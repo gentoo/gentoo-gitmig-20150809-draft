@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.15 2002/10/12 19:43:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.16 2002/10/19 09:31:05 azarah Exp $
+
+*shadow-4.0.3-r1 (19 Oct 2002)
+
+  19 Oct 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r1.ebuild :
+
+  Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
+  else the session entries in /etc/pam.d/su never get executed, and
+  pam_xauth for one, is then never used.  This should close bug #8831.
+
 
   12 Oct 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3.ebuild :
 
