@@ -1,6 +1,5 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-0.9.57.ebuild,v 1.2 2004/01/11 13:50:37 lanius Exp $
 
 DESCRIPTION="mtink is a status monitor and inkjet cartridge changer for some Epson printers"
 HOMEPAGE="http://xwtools.automatix.de/"
@@ -14,10 +13,7 @@ DEPEND="x11-libs/openmotif
 	x11-base/xfree
 	cups? ( net-print/cups )"
 
-S="${WORKDIR}/${PN}"
-
 src_compile() {
-	cp -f Makefile.ORG Makefile
 	make || die "Compile problem"
 }
 
