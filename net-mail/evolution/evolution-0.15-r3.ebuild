@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.15-r3.ebuild,v 1.1 2001/10/08 00:46:38 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.15-r3.ebuild,v 1.2 2001/10/09 03:45:37 hallski Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
@@ -76,7 +76,7 @@ src_install () {
 	make prefix=${D}/usr						\
 	     sysconfdir=${D}/etc					\
 	     localstatedir=${D}/var/lib					\
-	     DESTDIR=${D} install || die
+	     install || die
 
 	dodoc AUTHORS COPYING ChangeLog HACKING MAINTAINERS
 	dodoc NEWS README
