@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.4 2002/05/05 09:45:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.5 2002/06/02 17:40:23 prez Exp $
+
+*libdv-0.9.5-r1 (2 Jun 2002)
+
+  2 Jun 2002; Preston A. Elder <prez@gentoo.org> libdv-0.9.5-r1.ebuild :
+
+  Unset CFLAGS and CXXFLAGS -- it requires its own optimizations or
+  it will not compile properly on gcc 3.1
 
 *libdv-0.9.5 (5 May 2002)
 
