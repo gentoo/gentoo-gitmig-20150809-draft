@@ -1,25 +1,6 @@
 #buggy
 =x11-libs/qt-x11-2.3.2
 
-#Temporary committed, i want to test those packages first before releasing them
-=kde-base/kde-2.2.2
-=kde-base/kdelibs-2.2.2
-=kde-base/kdebase-2.2.2
-=kde-base/kdeaddons-2.2.2
-=kde-base/kdeadmin-2.2.2
-=kde-base/kdeartwork-2.2.2
-=kde-base/kdebindings-2.2.2
-=kde-base/kdegames-2.2.2
-=kde-base/kdegraphics-2.2.2
-=kde-base/kdemultimedia-2.2.2
-=kde-base/kdenetwork-2.2.2
-=kde-base/kdepim-2.2.2
-=kde-base/kdesdk-2.2.2
-=kde-base/kdetoys-2.2.2
-=kde-base/kdeutils-2.2.2
-=dev-util/kdevelop-2.0.2
-=kde-base/kdoc-2.2.2
-
 #waiting for new portage dep format
 >=x11-libs/qt-x11-3
 
