@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.4.ebuild,v 1.2 2004/08/11 17:38:29 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.4.ebuild,v 1.3 2004/08/25 17:59:23 squinky86 Exp $
 
 IUSE=""
 
@@ -37,7 +37,7 @@ pkg_postinst() {
 	einfo "you should counfigure it with gift-setup command."
 	echo
 	einfo "To run giFT with OpenFT support, run:"
-	einfo "giFT -p /usr/lib/giFT/libOpenFT.so"
+	einfo "\tgiFT -p /usr/lib/giFT/libOpenFT.so"
 	echo
 	einfo "Alternatively you can add the following line to"
 	einfo "your ~/.giFT/giftd.conf configuration file:"
