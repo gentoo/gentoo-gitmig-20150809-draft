@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.44.ebuild,v 1.1 2004/09/18 21:02:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.44.ebuild,v 1.2 2004/09/28 15:59:26 ka0ttic Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="a tool to locally check for signs of a rootkit"
 HOMEPAGE="http://www.chkrootkit.org/"
 SRC_URI="ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz
-		 mirror://gentoo/${P}-gentoo.diff.gz"
+		 mirror://gentoo/${P}-gentoo.diff.bz2"
 
 LICENSE="AMS"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -26,7 +26,10 @@ src_unpack() {
 }
 
 src_compile() {
-	make sense || die
+	emake \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
+		sense || die "emake sense failed"
 }
 
 src_install() {
@@ -41,5 +44,9 @@ src_install() {
 pkg_postinst() {
 	echo
 	einfo "Edit /etc/cron.weekly/chkrootkit to activate chkrootkit!"
+	einfo
+	einfo "Some applications, such as portsentry, will cause chkrootkit"
+	einfo "to produce false positives.  Read the chkrootkit FAQ at"
+	einfo "http://www.chkrootkit.org/ for more information."
 	echo
 }

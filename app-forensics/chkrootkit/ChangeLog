@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.9 2004/09/19 21:20:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.10 2004/09/28 15:59:26 ka0ttic Exp $
+
+  28 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> chkrootkit-0.44.ebuild:
+  Updated ebuild & diff to respect user CFLAGS/LDFLAGS as well as
+  FEATURES=nostrip. Added warning message for false positives (bug #65635).
+  Also, marked ~ppc64 (should've been carried over from 0.43-r3).
 
   19 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
   chkrootkit-0.43-r3.ebuild:
