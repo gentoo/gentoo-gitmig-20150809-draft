@@ -229,7 +229,7 @@ def merge(mycategory,mypackage,mystart):
 	outfile.close()
 
 	#begin provides/virtual package code
-	mypfn=root+"var/db/pkg/"+mycategory+"/"+mypackage+"/PROVIDES"
+	mypfn=root+"var/db/pkg/"+mycategory+"/"+mypackage+"/PROVIDE"
 	if os.path.exists(mypfn):
 		#this package provides some (possibly virtual) packages
 		mypfile=open(mypfn,"r")
@@ -240,7 +240,7 @@ def merge(mycategory,mypackage,mystart):
 			x=x[:-1]
 			mypsplit=string.split(x,"/")
 			if len(mypsplit)!=2:
-				print "!!! Invalid PROVIDES string:",x
+				print "!!! Invalid PROVIDE string:",x
 				sys.exit(1)	
 			providesdir=root+"var/db/pkg/"+x
 			if os.path.exists(providesdir):
@@ -284,7 +284,7 @@ def unmerge(category,pkgname):
 		return	
 		
 	#begin virtual/provides package code
-	mypname=root+"var/db/pkg/"+category+"/"+pkgname+"/PROVIDES"
+	mypname=root+"var/db/pkg/"+category+"/"+pkgname+"/PROVIDE"
 	if os.path.exists(mypname):
 		mypfile=open(mypname,"r")
 		myprovides=mypfile.readlines()
@@ -697,34 +697,6 @@ def isspecific(mypkg):
 		if not isjustname(mysplit[1]):
 			return 1
 	return 0
-
-#isinstalled will tell you if a package is installed.  Call as follows:
-# isinstalled("sys-apps/foo") will tell you if a package called foo (any
-# version) is installed.  isinstalled("sys-apps/foo-1.2") will tell you
-# if foo-1.2 (that version) is installed.
-
-def isinstalled(mycatpkg):
-	global installcache
-	if not installcache:
-		installcache=port_insttree()
-		#initialize cache
-	mycatpkg2=string.split(mycatpkg,"/")
-	
-	if isjustname(mycatpkg2[1]):
-		if installcache.has_key(mycatpkg):
-			return 1
-		else:
-			return 0
-	else:
-		mysplit=pkgsplit(mycatpkg2[1])
-		mykey=mycatpkg2[0]+"/"+mysplit[0]
-		# name and version specified
-		if not installcache.has_key(mykey):
-			return 0
-		for x in installcache[mykey]:
-			if x[0]==mycatpkg:
-				return 1
-	return 0
 	
 # This function can be used as a package verification function, i.e.
 # "pkgsplit("foo-1.2-1") will return None if foo-1.2-1 isn't a valid
@@ -841,7 +813,7 @@ def getgeneral(mycatpkg):
 		return string.join([mysplit[0],mysplit[1]],"/")
 
 def dep_depreduce(mypkgdep):
-	global installcache
+	global inst
 	#installcache holds a cached dictionary containing all installed packages
 	if not installcache:
 		installcache=port_insttree()
@@ -1155,24 +1127,35 @@ def dep_parse(depstring):
 	else:
 		return [1,dep_listcleanup(dep_zapdeps(mysplit,mysplit2))]
 
-def dep_frontend():
+def merge_check(mycatpkg):
+	if roottree.exists_specific(mycatpkg):
+		return 1
+	return 0
+
+def dep_frontend(mytype,depstring):
 	"""shell frontend for dependency system"""
-	depstring=getenv("DEPEND")
 	if depstring=="":
+		print ">>> No",mytype,"dependencies."
 		return 0
-	myparse=dep_parse(depstring)
+	if mytype=="build":
+		myparse=localtree.depcheck(depstring)
+	elif mytype=="runtime":
+		myparse=roottree.depcheck(depstring)
+	else:
+		print "!!! Error: dependency type",mytype,"not recognized.  Exiting."
+		sys.exit(1)
 	if myparse[0]==0:
 		#error
-		print '!!! Dependency error:',myparse[1]
+		print '!!! '+mytype+' dependency error:',myparse[1]
 		return 1
 	elif myparse[1]==None:
-		print '>>> Dependencies OK ;)'
+		print '>>> '+mytype+' dependencies OK ;)'
 		return 0
 	else:
-		print '!!! Some dependencies must be satisfied.'
-		print '!!! Please follow these steps:'
+		print '!!! Some '+mytype+' dependencies must be satisfied:'
 		print
 		dep_print(myparse[1])
+		print
 		return 1
 
 def port_currtree():
@@ -1274,9 +1257,213 @@ def port_porttree():
 				portagedict[mykey].append([fullpkg,catpkgsplit(fullpkg)])
 	os.chdir(origdir)
 	return portagedict
+
+class packagetree:
+	def __init__(self):
+		self.tree={}
+		self.populated=0
+	def populate(self):
+		"populates the tree with values"
+		populated=1
+		pass
+	def exists_specific(self,catpkg):
+		if not self.populated:
+			self.populate()
+		"this function tells you whether or not a specific package is installed"
+		cpsplit=catpkgsplit(catpkg)
+		if cpsplit==None:
+			return None 
+		if not self.tree.has_key(cpsplit[0]+"/"+cpsplit[1]):
+			return 0
+		for x in self.tree[cpsplit[0]+"/"+cpsplit[1]]:
+			if x[0]==catpkg:
+				return 1
+		return 0
+	def exists_node(self,nodename):
+		if not self.populated:
+			self.populate()
+		if self.tree.has_key(nodename):
+			return 1
+		return 0
+	def getnodes(self,nodename):
+		if not self.populated:
+			self.populate()
+		if self.tree.has_key(nodename):
+			return self.tree[nodename]
+		return []
+	def depcheck(self,depstring):
+		"evaluates a dependency string and returns a 2-node result list"
+		if not self.populated:
+			self.populate()
+		myusesplit=string.split(getsetting("USE"))
+		mysplit=string.split(depstring)
+		#convert parenthesis to sublists
+		mysplit=dep_parenreduce(mysplit)
+		#mysplit can't be None here, so we don't need to check
+		mysplit=dep_opconvert(mysplit,myusesplit)
+		#if mysplit==None, then we have a parse error (paren mismatch or misplaced ||)
+		#up until here, we haven't needed to look at the database tree
+		
+		if mysplit==None:
+			return [0,"Parse Error (parenthesis mismatch or || abuse?)"]
+		mysplit2=mysplit[:]
+		mysplit2=self.dep_wordreduce(mysplit2)
+		if mysplit2==None:
+			return [0,"Invalid token"]
+		myeval=dep_eval(mysplit2)
+		if myeval:
+			return [1,None]
+		else:
+			return [1,dep_listcleanup(dep_zapdeps(mysplit,mysplit2))]
+	def dep_wordreduce(self,mydeplist):
+		"""Calls dep_depreduce() on all the items in the deplist"""
+		mypos=0
+		deplist=mydeplist[:]
+		while mypos<len(deplist):
+			if type(deplist[mypos])==types.ListType:
+				#recurse
+				deplist[mypos]=self.dep_wordreduce(deplist[mypos])
+			else:
+				if deplist[mypos]=="||":
+					pass
+				else:
+					mydep=self.dep_depreduce(deplist[mypos])
+					if mydep!=None:
+						deplist[mypos]=mydep
+					else:
+						#encountered invalid string
+						return None
+			mypos=mypos+1
+		return deplist
+	def dep_depreduce(self,mypkgdep):
+		if mypkgdep[0]=="!":
+			# !cat/pkg-v
+			if self.exists_specific(mypkgdep[1:]):
+				return 0
+			else:
+				return 1
+		elif mypkgdep[0]=="=":
+			# =cat/pkg-v
+			return self.exists_specific(mypkgdep[1:])
+		elif (mypkgdep[0]=="<") or (mypkgdep[0]==">"):
+			# >=cat/pkg-v or <=,>,<
+			if mypkgdep[1]=="=":
+					cmpstr=mypkgdep[0:2]
+					cpv=mypkgdep[2:]
+			else:
+					cmpstr=mypkgdep[0]
+					cpv=mypkgdep[1:]
+			if not isspecific(cpv):
+				return None
+			if self.exists_node(getgeneral(cpv)):
+				mycatpkg=catpkgsplit(cpv)
+				mykey=mycatpkg[0]+"/"+mycatpkg[1]
+				if not self.exists_node(mykey):
+					return 0
+				for x in self.getnodes(mykey):
+					if eval("pkgcmp(x[1][1:],mycatpkg[1:])"+cmpstr+"0"):
+						return 1
+			return 0
+		if not isspecific(mypkgdep):
+			# cat/pkg 
+			if self.exists_node(mypkgdep):
+				return 1
+			else:
+				return 0
+		else:
+			return None
 	
+class vartree(packagetree):
+	"this tree will scan a var/db/pkg database located at root (passed to init)"
+	def __init__(self,root):
+		self.root=root
+		packagetree.__init__(self)
+	def populate(self):
+		"populates the local tree (/var/db/pkg)"
+		if not os.path.isdir(self.root+"var"):
+			os.mkdir(self.root+"var",0755)
+		if not os.path.isdir(self.root+"var/db"):
+			os.mkdir(self.root+"var/db",0755)
+		if not os.path.isdir(self.root+"var/db/pkg"):
+			os.mkdir(self.root+"var/db/pkg",0755)
+		dbdir=self.root+"var/db/pkg"
+		origdir=os.getcwd()
+		os.chdir(dbdir)
+		for x in os.listdir(os.getcwd()):
+			if not os.path.isdir(os.getcwd()+"/"+x):
+				continue
+			for y in os.listdir(os.getcwd()+"/"+x):
+				if x=="virtual":
+					#virtual packages don't require versions, if none is found, add a "1.0" to the end
+					if isjustname(y):
+						fullpkg=x+"/"+y+"-1.0"
+					else:
+						fullpkg=x+"/"+y
+				else:
+					fullpkg=x+"/"+y
+				mysplit=catpkgsplit(fullpkg)
+				mykey=x+"/"+mysplit[1]
+				if not self.tree.has_key(mykey):
+					self.tree[mykey]=[]
+				self.tree[mykey].append([fullpkg,mysplit])
+		os.chdir(origdir)
+		self.populated=1
+
+class portagetree(packagetree):
+	"this tree will scan a portage directory located at root (passed to init)"
+	def __init__(self,root):
+		self.root=root
+		packagetree.__init__(self)
+	def populate(self):
+		"populates the port tree"
+		origdir=os.getcwd()
+		os.chdir(self.root)
+		for x in categories:
+			if not os.path.isdir(os.getcwd()+"/"+x):
+				continue
+			for y in os.listdir(os.getcwd()+"/"+x):
+				if not os.path.isdir(os.getcwd()+"/"+x+"/"+y):
+					continue
+				if y=="CVS":
+					continue
+				for mypkg in os.listdir(os.getcwd()+"/"+x+"/"+y):
+					if mypkg[-7:] != ".ebuild":
+						continue
+					mypkg=mypkg[:-7]
+					mykey=x+"/"+y
+					fullpkg=x+"/"+mypkg
+					if not self.tree.has_key(mykey):
+						self.tree[mykey]=[]
+					self.tree[mykey].append([fullpkg,catpkgsplit(fullpkg)])
+		os.chdir(origdir)
+		self.populated=1
+
+class currenttree(packagetree):
+	"this tree will scan a current package file located at root (passed to init)"
+	def __init__(self,root):
+		self.root=root
+		packagetree.__init__(self)
+	def populate(self):
+		"populates the current tree"
+		mycurrent=open(self.root,"r")
+		mylines=mycurrent.readlines()
+		for x in mylines:
+			if x[:2]!="./":
+				continue
+			myline=string.split(string.strip(x)[2:-7],"/")
+			if len(myline)!=3:
+				continue
+			fullpkg=string.join([myline[0],myline[2]],"/")
+			mysplit=catpkgsplit(fullpkg)
+			mykey=mysplit[0]+"/"+mysplit[1]
+			if not self.tree.has_key(mykey):
+				self.tree[mykey]=[]
+			self.tree[mykey].append([fullpkg,mysplit])
+		mycurrent.close()
+		self.populated=1
+
 def init():
-	global installcache, configdefaults, configsettings, root, ERRPKG, ERRVER
+	global root, ERRPKG, ERRVER, configdefaults, configsettings, currtree, roottree, localtree, porttree 
 	configdefaults=getconfig("/etc/make.defaults")
 	configsettings=getconfig("/etc/make.conf")
 	root=getsetting("ROOT")
@@ -1295,6 +1482,17 @@ def init():
 			print "!!! Exiting."
 			print
 			sys.exit(1)
+	#packages installed locally (for build dependencies)
+	localtree=vartree("/")	
+	if root=="/":
+		#root is local, and build dep database is the runtime dep database
+		roottree=localtree
+	else:
+		#root is non-local, initialize non-local database as roottree
+		roottree=vartree(root)
+	portree=portagetree(getsetting("PORTDIR"))
+	currtree=currenttree(getsetting("CURRENTFILE"))
+	#package database is now initialized and ready, cap'n!
 	ERRPKG=""
 	ERRVER=""
 	installcache=None

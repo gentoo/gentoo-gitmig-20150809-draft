@@ -53,11 +53,20 @@ for x in sys.argv[1:]:
 
 	#exact version of package is already installed
 
-	if portage.isinstalled(mycat+"/"+mypkg):
+	if portage.roottree.exists_specific(mycat+"/"+mypkg):
 		print "!!! Error:",mypkg,"is already installed.  Unmerge first."
 		cleanup()
 		continue
-	
+	rdepfile="var/db/pkg/"+mycat+"/"+mypkg+"/"+"RDEPEND"
+	if os.path.exists(rdepfile):
+		a=open(rdepfile,"r")
+		myrlines=a.readlines()
+		rdep=""
+		for x in myrlines:
+			rdep=rdep+" "+x[:-1]
+	if (portage.dep_frontend("runtime",rdep))!=0:
+		cleanup()
+		sys.exit(1)
 	portage.doebuild("var/db/pkg/"+mycat+"/"+mypkg+"/"+mypkg+".ebuild","preinst")	
 	portage.merge(mycat,mypkg,os.getcwd())
 	portage.doebuild(portage.root+"var/db/pkg/"+mycat+"/"+mypkg+"/"+mypkg+".ebuild","postinst")	

@@ -18,8 +18,6 @@ fi
 source /etc/profile
 export PATH=/usr/lib/portage/bin:${PATH}
 eval `import-settings PROXY HTTP_PROXY FTP_PROXY FETCHCOMMAND PACKAGE DEBUG MAKEOPTS USE MAINTAINER CHOST CFLAGS CXXFLAGS PORTDIR DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM ROOT GENTOO_MIRRORS`
-export DEPEND
-export PROVIDES
 
 initvars() {
 	export DESTTREE=/usr
@@ -124,9 +122,28 @@ dyn_digest() {
     echo ">>> Computed message digests."
 }
 
-merge_check() {
-	if [ -d ${ROOT}var/db/pkg/${CATEGORY}/${PF} ]
+runtime_depend() {
+	#the echo thing is a trick to get rid of newlines
+    dopython portage.dep_frontend runtime "`echo ${RDEPEND}`"
+    if [ $? -ne 0 ]
     then
+		exit 1 
+    fi
+}
+
+build_depend() {
+	#the echo thing is a trick to get rid of newlines
+	dopython portage.dep_frontend build "`echo ${DEPEND}`"
+	if [ $? -ne 0 ]
+	then
+		exit 1 
+	fi
+}
+
+merge_check() {
+	dopython portage.merge_check "${CATEGORY}/${PF}"
+    if [ $? -ne 0 ]
+	then
 		echo 
 		echo '!!!' "${PF} already merged in ${ROOT} -- unmerge first" 
 		echo
@@ -186,16 +203,6 @@ digest_check() {
 		echo ">>> md5 ;-) ${1}"
 	fi
 	return 0
-}
-
-dyn_check() {
-
-    dopython portage.dep_frontend
-    if [ $? -ne 0 ]
-    then
-      exit 1 
-    fi
-
 }
 
 dyn_batchdigest() {
@@ -566,9 +573,17 @@ dyn_install() {
     cp ${STARTDIR}/${EBUILD} ${D}var/db/pkg/${CATEGORY}/${PF}
     local x
 	#create provides database
-	for x in $PROVIDES
+	for x in $PROVIDE
 	do
-		echo "$x" >> ${D}var/db/pkg/${CATEGORY}/${PF}/PROVIDES
+		echo "$x" >> ${D}var/db/pkg/${CATEGORY}/${PF}/PROVIDE
+	done
+	for x in $DEPEND
+	do 
+		echo "$x" >> ${D}/var/db/pkg/${CATEGORY}/${PF}/DEPEND
+	done
+	for x in $RDEPEND
+	do
+		echo "$x" >> ${D}/var/db/pkg/${CATEGORY}/${PF}/RDEPEND
 	done
 	echo ">>> Completed installing into ${D}"
     echo
@@ -686,12 +701,6 @@ dyn_help() {
 
 src_menu() {
     MYDIR=${BUILDDIR}
-    if [ "$1" = "p" ]
-    then
-	echo ${PF}
-	exit 0
-    fi
-
     local MYfoo
     for MYfoo in "$@" 
     do
@@ -703,15 +712,11 @@ src_menu() {
 	    dyn_unpack
 	    ;;
 	compile)
-        dopython portage.dep_frontend
-		if [ $? -ne 0 ]
-		then
-			exit $?
-		fi
-	            dyn_fetch
-	    dyn_unpack
+		build_depend
+		dyn_fetch
+		dyn_unpack
 	    dyn_compile
-            ;;
+		;;
 	prerm|postrm|preinst|postinst|config)
 	    pkg_${MYfoo}
 	    ;;
@@ -719,7 +724,7 @@ src_menu() {
 	    dyn_${MYfoo}
 	    ;;
 	package)
-		dyn_check
+		build_depend
 		dyn_fetch
 		local PNAME=${PF}.${PACKAGE}
 		if [ ! -d ${PKGDIR} ]
@@ -760,8 +765,7 @@ src_menu() {
 				continue
 			fi
     		fi
-
-	        dyn_unpack
+		dyn_unpack
 		dyn_compile
 		dyn_install
 		dyn_package
@@ -769,27 +773,28 @@ src_menu() {
 
 	qmerge)
 		#this is meant to merge over an existing version even if it exists
-		dyn_check
+		build_depend
 		dyn_fetch
 		dyn_unpack
 		dyn_compile
 		dyn_install
 		dyn_merge
+		runtime_depend
 		;;
-
  	merge)
+		#merge makes sure the package isn't already merged first
 		merge_check
-	    dyn_check
+	    build_depend
 		dyn_fetch
 		dyn_unpack
 	    dyn_compile
    		dyn_install
 		dyn_merge
+		runtime_depend
 	    ;;
 
 	rpm)
-
-	    dyn_check
+		build_depend
 		dyn_fetch
 	    dyn_unpack
 		dyn_compile
@@ -869,6 +874,12 @@ export FILESDIR=${O}/files
 tmpfoo=`/usr/bin/basename ${1%.*}`
 setp `/usr/sbin/pkgname ${tmpfoo}`
 
+#if [ $# -le 3 ]
+#then
+#	dyn_help
+#	exit 1
+#fi
+
 source ${1}
 if [ -e ${PEBUILD} ]
 then
@@ -882,7 +893,11 @@ then
 	eval `dopython portage.gen_archnames`
 fi
 
-
+#set up dependency variables correctly...
+if [ "$RDEPEND" = "" ]
+then
+	RDEPEND="$DEPEND"
+fi
 if [ ! -z ${BUILD_PREFIX} ]
 then
     export BUILDDIR=${BUILD_PREFIX}/${PF}
@@ -907,17 +922,12 @@ then
     export D=${D}/
 fi
 
-source ${1}
-if [ -e ${PEBUILD} ]
-then
-	source ${PEBUILD}
-fi
+#source ${1}
+#if [ -e ${PEBUILD} ]
+#then
+#	source ${PEBUILD}
+#fi
 
-
-if [ $# -eq 1 ]
-then
-	dyn_help
-fi
 
 foo=2
 while [ $foo -le $# ]
