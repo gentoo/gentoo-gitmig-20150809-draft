@@ -1,0 +1,8 @@
+# ChangeLog for x11-plugins/wmpasman
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/ChangeLog,v 1.1 2003/08/16 03:50:28 g2boojum Exp $
+
+*wmpasman-0.8.3 (15 Aug 2003)
+
+  15 Aug 2003; Nick Hadaway <raker@gentoo.org> wmpasman-0.8.3.ebuild:
+  New ebuild suggested by Susie Edgeworth on bug #19531.
