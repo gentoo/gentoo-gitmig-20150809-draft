@@ -1,4 +1,4 @@
-MD5 146b6ba318162828ad41e33b773be9de ChangeLog 6458
+MD5 2a7e77ac964c3c6ec3b0ab291134998f ChangeLog 6611
 MD5 e715d20dcc9f5af7e83e8ceaecb28fba module-init-tools-0.9.9.ebuild 3523
 MD5 638244b713d187af0e94d918aa08176c module-init-tools-0.9.10-r4.ebuild 6896
 MD5 ef0af44f51c9f603e41c37578da76960 module-init-tools-0.9.10-r5.ebuild 4722
@@ -8,7 +8,7 @@ MD5 43a77defbd90c7b3437bdaec67c1a953 module-init-tools-0.9.11.ebuild 4320
 MD5 5b82da95c1d35de4266fd709b2cc4e54 module-init-tools-0.9.11-r2.ebuild 4383
 MD5 5140c454a05cae20e4a1a2a44891c05a module-init-tools-0.9.11-r3.ebuild 4533
 MD5 91ae9cd23dab7f2d86efb824cd272188 module-init-tools-0.9.11a.ebuild 4540
-MD5 91ae9cd23dab7f2d86efb824cd272188 module-init-tools-0.9.12.ebuild 4540
+MD5 4c25b8e90eb48caebedc6a2778ed636d module-init-tools-0.9.12.ebuild 4538
 MD5 390b29c0fb86f31f1c290de3448f1ea3 files/digest-module-init-tools-0.9.9 143
 MD5 e20f41be805ddc7b8a6b74d52683a170 files/digest-module-init-tools-0.9.10-r4 212
 MD5 28295a2b93ba19ae91062a0078c078f6 files/module-init-tools-0.9.10-be-quiet-for-devfsd.patch 3327
