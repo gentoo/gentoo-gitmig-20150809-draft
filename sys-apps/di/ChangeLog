@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/di
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/di/ChangeLog,v 1.3 2003/02/13 20:42:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/di/ChangeLog,v 1.4 2003/02/21 02:08:30 zwelch Exp $
 
 *di-3.8 (09 Feb 2003)
+
+  20 Feb 2003; Zach Welch <zwelch@gentoo.org>: di-3.8.ebuild
+  add missing SLOT
 
   09 Feb 2003; Seth Chandler <sethbc@gentoo.org>: di-3.8.ebuild
   added di-3.8 to portage, thx to Thomas Preissler <tomjohn@gmx.de>
