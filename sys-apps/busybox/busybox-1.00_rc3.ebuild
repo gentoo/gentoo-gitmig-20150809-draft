@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.0.0_pre20040726.ebuild,v 1.1 2004/07/26 17:53:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_rc3.ebuild,v 1.1 2004/08/17 16:42:13 solar Exp $
 
 inherit eutils
 
 DESCRIPTION="Utilities for rescue and embedded systems"
-SNAPSHOT=20040726
+#SNAPSHOT=20040726
 HOMEPAGE="http://www.busybox.net/"
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,7 +20,7 @@ if [ "$SNAPSHOT" != "" ]; then
 	SRC_URI="http://www.busybox.net/downloads/snapshots/${PN}-${SNAPSHOT}.tar.bz2"
 else
 	MY_P=${PN}-${MY_PV}
-	SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.gz"
+	SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.bz2"
 fi
 
 S=${WORKDIR}/${MY_P}
