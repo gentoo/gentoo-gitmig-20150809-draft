@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.15 2005/02/12 10:26:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.16 2005/03/16 05:54:27 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 
@@ -94,12 +94,6 @@ xmms-plugin_src_unpack() {
 
 xmms-plugin_src_compile() {
 	filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
-
-	if use !amd64 && { use 3dnow || use mmx; }; then
-		myconf="${myconf} --enable-simd"
-	else
-		myconf="${myconf} --disable-simd"
-	fi
 
 	econf ${myconf}
 	cp config.h ${S}/${PLUGIN_PATH}
