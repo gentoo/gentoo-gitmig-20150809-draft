@@ -1,14 +1,24 @@
-MD5 c786be208d69f90503165f6712a366bd ChangeLog 1762
-MD5 909ec5c10391083a4dc7db3e365bbfb6 filelight-0.6.4.1-r1.ebuild 642
-MD5 00461b55d4102e41d6563422ca470d40 filelight-0.6.4.1.ebuild 536
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3dc1d683f94132cdc78c4400d2ff7497 ChangeLog 2099
+MD5 87de0cf9e442ab5e488af5999f510f74 filelight-0.6.4.1-r1.ebuild 642
+MD5 9da09b5791415d0b1b75af8b4a813416 filelight-0.6.4.1.ebuild 532
+MD5 d36d1e7ff0f573a55f63512c2c6b0859 filelight-1.0_beta1.ebuild 643
+MD5 f5980c68e0400f847c45f786989cb796 filelight-1.0_beta2-r1.ebuild 718
+MD5 96695c09f155c4f6a9a6f0a47aa79bd5 filelight-1.0_beta2-r2.ebuild 780
+MD5 2cfbe2c107dca3fb12b43805ce6b5c39 filelight-1.0_beta2.ebuild 643
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 5b740d63f31849e38dc4771f850052a1 filelight-1.0_beta1.ebuild 646
-MD5 2d083139c8308c591fde9a52e69afcae filelight-1.0_beta2.ebuild 643
-MD5 e9f696c1b1cb1ff45b4fc7b2732b1f84 filelight-1.0_beta2-r1.ebuild 718
-MD5 128864b74c83e63199a6a9a278087bcc filelight-1.0_beta2-r2.ebuild 781
 MD5 a9c5dd52f323f7bcea2c21a3cc5c2210 files/digest-filelight-0.6.4.1 69
 MD5 a9c5dd52f323f7bcea2c21a3cc5c2210 files/digest-filelight-0.6.4.1-r1 69
 MD5 9783f32c2b7f0d478632e43fc9104d03 files/digest-filelight-1.0_beta1 72
 MD5 e1f0425ca083f593d2be6aa3b41d41a0 files/digest-filelight-1.0_beta2 72
 MD5 e1f0425ca083f593d2be6aa3b41d41a0 files/digest-filelight-1.0_beta2-r1 72
 MD5 e1f0425ca083f593d2be6aa3b41d41a0 files/digest-filelight-1.0_beta2-r2 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhCVqI1lqEGTUzyQRAmvhAKDVkPUdp20j3Cq3K7cb5UwZ7DTPmACdEN/I
+2ejMx5JpQ3uTDVVKeeWdMCY=
+=vyyK
+-----END PGP SIGNATURE-----

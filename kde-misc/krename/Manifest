@@ -1,6 +1,16 @@
-MD5 d7ca36cc2b375c6b9aa2785ffcaac92c ChangeLog 4420
-MD5 d68c5ee48b0490f514de3bc3c5a00ae8 krename-2.8.5.ebuild 452
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 108dec379b582aeeeb89a62477905031 ChangeLog 4610
+MD5 45473a8c69b3d6e44d55a5c7653740e2 krename-2.8.5.ebuild 449
+MD5 66fb8eb021946eaffd2f6e341aeea4c1 krename-3.0.2.ebuild 512
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 e3c4e778aef468d6527dad87c9e7f4e7 krename-3.0.2.ebuild 515
 MD5 7372bce6a0f5a08335a2b91a138b0d5a files/digest-krename-2.8.5 66
 MD5 3117f21ba1aa2efe42e3d374cb1508d3 files/digest-krename-3.0.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhCcqI1lqEGTUzyQRAhFDAJ9Kf788JsFy+datjIIipJANXHgZUwCfaBmH
+WDgoVtIhvOhCMJilf8d3G9k=
+=jvQ2
+-----END PGP SIGNATURE-----

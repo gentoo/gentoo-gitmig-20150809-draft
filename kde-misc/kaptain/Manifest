@@ -1,5 +1,15 @@
-MD5 079ea46aac8e54c1db352c84c05209c0 kaptain-0.71.ebuild 752
-MD5 cf8d768931d041de975224869cdc80f9 ChangeLog 474
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c764cc91b120bb56d3ea11a103124a7b ChangeLog 666
+MD5 95bc1cd02a2f8346d744412ccd70ead2 kaptain-0.71.ebuild 749
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 2663b98e3a503fbe5ad65775a66a9c79 files/0.71-assert.patch 250
 MD5 cbbcdca451b0b9504f21390e7ac03563 files/digest-kaptain-0.71 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhCWYI1lqEGTUzyQRAjDYAJ4kxH64+pFBtlJ63zjDkwxERj4BjgCeMNND
+1qEFHaLXIhY8hVcqUTta8TU=
+=0GsL
+-----END PGP SIGNATURE-----

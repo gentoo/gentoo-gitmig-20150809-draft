@@ -1,4 +1,14 @@
-MD5 de69f537036a103080035b10e12f4920 ChangeLog 801
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 baf1d96edc96fb11eea4452ac94f0309 ChangeLog 962
+MD5 0b788eee6f76cba9d765c973f785a636 kbeam-0.61.ebuild 565
 MD5 c7905dd20e49deed0bced0499a9f714c metadata.xml 222
-MD5 d5a990b2471084ea014a6a416db28c95 kbeam-0.61.ebuild 565
 MD5 ba873639f681c915eb79da03aecaa9b3 files/digest-kbeam-0.61 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhCW4I1lqEGTUzyQRAi5gAKDEaAaXZ9AIy16duwb4kl0tZ6r3iACfaU1o
+40hMG5e85XcaOTG7G7eJibw=
+=tML6
+-----END PGP SIGNATURE-----

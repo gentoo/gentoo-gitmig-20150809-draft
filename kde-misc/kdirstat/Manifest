@@ -1,10 +1,20 @@
-MD5 2ca6be9bcf37a477ad4c1e6cb2fb7064 ChangeLog 2257
-MD5 6ea8dfb73199f2eebc72cf079c7198f1 kdirstat-2.2.0.ebuild 464
-MD5 085535450e113091ef8b6a437f6dd5de kdirstat-2.3.7.ebuild 463
-MD5 db4f53d5853f6a4db4c57a17da73018e kdirstat-2.4.0.ebuild 649
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2aea183fc8721b427592fe3c179ba03b ChangeLog 2552
+MD5 f661a4c19d42bb0aafa8fab2c6f5930f kdirstat-2.2.0.ebuild 460
+MD5 b8878cc18a5d98b0623cf86764d655eb kdirstat-2.3.7.ebuild 460
+MD5 ecb0bb4cbfba47b3747e2cb019d19f6a kdirstat-2.4.0.ebuild 649
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 ea038c6b98cd537013bdfe6344d0401a files/digest-kdirstat-2.2.0 63
 MD5 6c8b58bdea9797a5386fae5a69f23bc5 files/digest-kdirstat-2.3.7 67
 MD5 50612723fa9ed6e09e2f2b300d07aa1b files/digest-kdirstat-2.4.0 67
-MD5 1293616790e16b7e5814d2a9b6a975be files/kdirstatapp.h.fix.patch 248
 MD5 12d1a6dba51fffa13b56b37b8c58b68a files/kdirstat-2.4.0-configure.patch 3569
+MD5 1293616790e16b7e5814d2a9b6a975be files/kdirstatapp.h.fix.patch 248
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhCYBI1lqEGTUzyQRAoZTAJ9tm8g4vkuctG2xgwOZjzn1DiBbzQCeN3dr
+HWBSv7GawTPLn3uYj9USVD0=
+=gXuM
+-----END PGP SIGNATURE-----
