@@ -1,0 +1,17 @@
+--- gcc-20040215/gcc/version.c.orig	2004-02-16 10:29:21.934005976 -0600
++++ gcc-20040215/gcc/version.c	2004-02-16 10:31:24.478017312 -0600
+@@ -6,7 +6,7 @@
+    please modify this string to indicate that, e.g. by putting your
+    organization's name in parentheses at the end of the string.  */
+ 
+-const char version_string[] = "3.3.3-hammer 20040214 (prerelease)";
++const char version_string[] = "3.3.3 (Gentoo Linux 3.3.3_pre20040215)";
+ 
+ /* This is the location of the online document giving instructions for
+    reporting bugs.  If you distribute a modified version of GCC,
+@@ -15,4 +15,4 @@
+    forward us bugs reported to you, if you determine that they are
+    not bugs in your modifications.)  */
+ 
+-const char bug_report_url[] = "<URL:http://gcc.gnu.org/bugs.html>";
++const char bug_report_url[] = "<URL:http://bugs.gentoo.org/>";

@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.175 2004/02/12 18:06:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.176 2004/02/17 04:27:46 tgall Exp $
+
+*gcc-3.3.3_pre20040215 (16 Feb 2004)
+
+  15 Feb 2004; Tom Gall <tgall@gentoo.org> gcc-3.3.3_pre20040215.ebuild,
+  gcc-3.3.3_pre20040130:
+  Remove gcc-3.3.3_pre20040130, add gcc-3.3.3_pre20040215.ebuild
+  ppc64 prerelease, fixes a rather anoying set of ICEs. 
+  gcc-3.3.2-r6.ebuild was the reference.
 
   12 Feb 2004; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.2-r5.ebuild,
   gcc-3.3.2-r7.ebuild:
