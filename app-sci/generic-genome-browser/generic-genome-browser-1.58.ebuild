@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.4 2004/08/03 11:47:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.5 2004/12/23 22:22:06 ribosome Exp $
 
 inherit perl-module
 
@@ -21,7 +21,7 @@ IUSE="mysql gd"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="
-	>=app-sci/bioperl-1.4
+	>=sci-biology/bioperl-1.4
 	>=dev-perl/CGI-2.56
 	>=dev-perl/GD-2.07
 	dev-perl/DBI
