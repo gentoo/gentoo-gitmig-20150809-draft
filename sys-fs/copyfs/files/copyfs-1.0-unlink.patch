@@ -1,0 +1,100 @@
+diff -u --recursive copyfs-1.0-orig/cache.c copyfs-1.0/cache.c
+--- copyfs-1.0-orig/cache.c	2004-12-16 21:07:38.953286336 +0000
++++ copyfs-1.0/cache.c	2004-12-16 22:00:40.158056066 +0000
+@@ -94,6 +94,50 @@
+ }
+ 
+ /*
++ * Remove metadata from the cache
++ */
++void cache_remove_metadata(const char *vpath)
++{
++  bucket_t *bucket;
++  metadata_t *metadata;
++  int atHead = 1;
++  int atTail = 1;
++
++  /* Lookup the item */
++  bucket = &cache_hash_table[CACHE_HASH(vpath)];
++  metadata = bucket->b_contents;
++  while (metadata && strcmp(metadata->md_vfile, vpath))
++    metadata = metadata->md_next;
++  if (!metadata)
++    return ;
++
++  /* Disconnect it from the list */
++  if (metadata->md_previous)
++  {
++      metadata->md_previous->md_next = metadata->md_next;
++      atHead = 0;
++  }
++
++  if (metadata->md_next)
++  {
++      metadata->md_next->md_previous = metadata->md_previous;
++      atTail = 0;
++  }
++
++  if (atHead)
++  {
++      bucket->b_contents = metadata->md_next;
++      bucket->b_contents->md_previous = NULL;
++  }
++
++  bucket->b_count--;
++  if (bucket->b_count == 0)
++      bucket->b_contents = NULL;
++
++  free(metadata);
++}
++
++/*
+  * Clean the older items out of the cache to free space. The goal is to
+  * half the number of items, so that we don't get called constantly.
+  */
+diff -u --recursive copyfs-1.0-orig/cache.h copyfs-1.0/cache.h
+--- copyfs-1.0-orig/cache.h	2004-12-16 21:07:38.953286336 +0000
++++ copyfs-1.0/cache.h	2004-12-16 22:00:28.463400204 +0000
+@@ -11,6 +11,7 @@
+ void		cache_initialize(void);
+ void		cache_finalize(void);
+ metadata_t	*cache_get_metadata(const char *vpath);
++void		cache_remove_metadata(const char *vpath);
+ void		cache_add_metadata(metadata_t *metadata);
+ int		cache_find_maximal_match(char **array, metadata_t **result);
+ 
+Only in copyfs-1.0: config.cache
+Only in copyfs-1.0: config.log
+Only in copyfs-1.0: config.status
+Only in copyfs-1.0: fcopyfs-daemon
+diff -u --recursive copyfs-1.0-orig/interface.c copyfs-1.0/interface.c
+--- copyfs-1.0-orig/interface.c	2004-12-16 21:07:38.953286336 +0000
++++ copyfs-1.0/interface.c	2004-12-16 22:01:40.393756516 +0000
+@@ -137,6 +137,7 @@
+ 		file = helper_build_composite("-S", "/", entry->d_name +
+ 					      strlen(METADATA_PREFIX));
+ 	      metadata = rcs_translate_to_metadata(file, rcs_version_path);
++
+ 	      free(file);
+ 	      if (metadata && !metadata->md_deleted)
+ 		{
+@@ -181,13 +182,16 @@
+     return -errno;
+   if (S_ISDIR(st_rfile.st_mode))
+     return -EISDIR;
++  if (unlink(version->v_rfile) == -1)
++    return -errno;
+   metadata->md_deleted = 1;
+   metafile = create_meta_name(metadata->md_vfile, "metadata");
+-  if (write_metadata_file(metafile, metadata) == -1) {
+-    free(metafile);
++  if (unlink(metafile) == -1)
+     return -errno;
+-  }
+   free(metafile);
++
++  cache_remove_metadata(version->v_rfile);
++
+   return 0;
+ }
+ 
