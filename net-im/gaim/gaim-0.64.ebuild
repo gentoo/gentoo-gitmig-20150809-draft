@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.64.ebuild,v 1.2 2003/06/05 10:08:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.64.ebuild,v 1.3 2003/07/01 03:40:49 vapier Exp $
 
 IUSE="nls perl spell ssl nas"
 
@@ -57,10 +57,10 @@ pkg_postinst() {
 	if [ `use ssl` ]; then
 		ewarn
 		ewarn "You have chosen (by selecting 'USE=ssl') to install"
-		ewarn "the gaim-encryption plugin ( http://gaim-encryption.sf.net )"
+		ewarn "the gaim-encryption plugin ( http://gaim-encryption.sf.net/ )"
 		ewarn "this plugin is NOT supported by the Gaim project, and if you"
 		ewarn "expierence problems related to it, contact the Gentoo project"
-		ewarn "via http://bugs.gentoo.rog or the gaim-encryption project."
+		ewarn "via http://bugs.gentoo.org/ or the gaim-encryption project."
 		ewarn
 	fi
 }
