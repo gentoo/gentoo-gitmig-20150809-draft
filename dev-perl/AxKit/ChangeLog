@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AxKit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.21 2004/01/18 19:40:32 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.22 2004/02/25 00:41:26 bazik Exp $
+
+  25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> AxKit-1.6.1.ebuild:
+  Stable on sparc, thanks to Josh Grebe <josh@brokedown.net> for testing!
 
   18 Jan 2004; <tuxus@gentoo.org> AxKit-1.6.2.ebuild:
   Added ~mips to KEYWORDS.

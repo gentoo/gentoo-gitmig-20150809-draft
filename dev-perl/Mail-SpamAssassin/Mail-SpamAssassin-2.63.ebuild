@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.63.ebuild,v 1.5 2004/02/21 03:17:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.63.ebuild,v 1.6 2004/02/25 00:46:29 bazik Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://spamassassin.org/released/${P}.tar.bz2"
 
 LICENSE="GPL-2 | Artistic"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha hppa ~mips ia64 amd64"
+KEYWORDS="x86 ppc sparc alpha hppa ~mips ia64 amd64"
 IUSE="berkdb ssl"
 
 DEPEND=">=dev-perl/ExtUtils-MakeMaker-6.11-r1

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DelimMatch
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.10 2004/02/16 01:22:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.11 2004/02/25 00:43:25 bazik Exp $
+
+  25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> DelimMatch-1.06.ebuild:
+  Stable on sparc, thanks to Josh Grebe <josh@brokedown.net> for testing!
 
 *DelimMatch-1.06 (15 Feb 2004)
 
