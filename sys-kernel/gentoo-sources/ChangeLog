@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.77 2004/07/08 22:27:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.78 2004/07/09 15:03:35 plasmaroo Exp $
+
+*gentoo-sources-2.4.26-r4 (09 Jul 2004)
+
+  09 Jul 2004; <plasmaroo@gentoo.org> -gentoo-sources-2.4.19-r17.ebuild,
+  +gentoo-sources-2.4.19-r18.ebuild, -gentoo-sources-2.4.20-r20.ebuild,
+  +gentoo-sources-2.4.20-r21.ebuild, -gentoo-sources-2.4.22-r12.ebuild,
+  +gentoo-sources-2.4.22-r13.ebuild, -gentoo-sources-2.4.25-r5.ebuild,
+  +gentoo-sources-2.4.25-r6.ebuild, -gentoo-sources-2.4.26-r3.ebuild,
+  -gentoo-sources-2.4.26-r4.ebuild, +gentoo-sources-2.4.26-r5.ebuild,
+  +files/gentoo-sources-2.4.CAN-2004-0497.patch:
+  Version bumps for kernel attribute vulnerabilities, bug #56479.
 
   08 Jul 2004; <plasmaroo@gentoo.org> :
   Version bump - FreeS/WAN is now replaced with OpenS/WAN.
