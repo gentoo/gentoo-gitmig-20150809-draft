@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r2.ebuild,v 1.3 2003/09/15 20:36:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r2.ebuild,v 1.4 2003/09/15 21:31:50 azarah Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -444,10 +444,10 @@ src_install() {
 		done
 	fi
 
-	if [ -f "${D}${LIBPATH}\libgcc.a" ]
+	if [ -f "${D}${LIBPATH}/libgcc.a" ]
 	then
-		mv -f ${D}${LIBPATH}\libgcc.a ${D}${LIBPATH}\libgcc_s.a
-		cat > "${D}${LIBPATH}\libgcc.a" <<EOF
+		mv -f ${D}${LIBPATH}/libgcc.a ${D}${LIBPATH}/libgcc_s.a
+		cat > ${D}${LIBPATH}/libgcc.a <<EOF
 /* GNU ld script
 	Use the shared library, but some functions are only in
 	the libc.a static library, so try that secondarily.  */
