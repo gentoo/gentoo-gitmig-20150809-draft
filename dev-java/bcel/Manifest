@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5d13c98b214be16b3a60baa75d03e8fd bcel-5.1.ebuild 1175
-MD5 616980711c4155bf069b308beebd2bea ChangeLog 1286
+MD5 3d8f69d05da9732af8919c223fc5bef2 bcel-5.1.ebuild 1183
+MD5 ce54aec3beec15414a4961219a961249 ChangeLog 1381
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 e908f81e51167a747ab8527dacc3ee4e files/digest-bcel-5.1 66
 MD5 88f16b1c12a8814d078c5eb3906d2218 files/bcel-5.1-gentoo.diff 457
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBCr9z/rLF9B432nYRApcrAKC/VDyHgX7GwvEizZu4s46jgLV9awCfY4t5
-nF5GasITaBleDogNiw99IFg=
-=0d53
+iD8DBQFBC4No/rLF9B432nYRAjrcAJ0Uf3KTe3BsC/Nnlwf3pzcBlfWu5wCgmdbd
+HFcVJuPVz17lr11PvYyU/VI=
+=+xMb
 -----END PGP SIGNATURE-----
