@@ -12,7 +12,7 @@ if [ -z "${DONTWARNABOUTSYMLINKS}" ]; then
 			#exit 1
 		fi
 	done
-	DONTWARNABOUTSYMLINKS="true"
+	export DONTWARNABOUTSYMLINKS="true"
 fi
 
 if [ -z "${IWANTTOTRASHMYSYSTEM}" ]; then

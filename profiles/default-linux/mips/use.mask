@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.17 2005/01/08 20:47:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.18 2005/01/10 11:31:08 eradicator Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # masked because it hoses xchat on 64-bit machines
@@ -121,3 +121,4 @@ djbfft
 -n32
 -n64
 -cobalt
+-ip28
