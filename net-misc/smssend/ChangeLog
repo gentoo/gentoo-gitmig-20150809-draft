@@ -1,0 +1,7 @@
+# ChangeLog for net-misc/linuxsms
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smssend/ChangeLog,v 1.1 2003/01/31 22:22:50 verwilst Exp $
+
+*smssend-3.1 (1 Feb 2002) Bart Verwilst <verwilst@gentoo.org>
+
+  Initial version
