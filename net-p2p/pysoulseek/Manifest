@@ -2,6 +2,8 @@ MD5 05d64546a7755a5a9f84f9f6968eb32d ChangeLog 2628
 MD5 f48cc2d420f543654890c7931a5b2f98 pysoulseek-1.1.1.1.6.ebuild 943
 MD5 74ff71f03cf3eb29d84bf9585a0c6d71 pysoulseek-1.1.2.1.7.ebuild 944
 MD5 18f5a8d8a0435ee23c8d400b808d25a2 pysoulseek-1.2.0_pre3.ebuild 1193
+MD5 a32adfd73fce6f97da8c346e63c8af00 pysoulseek-1.2.0_pre4.ebuild 1193
 MD5 003e381c9f868835bd6559167f9b3642 files/digest-pysoulseek-1.1.1.1.6 137
 MD5 062e856f00b7f12024443bddfaadb9e1 files/digest-pysoulseek-1.1.2.1.7 137
 MD5 ee23ccbd3ccbf0d42bf07d617b2bfe8a files/digest-pysoulseek-1.2.0_pre3 145
+MD5 58d2a96f79d8a6062e1562c91407beb0 files/digest-pysoulseek-1.2.0_pre4 145
