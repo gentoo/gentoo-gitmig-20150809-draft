@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.3 2005/03/10 08:49:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.4 2005/03/10 09:46:40 azarah Exp $
+
+  10 Mar 2005; Martin Schlemmer <azarah@gentoo.org> files/klibc.m4:
+  Update m4 macro.
 
 *klibc-1.0.3 (10 Mar 2005)
 

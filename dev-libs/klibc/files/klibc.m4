@@ -31,12 +31,27 @@ AC_DEFUN([AC_CHECK_KLIBC],
 AC_REQUIRE([AC_CANONICAL_HOST])
 AC_ARG_ENABLE([klibc],
               [AS_HELP_STRING([--enable-klibc],
-                              [Use this to link the tools to klibc. Set KLCC
+                              [Enable linking to klibc [no].  You need at
+                               least klibc-1.0 or later for this.  Set KLCC
                                to the absolute file name of klcc if not in
-                               the PATH.])],
-              [KLIBC=yes], [KLIBC=no])
+                               the PATH])],
+              [KLIBC=$enableval], [KLIBC=no])
+AC_ARG_ENABLE([klibc-layout],
+              [AS_HELP_STRING([--enable-klibc-layout],
+                              [Enable installing binaries, libraries and
+                               headers into the klibc prefix [yes] ])],
+              [if test "X$KLIBC" != Xno; then
+                 KLIBC_LAYOUT=$enableval
+               else
+                 KLIBC_LAYOUT=no
+               fi],
+              [if test "X$KLIBC" != Xno; then
+                 KLIBC_LAYOUT=yes
+               else
+                 KLIBC_LAYOUT=no
+               fi])
 
-if test "X$KLIBC" = Xyes; then
+if test "X$KLIBC" != Xno; then
   # Basic cross compiling support.  I do not think it is wise to use
   # AC_CHECK_TOOL, because if we are cross compiling, we do not want
   # just 'klcc' to be returned ...
@@ -51,12 +66,21 @@ if test "X$KLIBC" = Xyes; then
 
   CC="$KLCC"
   CFLAGS="-Os"
+
   KLIBC_KCROSS="$($KLCC -print-klibc-kcross 2>/dev/null)"
   KLIBC_PREFIX="$($KLCC -print-klibc-prefix 2>/dev/null)"
   KLIBC_BIN_DIR="$($KLCC -print-klibc-bindir 2>/dev/null)"
   KLIBC_SBIN_DIR="${KLIBC_PREFIX}/${KLIBC_KCROSS}sbin"
   KLIBC_LIB_DIR="$($KLCC -print-klibc-libdir 2>/dev/null)"
   KLIBC_INCLUDE_DIR="$($KLCC -print-klibc-includedir 2>/dev/null)"
+
+  if test "X$KLIBC_LAYOUT" != Xno; then
+    prefix="$KLIBC_PREFIX"
+    bindir="$KLIBC_BIN_DIR"
+    sbindir="$KLIBC_SBIN_DIR"
+    libdir="$KLIBC_LIB_DIR"
+    includedir="$KLIBC_INCLUDE_DIR"
+  fi
 
   # At least KLIBC_LIB_DIR should be valid, else klibc is too old or
   # something went wrong
@@ -66,10 +90,5 @@ if test "X$KLIBC" = Xyes; then
 fi
 
 AC_SUBST(KLIBC)
-AC_SUBST(KLIBC_PREFIX)
-AC_SUBST(KLIBC_BIN_DIR)
-AC_SUBST(KLIBC_SBIN_DIR)
-AC_SUBST(KLIBC_LIB_DIR)
-AC_SUBST(KLIBC_INCLUDE_DIR)
 ])# AC_CHECK_KLIBC
 
