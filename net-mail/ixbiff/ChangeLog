@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ixbiff
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ixbiff/ChangeLog,v 1.1 2004/12/15 12:38:59 ticho Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ixbiff/ChangeLog,v 1.2 2005/01/14 20:17:35 ticho Exp $
+
+  14 Jan 2005; Andrej Kacian <ticho@gentoo.org> ixbiff-0.03b.ebuild:
+  Stable on x86.
 
 *ixbiff-0.03b (15 Dec 2004)
 
