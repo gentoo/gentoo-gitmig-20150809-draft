@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r1.ebuild,v 1.1 2002/12/15 23:54:49 rendhalver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r1.ebuild,v 1.2 2002/12/16 00:14:37 rendhalver Exp $
 
-IUSE="gpm postgres xface nas dnd X jpeg tiff png mule motif canna wnn lucid athena next xaw3d"
+IUSE="gpm postgres xface nas dnd X jpeg tiff png mule motif canna freewnn lucid athena next xaw3d"
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -52,7 +52,7 @@ RDEPEND="virtual/glibc
 	jpeg? ( media-libs/jpeg )
 
 	canna? ( app-i18n/canna )
-	wnn? ( app-i18n/freewnn )"
+	freewnn? ( app-i18n/freewnn )"
 
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
@@ -138,7 +138,7 @@ src_compile() {
 			myconf="${myconf} --with-xim=xlib"
 	        use canna && myconf="${myconf} --with-canna" ||
 	                myconf="${myconf} --without-canna"
-		use wnn && myconf="${myconf} --with-wnn" ||
+		use freewnn && myconf="${myconf} --with-wnn" ||
 	                myconf="${myconf} --without-wnn"
 	fi
 
