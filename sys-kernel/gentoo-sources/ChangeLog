@@ -1,6 +1,24 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.96 2004/11/27 20:57:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.97 2004/12/24 18:23:50 plasmaroo Exp $
+
+*gentoo-sources-2.4.22-r21 (24 Dec 2004)
+
+  24 Dec 2004; <plasmaroo@gentoo.org> -gentoo-sources-2.4.20-r29.ebuild,
+  +gentoo-sources-2.4.20-r30.ebuild, -gentoo-sources-2.4.22-r20.ebuild,
+  +gentoo-sources-2.4.22-r21.ebuild, -gentoo-sources-2.4.25-r13.ebuild,
+  +gentoo-sources-2.4.25-r14.ebuild, -gentoo-sources-2.4.26-r13.ebuild,
+  +gentoo-sources-2.4.26-r14.ebuild, -gentoo-sources-2.4.27-r5.ebuild,
+  +gentoo-sources-2.4.27-r6.ebuild, -gentoo-sources-2.4.28-r2.ebuild,
+  +gentoo-sources-2.4.28-r3.ebuild,
+  +files/gentoo-sources-2.4.20-CAN-2004-1056.patch,
+  +files/gentoo-sources-2.4.22-CAN-2004-1016.patch,
+  +files/gentoo-sources-2.4.22-vma.patch,
+  +files/gentoo-sources-2.4.CAN-2004-1016.patch,
+  +files/gentoo-sources-2.4.CAN-2004-1056.patch,
+  +files/gentoo-sources-2.4.CAN-2004-1137.patch,
+  +files/gentoo-sources-2.4.vma.patch:
+  Security bump; bugs #72452, #74384, #74392, #74464.
 
 *gentoo-sources-2.4.20-r29 (27 Nov 2004)
 
