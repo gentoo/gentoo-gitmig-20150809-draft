@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0.ebuild,v 1.15 2004/06/29 00:17:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0.ebuild,v 1.16 2004/11/03 00:22:36 vapier Exp $
 
 inherit eutils
-EPATCH_SOURCE="${FILESDIR}"
 
 DESCRIPTION="Telnet and telnetd ported from OpenBSD with IPv6 support"
 HOMEPAGE="ftp://ftp.suse.com/pub/people/kukuk/ipv6/"
@@ -11,7 +10,7 @@ SRC_URI="ftp://ftp.suse.com/pub/people/kukuk/ipv6/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64"
+KEYWORDS="alpha amd64 arm hppa ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -20,7 +19,7 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch
+	EPATCH_SOURCE="${FILESDIR}" epatch
 }
 
 src_install() {
