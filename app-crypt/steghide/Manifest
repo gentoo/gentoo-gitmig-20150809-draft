@@ -1,4 +1,4 @@
-MD5 c3d4113ab72ec1938189cb3173aa2f68 steghide-0.5.1.ebuild 725
 MD5 7132273e814fdeab28289287bd613a01 ChangeLog 509
-MD5 432253ab8d0ca4019046fd5c2aad15ae metadata.xml 390
+MD5 42fab2a1850b10b79aaf27a057465cb9 metadata.xml 255
+MD5 c3d4113ab72ec1938189cb3173aa2f68 steghide-0.5.1.ebuild 725
 MD5 d66bb10a2779986ec5b1a406328d8dfa files/digest-steghide-0.5.1 67
