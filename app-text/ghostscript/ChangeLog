@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.101 2005/03/27 11:59:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.102 2005/04/03 05:50:26 j4rg0n Exp $
+
+  03 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> +files/gs-osx-ijs.patch,
+  +files/gs-osx-unix-dll.patch, ghostscript-7.07.1-r8.ebuild:
+  Testing ppc-macos. Source and Makefile patches added for Darwin compatibility.
 
   27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   ghostscript-7.07.1-r8.ebuild:

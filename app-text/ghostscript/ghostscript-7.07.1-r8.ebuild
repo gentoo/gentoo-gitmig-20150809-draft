@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r8.ebuild,v 1.11 2005/03/27 11:59:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r8.ebuild,v 1.12 2005/04/03 05:50:26 j4rg0n Exp $
 
-inherit flag-o-matic eutils gcc
+inherit flag-o-matic eutils gcc libtool
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 HOMEPAGE="http://www.cups.org/ghostscript.php"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos s390 sparc x86"
 IUSE="X cups cjk emacs gtk"
 
 DEP="virtual/libc
@@ -44,6 +44,15 @@ src_unpack() {
 
 	cd ${S}
 
+	if use ppc-macos; then
+		epatch ${FILESDIR}/gs-osx-unix-dll.patch
+		cp src/unix-gcc.mak Makefile.in
+		sed -i -e "s:SHARE_JPEG=0:SHARE_JPEG=1:" Makefile.in || die
+		sed -i -e "s:SHARE_ZLIB=0:SHARE_ZLIB=1:" Makefile.in || die
+		sed -i -e "s:SHARE_LIBPNG=0:SHARE_LIBPNG=1:" Makefile.in || die
+		sed -i -e "s:usr/local:usr:" Makefile.in || die
+	fi
+
 	if use cjk ; then
 		epatch ${FILESDIR}/gs7.07.1-cjk.diff.bz2
 		epatch ${FILESDIR}/gs7.05.6-kochi-substitute.patch
@@ -65,6 +74,8 @@ src_unpack() {
 	# einstall borks on multilib systems -- eradicator
 	epatch ${FILESDIR}/gs${PV}-destdir.patch
 	epatch ${FILESDIR}/gs${PV}-ijsdestdir.patch
+
+	use ppc-macos && epatch ${FILESDIR}/gs-osx-ijs.patch
 
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):"\
