@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.5.0.ebuild,v 1.8 2004/07/20 14:47:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.5.0.ebuild,v 1.9 2004/08/02 18:08:37 spock Exp $
 
+inherit flag-o-matic
 IUSE="slang ncurses"
 
 DESCRIPTION="A multiplatform portable viewer of binary files with built-in editor in binary, hexadecimal and disassembler modes."
@@ -27,13 +28,6 @@ src_unpack() {
 #	sed -i "s/TARGET_OS=.*/TARGET_OS=linux/" makefile
 }
 
-pkg_setup() {
-	if [ -n "`/usr/bin/gcc --version | grep hardened`" ]; then
-		eerror "Currently biew doesn't work when GCC is compiled with the 'hardened' USE flag. Sorry."
-		die "Exiting"
-	fi
-}
-
 src_compile() {
 	cd ${S}
 
@@ -46,6 +40,8 @@ src_compile() {
 	else
 		scrnlib="vt100"
 	fi
+
+	filter-flags -fPIC
 
 	emake 	HOST_CFLAGS="${CFLAGS}" \
 		TARGET_SCREEN_LIB=${scrnlib} || die
