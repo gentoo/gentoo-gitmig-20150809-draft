@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.8.192.ebuild,v 1.3 2002/08/16 04:13:58 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.8.192.ebuild,v 1.4 2002/09/16 01:15:26 spider Exp $
 
 inherit gnome2
 
@@ -56,6 +56,11 @@ src_compile() {
 	else
 		myconf="$myconf --without-sqlite"
 	fi
+
+	if [ !"`use oci8`" ]
+	then
+	    myconf="$myconf --without-oracle"
+    fi
 
 	econf $myconf || die "configure failed"
 
