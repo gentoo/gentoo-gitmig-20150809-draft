@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/knoda
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.26 2005/02/25 02:09:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.27 2005/03/10 13:38:38 luckyduck Exp $
+
+  10 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> knoda-0.7.2.ebuild:
+  added ~amd64 KEYWORD, fixes #70460
 
   24 Feb 2005; Jason Wever <weeve@gentoo.org> knoda-0.7.2.ebuild:
   Added ~sparc keyword.
