@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.73 2005/01/09 21:03:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.74 2005/01/14 00:59:42 vapier Exp $
+
+*libsdl-1.2.8-r1 (13 Jan 2005)
+
+  13 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/1.2.8-amd64-endian.patch, +files/1.2.8-direct-8bit-color.patch,
+  libsdl-1.2.6-r3.ebuild, libsdl-1.2.7-r3.ebuild, +libsdl-1.2.8-r1.ebuild:
+  Add patches from upstream to fix asm errors on amd64 #77300 and direct 8bit
+  color #76946. Also punt useless C++ checks #74492.
 
   09 Jan 2005; Mike Frysinger <vapier@gentoo.org>
   +files/1.2.8-linux26.patch, libsdl-1.2.8.ebuild:

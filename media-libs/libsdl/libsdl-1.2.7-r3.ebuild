@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r3.ebuild,v 1.8 2005/01/03 02:19:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r3.ebuild,v 1.9 2005/01/14 00:59:42 vapier Exp $
 
 inherit toolchain-funcs fixheadtails eutils gnuconfig
 
@@ -62,6 +62,7 @@ src_unpack() {
 	fi
 
 	./autogen.sh || die "autogen failed"
+	epunt_cxx
 	gnuconfig_update
 }
 

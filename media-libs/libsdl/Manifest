@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ba9543364078a4cc2e887cec1eeaf81d ChangeLog 10936
-MD5 114ce0cde41698cd48fe7f21f8c95c7c libsdl-1.2.6-r3.ebuild 2897
-MD5 d1354ee11e24509f444f75566c12a58b libsdl-1.2.7-r3.ebuild 3846
+MD5 45ae682dfaaf5fe69a86542cf117fea9 ChangeLog 11298
+MD5 3d739d8898abbd33680c2b5ef990eac3 libsdl-1.2.6-r3.ebuild 2908
+MD5 600292a19b154118feaa18b5281b5d51 libsdl-1.2.7-r3.ebuild 3857
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
-MD5 d91b8e5b54c9e4739f1f5cc7d7d66bf9 libsdl-1.2.8.ebuild 4030
+MD5 9dbd35eeb938ee50f16789d7a9556634 libsdl-1.2.8-r1.ebuild 4157
 MD5 0c2020ec3ce37ea0612064c52d1014b1 files/1.2.6-alsa-1.0.0.patch 557
 MD5 60ecfde6cc7b734ef03b93357c537674 files/1.2.8-keyrepeat.patch 598
 MD5 803844293dc7df2bb7d2323c03977b71 files/1.2.7-libcaca.patch 23266
@@ -17,17 +17,19 @@ MD5 4f1ce33c931d461bed06277f60341085 files/1.2.6-nobuggy-X.patch 568
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.7-nobuggy-X.patch 568
 MD5 e0c6c6ffc15475282fc864b8f52f0abf files/1.2.8-linux26.patch 1268
 MD5 abf0c6fe9d93e5b0cc9a4dbb6d93ad87 files/1.2.7-joystick2.patch 16196
+MD5 4a2d1ec0616ac20777043a1341e7f04b files/1.2.8-amd64-endian.patch 943
 MD5 71a857d2bbcc34c4807638eb5d710f2e files/1.2.7-26headers.patch 1017
 MD5 323ad5b1e83521630dd4d54819c5efbd files/1.2.8-gcc2.patch 743
 MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7-r3 62
 MD5 88437c556d9b4571f08de4a4e2d9323a files/1.2.8-libcaca.patch 23278
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.8-nobuggy-X.patch 568
-MD5 4ce5ec18eafcf0b1c6caf31c9f67cb1d files/digest-libsdl-1.2.8 62
+MD5 4ce5ec18eafcf0b1c6caf31c9f67cb1d files/digest-libsdl-1.2.8-r1 62
 MD5 22c541533c3c588f430b62440053071f files/1.2.8-gcc2-asm.patch 10160
+MD5 8de3272b60b93842b7b87949620de869 files/1.2.8-direct-8bit-color.patch 7727
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4Zw3roRuSHgZdywRAmVbAJsFOA4esNkWYPhderAu/svqCEzSPQCfez+q
-e5dDkRY3RQ0VAu1k8JYMbBE=
-=sJMg
+iD8DBQFB5xmgroRuSHgZdywRAiCYAKCHsZJKdcMIJT6zxijUcNPH0a73oACfZ6/R
+ihFbYqa13uG9bSTbTqzK6F8=
+=Fjsc
 -----END PGP SIGNATURE-----

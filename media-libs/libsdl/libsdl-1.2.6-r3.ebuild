@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.13 2005/01/04 09:53:42 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.14 2005/01/14 00:59:42 vapier Exp $
 
 inherit eutils
 
@@ -48,6 +48,8 @@ src_unpack() {
 			-e 's:-laudio:-laudio -L/usr/X11R6/lib:' \
 			configure || die "nas sed hack failed"
 	fi
+
+	epunt_cxx
 }
 
 src_compile() {
