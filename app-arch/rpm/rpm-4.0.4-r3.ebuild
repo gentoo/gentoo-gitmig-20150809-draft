@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r2.ebuild,v 1.8 2002/07/24 01:41:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r3.ebuild,v 1.1 2002/07/24 01:41:48 seemant Exp $
 
 # note to self: check for java deps
 
@@ -18,7 +18,8 @@ RDEPEND="=sys-libs/db-3.2*
 	>=sys-apps/bzip2-1.0.1
 	>=dev-libs/popt-1.6.3"
 
-DEPEND="$RDEPEND nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 src_unpack() {
 
@@ -29,13 +30,13 @@ src_unpack() {
 	# Suppress pointer warnings
 	cp configure configure.orig
 	sed -e "s:-Wpointer-arith::" configure.orig > configure
-
 }
 
 src_compile() {
 
 	local myconf
 	use nls || myconf="--disable-nls"
+
 	econf ${myconf} || die
 	make || die
 }
@@ -52,5 +53,4 @@ src_install() {
 pkg_postinst() {
 
 	${ROOT}/usr/bin/rpm --initdb --root=${ROOT}
-
 }
