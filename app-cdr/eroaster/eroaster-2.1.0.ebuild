@@ -1,53 +1,56 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.10 2002/10/19 16:34:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.11 2002/10/22 05:36:44 seemant Exp $
 
 IUSE="xmms"
 
+S=${WORKDIR}/${P}
 DESCRIPTION="A graphical frontend for cdrecord and mkisofs written in gnome-python"
 HOMEPAGE="http://eroaster.sourceforge.net"
 SRC_URI="mirror://sourceforge/eroaster/${P}.tar.gz"  
 
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
-SLOT="0"
 
 # cdrecord and mkisofs are needed or configure fails
 DEPEND=">=dev-lang/python-2.0
 	>=dev-python/gnome-python-1.4
 	app-cdr/cdrtools"
 
-# xmms here is only used in runtime
+# xmms, lame and vorbis-tools are just runtime conveniences
 # not a bulild dep.
 RDEPEND="${DEPEND}
-	xmms? ( media-sound/xmms )"
-
-S=${WORKDIR}/${P}
-
-src_compile() {
-	econf || die "./configure failed"
-	emake || die
-}
+	xmms? ( media-sound/xmms )
+	encode? ( media-sound/lame )
+	oggvorbis? ( media-sound/vorbis-tools )
 
 src_install () {
-	make \
-		prefix=${D}/usr \
-		gnorbadir=${D}/usr/share/eroaster \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die
+	einstall \
+		gnorbadir=${D}/usr/share/eroaster || die
 }
 
 pkg_postinst() {
-	einfo
 	einfo "The following binaries are needed to make full use of this program:"
 	einfo
 	einfo "mpg123   For converting MP3s to WAVs and playing MP3s"
 	einfo "sox      For converting MP3s to WAVs"
-	einfo "xmms     For playing MP3s"
+	
+	if [ -z "`use xmms`" ]
+	then
+		einfo "xmms     For playing MP3s"
+	fi
+
 	einfo "bchunk   For converting BIN/CUE to ISO"
-	einfo "lame     For Encoding MP3s"
-	einfo "ogginfo  For Getting OGG ID3 information"
-	einfo "ogg123   For converting OGGs to WAVs"
-	einfo
+
+	if [ -z "`use encode`" ]
+	then
+		einfo "lame     For Encoding MP3s"
+	fi
+
+	if [ -z "`use oggvorbis`" ]
+	then
+		einfo "ogginfo  For Getting OGG ID3 information"
+		einfo "ogg123   For converting OGGs to WAVs"
+	fi
 }
