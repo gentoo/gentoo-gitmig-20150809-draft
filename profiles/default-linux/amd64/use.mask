@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.7 2004/10/17 20:12:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.8 2004/11/03 23:08:46 lv Exp $
 
 #unknowns
 afs
@@ -63,6 +63,10 @@ uclibc
 
 # altivec is a ppc instruction set.
 altivec
+
+# n32 and n64 are mips ABIs
+n32
+n64
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
