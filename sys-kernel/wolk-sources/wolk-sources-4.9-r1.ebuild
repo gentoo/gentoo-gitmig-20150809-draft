@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.10_pre7.ebuild,v 1.3 2003/11/14 07:08:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r1.ebuild,v 1.1 2003/11/14 07:08:11 nerdboy Exp $
 
 IUSE="build wolk-bootsplash wolk-supermount ipv6"
 
@@ -11,10 +11,10 @@ ETYPE="sources"
 inherit kernel || die
 
 OKV=2.4.20
-KV=${OKV}-wolk4.10s-pre7
+KV=${OKV}-wolk4.9s
 S=${WORKDIR}/linux-${KV}
 DESCRIPTION="Working Overloaded Linux Kernel (Server-Edition)"
-KEYWORDS="~x86 ~x86-64 ~ppc ~sparc ~sparc64 ~s390 ~alpha ~hppa ~arm ~mips"
+KEYWORDS="x86 ~x86-64 ~ppc ~sparc ~sparc64 ~s390 ~alpha ~hppa ~arm ~mips"
 SRC_PATH="mirror://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
@@ -28,19 +28,17 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://sourceforge/wolk/linux-${OKV}-wolk4.6s-to-4.7s.patch.bz2
 	mirror://sourceforge/wolk/linux-${OKV}-wolk4.7s-to-4.8s.patch.bz2
 	mirror://sourceforge/wolk/linux-${OKV}-wolk4.8s-to-4.9s.patch.bz2
-	http://wolk.sourceforge.net/tmp/4.10s-pre7-update.patch.bz2
-	wolk-bootsplash? ( http://wolk.sourceforge.net/Workstation-Edition/1007_bootsplash-v3.0.7-2.4.20-0.patch
-			 http://wolk.sourceforge.net/Workstation-Edition/1007_bootsplash-v3.0.7-2.4.20-1-aty128.patch
-			 http://wolk.sourceforge.net/Workstation-Edition/1007_bootsplash-v3.0.8-2.4.20-update.patch)
-	wolk-supermount? ( http://wolk.sourceforge.net/Workstation-Edition/1008_supermount-1.2.9-2.4.20-OLDIDE.patch)
-	ipv6? ( http://wolk.sourceforge.net/Workstation-Edition/1009_mipv6-0.9.5.1-v2.4.20-wolk4.0s.patch )"
+		wolk-bootsplash? ( http://wolk.sourceforge.net/Workstation-Edition/1007_bootsplash-v3.0.7-2.4.20-0.patch
+			http://wolk.sourceforge.net/Workstation-Edition/1007_bootsplash-v3.0.7-2.4.20-1-aty128.patch
+			http://wolk.sourceforge.net/Workstation-Edition/1007_bootsplash-v3.0.8-2.4.20-update.patch)
+		wolk-supermount? ( http://wolk.sourceforge.net/Workstation-Edition/1008_supermount-1.2.9-2.4.20-OLDIDE.patch)
+		ipv6? ( http://wolk.sourceforge.net/Workstation-Edition/1009_mipv6-0.9.5.1-v2.4.20-wolk4.0s.patch )"
 
 SLOT="${KV}"
 HOMEPAGE="http://wolk.sourceforge.net http://www.kernel.org"
 
 src_unpack() {
 local PATCHEFILES="-wolk4.0s -wolk4.0s-to-4.1s -wolk4.1s-to-4.2s -wolk4.2s-to-4.3s -wolk4.3s-to-4.4s -wolk4.4s-to-4.5s -wolk4.5s-to-4.6s -wolk4.6s-to-4.7s -wolk4.7s-to-4.8s -wolk4.8s-to-4.9s"
-
 	unpack linux-${OKV}.tar.bz2 || die
 		mv linux-${OKV} linux-${KV} || die
 		cd ${WORKDIR}/linux-${KV} || die
@@ -49,22 +47,28 @@ local PATCHEFILES="-wolk4.0s -wolk4.0s-to-4.1s -wolk4.1s-to-4.2s -wolk4.2s-to-4.
 			epatch ${DISTDIR}/linux-${OKV}${PATCHES}.patch.bz2 || die
 		done
 
-	epatch ${DISTDIR}/4.10s-pre7-update.patch.bz2 || die
+	einfo "Applying nvidia patches"
+	epatch ${FILESDIR}/wolk-4.9s-nvidia.patch || die
 
-		if [ "`use wolk-supermount`" ]; then
-			einfo "Applying Supermount patch"
-			epatch ${DISTDIR}/1008_supermount-1.2.9-2.4.20-OLDIDE.patch  || die
-		fi
-		if [ "`use ipv6`" ]; then
-			einfo "Applying MIPv6 patch"
-			epatch ${DISTDIR}/1009_mipv6-0.9.5.1-v2.4.20-wolk4.0s.patch  || die
-		fi
-		if [ "`use wolk-bootsplash`" ]; then
-			einfo "Applying Bootsplash patchset"
-			epatch ${DISTDIR}/1007_bootsplash-v3.0.7-2.4.20-0.patch  || die
-			epatch ${DISTDIR}/1007_bootsplash-v3.0.7-2.4.20-1-aty128.patch  || die
-			epatch ${DISTDIR}/1007_bootsplash-v3.0.8-2.4.20-update.patch || die
-		fi
+	einfo "Applying other needed patches"
+	epatch ${FILESDIR}/wolk-4.9s-speedstep.c.patch || die
+
+	if [ "`use wolk-supermount`" ]; then
+		ewinfo "Applying Supermount patch"
+		epatch ${DISTDIR}/1008_supermount-1.2.9-2.4.20-OLDIDE.patch  || die
+	fi
+	if [ "`use ipv6`" ]; then
+		einfo "Applying MIPv6 patch"
+		epatch ${DISTDIR}/1009_mipv6-0.9.5.1-v2.4.20-wolk4.0s.patch  || die
+	fi
+
+	if [ "`use wolk-bootsplash`" ]; then
+		einfo "Applying Bootsplash patches"
+		epatch ${DISTDIR}/1007_bootsplash-v3.0.7-2.4.20-0.patch  || die
+		epatch ${DISTDIR}/1007_bootsplash-v3.0.7-2.4.20-1-aty128.patch  || die
+		epatch ${DISTDIR}/1007_bootsplash-v3.0.8-2.4.20-update.patch || die
+	fi
+
 	kernel_universal_unpack
 }
 
@@ -77,10 +81,9 @@ pkg_postinst() {
 	einfo "to use one of this drivers."
 	einfo
 	einfo "This new ebuild has support for the workstation patches."
-	einfo "With the wolk-bootsplash, wolk-supermount, and ipv6"
-	einfo "use flags you can take advantage of the, "
-	einfo "Bootsplash, Supermount, MIPv6 patches."
+	einfo "With the wolk-bootsplash, wolk-supermount, and"
+	einfo "ipv6 use flags you can take advantage of the"
+	einfo "Bootsplash, Supermount, and MIPv6 patches."
 	ewarn "Patches not guaranteed; YMMV..."
 	einfo
 }
-

@@ -1,0 +1,30 @@
+--- arch/i386/kernel/speedstep.c.orig	2003-09-04 15:10:18.000000000 +0200
++++ arch/i386/kernel/speedstep.c	2003-09-04 15:11:37.000000000 +0200
+@@ -694,7 +694,6 @@
+ 
+ __setup("speedstep_coppermine=", speedstep_setup);
+ __setup("speedstep_default=", speedstep_set_default);
+-#endif
+ 
+ 
+ static struct cpufreq_driver speedstep_driver = {
+@@ -706,6 +705,19 @@
+ 	.name		= "speedstep",
+ };
+ 
++# else
++
++static struct cpufreq_driver speedstep_driver = {
++        .verify         = speedstep_verify,
++        .target         = speedstep_target,
++        .init           = speedstep_cpu_init,
++        .exit           = NULL,
++        .policy         = NULL,
++        .name           = "speedstep",
++};
++
++#endif
++
+ /**
+  * speedstep_init - initializes the SpeedStep CPUFreq driver
+  *
