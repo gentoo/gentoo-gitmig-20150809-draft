@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.10.ebuild,v 1.2 2004/04/19 01:08:55 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.10.ebuild,v 1.3 2004/04/27 18:08:12 pebenito Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ RDEPEND="sec-policy/selinux-base-policy"
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s:-Wall:-Wall ${CFLAGS}:g" ${S}/Makefile
+	sed -i -e "s:-Wall:-Wall ${CFLAGS}:g" -e 's/$(LIBS)/$(LIBS) $(LDFLAGS)/' ${S}/Makefile
 }
 
 src_compile() {

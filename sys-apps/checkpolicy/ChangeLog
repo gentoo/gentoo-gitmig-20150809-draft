@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.17 2004/04/19 01:03:46 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.18 2004/04/27 18:08:09 pebenito Exp $
+
+  27 Apr 2004; Chris PeBenito <pebenito@gentoo.org> checkpolicy-1.10.ebuild:
+  Make it listen to LDFLAGS.
 
 *checkpolicy-1.10 (18 Apr 2004)
 
