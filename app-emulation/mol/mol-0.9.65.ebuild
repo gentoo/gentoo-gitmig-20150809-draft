@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.65.ebuild,v 1.1 2002/09/08 07:46:16 trance Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.65.ebuild,v 1.2 2002/09/20 20:13:03 trance Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="MOL (Mac-on-Linux) is a PPC-only program to run Mac OS <=9.2 natively within Linux"
+DESCRIPTION="MOL (Mac-on-Linux) is a PPC-only program to run Mac OS X and under natively within Linux"
 SRC_URI="ftp://ftp.nada.kth.se/pub/home/f95-sry/Public/mac-on-linux/${P}.tgz"
 HOMEPAGE="http://www.maconlinux.net/"
 
