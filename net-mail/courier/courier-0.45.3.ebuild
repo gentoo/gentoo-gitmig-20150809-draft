@@ -11,7 +11,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ~ppc sparc"
 IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite"
 
 PROVIDE="virtual/mta
@@ -232,9 +232,6 @@ src_install() {
 		${D}/usr/share/courier/courierwebadmin/admin-45pop3.pl \
 		|| ewarn "failed to fix webadmin"
 
-}
-
-pkg_preinst() {
 	# avoid name collisions in /usr/sbin
 	local y
 	cd ${D}/usr/share/courier
