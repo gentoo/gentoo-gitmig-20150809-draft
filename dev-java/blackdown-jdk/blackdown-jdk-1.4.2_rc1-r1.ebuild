@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1-r1.ebuild,v 1.3 2004/09/29 20:59:28 axxo Exp $
-
-IUSE="doc mozilla"
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1-r1.ebuild,v 1.4 2004/10/01 04:40:56 axxo Exp $
 
 inherit java
 
@@ -21,6 +19,7 @@ HOMEPAGE="http://www.blackdown.org"
 SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* ~x86 ~amd64"
+IUSE="doc mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.6
@@ -95,7 +94,7 @@ src_install() {
 	dohtml README.html
 
 	# Install mozilla plugin if mozilla use flag is set
-	if use mozilla ; then
+	if use mozilla; then
 		case ${ARCH} in
 			amd64) platform="amd64" ;;
 			ppc) platform="ppc" ;;

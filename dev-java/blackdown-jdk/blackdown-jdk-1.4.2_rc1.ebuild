@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.14 2004/09/29 20:59:28 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.15 2004/10/01 04:40:56 axxo Exp $
 
 inherit java
 
@@ -19,6 +19,7 @@ HOMEPAGE="http://www.blackdown.org"
 SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* ~x86 amd64"
+IUSE="doc mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.6
@@ -28,7 +29,6 @@ PROVIDE="virtual/jdk-1.4.2
 	virtual/jre-1.4.2
 	virtual/java-scheme-2"
 
-IUSE="doc mozilla"
 
 # Extract the 'skip' value (offset of tarball) we should pass to tail
 get_offset() {
@@ -94,10 +94,11 @@ src_install() {
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html
 
-	# Install mozilla plugin
+	# Install mozilla plugin if mozilla use flag is set
 	if use mozilla; then
 		case ${ARCH} in
-			amd64|x86) platform="i386" ;;
+			amd64) platform="amd64" ;;
+			x86) platform="i386" ;;
 			ppc) platform="ppc" ;;
 			sparc*) platform="sparc" ;;
 		esac
