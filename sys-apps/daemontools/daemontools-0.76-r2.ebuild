@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r2.ebuild,v 1.3 2003/02/13 15:51:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r2.ebuild,v 1.4 2003/02/27 02:44:30 vapier Exp $
 
-S=${WORKDIR}/admin/${P}
+inherit eutils
 
 DESCRIPTION="Collection of tools for managing UNIX services"
 SRC_URI="http://cr.yp.to/daemontools/${P}.tar.gz"
@@ -14,12 +14,14 @@ LICENSE="freedist"
 
 DEPEND="virtual/glibc"
 
+S=${WORKDIR}/admin/${P}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${PV}-errno.patch
 
-	LDFLAGS=
-	use static && LDFLAGS="-static"
+	use static && LDFLAGS="${LDFLAGS} -static"
 
 	echo "gcc ${CFLAGS}" > src/conf-cc
 	echo "gcc ${LDFLAGS}" > src/conf-ld
