@@ -1,0 +1,21 @@
+--- unicorn/unicorn_usb/unicorn_usbdrv.c.orig	2004-12-14 23:03:58.498415040 +0000
++++ unicorn/unicorn_usb/unicorn_usbdrv.c	2004-12-14 23:04:49.927596616 +0000
+@@ -119,8 +119,8 @@ static void dump_urb(struct urb *urb)
+ 
+ 	printk(KERN_DEBUG "hcpriv=%p,dev=%p,pipe=%x,status=%d,transfer_flags=%d\n",
+ 	       urb->hcpriv,urb->dev,urb->pipe,urb->status,urb->transfer_flags);
+-	printk(KERN_DEBUG "bandwidth=%d,start_frame=%u,interval=%d,error_count=%d,timeout=%d\n",
+-	    urb->bandwidth,urb->start_frame,urb->interval,urb->error_count,urb->timeout);
++	printk(KERN_DEBUG "bandwidth=%d,start_frame=%u,interval=%d,error_count=%d\n",
++	    urb->bandwidth,urb->start_frame,urb->interval,urb->error_count);
+ 	// buffers
+ 	printk(KERN_DEBUG "transfer_buffer=%p,transfer_buffer_length=%d,actual_length=%d\n",
+ 	       urb->transfer_buffer,urb->transfer_buffer_length,urb->actual_length);
+@@ -149,7 +149,6 @@ static void fill_isoc_urb(struct urb *ur
+ 	urb->transfer_flags=USB_ISO_ASAP;
+ 	urb->start_frame = -1;
+ 	urb->interval = 1;
+-	urb->timeout = 0;
+ 	urb->complete=complete;
+ 	urb->context=context;
+ 	{

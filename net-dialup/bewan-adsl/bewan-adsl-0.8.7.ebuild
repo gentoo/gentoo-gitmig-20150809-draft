@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.8.7.ebuild,v 1.3 2004/12/05 21:17:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.8.7.ebuild,v 1.4 2004/12/14 21:20:09 mrness Exp $
 
-inherit eutils linux-info
+inherit eutils linux-mod
 
 DESCRIPTION="Bewan ADSL PCI&USB st driver"
 SRC_URI="http://www.bewan.com/bewan/drivers/bast-${PV}.tgz"
@@ -11,55 +11,61 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="usb doc"
+DEPEND="virtual/linux-sources"
 
 S="${WORKDIR}/unicorn"
 
-src_compile() {
+PCI_S="${S}/unicorn_pci"
+USB_S="${S}/unicorn_usb"
+BUILD_PARAMS="KERNEL_SOURCES=${KV_DIR} KVERS=${KV_FULL}"
+BUILD_TARGETS="modules"
+CONFIG_CHECK="ATM"
+ATM_ERROR="This driver requires you to build your kernel with support for Asynchronous Transfer Mode (ATM)"
 
+pkg_setup() {
+	MODULE_NAMES="unicorn_pci_atm(extra:${PCI_S}) unicorn_pci_eth(extra:${PCI_S})"
+	useq usb && MODULE_NAMES="${MODULE_NAMES} unicorn_usb_atm(extra:${USB_S})"
+
+	linux-mod_pkg_setup
+}
+
+src_unpack() {
+	unpack ${A}
+
+	#As of Linux 2.6.9, timeout is no longer in the URB structure, see:
+	#http://linux.bkbits.net:8080/linux-2.6/cset@1.1832.8.20
+	if [ ${KV_MINOR} -ge 6 ] && [ ${KV_PATCH} -ge 9 ]; then
+		epatch ${FILESDIR}/bewan-adsl-kill-timeout.patch
+	fi
+
+	# Fix up broken Makefiles
+	convert_to_m ${PCI_S}/Makefile
+	useq usb && convert_to_m ${USB_S}/Makefile
+}
+
+src_compile() {
 	einfo "Build common library"
 	cd ${S}/libm
 	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die
 	unset ARCH #unset ARCH because interfere with 2.6 kernel makefiles
 
-	einfo "Build PCI driver"
-	cd ${S}/unicorn_pci
-	emake || die "Failed to build PCI driver"
-
-	if use usb; then
-		einfo "Build USB driver"
-		cd ${S}/unicorn_usb
-		emake || die "Failed to build USB driver"
-	fi
-
-	#Build tools
+	einfo "Building tools"
 	cd ${S}/tools
 	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
+
+	linux-mod_src_compile
 }
 
 src_install() {
-	if kernel_is 2 6 ; then
-		KV_OBJ="ko"
-	else
-		KV_OBJ="o"
-	fi
+	linux-mod_src_install
 
 	cd ${S}
-	insinto "/lib/modules/${KV}/kernel/drivers/atm"
-	doins unicorn_pci/unicorn_pci_atm.${KV_OBJ} && \
-		doins unicorn_pci/unicorn_pci_eth.${KV_OBJ} || \
-		die "PCI driver not found! Install aborted."
-	if use usb; then
-		doins unicorn_usb/unicorn_usb_atm.${KV_OBJ} && \
-			doins unicorn_usb/unicorn_usb_eth.${KV_OBJ} || \
-			die "USB driver not found! Install aborted."
-	fi
-
 	#Install tools
 	dodir /usr/bin
 	cd ${S}/tools && einstall DESTDIR=${D} prefix=/usr || \
 		die "Cannot install tools"
 
-	if use doc; then
+	if useq doc; then
 		#Install documantation	
 		cd ${S}
 		dodoc README
@@ -73,15 +79,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To load the driver do 'insmod unicorn_atm' and 'insmod unicorn_pci' "
+	einfo "To load the driver do 'modprobe unicorn_atm' and 'modprobe unicorn_pci' "
 	einfo "and then do what you want with it (configure your pppd)"
 	einfo "OR"
 	einfo "it's time to look at the README file, the scripts directory gives you"
 	einfo "two comprehensive ways to load the driver, configure pppd and launch it."
-	einfo ""
 
-	einfo "Checking kernel module dependencies"
-	test -r "${ROOT}/usr/src/linux/System.map" && \
-		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
+	linux-mod_pkg_postinst
 }
-
