@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $ Header: $
+# ChangeLog for app-sci/clustalw
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/ChangeLog,v 1.2 2003/04/22 10:16:28 vapier Exp $
 
 *clustalw-1.83 (04 Apr 2003)
 
- 04 Apr 2003; Michael Imhof <tantive@gentoo.org> :
- Initial release.
- This ebuild was submitted by Gontran Zepeda <gontran@gontran.net>.
- Should close #18679.
+  04 Apr 2003; Michael Imhof <tantive@gentoo.org> :
+  Initial release.
+  This ebuild was submitted by Gontran Zepeda <gontran@gontran.net>.
+  Should close #18679.
