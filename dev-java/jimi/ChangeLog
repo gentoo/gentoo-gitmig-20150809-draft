@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jimi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/ChangeLog,v 1.4 2004/10/17 09:36:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/ChangeLog,v 1.5 2004/10/17 09:59:33 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jimi-1.0.ebuild:
+  depend on app-arch/unzip
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jimi-1.0.ebuild:
   keyword x86

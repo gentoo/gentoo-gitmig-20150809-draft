@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e70c8c621faedfa37d563e87d5879ac5 sablecc-anttask-1.1.0.ebuild 793
-MD5 fab23a519b6cc8681b4b5bcc11cd333c ChangeLog 589
+MD5 d822ce0d93354d6d156eb34688699e8e ChangeLog 683
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
+MD5 a04e8dc93a886e49d57443fbb54cd8a0 sablecc-anttask-1.1.0.ebuild 799
 MD5 e3ec25d0d50b2843532578c81939ff15 files/digest-sablecc-anttask-1.1.0 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVur/rLF9B432nYRAsxpAKC0QZ7Q7rvXUbxH+SMoA3XZtSJMrACfQUBT
-EBHf2z7EIpxuwJyDjVi91yw=
-=1QFz
------END PGP SIGNATURE-----
