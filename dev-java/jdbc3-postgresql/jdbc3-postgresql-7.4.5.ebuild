@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/jdbc3-postgresql-7.4.5.ebuild,v 1.1 2004/09/26 13:48:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/jdbc3-postgresql-7.4.5.ebuild,v 1.2 2004/09/26 19:43:26 mr_bones_ Exp $
 
 inherit java-pkg eutils versionator
 
@@ -12,8 +12,8 @@ IUSE=""
 LICENSE="POSTGRESQL"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.3
-		>=dev-java/ant-1.3
-       	dev-java/java-config"
+	>=dev-java/ant-1.3
+	dev-java/java-config"
 
 RDEPEND=">=virtual/jdk-1.3"
 
@@ -41,4 +41,3 @@ src_install() {
 	mv jars/postgresql.jar jars/${PN}.jar
 	java-pkg_dojar jars/${PN}.jar
 }
-
