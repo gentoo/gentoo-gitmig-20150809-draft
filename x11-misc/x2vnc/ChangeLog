@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/x2vnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.7 2003/02/12 09:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.8 2003/03/17 10:32:27 phosphan Exp $
+
+*x2vnc-1.5.1 (17 Mar 2003)
+
+  17 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> x2vnc-1.3.1.ebuild
+  x2vnc-1.5.1.ebuild x2vnc-1.31.ebuild files/digest-x2vnc-1.3.1 
+  files/digest-x2vnc-1.5.1 : 	
+  New version, masked 1.31 and provided 1.3.1 which is the same but has
+  a correct version number. Else the new 1.5.1 would be considered older.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
