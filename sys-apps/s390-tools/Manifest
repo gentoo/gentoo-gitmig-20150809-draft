@@ -1,0 +1,6 @@
+MD5 b60682ad3d2577bc500f31230077b21d s390-tools-1.2.4.ebuild 1421
+MD5 d523827ebe4465f93e50b5847c696099 ChangeLog 527
+MD5 084122472fde6b591c7a6474e066f2c8 metadata.xml 811
+MD5 d27d451e8020585ffb997a66a96b30e4 files/digest-s390-tools-1.2.4 278
+MD5 5237af379f668ca4e112dd27e11ecfa1 files/s390-tools-1.2.4-ucdsnmp.diff 436
+MD5 2de7c8793f6dbffe92910ab4ab08e318 files/s390-tools-1.2.4-vtoc.diff 2102
