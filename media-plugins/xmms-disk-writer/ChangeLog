@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/xmms-disk-writer
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-disk-writer/ChangeLog,v 1.1 2005/02/12 03:36:13 eradicator Exp $
+
+*xmms-disk-writer-1.2.10-r1 (11 Feb 2005)
+
+  11 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +xmms-disk-writer-1.2.10-r1.ebuild, +xmms-disk-writer-1.2.10.ebuild:
+  Initial import.  Stripped out of media-sound/xmms.
+
