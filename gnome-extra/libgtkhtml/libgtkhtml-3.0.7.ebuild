@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.7.ebuild,v 1.5 2003/09/06 23:52:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.7.ebuild,v 1.6 2003/09/08 17:29:06 pappy Exp $
 
 inherit gnome2
 
@@ -43,7 +43,7 @@ ELTCONF="--reverse-deps"
 
 src_compile() {
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	has_version 'sys-devel/hardened-gcc' && append-flags '-yet_exec'
+	# has_version 'sys-devel/hardened-gcc' && append-flags '-yet_exec'
 
 	gnome2_src_configure
 	patch ${S}/libtool < ${FILESDIR}/${P}-libtool.patch || die "libtool patch failed"
