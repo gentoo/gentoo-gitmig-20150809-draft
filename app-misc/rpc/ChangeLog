@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rpc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/ChangeLog,v 1.6 2003/10/18 07:32:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/ChangeLog,v 1.7 2003/10/28 03:24:48 mr_bones_ Exp $
+
+  27 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> rpc-0.98.ebuild:
+  Marking stable so people stop trying to use 0.97.
 
 *rpc-0.98 (18 Oct 2003)
 

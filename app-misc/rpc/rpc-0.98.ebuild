@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/rpc-0.98.ebuild,v 1.2 2003/10/18 07:32:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/rpc-0.98.ebuild,v 1.3 2003/10/28 03:24:48 mr_bones_ Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="A fullscreen console-based RPN calculator that uses the curses libr
 SRC_URI="http://www.eecs.umich.edu/~pelzlpj/rpc/${P}.tar.gz"
 HOMEPAGE="http://www.eecs.umich.edu/~pelzlpj/rpc/"
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
