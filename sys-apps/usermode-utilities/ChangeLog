@@ -1,7 +1,12 @@
 # ChangeLog for dev-util/usermode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.1 2002/10/10 10:10:57 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.2 2002/11/03 11:07:11 tantive Exp $
 
+
+*usermode-20021102 (03 Nov 2002)
+
+  03 Nov 2002; Michael Imhof <tantive@gentoo.org>
+  Version bumped.
 
 *usermode-utilities-* (10 Oct 2002)
 
