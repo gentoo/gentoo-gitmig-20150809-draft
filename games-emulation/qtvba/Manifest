@@ -1,5 +1,5 @@
-MD5 b9a46d55904a0147a9492cbdb526f2a8 qtvba-0.2.ebuild 733
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 484ed64436cbf88e6a1f192135f0dc2f ChangeLog 379
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 6a88c58d4f12f9694d8686842a514911 qtvba-0.2.ebuild 728
 MD5 d23d7ac95a82c235760a949cc54357a5 files/0.2-Makefilefix.patch 1706
 MD5 e0b84065e3aaf7c489a785d7684c2d95 files/digest-qtvba-0.2 61
