@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.61 2004/06/27 20:45:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.62 2004/07/21 16:30:28 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -169,7 +169,8 @@ src_compile() {
 	local myconf confrule
 
 	# Fix bug 37354: Disallow -funroll-all-loops on amd64
-	[[ $ARCH == amd64 ]] && filter-flags -funroll-all-loops
+	# Bug 57859 suggests that we want to do this for all archs
+	filter-flags -funroll-all-loops
 
 	# Fix bug 18245: Prevent "make" from the following chain:
 	# (1) Notice configure.in is newer than auto/configure
