@@ -16,9 +16,12 @@ if [ ! -d ~/.epsxe ]; then
 	if [ -f /usr/lib/psemu/bios/scph1001.bin ]; then
 		ln -s /usr/lib/psemu/bios/scph1001.bin .
 	else
-		wget http://aral3uz.tripod.com/sc.zip
-		unzip -L sc.zip
-		rm -f sc.zip
+		echo -e "\007"
+		echo "*** Put your BIOS file into $HOME/.epsxe/bios,"
+		echo "    or ePSXe may not work!"
+		echo ""
+		echo " Hit enter key to continue..."
+		read
 	fi
 fi
 

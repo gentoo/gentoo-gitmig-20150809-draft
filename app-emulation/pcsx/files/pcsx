@@ -11,8 +11,16 @@ if [ ! -f ~/.pcsx/config ]; then
 	ln -s /usr/bin/pcsx.bin pcsx
 	ln -s /usr/lib/psemu/plugins/* plugins/
 
+	cd bios
+	if [ -f /usr/lib/psemu/bios/scph1001.bin ]; then
+		ln -s /usr/lib/psemu/bios/scph1001.bin .
+		biosname=scph1001.bin
+	else
+		biosname=HLE
+	fi
+
 	cat >$HOME/.pcsx/config <<EOF
-Bios = scph1001.bin
+Bios = $biosname
 Gpu = $(basename $(echo plugins/libgpu* | cut -f1 -d\ ) )
 Spu = $(basename $(echo plugins/libspu* | cut -f1 -d\ ) )
 Cdr = $(basename $(echo plugins/libcdr* | cut -f1 -d\ ) )
@@ -33,15 +41,7 @@ PsxOut = 0
 SpuIrq = 0
 CdTiming = 0
 EOF
-
-	cd bios
-	if [ -f /usr/lib/psemu/bios/scph1001.bin ]; then
-		ln -s /usr/lib/psemu/bios/scph1001.bin .
-	else
-		wget http://aral3uz.tripod.com/sc.zip
-		unzip -L sc.zip
-		rm -f sc.zip
-	fi
+	unset biosname
 fi
 
 cd $HOME/.pcsx/
