@@ -1,6 +1,9 @@
-# ChangeLog for dev-ml/ulex
+# ChangeLog for dev-ml/camomile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.4 2004/08/25 02:17:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.5 2004/09/05 07:24:38 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> camomile-0.5.3.ebuild:
   Changed SRC_URI to use mirror:// syntax.
