@@ -129,9 +129,8 @@
 *sys-apps/iproute2
 #not required, since glibc depends on linux-headers and they come with the build image
 *sys-kernel/linux-headers
-
 #these ones have rc6 specific initfiles
->=sys-apps/xinetd-2.3.3-r1
+>=sys-apps/xinetd-2.3.3-r6
 >=net-fs/samba-2.2.1a-r6
 #multiple support in portage needed for this?
 #>=net-fs/samba-2.0.10-r6
