@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.938 2005/02/06 17:56:48 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.939 2005/02/07 07:00:49 superlag Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -753,5 +753,6 @@ x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
 x11-wm/icewm:silverxp - Apply ybuttons.cc.patch necessary for SilverXP theme
 x11-wm/metisse:freetype - Enable freetype font support
+x11-wm/openbox:startup-notification - Enable application startup notification
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
 x11-wm/windowmaker:vdesktop - Enable NEWTWM style virtual desktop support.
