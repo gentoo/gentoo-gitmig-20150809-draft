@@ -94,7 +94,7 @@
 *app-arch/ncompress
 *>=sys-apps/baselayout-1.7.9-r1
 *>=sys-apps/portage-2.0.35
-*=sys-devel/binutils-2.13.90.0.18
+*>=sys-devel/binutils-2.13.90.0.18
 *>=sys-devel/gcc-3.2.1
 *>=sys-libs/glibc-2.3.1-r2
 
