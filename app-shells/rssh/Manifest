@@ -1,4 +1,14 @@
-MD5 d6409bed9e8f44c0bfd20945ba943e13 rssh-2.2.1.ebuild 833
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c7264ec90eb5ae9bd94000558b9aab76 ChangeLog 841
 MD5 7b93999626c2904945bb487fe7f4b377 metadata.xml 273
+MD5 3515bd468eb9bf50667c8fedd85c39c8 rssh-2.2.1.ebuild 830
 MD5 b8eb40429d9aa0fbb47e1c396fdb7456 files/digest-rssh-2.2.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4OjmHTu7gpaalycRAp77AJ9S576OhCaNI0adyN51LBADzk+jcQCfTAMk
+k8b1hdhXgTIYNMkeqGy5vGs=
+=ONtQ
+-----END PGP SIGNATURE-----

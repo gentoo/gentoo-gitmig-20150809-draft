@@ -1,4 +1,14 @@
-MD5 87ea4c115f6f00829ed50c08d5f1f06f bashish-1.9.21.ebuild 793
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1075583d672dff761e4bd134d9e4ac1f ChangeLog 527
-MD5 be13d9a99e08f849c6aaa0151fc2e645 files/digest-bashish-1.9.21 66
+MD5 dd3107c74d01f069f78c7a40c87c7a90 bashish-1.9.21.ebuild 799
 MD5 81feb15ed591ce02afc2217b9d11ace5 files/bashish.conf 61
+MD5 be13d9a99e08f849c6aaa0151fc2e645 files/digest-bashish-1.9.21 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4OdwHTu7gpaalycRAl41AKDrDh13uerz2TtFPnyxaT5MZmUntgCgyo1R
+oXS5y21jKUTFnTcA6xq0jF4=
+=TFmX
+-----END PGP SIGNATURE-----

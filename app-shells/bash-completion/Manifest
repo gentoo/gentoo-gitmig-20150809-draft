@@ -1,8 +1,18 @@
-MD5 17b365812967175d1aec91767894c287 bash-completion-20040526.ebuild 1913
-MD5 894eb375b335be9d1d18a7b27ed3e93c bash-completion-20040526-r2.ebuild 2120
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b29d038163fb21399fb684da4ee5a1d4 ChangeLog 9222
 MD5 1dc8e7503e7e350f3382d37b612178cc metadata.xml 1023
-MD5 cf2b91fb90ddc3966177f3c31ff9fe16 files/gentoo.completion-20040526 16031
-MD5 a49b867e065849fd3f6ad2c9073d5d8f files/bash-completion 622
+MD5 115faf601395c07a603403509d2e6e25 bash-completion-20040526.ebuild 1918
+MD5 b7078b4059f2244bad22ce705f7f318f bash-completion-20040526-r2.ebuild 2124
+MD5 38a707ba9274991e61239ce569e840ff files/bash-completion 623
 MD5 1c828ed53387932b8ed971aafa179875 files/digest-bash-completion-20040526 76
+MD5 cf2b91fb90ddc3966177f3c31ff9fe16 files/gentoo.completion-20040526 16031
 MD5 d6ebad6cea105425801011b9c5f522a6 files/digest-bash-completion-20040526-r2 151
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4OdYHTu7gpaalycRAjQSAKDjWAJutY6VtPaFFZ7X0Skmh7CXLwCfdyvZ
+kDxDuAMETTmqAV9yJeexHrE=
+=NiWK
+-----END PGP SIGNATURE-----
