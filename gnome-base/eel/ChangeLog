@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/eel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.26 2003/01/31 01:40:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.27 2003/02/07 16:32:16 agriffis Exp $
+
+  07 Feb 2003; Aron Griffis <agriffis@gentoo.org> eel-2.2.0.2.ebuild :
+  Add ~alpha to KEYWORDS
 
 *eel-2.2.0.2 (30 Jan 2003)
 
