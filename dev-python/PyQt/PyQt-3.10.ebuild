@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.10.ebuild,v 1.1 2004/01/18 01:06:05 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.10.ebuild,v 1.2 2004/02/26 00:31:12 kloeri Exp $
 
 inherit distutils
 
@@ -26,6 +26,12 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	distutils_python_version
+
+	# fix qt-3.3 compile problem
+	if has_version '=x11-libs/qt-3.3*' ; then
+		epatch "${FILESDIR}/${P}-qt-3.3.patch"
+	fi
+
 	# standard qt sandbox problem workaround
 	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
 	dodir /usr/lib/python${PYVER}/site-packages /usr/include/python${PYVER} /usr/bin /usr/share/sip

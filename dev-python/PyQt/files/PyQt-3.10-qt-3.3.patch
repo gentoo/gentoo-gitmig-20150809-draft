@@ -1,0 +1,14 @@
+--- PyQt-x11-gpl-3.10/sip/qttable/qtable.sip~	2004-02-25 23:13:59.054964424 +0100
++++ PyQt-x11-gpl-3.10/sip/qttable/qtable.sip	2004-02-25 23:14:30.527179920 +0100
+@@ -168,11 +168,6 @@
+  
+ 	virtual int rtti() const;
+ %End
+-
+-protected:
+-%If (Qt_3_2_0 -)
+-	QString content() const;
+-%End
+ };
+ 
+ 
