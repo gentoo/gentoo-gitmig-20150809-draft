@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.14 2003/09/06 01:54:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.15 2003/09/08 06:59:01 vapier Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://zipper.paco.net/~igor/oops/oops-1.5.6.tar.gz"
@@ -25,21 +25,21 @@ src_unpack() {
 }
 
 src_compile() {
-	try ./configure --prefix=/usr --libdir=/usr/lib/oops --enable-oops-user=squid \
-		--sysconfdir=/etc/oops --sbindir=/usr/sbin --with-regexp=pcre --localstatedir=/var/run/oops
+	/configure --prefix=/usr --libdir=/usr/lib/oops --enable-oops-user=squid \
+		--sysconfdir=/etc/oops --sbindir=/usr/sbin --with-regexp=pcre --localstatedir=/var/run/oops || die
 	cd src
 	cp config.h.in config.h.in.orig
 	sed -e '/STRERROR_R/d' config.h.in.orig > config.h.in
 	cp Makefile Makefile.orig
 	sed -e 's:${OOPS:${DESTDIR}/${OOPS:g' Makefile.orig > Makefile
 	cd ..
-	try make
+	make || die
 }
 
 src_install() {
 	dodir /usr/sbin
 	chown squid.squid ${D}
-	try make DESTDIR=${D} install
+	make DESTDIR=${D} install || die
 	chmod -R g+srw ${D}/etc/oops
 	chmod -R g+rw ${D}/etc/oops/*
 
