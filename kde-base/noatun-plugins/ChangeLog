@@ -1,0 +1,11 @@
+# ChangeLog for kde-base/noatun-plugins
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.1 2005/02/11 18:35:02 danarmak Exp $
+
+*noatun-plugins-3.4.0_beta2-r1 (11 Feb 2005)
+
+  11 Feb 2005; Dan Armak <danarmak@gentoo.org> +metadata.xml,
+  +files/noatun-oblique-db-location-3.4.0_beta2.diff,
+  +noatun-plugins-3.4.0_beta2-r1.ebuild:
+  Initial import - replaces noatun-* ebuilds.
+
