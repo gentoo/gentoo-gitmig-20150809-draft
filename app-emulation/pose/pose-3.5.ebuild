@@ -8,9 +8,10 @@ SRC_URI="http://www.palmos.com/dev/tools/emulator/sources/emulator_src_3.5.tar.g
 
 DESCRIPTION="Palm OS Emulator"
 
-DEPEND=">=x11-libs/fltk-1.0.11"
-
-
+DEPEND="=x11-libs/fltk-1.1.0_beta10-r1"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 src_compile() {
 	cd ${WORKDIR}/Emulator_Src_3.5/BuildUnix
 	./configure || die

@@ -1,9 +1,13 @@
 # ChangeLog for app-text/hd2u
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # Maintainer: George Shapovalov <georges@its.caltech.edu>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/ChangeLog,v 1.1 2002/05/11 03:46:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/ChangeLog,v 1.2 2002/07/22 18:51:47 owen Exp $
 
 *pose-3.5,  (10 May 2002)
+
+  22 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  Changed DEPEND to fltk-1.1.0_beta10 as fltk-1.1.0_rc4 breaks
+  POSE.
 
   10 May 2002; G Shapovalov <george@gentoo.org> ChangeLog :
 
