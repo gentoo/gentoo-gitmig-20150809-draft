@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.18 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.19 2004/11/07 09:06:42 usata Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -58,109 +58,110 @@ TEXMF="/usr/share/texmf"
 SUPPLIER="misc" # This refers to the font supplier; it should be overridden
 
 latex-package_src_doinstall() {
-    debug-print function $FUNCNAME $*
-    # This actually follows the directions for a "single-user" system
-    # at http://www.ctan.org/installationadvice/ modified for gentoo.
-    [ -z "$1" ] && latex-package_src_install all
+	debug-print function $FUNCNAME $*
+	# This actually follows the directions for a "single-user" system
+	# at http://www.ctan.org/installationadvice/ modified for gentoo.
+	[ -z "$1" ] && latex-package_src_install all
 
-    while [ "$1" ]; do
-        case $1 in
-            "sh")
-                for i in `find . -maxdepth 1 -type f -name "*.${1}"`
-                do
-                    dobin $i
-                done
-                ;;
-            "sty" | "cls" | "fd" | "clo" | "def")
-                for i in `find . -maxdepth 1 -type f -name "*.${1}"`
-                do
-                    insinto ${TEXMF}/tex/latex/${PN}
-                    doins $i
-                done
-                ;;
-            "dvi" | "ps" | "pdf")
-                for i in `find . -maxdepth 1 -type f -name "*.${1}"`
-                do
-                    insinto /usr/share/doc/${P}
-                    doins $i
-                    #dodoc -u $i
-                done
-                ;;
-            "tex" | "dtx")
-                for i in `find . -maxdepth 1 -type f -name "*.${1}"`
-                do
-                    einfo "Making documentation: $i"
-                    texi2dvi -q -c --language=latex $i &> /dev/null
-                    done
-                ;;
-            "tfm" | "vf" | "afm" | "pfb")
-                for i in `find . -maxdepth 1 -type f -name "*.${1}"`
-                do
-                    insinto ${TEXMF}/fonts/${1}/${SUPPLIER}/${PN}
-                    doins $i
-                done
-                ;;
-            "ttf")
-                for i in `find . -maxdepth 1 -type f -name "*.ttf"`
-                do
-                    insinto ${TEXMF}/fonts/truetype/${SUPPLIER}/${PN}
-                    doins $i
-                done
-                ;;
-            "bst")
-                for i in `find . -maxdepth 1 -type f -name "*.bst"`
-                do
-                    insinto ${TEXMF}/bibtex/bst/${PN}
-                    doins $i
-                done
-                ;;
-            "styles")
-                latex-package_src_doinstall sty cls fd clo def bst
-                ;;
-            "doc")
-                latex-package_src_doinstall tex dtx dvi ps pdf
-                ;;
-            "fonts")
-                latex-package_src_doinstall tfm vg afm pfb ttf
-                ;;
-            "bin")
-                latex-package_src_doinstall sh
-                ;;
-            "all")
-                latex-package_src_doinstall styles fonts bin doc 
-                ;;
-        esac
-    shift
-    done
+	while [ "$1" ]; do
+		case $1 in
+			"sh")
+				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
+				do
+					dobin $i
+				done
+				;;
+			"sty" | "cls" | "fd" | "clo" | "def")
+				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
+				do
+					insinto ${TEXMF}/tex/latex/${PN}
+					doins $i
+				done
+				;;
+			"dvi" | "ps" | "pdf")
+				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
+				do
+					insinto /usr/share/doc/${P}
+					doins $i
+					#dodoc -u $i
+				done
+				;;
+			"tex" | "dtx")
+				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
+				do
+					einfo "Making documentation: $i"
+					texi2dvi -q -c --language=latex $i &> /dev/null
+					done
+				;;
+			"tfm" | "vf" | "afm" | "pfb")
+				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
+				do
+					insinto ${TEXMF}/fonts/${1}/${SUPPLIER}/${PN}
+					doins $i
+				done
+				;;
+			"ttf")
+				for i in `find . -maxdepth 1 -type f -name "*.ttf"`
+				do
+					insinto ${TEXMF}/fonts/truetype/${SUPPLIER}/${PN}
+					doins $i
+				done
+				;;
+			"bst")
+				for i in `find . -maxdepth 1 -type f -name "*.bst"`
+				do
+					insinto ${TEXMF}/bibtex/bst/${PN}
+					doins $i
+				done
+				;;
+			"styles")
+				latex-package_src_doinstall sty cls fd clo def bst
+				;;
+			"doc")
+				latex-package_src_doinstall tex dtx dvi ps pdf
+				;;
+			"fonts")
+				latex-package_src_doinstall tfm vg afm pfb ttf
+				;;
+			"bin")
+				latex-package_src_doinstall sh
+				;;
+			"all")
+				latex-package_src_doinstall styles fonts bin doc 
+				;;
+		esac
+	shift
+	done
 }
 
 latex-package_src_compile() {
-    debug-print function $FUNCNAME $*
-    for i in `find \`pwd\` -maxdepth 1 -type f -name "*.ins"`
-    do
-        einfo "Extracting from $i"
-        latex --interaction=batchmode $i &> /dev/null
-    done
+	debug-print function $FUNCNAME $*
+	for i in `find \`pwd\` -maxdepth 1 -type f -name "*.ins"`
+	do
+		einfo "Extracting from $i"
+		latex --interaction=batchmode $i &> /dev/null
+	done
 }
 
 latex-package_src_install() {
-    debug-print function $FUNCNAME $*
-    latex-package_src_doinstall all
+	debug-print function $FUNCNAME $*
+	latex-package_src_doinstall all
+	[ -n "${DOCS}" ] && dodoc ${DOCS}
 }
 
 latex-package_pkg_postinst() {
-    debug-print function $FUNCNAME $*
-    latex-package_rehash
+	debug-print function $FUNCNAME $*
+	latex-package_rehash
 }
 
 latex-package_pkg_postrm() {
-    debug-print function $FUNCNAME $*
-    latex-package_rehash
+	debug-print function $FUNCNAME $*
+	latex-package_rehash
 }
 
 latex-package_rehash() {
-    debug-print function $FUNCNAME $*
-    texconfig rehash
+	debug-print function $FUNCNAME $*
+	texconfig rehash
 }
 
 EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
