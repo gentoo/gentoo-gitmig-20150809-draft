@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r2.ebuild,v 1.5 2004/03/16 17:24:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r2.ebuild,v 1.6 2004/03/16 18:39:30 robbat2 Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="pam"
 RDEPEND=">=sys-libs/ncurses-5.2
 	>=sys-apps/sed-4
 	pam? ( >=sys-libs/pam-0.75 )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
