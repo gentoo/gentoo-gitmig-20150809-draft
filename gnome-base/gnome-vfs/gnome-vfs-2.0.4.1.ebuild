@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.0.4.1.ebuild,v 1.5 2002/12/15 12:35:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.0.4.1.ebuild,v 1.6 2002/12/24 20:41:36 azarah Exp $
 
 IUSE="doc"
 
@@ -13,7 +13,7 @@ SLOT="2"
 KEYWORDS="x86 ~ppc ~sparc alpha"
 LICENSE="GPL-2 LGPL-2.1"
 
-RDEPEND="=dev-libs/glib-2.0*
+RDEPEND=">=dev-libs/glib-2.0.6
 	>=gnome-base/gconf-1.2.1
 	>=gnome-base/ORBit2-2.4.1
 	>=gnome-base/gnome-mime-data-2.0.1

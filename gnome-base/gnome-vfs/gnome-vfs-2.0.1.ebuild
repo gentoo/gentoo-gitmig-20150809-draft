@@ -14,7 +14,7 @@ SLOT="2"
 KEYWORDS="x86 ppc sparc "
 LICENSE="GPL-2 LGPL-2.1"
 
-RDEPEND="=dev-libs/glib-2.0*
+RDEPEND=">=dev-libs/glib-2.0.6
 	>=gnome-base/gconf-1.2.0
 	>=gnome-base/ORBit2-2.4.0
 	>=gnome-base/gnome-mime-data-2.0.0
