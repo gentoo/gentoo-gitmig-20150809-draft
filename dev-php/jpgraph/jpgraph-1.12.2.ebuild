@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.7 2003/09/08 04:56:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.8 2003/11/06 20:27:42 robbat2 Exp $
 
 inherit php-lib
 
@@ -71,6 +71,6 @@ src_install() {
 	# as the apache user!
 
 	keepdir "${JPGRAPH_CACHE_DIR}"
-	fowners ${HTTPD_USER}.${HTTPD_GROUP} "${JPGRAPH_CACHE_DIR}"
+	fowners ${HTTPD_USER}:${HTTPD_GROUP} "${JPGRAPH_CACHE_DIR}"
 	fperms 700 "${JPGRAPH_CACHE_DIR}"
 }
