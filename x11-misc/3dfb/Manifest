@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ab43cd7692ec869d8076f95d4d08f47e 3dfb-0.5.5.ebuild 595
-MD5 761f2f19f4a1b6350ac345b334512440 ChangeLog 435
+MD5 457285964ad704eec67eccf927c41ddf ChangeLog 552
 MD5 809fdbb24c1177ba34d056255c235003 metadata.xml 385
+MD5 84a763c17ba806060fe59a6477d4792c 3dfb-0.6.1.ebuild 618
 MD5 d574d58e2e896ad6608521a4c19a32ba files/digest-3dfb-0.5.5 61
+MD5 50ee00e8e1db1ba6ff4162abafb01a31 files/digest-3dfb-0.6.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBEra9I1lqEGTUzyQRAnpIAJ0bKAe5X3sqCPwqZZbb9IPOpHrSlwCgv9i5
+f+fLCNmL/SvbInwk1PzybCY=
+=dE2K
+-----END PGP SIGNATURE-----
