@@ -1,12 +1,22 @@
-MD5 57c8ea470df3efb68d1bb5ccdb2a1cec ChangeLog 9822
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3175f69bbef8d8d5b28da5e04acf22e6 e2fsprogs-1.36-r2.ebuild 2626
+MD5 862681b6cb4c0158df646b35ee90b401 ChangeLog 10069
 MD5 54432110b1e54ba458f618f72d355216 e2fsprogs-1.36.ebuild 3400
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 34f9da9ce2baaac51c1ea7bcbf1a683e e2fsprogs-1.36-r2.ebuild 2625
 MD5 37cb0ccd95b17f3838109fb5c07bdd5c e2fsprogs-1.35-r1.ebuild 3377
-MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36 67
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 4a7d54ccac4002d10462c40660712a72 files/e2fsprogs-1.36-sed-locale.patch 2142
-MD5 1a896f2697b055d4b8b4139c3482ac9e files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
-MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36-r2 67
 MD5 f079047f6885f762f6fa838b55236cb2 files/e2fsprogs-sed-locale.patch 5989
-MD5 a47cce15da0a4e01bb3cec306d9d7dbe files/e2fsprogs-1.36-makefile.patch 2910
 MD5 3d9735f2397680a4978124f6805219ae files/digest-e2fsprogs-1.35-r1 67
+MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36-r2 67
+MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36 67
+MD5 a47cce15da0a4e01bb3cec306d9d7dbe files/e2fsprogs-1.36-makefile.patch 2910
+MD5 1a896f2697b055d4b8b4139c3482ac9e files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCQFRyBXaUFmZvwyMRAirqAKDLhX9zI+2CbTn1yIkD5HqPJhlCvACgrZ0i
+ZUErXn8iYzu6qhvwuPkwL20=
+=hpbd
+-----END PGP SIGNATURE-----
