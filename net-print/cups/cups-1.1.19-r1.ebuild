@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.6 2003/07/29 15:22:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.7 2003/09/19 18:02:18 rajiv Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="ssl slp pam"
+IUSE="ssl slp pam usb"
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -128,7 +128,7 @@ pkg_postinst() {
 
 	einfo
 	einfo "emerge >=app-text/ghostscript-7.05-r1 if you need to print"
-	einfo "to a non-postscript printer(after cups itself! even if it's"
+	einfo "to a non-postscript printer (after cups itself! even if it's"
 	einfo "already installed!)"
 	einfo
 }
