@@ -1,13 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.11.ebuild,v 1.3 2002/07/16 11:36:53 seemant Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12-r1.ebuild,v 1.1 2002/07/19 20:23:56 seemant Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
 HOMEPAGE="http://xine.sourceforge.net/"
-SRC_URI="http://xine.sourceforge.net/files/${P}a.tar.gz"
+SRC_URI="http://xine.sourceforge.net/files/${P}.tar.gz"
 
-DEPEND="X? ( virtual/x11 )
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="media-libs/libvorbis
+	X? ( virtual/x11 )
 	avi? ( >=media-libs/win32codecs-0.50 
 	       media-libs/divx4linux )
 	esd? ( media-sound/esound )
@@ -16,7 +21,7 @@ DEPEND="X? ( virtual/x11 )
 	arts? ( kde-base/kdelibs )
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
-	oggvorbis? ( media-libs/libvorbis )"
+	directfb? ( >=dev-libs/DirectFB-0.9.9 )"
 
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
@@ -29,9 +34,16 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	# Patch for framebuffer support.
-	patch -p0 < ${FILESDIR}/xineconfig.patch-${PV} || die
 
+	for file in `grep -l -r "xine_logo.mpg" *`; do
+		sed -e "s:xine_logo.mpg:xine_logo.mpv:g" ${file} \
+		    > ${file}.hacked || die
+		mv ${file}.hacked ${file} || die
+	done
+
+	use directfb && ( \
+		patch -p0 < ${FILESDIR}/xineconfig.patch-${PV} || die
+	) || patch -p1 < ${FILESDIR}/xine-lib-disable-directfb.patch || die
 }
 
 src_compile() {
@@ -40,36 +52,39 @@ src_compile() {
 
 	# Most of these are not working currently, but are here for completeness
 	local myconf
-	use X	   || myconf="${myconf} --disable-x11 --disable-xv"
-	use esd	   || myconf="${myconf} --disable-esd --disable-esdtest"
-	use nls	   || myconf="${myconf} --disable-nls"
-	use alsa   || myconf="${myconf} --disable-alsa --disable-alsatest"
-	use arts   || myconf="${myconf} --disable-arts --disable-artstest"
+	use X \
+		|| myconf="${myconf} --disable-x11 --disable-xv"
+	use esd	\
+		|| myconf="${myconf} --disable-esd --disable-esdtest"
+	use nls	\
+		|| myconf="${myconf} --disable-nls"
+	use alsa \
+		|| myconf="${myconf} --disable-alsa --disable-alsatest"
+	use arts \
+		|| myconf="${myconf} --disable-arts --disable-artstest"
+
 	# This breaks because with the test disabled, it defaults to "found" check with
 	# the next release until then let it autodetect.  See bug #2377.
 	# use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest"
 
-	use oggvorbis || myconf="${myconf}
-				 --disable-ogg
-				 --disable-oggtest
-				 --disable-vorbis
-				 --disable-vorbistest"
+	# In this release, oggvorbis is required, not optional.  upstream needs
+	# to start getting consistent.
+	#use oggvorbis \
+	#	|| myconf="${myconf} \
+	#		 --disable-ogg \
+	#		 --disable-oggtest \
+	#		 --disable-vorbis \
+	#		 --disable-vorbistest"
 	
-	use avi	&& myconf="${myconf}
-			   --with-w32-path=/usr/lib/win32" \
-		|| myconf="${myconf}
-			   --disable-asf"
+	use avi	\
+		&& myconf="${myconf} --with-w32-path=/usr/lib/win32" \
+		|| myconf="${myconf} --disable-asf"
 
 	# This is ``fixes'' compilation problems when em8300 libs installed
 	# The proper fix is to follow.
 	# myconf="${myconf} --disable-dxr3 --disable-dxr3test"
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--sysconfdir=/etc \
-		${myconf} || die
+	econf ${myconf} || die
 		    
 	emake || die
 }

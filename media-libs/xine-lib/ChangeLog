@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.12 2002/06/23 15:49:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.13 2002/07/19 20:23:56 seemant Exp $
+
+*xine-lib-0.9.12-r1 (19 Jul 2002)
+
+  19 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  xine-lib-0.9.12-r1.ebuild files/digest-xine-lib-0.9.12-r1 :
+
+  libvorbis is required, not optional. removed oggvorbis USE flag from
+  ebuild.
 
 *xine-lib-0.9.12 (23 Jun 2002)
 
