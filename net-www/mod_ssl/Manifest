@@ -1,5 +1,5 @@
-MD5 4e9738e050a81694659f4edbd253dbf3 mod_ssl-2.8.17.ebuild 2183
-MD5 cd90843cff77b2e8160c1f05c7ca54f0 ChangeLog 3656
+MD5 ee872ef4052350e63bd332dae276dcb6 mod_ssl-2.8.17.ebuild 2182
+MD5 c083ca84e94cc3d7ecd997a23dad4f62 ChangeLog 3749
 MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
 MD5 d9660a5d5e0e7004669341c99a92e91a mod_ssl-2.8.16.ebuild 2178
 MD5 b152e3907373f3239e7b13efbfb3d7c8 files/ssl.default-vhost.conf 6978
