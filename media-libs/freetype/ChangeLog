@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.32 2003/10/22 16:34:25 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.33 2003/10/23 00:15:53 agriffis Exp $
+
+  22 Oct 2003; Aron Griffis <agriffis@gentoo.org> freetype-2.1.4-r1.ebuild:
+  Stable on alpha
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org>
   freetype-2.1.4-r1.ebuild:
