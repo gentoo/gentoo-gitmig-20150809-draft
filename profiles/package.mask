@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+#azarah@gentoo.org (03 Jul 2002)
+#this one moves a lot of stuff around, and have a search dir
+#order fix that is very experimental
+=sys-devel/gcc-3.1-r8
+
 #lostlogic@gentoo.org (03 Jul 2002)
 #new apache ebuild changes a bit how we are handling the group
 #addition, want to make sure i'm not an idiot berfore unmasking
