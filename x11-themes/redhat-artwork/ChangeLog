@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.47 2005/01/28 18:33:48 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.48 2005/02/03 10:51:58 greg_g Exp $
+
+  03 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  redhat-artwork-0.120.1.2.ebuild:
+  Corrected KDE dependencies.
 
   26 Jan 2005; Gregorio Guidi <greg_g@gentoo.org>
   redhat-artwork-0.120.1.2.ebuild:

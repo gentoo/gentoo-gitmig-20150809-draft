@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.120.1.2.ebuild,v 1.5 2005/02/02 19:58:35 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.120.1.2.ebuild,v 1.6 2005/02/03 10:51:58 greg_g Exp $
 
 inherit eutils rpm libtool versionator kde-functions
 
@@ -21,8 +21,8 @@ DEPEND=">=sys-devel/autoconf-2.58
 	>=x11-libs/gtk+-2.0
 	gtk? (  >=media-libs/gdk-pixbuf-0.2.5
 			=x11-libs/gtk+-1.2* )
-	kde? (	>=x11-libs/qt-3.0.5
-		|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.0.2 ) )
+	kde? (	|| ( kde-base/kcontrol kde-base/kdebase )
+		|| ( kde-base/kwin kde-base/kdebase ) )
 	gtk2? ( >=x11-libs/gtk+-2* )
 	dev-util/intltool
 	media-gfx/icon-slicer"
