@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/simpserver-bin/simpserver-bin-0.9.ebuild,v 1.2 2004/06/24 23:00:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/simpserver-bin/simpserver-bin-0.9.ebuild,v 1.3 2004/07/15 00:26:24 agriffis Exp $
 
 MY_PN=${PN/-bin/}
 MY_P="${MY_PN}-${PV}"
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.secway.fr/"
 LICENSE="simpserver-test"
 
 KEYWORDS="-* ~x86"
+IUSE=""
 SLOT="0"
 S=${WORKDIR}/simp
 
