@@ -1,3 +1,4 @@
-MD5 8c76b39d90cf1f2637601036b9ff0a62 files/digest-gentoo-stats-0.4 67
-MD5 cdc40e846fc75459d77486129aa2b1a6 gentoo-stats-0.4.ebuild 1341
 MD5 9ae90b82db20037d17e5fd2a668f5d67 ChangeLog 2578
+MD5 ee394e997b668c22a402e4ed70f0c989 gentoo-stats-0.4.ebuild 1338
+MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
+MD5 8c76b39d90cf1f2637601036b9ff0a62 files/digest-gentoo-stats-0.4 67
