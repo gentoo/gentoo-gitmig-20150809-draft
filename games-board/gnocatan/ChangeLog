@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnocatan
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/ChangeLog,v 1.31 2005/03/02 21:17:20 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/ChangeLog,v 1.32 2005/03/08 04:56:40 rizzo Exp $
+
+  07 Mar 2005; Don Seiler <rizzo@gentoo.org> -gnocatan-0.8.1.45.ebuild,
+  -gnocatan-0.8.1.53.ebuild, gnocatan-0.8.1.54.ebuild:
+  Stable x86
 
 *gnocatan-0.8.1.54 (02 Mar 2005)
 
