@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.17 2003/02/12 09:16:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.18 2003/02/27 23:28:44 lostlogic Exp $
 
 *gentoo-sources-2.4.20-r1 (12 Jan 2003)
+
+  27 Feb 2003; Brandon Low <lostlogic@gentoo.org> gentoo-sources-2.4.20-r1.ebuild:
+  Move to stable
 
   Ebuild Changes
   * Dropped the *3c509-fix
