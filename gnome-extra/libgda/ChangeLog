@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.22 2003/07/05 12:27:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.23 2003/07/18 21:05:02 liquidx Exp $
+
+  18 Jul 2003; Alastair Tse <liquidx@gentoo.org> libgda-0.12.1.ebuild,
+  libgda-0.90.0.ebuild:
+  libgda >= 0.10 should be slotted as they can coexist with the older ones.
 
 *libgda-0.90.0 (05 Jul 2003)
 

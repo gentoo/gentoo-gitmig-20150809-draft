@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.90.0.ebuild,v 1.1 2003/07/05 12:27:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.90.0.ebuild,v 1.2 2003/07/18 21:05:02 liquidx Exp $
 
 IUSE="odbc postgres mysql ldap firebird freetds sqlite mdb oci8"
 
@@ -8,7 +8,7 @@ inherit gnome2 gnome.org
 
 DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
-SLOT="0"
+SLOT="1"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~x86 ~ppc"
 
