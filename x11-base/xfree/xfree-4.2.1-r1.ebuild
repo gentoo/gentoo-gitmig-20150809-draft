@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.3 2002/11/04 11:37:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.4 2002/11/04 11:59:30 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -179,8 +179,6 @@ src_unpack() {
 			local count=0
 			local popts="-l"
 
-			einfo "  ${x##*/}..."
-
 			# Stupid me forgot it was reversed patch, and did not fix it before
 			# upload to ibiblio ...
 			[ "${x##*/}" = "019_all_4.2.1-ati-radeon-9000-support.patch.bz2" ] \
@@ -191,6 +189,8 @@ src_unpack() {
 			[ "`gcc-version`" = "2.95" ] && \
 			[ "${x##*/}" = "107_all_4.2.1-gcc32-internal-compiler-error.patch.bz2" ] && \
 				continue
+
+			einfo "  ${x##*/}..."
 		
 			# Most -p differ for these patches ... im lazy, so shoot me :/
 			while [ "${count}" -lt 5 ]
