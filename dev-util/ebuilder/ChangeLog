@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/ebuilder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.4 2002/06/06 08:37:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.5 2002/08/20 04:10:45 gerk Exp $
 
 *ebuilder-0.4-r1 (06 May 2002)
+
+  20 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   05 June 2002; George Shapovalov <george@gentoo.org> files/digest-ebuilder-0.4-r1 :
 
@@ -29,7 +32,7 @@
 
   A revision number can now be added to the package name.
 
-  Changed the fourth line in the ebuilds to "$Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.4 2002/06/06 08:37:48 george Exp $".
+  Changed the fourth line in the ebuilds to "$Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.5 2002/08/20 04:10:45 gerk Exp $".
 
 
 *ebuilder-0.3 (04 May 2002)
