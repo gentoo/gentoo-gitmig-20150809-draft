@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.2.ebuild,v 1.1 2004/10/31 10:37:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.2.ebuild,v 1.2 2004/10/31 10:53:04 eradicator Exp $
 
 IUSE="encode flac mad oggvorbis"
 
@@ -84,7 +84,7 @@ src_install() {
 	rm -rf ${D}/share/doc
 
 	insinto /usr/share/pixmaps
-	newins AudacityLogo48x48.xpm audacity.xpm
+	newins images/AudacityLogo48x48.xpm audacity.xpm
 
 	insinto /usr/share/applications
 	doins ${FILESDIR}/audacity.desktop
