@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.ebuild,v 1.9 2004/09/19 02:59:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.ebuild,v 1.10 2004/10/06 20:05:32 pylon Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 ~ppc64 mips"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	!app-cdr/dvdrtools"
 PROVIDE="virtual/cdrtools"
 
 S=${WORKDIR}/${PN}-2.01
