@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qtorrent
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/ChangeLog,v 1.7 2004/07/18 17:00:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/ChangeLog,v 1.8 2004/12/08 01:31:28 weeve Exp $
+
+  07 Dec 2004; Jason Wever <weeve@gentoo.org> qtorrent-0.9.6.1.ebuild:
+  Stable on sparc.
 
   18 Jul 2004; Jason Wever <weeve@gentoo.org> qtorrent-0.9.6.1.ebuild:
   Added ~sparc keyword.
