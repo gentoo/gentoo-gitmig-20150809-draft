@@ -444,7 +444,6 @@ app-text/sgml2x
 app-admin/va-systemimager-server
 app-admin/va-systemimager-client
 <media-video/avifile-0.6.0
->=sys-apps/texinfo-4.0c
 #>=media-libs/pdflib-4.0.0
 >=berlin-base/berlin-0.2.2
 
