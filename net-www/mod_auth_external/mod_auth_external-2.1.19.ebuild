@@ -1,19 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/mod_auth_external-2.1.19.ebuild,v 1.1 2005/02/17 10:13:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/mod_auth_external-2.1.19.ebuild,v 1.2 2005/02/24 17:53:48 hollow Exp $
 
 inherit eutils apache-module
 
 DESCRIPTION="Apache External Authentication Module"
 HOMEPAGE="http://www.unixpapa.com/mod_auth_external.html"
-
 SRC_URI="http://www.unixpapa.com/software/${P}.tar.gz"
-DEPEND="sys-libs/pam"
-RDEPEND=""
+
+DEPEND=""
 LICENSE="Apache-1.1"
 KEYWORDS="~x86"
 IUSE=""
-SLOT="0"
+SLOT="1"
 
 DOCFILES="AUTHENTICATORS CHANGES INSTALL INSTALL.HARDCODE README TODO"
 
