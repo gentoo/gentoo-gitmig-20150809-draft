@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.28 2005/02/19 05:30:53 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.29 2005/02/23 22:23:17 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -301,7 +301,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
 	myconf="${myconf} $(use_enable real)"
-	myconf="${myconf} $(use_enable avi win32)"
+	use x86 && myconf="${myconf} $(use_enable avi win32)"
 
 	#############
 	# Video Output #
