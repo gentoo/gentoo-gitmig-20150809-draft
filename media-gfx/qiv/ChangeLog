@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/qiv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.6 2003/08/25 19:54:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.7 2004/01/03 13:44:28 mholzer Exp $
+
+*qiv-1.9 (03 Jan 2004)
+
+  03 Jan 2004; Martin Holzer <mholzer@gentoo.org> qiv-1.9.ebuild:
+  Version bumped. Closes 37098
 
   25 Aug 2003; Jason Wever <weeve@gentoo.org> qiv-1.7-r3.ebuild,
   qiv-1.9_pre10.ebuild:
