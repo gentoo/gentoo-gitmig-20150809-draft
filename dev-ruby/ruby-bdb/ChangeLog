@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-bdb
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.2 2004/03/13 20:04:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.3 2004/04/16 23:40:40 dholm Exp $
+
+  17 Apr 2004; David Holm <dholm@gentoo.org> ruby-bdb-0.5.0.ebuild:
+  Added to ~ppc.
 
 *ruby-bdb-0.5.0 (14 Mar 2004)
 

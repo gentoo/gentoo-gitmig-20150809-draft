@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.0.21.ebuild,v 1.2 2004/04/10 14:06:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.0.21.ebuild,v 1.3 2004/04/16 23:42:37 dholm Exp $
 
 inherit ruby eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ruby-dbi/ruby-dbi-all-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 USE_RUBY="ruby16 ruby18 ruby19"
 IUSE="firebird odbc postgres mysql"
 

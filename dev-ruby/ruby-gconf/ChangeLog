@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gconf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf/ChangeLog,v 1.6 2004/04/11 14:25:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf/ChangeLog,v 1.7 2004/04/16 23:47:51 dholm Exp $
+
+  17 Apr 2004; David Holm <dholm@gentoo.org> ruby-gconf-0.2.ebuild:
+  Added to ~ppc.
 
   11 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-gconf-0.1.ebuild,
   ruby-gconf-0.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-libart
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.6 2004/04/11 15:06:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.7 2004/04/17 00:03:31 dholm Exp $
+
+  17 Apr 2004; David Holm <dholm@gentoo.org> ruby-libart-0.34.ebuild:
+  Added to ~ppc.
 
   12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-libart-0.30.ebuild,
   ruby-libart-0.34.ebuild:

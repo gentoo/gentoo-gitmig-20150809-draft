@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amrita
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.8 2004/04/10 06:49:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.9 2004/04/16 23:37:36 dholm Exp $
+
+  17 Apr 2004; David Holm <dholm@gentoo.org> amrita-1.8.2-r1.ebuild:
+  Added to ~ppc.
 
   10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> amrita-1.0.2.ebuild,
   amrita-1.8.2-r1.ebuild, amrita-1.8.2.ebuild:
