@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r6.ebuild,v 1.1 2004/10/21 18:26:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r7.ebuild,v 1.1 2004/11/09 19:27:14 plasmaroo Exp $
 
 IUSE=""
 
@@ -28,7 +28,8 @@ S=${WORKDIR}/linux-${KV}
 DESCRIPTION="uCLinux kernel patches for CPUs without MMUs"
 SRC_URI="mirror://kernel/v${MMV}/linux-${OKV}.tar.bz2
 	http://www.uclinux.org/pub/uClinux/uClinux-${MMV}.x/${MY_P/linux/${base}}.${patch}.gz
-	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0814.patch"
 
 HOMEPAGE="http://www.uclinux.org/"
 KEYWORDS="~x86 -ppc"
@@ -43,10 +44,12 @@ src_unpack() {
 	epatch ${DISTDIR}/linux-${OKV}-CAN-2004-0415.patch || die "Failed to add the CAN-2004-0415 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-0596.patch || die "Failed to apply the CAN-2004-0596 security patch!"
+	epatch ${DISTDIR}/linux-${OKV}-CAN-2004-0814.patch || die "Failed to add the CAN-2004-0814 patch!"
 	epatch ${FILESDIR}/${PN}-2.6.IPTables-RDoS.patch || die "Failed to apply the IPTables RDoS security patch!"
 	epatch ${FILESDIR}/${PN}-2.6.ProcPerms.patch || die "Failed to apply the /proc permissions security patch!"
 	epatch ${FILESDIR}/${PN}-2.6.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
 	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-0816.patch || die "Failed to apply the CAN-2004-0816 patch!"
+	epatch ${FILESDIR}/${PN}-2.6.devPtmx.patch || die "Failed to apply /dev/ptmx patch!"
 
 	set MY_ARCH=${ARCH}
 	unset ARCH

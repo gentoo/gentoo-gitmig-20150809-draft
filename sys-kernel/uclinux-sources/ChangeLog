@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/uclinux-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.19 2004/10/21 18:26:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.20 2004/11/09 19:27:14 plasmaroo Exp $
+
+*uclinux-sources-2.4.26_p0-r7 (09 Nov 2004)
+
+  09 Nov 2004; <plasmaroo@gentoo.org> -uclinux-sources-2.4.26_p0-r6.ebuild,
+  +uclinux-sources-2.4.26_p0-r7.ebuild, -uclinux-sources-2.6.7_p0-r6.ebuild,
+  +uclinux-sources-2.6.7_p0-r7.ebuild,
+  +files/uclinux-sources-2.4.26_p0.XDRWrapFix.patch,
+  +files/uclinux-sources-2.6.devPtmx.patch:
+  Adding a fix for the 2.4 kNFSd security vulnerability and the 2.6 /dev/ptmx
+  DoS, bug #62524. Also fixed CAN-2004-0814 for 2.4 and 2.6, bug #68421.
 
 *uclinux-sources-2.6.7_p0-r6 (21 Oct 2004)
 
