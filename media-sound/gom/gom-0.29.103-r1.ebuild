@@ -3,10 +3,9 @@
 # Author Ryan Tolboom <ryan@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103.ebuild,v 1.3 2001/08/11 03:50:11 drobbins Exp
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Console Mixer Program for OSS"
-SRC_URI="http://www.Fh-Worms.DE./~inf222/code/c/gom/released/${A}"
+SRC_URI="http://www.Fh-Worms.DE./~inf222/code/c/gom/released/${P}.tar.gz"
 HOMEPAGE="http://www.fh-worms.de/~inf222"
 
 DEPEND=">=sys-libs/ncurses-5.2"
