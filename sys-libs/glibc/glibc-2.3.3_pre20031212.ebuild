@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20031212.ebuild,v 1.2 2003/12/14 14:23:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20031212.ebuild,v 1.3 2003/12/17 03:34:50 brad_mssw Exp $
 
 IUSE="nls pic build nptl"
 
@@ -57,7 +57,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	hppa? ( mirror://gentoo/${PN}-${MY_PV}-hppa-patches-p1.tar.bz2 )"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="~x86 ~mips ~sparc ~amd64 ~hppa ~alpha ~ia64"
+KEYWORDS="~x86 ~mips ~sparc ~amd64 ~hppa ~alpha ~ia64 ppc64"
 SLOT="2.2"
 LICENSE="LGPL-2"
 
