@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.2_beta1.ebuild,v 1.1 2002/10/25 02:37:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.2_beta1.ebuild,v 1.2 2002/11/18 12:49:16 vapier Exp $
 
 MY_P="${P/qt-/}"
 MY_P="${MY_P/_/}"
@@ -20,8 +20,8 @@ DEPEND="=x11-libs/qt-3*
 src_compile() {
 	export CPPFLAGS="${CXXFLAGS} -I/usr/include/libxml2/libxml"
 
-	econf --with-libdc=/usr || die
-	emake || die
+	econf --with-libdc=/usr
+	make || die
 }
 
 src_install() {
