@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.91 2004/01/26 01:38:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.92 2004/01/26 13:40:43 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -148,23 +148,12 @@ configure_die()
 	eerror	"Your KDE program installation died while running the configure script"
 	eerror
 
-	if [ -f /etc/env.d/09opengl ]
+	if [ `has_version media-video/nvidia-glx` ]
 	then
-		source /etc/env.d/09opengl
-		if [ -n "${LDPATH}" ]
-		then
-			GL_IMPLEM="${LDPATH/\/usr\/lib\/opengl\/}"
-			GL_IMPLEM="${GL_IMPLEM/\/lib}"
-			unset LDPATH
-		fi
-	fi
-	
-
-	if [ ${GL_IMPLEM} = "nvidia" ]
-	then
-		eerror	"You're using the nvidia drivers.  The problem is most likely fixed by "
-		eerror	"running: 'opengl-update xfree' to change your opengl back to xfree "
-		eerror  "(which is what Qt was most likely compiled against)"
+		eerror	"You're using the nvidia drivers.  If you've changed GL implementations since "
+		eerror  "emerging Qt this will cause problems.  This is easily fixed by switching back "
+		eerror	"by running: \"opengl-update xfree\" or \"opengl-update nvidia\" "
+		eerror  "(whichever your Qt was compiled against), then re-emerging this program "
 	fi	
 
 	if [ -f /usr/lib/gcc-lib/${CHOST}/3.2.3/include/stdio.h ]
