@@ -1,6 +1,11 @@
 # ChangeLog for net-im/naim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.12 2003/01/14 22:42:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.13 2003/01/15 23:45:43 lostlogic Exp $
+
+*naim-0.11.5.3 (15 Jan 2002)
+
+  15 Jan 2002; Brandon Low <lostlogic@gentoo.org> naim-0.11.5.3.ebuild :
+  Fixes a bug in the automatic encryption.
 
 *naim-0.11.5.2 (14 Jan 2002)
 
