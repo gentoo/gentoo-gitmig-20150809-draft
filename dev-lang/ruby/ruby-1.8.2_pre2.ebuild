@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.10 2004/09/01 08:05:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.11 2004/09/16 01:45:44 pvdabeel Exp $
 
 ONIGURUMA="onigd2_3_1"
 MY_P=${P/_pre/-preview}
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa ~amd64 -ia64 ~s390 macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa ~amd64 -ia64 ~s390 macos ppc-macos"
 IUSE="socks5 tcltk cjk doc"
 
 RDEPEND="virtual/libc
@@ -90,6 +90,9 @@ src_install() {
 	if use macos ; then
 		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%.*}.dylib
 		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%_*}.dylib
+	elif use ppc-macos ; then
+		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%.*}.dylib
+		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%_*}.dylib
 	else
 		dosym /usr/lib/libruby${SLOT/./}.so.${PV%_*} /usr/lib/libruby.so.${PV%.*}
 		dosym /usr/lib/libruby${SLOT/./}.so.${PV%_*} /usr/lib/libruby.so.${PV%_*}
@@ -100,6 +103,7 @@ src_install() {
 
 pkg_postinst() {
 	if ! use macos ; then
+	if ! use ppc-macos ; then
 		ewarn
 		ewarn "Warning: Vim won't work if you've just updated ruby from"
 		ewarn "1.6.x to 1.8.x due to the library version change."
@@ -113,12 +117,15 @@ pkg_postinst() {
 		einfo "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
 		einfo
 	fi
+	fi
 }
 
 pkg_postrm() {
 	if ! use macos ; then
+	if ! use ppc-macos ; then
 		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
 			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 		fi
+	fi
 	fi
 }

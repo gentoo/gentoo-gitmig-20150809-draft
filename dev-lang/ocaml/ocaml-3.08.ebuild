@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.ebuild,v 1.5 2004/08/22 11:28:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.ebuild,v 1.6 2004/09/16 01:42:08 pvdabeel Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://caml.inria.fr/distrib/ocaml-3.08/${P}.0.tar.gz"
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~ia64 amd64 hppa ~macos"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~ia64 amd64 hppa ~macos ~ppc-macos"
 IUSE="tcltk latex"
 
 DEPEND="virtual/libc
