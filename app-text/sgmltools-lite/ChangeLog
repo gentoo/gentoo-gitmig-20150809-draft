@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.14 2002/12/31 04:36:56 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.15 2003/01/03 05:05:55 satai Exp $
+
+  03 Jan 2003; Matthew Turk <satai@gentoo.org> :
+  Changed around the method of updating the SGML_CATALOG environment variables,
+  move it into sgml-catalog.eclass.  This should keep it up to date.
 
   30 Dec 2002; Matthew Turk <satai@gentoo.org> :
   Changed dependencies to work with new docbook-sgml-dtd's.

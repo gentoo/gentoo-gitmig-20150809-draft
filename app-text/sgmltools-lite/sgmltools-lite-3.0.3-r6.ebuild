@@ -82,17 +82,7 @@ src_install() {
 		cd ${S}
 	done
 
-
 }
 
 sgml-catalog_cat_include "/etc/sgml/sgml-lite.cat" \
 	"/usr/share/sgml/stylesheets/sgmltools/sgmltools.cat"
-
-pkg_postinst() {
-
-	gensgmlenv
-	grep -v export /etc/sgml/sgml.env > /etc/env.d/93sgmltools-lite
-
-	sgml-catalog_pkg_postinst
-
-}

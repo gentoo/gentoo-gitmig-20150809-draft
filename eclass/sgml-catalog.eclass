@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Matthew Turk <satai@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.2 2003/01/02 02:20:46 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.3 2003/01/03 05:05:55 satai Exp $
 #
 
 inherit base
@@ -40,11 +40,16 @@ sgml-catalog_pkg_postinst() {
         if [ ! -e $arg2 ]
         then
             ewarn "${arg2} doesn't appear to exist, although it ought to!"
-            return
+            continue
         fi
         einfo "Now adding $arg1 to $arg2 and /etc/sgml/catalog"
         sgml-catalog_cat_doinstall $arg1 $arg2
     done
+    sgml-catalog_cleanup
+}
+
+sgml-catalog_pkg_prerm() {
+    sgml-catalog_cleanup
 }
 
 sgml-catalog_pkg_postrm() {
@@ -59,15 +64,24 @@ sgml-catalog_pkg_postrm() {
         then
             ewarn "${arg2} still exists!  Not removing from ${arg1}" 
             ewarn "This is normal behavior for an upgrade..."
-            return
+            continue
         fi
         einfo "Now removing $arg1 from $arg2 and /etc/sgml/catalog"
         sgml-catalog_cat_doremove $arg1 $arg2
     done
 }
 
+sgml-catalog_cleanup() {
+    if [ -e /usr/bin/gensgmlenv ]
+    then
+        einfo Regenerating SGML environment variables...
+        gensgmlenv
+        grep -v export /etc/sgml/sgml.env > /etc/env.d/93sgmltools-lite
+    fi
+}
+
 sgml-catalog_src_compile() {
     return
 }
 
-EXPORT_FUNCTIONS pkg_postrm pkg_postinst src_compile
+EXPORT_FUNCTIONS pkg_postrm pkg_postinst src_compile pkg_prerm
