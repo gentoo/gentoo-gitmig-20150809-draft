@@ -1,5 +1,5 @@
-MD5 491fe79eec79c09ae027c2ecbfd90b02 ChangeLog 1567
-MD5 e19654aa276162a22ac174555ce898c8 bladeenc-0.94.2-r1.ebuild 641
+MD5 15d73bb83fcaa30e894483e791b59da8 ChangeLog 1669
+MD5 e62c325ca560f5351b0d09868c04a0c7 bladeenc-0.94.2-r1.ebuild 645
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 b582b66a647571df5d3507528f8548cf files/bladeenc-0.94.2-secfix.diff 394
 MD5 a1cd123ae2cdc12d1c72ecb7d52df91d files/digest-bladeenc-0.94.2-r1 78
