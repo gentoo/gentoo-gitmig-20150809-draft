@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/drac/drac-1.12-r1.ebuild,v 1.1 2003/09/17 20:31:39 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/drac/drac-1.12-r1.ebuild,v 1.2 2003/11/01 01:03:30 max Exp $
 
 DESCRIPTION="A robust implementation of POP-before-SMTP."
 HOMEPAGE="http://mail.cc.umanitoba.ca/drac/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.cc.umanitoba.ca/src/${PN}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="debug"
 
 DEPEND="virtual/glibc
@@ -40,7 +40,8 @@ src_compile() {
 		-e "${mysed}" \
 		-i Makefile || die "sed failed"
 
-	make || die "compile problem"
+	# Parallel build does not work.
+	emake -j1 || die "compile problem"
 }
 
 src_install() {
