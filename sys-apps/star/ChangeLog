@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/star
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.11 2003/02/12 09:08:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.12 2003/03/25 15:52:55 gmsoft Exp $
 
 *star-1.4.2 (14 Jan 2003)
 
@@ -10,6 +10,9 @@
   Marked unstable until after Gentoo 1.4 is out.
 
 *star-1.5_alpha09 (14 Jan 2003)
+
+  25 Mar 2003; Guy Matin <gmsoft@gentoo.org> star-1.5_alpha09.ebuild :
+  Added hppa to KEYWORDS.
 
   14 Jan 2003; Brandon Low <lostlogic@gentoo.org> star-1.5_alpha09.ebuild:
   Update to the latest alpha, and mark the alpha ebuild unstable.
