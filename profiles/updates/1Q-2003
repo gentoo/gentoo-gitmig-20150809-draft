@@ -27,3 +27,4 @@ move media-video/libdvb media-libs/libdvb
 move net-wireless/gkrellmwireless x11-plugins/gkrellmwireless
 move net-misc/gshield net-firewall/gshield
 move dev-util/uml dev-util/umbrello
+move app-text/fribidi dev-libs/fribidi
