@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.4 2004/06/28 02:00:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.5 2004/07/10 17:00:39 slarti Exp $
+
+  10 Jul 2004; Tom Martin <slarti@gentoo.org> rl-0.2.2.ebuild:
+  Marked ~amd64.
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> rl-0.2.2.ebuild:
   Added ~sparc, ~mips
