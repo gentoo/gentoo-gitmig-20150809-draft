@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.2-r1.ebuild,v 1.1 2003/01/20 00:29:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.2-r1.ebuild,v 1.2 2003/01/20 05:14:03 raker Exp $
 
 TLS_P="pfixtls-0.8.13-2.0.1-0.9.7"
 IPV6_P="tls+ipv6-1.12-pf-2.0.2"
@@ -77,7 +77,7 @@ src_unpack() {
 
 	if [ "`use mysql`" ] ; then
 		CCARGS="${CCARGS} -DHAS_MYSQL -I/usr/include/mysql"
-		AUXLIBS="${AUXLIBS} -lmysqlclient -lm"
+		AUXLIBS="${AUXLIBS} -lmysqlclient -lm -lz"
 	fi
 
 	if [ "`use ldap`" ] ; then

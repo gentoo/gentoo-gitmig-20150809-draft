@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.49 2003/01/20 00:29:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.50 2003/01/20 05:14:03 raker Exp $
 
 *postfix-2.0.2-r1 (19 Jan 2003)
 
@@ -8,6 +8,7 @@
   files/digest-postfix-2.0.2-r1 :
   I made so many individual changes on the last bug I figure I better
   release a new revision.  added maildir and mbox to IUSE.
+  Added -lz for linking to mysql.
 
 *postfix-2.0.2 (19 Jan 2003)
 
