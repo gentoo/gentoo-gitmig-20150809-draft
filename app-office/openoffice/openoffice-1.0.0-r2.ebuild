@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.3 2002/10/04 04:59:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.4 2002/11/28 17:29:42 gerk Exp $
 
 inherit virtualx
 
@@ -31,7 +31,7 @@ inherit virtualx
 
 SLOT="0"
 LICENSE="LGPL-2 | SISSL-1.1"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 
 LOC="/opt"
 #MAIN_VER="`echo ${PV} |sed -e "s:[a-z]::g"`"
