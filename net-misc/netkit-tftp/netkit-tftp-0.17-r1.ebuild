@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-tftp/netkit-tftp-0.17-r1.ebuild,v 1.6 2002/10/04 06:13:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-tftp/netkit-tftp-0.17-r1.ebuild,v 1.7 2002/10/19 23:29:50 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="the tftp server included in netkit"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-tftp-0.17.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 ppc"
 LICENSE="bsd"
 SLOT="0"
 

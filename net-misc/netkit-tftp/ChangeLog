@@ -1,8 +1,13 @@
 # ChangeLog for net-misc/netkit-tftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-tftp/ChangeLog,v 1.1 2002/07/09 09:45:45 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-tftp/ChangeLog,v 1.2 2002/10/19 23:29:50 cselkirk Exp $
 
 *netkit-tftp-0.17-r1 (22 Apr 2002)
+
+   20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> netkit-tftp-0.17.ebuild 
+   netkit-tftp-0.17-1.ebuild :
+
+   Added ppc to KEYWORDS.
 
    09 Jul 2002; phoen][x <phoenix@gentoo.org> netkit-tftp-0.17-r1.ebuild:
    Added KEYWORDS, LICENSE, SLOT.
