@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.09.ebuild,v 1.1 2004/04/24 19:29:58 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.09.ebuild,v 1.2 2004/04/27 03:16:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -69,5 +69,5 @@ pkg_postinst() {
 	einfo "   rc-update add linux-logo default"
 	einfo "which uses the settings found in"
 	einfo "   /etc/conf.d/linux-logo"
-	echo 
+	echo
 }
