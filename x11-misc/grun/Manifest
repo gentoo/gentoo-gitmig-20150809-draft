@@ -1,4 +1,4 @@
-MD5 af0159bca19ff4bda4d2f46f079e6ef0 ChangeLog 450
-MD5 9ae553b5d34c5152aa98a7b608d5f03c grun-0.9.2.ebuild 2354
-MD5 73023cc27e61e18e71950b09863a0e1c files/digest-grun-0.9.2 67
+MD5 72baab4ff3db686829fb6ffc0622b5aa grun-0.9.2.ebuild 2467
+MD5 2e2b537beffd6aa148127463048aef63 ChangeLog 538
 MD5 0ec741add267fdf1d3940d5cb5549acf files/grun-0.9.2-gentoo.diff 52328
+MD5 73023cc27e61e18e71950b09863a0e1c files/digest-grun-0.9.2 67

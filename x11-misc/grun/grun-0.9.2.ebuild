@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.15 2003/09/05 23:18:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.16 2003/12/20 11:23:32 taviso Exp $
 
 IUSE="nls"
 
@@ -23,7 +23,9 @@ KEYWORDS="x86 sparc "
 # The dependencies following the gentoo policy as suggested by gbevin
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	sys-devel/gnuconfig
+	sys-devel/automake"
 
 src_unpack() {
 	unpack ${A}
@@ -38,6 +40,10 @@ src_compile() {
 	if [ -z ${TERM} ] ; then
 		TERM=xterm
 	fi
+
+	ebegin "Running automake"
+		automake --add-missing &>/dev/null
+	eend $?
 
 	econf \
 		--enable-testfile \
