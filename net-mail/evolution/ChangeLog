@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.21 2002/07/17 16:13:06 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.22 2002/07/20 19:56:25 azarah Exp $
+
+*evolution-1.0.8-r1 (20 Jul 2002)
+
+  20 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Fix $D being hardcoded into the binary in some cases (ccache ??).
 
 *evolution-1.0.8 (17 Jul 2002)
 
