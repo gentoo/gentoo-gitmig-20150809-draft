@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.8.4.ebuild,v 1.6 2003/03/28 10:26:54 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.8.4.ebuild,v 1.7 2003/04/18 18:10:50 avenj Exp $
 
 DESCRIPTION="shows free space on your mounted filesystems"
 HOMEPAGE="http://gtkdiskfree.tuxfamily.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://gtkdiskfree.tuxfamily.org/src_tgz/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*
