@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.6.5.ebuild,v 1.3 2004/02/14 12:57:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.6.5.ebuild,v 1.4 2004/02/16 20:50:01 mr_bones_ Exp $
 
 inherit distutils
 
@@ -34,4 +34,3 @@ src_unpack() {
 	cd ${S}/PyDS
 	epatch ${FILESDIR}/${P}-py2.3.patch
 }
-	
