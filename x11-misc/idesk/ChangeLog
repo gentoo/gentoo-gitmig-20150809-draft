@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.9 2003/06/09 22:39:55 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.10 2003/07/29 17:18:31 bcowan Exp $
+
+*idesk-0.5.6 (29 Jul 2003)
+
+  29 Jul 2003; Brad Cowan <bcowan@gentoo.org> idesk-0.5.6.ebuild:
+  Version bump.
 
   09 Jun 2003; Dylan Carlson <absinthe@gentoo.org> idesk-0.3.5-r2.ebuild,
   files/idesk.1, files/ideskrc.5:
