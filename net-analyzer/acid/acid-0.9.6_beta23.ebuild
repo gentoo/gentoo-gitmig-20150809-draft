@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.3 2004/07/31 08:39:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.4 2004/09/04 18:55:05 squinky86 Exp $
 
 inherit webapp
 
@@ -43,6 +43,6 @@ pkg_postinst() {
 	einfo ""
 	einfo "Note: ACID is installed as a webapp."
 	einfo "The ACID database is an extension of the SNORT database."
-	einfo "To setup ACID database look in the README"
+	einfo "To setup the ACID database look in the README"
 	einfo ""
 }
