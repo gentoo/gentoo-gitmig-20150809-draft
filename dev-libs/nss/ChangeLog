@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.5 2003/07/11 20:45:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.6 2003/07/11 22:01:40 wwoods Exp $
+
+  11 Jul 2003; Will Woods <wwoods@gentoo.org> nss-3.8.ebuild:
+  Added ~alpha to KEYWORDS
 
   11 Jul 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
   putting in ~sparc keyword. thanks to weeve for testing

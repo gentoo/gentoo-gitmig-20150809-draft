@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.6 2003/07/11 20:38:24 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.7 2003/07/11 22:00:09 wwoods Exp $
+
+  11 Jul 2003; Will Woods <wwoods@gentoo.org> nspr-4.3.ebuild:
+  Added ~alpha to KEYWORDS
 
   11 Jul 2003; Bartosch Pixa <darkspecter@gentoo.org> nspr-4.3.ebuild:
   set ~ppc in keywords
