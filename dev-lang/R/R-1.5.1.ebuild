@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.5.1.ebuild,v 1.1 2002/07/18 00:51:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.5.1.ebuild,v 1.2 2002/08/10 06:18:26 george Exp $
 
 S=${WORKDIR}/${P}
 
@@ -75,9 +75,17 @@ src_install () {
 
 	#fix the R wrapper script to have the correct R_HOME_DIR
 	#sed regexp borrowed from included debian rules
-	cp ${D}/usr/bin/R ${S}/bin/R.orig
+	cp ${D}/usr/lib/R/bin/R ${S}/bin/R.orig
 	sed -e '/^R_HOME_DIR=.*/s::R_HOME_DIR=/usr/lib/R:' \
-		${S}/bin/R.orig > ${D}/usr/bin/R
+		${S}/bin/R.orig > ${D}/usr/lib/R/bin/R
+
+	#R installs two identical wrappers under /usr/bin and /usr/lib/R/bin/
+	#the 2nd one is corrected by above sed, for the 1st
+	#I'll just symlink it into /usr/bin
+	cd ${D}/usr/bin/
+	rm R
+	dosym ../lib/R/bin/R /usr/bin/R
+	cd ${S}
 	
 	dodoc AUTHORS BUGS COPYING* ChangeLog FAQ INSTALL *NEWS README \
 		RESOURCES THANKS VERSION Y2K
