@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/im-canna
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.3 2004/08/05 12:40:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.4 2004/09/07 07:48:22 usata Exp $
+
+  07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -im-canna-0.3.2.1.ebuild,
+  im-canna-0.3.2.2.ebuild:
+  Marked 0.3.2.2 stable. Removed old version.
 
 *im-canna-0.3.2.2 (05 Aug 2004)
 
