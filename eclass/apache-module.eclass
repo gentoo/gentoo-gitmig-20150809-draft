@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.2 2005/01/09 10:10:24 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.3 2005/01/21 08:06:38 vericgar Exp $
 ECLASS=apache-module
 INHERITED="$INHERITED $ECLASS"
 
@@ -212,7 +212,8 @@ apache1_pkg_postinst() {
 	fi
 	if [ -n "${APACHE1_MOD_CONF}" ] ; then
 		einfo
-		einfo "Configuration file installed as ${APACHE1_MODULES_CONFDIR}/${APACHE1_MOD_CONF}.conf"
+		einfo "Configuration file installed as"
+		einfo "    ${APACHE1_MODULES_CONFDIR}/$(basename ${APACHE1_MOD_CONF}).conf"
 		einfo "You may want to edit it before turning the module on in /etc/conf.d/apache"
 		einfo
 	fi
@@ -322,7 +323,8 @@ apache2_pkg_postinst() {
 	fi
 	if [ -n "${APACHE2_MOD_CONF}" ] ; then
 		einfo
-		einfo "Configuration file installed as ${APACHE2_MODULES_CONFDIR}/${APACHE2_MOD_CONF}.conf"
+		einfo "Configuration file installed as"
+		einfo "    ${APACHE2_MODULES_CONFDIR}/$(basename ${APACHE2_MOD_CONF}).conf"
 		einfo "You may want to edit it before turning the module on in /etc/conf.d/apache2"
 		einfo
 	fi
