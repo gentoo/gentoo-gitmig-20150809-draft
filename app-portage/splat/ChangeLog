@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/splat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.14 2005/01/01 15:55:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.15 2005/04/03 12:09:42 hardave Exp $
+
+  03 Apr 2005; Hardave Riar <hardave@gentoo.org> splat-0.08.ebuild:
+  Keyworded ~mips
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
