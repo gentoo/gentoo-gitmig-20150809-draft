@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3198 2004/09/29 11:57:19 lanius Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3199 2004/09/30 03:25:11 eradicator Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# Jeremy Huddleston <eradicator@gentoo.org> (29 Sep 2004)
+# Backwards compatibility problems in the API... many libexif packages
+# result in this:
+# error: too few arguments to function `exif_entry_get_value'
+=media-libs/libexif-0.6.10
 
 # Heinrich Wendel <lanius@gentoo.org> (29 Sep 2004)
 # This Swig version breaks a lot of stuff, since it doesn't
