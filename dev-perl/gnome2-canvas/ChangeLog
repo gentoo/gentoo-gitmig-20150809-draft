@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/gnome2-canvas
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.5 2003/12/30 15:57:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.6 2003/12/30 16:01:26 mcummings Exp $
+
+  30 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  gnome2-canvas-0.28.ebuild, gnome2-canvas-0.30.ebuild,
+  No longer available from CPAN
+
+  30 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  gnome2-canvas-0.32.ebuild, gnome2-canvas-0.34.ebuild:
+  Corrected SRC URI to point to CPAN
 
 *gnome2-canvas-0.34 (30 Dec 2003)
 
