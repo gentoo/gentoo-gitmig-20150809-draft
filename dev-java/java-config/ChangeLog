@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.23 2003/08/15 05:11:23 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.24 2003/08/24 01:50:20 strider Exp $
+
+*java-config-0.2.8-r2 (23 Aug 2003)
+
+  23 Aug 2003; Adrian Almenar <strider@gentoo.org> java-config-0.2.8-r2.ebuild,
+  files/0.2.8/java-config:
+  Revision Bump for some bug fixes
 
 *java-config-0.2.8-r1 (15 Aug 2003)
 
