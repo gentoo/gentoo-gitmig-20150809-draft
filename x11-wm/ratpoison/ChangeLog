@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ratpoison
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.18 2003/11/23 16:24:09 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.19 2004/03/15 02:40:16 bcowan Exp $
+
+  14 Mar 2004; Brad Cowan <bcowan@gentoo.org> :
+  Fixed read-only var assignment.
 
 *ratpoison-1.3.0_rc1 (23 Nov 2003)
 
