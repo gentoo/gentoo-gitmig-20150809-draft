@@ -1,6 +1,25 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.186 2004/11/03 00:34:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.187 2004/11/03 08:33:38 spyderous Exp $
+
+  03 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r2.ebuild:
+  PATCH_VER 0.2.6. Add 9990_x86_6.8.0-xbox-20041024.patch for the Xbox's
+  nvidia driver (#68726). Add 1100_all_6.8.0-build-all-lucida-fonts.patch
+  (#68414). The 75dpi and 100dpi fonts weren't being built. This is from
+  upstream CVS. Add 5200_all_6.8.0-newport-accel.patch (#38549). Hopefully
+  will go upstream. This adds acceleration for Newport video cards (mostly
+  MIPS users). Add 5160_all_6.8.0-radeon-fix-monitor-detection.patch (#67845,
+  fd.o #1559). This fixes issues with dual-monitor setups not being detected
+  properly. Add
+  0440_all_6.8.0-support-cymotion-master-and-ibm-space-saver-keyboards.patch
+  (#63767). This adds support for the Cherry CyMotion Master XPress and the
+  IBM Space Saver keyboards. It's from upstream CVS. FILES_VER 0.6. Add
+  xprint.init, a Gentoo-style init-script wrapper for the RH-style init script
+  provided by xorg, and install it on USE=xprint (#68316). In addition, fix
+  the function for migration from /usr/X11R6/libdir to /usr/libdir,
+  migrate_usr_x11r6_lib(). It now works properly even when .keep files are
+  left behind and when /usr/libdir/X11 is a symlink.
 
   02 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:

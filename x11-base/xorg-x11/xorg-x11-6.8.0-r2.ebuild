@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.41 2004/11/03 00:34:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.42 2004/11/03 08:33:38 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -39,8 +39,8 @@ IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc dri font-server
 	truetype-fonts type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
-FILES_VER="0.5"
-PATCH_VER="0.2.5"
+FILES_VER="0.6"
+PATCH_VER="0.2.6"
 XCUR_VER="0.3.1"
 #MGADRV_VER="1_3_0beta"
 #VIADRV_VER="0.1"
@@ -565,6 +565,12 @@ patch_setup() {
 		patch_exclude 9960_all_4.3.0-exec-shield-GNU
 		patch_exclude 9961_all_4.3.0-libGL-exec-shield
 
+		# Xbox nvidia driver, patch is a total hack, tears apart xc/config/cf
+		# (#68726). Only apply when necessary so we don't screw other stuff up.
+		if [ ! "${PROFILE_ARCH}" = "xbox" ]; then
+			patch_exclude 9990
+		fi
+
 		# this patch comments out the Xserver line in xdm's config
 		# We only want it here
 		if ! use s390; then
@@ -1026,6 +1032,17 @@ src_install() {
 		doins ${S}/extras/drm/shared/drm.h
 	fi
 
+	# If we want xprint, save the init script before deleting /etc/rc.d/
+	# Requested on #68316
+	if use xprint; then
+		# RH-style init script, we provide a wrapper
+		exeinto /usr/lib/misc
+		doexe ${D}/etc/rc.d/xprint
+		# Install the wrapper
+		exeinto /etc/init.d
+		doexe ${FILES_DIR}/xprint.init
+	fi
+
 	# Remove the /etc/rc.d nonsense -- not everyone is RedHat
 	rm -rf ${D}/etc/rc.d
 
@@ -1038,8 +1055,18 @@ migrate_usr_x11r6_lib() {
 	# whose files we move don't lose track of them. As such, we need
 	# _absolutely nothing_ in /usr/X11R6/lib so we can make such a symlink.
 	# Donnie Berkholz <spyderous@gentoo.org> 20 October 2004
+
+	# Get rid of "standard" symlink from <6.8.0-r2
+	# We can't overwrite symlink with directory w/ $(mv -f)
+	[ -L ${ROOT}usr/$(get_libdir)/X11 ] \
+		&& rm ${ROOT}usr/$(get_libdir)/X11
+	# Move everything
 	mv -f ${ROOT}usr/X11R6/$(get_libdir)/* ${ROOT}usr/$(get_libdir)
+	# Remove any floating .keep files so we can run rmdir
+	find ${ROOT}usr/X11R6/$(get_libdir) -name '\.keep' -exec rm -f {} \;
+	# Get rid of the directory
 	rmdir ${ROOT}usr/X11R6/$(get_libdir)
+	# Put a symlink in its place
 	ln -s ../$(get_libdir) ${ROOT}usr/X11R6/$(get_libdir)
 }
 
