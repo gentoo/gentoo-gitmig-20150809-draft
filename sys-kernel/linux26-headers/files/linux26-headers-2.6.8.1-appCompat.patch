@@ -1583,3 +1583,53 @@ diff -ur linux-2.6.8.1/include/asm-ppc/unaligned.h linux-2.6.8.1-gentoo/include/
  
  #endif
 -#endif /* __KERNEL__ */
+diff -ur linux-2.6.8.1/include/asm-ppc64/processor.h linux-2.6.8.1-gentoo/include/asm-ppc64/processor.h
+--- linux-2.6.8.1/include/asm-ppc64/processor.h	2004-09-28 16:56:15.966475184 +0100
++++ linux-2.6.8.1-gentoo/include/asm-ppc64/processor.h	2004-09-28 16:54:55.359729000 +0100
+@@ -547,9 +547,9 @@
+ 	unsigned long	saved_softe;	/* Ditto for Soft Enable/Disable */
+ #ifdef CONFIG_ALTIVEC
+ 	/* Complete AltiVec register set */
+-	vector128	vr[32] __attribute((aligned(16)));
++	__vector128	vr[32] __attribute((aligned(16)));
+ 	/* AltiVec status */
+-	vector128	vscr __attribute((aligned(16)));
++	__vector128	vscr __attribute((aligned(16)));
+ 	unsigned long	vrsave;
+ 	int		used_vr;	/* set if process has used altivec */
+ #endif /* CONFIG_ALTIVEC */
+diff -ur linux-2.6.8.1/include/asm-ppc64/spinlock.h linux-2.6.8.1-gentoo/include/asm-ppc64/spinlock.h
+--- linux-2.6.8.1/include/asm-ppc64/spinlock.h	2004-09-28 16:56:15.948477920 +0100
++++ linux-2.6.8.1-gentoo/include/asm-ppc64/spinlock.h	2004-09-28 16:55:30.463392000 +0100
+@@ -20,9 +20,10 @@
+ 	volatile unsigned int lock;
+ } spinlock_t;
+ 
+-#ifdef __KERNEL__
+ #define SPIN_LOCK_UNLOCKED	(spinlock_t) { 0 }
+ 
++#ifdef __KERNEL__
++
+ #define spin_is_locked(x)	((x)->lock != 0)
+ #define spin_lock_init(x)	do { *(x) = SPIN_LOCK_UNLOCKED; } while(0)
+ 
+diff -ur linux-2.6.8.1/include/asm-ppc64/page.h linux-2.6.8.1-gentoo/include/asm-ppc64/page.h
+--- linux-2.6.8.1/include/asm-ppc64/page.h	2004-07-10 01:47:34.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/asm-ppc64/page.h	2004-10-03 14:09:31.434460808 +0100
+@@ -90,6 +91,8 @@
+ /* to align the pointer to the (next) page boundary */
+ #define PAGE_ALIGN(addr)	_ALIGN(addr, PAGE_SIZE)
+ 
++typedef struct { unsigned long pte; } pte_t;
++
+ #ifdef __KERNEL__
+ #ifndef __ASSEMBLY__
+ #include <asm/naca.h>
+@@ -128,7 +131,6 @@
+  * These are used to make use of C type-checking.  
+  * Entries in the pte table are 64b, while entries in the pgd & pmd are 32b.
+  */
+-typedef struct { unsigned long pte; } pte_t;
+ typedef struct { unsigned int  pmd; } pmd_t;
+ typedef struct { unsigned int  pgd; } pgd_t;
+ typedef struct { unsigned long pgprot; } pgprot_t;
