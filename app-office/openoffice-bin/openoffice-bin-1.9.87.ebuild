@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.87.ebuild,v 1.1 2005/03/30 13:31:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.87.ebuild,v 1.2 2005/03/31 14:49:23 suka Exp $
 
 inherit eutils fdo-mime rpm versionator
 
-IUSE="gnome java"
+IUSE="gnome java kde"
 
 INSTDIR="/opt/OpenOffice.org"
 
@@ -42,6 +42,7 @@ src_unpack() {
 	done
 
 	rpm_unpack ${S}/openofficeorg-freedesktop-menus-1.9.${SNV}-1.noarch.rpm
+	use kde && rpm_unpack ${S}/openofficeorg-suse-menus-1.9.${SNV}-1.noarch.rpm
 
 	use gnome && rpm_unpack ${S}/openofficeorg-gnome-integration-1.9.${SNV}-1.i586.rpm
 	use java && rpm_unpack ${S}/openofficeorg-javafilter-1.9.${SNV}-1.i586.rpm
@@ -65,6 +66,8 @@ src_install () {
 	mv ${WORKDIR}/opt/openoffice.org1.9.${SNV}/* ${D}${INSTDIR}
 	mv ${WORKDIR}/usr/share/icons/* ${D}/usr/share/icons
 	mv ${WORKDIR}/usr/share/mime/* ${D}/usr/share/mime
+
+	use kde && dodir /usr/share/mimelnk/application && mv ${WORKDIR}/opt/kde3/share/mimelnk/application/* ${D}/usr/share/mimelnk/application
 
 	#Menu entries
 	cd ${D}${INSTDIR}/share/xdg/
