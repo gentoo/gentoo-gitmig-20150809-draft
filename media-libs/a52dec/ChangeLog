@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.19 2004/09/16 03:56:12 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.20 2004/10/01 13:58:31 phosphan Exp $
+
+*a52dec-0.7.4-r2 (01 Oct 2004)
+
+  01 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> +a52dec-0.7.4-r2.ebuild:
+  Now also builds shared libraries. If only static libs are built, some other
+  programs make trouble as soon as djbfft is used (they don't link it, though
+  they should).
 
   15 Sep 2004; Kito <keetz@gentoo.org> :
   added added ~ppc-macos keyword
