@@ -1,5 +1,5 @@
-MD5 66f84559fe9648cc411ddeebe6cbd287 udunits-1.12.0.ebuild 1843
-MD5 f8e3c83f55f213016c334507e04c387c ChangeLog 362
+MD5 d4b944e00879c34ad472e78019f91ce4 udunits-1.12.0.ebuild 1842
+MD5 1391a94a5e562094d03dfdf9fbb0e977 ChangeLog 438
 MD5 74fae2fe7f36e9290df846758328aa65 metadata.xml 369
 MD5 922ab296149176fd2c78ebf4654916ee files/udunits_configure_in.patch 241
 MD5 5b85e692f66a2a74d7c4e1d74a729e23 files/udunits_lib_make.patch 895
