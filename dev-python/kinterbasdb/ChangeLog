@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kinterbasdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.11 2004/06/25 01:32:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.12 2004/10/11 20:36:43 carlo Exp $
+
+*kinterbasdb-3.1_pre8 (11 Oct 2004)
+
+  11 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +kinterbasdb-3.1_pre8.ebuild:
+  version bump
 
   07 May 2004; Bryan Østergaard <kloeri@gentoo.org>
   kinterbasdb-3.0.1_pre3.ebuild:
