@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/shim-ruby18-1.8.1_pre3.ebuild,v 1.3 2004/03/15 03:02:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/shim-ruby18-1.8.1_pre3.ebuild,v 1.4 2004/04/16 16:30:34 usata Exp $
 
 inherit ruby
 
@@ -19,9 +19,6 @@ IUSE=""
 RUBY="/usr/bin/ruby16"
 
 DEPEND="~dev-lang/ruby-1.6.8"
-PROVIDE="dev-ruby/strscan
-	dev-ruby/racc
-	dev-ruby/optparse"
 
 S="${WORKDIR}/shim/ruby16"
 

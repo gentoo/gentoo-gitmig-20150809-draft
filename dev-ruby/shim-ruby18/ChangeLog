@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/shim-ruby18
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/ChangeLog,v 1.4 2004/03/15 03:02:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/ChangeLog,v 1.5 2004/04/16 16:30:34 usata Exp $
+
+  17 Apr 2004; Mamoru KOMACHI <usata@gentoo.org>
+  shim-ruby18-1.8.1_pre2.ebuild, shim-ruby18-1.8.1_pre3.ebuild:
+  Removed PROVIDE. See bug #46965
 
   14 Mar 2004; Jason Wever <weeve@gentoo.org> shim-ruby18-1.8.1_pre3.ebuild:
   Added ~sparc keyword.
