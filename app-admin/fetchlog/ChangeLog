@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/fetchlog
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.4 2004/10/05 02:58:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.5 2004/12/26 15:36:37 phosphan Exp $
+
+*fetchlog-1.0 (26 Dec 2004)
+
+  26 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> +fetchlog-1.0.ebuild:
+  Version bump
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   fetchlog-0.94.ebuild:
