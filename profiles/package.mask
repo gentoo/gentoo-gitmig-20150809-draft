@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2699 2004/02/14 18:06:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2700 2004/02/15 18:59:56 solar Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <solar@gentoo.org> (15 Feb 2004)
+# heap overflow bug #40631
+<=media-sound/mpg123-0.59s-r1
 
 # <lu_zero@gentoo.org> (14 Feb 2004)
 # Builds but aborts on load
