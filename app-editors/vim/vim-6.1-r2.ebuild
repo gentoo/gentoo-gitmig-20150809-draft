@@ -1,7 +1,7 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r2.ebuild,v 1.1 2002/04/08 03:06:29 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r2.ebuild,v 1.2 2002/05/23 06:50:09 seemant Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -62,7 +62,7 @@ DEPEND="virtual/glibc
 		>=sys-apps/portage-1.8.18
 		gpm?	( >=sys-libs/gpm-1.19.3 )
 		gnome?	( >=gnome-base/gnome-libs-1.4.1.2-r1 )
-		gtk?	( >=x11-libs/gtk+-1.2.10-r4 )
+		gtk?	( =x11-libs/gtk+-1.2* )
 		X?		( x11-base/xfree )
 		perl?	( sys-devel/perl )
 		python? ( dev-lang/python )

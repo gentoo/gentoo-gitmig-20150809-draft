@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.02.ebuild,v 1.2 2002/04/07 20:42:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.02.ebuild,v 1.3 2002/05/23 06:50:09 seemant Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="a modular screensaver for X11"
@@ -9,14 +9,14 @@ SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 DEPEND="virtual/x11 sys-devel/bc
-	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
+	gtk? ( =x11-libs/gtk+-1.2* )
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	opengl? ( virtual/opengl >=media-libs/gle-3.0.1 )
 	gnome? ( >=gnome-base/control-center-1.4.0.1-r1 )
 	pam? ( >=sys-libs/pam-0.75 )"
 
 RDEPEND="virtual/x11
-	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
+	gtk? ( =x11-libs/gtk+-1.2* )
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	opengl? ( virtual/opengl >=media-libs/gle-3.0.1 )
 	gnome? ( >=gnome-base/control-center-1.4.0.1-r1 )

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.2.ebuild,v 1.2 2002/04/28 02:37:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.2.ebuild,v 1.3 2002/05/23 06:50:09 seemant Exp $
 
 SYNCMAL="0.62.2"
 MALSYNC="2.0.7"
@@ -14,7 +14,7 @@ HOMEPAGE="http://jpilot.org/"
 # for jpilot-syncmal http://people.atl.mediaone.net/jasonday/code/syncmal/
 # And you'll also need an avangto account. 
 
-DEPEND=">=x11-libs/gtk+-1.2.10-r4 >=dev-libs/pilot-link-0.9.5"
+DEPEND="=x11-libs/gtk+-1.2* >=dev-libs/pilot-link-0.9.5"
 
 src_unpack() {
 	unpack ${P}.tar.gz

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Pedro Fiol <fiocolpe@softhome.net>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.14.ebuild,v 1.1 2002/05/17 06:36:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.14.ebuild,v 1.2 2002/05/23 06:50:09 seemant Exp $
 
 M=endeavour2-mimetypes
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2
 HOMEPAGE="http://wolfpack.twu.net/Endeavour2/"
 LICENSE="GPL-2"
 
-DEPEND=">=x11-libs/gtk+-1.2.8
+DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10
 	>=media-gfx/iv-0.1.9"
 

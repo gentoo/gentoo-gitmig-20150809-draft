@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/dn9b-0401-r1.ebuild,v 1.2 2001/11/10 02:58:37 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/dn9b-0401-r1.ebuild,v 1.3 2002/05/23 06:50:09 seemant Exp $
 
 S=${WORKDIR}/darcnes
 DESCRIPTION="A multi-system emulator"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.netway.com/~nyef"
 
 DEPEND=">=media-libs/svgalib-1.4.2
 	X? ( virtual/x11 )
-	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )"
+	gtk? ( =x11-libs/gtk+-1.2* )"
 
 src_compile() {
 

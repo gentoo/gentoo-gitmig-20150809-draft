@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Taras Glek <taras.glek@home.com>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.1.ebuild,v 1.1 2001/12/06 13:45:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.1.ebuild,v 1.2 2002/05/23 06:50:08 seemant Exp $
 
 S=${WORKDIR}/$PN/gtk
 MY_PV=141
@@ -9,9 +9,9 @@ DESCRIPTION="A very powerful editor for programmers"
 SRC_URI="http://www.scintilla.org/${PN}${MY_PV}.tgz" 
 HOMEPAGE="http://www.scintilla.org"
 
-DEPEND=">=x11-libs/gtk+-1.2.10-r4
+DEPEND="=x11-libs/gtk+-1.2*
 		gnome? ( gnome-base/gnome-core )"
-RDEPEND=">=x11-libs/gtk+-1.2.10-r4"
+RDEPEND="=x11-libs/gtk+-1.2*"
 
 src_compile() {
 
