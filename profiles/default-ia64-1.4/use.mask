@@ -23,3 +23,9 @@ selinux
 
 # No apm support on ia64
 apm
+
+# Paul de Vrieze <pauldv@gentoo.org>
+# There is no java in this profile (if there is it must be available). Without
+# this repoman will fail on apps like sys-libs/db
+java
+
