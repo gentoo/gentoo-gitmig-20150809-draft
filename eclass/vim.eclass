@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.22 2003/04/23 22:05:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.23 2003/04/24 16:31:44 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -79,7 +79,7 @@ apply_vim_patches() {
 	# For reasons yet unknown, epatch fails to apply this cleanly
 	ebegin "Applying filtered vim patches..."
 	TMPDIR=${T} patch -f -s -p0 < ${p}
-	eend
+	eend 0
 }
 
 vim_src_unpack() {
@@ -206,10 +206,15 @@ src_install() {
 
 		keepdir /usr/share/vim/vim${VIM_VERSION/.}/keymap
 
+		# Azarah put in the below "fix" in early 2002 but it makes
+		# things painful when going from 6.1->6.2a, etc.  It also
+		# seems to be completely unnecessary, so I'm removing it.
+		# (24 Apr 2003 agriffis)
+		#
 		# fix problems with vim not finding its data files.
-		echo "VIMRUNTIME=/usr/share/vim/vim${VIM_VERSION/.}" > 40vim
-		insinto /etc/env.d
-		doins 40vim
+		#echo "VIMRUNTIME=/usr/share/vim/vim${VIM_VERSION/.}" > 40vim
+		#insinto /etc/env.d
+		#doins 40vim
 
 		# default vimrc is installed by vim-core since it applies to
 		# both vim and gvim
