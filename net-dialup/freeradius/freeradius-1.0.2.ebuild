@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.1.ebuild,v 1.6 2005/02/28 18:06:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2.ebuild,v 1.1 2005/02/28 18:06:49 mrness Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ IUSE="frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl"
 DESCRIPTION="highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar.gz"
 HOMEPAGE="http://www.freeradius.org/"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -30,9 +30,6 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 
-	# gcc-3.4 fix
-	epatch ${FILESDIR}/${P}-gcc34.patch
-
 	export WANT_AUTOCONF=2.1
 	autoconf
 }
@@ -40,40 +37,40 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	if ! use snmp; then
+	if ! useq snmp; then
 		myconf="--without-snmp"
 	fi
-	if use frascend; then
+	if useq frascend; then
 		myconf="${myconf} --with-ascend-binary"
 	fi
-	if use frnothreads; then
+	if useq frnothreads; then
 		myconf="${myconf} --without-threads"
 	fi
-	if use frxp; then
+	if useq frxp; then
 		myconf="${myconf} --with-experimental-modules"
+	fi
+	#fix bug #77613
+	if has_version app-crypt/heimdal; then
+		myconf="${myconf} --enable-heimdal-krb5"
 	fi
 
 	# kill modules we don't use
-	if ! use ssl; then
+	if ! useq ssl; then
 		einfo "removing rlm_eap_tls and rlm_x99_token (no use ssl)"
 		rm -rf src/modules/rlm_eap/types/rlm_eap_tls src/modules/rlm_x99_token
 	fi
-	if ! use ldap; then
+	if ! useq ldap; then
 		einfo "removing rlm_ldap (no use ldap)"
 		rm -rf src/modules/rlm_ldap
 	fi
-	if ! use kerberos; then
+	if ! useq kerberos; then
 		einfo "removing rlm_krb5 (no use kerberos)"
 		rm -rf src/modules/rlm_krb5
 	fi
-	if ! use pam; then
+	if ! useq pam; then
 		einfo "removing rlm_pam (no use pam)"
 		rm -rf src/modules/rlm_pam
 	fi
-
-	# experimental modules are
-	# rlm_cram rlm_example rlm_perl
-	# rlm_python rlm_sim_files rlm_smb rlm_sqlcounter 
 
 	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
 		--mandir=/usr/share/man \
@@ -112,7 +109,7 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/radius.init radiusd
 
-	dodir /etc/conf.d
-	cp ${FILESDIR}/radius.conf ${D}/etc/conf.d/radiusd
+	insinto /etc/conf.d
+	newins ${FILESDIR}/radius.conf radiusd
 }
 
