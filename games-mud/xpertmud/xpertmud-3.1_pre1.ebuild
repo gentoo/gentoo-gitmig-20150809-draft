@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/xpertmud-3.1_pre1.ebuild,v 1.3 2004/07/03 22:24:09 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/xpertmud-3.1_pre1.ebuild,v 1.4 2004/09/03 15:11:33 dholm Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xpertmud/xpertmud-${MY_PV}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="python ruby"
 
 DEPEND=">=sys-devel/libperl-5.6.1
