@@ -1,0 +1,7 @@
+# ChangeLog for dev-haskell/hsshellscript
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.1 2005/01/24 14:20:03 kosmikus Exp $
+
+  24 Jan 2005; Andres Loeh <kosmikus@gentoo.org> :
+  Initial import (bug #79170).
+
