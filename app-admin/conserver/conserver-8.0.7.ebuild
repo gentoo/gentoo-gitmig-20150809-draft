@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.0.3.ebuild,v 1.2 2003/11/23 14:49:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.0.7.ebuild,v 1.1 2003/11/23 14:49:01 weeve Exp $
 
 DESCRIPTION="Conserver - Serial Console Manager"
 HOMEPAGE="http://www.conserver.com/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.conserver.com/conserver/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 sparc"
+KEYWORDS="~x86 ~sparc"
 
 IUSE="pam ssl tcpd"
 DEPEND="ssl?  ( >=dev-libs/openssl-0.9.6g )
