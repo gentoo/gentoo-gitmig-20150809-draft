@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.3 2004/05/02 17:28:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.4 2004/05/04 05:06:26 zypher Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ http://heanet.dl.sourceforge.net/sourceforge/ffmpeg/ffmpeg-0.4.8.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-DEPEND=">=x11-base/xfree-4.3.0-r5
+DEPEND="virtual/x11
 	>=media-libs/libsdl-1.2.6-r3
 	>=x11-libs/qt-3.3.0-r1"
 
