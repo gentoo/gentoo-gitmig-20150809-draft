@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c51309be21ed5217e17a9f0a01d4bf85 Snowball-Swedish-1.01.ebuild 494
+MD5 de28769b870fba3c08724313245312b2 ChangeLog 516
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 30f386b952006f06cc45d91183ec98d5 ChangeLog 408
+MD5 d9ff868b6f4ffc5afee16cea8496c1c9 Snowball-Swedish-1.01.ebuild 493
 MD5 e133084f343daf2e9ea0e48a665470d0 files/digest-Snowball-Swedish-1.01 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZHzetG5z4I8BtQoRAiU2AKCEdKnEkHNuug+PMDLiGihJsikMzACeMlsx
-6LY5cFSZ4HHmOnfrI2C97Sw=
-=Dmv+
+iD8DBQFB8nHWtG5z4I8BtQoRAqICAJ9QiMmpnZiHdYz5na1kD80+Z1HASACeKBjL
+s+SLnT9P6/sljchmdDmyUvk=
+=HhVz
 -----END PGP SIGNATURE-----

@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eae8d44a6212f0c28751c68042ff145a Lingua-Stem-Snowball-Da-1.01.ebuild 506
+MD5 376b87a5ac6562037e03e0505891c9ed ChangeLog 551
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 8dbf4bc7fbcf53ae4b3c8ac20d5f1616 ChangeLog 436
+MD5 0e4c876fb2c2b4f4006d0867da6f07fc Lingua-Stem-Snowball-Da-1.01.ebuild 505
 MD5 3de40c0e57abb450ec2928df58c5ec3b files/digest-Lingua-Stem-Snowball-Da-1.01 80
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZHxmtG5z4I8BtQoRAg1lAJ4pyScia/1Vy59cLJvFllo9PTfmswCfed87
-na6q/iLci58qziRtdRHkTWM=
-=Ki/n
+iD8DBQFB8nFLtG5z4I8BtQoRAiN/AJ9mQld7zWr6ZSnJQlla04Qhq+3b7wCcCgeg
+XYME83Uo9ubsTzplUHKXixc=
+=V1WR
 -----END PGP SIGNATURE-----
