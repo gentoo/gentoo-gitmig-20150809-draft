@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.3-r4.ebuild,v 1.1 2004/04/21 22:05:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.3-r4.ebuild,v 1.2 2004/05/11 03:08:29 kumba Exp $
 
 
 # Version Data
@@ -24,8 +24,11 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 18 Feb 2004
-# 3) Patches for Cobalt support
+# 2) linux-mips.org CVS snapshot diff from 05 Mar 2004
+# 3) Patch to tweak arch/mips/Makefile to build proper kernels under binutils-2.15.x
+# 4) Iluxa's minimal O2 patchset
+# 5) CAN-2004-0109: ISO9660 patch
+# 6) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"

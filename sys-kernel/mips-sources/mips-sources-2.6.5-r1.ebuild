@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.5-r1.ebuild,v 1.1 2004/04/21 22:05:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.5-r1.ebuild,v 1.2 2004/05/11 03:08:29 kumba Exp $
 
 
 # Version Data
@@ -21,8 +21,12 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 18 Feb 2004
-# 3) Patches for Cobalt support
+# 2) linux-mips.org CVS snapshot diff from 12 Apr 2004
+# 3) Patch to fix the Swap issue in 2.6.5+ (Credit: Peter Horton <cobalt@colonel-panic.org>
+# 4) Iluxa's minimal O2 patchset
+# 5) Patch to fix linking issue for initrd's
+# 6) CAN-2004-0109: ISO9660 patch
+# 7) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
