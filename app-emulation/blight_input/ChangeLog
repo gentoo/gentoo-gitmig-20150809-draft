@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/blight_input
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight_input/ChangeLog,v 1.1 2002/12/27 17:51:40 rphillips Exp $
+
+*blight_input-0.0.4 (26 Dec 2002)
+
+  26 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  initial release
