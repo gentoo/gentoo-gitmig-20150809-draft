@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.43 2003/11/14 22:41:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.44 2003/11/21 15:19:38 gmsoft Exp $
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gstreamer-0.6.3.ebuild,
   files/gstreamer-0.6.3-Werror.patch:
@@ -13,6 +13,10 @@
   Added a ppc related patch
 
 *gstreamer-0.6.4 (23 Oct 2003)
+
+  21 Nov 2003; Guy Martin <gmsoft@gentoo.org> gstreamer-0.6.4.ebuild, 
+  gstreamer-0.6.3.ebuild :
+  Added build fix for hppa.
 
   23 Oct 2003; foser <foser@gentoo.org> gstreamer-0.6.4.ebuild :
   Add some hacks to have at least some docs build

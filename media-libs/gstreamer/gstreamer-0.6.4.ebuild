@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.4.ebuild,v 1.2 2003/10/24 13:11:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.4.ebuild,v 1.3 2003/11/21 15:19:38 gmsoft Exp $
 
 inherit eutils flag-o-matic libtool gnome.org
 
@@ -53,10 +53,11 @@ src_compile() {
 		`use_enable doc docs-build` \
 		|| die "./configure failed"
 
-	# On alpha and amd64 some innocuous warnings are spit out that break the
-	# build because of -Werror
+	# On alpha, amd64 and hppa some innocuous warnings are spit out that break
+	# the build because of -Werror
 	use alpha && find . -name Makefile | xargs sed -i -e 's/-Werror//g'
 	use amd64 && find . -name Makefile | xargs sed -i -e 's/-Werror//g'
+	use hppa && find . -name Makefile | xargs sed -i -e 's/-Werror//g'
 
 	emake || die "compile failed"
 
