@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.21 2003/11/10 22:51:43 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.22 2003/11/11 00:05:20 gregf Exp $
+
+  10 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> wget-1.9.ebuild:
+  wget-1.9 marked as stable.
 
 *wget-1.9-r2 (10 Nov 2003)
 
