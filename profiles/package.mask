@@ -247,12 +247,6 @@ sys-apps/mkisofs
 # fixed etherape to build on gcc3.1 (unmask if know it works on gcc2).
 =app-analyzer/etherape-0.8.2-r1
 
-# seemant@gentoo.org (12 Jul 2002)
-# using securityfocus's perl wrapper script.  but the bug still inherently
-# exists in acroread, so I will mask it.  users who really really want it
-# are free to unmask.
->=app-text/acroread-5.05-r5
-
 # cardoe@gentoo.org (12 Jul 2002)
 # new beta of pcmcia-cs
 =sys-apps/pcmcia-cs-3.1.35_beta2
