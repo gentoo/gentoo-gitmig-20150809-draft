@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/c3p0
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.4 2004/07/15 08:25:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.5 2004/08/24 03:41:23 zx Exp $
+
+  23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> c3p0-0.8.4.5.ebuild:
+  Marking stable on x86
 
   15 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> :
   fix broken package.
