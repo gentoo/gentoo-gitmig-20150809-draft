@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.1 2004/06/30 15:14:10 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.2 2004/07/02 08:05:20 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -277,6 +277,7 @@ src_unpack() {
 	filter-flags "-fomit-frame-pointer"
 	filter-flags "-fprefetch-loop-arrays"
 	filter-flags "-fno-default-inline"
+	filter-flags "-fstack-protector"
 	append-flags "-fno-strict-aliasing"
 	replace-flags "-O3" "-O2"
 	replace-flags "-Os" "-O2"
