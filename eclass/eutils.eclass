@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.4 2002/11/11 21:36:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.5 2002/11/11 22:36:22 azarah Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselfs.
 #
@@ -49,8 +49,39 @@ GROUP ( /lib/libxxx )
 END_LDSCRIPT
 
 	dosed "s:libxxx:$1:" /usr/lib/$1
+
+	return 0
 }
 
+# Simple function to draw a line consisting of '=' the same length as $*
+#
+# <azarah@gentoo.org> (11 Nov 2002)
+#
+draw_line() {
+	local i=0
+	local str_length=""
+
+	# Handle calls that do not have args, or wc not being installed ...
+	if [ -z "$1" -o ! -x "$(which wc 2>/dev/null)" ]
+	then
+		echo "==============================================================="
+		return 0
+	fi
+
+	# Get the length of $*
+	str_length="$(echo -n "$*" | wc -m)"
+	
+	while [ "$i" -lt "${str_length}" ]
+	do
+		echo -n "="
+		
+		i=$((i + 1))
+	done
+
+	echo
+
+	return 0
+}
 
 # Default directory where patches are located
 EPATCH_SOURCE="${WORKDIR}/patch"
@@ -156,11 +187,22 @@ epatch() {
 				einfo "  ${x##*/}..."
 			fi
 
-			echo "*** Patch ${x##*/} ***" > ${STDERR_TARGET}
+			echo "***** ${x##*/} *****" > ${STDERR_TARGET}
+			echo >> ${STDERR_TARGET}
 
 			# Allow for prefix to differ ... im lazy, so shoot me :/
 			while [ "${count}" -lt 5 ]
 			do
+				# Generate some useful debug info ...
+				draw_line "***** ${x##*/} *****" >> ${STDERR_TARGET}
+				echo >> ${STDERR_TARGET}
+				
+				echo -n "PATCH COMMAND:  " >> ${STDERR_TARGET}
+				echo "${PIPE_CMD} ${x} | patch ${popts} -p${count}" >> ${STDERR_TARGET}
+				
+				echo >> ${STDERR_TARGET}
+				draw_line "***** ${x##*/} *****" >> ${STDERR_TARGET}
+				
 				if eval ${PIPE_CMD} ${x} | patch ${popts} --dry-run -f -p${count} 2>&1 >> ${STDERR_TARGET}
 				then
 					eval ${PIPE_CMD} ${x} | patch ${popts} -p${count} 2>&1 >> ${STDERR_TARGET}
