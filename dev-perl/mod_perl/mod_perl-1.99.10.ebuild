@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.10.ebuild,v 1.1 2003/10/31 00:58:38 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.10.ebuild,v 1.2 2003/10/31 01:01:18 rac Exp $
 
 inherit eutils
 
@@ -16,10 +16,13 @@ KEYWORDS="~x86 amd64"
 IUSE=""
 SLOT="1"
 
+# see bug 30087 for why sudo is in here
+
 DEPEND="dev-lang/perl
 	=net-www/apache-2*
 	>=dev-perl/CGI-2.93
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	app-admin/sudo"
 
 src_unpack() {
 	unpack ${A}
