@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/cvsweb-3.0.1.ebuild,v 1.1 2004/08/18 16:52:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/cvsweb-3.0.1.ebuild,v 1.2 2004/08/25 09:10:04 rl03 Exp $
 
 inherit webapp
 
@@ -30,6 +30,7 @@ src_install() {
 	cp css/cvsweb.css ${D}/${MY_HTDOCSDIR}
 	exeinto ${MY_CGIBINDIR}
 	doexe cvsweb.cgi
+	chmod +x ${D}/${MY_CGIBINDIR}/cvsweb.cgi
 
 	dodoc README TODO NEWS ChangeLog
 
