@@ -38,6 +38,9 @@
 >=sys-apps/vixie-cron-3.0.1-r2
 >=sys-libs/pwdb-0.61-r4
 
+# Critical xattr fixes:
+>=sys-boot/grub-0.94
+
 # must use coreutils (these RDEP on it):
 >=sys-apps/fileutils-4.1.11-r2
 >=sys-apps/textutils-2.1-r1
