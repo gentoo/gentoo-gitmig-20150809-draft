@@ -1,8 +1,11 @@
 # ChangeLog for app-arch/stuffit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.2 2002/11/21 00:31:50 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.3 2002/11/27 03:47:31 nall Exp $
 
 *stuffit-5.2.0.611 (29 Oct 2002)
+
+  26 Nov 2002; Jon Nall <nall@gentoo.org> stuffit-5.2.0.611.ebuild :
+  fixed SRC_URI to be blank. this fixes bug #10917
 
   19 Nov 2002; Jon Nall <nall@gentoo.org> stuffit-5.2.0.611.ebuild :
   fixed commented RESTRICT
