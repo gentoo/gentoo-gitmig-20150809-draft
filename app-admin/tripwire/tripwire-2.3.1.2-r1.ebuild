@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.3 2004/06/25 23:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.4 2004/10/20 22:40:22 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -60,7 +60,7 @@ src_compile() {
 	# 	-taviso@gentoo.org
 	strip-flags
 
-	emake release RPM_OPT_FLAGS="${CXXFLAGS}"
+	emake release RPM_OPT_FLAGS="${CXXFLAGS}" || die
 }
 
 src_install() {

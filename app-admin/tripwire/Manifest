@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 54846356d7bf165ecfed09ac368acf2c tripwire-2.3.1.2-r1.ebuild 2835
 MD5 3f918bc05537d29608b6f4f486a9599f ChangeLog 1886
 MD5 96f9cca8215d6e0286f08431592d3677 metadata.xml 597
-MD5 4e3264ac7ab0d91e7865573d1475788b tripwire-2.3.1.2-r1.ebuild 2828
-MD5 0700fa22e2353e11c842f48453703d96 files/tripwire-2.3.0-50-rfc822.patch.bz2 347
 MD5 fa08ee8d578671e3f18b1ce684e0fa31 files/tripwire-2.3.1-2-fhs.patch.bz2 327
-MD5 504ee0af20b026a651c89030f87c6e10 files/tripwire-2.3.1-2-gcc-3.3.patch.bz2 197
-MD5 30e2f2f5df395d3dd1dc02fb40d9810c files/tripwire-2.3.1-gcc3.patch.bz2 2878
-MD5 6e77715bf58f0e8122d2a2ec2344edab files/tripwire-jbj.patch.bz2 791
 MD5 7b5cac2555db706d0bdc2c49d7f6b9e9 files/tripwire-mkstemp.patch.bz2 564
-MD5 033e88454d3adcf1cfc83270b4dc452e files/tripwire.cron 315
-MD5 e68a00cf5ccdd906adec70a54fdfb66b files/tripwire.gif 4679
-MD5 9bbdaa3abc2c11b40d15b5d19d2c56f0 files/tripwire.txt 8401
 MD5 4a83584d44a4974cd6d48d695dfd1d67 files/twcfg.txt 604
-MD5 c0cf6e656870aa10c4ba2e4730080131 files/twinstall.sh 10100
 MD5 1c477e41e000e6579665e97f75a9cefb files/twpol.txt 51817
 MD5 9493ba83857bc6cfcd276f74becaa98e files/digest-tripwire-2.3.1.2-r1 142
+MD5 0700fa22e2353e11c842f48453703d96 files/tripwire-2.3.0-50-rfc822.patch.bz2 347
 MD5 87628f7bb2693d2ee923ad3bc1877533 files/tripwire-format-string-email-report.diff 472
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3K9XHTu7gpaalycRApSBAKCDZDlC+sxODFZW+jpnHZ72k6ee1wCdGvHF
-PtgxP1+XUNm91VadY/3YNh4=
-=7tyw
------END PGP SIGNATURE-----
+MD5 c0cf6e656870aa10c4ba2e4730080131 files/twinstall.sh 10100
+MD5 30e2f2f5df395d3dd1dc02fb40d9810c files/tripwire-2.3.1-gcc3.patch.bz2 2878
+MD5 504ee0af20b026a651c89030f87c6e10 files/tripwire-2.3.1-2-gcc-3.3.patch.bz2 197
+MD5 033e88454d3adcf1cfc83270b4dc452e files/tripwire.cron 315
+MD5 6e77715bf58f0e8122d2a2ec2344edab files/tripwire-jbj.patch.bz2 791
+MD5 e68a00cf5ccdd906adec70a54fdfb66b files/tripwire.gif 4679
+MD5 9bbdaa3abc2c11b40d15b5d19d2c56f0 files/tripwire.txt 8401
