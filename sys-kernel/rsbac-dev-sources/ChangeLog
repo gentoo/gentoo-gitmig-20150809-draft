@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/rsbac-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.8 2004/07/26 09:33:57 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.9 2004/08/05 01:44:37 kang Exp $
+
+*rsbac-dev-sources-2.6.7-r4 (05 Aug 2004)
+
+  05 Aug 2004; Guillaume Destuynder <kang@gentoo.org>
+  -rsbac-dev-sources-2.6.7-r3.ebuild,
+  +rsbac-dev-sources-2.6.7-r4.ebuild:
+  Fixes CAN 0415 and #59378 (file offset pointer handling vulnerability)
 
 *rsbac-dev-sources-2.6.7-r3 (22 Jul 2004)
 

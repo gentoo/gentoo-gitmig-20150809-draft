@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.7-r3.ebuild,v 1.2 2004/07/26 09:33:57 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.7-r4.ebuild,v 1.1 2004/08/05 01:44:37 kang Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -10,6 +10,7 @@ detect_version
 # rsbac 
 RSBACV=1.2.3
 RSBAC_SRC="http://rsbac.org/download/code/v${RSBACV}/rsbac-v${RSBACV}.tar.bz2"
+CAN_SRC="http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-2.6.7-CAN-2004-0415.patch"
 
 # rsbac kernel patches
 RGPV=7.1
@@ -19,6 +20,7 @@ UNIPATCH_STRICTORDER="yes"
 UNIPATCH_LIST="${FILESDIR}/${PN}-iptables-dos.patch
 	${FILESDIR}/${PN}-CAN-2004-0497.patch
 	${FILESDIR}/${PN}-CAN-2004-0596.patch
+	${DISTDIR}/linux-2.6.7-CAN-2004-0415.patch
 	${DISTDIR}/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2
 	${FILESDIR}/${PN}-v1.2.3-3.patch"
 UNIPATCH_DOCS="${WORKDIR}/patches/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}/0000_README"
@@ -26,7 +28,7 @@ UNIPATCH_DOCS="${WORKDIR}/patches/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}/
 HOMEPAGE="http://hardened.gentoo.org/rsbac/"
 DESCRIPTION="RSBAC hardened sources for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 
-SRC_URI="${KERNEL_URI} ${RSBAC_SRC} ${RGPV_SRC}"
+SRC_URI="${KERNEL_URI} ${RSBAC_SRC} ${RGPV_SRC} ${CAN_SRC}"
 KEYWORDS="x86"
 
 
