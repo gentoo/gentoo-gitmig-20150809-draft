@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnugadu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.22 2004/10/02 18:15:36 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.23 2004/10/14 22:53:31 spock Exp $
+
+  15 Oct 2004; Michal Januszewski <spock@gentoo.org> gnugadu-2.0.5.ebuild,
+  gnugadu-2.0.6.ebuild:
+  Changed --with-spell to use_with.. Closes bug #61430.
 
   02 Oct 2004; Michal Januszewski <spock@gentoo.org> gnugadu-2.0.5.ebuild,
   gnugadu-2.0.6.ebuild:
