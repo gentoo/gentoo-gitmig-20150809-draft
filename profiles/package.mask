@@ -446,7 +446,6 @@ app-admin/va-systemimager-client
 =sys-apps/vcron-3.0_p1-r2
 =sys-apps/vcron-3.0_p1-r6
 >=media-video/mpeg2-movie-1.5
->=media-gfx/autotrace-0.26
 =net-ftp/lftp-2.4.3
 =media-sound/grip-2.98.3
 =media-sound/grip-2.98.3-r1
@@ -455,6 +454,9 @@ app-admin/va-systemimager-client
 >=dev-db/unixODBC-2.0.8
 =app-editors/fte-20010819
 #=net-dialup/mgetty-1.1.26
+
+#older versions were reported as broken, 0.30 works fine (george)
+<=media-gfx/autotrace-0.28
 
 # have to fix the patches and dependencies
 =app-editors/fte-20010819
