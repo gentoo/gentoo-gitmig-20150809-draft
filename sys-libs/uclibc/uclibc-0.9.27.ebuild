@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.10 2005/03/02 19:20:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.11 2005/03/03 23:31:08 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -279,7 +279,7 @@ src_install() {
 
 	# remove files coming from kernel-headers
 	# scsi is uclibc's own directory since cvs 20040212
-	rm -r "${D}"$(alt_prefix)/include/{asm,linux,asm-generic}
+	rm -rf "${D}"$(alt_prefix)/include/{asm,linux,asm-generic}
 
 	# clean up misc cruft
 	find "${D}"$(alt_prefix)/include -type d '(' -name CVS -o -name .svn ')' | xargs rm -r
