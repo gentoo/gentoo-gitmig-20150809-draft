@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fdf7682c6c0b1e89c4918c834ba7aef4 ChangeLog 2621
+MD5 bd8e5db82cf6a31ddff39a20a2b690fd ChangeLog 2903
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 3b6e18c777efd5c4d2b440a8ebf53aa8 xmms-scrobbler-0.3.5.ebuild 655
-MD5 42622bef171de6fad52ada3997fecb2c files/digest-xmms-scrobbler-0.3.5 73
+MD5 2ece83b42f135617b9a6db3b4ae428af xmms-scrobbler-0.3.6.ebuild 657
+MD5 f3f9865258d1a7ab26719dc5e241b524 files/digest-xmms-scrobbler-0.3.6 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBaaDtArHZZzCEUG0RAlm+AJ9f3GAmsmoDqgIfc0pwE8TPpxBtwACfX5wC
-ew9sClz3VcQShLVtX9MKfqE=
-=3X6A
+iD8DBQFBu2JdArHZZzCEUG0RAudwAJ9Fo8XxfrbcbM769q3A/VEyr75sRgCghJvh
+A/Za4DjKPrW48nuPteQSflU=
+=L1d/
 -----END PGP SIGNATURE-----
