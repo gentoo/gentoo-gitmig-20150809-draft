@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cvsd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.11 2004/10/02 19:07:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.12 2004/11/14 15:33:27 max Exp $
+
+*cvsd-1.0.3 (13 Nov 2004)
+
+  13 Nov 2004; <max@gentoo.org> +cvsd-1.0.3.ebuild:
+  Bump version to 1.0.3.  Fixes bug #67384.
 
   02 Oct 2004; Jason Wever <weeve@gentoo.org> cvsd-1.0.2.ebuild:
   Added ~sparc keyword, resolves bug #65864.
