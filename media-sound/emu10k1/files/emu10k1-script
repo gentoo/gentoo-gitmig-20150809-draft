@@ -8,8 +8,8 @@ AUDIGY_PCI_TAG="multimedia audio controller: creative labs.*audigy"
 EMU10K1_PCI_TAG="multimedia audio controller: creative labs.*emu10k1"
 
 # first, lets try to read the driver information in /proc/driver/
-proc="`ls /proc/driver/emu10k1/*/info | awk '{print $1}'`"
-if [ -z "${CARD_TYPE}" ] && [ -e ${proc} ] ; then
+proc="`ls /proc/driver/emu10k1/*/info 2> /dev/null | awk '{print $1}'`"
+if [ -z "${CARD_TYPE}" ] && [ ! -z "${proc}" ] && [ -e ${proc} ] ; then
 	if [ -n "$(egrep -i '^card type.*audigy.*' ${proc})" ] ; then
 		CARD_TYPE="audigy"
 	elif [ -n "$(egrep -i '^card type.*emu10k1.*' ${proc})" ] ; then
