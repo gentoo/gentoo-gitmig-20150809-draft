@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.36 2004/07/04 23:48:19 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.37 2004/07/05 00:00:13 spock Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -42,7 +42,7 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_po
 
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
-IUSE="${IUSE} build"
+IUSE="${IUSE} build doc"
 SLOT="${KV}"
 
 # Grab kernel version from KV
@@ -166,6 +166,16 @@ compile_headers() {
 	ARCH=${MY_ARCH}	
 }
 
+compile_manpages() {
+	local MY_ARCH
+
+	einfo "Making manpages..."
+	MY_ARCH=${ARCH}
+	unset ARCH
+	make mandocs
+	ARCH=${MY_ARCH}
+}
+
 # install functions
 #==============================================================
 install_universal() {
@@ -230,8 +240,25 @@ install_sources() {
 		docs="${docs} ${S}/patches.txt"
 	fi
 
+	if use doc; then
+		install_manpages
+	fi
+	
 	dodoc ${docs}
 	mv ${WORKDIR}/linux* ${D}/usr/src
+}
+
+install_manpages() {
+	local MY_ARCH
+
+	ebegin "Installing mapages"
+	MY_ARCH=${ARCH}
+	unset ARCH
+	sed -i -e "s#/usr/local/man#${D}/usr/man#g" scripts/makeman
+	make installmandocs
+	eend $?
+	sed -i -e "s#${D}/usr/man#/usr/local/man#g" scripts/makeman
+	ARCH=${MY_ARCH}
 }
 
 # pkg_preinst functions
@@ -614,6 +641,7 @@ kernel-2_src_unpack() {
 
 kernel-2_src_compile() {
 	[ "${ETYPE}" == "headers" ] && compile_headers
+	[ "${ETYPE}" == "sources" ] && use doc && compile_manpages
 }
 
 kernel-2_pkg_preinst() {
