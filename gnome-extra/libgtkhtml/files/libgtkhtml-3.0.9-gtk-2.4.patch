@@ -1,0 +1,90 @@
+diff -uNr gtkhtml-3.0.9.orig/a11y/Makefile.am gtkhtml-3.0.9/a11y/Makefile.am
+--- gtkhtml-3.0.9.orig/a11y/Makefile.am	2004-04-28 02:00:18.000000000 +0000
++++ gtkhtml-3.0.9/a11y/Makefile.am	2004-04-28 02:00:42.000000000 +0000
+@@ -2,7 +2,7 @@
+ 
+ INCLUDES = -I$(top_srcdir)/src $(GTKHTML_CFLAGS)
+ 
+-CFLAGS += $(GAIL_CFLAGS) -DGTK_DISABLE_DEPRECATED=1 -DGDK_DISABLE_DEPRECATED=1 -DG_DISABLE_DEPRECATED=1 -DGNOME_DISABLE_DEPRECATED=1
++CFLAGS += $(GAIL_CFLAGS)
+ 
+ lib_LTLIBRARIES = libgtkhtml-a11y-3.0.la
+ 
+diff -uNr gtkhtml-3.0.9.orig/a11y/Makefile.in gtkhtml-3.0.9/a11y/Makefile.in
+--- gtkhtml-3.0.9.orig/a11y/Makefile.in	2004-04-28 02:00:18.000000000 +0000
++++ gtkhtml-3.0.9/a11y/Makefile.in	2004-04-28 02:00:58.000000000 +0000
+@@ -50,7 +50,7 @@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+ 
+-CFLAGS = @CFLAGS@ $(GAIL_CFLAGS) -DGTK_DISABLE_DEPRECATED=1 -DGDK_DISABLE_DEPRECATED=1 -DG_DISABLE_DEPRECATED=1 -DGNOME_DISABLE_DEPRECATED=1
++CFLAGS = @CFLAGS@ $(GAIL_CFLAGS)
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+diff -uNr gtkhtml-3.0.9.orig/components/html-editor/Makefile.am gtkhtml-3.0.9/components/html-editor/Makefile.am
+--- gtkhtml-3.0.9.orig/components/html-editor/Makefile.am	2004-04-28 02:00:18.000000000 +0000
++++ gtkhtml-3.0.9/components/html-editor/Makefile.am	2004-04-28 02:01:25.000000000 +0000
+@@ -16,15 +16,10 @@
+         -DGTKHTML_DATADIR=\""$(gtkhtml_data)"\"		\
+         -DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
+ 	-DGLADE_DATADIR=\"$(gladedir)\"			\
+-	-DGTK_DISABLE_DEPRECATED=1 			\
+-	-DGDK_DISABLE_DEPRECATED=1			\
+-	-DG_DISABLE_DEPRECATED=1			\
+-	-DGNOME_DISABLE_DEPRECATED=1			\
+ 	-DPREFIX=\""$(prefix)"\"			\
+ 	-DSYSCONFDIR=\""$(sysconfdir)"\"		\
+ 	-DDATADIR=\""$(datadir)"\"			\
+ 	-DLIBDIR=\""$(datadir)"\"			\
+-	-DBONOBO_DISABLE_DEPRECATED=1
+ 
+ # CORBA stuff
+ IDLS = Editor.idl
+diff -uNr gtkhtml-3.0.9.orig/components/html-editor/Makefile.in gtkhtml-3.0.9/components/html-editor/Makefile.in
+--- gtkhtml-3.0.9.orig/components/html-editor/Makefile.in	2004-04-28 02:00:18.000000000 +0000
++++ gtkhtml-3.0.9/components/html-editor/Makefile.in	2004-04-28 02:01:40.000000000 +0000
+@@ -198,15 +198,10 @@
+         -DGTKHTML_DATADIR=\""$(gtkhtml_data)"\"		\
+         -DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
+ 	-DGLADE_DATADIR=\"$(gladedir)\"			\
+-	-DGTK_DISABLE_DEPRECATED=1 			\
+-	-DGDK_DISABLE_DEPRECATED=1			\
+-	-DG_DISABLE_DEPRECATED=1			\
+-	-DGNOME_DISABLE_DEPRECATED=1			\
+ 	-DPREFIX=\""$(prefix)"\"			\
+ 	-DSYSCONFDIR=\""$(sysconfdir)"\"		\
+ 	-DDATADIR=\""$(datadir)"\"			\
+ 	-DLIBDIR=\""$(datadir)"\"			\
+-	-DBONOBO_DISABLE_DEPRECATED=1
+ 
+ 
+ # CORBA stuff
+diff -uNr gtkhtml-3.0.9.orig/src/Makefile.am gtkhtml-3.0.9/src/Makefile.am
+--- gtkhtml-3.0.9.orig/src/Makefile.am	2004-04-28 02:00:17.000000000 +0000
++++ gtkhtml-3.0.9/src/Makefile.am	2004-04-28 02:01:54.000000000 +0000
+@@ -12,10 +12,6 @@
+ 
+ AM_CFLAGS = 								\
+ 	-DICONDIR=\"$(datadir)/gtkhtml-@GTKHTML_RELEASE@/icons\"	\
+-	-DGTK_DISABLE_DEPRECATED=1					\
+-	-DGDK_DISABLE_DEPRECATED=1					\
+-	-DG_DISABLE_DEPRECATED=1					\
+-	-DGNOME_DISABLE_DEPRECATED=1
+ 
+ lib_LTLIBRARIES = libgtkhtml-3.0.la
+ 
+diff -uNr gtkhtml-3.0.9.orig/src/Makefile.in gtkhtml-3.0.9/src/Makefile.in
+--- gtkhtml-3.0.9.orig/src/Makefile.in	2004-04-28 02:00:17.000000000 +0000
++++ gtkhtml-3.0.9/src/Makefile.in	2004-04-28 02:02:06.000000000 +0000
+@@ -193,10 +193,6 @@
+ 
+ AM_CFLAGS = \
+ 	-DICONDIR=\"$(datadir)/gtkhtml-@GTKHTML_RELEASE@/icons\"	\
+-	-DGTK_DISABLE_DEPRECATED=1					\
+-	-DGDK_DISABLE_DEPRECATED=1					\
+-	-DG_DISABLE_DEPRECATED=1					\
+-	-DGNOME_DISABLE_DEPRECATED=1
+ 
+ 
+ lib_LTLIBRARIES = libgtkhtml-3.0.la

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.9.ebuild,v 1.12 2004/04/27 21:19:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.9.ebuild,v 1.13 2004/04/28 12:50:34 foser Exp $
 
 inherit gnome2 eutils
 
@@ -47,6 +47,10 @@ src_unpack() {
 	# The following patch fixes problems on 64-bit, but doesn't hurt
 	# to apply everywhere
 	epatch ${FILESDIR}/${PN}-3.0.8-alpha.patch
+
+	# fix gtk-2.4 build (#49218)
+	epatch ${FILESDIR}/${P}-gtk-2.4.patch
+
 }
 
 src_compile() {
