@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/muse
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.1 2003/03/08 12:23:34 jje Exp $
+
+*muse-0.7.2 (08 Mar 2003)
+
+  08 Mar 2003; jje <jje@gentoo.org> muse-0.7.2.ebuild:
+  Initial revision.
+  
+  Submitted by Jaromil, Maurizio Disimino. Help from j2.
+
