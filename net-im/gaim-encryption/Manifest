@@ -3,7 +3,7 @@ MD5 c7f17c30cc58952c71e57a2e23600e49 gaim-encryption-2.21.ebuild 1260
 MD5 6328f4895440419069b168c386243c9d ChangeLog 2790
 MD5 ab7db4bf9ff48c8de9da14fd12f6c15c metadata.xml 344
 MD5 8006b2fa4b739f0b9919144b66fe1160 gaim-encryption-2.22.ebuild 1260
-MD5 39dd437125f9c210485b587f749cab15 gaim-encryption-2.24-r1.ebuild 1572
+MD5 94c3016bbbe46afd7675ffe1b582fccc gaim-encryption-2.24-r1.ebuild 1569
 MD5 634fb953048e9a3e63ed137b1ecebf46 files/encrypt_api.diff 537
 MD5 24597e0458ae20c16bf8a8b363de4af4 files/digest-gaim-encryption-2.21 72
 MD5 2d945bd60bd6d47a3adbddb2184e3354 files/digest-gaim-encryption-2.22 72
