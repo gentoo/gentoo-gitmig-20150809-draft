@@ -12,7 +12,7 @@ The Gentoo Linux Cron README
   
   - To be able to use cron a user must be part of the cron group.
 
-  - Crontabs are placed in /var/spool/cron/crontabs
+  - Crontabs are placed in /var/spool/cron/crontabs (fcron: /var/spool/cron/fcrontabs )
 
   - Each cron takes care of running /etc/cron.{hourly|daily|weekly|montly}. Vixie 
   Cron does this via the system crontab /etc/crontab - the others must have a 

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.1 2002/04/20 22:03:25 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.2 2002/04/21 12:40:51 bangert Exp $
 
 MY_P=${P/vcron/vixie-cron}
 S=${WORKDIR}/${MY_P}
@@ -33,9 +33,10 @@ src_compile() {
 
 src_install() {
 
+	#this does not work if the directory exists already
 	diropts -m0750 -o root -g cron
 	dodir /var/spool/cron/crontabs
-	
+
 	doman crontab.1 crontab.5 cron.8
 
 	dodoc CHANGES CONVERSION FEATURES MAIL MANIFEST README THANKS

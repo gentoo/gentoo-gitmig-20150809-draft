@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry A! <jerry@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r1.ebuild,v 1.1 2002/04/20 22:03:25 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r1.ebuild,v 1.2 2002/04/21 12:40:51 bangert Exp $
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
@@ -41,8 +41,9 @@ src_compile() {
 
 src_install() {
 
+	# this does not work if the directory already exist
 	diropts -m 770 -o cron -g cron
-	dodir /var/spool/cron/crontabs
+	dodir /var/spool/cron/fcrontabs
 
 	insinto /usr/sbin
 	insopts -o root -g root -m 0110 ; doins fcron
