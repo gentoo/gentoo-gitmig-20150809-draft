@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.1 2002/09/08 20:02:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.2 2002/09/08 21:25:25 azarah Exp $
 
 inherit flag-o-matic
 # Compile problems with these ...
@@ -153,7 +153,8 @@ src_unpack() {
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
 		>> config/cf/host.def
 
-	if [ "`gcc -dumpversion`" != "2.95.3" ]
+	[ -z "${CC}" ] && CC=gcc
+	if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ]
 	then
 		# should fix bug #4189.  gcc-3.x have problems with -march=pentium4
 		# and -march=athlon-tbird
