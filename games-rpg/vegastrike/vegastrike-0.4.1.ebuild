@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.8 2004/03/12 10:13:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.9 2004/04/26 20:08:27 agriffis Exp $
 
 inherit games eutils flag-o-matic
 
@@ -79,7 +79,7 @@ src_compile() {
 	append-flags -DGLX_GLXEXT_LEGACY
 
 	cd ${S}/vegastrike
-	egamesconf --enable-boost-128 || die "econf failed"
+	egamesconf --enable-boost-128 || die "egamesconf failed"
 	emake || die "emake failed"
 
 	cd ${S}/vssetup/src/
