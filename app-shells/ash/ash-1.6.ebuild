@@ -1,25 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.4 2003/09/06 22:23:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.5 2004/02/20 22:17:54 vapier Exp $
 
 inherit eutils
 
-IUSE=""
-
-S=${WORKDIR}/bin_NetBSD-1.6release/src/bin/sh
 DESCRIPTION="NetBSD's lightweight bourne shell"
 HOMEPAGE="http://cvsweb.netbsd.org/bsdweb.cgi/src/bin/sh/"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/tar_files/src/bin.tar.gz
 	mirror://gentoo/dash-ash-hetio-yacc.diff.bz2
 	http://cvs.gentoo.org/~seemant/dash-ash-hetio-yacc.diff.bz2"
 
-SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~alpha x86"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~alpha"
 
 DEPEND="sys-devel/pmake
 	sys-apps/sed
 	dev-util/yacc"
+
+S=${WORKDIR}/bin_NetBSD-1.6release/src/bin/sh
 
 src_unpack() {
 	mkdir ${WORKDIR}/bin_NetBSD-1.6release
@@ -37,7 +36,7 @@ src_compile() {
 
 src_install() {
 	into /
-	newbin sh ash
+	newbin sh ash || die
 
 	newman sh.1 ash.1
 	dosym /usr/share/man/man1/ash.1.gz /usr/share/man/man1/sh.1.gz
