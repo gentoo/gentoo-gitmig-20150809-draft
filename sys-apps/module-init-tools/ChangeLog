@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.76 2005/02/17 02:27:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.77 2005/02/18 20:03:14 chainsaw Exp $
+
+  18 Feb 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/modutils-2.4.27-gcc4.patch, module-init-tools-3.1.ebuild:
+  GCC 4 compatability update; closes bug #80588
 
   16 Feb 2005; <solar@gentoo.org> module-init-tools-3.1.ebuild:
   - filtering pic is no longer needed

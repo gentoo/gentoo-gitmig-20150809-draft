@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1.ebuild,v 1.7 2005/02/17 02:27:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1.ebuild,v 1.8 2005/02/18 20:03:14 chainsaw Exp $
 
 inherit flag-o-matic eutils gnuconfig toolchain-funcs
 
@@ -41,6 +41,7 @@ src_unpack() {
 		epatch ${FILESDIR}/modutils-2.4.22-no-above-below.patch
 		epatch ${FILESDIR}/modutils-2.4.27-PATH_MAX.patch
 		epatch ${FILESDIR}/modutils-2.4.27-gcc34.patch
+		epatch ${FILESDIR}/modutils-2.4.27-gcc4.patch
 #	fi
 
 	# Support legacy .o modules
