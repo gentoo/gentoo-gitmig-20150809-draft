@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.8.3.ebuild,v 1.1 2004/12/07 10:06:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.8.3.ebuild,v 1.2 2004/12/08 05:07:25 vapier Exp $
 
 inherit eutils games
 
@@ -32,7 +32,7 @@ src_install() {
 	for game in jdoom jheretic jhexen ; do
 		newgamesbin "${FILESDIR}/wrapper" ${game}
 		sed -i \
-			-e "s:GAME:${game}:" ${GAMES_BINDIR}/${game} \
+			-e "s:GAME:${game}:" "${D}"/${GAMES_BINDIR}/${game} \
 			|| die "sed ${GAMES_BINDIR}/${game} failed"
 	done
 
