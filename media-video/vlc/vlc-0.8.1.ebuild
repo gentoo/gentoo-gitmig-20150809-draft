@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.7 2005/01/22 23:27:21 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.8 2005/01/29 16:15:03 luckyduck Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -25,7 +25,6 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 				media-libs/libdvdcss
 				>=media-libs/libdvdnav-0.1.9
 				media-libs/libdvdplay )
-		dvdnav? ( >=media-libs/libdvdnav-0.1.9 )
 		esd? ( media-sound/esound )
 		ogg? ( media-libs/libogg )
 		matroska? ( media-libs/libmatroska )

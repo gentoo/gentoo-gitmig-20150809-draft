@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.67 2005/01/09 09:16:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.68 2005/01/29 16:15:03 luckyduck Exp $
+
+  29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> vlc-0.8.1.ebuild:
+  removed unnecessary line from DEPEND, see #78830
 
   09 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> vlc-0.8.1.ebuild:
   added missing faad? dependency. fixes #77200.
