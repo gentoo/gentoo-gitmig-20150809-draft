@@ -2,7 +2,7 @@
 #
 
 # Files that we should remove PAGE_EXEC enforcement from
-PAGE_EXEC_EXEMPT="/usr/X11R6/bin/XFree86 /usr/bin/wine"
+PAGE_EXEC_EXEMPT="/usr/X11R6/bin/XFree86 /usr/lib/wine/bin/wine"
 
 # Files we should turn off trampoline emmulation for
 TRAMPOLINE_EXEMPT=""
@@ -13,12 +13,17 @@ MPROTECT_EXEMPT=""
 # Files we should not randomize mmap for
 MMAP_EXEMPT=""
 
-# Kernel options are:
+# 
+# Check your running kernel for valid options.
+# "sysctl -a | grep kernel.grsecurity. | cut -d '.' -f 3  | awk '{print $1}'"
+# 
+# Some of the kernel options may be:
 #
 # allow_ptrace_group
 # alt_ipc_perms
 # altered_pings
 # audit_chdir
+# audit_gid
 # audit_group
 # audit_ipc
 # audit_mount
@@ -27,24 +32,33 @@ MMAP_EXEMPT=""
 # chroot_deny_chdir
 # chroot_deny_chmod
 # chroot_deny_chroot
+# chroot_deny_fchdir
 # chroot_deny_mknod
 # chroot_deny_mount
+# chroot_deny_pivot
 # chroot_deny_ptrace
+# chroot_deny_shmat
+# chroot_deny_sysctl
+# chroot_deny_unix
+# chroot_enforce_chdir
 # chroot_execlog
+# chroot_findtask
 # chroot_restrict_nice
 # chroot_restrict_sigs
 # coredump
 # deny_phys_root
-# deny_serial_root
 # deny_pseudo_root
+# deny_serial_root
 # dmesg
 # exec_logging
 # execve_limiting
 # fifo_restrictions
 # fork_bomb_prot
 # forkfail_logging
+# grsec_lock
 # linking_restrictions
 # rand_ip_ids
+# rand_isns
 # rand_pids
 # rand_rpc
 # rand_tcp_src_ports
@@ -62,6 +76,7 @@ MMAP_EXEMPT=""
 # tpe
 # tpe_glibc
 # tpe_restrict_all
+
 ENABLED=""
 
 # Set when allow_ptrace_group is enabled
