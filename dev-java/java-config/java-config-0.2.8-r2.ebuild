@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.2.8-r2.ebuild,v 1.5 2003/10/22 11:54:14 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.2.8-r2.ebuild,v 1.6 2004/01/02 21:14:44 aether Exp $
 
 IUSE=""
 
