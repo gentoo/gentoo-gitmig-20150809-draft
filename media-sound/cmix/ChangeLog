@@ -1,9 +1,6 @@
 # ChangeLog for media-sound/cmix
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmix/ChangeLog,v 1.5 2004/07/01 07:55:57 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cmix-1.6.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmix/ChangeLog,v 1.6 2004/07/01 19:32:52 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cmix-1.6.ebuild:
   virtual/glibc -> virtual/libc
