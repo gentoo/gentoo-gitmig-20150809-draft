@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r12.ebuild,v 1.1 2004/12/24 19:42:58 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r13.ebuild,v 1.1 2005/01/09 16:21:03 plasmaroo Exp $
 
 OKV="2.4.20"
 OKB="2.4"
@@ -18,7 +18,7 @@ DESCRIPTION="Full sources for Marc-Christian Peterson's WOLK kernel, based on 2.
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/mcp/${OKB}-WOLK/"
 SRC_URI="mirror://kernel/linux/kernel/people/mcp/${OKB}-WOLK/${WOLK_SRC}
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${PN}-4.11-CAN-2004-0415.patch
-	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${PN}-4.9-CAN-2004-0814.patch"
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${PN}-4.9-CAN-2004-0814.2.patch"
 
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa -mips"
 
@@ -29,7 +29,7 @@ this file in the directory containing the sources."
 
 UNIPATCH_LIST="
 	${DISTDIR}/${PN}-4.11-CAN-2004-0415.patch
-	${DISTDIR}/${PN}-4.9-CAN-2004-0814.patch
+	${DISTDIR}/${PN}-4.9-CAN-2004-0814.2.patch
 	${FILESDIR}/${PN}.CAN-2004-0133.patch
 	${FILESDIR}/${PN}.CAN-2004-0181.patch
 	${FILESDIR}/${PN}.CAN-2004-0394.patch
@@ -46,7 +46,9 @@ UNIPATCH_LIST="
 	${FILESDIR}/${PN}.binfmt_a.out.patch
 	${FILESDIR}/${PN}.vma.patch
 	${FILESDIR}/${PN}.CAN-2004-1016.patch
-	${FILESDIR}/${PN}.CAN-2004-1056.patch"
+	${FILESDIR}/${PN}.CAN-2004-1056.patch
+	${FILESDIR}/${PN}.brk-locked.patch
+	${FILESDIR}/${PN}.77094.patch"
 
 #============================================================================
 # We'll override the src_unpack() function from the eclass. This is necessary

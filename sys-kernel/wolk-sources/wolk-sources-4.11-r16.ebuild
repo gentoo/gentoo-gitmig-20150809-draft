@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.11-r15.ebuild,v 1.1 2004/12/24 19:42:58 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.11-r16.ebuild,v 1.1 2005/01/09 16:21:03 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://sourceforge/wolk/linux-${OKV}-wolk4.10s.patch.bz2
 	mirror://sourceforge/wolk/linux-${OKV}-wolk4.10s-to-4.11s.patch.bz2
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch
-	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${PN}-4.9-CAN-2004-0814.patch"
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${PN}-4.9-CAN-2004-0814.2.patch"
 
 SLOT="${KV}"
 HOMEPAGE="http://wolk.sourceforge.net http://www.kernel.org"
@@ -47,7 +47,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0685.patch || die "Failed to add the CAN-2004-0685 patch!"
-	epatch ${DISTDIR}/${PN}-4.9-CAN-2004-0814.patch || die "Failed to add the CAN-2004-0814 patch!"
+	epatch ${DISTDIR}/${PN}-4.9-CAN-2004-0814.2.patch || die "Failed to add the CAN-2004-0814 patch!"
 	epatch ${FILESDIR}/${PN}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	epatch ${FILESDIR}/${PN}.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
 	epatch ${FILESDIR}/${PN}.XDRWrapFix.patch || die "Failed to apply the kNFSd XDR patch!"
@@ -58,6 +58,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.vma.patch || die "Failed to apply the VMA patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-1016.patch || die "Failed to apply the CAN-2004-1016 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
+	epatch ${FILESDIR}/${PN}.brk-locked.patch || die "Failed to apply the do_brk() locking patch!"
+	epatch ${FILESDIR}/${PN}.77094.patch || die "Failed to apply bug #77094 patch!"
 
 	kernel_universal_unpack
 }
