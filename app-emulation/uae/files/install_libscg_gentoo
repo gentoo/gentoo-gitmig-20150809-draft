@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# copy those files that are necessary to use the libscg
+# in UAE ON GENTOO
+# 
+# Patrick Ohly, 9.4.2000, GPL
+#
+# Updated for cdrtools 2.0.x Richard Drummond 15.2.2004
+# Ripped to pieces by Jonathan Heaney 23.2.2004
+#
+# check arguments
+#
+libsdir=/usr/lib
+incsdir=/usr/include
+scsiinc="$incsdir"/scsilib
+
+#
+# find our own directory
+# hint: this file is in src
+#
+uaedir=`dirname "$0"`
+
+cp -R -f -L "$scsiinc/btorder.h" "$scsiinc/intcvt.h" "$scsiinc/mconfig.h" \
+            "$scsiinc/prototyp.h" "$scsiinc/utypes.h" "$scsiinc/scg" \
+	    "$incsdir/xconfig.h" "$uaedir"/include
+cp -f "$libsdir/libscg.a" \
+      "$libsdir/libschily.a" "$uaedir"

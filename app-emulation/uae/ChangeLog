@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.12 2004/02/11 21:04:54 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.13 2004/03/04 20:05:05 dholm Exp $
+
+*uae-0.8.25_pre20040302 (04 Mar 2004)
+
+  04 Mar 2004; David Holm <dholm@gentoo.org> metadata.xml,
+  uae-0.8.25_pre20040302.ebuild, files/install_libscg_gentoo:
+  Version bump. Thanks goes to Jonathan Heaney for helping me with scsi support
+  and CAPS.
 
   11 Feb 2004; David Holm <dholm@gentoo.org> uae-0.8.23_pre20040129.ebuild:
   Added SDL configure flags as suggested by Jonathan Heaney and compilation fix
