@@ -1,16 +1,17 @@
 # ChangeLog for net-www/lynx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.9 2002/09/07 17:33:21 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.10 2002/09/16 00:33:22 murphy Exp $
 
 *lynx-2.8.4.1c (26 Aug 2002)
 
+  14 Sept 2002; Maarten Thibaut <murphy@gentoo.org> lynx-2.8.4.1c.ebuild :
+  Added sparc/sparc64 to keywords.
+  
   07 Sept 2002; Calum Selkirk <cselkirk@gentoo.org> lynx-2.8.4.1c.ebuild :
-
   Added ppc to KEYWORDS.
 
   28 Aug 2002; Seemant Kulleen <seemant@gentoo.org> lynx-2.8.4.1c.ebuild
   lynx-2.8.4a-r4.ebuild :
-
   PROVIDE=virtual/textbrowser
 
   26 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4.1c.ebuild :
@@ -23,10 +24,8 @@
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4a-r4.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
-  2 June 2002; Matthew Kennedy <mkennedy@gentoo.org>
-  lynx-2.8.4a-r4.ebuild, files/digest-lynx-2.8.4a-r4,
-  files/lynx-2.8.4a-LYStrings.c-gentoo.patch, ChangeLog :
-
+  2 June 2002; Matthew Kennedy <mkennedy@gentoo.org> lynx-2.8.4a-r4.ebuild,
+  files/digest-lynx-2.8.4a-r4, files/lynx-2.8.4a-LYStrings.c-gentoo.patch, ChangeLog :
   Patch for GCC3.1 support. Some users report success with -r3, some
   don't.
 
@@ -36,21 +35,18 @@
   Added LICENSE, KEYWORDS, SLOT.
 
   29 May 2002; Preston A. Elder <prez@gentoo.org> lynx-2.8.4a-r3.ebuild :
-
   Fixed the ebuild to just pass --with-ssl=yes, not --with-ssl=/usr.
   The configure fails to do the right thing with the path version.
 
 *lynx-2.8.4a-r3 (08 May 2002)
 
   08 May 2002; Carl Perry <edolnx@gentoo.org> lynx-2.8.4a-r3.ebuild :
-
   Fixed the alternate SRC_URI link so that it works.  Found during
   ibiblio.org outage yesterday.
 
 *lynx-2.8.4a-r3 (21 Mar 2002)
 
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> lynx-2.8.4a-r3.ebuild :
-
   HTML documentation will no longer be gzipped.  This bug located by
   stefan@mdy.univie.ac.at
 
@@ -60,7 +56,6 @@
   Added LICENSE, KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
