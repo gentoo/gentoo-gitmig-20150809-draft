@@ -62,3 +62,4 @@ slotmove =kde-base/kdebase-pam-3.4.0_beta1 3.4 0
 slotmove =dev-java/jdom-1.0_beta9* 0 1.0_beta9
 slotmove =dev-java/jdom-1.0_beta10* 0 1.0_beta10
 slotmove =app-editors/emacs-cvs-21.3.50* 21.3.50 22.0.50
+move app-i18n/scim-chinese app-i18n/scim-pinyin
