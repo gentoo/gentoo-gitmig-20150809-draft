@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-1.0.2.ebuild,v 1.7 2002/10/05 05:39:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-1.0.4.ebuild,v 1.1 2002/11/28 00:55:10 spider Exp $
 
 IUSE="doc"
 
@@ -8,17 +8,17 @@ inherit gnome2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome2 replacement for OAF"
-SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=dev-libs/libxml2-2.4.20
 	>=dev-libs/popt-1.6.3
-	>=gnome-base/ORBit2-2.4.0"
+	>=gnome-base/ORBit2-2.4.0
+	>=net-libs/linc-0.5.1"
 
 DEPEND="${RDEPEND} 
 	>=dev-util/pkgconfig-0.12.0
@@ -29,7 +29,4 @@ LIBTOOL_FIX="1"
 
 DOCS="AUTHORS  ABOUT-NLS COPYING* ChangeLog  README* INSTALL NEWS TODO docs/* api-docs/*"
 
-src_compile() {
-	gnome2_src_compile --enable-bonobo-activation-debug
-}
 
