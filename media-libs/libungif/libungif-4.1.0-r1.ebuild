@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0-r1.ebuild,v 1.2 2002/04/14 16:48:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0-r1.ebuild,v 1.3 2002/04/14 17:00:43 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for reading and writing gif images without LZW compression"
@@ -37,4 +37,18 @@ src_install() {
 	dodoc UNCOMPRESSED_GIF README TODO
 	dodoc doc/*.txt
 	dohtml -r doc
+}
+
+pkg_postinst() {
+
+	use gif 2>/dev/null && (
+		einfo "You had the gif USE flag set, so it is assumed that you want"
+		einfo "the binary from giflib instead.  Please make sure you have"
+		einfo "giflib emerged.  Otherwise, unset the gif flag and remerge this"
+	) || (
+		einfo "You did not have the gif USE flag, so your gif binary is being"
+		einfo "provided by this package.  If you would rather use the binary"
+		einfo "from giflib, please set the gif USE flag, and re-emerge both"
+		einfo "this and giflib"
+	)
 }
