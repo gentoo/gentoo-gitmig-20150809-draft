@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/epsxe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/ChangeLog,v 1.8 2003/07/13 22:00:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/ChangeLog,v 1.9 2003/08/05 19:47:18 wolf31o2 Exp $
+
+*epsxe-1.6.0 (05 Aug 2003)
+
+  05 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> epsxe-1.6.0.ebuild:
+  Version bumped.  Closes bug #25972.  Ebuild by collapse@postmark.net
 
 *epsxe-1.5.2 (27 Jul 2002)
 
