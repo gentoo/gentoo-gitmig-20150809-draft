@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.2-r20041227.ebuild,v 1.1 2005/01/08 07:35:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.2-r20041227.ebuild,v 1.2 2005/01/08 08:30:48 pylon Exp $
 
 IUSE="oggvorbis sox"
 
@@ -10,7 +10,7 @@ SRC_URI="http://scresto.site.voila.fr/data/${PN}/${PN}_${PVR/-r/_}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 S="${WORKDIR}/${P}"
 
 DEPEND=">=x11-libs/gtk+-2.4.0
