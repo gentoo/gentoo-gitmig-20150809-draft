@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.0_pre18.ebuild,v 1.1 2005/03/19 16:18:45 xmerlin Exp $
-
-inherit linux-mod
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.0_pre18.ebuild,v 1.2 2005/03/23 02:48:30 xmerlin Exp $
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
@@ -23,9 +21,7 @@ DEPEND=">=sys-cluster/dlm-1.0_pre21
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	check_KV
-
-	./configure --kernel_src=${KERNEL_DIR} || die
+	./configure || die
 
 	for i in cman dumb sm; do
 		emake -C ${i} all
