@@ -1,26 +1,34 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r11.ebuild,v 1.6 2004/10/10 05:02:53 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r11.ebuild,v 1.7 2004/10/28 16:13:14 vapier Exp $
 
-IUSE="build selinux"
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 # If the old /lib/sandbox.so is in /etc/ld.so.preload, it can
 # cause everything to segfault !!
 export SANDBOX_DISABLED="1"
 
-S=${WORKDIR}/${PF}
-SLOT="0"
 DESCRIPTION="Portage ports system"
+HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="http://gentoo.twobit.net/portage/${PF}.tar.bz2 http://dev.gentoo.org/~carpaski/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
-HOMEPAGE="http://www.gentoo.org"
 
+LICENSE="GPL-2"
+SLOT="0"
+IUSE="build selinux"
 # Contact carpaski with a reason before you modify any of these.
 KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc64  s390  sparc  x86"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 
-LICENSE="GPL-2"
-RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) selinux? ( dev-python/python-selinux )"
+RDEPEND="selinux? ( dev-python/python-selinux )
+	!build? (
+		>=sys-apps/sed-4.0.5
+		dev-python/python-fchksum
+		>=dev-lang/python-2.2.1
+		sys-apps/debianutils
+		>=app-shells/bash-2.05a
+	)"
+
+S=${WORKDIR}/${PF}
 
 python_version() {
 	local tmpstr="$(/usr/bin/python -V 2>&1 )"
@@ -56,7 +64,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/src; ${CC:-gcc} ${CFLAGS} tbz2tool.c -o tbz2tool
+	cd ${S}/src; $(tc-getCC) ${CFLAGS} tbz2tool.c -o tbz2tool
 	cd ${S}/src/sandbox-1.1
 	case ${ARCH} in
 		"x86")
