@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-5.5.6.ebuild,v 1.3 2003/06/25 13:13:49 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-5.5.6.ebuild,v 1.4 2003/07/21 20:37:26 mholzer Exp $
 
 inherit perl-module
 inherit flag-o-matic
@@ -21,7 +21,7 @@ MY_P2=${MY_PN}-${PV}
 
 S=${WORKDIR}/${MY_P2}
 DESCRIPTION="A Perl module to harness the powers of ImageMagick"
-SRC_URI="mirror://sourceforge/imagemagick/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/imagemagick/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.imagemagick.org/"
 
 SLOT="0"

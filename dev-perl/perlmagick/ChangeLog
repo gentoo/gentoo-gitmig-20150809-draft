@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.6 2003/06/25 13:13:49 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.7 2003/07/21 20:37:26 mholzer Exp $
+
+  22 Jul 2003; Martin Holzer <mholzer@gentoo.org> perlmagick-5.5.6.ebuild:
+  now used bz2. Closes #23176.
 
   25 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> perlmagick-5.5.6.ebuild:
   small DEPEND fix
