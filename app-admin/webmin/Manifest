@@ -7,7 +7,7 @@ MD5 14973a6b696c3410874c04a2210b20ba webmin-1.170.ebuild 2697
 MD5 f83ebdabd0cd02929050ed0a7388e3eb webmin-1.170-r1.ebuild 3377
 MD5 a21a0a8a415d1e5a1764199b0b4eeed2 webmin-1.160.ebuild 2685
 MD5 7d80c86adbd36eeb8f220b9efdd30819 files/webmin-pam 101
-MD5 7be7bafd8b2e3d886fef0a055078b226 files/init.d.webmin 860
+MD5 54dc8937e05bd76ad86a6c5f5ae6a333 files/init.d.webmin 859
 MD5 58f9530c780e652271313555858ad909 files/digest-webmin-1.170 138
 MD5 6d9dfc76f788500ff3c85cbb42667487 files/digest-webmin-1.170-r1 209
 MD5 17e9cccc95647ba080bd69785db85ac1 files/digest-webmin-1.160 137
@@ -23,7 +23,7 @@ MD5 cc16dcb159f84c912365504002444a08 files/virtual-server-2.31-namevirtual.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBxSvlArHZZzCEUG0RArnSAJsHnydf7xlA4L1aNtSXs+EmNYgM4wCeMcJP
-DOTTGJ/CVcPAU2vtiyUsMo0=
-=d9by
+iD8DBQFB0ZNvArHZZzCEUG0RAglkAJ0TjyA8DWGyaqeV1+xgGUhb5XvjGQCfc7b5
+OxhgveTkPqZEaq/fzxbn0I0=
+=/ZW+
 -----END PGP SIGNATURE-----
