@@ -15,7 +15,7 @@ MD5 c72f00859a8536c527d040173f92d3f4 files/kdenetwork-3.4.0-kopete-logout.patch 
 MD5 8dae5eac25d478ebf23279132c4a0ead files/digest-kdenetwork-3.3.2 70
 MD5 3939e85ee43aba114cc3ece4194145b6 files/reslisa.conf 340
 MD5 72eca9b8637e868d730399e0becc045d files/digest-kdenetwork-3.2.3 70
-MD5 d272c023453f42fe190bfed26a1378e4 files/kdenetwork-3.4.0-kopete-spaces.patch 17289
+MD5 f8624841efe576b99f71c604af307bbf files/kdenetwork-3.4.0-kopete-spaces.patch 8084
 MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
 MD5 622d3497792334fa87e483e249da693d files/digest-kdenetwork-3.4.0 70
 MD5 a0086a72d069c5606f1e2ea81b98fea8 files/digest-kdenetwork-3.3.1-r1 70
