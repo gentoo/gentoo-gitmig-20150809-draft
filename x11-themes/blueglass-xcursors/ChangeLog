@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/blueglass-xcursors
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/ChangeLog,v 1.1 2003/06/19 02:20:41 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/ChangeLog,v 1.2 2003/06/19 02:44:55 tad Exp $
+
+*blueglass-xcursors-0.3-r1 (19 Jun 2003)
+
+  19 Jun 2003; Troy Dack <tad@gentoo.org> blueglass-xcursors-0.3-r1.ebuild:
+  Fixes path errors due to renaming ebuild.
 
 *blueglass-xcursors-0.3 (18 Jun 2003)
 
