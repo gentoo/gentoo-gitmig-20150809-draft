@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.6 2004/04/16 09:41:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.7 2004/06/02 02:52:42 lv Exp $
+
+  01 Jun 2004; Travis Tilley <lv@gentoo.org> libcaca-0.9.ebuild:
+  stable on amd64
 
   16 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> libcaca-0.2.ebuild,
   libcaca-0.6.ebuild:
