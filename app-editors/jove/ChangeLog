@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/jove
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.5 2005/01/01 13:29:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.6 2005/03/11 13:34:19 seemant Exp $
+
+*jove-4.16.0.64 (11 Mar 2005)
+
+  11 Mar 2005; Seemant Kulleen <seemant@gentoo.org> -jove-4.16.0.58.ebuild,
+  +jove-4.16.0.64.ebuild:
+  version bump -- going straight to x86 stable, because the upstream tarballs
+  for the 58 version no longer exist. This fixes bug #80047 by anselm helbig
+  <anselm@chemie.fu-berlin.de>
 
   30 Dec 2004; Seemant Kulleen <seemant@gentoo.org> :
   since I added this, I'll be the maintainer

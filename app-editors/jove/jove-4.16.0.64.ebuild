@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.58.ebuild,v 1.5 2005/01/01 13:29:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.64.ebuild,v 1.1 2005/03/11 13:34:19 seemant Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
@@ -21,7 +21,7 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}
+S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${A}
@@ -38,7 +38,7 @@ src_compile() {
 	emake || die
 
 	if use X ; then
-		emake XJOVEJOME=/usr makexjove || die
+		emake XJOVEHOME=/usr makexjove || die
 	fi
 }
 
