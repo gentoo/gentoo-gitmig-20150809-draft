@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.2.ebuild,v 1.1 2004/09/22 03:42:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.2.ebuild,v 1.2 2004/09/28 01:59:54 vapier Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -39,7 +39,7 @@ src_compile() {
 
 src_install() {
 	into /
-	dobin sed/sed
+	dobin sed/sed || die "dobin"
 	if ! use build
 	then
 		einstall || die "Install failed"
