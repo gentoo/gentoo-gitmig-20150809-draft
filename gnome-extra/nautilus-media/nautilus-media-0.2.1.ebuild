@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-media/nautilus-media-0.2.1.ebuild,v 1.2 2003/02/07 23:19:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-media/nautilus-media-0.2.1.ebuild,v 1.3 2003/02/09 15:06:33 foser Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Media plugins for Nautilus"
 HOMEPAGE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 
 RDEPEND=">=media-libs/gstreamer-0.5.2
 	>=media-libs/gst-plugins-0.5.2

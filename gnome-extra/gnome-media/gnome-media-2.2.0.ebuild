@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.2.0.ebuild,v 1.2 2003/01/31 17:10:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.2.0.ebuild,v 1.3 2003/02/09 15:06:33 foser Exp $
 
 #FIXME SANDBOX
-addwrite /usr/share/
+#addwrite /usr/share/
 inherit gnome2
 
 S=${WORKDIR}/${P}
@@ -35,3 +35,16 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}/gstreamer-properties
+	WANT_AUTOCONF_2_5=1 autoconf -f
+}
+
+src_install() {
+	dodir /usr/share/gnome-media-2.0/interfaces
+
+	gnome2_src_install
+}

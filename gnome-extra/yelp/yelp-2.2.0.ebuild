@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.2.0.ebuild,v 1.1 2003/01/31 02:36:42 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.2.0.ebuild,v 1.2 2003/02/09 15:06:33 foser Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="Yelp is a Help browser for Gnome2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND="gnome-base/ORBit2
 	>=dev-libs/glib-2.0.6
