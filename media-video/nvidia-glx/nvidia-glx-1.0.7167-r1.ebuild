@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167.ebuild,v 1.2 2005/03/12 01:55:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r1.ebuild,v 1.1 2005/03/12 01:55:58 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -18,7 +18,8 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PAC
 LICENSE="NVIDIA"
 SLOT="0"
 
-KEYWORDS="-* -amd64 ~x86"
+# Just amd64 2005.0 fixes in this revbump
+KEYWORDS="-* ~amd64"
 
 RESTRICT="nostrip multilib-pkg-force"
 IUSE=""
@@ -83,7 +84,7 @@ src_unpack() {
 src_install() {
 	local MLTEST=$(type dyn_unpack)
 
-	if [[ ${MLTEST/set_abi} == ${MLTEST} ]] && has_multilib_profile ; then
+	if [[ "${MLTEST/set_abi}" == "${MLTEST}" ]] && has_multilib_profile ; then
 		local OABI=${ABI}
 		for ABI in $(get_install_abis) ; do
 			src_install-libs
