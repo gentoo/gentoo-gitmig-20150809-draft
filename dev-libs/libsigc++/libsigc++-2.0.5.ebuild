@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.5.ebuild,v 1.1 2004/10/09 21:20:19 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.5.ebuild,v 1.2 2004/10/11 07:25:45 obz Exp $
+
+inherit eutils
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -10,7 +12,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="1.3"
 KEYWORDS="~x86 ~ppc ~alpha amd64 ~sparc"
 IUSE="debug"
-inherit eutils
+
 DEPEND="virtual/libc"
 
 src_unpack() {

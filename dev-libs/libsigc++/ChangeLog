@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.37 2004/10/09 21:20:19 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.38 2004/10/11 07:25:45 obz Exp $
+
+  11 Oct 2004; Mike Gardiner <obz@gentoo.org> libsigc++-2.0.5.ebuild:
+  Fixed inherit line, see bug #67007. Need to move to dev-cpp/libsigcpp now
 
 *libsigc++-2.0.5 (09 Oct 2004)
 
