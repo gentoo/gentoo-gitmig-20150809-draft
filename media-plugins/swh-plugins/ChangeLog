@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/swh-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.7 2003/02/12 07:19:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.8 2003/03/15 11:14:46 jje Exp $
+
+*swh-plugins-0.3.7 (15 Mar 2003)
+
+  15 Mar 2003; jje <jje@gentoo.org> swh-plugins-0.3.7.ebuild:
+  Version bumps.
 
 *swh-plugins-0.3.6 (24 Jan 2003)
 
