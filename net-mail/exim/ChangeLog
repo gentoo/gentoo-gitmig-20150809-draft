@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.16 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.17 2002/12/15 14:03:57 aliz Exp $
+
+  15 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> : exim-4.10.ebuild
+  Added patch to fix security issue.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
