@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/toppler
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/toppler/ChangeLog,v 1.2 2003/09/10 15:47:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/toppler/ChangeLog,v 1.3 2003/10/10 02:25:41 mr_bones_ Exp $
+
+*toppler-1.0.3 (09 Oct 2003)
+
+  09 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> toppler-1.0.3.ebuild:
+  version bump
 
 *toppler-1.0.2 (09 Jun 2003)
 
