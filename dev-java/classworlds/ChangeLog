@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/classworlds
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/ChangeLog,v 1.4 2004/03/02 08:54:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/ChangeLog,v 1.5 2004/05/05 20:48:27 karltk Exp $
+
+*classworlds-1.0-r2 (06 May 2004)
+
+  06 May 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  classworlds-1.0-r2.ebuild: Changed SLOT, added proper dying in 
+  src_unpack, now uses java-pkg_dojar, better dying messages. Added
+  jikes support.
 
   07 Feb 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
   Fixed DESCRIPTION
