@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.39 2004/10/31 10:15:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.40 2004/10/31 10:17:47 eradicator Exp $
+
+  31 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> files/aumix.rc6:
+  Fixed depend()
 
   31 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/aumix-2.8-nls.patch:
