@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.50.ebuild,v 1.8 2004/02/22 13:30:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.50.ebuild,v 1.9 2004/03/29 00:33:24 vapier Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -94,7 +94,7 @@ DEPEND="${RDEPEND}
 	app-shells/tcsh
 	>=sys-apps/findutils-4.1.20-r1
 	dev-libs/libxslt
-	net-ftp/curl
+	net-misc/curl
 	!dev-util/dmake
 	dev-util/intltool"
 
