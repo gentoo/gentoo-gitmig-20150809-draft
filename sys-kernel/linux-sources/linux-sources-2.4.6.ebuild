@@ -118,8 +118,6 @@ src_unpack() {
 			mkdir MOSIX-1.0.5
 			cd MOSIX-1.0.5
 			unpack MOSIX-1.0.5.tar.gz
-			tar -x --no-same-owner -vf user.tar
-			rm user.tar
 			cd ${S}
 			try cat extras/MOSIX-1.0.5/patches.2.4.6 | patch -p0
 			tar -x --no-same-owner -vf extras/MOSIX-1.0.5/kernel.new.2.4.6.tar
@@ -324,6 +322,7 @@ src_compile() {
 		if [ "`use mosix`" ]
 		then
 			cd ${KS}/extras/MOSIX-1.0.5
+			tar -x --no-same-owner -vf user.tar -C ${T}
 			local x
 			for x in lib/moslib sbin/setpe sbin/tune bin/mosrun usr.bin/mon usr.bin/migrate usr.bin/mosctl
 			do
@@ -380,7 +379,7 @@ src_install() {
 	
 		if [ "`use mosix`" ]
 		then
-			cd ${KS}/extras/MOSIX-1.0.5/lib/moslib
+			cd ${T}
 			dodir /usr/lib /usr/include
 			dolib.a libmos.a
 			dolib.so libmos.so.0
