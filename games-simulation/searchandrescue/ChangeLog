@@ -1,6 +1,6 @@
 # ChangeLog for games-simulation/searchandrescue
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/ChangeLog,v 1.4 2004/06/03 21:05:42 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/ChangeLog,v 1.5 2004/06/24 23:23:15 agriffis Exp $
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   searchandrescue-0.8.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/corewars/corewars-0.9.13.ebuild,v 1.2 2004/02/20 07:33:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/corewars/corewars-0.9.13.ebuild,v 1.3 2004/06/24 23:22:13 agriffis Exp $
 
 DESCRIPTION="Simulation game involving virtual machine code"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
