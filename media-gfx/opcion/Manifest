@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f993f3e2a193018a596c43c592818f58 opcion-1.1.1.ebuild 725
-MD5 e718af6e952c500b46cfc6e06140cec4 ChangeLog 461
+MD5 9ba1ac46b6ee42dfa6f0014001ec1db1 ChangeLog 546
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 eacba6bd839f3a232c5913d31a71a77f opcion-1.1.1.ebuild 731
 MD5 217073f210ff1a99b65f840cc5050586 files/digest-opcion-1.1.1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcaqj/rLF9B432nYRAuiQAJ4r9uk18vmt8YuRBaqInpmKPX9k1ACgwtx2
-TcNlZmg3sq4KkEWuxPhsCz0=
-=Ola9
------END PGP SIGNATURE-----
