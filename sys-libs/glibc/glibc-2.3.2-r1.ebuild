@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.25 2003/09/08 23:01:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.26 2003/09/13 20:49:49 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -294,6 +294,14 @@ src_unpack() {
 	#
 	# <azarah@gentoo.org> (18 May 2003).
 	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-gcc33-sscanf.patch
+
+	# The mathinline.h header omits the middle term of a ?: expression.  This
+	# is a gcc extension, but since the ISO standard forbids it, it's a
+	# GLIBC bug (bug #27142).  See also:
+	#
+	#   http://bugs.gentoo.org/show_bug.cgi?id=27142
+	#
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-fix-omitted-operand-in-mathinline_h.patch
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
 	# do can be found in the patch headers.

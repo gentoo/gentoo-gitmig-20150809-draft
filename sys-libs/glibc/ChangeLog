@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.79 2003/09/08 03:28:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.80 2003/09/13 20:49:49 azarah Exp $
+
+  13 Sep 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r1.ebuild,
+  glibc-2.3.2-r2.ebuild, glibc-2.3.2-r3.ebuild:
+  Add glibc-2.3.2-fix-omitted-operand-in-mathinline_h.patch to resolve bug
+  #28537.
 
   08 Sep 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r1.ebuild:
   Fix gcc DEPEND to be '>=sys-devel/gcc-3.2', and not '=sys-devel/gcc-3.2*'.
