@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.6-r1.ebuild,v 1.1 2000/08/09 23:55:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.6-r1.ebuild,v 1.2 2000/08/16 04:38:21 drobbins Exp $
 
 P=ypbind-1.6
 A=ypbind-mt-1.6.tar.gz
 S=${WORKDIR}/ypbind-mt-1.6
-CATEGORY="net-nds"
 DESCRIPTION="Multithreaded NIS bind service"
 SRC_URI="ftp://ftp.de.kernel.org/pub/linux/utils/net/NIS/"${A}
 HOMEPAGE="http://www.suse.de/~kukuk/nis/ypbind-mt/index.html"
