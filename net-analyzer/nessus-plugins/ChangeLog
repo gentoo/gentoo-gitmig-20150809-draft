@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.40 2005/01/28 02:04:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.41 2005/02/26 03:27:40 dragonheart Exp $
+
+*nessus-plugins-2.2.3 (26 Feb 2005)
+
+  26 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  +nessus-plugins-2.2.3.ebuild:
+  Version bump as per bug #81580. Thanks to ChazeFroy <chazefroy@gmail.com> and
+  Omkhar Arasaratnam <omkhar@rogers.com>.
 
 *nessus-plugins-2.2.2a (28 Jan 2005)
 
