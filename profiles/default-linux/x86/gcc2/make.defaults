@@ -1,10 +1,5 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/make.defaults,v 1.13 2005/01/12 23:08:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/make.defaults,v 1.14 2005/01/19 03:43:48 vapier Exp $
 
-USE="x86 oss apm arts avi berkdb bitmap-fonts crypt cups encode fortran f77 font-server gdbm gif gpm gtk imlib java jpeg kde libg++ libwww mikmod mmx motif  mpeg ncurses nls oggvorbis opengl pam pdflib png python qt quicktime readline sdl slang spell ssl svga tcpd truetype truetype-fonts type1-fonts X xml2 xmms xv" 
-
-ARCH="x86"
-ACCEPT_KEYWORDS="x86"
-
-FEATURES="sandbox sfperms"
+USE="oss apm arts avi berkdb bitmap-fonts crypt cups encode fortran f77 font-server gdbm gif gpm gtk imlib java jpeg kde libg++ libwww mikmod mmx motif  mpeg ncurses nls oggvorbis opengl pam pdflib png python qt quicktime readline sdl slang spell ssl svga tcpd truetype truetype-fonts type1-fonts X xml2 xmms xv" 
