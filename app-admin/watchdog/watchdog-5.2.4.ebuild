@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.4.ebuild,v 1.2 2004/08/17 18:13:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.4.ebuild,v 1.3 2004/08/23 15:36:37 vapier Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-sundries.patch
+	[ "${PORTAGE_LIBC}" == "uclibc" ] && epatch ${FILESDIR}/${PV}-uclibc.patch
 }
 
 src_compile() {
