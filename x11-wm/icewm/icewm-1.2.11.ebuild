@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.9.ebuild,v 1.3 2003/08/20 13:52:34 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.11.ebuild,v 1.1 2003/08/20 13:52:34 hanno Exp $
 
 DESCRIPTION="Ice Window Manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -16,7 +16,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 src_compile(){
 	use esd \
@@ -52,6 +52,9 @@ src_compile(){
 		--with-cfgdir=/etc/icewm \
 		--with-docdir=/usr/share/doc/${PF}/html \
 		${myconf} || die "configure failed"
+	cd src
+	sed -i "s:/icewm-\$(VERSION)::" Makefile || die "patch failed"
+	cd ${S}
 
 	emake || die "emake failed"
 }
