@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r5.ebuild,v 1.1 2003/05/01 12:37:50 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r5.ebuild,v 1.2 2003/06/16 01:27:39 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -78,5 +78,9 @@ src_install() {
 			doman doc/*.1
 			dodoc README NEWS AUTHORS CHANGES COMPAT COPYING Y2K
 			dodoc doc/FAQ doc/INTRO
-		)
+
+			ebegin "creating info symlink"
+			dosym bash.info.gz /usr/share/info/bashref.info.gz
+			eend $?
+	)
 }
