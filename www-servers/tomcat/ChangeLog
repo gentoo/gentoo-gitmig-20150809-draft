@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.9 2004/10/09 09:59:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.10 2004/10/17 09:01:33 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> files/5.0.28/jikes.diff:
+  fix path in jikes patch, #67847
 
 *tomcat-5.0.28 (09 Oct 2004)
 
