@@ -1,6 +1,34 @@
 # ChangeLog for net-www/squid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.3 2002/02/08 09:59:00 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.4 2002/03/21 01:23:36 woodchip Exp $
+
+*squid-2.4.6 (20 Mar 2002)
+
+  20 Mar 2002; Donny Davies <woodchip@gentoo.org> files/squid.rc6, files/squid.confd,
+  squid-2.4.6.ebuild, files/squid-2.4.6-debian.diff, squid-2.4.6-gentoo.diff,
+  files/squid.pam.new, files/digest-squid-2.4.6, squid-2.3.4s-r3.ebuild,
+  squid-2.3.4s-r4.ebuild, squid-2.4.2s.ebuild, files/digest-squid-2.3.4s-r3,
+  files/digest-squid-2.3.4s-r4, files/digest-squid-2.4.2s,
+  files/squid-2.4.2s-debian.diff, files/squid-2.4.2s-gentoo.diff
+  files/squid.conf, files/squid.rc5 :
+
+  Be sure to upgrade! This version fixes some security glitches in older squids!
+
+  Updated to latest available release; fixed permissions on /usr/lib/squid/*_auth
+  programs, made the initscript stop() function more robust, grabbed Debian's latest
+  patch which includes tweaking SQUID_MAXFD (works this time ;) plus other fixes.
+  We now install the error pages for all available languages, defaulting to English.
+  Simply change the errors symlink in /etc/squid to whichever you prefer. Changed
+  the cache location to /var/cache/squid; sorry if this bothers anybody but it fits
+  better here and matches /etc/passwd properly now. If you're upgrading you could
+  make /var/cache/squid a symlink to /var/spool/squid, or move the subdirectories
+  manually. Heads up :)
+
+  Changed some ./configure options; enabled cache-digests, disabled the pinger
+  and added two more auth-modules. Added ability to compile without debugging.
+  Removed the stale config file and the old rc5 initscript. Also removed the older
+  ebuilds; they had numerous bugs. Added a pam_stack aware pam config, for future
+  deployment.
 
   8 Feb 2002; Donny Davies <woodchip@gentoo.org> files/squid.rc6 :
 

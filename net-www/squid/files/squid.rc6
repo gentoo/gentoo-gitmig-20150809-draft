@@ -1,37 +1,35 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/files/squid.rc6,v 1.4 2002/02/08 09:58:06 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/files/squid.rc6,v 1.5 2002/03/21 01:23:36 woodchip Exp $
 
 depend() {
 	need net
 }
 
-maxfiledescriptors() {
+#
+# Try to increase the # of filedescriptors we can open.
+#
+maxfds() {
 	[ -n "$SQUID_MAXFD" ] || return
-	[ -f /proc/sys/fs/file-max ] || return
+	[ -f /proc/sys/fs/file-max ] || return 0
 	[ $SQUID_MAXFD -le 4096 ] || SQUID_MAXFD=4096
 	global_file_max=`cat /proc/sys/fs/file-max`
 	minimal_file_max=$(($SQUID_MAXFD + 4096))
-	if [ "$global_file_max" -lt $minimal_file_max ] ; then
+	if [ "$global_file_max" -lt $minimal_file_max ]
+	then
 		echo $minimal_file_max > /proc/sys/fs/file-max
 	fi
 	ulimit -n $SQUID_MAXFD
 }
 
 checkconfig() {
-	if [ ! -e /etc/squid/squid.conf ] ; then
-		eerror "You need an /etc/squid/squid.conf to run squid"
-		eerror "There is a sample file in /usr/share/doc/squid"
-		return 1
-	fi
-
-	maxfiledescriptors
-
+	maxfds
 	CACHE_SWAP=`sed -e 's/#.*//g' /etc/squid/squid.conf | \
 		grep cache_dir | awk '{ print $3 }'`
-	[ -z "$CACHE_SWAP" ] && CACHE_SWAP=/var/spool/squid
-	cd /var/spool/squid ; umask 027
+	[ -z "$CACHE_SWAP" ] && CACHE_SWAP=/var/cache/squid
+	umask 027
+	cd /var/cache/squid
 	for x in $CACHE_SWAP ; do
 		if [ ! -d $x/00 ] ; then
 			einfo "Initializing cache directory: $x"
@@ -47,14 +45,42 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting squid"
-	start-stop-daemon --quiet --start --exec /usr/sbin/squid -- ${SQUID_OPTS}
+	start-stop-daemon --quiet --start --exec /usr/sbin/squid \
+		--pidfile /var/run/squid.pid -- ${SQUID_OPTS} < /dev/null
 	sleep 1
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping squid"
-	start-stop-daemon --stop --quiet --pidfile /var/run/squid.pid \
-		--retry -0/5/-0/5/-0/10/-0/10/-9/10
-	eend $?
+	PID=`cat /var/run/squid.pid 2>/dev/null`
+	start-stop-daemon --stop --quiet --exec /usr/sbin/squid \
+		--pidfile /var/run/squid.pid
+	#
+	# Now we have to wait until squid has _really_ stopped.
+	#
+	sleep 2
+	if test -n "$PID" && kill -0 $PID 2>/dev/null
+	then
+		einfon "Waiting ."
+		cnt=0
+		while kill -0 $PID 2>/dev/null
+		do
+			cnt=`expr $cnt + 1`
+			if [ $cnt -gt 60 ]
+			then
+				#
+				# Waited 120 seconds now. Fail.
+				#
+				eend 1 "Failed."
+				break
+			fi
+			sleep 2
+			echo -n "."
+		done
+		echo -n "done."
+		eend 0
+	else
+		eend 0
+	fi
 }
