@@ -1,9 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9i.ebuild,v 1.1 2003/12/17 11:58:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9i.ebuild,v 1.2 2004/04/21 16:28:21 vapier Exp $
 
-DESCRIPTION="tcng - Traffic Control Next Generation"
+DESCRIPTION="Traffic Control Next Generation"
 HOMEPAGE="http://tcng.sourceforge.net/"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
@@ -14,11 +15,11 @@ IUSE="doc tcsim"
 # os-headers as it compiles stuff with them
 # gcc/binutils as it compiles stuff
 DEPEND_COMMON="dev-lang/perl
-				sys-apps/iproute
-				net-dialup/linux-atm
-				virtual/os-headers
-				sys-devel/gcc
-				sys-devel/binutils"
+	sys-apps/iproute2
+	net-dialup/linux-atm
+	virtual/os-headers
+	sys-devel/gcc
+	sys-devel/binutils"
 
 DEPEND="doc? ( virtual/ghostscript app-text/tetex media-gfx/transfig )
 	sys-devel/make
