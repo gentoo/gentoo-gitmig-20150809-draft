@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.19 2004/06/06 11:24:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.20 2004/06/17 19:37:19 wolf31o2 Exp $
+
+  17 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
+  +files/pwgen.rc, pwgen-2.01.ebuild, pwgen-2.03-r1.ebuild,
+  -pwgen-2.03.ebuild:
+  Taking ownership for livecd herd (previously unmaintained) and adding init
+  script if USE=livecd.
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   pwgen-2.01.ebuild, pwgen-2.03-r1.ebuild, pwgen-2.03.ebuild:
