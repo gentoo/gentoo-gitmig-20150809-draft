@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Added ssl support and new patches
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.7.4.ebuild,v 1.9 2003/06/12 22:04:18 msterret Exp $
 
 IUSE="ssl"
  
