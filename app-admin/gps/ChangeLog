@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gps
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/ChangeLog,v 1.4 2004/03/12 10:32:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/ChangeLog,v 1.5 2004/06/02 21:43:13 kugelfang Exp $
+
+  02 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> gps-1.1.0.ebuild:
+  Marked ~amd64.
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gps-1.1.0.ebuild:
   Don't assign default to S; header fix
