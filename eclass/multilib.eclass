@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.17 2005/02/03 05:29:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.18 2005/02/03 05:52:51 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -187,11 +187,6 @@ get_abi_LIBDIR() { get_abi_var LIBDIR ${@}; }
 
 # Return a list of the ABIs we want to install for with 
 # the last one in the list being the default.
-get_abi_order() {
-	ewarn "Please update your ebuild to use get_install_abis instead of get_abi_order"
-	get_install_abis ${@}
-}
-
 get_install_abis() {
 	local order=""
 
@@ -277,14 +272,14 @@ get_all_libdirs() {
 # if we're in the last (or only) run through src_{unpack,compile,install}
 is_final_abi() {
 	! has_multilib_profile && return 0
-	local ALL_ABIS=$(get_abi_order)
+	local ALL_ABIS=$(get_install_abis)
 	local LAST_ABI=${ALL_ABIS/* /}
 	[ "${LAST_ABI}" = "${ABI}" ]
 }
 
 # echo the number of ABIs we will be installing for
 number_abis() {
-	get_abi_order | wc -w
+	get_install_abis | wc -w
 }
 
 # get_ml_incdir [<include dir> [<ABI>]]
@@ -359,7 +354,7 @@ prep_ml_includes() {
 			for dir in ${dirs}; do
 				local args=${dir}
 				local abi
-				for abi in $(get_abi_order); do
+				for abi in $(get_install_abis); do
 					args="${args} $(get_abi_CDEFINE ${abi}):${dir}/gentoo-multilib/${abi}"
 				done
 				create_ml_includes ${args}
