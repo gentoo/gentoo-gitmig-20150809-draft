@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/openrpg-1.5.1.ebuild,v 1.3 2004/06/24 23:16:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/openrpg-1.5.1.ebuild,v 1.4 2004/07/03 12:00:18 kloeri Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=dev-python/wxPython-2.4.0.2
+DEPEND=">=dev-python/wxpython-2.4.0.2
 	>=dev-lang/python-2.2.2"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/openrpg-1.4.1.ebuild,v 1.5 2004/06/24 23:16:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/openrpg-1.4.1.ebuild,v 1.6 2004/07/03 12:00:18 kloeri Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=dev-python/wxPython-2.3.3.1
+DEPEND=">=dev-python/wxpython-2.3.3.1
 	>=dev-lang/python-2.2.1"
 
 S="${WORKDIR}/${PN}1"
