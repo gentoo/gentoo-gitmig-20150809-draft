@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.4.ebuild,v 1.2 2003/01/19 14:30:58 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.4.ebuild,v 1.3 2003/02/13 08:01:17 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+-2.0 Hangul Input Modules"

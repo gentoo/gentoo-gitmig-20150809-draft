@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/manpages-fr-0.9.5.ebuild,v 1.4 2002/12/15 10:44:11 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/manpages-fr-0.9.5.ebuild,v 1.5 2003/02/13 08:47:02 vapier Exp $
 
 MY_P=${PN/pages/}
 S=${WORKDIR}/${MY_P}

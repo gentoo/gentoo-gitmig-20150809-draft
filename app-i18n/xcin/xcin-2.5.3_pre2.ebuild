@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.2 2002/11/06 14:44:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.3 2003/02/13 08:48:14 vapier Exp $
 
 XCIN="${P/_/.}.tar.gz"
 CHEWING="chewing-2002Jan07-snapshot.tar.gz"

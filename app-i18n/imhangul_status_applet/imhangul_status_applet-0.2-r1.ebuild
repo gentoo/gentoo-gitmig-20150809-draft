@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul_status_applet/imhangul_status_applet-0.2-r1.ebuild,v 1.2 2003/02/13 04:13:09 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul_status_applet/imhangul_status_applet-0.2-r1.ebuild,v 1.3 2003/02/13 08:01:30 vapier Exp $
 
 inherit gnome2
 S=${WORKDIR}/${P}

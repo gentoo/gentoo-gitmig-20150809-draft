@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/kon2-0.3.9b.ebuild,v 1.1 2002/08/12 15:07:52 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/kon2-0.3.9b.ebuild,v 1.2 2003/02/13 08:45:26 vapier Exp $
 
 DESCRIPTION="KON Kanji ON Linux console"
 SRC_URI="http://www.rarf.riken.go.jp/archives/Linux/kondara/Kondara-2.0/errata/SOURCES/kon2-0.3.9b.tar.gz"

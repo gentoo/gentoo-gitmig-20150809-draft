@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/manpages-ru-0.7.ebuild,v 1.6 2002/11/13 05:26:30 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/manpages-ru-0.7.ebuild,v 1.7 2003/02/13 08:47:08 vapier Exp $
 
 DESCRIPTION="A collection of Russian translations of Linux manual pages."
 HOMEPAGE="http://alexm.here.ru/manpages-ru/"

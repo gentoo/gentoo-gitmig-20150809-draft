@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/qkc-1.00.ebuild,v 1.2 2002/12/03 12:45:20 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/qkc-1.00.ebuild,v 1.3 2003/02/13 08:47:27 vapier Exp $
 
 MY_P=qkcc100
 DESCRIPTION="Quick KANJI code Converter"

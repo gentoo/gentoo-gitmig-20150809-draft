@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/skkinput-2.06.3.ebuild,v 1.2 2002/12/24 16:56:33 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/skkinput-2.06.3.ebuild,v 1.3 2003/02/13 08:47:56 vapier Exp $
 
 DESCRIPTION="A SKK-like Japanese input method for X11"
 SRC_URI="http://downloads.sourceforge.jp/skkinput2/1815/${P}.tar.gz"
