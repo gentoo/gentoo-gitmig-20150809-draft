@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.26 2004/04/15 02:11:39 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.27 2004/04/18 21:07:28 lv Exp $
+
+  18 Apr 2004; Travis Tilley <lv@gentoo.org> xorg-x11-6.7.0.ebuild:
+  marking stable on amd64 with the full realisation that the normal time period
+  for waiting to mark things stable has yet to be met. A security vulnerability,
+  outlined in bug 48107, forced me to mark the new xine-lib stable on amd64,
+  where it will not compile with any unmasked version of xfree due to -fPIC
+  errors (see bugs 48261, 44274, and 40646). Xorg-x11 is the only truly stable
+  and fully functional option on amd64! Xfree 4.3.0, in general, is simply not
+  amd64-friendly. Please CC me for any bugs relating to xorg-x11.
 
   14 Apr 2004; Stephen P. Becker <geoman@gentoo.org> xorg-x11-6.7.0.ebuild:
   Added ~mips keyword.
