@@ -1,18 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3323.ebuild,v 1.1 2004/09/14 21:49:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3339.ebuild,v 1.1 2004/11/26 22:24:23 wolf31o2 Exp $
 
 inherit games
 
 DESCRIPTION="Unreal Tournament 2004 Linux Dedicated Server"
 HOMEPAGE="http://www.unrealtournament.com/"
 
-ORIG_P="ut2004-3186-dedicatedserver.zip"
-PATCH_P="ut2004-lnxpatch${PV}.tar.bz2"
-SRC_URI="mirror://3dgamers/pub/3dgamers5/games/unrealtourn2k4/${ORIG_P}
-	mirror://3dgamers/pub/3dgamers/games/unrealtourn2k4/${ORIG_P}
-	mirror://3dgamers/pub/3dgamers5/games/unrealtourn2k4/${PATCH_P}
-	mirror://3dgamers/pub/3dgamers/games/unrealtourn2k4/${PATCH_P}"
+MY_P="dedicatedserver${PV}-bonuspack.zip"
+SRC_URI="mirror://3dgamers/pub/3dgamers/games/unrealtourn2k4/${MY_P}"
 
 LICENSE="ut2003"
 SLOT="0"
@@ -31,32 +27,25 @@ pkg_setup() {
 	games_pkg_setup
 }
 
-src_unpack() {
-	unzip ${DISTDIR}/${ORIG_P}
-	unpack ${PATCH_P}
-}
-
 src_install() {
 	einfo "This will take a while ... go get a pizza or something"
 
 	dodir ${dir}
-	rm -f ${D}/ut2004-bi{n,n-linux-amd64} || die "Removing ut2004 binaries"
-	cp -r ${S}/UT2004-Patch/* ${S} || die "Patching server to current..."
-	rm -rf ${S}/UT2004-Patch
 	cp -r ${S}/* ${Ddir}
 
 	if use amd64 ; then
-		rm ${Ddir}/System/{ucc-bi{n,n-macosx},UCC.exe} \
+		rm ${Ddir}/System/{ucc-bi{n,n-macosx}} \
 			|| die "removing unused binaries"
 		mv ${Ddir}/System/ucc-bin-linux-amd64 ${Ddir}/System/ucc-bin \
 			|| die "renaming ucc-bin-amd64 => ucc-bin"
 	else
-		rm ${Ddir}/System/{ucc-bin-{linux-amd64,macosx},UCC.exe} \
+		rm ${Ddir}/System/{ucc-bin-{linux-amd64,macosx}} \
 			|| die "removing unused binaries"
 	fi
 
 	fperms 0770 ${dir}/System/ucc-bin || die "fixing permissions on ucc-bin"
 	rm -f ${Ddir}/System/*.dll || die "removing windows dlls"
+	rm -f ${Ddir}/System/*.exe || die "removing windows exes"
 
 	prepgamesdirs
 
