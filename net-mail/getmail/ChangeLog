@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/getmail
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.10 2003/11/08 17:11:15 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.11 2004/06/07 06:14:35 kloeri Exp $
+
+  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> getmail-3.2.1.ebuild:
+  Stable on alpha.
 
   08 Nov 2003; Brad House <brad_mssw@gentoo.org> getmail-3.2.1.ebuild:
   add ~amd64 flag

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.6 2004/05/30 10:57:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.7 2004/06/07 06:18:56 kloeri Exp $
 
 inherit fixheadtails eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://untroubled.org/qmail-autoresponder/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc ~alpha ~mips ~hppa"
+KEYWORDS="x86 sparc ppc alpha ~mips ~hppa"
 
 DEPEND="virtual/glibc
 		dev-libs/bglibs
