@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.8 2004/04/06 04:05:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.9 2004/05/03 10:23:14 dholm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://xcin.linux.org.tw/pub/xcin/xcin/devel/${XCIN}
 
 LICENSE="XCIN"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )
