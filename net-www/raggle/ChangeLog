@@ -1,6 +1,10 @@
 # ChangeLog for net-www/raggle
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/raggle/ChangeLog,v 1.6 2004/02/28 09:15:04 twp Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/raggle/ChangeLog,v 1.7 2004/04/11 17:15:31 usata Exp $
+
+  12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> raggle-0.2.2.ebuild,
+  raggle-0.2.4.ebuild, raggle-0.2.5.ebuild, raggle-0.3.0.ebuild:
+  virtual/ruby fix
 
 *raggle-0.3.0 (28 Feb 2004)
 
