@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/gnu-regexp
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.1 2002/10/18 20:37:31 karltk Exp $
+
+*gnu-regexp-1.1.4 (06 Sep 2002)
+
+  06 Sep 2002; Thomas Osterlie <thomas.osterlie@acm.org> gnu-regexp-1.1.4.ebuild, files/digest-gnu-regexp-1.1.4, files/1.1.4/Makefile.diff :
+  Initial import. Fixes #7653.

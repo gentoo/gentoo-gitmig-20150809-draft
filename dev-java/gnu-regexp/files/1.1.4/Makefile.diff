@@ -1,0 +1,11 @@
+60,63c60
+< JAVAC = jikes
+< JAVAFLAGS = -O
+< 
+< #JAVAC = javac
+---
+> #JAVAC = jikes
+65a63,65
+> JAVAC = javac
+> JAVAFLAGS = -O
+> 
