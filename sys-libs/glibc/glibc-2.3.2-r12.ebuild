@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.8 2005/01/17 23:19:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.9 2005/01/20 15:50:50 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -578,6 +578,15 @@ src_compile() {
 	make PARALLELMFLAGS="${MAKEOPTS}" || die
 #	einfo "Doing GLIBC checks..."
 #	make check
+}
+
+src_test() {
+	# This is wrong, but glibc's tests fail bad when screwing 
+	# around with sandbox, so lets just punt it
+	unset LD_PRELOAD
+
+	cd ${S}/buildhere
+	make check || die "make check failed :("
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.37 2005/01/19 03:06:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.38 2005/01/20 15:50:50 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -735,6 +735,15 @@ src_compile() {
 		einfo "Building GLIBC with NPTL..."
 		make PARALLELMFLAGS="${MAKEOPTS}" || die
 	fi
+}
+
+src_test() {
+	# This is wrong, but glibc's tests fail bad when screwing 
+	# around with sandbox, so lets just punt it
+	unset LD_PRELOAD
+
+	cd ${GBUILDDIR}
+	make check || die "make check failed :("
 }
 
 src_install() {
