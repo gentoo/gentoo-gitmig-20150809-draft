@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.11 2003/11/12 19:26:24 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.12 2003/12/04 22:20:14 lanius Exp $
 
 IUSE="doc snmp usb apache2"
 
@@ -32,6 +32,8 @@ src_unpack() {
 	cp -a ${WORKDIR}/gd1.2 ${S}/src/
 	cd ${S}/platforms/gentoo
 	epatch ${FILESDIR}/${PV}/apcupsd.in.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PV}/ucd-snmp.patch
 }
 
 src_compile() {
