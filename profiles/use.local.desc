@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.189 2003/12/23 08:26:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.190 2003/12/25 04:09:19 nakano Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -42,7 +42,9 @@ app-sci/opendx:cdf - Adds cdf data exchange format to app-sci/opendx
 app-sci/opendx:hdf - Adds support for the Hierarchical Data Format to app-sci/opendx
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
-dev-db/postgresql:pg-hier - Enable recursive queries like Oracle's 'CONNECT BY' feature.
+dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
+dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
+dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
 dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
 dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
