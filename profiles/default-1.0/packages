@@ -14,8 +14,7 @@
 # flexibility.  For example, >=sys-libs/glibc-2.2.4 will cause emerge to ignore
 # all glibc ebuilds with a version less than 2.2.4.  This allows us to have
 # profile-specific package.mask settings.  *All* lines are used for this
-7# masking process, whether they are prefixed with a * or not.  And if a
-generic
+# masking process, whether they are prefixed with a * or not.  And if a generic
 # dep is used, like "sys-apps/foo", then all versions of foo are included.  If
 # there is no entry, then all versions of an app are included.  The key thing
 # to note is that this file does not need to end up being an exhaustive list
