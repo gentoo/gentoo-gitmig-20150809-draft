@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.65 2003/07/27 00:20:00 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.66 2003/08/25 19:16:35 weeve Exp $
+
+  25 Aug 2003; Jason Wever <weeve@gentoo.org> apache-1.3.27-r3.ebuild,
+  apache-1.3.27-r4.ebuild, apache-1.3.28.ebuild, apache-2.0.46.ebuild,
+  apache-2.0.47.ebuild:
+  Added AcceptMutex fixes for sparcs for bug #7172.
 
   26 Jul 2003; Donny Davies <woodchip@gentoo.org> apache-1.3.28.ebuild:
   Fix #25212.  Mark x86 stable.

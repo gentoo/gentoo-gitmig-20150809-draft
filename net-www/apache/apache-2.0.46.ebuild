@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.46.ebuild,v 1.4 2003/07/13 21:44:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.46.ebuild,v 1.5 2003/08/25 19:16:35 weeve Exp $
 
 inherit eutils
 
@@ -280,6 +280,15 @@ src_install () {
 	doins ${FILESDIR}/2.0.40/virtual-homepages.conf
 	doins ${FILESDIR}/2.0.40/dynamic-vhosts.conf
 	doins ${FILESDIR}/2.0.40/vhosts.conf
+
+        # Added by Jason Wever <weeve@gentoo.org>
+        # A little sedfu to fix bug #7172 for sparc64s
+        if [ ${ARCH} = "sparc" ]
+        then
+                sed -i -e '13a\AcceptMutex fcntl' \
+                        ${D}/etc/apache2/conf/apache2.conf
+        fi
+
 }
 
 parse_modules_config() {
