@@ -1,0 +1,37 @@
+#!/sbin/runscript
+#
+# init.d script for saru
+#
+# Created by Christian Zoffoli (XMerlin) <czoffoli@xmerlin.org>
+# Version 0.3
+
+PIDFILE=/var/run/saru.pid
+
+depend() {
+        use net
+        after heartbeat 
+	after ip_vs_user_sync_simple
+}
+
+start() {
+
+        if ! lsmod | grep "ipt_saru" &> /dev/null ; then
+                # module ipt_saru not loaded
+                ebegin "Inserting ipt_saru kernel module"
+                modprobe ipt_saru &> /dev/null
+                eend $?
+        fi
+
+        ebegin 'Starting saru'
+
+        start-stop-daemon --quiet --start --startas /usr/sbin/saru --pidfile ${PIDFILE} -- ${SARU_ARGS}
+        eend $?
+}
+
+stop() {
+        ebegin 'Stopping saru'
+        # start-stop-daemon doesn't work as expected with saru ...killproc works better
+	#start-stop-daemon -o --quiet --stop --pidfile ${PIDFILE}
+        killproc /usr/sbin/saru && rm -f ${PIDFILE}
+        eend $?
+}
