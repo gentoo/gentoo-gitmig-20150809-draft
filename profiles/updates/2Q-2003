@@ -17,3 +17,5 @@ move x11-misc/ttf-bitstream-vera media-fonts/ttf-bitstream-vera
 move x11-misc/urw-fonts media-fonts/urw-fonts
 move x11-misc/x11fonts-jmk media-fonts/x11fonts-jmk
 move x11-misc/zh-kcfonts media-fonts/zh-kcfonts
+move app-text/freefonts media-fonts/freefonts
+move app-text/sharefonts media-fonts/sharefonts
