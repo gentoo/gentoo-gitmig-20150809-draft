@@ -2,7 +2,7 @@
 # the ../default-sparc-1.0/scripts/build-rel.sh script and check the
 # changes that have occurred (cvs diff).
 #
-ARCH="sparc64"
+ARCH="sparc"
 CHOST=sparc-unknown-linux-gnu
 
 # Options passed to make during the build process
@@ -18,4 +18,4 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
 # USE arch:xxx keyword
-ACCEPT_KEYWORDS="sparc64"
+ACCEPT_KEYWORDS="sparc"

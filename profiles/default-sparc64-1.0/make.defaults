@@ -13,9 +13,12 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv"
 
 # These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.14 2002/09/03 22:41:02 drobbins Exp $
+# $Id: make.defaults,v 1.15 2002/12/09 16:54:51 seemant Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.14  2002/09/03 22:41:02  drobbins
+# adding "oss" to all profiles by default (yes, a good thing)
+#
 # Revision 1.13  2002/07/24 17:23:04  g2boojum
 # Removed "ipv6" from USE in make.defaults.  Some packages require
 # ipv6 support in the kernel if built w/ ipv6 support.
@@ -33,7 +36,7 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv"
 # More changes
 #
 #
-ARCH="sparc64"
+ARCH="sparc"
 CHOST=sparc-unknown-linux-gnu
 PLATFORM=sparc64-unknown-linux-gnu
 
@@ -50,5 +53,5 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
 # USE arch:xxx keyword
-ACCEPT_KEYWORDS="sparc64"
+ACCEPT_KEYWORDS="sparc"
 # End of lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh

@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the gcc 3.2 Portage system
-USE="sparc64 oss 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
+USE="oss 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
 java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis
 opengl pam pdflib png python qt qtmt quicktime readline sdl slang spell ssl
  tcpd truetype X xml2 xmms xv zlib"
@@ -9,7 +9,7 @@ COMPILER="gcc3"
 # the ../default-sparc-1.0/scripts/build-rel.sh script and check the
 # changes that have occurred (cvs diff).
 #
-ARCH="sparc64"
+ARCH="sparc"
 CHOST=sparc-unknown-linux-gnu
 PLATFORM=sparc64-unknown-linux-gnu
 
@@ -26,4 +26,4 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
 # USE arch:xxx keyword
-ACCEPT_KEYWORDS="sparc64"
+ACCEPT_KEYWORDS="sparc"
