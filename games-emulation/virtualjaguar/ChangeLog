@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/virtualjaguar
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.1 2003/09/13 02:14:52 msterret Exp $
+
+*virtualjaguar-1.0.5 (12 Sep 2003)
+
+  12 Sep 2003; Michael Sterrett <msterret@gentoo.org>
+  virtualjaguar-1.0.5.ebuild, files/virtualjaguar:
+  initial commit
+
