@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9.ebuild,v 1.3 2004/01/22 15:00:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9.ebuild,v 1.4 2004/01/23 22:56:42 blkdeath Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.proftpd.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc hppa ~alpha ~ppc ppc64"
+KEYWORDS="x86 ~sparc hppa ~alpha ~ppc ppc64"
 
 DEPEND="net-libs/libpcap
 	pam? ( >=sys-libs/pam-0.75 )
@@ -28,7 +28,6 @@ DEPEND="net-libs/libpcap
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-#	epatch ${FILESDIR}/1.2.9_rc3-reversedns.diff
 }
 
 src_compile() {
