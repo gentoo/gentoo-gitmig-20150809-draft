@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> 29 May 2003
+# Dev testing of 2.0.48-r1
+=sys-apps/portage-2.0.48-r1
+
 # <agenkin@gentoo.org> 28 May 2003
 # net-www/opera-static is removed in favor of the unified
 # net-www/opera.
