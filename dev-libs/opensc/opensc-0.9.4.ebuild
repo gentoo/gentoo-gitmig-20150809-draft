@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.9.4.ebuild,v 1.2 2005/01/23 11:16:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.9.4.ebuild,v 1.3 2005/01/23 22:31:20 dragonheart Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.opensc.org/files/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="-* ~ppc64"
+KEYWORDS="~amd64 ~ppc ~x86 ~ppc64"
 IUSE="ldap pam pcsc-lite X"
 
 RDEPEND="ldap? ( net-nds/openldap )
@@ -37,11 +37,15 @@ src_compile() {
 		|| mycard="--with-openct=/usr"
 	econf \
 		--disable-usbtoken \
-		--without-plugin-dir \
+		--with-plugin-dir=/usr/lib/mozilla/plugins \
 		`use_enable ldap` \
 		`use_with pam` \
 		${mycard} \
 		|| die
+
+	# --without-plugin-dir generates a /no directory
+
+
 	emake -j1 || die
 }
 

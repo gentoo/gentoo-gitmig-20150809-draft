@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>crypto</herd>
+<maintainer>
+  <email>crypto@gentoo.org</email>
+    <name>Crypto Herd</name>
+</maintainer>
+<longdescription>
+ibopensc is a library for accessing SmartCard devices. It is also the core library of the OpenSC 
+project. 
+
+Basic functionality (e.g. SELECT FILE, READ BINARY) should work on any ISO 7816-4 compatible SmartCard. 
+Encryption and decryption using private keys on the SmartCard is possible with PKCS #15 compatible 
+cards, such as the FINEID (Finnish Electronic IDentity) card.
+</longdescription>
+</pkgmetadata>

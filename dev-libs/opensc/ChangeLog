@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.11 2005/01/23 11:16:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.12 2005/01/23 22:31:20 dragonheart Exp $
+
+  24 Jan 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  opensc-0.9.4.ebuild:
+  Restored keywords. Added metadata with crypto herd as maintainers.
+  Specified plugin direcory to remove a /no directory and to provide
+  mozilla support.
 
   23 Jan 2005; Markus Rothe <corsair@gentoo.org> opensc-0.8.1-r1.ebuild,
   opensc-0.9.4.ebuild:
