@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.25 2004/02/08 04:51:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.26 2004/02/09 21:06:46 lu_zero Exp $
+
+  09 Feb 2004; Luca Barbato <lu_zero@gentoo.org> mpg123-0.59s-r1.ebuild:
+  Fixed a glitch in the ppc related section of Makefile.
 
   07 Feb 2004; Aron Griffis <agriffis@gentoo.org> mpg123-0.59s-r1.ebuild:
   Majorly clean up the arch support in this ebuild

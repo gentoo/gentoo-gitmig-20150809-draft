@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r1.ebuild,v 1.6 2004/02/08 04:51:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r1.ebuild,v 1.7 2004/02/09 21:06:46 lu_zero Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_unpack () {
 
 	# Don't force gcc since icc/ccc might be possible
 	sed -i -e "s|CC=gcc||" Makefile
+	sed -i -e "s:-mcpu=ppc::" Makefile
 }
 
 src_compile() {
