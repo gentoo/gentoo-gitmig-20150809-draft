@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r1.ebuild,v 1.7 2004/09/29 10:15:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r1.ebuild,v 1.8 2004/10/01 12:08:28 lanius Exp $
 
 inherit eutils
 
@@ -49,10 +49,11 @@ src_unpack() {
 	patch -p0 ${S}/man/gs.1 < ${FILESDIR}/${P}.man.patch || die
 
 	# search path fix
-	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):"\
-	Makefile.in || die "sed failed"
+	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.05/$(get_libdir):"\
+	src/Makefile.in || die "sed failed"
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
-	Makefile.in || die "sed failed"
+	src/Makefile.in || die "sed failed"
+
 }
 
 src_compile() {
@@ -64,12 +65,6 @@ src_compile() {
 
 	use cups && myconf="${myconf} --enable-cups --with-gimp-print" \
 		|| myconf="${myconf} --disable-cups --without-gimp-print"
-
-	# search path fix
-	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.05/$(get_libdir):"\
-	Makefile.in || die "sed failed"
-	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
-	Makefile.in || die "sed failed"
 
 	econf ${myconf} || die "econf failed"
 	make || die "make failed"

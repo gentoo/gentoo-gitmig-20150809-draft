@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.70 2004/09/29 10:15:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.71 2004/10/01 12:08:28 lanius Exp $
+
+  01 Oct 2004; Heinrich Wendel <lanius@gentoo.org>
+  ghostscript-7.05.6-r1.ebuild:
+  fix path of Makefile.in
 
 *ghostscript-7.07.1-r6 (29 Sep 2004)
 
