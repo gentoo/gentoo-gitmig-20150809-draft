@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/hatarai
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hatari/ChangeLog,v 1.1 2002/12/12 00:14:13 rphillips Exp $
+
+*hatari-0.20.2 (11 Dec 2002)
+
+  11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  initial release
