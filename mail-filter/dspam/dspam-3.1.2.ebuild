@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.2.ebuild,v 1.3 2004/10/16 17:27:29 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.2.ebuild,v 1.4 2004/10/24 15:08:56 st_lim Exp $
 
 inherit eutils
 
@@ -148,7 +148,7 @@ src_install () {
 	keepdir ${HOMEDIR}
 
 	# keeps dspam data in /var
-	diropts -m0770 -o dspam -g dspam
+	diropts -m0775 -o dspam -g dspam
 	dodir ${DATADIR}
 	keepdir ${DATADIR}
 
@@ -194,7 +194,7 @@ src_install () {
 
 	# install some initial configuration
 	insinto ${HOMEDIR}
-	insopts -m0640 -o dspam -g dspam
+	insopts -m0664 -o dspam -g dspam
 	[ ! -f ${HOMEDIR}/trusted.users ] && doins ${FILESDIR}/trusted.users
 	doins ${T}/untrusted.mailer_args
 	doins ${T}/default.prefs
@@ -404,10 +404,10 @@ pkg_config () {
 	einfo "  wget http://www.nuclearelephant.com/projects/dspam/SA-Corpus.tar.gz"
 	einfo "  tar zxvf SA-Corpus.tar.gz"
 	einfo "  cd ./SA-Corpus"
-	einfo "  ./train.pl user@example.com"
+	einfo "  perl train.pl user@example.com"
 	einfo
 	einfo "The current ebuild has installed a group called \"globaluser\". If you want"
 	einfo "you could train the \"globaluser\" instead of a valid email address:"
-	einfo "  ./train.pl globaluser"
+	einfo "  perl train.pl globaluser"
 	einfo
 }
