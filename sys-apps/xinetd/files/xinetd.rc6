@@ -1,37 +1,30 @@
 #!/sbin/runscript
 
+#you may move this into your rc.conf file if you wish
+XINETD_OPTS="-stayalive -reuse"
+
 depend() {
 	need net
 }
 
-autoconfig() {
-if [ ! -e /etc/xinetd.conf ] ; then
-	if [ ! -e /etc/inetd.conf ] ; then
+checkconfig() {
+	if [ ! -e /etc/xinetd.conf ] ; then
 		eerror "You need an /etc/xinetd.conf file to run xinetd"
-		eerror "There is a sample one in /usr/share/docs/xinetd"
+		eerror "There is a sample file in /usr/share/doc/xinetd"
 		return 1
-	else
-		einfo "Auto-creating xinetd.conf from your inetd.conf"
-		/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
 	fi
-fi
 }
 
 start() {
-	autoconfig || return 1
+	checkconfig || return 1
 	ebegin "Starting xinetd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/xinetd 1>&2
+	start-stop-daemon --start --quiet --exec /usr/sbin/xinetd \
+		-- -pidfile /var/run/xinetd.pid ${XINETD_OPTS}
 	eend $? 
 }
 
 stop() {
 	ebegin "Stopping xinetd"
-	start-stop-daemon --stop --quiet -u root -n xinetd 1>&2
-	# long explanation removed; basically: keep things sane
-	if [ $? -ne 0 ] ; then
-		if [ -e /dev/shm/.init.d/started/xinetd ] ; then
-			eend 0
-		fi
-	fi
+	start-stop-daemon --stop --quiet --pidfile /var/run/xinetd.pid
 	eend $?
 }
