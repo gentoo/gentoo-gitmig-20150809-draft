@@ -1,0 +1,12 @@
+# ChangeLog for net-irc/ezbounce
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ChangeLog,v 1.1 2003/11/22 02:00:01 zul Exp $
+
+*ezbounce-1.04a (21 Nov 2003)
+
+  21 Nov 2003; Chuck Short <zul@gentoo.org> ezbounce-1.04a.ebuild,
+  files/ezbounce-1.04a-crash-fix.patch:
+  Initial release
+  Ebuild submitted by Sven Wegener <sven.wegener@stealer.net>
+  Closes bug #31619.
+
