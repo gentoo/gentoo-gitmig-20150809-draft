@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.78 2004/10/31 20:08:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.79 2004/11/28 14:23:33 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -501,18 +501,28 @@ pkg_postinst() {
 	update_vim_helptags
 
 	einfo
-	if [[ "${MY_PN}" == "gvim" ]] ; then
-		einfo "To enable UTF-8 viewing, set guifont and guifontwide: "
-		einfo ":set guifont=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1"
-		einfo ":set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1"
-		einfo
-		einfo "note: to find out which fonts you can use, please read the UTF-8 help:"
-		einfo ":h utf-8"
-		einfo
-		einfo "Then, set read encoding to UTF-8:"
-		einfo ":set encoding=utf-8"
-	elif [[ "${MY_PN}" == "vim" ]] ; then
-		einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
+	if [[ $(get_major_version ) -lt 7 ]] ; then
+		if [[ "${MY_PN}" == "gvim" ]] ; then
+			einfo "To enable UTF-8 viewing, set guifont and guifontwide: "
+			einfo ":set guifont=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1"
+			einfo ":set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1"
+			einfo
+			einfo "note: to find out which fonts you can use, please read the UTF-8 help:"
+			einfo ":h utf-8"
+			einfo
+			einfo "Then, set read encoding to UTF-8:"
+			einfo ":set encoding=utf-8"
+		elif [[ "${MY_PN}" == "vim" ]] ; then
+			einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
+		fi
+	else
+		if [[ "${MY_PN}" == "gvim" ]] ; then
+			# TODO: once we have all the GUIs working, display a message
+			# explaining them.
+		elif [[ "${MY_PN}" == "vim" ]] ; then
+			# TODO: once we have the GUIs working, display a message explaining
+			# them.
+		fi
 	fi
 	einfo
 
