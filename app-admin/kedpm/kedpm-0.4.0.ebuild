@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.6 2004/06/24 21:29:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.7 2004/06/29 19:39:22 agriffis Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="gtk2"
 
-DEPEND="virtual/python"
+DEPEND="virtual/python
+	>=sys-apps/sed-4"
 RDEPEND="dev-python/pycrypto
 	gtk2? ( >=dev-python/pygtk-2 )"
 

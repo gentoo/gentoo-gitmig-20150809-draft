@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.19 2004/06/25 17:47:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.20 2004/06/29 19:42:32 agriffis Exp $
 
 DESCRIPTION="killproc and assorted tools for boot scripts"
 HOMEPAGE="http://www.suse.de/"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~amd64"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
