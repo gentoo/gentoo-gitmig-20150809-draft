@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.11-r2.ebuild,v 1.3 2003/09/29 18:52:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.11-r2.ebuild,v 1.4 2004/01/11 13:48:42 lanius Exp $
 #
 # 1. static       # Statically linked libraries, default.
 # 2. shared-2.95  # Dynamically linked libaries, compiled with gcc 2.95.
@@ -23,7 +23,7 @@ DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
-	>=x11-libs/lesstif-0.93.40" #lesstif resolves Bug 25767
+	x11-libs/openmotif" #lesstif resolves Bug 25767
 
 KEYWORDS="x86 ~ppc" #please test on x86
 SLOT="0"

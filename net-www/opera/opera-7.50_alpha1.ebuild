@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha1.ebuild,v 1.4 2003/12/30 07:25:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha1.ebuild,v 1.5 2004/01/11 13:48:42 lanius Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
@@ -21,7 +21,7 @@ DEPEND=">=sys-apps/sed-4"
 RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
 	media-libs/libexif
-	virtual/motif"
+	x11-libs/openmotif"
 
 SLOT="0"
 LICENSE="OPERA"
@@ -70,12 +70,6 @@ src_install() {
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera
-
-	# install correct motifwrapper
-	if has_version '=x11-libs/openmotif-2.2*'; then
-		rm ${D}/opt/opera/lib/opera/plugins/operamotifwrapper
-		cp ${S}/plugins/operamotifwrapper-3 ${D}/opt/opera/lib/opera/plugins
-	fi
 }
 
 pkg_postinst() {

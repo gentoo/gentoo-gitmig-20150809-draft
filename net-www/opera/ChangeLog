@@ -1,6 +1,11 @@
 # ChangeLog for net-www/opera
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.46 2003/12/30 07:25:46 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.47 2004/01/11 13:48:42 lanius Exp $
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> opera-6.12.ebuild,
+  opera-7.11-r2.ebuild, opera-7.21.ebuild, opera-7.22.ebuild,
+  opera-7.23.ebuild, opera-7.50_alpha1.ebuild:
+  fixed motif dep; removed old versions
 
   29 Dec 2003; Seemant Kulleen <seemant@gentoo.org> opera-7.50_alpha1.ebuild:
   some cleanups, and switch to virtual/motif instead
