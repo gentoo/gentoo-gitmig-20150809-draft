@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nbtscan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.12 2004/07/20 04:01:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.13 2004/07/26 04:23:03 j4rg0n Exp $
+
+  25 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org> nbtscan-1.5.1.ebuild:
+  Stable on macos.
 
   19 Jul 2004; Jason Wever <weeve@gentoo.org> nbtscan-1.5.1.ebuild:
   Stable on sparc.
