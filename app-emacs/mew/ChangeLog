@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.32 2005/01/05 18:46:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.33 2005/01/12 16:51:47 slarti Exp $
+
+  12 Jan 2005; Tom Martin <slarti@gentoo.org> mew-4.1.ebuild:
+  Stabilising on amd64.
 
   05 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> mew-4.1.ebuild:
   Stable on sparc
