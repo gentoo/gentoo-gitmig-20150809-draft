@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/mdadm-1.7.0.ebuild,v 1.3 2004/11/25 14:21:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/mdadm-1.7.0.ebuild,v 1.4 2004/12/05 19:51:40 vapier Exp $
 
 DESCRIPTION="A useful tool for running RAID systems - it can be used as a replacement for the raidtools, or as a supplement."
 HOMEPAGE="http://cgi.cse.unsw.edu.au/~neilb/mdadm"
@@ -9,7 +9,7 @@ SRC_URI="mirror://kernel/utils/raid/mdadm/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~alpha ~amd64 hppa"
+KEYWORDS="~alpha ~amd64 hppa ppc x86"
 IUSE="static"
 
 RDEPEND="virtual/libc"
