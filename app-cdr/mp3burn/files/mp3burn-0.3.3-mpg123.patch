@@ -1,0 +1,12 @@
+diff -Naur mp3burn-0.3.3-orig/mp3burn mp3burn-0.3.3/mp3burn
+--- mp3burn-0.3.3-orig/mp3burn	2004-04-28 10:11:37.000000000 +0200
++++ mp3burn-0.3.3/mp3burn	2004-09-04 03:18:59.914937170 +0200
+@@ -90,7 +90,7 @@
+ 	       &Cleanup;
+ 	       exit 1;
+ 	    }
+-  	    $hash->{DECODER} = ["mpg321", "--rate", "44100", "--stereo", "-s", "-q"];
++  	    $hash->{DECODER} = ["mpg123", "--rate", "44100", "--stereo", "-s", "-q"];
+ 	}    
+     } 
+     # else we don't know what type of file this is...

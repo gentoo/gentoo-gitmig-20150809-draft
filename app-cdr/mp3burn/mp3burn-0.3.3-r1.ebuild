@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mp3burn/mp3burn-0.3.3.ebuild,v 1.5 2004/09/03 21:05:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mp3burn/mp3burn-0.3.3-r1.ebuild,v 1.1 2004/09/05 23:35:41 eradicator Exp $
 
 IUSE=""
+
+inherit eutils
 
 DESCRIPTION="Burn mp3s without filling up your disk with .wav files"
 HOMEPAGE="http://sourceforge.net/projects/mp3burn/"
@@ -21,6 +23,12 @@ RDEPEND="${DEPEND}
 	 virtual/cdrtools
 	 dev-perl/MP3-Info
 	 dev-perl/String-ShellQuote"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-mpg123.patch
+}
 
 src_compile() {
 	emake

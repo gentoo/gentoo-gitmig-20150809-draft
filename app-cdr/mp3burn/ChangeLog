@@ -1,6 +1,15 @@
 # ChangeLog for app-cdr/mp3burn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mp3burn/ChangeLog,v 1.11 2004/09/03 21:05:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mp3burn/ChangeLog,v 1.12 2004/09/05 23:35:41 eradicator Exp $
+
+*mp3burn-0.3.3-r1 (05 Sep 2004)
+
+  05 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/mp3burn-0.3.3-mpg123.patch, +mp3burn-0.3.3-r1.ebuild,
+  -mp3burn-0.3.3.ebuild:
+  Changed mpg321 execution to mpg123 for virtual/mpg123 compatibility. Closes
+  bug #61443. Thanks to Bjarke Istrup Pedersen <Bjarke.ip@tekpunkt.dk> for
+  taking care of this.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> mp3burn-0.3.3.ebuild:
   Stable sparc.
