@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.39 2004/11/25 15:07:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.40 2004/11/30 17:21:32 ka0ttic Exp $
+
+  30 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> vixie-cron-4.1-r4.ebuild:
+  New patch revision; fixes all the uninitialized variable compiler warnings.
 
   25 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   vixie-cron-4.1-r4.ebuild:

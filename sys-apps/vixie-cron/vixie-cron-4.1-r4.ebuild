@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.4 2004/11/25 15:07:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.5 2004/11/30 17:21:32 ka0ttic Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.isc.org/isc/cron/"
 DESCRIPTION="Paul Vixie's cron daemon, a fully featured crond implementation"
 
 SELINUX_PATCH="${P}-selinux.diff"
-GENTOO_PATCH_REV="r2"
+GENTOO_PATCH_REV="r3"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${GENTOO_PATCH_REV}.patch.bz2"
