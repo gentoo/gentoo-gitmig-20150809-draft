@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/gnokii
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.4 2003/08/08 14:04:38 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.5 2003/10/01 00:04:33 liquidx Exp $
+
+*gnokii-0.5.4 (01 Oct 2003)
+
+  01 Oct 2003; Alastair Tse <liquidx@gentoo.org> gnokii-0.5.2-r1.ebuild,
+  gnokii-0.5.4.ebuild, files/gnokii-0.5.2-nounix98pty.patch,
+  files/gnokii-0.5.4-nounix98pty.patch:
+  version bump. revised ebuild to not disable sandbox and remove gnokii group
+  for the moment while we figure out whether it is actually needed. installs the
+  right docs and other general cleanup.
 
 *gnokii-0.5.2 (08 Aug 2003)
 
