@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dubya/fortune-mod-dubya-20040818.ebuild,v 1.1 2004/08/18 16:04:30 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dubya/fortune-mod-dubya-20040818.ebuild,v 1.2 2005/01/18 21:28:09 rizzo Exp $
 
 DESCRIPTION="Quotes from George W. Bush"
 HOMEPAGE="http://dubya.seiler.us/"
