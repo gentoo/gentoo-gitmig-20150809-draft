@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.30c.ebuild,v 1.3 2004/01/18 19:52:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.30c.ebuild,v 1.4 2004/04/09 16:18:40 seemant Exp $
 
 IUSE="nls oggvorbis"
 
@@ -24,7 +24,8 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	media-libs/flac
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
-DEPEND=">=sys-apps/sed-4.0.5"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4.0.5"
 
 SLOT="0"
 LICENSE="GPL-2"
