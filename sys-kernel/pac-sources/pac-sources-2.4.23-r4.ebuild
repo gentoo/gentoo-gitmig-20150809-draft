@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r3.ebuild,v 1.2 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r4.ebuild,v 1.1 2004/04/15 09:33:16 plasmaroo Exp $
 
 IUSE="build"
 
@@ -26,7 +26,6 @@ PRERC="`echo ${PV}|grep \_`"
 # Other working variables
 S=${WORKDIR}/linux-${KV}
 EXTRAVERSION="`echo ${KV}|sed -e 's:[^-]*\(-.*$\):\1:'`"
-BASE="`echo ${KV}|sed -e s:${EXTRAVERSION}::`"
 
 # If it's a last-stable+pre/rc+aa (marcelo), we need to handle it differently
 # ourkernel is the stable kernel we'll be working with (previous or current)
@@ -47,7 +46,6 @@ KEYWORDS="~x86"
 SLOT="${KV}"
 
 src_unpack() {
-	sleep 1
 	unpack linux-${OURKERNEL}.tar.bz2
 	mv linux-${OURKERNEL} linux-${KV} || die
 
@@ -60,6 +58,7 @@ src_unpack() {
 
 	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-pac patch failed"
 	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 	epatch ${FILESDIR}/${PN}.munmap.patch || die "Failed to apply munmap patch!"
 	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 
