@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.3 2004/04/14 13:01:16 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.4 2004/04/24 15:02:52 lanius Exp $
 
 inherit kde
-need-kde 3.1
 
 DESCRIPTION="K3b, KDE CD Writing Software"
 HOMEPAGE="http://www.k3b.org/"
@@ -11,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	monkey? ( mirror://sourceforge/${PN}/k3bmonkeyaudioplugin.tar.bz2 )"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc ~amd64 ~sparc"
 IUSE="debug dvdr kde oggvorbis mad flac encode monkey"
 
 DEPEND="kde? ( >=kde-base/kdebase-3.1 )
@@ -20,6 +19,8 @@ DEPEND="kde? ( >=kde-base/kdebase-3.1 )
 	flac? ( media-libs/flac )
 	mad? ( >=media-sound/mad-0.14.2b )
 	oggvorbis? ( media-libs/libvorbis )"
+
+need-kde 3.1
 
 RDEPEND="${DEPEND}
 	>=app-cdr/cdrtools-1.11

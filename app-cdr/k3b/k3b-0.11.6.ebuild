@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.6.ebuild,v 1.7 2004/04/14 13:01:16 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.6.ebuild,v 1.8 2004/04/24 15:02:52 lanius Exp $
 inherit kde
-need-kde 3.1
 
 DESCRIPTION="K3b, KDE CD Writing Software"
 HOMEPAGE="http://www.k3b.org/"
@@ -27,6 +26,8 @@ RDEPEND="${DEPEND}
 		  media-sound/sox
 		  media-video/transcode
 		  media-video/vcdimager )"
+
+need-kde 3.1
 
 # These are the languages supported by k3b as of version 0.11.6.
 # If you are using this ebuild as a model for another ebuild for

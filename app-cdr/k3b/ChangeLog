@@ -3,6 +3,10 @@
 # /home/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.46 2004/03/27 16:18:17
 # lanius Exp $
 
+  24 Apr 2004; Heinrich Wendel <lanius@gentoo.org> k3b-0.11.6.ebuild,
+  k3b-0.11.9.ebuild:
+  mark 0.11.9 stable, fix depend again
+
   14 Apr 2004; Heinrich Wendel <lanius@gentoo.org> k3b-0.11.1-r1.ebuild,
   k3b-0.11.5.ebuild:
   remove old versions
