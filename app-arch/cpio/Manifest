@@ -2,14 +2,12 @@
 Hash: SHA1
 
 MD5 293e182851a8a922c337ca4cfcdc3e9b ChangeLog 2551
-MD5 4c8873f71d542e82c3025819fa7453ab cpio-2.4.2-r4.ebuild 886
 MD5 546cde2749a1b655b8bd82cb888e9427 cpio-2.5.ebuild 757
-MD5 6d916de4f4c7c2ce09bb45559eb50658 files/digest-cpio-2.4.2-r4 62
 MD5 a0838e9d5ff0463ecb8758db81652ff1 files/digest-cpio-2.5 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWNEkHTu7gpaalycRApAiAJwMvPYBExG3+5vRG5Tit1C6InhLbQCgmcgt
-i0C4zxp1j8z/lgLiqHACNdc=
-=0AFa
+iD8DBQFBXVJeHTu7gpaalycRAvdGAJ9k42bE184mcjYgKdhi+tddDs6jfQCg84Ij
+Sf2DBYkSUrTl3mTMqBgeWA8=
+=jY06
 -----END PGP SIGNATURE-----
