@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.0.0.1.ebuild,v 1.3 2005/02/07 16:57:44 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.0.0.1-r1.ebuild,v 1.1 2005/02/07 16:57:44 humpback Exp $
 
 inherit eutils
 
@@ -65,14 +65,11 @@ src_install() {
 	doins avatars/*.jpg
 
 	insinto /opt/${PN}
-	make_desktop_entry skype "Skype VoIP" ../icons/hicolor/48x48/apps/skype.png
+	make_desktop_entry skype "Skype VoIP" skype
 	for SIZE in 16 32 48
 	do
-		#mkdir ${S}/icons/${SIZE}
-		#cp ${S}/icons/${PN}_${SIZE}_32.png ${S}/icons/${SIZE}/${PN}.png
-		#dodir /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
 		insinto /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
-		doins ${S}/icons/${SIZE}/${PN}.png
+		newins ${S}/icons/${PN}_${SIZE}_32.png ${PN}.png
 	done
 	fowners root:audio /opt/skype/skype.bin
 	fowners root:audio /opt/skype/skype
