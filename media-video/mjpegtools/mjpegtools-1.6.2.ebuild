@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2.ebuild,v 1.2 2004/02/07 19:25:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2.ebuild,v 1.3 2004/02/07 19:49:31 vapier Exp $
 
-inherit flag-o-matic gcc
+inherit flag-o-matic gcc eutils
 
-DESCRIPTION="Tools for MJPEG video."
+DESCRIPTION="Tools for MJPEG video"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="~x86 -ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="gtk avi dv quicktime sdl X 3dnow mmx sse"
 
 DEPEND="media-libs/jpeg
@@ -41,14 +41,14 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	[ `gcc-major-version` -eq 3 ] && append-flags -mno-sse2
+	[ `gcc-major-version` -eq 3 ] && [ "${ARCH}" == "x86" ] && append-flags -mno-sse2
 
 	myconf="${myconf} `use_with X x`"
 	myconf="${myconf} `use_with quicktime`"
 	myconf="${myconf} `use_enable x86 cmov-extensions`"
 
 	# Fix for Via C3-1, see #30345
-	grep -q cmov /proc/cpuinfo || "${myconf} --disable-cmov"
+	grep -q cmov /proc/cpuinfo || myconf="${myconf} --disable-cmov"
 
 	if [ "`use dv`" ] ; then
 		myconf="${myconf} --with-dv=/usr"
@@ -63,7 +63,7 @@ src_compile() {
 		fi
 	fi
 
-	econf ${myconf}
+	econf ${myconf} || die
 
 	if has_version 'sys-devel/hardened-gcc' ; then
 		for i in `find "${S}" -name "Makefile"` ; do
