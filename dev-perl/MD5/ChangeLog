@@ -1,6 +1,11 @@
+# ChangeLog for dev-perlMD5ChangeLog/
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MD5/ChangeLog,v 1.3 2002/10/30 07:20:39 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  forced version bump to install into correct locations
 # ChangeLog for dev-perl/MD5
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MD5/ChangeLog,v 1.2 2002/07/31 13:24:45 cselkirk Exp $
 
 *MD5-2.02 (27 Jun 2002)
 

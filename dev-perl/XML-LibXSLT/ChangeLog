@@ -1,6 +1,25 @@
-# ChangeLog for dev-perl/XML-LibXSLT
+# ChangeLog for dev-perlXML-CatalogChangeLog/dev-perlXML-LibXSLTChangeLog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.7 2002/10/23 15:29:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.8 2002/10/30 07:20:41 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : : : :
+
+  forced version bump to install into correct locations
+# ChangeLog for dev-perl/XML-LibXSLT
 
 *XML-LibXSLT-1.50 (18 Aug 2002)
 

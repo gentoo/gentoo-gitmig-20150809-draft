@@ -1,6 +1,17 @@
-# ChangeLog for dev-perl/HTML-Parser
+# ChangeLog for dev-perlHTML-CleanChangeLog/dev-perlHTML-ParserChangeLog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/ChangeLog,v 1.4 2002/07/31 13:10:12 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/ChangeLog,v 1.5 2002/10/30 07:20:36 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
+
+  forced version bump to install into correct locations
+# ChangeLog for dev-perl/HTML-Parser
 
 *HTML-Parser-3.26-r1 (24 Jul 2002)
 

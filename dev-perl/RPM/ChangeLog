@@ -1,6 +1,13 @@
-# ChangeLog for dev-perl/RPM
+# ChangeLog for dev-perlRPC-XMLChangeLog/dev-perlRPMChangeLog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPM/ChangeLog,v 1.4 2002/09/09 21:53:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPM/ChangeLog,v 1.5 2002/10/30 07:20:40 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
+
+  forced version bump to install into correct locations
+# ChangeLog for dev-perl/RPM
 
 *RPM-0.40 (9 Sep 2002)
 

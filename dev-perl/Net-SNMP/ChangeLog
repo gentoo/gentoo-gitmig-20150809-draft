@@ -1,6 +1,17 @@
-# ChangeLog for dev-perl/Net-SNMP
+# ChangeLog for dev-perlNet-DNSChangeLog/dev-perlNet-SNMPChangeLog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.4 2002/08/14 18:13:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.5 2002/10/30 07:20:39 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
+
+  forced version bump to install into correct locations
+# ChangeLog for dev-perl/Net-SNMP
 
 *Net-SNMP-4.01-r1 (14 Aug 2002)
 

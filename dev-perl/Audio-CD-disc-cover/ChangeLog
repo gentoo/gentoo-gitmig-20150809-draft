@@ -1,6 +1,17 @@
+# ChangeLog for dev-perlAppConfigChangeLog/dev-perlAudio-CD-disc-coverChangeLog
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.4 2002/10/30 07:20:34 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
+
+  forced version bump to install into correct locations
 # ChangeLog for dev-perl/Audio-CD-disc-cover
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.3 2002/09/21 00:56:07 vapier Exp $
 
 *Audio-CD-disc-cover-0.04 (18 Jun 2002)
 

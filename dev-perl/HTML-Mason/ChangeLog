@@ -1,6 +1,13 @@
-# ChangeLog for dev-perl/HTML-Mason
+# ChangeLog for dev-perlHTML-CleanChangeLog/dev-perlHTML-MasonChangeLog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.2 2002/07/31 13:07:15 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.3 2002/10/30 07:20:36 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
+
+  forced version bump to install into correct locations
+# ChangeLog for dev-perl/HTML-Mason
 
 *HTML-Mason-1.0 (1 Feb 2002)
 

@@ -1,6 +1,15 @@
+# ChangeLog for dev-perlMD5ChangeLog/dev-perlMIME-toolsChangeLog
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.2 2002/10/30 07:20:39 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
+
+  forced version bump to install into correct locations
 # ChangeLog for dev-perl/MIME-tools
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.1 2002/10/23 15:18:28 raker Exp $
 
 *MIME-tools-5.411a (23 Oct 2002)
 

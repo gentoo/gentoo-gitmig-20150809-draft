@@ -1,6 +1,23 @@
-# ChangeLog for dev-perl/Mail-Procmail
+# ChangeLog for dev-perlMD5ChangeLog/dev-perlMail-ProcmailChangeLog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Procmail/ChangeLog,v 1.3 2002/08/01 03:07:55 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Procmail/ChangeLog,v 1.4 2002/10/30 07:20:39 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : : :
+
+  forced version bump to install into correct locations
+# ChangeLog for dev-perl/Mail-Procmail
 
 *Mail-Procmail-1.02 (5 May 2002)
 

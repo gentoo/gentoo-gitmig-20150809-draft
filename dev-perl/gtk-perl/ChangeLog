@@ -1,6 +1,11 @@
-# ChangeLog for dev-perl/gtk-perl
+# ChangeLog for dev-perlgtk-perlChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.8 2002/10/18 14:25:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.9 2002/10/30 07:20:41 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  forced version bump to install into correct locations
+# ChangeLog for dev-perl/gtk-perl
 
 *gtk-perl-0.7008-r4 (26 May 2002)
 

@@ -1,6 +1,11 @@
+# ChangeLog for dev-perlHTML-CleanChangeLog/
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/ChangeLog,v 1.2 2002/10/30 07:20:36 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  forced version bump to install into correct locations
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: 
 
 *HTML-Clean-0.8 (24 Oct 2002)
 

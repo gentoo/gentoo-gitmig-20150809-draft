@@ -1,6 +1,11 @@
+# ChangeLog for dev-perlcdk-perlChangeLog/
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.2 2002/10/30 07:20:41 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  forced version bump to install into correct locations
 # ChangeLog for dev-libs/cdk-perl
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.1 2002/06/11 10:38:41 seemant Exp $
 
 *cdk-perl-20010421 (08 Jun 2002)
 

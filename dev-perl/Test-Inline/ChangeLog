@@ -1,6 +1,15 @@
+# ChangeLog for dev-perlTermReadKeyChangeLog/dev-perlTest-InlineChangeLog
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.5 2002/10/30 07:20:40 seemant Exp $
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
+
+  forced version bump to install into correct locations
 # ChangeLog for dev-perl/Test-Inline
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.4 2002/09/13 01:27:25 mcummings Exp $
 
 *Test-Inline-0.15 (28 Jun 2002)
 
