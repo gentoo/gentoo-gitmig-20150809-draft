@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.6 2004/03/15 22:13:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.7 2004/03/16 17:14:43 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -252,7 +252,8 @@ src_unpack() {
 		unpack libXrender-${XRENDER_VER}.tar.bz2 > /dev/null
 		mv libXrender-${XRENDER_VER} Xrender
 		cp Xrender.old/Imakefile Xrender/Imakefile
-		rm Xrender/Makefile*
+		# force rm, bug report because of read-only files
+		rm -f Xrender/Makefile*
 		touch Xrender/config.h
 		eend 0
 
@@ -263,7 +264,8 @@ src_unpack() {
 		cp Xft.old/Imakefile Xft/Imakefile
 		cp Xft.old/Xft.man Xft/Xft.man
 		ln -sf ../Xft.old/config Xft/config
-		rm Xft/Makefile*
+		# force rm, bug report because of read-only files
+		rm -f Xft/Makefile*
 		touch Xft/config.h
 		eend 0
 		cd ${S}
