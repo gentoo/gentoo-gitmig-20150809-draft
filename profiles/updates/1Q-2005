@@ -211,3 +211,4 @@ move sys-apps/apcupsd sys-power/apcupsd
 move sys-apps/cpufrequtils sys-power/cpufrequtils
 move net-fs/idmapd net-libs/nfsidmap
 move net-www/lynx www-client/lynx
+move net-www/amaya www-client/amaya
