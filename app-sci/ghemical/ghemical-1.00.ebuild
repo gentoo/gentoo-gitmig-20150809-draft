@@ -1,15 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ghemical/ghemical-1.00.ebuild,v 1.6 2003/01/12 21:38:59 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ghemical/ghemical-1.00.ebuild,v 1.7 2003/01/13 16:09:09 foser Exp $
 
 DEPEND="gnome-base/gnome-libs
 	dev-libs/libf2c
-    x11-libs/gtkglext
 	app-sci/mpqc
-	>=x11-libs/gtkglarea-1.2.3
+	=x11-libs/gtkglarea-1.2*
 	>=media-libs/glut-3.7
 	dev-libs/libxml
-	gnome-base/libglade"
+	=gnome-base/libglade-0*"
 
 IUSE=""
 SLOT="0"
