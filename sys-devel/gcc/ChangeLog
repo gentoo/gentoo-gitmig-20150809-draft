@@ -1,9 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.208 2004/04/22 02:50:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.209 2004/04/22 02:51:58 vapier Exp $
 
-  21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.2-r5:
-  This was never released so lets prune it.
+  21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.2-r5 gcc-3.1-r8:
+  These were never released so lets prune them.
 
   21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.2.3-r2 gcc-3.2.3-r3
   gcc-3.2.3-r4:
