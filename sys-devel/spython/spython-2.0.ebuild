@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0.ebuild,v 1.2 2001/01/11 23:11:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0.ebuild,v 1.3 2001/01/11 23:19:27 drobbins Exp $
 
 P=spython-1.5.2      
 S=${WORKDIR}/Python-2.0
@@ -36,7 +36,6 @@ src_unpack() {
    sed -e 's:"md5.h":"md5_2.h":' fchksum.c > ../fchksum.c
 }
 
-
 src_compile() {   
     cd ${S}
     export LDFLAGS=-static
@@ -60,4 +59,3 @@ src_install() {
 	exeinto /usr/bin
 	newexe ${S}/python spython
 }
-
