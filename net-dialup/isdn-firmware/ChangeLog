@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/isdn-firmware
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.2 2004/12/12 17:38:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.3 2004/12/22 22:17:14 mrness Exp $
+
+  23 Dec 2004; Alin Nastac <mrness@gentoo.org>
+  isdn-firmware-2004.4.5-r1.ebuild:
+  Beautify ebuild code, thanks to Stefan Briesenick <sbriesen@gmx.de>.
 
 *isdn-firmware-2004.4.5-r1 (12 Dec 2004)
 
