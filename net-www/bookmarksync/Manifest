@@ -1,3 +1,5 @@
-MD5 e9d3e569d5e3b22a0c39b68babd41a6d files/digest-bookmarksync-0.3.1 69
+MD5 11d0125f160335701d46cfab74468450 bookmarksync-0.3.2.ebuild 618
 MD5 72827c54c890de517e1aa260c23f9f03 bookmarksync-0.3.1.ebuild 617
-MD5 919f551848b9a90121b68012a2565ae7 ChangeLog 471
+MD5 c07724cd7a352696bae1d99aa3377e88 ChangeLog 630
+MD5 e9d3e569d5e3b22a0c39b68babd41a6d files/digest-bookmarksync-0.3.1 69
+MD5 9dd32e274bee7628a973c924ca72ec7d files/digest-bookmarksync-0.3.2 69
