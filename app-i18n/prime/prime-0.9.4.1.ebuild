@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.9.4.ebuild,v 1.1 2005/03/05 07:39:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.9.4.1.ebuild,v 1.1 2005/03/30 04:47:29 usata Exp $
 
 inherit ruby
 
@@ -9,8 +9,6 @@ HOMEPAGE="http://taiyaki.org/prime/"
 SRC_URI="http://prime.sourceforge.jp/src/${P/_/-}.tar.gz"
 
 LICENSE="GPL-2"
-# 0.8.X -> stable, 0.9.Y -> development; dictionary format may change
-# between releases in development branch, so please use it with care
 SLOT="0"
 KEYWORDS="~alpha ~ppc ~x86"
 IUSE="emacs"
