@@ -1,28 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.8 2004/04/22 15:57:24 avenj Exp $
-
-# to use this, you must be part of the "cron" group
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.9 2004/04/27 18:45:40 vapier Exp $
 
 inherit eutils
 
 MY_PV=29
-S=${WORKDIR}/${PN}
 DESCRIPTION="A cute little cron from Matt Dillon"
-SRC_URI="http://apollo.backplane.com/FreeSrc/${PN}${MY_PV}.tgz"
 HOMEPAGE="http://apollo.backplane.com/"
-KEYWORDS="x86 amd64 ppc sparc hppa alpha mips"
-SLOT="0"
+SRC_URI="http://apollo.backplane.com/FreeSrc/${PN}${MY_PV}.tgz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64"
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
-
 RDEPEND="!virtual/cron
 	>=sys-apps/cronbase-0.2.1-r3
 	virtual/mta"
-
 PROVIDE="virtual/cron"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -49,11 +48,11 @@ src_install() {
 
 	exeopts -m 0700 -o root -g wheel
 	exeinto /usr/sbin
-	doexe crond
+	doexe crond || die
 
 	exeopts -m 4750 -o root -g cron
 	exeinto /usr/bin
-	doexe crontab
+	doexe crontab || die
 	# reset execopts after setuid install of crontab to
 	# prevent init.d/dcron from being installed setuid as well
 	exeopts -m 0750 -o root -g root
@@ -67,7 +66,6 @@ src_install() {
 	insinto /etc
 	newins ${FILESDIR}/crontab-2.9-r1 crontab
 }
-
 
 pkg_postinst() {
 	echo
