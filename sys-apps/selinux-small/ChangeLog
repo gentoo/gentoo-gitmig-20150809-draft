@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.11 2003/05/06 14:25:22 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.12 2003/05/09 17:32:36 pebenito Exp $
+
+  09 May 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-small-2003011510-r4.ebuild:
+  Added check for /usr/src/linux. It must point to selinux-sources or
+  hardened-sources, as seen in bug #20703.
 
   06 May 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-small-2003011510-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r4.ebuild,v 1.2 2003/05/06 14:25:22 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r4.ebuild,v 1.3 2003/05/09 17:32:36 pebenito Exp $
 
 DESCRIPTION="SELinux policy compiler and example policies"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -33,7 +33,14 @@ RDEPEND="<sys-libs/glibc-2.3.2
 	 sys-apps/selinux-base-policy"
 
 pkg_setup() {
-	use selinux || eend 1 "You must have selinux USE var"
+	use selinux || eend 1 "You must have selinux in USE"
+	if [ ! -f /usr/src/linux/security/selinux/ss/ebitmap.c ]; then
+		eerror "The /usr/src/linux symlink appears to be incorrect.  It must"
+		eerror "be pointing to a selinux-sources or hardened-sources kernel"
+		eerror "for selinux-small to compile.  If the symlink is correct, the"
+		eerror "kernel sources may be damaged or incomplete, and will need to"
+		eend 1 "be remerged.  Please fix and retry."
+	fi
 }
 
 src_compile() {
