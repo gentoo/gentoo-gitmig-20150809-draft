@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.14.ebuild,v 1.3 2005/01/15 01:08:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.14.ebuild,v 1.4 2005/01/19 20:26:59 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,7 +34,7 @@ DEPEND="caps? ( sys-libs/libcap )
 	nls? ( sys-devel/gettext )
 	>=dev-libs/libgcrypt-1.1.94
 	>=dev-libs/libksba-0.9.7
-	>=dev-libs/libassuan-0.6.6
+	>=dev-libs/libassuan-0.6.9
 	smartcard? ( dev-libs/opensc )
 	sys-libs/zlib
 	virtual/libc

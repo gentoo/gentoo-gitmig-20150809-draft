@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.97 2005/01/15 01:08:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.98 2005/01/19 20:26:59 dragonheart Exp $
+
+  20 Jan 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.9.14.ebuild:
+  Changed libassuan dependacy to 0.6.9 as per bug #78713. Thanks Alexander
+  Gretencord <arutha@gmx.de>
 
   15 Jan 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.2.4.ebuild,
   gnupg-1.2.6.ebuild, gnupg-1.4.0-r1.ebuild, gnupg-1.9.10.ebuild,
