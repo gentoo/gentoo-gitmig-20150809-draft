@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.7.3-r1.ebuild,v 1.2 2004/05/26 19:54:57 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.7.3-r1.ebuild,v 1.3 2004/05/26 20:01:15 taviso Exp $
 
 inherit eutils python
 
@@ -22,11 +22,8 @@ DEPEND="spell? ( || ( app-text/aspell app-text/ispell ) )
 S=${WORKDIR}/TreeLine
 
 src_compile() {
-	sed -i "s#\(dataFilePath =\) None#\1 '/usr/lib/treeline'#g" \
-		${S}/source/*.py || die "Failed to set dataFilePath"
-
-	printf '#!/bin/sh\n\nexec %s %s/%s.py $*\n' \
-		python /usr/lib/treeline treeline > ${T}/treeline
+	printf '#!/bin/sh\n\nexec python %s/treeline.py $*\n' \
+		/usr/lib/treeline > ${T}/treeline
 }
 
 src_install() {
