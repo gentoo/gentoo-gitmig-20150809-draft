@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/libspectrum
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.5 2004/02/28 07:25:54 vapier Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.6 2004/06/24 22:33:12 agriffis Exp $
 
 *libspectrum-0.2.1 (28 Feb 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.1.ebuild,v 1.2 2004/03/27 08:33:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.1.ebuild,v 1.3 2004/06/24 22:30:59 agriffis Exp $
 
 inherit flag-o-matic eutils
 

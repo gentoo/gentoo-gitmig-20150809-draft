@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/dinero-4.7.ebuild,v 1.5 2004/03/15 04:15:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/dinero-4.7.ebuild,v 1.6 2004/06/24 22:30:37 agriffis Exp $
 
 MY_P="d${PV/./-}"
 S="${WORKDIR}/${MY_P}"

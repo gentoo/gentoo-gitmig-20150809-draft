@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-4.0.16.ebuild,v 1.5 2004/06/02 01:53:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-4.0.16.ebuild,v 1.6 2004/06/24 22:36:33 agriffis Exp $
 
 IUSE="doc"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-2.5.1.5336.ebuild,v 1.2 2004/05/30 14:50:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-2.5.1.5336.ebuild,v 1.3 2004/06/24 22:36:09 agriffis Exp $
 
 MY_PN="VMware-console-2.5.1-5336.tar.gz"
 S="${WORKDIR}/vmware-console-distrib"

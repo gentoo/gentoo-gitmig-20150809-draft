@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/wine
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.68 2004/04/10 14:41:29 mholzer Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.69 2004/06/24 22:36:44 agriffis Exp $
 
 *wine-20040408 (10 Apr 2004)
 

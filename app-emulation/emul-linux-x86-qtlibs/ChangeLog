@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.1 2004/04/13 17:45:26 kugelfang Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.2 2004/06/24 22:31:35 agriffis Exp $
 
 *emul-linux-x86-qtlibs-1.0 (13 Apr 2004)
 

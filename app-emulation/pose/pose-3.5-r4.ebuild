@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r4.ebuild,v 1.2 2004/02/21 09:07:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r4.ebuild,v 1.3 2004/06/24 22:33:57 agriffis Exp $
 
 S=${WORKDIR}/Emulator_Src_3.5
 HOMEPAGE="http://www.palmos.com/dev/tools/emulator/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/glukalka/glukalka-0.90.1.ebuild,v 1.1 2004/05/12 23:16:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/glukalka/glukalka-0.90.1.ebuild,v 1.2 2004/06/24 22:32:18 agriffis Exp $
 
 DESCRIPTION="Emulator of ZX Spectrum 48K/128K and clones"
 HOMEPAGE="http://glukalka.sourceforge.net"

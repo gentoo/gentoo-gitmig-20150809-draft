@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/basiliskII-jit
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.1 2004/03/21 14:18:48 dholm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.2 2004/06/24 22:30:04 agriffis Exp $
 
 *basiliskII-jit-1.0.0 (21 Mar 2004)
 
