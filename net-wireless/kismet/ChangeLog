@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.53 2004/12/27 16:56:06 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.54 2004/12/29 21:04:41 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Dec 2004; Henrik Brix Andersen <brix@gentoo.org>
   kismet-2004.10.1-r1.ebuild:
@@ -94,7 +97,7 @@
   kismet-2004.04.1.ebuild, kismet-3.0.1-r1.ebuild, kismet-3.0.1.ebuild:
   Fix use invocation
 
-  01 May 2004; Bryan Østergaard <kloeri@gentoo.org> kismet-2004.02.01.ebuild,
+  01 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> kismet-2004.02.01.ebuild,
   kismet-3.0.1-r1.ebuild, kismet-3.0.1.ebuild:
   Fix SRC_URI, bug #49649.
 
