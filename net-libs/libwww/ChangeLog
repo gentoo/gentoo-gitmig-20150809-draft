@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.25 2004/03/14 00:10:13 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.26 2004/03/24 21:42:53 usata Exp $
+
+  25 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> libwww-5.4.0-r2.ebuild,
+  files/libwww-5.4.0-automake-gentoo.diff:
+  Added a patch to fix Makefile.am. See bug #41959
 
   13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> :
   Added ~mips keyword.
