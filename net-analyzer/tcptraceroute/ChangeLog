@@ -1,10 +1,13 @@
 # ChangeLog for net-analyzer/tcptraceroute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.6 2003/02/12 07:50:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.7 2003/03/07 23:33:50 mholzer Exp $
+
+*tcptraceroute-1.4 (18 Aug 2002)
+
+  07 Mar 2003; Martin Holzer <mholzer@gentoo.org> tcptraceroute-1.4.ebuild :
+  Fixed Depend to libnet-1.0*. Closes #17017.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*tcptraceroute-1.4 (18 Aug 2002)
 
   18 Aug 2002; Bruce A. Locke <blocke@shivan.org> tcptraceroute-1.4.ebuild:
 
