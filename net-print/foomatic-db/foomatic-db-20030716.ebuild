@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-20030716.ebuild,v 1.3 2003/07/23 09:25:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-20030716.ebuild,v 1.4 2003/07/29 13:17:38 lanius Exp $
 
 DESCRIPTION="Foomatic printer database"
 HOMEPAGE="http://www.linuxprinting.org/foomatic"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/foomatic-db-${PV}.tar.gz
 	http://www.linuxprinting.org/download/foomatic/foomatic-db-engine-3.0.0.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE="cups ppds"
 
 S=${WORKDIR}/foomatic

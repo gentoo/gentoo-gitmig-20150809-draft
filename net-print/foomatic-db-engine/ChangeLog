@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.1 2003/07/16 14:44:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.2 2003/07/29 13:16:41 lanius Exp $
+
+*foomatic-db-engine-3.0.0 (29 Jul 2003)
+
+  29 Jul 2003; lanius@gentoo.org foomatic-db-engine-3.0.0.ebuild:
+  stable bump
 
   16 Jul 2003; Heinrich Wendel <lanius@gentoo.org> files/perl-module.diff:
   initial release
