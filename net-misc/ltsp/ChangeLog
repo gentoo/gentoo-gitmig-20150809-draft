@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ltsp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.6 2004/12/05 11:17:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.7 2004/12/07 19:33:58 blubb Exp $
+
+  07 Dec 2004; Simon Stelling <blubb@gentoo.org> ltsp-4.1-r1.ebuild:
+  added ~amd64
 
   05 Dec 2004; lanius@gentoo.org ltsp-4.1-r1.ebuild:
   fix handling of src_uri
