@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/acpid
+# ChangeLog for sys-power/acpid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.1 2005/03/15 19:15:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.2 2005/03/16 19:14:59 swegener Exp $
 
 *acpid-1.0.4 (15 Mar 2005)
 *acpid-1.0.2-r2 (15 Mar 2005)
