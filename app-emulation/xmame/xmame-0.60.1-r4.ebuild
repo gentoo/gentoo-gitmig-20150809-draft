@@ -1,14 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1-r4.ebuild,v 1.1 2002/10/18 05:27:51 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1-r4.ebuild,v 1.2 2002/11/12 07:59:13 vapier Exp $
 
-IUSE="sdl dga xv alsa esd opengl X 3dfx"
-
-A="xmame-0.60.1"
-S=${WORKDIR}/${A}
 DESCRIPTION="Multiple Arcade Machine Emulator for X11"
-SRC_URI="http://x.mame.net/download/${A}.tar.bz2
+SRC_URI="http://x.mame.net/download/${P}.tar.bz2
 		http://x.mame.net/download/0.60.1-0.61.1-pr1.diff.bz2
 		http://x.mame.net/download/0.61.1-pr1-0.61.1-pr2.diff.bz2
 		http://x.mame.net/download/0.61.1-pr2-0.61.1-pr3.diff.bz2
@@ -17,10 +12,12 @@ SRC_URI="http://x.mame.net/download/${A}.tar.bz2
 		http://x.mame.net/download/0.61.1-pr5-0.61.1-pr6.diff.bz2
 		http://x.mame.net/download/0.61.1-pr6-0.61.1-pr7.diff.bz2
 		http://x.mame.net/download/0.61.1-pr7-0.61.1-pr8.diff.bz2"
-HOMEPAGE="http://x.mame.net"
+HOMEPAGE="http://x.mame.net/"
 
 SLOT="0"
 LICENSE="xmame"
+KEYWORDS="x86 ppc"
+IUSE="sdl dga xv alsa esd opengl X 3dfx"
 
 DEPEND="xv? ( virtual/x11 )
 	dga? ( virtual/x11 )
@@ -33,14 +30,8 @@ DEPEND="xv? ( virtual/x11 )
 
 RDEPEND=${DEPEND}
 
-# Please note modifications for ppc in this ebuild.  If you update the ebuild,
-# please either test on ppc, or send it to a ppc developer for testing before
-# you commit the ebuild.  Thanks :-)
-
-KEYWORDS="x86 ppc"
-
 src_unpack() {
-	unpack ${A}.tar.bz2
+	unpack ${P}.tar.bz2
 	cd ${S}
 	bzcat ${DISTDIR}/0.60.1-0.61.1-pr1.diff.bz2 | patch -p1
 	bzcat ${DISTDIR}/0.61.1-pr1-0.61.1-pr2.diff.bz2 | patch -p1
@@ -162,10 +153,9 @@ src_compile() {
 	fi
 }
 
-src_install () {
-
+src_install() {
 	if [ "`use X`" ] || [ "`use dga`" ] || [ "`use xv`" ]; then
-	cp makefile.x11 Makefile
+		cp makefile.x11 Makefile
 		make \
 			PREFIX=${D}/usr \
 			MANDIR=${D}/usr/share/man/man6 \
@@ -189,11 +179,9 @@ src_install () {
 	else
 		dosym xmame.x11 /usr/bin/xmame
 	fi
-
 }
 
 pkg_postinst() {
-
 	if [ "`use sdl`" ]; then
 		einfo "xmame is a symbolic link to xmame.SDL"
 		if [ "`use X`" ] || [ "`use dga`" ] || [ "`use xv`" ]; then
@@ -202,5 +190,4 @@ pkg_postinst() {
 	else
 		einfo "xmame is a symbolic link to xmame.x11"
 	fi
-
 }
