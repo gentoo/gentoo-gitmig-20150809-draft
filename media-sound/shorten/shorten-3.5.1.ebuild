@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/shorten-3.5.1.ebuild,v 1.5 2004/04/20 17:34:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/shorten-3.5.1.ebuild,v 1.6 2004/05/26 16:28:14 jhuebel Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://etree.org/shnutils/shorten/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 src_compile() {
 	econf || die
