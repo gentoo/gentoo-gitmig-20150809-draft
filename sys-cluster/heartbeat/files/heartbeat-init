@@ -27,7 +27,7 @@ start() {
 
 	RunStartStop post-start
 
-	eend ret
+	eend $ret
 }
 
 stop() {
