@@ -1,6 +1,16 @@
-MD5 a6a0358f7c2bc639a459e913ecb51aa9 ChangeLog 780
-MD5 226beafc9ac575121b5e58297752cce4 gprolog-1.2.13.ebuild 1026
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f5c835dce5c304e57b0b4f8d628abce7 gprolog-1.2.16.ebuild 1054
+MD5 226beafc9ac575121b5e58297752cce4 gprolog-1.2.13.ebuild 1026
+MD5 a6a0358f7c2bc639a459e913ecb51aa9 ChangeLog 780
 MD5 9187f53634e60ab7eb2ac7e98b0b19f7 metadata.xml 159
 MD5 343cd0728a313eee77e9f5f9c9f74415 files/digest-gprolog-1.2.13 67
-MD5 4156a4307e91ebac06c4df79dc7ceae0 files/digest-gprolog-1.2.16 132
+MD5 dd04de7b5904293113f5838da347c4f9 files/digest-gprolog-1.2.16 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBo4gJI1lqEGTUzyQRAsLSAJ9H15NQP2Rt6iUuWvP9pr9OFgAIDQCfX0i/
+KVVdqtJ7hI2/XWOw5S/XbTM=
+=SwYD
+-----END PGP SIGNATURE-----
