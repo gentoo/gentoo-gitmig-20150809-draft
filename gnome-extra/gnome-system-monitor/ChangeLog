@@ -1,8 +1,13 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.3 2002/06/24 00:40:28 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.4 2002/07/25 04:42:17 spider Exp $
 
 gnome-system-monitor-2.0.0-r1 (22 Jun 2002)
+  25 Jul 2002; Spider <spider@gentoo.org> :
+  repoman clean
+  mirror://
+  remove unneeded SCHEMAS variable
+
   22 Jun 2002; Spider <spider@gentoo.org> gnome-system-monitor-2.0.0-r1.ebuild ChangeLog :
   Fixed a typo , /  .  in the changelog
   Added a scrollkeeper dependency
