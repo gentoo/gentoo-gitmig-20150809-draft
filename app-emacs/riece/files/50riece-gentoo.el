@@ -1,4 +1,5 @@
+
 ;;; riece site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 (autoload 'riece "riece" "Start riece." t)
