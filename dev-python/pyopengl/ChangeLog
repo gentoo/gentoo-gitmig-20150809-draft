@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.8 2005/01/26 01:27:30 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.9 2005/01/28 23:56:16 vapier Exp $
+
+  28 Jan 2005; Mike Frysinger <vapier@gentoo.org> pyopengl-2.0.0.44.ebuild,
+  pyopengl-2.0.1.09.ebuild:
+  Remove opengl-update cruft.
 
   25 Jan 2005; Fernando Serboncini <fserb@gentoo.org>
   pyopengl-2.0.0.44.ebuild, pyopengl-2.0.1.09.ebuild:

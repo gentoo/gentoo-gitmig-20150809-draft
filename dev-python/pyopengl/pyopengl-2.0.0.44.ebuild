@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.7 2005/01/26 01:27:30 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.8 2005/01/28 23:56:16 vapier Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -37,13 +37,4 @@ src_install() {
 	export maketype="python"
 	export python="virtualmake"
 	distutils_src_install
-}
-
-pkg_setup() {
-	CURRENT="$(opengl-update --get-implementation)"
-	opengl-update xorg-x11
-}
-
-pkg_postinst() {
-	opengl-update ${CURRENT}
 }
