@@ -610,6 +610,7 @@ x11-terms/powershell
 # <carpaski@gentoo.org> (12 Sep 2002)
 # Masked for testing
 # Using KEYWORDS masking instead.. hopefully unbreak emerge -up world
+# --woodchip (29 Nov 2002)
 #>=net-www/apache-2.0.0
 
 # <raker@gentoo.org> (11 Sep 2002)
