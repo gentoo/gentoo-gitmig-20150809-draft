@@ -1,6 +1,16 @@
-MD5 a3a2db79687b872b91e47476df43a28e ChangeLog 778
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9e087f3e8da85e7a677beb3451859a31 ChangeLog 880
 MD5 665d1f936fcf1e8ab83436d5fec3ce5c aseqview-0.1.4.ebuild 688
-MD5 9a84058fb714ab0910a6c82e6abe0c32 aseqview-0.2.1.ebuild 696
+MD5 01fdcce3215d2faecd3e0453b8a0de5c aseqview-0.2.1.ebuild 702
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 62dc4f68c863126cdfc9ba7abe731469 files/digest-aseqview-0.1.4 65
 MD5 caf9e4f757d5fc811fbd8416b96dacdf files/digest-aseqview-0.2.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoquyArHZZzCEUG0RAm/cAJ9L02vyDKF3RGsTEY7tqCPmngcsqgCfUEmn
+RggCyRgTvp5VQRYccoMyKZo=
+=Bwlf
+-----END PGP SIGNATURE-----

@@ -1,8 +1,18 @@
-MD5 f6b395a6f75c434129616be1d6f58078 ChangeLog 2155
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48327fd78d22a988a5bad690417e757e ChangeLog 2255
 MD5 3460c00dcd0c9c9ddb307bd927806777 apollo-1.4.1.ebuild 1532
-MD5 61c850f5f6564a3ac8689a0f1419eb62 apollo-1.4.2.ebuild 1096
+MD5 09188d0165325b1f77c9a16e1f681667 apollo-1.4.2.ebuild 1104
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 6ea3dbd53a98afe867e6cac2a499a897 files/apollo-1.4.1.patch.bz2 2650
 MD5 146cde786093f6e5ec2eae823291260c files/apollo-1.4.2-gentoo.diff 276
 MD5 a00fe12f4ef67580f796cb1a239a2ca4 files/digest-apollo-1.4.1 71
 MD5 6f7fe591f805258399900cb0e7aab313 files/digest-apollo-1.4.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoqt9ArHZZzCEUG0RAsxSAJ4/Xai8QGIJO6dr06uj5WVE2GQIsgCfc+cI
+bpyoONe3UTDxdNsDL5U4iZc=
+=bTC5
+-----END PGP SIGNATURE-----
