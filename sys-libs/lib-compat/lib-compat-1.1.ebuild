@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.1.ebuild,v 1.8 2004/06/24 23:05:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.1.ebuild,v 1.9 2004/07/02 09:16:19 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_install() {
 	use x86 && {
