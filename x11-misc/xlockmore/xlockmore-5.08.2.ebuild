@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.08.2.ebuild,v 1.2 2003/11/28 20:52:28 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.08.2.ebuild,v 1.3 2003/12/11 09:15:43 avenj Exp $
+
+inherit gnuconfig
 
 IUSE="nas esd motif opengl truetype gtk pam"
 
@@ -11,7 +13,7 @@ HOMEPAGE="http://www.tux.org/~bagleyd/xlockmore.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc amd64"
 
 DEPEND="virtual/x11
 	media-libs/freetype
@@ -23,6 +25,8 @@ DEPEND="virtual/x11
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
 src_compile() {
+	gnuconfig_update
+
 	local myconf
 	myconf="--enable-vtlock"
 	use pam && myconf="${myconf} --enable-pam" \
