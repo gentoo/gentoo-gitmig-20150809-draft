@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r2.ebuild,v 1.8 2004/06/29 10:03:52 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r2.ebuild,v 1.9 2004/06/29 21:05:27 ferringb Exp $
 
 inherit eutils flag-o-matic check-kernel
 
@@ -111,7 +111,7 @@ src_unpack() {
 	# GCC 3.4 fixes
 	epatch ${FILESDIR}/${P}-alsa-gcc34.patch
 	epatch ${FILESDIR}/${P}-altivec-gcc34.patch
-	bug #49488 s:-mcpu:-mtune:
+	#bug #49488 s:-mcpu:-mtune:
 	epatch ${FILESDIR}/${P}-gcc34-mtune.patch
 
 	#bug #49669, *major* syntax errors in help/help_mp-ro.h
