@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.11 2004/07/02 09:32:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.12 2004/07/07 08:53:08 kumba Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc debug"
 
@@ -109,7 +109,7 @@ LICENSE="GPL-2 LGPL-2.1"
 ## SpanKY says hppa is a no go with any 3.3.x
 ## desired KEYWORDS="~sparc ~x86"
 ## KEYWORDS="-* -hppa arm ~x86 ~sparc ~amd64"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 mips"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
