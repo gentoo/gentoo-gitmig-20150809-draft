@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.9 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.10 2003/01/04 03:31:12 aliz Exp $
+
+*nessus-core-1.2.7 (04 Jan 2003)
+
+  04 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump. Found by Raskasi <raskasi@gmx.net>.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
