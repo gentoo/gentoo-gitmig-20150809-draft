@@ -1,18 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.1.1.ebuild,v 1.2 2005/03/02 19:47:45 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.2.ebuild,v 1.1 2005/03/02 19:47:45 arj Exp $
 
 S="${WORKDIR}/${P}/src/=build"
 DESCRIPTION="Bazaar is a user-interface branch of tla"
-SRC_URI="http://bazaar.canonical.com/releases/src/bazaar_${PV}.tar.gz"
+SRC_URI="http://bazaar.canonical.com/releases/src/bazaar_${PV}.tar.gz
+	http://dev.gentoo.org/~arj/baz.1.gz"
 HOMEPAGE="http://bazaar.canonical.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DIR="thelove@canonical.com---dists--bazaar--1.1"
+DIR="thelove@canonical.com---dists--bazaar--1.2"
 
 DEPEND="sys-apps/coreutils
 	sys-apps/diffutils
@@ -26,7 +27,8 @@ DEPEND="sys-apps/coreutils
 	>=net-misc/neon-0.24.7"
 
 src_unpack() {
-	unpack "${A}"
+	unpack bazaar_${PV}.tar.gz
+	unpack baz.1.gz
 	mv ${DIR} ${P}
 	mkdir "${P}/src/=build"
 }
@@ -47,10 +49,7 @@ src_install () {
 	dodoc =ARCH-USERS-README
 	cd ${WORKDIR}/${P}/src
 	dodoc COPYING
-	cd docs-baz
-	dodoc =README
-	docinto ps
-	dodoc ps/*.ps
-	docinto html
-	dohtml -r html/
+	dodoc baz/=THANKS
+	cd ${WORKDIR}
+	doman baz.1
 }
