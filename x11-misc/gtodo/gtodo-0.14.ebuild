@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.14.ebuild,v 1.4 2004/06/15 16:32:06 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.14.ebuild,v 1.5 2004/06/17 01:44:29 mr_bones_ Exp $
 
-inherit gnome2
-inherit debug flag-o-matic
+inherit debug flag-o-matic gnome2
 
 strip-flags
 
