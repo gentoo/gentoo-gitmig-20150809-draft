@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.3.ebuild,v 1.11 2004/07/06 08:09:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.3.ebuild,v 1.12 2004/10/30 10:53:04 eradicator Exp $
 
 IUSE="oggvorbis"
 
-inherit gnuconfig
+inherit gnuconfig toolchain-funcs
 
 DESCRIPTION="flexible playlist manipulation shell and song player/streamer"
 HOMEPAGE="http://www.geocities.com/kman_can/"
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	econf || die
-	emake CCLD=g++ || die
+	emake CCLD=$(tc-getCXX) || die
 }
 
 src_install() {

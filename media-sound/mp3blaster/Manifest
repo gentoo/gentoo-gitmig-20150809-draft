@@ -1,9 +1,17 @@
-MD5 2e55e85516e9aec7f1c3e200bf934a12 mp3blaster-3.2.0.ebuild 1402
-MD5 8df49ad7b528156428435f84b3efc1d6 mp3blaster-3.1.1.ebuild 1463
-MD5 c725c19b7d96052ee642936fb30c1b73 mp3blaster-3.1.3.ebuild 1414
-MD5 a97644365eab93bcb6e9b7927f94c530 ChangeLog 2382
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4846df3beef23f946bd219a385b9f6f6 ChangeLog 2505
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 7a841800d584eafa732f19ccceab4eba files/mp3blaster-3.1.1-gcc3.1-fixes_cl.patch 591
-MD5 a7f0b76a6c8cf06c1692a30170b9ec0d files/digest-mp3blaster-3.1.1 68
+MD5 9f35ba49409f7058554fc672d1a1b4b7 mp3blaster-3.1.3.ebuild 1452
+MD5 da47b38512391f5349a50355bd074398 mp3blaster-3.2.0.ebuild 1442
 MD5 5b6f9d99b3e96b63be78c5d7a7b951ee files/digest-mp3blaster-3.1.3 68
 MD5 441643269ce24bf3d921465d51b702c4 files/digest-mp3blaster-3.2.0 68
+MD5 7a841800d584eafa732f19ccceab4eba files/mp3blaster-3.1.1-gcc3.1-fixes_cl.patch 591
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBg3N8ArHZZzCEUG0RAqLVAJ4iFHx1HIDLwESfTwZ2nzU/6ESRxACfeHnt
+JMPpVJQfmPiQd8uNBl0IN78=
+=PwEY
+-----END PGP SIGNATURE-----
