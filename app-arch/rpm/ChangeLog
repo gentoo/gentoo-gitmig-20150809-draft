@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.23 2003/04/14 15:54:05 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.24 2003/07/15 13:56:22 tuxus Exp $
 
 *rpm-4.2_pre069 (14 Apr 2003)
 
@@ -28,6 +28,9 @@
   Newest rpm available from redhat rawhide. Seems to work fine.
 
 *rpm-4.0.4-r5 (28 Feb 2003)
+
+  15 Jul 2003; Jan Seidel <tuxus@gentoo.org> rpm-4.0.4-r5.ebuild :
+  Mark stable on mips
 
   6 Mar 2003; Stefan Jones <cretin@gentoo.org> rpm-4.0.4-r5.ebuild :
   Marked as stable as it fixes the bug.
