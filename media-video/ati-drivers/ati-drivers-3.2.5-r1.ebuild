@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.3 2003/10/02 21:36:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.4 2003/10/05 03:34:46 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -65,9 +65,11 @@ src_compile() {
 	einfo "building the glx module"
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
 	if [ "`echo ${KV}|grep 2.6`" ] ; then
-		GENTOO_ARCH=${ARCH} unset ARCH
+		GENTOO_ARCH=${ARCH} 
+		unset ARCH
 	    addwrite "/usr/src/${FK}"
-	    cp 2.6.x/Makefile .
+		export _POSIX2_VERSION=199209
+		cp 2.6.x/Makefile .
 		make -C /usr/src/linux SUBDIRS="`pwd`" modules || \
 	    ewarn "glx module not built"
 	    ARCH=${GENTOO_ARCH}
