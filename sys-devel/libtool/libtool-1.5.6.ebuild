@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.6.ebuild,v 1.5 2004/07/16 04:03:19 agriffis Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.6.ebuild,v 1.6 2004/11/01 01:20:48 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils gnuconfig
 
@@ -27,8 +27,8 @@ DEPEND="virtual/libc
 # the automake dep is due to Bug #46037
 
 lt_setup() {
-	export WANT_AUTOCONF_2_5=1
-	export WANT_AUTOMAKE_1_5=1
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.5
 }
 
 gen_ltmain_sh() {

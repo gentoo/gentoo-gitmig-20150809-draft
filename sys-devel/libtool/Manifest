@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 ad4a9a44ac8f7543ac5d638b9eb18e6f ChangeLog 9389
-MD5 52842e1a0dc66123d0049371f3e02030 libtool-1.5.6.ebuild 5951
+MD5 a6ab2e377cee73f7c8c15b9f7b5a9714 libtool-1.5.6.ebuild 5945
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 2799bb13a45fc240046996e10cc12883 libtool-1.5.2-r5.ebuild 5893
+MD5 7b1ab8e073eb3e256d88f090fd961197 libtool-1.5.2-r5.ebuild 5890
 MD5 bd27a462a2a9fe3662d3d34179ed3200 files/libltdl-uclibc.patch 4590
 MD5 6e26db6ca2d038bca2ea11f6ba9c2e83 files/digest-libtool-1.5.6 131
 MD5 3b92d43ab25bc1ad32ee87d89660f268 files/digest-libtool-1.5.2-r5 131
@@ -59,7 +59,7 @@ MD5 d2313fcf3c18603f201627ca94850786 files/1.5.2/libtool-1.5.2-ltmain_sh-max_cmd
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhY9ZHTu7gpaalycRAtxQAJ9SVWZgtXmg/9pthnvr44D5ygWckACfXjMb
-dw2+mo+MsaHdrX/gEfMLWOc=
-=cIfk
+iD8DBQFBhY+YHTu7gpaalycRAmgpAKCZTgOlmjpaGBV4j3R3/N85Q4IvRACgqhK5
+k+wcQ9iAL92ZoO293IzC4lw=
+=086S
 -----END PGP SIGNATURE-----
