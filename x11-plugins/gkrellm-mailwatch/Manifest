@@ -1,7 +1,5 @@
 MD5 885236d0ba000cf9ad9a1116d3fe0d1d ChangeLog 2023
 MD5 55830788c3e20ebe7e92d6114c8b8ed9 gkrellm-mailwatch-0.7.2.ebuild 728
-MD5 2407c9336d73cf6e36ba7bc461b992df gkrellm-mailwatch-2.4.1.ebuild 684
 MD5 ea18d19b97f468b6730c50841e4a73ba gkrellm-mailwatch-2.4.2.ebuild 682
 MD5 2682942f3d6fdc5a9af73fdf2102ec9f files/digest-gkrellm-mailwatch-0.7.2 66
-MD5 ea803dbd027f51f7f8ee58e590322da6 files/digest-gkrellm-mailwatch-2.4.1 74
 MD5 336ae67c677d06e8c118ed8e7b70482a files/digest-gkrellm-mailwatch-2.4.2 74
