@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0-r3.ebuild,v 1.2 2004/06/15 22:16:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0-r3.ebuild,v 1.3 2004/06/17 01:48:57 mr_bones_ Exp $
 
 # We control what versions of what we download based on the KEYWORDS we
 # are using for the various arches. Thus if we want grsec1 stable we run
@@ -14,8 +14,7 @@
 ETYPE="sources"
 IUSE=""
 
-inherit eutils
-inherit kernel
+inherit eutils kernel
 
 [ "$OKV" == "" ] && OKV="2.4.26"
 
