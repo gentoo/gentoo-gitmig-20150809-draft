@@ -1,0 +1,13 @@
+# ChangeLog for media-video/freej
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/freej/ChangeLog,v 1.1 2004/11/20 02:03:17 chriswhite Exp $
+
+*freej-0.7 (20 Nov 2004)
+
+  20 Nov 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/freej-0.7-errno.patch, +files/freej-0.7-fastmemcpy.patch,
+  +files/freej-0.7-v4l.patch, +freej-0.7.ebuild:
+  Initial import into the tree.  Closes bug #29455.  Thanks to Kasper 
+  Souren and Kai Zimmermann for the ebuild submission.  Thanks to lu_zero 
+  and Tester for helping me unbreak a few things!
+
