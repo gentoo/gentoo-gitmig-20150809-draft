@@ -1,6 +1,18 @@
 # ChangeLog for www-servers/fnord
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.7 2005/03/03 18:48:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.8 2005/03/07 10:37:47 ka0ttic Exp $
+
+*fnord-1.9 (07 Mar 2005)
+
+  07 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/fnord-1.2-gentoo.diff, -files/fnord-1.5-gentoo.diff,
+  -files/fnord-1.6-gentoo.diff, -files/fnord-1.7-gentoo.diff,
+  +files/fnord-1.8-gentoo.diff, +files/fnord-1.9-gentoo.diff,
+  -fnord-1.2.ebuild, -fnord-1.5.ebuild, -fnord-1.6.ebuild,
+  -fnord-1.7.ebuild, fnord-1.8.ebuild, +fnord-1.9.ebuild:
+  Version bump for bug 84344; Marked 1.8 stable on x86. Tidy old crusty
+  ebuilds. Moved replace-sparc64-flags to src_compile where it belongs;
+  replaced naughty useradd stuff with enewuser calls.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> fnord-1.2.ebuild,
   fnord-1.5.ebuild, fnord-1.6.ebuild, fnord-1.7.ebuild, fnord-1.8.ebuild:

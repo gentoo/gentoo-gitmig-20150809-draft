@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.8.ebuild,v 1.8 2005/03/07 10:37:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.9.ebuild,v 1.1 2005/03/07 10:37:47 ka0ttic Exp $
 
-inherit flag-o-matic eutils fixheadtails
+inherit flag-o-matic eutils
 
 DESCRIPTION="Yet another small httpd."
 HOMEPAGE="http://www.fefe.de/fnord/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.fefe.de/fnord/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="diet"
 
 DEPEND="diet?(dev-libs/dietlibc)
@@ -28,7 +28,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A} && cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
-	ht_fix_all
 }
 
 src_compile() {
