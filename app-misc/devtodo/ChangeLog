@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.7 2003/12/29 01:13:03 avenj Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.8 2004/02/20 23:58:48 mr_bones_ Exp $
+
+  20 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> devtodo-0.1.17.ebuild:
+  header fix; inherit eutils for epatch; arm needs deps first
 
   28 Dec 2003; Jon Portnoy <avenj@gentoo.org> devtodo-0.1.17.ebuild :
   Added gnuconfig_update. Stable on AMD64.
