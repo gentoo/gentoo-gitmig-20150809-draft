@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/piave/piave-0.2.4-r1.ebuild,v 1.5 2004/10/26 22:01:45 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/piave/piave-0.2.4-r1.ebuild,v 1.6 2005/03/03 16:02:05 luckyduck Exp $
 
 inherit eutils gcc
 
@@ -20,11 +20,12 @@ DEPEND="virtual/x11
 	>=media-libs/gdk-pixbuf-0.22.0
 	>=media-libs/libsdl-1.2.6-r2
 	>=media-libs/sdl-image-1.2.3
-	>=media-libs/libdv-0.99-r1
+	<=media-libs/libdv-0.102
 	>=media-libs/libsndfile-1.0.5
 	>=media-libs/libvorbis-1.0.1
 	>=sys-libs/libraw1394-0.9.0
-	>=sys-libs/libavc1394-0.4.1"
+	>=sys-libs/libavc1394-0.4.1
+	media-libs/nas"
 
 
 src_compile() {
