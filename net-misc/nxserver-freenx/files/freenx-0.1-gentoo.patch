@@ -1,0 +1,60 @@
+--- nxnode.orig	2004-07-30 21:20:56.000000000 +0100
++++ nxnode	2004-08-28 21:01:07.220784071 +0100
+@@ -17,7 +17,7 @@
+ 
+ # constants
+ 
+-NX_DIR=/usr/NX.free
++NX_DIR=/usr/NX
+ 
+ read CMDLINE
+ 
+@@ -144,7 +144,7 @@
+ 		P=""
+ 		[ -n "$agent_user" ] && U="-u $agent_user"
+ 		[ -n "$agent_password" ] && P="-p $agent_password"
+-		LD_LIBRARY_PATH="/usr/NX.free/lib" /usr/NX.free/bin/nxdesktop -name "NX - $user@$HOSTNAME:$display - $session (GPL Edition)" -keyboard $keyboard -geometry $geometry $U $P $agent_server 2>>~/.nx/C-$sess_id/session &
++		LD_LIBRARY_PATH=/usr/NX/lib $NX_DIR/bin/nxdesktop -name "NX - $user@$HOSTNAME:$display - $session (GPL Edition)" -keyboard $keyboard -geometry $geometry $U $P $agent_server 2>>~/.nx/C-$sess_id/session &
+ 	else
+ 
+ 	# nxviewer session
+@@ -152,8 +152,8 @@
+ 	if [ "$type" = "vnc" ]
+ 	then
+ 		mkdir -p ~/.nx/C-$sess_id/scripts/
+-		echo "$agent_password" | /usr/NX.free/bin/nxpasswd ~/.nx/C-$sess_id/scripts/.passwd doit
+-		LD_LIBRARY_PATH="/usr/NX.free/lib" /usr/NX.free/bin/nxviewer -encodings tight hextile copyrect raw -passwd ~/.nx/C-$sess_id/scripts/.passwd -name "NX - $user@$HOSTNAME:$display - $session (GPL Edition)"  $agent_server 2>>~/.nx/C-$sess_id/session &
++		echo "$agent_password" | $NX_DIR/bin/nxpasswd ~/.nx/C-$sess_id/scripts/.passwd doit
++		LIB_LIBRARY_PATH=/usr/NX/lib $NX_DIR/bin/nxviewer -encodings tight hextile copyrect raw -passwd ~/.nx/C-$sess_id/scripts/.passwd -name "NX - $user@$HOSTNAME:$display - $session (GPL Edition)"  $agent_server 2>>~/.nx/C-$sess_id/session &
+ 	else
+ 		# backwards compatibility
+ 		K=""
+@@ -165,7 +165,7 @@
+ 
+ 
+ 	# "normal" nxagent session
+-		LD_LIBRARY_PATH="/usr/NX.free/lib" /usr/NX.free/bin/nxagent -persistent -name "NX - $user@$HOSTNAME:$display - $session (GPL Edition)" $K $G $B :$display 2>>~/.nx/C-$sess_id/session &
++		LD_LIBRARY_PATH=/usr/NX/lib $NX_DIR/bin/nxagent -persistent -name "NX - $user@$HOSTNAME:$display - $session (GPL Edition)" $K $G $B :$display 2>>~/.nx/C-$sess_id/session &
+ 	fi
+ 	fi
+ 	PID=$!
+--- nxserver.orig	2004-08-28 20:57:42.380485559 +0100
++++ nxserver	2004-08-28 21:04:41.223414803 +0100
+@@ -19,7 +19,7 @@
+ 
+ # Important constants
+ 
+-NX_DIR=/usr/NX.free
++NX_DIR=/usr/NX
+ NX_SESS_DIR=$NX_DIR/var/db/
+ NX_ETC_DIR=$NX_DIR/etc/
+ VERSION="1.4.0-01"
+@@ -89,7 +89,7 @@
+ 	cp -f $NX_ETC_DIR/passwords $NX_ETC_DIR/passwords.orig
+ 	echo "$PASSDB_CHUSER:*" >> $NX_ETC_DIR/passwords
+ 	# deactivated to avoid problems with comm-server
+-	#su - $PASSDB_CHUSER -c "mkdir -p ~/.ssh; cat $NX_ETC_DIR/users.id_dsa.pub >> ~/.ssh/authorized_keys2; chmod 600 ~/.ssh/authorized_keys2"
++	su - $PASSDB_CHUSER -c "mkdir -p ~/.ssh; cat $NX_ETC_DIR/users.id_dsa.pub >> ~/.ssh/authorized_keys2; chmod 600 ~/.ssh/authorized_keys2"
+ }
+ 
+ passdb_list_user()
