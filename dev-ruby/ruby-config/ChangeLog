@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.15 2004/08/20 01:33:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.16 2004/08/22 04:25:30 weeve Exp $
+
+  21 Aug 2004; Jason Wever <weeve@gentoo.org> ruby-config-0.3.ebuild:
+  Stable on sparc wrt security bug #60525.
 
   20 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> ruby-config-0.3.ebuild:
   Stable on alpha, bug 60525.
