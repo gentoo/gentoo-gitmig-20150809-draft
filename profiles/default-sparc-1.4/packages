@@ -27,9 +27,9 @@
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 !dev-lang/gpc
-*>=sys-apps/baselayout-1.8.5.3
+*>=sys-apps/baselayout-1.8.5.5
 *>=sys-apps/portage-2.0.45-r4
-*>=sys-devel/binutils-2.13.90.0.4
+*>=sys-devel/binutils-2.13.90.0.16
 *>=sys-devel/gcc-3.2
 *>=sys-libs/glibc-2.3.1-r2
 >=sys-kernel/linux-headers-2.4.19
