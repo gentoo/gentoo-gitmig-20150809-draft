@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 for x in `find /usr/portage/ -iname *.ebuild`
 do
-echo Megadownload ${x}
-echo
-ebuild ${x} fetch
+ebuild ${x} fetch > /tmp/portage-download.log 2>&1
 if [ $? -ne 0 ]
 then 
-	echo '!!!' couldn\'t download all files for ${x} >> /tmp/portage-download.log
-else
-	echo ${x} >> /tmp/portage-download.log
+	echo '!!!' couldn\'t download all files for ${x} 
+	cat /tmp/portage-download.log
+	echo
+	echo
+	echo
+	echo
+	echo
 fi
 done

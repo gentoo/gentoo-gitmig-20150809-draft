@@ -10,7 +10,6 @@ sleep 2
 cd ${PORTDIR}
 for x in `find ${PORTDIR}/ -iname '*.ebuild'` 
 do
-	echo "touching files for ${x}"
 	ebuild ${x} touch
 done
 if [ ! -d ${DISTDIR}-old ]
