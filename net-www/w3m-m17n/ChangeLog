@@ -1,6 +1,12 @@
 # ChangeLog for net-www/w3m-m17n
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/ChangeLog,v 1.5 2003/08/21 17:56:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/ChangeLog,v 1.6 2003/09/20 17:51:14 usata Exp $
+
+*w3m-m17n-20030916 (21 Sep 2003)
+
+  21 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-m17n-20030916.ebuild:
+  Version bumped to the latest CVS snapshot. Rewrote econf part. Added
+  gtk, xface and ipv6 IUSE flag. Now DEPENDs on dev-libs/boehm-gc.
 
 *w3m-m17n-0.4.1.20030308-r2 (22 Aug 2003)
 
