@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/eplayer/eplayer-0.7.20040103.ebuild,v 1.1 2004/01/04 06:28:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/eplayer/eplayer-0.7.20040103.ebuild,v 1.2 2004/01/05 00:51:35 vapier Exp $
 
 inherit enlightenment
 
@@ -11,4 +11,5 @@ DEPEND="media-libs/libvorbis
 	>=x11-libs/ecore-1.0.0.20031213_pre4
 	>=x11-libs/evas-1.0.0.20031018_pre12
 	>=media-libs/edje-0.0.1.20031018
+	>=x11-libs/ewl-0.0.3.20031225
 	>=x11-libs/esmart-0.0.2.20031018"
