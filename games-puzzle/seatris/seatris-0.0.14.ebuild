@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.4 2005/03/08 19:19:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.5 2005/03/08 19:22:16 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.earth.li/projectpurple/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~ppc64 ~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -26,11 +26,11 @@ src_unpack() {
 }
 
 src_install () {
-	dogamesbin seatris
+	dogamesbin seatris || die "dogamesbin failed"
 	doman seatris.6
 	dodoc ACKNOWLEDGEMENTS HISTORY README TODO example.seatrisrc
 	dodir "${GAMES_STATEDIR}"
 	touch "${D}${GAMES_STATEDIR}/seatris.score"
-	fperms 660 ${GAMES_STATEDIR}/seatris.score
+	fperms 660 "${GAMES_STATEDIR}/seatris.score"
 	prepgamesdirs
 }
