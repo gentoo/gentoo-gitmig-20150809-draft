@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.333 2004/05/03 20:40:59 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.334 2004/05/03 20:45:08 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -281,7 +281,7 @@ net-www/mozilla:moznoxft - Disable XFT support in mozilla and/or firefox
 net-www/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
 net-www/mozilla:mozsvg - Enable SVG support in mozilla and/or firefox, http://mozilla.org/projects/svg/
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
-net-www/mozilla-firefox:xprint - Enable xprint support in Mozilla and/or Firefox, http://www.mozilla.org/projects/xprint/
+net-www/mozilla:xprint - Enable xprint support in Mozilla and/or Firefox, http://www.mozilla.org/projects/xprint/
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
 net-www/pound:msdav - if you want the Microsoft DAV extensions enabled
 net-www/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
