@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.9.3.ebuild,v 1.1 2004/12/11 10:34:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.9.3.ebuild,v 1.2 2005/01/01 14:37:12 eradicator Exp $
 
 inherit ruby
 

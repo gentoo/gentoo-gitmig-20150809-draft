@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/unicon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/ChangeLog,v 1.4 2004/06/24 21:56:21 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/ChangeLog,v 1.5 2005/01/01 14:43:30 eradicator Exp $
 
   22 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> unicon-3.0.4.ebuild:
   Removed default S and MAKEOPTS; use epatch instaed of patch

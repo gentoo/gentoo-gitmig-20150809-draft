@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/dbskkd-cdb
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.9 2004/08/28 14:31:58 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.10 2005/01/01 14:27:09 eradicator Exp $
 
   28 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> dbskkd-cdb-1.01-r1.ebuild:
   Stable on ppc.

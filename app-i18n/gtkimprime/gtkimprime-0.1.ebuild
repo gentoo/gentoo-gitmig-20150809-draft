@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/gtkimprime/gtkimprime-0.1.ebuild,v 1.1 2004/11/30 07:07:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/gtkimprime/gtkimprime-0.1.ebuild,v 1.2 2005/01/01 14:28:16 eradicator Exp $
 
 DESCRIPTION="Yet another PRIME client for GTK+2"
 HOMEPAGE="http://gtkimprime.sourceforge.jp/"

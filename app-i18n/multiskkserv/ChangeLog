@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/multiskkserv
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.6 2004/11/23 10:01:06 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.7 2005/01/01 14:36:11 eradicator Exp $
 
   23 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/multiskkserv-20020201-gcc34.diff,

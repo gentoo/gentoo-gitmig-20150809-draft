@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/skk-jisyo-extra-200410.ebuild,v 1.3 2004/11/16 14:29:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/skk-jisyo-extra-200410.ebuild,v 1.4 2005/01/01 14:41:36 eradicator Exp $
 
 DESCRIPTION="Extra SKK dictionaries in plain text and cdb format"
 HOMEPAGE="http://openlab.ring.gr.jp/skk/dic.html"

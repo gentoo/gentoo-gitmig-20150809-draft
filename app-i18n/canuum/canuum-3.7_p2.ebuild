@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canuum/canuum-3.7_p2.ebuild,v 1.4 2004/08/14 15:34:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canuum/canuum-3.7_p2.ebuild,v 1.5 2005/01/01 14:26:26 eradicator Exp $
 
 MY_P="Canna${PV//[._]/}"
 S="${WORKDIR}/${MY_P}/${PN}"

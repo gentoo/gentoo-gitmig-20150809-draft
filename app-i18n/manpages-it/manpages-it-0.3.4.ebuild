@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-it/manpages-it-0.3.4.ebuild,v 1.2 2004/06/24 21:51:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-it/manpages-it-0.3.4.ebuild,v 1.3 2005/01/01 14:35:04 eradicator Exp $
 
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A somewhat comprehensive collection of Italian Linux man pages"

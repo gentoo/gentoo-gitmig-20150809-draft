@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/zhcon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.4 2004/08/25 10:17:30 sekretarz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.5 2005/01/01 14:44:34 eradicator Exp $
 
   25 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   +files/zhcon-0.2.3-gcc34.patch, zhcon-0.2.3.ebuild:

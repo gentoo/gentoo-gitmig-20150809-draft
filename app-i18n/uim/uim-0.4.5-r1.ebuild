@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.5-r1.ebuild,v 1.1 2004/12/14 07:03:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.5-r1.ebuild,v 1.2 2005/01/01 14:42:20 eradicator Exp $
 
 inherit eutils flag-o-matic
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/skkfep
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/ChangeLog,v 1.3 2004/06/24 21:54:28 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/ChangeLog,v 1.4 2005/01/01 14:40:40 eradicator Exp $
 
   22 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> skkfep-0.86c.ebuild:
   Stable on x86 and ppc.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-canna/iiimf-canna-0.3.0.ebuild,v 1.2 2004/09/14 08:26:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-canna/iiimf-canna-0.3.0.ebuild,v 1.3 2005/01/01 14:28:45 eradicator Exp $
 
 DESCRIPTION="Canna Language Engine input method module for IIIMF"
 HOMEPAGE="http://www.momonga-linux.org/~famao/iiimf-skk/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre3.ebuild,v 1.2 2004/06/24 21:56:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre3.ebuild,v 1.3 2005/01/01 14:43:44 eradicator Exp $
 
 inherit rpm eutils
 

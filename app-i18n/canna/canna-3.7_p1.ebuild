@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p1.ebuild,v 1.6 2004/06/28 01:41:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p1.ebuild,v 1.7 2005/01/01 14:26:12 eradicator Exp $
 
 inherit cannadic eutils
 

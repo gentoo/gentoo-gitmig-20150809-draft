@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/kanjipad
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.9 2004/10/27 03:10:19 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.10 2005/01/01 14:32:17 eradicator Exp $
 
   26 Oct 2004; Tom Gall <tgall@gentoo.org> kanjipad-2.0.0.ebuild:
   stable on ppc64, bug #66877
