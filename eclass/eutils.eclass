@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.54 2003/09/17 16:53:46 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.55 2003/09/21 09:58:47 solar Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -90,7 +90,8 @@ EPATCH_SOURCE="${WORKDIR}/patch"
 # Default extension for patches
 EPATCH_SUFFIX="patch.bz2"
 # Default options for patch
-EPATCH_OPTS=""
+# Set -g0 to keep RCS, ClearCase, Perforce and SCCS happy. Bug #24571
+EPATCH_OPTS="-g0"
 # List of patches not to apply.  Not this is only file names,
 # and not the full path ..
 EPATCH_EXCLUDE=""
