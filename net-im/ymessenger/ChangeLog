@@ -1,6 +1,13 @@
 # ChangeLog for net-im/ymessenger
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ChangeLog,v 1.16 2003/11/22 09:00:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ChangeLog,v 1.17 2003/12/30 12:52:51 seemant Exp $
+
+*ymessenger-1.0.4.1-r1 (30 Dec 2003)
+
+  30 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
+  ymessenger-1.0.4.1-r1.ebuild:
+  -r1 uses the rpm for redhat 7, which means glibc-2.3 is not a runtime
+  dependency. Closes bug #36091 by Denis Shcherbakov <deniss@princeton.edu>
 
   22 Nov 2003; Seemant Kulleen <seemant@gentoo.org> ymessenger-1.0.4.1.ebuild:
   only need the kde-functions eclass, not the kde eclass. Closes bug #33825 by
