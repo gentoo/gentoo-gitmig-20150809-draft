@@ -1,4 +1,4 @@
-MD5 ffe66cf41684ddacfd29190f2a0c0ccc libid3tag-0.15.0b.ebuild 987
-MD5 d0916efa18486b3585726b8c0628830e ChangeLog 746
-MD5 54aa87c4ea713263f56e3abf87b1ef12 files/id3tag.pc 222
 MD5 3c479075f74ef05646c045d14b21478a files/digest-libid3tag-0.15.0b 69
+MD5 54aa87c4ea713263f56e3abf87b1ef12 files/id3tag.pc 222
+MD5 91bec9a25e18eb978527c235ac917412 ChangeLog 744
+MD5 05c82184f121c433dddacb07f4c5b69c libid3tag-0.15.0b.ebuild 985
