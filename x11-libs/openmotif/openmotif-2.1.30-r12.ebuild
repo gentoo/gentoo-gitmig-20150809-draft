@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r12.ebuild,v 1.2 2005/03/24 17:23:35 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r12.ebuild,v 1.3 2005/03/25 07:09:27 lanius Exp $
 
 # disable sandbox, needed for motif-config
 SANDBOX_DISABLED="1"
@@ -28,6 +28,9 @@ DEPEND="${RDEPEND}
 SLOT="2.1"
 
 src_unpack() {
+	# profile stuff
+	motif-config --start-install
+
 	local cfg="${S}/config/cf/site.def"
 
 	unpack ${A}
@@ -165,7 +168,6 @@ src_install() {
 
 # Profile stuff
 pkg_setup() {
-	motif-config --start-install
 	if has_version =x11-libs/openmotif-2.1*; then touch $T/upgrade; fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r6.ebuild,v 1.2 2005/03/24 17:23:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r6.ebuild,v 1.3 2005/03/25 07:09:52 lanius Exp $
 
 # disable sandbox, needed for motif-config
 SANDBOX_DISABLED="1"
@@ -23,6 +23,9 @@ DEPEND="virtual/libc
 PROVIDE="virtual/motif"
 
 src_unpack() {
+	# profile stuff
+	motif-config --start-install
+
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/CAN-2005-0605.patch
@@ -92,7 +95,6 @@ src_install() {
 
 # Profile stuff
 pkg_setup() {
-	motif-config --start-install
 	if has_version ">=x11-libs/lesstif-0.94.0"; then touch $T/upgrade; fi
 }
 
