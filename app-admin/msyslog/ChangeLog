@@ -1,6 +1,12 @@
-# ChangeLog for app-admin/msyslog
+# ChangeLog for app-adminmsyslogChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.8 2002/09/21 03:08:05 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.9 2002/09/28 00:22:59 g2boojum Exp $
+
+*-1.08e-r1 (27 Sep 2002)
+
+  27 Sep 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  fixed bad doins paths
 
 *msyslog-1.09a (20 Sep 2002)
 
