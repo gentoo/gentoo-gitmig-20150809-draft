@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.11-r1.ebuild,v 1.1 2005/03/03 08:46:50 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.11-r2.ebuild,v 1.1 2005/03/12 21:52:05 marineam Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
@@ -14,7 +14,8 @@ detect_version
 CK_PATCH="patch-${KV_FULL}.bz2"
 UNIPATCH_LIST="
 	${DISTDIR}/${CK_PATCH}
-	${FILESDIR}/${P}-74070.patch"
+	${FILESDIR}/${P}-74070.patch
+	${FILESDIR}/${P}-lowmem-reserve-oops.patch"
 IUSE=""
 
 DESCRIPTION="Full sources for the Stock Linux kernel and Con Kolivas's high performance patchset"
