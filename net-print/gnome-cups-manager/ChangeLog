@@ -1,6 +1,10 @@
 # ChangeLog for net-print/gnome-cups-manager
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.20 2004/06/09 04:15:00 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.21 2004/06/10 03:39:02 absinthe Exp $
+
+  09 Jun 2004; Dylan Carlson <absinthe@gentoo.org>
+  -gnome-cups-manager-0.17-r03202004.ebuild:
+  Removed hardmask and unnecessary ebuild.
 
 *gnome-cups-manager-0.18 (09 Jun 2004)
 
