@@ -25,7 +25,7 @@
 # Masked for stable marking upstream
 # gnome 2.0.2rc things
 =app-editors/gedit-2.0.5
-=gnome-base/gnome-panel-2.0.8
+>=gnome-base/gnome-panel-2.0.8
 =gnome-base/gnome-session-2.0.7
 =gnome-base/gnome-desktop-2.0.8
 =gnome-base/gnome-vfs-2.0.4
@@ -49,7 +49,7 @@
 =media-sound/esound-0.2.29
 =gnome-extra/gnome-system-monitor-2.0.2
 =gnome-base/gnome-applets-2.0.2
-=app-text/ggv-1.99.10
+>=app-text/ggv-1.99.10
 =x11-libs/libwnck-0.17
 =gnome-base/ORBit2-2.4.3
 =net-libs/linc-0.5.3
