@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-1.1.ebuild,v 1.3 2004/05/15 01:13:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-1.1.ebuild,v 1.4 2004/06/03 15:54:42 agriffis Exp $
 
 #IUSE="doc"
 IUSE="doc tcc"
@@ -71,7 +71,7 @@ src_install () {
 	done
 
 	# Install documentation.
-	if [ -n `use doc` ]; then
+	if use doc; then
 		einfo "Installing documentation"
 		dodir /usr/share/doc/${PF}
 		cp -a ${S}/{man,misc,tutorial,READ_ME} ${D}/usr/share/doc/${PF} || die
