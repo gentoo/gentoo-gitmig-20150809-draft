@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.14 2003/12/01 22:55:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.15 2003/12/02 00:37:37 seemant Exp $
+
+*easytag-0.30c (01 Dec 2003)
+
+  01 Dec 2003; Seemant Kulleen <seemant@gentoo.org> easytag-0.28.ebuild,
+  easytag-0.29.ebuild, easytag-0.30c.ebuild:
+  this version bump adds three patches: to fix a bug when renaming files with
+  the scanner and using the character conversion; to fix a bug that doesn't save
+  the changed files, which aren't selected, when changing of directory or
+  exiting, even if you select the button Yes in the dialog box; and to fix a bug
+  when using the check button Repeat action for the rest of the files in the
+  dialog box, when deleting files.
 
   01 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> easytag-0.30.ebuild:
   moved to stable on sparc

@@ -1,13 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.28.ebuild,v 1.3 2003/09/02 02:01:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.30c.ebuild,v 1.1 2003/12/02 00:37:37 seemant Exp $
 
 IUSE="nls oggvorbis"
 
-S=${WORKDIR}/${P}
+inherit eutils
+
+MY_PV=${PV/%[a-zA-Z]/}
+MY_P=${PN}-${MY_PV}
+MY_P2=${MY_P/-/_}
+MY_P2=${MY_P2/./}
+
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="EasyTAG mp3/ogg ID3 tag editor"
-SRC_URI="mirror://sourceforge/easytag/${P}.tar.bz2"
 HOMEPAGE="http://easytag.sourceforge.net/"
+SRC_URI="mirror://sourceforge/easytag/${MY_P}.tar.bz2
+	mirror://sourceforge/easytag/patch_${MY_P2}_${MY_PV/./}a.diff
+	mirror://sourceforge/easytag/patch_${MY_P2}a_${MY_PV/./}b.diff
+	mirror://sourceforge/easytag/patch_${MY_P2}b_${PV/./}.diff"
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/id3lib-3.8.2
@@ -18,7 +28,17 @@ DEPEND=">=sys-apps/sed-4.0.5"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${DISTDIR}/patch_${MY_P2}_${MY_PV/./}a.diff
+	epatch ${DISTDIR}/patch_${MY_P2}a_${MY_PV/./}b.diff
+	epatch ${DISTDIR}/patch_${MY_P2}b_${PV/./}.diff
+}
+
 
 src_compile() {
 	local myconf
