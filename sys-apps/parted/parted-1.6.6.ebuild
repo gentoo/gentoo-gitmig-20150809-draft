@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6.ebuild,v 1.14 2004/03/07 08:19:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6.ebuild,v 1.15 2004/03/14 20:20:28 tgall Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
@@ -31,6 +33,8 @@ src_unpack() {
 }
 
 src_compile() {
+	use ppc64 && gnuconfig_update
+
 	econf \
 		`use_with readline` \
 		`use_enable nls` \
