@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07.ebuild,v 1.1 2003/09/26 02:15:34 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07.ebuild,v 1.2 2003/09/26 07:28:47 msterret Exp $
 
 S=${WORKDIR}/uucp-1.07	# This should be a .2 bug the package is messed
 DESCRIPTION="Taylor UUCP"
@@ -14,7 +14,7 @@ SLOT="0"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	epatch ${FILESDIR}/gentoo-uucp-${PV}.patch 
+	epatch ${FILESDIR}/gentoo-uucp-${PV}.patch
 	sh configure	make || die
 }
 
