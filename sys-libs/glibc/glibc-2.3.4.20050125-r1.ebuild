@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.6 2005/03/03 22:33:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.7 2005/03/04 12:43:13 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,17 +27,22 @@ GLIBC_MANPAGE_VERSION="2.3.4-r1"
 GLIBC_INFOPAGE_VERSION="2.3.4-r1"
 
 # Gentoo patchset
-PATCH_VER="1.3"
+PATCH_VER="1.4"
 
 # Libidn addon - http://www.gnu.org/software/libidn/
 #IDN_VER="0.5.13"
 #IDN_TARBALL="libidn-${IDN_VER}.tar.gz"
 #IDN_URI="http://josefsson.org/libidn/releases/${IDN_TARBALL}"
 
-# C Stubbs addon
-CSTUBS_VER="2.1.2"
-CSTUBS_TARBALL="c_stubs-${CSTUBS_VER}.tar.bz2"
-CSTUBS_URI="http://dev.gentoo.org/~eradicator/glibc/${CSTUBS_TARBALL}"
+# C Stubbs addon (contained in fedora, so ignoring)
+#CSTUBS_VER="2.1.2"
+#CSTUBS_TARBALL="c_stubs-${CSTUBS_VER}.tar.bz2"
+#CSTUBS_URI="http://dev.gentoo.org/~eradicator/glibc/${CSTUBS_TARBALL}"
+
+# Fedora addons
+FEDORA_VER="20041219T2331"
+FEDORA_TARBALL="glibc-fedora-${FEDORA_VER}.tar.bz2"
+FEDORA_URI="http://dev.gentoo.org/~eradicator/glibc/${FEDORA_TARBALL}"
 
 # (Recent snapshots fails with 2.6.5 and earlier)
 LT_KERNEL_VERSION="2.4.1"
@@ -156,6 +161,10 @@ get_glibc_src_uri() {
 		GLIBC_SRC_URI="${GLIBC_SRC_URI} ${CSTUBS_URI}"
 	fi
 
+	if [[ -n ${FEDORA_URI} ]] ; then
+		GLIBC_SRC_URI="${GLIBC_SRC_URI} ${FEDORA_URI}"
+	fi
+
 	echo "${GLIBC_SRC_URI}"
 }
 
@@ -175,10 +184,15 @@ toolchain-glibc_src_unpack() {
 	if [[ -n ${IDN_TARBALL} ]] ; then
 		unpack ${IDN_TARBALL}
 		mv libidn-${IDN_VER} libidn
+		echo "#stub" > ${S}/libidn/configure
 	fi
 
 	if [[ -n ${CSTUBS_TARBALL} ]] ; then
 		unpack ${CSTUBS_TARBALL}
+	fi
+
+	if [[ -n ${FEDORA_TARBALL} ]] ; then
+		unpack ${FEDORA_TARBALL}
 	fi
 
 	if [[ -n ${PATCH_VER} ]] ; then
@@ -581,7 +595,7 @@ setup_flags() {
 	strip-unsupported-flags
 	filter-flags -m32 -m64 -mabi=*
 
-	has_multilib_profile && CHOST="$(get_abi_CHOST)"
+	has_multilib_profile && CTARGET_OPT="$(get_abi_CHOST)"
 
 	case $(tc-arch) in
 		ppc)
@@ -598,17 +612,17 @@ setup_flags() {
 				case ${ABI} in
 					default|sparc)
 						if is-flag "-mcpu=ultrasparc3"; then
-							CHOST="sparcv9b-unknown-linux-gnu"
+							CTARGET_OPT="sparcv9b-unknown-linux-gnu"
 						else
-							CHOST="sparcv9-unknown-linux-gnu"
+							CTARGET_OPT="sparcv9-unknown-linux-gnu"
 						fi
 					;;
 					sparc64)
 						if is-flag "-mcpu=ultrasparc3"; then
-							CHOST="sparc64b-unknown-linux-gnu"
+							CTARGET_OPT="sparc64b-unknown-linux-gnu"
 							CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9b"
 						else
-							CHOST="sparc64-unknown-linux-gnu"
+							CTARGET_OPT="sparc64-unknown-linux-gnu"
 							CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9a"
 						fi
 
@@ -617,20 +631,24 @@ setup_flags() {
 				esac
 			else
 				if is-flag "-mcpu=ultrasparc3"; then
-					CHOST="sparcv9b-unknown-linux-gnu"
+					CTARGET_OPT="sparcv9b-unknown-linux-gnu"
 				elif { is_crosscompile && use nptl; } || is-flag "-mcpu=ultrasparc2" || is-flag "-mcpu=ultrasparc"; then
-					CHOST="sparcv9-unknown-linux-gnu"
+					CTARGET_OPT="sparcv9-unknown-linux-gnu"
 				fi
 			fi
 		;;
 	esac
+
+	if [[ -n ${CTARGET_OPT} && ${CBUILD} == ${CHOST} ]] && ! is_crosscompile; then
+		CBUILD_OPT=${CTARGET_OPT}
+	fi
 
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ] ; then
 		# broken in 3.4.x
 		replace-flags -march=pentium-m -mtune=pentium3
 	fi
 
-	if $(tc-getCC) -v 2>&1 | grep -q 'gcc version 3.[0123]'; then
+	if $(tc-getCC ${CTARGET}) -v 2>&1 | grep -q 'gcc version 3.[0123]'; then
 		append-flags -finline-limit=2000
 	fi
 
@@ -666,7 +684,7 @@ check_nptl_support() {
 	echo
 
 	einfon "Checking gcc for __thread support ... "
-	if ! $(tc-getCC) -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null; then
+	if ! $(tc-getCC ${CTARGET}) -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null; then
 		echo "no"
 		echo
 		eerror "Could not find a gcc that supports the __thread directive!"
@@ -812,8 +830,8 @@ glibc_do_configure() {
 	myconf="${myconf}
 		--without-cvs
 		--enable-bind-now
-		--build=${CBUILD}
-		--host=${CTARGET}
+		--build=${CBUILD_OPT:-${CBUILD}}
+		--host=${CTARGET_OPT:-${CTARGET}}
 		--disable-profile
 		--without-gd
 		--with-headers=$(alt_headers)
@@ -822,6 +840,8 @@ glibc_do_configure() {
 		--infodir=$(alt_prefix)/share/info
 		--libexecdir=$(alt_prefix)/lib/misc/glibc
 		${EXTRA_ECONF}"
+
+	export CC="$(tc-getCC ${CTARGET})"
 
 	GBUILDDIR="${WORKDIR}/build-${ABI}-${CTARGET}-$1"
 	mkdir -p ${GBUILDDIR}
@@ -1011,15 +1031,13 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 	DEPEND="${DEPEND}
 	        >=${CATEGORY}/gcc-3.3.5-r1"
 
-# Set this if mips converts mips-headers to kernel-2.eclass rather than using
-# linux-headers.
-#	if [[ ${CATEGORY/mips} != ${CATEGORY} ]] ; then
-#		DEPEND="${DEPEND}
-#		        || ( >=${CATEGORY}/mips-headers-2.6.8.1 )"
-#	else
+	if [[ ${CATEGORY/mips} != ${CATEGORY} ]] ; then
+		DEPEND="${DEPEND}
+		        >=${CATEGORY}/mips-headers-2.6.10"
+	else
 		DEPEND="${DEPEND}
 		        >=${CATEGORY}/linux-headers-2.6.8"
-#	fi
+	fi
 fi
 
 RDEPEND="virtual/os-headers
@@ -1035,6 +1053,18 @@ pkg_setup() {
 		die "nptlonly without nptl"
 	fi
 
+	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] && ! has_version "${CATEGORY}/${PN}"; then
+		ewarn "This is your first install of ${CATEGORY}/${PN}, so we"
+		ewarn "must disable some configure checks to get glibc to compile.  You should"
+		ewarn "re-emerge ${CATEGORY}/${PN} after this one installs to"
+		ewarn "be safe.  Additionally, you must use -nptl for the first emerge."
+
+		want_nptl && die "You need to use -nptl when emerging a crosscompiled glibc for the first time"
+
+		ebeep
+		epause 5
+	fi
+
 	# give some sort of warning about the nptl logic changes...
 	if want_nptl && want_linuxthreads ; then
 		ewarn "Warning! Gentoo's GLIBC with NPTL enabled now behaves like the"
@@ -1044,6 +1074,7 @@ pkg_setup() {
 		ewarn "used by default. If you do not need nor want the linuxthreads"
 		ewarn "fallback, you can disable this behavior by adding nptlonly to"
 		ewarn "USE to save yourself some compile time."
+
 		ebeep
 		epause 5
 	fi
@@ -1094,7 +1125,7 @@ src_unpack() {
 	# http://sources.redhat.com/ml/libc-alpha/2003-09/msg00100.html
 	# http://sourceware.org/ml/libc-alpha/2005-02/msg00042.html
 	echo 'int main(){}' > ${T}/gcc_eh_test.c
-	if ! $(tc-getCC) ${T}/gcc_eh_test.c -lgcc_eh 2>/dev/null ; then
+	if ! $(tc-getCC ${CTARGET}) ${T}/gcc_eh_test.c -lgcc_eh 2>/dev/null ; then
 		sed -i -e 's:-lgcc_eh::' Makeconfig || die "sed gcc_eh"
 	fi
 
