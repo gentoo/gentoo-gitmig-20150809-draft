@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.29 2004/09/16 02:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.30 2004/09/22 20:09:25 vapier Exp $
 
-inherit gnuconfig flag-o-matic
+inherit gnuconfig flag-o-matic libtool
 
 MY_P=${PN}src.v${PV}
 DESCRIPTION="Library to load, handle and manipulate images in the JPEG format"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.uu.net/graphics/jpeg/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 macos ppc-macos"
+KEYWORDS="alpha arm amd64 hppa ia64 macos mips ppc ppc64 ppc-macos s390 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
@@ -25,6 +25,7 @@ src_unpack() {
 	cd ${S}
 	sed -i 's/ltconfig.*/& $CHOST/' configure
 	gnuconfig_update
+	uclibctoolize
 }
 
 src_compile() {
