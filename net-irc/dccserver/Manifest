@@ -1,6 +1,14 @@
-MD5 c1824e164e6a40045bb6cab9056593a2 ChangeLog 1311
-MD5 af30eaa511eef29cbfc1369b2fd39f86 dccserver-0.3.ebuild 550
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7387fce92f1f576a87b8c4e042da5463 dccserver-0.4.ebuild 538
+MD5 eb44b7a224127a7d17dc9fafecfb3311 ChangeLog 1407
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 d1498ac6e19cf127c0e6e9deb1ab07d2 files/digest-dccserver-0.3 65
 MD5 da02dbdf2d0cd4d2d7bceb04b6be5399 files/digest-dccserver-0.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBsmcbI1lqEGTUzyQRAk2cAKC+CGE9ujE9EH+6NBLNWOtau937tQCeOdNr
+IUikR8xxcdev76vwaqHXA/o=
+=r9QN
+-----END PGP SIGNATURE-----
