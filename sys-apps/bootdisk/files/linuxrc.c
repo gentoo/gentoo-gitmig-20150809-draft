@@ -13,6 +13,15 @@
 
 #define NUMDRIVES (6)
 
+/*drobbins notes (11 Dec 2000)
+	device=(major*256)+minor
+	mount /proc
+	turn off module ickyness
+		echo "0 0 0 0" > /proc/sys/kernel/printk
+	use this info to set the new root fs
+		echo 0x902>/proc/sys/kernel/real-root-dev
+	umount /proc
+*/
 int set_loop(const char *device, const char *file, int offset, int loopro)
 {
 	struct loop_info loopinfo;
