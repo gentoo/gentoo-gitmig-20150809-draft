@@ -1,0 +1,17 @@
+# Default runlevel.
+id:5:initdefault:
+
+# Run rc when system boots
+si:S:sysinit:/etc/rc
+
+#  NB.  This uses getty, not agetty.
+
+c1:1235:respawn:/sbin/getty tty1 VC linux 
+c2:1235:respawn:/sbin/getty tty2 VC linux
+c3:5:respawn:/sbin/getty tty3 VC linux
+c4:5:respawn:/sbin/getty tty4 VC linux
+c5:5:respawn:/sbin/getty tty5 VC linux
+c6:45:respawn:/sbin/getty tty6 VC linux
+
+ca::ctrlaltdel:/sbin/shutdown -t5 -rfn now
+

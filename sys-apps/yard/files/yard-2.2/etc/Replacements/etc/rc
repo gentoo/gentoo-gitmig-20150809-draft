@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# /etc/rc:  System initialization script.
+#
+# Remount ROOT rw
+
+/bin/mount -n -o remount,rw /
+
+#  Compute module dependencies
+#/sbin/depmod -a
+
+#  Start up kerneld if desired
+#/sbin/kerneld
+
+#  Mount everything mentioned in fstab
+/bin/mount -av
+
+#  Set host name
+/bin/hostname Rescue
+
+#  If you need to load a keyboard map, uncomment this line and
+#  fix the pathnames:
+#/usr/sbin/loadkeys /usr/lib/kbd/keytables/defkeymap.map

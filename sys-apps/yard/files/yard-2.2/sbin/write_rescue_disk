@@ -1,0 +1,563 @@
+#! /usr/bin/perl
+# -*- Mode: Perl -*-
+# This script created automatically from scripts/write_rescue_disk.in
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/files/yard-2.2/sbin/write_rescue_disk,v 1.1 2002/08/25 20:25:33 aliz Exp $
+##############################################################################
+##
+##  WRITE_RESCUE_DISK
+##  Copyright (C) 1996,1997,1998  Tom Fawcett (fawcett@croftj.net)
+##
+##  This program is free software; you can redistribute it and/or modify
+##  it under the terms of the GNU General Public License as published by
+##  the Free Software Foundation; either version 2 of the License, or
+##  (at your option) any later version.
+##
+##  This program is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##  GNU General Public License for more details.
+##
+##  You should have received a copy of the GNU General Public License
+##  along with this program; if not, write to the Free Software
+##  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+##
+##############################################################################
+use strict;
+use File::Basename;
+use File::Find;
+use File::Path;
+use FileHandle;
+use Cwd;
+use English;
+use lib "/etc/yard", "/usr/lib/yard";
+use yardconfig;
+
+BEGIN {	require "yard_utils.pl" }
+
+require "Config.pl";
+
+STDOUT->autoflush(1);
+
+start_logging_output();
+print "write_rescue_disk 2.0\n";
+
+if ($CFG::disk_set !~ /^(single|double|base\+extra)$/) {
+  error "Config variable disk_set is set to \"$CFG::disk_set\"\n",
+        "which is not a valid value.\n";
+}
+
+##############################################################################
+###### Global variables used in this file
+##############################################################################
+my($kernel_fs_blocks);		# Number of blocks taken up by kernel
+                                #     on floppy, whether raw or within fs.
+my($root_start);		# Where the root starts on the floppy
+my($rootfsz_blocks);		# Number of blocks required by compressed root
+my($seek_clause);		# 'Seek' clause for dd root
+
+
+
+##############################################################################
+#####  Check a few things before starting.                               #####
+##############################################################################
+$REAL_USER_ID == 0 or die "This script must be run as root!\n";
+
+#  Check mount point
+if (-d $CFG::mount_point and -w $CFG::mount_point) {
+  info 1, "Using $CFG::mount_point as the floppy mount point\n";
+} else {
+  error "Mount point $CFG::mount_point must be a directory and\n",
+        "must be write-enabled.\n";
+}
+
+#  This test is slightly pointless; an uncompressed kernel these days is
+#  much too large to fit anyway.
+if (!-r $CFG::kernel) {
+  error "Can't read kernel file $CFG::kernel\n";
+} elsif (`file $CFG::kernel` =~ /executable/) {
+  error "It looks like the kernel you specified ($CFG::kernel)\n",
+        "is uncompressed.  It should be the compressed version.\n";
+}
+
+#  If user has set $CFG::double_disk_set, convert value
+#  to appropriate $CFG::disk_set setting.
+if (!defined($CFG::disk_set) and defined($CFG::double_disk_set)) {
+    if ($CFG::double_disk_set == 1) {
+	$CFG::disk_set = "double";
+    } elsif ($CFG::double_disk_set == 0) {
+	$CFG::disk_set = "single";
+    } else {
+	error "Value of \$CFG::double_disk_set is $CFG::double_disk_set\n",
+	      "Should be 1 or 0\n";
+    }
+}
+
+
+#  We only come back up here if we discover that there is not enough
+#  space on a single-disk rescue set, and the user has agreed to try
+#  a two-disk rescue set.
+RESTART:
+
+if (&rootfsz_up_to_date) {
+    info 0, "*****  There is an existing $CFG::rootfsz file, and\n",
+            "       it appears that no relevant files have changed since\n",
+            "       $CFG::rootfsz was created.\n",
+            "       Using this $CFG::rootfsz file as root fs\n";
+} else {
+    compress_root();
+}
+
+####   At this point, the root filesystem has been copied and compressed
+####   and resides in $CFG::rootfsz.  $CFG::mount_point is free.
+info 0, "Flushing $CFG::device buffer cache.\n";
+flush_device_buffer_cache($CFG::device);
+
+load_mount_info();
+
+#####  Dereference $CFG::device in case it's a symbolic link
+while (-l $CFG::device) {
+    ($CFG::device = readlink($CFG::device))
+	or die "Can't resolve CFG::device\n";
+}
+	
+
+if (defined($::mounted{$CFG::floppy})) {
+  error "Floppy device $CFG::floppy is mounted.  It shouldn't be in use.\n",
+        "Unmount $mounted::{$CFG::floppy}, remove the disk and insert a fresh one.\n", 
+        "Do NOT mount it.\n";
+
+} elsif (defined($::mounted{$CFG::mount_point})) {
+    if ($::mounted{$CFG::device} eq $CFG::mount_point) {
+	sys("umount $CFG::mount_point");
+    } else {
+	error "Some other device is already mounted on $CFG::mount_point\n",
+              "Unmount it before running write_rescue_disk.\n";
+    }
+}
+
+info 0, "Rescue disk set: $CFG::disk_set\n";
+ 
+#####  Major control branch here.  Transfer the kernel to the floppy
+#####  either using Lilo or not.  
+
+if ($CFG::use_lilo) {
+    setup_kernel_using_lilo();
+} else {
+    setup_kernel_raw();
+}
+
+#####  At this point, kernel is rdev'd with root start address and
+#####  $kernel_fs_blocks is set.
+#####  Check remaining space.
+
+$rootfsz_blocks    = bytes_to_K((-s $CFG::rootfsz));
+info 1, "Compressed root filesystem is $rootfsz_blocks blocks.\n";
+
+if ($CFG::disk_set eq "double") {   ########## DOUBLE DISK SET
+  if ($rootfsz_blocks > $CFG::floppy_capacity - 1) {
+    error "compressed root fs ($rootfsz_blocks blocks)",
+          "> space on floppy (", $CFG::floppy_capacity - 1, ")\n";
+  } else {
+    sync();
+    info 0, "\n\aRemove the floppy disk from the drive.\n",
+             "Label it BOOT DISK.\n\n";
+    insert_fresh_floppy_in_drive();
+    info 1, "Proceeding with root disk...\n";
+    transfer_sentinel();
+    $root_start  = 1;
+  }
+
+} else {			    ########## SINGLE DISK
+  if ($kernel_fs_blocks + $rootfsz_blocks > $CFG::floppy_capacity) {
+    info 0, "Kernel fs ($kernel_fs_blocks K) + compressed root fs ",
+    "($rootfsz_blocks K) > floppy capacity ",
+    "($CFG::floppy_capacity)\n";
+    #####  See whether rootfsz_blocks would fit on another disk.
+    #####  if so, offer to switch to a two-disk rescue set.
+    
+    if ($rootfsz_blocks <= $CFG::floppy_capacity - 1
+	and $CFG::disk_set eq "single") {
+      
+      info 0, "\aBut the compressed root fs will fit on a second disk.\n",
+      "Do you want to try a two-disk set now?\n";
+      if (<STDIN> =~ /^y/i) {
+	info 0, "OK, retrying...\n";
+	#####  NB. We must start over because the kernel must be
+	#####  rdev'd with the new root fs location.
+	
+	$CFG::disk_set = "double";
+	goto RESTART;		# yechh, spaghetti code
+	
+      } else {			# User didn't say yes.
+	error "Aborting $0\n";
+      }
+    } else {			# Root fs too large -- no way to continue.
+      error "and your compressed root fs is too large ",
+      "($rootfsz_blocks K)\nto fit on a second disk.",
+      "  Trim down your file set or go to a larger disk.\n";
+    }
+  } else {
+      
+    $root_start = $kernel_fs_blocks;
+      
+    info 0, "Kernel fs needs blocks 0-", $kernel_fs_blocks-1,
+            ", so root filesystem will begin at block $root_start\n",
+            "Kernel + filesystem = ", $kernel_fs_blocks + $rootfsz_blocks,
+            " blocks = ",
+            int(($kernel_fs_blocks + $rootfsz_blocks) / $CFG::floppy_capacity
+		* 100),
+	    "% of floppy capacity\n";
+  }
+}
+
+info 0, "Transferring compressed root filesystem ($CFG::rootfsz) to floppy \n";
+sync();
+sys("dd if=$CFG::rootfsz of=$CFG::floppy bs=1k seek=$root_start");
+sync();
+
+sleep 2;
+info 0, "\a\n\nTransfer completed successfully.\n\n";
+
+if ($CFG::disk_set eq "single") {
+  info 0, "Remove the floppy disk from the drive\n",
+          "This is a complete rescue disk.\n";
+
+} elsif ($CFG::disk_set eq "double") {
+  info 0, "Remove the second floppy disk from the drive\n",
+          "and label it ROOT DISK.\n",
+          "During the boot process you will be prompted for this\n",
+          "second disk after the kernel has been loaded from the first.\n";
+
+} elsif ($CFG::disk_set eq "base+extra") {
+  info 0, "Remove the floppy disk from the drive and label it BOOT DISK.\n",
+          "This will be the first disk to load.\n",
+          "The other disk, which you've already prepared,\n",
+          "will be loaded second after the kernel has booted.\n";
+}
+
+exit(0);
+
+
+##############################################################################
+#  A typical LILO FS:
+#
+# total 361
+#   1 drwxr-xr-x   2 root     root         1024 Jan 10 07:23 boot/
+#   1 drwxr-xr-x   2 root     root         1024 Jan 10 07:22 dev/
+#   1 -rw-r--r--   1 root     root          176 Jan 10 07:22 lilo.conf
+# 358 -rw-r--r--   1 root     root       362707 Jan 10 07:23 vmlinuz
+# boot:
+# total 8
+#    4 -rw-r--r--   1 root     root         3708 Jan 10 07:22 boot.b
+#    4 -rw-------   1 root     root         3584 Jan 10 07:23 map
+# dev:
+# total 0
+#    0 brw-r-----   1 root     root       2,   0 Jan 10 07:22 fd0
+#    0 crw-r--r--   1 root     root       1,   3 Jan 10 07:22 null           
+#
+sub setup_kernel_using_lilo {
+  
+  info 0, "Creating kernel filesystem for Lilo\n";
+  
+  #####  Contants for use with EXT2
+  my($inode_allocation)        = 8192; # bytes requested per inode
+  
+  my($blocks_for_kernel)	 = bytes_to_K(-s $CFG::kernel);
+  #  We have to guess how big the other files are going to be.
+  #  We also need additional space for lilo to work with.
+  my($blocks_for_other_files)	 = 20;
+  
+  $kernel_fs_blocks = $blocks_for_kernel + $blocks_for_other_files;
+  $kernel_fs_blocks += bytes_to_K($::INODE_SIZE * ($kernel_fs_blocks * 1024 / 
+						$inode_allocation));
+  
+  insert_fresh_floppy_in_drive();
+  
+  sys("mke2fs -b 1024 -i $inode_allocation -m 0 $CFG::floppy "
+      . $kernel_fs_blocks);
+  sys("mount -t ext2 $CFG::floppy $CFG::mount_point");
+  sys("rm -rf $CFG::mount_point/lost+found");
+  
+  info 0, "Copying kernel $CFG::kernel to kernel fs on $CFG::floppy\n";
+  ## This is slightly bad -- we shouldn't be mucking in the CFG
+  ## package, but this var is necessary for c_f_w_s.
+  local($CFG::kernel_basename) = basename($CFG::kernel);
+  sys("cp $CFG::kernel $CFG::mount_point/");
+  
+  #####  Put the mount point on the floppy, and /dev/null for lilo
+  sys("cp --parents -R $CFG::floppy $CFG::mount_point");
+  sys("cp --parents -R /dev/null $CFG::mount_point");
+  
+  #####  Set up lilo
+  mkdir("$CFG::mount_point/boot", 0777) or error "mkdir: $!";
+  sys("cp /boot/boot.b $CFG::mount_point/boot");
+  
+  my($lilo_conf) = resolve_file("./Replacements/etc/lilo.conf");
+  copy_file_with_substitution($lilo_conf, "$CFG::mount_point/lilo.conf");
+  
+  sys("lilo -v -v -C lilo.conf -r $CFG::mount_point");
+  
+  set_ramdisk_word("$CFG::mount_point/$CFG::kernel_basename",
+		   $kernel_fs_blocks);
+  
+  sys("umount $CFG::mount_point");
+  
+}				## End of setup_kernel_using_lilo
+
+
+sub setup_kernel_raw {
+
+  #####  These are returned at the end:
+  info 0, "Writing kernel file $CFG::kernel to $CFG::floppy\n";
+  sync();
+  insert_fresh_floppy_in_drive();
+  sys("dd if=$CFG::kernel of=$CFG::floppy bs=8192");
+  sync();
+
+  $kernel_fs_blocks = bytes_to_K(-s $CFG::kernel);
+
+  set_ramdisk_word($CFG::floppy, $kernel_fs_blocks);
+
+  sys("rdev $CFG::floppy $CFG::floppy");
+  sys("rdev -R $CFG::floppy 0");
+  sync();
+
+}# End of setup_kernel_raw
+
+
+    
+#  SET_RAMDISK_WORD($kernel, $kernel_blocks)
+#  Sets the ramdisk word in kernel based on configuration options
+#  and $kernel_blocks.
+sub set_ramdisk_word {
+  my($image_loc, $kernel_blocks) = @_;
+    
+  my($prompt_flag);
+
+  if ($CFG::disk_set eq "double") {
+    $root_start  = 1;	# Skip a block for sentinel sector
+    $prompt_flag = $::RAMDISK_PROMPT_FLAG;
+
+  } else {
+    $root_start  = $kernel_blocks;
+    $prompt_flag = 0;
+  }
+    
+  my($RAMDISK_WORD) = $::RAMDISK_LOAD_FLAG
+                      | $prompt_flag
+		      | ($::RAMDISK_IMAGE_START_MASK & $root_start);
+    
+  info 1, "rdev'ing kernel with root fs addr\n";
+  info 1, "RAMDISK_WORD = ", sprintf("%X", $RAMDISK_WORD), "\n";
+  sync();
+  sys("rdev -r $image_loc $RAMDISK_WORD");
+  sync();
+}
+
+#  TRANSFER_SENTINEL - transfer the boot sector sentinel to the second disk.
+sub transfer_sentinel {
+  my($sentinel_sector) = "$lib_dest/extras/bsect.b";
+
+  if (!-e $sentinel_sector) {
+    error "Sentinel boot sector $sentinel_sector does not exist!\n"
+
+  } else {
+    sys("dd if=$sentinel_sector of=$CFG::floppy bs=1k")
+  }
+}
+
+#  Return 0 if the contents file or any of the Replacements files are
+#  newer than rootfsz, else 1.
+sub rootfsz_up_to_date {
+  return(0) unless -e $CFG::rootfsz;
+  my($rootfsz_age) = -C $CFG::rootfsz;
+  my($any_newer) = 0;
+  return(0) unless $rootfsz_age < -C $CFG::contents_file;
+
+  sub any_newer
+      { if ($rootfsz_age > -C $File::Find::name)
+	    { $any_newer = 1 }
+      };
+  find(\&any_newer, $CFG::mount_point);
+
+  $any_newer ? 0 : 1;
+}
+
+
+
+
+sub insert_fresh_floppy_in_drive {
+  info 0, "Insert a new, write-enabled, ${CFG::floppy_capacity}K floppy into",
+          " the drive.\n";
+  info 0, "Press RETURN when ready.\n";
+  scalar(<STDIN>);		# read and discard
+  while (system("dd if=/dev/zero of=$CFG::floppy count=1 bs=1 >/dev/null 2>&1")) {
+    warn "\a**** Drive $CFG::floppy does not contain a write-enabled diskette\n";
+    warn "**** Fix this and press RETURN\n";
+    scalar(<STDIN>);
+  }
+}
+
+
+sub compress_root {
+  #####   Make sure $CFG::device isn't already mounted
+  load_mount_info();
+  if (defined($::mounted{$CFG::device})) {
+    if ($::mounted{$CFG::device} ne $CFG::mount_point) {
+      error "Device $CFG::device is already mounted on ", 
+            $::mounted{$CFG::device}, "\n",
+            "Are you sure it contains the root filesystem?\n";
+    }
+  } elsif (defined($::mounted{$CFG::mount_point})) {
+    error "Another device ($::mounted{$CFG::mount_point}) is already mounted",
+          " on $CFG::mount_point\n",
+          "Unmount it.\n";
+	
+  } else {
+	
+    ##  Mount the root filesystem one last time.  This accomplishes
+    ##  two things: We can get a ls-alR listing for future reference,
+    ##  and it checks that the root filesystem hasn't been trashed at
+    ##  some point along the way (if so, the mount will fail).
+	
+    info 0, "Mounting $CFG::device on $CFG::mount_point\n";
+    &mount_device();
+  }
+
+  info 1, "Listing filesystem contents\n";
+  my($contents_base) = basename($CFG::contents_file);
+  my($logfile_dir) = ($CFG::yard_temp or getcwd());
+  my($ls_file) = "${logfile_dir}/${contents_base}.ls";
+  sys("cd $CFG::mount_point; ls -alR > $ls_file");
+  info 0, "Listing of rootdisk is on $ls_file\n";
+
+  ##  Siphon off base files if necessary
+
+  if ($CFG::disk_set eq "base+extra") {
+    ####  FIX THIS
+    patch_rc_to_load_extra();
+    prepare_extra_disks();
+  }
+
+  sys("umount $CFG::mount_point");
+  info 0, "Compressing root filesystem on $CFG::device to $CFG::rootfsz\n";
+  sync();
+  #  Note to myself:
+  #  Can't reroute dd STDERR in this command because of the pipe
+  sys("dd if=$CFG::device count=$CFG::fs_size bs=1k | gzip -v9 " 
+      . "> $CFG::rootfsz");
+
+}##### End of compress_root
+
+#####  END OF WRITE_RESCUE_DISK
+__END__
+$Log: not supported by cvs2svn $
+Revision 1.1  2001/04/09 03:01:00  achim
+*** empty log message ***
+
+Revision 1.2  1998/05/23 13:42:57  fawcett
+yard-1.15
+
+
+#####  Code graveyard.
+
+sub prepare_extra_disks {
+    ###  Figure out what has to be left on the base disk
+    my(@base_dirs) = qw(dev etc proc sbin lib);
+    push(@other_files, &find_tar_and_dependents);
+    
+    print "Otherfiles: @other_files\n";
+
+    my(%in_base);
+    @in_base{@base_dirs} = @base_dirs;
+    my(@dirs) = split(' ', `ls -1 $CFG::mount_point`);
+    my(@extra_dirs) = grep(!exists($in_base{$_}), @dirs);
+    my($tmpfile) = "/tmp/yard$$";
+
+    info 0, "Creating \"extra\" disk with dirs: @extra_dirs\n";
+    sys("cd $CFG::mount_point; tar " .
+	join(' ', map("--exclude=$_ ", @other_files)) .
+	" --remove " .
+	" -czf $tmpfile @extra_dirs");
+    insert_fresh_floppy_in_drive();
+    sys("dd if=$tmpfile of=$CFG::floppy");
+
+    sync();
+    info 0, "Done with this disk.  This will be the second disk to load.\n";
+}
+
+
+sub patch_rc_to_load_extra {
+
+    #  Grab name of rc script, just for propriety
+    my($INITTAB) =  "$CFG::mount_point/etc/inittab";
+    my($rc, $rc_text);
+
+    open(INITTAB, "<$INITTAB") or error "$INITTAB: $!\n";
+    while (<INITTAB>) {
+	chomp;
+	next if /^\#/ or /^\s*$/;
+	my($code, $runlevels, $action, $command) = split(':');
+	if ($action eq 'sysinit') {
+	    info 0, "Found sysinit command file $command\n";
+	    $rc = "$CFG::mount_point$command";
+	    last;
+	}
+    }
+    close(INITTAB);
+
+    $ldconfig_path = `cd $CFG::mount_point ; find -name ldconfig -print`;
+    chomp($ldconfig_path);
+    $ldconfig_path =~ s|^\.||;	# Remove leading dot
+
+    open(RC, "<$rc") or error "$rc: $!";
+    print "Patching $rc\n";     
+    { local($INPUT_RECORD_SEPARATOR);
+      $rc_text = <RC>;
+    };
+    close(RC);
+
+    open(RC, ">$rc") or error "$rc: $!";
+    print RC "$ldconfig_path\n";
+    print RC "echo Insert second floppy into drive and press RETURN\n";
+    print RC ": \\$<\n";
+    print RC "tar xvzf $CFG::floppy\n";
+    print RC $rc_text, "\n$ldconfig_path\n";
+    close(RC) or die "Writing $rc: $!";
+}
+
+
+#####  Finds the tar executable
+sub find_tar_and_dependents {
+    my(@all_files);
+    #####  Find tar.  For a "base+extras" disk, this was added to the 
+    #####  root by make_root_fs, so we must find it now.
+    my($tar) = `find $CFG::mount_point -name tar -print`;
+    chomp($tar);
+    if (!$tar) {
+	error "tar executable is not on root fs";
+    } else {
+	push(@all_files, $tar);
+    }
+	
+    #####  Now find dependents.  Tar usually only needs libc, but we may
+    #####  as well be careful.
+    foreach $line (`ldd $tar`) {
+	my($rel_lib, $abs_lib) = $line =~ /(\S+) => (\S+)/;
+	next unless $abs_lib;
+	my($final) = $abs_lib;
+
+	if ($abs_lib =~ /not found/) {
+	    error "File $tar needs library $rel_lib, which does not exist!";
+	} else {
+	    my(@libs) = `find $CFG::mount_point -name \'$rel_lib*\' -print`;
+	    chomp(@libs);
+	    foreach (@libs) { s/(\.so).*$/$1*/ };
+	    push(@all_files, @libs);
+	}
+    }
+    
+    info 0, "Moving files to base disk: @all_files\n";
+    foreach (@all_files) { s|^$CFG::mount_point/(.*)$|$1| };
+    @all_files
+}
