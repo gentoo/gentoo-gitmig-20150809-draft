@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.5.5.ebuild,v 1.7 2003/02/13 17:19:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.5.5.ebuild,v 1.8 2004/01/04 03:49:52 port001 Exp $
+
+IUSE=""
 
 DESCRIPTION="Tool for launching commands on keystrokes"
 SRC_URI="http://hocwp.free.fr/xbindkeys/${P}.tar.gz"
@@ -9,7 +11,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 SLOT="0"
 
-DEPEND=">=x11-base/xfree-4.1.0"
+DEPEND=">=x11-base/xfree-4.1.0
+	dev-lang/tk"
 
 src_compile() {
 	./configure --prefix=/usr \
