@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.2.18.ebuild,v 1.3 2000/12/28 11:16:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.2.18.ebuild,v 1.4 2000/12/29 00:05:20 achim Exp $
 
 P=linux-UP-2.2.18
 A="linux-2.2.18.tar.bz2 i2c-2.5.4.tar.gz lm_sensors-2.5.4.tar.gz
@@ -97,7 +97,7 @@ src_unpack() {
     try make symlinks
     cp ${O}/files/${PV}/${PF}.config .config
     cp ${O}/files/${PV}/${PF}.autoconf include/linux/autoconf.h
-#    cp ${O}/files/${PV}/gentoolinux_logo.h include/linux/linux_logo.h
+    cp ${O}/files/${PV}/gentoolinux_logo.h include/linux/linux_logo.h
 
     cd ${S}/lm_sensors-2.5.4
 
