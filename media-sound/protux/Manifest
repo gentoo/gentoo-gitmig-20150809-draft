@@ -1,3 +1,5 @@
-MD5 e36f0d7701a9580cf61bbc38bccb97fa ChangeLog 442
 MD5 732be8a50646323366dc0ed97db7c642 protux-0.16.0.ebuild 718
+MD5 e36f0d7701a9580cf61bbc38bccb97fa ChangeLog 442
+MD5 aa85d836423127b36b441139d95c9848 protux-0.17.8.ebuild 617
 MD5 e2dd10b4d2a0c95521fdf87252684258 files/digest-protux-0.16.0 65
+MD5 8f21b8a7e61479e2c48c22ffa7de96e2 files/digest-protux-0.17.8 65
