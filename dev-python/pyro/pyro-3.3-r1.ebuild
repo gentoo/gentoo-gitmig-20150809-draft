@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-3.3.ebuild,v 1.5 2004/07/07 02:34:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-3.3-r1.ebuild,v 1.1 2004/07/07 02:34:39 liquidx Exp $
 
 inherit distutils eutils
 
@@ -30,5 +30,10 @@ src_install() {
 	cp -r ${S}/examples ${D}/usr/share/doc/${PF}
 	dohtml -r docs/*
 
-	mv /usr/bin/esd /usr/bin/pyroesd
+	mv ${D}/usr/bin/esd ${D}/usr/bin/pyroesd
+}
+
+pkg_postinst() {
+	einfo "Pyro's Event Service Daemon, /usr/bin/esd has been renamed to"
+	einfo " /usr/bin/pyroesd to avoid conflict with media-sound/esound."
 }

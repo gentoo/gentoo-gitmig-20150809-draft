@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyro
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.3 2004/06/25 01:43:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.4 2004/07/07 02:34:39 liquidx Exp $
+
+*pyro-3.3-r1 (07 Jul 2004)
+
+  07 Jul 2004; Alastair Tse <liquidx@gentoo.org> +pyro-3.3-r1.ebuild,
+  pyro-3.3.ebuild:
+  fix overwriting /usr/bin/esd temporarily be renaming esd to pyroesd. (#56096)
 
   17 Feb 2004; <kloeri@gentoo.org> pyro-3.3.ebuild:
   Add missing SLOT.
