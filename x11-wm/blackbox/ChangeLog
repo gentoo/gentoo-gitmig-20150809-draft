@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.7 2002/05/19 21:53:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.8 2002/05/23 04:42:02 spider Exp $
+
+*blackbox-0.65.0_alpha6 (22 May 2002)
+  22 May 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha6.ebuild:
+  latest, greatest, better than ever, and compiles on gcc 3.x
+
 
 *blackbox-0.65.0_alpha4 (19 May 2002)
   19 May 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha4.ebuild:
