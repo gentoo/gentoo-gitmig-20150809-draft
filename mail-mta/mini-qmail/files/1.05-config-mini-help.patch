@@ -10,7 +10,7 @@
 +    echo ' plusdom    - copied from the QMQP server'
 +    echo ' defaultdom - copied from the QMQP server'
 +    echo ' idhost     - hostname of QMPQ client'
-+    echo ' qmqpserver - list of QMQP servers\' IP addresses to send mail through'
++    echo ' qmqpserver - list of QMQP servers IP addresses to send mail through'
      exit 100
      ;;
    esac
