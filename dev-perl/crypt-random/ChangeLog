@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/crypt-random
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/ChangeLog,v 1.1 2003/06/23 17:25:01 mcummings Exp $
+
+*crypt-random-1.13 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  crypt-random-1.13.ebuild:
+  dep for crypt-dh
+
