@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.10-r7.ebuild,v 1.1 2005/02/05 10:17:22 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.10-r7.ebuild,v 1.2 2005/02/25 15:15:33 agriffis Exp $
 
 ETYPE="sources"
 IUSE="ultra1"
@@ -13,7 +13,7 @@ GPV="10.08"
 GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
 
-KEYWORDS="~x86 ~ppc ~amd64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~amd64 ~ppc64 ~ia64"
 
 HOMEPAGE="http://dev.gentoo.org/~dsd/gentoo-dev-sources"
 
