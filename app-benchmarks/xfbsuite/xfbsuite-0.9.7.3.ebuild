@@ -17,8 +17,7 @@ DEPEND="dev-lang/perl
 	dev-perl/perl-tk"
 
 src_install() {
-    mkdir -p ${D}/usr/share/xfbsuite/results
-
+    dodir /usr/share/xfbsuite/results
 	keepdir /usr/share/xfbsuite/results
  
     install -m644 Todo Readme.DE ${D}/usr/share/xfbsuite
@@ -27,7 +26,7 @@ src_install() {
  
     chmod -R 755 ${D}/usr/share/xfbsuite/{images,bin}
  
-    install -d ${D}/usr/bin
+    dodir /usr/bin
  
     install -m755 xfbsuite.tk xfbsuite.pl xfbsuite.sh ${D}/usr/bin
 }
