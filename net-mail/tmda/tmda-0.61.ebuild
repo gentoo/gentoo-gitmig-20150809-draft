@@ -1,6 +1,6 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.61.ebuild,v 1.1 2002/08/21 21:27:00 agenkin Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.61.ebuild,v 1.2 2002/10/04 06:09:54 vapier Exp $
 
 DESCRIPTION="Python-based SPAM reduction system"
 HOMEPAGE="http://software.libertine.org/tmda/index.html"
