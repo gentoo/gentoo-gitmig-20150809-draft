@@ -1,0 +1,48 @@
+<--  snip  -->
+
+$ make
+  CHK     include/linux/version.h
+expr: non-numeric argument
+make[1]: `arch/i386/kernel/asm-offsets.s' is up to date.
+  CHK     include/linux/compile.h
+  CC      kernel/power/swsusp.o
+kernel/power/swsusp.c: In function `init_header':
+kernel/power/swsusp.c:327: parse error before `;'
+kernel/power/swsusp.c: In function `sanity_check':
+kernel/power/swsusp.c:1074: parse error before `)'
+make[2]: *** [kernel/power/swsusp.o] Error 1
+make[1]: *** [kernel/power] Error 2
+make: *** [kernel] Error 2
+$ cat 
+include/linux/version.h 
+#define UTS_RELEASE "2.6.9-ac1"
+#define LINUX_VERSION_CODE
+#define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))
+$ 
+
+<--  snip  -->
+
+
+Proposed fix:
+
+
+Signed-off-by: Adrian Bunk <bunk@stusta.de>
+
+--- linux-2.6.9-ac1-full/Makefile.old	2004-10-21 14:48:07.000000000 +0200
++++ linux-2.6.9-ac1-full/Makefile	2004-10-21 14:48:30.000000000 +0200
+@@ -1,7 +1,7 @@
+ VERSION = 2
+ PATCHLEVEL = 6
+-SUBLEVEL = 9-ac1
+-EXTRAVERSION =
++SUBLEVEL = 9
++EXTRAVERSION = -ac1
+ NAME=AC 1
+ 
+ # *DOCUMENTATION*
+
+-
+To unsubscribe from this list: send the line "unsubscribe linux-kernel" in
+the body of a message to majordomo@vger.kernel.org
+More majordomo info at  http://vger.kernel.org/majordomo-info.html
+Please read the FAQ at  http://www.tux.org/lkml/

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>x86-kernel</herd>
+<longdescription>
+This kernel is based on Alan Cox's tree.
+It includes a small number of patches to vanilla 2.6,
+generally these are patches that Alan wants tested
+before they are released by RedHat.
+</longdescription>
+</pkgmetadata>
+	
