@@ -1,8 +1,13 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.42 2003/02/12 07:36:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.43 2003/02/18 07:01:32 raker Exp $
 
 *avifile-0.7.29.20030204 (04 Feb 2003)
+
+  18 Feb 2003; Nick Hadaway <raker@gentoo.org>
+  avifile-0.7.29.20030204.ebuild :
+  Changed the freetype USE flag to truetype.  Thanks to Pascal Labit
+  on bug #15888 for noticing this misnomer.
 
   10 Feb 2003; Nick Hadaway <raker@gentoo.org>
   avifile-0.7.29.20030204.ebuild :

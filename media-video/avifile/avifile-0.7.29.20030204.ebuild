@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.10 2003/02/13 13:23:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.11 2003/02/18 07:01:32 raker Exp $
 
-IUSE="static freetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
+IUSE="static truetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa
+esd"
 
 MY_P="${P/.200/-200}"
 MY_S="${PN}0.7-0.7.29"
@@ -24,7 +25,7 @@ DEPEND=">=media-libs/jpeg-6b
 	>=media-libs/xvid-0.9.0
 	>=media-sound/lame-3.90
 	>=media-libs/audiofile-0.2.3
-	freetype? ( >=media-libs/freetype-2.1 )
+	truetype? ( >=media-libs/freetype-2.1 )
 	xv? ( >=x11-base/xfree-4.2.1 )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
 	dvd? ( >=media-libs/a52dec-0.7 )
