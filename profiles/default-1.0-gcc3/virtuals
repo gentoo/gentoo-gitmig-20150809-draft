@@ -27,7 +27,7 @@ virtual/textbrowser		net-www/links
 virtual/mda				net-mail/procmail
 virtual/krb5			app-crypt/heimdal
 virtual/motif           x11-libs/openmotif
-virtual/xft				x11-libs/xft
+virtual/xft				x11-base/xft
 virtual/bootloader		sys-apps/grub
 virtual/editor			app-editors/nano
 virtual/jack			media-sound/jack-audio-connection-kit
