@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.839 2005/01/06 04:44:25 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.840 2005/01/07 08:57:46 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -22,15 +22,15 @@ app-cdr/k3b:monkey - Enable support for Monkey's audio codec
 app-crypt/gnupg:bzip2 - use transparent bzip2 compression
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gnupg:smartcard - Enables smartcard support
-app-crypt/gpgme:smime - Add smime support
 app-crypt/gpg-agent:threads - Enable thread support via libpth
+app-crypt/gpgme:smime - Add smime support
 app-crypt/gringotts:suid - Install the binary suid, acknowledging the usual risks
 app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-sensitive) password hashes
 app-crypt/johntheripper:skey - Enable S/Key (Single use password) authentication cracking support
+app-editors/emacs-cvs:aqua - Build Carbon Emacs
 app-editors/emacs:aqua - Build Carbon Emacs
 app-editors/emacs:multi-tty - Add multi-tty support
 app-editors/emacs:nosendmail - If you do not want to install any MTA
-app-editors/emacs-cvs:aqua - Build Carbon Emacs
 app-editors/gvim:mzscheme - Include support for the mzscheme interpreter
 app-editors/gvim:netbeans - Include netbeans integration support
 app-editors/nano:justify - Toggle the justify option ...
@@ -63,10 +63,10 @@ app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/anthy:ucs4 - Enable ucs4 support
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
-app-i18n/scim:immqt - Enable immodule for Qt support (binary incompatible)
-app-i18n/scim:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-i18n/scim-cvs:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/scim-cvs:immqt-bc - Enable immodule for Qt support (binary compatible)
+app-i18n/scim:immqt - Enable immodule for Qt support (binary incompatible)
+app-i18n/scim:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-i18n/uim-svn:dict - Build uim-dict (a dictionary utility for uim)
 app-i18n/uim-svn:fep - Build uim-fep
 app-i18n/uim-svn:m17n-lib - Enable m17n-lib support
@@ -78,9 +78,9 @@ app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home bank
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-misc/workrave:noexercises - Disable exercises support
 app-misc/workrave:noexperimental - Compile without experimental features
+app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
-app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
 app-office/grisbi:print - Enable TeX and printing support
 app-office/imposter:iksemel - Enable externel iksemel parsing support.
 app-office/magicpoint:m17n-lib - Enable m17n-lib (Multilingual Library) support.
@@ -149,6 +149,7 @@ dev-java/gnu-classpath:native - Compile native .so libraries
 dev-java/gnu-javamail:javadoc - Generate API documentation
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
 dev-java/java-gtk:gcj - Enable building with gcj
+dev-java/jmock:examples - Install example source code
 dev-java/libgconf-java:gcj - Enable building with gcj
 dev-java/libglade-java:gcj - Enable building with gcj
 dev-java/libgnome-java:gcj - Enable building with gcj
@@ -168,7 +169,6 @@ dev-java/quartz:struts - Enable struts support
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/velocity:j2ee - Add j2ee support
 dev-java/xml-xmlbeans:source - Zip the sources and install them
-dev-java/jmock:examples - Install example source code
 dev-lang/R:blas - Use the blas library. (virtual/blas)
 dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
 dev-lang/R:f77 - Use f77 to compile FORTRAN sources.
@@ -202,13 +202,13 @@ dev-libs/qsa:ide - enable the qsa ide
 dev-libs/qsa:threads	- enable thread support
 dev-libs/uclibc:xattr - enables extended attributes
 dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
+dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
+dev-lisp/gcl-cvs:dlopen - build a GCL which uses dlopen for linking
+dev-lisp/gcl-cvs:gprof - build a GCL with profiling support
 dev-lisp/gcl:ansi - build a GCL with ANSI support (else build a traditional CLtL1 image)
 dev-lisp/gcl:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl:dlopen - build a GCL which uses dlopen for linking
 dev-lisp/gcl:gprof - build a GCL with profiling support
-dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
-dev-lisp/gcl-cvs:dlopen - build a GCL which uses dlopen for linking
-dev-lisp/gcl-cvs:gprof - build a GCL with profiling support
 dev-lisp/sbcl:ldb - include support for the SBCL low level debugger
 dev-lisp/sbcl:nosbcl-af - don't build SBCL with support for Thomas Burdick's Alien Function package
 dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
@@ -529,8 +529,8 @@ net-irc/xchat-xsys:uptimed - Enables optional uptime records through uptimed
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
-net-libs/libgadu:threads - Enables pthread in resolver
 net-libs/gecko-sdk:moznoxft - Disable XFT support
+net-libs/libgadu:threads - Enables pthread in resolver
 net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
@@ -646,9 +646,9 @@ sci-mathematics/maxima:cmucl - adds cmucl (lisp) support to maxima
 sci-mathematics/maxima:gcl   - adds gcl (lisp) support to maxima
 sci-mathematics/maxima:sbcl   - adds sbcl (lisp) support to maxima
 sci-mathematics/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
+sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
 sci-mathematics/octave:blas - Adds dependency for virtual/blas.
 sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to sci-mathematics/octave (may be merged with hdf when opendx is completed)
-sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
 sci-mathematics/scilab:atlas - Add support for the atlas library
 sys-apps/busybox:devfs - Remove devfs options that crash busybox systems without devfs unless explicitly requested
 sys-apps/busybox:diet - Compile and link with dietlibc
