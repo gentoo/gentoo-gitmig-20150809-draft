@@ -3,17 +3,8 @@ RCS file: /cvsroot/shadow/libmisc/log.c,v
 retrieving revision 1.7
 retrieving revision 1.8
 diff -u -r1.7 -r1.8
---- shadow/libmisc/log.c	2003/12/17 12:52:25	1.7
-+++ shadow/libmisc/log.c	2005/03/09 04:55:31	1.8
-@@ -30,7 +30,7 @@
- #include <config.h>
- 
- #include "rcsid.h"
--RCSID ("$Id: shadow-4.0.7-lastlog.patch,v 1.1 2005/03/22 15:17:47 azarah Exp $")
-+RCSID ("$Id: shadow-4.0.7-lastlog.patch,v 1.1 2005/03/22 15:17:47 azarah Exp $")
- #include <sys/types.h>
- #include <pwd.h>
- #include <fcntl.h>
+--- shadow/libmisc/log.c
++++ shadow/libmisc/log.c
 @@ -89,6 +89,7 @@
  
  	ll_time = newlog.ll_time;
