@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/nrg2iso
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.9 2004/10/05 11:22:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.10 2004/12/25 15:56:54 ticho Exp $
+
+*nrg2iso-0.1 (25 Dec 2004)
+
+  25 Dec 2004; Andrej Kacian <ticho@gentoo.org> +nrg2iso-0.1.ebuild,
+  +nrg2iso-0.4-r1.ebuild, -nrg2iso-0.4.ebuild:
+  Make ~0.4 ebuild pull in actual 0.4 version, instead 0.1. Renamed current
+  0.4 ebuild to 0.1. Closes bug #75618, reported by Janne Liimatainen
+  <jeppe@arabuusimiehet.com>.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   nrg2iso-0.2-r1.ebuild, nrg2iso-0.2.ebuild:
