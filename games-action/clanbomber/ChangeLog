@@ -1,0 +1,8 @@
+# ChangeLog for games-action/clanbomber
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.1 2004/01/09 15:20:45 vapier Exp $
+
+*clanbomber-1.04 (09 Jan 2004)
+
+  09 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #20592.
