@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverputt/neverputt-0.18.2.ebuild,v 1.1 2003/10/28 10:14:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverputt/neverputt-0.18.2.ebuild,v 1.2 2003/10/29 09:46:17 mr_bones_ Exp $
 
 inherit games
 
 DATA="${GAMES_DATADIR}/${PN}/data"
-DESCRIPTION="Clone of Super Monkey Ball using SDL/OpenGL"
+DESCRIPTION="Mini golf game forked from the neverball code"
 HOMEPAGE="http://icculus.org/neverball/"
 SRC_URI="http://icculus.org/neverball/${P}.tar.bz2"
 
