@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.                                                                                         
 # Distributed under the terms of the GNU General Public License v2                                                                      
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.1 2003/06/06 15:24:48 prez Exp $                     
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.2 2003/06/06 17:38:17 prez Exp $                     
 
 At="mtxdrivers-rh9.0-0.3.0.run"
 SRC_URI=""
@@ -12,15 +12,16 @@ DEPEND=">=x11-base/xfree-4.2.0
 
 SLOT="0"
 LICENSE="Matrox"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 Xversion=`X -version 2>&1 | grep -s "XFree86 Version" | cut -d" " -f3 | sed -e "s/\([^\.]*\.[^\.]*\.[^\.]*\)\.[^\.]*/\1/"`
 
 src_unpack() {
     if [ ! -f "${DISTDIR}/${At}" ]; then
 		einfo "You must go to: http://www.matrox.com/mga/registration/home.cfm?refid=7667"
-		einfo "and log in (or create an account) to download the Matrox Parhelia drivers."
-		einfo "Remember to right-click and Save Link As when downloading them."
+		einfo "(for the RH9.0 drivers) and log in (or create an account) to download the"
+		einfo "Matrox Parhelia drivers. Remember to right-click and use Save Link As when"
+		einfo "downloading the driver."
 		die
     fi
 	mkdir ${S}
@@ -65,9 +66,15 @@ src_install() {
 
 pkg_postinst() {
     /sbin/depmod -a
-	einfo "Please look at /usr/share/doc/${P}/XF86Config.* for X configurations"
-	einfo "for your Parhelia or Millenium P650/P750 card."
-	einfo "NOTE: To be able to use busmastering, you MUST have /dev/video as"
-    einfo "a directory, which means you must remove anything there first"
-    einfo "(rm -f /dev/video), and mkdir /dev/video"
+	einfo "Please look at /usr/share/doc/${P}/XF86Config.* for"
+	einfo "X configurations for your Parhelia or Millenium P650/P750 card."
+	if [ ! -d /dev/video ]; then
+		if [ -f /dev/video ]; then
+			einfo "NOTE: To be able to use busmastering, you MUST have /dev/video as"
+		    einfo "a directory, which means you must remove anything there first"
+    		einfo "(rm -f /dev/video), and mkdir /dev/video"
+		else
+			mkdir /dev/video
+		fi
+	fi
 }
