@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/autopsy-2.03.ebuild,v 1.3 2004/09/23 12:14:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/autopsy-2.03.ebuild,v 1.4 2004/11/21 17:43:58 sekretarz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/autopsy/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~arm ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~arm ~ppc ~s390 ~sparc ~x86 ~amd64"
 IUSE=""
 
 # Runtime depend on grep and file deliberate

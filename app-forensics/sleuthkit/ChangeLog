@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.4 2004/11/20 19:04:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.5 2004/11/21 17:42:28 sekretarz Exp $
+
+  21 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> sleuthkit-1.73.ebuild:
+  Added to ~amd64, bug #71926
 
 *sleuthkit-1.73 (20 Nov 2004)
 
