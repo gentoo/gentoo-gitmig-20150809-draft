@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.13 2004/10/11 06:43:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.14 2004/10/11 07:45:21 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -173,7 +173,7 @@ pkg_setup() {
 	gcc-getCC
 
 	# See bug #35468, circular pam-X11 dep
-	if use pam && [ "`best_version x11-base/${PN}`" ]
+	if use pam && best_version x11-base/${PN}
 	then
 		einfo "Previous ${PN} installation detected"
 		einfo "Enabling PAM features in ${PN}..."
