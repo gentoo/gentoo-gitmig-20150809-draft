@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15s-r2.ebuild,v 1.2 2005/02/07 21:18:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15s-r2.ebuild,v 1.3 2005/02/09 18:36:41 luckyduck Exp $
 
-IUSE="static esd 16bit"
+IUSE="static 16bit"
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="amd64 x86"
 
-RDEPEND="esd? ( media-sound/esound )
+RDEPEND="media-sound/esound
 	 media-libs/id3lib"
 
 DEPEND="${RDEPEND}
