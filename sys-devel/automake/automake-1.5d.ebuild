@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.ebuild,v 1.1 2002/03/21 13:16:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5d.ebuild,v 1.1 2002/03/21 20:45:42 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
-SRC_URI="ftp://ftp.gnu.org/gnu/automake/${P}.tar.gz"
-#	ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.bz2"
+SRC_URI="ftp://sources.redhat.com/pub/automake/automake-1.5d.tar.bz2"
+#ftp://ftp.gnu.org/gnu/automake/${P}.tar.gz"
+#ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 
 DEPEND="sys-devel/perl
