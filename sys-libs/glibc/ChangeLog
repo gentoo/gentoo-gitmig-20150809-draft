@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.70 2003/07/24 18:17:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.71 2003/07/28 01:42:13 azarah Exp $
+
+  28 Jul 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r3.ebuild:
+  Do not install librt.so linker script anymore, as librt.so.1 breaks things
+  with librt.so as a script.
 
 *glibc-2.3.2-r3 (23 Jul 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.2 2003/07/24 18:28:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.3 2003/07/28 01:42:13 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -459,7 +459,7 @@ src_install() {
 		install -C ${buildtarget} || die
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
-	if [ -L ${D}/usr/lib/librt.so ]
+	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]
 	then
 		local LIBRTSO="`cd ${D}/lib; echo librt.so.*`"
 		local LIBPTHREADSO="`cd ${D}/lib; echo libpthread.so.*`"
@@ -473,6 +473,11 @@ EOF
 		grep "OUTPUT_FORMAT" ${D}/usr/lib/libc.so >> ${D}/usr/lib/librt.so
 		echo "GROUP ( /lib/${LIBPTHREADSO} /lib/${LIBRTSO} )" \
 			>> ${D}/usr/lib/librt.so
+
+		for x in ${D}/usr/lib/librt.so.[1-9]
+		do
+			[ -L "${x}" ] && rm -f ${x}
+		done
 	fi
 
 	if [ -z "`use build`" ]
