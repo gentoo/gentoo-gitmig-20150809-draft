@@ -35,10 +35,11 @@
 ~sys-kernel/linux-headers-2.4.18-r2
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
-# xfree 4.2.1 will be the initial version for alpha but its not finished yet
-#>=x11-base/xfree-4.2.1
+# xfree 4.2.1 will be the initial version for alpha 
+>=x11-base/xfree-4.2.1
 # sash - static shell for system recovery
 *app-shells/sash
+*dev-libs/libelf
 *sys-devel/perl
 *dev-perl/ExtUtils-MakeMaker
 *app-editors/nano
