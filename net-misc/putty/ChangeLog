@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.19 2004/10/27 13:37:40 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.20 2004/12/16 23:24:50 jhuebel Exp $
+
+  16 Dec 2004; Jason Huebel <jhuebel@gentoo.org> putty-0.56.ebuild:
+  removed ut_time patch from 0.56, bug #69411
 
 *putty-0.56 (27 Oct 2004)
 

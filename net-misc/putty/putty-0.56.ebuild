@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.56.ebuild,v 1.1 2004/10/27 13:37:40 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.56.ebuild,v 1.2 2004/12/16 23:24:50 jhuebel Exp $
 
 inherit eutils
 
@@ -28,9 +28,6 @@ src_unpack() {
 	ebegin "Setting CFLAGS"
 	sed -i "s!-O2!${CFLAGS}!g" ${S}/unix/Makefile.gtk
 	eend $?
-
-	# apply ut_time patch for amd64
-	use amd64 && epatch ${FILESDIR}/putty-ut_time.patch
 }
 
 src_compile() {
