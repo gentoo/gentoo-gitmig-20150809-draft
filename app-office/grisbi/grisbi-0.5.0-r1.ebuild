@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.0-r1.ebuild,v 1.5 2004/07/18 22:18:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.0-r1.ebuild,v 1.6 2004/08/07 21:14:48 slarti Exp $
 
 IUSE="print"
 
-DESCRIPTION="Grisbi is a personnal accounting application for Linux"
+DESCRIPTION="Grisbi is a personal accounting application for Linux"
 HOMEPAGE="http://www.grisbi.org"
 SRC_URI="mirror://sourceforge/grisbi/${P}.tar.gz"
 
