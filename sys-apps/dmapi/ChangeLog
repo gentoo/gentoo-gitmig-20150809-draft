@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.11 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.12 2003/04/16 07:27:11 aliz Exp $
+
+  16 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> dmapi-2.05-r1.ebuild :
+  Fixed sandbox issues.
 
   21 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: 20020330 ->
   2.0.1_p20020330 to fix policy violation for the naming of CVS snapshot
