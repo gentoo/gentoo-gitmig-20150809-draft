@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.26 2004/02/09 21:06:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.27 2004/02/15 19:43:42 weeve Exp $
+
+  15 Feb 2004; Jason Wever <weeve@gentoo.org> mpg123-0.59s-r1.ebuild:
+  Marked stable on sparc to fix bug #40631.
 
   09 Feb 2004; Luca Barbato <lu_zero@gentoo.org> mpg123-0.59s-r1.ebuild:
   Fixed a glitch in the ppc related section of Makefile.
