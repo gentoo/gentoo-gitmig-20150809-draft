@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.0.3-r1.ebuild,v 1.7 2002/12/09 04:21:02 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.0.3-r1.ebuild,v 1.8 2002/12/15 10:44:12 bjb Exp $
 
 IUSE="doc"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap/"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 RDEPEND=">=dev-libs/glib-2.0.6-r1"
 

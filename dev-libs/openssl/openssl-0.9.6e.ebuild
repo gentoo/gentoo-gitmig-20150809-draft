@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6e.ebuild,v 1.6 2002/12/09 04:21:04 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6e.ebuild,v 1.7 2002/12/15 10:44:12 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -11,7 +11,7 @@ RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND} >=sys-devel/perl-5"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

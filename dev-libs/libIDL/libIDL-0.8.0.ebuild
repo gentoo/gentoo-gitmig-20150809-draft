@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.0.ebuild,v 1.8 2002/12/09 04:21:03 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.0.ebuild,v 1.9 2002/12/15 10:44:12 bjb Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.gnome.org"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 RDEPEND=">=dev-libs/glib-2.0.0
 	>=sys-devel/flex-2.5.4"
