@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmpower
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.8 2004/06/24 23:16:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.9 2004/06/30 08:30:34 s4t4n Exp $
+
+  30 Jun 2004; Michele Noberasco <s4t4n@gentoo.org> wmpower-0.3.1.ebuild:
+  Stable on x86.
+  wmpower-0.1.2.ebuild, wmpower-0.1.3.ebuild:
+  Wipe out old versions.
 
 *wmpower-0.3.1 (22 Jun 2004)
 
