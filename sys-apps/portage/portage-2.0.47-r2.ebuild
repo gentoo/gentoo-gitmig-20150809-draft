@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r2.ebuild,v 1.2 2003/02/17 12:44:06 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r2.ebuild,v 1.3 2003/02/18 15:00:12 alain Exp $
 
 IUSE="build"
 
@@ -188,9 +188,11 @@ pkg_postinst() {
 	einfo "enables portage to drop root privleges and run as a normal user. It is"
 	einfo "enabled via FEATURES by adding userpriv."
 	echo
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-	sleep 5
+	if [ -z $PORTAGE_TEST ]; then
+		echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+		echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+		sleep 5
+	fi
 
 	# Kill the existing counter and generate a new one.
 	echo -n "Recalculating the counter... "
