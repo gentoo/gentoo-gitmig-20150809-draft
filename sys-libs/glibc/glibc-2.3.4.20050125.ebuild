@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.5 2005/02/07 06:38:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.6 2005/02/10 05:42:52 eradicator Exp $
 
-KEYWORDS="~mips ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
 BRANCH_UPDATE=""
 GLIBC_MANPAGE_VERSION="2.3.4-r1"
+#GLIBC_INFOPAGE_VERSION="2.3.4-r1"
 GLIBC_INFOPAGE_VERSION="none"
 
 PATCH_VER="1.1"
