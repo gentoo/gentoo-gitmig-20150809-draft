@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1-r2.ebuild,v 1.1 2004/07/31 22:24:35 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1-r2.ebuild,v 1.2 2004/08/21 04:58:10 weeve Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://linux.tucows.tierra.net/files/x11/dock/${PN}-${MY_PV}.tar.gz
 DEPEND="virtual/x11"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa ~mips ~ia64 amd64"
+KEYWORDS="x86 ~ppc sparc alpha hppa ~mips ~ia64 amd64"
 
 src_unpack()
 {
