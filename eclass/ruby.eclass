@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.19 2004/01/13 15:39:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.20 2004/01/22 07:25:32 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -240,7 +240,8 @@ erubydoc() {
 	[ -n "${rdfiles}" ] && doins ${rdfiles}
 	rmdir --ignore-fail-on-non-empty ${D}${rdbase}
 	if [ -d doc -o -d docs -o examples ] ; then
-		dohtml -r doc/* docs/* examples/*
+		dohtml -x html -r {doc,docs,examples}/*
+		dohtml -r {doc,docs,examples}/html/*
 	else
 		dohtml -r *
 	fi
