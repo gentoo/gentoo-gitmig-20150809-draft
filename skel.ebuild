@@ -96,7 +96,7 @@ src_compile() {
 	#make || die
 }
 
-src_install () {
+src_install() {
 	# You must *personally verify* that this trick doesn't install
 	# anything outside of DESTDIR; do this by reading and
 	# understanding the install part of the Makefiles.
