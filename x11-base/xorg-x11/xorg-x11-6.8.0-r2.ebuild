@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.5 2004/10/11 08:27:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.6 2004/10/11 08:29:39 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -818,11 +818,17 @@ setup_dynamic_libgl() {
 }
 
 strip_execs() {
-	if use debug
+	if use debug || has nostrip ${FEATURES}
 	then
 		ewarn "Debug build turned on by USE=debug"
 		ewarn "NOT stripping binaries and libraries"
 	else
+		local STRIP
+		if [ ! -z "${CBUILD}" ] && [ "${CBUILD}" != "${CHOST}" ]; then
+			STRIP=${CHOST}-strip
+		else
+			STRIP=strip
+		fi
 		einfo "Stripping binaries and libraries..."
 		# This bit I got from Redhat ... strip binaries and drivers ..
 		# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
@@ -836,7 +842,7 @@ strip_execs() {
 				if [ "${x/\/usr\/X11R6\/$(get_libdir)\/modules}" = "${x}" ]
 				then
 					echo "`echo ${x} | sed -e "s|${D}||"`"
-					strip ${x} || :
+					${STRIP} ${x} || :
 				fi
 			fi
 		done
@@ -847,7 +853,7 @@ strip_execs() {
 			if [ -f ${x} ]
 			then
 				echo "`echo ${x} | sed -e "s|${D}||"`"
-				strip --strip-debug ${x} || :
+				${STRIP} --strip-debug ${x} || :
 			fi
 		done
 	fi
