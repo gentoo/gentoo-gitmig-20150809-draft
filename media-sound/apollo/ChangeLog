@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/apollo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/ChangeLog,v 1.4 2002/10/08 18:52:15 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/ChangeLog,v 1.5 2002/10/30 20:20:48 hannes Exp $
+
+*apollo-1.4.2 (30 Oct 2002)
+
+  30 Oct 2002; Hannes Mehnert <hannes@gentoo.org> apollo-1.4.2.ebuild:
+  version bump
 
   08 Oct 2002; Hannes Mehnert <hannes@gentoo.org> apollo-1.4.1.ebuild,
   ChangeLog: added --without-stl, because stl support in apollo is broken.
