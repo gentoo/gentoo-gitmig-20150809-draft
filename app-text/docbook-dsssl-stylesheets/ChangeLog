@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook-dsssl-stylesheets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.5 2002/12/13 10:56:19 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.6 2002/12/31 04:36:55 satai Exp $
+
+*docbook-dsssl-stylesheets-1.77-r1 (30 Dec 2002)
+
+  30 Dec 2002; Matthew Turk <satai@gentoo.org> : 
+  changed to inherit sgml-catalog and better deal with catalogs.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

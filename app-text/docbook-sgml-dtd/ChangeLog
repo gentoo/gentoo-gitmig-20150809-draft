@@ -1,6 +1,26 @@
 # ChangeLog for app-text/docbook-sgml-dtd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.7 2002/12/13 10:56:19 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.8 2002/12/31 04:36:55 satai Exp $
+
+*docbook-sgml-dtd-4.1-r1 (30 Dec 2002)
+
+  30 Dec 2002; Matthew Turk <satai@gentoo.org> : 
+  changed to inherit sgml-catalog and better deal with catalogs. 
+
+*docbook-sgml-dtd-4.0-r1 (30 Dec 2002)
+
+  30 Dec 2002; Matthew Turk <satai@gentoo.org> : 
+  changed to inherit sgml-catalog and better deal with catalogs. 
+
+*docbook-sgml-dtd-3.1-r1 (30 Dec 2002)
+
+  30 Dec 2002; Matthew Turk <satai@gentoo.org> : 
+  changed to inherit sgml-catalog and better deal with catalogs. 
+
+*docbook-sgml-dtd-3.0-r1 (30 Dec 2002)
+
+  30 Dec 2002; Matthew Turk <satai@gentoo.org> :
+  changed to inherit sgml-catalog and better deal with catalogs. 
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,8 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r4.ebuild,v 1.10 2002/12/15 10:44:11 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r6.ebuild,v 1.1 2002/12/31 04:36:56 satai Exp $
 
-inherit libtool flag-o-matic
+inherit libtool flag-o-matic 
+inherit sgml-catalog
 
 
 filter-flags -fno-exceptions
@@ -23,6 +24,11 @@ RDEPEND="virtual/glibc
 KEYWORDS="x86 ppc sparc alpha"
 
 src_compile() {
+	# Please note!  Opts are disabled.  If you know what you're doing
+	# feel free to remove this line.  It may cause problems with
+	# docbook-sgml-utils among other things.
+	CFLAGS=""
+	CXXFLAGS=""
 
 	ln -s config/configure.in configure.in
 	elibtoolize
@@ -86,32 +92,9 @@ src_install() {
 
 }
 
-pkg_postinst() {
-  if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ] ; then
-    install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/catalog
-    install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/dsssl/catalog
-#    install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/unicode/catalog
-    install-catalog --add /etc/sgml/sgml-docbook.cat /etc/sgml/${P}.cat
-  fi
-}
-
-pkg_postrm() {
-	if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ] ; then
-		if [ ! -e /usr/share/sgml/openjade-${PV}/catalog ] && \
-		   [ -e /etc/sgml/${P}.cat ] ; then
-			install-catalog --remove /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/catalog
-		fi
-		if [ ! -e /usr/share/sgml/openjade-${PV}/dsssl/catalog ] && \
-		   [ -e /etc/sgml/${P}.cat ] ; then
-			install-catalog --remove /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/dsssl/catalog
-		fi
-		if [ ! -e /usr/share/sgml/openjade-${PV}/unicode/catalog ] && \
-		   [ -e /etc/sgml/${P}.cat ] ; then
-			install-catalog --remove /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/unicode/catalog
-		fi
-		if [ ! -e /etc/sgml/${P}.cat ] ; then
-			install-catalog --remove /etc/sgml/sgml-docbook.cat /etc/sgml/${P}.cat
-		fi
-	fi
-}
-
+sgml-catalog_cat_include "/etc/sgml/${P}.cat" \
+	"/usr/share/sgml/openjade-${PV}/catalog"
+sgml-catalog_cat_include "/etc/sgml/${P}.cat" \
+	"/usr/share/sgml/openjade-${PV}/dsssl/catalog"
+sgml-catalog_cat_include "/etc/sgml/sgml-docbook.cat" \
+	"/etc/sgml/${P}.cat"

@@ -1,6 +1,12 @@
-# ChangeLog for app-text/xhtml1
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.2 2002/11/27 19:10:11 vapier Exp $
+# ChangeLog for app-text/xhtml1 Copyright 2002 Gentoo Technologies, Inc.;
+# Distributed under the GPL v2 $Header:
+# /home/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.2 2002/11/27 19:10:11
+# vapier Exp $
+
+*xhtml1-20020801 (30 Dec 02)
+
+  30 Dec 2002; Matthew Turk <satai@gentoo.org> : 
+  changed to inherit sgml-catalog and better deal with catalogs. 
 
 *xhtml1-20020801 (16 Nov 02)
 

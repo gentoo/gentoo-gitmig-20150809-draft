@@ -14,7 +14,7 @@ DocBook/OpenJade environment.  Provides sgml2{html,txt,rtf,dvi,ps}"
 
 DEPEND="virtual/python
 	app-text/sgml-common
-	=app-text/docbook-sgml-dtd-3.1
+	=app-text/docbook-sgml-dtd-3.1-r1
 	app-text/docbook-dsssl-stylesheets
 	app-text/jadetex
 	app-text/openjade

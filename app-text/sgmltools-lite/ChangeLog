@@ -1,6 +1,14 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.13 2002/12/13 10:56:20 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.14 2002/12/31 04:36:56 satai Exp $
+
+  30 Dec 2002; Matthew Turk <satai@gentoo.org> :
+  Changed dependencies to work with new docbook-sgml-dtd's.
+
+*sgmltools-lite-3.0.3-r6 (30 Dec 2002)
+
+  30 Dec 2002; Matthew Turk <satai@gentoo.org> : 
+  changed to inherit sgml-catalog and better deal with catalogs. 
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
