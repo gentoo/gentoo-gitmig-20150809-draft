@@ -18,15 +18,14 @@ RDEPEND=">=x11-libs/gtk+-1.2.10-r4
 src_compile() {
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
-		    --sysconfdir=/etc
-	assert
+		    --sysconfdir=/etc || die
 
 	emake || die
 }
 
 src_install () {
-	make prefix=${D}/usr					\
-	     sysconfdir=${D}/etc				\
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
 	     install || die
 
 	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL NEWS README TODO

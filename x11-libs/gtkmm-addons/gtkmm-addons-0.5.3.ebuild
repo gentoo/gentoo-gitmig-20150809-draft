@@ -14,14 +14,13 @@ DEPEND=">=x11-libs/gtk+-1.2.10-r4
 
 src_compile() {
 	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-	assert
+		    --prefix=/usr || die				\
 
 	emake || die
 }
 
 src_install () {
-	make prefix=${D}/usr					\
+	make prefix=${D}/usr						\
 	     install || die
 
 	dodoc AUTHORS COPYING COPYING.LIB ChangeLog INSTALL NEWS README TODO
