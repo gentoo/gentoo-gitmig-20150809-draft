@@ -1,6 +1,16 @@
-MD5 00ac37847526408cb6939f3e4a3bf6e5 ChangeLog 667
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0faff822e925ee5727ca59d71920f028 ChangeLog 783
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 63af49bdfa0469610027c5b5263ef493 pyltxml-1.3-r1.ebuild 776
-MD5 0124f4c921446890649aca290be6595c pyltxml-1.3.ebuild 772
+MD5 6ed1a50d5fd39dc5fd99451ea91d25fd pyltxml-1.3-r1.ebuild 776
+MD5 3651bf3bb3cf20fc1d3f57e90eb7de47 pyltxml-1.3.ebuild 769
 MD5 c70a065d577606158efd80c0d7510187 files/digest-pyltxml-1.3 62
 MD5 c70a065d577606158efd80c0d7510187 files/digest-pyltxml-1.3-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCBu9kxtZcznfol0URAliuAJ9SE3xfId4vMWjG3xHVI0yvGuptSgCgyZ7p
+q1m5Jd48I+Fm+CElo7+WFic=
+=1zJk
+-----END PGP SIGNATURE-----
