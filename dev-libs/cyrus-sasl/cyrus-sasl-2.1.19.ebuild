@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19.ebuild,v 1.1 2004/07/16 23:53:38 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19.ebuild,v 1.2 2004/07/21 23:56:52 langthang Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -10,8 +10,8 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="x86 ~ppc sparc ~mips alpha ~arm ~hppa amd64 ia64 ~s390 ~ppc64"
-IUSE="gdbm ldap mysql postgres kerberos static ssl java pam"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+IUSE="berkdb gdbm ldap mysql postgres kerberos static ssl java pam"
 
 RDEPEND="virtual/libc
 	>=sys-libs/db-3.2
@@ -28,6 +28,35 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
 	sys-devel/automake
 	sys-devel/libtool"
+
+pkg_setup() {
+	if use gdbm && use berkdb; then
+		echo
+		eerror "You have both \"gdbm\" and \"berkdb\" in your USE flags."
+		eerror "please choose only one for your SASLdb database backend."
+		echo
+
+		has_version ">=sys-apps/portage-2.0.50" && (
+		einfo "It would be best practice to add the set of USE flags that you use for this"
+		einfo "package to the file: /etc/portage/package.use. Example:"
+		einfo "\`echo \"dev-libs/cyrus-sasl gdbm -berkdb\" >> /etc/portage/package.use\`"
+		einfo "to build cyrus-sasl with GNU database as your SASLdb backend."
+		)
+
+		exit 1
+	fi
+	echo
+	einfo "This version include a "-r" option for saslauthd to instruct it to reassemble"
+	einfo "realm and username into a username of "user@realm" form."
+	echo
+	einfo "If you are still using postfix->sasl->saslauthd->pam->mysql for"
+	einfo "authentication, please edit /etc/conf.d/saslauthd to read:"
+	einfo "SASLAUTHD_OPTS=\"\${SASLAUTH_MECH} -a pam -r\""
+	einfo "Don't forget to restart the service: \`/etc/init.d/saslauthd restart\`."
+	echo
+	einfo "Pause 30 seconds before continuing."
+	sleep 30
+}
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
@@ -81,9 +110,14 @@ src_compile() {
 		myconf="${myconf} --disable-sql"
 	fi
 	if use gdbm ; then
+		einfo "build with GNU DB as database backend for your SASLdb."
 		myconf="${myconf} --with-dblib=gdbm"
-	else
+	elif use berkdb ; then
+		einfo "build with Berkeley DB as database backend for your SASLdb."
 		myconf="${myconf} --with-dblib=berkeley"
+	else
+		einfo "build without SASLdb support"
+		myconf="${myconf} --with-dblib=none"
 	fi
 
 	# Compaq-sdk checks for -D_REENTRANT and -pthread takes care the cpp stuff.
@@ -137,17 +171,4 @@ src_install () {
 	newexe "${FILESDIR}/saslauthd2.rc6" saslauthd
 	insinto /etc/conf.d
 	newins "${FILESDIR}/saslauthd-${PV}.conf" saslauthd
-}
-
-pkg_postinst() {
-	echo
-	einfo
-	einfo "This version include a "-r" option for saslauthd to instruct it to reassemble"
-	einfo "realm and username into a username of "user@realm" form."
-	einfo
-	einfo "If you are still using postfix->sasl->saslauthd->pam->mysql for"
-	einfo "authentication, please edit /etc/conf.d/saslauthd to read:"
-	einfo "SASLAUTHD_OPTS=\"\$\{SASLAUTH_MECH\} -a pam -r\""
-	einfo "Don't forget to restart the service: \`/etc/init.d/saslauthd restart\`."
-	einfo
 }
