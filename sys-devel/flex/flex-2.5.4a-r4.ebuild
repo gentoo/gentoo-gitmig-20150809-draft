@@ -1,18 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r3.ebuild,v 1.3 2001/04/28 22:27:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r4.ebuild,v 1.1 2001/04/28 22:32:35 drobbins Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/flex-2.5.4
 DESCRIPTION="GNU lexical analyser generator"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/non-gnu/flex/${A}
-	 ftp://prep.ai.mit.edu/non-gnu/flex/${A}"
+SRC_URI="ftp://ftp.gnu.org/gnu/non-gnu/flex/flex-2.5.4a.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/flex/flex.html"
 
-DEPEN="virtual/glibc"
+DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc"
-
 
 src_compile() {
 
@@ -28,16 +25,15 @@ src_compile() {
 }
 
 src_install() {
-
     try make prefix=${D}/usr mandir=${D}/usr/share/man/man1 install
-    dosym /usr/bin/flex /usr/bin/lex
     if [ -z "`use build`" ]
     then
         dodoc COPYING NEWS README
     else
         rm -rf ${D}/usr/share ${D}/usr/include ${D}/usr/lib
     fi
-
+	cd ${D}/usr/bin
+	ln -s flex lex
 }
 
 
