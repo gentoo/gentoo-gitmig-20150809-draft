@@ -1,62 +1,62 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.5 2004/04/12 22:55:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.6 2004/05/07 06:13:11 mr_bones_ Exp $
 
-IUSE=""
-
-S=${WORKDIR}/qhull3.1
+MY_P="${PN}${PV}"
 DESCRIPTION="Geometry library"
-SRC_URI="http://www.geom.umn.edu/software/qhull/qhull3.1.tgz"
-HOMEPAGE="http://www.geom.umn.edu/software/qhull/"
+HOMEPAGE="http://www.qhull.org"
+SRC_URI="http://www.geom.umn.edu/software/qhull/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86 sparc ~ppc ~amd64"
+IUSE=""
 
-DEPEND=""
+RDEPEND="virtual/glibc"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
-src_compile() {
-	cd src
+S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/src
+	mv Makefile.txt Makefile
 	# This echo statement appends a new build target to the exisiting Makefile
 	# for an additional shared library; originally added to support octave-forge
 	echo 'libqhull.so: $(OBJS)
-	c++ -shared -Xlinker -soname -Xlinker $@ -o libqhull.so $(OBJS)' >> Makefile.txt
-	# This line now specifies the build targets, including the target added on
-	# the previous line
-	make -f Makefile.txt all libqhull.so
+	c++ -shared -Xlinker -soname -Xlinker $@ -o libqhull.so $(OBJS)' >> Makefile
 
+	# the newly compiled programs will be run during the build.  seems
+	# easiest to statically link.
+	sed -i \
+		-e 's/-lqhull/libqhull.a/' \
+		-e '/^all:/ s/$/ libqhull.so/' Makefile \
+			|| die "sed Makefile failed"
 }
 
-src_install () {
+src_compile() {
+	cd src
+	emake CCOPTS1="${CFLAGS}" || die "emake failed"
+}
 
+src_install() {
 	cd src
 
-	dolib libqhull.a
-	# This line installs the extra shared lib compiled with the target added
-	# above
-	dolib.so libqhull.so
-	dobin qconvex
-	dobin qdelaunay
-	dobin qhalf
-	dobin qhull
-	dobin qvoronoi
-	dobin rbox
+	dolib libqhull.a || die "dolib failed"
+	dolib.so libqhull.so || die "dolib.so failed"
+	dobin qconvex qdelaunay qhalf qhull qvoronoi rbox || die "dobin failed"
 
-	dodir /usr/include/qhull
 	insinto /usr/include/qhull
 	doins *.h
 
 	cd ${S}
 	dodoc Announce.txt COPYING.txt File_id.diz README.txt REGISTER.txt
-
 	cd html
-
-	rename .htm .html *.htm
-	rename .man .1 *.man
-
-	dohtml -a html,gif *
-
-	doman *.1
-
+	dohtml *
 	dodoc *.txt
+	for m in *man
+	do
+		newman ${m} ${m/.man/.1}
+	done
 }
