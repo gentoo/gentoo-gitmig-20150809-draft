@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-headers/ppc64-headers-2.6.4.ebuild,v 1.1 2004/03/31 04:02:16 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-headers/ppc64-headers-2.6.4.ebuild,v 1.2 2004/03/31 22:27:52 mr_bones_ Exp $
 
 IUSE="build crypt"
 
@@ -30,9 +30,9 @@ S=${WORKDIR}/linux-${KV}
 # to /usr/share/doc/gentoo-sources-${PV}/patches.txt.gz
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
-SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2 
-         mirror://kernel/ppc64-ames264.patch.gz"
-	
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
+	mirror://kernel/ppc64-ames264.patch.gz"
+
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 PROVIDE="virtual/kernel virtual/os-headers"
 LICENSE="GPL-2"
@@ -42,7 +42,7 @@ SLOT="${KV}"
 
 src_unpack() {
 	unpack ${A}
-#	mv linux linux-${KV} || die "Error moving kernel source tree to 
+#	mv linux linux-${KV} || die "Error moving kernel source tree to
 # linux-${KV}"
 
 	cd ${WORKDIR}/linux-2.6.4
@@ -53,20 +53,19 @@ src_unpack() {
 }
 
 src_install() {
-        if [ "`KV_to_int ${OKV}`" -ge "`KV_to_int 2.6.0`" ]; then
-                ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
-        fi
+	if [ "`KV_to_int ${OKV}`" -ge "`KV_to_int 2.6.0`" ]; then
+		ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
+	fi
 
 
-        # Do normal src_install stuff
-        kernel_src_install
+	# Do normal src_install stuff
+	kernel_src_install
 
-        # If this is 2.5 or 2.6 headers, then we need asm-generic too
-        if [ "`KV_to_int ${OKV}`" -ge "`KV_to_int 2.6.0`" ]; then
-                dodir /usr/include/asm-generic
-                cp -ax ${S}/include/asm-generic/* ${D}/usr/include/asm-generic
-        fi
-
+	# If this is 2.5 or 2.6 headers, then we need asm-generic too
+	if [ "`KV_to_int ${OKV}`" -ge "`KV_to_int 2.6.0`" ]; then
+		dodir /usr/include/asm-generic
+		cp -ax ${S}/include/asm-generic/* ${D}/usr/include/asm-generic
+	fi
 }
 
 pkg_preinst() {
