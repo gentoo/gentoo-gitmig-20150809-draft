@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/manpages-ja
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.12 2004/02/25 12:57:32 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.13 2004/03/31 20:16:01 usata Exp $
+
+*manpages-ja-20040315 (01 Apr 2004)
+
+  01 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> manpages-ja-20040315.ebuild:
+  Version bumped. Added echangelog(1), ekeyword(1), ewhich(1),
+  mkebuild(1), pkg-clean(1), pkg-size(1), revdep-rebuild(1).
+  Thanks to Akinori Hattori <hattya@gentoo.org> for the contribution.
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org>
   manpages-ja-20040115.ebuild:
