@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.82.0.00.ebuild,v 1.2 2005/03/25 16:07:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.82.0.00.ebuild,v 1.3 2005/03/26 16:58:12 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -43,7 +43,7 @@ src_install() {
 
 	# generate a startup script
 	echo "#!/bin/sh" > ${PN}
-	echo "\$(java-config -J) -cp \$(java-config -p projectx,oro) net.sourceforge.dvb.projectx.common.X" >> ${PN}
+	echo "\$(java-config -J) -cp \$(java-config -p projectx,oro) net.sourceforge.dvb.projectx.common.X \"\$@\"" >> ${PN}
 
 	dobin ${PN}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.81.7.ebuild,v 1.6 2005/01/07 21:16:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.81.7.ebuild,v 1.7 2005/03/26 16:58:12 luckyduck Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.lucike.info/download/software/projectx/${MY_PN}_Source_${PV}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
