@@ -1,9 +1,10 @@
 MD5 40c4bc08714dcefac3954c278c28c35a libgnomeprintui-2.6.2.ebuild 739
 MD5 88318b18466f781ae19f6ca94c55d470 libgnomeprintui-1.116.0.ebuild 784
+MD5 2313f3936db4c723a42282f8e26b1dc9 libgnomeprintui-2.8.0.ebuild 744
 MD5 d8cb07b4a151bd546ace41a5518d787a libgnomeprintui-2.4.0.ebuild 655
 MD5 dca27ca51de88d1dd72de97a6bb4cec5 libgnomeprintui-2.6.1.ebuild 739
 MD5 caf12f7d362be8e3e96f92e982cbdb5b libgnomeprintui-2.4.2.ebuild 659
-MD5 800f2666f77dc3965e5dd3db5ab352d7 ChangeLog 6766
+MD5 2bf9d1383420fff54cba8e6fbba34b29 ChangeLog 6894
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aa8edad42337411f28611f003999a286 libgnomeprintui-2.6.0.ebuild 732
 MD5 c19ecd012203d7a7f503ceb3d0c30f3a files/libgnomeprintui-2-syntax_fix.patch 895
@@ -14,3 +15,4 @@ MD5 4bb0abca3932a751bb44db9d48c20b18 files/digest-libgnomeprintui-2.4.2 74
 MD5 36adff026f0569396631cc1428b7d199 files/digest-libgnomeprintui-2.6.0 74
 MD5 0fb6f1b0c3217961db073ca22f45c8cb files/digest-libgnomeprintui-2.6.1 74
 MD5 3e6417d9c932e4eeff43b723a35b1353 files/digest-libgnomeprintui-2.6.2 74
+MD5 659018dfa0d3363d94c08a76dbce5256 files/digest-libgnomeprintui-2.8.0 74
