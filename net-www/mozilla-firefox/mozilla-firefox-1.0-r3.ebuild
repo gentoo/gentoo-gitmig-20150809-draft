@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r3.ebuild,v 1.7 2004/12/03 17:10:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r3.ebuild,v 1.8 2004/12/22 11:25:31 gmsoft Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source
 
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~hppa"
 IUSE="java mozsvg"
 
 # xrender.pc appeared for the first time in xorg-x11-6.7.0-r2
@@ -40,6 +40,10 @@ src_unpack() {
 	# alpha stubs patch from lfs project.
 	# <taviso@gentoo.org> (26 Jun 2003)
 	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
+
+	# hppa patches from Ivar <orskaug@stud.ntnu.no>
+	# <gmsoft@gentoo.org> (22 Dec 2004)
+	use hppa && epatch ${FILESDIR}/mozilla-hppa.patch
 
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
@@ -80,6 +84,14 @@ src_compile() {
 	# firefox.
 	has_hardened && append-flags -fno-stack-protector-all
 	replace-flags -fstack-protector-all -fstack-protector
+
+	# hppa have problems with high level of optimisation
+	# forcing -O0 <gmsoft@gentoo.org> (22 Dec 2004)
+	if use hppa
+	then
+		export CFLAGS="-O0 -pipe"
+		export CXXFLAGS="-O0 -pipe"
+	fi
 
 	####################################
 	#

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.89 2004/12/21 11:54:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.90 2004/12/22 11:25:31 gmsoft Exp $
+
+  22 Dec 2004; Guy Martin <gmsoft@gentoo.org> +files/mozilla-hppa.patch,
+  mozilla-firefox-1.0-r3.ebuild:
+  Added hppa support.
 
   21 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.0.ebuild:
