@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/autoconf-wrapper-1.ebuild,v 1.1 2004/10/21 01:06:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/autoconf-wrapper-1.ebuild,v 1.2 2004/10/22 16:08:48 vapier Exp $
 
 DESCRIPTION="wrapper for autoconf to manage multiple autoconf versions"
 HOMEPAGE="http://www.gentoo.org/"
@@ -17,11 +17,11 @@ S=${WORKDIR}
 
 src_install() {
 	exeinto /usr/lib/misc
-	newexe ${FILESDIR}/ac-wrapper-${PV}.pl ac-wrapper.pl
+	newexe ${FILESDIR}/ac-wrapper-${PV}.pl ac-wrapper.pl || die
 
 	dodir /usr/bin
 	local x=
 	for x in auto{conf,header,m4te,reconf,scan,update} ifnames ; do
-		dosym ../lib/misc/ac-wrapper.pl /usr/bin/${x}
+		dosym ../lib/misc/ac-wrapper.pl /usr/bin/${x} || die
 	done
 }
