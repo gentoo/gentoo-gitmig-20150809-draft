@@ -1,4 +1,6 @@
 MD5 6ea10825f95e231ba632ab5da722197c ChangeLog 1593
 MD5 7f4b1ac767214657b085c4951227af02 metadata.xml 178
 MD5 4a397f5ab5a6206e7fd647ebc4e6434e pyorbit-2.0.0.ebuild 617
+MD5 4a397f5ab5a6206e7fd647ebc4e6434e pyorbit-2.0.1.ebuild 617
 MD5 9d3297219d639bea2af5b40eac57dd24 files/digest-pyorbit-2.0.0 66
+MD5 e95549f9bb22fc658bfede9a5690dd2a files/digest-pyorbit-2.0.1 66

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyorbit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.14 2004/06/25 01:41:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.15 2004/11/23 15:52:21 liquidx Exp $
+
+*pyorbit-2.0.1 (23 Nov 2004)
+
+  23 Nov 2004; Alastair Tse <liquidx@gentoo.org> +pyorbit-2.0.1.ebuild:
+  version bump, moving CORBA.py and PortableServer.py to avoid colliding with
+  omniorbpy
 
   23 Mar 2004; Chris Aniszczyk <zx@gentoo.org> pyorbit-2.0.0.ebuild:
   Added ~hppa
