@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.31 2003/03/25 06:02:52 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.32 2003/05/13 08:10:25 aliz Exp $
+
+*shadow-4.0.3-r5 (13 May 2003)
+
+  13 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update. Added nodelay to second line of pam.d/system-auth.
 
 *shadow-4.0.3-r4 (23 Feb 2003)
 
