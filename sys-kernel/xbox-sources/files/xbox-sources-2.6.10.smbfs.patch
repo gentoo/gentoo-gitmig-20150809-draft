@@ -38,15 +38,7 @@ diff -urN linux-2.6.8.1/fs/smbfs/request.c linux-2.6.8.1.plasmaroo/fs/smbfs/requ
 +			goto out_bad_data;
  		return 0;
  	}
- 
-@@ -634,6 +642,7 @@
- 		req->rq_trans2buffer = smb_kmalloc(buf_len, GFP_NOFS);
- 		if (!req->rq_trans2buffer)
- 			goto out_no_mem;
-+		memset(req->rq_trans2buffer, 0, buf_len);
- 
- 		req->rq_parm = req->rq_trans2buffer;
- 		req->rq_data = req->rq_trans2buffer + parm_tot;
+
 @@ -643,8 +652,12 @@
  
  	if (parm_disp + parm_count > req->rq_total_parm)
@@ -60,19 +52,6 @@ diff -urN linux-2.6.8.1/fs/smbfs/request.c linux-2.6.8.1.plasmaroo/fs/smbfs/requ
  
  	inbuf = req->rq_buffer;
  	memcpy(req->rq_parm + parm_disp, inbuf + parm_offset, parm_count);
-@@ -657,8 +670,11 @@
- 	 * Check whether we've received all of the data. Note that
- 	 * we use the packet totals -- total lengths might shrink!
- 	 */
--	if (req->rq_ldata >= data_tot && req->rq_lparm >= parm_tot)
-+	if (req->rq_ldata >= data_tot && req->rq_lparm >= parm_tot) {
-+		req->rq_ldata = data_tot;
-+		req->rq_lparm = parm_tot;
- 		return 0;
-+	}
- 	return 1;
- 
- out_too_long:
 @@ -676,13 +692,13 @@
  	req->rq_errno = -EIO;
  	goto out;

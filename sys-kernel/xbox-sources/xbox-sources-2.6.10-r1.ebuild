@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.10.ebuild,v 1.1 2005/01/02 18:17:26 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.10-r1.ebuild,v 1.1 2005/01/09 17:03:25 plasmaroo Exp $
 
 ETYPE='sources'
 inherit kernel-2
@@ -12,7 +12,12 @@ XBOX_PATCHES=xboxpatches-2.6.10-20050102.tar.bz2
 K_NOSETEXTRAVERSION="don't_set_it"
 KEYWORDS="~x86 -*"
 UNIPATCH_LIST="
-	${DISTDIR}/${XBOX_PATCHES}"
+	${DISTDIR}/${XBOX_PATCHES}
+	${FILESDIR}/${PN}-2.6.8.1.CAN-2004-1056.patch
+	${FILESDIR}/${P}.smbfs.patch
+	${FILESDIR}/${P}.75963.patch
+	${FILESDIR}/${P}.brk-locked.patch
+	${FILESDIR}/${P}.77094.patch"
 DESCRIPTION='Full sources for the Xbox Linux kernel'
 SRC_URI="${KERNEL_URI}
 	mirror://gentoo/${XBOX_PATCHES}"
