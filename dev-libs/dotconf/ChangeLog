@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dotconf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.6 2004/06/24 23:06:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.7 2004/07/23 09:28:09 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dotconf-1.1.0.ebuild:
+  Stable amd64.
 
   02 Jun 2004; Jon Hood <squinky86@gentoo.org> -dotconf-1.0.13.ebuild,
   dotconf-1.1.0.ebuild:
