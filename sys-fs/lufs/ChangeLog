@@ -1,8 +1,13 @@
 # ChangeLog for sys-fs/lufs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.3 2003/11/26 01:25:42 wmertens Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.4 2004/03/26 23:34:44 aliz Exp $
 
-*lufs-0.9.6 (26 Nov 2003)
+*lufs-0.9.7-r1 (26 Mar 2004)
+
+  26 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> lufs-0.9.7-r1.ebuild:
+  Adding support for lufs integrated in kernel. Closing #44835.
+
+*lufs-0.9.7 (26 Nov 2003)
 
   26 Nov 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.7.ebuild :
   Version bump, gcc 3.3.2 build fix.
