@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.8 2003/07/11 22:14:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.9 2003/07/21 11:15:07 kosmikus Exp $
+
+  21 Jul 2003; Andres Loeh <kosmikus@gentoo.org> ghc-bin-5.04.3.ebuild:
+  ghc 5.04.3 is apparently not available for sparc as binary, changed KEYWORDS
+  accordingly; added the sparc tarballs to the digests for 5.04.2, 5.04.2-r1,
+  hopefully fixing bug #24750
 
   02 Jul 2003; Andres Loeh <kosmikus@gentoo.org> ghc-bin-5.04.3.ebuild,
   ghc-bin-6.0.ebuild:
