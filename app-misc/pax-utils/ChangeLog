@@ -1,30 +1,9 @@
 # ChangeLog for app-misc/pax-utils
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.7 2004/10/05 13:34:52 pvdabeel Exp $
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.8 2004/11/11 17:10:22 solar Exp $
 
-  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  pax-utils-0.0.2.ebuild:
-  Masked pax-utils-0.0.2.ebuild stable for ppc
+*pax-utils-0.0.4 (11 Nov 2004)
 
-*pax-utils-0.0.4 (15 Aug 2004)
-
-  15 Aug 2004; <solar@gentoo.org> metadata.xml, pax-utils-0.0.4.ebuild:
-  version bump, adds some new utils and removes the obsolete isetdyn
-
-  02 May 2004; <solar@gentoo.org> pax-utils-0.0.1.ebuild,
-  pax-utils-0.0.2.ebuild:
-  pass CFLAGS to Makefile
-
-  10 Nov 2003; <solar@gentoo.org> pax-utils-0.0.2.ebuild:
-  bumping to stable on x86
-
-*pax-utils-0.0.2 (06 Nov 2003)
-
-  06 Nov 2003; <solar@gentoo.org> pax-utils-0.0.2.ebuild:
-  updated the pax-utils, added manpages etc..
-
-*pax-utils-0.0.1 (24 Oct 2003)
-
-  24 Oct 2003; <solar@gentoo.org> metadata.xml, pax-utils-0.0.1.ebuild:
-  import of pax-utils into portage
+  11 Nov 2004; <solar@gentoo.org> +metadata.xml, pax-utils-0.0.4.ebuild:
+  marking pax-utils stable on x86/mips
 
