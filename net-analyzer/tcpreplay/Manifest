@@ -1,9 +1,12 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 611a4d1a9a0e4a832fdc3234f91434a5 tcpreplay-2.3.3.ebuild 1168
 MD5 94ac072464d33db5ccc07ea57e78267e tcpreplay-2.2.2.ebuild 842
-MD5 14df07aaf443f98bc93e1d7b6d8b36ff tcpreplay-3.0_beta1.ebuild 1190
+MD5 8bf97c477c7a773718acc40d7564e6d1 tcpreplay-3.0_beta1.ebuild 1213
 MD5 ec7bc993123faf48a1371d6785ddb60d tcpreplay-2.3.2.ebuild 1168
 MD5 d8f75cf7a4b5758c9d7c4498256b5806 tcpreplay-2.3.3-r1.ebuild 1204
-MD5 6845bcae9c9e8ac2f46eb0ed70873474 ChangeLog 1886
+MD5 3ca821f79658fdada5bb09f3204de4af ChangeLog 2004
 MD5 1cd3590be14655cd8346c467d76e8484 metadata.xml 250
 MD5 afa76b28a7e31d137461093ff1fe7e43 tcpreplay-1.4.6.ebuild 741
 MD5 8daa7ddc53cfe4ef8cd88df8f312339e files/digest-tcpreplay-2.3.3-r1 67
@@ -12,3 +15,10 @@ MD5 a2e378f507f02665aa74c92df8ea254b files/digest-tcpreplay-2.2.2 67
 MD5 bc5984507a3e4ebbee2b6d68de8d6eae files/digest-tcpreplay-2.3.2 67
 MD5 8daa7ddc53cfe4ef8cd88df8f312339e files/digest-tcpreplay-2.3.3 67
 MD5 7a5a48c32b202a4c9bf697c4c0f1ee31 files/digest-tcpreplay-3.0_beta1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCUrRlEZCkKN40op4RAroZAJ0RFhOA7mftnJ5LZFGdxw0N8PkktACeNnt5
+FYCiwTJR5xJa4EDl25FZ3ZI=
+=UFsW
+-----END PGP SIGNATURE-----
