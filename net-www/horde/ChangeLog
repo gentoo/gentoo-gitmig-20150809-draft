@@ -1,6 +1,9 @@
 # ChangeLog for net-www/horde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.14 2003/12/06 21:52:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.15 2003/12/06 21:54:42 mholzer Exp $
+
+  06 Dec 2003; Martin Holzer <mholzer@gentoo.org> horde-2.2.4.ebuild:
+  fixing access violation
 
   06 Dec 2003; Martin Holzer <mholzer@gentoo.org> horde-2.2.4.ebuild:
   fixing chown
