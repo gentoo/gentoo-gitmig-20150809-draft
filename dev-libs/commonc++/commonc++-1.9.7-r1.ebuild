@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-#
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r1.ebuild,v 1.3 2002/08/01 16:07:17 seemant Exp $
 
 S=${WORKDIR}/CommonC++-1.9.7
 DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\ 
@@ -9,9 +9,7 @@ and system services"
 SRC_URI="http://ftp.azc.uam.mx/mirrors/gnu/commonc++/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/commonc++/"
 
-
-DEPEND="virtual/glibc
-	sys-libs/zlib
+DEPEND="sys-libs/zlib
 	dev-libs/libxml2"
 
 SLOT="0"
@@ -27,13 +25,8 @@ src_unpack() {
 }
 src_compile() {
 
-    cd ${S}
-    ./configure \
-		--prefix=/usr --host=${CHOST} \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		|| die "./configure failed"
-    emake ||:
+	econf || die "./configure failed"
+    emake || die
 
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r1.ebuild,v 1.1 2002/07/13 03:22:57 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r1.ebuild,v 1.2 2002/08/01 16:07:16 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ STL library"
@@ -8,7 +8,7 @@ SRC_URI="http://www.stlport.org/archive/${P}.tar.gz"
 HOMEPAGE="http://www.stlport.org"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
+
 SLOT="0"
 KEYWORDS="x86"
 LICENSE="as-is"
@@ -22,7 +22,6 @@ src_unpack() {
 
 src_compile() {
 
-	cd ${S}/src
 	make -f gcc-linux.mak || die "Compile failed"
 }
 
@@ -42,4 +41,3 @@ src_install () {
 	cd ${S}
 	dohtml -r doc
 }
-

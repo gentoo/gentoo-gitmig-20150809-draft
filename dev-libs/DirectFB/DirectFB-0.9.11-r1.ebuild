@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.11-r1.ebuild,v 1.2 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.11-r1.ebuild,v 1.3 2002/08/01 16:07:16 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DirectFB is a thin library on top of the Linux framebuffer devices"
@@ -17,6 +17,9 @@ DEPEND="sys-devel/perl
 	quicktime? ( media-libs/quicktime4linux )"
 #	avi? ( >=media-video/avifile-0.7.4.20020426-r2 )"
 
+SLOT="0"
+LICENSE="LGPL-2.1"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}
@@ -71,7 +74,7 @@ src_compile() {
 		cp idirectfbvideoprovider_libmpeg3.c \
 			idirectfbvideoprovider_libmpeg3.c.orig
 	
-		sed s':#include <libmpeg3.h>:#include <libmpeg3/libmpeg3.h>:' \
+		sed 's:#include <libmpeg3.h>:#include <libmpeg3/libmpeg3.h>:' \
 			idirectfbvideoprovider_libmpeg3.c.orig > \
 				idirectfbvideoprovider_libmpeg3.c
 		cd ${S}
@@ -85,8 +88,8 @@ src_install () {
 	insinto /etc
 	doins fb.modes
 
-	make 	\
-		DESTDIR=${D}	\
+	make \
+		DESTDIR=${D} \
 		install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO

@@ -1,11 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.16.ebuild,v 1.3 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.16.ebuild,v 1.4 2002/08/01 16:07:17 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A minimal libc"
 SRC_URI="http://www.fefe.de/dietlibc/${P}.tar.bz2"
 HOMEPAGE="http://www.fefe.de/dietlibc"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -34,6 +38,4 @@ src_install () {
 
 	doman diet.1
 	dodoc AUTHOR BUGS CAVEAT CHANGES README THANKS TODO PORTING
-
 }
-
