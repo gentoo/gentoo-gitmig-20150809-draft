@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/stoned-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/ChangeLog,v 1.6 2005/02/23 12:35:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/ChangeLog,v 1.7 2005/02/25 22:46:58 mr_bones_ Exp $
+
+  25 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  stoned-bin-1.1.6.ebuild:
+  fix typo (bug #83314)
 
   23 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   stoned-bin-1.1.6.ebuild:
