@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.30 2002/07/30 00:14:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.31 2002/07/30 18:30:13 azarah Exp $
+
+  30 Jul 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-{1.0-r3,1.1_beta} :
+
+  Some gcc-3 fixes for pentium 4.
 
 *mozilla-1.1_beta (30 Jul 2002)
 

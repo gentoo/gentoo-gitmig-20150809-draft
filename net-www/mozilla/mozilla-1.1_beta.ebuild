@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.5 2002/07/30 00:14:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.6 2002/07/30 18:30:13 azarah Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit makeedit
@@ -177,7 +177,9 @@ src_compile() {
 	# Currently gcc-3.1.1 dont work well if we specify "-march"
 	# and other optimizations for pentium4.
 	[ -z "${CC}" ] && CC=gcc
-	if [ "`${CC} -dumpversion`" = "3.1.1" ] ; then
+	if [ "`${CC} -dumpversion`" = "3.1.1" ] || \
+	   [ "`${CC} -dumpversion`" = "3.2" ]
+	then
 		export CFLAGS="${CFLAGS/pentium4/pentium3}"
 		export CXXFLAGS="${CXXFLAGS/pentium4/pentium3}"
 	fi

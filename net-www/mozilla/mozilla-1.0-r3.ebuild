@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.6 2002/07/25 01:16:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.7 2002/07/30 18:30:13 azarah Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 
@@ -181,9 +181,11 @@ src_compile() {
 	# Currently gcc-3.1.1 dont work well if we specify "-march"
 	# and other optimizations
 	[ -z "${CC}" ] && CC=gcc
-	if [ "`${CC} -dumpversion`" = "3.1.1" ] ; then
-		export CFLAGS=""
-		export CXXFLAGS=""
+	if [ "`${CC} -dumpversion`" = "3.1.1" ] || \
+	   [ "`${CC} -dumpversion`" = "3.2" ]
+	then
+		export CFLAGS="${CFLAGS/pentium4/pentium3}"
+		export CXXFLAGS="${CFLAGS/pentium4/pentium3}"
 	fi
 
 	# Crashes on start when compiled with -fomit-frame-pointer
