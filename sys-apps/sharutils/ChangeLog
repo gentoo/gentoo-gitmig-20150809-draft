@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sharutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.6 2002/12/13 11:00:33 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.7 2003/02/09 17:09:59 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> sharutuls-4.2.1-r6.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

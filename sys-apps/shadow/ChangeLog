@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.24 2003/01/19 19:55:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.25 2003/02/09 17:02:24 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> shadow-4.0.3-r3.ebuild :
+  Added hppa to keywords.
 
   19 Jan 2003; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r3.ebuild :
   
