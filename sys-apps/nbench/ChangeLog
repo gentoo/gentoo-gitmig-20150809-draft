@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/nbench
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbench/ChangeLog,v 1.2 2003/02/12 09:04:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbench/ChangeLog,v 1.3 2003/10/16 23:32:13 bazik Exp $
+
+  17 Oct 2003; Sven Blumenstein <bazik@gentoo.org> nbench-2.1.ebuild:
+  Added ~sparc keyword.
 
 *nbench-2.1	(30 Jan 2003)
   30 Jan 2003l Joshua Brindle <method@gentoo.org> nbench-2.1.ebuild :
