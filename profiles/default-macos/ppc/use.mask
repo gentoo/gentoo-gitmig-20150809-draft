@@ -1,11 +1,13 @@
 # Add USE flags that don't work on Mac OS X here
 
-# alsa will more than likely never compile on os x
+# alsa/gpm will more than likely never compile on os x
 alsa
+gpm
 
-# kde is still a ways off
+# kde/gnome is still a ways off
 arts
 kde
+gnome
 
 # mach does not need caps
 caps
@@ -19,8 +21,6 @@ tcltk
 # net-misc/dante fails to compile, so we mask it until we succeed
 # (dev-lang/ruby, net-misc/lftp)
 socks5
-
-x86
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
