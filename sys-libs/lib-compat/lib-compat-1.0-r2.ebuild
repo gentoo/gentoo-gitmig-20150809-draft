@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.0-r2.ebuild,v 1.10 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.0-r2.ebuild,v 1.11 2002/10/05 18:18:31 gerk Exp $
 
-IUSE="x86"
+IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Compatibility c++ and libc5 libraries for programs new and old"
