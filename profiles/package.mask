@@ -380,10 +380,6 @@ net-im/linphone
 net-libs/libosip
 dev-perl/CDDB-File
 
-# <seemant@gentoo.org> (27 Aug 2002)
-# Masked for freeze
-=dev-libs/DirectFB-0.9.13
-
 # <spider@gentoo.org> (26 Aug 2002)
 # Masked for testing -- tore out the broken id3lib included and
 # added the final + patches to make it work
