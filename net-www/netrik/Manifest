@@ -1,5 +1,5 @@
-MD5 a0afb576d3a4798ec6181b242b3bc088 netrik-1.10.2.ebuild 729
-MD5 9f60f98c35648615634d9e604216cc2d netrik-1.6.0.ebuild 721
 MD5 d4ce06e0306069f35e3903cb2187b021 ChangeLog 645
+MD5 819bca61884c54c14a5d54b9ada165ba netrik-1.10.2.ebuild 738
+MD5 6e42174a0e124fcf6edf8702fe8b36a3 netrik-1.6.0.ebuild 730
 MD5 3ddf9fe835b417c6390365fa463ccd0d files/digest-netrik-1.10.2 65
 MD5 25304c28085761fdc17a4e0c5de07591 files/digest-netrik-1.6.0 64
