@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.13 2003/03/28 23:48:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.14 2003/04/04 21:33:45 zwelch Exp $
 
 *tk-8.3.4-r1 (28 Mar 2003)
 
@@ -11,6 +11,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *tk-8.3.4 (18 Dec 2002)
+
+  20 Mar 2003; Zach Welch <zwelch@gentoo.org> tk-8.3.4.ebuild:
+  add arm keyword
 
   08 Mar 2003; Guy Martin <gmsoft@gentoo.org> tk-8.3.4.ebuild :
   Added hppa to keywords.
