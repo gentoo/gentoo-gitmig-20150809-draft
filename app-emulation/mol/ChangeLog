@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.4 2002/07/12 13:19:05 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.5 2002/07/21 01:01:12 sunflare Exp $
+
+  20 July 2002; Phil Bordelon <sunflare@gentoo.org> mol-0.9.63.ebuild mol-0.9.64.ebuild :
+
+  Added -sparc64 KEYWORDS to go along with the -sparc and -x86 KEYWORDS
+  added by Gerk.
 
 *mol-0.9.64 (12 July 2002)
 
