@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/formido/formido-1.0.ebuild,v 1.2 2004/06/24 21:55:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/formido/formido-1.0.ebuild,v 1.3 2004/11/02 20:57:01 josejx Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://koti.mbnet.fi/lsoft/formido/${P}.tar.bz2
 	http://koti.mbnet.fi/lsoft/formido/formido-music.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 SLOT=0
 IUSE=""
 
