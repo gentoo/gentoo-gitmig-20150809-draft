@@ -1,9 +1,12 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.37 2003/11/12 18:10:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.38 2003/11/14 15:57:19 aliz Exp $
 
   12 Nov 2003; <mkennedy@gentoo.org> fetchmail-6.2.5.ebuild:
   use make, not emake
+
+  12 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> fetchmail-6.2.5.ebuild :
+  Make it compile on amd64.
 
 *fetchmail-6.2.5 (22 Oct 2003)
 
