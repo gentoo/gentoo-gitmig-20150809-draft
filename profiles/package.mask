@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3322 2004/11/16 02:27:51 fafhrd Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3323 2004/11/16 11:23:13 usata Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <usata@gentoo.org> (15 Nov 2004)
+# need to fix bug #71366
+=app-text/docbook-xml-simple-dtd-4.1.2.4-r1
+=app-text/docbook-xml-simple-dtd-1.0-r1
 
 # <wolf31o2@gentoo.org> (15 Nov 2004)
 # Masking since it is FUBAR with udev
