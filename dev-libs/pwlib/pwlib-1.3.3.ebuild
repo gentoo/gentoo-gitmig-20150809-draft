@@ -1,30 +1,24 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.2.13.ebuild,v 1.4 2002/07/11 06:30:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.3.ebuild,v 1.1 2002/07/20 16:41:51 raker Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Libs needed for GnomeMeeting"
 SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://www.openh323.org"
-
-DEPEND="virtual/glibc
-	>=sys-devel/bison-1.28
-	>=sys-devel/flex-2.5.4a"
+SLOT="0"
+DEPEND="virtual/glibc >=sys-devel/bison-1.28 >=sys-devel/flex-2.5.4a"
 
 src_compile() {
-
 	cd ${S}
 	export PWLIBDIR=${S}
 	export PWLIB_BUILD="yes"
 	make optshared || die
-
 	cd tools/asnparser
 	make optshared || die
-
 }
 
 src_install() {
-
 	mkdir -p ${D}/usr/lib
 	mkdir -p ${D}/usr/include/ptclib
 	mkdir -p ${D}/usr/include/ptlib/unix/ptlib
@@ -48,15 +42,5 @@ src_install() {
 	rm -rf ${D}/usr/share/pwlib/include/ptlib/unix/CVS
 	rm -rf ${D}/usr/share/pwlib/include/ptlib/CVS
 	cd ${D}/usr/lib
-	ln -sf libpt_linux_x86_r.so.1.2.12 libpt.so
-
+	ln -sf libpt_linux_x86_r.so.${PV} libpt.so
 }
-
-
-#pkg_postinst() {
-#
-#	cd /usr/share/pwlib
-#        ln -sf /usr/lib lib
-#        ln -sf /usr/include/pwlib include
-
-#}
