@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <fava@gentoo.org> (24 Apr 2003)
+# work in progress
+>=app-admin/ufed-0.3
+
 # <robbat2@gentoo.org> (23 Apr 2003)
 # PHP ebuilds using new PHP eclass
 # Work in progress
