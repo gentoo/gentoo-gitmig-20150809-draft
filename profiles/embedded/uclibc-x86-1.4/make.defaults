@@ -7,6 +7,7 @@ USE="x86 embedded uclibc"
 ARCH="x86"
 COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
+CFLAGS="-O2 -mcpu=i386 -pipe"
 
 # 
 # FEATURES are settings that affect the functionality of portage. Most of
@@ -27,5 +28,5 @@ ACCEPT_KEYWORDS="x86"
 #                unpack -- for debugging purposes only.
 #
 
-FEATURES="sandbox sfperms strict nodocs"
-#FEATURES="sandbox sfperms strict userpriv usersandbox"
+FEATURES="sandbox sfperms strict noman noinfo nodoc"
+
