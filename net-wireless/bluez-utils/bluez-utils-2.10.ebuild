@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.10.ebuild,v 1.1 2004/08/21 01:41:19 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.10.ebuild,v 1.2 2004/09/19 15:25:44 puggy Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ppc ~amd64"
 IUSE="gtk"
 RDEPEND=">=net-wireless/bluez-libs-2.10
 	!net-wireless/bluez-pan
