@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.22 2004/03/01 20:39:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.23 2004/03/02 16:38:19 iggy Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="x86 ppc alpha sparc mips hppa amd64 ia64 ppc64"
+KEYWORDS="x86 ppc alpha sparc mips hppa amd64 ia64 ppc64 s390"
 
 src_unpack() {
 	unpack ${A}

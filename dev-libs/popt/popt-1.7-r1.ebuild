@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.8 2004/02/21 00:58:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.9 2004/03/02 16:44:36 iggy Exp $
 
 inherit libtool gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.1.x/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64"
+KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64 s390"
 
 DEPEND="nls? ( sys-devel/gettext )"
 
