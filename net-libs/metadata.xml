@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The net-libs category contains libraries which are network-related.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie net-libs enthält Bibliotheken zur Netzwerkprogrammierung.
+	</longdescription>
 </catmetadata>
 
