@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.4-r2.ebuild,v 1.1 2003/10/12 01:37:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.4-r2.ebuild,v 1.2 2003/10/12 03:45:54 mkennedy Exp $
 
 DESCRIPTION="Steel Bank Common Lisp (SBCL) is a Open Source development system for ANSI Common Lisp. It provides an interactive environment including an integrated native compiler, interpreter, and debugger. (And it, and its generated code, can also play nicely with Unix when running noninteractively.)"
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -14,8 +14,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/s/sbcl/sbcl_${PV}.orig.tar.gz
 	x86? ( mirror://sourceforge/sbcl/${PN}-${BV_X86}-x86-linux-binary.tar.bz2 )
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-binary-linux-ppc.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
-	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )
-	mirror://sourceforge/sbcl/sbcl-${PV}-html.tar.bz2"
+	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips"
@@ -97,11 +96,14 @@ pkg_postinst() {
 	# since the Portage emerge step kills file timestamp information,
 	# we need to compensate by ensuring all fasl files are more recent
 	# than their source.
-	sleep 5 && find /usr/lib/sbcl -type f -name \*.fasl |xargs touch
-
+	sleep 5 && \
+		find /usr/lib/sbcl -type f -name \*.fasl |xargs touch
 	/usr/sbin/register-common-lisp-implementation sbcl
 }
 
 pkg_prerm() {
 	/usr/sbin/unregister-common-lisp-implementation sbcl
+	# since we modified the .fasl files in postinst, we must manually
+	# remove them here
+	rm -rf /usr/lib/sbcl
 }
