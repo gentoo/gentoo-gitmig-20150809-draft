@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.48 2004/12/20 19:21:39 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.49 2004/12/29 03:35:06 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Dec 2004; <max@gentoo.org> files/dhcrelay.conf, files/dhcrelay.rc6:
   Fix dhcrelay startup script for proper commandline arguments and proper
@@ -23,7 +26,7 @@
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> dhcp-3.0.1.ebuild:
   keywords ~amd64.
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> dhcp-3.0.1.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> dhcp-3.0.1.ebuild:
   Keyword ~alpha, bug 65840.
 
   07 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> dhcp-3.0.1.ebuild:
