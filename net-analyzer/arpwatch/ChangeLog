@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.4 2003/02/15 07:35:13 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.5 2003/08/06 14:15:35 lanius Exp $
+
+  06 Aug 2003; lanius <lanius@gentoo.org> files/arpwatch.confd,
+  files/arpwatch.init:
+  addded debian/redhat patches, added config file
 
 *arpwatch-2.1.11 (08 Jan 2003)
 
@@ -9,5 +13,5 @@
 
   08 Jan 2003; Martin Holzer <mholzer@gentoo.org> arpwatch-2.1.11.ebuild files/arpwatch-2.1.11-gentoo.diff files/arpwatch.init files/digest-arpwatch-2.1.11 ChangeLog :
 
-  Added initial version. Submitted by asen@warlock.ru in #13484. 
+  Added initial version. Submitted by asen@warlock.ru in #13483. 
 
