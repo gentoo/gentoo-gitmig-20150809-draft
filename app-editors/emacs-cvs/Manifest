@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b7a0485d9c77f485fe4493ff8b525399 ChangeLog 4621
+MD5 ae265e7ced45f72f0ffa21285e4e7fab ChangeLog 4737
 MD5 3b1bff980356c4a65d57cc1b4cf3e0af emacs-cvs-21.3.50.ebuild 3039
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 ef284023992370c27bed699927aa4b25 emacs-cvs-22.0.50.ebuild 4580
+MD5 0bab5fd0b9f8e100935cdcc067b46e06 emacs-cvs-22.0.50.ebuild 4579
 MD5 919b9a7805e3d62b322df4bc8a94cf2b emacs-cvs-23.0.0.ebuild 4596
 MD5 04a64867694a98538309b433c80aaa62 files/40aspell-gentoo.el 80
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50 0
@@ -20,7 +20,7 @@ MD5 0b379e4c82898cbd3b9929d752b7bfab files/50emacs-23.0.0.envd 38
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCE1MAVWNWqTUmv+0RArdcAKCz13ixH8d5Rq8IXqHOBR2cUnxAmwCdEmiK
-LVdS531vLHATi4cfXD1B1d8=
-=Tyk5
+iD8DBQFCHpdYVWNWqTUmv+0RAm4xAJwPV+IvtTXBWhQPpaNS6tiSj1E+AACghCKq
+LH5Xa9U2PEAYQbAvGARytpA=
+=XftU
 -----END PGP SIGNATURE-----
