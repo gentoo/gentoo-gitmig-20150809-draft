@@ -1,0 +1,77 @@
+diff -aur muine-0.6.3-orig/src/HandleView.cs muine-0.6.3/src/HandleView.cs
+--- muine-0.6.3-orig/src/HandleView.cs	2004-05-11 13:50:07.000000000 -0400
++++ muine-0.6.3/src/HandleView.cs	2004-09-22 21:52:10.000000000 -0400
+@@ -34,15 +34,23 @@
+ 							  SignalDelegate cb, IntPtr data,
+ 							  IntPtr p, int flags);
+ 
++	private SignalDelegate PointerActivatedCB;
++	private SignalDelegate PointersReorderedCB;
++	private SignalDelegate SelectionChangedCB;
++
+ 	public HandleView () : base (IntPtr.Zero)
+ 	{
+ 		Raw = pointer_list_view_new ();
+ 
+-		g_signal_connect_data (Raw, "pointer_activated", new SignalDelegate (PointerActivatedCallback),
++		PointerActivatedCB = new SignalDelegate (PointerActivatedCallback);
++		PointersReorderedCB = new SignalDelegate (PointersReorderedCallback);
++		SelectionChangedCB = new SignalDelegate (SelectionChangedCallback);
++
++		g_signal_connect_data (Raw, "pointer_activated", PointerActivatedCB,
+ 				       IntPtr.Zero, IntPtr.Zero, 0);
+-		g_signal_connect_data (Raw, "pointers_reordered", new SignalDelegate (PointersReorderedCallback),
++		g_signal_connect_data (Raw, "pointers_reordered", PointersReorderedCB,
+ 				       IntPtr.Zero, IntPtr.Zero, 0);
+-		g_signal_connect_data (Raw, "selection_changed", new SignalDelegate (SelectionChangedCallback),
++		g_signal_connect_data (Raw, "selection_changed", SelectionChangedCB,
+ 				       IntPtr.Zero, IntPtr.Zero, 0);
+ 	}
+ 
+diff -aur muine-0.6.3-orig/src/NotificationAreaIcon.cs muine-0.6.3/src/NotificationAreaIcon.cs
+--- muine-0.6.3-orig/src/NotificationAreaIcon.cs	2004-06-18 15:14:28.000000000 -0400
++++ muine-0.6.3/src/NotificationAreaIcon.cs	2004-09-23 10:11:49.521428120 -0400
+@@ -190,8 +190,8 @@
+ 		x = menu_x;
+ 		y = menu_y;
+ 
+-		int monitor = menu.Screen.GetMonitorAtPoint (x, y);
+-		Gdk.Rectangle rect = menu.Screen.GetMonitorGeometry (monitor);
++		int monitor = ((Widget)menu).Screen.GetMonitorAtPoint (x, y);
++		Gdk.Rectangle rect = ((Widget)menu).Screen.GetMonitorGeometry (monitor);
+ 
+ 		int space_above = y - rect.Y;
+ 		int space_below = rect.Y + rect.Height - y;
+diff -aur muine-0.6.3-orig/src/Player.cs muine-0.6.3/src/Player.cs
+--- muine-0.6.3-orig/src/Player.cs	2004-06-05 09:56:38.000000000 -0400
++++ muine-0.6.3/src/Player.cs	2004-09-22 21:53:17.000000000 -0400
+@@ -182,6 +182,10 @@
+ 							         IntPtr p, int flags);
+ 	}
+ 
++	private IntSignalDelegate tick_cb;
++	private SignalDelegate eos_cb;
++	private StringSignalDelegate error_cb;
++
+ 	public Player () : base (IntPtr.Zero)
+ 	{
+ 		IntPtr error_ptr;
+@@ -193,11 +197,15 @@
+ 			throw new Exception (error);
+ 		}
+ 		
+-		ConnectInt.g_signal_connect_data (Raw, "tick", new IntSignalDelegate (TickCallback),
++		tick_cb = new IntSignalDelegate (TickCallback);
++		eos_cb = new SignalDelegate (EosCallback);
++		error_cb = new StringSignalDelegate (ErrorCallback);
++
++		ConnectInt.g_signal_connect_data (Raw, "tick", tick_cb,
+ 		                                  IntPtr.Zero, IntPtr.Zero, 0);
+-		Connect.g_signal_connect_data (Raw, "end_of_stream", new SignalDelegate (EosCallback),
++		Connect.g_signal_connect_data (Raw, "end_of_stream", eos_cb,
+ 				               IntPtr.Zero, IntPtr.Zero, 0);
+-		ConnectString.g_signal_connect_data (Raw, "error", new StringSignalDelegate (ErrorCallback),
++		ConnectString.g_signal_connect_data (Raw, "error", error_cb,
+ 				                     IntPtr.Zero, IntPtr.Zero, 0);
+ 
+ 		playing = false;
