@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/treeviewx/treeviewx-0.4.ebuild,v 1.1 2004/08/08 16:26:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/treeviewx/treeviewx-0.4.ebuild,v 1.2 2004/11/01 03:01:45 ribosome Exp $
 
 DESCRIPTION="A phylogenetic tree viewer"
 HOMEPAGE="http://darwin.zoology.gla.ac.uk/~rpage/treeviewx/"
 SRC_URI="http://darwin.zoology.gla.ac.uk/~rpage/${PN}/tv-${PV}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 

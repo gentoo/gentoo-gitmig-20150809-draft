@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/treeviewx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/treeviewx/ChangeLog,v 1.1 2004/08/08 16:26:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/treeviewx/ChangeLog,v 1.2 2004/11/01 03:01:45 ribosome Exp $
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> treeviewx-0.4.ebuild:
+  Added to x86.
 
 *treeviewx-0.4 (8 Aug 2004)
 
