@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.3.ebuild,v 1.5 2004/05/29 03:33:06 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.3.ebuild,v 1.6 2004/06/03 23:10:12 geoman Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha ~mips hppa ~amd64 ~ia64"
+KEYWORDS="x86 ppc ~sparc ~alpha mips hppa ~amd64 ~ia64"
 
 RDEPEND=">=dev-libs/glib-2
 	>=sys-devel/flex-2.5.4"
