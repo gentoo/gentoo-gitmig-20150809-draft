@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: envtest-1.2.3-r4.ebuild,v 1.29 2003/04/09 11:10:31 carpaski Exp $
+# $Id: envtest-1.2.3-r4.ebuild,v 1.30 2003/04/09 11:12:17 carpaski Exp $
 
 DESCRIPTION="This ebuild display the environment for an ebuild. It's for portage-testing purposes only and will _always_ fail."
 HOMEPAGE="http://foo.bar.com/"
@@ -21,6 +21,7 @@ src_compile() {
 src_install() {
 	die "Have a nice day!"
 }
+
 
 
 
