@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.28 2005/03/09 17:08:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.29 2005/03/11 03:00:31 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -124,9 +124,6 @@ toolchain-binutils_src_compile() {
 }
 
 toolchain-binutils_src_test() {
-	# sandbox + toolchain tests == angry tests
-	unset LD_PRELOAD
-
 	cd "${MY_BUILDDIR}"
 	make check || die "check failed :("
 }
