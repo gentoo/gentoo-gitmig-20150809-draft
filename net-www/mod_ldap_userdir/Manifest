@@ -1,0 +1,5 @@
+MD5 bc72202f5d99b5bca554cd382168d505 mod_ldap_userdir-1.1.1.ebuild 1770
+MD5 816dbb8c8214f29079c1c6aec0b8d20b ChangeLog 457
+MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
+MD5 650877f5bf9738cca23bbbeeb5bf87d9 files/47_mod_ldap_userdir.conf 375
+MD5 7c29da41475b54ecba7e1ca97c9d9bea files/digest-mod_ldap_userdir-1.1.1 73
