@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta9.ebuild,v 1.2 2003/10/26 19:27:07 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta9.ebuild,v 1.3 2003/10/26 20:03:44 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #Original Kernel Version before Patches
@@ -18,7 +18,7 @@ KV=${KV//${PN}-}
 # eg: 2.6.0-test8-r1-patchset-1
 # this gets added on right at the end before it links
 # if you dont want to apply these patches, set GPV=0
-[ ! $(use vanilla) ] && GPV=0.1
+[ ! $(use vanilla) ] && GPV=0.2
 
 S=${WORKDIR}/linux-${OKV}
 ETYPE="sources"
