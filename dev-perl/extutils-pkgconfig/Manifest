@@ -1,10 +1,20 @@
-MD5 b7781ede1b712b1803d361fab9516f8e ChangeLog 1220
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f010d3dde5d424d79113e90fb612e67c ChangeLog 1383
 MD5 41f300c97f1d4a4f7891c041808e1a68 extutils-pkgconfig-1.02.ebuild 593
 MD5 1f293ecd537a82aaccdd4a08c83b0212 extutils-pkgconfig-1.03.ebuild 601
 MD5 89ca8d6c0e19b3adf31267013b1c8dd4 extutils-pkgconfig-1.05.ebuild 612
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 81ec9a295523d22bb5fee986595c73a5 extutils-pkgconfig-1.07.ebuild 478
+MD5 f785b55c70cdca58c2848b3fe5f49d10 extutils-pkgconfig-1.07.ebuild 601
 MD5 134f43b6ad21f65524d605a8a6b307c7 files/digest-extutils-pkgconfig-1.02 73
 MD5 b8fdb7c294f9e548cf4612e83cd22c72 files/digest-extutils-pkgconfig-1.03 73
 MD5 dc721520775714dd4d316255786c8787 files/digest-extutils-pkgconfig-1.05 73
 MD5 4e1daf1288c0a8286f35bafb57aae939 files/digest-extutils-pkgconfig-1.07 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLGnhtG5z4I8BtQoRAn/nAJ9Z1S+NnfLGm7C5Q6uIHp/seVHFBACfdy+D
+2rkNgST7OUYWNPxp8h15lbc=
+=VvC0
+-----END PGP SIGNATURE-----
