@@ -1,6 +1,16 @@
-MD5 eeb60f55975345de713e4e94c0c1e6a4 ChangeLog 857
-MD5 6d35307d60894bfab2aa30cacc682a5b atop-1.13.ebuild 871
-MD5 1c778088f971e4891c1e59e93f3ab68f atop-1.9.ebuild 763
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 15549e495e022243ed3cd7250cd256ab ChangeLog 1040
+MD5 442187268ede0f41cd4b5b95843e27ef atop-1.13.ebuild 874
+MD5 701d2375c48535ed551339c615c090f4 atop-1.9.ebuild 766
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c21353e3cfd66e9e2108b1da390e9fad files/digest-atop-1.9 120
 MD5 64d981f140d4e6136ab5e48b54cf3d2f files/digest-atop-1.13 122
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJyybLLFUmVNQ7rkRAhoqAJ92TOuazKbCdVHqiiWZxIalFQcAKgCeJvej
+PzGEcC8p/iyOA4Ubj22jmoQ=
+=Wprt
+-----END PGP SIGNATURE-----
