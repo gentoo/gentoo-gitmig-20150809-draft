@@ -1,0 +1,9 @@
+# ChangeLog for app-benchmarks/bonnie
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/ChangeLog,v 1.1 2003/02/11 18:57:16 sethbc Exp $
+
+*bonnie-2.0.6 (07 Jan 2003)
+
+  07 Jan 2003; Seth Chandler <sethbc@gentoo.org>: bonnie-2.0.6.ebuild
+  Initial import of bonnie. thanks to Thomas T. Veldhouse 
+  <veldy@veldy.net>

@@ -1,0 +1,8 @@
+--- Makefile.orig	2003-01-07 14:21:26.000000000 -0600
++++ Makefile	2003-01-07 14:23:23.000000000 -0600
+@@ -1,4 +1,4 @@
+-CFLAGS = -O $(SYSFLAGS)
++CFLAGS = $(SYSFLAGS)
+ 
+ bsd:	
+ 	@echo 'Options are "make bsd" and "make SysV" - the default is "bsd".'
