@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r2.ebuild,v 1.2 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r2.ebuild,v 1.3 2003/10/30 17:54:03 pebenito Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="The Vixie cron daemon"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 HOMEPAGE=""
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~arm ~mips ~hppa ~ia64"
+KEYWORDS="x86 ~amd64 ppc ~sparc ~alpha ~arm ~mips ~hppa ~ia64"
 SLOT="0"
 LICENSE="as-is"
 
