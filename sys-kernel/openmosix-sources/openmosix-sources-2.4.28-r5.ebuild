@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.28-r2.ebuild,v 1.2 2004/12/09 09:57:55 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.28-r5.ebuild,v 1.1 2005/01/10 17:52:15 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
 inherit kernel eutils
 
 OKV="2.4.28"
-TIMESTAMP="20041206"
+TIMESTAMP="20050110"
 [ "${PR}" == "r0" ] && KV=${PV/_/-}-openmosix || KV=${PV/_/-}-openmosix-${PR}
 S=${WORKDIR}/linux-${KV}
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.kernel.org/
 		http://dev.gentoo.org/~voxus/om/"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 IUSE=""
 
 src_unpack() {
@@ -39,5 +39,15 @@ src_unpack() {
 	epatch ${DISTDIR}/patch-${OKV}-om-migshm-${TIMESTAMP}.bz2 || die "openMosix patch failed."
 	epatch ${FILESDIR}/${PN}-binfmt_aout.patch || die "Security patch for binfmt_aout failed."
 	epatch ${FILESDIR}/${PN}-dn_neigh.patch || ewarn "dn_neigh patch failed."
+	epatch ${FILESDIR}/${PN}-moxa_random.patch || die "Security patch for moxa and random failed."
+
+	# CAN's
+	epatch ${FILESDIR}/${PN}.CAN-2004-1016.patch || die "Patch for CAN-2004-1016 failed."
+	epatch ${FILESDIR}/${PN}.CAN-2004-1056.patch || die "Patch for CAN-2004-1056 failed."
+	epatch ${FILESDIR}/${PN}.CAN-2004-1137.patch || die "Patch for CAN-2004-1137 failed."
+	epatch ${FILESDIR}/${PN}.CAN-2004-1235.patch || die "Patch for CAN-2004-1235 failed."
+
+	epatch ${FILESDIR}/${PN}-vma.patch || "Second patch for CAN-2004-1074 failed."
+
 	kernel_universal_unpack
 }

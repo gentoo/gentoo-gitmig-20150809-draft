@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.79 2004/12/27 16:49:40 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.80 2005/01/10 17:52:15 voxus Exp $
+
+*openmosix-sources-2.4.28-r5 (10 Jan 2005)
+
+  10 Jan 2005; Konstantin Arkhipov <voxus@gentoo.org>:
+  -openmosix-sources-2.4.28-r2.ebuild,
+  openmosix-sources-2.4.28-r4.ebuild,
+  +openmosix-sources-2.4.28-r5.ebuild:
+  Security patches, closing bugs #77094 and #77025.
+  Version bump also.
 
 *openmosix-sources-2.4.28-r4 (27 Dec 2004)
 

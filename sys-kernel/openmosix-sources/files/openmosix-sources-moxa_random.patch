@@ -1,0 +1,33 @@
+diff -ur linux-2.4.28/drivers/char/moxa.c linux-2.4.28.plasmaroo/drivers/char/moxa.c
+--- linux-2.4.28/drivers/char/moxa.c	2001-10-25 21:53:47.000000000 +0100
++++ linux-2.4.28.plasmaroo/drivers/char/moxa.c	2005-01-08 02:54:49.195636192 +0000
+@@ -1771,6 +1771,8 @@
+ 		return -EFAULT;
+ 	if(dltmp.cardno < 0 || dltmp.cardno >= MAX_BOARDS)
+ 		return -EINVAL;
++	if(dltmp.len < 0 || dltmp.len > sizeof(moxaBuff))
++		return -EINVAL;
+ 
+ 	switch(cmd)
+ 	{
+@@ -2927,8 +2929,6 @@
+ 	unsigned long baseAddr;
+ 	int i;
+ 
+-	if(len > sizeof(moxaBuff))
+-		return -EINVAL;
+ 	if(copy_from_user(moxaBuff, tmp, len))
+ 		return -EFAULT;
+ 	baseAddr = moxaBaseAddr[cardno];
+diff -ur linux-2.4.28/drivers/char/random.c linux-2.4.28.plasmaroo/drivers/char/random.c
+--- linux-2.4.28/drivers/char/random.c	2004-11-17 11:54:21.000000000 +0000
++++ linux-2.4.28.plasmaroo/drivers/char/random.c	2005-01-08 02:54:49.198635736 +0000
+@@ -1787,7 +1787,7 @@
+ 			     void *oldval, size_t *oldlenp,
+ 			     void *newval, size_t newlen, void **context)
+ {
+-	int	len;
++	size_t	len;
+ 	
+ 	sysctl_poolsize = random_state->poolinfo.POOLBYTES;
+ 
