@@ -22,6 +22,33 @@ export DIROPTIONS="-m0755"
 export MOPREFIX=${PN}
 export KVERS=`uname -r`
 
+
+unpack() {
+	local x
+	for x in "$@"
+	do
+		echo ">>> Unpacking ${x}"
+		case "${x##*.}" in
+		tar)
+			tar xf ${DISTDIR}/${x} || die
+			;;
+		gz|tgz|Z|z) 
+			tar xzf ${DISTDIR}/${x} || die
+			;;
+		bz2|tbz2)
+			cat ${DISTDIR}/${x} | bzip2 -d | tar xf - || die
+			;;
+		ZIP|zip)
+			unzip ${DISTDIR}/${x} || die
+			;;
+		*)
+			echo '!!!'" Error: couldn't unpack ${x}: file format not recognized"
+			exit 1
+			;;
+		esac
+	done
+}
+
 src_unpack() { 
 	unpack ${A} 
 }
