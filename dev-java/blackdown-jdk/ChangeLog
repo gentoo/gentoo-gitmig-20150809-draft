@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.37 2003/09/01 11:29:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.38 2003/10/03 10:57:22 pappy Exp $
+
+  03 Oct 2003; Alexander Gabert <pappy@gentoo.org> blackdown-jdk-1.4.1.ebuild:
+  added chpax behaviour for proper operation of blackdown under PaX kernels
 
   01 Sep 2003; Jason Wever <weeve@gentoo.org> blackdown-jdk-1.4.1.ebuild:
   Added fixes for bugs #26629 and #26925.
