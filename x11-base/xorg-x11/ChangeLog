@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.314 2005/02/03 16:34:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.315 2005/02/03 18:41:07 fmccor Exp $
+
+  03 Feb 2005; Ferris McCormick <fmccor@gentoo.org> xorg-x11-6.8.1.904.ebuild:
+  Add ~sparc keyword.  This release is working well for me (hardened and patched
+  for sunffb+xaa and for sunleo, as described at Bug 79467).
 
   03 Feb 2005; Markus Rothe <corsair@gentoo.org> xorg-x11-6.8.1.904.ebuild:
   Added ~ppc64 to KEYWORDS
