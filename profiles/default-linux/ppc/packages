@@ -1,0 +1,27 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/packages,v 1.3 2004/09/15 05:08:39 vapier Exp $
+
+*>=sys-devel/binutils-2.14.90.0.6
+*>=sys-devel/gcc-3.2.3
+*>=sys-libs/glibc-2.3.2
+
+*sys-apps/raidtools
+*app-arch/ncompress
+*app-arch/sharutils
+*dev-libs/popt
+*dev-perl/ExtUtils-MakeMaker
+*net-ftp/ftp
+*net-misc/dhcpcd
+*sys-apps/eject
+*sys-apps/fbset
+*sys-apps/hdparm
+*sys-apps/slocate
+*sys-apps/xinetd
+*sys-fs/hfsutils
+*sys-fs/mac-fdisk
+*sys-fs/reiserfsprogs
+*sys-libs/gdbm
+*sys-libs/pwdb
+*virtual/bootloader
+*virtual/editor
