@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/scponly
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.1 2003/04/22 21:27:03 avenj Exp $
+
+*scponly-3.7 (22 Apr 2003)
+
+   22 Apr 2003; Jon Portnoy <avenj@gentoo.org> scponly-3.7.ebuild :
+
+   Initial import. Ebuild submitted in bug #18850 by Matsuu Takuto
+   <matsuu@7501.net>.
