@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.862 2005/01/13 22:13:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.863 2005/01/13 23:19:25 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -297,8 +297,10 @@ kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 kde-base/kdeartwork:xscreensaver - Builds xscreensavers as compile time
-kde-base/kdegraphics:jpeg2k - Enable support for jpeg2k (jasper)
+kde-base/kdebase:logitech-mouse - Builds module for configuring logitech mice.
 kde-base/kdegraphics:povray - Enable povray dependency - needed for kpovmodeler
+kde-base/kdelibs:jpeg2k - Enable support for jpeg2k (jasper)
+kde-base/kdelibs:openexr - Enable support for openexr graphic file format (www.openexr.com)
 kde-base/kdemultimedia:cdparanoia - Enables build support for the cdparanoia package
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
