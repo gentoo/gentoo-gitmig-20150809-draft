@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.10 2004/06/24 23:14:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.11 2004/10/01 10:19:07 kugelfang Exp $
 
 inherit eutils
 
@@ -92,7 +92,8 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	preplib
-	dosed "s:-pthread::g" /usr/lib/libSDL.la # Bug 34804
+	dosed "s:-pthread::g" /usr/$(get_libdir)/libSDL.la # Bug 34804
+	# $(get_libdir) fixed BUG #65495.
 	dodoc BUGS CREDITS README README-SDL.txt README.CVS TODO WhatsNew
 	dohtml -r ./
 }

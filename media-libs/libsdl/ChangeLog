@@ -1,11 +1,18 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.59 2004/10/01 00:26:46 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.60 2004/10/01 10:19:07 kugelfang Exp $
+
+  01 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> libsdl-1.2.6-r3.ebuild,
+  libsdl-1.2.7-r1.ebuild, libsdl-1.2.7-r2.ebuild, libsdl-1.2.7-r3.ebuild,
+  libsdl-1.2.7.ebuild:
+  Fixed BUG #65495 (get_libdir) for all versions of libsdl in the tree.
 
 *libsdl-1.2.7-r3 30 Sep 2004
 
-  30 Sep 2004;  <> 
-  # INSERT ENTRY HERE
+  30 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> libsdl-1.2.7-r3.ebuild: 
+  Bumped to 1.2.7-r3. New version depends on >=media-libs/libcaca-0.9-r1,
+  which supplies a shared library now and allows libSDL.so to be build
+  again.
 
   19 Sep 2004; Mike Frysinger <vapier@gentoo.org> libsdl-1.2.7-r2.ebuild:
   Add code to check for broken DirectFB #61592.
