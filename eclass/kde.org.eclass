@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.org.eclass,v 1.14 2002/08/13 12:35:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.org.eclass,v 1.15 2002/08/18 23:55:03 danarmak Exp $
 # Contains the locations of ftp.kde.org packages and their mirrors
 ECLASS=kde.org
 INHERITED="$INHERITED $ECLASS"
@@ -16,7 +16,7 @@ case "$PV" in
     5)		SRC_URI="" # cvs ebuilds, no SRC_URI needed
 		debug-print "$ECLASS: finished, cvs detected, SRC_URI=$SRC_URI"
 		return 0 ;; 
-    *)		die "$ECLASS: Error: unrecognized version $PV, could not set SRC_URI" ;;
+    *)		debug-print "$ECLASS: Error: unrecognized version $PV, could not set SRC_URI" ;;
 esac
 
 SRC_URI="mirror://kde/$SRC_PATH"

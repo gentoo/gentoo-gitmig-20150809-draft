@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.11 2002/08/10 12:53:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.12 2002/08/18 23:54:59 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -43,8 +43,8 @@ INHERITED="$INHERITED $ECLASS"
 [ -z "$ECVS_PASS" ] && ECVS_PASS=""
 
 # Module to be fetched, must be set explicitly -
-# I don't like the former ="$NP" default setting
-[ -z "$ECVS_MODULE" ] && die "$ECLASS: error: ECVS_MODULE not set, cannot continue"
+# I don't like the former ="$PN" default setting
+[ -z "$ECVS_MODULE" ] && debug-print "$ECLASS: error: ECVS_MODULE not set, cannot continue"
 
 # Subdirectory in module to be fetched, default is not defined = whole module
 # DO NOT set default to "", if it's defined at all code will break!
