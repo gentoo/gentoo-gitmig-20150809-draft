@@ -1,0 +1,25 @@
+--- subversion-1.1.0-rc2.orig/configure.in	2004-08-10 19:31:57.000000000 +0200
++++ subversion-1.1.0-rc2/configure.in	2004-08-28 18:48:07.130058136 +0200
+@@ -698,6 +698,11 @@
+ SVN_CONFIG_SCRIPT(tools/hook-scripts/propchange-email.pl)
+ SVN_CONFIG_SCRIPT(subversion/bindings/swig/perl/native/Makefile.PL)
+ 
++test -z "$SVN_DB_INCLUDES" && SVN_DB_INCLUDES=""
++AC_SUBST(SVN_DB_INCLUDES)
++test -z "$SVN_DB_LIBS" && SVN_DB_LIBS=""
++AC_SUBST(SVN_DB_LIBS)
++
+ AC_OUTPUT
+ 
+ 
+--- subversion-1.1.0-rc2.orig/Makefile.in	2004-08-10 18:35:02.000000000 +0200
++++ subversion-1.1.0-rc2/Makefile.in	2004-08-28 18:56:44.650383088 +0200
+@@ -177,7 +177,7 @@
+ LINK_PY_WRAPPER = $(LIBTOOL) $(LTFLAGS) --mode=link $(SWIG_PY_LINK) $(SWIG_LDFLAGS) -rpath $(swig_pydir) -avoid-version -module
+ LINK_JAVA_WRAPPER = $(LIBTOOL) $(LTFLAGS) --mode=link $(SWIG_JAVA_LINK) $(SWIG_LDFLAGS) -rpath $(swig_javadir) -avoid-version -module
+ 
+-LINK_JAVAHL_CXX = $(LIBTOOL) $(LTFLAGS) --mode=link $(CXX) $(LT_LDFLAGS) $(CFLAGS) $(LDFLAGS) -rpath $(libdir)
++LINK_JAVAHL_CXX = $(LIBTOOL) $(LTFLAGS) --mode=link $(CXX) $(LT_LDFLAGS) $(CFLAGS) $(LDFLAGS) -rpath $(libdir) -lstdc++
+ 
+ INSTALL = @INSTALL@
+ INSTALL_LIB = $(LIBTOOL) --mode=install $(INSTALL)
