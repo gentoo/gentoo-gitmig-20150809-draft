@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/slime-cvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/ChangeLog,v 1.1 2003/11/12 00:12:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/ChangeLog,v 1.2 2003/12/16 06:02:26 mkennedy Exp $
+
+  15 Dec 2003; <mkennedy@gentoo.org> slime-cvs-0.ebuild, files/swank.asd:
+  catchup to cvs. resolves bug #35551
 
 *slime-cvs-0 (11 Nov 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0.ebuild,v 1.1 2003/11/12 00:12:26 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0.ebuild,v 1.2 2003/12/16 06:02:26 mkennedy Exp $
 
 ECVS_SERVER="common-lisp.net:/project/slime/cvsroot"
 ECVS_MODULE="slime"
@@ -38,7 +38,7 @@ src_install() {
 	elisp-site-file-install ${FILESDIR}/70slime-gentoo.el
 	dodoc README* ChangeLog
 	insinto /usr/share/common-lisp/source/swank
-	doins null-swank-impl.lisp swank-{cmucl,sbcl}.lisp swank.lisp ${FILESDIR}/swank.asd
+	doins null-swank-impl.lisp swank-backend.lisp swank-{cmucl,sbcl}.lisp swank.lisp ${FILESDIR}/swank.asd
 	dodir /usr/share/common-lisp/systems
 	dosym /usr/share/common-lisp/source/swank/swank.asd \
 		/usr/share/common-lisp/systems
