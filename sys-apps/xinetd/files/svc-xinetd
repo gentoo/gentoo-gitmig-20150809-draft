@@ -1,0 +1,42 @@
+#!/bin/sh
+#RCUPDATE:3 4:72:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=svc-xinetd
+opts="start stop"
+
+prepconfig() {
+	if [ ! -e /etc/xinetd.conf ] ; then
+		einfo "Creating new config from inetd..."
+	  	/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
+	fi
+	if [ /etc/inetd.conf -nt /etc/xinetd.conf ] ; then
+		einfo "Creating new config from inetd..."
+		/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
+	fi
+	if [ ! -e /etc/xinetd.conf ]
+	then
+		eerror "xinetd not started.  Config file not found."
+		exit 1
+	fi
+}
+
+start() {
+    ebegin "Starting ${SERVICE}"
+	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping ${SERVICE}"
+   	if [ -e ${SVCDIR}/control/${SERVICE} ]
+	then
+		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}
+		rm ${SVCDIR}/control/${SERVICE}
+	fi
+	eend $?
+}
+
+doservice ${@}
+
