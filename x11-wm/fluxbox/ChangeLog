@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.13 2002/06/18 23:12:51 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.14 2002/07/01 10:07:34 seemant Exp $
+
+*fluxbox-0.19-r2 (1 Jul 2002)
+
+  1 Jul 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.19-r2.ebuild
+  files/digest-fluxbox-0.19-r2 :
+
+  Added Oly's antialiasing patch, as suggested in bug #4376 by:
+  depairet@gmx.de (dominik) who also submitted a patched ebuild for it.
 
 *fluxbox-0.19-r1 (19 Jun 2002)
 
