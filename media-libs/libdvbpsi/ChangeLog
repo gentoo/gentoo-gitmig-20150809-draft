@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.15 2004/06/24 23:07:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.16 2004/12/06 15:54:00 lordvan Exp $
+
+  06 Dec 2004; Thomas Raschbacher <lordvan@gentoo.org> metadata.xml, 
+	libdvbpsi-0.1.4-r1.ebuild:
+  Added 0.1.4-r1 which fixes bug #41243 (thanks to Artem Baguinski <artm@v2.nl>)
+  Changed dep so that it doesn't depend on doxygen if USE="-doc".
+  Added metadata.xml
 
   07 Jun 2004; Travis Tilley <lv@gentoo.org> libdvbpsi-0.1.4.ebuild:
   stable on amd64
