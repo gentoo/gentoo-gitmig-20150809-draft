@@ -1,0 +1,7 @@
+For new installations:
+- touch ${MY_INSTALLDIR}/.htaccess ${MY_INSTALLDIR}/config.php
+and 
+chown ${VHOST_SERVER_GID}:${VHOST_SERVER_UID} ${MY_INSTALLDIR}/.htaccess ${MY_INSTALLDIR}/config.php
+
+Then point your browser to http://yourhost/gallery/setup/
+and follow the instructions.
