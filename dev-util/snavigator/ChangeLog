@@ -1,9 +1,13 @@
 # ChangeLog for dev-util/snavigator
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/snavigator/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/snavigator/ChangeLog,v 1.2 2002/10/30 21:48:52 cretin Exp $
 
 *snavigator-5.0 (1 Feb 2002)
 
+  30 Oct 2002; S.Jones <cretin@gentoo.org>:
+
+  Changed emake to make and added mkdir -p ${D}/etc/env.d/ to fix ebuild.
+  
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
