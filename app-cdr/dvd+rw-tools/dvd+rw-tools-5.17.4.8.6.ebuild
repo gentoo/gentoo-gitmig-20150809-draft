@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.17.4.8.6.ebuild,v 1.8 2004/06/24 21:33:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.17.4.8.6.ebuild,v 1.9 2004/06/27 21:14:34 vapier Exp $
 
-DESCRIPTION="A set of tools for DVD+RW/-RW drives."
+DESCRIPTION="A set of tools for DVD+RW/-RW drives"
 HOMEPAGE="http://fy.chalmers.se/~appro/linux/DVD+RW/"
 SRC_URI="http://fy.chalmers.se/~appro/linux/DVD+RW/tools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ppc sparc hppa amd64 alpha ia64"
-
 IUSE=""
 
-DEPEND="virtual/glibc
-		app-cdr/cdrtools"
+DEPEND="virtual/libc
+	app-cdr/cdrtools"
 
 src_compile() {
 	sed -i -e "s:^CFLAGS=\$(WARN).*:CFLAGS=${CFLAGS}:" \
@@ -23,10 +22,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin dvd+rw-booktype
-	dobin dvd+rw-format
-	dobin dvd+rw-mediainfo
-	dobin growisofs
+	dobin dvd+rw-booktype dvd+rw-format dvd+rw-mediainfo growisofs || die
 	dohtml index.html
 	doman growisofs.1
 }

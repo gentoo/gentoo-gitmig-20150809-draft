@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.16 2004/06/24 21:32:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.17 2004/06/27 21:13:18 vapier Exp $
 
 inherit eutils gcc
 
 DVDR_PATCH_P="cdrtools-2.01a25-dvd.patch"
-DESCRIPTION="A set of tools for CDR drives, including cdrecord."
+DESCRIPTION="A set of tools for CDR drives, including cdrecord"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
 	dvdr? ( mirror://gentoo/${DVDR_PATCH_P}.bz2 )"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
 IUSE="dvdr"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 PROVIDE="virtual/cdrtools"
 
 S=${WORKDIR}/${PN}-2.01
