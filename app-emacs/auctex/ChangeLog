@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.6 2003/06/10 00:51:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.7 2003/10/09 15:24:27 usata Exp $
+
+  10 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> auctex-10.0g.ebuild,
+  auctex-11.13.ebuild, auctex-11.14.ebuild:
+  Changed to depend on virtual/tetex
 
   09 Jun 2003; <msterret@gentoo.org> auctex-11.14.ebuild:
   DEPEND on sed >= 4

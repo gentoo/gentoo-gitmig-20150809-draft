@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.14.ebuild,v 1.5 2003/09/08 04:15:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.14.ebuild,v 1.6 2003/10/09 15:24:27 usata Exp $
 
 inherit elisp
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 
 DEPEND="virtual/emacs
 	>=sys-apps/sed-4
-	app-text/tetex"
+	virtual/tetex"
 
 S="${WORKDIR}/${P}"
 
