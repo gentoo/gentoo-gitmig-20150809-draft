@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1c281d1ceed4b173118e9044ab1e3194 ChangeLog 1398
 MD5 6ccd0e22262e34cff1aa44e5d0ec5dfa splitvt-1.6.5.ebuild 815
+MD5 9fd84a1282b6b04f65540d5793846b33 splitvt-1.6.5-r1.ebuild 1080
+MD5 8e18b5276d36124cb0bf2176c20376b1 ChangeLog 1578
 MD5 1152531db65d40cff4ce7511a24c9534 metadata.xml 166
 MD5 4675708dafd82ae94d6e1f37569c1a34 files/digest-splitvt-1.6.5 64
+MD5 0a9bb5fcdd5c9c90bc6a3e3c33be6417 files/digest-splitvt-1.6.5-r1 130
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB+9V+CHk4+ZoBpvsRAi18AJ9z0BvxpHOmNJCyMSChhNwIwFXIAACeOTlB
-/6naUa2fm6R0m7G3AvpDUJY=
-=X7Ec
+iD8DBQFB/DEtEZCkKN40op4RAmFvAJ0VGPNVbjPT6mrxmrzWTZ9GsYoCsgCfSHai
+o9iODcIkl8qaGozVUHOs/ns=
+=92iX
 -----END PGP SIGNATURE-----
