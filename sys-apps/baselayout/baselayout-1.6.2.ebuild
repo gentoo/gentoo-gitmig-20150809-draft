@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.3 2001/09/03 06:17:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.4 2001/09/03 06:48:34 drobbins Exp $
 
 SV=1.1.5
 S=${WORKDIR}/rc-scripts-${SV}
@@ -16,6 +16,7 @@ src_compile() {
 	cp ${S}/init.d/runscript.c ${T}
 	cd ${T}
 	gcc ${CFLAGS} runscript.c -o runscript
+	echo ${ROOT} > ${T}/ROOT
 }
 
 #adds ".keep" files so that dirs aren't auto-cleaned
@@ -33,15 +34,10 @@ src_install()
 	local foo
 	local altmerge
 	altmerge=0
-	if [ "$MAINTAINER" != "yes" ] && [ "$ROOT" = "/" ]
-	then
-		echo '!!! baselayout should only be merged if you know what youre doing.'
-		echo '!!! It will overwrite important system files (passwd/group and others) with their'
-		echo '!!! original versions.  For now, please update your files by hand by'
-		echo '!!! comparing the contents of the files in '${FILESDIR}' to your'
-		echo '!!! installed versions.  We will have an automated update system shortly.'
-		exit 1
-	fi
+	#special ${T}/ROOT hack because ROOT gets automatically unset during src_install()
+	#(because it conflicts with some makefiles)
+	local ROOT
+	ROOT="`cat ${T}/ROOT`"
 	if [ "$ROOT" = "/" ] && [ "`cat /proc/mounts | grep '/dev devfs'`" ]
 	then
 		#we're installing to our current system and have devfs enabled.  We'll need to
@@ -151,21 +147,21 @@ src_install()
 #	insinto /usr/bin
 #	insopts -m0755
 #	doins colors
-	if [ $altmerge -ne 1 ]
+	if [ $altmerge -eq 1 ]
 	then
+		#rootfs and devfs
+		dosym /usr/sbin/MAKEDEV /dev-state/MAKEDEV
+		keepdir /dev-state
+		keepdir /dev-state/pts /dev-state/shm
+		cd ${D}/dev
+	else
 		#normal
 		keepdir /dev
 		keepdir /dev-state
 		keepdir /dev/pts /dev/shm
 		dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
 		cd ${D}/dev-state
-	else
-		#rootfs and devfs
-		dosym /usr/sbin/MAKEDEV /dev-state/MAKEDEV
-		keepdir /dev-state
-		keepdir /dev-state/pts /dev-state/shm
-		cd ${D}/dev
-	fi
+	fi	
 	#These devices are also needed by many people and should be included
 	echo "Making device nodes... (this could take a minute or so...)"
 	${S}/sbin/MAKEDEV generic-i386
