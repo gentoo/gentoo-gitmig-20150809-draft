@@ -1,2 +1,3 @@
 PATH=/opt/ICAClient
 ROOTPATH=/opt/ICAClient
+ICAROOT=/opt/ICAClient

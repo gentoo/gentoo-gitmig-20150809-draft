@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.14 2004/09/18 19:38:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.15 2004/10/05 02:25:44 weeve Exp $
+
+*icaclient-8.0-r1 (04 Oct 2004)
+
+  04 Oct 2004; Jason Wever <weeve@gentoo.org> files/10ICAClient,
+  +icaclient-8.0-r1.ebuild:
+  Added fixes for bugs #65732 and #66036. Thanks to Andy Wang
+  <dopey@moonteeth.com> and Nico Baggus <mlspamcb@noci.xs4all.nl> for the
+  work.
 
   18 Sep 2004; Jason Wever <weeve@gentoo.org> icaclient-7.0.ebuild,
   icaclient-8.0.ebuild:
