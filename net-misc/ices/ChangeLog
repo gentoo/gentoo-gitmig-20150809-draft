@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ices
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.9 2004/04/07 07:46:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.10 2004/04/08 07:59:05 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> ices-2.0.0.ebuild:
+  Stable x86.
 
   07 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> ices-2.0.0.ebuild,
   ices-2.0_beta4.ebuild:
