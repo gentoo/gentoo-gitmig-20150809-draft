@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/acpid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.2 2002/05/21 20:54:03 azarah Exp $
+
+*acpid-1.0.1 (21 May 2002)
+
+  21 May 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Updated version.  Resolves bug #2867.
 
 *acpid-1.0.0 (1 Feb 2002)
 
