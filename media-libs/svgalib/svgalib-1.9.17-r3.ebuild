@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.7 2003/10/10 18:33:04 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.8 2004/01/15 03:06:17 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.arava.co.il/matan/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="-* x86"
 
 DEPEND="virtual/glibc"
 
@@ -35,15 +35,15 @@ src_compile() {
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
 	has_version "sys-devel/hardened-gcc" && CC="${CC} -yet_exec"
 
-	make OPTIMIZE="${CFLAGS}" static shared textutils lrmi utils || \
-		die "Failed to build libraries and utils!"
+	make OPTIMIZE="${CFLAGS}" static shared textutils lrmi utils \
+		|| die "Failed to build libraries and utils!"
 	# Build the gl stuff tpp
 	make OPTIMIZE="${CFLAGS}" -C gl || die "Failed to build gl!"
-	make OPTIMIZE="${CFLAGS}" -C gl libvgagl.so.${PV} || \
-		die "Failed to build libvgagl.so.${PV}!"
+	make OPTIMIZE="${CFLAGS}" -C gl libvgagl.so.${PV} \
+		|| die "Failed to build libvgagl.so.${PV}!"
 	rm -f src/svgalib_helper.h
-	make OPTIMIZE="${CFLAGS}" -C src libvga.so.${PV} || \
-		die "Failed to build libvga.so.${PV}!"
+	make OPTIMIZE="${CFLAGS}" -C src libvga.so.${PV} \
+		|| die "Failed to build libvga.so.${PV}!"
 	cp -a src/libvga.so.${PV} sharedlib/
 	make OPTIMIZE="${CFLAFS}" LDFLAGS='-L ../sharedlib' \
 		-C threeDKit lib3dkit.a || die "Failed to build threeDKit!"
@@ -51,8 +51,8 @@ src_compile() {
 	make INCLUDEDIR="/usr/src/linux/include" -C kernel/svgalib_helper \
 		clean all || die "Failed to build kernel module!"
 
-	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L ../sharedlib' demoprogs || \
-		die "Failed to build demoprogs!"
+	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L ../sharedlib' demoprogs \
+		|| die "Failed to build demoprogs!"
 
 	cp Makefile Makefile.orig
 	sed -e 's/\(install: $(INSTALLAOUTLIB) \)installheaders \(.*\)/\1\2/g' \
@@ -65,8 +65,8 @@ src_install() {
 	dodir /etc/svgalib /usr/{include,lib,bin,share/man}
 
 	make TOPDIR=${D} OPTIMIZE="${CFLAGS}" \
-		INCLUDEDIR="/usr/src/linux/include" install || \
-		die "Failed to install svgalib!"
+		INCLUDEDIR="/usr/src/linux/include" install \
+		|| die "Failed to install svgalib!"
 
 	insinto /usr/include
 	doins gl/vgagl.h
