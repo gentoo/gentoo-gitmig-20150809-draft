@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.11.ebuild,v 1.1 2003/10/14 21:24:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.11.ebuild,v 1.2 2003/10/26 22:05:04 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -159,38 +159,40 @@ keepdir_mount() {
 }
 
 create_dev_nodes() {
+	export PATH="${D}/sbin:${PATH}"
+
 	case ${ARCH} in
 		x86)
 			einfo "Using generic-i386 to make device nodes..."
-			${ROOT}/sbin/MAKEDEV generic-i386
+			${D}/sbin/MAKEDEV generic-i386
 			;;
 		ppc)
 			einfo "Using generic-powerpc to make device nodes..."
-			${ROOT}/sbin/MAKEDEV generic-powerpc
+			${D}/sbin/MAKEDEV generic-powerpc
 			;;
 		sparc)
 			einfo "Using generic-sparc to make device nodes..."
-			${ROOT}/sbin/MAKEDEV generic-sparc
+			${D}/sbin/MAKEDEV generic-sparc
 			;;
 		mips)
 			einfo "Using generic-mips to make device nodes..."
-			${ROOT}/sbin/MAKEDEV generic-mips
+			${D}/sbin/MAKEDEV generic-mips
 			;;
 		arm)
 			einfo "Using generic-arm to make device nodes..."
-			${ROOT}/sbin/MAKEDEV generic-arm
+			${D}/sbin/MAKEDEV generic-arm
 			;;
 		hppa)
 			einfo "Using generic-hppa to make device nodes..."
-			${ROOT}/sbin/MAKEDEV generic-hppa
+			${D}/sbin/MAKEDEV generic-hppa
 			;;
 		*)
 			einfo "Using generic to make device nodes..."
-			${ROOT}/sbin/MAKEDEV generic
+			${D}/sbin/MAKEDEV generic
 			;;
 	esac
 
-	${ROOT}/sbin/MAKEDEV sg scd rtc hde hdf hdg hdh input audio video
+	${D}/sbin/MAKEDEV sg scd rtc hde hdf hdg hdh input audio video
 }
 
 src_install() {
@@ -285,6 +287,9 @@ src_install() {
 		[ -f ${foo} ] && doins ${foo}
 	done
 	chmod go-rwx ${D}/etc/shadow
+	# We do not want to overwrite the user's settings
+	[ -f "${ROOT}/etc/hosts" ] && rm -f ${ROOT}/etc/hosts
+
 	keepdir_mount /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
 
@@ -531,8 +536,13 @@ pkg_postinst() {
 	# is used, as this was the cause for all the devfs problems we had
 	if [ "${altmerge}" -eq "0" -a ! -e "${ROOT}/dev/.udev" ]
 	then
-		einfo "Populating /dev with device nodes..."
-		tar -jxpf "${ROOT}/lib/udev-state/devices.tar.bz2" -C "${ROOT}/dev"
+		if [ -n "$(use selinux)" -a \
+		     -z "$(use build)" -a -z "$(use bootstrap)" ]
+		then
+			einfo "Populating /dev with device nodes..."
+			tar -jxpf "${ROOT}/lib/udev-state/devices.tar.bz2" \
+				-C "${ROOT}/dev"
+		fi
 	fi
 
 	echo
