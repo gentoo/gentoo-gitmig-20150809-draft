@@ -1,6 +1,11 @@
 # ChangeLog for dev-perlgtk-perlChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.13 2002/11/26 17:17:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.14 2002/11/29 18:35:34 mcummings Exp $
+
+*gtk-perl-0.7008-r9 (29 Nov 2002)
+
+  29 Nov 2002; Michael Cuummings <mcummings@gentoo.org> :
+  A significant typo on my part removed the GDK::Pixbuff modules.
 
 *gtk-perl-0.7008-r8 (26 Nov 2002)
 
