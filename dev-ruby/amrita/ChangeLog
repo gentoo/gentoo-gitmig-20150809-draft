@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amrita
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.11 2004/05/02 16:13:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.12 2004/06/09 18:53:04 gmsoft Exp $
+
+  09 Jun 2004; Guy Martin <gmsoft@gentoo.org> amrita-1.8.2-r1.ebuild:
+  Marked stable on hppa.
 
   02 May 2004; Ferris McCormick <fmccor@gentoo.org> amrita-1.8.2-r1.ebuild:
   Marked stable on sparc.
