@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.4 2004/08/23 13:26:25 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.5 2005/02/24 00:23:48 port001 Exp $
 
 inherit webapp
 
-IUSE="samba mysql apache2"
+IUSE="samba mysql apache2 http"
 
 MY_P="${P}d"
 WAS_VER="0.1.2b"
@@ -12,7 +12,7 @@ WAS_VER="0.1.2b"
 DESCRIPTION="Utility for monitoring and archiving AOL Instant Messenger messages across a network"
 HOMEPAGE="http://www.aimsniff.com/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
-	apache2? ( mirror://sourceforge/${PN}/was-${WAS_VER}.tar.gz )"
+	http? ( mirror://sourceforge/${PN}/was-${WAS_VER}.tar.gz )"
 
 RESTRICT="nomirror"
 
@@ -32,17 +32,18 @@ DEPEND=">=dev-lang/perl-5.8.4
 	dev-perl/DBI
 	dev-perl/Unix-Syslog
 	mysql? ( dev-db/mysql dev-perl/DBD-mysql )
-	samba? ( net-fs/samba )"
+	samba? ( net-fs/samba )
+	http? ( apache2? ( =net-www/apache-2* ) !apache2? ( =net-www/apache-1*) )"
 
 pkg_setup() {
-	if use apache2
+	if use http
 	then
 		webapp_pkg_setup
 	fi
 }
 
 src_install() {
-	if use apache2
+	if use http
 	then
 		webapp_src_preinst
 	fi
@@ -54,7 +55,7 @@ src_install() {
 	doins table.struct
 	dodoc README ChangeLog
 
-	if use apache2
+	if use http
 	then
 		cp ../was-${WAS_VER}/docs/README README.WAS
 		dodoc README.WAS
@@ -84,7 +85,7 @@ pkg_postinst() {
 		einfo "To create and enable the mysql database, please run: "
 		einfo "ebuild /var/db/pkg/net-analyzer/${P}/${P}.ebuild config"
 
-		if use apache2
+		if use http
 		then
 			echo "To create and enable the mysql database, please run:
 			ebuild /var/db/pkg/net-analyzer/${P}/${P}.ebuild config" > apache-postinst
@@ -92,7 +93,7 @@ pkg_postinst() {
 		fi
 	fi
 
-	if use apache2
+	if use http
 	then
 		echo
 		einfo "Go to http://${HOSTNAME}/was/admin.php to configure WAS."
