@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0.ebuild,v 1.11 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0.ebuild,v 1.12 2003/10/04 23:55:49 brad_mssw Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fame.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha hppa"
+KEYWORDS="x86 ppc sparc ~alpha hppa ~amd64"
 
 DEPEND="virtual/glibc"
 
@@ -19,6 +19,11 @@ replace-flags "-fprefetch-loop-arrays" " "
 
 src_compile() {
 	local myconf
+
+	if [ "${ARCH}" = "amd64" ]
+	then
+		libtoolize -c -f
+	fi
 
 	use mmx && myconf="${myconf} --enable-mmx"
 	use sse && myconf="${myconf} --enable-sse"
