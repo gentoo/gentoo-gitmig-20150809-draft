@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3b.ebuild,v 1.5 2004/10/05 08:49:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3d.ebuild,v 1.1 2004/10/05 08:49:45 eradicator Exp $
 
-IUSE="mpeg4"
+IUSE="mpeg4 howl"
 
 inherit flag-o-matic eutils
 
@@ -12,12 +12,12 @@ SRC_URI="http://www.deleet.de/projekte/daap/daapd/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~x86 ~ppc"
 
-DEPEND="sys-libs/zlib
-	=net-misc/howl-0.9.5
-	>=media-libs/libid3tag-0.15.0b
+DEPEND="zlib? ( sys-libs/zlib )
+	howl? ( >=net-misc/howl-0.9.6-r1 )
 	mpeg4? ( media-libs/faad2 )
+	>=media-libs/libid3tag-0.15.0b
 	>=net-libs/libhttpd-persistent-1.3p-r8
 	>=media-libs/daaplib-0.1.1a"
 
@@ -25,8 +25,17 @@ src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
-	if use mpeg4; then
-		epatch ${FILESDIR}/${P}-mpeg4.patch
+	cd ${S}
+	if ! use zlib; then
+		sed -ie 's/ZLIB_ENABLE = 1/ZLIB_ENABLE = 0/g' makefile
+	fi
+
+	if ! use howl; then
+		sed -ie 's/HOWL_ENABLE = 1/HOWL_ENABLE = 0/g' makefile
+	fi
+
+	if ! use mpeg4; then
+		sed -ie 's/MPEG4_ENABLE = 1/MPEG4_ENABLE = 0/g' makefile
 	fi
 }
 
@@ -35,18 +44,10 @@ src_compile() {
 }
 
 src_install() {
-
-#	emake DESTDIR=${D} DEPLOY=${D}usr install || die "emake install failed"
-
 	dobin daapd
-#	dolib daaplib/src/libdaaplib.a
-#	dolib libhttpd/src/libhttpd-persistent.a
 
 	dodoc COPYING README* daapd-example.conf
 	doman ${PN}.8
-
-#	insinto /usr/include
-#	doins libhttpd/src/httpd-persistent.h
 
 	insinto /etc
 	newins daapd-example.conf daapd.conf

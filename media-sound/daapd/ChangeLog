@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/daapd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.6 2004/08/28 22:32:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.7 2004/10/05 08:49:45 eradicator Exp $
+
+*daapd-0.2.3d (05 Oct 2004)
+
+  05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/daapd-0.2.3d-gentoo.patch, files/daapd.init.d, +daapd-0.2.3b.ebuild:
+  Version bump closes bug #66364.  Added ~amd64.
 
   29 Aug 2004; David Holm <dholm@gentoo.org> daapd-0.2.3b.ebuild:
   Added to ~ppc.

@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/files/daapd.init.d,v 1.2 2004/07/14 22:46:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/files/daapd.init.d,v 1.3 2004/10/05 08:49:45 eradicator Exp $
 
 depend() {
 	need net
+	use mDNSResponder
 }
 
 checkconfig() {
