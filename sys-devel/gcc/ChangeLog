@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.74 2003/02/25 13:50:16 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.75 2003/03/05 03:14:49 method Exp $
+
+*gcc-3.2.2-r3 (03 Mar 2003)
+  03 Mar 2003; Joshua Brindle <method@gentoo.org> gcc-3.2.2-r3.ebuild :
+  Fixed strip-flags to allow certain known stable optimizations including:
+  -O -O1 -O2 -Os -O3 -mcpu -march -pipe -g -freorder-blocks -fprefetch-loop-arrays
 
 *gcc-3.2.2-r1 (23 Feb 2003)
 
