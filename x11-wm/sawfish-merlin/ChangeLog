@@ -1,0 +1,12 @@
+# ChangeLog for x11-wm/sawfish
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/ChangeLog,v 1.1 2002/02/17 16:15:06 gbevin Exp $
+
+*sawfish-merlin-1.0.1 (17 Feb 2002)
+
+  17 Feb 2002; G.Bevin <gbevin@gentoo.org> :
+  
+  Seperate package to install the sawfish merlin patches. The required config
+  files for every user have been installed to /etc/skel. Already existing
+  users should copy .sawfishrc and .sawfish from /etc/skel to their home
+  directory before being able to use these merlin extensions.
