@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/sidplay-libs
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sidplay-libs/ChangeLog,v 1.2 2003/10/07 19:21:38 hanno Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sidplay-libs/ChangeLog,v 1.3 2004/03/18 17:28:17 eradicator Exp $
+
+*sidplay-libs-2.1.0-r1 (18 Mar 2004)
+
+  18 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  sidplay-libs-2.1.0-r1.ebuild, sidplay-libs-2.1.0.ebuild:
+  Revbump for elibtoolize. libsidutils.so was not getting installed on the first
+  emerge without it. See bug #35143.
 
   07 Oct 2003; Hanno Boeck <hanno@gentoo.org> sidplay-libs-2.1.0.ebuild:
   Original version was completely broken, should work now.

@@ -1,4 +1,4 @@
-MD5 592b8379bace8f0d17ed3390c051187f ChangeLog 491
-MD5 b908abec7939c0c8ea956f4f1a0fcc86 sidplay-libs-2.1.0.ebuild 598
+MD5 d695a3ada4796e6667239dc00acad15e sidplay-libs-2.1.0-r1.ebuild 654
+MD5 49899fc6d8a9f42df2b9e087b8b14021 ChangeLog 769
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
-MD5 8e6d42fd52a00be55bfda2932cab402e files/digest-sidplay-libs-2.1.0 71
+MD5 8e6d42fd52a00be55bfda2932cab402e files/digest-sidplay-libs-2.1.0-r1 71
