@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/fsv
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fsv/ChangeLog,v 1.1 2002/11/07 20:36:20 seemant Exp $
+
+*fsv-0.9 (07 Nov 2002)
+
+  07 Nov 2002; Seemant Kulleen <seemant@gentoo.org> fsv-0.9.ebuild ChangeLog
+  files/digest-fsv-0.9 :
+
+  A graphical file system viewer.  Really spiffy looking! Like Jurassic
+  Park.  Ebuild submitted by: pez@apocalyptech.com (CJ Kucera) in bug #9560
