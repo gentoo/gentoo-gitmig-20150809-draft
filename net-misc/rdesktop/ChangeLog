@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.8 2002/12/13 11:00:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.9 2002/12/29 16:37:44 bcowan Exp $
+
+*rdesktop-1.2_beta1-r1 (28 Dec 2002)
+
+  28 Dec 2002; Brad Cowan <bcowan@gentoo.org> rdesktop-1.2_beta1-r1.ebuild,
+  files/digest-rdesktop-1.2_beta1-r1:
+  
+  Fixed keymap issue and added more robust CFLAGS support.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
