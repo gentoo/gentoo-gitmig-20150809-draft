@@ -1,18 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.11-r1.ebuild,v 1.3 2003/12/28 02:23:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.11-r1.ebuild,v 1.4 2004/01/29 22:59:04 vapier Exp $
 
 inherit flag-o-matic eutils
 
-filter-flags -fPIC
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Reiserfs Utilities"
+HOMEPAGE="http://www.namesys.com/"
 SRC_URI="http://www.namesys.com/pub/${PN}/${P}.tar.gz"
-HOMEPAGE="http://www.namesys.com"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="ia64 hppa"
 
 src_unpack() {
@@ -22,11 +19,12 @@ src_unpack() {
 		# to Vitaly Fertman from the Namesys/ReiserFS team for
 		# this fix. Makes reiserfsck work. (drobbins, 23 Sep 03)
 		cd ${S}
-		patch -p2 < ${FILESDIR}/blk_size.patch || die "blk_size.patch failure"
+		epatch ${FILESDIR}/blk_size.patch
 	fi
 }
 
 src_compile() {
+	filter-flags -fPIC
 	./configure --prefix=/ || die "Failed to configure"
 	emake || die "Failed to compile"
 }
@@ -40,4 +38,3 @@ src_install() {
 	mv man usr/share
 	dosym /sbin/reiserfsck /sbin/fsck.reiserfs
 }
-

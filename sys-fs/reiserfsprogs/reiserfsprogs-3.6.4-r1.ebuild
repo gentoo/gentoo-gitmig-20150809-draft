@@ -1,25 +1,21 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.4-r1.ebuild,v 1.1 2003/09/15 17:46:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.4-r1.ebuild,v 1.2 2004/01/29 22:59:04 vapier Exp $
 
 inherit flag-o-matic eutils
 
-filter-flags -fPIC
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Reiserfs Utilities"
+HOMEPAGE="http://www.namesys.com/"
 SRC_URI="http://www.namesys.com/pub/${PN}/${P}.tar.gz"
-HOMEPAGE="http://www.namesys.com"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc ~sparc ~alpha"
+SLOT="0"
+KEYWORDS="x86 ppc ~sparc ~alpha amd64"
 
 DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
-
 	# NOTE: this patch needs to be applied to any architecture that has
 	# /usr/include/asm/bitops.h entirely wrapped with #ifdef __KERNEL__.
 	# This is needed because asm-i386/bitops.h is broken and reiserfsprogs
@@ -34,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}
+	filter-flags -fPIC
 	./configure --prefix=/ || die
 	emake || die
 }
@@ -48,4 +44,3 @@ src_install() {
 	mv man usr/share
 	dosym /sbin/reiserfsck /sbin/fsck.reiserfs
 }
-
