@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030220_pre0.ebuild,v 1.1 2003/02/20 12:41:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030220_pre0.ebuild,v 1.2 2003/03/03 01:53:05 vapier Exp $
 
 DESCRIPTION="window manager and desktop shell"
 HOMEPAGE="http://www.enlightenment.org/pages/enlightenment.html"
@@ -22,6 +22,7 @@ DEPEND="virtual/x11
 	>=sys-apps/efsd-0.0.1.2003*
 	>=media-libs/ebg-1.0.0.2003*
 	>=media-libs/imlib2_loaders-1.0.4.2003*
+	>=media-libs/freetype-2.1.3*
 	perl? ( sys-devel/perl )"
 
 S=${WORKDIR}/${PN}
