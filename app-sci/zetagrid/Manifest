@@ -2,6 +2,7 @@ MD5 072169d8b9f85414a59e769b8925185f ChangeLog 1157
 MD5 93b2ebf8f555bb5f9d082febb9673afe zetagrid-1.8.2-r1.ebuild 1631
 MD5 db4d61935ce9a38979244d3e989fc006 zetagrid-1.8.2.ebuild 1629
 MD5 debbda882572bf41924e9b270105e244 zetagrid-1.8.4.ebuild 1628
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 a7d4fb830f1ffe249b605b6814c58042 files/digest-zetagrid-1.8.2 122
 MD5 a7d4fb830f1ffe249b605b6814c58042 files/digest-zetagrid-1.8.2-r1 122
 MD5 81f09744d920b97cdb2c2da26c4cffd7 files/digest-zetagrid-1.8.4 122
