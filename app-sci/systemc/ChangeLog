@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/systemc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/ChangeLog,v 1.1 2002/12/06 19:59:00 george Exp $
+
+*systemc-2.0.1 (05 Dec Oct 2002)
+  
+  05 Dec 2002; George Shapovalov <georges@its.caltech.edu> systemc-2.0.1.ebuild : 
+
+  initial release. 
+  A C++ based modeling platform for VLSI and system-level co-design.
+  ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk>
