@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/ewl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ChangeLog,v 1.4 2003/03/14 19:21:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ChangeLog,v 1.5 2003/03/20 13:00:48 seemant Exp $
+
+*ewl-0.0.2.20030310-r1 (20 Mar 2003)
+
+  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  ewl-0.0.2.20030310-r1.ebuild:
+  version bump for removal of pic nonsense
 
 *ewl-0.0.2.20030310 (10 Mar 2003)
 
