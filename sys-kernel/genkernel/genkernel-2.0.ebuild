@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-2.0.ebuild,v 1.9 2004/06/24 22:56:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-2.0.ebuild,v 1.10 2005/01/29 05:32:17 wolf31o2 Exp $
 
 BUSYBOX="busybox-0.60.5"
 CLOOP="cloop_1.02-1"
