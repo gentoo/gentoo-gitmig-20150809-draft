@@ -21,13 +21,13 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (25 Feb 2003)
+# Testing more fixes -- It should be fairly solid by now.
+=sys-apps/portage-2.0.47-r5
+
 # <danarmak@gentoo.org> (25 Feb 2003)
 # badly broken here - masking until resolved
 =dev-util/ccache-2.1.1-r2
-
-# <carpaski@gentoo.org> (25 Feb 2003)
-# Testing more fixes -- It should be fairly solid by now.
-=sys-apps/portage-2.0.47-r4
 
 # <phoenix@gentoo.org> (24 Feb 2003)
 # Masked for forward compatibility
