@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.42 2005/03/23 17:52:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.43 2005/03/24 01:33:08 josejx Exp $
+
+  24 Mar 2005; Joseph Jezak <josejx@gentoo.org> CGI-3.05.ebuild:
+  Marked ppc stable for bug #86405.
 
 *CGI-3.07 (23 Mar 2005)
 
