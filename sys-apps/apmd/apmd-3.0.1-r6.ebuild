@@ -1,11 +1,12 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Craig Joly <joly@ee.ualberta.ca>, Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.1-r6.ebuild,v 1.1 2001/10/14 09:11:36 woodchip Exp $
+# Maintainer: Donny Davies <woodchip@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.1-r6.ebuild,v 1.2 2001/12/31 23:47:55 azarah Exp $
 
+MY_P=${P/-/_}
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Power Management Daemon"
-SRC_URI="ftp://ftp.debian.org/debian/pool/main/a/apmd/apmd_3.0.1-1.tar.gz"
+SRC_URI="ftp://ftp.debian.org/debian/pool/main/a/apmd/${MY_P}-1.tar.gz"
 HOMEPAGE="http://www.worldvisions.ca/~apenwarr/apmd/"
 
 DEPEND="virtual/glibc X? ( virtual/x11 )"
@@ -21,7 +22,10 @@ src_unpack() {
 	    -e "s:MANDIR\=\${PREFIX}\/man:MANDIR\=\${PREFIX}\/share\/man:" \
 	    Makefile.orig > Makefile
 
-	use X || sed -e "/^EXES=/s/xapm//" -e "/install.*xapm/d" Makefile | cat > Makefile
+	cp Makefile Makefile.orig2
+	use X || sed -e "/^EXES=/s/xapm//" \
+			-e "/install.*xapm/d" \
+			Makefile.orig2 > Makefile
 }
 
 src_compile() {

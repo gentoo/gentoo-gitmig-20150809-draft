@@ -1,7 +1,7 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.37.ebuild,v 1.1 2001/11/02 08:45:05 woodchip Exp $
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.37.ebuild,v 1.2 2001/12/31 23:47:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
@@ -12,9 +12,10 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 
-	./configure \
-	--prefix=/usr --mandir=/usr/share/man \
-	--datadir=/usr/share/misc --host=${CHOST} || die
+	./configure --prefix=/usr \
+		--mandir=/usr/share/man \
+		--datadir=/usr/share/misc \
+		--host=${CHOST} || die
 
 	emake || die
 }

@@ -1,8 +1,7 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Daniel Robbins <drobbins@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r6.ebuild,v 1.3 2001/11/13 18:32:30 azarah Exp $
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r6.ebuild,v 1.4 2001/12/31 23:47:55 azarah Exp $
 
 # to use this, you must be part of the "cron" group
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r6.ebuild,v 1.2 2001/10/06 16:44:02 drobbins Exp $
+# Maintainer: Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r6.ebuild,v 1.3 2001/12/31 23:47:55 azarah Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="queues jobs for later execution"
+DESCRIPTION="Queues jobs for later execution"
 SRC_URI="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.tar.bz2
 	 ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.dif"
 HOMEPAGE=""
@@ -15,25 +15,23 @@ RDEPEND="virtual/glibc"
 
 src_unpack() {
 
-    unpack ${P}.tar.bz2
-    cd ${S}
-    patch -p0 < ${DISTDIR}/${P}.dif || die
-    cp configure.in configure.orig
-    patch -p0 < ${FILESDIR}/${P}-configure.in-sendmail-gentoo.diff || die
-    patch -p0 < ${FILESDIR}/${P}-configure-sendmail-gentoo.diff || die
+	unpack ${P}.tar.bz2
+	cd ${S}
+	patch -p0 < ${DISTDIR}/${P}.dif || die
+	cp configure.in configure.orig
+	patch -p0 < ${FILESDIR}/${P}-configure.in-sendmail-gentoo.diff || die
+	patch -p0 < ${FILESDIR}/${P}-configure-sendmail-gentoo.diff || die
 }
 
 src_compile() {
 
-    ./configure --host=${CHOST/-pc/} --sysconfdir=/etc/at \
-	--with-jobdir=/var/cron/atjobs \
-	--with-atspool=/var/cron/atspool \
-	--with-etcdir=/etc/at \
-	--with-daemon_username=at \
-	--with-daemon_groupname=at
-    assert
-
-    emake || die
+	./configure --host=${CHOST/-pc/} --sysconfdir=/etc/at \
+		--with-jobdir=/var/cron/atjobs \
+		--with-atspool=/var/cron/atspool \
+		--with-etcdir=/etc/at \
+		--with-daemon_username=at \
+		--with-daemon_groupname=at || die
+	emake || die
 }
 
 src_install() {
@@ -49,10 +47,10 @@ src_install() {
 
 	for i in atjobs atspool
 	do
-	  dodir /var/cron/${i}
-	  fperms 700 /var/cron/${i}
-	  fowners at.at /var/cron/${i}
-	  touch ${D}/var/cron/${i}/.SEQ
+		dodir /var/cron/${i}
+		fperms 700 /var/cron/${i}
+		fowners at.at /var/cron/${i}
+		touch ${D}/var/cron/${i}/.SEQ
 	done
 
 	exeinto /etc/init.d

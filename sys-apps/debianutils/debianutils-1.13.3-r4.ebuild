@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.13.3-r4.ebuild,v 1.2 2001/08/04 18:22:45 pete Exp $
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.13.3-r4.ebuild,v 1.3 2001/12/31 23:47:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A selection of tools from Debian"
@@ -11,20 +11,19 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
 
-    unpack ${A}
-    cd ${S}
-    patch -p0 < ${FILESDIR}/${P}-Makefile-gentoo.diff
-
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${FILESDIR}/${P}-Makefile-gentoo.diff
 }
 
 src_compile() {
 
-    if [ -z "`use static`" ]
-    then
-	    try pmake
-    else
-        try pmake LDFLAGS=-static
-    fi
+	if [ -z "`use static`" ]
+	then
+		pmake || die
+	else
+		pmake LDFLAGS=-static || die
+	fi
 }
 
 
@@ -33,12 +32,12 @@ src_install() {
 	into /
 	dobin readlink tempfile mktemp
 
-    if [ -z "`use build`" ]
-    then
-        dobin run-parts
-	    insopts -m755
-	    exeinto /usr/sbin
-	    doexe savelog
+	if [ -z "`use build`" ]
+	then
+		dobin run-parts
+		insopts -m755
+		exeinto /usr/sbin
+		doexe savelog
 		
 		if [ -z "`use bootcd`" ]
 		then
@@ -48,9 +47,6 @@ src_install() {
 			cd debian
 			dodoc changelog control copyright
 		fi
-    fi
-
+	fi
 }
-
-
 

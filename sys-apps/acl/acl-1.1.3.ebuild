@@ -1,11 +1,10 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-1.1.3.ebuild,v 1.1 2001/11/17 08:44:07 drobbins Exp $
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-1.1.3.ebuild,v 1.2 2001/12/31 23:47:55 azarah Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="xfs dump/restore utilities"
+DESCRIPTION="XFS dump/restore utilities"
 SRC_URI="ftp://oss.sgi.com/projects/xfs/download/latest/cmd_tars/${P}.src.tar.gz"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 
@@ -23,13 +22,18 @@ src_compile() {
 	# 3) we remove a hard-coded "-O1"
 	# 4) we fix some Makefile-created library symlinks that contains absolute paths
 	cp include/builddefs include/builddefs.orig
-	sed -e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' -e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" -e 's:-O1::' -e 's:-S \(.*\) $(PKG_.*_DIR)/\(.*$\):-S \1 \2:' include/builddefs.orig > include/builddefs || die
+	sed -e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
+		-e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" \
+		-e 's:-O1::' \
+		-e 's:-S \(.*\) $(PKG_.*_DIR)/\(.*$\):-S \1 \2:' \
+		include/builddefs.orig > include/builddefs || die
 	# 5) We now fix some absolute path symlinks in various makefiles
 #	local x
 #	for x in dump restore
 ##	do
 #		cp ${x}/Makefile ${x}/Makefile.orig
-#		sed -e 's:$(INSTALL) -S $(PKG_.*_DIR)/\(.*\) \(.*/.*\):$(INSTALL) -S ../../sbin/\1 \2:' ${x}/Makefile.orig > ${x}/Makefile
+#		sed -e 's:$(INSTALL) -S $(PKG_.*_DIR)/\(.*\) \(.*/.*\):$(INSTALL) -S ../../sbin/\1 \2:' \
+#			${x}/Makefile.orig > ${x}/Makefile
 #	done
 	emake || die
 }

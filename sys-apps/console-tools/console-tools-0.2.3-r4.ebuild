@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r4.ebuild,v 1.2 2001/08/09 18:05:42 drobbins Exp $
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r4.ebuild,v 1.3 2001/12/31 23:47:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console and font utilities"
@@ -17,38 +17,39 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}.patch
-
-    patch -p0 < ${FILESDIR}/${P}-po-Makefile.in.in-gentoo.diff
-	try aclocal
-	try libtoolize --force -c
-	try autoheader
-	try automake -c
-	try autoconf
+	patch -p1 < ${FILESDIR}/${P}.patch || die
+	patch -p0 < ${FILESDIR}/${P}-po-Makefile.in.in-gentoo.diff || die
+	aclocal || die
+	libtoolize --force -c || die
+	autoheader || die
+	automake -c || die
+	autoconf || die
 }
 
 src_compile() {
 
-	local myconf
-
+	local myconf=""
 	if [ "$DEBUG" ]
-        then
-	  myconf="--enable-debugging"
+	then
+		myconf="--enable-debugging"
 	fi
-    if [ -z "`use nls`" ]
-    then
-      myconf="${myconf} --disable-nls"
-    fi
+	if [ -z "`use nls`" ]
+	then
+		myconf="${myconf} --disable-nls"
+	fi
 
-	try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} ${myconf}
-	try make $MAKEOPTS all
+	./configure --prefix=/usr \
+		--mandir=/usr/share/man \
+		--host=${CHOST} \
+		${myconf} || die
+	make $MAKEOPTS all || die
 }
 
 src_install() {
 
-    # DESTDIR does not work correct
-    try make DESTDIR=${D} install
-    
+	# DESTDIR does not work correct
+	make DESTDIR=${D} install || die
+
 	if [ -z "`use bootcd`" ]
 	then
 		dodoc BUGS COPYING* CREDITS ChangeLog NEWS README RELEASE TODO

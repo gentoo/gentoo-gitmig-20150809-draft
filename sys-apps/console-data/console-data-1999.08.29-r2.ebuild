@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-data/console-data-1999.08.29-r2.ebuild,v 1.1 2001/02/07 15:51:27 achim Exp $
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-data/console-data-1999.08.29-r2.ebuild,v 1.2 2001/12/31 23:47:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Data (fonts, keymaps) for the consoletools package"
@@ -10,25 +10,23 @@ HOMEPAGE="http://altern.org/ydirson/en/lct/data.html"
 
 src_compile() {
 
-	try ./configure --host=${CHOST} --prefix=/usr
+	./configure --host=${CHOST} \
+		--prefix=/usr || die
 	# do not use pmake
-	try make
+	make || die
 
 }
 
 src_install() {
 
-    try make DESTDIR=${D} install
+	make DESTDIR=${D} install || die
 
-    dodoc ChangeLog
-    docinto txt
-    dodoc doc/README.*
-    docinto txt/fonts
-    dodoc doc/fonts/*
-    docinto txt/keymaps
-    dodoc doc/keymaps/*
-
-
+	dodoc ChangeLog
+	docinto txt
+	dodoc doc/README.*
+	docinto txt/fonts
+	dodoc doc/fonts/*
+	docinto txt/keymaps
+	dodoc doc/keymaps/*
 }
-
 

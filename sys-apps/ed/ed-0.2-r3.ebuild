@@ -1,19 +1,19 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r3.ebuild,v 1.3 2001/11/24 18:36:40 drobbins Exp $
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r3.ebuild,v 1.4 2001/12/31 23:47:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Your basic line editor"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/ed/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ed/"
+
 DEPEND="virtual/glibc sys-apps/texinfo"
 
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff || die
 }
 
 src_compile() {  
@@ -22,7 +22,11 @@ src_compile() {
 }
 
 src_install() {                               
-	make prefix=${D}/ mandir=${D}/usr/share/man/man1 infodir=${D}/usr/share/info install || die
+	make prefix=${D}/ \
+		mandir=${D}/usr/share/man/man1 \
+		infodir=${D}/usr/share/info \
+		install || die
+		
 	if [ -z "`use bootcd`" ]
 	then
 		dodoc COPYING ChangeLog NEWS POSIX README THANKS TODO

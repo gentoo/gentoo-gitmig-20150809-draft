@@ -1,8 +1,7 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7.ebuild,v 1.2 2001/12/18 22:59:22 azarah Exp $
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7.ebuild,v 1.3 2001/12/31 23:47:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU utilities to find files"
@@ -12,15 +11,24 @@ HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 DEPEND="virtual/glibc sys-devel/gettext"
 RDEPEND="virtual/glibc"
 
-
 src_compile() {
-	./configure --host=${CHOST} --prefix=/usr --localstatedir=/var/spool/locate || die
+	./configure --host=${CHOST} \
+		--prefix=/usr \
+		--localstatedir=/var/spool/locate || die
 	emake libexecdir=/usr/lib/find || die
 }
 
 src_install() {
-	make prefix=${D}/usr mandir=${D}/usr/share/man infodir=${D}/usr/share/info \
-		localstatedir=/var/spool/locate libexecdir=${D}/usr/lib/find install || die
+	#do not change 'localstatedir=/var/spool/locate' to
+	#'localstatedir=${D}/var/spool/locate', as it will then be hardcoded
+	#into locate and updatedb
+	make prefix=${D}/usr \
+		mandir=${D}/usr/share/man \
+		infodir=${D}/usr/share/info \
+		localstatedir=/var/spool/locate \
+		libexecdir=${D}/usr/lib/find \
+		install || die
+		
 	dosed "s:TMPDIR=/usr/tmp:TMPDIR=/tmp:" usr/bin/updatedb
 	rm -rf ${D}/usr/var
 	if [ -z "`use build`" ] 

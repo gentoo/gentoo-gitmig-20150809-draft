@@ -1,10 +1,7 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org> 
-# Author: Holger Brueckner <darks@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.8.1.ebuild,v 1.5 2001/10/06 16:44:02 drobbins Exp $
-
-# WARNING: THIS EBUILD HAS ONLY BEEN PARTIALLY CONVERTED TO THE NEW RC6 INITSCRIPTS
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.8.1.ebuild,v 1.6 2001/12/31 23:47:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
