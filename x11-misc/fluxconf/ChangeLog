@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fluxconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.12 2003/10/30 16:00:38 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.13 2003/12/18 23:51:30 ciaranm Exp $
+
+*fluxconf-0.9.7 (18 Dec 2003)
+
+  18 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> fluxconf-0.9.7.ebuild:
+  Version bump
 
   30 Oct 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
   Added metadata.xml
