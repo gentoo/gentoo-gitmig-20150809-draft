@@ -1,14 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/files/pop-before-smtp.init,v 1.3 2004/07/14 23:51:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/files/pop-before-smtp.init,v 1.4 2004/11/05 13:54:00 ticho Exp $
 
 opts="reload"
 
 depend() {
 	need net
 	use logger dns ypbind
-	provide mta
 }
 
 start() {
@@ -18,7 +17,7 @@ start() {
 }
 
 stop() {
-	ebegin "Stopping postfix"
+	ebegin "Stopping pop-before-smtp"
 	start-stop-daemon --stop --pidfile /var/run/pop-before-smtp.pid
 	eend $?
 }
