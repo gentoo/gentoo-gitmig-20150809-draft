@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.17 2004/06/25 20:18:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.18 2004/06/30 14:21:14 agriffis Exp $
 
 inherit eutils
 
-IUSE="X"
+IUSE="X nls"
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Advanced Power Management Daemon"
