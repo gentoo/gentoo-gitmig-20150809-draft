@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/portsentry
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.1 2002/06/28 11:54:12 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.2 2002/07/21 20:48:48 owen Exp $
+
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added PPC to KEYWORDS and fixed typo in files/portsentry.confd
 
   28 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
   moved to net-analyzer - added SLOT - added LICENSE
