@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${PARCH}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
 	>=sys-libs/db-3.2
