@@ -1,6 +1,22 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.5 2002/04/22 20:56:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.6 2002/05/19 17:46:30 azarah Exp $
+
+automake-1.6.1 (19 May 2002)
+
+  19 May 2002; M.Schlemmer <azarah@gentoo.org> automake-1.6.1.ebuild,
+                                               am-wrapper.pl-1.6 :
+
+  New version.  Thanks to Alexander Kelett for the initial version that
+  contains all three major releases, and also am-wrapper.pl-1.6.
+
+  Changes from his version:  1.5d has to have "-1.5d" as suffix, and
+  not "-1.5", as this causes calls by aclocal to automake to fail,
+  as they have multiversion support.  Also fixed some other problems
+  that was part of my first dual version.  Added the sed to change
+  the "-1.5x" in am-wrapper.pl-1.6 to "-1.5d".
+
+  Anyway, should resolve bug 2803.
 
   22 April 2002; M.Schlemmer <azarah@gentoo.org> am-wrapper.pl :
 
