@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.12 2003/03/23 19:20:05 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.13 2003/04/12 17:01:01 seemant Exp $
 
 *vcron-3.0.1-r1 (20 Apr 2002)
+
+  12 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  vcron-3.0.1-r1.ebuild:
+  slight syntax fix to not inherit eutils
 
   23 Mar 2003; Joshua Brindle <method@gentoo.org> vcron-3.0.1-r1.ebuild:
   added selinux support, thanks pebenito

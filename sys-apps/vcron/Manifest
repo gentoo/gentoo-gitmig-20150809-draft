@@ -1,0 +1,6 @@
+MD5 feb9474fe8ced1e1ca7ecfe5b353dd0c ChangeLog 1675
+MD5 daeec6007d58532dee73d1d964c90c39 vcron-3.0.1-r1.ebuild 1575
+MD5 6a065c2a4012e573ebb852275516a1d4 files/crontab 563
+MD5 21a88e40cea6fde9bf6163e501b993dd files/digest-vcron-3.0.1-r1 140
+MD5 7f79290c2f51c9dcee459c8a5636f652 files/vcron.rc6 520
+MD5 93fd68cd51aefa795c40536370184ab4 files/vixie-cron-3.0.1-gentoo.patch 31409
