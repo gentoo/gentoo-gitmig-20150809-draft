@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r20.ebuild,v 1.3 2003/06/26 11:14:13 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r22.ebuild,v 1.1 2003/06/26 11:14:13 robh Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.xmms.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
 DEPEND="app-arch/unzip
@@ -36,9 +36,6 @@ src_unpack() {
 
 	# Save playlist, etc on SIGTERM and SIGINT, bug #13604.
 	epatch ${FILESDIR}/xmms-sigterm.patch
-
-	# Add Russian character set support
-	epatch ${FILESDIR}/xmms-russian-charset.patch
 
 	# The following optimisations are ONLY for x86 platform
 	if [ `use x86` ] ; then
@@ -65,6 +62,8 @@ src_unpack() {
 		else
 			use ipv6 && epatch ${FILESDIR}/xmms-ipv6-20020408-nommx.patch
 		fi
+	else
+		use ipv6 && epatch ${FILESDIR}/xmms-ipv6-20020408-nommx.patch
 	fi
 
 	# Patch for mpg123 to convert Japanese character code of MP3 tag info
@@ -76,6 +75,9 @@ src_unpack() {
 		touch ${S}/config.rpath
 		chmod +x ${S}/config.rpath
 	fi
+
+	# add russian charset support
+	epatch ${FILESDIR}/xmms-russian-charset.patch
 
 	# We run automake and autoconf here else we get a lot of warning/errors.
 	# I have tested this with gcc-2.95.3 and gcc-3.1.
