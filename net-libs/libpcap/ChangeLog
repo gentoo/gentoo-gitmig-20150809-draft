@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.11 2003/02/25 16:22:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.12 2003/02/27 19:47:15 latexer Exp $
+
+  27 Feb 2003; Peter Johanson <latexer@gentoo.org> libpcap-0.7.1-r1.ebuild :
+  Changed to stable on x86
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
