@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.50.ebuild,v 1.6 2004/07/01 11:53:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.50.ebuild,v 1.7 2004/11/30 15:02:53 phosphan Exp $
 
 inherit flag-o-matic
 
@@ -26,6 +26,15 @@ DEPEND="virtual/libc
 # source nor is it free (as in beer OR speech) Check out...
 # http://developer.intel.com/software/products/mkl/mkl52/index.htm for
 # more information
+
+pkg_setup() {
+	use ifc || if [ -z `which g77` ]; then
+		#if ifc is defined then the dep was already checked
+		eerror "No fortran compiler found on the system!"
+		eerror "Please add f77 to your USE flags and reemerge gcc!"
+		die
+	fi
+}
 
 src_compile() {
 	filter-flags -ffast-math
