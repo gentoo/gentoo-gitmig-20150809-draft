@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.4 2002/09/16 00:49:24 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.5 2002/10/13 09:36:07 bcowan Exp $
+
+*nfs-utils-1.0.1 (13 Oct 2002)
+
+  13 Oct 2002; Brad Cowan <bcowan@gentoo.org> nfs-utils-1.0.1.ebuild,
+  files/digest-nfs-utils-1.0.1 :
+  
+  Version bump thanks to j2ee<maurizio@iridium.aetheric.org>.
 
 *nfs-utils-0.3.3-r1 (24 Apr 2002)
 
