@@ -1,11 +1,16 @@
 # ChangeLog for app-arch/lha
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.4 2002/12/13 10:55:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.5 2003/02/10 07:12:50 seemant Exp $
+
+*lha-114i (24 May 2002)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> lha-114i.ebuild :
+
+  Changed sed expression to use : instead of / as delimiter, closing bug
+  #15006 by Blu3 <david+gentoo.org@blue-labs.org>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*lha-114i (24 May 2002)
-
   14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   Added ppc keyword
 
