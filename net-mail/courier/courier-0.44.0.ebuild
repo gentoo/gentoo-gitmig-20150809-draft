@@ -40,7 +40,7 @@ RDEPEND="virtual/glibc
 	#tcltk? ( >=dev-tcltk/expect-5.33.0 )
 
 DEPEND="${RDEPEND}
-	app-admin/fam-oss
+	app-admin/fam
 	dev-lang/perl
 	sys-apps/procps"
 

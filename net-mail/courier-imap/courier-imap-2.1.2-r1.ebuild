@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.2-r1.ebuild,v 1.4 2003/10/31 21:01:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.2-r1.ebuild,v 1.5 2003/12/07 23:56:12 foser Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -20,7 +20,7 @@ RDEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	>=dev-tcltk/expect-5.33.0
-	fam? ( app-admin/fam-oss )"
+	fam? ( app-admin/fam )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	dev-lang/perl
@@ -102,7 +102,7 @@ src_compile() {
 	myconf="${myconf} --without-redhat"
 
 	# bug #29879 - FAM support
-	if has_version 'app-admin/fam-oss' && [ -z "`use fam`" ]; then
+	if has_version 'app-admin/fam' && [ -z "`use fam`" ]; then
 		ewarn "FAM will be detected by the package and support will be enabled"
 		ewarn "The package presently provides no way to disable fam support if you don't want it"
 	fi

@@ -41,7 +41,7 @@ RDEPEND="virtual/glibc
 
 
 DEPEND="${RDEPEND}
-	app-admin/fam-oss
+	app-admin/fam
 	dev-lang/perl
 	sys-apps/procps"
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.47 2003/11/14 08:30:42 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.48 2003/12/07 23:56:12 foser Exp $
+
+  07 Dec 2003; foser <foser@gentoo.org> courier-imap*.ebuild :
+  Fix fam-oss dep to fam, due to move
 
   14 Nov 2003; Rajiv Aaron Manglani <rajiv@gentoo.org>
   courier-imap-1.7.3-r1.ebuild:
