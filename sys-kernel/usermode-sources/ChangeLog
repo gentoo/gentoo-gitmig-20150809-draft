@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.41 2004/07/17 21:06:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.42 2004/07/21 11:20:04 plasmaroo Exp $
+
+*usermode-sources-2.6.6-r4 (21 Jul 2004)
+
+  21 Jul 2004; <plasmaroo@gentoo.org> -usermode-sources-2.6.6-r3.ebuild,
+  +usermode-sources-2.6.6-r4.ebuild,
+  +files/usermode-sources-2.6.CAN-2004-0596.patch:
+  Version bump for the CAN-2004-0596 issue; bug #57826.
 
 *usermode-sources-2.6.6-r3 (09 Jul 2004)
 *usermode-sources-2.4.24-r6 (09 Jul 2004)
