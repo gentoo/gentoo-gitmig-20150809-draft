@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.4 2002/11/28 17:29:42 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.5 2002/11/30 00:29:40 vapier Exp $
 
 inherit virtualx
 
@@ -366,7 +366,6 @@ pkg_setup() {
 }
 
 pkg_preinst() {
-
 	# Restore it if we exiled it before ...
 	if [ -f /usr/include/jni.h.oo_compile ]
 	then
@@ -429,7 +428,7 @@ src_install() {
 	# Copy regcomp and needed libraries to install directory.  We
 	# need them for pkg_postinst component registration.
 	cd ${S}/solver/${MAIN_VER}/${GVERDIR}
-	mkdir -p ${D}${LOC}/OpenOffice-${PV}/program
+	dodir ${LOC}/OpenOffice-${PV}/program
 	cp bin/regcomp ${D}${LOC}/OpenOffice-${PV}/program
 
 	# NOTE!!!! We need to fix the registry for network install somehow.
@@ -493,4 +492,3 @@ pkg_postinst() {
 	mkdir -p user/psprint/{driver,fontmetric}
 	mkdir -p user/{autocorr,backup,plugin,store,temp,template}
 }
-
