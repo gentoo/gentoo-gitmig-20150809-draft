@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/nmh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.5 2004/07/17 22:08:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.6 2004/07/27 15:11:00 langthang Exp $
+
+*nmh-1.0.4-r3 (27 Jul 2004)
+
+  27 Jul 2004; Tuan Van <langthang@gentoo.org>
+  +files/nmh-1.0.4-m_getfld.patch, +nmh-1.0.4-r3.ebuild:
+  Revision bump, added patch wrt bug #57886.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> nmh-1.0.4-r2.ebuild:
   virtual/glibc -> virtual/libc
