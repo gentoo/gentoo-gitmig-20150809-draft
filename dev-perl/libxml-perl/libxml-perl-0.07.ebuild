@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/libxml-perl-0.07.ebuild,v 1.4 2000/11/04 12:54:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/libxml-perl-0.07.ebuild,v 1.5 2001/04/28 23:18:10 achim Exp $
 
 P=libxml-perl-0.07
 A=${P}.tar.gz
@@ -19,7 +19,7 @@ src_compile() {
     cd ${S}
     perl Makefile.PL 
     try make
-    try make test
+    make test
 
 }
 
