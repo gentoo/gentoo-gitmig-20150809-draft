@@ -1,0 +1,13 @@
+#!/bin/bash
+# rc		This file is responsible for starting/stopping
+#		services when the runlevel changes.
+cd /
+echo "Setting Hostname (gentoo-box)"
+/bin/hostname gentoo-box
+/bin/umount -n /initrd
+/bin/mount /initrd/proc
+/bin/mount /initrd/dev/pts
+/bin/mount -o remount /
+/bin/mount -o remount /initrd
+
+

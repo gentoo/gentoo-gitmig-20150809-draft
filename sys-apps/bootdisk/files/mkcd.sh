@@ -10,7 +10,7 @@ fi
 
 eval `import-settings PORTDIR`
 export BOOTIMG=${ROOT}/bootcd
-export INITDISK=${ROOT}/initdisk
+export INITDISK=${ROOT}/initrd
 export PORTDIR=$PORTDIR/gentoo-x86
 
 if [ -d ${BOOTIMG} ]
@@ -51,7 +51,7 @@ cd ${BOOTIMG}
 
 echo "Creating basic dirs"
 
-dodirs bin dev initrd lib proc sbin usr 
+dodirs bin dev initrd lib sbin usr 
 
 
 echo "Creating initdisk stuff in initrd first"
@@ -59,18 +59,16 @@ echo "Creating initdisk stuff in initrd first"
 echo "Creating /initrd dirs"
 cd ${BOOTIMG}/initrd
 
-dodirs dev proc distcd lib etc root tmp var mnt
+dodirs dev proc distcd etc root tmp var mnt
 cd mnt
 dodirs floppy gentoo ram
-ln -s ../initrd/distcd .
+ln -sf /initrd/distcd .
 cd ..
-#why touch distcd?
-touch distcd
 
 echo "Creating /initrd devices"
 
 cd ${BOOTIMG}/initrd/dev
-for i in console fd0 fd0u1440 hd[abcd] initctl loop0 ram0 scd[01] tty[01]
+for i in tty[01]
 do
   cp -a /dev/$i .
 done
@@ -79,24 +77,15 @@ mkdir pts
 
 echo "Populating /initrd/etc"
 cd ${BOOTIMG}/initrd/etc
-cp -af ${PORTDIR}/sys-apps/bootdisk/files/etc/* .
-find . -type d -name "CVS" -exec rm -r {} \;
+cp -af ${PORTDIR}/sys-apps/bootdisk/files/etc.boot/* .
+rm -r CVS
 touch ld.so.conf
 
-echo "Creating linuxrc"
-cd ${BOOTIMG}/initrd
-#gcc -Os -static -o linuxrc ${PORTDIR}/sys-apps/bootdisk/files/linuxrc.c
-cp ${PORTDIR}/sys-apps/bootdisk/files/linuxrc .
-strip linuxrc
 echo "Creating other dirs for initrd"
 cd ${BOOTIMG}/initrd/var
 dodirs log run
 touch log/wtmp
 touch run/utmp
-cd ${BOOTIMG}/initrd/lib
-mkdir modules
-mkdir modules/current
-
 
 
 echo "Creating links to initrd"
@@ -117,7 +106,8 @@ ln -sf ../initrd/dev/tty2 .
 #add more scsi disks!! :)
 
 for i in console fd0 fd0u1440 hd[abcd]* kmem loop[012] \
-         mem null ptmx ram[01234] scd* sd[abcd]* ttyp[01] ttys[01] \
+         mem null ptmx pty* ram[01234] random rtc scd* sd[abcd]* \
+	 stdin stdout stderr ttyp[01] ttys[01] \
 	 urandom zero
 do
     cp -af /dev/$i .
@@ -133,7 +123,7 @@ mknod initrd b 1 250
 cd ${BOOTIMG}/bin
 
 echo "Populating /bin"
-doexes bash cat chgrp chmod chown cp df du hostname kill ln login \
+doexes bash cat chgrp chmod chown cp df du hostname kill ldd ln login \
 	 ls mkdir mknod mount mv ping ps rm umount uname
 
 ln -s bash sh
@@ -143,10 +133,10 @@ echo "Populating /sbin"
 cd ${BOOTIMG}/sbin
 
 doexes agetty cfdisk depmod e2fsck fdisk grub halt ifconfig init insmod \
-	 ldconfig lilo ln lsmod mke2fs mkraid mkreiserfs mkswap \
+	 ldconfig lilo ln lsmod mke2fs mkraid mkreiserfs mkswap portmap \
 	 raidstart reboot resize2fs \
-	 route sfdisk shutdown touch
-# portmap? removed; 
+	 route rpc.statd sfdisk shutdown touch
+# portmap? removed; Ups added again
 # reiserfsck and resize_reiserfs does not exist in 2.4
 
 ln -s insmod modprobe
@@ -156,6 +146,7 @@ ln -s raidstart raidhotremove
 ln -s raidstart raidstop
 
 cp ${PORTDIR}/autoinstaller.sh .
+cp ${PORTDIR}/sys-apps/bootdisk/files/sbin/rc . .
 
 echo "Creating /usr dirs"
 cd ${BOOTIMG}/usr
@@ -164,8 +155,8 @@ dodirs bin lib sbin share
 echo "Populating /usr/bin"
 cd ${BOOTIMG}/usr/bin
 
-doexes awk bzip2 cut expr fdformat ftp grep gzip joe killall ldd \
-	loadkeys most rm rmdir scp sed ssh tar top vi 
+doexes awk bzip2 cut expr fdformat ftp grep gzip joe killall \
+	loadkeys most rm rmdir scp sed sleep ssh strace tar top vi 
 
 echo "Populating /usr/sbin"
 cd ${BOOTIMG}/usr/sbin
@@ -182,24 +173,10 @@ cp -af /usr/share/tabset .
 echo "terminfo"
 cp -af /usr/share/terminfo .
 
-echo "Populating /lib/modules"
-cd ${BOOTIMG}/lib
-mkdir modules
-#cd modules
-#cp -af /lib/modules/`uname -r` .
-#cd ${BOOTIMG}/lib/modules/`uname -r`
-#for i in modules.* 
-#do
-#  mv $i ../../../initrd/lib/modules/current/$i
-#  ln -sf ../../../initrd/lib/modules/current/$i .
-#done
-
-echo "Populating /usr/lib/security"
 cd ${BOOTIMG}/usr/lib
 
-mkdir security
-
 cp /usr/lib/security/pam_permit.so .
+cp /lib/libnss_files.so.2 .
 
 for j in "/bin" "/sbin" "/usr/bin" "/usr/sbin"
 do
@@ -227,6 +204,64 @@ do
 
 done
 
-ldconfig -r ${BOOTIMG}
-mv ${BOOTIMG}/initrd/* ${INITDISK}
+ldconfig -r ${BOOTIMG} -f /initrd/etc/ld.so.conf
+
+echo "Building initdisk"
+
+cd ${INITDISK}
+
+echo "Creating linuxrc"
+cp ${PORTDIR}/sys-apps/bootdisk/files/linuxrc .
+strip linuxrc
+
+for i in dev distcd etc mnt proc root tmp var
+do 
+  mkdir ${i}
+done
+
+cd dev
+for i in console fd0 fd0u1440 hd[abcd] initctl loop0 ram0 scd[01] tty[01]
+do
+  cp -a /dev/$i .
+done
+mknod initrd b 1 250
+
+mkdir pts
+
+cd ../etc
+echo "Populating /etc"
+cp -af ${PORTDIR}/sys-apps/bootdisk/files/etc/* .
+find . -type d -name "CVS" -exec rm -r {} \;
+cp ${BOOTIMG}/initrd/etc/ld.so.conf .
+cp ${BOOTIMG}/initrd/etc/ld.so.cache .
+
+cd ../mnt
+for i in floppy gentoo ram
+do
+  mkdir ${i}
+done
+
+cd ../var
+cp -a ${BOOTIMG}/var/* .
+
+cd ${ROOT}
+
+dd if=/dev/zero of=initdisk bs=1024 count=4096
+mke2fs -m 0 -N 3000 initdisk
+mkdir mnt
+mount -o loop initdisk mnt
+cp -af ${INITDISK}/* mnt
+umount mnt
+gzip -9 initdisk
+
+dd if=/dev/zero of=boot.img bs=1024 count=16384
+mke2fs boot.img
+mkdir mnt
+mount -o loop boot.img mnt
+cp -af ${BOOTIMG}/* mnt
+umount mnt
+gzip -9 boot.img
+
+
+
 
