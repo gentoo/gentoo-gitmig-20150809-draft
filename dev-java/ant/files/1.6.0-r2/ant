@@ -3,7 +3,7 @@
 #   Copyright (c) 2001-2003 The Apache Software Foundation.  All rights
 #   reserved.
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.6.0-r2/ant,v 1.1 2004/01/18 21:50:32 strider Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.6.0-r2/ant,v 1.2 2004/01/19 00:12:56 strider Exp $
 
 if [ -f $HOME/.gentoo/java-env ] ; then
   source $HOME/.gentoo/java-env
@@ -55,7 +55,7 @@ if [ -n "$CLASSPATH" ] ; then
 fi
 
 # add in the dependency .jar files
-LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant,ant-optional,log4j,xerces,xalan,junit,antlr,bcel,bsh,commons-beanutils,commons-logging,commons-net,oro,jdepend,jsch,regexp,rhino,jython,jta,jaf,javamail`"
+LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant,ant-optional,log4j,xerces,xalan,junit,antlr,bcel,bsh,commons-beanutils,commons-logging,commons-net,oro,jdepend,jsch,regexp,rhino,jython,jta,jaf,javamail 2> /dev/null`"
 
 if [ -n "$JAVA_HOME" ] ; then
   if [ -f "$JAVA_HOME/lib/tools.jar" ] ; then
