@@ -1,4 +1,6 @@
+MD5 e422993b46b395d871d41bd1c0482425 tenshi-0.3.1.ebuild 1392
 MD5 fac3c15cc47fbc397c34a2b7dc044f3b tenshi-0.3.ebuild 1390
-MD5 c4977a1ad54ad19586d4d5fde1c69e61 ChangeLog 327
+MD5 a4c1fafcc0831a6c97c5d95f1cc55bd0 ChangeLog 392
 MD5 f572ebddd176b9af5659db0d96b0c063 metadata.xml 263
 MD5 1742326091319f22ccc1e3a3e0a52666 files/digest-tenshi-0.3 61
+MD5 a91c1a0d1f95fa0deddd25f6f9623deb files/digest-tenshi-0.3.1 63
