@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.20 2005/01/03 00:22:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.21 2005/01/25 19:49:46 corsair Exp $
+
+  25 Jan 2005; Markus Rothe <corsair@gentoo.org> libraw1394-0.10.1.ebuild:
+  Stable on ppc64
 
   03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
