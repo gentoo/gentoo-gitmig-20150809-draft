@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.29 2003/10/31 23:03:40 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.30 2003/11/07 18:42:45 azarah Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -171,6 +171,14 @@ strip-flags() {
 			fi
 		done
 	done
+
+	# In case we filtered out all optimization flags fallback to -O2
+	if [ "${CFLAGS/-O}" != "${CFLAGS}" -a "${NEW_CFLAGS/-O}" = "${NEW_CFLAGS}" ]; then
+		NEW_CFLAGS="${NEW_CFLAGS} -O2"
+	fi
+	if [ "${CXXFLAGS/-O}" != "${CXXFLAGS}" -a "${NEW_CXXFLAGS/-O}" = "${NEW_CXXFLAGS}" ]; then
+		NEW_CXXFLAGS="${NEW_CXXFLAGS} -O2"
+	fi
 
 	set +f
 
