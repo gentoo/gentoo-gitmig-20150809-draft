@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.28 2004/12/03 17:48:49 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.29 2004/12/16 15:57:28 chainsaw Exp $
+
+*beep-media-player-0.9.7 (16 Dec 2004)
+
+  16 Dec 2004; Tony Vroon <chainsaw@gentoo.org>
+  +beep-media-player-0.9.7.ebuild:
+  Version bump. Closes bugs #70697 and #74126. Gnome VFS support has been
+  explicitly disabled, most plugins hate it.
 
   03 Dec 2004; Tom Martin <slarti@gentoo.org>
   beep-media-player-0.9.7_rc2-r3.ebuild:
