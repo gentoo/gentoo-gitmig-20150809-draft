@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.10 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.11 2003/02/18 09:00:45 carpaski Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -11,7 +11,7 @@ INHERITED="$INHERITED $ECLASS"
 
 newdepend sys-devel/gcc
 
-DESCRIPTION="Based on the ${ECLASS} eclass"
+[ -z "$DESCRIPTION" ] && DESCRIPTION="Based on the ${ECLASS} eclass"
 
 
 # NOTE: To force gcc3 if multi ver install, do:  export WANT_GCC_3="yes"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-base.eclass,v 1.20 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-base.eclass,v 1.21 2003/02/18 09:00:45 carpaski Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -13,5 +13,5 @@ INHERITED="$INHERITED $ECLASS"
 
 newdepend /c
 
-DESCRIPTION="Based on the $ECLASS eclass"
+[ -z "$DESCRIPTION" ] && DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://apps.kde.com/"

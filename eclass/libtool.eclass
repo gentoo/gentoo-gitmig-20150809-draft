@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.20 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.21 2003/02/18 09:00:45 carpaski Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -12,7 +12,7 @@ INHERITED="$INHERITED $ECLASS"
 
 newdepend "!bootstrap? ( sys-devel/libtool )"
 
-DESCRIPTION="Based on the ${ECLASS} eclass"
+[ -z "$DESCRIPTION" ] && DESCRIPTION="Based on the ${ECLASS} eclass"
 
 ELIBTOOL_VERSION=1.8.1
 

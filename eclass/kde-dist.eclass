@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.34 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.35 2003/02/18 09:00:45 carpaski Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -23,7 +23,7 @@ need-kde $PV
 [ "$PV" == "3.1_rc5" ] && S=${WORKDIR}/${PN}-3.1rc5
 [ "$PV" == "3.1_rc6" ] && S=${WORKDIR}/${PN}-3.1rc6
 
-DESCRIPTION="KDE ${PV} - "
+[ -z "$DESCRIPTION" ] && DESCRIPTION="KDE ${PV} - "
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"

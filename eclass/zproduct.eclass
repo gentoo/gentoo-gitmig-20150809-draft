@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.1 2003/02/17 05:06:48 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.2 2003/02/18 09:00:45 carpaski Exp $
 
 # This eclass is designed to streamline the construction of
 # ebuilds for new zope products
@@ -10,7 +10,7 @@ ECLASS=zproduct
 INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS src_install pkg_prerm pkg_postinst
 
-DESCRIPTION="Define me."
+[ -z "$DESCRIPTION" ] && DESCRIPTION="Define me."
 HOMEPAGE=""
 SRC_URI=""
 DEPEND=""
