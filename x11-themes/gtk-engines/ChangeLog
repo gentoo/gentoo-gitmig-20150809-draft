@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.14 2004/03/14 17:56:01 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.15 2004/04/17 14:47:27 liquidx Exp $
+
+  17 Apr 2004; Alastair Tse <liquidx@gentoo.org> gtk-engines-2.2.0.ebuild:
+  replace newdepend
 
   14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> gtk-engines-2.2.0.ebuild:
   Added ~mips keyword.

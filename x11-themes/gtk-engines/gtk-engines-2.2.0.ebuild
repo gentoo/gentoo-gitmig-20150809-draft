@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.2.0.ebuild,v 1.15 2004/03/14 17:56:01 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.2.0.ebuild,v 1.16 2004/04/17 14:47:27 liquidx Exp $
 
 inherit gtk-engines2 gnuconfig
 
@@ -25,7 +25,7 @@ SLOT="0"
 #	x11-themes/gtk-engines-raleigh
 #	x11-themes/gtk-engines-redmond95"
 
-[ -n "${HAS_GTK1}" ] && newdepend ">=media-libs/imlib-1.8"
+[ -n "${HAS_GTK1}" ] && DEPEND="${DEPEND} >=media-libs/imlib-1.8"
 
 GTK1_S=${WORKDIR}/${PN}-${GTK1_VER}
 GTK2_S=${WORKDIR}/${PN}-${GTK2_VER}
