@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r1.ebuild,v 1.6 2003/05/24 00:10:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r1.ebuild,v 1.7 2004/04/27 17:14:29 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A keyboard-based window manager"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.students.tut.fi/~tuomov/ion/"
 IUSE=""
 SLOT="0"
 LICENSE="Clarified-Artistic"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="virtual/x11"
 
