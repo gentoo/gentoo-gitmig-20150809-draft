@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.1 2005/01/15 02:24:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.2 2005/01/16 13:50:47 motaboy Exp $
+
+  16 Jan 2005; Simone Gotti <motaboy@gentoo.org> korn-3.4.0_beta1.ebuild:
+  Fix bug #78208.
 
 *korn-3.4.0_beta1 (15 Jan 2005)
 
