@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/files/eggdrop-installer,v 1.7 2004/09/12 03:27:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/files/eggdrop-installer,v 1.8 2004/09/12 15:31:46 swegener Exp $
 
 source /etc/init.d/functions.sh || {
 	echo "${0}: Could not source /etc/init.d/functions.sh!"
@@ -63,22 +63,22 @@ install_eggdrop() {
 	cp /opt/eggdrop/eggdrop.conf "${bot_dir}/eggdrop.conf"
 
 	einfo "Finished..."
-	einfo      
+	einfo
 	einfo "Please edit your ${bot_dir}/eggdrop.conf!"
 	einfo
 	einfo "The bot needs to be run from the ${bot_dir} directory."
-	einfo "Run 'cd ${bot_dir} &&  ./eggdrop -m eggdrop.conf'"
+	einfo "Run 'cd ${bot_dir} && ./eggdrop -m eggdrop.conf'"
 	einfo "to create the user file and then remove the -m command line option"
 	einfo "to start your eggdrop bot."
 	einfo
 	einfo "If you need any help pleaese refer to the man page, or"
-	einfo "eggdrop website at http://www.egghelper.org"
+	einfo "eggdrop website at http://www.egghelper.org/"
 }
 
 if [ ! -n "${1}" ]
 then
 	usage
-else 
+else
 	bot_name="${1}"
 	root_check
 fi

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.26 2004/09/12 03:27:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.27 2004/09/12 15:31:46 swegener Exp $
+
+  12 Sep 2004; Sven Wegener <swegener@gentoo.org> files/eggdrop-installer:
+  Trimmed trailing whitespace in eggdrop-installer script.
 
   12 Sep 2004; Sven Wegener <swegener@gentoo.org> files/eggdrop-installer:
   Added documentation to eggdrop-installer about how to create the user file and
