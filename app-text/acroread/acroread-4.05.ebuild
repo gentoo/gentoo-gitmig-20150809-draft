@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-4.05.ebuild,v 1.1 2001/02/06 14:48:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-4.05.ebuild,v 1.2 2001/04/29 19:37:22 blutgens Exp $
 
 A=linux-ar-405.tar.gz
 S=${WORKDIR}/ILINXR.install
@@ -30,6 +30,7 @@ src_install () {
   exeinto /usr/X11R6/bin
   doexe acroread
   dodoc ReadMe LICREAD.TXT
-
+  dodir /opt/netscape/plugins
+  dosym /usr/X11R6/lib/Acrobat4/Browsers/intellinux/nppdf.so /opt/netscape/plugins
 }
 
