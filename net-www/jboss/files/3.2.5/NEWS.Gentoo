@@ -1,0 +1,46 @@
+-*-text-*- $Id: NEWS.Gentoo,v 1.1 2004/07/20 03:50:56 mkennedy Exp $
+
+* net-www/jboss-3.2.5
+
+SERVER_HOME Changes
+-------------------
+
+Prior to this release in Portage, the SERVER_HOME (ie. /var/lib/jboss)
+used to deploy user applications was maintained with CONFIG_PROTECT.
+There are a few problems with this approach:
+
+    1. Upon updating, you may have to merge over 100 files with
+       etc-update.
+
+    2. Most of the files in SERVER_HOME are binary in nature and do
+       not benifit from CONFIG_PROTECT.
+
+    3. The CONFIG_PROTECT mechanism is only capable of merging files.
+       Thus the mechanism cannot support updates which require old
+       files in SERVER_HOME to be removed.
+
+Release net-www/jboss-3.2.5 onward will no longer maintain SERVER_HOME
+with CONFIG_PROTECT.  Instead of this, we recommended you to consider
+creating your own SERVER_HOME sub-directory based on the 3 templates
+provided by the JBoss installation (ie. SERVER_HOME/all,
+SERVER_HOME/default and SERVER_HOME/minimal).
+
+After you have made your own SERVER_HOME sub-directory, simply
+annotate /etc/conf.d/jboss so that JBoss uses your SERVER_HOME
+sub-directory rather than the default one. e.g.
+
+    cp -a /var/lib/jboss/default /var/lib/jboss/myserver
+    sed -i 's,^\(JBOSS_CONF=\).*,\1"myserver",g' /etc/conf.d/jboss
+
+Log4J Changes
+-------------
+
+The log4j.xml configuration file now sets prority INFO for
+"org.apache.commons" category which is extremely noise at DEBUG
+priority.
+
+
+Authors of this Document
+------------------------
+
+Matthew Kennedy <mkennedy@gentoo.org>

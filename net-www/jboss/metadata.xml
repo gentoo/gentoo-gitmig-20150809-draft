@@ -6,4 +6,8 @@
     <email>mkennedy@gentoo.org</email>
     <name>Matthew Kennedy</name>
   </maintainer>
+  <longdescription>
+    The JBoss/Server is the leading Open Source, standards-compliant,
+    J2EE based application server implemented in 100% Pure Java.
+  </longdescription>
 </pkgmetadata>

@@ -1,6 +1,17 @@
 # ChangeLog for net-www/jboss
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/ChangeLog,v 1.19 2004/06/25 15:38:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/ChangeLog,v 1.20 2004/07/20 03:50:56 mkennedy Exp $
+
+*jboss-3.2.5 (19 Jul 2004)
+
+  19 Jul 2004; <mkennedy@gentoo.org> metadata.xml, +files/3.2.5/NEWS.Gentoo,
+  +files/3.2.5/README.Gentoo, +files/3.2.5/catalog, +files/3.2.5/log4j.xml,
+  +files/3.2.5/conf.d/jboss, +files/3.2.5/env.d/50jboss,
+  +files/3.2.5/init.d/jboss, +jboss-3.2.5.ebuild:
+  New upstream version; Expanded metadata.xml; Addition of NEWS.Gentoo; No
+  longer CONFIG_PROTECT /var/lib/jboss (see NEWS.Gentoo); Adjust
+  Gentoo-installed log4j.xml so that the org.apache.commons category
+  is less noisy;  Resoves Bug #51410.
 
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org> jboss-3.2.1-r1.ebuild,
   jboss-3.2.1.ebuild:
