@@ -1,4 +1,6 @@
 MD5 679ba888768ac666d30e59e820578041 ibm-acpi-0.3.ebuild 1765
-MD5 2816084825f22ee837d81ee72f85aec1 ChangeLog 382
+MD5 d7eac71bc19210f53474b14ec7b44474 ibm-acpi-0.4.ebuild 1803
+MD5 67fc6829b8bd01da0764c7cf098501f2 ChangeLog 504
 MD5 dc1773fc29727c205a632b4a780a5d21 metadata.xml 219
 MD5 d3d4d8542e2fcc77d860f0942089bb8c files/digest-ibm-acpi-0.3 63
+MD5 d1c1de52630fbc3ae75edad2fad6f90b files/digest-ibm-acpi-0.4 63
