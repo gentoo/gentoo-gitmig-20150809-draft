@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/pktstat
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.1 2003/10/10 17:57:59 mholzer Exp $
+
+*pktstat-1.7.2q (11 Oct 2003)
+
+  11 Oct 2003; Martin Holzer <mholzer@gentoo.org> pktstat-1.7.2q.ebuild:
+  Initial Version. Submitted by Jeff Shirley <shirjs0@wfu.edu> in #25807.
+
