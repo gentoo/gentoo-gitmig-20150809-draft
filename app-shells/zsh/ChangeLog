@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.17 2003/03/25 20:55:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.18 2003/04/17 08:39:02 vladimir Exp $
+
+*zsh-4.1.0_pre7 (17 Apr 2003)
+
+  17 Apr 2003; Graham Forest <vladimir@gentoo.org> zsh-4.0.6-r3.ebuild,
+  zsh-4.1.0_pre7.ebuild:
+  Version bump, fixed zshall manpage problem, marked 4.0.6-r3 stable on ppc, and
+  changed ncurses to use USE
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
