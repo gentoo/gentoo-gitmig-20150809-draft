@@ -1,5 +1,7 @@
 MD5 5cb3e710ddee1d12b11f8a080478c246 ChangeLog 714
 MD5 a2e12db76824e131803ad36e1a0b10c4 scribus-scripting-0.4.ebuild 679
 MD5 5fad60d86ddb2011dd1b4732f4656223 scribus-scripting-0.5.ebuild 686
+MD5 6b3957a78b121b444f4c04cbf24958f4 scribus-scripting-0.5.1.ebuild 691
+MD5 1487e8ef2a43a3526db8f511ca656505 files/digest-scribus-scripting-0.5.1 75
 MD5 fe40dc3614b8945fb507d79ae6a09264 files/digest-scribus-scripting-0.4 73
 MD5 7283c3871b0cb6872b23cc3b69f8164c files/digest-scribus-scripting-0.5 73
