@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-j2sdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.32 2004/09/29 21:01:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.33 2004/11/03 19:07:58 cretin Exp $
+
+  03 Nov 2004; Stefan Jones <cretin@gentoo.org> sun-j2sdk-1.4.2.ebuild,
+  +files/1.4.2/j2sdk-1.4.2-gcc3.4-fixes.patch:
+  Added patch so gcc 3.4 compiles, bug #51289
 
   29 Sep 2004; Thomas Matthijs <axxo@gentoo.org> sun-j2sdk-1.4.1-r1.ebuild,
   sun-j2sdk-1.4.2.ebuild:

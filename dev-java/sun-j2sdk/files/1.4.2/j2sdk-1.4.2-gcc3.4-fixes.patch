@@ -1,0 +1,43 @@
+--- j2sdk/hotspot/src/os_cpu/linux_i486/vm/atomic_linux_i486.inline.hpp.jj	2004-09-15 09:13:45.000000000 -0700
++++ j2sdk/hotspot/src/os_cpu/linux_i486/vm/atomic_linux_i486.inline.hpp	2004-09-16 10:55:57.650095032 -0700
+@@ -50,7 +50,7 @@
+   __asm__ volatile (  "pushl %%ebx;mov 4+%1,%%ecx;mov %1,%%ebx;lock;cmpxchg8b (%3);popl %%ebx"
+                     : "=A" (old_value)
+                     : "m" (exchange_value), "A" (compare_value), "r" (dest)
+-                    : "%ebx", "%ecx", "memory");
++                    : "%ecx", "memory");
+   return old_value;
+ }
+ 
+--- j2sdk/j2se/src/share/native/sun/awt/font/fontmanager/fontobjects/t2kScalerContext.cpp.jj	2004-11-02 13:59:12.267814176 -0800
++++ j2sdk/j2se/src/share/native/sun/awt/font/fontmanager/fontobjects/t2kScalerContext.cpp	2004-11-02 14:05:10.354376744 -0800
+@@ -933,14 +933,14 @@
+ CMAPMapper::CharsToGlyphs(
+     int count, const Unicode16 unicodes[], UInt32 glyphs[]) const
+ {
+-    ConvertUnicodeToGlyphs(*font, (unsigned char *)cmap, count, unicodes, glyphs);
++    ConvertUnicodeToGlyphs(*font, (unsigned char *&)cmap, count, unicodes, glyphs);
+ }
+ 
+ void
+ CMAPMapper::CharsToGlyphs(
+         int count, const Unicode32 unicodes[], UInt32 glyphs[]) const
+ {
+-    ConvertUnicodeToGlyphs(*font, (unsigned char *)cmap, count, unicodes, glyphs);
++    ConvertUnicodeToGlyphs(*font, (unsigned char *&)cmap, count, unicodes, glyphs);
+ }
+ 
+ //////////////////////////////////////////////////////////////////////////////
+--- j2sdk/mozilla/share/plugin/mozilla_headers_ns610/nscore.h.jj	2004-11-02 14:22:23.209358920 -0800
++++ j2sdk/mozilla/share/plugin/mozilla_headers_ns610/nscore.h	2004-11-02 14:27:26.490253216 -0800
+@@ -192,6 +192,10 @@
+   #define HAVE_CPP_2BYTE_WCHAR_T
+ #endif
+ 
++#if defined(__GNUC__)
++#define HAVE_CPP_MODERN_SPECIALIZE_TEMPLATE_SYNTAX
++#endif
++
+   /* until we get an autoconf test for this, we'll assume it's on (since we're using it already) */
+ #define HAVE_CPP_TYPENAME
+ 

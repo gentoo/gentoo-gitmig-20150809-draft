@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.13 2004/09/29 21:01:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.14 2004/11/03 19:07:58 cretin Exp $
 
 inherit java
 
@@ -8,7 +8,8 @@ JAVA_PATCHES="
 	remove-fixed-paths
 	static_cxx
 	force-motif
-	gcc3.3-fixes"
+	gcc3.3-fixes
+	gcc3.4-fixes"
 
 S=${WORKDIR}/j2sdk
 

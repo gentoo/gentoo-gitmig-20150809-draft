@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a65f054d7d05db66da2fb78bd0cd59a9 sun-j2sdk-1.4.2.ebuild 3841
-MD5 94b9c6412867a1f27995e247e14ee04d ChangeLog 4676
+MD5 c06e2a9da33afc0c4cede26fd96ac628 sun-j2sdk-1.4.2.ebuild 3857
+MD5 b713a26f4a6f3579d549a17a011a91e4 ChangeLog 4844
 MD5 f4eeb1e3cd292967d0a36065d8bc1e3e sun-j2sdk-1.4.1-r1.ebuild 3990
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 3151dccccac816a78850fca950201f6f files/sun-j2sdk-1.4.1 447
@@ -22,11 +19,5 @@ MD5 ea3048b7ef26c763bb331b1430061d4c files/1.4.2/j2sdk-1.4.2-static_cxx.patch 43
 MD5 0bb65304895dd012bebfc692fbd48af1 files/1.4.2/j2sdk-1.4.2-pthread.patch 1624
 MD5 276f4ce091acd44428e36c15de66f7d1 files/1.4.2/j2sdk-1.4.2-gcc3.3-fixes.patch 4176
 MD5 df6db4b858ad836d290f1862857622d9 files/1.4.2/j2sdk-1.4.2-remove-fixed-paths.patch 4525
+MD5 db4df45b4212ae4c82f6ac2fcf75057f files/1.4.2/j2sdk-1.4.2-gcc3.4-fixes.patch 1958
 MD5 7c7b6039ae92a59953775ddb8d8b93c8 files/1.4.2/j2sdk-1.4.2-force-motif.patch 3137
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBWyLV/rLF9B432nYRAmOWAKCYd4wMpBz1PWQkVFIrYJGoLQzV6QCfSVk/
-AJklHN33xFMcy1kmyrhQZs8=
-=Cnrt
------END PGP SIGNATURE-----
