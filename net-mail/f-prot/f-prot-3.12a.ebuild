@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-3.12a.ebuild,v 1.5 2002/12/09 11:52:24 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-3.12a.ebuild,v 1.6 2003/02/13 14:29:53 vapier Exp $
 
 MY_P=${PN}_${PV}
 S=${WORKDIR}/${MY_P}

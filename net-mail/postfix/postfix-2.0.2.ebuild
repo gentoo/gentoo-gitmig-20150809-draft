@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.2.ebuild,v 1.4 2003/01/19 23:59:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.2.ebuild,v 1.5 2003/02/13 14:36:40 vapier Exp $
 
 TLS_P="pfixtls-0.8.13-2.0.1-0.9.7"
 IPV6_P="tls+ipv6-1.12-pf-2.0.2"

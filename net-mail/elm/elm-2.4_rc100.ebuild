@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/elm/elm-2.4_rc100.ebuild,v 1.1 2003/01/23 21:13:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/elm/elm-2.4_rc100.ebuild,v 1.2 2003/02/13 14:28:25 vapier Exp $
 
 # HORRIBLY SORRY FOR THIS!  BUT I WANT THE EBUILD AND IT DOESN'T
 # HURT ANYTHING!  I PROMISE! :) - raker@gentoo.org

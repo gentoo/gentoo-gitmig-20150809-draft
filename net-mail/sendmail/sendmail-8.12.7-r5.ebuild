@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.7-r5.ebuild,v 1.1 2003/02/03 06:24:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.7-r5.ebuild,v 1.2 2003/02/13 14:40:02 vapier Exp $
 
 IUSE="ssl ldap sasl berkdb tcpd gdbm"
 
