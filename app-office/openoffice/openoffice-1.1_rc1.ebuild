@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.15 2003/03/24 21:37:51 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_rc1.ebuild,v 1.1 2003/07/20 09:29:16 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -49,25 +49,26 @@ inherit virtualx
 
 
 LOC="/opt"
-FT_VER="2.1.3"
+FT_VER="2.1.4"
 STLP_VER="4.5.3"
-
+MY_PV="${PV/_rc1/rc}"
 INSTDIR="${LOC}/OpenOffice.org${PV}"
-S="${WORKDIR}/oo_${PV}_src"
+S="${WORKDIR}/oo_${MY_PV}_src"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
-SRC_URI="http://ny1.mirror.openoffice.org/stable/${PV}/OOo_${PV}_source.tar.bz2
-	http://sf1.mirror.openoffice.org/stable/${PV}/OOo_${PV}_source.tar.bz2
-	http://www.stlport.org/archive/STLport-${STLP_VER}.tar.gz
+SRC_URI="http://ny1.mirror.openoffice.org/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
+	http://sf1.mirror.openoffice.org/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
+	http://niihau.student.utwente.nl/openoffice/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z
 	mirror://sourceforge/freetype/freetype-${FT_VER}.tar.bz2"
 HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="-x86 -ppc"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
+	!=sys-libs/glibc-2.3.1*
 	>=dev-lang/perl-5.0
 	virtual/x11
 	app-arch/zip
@@ -93,7 +94,7 @@ pkg_setup() {
 	if [ "$(gcc-version)" != "3.2" ]
 	then
 		eerror
-		eerror "This build needs gcc-3.2 or later, but due to profile"
+		eerror "This build needs gcc-3.2.x, but due to profile"
 		eerror "settings, it cannot DEPEND on it, so please merge it"
 		eerror "manually:"
 		eerror
@@ -103,8 +104,8 @@ pkg_setup() {
 		eerror "gcc-3.2.  Thus if there is already a gcc-3.2.1-r2 out, use this"
 		eerror "rather than 3.2.1, etc."
 		eerror
-		eerror "As of writing, gcc-3.2.1 seemed to create the most stable builds."
-		eerror "Also, because OO is such a complex build, ONLY gcc-3.2.1 will be"
+		eerror "As of writing, gcc-3.2.3-r1 seemed to create the most stable builds."
+		eerror "Also, because OO is such a complex build, ONLY gcc-3.2.3-r1 will be"
 		eerror "supported!"
 		eerror
 		eerror "This process is not highly recomended, as upgrading your compiler"
@@ -163,7 +164,7 @@ oo_setup() {
 			export GCC_PROFILE="$(/usr/sbin/gcc-config --get-current-profile)"
 
 			# Just recheck gcc version ...
-			if [ "$(gcc-version)" != "3.2" ]
+			if [ "$(gcc-version)" != "3.2" ] 
 			then
 				# See if we can get a gcc profile we know is proper ...
 				if /usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1 &> /dev/null
@@ -192,7 +193,7 @@ src_unpack() {
 	oo_setup
 
 	cd ${WORKDIR}
-	unpack OOo_${PV}_source.tar.bz2 gpc231.tar.Z
+	unpack OOo_${MY_PV}_source.tar.bz2 gpc231.tar.Z
 
 	# Install gpc
 	cd ${WORKDIR}/gpc231
@@ -200,49 +201,13 @@ src_unpack() {
 
 	cd ${S}
 
-	# This resolves missing symbols (Debian)
-	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-compiler-flags.patch
-
-	# If $HOME is not set, ccache breaks. (Debian)
-	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-dont-unset-home.patch
-
-	# Misc Debian patches to fixup build
-	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-no-mozab.patch
-	echo "moz     moz : NULL" > ${S}/moz/prj/build.lst
-
-	# Misc patches from Mandrake
-	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-fix-asm.patch
-
-	# Get OO to use STLport-4.5.3 (Az)
-	cp ${DISTDIR}/STLport-${STLP_VER}.tar.gz ${S}/stlport/download || die
 	cd ${S}/stlport
-	if [ "${NEW_GCC}" -eq "1" ]
-	then
-		epatch ${FILESDIR}/${PV}/${PN}-1.0.1-use-STLport-4.5.3-newgcc.patch
-	else
-		epatch ${FILESDIR}/${PV}/${PN}-1.0.1-use-STLport-4.5.3.patch
-	fi
+	rm STLport-4.5.3.patch
+	epatch ${FILESDIR}/${PV}/newstlportfix.patch
 	cd ${S}
+	epatch ${FILESDIR}/${PV}/no-mozab.patch
 
-	# Seth -- Dec 1 2002
-	if [ "$(echo ${JAVA_BINARY} | egrep 'j(2s)?dk-1.4')" ]
-	then
-		epatch ${FILESDIR}/${PV}/${PN}-1.0.1-fix-jdk-1.4.0.patch
-	fi
 
-	# Debian patch to fix an xinteraction handler build error (Seth)
-	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-xinteraction-fix.patch
-	
-	# Get OO to build with freetype-2.1.3
-	einfo "Moving freetype-${FT_VER}.tar.bz2 in place ..."
-	cp ${DISTDIR}/freetype-${FT_VER}.tar.bz2 ${S}/freetype/download || die
-	# We need it as a .tar.gz ...
-	bzip2 -d ${S}/freetype/download/freetype-${FT_VER}.tar.bz2 || die
-	gzip -1 ${S}/freetype/download/freetype-${FT_VER}.tar
-	# OK, copy the new patch in place, and fixup some other things ...
-	cp ${FILESDIR}/${PV}/freetype-${FT_VER}.patch ${S}/freetype || die
-	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-use-freetype-${FT_VER}.patch
-	
 	# Now for our optimization flags ...
 	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
 		${S}/solenv/inc/unxlngi3.mk
@@ -253,12 +218,10 @@ src_unpack() {
 	cd ${S}; einfo "Fixing makefiles for multiprocess builds..."
 	for x in io/source/stm dtrans/source/X11 idlc/source nas zlib toolkit/util \
 		comphelper/util padmin/source svtools/util bridges/source/prot_uno \
-		ucb/source/ucp/ftpproxy framework/util framework/source/unotypes
+		framework/util framework/source/unotypes
 	do
 		perl -pi -e "s/^(PRJNAME)/MAXPROCESS=1\n\1/" ${x}/makefile.mk
 	done
-
-	epatch ${FILESDIR}/${PV}/${PN}-errno.patch
 }
 
 get_EnvSet() {
@@ -276,7 +239,7 @@ get_EnvSet() {
 }
 
 src_compile() {
-
+	addpredict /bin
 	local buildcmd=""
 
 	oo_setup
@@ -294,6 +257,17 @@ src_compile() {
 		# we take the easy way out. (Az)
 		export CC="/usr/bin/ccache/ccache ${CC}"
 		export CXX="/usr/bin/ccache/ccache ${CXX}"
+	fi
+    
+	# Enable new ccache for this build 
+	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
+	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
+	     -x /usr/bin/ccache ]
+	then
+		# Build uses its own env with $PATH, etc, so
+		# we take the easy way out. (Az)
+		export CC="/usr/bin/ccache ${CC}"
+		export CXX="/usr/bin/ccache ${CXX}"
 	fi
     
 	# Enable distcc for this build (Az)
@@ -318,7 +292,7 @@ src_compile() {
 	rm -f config.cache
 	./configure --enable-gcc3 \
 		--with-jdk-home=${JAVA_HOME} \
-		--with-lang=ENUS \
+		--with-lang=ALL\
 		--with-x || die
 	
 	cd ${S}
@@ -404,6 +378,9 @@ src_install() {
 	addpredict "/user"
 	addpredict "/share"
 	addpredict "/dev/dri"
+	addpredict "/usr/bin/soffice"
+	addpredict "/pspfontcache"	
+
 	# This allows us to change languages without editing the ebuild.
 	#
 	#   languages1="ENUS,FREN,GERM,SPAN,ITAL,DTCH,PORT,SWED,POL,RUSS"
@@ -487,13 +464,13 @@ src_install() {
 
 	# Install user autoresponse file
 	insinto /etc/openoffice
-	sed -e "s|<pv>|${PV}|g" ${T}/rsfile-local > ${T}/autoresponse.conf
-	doins ${T}/autoresponse.conf
+	sed -e "s|<pv>|${PV//_beta2}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
+	doins ${T}/autoresponse-${PV}.conf
 	
 	# Install wrapper script
 	exeinto /usr/bin
 	sed -e "s|<pv>|${PV}|g" \
-		${FILESDIR}/${PV}/ooffice-wrapper-1.2 > ${T}/ooffice
+		${FILESDIR}/${PV}/ooffice-wrapper-1.3 > ${T}/ooffice
 	doexe ${T}/ooffice
 	# Component symlinks
 	dosym ooffice /usr/bin/oocalc
@@ -501,6 +478,7 @@ src_install() {
 	dosym ooffice /usr/bin/ooimpress
 	dosym ooffice /usr/bin/oomath
 	dosym ooffice /usr/bin/oowriter
+	dosym ooffice /usr/bin/ooweb
 	dosym ooffice /usr/bin/oosetup
 	dosym ooffice /usr/bin/oopadmin
 
@@ -524,18 +502,15 @@ src_install() {
 
 	if [ -n "`use kde`" ]
 	then
-		local kdeloc="${D}${INSTDIR}/share/kde/net/applnk/OpenOffice.org${PV}"
+		local kdeloc="${D}${INSTDIR}/share/kde/net/"
 	
-		# Portage do not work with the space ..
-		mv ${D}${INSTDIR}/share/kde/net/applnk/OpenOffice.org\ ${PV} ${kdeloc}
-		
-		insinto /usr/share/applnk/OpenOffice.org
+		insinto /usr/share/applnk/OpenOffice.org\ 1.1
 		# Install the files needed for the catagory
 		doins ${kdeloc}/.directory
 		doins ${kdeloc}/.order
 		dodir /usr/share
 		# Install the icons and mime info
-		cp -a ${D}${INSTDIR}/share/kde/net/mimelnk/share/* ${D}/usr/share
+		cp -a ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
 		
 		for x in ${kdeloc}/*.desktop
 		do
@@ -548,25 +523,18 @@ src_install() {
 	fi
 
 	# Unneeded, as they get installed into /usr/share...
-	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
-
-	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
-		echo 'Categories=Application;Office;' >> ${f}
-	done
+	# They are needed else user installation fails.
+#	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
+	rm -rf ${D}${INSTDIR}/share/cde
+#
+#	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
+#		echo 'Categories=Application;Office;' >> ${f}
+#	done
 
 	# Make sure these do not get nuked.
-	keepdir ${INSTDIR}/user/config/registry/instance/org/openoffice/{Office,ucb}
+	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
 	keepdir ${INSTDIR}/user/psprint/{driver,fontmetric}
 	keepdir ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}
-}
-
-pkg_preinst() {
-
-	# The one with OO-1.0.0 was not valid
-	if [ -f ${ROOT}/etc/openoffice/autoresponse.conf ]
-	then
-		rm -f ${ROOT}/etc/openoffice/autoresponse.conf
-	fi
 }
 
 pkg_postinst() {
@@ -578,7 +546,7 @@ pkg_postinst() {
 	einfo
 	einfo " Also, for individual components, you can use any of:"
 	einfo
-	einfo "   oocalc, oodraw, ooimpress, oomath or oowriter"
+	einfo "   oocalc, oodraw, ooimpress, oomath, ooweb or oowriter"
 	einfo
 	einfo " If the fonts appear garbled in the user interface refer to "
 	einfo " Bug 8539, or http://www.openoffice.org/FAQs/fontguide.html#8"
