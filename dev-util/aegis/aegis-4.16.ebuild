@@ -1,5 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# Header: $
 
 IUSE="tcltk"
 
@@ -15,7 +16,7 @@ DEPEND="sys-libs/zlib
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc"
 
 src_compile() {
 	# By default aegis configure puts shareable read/write files (locks etc)
