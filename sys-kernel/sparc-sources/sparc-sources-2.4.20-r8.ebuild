@@ -1,12 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20-r8.ebuild,v 1.3 2003/07/22 20:00:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20-r8.ebuild,v 1.4 2003/07/23 09:48:02 joker Exp $
 
 IUSE="build ultra1"
 
-# OKV=original kernel version, KV=patched kernel version.  They can be the
-# same.
-KV=${PV}
+# OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 # Kernel ebuilds using the kernel.eclass can remove any patch that you
 # do not want to apply by simply setting the KERNEL_EXCLUDE shell
@@ -23,24 +21,23 @@ KV=${PV}
 
 ETYPE="sources"
 
-inherit kernel
-
+inherit kernel || die
+OKV="2.4.20"
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/sparc-sources-${PV}/patches.txt.gz
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${PVR}-sparc.tar.bz2"
+	
 KEYWORDS="~x86 -ppc sparc"
 SLOT="${KV}"
 
 src_unpack() {
 	unpack ${A}
-	mv linux-${OKV} linux-${KV} || die
+	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
 
-	cd ${KV}
-	# Kill patches we aren't suppposed to use, don't worry about 
-	# failures, if they aren't there that is a good thing!
+	cd ${WORKDIR}/${KV}
 
 	kernel_src_unpack
 
