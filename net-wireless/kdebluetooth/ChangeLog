@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.15 2004/08/29 12:14:59 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.16 2004/09/20 14:24:56 puggy Exp $
+
+  20 Sep 2004; Douglas Russell,,, <puggy@gentoo.org> :
+  Correcting digest
 
 *kdebluetooth-0.0.20040824 (29 Aug 2004)
 
