@@ -6,8 +6,12 @@
 		implementations and related tools.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-lang enthält verschiedene Programmiersprachen
+		Die Kategorie dev-lang enthÃ¤lt verschiedene Programmiersprachen
 		und die damit verbundenen Werkzeuge.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-lang contiene varias implementaciones de lenguajes de
+		programación y sus respectivas herramientas.
 	</longdescription>
 </catmetadata>
 
