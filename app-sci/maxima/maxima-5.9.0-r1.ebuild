@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r1.ebuild,v 1.3 2003/09/21 06:36:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r1.ebuild,v 1.4 2003/11/15 07:10:51 seemant Exp $
 
 DESCRIPTION="Free computer algebra environment, based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
@@ -76,12 +76,13 @@ pkg_postinst() {
 	fi
 	if [ -n "`use emacs`" ]
 	then
-	einfo "In order to use Maxima with emacs, add the following to your .emacs file:
-       (setq load-path (cons "/usr/share/maxima/5.9.0/emacs" load-path))
-       (autoload 'maxima-mode "maxima" "Maxima mode" t)
-       (autoload 'maxima "maxima" "Maxima interactive" t)
-       (setq auto-mode-alist (cons '("\\.max" . maxima-mode) auto-mode-alist))
-       (autoload 'emaxima-mode "emaxima" "EMaxima" t)
-       (add-hook 'emaxima-mode-hook 'emaxima-mark-file-as-emaxima)"
+		einfo "In order to use Maxima with emacs, add the following to your"
+		einfo ".emacs file:"
+		einfo "(setq load-path (cons "/usr/share/maxima/5.9.0/emacs" load-path))"
+		einfo "(autoload 'maxima-mode "maxima" "Maxima mode" t)"
+		einfo "(autoload 'maxima "maxima" "Maxima interactive" t)"
+		einfo "(setq auto-mode-alist (cons '("\\.max" . maxima-mode) auto-mode-alist))"
+		einfo "(autoload 'emaxima-mode "emaxima" "EMaxima" t)"
+		einfo "(add-hook 'emaxima-mode-hook 'emaxima-mark-file-as-emaxima)"
 	fi
 }
