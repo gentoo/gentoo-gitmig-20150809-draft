@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.8 2004/03/29 13:33:05 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.9 2004/04/27 08:28:28 pauldv Exp $
+
+  27 Apr 2004; Paul de Vrieze <pauldv@gentoo.org> -rapidsvn-0.3.0.ebuild:
+  Remove old version as the needed subversion build has been removed
 
   29 Mar 2004; David Holm <dholm@gentoo.org> rapidsvn-0.5.0.ebuild:
   RapidSVN 0.5.0 works with subversion 1.0*.
