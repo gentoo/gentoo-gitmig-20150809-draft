@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.1 2005/01/24 08:58:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.2 2005/01/24 09:15:00 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -147,133 +147,29 @@ pkg_setup() {
 	# See bug #35468, circular pam-X11 dep
 	check_pam
 
-	# Look for invalid USE flag combinations
+	# Look for invalid/dangerous USE flags and combinations
 	check_use_combos
 
-	# on amd64 we need /usr/lib64/X11/locale/lib to be a symlink
-	# created by the emul lib ebuild in order for adobe acrobat, staroffice,
-	# and a few other apps to work.
-	if [ -z "${MULTILIB_ABIS}" ]; then
-		use amd64 && get_libdir_override lib64
-		# lib32 isnt a supported configuration (yet?)
-		[ "$(get_libdir)" == "lib32" ] && get_libdir_override lib
-	fi
-
-	# Echo a message to the user about bitmap-fonts
-	if ! use bitmap-fonts; then
-		ewarn "Please emerge this with USE=\"bitmap-fonts\" to enable"
-		ewarn "75dpi and 100dpi fonts.  Your GTK+-1.2 fonts may look"
-		ewarn "screwy otherwise"
-
-		ebeep 5
-		epause 10
-	fi
+	setup_multilib
 }
 
 src_unpack() {
-
-	# Unpack source and patches
-	ebegin "Unpacking source"
-		unpack ${P}.tar.bz2
-#		unpack X11R${PV}-src{1,2,3,4,5}.tar.gz
-	eend 0
-
-#	if use doc; then
-#		ebegin "Unpacking documentation"
-#			unpack X11R${PV}-src{6,7}.tar.gz
-#		eend 0
-#	fi
-
-	ebegin "Unpacking Gentoo files and patches"
-		unpack ${P}-files-${FILES_VER}.tar.bz2 > /dev/null
-		unpack ${P}-patches-${PATCH_VER}.tar.bz2 > /dev/null
-	eend 0
-
-	if ! use minimal; then
-		# Unpack TaD's gentoo cursors
-		ebegin "Unpacking Gentoo cursors"
-			unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2 > /dev/null
-		eend 0
-	fi
-
-	# Unpack extra fonts stuff from Mandrake
-	ebegin "Unpacking fonts"
-		if use nls; then
-			unpack gemini-koi8-u.tar.bz2 > /dev/null
-		fi
-		unpack eurofonts-X11.tar.bz2 > /dev/null
-		if use font-server; then
-			unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
-		fi
-	eend 0
-
-	# Remove bum encoding
-	rm -f ${WORKDIR}/usr/share/fonts/encodings/urdunaqsh-0.enc
+	unpack_all
 
 	patch_setup
 
-	# Bulk patching - based on patch name
-	# Will create excluded stuff once it's needed
-	cd ${WORKDIR}
-	EPATCH_SUFFIX="patch" \
-	epatch ${PATCHDIR}
-	cd ${S}
+	patch
 
 	host_def_setup
 
-	# uclibc lacks sinf and cosf
-	if use uclibc; then
-		sed -i -e 's:GLXCLIENTDIRS = glxinfo glxgears:GLXCLIENTDIRS = :' \
-			${S}/programs/Imakefile
-	fi
-
-	# Get rid of cursor sets other than core and handhelds, saves ~4MB
-	if use minimal; then
-		 sed -i -e 's:SUBDIRS = redglass whiteglass handhelds:SUBDIRS = handhelds:' \
-			${S}/programs/xcursorgen/Imakefile
-	fi
-
-	cd ${S}
-	if use doc; then
-		# These are not included anymore as they are obsolete
-		local x
-		for x in ${S}/programs/Xserver/hw/xfree86/{XF98Conf.cpp,XF98Config}; do
-			if [ -f ${x} ]; then
-				sed -i '/Load[[:space:]]*"\(pex5\|xie\)"/d' ${x}
-			fi
-		done
-	fi
-
+	use_specific_hacks
 }
 
 src_compile() {
-
-	# If a user defines the MAKE_OPTS variable in /etc/make.conf instead of
-	# MAKEOPTS, they'll redefine an internal xorg Makefile variable and the
-	# xorg build will silently die. This is tricky to track down, so I'm
-	# adding a preemptive fix for this issue by making sure that MAKE_OPTS is
-	# unset. (drobbins, 08 Mar 2003)
-	unset MAKE_OPTS
-
-	einfo "Building xorg-x11..."
-	if use debug; then
-		chmod u+x ${S}/config/util/makeg.sh
-		FAST=1 ${S}/config/util/makeg.sh World WORLDOPTS="" \
-			|| die "debug make World failed"
-	else
-		FAST=1 emake World WORLDOPTS="" || die "make World failed"
-	fi
-
-	if use nls; then
-		emake -C ${S}/nls || die "nls build failed"
-	fi
-
+	build
 }
 
 src_install() {
-
-	unset MAKE_OPTS
-
 	install_everything
 
 	backward_compat_setup
@@ -552,11 +448,81 @@ check_use_combos() {
 		eerror "The opengl USE flag currently requires the xv flag."
 		die "This is a known bug. Do not report it."
 	fi
+
+	# Echo a message to the user about bitmap-fonts
+	if ! use bitmap-fonts; then
+		ewarn "Please emerge this with USE=\"bitmap-fonts\" to enable"
+		ewarn "75dpi and 100dpi fonts.  Your GTK+-1.2 fonts may look"
+		ewarn "screwy otherwise"
+
+		ebeep 5
+		epause 10
+	fi
+}
+
+setup_multilib() {
+	# on amd64 we need /usr/lib64/X11/locale/lib to be a symlink
+	# created by the emul lib ebuild in order for adobe acrobat, staroffice,
+	# and a few other apps to work.
+	if [ -z "${MULTILIB_ABIS}" ]; then
+		use amd64 && get_libdir_override lib64
+		# lib32 isnt a supported configuration (yet?)
+		[ "$(get_libdir)" == "lib32" ] && get_libdir_override lib
+	fi
 }
 
 ################
 # src_unpack() #
 ################
+
+unpack_all() {
+	# Unpack source and patches
+	ebegin "Unpacking source"
+		unpack ${P}.tar.bz2
+#		unpack X11R${PV}-src{1,2,3,4,5}.tar.gz
+	eend 0
+
+#	if use doc; then
+#		ebegin "Unpacking documentation"
+#			unpack X11R${PV}-src{6,7}.tar.gz
+#		eend 0
+#	fi
+
+	ebegin "Unpacking Gentoo files and patches"
+		unpack ${P}-files-${FILES_VER}.tar.bz2 > /dev/null
+		unpack ${P}-patches-${PATCH_VER}.tar.bz2 > /dev/null
+	eend 0
+
+	if ! use minimal; then
+		# Unpack TaD's gentoo cursors
+		ebegin "Unpacking Gentoo cursors"
+			unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2 > /dev/null
+		eend 0
+	fi
+
+	# Unpack extra fonts stuff from Mandrake
+	ebegin "Unpacking fonts"
+		if use nls; then
+			unpack gemini-koi8-u.tar.bz2 > /dev/null
+		fi
+		unpack eurofonts-X11.tar.bz2 > /dev/null
+		if use font-server; then
+			unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
+		fi
+	eend 0
+
+	# Remove bum encoding
+	rm -f ${WORKDIR}/usr/share/fonts/encodings/urdunaqsh-0.enc
+}
+
+patch() {
+	# Bulk patching - based on patch name
+	# Will create excluded stuff once it's needed
+	cd ${WORKDIR}
+	EPATCH_SUFFIX="patch" \
+	epatch ${PATCHDIR}
+	cd ${S}
+}
 
 host_def_setup() {
 	HOSTCONF="config/cf/host.def"
@@ -952,11 +918,64 @@ patch_setup() {
 	einfo "Done excluding patches"
 }
 
+use_specific_hacks() {
+	# uclibc lacks sinf and cosf
+	if use uclibc; then
+		sed -i -e 's:GLXCLIENTDIRS = glxinfo glxgears:GLXCLIENTDIRS = :' \
+			${S}/programs/Imakefile
+	fi
+
+	# Get rid of cursor sets other than core and handhelds, saves ~4MB
+	if use minimal; then
+		 sed -i -e 's:SUBDIRS = redglass whiteglass handhelds:SUBDIRS = handhelds:' \
+			${S}/programs/xcursorgen/Imakefile
+	fi
+
+	cd ${S}
+	if use doc; then
+		# These are not included anymore as they are obsolete
+		local x
+		for x in ${S}/programs/Xserver/hw/xfree86/{XF98Conf.cpp,XF98Config}; do
+			if [ -f ${x} ]; then
+				sed -i '/Load[[:space:]]*"\(pex5\|xie\)"/d' ${x}
+			fi
+		done
+	fi
+}
+
+#################
+# src_compile() #
+#################
+
+build() {
+	# If a user defines the MAKE_OPTS variable in /etc/make.conf instead of
+	# MAKEOPTS, they'll redefine an internal xorg Makefile variable and the
+	# xorg build will silently die. This is tricky to track down, so I'm
+	# adding a preemptive fix for this issue by making sure that MAKE_OPTS is
+	# unset. (drobbins, 08 Mar 2003)
+	unset MAKE_OPTS
+
+	einfo "Building xorg-x11..."
+	if use debug; then
+		chmod u+x ${S}/config/util/makeg.sh
+		FAST=1 ${S}/config/util/makeg.sh World WORLDOPTS="" \
+			|| die "debug make World failed"
+	else
+		FAST=1 emake World WORLDOPTS="" || die "make World failed"
+	fi
+
+	if use nls; then
+		emake -C ${S}/nls || die "nls build failed"
+	fi
+}
+
 #################
 # src_install() #
 #################
 
 install_everything() {
+	unset MAKE_OPTS
+
 	einfo "Installing X.org X11..."
 	# gcc3 related fix.  Do this during install, so that our
 	# whole build will not be compiled without mmx instructions.
