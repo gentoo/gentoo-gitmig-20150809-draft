@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.9 2003/01/16 03:35:41 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.10 2003/01/18 04:05:37 satai Exp $
+
+  17 Jan 2003; Matthew Turk <satai@gentoo.org> libusb-0.1.7.ebuild :
+  Specified docbook-sgml-dtd-r1.
 
 *libusb-0.1.7 (23 Dec 2002)
 

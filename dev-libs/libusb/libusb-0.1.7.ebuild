@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.7.ebuild,v 1.3 2003/01/16 03:35:41 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.7.ebuild,v 1.4 2003/01/18 04:05:37 satai Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Userspace access to USB devices"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/libusb/${P}.tar.gz"
 HOMEPAGE="http://libusb.sourceforge.net"
 
 DEPEND="virtual/glibc
-	doc? ( app-text/openjade =app-text/docbook-sgml-dtd-3.1* )"
+	doc? ( app-text/openjade =app-text/docbook-sgml-dtd-3.1-r1 )"
 
 SLOT="0"
 LICENSE="LGPL-2"
