@@ -1,6 +1,10 @@
 # ChangeLog for media-video/acidrip
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.5 2003/07/30 17:58:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.6 2003/11/18 17:32:34 mholzer Exp $
+
+  18 Nov 2003; Martin Holzer <mholzer@gentoo.org> acidrip-0.7.ebuild,
+  acidrip-0.8.ebuild, acidrip-0.9.ebuild:
+  added RESTRICT="nomirror"
 
   30 Jul 2003; Michael Cummings <mcummings@gentoo.org> acidrip-0.9.ebuild:
   Bug 22671 - vapier found the fix - should work again
