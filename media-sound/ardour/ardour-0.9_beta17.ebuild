@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta17.ebuild,v 1.2 2004/07/09 09:53:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta17.ebuild,v 1.3 2004/07/16 09:35:12 eldad Exp $
+
+inherit eutils
 
 MY_P="${P}.1"
 MY_PV="${PV}.1"
@@ -31,6 +33,12 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${MY_P/_/}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/ardour-gcc34.patch
+}
 
 src_compile() {
 	local myconf="--disable-dependency-tracking --enable-optimize"

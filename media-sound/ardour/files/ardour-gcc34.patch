@@ -1,0 +1,230 @@
+diff -ur ardour-0.9beta17.1.orig/gtk_ardour/ardour_dialog.h ardour-0.9beta17.1/gtk_ardour/ardour_dialog.h
+--- ardour-0.9beta17.1.orig/gtk_ardour/ardour_dialog.h	2004-07-11 16:39:53.000864856 -0400
++++ ardour-0.9beta17.1/gtk_ardour/ardour_dialog.h	2004-07-11 16:40:00.998649008 -0400
+@@ -48,7 +48,6 @@
+ 	void set_keyboard_input (bool yn);
+ 	int  run_status();
+ 
+-  protected:
+ 	gint enter_notify_event_impl (GdkEventCrossing*);
+ 	gint leave_notify_event_impl (GdkEventCrossing*);
+ 	gint unmap_event_impl (GdkEventAny *);
+diff -ur ardour-0.9beta17.1.orig/gtk_ardour/audio_time_axis.h ardour-0.9beta17.1/gtk_ardour/audio_time_axis.h
+--- ardour-0.9beta17.1.orig/gtk_ardour/audio_time_axis.h	2004-07-11 16:39:53.013862880 -0400
++++ ardour-0.9beta17.1/gtk_ardour/audio_time_axis.h	2004-07-11 16:40:00.999648856 -0400
+@@ -252,7 +252,7 @@
+ 	void show_all_automation ();
+ 	void show_existing_automation ();
+ 
+-	friend struct RedirectAutomationNode {
++	struct RedirectAutomationNode {
+ 	    unsigned long     what;
+ 	    Gtk::CheckMenuItem* menu_item;
+ 	    AutomationTimeAxisView* view;
+@@ -264,7 +264,7 @@
+ 	    ~RedirectAutomationNode ();
+ 	};
+ 
+-	friend struct RedirectAutomationInfo {
++	struct RedirectAutomationInfo {
+ 	    ARDOUR::Redirect* redirect;
+ 	    bool valid;
+ 	    Gtk::Menu* menu;
+diff -ur ardour-0.9beta17.1.orig/gtk_ardour/editor_ops.cc ardour-0.9beta17.1/gtk_ardour/editor_ops.cc
+--- ardour-0.9beta17.1.orig/gtk_ardour/editor_ops.cc	2004-07-11 16:39:52.999865008 -0400
++++ ardour-0.9beta17.1/gtk_ardour/editor_ops.cc	2004-07-11 16:40:01.001648552 -0400
+@@ -2814,7 +2814,6 @@
+ void
+ Editor::paste_named_selection (float times)
+ {
+-	using Gtk::CList_Helpers;
+ 	Gtk::CList_Helpers::SelectionList& selected = named_selection_display.selection();
+ 	TrackSelection::iterator i;
+ 
+diff -ur ardour-0.9beta17.1.orig/gtk_ardour/editor_region_list.cc ardour-0.9beta17.1/gtk_ardour/editor_region_list.cc
+--- ardour-0.9beta17.1.orig/gtk_ardour/editor_region_list.cc	2004-07-11 16:39:52.999865008 -0400
++++ ardour-0.9beta17.1/gtk_ardour/editor_region_list.cc	2004-07-11 16:40:01.002648400 -0400
+@@ -195,7 +195,6 @@
+ void
+ Editor::add_audio_region_to_region_display (AudioRegion *region)
+ {
+-	using Gtk::CTree_Helpers;
+ 
+ 	vector<const char*> item;
+ 	Gtk::CTree_Helpers::RowList::iterator i;
+diff -ur ardour-0.9beta17.1.orig/gtk_ardour/mixer_strip.cc ardour-0.9beta17.1/gtk_ardour/mixer_strip.cc
+--- ardour-0.9beta17.1.orig/gtk_ardour/mixer_strip.cc	2004-07-11 16:39:53.016862424 -0400
++++ ardour-0.9beta17.1/gtk_ardour/mixer_strip.cc	2004-07-11 16:40:01.005647944 -0400
+@@ -1829,7 +1829,6 @@
+ gint
+ MixerStrip::compute_redirect_sort_keys ()
+ {
+-	using Gtk::CList_Helpers;
+ 	CList_Helpers::RowList::iterator i;
+ 	unsigned long sort_key;
+ 
+diff -ur ardour-0.9beta17.1.orig/gtk_ardour/route_params_ui.cc ardour-0.9beta17.1/gtk_ardour/route_params_ui.cc
+--- ardour-0.9beta17.1.orig/gtk_ardour/route_params_ui.cc	2004-07-11 16:39:53.008863640 -0400
++++ ardour-0.9beta17.1/gtk_ardour/route_params_ui.cc	2004-07-11 16:40:01.007647640 -0400
+@@ -1037,7 +1037,6 @@
+ gint
+ RouteParams_UI::compute_redirect_sort_keys ()
+ {
+-	using Gtk::CList_Helpers;
+ 	CList_Helpers::RowList::iterator i;
+ 	unsigned long sort_key;
+ 
+diff -ur ardour-0.9beta17.1.orig/gtk_ardour/route_ui.h ardour-0.9beta17.1/gtk_ardour/route_ui.h
+--- ardour-0.9beta17.1.orig/gtk_ardour/route_ui.h	2004-07-11 16:39:53.002864552 -0400
++++ ardour-0.9beta17.1/gtk_ardour/route_ui.h	2004-07-11 16:40:01.007647640 -0400
+@@ -48,7 +48,6 @@
+ 
+ 	string name() const;
+ 	
+-  protected:
+ 	ARDOUR::Route& _route;
+ 
+ 	
+diff -ur ardour-0.9beta17.1.orig/gtk_ardour/visual_time_axis.h ardour-0.9beta17.1/gtk_ardour/visual_time_axis.h
+--- ardour-0.9beta17.1.orig/gtk_ardour/visual_time_axis.h	2004-07-11 16:39:52.977868352 -0400
++++ ardour-0.9beta17.1/gtk_ardour/visual_time_axis.h	2004-07-11 16:40:01.008647488 -0400
+@@ -135,7 +135,6 @@
+ 		 */
+ 		//SigC::Signal2<void,std::string,void*> VisualTimeAxisRemoved ;
+ 
+-	protected:
+ 		//---------------------------------------------------------------------------------------//
+ 		// Constructor / Desctructor
+ 		
+diff -ur ardour-0.9beta17.1.orig/libs/ardour/ardour/tempo.h ardour-0.9beta17.1/libs/ardour/ardour/tempo.h
+--- ardour-0.9beta17.1.orig/libs/ardour/ardour/tempo.h	2004-07-11 16:39:52.854887048 -0400
++++ ardour-0.9beta17.1/libs/ardour/ardour/tempo.h	2004-07-11 16:40:01.010647184 -0400
+@@ -178,12 +178,12 @@
+ 	};
+ 
+ 	typedef vector<BBTPoint> BBTPointList;
+-	
++#if 0	
+ 	template<class T> void apply_with_points (T& obj, void (T::*method)(BBTPointList&)) {
+ 		LockMonitor lm (lock, __LINE__, __FILE__);
+ 		(obj.*method)(bbt_points);
+ 	}
+-	
++#endif	
+ 	
+ 	template<class T> void apply_with_metrics (T& obj, void (T::*method)(const Metrics&)) {
+ 		LockMonitor lm (lock, __LINE__, __FILE__);
+diff -ur ardour-0.9beta17.1.orig/libs/gtkmm/src/build_sources/proxy.h.m4 ardour-0.9beta17.1/libs/gtkmm/src/build_sources/proxy.h.m4
+--- ardour-0.9beta17.1.orig/libs/gtkmm/src/build_sources/proxy.h.m4	2004-07-11 16:39:52.783897840 -0400
++++ ardour-0.9beta17.1/libs/gtkmm/src/build_sources/proxy.h.m4	2004-07-11 16:40:01.011647032 -0400
+@@ -167,6 +167,7 @@
+         }
+ 
+     public:
++      using [ProxySignal]NUM($1)<LIST([R],1,ARG_TYPE($1),[$1],[Obj,gObj,index],1)>::obj;
+       SlotType slot()
+         {
+           SigC::SlotData* tmp=manage(new SigC::SlotData());
+diff -ur ardour-0.9beta17.1.orig/libs/gtkmm/src/curve.gen_h ardour-0.9beta17.1/libs/gtkmm/src/curve.gen_h
+--- ardour-0.9beta17.1.orig/libs/gtkmm/src/curve.gen_h	2004-07-11 16:39:52.799895408 -0400
++++ ardour-0.9beta17.1/libs/gtkmm/src/curve.gen_h	2004-07-11 16:40:01.011647032 -0400
+@@ -136,6 +136,7 @@
+     void gtk_curve_get_vector(GtkCurve*,int,gfloat*),
+     void get_vector(int num,gfloat* data));
+ 
++#if 0
+   // For containers       
+   template <class Iterator>
+   int get_vector(Iterator b,Iterator e) const
+@@ -150,6 +151,7 @@
+       delete [] data;
+       return i;
+     };
++#endif
+ 
+   //void gtk_curve_set_vector(GtkCurve*,int,gfloat[]);
+   //: Sets the vector of points on the curve.
+diff -ur ardour-0.9beta17.1.orig/libs/gtkmm/src/gtk--/base.h ardour-0.9beta17.1/libs/gtkmm/src/gtk--/base.h
+--- ardour-0.9beta17.1.orig/libs/gtkmm/src/gtk--/base.h	2004-07-11 16:39:52.784897688 -0400
++++ ardour-0.9beta17.1/libs/gtkmm/src/gtk--/base.h	2004-07-11 16:41:02.354321528 -0400
+@@ -482,7 +482,7 @@
+   value_type operator*() const
+   {
+     if (node && node->data)
+-      return Gtk::wrap(static_cast<impl*>((*node).data));
++      return static_cast<value_type>( Gtk::wrap_auto((GtkObject*)static_cast<impl*>((*node).data)) );
+     return 0;
+   }
+ 
+diff -ur ardour-0.9beta17.1.orig/libs/gtkmmext/pix.cc ardour-0.9beta17.1/libs/gtkmmext/pix.cc
+--- ardour-0.9beta17.1.orig/libs/gtkmmext/pix.cc	2004-07-11 16:39:52.901879904 -0400
++++ ardour-0.9beta17.1/libs/gtkmmext/pix.cc	2004-07-11 16:40:01.012646880 -0400
+@@ -36,7 +36,7 @@
+ 
+ namespace std
+ {
+-	struct less<string *> {
++	template<> struct less<string *> {
+ 	    bool operator()(string *s1, string *s2) const {
+ 		    return *s1 < *s2;
+ 	    }
+diff -ur ardour-0.9beta17.1.orig/libs/pbd/pbd/stl_delete.h ardour-0.9beta17.1/libs/pbd/pbd/stl_delete.h
+--- ardour-0.9beta17.1.orig/libs/pbd/pbd/stl_delete.h	2004-07-11 16:39:52.763900880 -0400
++++ ardour-0.9beta17.1/libs/pbd/pbd/stl_delete.h	2004-07-11 16:40:01.013646728 -0400
+@@ -24,7 +24,7 @@
+ /* To actually use any of these deletion functions, you need to
+    first include the revelant container type header.
+ */
+-#if defined(_CPP_VECTOR) || defined(__SGI_STL_VECTOR)
++#if defined(_CPP_VECTOR) || defined(_GLIBCXX_VECTOR) || defined(__SGI_STL_VECTOR)
+ template<class T> void vector_delete (std::vector<T *> *vec) 
+ {
+ 	typename std::vector<T *>::iterator i;
+@@ -36,7 +36,7 @@
+ }
+ #endif // _CPP_VECTOR || __SGI_STL_VECTOR
+ 
+-#if defined(_CPP_MAP) || defined(__SGI_STL_MAP)
++#if defined(_CPP_MAP) || defined(_GLIBCXX_MAP) || defined(__SGI_STL_MAP)
+ template<class K, class T> void map_delete (std::map<K, T *> *m) 
+ {
+ 	typename std::map<K, T *>::iterator i;
+@@ -48,7 +48,7 @@
+ }
+ #endif // _CPP_MAP || __SGI_STL_MAP
+ 
+-#if defined(_CPP_LIST) || defined(__SGI_STL_LIST)
++#if defined(_CPP_LIST) || defined(_GLIBCXX_LIST) || defined(__SGI_STL_LIST)
+ template<class T> void list_delete (std::list<T *> *l) 
+ {
+ 	typename std::list<T *>::iterator i;
+@@ -61,7 +61,7 @@
+ }
+ #endif // _CPP_LIST || __SGI_STL_LIST
+ 
+-#if defined(_CPP_SLIST) || defined(__SGI_STL_SLIST)
++#if defined(_CPP_SLIST) || defined(_GLIBCXX_SLIST) || defined(__SGI_STL_SLIST)
+ template<class T> void slist_delete (std::slist<T *> *l) 
+ {
+ 	typename std::slist<T *>::iterator i;
+@@ -74,7 +74,7 @@
+ }
+ #endif // _CPP_SLIST || __SGI_STL_SLIST
+ 
+-#if defined(_CPP_SET) || defined(__SGI_STL_SET)
++#if defined(_CPP_SET) || defined(_GLIBCXX_SET) || defined(__SGI_STL_SET)
+ template<class T> void set_delete (std::set<T *> *sset) 
+ {
+ 	typename std::set<T *>::iterator i;
+diff -ur ardour-0.9beta17.1.orig/libs/sigc++/sigc++/macros/class_slot.h.m4 ardour-0.9beta17.1/libs/sigc++/sigc++/macros/class_slot.h.m4
+--- ardour-0.9beta17.1.orig/libs/sigc++/sigc++/macros/class_slot.h.m4	2004-07-11 16:39:52.933875040 -0400
++++ ardour-0.9beta17.1/libs/sigc++/sigc++/macros/class_slot.h.m4	2004-07-11 16:40:01.014646576 -0400
+@@ -77,7 +77,7 @@
+       if (!obj) return 0;
+       SlotData* tmp=manage(new SlotData());
+       CallData &data=reinterpret_cast<CallData&>(tmp->data_);
+-      data.callback=&callback;
++      data.callback=&[ObjectSlot]NUM($1)_<LIST(R,1,ARG_TYPE($1),[$1],Obj,1)>::callback;
+       data.obj=&obj;
+       data.func=(Func)func;
+       return tmp;
