@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 efd7707c7a8d2033930e6435b4240dd6 ChangeLog 4010
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 1f93bd8aef48a0391f8dfb2fddca1d63 DB_File-1.807.ebuild 583
-MD5 a211051dd011513466b1e1ce5820bc74 DB_File-1.803-r2.ebuild 758
-MD5 c237709155f89439b181c4b671102d54 DB_File-1.803.ebuild 647
 MD5 3903b823eed5144d5db56df401d50c78 DB_File-1.803-r1.ebuild 736
 MD5 272bb9f5d634bd88a814651b38cd2062 DB_File-1.808.ebuild 609
-MD5 7dc1c10cb8230f4e4c50d40703ca6a11 DB_File-1.811.ebuild 595
-MD5 1900638402c237ae141b03ef26fe6933 files/digest-DB_File-1.811 64
+MD5 c237709155f89439b181c4b671102d54 DB_File-1.803.ebuild 647
+MD5 7295068176a8231642a37b54d51da233 DB_File-1.811.ebuild 594
+MD5 1f93bd8aef48a0391f8dfb2fddca1d63 DB_File-1.807.ebuild 583
+MD5 a211051dd011513466b1e1ce5820bc74 DB_File-1.803-r2.ebuild 758
+MD5 7fe209edb67194b0a8393cac13786d8f ChangeLog 4103
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d6ce0e0407105b3de10b7dbc044ad25b files/digest-DB_File-1.803-r1 64
+MD5 d6ce0e0407105b3de10b7dbc044ad25b files/digest-DB_File-1.803-r2 64
+MD5 2259e73a14e4f2c7bd63215dba073b10 files/config.in 3121
+MD5 d6ce0e0407105b3de10b7dbc044ad25b files/digest-DB_File-1.803 64
 MD5 a08d92002d5cc85fdb5048e460ab094c files/digest-DB_File-1.807 64
 MD5 2973e31aff55ec1a5b0105860da5e149 files/digest-DB_File-1.808 64
-MD5 d6ce0e0407105b3de10b7dbc044ad25b files/digest-DB_File-1.803-r2 64
-MD5 d6ce0e0407105b3de10b7dbc044ad25b files/digest-DB_File-1.803 64
-MD5 d6ce0e0407105b3de10b7dbc044ad25b files/digest-DB_File-1.803-r1 64
-MD5 2259e73a14e4f2c7bd63215dba073b10 files/config.in 3121
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQ+QpugEuf3OQ0akRAvwlAJwNOS+e80dZrCE+p8GHUMXlRtqaKQCgils7
-FvaMiMzexx/FaBYT6YQPhcA=
-=Awso
------END PGP SIGNATURE-----
+MD5 1900638402c237ae141b03ef26fe6933 files/digest-DB_File-1.811 64

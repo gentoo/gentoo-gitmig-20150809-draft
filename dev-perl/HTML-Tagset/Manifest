@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3face451ee958be9e04ec29ef07060d1 ChangeLog 1965
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 2cec2ee82df2f4bd34b98ea71dc4a80d HTML-Tagset-3.04.ebuild 526
+MD5 a321f607c4dcbf0ec7fec20f24d6f6b7 HTML-Tagset-3.03-r2.ebuild 503
 MD5 55e704e0d38ee6bedd96a544a741b652 HTML-Tagset-3.03-r1.ebuild 476
-MD5 2c18c36aa6ea97b0fa9b530eca6409a9 HTML-Tagset-3.03-r2.ebuild 507
+MD5 3001b4745aed7d6139c1b0c7bdb4f54f ChangeLog 2202
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 370bb4a6ebe76973f555a473d1a0b6a4 files/digest-HTML-Tagset-3.03-r1 66
 MD5 370bb4a6ebe76973f555a473d1a0b6a4 files/digest-HTML-Tagset-3.03-r2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2pWBtG5z4I8BtQoRArxqAJ49Lh1fuIWrcC8gAnAKvDal4R/FyACfZFGN
-UvmShT5WuY4OT+790S3Pisc=
-=2Fm9
------END PGP SIGNATURE-----
+MD5 81485e4cdf4f2a30ed7f87861b8864c5 files/digest-HTML-Tagset-3.04 66
