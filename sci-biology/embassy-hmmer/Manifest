@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cbf6cdece79e3e00daa4499f7641f9cd embassy-hmmer-2.1.1.ebuild 463
-MD5 a06b09853be4cdd307b886d8debc70a7 ChangeLog 779
+MD5 682a4b2acefc2d3fd54ee36e0ba6cb77 ChangeLog 876
+MD5 b38a3fb41bd974693de331aabd9e2a13 embassy-hmmer-2.1.1.ebuild 472
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 b7e391c2b88024ccda59423a5ed6598e files/digest-embassy-hmmer-2.1.1 129
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy36KI1lqEGTUzyQRApY9AJ9hC5Gif/Ly7RUul6FtNW/1KOS0nACePc6W
-+WWydr5e6RyidlMyJWEF/Io=
-=02GT
------END PGP SIGNATURE-----

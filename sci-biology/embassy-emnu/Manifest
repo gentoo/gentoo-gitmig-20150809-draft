@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2f1d4f1bb6ebc614d33407a6bb03c615 embassy-emnu-1.05.ebuild 425
-MD5 0e5084bc9e5a366d034e2b95af25fe0a ChangeLog 761
+MD5 d9c7edd8220679c17d3d49a7eff1b2a5 ChangeLog 857
+MD5 02fe4077c241921cb46e9e58b7f00322 embassy-emnu-1.05.ebuild 434
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 8c98ad2b52c276086d21f0ebe1e261f1 files/digest-embassy-emnu-1.05 127
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy35BI1lqEGTUzyQRAsSTAJ0X9yGTgr5QWbJ/oVEaPcLPLwM2OwCgkFqJ
-zoUbBp/kshb1eeeIhrHA5hE=
-=5RrR
------END PGP SIGNATURE-----

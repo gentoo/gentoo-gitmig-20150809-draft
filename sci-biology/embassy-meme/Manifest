@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af92944529d2a7071cc7ff6dbefbcbef embassy-meme-2.3.1.ebuild 454
-MD5 74ff2f23379248eef6744ba5520e06cb ChangeLog 767
+MD5 0908739b84a09511207d479b0c761f79 ChangeLog 863
+MD5 93d37eb5a3cc53b2703bf98aa9a5371b embassy-meme-2.3.1.ebuild 463
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 6ddbec984e29722772a407da4e7c78fa files/digest-embassy-meme-2.3.1 128
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy36nI1lqEGTUzyQRAiWeAKC1sT+czw2w3WWvabAm1y8eXAIscQCgmw2e
-EqJvhiUkcSpkmtg0Gy64oSc=
-=Whs+
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b1ca4ec446a05e1c6f4b529ca8c41c1f embassy-topo-1.0.0.ebuild 353
-MD5 086017c40133a486207c745423850f9f ChangeLog 767
+MD5 930bf817c6570a85076d9a9e7a7d1eef ChangeLog 863
+MD5 fcc17d8015701170119ffe21d9f5f832 embassy-topo-1.0.0.ebuild 362
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 35afa04feaa0f7925996c31a6014d543 files/digest-embassy-topo-1.0.0 128
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy38II1lqEGTUzyQRAhEeAKCpAn0ustPSjYDL5uL3jwcIRhcCowCgkzJe
-LmouyH26qLFTpISIszkgpto=
-=tavA
------END PGP SIGNATURE-----
