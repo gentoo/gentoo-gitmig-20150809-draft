@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.14.ebuild,v 1.1 2003/10/26 23:06:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.14.ebuild,v 1.2 2003/11/20 14:18:58 liquidx Exp $
 
 IUSE="pam kerberos krb4 gtk gtk2 gnome opengl jpeg xinerama"
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="0"
 
 # NOTE: the motif interface is not supported/developed anymore
@@ -64,9 +64,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
 	# disable rpm -q checking, otherwise it breaks sandbox if rpm is installed
-	epatch ${FILESDIR}/xscreensaver-4.10-norpm.patch
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/xscreensaver-4.10-norpm.patch
 }
 
 src_compile() {

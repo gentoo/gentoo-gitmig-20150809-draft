@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.37 2003/11/08 16:57:15 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.38 2003/11/20 14:18:58 liquidx Exp $
+
+  20 Nov 2003; Alastair Tse <liquidx@gentoo.org> xscreensaver-4.11.ebuild,
+  xscreensaver-4.12.ebuild, xscreensaver-4.13.ebuild,
+  xscreensaver-4.14.ebuild:
+  cleanup and stable bump
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> xscreensaver-4.10.ebuild:
   added sparc keyword
