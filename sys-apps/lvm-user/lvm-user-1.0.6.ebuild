@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.6.ebuild,v 1.3 2003/01/05 02:01:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.6.ebuild,v 1.4 2003/01/12 20:42:46 drobbins Exp $
 
 IUSE="static"
 
@@ -12,8 +12,12 @@ SRC_URI="ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${PV}.tar.gz"
 HOMEPAGE="http://www.sistina.com/products_lvm.htm"
 KEYWORDS="x86 -ppc ~sparc"
 
-DEPEND="virtual/linux-sources"
-RDEPEND="${DEPEND} >=sys-apps/sed-4.0"
+# I have confirmed with the EVMS development team and from testing that
+# evms-1.0.6 no longer requires kernel sources to be installed to compile
+# properly. I have removed this dependency. (drobbins, 12 Jan 2003)
+
+DEPEND=""
+RDEPEND=">=sys-apps/sed-4.0"
 
 LICENSE="GPL-2 | LGPL-2"
 SLOT="0"
