@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.14 2004/02/19 00:45:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.15 2004/02/19 01:59:16 mholzer Exp $
+
+*ddd-3.3.8 (19 Feb 2004)
+
+  19 Feb 2004; Martin Holzer <mholzer@gentoo.org> ddd-3.3.8.ebuild:
+  Version bumped.
 
   19 Feb 2004; Martin Holzer <mholzer@gentoo.org> ddd-3.3.7.ebuild:
   changed SRC_URI to sf.net
