@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1.ebuild,v 1.1 2004/08/18 21:55:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1.ebuild,v 1.2 2004/08/19 15:32:22 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -72,14 +72,8 @@ src_compile() {
 	use static && append-ldflags -static
 	export LDFLAGS
 
-	local myconf="\
-		$( use_with tcpd tcp-wrappers ) \
-		$( use_with pam ) \
-		$( use_with skey )"
-
+	local myconf=""
 	use ipv6 || myconf="${myconf} --with-ipv4-default"
-	use kerberos && myconf="${myconf} --with-kerberos5=/usr" || \
-		myconf="${myconf} --without-kerberos5"
 
 	econf \
 		--sysconfdir=/etc/ssh \
@@ -89,6 +83,7 @@ src_compile() {
 		--with-privsep-path=/var/empty \
 		--with-privsep-user=sshd \
 		--with-md5-passwords \
+		`use_with kerberos kerberos5 /usr` \
 		`use_with tcpd tcp-wrappers` \
 		`use_with pam` \
 		`use_with skey` \
