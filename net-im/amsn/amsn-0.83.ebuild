@@ -16,6 +16,7 @@ KEYWORDS="x86 amd64"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
+	dev-tcltk/tls
 	imlib? ( media-libs/imlib )"
 
 src_compile() {
@@ -23,14 +24,18 @@ src_compile() {
 	if [ -n "`use imlib`" ]
 	then
 		einfo "Compiling the freedesktop notification plugin"
-		cd ${S}/plugins/traydock && econf || die
-		make
+		cd ${S}/plugins/traydock
+		econf || die
+		make || die
 	fi
 }
 
 src_install() {
 	mkdir -p ${D}/usr/share/amsn/
 	cp -a ${S}/* ${D}/usr/share/amsn/
+
+	# Remove all CVS crap
+	find ${D} -type d -name CVS -exec rm -rf {} \;
 
 	if [ -n "`use gnome`" ]
 	then
@@ -56,10 +61,10 @@ src_install() {
 		einfo "Installing the freedesktop notification plugin"
 		dodir /usr/lib/amsn/plugins/traydock
 		mv ${D}/usr/share/amsn/plugins/traydock/libtray.so ${D}/usr/lib/amsn/plugins/traydock
-		rm -rf ${D}/usr/share/amsn/plugins
-		ln -s /usr/lib/amsn/plugins ${D}/usr/share/amsn/plugins
+		rm -rf ${D}/usr/share/amsn/plugins/traydock
+		ln -s /usr/lib/amsn/plugins/traydock ${D}/usr/share/amsn/plugins/traydock
 	else
-		rm -rf ${D}/usr/share/amsn/plugins
+		rm -rf ${D}/usr/share/amsn/plugins/traydock
 	fi
 
 	dodir /usr/bin/
