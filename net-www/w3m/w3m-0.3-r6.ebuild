@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3-r5.ebuild,v 1.4 2002/08/16 03:01:02 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3-r6.ebuild,v 1.1 2002/08/18 06:42:12 naz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text based WWW browser, supports tables and frames"
@@ -10,7 +10,7 @@ HOMEPAGE="http://w3m.sourceforge.net/"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
-	>=media-libs/imlib-1.9.14
+	imlib? ( >=media-libs/imlib-1.9.8 )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
@@ -63,10 +63,12 @@ src_compile() {
 		# Do you want SSL verification support?
 		# (Your SSL library must be version 0.8 or later)
 		use ssl &>/dev/null && echo y || echo n
-		# Digest Auth support [y]? 
-		echo y
+		# (ssl) SSL verification support (SSL library >= version 0.8) [n]?
+		use ssl &>/dev/null && echo n
+		# (ssl) Digest Auth support [y]?
+		use ssl &>/dev/null && echo y
 		# Inline image support (you need Imlib library) [n]? 
-		echo y
+		use imlib &>/dev/null && echo y || echo n
 		# ANSI color escape sequences support [n]? 
 		echo y
 		# Use Migemo (Roma-ji search; Please see
