@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.16 2003/07/16 16:36:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.17 2003/09/04 14:48:43 agriffis Exp $
+
+  04 Sep 2003; Aron Griffis <agriffis@gentoo.org> gkrellmms-2.1.12.ebuild:
+  add ~alpha to KEYWORDS
 
   17 Jul 2003; Martin Holzer <mholzer@gentoo.org> gkrellmms-2.1.12.ebuild,
   gkrellmms-0.5.8.ebuild :
