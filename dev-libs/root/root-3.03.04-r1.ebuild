@@ -1,31 +1,39 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r1.ebuild,v 1.2 2002/07/11 06:30:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r1.ebuild,v 1.3 2002/08/01 18:46:28 seemant Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="An Object-Oriented Data Analysis Framework"
 SRC_URI="ftp://root.cern.ch/root/root_v3.03.04.source.tar.gz"
 HOMEPAGE="http://root.cern.ch/"
 
-DEPEND="virtual/glibc
-	virtual/x11
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
+
+DEPEND="virtual/x11
 	>=media-libs/xpm-3.4k
 	>=media-libs/freetype-2.0.9
 	opengl? ( virtual/opengl virtual/glu )
 	mysql? ( >=dev-db/mysql-3.23.49 )
 	postgres? ( >=dev-db/postgresql-7.1.3-r4 )"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 
-	use opengl		&&	myconf="${myconf} --enable-opengl" || myconf="${myconf} --disable-opengl"
-	use mysql		&&	myconf="${myconf} --enable-mysql" || myconf="${myconf} --disable-mysql"
-	use postgres	&&	myconf="${myconf} --enable-pgsql" || myconf="${myconf} --disable-pgsql"
+	use opengl \
+		&& myconf="${myconf} --enable-opengl" \
+		|| myconf="${myconf} --disable-opengl"
 
-	./configure \
+	use mysql \
+		&& myconf="${myconf} --enable-mysql" \
+		|| myconf="${myconf} --disable-mysql"
+
+	use postgres \
+		&& myconf="${myconf} --enable-pgsql" \
+		|| myconf="${myconf} --disable-pgsql"
+
+	econ \
 		linux \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
 		--docdir=/usr/share/doc/${P} \
 		--enable-shared \
 		--disable-rpath \

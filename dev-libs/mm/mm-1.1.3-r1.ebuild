@@ -1,14 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.1.3-r1.ebuild,v 1.1 2002/05/04 01:47:46 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.1.3-r1.ebuild,v 1.2 2002/08/01 18:46:28 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Shared Memory Abstraction Library"
 HOMEPAGE="http://www.engelschall.com/sw/mm/"
 SRC_URI="http://www.engelschall.com/sw/mm/${P}.tar.gz"
-DEPEND="virtual/glibc"
-LICENSE="as-is"
+
 SLOT="1"
+LICENSE="as-is"
+KEYWORDS="x86"
+
+DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}

@@ -1,15 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.3.ebuild,v 1.2 2002/07/23 05:59:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.3.ebuild,v 1.3 2002/08/01 18:46:28 seemant Exp $
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 DESCRIPTION="Libs needed for GnomeMeeting"
-SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://www.openh323.org"
+SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
+
 SLOT="0"
-DEPEND="virtual/glibc >=sys-devel/bison-1.28 >=sys-devel/flex-2.5.4a"
+LICENSE="MPL-1.1"
 KEYWORDS="x86 -ppc -sparc -sparc64"
-LICENSE="MPL"
+
+DEPEND=">=sys-devel/bison-1.28
+	>=sys-devel/flex-2.5.4a"
 
 src_unpack() {
 
@@ -17,12 +20,11 @@ src_unpack() {
 	cd ${S}
 	# Removes optimizations from unix make options
 	# Allows the users make.conf to set optimization level
-	patch -p1 < ${FILESDIR}/opts.diff
+	patch -p1 < ${FILESDIR}/opts.diff || die
 
 }
 
 src_compile() {
-	cd ${S}
 	export PWLIBDIR=${S}
 	export PWLIB_BUILD="yes"
 	make optshared || die

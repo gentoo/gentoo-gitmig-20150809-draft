@@ -1,14 +1,16 @@
 # Copyright 1998-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.01.ebuild,v 1.2 2002/07/11 06:30:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.01.ebuild,v 1.3 2002/08/01 18:46:28 seemant Exp $
 
 DESCRIPTION="UCL: The UCL Compression Library"
 SRC_URI="http://www.oberhumer.com/opensource/ucl/download/ucl-1.01.tar.gz"
 HOMEPAGE="http://www.oberhumer.com/opensource/ucl/"
-LICENSE="GPL"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
-	cd ${S}
 	./configure --prefix=/usr || die
 	emake || die
 }
@@ -18,4 +20,3 @@ src_install() {
 	mkdir -p ${D}usr/src/
 	cp -r ${S} ${D}usr/src/
 }
-

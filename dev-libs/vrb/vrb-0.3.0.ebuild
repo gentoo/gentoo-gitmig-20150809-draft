@@ -1,15 +1,17 @@
 # Copyright 2002 Johannes Findeisen <you@hanez.org>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.3.0.ebuild,v 1.1 2002/07/12 20:11:20 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.3.0.ebuild,v 1.2 2002/08/01 18:46:28 seemant Exp $
 
+S="${WORKDIR}/${P}"
 DESCRIPTION="The VRB library is a virtual ring buffer"
 HOMEPAGE="http://phil.ipal.org/freeware/vrb/"
+SRC_URI="http://phil.ipal.org/freeware/vrb/${P}.tar.gz"
+
+SLOT="0"
 LICENSE="LGPL-2.1"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
-
-SRC_URI="http://phil.ipal.org/freeware/vrb/${P}.tar.gz"
-S="${WORKDIR}/${P}"
 
 src_compile() {
 
