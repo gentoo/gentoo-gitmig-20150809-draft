@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.3.1.ebuild,v 1.1 2004/12/27 21:24:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.3.1.ebuild,v 1.2 2004/12/27 21:32:26 ribosome Exp $
 
 inherit kde-functions eutils
 
@@ -70,10 +70,10 @@ src_install () {
 }
 
 pkg_postinst () {
-	if ! has_version "app-sci/qcad-parts"; then
+	if ! has_version "sci-misc/qcad-parts"; then
 	einfo
 	einfo "The QCad parts library is available as a seperate package."
-	einfo "emerge app-sci/qcad-parts to get it."
+	einfo "emerge sci-misc/qcad-parts to get it."
 	einfo
 	fi
 }
