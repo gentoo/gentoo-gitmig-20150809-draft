@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.63 2004/08/11 20:09:49 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.64 2004/08/11 21:43:41 joker Exp $
+
+*sparc-sources-2.4.27-r1 (11 Aug 2004)
+
+  11 Aug 2004; Christian Birchinger <joker@gentoo.org>
+  +files/use-pte_alloc_one_fast-r1.patch, +sparc-sources-2.4.27-r1.ebuild:
+  Updated version with new use-pte_alloc_one_fast-r1.patch for sparc32 systems
+  and a security fix for the cmdline leak.
 
   11 Aug 2004; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.27.ebuild:
