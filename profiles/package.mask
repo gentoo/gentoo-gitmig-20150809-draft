@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <rendhalver@gentoo.org> (20 Feb 2003)
+# moving this one to app-xemacs/xemacs-ispell
+# cause it clashes with the real ispell ebuild
+app-xemacs/ispell
+
 # <phoenix@gentoo.org> (18 Feb 2003)
 # Can't test it - i'm no winex subscriber ( no credit-card :( )
 app-emulation/winex-transgaming
