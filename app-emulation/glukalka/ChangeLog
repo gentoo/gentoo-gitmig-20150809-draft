@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/glukalka
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/glukalka/ChangeLog,v 1.1 2003/09/02 07:42:36 msterret Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/glukalka/ChangeLog,v 1.2 2004/01/11 13:34:04 lanius Exp $
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> glukalka-0.67.ebuild:
+  fixed motif dep
 
 *glukalka-0.67 (02 Sep 2003)
 
