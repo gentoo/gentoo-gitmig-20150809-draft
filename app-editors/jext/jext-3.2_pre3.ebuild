@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-3.2_pre3.ebuild,v 1.6 2004/06/02 01:42:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-3.2_pre3.ebuild,v 1.7 2004/06/19 16:45:40 weeve Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/jext/${PN}-${MY_PV}.tar.gz
 	 mirror://sourceforge/jext/${PN}-sources-${MY_PV}.tar.gz"
 LICENSE="GPL-2 | JPython"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4.1
