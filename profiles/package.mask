@@ -18,7 +18,7 @@
 # broken
 app-admin/powertweak
 media-video/avi-xmms
-
+>=dev-libs/pilot-link-0.9.1
 # unfinished
 app-admin/va-systemimager-server
 app-admin/va-systemimager-client
