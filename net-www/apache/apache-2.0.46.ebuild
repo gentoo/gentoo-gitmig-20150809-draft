@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.46.ebuild,v 1.6 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.46.ebuild,v 1.7 2003/09/29 13:31:40 woodchip Exp $
 
 inherit eutils
 
@@ -280,6 +280,13 @@ src_install () {
 	doins ${FILESDIR}/2.0.40/virtual-homepages.conf
 	doins ${FILESDIR}/2.0.40/dynamic-vhosts.conf
 	doins ${FILESDIR}/2.0.40/vhosts.conf
+
+	#this ebuild doesnt use /var/www/localhost but the config templates
+	#in CVS now do, so just roll those changes back here; #29843
+	perl -pi -e 's|var/www/localhost|home/httpd|;' \
+		${D}/etc/apache2/conf/apache2.conf \
+		${D}/etc/apache2/conf/commonapache2.conf \
+		${D}/etc/apache2/conf/modules.d/41_mod_ssl.default-vhost.conf
 
 	# Added by Jason Wever <weeve@gentoo.org>
 	# A little sedfu to fix bug #7172 for sparc64s

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r4.ebuild,v 1.11 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r4.ebuild,v 1.12 2003/09/29 13:31:40 woodchip Exp $
 
 IUSE="ipv6 pam"
 
@@ -189,6 +189,12 @@ src_install() {
 	insinto /etc/apache/conf
 	doins ${FILESDIR}/conf/commonapache.conf
 	doins ${FILESDIR}/conf/apache.conf
+
+	#this ebuild doesnt use /var/www/localhost but the config templates
+	#in CVS now do, so just roll those changes back here; #29843
+	perl -pi -e 's|var/www/localhost|home/httpd|;' \
+		${D}/etc/apache/conf/apache.conf \
+		${D}/etc/apache/conf/commonapache.conf
 
 	# Added by Jason Wever <weeve@gentoo.org>
 	# A little sedfu to fix bug #7172 for sparc64s
