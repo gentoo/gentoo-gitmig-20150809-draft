@@ -1,0 +1,85 @@
+To complete installation you need to perform the following steps:
+
+  1) Create drupal database
+  2) Load drupal database scheme
+  3) Configure drupal base options
+  4) Add drupal entry to cron
+
+1 - Creating drupal database
+
+   These instructions are for MySQL.  If you are using another database,
+   check the database documentation.  In the following examples,
+   "dba_user" is an example MySQL user which has the CREATE and GRANT
+   privileges.  You will need to use the appropriate user name for your
+   system.
+
+   First, you must create a new database for your Drupal site:
+
+     $ mysqladmin -u dba_user -p create drupal
+
+   MySQL will prompt for the dba_user database password and then create
+   the initial database files.  Next you must login and set the access
+   database rights:
+
+     $ mysql -u dba_user -p
+
+   Again, you will be asked for the dba_user database password.  At the
+   MySQL prompt, enter following command:
+
+     GRANT ALL PRIVILEGES ON drupal.*
+        TO nobody@localhost IDENTIFIED BY 'password';
+
+   where
+
+    'drupal' is the name of your database
+    'nobody@localhost' is the userid of your webserver MySQL account
+    'password' is the password required to log in as the MySQL user
+
+   If successful, MySQL will reply with
+
+     Query OK, 0 rows affected
+
+   to activate the new permissions you must enter the command
+
+     flush privileges;
+
+   and then enter '\q' to exit MySQL.
+
+
+2 - Load the drupal database scheme
+
+   Once you have a database, you must load the required tables:
+
+     $ mysql -u nobody -p drupal < database/database.mysql
+
+
+3 - Configure drupal base options
+
+   Drupal server options are specified in includes/conf.php.
+
+   Before you can run Drupal, you must set the database URL and the
+   base URL to the web site.  Open the configuration file and edit the
+   $db_url line to match the database defined in the previous steps:
+
+     $db_url = "mysql://username:password@localhost/drupal";
+
+   Set $base_url to match the address to your web site:
+
+     $base_url = "http://www.example.com";
+
+
+4 - Add drupal entry to cron
+
+   Many Drupal modules have periodic tasks that must be triggered by a
+   cron job.  To activate these tasks, you must call the cron page;
+   this will pass control to the modules and the modules will decide
+   if and what they must do.
+
+   The following example crontab line will activate the cron script
+   on the hour:
+
+   0    *   *   *   *   wget -O - -q http://${VHOST_HOSTNAME}/cron.php
+
+
+The above information is a precis of the information in the drupal
+INSTALL file more information can be found there!
