@@ -1,6 +1,16 @@
-MD5 352a7c0e65f00f60813f2fa66bcd50d1 ChangeLog 676
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7415547af81b5d998e21bc41f48436c9 unicon-3.0.4.ebuild 1394
+MD5 a1c927d7f16bf519b1cb76a5f963ca6c ChangeLog 785
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 a41e61dccd9582d9d8176ee1afdd0c12 unicon-3.0.4.ebuild 1394
 MD5 e69f90a124ed00f574cc5ae111df1bd7 files/digest-unicon-3.0.4 66
 MD5 cc6f3b807859a0d79f19b3f649de45b5 files/unicon-3.0.4-debian.patch 59606
 MD5 31b30bcac54f35d0a41f969075a136de files/unicon-3.0.4-gentoo.patch 302
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2FVtiJcSIUGNthERAvXGAKCuaT2BlBRtzz9e7ODymMRQRlbGzgCeMmj9
+i8yOilF2Yq7F0L34dM6d/1w=
+=JJ5S
+-----END PGP SIGNATURE-----
