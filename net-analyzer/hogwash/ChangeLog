@@ -1,14 +1,22 @@
 # ChangeLog for net-analyzer/hogwash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/ChangeLog,v 1.6 2003/02/12 07:45:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/ChangeLog,v 1.7 2003/03/07 23:09:55 mholzer Exp $
 
 *hogwash-0.4_pre1 (10 Feb 2003)
+
+  07 Mar 2003; Martin Holzer <mholzer@gentoo.org> hogwash-0.4_pre1.ebuild :
+  Marked as stable. Works with new libnet api.
+
   10 Feb 2003; Seth Chandler <sethbc@gentoo.org>: hogwash-0.4_pre1.ebuild
   added to portage but -arch masked to fix some sandbox issues
 
   no longer -arch masked, now in ~arch
 
 *hogwash-0.2_pre7 (10 Feb 2003)
+
+  07 Mar 2003; Martin Holzer <mholzer@gentoo.org> hogwash-0.2_pre7.ebuild :
+  Fixed Depend to libnet-1.0*. Closes #17017.
+  
   10 Feb 2003; Seth Chandler <sethbc@gentoo.org>: hogwash-0.2_pre7.ebuild
   added to portage
 
@@ -18,6 +26,9 @@
   moved to net-analyzer - added SLOT
 
 *hogwash-0.1d-r2 (1 Feb 2002)
+
+  07 Mar 2003; Martin Holzer <mholzer@gentoo.org> hogwash-0.1d-r2.ebuild :
+  Fixed Depend to libnet-1.0*. Closes #17017.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

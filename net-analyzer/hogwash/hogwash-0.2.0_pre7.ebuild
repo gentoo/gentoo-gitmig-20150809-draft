@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/hogwash-0.2.0_pre7.ebuild,v 1.2 2003/02/13 13:40:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/hogwash-0.2.0_pre7.ebuild,v 1.3 2003/03/07 23:09:55 mholzer Exp $
 
 TGZFILE=hogwash-0.2.0-pre7.tar.gz
 S=${WORKDIR}/devel-0.2
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc "
 
 DEPEND=">=net-libs/libpcap-0.6.1
-	>=net-libs/libnet-1.0.2a"
+	=net-libs/libnet-1.0*"
 
 src_unpack() {
 
