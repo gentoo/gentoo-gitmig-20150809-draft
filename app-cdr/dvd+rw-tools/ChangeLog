@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvd+rw-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.24 2004/11/17 23:34:10 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.25 2004/11/19 19:33:08 gustavoz Exp $
+
+  19 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  dvd+rw-tools-5.21.4.10.8.ebuild:
+  Stable on sparc
 
   18 Nov 2004; Daniel Drake <dsd@gentoo.org> dvd+rw-tools-5.21.4.10.8.ebuild:
   Stable on x86 in order to fix burning bug with 2.6.9. Other arches please
