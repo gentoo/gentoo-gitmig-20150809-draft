@@ -1,0 +1,46 @@
+diff -urN magicpoint-1.10a.ORIG/mgp.h magicpoint-1.10a/mgp.h
+--- magicpoint-1.10a.ORIG/mgp.h	2003-06-06 16:18:25.000000000 +0900
++++ magicpoint-1.10a/mgp.h	2003-08-06 09:19:53.000000000 +0900
+@@ -84,7 +84,7 @@
+ #define VFONT	"minsl"
+ 
+ #ifndef VFCAP
+-#define VFCAP	"/usr/local/lib/VFlib/vfontcap"
++#define VFCAP	"/usr/share/VFlib/2.25.6/vfontcap"
+ #endif
+ 
+ #endif /* end of VFLIB */
+@@ -93,7 +93,7 @@
+ #include "freetype.h"
+ 
+ #ifndef FREETYPEFONTDIR
+-#define FREETYPEFONTDIR	"/usr/local/share/fonts/ttf"
++#define FREETYPEFONTDIR	"/usr/X11R6/lib/X11/fonts/truetype"
+ #endif
+ #endif /*FREETYPE*/
+ 
+@@ -130,7 +130,7 @@
+ #define	UUDECODE	"/usr/bin/uudecode"
+ #endif
+ #ifndef GUNZIP
+-#define	GUNZIP		"/usr/contrib/bin/gunzip"
++#define	GUNZIP		"/bin/gunzip"
+ #endif
+ 
+ #define MAXPAGE		512
+diff -urN magicpoint-1.10a.ORIG/sample/default.mgp magicpoint-1.10a/sample/default.mgp
+--- magicpoint-1.10a.ORIG/sample/default.mgp	2001-08-11 01:40:54.000000000 +0900
++++ magicpoint-1.10a/sample/default.mgp	2003-08-06 09:22:42.000000000 +0900
+@@ -12,9 +12,9 @@
+ %% into the "tfdir" directory above:
+ %%	ftp://ftp.mew.org/pub/mgp/ttf-jp.tar.gz
+ %%
+-%deffont "standard"   tfont "standard.ttf",   tmfont "kochi-mincho.ttf"
+-%deffont "thick"      tfont "thick.ttf",      tmfont "goth.ttf"
+-%deffont "typewriter" tfont "typewriter.ttf", tmfont "goth.ttf"
++%deffont "standard"   tfont "times.ttf",   tmfont "kochi-mincho.ttf"
++%deffont "thick"      tfont "ariel.ttf",   tmfont "kochi-gothic.ttf"
++%deffont "typewriter" tfont "cour.ttf",    tmfont "kochi-gothic.ttf"
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%
+ %% Default settings per each line numbers.
