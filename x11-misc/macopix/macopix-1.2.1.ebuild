@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.2.1.ebuild,v 1.3 2004/11/06 11:02:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.2.1.ebuild,v 1.4 2004/12/09 11:15:20 usata Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SRC_URI="${SRC_URI} ${BASE_URI}/${PN}-mascot-marimite-euc-ja-2.10.tar.gz"
 # programme itself is GPL-2, and mascots are free-noncomm
 LICENSE="GPL-2 free-noncomm"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 IUSE="gtk2 nls"
 

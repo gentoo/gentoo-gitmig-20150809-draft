@@ -1,7 +1,17 @@
-MD5 76b00c6b759e2f6a382474f4876df943 macopix-1.0.4.ebuild 1656
-MD5 44e644a514e2ffe4b2095add041bab10 ChangeLog 1369
-MD5 b2cff4cd1f9c86b821737b4fdb782aad macopix-1.2.1.ebuild 1787
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4debb18069c02134dbe0026d566568ae ChangeLog 1467
 MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
+MD5 76b00c6b759e2f6a382474f4876df943 macopix-1.0.4.ebuild 1656
+MD5 9fb08779a36d848097adc5f51e7a3902 macopix-1.2.1.ebuild 1785
 MD5 be15bd2a955689d7d9b76a8bb3ccb4d5 files/digest-macopix-1.0.4 807
 MD5 b0a721eeda3f2435d25879a0cbab63f3 files/digest-macopix-1.2.1 811
 MD5 6e587c290c184e6e8b620cf42123d5c7 files/macopix-1.2.1-gentoo.diff 480
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBuDIZVWNWqTUmv+0RAs4YAJsG1UEEmohCO1iR1vP48z/V2QchmQCgn6XM
+xGaG49s1WBk0WbgkaQc0phc=
+=403j
+-----END PGP SIGNATURE-----
