@@ -2,10 +2,6 @@ MD5 3e9b89948d1450cbb255f31178b894ba policycoreutils-1.4-r1.ebuild 1574
 MD5 5193def2349ed4fc44f3dd5d887e25ab ChangeLog 3134
 MD5 2eeb1df30e87ba2861eddbdc34a48bb8 metadata.xml 836
 MD5 75ee66235e6522c9de1ef80bb26bb26a policycoreutils-1.6.ebuild 1785
-MD5 7821fa9efa9de78861110c8bd21bf714 files/newrole 326
 MD5 b9c41decc251443bb9535f415b9b1896 files/digest-policycoreutils-1.4-r1 143
 MD5 5654021e49f2e838ecb41ac50536cc21 files/digest-policycoreutils-1.6 143
-MD5 7bfff4798c4a67cd8bb89b2f34d71f1d files/rlpkg 2251
-MD5 7821fa9efa9de78861110c8bd21bf714 files/run_init 326
-MD5 74b72f384af4ff8868c145ae98e6adaf files/avc_toggle 195
 MD5 b3e5bece06545088b90e09a70b01aa42 files/selinux-init 916
