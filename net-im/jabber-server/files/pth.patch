@@ -1,5 +1,5 @@
---- jabber-1.4.2/configure.orig      2002-02-04 17:05:37.000000000 -0600
-+++ jabber-1.4.2/configure   2002-10-19 09:54:16.000000000 -0500
+--- configure.orig      2002-02-04 17:05:37.000000000 -0600
++++ configure   2002-10-19 09:54:16.000000000 -0500
 @@ -81,13 +81,13 @@
  PTH_LDFLAGS=`pth-config --ldflags`
  PTH_LIBS=`pth-config --libs`
