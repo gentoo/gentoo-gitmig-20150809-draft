@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.5 2004/05/02 12:19:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.6 2004/05/10 23:15:52 lv Exp $
+
+  10 May 2004; Travis Tilley <lv@gentoo.org> jasper-1.701.0.ebuild:
+  added ~amd64 keyword
 
   02 May 2004; David Holm <dholm@gentoo.org> jasper-1.701.0.ebuild:
   Added to ~ppc.
