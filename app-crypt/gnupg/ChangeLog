@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.74 2004/09/04 13:43:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.75 2004/09/06 21:27:55 robbat2 Exp $
+
+  06 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> gnupg-1.9.10.ebuild,
+  gnupg-1.9.8.ebuild:
+  Fix bug #62111.
 
   04 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> gnupg-1.2.6.ebuild:
   Keyworded ~sparc wrt #62615
