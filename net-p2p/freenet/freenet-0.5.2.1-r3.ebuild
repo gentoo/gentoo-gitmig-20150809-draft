@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r3.ebuild,v 1.5 2003/07/24 21:49:46 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r3.ebuild,v 1.6 2003/07/30 16:08:10 lostlogic Exp $
 
 IUSE=""
 
@@ -79,7 +79,7 @@ pkg_config() {
 		einfo "Press U within 2 seconds to try an unstable snapshot"
 		read -n 1 -t 2 YN
 		if [ "${YN}" == "U" ] || [ "${YN}" == "u" ]; then
-			wget http://freenetproject.org/snapshots/freenet-exp-latest.jar -O /usr/lib/freenet/freenet.jar
+			wget http://freenetproject.org/snapshots/freenet-unstable-latest.jar -O /usr/lib/freenet/freenet.jar
 		else
 			wget http://freenetproject.org/snapshots/freenet-latest.jar -O /usr/lib/freenet/freenet.jar
 		fi
