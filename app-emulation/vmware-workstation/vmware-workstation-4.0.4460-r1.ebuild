@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.4460.ebuild,v 1.2 2003/06/29 20:06:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.4460-r1.ebuild,v 1.1 2003/07/26 00:02:52 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware. The agreeing to a licence is part of the configure step
 # which the user must run manually.
 
 S=${WORKDIR}/vmware-distrib
+N26KernSupport=vmware-any-any-update37
 NP="VMware-workstation-4.0.0-4460"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
@@ -16,12 +17,14 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
 	http://vmware-chil.www.conxion.com/software/${NP}.tar.gz
 	http://vmware-heva.www.conxion.com/software/${NP}.tar.gz
 	http://vmware.wespe.de/software/${NP}.tar.gz
-	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz"
+	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz
+	http://ftp.cvut.cz/vmware/${N26KernSupport}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/${N26KernSupport}.tar.gz"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 
-SLOT="0"
 LICENSE="vmware"
-KEYWORDS="x86 -ppc -sparc"
+SLOT="0"
+KEYWORDS="-* x86"
 IUSE="kde"
 
 DEPEND="virtual/glibc
@@ -31,14 +34,18 @@ DEPEND="virtual/glibc
 	>=dev-lang/tcl-8.3.3
 	sys-apps/pciutils"
 
-RDEPEND=${DEPEND}
-
 RESTRICT="nostrip"
 
-src_install() {
-	# lets make gcc happy regardless of what version we're using
-#	patch -p0 < ${FILESDIR}/${PVR}/vmware-config.pl-gcc-generalized.patch
+src_unpack() {
+	check_KV
+	unpack ${NP}.tar.gz
+	if [ "${KV:0:3}" == "2.6" ] || [ "${KV:0:3}" == "2.5" ] ; then
+		unpack ${N26KernSupport}.tar.gz
+		mv ${N26KernSupport}/*.tar ${S}/lib/modules/source/
+	fi
+}
 
+src_install() {
 	dodir /opt/vmware/bin
 	cp -a bin/* ${D}/opt/vmware/bin/
 	# vmware and vmware-ping needs to be suid root.
