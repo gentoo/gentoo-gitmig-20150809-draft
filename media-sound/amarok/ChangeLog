@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.34 2004/11/12 11:22:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.35 2004/11/23 03:00:34 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  amarok-1.1.1.ebuild:
+  -sparc
 
   12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> -amarok-0.9.ebuild,
   amarok-1.1.1.ebuild:
