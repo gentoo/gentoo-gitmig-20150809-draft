@@ -1,13 +1,15 @@
 # ChangeLog for gnome-extra/gnome-pilot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.8 2002/07/16 22:26:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.9 2002/07/16 22:28:13 seemant Exp $
 
 *gnome-pilot-0.1.65-r4 (16 Jul 2002)
 
   16 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
   gnome-pilot-0.1.65-r4.ebuild files/digest-gnome-pilot-0.1.65-r4 :
 
-  Updated to work with pilot-link-0.11.0
+  Updated to work with pilot-link-0.11.0  Thanks to David A. Desrosiers"
+  <hacker@gnu-designs.com> the pilot-link upstream author for the fix and to
+  nyergler@mac.com (Nathan R. Yergler) in bug #5051 for the catch.
 
 *gnome-pilot-0.1.65-r3 (01 Jul 2002)
 
