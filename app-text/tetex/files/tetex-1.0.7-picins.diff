@@ -1,8 +1,0 @@
---- teTeX-1.0.ORIG/texmf/tex/latex/misc/picins.sty	1992-09-27 09:00:00.000000000 +0900
-+++ teTeX-1.0/texmf/tex/latex/misc/picins.sty	2003-09-30 05:03:32.000000000 +0900
-@@ -576,4 +576,3 @@
-    \put(\c@xoff,\c@yoff){\box\env@box}%
-  \end{picture}%
- }
--
-\ No newline at end of file

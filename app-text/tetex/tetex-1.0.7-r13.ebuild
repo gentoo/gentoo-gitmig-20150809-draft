@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.10 2004/06/24 22:53:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.11 2004/07/30 19:50:14 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,9 +10,10 @@ S=${WORKDIR}/teTeX-1.0
 DESCRIPTION="a complete TeX distribution"
 HOMEPAGE="http://tug.org/teTeX/"
 SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-${PV}.tar.gz
-	 ftp://ftp.dante.de/pub/tex/systems/unix/teTeX/1.0/contrib/ghibo/${TEXMFSRC}
-	 mirror://gentoo/ec-ready-mf-tfm.tar.gz
-	 mirror://teTeX-french.tar.gz"
+	ftp://ftp.dante.de/pub/tex/systems/unix/teTeX/1.0/contrib/ghibo/${TEXMFSRC}
+	mirror://gentoo/ec-ready-mf-tfm.tar.gz
+	mirror://gentoo/teTeX-french.tar.gz
+	mirror://gentoo/${P}-gentoo.tar.gz"
 
 KEYWORDS="x86 ppc sparc alpha hppa"
 SLOT="0"
@@ -48,21 +49,22 @@ src_unpack() {
 	echo ">>> Unpacking teTeX-french.tar.gz"
 	tar --no-same-owner -xzf ${DISTDIR}/teTeX-french.tar.gz || die
 
+	cd ${S}
+	unpack ${P}-gentoo.tar.gz
+
 	# Fixes from way back ... not sure even Achim will
 	# still know why :/
-	cd ${WORKDIR}
-	epatch ${FILESDIR}/teTeX-1.0-gentoo.diff
-	cd ${S}
-	epatch ${FILESDIR}/teTeX-1.0.dif
+	epatch teTeX-1.0-gentoo.diff
+	epatch teTeX-1.0.diff
 
 	# Do not run config stuff
-	epatch ${FILESDIR}/${P}-dont-run-config.diff
+	epatch ${P}-dont-run-config.diff
 
 	# Fix for dvips to print directly.
-	epatch ${FILESDIR}/teTeX-1.0-dvips.diff
+	epatch teTeX-1.0-dvips.diff
 
 	# Fix picins.sty 
-	epatch ${FILESDIR}/${P}-picins.diff
+	epatch ${P}-picins.diff
 
 	# Prevent the silly readlink manpage from installing
 	epatch ${FILESDIR}/${PN}-no-readlink-manpage.diff

@@ -1,6 +1,12 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.63 2004/07/01 14:04:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.64 2004/07/30 19:50:14 usata Exp $
+
+  31 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> -files/teTeX-1.0-dvips.diff,
+  -files/teTeX-1.0-gentoo.diff, -files/tetex-1.0.7-dont-run-config.diff,
+  -files/tetex-1.0.7-dvips-secure.diff, -files/tetex-1.0.7-picins.diff,
+  tetex-1.0.7-r13.ebuild:
+  Archived patches in files directory and put them on Gentoo mirrors.
 
   01 Jul 2004; Tom Gall <tgall@gentoo.org> tetex-2.0.2-r3.ebuild:
   stable on ppc64, bug #54799
