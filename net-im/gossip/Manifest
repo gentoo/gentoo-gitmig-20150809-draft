@@ -1,17 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3caf61910f901abb6bbb0a62242ec766 ChangeLog 3407
-MD5 91b95fd10b39f804f02c370586144f9e gossip-0.6-r1.ebuild 812
-MD5 76d37cf0bb6cfe914d847ec57f60244e gossip-0.6.ebuild 765
-MD5 d643c85e09c08fca9c864113abb3e95a gossip-0.7.2.ebuild 826
-MD5 5556be5dae1a11d4b7be83b215408743 gossip-0.7.5.ebuild 827
-MD5 9a9ed8f43621c860f0323fcd365a2dbf metadata.xml 271
-MD5 d85225deca2fd75a13f8bad0effdf471 gossip-0.7.4.ebuild 827
 MD5 9629b65413873bf3701936c9601cfc82 gossip-0.7.6.ebuild 850
 MD5 b413b97ba47184b4f654193cb037a56b gossip-0.7.8.ebuild 896
-MD5 74c6a4b33f5bf9b5392c0f604cdbf55b files/digest-gossip-0.6 63
-MD5 74c6a4b33f5bf9b5392c0f604cdbf55b files/digest-gossip-0.6-r1 63
-MD5 380ba273ba985435cd49ab18d2b22382 files/digest-gossip-0.7.4 65
-MD5 0782faadd1504569029f8345f5d430a3 files/digest-gossip-0.7.5 65
-MD5 026b4965e022a1121bb4ea0aa7e62335 files/digest-gossip-0.7.2 65
-MD5 c54dc353178590bded70cd6152c7cdc4 files/gossip-0.6-click.patch 659
+MD5 9a9ed8f43621c860f0323fcd365a2dbf metadata.xml 271
 MD5 4050efbfb3d0d651099c4786b55eed9d files/digest-gossip-0.7.6 65
 MD5 8306015f92ba6d545883f19eaf3baa4d files/digest-gossip-0.7.8 65
+MD5 c54dc353178590bded70cd6152c7cdc4 files/gossip-0.6-click.patch 659
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBeZqDRkyva5PS18kRAkkMAJ930hVo//UJJUPlaHjEH0+e6aFWLwCfYJn9
+C/z6/VcsXYl1HH0sxrhvtnc=
+=Eyew
+-----END PGP SIGNATURE-----
