@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1-r1.ebuild,v 1.2 2003/01/31 20:00:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1-r1.ebuild,v 1.3 2003/02/05 21:29:56 hannes Exp $
 NEED_KDE_DONT_ADD_KDELIBS_DEP=1 # we're a special case, see below
 inherit kde-dist 
 
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc"
 newdepend ">=media-sound/cdparanoia-3.9.8
 	ldap? ( >=net-nds/openldap-1.2 )
 	pam? ( >=sys-libs/pam-0.73 )
-	motif? ( >=x11-libs/openmotif-2.1.30 )
+	motif? ( virtual/motif )
 	encode? ( >=media-sound/lame-3.89b )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )
 	cups? ( net-print/cups )
@@ -26,7 +26,7 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 # special case, contd.: we need kdelibs >=3.1-r1, but not so that we get a version !=3.1
 # so we told kde-functions:need-kde not to add a dep on kdelibs, and now we'll do it manually
 # newdepend "( >=kde-base/kdelibs-3.1-r1 <kde-base/kdelibs-3.1.1 )" # bug in portage?
-newdepend "=kde-base/kdelibs-3.1-r1"
+newdepend "=kde-base/kdelibs-3.1-r2"
 
 myconf="$myconf --with-dpms --with-cdparanoia"
 
@@ -40,64 +40,63 @@ use opengl	&& myconf="$myconf --with-gl"		|| myconf="$myconf --without-gl"
 use ssl		&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
 use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
 use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
+
 src_compile() {
-
-    kde_src_compile myconf configure
-    kde_remove_flag kdm/kfrontend -fomit-frame-pointer
-    kde_src_compile make
-
+	kde_src_compile myconf configure
+	kde_remove_flag kdm/kfrontend -fomit-frame-pointer
+	kde_src_compile make
 }
 
 src_install() {
 
-    kde_src_install
+	kde_src_install
 
-    # cf bug #5953
-    insinto /etc/pam.d
-    #newins ${FILESDIR}/kscreensaver.pam kscreensaver
-    newins ${FILESDIR}/kde.pam kde
+	# cf bug #5953
+	insinto /etc/pam.d
+	#newins ${FILESDIR}/kscreensaver.pam kscreensaver
+	newins ${FILESDIR}/kde.pam kde
 
-    # startkde script
-    cd ${D}/${KDEDIR}/bin
-    patch -p0 < ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff || die
-    mv startkde startkde.orig
-    sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
-    rm startkde.orig
-    chmod a+x startkde
+	# startkde script
+	cd ${D}/${KDEDIR}/bin
+	patch -p0 < ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff || die
+	mv startkde startkde.orig
+	sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
+	rm startkde.orig
+	chmod a+x startkde
 
-    # x11 session script
-    cd ${T}
-    echo "#!/bin/sh
+	# x11 session script
+	cd ${T}
+	echo "#!/bin/sh
 ${KDEDIR}/bin/startkde" > kde-${PV}
-    chmod a+x kde-${PV}
-    exeinto /etc/X11/Sessions
-    doexe kde-${PV}
+	chmod a+x kde-${PV}
+	exeinto /etc/X11/Sessions
+	doexe kde-${PV}
 
-    cd ${D}/${KDEDIR}/share/config/kdm || die
-    sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
+	cd ${D}/${KDEDIR}/share/config/kdm || die
+	sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
 	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:" \
 	${FILESDIR}/${PVR}/kdmrc > kdmrc
-    cp ${FILESDIR}/${PVR}/backgroundrc .
+	cp ${FILESDIR}/${PVR}/backgroundrc .
 
-    #backup splashscreen images, so they can be put back when unmerging 
-    #mosfet or so.
-    if [ ! -d ${KDEDIR}/share/apps/ksplash.default ]
-    then
-        cd ${D}/${KDEDIR}/share/apps
-        cp -rf ksplash/ ksplash.default
-    fi
-    
-    # Show gnome icons when choosing new icon for desktop shortcut
-    dodir /usr/share/pixmaps
-    mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
-    rm -rf ${D}/${KDEDIR}/share/apps/kdesktop/pics/
-    cd ${D}/${KDEDIR}/share/apps/kdesktop/
-    ln -sf /usr/share/pixmaps/ pics
+	#backup splashscreen images, so they can be put back when unmerging 
+	#mosfet or so.
+	if [ ! -d ${KDEDIR}/share/apps/ksplash.default ]
+	then
+		cd ${D}/${KDEDIR}/share/apps
+		cp -rf ksplash/ ksplash.default
+	fi
 
-    rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
+	# Show gnome icons when choosing new icon for desktop shortcut
+	dodir /usr/share/pixmaps
+	mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
+	rm -rf ${D}/${KDEDIR}/share/apps/kdesktop/pics/
+	cd ${D}/${KDEDIR}/share/apps/kdesktop/
+	ln -sf /usr/share/pixmaps/ pics
+
+	rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
 
 }
 
 pkg_postinst() {
-    mkdir -p ${KDEDIR}/share/templates/.source/emptydir
+	mkdir -p ${KDEDIR}/share/templates/.source/emptydir
 }

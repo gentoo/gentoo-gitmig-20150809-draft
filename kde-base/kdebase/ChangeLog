@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.56 2003/02/01 20:30:58 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.57 2003/02/05 21:29:56 hannes Exp $
+
+  05 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdebase-3.1-r1.ebuild:
+  changed dep on motif to virtual/motif (lesstif also works), changed dep
+  to kdelibs-3.1-r2 (closes bug #15182, thanks to throstur@bylur.net)
 
   01 Feb 2003; Jack Morgan <jmorgan@gentoo.org> kdebase-3.1.ebuild:
   added ~sparc to keywords
