@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r3.ebuild,v 1.1 2003/05/25 03:38:34 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r3.ebuild,v 1.2 2003/05/25 06:10:29 avenj Exp $
 
 IUSE="crypt nls selinux static pam"
 
@@ -24,7 +24,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2
 	!selinux? ( sys-apps/pam-login )
 	selinux? ( sys-apps/shadow )
-	pam? (sys-apps/pam-login)"
+	pam? ( sys-apps/pam-login )"
 
 RDEPEND="${DEPEND} dev-lang/perl
 	nls? ( sys-devel/gettext )"
