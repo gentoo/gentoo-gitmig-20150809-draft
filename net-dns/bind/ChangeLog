@@ -1,8 +1,12 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.1 2002/06/29 00:55:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.2 2002/07/20 17:30:12 nitro Exp $
 
 *bind-9.2.1-r1 (2 May 2002)
+
+  20 Jul 2002; Kyle Manna <nitro@gentoo.org> bind-9.2.1-r1.ebuild:
+
+  Moved away from emake to make.  Parallel builds break on some systems.
 
   1 June 2002; Kyle Manna <nitro@gentoo.org> bind-9.2.1-r1.ebuild:
 
