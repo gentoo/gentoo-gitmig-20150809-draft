@@ -1,10 +1,14 @@
-MD5 a6db1da5085e2c901773cf0e9003bdf0 ChangeLog 1296
-MD5 ed4a3e3f1678ab20c17e6adbdf1a8387 blight_input-0.0.4.ebuild 817
-MD5 221ab78cc4c93f4c989bc1f66838f485 blight_input-0.0.7.ebuild 884
-MD5 82037e48ba57e4aba84f02dec431796e blight_input-0.0.8.ebuild 894
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eefcac36cac1b5c5c37e43492b11514d ChangeLog 1380
+MD5 d8b9f42421700423b1a20b4329cc2ebe blight_input-0.0.8-r1.ebuild 939
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 75fb96ac15d2144a9a75c1eddba4ac9b blight_input-0.0.8-r1.ebuild 942
-MD5 f0c8aaf569bafff78daf0614d04e7083 files/digest-blight_input-0.0.4 71
-MD5 2e60105fad2f58e0d4742d859d704bd8 files/digest-blight_input-0.0.7 68
-MD5 146026873ebbcbdd9829bb0406cc7acd files/digest-blight_input-0.0.8 71
 MD5 82f760f850552f3be75d5dd733687219 files/digest-blight_input-0.0.8-r1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD4DBQFB2LzmUpKYMelfdYERAuu8AJj/EoDHQMXcooYocBnHDveogN7LAJ99lKGE
+/AZAUSnLBPA3O2pOx08d1Q==
+=j7s2
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/blight_input/blight_input-0.0.8-r1.ebuild,v 1.3 2004/09/23 08:50:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/blight_input/blight_input-0.0.8-r1.ebuild,v 1.4 2005/01/03 03:31:26 morfic Exp $
 
 inherit games
 

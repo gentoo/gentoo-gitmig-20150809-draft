@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/blight_input
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/blight_input/ChangeLog,v 1.4 2004/06/24 22:24:12 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/blight_input/ChangeLog,v 1.5 2005/01/03 03:31:26 morfic Exp $
+
+  02 Jan 2005; Daniel Goller <morfic@gentoo.org> :
+  Clean up in preparation of move
 
 *blight_input-0.0.8-r1 (30 Mar 2004)
 
