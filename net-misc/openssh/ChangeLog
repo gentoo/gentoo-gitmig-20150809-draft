@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.109 2004/12/30 00:06:48 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.110 2004/12/30 18:23:40 kloeri Exp $
+
+  30 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  openssh-3.9_p1-r1.ebuild:
+  Stable on alpha, bug 59361.
 
   29 Dec 2004; Hardave Riar <hardave@gentoo.org> openssh-3.9_p1-r1.ebuild:
   Stable on mips, bug #59361.
