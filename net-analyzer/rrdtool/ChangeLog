@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.14 2003/04/04 16:03:02 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.15 2003/04/16 16:36:28 mholzer Exp $
+
+*rrdtool-1.0.42 (16 Apr 2003)
+
+  16 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  rrdtool-1.0.42.ebuild:
+  Version bumped.
 
 *rrdtool-1.0.41 (13 Mar 2003)
 
