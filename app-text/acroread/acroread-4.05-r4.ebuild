@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-4.05-r4.ebuild,v 1.1 2002/04/05 05:48:41 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-4.05-r4.ebuild,v 1.2 2002/04/27 08:20:10 seemant Exp $
 
 MY_P=linux-ar-405
 S=${WORKDIR}/ILINXR.install
@@ -14,10 +14,10 @@ RDEPEND="virtual/x11"
 
 src_unpack() {
 
-  unpack ${A}
-  cd ${S}
-  tar xvf ILINXR.TAR
-  tar xvf READ.TAR 
+	unpack ${A}
+	cd ${S}
+	tar xvf ILINXR.TAR
+	tar xvf READ.TAR 
 }
 
 src_compile () {
