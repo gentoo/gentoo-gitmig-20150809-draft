@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.3 2002/06/01 03:41:55 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.4 2002/06/01 03:50:29 blocke Exp $
 
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -40,7 +40,7 @@ gnome2_src_install() {
 	einstall " scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ ${1}"
 
 	# manual document installation
-	if [ -n "${DOC}" && use doc ]
+	if [ -n "${DOC}" ]
 	then
 		dodoc ${DOC}
 	fi
