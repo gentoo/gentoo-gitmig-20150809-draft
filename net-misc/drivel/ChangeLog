@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/drivel
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.4 2003/05/20 07:28:57 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.5 2004/01/25 20:50:08 eradicator Exp $
+
+*drivel-0.9.3 (25 Jan 2004)
+
+  25 Jan 2004; Jeremy Huddleston <eradicator@gentoo.org> drivel-0.9.3.ebuild:
+  version bump. We depend on intltool so we can re-intltoolize since this
+  package was created with a bad version of intltool.  Closes bug #37911.
 
 *drivel-0.9.1 (20 May 2003)
 
