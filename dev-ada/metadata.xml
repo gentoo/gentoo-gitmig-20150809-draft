@@ -5,5 +5,9 @@
 		The dev-ada category contains libraries and utilities relevant to the
 		Ada programming language.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-ada enthält Bibliotheken und Werkzeuge für die 
+		Programmiersprache Ada.
+	</longdescription>
 </catmetadata>
 
