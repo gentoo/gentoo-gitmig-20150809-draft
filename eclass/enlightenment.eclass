@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.19 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.20 2004/06/28 02:38:46 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -58,6 +58,7 @@ enlightenment_src_unpack() {
 
 enlightenment_src_compile() {
 	[ ! -z "${EHACKAUTOGEN}" ] && sed -i 's:.*configure.*::' autogen.sh
+	export WANT_AUTOMAKE="${EAUTOMAKE:-1.8}"
 	env \
 		PATH="${T}:${PATH}" \
 		NOCONFIGURE=yes \
