@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.2 2004/11/03 00:26:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.3 2004/11/08 00:58:44 kumba Exp $
 
 inherit perl-module eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 # Original KEYWORDS="x86 ppc sparc alpha hppa ~mips amd64 ia64 ppc64 s390"
 # All other KEYWORDS were removed because this ebuild only contains an 64-bit arch fix.
-KEYWORDS="alpha amd64 ia64 ppc64"
+KEYWORDS="alpha amd64 ia64 ppc64 mips"
 IUSE="nls ipv6 perl ssl socks5"
 
 RDEPEND="!net-irc/irssi-cvs
