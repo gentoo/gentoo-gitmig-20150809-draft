@@ -1,0 +1,5 @@
+MD5 a9b68a73f170f715037b47419a0dc72b helium-1.1.ebuild 1628
+MD5 c1557d9dedb1e727fc23d81135ac953d ChangeLog 563
+MD5 9383829eb1e80fc6be12c53d3162d58b files/digest-helium-1.1 119
+MD5 538379c81a9dfdc87a15ce0e6a504c8a files/helium-1.1-readline.patch 1710
+MD5 3991ed4891d6455e980008f704211a97 files/helium-wrapper 558
