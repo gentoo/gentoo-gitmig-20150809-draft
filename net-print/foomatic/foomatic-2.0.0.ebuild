@@ -1,20 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/foomatic-2.0.0.ebuild,v 1.2 2002/10/20 18:52:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/foomatic-2.0.0.ebuild,v 1.3 2002/10/25 00:17:26 blizzy Exp $
 
 inherit perl-module
 
-S="${WORKDIR}/${P}"
-
-IUSE=""
-
-DESCRIPTION="Generates printer conifgs automagically"
+DESCRIPTION="Generates printer configurations automagically"
 HOMEPAGE="http://www.linuxprinting.org/foomatic"
 SRC_URI="http://www.linuxprinting.org/download/foomatic/${P}.tar.gz"
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/glibc
 	virtual/x11
@@ -24,24 +20,20 @@ DEPEND="virtual/glibc
 	samba? ( net-fs/samba )
 	cups? ( net-print/cups )"
 
-src_unpack() {
+S="${WORKDIR}/${P}"
 
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	patch -p1 < ${FILESDIR}/perl-module.diff || die "patch failed"
-
 }
 
 src_compile() {
-
 	econf || die "configure failed"
-
 	emake || die "parallel make failed"
-
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die "make install failed"
 
 	# install perl modules
