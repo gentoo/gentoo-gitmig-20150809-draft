@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/aewm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.4 2003/12/04 17:22:51 tseng Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.5 2004/03/07 09:32:18 pyrania Exp $
+
+  07 Mar 2004; Markus Nigbur <pyrania@gentoo.org> aewm-1.2.0.ebuild:
+  Removed stale ebuild.
 
   04 Dec 2003; Brandon Hale <tseng@gentoo.org> aewm-1.2.3.ebuild:
   fixing bad DEPEND
