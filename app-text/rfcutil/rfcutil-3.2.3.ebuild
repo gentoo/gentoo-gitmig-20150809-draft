@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.20 2005/01/01 16:33:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.21 2005/03/15 14:15:31 seemant Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SLOT="0"
 LICENSE="as-is"
 
 RDEPEND="dev-lang/perl
-	|| ( net-www/lynx virtual/w3m )"
+	|| ( www-client/lynx virtual/w3m )"
 
 src_unpack() {
 	unpack ${A}
