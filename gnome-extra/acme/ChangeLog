@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/acme
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/ChangeLog,v 1.33 2004/02/08 03:45:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/ChangeLog,v 1.34 2004/02/08 21:23:39 spider Exp $
+
+  08 Feb 2004; <spider@gentoo.org> :
+  x86 stable
 
 *acme-2.4.2-r1 (08 Feb 2004)
 
