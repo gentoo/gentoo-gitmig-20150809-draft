@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/ximian-connector
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ChangeLog,v 1.11 2004/10/05 19:31:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ChangeLog,v 1.12 2004/10/16 20:48:01 liquidx Exp $
+
+*ximian-connector-2.0.2 (16 Oct 2004)
+
+  16 Oct 2004; Alastair Tse <liquidx@gentoo.org>
+  -ximian-connector-1.4.6.0.6.1.ebuild, +ximian-connector-2.0.2.ebuild:
+  version bump
 
 *ximian-connector-2.0.1 (05 Oct 2004)
 
