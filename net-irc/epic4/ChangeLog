@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.5 2002/11/15 16:19:44 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.6 2002/11/15 16:21:50 phoenix Exp $
 
 *epic4-1.1.7 (22 Oct 2002)
 
@@ -35,8 +35,8 @@
   15 Nov 2002; phoen][x <phoenix@gentoo.org> epic4-1.0.1-r1.ebuild :
 
   Used flag-o-matic to replace "-O3" with "-O2". Seems like epic4
-  didn't work on a p3 with "-O3" - bitchx has the same problem, that's
-  why i'm trying to fix epic with the same solution.
+  did not ork on a p3 with "-O3" (check bug #10642) - bitchx has 
+  the same problem, that's why i tried to fix epic with the same solution.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
