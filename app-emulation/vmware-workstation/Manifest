@@ -8,14 +8,6 @@ MD5 677d3f162d6bcd8a95494c925c0050fe files/3.2.0.2230-r1/VMwareWorkstation.deskt
 MD5 9e5a50beb584c9ba35ba1f7043ed436b files/3.2.0.2230-r1/vmware 1439
 MD5 3bfb39f5e96f60db67c7246f74c21501 files/3.2.0.2230-r1/vmware-config.pl-gcc-generalized.patch 2948
 MD5 7ca1ec14670b51d8cf824a58bc8d6621 files/3.2.0.2230-r1/vmware.png 470
-MD5 48c1667773503fee21a1068da07440b9 files/4.0.4320/90vmware 70
-MD5 677d3f162d6bcd8a95494c925c0050fe files/4.0.4320/VMwareWorkstation.desktop 241
-MD5 0a8225372a21eea1c73b9cdad18d8755 files/4.0.4320/vmware 1437
-MD5 7ca1ec14670b51d8cf824a58bc8d6621 files/4.0.4320/vmware.png 470
-MD5 48c1667773503fee21a1068da07440b9 files/4.0.4388/90vmware 70
-MD5 677d3f162d6bcd8a95494c925c0050fe files/4.0.4388/VMwareWorkstation.desktop 241
-MD5 e65d2f01aec2c00afdb0112325de6792 files/4.0.4388/vmware 1436
-MD5 7ca1ec14670b51d8cf824a58bc8d6621 files/4.0.4388/vmware.png 470
 MD5 48c1667773503fee21a1068da07440b9 files/4.0.4460/90vmware 70
 MD5 677d3f162d6bcd8a95494c925c0050fe files/4.0.4460/VMwareWorkstation.desktop 241
 MD5 c571818b2b5ee66d89fc9fbee5c3e608 files/4.0.4460/vmware 1432
