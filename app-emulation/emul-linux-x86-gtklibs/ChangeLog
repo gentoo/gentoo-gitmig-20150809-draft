@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/emul-linux-x86-gtklibs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.1 2003/10/26 21:11:20 brad_mssw Exp $
+
+*emul-linux-x86-gtklibs-1.0 (26 Oct 2003)
+
+  26 Oct 2003; Brad House <brad_mssw@gentoo.org>
+  emul-linux-x86-gtklibs-1.0.ebuild:
+  initial commit of gtklibs for 32bit emulation
+
