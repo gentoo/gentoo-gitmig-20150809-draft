@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3.ebuild,v 1.3 2002/06/22 03:19:24 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3.ebuild,v 1.4 2002/06/22 12:17:55 peitolm Exp $
  
  
 S=${WORKDIR}/gentoo-src/gentoo-web
@@ -146,6 +146,7 @@ src_install() {
 	mkdir -p xml/packages
 	dodir ${WEBROOT}/packages/
 	insinto ${WEBROOT}/packages/
+	python python/genpkgxml.py ${T}/main-packages-old-style.xml || die
 	python python/genpkgxml-v2.py ${T}/main-packages.xml || die
 	for DIR in `ls xml/packages`
 	do
@@ -161,6 +162,7 @@ src_install() {
 
 	ROOT=${OLDROOT}
 	xsltproc $TEMPLATE ${T}/main-packages.xml > ${D}${WEBROOT}/index-packages.html || die
+	xsltproc $TEMPLATE ${T}/main-packages-old-style.xml > ${D}${WEBROOT}/index-packages-old.html || die
 	xsltproc $TEMPLATE xml/main-devlist.xml > ${D}${WEBROOT}/index-devlist.html || die
 	doins css/main-new.css css/resume.css
 	
