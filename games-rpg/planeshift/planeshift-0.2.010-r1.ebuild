@@ -1,22 +1,22 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.3 2003/12/16 23:43:48 hythloday Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.4 2004/02/03 20:44:33 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
+S="${WORKDIR}/${PN}"
 HOMEPAGE="http://www.planeshift.it/"
-SRC_URI="mirror://gentoo/distfiles/${P}.tar.bz2"
 DESCRIPTION="virtual fantasy world MMORPG"
+SRC_URI="mirror://gentoo/distfiles/${P}.tar.bz2"
 
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2 | Planeshift"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+IUSE=""
 
 DEPEND="net-ftp/curl
 	dev-games/crystalspace
 	dev-games/cel"
-
-S=${WORKDIR}/${PN}
 
 export PLANESHIFT_PREFIX=${PLANESHIFT_PREFIX:-${GAMES_PREFIX_OPT}/${PN}}
 export CRYSTAL_PREFIX=${CRYSTAL_PREFIX:-${GAMES_PREFIX_OPT}/crystal}
