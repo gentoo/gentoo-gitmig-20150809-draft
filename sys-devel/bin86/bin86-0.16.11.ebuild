@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.11.ebuild,v 1.1 2003/03/16 17:39:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.11.ebuild,v 1.2 2003/07/16 08:13:35 pvdabeel Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cix.co.uk/~mayday/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="~x86 ~sparc -ppc"
 
 DEPEND="virtual/glibc"
 
