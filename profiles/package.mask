@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# Won't compile yet for me..<Verwilst, 10 feb 2002>
+=net-misc/tightvnc-1.2.2
+
 #a work in progress (drobbins, 10 Feb 2002)
 app-emulation/vmware-workstation
 
@@ -75,7 +78,7 @@ app-admin/webconfig
 =app-doc/quanta-docs-1.0
 
 #won't compile here
-=media-sound/freeamp-2.1.1
+#=media-sound/freeamp-2.1.1
 
 #hasn't built in months
 >=net-ftp/kbear-1.2.1
