@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.4 2002/07/12 16:30:43 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.5 2002/07/25 04:44:13 mkennedy Exp $
+
+*jedit-4.0.3-r2 (24 Jul 2002)
+
+  24 Jul 2002; Matthew Kennedy <mkennedy@gentoo.org> jedit-4.0.3-r2.ebuild :
+
+  Should install the docs now... with the right permissions (resolves
+  bug #4929)
 
 *jedit-4.0.3-r1 (12 Jul 2002)
 
