@@ -1,0 +1,28 @@
+--- src/regexp/regsub.c.orig	Tue Sep 25 21:40:39 2001
++++ src/regexp/regsub.c	Tue Sep 25 21:40:59 2001
+@@ -42,7 +42,6 @@
+ 	register char c;
+ 	register int no;
+ 	register int len;
+-	extern char *strncpy();
+ 
+ 	if (prog == NULL || source == NULL || dest == NULL) {
+ 		regerror("NULL parm to regsub");
+--- src/regexp/regexp.c.orig	Tue Sep 25 21:40:32 2001
++++ src/regexp/regexp.c	Tue Sep 25 21:41:10 2001
+@@ -703,7 +703,6 @@
+ register char *string;
+ {
+ 	register char *s;
+-	extern char *strchr();
+ 
+ 	/* Be paranoid... */
+ 	if (prog == NULL || string == NULL) {
+@@ -802,7 +801,6 @@
+ {
+ 	register char *scan;	/* Current node. */
+ 	char *next;		/* Next node. */
+-	extern char *strchr();
+ 
+ 	scan = prog;
+ #ifdef DEBUG
