@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/raccess4vbox3/raccess4vbox3-0.2.8.ebuild,v 1.1 2004/11/21 18:47:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/raccess4vbox3/raccess4vbox3-0.2.8.ebuild,v 1.2 2004/11/21 18:48:59 mrness Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
 
-DEPEND="net-dialup/vbox3"
+RDEPEND="net-dialup/vbox3"
 
 src_compile() {
 	emake || die "emake failed"
