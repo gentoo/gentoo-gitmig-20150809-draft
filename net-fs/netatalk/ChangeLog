@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.20 2004/10/25 12:04:28 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.21 2004/12/12 06:03:06 rphillips Exp $
+
+*netatalk-2.0.1 (11 Dec 2004)
+
+  11 Dec 2004; <rphillips@gentoo.org> netatalk-2.0.1.ebuild:
+  Added Steven Klass' and AD Rutledge's ebuild for 2.0.x series of netatalk.
+  Fixes #69526
 
   25 Oct 2004; Kurt Lieber <klieber@gentoo.org> netatalk-1.6.4-r1.ebuild:
   x86 bumpage, bug #66370
