@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdbc2-oracle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/ChangeLog,v 1.6 2004/06/24 22:32:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/ChangeLog,v 1.7 2004/07/17 11:42:00 axxo Exp $
+
+  17 Jul 2004; Thomas Matthijs <axxo@gentoo.org> -jdbc2-oracle-8.1.7.ebuild,
+  -jdbc2-oracle-9.0.1.4.ebuild, -jdbc2-oracle-9.0.1.ebuild,
+  -jdbc2-oracle-9.2.0.1.ebuild, jdbc2-oracle-9.2.0.3.ebuild:
+  fix empty src_uri
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> jdbc2-oracle-8.1.7.ebuild,
   jdbc2-oracle-9.0.1.4.ebuild, jdbc2-oracle-9.0.1.ebuild,
