@@ -53,8 +53,8 @@ Now, finally emerge your multilib sandbox, full glibc and gcc
 # emerge -v portage gcc glibc
 
 Now unfortunately a bunch of .las are now lying around pointing to incorrect places... Here's a kludge:
-sed -i -e 's:usr/lib/gcc\(-lib\)?/sparc-unknown-linux-gnu:usr/lib/gcc/sparc64-unknown-linux-gnu:g' \
-       -e 's:/lib\(ffi\|g2c\|objc\|stdc++\|supc++\)\.la:/32/lib\1.la:g' \
-       -e 's:/32/32/:/32/:g' \
-       /usr/lib/*.la /usr/kde/*/lib/*.la /usr/qt/*/lib/*.la
-
+find /usr/lib /usr/kde/*/lib /usr/qt/*/lib -name '*.la' -exec \
+	sed -i -e 's:usr/lib/gcc\(-lib\)?/sparc-unknown-linux-gnu:usr/lib/gcc/sparc64-unknown-linux-gnu:g' \
+               -e 's:/lib\(ffi\|g2c\|objc\|stdc++\|supc++\):/32/lib\1:g' \
+               -e 's:/32/32/:/32/:g' \
+	       {} \;
