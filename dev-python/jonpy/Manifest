@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2c2298fae0ffb843de9f05e06f58c3c1 jonpy-0.06.ebuild 1113
+MD5 01c42846eea5839de5946e70befcc2d9 ChangeLog 335
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 eb196cd700a10300226f3854009cd800 files/digest-jonpy-0.06 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBxVkhefZ4eWAXRGIRAsEqAJ9O9zCkrVo3XxamyPLzLaLJ0jZlDACggefp
+7Fys7YDQvUCtX6R0k4tu3Tk=
+=3n+Z
+-----END PGP SIGNATURE-----
