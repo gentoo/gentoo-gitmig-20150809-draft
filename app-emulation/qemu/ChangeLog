@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.19 2004/11/02 09:08:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.20 2004/11/15 13:46:25 lu_zero Exp $
+
+*qemu-0.6.1 (15 Nov 2004)
+
+  15 Nov 2004; Luca Barbato <lu_zero@gentoo.org> +qemu-0.6.1.ebuild:
+  New version, filtering qemu-fast on nptl
 
   02 Nov 2004; Luca Barbato <lu_zero@gentoo.org> qemu-0.6.0.ebuild:
   Minor fix
