@@ -1,0 +1,5 @@
+MD5 d621384468bc33d9d148a429bdec47ad ChangeLog 422
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 6591bebce39b421420d7367175461101 lineak-xosdplugin-0.8.2.ebuild 1011
+MD5 6b06a7712d74799e4f33b60968ecee3d files/do-not-depend-on-kde.patch 1158
+MD5 6f29dbffa938505fdbf0dfb7110f1077 files/digest-lineak-xosdplugin-0.8.2 75
