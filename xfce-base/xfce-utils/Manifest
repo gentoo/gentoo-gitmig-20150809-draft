@@ -1,2 +1,6 @@
-MD5 a6f6f81118f88db7c361f039774ef7b3 xfce-utils-4.2.0.ebuild 496
+MD5 db369975fe538b4d44b5cd743e79789f xfce-utils-4.2.0.ebuild 496
+MD5 f8b0d28fca91cd41dcfd71d9569003b8 xfce-utils-4.0.6.ebuild 1092
+MD5 12e2787b27cd29ecbad300e024790397 ChangeLog 5467
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 36cfb57721de1080726f288c17acd532 files/digest-xfce-utils-4.0.6 68
 MD5 55d9e3f0f93fe625260dc740c557f6a3 files/digest-xfce-utils-4.2.0 69

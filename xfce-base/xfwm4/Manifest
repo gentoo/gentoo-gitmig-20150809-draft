@@ -1,2 +1,6 @@
-MD5 4df860becf4803cf5705104a78f58e6b xfwm4-4.2.0.ebuild 438
+MD5 eaaaa2845be898ce9fe59004414e1e6a xfwm4-4.2.0.ebuild 438
+MD5 1bbf410049f4bef5540b0258adb0b64e xfwm4-4.0.6.ebuild 1005
+MD5 05dd744e3acb697086bba8bbdab66c53 ChangeLog 5429
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 6f4435fee2dcec61a3cca0459b98839c files/digest-xfwm4-4.0.6 63
 MD5 4ce546f7744abe18cc8da66391eb5fc5 files/digest-xfwm4-4.2.0 64

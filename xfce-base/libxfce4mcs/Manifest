@@ -1,2 +1,6 @@
-MD5 712179db5e692796583f7a1a093ca3a4 libxfce4mcs-4.2.0.ebuild 444
+MD5 f07beebcfe31a449c22e798cbcffa35c libxfce4mcs-4.2.0.ebuild 444
+MD5 c436d628fc82c3fc6f1cc226da497cac libxfce4mcs-4.0.6.ebuild 912
+MD5 bbcf1c0697bacc5a0c3b30108020285c ChangeLog 5985
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 011f46410944ac6aa6c44d92b888069e files/digest-libxfce4mcs-4.0.6 69
 MD5 a16968bec2b75db41f497feb10c7430f files/digest-libxfce4mcs-4.2.0 70
