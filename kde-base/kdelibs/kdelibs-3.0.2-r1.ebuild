@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.2-r1.ebuild,v 1.2 2002/07/16 20:57:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.2-r1.ebuild,v 1.3 2002/07/17 11:16:42 danarmak Exp $
 
 inherit  kde kde.org
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
@@ -78,14 +78,14 @@ src_install() {
 	
 	dodir /etc/env.d
 
-	if [ "$PREFIX" != "$KDEDIR" ]; then
-echo "PATH=${KDEDIR}/bin:/usr/kde/3/bin
-ROOTPATH=${KDEDIR}/bin:/usr/kde/3/bin
-LDPATH=${KDEDIR}/lib:/usr/kde/3/lib" > ${D}/etc/env.d/65kdelibs-${PV}
+	if [ "$PREFIX" != "/usr/kde/3" ]; then
+echo "PATH=${PREFIX}/bin:/usr/kde/3/bin
+ROOTPATH=${PREFIX}/bin:/usr/kde/3/bin
+LDPATH=${PREFIX}/lib:/usr/kde/3/lib" > ${D}/etc/env.d/65kdelibs-${PV}
 	else
-echo "PATH=${KDEDIR}/bin
-ROOTPATH=${KDEDIR}/bin
-LDPATH=${KDEDIR}/lib" > ${D}/etc/env.d/65kdelibs-${PV}
+echo "PATH=${PREFIX}/bin
+ROOTPATH=${PREFIX}/bin
+LDPATH=${PREFIX}/lib" > ${D}/etc/env.d/65kdelibs-${PV}
 	fi
 
 	echo "KDEDIR=/usr/kde/3" > ${D}/etc/env.d/50kdedir-${PV}
