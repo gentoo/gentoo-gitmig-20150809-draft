@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libzvt
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.21 2004/10/01 00:21:04 geoman Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.22 2005/04/02 04:08:35 geoman Exp $
+
+  02 Apr 2005; Stephen P. Becker <geoman@gentoo.org> libzvt-2.0.1-r2.ebuild:
+  stable on mips
 
   30 Sep 2004; Stephen P. Becker <geoman@gentoo.org> libzvt-2.0.1-r2.ebuild:
   added ~mips keyword
