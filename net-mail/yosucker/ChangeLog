@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.7 2004/03/28 21:39:35 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.8 2004/05/01 19:41:56 abhishek Exp $
+
+*yosucker-53 (01 May 2004)
+
+  01 May 2004; Abhishek Amit <abhishek@gentoo.org> +yosucker-53.ebuild:
+  Version bump. Closes bug #42156
 
   28 Mar 2004; Jon Portnoy <avenj@gentoo.org> yosucker-51a.ebuild :
   AMD64 keywords.
