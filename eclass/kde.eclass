@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.67 2002/11/24 21:29:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.68 2003/01/30 19:21:56 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -17,13 +17,39 @@ if [ -n "$KDEBASE" -a -n "`use ppc`" -a "${PV//3.1}" != "$PV" ]; then
 else
 	DEPEND="$DEPEND sys-devel/automake"
 fi
-DEPEND="$DEPEND sys-devel/autoconf sys-devel/make"
+DEPEND="$DEPEND sys-devel/autoconf sys-devel/make sys-devel/perl" # perl is used for makefile generation
 
 # all kde apps need this one
 newdepend "~kde-base/kde-env-3"
 
 # overridden in other places like kde-dist, kde-source and some individual ebuilds
 SLOT="0"
+
+kde_src_unpack() {
+
+	debug-print-function $FUNCNAME $*
+	
+	# call base_src_unpack, which implements most of the functionality and has sections,
+	# unlike this function. The change from base_src_unpack to kde_src_unpack is thus
+	# wholly transparent for ebuilds.
+	base_src_unpack $*
+	
+	# kde-specific stuff stars here
+	
+	# fix the 'languageChange undeclared' bug group: touch all .ui files, so that the
+	# makefile regenerate any .cpp and .h files depending on them.
+	cd $S
+	debug-print "$FUNCNAME: Searching for .ui files in $PWD"
+	UIFILES="`find . -name *.ui -print`"
+	debug-print "$FUNCNAME: .ui files found:"
+	debug-print "$UIFILES"
+	# done in two stages, because touch doens't have a silent/force mode
+	if [ -n "$UIFILES" ]; then
+		debug-print "$FUNCNAME: touching .ui files..."
+		touch $UIFILES
+	fi
+
+}
 
 kde_src_compile() {
 
@@ -129,4 +155,4 @@ kde_src_install() {
 
 }
 
-EXPORT_FUNCTIONS src_compile src_install
+EXPORT_FUNCTIONS src_unpack src_compile src_install
