@@ -126,3 +126,5 @@ slotmove =kde-base/korundum-3.4* 3.4 0
 slotmove =media-libs/libmusepack-1.1 1.1 0
 slotmove =media-libs/flac-1.2 1.2 0
 move net-analyzer/ucd-snmp net-analyzer/net-snmp
+slotmove =x11-libs/openmotif-2.1* 2.1 0
+slotmove =x11-libs/openmotif-2.2* 2.2 0
