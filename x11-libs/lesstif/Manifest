@@ -1,5 +1,6 @@
 MD5 538f14f4c9a506a96c2342d3074f3240 lesstif-0.93.40.ebuild 1671
 MD5 d0af95bace88edd90d0e683c09779274 lesstif-0.93.36.ebuild 1266
+MD5 512ca248470b46c31fade09568eef382 lesstif-0.93.94.ebuild 2075
 MD5 512ca248470b46c31fade09568eef382 lesstif-0.93.91.ebuild 2075
 MD5 a823819c9b28bf2cbde83727d091fcc1 lesstif-0.93.36-r3.ebuild 1736
 MD5 53045970c3782de38917620f747f3227 ChangeLog 3357
@@ -7,3 +8,4 @@ MD5 caf61eda01cd0774b43a4b748b7406d6 files/digest-lesstif-0.93.36-r3 69
 MD5 caf61eda01cd0774b43a4b748b7406d6 files/digest-lesstif-0.93.36 69
 MD5 d9f21def21c6d7a280a7a40d0d8ff377 files/digest-lesstif-0.93.40 69
 MD5 68634aa34d141564480f544d35c01785 files/digest-lesstif-0.93.91 69
+MD5 b7dab7983555719dd200f3a69e61653d files/digest-lesstif-0.93.94 69
