@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.0_p1-r1.ebuild,v 1.9 2004/06/24 23:21:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.0_p1-r1.ebuild,v 1.10 2004/07/30 03:11:15 tgall Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/mlterm/${MY_P}.tar.gz
 	mirror://sourceforge/mlterm/${PATCH_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ppc hppa"
+KEYWORDS="x86 ppc hppa ppc64"
 LICENSE="BSD"
 
 # mlterm itself could use either gdk-pixbuf2, gdk-pixbuf1 or imlib but
