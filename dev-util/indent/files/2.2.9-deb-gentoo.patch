@@ -97,7 +97,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=71690
  #include "parse.h"
 +#include "output.h"
  
- RCSTAG_CC ("$Id: 2.2.9-deb-gentoo.patch,v 1.1 2005/01/04 03:21:26 vapier Exp $");
+ RCSTAG_CC ("$Id: 2.2.9-deb-gentoo.patch,v 1.2 2005/01/04 08:23:53 vapier Exp $");
  
 --- indent-2.2.9.orig/src/output.h
 +++ indent-2.2.9/src/output.h
@@ -110,21 +110,3 @@ http://bugs.gentoo.org/show_bug.cgi?id=71690
      BOOLEAN flag);
  
  
---- texinfo2man.c.orig	2002-01-17 14:28:51.000000000 -0500
-+++ texinfo2man.c	2005-01-03 22:16:21.510887200 -0500
-@@ -2,6 +2,7 @@
- #include <malloc.h>
- #include <string.h>
- #include <ctype.h>
-+#include <stdlib.h>
- 
- /* texinfo2man.
-  * Convert a texinfo document to man format.
-@@ -162,6 +163,7 @@
- 
- static char value_updated[64], value_edition[64], value_version[64];
- 
-+void
- process_texi (FILE * in)
- {
-   char buf[1024];
