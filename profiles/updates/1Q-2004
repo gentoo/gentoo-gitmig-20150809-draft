@@ -8,3 +8,4 @@ move app-text/psgml app-emacs/psgml
 move x11-misc/wmdf x11-plugins/wmdf
 move x11-misc/wmium x11-plugins/wmium
 move x11-misc/docker x11-plugins/docker
+move app-benchmarks/volcanomark app-benchmarks/volanomark
