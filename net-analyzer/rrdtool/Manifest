@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 750bc84a6757cbe788d84b8af12e9558 ChangeLog 6194
-MD5 2d4f76f7c52f48306f28c4f82d9cd8ed rrdtool-1.0.40-r1.ebuild 2178
 MD5 0c0e881b527385864b80c66881548947 rrdtool-1.0.42-r1.ebuild 2242
-MD5 7ede30dcddcef9c0b2a7cf2adde7a5d5 rrdtool-1.0.45.ebuild 2287
+MD5 3d66795f2957330f6d0831671508dfa8 rrdtool-1.0.46.ebuild 2756
 MD5 d379fbc23bd628393f66010e0f47f962 rrdtool-1.0.45-r1.ebuild 2308
-MD5 2b34b4e5a43fb9f77799b042171e5a9f rrdtool-1.0.45-r2.ebuild 2635
+MD5 7ede30dcddcef9c0b2a7cf2adde7a5d5 rrdtool-1.0.45.ebuild 2287
+MD5 2d4f76f7c52f48306f28c4f82d9cd8ed rrdtool-1.0.40-r1.ebuild 2178
+MD5 a20f2e0eb177d8e462ce7e492db3d8ab rrdtool-1.0.47.ebuild 2686
+MD5 a826e1cb39b7e7552165a70627ffb352 ChangeLog 6305
 MD5 c0b48928d9b670b8837a080dfc28df60 metadata.xml 794
-MD5 ad82593628d4b3297413db4c34bfbd12 rrdtool-1.0.46.ebuild 2758
-MD5 be43e6c0b5c3cddda26987edbb491f25 rrdtool-1.0.47.ebuild 2688
+MD5 2b34b4e5a43fb9f77799b042171e5a9f rrdtool-1.0.45-r2.ebuild 2635
+MD5 db9507e851ba51a61398c1ac7816f72a files/rrdtool-1.0.47-fPIC.patch 587
+MD5 dd9238326165d64f1c400c9e38cfda28 files/digest-rrdtool-1.0.45 67
+MD5 dbfa1a58afba8beb1930edc01f37f908 files/digest-rrdtool-1.0.46 67
+MD5 cd1090ecb4ba89539e79667d88e4431c files/digest-rrdtool-1.0.47 67
 MD5 97610425876ad7e680316d1a3e808c4b files/digest-rrdtool-1.0.40-r1 67
 MD5 e2341044ceaf46443ec4c577647d9cae files/digest-rrdtool-1.0.42-r1 67
-MD5 dd9238326165d64f1c400c9e38cfda28 files/digest-rrdtool-1.0.45 67
 MD5 dd9238326165d64f1c400c9e38cfda28 files/digest-rrdtool-1.0.45-r1 67
 MD5 dd9238326165d64f1c400c9e38cfda28 files/digest-rrdtool-1.0.45-r2 67
-MD5 dbfa1a58afba8beb1930edc01f37f908 files/digest-rrdtool-1.0.46 67
-MD5 db9507e851ba51a61398c1ac7816f72a files/rrdtool-1.0.46-fPIC.patch 587
 MD5 0375bc1ad29af2bbb7fc1782eef03896 files/rrdtool-1.0.46-tcl.patch 1170
-MD5 cd1090ecb4ba89539e79667d88e4431c files/digest-rrdtool-1.0.47 67
-MD5 db9507e851ba51a61398c1ac7816f72a files/rrdtool-1.0.47-fPIC.patch 587
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4wAGHTu7gpaalycRAk/oAJ92vqgaYKYS14WyZNfIcf8E4baENQCgip+b
-xoRnNKtcWbU0CRsRl008h44=
-=03x/
------END PGP SIGNATURE-----
+MD5 db9507e851ba51a61398c1ac7816f72a files/rrdtool-1.0.46-fPIC.patch 587
