@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/jdbc3-oracle
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.1 2003/05/14 23:23:05 absinthe Exp $
+
+*jdbc3-oracle-9.2.0.1 (14 May 2003)
+
+  14 May 2003; Dylan Carlson <absinthe@gentoo.org>
+  jdbc3-oracle-9.2.0.1.ebuild, jdbc3-oracle-9.2.0.3.ebuild:
+  Initial import.
+  
+  PLEASE NOTE:  These drivers are JDBC 3.0, and require a 1.4 JVM or later.
+
