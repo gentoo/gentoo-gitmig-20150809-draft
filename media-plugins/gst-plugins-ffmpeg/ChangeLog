@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.7 2004/08/03 22:40:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.8 2004/08/20 04:56:13 lv Exp $
+
+  20 Aug 2004; Travis Tilley <lv@gentoo.org> gst-plugins-ffmpeg-0.8.1.ebuild:
+  added ~amd64 keyword
 
   04 Aug 2004; foser <foser@gentoo.org> gst-plugins-ffmpeg-0.8.1.ebuild :
   Add homepage (#57908)
