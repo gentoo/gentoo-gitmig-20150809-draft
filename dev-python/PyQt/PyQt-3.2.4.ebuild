@@ -1,20 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.1.ebuild,v 1.1 2002/04/02 13:23:51 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.2.4.ebuild,v 1.1 2002/07/05 00:16:14 verwilst Exp $
 
 
-S="${WORKDIR}/PyQt-3.1"
+S="${WORKDIR}/PyQt-3.2.4"
 DESCRIPTION="PyQt is a set of Python bindings for the Qt Toolkit( VERSION 3.x ONLY!!)."
-SRC_URI="http://www.riverbankcomputing.co.uk/download/PyQt/PyQt-3.1-Qt-3.0.2.tar.gz"
+SRC_URI="http://www.riverbankcomputing.co.uk/download/PyQt/PyQt-3.2.4-Qt-3.0.4-X11.tar.gz"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt/"
 SLOT="0"
 
 DEPEND="virtual/glibc
 	sys-devel/libtool
-	>=x11-libs/qt-3.0.2
-        >=dev-lang/python-2.2
-        =dev-python/sip-3.1"
+	>=x11-libs/qt-3.0.4.1
+    	>=dev-lang/python-2.2
+    	=dev-python/sip-3.2.4"
 
 src_compile() {
 
@@ -42,4 +41,5 @@ src_install() {
 	make DESTDIR=${D} install-doc || die
 
 }
+
 
