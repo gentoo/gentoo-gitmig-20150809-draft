@@ -1,0 +1,65 @@
+--- zaptel-1.0.3/Makefile.orig	2004-12-19 00:45:36.697309064 +0100
++++ zaptel-1.0.3/Makefile	2004-12-19 00:48:07.578371656 +0100
+@@ -19,7 +19,7 @@
+ CFLAGS+=$(shell if uname -m | grep -q ppc; then echo "-fsigned-char"; fi)
+ CFLAGS+=$(shell if uname -m | grep -q x86_64; then echo "-m64"; fi)
+ LCFLAGS=-fPIC $(CFLAGS) -DBUILDING_TONEZONE
+-KFLAGS+=-I/usr/src/linux-2.4/include -O6
++KFLAGS+=-I/usr/src/linux/include -O6
+ KFLAGS+=-DMODULE -D__KERNEL__ -DEXPORT_SYMTAB -I/usr/src/linux/drivers/net \
+ 	-Wall -I. -Wstrict-prototypes -fomit-frame-pointer -I/usr/src/linux/drivers/net/wan -I /usr/src/linux/include -I/usr/src/linux/include/net
+ KFLAGS+=$(shell [ -f $(KINCLUDES)/linux/modversions.h ] && echo "-DMODVERSIONS -include $(KINCLUDES)/linux/modversions.h")
+@@ -39,7 +39,8 @@
+ CFLAGS+=-DZAPTEL_CONFIG=\"$(CONFIG_FILE)\"
+ 
+ BUILDVER=$(shell if uname -r | grep -q ^2.6; then echo "linux26"; else echo "linux24"; fi)
+-MODCONF=$(shell if [ -d $(ROOT_PREFIX)/etc/modprobe.d ]; then echo "$(ROOT_PREFIX)/etc/modprobe.d/zaptel"; elif [ -d $(ROOT_PREFIX)/etc/modutils ]; then echo "$(ROOT_PREFIX)/etc/modutils/zaptel"; elif [ -f $(ROOT_PREFIX)/etc/modprobe.conf ]; then echo "$(ROOT_PREFIX)/etc/modprobe.conf"; elif [ -f $(ROOT_PREFIX)/etc/modules.conf ]; then echo "$(ROOT_PREFIX)/etc/modules.conf"; else echo $(ROOT_PREFIX)/etc/conf.modules ; fi)
++# Gentoo uses /etc/modules.d/zaptel
++MODCONF=$(INSTALL_PREFIX)/etc/modules.d/zaptel
+ 
+ ifeq (${BUILDVER},linux24)
+ #We only support DEVFS in linux 2.4 kernels, since its considered obsolete post 2.4
+@@ -286,7 +287,7 @@
+ 	install -D -m 644 torisa.h $(INSTALL_PREFIX)/usr/include/linux/torisa.h
+ 	install -D -m 644 tonezone.h $(INSTALL_PREFIX)/usr/include/tonezone.h
+ 	( cd $(INSTALL_PREFIX)/usr/lib ; rm -f libtonezone.so ; ln -sf $(LIBTONEZONE) libtonezone.so )
+-	[ `id -u` = 0 ] && /sbin/ldconfig || :
++	if [ ! -d `dirname $(MODCONF)` ]; then install -d -m 755 `dirname $(MODCONF)` ; fi
+ 	if [ -f $(MODCONF) ]; then mv -f $(MODCONF) $(MODCONF).bak ; fi
+ 	cat $(MODCONF).bak | grep -v "alias char-major-250" | \
+ 	grep -v "post-install torisa /sbin/ztcfg" | \
+@@ -298,23 +299,7 @@
+ 	if ! grep "alias char-major-196" $(MODCONF); then \
+ 		echo "alias char-major-196 $(PRIMARY)" >> $(MODCONF); \
+ 	fi
+-		
+-	for x in $(MODULES); do \
+-		if ! grep "post-install $$x" $(MODCONF); then \
+-			if ! grep "install $$x " $(MODCONF); then \
+-				if [ "$$x" != "zaptel" ] ; then \
+-					if [ -f zaptel.ko ]; then echo "install $$x /sbin/modprobe --ignore-install $$x && /sbin/ztcfg" >> $(MODCONF); \
+-					else echo "post-install $$x /sbin/ztcfg" >> $(MODCONF); \
+-					fi; \
+-				fi; \
+-			fi; \
+-		fi; \
+-	done
+ 
+-	if [ -d /etc/modutils ]; then \
+-		/sbin/update-modules ; \
+-	fi
+-	[ `id -u` = 0 ] && /sbin/depmod -a || :
+ 	[ -f $(CONFIG_FILE) ] || install -D -m 644 zaptel.conf.sample $(CONFIG_FILE)
+ 
+ config:
+--- zaptel-1.0.3/Makefile.orig	2004-12-19 00:58:31.599506024 +0100
++++ zaptel-1.0.3/Makefile	2004-12-19 01:00:45.109209464 +0100
+@@ -15,7 +15,7 @@
+ HOSTCC=gcc
+ KINCLUDES=$(shell if [ -d /usr/src/linux-2.4/include ]; then echo /usr/src/linux-2.4/include ; else echo /usr/src/linux/include ; fi)
+ 
+-CFLAGS+=-I. -O4 -g -Wall -DBUILDING_TONEZONE #-DTONEZONE_DRIVER
++CFLAGS+=-I. -g -Wall -DBUILDING_TONEZONE #-DTONEZONE_DRIVER
+ CFLAGS+=$(shell if uname -m | grep -q ppc; then echo "-fsigned-char"; fi)
+ CFLAGS+=$(shell if uname -m | grep -q x86_64; then echo "-m64"; fi)
+ LCFLAGS=-fPIC $(CFLAGS) -DBUILDING_TONEZONE
