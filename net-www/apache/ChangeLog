@@ -1,6 +1,14 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.287 2004/10/29 12:10:46 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.288 2004/10/29 15:21:15 stuart Exp $
+
+  29 Oct 2004; Stuart Herbert <stuart@gentoo.org> apache-1.3.32-r1.ebuild,
+  apache-1.3.33.ebuild:
+  Added ssl USE flag support
+
+  29 Oct 2004; Stuart Herbert <stuart@gentoo.org> apache-1.3.32-r1.ebuild,
+  apache-1.3.33.ebuild:
+  Marked stable on x86
 
   29 Oct 2004; Stuart Herbert <stuart@gentoo.org> apache-1.3.33.ebuild:
   Updated to use existing mod_ssl for now

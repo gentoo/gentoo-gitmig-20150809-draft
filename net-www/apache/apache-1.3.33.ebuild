@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33.ebuild,v 1.2 2004/10/29 12:10:46 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33.ebuild,v 1.3 2004/10/29 15:21:15 stuart Exp $
 
 # stuart@gentoo.org - 2004/10/29:
 #
@@ -8,16 +8,17 @@
 
 inherit eutils fixheadtails
 
-IUSE="pam"
+IUSE="pam ssl"
 
-mod_ssl_ver=2.8.21
+mod_ssl_dep=2.8.21
+mod_ssl_ver=2.8.21-1.3.32
 
 S=${WORKDIR}/${PN}_${PV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
 SRC_URI="http://www.apache.org/dist/httpd/apache_${PV}.tar.gz
-	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}-1.3.32.tar.gz
+	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}.tar.gz
 	http://dev.gentoo.org/~stuart/apache-patches-1.3.33.tar.bz2"
 
 # The mod_ssl archive is only for providing the EAPI patch in here.
@@ -29,7 +30,10 @@ DEPEND="dev-lang/perl <=sys-libs/db-4.1
 	>=dev-libs/expat-1.95.2
 	>=sys-apps/sed-4
 	=sys-libs/db-1*
-	selinux? ( sec-policy/selinux-apache )"
+	selinux? ( sec-policy/selinux-apache )
+	ssl? ( =net-www/mod_ssl-${mod_ssl_dep} )
+	!<net-www/mod_ssl-${mod_ssl_dep}"
+
 LICENSE="Apache-2.0"
 SLOT="1"
 
@@ -48,7 +52,7 @@ src_unpack() {
 	ht_fix_file src/Configure src/helpers/getuid.sh
 
 	# setup eapi...
-	myssl=${WORKDIR}/mod_ssl-${mod_ssl_ver}-${PV}
+	myssl=${WORKDIR}/mod_ssl-${mod_ssl_ver}
 	cp ${myssl}/pkg.eapi/*.h src/include
 	cp ${myssl}/pkg.eapi/*.c src/ap
 	epatch ${myssl}/pkg.eapi/eapi.patch || die "eapi"
