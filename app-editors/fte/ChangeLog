@@ -1,8 +1,17 @@
 # ChangeLog for app-editors/fte
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.6 2002/05/08 08:43:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.7 2002/05/17 00:36:18 murphy Exp $
+
+*fte-20020324 (17 May 2002)
+
+  17 May 2002; M.Thibaut <murphy@gentoo.org> fte-20020324.ebuild :
+  
+  New version of FTE released - Resolves bug #2587. Also some changes in 
+  the ebuild that should make future releases easier. qfte has been disabled
+  because it doesn't compile.
 
 *fte-20010819-r3 (7 May 2002)
+
   7 May 2002; Spider <spider@gentoo.org> fte-20010819-r3.ebuild fte-20010819-r2.ebuild :
   fix sourceforge mirroring.
 
