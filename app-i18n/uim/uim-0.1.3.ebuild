@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.1.3.ebuild,v 1.3 2003/11/18 07:38:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.1.3.ebuild,v 1.4 2004/01/06 08:41:36 usata Exp $
 
 IUSE="gtk nls debug"
 
