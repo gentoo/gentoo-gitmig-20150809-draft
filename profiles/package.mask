@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3333 2004/11/19 06:16:05 langthang Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3334 2004/11/19 11:55:56 lv Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <lv@gentoo.org> (19 Nov 2004)
+# unfinished
+=sys-devel/gcc-3.3.5
 
 # <langthang@gentoo.org> (18 Nov 2004)
 # Masking for testing
