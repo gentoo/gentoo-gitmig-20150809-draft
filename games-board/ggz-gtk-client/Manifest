@@ -1,6 +1,16 @@
-MD5 0b364a7db3be6ed6651c2a705b0b50a3 ggz-gtk-client-0.0.5.ebuild 568
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e422b6c4e17f8ac0a430bff6bdd6e697 ChangeLog 925
+MD5 0b364a7db3be6ed6651c2a705b0b50a3 ggz-gtk-client-0.0.5.ebuild 568
+MD5 578465d3451130fe9dfeccfbcb87701a ggz-gtk-client-0.0.7.ebuild 831
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 af193836b0f55a883e3143664de56cd6 ggz-gtk-client-0.0.7.ebuild 851
 MD5 a70e4f21ed3008a0abfac956e634a71b files/digest-ggz-gtk-client-0.0.5 72
 MD5 1e8c24bd09f29cd29f9179681a676c92 files/digest-ggz-gtk-client-0.0.7 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhHNgHTu7gpaalycRAnibAKDHSTNmZDs21B/VsT0SCNDeV+iOZwCfX/Xg
+9fbgKYjFXlF//wOSvzN66ds=
+=7/RP
+-----END PGP SIGNATURE-----
