@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.7-r1.ebuild,v 1.1 2003/08/15 16:57:23 dholm Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.7-r1.ebuild,v 1.2 2003/09/08 07:20:54 msterret Exp $
 
 DESCRIPTION="An Interface to BSD sockets from Ada (TCP, UDP and multicast)."
 SRC_URI="http://www.rfc1149.net/download/adasockets/${P}.tar.gz"
