@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r2.ebuild,v 1.2 2005/02/23 03:47:44 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r3.ebuild,v 1.1 2005/02/23 03:47:44 rocket Exp $
 
 inherit flag-o-matic eutils
 
@@ -71,4 +71,9 @@ src_install() {
 	mv ${D}/lib/*.a ${D}/usr/lib
 
 	dodoc ABSTRACT CONTRIBUTORS INSTALL LVM-HOWTO TODO CHANGELOG FAQ KNOWN_BUGS README WHATSNEW
+
+	insinto /lib/rcscripts/addons
+	newins ${FILESDIR}/lvm-user-start.sh lvm-start.sh
+	newins ${FILESDIR}/lvm-user-stop.sh lvm-stop.sh
+
 }

@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm-user
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.7 2004/11/10 05:57:03 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.8 2005/02/23 03:47:44 rocket Exp $
+
+*lvm-user-1.0.7-r3 (22 Feb 2005)
+
+  22 Feb 2005; Eric Edgar <rocket@gentoo.org> +files/lvm-user-start.sh,
+  +files/lvm-user-stop.sh, +lvm-user-1.0.7-r3.ebuild:
+  New ebuild to install lvm-user-start.sh and lvm-user-stop.sh into
+  /lib/rcscripts/addons to initialize lvm at startup and shutdown
 
 *lvm-user-1.0.7-r2 (10 Nov 2004)
 
