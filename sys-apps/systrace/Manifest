@@ -1,5 +1,7 @@
 MD5 8bc5899387c733b60f0c3a5b4bd15990 systrace-1.0-r1.ebuild 1830
 MD5 e5464f6876c350ea044a017a9ebf103e ChangeLog 770
 MD5 2760c8cbd7856c70feb28c383979961e systrace-1.0-r2.ebuild 1799
+MD5 d464510a263517aba10ca7bf00c5cadc systrace-1.0-r3.ebuild 1727
 MD5 8f7c88d1249a2c3d03176b5b52bb88c3 files/digest-systrace-1.0-r1 147
+MD5 c9eadc36d056c9c93a9d9dc3c32e69db files/digest-systrace-1.0-r3 147
 MD5 ae6c383f84feb5ad04359eaaf24c34e0 files/digest-systrace-1.0-r2 147
