@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.9-r1.ebuild,v 1.1 2004/09/13 17:38:31 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.9-r1.ebuild,v 1.2 2004/09/22 12:32:59 nakano Exp $
 
 inherit eutils
 
@@ -46,6 +46,7 @@ pkg_setup(){
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/kazehakase-0.1.9_fix.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile(){
