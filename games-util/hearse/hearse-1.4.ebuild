@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/hearse-1.4.ebuild,v 1.4 2004/03/01 20:46:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/hearse-1.4.ebuild,v 1.5 2004/03/01 21:16:29 mr_bones_ Exp $
 
 inherit games
 
@@ -11,12 +11,12 @@ SRC_URI="http://www.argon.org/~roderick/hearse/dist/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=dev-lang/perl-5.8.0
 	>=games-roguelike/nethack-3.4.1
 	>=sys-apps/sed-4
-	dev-perl/libwww-perl
-	net-libs/libwww"
+	dev-perl/libwww-perl"
 
 src_unpack() {
 	unpack ${A}
@@ -26,11 +26,11 @@ src_unpack() {
 	sed -i \
 		-e "s:gzip :bzip2 :" \
 		-e "s:.gz:.bz2:" hearse \
-		|| die "sed hearse failed"
+			|| die "sed hearse failed"
 	sed -i \
 		-e 's:gzip :bzip2 :' \
 		-e "s:gz|z|Z:bz2:" bones-info \
-		|| die "sed bones-info failed"
+			|| die "sed bones-info failed"
 }
 src_compile() {
 	perl Makefile.PL || die "perl failed"
