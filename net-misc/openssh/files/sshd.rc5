@@ -13,7 +13,7 @@ gen_keys() {
 	if [ ! -e /etc/ssh/ssh_host_key ] 
 	then
 		einfo "Generating Hostkey..."
-  		/usr/bin/ssh-keygen -b 1024 -f /etc/ssh/ssh_host_key -N ''
+  		/usr/bin/ssh-keygen -t rsa1 -b 1024 -f /etc/ssh/ssh_host_key -N ''
 	fi
 	if [ ! -e /etc/ssh/ssh_host_dsa_key ]
 	then
