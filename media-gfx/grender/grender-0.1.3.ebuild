@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grender/grender-0.1.3.ebuild,v 1.2 2004/06/24 22:41:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grender/grender-0.1.3.ebuild,v 1.3 2004/07/19 09:57:29 eradicator Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 
 DEPEND=">=x11-libs/gtk+-2.2
 	media-gfx/maya"
