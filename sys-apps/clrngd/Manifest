@@ -1,5 +1,5 @@
-MD5 cb2f6f105e7f8478a5bf659665f2ed49 clrngd-1.0.3.ebuild 774
-MD5 509892586ab02e3812035b41e20f88c7 ChangeLog 415
+MD5 35898bc1cb83593c155f4a8c7453cefa clrngd-1.0.3.ebuild 774
+MD5 1a56a87961a3cfbd8d6423c86a18d18f ChangeLog 506
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 2547fefbb82be0e3c0ff51ddce43fb2d files/clrngd-conf.d 489
 MD5 4cdd916672c420b4c8bf90bffcf10ea1 files/clrngd-init.d 502
