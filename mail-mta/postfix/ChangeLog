@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.39 2004/12/29 00:24:43 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.40 2005/01/02 21:04:26 kloeri Exp $
+
+  02 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
+  postfix-2.1.5-r1.ebuild:
+  Stable on alpha.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
