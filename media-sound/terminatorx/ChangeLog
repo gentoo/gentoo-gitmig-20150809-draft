@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/terminatorx
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.1 2003/07/08 07:26:21 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.2 2003/07/17 21:59:10 raker Exp $
+
+*terminatorx-3.80-r1 (17 Jul 2003)
+
+  17 Jul 2003; Nick Hadaway <raker@gentoo.org> terminatorx-3.80.ebuild:
+  Changed media-sound/mad depend to media-libs/{libmad,libid3tag}
 
 *terminatorx-3.80 (08 Jul 2003)
 
