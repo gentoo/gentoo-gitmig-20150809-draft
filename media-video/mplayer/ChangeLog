@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.129 2004/05/02 17:43:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.130 2004/05/12 12:46:33 pappy Exp $
+
+  12 May 2004; Alexander Gabert <pappy@gentoo.org> mplayer-0.92-r1.ebuild,
+  mplayer-1.0_pre2-r1.ebuild, mplayer-1.0_pre3-r3.ebuild,
+  mplayer-1.0_pre3-r4.ebuild:
+  removed hardened-gcc logic, added filter-flags fPIC logic
 
   02 May 2004; Jason Wever <weeve@gentoo.org> mplayer-1.0_pre4-r1.ebuild:
   Changed -sparc keyword back to ~sparc.
