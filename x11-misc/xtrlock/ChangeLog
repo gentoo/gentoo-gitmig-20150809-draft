@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xtrlock
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.6 2004/06/24 22:46:03 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.7 2005/03/29 17:50:04 luckyduck Exp $
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/xtrlock-2.0-gcc34.patch, xtrlock-2.0-r1.ebuild:
+  added ~amd64 to KEYWORDS, fixes #83663. also added patch to enable successful
+  compilation with gcc3.4
 
   14 Jun 2004; <pyrania@gentoo.org> xtrlock-2.0-r1.ebuild:
   Added IUSE.
