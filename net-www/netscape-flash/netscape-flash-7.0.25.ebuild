@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-7.0.25.ebuild,v 1.6 2005/03/26 23:50:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-7.0.25.ebuild,v 1.7 2005/04/04 19:37:32 kugelfang Exp $
 
 inherit nsplugins
 
@@ -46,14 +46,11 @@ src_install() {
 	dohtml Readme.htm
 
 	# Optionally install the standalone GTK flash player
-	if [ "${ARCH}" != "amd64" ]; then
-		if use gtk
-		then
-			cd ${WORKDIR}/install_flash_player_6_linux_sa
-			docinto gflashplayer
-			dodoc readme.txt
-			dohtml ReadMe.htm
-			dobin gflashplayer
-		fi
+	if use gtk ; then
+		cd ${WORKDIR}/install_flash_player_6_linux_sa
+		docinto gflashplayer
+		dodoc readme.txt
+		dohtml ReadMe.htm
+		dobin gflashplayer
 	fi
 }

@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c69918519b9fe4cc1df1b3c24af00a59 ChangeLog 4312
+MD5 4739b3ebbd80be4eeaab4600a41bccf5 ChangeLog 4417
 MD5 a18ec0550b4cd80b68a137f0b52efd68 netscape-flash-6.0.79.ebuild 1358
 MD5 ed0d7c1f88417c91836ca8820ed56d6a netscape-flash-6.0.81.ebuild 1513
-MD5 1566d545313db13dedf1d2283cf567bf netscape-flash-7.0.25.ebuild 1538
+MD5 67482448228c317675488834ed997a53 netscape-flash-7.0.25.ebuild 1492
 MD5 49a191691f09c2436f41c87d3ca8b276 files/digest-netscape-flash-6.0.79 144
 MD5 553a045f5175d5cb331b737777e17cc0 files/digest-netscape-flash-6.0.81 144
 MD5 12d4887a4d1906a8d8a558f6607ad579 files/digest-netscape-flash-7.0.25 142
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCRfWs5mJXAu5GbtIRAjr5AJ9P6wzdv3A97us7ZVE/G2xAutMpXgCfcViB
-b99lnkl2ZhTrNvSuhi9Vd28=
-=CmLA
+iD8DBQFCUZg/5mJXAu5GbtIRAsrfAKCDPdmrCG7Sicc/KgCfS1ZuMv/BsACeOMXG
+FHB8CADQAHP7GD6m92zEYL8=
+=YNEP
 -----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.27 2005/03/26 23:50:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.28 2005/04/04 19:37:32 kugelfang Exp $
+
+  04 Apr 2005; Danny van Dyk <kugelfang@gentoo.org>
+  netscape-flash-7.0.25.ebuild:
+  Fixed BUG #82060.
 
   27 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
   netscape-flash-7.0.25.ebuild:
