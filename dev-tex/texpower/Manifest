@@ -1,4 +1,16 @@
-MD5 2b0f4db7832c952b3ab0c8b928aff344 ChangeLog 1673
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5bb230de85f1016186b391083ce2ca20 ChangeLog 1846
 MD5 495a6c8d7c6698e3d87ee5cbf6581c84 metadata.xml 252
 MD5 f9534f2fdca1dfabc88eaf80b7eccbd6 texpower-0.0.9d.ebuild 1055
+MD5 52eab1c6f788c2d5a50e58449e238904 texpower-0.1b.ebuild 1225
 MD5 b7e284873b175a5bdace6f10c67bc34f files/digest-texpower-0.0.9d 144
+MD5 f6dc1721abed569c6e83d32e71e6e7e9 files/digest-texpower-0.1b 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCT56nVWNWqTUmv+0RAsDoAKCEjVjXC5hhZKvi4b8aZuscP+wmMQCgoVs7
+T8rCbleFIY5NhawVsrMV658=
+=j9aA
+-----END PGP SIGNATURE-----
