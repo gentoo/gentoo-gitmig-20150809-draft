@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hibernate-script
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hibernate-script/ChangeLog,v 1.3 2004/11/24 19:32:05 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hibernate-script/ChangeLog,v 1.4 2004/12/07 20:07:48 brix Exp $
+
+*hibernate-script-1.02-r1 (07 Dec 2004)
+
+  07 Dec 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +hibernate-script-1.02-r1.ebuild:
+  Allow calling hibernate for suspend-to-disk, and hibernate-sleep for
+  suspend-to-ram.
 
 *hibernate-script-1.02 (24 Nov 2004)
 
