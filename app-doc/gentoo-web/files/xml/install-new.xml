@@ -14,7 +14,7 @@ Gentoo Linux release candidate.</abstract>
 <version>1.0</version>
 <date>18 Feb 2001</date>
 
-<chapter link="chap1">
+<chapter>
 <title>Getting started</title>
 
 <section>
@@ -110,7 +110,7 @@ CD image, which has all the tools you need for ReiserFS.
 </section>
 
 </chapter>
-<chapter link="chap2">
+<chapter>
 <title>Installation</title>
 
 <section>
@@ -165,7 +165,7 @@ a new ReiserFS filesystem on the partition /dev/hda1, type:
 <p>For my example partition layout above, I typed in the following commands:
 </p>
 
-<pre>
+<pre linkid="filesyscode" caption="Creating and mounting filesystems">
 # mkreiserfs /dev/hda1
 # mkswap /dev/hda2
 # mkreiserfs /dev/hda3
@@ -218,14 +218,13 @@ pipeline should do the exact same thing:
 
 
 
-<chapter link="chap3">
+<chapter>
 <title>Configuration</title>
 <section>
 <title>Configure the system</title>
-<body><p><font color="#FF0000">Note: If you want to compile a custom kernel during the install process, them before proceeding with the
+<body><note>If you want to compile a custom kernel during the install process, them before proceeding with the
 following instructions, copy the linux-sources tbz2 file from <path>/mnt/distcd/packages/All/linux-sources-???.tbz2</path> to <path>/mnt/gentoo/tmp</path>.
-Then, proceed with these instructions.  I'll let you know when it's time to merge it.</font>
-</p>
+Then, proceed with these instructions.  I'll let you know when it's time to merge it.</note>
 
 <p>Now that the base system tarball has been extracted, we need to get the system ready for booting.  Begin this process
 by typing:
@@ -365,18 +364,18 @@ I want to type are:</p><pre>grub&gt; root (hd0,0)
 grub&gt; setup (hd0)
 </pre>
 
-<p>Here's how the two commands work.  The first "root ( )" command tells GRUB
-the location of your boot partition (in my case, hda1 or in GRUB terminology
-(hd0,0)).  Then, the second "setup ( )" command tells GRUB where to install the
-boot record - it will be configure to look for its special files at the "root
-( )" location that you specified.  In my case, I want the boot record on the
-MBR of the hard drive, so I simply specify hda ((hd0)).  If I were using
+<p>Here's how the two commands work.  The first <code>root ( )</code> command tells GRUB
+the location of your boot partition (in my case, <path>/dev/hda1</path> or 
+<path>(hd0,0)</path> in GRUB terminology.  Then, the second <code>setup ( )</code> command tells GRUB where to install the
+boot record - it will be configure to look for its special files at the <code>root
+( )</code> location that you specified.  In my case, I want the boot record on the
+MBR of the hard drive, so I simply specify <path>/dev/hda</path> (<path>(hd0)</path>).  If I were using
 another boot loader and wanted to set up GRUB as a secondary boot-loader, I
 could install GRUB to the boot record of a particular partition.  In that case,
 I'd specify a particular partition rather than the entire disk.  Once the GRUB
 boot record has been 
-successfully installed, you can type "quit" to quit GRUB.  Gentoo Linux is
-installed, but we need to create the /boot/boot/grub/menu.lst file so that
+successfully installed, you can type <code>quit</code> to quit GRUB.  Gentoo Linux is
+installed, but we need to create the <path>/boot/boot/grub/menu.lst</path> file so that
 we get a nice GRUB boot menu when the system reboots.  Here's how to do it.</p>
 
 <p>Now, create the menu.lst file (<code>vi /boot/boot/grub/menu.lst</code>), and add the following to it:</p>
@@ -393,21 +392,26 @@ root (hd0,2)
 </pre><p>After saving this file, Gentoo Linux installation is complete.  Selecting the first option will
 tell GRUB to boot Gentoo Linux without a fuss.  The second part of the menu.lst file is optional, and shows you how to
 use GRUB to boot a bootable Windows partition.</p>
-<note>Above, <path>(hd0,0)</path> should point to your "boot" partition (<path>/dev/hda1</path> in my case) and <path>/dev/hda3</path> should point to your "root filesystem.  <path>(hd0,2)</path> contains the NT boot loader.</note>
-<p>Also, if you need to pass any options to the kernel, simply add them to the end of the "kernel" command.  We're already
-passing one option "root=/dev/hda3", but you can pass others as well.  There's one in particular that you may be interested
-in.  If you want to enable devfs (a special device filesystem), you can add the "devfs=mount" option at the end of the kernel
-line.
-</p>
+
+<note>Above, <path>(hd0,0)</path> should point to your "boot" partition
+(<path>/dev/hda1</path> in my case) and <path>/dev/hda3</path> should point to
+your "root filesystem.  <path>(hd0,2)</path> contains the NT boot
+loader.</note> <p>Also, if you need to pass any options to the kernel, simply
+add them to the end of the <code>kernel</code> command.  We're already passing one option
+(<code>root=/dev/hda3</code>), but you can pass others as well.  There's one in particular
+that you may be interested in.  If you want to enable devfs (a special device
+filesystem), you can add the <code>devfs=mount</code> option at the end of the <code>kernel</code>
+line.  </p>
+
 </body>
 </section>
 
 <section>
 <title>One Last Step</title>
 <body>
-<p>If you copied over the linux-sources-???.tbz2 file, you can now install the package and compile a fresh new
+<p>If you copied over the <path>linux-sources-???.tbz2</path> file, you can now install the package and compile a fresh new
 kernel.  To merge the linux-sources, type <code>pkgmerge /tmp/linux-sources-???.tbz2</code>.  After the merge completes,
-you can remove the .tbz2 from /tmp and continue with the kernel compile step.  If you didn't copy over the
+you can remove the .tbz2 from <path>/tmp</path> and continue with the kernel compile step.  If you didn't copy over the
 linux sources, you can skip the kernel compile step and proceed unmounting your filesystems below.</p>
 <p>To compile your own kernel, perform the following steps:</p><pre>
 # cd /usr/src/linux
@@ -415,7 +419,7 @@ linux sources, you can skip the kernel compile step and proceed unmounting your 
 # make bzImage
 # make modules
 # make modules_install
-# cp arch/i386/boot/bzImage /boot/boot <font color="#FF0000">(Note: the "/boot/boot" is intentional and should not simply be "/boot")</font>
+# cp arch/i386/boot/bzImage /boot/boot <codenote>The "/boot/boot" is intentional and should not simply be "/boot"</codenote>
 </pre>
 
 <p>Now, Gentoo Linux is installed.  The only remaining step is to exit the chrooted shell, safely unmount your partitions
@@ -431,8 +435,8 @@ and reboot the system:</p>
 
 </chapter>
 
-<chapter link="chap4">
-<title></title>
+<chapter>
+<title>You're done!</title>
 <section>
 <title>Congratulations!</title>
 <body><p>If you have any questions or would like to get involved with Gentoo Linux development, 

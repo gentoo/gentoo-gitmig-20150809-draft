@@ -35,7 +35,8 @@
 	<p class="tochead">Table of contents:</p>
 	<p class="tocitem">
 	<xsl:for-each select="chapter">
-		<a href="#{generate-id()}"><xsl:value-of select="title"/></a>
+		<xsl:variable name="chapid">doc_chap<xsl:number/></xsl:variable>
+		<a href="#{$chapid}"><xsl:number/>. <xsl:value-of select="title"/></a>
 		<br/>
 	</xsl:for-each>		
 	</p>
@@ -43,6 +44,10 @@
 	</tr>
 </table>
 	<xsl:apply-templates select="chapter"/>
+	<br/>
+	<br/>
+	<table class="tochead" width="100%" border="0"><tr><td align="right">Copyright 2001 Gentoo Technologies, Inc.<br/>
+	Questions, Comments, Corrections?  Email <a href="mailto:gentoo-dev@gentoo.org">gentoo-dev@gentoo.org</a>.</td></tr></table>
 	</body>
 	</html>
 </xsl:template>
@@ -62,12 +67,14 @@
 </xsl:template>
 
 <xsl:template match="chapter">
-	<a name="{generate-id()}"><p class="chaphead"><xsl:value-of select="title"/></p></a>
+	<xsl:variable name="chapid">doc_chap<xsl:number/></xsl:variable>
+	<a name="#{$chapid}"><p class="chaphead"><span class="chapnum"><xsl:number/>.</span> <xsl:value-of select="title"/></p></a>
 	<xsl:apply-templates select="section"/>
 </xsl:template>
 
 <xsl:template match="section">
-	<p class="secthead"><xsl:value-of select="title"/></p>
+	<xsl:variable name="sectid"><xsl:value-of select="$chapid"/>_sec<xsl:number/></xsl:variable>
+	<a name="#{$sectid}"><p class="secthead"><xsl:value-of select="title"/></p></a>
 	<xsl:apply-templates select="body"/>
 </xsl:template>
 
@@ -78,7 +85,7 @@
 </xsl:template>
 
 <xsl:template match="codenote">
-	<br/><span class="codenote">(<b>Note:</b> <xsl:value-of select="." />)</span>
+	<span class="codenote">(<b>Note:</b> <xsl:value-of select="." />)</span>
 </xsl:template>
 
 
@@ -101,8 +108,14 @@
 </xsl:template>
 
 <xsl:template match="pre">
+	<xsl:if test="@linkid">
+		<a href="#{@linkid}"/>
+	</xsl:if>	
+	<xsl:if test="@caption">
+		<p class="caption"><xsl:value-of select="@caption" /></p>
+	</xsl:if>
 	<pre>
-	<xsl:apply-templates />
+		<xsl:apply-templates />
 	</pre>
 </xsl:template>
 

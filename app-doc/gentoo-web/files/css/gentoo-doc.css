@@ -6,7 +6,7 @@ BODY {
 }
 
 P,H2,H3,UL,OL { 
-	margin: 0.5em 14% 0.5em 5%; 
+	margin: 0.5em 5% 0.5em 5%; 
 }
 
 TABLE {
@@ -14,7 +14,7 @@ TABLE {
 }
 
 PRE {
-	margin: 0.5em 14% 0.5em 5%; 
+	margin: 0.5em 5% 0.5em 5%; 
 	background: #ddddff;
 	font-family: Lucida Console, Courier;
 }
@@ -38,12 +38,17 @@ H1 {
 	font-weight: bold; 
 }
 
+.chapnum {
+	font-size: 0.8em;
+}
+
 .secthead {
-	margin: 0.4em 14% 0.2em 4%;
+	margin: 1.0em 14% 0.2em 4%;
+	color: #7a5ada;
 	font-size: 1.0em; 
 	font-weight: bold; 
 	font-family: Verdana, Arial, Helvetica;
-	text-decoration: underline;
+/*	text-decoration: underline; */
 }
 
 .code {
@@ -60,7 +65,7 @@ H1 {
 }
 
 .codenote {
-	background: #ffffbb;
+	background: #eeeeff;
 	font-family: Georgia, Verdana, Arial, Helvetica; 
 }
 
@@ -103,6 +108,14 @@ H1 {
 	color: white; 
 	font-weight: bold; 
 	font-family: Verdana, Arial, Helvetica;
+}
+
+.tochead a:link {
+	color: #00ff00;
+}
+
+.tochead a:visited {
+	color: #00dd00;
 }
 
 .tocitem { 
