@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.4 2003/02/10 14:19:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.5 2003/02/10 14:21:30 foser Exp $
 
 IUSE=""
 
@@ -9,8 +9,8 @@ inherit libtool
 MY_P="${P/-oss/}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="FAM, the File Alteration Monitor."
-SRC_URI="ftp://oss.sgi.com/projects/fam/download/${MY_P}.tar.gz
-	ftp://oss.sgi.com/projects/fam/download/contrib/dnotify.patch"
+SRC_URI="ftp://oss.sgi.com/projects/fam/download/${MY_P}.tar.gz"
+
 HOMEPAGE="http://oss.sgi.com/projects/fam/"
 
 KEYWORDS="x86 ~ppc ~alpha ~sparc"
@@ -21,7 +21,6 @@ DEPEND=">=sys-devel/perl-5.6.1"
 RDEPEND=">=net-nds/portmap-5b-r6"
 
 src_unpack() {
-
 	unpack ${MY_P}.tar.gz
 
 	cd ${S}
