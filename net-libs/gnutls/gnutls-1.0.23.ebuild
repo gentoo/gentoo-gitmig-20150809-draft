@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.23.ebuild,v 1.1 2005/01/05 20:38:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.23.ebuild,v 1.2 2005/01/06 11:09:31 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -23,7 +23,8 @@ RDEPEND=">=dev-libs/libgcrypt-1.1.94
 	zlib? ( >=sys-libs/zlib-1.1 )
 	virtual/libc
 	>=dev-libs/lzo-1.0
-	>=dev-libs/libtasn1-0.2.10"
+	>=dev-libs/libtasn1-0.2.10
+	dev-libs/libgpg-error"
 
 DEPEND="${RDEPEND}
 	sys-apps/gawk

@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.40 2005/01/05 20:38:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.41 2005/01/06 11:09:31 dragonheart Exp $
+
+  06 Jan 2005; Daniel Black <dragonheart@gentoo.org> gnutls-1.0.17.ebuild,
+  gnutls-1.0.23.ebuild:
+  added dev-libs/libgpg-error to depandencies as per mail by Bussolaro
+  Jean-pierre <jean-pierre.bussolaro@ycom.ch>
 
 *gnutls-1.0.23 (06 Jan 2005)
 
