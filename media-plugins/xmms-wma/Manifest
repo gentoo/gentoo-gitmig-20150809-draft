@@ -1,5 +1,5 @@
-MD5 e3be7ee0fdf770d9392b49ba3e2fb25f xmms-wma-1.0.3.ebuild 845
+MD5 3cadbf5abb7ab83d3592d213af02e8fe ChangeLog 858
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 a94a0f6afd83c9f1152db2cdf6a2a3ca ChangeLog 777
+MD5 1c0e1274917e2761731d6d225e55b1b3 xmms-wma-1.0.3.ebuild 845
 MD5 5112ee033af33bd3c309514fe4c880da files/digest-xmms-wma-1.0.3 67
 MD5 c04c28fc4aea2b19bab6d5f04593dde6 files/xmms-wma-1.0.3-ffmpeg.patch 2348
