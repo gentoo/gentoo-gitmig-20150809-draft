@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 be23cfef73d9beaaab151640dac872a7 ChangeLog 2879
+MD5 9b3556382cbc78f9a09b828301b1b0c8 ChangeLog 3051
 MD5 b5fdfdb443a94c51bb339c56188361e9 metadata.xml 175
+MD5 392826e9b5245d142e6977042bab6047 prime-el-1.5.1.ebuild 946
 MD5 d85c33dcf8f886459087d395c0e87994 prime-el-1.5.0.1.ebuild 945
-MD5 0a0514b93e0dc7818e38aabd87354d94 prime-el-1.4.2_p1.ebuild 943
 MD5 a6e9dc761a05be1097baf0ad92ad5a67 files/50prime-el-gentoo.el 62
+MD5 57c90cc0e857d6f2a1d7cffb91ef04a4 files/digest-prime-el-1.5.1 66
 MD5 0338b5bf026e4cd151fb4ddc0bc5c05a files/digest-prime-el-1.5.0.1 68
-MD5 cc150e3b86837531e109f0c0bbbb700f files/digest-prime-el-1.4.2_p1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCCy3RVWNWqTUmv+0RAgNkAJ4k+yOGiamjt8A6ALzpk6SmRndTaACgib69
-6tIWhOf42/Hm0VQPyh8Fe80=
-=mqKZ
+iD8DBQFCEuE5VWNWqTUmv+0RArsGAJ469j3LJZVVgYn8zXKAZv95Q/o9qACfU618
+yEyz/eN9WtDXy2OF6OHvQ9A=
+=XCrl
 -----END PGP SIGNATURE-----
