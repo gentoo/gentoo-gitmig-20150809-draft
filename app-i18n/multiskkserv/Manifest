@@ -1,0 +1,6 @@
+MD5 d937dd944baa267f52459d23d7c9856e multiskkserv-20020201.ebuild 1524
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 1a3e347b6ebfe24f60f255100a2af4a0 files/cdb-0.75-errno.diff 243
+MD5 9c6665659a4ef562597f11c70aec7259 files/multiskkserv.conf 360
+MD5 d3dc74aa35ff4510bbb4d9de96cd75eb files/multiskkserv.initd 868
+MD5 ce6ff83d1b90b4daa1b1b076c72db6d0 files/digest-multiskkserv-20020201 133

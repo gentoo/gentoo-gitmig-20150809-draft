@@ -1,0 +1,11 @@
+# ChangeLog for app-i18n/multiskkserv
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.1 2003/07/16 18:59:43 usata Exp $
+
+*multiskkserv-20020201 (17 Jul 2003)
+
+  17 Jul 2003; Mamoru KOMACHI <usata@gentoo.org>
+  multiskkserv-20020201.ebuild, files/cdb-0.75-errno.diff,
+  files/multiskkserv.conf, files/multiskkserv.initd:
+  New package, closing bug #23820
+
