@@ -22,10 +22,6 @@
 ##   End example
 ##
 
-# <sunflare@gentoo.org> 24 Jul 2002
-# Masked for testing.
-dev-lang/mono
-
 # <g2boojum@gentoo.org> 24 Jul 2002
 # waiting on copyright 
 net-misc/radvd
