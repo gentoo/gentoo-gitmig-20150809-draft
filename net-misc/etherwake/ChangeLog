@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/etherwake
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/etherwake/ChangeLog,v 1.1 2003/04/26 19:26:41 mholzer Exp $
+
+*etherwake-1.08 (26 Apr 2003)
+
+  26 Apr 2003; Martin Holzer <mholzer@gentoo.org> etherwake-1.08.ebuild
+  files/readme:
+  Initial ebuild submitted by Alexander Holler <aholler@gentoo.de> in #20012
