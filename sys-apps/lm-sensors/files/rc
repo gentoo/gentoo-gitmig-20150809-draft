@@ -1,0 +1,79 @@
+#!/sbin/runscript
+
+start() {
+	if ! [ -f /etc/conf.d/lm_sensors ] ; then
+		eerror "/etc/conf.d/lm_sensors does not exist, try running sensors-detect"
+		return 1
+	fi
+
+	. /etc/conf.d/lm_sensors
+
+	if [ -z "${MODULE_0}" ] ; then
+		eerror "MODULE_0 is not set in /etc/conf.d/lm_sensors, try running sensors-detect"
+		return 1
+	fi
+
+	ebegin "Loading lm_sensors modules"
+	eend $?
+	if ! [ -e /proc/sys/dev/sensors ] ; then
+		ebegin "  Loading i2c-proc"
+		modprobe i2c-proc &>/dev/null
+		eend $?
+	fi
+	[ -e /proc/sys/dev/sensors ] || return 1
+
+	i=0
+	while true; do
+		module=`eval echo '$'MODULE_${i}`
+		if [ -z "${module}" ] ; then
+			break
+		fi
+		ebegin "  Loading ${module}"
+		modprobe ${module} &>/dev/null
+		eend $?
+		i=$((i+1))
+	done
+	return 0
+}
+
+stop() {
+	if ! [ -f /etc/conf.d/lm_sensors ] ; then
+		eerror "/etc/conf.d/lm_sensors does not exist, try running sensors-detect"
+		return 1
+	fi
+
+	. /etc/conf.d/lm_sensors
+
+	if [ -z "${MODULE_0}" ] ; then
+		eerror "MODULE_0 is not set in /etc/conf.d/lm_sensors, try running sensors-detect"
+		return 1
+	fi
+
+	ebegin "Removing lm_sensors modules"
+	eend $?
+
+	# find the highest possible MODULE_ number
+	i=0
+	while true; do
+		module=`eval echo '$'MODULE_${i}`
+		if [ -z "${module}" ] ; then
+			break
+		fi
+		i=$((i+1))
+	done
+
+	while [ ${i} -gt 0 ]; do
+		i=$((i-1))
+		module=`eval echo '$'MODULE_${i}`
+		ebegin "  Removing ${module}"
+		rmmod ${module} &>/dev/null
+		eend $?
+	done
+
+	# should we actually remove i2c-proc???
+	ebegin "  Removing i2c-proc"
+	rmmod i2c-proc &>/dev/null
+	eend $?
+
+	return 0
+}
