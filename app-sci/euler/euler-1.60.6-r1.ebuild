@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6-r1.ebuild,v 1.7 2004/07/01 11:51:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6-r1.ebuild,v 1.8 2004/07/02 19:52:13 phosphan Exp $
 
 inherit eutils
 IUSE=""
@@ -26,6 +26,7 @@ src_unpack() {
 
 	cd ${S}/source
 	epatch ${FILESDIR}/${P}.patch
+	epatch ${FILESDIR}/euler-1.60-compound_statements.patch
 	sed -e "s:share/euler/docs/index.html:share/doc/${P}/html/index.html:" \
 		-i main.c
 	sed -e "s:-O2:\$(CFLAGS):" -i makefile
