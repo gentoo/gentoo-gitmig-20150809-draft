@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/libgnomeuimm-2.0.0.ebuild,v 1.15 2005/01/17 19:52:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/libgnomeuimm-2.0.0.ebuild,v 1.16 2005/03/13 20:44:01 corsair Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gtkmm/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="1.0"
-KEYWORDS="x86 ppc sparc hppa amd64"
+KEYWORDS="x86 ppc sparc hppa amd64 ~ppc64"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnomeui-2
@@ -34,8 +34,12 @@ src_unpack() {
 }
 
 src_compile() {
+	if useq amd64 || useq ppc64; then
+		aclocal -I scripts
+		automake
+		autoconf
+		libtoolize --copy --force
+	fi
 
-	use amd64 && aclocal -I scripts && automake && autoconf && libtoolize --copy --force
 	gnome2_src_compile
-
 }
