@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.115 2004/12/29 22:05:39 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.116 2005/01/01 15:47:09 usata Exp $
+
+*ruby-1.8.2 (02 Jan 2005)
+
+  02 Jan 2005; Mamoru KOMACHI <usata@gentoo.org> +ruby-1.8.2.ebuild:
+  Version bumped.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

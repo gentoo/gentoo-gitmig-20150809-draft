@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre3.ebuild,v 1.14 2005/01/01 15:47:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2.ebuild,v 1.1 2005/01/01 15:47:09 usata Exp $
 
-ONIGURUMA="onigd2_3_2"
+ONIGURUMA="onigd2_4_0"
 
 inherit flag-o-matic alternatives eutils gnuconfig
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
 SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
-	cjk? ( http://www.geocities.jp/kosako1/oniguruma/archive/${ONIGURUMA}.tar.gz )"
+	cjk? ( http://www.geocities.jp/kosako3/oniguruma/archive/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
 SLOT="1.8"
 # please keep sorted
-KEYWORDS="alpha amd64 arm hppa ~ia64 mips ppc ppc-macos ~s390 sparc x86 ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="socks5 tcltk cjk doc threads"
 
 RDEPEND="virtual/libc
