@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.1.1.ebuild,v 1.1 2003/04/27 08:06:25 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.1.1.ebuild,v 1.2 2003/04/27 18:38:46 tberman Exp $
 
 S=${WORKDIR}/xml-batik
 DESCRIPTION="Batik is a Java(tm) technology based toolkit for applications or applets that want to use images in the Scalable Vector Graphics (SVG) format for various purposes, such as viewing, generation or manipulation."
@@ -19,13 +19,11 @@ src_unpack() {
 }
 
 src_compile() {
-	ant dist-zip || die
+	ant jars
 }
 
 src_install () {
 
-	# Need to fix up some documentation + USE vars, but I want
-        # to put this in, as it appears to work as far as I can tell
 	dojar ${P}/batik*.jar
 	dojar ${P}/lib/*.jar
 	
