@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.4.ebuild,v 1.10 2004/11/11 21:29:16 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.4.ebuild,v 1.11 2004/11/30 18:45:57 plasmaroo Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -89,7 +89,6 @@ src_compile()  {
 }
 
 src_install() {
-
 	mkdir -p ${D}/usr/bin
 	mkdir -p ${D}/usr/sbin
 	if [ ${UserModeOnly} == true ]; then
@@ -104,8 +103,9 @@ src_install() {
 	newexe ${FILESDIR}/rc lm_sensors
 	dodoc BACKGROUND BUGS CHANGES CONTRIBUTORS COPYING INSTALL QUICKSTART \
 		README* TODO
-	cp -a doc/* ${D}/usr/share/doc/${PF}
 
+	[ -e ${ROOT}/usr/include/linux/i2c-dev.h -a -e ${D}/usr/include/linux/i2c-dev.h ] && rm ${D}/usr/include/linux/i2c-dev.h
+	cp -a doc/* ${D}/usr/share/doc/${PF}
 }
 
 pkg_postinst() {
