@@ -1,8 +1,11 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.25 2003/07/27 03:56:57 heim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.26 2003/08/01 03:40:08 heim Exp $
 
 *openoffice-bin-1.1_rc1 (24 Jul 2003)
+
+  31 Jul 2003; Todd Heim <heim@gentoo.org> Manifest openoffice-bin-1.1_beta2-r1.ebuild openoffice-bin-1.1_rc1.ebuild files/digest-openoffice-bin-1.1_beta2-r1 files/digest-openoffice-bin-1.1_rc1 :
+  fixed URL's for ppc binaries; installer dies with glibc errors.
 
   24 Jul 2003; Brad Laue <brad@gentoo.org> openoffice-bin-1.1_rc1.ebuild,
   files/1.1_rc1/ooffice-wrapper-1.3:
@@ -48,7 +51,7 @@
 
 *openoffice-bin-1.0.3 (Apr 07 2003)
 
-  26 Jul 2003; Todd Heim <theim@gentoo.org> Manifest openoffice-bin-1.0.3.ebuild files/digest-openoffice-bin-1.0.3 :
+  26 Jul 2003; Todd Heim <heim@gentoo.org> Manifest openoffice-bin-1.0.3.ebuild files/digest-openoffice-bin-1.0.3 :
   fixed url for ppc binary, changed to ~ppc
   07 Apr 2003; Seth Chandler <sethbc@gentoo.org>; openoffice-bin-1.0.3.ebuild:
   added 1.0.3 to portage, but printing is broken, there should be a fix out 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_beta2-r1.ebuild,v 1.2 2003/06/30 14:33:24 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_beta2-r1.ebuild,v 1.3 2003/08/01 03:40:08 heim Exp $
 
 IUSE="kde gnome"
 
@@ -16,8 +16,8 @@ INSTDIR="${LOC}/OpenOffice.org${PV}"
 #MY_PV="`echo ${PV} | gawk '{ print tolower($1) }'`"
 MY_PV="${PV/_/}"
 if [ `use ppc` ]; then
-	MY_P="OOo_${MY_PV}_LinuxPowerPC_installer"
-S="${WORKDIR}/${MY_P}"
+	MY_P="OOo_${MY_PV/beta/Beta}_LinuxPPC_installer"
+	S="${WORKDIR}/${MY_P}"
 else
 	MY_P="OOo_${MY_PV}_LinuxIntel_install" 
 	S="${WORKDIR}/${MY_P}"
@@ -26,7 +26,7 @@ fi;
 DESCRIPTION="OpenOffice productivity suite"
 SRC_URI="x86? ( http://vlaai.snt.utwente.nl/pub/software/openoffice/stable/${MY_PV}/OOo_${MY_PV}_LinuxIntel_install.tar.gz
 		http://openoffice.mirrors.pair.com/stable/${MY_PV}/OOo_${MY_PV}_LinuxIntel_install.tar.gz )
- 	 ppc? ( ftp://ftp.yellowdoglinux.com/pub/yellowdog/software/openoffice/OOo_${MY_PV}_LinuxPowerPC_installer.tar.gz )"
+ 	 ppc? ( ftp://ftp.yellowdoglinux.com/pub/yellowdog/software/openoffice/${MY_P}.tar.gz )"
 HOMEPAGE="http://www.openoffice.org"
 
 DEPEND="sys-apps/findutils
