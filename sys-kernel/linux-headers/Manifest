@@ -1,4 +1,4 @@
-MD5 200ecae8f4956db78f60b901445aca18 ChangeLog 5560
+MD5 3dde755878644df7510bdd1f016df53d ChangeLog 5556
 MD5 90a3df79392bb9607250e45e608472b3 linux-headers-2.2.20.ebuild 3924
 MD5 7289ac3b900fe7136758fdae230e74fb linux-headers-2.2.21_pre3.ebuild 4095
 MD5 b970d40b6384eb86cbeb120e6e0a5f0c linux-headers-2.4.16-r1.ebuild 5052
@@ -12,8 +12,8 @@ MD5 b854072fd0ae0ea776038247474d5fe5 linux-headers-2.4.18-r2.ebuild 4555
 MD5 ebb37a4bbba2124565be7130173a6f34 linux-headers-2.4.18.ebuild 3176
 MD5 db99dd305dd1be1b71632047b4e6f80c linux-headers-2.4.19-r1.ebuild 4794
 MD5 d0a25ca6955eb14a8baa4fee38cfc0f0 linux-headers-2.4.19.ebuild 4625
-MD5 7ded05ace4510818cd991bac295a7f39 linux-headers-2.4.21.ebuild 3570
-MD5 90252804663bea76afbf9c8262f8fa01 linux-headers-2.4.22.ebuild 3545
+MD5 b4601d645487253604cbbed2f575fbbc linux-headers-2.4.21.ebuild 3570
+MD5 09cea568bd3dedfd398d9735ddb223de linux-headers-2.4.22.ebuild 3545
 MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
 MD5 07aeae7e5036a3ec3e06d29fd68e9cce files/digest-linux-headers-2.2.20 216
 MD5 167e790d7861e0ed3a31577b31a92968 files/digest-linux-headers-2.2.21_pre3 281

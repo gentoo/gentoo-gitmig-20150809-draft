@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.4 2003/10/23 04:30:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.5 2003/10/30 23:17:54 kumba Exp $
 
 
 ETYPE="headers"
@@ -25,7 +25,7 @@ KEYWORDS="-*"
 
 
 # Figure out what architecture we are, and set ARCH appropriately
-ARCH="${ARCH:-`uname -m`}"
+ARCH="$(uname -m)"
 ARCH=`echo $ARCH | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/`
 [ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH=sparc64
 
@@ -114,4 +114,10 @@ pkg_preinst() {
 
 pkg_postinst() {
 	kernel_pkg_postinst
+
+	einfo "Kernel headers are usually only used when recompiling glibc, as such, following the installation"
+	einfo "of newer headers, it is advised that you re-merge glibc as follows:"
+	einfo "emerge glibc"
+	einfo "Failure to do so will cause glibc to not make use of newer features present in the updated kernel"
+	einfo "headers."
 }
