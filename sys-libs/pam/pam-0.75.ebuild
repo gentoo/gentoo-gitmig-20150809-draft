@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75.ebuild,v 1.1 2001/04/20 00:31:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75.ebuild,v 1.2 2001/04/20 03:00:29 achim Exp $
 
 P=pam-${PV}
 A=Linux-PAM-${PV}.tar.gz
@@ -13,12 +13,6 @@ HOMEPAGE="http://www.redhat.com/linux-info/pam/"
 DEPEND=">=sys-libs/cracklib-2.7-r2
 	>=sys-libs/pwdb-0.61-r3
         berkdb? ( =sys-libs/db-1.85-r1 )"
-
-src_unpack() {
-  unpack ${A}
-  cd ${S}
-  #patch -p0 < ${FILESDIR}/pam-0.73-pam_issue.diff
-}
 
 src_compile() {
 
@@ -63,13 +57,13 @@ src_install() {
    fi
  done
 
- dosym libpam.so.0.73 /lib/libpam.so
- dosym libpamc.so.0.73 /lib/libpamc.so
- dosym libpam_misc.so.0.73 /lib/libpam_misc.so
- dosym libpam.so.0.73 /lib/libpam.so.0
- dosym libpamc.so.0.73 /lib/libpamc.so.0
- dosym libpam_misc.so.0.73 /lib/libpam_misc.so.0
-
+ cd ${D}/lib
+ for i in pam pamc pam_misc
+ do
+   rm lib${i}.so
+   ln -s lib${i}.so.${PV} lib${i}.so
+   ln -s lib${i}.so.${PV} lib${i}.so.0
+ done
 }
 
 
