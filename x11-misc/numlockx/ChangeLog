@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/numlockx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.9 2004/06/24 22:29:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.10 2004/08/27 21:52:07 tgall Exp $
+
+  27 Aug 2004; Tom Gall <tgall@gentoo.org> numlockx-1.0.ebuild:
+  stable on ppc64, bug #59380
 
   01 Jun 2004; Brandon Hale <tseng@gentoo.org> numlockx-1.0.ebuild:
   Add IUSE=
