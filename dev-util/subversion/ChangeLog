@@ -1,9 +1,14 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.25 2003/07/12 13:23:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.26 2003/07/15 09:47:23 pauldv Exp $
 
-*subversion-0.24.2 (04 Jul 2003)
- 
+
+*subversion-0.24.2 (15 Jul 2003)
+
+  15 Jul 2003; <paul@gentoo.org> subversion-0.24.2-r1.ebuild,
+  subversion-0.24.2.ebuild:
+  Fix some python files going to the wrong location: #23657
+
   12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
 
