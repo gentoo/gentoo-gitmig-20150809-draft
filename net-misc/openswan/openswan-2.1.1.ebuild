@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.1.ebuild,v 1.1 2004/03/29 20:08:28 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.1.ebuild,v 1.2 2004/03/31 13:13:45 aliz Exp $
 
 MY_P=${P/_p/_kb}
 S=${WORKDIR}/${MY_P}
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 RDEPEND=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -*"
+KEYWORDS="~x86 ~amd64 -*"
 
 
 check_version_h() {
