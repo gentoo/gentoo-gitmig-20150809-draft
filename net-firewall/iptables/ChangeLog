@@ -1,8 +1,13 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.3 2003/03/15 17:31:02 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.4 2003/03/15 21:53:29 weeve Exp $
 
 *iptables-1.2.7a-r3 (11 Mar 2003)
+
+  15 Mar 2003; Jason Wever <weeve@gentoo.org>
+  files/sparc64_limit_fix.patch.bz2:
+  Added sparc64_limit_fix.patch.bz2 back into the files directory as it got lost
+  in the moving of iptables from sys-apps to net-firewall.
 
   15 Mar 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to KEYWORDS
