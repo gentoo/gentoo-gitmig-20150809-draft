@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.47 2004/01/10 02:37:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.48 2004/01/22 19:20:09 azarah Exp $
+
+*shadow-4.0.4.1 (22 Jan 2004)
+
+  22 Jan 2004; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.4.1.ebuild,
+  files/shadow-4.0.4.1-su-pam_open_session.patch,
+  files/shadow-4.0.4.1-useradd-manpage-update.patch:
+  Update version.
 
 *shadow-4.0.3-r10 (09 Jan 2004)
 

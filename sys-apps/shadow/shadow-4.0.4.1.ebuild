@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.7 2004/01/22 19:20:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.1 2004/01/22 19:20:09 azarah Exp $
 
 IUSE="pam selinux"
 
@@ -13,11 +13,11 @@ SELINUX_PATCH="shadow-4.0.3-selinux.diff"
 S="${WORKDIR}/${P}"
 HOMEPAGE="http://shadow.pld.org.pl/"
 DESCRIPTION="Utilities to deal with user accounts"
-SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
+SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64 ppc64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 ~ppc64"
 
 DEPEND=">=sys-libs/cracklib-2.7-r3
 	pam? ( >=sys-libs/pam-0.75-r4 )
@@ -45,7 +45,7 @@ src_unpack() {
 	# pam_xauth for one, is then never used.  This should close bug #8831.
 	#
 	# <azarah@gentoo.org> (19 Oct 2002)
-	use pam && epatch ${FILESDIR}/${P}-su-pam_open_session.patch-v2
+	use pam && epatch ${FILESDIR}/${P}-su-pam_open_session.patch
 
 	# If su should not simulate a login shell, use '/bin/sh' as shell to enable
 	# running of commands as user with /bin/false as shell, closing bug #15015.
@@ -65,7 +65,7 @@ src_compile() {
 
 	elibtoolize
 
-	local myconf=""
+	local myconf=
 	use pam \
 		&& myconf="${myconf} --with-libpam --with-libcrack" \
 		|| myconf="${myconf} --without-libpam"
