@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.29 2005/01/29 15:07:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.30 2005/02/19 12:54:39 josejx Exp $
+
+  19 Feb 2005; Joseph Jezak <josejx@gentoo.org> xfsprogs-2.6.25.ebuild:
+  Marked ppc stable for bug #82181.
 
   29 Jan 2005; <solar@gentoo.org> +files/2.6.25-uclibc-fadvise.patch,
   xfsprogs-2.6.25.ebuild:
