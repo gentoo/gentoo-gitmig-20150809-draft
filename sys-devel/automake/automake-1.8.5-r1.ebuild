@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r1.ebuild,v 1.10 2004/09/01 13:42:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r1.ebuild,v 1.11 2004/10/06 18:04:10 vapier Exp $
 
 inherit eutils
 
@@ -62,7 +62,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="1.5"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="uclibc"
 
 DEPEND="dev-lang/perl
@@ -232,7 +232,7 @@ src_install() {
 	# install wrapper script for autodetecting the proper version
 	# to use.
 	exeinto /usr/lib/${PN}
-	newexe ${FILESDIR}/am-wrapper.pl-1.8-v2 am-wrapper.pl
+	doexe ${FILESDIR}/am-wrapper.pl
 	# Name binaries to exact version, as they have limited support for
 	# more than one version installs
 	dosed "s:1\.8x:${NEW_PV}:g" /usr/lib/${PN}/am-wrapper.pl
