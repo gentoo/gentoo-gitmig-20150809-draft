@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.5 2002/11/12 07:21:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.6 2002/12/10 00:55:25 blauwers Exp $
 
 DESCRIPTION="Arphic Fonts"
 SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
@@ -45,7 +45,7 @@ src_install() {
 
 #	These don't get downloaded because there is no simple way to
 #	fetch them.. ie if I included the README in SRC_URI above, it would
-#	get saved as /usr/portage/distfiles/README which doesn't seem like
+#	get saved as ${DISTDIR}/README which doesn't seem like
 #	a really good idea.
 #	dodoc LICENSE README
 }
