@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r3.ebuild,v 1.5 2003/07/25 16:26:18 usata Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r3.ebuild,v 1.6 2003/07/29 13:01:19 lanius Exp $
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
@@ -50,13 +48,15 @@ src_unpack() {
 	fi
 
 	# man page patch from absinthe@pobox.com (Dylan Carlson) bug #14150
-#	patch -p0 ${S}/man/gs.1 < ${FILESDIR}/${P}.man.patch || die
 	epatch ${FILESDIR}/${P}.man.patch
 
 	epatch ${FILESDIR}/ps2epsi-security.patch
 
 	# bug 21627
 	epatch ${FILESDIR}/gs${PV}-random.patch
+
+	# ijs fPIC patch
+	epatch ${FILESDIR}/ijs.patch
 }
 
 src_compile() {
@@ -72,7 +72,6 @@ src_compile() {
 	econf ${myconf}
 	make || die "make failed"
 
-	# Compile ijs
 	cd ijs
 	econf --prefix=${D}/usr
 	make || die "make failed"

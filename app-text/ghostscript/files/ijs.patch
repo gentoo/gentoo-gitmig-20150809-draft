@@ -1,0 +1,11 @@
+--- ijs/Makefile.in.org	2003-07-29 14:51:28.000000000 +0200
++++ ijs/Makefile.in	2003-07-29 14:51:40.000000000 +0200
+@@ -1,7 +1,7 @@
+ # Unix
+ 
+ CC=@CC@
+-CFLAGS=-g -Wall -ansi -pedantic -Wmissing-prototypes
++CFLAGS=-g -Wall -ansi -pedantic -Wmissing-prototypes -fPIC
+ LDLIBS=
+ OBJ=.@OBJEXT@
+ EXE=@EXEEXT@

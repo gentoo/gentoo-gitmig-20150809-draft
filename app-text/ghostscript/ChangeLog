@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.37 2003/07/25 16:26:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.38 2003/07/29 13:01:19 lanius Exp $
+
+  29 Jul 2003; lanius@gentoo.org ghostscript-7.05.6-r3.ebuild,
+  files/ijs.patch:
+  added ijs patch to fix compiling on amd64/alpha
 
   26 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> ghostscript-7.05.6-r3.ebuild,
   files/gs7.05.6-kochi-substitute.patch:
