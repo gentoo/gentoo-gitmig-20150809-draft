@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dboxfe
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/ChangeLog,v 1.1 2004/09/12 04:43:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/ChangeLog,v 1.2 2004/09/30 10:57:00 mr_bones_ Exp $
+
+  30 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> dboxfe-0.0.3.ebuild:
+  HOMEPAGE changed
 
 *dboxfe-0.0.3 (11 Sep 2004)
 
