@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/thinkpad
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.4 2004/06/30 03:37:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.5 2004/07/19 02:36:46 robbat2 Exp $
+
+  18 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> thinkpad-4.8.ebuild:
+  stable on x86.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> thinkpad-4.8.ebuild:
   glibc -> libc

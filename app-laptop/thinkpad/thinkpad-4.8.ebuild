@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-4.8.ebuild,v 1.5 2004/06/30 03:37:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-4.8.ebuild,v 1.6 2004/07/19 02:36:46 robbat2 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/tpctl/${MYP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86 amd64"
+KEYWORDS="-* x86 amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
