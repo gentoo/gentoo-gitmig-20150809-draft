@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.9 2004/11/18 22:23:43 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.10 2004/11/21 00:13:41 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -196,10 +196,6 @@ src_install() {
 		[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
 	fi
 
-	if [ "${SPLIT_SPECS}" == "true" ] ; then
-		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
-	fi
-
 	# Because GCC 3.4 installs into the gcc directory and not the gcc-lib
 	# directory, we will have to rename it in order to keep compatibility
 	# with our current libtool check and gcc-config (which would be a pain
@@ -212,13 +208,15 @@ src_install() {
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry
 
-	if [ "${SPLIT_SPECS}" == "true" ] && use !boundschecking && hardened_gcc_works; then
+	if [ "${SPLIT_SPECS}" == "true" ] && [ -n "${PIE_CORE}" ] && use !boundschecking && hardened_gcc_works; then
 		if use hardened ; then
 			create_gcc_env_entry vanilla
 		else
 			create_gcc_env_entry hardened
 		fi
 		create_gcc_env_entry hardenednossp
+
+		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
 	fi
 
 	# Make sure we dont have stuff lying around that
