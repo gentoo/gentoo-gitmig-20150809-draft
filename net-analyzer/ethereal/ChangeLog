@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.12 2002/09/15 13:35:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.13 2002/10/11 21:20:52 bcowan Exp $
+
+*ethereal-0.9.7 (11 Oct 2002)
+
+  11 Oct 2002; Brad Cowan <bcowan@gentoo.org> ethereal-0.9.7.ebuild,
+  files/digest-ethereal-0.9.7 :
+  
+  Version bump, fixed sandbox violation closing bugs #7953,8681
 
 *ethereal-0.9.6 (30 Aug 2002)
 
