@@ -1,5 +1,5 @@
-MD5 949873a17e4290c2650bb48d24fc71c2 hmmer-2.2g.ebuild 911
-MD5 94ed71d187a03a68b8ebee4771739f98 hmmer-2.3.1.ebuild 914
+MD5 25a77e8877446483075c9715b350675e hmmer-2.2g.ebuild 893
+MD5 cdac1c0faccd2982768f2bb62a93a4d6 hmmer-2.3.1.ebuild 913
 MD5 d33b6fadf469ba5b1ddf0e8889fb1992 ChangeLog 569
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
 MD5 9fbc129db1a886510ff026fd89e131f1 files/Makefile-hmmer-2.2g.patch 1040

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/hmmer/hmmer-2.3.1.ebuild,v 1.4 2004/06/24 22:03:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/hmmer/hmmer-2.3.1.ebuild,v 1.5 2004/07/14 01:51:03 agriffis Exp $
 
 DESCRIPTION="HMMER - Biological sequence analysis with profile HMMs"
 HOMEPAGE="http://hmmer.wustl.edu/"
@@ -36,4 +36,3 @@ src_install() {
 	dobin afetch  alistat compalign compstruct revcomp seqstat seqsplit sfetch shuffle sreformat sindex weight translate
 
 }
-
