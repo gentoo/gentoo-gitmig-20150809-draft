@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/DateManip
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.1 2002/04/22 20:26:09 agenkin Exp $
+
+*DateManip-5.40 (22 April 2002)
+
+  22 Apr 2002; Arcady Genkin <agenkin@thpoon.com>: DateManip-5.40.ebuild
+  
+  Initial version of the package.
