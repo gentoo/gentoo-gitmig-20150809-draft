@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-validator
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.11 2004/06/24 22:23:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.12 2004/08/24 04:01:13 zx Exp $
+
+  24 Aug 2004; Chris Aniszczyk <zx@gentoo.org>
+  -commons-validator-1.0.2-r1.ebuild, -commons-validator-1.0.2-r2.ebuild,
+  commons-validator-1.0.2-r3.ebuild:
+  Cleanup & Stable on x86
 
 *commons-validator-1.0.2-r3 (21 Jun 2004)
 
