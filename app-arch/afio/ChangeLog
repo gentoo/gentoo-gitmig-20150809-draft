@@ -1,5 +1,10 @@
 # ChangeLog for app-arch/afio
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+*afio-2.5 (25 Feb 2004)
+
+  25 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> afio-2.5.ebuild:
+  version bump; ebuild submitted by Diego Garcia via bug #42772
 
   10 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> afio-2.4.7.ebuild,
   files/Makefile.patch:
