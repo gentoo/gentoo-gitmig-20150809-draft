@@ -1,6 +1,25 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.29 2003/04/17 16:53:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.30 2003/05/11 19:18:21 liquidx Exp $
+
+*openldap-2.1.19 (11 May 2003)
+
+  11 May 2003; Alastair Tse <liquidx@gentoo.org> openldap-2.1.19.ebuild:
+  wholesale changes to how this ebuild is installed. fixes :
+   - wrong pid file directory in both config and init.d (#13057)
+   - debugging enabled for syslogging (#16131)
+   - version bumped 2.1 series and omit redundant kerberos patch (#16341)
+   - fixed /var/tmp paths in *.la (#12084)  
+
+*openldap-2.0.27-r3 (11 May 2003)
+
+  11 May 2003; Alastair Tse <liquidx@gentoo.org> openldap-2.0.27-r3.ebuild,
+  files/2.0/slapd, files/2.0/slapd.conf, files/2.0/slurpd:
+  
+  wholesale changes to how this ebuild is installed. fixes :
+   - wrong pid file directory in both config and init.d (#13057)
+   - debugging enabled for syslogging (#16131)
+   - fixed /var/tmp paths in *.la (#12084)
 
   23 Feb 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.27*.ebuild :
   Changed --disable-sasl to --without-cyrus-sasl as noted by Matt

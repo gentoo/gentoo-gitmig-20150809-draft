@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r2.ebuild,v 1.6 2003/05/11 19:18:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r3.ebuild,v 1.1 2003/05/11 19:18:21 liquidx Exp $
 
 inherit eutils
+
+IUSE="ssl tcpd readline ipv6 gdbm ldap kerberos odbc"
 
 DESCRIPTION="LDAP suite of application and development tools"
 SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/${P}.tgz"
@@ -11,17 +13,16 @@ HOMEPAGE="http://www.OpenLDAP.org/"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha"
 LICENSE="OPENLDAP"
-IUSE="ssl tcpd readline ipv6 gdbm ldap kerberos odbc"
 
-DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.1
-	>=sys-libs/db-3
+DEPEND=">=sys-libs/ncurses-5.1
+	=sys-libs/db-3*
 	tcpd?	  ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl?	  ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )
 	gdbm?     ( >=sys-libs/gdbm-1.8.0 )
 	kerberos? ( >=app-crypt/krb5-1.2.6 )
 	odbc?     ( dev-db/unixODBC )"
+
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
@@ -44,13 +45,21 @@ pkg_preinst() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/kerberos-2.0.diff.bz2	
+	# never worked anyway ?
+	epatch ${FILESDIR}/kerberos-2.0.diff.bz2
+	# force the use of db3 only, db4 has api breakages
+	epatch ${FILESDIR}/${P}-db3-gentoo.patch
 }
 
 src_compile() {
 	local myconf
 
-	myconf="`use_enable debug`"
+	# regenerate ./configure
+	cd ${S}
+	./autogen.sh --help
+
+	# must enable debug for syslog'ing (#16131)
+	myconf="--enable-debug --enable-syslog"
 
 	use kerberos \
 		&& myconf="${myconf} --with-kerberos --enable-kpasswd" \
@@ -76,6 +85,11 @@ src_compile() {
 		&& myconf="${myconf} --enable-sql" \
 		|| myconf="${myconf} --disable-sql"
 
+	use gdbm \
+		&& myconf="${myconf} --enable-ldbm --with-ldbm-api=gdbm" \
+   		|| myconf="${myconf} --enable-ldbm --with-ldbm-api=berkeley"
+
+
 	econf \
 		--libexecdir=/usr/lib/openldap \
 		--enable-crypt \
@@ -88,8 +102,6 @@ src_compile() {
 		--enable-passwd \
 		--enable-shell \
 		--enable-slurpd \
-		--enable-ldbm \
-		--with-ldbm-api=auto \
 		${myconf} || die "configure failed"
 
 	emake depend || die "make depend failed"
@@ -103,24 +115,39 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die "make install failed"
-
-	chown ldap:ldap ${D}/etc/openldap/slapd.conf
-	dodir /var/lib/openldap-data
-	chown ldap:ldap ${D}var/lib/openldap-data
-
+	
 	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE
 	docinto rfc ; dodoc doc/rfc/*.txt
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/slapd-2.1-r1.rc6 slapd
-	newexe ${FILESDIR}/slurpd-2.1.rc6 slurpd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/slapd-2.1.conf slapd.conf
+	# make state directories
+	for x in data slurp ldbm; do
+		keepdir /var/lib/openldap-${x}
+		fowners ldap:ldap /var/lib/openldap-${x}
+		fperms 0700 /var/lib/openldap-${x}
+	done
 
 	# manually remove /var/tmp references in .la
 	# because it is packaged with an ancient libtool
 	for x in ${D}/usr/lib/lib*.la; do
-		sed -i -e "s:${D}::" ${x}
+		sed -i -e "s:-L${S}[/]*libraries::" ${x}
 	done
 
+	# change slapd.pid location in configuration file
+	keepdir /var/run/openldap
+	fowners ldap:ldap /var/run/openldap
+	fperms 0755 /var/run/openldap
+	sed -i -e "s:/var/lib/slapd.pid:/var/run/openldap/slapd.pid:" ${D}/etc/openldap/slapd.conf
+	sed -i -e "s:/var/lib/slapd.pid:/var/run/openldap/slapd.pid:" ${D}/etc/openldap/slapd.conf.default
+	fowners root:ldap /etc/openldap/slapd.conf
+	fperms 0640 /etc/openldap/slapd.conf
+	fowners root:ldap /etc/openldap/slapd.conf.default
+	fperms 0640 /etc/openldap/slapd.conf.default
+	
+	# install our own init scripts
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/2.0/slapd slapd
+	newexe ${FILESDIR}/2.0/slurpd slurpd
+	insinto /etc/conf.d
+	newins ${FILESDIR}/2.0/slapd.conf slapd.conf
+	
 }

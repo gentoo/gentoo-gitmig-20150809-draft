@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/2.0/slapd,v 1.1 2003/05/11 19:18:21 liquidx Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting ldap-server"
+	start-stop-daemon --start --quiet --pidfile /var/run/openldap/slapd.pid --exec /usr/lib/openldap/slapd -- -u ldap -g ldap ${OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ldap-server"
+	start-stop-daemon --stop --quiet --pidfile /var/run/openldap/slapd.pid --exec /usr/lib/openldap/slapd
+	eend $?
+}
