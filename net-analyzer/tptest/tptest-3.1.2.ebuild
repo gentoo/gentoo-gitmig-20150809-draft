@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/tptest-3.1.2.ebuild,v 1.1 2003/11/26 10:52:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/tptest-3.1.2.ebuild,v 1.2 2004/01/13 13:55:58 aliz Exp $
 
 MY_P=${PN}${PV}
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://tptest.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tptest/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 DEPEND=">=sys-apps/sed-4"
 #RDEPEND=""
