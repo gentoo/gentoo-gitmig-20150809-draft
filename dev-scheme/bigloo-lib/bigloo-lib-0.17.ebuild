@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo-lib/bigloo-lib-0.17.ebuild,v 1.2 2004/06/25 02:06:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo-lib/bigloo-lib-0.17.ebuild,v 1.3 2004/06/30 17:21:46 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Bigloo support libraries"
+HOMEPAGE="http://bigloo-lib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/bigloo-lib/${P}.tar.gz"
-HOMEPAGE="http://bigloo-lib.sf.net"
-SLOT="0"
+
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc "
+SLOT="0"
+KEYWORDS="x86 ~sparc"
 IUSE="nls gtk postgres mysql gtk2 ipcs gd ldap X gdbm expat"
 
 DEPEND=">=dev-scheme/bigloo-2.4
 	X? ( virtual/x11 )
-	gd? ( >=media-libs/libgd-1.8.3 )
+	gd? ( >=media-libs/gd-1.8.3 )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	nls? ( >=sys-devel/gettext-0.11.1 )
 	gtk2? ( =x11-libs/gtk+-2* )
