@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.77 2003/07/11 06:30:06 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.78 2003/07/14 22:36:38 lostlogic Exp $
+
+*postfix-2.0.13-r1 (14 Jul 2003)
+
+  14 Jul 2003; Brandon Low <lostlogic@gentoo.org> postfix-2.0.13-r1.ebuild:
+  Just update the TLS and IPV6 patches
 
   11 Jul 2003; Nick Hadaway <raker@gentoo.org> postfix-2.0.13.ebuild,
   files/postfix-pg.postfix-2.0.0.2.patch.bz2:
