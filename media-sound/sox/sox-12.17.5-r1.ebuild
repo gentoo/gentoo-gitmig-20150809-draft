@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.5-r1.ebuild,v 1.1 2004/09/11 17:17:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.5-r1.ebuild,v 1.2 2004/09/14 07:43:30 eradicator Exp $
 
 inherit gnuconfig eutils
 
@@ -15,9 +15,9 @@ LICENSE="LGPL-2.1"
 
 DEPEND="virtual/libc
 	encode? ( media-sound/lame )
-	alsa? ( media-libs/alsa-lib )
 	oggvorbis? ( media-libs/libvorbis )
 	mad? ( media-sound/madplay )"
+#	alsa? ( media-libs/alsa-lib )
 
 src_compile () {
 	# Needed on mips and probablly others

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.31 2004/09/11 17:17:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.32 2004/09/14 07:43:30 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> :
+  Removing sox-12.17.5 as it installs exactly the same thing as -r1. -r1 should
+  NOT have been added to portage. If you already have sox-12.17.5 installed, you
+  will gain nothing by emerging sox-12.17.5-r1.
 
 *sox-12.17.5-r1 (11 Sep 2004)
 
