@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.7.ebuild,v 1.1 2003/02/22 18:02:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.7.ebuild,v 1.2 2003/03/17 13:01:50 wmertens Exp $
 
 inherit eutils
 
@@ -23,6 +23,14 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.2.2-gentoo.diff
+
+	# Fix bad errno definitions (bug #16450 and #16267)
+	ebegin Fixing errno definitions
+	find . -name '*.[ch]' | xargs grep -l 'extern.*int.*errno' \
+	  | xargs -n1 perl -pi.orig -e '
+		$.==1 && s/^/#include <errno.h>\n/;
+		s/extern\s+int\s+errno\s*\;//;'
+	eend 0
 }
 
 src_compile() {
