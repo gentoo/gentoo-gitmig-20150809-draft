@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/gorua-0.16-r1.ebuild,v 1.2 2003/12/26 17:55:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/gorua-0.16-r1.ebuild,v 1.3 2003/12/26 21:49:00 weeve Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.unixuser.org/~haruyama/software/goRua/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ppc sparc"
+KEYWORDS="x86 alpha ppc ~sparc"
 
 DEPEND="=dev-lang/ruby-1.6*
 	=x11-libs/gtk+-1.2*
