@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.109 2005/01/31 21:06:16 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.110 2005/02/03 17:09:27 suka Exp $
+
+  03 Feb 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-ximian-1.3.7.ebuild:
+  GCC 3.4 patches also work fine with GCC 3.3.x so they are applied by default
+  now. This also fixes some further problems on hardened gccs, closes bug
+  #79815
 
   31 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-ximian-1.3.7.ebuild, openoffice-ximian-1.3.8.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.16 2005/02/01 18:19:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.17 2005/02/03 17:09:27 suka Exp $
 
 # Notes:
 #
@@ -298,14 +298,11 @@ src_unpack() {
 	einfo "Applying Ximian OO.org Patches"
 	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=${DISTRO} || die "Ximian patches failed"
 
-	# GCC 3.4.x fixes
-	if [ "$(gcc-version)" = "3.4" ]
-	then
-		epatch ${FILESDIR}/${OO_VER}/gcc34_2.patch.bz2
-		epatch ${FILESDIR}/${OO_VER}/gcc34-sal-link-to-libsupc++.diff
-		use !java && epatch ${FILESDIR}/${OO_VER}/gcc34-nojava-fix.patch
-		use gnome && epatch ${FILESDIR}/${OO_VER}/gcc34-gnome.patch
-	fi
+	#GCC 3.4 fixes, also needed for hardened
+	epatch ${FILESDIR}/${OO_VER}/gcc34_2.patch.bz2
+	epatch ${FILESDIR}/${OO_VER}/gcc34-sal-link-to-libsupc++.diff
+	use !java && epatch ${FILESDIR}/${OO_VER}/gcc34-nojava-fix.patch
+	use gnome && epatch ${FILESDIR}/${OO_VER}/gcc34-gnome.patch
 
 	#Fix for hardened
 	if use hardened; then
