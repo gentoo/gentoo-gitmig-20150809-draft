@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/blueglass-xcursors-0.4.ebuild,v 1.9 2004/06/09 07:13:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/blueglass-xcursors-0.4.ebuild,v 1.10 2004/06/09 07:29:04 spyderous Exp $
 
 MY_P="5532-BlueGlass-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -17,7 +17,7 @@ RDEPEND="virtual/x11"
 # use the directory 'Blue'.
 src_install() {
 	# Set up X11 implementation
-	X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
+	X11_IMPLEM_P="$(best_version virtual/x11)"
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
 	X11_IMPLEM="${X11_IMPLEM##*\/}"
 	einfo "X11 implementation is ${X11_IMPLEM}."
