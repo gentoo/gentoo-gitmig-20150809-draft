@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.6 2003/11/12 05:50:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.7 2004/06/01 14:09:05 vapier Exp $
 
 inherit elisp
 
@@ -13,6 +13,7 @@ DEBCVS=cvs.2003.07.20
 DESCRIPTION="A comprehensive Emacs interface for an inferior Common Lisp, or other Lisp based languages."
 HOMEPAGE="http://sourceforge.net/projects/ilisp/"
 SRC_URI="mirror://debian/pool/main/i/ilisp/${P/-/_}+${DEBCVS}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
@@ -63,7 +64,7 @@ src_install() {
 	dodoc docs/*.ps
 
 	elisp-site-file-install ${FILESDIR}/50ilispclc-gentoo.el
-	dodoc ACKNOWLEDGMENTS COPYING GETTING-ILISP HISTORY INSTALLATION README Welcome
+	dodoc ACKNOWLEDGMENTS GETTING-ILISP HISTORY INSTALLATION README Welcome
 
 	sed -i "s,@HYPERSPEC@,${P}/HyperSpec,g" ${D}/usr/share/emacs/site-lisp/50ilispclc-gentoo.el
 }

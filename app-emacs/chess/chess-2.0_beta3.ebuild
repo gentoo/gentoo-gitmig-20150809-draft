@@ -1,19 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta3.ebuild,v 1.4 2003/09/10 21:44:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta3.ebuild,v 1.5 2004/06/01 14:09:04 vapier Exp $
 
 inherit elisp
-
-IUSE=""
 
 DESCRIPTION="A chess client and library for Emacs"
 HOMEPAGE="http://emacs-chess.sourceforge.net/"
 SRC_URI="mirror://sourceforge/emacs-chess/${P/_beta/b}.tar.bz2
 	mirror://gentoo/emacs-chess-sounds-2.0.tar.bz2
 	mirror://gentoo/emacs-chess-pieces-2.0.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
@@ -40,7 +40,7 @@ src_install() {
 
 	doinfo chess.info
 	dohtml *.html
-	dodoc COPYING ChangeLog EPD.txt PGN.txt PLAN README TODO
+	dodoc ChangeLog EPD.txt PGN.txt PLAN README TODO
 }
 
 pkg_postinst() {

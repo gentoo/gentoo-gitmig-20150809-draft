@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.8.1.ebuild,v 1.1 2003/10/10 20:12:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.8.1.ebuild,v 1.2 2004/06/01 14:09:05 vapier Exp $
 
 inherit elisp
 
@@ -13,6 +13,7 @@ SRC_URI="ftp://ftp.gohome.org/wl/stable/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/emacs
 	>=app-emacs/apel-10.3
@@ -43,7 +44,7 @@ src_install() {
 	doins samples/en/*
 
 	doinfo doc/wl-ja.info doc/wl.info
-	dodoc BUGS* COPYING ChangeLog INSTALL* README*
+	dodoc BUGS* ChangeLog INSTALL* README*
 }
 
 pkg_postinst() {

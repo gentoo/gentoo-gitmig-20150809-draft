@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp-cvs/ilisp-cvs-5.12.0.ebuild,v 1.1 2004/01/17 20:58:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp-cvs/ilisp-cvs-5.12.0.ebuild,v 1.2 2004/06/01 14:09:05 vapier Exp $
 
 ECVS_SERVER="cvs-pserver.sourceforge.net:80/cvsroot/ilisp"
 ECVS_MODULE="ILISP"
@@ -11,6 +11,7 @@ inherit elisp-common cvs
 
 DESCRIPTION="A comprehensive Emacs interface for an inferior Common Lisp, or other Lisp based languages."
 HOMEPAGE="http://sourceforge.net/projects/ilisp/"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
@@ -19,7 +20,6 @@ IUSE="doc"
 DEPEND="virtual/emacs
 	dev-lisp/common-lisp-controller
 	doc? ( virtual/tetex sys-apps/texinfo app-text/texi2html )"
-
 
 S=${WORKDIR}/ILISP
 
@@ -59,7 +59,7 @@ src_install() {
 	dodoc docs/*.ps
 
 	elisp-site-file-install ${FILESDIR}/60ilisp-cvs-gentoo.el
-	dodoc ACKNOWLEDGMENTS COPYING GETTING-ILISP HISTORY INSTALLATION README Welcome
+	dodoc ACKNOWLEDGMENTS GETTING-ILISP HISTORY INSTALLATION README Welcome
 }
 
 pkg_preinst() {

@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.14.ebuild,v 1.11 2004/05/11 03:45:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.14.ebuild,v 1.12 2004/06/01 14:09:04 vapier Exp $
 
 inherit elisp
-
-IUSE=""
 
 DESCRIPTION="AUC TeX is an extensible package that supports writing and formatting TeX files"
 HOMEPAGE="http://www.gnu.org/software/auctex"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+IUSE=""
 
 DEPEND=">=sys-apps/sed-4
 	virtual/emacs
@@ -37,7 +37,7 @@ src_install() {
 	dosed ${SITELISP}/tex-site.el || die
 	doinfo doc/auctex*
 	elisp-site-file-install ${FILESDIR}/50auctex-gentoo.el
-	dodoc ChangeLog CHANGES COPYING INSTALLATION PROBLEMS README
+	dodoc ChangeLog CHANGES INSTALLATION PROBLEMS README
 }
 
 pkg_postinst() {

@@ -1,30 +1,28 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/howm/howm-1.1.2.1.ebuild,v 1.2 2004/06/01 14:09:04 vapier Exp $
 
 inherit elisp
 
-IUSE=""
-
-DESCRIPTION="Howm is a note-taking tool on Emacs"
-SRC_URI="http://howm.sourceforge.jp/a/${P}.tar.gz"
+DESCRIPTION="note-taking tool on Emacs"
 HOMEPAGE="http://howm.sourceforge.jp/"
+SRC_URI="http://howm.sourceforge.jp/a/${P}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="~x86"
 SLOT="0"
+KEYWORDS="~x86"
+IUSE=""
 
 DEPEND="virtual/emacs"
 
 SITEFILE="50howm-gentoo.el"
 
 src_compile() {
-
 	econf --with-docdir=/usr/share/doc/${P} || die
 	emake < /dev/null || die
 }
 
-src_install () {
-
+src_install() {
 	emake < /dev/null \
 		DESTDIR=${D} PREFIX=/usr LISPDIR=${SITELISP}/${PN} install || die
 	elisp-site-file-install ${T}/${SITEFILE} || die

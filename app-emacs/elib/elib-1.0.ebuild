@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0.ebuild,v 1.6 2004/04/20 19:22:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0.ebuild,v 1.7 2004/06/01 14:09:04 vapier Exp $
 
 inherit elisp
-
-IUSE=""
 
 DESCRIPTION="The Emacs Lisp Library"
 HOMEPAGE="http://jdee.sunsite.dk"
 SRC_URI="http://jdee.sunsite.dk/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="x86 ~ppc amd64"
+IUSE=""
 
 DEPEND="virtual/emacs"
 
@@ -34,7 +34,7 @@ src_install() {
 
 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
 
-	dodoc COPYING ChangeLog INSTALL NEWS README RELEASING TODO
+	dodoc ChangeLog INSTALL NEWS README RELEASING TODO
 }
 
 pkg_postinst() {

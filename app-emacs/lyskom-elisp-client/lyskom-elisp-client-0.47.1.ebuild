@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lyskom-elisp-client/lyskom-elisp-client-0.47.1.ebuild,v 1.1 2004/03/19 19:41:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lyskom-elisp-client/lyskom-elisp-client-0.47.1.ebuild,v 1.2 2004/06/01 14:09:05 vapier Exp $
 
 inherit elisp
-
-IUSE=""
 
 MY_P="${PN}-all-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -12,9 +10,11 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Elisp client for the LysKOM conference system"
 HOMEPAGE="http://www.lysator.liu.se/lyskom/klienter/emacslisp/index.en.html"
 SRC_URI="http://www.lysator.liu.se/lyskom/klienter/emacslisp/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND="virtual/emacs"
 
@@ -30,7 +30,7 @@ src_install() {
 	elisp-install ${PN} *.el*
 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
 
-	dodoc COPYING NEWS-* README
+	dodoc NEWS-* README
 }
 
 pkg_postinst() {

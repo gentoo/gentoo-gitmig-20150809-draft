@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.4.ebuild,v 1.3 2004/03/15 01:28:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.4.ebuild,v 1.4 2004/06/01 14:09:05 vapier Exp $
 
 SIMPLE_ELISP='nil'
 inherit elisp
-
-IUSE=""
 
 MY_PN="ProofGeneral"
 
 DESCRIPTION="Proof General is a generic interface for proof assistants"
 HOMEPAGE="http://proofgeneral.inf.ed.ac.uk/"
 SRC_URI="http://proofgeneral.inf.ed.ac.uk/${MY_PN}-${PV}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 
 DEPEND="virtual/emacs"
 
@@ -37,7 +37,7 @@ src_install() {
 	dohtml doc/*.html doc/*.jpg
 	doinfo doc/*.info*
 	dobin bin/*
-	dodoc README* TODO AUTHORS BUGS CHANGES COPYING FAQ INSTALL REGISTER
+	dodoc README* TODO AUTHORS BUGS CHANGES FAQ INSTALL REGISTER
 }
 
 pkg_postinst() {
