@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.5 2003/02/12 04:56:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.6 2003/12/16 00:43:23 avenj Exp $
+
+  15 Dec 2003; Jon Portnoy <avenj@gentoo.org> beep-1.2.2.ebuild :
+  AMD64 keywords.
 
 *beep-1.2.2 (10 Jul 2002)
 
