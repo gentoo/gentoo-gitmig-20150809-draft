@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5efd2420260a67928046682f379f0120 ChangeLog 1708
-MD5 de5f8886cfee369a9e72f9b98a2d40d7 xmlwrapp-0.5.0-r1.ebuild 1407
-MD5 9a07a5ca69d6975d81bbeb7770bac009 xmlwrapp-0.4.4.ebuild 1016
+MD5 2a310566c37ccff60a21795a306da6d5 ChangeLog 1812
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 9a07a5ca69d6975d81bbeb7770bac009 xmlwrapp-0.4.4.ebuild 1016
+MD5 3c52fe45debe224ca5decd5e9e207618 xmlwrapp-0.5.0-r1.ebuild 1414
 MD5 1379b575366d3cb3ffa8d958a43d846a xmlwrapp-0.5.0.ebuild 981
-MD5 00b7f4c2544aca35df2b6186090bd1fa files/digest-xmlwrapp-0.4.4 66
-MD5 2d028e0206e5e904262763672a00d4ea files/digest-xmlwrapp-0.5.0 66
-MD5 bbba6eba8abf58b5f9bed1fc32ae8214 files/digest-xmlwrapp-0.5.0-r1 130
 MD5 55066e7026cd8b9a9f6820015d0a986c files/xmlwrapp-gentoo.diff 469
+MD5 00b7f4c2544aca35df2b6186090bd1fa files/digest-xmlwrapp-0.4.4 66
+MD5 bbba6eba8abf58b5f9bed1fc32ae8214 files/digest-xmlwrapp-0.5.0-r1 130
+MD5 2d028e0206e5e904262763672a00d4ea files/digest-xmlwrapp-0.5.0 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMhTeCHk4+ZoBpvsRApQeAKCiqQuufq7DxIyVCboqBUIY1oV6tACfYjbx
-rFydCq2dplYdEooHGiWS+q0=
-=3KqE
+iD8DBQFCQEDDugEuf3OQ0akRAgpbAJwN54YXjwJ39/w6ix+0GoyGLaGoJQCfRTnD
+I1FHD/uGPjJaMnd1Ezu2mM4=
+=YV6D
 -----END PGP SIGNATURE-----
