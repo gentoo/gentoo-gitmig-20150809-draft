@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.13 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.14 2003/03/24 21:59:36 lostlogic Exp $
+
+*gawk-3.1.2 (24 Mar 2003)
+
+  24 Mar 2003; Brandon Low <lostlogic@gentoo.org> gawk-3.1.2.ebuild:
+  Bump
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> gawk-3.1.1-r1.ebuild :
   Added arm to keywords.
