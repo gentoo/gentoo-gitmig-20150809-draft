@@ -1,36 +1,46 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.2.ebuild,v 1.2 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.2.ebuild,v 1.3 2003/03/26 04:42:08 seemant Exp $
+
+IUSE="mysql ldap gdbm berkdb"
 
 inherit flag-o-matic
 filter-flags -funroll-loops
 filter-flags -fomit-frame-pointer
 
-IUSE="mysql ldap gdbm berkdb"
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
-SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.flounder.net/~mrsam/maildrop/index.html"
+SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ~sparc"
+
 DEPEND="dev-lang/perl
 	virtual/mta
 	berkdb? ( >=sys-libs/db-3.2 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	mysql? ( >=dev-db/mysql-3.23.51 )
 	ldap? ( >=net-nds/openldap-2.0.23 )"
+
 PROVIDE="virtual/mda"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc"
 
 src_compile() {
 	local myconf
-	use mysql && myconf="${myconf} --enable-maildropmysql --with-mysqlconfig=/etc/maildrop/maildropmysql.cf" \
+	use mysql \
+		&& myconf="${myconf} --enable-maildropmysql \
+			--with-mysqlconfig=/etc/maildrop/maildropmysql.cf" \
 		|| myconf="${myconf} --disable-maildropmysql"
-	use ldap && myconf="${myconf} --enable-maildropldap --with-ldapconfig=/etc/maildrop/maildropldap.cf" \
+
+	use ldap \
+		&& myconf="${myconf} --enable-maildropldap \
+			--with-ldapconfig=/etc/maildrop/maildropldap.cf" \
 		|| myconf="${myconf} --disable-maildropldap"
+
 	if use berkdb; then
 		myconf="${myconf} --with-db=db"
-        elif use gdbm; then
+	elif use gdbm; then
 		myconf="${myconf} --with-db=gdbm"	
 	fi
 
@@ -46,7 +56,7 @@ src_compile() {
 		--enable-trusted-users='root mail daemon postmaster qmaild mmdf vmail' \
 		--with-default-maildrop=./.maildir/ \
 		--enable-sendmail=/usr/sbin/sendmail \
-		${myconf}
+		${myconf} || die
 
 	emake || die "compile problem"
 }
@@ -70,7 +80,7 @@ src_install() {
 	done
 	rm -rf ${D}/usr/share/maildrop/scripts
 
-	insinto /etc/maildrop
+	insinto /etc
 	doins ${FILESDIR}/maildroprc
 	
 	if [ -n "`use mysql`" ]

@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/maildrop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.18 2003/02/15 03:47:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.19 2003/03/26 04:42:08 seemant Exp $
 
 *maildir-1.5.2 (14 Feb 2003)
+
+  23 Mar 2003; Seemant Kulleen <seemant@gentoo.org> maildrop-1.5.2.ebuild :
+
+  maildroprc in /etc instead of /etc/maildrop, closing bug #17785 by Duke
+  <duke@spacebox.net>
 
   14 Feb 2003; Nick Hadaway <raker@gentoo.org> maildrop-1.5.2.ebuild,
   files/digest-maildrop-1.5.2 :
