@@ -1,6 +1,13 @@
 # ChangeLog for net-www/gplflash
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.16 2004/11/03 16:08:15 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.17 2005/03/08 14:34:14 corsair Exp $
+
+*gplflash-0.4.13 (08 Mar 2005)
+
+  08 Mar 2005; Markus Rothe <corsair@gentoo.org> +gplflash-0.4.13.ebuild:
+  Version bump, but configure won't find new location of X11 includes/libraries.
+  Temporal solution is pointing configure to the exact location, until a better
+  is found. bug #79270
 
   03 Nov 2004; Markus Rothe <corsair@gentoo.org> +metadata.xml:
   Added metadata.xml
