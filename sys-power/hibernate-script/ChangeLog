@@ -1,0 +1,75 @@
+# ChangeLog for sys-apps/hibernate-script
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.1 2005/03/14 23:11:55 ciaranm Exp $
+
+*hibernate-script-1.05 (14 Mar 2005)
+
+  14 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +hibernate-script-1.05.ebuild:
+  Moved from sys-apps/hibernate-script to sys-power/hibernate-script.
+
+  12 Mar 2005; Henrik Brix Andersen <brix@gentoo.org>
+  -hibernate-script-1.00.ebuild, -hibernate-script-1.01.ebuild,
+  -hibernate-script-1.02-r1.ebuild, -hibernate-script-1.02.ebuild,
+  -hibernate-script-1.03.ebuild, -hibernate-script-1.04.ebuild:
+  Pruned old versions.
+
+  02 Mar 2005; Henrik Brix Andersen <brix@gentoo.org>
+  hibernate-script-1.05.ebuild:
+  Stable on x86.
+
+*hibernate-script-1.05 (08 Feb 2005)
+
+  08 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +hibernate-script-1.05.ebuild:
+  Version bump.
+
+*hibernate-script-1.04 (08 Feb 2005)
+
+  08 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +hibernate-script-1.04.ebuild:
+  Version bump.
+
+  05 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
+  hibernate-script-1.03.ebuild:
+  Stable on x86.
+
+  04 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  hibernate-script-1.03.ebuild:
+  Accidentally marked 1.03 stable on x86.
+
+*hibernate-script-1.03 (04 Jan 2005)
+
+  04 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +hibernate-script-1.03.ebuild:
+  Version bump.
+
+  30 Dec 2004; Henrik Brix Andersen <brix@gentoo.org>
+  hibernate-script-1.02-r1.ebuild:
+  Stable on x86.
+
+*hibernate-script-1.02-r1 (07 Dec 2004)
+
+  07 Dec 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +hibernate-script-1.02-r1.ebuild:
+  Allow calling hibernate for suspend-to-disk, and hibernate-sleep for
+  suspend-to-ram.
+
+*hibernate-script-1.02 (24 Nov 2004)
+
+  24 Nov 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +hibernate-script-1.02.ebuild:
+  Version bump.
+
+*hibernate-script-1.01 (19 Nov 2004)
+
+  19 Nov 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +hibernate-script-1.01.ebuild:
+  Version bump.
+
+*hibernate-script-1.00 (12 Nov 2004)
+
+  12 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
+  +hibernate-script-1.00.ebuild:
+  Initial check-in. Thank you to all who commented on bug #52019.
+
