@@ -29,7 +29,10 @@ that Linux supports.  The installation works by using a small included build ima
 a base to download and install packages whose sources are downloaded from the Internet.</p>
 
 <p>To install from the build CD, you will need to have a 486+ processor, and ideally at
-least 64 Megabytes of RAM.  To begin the install process, first grab the 16Mb
+least 64 Megabytes of RAM.  
+(Gentoo linux has been successfully built with 64MB of RAM + 64MB of swap space,
+but the build process is awfully slow under those conditions.)
+To begin the install process, first grab the 16Mb
 build CD ISO image (<path>build-ix86-1.0_rc6-r10.iso</path> is the latest at the time this
 article was written) from
 <uri>http://www.ibiblio.org/gentoo/snapshots/build/ix86-linux-gnu/</uri>.  Then, create
@@ -691,6 +694,11 @@ and reboot the system:</p>
 # <i>umount /mnt/gentoo</i>
 # <i>reboot</i>
 </pre>
+<note>
+After rebooting, it is a good idea to run the <c>update-modules</c> command to create
+the <path>/etc/modules.conf</path> file.  Instead of modifying this file directly, you should
+generally make changes to the files in <path>/etc/modules.d</path>.
+</note>
 <p>If you have any questions or would like to get involved with Gentoo Linux development, 
 consider joining our gentoo-dev mailing list (there's a "click to subscribe" link on our <uri link="http://www.gentoo.org">main page</uri>).
 </p>
