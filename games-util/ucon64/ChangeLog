@@ -1,0 +1,11 @@
+# ChangeLog for games-util/ucon64
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.1 2004/02/25 19:23:36 mr_bones_ Exp $
+
+*ucon64-1.9.8.3 (25 Feb 2004)
+
+  25 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  ucon64-1.9.8.3.ebuild:
+  initial commit; ebuild submitted by Luca Marra and heavily modified (bug
+  #42078)
+
