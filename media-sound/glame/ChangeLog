@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/glame
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.12 2003/11/12 22:08:42 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.13 2004/01/21 18:42:53 raker Exp $
+
+*glame-1.0.2 (21 Jan 2004)
+
+  21 Jan 2004; Nick Hadaway <raker@gentoo.org> glame-1.0.2.ebuild,
+  gentoo.patch:
+  Version bump.  Fixed libxml/libxml2 detection.  Fixed alsa detection
+  and added the alsa USE variable.  Added support for fftw and ladspa.
+  Please comment and reopen bug #35948 if you find any problems.
 
   12 Nov 2003; Todd Sunderlin <todd@gentoo.org> glame-1.0.1.ebuild:
   added ~sparc keyword

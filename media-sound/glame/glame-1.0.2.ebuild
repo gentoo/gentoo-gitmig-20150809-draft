@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.4.ebuild,v 1.5 2004/01/21 18:42:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.1 2004/01/21 18:42:53 raker Exp $
 
-IUSE="nls gnome"
+IUSE="nls gnome oggvorbis debug alsa"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Glame is an audio file editing utility"
@@ -11,15 +11,21 @@ HOMEPAGE="http://glame.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND=">=dev-util/guile-1.4-r3
-	dev-libs/libxml2
+	>=dev-libs/libxml-1.8.0
+	>=dev-libs/libxml2-2.0.0
 	>=media-sound/esound-0.2
-	media-libs/audiofile
-	gnome? ( <gnome-base/libglade-2 gnome-base/gnome-libs )"
+	>=media-libs/audiofile-0.2.2
+	=dev-libs/fftw-2*
+	media-sound/mad
+	media-libs/ladspa-sdk
+	oggvorbis? ( >=media-libs/libvorbis-1.0 )
+	gnome? ( <gnome-base/libglade-2 gnome-base/gnome-libs )
+	alsa? ( media-libs/alsa-lib )"
 
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( >=sys-devel/gettext-0.11.3 )"
 
 src_unpack() {
 	unpack ${A}
@@ -36,10 +42,13 @@ src_unpack() {
 	export WANT_AUTOCONF_2_5=1
 	cd ${S}/libltdl
 	autoconf -f
+
+	cd ${S}
+	epatch ${FILESDIR}/gentoo.patch
 }
 
 src_compile() {
-	local myconf=""
+	local myconf="--enable-ladspa"
 
 	if [ "`use gnome`" ]
 	then
@@ -52,10 +61,17 @@ src_compile() {
 
 	use nls	&& myconf="--enable-nls" \
 		|| myconf="--disable-nls"
+
 	use gnome && myconf="${myconf} --enable-gui" \
 		|| myconf="${myconf} --disable-gui"
 
-	econf --with-included-gettext ${myconf} || die "Configuration failed"
+	use debug && myconf="${myconf} --enable-swapfiledebug --enable-debug" \
+		|| myconf="${myconf} --disable-swapfiledebug --disable-debug"
+
+	use alsa || myconf="${myconf} --disable-alsatest"
+
+	econf ${myconf} || die "Configuration failed"
+
 	emake || die "Compilation failed"
 }
 

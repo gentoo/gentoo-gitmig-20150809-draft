@@ -1,0 +1,52 @@
+diff -urN glame-1.0.2/configure glame-1.0.2-new/configure
+--- glame-1.0.2/configure	2004-01-13 13:56:21.000000000 -0600
++++ glame-1.0.2-new/configure	2004-01-21 12:29:41.576998136 -0600
+@@ -28042,7 +28042,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
+-#include <xmlversion.h>
++#include <libxml/xmlversion.h>
+ 
+ int
+ main()
+@@ -30609,15 +30609,16 @@
+ main ()
+ {
+ 
+-#if SND_LIB_MAJOR != $alsa_min_major_version
+-#error wrong major version
+-#endif
+-#if SND_LIB_MINOR < $alsa_min_minor_version
+-#error wrong minor version
+-#endif
+-#if (SND_LIB_MINOR == $alsa_min_minor_version) && (SND_LIB_SUBMINOR < $alsa_min_subminor_version)
+-#error wrong subminor version
+-#endif
++/* #if SND_LIB_MAJOR != $alsa_min_major_version */
++/* #error wrong major version */
++/* #endif */
++/* #if SND_LIB_MINOR < $alsa_min_minor_version */
++/* #error wrong minor version */
++/* #endif */
++/* #if (SND_LIB_MINOR == $alsa_min_minor_version) && (SND_LIB_SUBMINOR < */
++/* $alsa_min_subminor_version) */
++/* #error wrong subminor version */
++/* #endif */
+ 
+   ;
+   return 0;
+diff -urN glame-1.0.2/src/glmid/gpsm.c glame-1.0.2-new/src/glmid/gpsm.c
+--- glame-1.0.2/src/glmid/gpsm.c	2004-01-10 18:17:16.000000000 -0600
++++ glame-1.0.2-new/src/glmid/gpsm.c	2004-01-21 12:32:35.530553176 -0600
+@@ -26,8 +26,8 @@
+ #include <stdio.h>
+ #include <errno.h>
+ #include <string.h>
+-#include <xmlmemory.h>
+-#include <parser.h>
++#include <libxml/xmlmemory.h>
++#include <libxml/parser.h>
+ #include "glame_types.h"
+ #include "swapfile.h"
+ #include "gpsm.h"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.3.ebuild,v 1.6 2003/09/07 00:06:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.3.ebuild,v 1.7 2004/01/21 18:42:53 raker Exp $
 
 IUSE="nls gnome"
 
