@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.13 2004/02/21 21:23:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.14 2004/02/21 22:33:43 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -23,6 +23,26 @@ vcards() {
 filter-patch() {
 	mv ${PATCH_DIR}/"*${1}*" ${PATCH_DIR}/excluded
 }
+
+patch_exclude() {
+	# Exclude patches matching a pattern if they exist
+	einfo "Excluding patches..."
+	for PATCH_GROUP in ${@}
+	do
+		# Repress errors for non-matching patterns, they're ugly
+		for PATCH in "$(ls ${PATCHDIR}/*${PATCH_GROUP}* 2> /dev/null)"
+		do
+			if [ -a "${PATCH}" ]
+			then
+				ebegin "  `basename ${PATCH}`"
+					mv -f ${PATCH} ${EXCLUDED}
+				eend 0
+			fi
+		done
+	done
+	einfo "Done excluding patches"
+}
+
 
 # This is to ease kernel checks for patching and other things. (spyderous)
 # Kernel checker is_kernel $1 $2 where $1 is KV_major and $2 is KV_minor.
