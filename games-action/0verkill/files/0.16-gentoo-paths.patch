@@ -1,10 +1,13 @@
 --- sprite.c.orig	2004-01-08 00:42:51.897946128 -0500
 +++ sprite.c	2004-01-08 00:43:10.986044296 -0500
-@@ -188,6 +188,9 @@
+@@ -188,6 +188,12 @@
   
  	if (!(f=fopen(filename,"rb")))
  	{
 +		chdir(DATA_PATH);
++	}
++	if (!(f=fopen(filename,"rb"))) {
++		chdir(DATA_PATH "/../");
 +	}
 +	if (!(f=fopen(filename,"rb"))) {
  		unsigned char msg[256];
