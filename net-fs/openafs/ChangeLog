@@ -1,10 +1,13 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.13 2002/12/26 21:05:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.14 2002/12/31 19:14:54 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *openafs-1.2.6-r1 (1 Oct 2002)
+
+  31 Dec 2002; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.6-r1.ebuild :
+  Added Chris Snyder's ebuild mod that updates env.d/
 
   26 Dec 2002; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.6-r1.ebuild :
 

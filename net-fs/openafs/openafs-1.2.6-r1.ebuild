@@ -97,6 +97,8 @@ src_install () {
 
 	dodir /etc/env.d
 	echo 'CONFIG_PROTECT_MASK="/etc/afs/C /etc/afs/afsws"' >> ${D}/etc/env.d/01${PN}
+	echo 'PATH=/usr/afsws/bin:/etc/afs/afsws' >> ${D}/etc/env.d/01${PN}
+	echo 'ROOTPATH=/usr/afsws/bin:/etc/afs/afsws:/usr/afs/bin' >> ${D}/etc/env.d/01${PN}
 }
 
 pkg_postinst () {
