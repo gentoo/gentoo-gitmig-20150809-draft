@@ -1,14 +1,24 @@
-MD5 eabda7781520c27b7cfe13147a19e61a autoconf-2.13.ebuild 1536
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cc7f5ea3c259adf353122e6a1ebd7637 autoconf-2.13.ebuild 1535
+MD5 f67c6d5490d290a6355f479f91b3e5f1 ChangeLog 9835
+MD5 7081c99116f8f40ad8c6cb41c708e5d7 autoconf-2.59-r6.ebuild 1138
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d1b5bd32e2fe7904d41b71ca1a17caf0 ChangeLog 9713
 MD5 3d83ca04ad6ce45925430fb4351be5d7 autoconf-2.59-r5.ebuild 3432
-MD5 10041a84877f898a14c9e4a4e142a36b autoconf-2.59-r6.ebuild 1139
-MD5 12f8fb67eaf50f87ed7825356503e8d7 files/autoconf-2.13-configure-gentoo.diff 958
-MD5 ed1c29020cbdfc79d6a1ece183afd936 files/digest-autoconf-2.59-r6 66
 MD5 372cd1fdd18a95f5a6af7cb36bfd12de files/autoconf-2.58-infopage-namechange.patch 5117
-MD5 b310d32d1d5c26cb84206bfda473da1c files/digest-autoconf-2.59-r5 131
-MD5 02c192b9ea3e4945d007a8cfde221c73 files/digest-autoconf-2.13 65
 MD5 dee8e039dbcfd6a6543e28688615ee17 files/autoconf-2.13-destdir.patch 677
-MD5 f935499520b964a1fcfc23b68d8c8558 files/autoconf-2.13-configure.in-gentoo.diff 443
 MD5 edfa347b2a6e2c0de846cabda899b429 files/autoconf-2.13-gentoo.patch 898
+MD5 02c192b9ea3e4945d007a8cfde221c73 files/digest-autoconf-2.13 65
+MD5 12f8fb67eaf50f87ed7825356503e8d7 files/autoconf-2.13-configure-gentoo.diff 958
+MD5 f935499520b964a1fcfc23b68d8c8558 files/autoconf-2.13-configure.in-gentoo.diff 443
 MD5 c07cd3cad0342c7c9ccafdb4f0ae8b03 files/ac-wrapper.pl 2785
+MD5 ed1c29020cbdfc79d6a1ece183afd936 files/digest-autoconf-2.59-r6 66
+MD5 b310d32d1d5c26cb84206bfda473da1c files/digest-autoconf-2.59-r5 131
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB/WRiugEuf3OQ0akRAuueAJ9d6AzY0yCq/8scONZfj4rxPPxSxgCglG8W
+2b8+0KWQuA1ewcBatlwKjLI=
+=2kvW
+-----END PGP SIGNATURE-----
