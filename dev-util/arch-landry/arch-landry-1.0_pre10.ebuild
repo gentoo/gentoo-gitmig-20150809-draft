@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/arch-landry/arch-landry-1.0_pre10.ebuild,v 1.2 2003/02/13 11:46:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/arch-landry/arch-landry-1.0_pre10.ebuild,v 1.3 2003/11/14 11:43:40 seemant Exp $
 
 MY_P="${P//_/}"
 S="${WORKDIR}/${MY_P}/src/=build"
@@ -17,7 +17,7 @@ RDEPEND=">=sys-apps/diffutils-2.0
 	>=sys-apps/findutils-4.0
 	>=sys-apps/gawk-3.0
 	>=sys-apps/sh-utils-2.0
-	>=sys-apps/tar-1.0
+	>=app-arch/tar-1.0
 	>=sys-apps/textutils-2.0
 	>=sys-apps/util-linux-2.0
 	>=sys-apps/debianutils-1.10

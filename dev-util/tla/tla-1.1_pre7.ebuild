@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.1_pre7.ebuild,v 1.1 2003/10/20 04:53:41 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.1_pre7.ebuild,v 1.2 2003/11/14 11:43:40 seemant Exp $
 
 MY_P="${P/_/}"
 
@@ -18,7 +18,7 @@ DEPEND="sys-apps/coreutils
 	sys-devel/patch
 	sys-apps/findutils
 	sys-apps/gawk
-	sys-apps/tar
+	app-arch/tar
 	sys-apps/util-linux
 	sys-apps/debianutils
 	sys-devel/make"

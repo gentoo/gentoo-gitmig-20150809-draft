@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/larch-1.0_pre0.ebuild,v 1.1 2003/10/05 03:04:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/larch-1.0_pre0.ebuild,v 1.2 2003/11/14 11:43:40 seemant Exp $
 
 MY_P="${P//_/}"
 DESCRIPTION="revision control system ideal for widely distributed development (see \"tla\" also)"
@@ -17,7 +17,7 @@ DEPEND="sys-apps/diffutils
 	sys-apps/coreutils
 	sys-apps/findutils
 	sys-apps/gawk
-	sys-apps/tar
+	app-arch/tar
 	sys-apps/util-linux
 	sys-apps/debianutils
 	sys-devel/make
