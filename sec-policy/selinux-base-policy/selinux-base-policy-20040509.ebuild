@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040509.ebuild,v 1.2 2004/05/16 01:22:22 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040509.ebuild,v 1.3 2004/06/10 22:36:13 pebenito Exp $
 
 IUSE="build"
 
@@ -23,6 +23,10 @@ S=${WORKDIR}/base-policy
 DEPRECATED="domains/program/devfsd.te domains/program/opt.te
 	file_contexts/program/devfsd.fc file_contexts/program/opt.fc
 	file_contexts/users.fc"
+
+src_compile() {
+	return
+}
 
 src_install() {
 	if use build; then

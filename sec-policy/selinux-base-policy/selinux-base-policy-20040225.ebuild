@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040225.ebuild,v 1.4 2004/04/07 20:11:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040225.ebuild,v 1.5 2004/06/10 22:36:13 pebenito Exp $
 
 IUSE="build"
 
@@ -20,6 +20,10 @@ RDEPEND="sys-devel/m4
 S=${WORKDIR}/base-policy
 
 [ -z ${POLICYDIR} ] && POLICYDIR="/etc/security/selinux/src/policy"
+
+src_compile() {
+	return
+}
 
 src_install() {
 	if use build; then
