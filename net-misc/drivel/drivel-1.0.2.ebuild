@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-1.0.2.ebuild,v 1.4 2004/10/23 09:34:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-1.0.2.ebuild,v 1.5 2004/12/06 09:04:32 joem Exp $
 
 inherit gnome2
 
 DESCRIPTION="Drivel is a LiveJournal client for the GNOME desktop."
-HOMEPAGE="http://sourceforge.net/project/drivel/"
+HOMEPAGE="http://www.dropline.net/drivel/"
 SRC_URI="mirror://sourceforge/drivel/${P}.tar.bz2"
 LICENSE="GPL-2"
 

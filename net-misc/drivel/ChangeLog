@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/drivel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.13 2004/12/06 06:25:09 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.14 2004/12/06 09:04:32 joem Exp $
+
+  06 Dec 2004; Joe McCann <joem@gentoo.org> drivel-1.0.2.ebuild,
+  drivel-1.2.1.ebuild, drivel-1.2.3.ebuild:
+  Changing to real homepage instead of sourceforge project page. Thanks to
+  spyderous for the correct link
 
   06 Dec 2004; Joe McCann <joem@gentoo.org> drivel-1.2.1.ebuild:
   marking x86 stable
