@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.90 2004/03/02 11:28:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.91 2004/03/04 23:44:57 robbat2 Exp $
+
+*mysql-4.0.18 (04 Mar 2004)
+
+  04 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.18.ebuild,
+  files/mysql-4.0.18-gentoo-nptl.diff, files/mysql-4.0.18-install-db-sh.diff,
+  files/mysql-4.0.18-mysqld-safe-sh.diff, files/mysql-4.0.18-thrssl.patch:
+  Update to latest version from upstream, bug #41465.
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> mysql-4.0.17.ebuild:
   Stable on sparc.
