@@ -23,7 +23,7 @@
 
 # <carpaski@gentoo.org> (03 Feb 2003)
 # Masked for testing. Lots of fixes.
-=sys-apps/portage-2.0.46-r10
+=sys-apps/portage-2.0.46-r11
 # Testing for UserPriv compile. Works, but breaks a couple ebuilds.
 >=sys-apps/portage-2.0.47_pre1
 
