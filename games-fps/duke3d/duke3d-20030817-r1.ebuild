@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.10 2004/03/19 16:51:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.11 2004/04/10 09:08:03 mr_bones_ Exp $
 
 ECVS_PASS="anonymous"
 ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -17,20 +17,20 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="perl opengl" # nophysfs"
 
-DEPEND="virtual/x11
-	x86? ( dev-lang/nasm )
-	>=sys-apps/sed-4
+RDEPEND="virtual/x11
 	media-libs/libsdl
 	media-libs/sdl-mixer
 	media-sound/timidity++
 	media-sound/timidity-eawpatches
 	opengl? ( virtual/opengl )"
-#	!nophysfs? ( dev-games/physfs )"
+DEPEND="${RDEPEND}
+	x86? ( dev-lang/nasm )
+	>=sys-apps/sed-4"
 
 S="${WORKDIR}/${ECVS_MODULE}"
 
-use_tf() { [ `use ${1}` ] && echo true || echo false; }
-use_ft() { [ `use ${1}` ] && echo false || echo true; }
+use_tf() { [ use ${1} && echo true || echo false; }
+use_ft() { [ use ${1} && echo false || echo true; }
 
 src_unpack() {
 	local fromcvs=0
@@ -49,18 +49,31 @@ src_unpack() {
 	sed -i \
 		-e "/^useperl := /s:=.*:= `use_tf perl`:" \
 		-e "/^useopengl := /s:=.*:= `use_tf opengl`:" \
-		-e "/^usephysfs := /s:=.*:= false:" \
-		Makefile
-	[ `use x86` ] && sed -i 's:^#USE_ASM:USE_ASM:' Makefile
+		-e "/^usephysfs := /s:=.*:= false:" Makefile \
+			|| die "sed Makefile failed"
+	if use x86 ; then
+		sed -i \
+			-e 's:^#USE_ASM:USE_ASM:' Makefile \
+				|| die "sed Makefile failed (x86)"
+	fi
 	epatch ${FILESDIR}/${PV}-buildengine-makefile-cflags.patch
-	sed -i 's:/usr/lib/perl5/i386-linux/CORE/libperl.a::' Makefile
+	sed -i \
+		-e 's:/usr/lib/perl5/i386-linux/CORE/libperl.a::' Makefile \
+			|| die "sed Makefile failed"
 
 	# configure duke3d
 	cd ${S}/source
 	epatch ${FILESDIR}/${PV}-duke3d-makefile-opts.patch
-	[ `use x86` ] && sed -i '/^#use_asm/s:#::' Makefile
-	[ `use opengl` ] && sed -i '/^#use_opengl/s:#::' Makefile
-#	[ `use nophysfs` ] || sed -i '/^#use_physfs/s:#::' Makefile
+	if use x86 ; then
+		sed -i \
+			-e '/^#use_asm/s:#::' Makefile \
+				|| die "sed Makefile failed"
+	fi
+	if use opengl ; then
+		sed -i \
+			-e '/^#use_opengl/s:#::' Makefile \
+				|| die "sed Makefile failed"
+	fi
 }
 
 src_compile() {
@@ -75,7 +88,7 @@ src_compile() {
 src_install() {
 	dogamesbin ${FILESDIR}/duke3d
 	dosed "s:GENTOO_DIR:${GAMES_DATADIR}/${PN}:" ${GAMES_BINDIR}/duke3d
-	newgamesbin source/duke3d duke3d.bin
+	newgamesbin source/duke3d duke3d.bin || die "newgamesbin failed"
 
 	dodoc readme.txt
 

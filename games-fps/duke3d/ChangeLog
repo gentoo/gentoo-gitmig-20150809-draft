@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/duke3d
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.9 2004/03/19 16:51:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.10 2004/04/10 09:08:03 mr_bones_ Exp $
+
+  10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  duke3d-20030817-r1.ebuild:
+  don't rdepend on sed; error check sed; use flag tidy
 
   28 Nov 2003; David Holm <dholm@gentoo.org> duke3d-20030817-r1.ebuild:
   nasm is only available on x86 and timidity-eawpatches is only available on
