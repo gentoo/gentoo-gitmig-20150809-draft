@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r9.ebuild,v 1.9 2003/10/01 20:55:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r9.ebuild,v 1.10 2003/10/10 18:41:23 pappy Exp $
 
 IUSE="doc"
 
@@ -50,12 +50,6 @@ src_unpack() {
 	sed -e 's:DB185INC=:DB185INC= -I/usr/include/db1:' \
 		-e 's:DB185LIB=:DB185LIB= -ldb1:' \
 		${S}/dist/Makefile.in.orig > ${S}/dist/Makefile.in || die "Failed to sed"
-
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	#if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
-	#then
-	#	CC="${CC} -yet_exec"
-	#fi
 
 	# Fix invalid .la files
 	cd ${WORKDIR}/${P}/dist
