@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <hanno@gentoo.org> (17 Nov 2002)
+# new ebuild for pcmcia-cs, changed a lot, must check if it doesn't break
+# things before unmasking.
+=sys-apps/pcmcia-cs-3.2.3
+
 # <phoenix@gentoo.org> (17 Nov 2002)
 # sawfish-1.2 is newer - masking 2.0
 # to force portage to go ~back~ to 1.2
