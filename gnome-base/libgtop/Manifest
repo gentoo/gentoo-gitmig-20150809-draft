@@ -4,8 +4,8 @@ MD5 8d7dedf2a6f031ad86b2f272ecdbf629 libgtop-2.0.8.ebuild 589
 MD5 6557400e2377e0a34b3bb0c870226e60 libgtop-2.8.3.ebuild 592
 MD5 10535e0f0d28bb1c0c5154109989ab1d libgtop-1.0.13-r2.ebuild 1500
 MD5 8aa1952067afb8ce0878c825e0c90e6f libgtop-2.8.0.ebuild 615
-MD5 4129b7cbf40084ad753e109a97e47385 libgtop-2.8.2.ebuild 594
-MD5 f5ffe0a5b0de76175df0188608cd6cc5 ChangeLog 7655
+MD5 c0cc584b2645895c51a1db799d885a4c libgtop-2.8.2.ebuild 589
+MD5 3f6671a1bae228712216e024a1e64375 ChangeLog 7744
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 059693f20d0addbeb2d9d98cbc58dfac files/libgtop-2.0.6-lt_version_fix.patch 424
 MD5 b1a2be73a4e3ecb6d70da68624080ba9 files/1.0.13-remote_buffer_overflow.diff 543
