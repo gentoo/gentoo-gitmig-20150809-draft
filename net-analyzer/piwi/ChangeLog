@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/piwi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.1 2003/07/17 20:15:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.2 2003/07/26 23:51:00 solar Exp $
+
+*piwi-0.8.0.20030726 (26 Jul 2003)
+
+  26 Jul 2003; <solar@gentoo.org> piwi-0.8.0.20030726.ebuild:
+  version bump, upstream now provides proper versioning
 
 *piwi-0.0.20030717 (17 Jul 2003)
 
