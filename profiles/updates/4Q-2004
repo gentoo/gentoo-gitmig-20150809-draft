@@ -151,3 +151,4 @@ move app-sci/freehdl sci-electronics/freehdl
 move app-sci/geda sci-electronics/geda
 move app-sci/gerbv sci-electronics/gerbv
 move app-sci/gplcver sci-electronics/gplcver
+move app-sci/gnucap sci-electronics/gnucap
