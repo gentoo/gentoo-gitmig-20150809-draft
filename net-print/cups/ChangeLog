@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.84 2004/09/22 13:08:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.85 2004/10/06 13:17:28 lanius Exp $
+
+*cups-1.1.20-r3 (06 Oct 2004)
+
+  06 Oct 2004; Heinrich Wendel <lanius@gentoo.org> +files/str920.patch,
+  +cups-1.1.20-r3.ebuild, +cups-1.1.21-r1.ebuild:
+  fix security issue in logfiles; bug #66501
 
   22 Sep 2004; Joshua Kinard <kumba@gentoo.org> cups-1.1.20-r2.ebuild:
   Marked stable on mips.
