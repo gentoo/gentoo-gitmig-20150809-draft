@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.15 2004/10/30 16:24:19 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.16 2004/11/03 18:18:05 carlo Exp $
+
+*digikam-0.7_rc1 (03 Nov 2004)
+
+  03 Nov 2004; Carsten Lohrke <carlo@gentoo.org> -digikam-0.5.1.ebuild,
+  -digikam-0.6.2_rc1.ebuild, -digikam-0.7_beta1.ebuild,
+  +digikam-0.7_rc1.ebuild:
+  version bump,  clean up
 
   30 Oct 2004; Carsten Lohrke <carlo@gentoo.org> digikam-0.7_beta1.ebuild:
   added missing media-libs/imlib2 dependency
