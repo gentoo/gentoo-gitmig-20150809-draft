@@ -1,0 +1,10 @@
+--- src/compat/widgets/q3groupbox.cpp.orig	2004-12-28 10:52:08.917838088 -0500
++++ src/compat/widgets/q3groupbox.cpp	2004-12-28 10:50:50.034830128 -0500
+@@ -39,6 +39,7 @@
+ #include "qcheckbox.h"
+ #include "qaccessible.h"
+ #include "qstyleoption.h"
++#include "qevent.h"
+ using namespace Qt;
+ 
+ /*!
