@@ -6,17 +6,6 @@ retrieving revision 1.6
 diff -u -r1.5 -r1.6
 --- others/amazon.py	4 Dec 2003 01:56:50 -0000	1.5
 +++ others/amazon.py	17 May 2004 14:37:44 -0000	1.6
-@@ -55,8 +55,8 @@
- 
- __author__ = "Mark Pilgrim (f8dy@diveintomark.org)"
- __version__ = "0.61"
--__cvsversion__ = "$Revision: 1.1 $"[11:-2]
--__date__ = "$Date: 2004/06/26 19:49:29 $"[7:-2]
-+__cvsversion__ = "$Revision: 1.1 $"[11:-2]
-+__date__ = "$Date: 2004/06/26 19:49:29 $"[7:-2]
- __copyright__ = "Copyright (c) 2002 Mark Pilgrim"
- __license__ = "Python"
- # Powersearch and return object type fix by Joseph Reagle <geek@goatee.net>
 @@ -174,7 +174,7 @@
      return rc
  
@@ -34,15 +23,6 @@ retrieving revision 1.5
 diff -u -r1.3 -r1.5
 --- others/babelfish.py	21 Aug 2003 12:25:35 -0000	1.3
 +++ others/babelfish.py	9 Jun 2004 23:43:37 -0000	1.5
-@@ -53,7 +53,7 @@
- BabelizerIOError
-     Thrown for various networking and IO errors.
- 
--Version: $Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $
-+Version: $Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $
- Author: Jonathan Feinberg <jdf@pobox.com>
- """
- import re, string, urllib
 @@ -66,6 +66,7 @@
  """
  __where = [ re.compile(r'lang=..>([^<]*)</div'),
@@ -67,23 +47,6 @@ retrieving revision 1.39
 diff -u -r1.38 -r1.39
 --- plugins/Bugzilla.py	6 Feb 2004 04:36:21 -0000	1.38
 +++ plugins/Bugzilla.py	1 May 2004 19:53:28 -0000	1.39
-@@ -34,15 +34,13 @@
- Bugzilla bug retriever
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
- 
- import os
- import re
- import csv
- import getopt
--import string
- import urllib
--import urllib2
- import xml.dom.minidom as minidom
- 
- from itertools import imap, ifilter
 @@ -55,6 +53,7 @@
  import plugins
  import ircutils
@@ -155,16 +118,6 @@ retrieving revision 1.56
 diff -u -r1.53 -r1.56
 --- plugins/Debian.py	1 Apr 2004 17:09:20 -0000	1.53
 +++ plugins/Debian.py	6 Jun 2004 21:18:18 -0000	1.56
-@@ -33,7 +33,8 @@
- This is a module to contain Debian-specific commands.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__author__ = "James Vega (jamessan) <jamessan@users.sf.net>"
- 
- import plugins
- 
 @@ -130,7 +131,7 @@
              glob = rest.pop()
              regexp = fnmatch.translate(glob.lstrip('/'))
@@ -235,16 +188,6 @@ retrieving revision 1.22
 diff -u -r1.19 -r1.22
 --- plugins/Dunno.py	5 Feb 2004 06:00:45 -0000	1.19
 +++ plugins/Dunno.py	6 May 2004 16:33:43 -0000	1.22
-@@ -34,7 +34,8 @@
- random "I dunno"-like responses.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__author__ = "Daniel DiPaolo (Strike) <ddipaolo@users.sf.net>"
- 
- import os
- import time
 @@ -95,17 +96,19 @@
          """
          # Must be registered to use this
@@ -368,16 +311,6 @@ retrieving revision 1.49
 diff -u -r1.47 -r1.49
 --- plugins/Enforcer.py	5 Apr 2004 15:57:22 -0000	1.47
 +++ plugins/Enforcer.py	28 Apr 2004 06:30:55 -0000	1.49
-@@ -36,7 +36,8 @@
- empty channel in order to get ops.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__author__ = 'Jeremy Fincher (jemfinch) <jemfinch@users.sf.net>'
- 
- import plugins
- 
 @@ -162,8 +163,14 @@
          return False    # Default.
  
@@ -403,15 +336,6 @@ retrieving revision 1.92
 diff -u -r1.91 -r1.92
 --- plugins/FunDB.py	13 Apr 2004 04:08:15 -0000	1.91
 +++ plugins/FunDB.py	7 Jun 2004 05:17:50 -0000	1.92
-@@ -33,7 +33,7 @@
- Provides fun commands that require a database to operate.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
- 
- import plugins
- 
 @@ -344,9 +344,10 @@
              (id, insult) = cursor.fetchone()
              nick = re.sub(r'\bme\b', msg.nick, nick)
@@ -462,15 +386,6 @@ retrieving revision 1.34
 diff -u -r1.33 -r1.34
 --- plugins/Python.py	6 Feb 2004 04:36:21 -0000	1.33
 +++ plugins/Python.py	2 Jun 2004 05:16:54 -0000	1.34
-@@ -34,7 +34,7 @@
- written in) somehow.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
- 
- import plugins
- 
 @@ -48,9 +48,11 @@
  
  # Stupid printing on import...
@@ -494,16 +409,6 @@ retrieving revision 1.166
 diff -u -r1.163 -r1.166
 --- plugins/Relay.py	18 Apr 2004 00:35:54 -0000	1.163
 +++ plugins/Relay.py	10 May 2004 22:17:45 -0000	1.166
-@@ -33,7 +33,8 @@
- Handles relaying between networks.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__author__ = 'Jeremy Fincher (jemfinch) <jemfinch@users.sf.net>'
- 
- import plugins
- 
 @@ -217,7 +218,7 @@
          Starts relaying between the channel <channel> on all networks.  If on a
          network the bot isn't in <channel>, he'll join.  This commands is
@@ -530,16 +435,6 @@ retrieving revision 1.19
 diff -u -r1.17 -r1.19
 --- plugins/Scheduler.py	29 Mar 2004 16:52:42 -0000	1.17
 +++ plugins/Scheduler.py	27 May 2004 16:47:05 -0000	1.19
-@@ -34,7 +34,8 @@
- or repeatedly run at a particular interval.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__author__ = 'Jeremy Fincher (jemfinch) <jemfinch@users.sf.net>'
- 
- import plugins
- 
 @@ -62,7 +63,7 @@
              raise callbacks.Error, callbacks.ambiguousReply(ambiguous)
          def f():
@@ -566,15 +461,6 @@ retrieving revision 1.45
 diff -u -r1.43 -r1.45
 --- plugins/Services.py	16 Apr 2004 07:59:47 -0000	1.43
 +++ plugins/Services.py	4 Jun 2004 06:14:29 -0000	1.45
-@@ -33,7 +33,7 @@
- Services: Handles management of nicks with NickServ, and ops with ChanServ.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
- 
- import plugins
- 
 @@ -56,8 +56,8 @@
      chanserv = something('What is your ChanServ named?', default='ChanServ')
      nickserv = something('What is your NickServ named?', default='NickServ')
@@ -602,24 +488,6 @@ retrieving revision 1.74
 diff -u -r1.71 -r1.74
 --- plugins/Sourceforge.py	16 Apr 2004 16:31:17 -0000	1.71
 +++ plugins/Sourceforge.py	1 May 2004 21:38:49 -0000	1.74
-@@ -33,6 +33,9 @@
- Accesses Sourceforge.net for various things
- """
- 
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__author__ = "James Vega (jamessan) <jamessan@users.sf.net>"
-+
- import re
- import sets
- import getopt
-@@ -43,7 +46,6 @@
- 
- import conf
- import utils
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
- 
- import plugins
- import ircutils
 @@ -116,7 +118,7 @@
      _statusOpt = {'any':100, 'open':1, 'closed':2, 'deleted':3, 'pending':4}
  
@@ -646,15 +514,6 @@ retrieving revision 1.23
 diff -u -r1.22 -r1.23
 --- plugins/Words.py	27 Mar 2004 13:30:46 -0000	1.22
 +++ plugins/Words.py	29 Apr 2004 11:52:20 -0000	1.23
-@@ -33,7 +33,7 @@
- This handles interesting things to do with a dictionary (words) database.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
- 
- import supybot
- import plugins
 @@ -104,10 +104,13 @@
          
      def getWord(self, dbHandler):
@@ -707,16 +566,6 @@ retrieving revision 1.38
 diff -u -r1.34 -r1.38
 --- src/Admin.py	16 Apr 2004 07:39:55 -0000	1.34
 +++ src/Admin.py	11 May 2004 17:41:54 -0000	1.38
-@@ -34,7 +34,8 @@
- caller to have the 'admin' capability.  This plugin is loaded by default.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__author__ = 'Jeremy Fincher (jemfinch) <jemfinch@users.sf.net>'
- 
- import fix
- 
 @@ -53,6 +54,7 @@
  import ircmsgs
  import ircutils
@@ -766,15 +615,6 @@ retrieving revision 1.41
 diff -u -r1.39 -r1.41
 --- src/socketDrivers.py	12 Apr 2004 21:44:03 -0000	1.39
 +++ src/socketDrivers.py	19 Apr 2004 04:36:26 -0000	1.41
-@@ -35,7 +35,7 @@
- 
- from __future__ import division
- 
--__revision__ ="$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ ="$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
- 
- import fix
- 
 @@ -141,7 +141,8 @@
          self.irc.reset()
          self.conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -793,15 +633,6 @@ retrieving revision 1.39
 diff -u -r1.35 -r1.39
 --- plugins/URL.py	27 Feb 2004 17:20:57 -0000	1.35
 +++ plugins/URL.py	7 Jun 2004 19:45:49 -0000	1.39
-@@ -35,7 +35,7 @@
- URLs in the database.
- """
- 
--__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
-+__revision__ = "$Id: supybot-0.77.2-cvsadditions-2004-06-10.patch,v 1.1 2004/06/26 19:49:29 liquidx Exp $"
- 
- import plugins
- 
 @@ -171,8 +171,11 @@
          if not ircutils.isChannel(msg.args[0]):
              return

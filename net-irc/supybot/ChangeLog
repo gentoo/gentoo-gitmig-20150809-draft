@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/supybot
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.5 2004/06/26 19:49:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.6 2004/06/28 14:08:18 liquidx Exp $
+
+  28 Jun 2004; Alastair Tse <liquidx@gentoo.org>
+  files/supybot-0.77.2-cvsadditions-2004-06-10.patch:
+  sanitize patch so it doesn't get mangled by cvs (#55319)
 
 *supybot-0.77.2 (26 Jun 2004)
 
