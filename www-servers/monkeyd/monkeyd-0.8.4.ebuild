@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.8.4.ebuild,v 1.1 2004/08/08 17:41:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.8.4.ebuild,v 1.2 2004/09/06 22:17:45 vapier Exp $
 
 WEBROOT=/var/www/localhost
 
@@ -11,7 +11,7 @@ SRC_URI="http://monkeyd.sourceforge.net/versions/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 IUSE="php"
 
 DEPEND="virtual/libc"
