@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r2.ebuild,v 1.1 2004/11/07 21:30:05 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r2.ebuild,v 1.2 2004/11/08 15:39:32 ribosome Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -21,7 +21,7 @@ IUSE="X"
 RESTRICT="nomirror"
 
 DEPEND=">=sys-apps/baselayout-1.8.0"
-RDEPEND="X? ( virtual/x11 )"
+RDEPEND="!sparc? ( X? ( virtual/x11 ) )"
 
 src_unpack () {
 	unpack ${A}
@@ -35,7 +35,8 @@ src_unpack () {
 src_install () {
 	insinto ${I}
 	doins setiathome README
-	use X && doins xsetiathome README.xsetiathome
+	use X && ! use sparc && doins xsetiathome README.xsetiathome
+	fperms +x ${I}/setiathome
 
 	exeinto ${I}
 	newexe ${FILESDIR}/setiathome-wrapper setiwrapper

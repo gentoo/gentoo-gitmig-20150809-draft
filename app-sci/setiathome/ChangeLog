@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/setiathome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.25 2004/11/07 21:30:05 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.26 2004/11/08 15:39:32 ribosome Exp $
+
+  08 Nov 2004; Olivier Fisette <ribosome@gentoo.org> setiathome-3.03-r2.ebuild:
+  Removed X support and fixed file permissions for the sparc binaries.
 
 *setiathome-3.03-r2 (07 Nov 2004)
 
