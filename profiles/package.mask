@@ -194,6 +194,4 @@ gnome-apps/gnapster
 # These are the old locations. Will be removed when new locations are tested.
 # /Hallski
 
-dev-util/glimmer
-net-www/screem
 media-video/zapping
