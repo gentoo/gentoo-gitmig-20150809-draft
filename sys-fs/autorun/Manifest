@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2d669201a2b726b47e708913f16b2b2a autorun-3.10.ebuild 688
+MD5 e4ec01e615a90e2325f878a1496ced36 ChangeLog 347
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 90c866c065286201c5232eeb07999b55 files/digest-autorun-3.10 64
+MD5 d2575cfc679fee43d03d6606b73eb193 files/3.10-gentoo.patch 346
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBaJS5HTu7gpaalycRAiyJAKCIJVULgdqQOH9/+5C5q22qfbVPlgCgiXJY
+IhRjsa9+C+purzHCJjlL1uU=
+=K3KD
+-----END PGP SIGNATURE-----
