@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.63 2003/12/26 15:59:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.64 2003/12/29 11:53:38 bazik Exp $
+
+  29 Dec 2003; Sven Blumenstein <bazik@gentoo.org> gkrellm-2.1.23.ebuild:
+  Stable on sparc.
 
   26 Dec 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.24.ebuild:
   adding ssl. closes 36363.
