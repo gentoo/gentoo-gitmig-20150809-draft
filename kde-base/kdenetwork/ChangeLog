@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.111 2004/11/04 13:45:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.112 2004/11/05 19:03:49 caleb Exp $
+
+  05 Nov 2004; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.3.1.ebuild:
+  x86 stable
 
   04 Nov 2004; Jason Wever <weeve@gentoo.org> kdenetwork-3.3.1.ebuild:
   Stable on sparc wrt security bug #69936.

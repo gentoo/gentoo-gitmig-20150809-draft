@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.3.1.ebuild,v 1.4 2004/11/04 13:45:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.3.1.ebuild,v 1.5 2004/11/05 19:18:50 caleb Exp $
 
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE addon modules: plugins for konqueror, noatun etc"
 
-KEYWORDS="~amd64 ~hppa sparc ~x86 ~alpha"
+KEYWORDS="~amd64 ~hppa sparc x86 ~alpha"
 IUSE="arts sdl svga xmms esd"
 
 DEPEND="~kde-base/kdepim-${PV}
