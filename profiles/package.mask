@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <strider@gentoo.org> (4 Nov 2002)
+# Masked since all jakarta projects dont have jakarta- preffix
+# Moved to dev-java/regexp
+>=dev-java/jakarta-regexp-1.2
+
 # <danarmak@gentoo.org> (1 Nov 2002)
 # old and broken. I hope there'll be a new release soon - there's a kwintv3 project that's basically
 # a rewrite and it's in alpha stages atm. I've a cs ebuild for it btw.
