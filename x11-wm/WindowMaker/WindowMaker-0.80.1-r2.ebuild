@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.14 2002/10/05 05:39:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.15 2002/10/17 14:50:06 aliz Exp $
 
 IUSE="gif nls png kde oss jpeg gnome"
 
@@ -24,11 +24,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 src_unpack() {
-
-        unpack ${A}
-        cd ${WORKDIR}
-        patch -p0 < ${FILESDIR}/${P}-gentoo.patch
-
+	unpack ${A}
+	cd ${WORKDIR}
+	patch -p0 < ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
@@ -41,7 +39,7 @@ src_compile() {
 	
 	use kde \
 		&& myconf="${myconf} --enable-kde" \
-		&& export KDEDIR=/usr/kde/2	\
+		&& export KDEDIR=/usr/kde/2 \
 		|| myconf="${myconf} --disable-kde"
 	
 	if [ "$WITH_MODELOCK" ] ; then
@@ -128,8 +126,7 @@ src_install() {
 }
 
 pkg_postinst() {
-
-    echo
+	echo
 	echo '######################################################################'
 	echo '# If do you want trans globes and other trans elements you need      #'
 	echo '# libxpm (media-libs/xpm).                                           #'

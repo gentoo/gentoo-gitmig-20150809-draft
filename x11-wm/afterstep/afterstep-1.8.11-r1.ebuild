@@ -21,10 +21,9 @@ RDEPEND="${DEPEND}
 
 
 src_unpack() {
-    unpack ${A}
-    cd ${S}
-    patch -p0 < ${FILESDIR}/${P}-gentoo.diff
-
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.3.11.ebuild,v 1.5 2002/08/14 15:45:39 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.3.11.ebuild,v 1.6 2002/10/17 14:50:07 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A minimalist, no frills window manager for X."
@@ -17,18 +17,16 @@ RDEPEND="$DEPEND"
 
 src_compile() {
 
-    emake allinone || die
+	emake allinone || die
 
 }
 
 src_install () {
+	dodoc ChangeLog README*
 
-    dodoc ChangeLog README*
+	exeinto /usr/bin
+	doexe evilwm
 
-    exeinto /usr/bin
-    doexe evilwm
-
-    doman evilwm.1
-
+	doman evilwm.1
 }
 

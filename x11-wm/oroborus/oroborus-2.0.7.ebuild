@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.7.ebuild,v 1.3 2002/10/17 13:14:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.7.ebuild,v 1.4 2002/10/17 14:50:07 aliz Exp $
 
 DESCRIPTION="Small and fast window manager."
 HOMEPAGE="http://www.dreamind.de/oroborus.shtml"
@@ -16,11 +16,11 @@ S="${WORKDIR}/${P}"
 
 src_compile() {
 
-	./configure --host=${CHOST}					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc/X11/oroborus			\
-	 	    --infodir=/usr/share/info				\
-		    --mandir=/usr/share/man				\
+	./configure --host=${CHOST} \
+		    --prefix=/usr \
+		    --sysconfdir=/etc/X11/oroborus \
+	 	    --infodir=/usr/share/info \
+		    --mandir=/usr/share/man \
 		    || die
 	
 	emake || die
@@ -28,10 +28,10 @@ src_compile() {
 
 src_install () {
 
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc/X11/oroborus				\
-	     infodir=${D}/usr/share/info				\
-	     mandir=${D}/usr/share/man					\
+	make prefix=${D}/usr \
+	     sysconfdir=${D}/etc/X11/oroborus \
+	     infodir=${D}/usr/share/info \
+	     mandir=${D}/usr/share/man \
 	     install || die
 
 	if [ "`use gnome`" ] ; then

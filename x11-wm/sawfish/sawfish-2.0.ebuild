@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-2.0.ebuild,v 1.6 2002/10/05 05:39:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-2.0.ebuild,v 1.7 2002/10/17 14:50:07 aliz Exp $
 
 IUSE="readline esd nls"
 
@@ -49,7 +49,7 @@ src_compile() {
 	# The themer is currently broken (must have rep-gtk-0.15
 	# installed to get it compiled) - Azarah, 24 Jun 2002
 	./configure --host=${CHOST} \
-		--prefix=/usr  \
+		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--libexecdir=/usr/lib \
 		--with-gnome-prefix=/usr \

@@ -15,10 +15,10 @@ DEPEND="virtual/glibc
 RDEPEND=${DEPEND}
 
 src_unpack() {
-   unpack ${A}
-   cd ${S}
-   # this is definitely going to be an upstream patch (mkennedy)
-   patch -p1 <${FILESDIR}/treewm-0.4.2-gcc3-gentoo.patch || die
+	unpack ${A}
+	cd ${S}
+	# this is definitely going to be an upstream patch (mkennedy)
+	patch -p1 <${FILESDIR}/treewm-0.4.2-gcc3-gentoo.patch || die
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.7 2002/10/17 13:14:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.8 2002/10/17 14:50:07 aliz Exp $
 
 NPV=20010309
 S=${WORKDIR}/pwm-${NPV}
@@ -42,7 +42,7 @@ src_compile() {
 
 src_install() {
 	make PREFIX=${D}/usr \
-	     MANDIR=${D}/usr/share/man	\
+	     MANDIR=${D}/usr/share/man \
 	     DOCDIR=${D}/usr/share/doc \
 	     ETCDIR=${D}/etc/X11 \
 	     install || die

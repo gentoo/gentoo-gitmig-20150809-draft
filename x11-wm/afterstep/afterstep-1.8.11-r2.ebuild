@@ -21,28 +21,26 @@ RDEPEND="${DEPEND}
 
 
 src_unpack() {
-
-    unpack ${A}
-    cd ${S}
-    patch -p0 < ${FILESDIR}/${P}-gentoo.diff
-
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
 	local myconf
 	use nls && myconf="${myconf} --enable-i18n"
 
-	./configure	\
-		--host=${CHOST}	\
-		--prefix=/usr	\
-		--libdir=/usr/lib	\
-		--mandir=/usr/share/man	\
-		--infodir=/usr/share/info	\
-		--sysconfdir=/etc/X11	\
-		--with-helpcommand="xterm -e man"	\
-		--disable-availability	\
-		--disable-staticlibs	\
-		--with-xpm	\
+	./configure \
+		--host=${CHOST} \
+		--prefix=/usr \
+		--libdir=/usr/lib \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--sysconfdir=/etc/X11 \
+		--with-helpcommand="xterm -e man" \
+		--disable-availability \
+		--disable-staticlibs \
+		--with-xpm \
 		${myconf} || die
 		    
 	emake || die
@@ -50,8 +48,8 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D}						\
-	     GNUSTEP_LOCAL_ROOT=${D}${GNUSTEP_LOCAL_ROOT}		\
+	make DESTDIR=${D} \
+	     GNUSTEP_LOCAL_ROOT=${D}${GNUSTEP_LOCAL_ROOT} \
 	     install || die
 	     
 	rm -f ${D}/usr/bin/sessreg

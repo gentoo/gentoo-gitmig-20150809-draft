@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.7-r1.ebuild,v 1.6 2002/10/05 05:39:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.7-r1.ebuild,v 1.7 2002/10/17 14:50:07 aliz Exp $
 
 IUSE="ncurses gtk gnome"
 
@@ -29,16 +29,16 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	use gnome	\
-		&& myconf="--with-gnome"	\
-		|| myconf="--without-gnome"	\
+	use gnome \
+		&& myconf="--with-gnome" \
+		|| myconf="--without-gnome" \
 
-	./configure	\
-		--prefix=/usr 	\
+	./configure \
+		--prefix=/usr \
 		--host=${CHOST} \
 		--libexecdir=/usr/lib \
 		--mandir=/usr/share/man \
-		--infodir=/usr/share/info	\
+		--infodir=/usr/share/info \
 		${myconf} || die
 
 	emake || die
