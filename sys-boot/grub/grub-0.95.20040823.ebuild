@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.3 2004/08/26 20:52:02 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.4 2004/09/05 20:40:39 robmoss Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig
 
@@ -118,7 +118,7 @@ pkg_postinst() {
 	cp -p /lib/grub/*/* /boot/grub
 
 	[ -e /boot/grub/grub.conf ] \
-		&& /usr/sbin/grub \
+		&& /sbin/grub \
 			--batch \
 			--device-map=/boot/grub/device.map \
 			< /boot/grub/grub.conf > /dev/null 2>&1
