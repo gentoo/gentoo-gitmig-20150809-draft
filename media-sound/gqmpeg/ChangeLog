@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gqmpeg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/ChangeLog,v 1.13 2004/11/01 19:35:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/ChangeLog,v 1.14 2004/11/21 20:53:59 chainsaw Exp $
+
+*gqmpeg-0.91.1 (21 Nov 2004)
+
+  21 Nov 2004; Tony Vroon <chainsaw@gentoo.org> +gqmpeg-0.91.1.ebuild:
+  Version bump, closes bug #71131.
 
   01 Nov 2004; Markus Rothe <corsair@gentoo.org>
 
