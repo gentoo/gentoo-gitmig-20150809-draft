@@ -204,3 +204,4 @@ move sys-apps/nvram-reboot sys-power/nvram-reboot
 move sys-apps/cpudyn sys-power/cpudyn
 move sys-apps/cpufreqd sys-power/cpufreqd
 move sys-apps/athcool sys-power/athcool
+move sys-apps/gtk-cpuspeedy sys-power/gtk-cpuspeedy
