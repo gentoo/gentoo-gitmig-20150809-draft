@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-1.4.6-r3.ebuild,v 1.3 2003/09/10 05:35:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-1.4.6-r3.ebuild,v 1.4 2003/09/24 20:20:26 mholzer Exp $
 
 DESCRIPTION="Full state iptables firewall"
 HOMEPAGE="http://www.shorewall.net/"
@@ -22,10 +22,11 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/shorewall shorewall
-	dohtml documentation/*.htm*
+	dohtml -r documentation/*
 }
 
 pkg_postinst() {
-	einfo "Read the documentatition from http://www.shorewall.net"
+	einfo "Read the documentation from http://www.shorewall.net"
+	einfo "available at /usr/share/doc/${P}/html/index.htm"
 	einfo "and edit the files in /etc/shorewall before starting the firewall"
 }
