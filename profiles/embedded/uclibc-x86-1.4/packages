@@ -1,6 +1,6 @@
 # Which to use?  Use the profile-specific stuff to "lock down" specific
 # versions of ebuilds.  Gentoo Linux 1.0_rc6 uses certain known-compatible
-# versions of binutils, gcc and glibc, so we lock them down here.  This
+# versions of binutils, gcc and uclibc, so we lock them down here.  This
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 
