@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.8-r2.ebuild,v 1.2 2004/08/03 12:01:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.8-r2.ebuild,v 1.3 2004/08/07 22:26:35 slarti Exp $
 
 inherit eutils
 
-DESCRIPTION="MIT Object extention to Tcl"
+DESCRIPTION="MIT Object extension to Tcl"
 SF_PN="otcl-tclcl"
 HOMEPAGE="http://sourceforge.net/projects/${SF_PN}/"
 SRC_URI="mirror://sourceforge/${SF_PN}/${P}.tar.gz"
