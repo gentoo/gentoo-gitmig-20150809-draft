@@ -855,3 +855,8 @@ sys-apps/texinfo
 =net-dialup/pptpd-1.1.2
 =net-dialup/pppd-2.4.1-r9
 
+
+
+# spider@gentoo.org 23 May 2002
+# This one doesn't build, looks abandondware
+app-arch/gnorpm
