@@ -1,0 +1,7 @@
+# ChangeLog for net-print/pup
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pup/ChangeLog,v 1.1 2004/04/08 11:06:05 lanius Exp $
+
+  08 Apr 2004; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
+  initial ebuild, thx to Scott Alfter <gentoo@salfter.dyndns.org> , bug# 46893
+
