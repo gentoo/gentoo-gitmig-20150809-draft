@@ -72,6 +72,10 @@ src_compile() {
 	
 	export BUILD_MODULES=all
 
+	# Crashes on start when compiled with -fomit-frame-pointer
+	CFLAGS="${CFLAGS/-fomit-frame-pointer}"
+	CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer}"
+
 	./configure  --host=${CHOST}					\
 		     --prefix=/usr/lib/mozilla 				\
 		     --disable-tests		 			\
