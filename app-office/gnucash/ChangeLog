@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.48 2004/07/23 07:09:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.49 2004/09/19 15:46:07 kugelfang Exp $
+
+  19 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> gnucash-1.8.9.ebuild:
+  Marked ~amd64. Fixes BUG #39937.
 
   22 Jul 2004; Seemant Kulleen <seemant@gentoo.org> -gnucash-1.8.4.ebuild,
   -gnucash-1.8.5.ebuild, -gnucash-1.8.6.ebuild, gnucash-1.8.9.ebuild:

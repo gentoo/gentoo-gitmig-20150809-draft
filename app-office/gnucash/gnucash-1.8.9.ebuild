@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.6 2004/07/23 07:09:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.7 2004/09/19 15:46:07 kugelfang Exp $
 
 inherit flag-o-matic libtool
 
@@ -19,10 +19,11 @@ HOMEPAGE="http://www.gnucash.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 ~alpha ~ppc ~sparc ~amd64"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=dev-util/guile-1.6
+	amd64? ( >=dev-util/guile-1.6.4-r2 )
 	>=dev-libs/slib-2.3.8
 	>=media-libs/libpng-1.0.9
 	>=media-libs/jpeg-6b
@@ -60,6 +61,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 src_compile() {
 	elibtoolize
 
+	append-ldflags -L/usr/X11R6/$(get_libdir)
 	econf \
 		--enable-etags \
 		--enable-ctags \
