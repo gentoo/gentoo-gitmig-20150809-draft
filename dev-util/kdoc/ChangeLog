@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/kdoc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdoc/ChangeLog,v 1.1 2002/04/04 22:15:33 danarmak Exp $
+
+*kdoc-2.0_alpha54 (4 Mar 2002)
+
+  4 Mar 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  kdoc now lives in dev-util not kde-base, has its own versioning scheeme
+  separate from the kde one and installs into /usr.
