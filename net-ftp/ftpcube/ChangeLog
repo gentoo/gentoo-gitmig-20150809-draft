@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/ftpcube
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.13 2003/04/30 12:13:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.14 2003/05/05 09:19:21 liquidx Exp $
+
+  05 May 2003; Alastair Tse <liquidx@gentoo.org> ftpcube-0.4.1.ebuild,
+  ftpcube-0.4.2.ebuild, ftpcube-0.4.3.ebuild:
+  bumps to stable x86
 
 *ftpcube-0.4.3 (30 Apr 2003)
 
