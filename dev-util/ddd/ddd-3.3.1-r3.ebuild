@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r3.ebuild,v 1.11 2004/06/25 02:27:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r3.ebuild,v 1.12 2004/07/14 23:11:56 agriffis Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ SRC_URI="ftp://ftp.easynet.be/gnu/ddd/${P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE=""
 
 DEPEND="virtual/x11
 	>=sys-devel/gdb-4.16

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r1.ebuild,v 1.12 2004/06/25 02:27:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r1.ebuild,v 1.13 2004/07/14 23:11:56 agriffis Exp $
 
 DESCRIPTION="graphical front-end for command-line debuggers"
 HOMEPAGE="http://www.gnu.org/software/ddd"
@@ -10,6 +10,7 @@ SRC_URI="ftp://ftp.easynet.be/gnu/ddd/${P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND="virtual/x11
 	>=sys-devel/gdb-4.16
