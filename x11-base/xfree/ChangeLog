@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.40 2002/09/08 20:02:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.41 2002/09/10 21:02:48 azarah Exp $
+
+  10 Sep 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild :
+
+  Gcc3 related fixes.
 
 *xfree-4.2.1 (8 Sep 2002):
 

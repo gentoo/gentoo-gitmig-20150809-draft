@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.2 2002/09/08 21:25:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.3 2002/09/10 21:02:48 azarah Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 
@@ -153,8 +153,7 @@ src_unpack() {
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
 		>> config/cf/host.def
 
-	[ -z "${CC}" ] && CC=gcc
-	if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ]
+	if [ "`gcc-version`" != "2.95" ]
 	then
 		# should fix bug #4189.  gcc-3.x have problems with -march=pentium4
 		# and -march=athlon-tbird
@@ -217,7 +216,17 @@ src_compile() {
 
 src_install() {
 
-	make install DESTDIR=${D} || die
+	# gcc3 related fix.  Do this during install, so that our
+	# whole build will not be compiled without mmx instructions.
+	if [ "`gcc-version`" != "2.95" ] && [ "${ARCH}" = "x86" ]
+	then
+		make install \
+			CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx"
+			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx"
+			DESTDIR=${D} || die
+	else
+		make install DESTDIR=${D} || die
+	fi
 	
 	make install.man DESTDIR=${D} || die
 
