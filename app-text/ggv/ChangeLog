@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.50 2004/02/10 06:30:45 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.51 2004/02/10 13:45:39 gustavoz Exp $
+
+  10 Feb 2004; <gustavoz@gentoo.org> ggv-2.4.1.ebuild:
+  stable on hppa and sparc
 
   10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> ggv-2.4.1.ebuild:
   set ppc in keywords
