@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.9-r1.ebuild,v 1.1 2005/01/31 23:15:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.9-r1.ebuild,v 1.2 2005/02/03 21:00:56 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -250,6 +250,12 @@ src_install() {
 	doins ${S}/etc/modules.d/*
 	insinto /etc/skel
 	find ${S}/etc/skel -type f -maxdepth 1 -print0 | xargs --null doins
+
+	# Special-case uglyness... For people updating from lib32 -> lib amd64
+	# profiles, keep lib32 in the search path while it's around
+	if has_multilib_profile && [ -d /lib32 -o -d /usr/lib32 ] && ! hasq lib32 ${libdirs}; then
+		libdirs_env="${libdirs_env}:/lib32:/usr/lib32:/usr/local/lib32"
+	fi
 
 	# List all the multilib libdirs in /etc/env/04multilib
 	echo "LDPATH=\"${libdirs_env}\"" > ${D}/etc/env.d/04multilib
