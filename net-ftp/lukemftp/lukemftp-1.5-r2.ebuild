@@ -1,14 +1,14 @@
-# Copyright 2000-2001 Gentoo Technologies, Inc.
+# Copyright 2000-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lukemftp/lukemftp-1.5-r2.ebuild,v 1.1 2001/09/25 19:38:07 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lukemftp/lukemftp-1.5-r2.ebuild,v 1.2 2002/04/27 13:36:00 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NetBSD FTP client with several advanced features"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/misc/lukemftp/${P}.tar.gz"
 
 DEPEND="virtual/glibc
-        >=sys-libs/ncurses-5.1"
+	>=sys-libs/ncurses-5.1"
 
 src_unpack() {
 	unpack ${A}
