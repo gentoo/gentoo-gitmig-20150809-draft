@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/pwcrypt-1.2.2.ebuild,v 1.2 2004/03/21 15:06:48 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/pwcrypt-1.2.2.ebuild,v 1.3 2004/04/12 16:12:05 hattya Exp $
+
+IUSE=""
 
 DESCRIPTION="An improved version of cli-crypt (encrypts data sent to it from the cli)"
 HOMEPAGE="http://xjack.org/pwcrypt"

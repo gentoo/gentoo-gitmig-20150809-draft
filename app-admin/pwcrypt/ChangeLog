@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwcrypt
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/ChangeLog,v 1.2 2004/03/21 15:06:48 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/ChangeLog,v 1.3 2004/04/12 16:12:05 hattya Exp $
+
+  13 Apr 2004; Akinori Hattori <hattya@gentoo.org> pwcrypt-1.2.2.ebuild:
+  added IUSE.
 
   22 Mar 2004; Akinori Hattori <hattya@gentoo.org> pwcrypt-1.2.2.ebuild:
   stable on x86.
