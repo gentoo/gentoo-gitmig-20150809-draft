@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-goom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.9 2004/09/05 14:14:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.10 2004/09/14 07:05:11 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-goom-1.99.4.ebuild:
+  Stable amd64, sparc.
 
   05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> xmms-goom-1.99.4.ebuild:
   Added Debian patch to make it work on amd64. Closing #54258.
