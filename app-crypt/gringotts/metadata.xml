@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gnome</herd>
-<maintainer><email>leonardop@gentoo.org</email></maintainer>
+  <herd>gnome</herd>
+  <maintainer>
+    <email>leonardop@gentoo.org</email>
+    <name>Leonardo Boshell</name>
+  </maintainer>
+  <longdescription>
+    Gringotts is a small utility for Linux and other Unices that
+    allows you to jot down sensitive data (passwords, credit card
+    numbers, PINs, friends' addresses) in an easy-to-read,
+    easy-to-access, and most of all very secure form.
+  </longdescription>
 </pkgmetadata>

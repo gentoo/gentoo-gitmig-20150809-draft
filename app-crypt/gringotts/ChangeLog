@@ -1,6 +1,20 @@
 # ChangeLog for app-crypt/gringotts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.17 2004/10/05 11:46:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.18 2004/11/12 06:09:35 leonardop Exp $
+
+*gringotts-1.2.8-r1 (12 Nov 2004)
+
+  12 Nov 2004; Leonardo Boshell <leonardop@gentoo.org>
+  gringotts-1.2.8-r1.ebuild:
+  Use a local USE flag to optionally install a suid executable. A suid
+  gringotts binary can effectively call mlockall(), thus increasing
+  security, at the cost of relying on a suid binary, which could break with
+  some glibc installations. See bug #69458.
+
+  11 Nov 2004; Leonardo Boshell <leonardop@gentoo.org> gringotts-0.6.2.ebuild,
+  gringotts-1.2.7.ebuild, metadata.xml:
+  Removed ebuilds for 0.6.2 and 1.2.7.
+  Updated metadata.xml
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gringotts-1.2.7.ebuild, gringotts-1.2.8.ebuild:
@@ -13,7 +27,7 @@
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> gringotts-0.6.2.ebuild:
   Add die following econf for bug 48950
 
-  18 Apr 2004; L. Boshell <liquidx@gentoo.org> gringotts-1.2.8.ebuild:
+  18 Apr 2004; Leonardo Boshell <leonardop@gentoo.org> gringotts-1.2.8.ebuild:
   Marked stable on x86. Remove GTK_DISABLE_DEPRECATED macro from Makefile,
   so it compiles using Gtk+ 2.4.
 
