@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.22 2004/01/26 01:12:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.23 2004/01/30 07:30:01 drobbins Exp $
 
 IUSE="berkdb selinux"
 
@@ -19,14 +19,16 @@ LICENSE="BSD | GPL-2"
 KEYWORDS="amd64 x86 ppc sparc alpha hppa arm mips"
 SLOT="0"
 
-DEPEND=">=sys-libs/cracklib-2.7-r3
+RDEPEND=">=sys-libs/cracklib-2.7-r3
 	=dev-libs/glib-1.2*
 	>=sys-libs/pwdb-0.61-r4
-	>=sys-devel/autoconf-2.5
-	>=sys-devel/automake-1.6
-	>=sys-devel/flex-2.5.4a-r5
 	berkdb? ( >=sys-libs/db-3.2.9 )
 	selinux? ( sys-libs/libselinux )"
+
+DEPEND="$RDEPEND
+	>=sys-devel/autoconf-2.58
+	>=sys-devel/automake-1.6
+	>=sys-devel/flex-2.5.4a-r5"
 
 #inherit needs to be after DEPEND definition to protect RDEPEND
 inherit gcc eutils flag-o-matic

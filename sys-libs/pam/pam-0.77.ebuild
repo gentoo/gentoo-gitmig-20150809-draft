@@ -1,25 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.12 2004/01/26 01:12:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.13 2004/01/30 07:30:01 drobbins Exp $
 
 PATCH_LEVEL="1.2"
 BDB_VER="4.1.25"
 PAM_REDHAT_VER="0.77-4"
 
-DEPEND="dev-lang/perl
-	>=sys-libs/cracklib-2.7-r8
-	=dev-libs/glib-1.2*
-	>=sys-devel/autoconf-2.5
-	>=sys-devel/automake-1.6
-	>=sys-devel/flex-2.5.4a-r5
-	pwdb? ( >=sys-libs/pwdb-0.62 )
-	selinux? ( sys-libs/libselinux )"
-# Have python sandbox issues currently ...
-#	doc? ( app-text/sgmltools-lite )
-
 RDEPEND=">=sys-libs/cracklib-2.7-r8
 	selinux? ( sys-libs/libselinux )
 	berkdb? ( >=sys-libs/db-${BDB_VER} )"
+
+DEPEND="$RDEPEND
+	dev-lang/perl
+	=dev-libs/glib-1.2*
+	>=sys-devel/autoconf-2.58
+	>=sys-devel/automake-1.6
+	>=sys-devel/flex-2.5.4a-r5
+	pwdb? ( >=sys-libs/pwdb-0.62 )"
+
+# Have python sandbox issues currently ...
+#	doc? ( app-text/sgmltools-lite )
 
 # BDB is internalized to get a non-threaded lib for pam_userdb.so to
 # be built with.  The runtime-only dependency on BDB suggests the user
