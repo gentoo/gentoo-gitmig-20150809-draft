@@ -111,16 +111,15 @@
 # Actual profiled pkgs start here
 *app-arch/ncompress
 *>=sys-apps/baselayout-1.7.9-r1
-*>=sys-apps/portage-2.0.27
+*>=sys-apps/portage-2.0.35
 *=sys-devel/binutils-2.13.90.0.4
 *>=sys-devel/gcc-3.2
 *=sys-libs/glibc-2.2.5-r6
 *sys-apps/texinfo
 sys-kernel/ppc-sources
->=sys-kernel/linux-headers-2.4.18
+*=sys-kernel/linux-headers-2.4.18-r2
 >=sys-apps/sysklogd-1.4.1
 *>=dev-lang/python-2.2-r4
->=x11-base/xfree-4.1.0-r2
 *app-editors/nano
 #*app-editors/vim # Vim emerges xfree ... this sucks
 *sys-apps/hfsutils
@@ -131,7 +130,7 @@ sys-kernel/ppc-sources
 *net-ftp/ftp
 *net-misc/dhcpcd
 net-misc/netkit-telnetd
-net-misc/rsync
+*net-misc/rsync
 *net-misc/wget
 *sys-apps/bash
 *sys-apps/bzip2
@@ -191,14 +190,13 @@ sys-apps/reiserfsprogs
 *sys-libs/readline  
 *sys-libs/slang
 *sys-libs/zlib
+*>=net-misc/openssh-3.0.1_p1
+*>=sys-apps/devfsd-1.3.20
 >=sys-libs/gpm-1.19.3-r5
 >=sys-apps/isapnptools-1.23-r6
 >=sys-apps/dcron-2.7-r6
-*>=net-misc/openssh-3.0.1_p1
-*>=sys-apps/devfsd-1.3.20
 >=sys-apps/xinetd-2.3.3-r6
 >=net-fs/samba-2.2.2-r6
-#>=net-fs/samba-2.0.10-r6
 >=sys-apps/at-3.1.8-r6
 >=app-admin/fcron-1.1.1-r6
 >=app-admin/metalog-0.6-r6
@@ -216,17 +214,13 @@ sys-apps/reiserfsprogs
 >=net-misc/fakeidentd-1.4-r6
 >=net-nds/openldap-1.2.12-r6
 >=net-nds/portmap-5b-r6
-#>=sys-apps/vcron-3.0_p1-r6
 >=media-sound/alsa-utils-0.5.10-r6
 >=net-print/LPRng-3.7.9-r6
 >=net-nds/ypbind-1.7-r6
 >=net-nds/ypserv-1.3.9-r6
 >=net-print/cups-1.1.10-r6
-# including "lower" version of ntp
-#>=net-misc/ntp-4.1.71-r6
 <net-misc/ntp-4.1.71-r6
 >=sys-apps/apmd-3.0.1-r6
-#>=net-mail/postfix-20010228.5-r6
 >=net-misc/portsentry-1.1-r6
 >=sys-apps/noflushd-2.4-r6
 >=app-text/dictd-1.5.5-r6
