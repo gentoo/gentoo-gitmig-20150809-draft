@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.45 2005/02/01 15:08:05 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.46 2005/02/02 10:21:28 greg_g Exp $
+
+  02 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> -files/amarok-1.0-cjk.diff,
+  amarok-1.2_beta4.ebuild:
+  Removed cjk patch, it does not apply anymore.
 
 *amarok-1.2_beta4 (01 Feb 2005)
 
