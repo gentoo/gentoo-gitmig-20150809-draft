@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.14 2003/06/25 19:52:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.15 2003/10/22 16:38:44 agriffis Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -122,6 +122,12 @@ gcc2-flags() {
 	CXXFLAGS=${CXXFLAGS//athlon-4/i686}
 	CXXFLAGS=${CXXFLAGS//athlon-[xm]p/i686}
 	CXXFLAGS=${CXXFLAGS//athlon/i686}
+
+	if [ "$ARCH" = alpha ]; then
+		CHOST=${CHOST/#alphaev6[78]/alphaev6}
+		CFLAGS=${CFLAGS//ev6[78]/ev6}
+		CXXFLAGS=${CXXFLAGS//ev6[78]/ev6}
+	fi
 
 	export CFLAGS CXXFLAGS
 }
