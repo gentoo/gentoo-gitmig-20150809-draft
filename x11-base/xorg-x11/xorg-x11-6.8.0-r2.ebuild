@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.52 2004/11/04 04:25:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.53 2004/11/04 04:39:01 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1364,10 +1364,10 @@ print_info() {
 
 	echo
 	ewarn "BEWARE:"
-	ewarn "Font installation location has MOVED to:"
-	ewarn "/usr/share/fonts"
+	ewarn "/usr/X11R6/$(get_libdir) has MOVED"
+	ewarn "to /usr/$(get_libdir)"
 	ewarn "Run etc-update to update your config files."
-	ewarn "Old locations for fonts, docs and man pages"
+	ewarn "Old locations for anything in /usr/X11R6/$(get_libdir)"
 	ewarn "are deprecated."
 	echo
 	ewarn "The configuration file has changed from that in XFree86."
@@ -1377,7 +1377,7 @@ print_info() {
 	einfo "If XF86Config exists and xorg.conf does not, it will still"
 	einfo "read XF86Config."
 
-	# Try to get people to read /usr/share/fonts move
+	# Try to get people to read /usr/X11R6/libdir move
 	ebeep 5
 	epause 10
 }
