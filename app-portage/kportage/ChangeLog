@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kportage
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportage/ChangeLog,v 1.5 2004/06/24 21:50:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportage/ChangeLog,v 1.6 2004/06/28 23:53:07 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kportage-0.6.1.ebuild:
+  QA: kde-base -> kde, need-kde after R/DEPEND
 
   03 Jan 2004; Caleb Tennis <caleb@gentoo.org> kportage-0.6.1.ebuild:
   Remove need-qt, add qt dependency directly to ebuild
