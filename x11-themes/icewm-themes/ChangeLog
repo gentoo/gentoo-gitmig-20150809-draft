@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/icewm-themes
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.4 2004/10/09 19:14:22 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.5 2005/03/09 18:28:33 luckyduck Exp $
+
+  09 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> icewm-themes-0.0.1.ebuild:
+  added ~amd64 KEYWORD to fix #77628
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> icewm-themes-0.0.1.ebuild:
   Stable on x86 and ppc.
