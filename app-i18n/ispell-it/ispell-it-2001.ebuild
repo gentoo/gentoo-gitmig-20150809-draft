@@ -1,4 +1,7 @@
-P=ispell-it
+# Copyright 2002, Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2.
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-it/ispell-it-2001.ebuild,v 1.2 2002/10/30 22:01:36 seemant Exp $
+
 S=${WORKDIR}/${P}
 DESCRIPTION="Loris Palmerini - Italian dictionary for ispell."
 HOMEPAGE="http://members.xoom.virgilio.it/trasforma/ispell/"
@@ -9,7 +12,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="app-text/ispell"
-RDEPEND=""
 
 src_compile() {
 	make || die
