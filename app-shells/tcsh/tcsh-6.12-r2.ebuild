@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12-r2.ebuild,v 1.2 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12-r2.ebuild,v 1.3 2003/05/21 23:54:06 taviso Exp $
 
 MY_P="${PN}-${PV}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.tcsh.org/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc "
+KEYWORDS="x86 ~ppc sparc ~alpha"
 IUSE="cjk perl"
 
 RDEPEND="virtual/glibc

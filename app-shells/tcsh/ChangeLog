@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.12 2003/03/08 01:03:58 alain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.13 2003/05/21 23:54:06 taviso Exp $
+
+  22 May 2003; Tavis Ormandy <taviso@gentoo.org> tcsh-6.12-r2.ebuild:
+  Marking ~alpha, fixes #21125
 
 *tcsh-6.12-r2 (7 Mar 2003)
 
