@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/ChangeLog,v 1.6 2003/05/08 11:10:08 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/ChangeLog,v 1.7 2003/05/10 22:48:36 george Exp $
+
+  10 May 2003; George Shapovalov <george@gentoo.org> rip-1.07.ebuild :
+  added ~ppc to keywords since previous version had ppc there, 
+  as was requested by "minor" arch developers
 
 *rip-1.07 (08 May 2003)
 
