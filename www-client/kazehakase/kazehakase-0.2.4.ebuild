@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.2.4.ebuild,v 1.1 2005/03/18 19:39:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.2.4.ebuild,v 1.2 2005/03/23 16:20:11 seemant Exp $
 
 IUSE="migemo estraier thumbnail"
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 LICENSE="GPL-2"
 
-DEPEND=">=net-www/mozilla-1.6
+DEPEND=">=www-client/mozilla-1.6
 	x11-libs/pango
 	>=x11-libs/gtk+-2
 	dev-util/pkgconfig
@@ -25,10 +25,10 @@ RDEPEND="${DEPEND}
 	!www-client/kazehakase-cvs"
 
 pkg_setup(){
-	local moz_use="$(</var/db/pkg/`best_version net-www/mozilla`/USE)"
+	local moz_use="$(</var/db/pkg/`best_version www-client/mozilla`/USE)"
 
-	# >=net-www/mozilla-1.7.3-r2 always depend on gtk2.
-	if ! has_version '>=net-www/mozilla-1.7.3-r2' && ! has gtk2 ${moz_use}
+	# >=www-client/mozilla-1.7.3-r2 always depend on gtk2.
+	if ! has_version '>=www-client/mozilla-1.7.3-r2' && ! has gtk2 ${moz_use}
 	then
 		echo
 		eerror

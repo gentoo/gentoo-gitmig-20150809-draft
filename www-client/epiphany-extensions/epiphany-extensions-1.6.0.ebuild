@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-1.6.0.ebuild,v 1.2 2005/03/23 15:16:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-1.6.0.ebuild,v 1.3 2005/03/23 16:19:48 seemant Exp $
 
 inherit gnome2 eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=www-client/epiphany-1.5.7
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2
 	app-text/opensp
-	>=net-www/mozilla-1.7"
+	>=www-client/mozilla-1.7"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
