@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.15 2005/01/31 21:06:16 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.16 2005/02/01 18:19:34 mr_bones_ Exp $
 
 # Notes:
 #
@@ -424,7 +424,7 @@ src_compile() {
 
 	export buildcmd="${S}/solenv/bin/build.pl --all product=full strip=true --dlv_switch link"
 
-	# Should the build use multiprocessing? Not enabled by default, as it tends to break 
+	# Should the build use multiprocessing? Not enabled by default, as it tends to break
 	if [ "${WANT_DISTCC}" == "true" ]
 	then
 		if [ "${JOBS}" -gt 1 ]
@@ -450,7 +450,7 @@ src_compile() {
 		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
 	fi
 
-	# Now for our optimization flags ...	
+	# Now for our optimization flags ...
 	export ARCH_FLAGS="${CFLAGS}"
 
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
@@ -484,7 +484,7 @@ src_install() {
 	addpredict "/opt/OpenOffice.org/foo.tmp"
 	addpredict "/opt/OpenOffice.org/delme"
 	addpredict "/root/.gnome"
-	
+
 
 	# The install part should now be relatively OK compared to
 	# what it was.  Basically we use autoresponse files to install
