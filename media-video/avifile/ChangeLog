@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.94 2005/01/31 01:02:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.95 2005/02/14 17:24:21 luckyduck Exp $
+
+  14 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  avifile-0.7.41.20041001-r1.ebuild:
+  made divx4linux dependency optional, controlled by the respective useflag.
+  fixes #81787
 
   31 Jan 2005; <lucky@gentoo.org> avifile-0.7.41.20041001-r2.ebuild:
   removed the pic functionality. fixes #80034
