@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.172 2004/05/04 20:41:39 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.173 2004/05/04 21:19:08 rizzo Exp $
+
+  04 May 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.77-r1.ebuild,
+  gaim-0.77.ebuild:
+  Being smarter with ExtUtils-MakeMaker dep, thanks to rac.  Fixes Bug #47651
 
 *gaim-0.77-r1 (04 May 2004)
 
