@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Symdump
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.4 2004/10/01 20:22:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.5 2004/10/03 15:47:47 mcummings Exp $
+
+  03 Oct 2004; Michael Cummings <mcummings@gentoo.org>
+  Devel-Symdump-2.03.ebuild:
+  Mirror fix; stable on sparc
 
   01 Oct 2004; <mcummings@gentoo.org> Devel-Symdump-2.03.ebuild:
   tested successful on ~sparc, adding keyword - dep for xml-dt
