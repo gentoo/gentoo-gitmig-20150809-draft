@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.9 2004/09/07 16:15:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.10 2004/09/11 15:26:22 dragonheart Exp $
+
+*iozone-3.221-r1 (12 Sep 2004)
+
+  12 Sep 2004; Daniel Black <dragonheart@gentoo.org> +files/3.221-gcc.patch,
+  +iozone-3.221-r1.ebuild, iozone-3.221.ebuild:
+  x86 stable. Revision bump adds patch to (hopefully) fix bug #59793. Thanks to
+  Alex Rostovtsev <tetromino@gmail.com> for characterizing the problem
 
   07 Sep 2004; <blubb@gentoo.org> iozone-3.221.ebuild:
   added ~amd64 keyword
