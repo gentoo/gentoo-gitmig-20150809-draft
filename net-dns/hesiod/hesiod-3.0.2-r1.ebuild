@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2-r1.ebuild,v 1.7 2004/06/24 22:35:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2-r1.ebuild,v 1.8 2004/07/01 22:11:53 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 alpha ia64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

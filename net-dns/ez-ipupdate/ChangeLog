@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ez-ipupdate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.7 2004/06/24 22:35:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.8 2004/07/01 22:11:39 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ez-ipupdate-3.0.11_beta8.ebuild:
+  virtual/glibc -> virtual/libc
 
 *ez-ipupdate-3.0.11_beta8 (29 Jun 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.0.15.ebuild,v 1.5 2004/06/24 22:37:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.0.15.ebuild,v 1.6 2004/07/01 22:12:59 eradicator Exp $
 
 inherit base
 
@@ -17,7 +17,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 pkg_config() {
 	cd /tmp

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.11.ebuild,v 1.3 2004/06/24 22:37:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.11.ebuild,v 1.4 2004/07/01 22:13:41 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.phys.uu.nl/%7Erombouts/pdnsd.html http://home.t-online.de/h
 
 IUSE="ipv6 debug isdn"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-apps/sed
 	sys-apps/gawk
 	sys-devel/libtool
@@ -22,7 +22,7 @@ DEPEND="virtual/glibc
 	sys-devel/automake
 	sys-devel/autoconf"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="BSD | GPL-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.8-r1.ebuild,v 1.6 2004/06/25 23:39:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.8-r1.ebuild,v 1.7 2004/07/01 22:11:21 eradicator Exp $
 
 MY_P="${P/_/}"
 MY_PV="${PV/_rc*/}"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc mips arm amd64 ~ia64 s390"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 
 S="${WORKDIR}/${PN}-${MY_PV}"

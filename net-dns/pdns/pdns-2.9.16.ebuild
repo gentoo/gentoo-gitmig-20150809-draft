@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.16.ebuild,v 1.2 2004/06/24 22:37:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.16.ebuild,v 1.3 2004/07/01 22:13:26 eradicator Exp $
 
 DESCRIPTION="The PowerDNS Daemon."
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="mysql postgres static ldap"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	mysql? ( >=dev-db/mysql-3.23.54a )
 	postgres? ( >=dev-cpp/libpqpp-4.0-r1 )
 	ldap? ( >=net-nds/openldap-2.0.27-r4 )"

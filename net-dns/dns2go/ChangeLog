@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dns2go
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dns2go/ChangeLog,v 1.6 2004/06/24 22:34:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dns2go/ChangeLog,v 1.7 2004/07/01 22:11:05 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dns2go-1.1-r2.ebuild:
+  virtual/glibc -> virtual/libc
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> dns2go-1.1-r2.ebuild:
   adding s390 keywords

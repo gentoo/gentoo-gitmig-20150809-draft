@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.2_rc1.ebuild,v 1.10 2004/06/24 22:33:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.2_rc1.ebuild,v 1.11 2004/07/01 22:10:31 eradicator Exp $
 
 MY_P=${P//-tools}
 MY_P=${MY_P/_}
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc alpha hppa"
 LICENSE="as-is"
 SLOT="0"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	econf || die "configure failed"

@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.11 2004/06/24 22:37:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.12 2004/07/01 22:13:26 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  pdns-2.9.12-r1.ebuild, pdns-2.9.12.ebuild, pdns-2.9.15.ebuild,
+  pdns-2.9.16.ebuild, pdns-2.9.8.ebuild:
+  virtual/glibc -> virtual/libc
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> pdns-2.9.12.ebuild,
   pdns-2.9.8.ebuild:

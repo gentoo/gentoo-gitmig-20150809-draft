@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.31 2004/06/24 22:34:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.32 2004/07/01 22:10:51 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  djbdns-1.05-r3.ebuild:
+  virtual/glibc -> virtual/libc
 
 *djbdns-1.05-r13 (23 Jun 2004)
 

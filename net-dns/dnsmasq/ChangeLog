@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.42 2004/06/27 09:31:56 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.43 2004/07/01 22:11:21 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  dnsmasq-2.5-r1.ebuild, dnsmasq-2.5.ebuild, dnsmasq-2.7.ebuild,
+  dnsmasq-2.8-r1.ebuild, dnsmasq-2.8.ebuild, dnsmasq-2.9.ebuild:
+  virtual/glibc -> virtual/libc
 
   27 Jun 2004; Jon Portnoy <avenj@gentoo.org> dnsmasq-2.9.ebuild :
   Stable on x86 + AMD64.

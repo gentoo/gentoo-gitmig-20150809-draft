@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3.ebuild,v 1.11 2004/06/24 22:33:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3.ebuild,v 1.12 2004/07/01 22:10:31 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ KEYWORDS="-x86 -ppc -sparc -alpha -hppa -amd64 -ia64"
 LICENSE="as-is"
 SLOT="0"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 
