@@ -1,0 +1,13 @@
+diff -Nurp ../fglrx-orig/build_mod/Makefile build_mod/Makefile
+--- ../fglrx-orig/build_mod/Makefile	1970-01-01 00:00:00.000000000 +0000
++++ build_mod/Makefile	2003-08-03 16:18:54.592187072 +0000
+@@ -0,0 +1,9 @@
++#
++# Makefile for the drm device driver. 
++# make -C /usr/src/linux SUBDIRS=`pwd` modules
++EXTRA_CFLAGS+=-DATI_AGP_HOOK -DATI -DFGL -DFGL_RX -DFGL_CUSTOM_MODULE  -DFGL_LINUX253P1_VMA_API -D__AGP__ 
++##-Ipatch/include -Ipatch/driver/char/drm
++
++fglrx-objs  := agpgart_be.o agp3.o i7505-agp.o nvidia-agp.o firegl_public.o libfglrx_ip.a.GCC3
++
++obj-m += fglrx.o

@@ -1,0 +1,37 @@
+diff -Nurp ../fglrx-orig/build_mod/firegl_public.c build_mod/firegl_public.c
+--- ../fglrx-orig/build_mod/firegl_public.c	2003-07-11 11:42:06.000000000 +0000
++++ build_mod/firegl_public.c	2003-08-03 16:15:57.447117216 +0000
+@@ -3050,33 +3050,6 @@ static int __init have_cpuid_p(void)
+ 
+ int __ke_amd_adv_spec_cache_feature(void)
+ {
+-        char vendor_id[16];
+-        int ident;
+-        int family, model;
+- 
+-        /* Must have CPUID */
+-        if(!have_cpuid_p())
+-                goto donthave;
+-        if(cpuid_eax(0)<1)
+-                goto donthave;
+-        
+-        /* Must be x86 architecture */
+-        cpuid(0, &ident,  
+-                (int *)&vendor_id[0],
+-                (int *)&vendor_id[8],
+-                (int *)&vendor_id[4]);
+-
+-        if (memcmp(vendor_id, "AuthenticAMD", 12)) 
+-               goto donthave;
+-
+-        ident = cpuid_eax(1);
+-        family = (ident >> 8) & 0xf;
+-        model  = (ident >> 4) & 0xf;
+-        if (((family == 6)  && (model >= 6)) || (family == 15)) {
+-                return 1;
+-        }
+-
+-donthave:
+         return 0;
+ }
+ 

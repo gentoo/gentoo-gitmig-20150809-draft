@@ -1,0 +1,137 @@
+diff -Nurp ../fglrx-orig/build_mod/agpgart_be.c build_mod/agpgart_be.c
+--- ../fglrx-orig/build_mod/agpgart_be.c	2003-07-11 11:42:06.000000000 +0000
++++ build_mod/agpgart_be.c	2003-08-03 16:14:20.259891920 +0000
+@@ -240,7 +240,7 @@ int agp_backend_acquire(void)
+     // don't increment our own module usage count, cause this
+     // would prevent the firegl kernel module from ever beeing unloaded.
+     // (agp_backend_release is called during module unload)
+-	MOD_INC_USE_COUNT;
++	try_module_get(THIS_MODULE);
+ #endif // STANDALONE_AGPGART
+ 	return 0;
+ }
+@@ -252,7 +252,7 @@ void agp_backend_release(void)
+ 	}
+ 	atomic_dec(&agp_bridge.agp_in_use);
+ #ifdef STANDALONE_AGPGART
+-	MOD_DEC_USE_COUNT;
++	module_put(THIS_MODULE);
+ #endif // STANDALONE_AGPGART
+ }
+ 
+@@ -368,7 +368,7 @@ static void agp_free_memory_phys_list(ag
+ 	agp_free_key(curr->key);    // release the agp handle
+ 	vfree(curr->memory);        // release the table with the phys adresses
+ 	kfree(curr);                // release the agp_memory structure itself
+-	MOD_DEC_USE_COUNT;
++	module_put(THIS_MODULE);
+ }
+ 
+ agp_memory *agp_allocate_memory_phys_list(
+@@ -398,13 +398,13 @@ agp_memory *agp_allocate_memory_phys_lis
+ 	 * it
+ 	 */
+ 
+-    MOD_INC_USE_COUNT;
++    try_module_get(THIS_MODULE);
+ 
+     /* allocate a "new" agp_memory structure for the requested pages */
+ 	scratch_pages = (page_count + ENTRIES_PER_PAGE - 1) / ENTRIES_PER_PAGE;
+ 	new = agp_create_memory(scratch_pages);
+ 	if (new == NULL) {
+-        MOD_DEC_USE_COUNT;
++	  	module_put(THIS_MODULE);
+ 		return NULL;
+ 	}
+     new->alloc_type = AGP_ALLOC_TYPE_PHYS_LIST;
+@@ -453,7 +453,7 @@ void agp_free_memory(agp_memory * curr)
+ 	agp_free_key(curr->key);
+ 	vfree(curr->memory);
+ 	kfree(curr);
+-	MOD_DEC_USE_COUNT;
++	module_put(THIS_MODULE);
+ }
+ 
+ agp_memory *agp_allocate_memory(size_t page_count, u32 type)
+@@ -478,14 +478,14 @@ agp_memory *agp_allocate_memory(size_t p
+ 	 * it
+ 	 */
+ 
+-      	MOD_INC_USE_COUNT;
++	try_module_get(THIS_MODULE);
+ 
+ 	scratch_pages = (page_count + ENTRIES_PER_PAGE - 1) / ENTRIES_PER_PAGE;
+ 
+ 	new = agp_create_memory(scratch_pages);
+ 
+ 	if (new == NULL) {
+-	      	MOD_DEC_USE_COUNT;
++		module_put(THIS_MODULE);
+ 		return NULL;
+ 	}
+ #ifdef FGL
+@@ -1566,7 +1566,7 @@ static agp_memory *intel_i810_alloc_by_t
+ 		new->page_count = pg_count;
+ 		new->num_scratch_pages = 0;
+ 		vfree(new->memory);
+-	   	MOD_INC_USE_COUNT;
++		try_module_get(THIS_MODULE);
+ 		return new;
+ 	}
+ 	if(type == AGP_PHYS_MEMORY) {
+@@ -1583,7 +1583,7 @@ static agp_memory *intel_i810_alloc_by_t
+ 		if (new == NULL) {
+ 			return NULL;
+ 		}
+-	   	MOD_INC_USE_COUNT;
++		try_module_get(THIS_MODULE);
+ 		new->memory[0] = agp_bridge.agp_alloc_page();
+ 
+ 		if (new->memory[0] == 0) {
+@@ -1614,7 +1614,7 @@ static void intel_i810_free_by_type(agp_
+ 		vfree(curr->memory);
+ 	}
+ 	kfree(curr);
+-   	MOD_DEC_USE_COUNT;
++	module_put(THIS_MODULE);
+ }
+ 
+ static unsigned long intel_i810_mask_memory(unsigned long addr, int type)
+@@ -1882,7 +1882,7 @@ static agp_memory *intel_i830_alloc_by_t
+     
+         if (nw == NULL) return(NULL); 
+     
+-        MOD_INC_USE_COUNT; 
++	try_module_get(THIS_MODULE);
+         nw->memory[0] = agp_bridge.agp_alloc_page(); 
+         physical = nw->memory[0]; 
+         if (nw->memory[0] == 0) { 
+diff -Nurp ../fglrx-orig/build_mod/firegl_public.c build_mod/firegl_public.c
+--- ../fglrx-orig/build_mod/firegl_public.c	2003-07-11 11:42:06.000000000 +0000
++++ build_mod/firegl_public.c	2003-08-03 16:14:20.261891616 +0000
+@@ -322,8 +322,8 @@ struct firegl_stub_info_t *firegl_stub_p
+ #define inter_module_get(x)             firegl_stub_pointer
+ #define inter_module_register(x,y,z)    do { firegl_stub_pointer = z; } while (0)
+ /* This is a kludge for backward compatibility that is only useful in DRM(stub_open) */
+-#define fops_put(fops)      MOD_DEC_USE_COUNT
+-#define fops_get(fops)      (fops); MOD_INC_USE_COUNT
++#define fops_put(fops)      module_put(THIS_MODULE)
++#define fops_get(fops)      (fops); try_module_get(THIS_MODULE)
+ #endif // LINUX_VERSION_CODE < 0x020400
+ 
+ 
+@@ -979,12 +979,12 @@ int __ke_error_code(enum __ke_error_num 
+ 
+ void __ke_mod_inc_use_count(void)
+ {
+-    MOD_INC_USE_COUNT;
++    try_module_get(THIS_MODULE);
+ }
+ 
+ void __ke_mod_dec_use_count(void)
+ {
+-    MOD_DEC_USE_COUNT;
++    module_put(THIS_MODULE);
+ }
+ 
+ /*****************************************************************************/
