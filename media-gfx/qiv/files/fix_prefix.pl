@@ -18,4 +18,4 @@ close MAKEFILE;
 close TMP;
 
 system "cp ${ARGV[0]}/tmp ${ARGV[0]}/Makefile";
-#unlink "${ARGV[0]}/tmp";
+unlink "${ARGV[0]}/tmp";
