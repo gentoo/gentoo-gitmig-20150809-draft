@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.5.ebuild,v 1.17 2004/02/22 05:47:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.5.ebuild,v 1.18 2004/04/26 15:27:08 agriffis Exp $
 
 DESCRIPTION="Extracts files from Microsoft .cab files"
 SRC_URI="http://www.kyz.uklinux.net/downloads/${P}.tar.gz"
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc alpha"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 
