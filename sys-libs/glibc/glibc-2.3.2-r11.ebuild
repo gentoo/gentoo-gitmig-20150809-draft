@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r11.ebuild,v 1.13 2004/09/24 12:52:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r11.ebuild,v 1.14 2004/09/29 05:24:47 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -610,10 +610,10 @@ EOF
 		}
 
 		# Install nscd config file
-		insinto /etc
-		doins ${FILESDIR}/nscd.conf
+		insinto /etc ; doins ${FILESDIR}/nscd.conf
+		exeinto /etc/init.d ; doexe ${FILESDIR}/nscd
 
-		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE \
+		dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE \
 			NEWS NOTES PROJECTS README*
 	else
 		rm -rf ${D}/usr/share ${D}/usr/lib/gconv

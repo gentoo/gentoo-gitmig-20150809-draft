@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.259 2004/09/28 13:23:37 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.260 2004/09/29 05:24:47 vapier Exp $
+
+  29 Sep 2004; Mike Frysinger <vapier@gentoo.org> files/nscd,
+  glibc-2.2.5-r9.ebuild, glibc-2.3.2-r11.ebuild,
+  glibc-2.3.3.20040420-r1.ebuild, glibc-2.3.4.20040619-r1.ebuild,
+  glibc-2.3.4.20040808.ebuild, glibc-2.3.4.20040928.ebuild:
+  Install the nscd init.d script #43076 by Rui Malheiro.
 
 *glibc-2.3.4.20040928 (28 Sep 2004)
 

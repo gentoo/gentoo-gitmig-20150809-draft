@@ -1,43 +1,39 @@
-#! /bin/sh
-#RCUPDATE:3 4:72
-
-.  /etc/rc.d/config/functions
-
-SERVICE=nscd
-EXE=/usr/sbin/nscd
-opts="start stop restart"
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/nscd,v 1.3 2004/09/29 05:24:47 vapier Exp $
 
 start() {
 	ebegin "Starting Name Service Cache Daemon"
-	secure=` cat /etc/nsswitch.conf | while read curline ; do
-	  table=${curline%:*}
-	  entries=${curline##$table:}
-	  table=${table%%[^a-z]*}
-	  case $table in
-	    passwd*|group*|hosts)
-	      for entry in $entries ; do
-		case $entry in
-		  nisplus*)
-		    /usr/sbin/nscd_nischeck $table || echo "-S $table,yes"
-		  ;;
+	secure=`while read curline ; do
+		table=${curline%:*}
+		entries=${curline##$table:}
+		table=${table%%[^a-z]*}
+		case $table in
+			passwd*|group*|hosts)
+			for entry in $entries ; do
+			case $entry in
+				nisplus*)
+					/usr/sbin/nscd_nischeck $table || \
+					/echo "-S $table,yes"
+				;;
+			esac
+			done
+		;;
 		esac
-	      done
-	    ;;
-	  esac
-	done`
-	start-stop-daemon --start --quiet --exec $EXE -- $secure 1>&2
-	eend $? "Error starting $SERVICE"
+		done < /etc/nsswitch.conf`
+	local pidfile="$(strings /usr/sbin/nscd | grep nscd.pid)"
+	mkdir -p "$(dirname ${pidfile})"
+	start-stop-daemon --start --quiet \
+		--exec /usr/sbin/nscd --pid ${pidfile} \
+		-- $secure
+	eend $?
 }
-stop () {
+
+stop() {
 	ebegin "Shutting down Name Service Cache Daemon"
-	start-stop-daemon --stop --quiet --pidfile /var/run/nscd.pid 1>&2
-	eend $? "Error stopping $SERVICE"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/nscd
+	eend $?
 }
 
-restart () {
-	stop
-	start
-}
-
-doservice ${@}
-
+# vim:ts=4
