@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.13-r4.ebuild,v 1.1 2003/01/16 15:59:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.13-r4.ebuild,v 1.2 2003/02/10 16:28:56 gmsoft Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.math.fu-berlin.de/~guckes/screen/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	pam? ( >=sys-libs/pam-0.75 )"
