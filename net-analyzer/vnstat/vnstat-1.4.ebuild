@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4.ebuild,v 1.1 2004/06/14 00:02:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4.ebuild,v 1.2 2004/06/14 00:03:10 vapier Exp $
 
 DESCRIPTION="Console-based network traffic monitor that keeps statistics of network usage"
 HOMEPAGE="http://humdi.net/vnstat/"
@@ -33,9 +33,9 @@ src_install() {
 pkg_postinst() {
 	# compatibility for 1.1 ebuild
 	if [ -d ${ROOT}/var/spool/vnstat ] ; then
-        mv -f ${ROOT}/var/spool/vnstat/* ${ROOT}/var/lib/vnstat \
+		mv -f ${ROOT}/var/spool/vnstat/* ${ROOT}/var/lib/vnstat \
 			&& rmdir ${ROOT}/var/spool/vnstat
-        einfo "vnStat db files moved from /var/spool/vnstat to /var/lib/vnstat"
+		einfo "vnStat db files moved from /var/spool/vnstat to /var/lib/vnstat"
 	fi
 
 	einfo "Repeat the following command for every interface you"
