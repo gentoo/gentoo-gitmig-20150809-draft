@@ -2,6 +2,7 @@ MD5 d334765d2479b4a6cb9b7e144dc7f618 development-sources-2.6.0_beta2-r8.ebuild 3
 MD5 a2a956e0d8e098fd455d5b06914107dc development-sources-2.5.73.ebuild 2345
 MD5 98b09e36985863bd88dc10d6122be644 development-sources-2.6.0_beta2.ebuild 3276
 MD5 a0fbc88b30b1484ba994deda05bee89c development-sources-2.6.0_beta3-r7.ebuild 3284
+MD5 b70a2cbcbf26e33cead87fdf1fc70c5a development-sources-2.6.0_beta5-r8.ebuild 3281
 MD5 182ba630549546aeb778989dbff26ac4 development-sources-2.5.75.ebuild 3036
 MD5 356feb514afb722bff2ae98e5c6190b4 development-sources-2.5.70.ebuild 2333
 MD5 57d3c428bb535542d3e15aa0decbc839 development-sources-2.6.0_beta4.ebuild 3276
@@ -17,7 +18,7 @@ MD5 655c9a7fbec24e0ad83948f231b3472a development-sources-2.6.0_beta3.ebuild 3276
 MD5 30e31f2b9df5c7e2c900d4c02998ab36 development-sources-2.6.0_beta3-r8.ebuild 3284
 MD5 75a35a4dcd65015cb346306e3d3e8755 development-sources-2.6.0_beta3-r3.ebuild 3412
 MD5 4dee4ca002d6c693a7b363214489f722 development-sources-2.6.0_beta5-r4.ebuild 3281
-MD5 0122c37acd4c226b18b67ef78de631c2 ChangeLog 7498
+MD5 58950dbbd362baf20abe71e3809d3e61 ChangeLog 7693
 MD5 4a97ea69aaf379b8c34d317ddc37a653 development-sources-2.5.71.ebuild 2345
 MD5 854abf2bdb617fe8c7de18312a60bb85 metadata.xml 442
 MD5 e421bbb9407ad8bf1297bb4288803afe development-sources-2.6.0_beta5.ebuild 3276
@@ -38,6 +39,7 @@ MD5 ee03bf2bc399597a51976774177ad2f3 files/digest-development-sources-2.6.0_beta
 MD5 12ac7d16282e718002999544d5652a1a files/digest-development-sources-2.6.0_beta3-r9 142
 MD5 02ab502f5bfdc2cb24455bdb40b17326 files/digest-development-sources-2.6.0_beta4-r3 142
 MD5 ac0156283d35a79514bca201eb496aff files/digest-development-sources-2.6.0_beta5-r4 142
+MD5 d7cc2b7bf8c192ef0cd02b110d9ab5c2 files/digest-development-sources-2.6.0_beta5-r8 142
 MD5 a1867ed6ed9737f050a335953e36b414 files/digest-development-sources-2.5.70 67
 MD5 77d97aec24091542f58bd398c9aeb709 files/digest-development-sources-2.5.71 67
 MD5 227f2c2422f5382be32230d29f265b8a files/digest-development-sources-2.5.72 67
