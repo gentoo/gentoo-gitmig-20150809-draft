@@ -23,7 +23,7 @@ MD5 9787933dfca9cc3858468186231a9df1 files/postgresql.conf-7.4.2 390
 MD5 87d6c19e0b4bc95f392b11a565608540 files/postgresql.init-7.4.2 1288
 MD5 667fb0bc9b54b263d02fe7b920f82099 ChangeLog 16373
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 e730e360b4e5c8973a96485aa14e9ede postgresql-7.3.4-r1.ebuild 8111
+MD5 7a288eaa90abf9aeed3b3f00553689bb postgresql-7.3.4-r1.ebuild 8050
 MD5 ec32a055d1570127e95ea7d788479358 postgresql-7.3.5.ebuild 7921
 MD5 3fef1807f81d94064c1fd13ddbcc297e postgresql-7.3.6.ebuild 7926
 MD5 b47387990dd71dcc05ff0a93138f8222 postgresql-7.4.2.ebuild 8640
