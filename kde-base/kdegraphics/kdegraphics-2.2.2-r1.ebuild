@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.2.2-r1.ebuild,v 1.1 2003/01/17 20:31:28 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.2.2-r1.ebuild,v 1.2 2003/02/01 20:01:14 jmorgan Exp $
 
 IUSE="tetex gphoto2"
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - graphics-related apps"
 
-KEYWORDS="x86 ~sparc "
+KEYWORDS="x86 sparc "
 
 DEPEND="$DEPEND sys-devel/perl
 	media-gfx/sane-backends
