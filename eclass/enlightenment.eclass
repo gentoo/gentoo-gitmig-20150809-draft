@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.21 2004/07/19 22:19:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.22 2004/07/19 22:20:16 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -10,7 +10,7 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 
 USE_CVS="no"
-if [ "${PV:0-5}" == ".9999" ] ; then
+if [ "${PV/.9999}" != "${PV}" ] ; then
 	USE_CVS="yes"
 	inherit cvs
 fi
