@@ -1,0 +1,138 @@
+--- plugin/vimspell.vim	2004-04-22 19:47:29.000000000 +0400
++++ plugin/vimspell.vim	2004-10-21 12:10:12.811142448 +0400
+@@ -445,11 +445,15 @@ endfunction
+ " Function: s:SpellVerifyLanguage(a:language) {{{2
+ " Verify the availability of the language for the previously selected
+ " spell checker.
+ function! s:SpellVerifyLanguage(language)
+   if  b:spell_executable == "ispell" || b:spell_executable == "aspell"
+-    let l:dirs = system("echo word |". b:spell_executable ." -l -d". a:language )
++	if  b:spell_executable == "ispell"
++		let l:dirs = system("echo word |". b:spell_executable ." -l -d". a:language )
++	else
++		let l:dirs = system("echo word |". b:spell_executable ." -d". a:language . " list ")
++	endif
+     if v:shell_error != 0
+       echo "Language '". a:language ."' not known from ". b:spell_executable ."."
+       return 1
+     endif
+   else
+@@ -470,12 +474,17 @@ function! s:SpellGuessLanguage()
+ 
+   let l:mlang=substitute(b:spell_internal_language_list,",.*","","")
+ 
+   while matchstr(l:mlang,",") == "" 
+ 	\ && l:langnum <= s:SpellGetOption("spell_guess_max_languages",3)
+-    let l:errors=system(b:spell_executable . b:spell_options . " -l -d " .
+-	  \ l:mlang . " < " . escape(expand("%"),' \'))
++	if b:spell_executable == "ispell"
++		let l:errors=system(b:spell_executable . b:spell_options . " -l -d " .
++			\ l:mlang . " < " . escape(expand("%"),' \'))
++	else
++		let l:errors=system(b:spell_executable . b:spell_options . " -d " .
++			\ l:mlang . " list " . " < " . escape(expand("%"),' \'))
++	endif
+     let l:errors=escape(l:errors,'"')
+     let l:index=stridx(l:errors, "\n")
+     let l:spellcount=0
+     let l:errorcount=0
+ 
+@@ -527,12 +536,13 @@ function! s:SpellGetDicoList()
+     let l:dirfiles = substitute(l:dirfiles,"\.hash","","g")
+     let l:dirfiles = substitute(l:dirfiles,"\n",",","g")
+   elseif b:spell_executable == "aspell"
+     " Thanks to Alexandre Beneteau <alexandre.beneteau@wanadoo.fr> for showing
+     " me a way to get aspell directory for dictionaries.
+-    let l:dirs = system('aspell config | '. s:grep . ' "dict-dir current"')
+-    let l:dirs = substitute(l:dirs,'^.*dict-dir current: \(\/.*\)','\1',"")
++"    let l:dirs = system('aspell config | '. s:grep . ' "dict-dir current"')
++"    let l:dirs = substitute(l:dirs,'^.*dict-dir current: \(\/.*\)','\1',"")
++	let l:dirs = system('aspell config dict-dir')
+     "don't know, why there is a <NUL> char at the end of line ? Get rid of it.
+     let l:dirs = substitute(l:dirs,".$","","")
+ 
+     let l:dirfiles = glob("`".s:find . l:dirs . s:findname . '"*.multi"' . s:findopt ."`")
+     let l:dirfiles = substitute(l:dirfiles,"\/[^\n]*\/","","g")
+@@ -743,10 +758,11 @@ endfunction
+ "   1 if new document installed, 0 otherwise.
+ " Note: Cleaned and generalized by guo-peng Wen
+ "'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ 
+ function! s:SpellInstallDocumentation(full_name, revision)
++    return 0
+     " Name of the document path based on the system we use:
+     if (has("unix"))
+         " On UNIX like system, using forward slash:
+         let l:slash_char = '/'
+         let l:mkdir_cmd  = ':silent !mkdir -p '
+@@ -895,15 +911,26 @@ function! s:SpellCheck()
+   let b:spellerrors="nonexisitingwordinthisdociumnt\\"
+   let b:spellcorrected="nonexisitingwordinthisdociumnt"
+   let b:spellicorrected="nonexisitingwordinthisdociumnt"
+ 
+   if exists("b:spell_filter") && b:spell_filter != ""
+-    let l:errors=system('cat '. escape(l:filename,' \')."|".b:spell_filter_pipe 
+-	  \. b:spell_executable . b:spell_options . " -l -d ".b:spell_language)
++	if b:spell_executable == "ispell"
++		let l:errors=system('cat '. escape(l:filename,' \')."|".b:spell_filter_pipe
++			\. b:spell_executable . b:spell_options . " -l -d ".b:spell_language)
++	else
++		let l:errors=system('cat '. escape(l:filename,' \')."|".b:spell_filter_pipe
++			\. b:spell_executable . b:spell_options . " -d ".b:spell_language
++			\. " list ")
++	endif
+   else
+-    let l:errors=system(b:spell_executable . b:spell_options
+-	  \. " -l -d ".b:spell_language." < ".escape(l:filename,' \'))
++	if b:spell_executable == "ispell"
++		let l:errors=system(b:spell_executable . b:spell_options
++			\. " -l -d ".b:spell_language." < ".escape(l:filename,' \') )
++	else
++		let l:errors=system(b:spell_executable . b:spell_options
++			\. " -d ".b:spell_language." list "." < ".escape(l:filename,' \') )
++	endif
+   endif
+ 
+   let l:errors=escape(l:errors,'"')
+   let l:index=stridx(l:errors, "\n")
+   let l:spellcount=0
+@@ -1015,12 +1042,17 @@ function! s:SpellCheckWindow()
+     let b:spellerrors="nonexisitingwordinthisdociumnt\\"
+     let b:spellcorrected="nonexisitingwordinthisdociumnt"
+     let b:spellicorrected="nonexisitingwordinthisdociumnt"
+   endif
+ 
+-  let l:errors=system(b:spell_executable . b:spell_options
+-	\ . " -l -d ".b:spell_language." < ".w:tempname)
++  if  b:spell_executable == "ispell"
++	let l:errors=system(b:spell_executable . b:spell_options
++		\ . " -l -d ".b:spell_language." < ".w:tempname)
++  else
++	let l:errors=system(b:spell_executable . b:spell_options
++		\ . " -d ".b:spell_language. " list " ." < ".w:tempname)
++  endif
+   let l:errors=escape(l:errors,'"')
+   let l:index=stridx(l:errors, "\n")
+ 
+   while (l:index > 0)
+     " use stridx/strpart instead of sustitude, because it is faster
+@@ -1087,12 +1119,17 @@ function! s:SpellCheckLine()
+     let b:spellerrors="nonexisitingwordinthisdociumnt\\"
+     let b:spellcorrected="nonexisitingwordinthisdociumnt"
+     let b:spellicorrected="nonexisitingwordinthisdociumnt"
+   endif
+ 
+-  let l:ispexpr = "echo \"".escape(getline('.'),'\"<>')."\"|".b:spell_filter_pipe
+-	\ . b:spell_executable . b:spell_options . ' -l -d '.b:spell_language
++  if  b:spell_executable == "ispell"
++	let l:ispexpr = "echo \"".escape(getline('.'),'\"<>')."\"|".b:spell_filter_pipe
++		\ . b:spell_executable . b:spell_options . ' -l -d '.b:spell_language
++  else
++	let l:ispexpr = "echo \"".escape(getline('.'),'\"<>')."\"|".b:spell_filter_pipe
++		\ . b:spell_executable . b:spell_options . ' -d '.b:spell_language . " list "
++  endif
+   let l:errors=system(l:ispexpr)
+   let l:errors=escape(l:errors,'"')
+   let l:index=stridx(l:errors, "\n")
+ 
+   while (l:index > 0)
