@@ -1,66 +1,61 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.1-r3.ebuild,v 1.2 2002/07/11 06:30:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.1-r3.ebuild,v 1.3 2002/07/23 04:33:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Quick and useful plotting program"
 SRC_URI="ftp://ftp.gnuplot.org/pub/gnuplot/${P}.tar.gz"
 HOMEPAGE="http://www.gnuplot.org"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
 DEPEND="media-libs/libpng
-	plotutils? ( media-libs/plotutils )
-	readline? ( sys-libs/readline )
 	X? ( virtual/x11 )
-	svga? ( media-libs/svgalib )"
+	svga? ( media-libs/svgalib )
+	readline? ( sys-libs/readline )
+	plotutils? ( media-libs/plotutils )"
 
 src_compile() {
-	local myvar
+	local myconf
 	#--with-lasergnu flag seems to be broken and I'm too lazy to fix now
-	#myvar=" --with-png --without-gd --with-lasergnu"
-	myvar=" --with-png --without-gd --with-plot=/usr/lib"
+	#myconf=" --with-png --without-gd --with-lasergnu"
+	myconf=" --with-png --without-gd --with-plot=/usr/lib"
 	#--with-plot enables the Gnu plotutils library
 	#need to specify path to differentiate from Unix plot
-	if [ -z "`use plotutils`" ]
-	then
-		myvar="${myvar} --without-plot"
-	else
-		myvar="${myvar} --with-plot=/usr/lib"
-	fi
-	if [ -z "`use X`" ]
-	then
-		myvar="${myvar} --without-x"
-	else
-		myvar="${myvar} --with-x"
-	fi
-	if [ -z "`use readline`" ]
-	then
-		#use the built-in readline
-		myvar="${myvar} --with-readline"
-	else
-		#use gnu readline
-		myvar="${myvar} --with-readline=gnu"
-	fi
-	if [ -z "`use svga`" ]
-	then
-		myvar="${myvar} --without-linux-vga"
-	else
-		myvar="${myvar} --with-linux-vga"
-	fi
-	./configure \
-		${myvar} \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
+
+	use plotutils \
+		&& myconf="${myconf} --with-plot=/usr/lib" \
+		|| myconf="${myconf} --without-plot"
+
+	use X \
+		&& myconf="${myconf} --with-x" \
+		|| myconf="${myconf} --without-x"
+
+	use readline \
+		&& myconf="${myconf} --with-readline=gnu" \
+		|| myconf="${myconf} --with-readline"
+
+	use svga \
+		&& myconf="${myconf} --with-linux-vga" \
+		|| myconf="${myconf} --without-linux-vga"
+
+	econf \
 		--datadir=/usr/share/gnuplot \
-		--mandir=/usr/share/man || die
+		${myconf} || die
+
 	mv Makefile Makefile.orig
-	sed -e 's/datadir = \/usr/datadir = ${prefix}/'  \
+	sed -e 's/datadir = \/usr/datadir = ${prefix}/' \
 	    -e 's/mandir = \/usr/mandir = ${prefix}/' \
 	    Makefile.orig > Makefile
+
 	cd docs
 	mv Makefile Makefile.orig
-	sed -e 's/datadir = \/usr/datadir = ${prefix}/' Makefile.orig > Makefile
-	cd ..
+	sed -e 's/datadir = \/usr/datadir = ${prefix}/' \
+		Makefile.orig > Makefile
+
+	cd ${S}
 	emake || die
 }
 
@@ -81,5 +76,3 @@ pkg_postinst() {
 		einfo
 	fi
 }
-
-

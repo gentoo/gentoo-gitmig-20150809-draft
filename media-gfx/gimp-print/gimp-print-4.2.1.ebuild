@@ -1,38 +1,40 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.1.ebuild,v 1.3 2002/07/11 06:30:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.1.ebuild,v 1.4 2002/07/23 04:33:46 seemant Exp $
 
-MY_P="${PN}-`echo ${PV} |sed -e 's:_:-:' -e 's:eta::'`"
+inherit libtool
+
+MY_P=${P}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Gimp Plugin and Ghostscript driver for Gimp"
 SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.gz"
 HOMEPAGE="http://gimp-print.sourceforge.net/"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
 DEPEND=">=media-gfx/gimp-1.2.1
 	doc? ( app-text/texi2html )
-	gtk? ( ~x11-libs/gtk+-1.2.10 )
+	gtk? ( =x11-libs/gtk+-1.2* )
 	cups? ( net-print/cups )"
 
 RDEPEND="virtual/glibc"
 
-
 src_compile() {
 	
+	elibtoolize
+	aclocal
+
 	local myconf
 
-	use cups	\
-		&& myconf="${myconf} --with-cups"	\
+	use cups \
+		&& myconf="${myconf} --with-cups" \
 		|| myconf="${myconf} --without-cups"
 	
 	use nls || myconf="${myconf} --disable-nls"
 	
-	libtoolize --copy --force
-	aclocal
-	
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
+	econf \
 		--sysconfdir=/etc/gimp/1.2/ \
 		--with-gimp-exec-prefix=/usr \
 		${myconf} || die
@@ -73,4 +75,3 @@ src_install() {
 	dodoc AUTHORS ChangeLog COPYING NEWS README*
 	dohtml -r doc
 }
-

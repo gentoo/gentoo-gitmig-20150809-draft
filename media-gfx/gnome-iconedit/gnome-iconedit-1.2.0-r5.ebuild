@@ -1,13 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.3 2002/07/11 06:30:27 drobbins Exp $
-
-LICENSE="GPL-2"
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.4 2002/07/23 04:33:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Edits icons, what more can you say?"
-SRC_URI="http://210.77.60.218/ftp/ftp.debian.org/pool/main/g/gnome-iconedit/gnome-iconedit_${PV}.orig.tar.gz"
+SRC_URI="http://210.77.60.218/ftp/ftp.debian.org/pool/main/g/${PN}/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="www.advogato.org/proj/GNOME-Iconedit/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	=x11-libs/gtk+-1.2*
@@ -43,12 +45,8 @@ src_compile() {
 	
 	CFLAGS="${CFLAGS} `gnome-config --cflags print` -I/usr/include/gdk-pixbuf-1.0"	
 
-	./configure --host=${CHOST} 					\
-		--prefix=/usr					\
-		--mandir=/usr/share/man				\
-		--infodir=/usr/share/info				\
-		--with-sysconfdir=/etc				\
-		--without-gnome-print				\
+	econf \
+		--without-gnome-print \
 		${myconf} || die
 
 	emake || die
@@ -56,10 +54,7 @@ src_compile() {
 
 src_install() {
 
-	make prefix=${D}/usr						\
-		mandir=${D}/usr/share/man					\
-		infodir=${D}/usr/share/info				\
-		sysconfdir=${D}/etc install || die
+	einstall || die
 
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 }

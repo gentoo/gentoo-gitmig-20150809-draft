@@ -1,14 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-0.6-r4.ebuild,v 1.3 2002/07/11 06:30:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-0.6-r4.ebuild,v 1.4 2002/07/23 04:33:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Eye of GNOME"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/eog/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/gnome-office/eog.shtml"
 
-RDEPEND="virtual/glibc
-	>=gnome-base/gconf-1.0.4-r2
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND=">=gnome-base/gconf-1.0.4-r2
 	>=gnome-base/bonobo-1.0.9-r1
 	>=gnome-base/gnome-print-0.25i
 	>=gnome-base/libglade-0.17
@@ -19,7 +22,7 @@ RDEPEND="virtual/glibc
 	png? ( 	media-libs/libpng 
 			sys-libs/zlib )"
 
-DEPEND="${RDEPEND}
+RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext
 	>=dev-util/intltool-0.11 )"
 
@@ -30,12 +33,7 @@ src_compile() {
 
 	use nls || myconf="--disable-nls"
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var/lib \
-		${myconf} || die
-	
+	econf ${myconf} || die
 	emake || die
 }
 

@@ -1,11 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.5.3.ebuild,v 1.2 2002/07/11 06:30:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.5.3.ebuild,v 1.3 2002/07/23 04:33:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An image viewer that uses OpenGL"
 SRC_URI="http://gliv.tuxfamily.org/gliv-${PV}.tar.bz2"
 HOMEPAGE="http://gliv.tuxfamily.org"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 # Version 1.5.2 and later of gliv can use gtkglarea-1.99.0 or
 # later, but will fail to compile if gtk+-2.0 is present, but
@@ -57,4 +61,3 @@ src_install() {
     
     dodoc COPYING README NEWS THANKS
 }
-
