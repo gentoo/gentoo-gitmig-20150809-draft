@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-3.0.1.ebuild,v 1.4 2003/09/14 12:32:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-3.0.1.ebuild,v 1.5 2003/10/13 00:26:29 robbat2 Exp $
 
 ETHEREAL_VERSION="0.9.13"
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
@@ -36,7 +36,7 @@ src_compile() {
 
 	einfo "Running autoconf-2.57 to fix libpcap borkage"
 	cd ${S}/libpcap-0.7.2
-	autoconf-2.57 || die "Failed to run autoconf-2.57"
+	WANT_AUTOCONF_2_5=1 autoconf || die "Failed to run autoconf-2.57"
 
 	cd ${S}
 	./configure \
