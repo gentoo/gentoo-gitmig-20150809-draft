@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/eclipse-gef-bin-20040330.ebuild,v 1.2 2004/06/25 02:30:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/eclipse-gef-bin-20040330.ebuild,v 1.3 2004/07/14 23:23:25 agriffis Exp $
 
 inherit eclipse-ext
 
@@ -10,6 +10,7 @@ SRC_URI="http://download.eclipse.org/tools/gef/downloads/drops/I-I20040330-20040
 SLOT="0"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86"
+IUSE=""
 DEPEND=">=dev-util/eclipse-sdk-3.0.0_pre8"
 
 src_unpack() {

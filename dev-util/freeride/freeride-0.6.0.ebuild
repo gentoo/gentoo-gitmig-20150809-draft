@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.6.0.ebuild,v 1.3 2004/06/25 02:32:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.6.0.ebuild,v 1.4 2004/07/14 23:28:05 agriffis Exp $
 
 inherit ruby eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/256/${P}.tgz"
 LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 USE_RUBY="any"
 DEPEND="virtual/ruby

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta3.ebuild,v 1.13 2004/06/25 02:32:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta3.ebuild,v 1.14 2004/07/14 23:28:46 agriffis Exp $
 
 MY_P=${P/eta/}
 MY_P=${MY_P/_/}
@@ -12,6 +12,7 @@ HOMEPAGE="http://cvsgui.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=dev-lang/tcl-8.3.3

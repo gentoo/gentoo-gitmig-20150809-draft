@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/eclipse-emf-bin-200403250631.ebuild,v 1.2 2004/06/25 02:30:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/eclipse-emf-bin-200403250631.ebuild,v 1.3 2004/07/14 23:23:06 agriffis Exp $
 
 inherit eclipse-ext
 
@@ -10,6 +10,7 @@ SRC_URI="http://download.eclipse.org/tools/emf/downloads/drops/2.0/I200403250631
 LICENSE="CPL-1.0"
 SLOT="2"
 KEYWORDS="~x86"
+IUSE=""
 DEPEND=">=dev-util/eclipse-sdk-3.0.0_pre8"
 
 src_unpack() {
