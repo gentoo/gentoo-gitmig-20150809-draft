@@ -57,7 +57,6 @@
 *app-shells/bash
 *app-shells/sash
 *dev-lang/perl
-*net-firewall/iptables
 *net-misc/dhcpcd
 *net-misc/iputils
 *net-misc/rsync
