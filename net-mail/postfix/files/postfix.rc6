@@ -1,11 +1,12 @@
 #!/sbin/runscript
 
-PIDFILE=/var/spool/postfix/pid/master.pid
-
 depend() {
     need net
     use sysklogd metalog syslog-ng
 }
+
+
+PIDFILE=/var/spool/postfix/pid/master.pid
 
 start() {
     ebegin "Starting postfix"
