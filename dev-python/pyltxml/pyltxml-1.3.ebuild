@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyltxml/pyltxml-1.3.ebuild,v 1.1 2003/10/30 01:40:37 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyltxml/pyltxml-1.3.ebuild,v 1.2 2003/10/30 08:26:23 pythonhead Exp $
 
 inherit distutils
 
@@ -12,6 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+DEPEND=">=dev-lang/python-2.2.2
+	>=dev-libs/ltxml-1.2.5"
 DOCS="00README"
 
 src_unpack() {
