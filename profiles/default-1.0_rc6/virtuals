@@ -26,12 +26,13 @@ sys-apps/reiserfs-utils sys-apps/reiserfsprogs
 virtual/sylpheed        net-mail/sylpheed
 virtual/php             dev-php/mod_php
 virtual/textbrowser		net-www/links
-virtual/mda		net-mail/procmail
+virtual/mda				net-mail/procmail
 virtual/krb5			app-crypt/heimdal
 virtual/motif           x11-libs/openmotif
 virtual/bootloader		sys-apps/grub
 virtual/editor			app-editors/nano
 virtual/jack			media-sound/jack-audio-connection-kit
-virtual/os-headers	sys-kernel/linux-headers
-virtual/ghc             dev-lang/ghc-bin
-virtual/modutils sys-apps/modutils
+virtual/os-headers		sys-kernel/linux-headers
+virtual/ghc				dev-lang/ghc-bin
+virtual/modutils 		sys-apps/modutils
+virtual/inetd			sys-apps/netkit-base
