@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortalog
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.7 2004/11/22 18:51:45 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.8 2004/11/28 16:57:35 eldad Exp $
+
+  28 Nov 2004; Eldad Zack <eldad@gentoo.org> snortalog-2.2.1.ebuild:
+  Completed dependencies. Closes Bug 72090.
 
   22 Nov 2004; Eldad Zack <eldad@gentoo.org> snortalog-2.2.1.ebuild:
   Updated dependencies. (Bug 72090)
