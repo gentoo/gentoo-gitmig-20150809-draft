@@ -1,17 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.2.0.ebuild,v 1.8 2003/07/09 16:12:09 liquidx Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.2.0.ebuild,v 1.9 2003/08/07 03:37:53 vapier Exp $
 
 inherit libtool gnome2
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Applets for the Gnome2 Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
-SLOT="2"
+
 LICENSE="GPL-2 FDL-1.1" 
+SLOT="2"
 KEYWORDS="x86 ppc alpha ~sparc"
+IUSE="doc"
 
 RDEPEND=">=x11-libs/gtk+-2.1
 	>=x11-libs/libwnck-0.13
@@ -24,7 +23,6 @@ RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
 	>=app-text/scrollkeeper-0.3.11"
-											
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	doc? ( dev-util/gtk-doc )
 	${DEPEND}"

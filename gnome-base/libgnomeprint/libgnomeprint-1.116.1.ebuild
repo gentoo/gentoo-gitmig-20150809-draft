@@ -1,17 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-1.116.1.ebuild,v 1.5 2003/02/13 12:13:15 vapier Exp $
-
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-1.116.1.ebuild,v 1.6 2003/08/07 03:39:17 vapier Exp $
 
 inherit libtool gnome.org
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Printer handling for Gnome"
 HOMEPAGE="http://www.gnome.org/"
-SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc "
-LICENSE="GPL-2 LGPL-2.1"
 
+KEYWORDS="x86 ~ppc ~sparc "
+SLOT="2"
+LICENSE="GPL-2 LGPL-2.1"
+IUSE="doc"
 
 RDEPEND=">=gnome-base/libbonobo-2.0.0
 	>=media-libs/libart_lgpl-2.3.8
@@ -19,7 +18,6 @@ RDEPEND=">=gnome-base/libbonobo-2.0.0
 	>=dev-libs/libxml2-2.4.22
 	>=dev-libs/glib-2.0.0
 	>=media-libs/freetype-2.0.9"
-		
 DEPEND="${RDEPEND} 
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( dev-util/gtk-doc )"
@@ -27,7 +25,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	elibtoolize
 	local myconf
-	 use doc && myconf="--enable-gtk-doc" || myconf="--disable-gtk-doc"
+	use doc && myconf="--enable-gtk-doc" || myconf="--disable-gtk-doc"
 	 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
