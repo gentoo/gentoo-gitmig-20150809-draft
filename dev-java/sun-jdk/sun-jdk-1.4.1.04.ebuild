@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1.04.ebuild,v 1.2 2003/08/08 22:38:24 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1.04.ebuild,v 1.3 2003/08/24 02:23:53 strider Exp $
 
 # Since This Ebuild Has FETCH restrictions:
 # You need to download this file from 
@@ -15,13 +15,13 @@ At="j2sdk-1_4_1_04-linux-i586.bin"
 S="${WORKDIR}/j2sdk1.4.1_04"
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.1_04"
 HOMEPAGE="http://java.sun.com/j2se/1.4.1/download.html"
-SRC_URI=""
+SRC_URI=${At}
 RESTRICT="fetch"
 SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
 
-DEPEND=">=dev-java/java-config-0.2.5
+DEPEND=">=dev-java/java-config-0.2.7
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
 
 RDEPEND="sys-libs/lib-compat"
@@ -30,11 +30,16 @@ PROVIDE="virtual/jre-1.4
 	virtual/jdk-1.4
 	virtual/java-scheme-2"
 
+pkg_nofetch() {
+	einfo "Please download ${At} from:"
+	einfo ${HOMEPAGE}
+	einfo "(select the \"Linux self-extracting file\" package format of the SDK)"
+	einfo "and move it to ${DISTDIR}"
+}
+
 src_unpack() {
-	if [ ! -f ${DISTDIR}/${At} ] ; then
-		die "Please download ${At} from ${HOMEPAGE} (select the \"Linux self-extracting file\" package format of the SDK) and move it to ${DISTDIR}"
-	fi
-	tail +437 ${DISTDIR}/${At} > install.sfx
+	startAt=`grep -aonm 1 ELF ${DISTDIR}/${At} | cut -d: -f1`
+	tail +${startAt} ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
 	./install.sfx || die
 	rm install.sfx
