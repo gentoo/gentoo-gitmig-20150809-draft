@@ -1,6 +1,20 @@
 # ChangeLog for media-radio/cwdaemon
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.4 2004/08/05 00:35:27 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.5 2004/12/08 23:05:22 killsoft Exp $
+
+*cwdaemon-0.9 (08 Dec 2004)
+
+  08 Dec 2004; Robb Romans <killsoft@gentoo.org> +cwdaemon-0.9.ebuild:
+  cwdaemon (0.9)
+  
+  * ESCh will send echo to the program using cwdaemon when CW playing is done,
+    using the '^' character. Added by Lada, OK1ZIA. This is used by tucnak,
+    a VHF contest logging program, see http://tucnak.nagano.cz.
+  * Debian init.d bootscript added by Lada, together with /etc/default/cwdaemon,
+    which you can use to configure cwdaemon. Set START_CWDAEMON=no in
+    /etc/default/cwdaemon to disable start at boottime.
+  * Serial and parallel port now supported on FreeBSD. Parallel port and various
+    BSD fixes thanks to Diane Bruce, VA3DB.
 
   04 Aug 2004; Robb Romans <killsoft@gentoo.org> cwdaemon-0.8.ebuild:
   Mark stable on x86, add ~alpha.
