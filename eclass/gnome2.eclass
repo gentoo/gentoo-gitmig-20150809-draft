@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.21 2002/08/17 20:23:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.22 2002/08/22 19:06:40 azarah Exp $
 
 inherit libtool
 
@@ -43,8 +43,9 @@ gnome2_src_compile() {
 
 gnome2_src_install() {
 
-	# if this is not present, scrollkeeper-update may segfault
-	dodir /var/lib/scrollkeeper/scrollkeeper_docs
+	# if this is not present, scrollkeeper-update may segfault and
+	# create bogus directories in /var/lib/
+	[ -x ${ROOT}/bin/wc ] && dodir /var/lib/scrollkeeper
 
 	# we must delay gconf schema installation due to sandbox
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
@@ -59,7 +60,12 @@ gnome2_src_install() {
 		dodoc ${DOCS}
 	fi
 
+	# if empty, remove
+	[ -x ${ROOT}/bin/wc ] && [ `ls -al ${D}/var/lib/scrollkeeper | wc -l` -eq 3 ] && \
+		rm -rf ${D}/var/lib/scrollkeeper
 	# only update scrollkeeper if this package needs it
+	# we cannot use a env variable, as it may get reset when merging
+	# in phases.
 	[ ! -d ${D}/var/lib/scrollkeeper ] && SCROLLKEEPER_UPDATE="0"
 }
 
@@ -81,7 +87,7 @@ gnome2_gconf_install() {
 gnome2_pkg_postinst() {
 	gnome2_gconf_install
 	
-	if [ -x ${ROOT}/usr/bin/scrollkeeper-update ] && [ SCROLLKEEPER_UPDATE = "1" ]
+	if [ -x ${ROOT}/usr/bin/scrollkeeper-update ] && [ "${SCROLLKEEPER_UPDATE}" = "1" ]
 	then
 		echo ">>> Updating Scrollkeeper"
 		scrollkeeper-update -p ${ROOT}/var/lib/scrollkeeper
