@@ -1,0 +1,13 @@
+# ChangeLog for sys-fs/loop-aes
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.1 2005/01/31 16:33:00 genstef Exp $
+
+*loop-aes-3.0b (31 Jan 2005)
+
+  31 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +loop-aes-3.0b.ebuild:
+  New ebuild thanks to Marcin 'aye' Kryczek <aye@gentoo.pl>, Carsten Lohrke
+  <carlo@gentoo.org>, Lukas Miczka <cpu@ztpnet.pl>, Karol Wojtaszek
+  <sekretarz@gentoo.org>, Lars Weiler <pylon@gentoo.org> and Adam Twardowski
+  <adam@shonetwork.com> in bug 71603
+
