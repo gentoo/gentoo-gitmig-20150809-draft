@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.25 2003/08/20 04:11:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.26 2003/09/15 15:21:04 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -33,7 +33,10 @@ INHERITED="$INHERITED $ECLASS"
 # Sets mcpu to v8 and uses the original value
 # as mtune if none specified.
 #
-
+#### filter-mfpmath <math types> ####
+# Remove specified math types from the fpmath specification
+# If the user has -mfpmath=sse,386, running `filter-mfpmath sse`
+# will leave the user with -mfpmath=386
 
 # C[XX]FLAGS that we allow in strip-flags
 ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
