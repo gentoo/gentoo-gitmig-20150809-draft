@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7178940fc729d54ebbb7c7707918ba47 ChangeLog 1730
-MD5 a9ad9e516eef40bbcab8bd73974fb091 qca-tls-1.0.ebuild 1032
+MD5 003c4b7d42499a6b4d20fc2d384435ae ChangeLog 1844
 MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
+MD5 a56932449a8bc750157cb1d063ef8d7f qca-tls-1.0-r1.ebuild 1045
+MD5 a9ad9e516eef40bbcab8bd73974fb091 qca-tls-1.0.ebuild 1032
 MD5 5398cdc5d090333de8881b20f3d10f8e files/digest-qca-tls-1.0 63
+MD5 5398cdc5d090333de8881b20f3d10f8e files/digest-qca-tls-1.0-r1 63
 MD5 f87721e55c7f47d133faa99241219ae5 files/qca-pathfix.patch 301
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBoa36mdTrptrqvGERAuE6AJ9zPGh43FF9Jss12tIPwdsMU31MkgCfZJ+H
-0HQr5zxEO0XZ8VTsGpBiZXc=
-=9UJs
------END PGP SIGNATURE-----
