@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ada24e2e1b9066ca4a73df9d07437caa ChangeLog 626
+MD5 0d9941f2ec3cd8f652f37d5683b5f20a ChangeLog 629
+MD5 43141c0be2a3726045bc352e89e40868 foldutil-1.6.ebuild 694
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 20c165e0e64424d917c0842c82a94481 foldutil-1.6.ebuild 691
 MD5 7e945f99ef486b2c6984a0399ba1004b files/digest-foldutil-1.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBN9iHLLFUmVNQ7rkRAngtAJ9itbqv1rJHS/gRsL0Jvv7CpMoSlgCfX5ka
-4qjjRMawGOGSKoBKlR1hyXo=
-=z1K7
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 522f7c017001e10487eefbc0744fdcf9 ChangeLog 835
-MD5 29df1f342bd68d593f58f23cdac0d9c3 colorsel-20040416.ebuild 1058
+MD5 f8b56b0ed1c05dae595b73e2961f2ef1 ChangeLog 838
+MD5 768bf53baae292db2ad62ba5cffc9b17 colorsel-20040416.ebuild 1061
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 9b9303a673bd0d0add94b64850949cab files/digest-colorsel-20040416 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBN7wLLLFUmVNQ7rkRAuZaAJsGOnShA1Mnfqz/bIwD37JFXos66QCgi1nJ
-ynXjdRETZe9BR116ClO+oU0=
-=9X0u
------END PGP SIGNATURE-----

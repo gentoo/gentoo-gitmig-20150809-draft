@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f453b76f4c8d6ae44a95742746cfa64 ChangeLog 792
+MD5 b3536fdec4edfce8db795db8334e57e2 ChangeLog 795
 MD5 b6deb13fae9232065a4bdf92742fa9c4 metadata.xml 219
-MD5 ca268130cda3e5ca2f552fe4d61dddc4 multvals-3.6.1.ebuild 598
+MD5 eb3d555bcac9993f452a8169ea92fa35 multvals-3.6.1.ebuild 601
 MD5 3a15d8afc444e8aceafb48dc8e6ef3bd files/digest-multvals-3.6.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBOmXwLLFUmVNQ7rkRAvx1AKCw3n8e7ztepID/Y3+lirm87IufRACglO4T
-mrlXxDgH8YN7JkEwHzZUL0M=
-=pYtB
------END PGP SIGNATURE-----

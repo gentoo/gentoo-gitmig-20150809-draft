@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e78658897b3cb29ee6a89442026290c supertab-0.31.ebuild 417
-MD5 863a8cf49dcf4f7a0107a3895b369d52 ChangeLog 1313
-MD5 6babd535e602077443edeafe733912ae supertab-0.32.ebuild 727
+MD5 ec7d9689f6481d5e8b18876f5b097b0d ChangeLog 1316
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 a172ea0f54283a90a2a89f405754b8f7 supertab-0.31.ebuild 419
+MD5 302badcc1a535464e422ae93d467c220 supertab-0.32.ebuild 730
 MD5 fa65499114a972d1f74bece511e93f28 files/digest-supertab-0.31 64
 MD5 1087a450208ac83880b067d0c60164a1 files/digest-supertab-0.32 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBOmypLLFUmVNQ7rkRAsfSAKC1bOKLnIhLkPAu3ShGgP+bQHIOUgCg0GFS
-hR3StikHJ1GyQZ1ACG8mI5Y=
-=NfvO
------END PGP SIGNATURE-----

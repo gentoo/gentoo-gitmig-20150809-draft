@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8d0796ce62c6a991de42c608f8ca8c3c ChangeLog 534
-MD5 70d15a74630a56dc38caa1be5e6dc7a4 greputils-2.3.ebuild 534
+MD5 e0b8b6bb8f0f752a163856b8fbae8617 ChangeLog 537
+MD5 148ec677e7b992ed76769b71781cbae3 greputils-2.3.ebuild 537
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 b17b72a42886c6e1865c4eb679a01292 files/digest-greputils-2.3 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBhQJWLLFUmVNQ7rkRAmsNAJkBzhCKm1JzuccEehuFc0Jre6yI5ACgi3+I
-QwckRvMWZ9Y1TaIY7/C3ys4=
-=U6ol
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1dd24e318113e5dd6917cb72e07fa4ca ctx-1.17.ebuild 524
-MD5 852451df81e0d9be9fe17b35dd562c46 ChangeLog 828
+MD5 950f88a16d767f1fb80933e3145d038c ChangeLog 831
+MD5 6144a80e360321c150775e3e2e72e565 ctx-1.17.ebuild 527
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 754dc58fc977f4a0b2beaa96ef1c80cc files/digest-ctx-1.17 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByE0xLLFUmVNQ7rkRAlr3AKDJy0T5EXM/ttHsZbWOjwlq2Dsn/wCeJxCf
-7qsVlbKuUiZnhBc9rK07j3g=
-=4tWx
------END PGP SIGNATURE-----

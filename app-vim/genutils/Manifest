@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4d02c87fb76092f2f95d289ac5573692 ChangeLog 786
+MD5 1b7562faef3c0e7c7afc778438bbf929 ChangeLog 789
+MD5 4acc33791242b750e821d06c477bfb90 genutils-1.13.ebuild 632
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 cc14e5ac1bb8827b527075d55b1cdd2b genutils-1.13.ebuild 629
 MD5 166d5bf44bb32933762370c22a4641dd files/digest-genutils-1.13 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBOlxILLFUmVNQ7rkRAmC3AJ0Wbl1eYrrg0HQ+j41+aL5fZUnUygCgmcFN
-6dy4SfdzeOaE+1NvPWkrsXg=
-=KXKT
------END PGP SIGNATURE-----
