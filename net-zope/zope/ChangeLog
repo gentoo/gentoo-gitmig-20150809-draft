@@ -1,8 +1,14 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.8 2003/11/15 11:22:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.9 2003/12/10 19:08:11 lanius Exp $
 
 06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*zope-2.6.2-r1 (10 Dec 2003)
+
+  10 Dec 2003; Heinrich Wendel <lanius@gentoo.org> zope-2.6.2-r1.ebuild:
+  added support for specifying python version, thx to Andy Dustman
+  <andy-gentoo.54e552@dustman.net>, bug #35471
 
   15 Nov 2003; Heinrich Wendel <lanius@gentoo.org> files/2.6.1/zope.initd:
   bug #33228, fixed init script status() function
