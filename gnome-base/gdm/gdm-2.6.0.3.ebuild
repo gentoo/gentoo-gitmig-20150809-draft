@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.3.ebuild,v 1.2 2004/08/21 01:37:19 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.3.ebuild,v 1.3 2004/08/24 13:04:44 foser Exp $
 
 inherit gnome2 eutils
 
@@ -67,8 +67,8 @@ src_install() {
 	dosym /usr/bin/gdm /usr/bin/gdm-binary
 
 	# log, etc.
-	dodir /var/log/gdm
-	dodir /var/gdm
+	keepdir /var/log/gdm
+	keepdir /var/gdm
 	chown root:gdm ${D}/var/gdm
 	chmod 1770 ${D}/var/gdm
 

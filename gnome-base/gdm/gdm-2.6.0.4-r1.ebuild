@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.4.ebuild,v 1.1 2004/08/22 07:46:20 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.4-r1.ebuild,v 1.1 2004/08/24 13:04:44 foser Exp $
 
 inherit gnome2 eutils
 
@@ -13,8 +13,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
 IUSE="tcpd xinerama selinux"
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/gentoo-gdm-theme.tar.bz2
-	mirror://gentoo/gentoo-gdm-theme-r1.tar.bz2"
+	mirror://gentoo/gentoo-gdm-theme-r2.tar.bz2"
 MY_V="`echo ${PV} |cut -b -5`"
 
 RDEPEND=">=sys-libs/pam-0.72
@@ -67,8 +66,8 @@ src_install() {
 	dosym /usr/bin/gdm /usr/bin/gdm-binary
 
 	# log, etc.
-	dodir /var/log/gdm
-	dodir /var/gdm
+	keepdir /var/log/gdm
+	keepdir /var/gdm
 	chown root:gdm ${D}/var/gdm
 	chmod 1770 ${D}/var/gdm
 
@@ -102,8 +101,7 @@ src_install() {
 	dosed "s:#GraphicalTheme=circles:GraphicalTheme=gentoo-cow:" /etc/X11/gdm/gdm.conf
 
 	# Move Gentoo theme in
-	mv ${WORKDIR}/gentoo-cow  ${D}/usr/share/gdm/themes
-	mv ${WORKDIR}/gentoo-emergence  ${D}/usr/share/gdm/themes
+	mv ${WORKDIR}/gentoo-*  ${D}/usr/share/gdm/themes
 
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
 
