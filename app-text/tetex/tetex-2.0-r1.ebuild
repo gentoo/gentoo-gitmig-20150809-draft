@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0-r1.ebuild,v 1.2 2003/02/06 10:32:18 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0-r1.ebuild,v 1.3 2003/02/06 16:10:30 satai Exp $
 
 inherit eutils flag-o-matic
 
@@ -169,7 +169,7 @@ pkg_postinst() {
 		texconfig confall &>/dev/null
 		texconfig font rw &>/dev/null
 		texconfig font vardir /var/cache/fonts &>/dev/null
-		texconfig font options vardir &>/dev/null
+		texconfig font options varfonts &>/dev/null
 		einfo "Generating format files..."
 		fmtutil --missing &>/dev/null # This should generate all missing fmt files.
 		echo
