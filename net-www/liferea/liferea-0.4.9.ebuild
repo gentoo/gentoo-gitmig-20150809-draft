@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/liferea-0.4.9.ebuild,v 1.1 2004/05/24 01:30:25 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/liferea-0.4.9.ebuild,v 1.2 2004/05/25 18:47:24 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -26,5 +26,5 @@ pkg_setup(){
 	ewarn "Please ctrl+c now if you'd like to save your feed list."
 	sleep 8
 }
-	
+
 DOCS="README AUTHORS ChangeLog COPYING"
