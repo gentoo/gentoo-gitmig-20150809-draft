@@ -1,8 +1,8 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.4 2002/07/04 03:58:05 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.5 2002/07/08 13:44:31 seemant Exp $
 
-*eterm-0.9.1-r4 (18 Jun 2002)
+*eterm-0.9.1-r5 (18 Jun 2002)
 
   18 Jun 2002; Michael Nazaroff <naz@gentoo.org> eterm-0.9.1-r5.ebuild:
 

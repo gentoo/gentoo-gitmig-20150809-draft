@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r4.ebuild,v 1.2 2002/06/21 14:37:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r4.ebuild,v 1.3 2002/07/08 13:44:31 seemant Exp $
 
 MY_PN=${PN/et/Et}
 MY_P=${MY_PN}-${PV}
@@ -30,11 +30,10 @@ src_compile() {
 	local myconf="--disable-mmx"
 
 	use imlib \
-		&& myconf="${myconf} --with-imlib" \
-		|| myconf="${myconf} --without-imlib"
+		&& myconf="${myconf} --with-imlib --enable-trans" \
+		|| myconf="${myconf} --without-imlib --disable-trans"
 
     econf \
-		--enable-trans \
 		--with-x \
 		--enable-multi-charset \
 		--with-delete=execute \
