@@ -2,6 +2,23 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp
 
+*leafnode-1.9.21 (16 Apr 2002)
+
+  16 Apr 2002; Bruce A. Locke <blocke@shivan.org> leafnode-1.9.21.ebuild:
+
+  Committed to CVS as 1.9.21 ebuild
+
+  07 Apr 2002; Markus Krainer <krainer@chello.at> leafnode-1.9.20.ebuild,
+  files/digest-leafnode-1.9.20, ChangeLog :
+
+  - New version 1.9.20
+  - Removed "--host" option for ./configure (seems deprecated)
+  - Added "--localstatedir=/var" to ./configure (use /var instead of /usr/var)
+  - Added "--sysconfdir=/etc/leafnode" to ./configure
+  - Changed INSTALLROOT to DESTDIR in make install
+  - Removed doc_german from dodoc 
+  - display a warning as there are incompatible changes to prev. version
+
 *leafnode-1.9.19 (24 Feb 2002)
 
   24 Feb 2002; Chris Houser <chouser@gentoo.org> leafnode-1.9.19.ebuild :
