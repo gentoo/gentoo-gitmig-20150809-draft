@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/kdiff3-0.9.82.ebuild,v 1.7 2004/06/24 22:19:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/kdiff3-0.9.82.ebuild,v 1.8 2004/07/03 20:32:04 carlo Exp $
 
 inherit kde
-need-kde 3
 
 DESCRIPTION="KDE-based frontend to diff3"
-SRC_URI="mirror://sourceforge/kdiff3/${P}.tar.gz"
 HOMEPAGE="http://kdiff3.sourceforge.net/"
+SRC_URI="mirror://sourceforge/kdiff3/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc ~sparc"
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 amd64 ppc ~sparc"
 IUSE=""
-RESTRICT="nomirror"
 
 RDEPEND="$RDEPEND sys-apps/diffutils"
+need-kde 3
