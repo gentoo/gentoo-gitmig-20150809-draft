@@ -1,0 +1,86 @@
+diff -burN /var/tmp/portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/src/Seq/MIDIFile.C ZynAddSubFX-2.1.1/src/Seq/MIDIFile.C
+--- /var/tmp/portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/src/Seq/MIDIFile.C	2004-07-30 19:15:30.000000000 -0500
++++ ZynAddSubFX-2.1.1/src/Seq/MIDIFile.C	2004-10-13 02:05:05.836598554 -0500
+@@ -231,7 +231,7 @@
+     ///test 
+ //    ntrack=0;
+     
+-    me->writeevent(&me->miditrack[ntrack].record,&me->tmpevent);
++    me->writeevent(&me->miditrack[(int)ntrack].record,&me->tmpevent);
+     
+ };
+ 
+@@ -251,7 +251,7 @@
+     me->tmpevent.par1=note;
+     me->tmpevent.par2=vel;
+     me->tmpevent.channel=chan;
+-    me->writeevent(&me->miditrack[ntrack].record,&me->tmpevent);
++    me->writeevent(&me->miditrack[(int)ntrack].record,&me->tmpevent);
+ 
+     
+     
+@@ -271,7 +271,7 @@
+     me->tmpevent.par1=control;//???????????? ma uit la Sequencer::recordnote() din varianele vechi de zyn
+     me->tmpevent.par2=value;
+     me->tmpevent.channel=chan;
+-    me->writeevent(&me->miditrack[ntrack].record,&me->tmpevent);
++    me->writeevent(&me->miditrack[(int)ntrack].record,&me->tmpevent);
+     
+ };
+ 
+@@ -304,7 +304,7 @@
+     me->tmpevent.par1=0;
+     me->tmpevent.par2=0;
+     me->tmpevent.channel=0;
+-    me->writeevent(&me->miditrack[ntrack].record,&me->tmpevent);
++    me->writeevent(&me->miditrack[(int)ntrack].record,&me->tmpevent);
+ };
+ 
+ 
+diff -burN /var/tmp/portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/src/Seq/Sequencer.C ZynAddSubFX-2.1.1/src/Seq/Sequencer.C
+--- /var/tmp/portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/src/Seq/Sequencer.C	2004-07-20 15:17:56.000000000 -0500
++++ ZynAddSubFX-2.1.1/src/Seq/Sequencer.C	2004-10-13 02:03:54.829973000 -0500
+@@ -101,30 +101,30 @@
+     //test
+ //    if (ntrack!=0) return(-1);
+ 
+-    updatecounter(&playtime[ntrack]);
++    updatecounter(&playtime[(int)ntrack]);
+ 
+-//    printf("%g %g\n",nextevent[ntrack].time,playtime[ntrack].abs);
++//    printf("%g %g\n",nextevent[(int)ntrack].time,playtime[(int)ntrack].abs);
+ 
+-    if (nextevent[ntrack].time<playtime[ntrack].abs) readevent(&miditrack[ntrack].track,&nextevent[ntrack].ev);
++    if (nextevent[(int)ntrack].time<playtime[(int)ntrack].abs) readevent(&miditrack[(int)ntrack].track,&nextevent[(int)ntrack].ev);
+ 	else return(-1);
+-    if (nextevent[ntrack].ev.type==-1) return(-1);
++    if (nextevent[(int)ntrack].ev.type==-1) return(-1);
+ //    printf("********************************\n");    
+ 
+     //sa pun aici o protectie. a.i. daca distanta dintre timpul curent si eveliment e prea mare (>1sec) sa elimin nota
+ 
+-    if (ntrack==1) printf("_ %f %.2f  (%d)\n",nextevent[ntrack].time,playtime[ntrack].abs,nextevent[ntrack].ev.par2);
++    if (ntrack==1) printf("_ %f %.2f  (%d)\n",nextevent[(int)ntrack].time,playtime[(int)ntrack].abs,nextevent[(int)ntrack].ev.par2);
+ 
+-    *type=nextevent[ntrack].ev.type;
+-    *par1=nextevent[ntrack].ev.par1;
+-    *par2=nextevent[ntrack].ev.par2;
+-    *midich=nextevent[ntrack].ev.channel;
++    *type=nextevent[(int)ntrack].ev.type;
++    *par1=nextevent[(int)ntrack].ev.par1;
++    *par2=nextevent[(int)ntrack].ev.par2;
++    *midich=nextevent[(int)ntrack].ev.channel;
+ 
+     
+-    double dt=nextevent[ntrack].ev.deltatime*0.0001*realplayspeed;
+-    printf("zzzzzzzzzzzzzz[%d] %d\n",ntrack,nextevent[ntrack].ev.deltatime);
+-    nextevent[ntrack].time+=dt;
++    double dt=nextevent[(int)ntrack].ev.deltatime*0.0001*realplayspeed;
++    printf("zzzzzzzzzzzzzz[%d] %d\n",ntrack,nextevent[(int)ntrack].ev.deltatime);
++    nextevent[(int)ntrack].time+=dt;
+ 
+-//    printf("%f   -  %d %d \n",nextevent[ntrack].time,par1,par2);
++//    printf("%f   -  %d %d \n",nextevent[(int)ntrack].time,par1,par2);
+     return(0);//?? sau 1
+ };
+ 

@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/zynaddsubfx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.13 2004/09/28 23:15:40 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.14 2004/10/18 05:15:15 chriswhite Exp $
+
+*zynaddsubfx-2.1.1 (18 Oct 2004)
+
+  18 Oct 2004; Chris White <chriswhite@gentoo.org>
+  +files/zynaddsubfx-2.1.1-fltk_flags.patch,
+  +files/zynaddsubfx-2.1.1-fltk_version.patch,
+  +files/zynaddsubfx-2.1.1-gcc34_mem_hack.patch,
+  +files/zynaddsubfx-2.1.1-gcc_subscript_warning.patch,
+  +files/zynaddsubfx-2.1.1-sanitize_makefile.patch, +zynaddsubfx-2.1.1.ebuild:
+  Bumped to version 2.1.1 as per Bug #67164. Thanks to Eric Shattow for working
+  on the ebuild and pathches. Fixes some nice little stability issues.
 
 *zynaddsubfx-2.0.0 (29 Sep 2004)
 

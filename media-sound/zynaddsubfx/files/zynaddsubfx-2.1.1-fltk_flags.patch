@@ -1,0 +1,32 @@
+diff -burN /var/tmp/portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/ExternalPrograms/Controller/compile.sh ZynAddSubFX-2.1.1/ExternalPrograms/Controller/compile.sh
+--- /var/tmp/portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/ExternalPrograms/Controller/compile.sh	2003-11-28 14:45:03.000000000 -0600
++++ ZynAddSubFX-2.1.1/ExternalPrograms/Controller/compile.sh	2004-10-12 17:37:01.049827687 -0500
+@@ -1,8 +1,8 @@
+-clean.sh
++./clean.sh
+ fluid -c ControllerUI.fl
+-gcc -c ControllerUI.cxx -o ControllerUI.o
+-gcc -c Controller.C -o Controller.o
+-gcc -c main.C -o main.o
++gcc `fltk-config --cflags` -c ControllerUI.cxx -o ControllerUI.o
++gcc `fltk-config --cflags` -c Controller.C -o Controller.o
++gcc `fltk-config --cflags` -c main.C -o main.o
+ 
+ 
+ 
+diff -burN /var/tmp/portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/ExternalPrograms/Spliter/compile.sh ZynAddSubFX-2.1.1/ExternalPrograms/Spliter/compile.sh
+--- /var/tmp/portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/ExternalPrograms/Spliter/compile.sh	2003-11-28 14:45:03.000000000 -0600
++++ ZynAddSubFX-2.1.1/ExternalPrograms/Spliter/compile.sh	2004-10-12 17:37:04.809589979 -0500
+@@ -1,8 +1,8 @@
+-clean.sh
++./clean.sh
+ fluid -c SpliterUI.fl
+-gcc -c SpliterUI.cxx -o SpliterUI.o
+-gcc -c Spliter.C -o Spliter.o
+-gcc -c main.C -o main.o
++gcc `fltk-config --cflags` -c SpliterUI.cxx -o SpliterUI.o
++gcc `fltk-config --cflags` -c Spliter.C -o Spliter.o
++gcc `fltk-config --cflags` -c main.C -o main.o
+ 
+ gcc -o spliter *.o `fltk-config --ldflags` -lasound
+ 

@@ -1,0 +1,11 @@
+diff -burN /var/tmp/portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/src/Makefile ZynAddSubFX-2.1.1/src/Makefile
+--- /var/tmp/portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/src/Makefile	2004-09-30 15:57:48.000000000 -0500
++++ ZynAddSubFX-2.1.1/src/Makefile	2004-10-13 02:50:11.923823045 -0500
+@@ -63,7 +63,6 @@
+ .PHONY: subdirs $(SUBDIRS)
+ 
+ all:
+-	yes " " | head
+ 	$(MAKE) -C UI $@
+ #	@sh -c "cd UI ; $(CXX) -MM -MG -w *.cc >> ../Make.deps ; cd .."
+ 	@for name in $(SUBDIRS); do sh -c "cd $$name ; $(CXX) -MM -MG -w *.C >> ../Make.deps ; cd .."; done
