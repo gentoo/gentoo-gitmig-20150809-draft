@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.1 2003/09/15 17:46:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.2 2003/11/14 20:10:36 seemant Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 
 DEPEND="sys-devel/autoconf
 	sys-devel/automake
-	sys-apps/bzip2"
+	app-arch/bzip2"
 RDEPEND=""
 
 S=${WORKDIR}/hfsplus-${PV}
