@@ -1,6 +1,42 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.5 2002/09/03 23:41:47 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.6 2002/10/07 03:42:16 lostlogic Exp $
+
+*xfs-sources-2.4.19-r2 (06 Oct 2002)
+
+  06 Oct 2002; Brandon Low <lostlogic@gentoo.org> xfs-sources-2.4.19-r1.ebuild:
+
+  This release is a team effort of Tobias Eichert <tobias@databoogie.net>
+  and myself.
+
+  While testing this kerenl I ran into very bad crashing behavior with
+  the USE="acpi4linux" option enabled... just a warning.  But for you
+  laptopers it is still there.
+
+  New from xfs-sources-2.4.19-r1:
+  - Update to latest XFS patch
+  - Dropped ext3-htree due to corruption with current e2fsprogs
+    this may bite some of you who are already using it, but
+    hopefully it will be updated before you need to fsck your
+    partitions a lot.
+  - Update EVMS
+  - Update JFS
+  - Fix for grsecurity compilation
+  - Update patches.txt documentation and kernel.eclass (makes older
+    a little funky, but is more forward working)
+  - Fix processor type options to show gcc>31 rather than gcc31
+  - Add futexes support
+  - Add imon support
+  - Optional ACPI patch just set USE="acpi4linux"
+  - Redone ebuild setup now we have an eclass for these things
+  - Rename some patches to better names for use with KERNEL_EXCLUDE
+  - Add support for KERNEL_EXCLUDE
+  - Add and re-arrange VIA bugfixes
+  - Update grsecurity
+  - Switch to latest release IPSEC Free S/WAN
+  - Add usbdnet support for Zaurus handhelds
+  - Add supermount patches.
+  - Incorportate the small fixes done to xfs-sources-2.4.19-r1
 
 *xfs-sources-2.4.19-r1 (03 Sep 2002)
 

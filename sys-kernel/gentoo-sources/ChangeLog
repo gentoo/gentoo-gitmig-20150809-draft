@@ -1,6 +1,48 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.5 2002/09/05 04:46:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.6 2002/10/07 03:42:16 lostlogic Exp $
+
+*gentoo-sources-2.4.19-r10 (06 Oct 2002)
+
+  06 Oct 2002; Brandon Low <lostlogic@gentoo.org> gentoo-sources-2.4.19-r10.ebuild:
+
+  While testing this kerenl I ran into very bad crashing behavior with 
+  the USE="acpi4linux" option enabled... just a warning.  But for you
+  laptopers it is still there.
+
+  Well I dug up about 3-4 hours of time and merged xfs into this kernel
+  so everyone who has been asking for it finally gets their way because
+  I hate being unpopular.  I hope you all enjoy XFS, it is enabled by a
+  hidden useflag so set USE="xfs" to turn it on for this kernel.  Please
+  let me know your results.
+
+  New in this release:
+  - Dropped ext3-htree due to corruption with current e2fsprogs
+    this may bite some of you who are already using it, but
+    hopefully it will be updated before you need to fsck your
+    partitions a lot.
+  - Update EVMS
+  - Update JFS
+  - Fix for grsecurity compilation
+  - Update patches.txt documentation and kernel.eclass (makes older
+    a little funky, but is more forward working)
+  - Fix processor type options to show gcc>31 rather than gcc31
+  - Add futexes support
+  - Add imon support
+  - Optional XFS patch just set USE="xfs"
+  - Optional ACPI patch just set USE="acpi4linux"
+  - Redone ebuild setup now we have an eclass for these things
+  - Rename some patches to better names for use with KERNEL_EXCLUDE
+  - Add support for KERNEL_EXCLUDE
+  - Add and re-arrange VIA bugfixes
+  - Update grsecurity
+  - Switch to latest release IPSEC Free S/WAN
+  - Add usbdnet support for Zaurus handhelds
+  - Updated preempt
+  - Updated rmap
+  - Add xattr and acl patches and include the JFS patches for them.
+  - Add supermount patches.
+  - Incorportate the small fixes done to gentoo-sources-2.4.19-r9
 
 *gentoo-sources-2.4.19-r9 (03 Sep 2002)
 
