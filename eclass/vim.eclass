@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.46 2003/12/09 13:01:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.47 2004/01/06 16:01:57 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -13,6 +13,11 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack
 
 IUSE="$IUSE ncurses nls acl"
+
+# Vim doesn't build with 9libs, though it would probably run with it
+# installed, so we don't put this in RDEPEND.  See bug 35765
+DEPEND="$DEPEND !dev-libs/9libs"
+
 if [ ${PN} != vim-core ]; then
 	IUSE="$IUSE cscope gpm perl python ruby"
 	DEPEND="$DEPEND
