@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.3.ebuild,v 1.6 2004/07/01 20:52:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.3.ebuild,v 1.7 2004/07/15 02:41:51 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
@@ -14,8 +14,6 @@ KEYWORDS="x86 ~ppc sparc"
 DEPEND="virtual/libc
 	>=sys-libs/db-3.2
 	>=dev-libs/openssl-0.9.6k"
-
-S="${WORKDIR}/${P}"
 
 src_compile() {
 

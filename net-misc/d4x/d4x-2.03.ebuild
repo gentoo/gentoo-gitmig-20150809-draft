@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.03.ebuild,v 1.11 2004/06/24 23:40:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.03.ebuild,v 1.12 2004/07/15 02:43:10 agriffis Exp $
 
 IUSE="nls esd gnome oss"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="GTK based download manager for X."
 SRC_URI="http://www.krasu.ru/soft/chuchelo/files/${P}.tar.gz"
 HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
@@ -70,4 +69,3 @@ src_install () {
 		newins nt.desktop d4x.desktop
 	fi
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0_rc2.ebuild,v 1.6 2004/06/24 23:40:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0_rc2.ebuild,v 1.7 2004/07/15 02:43:10 agriffis Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -82,4 +82,3 @@ src_install () {
 	dodoc AUTHORS COPYING ChangeLog* NEWS PLANS TODO \
 		DOC/{FAQ*,LICENSE,NAMES,README*,TROUBLES,THANKS}
 }
-

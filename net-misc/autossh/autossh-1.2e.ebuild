@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.2e.ebuild,v 1.7 2004/07/01 20:42:56 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.2e.ebuild,v 1.8 2004/07/15 02:39:08 agriffis Exp $
 
 DESCRIPTION="Automatically restart SSH sessions and tunnels"
 HOMEPAGE="http://www.harding.motd.ca/autossh/"
@@ -27,4 +27,3 @@ src_install() {
 	dodoc CHANGES README autossh.host rscreen
 	doman autossh.1
 }
-

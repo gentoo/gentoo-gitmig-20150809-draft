@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation 
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.7.ebuild,v 1.3 2004/07/14 12:28:16 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.7.ebuild,v 1.4 2004/07/15 02:41:51 agriffis Exp $
 
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
 HOMEPAGE="http://www.iu.hio.no/cfengine/"
