@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r3.ebuild,v 1.9 2004/03/11 14:19:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r3.ebuild,v 1.10 2004/03/12 02:53:25 mr_bones_ Exp $
 
 S=${WORKDIR}/${P/commonc/CommonC}
 DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\
@@ -35,7 +35,7 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 	#Ugly hack the makefile looks a bit ill behaving
-	rm -fR ${D}/var 
+	rm -fR ${D}/var
 	dodoc AUTHORS INSTALL NEWS OVERVIEW.TXT ChangeLog \
 		README THANKS TODO COPYING*
 	dohtml doc/*
