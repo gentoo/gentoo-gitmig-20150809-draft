@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/gnurobbo
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.1 2005/03/02 05:26:40 mr_bones_ Exp $
+
+*gnurobbo-0.57 (02 Mar 2005)
+
+  02 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +gnurobbo-0.57.ebuild:
+  initial commit (bug #83495)
+
