@@ -1,15 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.3.4.ebuild,v 1.3 2004/06/03 02:55:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.3.4.ebuild,v 1.4 2004/06/16 21:52:58 mr_bones_ Exp $
 
 inherit java-pkg
-USE="oracle servlet-2.3 servlet-2.4 dbcp jboss jta jmx struts jikes"
+
 DESCRIPTION="Quartz Scheduler from OpenSymphony"
 HOMEPAGE="http://www.opensymphony.com/quartz/"
 SRC_URI="mirror://sourceforge/quartz/${P}.tar.gz"
+
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE="oracle servlet-2.3 servlet-2.4 dbcp jboss jta jmx struts jikes"
 
 DEPEND=">=virtual/jdk-1.4
 		oracle? ( =dev-java/jdbc2-oracle-9.2.0.3 )
@@ -21,8 +23,6 @@ DEPEND=">=virtual/jdk-1.4
 		jmx? ( =dev-java/jmx-1.2.1 )
 		struts? ( =dev-java/struts-1.1 )
 		jikes? ( dev-java/jikes )"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	local antflags=""
