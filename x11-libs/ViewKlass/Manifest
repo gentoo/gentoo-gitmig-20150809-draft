@@ -1,4 +1,6 @@
-MD5 67d8159e797d2f42b3c84e474eb6db87 ChangeLog 932
+MD5 137adf55f0231f048d705aca953ed4f6 ChangeLog 1070
 MD5 04d6fb63fbb9a7affc4ff4bfbed6641d ViewKlass-0.6.0.ebuild 865
+MD5 267d6541dd3510432c7c3cf4bbe38f5e ViewKlass-0.7.0.ebuild 811
 MD5 f0a90700a678d09e23a00056fe8e774f files/ViewKlass-0.6.0-gentoo.patch.gz 8810
+MD5 9ddd4d4de3bed0944ab8c6aa079eac55 files/digest-ViewKlass-0.7.0 67
 MD5 36b02a31ee3dcda42c1d897e0e75a977 files/digest-ViewKlass-0.6.0 67
