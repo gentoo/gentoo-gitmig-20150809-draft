@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-4.2.1.ebuild,v 1.1 2004/04/12 23:41:56 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-4.2.1.ebuild,v 1.2 2004/04/13 13:23:58 dholm Exp $
 
 DESCRIPTION="a utility for monitoring and managing daemons or similar programs running on a Unix system."
 HOMEPAGE="http://www.tildeslash.com/monit/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.tildeslash.com/monit/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="ssl"
 
 RDEPEND="virtual/glibc
