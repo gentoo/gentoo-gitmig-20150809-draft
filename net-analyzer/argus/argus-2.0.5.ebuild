@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.3 2003/07/13 11:30:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.4 2004/02/06 14:32:06 aliz Exp $
 
 DESCRIPTION="network Audit Record Generation and Utilization System"
 HOMEPAGE="http://www.qosient.com/argus/"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.qosient.com/argus/"
 SRC_URI="ftp://ftp.qosient.com/pub/argus/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 RDEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2"
@@ -17,11 +17,12 @@ DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.4.6"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${A} ; cd ${S}
+
+	epatch ${FILESDIR}/${P}-libpcap-include.patch
 
 	# Fix hardcoded config file
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff || die
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_install () {
