@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.7 2003/02/28 04:04:16 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.8 2003/03/19 03:27:11 livewire Exp $
+
+*gs-sources-2.4.21_pre5-r1    (18 March 2003)
+
+  18 March 2003: Bob Johnson <livewire@gentoo.org>
+
+	- updated acpi to acpi-20030228-2.4.21-pre4
+	- updated Aic79xx to aic79xx-linux-2.4-20030318
+	- ptrace exploit patch 
+
+  27 Feb 2003: Bob Johnson <livewire@gentoo.org>
+
+        - bumped to 2.4.21_pre5
 
 *gs-sources-2.4.21_pre5    (27 Feb 2003)
 
