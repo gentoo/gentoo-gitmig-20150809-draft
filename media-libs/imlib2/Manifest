@@ -4,13 +4,13 @@ Hash: SHA1
 MD5 40fc235c23f26755c8c2cde74462d003 ChangeLog 3391
 MD5 97e06b6a0558fb155d2b2d60d510a436 imlib2-1.1.2.ebuild 1010
 MD5 0c36280f1141c2ab86d0bd09ceec038a metadata.xml 2284
-MD5 3280bf139e2a154f44310523d51e6e2e imlib2-1.1.2.20040912.ebuild 961
-MD5 3e9a1ba66e5768dce02d7a338edaaf1d files/digest-imlib2-1.1.2.20040912 74
+MD5 48234eb9bf8520b50f9ab8ce4bb0fb68 imlib2-1.1.2.20041016.ebuild 961
+MD5 530b9d3b178d668c320295cb93500528 files/digest-imlib2-1.1.2.20041016 74
 MD5 78f8f17705b3e58fd3f15a898dfa2e25 files/digest-imlib2-1.1.2 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBXMdmHTu7gpaalycRAupAAKDmdOKu8QD07r6fL/7pKEgpv9zg/wCeI5TL
-BikrtQGkb+0QhJ0EhzARlXI=
-=z5WU
+iD8DBQFBc72LHTu7gpaalycRArO3AJ0apPbnOZI4j+4UtaefalHvU5C1YQCfTn7N
+e9onfpMEuylVHghRHeZlNvg=
+=yZJY
 -----END PGP SIGNATURE-----
