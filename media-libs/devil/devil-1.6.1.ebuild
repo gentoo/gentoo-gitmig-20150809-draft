@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.1.ebuild,v 1.8 2004/03/19 07:56:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.1.ebuild,v 1.9 2004/03/23 19:18:11 mholzer Exp $
 
 IUSE="gif png tiff sdl X opengl jpeg"
 
@@ -10,23 +10,19 @@ S=${WORKDIR}/DevIL
 DESCRIPTION="DevIL image library 1.6.1"
 HOMEPAGE="http://www.imagelib.org/"
 SRC_URI="mirror://sourceforge/openil/DevIL-${PV}.tar.gz"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 sparc "
 
-RDEPEND="X? ( x11-base/xfree )
+DEPEND="X? ( x11-base/xfree )
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	sdl? ( media-libs/libsdl )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( media-libs/tiff )
 	opengl? ( virtual/opengl )"
-
-
-DEPEND="${RDEPEND}"
-
-
 
 src_compile() {
 	local myconf
