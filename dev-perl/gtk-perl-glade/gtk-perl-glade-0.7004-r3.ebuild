@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r3.ebuild,v 1.5 2003/06/21 21:36:44 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r3.ebuild,v 1.6 2003/09/04 04:46:17 msterret Exp $
 
 inherit perl-module
 
@@ -18,15 +18,15 @@ DEPEND="${DEPEND}
 	>=dev-perl/gtk-perl-${PV}
 	dev-util/glade"
 
-src_compile() {            
+src_compile() {
 	perl Makefile.PL
 	emake || die
-	cd Glade               
-	perl Makefile.PL 
+	cd Glade
+	perl Makefile.PL
 	emake || die
 }
 
-src_install() {                               
+src_install() {
 	cd Glade
 	make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die
 }

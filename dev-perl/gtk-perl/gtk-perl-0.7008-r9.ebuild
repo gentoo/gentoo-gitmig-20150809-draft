@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r9.ebuild,v 1.7 2003/07/04 05:35:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r9.ebuild,v 1.8 2003/09/04 04:44:32 msterret Exp $
 
 inherit perl-module eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha hppa"
 
 DEPEND="${DEPEND}
-	media-libs/gdk-pixbuf 
+	media-libs/gdk-pixbuf
 	=x11-libs/gtk+-1.2*
 	dev-perl/XML-Writer
 	dev-perl/XML-Parser
@@ -36,7 +36,7 @@ src_unpack() {
 	cp Makefile.PL Makefile.PL.bak
 	perl -pi -e '/CCMD/ && s|/m;|/mg;|' */Makefile.PL
 
-	perl Makefile.PL ${myconf} \                                            
+	perl Makefile.PL ${myconf} \
 		PREFIX=${D}/usr
 }
 
