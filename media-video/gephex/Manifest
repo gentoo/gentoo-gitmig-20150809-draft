@@ -1,11 +1,23 @@
-MD5 d53f1e8917609b98290a7efbbfc649a7 ChangeLog 794
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b5be84b1fbc42ca05516ecb2eafe1471 gephex-0.0.4-r1.ebuild 1232
-MD5 5058c9b00a8344a3f43b2a200f7718bd gephex-0.0.4.ebuild 1159
-MD5 2a49038c50ecad6d0d355dea425bbb88 gephex-0.4.ebuild 1045
+MD5 6487f7f20c3f5242a304ead5a12aa899 ChangeLog 910
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 0e6024af9a9dd49daca8977ba601c8f5 files/0.0.4-alsa-api-fix.patch 832
-MD5 060f2d352bb4bee71e647beb2b8135a1 files/0.0.4-disable-glx.patch 159
+MD5 5058c9b00a8344a3f43b2a200f7718bd gephex-0.0.4.ebuild 1159
+MD5 cf4e2f004c3253d8274ad74ded3ba2c0 gephex-0.4.1.ebuild 1158
+MD5 2a49038c50ecad6d0d355dea425bbb88 gephex-0.4.ebuild 1045
+MD5 1eefed026f973fc48b260ef40cecad56 files/digest-gephex-0.4.1 66
 MD5 d0c894eccb6239538b954cb1d6680c5d files/0.0.4-makefile.in.patch 873
+MD5 0e6024af9a9dd49daca8977ba601c8f5 files/0.0.4-alsa-api-fix.patch 832
 MD5 8ce45a490b11be332445c5166c2be858 files/digest-gephex-0.0.4 65
-MD5 8ce45a490b11be332445c5166c2be858 files/digest-gephex-0.0.4-r1 65
 MD5 4fe4a3b7c2fad145df1bbedc08e914db files/digest-gephex-0.4 64
+MD5 060f2d352bb4bee71e647beb2b8135a1 files/0.0.4-disable-glx.patch 159
+MD5 8ce45a490b11be332445c5166c2be858 files/digest-gephex-0.0.4-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBizX2RPjscZbntocRAmRDAJ93o/EJpE/zQpTTnVpVDNNK6wH6OgCfYBkB
+/2/PNYhsnKsFKyTqemI40L8=
+=vjMZ
+-----END PGP SIGNATURE-----

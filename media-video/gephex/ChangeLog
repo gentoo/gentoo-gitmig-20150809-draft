@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gephex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.8 2004/09/30 06:00:23 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.9 2004/11/05 08:24:06 zypher Exp $
+
+*gephex-0.4.1 (29 Oct 2004)
+
+  05 Nov 2004; Marc Hildebrand <zypher@gentoo.org>; gephex-0.4.1.ebuild :
+  Version bump.
 
   30 Sep 2004; Chris White <chriswhite@gentoo.org> :
   Fixed +x permissions on ebuild.
