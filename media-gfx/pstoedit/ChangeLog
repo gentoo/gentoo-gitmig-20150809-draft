@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.5 2003/06/17 11:33:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.6 2003/10/02 14:28:12 obz Exp $
+
+  02 Oct 2003; Mike Gardiner <obz@gentoo.org> metadata.xml,
+  pstoedit-3.33.ebuild:
+  Fixes re bug: 29724 for libEMF and removed ming support which is currently
+  un-supported support (?). We're also going stable on x86
 
 *pstoedit-3.33 (17 Jun 2003)
 
