@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 76a96ad7c96357655e1ea98f58065c18 ChangeLog 352
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 1ca1b53c796e45b6b69270099679cbff triptych-demo-0.ebuild 731
+MD5 5593d94dac71b0477981be9ef76204fc files/digest-triptych-demo-0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBtoRGroRuSHgZdywRAjTgAJ9JUGyP0S3/2Ka36FDjTpUEmEFCxwCfUk6I
+KYfNw/08hvzr9Ou79zj/9aY=
+=kYHs
+-----END PGP SIGNATURE-----
