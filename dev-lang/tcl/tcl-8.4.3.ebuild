@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.3.ebuild,v 1.1 2003/06/30 23:14:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.3.ebuild,v 1.2 2003/08/15 13:03:24 lanius Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -13,7 +13,7 @@ DESCRIPTION="Tool Command Language"
 
 # gentoolkit is needed only for revdep-rebuild
 DEPEND="virtual/glibc
-	>=app-admin/gentoolkit-0.1.22"
+	>=app-portage/gentoolkit-0.1.22"
 RDEPEND="virtual/glibc"
 
 SLOT="0"
