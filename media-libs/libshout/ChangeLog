@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libshout
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.6 2004/03/17 04:14:39 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.7 2004/04/08 07:58:18 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> libshout-2.0.ebuild,
+  metadata.xml:
+  Added metadata.xml.  Stable x86.  Fixed broken DEPEND.
 
   16 Mar 2004; Dylan Carlson <absinthe@gentoo.org> libshout-2.0.ebuild:
   Added ~amd64 to KEYWORDS.
