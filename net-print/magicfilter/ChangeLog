@@ -1,26 +1,32 @@
 # ChangeLog for net-print/magicfilter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.3 2002/07/14 20:41:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.4 2003/02/11 12:29:30 seemant Exp $
 
 *magicfilter-1.2-r3 (26 Mar 2002)
+
+  11 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  magicfilter-1.2-r3.ebuild :
+
+  ugh, what a nasty ebuild this was. Modernised the syntax, and moved all
+  the patches and extra files into a tarball on the mirrors instead.
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> magicfilter-1.2-r3.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
-	26 Mar 2002; Aron Griffis <agriffis@gentoo.org> magicfilter-1.2-r3.ebuild:
+  26 Mar 2002; Aron Griffis <agriffis@gentoo.org> magicfilter-1.2-r3.ebuild:
 
-	Fixed magicfilterconfig man-page installation
+  Fixed magicfilterconfig man-page installation
 
 *magicfilter-1.2-r2 (1 Feb 2002)
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> magicfilter-1.2-r2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
-	1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
 
-	Added initial ChangeLog which should be updated whenever the package is
-	updated in any way. This changelog is targetted to users. This means that
-	the comments should well explained and written in clean English. The
-	details about writing correct changelogs are explained in the
-	skel.ChangeLog file which you can find in the root directory of the
-	portage repository.
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that
+  the comments should well explained and written in clean English. The
+  details about writing correct changelogs are explained in the
+  skel.ChangeLog file which you can find in the root directory of the
+  portage repository.
