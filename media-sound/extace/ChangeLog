@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/extace
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/ChangeLog,v 1.5 2004/06/24 23:59:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/ChangeLog,v 1.6 2004/07/20 01:17:25 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> extace-1.8.11.ebuild:
+  ~amd64
 
   22 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> extace-1.8.11.ebuild:
   Removed explicit S=.
