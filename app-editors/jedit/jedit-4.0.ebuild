@@ -1,6 +1,6 @@
 # Copyright 2002 Maik Schreiber
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.0.ebuild,v 1.2 2002/07/08 21:02:50 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.0.ebuild,v 1.3 2002/08/06 17:34:16 blizzy Exp $
 
 S="${WORKDIR}/jEdit"
 DESCRIPTION="A programmer's editor written in Java"
@@ -12,14 +12,14 @@ KEYWORDS="*"
 
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}
-	>=dev-java/ant-1.4.1
-	jikes? ( >=dev-java/jikes-1.15 )"
+	>=dev-java/ant-1.4.1"
+#	jikes? ( >=dev-java/jikes-1.15 )"
 
 src_compile() {
 	local antflags
 
 	antflags=""
-	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+#	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 
 	ant ${antflags} || die "compile problem"
 }

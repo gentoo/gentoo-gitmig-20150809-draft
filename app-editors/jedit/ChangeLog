@@ -1,30 +1,30 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.5 2002/07/25 04:44:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.6 2002/08/06 17:34:16 blizzy Exp $
+
+  06 Aug 2002; Maik Schreiber <blizzy@gentoo.org> jedit-4.0.ebuild,
+  jedit-4.0.3.ebuild, jedit-4.0.3-r1.ebuild, jedit-4.0.3-r2.ebuild:
+  Disabled compilation with jikes: jikes-1.16 appears to produce
+  garbage that makes jEdit fail on startup.
 
 *jedit-4.0.3-r2 (24 Jul 2002)
 
-  24 Jul 2002; Matthew Kennedy <mkennedy@gentoo.org> jedit-4.0.3-r2.ebuild :
-
+  24 Jul 2002; Matthew Kennedy <mkennedy@gentoo.org> jedit-4.0.3-r2.ebuild:
   Should install the docs now... with the right permissions (resolves
   bug #4929)
 
 *jedit-4.0.3-r1 (12 Jul 2002)
 
-  12 Jul 2002; Ryan Phillips <rphillips@gentoo.org> jedit-4.0.3-r1.ebuild :
-
+  12 Jul 2002; Ryan Phillips <rphillips@gentoo.org> jedit-4.0.3-r1.ebuild:
   Should install the docs now...
 
 *jedit-4.0.3 (02 Jul 2002)
 
-  02 Jul 2002; Ryan Phillips <rphillips@gentoo.org> jedit-4.0.3.ebuild :
-
-  New version. Moves jedit to /usr/share/jedit
-  Fixes #4304
+  02 Jul 2002; Ryan Phillips <rphillips@gentoo.org> : New version. Moves
+  jedit to /usr/share/jedit. Fixes #4304.
   
 *jedit-4.0 (09 Jun 2002)
 
-  09 Jun 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
-
-  Initial import, closes bug #3152.
+  09 Jun 2002; Ryan Phillips <rphillips@gentoo.org> : Initial import,
+  closes bug #3152.
   ebuild submitted by Maik Schreiber <bZ@iq-computing.de>
