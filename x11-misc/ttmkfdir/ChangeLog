@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ttmkfdir
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.49 2004/11/17 15:23:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.50 2004/12/21 13:43:22 foser Exp $
+
+  21 Dec 2004; foser <foser@gentoo.org> ttmkfdir-3.0.9-r2.ebuild :
+  Add patch to fix build issues with newer freetypes (#44119)
 
   17 Nov 2004; Markus Rothe <corsair@gentoo.org> ttmkfdir-3.0.9-r2.ebuild:
   Stable on ppc64
