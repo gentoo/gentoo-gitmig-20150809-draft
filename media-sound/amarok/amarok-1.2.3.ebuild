@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.3.ebuild,v 1.1 2005/03/29 13:32:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.3.ebuild,v 1.2 2005/04/03 19:25:04 greg_g Exp $
 
 inherit kde eutils
 
@@ -39,7 +39,7 @@ need-kde 3.2
 
 pkg_setup() {
 	if use arts && ! use xine && ! use gstreamer; then
-		ewarn "aRTs support is deprecated, if you have problems please consider"
+		ewarn "aRts support is deprecated, if you have problems please consider"
 		ewarn "enabling support for Xine or GStreamer"
 		ewarn "(emerge amarok again with USE=\"xine\" or USE=\"gstreamer\")."
 		ebeep 2
