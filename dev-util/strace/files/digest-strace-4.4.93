@@ -1,1 +1,5 @@
+MD5 db010dd4d78a0a198a7436df23c654e4 /files/strace-4.4.93-configure.ac.patch 337
+MD5 8b3c145c5cbe648c4eceeaedd4ec9d05 /files/strace-4.4-arm-configure.patch 224
+MD5 ae0107bf0d9c841b0f0929a88f47844a /files/strace-4.4-arm.patch 7667
+MD5 dd4fc4f8778b7b6576497bbc45079f7d /strace-4.4.93.ebuild 1425
 MD5 7d2df2a1522533cd51feb52eb1de4b76 strace-4.4.93.tar.bz2 361355

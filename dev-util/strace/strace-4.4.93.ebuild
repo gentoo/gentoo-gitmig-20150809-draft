@@ -1,20 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.93.ebuild,v 1.2 2003/02/23 02:29:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.93.ebuild,v 1.3 2003/04/03 20:04:47 mholzer Exp $
 
-# NOTE: For some reason, upstream has changed the naming scheme
-# for the tarballs to something quite lame:
-# strace_version-revision.tar.gz
-# This makes it difficult for us to deal with, because portage
-# is supposed to glean the package version information from the
-# filename of the ebuild. Grr
-# Thus, *MAINTAINER*: change the *revision* in the SRC_URI below
-# by hand. Sorry, couldn't think of a better way.
-#  - Jon Nelson, 27 Apr 2002
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A usefull diagnostic, instructional, and debugging tool"
-SRC_URI="mirror://sourceforge/strace/strace-4.4.93.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
 
 SLOT="0"
@@ -27,7 +19,7 @@ src_unpack() {
     unpack ${A}
     cd ${S}
     # the patch change the autoconf dep to 2.54
-    patch -p1 < ${FILESDIR}/strace-4.4.93-configure.ac.patch || die
+    epatch ${FILESDIR}/${P}-configure.ac.patch 
 }
 
 src_compile() {
