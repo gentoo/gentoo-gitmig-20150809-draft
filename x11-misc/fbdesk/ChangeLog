@@ -1,8 +1,11 @@
 # ChangeLog for x11-misc/fbdesk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.2 2003/02/12 09:28:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.3 2003/04/01 22:26:21 spider Exp $
 
 *fbdesk-1.1.2 (26 Jan 2003)
+
+  02 apr 2003; <spider@gentoo.org> fbdesk-1.1.2.ebuild:
+  Fixed xpm dep, bug 1446
 
   26 Jan 2003; Brad Cowan <bcowan@gentoo.org> fbdesk-1.1.2.ebuild,
   files/digest-fbdesk-1.1.2, ChangeLog:
