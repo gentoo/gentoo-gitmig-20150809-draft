@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mailmin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/ChangeLog,v 1.5 2004/04/19 07:24:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/ChangeLog,v 1.6 2004/04/19 08:52:37 dholm Exp $
+
+  19 Apr 2004; David Holm <dholm@gentoo.org> mailmin-0.0.1-r2.ebuild:
+  Added to ~ppc.
 
 *mailmin-0.0.1-r1 (19 Apr 2004)
 
