@@ -1,0 +1,6 @@
+# ChangeLog for dev-java/asm
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.1 2004/03/29 22:19:19 karltk Exp $
+
+  28 Mar 2004; Karl Trygve Kalleberg <karltk@gentoo.org> asm-1.4.2.ebuild
+  Initial import. Ebuild submitted by myself.
