@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.91.0.2.ebuild,v 1.1 2001/02/21 05:46:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.91.0.2.ebuild,v 1.2 2001/02/27 17:21:15 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,12 +10,12 @@ SRC_URI="http://ftp.valinux.com/pub/support/hjl/binutils/${A}"
 DEPEND="virtual/glibc"
 
 src_compile() {                           
-	try ./configure --prefix=/usr --host=${CHOST}
+	try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST}
 	try make ${MAKEOPTS}
 }
 
 src_install() {
-	try make prefix=${D}/usr install
+	try make prefix=${D}/usr mandir=${D}/usr/share/man install
 	rm -rf ${D}/usr/share
 	dodoc COPYING* README
 	docinto bfd
