@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-db
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.6 2003/12/10 18:31:45 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.7 2003/12/12 20:16:26 lanius Exp $
+
+  12 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
+  foomatic-db-20031018.ebuild:
+  Permissions to all files were set to 755 and portage tried to strip them,
+  although they are .xml files
 
   10 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
   foomatic-db-20031018.ebuild:
