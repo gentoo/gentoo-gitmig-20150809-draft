@@ -5,6 +5,6 @@ MD5 c700ef06f9532087e4f27487633179a9 files/gd-1.8.4-dec-alpha-compiler.diff 725
 MD5 823829a0fbcb1d4cf0adb69755019f6d files/digest-libgd-2.0.22 133
 MD5 a62df0447788ecbbba18816d3f9e1ead ChangeLog 6243
 MD5 9952be0dce72e93fde973a863537e423 libgd-1.8.4-r2.ebuild 2281
-MD5 bfdcc5a2eea102c4412790232ad63212 libgd-2.0.23.ebuild 1598
+MD5 eb0efbdc61998f59b34dbc74d7f15862 libgd-2.0.23.ebuild 1602
 MD5 312563b7288a2111976b24b0865d9df8 metadata.xml 1227
 MD5 c5deba52faa537a02c8ed9cad848e40a libgd-2.0.22.ebuild 1586
