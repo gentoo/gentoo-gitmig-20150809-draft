@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.6 2004/05/06 14:56:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.7 2004/06/05 19:21:34 usata Exp $
+
+  06 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> pgf-0.60.ebuild,
+  pgf-0.61.ebuild:
+  Stable on x86 and ppc.
 
   06 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> pgf-0.61.ebuild:
   Added ~sparc, #50229
