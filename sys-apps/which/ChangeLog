@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/which
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.6 2002/12/13 11:00:34 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.7 2003/01/19 20:12:15 tuxus Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *which-2.14 (26 Jul 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   04 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> which-2.12-r2.ebuild
   which-2.13.ebuild  which-2.14.ebuild :

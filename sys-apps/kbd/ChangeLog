@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.5 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.6 2003/01/19 20:18:48 tuxus Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -15,6 +15,9 @@
   killed this ebuild.
 
 *kbd-1.06-r1  (22 Mar 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   22 Mar 2002; Seemant Kulleen <seemant@gentoo.org> kbd-1.06-r1.ebuild :
   Added USE dependent nls support from a patch sent in by Matthew Kennedy.

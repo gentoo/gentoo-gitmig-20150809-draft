@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/netkit-base
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.8 2003/01/02 16:04:57 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.9 2003/01/19 20:14:28 tuxus Exp $
 
 *netkit-base-0.17-r7 (22 Dec 2002)
 
@@ -18,6 +18,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *netkit-base-0.17-r6 (1 May 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> netkit-base-0.17-r6.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
