@@ -1,0 +1,34 @@
+--- pppd/utils.c.orig	2003-07-01 17:13:31.000000000 +0000
++++ pppd/utils.c	2003-07-01 17:14:09.000000000 +0000
+@@ -253,11 +253,11 @@
+ 	    break;
+ 	case 'r':
+ 	    f = va_arg(args, char *);
+-#ifndef __powerpc__
+-	    n = vslprintf(buf, buflen + 1, f, va_arg(args, va_list));
+-#else
++#if defined(__powerpc__) || defined(__x86_64__)
+ 	    /* On the powerpc, a va_list is an array of 1 structure */
+ 	    n = vslprintf(buf, buflen + 1, f, va_arg(args, void *));
++#else
++	    n = vslprintf(buf, buflen + 1, f, va_arg(args, va_list));
+ #endif
+ 	    buf += n;
+ 	    buflen -= n;
+--- pppd/plugins/pppoe/utils.c.orig	2000-08-06 15:39:28.000000000 +0000
++++ pppd/plugins/pppoe/utils.c	2003-07-01 17:13:20.000000000 +0000
+@@ -182,11 +182,11 @@
+       continue;
+     case 'r':
+       f = va_arg (args, char *);
+-#ifndef __powerpc__
+-      n = vpoe_slprintf (buf, buflen + 1, f, va_arg (args, va_list));
+-#else
++#if defined(__powerpc__) || defined(__x86_64__)
+       /* On the powerpc, a va_list is an array of 1 structure */
+       n = vpoe_slprintf (buf, buflen + 1, f, va_arg (args, void *));
++#else
++      n = vpoe_slprintf (buf, buflen + 1, f, va_arg (args, va_list));
+ #endif
+       buf += n;
+       buflen -= n;
