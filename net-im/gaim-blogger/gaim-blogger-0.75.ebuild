@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-blogger/gaim-blogger-0.75.ebuild,v 1.1 2004/01/17 05:05:15 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-blogger/gaim-blogger-0.75.ebuild,v 1.2 2004/04/02 19:04:19 rizzo Exp $
 
 DESCRIPTION="Gaim-blogger is a protocol plugin for Gaim which makes use of Gaim's IM interface to post, edit, view and track blogs."
 HOMEPAGE="http://gaim-blogger.sourceforge.net"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=net-im/gaim-0.75-r3"
+DEPEND="~net-im/gaim-0.75-r3"
 #RDEPEND=""
 
 S=${WORKDIR}/${PN}
