@@ -1,8 +1,0 @@
-# ChangeLog for sys-cluster/gfs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs/ChangeLog,v 1.2 2004/06/27 15:19:54 zypher Exp $
-
-*gfs-20040626 (25 Jun 2004)
-
-  27 Jun 2003; Marc Hildebrand <zypher@gentoo.org> gfs-20040626.ebuild:
-  Initial import.
