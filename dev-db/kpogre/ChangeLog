@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/kpogre
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.1 2004/04/26 08:38:11 nakano Exp $
+
+*kpogre-0.97 (26 Apr 2004)
+
+  26 Apr 2004; Masatomo Nakano <nakano@gentoo.org>
+  +files/kpogre-0.97-gentoo.patch, +kpogre-0.97.ebuild:
+  Initial import. Submitted by Diego Petteno <dgp85@users.sourceforge.net>.
+  #48023
+
