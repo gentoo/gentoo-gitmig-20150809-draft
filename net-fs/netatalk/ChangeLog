@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.8 2003/07/01 21:39:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.9 2003/07/06 15:30:56 mholzer Exp $
+
+*netatalk-1.6.3 (06 Jul 2003)
+
+  06 Jul 2003; Martin Holzer <mholzer@gentoo.org> netatalk-1.6.3.ebuild:
+  Version bumped.
 
 *netatalk-1.6.2 (01 Jul 2003)
 
