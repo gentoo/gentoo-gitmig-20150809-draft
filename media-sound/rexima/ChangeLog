@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rexima
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.10 2004/11/23 05:56:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.11 2004/12/19 06:23:54 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> rexima-1.4.ebuild:
+  Stable sparc.
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> rexima-1.4.ebuild:
   Added to ~sparc.
