@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.19 2005/03/08 22:52:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.20 2005/03/10 13:43:44 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -40,7 +40,6 @@ FEDORA_TARBALL="glibc-fedora-${FEDORA_VER}.tar.bz2"
 FEDORA_URI="http://dev.gentoo.org/~eradicator/glibc/${FEDORA_TARBALL}"
 
 # (Recent snapshots fails with 2.6.5 and earlier)
-LT_KERNEL_VERSION="2.4.1"
 NPTL_KERNEL_VERSION="2.6.6"
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~eradicator/glibc"
@@ -1043,16 +1042,16 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 	fi
 
 	case ${CTARGET} in
-		x86_64*)
+		x86_64-pc-linux-gnu)
 			[[ ${CHOST/-*/} == "i686" ]] || RDEPEND="${RDEPEND} cross-i686-pc-linux-gnu/${PN}"
 		;;
-		sparc64*)
+		sparc64-unknown-linux-gnu)
 			[[ ${CHOST/-*/} == "sparc" ]] || RDEPEND="${RDEPEND} cross-sparc-unknown-linux-gnu/${PN}"
 		;;
-		ppc64*)
+		powerpc64-unknown-linux-gnu)
 			[[ ${CHOST/-*/} == "powerpc" ]] || RDEPEND="${RDEPEND} cross-powerpc-unknown-linux-gnu/${PN}"
 		;;
-		mips64*)
+		mips64-unknown-linux-gnu)
 			[[ ${CHOST/-*/} == "mips" ]] || RDEPEND="${RDEPEND} cross-mips-unknown-linux-gnu/${PN}"
 		;;
 	esac
