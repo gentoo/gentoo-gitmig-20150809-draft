@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.13 2004/07/27 03:19:05 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.14 2004/07/29 16:00:27 lv Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -185,7 +185,8 @@ RDEPEND="virtual/libc
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
-PDEPEND="sys-devel/gcc-config"
+PDEPEND="sys-devel/gcc-config
+	sys-libs/libstdc++-v3"
 
 has_lib64() {
 	use amd64 && return 0
