@@ -92,3 +92,4 @@ move net-mail/spampd mail-filter/spampd
 move net-mail/tmda mail-filter/tmda
 move dev-perl/Mail-SpamAssassin mail-filter/spamassassin
 move sys-apps/squashfs-tools sys-fs/squashfs-tools
+move app-admin/fwanalog net-firewall/fwanalog
