@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/jircii
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.17 2004/12/19 01:02:02 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.18 2005/01/30 12:54:28 swegener Exp $
+
+*jircii-27 (30 Jan 2005)
+
+  30 Jan 2005; Sven Wegener <swegener@gentoo.org> -jircii-18.ebuild,
+  -jircii-23.ebuild, jircii-24.ebuild, +jircii-27.ebuild:
+  Version bump. Marked 24 stable on x86.
 
 *jircii-24 (19 Dec 2004)
 
