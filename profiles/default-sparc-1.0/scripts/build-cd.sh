@@ -398,10 +398,12 @@ buildroot() {
 	emerge_root ${MYROOT} ${MYCDIMAGE}/${PACKAGES}
 	find ${MYROOT}/bin ${MYROOT}/sbin ${MYROOT}/usr/bin ${MYROOT}/usr/sbin -type f | xargs file| grep "not stripped" | cut -d: -f1| xargs strip
 	find ${MYROOT}/lib ${MYROOT}/usr/lib -type f | xargs file| grep "not stripped" | cut -d: -f1| xargs strip --strip-debug
-	compile_kernel_arch ${KARCH}
-	mkdir -p ${MYCDROOT}
-	copy_kernel ${KARCH} ${MYCDROOT}
-	copy_modules ${KARCH} ${MYROOT}
+	if [ ! -r ${KERNEL_ROOT}/vmlinux ]; then
+		compile_kernel_arch ${KARCH}
+		mkdir -p ${MYCDROOT}
+		copy_kernel ${KARCH} ${MYCDROOT}
+		copy_modules ${KARCH} ${MYROOT}
+	fi
 	copy_clean ${KARCH}
 	umount ${MYROOT}/mnt/.init.d
 
@@ -527,6 +529,7 @@ do_sparc64() {
 	KERNEL_ROOT=${PORTAGE_TMPDIR}/portage/${DIR_NAME}/work/*
 	MYARCH=$ARCH_SPARC64
 	MYCHOST=$CHOST_SPARC64
+	MYPLATFORM=$PLATFORM_SPARC64
 	MYCFLAGS=$CFLAGS_SPARC64
 	MYCXXFLAGS=$CXXFLAGS_SPARC64
 	buildroot sparc64
