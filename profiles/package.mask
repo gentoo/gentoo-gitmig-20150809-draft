@@ -107,6 +107,8 @@ x11-themes/gtk-xfce-engine
 >=gnome-base/gnome-session-2.0.4
 >=gnome-base/gnome-desktop-2.0.5
 >=gnome-base/gnome-panel-2.0.4
+>=gnome-base/libgnomeprintui-1.116.0
+>=gnome-base/libgnomeprint-1.116.0
 
 # Donny Davies <woodchip@gentoo.org> (03 Aug 2002)
 # Needs to wait for the next baselayout release.
