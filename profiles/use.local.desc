@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.857 2005/01/12 03:52:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.858 2005/01/12 13:30:36 ticho Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -190,6 +190,7 @@ dev-libs/cyrus-sasl:sample - Build sample client and server
 dev-libs/gdal:fits - enables support for NASA's cfitsio library
 dev-libs/gdal:ogdi - enables support for the open geographic datastore interface
 dev-libs/gmetadom:ocaml - adds support/bindings for the Ocaml
+dev-libs/gmime:mono - Build mono bindings
 dev-libs/libcdio:cddb - use libcddb for CD database lookups
 dev-libs/libmix:no-net2 - disable libpcap and libnet support
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
