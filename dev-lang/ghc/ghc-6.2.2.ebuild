@@ -1,29 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.1.ebuild,v 1.9 2004/10/18 16:47:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.1 2004/10/18 17:20:50 kosmikus Exp $
 
-#Some explanation of bootstrap logic:
+# Brief explanation of the bootstrap logic:
 #
-#After thinking through the best way to bootstrap ghc I decided to split it into
-#ghc and ghc-bin and make ghc depend on ghc-bin.
-#  The ebuild has been revamped and greatly simplified. Bootstrap off old 4x hc files no longer works on x86.
-#Not sure what happens with old scheme on sparc, as I did not see any test reports.
+# ghc requires ghc-bin to bootstrap.
+# Therefore, 
+# (1) both ghc-bin and ghc provide virtual/ghc
+# (2) virtual/ghc *must* default to ghc-bin
+# (3) ghc depends on virtual/ghc
 #
-#The considerations:
-#Making ghc unpack binary build first (under ${WORKDIR}) and bootstrapping from that will effectively force
-#ghc-bin reinstall every time ghc is rebuilt or upgraded. What is worse it will likely force download of binary image
-#at upgrade, which is not nice (in fact quite bad for modem users - 16+ MB).
-#
-#The best results are achieved if ghc-bin is left alone after ghc installation -
-#Both ebuilds install in the same place, thus space penalty is minimal. In fact only the docs exist in double
-#(considering that ghc is not installing much docs at present this looks more like an advantage).
-#When the upgrade time comes, if you still have ghc-bin around, portage will happily bootstrap off
-#your existing ghc (or ghc-bin, whichever was merged last), without attempting to ruin anything...
-#
-#There is only one issue: ghci will be successfully built only if ghc is bootstrapped from the same version.
-#Thus we need to detect presently installed one and bootstrap in one or two stages..
+# This solution has the advantage that the binary distribution
+# can be removed once an forall after the first succesful install
+# of ghc.
 
-inherit base
+inherit base flag-o-matic eutils
 
 IUSE="doc tetex opengl"
 
@@ -34,7 +25,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -alpha"
+KEYWORDS="~x86 -alpha"
 
 
 PROVIDE="virtual/ghc"
@@ -67,14 +58,38 @@ RDEPEND="virtual/libc
 # extend path to /opt/ghc/bin to guarantee that ghc-bin is found
 GHCPATH="${PATH}:/opt/ghc/bin"
 
+SUPPORTED_CFLAGS=""
+
+# Setup supported CFLAGS.
+setup_cflag() {
+	OLD_CFLAGS="${CFLAGS}"
+	CFLAGS="${CFLAGS} $1"
+	strip-unsupported-flags
+
+	if [ "${OLD_CFLAGS}" != "${CFLAGS}" ];
+	then
+		SUPPORTED_CFLAGS="$1 ${SUPPORTED_CFLAGS}"
+	fi
+}
+
+setup_cflags() {
+	setup_cflag "-fno-pic"
+	setup_cflag "-fno-stack-protector"
+}
+
 src_unpack() {
 	base_src_unpack
 
 	# hardened-gcc needs to be disabled, because the
 	# mangler doesn't accept its output; yes, the 6.2 version
 	# should do ...
-	cd ${S}
-	bzcat ${FILESDIR}/ghc-6.2.hardened.patch.bz2 | patch -p1
+	cd ${S}/ghc
+	pushd driver
+	setup_cflags
+	epatch ${FILESDIR}/${PN}-6.2.hardened.patch
+	sed -i -e "s|@GHC_CFLAGS@|${SUPPORTED_CFLAGS//-f/-optc-f}|" ghc/ghc.sh
+	sed -i -e "s|@GHC_CFLAGS@|${SUPPORTED_CFLAGS//-f/-optc-f}|" ghci/ghci.sh
+	popd
 }
 
 src_compile() {
@@ -88,8 +103,9 @@ src_compile() {
 	# (this is still necessary, even though we have the patch, because
 	# we might be bootstrapping from a version that didn't have the
 	# patch included)
-	echo "SRC_CC_OPTS+=-fno-pic -fno-stack-protector" >> mk/build.mk
-	echo "SRC_HC_OPTS+=-optc-fno-pic -optc-fno-stack-protector" >> mk/build.mk
+	setup_cflags
+	echo "SRC_CC_OPTS+=${SUPPORTED_CFLAGS}" >> mk/build.mk
+	echo "SRC_HC_OPTS+=${SUPPORTED_CFLAGS//-f/-optc-f}" >> mk/build.mk
 
 	# force the config variable ArSupportsInput to be unset;
 	# ar in binutils >= 2.14.90.0.8-r1 seems to be classified
@@ -97,7 +113,7 @@ src_compile() {
 	echo "ArSupportsInput:=" >> mk/build.mk
 
 	# Required under ppc to work around some obscure linker problem.
-	if ( use ppc )
+	if use ppc;
 	then
 		echo "SplitObjs=NO" >> mk/build.mk
 	fi
@@ -110,13 +126,13 @@ src_compile() {
 
 	# the build does not seem to work all that
 	# well with parallel make
-	make || die "make failed"
+	emake -j1 || die "make failed"
 
 	# if documentation has been requested, build documentation ...
 	if use doc; then
-		make html || die "make html failed"
+		emake -j1 html || die "make html failed"
 		if use tetex; then
-			make ps || die "make ps failed"
+			emake -j1 ps || die "make ps failed"
 		fi
 	fi
 
@@ -142,11 +158,12 @@ src_install () {
 	fi
 	echo SGMLDocWays="${mydoc}" >> mk/build.mk
 
-	make ${insttarget} \
+	emake -j1 ${insttarget} \
 		prefix="${D}/usr" \
 		datadir="${D}/usr/share/doc/${PF}" \
 		infodir="${D}/usr/share/info" \
-		mandir="${D}/usr/share/man" || die
+		mandir="${D}/usr/share/man" \
+		|| die "make ${insttarget} failed"
 
 	#need to remove ${D} from ghcprof script
 	cd ${D}/usr/bin

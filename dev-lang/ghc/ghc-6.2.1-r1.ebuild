@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.1-r1.ebuild,v 1.4 2004/10/18 16:47:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.1-r1.ebuild,v 1.5 2004/10/18 17:20:50 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -23,7 +23,7 @@
 #There is only one issue: ghci will be successfully built only if ghc is bootstrapped from the same version.
 #Thus we need to detect presently installed one and bootstrap in one or two stages..
 
-inherit base
+inherit base flag-o-matic eutils
 
 IUSE="doc tetex opengl"
 
@@ -67,17 +67,40 @@ RDEPEND="virtual/libc
 # extend path to /opt/ghc/bin to guarantee that ghc-bin is found
 GHCPATH="${PATH}:/opt/ghc/bin"
 
+SUPPORTED_CFLAGS=""
+
+# Setup supported CFLAGS.
+setup_cflag() {
+	OLD_CFLAGS="${CFLAGS}"
+	CFLAGS="${CFLAGS} $1"
+	strip-unsupported-flags
+
+	if [ "${OLD_CFLAGS}" != "${CFLAGS}" ];
+	then
+		SUPPORTED_CFLAGS="$1 ${SUPPORTED_CFLAGS}"
+	fi
+}
+
+setup_cflags() {
+	setup_cflag "-fno-pic"
+	setup_cflag "-fno-stack-protector"
+}
+
 src_unpack() {
 	base_src_unpack
 
 	# hardened-gcc needs to be disabled, because the
 	# mangler doesn't accept its output; yes, the 6.2 version
 	# should do ...
-	cd ${S}
-	bzcat ${FILESDIR}/ghc-6.2.hardened.patch.bz2 | patch -p1
-	pushd ghc/compiler/ghci
-	bzcat ${FILESDIR}/ghc-6.2.1-linker.patch.bz2 | patch -p0
+	cd ${S}/ghc
+	pushd driver
+	setup_cflags
+	epatch ${FILESDIR}/${PN}-6.2.hardened.patch
+	sed -i -e "s|@GHC_CFLAGS@|${SUPPORTED_CFLAGS//-f/-optc-f}|" ghc/ghc.sh
+	sed -i -e "s|@GHC_CFLAGS@|${SUPPORTED_CFLAGS//-f/-optc-f}|" ghci/ghci.sh
 	popd
+	cd compiler/ghci
+	bzcat ${FILESDIR}/ghc-6.2.1-linker.patch.bz2 | patch -p0
 }
 
 src_compile() {
@@ -91,8 +114,9 @@ src_compile() {
 	# (this is still necessary, even though we have the patch, because
 	# we might be bootstrapping from a version that didn't have the
 	# patch included)
-	echo "SRC_CC_OPTS+=-fno-pic -fno-stack-protector" >> mk/build.mk
-	echo "SRC_HC_OPTS+=-optc-fno-pic -optc-fno-stack-protector" >> mk/build.mk
+	setup_cflags
+	echo "SRC_CC_OPTS+=${SUPPORTED_CFLAGS}" >> mk/build.mk
+	echo "SRC_HC_OPTS+=${SUPPORTED_CFLAGS//-f/-optc-f}" >> mk/build.mk
 
 	# force the config variable ArSupportsInput to be unset;
 	# ar in binutils >= 2.14.90.0.8-r1 seems to be classified
