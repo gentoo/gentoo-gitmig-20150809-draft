@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.2 2003/11/12 04:28:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.3 2003/11/12 15:31:06 agriffis Exp $
 
 DESCRIPTION="Beecrypt is a general-purpose cryptography library."
 HOMEPAGE="http://sourceforge.net/projects/beecrypt"
@@ -11,8 +11,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 
 DEPEND="python? ( =dev-lang/python-2.2* )
-		!<app-arch/rpm-4.2.1
-		alpha? ( sys-devel/autoconf )"
+		!<app-arch/rpm-4.2.1"
 
 IUSE="python"
 
@@ -23,9 +22,11 @@ src_unpack() {
 	if use alpha; then
 		# Prevent usage of lib64 on alpha where it isn't appropriate.
 		# We only have one execution model, so all libraries install
-		# in /usr/lib.  (11 Nov 2003 agriffis)
+		# in /usr/lib.  Note: This patch modifies configure, not
+		# configure.ac, because this package's Makefile is too smart
+		# and screws up mpopt.s when configure.ac is modified.
+		# (11 Nov 2003 agriffis)
 		epatch ${FILESDIR}/beecrypt-3.1.0-alpha.patch
-		autoconf
 	fi
 }
 

@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.6 2003/11/12 04:28:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.7 2003/11/12 15:31:06 agriffis Exp $
+
+  12 Nov 2003; Aron Griffis <agriffis@gentoo.org> beecrypt-3.1.0-r1.ebuild,
+  files/beecrypt-3.1.0-alpha.patch:
+  This library's makefiles are way too smart for its own good. If you update
+  configure.ac, then the makefiles notice and insist on rebuilding half a dozen
+  other things (even after you run autoconf). The end result is that mpopt.s is
+  emptied and undefined symbols appear in the library.
+
+  Modified the patch to affect configure instead of configure.ac so that
+  autoconf isn't required and the build system doesn't screw up.
 
   11 Nov 2003; Aron Griffis <agriffis@gentoo.org> beecrypt-3.1.0-r1.ebuild:
   Fix autoconf whoops which caused mpopt.s to fail to build because the
