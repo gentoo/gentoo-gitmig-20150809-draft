@@ -1,5 +1,5 @@
-MD5 fd47eaa6cac5114f4cd51c8934d53ab9 ChangeLog 1229
 MD5 df990c37b735d275f37186059d4ed717 xanim-export-2.80.1-r3.ebuild 3068
-MD5 0059162a520b18c83fa08d844629c679 metadata.xml 231
+MD5 fd47eaa6cac5114f4cd51c8934d53ab9 ChangeLog 1229
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 619a8b8f93e2addf6df259ec59340d1d files/2.80.1-makefile.patch 1099
 MD5 b6a69a73a8448ca48f9c764140b27831 files/digest-xanim-export-2.80.1-r3 684
