@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.12.ebuild,v 1.3 2001/09/25 01:20:38 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.12-r6.ebuild,v 1.1 2001/09/25 01:20:38 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
@@ -42,9 +42,9 @@ src_install() {
 	docinto rfc ; dodoc doc/rfc/*.txt
 	docinto devel ; dodoc doc/devel/*
 
-	exeinto /etc/rc.d/init.d
-	newexe ${FILESDIR}/slapd.rc5 slapd
-	newexe ${FILESDIR}/slurpd.rc5 slurpd
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/slapd.rc6 slapd
+	newexe ${FILESDIR}/slurpd.rc6 slurpd
 
 	cd ${D}/etc/openldap
 	for i in *
