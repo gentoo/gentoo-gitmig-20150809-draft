@@ -1,6 +1,12 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.21 2005/01/23 14:37:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.22 2005/02/26 00:43:52 ka0ttic Exp $
+
+*chkrootkit-0.45 (25 Feb 2005)
+
+  25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/chkrootkit-0.45-makefile.diff, +chkrootkit-0.45.ebuild:
+  Version bump.
 
 *chkrootkit-0.44-r1 (23 Jan 2005)
 
