@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4.ebuild,v 1.5 2003/02/24 19:42:04 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4.ebuild,v 1.6 2003/02/26 10:58:06 gmsoft Exp $
 
 inherit gnuconfig
 
@@ -29,6 +29,7 @@ src_unpack() {
 }
 
 src_install () {
+	[ "${ARCH}" = "hppa" ] && CBUILD="${CHOST}"
 	einstall sbindir=${D}/sbin || die "Install failed"
 	if [ -z "`use build`" ]
 	then
