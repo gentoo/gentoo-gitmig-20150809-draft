@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.11 2004/09/13 02:25:48 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.12 2004/09/13 03:32:24 morfic Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -282,13 +282,9 @@ host_def_setup() {
 				replace-cpu-flags "athlon-tbird" "athlon"
 			fi
 
-			if use x86
-			then
-				if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -le "4" ]
-				then
-					append-flags "-mno-sse2"
-				fi
-			fi
+			#to fix #56702 for now, thanks Spanky
+			[ "$(gcc-version)" == "3.4" ] && test_flag -mno-sse2 && append-flags -mno-sse2
+
 
 			# Try a fix for #49310, see #50931 for more info. <spyderous>
 			if [ "`is-flag -fomit-frame-pointer`" ]
