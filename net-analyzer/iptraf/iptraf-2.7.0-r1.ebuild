@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.7 2004/06/05 13:20:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.8 2004/06/09 18:04:20 agriffis Exp $
 
 S=${WORKDIR}/${P}
 V6PATCH_LEVEL=alpha11
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r1"
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
-	[ -n "`use ipv6`" ] && patch -p 0 < ${DISTDIR}/${P}-ipv6-${V6PATCH_LEVEL}.diff
+	use ipv6 && patch -p 0 < ${DISTDIR}/${P}-ipv6-${V6PATCH_LEVEL}.diff
 	cd src
 	cp dirs.h dirs.h.orig
 	sed -e s:/var/local/iptraf:/var/lib/iptraf: -e s:/usr/local/bin:/usr/sbin: dirs.h.orig > dirs.h
