@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/mzscheme-201.ebuild,v 1.8 2004/07/14 16:25:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/mzscheme-201.ebuild,v 1.9 2004/09/24 21:40:40 pvdabeel Exp $
 
 S=${WORKDIR}/plt
 DESCRIPTION="MzScheme scheme compiler"
@@ -10,7 +10,7 @@ DEPEND=">=sys-devel/gcc-2.95.3-r7"
 #RDEPEND=""
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 src_compile() {
