@@ -1,7 +1,7 @@
-diff -ru DVDStyler-1.05.orig/src/MainWin.cpp DVDStyler-1.05/src/MainWin.cpp
---- DVDStyler-1.05.orig/src/MainWin.cpp	2004-07-26 22:10:20.000000000 +0930
-+++ DVDStyler-1.05/src/MainWin.cpp	2004-07-30 13:44:08.146968624 +0930
-@@ -39,8 +39,8 @@
+diff -ru DVDStyler-1.1.orig/src/MainWin.cpp DVDStyler-1.1/src/MainWin.cpp
+--- DVDStyler-1.1.orig/src/MainWin.cpp	2004-07-26 22:10:20.000000000 +0930
++++ DVDStyler-1.1/src/MainWin.cpp	2004-07-30 13:44:08.146968624 +0930
+@@ -38,8 +38,8 @@
  #include "rc/files.xpm"
  
  
@@ -9,10 +9,10 @@ diff -ru DVDStyler-1.05.orig/src/MainWin.cpp DVDStyler-1.05/src/MainWin.cpp
 -#define BUTTONS_DIR wxGetAppPath() + _T("/../buttons")
 +#define BACKGROUNDS_DIR _T("/usr/share/DVDStyler/backgrounds")
 +#define BUTTONS_DIR _T("/usr/share/DVDStyler/buttons")
- #define DATA_DIR(fname) wxGetAppPath() + wxFILE_SEP_PATH + _T("..") + wxFILE_SEP_PATH + fname
  
  //////////////////////////// help functions //////////////////////////////////
-@@ -327,7 +327,7 @@
+ 
+@@ -322,7 +322,7 @@
  {
    ShowDirTree(false);
    m_thumbnails->Clear();
@@ -21,18 +21,9 @@ diff -ru DVDStyler-1.05.orig/src/MainWin.cpp DVDStyler-1.05/src/MainWin.cpp
    while (!fname.IsEmpty())
    {
  	wxThumb* thumb = new wxThumb(fname);
-@@ -708,7 +708,7 @@
-     wxString hlFile  = menuFile + _T("_highlight.png");
-     wxString selFile = menuFile + _T("_select.png");
-     wxString spuFile = menuFile + _T("_spumux.xml");
--    wxString silenceFile = DATA_DIR(_T("silence.mp2"));
-+    wxString silenceFile = _T("/usr/share/DVDStyler/silence.mp2");
- 	
- 	bool videoMenu = menu->HasVideoBackground();
-   
-diff -ru DVDStyler-1.05.orig/src/MenuBox.cpp DVDStyler-1.05/src/MenuBox.cpp
---- DVDStyler-1.05.orig/src/MenuBox.cpp	2004-07-26 22:10:59.000000000 +0930
-+++ DVDStyler-1.05/src/MenuBox.cpp	2004-07-30 13:42:34.552197192 +0930
+diff -ru DVDStyler-1.1.orig/src/MenuBox.cpp DVDStyler-1.1/src/MenuBox.cpp
+--- DVDStyler-1.1.orig/src/MenuBox.cpp	2004-07-26 22:10:59.000000000 +0930
++++ DVDStyler-1.1/src/MenuBox.cpp	2004-07-30 13:42:34.552197192 +0930
 @@ -284,11 +284,11 @@
        case ttTR:
        case ttBL: SetCursor(wxCursor(wxCURSOR_SIZENESW)); break;
@@ -48,9 +39,9 @@ diff -ru DVDStyler-1.05.orig/src/MenuBox.cpp DVDStyler-1.05/src/MenuBox.cpp
  #endif
      }
    }
-diff -ru DVDStyler-1.05.orig/src/dvdstyler.cpp DVDStyler-1.05/src/dvdstyler.cpp
---- DVDStyler-1.05.orig/src/dvdstyler.cpp	2004-07-04 21:12:48.000000000 +0930
-+++ DVDStyler-1.05/src/dvdstyler.cpp	2004-07-30 13:42:34.557196432 +0930
+diff -ru DVDStyler-1.1.orig/src/dvdstyler.cpp DVDStyler-1.1/src/dvdstyler.cpp
+--- DVDStyler-1.1.orig/src/dvdstyler.cpp	2004-07-04 21:12:48.000000000 +0930
++++ DVDStyler-1.1/src/dvdstyler.cpp	2004-07-30 13:42:34.557196432 +0930
 @@ -58,7 +58,7 @@
    // Pop up a dialog the first time the program is run
    if (!lang.length())
@@ -69,3 +60,23 @@ diff -ru DVDStyler-1.05.orig/src/dvdstyler.cpp DVDStyler-1.05/src/dvdstyler.cpp
  	m_locale.AddCatalog(_T("dvdstyler"));
    }
  
+--- DVDStyler-1.1.orig/src/ProgressDlg.cpp	2004-10-20 23:44:10.611351992 +0200
++++ DVDStyler-1.1/src/ProgressDlg.cpp	2004-10-20 23:45:14.313667768 +0200
+@@ -15,7 +15,7 @@
+ #include <wxVillaLib/utils.h>
+ #include <wx/dir.h>
+ 
+-#define DATA_DIR(fname) wxGetAppPath() + wxFILE_SEP_PATH + _T("..") + wxFILE_SEP_PATH + fname
++#define DATA_DIR(fname) _T("/usr/share/DVDStyler") + wxFILE_SEP_PATH + fname
+ 
+ void DeleteDir(wxString dir, bool subdirs = false)
+ {
+@@ -237,7 +237,7 @@
+   wxString hlFile  = menuFile + _T("_highlight.png");
+   wxString selFile = menuFile + _T("_select.png");
+   wxString spuFile = menuFile + _T("_spumux.xml");
+-  wxString silenceFile = DATA_DIR(_T("silence.mp2"));
++  wxString silenceFile = _T("/usr/share/DVDStyler/silence.mp2");
+   
+   bool videoMenu = menu->HasVideoBackground();
+   // save background

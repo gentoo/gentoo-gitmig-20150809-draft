@@ -1,16 +1,16 @@
-diff -ur DVDStyler-1.05.orig/src/Config.h DVDStyler-1.05/src/Config.h
---- DVDStyler-1.05.orig/src/Config.h	2004-10-04 19:48:20.715719055 -0400
-+++ DVDStyler-1.05/src/Config.h	2004-10-04 19:48:57.723904668 -0400
-@@ -85,7 +85,7 @@
+diff -ur DVDStyler-1.1.orig/src/Config.h DVDStyler-1.1/src/Config.h
+--- DVDStyler-1.1.orig/src/Config.h	2004-10-05 12:49:10.953845245 -0400
++++ DVDStyler-1.1/src/Config.h	2004-10-05 12:49:53.346475208 -0400
+@@ -88,7 +88,7 @@
  	
  	CONFIG_PROP(Version,  _T("Version"), DEF_VERSION)
  	CONFIG_PROP(Language, _T("Interface/Language"), DEF_LANGUAGE)
 -	CONFIG_PROP_INT(DefMenuFormat, _T("Interface/DefMenuFormat"), DEF_MENU_FORMAT)
 +	CONFIG_PROP_INT(DefMenuFormat, _T("Interface/DefMenuFormat"), (long)DEF_MENU_FORMAT)
- 	CONFIG_PROP(LogFile,  _T("Generate/LogFile"), DEF_LOG_FILE)
  	CONFIG_PROP(GenerateTemp, _T("Generate/TempDir"), DEF_GEN_TEMP_DIR)
  	CONFIG_PROP(Jpeg2MpegCmd, _T("Generate/Jpeg2MpegCmd"), DEF_JPEG2MPEG_CMD)
-@@ -99,7 +99,7 @@
+ 	CONFIG_PROP(FrameRatePAL, _T("Generate/FrameRatePAL"), DEF_FRAMERATE_PAL)
+@@ -101,7 +101,7 @@
  	CONFIG_PROP_BOOL(PreviewDo, _T("Preview/Do"), DEF_PREVIEW_DO)
  	CONFIG_PROP(PreviewCmd, _T("Preview/Cmd"), DEF_PREVIEW_CMD)
  	
@@ -19,3 +19,12 @@ diff -ur DVDStyler-1.05.orig/src/Config.h DVDStyler-1.05/src/Config.h
  	CONFIG_PROP(IsoCmd, _T("Iso/Cmd"), DEF_ISO_CMD)
  	CONFIG_PROP(IsoSaveTo, _T("Iso/SaveTo"), DEF_ISO_SAVETO)
  	
+@@ -110,7 +110,7 @@
+ 	CONFIG_PROP(BurnDevice, _T("Burn/Device"), DEF_BURN_DEVICE)
+ 	CONFIG_PROP(CdrSecurity, _T("Burn/CdrSecurity"), DEF_CDR_SECURITY)
+ 	
+-	CONFIG_PROP_BOOL(FormatDo, _T("Burn/FormatDo"), DEF_FORMAT_DO)
++	CONFIG_PROP_BOOL(FormatDo, _T("Burn/FormatDo"), (long)DEF_FORMAT_DO)
+ 	CONFIG_PROP(FormatCmd, _T("Burn/FormatCmd"), DEF_FORMAT_CMD)
+     
+   protected:
