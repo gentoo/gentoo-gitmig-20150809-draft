@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tftp-hpa/tftp-hpa-0.29.ebuild,v 1.8 2002/10/04 03:46:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tftp-hpa/tftp-hpa-0.29.ebuild,v 1.9 2002/11/30 02:01:02 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="HPA's TFTP Daemon is a port of the OpenBSD TFTP server"
 SRC_URI="ftp://ftp.kernel.org/pub/software/network/tftp/${P}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/pub/software/network/tftp/"
@@ -14,11 +13,11 @@ KEYWORDS="x86 ppc sparc sparc64"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	econf || die
+	econf
 	make || die
 }
 
-src_install () {
+src_install() {
 	make INSTALLROOT=${D} install || die
 	dodoc README* CHANGES INSTALL*
 

@@ -1,29 +1,24 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.22.ebuild,v 1.3 2002/11/04 18:01:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.22.ebuild,v 1.4 2002/11/30 01:59:30 vapier Exp $
 
-IUSE="tcpd"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Syslog-ng is a syslog replacement with advanced filtering features"
 SRC_URI="http://www.balabit.hu/downloads/syslog-ng/1.5/${P}.tar.gz"
 HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+IUSE="tcpd"
 
 DEPEND=">=dev-libs/libol-0.3.5
 	sys-devel/flex
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
-
 src_compile() {
-
 	local myconf
-
 	use tcpd && myconf="--enable-tcp-wrapper"
-
-	econf ${myconf} || die
+	econf ${myconf}
 
 	# configure script braindamage?
 #    cd ${S}/src
@@ -36,8 +31,7 @@ src_compile() {
 }
 
 src_install() {
-
-	einstall || die
+	einstall
 	rm -rf ${D}/usr/share/man
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS PORTS README
@@ -58,4 +52,3 @@ pkg_postinst() {
 	einfo "To convert your existing syslog.conf for use with syslog-ng,"
 	einfo "use the syslog2ng script in /usr/share/doc/${PF}."
 }
-

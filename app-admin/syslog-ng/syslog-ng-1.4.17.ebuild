@@ -1,27 +1,24 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.4.17.ebuild,v 1.1 2002/11/05 19:29:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.4.17.ebuild,v 1.2 2002/11/30 01:58:38 vapier Exp $
 
-IUSE="tcpd"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Syslog-ng is a syslog replacement with advanced filtering features"
 SRC_URI="http://www.balabit.hu/downloads/syslog-ng/1.4/${P}.tar.gz"
 HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+IUSE="tcpd"
 
 DEPEND="=dev-libs/libol-0.2.23
 	sys-devel/flex
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
-
 src_compile() {
 	local myconf
 	use tcpd && myconf="--enable-tcp-wrapper"
-
-	econf ${myconf} || die
+	econf ${myconf}
 
 	# configure script braindamage?
 #    cd ${S}/src
@@ -34,7 +31,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	einstall
 	rm -rf ${D}/usr/share/man
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS PORTS README
