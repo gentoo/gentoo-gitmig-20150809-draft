@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.29.ebuild,v 1.9 2004/08/26 03:45:59 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.29.ebuild,v 1.10 2004/08/26 04:48:27 vapier Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc amd64 ppc alpha ~ia64 ~hppa ~mips"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ~ia64"
 IUSE=""
 
 DEPEND=">=net-im/gaim-0.80
@@ -35,6 +35,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "Install failed"
-	dodoc CHANGELOG COPYING INSTALL NOTES README TODO VERSION WISHLIST
+	dodoc CHANGELOG INSTALL NOTES README TODO VERSION WISHLIST
 }
-
