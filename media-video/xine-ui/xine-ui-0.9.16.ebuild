@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.16.ebuild,v 1.1 2002/12/25 03:52:55 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.16.ebuild,v 1.2 2003/01/02 19:15:17 agenkin Exp $ 
 
 DESCRIPTION="Skinned front end for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -8,6 +8,7 @@ LICENSE="GPL-2"
 
 DEPEND="media-libs/libpng
 	>=media-libs/xine-lib-1_alpha2
+	>=net-ftp/curl-7.10.2
 	X? ( virtual/x11 )
 	aalib? ( media-libs/aalib )
 	gnome? ( gnome-base/ORBit )
@@ -46,8 +47,8 @@ src_compile() {
 
 	# Most of these are not working currently, but are here for completeness
 	local myconf
-	use X      || myconf="${myconf} --disable-x11 --disable-xv"
-	use nls    || myconf="${myconf} --disable-nls"
+	use X	   || myconf="${myconf} --disable-x11 --disable-xv"
+	use nls	   || myconf="${myconf} --disable-nls"
   
 	econf ${myconf} || die
 	emake || die
