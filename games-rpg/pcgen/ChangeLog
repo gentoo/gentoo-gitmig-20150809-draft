@@ -1,0 +1,17 @@
+# ChangeLog for app-games/pcgen
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/ChangeLog,v 1.1 2003/09/12 00:52:27 vapier Exp $
+
+*pcgen-5.3.3 (08 Aug 2003)
+
+  08 Aug 2003; Michael Sterrett <msterret@gentoo.org> pcgen-5.3.3.ebuild:
+  added masked unstable version. (bug 25523)
+
+  08 Aug 2003; Michael Sterrett <msterret@gentoo.org> pcgen-5.2.ebuild:
+  mark stable
+
+*pcgen-5.2 (07 Aug 2003)
+
+  07 Aug 2003; Michael Sterrett <msterret@gentoo.org> pcgen-5.2.ebuild:
+  initial commit (bug 25522) Ebuild submitted by Robert Thomas. (modified)
+
