@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.1.ebuild,v 1.1 2002/11/25 10:47:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.1.ebuild,v 1.2 2002/11/30 21:28:22 vapier Exp $
 
-IUSE="gtk nls"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Single process stack of various system monitors"
 SRC_URI="http://web.wt.net/~billw/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gkrellm.net/"
@@ -12,9 +9,9 @@ HOMEPAGE="http://www.gkrellm.net/"
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~sparc64"
+IUSE="gtk nls"
 
 DEPEND="gtk? >=x11-libs/gtk+-2.0.5 : =dev-libs/glib-1.2*"
-
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
@@ -32,7 +29,7 @@ src_compile() {
 	fi
 }
 
-src_install () {
+src_install() {
 	touch .keep
 	dodir /usr/{bin,include,share/man}
 
