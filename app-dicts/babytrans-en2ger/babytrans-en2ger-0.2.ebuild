@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ger/babytrans-en2ger-0.1.ebuild,v 1.1 2004/09/10 06:20:52 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ger/babytrans-en2ger-0.2.ebuild,v 1.1 2004/09/22 20:31:36 angusyoung Exp $
 
 MY_P="EngtoGer.dic.gz"
 MY_F="Engtoger.dic"
@@ -13,9 +13,18 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
-S=${WORKDIR}/${P}
+RDEPEND="app-dicts/babytrans"
+RESTRICT="fetch"
+
+pkg_nofetch() {
+	einfo "Due to license restrictions that may or may not apply to"
+	einfo "this package, it now has fetch restrictions turned on. This"
+	einfo "means that you must download ${MY_P} file manually from"
+	einfo "${HOMEPAGE} or copy then"
+	einfo "from a windows installation of babylon and put them in "
+	einfo "${DISTDIR}. Finally note that having a license of"
+	einfo "babylon is desired in order to use this package"
+}
 
 src_unpack() {
 	local MY_A
