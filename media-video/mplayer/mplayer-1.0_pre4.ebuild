@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4.ebuild,v 1.5 2004/05/27 05:08:14 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4.ebuild,v 1.6 2004/06/01 09:04:10 ferringb Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 mad bidi xvid divx4linux"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 mad bidi xvid divx4linux xinerama libcaca"
 
 inherit eutils flag-o-matic
 
@@ -31,6 +31,7 @@ RDEPEND="xvid? (
 	x86? ( >=media-libs/win32codecs-0.60
 		divx4linux? ( >=media-libs/divx4linux-20030428 )
 	)
+	xinerama? ( virtual/x11 )
 	gtk? ( media-libs/libpng
 	       virtual/x11
 			=x11-libs/gtk+-1.2*
@@ -62,6 +63,7 @@ RDEPEND="xvid? (
 	theora? ( media-libs/libtheora )
 	mad? ( media-libs/libmad )
 	bidi? ( dev-libs/fribidi )
+	libcaca? ( media-libs/libcaca )
 	>=sys-apps/portage-2.0.36"
 #	dvd? ( media-libs/libdvdnav )
 # Hardcode paranoia support for now, as there is no
@@ -247,6 +249,7 @@ src_compile() {
 		`use_enable v4l tv-v4l` \
 		`use_enable v4l2 tv-v4l2` \
 		`use_enable divx4linux` \
+		`use_enable libcaca caca` \
 		`use_enable jpeg` \
 		${myconf} || die
 	# Breaks with gcc-2.95.3, bug #14479:
