@@ -1,0 +1,63 @@
+--- xc.patch	2004-08-25 11:13:06.749688613 +0000
++++ xc.patch	2004-08-25 11:13:37.307230320 +0000
+@@ -116,60 +116,6 @@
+ !     nlwMiddle >>= 3; \
+       while (h--) { \
+   	srcpix = psrc[srcy]; \
+-*** xc/programs/Xserver/cfb/cfbglblt8.c.orig	Fri Dec 14 19:59:23 2001
+---- xc/programs/Xserver/cfb/cfbglblt8.c	Tue Aug 12 10:05:57 2003
+-***************
+-*** 284,288 ****
+-      register glyphPointer   glyphBits;
+-      register int	xoff;
+-! #if defined(USE_LEFT_BITS) || (!defined(STIPPLE) && !defined(USE_STIPPLE_CODE))
+-      register CfbBits	*dst;
+-  #endif
+---- 284,288 ----
+-      register glyphPointer   glyphBits;
+-      register int	xoff;
+-! #if defined(USE_LEFTBITS) || (!defined(STIPPLE) && !defined(USE_STIPPLE_CODE))
+-      register CfbBits	*dst;
+-  #endif
+-***************
+-*** 292,296 ****
+-      CfbBits		*dstLine;
+-      CfbBits		*pdstBase;
+-! #ifdef USE_LEFT_BITS
+-      CARD32		*cTmp;
+-  #endif
+---- 292,296 ----
+-      CfbBits		*dstLine;
+-      CfbBits		*pdstBase;
+-! #ifdef USE_LEFTBITS
+-      CARD32		*cTmp;
+-  #endif
+-***************
+-*** 399,403 ****
+-  	    	} while (--hTmp);
+-  	    	break;
+-! #else /* !USE_LEFT_BITS */
+-  	    	{
+-  		    int h;
+---- 399,403 ----
+-  	    	} while (--hTmp);
+-  	    	break;
+-! #else /* !USE_LEFTBITS */
+-  	    	{
+-  		    int h;
+-***************
+-*** 412,416 ****
+-  	    	glyphBits = clips;
+-  	    	/* fall through */
+-! #endif /* USE_LEFT_BITS */
+-  	    case rgnIN:
+-  #ifdef STIPPLE
+---- 412,416 ----
+-  	    	glyphBits = clips;
+-  	    	/* fall through */
+-! #endif /* USE_LEFTBITS */
+-  	    case rgnIN:
+-  #ifdef STIPPLE
+ *** xc/programs/Xserver/cfb/cfbcppl.c.orig	Fri Dec 14 19:59:22 2001
+ --- xc/programs/Xserver/cfb/cfbcppl.c	Sun Apr 18 12:53:36 2004
+ ***************
