@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12_pre53.ebuild,v 1.1 2003/09/11 12:22:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12_pre53.ebuild,v 1.2 2003/12/12 08:56:22 avenj Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://lincity.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="X svga"
 
 DEPEND="virtual/glibc
