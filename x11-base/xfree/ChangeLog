@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.81 2003/01/09 10:34:59 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.82 2003/01/11 09:56:09 jmorgan Exp $
+
+  11 Jan 2003; Jack Morgan <jmorgan@gentoo.org> xfree-4.2.1-r2.ebuild :
+  Changed sparc back to -sparc as it breakes keymaps
 
   09 Jan 2003; Jack Morgan <jmorgan@gentoo.org> xfree-4.2.1-r2.ebuild :
   Changed ~sparc to sparc
