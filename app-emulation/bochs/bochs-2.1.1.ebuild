@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.15 2004/11/20 18:46:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.16 2004/11/20 20:41:13 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -58,7 +58,7 @@ src_compile() {
 	./configure \
 		--enable-fpu --enable-cdrom --enable-control-panel \
 		--enable-usb --enable-pci --enable-mmx --enable-sse\
-		--enable-cpu-level=6 \
+		--enable-cpu-level=6 --enable-vbe\
 		--enable-repeat-speedups --enable-guest2host-tlb \
 		--enable-plugins --enable-debugger \
 		--enable-ignore-bad-msr \
