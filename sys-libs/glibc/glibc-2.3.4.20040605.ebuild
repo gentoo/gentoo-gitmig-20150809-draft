@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.5 2004/06/07 07:06:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.6 2004/06/07 08:29:18 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -107,6 +107,7 @@ setup_flags() {
 	# temporary fix for a few gcc 3.4 related problems
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
+		filter-flags -funit-at-a-time
 		append-flags -fno-unit-at-a-time
 	fi
 
