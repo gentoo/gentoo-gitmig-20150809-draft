@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 52e0d8706efb4d127d19f9940f20fbed multitail-3.4.5.ebuild 1029
+MD5 053e782d0bf5a711cfa8707445f11041 multitail-3.4.5.ebuild 1028
 MD5 404d92915c91e5a583cf63be32db6afd multitail-3.0.6.ebuild 890
 MD5 3036d281dfbd5a675b5beeaeaf7f3bfa multitail-3.4.1.ebuild 1030
-MD5 d24476f98796bedbfa436f07feaeb888 ChangeLog 3234
+MD5 23c678d3a8bfdc253149d2c8aedf3b3e ChangeLog 3327
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 c1b7adb16b638c126e5ad8647d3bcda7 multitail-3.4.8.ebuild 1034
 MD5 a2b15786902a65e70fbf571cc9681168 files/digest-multitail-3.0.6 63
 MD5 0fe2c8f86631c227b4945c0f4d6cdf76 files/digest-multitail-3.4.1 63
 MD5 fe45a3a1567df9e06b0265479e02d163 files/digest-multitail-3.4.5 63
 MD5 63f24c0564928cd5d344cd6fec66852d files/digest-multitail-3.4.8 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCJGFsEZCkKN40op4RAqMZAKCxtrHOqrFbymrB2un/QGjQbDRieACgrPa/
-U/AmDugaNxt+AZD2bAp+ors=
-=OnLX
------END PGP SIGNATURE-----
