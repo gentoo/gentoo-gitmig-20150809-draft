@@ -32,7 +32,8 @@
 # Galeon 1.2.0 depends on Mozilla 0.9.9
 >=net-www/galeon-1.1.0
 
->=sys-apps/pcmcia-cs-3.1.33
+# Let's see how this works
+#>=sys-apps/pcmcia-cs-3.1.33
 
 # Masing Azarah's new baselayout until several problems are confirmed fixed.
 # 4 Mar 2002, Daniel Robbins
