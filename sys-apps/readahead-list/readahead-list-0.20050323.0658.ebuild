@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-0.20050323.0658.ebuild,v 1.1 2005/03/23 08:33:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-0.20050323.0658.ebuild,v 1.2 2005/03/23 08:33:36 robbat2 Exp $
 
 DESCRIPTION="Perform readahead(2) to pre-cache files."
 HOMEPAGE="http://tirpitz.iat.sfu.ca/"
@@ -33,7 +33,7 @@ src_install() {
 	newins readahead.runlevel-default.list runlevel-default
 	newins readahead.runlevel-boot.list runlevel-boot
 	newins readahead._sbin_rc.list exec_sbin_rc
-	
+
 	# docs
 	cd ${S}
 	dodoc README
