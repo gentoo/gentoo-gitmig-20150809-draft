@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.9.3.ebuild,v 1.3 2003/11/19 17:08:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.9.3.ebuild,v 1.4 2003/11/19 17:09:13 mholzer Exp $
 
 IUSE="oggvorbis mad"
 
@@ -48,8 +48,7 @@ src_install() {
 pkg_postinst() {
 	einfo "libao has issues with the ALSA drivers, please refer to the FAQ"
 	einfo "http://musicpd.sourceforge.net/faq.php"
-	einfo 
+	einfo
 	einfo " You need to set PORT, MUSIC_DIR, PLAYLIST_DIR,"
 	einfo " LOG_FILE and ERROR_FILE in /etc/conf.d/mpd"
-
 }
