@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r2.ebuild,v 1.3 2004/06/24 23:31:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r2.ebuild,v 1.4 2004/07/01 22:36:43 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~hppa ~alpha ~amd64"
 IUSE="ssl mbox pic"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		>=sys-libs/pam-0.72
 		ssl? ( dev-libs/openssl )"
 # vimap and imap-c-client are both based off the same codebase

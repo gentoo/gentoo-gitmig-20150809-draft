@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/autorespond-2.0.4.ebuild,v 1.8 2004/06/24 23:19:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/autorespond-2.0.4.ebuild,v 1.9 2004/07/01 22:28:27 eradicator Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 alpha ~hppa ia64 ~mips ~ppc ~sparc amd64"
 LICENSE="GPL-2"
 SLOT="0"
 RDEPEND="mail-mta/qmail"
-DEPEND="sys-devel/gcc virtual/glibc"
+DEPEND="sys-devel/gcc virtual/libc"
 
 src_unpack() {
 	unpack ${P}.tar.gz

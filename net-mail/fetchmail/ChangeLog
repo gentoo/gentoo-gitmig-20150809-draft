@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.50 2004/07/01 04:10:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.51 2004/07/01 22:31:31 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  fetchmail-5.9.14.ebuild, fetchmail-6.2.1-r1.ebuild,
+  fetchmail-6.2.2-r2.ebuild, fetchmail-6.2.3.ebuild, fetchmail-6.2.4.ebuild,
+  fetchmail-6.2.5.ebuild:
+  virtual/glibc -> virtual/libc
 
   30 Jun 2004; Tom Gall <tgall@gentoo.org> fetchmail-6.2.5.ebuild:
   stable on ppc64, bug #55661

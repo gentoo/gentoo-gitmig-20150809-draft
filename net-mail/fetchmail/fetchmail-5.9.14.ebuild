@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.9.14.ebuild,v 1.13 2004/06/24 23:22:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.9.14.ebuild,v 1.14 2004/07/01 22:31:31 eradicator Exp $
 
 IUSE="ssl nls"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Fetchmail is a full-featured remote-mail retrieval and forwarding u
 HOMEPAGE="http://catb.org/~esr/fetchmail/"
 SRC_URI="http://www.catb.org/~esr/fetchmail/${P}.tar.gz"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 RDEPEND="nls? ( sys-devel/gettext )"
 

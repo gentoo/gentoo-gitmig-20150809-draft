@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mpack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.6 2004/06/24 23:25:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.7 2004/07/01 22:33:24 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mpack-1.5-r1.ebuild,
+  mpack-1.5.ebuild:
+  virtual/glibc -> virtual/libc
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.1-r1.ebuild,v 1.9 2004/06/24 23:22:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.1-r1.ebuild,v 1.10 2004/07/01 22:31:31 eradicator Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2 public-domain"
 KEYWORDS="x86 alpha"
 IUSE="ssl nls ipv6"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	nls? ( sys-devel/gettext )"
 

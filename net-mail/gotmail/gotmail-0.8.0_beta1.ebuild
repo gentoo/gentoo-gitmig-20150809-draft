@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.8.0_beta1.ebuild,v 1.5 2004/06/24 23:23:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.8.0_beta1.ebuild,v 1.6 2004/07/01 22:32:06 eradicator Exp $
 
 PVPREV=0.7.10
 S=${WORKDIR}/${PN}-${PVPREV}
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	net-misc/curl
 	dev-perl/URI
 	dev-perl/libnet"

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-notify
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/ChangeLog,v 1.9 2004/06/24 23:27:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/ChangeLog,v 1.10 2004/07/01 22:34:28 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  qmail-notify-0.93-r1.ebuild, qmail-notify-0.93.ebuild:
+  virtual/glibc -> virtual/libc
 
 *qmail-notify-0.93-r1 (11 Aug 2003)
 

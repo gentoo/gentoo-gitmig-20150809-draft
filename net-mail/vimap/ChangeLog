@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vimap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.7 2004/06/24 23:31:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.8 2004/07/01 22:36:56 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> vimap-2002c.ebuild:
+  virtual/glibc -> virtual/libc
 
 *vimap-2002c (28 May 2003)
 

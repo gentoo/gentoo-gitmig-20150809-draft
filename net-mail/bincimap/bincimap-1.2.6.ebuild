@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.6.ebuild,v 1.6 2004/06/24 23:19:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.6.ebuild,v 1.7 2004/07/01 22:28:56 eradicator Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64"
 IUSE="ssl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
 RDEPEND="${DEPEND}

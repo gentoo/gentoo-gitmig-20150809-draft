@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.7 2004/06/24 23:30:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.8 2004/07/01 22:35:13 eradicator Exp $
 
 IUSE=""
 
@@ -12,10 +12,10 @@ DESCRIPTION="Safecat implements qmail's maildir algorithm, copying standard inpu
 HOMEPAGE="http://budney.homeunix.net:8080/users/budney/linux/software/${PN}/"
 SRC_URI="http://budney.homeunix.net:8080/users/budney/linux/software/${PN}/${P}.tar.gz"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-apps/groff"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~amd64 ~mips"

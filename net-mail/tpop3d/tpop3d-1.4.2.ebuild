@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.13 2004/06/24 23:31:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.14 2004/07/01 22:36:13 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="ssl ldap mysql perl pam tcpd maildir debug"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl?	( >=dev-libs/openssl-0.9.6 )
 	ldap? 	( >=net-nds/openldap-2.0.7 )
 	mysql? 	( >=dev-db/mysql-3.23.28 )

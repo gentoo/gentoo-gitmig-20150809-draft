@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.14 2004/07/01 04:10:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.15 2004/07/01 22:31:31 eradicator Exp $
 
 IUSE="ssl nls ipv6 kerberos krb4"
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2 public-domain"
 KEYWORDS="x86 alpha sparc ppc amd64 s390 ppc64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	nls? ( sys-devel/gettext )
 	kerberos? ( virtual/krb5 )

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mess822
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.6 2004/06/24 23:25:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.7 2004/07/01 22:33:05 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mess822-0.58-r1.ebuild:
+  virtual/glibc -> virtual/libc
 
   15 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> mess822-0.58-r1.ebuild:
   marked ~amd64

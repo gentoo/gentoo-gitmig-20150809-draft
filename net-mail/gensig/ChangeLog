@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/gensig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gensig/ChangeLog,v 1.4 2004/06/24 23:22:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gensig/ChangeLog,v 1.5 2004/07/01 22:31:45 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gensig-2.2.ebuild,
+  gensig-2.3.ebuild:
+  virtual/glibc -> virtual/libc
 
 *gensig-2.3 (19 Oct 2003)
 

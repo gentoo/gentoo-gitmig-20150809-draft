@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/cvm-vmailmgr-0.4.ebuild,v 1.5 2004/06/25 03:11:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/cvm-vmailmgr-0.4.ebuild,v 1.6 2004/07/01 22:30:18 eradicator Exp $
 
 inherit gcc
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/bglibs-1.009"
 RDEPEND=">=net-mail/vmailmgr-0.96.9-r1
 	>=sys-apps/ucspi-unix-0.34"

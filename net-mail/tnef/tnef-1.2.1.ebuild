@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/tnef-1.2.1.ebuild,v 1.3 2004/06/24 23:30:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/tnef-1.2.1.ebuild,v 1.4 2004/07/01 22:35:59 eradicator Exp $
 
 DESCRIPTION="Decodes MS-TNEF MIME attachments"
 SRC_URI="mirror://sourceforge/tnef/${P}.tar.gz"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~amd64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	econf || die

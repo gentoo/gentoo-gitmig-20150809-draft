@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r1.ebuild,v 1.2 2004/06/24 23:30:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r1.ebuild,v 1.3 2004/07/01 22:35:27 eradicator Exp $
 
 IUSE=""
 
@@ -11,11 +11,11 @@ across serial links."
 HOMEPAGE="http://cr.yp.to/serialmail.html"
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
 	>=sys-apps/daemontools-0.76-r1"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpw/checkpw-1.01.ebuild,v 1.2 2004/06/24 23:20:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpw/checkpw-1.01.ebuild,v 1.3 2004/07/01 22:29:22 eradicator Exp $
 
 inherit gcc
 
@@ -14,7 +14,7 @@ IUSE="static"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

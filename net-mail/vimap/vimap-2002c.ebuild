@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c.ebuild,v 1.7 2004/06/24 23:31:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c.ebuild,v 1.8 2004/07/01 22:36:56 eradicator Exp $
 
 S=${WORKDIR}/imap-2002c1
 
@@ -17,7 +17,7 @@ PROVIDE="virtual/imapd"
 PROVIDE="${PROVIDE} virtual/imap-c-client"
 DEPEND="!net-mail/uw-imap
 	!virtual/imap-c-client
-	virtual/glibc
+	virtual/libc
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )"
 

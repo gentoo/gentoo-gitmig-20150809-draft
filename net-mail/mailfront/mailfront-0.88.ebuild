@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.88.ebuild,v 1.4 2004/06/25 03:11:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.88.ebuild,v 1.5 2004/07/01 22:32:20 eradicator Exp $
 
 inherit fixheadtails gcc
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/bglibs-1.006"
 RDEPEND="net-mail/cvm-vmailmgr
 	mail-mta/qmail"
