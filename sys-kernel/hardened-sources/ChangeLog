@@ -1,7 +1,15 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.32 2004/07/22 10:26:12 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.33 2004/08/04 19:59:24 scox Exp $
 
+*hardened-sources-2.4.26-r4 (04 Aug 2004)
+
+  04 Aug 2004; Andrea Luzzardi <scox@gentoo.org>
+  +hardened-sources-2.4.26-r4.ebuild,
+  +files/2.4.26-CAN-2004-0415.patch,
+  -hardened-sources-2.4.26-3:
+  Version bump, fix for CAN 0415, see bug #59378.
+  
 *hardened-sources-2.4.26-r3 (22 Jul 2004)
 
   22 Jul 2004; Andrea Luzzardi <scox@gentoo.org>

@@ -1,0 +1,3343 @@
+diff -urNp linux-8250/arch/cris/drivers/eeprom.c linux-10000/arch/cris/drivers/eeprom.c
+--- linux-8250/arch/cris/drivers/eeprom.c
++++ linux-10000/arch/cris/drivers/eeprom.c
+@@ -494,7 +494,7 @@ static int eeprom_read_buf(loff_t addr, 
+ static ssize_t eeprom_read(struct file * file, char * buf, size_t count, loff_t *off)
+ {
+   int read=0;
+-  unsigned long p = file->f_pos;
++  unsigned long p = *off;
+ 
+   unsigned char page;
+ 
+@@ -528,7 +528,7 @@ static ssize_t eeprom_read(struct file *
+     return -EFAULT;
+   }
+ 
+-  if( (p + count) > eeprom.size)
++  if (count > eeprom.size - p)
+   {
+     /* truncate count */
+     count = eeprom.size - p;
+@@ -548,7 +548,7 @@ static ssize_t eeprom_read(struct file *
+   
+   if(read > 0)
+   {
+-    file->f_pos += read;
++    *off = p + read;
+   }
+ 
+   eeprom.busy--;
+@@ -593,7 +593,7 @@ static ssize_t eeprom_write(struct file 
+   {
+     restart = 0;
+     written = 0;
+-    p = file->f_pos;
++    p = *off;
+    
+     
+     while( (written < count) && (p < eeprom.size))
+@@ -721,10 +721,10 @@ static ssize_t eeprom_write(struct file 
+ 
+   eeprom.busy--;
+   wake_up_interruptible(&eeprom.wait_q);
+-  if (written == 0 && file->f_pos >= eeprom.size){
++  if (written == 0 && p >= eeprom.size){
+     return -ENOSPC;
+   }
+-  file->f_pos += written;
++  *off = p;
+   return written;
+ }
+ 
+diff -urNp linux-8250/arch/i386/kernel/mtrr.c linux-10000/arch/i386/kernel/mtrr.c
+--- linux-8250/arch/i386/kernel/mtrr.c
++++ linux-10000/arch/i386/kernel/mtrr.c
+@@ -1648,11 +1648,16 @@ static int mtrr_file_del (unsigned long 
+ static ssize_t mtrr_read (struct file *file, char *buf, size_t len,
+ 			  loff_t *ppos)
+ {
+-    if (*ppos >= ascii_buf_bytes) return 0;
+-    if (*ppos + len > ascii_buf_bytes) len = ascii_buf_bytes - *ppos;
+-    if ( copy_to_user (buf, ascii_buffer + *ppos, len) ) return -EFAULT;
+-    *ppos += len;
+-    return len;
++	loff_t pos = *ppos;
++
++	if (pos < 0 || pos >= ascii_buf_bytes)
++		return 0;
++	if (len > ascii_buf_bytes - pos)
++		len = ascii_buf_bytes - pos;
++	if (copy_to_user(buf, ascii_buffer + pos, len))
++		return -EFAULT;
++	*ppos = pos + len;
++	return len;
+ }   /*  End Function mtrr_read  */
+ 
+ static ssize_t mtrr_write (struct file *file, const char *buf, size_t len,
+diff -urNp linux-8250/arch/ia64/kernel/efivars.c linux-10000/arch/ia64/kernel/efivars.c
+--- linux-8250/arch/ia64/kernel/efivars.c
++++ linux-10000/arch/ia64/kernel/efivars.c
+@@ -366,6 +366,7 @@ efi_systab_read(struct file *file, char 
+ 	int ret;
+ 	const int max_nr_entries = 7; 	/* num ptrs to tables we could expose */
+ 	const int max_line_len = 80;
++	loff_t pos = *ppos;
+ 
+ 	if (!efi.systab)
+ 		return 0;
+@@ -390,13 +391,13 @@ efi_systab_read(struct file *file, char 
+ 	if (efi.boot_info)
+ 		length += sprintf(proc_buffer + length, "BOOTINFO=0x%lx\n", __pa(efi.boot_info));
+ 
+-	if (*ppos >= length) {
++	if (pos != (unsigned)pos || pos >= length) {
+ 		ret = 0;
+ 		goto out;
+ 	}
+ 
+-	data = proc_buffer + file->f_pos;
+-	size = length - file->f_pos;
++	data = proc_buffer + pos;
++	size = length - pos;
+ 	if (size > count)
+ 		size = count;
+ 	if (copy_to_user(buffer, data, size)) {
+@@ -404,7 +405,7 @@ efi_systab_read(struct file *file, char 
+ 		goto out;
+ 	}
+ 
+-	*ppos += size;
++	*ppos += pos + size;
+ 	ret = size;
+ 
+ out:
+diff -urNp linux-8250/arch/ia64/kernel/salinfo.c linux-10000/arch/ia64/kernel/salinfo.c
+--- linux-8250/arch/ia64/kernel/salinfo.c
++++ linux-10000/arch/ia64/kernel/salinfo.c
+@@ -451,6 +451,7 @@
+ 	size_t size;
+ 	u8 *buf;
+ 	u64 bufsize;
++	loff_t pos = *ppos;
+ 
+ 	if (data->state == STATE_LOG_RECORD) {
+ 		buf = data->log_buffer;
+@@ -462,17 +463,17 @@
+ 		buf = NULL;
+ 		bufsize = 0;
+ 	}
+-	if (*ppos >= bufsize)
++	if (pos != (unsigned)pos || pos >= bufsize)
+ 		return 0;
+ 
+-	saldata = buf + file->f_pos;
+-	size = bufsize - file->f_pos;
++	saldata = buf + pos;
++	size = bufsize - pos;
+ 	if (size > count)
+ 		size = count;
+ 	if (copy_to_user(buffer, saldata, size))
+ 		return -EFAULT;
+ 
+-	*ppos += size;
++	*ppos = pos + size;
+ 	return size;
+ }
+ 
+diff -urNp linux-8250/arch/mips/sibyte/sb1250/bcm1250_tbprof.c linux-10000/arch/mips/sibyte/sb1250/bcm1250_tbprof.c
+--- linux-8250/arch/mips/sibyte/sb1250/bcm1250_tbprof.c
++++ linux-10000/arch/mips/sibyte/sb1250/bcm1250_tbprof.c
+@@ -284,7 +284,9 @@ static ssize_t sbprof_tb_read(struct fil
+ 	char *dest    =	 buf;
+ 	long  cur_off = *offp;
+ 
+-	count = 0;
++	if (cur_off < 0)
++		return -EINVAL;
++
+ 	cur_sample = cur_off / TB_SAMPLE_SIZE;
+ 	sample_off = cur_off % TB_SAMPLE_SIZE;
+ 	sample_left = TB_SAMPLE_SIZE - sample_off;
+diff -urNp linux-8250/arch/ppc/kernel/ppc_htab.c linux-10000/arch/ppc/kernel/ppc_htab.c
+--- linux-8250/arch/ppc/kernel/ppc_htab.c
++++ linux-10000/arch/ppc/kernel/ppc_htab.c
+@@ -112,6 +112,7 @@ static ssize_t ppc_htab_read(struct file
+ 			     size_t count, loff_t *ppos)
+ {
+ 	unsigned long mmcr0 = 0, pmc1 = 0, pmc2 = 0;
++	loff_t pos = *ppos;
+ 	int n = 0;
+ #ifdef CONFIG_PPC_STD_MMU
+ 	int valid;
+@@ -213,14 +214,14 @@ return_string:
+ 		      "Non-error misses: %lu\n"
+ 		      "Error misses\t: %lu\n",
+ 		      pte_misses, pte_errors);
+-	if (*ppos >= strlen(buffer))
++	if (pos != (unsigned)pos || pos >= strlen(buffer))
+ 		return 0;
+-	if (n > strlen(buffer) - *ppos)
+-		n = strlen(buffer) - *ppos;
++	if (n > strlen(buffer) - pos)
++		n = strlen(buffer) - pos;
+ 	if (n > count)
+ 		n = count;
+-	copy_to_user(buf, buffer + *ppos, n);
+-	*ppos += n;
++	copy_to_user(buf, buffer + pos, n);
++	*ppos = pos + n;
+ 	return n;
+ }
+ 
+diff -urNp linux-8250/arch/ppc/platforms/proc_rtas.c linux-10000/arch/ppc/platforms/proc_rtas.c
+--- linux-8250/arch/ppc/platforms/proc_rtas.c
++++ linux-10000/arch/ppc/platforms/proc_rtas.c
+@@ -261,18 +261,19 @@ static ssize_t ppc_rtas_poweron_read(str
+ 		size_t count, loff_t *ppos)
+ {
+ 	int n;
++	loff_t pos = *ppos;
+ 	if (power_on_time == 0)
+ 		n = sprintf(buf, "Power on time not set\n");
+ 	else
+ 		n = sprintf(buf, "%lu\n", power_on_time);
+ 
+-	if (*ppos >= strlen(buf))
++	if (pos != (unsigned)pos || pos >= strlen(buf))
+ 		return 0;
+-	if (n > strlen(buf) - *ppos)
+-		n = strlen(buf) - *ppos;
++	if (n > strlen(buf) - pos)
++		n = strlen(buf) - pos;
+ 	if (n > count)
+ 		n = count;
+-	*ppos += n;
++	*ppos = pos + n;
+ 	return n;
+ }
+ 
+@@ -298,15 +299,16 @@ static ssize_t ppc_rtas_progress_read(st
+ 		size_t count, loff_t *ppos)
+ {
+ 	int n = 0;
++	loff_t pos = *ppos;
+ 	if (progress_led != NULL)
+ 		n = sprintf (buf, "%s\n", progress_led);
+-	if (*ppos >= strlen(buf))
++	if (pos != (unsigned)pos || pos >= strlen(buf))
+ 		return 0;
+-	if (n > strlen(buf) - *ppos)
+-		n = strlen(buf) - *ppos;
++	if (n > strlen(buf) - pos)
++		n = strlen(buf) - pos;
+ 	if (n > count)
+ 		n = count;
+-	*ppos += n;
++	*ppos = pos + n;
+ 	return n;
+ }
+ 
+@@ -342,6 +344,7 @@ static ssize_t ppc_rtas_clock_read(struc
+ {
+ 	unsigned int year, mon, day, hour, min, sec;
+ 	unsigned long *ret = kmalloc(4*8, GFP_KERNEL);
++	loff_t pos = *ppos;
+ 	int n, error;
+ 
+ 	error = call_rtas("get-time-of-day", 0, 8, ret);
+@@ -358,13 +361,13 @@ static ssize_t ppc_rtas_clock_read(struc
+ 	}
+ 	kfree(ret);
+ 
+-	if (*ppos >= strlen(buf))
++	if (pos != (unsigned)pos || pos >= strlen(buf))
+ 		return 0;
+-	if (n > strlen(buf) - *ppos)
+-		n = strlen(buf) - *ppos;
++	if (n > strlen(buf) - pos)
++		n = strlen(buf) - pos;
+ 	if (n > count)
+ 		n = count;
+-	*ppos += n;
++	*ppos = pos + n;
+ 	return n;
+ }
+ 
+@@ -729,16 +732,16 @@ static ssize_t ppc_rtas_tone_freq_write(
+ static ssize_t ppc_rtas_tone_freq_read(struct file * file, char * buf,
+ 		size_t count, loff_t *ppos)
+ {
+-	int n;
+-	n = sprintf(buf, "%lu\n", rtas_tone_frequency);
++	int n = sprintf(buf, "%lu\n", rtas_tone_frequency);
++	loff_t pos = *ppos;
+ 
+-	if (*ppos >= strlen(buf))
++	if (pos != (unsigned)pos || pos >= strlen(buf))
+ 		return 0;
+-	if (n > strlen(buf) - *ppos)
+-		n = strlen(buf) - *ppos;
++	if (n > strlen(buf) - pos)
++		n = strlen(buf) - pos;
+ 	if (n > count)
+ 		n = count;
+-	*ppos += n;
++	*ppos = pos + n;
+ 	return n;
+ }
+ /* ****************************************************************** */
+@@ -770,15 +773,16 @@ static ssize_t ppc_rtas_tone_volume_writ
+ static ssize_t ppc_rtas_tone_volume_read(struct file * file, char * buf,
+ 		size_t count, loff_t *ppos)
+ {
+-	int n;
+-	n = sprintf(buf, "%lu\n", rtas_tone_volume);
++	int n = sprintf(buf, "%lu\n", rtas_tone_volume);
++	loff_t pos = *ppos;
+ 
+-	if (*ppos >= strlen(buf))
++	if (pos != (unsigned)pos || pos >= strlen(buf))
+ 		return 0;
+-	if (n > strlen(buf) - *ppos)
+-		n = strlen(buf) - *ppos;
++	if (n > strlen(buf) - pos)
++		n = strlen(buf) - pos;
+ 	if (n > count)
+ 		n = count;
+-	*ppos += n;
++	*ppos = pos + n;
++
+ 	return n;
+ }
+diff -urNp linux-8250/arch/ppc64/kernel/nvram.c linux-10000/arch/ppc64/kernel/nvram.c
+--- linux-8250/arch/ppc64/kernel/nvram.c
++++ linux-10000/arch/ppc64/kernel/nvram.c
+@@ -78,11 +78,12 @@
+ 			  size_t count, loff_t *ppos)
+ {
+ 	unsigned long len;
+-	char *tmp_buffer;
++	char *tmp_buffer; 
++	loff_t pos = *ppos;
+ 
+ 	if (verify_area(VERIFY_WRITE, buf, count))
+ 		return -EFAULT;
+-	if (*ppos >= rtas_nvram_size)
++	if ((unsigned)pos != pos || pos >= rtas_nvram_size)
+ 		return 0;
+ 	if (count > rtas_nvram_size)
+ 		count = rtas_nvram_size;
+@@ -93,7 +94,7 @@
+ 		return 0;
+ 	}
+ 
+-	len = read_nvram(tmp_buffer, count, ppos);
++	len = read_nvram(tmp_buffer, count, &pos);
+ 	if ((long)len <= 0) {
+ 		kfree(tmp_buffer);
+ 		return len;
+@@ -105,6 +106,7 @@
+ 	}
+ 
+ 	kfree(tmp_buffer);
++	*ppos = pos;
+ 	return len;
+ 
+ }
+@@ -114,10 +116,11 @@
+ {
+ 	unsigned long len;
+ 	char * tmp_buffer;
++	loff_t pos = *ppos;
+ 
+ 	if (verify_area(VERIFY_READ, buf, count))
+ 		return -EFAULT;
+-	if (*ppos >= rtas_nvram_size)
++	if (pos != (unsigned) pos || pos >= rtas_nvram_size)
+ 		return 0;
+ 	if (count > rtas_nvram_size)
+ 		count = rtas_nvram_size;
+@@ -133,7 +136,8 @@
+ 		return -EFAULT;
+ 	}
+ 
+-	len = write_nvram(tmp_buffer, count, ppos);
++	len = write_nvram(tmp_buffer, count, &pos);
++	*ppos = pos;
+ 
+ 	kfree(tmp_buffer);
+ 	return len;
+diff -urNp linux-8250/arch/ppc64/kernel/proc_pmc.c linux-10000/arch/ppc64/kernel/proc_pmc.c
+--- linux-8250/arch/ppc64/kernel/proc_pmc.c
++++ linux-10000/arch/ppc64/kernel/proc_pmc.c
+@@ -412,8 +412,9 @@ static ssize_t read_profile(struct file 
+ 	}
+ 	pnt = (char *)(perfmon_base.profile_buffer) + p - sizeof(unsigned int);
+ 	copy_to_user(buf,(void *)pnt,count);
++	p += count;
+ 	read += count;
+-	*ppos += read;
++	*ppos = p;
+ 	return read;
+ }
+ 
+@@ -455,19 +456,17 @@ static ssize_t read_trace(struct file *f
+ 			    size_t count, loff_t *ppos)
+ {
+ 	unsigned long p = *ppos;
+-	ssize_t read;
+ 	char * pnt;
+ 
+ 	if (p >= (perfmon_base.trace_length)) return 0;
+ 	if (count > (perfmon_base.trace_length) - p)
+ 		count = (perfmon_base.trace_length) - p;
+-	read = 0;
+ 
+ 	pnt = (char *)(perfmon_base.trace_buffer) + p;
+ 	copy_to_user(buf,(void *)pnt,count);
+-	read += count;
+-	*ppos += read;
+-	return read;
++	p += count;
++	*ppos = p;
++	return count;
+ }
+ 
+ static ssize_t write_trace(struct file * file, const char * buf,
+@@ -486,13 +485,11 @@ static ssize_t read_timeslice(struct fil
+ 	if (p >= (perfmon_base.timeslice_length)) return 0;
+ 	if (count > (perfmon_base.timeslice_length) - p)
+ 		count = (perfmon_base.timeslice_length) - p;
+-	read = 0;
+ 
+ 	pnt = (char *)(perfmon_base.timeslice_buffer) + p;
+ 	copy_to_user(buf,(void *)pnt,count);
+-	read += count;
+-	*ppos += read;
+-	return read;
++	*ppos = p + count;
++	return count;
+ }
+ 
+ static ssize_t write_timeslice(struct file * file, const char * buf,
+diff -urNp linux-8250/arch/ppc64/kernel/rtas-proc.c linux-10000/arch/ppc64/kernel/rtas-proc.c
+--- linux-8250/arch/ppc64/kernel/rtas-proc.c
++++ linux-10000/arch/ppc64/kernel/rtas-proc.c
+@@ -337,6 +337,7 @@
+ {
+ 	char stkbuf[40];  /* its small, its on stack */
+ 	int n;
++	loff_t pos = *ppos;
+ 
+ 	if (power_on_time == 0)
+ 		n = snprintf(stkbuf, 40, "Power on time not set\n");
+@@ -344,15 +345,15 @@
+ 		n = snprintf(stkbuf, 40, "%lu\n", power_on_time);
+ 
+ 	int sn = strlen(stkbuf) +1;
+-	if (*ppos >= sn)
++	if (pos != (unsigned)pos || pos >= sn)
+ 		return 0;
+-	if (n > sn - *ppos)
+-		n = sn - *ppos;
++	if (n > sn - pos)
++		n = sn - pos;
+ 	if (n > count)
+ 		n = count;
+-	if (copy_to_user(buf, stkbuf + (*ppos), n))
++	if (copy_to_user(buf, stkbuf + pos, n))
+ 		return -EFAULT;
+-	*ppos += n;
++	*ppos = pos + n;
+ 	return n;
+ }
+ 
+@@ -384,6 +385,7 @@
+ 		size_t count, loff_t *ppos)
+ {
+ 	int n = 0, sn;
++	loff_t pos = *ppos;
+ 	
+ 	if (progress_led == NULL)
+ 		return 0;
+@@ -396,20 +398,20 @@
+ 	n = sprintf (tmpbuf, "%s\n", progress_led);
+ 
+ 	sn = strlen (tmpbuf) +1;
+-	if (*ppos >= sn) {
++	if (pos != (unsigned)pos || pos >= sn) {
+ 		kfree(tmpbuf);
+ 		return 0;
+ 	}
+-	if (n > sn - *ppos)
+-		n = sn - *ppos;
++	if (n > sn - pos)
++		n = sn - pos;
+ 	if (n > count)
+ 		n = count;
+-	if (copy_to_user(buf, tmpbuf + (*ppos), n)) {
++	if (copy_to_user(buf, tmpbuf + pos, n) {
+ 		kfree(tmpbuf);
+ 		return -EFAULT;
+ 	}
+ 	kfree(tmpbuf);
+-	*ppos += n;
++	*ppos = pos + n;
+ 	return n;
+ }
+ 
+@@ -453,6 +455,7 @@
+ 	unsigned int year, mon, day, hour, min, sec;
+ 	unsigned long *ret = kmalloc(4*8, GFP_KERNEL);
+ 	int n, error;
++	loff_t pos = *ppos;
+ 
+ 	error = rtas_call(rtas_token("get-time-of-day"), 0, 8, ret);
+ 	
+@@ -471,16 +474,16 @@
+ 	kfree(ret);
+ 
+ 	int sn = strlen(stkbuf) +1;
+-	if (*ppos >= sn)
++	if (pos != (unsigned)pos || pos >= sn)
+ 		return 0;
+-	if (n > sn - *ppos)
+-		n = sn - *ppos;
++	if (n > sn - pos)
++		n = sn - pos;
+ 	if (n > count)
+ 		n = count;
+-	if (copy_to_user(buf, stkbuf + (*ppos), n))
++	if (copy_to_user(buf, stkbuf + pos, n))
+ 		return -EFAULT;
+ 
+-	*ppos += n;
++	*ppos = pos + n;
+ 	return n;
+ }
+ 
+@@ -878,20 +881,21 @@
+ {
+ 	int n, sn;
+ 	char stkbuf[40];  /* its small, its on stack */
++	loff_t pos = *ppos;
+ 
+ 	n = snprintf(stkbuf, 40, "%lu\n", rtas_tone_frequency);
+ 
+ 	sn = strlen(stkbuf) +1;
+-	if (*ppos >= sn)
++	if (pos != (unsigned)pos || pos >= sn)
+ 		return 0;
+-	if (n > sn - *ppos)
+-		n = sn - *ppos;
++	if (n > sn - pos)
++		n = sn - pos;
+ 	if (n > count)
+ 		n = count;
+-	if (copy_to_user(buf, stkbuf + (*ppos), n))
++	if (copy_to_user(buf, stkbuf + pos, n))
+ 		return -EFAULT;
+ 
+-	*ppos += n;
++	*ppos = pos + n;
+ 	return n;
+ }
+ /* ****************************************************************** */
+@@ -933,19 +937,20 @@
+ {
+ 	int n, sn;
+ 	char stkbuf[40];  /* its small, its on stack */
++	loff_t pos = *ppos;
+ 
+ 	n = snprintf(stkbuf, 40, "%lu\n", rtas_tone_volume);
+ 	sn = strlen(stkbuf) +1;
+-	if (*ppos >= sn)
++	if (pos != (unsigned)pos || pos >= sn)
+ 		return 0;
+-	if (n > sn - *ppos)
+-		n = sn - *ppos;
++	if (n > sn - pos)
++		n = sn - pos;
+ 	if (n > count)
+ 		n = count;
+-	if (copy_to_user(buf, stkbuf + (*ppos), n))
++	if (copy_to_user(buf, stkbuf + pos, n))
+ 		return -EFAULT;
+ 
+-	*ppos += n;
++	*ppos = pos + n;
+ 	return n;
+ }
+ 
+@@ -1064,6 +1069,7 @@
+ 	char * buffer;
+ 	int i, sn;
+ 	int n = 0;
++	loff_t pos = *ppos;
+ 
+ 	int m = MAX_ERRINJCT_TOKENS * (ERRINJCT_TOKEN_LEN+1);
+ 	buffer = (char *)kmalloc(m, GFP_KERNEL);
+@@ -1078,22 +1084,22 @@
+ 	}
+ 
+ 	sn = strlen(buffer) +1;
+-	if (*ppos >= sn) {
++	if (pos != (unsigned)pos || pos >= sn) {
+ 		kfree(buffer);
+ 		return 0;
+ 	}
+-	if (n > sn - *ppos)
+-		n = sn - *ppos;
++	if (n > sn - pos)
++		n = sn - pos;
+ 
+ 	if (n > count)
+ 		n = count;
+ 
+-	if (copy_to_user(buf, buffer + *ppos, n)) {
++	if (copy_to_user(buf, buffer + pos, n)) {
+ 		kfree(buffer);
+ 		return -EFAULT;
+ 	}
+ 
+-	*ppos += n;
++	*ppos = pos + n;
+ 
+ 	kfree(buffer);
+ 	return n;
+diff -urNp linux-8250/arch/ppc64/kernel/rtas_flash.c linux-10000/arch/ppc64/kernel/rtas_flash.c
+--- linux-8250/arch/ppc64/kernel/rtas_flash.c
++++ linux-10000/arch/ppc64/kernel/rtas_flash.c
+@@ -126,6 +126,7 @@ static ssize_t rtas_flash_read(struct fi
+ 	int error;
+ 	char *msg;
+ 	int msglen;
++	loff_t pos = *ppos;
+ 
+ 	if (!flash_possible) {
+ 		msg = "error: this partition does not have service authority\n";
+@@ -142,7 +143,7 @@ static ssize_t rtas_flash_read(struct fi
+ 	if (msglen > count)
+ 		msglen = count;
+ 
+-	if (ppos && *ppos != 0)
++	if (pos != (unsigned)pos || pos != 0)
+ 		return 0;	/* be cheap */
+ 
+ 	error = verify_area(VERIFY_WRITE, buf, msglen);
+diff -Nru linux-8250/arch/ppc64/kernel/lparcfg.c linux-10000/arch/ppc64/kernel/lparcfg.c
+--- linux-8250/arch/ppc64/kernel/lparcfg.c	2004-08-04 06:19:29 -07:00
++++ linux-10000/arch/ppc64/kernel/lparcfg.c	2004-08-04 06:19:29 -07:00
+@@ -415,7 +415,7 @@
+ 	pnt = (char *)(data) + p;
+ 	copy_to_user(buf, (void *)pnt, count);
+ 	read += count;
+-	*ppos += read;
++	*ppos = p + read;
+ 	return read;
+ }
+ 
+diff -urNp linux-8250/arch/s390/kernel/debug.c linux-10000/arch/s390/kernel/debug.c
+--- linux-8250/arch/s390/kernel/debug.c
++++ linux-10000/arch/s390/kernel/debug.c
+@@ -470,7 +470,7 @@ static ssize_t debug_output(struct file 
+ 				goto out;
+ 	}
+ out:
+-	p_info->offset           = *offset + count;
++	p_info->offset           += count;
+ 	p_info->act_entry_offset = size;	
+ 	*offset = p_info->offset;
+ 	return count;
+@@ -1068,7 +1068,7 @@ static int debug_input_level_fn(debug_in
+ 		       input_buf[0]);
+ 	}
+       out:
+-	*offset += in_buf_size;
++	*offset = in_buf_size;
+ 	return rc;		/* number of input characters */
+ }
+ 
+@@ -1135,7 +1135,7 @@ static int debug_input_flush_fn(debug_in
+         printk(KERN_INFO "debug: area `%c` is not valid\n", input_buf[0]);
+ 
+       out:
+-        *offset += in_buf_size;
++        *offset = in_buf_size;
+         return rc;              /* number of input characters */
+ }
+ 
+diff -urNp linux-8250/arch/s390x/kernel/debug.c linux-10000/arch/s390x/kernel/debug.c
+--- linux-8250/arch/s390x/kernel/debug.c
++++ linux-10000/arch/s390x/kernel/debug.c
+@@ -470,7 +470,7 @@ static ssize_t debug_output(struct file 
+ 				goto out;
+ 	}
+ out:
+-	p_info->offset           = *offset + count;
++	p_info->offset           += count;
+ 	p_info->act_entry_offset = size;	
+ 	*offset = p_info->offset;
+ 	return count;
+@@ -1068,7 +1068,7 @@ static int debug_input_level_fn(debug_in
+ 		       input_buf[0]);
+ 	}
+       out:
+-	*offset += in_buf_size;
++	*offset = in_buf_size;
+ 	return rc;		/* number of input characters */
+ }
+ 
+@@ -1135,7 +1135,7 @@ static int debug_input_flush_fn(debug_in
+         printk(KERN_INFO "debug: area `%c` is not valid\n", input_buf[0]);
+ 
+       out:
+-        *offset += in_buf_size;
++        *offset = in_buf_size;
+         return rc;              /* number of input characters */
+ }
+ 
+diff -urNp linux-8250/arch/x86_64/kernel/mtrr.c linux-10000/arch/x86_64/kernel/mtrr.c
+--- linux-8250/arch/x86_64/kernel/mtrr.c
++++ linux-10000/arch/x86_64/kernel/mtrr.c
+@@ -957,16 +957,18 @@ static int mtrr_file_del (u64 base, u32 
+ static ssize_t mtrr_read (struct file *file, char *buf, size_t len,
+ 		loff_t * ppos)
+ {
+-	if (*ppos >= ascii_buf_bytes)
++	loff_t pos = *ppos;
++
++	if (pos < 0 || pos >= ascii_buf_bytes)
+ 		return 0;
+ 
+-	if (*ppos + len > ascii_buf_bytes)
+-		len = ascii_buf_bytes - *ppos;
++	if (len > ascii_buf_bytes - pos)
++		len = ascii_buf_bytes - pos;
+ 
+-	if (copy_to_user (buf, ascii_buffer + *ppos, len))
++	if (copy_to_user (buf, ascii_buffer + pos, len))
+ 		return -EFAULT;
+ 
+-	*ppos += len;
++	*ppos = pos + len;
+ 	return len;
+ }
+ 
+diff -urNp linux-8250/drivers/acpi/system.c linux-10000/drivers/acpi/system.c
+--- linux-8250/drivers/acpi/system.c
++++ linux-10000/drivers/acpi/system.c
+@@ -520,6 +520,7 @@ acpi_system_read_dsdt (
+ 	struct acpi_buffer	dsdt = {ACPI_ALLOCATE_BUFFER, NULL};
+ 	void			*data = 0;
+ 	size_t			size = 0;
++	loff_t			pos = *ppos;
+ 
+ 	ACPI_FUNCTION_TRACE("acpi_system_read_dsdt");
+ 
+@@ -527,9 +528,12 @@ acpi_system_read_dsdt (
+ 	if (ACPI_FAILURE(status))
+ 		return_VALUE(-ENODEV);
+ 
+-	if (*ppos < dsdt.length) {
+-		data = dsdt.pointer + file->f_pos;
+-		size = dsdt.length - file->f_pos;
++	if (pos < 0)
++		return -EINVAL;
++
++	if (pos < dsdt.length) {
++		data = dsdt.pointer + pos;
++		size = dsdt.length - pos;
+ 		if (size > count)
+ 			size = count;
+ 		if (copy_to_user(buffer, data, size)) {
+@@ -540,7 +544,9 @@ acpi_system_read_dsdt (
+ 
+ 	acpi_os_free(dsdt.pointer);
+ 
+-	*ppos += size;
++	pos += size;
++
++	*ppos = pos;
+ 
+ 	return_VALUE(size);
+ }
+@@ -563,6 +569,7 @@ acpi_system_read_fadt (
+ 	struct acpi_buffer	fadt = {ACPI_ALLOCATE_BUFFER, NULL};
+ 	void			*data = 0;
+ 	size_t			size = 0;
++	loff_t			pos = *ppos;
+ 
+ 	ACPI_FUNCTION_TRACE("acpi_system_read_fadt");
+ 
+@@ -570,9 +577,12 @@ acpi_system_read_fadt (
+ 	if (ACPI_FAILURE(status))
+ 		return_VALUE(-ENODEV);
+ 
+-	if (*ppos < fadt.length) {
+-		data = fadt.pointer + file->f_pos;
+-		size = fadt.length - file->f_pos;
++	if (pos < 0)
++		return -EINVAL;
++
++	if (pos < fadt.length) {
++		data = fadt.pointer + pos;
++		size = fadt.length - pos;
+ 		if (size > count)
+ 			size = count;
+ 		if (copy_to_user(buffer, data, size)) {
+@@ -583,7 +593,8 @@ acpi_system_read_fadt (
+ 
+ 	acpi_os_free(fadt.pointer);
+ 
+-	*ppos += size;
++	pos += size;
++	*ppos = pos;
+ 
+ 	return_VALUE(size);
+ }
+diff -urNp linux-8250/drivers/block/acsi_slm.c linux-10000/drivers/block/acsi_slm.c
+--- linux-8250/drivers/block/acsi_slm.c
++++ linux-10000/drivers/block/acsi_slm.c
+@@ -367,6 +367,7 @@ static ssize_t slm_read( struct file *fi
+ 
+ {
+ 	struct inode *node = file->f_dentry->d_inode;
++	loff_t pos = *ppos;
+ 	unsigned long page;
+ 	int length;
+ 	int end;
+@@ -381,18 +382,18 @@ static ssize_t slm_read( struct file *fi
+ 		count = length;
+ 		goto out;
+ 	}
+-	if (file->f_pos >= length) {
++	if (pos != (unsigned)pos || pos >= length) {
+ 		count = 0;
+ 		goto out;
+ 	}
+-	if (count + file->f_pos > length)
+-		count = length - file->f_pos;
+-	end = count + file->f_pos;
+-	if (copy_to_user(buf, (char *)page + file->f_pos, count)) {
++	if (count > length - pos)
++		count = length - pos;
++	end = count + pos;
++	if (copy_to_user(buf, (char *)page + pos, count)) {
+ 		count = -EFAULT;
+ 		goto out;
+ 	}
+-	file->f_pos = end;
++	*ppos = end;
+ out:	free_page( page );
+ 	return( count );
+ }
+diff -urNp linux-8250/drivers/block/rd.c linux-10000/drivers/block/rd.c
+--- linux-8250/drivers/block/rd.c
++++ linux-10000/drivers/block/rd.c
+@@ -320,14 +320,19 @@ out:
+ static ssize_t initrd_read(struct file *file, char *buf,
+ 			   size_t count, loff_t *ppos)
+ {
+-	int left;
++	loff_t n = *ppos;
++	unsigned pos = n;
++	unsigned left = initrd_end - initrd_start;
+ 
+-	left = initrd_end - initrd_start - *ppos;
++	if (pos != n || pos >= left)
++		return 0;
++
++	left -= pos;
+ 	if (count > left) count = left;
+ 	if (count == 0) return 0;
+-	if (copy_to_user(buf, (char *)initrd_start + *ppos, count))
++	if (copy_to_user(buf, (char *)initrd_start + pos, count))
+ 		return -EFAULT;
+-	*ppos += count;
++	*ppos = pos + count;
+ 	return count;
+ }
+ 
+diff -urNp linux-8250/drivers/char/i8k.c linux-10000/drivers/char/i8k.c
+--- linux-8250/drivers/char/i8k.c
++++ linux-10000/drivers/char/i8k.c
+@@ -493,6 +493,7 @@ static int i8k_get_info(char *buffer, ch
+ 
+ static ssize_t i8k_read(struct file *f, char *buffer, size_t len, loff_t *fpos)
+ {
++    loff_t pos = *fpos;
+     int n;
+     char info[128];
+ 
+@@ -501,19 +502,19 @@ static ssize_t i8k_read(struct file *f, 
+ 	return n;
+     }
+ 
+-    if (*fpos >= n) {
++    if (pos != (unsigned)pos || pos >= n) {
+ 	return 0;
+     }
+ 
+-    if ((*fpos + len) >= n) {
+-	len = n - *fpos;
++    if (len >= n - pos) {
++	len = n - pos;
+     }
+ 
+     if (copy_to_user(buffer, info, len) != 0) {
+ 	return -EFAULT;
+     }
+ 
+-    *fpos += len;
++    *fpos = pos + len;
+     return len;
+ }
+ 
+diff -urNp linux-8250/drivers/char/istallion.c linux-10000/drivers/char/istallion.c
+--- linux-8250/drivers/char/istallion.c
++++ linux-10000/drivers/char/istallion.c
+@@ -4854,6 +4854,7 @@ static ssize_t stli_memread(struct file 
+ 	void		*memptr;
+ 	stlibrd_t	*brdp;
+ 	int		brdnr, size, n;
++	loff_t		pos = *offp;
+ 
+ #if DEBUG
+ 	printk(KERN_DEBUG "stli_memread(fp=%x,buf=%x,count=%x,offp=%x)\n",
+@@ -4868,25 +4869,26 @@ static ssize_t stli_memread(struct file 
+ 		return(-ENODEV);
+ 	if (brdp->state == 0)
+ 		return(-ENODEV);
+-	if (fp->f_pos >= brdp->memsize)
++	if (pos != (unsigned)pos || pos >= brdp->memsize)
+ 		return(0);
+ 
+-	size = MIN(count, (brdp->memsize - fp->f_pos));
++	size = MIN(count, (brdp->memsize - pos));
+ 
+ 	save_flags(flags);
+ 	cli();
+ 	EBRDENABLE(brdp);
+ 	while (size > 0) {
+-		memptr = (void *) EBRDGETMEMPTR(brdp, fp->f_pos);
+-		n = MIN(size, (brdp->pagesize - (((unsigned long) fp->f_pos) % brdp->pagesize)));
++		memptr = (void *) EBRDGETMEMPTR(brdp, pos);
++		n = MIN(size, (brdp->pagesize - (((unsigned long) pos) % brdp->pagesize)));
+ 		if (copy_to_user(buf, memptr, n)) {
+ 			count = -EFAULT;
+ 			goto out;
+ 		}
+-		fp->f_pos += n;
++		pos += n;
+ 		buf += n;
+ 		size -= n;
+ 	}
++	*offp = pos;
+ out:
+ 	EBRDDISABLE(brdp);
+ 	restore_flags(flags);
+@@ -4909,6 +4911,7 @@ static ssize_t stli_memwrite(struct file
+ 	stlibrd_t	*brdp;
+ 	char		*chbuf;
+ 	int		brdnr, size, n;
++	loff_t		pos = *offp;
+ 
+ #if DEBUG
+ 	printk(KERN_DEBUG "stli_memwrite(fp=%x,buf=%x,count=%x,offp=%x)\n",
+@@ -4923,26 +4926,27 @@ static ssize_t stli_memwrite(struct file
+ 		return(-ENODEV);
+ 	if (brdp->state == 0)
+ 		return(-ENODEV);
+-	if (fp->f_pos >= brdp->memsize)
++	if (pos != (unsigned)pos || pos >= brdp->memsize)
+ 		return(0);
+ 
+ 	chbuf = (char *) buf;
+-	size = MIN(count, (brdp->memsize - fp->f_pos));
++	size = MIN(count, (brdp->memsize - pos));
+ 
+ 	save_flags(flags);
+ 	cli();
+ 	EBRDENABLE(brdp);
+ 	while (size > 0) {
+-		memptr = (void *) EBRDGETMEMPTR(brdp, fp->f_pos);
+-		n = MIN(size, (brdp->pagesize - (((unsigned long) fp->f_pos) % brdp->pagesize)));
++		memptr = (void *) EBRDGETMEMPTR(brdp, pos);
++		n = MIN(size, (brdp->pagesize - (((unsigned long) pos) % brdp->pagesize)));
+ 		if (copy_from_user(memptr, chbuf, n)) {
+ 			count = -EFAULT;
+ 			goto out;
+ 		}
+-		fp->f_pos += n;
++		pos += n;
+ 		chbuf += n;
+ 		size -= n;
+ 	}
++	*offp = pos;
+ out:
+ 	EBRDDISABLE(brdp);
+ 	restore_flags(flags);
+diff -urNp linux-8250/drivers/char/mem.c linux-10000/drivers/char/mem.c
+--- linux-8250/drivers/char/mem.c
++++ linux-10000/drivers/char/mem.c
+@@ -66,7 +66,7 @@ static ssize_t do_write_mem(struct file 
+ 	if (copy_from_user(p, buf, count))
+ 		return -EFAULT;
+ 	written += count;
+-	*ppos += written;
++	*ppos = realp + written;
+ 	return written;
+ }
+ 
+@@ -107,7 +107,7 @@ static ssize_t read_mem(struct file * fi
+ 	if (copy_to_user(buf, __va(p), count))
+ 		return -EFAULT;
+ 	read += count;
+-	*ppos += read;
++	*ppos = p + read;
+ 	return read;
+ }
+ 
+diff -urNp linux-8250/drivers/char/nvram.c linux-10000/drivers/char/nvram.c
+--- linux-8250/drivers/char/nvram.c
++++ linux-10000/drivers/char/nvram.c
+@@ -252,9 +252,13 @@ static ssize_t
+ nvram_read(struct file *file, char *buf, size_t count, loff_t *ppos)
+ {
+ 	unsigned char contents[NVRAM_BYTES];
+-	unsigned i = *ppos;
++	loff_t n = *ppos;
++	unsigned i = n;
+ 	unsigned char *tmp;
+ 
++	if (i != n || i >= NVRAM_BYTES)
++		return 0;
++
+ 	spin_lock_irq(&rtc_lock);
+ 
+ 	if (!__nvram_check_checksum())
+@@ -281,10 +285,14 @@ static ssize_t
+ nvram_write(struct file *file, const char *buf, size_t count, loff_t *ppos)
+ {
+ 	unsigned char contents[NVRAM_BYTES];
+-	unsigned i = *ppos;
++	loff_t n = *ppos;
++	unsigned i = n;
+ 	unsigned char *tmp;
+ 	int len;
+ 
++	if (i != n || i >= NVRAM_BYTES)
++		return 0;
++
+ 	len = (NVRAM_BYTES - i) < count ? (NVRAM_BYTES - i) : count;
+ 	if (copy_from_user(contents, buf, len))
+ 		return -EFAULT;
+diff -urNp linux-8250/drivers/char/nwflash.c linux-10000/drivers/char/nwflash.c
+--- linux-8250/drivers/char/nwflash.c
++++ linux-10000/drivers/char/nwflash.c
+@@ -133,7 +133,8 @@ static int flash_ioctl(struct inode *ino
+ 
+ static ssize_t flash_read(struct file *file, char *buf, size_t size, loff_t * ppos)
+ {
+-	unsigned long p = *ppos;
++	loff_t n = *ppos;
++	unsigned long p = n;
+ 	unsigned int count = size;
+ 	int ret = 0;
+ 
+@@ -144,7 +145,7 @@ static ssize_t flash_read(struct file *f
+ 	if (count)
+ 		ret = -ENXIO;
+ 
+-	if (p < gbFlashSize) {
++	if (n == p && p < gbFlashSize) {
+ 		if (count > gbFlashSize - p)
+ 			count = gbFlashSize - p;
+ 
+@@ -157,7 +158,7 @@ static ssize_t flash_read(struct file *f
+ 		ret = copy_to_user(buf, (void *)(FLASH_BASE + p), count);
+ 		if (ret == 0) {
+ 			ret = count;
+-			*ppos += count;
++			*ppos = p + count;
+ 		}
+ 		up(&nwflash_sem);
+ 	}
+@@ -166,7 +167,8 @@ static ssize_t flash_read(struct file *f
+ 
+ static ssize_t flash_write(struct file *file, const char *buf, size_t size, loff_t * ppos)
+ {
+-	unsigned long p = *ppos;
++	loff_t n = *ppos;
++	unsigned long p = n;
+ 	unsigned int count = size;
+ 	int written;
+ 	int nBlock, temp, rc;
+@@ -185,7 +187,7 @@ static ssize_t flash_write(struct file *
+ 	/*
+ 	 * check for out of range pos or count
+ 	 */
+-	if (p >= gbFlashSize)
++	if (p != n || p >= gbFlashSize)
+ 		return count ? -ENXIO : 0;
+ 
+ 	if (count > gbFlashSize - p)
+@@ -274,7 +276,7 @@ static ssize_t flash_write(struct file *
+ 		p += rc;
+ 		buf += rc;
+ 		written += rc;
+-		*ppos += rc;
++		*ppos = p;
+ 
+ 		if (flashdebug)
+ 			printk(KERN_DEBUG "flash_write: written 0x%X bytes OK.\n", written);
+diff -urNp linux-8250/drivers/char/raw.c linux-10000/drivers/char/raw.c
+--- linux-8250/drivers/char/raw.c
++++ linux-10000/drivers/char/raw.c
+@@ -309,6 +309,7 @@ ssize_t	rw_raw_dev(int rw, struct file *
+ 	int		minor;
+ 	kdev_t		dev;
+ 	unsigned long	limit;
++	loff_t		off = *offp;
+ 
+ 	int		sector_size, sector_bits, sector_mask;
+ 	int		max_sectors;
+@@ -319,6 +320,9 @@ ssize_t	rw_raw_dev(int rw, struct file *
+ 
+ 	minor = MINOR(filp->f_dentry->d_inode->i_rdev);
+ 
++	if (off < 0)
++		return -EINVAL;
++
+ 	new_iobuf = 0;
+ 	iobuf = filp->f_iobuf;
+ 	if (test_and_set_bit(0, &filp->f_iobuf_lock)) {
+@@ -338,12 +342,12 @@ ssize_t	rw_raw_dev(int rw, struct file *
+ 		 MAJOR(dev), MINOR(dev), limit);
+ 	
+ 	err = -EINVAL;
+-	if ((*offp & sector_mask) || (size & sector_mask))
++	if ((off & sector_mask) || (size & sector_mask))
+ 		goto out_free;
+ 	err = 0;
+ 	if (size)
+ 		err = -ENXIO;
+-	if ((*offp >> sector_bits) >= limit)
++	if ((off >> sector_bits) >= limit)
+ 		goto out_free;
+ 
+ 	/*
+@@ -353,7 +357,7 @@ ssize_t	rw_raw_dev(int rw, struct file *
+ 	 */
+ 
+ 	transferred = 0;
+-	blocknr = *offp >> sector_bits;
++	blocknr = off >> sector_bits;
+ 	while (size > 0) {
+ 		blocks = size >> sector_bits;
+ 		if (blocks > max_sectors)
+@@ -390,7 +394,7 @@ ssize_t	rw_raw_dev(int rw, struct file *
+ 	}
+ 	
+ 	if (transferred) {
+-		*offp += transferred;
++		*offp = off + transferred;
+ 		err = transferred;
+ 	}
+ 
+diff -Nru linux-8250/drivers/char/tpqic02.c linux-10000/drivers/char/tpqic02.c
+--- linux-8250/drivers/char/tpqic02.c	2004-08-04 06:19:30 -07:00
++++ linux-10000/drivers/char/tpqic02.c	2004-08-04 06:19:30 -07:00
+@@ -1818,6 +1818,7 @@
+ 	kdev_t dev = filp->f_dentry->d_inode->i_rdev;
+ 	unsigned short flags = filp->f_flags;
+ 	unsigned long bytes_todo, bytes_done, total_bytes_done = 0;
++	loff_t pos = *ppos;
+ 	int stat;
+ 
+ 	if (status_zombie == YES) {
+@@ -1898,6 +1899,7 @@
+ 
+ 	/*****************************/
+ 		if (bytes_todo == 0) {
++			*ppos = pos;
+ 			return total_bytes_done;
+ 		}
+ 
+@@ -1966,7 +1968,7 @@
+ 		if (bytes_done > 0) {
+ 			status_bytes_rd = YES;
+ 			buf += bytes_done;
+-			*ppos += bytes_done;
++			pos += bytes_done;
+ 			total_bytes_done += bytes_done;
+ 			count -= bytes_done;
+ 		}
+diff -urNp linux-8250/drivers/char/vc_screen.c linux-10000/drivers/char/vc_screen.c
+--- linux-8250/drivers/char/vc_screen.c
++++ linux-10000/drivers/char/vc_screen.c
+@@ -98,7 +98,8 @@ vcs_read(struct file *file, char *buf, s
+ {
+ 	struct inode *inode = file->f_dentry->d_inode;
+ 	unsigned int currcons = MINOR(inode->i_rdev);
+-	long pos = *ppos;
++	loff_t n = *ppos;
++	unsigned pos = n;
+ 	long viewed, attr, read;
+ 	int col, maxcol;
+ 	unsigned short *org = NULL;
+@@ -124,11 +125,10 @@ vcs_read(struct file *file, char *buf, s
+ 	if (!vc_cons_allocated(currcons))
+ 		goto unlock_out;
+ 
+-	ret = -EINVAL;
+-	if (pos < 0)
+-		goto unlock_out;
+ 	read = 0;
+ 	ret = 0;
++	if (pos != n)
++		goto unlock_out;
+ 	while (count) {
+ 		char *con_buf0, *con_buf_start;
+ 		long this_round, size;
+@@ -244,16 +244,15 @@ vcs_read(struct file *file, char *buf, s
+ 		acquire_console_sem();
+ 
+ 		if (ret) {
+-			read += (orig_count - ret);
+ 			ret = -EFAULT;
+-			break;
++			goto unlock_out;
+ 		}
+ 		buf += orig_count;
+ 		pos += orig_count;
+ 		read += orig_count;
+ 		count -= orig_count;
+ 	}
+-	*ppos += read;
++	*ppos = pos;
+ 	if (read)
+ 		ret = read;
+ unlock_out:
+@@ -267,7 +266,8 @@ vcs_write(struct file *file, const char 
+ {
+ 	struct inode *inode = file->f_dentry->d_inode;
+ 	unsigned int currcons = MINOR(inode->i_rdev);
+-	long pos = *ppos;
++	loff_t n = *ppos;
++	unsigned pos = n;
+ 	long viewed, attr, size, written;
+ 	char *con_buf0;
+ 	int col, maxcol;
+@@ -297,7 +297,7 @@ vcs_write(struct file *file, const char 
+ 
+ 	size = vcs_size(inode);
+ 	ret = -EINVAL;
+-	if (pos < 0 || pos > size)
++	if (pos != n || pos > size)
+ 		goto unlock_out;
+ 	if (count > size - pos)
+ 		count = size - pos;
+@@ -435,7 +435,7 @@ vcs_write(struct file *file, const char 
+ 		if (org0)
+ 			update_region(currcons, (unsigned long)(org0), org-org0);
+ 	}
+-	*ppos += written;
++	*ppos = pos;
+ 	ret = written;
+ 
+ unlock_out:
+diff -urNp linux-8250/drivers/gsc/eisa_eeprom.c linux-10000/drivers/gsc/eisa_eeprom.c
+--- linux-8250/drivers/gsc/eisa_eeprom.c
++++ linux-10000/drivers/gsc/eisa_eeprom.c
+@@ -33,21 +33,27 @@ static ssize_t eisa_eeprom_read(struct f
+ {
+ 	unsigned char *tmp;
+ 	ssize_t ret;
++	loff_t n = *ppos;
++	unsigned pos = n;
+ 	int i;
+ 	
+-	if (*ppos >= HPEE_MAX_LENGTH)
++	if (pos != n || pos >= HPEE_MAX_LENGTH)
+ 		return 0;
+ 	
+-	count = *ppos + count < HPEE_MAX_LENGTH ? count : HPEE_MAX_LENGTH - *ppos;
++	if (count > HPEE_MAX_LENGTH - pos)
++		count = HPEE_MAX_LENGTH - pos;
++
+ 	tmp = kmalloc(count, GFP_KERNEL);
+ 	if (tmp) {
+ 		for (i = 0; i < count; i++)
+-			tmp[i] = gsc_readb(eeprom_addr+(*ppos)++);
++			tmp[i] = gsc_readb(eeprom_addr+pos++);
+ 
+ 		if (copy_to_user (buf, tmp, count))
+ 			ret = -EFAULT;
+-		else
++		else {
+ 			ret = count;
++			*ppos = pos;
++		}
+ 		kfree (tmp);
+ 	} else
+ 		ret = -ENOMEM;
+diff -urNp linux-8250/drivers/hotplug/pci_hotplug_core.c linux-10000/drivers/hotplug/pci_hotplug_core.c
+--- linux-8250/drivers/hotplug/pci_hotplug_core.c
++++ linux-10000/drivers/hotplug/pci_hotplug_core.c
+@@ -604,7 +604,7 @@ static ssize_t power_read_file (struct f
+ 		retval = -EFAULT;
+ 		goto exit;
+ 	}
+-	*offset += len;
++	*offset = len;
+ 	retval = len;
+ 
+ exit:
+@@ -715,7 +715,7 @@ static ssize_t attention_read_file (stru
+ 		retval = -EFAULT;
+ 		goto exit;
+ 	}
+-	*offset += len;
++	*offset = len;
+ 	retval = len;
+ 
+ exit:
+@@ -780,14 +780,15 @@ static ssize_t latch_read_file (struct f
+ 	int retval;
+ 	int len;
+ 	u8 value;
++	loff_t off = *offset;
+ 
+-	dbg("count = %d, offset = %lld\n", count, *offset);
++	dbg("count = %d, offset = %lld\n", count, off);
+ 
+-	if (*offset < 0)
++	if (off < 0)
+ 		return -EINVAL;
+ 	if (count <= 0)
+ 		return 0;
+-	if (*offset != 0)
++	if (off != 0)
+ 		return 0;
+ 
+ 	if (slot == NULL) {
+@@ -808,7 +809,7 @@ static ssize_t latch_read_file (struct f
+ 		retval = -EFAULT;
+ 		goto exit;
+ 	}
+-	*offset += len;
++	*offset = off + len;
+ 	retval = len;
+ 
+ exit:
+@@ -823,14 +824,15 @@ static ssize_t presence_read_file (struc
+ 	int retval;
+ 	int len;
+ 	u8 value;
++	loff_t off = *offset;
+ 
+-	dbg("count = %d, offset = %lld\n", count, *offset);
++	dbg("count = %d, offset = %lld\n", count, off);
+ 
+-	if (*offset < 0)
++	if (off < 0)
+ 		return -EINVAL;
+ 	if (count <= 0)
+ 		return 0;
+-	if (*offset != 0)
++	if (off != 0)
+ 		return 0;
+ 
+ 	if (slot == NULL) {
+@@ -851,7 +853,7 @@ static ssize_t presence_read_file (struc
+ 		retval = -EFAULT;
+ 		goto exit;
+ 	}
+-	*offset += len;
++	*offset = off + len;
+ 	retval = len;
+ 
+ exit:
+@@ -869,14 +871,15 @@ static ssize_t max_bus_speed_read_file (
+ 	int retval;
+ 	int len = 0;
+ 	enum pci_bus_speed value;
++	loff_t off = *offset;
+ 	
+-	dbg ("count = %d, offset = %lld\n", count, *offset);
++	dbg ("count = %d, offset = %lld\n", count, off);
+ 
+-	if (*offset < 0)
++	if (off < 0)
+ 		return -EINVAL;
+ 	if (count <= 0)
+ 		return 0;
+-	if (*offset != 0)
++	if (off != 0)
+ 		return 0;
+ 
+ 	if (slot == NULL) {
+@@ -903,7 +906,7 @@ static ssize_t max_bus_speed_read_file (
+ 		retval = -EFAULT;
+ 		goto exit;
+ 	}
+-	*offset += len;
++	*offset = off + len;
+ 	retval = len;
+ 
+ exit:
+@@ -919,14 +922,15 @@ static ssize_t cur_bus_speed_read_file (
+ 	int retval;
+ 	int len = 0;
+ 	enum pci_bus_speed value;
++	loff_t off = *offset;
+ 
+-	dbg ("count = %d, offset = %lld\n", count, *offset);
++	dbg ("count = %d, offset = %lld\n", count, off);
+ 
+-	if (*offset < 0)
++	if (off < 0)
+ 		return -EINVAL;
+ 	if (count <= 0)
+ 		return 0;
+-	if (*offset != 0)
++	if (off != 0)
+ 		return 0;
+ 
+ 	if (slot == NULL) {
+@@ -953,7 +957,7 @@ static ssize_t cur_bus_speed_read_file (
+ 		retval = -EFAULT;
+ 		goto exit;
+ 	}
+-	*offset += len;
++	*offset = off + len;
+ 	retval = len;
+ 
+ exit:
+diff -urNp linux-8250/drivers/ieee1394/pcilynx.c linux-10000/drivers/ieee1394/pcilynx.c
+--- linux-8250/drivers/ieee1394/pcilynx.c
++++ linux-10000/drivers/ieee1394/pcilynx.c
+@@ -1064,12 +1064,14 @@ static ssize_t mem_read(struct file *fil
+         ssize_t retval;
+         void *membase;
+ 
+-        if ((off + count) > PCILYNX_MAX_MEMORY+1) {
+-                count = PCILYNX_MAX_MEMORY+1 - off;
+-        }
+-        if (count == 0 || off > PCILYNX_MAX_MEMORY) {
++	if (!count)
++		return 0;
++	if (off < 0)
++		return -EINVAL;
++	if (off > PCILYNX_MAX_MEMORY)
+                 return -ENOSPC;
+-        }
++        if (count > PCILYNX_MAX_MEMORY + 1 - off)
++                count = PCILYNX_MAX_MEMORY + 1 - off;
+ 
+         switch (md->type) {
+         case rom:
+@@ -1090,6 +1092,7 @@ static ssize_t mem_read(struct file *fil
+ 
+         if (count < mem_mindma) {
+                 memcpy_fromio(md->lynx->mem_dma_buffer, membase+off, count);
++                off += count;
+                 goto out;
+         }
+ 
+@@ -1128,7 +1128,7 @@ static ssize_t mem_read(struct file *fil
+         up(&md->lynx->mem_dma_mutex);
+ 
+ 	if (retval) return -EFAULT;
+-        *offset += count;
++        *offset = off;
+         return count;
+ }
+ 
+@@ -1137,32 +1137,36 @@ static ssize_t mem_write(struct file *fi
+                          loff_t *offset)
+ {
+         struct memdata *md = (struct memdata *)file->private_data;
++        loff_t off = *offset;
+ 
+-        if (((*offset) + count) > PCILYNX_MAX_MEMORY+1) {
+-                count = PCILYNX_MAX_MEMORY+1 - *offset;
+-        }
+-        if (count == 0 || *offset > PCILYNX_MAX_MEMORY) {
+-                return -ENOSPC;
+-        }
++	if (!count)
++		return 0;
++	if (off < 0)
++		return -EINVAL;
++	if (off > PCILYNX_MAX_MEMORY)
++		return -ENOSPC;
++
++	if (count > PCILYNX_MAX_MEMORY + 1 - off)
++		count = PCILYNX_MAX_MEMORY + 1 - off;
+ 
+         /* FIXME: dereferencing pointers to PCI mem doesn't work everywhere */
+         switch (md->type) {
+         case aux:
+-		if (copy_from_user(md->lynx->aux_port+(*offset), buffer, count))
++		if (copy_from_user(md->lynx->aux_port+off, buffer, count))
+ 			return -EFAULT;
+                 break;
+         case ram:
+-		if (copy_from_user(md->lynx->local_ram+(*offset), buffer, count))
++		if (copy_from_user(md->lynx->local_ram+off, buffer, count))
+ 			return -EFAULT;
+                 break;
+         case rom:
+                 /* the ROM may be writeable */
+-		if (copy_from_user(md->lynx->local_rom+(*offset), buffer, count))
++		if (copy_from_user(md->lynx->local_rom+off, buffer, count))
+ 			return -EFAULT;
+                 break;
+         }
+ 
+-        file->f_pos += count;
++        *offset = off + count;
+         return count;
+ }
+ #endif /* CONFIG_IEEE1394_PCILYNX_PORTS */
+diff -urNp linux-8250/drivers/isdn/divert/divert_procfs.c linux-10000/drivers/isdn/divert/divert_procfs.c
+--- linux-8250/drivers/isdn/divert/divert_procfs.c
++++ linux-10000/drivers/isdn/divert/divert_procfs.c
+@@ -80,6 +80,7 @@ static ssize_t
+ isdn_divert_read(struct file *file, char *buf, size_t count, loff_t * off)
+ {
+ 	struct divert_info *inf;
++	loff_t pos = *off;
+ 	int len;
+ 
+ 	if (!*((struct divert_info **) file->private_data)) {
+@@ -95,7 +96,7 @@ isdn_divert_read(struct file *file, char
+ 	if ((len = strlen(inf->info_start)) <= count) {
+ 		if (copy_to_user(buf, inf->info_start, len))
+ 			return -EFAULT;
+-		file->f_pos += len;
++		*off = pos + len;
+ 		return (len);
+ 	}
+ 	return (0);
+diff -urNp linux-8250/drivers/isdn/hysdn/hysdn_procconf.c linux-10000/drivers/isdn/hysdn/hysdn_procconf.c
+--- linux-8250/drivers/isdn/hysdn/hysdn_procconf.c
++++ linux-10000/drivers/isdn/hysdn/hysdn_procconf.c
+@@ -212,29 +212,27 @@ hysdn_conf_write(struct file *file, cons
+ static ssize_t
+ hysdn_conf_read(struct file *file, char *buf, size_t count, loff_t * off)
+ {
++	loff_t pos = *off;
+ 	char *cp;
+ 	int i;
+ 
+ 	if (off != &file->f_pos)	/* fs error check */
+ 		return -ESPIPE;
+ 
+-	if (file->f_mode & FMODE_READ) {
+-		if (!(cp = file->private_data))
+-			return (-EFAULT);	/* should never happen */
+-		i = strlen(cp);	/* get total string length */
+-		if (*off < i) {
+-			/* still bytes to transfer */
+-			cp += *off;	/* point to desired data offset */
+-			i -= *off;	/* remaining length */
+-			if (i > count)
+-				i = count;	/* limit length to transfer */
+-			if (copy_to_user(buf, cp, i))
+-				return (-EFAULT);	/* copy error */
+-			*off += i;	/* adjust offset */
+-		} else
+-			return (0);
++	if (!(cp = file->private_data))
++		return (-EFAULT);	/* should never happen */
++	i = strlen(cp);	/* get total string length */
++	if (pos == (unsigned)pos && pos < i) {
++		/* still bytes to transfer */
++		cp += pos;	/* point to desired data offset */
++		i -= pos;	/* remaining length */
++		if (i > count)
++			i = count;	/* limit length to transfer */
++		if (copy_to_user(buf, cp, i))
++			return (-EFAULT);	/* copy error */
++		*off = pos + i;	/* adjust offset */
+ 	} else
+-		return (-EPERM);	/* no permission to read */
++		return (0);
+ 
+ 	return (i);
+ }				/* hysdn_conf_read */
+diff -urNp linux-8250/drivers/isdn/hysdn/hysdn_proclog.c linux-10000/drivers/isdn/hysdn/hysdn_proclog.c
+--- linux-8250/drivers/isdn/hysdn/hysdn_proclog.c
++++ linux-10000/drivers/isdn/hysdn/hysdn_proclog.c
+@@ -210,6 +210,7 @@ hysdn_log_read(struct file *file, char *
+ 	word ino;
+ 	struct procdata *pd = NULL;
+ 	hysdn_card *card;
++	loff_t pos = *off;
+ 
+ 	if (!*((struct log_data **) file->private_data)) {
+ 		if (file->f_flags & O_NONBLOCK)
+@@ -238,7 +239,7 @@ hysdn_log_read(struct file *file, char *
+ 	if ((len = strlen(inf->log_start)) <= count) {
+ 		if (copy_to_user(buf, inf->log_start, len))
+ 			return -EFAULT;
+-		file->f_pos += len;
++		*off = pos + len;
+ 		return (len);
+ 	}
+ 	return (0);
+diff -Nru linux-8250/drivers/isdn/isdn_common.c linux-10000/drivers/isdn/isdn_common.c
+--- linux-8250/drivers/isdn/isdn_common.c	2004-08-04 06:19:29 -07:00
++++ linux-10000/drivers/isdn/isdn_common.c	2004-08-04 06:19:29 -07:00
+@@ -976,10 +976,14 @@
+ 	int chidx;
+ 	int retval;
+ 	char *p;
++	loff_t pos = *off;
+ 
+ 	if (off != &file->f_pos)
+ 		return -ESPIPE;
+ 
++	if (pos != (unsigned) pos)
++		return -EINVAL;
++
+ 	lock_kernel();
+ 	if (minor == ISDN_MINOR_STATUS) {
+ 		if (!file->private_data) {
+@@ -996,7 +1000,7 @@
+ 				retval = -EFAULT;
+ 				goto out;
+ 			}
+-			*off += len;
++			*off = pos + len;
+ 			retval = len;
+ 			goto out;
+ 		}
+@@ -1027,7 +1031,7 @@
+ 		cli();
+ 		len = isdn_readbchan(drvidx, chidx, p, 0, count,
+ 				     &dev->drv[drvidx]->rcv_waitq[chidx]);
+-		*off += len;
++		*off = pos + len;
+ 		restore_flags(flags);
+ 		if (copy_to_user(buf,p,len)) 
+ 			len = -EFAULT;
+@@ -1064,7 +1068,7 @@
+ 		else
+ 			dev->drv[drvidx]->stavail = 0;
+ 		restore_flags(flags);
+-		*off += len;
++		*off = pos + len;
+ 		retval = len;
+ 		goto out;
+ 	}
+diff -urNp linux-8250/drivers/macintosh/ans-lcd.c linux-10000/drivers/macintosh/ans-lcd.c
+--- linux-8250/drivers/macintosh/ans-lcd.c
++++ linux-10000/drivers/macintosh/ans-lcd.c
+@@ -61,13 +61,13 @@ anslcd_write( struct file * file, const 
+ 
+ 	if ( verify_area(VERIFY_READ, buf, count) )
+ 		return -EFAULT;
+-	for ( i = *ppos; count > 0; ++i, ++p, --count ) 
+-	{
++	while (count--) {
+ 		char c;
+-		__get_user(c, p);
++		if (__get_user(c, p++))
++			return -EFAULT;
+ 		anslcd_write_byte_data( c );
+ 	}
+-	*ppos = i;
++	*ppos += p - buf;
+ 	return p - buf;
+ }
+ 
+diff -urNp linux-8250/drivers/macintosh/nvram.c linux-10000/drivers/macintosh/nvram.c
+--- linux-8250/drivers/macintosh/nvram.c
++++ linux-10000/drivers/macintosh/nvram.c
+@@ -37,14 +37,15 @@ static loff_t nvram_llseek(struct file *
+ static ssize_t read_nvram(struct file *file, char *buf,
+ 			  size_t count, loff_t *ppos)
+ {
+-	unsigned int i;
++	loff_t n = *ppos;
++	unsigned int i = n;
+ 	char *p = buf;
+ 
+ 	if (verify_area(VERIFY_WRITE, buf, count))
+ 		return -EFAULT;
+-	if (*ppos >= NVRAM_SIZE)
++	if (i != n || i >= NVRAM_SIZE)
+ 		return 0;
+-	for (i = *ppos; count > 0 && i < NVRAM_SIZE; ++i, ++p, --count)
++	for (; count > 0 && i < NVRAM_SIZE; ++i, ++p, --count)
+ 		if (__put_user(nvram_read_byte(i), p))
+ 			return -EFAULT;
+ 	*ppos = i;
+@@ -54,15 +55,16 @@ static ssize_t read_nvram(struct file *f
+ static ssize_t write_nvram(struct file *file, const char *buf,
+ 			   size_t count, loff_t *ppos)
+ {
+-	unsigned int i;
++	loff_t n = *ppos;
++	unsigned int i = n;
+ 	const char *p = buf;
+ 	char c;
+ 
+ 	if (verify_area(VERIFY_READ, buf, count))
+ 		return -EFAULT;
+-	if (*ppos >= NVRAM_SIZE)
++	if (i != n || i >= NVRAM_SIZE)
+ 		return 0;
+-	for (i = *ppos; count > 0 && i < NVRAM_SIZE; ++i, ++p, --count) {
++	for (; count > 0 && i < NVRAM_SIZE; ++i, ++p, --count) {
+ 		if (__get_user(c, p))
+ 			return -EFAULT;
+ 		nvram_write_byte(c, i);
+diff -urNp linux-8250/drivers/mtd/mtdchar.c linux-10000/drivers/mtd/mtdchar.c
+--- linux-8250/drivers/mtd/mtdchar.c
++++ linux-10000/drivers/mtd/mtdchar.c
+@@ -125,11 +125,16 @@ static ssize_t mtd_read(struct file *fil
+ 	int ret=0;
+ 	int len;
+ 	char *kbuf;
++	loff_t n = *ppos;
++	unsigned long pos = n;
+ 	
+ 	DEBUG(MTD_DEBUG_LEVEL0,"MTD_read\n");
+ 
+-	if (*ppos + count > mtd->size)
+-		count = mtd->size - *ppos;
++	if (n != pos || pos > mtd->size)
++		return 0;
++
++	if (count > mtd->size - pos)
++		count = mtd->size - pos;
+ 
+ 	if (!count)
+ 		return 0;
+@@ -146,9 +151,9 @@ static ssize_t mtd_read(struct file *fil
+ 		if (!kbuf)
+ 			return -ENOMEM;
+ 		
+-		ret = MTD_READ(mtd, *ppos, len, &retlen, kbuf);
++		ret = MTD_READ(mtd, pos, len, &retlen, kbuf);
+ 		if (!ret) {
+-			*ppos += retlen;
++			pos += retlen;
+ 			if (copy_to_user(buf, kbuf, retlen)) {
+ 			        kfree(kbuf);
+ 				return -EFAULT;
+@@ -166,6 +171,7 @@ static ssize_t mtd_read(struct file *fil
+ 		
+ 		kfree(kbuf);
+ 	}
++	*ppos = pos;
+ 	
+ 	return total_retlen;
+ } /* mtd_read */
+@@ -176,16 +182,18 @@ static ssize_t mtd_write(struct file *fi
+ 	char *kbuf;
+ 	size_t retlen;
+ 	size_t total_retlen=0;
++	loff_t n = *ppos;
++	unsigned long pos = n;
+ 	int ret=0;
+ 	int len;
+ 
+ 	DEBUG(MTD_DEBUG_LEVEL0,"MTD_write\n");
+ 	
+-	if (*ppos == mtd->size)
++	if (n != pos || pos >= mtd->size)
+ 		return -ENOSPC;
+ 	
+-	if (*ppos + count > mtd->size)
+-		count = mtd->size - *ppos;
++	if (count > mtd->size - pos)
++		count = mtd->size - pos;
+ 
+ 	if (!count)
+ 		return 0;
+@@ -207,9 +215,9 @@ static ssize_t mtd_write(struct file *fi
+ 			return -EFAULT;
+ 		}
+ 		
+-	        ret = (*(mtd->write))(mtd, *ppos, len, &retlen, kbuf);
++	        ret = (*(mtd->write))(mtd, pos, len, &retlen, kbuf);
+ 		if (!ret) {
+-			*ppos += retlen;
++			pos += retlen;
+ 			total_retlen += retlen;
+ 			count -= retlen;
+ 			buf += retlen;
+@@ -221,6 +229,7 @@ static ssize_t mtd_write(struct file *fi
+ 		
+ 		kfree(kbuf);
+ 	}
++	*ppos = pos;
+ 
+ 	return total_retlen;
+ } /* mtd_write */
+diff -urNp linux-8250/drivers/pci/proc.c linux-10000/drivers/pci/proc.c
+--- linux-8250/drivers/pci/proc.c
++++ linux-10000/drivers/pci/proc.c
+@@ -47,7 +47,8 @@ proc_bus_pci_read(struct file *file, cha
+ 	const struct inode *ino = file->f_dentry->d_inode;
+ 	const struct proc_dir_entry *dp = ino->u.generic_ip;
+ 	struct pci_dev *dev = dp->data;
+-	unsigned int pos = *ppos;
++	loff_t n = *ppos;
++	unsigned pos = n;
+ 	unsigned int cnt, size;
+ 
+ 	/*
+@@ -63,7 +64,7 @@ proc_bus_pci_read(struct file *file, cha
+ 	else
+ 		size = 64;
+ 
+-	if (pos >= size)
++	if (pos != n || pos >= size)
+ 		return 0;
+ 	if (nbytes >= size)
+ 		nbytes = size;
+@@ -129,14 +130,13 @@ proc_bus_pci_write(struct file *file, co
+ 	const struct inode *ino = file->f_dentry->d_inode;
+ 	const struct proc_dir_entry *dp = ino->u.generic_ip;
+ 	struct pci_dev *dev = dp->data;
+-	int pos = *ppos;
++	loff_t n = *ppos;
++	unsigned pos = n;
+ 	int cnt;
+ 
+-	if (pos >= PCI_CFG_SPACE_SIZE)
++	if (pos != n || pos >= PCI_CFG_SPACE_SIZE)
+ 		return 0;
+-	if (nbytes >= PCI_CFG_SPACE_SIZE)
+-		nbytes = PCI_CFG_SPACE_SIZE;
+-	if (pos + nbytes > PCI_CFG_SPACE_SIZE)
++	if (nbytes > PCI_CFG_SPACE_SIZE - pos)
+ 		nbytes = PCI_CFG_SPACE_SIZE - pos;
+ 	cnt = nbytes;
+ 
+diff -urNp linux-8250/drivers/pnp/isapnp_proc.c linux-10000/drivers/pnp/isapnp_proc.c
+--- linux-8250/drivers/pnp/isapnp_proc.c
++++ linux-10000/drivers/pnp/isapnp_proc.c
+@@ -102,6 +102,7 @@ static ssize_t isapnp_info_entry_read(st
+ 				      size_t count, loff_t * offset)
+ {
+ 	isapnp_info_buffer_t *buf;
++	loff_t pos = *offset;
+ 	long size = 0, size1;
+ 	int mode;
+ 
+@@ -111,15 +112,15 @@ static ssize_t isapnp_info_entry_read(st
+ 	buf = (isapnp_info_buffer_t *) file->private_data;
+ 	if (!buf)
+ 		return -EIO;
+-	if (file->f_pos >= buf->size)
++	if (pos != (unsigned)pos || pos >= buf->size)
+ 		return 0;
+ 	size = buf->size < count ? buf->size : count;
+-	size1 = buf->size - file->f_pos;
++	size1 = buf->size - pos;
+ 	if (size1 < size)
+ 		size = size1;
+-	if (copy_to_user(buffer, buf->buffer + file->f_pos, size))
++	if (copy_to_user(buffer, buf->buffer + pos, size))
+ 		return -EFAULT;
+-	file->f_pos += size;
++	*offset = pos + size;
+ 	return size;
+ }
+ 
+@@ -128,6 +129,7 @@ static ssize_t isapnp_info_entry_write(s
+ {
+ 	isapnp_info_buffer_t *buf;
+ 	long size = 0, size1;
++	loff_t pos = *offset;
+ 	int mode;
+ 
+ 	mode = file->f_flags & O_ACCMODE;
+@@ -136,19 +138,19 @@ static ssize_t isapnp_info_entry_write(s
+ 	buf = (isapnp_info_buffer_t *) file->private_data;
+ 	if (!buf)
+ 		return -EIO;
+-	if (file->f_pos < 0)
++	if (pos < 0)
+ 		return -EINVAL;
+-	if (file->f_pos >= buf->len)
++	if (pos >= buf->len)
+ 		return -ENOMEM;
+ 	size = buf->len < count ? buf->len : count;
+-	size1 = buf->len - file->f_pos;
++	size1 = buf->len - pos;
+ 	if (size1 < size)
+ 		size = size1;
+-	if (copy_from_user(buf->buffer + file->f_pos, buffer, size))
++	if (copy_from_user(buf->buffer + pos, buffer, size))
+ 		return -EFAULT;
+-	if (buf->size < file->f_pos + size)
+-		buf->size = file->f_pos + size;
+-	file->f_pos += size;
++	if (buf->size < pos + size)
++		buf->size = pos + size;
++	*offset = pos + size;
+ 	return size;
+ }
+ 
+@@ -240,14 +242,13 @@ static ssize_t isapnp_proc_bus_read(stru
+ 	struct inode *ino = file->f_dentry->d_inode;
+ 	struct proc_dir_entry *dp = ino->u.generic_ip;
+ 	struct pci_dev *dev = dp->data;
+-	int pos = *ppos;
++	loff_t n = *ppos;
++	unsigned pos = n;
+ 	int cnt, size = 256;
+ 
+-	if (pos >= size)
++	if (pos != n || pos >= size)
+ 		return 0;
+-	if (nbytes >= size)
+-		nbytes = size;
+-	if (pos + nbytes > size)
++	if (nbytes > size - pos)
+ 		nbytes = size - pos;
+ 	cnt = nbytes;
+ 
+diff -urNp linux-8250/drivers/s390/block/dasd.c linux-10000/drivers/s390/block/dasd.c
+--- linux-8250/drivers/s390/block/dasd.c
++++ linux-10000/drivers/s390/block/dasd.c
+@@ -4676,15 +4676,17 @@ dasd_generic_read (struct file *file, ch
+ 		   loff_t * offset)
+ {
+ 	loff_t len;
++	loff_t n = *offset;
++	unsigned pos = n;
+ 	tempinfo_t *p_info = (tempinfo_t *) file->private_data;
+ 
+-	if (*offset >= p_info->len) {
++	if (n != pos || pos >= p_info->len) {
+ 		return 0;	/* EOF */
+ 	} else {
+-		len = MIN (user_len, (p_info->len - *offset));
+-		if (copy_to_user (user_buf, &(p_info->data[*offset]), len))
++		len = MIN (user_len, (p_info->len - pos));
++		if (copy_to_user (user_buf, &(p_info->data[pos]), len))
+ 			return -EFAULT;
+-		(*offset) += len;
++		*offset = pos + len;
+ 		return len;	/* number of bytes "read" */
+ 	}
+ }
+diff -urNp linux-8250/drivers/s390/char/tapechar.c linux-10000/drivers/s390/char/tapechar.c
+--- linux-8250/drivers/s390/char/tapechar.c
++++ linux-10000/drivers/s390/char/tapechar.c
+@@ -161,6 +161,7 @@
+ 	size_t block_size;
+ 	ccw_req_t *cqr;
+ 	int rc;
++	loff_t pos = *ppos;
+ #ifdef TAPE_DEBUG
+         debug_text_event (tape_debug_area,6,"c:read");
+ #endif /* TAPE_DEBUG */
+@@ -230,7 +231,7 @@
+ 	debug_text_event (tape_debug_area,6,"c:rbytes:");
+ 	debug_int_event (tape_debug_area,6,block_size - ti->devstat.rescnt);
+ #endif	/* TAPE_DEBUG */
+-	filp->f_pos += block_size - ti->devstat.rescnt;
++	*ppos = pos + (block_size - ti->devstat.rescnt);
+ 	return block_size - ti->devstat.rescnt;
+ }
+ 
+@@ -246,6 +247,8 @@
+ 	ccw_req_t *cqr;
+ 	int nblocks, i, rc;
+ 	size_t written = 0;
++	loff_t pos = *ppos;
++
+ #ifdef TAPE_DEBUG
+ 	debug_text_event (tape_debug_area,6,"c:write");
+ #endif
+@@ -318,15 +321,17 @@
+ 	        debug_text_event (tape_debug_area,6,"c:wbytes:"); 
+ 		debug_int_event (tape_debug_area,6,block_size - ti->devstat.rescnt);
+ #endif
+-		filp->f_pos += block_size - ti->devstat.rescnt;
+ 		written += block_size - ti->devstat.rescnt;
+-		if (ti->devstat.rescnt > 0)
++		if (ti->devstat.rescnt > 0) {
++			*ppos = pos + written;
+ 			return written;
++		}
+ 	}
+ #ifdef TAPE_DEBUG
+ 	debug_text_event (tape_debug_area,6,"c:wtotal:");
+ 	debug_int_event (tape_debug_area,6,written);
+ #endif
++	*ppos = pos + written;
+ 	return written;
+ }
+ 
+diff -urNp linux-8250/drivers/s390/net/ctcmain.c linux-10000/drivers/s390/net/ctcmain.c
+--- linux-8250/drivers/s390/net/ctcmain.c
++++ linux-10000/drivers/s390/net/ctcmain.c
+@@ -2899,6 +2899,7 @@ static int ctc_ctrl_open(struct inode *i
+ 	file->private_data = kmalloc(CTRL_BUFSIZE, GFP_KERNEL);
+ 	if (file->private_data == NULL)
+ 		return -ENOMEM;
++	*(char *)file->private_data = '\0';
+ 	MOD_INC_USE_COUNT;
+ 	return 0;
+ }
+@@ -2964,6 +2965,7 @@ static ssize_t ctc_ctrl_read(struct file
+ 	ctc_priv *privptr;
+ 	ssize_t ret = 0;
+ 	char *p = sbuf;
++	loff_t pos = *off;
+ 	int l;
+ 
+ 	if (!(dev = find_netdev_by_ino(ino)))
+@@ -2973,19 +2975,19 @@ static ssize_t ctc_ctrl_read(struct file
+ 
+ 	privptr = (ctc_priv *)dev->priv;
+ 
+-	if (file->f_pos == 0)
++	if (!*sbuf || pos == 0)
+ 		sprintf(sbuf, "%d\n", privptr->channel[READ]->max_bufsize);
+ 
+ 	l = strlen(sbuf);
+ 	p = sbuf;
+-	if (file->f_pos < l) {
+-		p += file->f_pos;
++	if (pos == (unsigned)pos && pos < l) {
++		p += pos;
+ 		l = strlen(p);
+ 		ret = (count > l) ? l : count;
+ 		if (copy_to_user(buf, p, ret))
+ 			return -EFAULT;
++		*off = pos + ret;
+ 	}
+-	file->f_pos += ret;
+ 	return ret;
+ }
+ 
+@@ -2996,6 +2998,7 @@ static int ctc_stat_open(struct inode *i
+ 	file->private_data = kmalloc(STATS_BUFSIZE, GFP_KERNEL);
+ 	if (file->private_data == NULL)
+ 		return -ENOMEM;
++	*(char *)file->private_data = '\0';
+ 	MOD_INC_USE_COUNT;
+ 	return 0;
+ }
+@@ -3035,6 +3038,7 @@ static ssize_t ctc_stat_read(struct file
+ 	ctc_priv *privptr;
+ 	ssize_t ret = 0;
+ 	char *p = sbuf;
++	loff_t pos = *off;
+ 	int l;
+ 
+ 	if (!(dev = find_netdev_by_ino(ino)))
+@@ -3044,7 +3048,7 @@ static ssize_t ctc_stat_read(struct file
+ 
+ 	privptr = (ctc_priv *)dev->priv;
+ 
+-	if (file->f_pos == 0) {
++	if (!*sbuf || pos == 0) {
+ 		p += sprintf(p, "Device FSM state: %s\n",
+ 			     fsm_getstate_str(privptr->fsm));
+ 		p += sprintf(p, "RX channel FSM state: %s\n",
+@@ -3066,14 +3070,14 @@ static ssize_t ctc_stat_read(struct file
+ 	}
+ 	l = strlen(sbuf);
+ 	p = sbuf;
+-	if (file->f_pos < l) {
+-		p += file->f_pos;
++	if (pos == (unsigned)pos && pos < l) {
++		p += pos;
+ 		l = strlen(p);
+ 		ret = (count > l) ? l : count;
+ 		if (copy_to_user(buf, p, ret))
+ 			return -EFAULT;
++		*off = pos + ret;
+ 	}
+-	file->f_pos += ret;
+ 	return ret;
+ }
+ 
+diff -urNp linux-8250/drivers/s390/net/netiucv.c linux-10000/drivers/s390/net/netiucv.c
+--- linux-8250/drivers/s390/net/netiucv.c
++++ linux-10000/drivers/s390/net/netiucv.c
+@@ -1366,6 +1366,7 @@ netiucv_buffer_open(struct inode *inode,
+ 	file->private_data = kmalloc(CTRL_BUFSIZE, GFP_KERNEL);
+ 	if (file->private_data == NULL)
+ 		return -ENOMEM;
++	*(char *)file->private_data = '\0';
+ 	MOD_INC_USE_COUNT;
+ 	return 0;
+ }
+@@ -1431,6 +1432,7 @@ netiucv_buffer_read(struct file *file, c
+ 	netiucv_priv *privptr;
+ 	ssize_t ret = 0;
+ 	char *p = sbuf;
++	loff_t pos = *off;
+ 	int l;
+ 
+ 	if (!(dev = find_netdev_by_ino(ino)))
+@@ -1440,19 +1442,20 @@ netiucv_buffer_read(struct file *file, c
+ 
+ 	privptr = (netiucv_priv *)dev->priv;
+ 
+-	if (file->f_pos == 0)
++	if (!*sbuf || pos == 0)
+ 		sprintf(sbuf, "%d\n", privptr->conn->max_buffsize);
+ 
+ 	l = strlen(sbuf);
+ 	p = sbuf;
+-	if (file->f_pos < l) {
+-		p += file->f_pos;
++	if (pos == (unsigned)pos && pos < l) {
++		p += pos;
+ 		l = strlen(p);
+ 		ret = (count > l) ? l : count;
+ 		if (copy_to_user(buf, p, ret))
+ 			return -EFAULT;
+ 	}
+-	file->f_pos += ret;
++	pos += ret;
++	*off = pos;
+ 	return ret;
+ }
+ 
+@@ -1462,6 +1465,7 @@ netiucv_user_open(struct inode *inode, s
+ 	file->private_data = kmalloc(CTRL_BUFSIZE, GFP_KERNEL);
+ 	if (file->private_data == NULL)
+ 		return -ENOMEM;
++	*(char *)file->private_data = '\0';
+ 	MOD_INC_USE_COUNT;
+ 	return 0;
+ }
+@@ -1526,6 +1530,7 @@ netiucv_user_read(struct file *file, cha
+ 	netiucv_priv *privptr;
+ 	ssize_t ret = 0;
+ 	char *p = sbuf;
++	loff_t pos = *off;
+ 	int l;
+ 
+ 	if (!(dev = find_netdev_by_ino(ino)))
+@@ -1536,20 +1541,20 @@ netiucv_user_read(struct file *file, cha
+ 	privptr = (netiucv_priv *)dev->priv;
+ 
+ 
+-	if (file->f_pos == 0)
++	if (!*sbuf || pos == 0)
+ 		sprintf(sbuf, "%s\n",
+ 			netiucv_printname(privptr->conn->userid));
+ 
+ 	l = strlen(sbuf);
+ 	p = sbuf;
+-	if (file->f_pos < l) {
+-		p += file->f_pos;
++	if (pos == (unsigned)pos && pos < l) {
++		p += pos;
+ 		l = strlen(p);
+ 		ret = (count > l) ? l : count;
+ 		if (copy_to_user(buf, p, ret))
+ 			return -EFAULT;
++		*off = pos + ret;
+ 	}
+-	file->f_pos += ret;
+ 	return ret;
+ }
+ 
+@@ -1561,6 +1566,7 @@ netiucv_stat_open(struct inode *inode, s
+ 	file->private_data = kmalloc(STATS_BUFSIZE, GFP_KERNEL);
+ 	if (file->private_data == NULL)
+ 		return -ENOMEM;
++	*(char *)file->private_data = '\0';
+ 	MOD_INC_USE_COUNT;
+ 	return 0;
+ }
+@@ -1591,6 +1597,7 @@ static ssize_t
+ netiucv_stat_read(struct file *file, char *buf, size_t count, loff_t *off)
+ {
+ 	unsigned int ino = ((struct inode *)file->f_dentry->d_inode)->i_ino;
++	loff_t pos = *off;
+ 	char *sbuf = (char *)file->private_data;
+ 	net_device *dev;
+ 	netiucv_priv *privptr;
+@@ -1605,7 +1612,7 @@ netiucv_stat_read(struct file *file, cha
+ 
+ 	privptr = (netiucv_priv *)dev->priv;
+ 
+-	if (file->f_pos == 0) {
++	if (!*sbuf || pos == 0) {
+ 		p += sprintf(p, "Device FSM state: %s\n",
+ 			     fsm_getstate_str(privptr->fsm));
+ 		p += sprintf(p, "Connection FSM state: %s\n",
+@@ -1629,14 +1636,14 @@ netiucv_stat_read(struct file *file, cha
+ 	}
+ 	l = strlen(sbuf);
+ 	p = sbuf;
+-	if (file->f_pos < l) {
+-		p += file->f_pos;
++	if (pos == (unsigned)pos && pos < l) {
++		p += pos;
+ 		l = strlen(p);
+ 		ret = (count > l) ? l : count;
+ 		if (copy_to_user(buf, p, ret))
+ 			return -EFAULT;
++		*off = pos + ret;
+ 	}
+-	file->f_pos += ret;
+ 	return ret;
+ }
+ 
+diff -urNp linux-8250/drivers/s390/net/qeth.c linux-10000/drivers/s390/net/qeth.c
+--- linux-8250/drivers/s390/net/qeth.c
++++ linux-10000/drivers/s390/net/qeth.c
+@@ -9891,7 +9891,7 @@ static ssize_t qeth_procfile_write(struc
+ 	int pos=0,end_pos;
+ 	char dbf_text[15];
+ 
+-	if (*offset>0) return user_len;
++	if (*offset) return user_len;
+ 	buffer=vmalloc(__max(user_len+1,QETH_DBF_MISC_LEN));
+ 	if (buffer == NULL)
+ 		return -ENOMEM;
+@@ -10407,14 +10407,16 @@ static ssize_t qeth_procfile_read(struct
+ {
+ 	loff_t len;
+ 	tempinfo_t *p_info = (tempinfo_t *) file->private_data;
++	loff_t n = *offset;
++	unsigned long pos = n;
+ 	
+-	if (*offset >= p_info->len) {
++	if (pos != n || pos >= p_info->len) {
+ 		return 0;
+ 	} else {
+-		len = __min(user_len, (p_info->len - *offset));
+-		if (copy_to_user (user_buf, &(p_info->data[*offset]), len))
++		len = __min(user_len, (p_info->len - pos));
++		if (copy_to_user (user_buf, &(p_info->data[pos]), len))
+ 			return -EFAULT;
+-		(*offset) += len;
++		*offset = pos + len;
+ 		return len;
+ 	}
+ }
+@@ -10449,7 +10451,7 @@ static ssize_t qeth_ipato_procfile_write
+ 	qeth_card_t *card;
+ #define BUFFER_LEN (10+32+1+5+1+DEV_NAME_LEN+1)
+ 
+-	if (*offset>0) return user_len;
++	if (*offset) return user_len;
+ 	buffer=vmalloc(__max(__max(user_len+1,BUFFER_LEN),QETH_DBF_MISC_LEN));
+ 
+ 	if (buffer == NULL)
+@@ -10573,7 +10575,7 @@ static ssize_t qeth_ipato_procfile_write
+ 	PRINT_ERR("unknown ipato information command\n");
+ out:
+ 	vfree(buffer);
+-	*offset = *offset + user_len;
++	*offset = user_len;
+ #undef BUFFER_LEN
+ 	return user_len;
+ }
+diff -urNp linux-8250/drivers/s390/s390io.c linux-10000/drivers/s390/s390io.c
+--- linux-8250/drivers/s390/s390io.c
++++ linux-10000/drivers/s390/s390io.c
+@@ -8545,14 +8545,16 @@ chan_subch_read (struct file *file, char
+ {
+ 	loff_t len;
+ 	tempinfo_t *p_info = (tempinfo_t *) file->private_data;
++	loff_t n = *offset;
++	unsigned long pos = n;
+ 
+-	if (*offset >= p_info->len) {
++	if (pos != n || pos >= p_info->len) {
+ 		return 0;
+ 	} else {
+-		len = MIN (user_len, (p_info->len - *offset));
+-		if (copy_to_user (user_buf, &(p_info->data[*offset]), len))
++		len = MIN (user_len, (p_info->len - pos));
++		if (copy_to_user (user_buf, &(p_info->data[pos]), len))
+ 			return -EFAULT;
+-		(*offset) += len;
++		*offset = pos + len;
+ 		return len;
+ 	}
+ }
+@@ -9340,14 +9342,16 @@ cio_chpids_proc_read( struct file *file,
+ {
+      loff_t len;
+      tempinfo_t *p_info = (tempinfo_t *) file->private_data;
++     loff_t n = *offset;
++     unsigned long pos = n;
+      
+-     if ( *offset>=p_info->len) {
++     if ( n != pos || pos >= p_info->len) {
+ 	  return 0;
+      } else {
+-	  len = MIN(user_len, (p_info->len - *offset));
+-	  if (copy_to_user( user_buf, &(p_info->data[*offset]), len))
++	  len = MIN(user_len, (p_info->len - pos));
++	  if (copy_to_user( user_buf, &(p_info->data[pos]), len))
+ 	       return -EFAULT; 
+-	  (* offset) += len;
++	  *offset = pos + len;
+ 	  return len;
+      }
+ }
+diff -urNp linux-8250/drivers/sbus/char/flash.c linux-10000/drivers/sbus/char/flash.c
+--- linux-8250/drivers/sbus/char/flash.c
++++ linux-10000/drivers/sbus/char/flash.c
+@@ -105,9 +105,12 @@ static ssize_t
+ flash_read(struct file * file, char * buf,
+ 	   size_t count, loff_t *ppos)
+ {
+-	unsigned long p = file->f_pos;
++	unsigned long p = *ppos;
+ 	int i;
+ 	
++	if (p > flash.read_size)
++		return 0;
++
+ 	if (count > flash.read_size - p)
+ 		count = flash.read_size - p;
+ 
+@@ -118,7 +121,7 @@ flash_read(struct file * file, char * bu
+ 		buf++;
+ 	}
+ 
+-	file->f_pos += count;
++	*ppos = p + count;
+ 	return count;
+ }
+ 
+diff -urNp linux-8250/drivers/scsi/osst.c linux-10000/drivers/scsi/osst.c
+--- linux-8250/drivers/scsi/osst.c
++++ linux-10000/drivers/scsi/osst.c
+@@ -3082,6 +3082,7 @@ static ssize_t osst_write(struct file * 
+ 	ST_mode * STm;
+ 	ST_partstat * STps;
+ 	int dev = TAPE_NR(inode->i_rdev);
++	loff_t pos = *ppos;
+ 
+ 	STp = os_scsi_tapes[dev];
+ 
+@@ -3299,7 +3300,7 @@ if (SRpnt) printk(KERN_ERR "osst%d:A: No
+ 		if (i == (-ENOSPC)) {
+ 			transfer = STp->buffer->writing;	/* FIXME -- check this logic */
+ 			if (transfer <= do_count) {
+-				filp->f_pos += do_count - transfer;
++				pos += do_count - transfer;
+ 				count -= do_count - transfer;
+ 				if (STps->drv_block >= 0) {
+ 					STps->drv_block += (do_count - transfer) / STp->block_size;
+@@ -3337,7 +3338,7 @@ if (SRpnt) printk(KERN_ERR "osst%d:A: No
+ 			goto out;
+ 		}
+ 
+-		filp->f_pos += do_count;
++		pos += do_count;
+ 		b_point += do_count;
+ 		count -= do_count;
+ 		if (STps->drv_block >= 0) {
+@@ -3359,7 +3360,7 @@ if (SRpnt) printk(KERN_ERR "osst%d:A: No
+ 		if (STps->drv_block >= 0) {
+ 			STps->drv_block += blks;
+ 		}
+-		filp->f_pos += count;
++		pos += count;
+ 		count = 0;
+ 	}
+ 
+@@ -3389,6 +3390,7 @@ if (SRpnt) printk(KERN_ERR "osst%d:A: No
+ 	retval = total;
+ 
+ out:
++	*ppos = pos;
+ 	if (SRpnt != NULL) scsi_release_request(SRpnt);
+ 
+ 	up(&STp->lock);
+@@ -3409,6 +3411,7 @@ static ssize_t osst_read(struct file * f
+ 	ST_partstat * STps;
+ 	Scsi_Request *SRpnt = NULL;
+ 	int dev = TAPE_NR(inode->i_rdev);
++	loff_t pos = *ppos;
+ 
+ 	STp = os_scsi_tapes[dev];
+ 
+@@ -3534,7 +3537,7 @@ static ssize_t osst_read(struct file * f
+ 			}
+ 			STp->logical_blk_num += transfer / STp->block_size;
+ 			STps->drv_block      += transfer / STp->block_size;
+-			filp->f_pos          += transfer;
++			pos                  += transfer;
+ 			buf                  += transfer;
+ 			total                += transfer;
+ 		}
+@@ -3573,6 +3576,7 @@ static ssize_t osst_read(struct file * f
+ 	retval = total;
+ 
+ out:
++	*ppos = pos;
+ 	if (SRpnt != NULL) scsi_release_request(SRpnt);
+ 
+ 	up(&STp->lock);
+diff -urNp linux-8250/drivers/scsi/st.c linux-10000/drivers/scsi/st.c
+--- linux-8250/drivers/scsi/st.c
++++ linux-10000/drivers/scsi/st.c
+@@ -1202,6 +1202,7 @@ static ssize_t
+ 	ST_mode *STm;
+ 	ST_partstat *STps;
+ 	int dev = TAPE_NR(inode->i_rdev);
++	loff_t pos = *ppos;
+ 
+ 	read_lock(&st_dev_arr_lock);
+ 	STp = scsi_tapes[dev];
+@@ -1433,7 +1434,7 @@ static ssize_t
+ 					residual *= STp->block_size;
+ 				if (residual <= do_count) {
+ 					/* Within the data in this write() */
+-					filp->f_pos += do_count - residual;
++					pos += do_count - residual;
+ 					count -= do_count - residual;
+ 					if (STps->drv_block >= 0) {
+ 						if (STp->block_size == 0 &&
+@@ -1489,7 +1490,7 @@ static ssize_t
+ 				retval = total - count;
+ 			goto out;
+ 		}
+-		filp->f_pos += do_count;
++		pos += do_count;
+ 		b_point += do_count;
+ 		count -= do_count;
+ 		if (STps->drv_block >= 0) {
+@@ -1508,7 +1509,7 @@ static ssize_t
+ 			retval = i;
+ 			goto out;
+ 		}
+-		filp->f_pos += count;
++		pos += count;
+ 		count = 0;
+ 	}
+ 
+@@ -1543,6 +1544,7 @@ static ssize_t
+ 	retval = total - count;
+ 
+  out:
++	*ppos = pos;
+ 	if (SRpnt != NULL)
+ 		scsi_release_request(SRpnt);
+ 	up(&STp->lock);
+@@ -1743,6 +1745,7 @@ static ssize_t
+ 	ST_mode *STm;
+ 	ST_partstat *STps;
+ 	int dev = TAPE_NR(inode->i_rdev);
++	loff_t pos = *ppos;
+ 
+ 	read_lock(&st_dev_arr_lock);
+ 	STp = scsi_tapes[dev];
+@@ -1887,7 +1890,7 @@ static ssize_t
+ 				retval = i;
+ 				goto out;
+ 			}
+-			filp->f_pos += transfer;
++			pos += transfer;
+ 			buf += transfer;
+ 			total += transfer;
+ 		}
+@@ -1917,6 +1920,7 @@ static ssize_t
+ 	retval = total;
+ 
+  out:
++	*ppos = pos;
+ 	if (SRpnt != NULL) {
+ 		scsi_release_request(SRpnt);
+ 		SRpnt = NULL;
+diff -urNp linux-8250/drivers/usb/brlvger.c linux-10000/drivers/usb/brlvger.c
+--- linux-8250/drivers/usb/brlvger.c
++++ linux-10000/drivers/usb/brlvger.c
+@@ -596,6 +596,9 @@ brlvger_write(struct file *file, const c
+ 
+ 	off = *pos;
+ 
++	if (off < 0)
++		return -EINVAL;
++
+ 	if(off > priv->plength)
+ 		return -ESPIPE;;
+ 
+diff -urNp linux-8250/drivers/usb/devio.c linux-10000/drivers/usb/devio.c
+--- linux-8250/drivers/usb/devio.c
++++ linux-10000/drivers/usb/devio.c
+@@ -80,7 +80,7 @@ static ssize_t usbdev_read(struct file *
+ 	struct dev_state *ps = (struct dev_state *)file->private_data;
+ 	ssize_t ret = 0;
+ 	unsigned len;
+-	loff_t pos;
++	loff_t pos, last;
+ 	int i;
+ 
+ 	pos = *ppos;
+@@ -102,37 +102,38 @@ static ssize_t usbdev_read(struct file *
+ 			goto err;
+ 		}
+ 
+-		*ppos += len;
++		pos += len;
+ 		buf += len;
+ 		nbytes -= len;
+ 		ret += len;
+ 	}
+ 
+-	pos = sizeof(struct usb_device_descriptor);
++	last = sizeof(struct usb_device_descriptor);
+ 	for (i = 0; nbytes && i < ps->dev->descriptor.bNumConfigurations; i++) {
+ 		struct usb_config_descriptor *config =
+ 			(struct usb_config_descriptor *)ps->dev->rawdescriptors[i];
+ 		unsigned int length = le16_to_cpu(config->wTotalLength);
+ 
+-		if (*ppos < pos + length) {
+-			len = length - (*ppos - pos);
++		if (pos < last + length) {
++			len = length - (pos - last);
+ 			if (len > nbytes)
+ 				len = nbytes;
+ 
+ 			if (copy_to_user(buf,
+-			    ps->dev->rawdescriptors[i] + (*ppos - pos), len)) {
++			    ps->dev->rawdescriptors[i] + (pos - last), len)) {
+ 				ret = -EFAULT;
+ 				goto err;
+ 			}
+ 
+-			*ppos += len;
++			pos += len;
+ 			buf += len;
+ 			nbytes -= len;
+ 			ret += len;
+ 		}
+ 
+-		pos += length;
++		last += length;
+ 	}
++	*ppos = pos;
+ 
+ err:
+ 	up_read(&ps->devsem);
+diff -urNp linux-8250/drivers/usb/drivers.c linux-10000/drivers/usb/drivers.c
+--- linux-8250/drivers/usb/drivers.c
++++ linux-10000/drivers/usb/drivers.c
+@@ -52,9 +52,10 @@ static ssize_t usb_driver_read(struct fi
+ 	struct list_head *tmp = usb_driver_list.next;
+ 	char *page, *start, *end;
+ 	ssize_t ret = 0;
+-	unsigned int pos, len;
++	loff_t n = *ppos;
++	unsigned int pos = n, len;
+ 
+-	if (*ppos < 0)
++	if (pos != n)
+ 		return -EINVAL;
+ 	if (nbytes <= 0)
+ 		return 0;
+@@ -64,7 +65,6 @@ static ssize_t usb_driver_read(struct fi
+                 return -ENOMEM;
+ 	start = page;
+ 	end = page + (PAGE_SIZE - 100);
+-	pos = *ppos;
+ 	for (; tmp != &usb_driver_list; tmp = tmp->next) {
+ 		struct usb_driver *driver = list_entry(tmp, struct usb_driver, driver_list);
+ 		int minor = driver->fops ? driver->minor : -1;
+@@ -88,7 +88,7 @@ static ssize_t usb_driver_read(struct fi
+ 		if (copy_to_user(buf, page + pos, len))
+ 			ret = -EFAULT;
+ 		else
+-			*ppos += len;
++			*ppos = pos + len;
+ 	}
+ 	free_page((unsigned long)page);
+ 	return ret;
+diff -urNp linux-8250/drivers/usb/host/uhci-debug.h linux-10000/drivers/usb/host/uhci-debug.h
+--- linux-8250/drivers/usb/host/uhci-debug.h
++++ linux-10000/drivers/usb/host/uhci-debug.h
+@@ -530,16 +530,14 @@ static ssize_t uhci_proc_read(struct fil
+ 			loff_t *ppos)
+ {
+ 	struct uhci_proc *up = file->private_data;
+-	unsigned int pos;
++	loff_t n = *ppos;
++	unsigned int pos = n;
+ 	unsigned int size;
+ 
+-	pos = *ppos;
+ 	size = up->size;
+-	if (pos >= size)
++	if (pos != n || pos >= size)
+ 		return 0;
+-	if (nbytes >= size)
+-		nbytes = size;
+-	if (pos + nbytes > size)
++	if (nbytes > size - pos)
+ 		nbytes = size - pos;
+ 
+ 	if (!access_ok(VERIFY_WRITE, buf, nbytes))
+@@ -547,7 +545,7 @@ static ssize_t uhci_proc_read(struct fil
+ 
+ 	copy_to_user(buf, up->data + pos, nbytes);
+ 
+-	*ppos += nbytes;
++	*ppos = pos + nbytes;
+ 
+ 	return nbytes;
+ }
+diff -urNp linux-8250/drivers/video/fbmem.c linux-10000/drivers/video/fbmem.c
+--- linux-8250/drivers/video/fbmem.c
++++ linux-10000/drivers/video/fbmem.c
+@@ -403,9 +403,7 @@ fb_read(struct file *file, char *buf, si
+ 	fb->fb_get_fix(&fix,PROC_CONSOLE(info), info);
+ 	if (p >= fix.smem_len)
+ 	    return 0;
+-	if (count >= fix.smem_len)
+-	    count = fix.smem_len;
+-	if (count + p > fix.smem_len)
++	if (count > fix.smem_len - p)
+ 		count = fix.smem_len - p;
+ 	if (count) {
+ 	    char *base_addr;
+@@ -414,7 +412,7 @@ fb_read(struct file *file, char *buf, si
+ 	    count -= copy_to_user(buf, base_addr+p, count);
+ 	    if (!count)
+ 		return -EFAULT;
+-	    *ppos += count;
++	    *ppos = p + count;
+ 	}
+ 	return count;
+ }
+@@ -436,10 +434,8 @@ fb_write(struct file *file, const char *
+ 	fb->fb_get_fix(&fix, PROC_CONSOLE(info), info);
+ 	if (p > fix.smem_len)
+ 	    return -ENOSPC;
+-	if (count >= fix.smem_len)
+-	    count = fix.smem_len;
+ 	err = 0;
+-	if (count + p > fix.smem_len) {
++	if (count > fix.smem_len - p) {
+ 	    count = fix.smem_len - p;
+ 	    err = -ENOSPC;
+ 	}
+@@ -448,7 +444,7 @@ fb_write(struct file *file, const char *
+ 
+ 	    base_addr = info->disp->screen_base;
+ 	    count -= copy_from_user(base_addr+p, buf, count);
+-	    *ppos += count;
++	    *ppos = p + count;
+ 	    err = -EFAULT;
+ 	}
+ 	if (count)
+diff -urNp linux-8250/drivers/zorro/proc.c linux-10000/drivers/zorro/proc.c
+--- linux-8250/drivers/zorro/proc.c
++++ linux-10000/drivers/zorro/proc.c
+@@ -50,11 +50,9 @@ proc_bus_zorro_read(struct file *file, c
+ 	struct ConfigDev cd;
+ 	loff_t pos = *ppos;
+ 
+-	if (pos >= sizeof(struct ConfigDev))
++	if (pos < 0 || pos >= sizeof(struct ConfigDev))
+ 		return 0;
+-	if (nbytes >= sizeof(struct ConfigDev))
+-		nbytes = sizeof(struct ConfigDev);
+-	if (pos + nbytes > sizeof(struct ConfigDev))
++	if (nbytes > sizeof(struct ConfigDev) - pos)
+ 		nbytes = sizeof(struct ConfigDev) - pos;
+ 
+ 	/* Construct a ConfigDev */
+@@ -67,7 +65,7 @@ proc_bus_zorro_read(struct file *file, c
+ 
+ 	if (copy_to_user(buf, &cd, nbytes))
+ 		return -EFAULT;
+-	*ppos += nbytes;
++	*ppos = pos + nbytes;
+ 
+ 	return nbytes;
+ }
+diff -urNp linux-8250/fs/devfs/base.c linux-10000/fs/devfs/base.c
+--- linux-8250/fs/devfs/base.c
++++ linux-10000/fs/devfs/base.c
+@@ -3312,7 +3312,7 @@ static ssize_t devfsd_read (struct file 
+ {
+     int done = FALSE;
+     int ival;
+-    loff_t pos, devname_offset, tlen, rpos;
++    loff_t pos, devname_offset, tlen, rpos, old_pos;
+     devfs_handle_t de;
+     struct devfsd_buf_entry *entry;
+     struct fs_info *fs_info = file->f_dentry->d_inode->i_sb->u.generic_sbp;
+@@ -3363,8 +3363,8 @@ static ssize_t devfsd_read (struct file 
+     info->namelen = DEVFS_PATHLEN - pos - 1;
+     if (info->mode == 0) info->mode = de->mode;
+     devname_offset = info->devname - (char *) info;
+-    rpos = *ppos;
+-    if (rpos < devname_offset)
++    old_pos = rpos = *ppos;
++    if (rpos >= 0 && rpos < devname_offset)
+     {
+ 	/*  Copy parts of the header  */
+ 	tlen = devname_offset - rpos;
+@@ -3390,7 +3390,7 @@ static ssize_t devfsd_read (struct file 
+ 	}
+ 	rpos += tlen;
+     }
+-    tlen = rpos - *ppos;
++    tlen = rpos - old_pos;
+     if (done)
+     {
+ 	devfs_handle_t parent;
+@@ -3504,16 +3504,17 @@ static ssize_t stat_read (struct file *f
+ 			  loff_t *ppos)
+ {
+     ssize_t num;
++    loff_t n = *ppos;
+     char txt[80];
+ 
+     num = sprintf (txt, "Number of entries: %u  number of bytes: %u\n",
+ 		   stat_num_entries, stat_num_bytes) + 1;
+     /*  Can't seek (pread) on this device  */
+     if (ppos != &file->f_pos) return -ESPIPE;
+-    if (*ppos >= num) return 0;
+-    if (*ppos + len > num) len = num - *ppos;
+-    if ( copy_to_user (buf, txt + *ppos, len) ) return -EFAULT;
+-    *ppos += len;
++    if (n != (unsigned)n || n >= num) return 0;
++    if (len > num - n) len = num - n;
++    if ( copy_to_user (buf, txt + n, len) ) return -EFAULT;
++    *ppos = n + len;
+     return len;
+ }   /*  End Function stat_read  */
+ #endif
+diff -urNp linux-8250/fs/hfs/file.c linux-10000/fs/hfs/file.c
+--- linux-8250/fs/hfs/file.c
++++ linux-10000/fs/hfs/file.c
+@@ -150,7 +150,7 @@ static hfs_rwret_t hfs_file_read(struct 
+ 		return -EINVAL;
+ 	}
+ 	pos = *ppos;
+-	if (pos >= HFS_FORK_MAX) {
++	if (pos < 0 || pos >= HFS_FORK_MAX) {
+ 		return 0;
+ 	}
+ 	size = inode->i_size;
+@@ -167,7 +167,7 @@ static hfs_rwret_t hfs_file_read(struct 
+ 	}
+ 	if ((read = hfs_do_read(inode, HFS_I(inode)->fork, pos,
+ 				buf, left, filp->f_reada != 0)) > 0) {
+-	        *ppos += read;
++	        *ppos = pos + read;
+ 		filp->f_reada = 1;
+ 	}
+ 
+@@ -197,7 +197,7 @@ static hfs_rwret_t hfs_file_write(struct
+ 
+ 	pos = (filp->f_flags & O_APPEND) ? inode->i_size : *ppos;
+ 
+-	if (pos >= HFS_FORK_MAX) {
++	if (pos < 0 || pos >= HFS_FORK_MAX) {
+ 		return 0;
+ 	}
+ 	if (count > HFS_FORK_MAX) {
+@@ -207,8 +207,8 @@ static hfs_rwret_t hfs_file_write(struct
+ 	        pos += written;
+ 
+ 	*ppos = pos;
+-	if (*ppos > inode->i_size) {
+-	        inode->i_size = *ppos;
++	if (pos > inode->i_size) {
++	        inode->i_size = pos;
+ 		mark_inode_dirty(inode);
+ 	}
+ 
+diff -urNp linux-8250/fs/hfs/file_cap.c linux-10000/fs/hfs/file_cap.c
+--- linux-8250/fs/hfs/file_cap.c
++++ linux-10000/fs/hfs/file_cap.c
+@@ -191,7 +191,7 @@ static hfs_rwret_t cap_info_write(struct
+ 				  hfs_rwarg_t count, loff_t *ppos)
+ {
+         struct inode *inode = filp->f_dentry->d_inode;
+-	hfs_u32 pos;
++	hfs_u32 pos, last;
+ 
+ 	if (!S_ISREG(inode->i_mode)) {
+ 		hfs_warn("hfs_file_write: mode = %07o\n", inode->i_mode);
+@@ -207,14 +207,14 @@ static hfs_rwret_t cap_info_write(struct
+ 		return 0;
+ 	}
+ 
+-	*ppos += count;
+-	if (*ppos > HFS_FORK_MAX) {
+-		*ppos = HFS_FORK_MAX;
++	last = pos + count;
++	if (last > HFS_FORK_MAX) {
++		last = HFS_FORK_MAX;
+ 		count = HFS_FORK_MAX - pos;
+ 	}
+ 
+-	if (*ppos > inode->i_size)
+-	        inode->i_size = *ppos;
++	if (last > inode->i_size)
++	        inode->i_size = last;
+ 
+ 	/* Only deal with the part we store in memory */
+ 	if (pos < sizeof(struct hfs_cap_info)) {
+@@ -272,6 +272,7 @@ static hfs_rwret_t cap_info_write(struct
+ 		}
+ 	}
+ 
++	*ppos = last;
+ 	inode->i_mtime = inode->i_ctime = CURRENT_TIME;
+ 	mark_inode_dirty(inode);
+ 	return count;
+diff -urNp linux-8250/fs/hfs/file_hdr.c linux-10000/fs/hfs/file_hdr.c
+--- linux-8250/fs/hfs/file_hdr.c
++++ linux-10000/fs/hfs/file_hdr.c
+@@ -384,7 +384,7 @@ static hfs_rwret_t hdr_read(struct file 
+ 	struct hfs_cat_entry *entry = HFS_I(inode)->entry;
+ 	const struct hfs_hdr_layout *layout;
+ 	off_t start, length, offset;
+-	off_t pos = *ppos;
++	loff_t pos = *ppos;
+ 	int left, lcv, read = 0;
+ 
+ 	if (!S_ISREG(inode->i_mode)) {
+@@ -399,7 +399,7 @@ static hfs_rwret_t hdr_read(struct file 
+ 	}
+ 
+ 	/* Adjust count to fit within the bounds of the file */
+-	if ((pos >= inode->i_size) || (count <= 0)) {
++	if (pos != (unsigned)pos || pos >= inode->i_size || count <= 0) {
+ 		return 0;
+ 	} else if (count > inode->i_size - pos) {
+ 		count = inode->i_size - pos;
+@@ -646,7 +646,7 @@ static hfs_rwret_t hdr_write(struct file
+ 		hfs_warn("hfs_hdr_write: mode = %07o\n", inode->i_mode);
+ 		return -EINVAL;
+ 	}
+-	if (count <= 0) {
++	if (count <= 0 || pos != (unsigned)pos) {
+ 		return 0;
+ 	}
+ 
+diff -urNp linux-8250/fs/openpromfs/inode.c linux-10000/fs/openpromfs/inode.c
+--- linux-8250/fs/openpromfs/inode.c
++++ linux-10000/fs/openpromfs/inode.c
+@@ -69,17 +69,18 @@ static ssize_t nodenum_read(struct file 
+ 			    size_t count, loff_t *ppos)
+ {
+ 	struct inode *inode = file->f_dentry->d_inode;
++	loff_t pos = *ppos;
+ 	char buffer[10];
+ 	
+ 	if (count < 0 || !inode->u.generic_ip)
+ 		return -EINVAL;
+ 	sprintf (buffer, "%8.8x\n", (u32)(long)(inode->u.generic_ip));
+-	if (file->f_pos >= 9)
++	if (pos != (unsigned)pos || pos >= 9)
+ 		return 0;
+-	if (count > 9 - file->f_pos)
+-		count = 9 - file->f_pos;
+-	copy_to_user(buf, buffer + file->f_pos, count);
+-	file->f_pos += count;
++	if (count > 9 - pos)
++		count = 9 - pos;
++	copy_to_user(buf, buffer + pos, count);
++	*ppos = pos + count;
+ 	return count;
+ }
+ 
+@@ -87,6 +88,7 @@ static ssize_t property_read(struct file
+ 			     size_t count, loff_t *ppos)
+ {
+ 	struct inode *inode = filp->f_dentry->d_inode;
++	loff_t pos = *ppos;
+ 	int i, j, k;
+ 	u32 node;
+ 	char *p, *s;
+@@ -94,7 +96,7 @@ static ssize_t property_read(struct file
+ 	openprom_property *op;
+ 	char buffer[64];
+ 	
+-	if (filp->f_pos >= 0xffffff)
++	if (pos < 0 || pos >= 0xffffff)
+ 		return -EINVAL;
+ 	if (!filp->private_data) {
+ 		node = nodes[(u16)((long)inode->u.generic_ip)].node;
+@@ -180,7 +182,7 @@ static ssize_t property_read(struct file
+ 	} else {
+ 		i = (op->len << 1) + 1;
+ 	}
+-	k = filp->f_pos;
++	k = pos;
+ 	if (k >= i) return 0;
+ 	if (count > i - k) count = i - k;
+ 	if (op->flag & OPP_STRING) {
+@@ -196,16 +198,16 @@ static ssize_t property_read(struct file
+ 			j = count;
+ 
+ 		if (j >= 0) {
+-			copy_to_user(buf + k - filp->f_pos,
++			copy_to_user(buf + k - pos,
+ 				     op->value + k - 1, j);
+ 			count -= j;
+ 			k += j;
+ 		}
+ 
+ 		if (count)
+-			__put_user('\'', &buf [k++ - filp->f_pos]);
++			__put_user('\'', &buf [k++ - pos]);
+ 		if (count > 1)
+-			__put_user('\n', &buf [k++ - filp->f_pos]);
++			__put_user('\n', &buf [k++ - pos]);
+ 
+ 	} else if (op->flag & OPP_STRINGLIST) {
+ 		char *tmp;
+@@ -273,47 +275,48 @@ static ssize_t property_read(struct file
+ 
+ 		if ((k < i - 1) && (k & 1)) {
+ 			sprintf (buffer, "%02x", *(op->value + (k >> 1)));
+-			__put_user(buffer[1], &buf[k++ - filp->f_pos]);
++			__put_user(buffer[1], &buf[k++ - pos]);
+ 			count--;
+ 		}
+ 
+ 		for (; (count > 1) && (k < i - 1); k += 2) {
+ 			sprintf (buffer, "%02x", *(op->value + (k >> 1)));
+-			copy_to_user (buf + k - filp->f_pos, buffer, 2);
++			copy_to_user (buf + k - pos, buffer, 2);
+ 			count -= 2;
+ 		}
+ 
+ 		if (count && (k < i - 1)) {
+ 			sprintf (buffer, "%02x", *(op->value + (k >> 1)));
+-			__put_user(buffer[0], &buf[k++ - filp->f_pos]);
++			__put_user(buffer[0], &buf[k++ - pos]);
+ 			count--;
+ 		}
+ 
+ 		if (count)
+-			__put_user('\n', &buf [k++ - filp->f_pos]);
++			__put_user('\n', &buf [k++ - pos]);
+ 	}
+-	count = k - filp->f_pos;
+-	filp->f_pos = k;
++	count = k - pos;
++	*ppos = k;
+ 	return count;
+ }
+ 
+ static ssize_t property_write(struct file *filp, const char *buf,
+ 			      size_t count, loff_t *ppos)
+ {
++	loff_t pos = *ppos;
+ 	int i, j, k;
+ 	char *p;
+ 	u32 *q;
+ 	void *b;
+ 	openprom_property *op;
+ 	
+-	if (filp->f_pos >= 0xffffff)
++	if (pos < 0 || pos >= 0xffffff)
+ 		return -EINVAL;
+ 	if (!filp->private_data) {
+ 		i = property_read (filp, NULL, 0, 0);
+ 		if (i)
+ 			return i;
+ 	}
+-	k = filp->f_pos;
++	k = pos;
+ 	op = (openprom_property *)filp->private_data;
+ 	if (!(op->flag & OPP_STRING)) {
+ 		u32 *first, *last;
+@@ -433,7 +436,8 @@ static ssize_t property_write(struct fil
+ 				op->len = i;
+ 		} else
+ 			op->len = i;
+-		filp->f_pos += count;
++		pos += count;
++		*ppos = pos;
+ 	}
+ write_try_string:
+ 	if (!(op->flag & OPP_BINARY)) {
+@@ -450,7 +454,8 @@ write_try_string:
+ 				op->flag |= OPP_QUOTED;
+ 				buf++;
+ 				count--;
+-				filp->f_pos++;
++				pos++;
++				*ppos = pos;
+ 				if (!count) {
+ 					op->flag |= OPP_STRING;
+ 					return 1;
+@@ -459,9 +464,9 @@ write_try_string:
+ 				op->flag |= OPP_NOTQUOTED;
+ 		}
+ 		op->flag |= OPP_STRING;
+-		if (op->alloclen <= count + filp->f_pos) {
++		if (op->alloclen <= count + pos) {
+ 			b = kmalloc (sizeof (openprom_property)
+-				     + 2 * (count + filp->f_pos), GFP_KERNEL);
++				     + 2 * (count + pos), GFP_KERNEL);
+ 			if (!b)
+ 				return -ENOMEM;
+ 			memcpy (b, filp->private_data,
+@@ -469,14 +474,14 @@ write_try_string:
+ 				+ strlen (op->name) + op->alloclen);
+ 			memset (((char *)b) + sizeof (openprom_property)
+ 				+ strlen (op->name) + op->alloclen, 
+-				0, 2*(count - filp->f_pos) - op->alloclen);
++				0, 2*(count - pos) - op->alloclen);
+ 			op = (openprom_property *)b;
+-			op->alloclen = 2*(count + filp->f_pos);
++			op->alloclen = 2*(count + pos);
+ 			b = filp->private_data;
+ 			filp->private_data = (void *)op;
+ 			kfree (b);
+ 		}
+-		p = op->value + filp->f_pos - ((op->flag & OPP_QUOTED) ? 1 : 0);
++		p = op->value + pos - ((op->flag & OPP_QUOTED) ? 1 : 0);
+ 		copy_from_user (p, buf, count);
+ 		op->flag |= OPP_DIRTY;
+ 		for (i = 0; i < count; i++, p++)
+@@ -486,17 +491,19 @@ write_try_string:
+ 			}
+ 		if (i < count) {
+ 			op->len = p - op->value;
+-			filp->f_pos += i + 1;
++			pos += i + 1;
++			*ppos = pos;
+ 			if ((p > op->value) && (op->flag & OPP_QUOTED)
+ 			    && (*(p - 1) == '\''))
+ 				op->len--;
+ 		} else {
+ 			if (p - op->value > op->len)
+ 				op->len = p - op->value;
+-			filp->f_pos += count;
++			pos += count;
++			*ppos = pos;
+ 		}
+ 	}
+-	return filp->f_pos - k;
++	return pos - k;
+ }
+ 
+ int property_release (struct inode *inode, struct file *filp)
+diff -urNp linux-8250/fs/proc/base.c linux-10000/fs/proc/base.c
+--- linux-8250/fs/proc/base.c
++++ linux-10000/fs/proc/base.c
+@@ -334,6 +334,7 @@ static ssize_t proc_info_read(struct fil
+ 	ssize_t length;
+ 	ssize_t end;
+ 	struct task_struct *task = inode->u.proc_i.task;
++	loff_t pos = *ppos;
+ 
+ 	if (count > PROC_BLOCK_SIZE)
+ 		count = PROC_BLOCK_SIZE;
+@@ -347,14 +348,14 @@ static ssize_t proc_info_read(struct fil
+ 		return length;
+ 	}
+ 	/* Static 4kB (or whatever) block capacity */
+-	if (*ppos >= length) {
++	if (pos < 0 || pos >= length) {
+ 		free_page(page);
+ 		return 0;
+ 	}
+-	if (count + *ppos > length)
+-		count = length - *ppos;
+-	end = count + *ppos;
+-	copy_to_user(buf, (char *) page + *ppos, count);
++	if (count > length - pos)
++		count = length - pos;
++	end = count + pos;
++	copy_to_user(buf, (char *) page + pos, count);
+ 	*ppos = end;
+ 	free_page(page);
+ 	return count;
+diff -urNp linux-8250/fs/proc/generic.c linux-10000/fs/proc/generic.c
+--- linux-8250/fs/proc/generic.c
++++ linux-10000/fs/proc/generic.c
+@@ -56,6 +56,7 @@ proc_file_read(struct file * file, char 
+ 	ssize_t	n, count;
+ 	char	*start;
+ 	struct proc_dir_entry * dp;
++	loff_t pos = *ppos;
+ 
+ 	dp = (struct proc_dir_entry *) inode->u.generic_ip;
+ 	if (!(page = (char*) __get_free_page(GFP_KERNEL)))
+@@ -64,6 +65,8 @@ proc_file_read(struct file * file, char 
+ 	while ((nbytes > 0) && !eof)
+ 	{
+ 		count = MIN(PROC_BLOCK_SIZE, nbytes);
++		if ((unsigned)pos > INT_MAX)
++			break;
+ 
+ 		start = NULL;
+ 		if (dp->get_info) {
+@@ -71,11 +74,11 @@ proc_file_read(struct file * file, char 
+ 			 * Handle backwards compatibility with the old net
+ 			 * routines.
+ 			 */
+-			n = dp->get_info(page, &start, *ppos, count);
++			n = dp->get_info(page, &start, pos, count);
+ 			if (n < count)
+ 				eof = 1;
+ 		} else if (dp->read_proc) {
+-			n = dp->read_proc(page, &start, *ppos,
++			n = dp->read_proc(page, &start, pos,
+ 					  count, &eof, dp->data);
+ 		} else
+ 			break;
+@@ -84,8 +87,8 @@ proc_file_read(struct file * file, char 
+ 			/*
+ 			 * For proc files that are less than 4k
+ 			 */
+-			start = page + *ppos;
+-			n -= *ppos;
++			start = page + pos;
++			n -= pos;
+ 			if (n <= 0)
+ 				break;
+ 			if (n > count)
+@@ -111,12 +114,13 @@ proc_file_read(struct file * file, char 
+ 			break;
+ 		}
+ 
+-		*ppos += start < page ? (long)start : n; /* Move down the file */
++		pos += start < page ? (long)start : n; /* Move down the file */
+ 		nbytes -= n;
+ 		buf += n;
+ 		retval += n;
+ 	}
+ 	free_page((unsigned long) page);
++	*ppos = pos;
+ 	return retval;
+ }
+ 
+diff -urNp linux-8250/fs/proc/kcore.c linux-10000/fs/proc/kcore.c
+--- linux-8250/fs/proc/kcore.c
++++ linux-10000/fs/proc/kcore.c
+@@ -93,8 +93,9 @@ static ssize_t read_kcore(struct file *f
+ 		if (copy_to_user(buf, (void *) (PAGE_OFFSET+p-PAGE_SIZE), count))
+ 			return -EFAULT;
+ 		read += count;
++		p += count;
+ 	}
+-	*ppos += read;
++	*ppos = p;
+ 	return read;
+ }
+ #else /* CONFIG_KCORE_AOUT */
+diff -urNp linux-8250/fs/proc/proc_misc.c linux-10000/fs/proc/proc_misc.c
+--- linux-8250/fs/proc/proc_misc.c
++++ linux-10000/fs/proc/proc_misc.c
+@@ -539,12 +539,13 @@ static int memory_read_proc(char *page, 
+ static ssize_t read_profile(struct file *file, char *buf,
+ 			    size_t count, loff_t *ppos)
+ {
+-	unsigned long p = *ppos;
++	loff_t n = *ppos;
++	unsigned p = n;
+ 	ssize_t read;
+ 	char * pnt;
+ 	unsigned int sample_step = 1 << prof_shift;
+ 
+-	if (p >= (prof_len+1)*sizeof(unsigned int))
++	if (p != n || p >= (prof_len+1)*sizeof(unsigned int))
+ 		return 0;
+ 	if (count > (prof_len+1)*sizeof(unsigned int) - p)
+ 		count = (prof_len+1)*sizeof(unsigned int) - p;
+@@ -558,7 +559,7 @@ static ssize_t read_profile(struct file 
+ 	if (copy_to_user(buf,(void *)pnt,count))
+ 		return -EFAULT;
+ 	read += count;
+-	*ppos += read;
++	*ppos = n + read;
+ 	return read;
+ }
+ 
+diff -urNp linux-8250/fs/udf/file.c linux-10000/fs/udf/file.c
+--- linux-8250/fs/udf/file.c
++++ linux-10000/fs/udf/file.c
+@@ -155,7 +155,8 @@ static ssize_t udf_file_write(struct fil
+ {
+ 	ssize_t retval;
+ 	struct inode *inode = file->f_dentry->d_inode;
+-	int err, pos;
++	int err;
++	loff_t pos;
+ 
+ 	if (UDF_I_ALLOCTYPE(inode) == ICBTAG_FLAG_AD_IN_ICB)
+ 	{
+@@ -164,8 +165,11 @@ static ssize_t udf_file_write(struct fil
+ 		else
+ 			pos = *ppos;
+ 
+-		if (inode->i_sb->s_blocksize < (udf_file_entry_alloc_offset(inode) +
+-			pos + count))
++		if (pos < 0 || pos + count < pos)
++			return 0;
++
++		if (inode->i_sb->s_blocksize - udf_file_entry_alloc_offset(inode) <
++			pos + count)
+ 		{
+ 			udf_expand_file_adinicb(inode, pos + count, &err);
+ 			if (UDF_I_ALLOCTYPE(inode) == ICBTAG_FLAG_AD_IN_ICB)
+diff -urNp linux-8250/mm/shmem.c linux-10000/mm/shmem.c
+--- linux-8250/mm/shmem.c
++++ linux-10000/mm/shmem.c
+@@ -921,9 +921,13 @@ static void do_shmem_file_read(struct fi
+ 	struct inode *inode = filp->f_dentry->d_inode;
+ 	struct address_space *mapping = inode->i_mapping;
+ 	unsigned long index, offset;
++	loff_t pos = *ppos;
+ 
+-	index = *ppos >> PAGE_CACHE_SHIFT;
+-	offset = *ppos & ~PAGE_CACHE_MASK;
++	if (unlikely(pos < 0))
++		return;
++
++	index = pos >> PAGE_CACHE_SHIFT;
++	offset = pos & ~PAGE_CACHE_MASK;
+ 
+ 	for (;;) {
+ 		struct page *page;
+diff -urNp linux-8250/net/8021q/vlanproc.c linux-10000/net/8021q/vlanproc.c
+--- linux-8250/net/8021q/vlanproc.c
++++ linux-10000/net/8021q/vlanproc.c
+@@ -232,7 +232,9 @@ static ssize_t vlan_proc_read(struct fil
+ 	struct inode *inode = file->f_dentry->d_inode;
+ 	struct proc_dir_entry *dent;
+ 	char *page;
+-	int pos, offs, len;
++	int pos, len;
++	loff_t n = *ppos;
++	unsigned offs = n;
+ 
+ 	if (count <= 0)
+ 		return 0;
+@@ -249,15 +251,14 @@ static ssize_t vlan_proc_read(struct fil
+ 		return -ENOBUFS;
+ 
+ 	pos = dent->get_info(page, dent->data, 0, 0);
+-	offs = file->f_pos;
+-	if (offs < pos) {
++	if (offs == n && offs < pos) {
+ 		len = min_t(int, pos - offs, count);
+ 		if (copy_to_user(buf, (page + offs), len)) {
+ 			kfree(page);
+ 			return -EFAULT;
+ 		}
+ 
+-		file->f_pos += len;
++		*ppos = offs + len;
+ 	} else {
+ 		len = 0;
+ 	}
+diff -urNp linux-8250/net/atm/br2684.c linux-10000/net/atm/br2684.c
+--- linux-8250/net/atm/br2684.c
++++ linux-10000/net/atm/br2684.c
+@@ -729,6 +729,7 @@ static ssize_t br2684_proc_read(struct f
+ 	unsigned long page;
+ 	int len = 0, x, left;
+ 	page = get_free_page(GFP_KERNEL);
++	loff_t n = *pos;
+ 	if (!page)
+ 		return -ENOMEM;
+ 	left = PAGE_SIZE - 256;
+@@ -736,7 +737,7 @@ static ssize_t br2684_proc_read(struct f
+ 		left = count;
+ 	read_lock(&devs_lock);
+ 	for (;;) {
+-		x = br2684_proc_engine(*pos, &((char *) page)[len]);
++		x = br2684_proc_engine(n, &((char *) page)[len]);
+ 		if (x == 0)
+ 			break;
+ 		if (x > left)
+@@ -751,11 +752,12 @@ static ssize_t br2684_proc_read(struct f
+ 		}
+ 		len += x;
+ 		left -= x;
+-		(*pos)++;
++		n++;
+ 		if (left < 256)
+ 			break;
+ 	}
+ 	read_unlock(&devs_lock);
++	*pos = n;
+ 	if (len > 0 && copy_to_user(buf, (char *) page, len))
+ 		len = -EFAULT;
+ 	free_page(page);
+diff -urNp linux-8250/net/atm/mpoa_proc.c linux-10000/net/atm/mpoa_proc.c
+--- linux-8250/net/atm/mpoa_proc.c
++++ linux-10000/net/atm/mpoa_proc.c
+@@ -109,6 +109,7 @@ static ssize_t proc_mpc_read(struct file
+ 	eg_cache_entry *eg_entry;
+ 	struct timeval now;
+ 	unsigned char ip_string[16];
++	loff_t n = *pos;
+ 	if(count == 0)
+ 	        return 0;
+ 	page = get_free_page(GFP_KERNEL);
+@@ -150,14 +151,14 @@ static ssize_t proc_mpc_read(struct file
+ 		mpc = mpc->next;
+ 	}
+ 
+-	if (*pos >= length) length = 0;
++	if (n != (unsigned)n || n >= length) length = 0;
+ 	else {
+-	  if ((count + *pos) > length) count = length - *pos;
++	  if (count > length - n) count = length - n;
+ 	  if (copy_to_user(buff, (char *)page , count)) {
+  		  free_page(page);
+ 		  return -EFAULT;
+           }
+-	  *pos += count;
++	  *pos = n + count;
+ 	}
+ 
+  	free_page(page);
+diff -urNp linux-8250/net/wanrouter/wanproc.c linux-10000/net/wanrouter/wanproc.c
+--- linux-8250/net/wanrouter/wanproc.c
++++ linux-10000/net/wanrouter/wanproc.c
+@@ -243,7 +243,9 @@ typedef struct wan_stat_entry
+ 		struct inode *inode = file->f_dentry->d_inode;
+ 		struct proc_dir_entry* dent;
+ 		char* page;
+-		int pos, offs, len;
++		int pos, len;
++		loff_t n = *ppos;
++		unsigned offs = n;
+ 
+ 		if (count <= 0)
+ 			return 0;
+@@ -257,14 +259,13 @@ typedef struct wan_stat_entry
+ 			return -ENOBUFS;
+ 			
+ 		pos = dent->get_info(page, dent->data, 0, 0);
+-		offs = file->f_pos;
+-		if (offs < pos) {
++		if (offs == n && offs < pos) {
+ 			len = min_t(unsigned int, pos - offs, count);
+ 			if (copy_to_user(buf, (page + offs), len)) {
+ 				kfree(page);
+ 				return -EFAULT;
+ 			}
+-			file->f_pos += len;
++			*ppos = offs + len;
+ 		}
+ 		else
+ 			len = 0;
