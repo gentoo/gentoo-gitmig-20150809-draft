@@ -1,5 +1,5 @@
-MD5 2ee67cb1c0e7a24ac93c7c8d399f5204 ChangeLog 1442
-MD5 ab5f06ed4f056127bae7cf9f902e9e8e bluez-utils-2.3-r1.ebuild 1800
+MD5 643cce30ae9b135939c1c56e7829d394 ChangeLog 1569
+MD5 e4522898978561377cec0e316a37e501 bluez-utils-2.3-r1.ebuild 1834
 MD5 f7db3b22bfee688d179582ebd6fb0716 bluez-utils-2.3.ebuild 1540
 MD5 23d1ee94cc2fb13eb6dcae0a51b061fa metadata.xml 237
 MD5 2ab25111499ea25953a1231ba729de51 files/bluetooth.rc 1081

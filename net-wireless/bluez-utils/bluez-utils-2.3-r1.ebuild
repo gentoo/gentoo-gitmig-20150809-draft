@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3-r1.ebuild,v 1.2 2003/09/19 18:10:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3-r1.ebuild,v 1.3 2003/09/19 19:35:28 liquidx Exp $
 
 DESCRIPTION="bluetooth utilities"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -53,7 +53,8 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc README
 
-	sed -e "s:\(pin_helper \)/bin/bluepin:\1/etc/bluetooth/pin" \
+	sed -e "s:\(pin_helper \).*:\1/etc/bluetooth/pin;:" \
+		-e "s:security auto;:security user;:" \
 		-i ${D}/etc/bluetooth/hcid.conf
 
 	insinto /etc/init.d
