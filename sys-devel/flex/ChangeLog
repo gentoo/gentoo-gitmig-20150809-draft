@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.19 2004/07/02 08:38:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.20 2004/07/19 08:29:55 mr_bones_ Exp $
+
+  19 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> flex-2.5.4a-r5.ebuild:
+  take out the emake || make bit.  Works for me with -j and no verified
+  bug reports exist; tidy
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> flex-2.5.23.ebuild,
   flex-2.5.31-r1.ebuild, flex-2.5.31.ebuild, flex-2.5.4a-r5.ebuild:
