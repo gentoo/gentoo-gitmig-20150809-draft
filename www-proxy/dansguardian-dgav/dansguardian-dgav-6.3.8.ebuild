@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian-dgav/dansguardian-dgav-6.3.8.ebuild,v 1.1 2005/03/08 19:45:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian-dgav/dansguardian-dgav-6.3.8.ebuild,v 1.2 2005/03/10 10:01:21 mrness Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="http://mirror.dansguardian.org/downloads/2/Stable/${DG_PN}-${DG_PV}.sou
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
-IUSE="threads"
+IUSE=""
 DEPEND="!www-proxy/dansguardian
 	virtual/libc
 	net-libs/libesmtp
@@ -33,8 +33,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${AV_PN}-${PV}-virus-response.patch
 	epatch clamdscan.patch
 
-	#add support for threads
-	useq threads && sed -i -e 's/^\(LIBS *=.*-lesmtp.*\)/\1 -pthread/' autoconf/linux.in
+	#need it by libesmtp
+	sed -i -e 's/^\(LIBS *=.*-lesmtp.*\)/\1 -pthread/' autoconf/linux.in
 }
 
 src_compile() {
