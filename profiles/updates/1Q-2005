@@ -186,3 +186,4 @@ move sys-apps/mbuffer sys-block/mbuffer
 move sys-apps/nwutil sys-block/nwutil
 move sys-apps/nbd sys-block/nbd
 move sys-apps/gpart sys-block/gpart
+move sys-apps/partimage sys-block/partimage
