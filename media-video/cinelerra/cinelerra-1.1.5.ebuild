@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.5.ebuild,v 1.3 2003/07/12 21:12:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.5.ebuild,v 1.4 2003/07/13 02:43:57 lu_zero Exp $
 
 inherit gcc eutils
 export WANT_GCC_3="yes"
@@ -9,7 +9,8 @@ export CFLAGS=${CFLAGS/-O?/-O2}
 
 DESCRIPTION="Cinelerra - Professional Video Editor"
 HOMEPAGE="http://heroinewarrior.com/cinelerra.php3"
-SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
+SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2
+		mirror://gentoo/${PN}-fixes-${PV}.diff.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,7 +25,7 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/compile-1.1.5.diff
+	epatch ${DISTDIR}/${PN}-fixes-${PV}.diff.bz2
 	
 }
 
