@@ -1,6 +1,6 @@
 diff -u -r firebird-1.0.0.796_orig/builds/original/build_kit firebird-1.0.0.796/builds/original/build_kit
 --- firebird-1.0.0.796_orig/builds/original/build_kit	2001-08-06 17:34:57.000000000 +0200
-+++ firebird-1.0.0.796/builds/original/build_kit	2002-03-22 09:09:22.000000000 +0100
++++ firebird-1.0.0.796/builds/original/build_kit	2002-03-22 09:24:24.000000000 +0100
 @@ -67,7 +67,7 @@
  
  #
@@ -12,7 +12,7 @@ diff -u -r firebird-1.0.0.796_orig/builds/original/build_kit firebird-1.0.0.796/
  export LD_LIBRARY_PATH
 diff -u -r firebird-1.0.0.796_orig/builds/original/prefix.linux firebird-1.0.0.796/builds/original/prefix.linux
 --- firebird-1.0.0.796_orig/builds/original/prefix.linux	2002-03-08 12:42:26.000000000 +0100
-+++ firebird-1.0.0.796/builds/original/prefix.linux	2002-03-22 09:07:31.000000000 +0100
++++ firebird-1.0.0.796/builds/original/prefix.linux	2002-03-22 09:24:24.000000000 +0100
 @@ -33,7 +33,7 @@
  PROD_DEBUG_OBJECTS=	nodebug.o
  PROD_SHRLIB_DIR=	-Lsource/jrd -Lsource/interbase/lib
@@ -24,7 +24,7 @@ diff -u -r firebird-1.0.0.796_orig/builds/original/prefix.linux firebird-1.0.0.7
  DEV_DEBUG_OBJECTS=	grammar.o dbg.o dbt.o dmp.o
 diff -u -r firebird-1.0.0.796_orig/jrd/misc.c firebird-1.0.0.796/jrd/misc.c
 --- firebird-1.0.0.796_orig/jrd/misc.c	2000-08-03 22:50:58.000000000 +0200
-+++ firebird-1.0.0.796/jrd/misc.c	2002-03-22 09:07:02.000000000 +0100
++++ firebird-1.0.0.796/jrd/misc.c	2002-03-22 09:24:24.000000000 +0100
 @@ -73,16 +73,16 @@
     pop the arguments off the call stack and put
     them into the passed buffer */
@@ -54,3 +54,15 @@ diff -u -r firebird-1.0.0.796_orig/jrd/misc.c firebird-1.0.0.796/jrd/misc.c
  	    STUFF_SHORT (p, sh);
  	    q = va_arg (ptr, UCHAR*);
  	    STUFF_BYTES (p, q, sh);
+diff -u -r firebird-1.0.0.796_orig/qli/help.e firebird-1.0.0.796/qli/help.e
+--- firebird-1.0.0.796_orig/qli/help.e	2000-08-03 22:53:52.000000000 +0200
++++ firebird-1.0.0.796/qli/help.e	2002-03-22 10:04:29.000000000 +0100
+@@ -160,7 +160,7 @@
+     if (!(l = p - X.TOPIC))
+ 	continue;
+     if (++topics == 1 && banner)
+-	ib_printf ("%s\n", banner, string, parent);
++	ib_printf ("%s\n", banner);
+     p = line + ((ptr - line + COLUMN_WIDTH - 1) / COLUMN_WIDTH) * COLUMN_WIDTH;
+     if (p + l > line + RIGHT_MARGIN)
+ 	{
