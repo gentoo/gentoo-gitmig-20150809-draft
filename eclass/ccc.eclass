@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.7 2003/05/26 23:01:43 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.8 2003/05/28 11:02:02 taviso Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
@@ -164,7 +164,9 @@ replace-ccc-g()
 	# -g will stop ccc/cxx performing optimisation
 	# replacing it with -g3 will let them co-exist.
 	find ${WORKDIR} -iname Makefile | \
-		xargs | ccc-fixup "s#\(^\CX*FLAGS=.*[\'\" \t]\)-g\([\'\" \t]\)#\1-g3\2#g"
+		xargs | ccc-fixup \
+		"s#\(^\CX\{,2\}FLAGS[[:space:]]*=.*[\'\"\x20\t]\)-g\([\'\"\x20\t]\|$\)#\1-g3\2#g"
+	# FIXME: my eyes! it burns!
 }
 
 ccc-elf-check()
