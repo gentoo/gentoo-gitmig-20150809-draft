@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/mmpython-0.4.2.ebuild,v 1.1 2004/05/25 09:04:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/mmpython-0.4.2.ebuild,v 1.2 2004/05/27 07:05:00 kloeri Exp $
 
 inherit distutils
 
@@ -14,4 +14,5 @@ KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
 DEPEND="${DEPEND}
-	>=media-libs/libdvdread-0.9.3"
+	>=media-libs/libdvdread-0.9.3
+	media-video/lsdvd"
