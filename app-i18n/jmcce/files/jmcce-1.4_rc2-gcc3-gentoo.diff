@@ -1,0 +1,12 @@
+diff -urN jmcce-1.4RC2.ORIG/util/tit2tui.c jmcce-1.4RC2/util/tit2tui.c
+--- jmcce-1.4RC2.ORIG/util/tit2tui.c	2002-05-15 22:44:30.000000000 +0900
++++ jmcce-1.4RC2/util/tit2tui.c	2004-01-22 14:49:30.121746528 +0900
+@@ -19,7 +19,7 @@
+ #define _llseek lseek  // for DOS compatible
+ #define _lread  read   // for DOS compatible
+ 
+-//#define ANSI            //* Comment out for UNIX version     
++#define ANSI            //* Comment out for UNIX version     
+ #ifdef ANSI             //* ANSI compatible version          
+ #include <stdarg.h>
+ int average( int first, ... );

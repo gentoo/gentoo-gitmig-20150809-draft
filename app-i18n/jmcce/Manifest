@@ -1,4 +1,5 @@
-MD5 a77fe88ee9ce9da860af7c2239c0baca ChangeLog 358
-MD5 5e376addc2d8962e2275eded79e49969 jmcce-1.4_rc2.ebuild 891
+MD5 f5e29bb104a5b68e6beebb43db2057a6 ChangeLog 521
+MD5 35f5d8d04d54ff090633ca212855a6fa jmcce-1.4_rc2.ebuild 986
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 e77919af8495197697785325e0809b82 files/digest-jmcce-1.4_rc2 65
+MD5 69726c3d942600fbd25f0e519a26dfff files/jmcce-1.4_rc2-gcc3-gentoo.diff 568
