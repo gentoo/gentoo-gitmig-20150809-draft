@@ -1,18 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.2-r1.ebuild,v 1.2 2003/10/28 20:05:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.2-r1.ebuild,v 1.3 2004/02/20 09:47:53 mr_bones_ Exp $
 
+S="${WORKDIR}/${PN}"
 DESCRIPTION="IT/XM/S3M/MOD player library with click removal and IT filters"
 HOMEPAGE="http://dumb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dumb/${P}-fixed.tar.gz"
 
+KEYWORDS="x86"
 LICENSE="DUMB-0.9.2"
 SLOT="0"
-KEYWORDS="x86"
 
 DEPEND=""
-
-S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -25,13 +24,13 @@ EOF
 }
 
 src_compile() {
-	emake OFLAGS="${CFLAGS}" all || die
+	emake OFLAGS="${CFLAGS}" all || die "emake failed"
 }
 
 src_install() {
 	dodir /usr/lib /usr/include /usr/bin
-	make install PREFIX=${D}/usr || die
-	dodoc readme.txt release.txt docs/*
+	make PREFIX="${D}/usr" install || die "make install failed"
+	dodoc readme.txt release.txt docs/* || die "dodoc failed"
 }
 
 pkg_postinst() {
