@@ -1,0 +1,66 @@
+--- dante-1.1.12/sockd/sockd.c.orig	Mon Apr 15 13:33:09 2002
++++ dante-1.1.12/sockd/sockd.c	Mon Apr 15 13:36:51 2002
+@@ -208,7 +208,6 @@
+ 
+ 		close(p);
+ 	}
+-	newprocinit();
+ 
+ 	/*
+ 	 * Check system limits against what we need.
+@@ -293,6 +292,22 @@
+ 		return EXIT_FAILURE;
+ 	}
+ 
++	time(&sockscf.stat.boot);
++
++	if ((sockscf.state.motherpidv = (pid_t *)malloc(
++	sizeof(*sockscf.state.motherpidv) * sockscf.option.serverc)) == NULL)
++		serrx(EXIT_FAILURE, "%s", NOMEM);
++
++	/*
++	 * Would have liked to move the daemon() call to after the "running"
++	 * message below, but we want to know who our children are.
++	 */
++	if (sockscf.option.daemon)
++		if (daemon(1, 0) != 0)
++			serr(EXIT_FAILURE, "daemon()");
++
++	newprocinit();
++
+ #if !HAVE_DISABLED_PIDFILE
+ 	socks_seteuid(NULL, sockscf.uid.privileged);
+ 	if ((fp = fopen(SOCKD_PIDFILE, "w")) == NULL) {
+@@ -308,7 +323,7 @@
+ 	}
+ #endif /* !HAVE_DISABLED_PIDFILE */
+ 
+-	time(&sockscf.stat.boot);
++	*sockscf.state.motherpidv = sockscf.state.pid;	/* main server. */
+ 
+ 	/* fork of requested number of servers.  Start at one 'cause we are "it".  */
+ 	for (p = 1; p < sockscf.option.serverc; ++p) {
+@@ -809,22 +824,13 @@
+ 	if (argc > 0)
+ 		serrx(EXIT_FAILURE, "%s: unknown argument %s", function, *argv);
+ 
+-	if (sockscf.option.daemon)
+-		if (daemon(1, 0) != 0)
+-			serr(EXIT_FAILURE, "%s: daemon()", function);
+-
+ 	if (sockscf.option.configfile == NULL)
+ 		sockscf.option.configfile = SOCKD_CONFIGFILE;
+ 
+ 	optioninit();
+ 
+ 	genericinit();
+-
+-	if ((sockscf.state.motherpidv = (pid_t *)malloc(
+-	sizeof(*sockscf.state.motherpidv) * sockscf.option.serverc)) == NULL)
+-		serrx(EXIT_FAILURE, "%s: %s", function, NOMEM);
+-	*sockscf.state.motherpidv = sockscf.state.pid;	/* main server. */
+-
++	
+ 	fixsettings();
+ 
+ 	if (verifyonly) {

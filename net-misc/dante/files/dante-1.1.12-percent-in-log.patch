@@ -1,0 +1,25 @@
+Index: lib/serr.c
+===================================================================
+RCS file: /share/inferno/src/socks/lib/serr.c,v
+retrieving revision 1.5
+diff -u -r1.5 serr.c
+--- lib/serr.c	12 Dec 2001 14:42:13 -0000	1.5
++++ lib/serr.c	18 Apr 2002 09:20:30 -0000
+@@ -74,7 +74,7 @@
+ 		bufused += snprintfn(&buf[bufused], sizeof(buf) - bufused,
+ 		": %s (errno = %d)", strerror(errno), errno);
+ 
+-		slog(LOG_ERR, buf);
++		slog(LOG_ERR, "%s", buf);
+ 
+ 		/* LINTED expression has null effect */
+ 		va_end(ap);
+@@ -147,7 +147,7 @@
+ 		bufused += snprintfn(&buf[bufused], sizeof(buf) - bufused,
+ 		": %s (errno = %d)", strerror(errno), errno);
+ 
+-		slog(LOG_ERR, buf);
++		slog(LOG_ERR, "%s", buf);
+ 
+ 		/* LINTED expression has null effect */
+ 		va_end(ap);
