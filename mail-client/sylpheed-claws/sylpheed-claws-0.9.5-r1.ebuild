@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.5-r1.ebuild,v 1.1 2004/05/30 03:05:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.5-r1.ebuild,v 1.2 2004/06/24 16:30:16 agriffis Exp $
 
 IUSE="nls gnome gtk2 xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -84,7 +84,7 @@ src_compile() {
 	    && myconf="${myconf} --enable-imlib" \
 	    || myconf="${myconf} --disable-imlib"
 
-	[ use spell -a ! use gtk2 ] \
+	use spell && ! use gtk2 \
 	    && myconf="${myconf} --enable-aspell" \
 	    || myconf="${myconf} --disable-aspell"
 
@@ -125,7 +125,7 @@ src_compile() {
 	emake || die
 
 	# build the ghostscript-viewer plugin
-	if [ `use pdflib` -a -z `use gtk2` ]; then
+	if use pdflib && ! use gtk2; then
 		cd ${S2}
 		econf \
 			--with-sylpheed-dir=${S} || die
@@ -161,7 +161,7 @@ src_install() {
 	doexe launch_firebird tb2sylpheed update-po uudec
 
 	# install the ghostscipt-viewer plugin
-	if [ `use pdflib` -a -z `use gtk2` ]; then
+	if use pdflib && ! use gtk2; then
 		cd ${S2}
 		make plugindir=${D}/usr/lib/${PN}/plugins install || die
 		docinto ${MY_GS}
