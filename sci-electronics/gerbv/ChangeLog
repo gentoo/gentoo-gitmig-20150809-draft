@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/gerbv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.4 2005/02/17 23:29:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.5 2005/03/13 16:57:58 plasmaroo Exp $
+
+*gerbv-1.0.1 (13 Mar 2005)
+
+  13 Mar 2005; <plasmaroo@gentoo.org> -gerbv-1.0.0.ebuild,
+  +gerbv-1.0.1.ebuild:
+  Version bump; bug #83007.
 
   18 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> gerbv-1.0.0.ebuild:
   Added to ~ppc.

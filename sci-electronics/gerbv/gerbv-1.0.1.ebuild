@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-1.0.0.ebuild,v 1.2 2005/02/17 23:29:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-1.0.1.ebuild,v 1.1 2005/03/13 16:57:58 plasmaroo Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_compile() {
 	local confOptions
 
 	use gtk2 && confOptions='--enable-gtk2'
-	use gtk2 && use xinerama && epatch ${FILESDIR}/${P}-Xinerama.patch
+	use gtk2 && use xinerama && epatch ${FILESDIR}/${PN}-1.0.0-Xinerama.patch
 	use png || confOptions="$confOptions --disable-exportpng"
 
 	econf $confOptions || die
