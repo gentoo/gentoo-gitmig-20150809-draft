@@ -3,7 +3,7 @@ MD5 4537d46888da386ec78522e8def821c7 boost-1.29.0.ebuild 1437
 MD5 513b268dfb4fcbe155360721bc2a2682 boost-1.31.0_alpha2-r1.ebuild 3854
 MD5 8c005a1eb57abb8b207e804540b13e34 boost-1.31.0_alpha1.ebuild 3305
 MD5 47cc0eb1fd0be0e7b300c2433f3da645 boost-1.30.0.ebuild 2997
-MD5 586a2db7067ff4f5ce4663881f8fc6ed ChangeLog 2612
+MD5 b1204c41bca3ad772725ec3282d35063 ChangeLog 2640
 MD5 b3bbd582e04282543387892a8c1a813b boost-1.31.0_alpha2.ebuild 3327
 MD5 bbfabae058836ed7950ffc6bb8f08cbe boost-1.30.2.ebuild 2985
 MD5 60837b07dcdf0907c66674b577ab6b9a files/digest-boost-1.31.0_alpha2-r1 67
