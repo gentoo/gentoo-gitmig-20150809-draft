@@ -182,3 +182,4 @@ move app-sci/nco sci-misc/nco
 move app-sci/ncview sci-misc/ncview
 move app-sci/qcad sci-misc/qcad
 move app-sci/qcad-parts sci-misc/qcad-parts
+move app-sci/comedi sci-misc/comedi
