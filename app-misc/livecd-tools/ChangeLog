@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.9 2004/05/12 14:46:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.10 2004/05/14 15:46:29 wolf31o2 Exp $
+
+  14 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Changing maintainers to newly formed livecd herd.
 
   12 May 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   livecd-tools-1.0.2.ebuild:
