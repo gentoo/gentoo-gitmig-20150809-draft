@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.1.0.ebuild,v 1.2 2004/02/04 14:15:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.1.0.ebuild,v 1.3 2004/02/05 01:45:01 vapier Exp $
 
 MY_P=${P/c/C}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/x11
 	virtual/opengl"
