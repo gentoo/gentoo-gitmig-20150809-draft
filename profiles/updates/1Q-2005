@@ -242,3 +242,4 @@ slotmove =dev-java/batik-1.5.1* 0 1.5.1
 move net-misc/gtk-imonc net-dialup/gtk-imonc
 move www-client/w3m-m17n www-client/w3m
 move net-www/charm net-news/charm
+move net-www/nvu app-editors/nvu
