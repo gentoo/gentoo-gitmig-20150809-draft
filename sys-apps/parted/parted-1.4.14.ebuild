@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.14.ebuild,v 1.3 2001/06/02 22:34:02 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.14.ebuild,v 1.4 2001/06/06 14:40:04 pete Exp $
 
 #P=
 A=${P}.tar.gz
@@ -22,5 +22,8 @@ src_compile() {
 
 src_install () {
     try make DESTDIR=${D} install
+    dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
+    cd doc ; docinto doc
+    dodoc API COPYING.DOC FAT USER USER.jp
 }
 
