@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.4 2004/09/28 17:51:08 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.5 2004/10/09 22:06:20 dholm Exp $
+
+  10 Oct 2004; David Holm <dholm@gentoo.org>
+  gnustep-back-art-0.9.5_pre20040928.ebuild:
+  Added to ~ppc.
 
 *gnustep-back-art-0.9.5_pre20040927 (28 Sep 2004)
 

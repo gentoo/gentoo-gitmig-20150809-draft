@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/gnustep-back-xlib-0.9.5_pre20040928.ebuild,v 1.1 2004/09/28 17:50:52 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/gnustep-back-xlib-0.9.5_pre20040928.ebuild,v 1.2 2004/10/09 22:12:51 dholm Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -17,7 +17,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Default X11 back-end component for the GNUstep GUI Library."
 HOMEPAGE="http://www.gnustep.org"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
