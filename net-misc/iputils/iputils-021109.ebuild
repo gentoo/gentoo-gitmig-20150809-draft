@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.3 2003/12/31 17:09:40 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.4 2004/01/03 15:04:13 plasmaroo Exp $
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -27,15 +27,21 @@ src_unpack() {
 	cd ${S}
 
 	cp ${FILESDIR}/${P}-pfkey.patch include-glibc/net/pfkeyv2.h || die
-	sed -e "27s:-O2:${CFLAGS}:" -i Makefile
+	sed -e "27s:-O2:${CFLAGS}:;68s:./configure:unset CFLAGS\;./configure:" -i Makefile
 	sed -e "10s:-ll:-lfl:" -i setkey/Makefile
+	sed -e "51s:ifdef:ifndef:;68d; 69d; 70d;" -i racoon/grabmyaddr.c
+	sed -e '461i\LIBS="$LIBS -lfl -lresolv"' -i racoon/configure.in
 
 }
 
 src_compile() {
 
 	use static && LDFLAGS="${LDFLAGS} -static"
-	make KERNEL_INCLUDE="/usr/include" || die
+	cd ${S}/libipsec && emake KERNEL_INCLUDE="/usr/include" || die
+	cd ${S}/setkey && emake KERNEL_INCLUDE="/usr/include" || die
+	cd ${S}/racoon && autoconf || die
+
+	cd ${S} && emake KERNEL_INCLUDE="/usr/include" || die
 #	if [ "`use doc`" ]; then
 #		make html || die
 #	fi
@@ -44,6 +50,7 @@ src_compile() {
 }
 
 src_install() {
+
 	into /
 	dobin ping ping6
 	dosbin arping
@@ -60,4 +67,5 @@ src_install() {
 #	if [ "`use doc`" ]; then
 #		dohtml doc/*.html
 #	fi
+
 }
