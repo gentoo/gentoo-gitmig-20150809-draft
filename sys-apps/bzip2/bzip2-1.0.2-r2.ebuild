@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.2-r2.ebuild,v 1.19 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.2-r2.ebuild,v 1.20 2003/03/01 20:15:08 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-quality data compressor used extensively by Gentoo Linux"
@@ -32,15 +32,15 @@ src_unpack() {
 src_compile() {
 	if [ -z "`use build`" ]
 	then
-		emake -f Makefile-libbz2_so all || die
+		emake CC="${CC}" CXX="${CXX}" -f Makefile-libbz2_so all || die "Make failed"
 	fi
-	emake all || die
+	emake CC="${CC}" CXX="${CXX}" all || die "Make failed"
 }
 
 src_install() {
 	if [ -z "`use build`" ]
 	then
-		make PREFIX=${D}/usr install || die
+		einstall DESTDIR="${D}" || die
 		mv ${D}/usr/bin ${D}
 		
 		dolib.so ${S}/libbz2.so.${PV}
