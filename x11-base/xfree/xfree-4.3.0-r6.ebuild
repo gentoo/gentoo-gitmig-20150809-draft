@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.21 2004/04/13 15:49:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.22 2004/04/19 00:39:55 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -110,6 +110,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	dev-lang/perl
 	media-libs/libpng
 	app-arch/unzip
+	!x11-base/xorg-x11
 	!virtual/xft
 	!virtual/x11"
 #RDEPEND="$DEPEND"
