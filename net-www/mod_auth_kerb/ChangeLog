@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_kerb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.8 2005/02/17 10:41:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.9 2005/03/04 05:49:59 hollow Exp $
+
+  04 Mar 2005; Benedikt Boehm <hollow@gentoo.org>
+  files/4.11-r1/11_mod_auth_kerb.conf:
+  added default module config
 
   17 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
   mod_auth_kerb-5.0_rc6.ebuild:
