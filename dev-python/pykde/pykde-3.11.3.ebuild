@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.1.ebuild,v 1.5 2004/08/30 15:22:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.3.ebuild,v 1.1 2004/08/30 15:22:02 carlo Exp $
 
 inherit eutils distutils
 
@@ -20,9 +20,9 @@ IUSE="debug doc kjs"
 DEPEND="virtual/libc
 	sys-devel/libtool
 	virtual/python
-	>=dev-python/sip-4.0.1
+	>=dev-python/sip-3.10.2
 	>=dev-python/PyQt-3.12
-	<kde-base/kdelibs-3.3"
+	<kde-base/kdelibs-3.4"
 
 src_compile() {
 	cd ${S}
