@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24.ebuild,v 1.8 2004/11/12 16:59:09 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24.ebuild,v 1.9 2004/11/22 18:53:10 vapier Exp $
 
 inherit libtool
 
@@ -10,8 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-
-KEYWORDS="amd64 arm ~ppc ~ppc64 sparc x86 ~ppc-macos"
+KEYWORDS="amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libsndfile-1.0.0"
