@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lvm-user
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.7 2002/08/01 18:26:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.8 2002/11/07 14:48:33 aliz Exp $
+
+*lvm-user-1.0.6 (07 Nov 2002)
+
+  07 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
 
 *lvm-user-1.0.5 (01 Aug 2002)
 
