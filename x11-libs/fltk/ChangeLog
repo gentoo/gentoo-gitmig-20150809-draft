@@ -1,6 +1,20 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.2 2002/03/28 17:52:25 tod Exp $
+
+*fltk-1.1.0_beta10-r1 (28 Mar 2002)
+
+  28 Mar 2002; Tod Neidt <tod@gentoo.org> fltk-1.1.0_beta10-r1.ebuild :
+
+  Added missing ${myconf} to ./configure.
+  Bug# 1325, thanks for the catch R. Strusberg.
+
+*fltk-1.0.11-r2 (1 Feb 2002)
+
+  28 Mar 2002; Tod Neidt <tod@gentoo.org> fltk-1.0.11-r2.ebuild :
+  
+  Added missing ${myconf} to ./configure. Also fixed up SRC_URI.
+  Bug# 1325, thanks for the catch R. Strusberg.
 
 *fltk-1.1.0_beta10 (1 Feb 2002)
 
