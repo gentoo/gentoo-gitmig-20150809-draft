@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.0.0.1-r1.ebuild,v 1.1 2005/02/07 16:57:44 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.0.0.20.ebuild,v 1.1 2005/03/19 21:45:50 humpback Exp $
 
 inherit eutils
 
@@ -90,7 +90,6 @@ pkg_postinst() {
 		ewarn "On the \"Hardware\" tab, check the box next to \"Full duplex\"."
 	fi
 	##I do not know if this is true for this version. But will leave the note here
-	ewarn "There are some problems with this version of skype when upgrading"
-	ewarn "If you have problems please go to:"
-	ewarn "http://forum.skype.com/bb/viewtopic.php?t=7187"
+	ewarn "If you are upgrading and skype does not autologin do a manual login"
+	ewarn "you will not loose your contacts."
 }
