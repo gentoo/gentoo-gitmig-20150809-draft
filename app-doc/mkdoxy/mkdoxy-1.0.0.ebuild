@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/mkdoxy/mkdoxy-1.0.0.ebuild,v 1.8 2005/01/01 13:17:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/mkdoxy/mkdoxy-1.0.0.ebuild,v 1.9 2005/04/01 02:27:10 agriffis Exp $
 
 DESCRIPTION="mkDoxy generates Doxygen-compatible HTML documentation for makefiles"
 HOMEPAGE="http://sourceforge.net/projects/mkdoxy/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~sparc alpha hppa ~amd64 ia64"
 IUSE=""
 
 DEPEND="app-doc/doxygen
