@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.4 2003/08/30 10:15:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.5 2003/08/30 10:28:18 liquidx Exp $
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml:
+  added metadata.xml
 
   30 Aug 2003; Alastair Tse <liquidx@gentoo.org> libmal-0.31.ebuild:
   moved dev-libs/pilot-link to app-pda/pilot-link
