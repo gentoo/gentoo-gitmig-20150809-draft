@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/fluxspace-0.0.3-r1.ebuild,v 1.1 2003/10/16 21:43:53 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/fluxspace-0.0.3-r1.ebuild,v 1.2 2004/04/12 03:33:20 weeve Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ RDEPEND="x11-wm/fluxbox
 		media-libs/imlib2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 myconf="--prefix=/usr"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.13 2004/04/11 15:13:45 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.14 2004/04/12 03:31:59 weeve Exp $
+
+  11 Apr 2004; Jason Wever <weeve@gentoo.org> idesk-0.5.6.ebuild:
+  Added ~sparc keyword.
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> idesk-0.3.3.ebuild,
   idesk-0.3.4.ebuild, idesk-0.3.5-r1.ebuild, idesk-0.3.5-r2.ebuild,
