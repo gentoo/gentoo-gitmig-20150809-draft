@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-mist
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/ChangeLog,v 1.5 2003/10/14 20:11:04 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/ChangeLog,v 1.6 2004/01/19 23:38:08 gustavoz Exp $
+
+  19 Jan 2004; <gustavoz@gentoo.org> gtk-engines-mist-0.10.ebuild:
+  stable on hppa and sparc
 
   14 Oct 2003; Alastair Tse <liquidx@gentoo.org> gtk-engines-mist-0.10.ebuild:
   bumped to stable
