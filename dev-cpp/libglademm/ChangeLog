@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.11 2004/06/24 21:49:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.12 2004/07/13 23:31:47 khai Exp $
+
+*libglademm-2.2.0 (13 Jul 2004)
+
+  13 Jul 2004; Yi Qiang <khai@gentoo.org> libglademm-2.0.1.ebuild,
+  libglademm-2.2.0.ebuild:
+  Fixed slotting issue and the ever so dreadful depend issues that plague *mm
+  packages.
 
   30 May 2004; Danny van Dyk <kugelfang@gentoo.org> libglademm-2.4.0.ebuild:
   Fixing BUG #52389.
