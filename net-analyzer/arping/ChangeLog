@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.13 2004/06/24 21:55:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.14 2004/07/08 16:31:39 eldad Exp $
+
+  08 Jul 2004; Eldad Zack <eldad@gentoo.org> arping-1.06-r1.ebuild:
+  Added missing IUSE.
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> arping-2.01.ebuild:
   Stable on sparc.
