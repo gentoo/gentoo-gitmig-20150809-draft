@@ -1,15 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.78.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.78.ebuild,v 1.2 2004/02/10 06:14:15 mr_bones_ Exp $
 
 inherit games
 
 DESCRIPTION="An arcade 2D shoot-em-up game"
 HOMEPAGE="http://linux.tlk.fr/"
 SRC_URI="http://www.tlk.fr/lesjeux/${P}.tar.gz"
-LICENSE="GPL-2"
+
 KEYWORDS="x86"
+LICENSE="GPL-2"
 SLOT=0
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=media-libs/libsdl-0.11.0
