@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.10.ebuild,v 1.6 2004/04/05 05:21:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.10.ebuild,v 1.7 2004/05/05 03:53:35 mr_bones_ Exp $
 
-inherit games flag-o-matic gcc
+inherit eutils flag-o-matic gcc games
 
 DESCRIPTION="Addictive OpenGL-based block game"
 HOMEPAGE="http://aluminumangel.org/attack/"
@@ -23,6 +23,7 @@ src_unpack() {
 	sed -i \
 		-e 's:-O6:@CXXFLAGS@:' src/Makefile.in \
 		|| die "sed src/Makefile.in failed"
+	epatch "${FILESDIR}/${PV}-gcc34.patch"
 }
 
 src_compile() {
