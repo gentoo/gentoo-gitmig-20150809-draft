@@ -1,17 +1,27 @@
-MD5 48675b78cc188dcef2ef4653dc49e085 ChangeLog 11185
-MD5 d2c5f3ba084defee6f806a4eab5d3e36 grub-0.92-r1.ebuild 2526
-MD5 fc967cbfa21d5efadccfe2146dfa03df grub-0.93.20030118.ebuild 2512
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8508f95536118f80e92a1ef35ac4cbc1 ChangeLog 11358
+MD5 ab8dffe755fef76f482674e25a29c08a grub-0.92-r1.ebuild 2528
+MD5 cafd80ff67a1bc6b1ecbf32469ee9da8 grub-0.93.20030118.ebuild 2514
+MD5 ef7e47c4eac64f6510f0a90b6fa826fc grub-0.94-r1.ebuild 3484
 MD5 b0eacbb6edb031d87f33ed0b08f5916d metadata.xml 226
-MD5 0dd299714e769591e7e0b6aed01908e6 grub-0.94-r1.ebuild 3431
-MD5 ebff7c57fe55cb10fa55ec38f85c02da grub-0.94-r2.ebuild 3545
-MD5 c541836ee4c16ba4395be138dd07713e grub-0.95.20040823.ebuild 4030
+MD5 bb4f93e519b585262e0710d6cdaf6896 grub-0.94-r2.ebuild 3600
+MD5 b9129e6d1edda49285fdf84f5ed29b7d grub-0.95.20040823.ebuild 4075
 MD5 16039704cf1e6b6f46b4413532af082c files/digest-grub-0.92-r1 133
 MD5 5d1c8e582496db9d7a9b77e76f09f7d8 files/digest-grub-0.93.20030118 139
-MD5 8d898cd9d1928916596cc3f9883eac67 files/grub-0.93-gcc3.3.diff 639
-MD5 cdd6c89d48982ecd544c0b4774755afd files/splash.xpm.gz 33856
 MD5 0b52e1b3a6a9f3c9b86742580eabf28d files/digest-grub-0.94-r1 131
-MD5 e9e73f57d9f9d5c550792980b2635f94 files/grub-0.94-gcc3.4.patch 479
 MD5 0b52e1b3a6a9f3c9b86742580eabf28d files/digest-grub-0.94-r2 131
-MD5 7357395b0d223c0bbf0675a9af31f9c3 files/grub-0.94-grub.conf.patch 7574
 MD5 3a653f86b731c2a17482d25f57b2d041 files/digest-grub-0.95.20040823 149
+MD5 8d898cd9d1928916596cc3f9883eac67 files/grub-0.93-gcc3.3.diff 639
+MD5 e9e73f57d9f9d5c550792980b2635f94 files/grub-0.94-gcc3.4.patch 479
+MD5 7357395b0d223c0bbf0675a9af31f9c3 files/grub-0.94-grub.conf.patch 7574
 MD5 9c1ec8bfdc5f20ce965c2d2167a43162 files/grub-0.95.20040823-warnings.patch 2529
+MD5 cdd6c89d48982ecd544c0b4774755afd files/splash.xpm.gz 33856
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB7/qGArHZZzCEUG0RArrLAJ4rgsy3olG9Ju3E/CPHQw9A3krTfQCfTAPe
+fFZbBdDHPB4sxXfTOBz+vjA=
+=u4O9
+-----END PGP SIGNATURE-----

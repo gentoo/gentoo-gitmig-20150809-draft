@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.13 2004/10/13 20:56:53 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.14 2005/01/20 18:37:45 eradicator Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
@@ -19,9 +19,14 @@ DEPEND=">=sys-libs/ncurses-5.2-r5
 	>=sys-devel/autoconf-2.5"
 PROVIDE="virtual/bootloader"
 
-src_unpack() {
+pkg_setup() {
 	has_m32 || die "your compiler seems to be unable to compile 32bit code. if you are on amd64, make sure you compile gcc with USE=multilib FEATURES=-sandbox"
 
+	ABI_ALLOW="x86"
+	ABI="x86"
+}
+
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 
