@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.5.1.ebuild,v 1.1 2004/12/16 10:30:56 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.5.1.ebuild,v 1.2 2005/01/19 01:01:27 ka0ttic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://alioth.debian.org/download.php/844/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/libc"
