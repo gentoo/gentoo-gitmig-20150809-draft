@@ -1,6 +1,12 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.6 2002/07/14 20:25:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.7 2002/07/29 15:13:53 danarmak Exp $
+
+*wwwoffle-2.7d (29 Jul 2002)
+
+  29 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Bugfix version.
 
 *wwwoffle-2.7b (02 Jun 2002)
 
