@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.4.0/linux-sources-2.4.0_rc10.ebuild,v 1.1 2000/11/10 19:44:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.4.0/linux-sources-2.4.0_rc10.ebuild,v 1.2 2000/11/16 00:29:26 drobbins Exp $
 
 A="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
 	patch-2.4.0-test9.bz2 patch-2.4.0-test10.bz2
-	i2c-2.5.4.tar.gz lm_sensors-2.5.4.tar.gz jfs-0.0.17-patch.tar.gz
+	i2c-2.5.4.tar.gz lm_sensors-2.5.4.tar.gz jfs-0.0.18-patch.tar.gz
 	alsa-driver-0.5.9d.tar.bz2 NVIDIA_kernel-0.9-5.tar.gz"
 
 S=/usr/src/linux
@@ -16,7 +16,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2
 	 	http://devlinux.com/pub/namesys/2.4-beta/linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
   	 	http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.4.tar.gz
 	 	http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz
-	 	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.0.17-patch.tar.gz
+	 	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.0.18-patch.tar.gz
 		ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.9d.tar.bz2
 		ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-5/NVIDIA_kernel-0.9-5.tar.gz"
 
@@ -67,10 +67,10 @@ src_unpack() {
 	cd extras
 	mkdir jfs
 	cd jfs
-	unpack jfs-0.0.17-patch.tar.gz
+	unpack jfs-0.0.18-patch.tar.gz
 	cd ${S}
-	patch -p1 < extras/jfs/jfs-common-v0.0.17-patch 
-	patch -p1 < extras/jfs/jfs-2.4.0-test10-v0.0.17-patch 
+	patch -p1 < extras/jfs/jfs-common-v0.0.18-patch 
+	patch -p1 < extras/jfs/jfs-2.4.0-test10-v0.0.18-patch 
 
 	echo "Preparing for compilation..."
 	try make include/linux/version.h
