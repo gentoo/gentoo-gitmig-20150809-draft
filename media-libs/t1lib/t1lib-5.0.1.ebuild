@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.1.ebuild,v 1.1 2004/02/22 05:49:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.1.ebuild,v 1.2 2004/03/12 11:22:21 vapier Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sunsite.unc.edu/pub/Linux/libs/graphics/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="5"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~amd64 ~ia64"
 IUSE="X doc"
 
 DEPEND="X? ( virtual/x11 )"
@@ -29,14 +29,9 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	local myopt
+	local myopt=""
 
 	use alpha && append-flags -mieee
-
-	use X \
-		&& myconf="--with-x" \
-		|| myconf="--without-x"
 
 	if [ ! -x /usr/bin/latex ] ; then
 		myopt="without_doc"
@@ -44,7 +39,8 @@ src_compile() {
 
 	econf \
 		--datadir=/etc \
-		${myconf} || die
+		`use_with X x` \
+		 || die
 	make ${myopt} || die
 }
 
@@ -73,7 +69,7 @@ src_install() {
 
 	cd ..
 	dodoc Changes LGPL LICENSE README*
-	if [ `use doc` ] ; then
+	if use doc ; then
 		cd doc
 		insinto /usr/share/doc/${PF}
 		doins *.pdf *.dvi
