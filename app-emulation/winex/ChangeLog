@@ -1,9 +1,12 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.5 2002/08/04 18:32:54 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.6 2002/08/04 19:03:32 phoenix Exp $
 
 
 *winex-20020804 (04 Aug 2002)
+
+  04 Aug 2002; phoen][x <phoenix@gentoo.org> winex-20020804.ebuild :
+  Added regedit script.
 
   04 Aug 2002; phoen][x <phoenix@gentoo.org> winex-20020804.ebuild :
   Fixed the install location of generic.ppd and system.ini.

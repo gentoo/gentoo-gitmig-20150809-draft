@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020804.ebuild,v 1.2 2002/08/04 18:32:54 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020804.ebuild,v 1.3 2002/08/04 19:03:32 phoenix Exp $
 
 S=${WORKDIR}/wine
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
@@ -76,6 +76,7 @@ src_install () {
 	# Install the wrapper script
 	mkdir ${D}/usr/bin
 	cp ${FILESDIR}/${P}-winex ${D}/usr/bin/winex
+	cp ${FILESDIR}/${P}-regedit ${D}/usr/bin/regedit
 
 	# Take care of the other stuff
 	cd ${S}
