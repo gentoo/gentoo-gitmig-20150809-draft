@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d-bin/blackdown-java3d-bin-1.3.1-r1.ebuild,v 1.1 2005/04/02 10:01:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d-bin/blackdown-java3d-bin-1.3.1-r1.ebuild,v 1.2 2005/04/02 19:20:52 axxo Exp $
 
 inherit java-pkg
 
@@ -51,7 +51,9 @@ src_install () {
 	dodoc README-Java3D
 
 	java-pkg_dojar jre/lib/ext/*.jar
-	java-pkg_doso jre/lib/i386/*.so
+	use x86 && arch="i386"
+	use amd64 && arch="amd64"
+	java-pkg_doso jre/lib/${arch}/*.so
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}

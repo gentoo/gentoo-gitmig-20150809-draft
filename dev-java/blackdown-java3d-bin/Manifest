@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4d27024116cf749b2f5ab3f48144e9b7 blackdown-java3d-bin-1.3.1-r1.ebuild 1653
-MD5 739888777d80c65e00ecc0a5b2edb26a ChangeLog 1637
+MD5 aada8f7e516eb4c389ee0f899d23dc9b blackdown-java3d-bin-1.3.1-r1.ebuild 1707
+MD5 7817600e9e51fce21558ec3669c26290 ChangeLog 1760
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 b35fdbb0afc61eacc3276bc5de486eb1 files/digest-blackdown-java3d-bin-1.3.1-r1 155
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCTm2F/rLF9B432nYRAiyQAJ9y6iX75muP7rmzbzMs3YvmcJCuMwCfWlXx
-mtkCDSPULvBYpVjTThYlpig=
-=Jl6j
+iD8DBQFCTvDO/rLF9B432nYRAuFDAKCOGdbrGtYvE5mf5GHehj15UGdefQCgyNKU
+3CzjRg4Ss9qZXSsLpxsDXrU=
+=9lxr
 -----END PGP SIGNATURE-----
