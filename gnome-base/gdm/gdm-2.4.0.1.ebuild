@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.1.ebuild,v 1.1 2002/07/10 01:41:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.1.ebuild,v 1.2 2002/07/10 01:55:52 spider Exp $
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -8,17 +8,9 @@ KEYWORDS="x86 ppc"
 
 MY_V="`echo ${PV} |cut -b -5`"
 S=${WORKDIR}/${P}
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gnome/sources/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-
-DEBUG="yes"
-RESTRICT="nostrip"
-# force debug information
-CFLAGS="${CFLAGS} -g"
-CXXFLAGS="${CXXFLAGS} -g"
-
-
 
 RDEPEND=">=sys-libs/pam-0.72
 	>=sys-apps/tcp-wrappers-7.6
