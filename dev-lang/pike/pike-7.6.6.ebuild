@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.6.ebuild,v 1.7 2004/10/20 15:38:20 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.6.ebuild,v 1.8 2004/12/29 02:37:04 ribosome Exp $
 # Contributions by Emil Skoldberg, Fredrik Mellstrom (see ChangeLog)
 
 inherit fixheadtails
@@ -31,7 +31,7 @@ DEPEND="zlib?	( sys-libs/zlib )
 		virtual/glut )
 	sdl?	( media-libs/libsdl )
 	gtk?	( =x11-libs/gtk+-1.2* )
-	fftw?	( dev-libs/fftw )
+	fftw?	( sci-libs/fftw )
 	crypt?	( dev-libs/nettle )
 	dev-libs/gmp"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.24.ebuild,v 1.4 2004/10/20 15:38:20 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.24.ebuild,v 1.5 2004/12/29 02:37:04 ribosome Exp $
 
 IUSE="crypt debug doc fftw gdbm gif gtk jpeg kerberos opengl pdflib scanner svg tiff truetype zlib"
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 
 DEPEND="crypt?	( dev-libs/nettle )
-	fftw?	( dev-libs/fftw )
+	fftw?	( sci-libs/fftw )
 	gdbm?	( sys-libs/gdbm )
 	gif?	( media-libs/giflib )
 	gtk?	( =x11-libs/gtk+-1.2* )
