@@ -1,13 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.0_beta11.ebuild,v 1.1 2003/12/08 03:50:27 kumba Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.0.ebuild,v 1.1 2003/12/24 12:09:59 plasmaroo Exp $
 
 ETYPE="headers"
 inherit kernel
 
 OKV="${PV/_/-}"
-OKV="${OKV/beta/test}"
 KV="${OKV}"
 S=${WORKDIR}/linux-${OKV}
 EXTRAVERSION=""
@@ -25,12 +23,10 @@ SLOT="0"
 PROVIDE="virtual/kernel virtual/os-headers"
 KEYWORDS="-*"
 
-
 # Figure out what architecture we are, and set ARCH appropriately
 ARCH="$(uname -m)"
 ARCH=`echo $ARCH | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/`
 [ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH=sparc64
-
 
 # Archs which have their own separate header packages, add a check here
 # and redirect the user to them
@@ -39,8 +35,6 @@ if [ "${ARCH}" = "mips" ] || [ "${ARCH}" = "mips64" ]; then
 	eerror "Please use sys-kernel/${ARCH/64/}-headers instead."
 	die
 fi
-
-
 
 src_unpack() {
 	unpack ${A}
@@ -59,6 +53,10 @@ src_compile() {
 	if [ -n "`use sparc`" ]; then
 		make ARCH=${ARCH} dep || die "Failed to run 'make dep'"
 	fi
+
+	# User-space patches for various things
+	epatch ${FILESDIR}/${P}-appCompat.patch
+
 }
 
 src_install() {
