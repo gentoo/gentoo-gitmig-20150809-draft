@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/baekmuk-fonts
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.4 2003/08/20 19:55:08 usata Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.5 2004/01/09 22:41:48 weeve Exp $
+
+  09 Jan 2004; Jason Wever <weeve@gentoo.org> baekmuk-fonts-2.1-r1.ebuild:
+  Marked stable on sparc.
 
 *baekmuk-fonts-2.1-r1 (31 Jul 2003)
 

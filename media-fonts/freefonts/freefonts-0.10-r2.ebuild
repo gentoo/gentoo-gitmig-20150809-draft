@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.4 2003/09/11 01:39:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.5 2004/01/09 22:43:19 weeve Exp $
 
 S=${WORKDIR}/freefont
 DESCRIPTION="A Collection of Free True Type Fonts"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/fonts/${P}.tar.gz"
 HOMEPAGE="http://www.gimp.org"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 sparc ~ppc"
 SLOT="0"
 LICENSE="freedist"
 IUSE="X"
