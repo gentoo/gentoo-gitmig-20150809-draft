@@ -1,14 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.12 2003/06/02 08:08:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.13 2003/06/05 01:30:58 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 DEBUG="yes"
 RESTRICT="nostrip"
 
-IUSE="3dfx sse mmx 3dnow xml truetype nls cjk doc"
-
+IUSE="3dfx sse mmx 3dnow xml truetype nls cjk doc ipv6"
 
 filter-flags "-funroll-loops"
 
@@ -39,9 +38,9 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="1.1.4"
+PATCH_VER="2.1.0"
 FT2_VER="2.1.3"
-XCUR_VER="0.2"
+XCUR_VER="0.3"
 SISDRV_VER="180403-1"
 SAVDRV_VER="1.1.27t"
 MGADRV_VER="1_3_0beta"
@@ -99,7 +98,7 @@ SRC_URI="${SRC_URI}
 	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	mirror://gentoo/eurofonts-X11.tar.bz2
 	mirror://gentoo/xfsft-encodings.tar.bz2
-	mirror://gentoo/XFree86-compose.dir.bz2
+	mirror://gentoo/XFree86-compose.dir-0.1.bz2
 	mirror://gentoo/XFree86-en_US.UTF-8.old.bz2
 	mirror://gentoo/XFree86-locale.alias.bz2
 	mirror://gentoo/XFree86-locale.dir.bz2
@@ -108,7 +107,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -129,8 +128,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 # unzip - needed for savage driver (version 1.1.27t)
 # x11-libs/xft -- blocked because of interference with xfree's
  	
-PDEPEND="x11-terms/xterm
-	3dfx? ( >=media-libs/glide-v3-3.10 )"
+PDEPEND="3dfx? ( >=media-libs/glide-v3-3.10 )"
 
 PROVIDE="virtual/x11
 	virtual/opengl
@@ -142,6 +140,8 @@ PROVIDE="virtual/x11
 inherit eutils flag-o-matic gcc
 
 DESCRIPTION="Xfree86: famous and free X server"
+
+PATCH_DIR=${WORKDIR}/patch
 
 src_unpack() {
 
@@ -199,24 +199,36 @@ src_unpack() {
 	then
 		# Do not apply this patch for gcc-2.95.3, as it cause compile to fail,
 		# closing bug #10146.
-		EPATCH_EXCLUDE="107_all_4.2.1-gcc32-internal-compiler-error.patch.bz2"
+		EPATCH_EXCLUDE="107_all_4.2.1-gcc32-internal-compiler-error.patch"
 	fi
 
 	if [ -z "`use debug`" ]
 	then
-		rm -f ${WORKDIR}/patch/202_all_4.2.99.3-acecad-debug.patch.bz2
+		mv -f ${PATCH_DIR}/5901* ${PATCH_DIR}/excluded
+	else
+		mv -f ${PATCH_DIR}/0120* ${PATCH_DIR}/excluded
 	fi
 # FIXME: bug #19812, 075 should be deprecated by 076, left as
 # TDFX_RISKY for feedback (put in -r3 if no problems)
 	if [ "`use 3dfx`" -a "${TDFX_RISKY}" = "yes" ]
 	then
-		rm -f ${WORKDIR}/patch/075*
+		mv -f ${PATCH_DIR}/5850* ${PATCH_DIR}/excluded
 	else
-		rm -f ${WORKDIR}/patch/076*
+		mv -f ${PATCH_DIR}/5851* ${PATCH_DIR}/excluded
+	fi
+
+	if [ -z "`use ipv6`" ]
+	then
+		mv -f ${PATCH_DIR}/200* ${PATCH_DIR}/excluded
+	else
+		if [ -z "`use doc`" ]
+		then
+			mv -f ${PATCH_DIR}/2001* ${PATCH_DIR}/excluded
+		fi
 	fi
 
 	# Various Patches from all over
-	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patch/
+	EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
 	
 	unset EPATCH_EXCLUDE
 	
@@ -253,12 +265,7 @@ src_unpack() {
 		done
 		ebegin "Done unpacking Core Fonts"; eend 0
 	fi
-	# Customise font directory to /usr/share/fonts
-	ebegin "Changing Font directory to /usr/share/fonts"
-	sed -i "s:#define FontDir.*:#define FontDir /usr/share/fonts:" \
-		${S}/config/cf/X11.tmpl
-	eend 0
-
+	
 	ebegin "Setting up config/cf/host.def"
 	cd ${S}; cp ${FILESDIR}/${PV}/site.def config/cf/host.def || die
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
@@ -269,9 +276,8 @@ src_unpack() {
 	echo "#define InstallXserverSetUID NO" >> config/cf/host.def
 	echo "#define BuildServersOnly NO" >> config/cf/host.def
 
-	# This problem has gone away for recent gcc's and xfree's
 	# Bug #12775 .. fails with -Os.
-	# replace-flags "-Os" "-O2"
+	replace-flags "-Os" "-O2"
 
 	if [ "`gcc-version`" != "2.95" ]
 	then
@@ -328,16 +334,25 @@ src_unpack() {
 		then
 			echo "#define HasMMXSupport	YES" >> config/cf/host.def
 			echo "#define MesaUseMMX YES" >> config/cf/host.def
+		else
+			echo "#define HasMMXSupport	NO" >> config/cf/host.def
+			echo "#define MesaUseMMX NO" >> config/cf/host.def
 		fi
 		if [ -n "`use 3dnow`" ]
 		then
 			echo "#define Has3DNowSupport YES" >> config/cf/host.def
 			echo "#define MesaUse3DNow YES" >> config/cf/host.def
+		else
+			echo "#define Has3DNowSupport NO" >> config/cf/host.def
+			echo "#define MesaUse3DNow NO" >> config/cf/host.def
 		fi
 		if [ -n "`use sse`" ]
 		then
 			echo "#define HasKatmaiSupport YES" >> config/cf/host.def
 			echo "#define MesaUseKatmai YES" >> config/cf/host.def
+		else
+			echo "#define HasKatmaiSupport NO" >> config/cf/host.def
+			echo "#define MesaUseKatmai NO" >> config/cf/host.def
 		fi
 
 		# build with glide3 support? (build the tdfx_dri.o module)
@@ -364,6 +379,14 @@ src_unpack() {
 		echo "#define XF86CardDrivers mga glint s3virge sis savage trident \
 			chips tdfx fbdev ati DevelDrivers vga nv XF86OSCardDrivers \
 			XF86ExtraCardDrivers" >> config/cf/host.def
+	fi
+
+	if [ "${ARCH}" = "sparc" ]
+	then
+		echo "#define XF86CardDrivers sunffb sunleo suncg6 suncg3 suncg15 \
+		suntcx sunbw2 glint mga tdfx ati savage vesa vga fbdev \
+		XF86OSCardDrivers XF86ExtraCardDrivers \
+		DevelDrivers" >> config/cf/host.def
 	fi
 
 	if [ -n "`use xml`" ]
@@ -411,6 +434,11 @@ src_unpack() {
 		fi
 	fi
 
+	if [ "`use ipv6`" ]
+	then
+		echo "#define HasIPv6 YES" >> config/cf/host.def
+	fi
+
 #	# Build with the binary MatroxHAL driver
 #	echo "#define HaveMatroxHal YES" >> config/cf/host.def
 #	echo "#define UseMatroxHal YES" >> config/cf/host.def
@@ -427,7 +455,7 @@ src_unpack() {
 	eend 0
 
 	cd ${S}
-	bzcat ${DISTDIR}/XFree86-compose.dir.bz2 > nls/compose.dir
+	bzcat ${DISTDIR}/XFree86-compose.dir-0.1.bz2 > nls/compose.dir
 	bzcat ${DISTDIR}/XFree86-locale.alias.bz2 > nls/locale.alias
 	bzcat ${DISTDIR}/XFree86-locale.dir.bz2 > nls/locale.dir
 	bzcat ${DISTDIR}/XFree86-en_US.UTF-8.old.bz2 > nls/Compose/en_US.UTF-8
@@ -446,12 +474,6 @@ src_unpack() {
 			fi
 		done
 	fi
-
-	if [ use debug ]
-	then
-		sed -i 's|libidriver.a: $(SUBDIRS)|libidriver.a: all.subdirs|' \
-			programs/Xserver/hw/xfree86/input/Makefile
-	fi
 }
 
 src_compile() {
@@ -467,7 +489,6 @@ src_compile() {
 	unset MAKE_OPTS
 
 	einfo "Building XFree86..."
-
 	emake World || die
 
 	if [ -n "`use nls`" ]
@@ -568,17 +589,17 @@ src_install() {
 	if [ -n "`use truetype`" ]
 	then
 		ebegin "Installing MS Core Fonts"
-		dodir /usr/share/fonts/truetype
-		cp -af ${WORKDIR}/truetype/*.ttf ${D}/usr/share/fonts/truetype
+		dodir /usr/X11R6/lib/X11/fonts/truetype
+		cp -af ${WORKDIR}/truetype/*.ttf ${D}/usr/X11R6/lib/X11/fonts/truetype
 		eend 0
 	fi
 
 	# EURO support
 	ebegin "Euro Support..."
 	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-8x14.bdf | \
-		gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-8x14-lat9.pcf.gz
+		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-8x14-lat9.pcf.gz
 	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-9x16.bdf | \
-		gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-9x16-lat9.pcf.gz
+		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-9x16-lat9.pcf.gz
 	eend 0
 
 	# Standard symlinks
@@ -655,11 +676,11 @@ src_install() {
 
 	# Yet more Mandrake
 	ebegin "Encoding files for xfsft font server..."
-	dodir /usr/share/fonts/encodings
-	cp -a ${WORKDIR}/usr/share/fonts/encodings/* \
-		${D}/usr/share/fonts/encodings
+	dodir /usr/X11R6/lib/X11/fonts/encodings
+	cp -a ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/* \
+		${D}/usr/X11R6/lib/X11/fonts/encodings
 	
-	for x in ${D}/usr/share/fonts/encodings/{.,large}/*.enc
+	for x in ${D}/usr/X11R6/lib/X11/fonts/encodings/{.,large}/*.enc
 	do
 		[ -f "${x}" ] && gzip -9 -f ${x}
 	done
@@ -672,7 +693,7 @@ src_install() {
 		gunzip *.Z
 		gzip -9 *.pcf
 		cd ${S}
-		cp -a ${WORKDIR}/ukr ${D}/usr/share/fonts
+		cp -a ${WORKDIR}/ukr ${D}/usr/X11R6/lib/X11/fonts
 		eend 0
 	fi
 	
@@ -780,25 +801,6 @@ src_install() {
 	doins ${WORKDIR}/cursors/gentoo-blue/cursors/*
 	insinto /usr/share/cursors/xfree/gentoo-silver/cursors
 	doins ${WORKDIR}/cursors/gentoo-silver/cursors/*
-
-	# font paths
-	if [ -f ${ROOT}/etc/X11/XF86Config ]
-	then
-		sed "s:/usr/X11R6/lib/X11/fonts:/usr/share/fonts:g" \
-			${ROOT}/etc/X11/XF86Config > ${D}/etc/X11/XF86Config
-	fi
-
-	if [ -f ${ROOT}/etc/X11/fs/config ]
-	then
-		sed "s:/usr/X11R6/lib/X11/fonts:/usr/share/fonts:g" \
-			${ROOT}/etc/X11/fs/config > ${D}/etc/X11/fs/config
-	fi
-
-	sed -i "s:/usr/X11R6/lib/X11/fonts:/usr/share/fonts:g" \
-		${D}/etc/X11/XF86Config.example
-
-	sed -i "s:/usr/X11R6/lib/X11/fonts:/usr/share/fonts:g" \
-		${D}/etc/init.d/xfs
 }
 
 pkg_preinst() {
@@ -851,9 +853,9 @@ pkg_preinst() {
 
 	# clean out old fonts.* and encodings.dir files, as we
 	# will regenerate them
-	find ${ROOT}/usr/share/fonts/ -type f -name 'fonts.*' \
+	find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'fonts.*' \
 		-exec rm -f {} \;
-	find ${ROOT}/usr/share/fonts/ -type f -name 'encodings.dir' \
+	find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'encodings.dir' \
 		-exec rm -f {} \;
 
 	# make sure we do not have any stale files lying round
@@ -925,15 +927,15 @@ pkg_postinst() {
 		# Create the encodings.dir in /usr/X11R6/lib/X11/fonts/encodings
 		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
 		${ROOT}/usr/X11R6/bin/mkfontdir -n \
-			-e ${ROOT}/usr/share/fonts/encodings \
-			-e ${ROOT}/usr/share/fonts/encodings/large \
-			-- ${ROOT}/usr/share/fonts/encodings
+			-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings \
+			-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large \
+			-- ${ROOT}/usr/X11R6/lib/X11/fonts/encodings
 		eend 0
 
 		if [ -x ${ROOT}/usr/X11R6/bin/ttmkfdir ]
 		then
 			ebegin "Creating fonts.scale files..."
-			for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1)
+			for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 			do
 				[ -z "$(ls ${x}/)" ] && continue
 				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
@@ -944,7 +946,7 @@ pkg_postinst() {
 				     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 				then
 					${ROOT}/usr/X11R6/bin/ttmkfdir -x 2 \
-						-e ${ROOT}/usr/share/fonts/encodings/encodings.dir \
+						-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 						-o ${x}/fonts.scale -d ${x}
 				fi
 			done
@@ -952,7 +954,7 @@ pkg_postinst() {
 		fi
 			
 		ebegin "Generating fonts.dir files..."
-		for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1)
+		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
 			[ -z "$(ls ${x}/)" ] && continue
 			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
@@ -961,15 +963,15 @@ pkg_postinst() {
 			then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
 				${ROOT}/usr/X11R6/bin/mkfontdir \
-					-e ${ROOT}/usr/share/fonts/encodings \
-					-e ${ROOT}/usr/share/fonts/encodings/large \
+					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings \
+					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large \
 					-- ${x}
 			fi
 		done
 		eend 0
 
 		ebegin "Generating Xft Cache..."
-		for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1)
+		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
 			[ -z "$(ls ${x}/)" ] && continue
 			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
@@ -986,7 +988,7 @@ pkg_postinst() {
 		eend 0
 		
 		ebegin "Fixing permissions..."
-		find ${ROOT}/usr/share/fonts/ -type f -name 'font.*' \
+		find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'font.*' \
 			-exec chmod 0644 {} \;
 		eend 0
 
