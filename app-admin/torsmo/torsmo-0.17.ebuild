@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17.ebuild,v 1.6 2004/07/18 05:55:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17.ebuild,v 1.7 2004/08/16 10:20:29 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="system monitor that sits in the corner of your desktop"
 HOMEPAGE="http://torsmo.sourceforge.net/"
@@ -9,7 +11,7 @@ SRC_URI="mirror://sourceforge/torsmo/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
-IUSE=""
+IUSE="mozilla"
 
 RDEPEND="virtual/libc
 	virtual/x11"
@@ -19,6 +21,12 @@ DEPEND="${RDEPEND}
 	sys-apps/grep
 	sys-apps/sed
 	sys-devel/gcc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use mozilla && epatch ${FILESDIR}/${P}-mozilla.patch
+}
 
 src_install() {
 	emake DESTDIR=${D} install || die "make install failed"
