@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.24 2005/03/08 10:40:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.25 2005/03/08 11:55:55 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -91,7 +91,8 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # Defaults:
 export MULTILIB_ABIS=${MULTILIB_ABIS:-"default"}
 export DEFAULT_ABI=${DEFAULT_ABI:-"default"}
-export ABI=${ABI:-"default"}
+# This causes econf to set --libdir=/usr/lib where it didn't before
+#export ABI=${ABI:-"default"}
 export CFLAGS_default
 export LDFLAGS_default
 export CHOST_default=${CHOST_default:-${CHOST}}
@@ -174,8 +175,6 @@ get_abi_var() {
 	local abi
 	if [ $# -gt 1 ]; then
 		abi=${2}
-	elif [ -n "${ABI}" ]; then
-		abi=${ABI}
 	elif [ -n "${DEFAULT_ABI}" ]; then
 		abi=${DEFAULT_ABI}
 	else
@@ -282,7 +281,7 @@ is_final_abi() {
 	has_multilib_profile || return 0
 	local ALL_ABIS=$(get_install_abis)
 	local LAST_ABI=${ALL_ABIS/* /}
-	[[ "${LAST_ABI}" == "${ABI}" ]]
+	[[ ${LAST_ABI} == ${ABI} ]]
 }
 
 # echo the number of ABIs we will be installing for
@@ -306,7 +305,7 @@ get_ml_incdir() {
 		return 0
 	fi
 
-	local abi=${ABI:-${DEFAULT_ABI}}
+	local abi=${ABI-${DEFAULT_ABI}}
 	if [[ ${#} -gt 0 ]]; then
 		abi=${1}
 		shift
