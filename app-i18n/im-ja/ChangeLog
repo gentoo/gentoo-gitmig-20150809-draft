@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.9 2003/09/13 01:33:12 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.10 2003/12/13 15:26:07 usata Exp $
+
+*im-ja-0.9_alpha20031109 (14 Dec 2003)
+
+  14 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> im-ja-0.4.ebuild,
+  im-ja-0.5.ebuild, im-ja-0.7_p2.ebuild, im-ja-0.8.ebuild,
+  im-ja-0.9_alpha20031109.ebuild:
+  Included experimental XIM support. It is masked until 0.9 is released
+  (and will be removed after that). See bug #33123.
+  Removed old ebuilds and marked 0.8 stale on x86 and sparc.
 
 *im-ja-0.8 (08 Sep 2003)
 
