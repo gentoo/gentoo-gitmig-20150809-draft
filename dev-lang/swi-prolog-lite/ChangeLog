@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/swi-prolog-lite
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.6 2003/07/11 22:14:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.7 2004/01/10 00:45:50 george Exp $
+
+swi-prolog-lite-5.2.8 (09 Jan 2003)
+
+  09 Jan 2003; George Shapovalov <george@gentoo.org> swi-prolog-lite-5.2.8.ebuild, metadata.xml :
+  new version (#30305)
+  destdir patch no longer necessary. Thanks to Alfredo Matos <alf_matos@netcabo.pt> for update
 
 *swi-prolog-lite-5.1.13 (23 May 2003)
 
