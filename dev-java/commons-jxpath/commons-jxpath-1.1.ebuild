@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.1.ebuild,v 1.4 2004/10/16 17:07:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.1.ebuild,v 1.5 2004/10/16 23:12:22 axxo Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jakarta.apache.org/commons/jxpath/"
 SRC_URI="mirror://apache/jakarta/commons/jxpath/source/${PN}-${PV}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	=dev-java/servletapi-2.3*
-	>=dev-java/jdom-1.0_beta9
+	=dev-java/jdom-1.0_beta9*
 	>=dev-java/ant-1.4
 	junit? ( >=dev-java/junit-3.7 )"
 RDEPEND=">=virtual/jdk-1.3"
