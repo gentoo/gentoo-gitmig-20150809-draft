@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-mpg123
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mpg123/ChangeLog,v 1.2 2005/02/13 21:48:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mpg123/ChangeLog,v 1.3 2005/02/28 10:41:52 eradicator Exp $
+
+  28 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-mpg123-1.2.10-r1.ebuild:
+  Stable amd64, sparc, x86.
 
   13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   xmms-mpg123-1.2.10-r1.ebuild:
