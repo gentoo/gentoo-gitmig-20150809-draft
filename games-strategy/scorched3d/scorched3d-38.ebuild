@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-38.ebuild,v 1.1 2004/12/05 11:14:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-38.ebuild,v 1.2 2004/12/06 08:41:24 mr_bones_ Exp $
 
-inherit games
+inherit wxwidgets games
 
 DESCRIPTION="Multi-player tank battle in 3D (OpenGL)"
 HOMEPAGE="http://www.scorched3d.co.uk/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scorched3d/Scorched3D-${PV}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE="mysql"
+IUSE="mysql gtk2"
 
 DEPEND=">=media-libs/libsdl-1.0.1
 	media-libs/sdl-net
@@ -24,13 +24,12 @@ DEPEND=">=media-libs/libsdl-1.0.1
 S="${WORKDIR}/scorched"
 
 pkg_setup() {
-	if wx-config --cppflags | grep gtk2u >& /dev/null; then
-		einfo "${PN} will not build if wxGTK was compiled"
-		einfo "with unicode support.  If you are using a version of"
-		einfo "wxGTK <= 2.4.2, you must set USE=-gtk2.  In newer versions,"
-		einfo "you must set USE=-unicode."
-		die "wxGTK must be re-emerged without unicode suport"
+	if ! use gtk2; then
+		need-wxwidgets gtk || die "No gtk1 version of x11-libs/wxGTK found"
+	else
+		need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
 	fi
+	games_pkg_setup
 }
 
 src_compile() {
