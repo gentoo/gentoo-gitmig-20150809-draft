@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /home/cvsroot/gentoo-x86/skel.build,v 1.7 2001/08/25 21:15:08 chadh Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.33.0.ebuild,v 1.10 2003/03/14 08:23:54 george Exp $
 
 IUSE="X"
 
@@ -21,10 +21,10 @@ DEPEND=">=dev-lang/tcl-8.2
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="*"
+KEYWORDS="x86 ppc sparc alpha"
 
 src_compile() {
-    
+
 	local myconf
 	local tclv
 	local tkv
@@ -37,7 +37,7 @@ src_compile() {
 
 	#configure needs to find the files tclConfig.sh and tclInt.h
 	myconf="--with-tcl=/usr/lib --with-tclinclude=/usr/lib/tcl$tclv/include/generic"
-	
+
 	if use X; then
 		#--with-x is enabled by default
 		#configure needs to find the file tkConfig.sh and tk.h
@@ -48,14 +48,13 @@ src_compile() {
 		myconf="$myconf --without-x"
 	fi
 
-	econf $myconf || die	
+	econf $myconf || die
 	emake || die
 
 }
 
 src_install () {
-	
-	einstall || die
-	
-}
 
+	einstall || die
+
+}

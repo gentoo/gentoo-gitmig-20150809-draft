@@ -1,9 +1,13 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.10 2003/03/10 22:28:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.11 2003/03/14 08:23:54 george Exp $
 
 *expect-5.37.1-r1 (20 Jul 2002)
 
+  13 Mar 2003; George Shapovalov <george@gentoo.org> epect-5.33.0.ebuild :
+  well, this version is really old, but since it is only second one awailable in portage,
+  leaving it in so far. Cleaned it up somewhat, adjusted KEYWORDS..
+  
   10 Mar 2003; Aron Griffis <agriffis@gentoo.org> expect-5.37.1-r1.ebuild:
   Mark stable on alpha
 
