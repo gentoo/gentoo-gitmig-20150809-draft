@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r2.ebuild,v 1.3 2005/02/18 22:38:15 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r2.ebuild,v 1.4 2005/02/18 22:40:05 greg_g Exp $
 
 inherit eutils flag-o-matic
 
@@ -26,7 +26,6 @@ DEPEND="virtual/x11 virtual/xft
 	nas? ( >=media-libs/nas-1.5 )
 	odbc? ( dev-db/unixODBC )
 	mysql? ( dev-db/mysql )
-	sqlite? ( =dev-db/sqlite-2* )
 	firebird? ( dev-db/firebird )
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( dev-db/postgresql )
