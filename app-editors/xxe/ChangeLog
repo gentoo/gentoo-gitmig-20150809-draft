@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xxe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.20 2005/01/01 13:37:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.21 2005/01/25 19:47:32 rizzo Exp $
+
+  25 Jan 2005; Don Seiler <rizzo@gentoo.org> xxe-2.8_p1.ebuild:
+  Adding postinst note about setting LANG for special characters. Closes Bug
+  #78479.
 
   17 Dec 2004; Tom Martin <slarti@gentoo.org> xxe-2.8_p1.ebuild:
   Marked ~amd64, resolves bug 74461.
