@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/obsd-sources/obsd-sources-3.4_p8.ebuild,v 1.1 2003/12/07 14:00:53 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/obsd-sources/obsd-sources-3.4_p8.ebuild,v 1.2 2003/12/07 16:09:38 g2boojum Exp $
 
 DESCRIPTION="OpenBSD userland and kernel sources"
 HOMEPAGE="http://www.openbsd.com/"
@@ -38,6 +38,6 @@ src_compile() {
 
 src_install() {
 	dodir /usr/src
-	cp -r * ${D}/usr/src
+	cp -R * ${D}/usr/src
 }
 
