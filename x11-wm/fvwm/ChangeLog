@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.83 2004/10/16 19:42:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.84 2004/10/19 08:26:40 usata Exp $
+
+  19 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> fvwm-2.4.18.ebuild,
+  fvwm-2.5.10-r3.ebuild, fvwm-2.5.10-r5.ebuild, fvwm-2.5.10-r6.ebuild,
+  fvwm-2.5.12.ebuild:
+  Block x11-wm/metisse; bug #66374.
 
   16 Oct 2004; Mike Frysinger <vapier@gentoo.org> fvwm-2.4.18.ebuild,
   fvwm-2.5.10-r3.ebuild, fvwm-2.5.10-r5.ebuild, fvwm-2.5.10-r6.ebuild,

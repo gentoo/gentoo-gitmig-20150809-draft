@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.18.ebuild,v 1.6 2004/10/16 19:42:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.18.ebuild,v 1.7 2004/10/19 08:26:40 usata Exp $
 
 inherit gnuconfig
 
@@ -25,7 +25,8 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
 		sys-apps/debianutils
 		virtual/x11"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	!x11-wm/metisse"
 
 src_unpack() {
 	unpack ${A}
