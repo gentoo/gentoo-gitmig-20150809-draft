@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.147 2003/11/21 16:01:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.148 2003/11/27 22:02:17 pappy Exp $
+
+*gcc-3.2.3-r3 (27 Nov 2003)
+
+  27 Nov 2003; Alexander Gabert <pappy@gentoo.org> gcc-3.2.3-r3.ebuild,
+  gcc-3.3.2-r3.ebuild, files/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch:
+  adding bumpee versions of gcc-3.3.2 and gcc-3.2.3 for proper migration of the
+  propolice functions to the glibc, this updated is needed because of bugs like
+  25299 and other related -static -fstack-protector building in the current
+  2.3.2-r3 glibc
 
   21 Nov 2003; Aron Griffis <agriffis@gentoo.org> gcc-3.3.2-r2.ebuild:
   Add ~ia64
