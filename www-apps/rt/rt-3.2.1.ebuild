@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.1 2004/08/25 13:01:01 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.2 2004/08/27 21:15:14 rl03 Exp $
 
 inherit webapp eutils
 
-IUSE="mysql postgres fastcgi apache2"
+IUSE="mysql postgres fastcgi"
+#IUSE="mysql postgres fastcgi apache2"
 
 DESCRIPTION="RT is an industrial-grade ticketing system"
 HOMEPAGE="http://www.bestpractical.com/rt/"
@@ -61,22 +62,23 @@ RDEPEND="
 	mysql? ( >=dev-db/mysql-4.0.13 >=dev-perl/DBD-mysql-2.0416 )
 	postgres? ( >=dev-db/postgresql-7.4.2-r1 dev-perl/DBD-Pg )
 	fastcgi? ( dev-perl/FCGI net-www/mod_fastcgi )
-	apache2? ( >=net-www/apache-2 dev-perl/FCGI net-www/mod_fastcgi )
-	!apache2? ( =net-www/apache-1* =dev-perl/libapreq-1* )
+	!fastcgi? ( =dev-perl/libapreq-1* )
+	=net-www/apache-1*
 "
-#	apache2? ( >=net-www/apache-2  >=dev-perl/mod_perl-1.99.11 >=dev-perl/libapreq-2 ) : ( =net-www/apache-1* dev-perl/libapreq-1* )
+#	apache2? ( >=net-www/apache-2 dev-perl/FCGI net-www/mod_fastcgi )
+#	!apache2? ( =net-www/apache-1* =dev-perl/libapreq-1* )
 
 LICENSE="GPL-2"
 
 pkg_setup() {
 	webapp_pkg_setup
 
-	if use apache2; then
-		ewarn "mod_perl2 isn't ready for prime time, fastcgi will be used instead"
-		ewarn "If you really want mod_perl2, you can edit the ebuild and uncomment a few lines"
-		ewarn "but if your RT breaks, you get to keep the pieces."
-		ewarn
-	fi
+#	if use apache2; then
+#		ewarn "mod_perl2 isn't ready for prime time, fastcgi will be used instead"
+#		ewarn "If you really want mod_perl2, you can edit the ebuild and uncomment a few lines"
+#		ewarn "but if your RT breaks, you get to keep the pieces."
+#		ewarn
+#	fi
 	ewarn
 	ewarn "If you are upgrading from an existing _RT2_ installation,"
 	ewarn "stop this ebuild (Ctrl-C now), download the upgrade tool,"
