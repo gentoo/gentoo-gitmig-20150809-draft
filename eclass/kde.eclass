@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.104 2004/08/26 15:57:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.105 2004/09/03 14:30:28 lv Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
 # Revisions Caleb Tennis <caleb@gentoo.org>
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 
-inherit base kde-functions
+inherit base eutils kde-functions
 ECLASS=kde
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the $ECLASS eclass"
@@ -117,7 +117,11 @@ kde_src_compile() {
 				export KDEDIRS="${PREFIX}:${KDEDIR}"
 
 				cd $S
-				./configure ${myconf} || die "died running ./configure, $FUNCNAME:configure"
+				./configure \
+					${myconf} \
+					--libdir="\${exec_prefix}/$(get_libdir)" \
+					|| die "died running ./configure, $FUNCNAME:configure"
+					
 				# Seems ./configure add -O2 by default but hppa don't want that but we need -ffunction-sections
 				if [ "${ARCH}" = "hppa" ]
 				then
