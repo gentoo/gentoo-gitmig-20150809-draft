@@ -1,4 +1,4 @@
-./sys-apps/baselayout/baselayout-1.6.4.ebuild
+>=sys-apps/baselayout-1.6.4
 ./sys-libs/glibc/glibc-2.2.4-r2.ebuild
 ./sys-apps/bash/bash-2.04-r4.ebuild
 ./sys-apps/bzip2/bzip2-1.0.1-r4.ebuild
