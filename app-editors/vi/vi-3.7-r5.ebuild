@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r5.ebuild,v 1.3 2004/02/22 15:59:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r5.ebuild,v 1.4 2004/02/25 14:17:36 aliz Exp $
 
 IUSE=""
 
@@ -28,6 +28,7 @@ src_compile() {
 	# WARN is set in the environment in /sbin/functions.sh
 	# (unfortunately generic variable name).  Need to reset on the
 	# make command-line to keep from breaking the build.
+	make clean || die
 	make DESTDIR=/usr \
 		TERMLIB=termlib \
 		PRESERVEDIR=/var/lib/expreserve \
