@@ -1,7 +1,14 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.24 2002/06/12 11:30:29 spider Exp $
-*gnome-2.0.0_rc1.ebuild (12 Jun 2002)
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.25 2002/06/14 16:27:47 spider Exp $
+
+gnome-2.0.0_rc1 (14 Jun 2002)
+  14 Jun 2002 ;Spider <spider@gentoo.org> gnome-2.0.0_rc1.ebuild
+  I have removed the previous rc1 and added a r22 because -rc wasn't final.
+  the new rc1 has a anti-dependency on gnome-core and includes gnome-games
+
+
+*gnome-2.0.0_rc1 (12 Jun 2002)
   12 Jun 2002; Spider <spider@gentoo.org> gnome-2.0.0_rc1.ebuild :
   Finally the first releaser candidate is out
   
