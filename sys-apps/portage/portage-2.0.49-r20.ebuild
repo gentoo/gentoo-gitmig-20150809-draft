@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r20.ebuild,v 1.2 2004/01/01 08:21:25 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r20.ebuild,v 1.3 2004/01/06 11:07:44 carpaski Exp $
 
 IUSE="build"
 
@@ -151,6 +151,19 @@ src_install() {
 	dodoc ${S}/ChangeLog
 }
 
+
+pkg_preinst() {
+	if has livecvsportage $FEATURES; then
+		if [ "$ROOT" == "/" ]; then
+			rm -Rf "${IMAGE}"/usr/lib/portage/pym/*
+
+			mv "${IMAGE}"/usr/lib/portage/bin/{sandbox,tbz2tool} ${T}
+			rm -Rf "${IMAGE}"/usr/lib/portage/bin/*
+			mv "${T}"/{sandbox,tbz2tool} "${IMAGE}"/usr/lib/portage/bin/
+		fi
+	fi
+}
+
 pkg_postinst() {
 	local x
 
@@ -210,7 +223,7 @@ pkg_postinst() {
 		# Kill the existing counter and generate a new one.
 		echo -n "Recalculating the counter... "
 		mv /var/cache/edb/counter /var/cache/edb/counter.old
-		python -c 'import portage; portage.db["/"]["vartree"].dbapi.counter_tick("/")' &>/dev/null
+		python -c 'import sys; sys.path = ["/usr/lib/portage/pym"]+sys.path; import portage; portage.db["/"]["vartree"].dbapi.counter_tick("/")' &>/dev/null
 		if [ -f /var/cache/edb/counter ] ; then
 			echo "Counter updated successfully."
 			rm -f /var/cache/edb/counter.old
@@ -225,7 +238,7 @@ pkg_postinst() {
 		cd ${ROOT}var/cache/edb/dep
 		#Nick, I changed the following to deal with situations where stderr spits out stuff like: "!!! CANNOT IMPORT FTPLIB:"
 		#which causes an infinite loop. (drobbins)
-		python -c 'import portage; myf=open("/tmp/auxdbkl","w"); myf.write(str(len(portage.auxdbkeys))); myf.close()'
+		python -c 'import sys; sys.path = ["/usr/lib/portage/pym"]+sys.path; import portage; myf=open("/tmp/auxdbkl","w"); myf.write(str(len(portage.auxdbkeys))); myf.close()'
 		AUXDBKEYLEN=`cat /tmp/auxdbkl`
 		rm -f /tmp/auxdbkl
 		find ${ROOT}var/cache/edb/dep -type f -exec wc -l {} \; | egrep -v "^ *${AUXDBKEYLEN}" | sed 's:^ \+[0-9]\+ \+\([^ ]\+\)$:\1:' 2>/dev/null | xargs -n 50 -r rm -f
