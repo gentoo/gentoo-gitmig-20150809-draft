@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Jens Blaesche <mr.big@pc-trouble.de>
-# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.1-r1.ebuild,v 1.1 2001/10/08 20:36:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.1-r1.ebuild,v 1.2 2001/10/27 01:53:23 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Zapping is a TV- and VBI- viewer for the Gnome environment."
@@ -26,8 +26,10 @@ src_compile() {
 }
 
 src_install () {
-	make prefix=${D}/usr			\
-	     sysconfdir=${D}/etc		\
+	make prefix=${D}/usr				\
+	     sysconfdir=${D}/etc			\
+	     infodir=${D}/usr/share/info	\
+	     mandir=${D}/usr/share/man		\
 	     install || die
 
 	rm ${D}/usr/bin/zapzilla
