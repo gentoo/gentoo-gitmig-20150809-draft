@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.17 2003/02/12 07:39:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.18 2003/03/31 20:26:15 azarah Exp $
+
+*nvidia-glx-1.0.4349 (30 Mar 2003)
+
+  30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> nvidia-glx-1.0.4349.ebuild :
+  New version, closing bug #18541.
 
 *nvidia-glx-1.0.4191 (31 Jan 2003)
 
