@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.16.ebuild,v 1.2 2003/09/05 01:23:29 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.16.ebuild,v 1.3 2003/09/07 22:25:24 mholzer Exp $
 
 IUSE="gtk gtk2 nls"
 
@@ -28,7 +28,7 @@ src_compile() {
 
 	if use gtk2 || use gtk
 	then
-		emake || die
+		PREFIX=/usr emake || die
 	else
 		cd ${S}/server
 		emake glib12=1 || die
