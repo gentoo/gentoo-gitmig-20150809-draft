@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.62 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.63 2002/10/27 09:52:36 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 
 inherit base kde-functions
@@ -73,6 +73,11 @@ kde_src_compile() {
 				fi
 
 				export PATH="${KDEDIR}/bin:${PATH}"
+				
+				# configure doesn't need to know about the other KDEs installed.
+				# in fact, if it does, it sometimes tries to use the wrong dcopidl, etc.
+				# due to the messed up way configure searches for things
+				export KDEDIRS="${PREFIX}:${KDEDIR}"
 
 				cd $S
 				./configure ${myconf} || die "died running ./configure, $FUNCNAME:configure"
