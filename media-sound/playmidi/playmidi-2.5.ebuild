@@ -1,13 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5.ebuild,v 1.4 2004/04/08 09:01:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5.ebuild,v 1.5 2004/05/10 07:21:30 mr_bones_ Exp $
 
 inherit eutils
 
 DESCRIPTION="Command Line and GUI based MIDI Player"
 HOMEPAGE="http://sourceforge.net/projects/playmidi/"
-LICENSE="GPL-2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc"
 IUSE="svga X gtk"
 
 DEPEND="sys-libs/ncurses
@@ -16,37 +19,47 @@ DEPEND="sys-libs/ncurses
 		=x11-libs/gtk+-1* )
 	X? ( virtual/x11 )"
 
-SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc"
 
-S=${WORKDIR}/${P/2.5/2.4}
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
+S="${WORKDIR}/${P/2.5/2.4}"
 
-CFLAGS="${CFLAGS} `/usr/bin/gtk-config --cflags`"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/${P}.patch"
+}
 
 src_compile() {
-	epatch ${FILESDIR}/${P}.patch
+	local targets="playmidi"
+	local LIBGTK=
+
+	use svga && targets="$targets splaymidi"
+	use X && targets="$targets xplaymidi"
+	if use gtk ; then
+		targets="$targets gtkplaymidi"
+		CFLAGS="${CFLAGS} $(/usr/bin/gtk-config --cflags)"
+		LIBGTK="$(gtk-config --libs)"
+	fi
 
 	echo "5" | ./Configure
 
-	if [ `use gtk` ] ; then
-		CFLAGS="${CFLAGS} `/usr/bin/gtk-config --cflags`"
-	fi
-
-	make CFLAGS="${CFLAGS}" playmidi || die
-	use svga && make CFLAGS="${CFLAGS}" splaymidi || die
-	use X && make CFLAGS="${CFLAGS}" xplaymidi || die
-	use gtk && make CFLAGS="${CFLAGS}" LIBGTK="`gtk-config --libs`" gtkplaymidi || die
+	emake -j1 CFLAGS="${CFLAGS}" depend clean
+	emake LIBGTK="${LIBGTK}" CFLAGS="${CFLAGS}" ${targets} \
+		|| die "emake failed"
 }
 
 src_install() {
-	dobin playmidi || die
-	use svga && dobin splaymidi || die
-	use X && dobin xplaymidi || die
-	use gtk && dobin gtkplaymidi || die
+	dobin playmidi || die "dobin failed"
+	if use svga ; then
+		dobin splaymidi || die "dobin failed (svga)"
+	fi
+	if use gtk ; then
+		dobin gtkplaymidi || die "dobin failed (gtk)"
+	fi
+	if use X ; then
+		dobin xplaymidi || die "dobin failed (X)"
+	fi
 
-	dodoc BUGS COPYING QuickStart README.1ST
+	dodoc BUGS QuickStart README.1ST
 
 	docinto techref
 	dodoc techref/*
