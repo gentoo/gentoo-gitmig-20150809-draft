@@ -1,4 +1,14 @@
-MD5 04c8f0e3e0272ffdc9f56b0aaa64da7a ChangeLog 741
-MD5 fbd0b2b1364c02fdb0e08029d0fd8f3f XML-Filter-BufferText-1.01.ebuild 616
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0cf1eec2fe64ae53a54f4a77f13eba8b ChangeLog 852
+MD5 926790f10e27cc11638fd98b5af2ea86 XML-Filter-BufferText-1.01.ebuild 615
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 ccf39969b038b55e144e3945fd782899 files/digest-XML-Filter-BufferText-1.01 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5bA1KRy60XGEcJIRAjKIAKCjto5mMsmU+9D0q/ksdUt266ZFDQCfVPUX
+kT4p9+g5c7efeOdgnAuVQNM=
+=PLPJ
+-----END PGP SIGNATURE-----
