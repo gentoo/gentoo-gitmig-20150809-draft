@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.34 2004/12/14 09:15:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.35 2004/12/14 09:38:54 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP-3"
 SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session shared sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session shared sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="$DEPEND
@@ -40,6 +40,7 @@ DEPEND="$DEPEND
 	gmp? ( dev-libs/gmp )
 	imap? ( virtual/imap-c-client )
 	jpeg? ( >=media-libs/jpeg-6b )
+	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	libedit? ( dev-libs/libedit )
 	mcve? ( net-libs/libmonetra )
@@ -365,6 +366,7 @@ php5-sapi_src_compile () {
 	enable_extension_with		"ingres"		"ingres"		1
 	enable_extension_with		"interbase"		"interbase"		1
 	# ircg extension not supported on Gentoo at this time
+	enable_extension_with		"kerberos"		"kerberos"		1
 	enable_extension_disable	"libxml"		"xml2"			0
 	enable_extension_enable		"mbstring"		"nls"			1
 	enable_extension_with		"mcrypt"		"crypt"			1
