@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.29 2004/04/29 18:36:57 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.30 2004/04/29 19:51:33 lordvan Exp $
+
+  29 Apr 2004; Thomas Raschbacher <lordvan@gentoo.org> clamav-0.68.ebuild,
+  clamav-0.70_rc.ebuild:
+  Marked clamav-0.70 stable x86
+  Removed clamav-0.68 because of RAR bug
+  Removed clamav-0.70_rc
 
   29 Apr 2004; Guy Martin <gmsoft@gentoo.org> clamav-0.70.ebuild:
   Marked stable on hppa for bug #46264.
@@ -10,7 +16,7 @@
 
 *clamav-0.70 (17 Apr 2004)
 
-  17 Apr 2004; root <root@gentoo.org> clamav-0.70.ebuild:
+  17 Apr 2004; Thomas Raschbacher <lordvan@gentoo.org> clamav-0.70.ebuild:
   version bump (lots of changes; see the application ChangeLog/Webpage)
 
   07 Apr 2004; Seemant Kulleen <seemant@gentoo.org> clamav-0.68.1.ebuild:
