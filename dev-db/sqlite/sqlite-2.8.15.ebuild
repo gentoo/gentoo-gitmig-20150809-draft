@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.15.ebuild,v 1.11 2004/12/11 23:02:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.15.ebuild,v 1.12 2004/12/20 13:35:06 absinthe Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ DEPEND="virtual/libc
 	dev-lang/tcl"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha ~arm mips hppa ~ppc64 ~amd64 ppc-macos"
+KEYWORDS="x86 ppc sparc alpha ~arm mips hppa ~ppc64 amd64 ppc-macos"
 
 src_unpack() {
 
