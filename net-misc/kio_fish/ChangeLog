@@ -1,16 +1,20 @@
 # ChangeLog for net-misc/kio_fish
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kio_fish/ChangeLog,v 1.7 2003/02/12 08:25:27 vapier Exp $
-
-  31 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kio_fish/ChangeLog,v 1.8 2003/04/23 12:44:12 danarmak Exp $
 
   Added warning message: this app is part of KDE 3.1 (kdebase). You really
   should upgrade to kde 3.1 and use it from there. This old standalone
   version is not being updated or fixed anymore.
 
+  31 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *kio_fish-1.1.2 (7 Jun 2002)
+
+  23 Apr 2003; Dan Armak <danarmak@gentoo.org> kio_fish-1.1.2.ebuild:
+  Fixed pkg_postinst funtion (was mistakenly called src_postinst, which did
+  nothing). Upgraded warning message.
 
   07 Jul 2002; phoen][x <phoenix@gentoo.org> kio_fish-1.1.2.ebuild:
   Added KEYWORDS.
