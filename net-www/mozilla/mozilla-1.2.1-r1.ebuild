@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r1.ebuild,v 1.2 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r1.ebuild,v 1.3 2002/12/09 20:17:53 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -89,17 +89,15 @@ moz_setup() {
 	if [ -z "${CC}" ]
 	then
 		export CC="gcc"
-
+	fi
+	if [ -z "${CXX}" ]
+	then
 		if [ "$(gcc-major-version)" -eq "3" ]
 		then
 			export CXX="g++"
 		else
 			export CXX="gcc"
 		fi
-	fi
-	if [ -z "${CXX}" ]
-	then
-		export CXX="${CC}"
 	fi
 
 	#This should enable parallel builds, I hope
@@ -164,9 +162,12 @@ src_unpack() {
 
 	if [ -z "`use gtk2`" ]
 	then
-		# Get mozilla to link to Xft2.0 that we install in tmp directory
-		# <azarah@gentoo.org> (18 Nov 2002)
-		epatch ${FILESDIR}/${PV%\.*}/${P%\.*}b-Xft-includes.patch.bz2
+		if [ -z "`use moznoxft`" ]
+		then
+			# Get mozilla to link to Xft2.0 that we install in tmp directory
+			# <azarah@gentoo.org> (18 Nov 2002)
+			epatch ${FILESDIR}/${PV%\.*}/${P%\.*}b-Xft-includes.patch.bz2
+		fi
 	else
 		# Update Gtk+2 bits from CVS
 		epatch ${FILESDIR}/${PV%\.*}/${P%\.*}b-gtk2.patch.bz2
@@ -361,7 +362,7 @@ src_compile() {
 	#
 	# *********************************************************************
 
-	if [ -z "`use gtk2`" ]
+	if [ -z "`use gtk2`" -a -z "`use moznoxft`" ]
 	then
 		cd ${FC_S}
 		einfo "Configuring Xft2.0..."
@@ -510,8 +511,11 @@ src_install() {
 		einfo "Installing Mozilla NSS..."
 		# Install the headers ('make install' do not work for headers ...)
 		insinto /usr/lib/mozilla/include/nss
+		doins ${S}/dist/public/nss/*.h
 		doins ${S}/dist/public/seccmd/*.h
 		doins ${S}/dist/public/security/*.h
+		# These come with zlib ...
+		rm -f ${D}/usr/lib/mozilla/include/nss/{zconf.h,zlib.h}
 
 		cd ${S}/security/nss
 
