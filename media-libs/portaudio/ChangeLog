@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/portaudio
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.4 2003/10/24 13:02:12 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.5 2004/03/25 01:39:23 eradicator Exp $
+
+  24 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  portaudio-18.ebuild:
+  ~sparc - see bug #45132.
+
+  26 Oct 2002, Bart Verwilst <verwilst@gentoo.org>
+
+  Added to stable tree (removed ~).
 
 *portaudio-18 (14 Oct 2002) 
 
@@ -8,7 +16,4 @@
 
   Initial ebuild, by Tue Haste Andersen <haste@diku.dk>.
 
-  26 Okt 2002, Bart Verwilst <verwilst@gentoo.org>
-
-  Added to stable tree (removed ~).
 

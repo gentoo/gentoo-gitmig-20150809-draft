@@ -1,3 +1,4 @@
-MD5 ceca857c493c2f9f5d266723cbbce432 ChangeLog 449
-MD5 b01207ce42a67a209a535af9c72df2a7 portaudio-18.ebuild 795
+MD5 5ac162f5a50a0595b515f6510bef6bca portaudio-18.ebuild 803
+MD5 46cd3623bd3d257d9846bf679a0cd1c6 ChangeLog 578
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 216bea28964aee7308b174121350d20d files/digest-portaudio-18 62
