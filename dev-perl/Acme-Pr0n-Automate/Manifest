@@ -1,4 +1,14 @@
-MD5 f5cfdaf332cc28afc97b7b1d39aff870 Acme-Pr0n-Automate-0.05.ebuild 554
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d0db5283cf7c5f999d2cc5afa91a950d Acme-Pr0n-Automate-0.05.ebuild 552
 MD5 820e096a17b921128402da59763e846b ChangeLog 508
-MD5 d76c2c7644241fe38b3a5e4b8e4d3b68 metadata.xml 379
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 937913c89b2ac7ee79de5993e434f26f files/digest-Acme-Pr0n-Automate-0.05 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBcDVtI1lqEGTUzyQRAvFwAJ0aFsF3iCJBm4EVbC0WaN1AuIGC2gCfRVNy
+Y4EiMm0+2ohda4Zxjn/vR+4=
+=S+C+
+-----END PGP SIGNATURE-----
