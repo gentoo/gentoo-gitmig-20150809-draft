@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/legends
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.1 2003/09/26 15:52:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.2 2003/11/22 04:58:02 mr_bones_ Exp $
+
+*legends-0.3.0 (21 Nov 2003)
+
+  21 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> legends-0.3.0.ebuild:
+  version bump; ebuild patch by Donnie Berkholz via bug 32504
 
 *legends-0.2.2b (26 Sep 2003)
 
