@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/TermReadKey
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.9 2003/03/04 04:15:39 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.10 2003/06/04 01:05:51 mcummings Exp $
+
+*TermReadKey-2.21 (03 Jun 2003)
+
+  03 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  TermReadKey-2.21.ebuild:
+  New CPAN version
 
 *TermReadKey-2.19-r1 (03 Mar 2003)
 
