@@ -5,6 +5,9 @@
 # script originally from Courier distfile original name = courier.sysvinit
 # adapted for Gentoo by Brian Jackson
 #
+# TODO
+# should we update all the .dat/.pem files when the source/config files are 
+#	newer than the .dat/.pem files?
 
 prefix="/usr"
 exec_prefix="/usr/bin"
@@ -158,7 +161,7 @@ stop() {
 	[ -x ${sbindir}/courier-pop3d ] && \
 		ebegin " Stopping courier-pop3d" && ${sbindir}/courier-pop3d stop
 
-	[ -x ${sbindir}/pop3d-ssl ] && \
+	[ -x ${sbindir}/courier-pop3d-ssl ] && \
 		ebegin " Stopping courier-pop3d-ssl" && ${sbindir}/courier-pop3d-ssl stop
 
 	[ -x ${sbindir}/courier-imapd ] && \
