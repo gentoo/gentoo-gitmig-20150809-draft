@@ -1,6 +1,14 @@
-MD5 4abcaaffe0e2bc00ab3f44ed59ab4b4c ChangeLog 2139
-MD5 536195a889b2b674acae78aa320e2991 ircii-20030709-r2.ebuild 864
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8457bf8e3f2465307db20a44ad76369a ChangeLog 2264
+MD5 9f633e03b12bbdef04cb451cadbf46ee ircii-20040820.ebuild 825
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 f3f6d9af505db0f37d299bda7ab1e3b5 ircii-20040820.ebuild 849
-MD5 954a7ad41538e4a5f68b720074da0891 files/digest-ircii-20030709-r2 67
 MD5 d050eac938d29febadf6f5cc939f0f03 files/digest-ircii-20040820 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBlk/WI1lqEGTUzyQRApN9AJ9xtDB20GkXyhiVs9f0773n+TNpaACfaTuo
+cXlfQHb5fR/7PyOfAt8Tnnk=
+=1Fr1
+-----END PGP SIGNATURE-----
