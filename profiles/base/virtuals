@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.17 2004/06/04 04:03:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.18 2004/06/20 02:39:13 george Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -55,3 +55,4 @@ x11-libs/xaw					x11-libs/Xaw3d
 virtual/ruby		dev-lang/ruby
 virtual/squeak-image				dev-lang/squeak-fullimage
 virtual/blas					app-sci/blas-atlas
+virtual/lapack		app-sci/lapack-atlas
