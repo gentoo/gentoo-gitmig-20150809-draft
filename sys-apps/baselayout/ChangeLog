@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.5 2002/03/03 22:13:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.6 2002/03/04 19:14:33 azarah Exp $
+
+*baselayout-1.7.3 (4 March 2002)
+
+  4 March 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.7.3.ebuild :
+
+  Add updated xdm scripts to handle the "dead keys" bug. They should move to
+  the xfree package when tested fully.
+
+  Other minor ajustments.
 
 *baselayout-1.7.2 (3 March 2002)
 
