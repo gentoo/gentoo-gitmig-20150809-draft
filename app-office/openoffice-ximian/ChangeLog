@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.92 2005/01/16 16:30:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.93 2005/01/16 22:59:19 suka Exp $
+
+  16 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/1.1.3/hardened-link.patch, +files/1.1.3/pthreadlink-fix.patch,
+  openoffice-ximian-1.3.7.ebuild:
+  Try to fix build problems with hardened-gccs, patches provided by
+  Kevin F. Quinn <co@kevquinn.com> in bug #52642
 
   16 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-ximian-1.3.7.ebuild:
