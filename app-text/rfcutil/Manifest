@@ -1,5 +1,5 @@
-MD5 d35848d8dde867d56a6dc8ee6c12b3b6 ChangeLog 735
-MD5 4cd448aeb58446a897cb299430282792 rfcutil-3.2.3.ebuild 1279
+MD5 158072404835b05a99d208a7ce3e561b rfcutil-3.2.3.ebuild 1281
+MD5 9732c93cba94954d6c3bc8951990e37a ChangeLog 844
 MD5 ab5b1af445d492d26a576f3f2e8204c3 metadata.xml 336
 MD5 93feedf0b8940d11c9662ebc22dec752 files/rfc-3.2.3.diff 840
 MD5 da1829ff508f6abe3d77c2e87e8599bf files/digest-rfcutil-3.2.3 60
