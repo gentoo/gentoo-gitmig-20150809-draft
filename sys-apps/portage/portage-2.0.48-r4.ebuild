@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r4.ebuild,v 1.1 2003/07/18 18:13:20 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r4.ebuild,v 1.2 2003/07/18 18:48:40 carpaski Exp $
 
 IUSE="build"
 
@@ -150,29 +150,26 @@ pkg_postinst() {
 		rm -f /var/cache/edb/mtimes
 	fi
 
+	if [ ! -f "/etc/portage/package.mask" ]; then
+	  if [ -f "/etc/portage/profiles/package.mask" ]; then
+			ln /etc/portage/profiles/package.mask /etc/portage/package.mask
+		fi
+	fi
+
 	echo
 	eerror "NOTICE: PLEASE *REPLACE* your make.globals. All user changes to variables"
 	eerror "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
-	echo
-	eerror "NOTICE: The wheel group requirement for non-root users has been changed to"
-	eerror "group portage. Group portage must be a valid group for user to use portage."
 	echo
 	einfo "Feature additions are noted in help and make.conf descriptions. Update"
 	einfo "them using 'etc-update' please. Maintaining current configs for portage"
 	einfo "and other system packages is fairly important for the continued health"
 	einfo "of your system."
 	echo
-	einfo "A worldfile rebuilding script is available to regenerate entries that"
-	einfo "should be in your worldfile but were removed by a recently discovered"
-	einfo "'-e bug' or if you deleted it: run 'regenworld' as root."
+	einfo "/etc/portage/profiles/package.mask has been moved to /etc/portage/package.mask"
+	einfo "a hardlink has been created to the new location if the file exists in profiles"
+	einfo "already."
 	echo
-	eerror "The late 2.0.48 portages contains Manifest files which contain all"
-	eerror "the files and ebuilds used, not just the archives extracted. This is to"
-	eerror "help discovering corruption and increasing security and should require"
-	eerror "no extra work from end-users. If portage reports a bad file that is not"
-	eerror "in the distfiles directory, after you've deleted it an re-sync'd, report it."
-	echo
-	if [ -z $PORTAGE_TEST ]; then
+	if [ -z "$PORTAGE_TEST" ]; then
 		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
 		echo -ne "\a" ; sleep 1
 		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
