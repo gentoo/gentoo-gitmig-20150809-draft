@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.11 2002/10/18 20:50:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.12 2002/11/04 17:38:40 seemant Exp $
 
 IUSE="icc X svga"
 
@@ -86,7 +86,7 @@ src_install ()
 {
 	emake DESTDIR=${D} install || die
 
-	mkdir -p ${D}/etc
+	dodir /etc
 	dosym /usr/share/povray-3.5/povray.ini /etc/povray.ini
 }
 

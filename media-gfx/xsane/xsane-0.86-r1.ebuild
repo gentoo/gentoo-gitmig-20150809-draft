@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.86-r1.ebuild,v 1.5 2002/10/20 18:48:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.86-r1.ebuild,v 1.6 2002/11/04 17:38:09 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XSane is a graphical scanning frontend"
@@ -31,11 +31,11 @@ src_install () {
 	
 	# link xsane so it is seen as a plugin in gimp
 	if [ -d /usr/lib/gimp/1.2 ]; then
-		mkdir -p ${D}/usr/lib/gimp/1.2/plug-ins
-		ln -sf /usr/bin/xsane ${D}/usr/lib/gimp/1.2/plug-ins
+		dodir /usr/lib/gimp/1.2/plug-ins
+		dosym /usr/bin/xsane /usr/lib/gimp/1.2/plug-ins
 	fi
 	if [ -d /usr/lib/gimp/1.3 ]; then
-		mkdir -p ${D}/usr/lib/gimp/1.3/plug-ins
-		ln -sf /usr/bin/xsane ${D}/usr/lib/gimp/1.3/plug-ins
+		dodir /usr/lib/gimp/1.3/plug-ins
+		dosym /usr/bin/xsane /usr/lib/gimp/1.3/plug-ins
 	fi
 }
