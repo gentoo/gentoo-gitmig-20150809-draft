@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.25 2002/10/28 10:22:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.26 2002/10/28 15:42:57 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -459,6 +459,13 @@ pkg_preinst() {
 		rm -rf ${ROOT}/usr/lib/opengl/xfree/*
 	fi
 
+	# clean out old fonts.* and encodings.dir files, as we
+	# will regenerate them
+	find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'fonts.*' \
+		-exec rm -f {} \;
+	find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'encodings.dir' \
+		-exec rm -f {} \;
+
 	# make sure we do not have any stale files lying round
 	# that could break things.
 	rm -f ${ROOT}/usr/X11R6/lib/libGL.*
@@ -477,10 +484,6 @@ pkg_postinst() {
 
 		# This one cause ttmkfdir to segfault :/
 		rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large/gbk-0.enc.gz
-
-		# These could be from old installations, and should not be present
-		find ${ROOT}/usr/X11R6/lib/X11/fonts/encodings -type f -name 'fonts.*' \
-			-exec rm -f {} \;
 
 		# ********************************************************************
 		#  A note about fonts and needed files:
@@ -512,6 +515,7 @@ pkg_postinst() {
 		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
 			[ -z "$(ls ${x}/)" ] && continue
+			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 		
 			# Only generate .scale files if there are truetype
 			# fonts present ...
@@ -528,6 +532,7 @@ pkg_postinst() {
 		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
 			[ -z "$(ls ${x}/)" ] && continue
+			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 		
 			if [ "${x/encodings}" = "${x}" ]
 			then
