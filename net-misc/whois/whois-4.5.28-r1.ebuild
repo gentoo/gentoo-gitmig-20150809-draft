@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.28-r1.ebuild,v 1.5 2002/10/04 06:15:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.28-r1.ebuild,v 1.6 2002/11/21 16:44:58 hannes Exp $
 
+IUSE="nls"
 MY_P=${P/-/_}
 S=${WORKDIR}/${P}
 DESCRIPTION="improved Whois Client"
