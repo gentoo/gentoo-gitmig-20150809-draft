@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.7.1.ebuild,v 1.11 2003/06/08 04:56:34 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.7.1.ebuild,v 1.12 2003/07/11 21:41:53 aliz Exp $
 
 S=${WORKDIR}/java-gnome-${PV}
 DESCRIPTION="GTK+ bindings for Java"
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc
 RDEPEND="$DEPEND"
 SLOT="0.7"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 IUSE=""
 

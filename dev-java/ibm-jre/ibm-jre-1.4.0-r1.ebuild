@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.4.0-r1.ebuild,v 1.3 2003/02/13 10:09:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.4.0-r1.ebuild,v 1.4 2003/07/11 21:41:53 aliz Exp $
 
 inherit nsplugins
 
@@ -17,7 +17,7 @@ PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
 LICENSE="IBM-ILNWP"
 SLOT="1.4"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then

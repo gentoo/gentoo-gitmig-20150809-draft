@@ -1,10 +1,20 @@
 # ChangeLog for dev-java/saxon
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.1 2003/05/14 06:15:13 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.2 2003/07/11 21:41:54 aliz Exp $
 
 *saxon-7.5 (14 May 2003)
 
   14 May 2003; Dylan Carlson <absinthe@gentoo.org> saxon-6.5.2.ebuild,
   saxon-7.3.1.ebuild, saxon-7.5.ebuild:
   Initial import.
+
+*saxon-7.3.1 (14 May 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*saxon-6.5.2 (14 May 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 

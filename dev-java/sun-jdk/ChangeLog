@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.43 2003/06/07 03:21:46 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.44 2003/07/11 21:41:54 aliz Exp $
+
+*sun-jdk-1.4.1.03 (16 Jun 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *sun-jdk-1.4.1.02-r1 (06 Jun 2003)
   06 Jun 2003;  Adrian Almenar <strider@gentoo.org> sun-jdk-1.4.1.03.ebuild, files/digest-sun-jdk-1.4.1.03 files/sun-jdk-1.4.1.03:

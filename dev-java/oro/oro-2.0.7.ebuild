@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/oro-2.0.7.ebuild,v 1.2 2003/04/26 05:36:58 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/oro-2.0.7.ebuild,v 1.3 2003/07/11 21:41:54 aliz Exp $
 
 S=${WORKDIR}/jakarta-oro-${PV}
 DESCRIPTION="A set of text-processing Java classes that provide Perl5 compatible regular expressions, AWK-like regular expressions, glob expressions, and utility classes for performing substitutions, splits, filtering filenames, etc."
@@ -12,7 +12,7 @@ DEPEND=">=virtual/jdk-1.3
 REDEPND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="doc jikes"
 
 src_compile() {

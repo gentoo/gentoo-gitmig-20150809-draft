@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix-jce/cryptix-jce-20030217.ebuild,v 1.1 2003/05/14 05:08:58 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix-jce/cryptix-jce-20030217.ebuild,v 1.2 2003/07/11 21:41:50 aliz Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ S=${WORKDIR}
 DESCRIPTION="Cryptix JCE is a complete clean-room implementation of the official JCE 1.2 API as published by Sun."
 SRC_URI="http://cryptix.org/dist/${P}-snap.zip"
 HOMEPAGE="http://cryptix.org/products/jce/"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 DEPEND=""

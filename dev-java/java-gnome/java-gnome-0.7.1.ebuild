@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.7.1.ebuild,v 1.12 2003/05/03 19:51:59 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.7.1.ebuild,v 1.13 2003/07/11 21:41:53 aliz Exp $
 
 IUSE="gnome"
 
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 RDEPEND="$DEPEND"
 SLOT="0.7"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 src_compile() {
 	local myconf

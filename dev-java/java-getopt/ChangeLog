@@ -1,9 +1,15 @@
 # ChangeLog for dev-java/java-getopt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/ChangeLog,v 1.2 2003/02/12 05:52:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/ChangeLog,v 1.3 2003/07/11 21:41:53 aliz Exp $
 
 *java-getopt-1.0.0 (18 Oct 2002)
 
   18 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> java-getopt-1.0.9.ebuild, files/digest-java-getopt-1.0.9 :
   Initial version, all code submitted by Thomas Osterlie
   <thomas.osterlie@acm.org>. Fixes #7653.
+
+*java-getopt-1.0.9 (13 Feb 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+

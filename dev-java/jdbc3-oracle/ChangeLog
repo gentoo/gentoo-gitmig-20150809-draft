@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdbc3-oracle
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.1 2003/05/14 23:23:05 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.2 2003/07/11 21:41:54 aliz Exp $
+
+*jdbc3-oracle-9.2.0.3 (14 May 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *jdbc3-oracle-9.2.0.1 (14 May 2003)
 

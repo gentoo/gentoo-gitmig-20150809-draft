@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/jdbc2-postgresql
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/ChangeLog,v 1.1 2003/05/14 17:20:01 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/ChangeLog,v 1.2 2003/07/11 21:41:53 aliz Exp $
+
+*jdbc2-postgresql-7.3 (14 May 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*jdbc2-postgresql-7.2 (14 May 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *jdbc2-postgresql-7.1 (14 May 2003)
 
@@ -9,4 +19,14 @@
   jdbc2-postgresql-7.1.ebuild, jdbc2-postgresql-7.2.ebuild,
   jdbc2-postgresql-7.3.ebuild:
   Initial import.
+
+*jdbc2-postgresql-7.0 (14 May 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*jdbc2-postgresql-6.5.2 (14 May 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
