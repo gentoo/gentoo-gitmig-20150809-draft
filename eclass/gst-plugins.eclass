@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.16 2004/07/23 05:25:28 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.17 2004/07/23 13:10:02 obz Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -24,7 +24,7 @@ inherit libtool debug
 ###
 
 # Create a major/minor combo for our SLOT and executables suffix
-PVP="${PV//[-\._]/ }"
+PVP=(${PV//[-\._]/ })
 PV_MAJ_MIN=${PVP[0]}.${PVP[1]}
 
 MY_P=gst-plugins-${PV}
