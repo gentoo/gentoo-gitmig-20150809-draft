@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/flim-1.14.5.ebuild,v 1.2 2003/07/29 02:11:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/flim-1.14.5.ebuild,v 1.3 2003/08/13 07:06:36 usata Exp $
 
 inherit elisp
 
@@ -12,12 +12,12 @@ SRC_URI="ftp://ftp.m17n.org/pub/mule/flim/flim-1.14/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ~sparc ~ppc"
+KEYWORDS="x86 alpha sparc ppc"
 
 DEPEND="virtual/emacs
 	>=app-emacs/apel-10.3"
 
-PROVIDE="virtual/flim-1.14.5"
+PROVIDE="virtual/flim"
 S="${WORKDIR}/${P}"
 
 src_compile() {
