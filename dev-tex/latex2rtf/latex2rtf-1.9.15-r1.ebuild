@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.15-r1.ebuild,v 1.1 2004/04/21 14:16:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.15-r1.ebuild,v 1.2 2004/04/22 21:28:11 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="LaTeX to RTF converter"
 HOMEPAGE="http://latex2rtf.sourceforge.net/"
 SRC_URI="mirror://sourceforge/latex2rtf/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
 DEPEND="virtual/glibc
