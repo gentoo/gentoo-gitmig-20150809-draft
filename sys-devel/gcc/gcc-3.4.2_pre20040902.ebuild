@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2_pre20040902.ebuild,v 1.2 2004/09/06 00:18:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2_pre20040902.ebuild,v 1.3 2004/09/06 13:37:06 lv Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -119,6 +119,7 @@ fi
 pkg_setup() {
 	gcc_setup_variables
 	PIEPATCH_EXCLUDE="upstream/04_all_gcc-3.4.0-v8.7.6.1-pie-arm-uclibc.patch.bz2"
+	GENTOO_PATCH_EXCLUDE="18_all_gcc34-c++-staticinit-threadsafe.patch.bz2"
 	(use x86 || use sparc || use amd64) && HARDENED_GCC_WORKS="true"
 }
 
