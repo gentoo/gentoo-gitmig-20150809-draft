@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mlton-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton-bin/ChangeLog,v 1.1 2004/06/10 08:31:34 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton-bin/ChangeLog,v 1.2 2004/06/10 08:43:17 mattam Exp $
+
+  10 Jun 2004; Matthieu Sozeau <mattam@gentoo.org> mlton-bin-20040227.ebuild:
+  Add -* to keywords, there is only one version of the binary, for x86.
 
 *mlton-bin-20040227 (10 Jun 2004)
 
