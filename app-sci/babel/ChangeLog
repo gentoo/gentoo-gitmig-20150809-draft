@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/babel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/babel/ChangeLog,v 1.5 2003/09/24 15:18:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/babel/ChangeLog,v 1.6 2003/12/16 13:24:31 weeve Exp $
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org> babel-1.6.ebuild:
+  Added ~sparc keyword to fix broken dependencies in app-sci/xdrawchem.
 
   24 Sep 2003; Patrick Kursawe <phosphan@gentoo.org> babel-1.6.ebuild:
   removed old PROVIDE line, added blocker for openbabel.
