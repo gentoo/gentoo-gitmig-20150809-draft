@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.213 2005/01/08 20:29:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.214 2005/01/11 21:11:46 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -156,7 +156,6 @@ livecd - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during livec
 mad - Adds support for mad (high-quality mp3 decoder library and cli frontend)
 maildir - Adds support for maildir (~/.maildir) style mail spools
 mailwrapper - Adds mailwrapper support to allow multiple MTAs to be installed
-makecheck - Work around to pull in packages needed to run with FEATURES=maketest
 matrox - Adds Matrox MGA support to mplayer
 mbox - Adds support for mbox (/var/spool/mail) style mail spools
 mcal - Adds support for MCAL calender system
@@ -265,6 +264,7 @@ sysvipc - Support for System V-compatible inter-process communication
 szip - Use the szip compression library
 tcltk - Support for Tcl and/or Tk
 tcpd - Adds support for TCP wrappers
+test - Work around to pull in packages needed to run with FEATURES=maketest / FEATURES=test
 tetex - Adds support for teTeX
 theora - Adds support for the Theora Video Compression Codec
 tidy - Adds support for HTML Tidy
