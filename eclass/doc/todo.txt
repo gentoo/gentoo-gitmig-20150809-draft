@@ -1,12 +1,7 @@
+- inverse section requests (I like fancy names)
+- sort out docs/sgml, get link from site
+- have ebuilds/eclasses use newdepend()
+- sort debug.eclass msgs into levels, divide output
 
-inverse section requests (I like fancy names)
-
-newdepend() in virtual.eclass, consider functions.eclass or similar
-
-finish multi-qt stuff
-
-sort out docs/sgml, get link from site
-
-cleanup or remove kde.org.eclass - cancelled?
 
 

@@ -1,12 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dan Armak <danarmak@gentoo.org>Xx
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.14 2001/10/20 09:04:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.15 2001/11/16 12:50:41 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
-inherit autoconf base || die
+inherit autoconf base depend || die
 ECLASS=kde
 
 DESCRIPTION="Based on the $ECLASS eclass"
@@ -23,7 +20,7 @@ kde-objprelink-patch() {
 	    cd ${S} && \
 	    patch -p0 < /usr/share/objprelink/kde-admin-acinclude.patch && \
 	    make -f Makefile.cvs || die "died in kde-objprelink-patch"
-	fi    
+	fi
 }
 
 kde_src_compile() {
@@ -36,9 +33,11 @@ kde_src_compile() {
 	case $1 in
 		myconf)
 			debug-print-section myconf
-			myconf="--host=${CHOST} --with-x --enable-mitshm --with-xinerama --prefix=${KDEDIR} --with-qt-dir=${QTDIR}"
+			myconf="--host=${CHOST} --with-x --enable-mitshm --with-xinerama --prefix=/usr --with-qt-dir=${QTDIR}"
 			use qtmt 	&& myconf="$myconf --enable-mt"
 			use objprelink	&& myconf="$myconf --enable-objprelink" || myconf="$myconf --disable-objprelink"
+			set-kdedir $kde_version
+			set-qtdir $qt_version
 			;;
 		configure)
 			debug-print-section configure
@@ -87,4 +86,17 @@ kde_src_install() {
 }
 
 EXPORT_FUNCTIONS src_compile src_install
+
+
+
+
+
+
+
+
+
+
+
+
+
 

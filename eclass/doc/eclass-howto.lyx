@@ -30,7 +30,7 @@ eclass howto
 Dan Armak
 \layout Date
 
-Updated for eclasses v3.3
+Updated for eclasses v4
 \layout Section
 
 Introduction
@@ -44,11 +44,10 @@ eclasses are parts of ebuilds; that is, they have the same syntax ebuilds
 \layout Standard
 
 The most similar group of ebuilds is the kde apps.
- These have been selected to be the test case for the first incarnation
- of eclasses.
- Inheriting ebuilds are available for all of kde-2.2.1 (as kde*-2.2.1-r1), kdevelop-
-2.0.1 and koffice-1.1.
- Others will follow.
+ were accordingly selected to be the test case for eclasses, and I believe
+ I can now say the test has been successful.
+ Eclasses for non-kde ebuilds may follow, but there are no concrete plans
+ as of this time.
 \layout Standard
 
 Please read news.txt for an abstract of changes between versions of the eclasses.
@@ -143,7 +142,7 @@ inherit <list of eclasses> || die
 \layout Standard
 
 Eclasses do not need this first line, since they are always sourced from
- an ebuild which has it.
+ an ebuild which already has it.
 \layout Subsection
 
 virtual.eclass
@@ -448,11 +447,47 @@ cd ${S}
 patch -p0 < ${FILESDIR}/${P}-gentoo.diff
 \layout Standard
 
-Once, long ago, I remember hearing that emerge would execute this code automatic
-ally between src_unpack() and src_compile() if the file ${FILESDIR}/${P}-gentoo.d
-iff was present.
- Was this a plan, a rumour, or what? Someone please correct me, or at least
- correct this document.
+There is also a helper function provided by base.eclass, called newdepend().
+ It simply adds all parameters to both DEPEND and RDEPEND, saving you the
+ trouble of writing and maintaining two lists of dependencies.
+\layout Subsection
+
+depend.eclass
+\layout Standard
+
+Added in v4.
+ This provides two pairs of functions: need-kdelibs(), need-qt() and set-kdedir(
+), set-qtdir().
+ These functions handle the details of the multi-qt and multi-kdelibs schemes.
+ These schemes set rules for having multiple versions of qt and/or of kdelibs
+ installed side-by-side.
+\layout Standard
+
+The need-* functions are called with a parameter which is the version number
+ required.
+ They then add the corresponding dependencies to DEPEND and RDEPEND, and
+ set the variables kde_version and qt_version which are used by the set-*dir
+ functions.
+ If no parameter is passed, a version number of 0 (zero) is used.
+\layout Standard
+
+It is important to call these functions from the main part of the ebuild,
+ so that any changes to DEPEND and RDEPEND affect emerge.
+\layout Standard
+
+The set-* dir functions are both called from the beginning of the configure
+ section of the kde_src_compile() function.
+ They read the qt_version and kde_version variables set by need-*, check
+ which multi-*-scheme conforming libs are installed, and set KDEDIR and
+ QTDIR to the location of the latest version installed that fulfills the
+ requirements.
+ When the new portage dependency functionality is released, this is where
+ the changes needed for kde/qt-3 support will go.
+\layout Standard
+
+If no multi-*-scheme-compatible3 installation is found, KDEDIR and QTDIR
+ are left untouched, assuming that the machine is an older one which sets
+ hardcoded QTDIR and KDEDIR values from /etc/env.d.
 \layout Subsection
 
 kde.eclass
@@ -463,30 +498,30 @@ Used by all kde apps, whether directly or indirectly.
  defaults but functions which can be used as-is more often then not.
  In fact, none of the high-level kde-* eclasses which inherit from here
  change the functions in any way, and the ebuilds rarely do so.
+ This eclass contains the meat of the kde eclass system, while virtual and
+ base can be said to provide the skeleton.
 \layout Standard
 
-It inherits autoconf and base.
+It inherits autoconf, base and depend.
 \layout Standard
 
 Read it to find out what it defines.
  It is quite self-explanatory.
 \layout Standard
 
-Briefly, it handles all standard kde-2.1* and 2.2* apps that need configure/make/m
+Briefly, it handles all standard kde apps that use GNU standard configure/make/m
 ake install cycles.
  It handles all the std.
  configure options e.g.
  qtmt.
- It also adds kdelibs to DEPEND/RDEPEND.
 \layout Standard
 
 Note: some kde apps, like widget styles and i18n packages, do not need to
  compile anything.
- Therefore kde.eclass does not inherit c and does not depend on qt.
- These packages can then inherit straight from here (or from kde-i18n.eclass,
- which also inherits from here).
- All other packages, which need to compile c code and link against qt, should
- inherit from kde-base.eclass.
+ Therefore kde.eclass does not inherit c.
+ These packages can then inherit straight from here.
+ All other packages, which need to compile c code, should inherit from kde-base.e
+class.
 \layout Standard
 
 As of v3.3, kde-objprelink was merged with kde, which now provides the objprelink
@@ -727,4 +762,17 @@ Derived from $ECLASS
  set.
  This is to remind you to write a description of your own for your ebuilds.
  Otherwise the inherited one will show through as a reminder.
+\layout Itemize
+
+Remember to always call need-kdelibs().
+ need-qt(0 is more optional, since you can depend on kdelibs to make sure
+ qt is installed.
+ There's no harm in explicitly calling need-qt, though.
+\layout Itemize
+
+If you override kde_src_compile, section configure, remember that you 
+\emph on 
+must
+\emph default 
+ call set-kdedir and set-qtdir somewhere before calling configure.
 \the_end

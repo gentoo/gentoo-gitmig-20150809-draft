@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.4 2001/10/03 17:10:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.5 2001/11/16 12:50:41 danarmak Exp $
 # This provides functions for verbose output for debugging
 
 # Note: we check whether these settings are set by "if [ "$FOO" ]; then".
@@ -9,7 +9,7 @@
 
 # redirect output, unset to disable
 # use e.g. /dev/tty.
-# todo: add support for loging into a file.
+# todo: add support for logging into a file.
 DEBUG_OUTPUT=""
 
 # used internally for output
@@ -21,7 +21,7 @@ debug-print() {
 
 	while [ "$1" ]; do
 		echo "debug: $1" > $DEBUG_OUTPUT
-	shift
+		shift
 	done
 
 }
@@ -32,7 +32,7 @@ debug-print-function() {
 	
 	str="now in function $1" 
 	shift
-	debug-print "$str" "parameters: $*"
+	debug-print "$str, parameters: $*"
 
 }
 

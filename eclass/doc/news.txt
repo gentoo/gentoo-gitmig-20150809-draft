@@ -1,8 +1,29 @@
+16/11
+v4
+Added multi-qt and multi-kdelibs functionality. See detailed explanation in eclass howto.
+There is now a new depend.eclass inherited by kde.eclass. It provides two pairs of
+functions, need-{kdelibs,qt} and set-{kdedir,qtdir}.
+An inheriting ebuild calls "need-kdelibs $ver" from its main section and gets the correct
+things added to DEPEND and RDEPEND. Same for qt. Usually ebuilds don't call need-qt
+directly, because the kdelibs depend already provides them with the necessary qt
+version, but the function does exist and is usable.
+The set-* functions are called at the beginning of kde_src_compile/configure section.
+They export the correct QTDIR and KDEDIR (the latter points to the location of kdelibs)
+based on the vars kde_version and qt_version which are set in need-*. (So don't touch
+these vars; I've added a list of Internal Vars to the eclass howto). If no multi-*-scheme
+compatible directories are found, set-* leaves KDEDIR/QTDIR untouched, this enables
+older systems to work with the new eclass and ebuilds.
+There have been many other misc small changes in the eclasses, because this was a
+big commit after weeks of testing. For example the newdepend() function was added to
+base.eclass; I'll eventually modify ebuilds to use it.
+When the new dep functionality is added to portage, I'll change the need-* functions
+accordingly, but the ebuilds won't need to be changed.
+
 26/10
 Added koffice-i18n.eclass, very similar to kde-i18n.eclass.
 
 15/10
-Added some multi-QTDIR failsafes:
+Added some multi-QTDIR failsafes (shouldn't be needed, but do no harm):
 myconf+=--with-qt-dir=${QTDIR}
 LIBRARY_PATH=${LIBRARY_PATH}:${QTDIR}/lib make
 

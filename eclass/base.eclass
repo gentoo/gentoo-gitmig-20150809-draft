@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.6 2001/10/01 13:54:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.7 2001/11/16 12:50:41 danarmak Exp $
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
 inherit virtual || die
@@ -89,4 +89,19 @@ base_src_install() {
 }
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install
+
+# misc helper functions
+# adds all parameters to DEPEND and RDEPEND
+newdepend() {
+
+	debug-print-function newdepend $*
+	debug-print "newdepend: DEPEND=$DEPEND RDEPEND=$RDEPEND"
+
+	while [ -n "$1" ]; do
+		DEPEND="$DEPEND $1"
+		RDEPEND="$RDEPEND $1"
+		shift
+	done
+
+}
 
