@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/skunkweb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.1 2003/10/25 03:31:05 pythonhead Exp $
+
+*skunkweb-3.4_beta5 (24 Oct 2003)
+
+  24 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> metadata.xml,
+  skunkweb-3.4_beta5.ebuild:
+  Initial commit. Thank you Jacob Smullyan <smulloni@smullyan.org> (Bug #26450)
+
