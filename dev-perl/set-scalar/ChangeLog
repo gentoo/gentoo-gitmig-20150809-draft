@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/set-scalar
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.1 2003/07/20 16:50:08 mcummings Exp $
+
+*set-scalar-1.17 (20 Jul 2003)
+
+  20 Jul 2003; Michael Cummings <mcummings@gentoo.org> set-scalar-1.17.ebuild:
+  Ebuild submitted by Stephen Diener <sediener@unity.ncsu.edu> for new addition
+  to app-sci in bug 24607
+
