@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.21 2002/04/29 04:15:33 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.22 2002/05/05 23:45:44 rphillips Exp $
 
   27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
 
@@ -19,12 +19,18 @@
   Hmm, and I did not edit the ChangeLog for some reason to say that the mhash
   and mcrypt flags are encapsulated by the crypt flag now.
 
+*php-4.1.2-r9 (5 May 2002)
+
+  5 May 2002; Ryan Phillips <rphillips@gentoo.org> php-4.1.2-r9.ebuild :
+
+  Added support for SSL, snmp, curl, and bzip2 to package.  Fixes #2468
+
 *php-4.1.2-r8 (28 Apr 2002)
 
   27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> php-4.1.2-r7.ebuild :
 
-  For some reason --with-gettext doesn't find the libraries it needs. 
-  ./configure --with-gettext from the commandline works fine.  Reopening
+  for some reason --with-gettext doesn't find the libraries it needs. 
+  ./configure --with-gettext from the commandline works fine.  reopening
   bug report.
 
 *php-4.1.2-r8 (27 Apr 2002)
