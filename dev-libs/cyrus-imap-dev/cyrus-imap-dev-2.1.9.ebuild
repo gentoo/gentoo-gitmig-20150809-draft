@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.9.ebuild,v 1.3 2002/11/30 01:27:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.9.ebuild,v 1.4 2002/11/30 01:27:48 vapier Exp $
 
 DESCRIPTION="Developer support for the Cyrus IMAP Server"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -58,7 +58,7 @@ src_compile() {
 src_install() {
 	dodoc COPYRIGHT README*
 	cd ${S}/lib
-	mkdir -p -m 0755 ${D}usr/include/cyrus
+	dodir /usr/include/cyrus
 	emake DESTDIR=${D} install || die "compile problem"
 	cd ${S}/acap
 	emake DESTDIR=${D} install || die "compile problem"
