@@ -1,10 +1,15 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.15 2002/12/13 11:00:01 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.16 2002/12/21 07:19:40 seo Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *bitchx-1.0.19-r3 (11 Nov 2002)
+
+  21 Dec 2002; Jungmin Seo <seo@gentoo.org> bitchx-1.0.19-r3.ebuild,
+  ChangeLog, files/bitchx-1.0.19-cjk.patch:
+  Added 'cjk' use flag on the ebuild, the patch for 'cjk' and
+  the patch is for using 2-byte nicks (euc-kr and euc-jp) 
 
   19 Nov 2002; phoen][x <phoenix@gentoo.org> bitchx-1.0.19-r3.ebuild :
   Added "-fPIC" to C(XX)FLAGS on alpha boxes. This fixes bug 10932.

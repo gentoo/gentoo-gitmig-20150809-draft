@@ -1,13 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r3.ebuild,v 1.3 2002/12/09 04:33:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r3.ebuild,v 1.4 2002/12/21 07:19:40 seo Exp $
 
-IUSE="ssl esd gnome xmms ncurses ipv6 gtk"
+IUSE="ssl esd gnome xmms ncurses ipv6 gtk cjk"
 
 MY_P=ircii-pana-${PV/.0./.0c}
 S=${WORKDIR}/BitchX
 DESCRIPTION="An IRC Client"
-SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz
+		cjk? (http://www.gentoo.org/~seo/distfiles/bitchx-1.0.19-cjk.patch)"
 HOMEPAGE="http://www.bitchx.com/"
 
 SLOT="0"
@@ -32,6 +33,14 @@ DEPEND=">=sys-libs/ncurses-5.1
 		>=media-libs/audiofile-0.1.5 )
 	gtk? ( =x11-libs/gtk+-1.2*
 		>=media-libs/imlib-1.9.10-r1 )"
+
+src_unpack() {
+	unpack ${MY_P}.tar.gz
+	cd ${S}
+	if [ -n "`use cjk`" ]
+	then patch -p0 < ${FILESDIR}/${P}-cjk.patch
+	fi
+}
 
 src_compile() {
 	local myconf
