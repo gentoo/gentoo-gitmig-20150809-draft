@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 b381403de8e5407c6494108175126061 metadata.xml 235
-MD5 edeb31f57aacc3982d6a0e69e8987dcc isdn-firmware-2004.4.5.ebuild 983
-MD5 930fafbc197f35d50cf4f7997504976a ChangeLog 444
-MD5 89ba560b85c0e4aaaec2e36831fa2470 files/digest-isdn-firmware-2004.4.5 73
+MD5 3aae5e90b5c38cb49a831cdb8471a03d ChangeLog 707
+MD5 5b35b41a65ce0181e84050884d325c2f isdn-firmware-2004.4.5-r1.ebuild 894
+MD5 89ba560b85c0e4aaaec2e36831fa2470 files/digest-isdn-firmware-2004.4.5-r1 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoRYfjtv59x0+BrURAjOwAJ4plngVYnQLXHBZ6eZLBOrVcoyTswCfXCBB
-5NEBOe4HQa0w5nmXvYO0sCA=
-=lVfy
+iD8DBQFBvIIPjtv59x0+BrURApMNAJwPryXiOxIxdGceKntnYNhSkhgGewCg4uXh
+aZCAUlqnG/WWS3GjaVxL4q8=
+=8PRW
 -----END PGP SIGNATURE-----
