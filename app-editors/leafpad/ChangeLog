@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/leafpad
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.1 2005/01/25 15:39:03 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.2 2005/03/28 23:20:25 luckyduck Exp $
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> leafpad-0.7.9.ebuild:
+  added ~amd64 to KEYWORDS, fixes #87018
 
 *leafpad-0.7.9 (25 Jan 2005)
 

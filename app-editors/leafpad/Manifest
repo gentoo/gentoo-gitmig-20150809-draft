@@ -1,4 +1,14 @@
-MD5 d261547c518fe72c97bb67642d6270c7 leafpad-0.7.9.ebuild 771
-MD5 af5c5334fe6511a9f09a8037e0f80de0 ChangeLog 355
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b3dc648b6d7c773c6e966954e355b4b4 leafpad-0.7.9.ebuild 781
+MD5 6bce25cebfd5af37023f08517fde0ab8 ChangeLog 474
 MD5 8fc22f08ecb2e292e60ce7553c58d0c2 metadata.xml 222
 MD5 1797f2db92965c3b3379dcf9a1fa674c files/digest-leafpad-0.7.9 143
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSJFA06ebR+OMO78RAl5iAKCNGJ5wwKKxK6fgKR0aQGQU2se7NgCfZA99
+rQRzYhxAPvvNYndaqAtaQXY=
+=3Cy3
+-----END PGP SIGNATURE-----
