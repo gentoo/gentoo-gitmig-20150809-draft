@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r1.ebuild,v 1.1 2003/10/30 07:52:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r1.ebuild,v 1.2 2004/02/23 00:16:38 agriffis Exp $
 
 DESCRIPTION="udhcp Server/Client Package"
 HOMEPAGE="http://udhcp.busybox.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://udhcp.busybox.net/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~ia64 amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 amd64"
 
 DEPEND=""
 

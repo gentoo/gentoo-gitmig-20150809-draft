@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.7-r1.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.7-r1.ebuild,v 1.4 2004/02/23 00:16:54 agriffis Exp $
 
 MY_PN="vlan"
 S=${WORKDIR}/${MY_PN}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.candelatech.com/~greear/vlan.html"
 SRC_URI="http://www.candelatech.com/~greear/vlan/${MY_PN}.${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~arm"
+KEYWORDS="x86 ~sparc "
 IUSE="static"
 DEPEND=">=sys-kernel/linux-headers-2.4.14"
 RDEPEND=">=virtual/kernel-2.4.14"
