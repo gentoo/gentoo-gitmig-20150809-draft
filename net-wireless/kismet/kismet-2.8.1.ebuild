@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.8.1.ebuild,v 1.2 2003/02/11 19:39:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.8.1.ebuild,v 1.3 2003/02/12 06:31:47 latexer Exp $
 
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
 HOMEPAGE="http://www.kismetwireless.net/"
 SRC_URI="http://www.kismetwireless.net/code/${P}.tar.gz
+	 kismet-inits-${PV}.tar.gz
 	 ethereal? (http://www.ethereal.com/distribution/ethereal-0.9.8.tar.bz2)"
 
 LICENSE="GPL-2"
@@ -47,7 +48,7 @@ src_compile() {
 			s:=ap_manuf:=/etc/kismet/ap_manuf:g; \
 			s:=client_manuf:=/etc/kismet/client_manuf:g" \
 			kismet.conf.orig > kismet.conf
-	sed -e "s:/usr/local:/usr/g" kismet_ui.conf.orig > kismet_ui.conf
+	sed -e "s:/usr/local:/usr:g" kismet_ui.conf.orig > kismet_ui.conf
 	rm -f kismet.conf.orig kismet_ui.conf.orig
 
 	cd ${S} 
@@ -62,4 +63,9 @@ src_install () {
 		ETC=${D}/etc/kismet MAN=${D}/usr/share/man \
 		SHARE=${D}/usr/share/${PN} install || die
 	dodoc CHANGELOG FAQ README docs/*
+	
+	exeinto /etc/init.d
+	newexe ${WORKDIR}/kismet.initd kismet
+	insinto /etc/conf.d
+	newins ${WORKDIR}/kismet.confd kismet
 }
