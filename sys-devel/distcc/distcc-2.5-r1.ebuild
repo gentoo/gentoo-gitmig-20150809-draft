@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.5-r1.ebuild,v 1.2 2003/06/07 19:04:54 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.5-r1.ebuild,v 1.3 2003/08/08 13:25:37 lisa Exp $
 
 inherit eutils
 
@@ -98,7 +98,7 @@ pkg_postinst() {
 	einfo "Portage 2.0.46-r11+ will take advantage of distcc if you put"
 	einfo "distcc into the FEATURES setting in make.conf and use" 
 	einfo "distcc-config --set-hosts. Do NOT set CC=distcc or similar."
-	ewarn "See \"http://wiki.dev.gentoo.org/gentoo/moin.cgi/UsingDistcc\" for information."
+	ewarn "See http://www.gentoo.org/doc/en/distcc.xml for information."
 }
 
 #pkg_prerm() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.8-r2.ebuild,v 1.6 2003/08/06 23:32:20 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.8-r2.ebuild,v 1.7 2003/08/08 13:25:37 lisa Exp $
 
 inherit eutils gcc flag-o-matic
 [ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -105,7 +105,7 @@ pkg_postinst() {
 		ewarn "after booting or chrooting into ${ROOT}"
 	fi
 	einfo "Documentation and how to set up distcc can be found at"
-	einfo "http://dev.gentoo.org/~lisa/distcc/distcc.html"
+	einfo "http://www.gentoo.org/doc/en/distcc.xml"
 	echo ""
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
 	einfo "   sudo -H -u portage distccmon-text OR sudo -H -u portage distccmon-gnome"
