@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.3.2.ebuild,v 1.9 2004/09/06 20:54:32 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.3.2.ebuild,v 1.10 2004/10/04 20:17:26 kumba Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,7 +23,7 @@ IUSE="build"
 DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.7
 	>=sys-devel/gcc-config-1.3.1
-	!sys-devel/egcs64-sparc"
+	sys-devel/gcc-sparc64"
 
 RDEPEND="virtual/libc
 	>=sys-devel/gcc-config-1.3.1
