@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aede4765de5b9aa9453a1f714956e8bc ChangeLog 931
 MD5 7d17331773b3add621f5790debe7d561 zprod-manager-0.1.ebuild 546
+MD5 062a4996b86a50f11adfc0867530f3a7 ChangeLog 1145
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 af09a8d62cf1cfc5429d5b2efec527d8 zprod-manager-0.1-r1.ebuild 547
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zprod-manager-0.1-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zprod-manager-0.1 0
-MD5 400b299636356dfec8e261fe86c4c330 files/0.1/zprod-manager 6981
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD4DBQFA+eG5mdTrptrqvGERAsCuAJUaMCjSO0SyTwQkqPrvIX5zHK59AKCZDxOB
-tSHN5gGy83sADJ1rjc3ZhA==
-=yIxv
------END PGP SIGNATURE-----
+MD5 6093a6000b6b8a6577e7948f0f180877 files/0.1/zprod-manager 7156
