@@ -31,6 +31,7 @@ MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.2-prelink-lpthread.patch 476
 MD5 ce442db939c59218a16be167f793b817 files/perl-5.8.2-uclibc.patch 573
 MD5 01af75daf3d222a668059e90d78a1f9d files/perl-5.8.4-nonblock.patch 400
 MD5 076dcbef37263d6dd7af719b55cfc2de files/perl-5.8.4-noksh.patch 611
+MD5 690c22305e16accb34fcbf411133aff0 files/perl-cleaner 8561
 MD5 803b7c028f59008ea1e6d577e5c0bab0 files/stat.t 8884
 MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.4-perldoc-emptydirs.patch 489
 MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-5.8.4-picdl.patch 250
@@ -54,11 +55,10 @@ MD5 8381e239056a7895edf8f3c6c05c835c files/digest-perl-5.8.2-r2 64
 MD5 93155b02a7e9d3cdc6d6934ce78d9f11 files/digest-perl-5.8.4-r2 64
 MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-perl-5.8.5-r3 64
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r2 64
-MD5 9adc5dc1e4fd209394393f94966191e6 files/perl-cleaner 8589
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB989etG5z4I8BtQoRAsGCAKCFsdb7+JiEL0gUlW/NuueaFEolIQCdHvcz
-8+Zr+gJGL+kbZvkNkRShfp4=
-=9KFD
+iD8DBQFB99T1tG5z4I8BtQoRAo3eAKCQif8COSIshGaBC0R6jQrGTAfKMQCfQ8cS
+NI4XkXY2500EKTbf2RfwB/0=
+=fu7o
 -----END PGP SIGNATURE-----

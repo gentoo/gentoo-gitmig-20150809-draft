@@ -213,7 +213,6 @@ echo "`date` : Locating ebuilds linked against libperl">>$LOG
 for i in $(find $(egrep -v ^# /etc/ld.so.conf) -type f -name '*.so*' ! -newer /usr/lib/libperl.so ) \
       $(find $(echo $PATH | sed 's/:/ /g') -type f -perm +0111 ! -newer /usr/lib/libperl.so ) ;
 do
-  echo "Checking ${i}" #MPC
   if [ -f ${i} ]; then
      ldd ${i} 2>&1 | grep "libperl" - >/dev/null && grep -l $i $PKGDIR/*/*/CONTENTS>>$TMPDIR/modules.list;
   fi
