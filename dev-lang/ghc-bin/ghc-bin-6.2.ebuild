@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.ebuild,v 1.1 2003/12/17 18:05:15 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.ebuild,v 1.2 2004/03/31 09:20:12 kosmikus Exp $
 
 IUSE="" # opengl not included in binary
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-i386-unknown-linux.tar.
 HOMEPAGE="http://www.haskell.org"
 
 LICENSE="as-is"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 SLOT="0"
 
 LOC="/opt/ghc"
