@@ -1,0 +1,16 @@
+# ChangeLog for dev-java/japhar
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japhar/ChangeLog,v 1.1 2002/02/10 21:16:49 karltk Exp $
+
+*japhar-0.10 ( 10 Feb 2002 )
+
+  10 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog japhar-0.10.ebuild files/digest-japhar-0.10:
+  
+  Japhar is the Hungry Programmers'  Java VM. It has been built from the 
+  ground up without consulting Sun's sources.
+
+  Japhar is released under the LGPL, which should make it much more attractive
+  for companies interested in embedding an open source JVM in their 
+  proprietary/commercial products. For example, the LGPL is compatible with 
+  Netscape's NPL license, and allows Japhar to be included into Mozilla.
+
