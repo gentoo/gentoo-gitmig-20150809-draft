@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.0.6.ebuild,v 1.2 2003/06/12 21:08:51 msterret Exp $
 
 DESCRIPTION="Music Score Typesetter"
 HOMEPAGE="http://muse.seh.de/mscore/index.php"

@@ -1,7 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/media-sound/mbrola/mbrola-3.0.1h.ebuild,v 1.0
-# 2002/05/18 17:25:12 naz Exp
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.6 2003/06/12 21:07:18 msterret Exp $
 
 S=${WORKDIR}
 URL="http://tcts.fpms.ac.be/synthesis/mbrola"

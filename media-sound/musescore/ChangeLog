@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/musescore
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.1 2003/03/08 12:54:09 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.2 2003/06/12 21:08:51 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> musescore-0.0.6.ebuild:
+  fix Header
 
 *musescore-0.0.6 (08 Mar 2003)
 

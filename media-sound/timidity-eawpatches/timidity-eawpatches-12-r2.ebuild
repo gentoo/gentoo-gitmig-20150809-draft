@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r2.ebuild,v 1.2 2003/06/12 21:11:49 msterret Exp $
 
 S=${WORKDIR}/eawpats
 DESCRIPTION="Eric Welsh's GUS patches for TiMidity"

@@ -3,6 +3,9 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/mbrola/mbrola-3.0.1h.ebuild,v
 # 1.0 2002/05/07 03:58:19 naz Exp $
 
+  12 Jun 2003; <msterret@gentoo.org> mbrola-3.0.1h-r1.ebuild:
+  fix Header
+
 *mbrola-3.0.1h-r1 (29 May 2002)
 
   30 Dec 2002; Martin Holzer <mholzer@gentoo.org> mbrola-3.0.1h-r1.ebuild ChangeLog :
