@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.10 2003/08/05 16:25:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.11 2003/08/18 07:38:07 robbat2 Exp $
+
+*nvi-1.81.5-r1 (18 Aug 2003)
+
+  18 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> nvi-1.81.5-r1.ebuild:
+  fix the db3/4 bug, but it now exposes this package has bigger problems with
+  glibc. masked.
 
   05 Aug 2003; Aron Griffis <agriffis@gentoo.org> nvi-1.81.5.ebuild:
   Stable on alpha
