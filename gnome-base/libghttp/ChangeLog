@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libghttp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/ChangeLog,v 1.15 2003/12/07 16:28:54 foser Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/ChangeLog,v 1.16 2004/01/08 20:43:18 agriffis Exp $
+
+  08 Jan 2004; <agriffis@gentoo.org> libghttp-1.0.9-r4.ebuild:
+  stable on alpha and ia64
 
 *libghttp-1.0.9-r4 (06 Dec 2003)
 
