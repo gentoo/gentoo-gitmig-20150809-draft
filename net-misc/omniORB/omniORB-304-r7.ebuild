@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r7.ebuild,v 1.11 2004/06/25 00:02:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r7.ebuild,v 1.12 2004/07/15 03:15:34 agriffis Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ DEPEND="dev-lang/python"
 
 PLT="i586_linux_2.0_glibc2.1"
 KEYWORDS="x86 sparc "
+IUSE=""
 SLOT="0"
 LICENSE="LGPL-2 GPL-2"
 

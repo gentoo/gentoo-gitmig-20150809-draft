@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r2.ebuild,v 1.5 2004/06/25 00:00:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r2.ebuild,v 1.6 2004/07/15 03:09:35 agriffis Exp $
 
 inherit gcc kernel-mod eutils
 
@@ -15,6 +15,7 @@ SRC_URI="http://download.nvidia.com/XFree86/nforce/${NV_V}/${NV_PACKAGE}.tar.gz"
 LICENSE="NVIDIA"
 SLOT="${KV}"
 KEYWORDS="-* x86"
+IUSE=""
 RESTRICT="nostrip"
 
 DEPEND="virtual/linux-sources"

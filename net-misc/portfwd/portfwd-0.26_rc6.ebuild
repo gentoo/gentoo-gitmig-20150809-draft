@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/portfwd-0.26_rc6.ebuild,v 1.5 2004/06/25 00:05:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/portfwd-0.26_rc6.ebuild,v 1.6 2004/07/15 03:18:37 agriffis Exp $
 
 DESCRIPTION="Port Forwarding Daemon"
 SRC_URI="mirror://sourceforge/${PN}/${P/_/}.tar.gz"
@@ -9,6 +9,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="x86 ~ia64 ~amd64"
+IUSE=""
 
 DEPEND=">=sys-apps/sed-4*"
 RDEPEND="${DEPEND}"
