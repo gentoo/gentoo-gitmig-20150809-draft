@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.3.1.ebuild,v 1.6 2004/07/01 22:15:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.3.1.ebuild,v 1.7 2004/07/14 23:46:53 agriffis Exp $
 
 DESCRIPTION="IPsec-Tools is a port of KAME's IPsec utilities to the Linux-2.6 IPsec implementation."
 HOMEPAGE="http://ipsec-tools.sourceforge.net/"
@@ -11,8 +11,6 @@ SLOT="0"
 IUSE=""
 DEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6"
-
-S=${WORKDIR}/${P}
 
 pkg_setup() {
 	my_KV=`echo ${KV} | cut -f-2 -d "."`
