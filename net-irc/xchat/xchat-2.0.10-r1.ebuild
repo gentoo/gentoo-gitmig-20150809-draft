@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.10-r1.ebuild,v 1.2 2004/07/17 11:58:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.10-r1.ebuild,v 1.3 2004/07/17 12:05:36 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -92,5 +92,6 @@ pkg_postinst() {
 	einfo
 	einfo "With this release the tab completion behaviour has changed."
 	einfo "See http://forum.xchat.org/viewtopic.php?p=653 for more info."
+	einfo "Use '/set completion_amount 0' to revert back to the old behaviour."
 	einfo
 }

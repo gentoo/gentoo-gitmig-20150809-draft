@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.108 2004/07/17 11:58:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.109 2004/07/17 12:05:36 swegener Exp $
+
+  17 Jul 2004; Sven Wegener <swegener@gentoo.org> xchat-2.0.10-r1.ebuild:
+  Added info about '/set completion_amount 0' to pkg_postinst.
 
   17 Jul 2004; Sven Wegener <swegener@gentoo.org> +files/xc2010-fixfocus.diff,
   -xchat-1.8.11.ebuild, xchat-2.0.10-r1.ebuild, -xchat-2.0.10.ebuild,
