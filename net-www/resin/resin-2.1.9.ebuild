@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/resin/resin-2.1.9.ebuild,v 1.1 2003/04/30 13:17:37 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin/resin-2.1.9.ebuild,v 1.2 2003/04/30 13:26:01 absinthe Exp $
 
 inherit java-pkg
 
@@ -18,7 +18,7 @@ pkg_setup() {
 		groupadd -g 268 resin || die "problem adding group resin, gid 268"
 	fi
 	if ! id resin; then
-		useradd -u 268 -g resin -s /bin/bash -d /opt/resin -c "Apache Tomcat" resin || die "problem adding user resin, uid 268"
+		useradd -u 268 -g resin -s /bin/bash -d /opt/resin -c "Resin" resin || die "problem adding user resin, uid 268"
 	fi
 }
 
