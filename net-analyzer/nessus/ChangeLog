@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.31 2004/07/16 14:07:56 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.32 2004/07/20 02:54:52 weeve Exp $
+
+  19 Jul 2004; Jason Wever <weeve@gentoo.org> nessus-2.0.10a.ebuild:
+  Stable on sparc.
 
 *nessus-2.1.0 (16 Jul 2004)
 
