@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.76 2004/12/18 21:00:58 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.77 2005/01/11 12:16:52 lu_zero Exp $
+
+  11 Jan 2005; Luca Barbato <lu_zero@gentoo.org> mjpegtools-1.6.2-r3.ebuild:
+  Deps updated, should fix bug #71867
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> mjpegtools-1.6.2-r3.ebuild:
   added ~ppc64 to KEYWORDS; bug #74834
