@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.17 2003/07/22 12:54:18 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.18 2003/07/28 22:50:28 usata Exp $
 
   22 Jul 2003; Christian Birchinger <joker@gentoo.org>
   stunnel-4.04-r1.ebuild, files/stunnel.rc6:
@@ -10,6 +10,9 @@
   Fixed path to patch. Closes #23702.
 
 *stunnel-3.24-r1 (02 Jul 2003)
+
+  27 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> stunnel-3.24-r1.ebuild:
+  Added alpha and ppc keywords.
 
   02 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> stunnel-3.24-r1.ebuild :
   New revision without the blindingfix patch.
