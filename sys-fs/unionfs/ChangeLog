@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.6 2005/03/10 09:26:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.7 2005/03/23 14:18:23 satya Exp $
+
+*unionfs-1.0.10 (23 Mar 2005)
+
+  23 Mar 2005; Christian Andreetta <satya@gentoo.org> +unionfs-1.0.10.ebuild:
+  revision bump. Masking 'acl' flag for upstream issues.
 
 *unionfs-1.0.9 (10 Mar 2005)
 
