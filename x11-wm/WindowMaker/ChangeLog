@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/WindowMaker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.1 2002/02/01 21:53:39 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.2 2002/04/02 19:40:16 seemant Exp $
+
+*WindowMaker-0.80.0-r2 (2 Apr 2002)
+
+  2 Apr 2002; Seemant Kulleen <seemant@gentoo.org> WindowMaker-0.80.0-r2.ebuild:
+
+  Added USE dependent nls and sound compilation.
 
 *WindowMaker-0.80.0-r1 (1 Feb 2002)
 
