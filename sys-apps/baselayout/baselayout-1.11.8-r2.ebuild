@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.8-r2.ebuild,v 1.1 2005/01/13 07:37:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.8-r2.ebuild,v 1.2 2005/01/15 13:41:16 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -111,11 +111,31 @@ unkdir() {
 }
 
 src_install() {
-	local dir libdirs libdirs_env
+	local dir libdirs libdirs_env rcscripts_dir
 
 	# This directory is to stash away things that will be used in
 	# pkg_postinst; it's needed first for kdir to function
 	dodir /usr/share/baselayout
+
+	# Jeremy Huddleston <eradicator@gentoo.org>
+	# For multilib, we want to make sure that all our multilibdirs exist
+	# and make lib even if it's not listed as one (like on amd64/ppc64
+	# which sometimes has lib32/lib64 instead of lib/lib64).
+	# lib should NOT be a symlink to one of the other libdirs.
+	# Old systems with symlinks won't be affected by this change, as the
+	# symlinks already exist and won't get removed, but new systems will
+	# be setup properly.
+	#
+	# I'll be making a script to convert existing systems from symlink to
+	# nosymlink and putting it in /usr/portage/scripts.
+	libdirs=$(get_all_libdirs)
+	: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
+
+	if [ "${SYMLINK_LIB}" = "yes" ]; then
+		rcscripts_dir="/$(get_abi_LIBDIR ${DEFAULT_ABI})/rcscripts"
+	else
+		rcscripts_dir="/lib/rcscripts"
+	fi
 
 	einfo "Creating directories..."
 	kdir /usr
@@ -184,26 +204,23 @@ src_install() {
 	kdir /var/state
 	kdir -m 1777 /var/tmp
 
-	# Jeremy Huddleston <eradicator@gentoo.org>
-	# For multilib, we want to make sure that all our multilibdirs exist
-	# and make lib even if it's not listed as one (like on amd64/ppc64
-	# which sometimes has lib32/lib64 instead of lib/lib64).
-	# lib should NOT be a symlink to one of the other libdirs.
-	# Old systems with symlinks won't be affected by this change, as the
-	# symlinks already exist and won't get removed, but new systems will
-	# be setup properly.
-	#
-	# I'll be making a script to convert existing systems from symlink to
-	# nosymlink and putting it in /usr/portage/scripts.
-	libdirs=$(get_all_libdirs)
-	: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
 	for dir in ${libdirs}; do
+		libdirs_env="${libdirs_env:+$libdirs_env:}/${dir}:/usr/${dir}:/usr/local/${dir}"
+		[ "${dir}" = "lib" -a "${SYMLINK_LIB}" = "yes" ] && continue
 		kdir /${dir}
 		kdir /usr/${dir}
 		kdir /usr/local/${dir}
 		kdir /usr/X11R6/${dir}
-		libdirs_env="${libdirs_env:+$libdirs_env:}/${dir}:/usr/${dir}:/usr/local/${dir}"
 	done
+
+	# Ugly compatibility with stupid ebuilds and old profiles symlinks
+	if [ "${SYMLINK_LIB}" = "yes" ]; then
+		rm -rf ${D}/lib ${D}/usr/lib ${D}/usr/local/lib ${D}/usr/X11R6/lib
+		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /lib
+		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/lib
+		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/local/lib
+		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/X11R6/lib
+	fi
 
 	# FHS compatibility symlinks stuff
 	dosym /var/tmp /usr/tmp
@@ -304,7 +321,7 @@ src_install() {
 	# under CONFIG_PROTECTed /etc
 	#
 	cd ${S}/sbin
-	exeinto /lib/rcscripts/sh
+	exeinto ${rcscripts_dir}/sh
 	doexe rc-services.sh rc-daemon.sh rc-help.sh
 
 	# We can only install new, fast awk versions of scripts
@@ -318,15 +335,15 @@ src_install() {
 		into /
 		dosbin depscan.sh
 		dosbin env-update.sh
-		insinto /lib/rcscripts/awk
+		insinto ${rcscripts_dir}/awk
 		doins ${S}/src/awk/*.awk
 	fi
 
 	# Original design had these in /etc/net.modules.d but that is too
 	# problematic with CONFIG_PROTECT
-	dodir /lib/rcscripts
-	cp -a ${S}/lib/rcscripts/net.modules.d ${D}/lib/rcscripts
-	chown -R root:root ${D}/lib/rcscripts
+	dodir ${rcscripts_dir}
+	cp -a ${S}${rcscripts_dir}/net.modules.d ${D}${rcscripts_dir}
+	chown -R root:root ${D}${rcscripts_dir}
 
 	#
 	# Install baselayout documentation
