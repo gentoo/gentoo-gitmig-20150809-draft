@@ -1,0 +1,12 @@
+# ChangeLog for x11-plugins/gkrellflynn
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellflynn/ChangeLog,v 1.1 2002/10/31 14:07:32 seemant Exp $
+
+*gkrellflynn-0.6 (31 Oct 2002)
+
+  31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> gkrellflynn-0.6.ebuild
+  ChangeLog files/digest-gkrellflynn-0.6 :
+
+  A load monitor plugin for GKrellM1 and/or GKrellM2 which shows the Doom
+  guy's face.  Ebuild submitted by: matthieu.codron@laposte.net (Matthieu
+  Codron) in bug #9224
