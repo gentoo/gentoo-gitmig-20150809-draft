@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.4.1-r1.ebuild,v 1.2 2004/06/25 00:36:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.4.1-r1.ebuild,v 1.3 2004/06/28 03:47:20 squinky86 Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 LICENSE="as-is"
 
-DEPEND="virtual/glibc >=sys-libs/ncurses-5.2
+DEPEND="virtual/libc
+	>=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xmms? ( media-sound/xmms )"
