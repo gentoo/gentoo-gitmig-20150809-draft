@@ -1,9 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/files/athcool,v 1.1 2003/08/10 07:39:52 vapier Exp $
-
-depend() {
-	need net
-}
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/files/athcool,v 1.2 2003/08/10 13:42:09 lisa Exp $
 
 start() {
 	ebegin "Starting Athcool"
