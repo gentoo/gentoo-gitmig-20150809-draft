@@ -1,31 +1,38 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.8.1.ebuild,v 1.11 2004/02/29 02:50:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.02.01.ebuild,v 1.1 2004/02/29 02:50:22 latexer Exp $
 
+MY_P=${P/2004.02/feb.04}
+ETHEREAL_VERSION="0.9.13"
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
 HOMEPAGE="http://www.kismetwireless.net/"
-SRC_URI="http://www.kismetwireless.net/code/${P}.tar.gz
-	 kismet-inits-${PV}.tar.gz
-	 ethereal? (http://www.ethereal.com/distribution/old-versions/ethereal-0.9.8.tar.bz2)"
+SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz
+	 ethereal? (http://www.ethereal.com/distribution/ethereal-${ETHEREAL_VERSION}.tar.bz2)"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ppc"
-IUSE="acpi ipv6 gps ethereal"
+KEYWORDS="~x86"
+IUSE="acpi gps ethereal"
 
-DEPEND="gps? ( >=dev-libs/expat-1.95.4 media-gfx/imagemagick )"
+DEPEND="gps? ( >=dev-libs/expat-1.95.4 media-gfx/imagemagick )
+	>=sys-devel/autoconf-2.58"
 RDEPEND="net-wireless/wireless-tools"
+
+S=${WORKDIR}/${MY_P}
+
 src_compile() {
 	local myconf
 
-	myconf="`use_enable acpi`
-		`use_enable ipv6`
-		`use_enable gps`"
+	# To have kismet build acpi support, you need to be running a kernel
+	# with acpi enabled at the time of compiling
+
+	myconf="`use_enable acpi`"
+	use gps || myconf="${myconf} --disable-gps"
 
 	if [ -n "`use ethereal`" ]; then
-		myconf="${myconf} --with-ethereal=${WORKDIR}/ethereal-0.9.8"
+		myconf="${myconf} --with-ethereal=${WORKDIR}/ethereal-${ETHEREAL_VERSION}"
 
-		cd ${WORKDIR}/ethereal-0.9.8/wiretap
+		cd ${WORKDIR}/ethereal-${ETHEREAL_VERSION}/wiretap
 		econf || die
 		emake || die
 	fi
@@ -65,7 +72,7 @@ src_install () {
 	dodoc CHANGELOG FAQ README docs/*
 
 	exeinto /etc/init.d
-	newexe ${WORKDIR}/kismet.initd kismet
+	newexe ${FILESDIR}/rc-script-3 kismet
 	insinto /etc/conf.d
-	newins ${WORKDIR}/kismet.confd kismet
+	newins ${FILESDIR}/rc-conf-3 kismet
 }
