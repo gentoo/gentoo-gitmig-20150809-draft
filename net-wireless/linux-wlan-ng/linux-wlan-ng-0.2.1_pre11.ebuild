@@ -1,22 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0.ebuild,v 1.6 2003/04/09 21:02:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre11.ebuild,v 1.1 2003/08/02 22:33:26 latexer Exp $
 
+
+inherit eutils
 
 IUSE="apm build nocardbus pcmcia pnp trusted usb"
 
-if [ -n "`use pcmcia`" ]; then
-	has_version '=sys-apps/pcmcia-cs-3.2.1*' && PCMCIA_VERSION="3.2.1"
-	has_version '=sys-apps/pcmcia-cs-3.2.3*' && PCMCIA_VERSION="3.2.3"
-	has_version '=sys-apps/pcmcia-cs-3.2.4*' && PCMCIA_VERSION="3.2.4"
-fi
-
-PCMCIA_CS="pcmcia-cs-${PCMCIA_VERSION}"
+PCMCIA_CS="pcmcia-cs-3.2.1"
+PATCH_3_2_2="pcmcia-cs-3.2.1-3.2.2.diff.gz"
+PATCH_3_2_3="pcmcia-cs-3.2.1-3.2.3.diff.gz"
+PATCH_3_2_4="pcmcia-cs-3.2.1-3.2.4.diff.gz"
 PCMCIA_DIR="${WORKDIR}/${PCMCIA_CS}"
+MY_P=${PN}-${PV/_/-}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="The linux-wlan Project"
-SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${P}.tar.gz 
-		pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_CS}.tar.gz )"
+SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${MY_P}.tar.gz 
+		mirror://gentoo/${PN}-gentoo-init.gz
+		pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_CS}.tar.gz )
+		pcmcia? ( mirror://gentoo/${PATCH_3_2_2} )
+		pcmcia? ( mirror://gentoo/${PATCH_3_2_3} )
+		pcmcia? ( mirror://gentoo/${PATCH_3_2_4} )"
 
 HOMEPAGE="http://linux-wlan.org"
 DEPEND="sys-kernel/linux-headers
@@ -42,13 +47,27 @@ fi
 
 src_unpack() {
 
-	check_KV
-	unpack ${A}
-	cd ${S}
+	unpack ${MY_P}.tar.gz
+	unpack ${PN}-gentoo-init.gz
+	cp ${WORKDIR}/${PN}-gentoo-init ${S}/etc/rc.wlan
+
+	if [ -n "`use pcmcia`" ]; then
+		unpack ${PCMCIA_CS}.tar.gz
+		cd ${PCMCIA_DIR}
+		if [ -z "`has_version =sys-apps/pcmcia-cs-3.2.4*`" ]; then
+			epatch ${DISTDIR}/${PATCH_3_2_4}
+		elif [ -z "`has_version =sys-apps/pcmcia-cs-3.2.3*`" ]; then
+			epatch ${DISTDIR}/${PATCH_3_2_3}
+		elif [ -z "`has_version =sys-apps/pcmcia-cs-3.2.2*`" ]; then
+			epatch ${DISTDIR}/${PATCH_3_2_2}
+		fi
+	fi
+
 
 	# Lots of sedding to do to get the man pages and a few other
 	# things to end up in the right place.
 
+	cd ${S}
 	mv man/Makefile man/Makefile.orig
 	sed -e "s:mkdir:#mkdir:" \
 		-e "s:cp nwepgen.man:#cp nwepgen.man:" \
@@ -151,8 +170,9 @@ src_compile() {
 
 	# compile add-on keygen program.  It seems to actually provide usable keys.
 	cd ${S}/add-ons/keygen
-
 	emake || die "Failed to compile add-on keygen program"
+	cd ${S}/add-ons/lwepgen
+	emake || die "Failed to compile add-on lwepgen program"
 }
 
 src_install () {
@@ -176,6 +196,7 @@ src_install () {
 
 	exeinto /sbin
 	doexe add-ons/keygen/keygen
+	doexe add-ons/lwepgen/lwepgen
 
 }
 
@@ -194,8 +215,8 @@ pkg_postinst() {
 	einfo "Modify /etc/conf.d/wlancfg-* to set individual card parameters."
 	einfo "There are detailed instructions in these config files."
 	einfo ""
-	einfo "Two keygen programs are included: nwepgen and keygen.  keygen seems"
-	einfo "provide more usable keys at the moment."
+	einfo "Three keygen programs are included: nwepgen, keygen, and lwepgen."
+	einfo "keygen seems provide more usable keys at the moment."
 	einfo ""
 	einfo "Be sure to add iface_wlan0 parameters to /etc/conf.d/net."
 	einfo ""
