@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xmingw-gcc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/ChangeLog,v 1.9 2004/10/14 17:24:05 cretin Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/ChangeLog,v 1.10 2005/02/09 12:57:22 blubb Exp $
+
+  09 Feb 2005; Simon Stelling <blubb@gentoo.org> xmingw-gcc-3.4.2.ebuild:
+  added ~amd64
 
 *xmingw-gcc-3.4.2 (14 Oct 2004)
 
