@@ -1,6 +1,8 @@
 # Copyright 2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141.ebuild,v 1.1 2002/10/09 10:50:49 hannes Exp $
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141.ebuild,v 1.2 2002/10/09 10:52:53 hannes Exp $
+
+IUSE="python gpm nls ruby perl"
 
 inherit kde-base
 need-kde 3
