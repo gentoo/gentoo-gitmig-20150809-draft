@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.17_pre4.ebuild,v 1.2 2002/04/25 06:56:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.17_pre4.ebuild,v 1.3 2002/04/29 21:01:13 sandymac Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -17,10 +17,11 @@ ETYPE="sources"
 #   2.4.16, plus:
 #   2.4.17-pre4 (aka "2.4.16-pre4") openmosix
 
-DESCRIPTION="Full sources for the Gentoo Linux kernel"
+DESCRIPTION="Full sources for the Gentoo openMosix Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
 PROVIDE="virtual/linux-sources"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://www.openmosix.org/" 
+LICENSE="GPL-2"
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.18-r2.ebuild,v 1.1 2002/04/25 21:34:57 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.18-r2.ebuild,v 1.2 2002/04/29 21:01:13 sandymac Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -17,6 +17,7 @@ DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
+LICENSE="GPL-2"
 
 KERNEL_ARCH=`echo $ARCH |\
   sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
