@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.9 2004/02/16 01:33:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.10 2004/02/19 17:12:33 battousai Exp $
+
+*synaptics-0.12.4 (19 Feb 2004)
+
+  19 Feb 2004; Bryan Stine <battousai@gentoo.org>; synaptics-0.12.4.ebuild:
+  Version bump. This version has some good upstream Makefile fixes, including
+  DESTDIR compliance and ability to detect and build against XFree86 SDK
+  headers.
 
   15 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
   Removing myself as primary maintainer, this is now a herd thing.
