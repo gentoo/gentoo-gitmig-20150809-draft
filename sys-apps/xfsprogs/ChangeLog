@@ -1,7 +1,13 @@
 # ChangeLog for sys-apps/xfsprogs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/ChangeLog,v 1.4 2002/07/26 17:53:40 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/ChangeLog,v 1.5 2002/09/27 20:01:06 bcowan Exp $
 
+*xfsprogs-2.2.2 (27 Sep 2002)
+
+  27 Sep 2002; Brad Cowan <bcowan@gentoo.org> xfsprogs-2.2.2.ebuild
+  files/digest-xfsprogs-2.2.2 :
+  
+  version bump thanks to Hanno Boeck <hanno@gentoo.org>
 
 *xfsprogs-20020330-r1.ebuild (26 July 2002)
 
