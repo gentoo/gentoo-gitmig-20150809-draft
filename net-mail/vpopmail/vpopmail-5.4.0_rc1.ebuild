@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0_rc1.ebuild,v 1.2 2004/01/07 20:22:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0_rc1.ebuild,v 1.3 2004/02/08 04:59:41 vapier Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -63,9 +63,16 @@ src_unpack() {
 
 	epatch ${FILESDIR}/vpopmail-5.2.1-showall.patch
 
-	for i in vchkpw.c vconvert.c vdelivermail.c vpopbull.c vpopmail.c vqmaillocal.c vuserinfo.c maildirquota.c; do
-		sed -e 's|Maildir|.maildir|g' -i $i || die "Failed to change s/Maildir/.maildir/g in $i"
-	done
+	sed -i \
+		's|Maildir|.maildir|g' \
+		vchkpw.c vconvert.c vdelivermail.c \
+		vpopbull.c vpopmail.c vqmaillocal.c \
+		vuserinfo.c maildirquota.c \
+		|| die "failed to change Maildir to .maildir"
+	sed -i \
+		'/printf.*vpopmail/s:vpopmail (:(:' \
+		vdelivermail.c vpopbull.c vqmaillocal.c \
+		|| die "failed to remove vpopmail advertisement"
 
 	gnuconfig_update
 	ht_fix_file ${S}/cdb/Makefile
