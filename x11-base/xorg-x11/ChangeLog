@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.38 2004/05/12 13:33:50 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.39 2004/05/28 08:37:52 spyderous Exp $
+
+  28 May 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
+  PATCH_VER 0.7. Add 9860_all_xorg-xkb_winkeys.patch to fix broken windows keys
+  (#48307).
 
   12 May 2004; Alexander Gabert <pappy@gentoo.org> xorg-x11-6.7.0.ebuild:
   removed hardened-gcc checks
