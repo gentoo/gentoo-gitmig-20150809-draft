@@ -1,0 +1,8 @@
+# ChangeLog for dev-util/xmingw-w32api
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.1 2003/10/02 10:22:06 cretin Exp $
+
+* xmingw-w32api-2.4 (01 Oct 2003)
+
+  01 Oct 2003; Stefan Jones <cretin@gentoo.org> :
+  Initial ebuild

@@ -1,0 +1,4 @@
+MD5 799d6c961981e2818fd7d0566535be4a xmingw-gcc-3.3.1.ebuild 1726
+MD5 22bad980f347db2267d2c5de86afc363 ChangeLog 321
+MD5 d71c6facc23b16c6ba56b97cbb4efbf8 files/digest-xmingw-gcc-3.3.1 279
+MD5 f15585878583770a2d6c7d0ce5014264 files/gcc-3.3.1-includefix.diff 798
