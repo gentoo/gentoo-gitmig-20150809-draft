@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.0.ebuild,v 1.1 2004/10/24 15:08:56 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.0.ebuild,v 1.2 2004/10/27 15:47:55 st_lim Exp $
 
 inherit eutils
 
@@ -64,7 +64,6 @@ src_compile() {
 	# these are the default settings
 	myconf="${myconf} --with-signature-life=14"
 	myconf="${myconf} --enable-broken-return-codes"
-	myconf="${myconf} --enable-preferences-extension"
 	myconf="${myconf} --enable-experimental"
 	myconf="${myconf} --enable-long-username"
 	myconf="${myconf} --enable-robinson"
@@ -92,6 +91,7 @@ src_compile() {
 		myconf="${myconf} --with-mysql-libraries=/usr/lib/mysql"
 		myconf="${myconf} --with-client-compression"
 		myconf="${myconf} --enable-virtual-users"
+		myconf="${myconf} --enable-preferences-extension"
 
 		# an experimental feature available with MySQL and PgSQL backend
 		if use neural ; then
@@ -102,6 +102,7 @@ src_compile() {
 		myconf="${myconf} --with-pgsql-includes=/usr/include/postgresql"
 		myconf="${myconf} --with-pgsql-libraries=/usr/lib/postgresql"
 		myconf="${myconf} --enable-virtual-users"
+		myconf="${myconf} --enable-preferences-extension"
 
 		# an experimental feature available with MySQL and PgSQL backend
 		if use neural ; then
@@ -111,6 +112,7 @@ src_compile() {
 		myconf="${myconf} --with-storage-driver=ora_drv"
 		myconf="${myconf} --with-oracle-home=${ORACLE_HOME}"
 		myconf="${myconf} --enable-virtual-users"
+		myconf="${myconf} --enable-preferences-extension"
 
 		# I am in no way a Oracle specialist. If someone knows
 		# how to query the version of Oracle, then let me know.
@@ -122,15 +124,13 @@ src_compile() {
 	elif use sqlite ; then
 		myconf="${myconf} --with-storage-driver=sqlite_drv"
 		myconf="${myconf} --enable-virtual-users"
+		myconf="${myconf} --enable-preferences-extension"
 
 	else
 		myconf="${myconf} --with-storage-driver=libdb4_drv"
-		myconf="${myconf} --with-db4-includes=/usr/include"
-		myconf="${myconf} --with-db4-libraries=/usr/lib"
 	fi
 
-	econf ${myconf} \
-		--with-delivery-agent="${agent}" || die
+	econf ${myconf} || die
 	emake || die
 
 }

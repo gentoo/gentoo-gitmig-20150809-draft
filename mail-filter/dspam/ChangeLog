@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.20 2004/10/24 15:08:56 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.21 2004/10/27 15:47:55 st_lim Exp $
+
+  27 Oct 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2.0.ebuild:
+  Fixed bug #68526. Noted that preference-extensions only work when using
+  mysql and not when using db4.
+
+*dspam-3.2.0 (27 Oct 2004)
+
+  27 Oct 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2.0.ebuild:
+  Removed the agent, and removed some lines for db4
 
 *dspam-3.2_rc3 (24 Oct 2004)
 
