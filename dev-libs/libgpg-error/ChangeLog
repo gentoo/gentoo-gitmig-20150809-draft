@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/libgpg-error
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.1 2003/12/29 19:50:14 hanno Exp $
+
+*libgpg-error-0.6 (29 Dec 2003)
+
+  29 Dec 2003; Hanno Boeck <hanno@gentoo.org> libgpg-error-0.6.ebuild:
+  New ebuild, lib needed by latest libgcrypt.
+
