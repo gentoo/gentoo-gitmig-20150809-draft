@@ -1,0 +1,54 @@
+--- udev-015/namedev.c	2004-01-29 19:02:10.067218096 +0200
++++ udev-015.no_sleep/namedev.c	2004-01-29 19:10:21.440518000 +0200
+@@ -285,6 +285,10 @@ static void wait_for_device_to_initializ
+ 	struct bus_file *b = &bus_files[0];
+ 	struct sysfs_attribute *tmpattr;
+ 	int loop;
++	int wait = 1;
++	
++	if (getenv("UDEV_NO_SLEEP") != NULL)
++		wait = 0;
+ 
+ 	while (1) {
+ 		if (b->bus == NULL)
+@@ -300,7 +304,8 @@ static void wait_for_device_to_initializ
+ 					goto exit;
+ 				}
+ 				/* sleep to give the kernel a chance to create the file */
+-				sleep(1);
++				if (wait)
++					sleep(1);
+ 			}
+ 			dbg("timed out waiting for '%s' file, continuing on anyway...", b->file);
+ 			goto exit;
+@@ -524,6 +529,10 @@ static struct sysfs_device *get_sysfs_de
+ 	struct sysfs_class_device *class_dev_parent;
+ 	struct timespec tspec;
+ 	int loop;
++	int wait = 1;
++
++	if (getenv("UDEV_NO_SLEEP") != NULL)
++		wait = 0;
+ 
+ 	/* Figure out where the device symlink is at.  For char devices this will
+ 	 * always be in the class_dev->path.  But for block devices, it's different.
+@@ -542,7 +551,8 @@ static struct sysfs_device *get_sysfs_de
+ 	tspec.tv_nsec = 10000000;  /* sleep 10 millisec */
+ 	loop = 10;
+ 	while (loop--) {
+-		nanosleep(&tspec, NULL);
++		if (wait)
++			nanosleep(&tspec, NULL);
+ 		if (class_dev_parent)
+ 			sysfs_device = sysfs_get_classdev_device(class_dev_parent);
+ 		else
+@@ -569,7 +579,8 @@ device_found:
+ 		loop = 10;
+ 		tspec.tv_nsec = 10000000;
+ 		while (loop--) {
+-			nanosleep(&tspec, NULL);
++			if (wait)
++				nanosleep(&tspec, NULL);
+ 			sysfs_get_device_bus(sysfs_device);
+ 			
+ 			if (sysfs_device->bus[0] != '\0')
