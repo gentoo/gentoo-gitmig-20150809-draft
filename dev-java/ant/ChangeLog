@@ -1,39 +1,47 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.10 2002/10/18 20:19:05 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.11 2002/10/25 23:47:41 blizzy Exp $
+
+*ant-1.5.1 (25 Oct 2002)
+
+  25 Oct 2002; Maik Schreiber <blizzy@gentoo.org> ant-1.5.1.ebuild,
+  files/1.5.1/ant: New version.
+
+  25 Oct 2002; Maik Schreiber <blizzy@gentoo.org> ant-1.5.ebuild: Changed
+  KEYWORDS to "x86 ~ppc".
 
 *ant-1.5 (26 Jul 2002)
 
-  18 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/1.5/ant :
+  18 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/1.5/ant:
   Fixed nasty oversight in script.
 
-  14 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/1.5/ant :
+  14 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/1.5/ant:
   Fixed bugs with script as reported in #7732. Marked for testing. 
 
-  26 Jul 2002; William McArthur <sandymac@gentoo.org> ant-1.5.ebuild files/1.5/ant files/digest-ant-1.5 :
-  Upgraded to Ant 1.5, rewrote the Gentoo specific ant script to take
-  avantage of java-config. It also looked like the Gentoo ant-1.4.1
+  26 Jul 2002; William McArthur <sandymac@gentoo.org> ant-1.5.ebuild,
+  files/1.5/ant: Upgraded to Ant 1.5, rewrote the Gentoo specific ant script to
+  take avantage of java-config. It also looked like the Gentoo ant-1.4.1
   script was based an older version of ant.
 
 *ant-1.4.1-r3 (03 May 2002)
 
-  26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild :
+  26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild:
   Added test in pkg_setup() to ensure that a proper system VM is installed. 
   This is a special-case, we should not bother about adding similar tests to
   all other java packages.
 
-  24 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild :
+  24 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild:
   Added extra install-time test to verify that all files install properly. 
   Some users manage to install a faulty ant, for some reason.
 
-  13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> ant-1.4.1-r3.ebuild :
+  13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> ant-1.4.1-r3.ebuild:
   added ppc keyword
 
-  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild :
-  Added SLOT, KEYWORDS and LICENSE. Ebuild originally submitted by
-  Achim Gottinger <achim@gentoo.org>.
+  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild:
+  Added SLOT, KEYWORDS and LICENSE. Ebuild originally submitted by Achim
+  Gottinger <achim@gentoo.org>.
 
-  03 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild files/digest-ant-1.4.1-r3:
+  03 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild:
   Now handles the case of multiple occurrences of JAVA_HOME in the Java
   environment setting, thanks to Florian L. Klein <kleinf@gmx.de>.
 
@@ -41,13 +49,13 @@
 
 *ant-1.4.1-r2 (10 Apr 2002)
 
-  10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r2.ebuild files/digest-ant-1.4.1-r2:
+  10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r2.ebuild:
   The JAVA_HOME env var is now picked from $HOME/.gentoo/java-env if it exists,
   /etc/env.d/20java if not. An error is emitted if both files are missing.
 
   Removed ant-1.4.1-r1.ebuild files/digest-ant-1.4.1-r1
 
-*ant-1.4.1-r1 (1 Feb 2002)
+*ant-1.4.1-r1 (01 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog:
   Added initial ChangeLog.
