@@ -1,8 +1,13 @@
 # ChangeLog for net-www/adzapper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/ChangeLog,v 1.1 2002/11/11 05:23:24 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/ChangeLog,v 1.2 2003/01/02 18:42:54 jrray Exp $
+
+*adzapper-20021128 (02 Jan 2003)
+
+  02 Jan 2003; J Robert Ray <jrray@gentoo.org> : Version bump, and fixed
+  the digest of the old version, the rules changed a little but the file
+  was not renamed.
 
 *adzapper-20021111 (10 Nov 2002)
 
-  10 Nov 2002; J Robert Ray <jrray@gentoo.org> :
-  New ebuild.
+  10 Nov 2002; J Robert Ray <jrray@gentoo.org> : New ebuild.
