@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.44 2002/04/07 07:15:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.45 2002/04/07 07:18:18 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -46,7 +46,7 @@ src_install() {
 	for x in shots/desktop*.png
 	do
 		[ "${x%*small.png}" != "${x}" ] && continue
-		sed -e "s:TITLE:${x}:" -e "s:IMG:http://www.ibiblio.org/gentoo/images/${x}:" ${S}/html/shell.html > ${D}${WEBROOT}/images/${x%.png}.html
+		sed -e "s:TITLE:${x}:" -e "s:IMG:http\://www.ibiblio.org/gentoo/images/${x}:" ${S}/html/shell.html > ${D}${WEBROOT}/images/${x%.png}.html
 	done
 	
 	insinto ${WEBROOT}
