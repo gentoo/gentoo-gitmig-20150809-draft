@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.9 2004/04/16 09:40:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.10 2004/04/16 19:07:46 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -34,8 +34,8 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
 RDEPEND="${RDEPEND}
-        tcltk? ( >=dev-lang/tk-8.1 )
-        emacs? ( virtual/emacs )"
+	tcltk? ( >=dev-lang/tk-8.1 )
+	emacs? ( virtual/emacs )"
 
 src_compile() {
 	local myconf
