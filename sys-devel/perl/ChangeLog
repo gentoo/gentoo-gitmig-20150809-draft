@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.51 2003/02/05 10:33:54 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.52 2003/02/08 00:27:06 gmsoft Exp $
+
+  07 Feb 2003; Guy Martin <gmsoft@gentoo.org> perl-5.6.1-r9.ebuild perl-5.6.1-r10.ebuild :
+  Added hppa to keywords.
 
   05 Feb 2003; J Robert Ray <jrray@gentoo.org> perl-5.8.0-r9.ebuild; Changed to strip
   "-malign-double" from CFLAGS, fixing bug 14608.

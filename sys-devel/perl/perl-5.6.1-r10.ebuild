@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r10.ebuild,v 1.8 2003/01/19 16:54:11 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r10.ebuild,v 1.9 2003/02/08 00:27:06 gmsoft Exp $
 
 IUSE="berkdb gdbm"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.perl.org"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
 
 RDEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-libs/db-3.2.3h-r3
@@ -41,6 +41,13 @@ src_compile() {
     then
 		myconf="-Di_gdbm"
     fi
+
+    # It seems that perl config use the hostname instead of the osname on hppa
+    if [ "`use hppa`" ]
+    then
+        myconf="${myconf} -Dosname=linux"
+    fi
+
     if [ "`use berkdb`" ]
     then
 		myconf="${myconf} -Di_db -Di_ndbm"
