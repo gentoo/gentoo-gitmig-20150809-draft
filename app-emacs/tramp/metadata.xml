@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>emacs</herd>
+<longdescription>
+TRAMP (Transparent Remote Access, Multiple Protocols) is a package for
+editing remote files, similar to ange-ftp. Whereas ange-ftp uses FTP
+to conn ect to the remote host and to transfer the files, TRAMP uses a
+remote shell conn ection (rlogin, telnet, ssh)
+</longdescription>
+</pkgmetadata>
