@@ -1,4 +1,4 @@
-$ORIGIN 127.0.0.in-addr.arpa.
+$ORIGIN 127.in-addr.arpa.
 $TTL 1W
 @			1D IN SOA	localhost. root.localhost. (
 					2002081601	; serial
@@ -8,4 +8,4 @@ $TTL 1W
 					1D )		; minimum
 
 			1D IN NS	localhost.
-1			1D IN PTR	localhost.
+*			1D IN PTR	localhost.

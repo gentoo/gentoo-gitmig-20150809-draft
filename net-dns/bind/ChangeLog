@@ -1,9 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.17 2003/02/15 05:14:50 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.18 2003/02/15 05:43:14 raker Exp $
 
-  14 Feb 2003; Nick Hadaway <raker@gentoo.org> files/127.0.0,
-  files/named.conf :
+*bind-9.2.2_rc1-r2 (14 Feb 2003)
+
+  14 Feb 2003; Nick Hadaway <raker@gentoo.org> bind-9.2.2_rc1-r2.ebuild,
+  files/digest-bind-9.2.2_rc1-r2, files/127, files/named.conf-r1 :
   Updated default config so all 127.* traffic is localhost.  Thanks
   to Rich Edelman on bug #15637 for noticing this.
 
