@@ -1,6 +1,9 @@
 # ChangeLog for app-text/trang
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.3 2004/08/01 07:00:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.4 2004/08/24 03:20:57 zx Exp $
+
+  23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> trang-20030619.ebuild:
+  Marking stable on x86
 
   01 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> trang-20030619.ebuild:
   dev-java/saxon -> dev-java/saxon-bin
