@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.41 2004/06/09 17:54:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.42 2004/06/20 14:54:45 zul Exp $
+
+  20 Jun 2004; Chuck Short <zul@gentoo.org> mod_ssl-2.8.17.ebuild,
+  mod_ssl-2.8.18.ebuild:
+  Ebuild cleanups.
 
   09 Jun 2004; Guy Martin <gmsoft@gentoo.org> mod_ssl-2.8.18.ebuild:
   Marked stable on hppa.

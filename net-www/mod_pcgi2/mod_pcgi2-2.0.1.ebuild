@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.6 2004/04/27 20:41:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.7 2004/06/20 14:52:45 zul Exp $
 
 inherit eutils
 
@@ -94,7 +94,7 @@ pkg_postinst() {
 		einfo "Add '-D PCGI' to your APACHE2_OPTS in /etc/conf.d/apache2"
 	else
 		einfo "1. Execute the command:"
-		einfo " \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+		einfo " \"ebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config\""
 		einfo "2. Edit /etc/conf.d/apache and add \"-D PCGI\" to APACHE_OPTS"
 	fi
 }

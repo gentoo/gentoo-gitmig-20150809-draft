@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.18.ebuild,v 1.6 2004/06/09 17:54:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.18.ebuild,v 1.7 2004/06/20 14:54:45 zul Exp $
 
 MY_P=${P}-1.3.31
 S=${WORKDIR}/${MY_P}
@@ -53,7 +53,7 @@ pkg_postinst() {
 	install -d -o root -g root -m0755 ${ROOT}/etc/apache/conf/ssl
 
 	einfo
-	einfo "Execute \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+	einfo "Execute \"ebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config\""
 	einfo "to have your apache.conf auto-updated for use with this module."
 	einfo "You should then edit your /etc/conf.d/apache file to suit."
 	einfo

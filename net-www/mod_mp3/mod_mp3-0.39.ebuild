@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.39.ebuild,v 1.8 2004/03/15 03:06:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.39.ebuild,v 1.9 2004/06/20 14:51:24 zul Exp $
 
 IUSE="mysql postgres"
 
@@ -43,7 +43,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Execute \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+	einfo "Execute \"ebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config\""
 	einfo "to have your apache.conf auto-updated for use with this module."
 	einfo "You should then edit your /etc/conf.d/apache file to suit."
 	einfo
