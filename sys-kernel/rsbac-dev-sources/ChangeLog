@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/rsbac-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.14 2004/11/28 22:46:15 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.15 2004/12/02 18:56:58 kang Exp $
+
+*rsbac-dev-sources-2.6.7-r9 (02 Dec 2004)
+
+  02 Dec 2004; Guillaume Destuynder <kang@gentoo.org>
+  +files/rsbac-dev-sources-2.6.7-AF_UNIX.patch,
+  -rsbac-dev-sources-2.6.7-r8.ebuild, +rsbac-dev-sources-2.6.7-r9.ebuild:
+  Security vulnerability fix: #72317 - AF_UNIX Arbitrary Kernel Memory
+
+*rsbac-dev-sources-2.6.7-r8 (28 Nov 2004)
 
   28 Nov 2004; Guillaume Destuynder <kang@gentoo.org>
   files/rsbac-dev-sources-2.6.7-70681-binfmt.patch,

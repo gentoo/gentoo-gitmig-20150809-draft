@@ -1,6 +1,6 @@
-MD5 7e4bf36454f0642596014497cf02c8c2 ChangeLog 3685
 MD5 ed6fb50f79e8049f3f3576bb25c32747 metadata.xml 465
-MD5 4e73acf16cfc7b5091dd05dfe9de7273 rsbac-dev-sources-2.6.7-r8.ebuild 1756
+MD5 b03a45c3009ca8ec56dba83fa6afc8da rsbac-dev-sources-2.6.7-r9.ebuild 1796
+MD5 17c7be9091418932d25a5d94b4259eb8 ChangeLog 4019
 MD5 706d7794a822074aaf31502d7a7e48d3 files/2.6.7-cmdline.patch 455
 MD5 b6e38b41c8a79943df2ab2642149d06f files/rsbac-dev-sources-CAN-2004-0497.patch 2214
 MD5 f0e12ba218f53c2694a91259bdc2fdc7 files/rsbac-dev-sources-CAN-2004-0596.patch 494
@@ -13,4 +13,5 @@ MD5 b70bcb7c4896526b671f12695522cb0e files/rsbac-bugfix-v1.2.3-kang-01.diff 510
 MD5 452e04a312368605e145428c35bd0e05 files/rsbac-dev-sources-2.6.7-62524-ptmx.patch 572
 MD5 accdbfc81ddc59d568ed845b5972f10a files/rsbac-dev-sources-2.6.7-70681-binfmt.patch 2606
 MD5 7872d0af6e27fb6007833b113097bb34 files/rsbac-dev-sources-2.6.7-CAN-2004-0883.patch 3357
-MD5 fd024d5229ee08ef90d6a532bdf99977 files/digest-rsbac-dev-sources-2.6.7-r8 281
+MD5 530630d25910e6bd9376b63ea099655f files/rsbac-dev-sources-2.6.7-AF_UNIX.patch 469
+MD5 fd024d5229ee08ef90d6a532bdf99977 files/digest-rsbac-dev-sources-2.6.7-r9 281
