@@ -1,0 +1,11 @@
+--- avifile0.6-0.6.4/plugins/libdivx4/divx4.cpp~	Sat Nov 24 12:36:00 2001
++++ avifile0.6-0.6.4/plugins/libdivx4/divx4.cpp	Sat Nov 24 12:36:11 2001
+@@ -172,7 +172,7 @@
+ 		return 0;
+ 	    DEC_FRAME param;
+             // leave here for some time - until all users will use new headers
+-	    CONST_VOID param.bitstream = src;
++	    param.bitstream = src;
+ 	    unsigned char* pc[3];
+ 	    param.bmp=pImage?pImage->Data():0;
+ 	    param.length=size;
