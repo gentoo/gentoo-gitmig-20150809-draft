@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/dynamite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/dynamite/ChangeLog,v 1.6 2004/07/07 03:05:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/dynamite/ChangeLog,v 1.7 2004/10/18 12:16:30 dholm Exp $
+
+  18 Oct 2004; David Holm <dholm@gentoo.org> dynamite-0.1.ebuild:
+  Added to ~ppc.
 
   07 Jul 2004; Alastair Tse <liquidx@gentoo.org>
   files/dynamite-0.1-segv.patch:

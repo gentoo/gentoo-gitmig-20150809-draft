@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/synce-serial
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-serial/ChangeLog,v 1.12 2004/09/25 17:55:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-serial/ChangeLog,v 1.13 2004/10/18 12:15:24 dholm Exp $
+
+  18 Oct 2004; David Holm <dholm@gentoo.org> synce-serial-0.9.0.ebuild:
+  Added to ~ppc.
 
 *synce-serial-0.9.0 (25 Sep 2004)
 

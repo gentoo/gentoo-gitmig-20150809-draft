@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.2-r1.ebuild,v 1.5 2004/06/24 21:44:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.2-r1.ebuild,v 1.6 2004/10/18 12:16:30 dholm Exp $
 
 DESCRIPTION="Orange is a tool and library for squeezing out juicy \
 installable Microsoft Cabinet Files from self-extracting installers \
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=app-pda/dynamite-0.1
