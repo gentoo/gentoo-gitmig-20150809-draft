@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.22 2005/02/14 11:33:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.23 2005/02/28 22:34:36 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -92,9 +92,9 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 export MULTILIB_ABIS=${MULTILIB_ABIS:-"default"}
 export DEFAULT_ABI=${DEFAULT_ABI:-"default"}
 export ABI=${ABI:-"default"}
-export CFLAGS_default=""
-export LDFLAGS_default=""
-export CHOST_default=${CHOST}
+export CFLAGS_default
+export LDFLAGS_default
+export CHOST_default=${CHOST_default:-${CHOST}}
 export LIBDIR_default=${CONF_LIBDIR:-"lib"}
 export CDEFINE_default="__unix__"
 
@@ -189,6 +189,7 @@ get_abi_var() {
 get_abi_CFLAGS() { get_abi_var CFLAGS "${@}"; }
 get_abi_LDFLAGS() { get_abi_var LDFLAGS "${@}"; }
 get_abi_CHOST() { get_abi_var CHOST "${@}"; }
+get_abi_CTARGET_ALIASES() { get_abi_var CTARGET_ALIASES "${@}"; }
 get_abi_CDEFINE() { get_abi_var CDEFINE "${@}"; }
 get_abi_LIBDIR() { get_abi_var LIBDIR "${@}"; }
 
@@ -278,10 +279,10 @@ get_all_libdirs() {
 # using the new multilib configuration.  This can be used to determine
 # if we're in the last (or only) run through src_{unpack,compile,install}
 is_final_abi() {
-	! has_multilib_profile && return 0
+	has_multilib_profile || return 0
 	local ALL_ABIS=$(get_install_abis)
 	local LAST_ABI=${ALL_ABIS/* /}
-	[ "${LAST_ABI}" = "${ABI}" ]
+	[[ "${LAST_ABI}" == "${ABI}" ]]
 }
 
 # echo the number of ABIs we will be installing for
