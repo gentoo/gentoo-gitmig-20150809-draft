@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-0.9.2.ebuild,v 1.5 2003/04/05 07:30:30 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-0.9.2.ebuild,v 1.6 2003/04/28 19:52:53 liquidx Exp $
 
 S=${WORKDIR}/MySQL-python-${PV}
 DESCRIPTION="MySQL Module for python" 
@@ -10,7 +10,6 @@ LICENSE="GPL-2"
 SLOT="0"
 DEPEND="virtual/python
 	virtual/glibc
-	>=dev-lang/python-1.5.2
 	>=dev-db/mysql-3.22.19"
 RDEPEND=""
 KEYWORDS="ppc x86 sparc "
