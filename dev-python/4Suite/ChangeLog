@@ -1,10 +1,15 @@
 # ChangeLog for dev-python/4Suite
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4Suite/ChangeLog,v 1.7 2003/03/17 12:04:09 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4Suite/ChangeLog,v 1.8 2003/04/20 00:31:45 blauwers Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*4Suite-1.0_alpha1 (20 Apr 2003)
+
+  20 Apr 2003; Bart Lauwers <blauwers@gentoo.org> :
+  Version bump per bug #12760 and ebuild clean-up
  
 *4Suite-0.11.1 (18 Mar 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   17 Mar 2003; Graham Forest <vladimir@gentoo.org> 4Suite-0.11.1.ebuild:
   set ~ppc in keywords
