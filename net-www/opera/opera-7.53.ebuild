@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.52.ebuild,v 1.3 2004/07/08 21:05:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.53.ebuild,v 1.1 2004/07/20 17:23:09 lanius Exp $
 
 IUSE="static spell"
 
-OPERAVER="7.52-20040706"
-OPERAFTPDIR="752"
+OPERAVER="7.53-20040716"
+OPERAFTPDIR="753"
 
 S=${WORKDIR}/${A/.tar.bz2/}
 

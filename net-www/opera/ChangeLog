@@ -1,6 +1,12 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.73 2004/07/08 21:05:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.74 2004/07/20 17:23:09 lanius Exp $
+
+*opera-7.53 (20 Jul 2004)
+
+  20 Jul 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.52.ebuild,
+  opera-7.53.ebuild:
+  version bump, mark stable for security reasons
 
   08 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> opera-7.52.ebuild:
   amd64 static only
