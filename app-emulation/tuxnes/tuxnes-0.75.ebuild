@@ -1,12 +1,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.1 2002/12/11 23:14:25 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.2 2003/01/31 21:52:22 mholzer Exp $
 
 inherit flag-o-matic
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="TuxNES is an emulator for the 8-bit Nintendo Entertainment System"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/tuxnes/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://tuxnes.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
