@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.58 2003/08/03 02:20:30 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.59 2003/08/04 01:29:35 latexer Exp $
+
+  03 Aug 2003; Peter Johanson <latexer@gentoo.org>
+  mm-sources-2.6.0_beta2-r3.ebuild:
+  Added the pkg_postinst from development-sources to aid basic configuration.
+  thanks spyderous.
 
   02 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta2-r3.ebuild:

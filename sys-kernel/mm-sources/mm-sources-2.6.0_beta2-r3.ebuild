@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta2-r3.ebuild,v 1.2 2003/08/03 02:20:30 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta2-r3.ebuild,v 1.3 2003/08/04 01:29:35 latexer Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -36,4 +36,27 @@ src_unpack() {
 	unset ARCH
 	kernel_universal_unpack
 
+}
+pkg_postinst() {
+	if [ ! -e ${ROOT}usr/src/linux-beta ]
+	then
+		ln -sf linux-${KV} ${ROOT}/usr/src/linux-beta
+	fi
+
+	ewarn "Please note that ptyfs support has been removed from devfs"
+	ewarn "in the later 2.5.x kernels, and you have to compile it in now,"
+	ewarn "or else you will get errors when trying to open a pty."
+	ewarn "The option is File systems->Pseudo filesystems->/dev/pts"
+	ewarn "filesystem."
+	echo
+	ewarn "Also, note that you must compile in support for"
+	ewarn "input devices (Input device support->Input devices),"
+	ewarn "the virtual terminal (Character Devices->Virtual terminal),"
+	ewarn "vga_console (Graphics Support->Console...->VGA text console)"
+	ewarn "and the vt_console (Character Devices->Support for console...)."
+	ewarn "Otherwise, you will get the dreaded \"Uncompressing the Kernel\""        ewarn "error."
+	echo
+	einfo "Consult http://www.codemonkey.org.uk/post-halloween-2.5.txt"
+	einfo "for more info about the development series."
+	echo
 }
