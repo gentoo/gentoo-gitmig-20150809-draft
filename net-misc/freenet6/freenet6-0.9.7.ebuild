@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-0.9.7.ebuild,v 1.6 2004/07/15 02:49:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-0.9.7.ebuild,v 1.7 2004/10/01 23:12:39 pyrania Exp $
+
+inherit eutils
 
 DESCRIPTION="Client to configure an IPv6 tunnel to freenet6"
 HOMEPAGE="http://www.freenet6.net/"
@@ -16,7 +18,7 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/freenet6-0.9.2.diff || die "Failed to patch"
+	epatch ${FILESDIR}/freenet6-0.9.2.diff || die "Failed to epatch"
 
 	mv -f src/Makefile ${T}
 	sed "s:gcc -g -I\$(INC) -Wall:${CC} -I\$(INC) ${CFLAGS}:" \

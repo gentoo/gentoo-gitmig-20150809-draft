@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1.ebuild,v 1.10 2004/07/22 22:27:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1.ebuild,v 1.11 2004/10/01 23:16:23 pyrania Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P/-utils}
 IUSE=""
@@ -24,7 +26,7 @@ src_unpack() {
 		Makefile.orig > Makefile
 
 	# Fix install locations
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gentoo.diff || die "epatch failed."
 }
 
 src_compile() {

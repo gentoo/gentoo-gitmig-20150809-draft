@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r2.ebuild,v 1.13 2004/08/22 04:42:19 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r2.ebuild,v 1.14 2004/10/01 23:14:54 pyrania Exp $
+
+inherit eutils
 
 IUSE="ssl nls gnome"
 
@@ -40,7 +42,7 @@ src_unpack() {
 			>${S}/doc/${lang}/Makefile.in
 	done
 
-	patch -p0 < ${FILESDIR}/wget-log.c.patch
+	epatch ${FILESDIR}/wget-log.c.patch || die "epatch failed."
 }
 
 src_compile() {
