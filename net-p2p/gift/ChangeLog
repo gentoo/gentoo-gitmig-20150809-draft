@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.20 2002/09/28 09:12:25 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.21 2002/10/05 10:27:33 verwilst Exp $
+
+*gift-0.10.0_pre021004 (5 Okt 2002) Bart Verwilst <verwilst@gentoo.org>
+
 *gift-0.10.0_pre020927 (28 Sept 2002) Bart Verwilst <verwilst@gentoo.org>
 
 *gift-0.10.0_pre020924 (25 Sept 2002) Bart Verwilst <verwilst@gentoo.org>
