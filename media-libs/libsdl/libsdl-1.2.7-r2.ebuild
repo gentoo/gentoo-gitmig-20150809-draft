@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.4 2004/07/31 06:42:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.5 2004/08/17 15:40:53 vapier Exp $
 
-inherit fixheadtails eutils
+inherit fixheadtails eutils gnuconfig
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="http://www.libsdl.org/"
@@ -60,6 +60,8 @@ src_unpack() {
 	fi
 
 	./autogen.sh || die "autogen failed"
+
+	gnuconfig_update
 }
 
 src_compile() {
