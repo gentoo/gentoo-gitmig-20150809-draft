@@ -1,11 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5-r1.ebuild,v 1.7 2002/09/14 15:51:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5-r1.ebuild,v 1.8 2002/09/25 15:29:25 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU regular expression matcher"
-SRC_URI="ftp://prep.ai.mit.edu/gnu/grep/${P}.tar.gz"
+SRC_URI="ftp://prep.ai.mit.edu/gnu/${PN}/${P}.tar.gz
+	ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/grep/grep.html"
+
 KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="0"
 LICENSE="GPL-2"
@@ -14,8 +16,8 @@ DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"
 
 src_compile() {
-	local myconf
-	[ -z "`use nls`" ] && myconf="--disable-nls"
+	local myconf=""
+	use nls || myconf="--disable-nls"
 	
 	./configure --prefix=/usr \
 		--bindir=/bin \
