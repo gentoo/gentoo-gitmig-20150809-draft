@@ -1,0 +1,22 @@
+diff -ur aria-1.0.0.orig/po/Makefile.in.in aria-1.0.0/po/Makefile.in.in
+--- aria-1.0.0.orig/po/Makefile.in.in	2000-10-11 02:30:42.000000000 -0500
++++ aria-1.0.0/po/Makefile.in.in	2004-02-08 23:25:11.299075768 -0600
+@@ -84,6 +84,7 @@
+ 
+ $(srcdir)/$(PACKAGE).pot: $(POTFILES)
+ 	$(XGETTEXT) --default-domain=$(PACKAGE) --directory=$(top_srcdir) \
++	  --from-code=ISO-8859-1 \
+ 	  --add-comments --keyword=_ --keyword=N_ \
+ 	  --files-from=$(srcdir)/POTFILES.in \
+ 	&& test ! -f $(PACKAGE).po \
+diff -ur aria-1.0.0.orig/po/Makfile aria-1.0.0/po/Makfile
+--- aria-1.0.0.orig/po/Makfile	2002-12-18 09:40:55.000000000 -0600
++++ aria-1.0.0/po/Makfile	2004-02-08 23:25:56.980131192 -0600
+@@ -124,6 +124,7 @@
+ 
+ $(srcdir)/$(PACKAGE).pot: $(POTFILES)
+ 	$(XGETTEXT) --default-domain=$(PACKAGE) --directory=$(top_srcdir) \
++	  --from-code=ISO-8859-1 \
+ 	  --add-comments --keyword=_ --keyword=N_ \
+ 	  --files-from=$(srcdir)/POTFILES.in \
+ 	&& test ! -f $(PACKAGE).po \

@@ -1,0 +1,16 @@
+diff -ur aria-1.0.0.orig/src/initrc.cc aria-1.0.0/src/initrc.cc
+--- aria-1.0.0.orig/src/initrc.cc	2001-10-12 11:47:39.000000000 -0500
++++ aria-1.0.0/src/initrc.cc	2004-02-08 23:52:05.509678456 -0600
+@@ -76,7 +76,11 @@
+   if(!copy_file(datadir+"/aria/rc.aria", rcdir+"/rc.aria") ||
+      !copy_file(datadir+"/aria/command.aria", savedir+"/command.aria") ||
+      !copy_file(datadir+"/aria/server.aria", savedir+"/server.aria") ||
+-     !copy_file(datadir+"/aria/useragent.aria", savedir+"/useragent.aria")) {
++     !copy_file(datadir+"/aria/useragent.aria", savedir+"/useragent.aria") ||
++     !copy_file(datadir+"/aria/gui.aria", savedir+"/gui.aria") ||
++     !copy_file(datadir+"/aria/http_proxy.aria", savedir+"/http_proxy.aria") ||
++     !copy_file(datadir+"/aria/ftp_proxy.aria", savedir+"/ftp_proxy.aria") ||       
++     !copy_file(datadir+"/aria/history.aria", savedir+"/history.aria")) {
+     cerr << _("Error occurred in resource file copy: ") << strerror(errno) << endl;
+     return false;
+   }

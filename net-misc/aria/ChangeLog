@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/aria
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.9 2003/05/15 20:47:36 jhhudso Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.10 2004/02/09 06:39:48 jhhudso Exp $
+
+
+  09 Feb 2004; root <root@gentoo.org> aria-0.10.0.ebuild,
+  aria-0.10.2_beta7.ebuild, aria-1.0.0.ebuild, metadata.xml,
+  files/aria-1.0.0-savefiles-gentoo.diff,
+  files/aria-1.0.0-xgettext-gentoo.diff:
+  Fixed bug #39317 and #39342 and updated the copyright headers on the other
+  ebuilds. The first bug was that aria would not start without some specific
+  startup files in your homedir; they are now provided and setup automatically.
+  The second bug was that aria would not compile because it could not create
+  internationalization file aria.po. I also fixed the NLS useflag so it
+  actually does something now.
 
 *aria-1.0.0.ebuild (15 May 2003)
 
