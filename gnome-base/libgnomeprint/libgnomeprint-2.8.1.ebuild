@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.8.0.1.ebuild,v 1.1 2004/11/24 17:00:55 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.8.1.ebuild,v 1.1 2004/11/29 09:15:06 obz Exp $
 
 inherit gnome2
 
@@ -32,4 +32,4 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} `use_with cups`"
 
-DOCS="AUTHORS COPYING* ChangeLog* INSTALL NEWS README"
+DOCS="AUTHORS ChangeLog* NEWS README"
