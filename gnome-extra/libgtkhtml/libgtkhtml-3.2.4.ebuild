@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.2.4.ebuild,v 1.5 2005/03/10 02:19:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.2.4.ebuild,v 1.6 2005/03/12 19:41:20 vapier Exp $
 
 inherit gnome2 versionator
 
@@ -11,10 +11,10 @@ MY_MAJ_PV=$(get_version_component_range 1-2)
 DESCRIPTION="Lightweight HTML Rendering/Printing/Editing Engine"
 HOMEPAGE="http://www.gnome.org/"
 SRC_URI="mirror://gnome/sources/${MY_PN}/${MY_MAJ_PV}/${MY_P}.tar.bz2"
-LICENSE="GPL-2 LGPL-2"
 
+LICENSE="GPL-2 LGPL-2"
 SLOT="3.2"
-KEYWORDS="x86 ppc sparc ~hppa ~alpha ~ia64 ~amd64 ~mips ~arm"
+KEYWORDS="x86 ppc sparc hppa ~alpha ia64 ~amd64 ~mips arm"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
