@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r18.ebuild,v 1.1 2002/12/27 22:19:36 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r18.ebuild,v 1.2 2003/01/19 17:33:56 azarah Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6"
 
@@ -39,6 +39,9 @@ src_unpack() {
 
 	# Patch to allow external programmes to have the "jump to" dialog box
 	epatch ${FILESDIR}/xmms-jump.patch
+
+	# Save playlist, etc on SIGTERM and SIGINT, bug #13604.
+	epatch ${FILESDIR}/xmms-sigterm.patch
 
 	# The following optimisations are ONLY for x86 platform
 	use x86 && ( \
@@ -82,7 +85,7 @@ src_unpack() {
 		cd ${x}
 		aclocal
 		export WANT_AUTOCONF_2_5=1
-		automake --gnu --include-deps Makefile || die
+		automake --gnu --add-missing --include-deps Makefile || die
 		autoconf || die
 	done
 }
