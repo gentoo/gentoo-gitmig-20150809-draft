@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.28 2003/04/21 15:49:44 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.29 2003/04/22 20:44:46 azarah Exp $
+
+*nvidia-kernel-1.0.4349-r2 (22 Apr 2003)
+
+  22 Apr 2003; Martin Schlemmer <azarah@gentoo.org> nvidia-kernel-1.0.4349-r2.ebuild :
+  - Add a patch from myself to handle devfs/irq changes in 2.5.68+.  It works for
+    me at least ....
+  - Update the 2.5 patch to fix a memory leak.
 
 *nvidia-kernel-1.0.4349-r1 (21 Apr 2003)
 
