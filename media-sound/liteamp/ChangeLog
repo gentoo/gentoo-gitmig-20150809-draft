@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/liteamp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/ChangeLog,v 1.6 2003/04/16 17:07:47 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/ChangeLog,v 1.7 2003/07/17 21:31:54 raker Exp $
+
+*liteamp-0.2.2-r1 (17 Jul 2003)
+
+  17 Jul 2003; Nick Hadaway <raker@gentoo.org> liteamp-0.2.2-r1.ebuild:
+  Now depending on media-libs/{libmad,libid3tag} instead of 
+  media-sound/mad
 
 *liteamp-0.2.2 (17 Apr 2003)
 
