@@ -1,4 +1,14 @@
-MD5 3c8f821cbb45c5443424d7ac40c232aa ChangeLog 935
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 624568ce0c77cdf139aed4c85e924983 ChangeLog 1013
 MD5 68e1dc493fdd01842cfa2aaa74788668 metadata.xml 345
-MD5 4e680bc08199b828c6db2a1f53c4f7e0 xsetleds-0.1.3.ebuild 629
+MD5 a59f048db2dca1af859efe0195641ea1 xsetleds-0.1.3.ebuild 627
 MD5 2a543873f26c6acadebee048cc4033f5 files/digest-xsetleds-0.1.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBf2KOI7fK2cqeyXkRAmW4AJ9eNqRaml0lakqL3Qah6m6b96UqcwCgnHs9
+qk9rMvnwJC9Ts77EzSLsUtM=
+=yYaZ
+-----END PGP SIGNATURE-----
