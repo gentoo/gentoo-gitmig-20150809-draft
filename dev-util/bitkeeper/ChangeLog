@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/bitkeeper
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/ChangeLog,v 1.7 2003/02/17 04:05:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/ChangeLog,v 1.8 2003/03/31 17:03:36 mholzer Exp $
+
+*bitkeeper-3.0.1-r1 (31 Mar 2003)
+
+  31 Mar 2003; Martin Holzer <mholzer@gentoo.org> bitkeeper-3.0.1-r1.ebuild:
+  Solves name conflicts between BK man pages and system man pages; also includes
+  code to restore hard links broken by prepman. Patch was submitted in #14409 by
+  Evan Powers (powers.161@osu.edu).
 
 *bitkeeper-3.0.1 (18 Jan 2003)
 
