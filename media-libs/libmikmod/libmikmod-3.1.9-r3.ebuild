@@ -1,13 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.9-r3.ebuild,v 1.3 2001/06/11 08:34:02 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.9-r3.ebuild,v 1.4 2002/02/11 10:49:26 m0rpheus Exp $
 
 P=libmikmod-3.1.9
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="The boldest sound on the planet"
-SRC_URI="http://mikmod.darkorb.net/libmikmod/"${A}
+SRC_URI="http://www.mikmod.org/files/libmikmod/${A}"
 
 DEPEND="virtual/glibc
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
