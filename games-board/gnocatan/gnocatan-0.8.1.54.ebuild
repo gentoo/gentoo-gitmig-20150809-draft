@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/gnocatan-0.8.1.54.ebuild,v 1.2 2005/03/08 04:56:40 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/gnocatan-0.8.1.54.ebuild,v 1.3 2005/03/09 15:11:08 rizzo Exp $
 
 inherit eutils gnome2 debug
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE="nls debug X"
 
-RDEPEND="dev-libs/glib
+RDEPEND=">=dev-libs/glib-2.0
 	X? ( >=gnome-base/libgnomeui-2.6.1.1
 		>=app-text/scrollkeeper-0.3* )"
 

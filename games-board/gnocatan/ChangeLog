@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnocatan
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/ChangeLog,v 1.32 2005/03/08 04:56:40 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/ChangeLog,v 1.33 2005/03/09 15:11:08 rizzo Exp $
+
+  09 Mar 2005; Don Seiler <rizzo@gentoo.org> gnocatan-0.8.1.54.ebuild:
+  Depends on glib >= 2.0, fixes bug #84483.  Thanks to Thomas Schürger.
 
   07 Mar 2005; Don Seiler <rizzo@gentoo.org> -gnocatan-0.8.1.45.ebuild,
   -gnocatan-0.8.1.53.ebuild, gnocatan-0.8.1.54.ebuild:
