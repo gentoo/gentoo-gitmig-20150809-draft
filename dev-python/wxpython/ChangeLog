@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.13 2004/11/13 23:05:05 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.14 2004/12/11 20:25:33 pythonhead Exp $
+
+  11 Dec 2004; Rob Cakebread <pythonhead@gentoo.org>
+  wxpython-2.5.3.1.ebuild:
+  Put headers in a better place. Closes #74019
 
   13 Nov 2004; Rob Cakebread <pythonhead@gentoo.org>
   wxpython-2.5.3.1.ebuild:

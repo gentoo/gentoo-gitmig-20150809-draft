@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.5.3.1.ebuild,v 1.3 2004/11/13 23:05:05 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.5.3.1.ebuild,v 1.4 2004/12/11 20:25:33 pythonhead Exp $
 
 inherit python wxwidgets
 
@@ -82,6 +82,15 @@ src_install() {
 	local site_pkgs=/usr/lib/python${PYVER}/site-packages
 	dodir ${site_pkgs}
 
+	if ! use gtk2; then
+		need-wxwidgets gtk || die "Emerge wxGTK with -no_wxgtk1 in USE"
+	elif use unicode; then
+		need-wxwidgets unicode || die "Emerge wxGTK with unicode in USE"
+	else
+		need-wxwidgets gtk2 || die "Emerge wxGTK with gtk2 in USE"
+	fi
+
+	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
 	use opengl \
 		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
 		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
