@@ -1,5 +1,5 @@
 MD5 c402519da1e3b4aa09d00d644d8d1af5 module-build-0.18.ebuild 683
-MD5 909a734e7f2369db2958dd15159c0cdc ChangeLog 779
-MD5 57d70f74387def3fce0e5b65070d0c0a module-build-0.19.ebuild 683
+MD5 4f2035ee8a424a841c5d108c6f07f7b3 ChangeLog 885
+MD5 0e268e19227eb3e1a7cb82fb07b7583e module-build-0.19.ebuild 699
 MD5 46c83a840d25a11c761e0cbceae27a95 files/digest-module-build-0.18 68
 MD5 0d078cff23ce12c13c3e9525bff85314 files/digest-module-build-0.19 68
