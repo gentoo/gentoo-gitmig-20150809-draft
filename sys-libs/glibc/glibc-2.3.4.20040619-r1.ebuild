@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.9 2004/08/13 01:25:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.10 2004/08/17 16:44:29 lu_zero Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -44,7 +44,7 @@ fi
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="-* ~x86 mips amd64 ~hppa"
+KEYWORDS="-* ~x86 mips amd64 ~hppa ~ppc"
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
