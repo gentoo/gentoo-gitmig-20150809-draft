@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-0.98.ebuild,v 1.2 2005/02/18 17:37:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-0.98.ebuild,v 1.3 2005/03/08 23:13:27 mattam Exp $
 
 inherit findlib
 
@@ -10,20 +10,22 @@ SRC_URI="mirror://sourceforge/ocamlnet/${P}.tar.gz"
 
 LICENSE="as-is"
 KEYWORDS="~ppc ~x86"
-SLOT=")"
+SLOT="0"
 IUSE=""
 
 DEPEND=">=dev-ml/pcre-ocaml-4.31.0"
 
 S="${WORKDIR}/${P}/src"
 
+DATADIR=/usr/share/${PN}
+
 src_compile() {
-	./configure || die "configure failed"
+	./configure -with-pop -datadir ${DATADIR}  || die "configure failed"
 	make all opt || die "make failed"
 }
 
 src_install() {
-	findlib_src_install NET_DB_DIR="${D}${OCAML_SITELIB}/netstring"
+	findlib_src_install NET_DB_DIR="${D}${DATADIR}"
 
 	cd "${WORKDIR}/${P}"
 	dodoc README

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.10 2005/02/18 17:37:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.11 2005/03/08 23:13:27 mattam Exp $
+
+  09 Mar 2005; Matthieu Sozeau <mattam@gentoo.org> ocamlnet-0.98.ebuild:
+  Fix data files installation, add pop library.
 
   18 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> ocamlnet-0.98.ebuild:
   fix repoman issues; tidy
