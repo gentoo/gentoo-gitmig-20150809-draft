@@ -1,6 +1,9 @@
 # ChangeLog for net-news/pan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.45 2004/12/05 02:18:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.46 2004/12/23 15:07:44 corsair Exp $
+
+  23 Dec 2004; Markus Rothe <corsair@gentoo.org> pan-0.14.2.91.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #75353
 
   05 Dec 2004; Sven Wegener <swegener@gentoo.org> -pan-0.13.0.ebuild,
   pan-0.14.2.91.ebuild, pan-0.14.2.ebuild:
