@@ -1,6 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.4-r7.ebuild,v 1.2 2002/04/03 04:25:43 tod Exp $
+# Author: Gentoo System <system@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.4-r7.ebuild,v 1.3 2002/04/30 11:10:55 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An advanced and very configurable FTP server"
@@ -53,7 +54,7 @@ src_install() {
 		sbindir=${D}/usr/sbin \
 		mandir=${D}/usr/share/man \
 		localstatedir=${D}/var/run \
-		rundir=${D}/var/run/proftp \
+		rundir=${D}/var/run/proftpd \
 		sysconfdir=${D}/etc/proftpd \
 		install || die
 
