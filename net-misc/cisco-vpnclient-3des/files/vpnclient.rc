@@ -1,27 +1,37 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/files/vpnclient.rc,v 1.5 2004/07/14 23:55:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/files/vpnclient.rc,v 1.6 2004/08/25 00:04:32 vapier Exp $
 
 opts="start stop status"
 
 VPNCLIENT="/usr/bin/vpnclient"
 VPNDEV="cipsec0"
-VPNMOD="cisco_ipsec"
-
-ID="`which id`"
-if [ "$?" != "0" ]; then
-    eerror "Failed: Unable to determine access level (can't find $HILITE id $NORMAL in \$PATH)."
-    unset ID
-    exit 1
-fi
-WHOAMI="`$ID -u`"
 
 depend() {
 	need net
 }
 
+checkconfig() {
+	export KV="$(uname -r)"
+
+	export VPNMOD="cisco_ipsec"
+	case "${KV}" in
+		2.6.*|2.5.*)		VPNMOD_FILE="${VPNMOD}.ko";;
+		2.4.*|2.2.*|2.0.*)	VPNMOD_FILE="${VPNMOD}.o";;
+		*)
+			eerror "Kernel version '${KV}' is not supported"
+			return 1;;
+	esac
+	export VPNMOD_FILE
+	return 0
+}
+
 start() {
+	checkconfig || return 1
+
+	local PC=""
+
 	ebegin "Starting Cisco VPN Client"
 
 	if [ -f /etc/resolv.conf.vpnbackup ]; then
@@ -29,88 +39,77 @@ start() {
 		mv /etc/resolv.conf.vpnbackup /etc/resolv.conf
 	fi
 
-        if [ -d /lib/modules/preferred ]; then
-                PC=/lib/modules/preferred/CiscoVPN
-        else
-                PC=/lib/modules/`uname -r`/CiscoVPN
-        fi
+	if [ -d /lib/modules/preferred ]; then
+		PC="/lib/modules/preferred/CiscoVPN"
+	else
+		PC="/lib/modules/${KV}/CiscoVPN"
+	fi
 
-        if [ -d $PC ] ; then
-                /sbin/insmod ${PC}/${VPNMOD} >/dev/null 2>&1
-                if [ "$?" != "0" ] ; then
-                        eerror "Failed to load module ${VPNMOD}"
-                        exit 1
-                fi
-        else
-                eerror "module directory $PC not found."
-                exit 1
-        fi
-	case "`uname -r`" in
-		2.6.*)
-		;;
-		2.5.*)
-		;;
-		2.4.*)
-		;;
-		2.2.*)
-		;;
-		2.0.*)
-			#
-			# This is only needed due to a bug in 2.0.x kernels that affects
-			# arp lookups.
-			#
-			ifconfig $VPNDEV 222.222.222.222 ;
-			if [ "$?" != "0" ] ; then
-				eerror "Failed (ifconfig)."
-				/sbin/rmmod ${VPNMOD}
-				exit 1
-			fi
-		;;
-		*)
-			eerror "Failed (unsupported Linux version)."
+	if [ -d "${PC}" ] ; then
+		/sbin/insmod ${PC}/${VPNMOD_FILE} >/dev/null 2>&1
+		if [ "$?" != "0" ] ; then
+			eend 1 "Failed to load module '${VPNMOD}'"
+			return 1
+		fi
+	else
+		eend 1 "module directory '$PC' not found"
+		return 1
+	fi
+
+	if [ "${KV:0:3}" == "2.0" ] ; then
+		# This is only needed due to a bug in 2.0.x kernels that affects
+		# arp lookups.
+		ifconfig $VPNDEV 222.222.222.222 ;
+		if [ "$?" != "0" ] ; then
+			eerror "Failed (ifconfig)"
 			/sbin/rmmod ${VPNMOD}
 			exit 1
-		;;
-	esac
-	eend $? 
+		fi
+	fi
+
+	eend 0
 }
 
 stop() {
+	checkconfig || return 1
+
 	ebegin "Stopping Cisco VPN Client"
+
 	if [ -x $VPNCLIENT ]; then
 		$VPNCLIENT disconnect > /dev/null 2>&1
 	fi
 	/sbin/lsmod | grep -q "${VPNMOD}"
 	if [ "$?" != "0" ] ; then 
-		eerror "Failed: module ${VPNMOD} is not running."
-		exit 1
+		eend 1 "Failed: module ${VPNMOD} is not running"
+		return 1
 	fi
 	/sbin/ifconfig $VPNDEV down
 	if [ "$?" != "0" ] ; then
-		eerror "Failed (ifconfig)."
-		exit 1
+		eend 1 "Failed (ifconfig)"
+		return 1
 	fi
 	/sbin/rmmod ${VPNMOD}
 	if [ "$?" != "0" ] ; then
-		eerror "Failed (rmmod)."
-		exit 1
+		eend 1 "Failed (rmmod)"
+		return 1
 	fi
-	eend $?
+
+	eend 0
 }
 
 status() {
-	/sbin/lsmod | egrep 'Module'
+	checkconfig || return 1
+
 	/sbin/lsmod | egrep "${VPNMOD}"
 	if [ "$?" != "0" ] ; then
-		echo
-		eerror "Failed (lsmod ${VPNMOD}): the VPN module is not loaded."
-		exit 1
+		eerror "Failed (lsmod ${VPNMOD}): the VPN module is not loaded"
+		return 1
 	fi
 	echo
 	/sbin/ifconfig $VPNDEV
 	if [ "$?" != "0" ] ; then
 		echo
-		eerror "Failed (ifconfig ${VPNDEV}): the virtual interface is not present."
-		exit 1
+		eerror "Failed (ifconfig ${VPNDEV}): the virtual interface is not present"
+		return 1
 	fi
 }
