@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.52-r1.ebuild,v 1.2 2005/01/31 01:40:47 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.52-r1.ebuild,v 1.3 2005/01/31 04:14:07 swtaylor Exp $
 
 inherit eutils gnuconfig
 
 DESCRIPTION="courier authentication library"
-[ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2" || SRC_URI="http://www.courier-mta.org/beta/courier-authlib/${P%%_pre}.tar.bz2"
+[ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+[ -z "$SRC_URI" ] && SRC_URI="http://www.courier-mta.org/beta/courier-authlib/${P%%_pre}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
 S="${WORKDIR}/${P%%_pre}"
 
@@ -77,7 +78,7 @@ src_compile() {
 
 	use debug && myconf="${myconf} debug=true"
 
-	ewarn "${myconf}"
+	einfo "${myconf}"
 
 	econf \
 		--sysconfdir=/etc/courier \
@@ -105,15 +106,14 @@ orderfirst() {
 }
 
 src_install() {
-	dodir /var/lib/courier/authdaemon
-	dodir /etc/courier/authlib
-	dodir /etc/init.d
+	diropts -o mail -g mail
+	dodir /etc/courier
 	keepdir /var/lib/courier/authdaemon
 	keepdir /etc/courier/authlib
 	emake install DESTDIR="${D}" || die "install"
 	emake install-migrate DESTDIR="${D}" || die "migrate"
 	emake install-configure DESTDIR="${D}" || die "configure"
-	rm ${D}/etc/courier/authlib/*.bak
+	rm -vf ${D}/etc/courier/authlib/*.bak
 	chown mail:mail ${D}/etc/courier/authlib/*
 	for y in ${D}/etc/courier/authlib/*.dist ; do
 		[ ! -e "${y%%.dist}" ] && cp -v ${y} ${y%%.dist}
@@ -124,9 +124,11 @@ src_install() {
 	use mysql && orderfirst authdaemonrc authmodulelist authmysql
 	dodoc AUTHORS COPYING ChangeLog* INSTALL NEWS README
 	dohtml README.html README_authlib.html NEWS.html INSTALL.html README.authdebug.html
-	use ldap && dodoc authldap.schema
 	use mysql && ( dodoc README.authmysql.myownquery ; dohtml README.authmysql.html )
 	use postgres && dohtml README.authpostgres.html
+	use ldap && ( dodoc README.ldap ; dodir /etc/openldap/schema ; \
+		cp authldap.schema ${D}/etc/openldap/schema/ )
+	dodir /etc/init.d
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/courier-authlib-initd courier-authlib || die "init.d failed"
 }
