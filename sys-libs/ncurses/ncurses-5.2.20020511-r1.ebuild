@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020511-r1.ebuild,v 1.2 2002/06/08 22:32:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020511-r1.ebuild,v 1.3 2002/06/27 03:19:26 gerk Exp $
 
 MY_PV=${PV%.*}
 
@@ -26,7 +26,9 @@ src_unpack() {
 	#( zcat ${DISTDIR}/${PN}-${MY_PV}-20020429.patch.gz | patch -p1 ) || die
 	#( zcat ${DISTDIR}/${PN}-${MY_PV}-20020511.patch.gz | patch -p1 ) || die
 	#this is the generated patch..
-	( bzcat ${DISTDIR}/${PN}-${PV}.diff.bz2 | patch -p1 ) || die
+	# bzcat doesn't always exist (i.e. making stage1), bunzip2 is safer
+	# Gerk - June 26 2002
+	( bunzip2 -c ${DISTDIR}/${PN}-${PV}.diff.bz2 | patch -p1 ) || die
 }
 
 src_compile() {
