@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.1.4.ebuild,v 1.1 2002/12/15 14:48:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.1.4.ebuild,v 1.2 2002/12/18 18:21:02 mholzer Exp $
 
 DESCRIPTION="Image viewer/manager with optional support for MPEG movies."
 HOMEPAGE="http://pornview.sourceforge.net"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 DEPEND="media-libs/libpng
 	>=media-libs/gdk-pixbuf-0.16
 	=x11-libs/gtk+-1.2*
-	mpeg? ( >=media-libs/xine-lib-0.9.9 )"
+	mpeg? ( =media-libs/xine-lib-0.9* )"
 
 #From README mplayer is broken
 #	avi? ( media-video/mplayer )"

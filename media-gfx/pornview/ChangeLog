@@ -1,10 +1,14 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.6 2002/12/15 14:48:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.7 2002/12/18 18:21:02 mholzer Exp $
 
 *pornview-0.1.4 (15 Dec 2002)
 
-  15 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.4.ebuild files/digest-pornview-0.1.4 Changelog
+  18 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.4.ebuild :
+  Fixed Dependeny (#12366) doesn't work with xine-lib >=0.9.13) i've added a bug on sf for this
+  
+
+  15 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.4.ebuild files/digest-pornview-0.1.4 Changelog :
   Added nev Version. Sorry mplayer support is broken by pornview itself. So it's disabled
 
 Sorry Guys, we had to remove 0.1.1 - 0.1.3
