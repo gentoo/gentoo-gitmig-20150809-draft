@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/charva-1.0.1.ebuild,v 1.1 2004/04/11 20:34:12 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/charva-1.0.1.ebuild,v 1.2 2004/04/12 09:36:19 dholm Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 src_unpack() {
 	unpack ${A}
