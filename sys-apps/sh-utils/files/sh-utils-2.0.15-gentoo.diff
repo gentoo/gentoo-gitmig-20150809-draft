@@ -1,0 +1,104 @@
+diff -Naurb sh-utils-2.0.15/src/uname.c sh-utils-2.0.15-fixed/src/uname.c
+--- sh-utils-2.0.15/src/uname.c	Thu Jul 18 20:32:33 2002
++++ sh-utils-2.0.15-fixed/src/uname.c	Sat Aug 24 18:47:00 2002
+@@ -81,6 +81,9 @@
+ /* The name this program was run with, for error messages. */
+ char *program_name;
+ 
++/* Prototype for __sysinfo_processor_type */
++void __sysinfo_processor_type (char *proc_info);
++
+ static struct option const long_options[] =
+ {
+   {"all", no_argument, NULL, 'a'},
+@@ -120,7 +123,6 @@
+   -v, --kernel-version     print the kernel version\n\
+   -m, --machine            print the machine hardware name\n\
+   -p, --processor          print the processor type\n\
+-  -i, --hardware-platform  print the hardware platform\n\
+   -o, --operating-system   print the operating system\n\
+ "), stdout);
+       fputs (HELP_OPTION_DESCRIPTION, stdout);
+@@ -193,10 +195,6 @@
+ 	  toprint |= PRINT_PROCESSOR;
+ 	  break;
+ 
+-	case 'i':
+-	  toprint |= PRINT_HARDWARE_PLATFORM;
+-	  break;
+-
+ 	case 'o':
+ 	  toprint |= PRINT_OPERATING_SYSTEM;
+ 	  break;
+@@ -240,15 +238,13 @@
+   if (toprint & PRINT_PROCESSOR)
+     {
+       char const *element = unknown;
+-#if HAVE_SYSINFO && defined SI_ARCHITECTURE
+       {
+-	static char processor[257];
+-	if (0 <= sysinfo (SI_ARCHITECTURE, processor, sizeof processor))
++		static char processor[BUFSIZ];
++		__sysinfo_processor_type(processor);
+ 	  element = processor;
+       }
+-#endif
+ #ifdef UNAME_PROCESSOR
+-      if (element == unknown)
++      if (element == "unknown")
+ 	{
+ 	  static char processor[257];
+ 	  size_t s = sizeof processor;
+@@ -260,30 +256,6 @@
+       print_element (element);
+     }
+ 
+-  if (toprint & PRINT_HARDWARE_PLATFORM)
+-    {
+-      char const *element = unknown;
+-#if HAVE_SYSINFO && defined SI_PLATFORM
+-      {
+-	static char hardware_platform[257];
+-	if (0 <= sysinfo (SI_PLATFORM,
+-			  hardware_platform, sizeof hardware_platform))
+-	  element = hardware_platform;
+-      }
+-#endif
+-#ifdef UNAME_HARDWARE_PLATFORM
+-      if (element == unknown)
+-	{
+-	  static char hardware_platform[257];
+-	  size_t s = sizeof hardware_platform;
+-	  static int mib[] = { CTL_HW, UNAME_HARDWARE_PLATFORM };
+-	  if (sysctl (mib, 2, hardware_platform, &s, 0, 0) >= 0)
+-	    element = hardware_platform;
+-	}
+-#endif
+-      print_element (element);
+-    }
+-
+   if (toprint & PRINT_OPERATING_SYSTEM)
+     print_element (HOST_OPERATING_SYSTEM);
+ 
+@@ -291,3 +263,21 @@
+ 
+   exit (0);
+ }
++
++/* Originally written by Carlos Gorges, ported to 2.0.15 by <styx@gentoo.org>
++ * Return return vendor_id from proc cpuinfo */
++void __sysinfo_processor_type (char *proc_info) {
++	FILE *ffd;
++	char temp_string[BUFSIZ], final_string[BUFSIZ] = "unknown";
++
++	if((ffd=fopen("/proc/cpuinfo", "r")) != NULL) {
++		while(fscanf(ffd, "%s :", temp_string) != EOF)
++			if((!(strcmp(temp_string, "vendor_id"))) ||
++				(!(strcmp(temp_string, "machine" )))) {
++					fscanf(ffd, "%s", final_string);
++					break;
++			}
++		fclose(ffd);
++	}
++	strncpy(proc_info, final_string, BUFSIZ);
++}
