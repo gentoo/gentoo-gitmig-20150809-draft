@@ -3,12 +3,13 @@ MD5 9d13f2f07418d8a85c60215ca5154a14 mysql-4.0.12.ebuild 6783
 MD5 b64d68609c59d34bcf939fb6b286aec4 mysql-4.0.14.ebuild 6918
 MD5 b1716c908bb6b91f9d95929d8882d362 mysql-3.23.52-r1.ebuild 5872
 MD5 2016c8172ffeb2d0277383931c5b73cc mysql-4.0.13-r2.ebuild 6444
-MD5 74438e35925987cfe739a21f0c726258 mysql-4.0.14-r1.ebuild 6932
+MD5 33475adae96f545279f5066e3b53f33f mysql-4.0.14-r1.ebuild 7032
 MD5 a3702a4c1f2b7118dcd12c8157f07009 mysql-3.23.57.ebuild 6550
 MD5 5f832ff4cd3f663264c59ed2cef9f78f mysql-4.0.13.ebuild 6603
 MD5 afdb302639a6f959bd5715a968162b0e mysql-4.0.13-r1.ebuild 6452
-MD5 63d28ef0a3828aa7b686be86ad89cacc ChangeLog 10397
+MD5 4595034d75e65484e475edc6833e6255 ChangeLog 10536
 MD5 c588cc151fef0b6f588fd21d2a500353 mysql-4.0.13-r3.ebuild 7127
+MD5 977be6c68f6231cbcf1febd3305ade5d files/mysql-4.0.14-r2-tcpd-vars-fix.diff 465
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
 MD5 6b6ee32d2f9f3030b5fcea0a2a9a5360 files/mysql-4.0.rc6 950
