@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.3 2003/01/27 17:40:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.4 2003/02/10 14:19:34 foser Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://oss.sgi.com/projects/fam/download/${MY_P}.tar.gz
 	ftp://oss.sgi.com/projects/fam/download/contrib/dnotify.patch"
 HOMEPAGE="http://oss.sgi.com/projects/fam/"
 
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 	cd ${S}
 	patch -p1 < ${DISTDIR}/dnotify.patch || die
-#	patch -p1 < ${FILESDIR}/${PF}-gcc3.patch || die
+	patch -p1 < ${FILESDIR}/${PF}-gcc3.patch || die
 
 	# should fix the sigqueue overflow problems
 	cd ${S}/fam
