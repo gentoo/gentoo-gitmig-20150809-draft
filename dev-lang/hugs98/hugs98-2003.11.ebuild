@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.7 2004/11/03 20:52:49 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.8 2004/11/16 12:23:28 kosmikus Exp $
 
-inherit base eutils
+inherit base flag-o-matic eutils
 
 IUSE="opengl"
 
@@ -13,7 +13,7 @@ SRC_URI="http://cvs.haskell.org/Hugs/downloads/Nov2003/${MY_P}.tar.gz"
 HOMEPAGE="http://www.haskell.org/hugs/"
 
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~amd64"
 LICENSE="as-is"
 
 DEPEND="virtual/libc
@@ -28,6 +28,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
+
 	if use opengl; then
 		myconf="--enable-hopengl"
 		# the nvidia drivers *seem* not to work together
@@ -54,7 +57,7 @@ src_compile() {
 	# about how you need to give "--host --target --build",
 	# and sometimes it will refuse to run at all.
 
-	cd ${S}/src/unix || die
+	cd ${S}/src/unix || die "source directory not found"
 	./configure \
 		--host=${CHOST} \
 		--target=${CHOST} \
@@ -67,17 +70,17 @@ src_compile() {
 		--enable-profiling \
 		${myconf} || die "./configure failed"
 	cd ..
-	emake || die
+	emake || die "make failed"
 }
 
 src_install () {
-	cd ${S}/src || die
+	cd ${S}/src || die "source directory not found"
 	make \
 		HUGSDIR=${D}/usr/lib/hugs \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
-		install || die
+		install || die "make install failed"
 
 	#somewhat clean-up installation of few docs
 	cd ${S}
