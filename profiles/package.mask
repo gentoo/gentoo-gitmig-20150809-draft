@@ -13,10 +13,6 @@
 # 23 Mar, m0rpheus: bind 8 keeps having serious problems.
 <net-misc/bind-9.0.0 
 
-#these two needs automake-1.6 and autoconf-1.53
-#=media-libs/audiofile-0.2.3-r1
-#=app-office/abiword-0.99.3
-
 # 
 net-mail/vlnx
 
@@ -25,6 +21,14 @@ net-www/zope
 
 #18 Mar 2002, drobbins: this doesn't build if USE="-* build" is set
 #>=sys-apps/sh-utils-2.0.11-r2
+
+#These introduce a method to dinamically switch between OpenGL
+#implementations on the fly.  Need testing.
+#
+# -- Azarah (7 April 2002)
+>=media-video/nvidia-kernel-1.0.2880
+>=media-video/nvidia-glx-1.0.2880
+>=x11-base/xfree-4.2.0-r9
 
 #GNUCash-1.6* do not work with these
 # guile-1.5 changed function names of 1.4
@@ -53,10 +57,6 @@ net-www/zope
 # This is more a java-config bug ....
 =net-www/mozilla-0.9.9
 
-
-# Galeon 1.2.0 depends on Mozilla 0.9.9
-# We have mozilla 0.9.9 now <spider@gentoo.org>
-# >=net-www/galeon-1.1.0
 
 # Let's see how this works
 #>=sys-apps/pcmcia-cs-3.1.33
