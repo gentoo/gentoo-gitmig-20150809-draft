@@ -1,7 +1,12 @@
 # ChangeLog for dev-libs/aterm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.11 2004/03/04 20:10:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.12 2004/04/01 00:38:54 karltk Exp $
 
+*aterm-2.0 (01 Apr 2004)
+
+  01 Apr 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  aterm-2.0.5.ebuild : New upstream version. No joke.
+  
   04 Mar 2004; Jason Wever <weeve@gentoo.org> aterm-1.6.7.ebuild:
   Stable on sparc.
 
