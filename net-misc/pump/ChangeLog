@@ -1,13 +1,13 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.5 2002/12/13 11:00:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.6 2003/01/17 21:50:06 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *pump-0.8.11 (1 Feb 2002)
 
-  04 Dec 2002; Calum Selkirk <cselkirk@gentoo.org> pump-0.8.11.ebuild :
+  17 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Removed init.d script ... see Bug 8917.
 
+  04 Dec 2002; Calum Selkirk <cselkirk@gentoo.org> pump-0.8.11.ebuild :
   Added ppc to KEYWORDS.
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> pump-0.8.11.ebuild :
