@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/surfraw/surfraw-1.0.7.ebuild,v 1.9 2004/06/30 07:46:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/surfraw/surfraw-1.0.7.ebuild,v 1.10 2004/10/01 23:48:32 pyrania Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A fast unix command line interface to WWW"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/misc/proff/${P}.tar.gz"
 HOMEPAGE="http://surfraw.sourceforge.net/"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
+IUSE=""
 
 
 src_compile() {
