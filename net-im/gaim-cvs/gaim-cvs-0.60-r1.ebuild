@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r1.ebuild,v 1.2 2002/10/25 19:40:20 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r1.ebuild,v 1.3 2002/10/26 07:53:07 phoenix Exp $
 
 IUSE="nas nls esd arts perl"
 
@@ -11,13 +11,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
-inherit cvs
-
-ECVS_SERVER="cvs.gaim.sourceforge.net:/cvsroot/gaim"
-ECVS_MODULE="gaim"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
-S=${WORKDIR}/${ECVS_MODULE}
-
 DEPEND="=sys-libs/db-1*
 	!net-im/gaim
 	=x11-libs/gtk+-2.0*
@@ -27,6 +20,13 @@ DEPEND="=sys-libs/db-1*
 	nas? ( >=media-libs/nas-1.4.1-r1 )
 	arts? ( >=kde-base/arts-0.9.5 )
 	perl? ( >=sys-devel/perl-5.6.1 )"
+
+inherit cvs
+
+ECVS_SERVER="cvs.gaim.sourceforge.net:/cvsroot/gaim"
+ECVS_MODULE="gaim"
+ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
+S=${WORKDIR}/${ECVS_MODULE}
 
 src_compile() {
 	local myconf
