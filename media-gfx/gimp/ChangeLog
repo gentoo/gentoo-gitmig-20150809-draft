@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gimp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.102 2004/12/22 16:43:11 obz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.103 2005/02/03 04:18:25 joem Exp $
+
+*gimp-2.2.3 (02 Feb 2005)
+
+  02 Feb 2005; Joe McCann <joem@gentoo.org> gimp-2.0.6.ebuild,
+  +gimp-2.2.3.ebuild:
+  Bugfix bump and removal from p.mask. Added gtkhtml to IUSE
 
   23 Dec 2004; Mike Gardiner <obz@gentoo.org> gimp-2.2.0.ebuild, gimp-2.0.6.ebuild:
   More fixes, changed doc? to gtkhtml? (bug #74848), and fixed USE=-doc to not install any developer documentation in 2.2.0

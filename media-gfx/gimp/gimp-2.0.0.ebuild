@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.0.ebuild,v 1.10 2004/07/24 02:39:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.0.ebuild,v 1.11 2005/02/03 04:18:25 joem Exp $
 
 inherit flag-o-matic libtool eutils
 

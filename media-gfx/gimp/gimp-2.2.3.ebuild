@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.6.ebuild,v 1.3 2005/02/03 04:18:25 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.3.ebuild,v 1.1 2005/02/03 04:18:25 joem Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -8,27 +8,30 @@ DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
 LICENSE="GPL-2"
 
-P_HELP="gimp-help-2-0.5" #"gimp-help-${PV/\./-}"
+P_HELP="gimp-help-2-0.6" #gimp-help-2-{version}
 S_HELP="$WORKDIR/${P_HELP}"
-SRC_URI="mirror://gimp/v2.0/${P}.tar.bz2
+SRC_URI="mirror://gimp/v2.2/${P}.tar.bz2
 	doc? ( mirror://gimp/help/testing/${P_HELP}.tar.gz )"
 
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64 ~mips ~ppc64 ~alpha"
 #IUSE="X aalib altivec debug doc gimpprint jpeg mmx mng png python sse svg tiff wmf"
-IUSE="aalib altivec debug doc gimpprint gtkhtml jpeg mmx mng png python sse svg tiff wmf"
+IUSE="aalib altivec debug doc gtkhtml gimpprint jpeg mmx mng png python sse svg tiff wmf"
 
 # FIXME : some more things can be (local) USE flagged
 # a few options are detection only, fix them to switch
 
 #	X? ( virtual/x11 )"
 RDEPEND="virtual/x11
-	>=dev-libs/glib-2.2
-	>=x11-libs/gtk+-2.2.2
-	>=x11-libs/pango-1.2.2
+	>=dev-libs/glib-2.4.5
+	>=x11-libs/gtk+-2.4.4
+	>=x11-libs/pango-1.4
+	>=media-libs/freetype-2.1.7
 	>=media-libs/fontconfig-2.2
 	>=media-libs/libart_lgpl-2.3.8-r1
 	sys-libs/zlib
+	dev-libs/libxml2
+	dev-libs/libxslt
 
 	gimpprint? ( =media-gfx/gimp-print-4.2* )
 	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
@@ -39,7 +42,7 @@ RDEPEND="virtual/x11
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	mng? ( media-libs/libmng )
 
-	wmf? ( >=media-libs/libwmf-0.2.8 )
+	wmf? ( >=media-libs/libwmf-0.2.8.2 )
 	svg? ( >=gnome-base/librsvg-2.2 )
 
 	aalib?	( media-libs/aalib )
@@ -59,6 +62,8 @@ src_unpack() {
 	# Fix linking to older version of gimp if installed - this should
 	# void liquidx's hack, so it is removed.
 	epatch ${FILESDIR}/ltmain_sh-1.5.0-fix-relink.patch
+	# Install the missing pygimp logo
+	cp ${FILESDIR}/pygimp-logo.png ${S}/plug-ins/pygimp/
 
 }
 
@@ -85,10 +90,14 @@ src_compile() {
 		HARDENED_SUPPRESS_MMX="`use_enable mmx`"
 	fi
 
+	local myconf
+	use doc || myconf="${myconf} --disable-devel-docs"
+
 	econf \
 		--disable-default-binary \
 		--with-x \
 		"${HARDENED_SUPPRESS_MMX}" \
+		${myconf} \
 		`use_enable sse` \
 		`use_enable altivec` \
 		`use_enable doc gtk-doc` \
@@ -125,12 +134,15 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING ChangeL* HACKING INSTALL \
-		MAINTAINERS NEWS PLUGIN_MAINTAINERS README* TODO*
+	dodoc AUTHORS ChangeLog* HACKING NEWS README*
 
 	if use doc; then
 		cd ${S_HELP}
 		make DESTDIR=${D} install || die
 	fi
 
+	# Create the gimp-remote link, see bug #36648
+	dosym gimp-remote-2.2 /usr/bin/gimp-remote
+
 }
+
