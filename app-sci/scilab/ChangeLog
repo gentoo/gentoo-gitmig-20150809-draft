@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/scilab
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.18 2004/06/28 04:17:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.19 2004/06/30 19:26:37 kugelfang Exp $
+
+  30 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> -scilab-2.6.ebuild,
+  -scilab-2.7-r1.ebuild, scilab-2.7-r2.ebuild, -scilab-2.7.ebuild:
+  Added ifc/g77 check to scilab-2.7-r2 as well. Removed <scilab-2.7-r1.
 
   27 Jun 2004; Aron Griffis <agriffis@gentoo.org> scilab-2.7-r3.ebuild,
   scilab-2.7.ebuild:

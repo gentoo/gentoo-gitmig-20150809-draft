@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r2.ebuild,v 1.7 2004/06/24 22:16:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r2.ebuild,v 1.8 2004/06/30 19:26:37 kugelfang Exp $
 
 DESCRIPTION="Scientific software package for numerical computations, Matlab lookalike"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/${P}.src.tar.gz
@@ -30,6 +30,12 @@ pkg_setup() {
 		ewarn "Previous version of scilab was detected on your system"
 		ewarn "Unfortunately these versions cause problems for newer ones during update"
 		ewarn 'Please uninstall it with "emerge unmerge scilab" before continuig'
+		die
+	fi
+	use ifc || if [ -z `which g77` ]; then
+		#if ifc is defined then the dep was already checked
+		eerror "No fortran compiler found on the system!"
+		eerror "Please add f77 to your USE flags and reemerge gcc!"
 		die
 	fi
 }
