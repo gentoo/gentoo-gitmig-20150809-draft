@@ -1,0 +1,47 @@
+--- linuxtrade-3.65/alert.c.bool	2002-12-27 01:03:32.000000000 -0500
++++ linuxtrade-3.65/alert.c	2004-07-19 19:26:56.000000000 -0400
+@@ -679,7 +679,7 @@
+ 	int	i;
+ 	ALERT	*ap;
+ 	float	var;
+-	int	bool;
++	int	bule;
+ 	time_t	now;
+ 	struct tm *tm;
+ 	int	dowrite = 0;
+@@ -707,9 +707,9 @@
+ 
+ 		switch (ap->op)
+ 		{
+-		case '<':	bool = var < ap->val; break;
+-		case '>':	bool = var > ap->val; break;
+-		case '=':	bool = var = ap->val; break;
++		case '<':	bule = var < ap->val; break;
++		case '>':	bule = var > ap->val; break;
++		case '=':	bule = var = ap->val; break;
+ 		default:	continue;
+ 		case 'f':
+ 				time(&now); tm = localtime(&now);
+@@ -723,7 +723,7 @@
+ 					continue;
+ 				}
+ 				else
+-					bool = var <= ap->val;
++					bule = var <= ap->val;
+ 				break;
+ 		case 'F':
+ 				time(&now); tm = localtime(&now);
+@@ -737,11 +737,11 @@
+ 					continue;
+ 				}
+ 				else
+-					bool = var >= ap->val;
++					bule = var >= ap->val;
+ 				break;
+ 		}
+ 
+-		if (!bool)
++		if (!bule)
+ 			continue;
+ 
+ 		ap->alstate = ALERT_TRIG;	// Alerts are one-shot

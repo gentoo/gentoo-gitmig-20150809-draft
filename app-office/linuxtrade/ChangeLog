@@ -1,0 +1,11 @@
+# ChangeLog for app-office/linuxtrade
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/linuxtrade/ChangeLog,v 1.1 2004/07/20 00:06:04 agriffis Exp $
+
+*linuxtrade-3.65 (19 Jul 2004)
+
+  19 Jul 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/linuxtrade-3.65-bool.patch, +linuxtrade-3.65.ebuild:
+  New ebuild for linuxtrade, ncurses-based realtime quote tracker, submitted by
+  me
+

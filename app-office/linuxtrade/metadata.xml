@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>agriffis@gentoo.org</email>
+</maintainer>
+<longdescription>
+Linuxtrade is a lightweight curses-based program with all the cool
+features expected from a real-time stock market trading console:
+portfolios, real time quotes, charts with live updates, time and
+sales, fundamental and technical indicators, top ten and market
+movers, news articles, alerts, option chains, the Briefing.com In Play
+and Up/Downgrades lists, earnings, splits and quiet period calendars,
+and Level 2 market depth indications from the Archipelago and the
+Island ECN's.
+</longdescription>
+</pkgmetadata>
