@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/KXL/KXL-1.1.5.ebuild,v 1.9 2003/02/13 10:32:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/KXL/KXL-1.1.7.ebuild,v 1.1 2003/03/04 22:13:05 vapier Exp $
 
 DESCRIPTION="Development Library for making games for X"
 SRC_URI="http://kxl.hn.org/download/${P}.tar.gz"
