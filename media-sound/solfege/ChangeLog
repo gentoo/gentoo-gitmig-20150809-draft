@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/solfege
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.9 2004/11/19 22:55:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.10 2004/12/19 06:45:07 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  solfege-2.0.6.ebuild:
+  Stable x86.
 
 *solfege-2.0.6 (19 Nov 2004)
 
