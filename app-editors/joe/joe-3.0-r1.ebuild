@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.0.ebuild,v 1.1 2004/04/23 22:18:54 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.0-r1.ebuild,v 1.1 2004/05/07 14:20:31 joker Exp $
 
 IUSE=""
 
@@ -21,6 +21,16 @@ PROVIDE="virtual/editor"
 # Bug 34609 (joe 2.9.8 editor seg-faults on 'find and replace' when compiled with -Os)
 replace-flags "-Os" "-O2"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# Fix bug #50271 (joe 3.0 documentation doesn't reflect new config file location)
+	for i in jmacsrc.in jpicorc.in jstarrc.in rjoerc.in joe.1.in
+	do
+		sed -e 's:@sysconfdir@/:@sysconfdir@/joe/:' -i ${i}
+	done
+}
+
 src_compile() {
 	econf || die
 	make || die
@@ -28,5 +38,12 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc COPYING INFO LIST README TODO VERSION
+	dodoc COPYING ChangeLog HINTS INFO LIST NEWS README README.cvs TODO
+}
+
+pkg_postinst() {
+	echo
+	einfo "Global configuration has been moved from /etc to /etc/joe."
+	einfo "You should move or remove your old configuration files."
+	echo
 }
