@@ -1,6 +1,10 @@
 # ChangeLog for net-www/publicfile
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/ChangeLog,v 1.9 2003/12/30 15:08:32 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/ChangeLog,v 1.10 2004/04/06 10:55:48 method Exp $
+
+  06 Apr 2004; Joshua Brindle <method@gentoo.org> publicfile-0.52-r1.ebuild,
+  publicfile-0.52.ebuild:
+  added selinux policy to rdepend
 
 *publicfile-0.52-r1 (30 Dec 2003)
 

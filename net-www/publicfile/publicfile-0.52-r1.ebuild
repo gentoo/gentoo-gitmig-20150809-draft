@@ -1,9 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52-r1.ebuild,v 1.1 2003/12/30 15:08:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52-r1.ebuild,v 1.2 2004/04/06 10:55:48 method Exp $
 
 inherit eutils
 
+IUSE="selinux"
 DESCRIPTION="publish files through FTP and HTTP"
 HOMEPAGE="http://cr.yp.to/publicfile.html"
 SRC_URI="http://cr.yp.to/publicfile/${P}.tar.gz
@@ -14,7 +15,8 @@ LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND=">=sys-apps/daemontools-0.70
-	>=sys-apps/ucspi-tcp-0.83"
+	>=sys-apps/ucspi-tcp-0.83
+	selinux? ( sec-policy/selinux-publicfile )"
 
 src_unpack() {
 	unpack publicfile-0.52.tar.gz

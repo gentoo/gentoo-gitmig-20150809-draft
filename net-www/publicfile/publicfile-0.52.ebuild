@@ -1,7 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52.ebuild,v 1.13 2004/02/22 16:55:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52.ebuild,v 1.14 2004/04/06 10:55:48 method Exp $
 
+IUSE="selinux"
 S=${WORKDIR}/${P}
 DESCRIPTION="publish files through FTP and HTTP"
 SRC_URI="http://cr.yp.to/publicfile/${P}.tar.gz"
@@ -12,7 +13,8 @@ SLOT="0"
 LICENSE="as-is"
 
 RDEPEND=">=sys-apps/daemontools-0.70
-	>=sys-apps/ucspi-tcp-0.83"
+	>=sys-apps/ucspi-tcp-0.83
+	selinux? ( sec-policy/selinux-publicfile )"
 
 src_compile() {
 	echo "gcc ${CFLAGS}" > conf-cc

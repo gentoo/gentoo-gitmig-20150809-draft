@@ -1,6 +1,10 @@
 # ChangeLog for net-www/privoxy
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.19 2004/03/23 04:19:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.20 2004/04/06 10:53:39 method Exp $
+
+  06 Apr 2004; Joshua Brindle <method@gentoo.org> privoxy-2.9.14_beta.ebuild,
+  privoxy-3.0.2.ebuild, privoxy-3.0.3.ebuild:
+  added selinux policy to rdepend
 
   22 Mar 2004; Jason Wever <weeve@gentoo.org> privoxy-3.0.2.ebuild,
   privoxy-3.0.3.ebuild:

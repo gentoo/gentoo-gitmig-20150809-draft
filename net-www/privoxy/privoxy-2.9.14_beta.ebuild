@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-2.9.14_beta.ebuild,v 1.8 2004/02/22 16:54:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-2.9.14_beta.ebuild,v 1.9 2004/04/06 10:53:39 method Exp $
 
+IUSE="selinux"
 MY_P=${P/_beta/-beta}
 S=${WORKDIR}/${MY_P}
 HOMEPAGE="http://www.privoxy.org"
@@ -9,6 +10,7 @@ DESCRIPTION="A web proxy with advanced filtering capabilities for protecting pri
 SRC_URI="mirror://sourceforge/ijbswa/${MY_P}-src.tar.gz"
 
 DEPEND="virtual/textbrowser"
+RDEPEND="selinux? ( sec-policy/selinux-privoxy )"
 
 SLOT="2"
 KEYWORDS="x86 sparc"
