@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/diradm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.10 2005/01/09 10:14:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.11 2005/01/09 13:39:55 robbat2 Exp $
+
+*diradm-2.3 (09 Jan 2005)
+
+  09 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> +diradm-2.3.ebuild:
+  new version.
 
 *diradm-2.2 (09 Jan 2005)
 

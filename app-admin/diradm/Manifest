@@ -1,8 +1,9 @@
 MD5 be8e5e90a7584702a8ed117e87e87066 diradm-1.1.ebuild 706
 MD5 dcbaf04bd8a87d21d79093435ec043f5 diradm-1.1-r1.ebuild 711
 MD5 7d2afaf256a0ee60bb028d94e85a8617 diradm-2.1.ebuild 1078
+MD5 6a2fc0ebe495d5c5b3352abf2dbd9170 diradm-2.3.ebuild 1196
 MD5 97a244c51245f6a678434fb1bda510d2 diradm-1.2.ebuild 713
-MD5 f73b317f50b0e549ed67291213537737 ChangeLog 1112
+MD5 bc3c7688b49f1f716fc2027de3193903 ChangeLog 1228
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 aefb88d593867952053e867f2ca3ce7d diradm-2.2.ebuild 1075
 MD5 8da816300b28290bb801948a907c20da files/digest-diradm-1.1-r1 61
@@ -10,3 +11,4 @@ MD5 8da816300b28290bb801948a907c20da files/digest-diradm-1.1 61
 MD5 ae1c6984ec04ecdd16c006687082d7bd files/digest-diradm-1.2 61
 MD5 b6d85d7842da8a0123dd9bf4c0491042 files/digest-diradm-2.1 62
 MD5 65d6a787fc54d9daa32d3053f110138d files/digest-diradm-2.2 62
+MD5 0cd175c067b14f4d3c81e8a0c2758042 files/digest-diradm-2.3 62
