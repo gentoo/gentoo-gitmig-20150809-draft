@@ -1,6 +1,14 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.70 2004/08/09 02:41:16 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.71 2004/09/30 01:07:00 morfic Exp $
+
+*transcode-0.6.12-r2 (29 Sep 2004)
+
+  29 Sep 2004; Daniel Goller <morfic@gentoo.org>
+  +files/transcode-0.6.12-r2-dvdmenu.patch,
+  +files/transcode-0.6.12-r2-gcc34.patch, +transcode-0.6.12-r2.ebuild:
+  ebuild cleanup + fixes for bug #43907, bug #57513, bug #56535
+  Special thanks to autovoicer Bret Towe
 
   08 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> transcode-0.6.11.ebuild:
   Added another gcc-3.4 fix. Closes bug #54046.
