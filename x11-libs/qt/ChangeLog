@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.125 2004/02/17 12:20:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.126 2004/02/20 15:30:56 gmsoft Exp $
+
+  20 Feb 2004; Guy Martin <gmsoft@gentoo.org> qt-3.3.0-r1.ebuild:
+  Marked stable on hppa.
 
   17 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0-r1.ebuild:
   Okay, I think this new ebuild fixes the problems of uic using the old
