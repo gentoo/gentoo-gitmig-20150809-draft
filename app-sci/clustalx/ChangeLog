@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/clustalx
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalx/ChangeLog,v 1.2 2004/10/14 14:35:24 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalx/ChangeLog,v 1.3 2004/11/17 14:17:51 ribosome Exp $
+
+  17 Nov 2004; Olivier Fisette <ribosome@gentoo.org> clustalx-1.83.ebuild:
+  Added to x86. Use toolchain-funcs rather than the gcc eclass.
 
   14 Oct 2004; Olivier Fisette <ribosome@gentoo.org> clustalx-1.83.ebuild:
   Use gcc.eclass rather than ${CC}.
