@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/cctools-extras
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/cctools-extras/ChangeLog,v 1.1 2004/11/07 22:56:00 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/cctools-extras/ChangeLog,v 1.2 2004/11/18 18:42:01 kito Exp $
+
+  18 Nov 2004; Kito <kito@gentoo.org> cctools-extras-525.ebuild:
+  fix libkld.a static build
 
 *cctools-extras-525 (07 Nov 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/cctools-extras/cctools-extras-525.ebuild,v 1.2 2004/11/07 23:13:37 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/cctools-extras/cctools-extras-525.ebuild,v 1.3 2004/11/18 18:42:01 kito Exp $
 
 DESCRIPTION="Extra cctools utils"
 HOMEPAGE="http://darwinsource.opendarwin.org/"
@@ -12,12 +12,16 @@ SLOT="0"
 KEYWORDS="~ppc-macos"
 IUSE=""
 
-DEPEND=""
+DEPEND="sys-apps/bootstrap_cmds
+		virtual/libc"
 
 src_compile() {
 	cd ${WORKDIR}/cctools-${PV}
-	rm -rf ar as cbtlibs dyld file gprof ld libdyld libmacho mkshlib otool
-	make SUBDIRS="libstuff misc" || die "make failed"
+	rm -rf ar as cbtlibs dyld file gprof libdyld mkshlib otool
+	make SUBDIRS="libmacho libstuff misc" RC_OS=macos || die "make failed"
+
+	cd ${WORKDIR}/cctools-${PV}/ld
+	make RC_OS=macos kld_build || die "static kld build failed"
 }
 
 src_install() {
@@ -28,6 +32,9 @@ src_install() {
 	newbin indr.NEW indr || die "indr failed"
 	newbin seg_addr_table.NEW seg_addr_table || die "seg_addr_table failed"
 	newbin seg_hack.NEW seg_hack || die "seg_hack failed"
+
+	cd ${WORKDIR}/cctools-${PV}/ld/static_kld
+	dolib.a *.a
 
 	cd ${WORKDIR}/cctools-${PV}/man
 	doman {check_dylib.1,checksyms.1,indr.1,seg_addr_table.1}
