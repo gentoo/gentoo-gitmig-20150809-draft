@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/xffm-4.0.6.ebuild,v 1.1 2004/07/12 17:06:59 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/xffm-4.0.6.ebuild,v 1.2 2004/08/04 05:36:54 bcowan Exp $
 
 IUSE="samba"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ia64 ~x86 ~ppc ~alpha ~sparc ~amd64 ~hppa ~mips"
+KEYWORDS="~ia64 x86 ~ppc ~alpha ~sparc ~amd64 ~hppa ~mips"
 
 DEPEND=">=x11-libs/gtk+-2.0.6
 	dev-util/pkgconfig
