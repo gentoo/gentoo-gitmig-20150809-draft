@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.4.ebuild,v 1.2 2003/02/28 01:03:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.4.ebuild,v 1.3 2003/03/02 13:15:00 liquidx Exp $
 
 IUSE="spell"
 
@@ -27,6 +27,12 @@ export CONFIG_PROTECT_MASK="/etc/gconf"
 src_compile() {
 	local myconf=""
 
+	# Likely that glibc might of been compiled with nls turned off.
+    # Warn people that Pan requires glibc to have nls support.
+	if [ -z "`use nls`" ]; then
+		ewarn "Pan requires glibc to be merged with 'nls' in your USE flags."
+	fi
+    
 	use spell \
 		&& myconf="${myconf} --enable-gtkspell" \
 		|| myconf="${myconf} --disable-gtkspell"
