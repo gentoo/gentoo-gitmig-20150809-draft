@@ -1,6 +1,6 @@
 MD5 11ee038e783a57b232061caddd8a48a0 textutils-2.1.ebuild 1101
 MD5 4639171ca42a3aba855a0b48114d7e8b textutils-2.0.21.ebuild 1254
-MD5 805c1782faed7b13286d54877130f5f1 textutils-2.1-r1.ebuild 467
+MD5 daaa565e04dac807cec4a2150533d2fc textutils-2.1-r1.ebuild 472
 MD5 1adb441c8e36850d8ab67059854567a3 ChangeLog 2387
 MD5 fa618c23a88a25c243798aacf2db59a6 files/textutils-2.0.21-gentoo.diff 1278
 MD5 912d3e77416726cfd0e4fbe8b53a3468 files/digest-textutils-2.1 66
