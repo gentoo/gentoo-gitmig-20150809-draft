@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmMatrix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMatrix/ChangeLog,v 1.5 2004/06/24 23:12:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMatrix/ChangeLog,v 1.6 2004/11/28 19:00:02 s4t4n Exp $
+
+  28 Nov 2004; Michele Noberasco <s4t4n@gentoo.org> wmMatrix-0.2.ebuild:
+  Changed HOMEPAGE and SRC_URI to the www.dockapps.org ones, as the
+  original package homepage no longer exists...
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
