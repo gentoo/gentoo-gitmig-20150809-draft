@@ -79,6 +79,5 @@ move kde-base/arts-1.1.0.5 kde-base/arts-1.1.0_rc5
 move app-sci/kstars kde-base/kdeedu
 move gnome-extra/mc app-misc/mc
 move sys-apps/i2c sys-kmods/i2c
-move sys-apps/lm_sensors sys-kmods/lm_sensors
 move media-sound/freeamp media-sound/zinf
 move app-text/xmltex app-text/passivetex
