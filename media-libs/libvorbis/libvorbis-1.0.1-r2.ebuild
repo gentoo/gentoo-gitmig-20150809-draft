@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.9 2004/09/12 10:32:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.10 2004/09/16 02:08:05 pvdabeel Exp $
 
 inherit libtool flag-o-matic gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.vorbis.com/files/${PV}/unix/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 amd64 mips sparc hppa alpha ia64 ppc ppc64 ~macos"
+KEYWORDS="x86 amd64 mips sparc hppa alpha ia64 ppc ppc64 ~macos ~ppc-macos"
 
 IUSE=""
 
@@ -30,6 +30,8 @@ src_compile() {
 	# Fixes some strange sed-, libtool- and ranlib-errors on
 	# Mac OS X
 	if use macos; then
+		glibtoolize
+	elif use ppc-macos; then
 		glibtoolize
 	else
 		elibtoolize
@@ -55,6 +57,7 @@ src_compile() {
 
 	econf || die
 	use macos && cd ${S} && sed -i -e 's/examples//' Makefile
+	use ppc-macos && cd ${S} && sed -i -e 's/examples//' Makefile
 	emake || die
 }
 
@@ -63,6 +66,9 @@ src_install() {
 	if use macos; then
 		dosym /usr/lib/libvorbisfile.3.1.0.dylib /usr/lib/libvorbisfile.0.dylib
 		dosym /usr/lib/libvorbisenc.2.0.0.dylib /usr/lib/libvorbisenc.0.dylib
+	elif use ppc-macos; then
+		dosym /usr/lib/libvorbisfile.3.1.0.dylib /usr/lib/libvorbisfile.0.dylib
+		dosym /usr/lib/libvorbisenc.2.0.0.dylib /usr/lib/libvorbisenc.0.dylib	
 	else
 		dosym /usr/lib/libvorbisfile.so.3.1.0 /usr/lib/libvorbisfile.so.0
 		dosym /usr/lib/libvorbisenc.so.2.0.0 /usr/lib/libvorbisenc.so.0

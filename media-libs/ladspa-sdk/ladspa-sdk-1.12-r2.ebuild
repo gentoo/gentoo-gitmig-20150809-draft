@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.3 2004/09/15 16:09:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.4 2004/09/16 02:04:00 pvdabeel Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.ladspa.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc sparc ~alpha amd64 ~macos"
+KEYWORDS="x86 ~ppc sparc ~alpha amd64 ~macos ~ppc-macos"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"
@@ -30,6 +30,7 @@ src_unpack() {
 			die "sed makefile failed (mkdirhier)"
 	epatch ${FILESDIR}/${P}-test.patch
 	use macos && epatch ${FILESDIR}/${P}-macos.patch
+	use ppc-macos && epatch ${FILESDIR}/${P}-macos.patch
 }
 
 src_compile() {

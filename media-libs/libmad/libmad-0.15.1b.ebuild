@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.11 2004/07/22 10:28:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.12 2004/09/16 02:04:38 pvdabeel Exp $
 
 IUSE="debug"
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~mips ~ia64 ppc64 macos"
+KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~mips ~ia64 ppc64 macos ppc-macos"
 
 DEPEND="virtual/libc"
 

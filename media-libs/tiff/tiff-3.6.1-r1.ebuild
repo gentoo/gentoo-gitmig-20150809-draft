@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.7 2004/09/07 02:16:15 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.8 2004/09/16 02:08:25 pvdabeel Exp $
 
 MY_S=${P/tiff-/tiff-v}
 MY_P=${PN}-v${PV/_beta/-beta}
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc mips alpha arm hppa amd64 ia64 s390 macos"
+KEYWORDS="~x86 ~ppc ~sparc mips alpha arm hppa amd64 ia64 s390 macos ppc-macos"
 IUSE="lzw-tiff"
 
 DEPEND=">=media-libs/jpeg-6b

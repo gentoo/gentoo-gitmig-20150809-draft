@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.28 2004/09/07 02:15:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.29 2004/09/16 02:03:24 pvdabeel Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -11,12 +11,12 @@ SRC_URI="ftp://ftp.uu.net/graphics/jpeg/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 macos ppc-macos"
 IUSE=""
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
-	!macos? >=sys-apps/sed-4"
+	!macos? ( !ppc-macos? ( >=sys-apps/sed-4 ) )"
 
 src_unpack() {
 	unpack ${A}
