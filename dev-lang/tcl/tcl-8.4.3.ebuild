@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.3.ebuild,v 1.5 2003/12/07 14:32:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.3.ebuild,v 1.6 2004/01/03 18:23:31 iggy Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -17,7 +17,7 @@ RDEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="~x86 ~sparc ~mips ~ia64"
 IUSE=""
 
 # hyper-optimizations untested...

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.21 2003/12/19 17:19:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.22 2004/01/03 18:23:31 iggy Exp $
+
+  03 Jan 2004; Brian Jackson <iggy@gentoo.org> tcl-8.3.3-r1.ebuild,
+  tcl-8.3.3-r3.ebuild, tcl-8.3.4.ebuild, tcl-8.4.3.ebuild, tcl-8.4.4.ebuild,
+  tcl-8.4.5.ebuild:
+  adding ~ia64 keywords, it's installed on the releng ia64 box, so I assume it's
+  safe, needed for bitkeeper
 
   19 Dec 2003; David Holm <dholm@gentoo.org> tcl-8.4.5.ebuild:
   Added to ~ppc.
