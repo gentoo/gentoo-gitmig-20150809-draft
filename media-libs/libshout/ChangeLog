@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libshout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.15 2005/02/26 21:50:56 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.16 2005/02/27 06:45:31 jnc Exp $
+
+*libshout-2.1 (27 Feb 2005)
+
+  27 Feb 2005; Eric Shattow <jnc@gentoo.org> +libshout-2.1.ebuild:
+  Version bump.
 
   26 Feb 2005; Eric Shattow <jnc@gentoo.org> libshout-2.0.ebuild:
   Update SRC_URI to new xiph.org location
