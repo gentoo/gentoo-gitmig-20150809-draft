@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/io-vm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io-vm/ChangeLog,v 1.4 2004/10/18 12:25:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io-vm/ChangeLog,v 1.5 2004/10/27 19:00:12 kito Exp $
+
+  27 Oct 2004; Kito <kito@gentoo.org> io-vm-20030923.ebuild:
+  added ~ppc-macos keyword
 
   18 Oct 2004; David Holm <dholm@gentoo.org> io-vm-20030923.ebuild:
   Added to ~ppc.
