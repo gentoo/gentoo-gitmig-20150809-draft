@@ -4,10 +4,6 @@
 # this patch works for me on x86 and ppc but breaks other ppl :( (kain, 08 May 2002)
 =sys-devel/gdb-5.1.1-r1
 
-# I can't test my pbbuttons ebuild - need some help from powerbook
-# owners please (daybird, 07 May 2002)
-sys-apps/pbbuttonsd
-
 # According to spider this breaks gnome-vfs (sandymac, 03 May 2002):
 # and evolution (azarah, 05 May 2002)
 dev-libs/libiconv
