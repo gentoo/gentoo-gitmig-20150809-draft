@@ -73,4 +73,9 @@ move kde-base/kfile-lnk kde-base/kdeaddons-kfile-plugins
 move kde-base/kfile-txt kde-base/kdeaddons-kfile-plugins
 move kde-base/kfile-cert kde-base/kdeaddons-kfile-plugins
 move kde-base/kfile-mhtml kde-base/kdeaddons-kfile-plugins
+move kde-base/kicker-kbinaryclock kde-base/kicker-applets
+move kde-base/kicker-kolourpicker kde-base/kicker-applets
+move kde-base/kicker-ktimemon kde-base/kicker-applets
+move kde-base/kicker-math kde-base/kicker-applets
+move kde-base/kicker-mediacontrol kde-base/kicker-applets
 
