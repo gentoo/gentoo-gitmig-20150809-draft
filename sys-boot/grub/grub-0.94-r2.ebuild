@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r2.ebuild,v 1.3 2005/01/20 18:37:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r2.ebuild,v 1.4 2005/02/04 00:13:45 eradicator Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
@@ -63,6 +63,7 @@ src_compile() {
 	# build the net-bootable grub first
 	CFLAGS="" \
 	econf \
+		--libdir=/lib \
 		--datadir=/usr/lib/grub \
 		--exec-prefix=/ \
 		--disable-auto-linux-mem-opt \
@@ -82,6 +83,7 @@ src_compile() {
 	# now build the regular grub
 	CFLAGS="${CFLAGS}" \
 	econf \
+			--libdir=/lib \
 			--datadir=/usr/lib/grub \
 			--exec-prefix=/ \
 			--disable-auto-linux-mem-opt || die

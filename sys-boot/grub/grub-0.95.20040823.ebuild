@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.11 2005/01/20 18:37:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.12 2005/02/04 00:13:45 eradicator Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig toolchain-funcs
 
@@ -70,6 +70,7 @@ src_compile() {
 	then
 		CFLAGS="" \
 		econf \
+		--libdir=/lib \
 		--datadir=/usr/lib/grub \
 		--exec-prefix=/ \
 		--disable-auto-linux-mem-opt \
@@ -91,6 +92,7 @@ src_compile() {
 	# Note that FFS and UFS2 support are broken for now - stage1_5 files too big
 	CFLAGS="${CFLAGS}" \
 	econf \
+			--libdir=/lib \
 			--datadir=/usr/lib/grub \
 			--exec-prefix=/ \
 			--disable-auto-linux-mem-opt || die "econf failed"
