@@ -1,0 +1,11 @@
+# ChangeLog for net-im/reaim
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/reaim/ChangeLog,v 1.1 2004/06/15 19:06:27 squinky86 Exp $
+
+*reaim-0.8 (15 Jun 2004)
+
+  15 Jun 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml, +files/reaim,
+  +reaim-0.8.ebuild:
+  Initial commit. Thanks to David Brigada <brigad@rpi.edu> for the package.
+  Closes #53349
+
