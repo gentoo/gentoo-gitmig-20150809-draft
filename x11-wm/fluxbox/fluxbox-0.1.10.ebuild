@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.10.ebuild,v 1.4 2002/08/14 15:45:39 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.10.ebuild,v 1.5 2002/08/16 17:19:25 seemant Exp $
 
 inherit commonbox flag-o-matic
 
@@ -17,6 +17,14 @@ KEYWORDS="x86 ppc sparc sparc64"
 mydoc="ChangeLog COPYING NEWS"
 myconf="--enable-xinerama"
 filter-flags -fno-exceptions
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/${PN}-vano-gentoo.patch
+}
+
 src_compile() {
 
 	commonbox_src_compile

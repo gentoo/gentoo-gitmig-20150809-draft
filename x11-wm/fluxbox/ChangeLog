@@ -1,8 +1,15 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.21 2002/08/15 16:33:01 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.22 2002/08/16 17:19:25 seemant Exp $
 
 *fluxbox-0.1.10 (14 Jul 2002)
+
+  16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.10.ebuild :
+
+  Added Vano's patch to make the menu disappear on left click anywhere.
+  Thanks to: vano-gentoo@europeansoftware.com (Vania Dolukhanian) in bug
+  #5005
+
   04 Aug 2002; Spider <spider@gentoo.org> fluxbox-0.1.10.ebuild :
   filtering out -fno-exceptions
   

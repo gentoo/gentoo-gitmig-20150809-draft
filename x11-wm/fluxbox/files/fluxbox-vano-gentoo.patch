@@ -1,0 +1,35 @@
+diff -urN fluxbox-0.1.10/src/fluxbox.cc fluxbox-0.1.10_patched/src/fluxbox.cc
+--- fluxbox-0.1.10/src/fluxbox.cc	Sun Jul 14 01:00:23 2002
++++ fluxbox-0.1.10_patched/src/fluxbox.cc	Mon Jul 15 03:14:04 2002
+@@ -884,6 +884,31 @@
+ 				
+ 			if (be.button == 1)
+ 				win->installColormap(True);
++
++			// Very dirty fix to enable closing the root menu when left
++			// clicking on any window. Vano D.
++			// FIX START
++			ScreenList::iterator it2 = screenList.begin();
++			ScreenList::iterator it_end2 = screenList.end();
++
++			for (; it2 != it_end2; ++it2) {
++
++				BScreen *screen2 = *it2;
++//				if (be.window != screen->getRootWindow())
++//					continue;
++				
++				if (be.button == 1) {
++					if (! screen2->isRootColormapInstalled())
++						screen2->getImageControl()->installRootColormap();
++
++					if (screen2->getWorkspacemenu()->isVisible())
++						screen2->getWorkspacemenu()->hide();
++					if (screen2->getRootmenu()->isVisible())
++						screen2->getRootmenu()->hide();
++				}
++			}
++			// FIX END
++
+ 					
+ 		} else if ((menu = searchMenu(be.window))) {
+ 			menu->buttonPressEvent(&be);
