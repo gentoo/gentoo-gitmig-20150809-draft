@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.0.3.ebuild,v 1.1 2004/01/09 05:40:03 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.0.3.ebuild,v 1.2 2004/01/25 22:12:36 bcowan Exp $
 
 IUSE="alsa"
 S=${WORKDIR}/${P}
@@ -17,7 +17,7 @@ DEPEND=">=x11-libs/gtk+-2.0.6
 	dev-util/pkgconfig
 	dev-libs/libxml2
 	alsa? ( media-libs/alsa-lib )
-	=xfce-base/xfce4-base-${PV}"
+	>=xfce-base/xfce4-base-${PV}"
 
 src_compile() {
 	local myconf
