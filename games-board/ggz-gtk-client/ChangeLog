@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-gtk-client
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.2 2003/09/10 20:21:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.3 2003/11/28 00:02:14 mr_bones_ Exp $
+
+  27 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  ggz-gtk-client-0.0.7.ebuild:
+  fix gtk2 USE flag usage (bug 34559)
 
 *ggz-gtk-client-0.0.7 (10 Jul 2003)
 
