@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Nästén <pekdon@gmx.net>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta5.ebuild,v 1.3 2002/03/28 22:25:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta5.ebuild,v 1.4 2002/03/28 22:51:02 seemant Exp $
 
 # Fix so that updating can only be done by 'cp old.ebuild new.ebuild'
 MY_P="`echo ${P} |sed -e 's:-::' -e 's:_b:B:'`"
@@ -18,7 +18,7 @@ RDEPEND=">=app-cdr/cdrtools-1.11
 	 >=media-sound/sox-12
 	 >=media-sound/mpg123-0.59
 	 >=media-sound/mp3info-0.8.4
-	 oggvorbis? ( >=media-sound/vorbis-tools-1.0_rc2
+	 ogg? ( >=media-sound/vorbis-tools-1.0_rc2
 	 	>=media-sound/oggtst-0.0 )"
 
 
