@@ -38,7 +38,7 @@
 
 # optional SELinux-patched programs:
 >=app-admin/logrotate-3.6.5-r1
->=sys-apps/vcron-3.0.1-r1
+>=sys-apps/vcron-3.0.1-r2
 
 # SELinux merged into 2.6.0-test3:
 >=sys-kernel/ppc-sources-2.6.0_beta3
