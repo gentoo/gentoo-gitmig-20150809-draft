@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2-r2.ebuild,v 1.1 2001/03/09 21:36:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2-r2.ebuild,v 1.2 2001/03/10 00:21:26 drobbins Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -50,7 +50,7 @@ src_unpack() {
 #    echo "Applying ${KV} patch..."
 #    try bzip2 -dc ${DISTDIR}/patch-${KV}.bz2 | patch -p1
     echo "Applying reiserfs-update patch..."
-    try gzip -dc ${DISTDIR}/linux-2.4.2-reiserfs-20010222.patch.gz | patch -N -p1
+    try gzip -dc ${DISTDIR}/linux-2.4.2-reiserfs-20010305.patch.gz | patch -N -p1
     mkdir ${S}/extras
     
     #create and apply LVM patch.  The tools get built later.
