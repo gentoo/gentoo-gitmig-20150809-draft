@@ -1,0 +1,50 @@
+# ChangeLog for app-editors/vim-core
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.1 2002/09/13 09:16:58 hannes Exp $
+
+*vim-core-6.1.ebuild (12 Sep 2002)
+
+  12 Sep 2002; Hannes Mehnert <hannes@gentoo.org> vim-core-6.1.ebuild:
+  splitted vim into gvim, vim and vim-core
+
+*<PACKAGE_NAME>-<PACKAGE_VERSION>-<PACKAGE_RELEASE> (DD MMM YYYY)
+
+  DD MMM YYYY; YOUR_NAME <YOUR_EMAIL> changed_file1, changed_file2: Initial
+  import. Ebuild submitted by submitter_name <submitter_email>.  Note that the
+  "changed_file" listing is optional if you are simply bumping the rev of the
+  ebuild and are only making changes to the .ebuild file itself.  Also note
+  that we now have a single unified paragraph rather than having the first line
+  separated from the rest by a newline.  Everything should be in one block like
+  this. (note by drobbins, 16 Jul 2002)
+
+  DD MMM YYYY; YOUR_NAME <YOUR_EMAIL> changed_file1, changed_file2: this is
+  an earlier ChangeLog enty.
+ 
+-- Explanation of ChangeLog format:
+
+  This changelog is targetted to users. This means that the comments should be
+  well explained and written in clean English.
+ 
+  Every new version or revision of the package should be marked by a '*'
+  seperator line as above. Changes since the last revision have to be added to
+  the top of the file, underneath the initial copyright and cvs header
+  comments, in exactly the same format as this comment.
+  
+  This means that you start with header line that has the following format,
+  indented two spaces:
+  
+  DD MMM YYYY; your_name <your_email> changed_file1, changed_file2: Your
+  explanation should follow. It should be indented and wrapped at a line width
+  of 80 characters.  The changed_files can be omitted if they are obvious; for
+  example, if you are only modifying the .ebuild file and committing a new rev
+  of a package.  Any details about what exactly changed in the code should be
+  added as a message when the changes are committed to cvs, not in this file.
+
+-- A word regarding credit:
+
+  Please add credit information ("ebuild submitted by ...", "patch submitted
+  by ...") to the ChangeLog. Do not add this information to the ebuilds
+  themselves.
+
+  And remember: Give credit where credit is due. We're all doing this for
+  free, so the best we can hope (and expect!) to receive is credit.
