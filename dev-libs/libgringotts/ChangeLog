@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgringotts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/ChangeLog,v 1.1 2002/12/06 03:27:15 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/ChangeLog,v 1.2 2003/01/14 07:37:38 leonardop Exp $
+
+*libgringotts-1.1.2 (14 Jan 2003)
+
+  14 Jan 2003; L. Boshell <leonardop@gentoo.org> : New version.
+  Dependencies are more comprehensive now, thanks to Alastair Tse (bug
+  #11919).
 
 *libgringotts-1.1.1 (05 Dec 2002)
 
