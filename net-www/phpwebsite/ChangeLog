@@ -1,6 +1,12 @@
 # ChangeLog for net-www/phpwebsite
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/ChangeLog,v 1.11 2003/12/16 02:41:53 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/ChangeLog,v 1.12 2004/01/06 18:40:46 rizzo Exp $
+
+*phpwebsite-0.9.3_p2-r1 (06 Jan 2004)
+
+  06 Jan 2004; Don Seiler <rizzo@gentoo.org>; phpwebsite-0.9.3_p1-r1.ebuild,
+  phpwebsite-0.9.3_p2-r1.ebuild, phpwebsite-0.9.3_p2.ebuild:
+  Adding in fixed Database.php
 
 *phpwebsite-0.9.3_p2 (15 Dec 2003)
 
