@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.2.ebuild,v 1.3 2003/07/11 21:41:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.2.ebuild,v 1.4 2004/03/07 02:32:30 zx Exp $
 
 DESCRIPTION="High-performance, full-featured text search engine written entirely in Java"
 HOMEPAGE="http://jakarta.apache.org/lucene"
