@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.6 2002/12/16 09:18:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.7 2003/01/31 22:06:13 mholzer Exp $
 
 *usermin-0.980 (16 Dec 2002)
+
+  31 Jan 2003; Martin Holzer <mholzer@gentoo.org> usermin-0.980.ebuild :
+  Change SRC_URI to use mirror://sourceforge.
 
   16 Dec 2002; Seemant Kulleen <Seemant@gentoo.org> usermin-0.980.ebuild
   files/digest-usermin-0.980 :
@@ -10,6 +13,9 @@
   Version bump.
 
 *usermin-0.970 (14 Dec 2002)
+
+  31 Jan 2003; Martin Holzer <mholzer@gentoo.org> usermin-0.970.ebuild :
+  Change SRC_URI to use mirror://sourceforge.
 
   14 Dec 2002; Seemant Kulleen <seemant@gentoo.org> usermin-0.970.ebuild
   files/usermin.pam :
@@ -19,6 +25,9 @@
   flx-linuxnews@ifrance.com (Franc,ois-Xavier LAMARE) in bug #11976.
 
 *usermin-0.940 (8 Nov 2002)
+
+  31 Jan 2003; Martin Holzer <mholzer@gentoo.org> usermin-0.940.ebuild :
+  Change SRC_URI to use mirror://sourceforge.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

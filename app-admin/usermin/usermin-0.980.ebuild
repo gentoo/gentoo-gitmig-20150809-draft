@@ -1,11 +1,11 @@
 # Copyright 2002, Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-0.980.ebuild,v 1.1 2002/12/16 09:18:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-0.980.ebuild,v 1.2 2003/01/31 22:06:13 mholzer Exp $
 
 IUSE="ssl"
 
 DESCRIPTION="Usermin, a web-based user administration interface"
-SRC_URI="http://twtelecom.dl.sourceforge.net/sourceforge/webadmin/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/webadmin/${P}.tar.gz"
 HOMEPAGE="http://www.webmin.com/index6.html"
 
 SLOT="0"
