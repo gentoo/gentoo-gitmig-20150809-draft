@@ -1,0 +1,12 @@
+--- blight_input-0.0.8-b/src/SDL_ttf.c.orig	2005-01-01 00:34:42.153211968 -0600
++++ blight_input-0.0.8-b/src/SDL_ttf.c	2005-01-01 00:31:41.263711352 -0600
+@@ -39,6 +39,9 @@
+ #define FREEA(p) free(p)
+ #endif
+ 
++#include <ft2build.h>
++#include FT_FREETYPE_H
++
+ #include <freetype/freetype.h>
+ #include <freetype/ftoutln.h>
+ #include <freetype/ttnameid.h>

@@ -1,0 +1,80 @@
+--- emu64/Makefile.orig	2004-11-26 17:04:12.407300864 +0000
++++ emu64/Makefile	2004-11-26 17:10:14.568244032 +0000
+@@ -92,46 +92,49 @@
+ PREFIX		=$(shell grep WITH_HOME config.h | cut -d '"' -f 2)
+ SHARE		="$(PREFIX)share/mupen64/"
+ 
++GTK_CFLAGS	= `pkg-config --cflags gtk+-2.0` -D_GTK2
++GTK_LIBS	= `pkg-config --libs gtk+-2.0`
++
+ all:	mupen64
+ 
+ main/main.o:	main/main.c
+ 		$(CC) $(CFLAGS) -c -o $@ $<
+ 
+ main/main_gtk.o:	main/main_gtk.c
+-			$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++			$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/main_gtk.o:	main/gui_gtk/main_gtk.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/translate.o:	main/gui_gtk/translate.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/messagebox.o:	main/gui_gtk/messagebox.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/aboutdialog.o:	main/gui_gtk/aboutdialog.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/configdialog.o:	main/gui_gtk/configdialog.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/support.o:		main/gui_gtk/support.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/rombrowser.o:	main/gui_gtk/rombrowser.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/romproperties.o:	main/gui_gtk/romproperties.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/config.o:		main/gui_gtk/config.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/dirbrowser.o:	main/gui_gtk/dirbrowser.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/gui_gtk/vcrcomp_dialog.o:	main/gui_gtk/vcrcomp_dialog.c
+-				$(CC) $(CFLAGS) -c -o $@ $< `gtk-config --cflags`
++				$(CC) $(CFLAGS) -c -o $@ $< $(GTK_CFLAGS)
+ 
+ main/vcr_compress.o:		main/vcr_compress.cpp
+ 				$(CXX) $(CXXFLAGS) -c -o $@ $< `avifile-config --cflags`
+@@ -143,13 +146,13 @@
+ ifneq ("$(shell grep VCR config.h)","\#define VCR_SUPPORT 1")
+ 
+ mupen64:	$(OBJ) $(OBJ_X86) $(OBJ_GTK_GUI)
+-		$(CC) $^ $(CFLAGS) $(LIB) -Wl,-export-dynamic `gtk-config --libs` -L/usr/X11R6/lib -lSDL -lGL -lpthread -ldl -o $@
++		$(CC) $^ $(CFLAGS) $(LIB) -Wl,-export-dynamic $(GTK_LIBS) -L/usr/X11R6/lib -lSDL -lGL -lpthread -ldl -o $@
+ 		strip --strip-all $@
+ 
+ else
+ 
+ mupen64:	$(OBJ) $(OBJ_X86) $(OBJ_GTK_GUI) $(OBJ_VCR)
+-		$(CXX) $^ $(CFLAGS) $(LIB) -Wl,-export-dynamic `gtk-config --libs` `avifile-config --libs` -L/usr/X11R6/lib -lSDL -lGL -lpthread -ldl -o $@
++		$(CXX) $^ $(CFLAGS) $(LIB) -Wl,-export-dynamic $(GTK_LIBS) `avifile-config --libs` -L/usr/X11R6/lib -lSDL -lGL -lpthread -ldl -o $@
+ 		strip --strip-all $@
+ endif
+ 

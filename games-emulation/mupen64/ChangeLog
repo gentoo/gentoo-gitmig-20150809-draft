@@ -1,6 +1,17 @@
 # ChangeLog for games-emulation/mupen64
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.5 2004/06/24 22:31:04 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.6 2005/01/01 06:59:18 morfic Exp $
+
+*mupen64-0.4 (01 Jan 2005)
+
+  01 Jan 2005; Daniel Goller <morfic@gentoo.org>
+  +files/mupen64-SDL_ttf.patch, +files/mupen64-confdir.patch,
+  +files/mupen64-gcc3.patch, +files/mupen64-gentoo-avi.patch,
+  +files/mupen64-gentoo-sdl.patch, +files/mupen64-gtk2-makefile.patch,
+  +files/mupen64-makefiles.patch, +files/mupen64-rice-confdir.patch,
+  +mupen64-0.4.ebuild:
+  Initial commit of version 0.4 thanks to al contributors on bug#56195
+  Adding patch to allow it compile with ~arch freetype
 
   27 Sep 2003; Michael Sterrett <msterret@gentoo.org> mupen64-0.3.ebuild,
   files/mupen64:

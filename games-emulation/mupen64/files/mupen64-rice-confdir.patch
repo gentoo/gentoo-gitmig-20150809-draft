@@ -1,0 +1,38 @@
+--- riceplugin/Config.cpp.orig	2004-11-26 02:23:52.306288064 +0000
++++ riceplugin/Config.cpp	2004-11-26 02:35:57.418054320 +0000
+@@ -737,8 +737,9 @@
+ #else // _WIN32
+    FILE *f;
+    char name[MAX_PATH];
+-   GetPluginDir(name);
+-   strcat(name, CONFIG_FILE);
++   //GetPluginDir(name);
++   //strcat(name, CONFIG_FILE);
++   snprintf(name, MAX_PATH, "%s/.mupen64/plugins/%s", getenv("HOME"), CONFIG_FILE);
+    f = fopen(name, "rb");
+    if (!f) return FALSE;
+    fclose(f);
+@@ -889,8 +890,9 @@
+ 	RegCloseKey(hKey2);
+ #else // _WIN32
+    char name[MAX_PATH];
+-   GetPluginDir(name);
+-   strcat(name, CONFIG_FILE);
++   //GetPluginDir(name);
++   //strcat(name, CONFIG_FILE);
++   snprintf(name, MAX_PATH, "%s/.mupen64/plugins/%s", getenv("HOME"), CONFIG_FILE);
+    FILE *f = fopen(name, "rb");
+    if (!f)
+      {
+@@ -1027,8 +1029,9 @@
+ 	return(0);
+ #else // _WIN32
+    char name[MAX_PATH];
+-   GetPluginDir(name);
+-   strcat(name, CONFIG_FILE);
++   //GetPluginDir(name);
++   //strcat(name, CONFIG_FILE);
++   snprintf(name, MAX_PATH, "%s/.mupen64/plugins/%s", getenv("HOME"), CONFIG_FILE);
+    FILE *f = fopen(name, "rb");
+    char buf[0x1000];
+    while(fscanf(f, "%s", buf) == 1)

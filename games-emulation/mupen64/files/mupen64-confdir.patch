@@ -1,0 +1,48 @@
+--- blight_input-0.0.8-b/src/plugin.c.orig	2003-10-15 00:44:17.000000000 +0000
++++ blight_input-0.0.8-b/src/plugin.c		2004-07-16 12:15:22.757428472 +0000
+@@ -33,6 +33,7 @@
+ #include "SDL.h"
+ #include <errno.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ 
+ static unsigned short button_bits[] = {
+@@ -158,7 +159,8 @@
+ 	FILE *f;
+ 	int cont, plugged, mempak, mouse, i, b, dev;
+ 	char line[200], device[200], key_a[200], key_b[200], button_a[200], button_b[200],
+-             axis[200], button[200], hat[200], hat_pos_a[200], hat_pos_b[200], mbutton[200];
++             axis[200], button[200], hat[200], hat_pos_a[200], hat_pos_b[200], mbutton[200],
++	     conffilename[200];
+ 	const char *p;
+ //	const char *p1, *p2;
+ 
+@@ -188,8 +190,8 @@
+ 			controller[i].axis[b].hat_pos_b = -1;
+ 		}
+ 	}
+-
+-	f = fopen( "blight_input.conf", "r" );
++	snprintf (conffilename, 200, "%s/.mupen64/plugins/blight_input.conf", getenv("HOME"));
++	f = fopen(conffilename, "r" );
+ 	if( f == NULL )
+ 	{
+ 		fprintf( stderr, "["PLUGIN_NAME"]: Couldn't open blight_input.conf for reading: %s\n", strerror( errno ) );
+@@ -339,8 +341,10 @@
+ 	char cButton_a[100], cButton_b[100], cAxis[100];
+ 	char cHat[100];
+ 	char cMouse[100];
++	char conffilename[200];
+ 
+-	f = fopen( "blight_input.conf", "w" );
++	snprintf (conffilename, 200, "%s/.mupen64/plugins/blight_input.conf", getenv("HOME"));
++	f = fopen(conffilename, "w" );
+ 	if( f == NULL )
+ 	{
+ 		fprintf( stderr, "["PLUGIN_NAME"]: Couldn't open blight_input.conf for writing: %s\n", strerror( errno ) );
+--- emu64/path.cfg.orig	2004-07-05 20:37:13.000000000 +0000
++++ emu64/path.cfg	2004-07-16 22:40:43.000000000 +0000
+@@ -1 +1 @@
+-/bidon/roms/
++/usr/games/lib/mupen64/roms/

@@ -1,0 +1,11 @@
+--- emu64/config.h.orig	2004-07-15 23:09:00.000000000 +0000
++++ emu64/config.h	2004-07-15 23:05:24.000000000 +0000
+@@ -1,7 +1,7 @@
+ #ifndef CONFIG_H
+ #define CONFIG_H
+ 
+ #undef WITH_HOME
+-#undef VCR_SUPPORT
++#define VCR_SUPPORT 1
+ 
+ #endif /* CONFIG_H */
