@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/pcre++
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/ChangeLog,v 1.1 2004/09/05 23:25:44 eradicator Exp $
+
+*pcre++-0.9.5 (05 Sep 2004)
+
+  05 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +files/pcre++-0.9.5-nodoc.patch, +pcre++-0.9.5.ebuild:
+  Initial ebuild submitted by Michael Krelin <gentoodoo@klever.net> in bug
+  #61024.
+

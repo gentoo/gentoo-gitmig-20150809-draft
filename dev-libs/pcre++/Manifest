@@ -1,0 +1,5 @@
+MD5 0615e2f15cb07b0db41ee27be35acf97 pcre++-0.9.5.ebuild 718
+MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
+MD5 ac3c18079aa157a0414f98a74f999ce3 ChangeLog 451
+MD5 4abca25583b6d315ef1ca74222ece764 files/digest-pcre++-0.9.5 64
+MD5 81e100144358d97f6cda45624c4b507a files/pcre++-0.9.5-nodoc.patch 390
