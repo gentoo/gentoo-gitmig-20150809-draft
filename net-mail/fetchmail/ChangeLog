@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.49 2004/06/24 23:22:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.50 2004/07/01 04:10:06 tgall Exp $
+
+  30 Jun 2004; Tom Gall <tgall@gentoo.org> fetchmail-6.2.5.ebuild:
+  stable on ppc64, bug #55661
 
   12 May 2004; Michael McCabe <randy@gentoo.org> fetchmail-6.2.5.ebuild:
   Added s390 keyword and fix
