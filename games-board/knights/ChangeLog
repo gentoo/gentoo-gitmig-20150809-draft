@@ -1,6 +1,10 @@
 # ChangeLog for games-board/knights
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.6 2004/08/07 15:22:32 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.7 2004/11/06 06:19:12 mr_bones_ Exp $
+
+  05 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> +files/0.6-gcc34.patch,
+  knights-0.6.ebuild:
+  gcc34 patch from Andrew Kirilenko via bug #69382
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> knights-0.6.ebuild:
   Marked ~amd64; resolving 59658.
