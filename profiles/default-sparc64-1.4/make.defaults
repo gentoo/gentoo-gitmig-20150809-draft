@@ -1,12 +1,9 @@
 # Copyright 2002 Gentoo Technologies, Inc.
-# System-wide defaults for the gcc 3.2 Portage system
-USE="oss 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis opengl pam pdflib png python qt qtmt quicktime readline sdl slang spell ssl tcpd truetype X xml2 xmms xv zlib"
-COMPILER="gcc3"
-# Please edit the file make.defaults.sparc to make changes, then run
-# the ../default-sparc-1.0/scripts/build-rel.sh script and check the
-# changes that have occurred (cvs diff).
-#
+# System-wide defaults for the Portage system
+
 ARCH="sparc"
+
+# Host type
 CHOST=sparc-unknown-linux-gnu
 PLATFORM=sparc64-unknown-linux-gnu
 PROFILE_ARCH="sparc64"
@@ -19,10 +16,20 @@ FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
 # Global configure options
 
 # C Compiler flags
-CFLAGS="-mcpu=v8 -mtune=v9 -O2 -pipe"
+CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-# USE arch:xxx keyword
+USE="arts apm avi berkdb crypt cups encode esd fbcon gdbm gif gtk gnome imlib java jpeg kde
+ libwww mikmod motif mpeg ncurses oggvorbis oss opengl pam perl png python pdflib qt readline 
+ slang sdl spell ssl tcpd truetype X xv xml2 xmms zlib"
+
+
+# The following USE flags are NOT recommended for sparc64 and might cause breakage...
+# mmx, 3dnow, sse, svga
+
+COMPILER="gcc3"
+
 ACCEPT_KEYWORDS="sparc"
 FEATURES="sandbox ccache"
+
