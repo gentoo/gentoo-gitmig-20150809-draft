@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.3 2004/02/20 06:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.4 2004/03/02 14:28:23 vapier Exp $
 
 inherit games eutils
 
@@ -12,6 +12,7 @@ SRC_URI="http://www.techrescue.org/xboing/${PN}${PV}.tar.gz
 LICENSE="xboing"
 SLOT="0"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND="virtual/x11"
 
@@ -25,9 +26,9 @@ src_unpack() {
 
 src_compile() {
 	xmkmf -a || die
-	cp Imakefile{,.orig}
-	sed -e "s:GENTOO_VER:${PF/${PN}-/}:" \
-		Imakefile.orig > Imakefile
+	sed -i \
+		-e "s:GENTOO_VER:${PF/${PN}-/}:" \
+		Imakefile
 	emake \
 		CXXOPTIONS="${CXXFLAGS}" \
 		CDEBUGFLAGS="${CFLAGS}" \
@@ -41,8 +42,8 @@ src_install() {
 		XBOING_DIR=${GAMES_DATADIR}/${PN} \
 		install \
 		|| die
-	fperms 660 ${GAMES_STATEDIR}/xboing.score
 	newman xboing.man xboing.6
 	dodoc README docs/*.doc
 	prepgamesdirs
+	fperms 660 ${GAMES_STATEDIR}/xboing.score
 }
