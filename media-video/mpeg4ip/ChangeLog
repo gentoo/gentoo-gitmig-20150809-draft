@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.3 2003/12/08 23:32:20 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.4 2004/01/04 23:34:13 tester Exp $
+
+*mpeg4ip-1.0 (05 Jan 2004)
+
+  05 Jan 2004; Olivier Crete <tester@gentoo.org> mpeg4ip-1.0.ebuild:
+  Version bump.. now 1.0!
 
   09 Dec 2003; Olivier Crete <tester@gentoo.org> mpeg4ip-1.0_rc1.ebuild,
   mpeg4ip-1.0_rc3.ebuild, files/sliver.patch:
