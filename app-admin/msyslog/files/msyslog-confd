@@ -1,6 +1,0 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/files/msyslog-confd,v 1.6 2003/02/14 22:13:32 vapier Exp $
-
-# Passed to /usr/sbin/msyslogd...
-MSYSLOG_OPTS="-i unix /dev/log -i linux"
