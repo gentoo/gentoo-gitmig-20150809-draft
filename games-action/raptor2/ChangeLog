@@ -1,13 +1,12 @@
 # ChangeLog for games-action/raptor2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/raptor2/ChangeLog,v 1.2 2003/09/10 20:27:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/raptor2/ChangeLog,v 1.3 2003/10/28 14:13:15 vapier Exp $
 
 *raptor2-1.0.0-r1 (20 Jul 2003)
 
   20 Jul 2003; jje <jje@gentoo.org> raptor2-1.0.0-r1.ebuild,
   raptor2-1.0.0.ebuild:
   New revision to use split dumb / allegro builds.
-  
   Submitted by: Ben Davis <entheh@users.sf.net>
 
   04 Jul 2003; Michael Sterrett <msterret@gentoo.org> raptor2-1.0.0.ebuild:

@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/raptor2/raptor2-1.0.0-r1.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/raptor2/raptor2-1.0.0-r1.ebuild,v 1.2 2003/10/28 14:13:15 vapier Exp $
 
 inherit eutils games
 
 MY_P="raptor-${PV}"
 DESCRIPTION="space shoot-em-up game"
-SRC_URI="mirror://sourceforge/raptorv2/${MY_P}.tar.gz"
 HOMEPAGE="http://raptorv2.sourceforge.net/"
+SRC_URI="mirror://sourceforge/raptorv2/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="oggvorbis nls"
 
 RDEPEND=">=media-libs/allegro-4.0.0
@@ -22,9 +22,9 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A} && cd ${S}
 	epatch ${FILESDIR}/${PV}-chdir.patch
-	cd src && cp raptor.cpp{,.orig}
-	sed -e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}/:" \
-		raptor.cpp.orig > raptor.cpp
+	sed -i \
+		"s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}/:" \
+		src/raptor.cpp
 }
 
 src_install() {
@@ -34,4 +34,3 @@ src_install() {
 	dodoc AUTHORS ChangeLog README NEWS
 	prepgamesdirs
 }
-
