@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.9.10-r1.ebuild,v 1.1 2005/03/09 13:03:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.9.10-r1.ebuild,v 1.2 2005/03/09 17:40:25 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,13 +17,13 @@ DEPEND="${RDEPEND}
 	!dev-util/calltree"
 
 src_unpack() {
-    unpack ${A}
-    epatch ${FILESDIR}/callgrind-sim-pic.patch
+	unpack ${A}
+	epatch ${FILESDIR}/callgrind-sim-pic.patch
 }
 
 src_install() {
-	einstall                     || die
+	einstall || die
 	rm -rf ${D}/usr/share/doc/valgrind
 	dodoc AUTHORS INSTALL README || die "dodoc failed"
-	dohtml docs/*.html           || die "dohtml failed"
+	dohtml docs/*.html || die "dohtml failed"
 }
