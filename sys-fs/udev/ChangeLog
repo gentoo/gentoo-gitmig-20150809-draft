@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.13 2003/12/26 23:32:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.14 2003/12/27 11:24:46 azarah Exp $
+
+  27 Dec 2003; Martin Schlemmer <azarah@gentoo.org> udev-011.ebuild,
+  files/udev-011-namedev_c-gcc295-compat.patch:
+  Fix gcc-2.95.4 compat, bug #36556.
 
 *udev-011 (27 Dec 2003)
 
