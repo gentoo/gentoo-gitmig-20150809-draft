@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/omni
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/ChangeLog,v 1.2 2003/10/20 10:34:54 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/ChangeLog,v 1.3 2003/11/06 11:53:48 tester Exp $
+
+*omni-1.6 (06 Nov 2003)
+
+  06 Nov 2003; Olivier Crete <tester@gentoo.org> omni-1.6.ebuild:
+  Added omni 1.6
 
   20 Oct 2003; Olivier Crete <tester@gentoo.org> omni-1.4a.ebuild:
   Fixed up ebuild for omni 1.4a and marked stable
