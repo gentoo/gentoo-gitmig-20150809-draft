@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/glide-v3
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.2 2002/02/17 18:30:02 azarah Exp $
+
+  17 Feb 2002; M.Schlemmer <azarah@gentoo.org> glide-v3-3.10-r1.ebuild :
+
+  Changed the USE flags used, so that only 'voodoo3' is needed for voodoo3
+  support, else voodoo4/5 support will be compiled in.
 
 *glide-v3-3.10 (1 Feb 2002)
 
