@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.9.ebuild,v 1.2 2003/09/18 01:17:12 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.9.ebuild,v 1.3 2003/12/04 23:31:13 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.namesys.com"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ia64"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ia64"
 
 src_compile() {
 	./configure --prefix=/ || die "Failed to configure"
