@@ -1,0 +1,12 @@
+--- fluxbox.toolbar/src/FbRootWindow.cc	2003-05-13 20:51:39.000000000 +1000
++++ fluxbox.real/src/FbRootWindow.cc	2004-09-12 00:13:06.000000000 +1000
+@@ -46,7 +46,8 @@
+         vinfo_nitems > 0) {
+ 
+         for (int i = 0; i < vinfo_nitems; i++) {
+-            if (DefaultDepth(disp, screen_num) < vinfo_return[i].depth)
++            // We can't handle 32-bit visuals just yet (Composite ARGB)
++            if (vinfo_return[i].depth != 32 && DefaultDepth(disp, screen_num) < vinfo_return[i].depth)
+                 m_visual = vinfo_return[i].visual;
+         }
+ 

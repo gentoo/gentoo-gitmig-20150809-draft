@@ -1,0 +1,26 @@
+Index: util/fluxbox-generate_menu.in
+===================================================================
+RCS file: /cvsroot/fluxbox/fluxbox/util/fluxbox-generate_menu.in,v
+retrieving revision 1.29
+diff -u -r1.29 fluxbox-generate_menu.in
+--- util/fluxbox-generate_menu.in	9 Sep 2004 15:25:26 -0000	1.29
++++ util/fluxbox-generate_menu.in	11 Sep 2004 15:44:57 -0000
+@@ -960,7 +960,7 @@
+ else
+     [ -n "$MY_TERM" ] && echo "Warning: you chose an invalid term." >&2
+     #The precise order is up for debate.
+-    for term in Eterm aterm rxvt wterm xterm konsole gnome-terminal; do
++    for term in urxvtc urxvt Eterm aterm rxvt wterm konsole gnome-terminal xterm ; do
+         if find_it $term; then
+             DEFAULT_TERM=$term
+             break
+@@ -1038,7 +1038,7 @@
+ 
+ 
+ append_submenu "${TERMINALMENU}"
+-    normal_find xterm gnome-terminal Eterm konsole aterm rxvt
++    normal_find xterm gnome-terminal Eterm konsole aterm rxvt urxvt urxvtc
+ append_menu_end
+ 
+ 
+

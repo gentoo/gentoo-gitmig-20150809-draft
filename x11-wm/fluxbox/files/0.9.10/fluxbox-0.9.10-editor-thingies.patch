@@ -1,0 +1,16 @@
+Index: util/fluxbox-generate_menu.in
+===================================================================
+RCS file: /cvsroot/fluxbox/fluxbox/util/fluxbox-generate_menu.in,v
+retrieving revision 1.29
+diff -u -r1.29 fluxbox-generate_menu.in
+--- util/fluxbox-generate_menu.in	9 Sep 2004 15:25:26 -0000	1.29
++++ util/fluxbox-generate_menu.in	11 Sep 2004 15:50:01 -0000
+@@ -1095,7 +1095,7 @@
+ 
+ append_submenu "${EDITORMENU}"
+     normal_find gvim bluefish nedit gedit xedit kword kwrite kate anjuta \
+-        wings xemacs emacs
++        wings xemacs emacs kvim cream
+     find_it     nano   append "[exec]   (nano)     {${DEFAULT_TERM} -e nano}"
+     find_it     vi     append "[exec]   (vi)       {${DEFAULT_TERM} -e vi}" ||\
+         find_it     vim    append "[exec]   (vim)      {${DEFAULT_TERM} -e vim}"

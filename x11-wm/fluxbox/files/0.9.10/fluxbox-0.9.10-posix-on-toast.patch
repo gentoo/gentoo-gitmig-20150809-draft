@@ -1,0 +1,18 @@
+Index: util/fluxbox-generate_menu.in
+===================================================================
+RCS file: /cvsroot/fluxbox/fluxbox/util/fluxbox-generate_menu.in,v
+retrieving revision 1.29
+diff -u -r1.29 fluxbox-generate_menu.in
+--- util/fluxbox-generate_menu.in	9 Sep 2004 15:25:26 -0000	1.29
++++ util/fluxbox-generate_menu.in	11 Sep 2004 15:40:13 -0000
+@@ -173,8 +173,8 @@
+ menu_entry() {
+     if [ -f "$1" ]; then
+         #                   space&tab here
+-        entry_name=`grep '^[	 ]*Name=' "$1" | head -1 | cut -d = -f 2`
+-        entry_exec=`grep '^[	 ]*Exec=' "$1" | head -1 | cut -d = -f 2`
++        entry_name=`grep '^[	 ]*Name=' "$1" | head -n 1 | cut -d = -f 2`
++        entry_exec=`grep '^[	 ]*Exec=' "$1" | head -n 1 | cut -d = -f 2`
+         if [ -n "$entry_name" -a -n "$entry_exec" ]; then
+             append "[exec] ($entry_name) {$entry_exec}"
+         fi

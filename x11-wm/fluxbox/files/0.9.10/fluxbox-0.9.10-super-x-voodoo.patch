@@ -1,0 +1,181 @@
+diff -I'^// \$Id' -Naur --exclude-from diff-exclude fluxbox.real/src/FbTk/FbPixmap.cc fluxbox.xerrors/src/FbTk/FbPixmap.cc
+--- fluxbox.real/src/FbTk/FbPixmap.cc	2004-09-11 11:41:01.000000000 +1000
++++ fluxbox.xerrors/src/FbTk/FbPixmap.cc	2004-09-11 13:42:24.000000000 +1000
+@@ -305,28 +305,26 @@
+     };
+ 
+     Pixmap root_pm = None;
+-
+     for (prop = 0; prop_ids[prop]; prop++) {
+         if (XGetWindowProperty(s_display,
+                                RootWindow(s_display, screen_num),
+                                XInternAtom(s_display, prop_ids[prop], False),
+-                               0L, 4,
++                               0l, 4l,
+                                False, XA_PIXMAP,
+                                &real_type, &real_format,
+                                &items_read, &items_left,
+-                               (unsigned char **) &data) == Success &&
+-            real_format == 32 && items_read == 1) {
++                               (unsigned char **) &data) == Success) {
++            if (real_format == 32 && items_read == 1) {
+ 
+-            if (strcmp(prop_ids[prop], "_XSETROOT_ID") == 0) {
+-                if (print_error) {
++                if (print_error && strcmp(prop_ids[prop], "_XSETROOT_ID") == 0) {
+                     fprintf(stderr, "%s", error_message);
+                     print_error = false;
+-                }
+-            } else
+-                root_pm = (Pixmap) (*data);
+-
++                } else
++                    root_pm = (Pixmap) (*data);
++            }
+             XFree(data);
+-            break;
++            if (root_pm != None)
++                break;
+         }
+     }
+ 
+diff -I'^// \$Id' -Naur --exclude-from diff-exclude fluxbox.real/src/FbTk/FbWindow.cc fluxbox.xerrors/src/FbTk/FbWindow.cc
+--- fluxbox.real/src/FbTk/FbWindow.cc	2004-09-11 11:41:01.000000000 +1000
++++ fluxbox.xerrors/src/FbTk/FbWindow.cc	2004-09-11 22:25:01.000000000 +1000
+@@ -315,10 +315,11 @@
+     XUndefineCursor(s_display, window());
+ }
+ 
+-void FbWindow::reparent(const FbWindow &parent, int x, int y) {
++void FbWindow::reparent(const FbWindow &parent, int x, int y, bool continuing) {
+     XReparentWindow(s_display, window(), parent.window(), x, y);
+     m_parent = &parent;
+-    updateGeometry();
++    if (continuing) // we will continue managing this window after reparent
++        updateGeometry();
+ }
+ 
+ std::string FbWindow::textProperty(Atom property) const {
+diff -I'^// \$Id' -Naur --exclude-from diff-exclude fluxbox.real/src/FbTk/FbWindow.hh fluxbox.xerrors/src/FbTk/FbWindow.hh
+--- fluxbox.real/src/FbTk/FbWindow.hh	2004-09-11 11:41:01.000000000 +1000
++++ fluxbox.xerrors/src/FbTk/FbWindow.hh	2004-09-11 22:25:18.000000000 +1000
+@@ -119,7 +119,7 @@
+     void setCursor(Cursor cur);
+     /// uses the parents cursor instead
+     void unsetCursor();
+-    void reparent(const FbWindow &parent, int x, int y);
++    void reparent(const FbWindow &parent, int x, int y, bool continuing = true);
+ 
+     bool property(Atom property,
+                   long long_offset, long long_length,
+diff -I'^// \$Id' -Naur --exclude-from diff-exclude fluxbox.real/src/FbTk/Menu.cc fluxbox.xerrors/src/FbTk/Menu.cc
+--- fluxbox.real/src/FbTk/Menu.cc	2004-09-10 01:15:17.000000000 +1000
++++ fluxbox.xerrors/src/FbTk/Menu.cc	2004-09-11 22:17:55.000000000 +1000
+@@ -433,7 +433,7 @@
+     }
+ 
+     int itmp = (theme().itemHeight() * menu.persub);
+-    menu.frame_h = itmp < 0 ? 0 : itmp;
++    menu.frame_h = itmp < 1 ? 1 : itmp;
+ 
+     int new_width = (menu.sublevels * menu.item_w);
+     int new_height = menu.frame_h;
+@@ -442,8 +442,12 @@
+         new_height += theme().titleHeight() + ((menu.frame_h > 0)?menu.title.borderWidth():0);
+ 
+ 
+-    if (new_width < 1) 
+-        new_width = menu.item_w;
++    if (new_width < 1) {
++        if (menu.item_w > 0) 
++            new_width = menu.item_w;
++        else
++            new_width = 1;
++    }
+ 
+     if (new_height < 1)
+         new_height = 1;
+@@ -548,7 +552,7 @@
+     }
+ 
+     menu.frame.moveResize(0, ((title_vis) ? menu.title.y() + menu.title.height() + 
+-                              menu.title.borderWidth()*2 : 0), 
++                              menu.title.borderWidth()*2 : 1), 
+                           width(), menu.frame_h);
+ 
+ 
+diff -I'^// \$Id' -Naur --exclude-from diff-exclude fluxbox.real/src/Window.cc fluxbox.xerrors/src/Window.cc
+--- fluxbox.real/src/Window.cc	2004-09-01 01:26:38.000000000 +1000
++++ fluxbox.xerrors/src/Window.cc	2004-09-11 22:24:20.000000000 +1000
+@@ -3232,7 +3232,7 @@
+ 
+ #endif // DEBUG
+         // reparent to root window
+-        client->reparent(screen().rootWindow(), frame().x(), frame().y());
++        client->reparent(screen().rootWindow(), frame().x(), frame().y(), false);
+ 
+         if (!remap)
+             client->hide();
+diff -I'^// \$Id' -Naur --exclude-from diff-exclude fluxbox.real/src/fluxbox.cc fluxbox.xerrors/src/fluxbox.cc
+--- fluxbox.real/src/fluxbox.cc	2004-09-10 01:15:17.000000000 +1000
++++ fluxbox.xerrors/src/fluxbox.cc	2004-09-11 22:29:22.000000000 +1000
+@@ -386,18 +386,20 @@
+ } // end anonymous
+ 
+ static int handleXErrors(Display *d, XErrorEvent *e) {
++    if (e->error_code == BadWindow)
++        last_bad_window = e->resourceid;
+ #ifdef DEBUG
+-    /*    
+-    char errtxt[128];
+-    
+-    XGetErrorText(d, e->error_code, errtxt, 128);
+-    cerr<<"Fluxbox: X Error: "<<errtxt<<"("<<(int)e->error_code<<") opcodes "<<
+-        (int)e->request_code<<"/"<<(int)e->minor_code<<" resource 0x"<<hex<<(int)e->resourceid<<dec<<endl;
+-    */
++    else {
++        // ignore bad window ones, they happen a lot 
++        // when windows close themselves
++        char errtxt[128];
++
++        XGetErrorText(d, e->error_code, errtxt, 128);
++        cerr<<"Fluxbox: X Error: "<<errtxt<<"("<<(int)e->error_code<<") opcodes "<<
++            (int)e->request_code<<"/"<<(int)e->minor_code<<" resource 0x"<<hex<<(int)e->resourceid<<dec<<endl;
++    }
+ #endif // !DEBUG
+ 
+-    if (e->error_code == BadWindow)
+-        last_bad_window = e->resourceid;
+ 
+     return False;
+ }
+@@ -501,6 +503,7 @@
+     m_reconfig_timer.setTimeout(to);
+     m_reconfig_timer.setCommand(reconfig_cmd);
+     m_reconfig_timer.fireOnce(true);
++    //XSynchronize(disp, True);
+ 
+     s_singleton = this;
+     m_have_shape = false;
+@@ -633,10 +636,11 @@
+     FbTk::ThemeManager::instance().load(FbTk::StringUtil::expandFilename(getStyleFilename()));
+ 
+     XSynchronize(disp, False);
++    //XSynchronize(disp, True);
+     sync(false);
+ 
+     m_reconfigure_wait = m_reread_menu_wait = false;
+-	
++
+     // Create keybindings handler and load keys file	
+     m_key.reset(new Keys(StringUtil::expandFilename(*m_rc_keyfile).c_str()));
+ 
+@@ -1813,7 +1817,7 @@
+         for (unsigned int i=0; i<paths.size(); ++i)
+             FbTk::Image::addSearchPath(paths[i]);
+     }
+-    
++
+     if (!dbfile.empty()) {
+         if (!m_screen_rm.load(dbfile.c_str())) {
+             cerr<<_FBTEXT(Fluxbox, CantLoadRCFile, "Failed to load database", "Failed trying to read rc file")<<":"<<dbfile<<endl;

@@ -1,0 +1,69 @@
+diff -I'^// \$Id' -Naur --exclude-from diff-exclude --exclude fluxbox.cc fluxbox.real/src/FbTk/FbWindow.cc fluxbox.composite/src/FbTk/FbWindow.cc
+--- fluxbox.real/src/FbTk/FbWindow.cc	2004-09-11 22:33:14.000000000 +1000
++++ fluxbox.composite/src/FbTk/FbWindow.cc	2004-09-12 01:11:39.000000000 +1000
+@@ -111,6 +111,10 @@
+ 
+ FbWindow::~FbWindow() {
+ 
++    // Need to free xrender pics before destroying window
++    if (m_transparent.get() != 0)
++        m_transparent.reset(0);
++
+     if (m_window != 0) {
+         // so we don't get any dangling eventhandler for this window
+         FbTk::EventManager::instance()->remove(m_window); 
+diff -I'^// \$Id' -Naur --exclude-from diff-exclude --exclude fluxbox.cc fluxbox.real/src/FbTk/Menu.cc fluxbox.composite/src/FbTk/Menu.cc
+--- fluxbox.real/src/FbTk/Menu.cc	2004-09-12 00:12:05.000000000 +1000
++++ fluxbox.composite/src/FbTk/Menu.cc	2004-09-12 01:45:36.000000000 +1000
+@@ -567,6 +567,8 @@
+         m_real_frame_pm = FbTk::FbPixmap(menu.frame.window(),
+                                          menu.frame.width(), menu.frame.height(),
+                                          menu.frame.depth());
++        if (m_transp.get() != 0) 
++            m_transp->setDest(m_real_frame_pm.drawable(), screenNumber());
+ 
+         menu.frame.setBackgroundPixmap(m_real_frame_pm.drawable());
+         GContext def_gc(menu.frame);
+@@ -1385,7 +1387,6 @@
+ 
+ void Menu::reconfigure() {
+ 
+-
+     if (alpha() == 255 && m_transp.get() != 0) {
+         m_transp.reset(0);
+     } else if (alpha () < 255) {
+@@ -1394,8 +1395,13 @@
+             m_transp.reset(new Transparent(FbPixmap::getRootPixmap(screenNumber()),
+                                            m_real_frame_pm.drawable(), alpha(),
+                                            screenNumber()));
+-        } else
++        } else {
++            Pixmap root = FbPixmap::getRootPixmap(screenNumber());
++            if (m_transp->source() != root)
++                m_transp->setSource(root, screenNumber());
++
+             m_transp->setAlpha(alpha());
++        }
+     }
+ 
+     m_need_update = true; // redraw items
+diff -I'^// \$Id' -Naur --exclude-from diff-exclude --exclude fluxbox.cc fluxbox.real/src/FbTk/Transparent.cc fluxbox.composite/src/FbTk/Transparent.cc
+--- fluxbox.real/src/FbTk/Transparent.cc	2004-09-11 11:41:01.000000000 +1000
++++ fluxbox.composite/src/FbTk/Transparent.cc	2004-09-12 01:46:20.000000000 +1000
+@@ -60,7 +60,7 @@
+     Pixmap alpha_pm = XCreatePixmap(disp, drawable,
+                                     1, 1, 8);
+     if (alpha_pm == 0) {
+-        cerr<<"FbTk::Transparent: "<<_FBTKTEXT(Error, NoRenderPixmap, "Warning: Failed to create alpha pixmap.", "XCreatePixmap files for our transparency pixmap")<<endl;
++        cerr<<"FbTk::Transparent: "<<_FBTKTEXT(Error, NoRenderPixmap, "Warning: Failed to create alpha pixmap.", "XCreatePixmap failed for our transparency pixmap")<<endl;
+         return 0;
+     }
+ 
+@@ -131,7 +131,6 @@
+         XRenderFindVisualFormat(disp,
+                                 DefaultVisual(disp, screen_num));
+ 
+-
+     if (src != 0 && format != 0) {
+         m_src_pic = XRenderCreatePicture(disp, src, format,
+                                          0, 0);

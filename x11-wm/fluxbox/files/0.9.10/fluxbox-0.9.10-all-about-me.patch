@@ -1,0 +1,16 @@
+Index: util/fluxbox-generate_menu.in
+===================================================================
+RCS file: /cvsroot/fluxbox/fluxbox/util/fluxbox-generate_menu.in,v
+retrieving revision 1.29
+diff -u -r1.29 fluxbox-generate_menu.in
+--- util/fluxbox-generate_menu.in	9 Sep 2004 15:25:26 -0000	1.29
++++ util/fluxbox-generate_menu.in	11 Sep 2004 22:23:06 -0000
+@@ -1282,6 +1282,7 @@
+     append "[commanddialog] (${FLUXBOXCOMMAND})"
+     append "[reconfig] (${RELOADITEM})"
+     append "[restart] (${RESTARTITEM})"
++    append "[exec] (About) {fluxbox -v 2>/dev/null  | head -n1 | xmessage -file - -center}"
+     append "[separator]"
+     append "[exit] (${EXITITEM})"
+ 
+

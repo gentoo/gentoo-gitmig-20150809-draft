@@ -1,0 +1,24 @@
+Index: util/fluxbox-generate_menu.in
+===================================================================
+RCS file: /cvsroot/fluxbox/fluxbox/util/fluxbox-generate_menu.in,v
+retrieving revision 1.29
+diff -u -r1.29 fluxbox-generate_menu.in
+--- util/fluxbox-generate_menu.in	9 Sep 2004 15:25:26 -0000	1.29
++++ util/fluxbox-generate_menu.in	12 Sep 2004 00:16:31 -0000
+@@ -1201,13 +1201,8 @@
+ append_submenu "${FBSETTINGSMENU}"
+     append "[config] (${CONFIGUREMENU})"
+ 
+-    append_menu "[submenu] (${SYSTEMSTYLES}) {${STYLEMENUTITLE}}"
+-        append "[stylesdir] (${PREFIX}/share/fluxbox/styles)"
+-	append "[stylesdir] (/usr/share/commonbox/styles/)"
+-    append_menu_end
+-
+-    append_menu "[submenu] (${USERSTYLES}) {${STYLEMENUTITLE}}"
+-        append "[stylesdir] (~/.fluxbox/styles)"
++    append_menu "[submenu] (Styles) (Select a Style)"
++	append "[include] (/usr/share/fluxbox/menu.d/styles/)"
+     append_menu_end
+ 
+     # Backgroundmenu
+
