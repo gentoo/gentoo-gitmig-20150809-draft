@@ -1,5 +1,5 @@
-MD5 7b37cb1338f825a9850db56f19acc155 ChangeLog 1044
-MD5 a959db7352b7b893e9e73f5139c00e97 sweep-0.8.2-r1.ebuild 1294
+MD5 27a7fd8ac588cc4492f9379b4ba37e30 sweep-0.8.2-r1.ebuild 1311
+MD5 4aea7d18feb5655c9a5ebb47b1f573ee ChangeLog 1148
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
 MD5 b161c4813423e2a3c7a1b76b1a59527f files/sweep-0.8.2-alsa.patch 383
 MD5 fa303e73e349b9c125d053c768fccf74 files/digest-sweep-0.8.2-r1 63
