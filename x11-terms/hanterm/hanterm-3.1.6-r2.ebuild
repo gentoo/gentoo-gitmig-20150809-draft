@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.16 2004/10/23 07:39:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.17 2004/11/14 09:21:56 usata Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.hanterm.org/"
 SRC_URI="http://download.kldp.net/hanterm/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~ppc-macos"
+KEYWORDS="x86 ppc ppc-macos"
 LICENSE="X11"
 
 DEPEND="virtual/libc

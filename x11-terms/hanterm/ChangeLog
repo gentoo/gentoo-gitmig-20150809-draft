@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/hanterm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.15 2004/10/23 07:39:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.16 2004/11/14 09:21:56 usata Exp $
+
+  14 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> hanterm-3.1.6-r2.ebuild:
+  Stable on ppc and ppc-macos.
 
   23 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> hanterm-3.1.6-r2.ebuild:
   Added to ~ppc-macos.
