@@ -1,0 +1,11 @@
+# ChangeLog for app-office/texmaker
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.1 2004/11/07 07:32:51 usata Exp $
+
+*texmaker-1.11 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +texmaker-1.11.ebuild:
+  Initial import. Ebuild submitted by Alex Linke <incubation.11@freenet.de>;
+  bug #68439.
+
