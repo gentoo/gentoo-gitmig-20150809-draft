@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4Suite/4Suite-0.11.1.ebuild,v 1.9 2003/02/13 11:31:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4Suite/4Suite-0.11.1.ebuild,v 1.10 2003/03/17 12:04:09 vladimir Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Python tools for XML processing and object-databases."
@@ -12,7 +12,7 @@ DEPEND="virtual/python
 RDEPEND="${RDEPEND}"
 
 SLOT="0"
-KEYWORDS="x86 sparc alpha"
+KEYWORDS="x86 sparc alpha ~ppc"
 LICENSE="as-is"
 
 src_compile() {
