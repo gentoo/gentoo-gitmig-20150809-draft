@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/karamba
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.13 2004/08/08 14:06:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.14 2004/12/01 00:15:30 carlo Exp $
+
+  01 Dec 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml:
+  adding metadata
 
   08 Aug 2004; Daniel Black <dragonheart@gentoo.org> karamba-0.17-r1.ebuild:
   QA fix - change .keep creation to keepdir
