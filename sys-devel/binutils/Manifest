@@ -11,7 +11,7 @@ MD5 0c25a829197c155f46205e5a23ea4e16 binutils-2.15.90.0.3-r3.ebuild 4975
 MD5 0a2e87d8fa7ba203b47fc8f5c795ec42 binutils-2.15.91.0.1.ebuild 4707
 MD5 47b50dfab666ec01e53e417deeb957d5 binutils-2.15.91.0.2.ebuild 5161
 MD5 5d78590cad68180dcaeac4774a2a8b5e binutils-2.15.92.0.2-r1.ebuild 4872
-MD5 e0604801817a8abebf7f5d3c1a021194 binutils-2.15.92.0.2-r2.ebuild 530
+MD5 965edb0800850b35cc8d6a020d49a00a binutils-2.15.92.0.2-r2.ebuild 530
 MD5 640181fe75d53ae2aed5830bf0b4e9e7 binutils-2.15.94.0.1.ebuild 429
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.patch 456
@@ -81,7 +81,7 @@ MD5 bad6ba9f63eb3a86d7006191848a47b8 files/2.15/52_all_binutils-20040527-uclibc-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBo5xqHTu7gpaalycRAoiCAJ0f9DT7nbq0Y3Z2UONH+SENh3BDlwCg5Jrx
-9xgSUb8i4stW7INHtzv3rOs=
-=n9tF
+iD8DBQFBo50oHTu7gpaalycRAuy8AJ9C1sv4RnjOqMJoDb2cJPqUfnuLhgCfVLpS
+izjso2Zk1q9q3UuEZRfAF48=
+=sSQe
 -----END PGP SIGNATURE-----
