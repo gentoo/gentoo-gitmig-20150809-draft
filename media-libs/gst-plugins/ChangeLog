@@ -4,6 +4,7 @@
 
   02 Nov 2002; foser <foser@gentoo.org> gst-plugins-0.4.2.ebuild :
   New minor version
+  Added patch for gst-launch-ext
 
 *gst-plugins-0.4.1-r1 (17 Oct 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.2.ebuild,v 1.1 2002/11/01 23:51:07 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.2.ebuild,v 1.2 2002/11/02 14:54:33 foser Exp $
 
 inherit libtool gnome2 flag-o-matic
 
@@ -50,6 +50,12 @@ DEPEND=">=media-libs/gstreamer-0.4.2
 # disable avi for now, it doesnt work
 #	avi? ( media-video/avifile )
 
+src_unpack() {
+	unpack ${A}
+
+	# fix for gst-launch-ext
+	patch -d ${S} -p1 < ${FILESDIR}/gentoo-gst-0.4.2-launch.patch
+}
 
 src_compile() {
 	elibtoolize
