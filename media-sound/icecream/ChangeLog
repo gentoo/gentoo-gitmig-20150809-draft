@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/icecream
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/icecream/ChangeLog,v 1.1 2004/09/16 20:20:10 eradicator Exp $
+
+*icecream-0.8 (16 Sep 2004)
+
+  16 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> +icecream-0.8.ebuild:
+  Iinitial ebuild from Fabian Mohren <mohrenfabian@yahoo.de>
+
