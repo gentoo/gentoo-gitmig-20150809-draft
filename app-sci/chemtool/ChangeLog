@@ -1,9 +1,14 @@
 # ChangeLog for app-sci/chemtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.2 2003/02/12 05:15:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.3 2003/04/18 17:12:23 seemant Exp $
 
 *chemtool-1.5 (27 Nov 2002)
-  
+
+  18 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  chemtool-1.5.ebuild:
+  sandbox violation fix. reported by: wernfried haas <w.haas@xover.mud.at> in
+  bug #19562
+
   27 Nov 2002; George Shapovalov <george@gentoo.org> chemtool-1.5.ebuild, files/{Makefile.in-chemtool-1.5-gentoo.diff,digest-chemtool-1.5,config.h.in-chemtool-1.5-gentoo.diff,src-cht-Makefile.in-chemtool-1.5-gentoo.diff,configure.in-chemtool-1.5-gentoo.diff} :
 
   initial release. 

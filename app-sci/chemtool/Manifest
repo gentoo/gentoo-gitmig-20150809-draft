@@ -1,0 +1,7 @@
+MD5 2bbf36e00252246729e885e3b66762ef chemtool-1.5.ebuild 1743
+MD5 9396710af62e6f9aa858a8e318ad33bb ChangeLog 605
+MD5 55ed6136e52ec1136e015844186dd7ba files/config.h.in-chemtool-1.5-gentoo.diff 368
+MD5 776f1a36180ed2f86a523e6119066079 files/digest-chemtool-1.5 64
+MD5 85997784eda14376edb5a380af598393 files/Makefile.in-chemtool-1.5-gentoo.diff 2715
+MD5 a3c19580612c87d845915088e7b2b17b files/src-cht-Makefile.in-chemtool-1.5-gentoo.diff 294
+MD5 55ee243e7331b078a204b1ad52ef4146 files/configure.in-chemtool-1.5-gentoo.diff 2069
