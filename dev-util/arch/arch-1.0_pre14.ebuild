@@ -4,10 +4,10 @@
 # Author: Defresne Sylvain (keiichi) <kamisama@free.fr>,  Chris Houser <chouser@gentoo.org>
  
 
-P="${P//_/}"
-S="${WORKDIR}/${P}/src/=build"
+MY_P="${P//_/}"
+S="${WORKDIR}/${MY_P}/src/=build"
 DESCRIPTION="revision control system ideal for widely distributed development"
-SRC_URI="ftp://regexps.com/pub/src/arch/${P}.tar.gz"
+SRC_URI="ftp://regexps.com/pub/src/arch/${MY_P}.tar.gz"
 HOMEPAGE="http://www.regexps.com/#arch"
 SLOT="0"
 
@@ -27,11 +27,11 @@ src_unpack() {
 	local t
 
 	unpack "${A}"
-	mkdir -p "${P}/src/=build"
+	mkdir -p "${MY_P}/src/=build"
 
 	# patch arch to install its scripts in /usr/share/arch
 	# instead of /usr/libexec/arch (there is only shareables scripts).
-	t="${P}/src/build-tools/Makefiles/rules.mk"
+	t="${MY_P}/src/build-tools/Makefiles/rules.mk"
 
 	cp ${t} ${t}.orig
 	sed 's:/libexec:/share:g' ${t}.orig > ${t} || die "Patch failed for $t"
@@ -64,7 +64,7 @@ src_install () {
 	done
 
 	# get some docs
-	cd ${WORKDIR}/${P}
+	cd ${WORKDIR}/${MY_P}
 	dodoc =NEWS =README COPYING
 	dohtml docs/html/*
 }
