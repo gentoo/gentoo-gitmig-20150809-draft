@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>pYrania@gentoo.org</email>
+  <name>Markus Nigbur</name>
+</maintainer>
+<longdescription>
+	Netcomics is a program that downloads today's comic strips
+	from the Web, and places them in a local directory where they can be
+	retrieved for display. Because each website that carries comic strips
+	chooses how old of strips to show, the comic strips downloaded will
+	actually be from different dates, but they'll always be the latest.
+</longdescription>
+</pkgmetadata>
