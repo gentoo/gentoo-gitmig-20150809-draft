@@ -1,6 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1.ebuild,v 1.2 2002/06/17 04:05:39 rphillips Exp
+# Author Geert Bevin <gbevin@theleaf.be>
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1-r1.ebuild,v 1.7 2002/07/12 16:44:18 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -9,6 +10,7 @@ HOMEPAGE="http://www.postgresql.org"
 LICENSE="POSTGRESQL"
 
 DEPEND="virtual/glibc
+		>=sys-apps/daemontools-0.76-r1
 		sys-devel/autoconf
 		>=sys-libs/readline-4.1
 		>=sys-libs/ncurses-5.2
@@ -21,6 +23,7 @@ DEPEND="virtual/glibc
 		nls? ( sys-devel/gettext )"
 
 RDEPEND="virtual/glibc
+		>=sys-apps/daemontools-0.76-r1
 		>=sys-libs/zlib-1.1.3
 		tcltk? ( >=dev-lang/tcl-8 )
 		perl? ( >=sys-devel/perl-5.6.1-r2 )
@@ -103,11 +106,11 @@ src_compile() {
 }
 
 pkg_preinst() {
-	if ! groupmod postgresql ; then
+	if ! groupmod postgres ; then
 		groupadd -g 70 postgres || die "problem adding group postgres"
 	fi
 
-	if ! id postgresql; then
+	if ! id postgres; then
 		useradd -g postgres -s /dev/null -d /var/lib/postgresql -c "postgres" postgres
 		assert "problem adding user postgres"
 	fi
@@ -168,7 +171,7 @@ pkg_config() {
 		echo -n "A postgres data directory already exists from version "; cat /var/lib/postgresql/data/PG_VERSION
 		echo "Read the documentation to check how to upgrade to version ${PV}."
 	else
-		su - postgres -c "/usr/bin/initdb --pgdata /var/lib/postgresql/data"
+		setuidgid postgres /usr/bin/initdb --pgdata /var/lib/postgresql/data
 	fi
 
 }
