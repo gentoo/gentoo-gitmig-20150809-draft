@@ -6,13 +6,13 @@ MD5 b82d65788ad9b14893f23d69e6ef6322 cpudyn-1.0.ebuild 986
 MD5 2c60519258a78ccd06d3bfe30cb50e73 cpudyn-0.99.0.ebuild 1071
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 18c8ec21370d4ce089720fe94de89e6c files/digest-cpudyn-1.0 58
-MD5 f3715f690956055ae4729d283278d613 files/cpudyn.init 3430
+MD5 0856b699f523f97c7618f07b8e146e77 files/cpudyn.init 3034
 MD5 1d3f888c7c5af12d57517e8c7ebb27d8 files/cpudyn-0.99.0-init_conf_updates.patch 816
 MD5 14510794829fd0435f8342da60c5ba46 files/digest-cpudyn-0.99.0 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBaNnVHTu7gpaalycRAsDKAJ9oia9clXJ4NtYeYJSk8QRIcq+9dACgteSI
-cB7yl7DON9JQ92ka8nZWjnQ=
-=/+gm
+iD8DBQFBbBv7HTu7gpaalycRAgxLAJ9L8b3FY1Tx2EIS1sjW8elMfYktCwCeNFXS
+g38jBX+rphjE8eBGsjpmkkk=
+=ub83
 -----END PGP SIGNATURE-----
