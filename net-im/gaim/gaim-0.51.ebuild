@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@bigfoot.com>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.48.ebuild,v 1.1 2001/11/23 08:46:27 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.51.ebuild,v 1.1 2002/01/25 16:16:47 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk AOL Instant Messenger client"
@@ -10,7 +10,7 @@ HOMEPAGE="http://gaim.sourceforge.net"
 
 DEPEND=">=x11-libs/gtk+-1.2.10-r4
 	nls? ( sys-devel/gettext )
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
+	gnome? ( >=gnome-base/gnome-core-1.4 )
 	perl? ( >=sys-devel/perl-5.6.1 )
 	nas? ( >=media-libs/nas-1.4.1-r1 )
 	esd? ( >=media-sound/esound-0.2.22-r2 )
@@ -36,12 +36,14 @@ src_compile() {
     fi
     if [ -z "`use arts`" ] ; then
         myopts="$myopts --disable-arts"
+    else
+	KDEDIR=/usr/kde/2
     fi
     if [ -z "`use nls`" ] ; then
         myopts="$myopts --disable-nls"
     fi
-    try ./configure --host=${CHOST} ${myopts}
-    try emake
+    ./configure --host=${CHOST} ${myopts} || die
+    emake || die
 
 }
 
