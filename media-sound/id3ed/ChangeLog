@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/id3ed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/ChangeLog,v 1.1 2003/02/08 01:09:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/ChangeLog,v 1.2 2003/02/15 08:30:35 seemant Exp $
 
 *id3ed-1.10.4 (07 Feb 2003)
+
+  15 Feb 2003;  Seemant Kulleen <seemant@gentoo.org> id3ed-1.10.4.ebuild :
+  
+  Added "-I./" to the CFLAGS to allow compilation against readline-4.2a.
+  Thanks to: warp\0x00\ in #gentoo-ppc
 
   07 Feb 2003; Seemant Kulleen <seemant@gentoo.org> id3ed-1.10.4.ebuild
   ChangeLog files/digest-id3ed-1.10.4 :

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/id3ed-1.10.4.ebuild,v 1.2 2003/02/08 01:23:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/id3ed-1.10.4.ebuild,v 1.3 2003/02/15 08:30:35 seemant Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND="sys-libs/ncurses
 
 src_compile() {
 	econf || die
-	emake || die
+	emake CFLAGS="${CFLAGS} -I./" || die
 }
 
 src_install() {
