@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/libapreq-1.3.ebuild,v 1.4 2004/06/25 00:41:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/libapreq-1.3.ebuild,v 1.5 2004/07/14 18:35:48 agriffis Exp $
 
 inherit perl-module eutils
 
@@ -24,4 +24,3 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-statlink.patch || die
 }
-
