@@ -1,0 +1,102 @@
+#!/bin/bash
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# based on gcc-config by Martin Schlemmer <azarah@gentoo.org
+# Author:  Heinrich Wendel <lanius@gentoo.org>
+
+source /etc/init.d/functions.sh || {
+    echo "$0: Could not source /etc/init.d/functions.sh!"
+    exit 1
+}
+umask 022
+
+PROFILE_PATH=/usr/$(get_libdir)/motif
+CONFIG_FILE=${PROFILE_PATH}/current
+
+usage() {
+cat << "USAGE_END"
+Usage: motif-config [options] [Profile]
+Change the current motif profile, or give info about profiles.
+
+Options:
+
+  -c, --get-current-profile  Print current used motif profile.
+  
+  -l, --list-profiles        Print a list of available profiles.
+
+  -L, --get-lib-path         Print path where libraries of the given/current
+                             profile are located.
+
+  -I, --get-inc-path         Print path where includes of the given/current
+                             profile are located.
+
+      --libs                 Print link flags for the given/current
+                             profile.
+
+      --cflags               Print compilation flags for the given/current
+                             profile.
+
+USAGE_END
+    exit $1
+}
+[[ $# -lt 1 ]] && usage 1
+
+
+get_current_profile() {
+	exit 0
+}
+
+switch_profile() {
+	exit 0
+}
+
+list_profiles() {
+	exit 0
+}
+
+get_lib_path() {
+	exit 0
+}
+
+get_inc_path() {
+	exit 0
+}
+
+for x in "$@"; do
+	case "${x}" in
+		-l|--list-profiles)
+		;;
+
+		-L|--get-lib-path)
+		;;
+
+		-I|--get-inc-path)
+		;;
+
+		--clfags)
+		;;
+
+		--ldflags)
+		;;
+
+		-h|--help)
+			usage 0
+			exit 0
+		;;
+
+		-v|--version)
+			echo "motif-config-1.0"
+			exit 0
+		;;
+
+		-*)
+			eerror "$0: Invalid switch! Run $0 without parameters for help."
+			exit 1
+		;;
+
+
+		*)
+			# switch profile 
+		;;
+	esac
+done
