@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <azarah@gentoo.org> (27 Dec 2002)
+# Breaks things for now .. wait till new versions
+# of monkey-media, etc are out.
+>=media-libs/gstreamer-0.5.0
+>=media-libs/gst-plugins-0.5.0
+
 # <vapier@gentoo.org> (26 Dec 2002)
 # latest wxGTK breaks wxPython
 =wxGTK/wxGTK-2.3.4
