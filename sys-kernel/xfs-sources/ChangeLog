@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.44 2004/04/15 18:16:06 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.45 2004/04/17 15:31:51 plasmaroo Exp $
+
+*xfs-sources-2.4.24-r5 (17 Apr 2004)
+
+  17 Apr 2004; <plasmaroo@gentoo.org> +files/xfs-sources.CAN-2004-0010.patch,
+  +files/xfs-sources.CAN-2004-0177.patch,
+  +files/xfs-sources.CAN-2004-0178.patch, +xfs-sources-2.4.24-r5.ebuild:
+  Added patches for the CAN-2004-0010, CAN-2004-0177 and CAN-2004-0178
+  vulnerabilities.
 
 *xfs-sources-2.4.24-r4 (15 Apr 2004)
 
