@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.20.ebuild,v 1.7 2003/12/02 04:11:38 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.20-r1.ebuild,v 1.1 2004/01/07 00:41:57 plasmaroo Exp $
 
 ETYPE="sources"
 
@@ -60,7 +60,9 @@ src_unpack() {
 		patch -p1 < ${BUGFIX}-3.diff || die "cannot apply fix patch 1"
 		echo "-> Fix patch 3 applied"
 
-		epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+		epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
+		epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+		epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 
 		# We need to have our kernel in /boot
 		mv Makefile Makefile.orig
