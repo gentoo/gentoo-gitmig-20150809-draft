@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/portsentry
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.10 2003/06/09 21:25:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.11 2003/07/08 20:58:54 mholzer Exp $
+
+*portsentry-1.2 (08 Jul 2003)
+
+  08 Jul 2003; Martin Holzer <mholzer@gentoo.org> portsentry-1.1-r7.ebuild,
+  portsentry-1.2.ebuild:
+  Version bumped. Closes #24124
 
   09 Jun 2003; <msterret@gentoo.org> portsentry-1.1-r7.ebuild:
   check return of sed; fix HOMEPAGE and SRC_URI breakage by CISCO
