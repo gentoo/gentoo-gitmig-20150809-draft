@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.14.ebuild,v 1.1 2003/07/13 07:09:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.14.ebuild,v 1.2 2003/07/16 07:22:36 pvdabeel Exp $
 
 DESCRIPTION="P.E.Op.S Software GPU plugin"
 HOMEPAGE="http://sourceforge.net/projects/peops/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/peops/PeopsSoftGpu${PV//.}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 IUSE="sdl"
 
 DEPEND="=x11-libs/gtk+-1*

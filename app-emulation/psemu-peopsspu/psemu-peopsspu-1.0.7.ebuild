@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7.ebuild,v 1.1 2003/07/13 08:51:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7.ebuild,v 1.2 2003/07/16 07:23:57 pvdabeel Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://peops.sourceforge.net/"
 SRC_URI="mirror://sourceforge/peops/PeopsSpu${PV//./}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 SLOT="0"
 IUSE="alsa oss"
 
