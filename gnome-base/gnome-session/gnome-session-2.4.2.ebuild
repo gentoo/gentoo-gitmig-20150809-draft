@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.2.ebuild,v 1.7 2004/03/09 23:21:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.2.ebuild,v 1.8 2004/03/17 01:05:52 geoman Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2 LGPL-2 FDL-1.1"
 
 IUSE="ipv6"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ia64"
+KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ia64 ~mips"
 
 RDEPEND=">=x11-libs/gtk+-2.2
 	>=media-sound/esound-0.2.26
