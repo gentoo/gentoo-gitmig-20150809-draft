@@ -1,19 +1,20 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmf/cmf-1.3.1.ebuild,v 1.2 2003/04/04 03:15:41 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmf/cmf-1.3.1.ebuild,v 1.3 2003/06/21 08:15:03 kutsuya Exp $
 
 inherit zproduct
+S=${WORKDIR}/CMF-${PV}
 
-DESCRIPTION="Zope Content Management Framework. Services for content-oriented portal sites."
+DESCRIPTION="Content Management Framework. Services for content-oriented portal sites."
 
 HOMEPAGE="http://cmf.zope.org/"
 SRC_URI="${HOMEPAGE}/download/CMF-${PV}/CMF-${PV}.tar.gz"
-S=${WORKDIR}/CMF-${PV}
-
+SLOT=1.3
 LICENSE="ZPL"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 ZPROD_LIST="CMFCalendar CMFCore CMFDefault CMFTopic"
+MYDOC="DEPENDENCIES.txt INSTALL_CVS.txt ${MYDOC}"
 
 
 
