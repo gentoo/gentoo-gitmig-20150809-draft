@@ -8,5 +8,5 @@ MD5 9fc3b9c04b508118400377fabd75be92 files/heartbeat-1.2.0-failbackfix.patch 486
 MD5 42f0e631ebd916d234c0a3a807d4a671 files/digest-heartbeat-1.0.4 68
 MD5 d940c2eea866c93bb48facd1ae54f5f6 files/digest-heartbeat-1.1.5 68
 MD5 e3895cdfd71fec4131de1c12a1a1c6bb files/digest-heartbeat-1.2.2 68
-MD5 b679e75aa63bb6107c8334c5989f6892 files/heartbeat-init 827
+MD5 343f80e3711eec80114c5ca01d38b8b0 files/heartbeat-init 821
 MD5 5a2e512ad67f6469362d57745be05d42 files/digest-heartbeat-1.2.0-r2 68
