@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r2.ebuild,v 1.2 2002/06/08 15:19:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r2.ebuild,v 1.3 2002/06/24 23:05:28 azarah Exp $
+
+# NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 
 # handle _rc versions
 MY_PV1=${PV/_}
@@ -130,6 +132,11 @@ src_compile() {
 		myext="${myext},interfaceinfo"
 	fi
 
+	
+	if [ "${NO_MAIL}" = "YES" ] || [ "${NO_MAIL}" = "yes" ]
+	then
+		myconf="${myconf} --disable-mailnews"
+	fi
 	
 	export BUILD_MODULES=all
 	export BUILD_OPT=1

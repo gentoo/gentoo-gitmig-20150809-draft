@@ -1,9 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.23 2002/06/08 15:19:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.24 2002/06/24 23:05:28 azarah Exp $
 
-
-
+  26 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Add support to set NO_MAIL=YES to disable the mail and news components.
+  This hopefully resolves bug #3575.
 
 mozilla-1.0-r2 (7 Jun 2002)
   7 Jun 2002; Spider <spider@gentoo.org> :
