@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.39 2004/08/08 02:02:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.40 2004/08/29 17:20:48 eradicator Exp $
+
+  29 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  musicbrainz-2.1.1.ebuild, +files/musicbrainz-2.1.1-gcc2.patch:
+  Fix non-ANSI C which will cause gcc2 to die.  Closes bug #61568.
 
   07 Aug 2004; <agriffis@gentoo.org> musicbrainz-2.1.1.ebuild:
   stable on ia64 #54287
