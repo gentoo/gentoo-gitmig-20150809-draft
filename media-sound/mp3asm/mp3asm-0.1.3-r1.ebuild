@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3asm/mp3asm-0.1.3-r1.ebuild,v 1.8 2004/06/25 00:11:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3asm/mp3asm-0.1.3-r1.ebuild,v 1.9 2004/07/20 06:08:29 eradicator Exp $
 
 IUSE=""
 
@@ -11,10 +11,9 @@ SRC_URI="mirror://sourceforge/mp3asm/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~amd64"
 
 DEPEND=""
-RDEPEND=""
 
 # the author uses weird numbering...
 S=${WORKDIR}/mp3asm-0.1
