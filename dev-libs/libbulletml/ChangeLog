@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbulletml
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.1 2004/09/27 06:55:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.2 2004/10/17 09:51:24 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> libbulletml-0.0.6.ebuild:
+  Added to ~ppc.
 
 *libbulletml-0.0.6 (26 Sep 2004)
 
