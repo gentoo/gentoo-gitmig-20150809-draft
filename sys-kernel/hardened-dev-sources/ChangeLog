@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.30 2004/07/24 13:25:39 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.31 2004/08/07 01:43:35 tseng Exp $
+
+*hardened-dev-sources-2.6.7-r5 (06 Aug 2004)
+
+  06 Aug 2004; Brandon Hale <tseng@gentoo.org>
+  +hardened-dev-sources-2.6.7-r5.ebuild:
+  Bump genpatches to 7.44 from g-d-s -r12, this fixes a security issue (#59378)
+  and adds some sparc fixes.
 
   24 Jul 2004; Brandon Hale <tseng@gentoo.org>
   -hardened-dev-sources-2.6.5-r5.ebuild,
