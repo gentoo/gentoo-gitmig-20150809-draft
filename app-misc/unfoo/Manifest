@@ -1,4 +1,14 @@
-MD5 6e5f02fd170157c46f992423b4ccd913 ChangeLog 717
-MD5 613c48989e5c2d63c8b90659ae6b641b unfoo-1.0.4.ebuild 841
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f3db52d45537f4cd032d6b4e102efa73 ChangeLog 795
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
+MD5 b694eed2a78879bc19e668fe6ea02b8f unfoo-1.0.4.ebuild 845
 MD5 bf50296339c85ffbc3bd2485d5f215ce files/digest-unfoo-1.0.4 54
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCNYfH60LfUIagIAkRAgExAKD3MLKroz5Ht52GCn9ov2WUCdvVawCg9Sy6
+upifrwhEotnkX9AHy0Z18WM=
+=pLHH
+-----END PGP SIGNATURE-----
