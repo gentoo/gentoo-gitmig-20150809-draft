@@ -1,0 +1,8 @@
+# ChangeLog for dev-lisp/cl-xlunit
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xlunit/ChangeLog,v 1.1 2003/10/06 10:07:20 mkennedy Exp $
+
+*cl-xlunit-0.6.1 (05 Oct 2003)
+
+  26 Aug 2003; Matthew Kennedy <mkennedy@gentoo.org> 
+  Initial import.
