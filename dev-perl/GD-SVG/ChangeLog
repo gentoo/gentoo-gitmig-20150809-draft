@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD-SVG
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/ChangeLog,v 1.1 2004/01/09 02:43:15 sediener Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/ChangeLog,v 1.2 2004/04/19 22:42:22 kloeri Exp $
+
+  20 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> GD-SVG-0.25.ebuild:
+  Added ~alpha to keywords.
 
 *GD-SVG-0.25 (08 Jan 2004)
 
