@@ -1,6 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r2.ebuild,v 1.2 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r2.ebuild,v 1.3 2002/07/23 05:02:15 george Exp $
 
 S=${WORKDIR}/SWIG-${PV}
 DESCRIPTION="Simplied Wrapper and Interface Generator"
@@ -16,7 +16,11 @@ DEPEND="virtual/glibc
 	tcltk? ( >=dev-lang/tk-8.3 )
 	perl? ( >=sys-devel/perl-5.6.1 )"
 	
-RDEPEND=""
+RDEPEND="${DEPEND}"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
 
 src_compile() {
 	local myc
