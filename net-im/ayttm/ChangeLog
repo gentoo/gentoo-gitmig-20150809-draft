@@ -1,6 +1,11 @@
 # ChangeLog for net-im/ayttm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ChangeLog,v 1.7 2004/01/25 14:43:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ChangeLog,v 1.8 2004/02/19 05:43:43 usata Exp $
+
+  19 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> ayttm-0.4.5.ebuild,
+  ayttm-0.4.6.ebuild:
+  Disabled arts IUSE flag because it may cause segfault on startup.
+  This closes bug #40688
 
 *ayttm-0.4.6 (25 Jan 2004)
 
