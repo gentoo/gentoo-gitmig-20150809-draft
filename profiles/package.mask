@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <pauldv@gentoo.org> 10 Jun 2003
+# Beta version, and testing needed
+=app-office/openoffice-1.1_beta2
+
 # <malverian@gentoo.org> 08 Jun 2003
 # Masked for testing
 =net-p2p/lmule-1.3.1
