@@ -202,8 +202,16 @@ Now, it's time to extract the <path>sys.tbz2</path> tarball to <path>/mnt/gentoo
 You'll find the tarball at <path>/mnt/distcd/packages/sys.tbz2</path>.
 Extract it by typing:</p>
 <pre>
-# <i>tar xjvf /mnt/distcd/packages/sys.tbz2 -C /mnt/gentoo</i>
-</pre><p>
+# <i>tar xpjvf /mnt/distcd/packages/sys.tbz2 -C /mnt/gentoo</i>
+</pre>
+<impo>Please notice that we use the <c>p</c> option when extracting the
+sys tarball.  This is <e>extremely</e> important, since it ensures that
+the literal permissions in the tarball will be preserved on disk.  Without
+the <c>p</c>, directory perms are affected by the umask -- which is helpful
+when you're extracting a source tarball, but not so helpful when you're
+restoring a system image.</impo>
+
+<p>
 If you're installing from another Linux distribution and your version of tar doesn't have the <c>-j</c> (bzip2) option, the following
 pipeline should do the exact same thing:
 </p><pre>
