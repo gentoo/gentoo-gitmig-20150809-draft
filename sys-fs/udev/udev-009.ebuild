@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-009.ebuild,v 1.1 2003/12/17 19:44:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-009.ebuild,v 1.2 2003/12/19 23:05:52 vapier Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -8,8 +8,8 @@ USE_EXT_LIBSYSFS="no"
 
 inherit eutils
 
-DESCRIPTION="udev - Linux dynamic device naming support (aka userspace devfs)"
-HOMEPAGE="http://www.kernel.org/"
+DESCRIPTION="Linux dynamic device naming support (aka userspace devfs)"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev-FAQ"
 SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
