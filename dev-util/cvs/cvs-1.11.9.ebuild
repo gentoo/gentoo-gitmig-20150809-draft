@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.9.ebuild,v 1.4 2003/11/07 20:34:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.9.ebuild,v 1.5 2003/11/07 20:45:48 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -22,16 +22,17 @@ src_compile() {
 	use alpha && append-flags -fPIC
 
 	econf --with-tmpdir=/tmp || die
-	make || die
+	emake || die "emake failed"
 }
 
 src_install() {
 	einstall || die
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/cvspserver.xinetd.d cvspserver
+	newins ${FILESDIR}/cvspserver.xinetd.d cvspserver || die "newins failed"
 
-	dodoc BUGS COPYING* ChangeLog* DEVEL* FAQ HACKING
-	dodoc MINOR* NEWS PROJECTS README* TESTS TODO
+	dodoc BUGS COPYING* ChangeLog* DEVEL* FAQ HACKING \
+		MINOR* NEWS PROJECTS README* TESTS TODO || \
+			die "dodoc failed"
 	insinto /usr/share/emacs/site-lisp
-	doins cvs-format.el
+	doins cvs-format.el || die "doins failed"
 }
