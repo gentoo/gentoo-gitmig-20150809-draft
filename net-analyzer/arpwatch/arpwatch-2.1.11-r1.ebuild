@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.1 2003/08/06 14:15:35 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.2 2003/08/06 14:36:06 lanius Exp $
 
 MY_P=arpwatch-2.1a11
 S=${WORKDIR}/$MY_P
@@ -18,8 +18,11 @@ DEPEND="net-libs/libpcap
 src_unpack() {
 	unpack $A
 	cd ${S}
+
 	einfo "Patching arpwatch with debian and redhat patches"
-	patch -s < ${FILESDIR}/${P}-gentoo.diff
+#	patch -s < ${FILESDIR}/arpwatch-debian.diff
+#	patch -s < ${FILESDIR}/arpwatch-redhat.diff
+	gzip -dc ${FILESDIR}/${P}-r1.diff.gz | patch -s
 }
 
 src_compile() {
