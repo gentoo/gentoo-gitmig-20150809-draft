@@ -1,19 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d17c4febf3fb4da588fddfd798508f94 ChangeLog 1924
-MD5 6f8a1bef39a25fe51d2a31709bc89638 electric-6.07.ebuild 710
+MD5 d2000298a2a62ad2b722236e6ae1b7c6 electric-7.00.ebuild 1000
+MD5 7bcc3ac498407527ca26b09f5cef9cd9 ChangeLog 2101
 MD5 465d41b2deca4c7b9a9cfdc39b5a0e93 electric-6.08-r1.ebuild 944
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 0bcd09959370bd09c26909326c5cc8f1 files/6.08-fix-sandbox-r1.patch 940
-MD5 31522760b841deb101bacf8521455e79 files/6.08-fix-sandbox.patch 962
-MD5 aaf0ac9ca614a144e057e71e2056dace files/6.08-qt.patch 1373
+MD5 6f8a1bef39a25fe51d2a31709bc89638 electric-6.07.ebuild 710
 MD5 360605382817275ccc10068be4fe9da6 files/digest-electric-6.07 66
+MD5 67fe7d0e0440fec38e812682bd6fb218 files/digest-electric-7.00 66
+MD5 31522760b841deb101bacf8521455e79 files/6.08-fix-sandbox.patch 962
+MD5 aaf0ac9ca614a144e057e71e2056dace files/7.00-qt.patch 1373
+MD5 0bcd09959370bd09c26909326c5cc8f1 files/6.08-fix-sandbox-r1.patch 940
 MD5 08ac6be372fdf34293ebc04a592c6063 files/digest-electric-6.08-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsTGI1lqEGTUzyQRAv8rAKCvLJ/CxTI4mbq+u2w7NFe9iV2/8QCgjjER
-KT4ANYJI/KhxQvvWlsR7Yc8=
-=wTA8
------END PGP SIGNATURE-----
+MD5 bff298428c1a56897e68ea9cd3ae68d4 files/7.00-fix-sandbox.patch 460
+MD5 aaf0ac9ca614a144e057e71e2056dace files/6.08-qt.patch 1373

@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/electric
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.13 2004/10/02 15:09:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.14 2004/12/03 16:01:56 phosphan Exp $
+
+*electric-7.00 (03 Dec 2004)
+
+  03 Dec 2004; Patrick Kursawe <phosphan@gentoo.org>
+  +files/7.00-fix-sandbox.patch, +files/7.00-qt.patch, +electric-7.00.ebuild:
+  Version bump
 
   29 Sep 2004; Simon Stelling <blubb@gentoo.org> electric-6.08-r1.ebuild:
   added ~amd64
