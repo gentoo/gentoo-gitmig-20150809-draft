@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.0.3.ebuild,v 1.1 2000/11/26 12:38:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.0.3.ebuild,v 1.2 2000/11/27 15:12:34 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -28,6 +28,7 @@ src_compile() {
 src_install () {
 
     cd ${S}
+    dodir /usr/include/postgres
     try make POSTGRESDIR=${D}/usr install
 
 }

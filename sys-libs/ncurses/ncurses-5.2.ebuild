@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.ebuild,v 1.1 2000/11/26 14:48:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.ebuild,v 1.2 2000/11/27 15:12:34 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -17,7 +17,7 @@ src_compile() {
 }
 
 src_install() {                               
-	try make prefix=${D}/usr install
+	try make prefix=${D}/usr install ticdir=${D}/usr/share/terminfo
 	#move to root so that we can use ncurses on boot
 	cd ${D}/usr/lib
 	dodir /lib
