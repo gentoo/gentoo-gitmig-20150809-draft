@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.22 2004/08/13 21:05:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.23 2004/08/14 19:11:04 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -193,7 +193,7 @@ php5-sapi_check_awkward_uses () {
 
 	if useq ldap ; then
 		enable_extension_with 		"ldap" 			"ldap" 			1
-		enable_extension_with 		"ldap-sasl" 	"sasl" 			1
+		enable_extension_with 		"ldap-sasl" 	"sasl" 			0
 	fi
 
 	if useq odbc ; then
