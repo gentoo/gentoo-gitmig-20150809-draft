@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.3.ebuild,v 1.1 2004/12/21 11:51:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.3.ebuild,v 1.2 2004/12/21 12:04:06 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://mckoi.com/database/"
 SRC_URI="http://www.mckoi.com/database/ver/${P/-/}.zip"
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.6.2
