@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/eclipse-SDK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/ChangeLog,v 1.5 2003/01/05 22:23:07 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/ChangeLog,v 1.6 2003/02/07 18:01:27 mkennedy Exp $
+
+
+*eclipse-SDK-20030207 (07 Feb 2003)
+
+  07 Feb 2003; eclipse-SDK-20030203_pre4.ebuild,
+  files/digest-eclipse-SDK-20030203_pre4, ChangeLog: 
+
+  Patch contributed by Moritz Angermann <moritz.angermann@gmx.net> of bug
+  #15172 fame. Resolves bugs 15172, 13894.
 
 *eclipse-SDK-20021016 (05 Jan 2003)
   05 Jan 2003; Rodney Rees <manson@gentoo.org>l;
