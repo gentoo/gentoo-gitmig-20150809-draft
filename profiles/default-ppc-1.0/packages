@@ -36,6 +36,9 @@
 # Not fully tagged for keywords yet
 <=sys-apps/portage-2.0.13
 
+# not working, needs attention - Gerk Jul 30 2002
+<media-sound/alsa-driver-0.9.0_rc2
+
 # qt-3.0.5 not tested yet on ppc - danarmak Jul 20
 <x11-libs/qt-3.0.5
 
