@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-shell
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.11 2004/04/17 16:24:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.12 2004/06/18 06:11:00 eradicator Exp $
+
+  17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-shell-0.99.3-r3.ebuild:
+  Added to ~amd64.
 
   17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-shell-0.99.3-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jess/xmms-jess-2.9.1.ebuild,v 1.6 2004/04/20 17:53:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jess/xmms-jess-2.9.1.ebuild,v 1.7 2004/06/18 06:05:32 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://arquier.free.fr/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 
 DEPEND="virtual/x11
 	media-sound/xmms
