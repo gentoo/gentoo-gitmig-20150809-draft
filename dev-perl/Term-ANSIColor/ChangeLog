@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Term-ANSIColor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/ChangeLog,v 1.1 2004/06/26 18:43:18 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/ChangeLog,v 1.2 2004/06/26 18:51:16 stuart Exp $
+
+  26 Jun 2004; Stuart Herbert <stuart@gentoo.org> Term-ANSIColor-1.08.ebuild:
+  Added ~sparc and ~alpha keywords
 
 *Term-ANSIColor-1.08 (26 Jun 2004)
 
