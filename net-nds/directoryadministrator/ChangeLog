@@ -1,0 +1,11 @@
+# ChangeLog for net-nds/directoryadministrator
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/directoryadministrator/ChangeLog,v 1.1 2003/05/31 14:04:44 g2boojum Exp $
+
+*directoryadministrator-1.4 (31 May 2003)
+
+  31 May 2003; Grant Goodyear <g2boojum@gentoo.org>
+  directoryadministrator-1.4.ebuild:
+  Long-delayed new package.  Closes bugs 9966 and 12987.  
+  Thanks to Tim Radisch, Marius Mauch, and Gareth John!
+
