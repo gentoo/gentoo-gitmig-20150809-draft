@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.19.ebuild,v 1.1 2003/03/21 23:18:06 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.19.ebuild,v 1.2 2003/06/29 18:24:08 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ne is the nice editor, easy to use for the beginner and powerful for the wizard"
@@ -11,7 +11,7 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )"
 PROVIDE="virtual/editor"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 IUSE="ncurses"
 

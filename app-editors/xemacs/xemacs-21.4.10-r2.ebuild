@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r2.ebuild,v 1.4 2003/02/13 07:01:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r2.ebuild,v 1.5 2003/06/29 18:24:09 aliz Exp $
 
 IUSE="gpm postgres xface nas dnd X jpeg tiff png mule motif canna freewnn lucid athena neXt Xaw3d"
 
@@ -58,7 +58,7 @@ PROVIDE="virtual/xemacs virtual/editor"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc ~sparc"
+KEYWORDS="x86 -ppc ~sparc"
 
 
 src_unpack() {

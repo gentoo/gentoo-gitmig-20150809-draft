@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.4 2003/04/23 00:43:06 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.5 2003/06/29 18:24:09 aliz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://nedit.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/videoteco/videoteco-4.69.ebuild,v 1.1 2003/04/28 16:06:17 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/videoteco/videoteco-4.69.ebuild,v 1.2 2003/06/29 18:24:09 aliz Exp $
 
 DESCRIPTION="Enhanced Visual TECO clone"
 HOMEPAGE="ftp://ftp.mindlink.net/pub/teco/cantrell-teco/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.mindlink.net/pub/teco/cantrell-teco/teco_4_69.tar.gz
 		ftp://ftp.mindlink.net/pub/teco/cantrell-teco/unofficial_patches/4.69/patch1"	
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~x86"
+KEYWORDS="~alpha x86"
 IUSE=""
 DEPEND="virtual/glibc
 	sys-libs/libtermcap-compat"
