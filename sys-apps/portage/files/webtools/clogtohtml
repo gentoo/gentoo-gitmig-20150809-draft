@@ -41,7 +41,7 @@ while (pos<len(mylines)) and (entry<10):
 	pos=pos+2
 	desc=""
 	while mylines[pos][:-1]!="":
-		desc=desc+string.strip(mylines[pos][:-1])
+		desc=desc+" "+string.strip(mylines[pos][:-1])
 		pos=pos+1
 	if desc:
 		print '<p class="itemdesc">'+desc+'</p>'
