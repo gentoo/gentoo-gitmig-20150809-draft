@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0-r1.ebuild,v 1.4 2004/05/24 00:47:20 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0-r1.ebuild,v 1.5 2004/06/20 02:20:52 humpback Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://mu-conference.jabberstudio.org/"
 SRC_URI="http://www.jabberstudio.org/files/mu-conference/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~sparc"
 SLOT="0"
 
 DEPEND=">=net-im/jabberd-1.4.3-r3
