@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.4.ebuild,v 1.7 2004/07/12 15:07:34 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.7.ebuild,v 1.1 2004/07/12 15:07:34 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,16 +14,16 @@ HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
 SLOT="${KV}"
 
-KEYWORDS="~amd64 -ppc -sparc ~x86"
+KEYWORDS="-ppc -sparc ~x86"
 IUSE=""
 LICENSE="GPL-2"
 
-DEPEND=""
+DEPEND=">=sys-apps/i2c-${PV}"
 
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	epatch ${FILESDIR}/${PN}-2.8.2-sensors-detect-gentoo.diff > /dev/null || die
+	epatch ${FILESDIR}/${P}-sensors-detect-gentoo.diff > /dev/null || die
 
 	# Get the right I2C includes without dropping the kernel includes
 	mkdir -p ${MYI2C}/linux
@@ -35,7 +35,7 @@ src_compile()  {
 	einfo "*****************************************************************"
 	einfo
 	einfo "This ebuild assumes your /usr/src/linux kernel is the one you"
-	einfo "used to build i2c-2.8.2."
+	einfo "used to build i2c-2.8.7."
 	einfo
 	einfo "For 2.5+ series kernels, use the support already in the kernel"
 	einfo "under 'Character devices' -> 'I2C support' and then merge this"
@@ -53,7 +53,7 @@ src_compile()  {
 		LINUX=`echo $LINUX | sed 's/build\//build/'`
 		KV=`cut -d\  -f3 ${LINUX}/include/linux/version.h | grep \" | sed -e 's/"//' -e 's/"//'`
 		if [ "${KV}" == "" ]; then
-			die "Could not get kernel version; make sure ${LINUX}include/linux/version.h is there!"
+			die "Could not get kernel version; make sure ${LINUX}/include/linux/version.h is there!"
 		fi
 	else
 		LINUX='/usr/src/linux'
@@ -80,7 +80,18 @@ src_compile()  {
 	einfo "that contain 'No such file' references."
 
 	echo
-	filter-flags -fPIC -fstack-protector
+
+	# Please _don't_ use filter-flags -fPIC on apps that need it!
+	# [ amd64, hppa, ia64, etc... ]
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/05/28
+	case "${ARCH}" in
+		"amd64")
+			filter-flags -fstack-protector
+			;;
+		*)
+			filter-flags -fPIC -fstack-protector
+			;;
+	esac
 
 	cd ${S}
 	emake clean

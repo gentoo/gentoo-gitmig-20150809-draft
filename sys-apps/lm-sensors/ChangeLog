@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.30 2004/06/30 17:36:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.31 2004/07/12 15:07:34 plasmaroo Exp $
+
+*lm-sensors-2.8.7 (12 Jul 2004)
+
+  12 Jul 2004; <plasmaroo@gentoo.org> lm-sensors-2.8.2.ebuild,
+  lm-sensors-2.8.3.ebuild, lm-sensors-2.8.4.ebuild, lm-sensors-2.8.5.ebuild,
+  lm-sensors-2.8.6.ebuild, +lm-sensors-2.8.7.ebuild,
+  +files/lm-sensors-2.8.7-sensors-detect-gentoo.diff:
+  Marking 2.8 series "~x86"; added 2.8.7 - closes bug #54606.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> lm-sensors-2.6.5.ebuild,
   lm-sensors-2.7.0-r1.ebuild, lm-sensors-2.8.1.ebuild,
