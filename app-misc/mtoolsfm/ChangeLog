@@ -1,6 +1,6 @@
-# ChangeLog for sys-fs/mtoolsfm
+# ChangeLog for app-misc/mtoolsfm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mtoolsfm/ChangeLog,v 1.4 2003/09/17 14:03:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mtoolsfm/ChangeLog,v 1.5 2003/09/17 19:20:16 vapier Exp $
 
 *mtoolsfm-1.9.3 (17 Sep 2003)
 
