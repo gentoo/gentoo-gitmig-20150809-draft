@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# $Header: /var/cvsroot/gentoo-x86/net-www/memcached/files/init,v 1.1 2003/07/26 22:52:16 lisa Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting memcached"
+	/sbin/start-stop-daemon --start \
+	        --exec ${MEMCACHED_BINARY} \
+		--pidfile /var/run/memcached.pid \
+		-- -d -p ${PORT} -l ${LISTENON} -m ${MEMUSAGE}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping memcached"
+	start-stop-daemon --stop --quiet --pidfile /var/run/memcached.pid
+	rm -f /var/run/memcached.pid
+	eend $?
+}
+
