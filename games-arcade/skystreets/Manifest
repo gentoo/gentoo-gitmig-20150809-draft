@@ -3,6 +3,8 @@ MD5 6bbd57dcbac328e88abdd5ca25c22d44 ChangeLog 650
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 47ec99f7b2dd26ea10437eca89a7ea7c skystreets-0.2.1.ebuild 1137
 MD5 35930100d486efcf1f07e5a82627ac18 skystreets-0.1.3.ebuild 1137
+MD5 ffbb8bf87e544e1e2768bb4ada64c38f skystreets-0.2.2.ebuild 636
 MD5 3e225bce97a9da9d1be150d6228dea2f files/digest-skystreets-0.1.1 147
 MD5 073f0fd1b9706ab4ba255dc19734be81 files/digest-skystreets-0.1.3 147
 MD5 e83178c72605142acea55a07fe494fea files/digest-skystreets-0.2.1 147
+MD5 d4e0cfa58c5accddce80b18ee955d5ac files/digest-skystreets-0.2.2 70
