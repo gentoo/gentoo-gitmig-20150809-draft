@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.40 2004/09/23 23:50:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.41 2004/11/25 02:32:54 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -36,7 +36,7 @@
 #		if you are using <sys-apps/portage-2.0.49-r17.
 # PATCHES	Space delimited list of patch files.
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 ECLASS=ruby
 INHERITED="${INHERITED} ${ECLASS}"
@@ -103,7 +103,7 @@ ruby_econf() {
 
 ruby_emake() {
 	if [ -f makefiles -o -f GNUmakefile -o -f makefile -o -f Makefile ] ; then
-		make CC=${CC:-gcc} CXX=${CXX:-g++} "$@" || die "emake for ruby failed"
+		make CC="$(tc-getCC)" CXX="$(tc-getCXX)" ${MAKEOPTS} ${EXTRA_EMAKE} "$@" || die "emake for ruby failed"
 	fi
 }
 
@@ -144,7 +144,7 @@ erubydoc() {
 
 	insinto ${rdbase}
 	[ -n "${rdfiles}" ] && doins ${rdfiles}
-	rmdir --ignore-fail-on-non-empty ${D}${rdbase}
+	rmdir ${D}${rdbase} 2>/dev/null || true
 	if [ -d doc -o -d docs ] ; then
 		dohtml -x html -r {doc,docs}/*
 		dohtml -r {doc,docs}/html/*
