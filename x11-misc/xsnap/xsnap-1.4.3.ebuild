@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3.ebuild,v 1.1 2004/12/19 01:53:10 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3.ebuild,v 1.2 2005/03/29 11:53:35 pyrania Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ IUSE=""
 DEPEND="virtual/x11"
 
 src_compile() {
+	epatch ${FILESDIR}/${PN}-1.4-gentoo.patch || die "epatch failed."
 	xmkmf || die
 	make || die
 }

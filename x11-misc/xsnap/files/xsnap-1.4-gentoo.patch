@@ -1,0 +1,11 @@
+--- xsnap.c	2004-09-30 00:59:15.000000000 -0600
++++ xsnap.c.fix	2005-02-01 00:00:05.369862512 -0600
+@@ -18,6 +18,8 @@
+  */
+ 
+ #include <stdio.h> 
++#include <string.h>
++#include <stdlib.h>
+ #include <unistd.h>
+ #include <sys/stat.h>
+ #include <zlib.h>
