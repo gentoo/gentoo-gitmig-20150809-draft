@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-1.2.0.31.ebuild,v 1.1 2003/07/18 21:07:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-1.2.0.31.ebuild,v 1.2 2004/01/10 14:50:34 obz Exp $
 
 MAJOR_PV=${PV%.[0-9]*.[0-9]*}
 MINOR_PV=${PV#[0-9]*.[0-9]*.}
@@ -29,5 +29,5 @@ src_install() {
 
 	dodoc INSTALL README* COPYING AUTHORS ChangeLog NEWS TODO
 	insinto /usr/share/guile-gtk/examples
-	doins ${S}/examples/*.sc
+	doins ${S}/examples/*.scm
 }
