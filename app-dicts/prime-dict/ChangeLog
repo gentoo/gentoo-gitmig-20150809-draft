@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/prime-dict
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/ChangeLog,v 1.1 2003/12/05 10:52:44 usata Exp $
+
+*prime-dict-0.6.0 (05 Dec 2003)
+
+  05 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  prime-dict-0.6.0.ebuild:
+  Initial import. Ebuild submitted by Hattya <hattya@inter7.jp>
+  Closing bug #31497
+
