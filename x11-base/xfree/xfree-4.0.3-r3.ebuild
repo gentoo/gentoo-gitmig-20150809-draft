@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r3.ebuild,v 1.2 2001/04/28 12:48:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r3.ebuild,v 1.3 2001/05/07 17:57:00 achim Exp $
 
 A="X402src-1.tgz X402src-2.tgz X402src-3.tgz 4.0.2-4.0.3.diff.gz truetype.tar.gz"
 S=${WORKDIR}/xc
@@ -72,7 +72,10 @@ src_install() {
     doins ${FILESDIR}/xinitrc
     insinto /etc/X11/xdm
     doins ${FILESDIR}/Xsession
-
+    insinto /etc/pam.d
+    doins ${FILESDIR}/xdm
+    insinto /etc/rc.d/init.d
+    newins ${FILESDIR}/xdm.start xdm
 }
 
 
