@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.1-r1.ebuild,v 1.2 2004/02/25 21:51:02 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.1-r1.ebuild,v 1.3 2004/04/21 16:19:18 vapier Exp $
 
 DESCRIPTION="A firewall GUI"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 HOMEPAGE="http://www.fwbuilder.org/"
-RESTRICT="nomirror"
-S=${WORKDIR}/${P}
 
 KEYWORDS="~x86 sparc ~amd64"
 LICENSE="GPL-2"
@@ -21,7 +19,7 @@ DEPEND="sys-devel/autoconf
 	nls? ( >=sys-devel/gettext-0.11 )
 	~net-libs/libfwbuilder-1.0.2"
 
-RDEPEND="sys-apps/iproute"
+RDEPEND="sys-apps/iproute2"
 
 # Added by Jason Wever <weeve@gentoo.org>
 # Fix for bug #30256.
