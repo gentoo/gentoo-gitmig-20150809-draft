@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.3.ebuild,v 1.8 2002/10/05 18:08:30 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.3.ebuild,v 1.9 2002/11/18 14:03:21 nall Exp $
 
 IUSE="sse xmms"
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	sys-apps/gawk"
 
 src_compile() {
-	elibtoolize
+	elibtoolize --reverse-deps
 
 	local myconf
 

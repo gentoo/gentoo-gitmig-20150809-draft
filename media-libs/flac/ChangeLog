@@ -1,9 +1,14 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.5 2002/10/31 23:31:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.6 2002/11/18 14:03:21 nall Exp $
 
 *flac-1.0.4 (31 Oct 2002)
 
+  16 Nov 2002; Jon Nall <nall@gentoo.org> flac-1.0.4.ebuild :
+
+  added --reverse-deps to the elibtoolize command. this fixes bug
+  #10808
+  
   31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> flac-1.0.4.ebuild
   files/digest-flac-1.0.4 :
 
@@ -12,6 +17,9 @@
   an ebuild for 1.0.3 in bug #6966
 
 *flac-1.0.3 (08 Jul 2002) 
+
+  16 Nov 2002; Jon Nall <nall@gentoo.org> flac-1.0.3.ebuild :
+  added --reverse-deps to the elibtoolize command. 
 
   11 Sep 2002; Mark Guertin <gerk@gentoo.org> flac-1.0.3.ebuild :
   set nasm as x86 only dependancy
