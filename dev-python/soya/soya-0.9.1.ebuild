@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.9.1.ebuild,v 1.2 2004/12/29 23:46:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.9.1.ebuild,v 1.3 2005/02/09 23:21:31 kloeri Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="A high-level 3D engine for Python, designed with games in mind"
 SRC_URI="http://download.gna.org/soya/${MY_P}.tar.bz2"
 HOMEPAGE="http://home.gna.org/oomadness/en/soya/"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 

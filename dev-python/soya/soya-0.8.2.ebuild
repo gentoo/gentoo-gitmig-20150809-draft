@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.8.2.ebuild,v 1.1 2004/11/02 11:00:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.8.2.ebuild,v 1.2 2005/02/09 23:21:31 kloeri Exp $
 
 inherit distutils
 
