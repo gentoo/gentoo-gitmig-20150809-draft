@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.1 2004/06/27 18:30:09 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.2 2004/07/10 15:22:24 stuart Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -14,11 +14,17 @@
 
 inherit confutils
 
+ECLASS=php5-sapi
+INHERITED="$INHERITED $ECLASS"
+
+# set MY_P in the ebuild
+
 HOMEPAGE="http://www.php.net/"
 SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
 IUSE="${IUSE} adabas bcmath birdstep bzlib calendar cpdflib crypt ctype curl curlwrappers db2 dbase dbmaker dbx dio esoob exif fam frontbase fdftk filepro ftp gmp hyperwave-api iconv informix ingres interbase iodbc libedit mcve mhash ming mnogosearch msession msql mssql mysql ncurses nls nis oci8 oracle7 ssl ovrimos pcre pfpro postgres posix readline recode sapdb session shared simplexml snmp soap sockets solid spell spl ssl sybase sybase-ct sysvipc tidy tokenizer truetype odbc wddx xsl xml2 xmlrpc zlib dba cdb berkdb flatfile gdbm inifile qdbm empress empress-bcs gd gd-external imap kerberos ssl ldap sasl pcntl mmap sqlite"
 DEPEND="$DEPEND
+	!<=dev-php/php-4.99.99
 	readline? ( sys-libs/readline )"
 
 # ========================================================================
@@ -28,11 +34,141 @@ PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install"
 
 # ========================================================================
 
-EXPORT_FUNCTIONS src_compile src_install
+# we make the CLI version of PHP responsible for a few things,
+# such as the files required by PEAR
+
+PHP_PROVIDER_PKG="dev-php/php"
+PHP_PROVIDER_PKG_MINPVR="5.0.0"
+
+# ========================================================================
+
+EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack
+
+# ========================================================================
+# INTERNAL FUNCTIONS
+# ========================================================================
+
+php5-sapi_check_awkward_uses () {
+
+	if useq dba ; then
+		#                     extension     USE flag    shared support?
+		enable_extension_with "cdb"			"cdb"		1
+		enable_extension_with "db4"			"berkdb"	1
+		enable_extension_with "dbm"			"dbm"		1
+		enable_extension_with "flatfile"	"flatfile"	1
+		enable_extension_with "gdbm"		"gdbm"		1
+		enable_extension_with "inifile"		"inifile"	1
+		enable_extension_with "ndbm"		"ndbm"		1
+		enable_extension_with "qdbm"		"qdbm"		1
+	fi
+
+	if useq gd-external ; then
+		enable_extension_with "gd" "gd-external" 1 "/usr"
+		enable_extension_enable	"gd-jis-conf"	"nls" 0
+		enable_extension_enable	"gd-native-ttf"	"truetype" 0
+	else
+		enable_extension_with "gd" "gd" 1
+		enable_extension_enable	"gd-jis-conf"	"nls" 0
+		enable_extension_enable	"gd-native-ttf"	"truetype" 0
+	fi
+
+	if useq imap ; then
+		enable_extension_with "imap" "imap" 1
+		enable_extension_with "kerberos" "kerberos" 1
+		enable_extension_with "imap-ssl" "ssl" 1
+	fi
+
+	if useq ldap ; then
+		enable_extension_with "ldap" "ldap" 1
+		enable_extension_with "ldap-sasl" "sasl" 1
+	fi
+
+	if useq odbc ; then
+		enable_extension_with		"unixODBC"		"odbc"			1
+
+		enable_extension_with		"adabas"		"adabas"		1
+		enable_extension_with		"birdstep"		"birdstep"		1
+		enable_extension_with		"dbmaker"		"dbmaker"		1
+		enable_extension_with		"empress"		"empress"		1
+		if useq empress ; then
+			enable_extension_with	"empress-bcs"	"empress-bcs"	0
+		fi
+		enable_extension_with		"esoob"			"esoob"			1
+		enable_extension_with		"ibm-db2"		"db2"			1
+		enable_extension_with		"iodbc"			"iodbc"			1
+		enable_extension_with		"sapdb"			"sapdb"			1
+		enable_extension_with		"solid"			"solid"			1
+	fi
+
+	if useq mysql ; then
+		enable_extension_with		"mysql"			"mysql"			1
+	else
+		enable_extension_with		"mysqli"		"mysql"			1
+	fi
+
+	case "$PHPSAPI" in
+		cli|cgi)
+			enable_extension_with "pcntl" "pcntl" 1 ;;
+	esac
+
+	confutils_use_conflict "readline" "libedit"
+
+	if ! useq session ; then
+		enable_extension_disable	"session"		"session"		1
+	else
+		enable_extension_with		"mm"			"mmap"			0
+		enable_extension_with		"msession"		"msession"		1
+	fi
+
+	if ! useq sqlite ; then
+		enable_extension_without	"sqlite"	"sqlite"	0
+	else
+		enable_extension_enable		"sqlite-utf8"	"nls"	0
+	fi
+}
+
+# are we the CLI ebuild or not?
+# used to conditionally install a few things
+
+php5-sapi_is_providerbuild () {
+	if [ "${CATEGORY}/${PN}" == "${PHP_PROVIDER_PKG}" ]; then
+		return 0
+	else
+		return 1
+	fi
+}
 
 # ========================================================================
 # EXPORTED FUNCTIONS
 # ========================================================================
+
+php5-sapi_pkg_setup () {
+	# let's do all the USE flag testing before we do anything else
+	# this way saves a lot of time
+
+	php5-sapi_check_awkward_uses
+}
+
+php5-sapi_src_unpack () {
+	unpack ${A}
+	cd ${S}
+
+	# Patch PHP to show Gentoo as the server platform
+	sed -i "s/PHP_UNAME=\`uname -a\`/PHP_UNAME=\`uname -s -n -r -v\`/g" configure
+	# Patch for PostgreSQL support
+	sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i configure
+
+	# Patch for session persistence bug
+	epatch ${FILESDIR}/php5_soap_persistence_session.diff
+
+    # stop php from activating the apache config, as we will do that ourselves
+	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
+		sed -i.orig -e 's,-i -a -n php5,-i -n php5,g' $i
+	done
+
+	# Just in case ;-)
+	chmod 755 configure
+}
 
 php5-sapi_src_compile () {
 
@@ -105,6 +241,8 @@ php5-sapi_src_compile () {
 	enable_extension_enable		"yp"			"nis"			1
 	enable_extension_with		"zlib"			"zlib"			1
 
+	php5-sapi_check_awkward_uses
+
 	# DBA support
 	confutils_use_depend_all "cdb"		"dba"
 	confutils_use_depend_all "db4"		"dba"
@@ -115,59 +253,17 @@ php5-sapi_src_compile () {
 
 	enable_extension_enable		"dba"		"dba" 1
 
-	if useq dba ; then
-		#                     extension     USE flag    shared support?
-		enable_extension_with "cdb"			"cdb"		1
-		enable_extension_with "db4"			"berkdb"	1
-		enable_extension_with "dbm"			"dbm"		1
-		enable_extension_with "flatfile"	"flatfile"	1
-		enable_extension_with "gdbm"		"gdbm"		1
-		enable_extension_with "inifile"		"inifile"	1
-		enable_extension_with "ndbm"		"ndbm"		1
-		enable_extension_with "qdbm"		"qdbm"		1
-	fi
-
 	# GD library support
-
 	confutils_use_depend_any "truetype" "gd" "gd-external"
-
-	if useq gd-external ; then
-		enable_extension_with "gd" "gd-external" 1 "/usr"
-		enable_extension_enable	"gd-jis-conf"	"nls" 0
-		enable_extension_enable	"gd-native-ttf"	"truetype" 0
-	else
-		enable_extension_with "gd" "gd" 1
-		enable_extension_enable	"gd-jis-conf"	"nls" 0
-		enable_extension_enable	"gd-native-ttf"	"truetype" 0
-	fi
 	
 	# imap support
-
 	confutils_use_depend_all "kerberos" "imap"
 
-	if useq imap ; then
-		enable_extension_with "imap" "imap" 1
-		enable_extension_with "kerberos" "kerberos" 1
-		enable_extension_with "imap-ssl" "ssl" 1
-	fi
-
 	# ldap support
-
 	confutils_use_depend_all "sasl" "ldap"
-
-	if useq ldap ; then
-		enable_extension_with "ldap" "ldap" 1
-		enable_extension_with "ldap-sasl" "sasl" 1
-	fi
 
 	# mysql support
 	confutils_use_conflict "mysqli" "mysql"
-
-	if useq mysql ; then
-		enable_extension_with		"mysql"			"mysql"			1
-	else
-		enable_extension_with		"mysqli"		"mysql"			1
-	fi
 
 	# odbc support
 	confutils_use_depend_all "adabas"		"odbc"
@@ -180,70 +276,41 @@ php5-sapi_src_compile () {
 	confutils_use_depend_all "sapdb"		"odbc"
 	confutils_use_depend_all "solid"		"odbc"
 
-	if useq odbc ; then
-		enable_extension_with		"unixODBC"		"odbc"			1
-
-		enable_extension_with		"adabas"		"adabas"		1
-		enable_extension_with		"birdstep"		"birdstep"		1
-		enable_extension_with		"dbmaker"		"dbmaker"		1
-		enable_extension_with		"empress"		"empress"		1
-		if useq empress ; then
-			enable_extension_with	"empress-bcs"	"empress-bcs"	0
-		fi
-		enable_extension_with		"esoob"			"esoob"			1
-		enable_extension_with		"ibm-db2"		"db2"			1
-		enable_extension_with		"iodbc"			"iodbc"			1
-		enable_extension_with		"sapdb"			"sapdb"			1
-		enable_extension_with		"solid"			"solid"			1
-	fi
-
-	# pcntl support
-
-	case "$PHPSAPI" in
-		cli|cgi)
-			enable_extension_with "pcntl" "pcntl" 1 ;;
-	esac
-
 	# readline support
 	#
 	# you can use readline or libedit, but you can't use both
-
-	confutils_use_conflict "readline" "libedit"
-
 	enable_extension_with		"readline"		"readline"		0
 	enable_extension_with		"libedit"		"libedit"		1
 
 	# session support
-
 	confutils_use_depend_all "mm"		"session"
 	confutils_use_depend_all "msession"	"session"
 
-	if ! useq session ; then
-		enable_extension_disable	"session"		"session"		1
-	else
-		enable_extension_with		"mm"			"mmap"			0
-		enable_extension_with		"msession"		"msession"		1
-	fi
-
-	# sqlite support
-
-	if ! useq sqlite ; then
-		enable_extension_without	"sqlite"	"sqlite"	0
-	else
-		enable_extension_enable		"sqlite-utf8"	"nls"	0
-	fi
-
-	echo "$my_conf"
+	echo "${my_conf}"
 
 	econf ${my_conf} || die "configure failed"
 	emake || die "make failed"
 }
 
 php5-sapi_src_install () {
+	addpredict /usr/share/snmp/mibs/.index
+	
 	useq shared && PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules"
 	make INSTALL_ROOT=${D} $PHP_INSTALLTARGETS || die "install failed"
 
+	# annoyingly, we have to install the CLI by hand
 	if [ "$PHPSAPI" = "cli" ]; then
 		dobin sapi/cli/php
+	fi
+
+	# we only install the following for the PHP_PROVIDER_PKG ebuild
+
+	if ! php5-sapi_is_providerbuild ; then
+		rm ${D}/usr/bin/php-config
+		rm ${D}/usr/bin/phpize
+		rm ${D}/usr/bin/phpextdist
+		rm -rf ${D}/usr/lib/php/build
+		rm -rf ${D}/usr/include/php
+		rm -rf ${D}/usr/share/man/man1/php.1*
 	fi
 }
