@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.5 2002/04/04 12:02:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.6 2002/04/08 03:06:29 jhhudso Exp $
+
+*vim-6.1-r2 (7 Apr 2002)
+
+	7 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> vim-6.1-r2.ebuild :
+
+	Removed "addpredict /dev/vc/" from ebuild, portage-1.8.17 now
+	includes /dev/vc/ in sandbox as a default writable directory,
+	as it did with /dev/pts/ before 1.8.17.
 
 *vim-6.1-r1 (4 Apr 2002)
 
