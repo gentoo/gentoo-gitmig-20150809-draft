@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.25 2005/01/06 07:12:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.26 2005/01/29 21:18:02 dragonheart Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc hppa amd64 ia64 alpha mips"
 IUSE="crypt ipv6 activefilter"
 
 DEPEND="virtual/libc
-	activefilter? ( net-libs/libpcap )"
+	activefilter? ( virtual/libpcap )"
 
 src_unpack() {
 	unpack ${A}
