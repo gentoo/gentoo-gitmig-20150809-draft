@@ -46,7 +46,8 @@ fi
 if [ ! -e /etc/modules/${KERNVERS} ]
 then
     ebegin "Auto-generating ${KERNVERS} modules.conf"
-    modprobe -c | grep -v ".*=.*/modules\..*" >/etc/modules/${KERNVERS}
+    #modprobe -c | grep -v ".*=.*/modules\..*" >/etc/modules/${KERNVERS}
+    modprobe -c > /etc/modules/${KERNVERS}
     if [ $? -eq 0 ]
     then
 	eend 0
