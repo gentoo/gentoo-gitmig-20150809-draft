@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/menumaker
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/menumaker/ChangeLog,v 1.6 2004/06/25 01:34:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/menumaker/ChangeLog,v 1.7 2004/08/07 10:53:03 malc Exp $
+
+  07 Aug 2004; Malcolm Lashley <malc@gentoo.org> menumaker-0.17.ebuild:
+  ~amd64 closes bug #58432
 
 *menumaker-0.17 (03 Jun 2004)
 
