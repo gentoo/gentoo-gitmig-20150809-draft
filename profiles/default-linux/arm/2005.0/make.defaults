@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/2005.0/make.defaults,v 1.1 2005/01/20 21:24:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/2005.0/make.defaults,v 1.2 2005/01/21 15:30:13 vapier Exp $
 
 GRP_STAGE23_USE="
 berkdb
@@ -17,5 +17,3 @@ tcpd
 "
 
 USE="${GRP_STAGE23_USE} crypt zlib"
-
-FEATURES="sfperms -sandbox"

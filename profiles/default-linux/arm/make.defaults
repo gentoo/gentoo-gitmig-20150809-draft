@@ -1,23 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/make.defaults,v 1.1 2004/12/22 02:40:30 vapier Exp $
-
-GRP_STAGE23_USE="
-acl
-berkdb
-gpm
-ipv6
-ncurses
-nls
-pam
-perl
-python
-readline
-ssl
-tcpd
-"
-
-USE="${GRP_STAGE23_USE} crypt zlib"
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/make.defaults,v 1.2 2005/01/21 15:30:13 vapier Exp $
 
 ARCH="arm"
 ACCEPT_KEYWORDS="arm"
