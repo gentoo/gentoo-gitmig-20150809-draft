@@ -1,5 +1,5 @@
-MD5 a277dacac24ae3c3987fbab084cd538f ChangeLog 683
-MD5 9af5287371585724c509d56a6c14cc40 lapack-3.0.ebuild 733
+MD5 e3bed3c22ce8e62e6f25151b1a0bd41f ChangeLog 761
+MD5 f04e1b648643ea0b546467de313cf16e lapack-3.0.ebuild 735
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 794a9f20f734d45242bb3ed87970b7c9 lapack-3.0-r1.ebuild 835
 MD5 823864ca423f83efce8f2b0b64bb44d6 files/Makefile 12334
