@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030724.ebuild,v 1.4 2003/10/11 22:48:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030724.ebuild,v 1.5 2003/11/10 17:12:31 taviso Exp $
 
 inherit ccc eutils
 
@@ -16,9 +16,7 @@ SLOT="0"
 KEYWORDS="x86 alpha ~sparc"
 IUSE="static nls"
 
-DEPEND="virtual/glibc
-	>=sys-apps/sed-4"
-RDEPEND="virtual/glibc"
+DEPEND="virtual/glibc !app-shells/pdksh"
 
 S=${WORKDIR}
 
@@ -70,11 +68,11 @@ src_install() {
 	local my_arch="${S}/arch/$(${S}/bin/package)"
 
 	exeinto /bin
-	newexe ${my_arch}/bin/ok/ksh ksh93
+	doexe ${my_arch}/bin/ok/ksh
 
 	# FIXME: talk to pdksh maintainer about making this nicer,
 	# 		how can we co-exist nicely without blocking?
-	dosym /bin/ksh93 /bin/ksh
+	dosym /bin/ksh /bin/ksh93
 
 	newman ${my_arch}/man/man1/sh.1 ksh.1
 	dodoc lib/package/LICENSES/ast lib/package/gen/ast-ksh.txt
