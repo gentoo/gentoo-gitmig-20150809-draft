@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.13 2002/08/18 05:34:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.14 2002/08/28 14:24:59 seemant Exp $
+
+*sylpheed-claws-0.8.2 (28 Aug 2002)
+
+  28 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.8.2.ebuild files/digest-sylpheed-claws-0.8.2 :
+
+  Version bump which fixes many memory leaks.  The dillo and aspell patches
+  are still applied on this release as well.
 
 *sylpheed-claws-0.8.1-r1 (17 Aug 2002)
 
