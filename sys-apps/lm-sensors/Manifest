@@ -1,4 +1,5 @@
-MD5 32dadfed3ba57590b5accd0d80d78bb6 ChangeLog 6185
+MD5 e969241d1dcb9480f3f17c8c5c9c61a4 lm-sensors-2.8.3.20040202.ebuild 4696
+MD5 09346ffe2da1724e5200205c1dd4a91a ChangeLog 6396
 MD5 e4c90be0b8769f3616567470e3c89ade lm-sensors-2.6.5.ebuild 2030
 MD5 28373b812640d00c88c1b25d8e27d1f4 lm-sensors-2.8.0.ebuild 3697
 MD5 8b2dc6ba7619678e04264b30ece4245b lm-sensors-2.8.3.ebuild 4725
@@ -19,4 +20,5 @@ MD5 265c3ccaffdf984cbd371aec994b3162 files/lm-sensors-2.8.0-sensors-detect-gento
 MD5 f0520fc5631209ae9278e18d9b464d8e files/no-isadump-ppc.patch 1193
 MD5 72151bdd499b580ff965dd1a2e4216fb files/lm-sensors-2.8.2-sensors-detect-gentoo.diff 4973
 MD5 d8c62d91275ce75f12c70d068db57a97 files/rc_lm_sensors 621
+MD5 f98a80a36ac25c60c26904957c593174 files/digest-lm-sensors-2.8.3.20040202 78
 MD5 2217cbce56dd9da8bbe4188a24c9412f files/rc 2006
