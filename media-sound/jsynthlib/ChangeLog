@@ -1,0 +1,7 @@
+# ChangeLog for media-sound/jsynthlib
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jsynthlib/ChangeLog,v 1.1 2005/01/10 04:50:56 jnc Exp $
+
+  09 Jan 2005; Eric Shattow <jnc@gentoo.org> +metadata.xml:
+  Initial revision. closes bug #75139.
+

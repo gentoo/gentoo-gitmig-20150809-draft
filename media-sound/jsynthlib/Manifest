@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
+MD5 e771862fb9fe35b41463e07b89a3a4a5 jsynthlib-0.19_pre20041220.ebuild 901
+MD5 6bdb90a080b5651647c45205a89605ff ChangeLog 312
+MD5 51f01127e6698ee2c46c991861fc3142 files/digest-jsynthlib-0.19_pre20041220 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB4gnF+uC/ViVka/0RAl/bAJoDHeBgS2OrNOSCX2IB5ZAiVVUqRwCgpChs
+veJLuYxokGAitU4JE0b/yDo=
+=trrf
+-----END PGP SIGNATURE-----
