@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obpager
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.1 2004/11/06 14:59:52 pyrania Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.2 2005/02/05 17:00:23 kloeri Exp $
+
+  05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> obpager-1.8.ebuild:
+  ~alpha keyword, bug 78657.
 
 *obpager-1.8 (06 Nov 2004)
 
