@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/amanda
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.1 2003/06/26 19:47:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.2 2003/07/08 07:23:48 robbat2 Exp $
+
+*amanda-2.4.4-r1 (08 Jul 2003)
+
+  08 Jul 2003; Robin Johnson <robbat2@gentoo.org> amanda-2.4.4-r1.ebuild,
+  files/amanda-amandahosts, files/amanda-inetd.amanda.sample,
+  files/amanda-profile, files/amanda-xinetd:
+  Large improvements to the ebuild configuration system, using the same
+  environment variables. Now we also preserve them in an env.d file, which also
+  adds the CONFIG_PROTECT entry I missed before. Also update many config files
+  to be dynamically filled in from the env variables.
 
 *amanda-2.4.4 (26 Jun 2003)
 
