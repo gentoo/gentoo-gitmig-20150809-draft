@@ -2,8 +2,11 @@ MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 9b624859848241d6ea0ecc4703d4949d ChangeLog 1423
 MD5 f6b1defc5b579cc8f8864d24c977049a kita-0.6.4-r1.ebuild 985
 MD5 2a3c30fa28efa6ee87257e4c3c7bc8f7 kita-0.6.4.1.ebuild 1093
+MD5 e543d4438564fe8a83c2d63ecc5b7d88 kita-0.7.1.ebuild 1093
 MD5 0e8094bdc9a599c889eb7cde4d349b33 kita-0.6.1-r1.ebuild 992
+MD5 f511cae9e9e3e96168d2e2edeb276c08 files/digest-kita-0.7.0 61
 MD5 44dfd09afa2985ef5ce8ab4050bb0826 files/digest-kita-0.6.4.1 63
+MD5 a822365e8f8cb44c47703fa30bce7172 files/digest-kita-0.7.1 61
 MD5 fee0763de510e19ef8cb8bbb3e27282f files/kita-boardview-gentoo.diff 503
 MD5 2b922042edfcb478d81813e197bc5963 files/kita-0.6.4-close-gentoo.diff 591
 MD5 f2a0f7e84defbfe37a714804e39d1463 files/digest-kita-0.6.1-r1 61
