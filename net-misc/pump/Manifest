@@ -1,6 +1,16 @@
-MD5 519678716dcd9130b5a836e851649bad pump-0.8.19-r1.ebuild 704
-MD5 4c6b8d7f8184a00ee8adf70f36c63f71 pump-0.8.11-r1.ebuild 688
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c4b3a73a055e554f9b7e2c794f79be00 ChangeLog 1506
+MD5 4c6b8d7f8184a00ee8adf70f36c63f71 pump-0.8.11-r1.ebuild 688
+MD5 f27dfddd7f6df15e27779e439fa1491a pump-0.8.19-r1.ebuild 705
+MD5 2b45c75857947cb4866c175f48304eda files/digest-pump-0.8.19-r1 67
 MD5 dbccd88cdb05d334ef22e298091382e3 files/pump.conf 155
 MD5 7158de78d2fd79881a6b2cbf4e13803c files/digest-pump-0.8.11-r1 67
-MD5 2b45c75857947cb4866c175f48304eda files/digest-pump-0.8.19-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBh+tsHTu7gpaalycRAr8CAKCXNVuZBDF2xTd8/tHtnNhgWY8PIgCeKQ7+
+SKoaTcHTfipQL6Ri/zG7acU=
+=eBcm
+-----END PGP SIGNATURE-----
