@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 34457553b68159f39ba4ddd4e64ba5d1 ChangeLog 940
-MD5 feda9c96e138eeef4b140ec664c89aa3 banner-1.2.1.ebuild 594
+MD5 5345e5e598583fd6811314376aacc1e5 banner-1.2.1.ebuild 529
 MD5 22d085b9ba0312397ee20aaef3ab45b0 files/digest-banner-1.2.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA34+lHTu7gpaalycRAhdgAKCcp6nyU57fP1kQivBV+cIz9bW+vwCg73u/
+Qn95I/6pmQYXN+VaDYGwIHg=
+=4WXg
+-----END PGP SIGNATURE-----

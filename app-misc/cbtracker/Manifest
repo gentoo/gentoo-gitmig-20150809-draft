@@ -1,4 +1,14 @@
-MD5 7a5308f1a39c7bd8634d70e4e86b0947 cbtracker-1.0b.ebuild 699
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4c3100230fddda7fd83e2eb307d20842 ChangeLog 481
+MD5 1623ea61623ef928c66431e2feb41681 cbtracker-1.0b.ebuild 699
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 9bfe88b5fa3f3596ec8776300f9df9fb files/digest-cbtracker-1.0b 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35BaHTu7gpaalycRAjp3AKCvMX0INUBqYck38NheKZAwMsNoUgCfe9M+
+Nhu2KKIvO3Fa15701WTW7U8=
+=dxog
+-----END PGP SIGNATURE-----

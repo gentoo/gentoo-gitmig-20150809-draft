@@ -1,4 +1,14 @@
-MD5 2f6c71dceb1bf9b76b56018479325eea glabels-1.93.3.ebuild 973
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ff7e01460f9e182e31bf27c73c853045 ChangeLog 1822
+MD5 6532b3dacea2acc13f27ef2f96b2f3b8 glabels-1.93.3.ebuild 961
 MD5 54b7f17aa1f3cf4e8cc03858fd99070c metadata.xml 554
 MD5 9e2ffe73924322314756d4f75f0f7298 files/digest-glabels-1.93.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35KaHTu7gpaalycRAj6/AKDOHOaOQZiypfFiT7eopIUoLTtmkgCeKltI
+iRnTca7LgTZ6TwIPstDjPEU=
+=Y2EP
+-----END PGP SIGNATURE-----

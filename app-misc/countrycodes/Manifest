@@ -1,4 +1,14 @@
-MD5 73d02cd5e5cf86261cdc65978856efa5 countrycodes-1.0.5.ebuild 897
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 411168b478ec1edbfeaffe6ce52d573f ChangeLog 824
+MD5 5b7d79f66f0971f32c7ca77b91a58714 countrycodes-1.0.5.ebuild 893
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 4f42346a15ab781a4585f7254b5e35e7 files/digest-countrycodes-1.0.5 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35DtHTu7gpaalycRAuTTAKCVUVWM5yukedG2vGblc1cixDHcagCg4KoY
+IXTMpVZa4lein1Py+3uCjA8=
+=6/lD
+-----END PGP SIGNATURE-----

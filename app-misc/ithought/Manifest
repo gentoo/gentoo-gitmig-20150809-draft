@@ -1,3 +1,13 @@
-MD5 1907fb965278c24e7e540eb4d2bfd700 ithought-0.0.5-r1.ebuild 732
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b09edb7b636973b1fe2458b2433455b1 ChangeLog 913
+MD5 3274f49626c454a0939fe3ae023fb287 ithought-0.0.5-r1.ebuild 660
 MD5 989344aa23c9f62b89cb58e2177488fe files/digest-ithought-0.0.5-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35O4HTu7gpaalycRAnSeAJ92DqOc1DVFh2S6e1bdY9rFz5vXzACgvQYE
+8Yq6Bvj3No5HBxGNrcBOHR8=
+=wIF5
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
-MD5 a2ff78d4cbe1d8c17c5996378baf0356 gcal-3.01.ebuild 1589
-MD5 3abbf2d4819cb1dd4dadcb66ced14e70 gcal-3.01-r1.ebuild 1661
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d661706d0383ba989897327e31490d48 ChangeLog 845
+MD5 b84c391fc84bc86b2d4ca2c7aeaf6e1b gcal-3.01-r1.ebuild 1651
+MD5 aa4f829d09169bed9bdf01bcb45b95a0 gcal-3.01.ebuild 1579
 MD5 e1f8151e053aefc6508cc1bbd8a4b127 files/digest-gcal-3.01 62
 MD5 e1f8151e053aefc6508cc1bbd8a4b127 files/digest-gcal-3.01-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35I7HTu7gpaalycRAjISAKCB6db9sK9SsvWcboAi0L8fIimSwwCeORYO
+zi4GjIy0SXsjD2kH5cXm0uc=
+=2woz
+-----END PGP SIGNATURE-----

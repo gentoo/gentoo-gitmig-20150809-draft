@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a908c958f5ca016481ace77f50366cf6 ChangeLog 2010
-MD5 ba3c6b230d8a9ca4da1b9de6c6c5d119 devtodo-0.1.17.ebuild 955
-MD5 cb4cff0cd869696d1207553de89551c1 files/digest-devtodo-0.1.17 66
-MD5 48d3c0943acaae812475061a16fe6eb9 files/devtodo.patch 2359
+MD5 708bc8d1cf20e92b71d189b71d12b641 devtodo-0.1.17.ebuild 939
 MD5 690abe23e1e2a741222bbc156f9e6478 files/devtodo-0.1.11.colourplain.patch 360
+MD5 48d3c0943acaae812475061a16fe6eb9 files/devtodo.patch 2359
+MD5 cb4cff0cd869696d1207553de89551c1 files/digest-devtodo-0.1.17 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35EZHTu7gpaalycRAi44AKC/lVIpfiAdL70Q+XE0Kgeq2kl3kgCgj1EJ
+3S3joQPFCmDxWxBXd5RkSDc=
+=gtle
+-----END PGP SIGNATURE-----

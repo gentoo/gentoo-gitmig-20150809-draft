@@ -1,3 +1,13 @@
-MD5 180141be9b7e29bcd8b69a3f76bc0b15 git-4.3.20.ebuild 607
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d91eb7ff847038af0d7a182eefea84e0 ChangeLog 458
+MD5 865d78ba5b9aa92c760cd28c9fd29053 git-4.3.20.ebuild 549
 MD5 4c60d310dc9ce1c7ae02a65dd57f5784 files/digest-git-4.3.20 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35KEHTu7gpaalycRAoWqAKDgxOW+m56BQlBSKQQVWs8rIt9OrACgjxbY
+/f2Vixyxx/zYeKkiacsUPmc=
+=ArXv
+-----END PGP SIGNATURE-----

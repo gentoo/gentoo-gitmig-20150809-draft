@@ -1,7 +1,17 @@
-MD5 422693aac697c7937de1f66a15eb5ea6 gtktalog-1.0.3.ebuild 1003
-MD5 fd3ffc4113569ab346f3d4b8c314df61 gtktalog-1.0.2.ebuild 1003
-MD5 f1c70160f2c302f259af7e99d4590ef9 gtktalog-1.0.1.ebuild 1003
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5e7a312e53281a128f4d0930332d3441 ChangeLog 1988
+MD5 a45f5afb20af079b8149abfd81befa77 gtktalog-1.0.1.ebuild 923
+MD5 ebfdf1361d26ef53100539641cd4f4ce gtktalog-1.0.2.ebuild 923
+MD5 8645d40f548a6feacd883a98d03ef227 gtktalog-1.0.3.ebuild 923
 MD5 aacd6e99565d4e3995d22dd20259c278 files/digest-gtktalog-1.0.1 68
 MD5 fb8d14db61d77be0d8697e684b00b581 files/digest-gtktalog-1.0.2 68
 MD5 1e64078333e33ae5886ccd8331bbf61e files/digest-gtktalog-1.0.3 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35MPHTu7gpaalycRAtB4AJ482L5gMI+hk66Gr8tcmUmMbfBiqACZAYBb
+fBLi7mf9d0PaTip1UuEv8+I=
+=/pFx
+-----END PGP SIGNATURE-----
