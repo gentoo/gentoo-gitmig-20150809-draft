@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimageview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/ChangeLog,v 1.6 2004/06/29 13:04:03 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/ChangeLog,v 1.7 2004/07/31 02:36:40 tgall Exp $
+
+  31 Jul 2004; Tom Gall <tgall@gentoo.org> gimageview-0.2.25.ebuild:
+  stable on ppc64, bug #57127
 
   29 Jun 2004; Daniel Goller <morfic@gentoo.org> gimageview-0.2.25.ebuild:
   Added patch to allow compilation with gcc-3.4

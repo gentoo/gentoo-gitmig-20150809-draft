@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.25.ebuild,v 1.5 2004/06/29 13:04:03 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.25.ebuild,v 1.6 2004/07/31 02:36:40 tgall Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gtkmmviewer/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ppc64"
 # mng, xine, and mplayer are local flags
 IUSE="gnome nls gtk gtk2 imlib wmf mng svg xine mplayer"
 

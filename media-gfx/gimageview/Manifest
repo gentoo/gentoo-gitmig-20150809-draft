@@ -1,5 +1,5 @@
-MD5 8aa569e01e2e9f01d68f1f4ff8318e28 ChangeLog 883
+MD5 998454220b53bcc4fdfb967a47be50af ChangeLog 982
+MD5 c578a9059e15dc6d483bb5225b6de2e1 gimageview-0.2.25.ebuild 1914
 MD5 4368b20da8cb79a90eb16111f691f548 metadata.xml 379
-MD5 cd5caab4e622b58d212fa8e8e4f1362e gimageview-0.2.25.ebuild 1909
 MD5 36f65a43da5f087e4bbc63ff7f8adad0 files/digest-gimageview-0.2.25 70
 MD5 9a949f1e3e1aebb680b0b2823db37bf1 files/gimv-gcc34.patch 851
