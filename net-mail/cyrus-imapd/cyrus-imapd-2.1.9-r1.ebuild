@@ -1,10 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9-r1.ebuild,v 1.3 2002/10/05 05:39:22 drobbins Exp $
-
-IUSE="ssl kerberos perl snmp afs"
-
-inherit perl-module
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9-r1.ebuild,v 1.4 2002/10/11 14:51:49 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -21,7 +17,6 @@ DEPEND="virtual/glibc
 	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-    	perl? ( >=sys-devel/perl-5.6.1 )
 	kerberos? ( >=app-crypt/krb5-1.2.5 )
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
@@ -61,18 +56,19 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-openssl=/usr" \
 		|| myconf="${myconf} --without-openssl"
 
-    	use perl && myconf="${myconf} --with-perl --enable-cyradm" \
-		|| myconf="${myconf} --without-perl --disable-cyradm"
-
-	use kerberos && myconf="${myconf} --with-krb --with-auth=krb" \
-		|| myconf="${myconf} --without-krb --with-auth=unix"
+	use kerberos && myconf="${myconf} --with-krb --with-auth=krb --enable-gssapi" \
+		|| myconf="${myconf} --without-krb --with-auth=unix --disable-gssapi"
 
 	econf \
 		--enable-listext \
 		--with-cyrus-group=mail \
 		--enable-netscapehack \
 		--with-com_err=yes \
+		--without-perl \
+		--disable-cyradm \
 		${myconf} || die "bad ./configure"
+	# doesn't work
+		--sysconfdir=/etc/cyrusimapd
 
 	# make depends break with -f... in CFLAGS
 	make depend CFLAGS="" || die "make depend problem"
@@ -82,28 +78,35 @@ src_compile() {
 }
 
 src_install () {
-	# remove perl subdirs from beeing installed
-	sed "s:SUBDIRS = imap sieve:SUBDIRS =:" ${S}/perl/Makefile > ${S}/perl/Makefile.install
-	mv ${S}/perl/Makefile ${S}/perl/Makefile.orig
-	mv ${S}/perl/Makefile.install ${S}/perl/Makefile
 
 	# Install!
 	make DESTDIR=${D} install || die
 
+	# Remove the developer stuff (-> dev-libs/cyrus-imap-devel)
+	rm -rf ${D}usr/include ${D}usr/lib
+
+	# Rename the master from cyrus to cyrusmaster (postfix has a master too)
+	mv ${D}usr/cyrus/bin/master ${D}usr/cyrus/bin/cyrusmaster
+
 	# Fix manpage stuff
 	rm -rf ${D}usr/man
+
+	# master is renamed to cyrusmaster because postfix has a master too
+	mv man/master.8 man/cyrusmaster.8
+	patch man/cyrusmaster.8 ${FILESDIR}/master.8.diff || die "error patching master.8"
+
 	doman man/*.?
 
-	mkdir ${D}etc
-	cp ${FILESDIR}/imapd.conf ${D}etc/imapd.conf
-	cp ${FILESDIR}/cyrus.conf ${D}etc/cyrus.conf
+	# remove man-pages from packet net-mail/cyrus-imapd-admin
+	rm ${D}usr/share/man/man1/installsieve.1.gz ${D}usr/share/man/man1/sieveshell.1.gz
+
+	mkdir ${D}etc 
+	cp ${FILESDIR}/imapd_2.conf ${D}etc/imapd.conf
+	cp ${FILESDIR}/cyrus_2.conf ${D}etc/cyrus.conf
 	mkdir ${D}etc/pam.d
 	cp ${FILESDIR}/pam.d-imap ${D}etc/pam.d/imap
 
-	mkdir ${D}var ${D}var/log
-	touch ${D}var/log/imapd.log
-	touch ${D}var/log/auth.log
-
+	mkdir ${D}var
    	mkdir -m 0750 ${D}var/imap
    	chown -R cyrus.mail ${D}var/imap 
    	mkdir -m 0755 ${D}var/imap/db
@@ -146,26 +149,20 @@ src_install () {
 	# Remove the CVS directories
 	find 2>/dev/null ${D}usr/share/doc/ -type d -name CVS -exec rm -rf '{}' \;
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/cyrus.rc6 cyrus
+	exeinto /etc/init.d ; newexe ${FILESDIR}/cyrus.rc6_2 cyrus
 
-	if use perl ; then
-		export DESTDIR=${D}
-		cd ${S}/perl/imap
-		perl-module_src_prep
-		perl-module_src_compile
-		perl-module_src_install 
-        cd ${S}/perl/sieve/acap
-		perl-module_src_prep
-		perl-module_src_compile
-        perl-module_src_install
-        cd ${S}/perl/sieve/acap/managesieve
-		perl-module_src_prep
-		perl-module_src_compile
-        perl-module_src_install
+	if [ "'use ssl'" ]; then
+		# from mod_ssl
+		echo "Generating self-signed test certificate"
+		echo "(Ignore any message from the yes command below)"
+		mkdir certs
+		cd certs
+		yes "" | ${FILESDIR}/gentestcrt.sh >/dev/null 2>&1
+		mkdir ${D}etc/cyrusimapd
+		cp server.crt server.key ${D}etc/cyrusimapd
+		chown cyrus.root ${D}etc/cyrusimapd/server.crt ${D}etc/cyrusimapd/server.key
+		chmod 0400 ${D}etc/cyrusimapd/server.crt ${D}etc/cyrusimapd/server.key
 	fi
-
-	# remove empty log files installed by default
-	rm ${D}/var/log/{auth,imapd}.log
 
 }
 
@@ -190,19 +187,15 @@ pkg_postinst() {
 	ewarn "*****************************************************************"
 
 	einfo "*****************************************************************"
-	einfo "* NOTE: For correct logging add                                 *"
+	einfo "* NOTE: For correct logging with syslog add                     *"
 	einfo "*         local6.* /var/log/imapd.log                           *"
 	einfo "*         auth.debug /var/log/auth.log                          *"
-	einfo "*       to /etc/syslog.conf.                                     *"
+	einfo "*       to /etc/syslog.conf.                                    *"
 	einfo "*****************************************************************"
 
-	if [ "'use ssl'" ]; then
-		ewarn "*****************************************************************"
-		ewarn "* WARNING: Read the section about SSL and TLS of                *"
-		ewarn "* /usr/share/doc/${P}/html/install-configure.html. *"
-		ewarn "* about installing the needed keys.                             *"
-		ewarn "*****************************************************************"
-	fi
-
+	ewarn "*******************************************************"
+	ewarn "* WARNING: You have to add user cyrus to the sasldb2. *"
+	ewarn "* Do this with:                                       *"
+	ewarn "*   saslpasswd2 cyrus                                 *"
+	ewarn "*******************************************************"
 }
-

@@ -1,12 +1,20 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.12 2002/09/30 22:25:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.13 2002/10/11 14:51:49 raker Exp $
 
-<<<<<<< ChangeLog
-*cyrus-imapd-2.1.9-r2 (30 Sep 2002)
+*cyrus-imapd-2.1.9-r1 (01 Oct 2002)
 
-  12 Sep 2002; <mcummings@gentoo.org> cyrus-imapd-2.1.5-r2 :
-  Corrected syntax for perl portion
+  11 Oct 2002; Nick Hadaway <raker@gentoo.org>
+  cyrus-imapd-2.1.9-r1.ebuild :
+  Added gssapi support based on the kerberos use flag.
+
+  01 Oct 2002; Alexander Holler <holler@ahsoftware.de>
+  cyrus-imapd-2.1.9-r1.ebuild, files/cyrus_2.conf, files/gentestcrt.sh,
+  files/imapd_2.conf, files/master.8.diff:
+  Removed cyradm and sieveshell (now in package cyrus-imap-admin).
+  Added generation of a self-signed test certificate.
+  Added 'use dns logger' to the startup-script.
+  Renamed master to cyrusmaster because postfix has a master too (manpage conflict)
 
 *cyrus-imapd-2.1.9 (10 Sep 2002)
 
@@ -23,7 +31,6 @@
   Version bump.  Cleaned up the ebuild even more.  Added a patch to
   bypass the -I/usr/include gcc problem.  Added kerberos use flag.
 
->>>>>>> 1.9
 *cyrus-imapd-2.1.5-r1 (13 Aug 2002)
 
   22 Aug 2002; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.5-r1.ebuild :
