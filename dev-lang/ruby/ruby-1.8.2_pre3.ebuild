@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre3.ebuild,v 1.10 2004/11/11 15:33:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre3.ebuild,v 1.11 2004/11/12 16:53:56 usata Exp $
 
 ONIGURUMA="onigd2_3_2"
 
@@ -120,7 +120,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if use ppc-macos ; then
+	if ! use ppc-macos ; then
 		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
 			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 		fi

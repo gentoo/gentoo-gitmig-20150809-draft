@@ -1,11 +1,11 @@
---- Makefile.in.orig	2004-08-31 23:07:04.000000000 +0900
-+++ Makefile.in	2004-08-31 23:07:04.000000000 +0900
+--- Makefile.in.orig	2004-07-07 15:54:37.000000000 +0900
++++ Makefile.in	2004-11-13 00:53:52.000000000 +0900
 @@ -151,7 +151,7 @@
  
  install-doc:
  		@echo Generating RDoc documentation
 -		$(bindir)/$(PROGRAM) $(srcdir)/bin/rdoc --all --ri-system $(srcdir)
-+		cd $(srcdir)/lib && find . -name \*.rb -print0 | xargs -0 $(DESTDIR)$(bindir)/$(PROGRAM) ../bin/rdoc --all --ri-system
++		$(DESTDIR)$(bindir)/$(PROGRAM) $(srcdir)/bin/rdoc --all --ri-system $(srcdir) `find lib -name \*.rb`
  
  clean-ext:
  		@-$(MINIRUBY) $(srcdir)/ext/extmk.rb $(SCRIPT_ARGS) clean 2> /dev/null || true
