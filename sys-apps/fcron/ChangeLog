@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.43 2005/01/15 15:12:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.44 2005/01/20 00:27:10 ka0ttic Exp $
+
+*fcron-2.9.5.1-r2 (19 Jan 2005)
+
+  19 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> -fcron-2.9.5.1-r1.ebuild,
+  +fcron-2.9.5.1-r2.ebuild:
+  Revision bump. Install fcronsighup into /usr/bin where it should be; fixes
+  bug 78726
 
   15 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> fcron-2.9.5.1-r1.ebuild:
   Fixed crontab perms.

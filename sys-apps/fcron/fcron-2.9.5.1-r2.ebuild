@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.5.1-r1.ebuild,v 1.2 2005/01/15 15:12:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.5.1-r2.ebuild,v 1.1 2005/01/20 00:27:10 ka0ttic Exp $
 
 inherit cron
 
@@ -71,8 +71,9 @@ src_install() {
 	docron fcron -m0110 -o root -g root
 	docrontab fcrontab -m6110 -o cron -g cron
 
-	docron fcrondyn -m6110 -o cron -g cron
-	docron fcronsighup -m6110 -o root -g cron
+	insinto /usr/sbin
+	insopts -o root -g cron -m6110 ; doins fcronsighup
+	insopts -o cron -g cron -m6110 ; doins fcrondyn
 
 	# /etc stuff
 	insinto /etc/fcron
