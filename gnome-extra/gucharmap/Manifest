@@ -1,3 +1,5 @@
-MD5 956bfb1266734aa31f7e90afac0aa64d ChangeLog 870
 MD5 8776758bcd57c5c91a4dd72b3d89e070 gucharmap-0.8.0.ebuild 1489
+MD5 8d44ac6b93828aa8cce1d02106716ef6 ChangeLog 983
+MD5 5a04941dc0c3c43a5372813d65720e4b gucharmap-0.9.0.ebuild 960
 MD5 051f2f68aa11199c28c9d317e956d673 files/digest-gucharmap-0.8.0 68
+MD5 1a5e58aa329e823eb180d134748d1593 files/digest-gucharmap-0.9.0 69
