@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfwm4-themes
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.9 2004/01/09 05:50:09 bcowan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.10 2004/01/16 21:16:50 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  xfwm4-themes-4.0.0.ebuild:
+  set ppc in keywords
 
 *xfwm4-themes-4.0.3 (09 Jan 2004)
 
