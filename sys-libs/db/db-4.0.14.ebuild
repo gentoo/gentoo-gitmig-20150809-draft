@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.17 2003/05/25 15:26:52 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.18 2003/05/25 18:27:25 pauldv Exp $
 
 IUSE="tcltk java"
 
@@ -80,7 +80,7 @@ fix_so () {
 	[ ${target} ] && ln -sf ${target//.\//} libdb_java.so
 	cd -
 	cd /usr/include
-	target=`ls db? |tail -n 1`
+	target=`ls -d db? |tail -n 1`
 	[ ${target} ] && ln -sf ${target}/db.h .
 	cd -
 }

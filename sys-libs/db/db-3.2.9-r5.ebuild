@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r5.ebuild,v 1.3 2003/05/24 13:05:29 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r5.ebuild,v 1.4 2003/05/25 18:27:25 pauldv Exp $
 
 IUSE=""
 
@@ -145,7 +145,7 @@ fix_so () {
 	[ ${target} ] && ln -sf ${target//.\//} libdb_tcl.so
 	cd -
 	cd /usr/include
-	target=`ls db? |tail -n 1`
+	target=`ls -d db? |tail -n 1`
 	[ ${target} ] && ln -sf ${target}/db.h .
 	cd -
 }
