@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.27 2004/10/26 22:28:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.28 2004/11/04 00:13:23 geoman Exp $
+
+  03 Nov 2004; Stephen P. Becker <geoman@gentoo.org> evolution-2.0.2.ebuild:
+  added ~mips keyword
 
   28 Oct 2004; Aron Griffis <agriffis@gentoo.org> evolution-2.0.2.ebuild:
   add ~ia64
