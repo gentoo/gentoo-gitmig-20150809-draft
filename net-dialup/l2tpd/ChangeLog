@@ -1,0 +1,17 @@
+# ChangeLog for net-misc/l2tpd
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.1 2003/11/17 19:54:29 lanius Exp $
+
+*l2tpd-0.69 (17 Nov 2003)
+
+  17 Nov 2003; Heinrich Wendel <lanius@gentoo.org> l2tpd-0.69.ebuild,
+  files/l2tpd-init:
+  moved from net-misc to net-dialup
+
+  10 Jul 2003; Donny Davies <woodchip@gentoo.org> l2tpd-0.69.ebuild:
+  Close #23945.
+
+*l2tpd-0.69 (24 Feb 2003)
+
+  24 Feb 2003; Donny Davies <woodchip@gentoo.org> :
+  Initial import, created by me.
