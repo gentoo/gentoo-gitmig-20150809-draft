@@ -1,6 +1,6 @@
 # Copyright 2002 Thomas Capricelli <orzel@freehackers.org>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141_rc1.ebuild,v 1.1 2002/08/06 20:34:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141_rc1.ebuild,v 1.2 2002/08/14 18:36:02 murphy Exp $
 inherit kde-base
 need-kde 3
 
@@ -9,7 +9,7 @@ DESCRIPTION="KDE editor based on vim"
 SRC_URI="http://www.freehackers.org/kvim/dl/kvim-6.1.141rc1.tar.bz2"
 HOMEPAGE="http://www.freehackers.org/kvim/"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 PATCHES="$FILESDIR/${P}-gcc2fix.patch"
 

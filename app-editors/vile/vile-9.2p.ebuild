@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2p.ebuild,v 1.4 2002/07/25 20:32:22 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2p.ebuild,v 1.5 2002/08/14 18:36:03 murphy Exp $
 
 S=${WORKDIR}/vile-9.2
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"
@@ -33,7 +33,7 @@ RDEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
 	unpack vile-9.2.tgz

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.4.ebuild,v 1.5 2002/08/06 15:48:33 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.4.ebuild,v 1.6 2002/08/14 18:32:05 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Vi clone"
@@ -11,7 +11,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="Sleepycat"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {
 	cd build.unix

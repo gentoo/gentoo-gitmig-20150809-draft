@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.4o.ebuild,v 1.7 2002/08/06 16:43:37 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.4o.ebuild,v 1.8 2002/08/14 18:36:02 murphy Exp $
 
 DESCRIPTION="Really tiny vi clone, for things like rescue disks"
 HOMEPAGE="http://www.pell.chi.il.us/~orc/Code/"
@@ -13,7 +13,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="levee"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack () {
 	unpack "${A}" || die

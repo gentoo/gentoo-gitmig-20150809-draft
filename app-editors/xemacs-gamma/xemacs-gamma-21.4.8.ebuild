@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/xemacs-gamma-21.4.8.ebuild,v 1.6 2002/08/02 05:05:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/xemacs-gamma-21.4.8.ebuild,v 1.7 2002/08/14 18:36:03 murphy Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.xemacs.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=sys-libs/zlib-1.1.4

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Taras Glek <taras.glek@home.com>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.5-r1.ebuild,v 1.3 2002/08/06 17:19:38 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.5-r1.ebuild,v 1.4 2002/08/14 18:36:03 murphy Exp $
 
 S=${WORKDIR}/$PN/gtk
 MY_PV=145
@@ -15,7 +15,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 	unpack ${A}

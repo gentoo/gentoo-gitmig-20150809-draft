@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xwpe/xwpe-1.5.29a.ebuild,v 1.3 2002/08/06 17:35:49 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xwpe/xwpe-1.5.29a.ebuild,v 1.4 2002/08/14 18:36:04 murphy Exp $
 
 DESCRIPTION="An IDE to Develop in text and graphical mode"
 HOMEPAGE="http://www.identicalsoftware.com/xwpe/"
@@ -13,7 +13,7 @@ DEPEND=">=sys-libs/gpm-1.20.0 \
 
 RDEPEND="${DEPEND}"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 SRC_URI="http://www.identicalsoftware.com/xwpe/${P}.tar.gz"
 

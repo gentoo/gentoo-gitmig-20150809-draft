@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.1.9.ebuild,v 1.4 2002/08/06 16:44:47 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.1.9.ebuild,v 1.5 2002/08/14 18:36:02 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="mp, the definitive text editor"
@@ -15,7 +15,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {
 	emake || die

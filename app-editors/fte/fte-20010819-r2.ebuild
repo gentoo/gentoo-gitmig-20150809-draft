@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r2.ebuild,v 1.7 2002/08/02 05:05:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r2.ebuild,v 1.8 2002/08/14 18:36:00 murphy Exp $
 
 S=${WORKDIR}/${P}
 
@@ -23,7 +23,7 @@ TARGETS=""
 
 SLOT="0"
 LICENSE="GPL"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 if [ "`use slang`" ] ; then
 	TARGETS="$TARGETS sfte"
