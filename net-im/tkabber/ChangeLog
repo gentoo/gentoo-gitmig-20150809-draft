@@ -1,11 +1,11 @@
 # ChangeLog for net-im/tkabber
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.10 2003/07/08 17:45:23 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.11 2003/07/08 17:47:18 agenkin Exp $
 
 *tkabber-0.9.5b (08 Jul 2003)
 
   08 Jul 2003; Arcady Genkin <agenkin@gentoo.org> :
-  Version update.
+  Version update.  Thanks to Tobias Sager <moixa@gmx.ch>.
 
 *tkabber-0.9.4b (02 Mar 2003)
 
