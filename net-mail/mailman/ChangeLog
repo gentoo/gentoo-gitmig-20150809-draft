@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.18 2003/07/26 20:01:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.19 2003/07/30 19:33:04 raker Exp $
+
+*mailman-2.1.2-r1 (30 Jul 2003)
+
+  30 Jul 2003; Nick Hadaway <raker@gentoo.org> mailman-2.1.2-r1.ebuild,
+  files/README.gentoo:
+  Reworked the apache configuration steps in the readme and in the 
+  ebuild.  Revision bumped as there have been lots of changes since
+  2.1.2 was initially added to portage.
 
   26 Jul 2003; Nick Hadaway <raker@gentoo.org> mailman-2.1.2.ebuild:
   Removed invalid apache use flag and adjusted routines accordingly.
