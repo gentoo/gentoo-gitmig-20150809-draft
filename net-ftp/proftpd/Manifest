@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fdd759339f12fae35f40a371c773c18c ChangeLog 14108
+MD5 60e5ee7d096d6fdff0c9160117c09cf6 ChangeLog 14201
 MD5 b47207aedd0149443faa2152950714ed metadata.xml 401
-MD5 0da1408981233bd78976ee644a3a5e84 proftpd-1.2.10-r1.ebuild 4395
-MD5 77ab83f5b6de2298739b5d6b6c792a78 proftpd-1.2.10-r2.ebuild 4478
-MD5 1260354a840c5fca83d551172f4657ce proftpd-1.2.10-r3.ebuild 4330
 MD5 6fc1a218a29c9fc20ee69100d1f8888a proftpd-1.2.10.ebuild 4139
+MD5 1260354a840c5fca83d551172f4657ce proftpd-1.2.10-r3.ebuild 4330
 MD5 58abdaa0274915af4dcc12046c752afb proftpd-1.2.9-r2.ebuild 3439
+MD5 0da1408981233bd78976ee644a3a5e84 proftpd-1.2.10-r1.ebuild 4395
+MD5 500ff36d4796598be93237951d1b3670 proftpd-1.2.10-r2.ebuild 4477
 MD5 e558f099037d359da5f855285542246e files/1.2.9_rc3-reversedns.diff 1974
 MD5 fa041c7b343099eef454338152a04ea7 files/digest-proftpd-1.2.10 67
-MD5 52697b758d9c85e63c881592c5a8bb02 files/digest-proftpd-1.2.10-r1 213
-MD5 52697b758d9c85e63c881592c5a8bb02 files/digest-proftpd-1.2.10-r2 213
 MD5 81e05e840c023b1f6bfb46dc24cb165f files/digest-proftpd-1.2.10-r3 142
-MD5 6c1a92fc601780a49fdfc01aaf483b69 files/digest-proftpd-1.2.9-r2 66
 MD5 cfe47c0d5f8fece1d36ca8d56d0f2b99 files/ftp.pamd 701
+MD5 6c1a92fc601780a49fdfc01aaf483b69 files/digest-proftpd-1.2.9-r2 66
 MD5 0cf02f8c82f22e714b8299e7b7907d8f files/mod_sql_postgres.c.patch 275
 MD5 b00999f820f1e46a501ce4fcaeb5fe23 files/proftpd-1.2.9-makefile.patch 434
 MD5 50955f0d375360841d50a82b9589e435 files/proftpd-1.2.9-privescal-fix.patch 588
 MD5 b338504ed873219e368abab7df6c276d files/proftpd.conf 1704
 MD5 55ca24c9ee61b9ed94968c664baaeace files/proftpd.rc6 731
 MD5 4d676b70c97bc6daabd8c2ba8d52d27a files/proftpd.xinetd 295
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJkxB8zY1VwezZiERAsOEAKCaIbYKEAgHOJrIlXY5WG7IWK7SiQCffPW+
-4kKzJWFVkeMXtX5Xc9oi5wI=
-=vjKl
------END PGP SIGNATURE-----
+MD5 52697b758d9c85e63c881592c5a8bb02 files/digest-proftpd-1.2.10-r1 213
+MD5 52697b758d9c85e63c881592c5a8bb02 files/digest-proftpd-1.2.10-r2 213
