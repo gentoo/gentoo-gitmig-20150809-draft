@@ -1,12 +1,17 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.19 2003/08/16 20:22:21 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.20 2003/09/10 04:08:12 vapier Exp $
+
+*xosd-2.2.4-r1 (10 Sep 2003)
+
+  10 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Fix font alignment #28054.
+
+*xosd-2.2.4 (15 Aug 2003)
 
   16 Aug 2003; Nick Hadaway <raker@gentoo.org> xosd-2.2.4.ebuild:
   Thanks to Jonathan Hitchcock on bug #26710 for noticing that the
   xmms plugin gets installed to the wrong directory.
-
-*xosd-2.2.4 (15 Aug 2003)
 
   15 Aug 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml,
   xosd-0.7.0.ebuild, xosd-1.0.2.ebuild, xosd-2.0.0.ebuild,
