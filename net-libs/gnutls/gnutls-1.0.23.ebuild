@@ -1,31 +1,29 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.14.ebuild,v 1.6 2004/11/09 22:26:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.23.ebuild,v 1.1 2005/01/05 20:38:23 dragonheart Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
-SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/${P}.tar.gz"
 
 IUSE="zlib doc crypt"
-LICENSE="|| ( LGPL-2.1 GPL-2 )"
+LICENSE="LGPL-2.1 GPL-2"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~mips ~alpha ppc64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~mips ~alpha"
+
+# Removed keywords awaiting >=dev-libs/libtasn1-0.2.10 keywords (bug #61944)
+# ~ppc64  ~ia64 ~hppa
 
 RDEPEND=">=dev-libs/libgcrypt-1.1.94
-	crypt? ( >=app-crypt/opencdk-0.5.3 )
+	crypt? ( >=app-crypt/opencdk-0.5.5 )
 	zlib? ( >=sys-libs/zlib-1.1 )
-	virtual/libc"
-
-# Need masking on ~amd64 ~sparc ~ppc ~mips ~alpha
-#	>=dev-libs/libtasn1-0.2
-#	>=dev-libs/lzo-1.0"
-
-# should be crypt? ( >=app-crypt/opencdk-0.5.5 ) however I did see the source for it
-# ^^ this is what configure expects.
+	virtual/libc
+	>=dev-libs/lzo-1.0
+	>=dev-libs/libtasn1-0.2.10"
 
 DEPEND="${RDEPEND}
 	sys-apps/gawk
@@ -38,22 +36,18 @@ DEPEND="${RDEPEND}
 #	libtasn1
 #	opencdk
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}/includes/gnutls; epatch ${FILESDIR}/${PN}-1.0.14-extra.h.patch
-}
-
 src_compile() {
-	#   I think this vvv gets ignored if not present
-	local myconf="--without-included-libtasn1 --without-included-opencdk"
+	# Needed for mips and probably others
+	gnuconfig_update
 
-
+	local myconf=""
 	use crypt || myconf="${myconf} --disable-extra-pki --disable-openpgp-authentication"
 
 	econf  \
 		`use_with zlib` \
-		--with-included-minilzo \
-		--with-included-libtasn1 \
+		--without-included-minilzo \
+		--without-included-libtasn1 \
+		 --without-included-opencdk \
 		${myconf} || die
 	emake || die
 }

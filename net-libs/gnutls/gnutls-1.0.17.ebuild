@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.15 2004/12/23 13:39:10 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.16 2005/01/05 20:38:23 dragonheart Exp $
 
 inherit eutils gnuconfig
 
