@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.13.6.ebuild,v 1.2 2004/11/05 05:04:29 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.13.6.ebuild,v 1.3 2005/02/09 03:13:01 battousai Exp $
 
 inherit toolchain-funcs eutils
 
