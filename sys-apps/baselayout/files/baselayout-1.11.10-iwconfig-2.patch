@@ -1,0 +1,26 @@
+diff -u -B -r1.7.2.15 iwconfig
+--- 1/lib/rcscripts/net.modules.d/iwconfig	13 Mar 2005 19:03:21 -0000
++++ 2/lib/rcscripts/net.modules.d/iwconfig	14 Mar 2005 16:49:14 -0000
+@@ -217,11 +217,8 @@
+ 		fi
+ 	fi
+ 
+-	# Attempt to default the key to [1]
+-	iwconfig ${iface} key [1] 2>/dev/null
+-
+ 	key=$( iwconfig_get_wep_key )
+-	e=$( eval "iwconfig ${iface} key [1] key ${key} 2>&1" )
++	e=$( eval "iwconfig ${iface} key ${key} 2>&1" )
+ 	if [[ -n ${e} && ${key} != off ]]; then
+ 		ewarn "${iface} does not support setting keys"
+ 		ewarn "or the parameter \"mac_key_${ESSIDVAR}\" or \"key_${ESSIDVAR}\" is incorrect"
+@@ -344,9 +341,6 @@
+ 			vewarn "\"${dessid}\" is not WEP enabled - ignoring setting"
+ 		fi
+ 
+-		# Attempt to default the key to [1]
+-		iwconfig ${iface} key [1] 2>/dev/null
+-
+ 		e=$( eval "iwconfig ${iface} key ${key} 2>&1" )
+ 		if [[ -n ${e} && ${key} != off ]]; then
+ 			ewarn "${iface} does not support setting keys"
