@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12-r1.ebuild,v 1.1 2002/07/19 20:23:56 seemant Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12-r1.ebuild,v 1.2 2002/07/20 04:12:05 seemant Exp $ 
+
+inherit libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -48,7 +50,7 @@ src_unpack() {
 
 src_compile() {
 
-	libtoolize --copy --force
+	elibtoolize
 
 	# Most of these are not working currently, but are here for completeness
 	local myconf
@@ -91,12 +93,16 @@ src_compile() {
 
 src_install() {
 	
-	make prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		docdir=${D}/usr/share/doc/${PF}/html \
-		sysconfdir=${D}/etc \
-		install || die
+#	make \
+#		prefix=${D}/usr \
+#		mandir=${D}/usr/share/man \
+#		datadir=${D}/usr/share \
+#		infodir=${D}/usr/share/info \
+#		docdir=${D}/usr/share/doc/${PF}/html \
+#		sysconfdir=${D}/etc \
+#		install || die
+
+	einstall || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 	cd ${S}/doc
