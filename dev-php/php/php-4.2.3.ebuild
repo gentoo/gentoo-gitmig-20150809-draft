@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.3.ebuild,v 1.8 2002/10/27 18:59:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.3.ebuild,v 1.9 2002/11/14 20:36:08 rphillips Exp $
 
 IUSE="freetype postgres tiff libwww nls jpeg readline ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -106,14 +106,8 @@ src_compile() {
 	use ldap &&  myconf="${myconf} --with-ldap"
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
 	use freetype && myconf="${myconf} --with-ttf --with-t1lib"
-
-	# rphillips - should fix #2708
-	if [ "`use pdflib`" ] ; then
-		myconf="${myconf} --enable-pdflib=/usr"
-	else
-		use gd && myconf="${myconf} --with-gd"
-	fi
-
+	use pdflib && myconf="${myconf} --enable-pdflib=/usr"
+	use gd && myconf="${myconf} --with-gd"
 	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
 	use png  && myconf="${myconf} --with-png-dir=/usr"
