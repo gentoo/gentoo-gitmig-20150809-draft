@@ -1,8 +1,7 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Desktop Team <desktop@gentoo.org>
-# Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6-r4.ebuild,v 1.5 2002/02/03 07:31:59 azarah Exp $
+# Maintainer: Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.8-r1.ebuild,v 1.1 2002/02/06 14:08:40 azarah Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -17,10 +16,10 @@ RDEPEND=">=gnome-base/ORBit-0.5.10-r1
 	>=media-libs/libpng-1.0.9
 	app-arch/zip
 	app-arch/unzip
-	x11-libs/gtk+"
+	x11-libs/gtk+
 	java?  ( virtual/jdk )"
 #	gtk?   ( x11-libs/gtk+ )
-#	mozqt? ( x11-libs/qt )
+#	mozqt? ( x11-libs/qt )"
 
 DEPEND="${RDEPEND}
 	virtual/x11
@@ -35,7 +34,20 @@ export BUILD_OFFICIAL=1
 [ "`use ssl`" ] && export MOZ_PSM=1
 
 # do we build java support for the NSS stuff ?
-[ "`use java`" ] && export NS_USE_JDK=1
+# NOTE: this is broken for the moment
+#[ "`use java`" ] && export NS_USE_JDK=1
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}/widget
+	tar -jxf ${FILESDIR}/timer-0.9.7.tar.bz2 || die
+	cp Makefile.in Makefile.in.orig
+	sed -e 's:= public src:= public src timer:' Makefile.in.orig \
+		> Makefile.in
+	cd ${S}
+}
 
 src_compile() {
 
@@ -61,8 +73,8 @@ src_compile() {
 	fi
 
 	if [ -z "$DEBUG" ] ; then
-		myconf="${myconf} --enable-strip-libs --disable-debug"
-		myconf="${myconf} --disable-dtd-debug"
+		myconf="${myconf} --enable-strip-libs --disable-debug \
+			--disable-dtd-debug --disable-tests"
 	fi
 
 
@@ -71,19 +83,16 @@ src_compile() {
 	#        is just here for completeness.  Please do not use if you 
 	#        do not know what you are doing!
 	#
-	# The defaults are (as of 0.9.6, according to configure (line ~9787)):
-	#     cookie wallet content-packs xml-rpc xmlextras help transformiix venkman
+	# The defaults are (as of 0.9.7, according to configure (line ~10251)):
+	#     cookie wallet content-packs xml-rpc xmlextras help transformiix venkman inspector
 	# Non-defaults are:
-	#     irc xmlterm inspector access-builtin ctl
+	#     irc xmlterm access-builtin ctl
 	local myext="default"
 	if [ "`use mozirc`" ] ; then
 		myext="${myext},irc"
 	fi
 	if [ "`use mozxmlterm`" ] ; then
 		myext="${myext},xmlterm"
-	fi
-	if [ "`use mozinspector`" ] ; then
-		myext="${myext},inspector"
 	fi
 	if [ "`use mozaccess-builtin`" ] ; then
 		myext="${myext},access-builtin"
@@ -105,12 +114,13 @@ src_compile() {
 		     --disable-tests		 			\
 		     --disable-pedantic					\
 		     --enable-mathml					\
-		     --enable-svg					\
+		     --disable-svg					\
 		     --enable-xsl					\
 		     --enable-crypto					\
 		     --enable-detect-webshell-leaks			\
 		     --enable-xinerama					\
 		     --with-java-supplement				\
+		     --enable-nspr-autoconf				\
 		     --with-extensions="${myext}"			\
 		     --enable-optimize=-O3				\
 		     --enable-xterm-updates				\
@@ -214,21 +224,18 @@ src_install() {
 	# Take care of non root execution
 	# (seems the problem is that not all files are readible by the user)
 	chmod -R g+r,o+r ${D}/usr/lib/mozilla
-
-	# Fix to get it removed at unmerge
-	touch ${D}/usr/lib/mozilla/component.reg
 }
 
 pkg_postinst() {
 
         # Make symlink for Java plugin (do not do in src_install(), else it only
 	# gets installed every second time)
-	if [ "`use java`" ] && [ ! -L /usr/lib/mozilla/plugins/`java-config --browser-plugin` ]
+	if [ "`use java`" ] && [ ! -L /usr/lib/mozilla/plugins/`java-config --browser-plugin=mozilla` ]
 	then
-		if [ -e `java-config --full-browser-plugin-path` ]
+		if [ -e `java-config --full-browser-plugin-path=mozilla` ]
 		then
-			ln -sf `java-config --full-browser-plugin-path`
-				/usr/lib/mozilla/plugins/`java-config --browser-plugin`
+			ln -sf `java-config --full-browser-plugin-path=mozilla` \
+				/usr/lib/mozilla/plugins/`java-config --browser-plugin=mozilla` 
 		fi
 	fi
 
@@ -242,6 +249,9 @@ pkg_postinst() {
 	umask 022
 	/usr/lib/mozilla/regxpcom
 	chmod g+r,o+r /usr/lib/mozilla/component.reg
+	# Setup the default skin and locale to correctly generate the Chrome .rdf files
+	echo "skin,install,select,classic/1.0" >> ${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt
+	echo "locale,install,select,en-US" >> ${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt
 	/usr/lib/mozilla/regchrome
 	find /usr/lib/mozilla -type d -perm 0700 -exec chmod 755 {} \; || :
 
