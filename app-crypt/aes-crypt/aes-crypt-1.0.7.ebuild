@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aes-crypt/aes-crypt-1.0.7.ebuild,v 1.7 2004/06/27 21:27:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aes-crypt/aes-crypt-1.0.7.ebuild,v 1.8 2004/08/08 13:14:00 mcummings Exp $
 
 MY_P="${PN/-crypt/}-${PV}"
-DESCRIPTION="Command line program ('aes') to encrypt and decrypt data using the Rijndael algorythm"
+DESCRIPTION="Command line program ('aes') to encrypt and decrypt data using the Rijndael algorithm"
 HOMEPAGE="http://my.cubic.ch/users/timtas/aes/"
 SRC_URI="http://my.cubic.ch/users/timtas/aes/${MY_P}.tar.gz"
 
