@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1.ebuild,v 1.15 2004/07/14 20:08:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1.ebuild,v 1.16 2004/10/01 23:02:08 pyrania Exp $
+
+inherit eutils
 
 IUSE="X aalib svga directfb"
 
@@ -22,7 +24,7 @@ src_unpack() {
 	cd ${S}
 	if [ ${ARCH} = "ppc" ]
 	then
-		patch -p1 < ${FILESDIR}/libggi-${PV}-ppc.patch || die
+		epatch ${FILESDIR}/libggi-${PV}-ppc.patch || die "epatch failed"
 	fi
 }
 
