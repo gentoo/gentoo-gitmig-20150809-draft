@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors: Preston A. Elder <prez@goth.net>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641d.ebuild,v 1.1 2002/04/17 23:39:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641d.ebuild,v 1.2 2002/04/17 23:46:32 azarah Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -208,6 +208,11 @@ src_install() {
 	# The second is just the db generation, and component registration,
 	# which will be done in pkg_postinst() and have the *live*
 	# ${ROOT} as target.
+	#
+	# NOTE: this is just temporary until I can come up with a better
+	#       solution (or somebody else).  There is a way to make setup
+	#       use a template, but as far as I can tell, the fact that
+	#       we use ${D} to install, will nuke component registration.
 	#
 	# Azarah -- 16 April 2002
 
