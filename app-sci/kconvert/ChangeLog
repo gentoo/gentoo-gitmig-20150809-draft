@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/lightspeed
+# ChangeLog for app-sci/kconvert
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kconvert/ChangeLog,v 1.1 2003/02/17 20:34:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kconvert/ChangeLog,v 1.2 2003/04/22 10:20:41 vapier Exp $
 
 *kconvert-1.1.ebuild (17 Feb 2003)
 
