@@ -36,10 +36,6 @@
 # keeping old stuff around
 media-tv/nvrec
 
-# <liquidx@gentoo.org> (10 Nov 2003)
-# stability problems
-=net-www/straw-0.20
-
 # <george@gentoo.org> (08 Nov 2003)
 # masking intermediat version before it goes away, now that the release is stable
 =app-sci/lard-20030204
