@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.6.0.ebuild,v 1.8 2004/06/24 22:39:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.6.0.ebuild,v 1.9 2004/07/01 05:23:12 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64 ~sparc"
 IUSE="alsa debug mad oggvorbis sdl zlib"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	>media-libs/libmpeg2-0.3.1
 	sdl? ( >=media-libs/libsdl-1.2.2 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.1b.ebuild,v 1.3 2004/06/24 22:38:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.1b.ebuild,v 1.4 2004/07/01 05:23:11 mr_bones_ Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="X ggi directfb alsa sdl ncurses"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	X? (
 		virtual/x11
 		=media-libs/freetype-2*
