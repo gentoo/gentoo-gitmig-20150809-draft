@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.20-r1.ebuild,v 1.1 2003/06/28 01:00:29 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.20-r1.ebuild,v 1.2 2003/06/28 01:06:38 tberman Exp $
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan exiscan-acl maildir"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan exiscan-acl maildir lmtp"
 
 EXISCAN_VER=${PV}-26
 EXISCANACL_VER=${PV}-09

@@ -2,7 +2,7 @@ MD5 398d2fc4ee1367bd675e2f6b8350c48d ChangeLog 5660
 MD5 0940d1b635323dccef779e9c41a78234 exim-4.10.ebuild 6212
 MD5 99050d3d99619961c4b5fb54c9662aa6 exim-4.12.ebuild 5434
 MD5 1960014d5516aa993f10ff19d0ce7e7c exim-4.14.ebuild 5435
-MD5 a54eb4cb54b7df1baf23f2ea6ec7466d exim-4.20-r1.ebuild 6166
+MD5 9dccc1a640570ae9296725f910c55e9e exim-4.20-r1.ebuild 6171
 MD5 412d1e8588d5ac36260ad9da692a1cdf exim-4.20.ebuild 5567
 MD5 68fc403ba2c98ccba281939085cb9052 files/auth_conf.sub 775
 MD5 0cb2ffe88c81fd7ac8429b5a19d58b35 files/configure 16346
