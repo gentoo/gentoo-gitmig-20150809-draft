@@ -1,42 +1,52 @@
-MD5 943065c583a2784de8b412c78448df05 openssh-3.7.1_p2-r1.ebuild 4094
-MD5 5cef7d550ced1fd69bf848057f9550b2 openssh-3.8.1_p1-r1.ebuild 4225
-MD5 21a99db81b8b64032ab0400ec6d1e58a openssh-3.8.1_p1.ebuild 4045
-MD5 5980749b551997b4337676c916441243 openssh-3.9_p1.ebuild 4307
-MD5 483c0aaacb9e93630487cc3e95c95984 openssh-3.7.1_p2-r2.ebuild 4625
-MD5 f3b51950101783d3e4735631aea8802d openssh-3.8.1_p1-r2.ebuild 4247
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5b82460b0bc341721db791733ca49b61 ChangeLog 17190
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
+MD5 943065c583a2784de8b412c78448df05 openssh-3.7.1_p2-r1.ebuild 4094
+MD5 483c0aaacb9e93630487cc3e95c95984 openssh-3.7.1_p2-r2.ebuild 4625
+MD5 21a99db81b8b64032ab0400ec6d1e58a openssh-3.8.1_p1.ebuild 4045
 MD5 8aa5f9269062d89fb56275b53747ea18 openssh-3.8_p1.ebuild 4222
-MD5 6905aafd16d110e8e8b74cad4914ceb7 files/openssh-3.8.1_p1-largekey.patch.bz2 1304
-MD5 e62c6cfae268e95fb406080c91713c1a files/digest-openssh-3.8_p1 138
-MD5 2cce94a742ab0721d87b1ff63c32d0f9 files/digest-openssh-3.9_p1 136
-MD5 265e0566d8f9408f1f89cfa2bf2a5105 files/openssh-3.9_p1-fix_suid.patch.bz2 304
-MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8.1_p1-resolv_functions.patch.bz2 315
-MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8_p1-kerberos.patch.bz2 465
-MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.7.1_p2-chroot.patch.bz2 1119
-MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8_p1-chroot.patch.bz2 1119
-MD5 5b057f6a1a7c2c0f94f83bc19c4d6a9b files/openssh-3.5_p1-gentoo-sshd-gcc3.patch.bz2 253
-MD5 7c16095191b5dc9d653dcb658650c88c files/digest-openssh-3.8.1_p1-r1 141
-MD5 7c16095191b5dc9d653dcb658650c88c files/digest-openssh-3.8.1_p1-r2 141
-MD5 7c16095191b5dc9d653dcb658650c88c files/digest-openssh-3.8.1_p1 141
-MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8.1_p1-kerberos.patch.bz2 465
-MD5 b96a393752121c75feedaa49c42b2969 files/openssh-3.7.1_p2-kerberos.patch.bz2 490
-MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8_p1-skey.patch.bz2 270
+MD5 7c6a0875ecaea2f6f06a7e5168bd0f27 openssh-3.8.1_p1-r1.ebuild 4225
+MD5 f3b51950101783d3e4735631aea8802d openssh-3.8.1_p1-r2.ebuild 4247
+MD5 5980749b551997b4337676c916441243 openssh-3.9_p1.ebuild 4307
+MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r2 142
+MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r1 142
+MD5 7880e18b2a91e5927810dddc7bda270f files/openssh-3.7.1_p1-selinux.diff.bz2 1353
+MD5 b912e51afc37c43afef30d1f4aaee55a files/openssh-skeychallenge-args.diff.bz2 424
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
 MD5 0a1428803057b7d25e624c6b297980d8 files/sshd.rc6 1281
-MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8.1_p1-skey.patch.bz2 270
-MD5 93d19c0ef91091a730510c46ab8e811e files/openssh-3.9_p1-selinux.diff.bz2 1307
-MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.9_p1-opensc.patch.bz2 1381
-MD5 7880e18b2a91e5927810dddc7bda270f files/openssh-3.7.1_p1-selinux.diff.bz2 1353
-MD5 0bc069a375ecec2d469b74a3a9a7d647 files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 6225
-MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r1 142
-MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r2 142
-MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.9_p1-chroot.patch.bz2 1119
-MD5 6c92c72a7cbec59eed493e728d14ad3c files/openssh-3.8.1p1-sftplogging-1.2-gentoo.patch.bz2 6164
-MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.8.1_p1-opensc.patch.bz2 1381
-MD5 f08e067b7000e994a23291e15c9e53f3 files/openssh-3.9_p1-largekey.patch.bz2 1352
-MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8.1_p1-chroot.patch.bz2 1119
-MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.9_p1-skey.patch.bz2 270
 MD5 7a205083ec21bedffb0adc331d587291 files/openssh-3.7.1_p2-skey.patch.bz2 272
+MD5 e62c6cfae268e95fb406080c91713c1a files/digest-openssh-3.8_p1 138
+MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8.1_p1-chroot.patch.bz2 1119
+MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8_p1-chroot.patch.bz2 1119
+MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8_p1-kerberos.patch.bz2 465
 MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8_p1-resolv_functions.patch.bz2 315
-MD5 b912e51afc37c43afef30d1f4aaee55a files/openssh-skeychallenge-args.diff.bz2 424
+MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8_p1-skey.patch.bz2 270
+MD5 7c16095191b5dc9d653dcb658650c88c files/digest-openssh-3.8.1_p1 141
+MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8.1_p1-kerberos.patch.bz2 465
+MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8.1_p1-resolv_functions.patch.bz2 315
+MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8.1_p1-skey.patch.bz2 270
+MD5 7c16095191b5dc9d653dcb658650c88c files/digest-openssh-3.8.1_p1-r1 141
+MD5 7c16095191b5dc9d653dcb658650c88c files/digest-openssh-3.8.1_p1-r2 141
+MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.8.1_p1-opensc.patch.bz2 1381
+MD5 2cce94a742ab0721d87b1ff63c32d0f9 files/digest-openssh-3.9_p1 136
+MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.9_p1-chroot.patch.bz2 1119
+MD5 265e0566d8f9408f1f89cfa2bf2a5105 files/openssh-3.9_p1-fix_suid.patch.bz2 304
+MD5 f08e067b7000e994a23291e15c9e53f3 files/openssh-3.9_p1-largekey.patch.bz2 1352
+MD5 0bc069a375ecec2d469b74a3a9a7d647 files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 6225
+MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.9_p1-skey.patch.bz2 270
+MD5 5b057f6a1a7c2c0f94f83bc19c4d6a9b files/openssh-3.5_p1-gentoo-sshd-gcc3.patch.bz2 253
+MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.7.1_p2-chroot.patch.bz2 1119
+MD5 b96a393752121c75feedaa49c42b2969 files/openssh-3.7.1_p2-kerberos.patch.bz2 490
+MD5 6905aafd16d110e8e8b74cad4914ceb7 files/openssh-3.8.1_p1-largekey.patch.bz2 1304
+MD5 6c92c72a7cbec59eed493e728d14ad3c files/openssh-3.8.1p1-sftplogging-1.2-gentoo.patch.bz2 6164
+MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.9_p1-opensc.patch.bz2 1381
+MD5 93d19c0ef91091a730510c46ab8e811e files/openssh-3.9_p1-selinux.diff.bz2 1307
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBXCHhHTu7gpaalycRArK2AJ42Xmqgv4VfCtHdTgyC4xaE3jBdzQCfRZeU
+yEQ2f9OFkrFweHYoFsP0/k0=
+=9bx5
+-----END PGP SIGNATURE-----
