@@ -1,0 +1,16 @@
+The Makefile doesn't actually use the SYS variable and having it 
+set in your env can cause weird build failures.  Just punt it.
+
+http://bugs.gentoo.org/show_bug.cgi?id=83000
+
+--- portmap/Makefile
++++ portmap/Makefile
+@@ -109,7 +109,7 @@
+ SHELL	= /bin/sh
+ 
+ COPT	= $(CONST) -Dperror=xperror $(CHECK_PORT) \
+-	$(SYS) -DFACILITY=$(FACILITY) $(ULONG) $(ZOMBIES) $(SA_LEN) \
++	-DFACILITY=$(FACILITY) $(ULONG) $(ZOMBIES) $(SA_LEN) \
+ 	$(LOOPBACK) $(SETPGRP)
+ CFLAGS	= $(COPT) $(O) $(NSARCHS)
+ OBJECTS	= portmap.o pmap_check.o from_local.o $(AUX)

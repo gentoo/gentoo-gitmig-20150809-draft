@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/portmap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.30 2005/02/07 19:46:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.31 2005/02/22 22:35:52 vapier Exp $
+
+  22 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/portmap-5b-no-SYS.patch, portmap-5b-r9.ebuild:
+  Add patch to delete the $(SYS) variable which isnt used at all #83000 by
+  Mihai Limbasan.
 
   07 Feb 2005; Markus Rothe <corsair@gentoo.org> -portmap-5b-r8.ebuild,
   portmap-5b-r9.ebuild:

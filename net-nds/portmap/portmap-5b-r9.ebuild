@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r9.ebuild,v 1.12 2005/02/07 19:46:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r9.ebuild,v 1.13 2005/02/22 22:35:53 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -27,25 +27,28 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}_5beta.dif
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}_5beta.dif
 
 	# Redhat patches
-	epatch ${FILESDIR}/${PN}-4.0-malloc.patch
-	epatch ${FILESDIR}/${PN}-4.0-cleanup.patch
-	epatch ${FILESDIR}/${PN}-4.0-rpc_user.patch
-	epatch ${FILESDIR}/${PN}-4.0-sigpipe.patch
+	epatch "${FILESDIR}"/${PN}-4.0-malloc.patch
+	epatch "${FILESDIR}"/${PN}-4.0-cleanup.patch
+	epatch "${FILESDIR}"/${PN}-4.0-rpc_user.patch
+	epatch "${FILESDIR}"/${PN}-4.0-sigpipe.patch
 
 	# Should include errno.h, and not define as external.  Fix
 	# relocation error and build problem with glibc-2.3.2 cvs ...
 	# <azarah@gentoo.org> (31 Dec 2002).
-	epatch ${FILESDIR}/${P}-include-errno_h.patch
+	epatch "${FILESDIR}"/${P}-include-errno_h.patch
 
 	# Patch to listen on loopback only #65199
-	epatch ${FILESDIR}/${P}-loopback-only.patch
+	epatch "${FILESDIR}"/${P}-loopback-only.patch
 
 	# Make tcp wrapper checks easier
-	epatch ${FILESDIR}/${P}-optional-tcpd.patch
+	epatch "${FILESDIR}"/${P}-optional-tcpd.patch
+
+	# Remove useless make variable #83000
+	epatch "${FILESDIR}"/${P}-no-SYS.patch
 }
 
 src_compile() {
