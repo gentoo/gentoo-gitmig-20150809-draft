@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f9fe4435d5d0f39574b77babf97400a sussen-0.5.3.ebuild 1125
-MD5 e41e73dcfffbd0ead53bc0abe675097f sussen-0.10.ebuild 737
-MD5 4a1fa8c12722b43a069929ad2b0228b5 ChangeLog 697
+MD5 4b90c25fdf056d566dab45a6b8aa26dc ChangeLog 796
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
+MD5 39930456b1985fd25f75bac4179ef832 sussen-0.5.3.ebuild 1125
+MD5 912198d23fe813afd58feb9fc11619b2 sussen-0.10.ebuild 742
 MD5 5dd20ca6159958efc7303bd449ea592e files/digest-sussen-0.5.3 64
 MD5 913a9112332add1b07f8e13567ef78c6 files/digest-sussen-0.10 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB8Y6IEZCkKN40op4RAmnWAJ4zjF9FoHVmj+M69bjgIJd/9ZDTGwCfZOsp
-lqN7wvNI8w5/byGqtQ3LUdY=
-=XIMe
------END PGP SIGNATURE-----
