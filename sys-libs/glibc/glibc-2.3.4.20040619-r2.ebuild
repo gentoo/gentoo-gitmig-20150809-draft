@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.3 2004/11/11 20:05:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.4 2004/11/12 23:43:37 kumba Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -380,7 +380,7 @@ do_arch_mips_patches() {
 	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-incl-sgidefs.diff
 	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-addabi.diff
 	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-syscall.h.diff
-	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-semtimedop.diff
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-semtimedop.diff
 	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-sysify.diff
 
 	if use n32 || use n64; then
