@@ -1,6 +1,19 @@
 # ChangeLog for net-libs/gnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.10 2003/04/06 04:05:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.11 2003/05/07 12:57:32 foser Exp $
+
+*gnet-2.0.2 (07 May 2003)
+
+  07 May 2003; foser <foser@gentoo.org> gnet-2.0.2.ebuild :
+  New version, use gnome2 eclass, SLOT 2
+
+*gnet-1.1.9 (07 May 2003)
+
+  07 May 2003; foser <foser@gentoo.org> gnet-1.1.9.ebuild :
+  New version, removed patch, fixed license
+
+  07 May 2003; foser <foser@gentoo.org> gnet-1.1.{5,8,9}.ebuild :
+  Set SLOT 1
 
 *gnet-1.1.8 (11 mar 2003)
 
