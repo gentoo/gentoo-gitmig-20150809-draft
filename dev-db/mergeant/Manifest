@@ -2,6 +2,7 @@ MD5 de73768f96b9ee522467979c04fb9454 mergeant-0.12.0.ebuild 1236
 MD5 f9ad2dd1d7cc5b3de8c63147011ebfe6 ChangeLog 878
 MD5 42ba8cda84c8d3b4c935a1a2e8342767 mergeant-0.11.0.ebuild 1163
 MD5 d815836e94cb15855368328bd992706b mergeant-0.12.1.ebuild 1236
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 7acea0628375a86548ecc40dd5f34c35 files/digest-mergeant-0.12.0 69
 MD5 cae37a9c8157e94e07b7826c93ceb9b8 files/digest-mergeant-0.11.0 135
 MD5 40c851ac355e64c4e94e52bbeabf5a2d files/digest-mergeant-0.12.1 69
