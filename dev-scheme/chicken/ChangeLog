@@ -1,0 +1,16 @@
+# ChangeLog for dev-lisp/chicken
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.1 2005/02/07 07:50:02 mkennedy Exp $
+
+*chicken-1.89 (07 Feb 2005)
+
+  07 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +chicken-1.22.ebuild, +chicken-1.89.ebuild:
+  Move from dev-lisp/; Updated ebuild; Resolves bug #78247 and #80599
+
+*chicken-1.22 (20 Nov 2003)
+
+  20 Nov 2003; <mkennedy@gentoo.org> chicken-1.22.ebuild:
+  Initial import. Ebuild contributed by Mirian Crzig Lennox <mirian@cosmic.com>
+  and modified by Matthew Kennedy <mkennedy@gentoo.org>
+
