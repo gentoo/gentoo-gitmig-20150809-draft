@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.41 2005/02/13 15:55:25 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.42 2005/02/22 20:24:09 griffon26 Exp $
+
+  22 Feb 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +files/valgrind-2.2.0-current-macro-clash.patch, valgrind-2.2.0-r2.ebuild:
+  Fixed compilation against 2.6.10 kernel headers closing bug #82629 
+  reported by Dennis Schridde <lindevel@gmx.net>.
 
 *valgrind-2.2.0-r2 (13 Feb 2005)
 
