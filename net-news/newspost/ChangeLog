@@ -1,6 +1,11 @@
 # ChangeLog for net-news/newspost
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/ChangeLog,v 1.3 2003/02/12 08:37:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/ChangeLog,v 1.4 2003/04/02 16:29:17 danarmak Exp $
+
+*newspost-2.1 (02 Apr 2003)
+
+  02 Apr 2003; Dan Armak <danarmak@gentoo.org> newspost-2.1.ebuild:
+  New upstream version. Closes bug #16037 - thanks to BiOCHiP for submitting.
 
 *newspost-2.0 (29 Jul 2002)
 
