@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Jays Kwak <jayskwak@gentoo.or.kr>
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
+# /space/gentoo/cvsroot/gentoo-x86/sys-apps/ami/ami-1.0.11-r1.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Korean IMS Ami"
