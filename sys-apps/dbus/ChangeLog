@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.36 2005/02/21 16:56:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.37 2005/02/27 19:22:12 weeve Exp $
+
+  27 Feb 2005; Jason Wever <weeve@gentoo.org> dbus-0.23-r3.ebuild:
+  Added ~sparc keyword.
 
   20 Feb 2005; Aron Griffis <agriffis@gentoo.org> dbus-0.23-r3.ebuild:
   stable on ia64 #80601
