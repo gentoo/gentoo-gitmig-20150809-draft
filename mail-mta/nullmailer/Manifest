@@ -1,22 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c97a6fed3d9a2f9173500744cea5a220 ChangeLog 2470
-MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
-MD5 b274ea3b885ad9f09ed233b9984765d9 nullmailer-1.00_rc7-r1.ebuild 3177
 MD5 6db6524a9dc45c93259644fab749dbf0 nullmailer-1.00_rc7-r2.ebuild 3528
 MD5 456f3b517222cb4da5136872de1246e7 nullmailer-1.00_rc7-r4.ebuild 3825
+MD5 b274ea3b885ad9f09ed233b9984765d9 nullmailer-1.00_rc7-r1.ebuild 3177
+MD5 e5b2646a694546a25edd275aca83a772 ChangeLog 2638
+MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 15ba1ee17b414a2a084652e76f513b3c nullmailer-1.00_rc7.ebuild 3226
+MD5 273fdcb5a514ae199772ad36190c01ed nullmailer-1.00_rc7-r5.ebuild 4409
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7 70
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7-r1 70
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7-r2 70
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7-r4 70
+MD5 639fa6e9d323b500b247ab367596cb29 files/digest-nullmailer-1.00_rc7-r5 143
 MD5 4a2517a7b69e06ec8f1dcc634f1f9f28 files/mailer.conf 1588
 MD5 ccc26a349646e55860dc06066004ce63 files/remotes.sample 301
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFA+e+DmdTrptrqvGERAmZWAJ9WvF3L7EkiDiHDXiAJXiYi20n3nQCeJ64d
-vNxx81gaPzQ5/o9zJNUHnaM=
-=lc+U
+iD8DBQFBmdVyPpIsIjIzwiwRApWRAKDfXB1AmtYCQ22vm2hi4QAA/vU+1gCg/Z/U
+5/kOhKeCCg0ShH2QNct8mGA=
+=rPQM
 -----END PGP SIGNATURE-----
