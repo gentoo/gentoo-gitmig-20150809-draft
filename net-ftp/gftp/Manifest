@@ -2,6 +2,7 @@ MD5 9470bf52f8a653dd4a26f1a71a604292 ChangeLog 2386
 MD5 799ae8f467b0fc4c5086c7b09fedeb8b gftp-2.0.13.ebuild 1032
 MD5 cb97912c4eeeabec9fe34baf6fc5fdfa gftp-2.0.14.ebuild 997
 MD5 80be8d608e0679dd6a92c30e3c7369f7 gftp-2.0.14_rc1.ebuild 1022
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 8e7b5678687f0a6685df59ecfc697c86 files/digest-gftp-2.0.13 63
 MD5 4a567cc97f7b5318979193135b98eafd files/digest-gftp-2.0.14 64
 MD5 35ad6821c6e09d90227714f8b087f565 files/digest-gftp-2.0.14_rc1 67
