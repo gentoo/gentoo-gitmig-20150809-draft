@@ -84,6 +84,7 @@ nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nocardbus - Disables cardbus support in pcmcia-cs
+oci8 - Adds Oracle Support
 odbc - Adds ODBC Support (Open DataBase Connectivity)
 oggvorbis - Adds support for the OggVorbis audio encoding
 opengl - Adds support for OpenGL
