@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.3.1-r1.ebuild,v 1.1 2003/04/06 16:54:09 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.3.1-r1.ebuild,v 1.2 2003/06/24 19:38:11 pauldv Exp $
 
 IUSE="ssl pam tcpd"
 
@@ -14,7 +14,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 DEPEND="sys-apps/shadow
-	>=sys-libs/db-3
 	pam? ( sys-libs/pam )
 	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )"
