@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.1 2003/09/21 01:40:41 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.2 2003/10/06 06:38:33 mkennedy Exp $
 #
-# Author Matthew Kennedy <mkennedy@gentoo.org>
+# Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
+# Copyright 2003 Jeremy Maitin-Shepard <jbms@attbi.com>
 #
 # This is not an eclass, but it does provide emacs-related
 # installation utilities.
@@ -11,6 +12,10 @@ ECLASS=elisp-common
 INHERITED="$INHERITED $ECLASS"
 
 SITELISP=/usr/share/emacs/site-lisp
+
+elisp-compile() {
+	/usr/bin/emacs --batch -f batch-byte-compile --no-site-file --no-init-file $*
+}
 
 elisp-install() {
 	local subdir=$1
@@ -54,3 +59,4 @@ EOF
 # tab-width: 4 ***
 # indent-tabs-mode: t ***
 # End: ***
+
