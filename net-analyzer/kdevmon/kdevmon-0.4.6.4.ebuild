@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/kdevmon/kdevmon-0.4.6.4.ebuild,v 1.11 2003/02/13 13:42:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/kdevmon/kdevmon-0.4.6.4.ebuild,v 1.12 2003/02/15 07:45:24 gerk Exp $
 
 inherit kde-base || die
 
@@ -15,4 +15,4 @@ newdepend ">=kde-base/kdebase-3"
 
 
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc  ppc"

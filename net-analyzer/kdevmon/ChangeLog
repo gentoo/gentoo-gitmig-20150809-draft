@@ -1,10 +1,13 @@
 # ChangeLog for net-analyzer/kdevmon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/kdevmon/ChangeLog,v 1.5 2003/02/12 07:46:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/kdevmon/ChangeLog,v 1.6 2003/02/15 07:45:24 gerk Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *kdevmon-0.4.6.4 (2 May 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> kdevmon-0.4.6.4.ebuild :
+  set ppc in keywords
 
   2 May 2002; Dan Armak <danarmakgentoo.org> Changelog :
 
