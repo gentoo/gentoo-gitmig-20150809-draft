@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.5 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.6 2002/07/16 17:17:05 g2boojum Exp $
+
+*net-tools-1.60-r5 (16 Jul 2002)
+
+  16 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  added some RH patches
 
 *net-tools-1.60-r4 (21 Jun 2002)
 
