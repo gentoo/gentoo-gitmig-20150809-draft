@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.37 2003/06/08 20:04:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.38 2003/06/08 20:05:41 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -308,7 +308,7 @@ php_src_compile() {
 		myconf="${myconf} --enable-xslt" 
 		myconf="${myconf} --with-xslt-sablot" 
 		myconf="${myconf} --with-xmlrpc"
-		myconf="${myconf} --with-wddx"
+		myconf="${myconf} --enable-wddx"
 		myconf="${myconf} --with-xml"
 	else
 		myconf="${myconf} --disable-xml"
@@ -333,7 +333,7 @@ php_src_compile() {
 	myconf="${myconf} --enable-dbase"
 	myconf="${myconf} --enable-filepro"
 	myconf="${myconf} --enable-ftp"
-	myconf="${myconf} --enable-mime-magic"
+	myconf="${myconf} --with-mime-magic"
 	myconf="${myconf} --enable-sockets"
 	myconf="${myconf} --enable-sysvsem --enable-sysvshm --enable-sysvipc"
 	myconf="${myconf} --with-iconv"
