@@ -1,10 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r4.ebuild,v 1.10 2003/02/13 16:19:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r4.ebuild,v 1.11 2003/02/14 21:37:24 vapier Exp $
 
-IUSE="ssl ipv6"
-
-S=${WORKDIR}/${P}
+inherit eutils
 
 DESCRIPTION="Collection of tools for managing UNIX services"
 SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
@@ -12,14 +10,13 @@ SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
  	ssl? ( http://www.nrg4u.com/qmail/ucspi-tcp-ssl-20020705.patch.gz )"
 HOMEPAGE="http://cr.yp.to/ucspi-tcp.html"
 
-DEPEND="virtual/glibc
-	ssl? ( >=dev-libs/openssl-0.9.6g )"
-
 SLOT="0"
 KEYWORDS="x86 sparc "
 LICENSE="as-is"
+IUSE="ssl ipv6"
 
-inherit eutils
+DEPEND="virtual/glibc
+	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 src_unpack() {
 	unpack ${A}
@@ -41,10 +38,6 @@ src_compile() {
 }
 
 src_install() {
-	for i in tcpserver tcprules tcprulescheck argv0 recordio tcpclient *\@ tcpcat mconnect mconnect-io addcr delcr fixcrio rblsmtpd
-	do
-		dobin $i
-	done
-
+	dobin tcpserver tcprules tcprulescheck argv0 recordio tcpclient *\@ tcpcat mconnect mconnect-io addcr delcr fixcrio rblsmtpd
 	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION
 }
