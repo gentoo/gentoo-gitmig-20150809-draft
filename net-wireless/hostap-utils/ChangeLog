@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostap-utils
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/ChangeLog,v 1.16 2004/12/26 21:35:51 brix Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/ChangeLog,v 1.17 2005/01/14 17:22:13 brix Exp $
+
+  14 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  hostap-utils-0.2.6.ebuild:
+  Stable on x86.
 
 *hostap-utils-0.2.6 (26 Dec 2004)
 
