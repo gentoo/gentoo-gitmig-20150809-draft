@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/detachtty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/ChangeLog,v 1.8 2005/01/01 14:58:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/ChangeLog,v 1.9 2005/03/27 11:30:14 hansmi Exp $
+
+  27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> detachtty-9.ebuild:
+  Stable on ppc.
 
   24 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> detachtty-9.ebuild:
   Marked stable on x86.
