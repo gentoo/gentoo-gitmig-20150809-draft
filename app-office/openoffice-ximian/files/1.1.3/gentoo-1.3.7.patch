@@ -1,5 +1,19 @@
 --- patches/OOO_1_1_3/apply.orig	2004-12-02 00:07:00.659646960 +0100
 +++ patches/OOO_1_1_3/apply	2004-12-02 00:07:18.119992584 +0100
+@@ -27,9 +27,10 @@
+ PLD  : PLDOnly, LinuxCommon, KDECommon, GlobalDesktopFiles, NonArkCommon
+ KDE  : LinuxCommon, KDEOnly
+ Ark : ArkOnly, LinuxCommon, GlobalDesktopFiles
+-Gentoo : LinuxCommon, GlobalDesktopFiles, NonArkCommon, GentooOnly
+-GentooGNOME : Gentoo, GnomeVFS, NovellOnly
+-GentooKDE : Gentoo, KDECommon
++GentooBase : LinuxCommon, GlobalDesktopFiles, NonArkCommon
++Gentoo: GentooBase
++GentooGNOME : GentooBase, GnomeVFS, NovellOnly
++GentooKDE : GentooBase, KDECommon
+ 
+ # somewhat odder:
+ Win32 : VCLPlug, Common, ODKFixes, VBABits, Win32Only
 @@ -1121,14 +1121,6 @@
  
  ########################################################
