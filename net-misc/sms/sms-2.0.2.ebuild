@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/sms-2.0.2.ebuild,v 1.2 2004/11/29 12:49:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/sms-2.0.2.ebuild,v 1.3 2005/01/16 04:55:54 dragonheart Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Command line program for sending SMS to Polish GSM mobile phone users"
 HOMEPAGE="http://ceti.pl/~miki/komputery/sms.html"
@@ -20,7 +22,7 @@ DEPEND="${RDEPEND}
 	sys-apps/sed"
 
 src_compile() {
-	emake CXXFLAGS="${CXXFLAGS} -I./lib" || die
+	emake CXX=$(tc-getCXX) CXXFLAGS="${CXXFLAGS} -I./lib" LDFLAGS="-lc" || die
 }
 
 src_install() {

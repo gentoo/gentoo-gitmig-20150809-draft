@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/sms
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/ChangeLog,v 1.11 2004/11/25 21:09:59 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/ChangeLog,v 1.12 2005/01/16 04:55:54 dragonheart Exp $
+
+  16 Jan 2005; Daniel Black <dragonheart@gentoo.org> -sms-2.0.0_rc1.ebuild,
+  -sms-2.0.1.ebuild, sms-2.0.2.ebuild:
+  Fixed bug #66069 - compile failure in gcc 3.4. Cleaned out other ebuilds.
+  Thanks to crs <crs@nst.pl> for the bug report
 
 *sms-2.0.2 (14 Nov 2004)
 
