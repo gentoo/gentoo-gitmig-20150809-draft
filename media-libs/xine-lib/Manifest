@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9d3ab3fe1fb6d53eca56ffd5fdae5495 ChangeLog 31462
 MD5 af08cabbae4b191018ca153392a86bea metadata.xml 304
-MD5 ecc75a8fa2b8be0fdf376ca2bc1a655f xine-lib-1.0.ebuild 8088
+MD5 424d1fa88b2c772b3d393db78232fb65 xine-lib-1.0.ebuild 8073
 MD5 4052265429970e0a67ed0d039d770515 xine-lib-1_rc5-r3.ebuild 5473
-MD5 9b1839aa704083ac8bc733e78fe15bd2 xine-lib-1_rc6.ebuild 5401
-MD5 f9634de2e799d22a319aa81a2b38bd1d xine-lib-1_rc7.ebuild 5370
+MD5 6fa6e2ec95832cf4ec8b245226b39927 xine-lib-1_rc6.ebuild 5390
+MD5 41c7db7b4a4c2dac3d6ba6476c838406 xine-lib-1_rc7.ebuild 5359
 MD5 9f2c1755efbee2e9605f6fba4db54c69 xine-lib-1_rc8-r1.ebuild 6468
-MD5 d7d43244f336b4e0826eedf8a3d3dbc1 xine-lib-1_rc8.ebuild 5423
+MD5 0048524e056c862f1702ba68e9779b1e xine-lib-1_rc8.ebuild 5401
+MD5 e287e99d1beede43359f0ecd9b52ab54 xine-lib-1_rc6-r1.ebuild 5713
+MD5 2b46f07c83e7568f78d8cb4f601a9d25 ChangeLog 666
 MD5 bcd5f2b8999f92c2f7215009f5ae1490 files/configure-64bit-define.patch 221
 MD5 1780c88522c9a26856effa70a0e27b50 files/digest-xine-lib-1.0 65
 MD5 044cbe825fc480693aec675808e4c679 files/digest-xine-lib-1_rc5-r3 67
@@ -41,15 +42,16 @@ MD5 a52bac7d568413597e0c7932b164e58c files/xine-lib-2.6.patch 594
 MD5 0cf698a9ff87a3595140d92df7b900b6 files/xine-lib-configure.patch 342
 MD5 aa54582a91933533008c1211dcbcfb35 files/xine-lib-disable-directfb.patch 4169
 MD5 3cbdef8aa211184b96474addb4f7c5d6 files/xine-lib-gcc34.patch 423
+MD5 ddf48f1eb00a6985b6fba5fff9386ad0 files/xine-lib-hardened-mmx.patch 2558
 MD5 5d2c3c00bf3ae9a89dfcaa8b5c5b17a2 files/xine-lib-x11.patch 703
 MD5 dcb0c79c0bb106397aad42f6d936627d files/xineconfig.patch-0.9.13 601
-MD5 ddf48f1eb00a6985b6fba5fff9386ad0 files/xine-lib-hardened-mmx.patch 2558
-MD5 d8f3138ae2260f7c98bf46ae7159be11 files/xine-lib-configure.ac.patch 926
 MD5 3704271d4339b919569b4ea416a4c34e files/xine-lib-1_rc8-configure.ac.patch 2825
+MD5 d8f3138ae2260f7c98bf46ae7159be11 files/xine-lib-configure.ac.patch 926
+MD5 082b3ed1c96543704d604199047b1dee files/digest-xine-lib-1_rc6-r1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB2tQxFdQwWVoAgN4RAtdsAKDmT3Pbc2N1LfLVOs9erbMgpbQquACgoTXd
-ZhECFbhpXeABmTDoSA8FXHM=
-=AQUU
+iD8DBQFB29EVArHZZzCEUG0RArxeAJ4700MRmVTIP0zA8LSpUzjlm8XXTgCeKcnf
+Xqf9Te/B+wRrlMjRTF5biV8=
+=5MW4
 -----END PGP SIGNATURE-----

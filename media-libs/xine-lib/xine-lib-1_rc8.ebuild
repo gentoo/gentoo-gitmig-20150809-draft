@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8.ebuild,v 1.6 2005/01/01 05:54:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8.ebuild,v 1.7 2005/01/05 11:35:37 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -67,8 +67,8 @@ src_unpack() {
 	# Fix building on amd64, #49569
 	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
 
-	use pic && epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
-	use pic && epatch ${FILESDIR}/${PN}-1_rc7-mmx.patch
+	epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
+	epatch ${FILESDIR}/${PN}-1_rc7-mmx.patch
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
 	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure

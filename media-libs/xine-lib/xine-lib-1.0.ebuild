@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.13 2005/01/03 19:46:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.14 2005/01/05 11:35:37 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="arts esd avi nls dvd X directfb oggvorbis alsa gnome sdl speex
-	theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0 samba dxr3 vidix png mng pic"
+	theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0 samba dxr3 vidix png mng"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	!amd64? ( X? ( virtual/x11 ) )
@@ -79,7 +79,7 @@ src_unpack() {
 	# Fix building on amd64, #49569
 	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
 
-	use pic && epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
+	epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
 	use x86 && epatch ${FILESDIR}/${PN}-hardened-mmx.patch
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
