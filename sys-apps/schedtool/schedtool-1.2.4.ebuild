@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedtool/schedtool-1.2.3.ebuild,v 1.2 2005/01/02 05:30:15 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedtool/schedtool-1.2.4.ebuild,v 1.1 2005/01/02 05:30:15 marineam Exp $
 
 DESCRIPTION="A tool to query or alter a process' scheduling policy."
 HOMEPAGE="http://freequaos.host.sk/schedtool"
