@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.10 2003/06/18 02:19:45 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.11 2003/07/11 03:34:34 woodchip Exp $
+
+*ypserv-2.8 (10 Jul 2003)
+
+  10 Jul 2003; Donny Davies <woodchip@gentoo.org> ypserv-2.8.ebuild,
+  files/rpc.yppasswdd, files/ypserv.confd, files/ypserv.rc:
+  Updates from N. Owen Gunden" <ogunden@phauna.org>.
 
   17 Jun 2003; Donny Davies <woodchip@gentoo.org> ypserv-1.3.12.ebuild,
   ypserv-2.5-r1.ebuild, ypserv-2.5.ebuild, files/ypserv-confd,
