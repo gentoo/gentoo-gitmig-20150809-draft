@@ -1,11 +1,11 @@
 # ChangeLog for sys-apps/less
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.13 2003/02/24 22:34:59 dragon Exp $
-
-  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
-  Added hppa to keywords.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.14 2003/02/25 14:30:30 gmsoft Exp $
 
 *less-378-r2 (08 Feb 2003)
+
+  25 Feb 2003; Guy Martin <gmsoft@gentoo.org> less-378-r2.ebuild :
+  Added hppa to keywords.
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> less-378-r2.ebuild :
   Mark as stable for mips.
@@ -16,7 +16,10 @@
 
 *less-378-r1 (26 Dec 2002)
 
-  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> less-378-r1.ebuild :
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> less-378-r1.ebuild :
+  Added hppa to keywords.
+
+ 24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> less-378-r1.ebuild :
   Mark as stable for mips.
 
   26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> less-378-r1.ebuild :
