@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/cwirc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/ChangeLog,v 1.14 2004/08/13 13:09:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/ChangeLog,v 1.15 2004/08/24 02:29:34 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> -cwirc-1.8.3.ebuild,
+  -cwirc-1.8.5.ebuild, cwirc-1.8.6.ebuild:
+  Marked stable on x86 and removed old ebuilds.
 
   13 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml,
   cwirc-1.8.5.ebuild:
