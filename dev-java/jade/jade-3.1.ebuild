@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/jade-3.1.ebuild,v 1.2 2004/03/23 03:07:57 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/jade-3.1.ebuild,v 1.3 2004/04/11 21:56:41 zx Exp $
 
 inherit java-pkg
 
-DESCRIPTION="JADE is  FIPA-compliant Java Agent Development Environment"
+DESCRIPTION="JADE is FIPA-compliant Java Agent Development Environment"
 SRC_URI="http://www.cs.bath.ac.uk/~occ/jade-dl/JADE-src-${PV}.zip"
 HOMEPAGE="http://jade.cselt.it/"
 IUSE="doc jikes"
