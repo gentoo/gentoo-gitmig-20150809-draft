@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r8.ebuild,v 1.2 2002/03/21 22:59:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r8.ebuild,v 1.3 2002/04/13 16:43:46 danarmak Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -78,8 +78,8 @@ src_unpack () {
 		> ${S}/programs/Xserver/Imakefile
 
 	# Apply Xft quality patch from  http://www.cs.mcgill.ca/~dchest/xfthack/
-	cd ${S}/lib/Xft
-	cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 || die
+	#cd ${S}/lib/Xft
+	#cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 || die
 }
 
 src_compile() {
