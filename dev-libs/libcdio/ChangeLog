@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libcdio
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.1 2003/08/02 16:05:20 coredumb Exp $
+
+
+*libcdio-0.62 (02 Aug 2003)
+
+  02 Aug 2003; Tal Peer <coredumb@gentoo.org> libcdio-0.62.ebuild :
+  Initial import, closes bug #20261.
+
