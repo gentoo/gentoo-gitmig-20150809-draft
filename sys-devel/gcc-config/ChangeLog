@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.10 2002/12/23 01:49:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.11 2002/12/24 18:26:45 azarah Exp $
+
+*gcc-config-1.2.6 (23 Dec 2002)
+
+  24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.2.6.ebuild :
+
+  In some cases we have an old /usr/bin/cpp binary that was not unmerged from
+  non multi arch/version scheme gcc's.  If so, backup it, and replace with a
+  wrapper script.
 
 *gcc-config-1.2.5 (23 Dec 2002)
 
