@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.20 2004/02/26 13:59:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.21 2004/04/06 19:57:44 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 
@@ -43,6 +43,10 @@ src_unpack() {
 	if [ "${ARCH}" = "amd64" ]
 	then
 		cd ${S}; epatch ${FILESDIR}/${PN}-${PV}-amd64.patch
+	elif [ "${ARCH}" = "hppa" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/${PN}-${PV}-hppa.patch
 	fi
 
 	if [ "`use mips`" ]; then

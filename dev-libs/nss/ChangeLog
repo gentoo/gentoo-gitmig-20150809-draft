@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.18 2004/02/26 13:59:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.19 2004/04/06 19:57:44 gmsoft Exp $
+
+  06 Apr 2004; Guy Martin <gmsoft@gentoo.org> nss-3.8.ebuild:
+  Added a build-fix patch for hppa.
 
   26 Feb 2004; Gustavo Zacarias <gustavoz@gentoo.org> nss-3.8.ebuild:
   stable on hppa
