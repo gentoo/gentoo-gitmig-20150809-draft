@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nicotine
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/ChangeLog,v 1.12 2004/02/03 18:13:50 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/ChangeLog,v 1.13 2004/02/10 15:13:53 tseng Exp $
+
+  10 Feb 2004; Brandon Hale <tseng@gentoo.org> nicotine-1.0.7.ebuild:
+  Keyword 1.0.7 stable on x86
 
   03 Feb 2004; Sven Blumenstein <bazik@gentoo.org> nicotine-1.0.7.ebuild:
   Nicotine is bad for your health! I marked it ~sparc anyway...
