@@ -4,5 +4,5 @@ MD5 d646f32e97b41529d4ab5066c69bc856 files/longlong.patch 473
 MD5 8458ecf3c3c6b27f949d1b1c1e6a9cc7 files/randraw.c.41.diff 585
 MD5 4b44ae3400e39e16c1e508679cac6f28 ChangeLog 4024
 MD5 0d3e72846db7201d71054b34465b044a gmp-4.1-r1.ebuild 1038
-MD5 379add68ceab8e3129426cf6752ae008 gmp-4.1.2.ebuild 1446
+MD5 403809ebb2b49614ed1bcf6fc0311771 gmp-4.1.2.ebuild 1422
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
