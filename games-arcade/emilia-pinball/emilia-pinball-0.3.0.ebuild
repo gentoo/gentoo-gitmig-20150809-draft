@@ -15,11 +15,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 alpha"
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	virtual/x11
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
+
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 S=${WORKDIR}/${MY_P}
 
