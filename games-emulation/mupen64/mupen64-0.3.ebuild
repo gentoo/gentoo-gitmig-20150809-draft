@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.3.ebuild,v 1.2 2003/09/27 08:06:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.3.ebuild,v 1.3 2003/11/25 15:58:49 vapier Exp $
 
 inherit games gcc eutils
 
@@ -29,27 +29,33 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	# the riceplugin seems to want gcc 3.3 to compile.
+
+	# the riceplugin seems to want gcc 3.3 to compile
 	if [ "`gcc-major-version`" -lt 3 -o "`gcc-version`" = "3.2" ] ; then
 		rm -rf riceplugin
 	else
 		epatch ${FILESDIR}/${PV}-gcc3.patch
 		sed -i \
-			-e "/^CFLAGS/s:-O3.*$:${CFLAGS}:" riceplugin/Makefile || \
-			die "sed riceplugin/Makefile failed"
+			-e "/^CFLAGS/s:-O3.*$:${CFLAGS}:" \
+			riceplugin/Makefile \
+			|| die "sed riceplugin/Makefile failed"
 	fi
+	# the riceplugin requires sse support
+	echo "#include <xmmintrin.h>" > ${T}/test.c
+	$(gcc-getCC) ${CFLAGS} -o ${T}/test.s -S ${T}/test.c >&/dev/null || rm -rf riceplugin
+
 	sed -i \
-		-e "/^CC/s:-O3.*-Wall:${CFLAGS}:" emu64/Makefile \
-			mupen64_input/Makefile || \
-				die "sed mupen64_input/Makefile failed"
+		-e "/^CC/s:-O3.*-Wall:${CFLAGS}:" \
+		emu64/Makefile mupen64_input/Makefile \
+		|| die "sed mupen64_input/Makefile failed"
 	sed -i \
 		-e "/^CFLAGS/s:-O3.*-march=athlon:${CFLAGS}:" \
-		mupen64_sound/Makefile || die "sed mupen64_sound/Makefile failed"
+		mupen64_sound/Makefile \
+		|| die "sed mupen64_sound/Makefile failed"
 	sed -i \
 		-e "/^CFLAGS/s:-O3.*$:${CFLAGS}:" \
-		rsp_hle/Makefile \
-		tr64_oglv078_src/Makefile || \
-			sed "other sed Makefiles failed"
+		rsp_hle/Makefile tr64_oglv078_src/Makefile \
+		|| die "other sed Makefiles failed"
 }
 
 src_compile() {
