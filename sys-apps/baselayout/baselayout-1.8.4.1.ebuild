@@ -1,16 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.2.ebuild,v 1.6 2002/10/20 08:34:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.4.1.ebuild,v 1.1 2002/10/28 15:43:33 azarah Exp $
 
 IUSE="bootstrap build"
 
-SV="1.3.9"
+SV="1.4.1.1"
 SVREV=""
-#sysvinit version
+# SysvInit version
 SVIV="2.84"
 
-S=${WORKDIR}/rc-scripts-${SV}
-S2=${WORKDIR}/sysvinit-${SVIV}/src
+S="${WORKDIR}/rc-scripts-${SV}"
+S2="${WORKDIR}/sysvinit-${SVIV}/src"
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
 SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.gz
 	ftp://sunsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="sys-kernel/linux-headers
 	>=sys-apps/portage-2.0.23"
@@ -35,13 +35,14 @@ RDEPEND="${DEPEND}
 # or "build" are in USE.
 	   
 
-#This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
+# This ebuild needs to be merged "live".  You can't simply make a package
+# of it and merge it later.
 
 pkg_setup() {
 
 	if [ "${ROOT}" = "/" ]
 	then
-		#make sure we do not kill X because of the earlier bad /etc/inittab we used.
+		# Make sure we do not kill X because of the earlier bad /etc/inittab we used.
 		if [ -L ${svcdir}/started/xdm ] && \
 		   [ -n "`egrep 'x:3:respawn:/etc/X11/startDM.sh' /etc/inittab`" ] && \
 		   [ -n "`ps -A | egrep "X"`" ]
@@ -64,14 +65,14 @@ src_unpack() {
 	echo ">>> Unpacking rc-scripts-${SV}${SVREV}.tar.bz2"
 	tar -jxf ${FILESDIR}/rc-scripts-${SV}${SVREV}.tar.bz2 || die
 
-	#fix CFLAGS for sysvinit stuff
+	# Fix CFLAGS for sysvinit stuff
 	cd ${S2}
 	cp Makefile Makefile.orig
 	sed -e "s:-O2:${CFLAGS}:" Makefile.orig >Makefile || die
 	if [ -n "`use build`" ]
 	then
-		#do not build sulogin, as it needs libcrypt which is not in the
-		#build image.
+		# Do not build sulogin, as it needs libcrypt which is not in the
+		# build image.
 		cp Makefile Makefile.orig
 		sed -e 's:PROGS\t= init halt shutdown killall5 runlevel sulogin:PROGS\t= init halt shutdown killall5 runlevel:g' \
 			Makefile.orig > Makefile || die
@@ -104,7 +105,7 @@ src_compile() {
 
 	if [ -z "`use build`" ]
 	then
-		# build sysvinit stuff
+		# Build sysvinit stuff
 		cd ${S2}
 		emake LDFLAGS="" || die "problem compiling sysvinit"
 	fi
@@ -112,15 +113,15 @@ src_compile() {
 
 defaltmerge() {
 
-	#define the "altmerge" variable.
+	# Define the "altmerge" variable.
 	altmerge=0
-	#special ${T}/ROOT hack because ROOT gets automatically unset during src_install()
-	#(because it conflicts with some makefiles)
+	# Special ${T}/ROOT hack because ROOT gets automatically unset during src_install()
+	# (because it conflicts with some makefiles)
 	local ROOT=""
 	ROOT="`cat ${T}/ROOT`"
 	if [ -z "`use bootstrap`" -a -z "`use build`" -a -e ${ROOT}/dev/.devfsd ]
 	then
-		# we're installing to a system that has devfs enabled; don't create device
+		# We're installing to a system that has devfs enabled; don't create device
 		# nodes.
 		altmerge=1
 	fi
@@ -135,14 +136,17 @@ src_install() {
 	exeinto /sbin
 	doexe ${T}/runscript
 	doexe ${T}/start-stop-daemon
+	# Need this in /sbin, as it could be run before
+	# /usr is mounted.
+	doexe ${S}/sbin/update-modules
 
 	keepdir /usr
 	keepdir /usr/bin
 	keepdir /usr/lib
 	keepdir /usr/sbin
-	#dont install run-crons anymore, as sys-apps/cronbase installs it now
-	#dosbin ${S}/sbin/MAKEDEV ${S}/sbin/run-crons ${S}/sbin/update-modules
-	dosbin ${S}/sbin/MAKEDEV ${S}/sbin/update-modules
+	# Dont install run-crons anymore, as sys-apps/cronbase installs it now
+	#dosbin ${S}/sbin/MAKEDEV ${S}/sbin/run-crons
+	dosbin ${S}/sbin/MAKEDEV
 	keepdir /var /var/run /var/lock/subsys
 	dosym ../var/tmp /usr/tmp
 	
@@ -156,11 +160,11 @@ src_install() {
 	
 	#dosym ../src/linux/include/linux /usr/include/linux
 	#dosym ../src/linux/include/asm-i386 /usr/include/asm
-	#Important note: Gentoo Linux 1.0_rc6 no longer uses symlinks to /usr/src for includes.
-	#We now rely on the special sys-kernel/linux-headers package, which takes a snapshot of
-	#the currently-installed includes in /usr/src and copies them to /usr/include/linux and
-	#/usr/include/asm.  This is the recommended approach so that kernel includes can remain
-	#constant.  The kernel includes should really only be upgraded when you upgrade glibc.
+	# Important note: Gentoo Linux 1.0_rc6 no longer uses symlinks to /usr/src for includes.
+	# We now rely on the special sys-kernel/linux-headers package, which takes a snapshot of
+	# the currently-installed includes in /usr/src and copies them to /usr/include/linux and
+	# /usr/include/asm.  This is the recommended approach so that kernel includes can remain
+	# constant.  The kernel includes should really only be upgraded when you upgrade glibc.
 	keepdir /usr/include/linux /usr/include/asm
 	keepdir /usr/share/man /usr/share/info /usr/share/doc /usr/share/misc
 
@@ -168,17 +172,17 @@ src_install() {
 	do
 		keepdir /usr/local/${foo}
 	done
-	#local FHS compat symlinks
+	# Local FHS compat symlinks
 	dosym share/man /usr/local/man	
 	dosym share/doc	/usr/local/doc	
 
-	#FHS compatibility symlinks stuff
+	# FHS compatibility symlinks stuff
 	dosym share/man /usr/man
 	dosym share/doc /usr/doc
 	dosym share/info /usr/info
 	keepdir /usr/X11R6/share
 	dosym ../../share/info	/usr/X11R6/share/info
-	#end FHS compatibility symlinks stuff
+	# End FHS compatibility symlinks stuff
 		
 	doman ${FILESDIR}/MAKEDEV.8 ${S}/man/*
 	dodoc ${FILESDIR}/copyright
@@ -186,21 +190,21 @@ src_install() {
 	keepdir /usr/X11R6/lib /usr/X11R6/man
 	keepdir /var/log/news
 
-	#supervise stuff depreciated
+	# Supervise stuff depreciated
 	#dodir /var/lib/supervise
 	#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/control
 	#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/services
-	#end supervise stuff
+	# End supervise stuff
 	
 	keepdir /opt
 
-	#the .keep file messes up Portage when looking in /var/db/pkg
+	# The .keep file messes up Portage when looking in /var/db/pkg
 	dodir /var/db/pkg 
 	keepdir /var/spool /var/tmp /var/lib/misc
 	chmod 1777 ${D}/var/tmp
 	keepdir /root
 	
-	#/proc is very likely mounted right now so a keepdir will fail on merge
+	# /proc is very likely mounted right now so a keepdir will fail on merge
 	dodir /proc	
 	
 	chmod go-rx ${D}/root
@@ -211,7 +215,7 @@ src_install() {
 	chmod 775 ${D}/var/lock
 	insopts -m0644
 
-	# bug #5359 (FHS complience)
+	# Bug #5359 (FHS complience)
 	keepdir /etc/opt
 
 	insinto /etc
@@ -222,7 +226,7 @@ src_install() {
 	done
 	for foo in ${S}/etc/*
 	do
-		#install files, not dirs
+		# Install files, not dirs
 		[ -f ${foo} ] && doins ${foo}
 	done
 	chmod go-rwx ${D}/etc/shadow
@@ -232,12 +236,12 @@ src_install() {
 	keepdir /lib/dev-state
 	if [ "${altmerge}" -eq "1" ]
 	then
-		#rootfs and devfs
+		# rootfs and devfs
 		dosym /usr/sbin/MAKEDEV /lib/dev-state/MAKEDEV
-		#this is not needed anymore...
+		# This is not needed anymore...
 		#keepdir /lib/dev-state/pts /lib/dev-state/shm
 	else
-		#normal
+		# Normal
 		keepdir /dev
 		keepdir /dev/pts /dev/shm
 		dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
@@ -249,7 +253,7 @@ src_install() {
 
 	if [ -z "`use build`" ]
 	then
-		#install sysvinit stuff
+		# Install sysvinit stuff
 		cd ${S2}
 		into /
 		dosbin init halt killall5 runlevel shutdown sulogin
@@ -258,17 +262,19 @@ src_install() {
 		dosym killall5 /sbin/pidof
 		dosym halt /sbin/reboot
 
-		#sysvinit docs
+		# SysvInit docs
 		cd ${S2}/../
 		doman man/*.[1-9]
 		docinto sysvinit-${SVIV}
 		dodoc COPYRIGHT README doc/*
 	fi
 
-	#env-update stuff
+	# env-update stuff
 	keepdir /etc/env.d
 	insinto /etc/env.d
 	doins ${S}/etc/env.d/00basic
+
+	keepdir /etc/devfs.d
 	
 	keepdir /etc/modules.d
 	insinto /etc/modules.d
@@ -280,11 +286,11 @@ src_install() {
 	do
 		[ -f ${foo} ] && doins ${foo}
 	done
-	#/etc/conf.d/net.ppp* should only be readible by root
+	# /etc/conf.d/net.ppp* should only be readible by root
 	chmod 0600 ${D}/etc/conf.d/net.ppp*
 
-	#this seems the best place for templates .. any ideas ?
-	#NB: if we move this, then $TEMPLATEDIR in net.ppp0 need to be updated as well
+	# This seems the best place for templates .. any ideas ?
+	# NB: if we move this, then $TEMPLATEDIR in net.ppp0 need to be updated as well
 	keepdir /etc/ppp
 	insinto /etc/ppp
 	doins ${S}/etc/ppp/chat-default
@@ -295,18 +301,18 @@ src_install() {
 	do
 		[ -f ${foo} ] && doexe ${foo}
 	done
-	#/etc/init.d/net.ppp* should only be readible by root
-#	chmod 0600 ${D}/etc/init.d/net.ppp*
+	# /etc/init.d/net.ppp* should only be readible by root
+	#chmod 0600 ${D}/etc/init.d/net.ppp*
 
-	#these moved from /etc/init.d/ to /sbin to help newb systems
-	#from breaking
+	# These moved from /etc/init.d/ to /sbin to help newb systems
+	# from breaking
 	exeinto /sbin
 	doexe ${S}/sbin/depscan.sh
 	doexe ${S}/sbin/runscript.sh
 	doexe ${S}/sbin/functions.sh
 	doexe ${S}/sbin/rc-envupdate.sh
 	doexe ${S}/sbin/rc-help.sh
-	#compat symlinks (some stuff have hardcoded paths)
+	# Compat symlinks (some stuff have hardcoded paths)
 	dosym /sbin/depscan.sh /etc/init.d/depscan.sh
 	dosym /sbin/runscript.sh /etc/init.d/runscript.sh
 	dosym /sbin/functions.sh /etc/init.d/functions.sh
@@ -320,10 +326,10 @@ src_install() {
 
 	keepdir ${svcdir} >/dev/null 2>&1
 
-	#skip this if we are merging to ROOT
+	# Skip this if we are merging to ROOT
 	[ "${ROOT}" = "/" ] && return 0
 	
-	#set up default runlevel symlinks
+	# Set up default runlevel symlinks
 	local bar=""
 	for foo in default boot nonetwork single
 	do
@@ -338,7 +344,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	#make sure symlinks of these get installed.
+	# Make sure symlinks of these get installed.
 	if [ -e ${ROOT}/etc/init.d/depscan.sh ] && \
 	   [ ! -L ${ROOT}/etc/init.d/depscan.sh ]
 	then
@@ -362,15 +368,15 @@ pkg_preinst() {
 
 pkg_postinst() {
 
-	#doing device node creation in pkg_postinst() now so they aren't recorded in CONTENTS.
-	#latest CVS-only version of Portage doesn't record device nodes in CONTENTS at all.
+	# Doing device node creation in pkg_postinst() now so they aren't recorded in CONTENTS.
+	# latest CVS-only version of Portage doesn't record device nodes in CONTENTS at all.
 	defaltmerge
-	# we dont want to create devices if this is not a bootstrap and devfs
+	# We dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
 	if [ "${altmerge}" -eq "0" ]
 	then
 		cd ${ROOT}/dev
-		#These devices are also needed by many people and should be included
+		# These devices are also needed by many people and should be included
 		einfo "Making device nodes (this could take a minute or so...)"
 		
 		case ${ARCH} in
@@ -401,14 +407,14 @@ pkg_postinst() {
 		${ROOT}/usr/sbin/MAKEDEV hdg
 		${ROOT}/usr/sbin/MAKEDEV hdh
 	fi
-	#we create the /boot directory here so that /boot doesn't get deleted when a previous
-	#baselayout is unmerged with /boot unmounted.
+	# We create the /boot directory here so that /boot doesn't get deleted when a previous
+	# baselayout is unmerged with /boot unmounted.
 	install -d ${ROOT}/boot
 	if [ ! -L ${ROOT}/boot/boot ]
 	then
 		ln -snf . ${ROOT}/boot/boot
 	fi
-	#we create this here so we don't overwrite an existing /etc/hosts during bootstrap
+	# We create this here so we don't overwrite an existing /etc/hosts during bootstrap
 	if [ ! -e ${ROOT}/etc/hosts ]
 	then
 		cat << EOF >> ${ROOT}/etc/hosts
@@ -425,14 +431,20 @@ EOF
 			touch ${ROOT}/etc/mtab
 		fi
 	fi
-	#we should only install empty files if these files don't already exist.
+	# We should only install empty files if these files don't already exist.
 	local x=""
 	for x in log/lastlog run/utmp log/wtmp
 	do
 		[ -e ${ROOT}/var/${x} ] || touch ${ROOT}/var/${x}
 	done
+	for x in run/utmp log/wtmp
+	do
+		chgrp utmp ${ROOT}/var/${x}
+		chmod 0664 ${ROOT}/var/${x}
+	done
+					
 
-	#handle the ${svcdir} that changed in location
+	# Handle the ${svcdir} that changed in location
 	if [ ! -d ${ROOT}/${svcdir}/started/ ] && \
 	   [ -z "`use bootstrap`" -a -z "`use build`" ]
 	then
@@ -444,23 +456,27 @@ EOF
 		fi
 	fi
 
-	#touching /etc/passwd and /etc/shadow after install can be fatal, as many
-	#new users do not update them properly.  thus remove all ._cfg files if
-	#we are not busy with a bootstrap.
+	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
+	# new users do not update them properly.  thus remove all ._cfg files if
+	# we are not busy with a bootstrap.
 	if [ -z "`use build`" -a -z "`use bootstrap`" ]
 	then
 		ewarn "Removing invalid backup copies of critical config files..."
 		rm -f ${ROOT}/etc/._cfg????_{passwd,shadow}
 	fi
 
-	#reload init to fix unmounting problems of / on next reboot
+	# Reload init to fix unmounting problems of / on next reboot
 	# this is really needed, as without the new version of init cause init
 	# not to quit properly on reboot, and causes a fsck of / on next reboot.
 	if [ "${ROOT}" = "/" -a -z "`use build`" -a -z "`use bootstrap`" ]
 	then
-		#do not return an error if this fails
+		# Do not return an error if this fails
 		/sbin/init U &>/dev/null || :
 	fi
+
+	# Simple Release version for testing of features that *should* be
+	# present in the rc-scripts, etc.
+	echo "Gentoo Base System version ${SV}" > ${ROOT}/etc/gentoo-release
 }
 
 pkg_postrm() {
