@@ -1,0 +1,10 @@
+--- xmms/skinwin.c	2001-06-16 16:05:47.000000000 -0700
++++ xmms/skinwin.c.new	2003-07-18 00:34:31.000000000 -0700
+@@ -205,6 +205,7 @@
+ 	str = g_strconcat(DATA_DIR, "/Skins", NULL);
+ 	scan_skindir(str);
+ 	g_free(str);
++	scan_skindir("/usr/local/share/xmms/Skins");
+ 	skinlist = g_list_sort(skinlist, skinlist_compare_func);
+ 	skinsdir = getenv("SKINSDIR");
+ 	if (skinsdir)
