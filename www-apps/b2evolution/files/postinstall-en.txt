@@ -1,0 +1,7 @@
+Please read the docs before installing or upgrading.
+
+For initial installations, you need to go to the "install" page, which can be found at (for example:)
+http://localhost/b2evolution/install/
+
+Note that b2evolutions suggested upgrade procedure involves saving your customisations, wiping the directory, and 
+installing the newer version.

@@ -1,0 +1,10 @@
+# ChangeLog for www-apps/b2evolution
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.1 2005/02/05 21:44:47 dsd Exp $
+
+*b2evolution-0.9.0.11 (05 Feb 2005)
+
+  05 Feb 2005; Daniel Drake <dsd@gentoo.org> +metadata.xml,
+  +files/postinstall-en.txt, +b2evolution-0.9.0.11.ebuild:
+  Initial commit. Includes security fix from http://secunia.com/advisories/13718/
+
