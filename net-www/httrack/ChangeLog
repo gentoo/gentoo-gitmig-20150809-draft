@@ -1,6 +1,12 @@
 # ChangeLog for net-www/httrack
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/httrack/ChangeLog,v 1.4 2003/02/15 20:08:48 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/httrack/ChangeLog,v 1.5 2003/03/18 16:48:38 sethbc Exp $
+
+*httrack-3.23 (18 Mar 2003)
+
+  18 Mar 2003; Seth Chandler <sethbc@gentoo.org>; httrack-3.22.ebuild,
+  httrack-3.22.ebuild, httrack-3.23.ebuild:
+  bumpage+fixes
 
 *httrack-3.22-3 (09 Feb 2003)
 
