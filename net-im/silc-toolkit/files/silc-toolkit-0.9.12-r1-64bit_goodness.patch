@@ -1,0 +1,108 @@
+diff -ur silc-toolkit-0.9.12/configure silc-toolkit-0.9.12-new/configure
+--- silc-toolkit-0.9.12/configure	2004-02-29 10:09:59.000000000 -0500
++++ silc-toolkit-0.9.12-new/configure	2004-06-01 02:41:13.767084624 -0400
+@@ -28626,7 +28626,7 @@
+ fi
+ 
+ if test x$has_threads = xtrue; then
+-  CFLAGS="$CFLAGS -D_REENTRANT"
++  CFLAGS="$CFLAGS -D_REENTRANT -fPIC"
+ 
+   # XXX possibly incomplete
+   case "${target}" in
+diff -ur silc-toolkit-0.9.12/configure.in silc-toolkit-0.9.12-new/configure.in
+--- silc-toolkit-0.9.12/configure.in	2004-02-29 10:09:51.000000000 -0500
++++ silc-toolkit-0.9.12-new/configure.in	2004-06-01 02:41:00.907039648 -0400
+@@ -971,7 +971,7 @@
+ 
+ AM_CONDITIONAL(SILC_THREADS, test x$has_threads = xtrue)
+ if test x$has_threads = xtrue; then
+-  CFLAGS="$CFLAGS -D_REENTRANT"
++  CFLAGS="$CFLAGS -D_REENTRANT -fPIC"
+ 
+   # XXX possibly incomplete
+   case "${target}" in
+diff -ur silc-toolkit-0.9.12/lib/silccore/tests/Makefile silc-toolkit-0.9.12-new/lib/silccore/tests/Makefile
+--- silc-toolkit-0.9.12/lib/silccore/tests/Makefile	2004-02-29 10:10:41.000000000 -0500
++++ silc-toolkit-0.9.12-new/lib/silccore/tests/Makefile	2004-06-01 02:40:28.864910792 -0400
+@@ -139,7 +139,7 @@
+ AWK = gawk
+ CC = gcc
+ CCDEPMODE = depmode=gcc3
+-CFLAGS =  -g -O2 -Wall -finline-functions -D_REENTRANT
++CFLAGS =  -g -O2 -Wall -finline-functions -D_REENTRANT -fPIC
+ CPP = gcc -E
+ CPPFLAGS = 
+ CXX = g++
+diff -ur silc-toolkit-0.9.12/lib/silccrypt/tests/Makefile silc-toolkit-0.9.12-new/lib/silccrypt/tests/Makefile
+--- silc-toolkit-0.9.12/lib/silccrypt/tests/Makefile	2004-02-29 10:10:41.000000000 -0500
++++ silc-toolkit-0.9.12-new/lib/silccrypt/tests/Makefile	2004-06-01 02:40:35.138956992 -0400
+@@ -171,7 +171,7 @@
+ AWK = gawk
+ CC = gcc
+ CCDEPMODE = depmode=gcc3
+-CFLAGS =  -g -O2 -Wall -finline-functions -D_REENTRANT
++CFLAGS =  -g -O2 -Wall -finline-functions -D_REENTRANT -fPIC
+ CPP = gcc -E
+ CPPFLAGS = 
+ CXX = g++
+diff -ur silc-toolkit-0.9.12/lib/silcmath/mpi/configure silc-toolkit-0.9.12-new/lib/silcmath/mpi/configure
+--- silc-toolkit-0.9.12/lib/silcmath/mpi/configure	2004-02-24 09:39:41.000000000 -0500
++++ silc-toolkit-0.9.12-new/lib/silcmath/mpi/configure	2004-06-01 02:40:17.731603312 -0400
+@@ -2778,7 +2778,7 @@
+   echo "Using assembler optimization if possible."
+ fi
+ 
+-CFLAGS="$CFLAGS -D_REENTRANT"
++CFLAGS="$CFLAGS -D_REENTRANT -fPIC"
+ 
+ # Put here any platform specific stuff
+ #
+diff -ur silc-toolkit-0.9.12/lib/silcmath/mpi/configure.in silc-toolkit-0.9.12-new/lib/silcmath/mpi/configure.in
+--- silc-toolkit-0.9.12/lib/silcmath/mpi/configure.in	2004-02-24 09:39:12.000000000 -0500
++++ silc-toolkit-0.9.12-new/lib/silcmath/mpi/configure.in	2004-06-01 02:40:08.013080752 -0400
+@@ -78,7 +78,7 @@
+   echo "Using assembler optimization if possible."
+ fi
+ 
+-CFLAGS="$CFLAGS -D_REENTRANT"
++CFLAGS="$CFLAGS -D_REENTRANT -fPIC"
+ 
+ # Put here any platform specific stuff
+ #
+diff -ur silc-toolkit-0.9.12/lib/silcsftp/tests/Makefile silc-toolkit-0.9.12-new/lib/silcsftp/tests/Makefile
+--- silc-toolkit-0.9.12/lib/silcsftp/tests/Makefile	2004-02-29 10:10:42.000000000 -0500
++++ silc-toolkit-0.9.12-new/lib/silcsftp/tests/Makefile	2004-06-01 02:40:48.443934328 -0400
+@@ -144,7 +144,7 @@
+ AWK = gawk
+ CC = gcc
+ CCDEPMODE = depmode=gcc3
+-CFLAGS =  -g -O2 -Wall -finline-functions -D_REENTRANT
++CFLAGS =  -g -O2 -Wall -finline-functions -D_REENTRANT -fPIC
+ CPP = gcc -E
+ CPPFLAGS = 
+ CXX = g++
+diff -ur silc-toolkit-0.9.12/lib/silcutil/tests/Makefile silc-toolkit-0.9.12-new/lib/silcutil/tests/Makefile
+--- silc-toolkit-0.9.12/lib/silcutil/tests/Makefile	2004-02-29 10:10:42.000000000 -0500
++++ silc-toolkit-0.9.12-new/lib/silcutil/tests/Makefile	2004-06-01 02:40:39.118352032 -0400
+@@ -139,7 +139,7 @@
+ AWK = gawk
+ CC = gcc
+ CCDEPMODE = depmode=gcc3
+-CFLAGS =  -g -O2 -Wall -finline-functions -D_REENTRANT
++CFLAGS =  -g -O2 -Wall -finline-functions -D_REENTRANT -fPIC
+ CPP = gcc -E
+ CPPFLAGS = 
+ CXX = g++
+diff -ur silc-toolkit-0.9.12/tutorial/Makefile.defines_int silc-toolkit-0.9.12-new/tutorial/Makefile.defines_int
+--- silc-toolkit-0.9.12/tutorial/Makefile.defines_int	2004-02-29 10:10:43.000000000 -0500
++++ silc-toolkit-0.9.12-new/tutorial/Makefile.defines_int	2004-06-01 02:40:54.267049080 -0400
+@@ -18,7 +18,7 @@
+ silc_install_prefix=/usr/local/silc
+ SILC_COMMON_LIBS=  -ldl -lpthread -L$(silc_install_prefix)/lib \
+ 	-L/usr/local/silc/lib -lsilc -lsilcclient -lsilc
+-SILC_CFLAGS= -g -O2 -Wall -finline-functions -D_REENTRANT
++SILC_CFLAGS= -g -O2 -Wall -finline-functions -D_REENTRANT -fPIC
+ CC=gcc
+ LIBTOOL = $(SHELL) $(top_builddir)/libtool
+ LN_S = ln -s  

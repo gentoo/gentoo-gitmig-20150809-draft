@@ -1,6 +1,13 @@
 # ChangeLog for net-im/silc-toolkit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.9 2004/06/01 02:45:57 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.10 2004/06/01 08:36:09 absinthe Exp $
+
+*silc-toolkit-0.9.12-r1 (01 Jun 2004)
+
+  01 Jun 2004; Dylan Carlson <absinthe@gentoo.org>
+  +files/silc-toolkit-0.9.12-r1-64bit_goodness.patch,
+  +silc-toolkit-0.9.12-r1.ebuild:
+  -fPIC workaround for amd64 so that Gaim will build with USE=silc.
 
   31 May 2004; Dylan Carlson <absinthe@gentoo.org> silc-toolkit-0.9.12.ebuild:
   Added ~amd64 to KEYWORDS.
