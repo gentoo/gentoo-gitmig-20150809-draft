@@ -1,7 +1,18 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.23 2003/03/19 03:31:10 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.24 2003/04/13 16:49:56 livewire Exp $
 
+*xfs-sources-2.4.20-r3 (12 April 2003)
+
+  12 April 2003; Bob Johnson <livewire@gentoo.org>
+
+  - Added Grsecurity 1.9.9f
+  - Xfs bumped to 20030406
+  - AIC79XX bumped to 20030410
+  - bootsplash bumped to 3.0.7
+  - added brlock fix
+  - win4lin support removed 
+  			
 *xfs-sources-2.4.20-r2 (18 March 2003)
 
   18 March 2003; Bob Johnson <livewire@gentoo.org>
