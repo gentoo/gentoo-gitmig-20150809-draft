@@ -1,11 +1,11 @@
 # ChangeLog for sys-cluster/openmosix-user
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pconsole/ChangeLog,v 1.1 2004/08/16 07:49:54 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pconsole/ChangeLog,v 1.2 2004/08/16 07:50:43 voxus Exp $
 
 *pconsole-1.0 (16 Aug 2004)
 
   16 Aug 2004; Konstantin Arkhipov <voxus@gentoo.org>
   +pconsole-1.0.ebuild,
   +files/pconsole-1.0-exit-warn.patch:
-  Initial release. Ebuild submitted by Jesse Becker <jbecker@speakeasy.net>.
-  Trivial patch to avoid compilation warning.
+  Initial release. Ebuild submitted by Jesse Becker <jbecker@speakeasy.net>,
+  closing bug #58812. Trivial patch to avoid compilation warning.
