@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.11.0.ebuild,v 1.2 2002/11/01 12:21:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.11.0.ebuild,v 1.3 2002/11/25 23:17:20 vapier Exp $
 
 IUSE="dvd"
 
@@ -19,7 +19,7 @@ RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libglade-2
 	>=media-libs/xine-lib-0.9.13
-	dvd? ( >=media-video/xine-dvdnav-0.9.13 )"
+	dvd? ( >=media-plugins/xine-dvdnav-0.9.13 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.17
