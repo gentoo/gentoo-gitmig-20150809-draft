@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.70 2004/07/08 18:40:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.71 2004/07/08 20:19:17 pylon Exp $
+
+  08 Jul 2004; Lars Weiler <pylon@gentoo.org> ethereal-0.10.5.ebuild:
+  Stable on ppc.
 
   08 Jul 2004; Travis Tilley <lv@gentoo.org> ethereal-0.10.5.ebuild:
   fixed epatch line for the gcc 3.4 patch
