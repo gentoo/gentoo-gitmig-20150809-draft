@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/evms
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.1 2002/04/27 07:17:49 woodchip Exp $
+
+*evms-1.0.0 (27 Apr 2002)
+
+  27 Apr 2002; Donny Davies <woodchip@gentoo.org> evms-1.0.0.ebuild :
+
+  Made a package for IBM's Enterprise Volume Management System.
