@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.10 2004/07/30 13:23:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.11 2004/07/30 13:26:19 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -82,16 +82,14 @@ horde_src_install() {
 	local destdir=${MY_HTDOCSDIR}/horde
 	[ "${HORDE_PN}" != "horde" ] && destdir=${destdir}/${HORDE_PN}
 
+	# Work-around when dealing with CVS sources
+	[ "${EHORDE_CVS}" == "true" ] && cd ${HORDE_PN}
+
 	dodoc README docs/*
 	rm -rf COPYING LICENSE README docs
 
 	dodir ${destdir}
-
-	# Work-around when dealing with CVS sources
-	[ "${EHORDE_CVS}" == "true" ] && cd ${HORDE_PN}
-
 	cp -r . ${D}/${destdir}/
-
 	webapp_serverowned ${MY_HTDOCSDIR}
 
 	webapp_src_install
