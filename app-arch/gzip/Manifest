@@ -1,8 +1,17 @@
-MD5 3a9442b8a857f89e830c574f7eba385d gzip-1.3.5-r1.ebuild 2105
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 95c40d718d0355cad30035b40f25a958 ChangeLog 4306
 MD5 c792b7221f6eba29a5a78f53e40e2a70 gzip-1.3.3-r4.ebuild 1780
-MD5 745ff96c38ee8b36c587529a6b9bb42e ChangeLog 4156
+MD5 176fe0a37786a99dde1d1b218110cf91 gzip-1.3.5-r1.ebuild 2039
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 07e347c680d1ca49a2683aa6cb2b126a files/gzip-1.3.3-security.patch 2521
 MD5 2034712a3fa0de0258ee8a1598965ac5 files/digest-gzip-1.3.3-r4 62
-MD5 b007ca73991aa40a1b2d56cfeb9d270f files/digest-gzip-1.3.5-r1 131
-MD5 9bb1ded151380e60b0769c97b0fd1f5c files/gzip-1.3.5-security.patch 2170
+MD5 a3bbaab6aec4b44161509caf1883e5d8 files/digest-gzip-1.3.5-r1 134
+MD5 07e347c680d1ca49a2683aa6cb2b126a files/gzip-1.3.3-security.patch 2521
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBPxSzHTu7gpaalycRAn5MAKDULa3wi8kIKHSar0HPJNNx6VtsiACghH+S
+60gsT1Y1gn+mSLvlm/pqUPM=
+=mTCs
+-----END PGP SIGNATURE-----

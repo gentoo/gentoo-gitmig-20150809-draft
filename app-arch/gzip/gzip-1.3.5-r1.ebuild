@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r1.ebuild,v 1.5 2004/06/28 15:57:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r1.ebuild,v 1.6 2004/09/08 14:18:16 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/gzip/gzip.html"
 # This is also available from alpha.gnu.org, but that site has very limited
 # bandwidth and often isn't accessible
 SRC_URI="mirror://debian/pool/main/g/gzip/gzip_${PV}.orig.tar.gz
-	mirror://debian/pool/main/g/gzip/gzip_1.3.5-8.diff.gz"
+	mirror://gentoo/${P}-deb.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,8 +24,7 @@ PROVIDE="virtual/gzip"
 src_unpack() {
 	unpack gzip_${PV}.orig.tar.gz
 	cd ${S}
-	epatch ${DISTDIR}/gzip_1.3.5-8.diff.gz
-	epatch ${FILESDIR}/gzip-1.3.5-security.patch
+	epatch ${DISTDIR}/${P}-deb.patch.bz2
 }
 
 src_compile() {
