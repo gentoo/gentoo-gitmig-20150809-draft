@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <agenkin@gentoo.org> (2 Oct 2002)
+# Masked pending unfreeze.
+>=net-misc/e100-2.1.15
+
 # <danarmak@gentoo.org> (2 Oct 2002)
 # kde 3.1 beta2: masked permanently
 =kde-base/arts-1.1.0
