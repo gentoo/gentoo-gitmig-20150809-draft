@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0.ebuild,v 1.14 2004/10/19 17:34:49 vapier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0.ebuild,v 1.15 2004/10/20 13:01:06 vapier Exp $
 
 DESCRIPTION="plugin to provide SSL/TLS capability to programs that utilize the Qt Cryptographic Architecture (QCA)"
 HOMEPAGE="http://psi.affinix.com/"
@@ -25,6 +24,6 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "make install failed"
+	make INSTALL_ROOT="${D}" install || die "make install failed"
 	dodoc README
 }
