@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/karamba-weather
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-sys/ChangeLog,v 1.1 2003/05/04 06:09:49 prez Exp $
+
+*karamba-sys-0.01 (03 May 2003)
+
+  03 May 2003; Preston A. Elder <prez@gentoo.org> karamba-sys-0.01.ebuild:
+  Initial import.
+
