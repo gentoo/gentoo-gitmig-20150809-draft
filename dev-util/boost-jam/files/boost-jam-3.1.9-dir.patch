@@ -6,7 +6,7 @@ diff -Naur boost-jam-3.1.9.orig/Jambase boost-jam-3.1.9/Jambase
  if ! $(BOOST_BUILD_PATH) && $(UNIX)
  {
 -    BOOST_BUILD_PATH = /usr/share/boost-build ;
-+    BOOST_BUILD_PATH = /usr/share/boost ;
++    BOOST_BUILD_PATH = /usr/share/boost/v2 ;
  }
  
  
@@ -18,7 +18,7 @@ diff -Naur boost-jam-3.1.9.orig/jambase.c boost-jam-3.1.9/jambase.c
  "if ! $(BOOST_BUILD_PATH) && $(UNIX)\n",
  "{\n",
 -"BOOST_BUILD_PATH = /usr/share/boost-build ;\n",
-+"BOOST_BUILD_PATH = /usr/share/boost ;\n",
++"BOOST_BUILD_PATH = /usr/share/boost/v2 ;\n",
  "}\n",
  "rule boost-build ( dir ? )\n",
  "{\n",
