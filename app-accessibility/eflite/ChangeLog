@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/eflite
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.4 2004/03/22 17:46:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.5 2004/03/23 05:49:39 eradicator Exp $
+
+  22 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> eflite-0.3.8.ebuild:
+  Added ~amd64 to keywords.
 
   22 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> eflite-0.3.8.ebuild:
   Conf file is now in /etc/eflite/ instead of /etc. No revbump done because it
