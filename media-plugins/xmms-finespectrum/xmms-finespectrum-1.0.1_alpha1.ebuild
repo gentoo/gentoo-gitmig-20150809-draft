@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/xmms-finespectrum-1.0.1_alpha1.ebuild,v 1.1 2004/02/02 10:04:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/xmms-finespectrum-1.0.1_alpha1.ebuild,v 1.2 2004/03/21 16:57:26 jhuebel Exp $
 
 MY_P="${PN/xmms-/}-${PV/_alpha1/alpha}"
 S="${WORKDIR}/${MY_P}"
@@ -13,6 +13,11 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc"
 
 DEPEND="media-sound/xmms"
+
+src_unpack() {
+	unpack ${A}
+	use amd64 && gnuconfig_update
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die
