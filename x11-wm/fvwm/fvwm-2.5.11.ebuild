@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r7.ebuild,v 1.1 2004/09/08 10:00:24 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.11.ebuild,v 1.1 2004/09/30 17:27:49 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,8 @@ IUSE="bidi debug gnome gtk gtk2 imlib ncurses nls nosm noxpm perl png readline r
 
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
-		perl? ( http://users.tpg.com.au/users/scottie7/FvwmTabs-v3.1.tar.gz	)"
+		mirror://gentoo/${P}-translucent-menus.diff.gz
+		perl? ( http://users.tpg.com.au/users/scottie7/FvwmTabs-v3.3.tar.gz	)"
 HOMEPAGE="http://www.fvwm.org/"
 
 SLOT="0"
@@ -39,7 +40,7 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 # XXX:	netpbm is used by FvwmScript-ScreenDump, worth a dependency?
 DEPEND="${RDEPEND} dev-util/pkgconfig"
 
-SFT=${WORKDIR}/FvwmTabs-v3.1
+SFT=${WORKDIR}/FvwmTabs-v3.3
 
 src_unpack() {
 	unpack ${A}
@@ -47,7 +48,7 @@ src_unpack() {
 	# this patch enables fast translucent menus in fvwm..yummy! this is a
 	# minor tweak of a patch posted to fvwm-user mailing list by Olivier
 	# Chapuis in <20030827135125.GA6370@snoopy.folie>.
-	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.9-translucent-menus.diff.gz
+	cd ${S}; epatch ${WORKDIR}/${P}-translucent-menus.diff
 
 	# according to a post to fvwm-workers mailing list, Mikhael Goikhman
 	# planned on disabling these debug statements before the release, but
@@ -64,42 +65,12 @@ src_unpack() {
 		eend $?
 	fi
 
-	# this patch adds an 'ShowOnlyIcons Never' option to FvwmIconMan.
-	# XXX: ShowNoIcons ever option added to official FvwmIconMan on 24 Jun 2004
-	# XXX: Remove this patch, and add ewarn about new Syntax.
-	cd ${S}; epatch ${FILESDIR}/fvwm-iconman.diff
-
-	# fix some issues reported since the 2.5.10 release.
-	# XXX: incvs
-	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-post-release.diff
+	# fixing #51287, the fvwm-menu-xlock script is not compatible
+	# with the xlockmore implementation in portage.
+	cd ${S}; epatch ${FILESDIR}/fvwm-menu-xlock-xlockmore-compat.diff
 
 	# build fails on alpha with certain options without this.
 	use alpha && append-flags -fPIC
-
-	# just in case anyone on mips want to test.
-	# XXX: incvs
-	use mips && epatch ${FILESDIR}/fvwm-2.5.10-mips-compat.diff
-
-	# fixing #51287, the fvwm-menu-xlock script is not compatible
-	# with the xlockmore implementation in portage.
-	epatch ${FILESDIR}/fvwm-menu-xlock-xlockmore-compat.diff
-
-	# XXX: incvs
-	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-FvwmCommand.diff
-
-	# XXX: incvs
-	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-Test-update.diff
-
-	# XXX: incvs
-	cd ${S}; epatch ${FILESDIR}/centerplacement-2.5.10.diff
-	cd ${S}; epatch ${FILESDIR}/iconfile-2.5.10.diff
-
-	# XXX: incvs
-	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-fvwmbuttonshover.diff.gz
-
-	# XXX: incvs
-	# fix some 64bit cleanliness issues
-	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-long-data-elements.diff
 }
 
 src_compile() {
@@ -220,7 +191,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	if use perl; then
@@ -236,7 +206,7 @@ src_install() {
 			doexe ${SFT}/FvwmTabs
 
 			dodoc ${SFT}/fvwmtabrc ${SFT}/tab.zsh
-			doman ${SFT}FvwmTabs.1
+			doman ${SFT}/FvwmTabs.1
 			dohtml ${SFT}/FvwmTabs.man.html
 
 			newdoc ${SFT}/README README.fvwmtabs
@@ -302,10 +272,6 @@ src_install() {
 
 	dodoc ${FILESDIR}/README.transluceny.gz
 
-	# make sure FvwmGtk man page is installed
-	# XXX: Fixed in cvs
-	use gtk && doman ${S}/modules/FvwmGtk/FvwmGtk.1
-
 	# fix a couple of symlinks.
 	prepallman
 }
@@ -321,4 +287,9 @@ pkg_postinst() {
 			einfo
 		fi
 	fi
+	echo
+	einfo "If you have been using the 'ShowOnlyIcons never' syntax in FvwmIconMan,"
+	einfo "please update your configuration to use the new officially supported"
+	einfo "'ShowNoIcons' option."
+	echo
 }
