@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/tre
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.1 2004/05/06 08:37:57 dragonheart Exp $
+
+*tre-0.6.6 (06 May 2004)
+
+  06 May 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +tre-0.6.6.ebuild:
+  Inital import thanks to John Hampton <pacopablo@pacopablo.com> #49554
+
