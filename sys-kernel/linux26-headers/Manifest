@@ -7,7 +7,7 @@ MD5 89403525f4da5e8458fd7f720d6de6ee linux26-headers-2.6.6-r1.ebuild 4223
 MD5 21dcb669b4e8535f0a04f40ad2c4c9ff metadata.xml 224
 MD5 b3d1c41a74dbe1041b4082288cacd3ca linux26-headers-2.6.7-r4.ebuild 4031
 MD5 91179c84e3dc8dadcfdad16cabede343 linux26-headers-2.6.5.ebuild 4188
-MD5 858fb6efcec93b6189f06bab7cbf21cd linux26-headers-2.6.8.1-r1.ebuild 4805
+MD5 8559f80e3a71510d73397917e8d01243 linux26-headers-2.6.8.1-r1.ebuild 4774
 MD5 18bed04a1b45de515096089cc10913ec files/digest-linux26-headers-2.6.8.1 68
 MD5 14a0de85d11206096f05e186cebab07b files/linux26-headers-2.6.8.1-appCompat.patch 53549
 MD5 0501d9fb994e3c9721b2a239e92e30c6 files/linux26-headers-2.6.8.1-strict-ansi-fix.patch 4086
@@ -28,10 +28,11 @@ MD5 ec3d195f7d40d599802d5c0c5ad8f502 files/linux26-headers-2.6.4-appCompat.patch
 MD5 18bed04a1b45de515096089cc10913ec files/digest-linux26-headers-2.6.8.1-r1 68
 MD5 00e5bea1e925c2d81d32191937eb8d5b files/linux26-headers-soundcard-ppc64.patch 631
 MD5 9f83b3bf65ac599e58c5b96ed2569963 files/linux26-headers-2.6.8.1-sparc-signal_h.patch 298
+MD5 602f7309c0163c018627f06b5f1ace3a files/linux26-headers-2.6.8.1-arm-float.patch 640
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBtRworoRuSHgZdywRAi91AJ4vijXn4TyLxpDPk0qa1d31n+0HSQCfcFw+
-0U2DNOD9SXmE6xGq9WmqZR4=
-=yq/x
+iD8DBQFBtVm1roRuSHgZdywRAvQUAJkBZLOGU6aQQPLSEBET1wU1BuBz+wCePPZE
+IG0BwApTqwg+FpDUOXJDkPg=
+=Qrmw
 -----END PGP SIGNATURE-----

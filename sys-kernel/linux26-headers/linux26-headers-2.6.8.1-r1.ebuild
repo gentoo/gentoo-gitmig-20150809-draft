@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.14 2004/12/07 02:57:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.15 2004/12/07 07:18:21 vapier Exp $
 
 # What's in this kernel?
 
@@ -67,20 +67,14 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.6.7-generic-arm-prepare.patch
 	epatch ${FILESDIR}/${P}-strict-ansi-fix.patch
 	epatch ${FILESDIR}/${P}-appCompat.patch
+	epatch ${FILESDIR}/${P}-sparc-signal_h.patch
+	epatch ${FILESDIR}/${PN}-soundcard-ppc64.patch
+	epatch ${FILESDIR}/${P}-arm-float.patch
 
 	# Fixes
-	case "${ARCH}" in
-		sparc*)
-			epatch ${FILESDIR}/${P}-sparc-signal_h.patch
-		;;
-		*)
-			headers___fix ${S}/include/asm-ia64/*
-			headers___fix ${S}/include/asm-ppc64/*
-			headers___fix ${S}/include/asm-ppc64/iSeries/*
-		;;
-	esac
-
-	use ppc64 && epatch ${FILESDIR}/${PN}-soundcard-ppc64.patch
+	headers___fix ${S}/include/asm-ia64/*
+	headers___fix ${S}/include/asm-ppc64/*
+	headers___fix ${S}/include/asm-ppc64/iSeries/*
 }
 
 src_compile() {
