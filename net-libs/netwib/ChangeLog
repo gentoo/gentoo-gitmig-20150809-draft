@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/netwib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.1 2003/12/25 21:49:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.2 2003/12/26 13:35:20 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> netwib-5.6.0.ebuild:
+  Contrary to popular belief, this does not currently compile against libnet,
+  nor does the appropriate version of libnet have a sparc or ~sparc keyword.
 
 *netwib-5.6.0 (25 Dec 2003)
 
