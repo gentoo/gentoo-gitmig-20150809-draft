@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.45 2004/10/08 19:05:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.46 2004/10/09 02:03:50 j4rg0n Exp $
+
+  08 Oct 2004; Lina Pezzella <j4rg0n@gentoo.org> libpcre-4.5.ebuild:
+  Added patch for creation of dylibs on ppc-macos. Bug #58165. Thanks to Robin Munn for the submission.
+  Testing on ppc-macos.
 
   08 Oct 2004; Guy Martin <gmsoft@gentoo.org> libpcre-4.5.ebuild:
   Marked stable on hppa.
