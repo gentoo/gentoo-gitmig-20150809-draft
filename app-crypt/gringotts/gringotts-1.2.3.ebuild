@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.3.ebuild,v 1.2 2003/01/14 07:46:35 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.3.ebuild,v 1.3 2003/01/14 08:36:11 leonardop Exp $
 
 DESCRIPTION="Utility that allows you to jot down sensitive data"
 SRC_URI="http://devel.pluto.linux.it/projects/Gringotts/current/${P}.tar.bz2"
@@ -21,9 +21,9 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 src_compile() {
 	local myconf=""
 
-    use X && myconf="--with-x" || myconf="--without-x"
+	use X && myconf="--with-x" || myconf="--without-x"
 
-    econf ${myconf}
+	econf ${myconf}
 
 	emake || die "Compilation failed"
 }
