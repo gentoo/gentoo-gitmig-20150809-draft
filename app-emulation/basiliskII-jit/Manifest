@@ -1,4 +1,15 @@
-MD5 199f53ea6b63c9ae36d4df9e466ce366 ChangeLog 736
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 212bd7c0d1037f64bb765ffdf1cd98b7 ChangeLog 929
 MD5 facc0dd047834a48c927393cabd0cc37 metadata.xml 518
-MD5 a0a75c7b8d30f4304783f39c5f4dd71d basiliskII-jit-1.0.0-r1.ebuild 2838
+MD5 1c5c3fce1e68fdeaf5e767fb18066305 basiliskII-jit-1.0.0-r1.ebuild 2897
 MD5 1cbb0fab815fa2bc2c502966bdf62294 files/digest-basiliskII-jit-1.0.0-r1 79
+MD5 a84e85a581b344be5ecbd0629a272fed files/basiliskII-jit-gcc34.patch 939
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBV/DMmdTrptrqvGERAgABAJsHOP1BT3q+gpVOvkSsuY1T8QgcXACeJJts
+ahRpjXDBmqJ89c+PMD+ES28=
+=o1BX
+-----END PGP SIGNATURE-----
