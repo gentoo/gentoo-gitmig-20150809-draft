@@ -1,0 +1,24 @@
+diff -Nru wvstreams-4.0.2.orig/oggspeex/wvoggspeex.cc wvstreams-4.0.2/oggspeex/wvoggspeex.cc
+--- wvstreams-4.0.2.orig/oggspeex/wvoggspeex.cc	2005-03-24 04:01:23.000000000 +0200
++++ wvstreams-4.0.2/oggspeex/wvoggspeex.cc	2005-03-30 21:23:57.357906840 +0300
+@@ -15,6 +15,10 @@
+ 
+ #define OGG_SPEEX_DECODER_BUF_SIZE 16384 // at most 16k at once
+ 
++#ifndef MAX_BYTES_PER_FRAME
++#define MAX_BYTES_PER_FRAME 2000
++#endif
++
+ /** Extracts a little endian integer from a buffer. */
+ static unsigned long int getint_le(WvBuf &inbuf)
+ {
+@@ -170,8 +174,7 @@
+     // generate stream header
+     ogg_packet header;
+     SpeexHeader spxheader;
+-    SpeexMode *spxmode = speex_mode_list[mode()];
+-    speex_init_header(&spxheader, samplingrate(), channels(), spxmode);
++    speex_init_header(&spxheader, samplingrate(), channels(), speex_mode_list[mode()]);
+     spxheader.vbr = vbr();
+     spxheader.bitrate = nominalbitrate();
+     spxheader.frames_per_packet = 1;
