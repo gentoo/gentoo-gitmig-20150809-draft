@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.83 2005/01/23 07:01:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.84 2005/01/23 18:53:12 luckyduck Exp $
+
+  23 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> alsa-utils-1.0.8.ebuild:
+  updated alsa-lib dependency to fix bug #79205.
 
 *alsa-utils-1.0.8 (22 Jan 2005)
 
