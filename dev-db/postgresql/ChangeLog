@@ -1,9 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.21 2002/07/31 01:29:24 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.22 2002/08/13 19:35:57 pvdabeel Exp $
 
 * postgresql-7.2.1-r2 (31 Jul 2002)                                      
-                                                                                
+
+  13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> postgresql-7.2.1-r2.ebuild:
+
+  Added ppc keyword
+
   31 Jul 2002; Stuart Bouyer <stubear@gentoo.org> postgresql-7.2.1-r2.ebuild:
 
   Moved --enable-multibyte to nls flag after it was pointed out that it
