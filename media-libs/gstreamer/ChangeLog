@@ -1,8 +1,17 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.12 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.13 2002/12/26 23:22:18 azarah Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*gstreamer-0.5.0 (26 Dec 2002)
+
+  26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gstreamer-0.5.0.ebuild :
+  Version update.  Really fix the problems compiling when specifying USE="doc"
+  The problem is that gstreamer's docs imports the wrong version (or different
+  to ours) of app-text/docbook-xsl-stylesheets, and delete files it should not.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords.
  
 *gstreamer-0.4.2-r1 (04 Nov 2002)
 
