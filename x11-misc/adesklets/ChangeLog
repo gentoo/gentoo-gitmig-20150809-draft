@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/adesklets
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.5 2005/03/22 11:59:57 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.6 2005/03/29 02:15:11 josejx Exp $
+
+  29 Mar 2005; Joseph Jezak <josejx@gentoo.org> adesklets-0.4.6.ebuild:
+  Added ~ppc for bug #85259.
 
   22 Mar 2005; Michele Noberasco <s4t4n@gentoo.org> adesklets-0.4.5.ebuild:
   Removed older version, leaving only latest (all-arch masked) version, as
