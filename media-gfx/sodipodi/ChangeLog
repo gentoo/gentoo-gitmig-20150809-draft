@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/sodipodi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/ChangeLog,v 1.4 2002/10/24 21:56:07 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/ChangeLog,v 1.5 2002/11/27 19:59:15 foser Exp $
+
+*sodipodi-0.28 (27 Nov 2002)
+
+  27 Nov 2002; foser <foser@gentoo.org> sodipodi-0.28.ebuild :
+  New version, fixed wmf stuff
 
 *sodipodi-0.27 (22 Oct 2002)
 
