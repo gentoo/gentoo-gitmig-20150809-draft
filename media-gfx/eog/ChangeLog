@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.84 2004/12/29 00:30:34 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.85 2005/01/01 14:52:58 weeve Exp $
+
+  01 Jan 2005; Jason Wever <weeve@gentoo.org> eog-0.6-r4.ebuild:
+  Added ~sparc keyword.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.8.1.ebuild,v 1.4 2004/12/11 10:33:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.8.1.ebuild,v 1.5 2005/01/01 14:52:58 weeve Exp $
 
 inherit gnome2 eutils
 
