@@ -19,4 +19,4 @@ else
 	umask 022
 fi
 unset ROOTPATH
-export EDITOR=nano
+export EDITOR=/usr/bin/nano
