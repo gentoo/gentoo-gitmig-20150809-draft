@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 19e10a2d17161840b236602c38f1a82d glbsp-2.05.ebuild 821
+MD5 2562a2c12b4d57c931dbc5b0c178a238 ChangeLog 361
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 ac9871a05f5e6e4bae5d5338abe63bea files/digest-glbsp-2.05 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA/dy6HTu7gpaalycRAu4mAKC9UatXD3YoCTD2EUsFF02c/a2fpQCbB60Z
+1pTLaqSwJuiPvGghL41Rnyg=
+=gWMX
+-----END PGP SIGNATURE-----

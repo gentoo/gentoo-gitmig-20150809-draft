@@ -1,0 +1,8 @@
+# ChangeLog for games-util/glbsp
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/ChangeLog,v 1.1 2004/07/21 03:02:05 vapier Exp $
+
+*glbsp-2.05 (20 Jul 2004)
+
+  20 Jul 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Hinrik Örn Sigurðsson #53793.
