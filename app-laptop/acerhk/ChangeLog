@@ -1,0 +1,8 @@
+# ChangeLog for app-laptop/acerhk
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.1 2004/08/26 08:12:23 sekretarz Exp $
+
+  26 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org> :
+  Initial add. Thanks to Sebastien ESTIENNE <sebest@ovibes.net> and Ronald van
+  der Meer <revdmeer@conceptsfa.nl> in bug #48735.
+
