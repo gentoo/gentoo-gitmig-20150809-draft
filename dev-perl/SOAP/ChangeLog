@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/SOAP
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP/ChangeLog,v 1.9 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP/ChangeLog,v 1.10 2003/06/01 01:32:32 mcummings Exp $
+
+*SOAP-0.28-r2 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> SOAP-0.28-r2.ebuild:
+  Added missing depend
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
