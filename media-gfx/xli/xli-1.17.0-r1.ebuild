@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r1.ebuild,v 1.3 2005/02/28 20:51:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r1.ebuild,v 1.4 2005/02/28 21:02:44 gustavoz Exp $
 
 inherit alternatives
 
@@ -11,7 +11,7 @@ SRC_URI="http://pantransit.reptiles.org/prog/xli/xli-${SNAPSHOT}.tar.gz"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11
