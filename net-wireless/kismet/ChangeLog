@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.36 2004/07/27 20:53:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.37 2004/09/02 23:49:24 malc Exp $
+
+  02 Sep 2004; Malcolm Lashley <malc@gentoo.org> +files/kismet_amd64.patch,
+  kismet-2004.04.1.ebuild:
+  Fix for amd64 from Vasiliy Astapov - tested with prism54
 
   27 Jul 2004; <solar@gentoo.org> kismet-2004.04.1.ebuild:
   added missing inherit eutils, needed for epatch ; added call to

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.04.1.ebuild,v 1.5 2004/07/27 20:53:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.04.1.ebuild,v 1.6 2004/09/02 23:49:24 malc Exp $
 
 inherit gnuconfig eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="acpi gps ethereal"
 
 DEPEND="gps? ( >=dev-libs/expat-1.95.4 dev-libs/gmp media-gfx/imagemagick )
@@ -26,6 +26,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/kismet_gcc34.gz
+	epatch ${FILESDIR}/kismet_amd64.patch
 	gnuconfig_update ${S}
 }
 

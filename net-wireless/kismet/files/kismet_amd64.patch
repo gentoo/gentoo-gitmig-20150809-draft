@@ -1,0 +1,170 @@
+kismet amd64 amd 64 bit patch.
+
+Got amd64 laptop mitac8355. Kismet unfortunately hangs up on 64 bit. So did some fast fix. 
+
+And it could access 16G of RAM ;)
+
+$Id: kismet_amd64.patch,v 1.1 2004/09/02 23:49:24 malc Exp $ 
+email: k_w-at-bk-dot-ru
+
+diff -u ../kismet-2004-04-R1/configfile.cc ./configfile.cc
+--- ../kismet-2004-04-R1/configfile.cc	2004-01-24 16:27:20.000000000 -0500
++++ ./configfile.cc	2004-05-30 16:59:33.093508480 -0400
+@@ -251,12 +251,12 @@
+                                 macmap<int> *dest_map,
+                                 int *bssid_invert, int *source_invert, int *dest_invert) {
+     // Break it into filter terms
+-    unsigned int parse_pos = 0;
+-    unsigned int parse_error = 0;
++    size_t parse_pos = 0;
++    size_t parse_error = 0;
+ 
+     while (parse_pos < filter_str.length()) {
+-        unsigned int addr_term_end;
+-        unsigned int address_target = 0; // 1=bssid 2=source 4=dest 7=any
++        size_t addr_term_end;
++        size_t address_target = 0; // 1=bssid 2=source 4=dest 7=any
+ 
+         if (filter_str[parse_pos] == ',' || filter_str[parse_pos] == ' ') {
+             parse_pos++;
+@@ -310,10 +310,10 @@
+             break;
+         }
+ 
+-        unsigned int term_parse_pos = 0;
++        size_t term_parse_pos = 0;
+         while (term_parse_pos < term_contents.length()) {
+-            unsigned int term_end;
+-            unsigned int invert = 0;
++            size_t term_end;
++            size_t invert = 0;
+ 
+             if (term_contents[term_parse_pos] == ' ' || term_contents[term_parse_pos] == ',') {
+                 term_parse_pos++;
+diff -u ../kismet-2004-04-R1/kismet_drone.cc ./kismet_drone.cc
+--- ../kismet-2004-04-R1/kismet_drone.cc	2004-04-04 21:20:57.000000000 -0400
++++ ./kismet_drone.cc	2004-05-30 17:10:15.081911408 -0400
+@@ -571,8 +571,8 @@
+     }
+ 
+     // Parse the allowed hosts into the vector
+-    unsigned int ahstart = 0;
+-    unsigned int ahend = allowed_hosts.find(",");
++    size_t ahstart = 0;
++    size_t ahend = allowed_hosts.find(",");
+ 
+     int ahdone = 0;
+     while (ahdone == 0) {
+@@ -590,7 +590,7 @@
+         client_ipblock *ipb = new client_ipblock;
+ 
+         // Find the netmask divider, if one exists
+-        unsigned int masksplit = hoststr.find("/");
++        size_t masksplit = hoststr.find("/");
+         if (masksplit == string::npos) {
+             // Handle hosts with no netmask - they're treated as single hosts
+             inet_aton("255.255.255.255", &(ipb->mask));
+diff -u ../kismet-2004-04-R1/kismet_server.cc ./kismet_server.cc
+--- ../kismet-2004-04-R1/kismet_server.cc	2004-04-04 21:20:57.000000000 -0400
++++ ./kismet_server.cc	2004-05-30 17:09:19.615343608 -0400
+@@ -1178,10 +1178,10 @@
+     // Convert the WEP mappings to our real map
+     vector<string> raw_wepmap_vec;
+     raw_wepmap_vec = conf->FetchOptVec("wepkey");
+-    for (unsigned int rwvi = 0; rwvi < raw_wepmap_vec.size(); rwvi++) {
++    for (size_t rwvi = 0; rwvi < raw_wepmap_vec.size(); rwvi++) {
+         string wepline = raw_wepmap_vec[rwvi];
+ 
+-        unsigned int rwsplit = wepline.find(",");
++        size_t rwsplit = wepline.find(",");
+         if (rwsplit == string::npos) {
+             fprintf(stderr, "FATAL:  Malformed 'wepkey' option in the config file.\n");
+             ErrorShutdown();
+@@ -1458,12 +1458,12 @@
+ 
+     vector<string> hostsvec = StrTokenize(allowed_hosts, ",");
+ 
+-    for (unsigned int hostcomp = 0; hostcomp < hostsvec.size(); hostcomp++) {
++    for (size_t hostcomp = 0; hostcomp < hostsvec.size(); hostcomp++) {
+         client_ipblock *ipb = new client_ipblock;
+         string hoststr = hostsvec[hostcomp];
+ 
+         // Find the netmask divider, if one exists
+-        unsigned int masksplit = hoststr.find("/");
++        size_t masksplit = hoststr.find("/");
+         if (masksplit == string::npos) {
+             // Handle hosts with no netmask - they're treated as single hosts
+             inet_aton("255.255.255.255", &(ipb->mask));
+diff -u ../kismet-2004-04-R1/tcpserver.cc ./tcpserver.cc
+--- ../kismet-2004-04-R1/tcpserver.cc	2003-03-20 16:02:53.000000000 -0500
++++ ./tcpserver.cc	2004-05-30 17:05:17.872094168 -0400
+@@ -377,7 +377,7 @@
+ 
+     /* See if the buffer contains a command. */
+     int killbits = 0;
+-    unsigned int nl = copt->cmdbuf.find("\r\n");
++    size_t nl = copt->cmdbuf.find("\r\n");
+     if (nl == string::npos) {
+         nl = copt->cmdbuf.find('\n');
+         if (nl == string::npos)
+@@ -422,8 +422,8 @@
+ 
+     // Find the first space - this is the command.  If it doesn't look like something
+     // we can handle, pass it on.
+-    unsigned int start = 0;
+-    unsigned int space = in_command->cmd.find(" ");
++    size_t start = 0;
++    size_t space = in_command->cmd.find(" ");
+     if (space == string::npos)
+         return 1;
+ 
+@@ -482,7 +482,7 @@
+         start = space + 1;
+         vector<int> field_vec;
+ 
+-        unsigned int end = in_command->cmd.find(",", start);
++        size_t end = in_command->cmd.find(",", start);
+ 
+         int done = 0;
+         int initial = 1;
+@@ -499,7 +499,7 @@
+             // Try once to match it to * - an int compare is cheaper than a string
+             if (initial) {
+                 if (com == "*") {
+-                    for (unsigned int fld = 0; fld < sprot->field_map.size(); fld++)
++                    for (size_t fld = 0; fld < sprot->field_map.size(); fld++)
+                         field_vec.push_back(fld);
+                     break;
+                 }
+diff -u ../kismet-2004-04-R1/util.cc ./util.cc
+--- ../kismet-2004-04-R1/util.cc	2003-12-09 16:36:38.000000000 -0500
++++ ./util.cc	2004-05-27 21:49:31.000000000 -0400
+@@ -138,8 +138,8 @@
+ }
+ 
+ vector<string> StrTokenize(string in_str, string in_split) {
+-    unsigned int begin = 0;
+-    unsigned int end = in_str.find(in_split);
++    size_t begin = 0;
++    size_t end = in_str.find(in_split);
+     vector<string> ret;
+ 
+     if (in_str.length() == 0)
+@@ -159,7 +159,7 @@
+ vector<string> LineWrap(string in_txt, unsigned int in_hdr_len, unsigned int in_maxlen) {
+ 	vector<string> ret;
+ 
+-	unsigned int pos, prev_pos, start, hdroffset;
++	size_t pos, prev_pos, start, hdroffset;
+ 	start = hdroffset = 0;
+ 
+ 	for (pos = prev_pos = in_txt.find(' ', in_hdr_len); pos != string::npos; pos = in_txt.find(' ', pos + 1)) {
+@@ -359,7 +359,7 @@
+     vector<int> ret;
+     int ch;
+ 
+-    for (unsigned int x = 0; x < optlist.size(); x++) {
++    for (size_t x = 0; x < optlist.size(); x++) {
+         if (sscanf(optlist[x].c_str(), "%d", &ch) != 1) {
+             ret.clear();
+             break;
