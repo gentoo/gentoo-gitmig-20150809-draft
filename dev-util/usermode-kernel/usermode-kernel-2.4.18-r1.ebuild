@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/usermode-kernel/usermode-kernel-2.4.18.ebuild,v 1.1 2002/03/04 19:48:22 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/usermode-kernel/usermode-kernel-2.4.18-r1.ebuild,v 1.1 2002/03/05 18:18:53 g2boojum Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -16,6 +16,7 @@ S=${WORKDIR}/linux-${KV}
 # INCLUDED:
 #	User mode linux patch
 #	http://user-mode-linux.sourceforge.net
+#	UML clashes with the current Gentoo patch, so I've ignored it for now.
 
 DESCRIPTION="Full (vanilla) sources for the User Mode Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://uml-pub.ists.dartmouth.edu/uml/${UML_PATCH}.bz2"
@@ -53,6 +54,8 @@ src_install() {
 		cd ${S}
 		echo ">>> Copying sources..."
 		mv ${WORKDIR}/* ${D}/usr/src/uml
+		cd ${D}/usr/src/uml
+		ln -sf linux-${KV} linux
 }
 
 
