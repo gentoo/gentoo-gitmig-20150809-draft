@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.83 2004/03/06 10:46:11 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.84 2004/03/09 00:00:34 wesolows Exp $
+
+  08 Mar 2004; Keith M Wesolowski <wesolows@gentoo.org>
+  development-sources-2.6.4_rc2.ebuild:
+  Add sparc patchset to 2.6.4-rc2.
 
 *development-sources-2.6.4_rc2 (06 Mar 2004)
 
