@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.6.ebuild,v 1.1 2002/04/25 23:27:06 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.6.ebuild,v 1.2 2002/04/29 08:43:46 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Allows certain users/groups to run commands as root"
@@ -17,7 +17,7 @@ src_compile() {
 	else
 		myconf="--without-pam"
 	fi
-	./configure --prefix=/usr --host=${CHOST} --mandir=/usr/share/man  --sysconfdir=/etc --with-all-insults --disable-path-info $myconf || die
+	./configure --prefix=/usr --host=${CHOST} --mandir=/usr/share/man  --sysconfdir=/etc --with-all-insults --disable-path-info --with-env-editor $myconf || die
 	emake || die
 }
 
