@@ -1,16 +1,14 @@
 # ChangeLog for media-libs/quicktime4linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.4 2002/07/26 12:40:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.5 2002/07/26 12:41:02 aliz Exp $
 
 *quicktime4linux-1.5.5 (24 May 2002)
 
   26 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> quicktime4linux-1.5.5-r1 :
 
-  Closes #5588 and #4702. Contributions from  Fredrik Jagenheim 
+  Closes #5588 and hopefully #4702 later. Contributions from Fredrik Jagenheim 
   <humming@pobox.com>, Johannes Findeisen <you@hanez.org>
   and Eivind Tagseth <eivindt-gentoo@multinet.no>, thanks!
-
-  Fixes for bugs #5588 and #4702.
 
   24 May 2002; Seemant Kulleen <seemant@gentoo.org>
   quicktime4linux-1.5.5.ebuild files/digest-quicktime4linux-1.5.5 :
