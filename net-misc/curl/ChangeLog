@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.28 2005/03/13 08:06:52 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.29 2005/03/16 11:21:41 liquidx Exp $
+
+  16 Mar 2005; Alastair Tse <liquidx@gentoo.org> curl-7.13.1.ebuild:
+  disabling src_test (#85403)
 
   13 Mar 2005; Hardave Riar <hardave@gentoo.org> curl-7.13.1.ebuild:
   Stable on mips, bug #82534.
