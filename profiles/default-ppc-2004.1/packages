@@ -58,7 +58,6 @@
 *sys-fs/e2fsprogs
 *sys-fs/hfsutils
 *sys-fs/hfsplusutils
-*sys-fs/lvm2
 *sys-libs/cracklib  
 *sys-libs/db
 *sys-libs/gdbm  
