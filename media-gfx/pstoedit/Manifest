@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1ce4852bb9edab1d50bfb22232e706ce pstoedit-3.32.ebuild 1004
-MD5 6e80da1a6d66a20ac0819ef8c14481f9 pstoedit-3.40.ebuild 1553
-MD5 a0dcf9b64ef5da09facacbbb62b03c8a ChangeLog 2520
+MD5 9f9a174a90c2e53b35ad53fd92f519ef ChangeLog 2624
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 1ce4852bb9edab1d50bfb22232e706ce pstoedit-3.32.ebuild 1004
 MD5 0187a9702c0fb3b0b8beae436a0bb9c0 pstoedit-3.33.ebuild 1465
+MD5 c58fbf8422914cf3c5f87a4a904db085 pstoedit-3.40.ebuild 1556
 MD5 31054e5cc9324907446fa0eebf1438ca files/digest-pstoedit-3.32 65
 MD5 a907639a46bec91770facf3dda3db0b6 files/digest-pstoedit-3.33 65
 MD5 b4ab64e60b0732f6b73230e7834dc110 files/digest-pstoedit-3.40 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCQGnUZ/iYVBmujdURAj8MAKDGKV3IvIkjZ7ULKVvunDzMyzhcwQCgtRbp
-WUIjr7MTjsGg8FdGel6uLCM=
-=kGH9
------END PGP SIGNATURE-----

@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c1fc5c1332bb5b9d342a077d86f7ed15 inkscape-0.38.1.ebuild 1100
-MD5 1b9cd1b4f6b5955dbfd427741488fee2 inkscape-0.39.ebuild 1129
-MD5 1000fcbaba9db84ea544bb2e0ec3176e inkscape-0.40-r1.ebuild 1257
-MD5 d0b3db2f31f409e820730c52d9cb6810 inkscape-0.40.ebuild 1175
-MD5 56df37cd00502e6ca07fe0fe22b59482 inkscape-0.38.ebuild 1020
-MD5 d06e0f5489802fb0c57ebf507f73f60a inkscape-0.41.ebuild 2082
-MD5 5e0a5ce59b0961ca137e842421f228f3 ChangeLog 1645
+MD5 635858dc16a8f507208361c4679f76b8 ChangeLog 1749
 MD5 43f345619b8fb7c94ce9a6839d5b1ce4 inkscape-0.37.ebuild 1018
 MD5 45828204906035f66f3428b9f2f53eca metadata.xml 223
-MD5 5a2e7c990f27ecf4a864bc72a8324695 files/0.40-radial.patch 487
-MD5 2a6db3de949e36fe3ec3ecbca9c26f3e files/inkscape-0.41_gnome-print.patch 404
-MD5 2e95c9a487b220b70e9d2a0485316ff4 files/digest-inkscape-0.38.1 68
-MD5 1fc3e80f4d06574fbcc24e8647d4cb96 files/digest-inkscape-0.40-r1 66
+MD5 56df37cd00502e6ca07fe0fe22b59482 inkscape-0.38.ebuild 1020
+MD5 c1fc5c1332bb5b9d342a077d86f7ed15 inkscape-0.38.1.ebuild 1100
+MD5 1b9cd1b4f6b5955dbfd427741488fee2 inkscape-0.39.ebuild 1129
+MD5 d0b3db2f31f409e820730c52d9cb6810 inkscape-0.40.ebuild 1175
+MD5 1000fcbaba9db84ea544bb2e0ec3176e inkscape-0.40-r1.ebuild 1257
+MD5 dd591b11612a5379afc38c8c429eafc4 inkscape-0.41.ebuild 2085
 MD5 43383d33f039e916a8092b3703f3ede2 files/digest-inkscape-0.37 66
 MD5 2351ba855aa9cbb514d6b9d61c29158b files/digest-inkscape-0.38 66
+MD5 2e95c9a487b220b70e9d2a0485316ff4 files/digest-inkscape-0.38.1 68
+MD5 96ffe3671e95f776e9e90718e5e3132a files/string.patch 489
 MD5 4908ac96c1846e705c50d6b56f2cf30c files/digest-inkscape-0.39 66
 MD5 1fc3e80f4d06574fbcc24e8647d4cb96 files/digest-inkscape-0.40 66
+MD5 5a2e7c990f27ecf4a864bc72a8324695 files/0.40-radial.patch 487
+MD5 1fc3e80f4d06574fbcc24e8647d4cb96 files/digest-inkscape-0.40-r1 66
 MD5 8d23195ea09e60622c134e6d6af1b0a7 files/digest-inkscape-0.41 67
-MD5 96ffe3671e95f776e9e90718e5e3132a files/string.patch 489
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCQGuQZ/iYVBmujdURAiNeAJ9wrVyWOysNpP21sBclBeN6XmblJgCgvuWZ
-wVEwzwsVbzQDdN2f7VLS9WI=
-=1KjJ
------END PGP SIGNATURE-----
+MD5 2a6db3de949e36fe3ec3ecbca9c26f3e files/inkscape-0.41_gnome-print.patch 404
