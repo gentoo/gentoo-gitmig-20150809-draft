@@ -2,4 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sound</herd>
+<maintainer>
+	<email>tigger@ereet.co.uk</email>
+	<name>Rob Holland</name>
+	<description>Rob is the user maintainer of this package.  He's an
+	ex-gentoo dev, and used to be the gentoo-dev-maintainer. Nothing's
+	changed but the email address.
+	</description>
 </pkgmetadata>
