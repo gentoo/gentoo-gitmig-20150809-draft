@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.0.ebuild,v 1.2 2003/07/28 11:16:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.0.ebuild,v 1.3 2003/08/22 16:11:19 obz Exp $
 
 inherit gnome2
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2
 	virtual/opengl
 	virtual/x11"
 
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.10 )"
 
 DOCS="AUTHORS COPYING* ChangeLog* INSTALL NEWS* README* TODO"
