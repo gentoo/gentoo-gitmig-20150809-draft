@@ -1,6 +1,9 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.16 2003/12/14 19:30:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.17 2003/12/28 14:24:55 lanius Exp $
+
+  28 Dec 2003; Heinrich Wendel <lanius@gentoo.org> lprng-3.8.22.ebuild:
+  fix newdepend, not allowed in ebuilds
 
   14 Dec 2003; Heinrich Wendel <lanius@gentoo.org> lprng-3.8.12-r1.ebuild,
   lprng-3.8.22.ebuild:

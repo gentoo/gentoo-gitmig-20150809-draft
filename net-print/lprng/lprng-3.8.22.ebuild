@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.22.ebuild,v 1.6 2003/12/14 19:30:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.22.ebuild,v 1.7 2003/12/28 14:24:55 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/glibc
 LICENSE="GPL-2 | Artistic"
 SLOT="0"
 
-has_version net-print/foomatic && newdepend ">=net-print/foomatic-3.0.0"
+has_version net-print/foomatic && DEPEND="${DEPEND} >=net-print/foomatic-3.0.0"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
