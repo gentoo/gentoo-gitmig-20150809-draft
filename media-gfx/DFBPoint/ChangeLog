@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/DFBPoint
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+  02 Jan 2004; Sven Blumenstein <bazik@gentoo.org> DFBPoint-0.7.2.ebuild:
+  Masked on sparc as DEPEND dev-libs/DirectFB is -sparc.
+
   09 Oct 2003; Brandy Westcott brandy@gentoo.org DFBPoint-0.7.2.ebuild,
   metadata.xml:
   Changed virtual/x11 dependency to virtual/glibc. We don't need X for DFBPoint.
