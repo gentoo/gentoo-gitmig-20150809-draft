@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f382d31463716c795e9fa062ec2a1a72 ChangeLog 1948
-MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 443cb532ce17cb9d1458e48b70770ad5 protux-0.20.1.ebuild 846
-MD5 e22e91859ae784aae1e4f5a50b33b84c protux-0.20.2.ebuild 875
-MD5 2ef4161f2da38462aeb9b3ef66c67442 files/digest-protux-0.20.1 65
+MD5 f47dd21a962d6432ea2e6640c69e3f33 ChangeLog 2035
+MD5 e5909577c2df2490d3f92fd14035e7d0 protux-0.20.2.ebuild 875
+MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 c4d75b6d370a9e848f5dd0e5a87b2d02 files/digest-protux-0.20.2 65
+MD5 2ef4161f2da38462aeb9b3ef66c67442 files/digest-protux-0.20.1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdfk6ArHZZzCEUG0RAniZAJ4y67tEATCgvXPcOaX5U4lU8pgUjACgiptP
-1dvuLSr3e0ocjKOqpWGXjIo=
-=KHxF
+iD8DBQFB5mNoRPjscZbntocRAjPLAJ92Xm5sVeKXSB49Dtt+prwazTqCOwCfe8et
+zaDxH409gJDodQyZjCFlmcY=
+=hwXW
 -----END PGP SIGNATURE-----

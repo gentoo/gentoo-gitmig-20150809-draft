@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/protux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.14 2004/10/20 05:35:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.15 2005/01/13 11:58:26 zypher Exp $
+
+  13 Jan 2005; Marc Hildebrand <zypher@gentoo.org> protux-0.20.2.ebuild:
+  stable on x86.
 
   19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -protux-0.16.0.ebuild, -protux-0.17.8.ebuild, -protux-0.20.0.ebuild:
