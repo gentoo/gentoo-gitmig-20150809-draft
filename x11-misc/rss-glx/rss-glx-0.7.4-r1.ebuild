@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.9 2004/03/10 14:40:41 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.10 2004/03/25 01:00:04 mr_bones_ Exp $
 
 inherit flag-o-matic
 use kde && inherit kde
@@ -19,7 +19,8 @@ KEYWORDS="x86 ppc"
 DEPEND="virtual/x11
 	virtual/opengl
 	>=sys-apps/sed-4
-	kde? ( kde-base/kdeartwork ) : ( x11-misc/xscreensaver )"
+	kde? ( kde-base/kdeartwork )
+	!kde? ( x11-misc/xscreensaver )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.15 2004/03/10 14:40:41 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.16 2004/03/25 01:00:03 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  rss-glx-0.7.4-r1.ebuild:
+  don't use deprecated ?: use syntax
 
   10 Mar 2004; Philip Walls <malverian@gentoo.org> rss-glx-0.7.6.ebuild:
   Added ~amd64 keyword.
