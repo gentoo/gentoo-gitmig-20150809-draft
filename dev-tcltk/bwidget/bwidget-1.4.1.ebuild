@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/bwidget-1.4.1.ebuild,v 1.1 2002/08/14 23:18:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/bwidget-1.4.1.ebuild,v 1.2 2003/02/13 07:19:56 gerk Exp $
 
 DESCRIPTION="The BWidget toolkit is a high-level widget set for Tcl/Tk. It contains widgets such as progress bars, 3D separators, various manager widgets for toplevels, frames, paned or scrolled windows, button boxes, notebooks or dialogs as well as composite widgets such as comboboxes, spin boxes and tree widgets. The BWidget toolkit is completely written in Tcl so no compiled extension library is required"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://tcllib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tcllib/${MY_P}.tar.gz"
 LICENSE="LICENSE.txt"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 DEPEND="dev-lang/tk 
 	dev-lang/tcl"
 S=${WORKDIR}/${MY_P}
