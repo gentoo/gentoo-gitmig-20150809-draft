@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e24c89306f1304e77cfb541cd87e03b3 ChangeLog 1454
+MD5 9392a299a82466d9c668a381287b4851 ChangeLog 1563
 MD5 2b37b274c495da251ea99f5c69ebce9c canna-zipcode-20021021-r2.ebuild 1102
-MD5 ae63388ccca6aaf98355f1015505a024 canna-zipcode-20040803.ebuild 1103
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 c232c65ffd7094da41cc546c0fa9ee1b canna-zipcode-20040803.ebuild 1105
 MD5 d02c230b37c06b9f88d6a05c1664df74 files/02zipcode.dics.dir 155
-MD5 953a031e4ad693397acd5354cc76d9c6 files/digest-canna-zipcode-20040803 198
 MD5 4e7d6b209d315a4827d645f861933a45 files/digest-canna-zipcode-20021021-r2 198
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaDKsVWNWqTUmv+0RAm49AJ4uU+FOmjpcj+qYLwYRYBjaYn7cvwCeJTmQ
-xtJ1qJRUsYCLwDSvLi3AZ+o=
-=2TXY
------END PGP SIGNATURE-----
+MD5 953a031e4ad693397acd5354cc76d9c6 files/digest-canna-zipcode-20040803 198
