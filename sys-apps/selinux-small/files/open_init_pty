@@ -1,0 +1,11 @@
+#!/usr/bin/python2.2
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/files/open_init_pty,v 1.1 2003/06/13 16:49:23 pebenito Exp $
+
+# by Chris PeBenito <pebenito@gentoo.org>
+# replacement for expect script written by Russell Coker
+
+import sys,pexpect
+runinfo = pexpect.run( sys.argv[1], sys.argv[2:] )
+print runinfo
