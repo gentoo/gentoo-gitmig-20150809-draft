@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.7 2003/06/16 01:27:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.8 2003/07/01 15:08:57 todd Exp $
+
+  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> bash-2.05b-r5.ebuild:
+  set stable on sparc
 
   15 Jun 2003; Seemant Kulleen <seemant@gentoo.org> bash-2.05b-r5.ebuild:
   added a symlink bashref.info.gz->bash.info.gz -- closes bug #22168 by Chris
