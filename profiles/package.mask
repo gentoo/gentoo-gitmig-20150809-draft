@@ -26,8 +26,6 @@
 >app-text/tetex-1.0.7-r11
 
 # <carpaski@gentoo.org> (12 Jan 2003)
-# Quick mask to test ebuild
-=sys-apps/portage-2.0.46-r8
 # Testing for UserPriv compile. Works, but breaks a couple ebuilds.
 >=sys-apps/portage-2.0.47_pre1
 
