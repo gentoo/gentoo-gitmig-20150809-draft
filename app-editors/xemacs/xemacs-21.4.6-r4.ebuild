@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.6-r4.ebuild,v 1.3 2002/07/25 20:43:10 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.6-r4.ebuild,v 1.4 2002/08/02 05:05:01 seemant Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -10,8 +10,8 @@ DESCRIPTION="The ultimate emacs, IMO.  This is a non-FSF but still free for use 
 EFS=1.27
 BASE=1.58
 SRC_URI="http://ftp.us.xemacs.org/ftp/pub/xemacs/xemacs-21.4/${P}.tar.gz
-         http://ftp.us.xemacs.org/ftp/pub/xemacs/packages/efs-${EFS}-pkg.tar.gz
-         http://ftp.us.xemacs.org/ftp/pub/xemacs/packages/xemacs-base-${BASE}-pkg.tar.gz"
+	 http://ftp.us.xemacs.org/ftp/pub/xemacs/packages/efs-${EFS}-pkg.tar.gz
+	 http://ftp.us.xemacs.org/ftp/pub/xemacs/packages/xemacs-base-${BASE}-pkg.tar.gz"
 HOMEPAGE="http://www.xemacs.org"
 
 DEPEND="sys-libs/ncurses
@@ -41,7 +41,7 @@ src_unpack() {
 src_compile() {                           
 local myopts
 local soundopts
-        
+	
 	if [ "`use X`" ]
 	then
 		myopts="--with-x	\
@@ -58,11 +58,11 @@ local soundopts
 	else
 		myopts="--without-x"
 	fi
-        
+	
 	use gpm	\
 		&& myopts="${myopts} --with-gpm"	\
 		|| myopts="${myopts} --without-gpm"
-        
+	
 	soundopts="native"
 	use nas	\
 		&& soundopts="$soundopts,nas"
@@ -93,13 +93,13 @@ src_install() {
 		mandir="${D}/usr/share/man/man1" \
 		infodir="${D}/usr/share/info" \
 		install || die
-        
+	
 	# Install the two packages
 	dodir /usr/lib/xemacs/xemacs-packages/
 	cd "${D}/usr/lib/xemacs/xemacs-packages/"
 	unpack "efs-${EFS}-pkg.tar.gz"
 	unpack "xemacs-base-${BASE}-pkg.tar.gz"
-        
+	
 	#remove extraneous files
 	cd "${D}/usr/share/info"
 	rm -f dir info.info texinfo* termcap*

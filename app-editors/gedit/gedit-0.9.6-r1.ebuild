@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.2 2002/08/01 11:58:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.3 2002/08/02 05:05:01 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Text Editor"
@@ -13,10 +13,10 @@ KEYWORDS="x86"
 RDEPEND="( >=gnome-base/libglade-0.17-r1
 	 <gnome-base/libglade-2.0.0 )
 	 >=gnome-base/gnome-print-0.30
-         >=gnome-base/gnome-vfs-1.0.2-r1"
+	 >=gnome-base/gnome-vfs-1.0.2-r1"
 
 DEPEND="${RDEPEND}
-        nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )"
 
 
 src_compile() {
@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-  	make prefix=${D}/usr install || die
+		make prefix=${D}/usr install || die
 
 	dodoc AUTHORS BUGS COPYING ChangeLog FAQ NEWS README* THANKS TODO
 }

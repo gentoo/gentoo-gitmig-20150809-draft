@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-3.0_pre1.ebuild,v 1.1 2002/07/28 10:03:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-3.0_pre1.ebuild,v 1.2 2002/08/02 05:05:01 seemant Exp $
 inherit kde-base
 
 need-kde 3
@@ -21,12 +21,12 @@ KEYWORDS="x86"
 S=${WORKDIR}/quanta-3.0pr1
 
 src_install() {
-    
-    kde_src_install
-    
-    dodir ${PREFIX}/share/apps/quanta/doc/
-    for x in css html javascript php; do
+	
+	kde_src_install
+	
+	dodir ${PREFIX}/share/apps/quanta/doc/
+	for x in css html javascript php; do
 	cp -a ${WORKDIR}/${x}/*.docrc ${WORKDIR}/${x}/${x} ${D}/${PREFIX}/share/apps/quanta/doc/
-    done
-    
+	done
+	
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.5 2002/07/25 20:51:49 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.6 2002/08/02 05:05:01 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="clone of Pico with more functions in a smaller size"
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install () {
-    make 	\
+	make 	\
 		DESTDIR=${D} 	\
 		install || die
 

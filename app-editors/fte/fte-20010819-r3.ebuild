@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.5 2002/07/25 19:12:09 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.6 2002/08/02 05:05:01 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lightweight text-mode editor"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip
-  	 mirror://sourceforge/${PN}/${P}-common.zip"
+		 mirror://sourceforge/${PN}/${P}-common.zip"
 HOMEPAGE="http://fte.sourceforge.net"
 
 RDEPEND=">=sys-libs/ncurses-5.2
@@ -69,7 +69,7 @@ src_install () {
 	done
 
 	dodoc Artistic CHANGES BUGS COPYING HISTORY README TODO 
-  
+	
 	dodir etc/fte
 	cp src/system.fterc ${D}/etc/fte/system.fterc
 

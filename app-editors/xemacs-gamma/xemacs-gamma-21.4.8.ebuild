@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/xemacs-gamma-21.4.8.ebuild,v 1.5 2002/08/01 12:51:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/xemacs-gamma-21.4.8.ebuild,v 1.6 2002/08/02 05:05:01 seemant Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -107,7 +107,7 @@ src_compile() {
 		myconf="${myconf} --without-postgresql"
 	use mule && myconf="${myconf} --with-mule" ||
 		myconf="${myconf} --without-mule"
-        
+	
 	local soundconf="native"
 
 	use nas	&& soundconf="${soundconf},nas"
@@ -133,7 +133,7 @@ src_install() {
 		mandir="${D}/usr/share/man/man1" \
 		infodir="${D}/usr/share/info" \
 		install gzip-el || die
-        
+	
 	# install base packages
 	dodir /usr/lib/xemacs/xemacs-packages/
 	cd ${D}/usr/lib/xemacs/xemacs-packages/
@@ -146,7 +146,7 @@ src_install() {
 		cd ${D}/usr/lib/xemacs/mule-packages/
 		unpack mule-base-${MULE}-pkg.tar.gz
 	fi
-        
+	
 	# remove extraneous files
 	cd ${D}/usr/share/info
 	rm -f dir info.info texinfo* termcap*

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Taras Glek <taras.glek@home.com>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.1.ebuild,v 1.3 2002/07/25 20:25:49 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.1.ebuild,v 1.4 2002/08/02 05:05:01 seemant Exp $
 
 S=${WORKDIR}/$PN/gtk
 MY_PV=141
@@ -19,24 +19,24 @@ KEYWORDS="x86"
 
 src_compile() {
 
-    make -C ../../scintilla/gtk || die
-    sed -e 's#usr/local#usr#g' \
+	make -C ../../scintilla/gtk || die
+	sed -e 's#usr/local#usr#g' \
 		-e 's#$(datadir)#${D}$(datadir)#g' \
 		makefile > Makefile.good || die
-    rm makefile
-    mv Makefile.good makefile
-    emake || die
+	rm makefile
+	mv Makefile.good makefile
+	emake || die
 	
 }
 
 src_install () {
 
-    dodir /usr
-    dodir /usr/bin
-    dodir /usr/share
+	dodir /usr
+	dodir /usr/bin
+	dodir /usr/share
 	use gnome && dodir /usr/share/gnome/apps/Applications
-    make prefix=${D}/usr install || die
-    mv ${D}/usr/bin/SciTE ${D}/usr/bin/scite
+	make prefix=${D}/usr install || die
+	mv ${D}/usr/bin/SciTE ${D}/usr/bin/scite
 	
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.5 2002/07/25 19:10:59 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.6 2002/08/02 05:05:01 seemant Exp $
 
 
 S=${WORKDIR}/${P}
@@ -33,11 +33,11 @@ src_unpack() {
 	# Resolves bug 2104 # ppc fix
 
 	SYSTEM_ARCH=`echo $ARCH |\
-    sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+	sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
 	if [ -z "$SYSTEM_ARCH" ]
 	then
 	 SYSTEM_ARCH=`uname -m |\
-     sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+	 sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
 	fi 
 
 	cd ${WORKDIR}
@@ -54,7 +54,7 @@ src_unpack() {
 	  ;;
 	 arm)
 	  ;;
-    esac
+	esac
 }
 
 
