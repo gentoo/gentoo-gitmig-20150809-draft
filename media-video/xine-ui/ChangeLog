@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.36 2003/08/12 01:09:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.37 2003/10/21 15:04:02 mholzer Exp $
+
+  22 Oct 2003; Martin Holzer <mholzer@gentoo.org> xine-ui-0.9.13.ebuild,
+  xine-ui-0.9.21.ebuild, xine-ui-0.9.22.ebuild:
+  added RESTRICT="nomirror"
 
   11 Aug 2003; Jason Wever <weeve@gentoo.org> xine-ui-0.9.21.ebuild:
   Added ~sparc to keywords.
