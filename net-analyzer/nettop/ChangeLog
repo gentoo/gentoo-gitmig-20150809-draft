@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nettop
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.1 2003/09/14 17:58:16 zul Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.2 2004/03/21 19:31:19 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> nettop-0.2.3.ebuild:
+  Added ~sparc keyword.
 
 *nettop-0.2.3 (14 Sep 2003)
 
