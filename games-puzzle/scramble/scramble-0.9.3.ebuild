@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/scramble-0.9.1.ebuild,v 1.3 2004/11/11 12:43:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/scramble-0.9.3.ebuild,v 1.1 2005/01/30 06:11:54 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.shiftygames.com/scramble/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2

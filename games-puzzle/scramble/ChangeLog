@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/scramble
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/ChangeLog,v 1.5 2004/11/11 12:43:25 wolf31o2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/ChangeLog,v 1.6 2005/01/30 06:11:54 mr_bones_ Exp $
+
+*scramble-0.9.3 (30 Jan 2005)
+
+  30 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org> -scramble-0.7.ebuild,
+  -scramble-0.9.1.ebuild, +scramble-0.9.3.ebuild:
+  version bump; clean old ebuilds
 
   11 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> scramble-0.9.1.ebuild:
   Added ~amd64 KEYWORD and closing bug #69754.
