@@ -1,0 +1,25 @@
+diff -u -r gnome-utils-1.4.1.orig/configure.in gnome-utils-1.4.1/configure.in
+--- gnome-utils-1.4.1.orig/configure.in	Fri Oct  5 06:02:18 2001
++++ gnome-utils-1.4.1/configure.in	Sun Oct  7 00:37:33 2001
+@@ -226,7 +226,7 @@
+ GLADE_LIBS=`gnome-config --libs libglade`
+ GLADE_CFLAGS=`gnome-config --cflags libglade`
+ AC_SUBST(GLADE_LIBS)
+-AC_SUBST(GLADE_FGLAGS)
++AC_SUBST(GLADE_CFLAGS)
+ 
+ dnl *******************************
+ dnl gtkhtml
+diff -u -r gnome-utils-1.4.1.orig/gfloppy/src/Makefile.am gnome-utils-1.4.1/gfloppy/src/Makefile.am
+--- gnome-utils-1.4.1.orig/gfloppy/src/Makefile.am	Fri Aug 24 07:19:35 2001
++++ gnome-utils-1.4.1/gfloppy/src/Makefile.am	Sun Oct  7 00:30:28 2001
+@@ -6,7 +6,8 @@
+ 	-I$(top_srcdir)/intl 			\
+ 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
+         -DGLADEDIR=\""$(gladedir)"\"           	\
+-	$(GNOME_INCLUDEDIR)
++	$(GNOME_INCLUDEDIR)			\
++	$(GLADE_CFLAGS)
+ 
+ bin_PROGRAMS = gfloppy
+ 
