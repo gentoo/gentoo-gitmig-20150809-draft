@@ -1,16 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.2 2003/02/13 14:29:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.3 2003/04/08 22:04:49 liquidx Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
 
+inherit eutils
+
 PB=ezmlm-idx
+EZMLM_P=ezmlm-0.53
+
 S2=${WORKDIR}/${PB}-${PV}
-S=${WORKDIR}/ezmlm-0.53
-GFILESDIR=${PORTDIR}/net-mail/${PB}/files/
+S=${WORKDIR}/${EZMLM_P}
 DESCRIPTION="Simple yet powerful mailing list manager for qmail."
-SRC_URI="http://gd.tuwien.ac.at/infosys/mail/qmail/ezmlm-patches/${PB}-${PV}.tar.gz http://cr.yp.to/software/ezmlm-0.53.tar.gz"
+SRC_URI="http://gd.tuwien.ac.at/infosys/mail/qmail/ezmlm-patches/${PB}-${PV}.tar.gz http://cr.yp.to/software/${EZMLM_P}.tar.gz"
 HOMEPAGE="http://www.ezmlm.org"
 SLOT="0"
 LICENSE="as-is"
@@ -33,6 +36,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S2}
 	mv ${S2}/* ${S} || die
+	
 	cd ${S}
 	patch < idx.patch || die
 	#remove cat-man pages
@@ -51,9 +55,10 @@ src_unpack() {
 	#from the envelope sender and often reflects the local MTA rather than the user's 
 	#"official" email address... enable this option by using "-f" with ezmlm-issub and/or
 	#ezmlm-gate.
-	cp ${GFILESDIR}/get_header.[ch] . || die
-	patch < ${GFILESDIR}/from-header.patch || die
+	cp ${FILESDIR}/get_header.[ch] . || die
+	patch < ${FILESDIR}/from-header.patch || die
 	echo ">>> Successfully applied Ed Korthof's From: header patch."
+	epatch ${FILESDIR}/${EZMLM_P}-errno.patch
 }
 
 src_compile() {

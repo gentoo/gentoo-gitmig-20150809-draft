@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/ezmlm-idx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.4 2003/02/12 08:10:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.5 2003/04/08 22:04:49 liquidx Exp $
 
 *ezmlm-idx-0.40-r2 (30 Nov 2002)
+
+  08 Apr 2003; Alastair Tse <liquidx@gentoo.org> ezmlm-idx-0.40-r2.ebuild:
+  errno fix for glibc-2.3.2. thanks to Sebastian Klemke <packet@berlin.ccc.de>.
 
   30 Nov 2002; Daniel Robbins <drobbins@gentoo.org>: Added Ed Korthof's
   From: header patch to fix some issues we're experiencing on gentoo.org;
