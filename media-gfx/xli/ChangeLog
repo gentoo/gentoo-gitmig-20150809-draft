@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/xli
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.21 2005/03/17 19:44:30 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.22 2005/03/18 23:39:25 cryos Exp $
+
+  18 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> xli-1.17.0-r1.ebuild,
+  xli-1.17.0.ebuild:
+  Removing full path from xmkmf call as it is not needed, and breaks systems
+  with no X11R6 symlink, bug 85797.
 
   17 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> xli-1.17.0-r1.ebuild:
   Marked stable on amd64 for gnupg-1.4.1, bug 85547.
@@ -11,7 +16,7 @@
   15 Mar 2005; Hardave Riar <hardave@gentoo.org> xli-1.17.0-r1.ebuild:
   Keyworded ~mips, bug #76234.
 
-  01 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> xli-1.17.0-r1.ebuild:
+  01 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> xli-1.17.0-r1.ebuild:
   Stable on alpha.
 
   28 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> xli-1.17.0-r1.ebuild:
@@ -23,7 +28,7 @@
   28 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> xli-1.17.0-r1.ebuild:
   Stable on sparc wrt #79762
 
-  28 Feb 2005; Olivier Crête <tester@gentoo.org> xli-1.17.0-r1.ebuild:
+  28 Feb 2005; Olivier CrÃªte <tester@gentoo.org> xli-1.17.0-r1.ebuild:
   Stable on x86 per security bug #79762
 
 *xli-1.17.0-r1 (28 Feb 2005)
@@ -31,7 +36,7 @@
   28 Feb 2005; Tavis Ormandy <taviso@gentoo.org> +xli-1.17.0-r1.ebuild:
   new snapshot with security fixes.
 
-  05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> xli-1.17.0.ebuild:
+  05 Feb 2005; Bryan Ãstergaard <kloeri@gentoo.org> xli-1.17.0.ebuild:
   ~alpha keyworded, bug 76234.
 
   03 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> xli-1.17.0.ebuild:

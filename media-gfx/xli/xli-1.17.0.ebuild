@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.19 2005/03/16 20:22:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.20 2005/03/18 23:39:25 cryos Exp $
 
 inherit alternatives
 
@@ -45,7 +45,7 @@ src_unpack() {
 }
 
 src_compile() {
-	/usr/X11R6/bin/xmkmf || die
+	xmkmf || die "xmkmf died."
 
 	emake CDEBUGFLAGS="${CFLAGS}" || die
 }

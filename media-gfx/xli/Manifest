@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 14d64b13af8b0159de950bf773e5019c xli-1.17.0-r1.ebuild 2211
-MD5 e8f42f1eb29e17efb719c0a03fbe751c ChangeLog 2335
+MD5 d00d85d03560cfd6ce5b093f3456a7ca xli-1.17.0-r1.ebuild 2212
+MD5 5e70eb876fe5cdec1ec26ade94de0c93 ChangeLog 2550
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 30914776e4be0070e5966a350f3d8586 xli-1.17.0.ebuild 2117
+MD5 3dfd4609226054038e49e9be9a9acb9f xli-1.17.0.ebuild 2114
 MD5 88664b266f34957e871e07457c605227 files/Xli.ad 123
 MD5 4f4d73aa9e90de9931e810d283ab6db6 files/digest-xli-1.17.0-r1 66
 MD5 56c2673ad567dbf5ca2163c932571234 files/digest-xli-1.17.0 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCOd4untT9W3vfTuoRAuoBAJ9+5bSKM14tbnv4C+pXvCYXicQaiQCgq1vk
-hJu5C2bVWbU3tKwN7x89u18=
-=YsZv
+iD8DBQFCO2bIntT9W3vfTuoRAgh4AKC18zgoiymHtleY3jUHNBZ7VbHcQgCfeq93
+9oHUNk4/gLZxGNDkexfVMGg=
+=77vc
 -----END PGP SIGNATURE-----
