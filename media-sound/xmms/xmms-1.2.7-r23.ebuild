@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.2 2003/07/18 09:17:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.3 2003/07/19 06:49:08 seemant Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -88,7 +88,9 @@ src_unpack() {
 	elibtoolize
 
 	if use nls; then
-		epatch ${FILESDIR}/${PN}-gettext-fix.patch
+		if has_version '>=sys-devel/gettext-0.12'; then
+			epatch ${FILESDIR}/${PN}-gettext-fix.patch
+		fi
 	fi
 
 	echo ">>> Reconfiguring..."

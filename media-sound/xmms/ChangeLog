@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.56 2003/07/18 08:46:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.57 2003/07/19 06:49:08 seemant Exp $
+
+  18 Jul 2003; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r23.ebuild:
+  gettext patch only applied if gettext-0.12 or greater is installed
 
 *xmms-1.2.7-r23 (18 Jul 2003)
 
