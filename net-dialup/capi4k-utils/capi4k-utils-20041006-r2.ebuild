@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r2.ebuild,v 1.1 2004/11/13 10:29:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r2.ebuild,v 1.2 2004/11/13 12:22:37 mrness Exp $
 
-inherit eutils rpm
+inherit eutils
 
 YEAR_PV=${PV:0:4}
 MON_PV=${PV:4:2}
@@ -20,8 +20,7 @@ KEYWORDS="~x86"
 IUSE=""
 S=${WORKDIR}/${PN}
 SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/${MY_P}.tar.gz
-	ftp://ftp.in-berlin.de/pub/capi4linux/OLD/${MY_P}.tar.gz
-	ftp://ftp.suse.com/pub/suse/i386/9.2/suse/src/i4l-base-2004.9.27-2.src.rpm"
+	ftp://ftp.in-berlin.de/pub/capi4linux/OLD/${MY_P}.tar.gz"
 
 DEPEND="virtual/linux-sources
 	dev-lang/perl
@@ -29,12 +28,11 @@ DEPEND="virtual/linux-sources
 	virtual/os-headers
 	sys-devel/automake
 	sys-devel/autoconf
-	sys-devel/libtool
-	app-arch/rpm"
+	sys-devel/libtool"
 RDEPEND=""
 
 src_unpack() {
-	rpm_src_unpack || die "failed to unpack sources or firmware files"
+	unpack ${A} || die "failed to unpack sources"
 	cd ${S}
 	# set our config
 	cp -f ${MY_FILES}/config .config
@@ -66,7 +64,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /dev
+	dodir /dev /usr/share/isdn
 	emake DESTDIR=${D} install || die "make install failed"
 
 	# install docs
@@ -90,11 +88,6 @@ src_install() {
 
 	# very useful tool ;-)
 	dobin scripts/isdncause
-
-	# install AVM firmware files
-	insinto /usr/share/isdn
-	insopts -m 0444
-	doins ${WORKDIR}/i4l_suse/firm/{*.t4,*.frm,c[24].bin}
 }
 
 pkg_postinst() {
@@ -102,6 +95,7 @@ pkg_postinst() {
 	einfo "/usr/share/doc/${PN}/README.gentoo.gz"
 	einfo ""
 	einfo "Annotation for active AVM ISDN boards (B1 ISA/PCI, ...):"
-	einfo "This ebuild has installed a bunch of firmware files"
-	einfo "which are to be found in /usr/share/isdn"
+	einfo "Please run the following command:"
+	einfo "  emerge suse-isdn-firmware"
+	einfo "You will probably find your board's firmware in /usr/share/isdn"
 }
