@@ -1,6 +1,12 @@
 # ChangeLog for net-news/slrn
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.11 2003/07/13 16:53:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.12 2003/09/05 05:24:31 solar Exp $
+
+*slrn-0.9.8.0 (05 Sep 2003)
+
+  05 Sep 2003; <solar@gentoo.org> slrn-0.9.8.0.ebuild:
+  version bump to fix potential XRef buffer overflow vulnerabilty. fixes bug
+  #27850
 
   12 Jun 2003; <msterret@gentoo.org> slrn-0.9.7.4-r1.ebuild,
   slrn-0.9.7.4.ebuild:
