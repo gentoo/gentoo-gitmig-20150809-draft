@@ -1,17 +1,29 @@
-MD5 8b151f7c92d62419912253ca8e3e9bcc ChangeLog 7452
-MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f85484f4c2a59ccdd83eb034e2db18bf xmule-1.9.4.ebuild 1075
+MD5 a110bede2c7ff748820f7d5f90f4d01f xmule-1.9.3.ebuild 1038
+MD5 b9a11eca73cdaaec68c8fee13cc3ce42 xmule-1.9.4b.ebuild 1052
 MD5 0d8a39bcff32bccb63a37704a7f079bd xmule-1.8.4-r1.ebuild 1030
+MD5 a3ea19dcaa7f533fdbc11d9ef7d72eb4 xmule-1.10.0.ebuild 1077
 MD5 ac772dd3ddd27d3637f09b1c23673eac xmule-1.9.0.ebuild 1040
 MD5 633fe0e2cf43f3d343c4ddd1f762c7ba xmule-1.9.1b.ebuild 1041
+MD5 1ab863304254a977ca2f5bc59594ed99 ChangeLog 7587
 MD5 fc178c02be80f691b52248e5b5304573 xmule-1.9.2.ebuild 1040
-MD5 a110bede2c7ff748820f7d5f90f4d01f xmule-1.9.3.ebuild 1038
-MD5 f85484f4c2a59ccdd83eb034e2db18bf xmule-1.9.4.ebuild 1075
-MD5 b9a11eca73cdaaec68c8fee13cc3ce42 xmule-1.9.4b.ebuild 1052
-MD5 7af93e9c27cecc95812aaf13b2579dc9 files/digest-xmule-1.8.4-r1 65
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+MD5 bf88f1c0b86193f23d74fdbbcd3067fb files/xmule-1.9.4.diff 1294
 MD5 83413c32a94e2597771601d45b4ac116 files/digest-xmule-1.9.0 65
-MD5 61e084b494702755988fa609d01c11d1 files/digest-xmule-1.9.1b 66
 MD5 0d71e38e3e11f5e73c79b3699065a4b9 files/digest-xmule-1.9.2 65
 MD5 5eaa6ecd6808f9f812b563051c8e22e8 files/digest-xmule-1.9.3 65
 MD5 640c277c4bfab17696b3222509f2c9d4 files/digest-xmule-1.9.4 65
-MD5 bf88f1c0b86193f23d74fdbbcd3067fb files/xmule-1.9.4.diff 1294
+MD5 196bcbbfbdaaaaf0a59fefae64628be6 files/digest-xmule-1.10.0 66
+MD5 61e084b494702755988fa609d01c11d1 files/digest-xmule-1.9.1b 66
 MD5 2fe31de94e8e9c24ce6b0506274a42b2 files/digest-xmule-1.9.4b 66
+MD5 7af93e9c27cecc95812aaf13b2579dc9 files/digest-xmule-1.8.4-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCQKNAZ/iYVBmujdURAp4rAJ46sN+Es43DvH0pyBngBxgZwyXdJgCgmj7u
+ZOlA09XcDe6w9UTf5EdR+tc=
+=xcLI
+-----END PGP SIGNATURE-----
