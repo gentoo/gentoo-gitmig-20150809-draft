@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> (18 Jul 2002)
+# masked for testing
+=media-sound/xmms-1.2.7-r12
+
 # danarmak@gentoo.org (18 Jul 2002)
 # new qt-3.0.5 isn't binary compatible with previous versions, kdelibs etc.
 # have to be recompiled when upgrading. masked for now
