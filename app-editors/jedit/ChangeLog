@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.49 2005/01/01 13:28:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.50 2005/02/28 13:23:54 luckyduck Exp $
+
+*jedit-4.2-r1 (28 Feb 2005)
+
+  28 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +jedit-4.2-r1.ebuild:
+  applied a patch which was suggested by Diego Pettenò
+  <dgp85@users.sourceforge.net> and made further improvements to the ebuild.
+  Fixes #81884.
 
   27 Dec 2004; Ray Russell Reese III <anti@gentoo.org> jedit-4.2.ebuild:
   Added kde and gnome USE flags that provide a jedit.desktop. Resolves bug #49406
