@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.120.ebuild,v 1.3 2004/07/14 19:45:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.120.ebuild,v 1.4 2004/08/03 11:49:17 dholm Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cpan.org/authors/id/R/RW/RWMJ/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="postgres"
 SRC_TEST="do"
 
