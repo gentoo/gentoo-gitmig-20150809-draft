@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.7.1.ebuild,v 1.1 2003/12/06 20:25:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.7.1.ebuild,v 1.2 2004/01/06 03:39:39 avenj Exp $
 
 MY_P=${P//a}
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 IUSE="nls"
 
