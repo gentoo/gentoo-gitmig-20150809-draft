@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.4-r2.ebuild,v 1.1 2002/02/24 19:11:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5.ebuild,v 1.1 2002/03/17 21:47:21 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Virtual File System."
@@ -14,6 +14,7 @@ RDEPEND=">=gnome-base/gconf-1.0.4-r2
 	 >=sys-apps/bzip2-1.0.2
 	 ssl? ( dev-libs/openssl )"
 
+
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.8.0
 	>=dev-util/intltool-0.11
@@ -21,6 +22,13 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	local myconf
+
+	if [ -z "`use nls`" ]
+	then
+		myconf="${myconf} --disable-nls"
+		mkdir intl
+		touch intl/libgettext.h
+	fi
 
 	./configure --host=${CHOST} \
 		    --prefix=/usr \

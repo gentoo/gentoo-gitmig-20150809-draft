@@ -1,6 +1,8 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.4 2002/03/10 09:03:18 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.5 2002/03/17 21:47:21 azarah Exp $
+
+*gnome-vfs-1.0.5 (16 Mar 2002)
 
 *gnome-vfs-1.0.4-r3 (10 Mar 2002)
 
