@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.9.1.ebuild,v 1.10 2005/03/31 20:31:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.9.1.ebuild,v 1.11 2005/04/02 21:47:51 nerdboy Exp $
 
 DESCRIPTION="Documentation and analysis tool for C++, C, Java, IDL, PHP and C#"
 HOMEPAGE="http://www.doxygen.org/"
@@ -34,7 +34,7 @@ src_compile() {
 
 	# ./configure and compile
 	./configure ${confopts} || die '"./configure" failed.'
-	emake all || die '"emake all" failed.'
+	make DESTDIR="${D}" all || die '"make all" failed.'
 
 	# generate html and pdf (if tetex in use) documents.
 	# errors here are not considered fatal, hence the ewarn message
