@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sh-utils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.26 2003/12/29 03:45:19 kumba Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.27 2004/01/24 17:49:08 gustavoz Exp $
+
+  24 Jan 2004; <gustavoz@gentoo.org> sh-utils-2.0.15-r1.ebuild:
+  stable on sparc - less than -r1 can cause problems
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> sh-utils-2.0.15-r1.ebuild:
   Move to mips stable (~mips -> mips)
