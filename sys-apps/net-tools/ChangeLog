@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.33 2004/07/17 05:28:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.34 2004/07/17 08:37:38 mr_bones_ Exp $
+
+  17 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  net-tools-1.60-r8.ebuild:
+  use emake (work around buggy makefiles); error check; tidy
 
   16 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   -net-tools-1.60-r7.ebuild:

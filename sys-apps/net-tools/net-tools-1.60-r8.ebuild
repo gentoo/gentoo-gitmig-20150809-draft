@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r8.ebuild,v 1.5 2004/06/24 22:19:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r8.ebuild,v 1.6 2004/07/17 08:37:38 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -18,7 +18,10 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=sys-apps/sed-4"
 
 src_unpack() {
-	use static && append-flags -static && append-ldflags -static
+	if use static ; then
+		append-flags -static
+		append-ldflags -static
+	fi
 
 	PATCHDIR=${WORKDIR}/${P}-gentoo
 
@@ -50,6 +53,7 @@ src_unpack() {
 	cp ${PATCHDIR}/net-tools-1.60-config.make config.make
 
 	sed -i \
+		-e 's/^libdir:/libdir: version.h/' \
 		-e "s:-O2 -Wall -g:${CFLAGS}:" \
 		-e "/^LOPTS =/ s/\$/${CFLAGS}/" Makefile \
 		|| die "sed Makefile failed"
@@ -74,29 +78,28 @@ src_unpack() {
 }
 
 src_compile() {
-	# Changing "emake" to "make" closes half of bug #820;
-	# configure is run from *inside* the Makefile, sometimes
-	# breaking parallel makes (if ./configure doesn't finish first)
-	emake -j1 || die
+	#configure shouldn't run anymore so bug #820 shouldn't apply...
+	emake libdir || die "emake libdir failed"
+	emake || die "emake failed"
 
 	if use nls ; then
-		cd po
-		make || die
-		cd ..
+		emake i18ndir || die "emake i18ndir failed"
 	fi
 
-	use uclibc || $(gcc-getCC) ${CFLAGS} -o ether-wake ether-wake.c || die "ether-wake failed to build"
+	if ! use uclibc ; then
+		$(gcc-getCC) ${CFLAGS} -o ether-wake ether-wake.c || die "ether-wake failed to build"
+	fi
 }
 
 src_install() {
-	make BASEDIR=${D} install || die
+	make BASEDIR="${D}" install || die "make install failed"
 
-	use uclibc || dosbin ether-wake || die
-	mv ${D}/bin/* ${D}/sbin
-	for i in hostname domainname netstat dnsdomainname ypdomainname nisdomainname
-	do
-		mv ${D}/sbin/${i} ${D}/bin
-	done
+	if ! use uclibc ; then
+		dosbin ether-wake || die "dosbin failed"
+	fi
+	mv ${D}/bin/* ${D}/sbin || die "mv failed"
+	mv ${D}/sbin/{hostname,domainname,netstat,dnsdomainname,ypdomainname,nisdomainname} ${D}/bin \
+		|| die "mv failed"
 	use uclibc && rm -f ${D}/bin/{yp,nis}domainname
 	dodir /usr/bin
 	dosym /bin/hostname /usr/bin/hostname
@@ -106,8 +109,7 @@ src_install() {
 		dodoc README README.ipv6 TODO
 	else
 		#only install /bin/hostname
-		rm -rf ${D}/usr
-		rm -rf ${D}/sbin
+		rm -rf ${D}/usr ${D}/sbin
 		rm -f ${D}/bin/{domainname,netstat,dnsdomainname}
 		rm -f ${D}/bin/{ypdomainname,nisdomainname}
 	fi
