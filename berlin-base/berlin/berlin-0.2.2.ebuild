@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/berlin-base/berlin/berlin-0.2.2.ebuild,v 1.2 2002/04/28 04:03:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/berlin-base/berlin/berlin-0.2.2.ebuild,v 1.3 2002/05/27 17:27:37 drobbins Exp $
 
 A0=Berlin-${PV}.tar.bz2
 A1=Prague-${PV}.tar.bz2
@@ -12,13 +12,13 @@ A5=Berlin-Clients-Perl-${PV}.tar.bz2
 A6=Berlin-Clients-Python-${PV}.tar.bz2
 S=${WORKDIR}/Berlin-${PV}
 DESCRIPTION="A new alternative to X"
-SRC_URI="http://prdownloads.sourceforge.net/berlin/${A0}
-		 http://prdownloads.sourceforge.net/berlin/${A1}
-		 http://prdownloads.sourceforge.net/berlin/${A2}
-		 http://prdownloads.sourceforge.net/berlin/${A3}
-		 http://prdownloads.sourceforge.net/berlin/${A4}
-		 http://prdownloads.sourceforge.net/berlin/${A5}
-		 http://prdownloads.sourceforge.net/berlin/${A6}"
+SRC_URI="mirror://sourceforge/berlin/${A0}
+		 mirror://sourceforge/berlin/${A1}
+		 mirror://sourceforge/berlin/${A2}
+		 mirror://sourceforge/berlin/${A3}
+		 mirror://sourceforge/berlin/${A4}
+		 mirror://sourceforge/berlin/${A5}
+		 mirror://sourceforge/berlin/${A6}"
 
 HOMEPAGE="http://www.berlin-consortium.org"
 

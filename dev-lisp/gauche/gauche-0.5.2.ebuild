@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.5.2.ebuild,v 1.1 2002/04/13 22:05:00 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.5.2.ebuild,v 1.2 2002/05/27 17:27:37 drobbins Exp $
 
 S=${WORKDIR}/Gauche-${PV}
 DESCRIPTION="A Unix system friendly scheme interpreter"
-SRC_URI="http://prdownloads.sourceforge.net/gauche/Gauche-${PV}.tgz"
+SRC_URI="mirror://sourceforge/gauche/Gauche-${PV}.tgz"
 HOMEPAGE="http://gauche.sf.net"
 
 DEPEND="virtual/glibc"

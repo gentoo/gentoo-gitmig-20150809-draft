@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Terje Kvernes <terjekv@math.uio.no>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ggz-client-libs/ggz-client-libs-0.0.5.ebuild,v 1.2 2002/04/27 21:46:44 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ggz-client-libs/ggz-client-libs-0.0.5.ebuild,v 1.3 2002/05/27 17:27:37 drobbins Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="The client libraries for GGZ Gaming Zone"
 
-SRC_URI="http://prdownloads.sourceforge.net/ggz/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/ggz/${P}.tar.gz"
 
 HOMEPAGE="http://ggz.sourceforge.net/"
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird-docs/firebird-docs-1.0.ebuild,v 1.1 2002/03/20 19:19:43 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird-docs/firebird-docs-1.0.ebuild,v 1.2 2002/05/27 17:27:37 drobbins Exp $
 
 S=${WORKDIR}
 
 DESCRIPTION="Firebird is a relational database offering many ANSI SQL-92 features that runs on Linux, Windows, and a variety of Unix platforms. Firebird offers excellent concurrency, high performance, and powerful language support for stored procedures and triggers. It has been used in production systems, under a variety of names since 1981."
-SRC_URI="http://prdownloads.sourceforge.net/firebird/Firebird_v1_ReleaseNotes.pdf
+SRC_URI="mirror://sourceforge/firebird/Firebird_v1_ReleaseNotes.pdf
 	ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip"
 
 HOMEPAGE="http://firebird.sourceforge.net/"

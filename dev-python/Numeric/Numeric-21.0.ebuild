@@ -5,7 +5,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="numerical python module"
-SRC_URI="http://prdownloads.sourceforge.net/numpy/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/numpy/${P}.tar.gz"
 HOMEPAGE="http://www.pfdubois.com/numpy/"
 
 # 2.1 gave sandbox violations see #21

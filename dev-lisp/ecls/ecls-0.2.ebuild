@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.2.ebuild,v 1.2 2001/08/13 00:58:30 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.2.ebuild,v 1.3 2002/05/27 17:27:37 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Embeddable Common Lisp 'Spain'"
-SRC_URI="http://prdownloads.sourceforge.net/ecls/${P}.tgz"
+SRC_URI="mirror://sourceforge/ecls/${P}.tgz"
 
 PROVIDE="virtual/commonlisp"
 

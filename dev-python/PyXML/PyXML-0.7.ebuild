@@ -5,7 +5,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A collection of libraries to process XML with Python."
-SRC_URI="http://prdownloads.sourceforge.net/pyxml/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/pyxml/${P}.tar.gz"
 HOMEPAGE="http://pyxml.sourceforge.net/"
 
 DEPEND="virtual/python"

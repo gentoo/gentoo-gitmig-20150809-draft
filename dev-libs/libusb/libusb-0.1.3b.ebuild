@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.3b.ebuild,v 1.2 2001/11/10 12:05:20 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.3b.ebuild,v 1.3 2002/05/27 17:27:37 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Userspace access to USB devices"
-SRC_URI="http://prdownloads.sourceforge.net/libusb/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/libusb/${P}.tar.gz"
 HOMEPAGE="http://libusb.sourceforge.net"
 
 DEPEND="virtual/glibc"

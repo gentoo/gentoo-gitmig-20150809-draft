@@ -7,7 +7,7 @@ S=${WORKDIR}/${P}
 
 DESCRIPTION="A blending of the wxWindows C++ class library with Python."
 
-SRC_URI="http://prdownloads.sourceforge.net/wxpython/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/wxpython/${P}.tar.gz"
 
 HOMEPAGE="http://www.wxpython.org/"
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@uwyn.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-1.0.5.2-r1.ebuild,v 1.1 2002/03/22 09:39:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-1.0.5.2-r1.ebuild,v 1.2 2002/05/27 17:27:37 drobbins Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="IBPP, a C++ client API for firebird 1.0"
-SRC_URI="http://prdownloads.sourceforge.net/ibpp/ibpp-1-0-5-2-src.zip"
+SRC_URI="mirror://sourceforge/ibpp/ibpp-1-0-5-2-src.zip"
 
 DEPEND=">=sys-devel/gcc-2.95.3-r5
 	>=dev-db/firebird-1.0"

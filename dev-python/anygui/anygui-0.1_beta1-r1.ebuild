@@ -6,7 +6,7 @@
 pv="0.1b1"
 S=${WORKDIR}/${PN}-${pv}
 DESCRIPTION="Generic GUI Module for Python"
-SRC_URI="http://prdownloads.sourceforge.net/anygui/${PN}-${pv}.tar.gz"
+SRC_URI="mirror://sourceforge/anygui/${PN}-${pv}.tar.gz"
 HOMEPAGE="http://anygui.sourceforge.net/"
 
 DEPEND=">=dev-lang/python-2.0

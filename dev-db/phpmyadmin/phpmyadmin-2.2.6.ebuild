@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.2.6.ebuild,v 1.1 2002/05/01 04:02:49 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.2.6.ebuild,v 1.2 2002/05/27 17:27:37 drobbins Exp $
 
 MY_PN=phpMyAdmin
 
 S=${WORKDIR}/${MY_PN}-${PV}
 DESCRIPTION="Web-based administration for MySQL database in php"
-SRC_URI="http://prdownloads.sourceforge.net/${PN}/${MY_PN}-${PV}-php.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}-php.tar.bz2"
 HOMEPAGE="http://phpmyadmin.sourceforge.net/"
 
 DEPEND=">=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38 >=dev-lang/php-4.1.2-r5"

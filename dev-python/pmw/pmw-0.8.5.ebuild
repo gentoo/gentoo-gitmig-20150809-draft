@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-0.8.5.ebuild,v 1.1 2002/03/19 17:45:32 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-0.8.5.ebuild,v 1.2 2002/05/27 17:27:37 drobbins Exp $
 
 DESCRIPTION="A toolkit for building high-level compound widgets in Python using the Tkinter module."
 HOMEPAGE="http://pmw.sourceforge.net/"
 
 DEPEND=">=dev-lang/python-2.1"
 
-SRC_URI="http://prdownloads.sourceforge.net/pmw/Pmw.${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/pmw/Pmw.${PV}.tar.gz"
 S="${WORKDIR}"/Pmw
 
 src_compile() {

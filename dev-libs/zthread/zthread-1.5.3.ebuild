@@ -6,7 +6,7 @@
 S=${WORKDIR}/ZThread-${PV}
 
 DESCRIPTION="A Platform-Independent Object-Oriented Threading Architecture"
-SRC_URI="http://prdownloads.sourceforge.net/zthread/ZThread-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/zthread/ZThread-${PV}.tar.gz"
 HOMEPAGE="http://www.cs.buffalo.edu/~crahen/projects/zthread/"
 
 DEPEND=">=sys-libs/glibc-2.2.4"

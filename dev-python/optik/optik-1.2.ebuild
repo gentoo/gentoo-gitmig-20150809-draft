@@ -6,7 +6,7 @@
 S="${WORKDIR}/Optik-1.2"
 
 DESCRIPTION="Optik is a powerful, flexible, easy-to-use command-line parsing library for Python."
-SRC_URI="http://prdownloads.sourceforge.net/optik/Optik-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/optik/Optik-${PV}.tar.gz"
 HOMEPAGE="http://optik.sourceforge.net/"
 
 DEPEND="virtual/python"
