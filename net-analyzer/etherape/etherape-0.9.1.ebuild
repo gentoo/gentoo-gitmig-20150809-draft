@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.0.ebuild,v 1.8 2005/01/08 08:24:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.1.ebuild,v 1.1 2005/01/08 08:24:22 dragonheart Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://etherape.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND=">=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.0
@@ -19,23 +19,8 @@ DEPEND=">=gnome-base/libglade-2.0
 	sys-devel/gettext
 	sys-devel/autoconf"
 
-src_unpack() {
-	unpack ${A} ; cd ${S}
-
-	epatch ${FILESDIR}/${P}-libpcap-include.patch
-	epatch ${FILESDIR}/${P}-res_mkquery.patch
-}
-
-src_compile() {
-	aclocal
-	autoconf
-
-	econf || die
-	emake || die
-}
-
 src_install() {
-	emake DESTDIR=${D} install || die "install failed"
+	emake DESTDIR=${D} install || die "failed to install"
 
 	# move shortcut to gnome2 compliant location
 	dodir /usr/share/applications
