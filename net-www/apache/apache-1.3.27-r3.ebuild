@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r3.ebuild,v 1.1 2003/02/23 22:20:54 mholzer Exp $
-
-IUSE="ssl"
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r3.ebuild,v 1.2 2003/02/24 20:06:29 mholzer Exp $
 
 mod_ssl_ver=2.8.11-${PV}
 
@@ -19,8 +17,7 @@ SRC_URI="http://httpd.apache.org/dist/httpd/apache_${PV}.tar.gz
 DEPEND="sys-devel/perl sys-libs/db
 	>=dev-libs/mm-1.1.3
 	>=sys-libs/gdbm-1.8
-	>=dev-libs/expat-1.95.2
-	ssl? ( >=dev-libs/openssl-0.9.6i )"
+	>=dev-libs/expat-1.95.2"
 LICENSE="Apache-1.1"
 SLOT="1"
 

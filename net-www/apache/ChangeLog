@@ -1,13 +1,19 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.43 2003/02/24 20:01:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.44 2003/02/24 20:06:29 mholzer Exp $
 
 *apache-1.3.27-r4 (23 Feb 2003)
 
   23 Feb 2003; Martin Holzer <mholzer@gentoo.org> apache-1.3.27-r4.ebuild files/digest-apache-1.3.27-r4 ChangeLog :
   Added openssl to DEPEND.
 
+  24 Feb 2003; Martin Holzer <mholzer@gentoo.org> apache-1.3.27-r4.ebuild ChangeLog :
+  Removed Changes done from -r2 to -r4.
+
 *apache-1.3.27-r3 (23 Feb 2003)
+
+  24 Feb 2003; Martin Holzer <mholzer@gentoo.org> apache-1.3.27-r3.ebuild ChangeLog :
+  Removed Changes done from -r1 to -r3.
 
   23 Feb 2003; Martin Holzer <mholzer@gentoo.org> apache-1.3.27-r3.ebuild files/digest-apache-1.3.27-r3 ChangeLog :
   Added openssl to DEPEND.
