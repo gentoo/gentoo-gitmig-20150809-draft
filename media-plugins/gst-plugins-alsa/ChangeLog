@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-alsa
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.12 2004/07/13 09:30:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.13 2004/07/31 03:43:07 spider Exp $
+
+  31 Jul 2004; <spider@gentoo.org> gst-plugins-alsa-0.8.2-r1.ebuild:
+  stable on x86 for gnome 2.6.2
 
   13 Jul 2004; foser <foser@gentoo.org> gst-plugins-alsa-0.8.2-r1.ebuild :
   Add eutils inherit (#56819)
