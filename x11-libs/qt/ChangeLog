@@ -1,10 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.185 2005/01/24 11:10:03 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.186 2005/01/28 19:05:36 greg_g Exp $
 
 *qt-3.3.3-r3 (24 Jan 2005)
 
-  24 Jan 2005; Gregorio Guidi <greg@gentoo.org>
+  24 Jan 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/qt-3.3.3-amd64-fullscreen.patch,
   +files/qt-3.3.3-flickerfree_qiconview_buffered.patch,
   +files/qt-3.3.3-flickerfree_qscrollview_fixwindowactivate.patch,
