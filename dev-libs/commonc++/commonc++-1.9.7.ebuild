@@ -15,6 +15,16 @@ DEPEND="virtual/glibc
 	sys-libs/zlib
 	dev-libs/libxml2"
 
+SLOT="0"
+LICENSE="GPL-2"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${FILESDIR}/commmonc++-0.1.patch || die
+
+}
 src_compile() {
 
     cd ${S}
@@ -29,5 +39,6 @@ src_install () {
 
     make prefix=${D} install || die
     dodoc AUTHORS INSTALL NEWS OVERVIEW.TXT ChangeLog\
-		  README THANKS TODO 
+		  README THANKS TODO COPYING COPYING.addendum
+	dohtml doc/*
 }
