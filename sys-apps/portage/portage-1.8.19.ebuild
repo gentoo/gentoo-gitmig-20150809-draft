@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.19.ebuild,v 1.2 2002/04/09 19:44:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.19.ebuild,v 1.3 2002/04/10 05:59:36 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -39,9 +39,6 @@ pkg_preinst() {
 }
 
 src_install() {
-	#dep cache
-	dodir /var/cache/edb/dep
-
 	#config files
 	cd ${S}/cnf
 	insinto /etc
@@ -134,6 +131,6 @@ pkg_postinst() {
 	then
 		rm -rf ${ROOT}var/cache/edb/dep/*
 	else
-		mkdir ${ROOT}var/cache/edb/dep
+		install -d ${ROOT}var/cache/edb/dep
 	fi	
 }
