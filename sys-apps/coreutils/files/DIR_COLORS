@@ -4,7 +4,7 @@
 # You can copy this file to .dir_colors in your $HOME directory to override
 # the system defaults.
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.2 2004/05/16 04:55:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.3 2004/06/30 15:13:00 vapier Exp $
 
 # COLOR needs one of these arguments: 'tty' colorizes output to ttys, but not
 # pipes. 'all' adds color characters to all output. 'none' shuts colorization
@@ -96,6 +96,7 @@ EXEC 01;32
 .gz  01;31
 .bz2 01;31
 .bz  01;31
+.tbz2 01;31
 .tz  01;31
 .deb 01;31
 .rpm 01;31
@@ -137,3 +138,17 @@ EXEC 01;32
 .fli 01;35  # AutoDesk Animator
 .gl 01;35
 .dl 01;35
+
+.pdf 00;32 # Document files
+.ps 00;32
+.txt 00;32
+.log 00;32
+.tex 00;32
+.doc 00;32
+
+.mp3 00;36 # Audio files
+.wav 00;36
+.mid 00;36
+.midi 00;36
+.au 00;36
+.ogg 00;36
