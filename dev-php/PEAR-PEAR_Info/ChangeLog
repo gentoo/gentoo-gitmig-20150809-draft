@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-PEAR_Info
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.1 2003/12/25 14:14:18 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.2 2004/01/10 00:53:12 coredumb Exp $
+
+*PEAR-PEAR_Info-1.5.2 (10 Jan 2004)
+
+  10 Jan 2004; Tal Peer <coredumb@gentoo.org> PEAR-PEAR_Info-1.5.2.ebuild:
+  Version bump.
 
 *PEAR-PEAR_Info-1.5.1 (25 Dec 2003)
 
