@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.6.ebuild,v 1.1 2002/12/18 10:32:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.2.ebuild,v 1.1 2003/01/15 01:19:22 azarah Exp $
 
 IUSE="bootstrap build"
 
-SV="1.4.2.6"
+SV="1.4.3.2"
 SVREV=""
 # SysvInit version
 SVIV="2.84"
@@ -410,6 +410,9 @@ pkg_preinst() {
 	then
 		rm -f ${ROOT}/usr/lib/X11
 	fi
+
+	# Remove old backup /etc/conf.d/rc files ...
+	rm -f ${ROOT}/etc/conf.d/._cfg????_rc
 }
 
 pkg_postinst() {
@@ -419,7 +422,7 @@ pkg_postinst() {
 	defaltmerge
 	# We dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
-	if [ "${altmerge}" -eq "0" ]
+	if [ "${altmerge}" -eq "0" -a ! -e ${ROOT}/dev/.devfsd ]
 	then
 		cd ${ROOT}/dev
 		# These devices are also needed by many people and should be included
@@ -492,17 +495,34 @@ EOF
 		chgrp utmp ${ROOT}/var/${x}
 		chmod 0664 ${ROOT}/var/${x}
 	done
-					
 
-	# Handle the ${svcdir} that changed in location
-	if [ ! -d ${ROOT}/${svcdir}/started/ ] && \
-	   [ -z "`use bootstrap`" -a -z "`use build`" ]
+	# Make sure we get everything ready for $svcdir that moved to
+	# /var/state/init.d ....
+	if [ -z "`use build`" -a -z "`use bootstrap`" ]
 	then
-		mkdir -p ${ROOT}/${svcdir}
-		mount -t tmpfs tmpfs ${ROOT}/${svcdir}
-		if [ -d ${ROOT}/dev/shm/.init.d ]
+		local rcconfd="`ls ${ROOT}/etc/conf.d/._cfg????_rc 2> /dev/null`"
+
+		if [ -f "${rcconfd}" -a -z "`grep 'svcmount' ${ROOT}/etc/conf.d/rc`" ]
 		then
-			cp -ax ${ROOT}/dev/shm/.init.d/. ${ROOT}/${svcdir}
+			ewarn "Backing up your old /etc/conf.d/rc, and replacing with new!"
+			ewarn "This is needed, as \$svcdir moved from /mnt/.init.d to"
+			ewarn "/var/state/init.d"
+			echo
+			cp -f "${ROOT}/etc/conf.d/rc" "${ROOT}/etc/conf.d/rc.old"
+			mv -f "${rcconfd}"  "${ROOT}/etc/conf.d/rc"
+		fi
+	
+		source ${ROOT}/etc/conf.d/rc
+
+		# Handle the ${svcdir} that changed in location
+		if [ ! -d "${ROOT}/${svcdir}/started" ]
+		then
+			mkdir -p "${ROOT}/${svcdir}"
+#			mount -t tmpfs tmpfs ${ROOT}/${svcdir}
+			if [ -d ${ROOT}/mnt/.init.d ]
+			then
+				cp -ax ${ROOT}/mnt/.init.d/* ${ROOT}/${svcdir}
+			fi
 		fi
 	fi
 
@@ -539,6 +559,10 @@ EOF
 	echo
 	einfo "Please note that /sbin/update-modules moved to /sbin/modules-update"
 	einfo "for consistency reasons."
+	echo
+	ewarn "Please be sure to update all scripts in /etc/init.d/ as well as"
+	ewarn "/etc/inittab to the latest versions, else things might break at"
+	ewarn "your next reboot!"
 	echo
 }
 
