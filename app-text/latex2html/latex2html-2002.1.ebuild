@@ -32,8 +32,9 @@ src_compile() {
 	use gif && myconf="${myconf} --enable-gif"
 	use png && myconf="${myconf} --enable-png"
 
+	use gif || use png || myconf="${myconf} --disable-images"
+
 	myconf="${myconf} \
-	--prefix=/usr \
 	--libdir=/usr/lib/latex2html \
 	--shlibdir=/usr/lib/latex2html \
 	--enable-pk \
@@ -64,6 +65,11 @@ src_install () {
 	cp cfgcache.pm.bak ${D}/usr/lib/latex2html/cfgcache.pm
 
 	dodoc BUGS Changes FAQ INSTALL LICENSE MANIFEST README TODO
+
+	# make /usr/share/latex2html sticky
+	touch .keep
+	insinto /usr/share/latex2html
+	doins .keep
 }
 
 pkg_postinst() {
