@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.7 2004/03/15 22:43:57 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.8 2004/03/21 12:04:18 mboman Exp $
+
+  21 Mar 2004; Michael Boman <mboman@gentoo.org> Geo-IP-1.15.ebuild,
+  Geo-IP-1.21.ebuild:
+  QA: IUSE variable was missing, unnecessary definition of S removed.
 
   16 Mar 2004; Michael Boman <mboman@gentoo.org> Geo-IP-1.21.ebuild:
   Marked 1.21 stable on x86
