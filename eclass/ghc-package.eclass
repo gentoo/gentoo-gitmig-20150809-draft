@@ -1,14 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.5 2004/11/24 15:05:49 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.6 2005/03/18 23:31:48 kosmikus Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
 # This eclass helps with the Glasgow Haskell Compiler's package
 # configuration utility.
 
+inherit versionator
+
 ECLASS="ghc-package"
-INHERITED="$INHERITED $ECLASS"
+INHERITED="${INHERITED} ${ECLASS}"
 
 PATH="${PATH}:/opt/ghc/bin"
 
@@ -25,19 +27,38 @@ ghc-getghcpkg() {
 
 # returns the name of the ghc-pkg binary (ghc-pkg
 # itself usually is a shell script, and we have to
-# bypass the script under certain circumstances)
+# bypass the script under certain circumstances);
+# for Cabal, we add the global package config file,
+# because for some reason that's required
 ghc-getghcpkgbin() {
-	echo $(ghc-libdir)/"ghc-pkg.bin"
+	if ghc-cabal; then
+		echo $(ghc-libdir)/"ghc-pkg.bin" "--global-conf=$(ghc-libdir)/package.conf"
+	else
+		echo $(ghc-libdir)/"ghc-pkg.bin"
+	fi
 }
 
 # returns the version of ghc
+_GHC_VERSION_CACHE=""
 ghc-version() {
-	$(ghc-getghc) --version | sed 's:^.*version ::'
+	if [[ -z "${_GHC_VERSION_CACHE}" ]]; then
+		_GHC_VERSION_CACHE="$($(ghc-getghc) --version | sed 's:^.*version ::')"
+	fi
+	echo "${_GHC_VERSION_CACHE}"
+}
+
+# returns true for ghc >= 6.4
+ghc-cabal() {
+	version_is_at_least "6.4" "$(ghc-version)"
 }
 
 # returns the library directory
+_GHC_LIBDIR_CACHE=""
 ghc-libdir() {
-	$(ghc-getghc) --print-libdir
+	if [[ -z "${_GHC_LIBDIR_CACHE}" ]]; then
+		_GHC_LIBDIR_CACHE="$($(ghc-getghc) --print-libdir)"
+	fi
+	echo "${_GHC_LIBDIR_CACHE}"
 }
 
 # returns the (Gentoo) library configuration directory
@@ -132,9 +153,18 @@ ghc-reverse() {
 
 # show the packages in a package configuration file
 ghc-listpkg() {
-	[ -f $1 ] && echo $($(ghc-getghcpkgbin) -l -f $1) \
+	local ghcpkgcall
+	if ghc-cabal; then
+		echo $($(ghc-getghcpkg) list -f $1) \
+			| sed \
+				-e "s|^.*${f}:\([^:]*\).*$|\1|" \
+				-e "s|/.*$||" \
+				-e "s|,| |g" -e "s|[()]||g"
+	else
+		echo $($(ghc-getghcpkgbin) -l -f $1) \
 			| cut -f2 -d':' \
 			| sed 's:,: :g'
+	fi
 }
 
 # exported function: registers the package-specific package
