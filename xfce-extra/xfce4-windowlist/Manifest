@@ -1,2 +1,6 @@
-MD5 b8da0db303437613bf036b3c41e4fcb3 xfce4-windowlist-0.1.0-r1.ebuild 422
+MD5 a3fb79157b0bc69cd47bc320aa833c9b ChangeLog 537
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 736b65ddd2d1780b372f6c9d6ab1301e xfce4-windowlist-0.1.0-r1.ebuild 425
+MD5 6f6561b5d46c9f8ab60c03a2cf2e6552 xfce4-windowlist-0.1.0.ebuild 739
+MD5 ede2fb1d0a92f8c2aa944bb0134a181a files/digest-xfce4-windowlist-0.1.0 81
 MD5 ede2fb1d0a92f8c2aa944bb0134a181a files/digest-xfce4-windowlist-0.1.0-r1 81

@@ -1,2 +1,6 @@
-MD5 ef21f2ee5188f996ed0004f31eb683db xfce4-cpugraph-0.2.2-r1.ebuild 421
+MD5 0a8c9f333aa22fe6215816f3932cc01b xfce4-cpugraph-0.2.2-r1.ebuild 428
+MD5 eb155bd856665a2fa131e3bdd20af6d2 xfce4-cpugraph-0.2.2.ebuild 742
+MD5 6b6ecd940dbc619302a171a26155ee38 ChangeLog 508
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 9b6fb4bdabdf4cfa391fe2f12e90af09 files/digest-xfce4-cpugraph-0.2.2 79
 MD5 9b6fb4bdabdf4cfa391fe2f12e90af09 files/digest-xfce4-cpugraph-0.2.2-r1 79

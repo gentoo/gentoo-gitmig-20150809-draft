@@ -1,2 +1,6 @@
-MD5 9944bb030a618a1ee62ef1db0b7d66f2 xfce4-notes-0.9.7-r1.ebuild 376
+MD5 578b4dd3e2e0088728d6af4786848473 xfce4-notes-0.9.7.ebuild 719
+MD5 a36e511c5370989f0283b67fbc889d7b xfce4-notes-0.9.7-r1.ebuild 384
+MD5 d99efc0651961ba7c0bd6aabb4d9c05f ChangeLog 702
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 6b41a6e0f0f511c726ef91eb894a79cd files/digest-xfce4-notes-0.9.7 76
 MD5 6b41a6e0f0f511c726ef91eb894a79cd files/digest-xfce4-notes-0.9.7-r1 76
