@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.75 2003/04/28 18:43:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.76 2003/04/28 20:56:17 azarah Exp $
+
+  28 Apr 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.6.ebuild :
+  Some of the build images have MAKEDEV in /usr/sbin, and we called it with
+  /usr/sbin/MAKEDEV, which is wrong since we moved it to /sbin.  This caused
+  things to break, as we called /usr/sbin/MAKEDEV, and subsequent calls used
+  the copy in /sbin, which is different versions.  Add a symlink in /usr/sbin
+  to overwrite the invalide MAKEDEV, and call it via /sbin/MAKEDEV.  This
+  should close bug #15299.
 
   28 Apr 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.6.ebuild :
   Fix docs installing to the wrong place (bug #20091), thanks to sharp eye of

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.6.ebuild,v 1.2 2003/04/28 18:43:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.6.ebuild,v 1.3 2003/04/28 20:56:17 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -233,6 +233,7 @@ src_install() {
 
 	into /
 	dosbin ${S}/sbin/MAKEDEV
+	dosym ../../sbin/MAKEDEV /usr/sbin/MAKEDEV
 	keepdir /lib/dev-state
 	if [ "${altmerge}" -eq "1" ]
 	then
@@ -469,42 +470,42 @@ pkg_postinst() {
 		case ${ARCH} in
 			x86)
 				einfo "Using generic-i386 to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-i386
+				${ROOT}/sbin/MAKEDEV generic-i386
 				;;
 			ppc)
 				einfo "Using generic-powerpc to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-powerpc
+				${ROOT}/sbin/MAKEDEV generic-powerpc
 				;;
 			sparc)
 				einfo "Using generic-sparc to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-sparc
+				${ROOT}/sbin/MAKEDEV generic-sparc
 				;;
 			mips)
 				einfo "Using generic-mips to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-mips
+				${ROOT}/sbin/MAKEDEV generic-mips
 				;;
 			arm)
 				einfo "Using generic-arm to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-arm
+				${ROOT}/sbin/MAKEDEV generic-arm
 				;;
 			hppa)
 				einfo "Using generic-hppa to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-hppa
+				${ROOT}/sbin/MAKEDEV generic-hppa
 				;;
 			*)
 				einfo "Using generic to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic
+				${ROOT}/sbin/MAKEDEV generic
 				;;
 		esac
 		
-		${ROOT}/usr/sbin/MAKEDEV sg
-		${ROOT}/usr/sbin/MAKEDEV scd
-		${ROOT}/usr/sbin/MAKEDEV rtc 
-		${ROOT}/usr/sbin/MAKEDEV audio
-		${ROOT}/usr/sbin/MAKEDEV hde
-		${ROOT}/usr/sbin/MAKEDEV hdf
-		${ROOT}/usr/sbin/MAKEDEV hdg
-		${ROOT}/usr/sbin/MAKEDEV hdh
+		${ROOT}/sbin/MAKEDEV sg
+		${ROOT}/sbin/MAKEDEV scd
+		${ROOT}/sbin/MAKEDEV rtc 
+		${ROOT}/sbin/MAKEDEV audio
+		${ROOT}/sbin/MAKEDEV hde
+		${ROOT}/sbin/MAKEDEV hdf
+		${ROOT}/sbin/MAKEDEV hdg
+		${ROOT}/sbin/MAKEDEV hdh
 	fi
 	# We create the /boot directory here so that /boot doesn't get deleted when a previous
 	# baselayout is unmerged with /boot unmounted.
