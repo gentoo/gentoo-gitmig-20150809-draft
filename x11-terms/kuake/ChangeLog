@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/kuake
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kuake/ChangeLog,v 1.3 2004/03/14 17:32:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kuake/ChangeLog,v 1.4 2004/04/18 20:18:38 weeve Exp $
+
+  18 Apr 2004; Jason Wever <weeve@gentoo.org> kuake-0.2.2.ebuild:
+  Added ~sparc keyword.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kuake-0.2.1.ebuild,
   kuake-0.2.2.ebuild:
