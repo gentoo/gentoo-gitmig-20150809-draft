@@ -5,6 +5,7 @@
 acpi
 afs
 avi
+cmucl
 hdf
 icc
 icc-pgo
