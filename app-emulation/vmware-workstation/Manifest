@@ -8,7 +8,7 @@ MD5 4e7383b2b07a5064b69a32c2fee3c138 ChangeLog 15486
 MD5 a4e5ebe5e931d6196fd49550e067b078 metadata.xml 339
 MD5 6b8a8da4e24fdfdf5f7ed53a5e92d8c6 vmware-workstation-5.0_beta2.ebuild 5954
 MD5 48c1667773503fee21a1068da07440b9 files/90vmware 70
-MD5 3f93465c48a0da943c2c2d1683504536 files/digest-vmware-workstation-5.0_beta1 84
+MD5 1a72b09b718dd43f60908f488eaa2918 files/digest-vmware-workstation-5.0_beta1 84
 MD5 3f93465c48a0da943c2c2d1683504536 files/digest-vmware-workstation-5.0_beta2 84
 MD5 ff3a3cba7b25c90e51dc77ecb7d2e7d0 files/digest-vmware-workstation-4.5.2.8848-r2 210
 MD5 4c2f197007436c71738cdab98bb5ea5b files/digest-vmware-workstation-3.2.1.2242-r2 210
@@ -22,7 +22,7 @@ MD5 cd2c7dfb0ea80293b3647713f5e35969 files/3.2.1.2242/vmware 1419
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB6lQeI1lqEGTUzyQRAnM8AKCQ5SZBzANYa+EwRWeheEUJq70SowCfV4Oi
-o/7DcDWlG7epJWDqQVFMrFI=
-=/3FK
+iD8DBQFB6mc0I1lqEGTUzyQRAqVTAKDen6HJTOYL5ckMVOhh1G0BHMRRvACfbhmo
+y4jBmHECfcnfzUHbdDvdhcI=
+=x9LP
 -----END PGP SIGNATURE-----
