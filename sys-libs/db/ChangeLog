@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.76 2003/12/29 04:07:02 kumba Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.77 2004/01/16 13:03:20 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> db-4.1.25_p1-r3.ebuild:
+  set ppc in keywords
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> db-4.0.14-r2.ebuild:
   Move to mips stable (~mips -> mips)

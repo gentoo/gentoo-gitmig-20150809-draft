@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.116 2004/01/15 23:11:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.117 2004/01/16 13:03:20 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> glibc-2.3.2-r9.ebuild:
+  set ppc in keywords
 
   10 Jan 2004; Aron Griffis <agriffis@gentoo.org> glibc-2.3.2-r9.ebuild:
   stable on alpha for bug 37595... alpha really needs execstack-PaX-support.patch
