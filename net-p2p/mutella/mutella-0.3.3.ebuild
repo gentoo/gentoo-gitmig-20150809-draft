@@ -1,17 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.3.3.ebuild,v 1.5 2002/11/03 17:38:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.3.3.ebuild,v 1.6 2002/11/12 06:51:26 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Text-mode gnutella client."
-SRC_URI="http://telia.dl.sourceforge.net/sourceforge/mutella/mutella-0.3.3.tar.gz"
-HOMEPAGE="http://mutella.sourceforge.net"
+DESCRIPTION="Text-mode gnutella client"
+SRC_URI="mirror://sourceforge/mutella/${P}.tar.gz"
+HOMEPAGE="http://mutella.sourceforge.net/"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-DEPEND="virtual/glibc sys-libs/readline"
-RDEPEND=${DEPEND}
+DEPEND="virtual/glibc
+	sys-libs/readline"
 
 src_unpack() {
 	unpack ${A}
@@ -19,17 +19,11 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf
 	emake || die "compile problem"
 }
 
-src_install () {
-	make DESTDIR=${D} install || die
+src_install() {
+	make DESTDIR=${D} install || die "install failed"
 	dodoc AUTHORS ChangeLog COPYING INSTALL KNOWN-BUGS README TODO
 }
-
-
