@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/yahoo-transport-2.3.0.ebuild,v 1.1 2004/01/12 01:14:39 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/yahoo-transport-2.3.0.ebuild,v 1.2 2004/01/23 19:23:39 humpback Exp $
 
 DESCRIPTION="Open Source Jabber Server Yahoo transport"
 HOMEPAGE="http://yahoo-transport-2.jabberstudio.org/"
@@ -33,6 +33,6 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Please read /usr/share/doc/${P}/README.Gentoo"
+	einfo "Please read /usr/share/doc/${P}/README.Gentoo.gz"
 	einfo
 }

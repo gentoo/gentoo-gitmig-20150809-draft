@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-1.2.8_rc1.ebuild,v 1.2 2004/01/23 18:25:20 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-1.2.8_rc1.ebuild,v 1.3 2004/01/23 19:22:19 humpback Exp $
 
 MY_PV="${PV/_rc/rc}"
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -32,6 +32,6 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Please read /usr/share/doc/${P}/README.Gentoo"
+	einfo "Please read /usr/share/doc/${P}/README.Gentoo.gz"
 	einfo
 }
