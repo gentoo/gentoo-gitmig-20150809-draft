@@ -400,10 +400,6 @@ gnome-extra/gcalctool
 # gtkmm-addons is broken for gcc32
 x11-libs/gtkmm-addons
 
-# <satai@gentoo.org> (29 Sep 2002)
-# Waiting for freeze to end.
-=dev-util/cweb-3.63-r1
-
 # <raker@gentoo.org> (25 Sep 2002)
 # version bump.  ssl and other fixes
 =net-mail/courier-imap-1.5.3
