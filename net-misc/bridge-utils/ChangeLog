@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.10 2004/02/25 07:42:02 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.11 2004/03/18 11:31:04 jhhudso Exp $
+
+*bridge-utils-0.9.6-r1 (18 Mar 2004)
+
+  18 Mar 2004; Jared Hudson <jhhudso@gentoo.org> bridge-utils-0.9.6-r1.ebuild,
+  bridge-utils-0.9.6.ebuild, metadata.xml, files/bridge.conf, files/bridge.rc:
+  Added an init script to the bridge port thanks to Gustavo Felisberto
+  <humpback@gentoo.org> and Denis Knauf <deac@linux-ist-pleite.de>
 
   25 Feb 2004; Patrick Kursawe <phosphan@gentoo.org>
   bridge-utils-0.9.3-r1.ebuild, bridge-utils-0.9.6.ebuild:
