@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/Xautoconfig
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/ChangeLog,v 1.14 2004/10/12 13:00:38 pylon Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/ChangeLog,v 1.15 2005/01/02 15:06:44 corsair Exp $
+
+  02 Jan 2005; Markus Rothe <corsair@gentoo.org> Xautoconfig-0.22-r2.ebuild:
+  Added ~ppc64 to KEYWORDS; credits go to Alex Polvi <polvi@gentoo.org>; bug
+  #76362
 
   12 Oct 2004; Lars Weiler <pylon@gentoo.org> files/XF4text.h.diff:
   XkbModel pc104 should be used, as this works better on NewWorld machines.
