@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r2.ebuild,v 1.1 2003/09/20 23:12:18 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r2.ebuild,v 1.2 2003/10/21 10:37:00 iggy Exp $
 
 IUSE="build"
 
@@ -63,7 +63,10 @@ src_unpack() {
 		bzcat ${DISTDIR}/patch-${PV/_/-}.bz2|patch -p1 || die "-marcelo patch failed"
 	fi
 
-	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-aa patch failed"
+	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-ck patch failed"
+
+	epatch ${DISTDIR}/patch-2.4.22-ck2-fix.patch
+	epatch ${DISTDIR}/patch-2422-ck2-sm1.2.8-sm1.2.9-0309171736
 
 	kernel_universal_unpack
 }
