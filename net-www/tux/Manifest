@@ -1,0 +1,5 @@
+MD5 afd2e11572098f44d56eda3381cafab0 tux-2.2.7.ebuild 816
+MD5 5cdf6a00aa7a9f1a9c960054ddf17917 files/digest-tux-2.2.7 60
+MD5 e6d1cb3d4aa003c2c697dd85045fc726 files/tux.init.d 1700
+MD5 cf663fe61e62783571ccb44751607de3 files/tux.conf.d 1842
+MD5 ee360a218aab2ab023d40a39c6385e2a ChangeLog 335
