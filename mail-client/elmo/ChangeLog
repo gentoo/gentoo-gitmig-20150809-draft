@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/elmo
+# ChangeLog for mail-client/elmo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/ChangeLog,v 1.4 2004/07/01 19:48:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/ChangeLog,v 1.5 2004/07/17 22:08:37 aliz Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> elmo-0.5.ebuild,
   elmo-0.6.ebuild:

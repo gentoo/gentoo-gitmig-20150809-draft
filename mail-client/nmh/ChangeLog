@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/nmh
+# ChangeLog for mail-client/nmh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.4 2004/07/01 19:49:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.5 2004/07/17 22:08:37 aliz Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> nmh-1.0.4-r2.ebuild:
   virtual/glibc -> virtual/libc

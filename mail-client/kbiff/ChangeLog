@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/kbiff
+# ChangeLog for mail-client/kbiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/kbiff/ChangeLog,v 1.4 2004/06/28 23:56:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/kbiff/ChangeLog,v 1.5 2004/07/17 22:08:37 aliz Exp $
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kbiff-3.6.3.ebuild,
   kbiff-3.7.ebuild:

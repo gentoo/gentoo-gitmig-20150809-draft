@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/evolution
+# ChangeLog for mail-client/evolution
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.6 2004/06/24 22:15:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.7 2004/07/17 22:08:37 aliz Exp $
 
   19 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/evolution-gcc34.patch:

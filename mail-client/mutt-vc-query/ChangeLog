@@ -1,6 +1,6 @@
-# ChangeLog for app-misc/mutt-vc-query
+# ChangeLog for mail-client/mutt-vc-query
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt-vc-query/ChangeLog,v 1.2 2004/06/24 22:17:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt-vc-query/ChangeLog,v 1.3 2004/07/17 22:08:37 aliz Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +mutt-vc-query-002.ebuild:

@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/drac
+# ChangeLog for mail-client/drac
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/ChangeLog,v 1.5 2004/07/01 19:48:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/ChangeLog,v 1.6 2004/07/17 22:08:37 aliz Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> drac-1.12-r1.ebuild,
   drac-1.12.ebuild:

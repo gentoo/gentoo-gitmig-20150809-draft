@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/mailx-support
+# ChangeLog for mail-client/mailx-support
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/ChangeLog,v 1.5 2004/07/16 03:08:07 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/ChangeLog,v 1.6 2004/07/17 22:08:37 aliz Exp $
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> mailx-support-20030215.ebuild:
   stable on ppc64, bug #55669
