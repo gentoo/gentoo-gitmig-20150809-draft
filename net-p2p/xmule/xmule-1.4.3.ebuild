@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.4.3.ebuild,v 1.2 2003/08/14 09:28:18 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.4.3.ebuild,v 1.3 2003/08/19 23:11:19 scandium Exp $
 
 DESCRIPTION="wxWindows based client for the eDonkey/eMule/lMule network"
 HOMEPAGE="http://www.xmule.org/"
@@ -25,3 +25,12 @@ src_compile () {
 src_install () {
 	einstall || die
 }
+
+pkg_postinst() {
+        echo
+        einfo "This version of xmule has a security hole related to"
+        einfo "the function OP_SERVERMESSAGE"
+        einfo "Use it at your own risk !"
+        echo
+}
+
