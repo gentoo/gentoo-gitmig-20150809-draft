@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.91 2003/07/14 19:47:17 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.92 2003/07/18 16:16:14 mholzer Exp $
+
+  19 Jul 2003; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.30.ebuild,
+  files/scripts/revdep-rebuild, files/scripts/revdep-rebuild-1,
+  files/scripts/revdep-rebuild-2:
+  Cleanup
 
   14 Jul 2003; Stanislav Brabec <utx@gentoo.org> gentoolkit-0.1.30.ebuild:
   Marked as stable, it was heavily tested by users in the big mysql4 upgrade.
