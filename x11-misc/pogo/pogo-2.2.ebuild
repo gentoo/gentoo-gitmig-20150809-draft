@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/pogo-2.2.ebuild,v 1.2 2004/02/28 19:19:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/pogo-2.2.ebuild,v 1.3 2004/04/25 20:49:07 squinky86 Exp $
 
 S="${WORKDIR}/Epplets-${PV}"
 
@@ -23,7 +23,7 @@ src_compile() {
 	for file in `grep -r /usr/local/ *|cut -f1 -d":"|sort|uniq`;do
 		sed -i -e "s:/usr/local:/usr/share:g" ${file}
 	done
-	make all || "Make failed"
+	make all || die "Make failed"
 }
 
 src_install () {
