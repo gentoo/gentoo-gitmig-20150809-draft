@@ -28,7 +28,12 @@ src_install() {
   insinto /usr/local/httpd/cgi-bin
   insopts -m 755 
   doins webcam/webcam.cgi
+  dodir /usr/X11R6/lib
+  mv ${D}/usr/lib/X11 ${D}/usr/X11R6/lib
+  rm ${D}/usr/X11R6/lib/fonts/misc/fonts.dir
+  rm -fd ${D}/usr/lib
 }
+
 
 
 
