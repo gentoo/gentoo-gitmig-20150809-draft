@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.1.ebuild,v 1.1 2004/12/24 04:03:03 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.2-r3.ebuild,v 1.1 2005/01/05 09:30:49 phosphan Exp $
 
 DESCRIPTION="Satellite tracking and orbital prediction."
 HOMEPAGE="http://www.qsl.net/kd2bd/predict.html"
@@ -9,7 +9,7 @@ SRC_URI="http://www.amsat.org/amsat/ftp/software/Linux/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="xforms gtk nls"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="sys-libs/ncurses
 	gtk? ( =x11-libs/gtk+-1.2* )
@@ -42,7 +42,7 @@ src_compile() {
 
 	# write vocalizer.h
 	cd vocalizer
-	echo "char *path={\"/use/share/predict/vocalizer/\"};" > vocalizer.h
+	echo "char *path={\"/usr/share/predict/vocalizer/\"};" > vocalizer.h
 
 	# compile vocalizer
 	einfo "compiling vocalizer"
@@ -56,11 +56,6 @@ src_compile() {
 		cd ${S}/clients/earthtrack
 		${COMPILER} -lm earthtrack.c -o earthtrack
 	fi
-
-	# geosat
-	einfo "compiling geosat"
-	cd ${S}/clients/geosat
-	${COMPILER} -lm geosat.c -o geosat
 
 	# kep_reload
 	einfo "compiling kep_reload"
@@ -80,11 +75,11 @@ src_compile() {
 		# note there are plugins for gsat but they are missing header files and wont compile
 		use nls || myconf="--disable-nls"
 		einfo "compiling gsat"
-		cd ${S}/clients/gsat-1.0.0
+		cd ${S}/clients/gsat-*
 		./configure --prefix=/usr ${myconf}
 		cd src
-		mv globals.h globals.h.orig
-		sed -e "s:#define DEFAULTPLUGINSDIR .*:#define DEFAULTPLUGINSDIR \"/usr/lib/gsat/plugins/\":" globals.h.orig > globals.h
+		sed -e "s:#define DEFAULTPLUGINSDIR .*:#define DEFAULTPLUGINSDIR \"/usr/lib/gsat/plugins/\":" -i globals.h
+		sed -e 's:int errno;::' -i globals.h
 		cd ..
 		emake
 	fi
@@ -95,18 +90,21 @@ src_install() {
 	cd ${S}
 	dobin predict ${FILESDIR}/predict-update
 	dodoc CHANGES COPYING CREDITS HISTORY README
-	dodoc default/predict.*
 	dodoc docs/pdf/predict.pdf
 	dodoc docs/postscript/predict.ps
 	doman docs/man/predict.1
 
+	insinto /usr/share/${PN}/default
+	doins default/predict.*
+
 	#install vocalizer
+	exeinto /usr/bin
 	cd vocalizer
+	doexe vocalizer
+	dodir /usr/share/predict/vocalizer
 	insinto /usr/share/predict/vocalizer
-	doins vocalizer
-	chmod a+x ${D}/usr/share/predict/vocalizer/vocalizer
-	doins 0 1 2 3 4 5 6 7 8 9
-	doins approaching azimuth elevation intro receding
+	dosym  /usr/bin/vocalizer /usr/share/predict/vocalizer/vocalizer
+	doins *.wav
 
 	mv README README.vocalizer
 	dodoc README.vocalizer
@@ -118,17 +116,10 @@ src_install() {
 		cd ${S}/clients/earthtrack
 		ln -s earthtrack earthtrack2
 		dobin earthtrack earthtrack2
-		mv INSTALL INSTALL.earthtrack
+		mv README_FIRST README_FIRST.earthtrack
 		mv README README.earthtrack
-		dodoc INSTALL.earthtrack README.earthtrack
+		dodoc README_FIRST.earthtrack README.earthtrack
 	fi
-
-	# geosat
-	cd ${S}/clients/geosat
-	dobin geosat
-	mv INSTALL INSTALL.geosat
-	mv README README.geosat
-	dodoc INSTALL.geosat README.geosat
 
 	# kep_reload
 	cd ${S}/clients/kep_reload
@@ -150,7 +141,7 @@ src_install() {
 	# gsat
 	if use gtk; then
 		# the install seems broken so do manually...
-		cd ${S}/clients/gsat-1.0.0
+		cd ${S}/clients/gsat-*
 		dodir /usr/lib/gsat/plugins
 		keepdir /usr/lib/gsat/plugins
 		cd src
@@ -172,6 +163,6 @@ pkg_postinst() {
 	einfo "after that is set run 'predict -s'"
 	einfo ""
 	einfo "to get list of satellites run 'predict-update'"
-	einfo "before running predict also this script will update"
+	einfo "before running predict this script will also update"
 	einfo "the list of satellites so they are up to date."
 }

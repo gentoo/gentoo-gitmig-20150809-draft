@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9255fb0170b029096b27e345d97ab533 predict-2.2.2-r2.ebuild 4312
-MD5 33bf97554f5a3e2b8c3a9b23da45d91d predict-2.2.1.ebuild 4541
-MD5 26c7b650fd73bead0f8927a96e36ca9c ChangeLog 1626
+MD5 95801bec31bda2e4c4c231ccb8958087 predict-2.2.2-r2.ebuild 4312
+MD5 cfa0bc2db748bd915a2447872a101297 predict-2.2.2-r3.ebuild 4348
+MD5 16437d50f2daea0cb724f045408a1b02 ChangeLog 1834
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 729e9f2e1ecbb139b17f650d2916da21 files/digest-predict-2.2.2-r2 66
-MD5 e9851bdcd10870d0cf8dd12a543acb05 files/digest-predict-2.2.1 65
+MD5 729e9f2e1ecbb139b17f650d2916da21 files/digest-predict-2.2.2-r3 66
 MD5 95dc86360de601d5c7c9d2f7d87c2c79 files/predict-update 4037
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHTtI1lqEGTUzyQRAg/wAJ9ZkkbQvQlLCE+he3bCTapRsYAMZQCfZXPk
-kzEGGzdUSpFjCob4cKNnTRg=
-=ccUN
------END PGP SIGNATURE-----
