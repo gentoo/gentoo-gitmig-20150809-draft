@@ -1,13 +1,14 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.27 2005/03/27 17:45:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.28 2005/04/02 18:29:37 luckyduck Exp $
+
+  02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> bcel-5.1-r1.ebuild,
+  -bcel-5.1.ebuild:
+  cleanup, removed old revision with a dependency to regexp.
 
 *bcel-5.1-r1 27 Mar 2005
 
-  27 Mar 2005;  <> 
-  # INSERT ENTRY HERE
-
-  27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> bcel-5.1.ebuild:
+  27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +bcel-5.1-r1.ebuild:
   moved from dev-java/regexp to dev-java/jakarta-regexp dependency. see #71336.
   introduced support for the source useflag.
 
