@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/libmonetra-4.1.ebuild,v 1.6 2004/09/25 08:55:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/libmonetra-4.1.ebuild,v 1.7 2004/09/28 15:30:20 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.mcve.com/pub/libmcve/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~arm ~hppa ~ppc ~s390 ~x86"
+KEYWORDS="~arm ~hppa ~ia64 ~ppc ~s390 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl
