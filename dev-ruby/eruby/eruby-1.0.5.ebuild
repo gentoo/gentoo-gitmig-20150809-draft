@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintaner: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.5.ebuild,v 1.2 2004/04/10 23:32:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.5.ebuild,v 1.3 2004/04/30 16:32:25 usata Exp $
 
 inherit ruby
+
+IUSE=""
 
 DESCRIPTION="eRuby interprets a Ruby code embedded text file"
 HOMEPAGE="http://www.modruby.net/"
 SRC_URI="http://www.modruby.net/archive/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~hppa ~mips ~sparc ~x86 ~ppc"
+KEYWORDS="~alpha ~hppa ~mips ~sparc x86 ~ppc"
 DEPEND="virtual/ruby"
 USE_RUBY="ruby16 ruby18"	# doesn't build on ruby19
 
