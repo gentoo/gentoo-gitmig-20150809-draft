@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkDPS
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.7 2003/12/03 15:51:06 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.8 2004/03/21 15:09:48 dholm Exp $
+
+  21 Mar 2004; David Holm <dholm@gentoo.org> gtkDPS-0.3.4.ebuild:
+  Added to ~ppc.
 
   03 Dec 2003; Aron Griffis <agriffis@gentoo.org> gtkDPS-0.3.4.ebuild:
   Stable on alpha to support lilypond-1.8.2
