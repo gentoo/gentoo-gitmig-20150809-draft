@@ -1,16 +1,18 @@
-# Copyright 2002 Alexander Gretencord <arutha@gmx.de>
+# Copyright 2002 Gentoo Technologies, Inc
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smartsuite/smartsuite-2.1.ebuild,v 1.1 2002/07/23 23:28:34 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smartsuite/smartsuite-2.1.ebuild,v 1.2 2002/07/25 13:48:39 seemant Exp $
 
+S=${WORKDIR}/${P}
 DESCRIPTION="Suite to control and monitor storage devices using SMART technology."
 HOMEPAGE="http://www.linux-ide.org/smart.html"
-DEPEND="virtual/glibc"
-LICENSE="GPL-2"
-
 SRC_URI="mirror://sourceforge/smartsuite/${P}.tar.gz
 	http://www.linux-ide.org/smart/${P}.tar.gz"
-S=${WORKDIR}/${P}
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="virtual/glibc"
 
 src_unpack() {
 
