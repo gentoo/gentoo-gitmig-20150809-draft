@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.13 2003/03/02 02:10:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.14 2003/03/10 13:02:36 vapier Exp $
 
 *GD-2.06 (23 Feb 2003)
+
+  10 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added optional xpm/gif support (gif patch is from dragon@gentoo.org).
 
   23 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump to support libgd-2.x and to fix #15913.
