@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-3.0.0.ebuild,v 1.4 2001/11/19 14:33:58 danarmak Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-3.0.0-r1.ebuild,v 1.1 2001/12/06 02:34:26 gbevin Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -52,7 +52,6 @@ src_compile() {
 
 	export LDFLAGS="-ldl"
 
-	use opengl												|| myconf="-no-opengl"
 	use nas			&& myconf="${myconf} -system-nas-sound"
 	use gif			&& myconf="${myconf} -qt-gif"
 	[ "$DEBUG" ]	&& myconf="${myconf} -debug" 			|| myconf="${myconf} -release -no-g++-exceptions"
