@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/beast
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.6 2003/06/28 23:30:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.7 2003/07/18 00:36:37 raker Exp $
+
+*beast-0.5.3-r1 (17 Jul 2003)
+
+  17 Jul 2003; Nick Hadaway <raker@gentoo.org> beast-0.5.3-r1.ebuild:
+  Changed to media-libs/{libmad,libid3tag} from media-sound/mad
 
 *beast-0.5.3 (29 Jun 2003)
 
