@@ -153,8 +153,8 @@ net-www/galeon-cvs
 =gnome-base/gnome-mime-data-2.0.1
 =gnome-extra/at-spi-1.0.2
 =gnome-extra/libgail-gnome-1.0.1
-=gnome-base/nautilus-2.0.6
-=gnome-base/eel-2.0.6
+>=gnome-base/nautilus-2.0.6
+>=gnome-base/eel-2.0.6
 =media-gfx/eog-1.0.3
 =gnome-extra/gnome-games-2.0.4
 =gnome-extra/gconf-editor-0.3.1
@@ -170,6 +170,8 @@ net-www/galeon-cvs
 =gnome-extra/libgtkhtml-2.0.2
 =gnome-base/control-center-2.0.1.1
 >=gnome-base/gnome-2.0.2_pre1
+>=gnome-extra/gnome-user-docs-2.0.1
+
 
 # <spider@gentoo.org> (05 Sep 2002)
 # masked for testing and recheck of ebuild by rphillips
