@@ -1,0 +1,120 @@
+--- setfiles.c.orig	2003-04-04 07:29:44.000000000 -0600
++++ setfiles.c	2003-05-10 23:42:39.000000000 -0500
+@@ -89,6 +89,10 @@
+ static int use_inum = 0;
+ 
+ static int quiet = 0;
++
++static char *rootpath = NULL;
++static int rootpathlen = 0;
++
+ #define QPRINTF(args...) do { if (!quiet) printf(args); } while (0)
+ 
+ /*
+@@ -283,15 +287,27 @@
+ int match(const char *name, struct stat *sb, security_id_t *out_sid) 
+ {
+ 	int i, ret;
++	const char *fullname = name;
++
++	/* fullname will be the real file that gets labeled
++	 * name will be what is matched in the policy */
++	if (NULL != rootpath) {
++		if (0 != strncmp(rootpath, name, rootpathlen)) {
++			fprintf(stderr, "%s:  %s is not located in %s\n", 
++				progname, name, rootpath);
++			return -1;
++		}
++		name += rootpathlen;
++	}
+ 
+ 	if (flask_enabled) {
+-		ret = lstat_secure(name, sb, out_sid);
++		ret = lstat_secure(fullname, sb, out_sid);
+ 	} else {
+-		ret = lstat(name, sb);
++		ret = lstat(fullname, sb);
+ 	} 
+ 	if (ret) {
+ 		fprintf(stderr, "%s:  unable to stat file %s\n", progname,
+-			name);
++			fullname);
+ 		return -1;
+ 	}
+ 
+@@ -564,6 +580,23 @@
+ 	return 0;
+ }
+ 
++void set_rootpath(const char *arg)
++{
++	int len;
++
++	rootpath = strdup(arg);
++	if (NULL == rootpath) {
++		fprintf(stderr, "%s:  insufficient memory for rootpath\n", 
++			progname);
++		exit(1);
++	}
++
++	/* trim trailing /, if present */
++	len = strlen(rootpath);
++	while ('/' == rootpath[len - 1])
++		rootpath[--len] = 0;
++	rootpathlen = len;
++}
+ 
+ int main(int argc, char **argv)
+ {
+@@ -577,7 +610,7 @@
+ 	struct stat sb;
+ 
+ 	/* Process any options. */
+-	while ((opt = getopt(argc, argv, "dinqsvRW")) > 0) {
++	while ((opt = getopt(argc, argv, "dinqsvrRW")) > 0) {
+ 		switch (opt) {
+ 		case 'd':
+ 			debug = 1;
+@@ -604,6 +637,20 @@
+ 		case 'i':
+ 			use_inum = 1;
+ 			break;
++		case 'r':
++			if (optind + 1 >= argc) {
++				fprintf(stderr, "usage:  %s -r rootpath\n", 
++					argv[0]);
++				exit(1);
++			}
++			if (NULL != rootpath) {
++				fprintf(stderr, 
++					"%s: only one -r can be specified\n", 
++					argv[0]);
++				exit(1);
++			}
++			set_rootpath(argv[optind++]);
++			break;
+ 		}
+ 	}
+ 
+@@ -675,7 +722,7 @@
+ 	} else {
+ 		if (optind > (argc - 2)) {
+ 			fprintf(stderr,
+-				"usage:  %s [-dnqvRW] spec_file pathname...\n",
++				"usage:  %s [-dnqvrRW] spec_file pathname...\n",
+ 				argv[0]);
+ 			exit(1);
+ 		}
+@@ -919,7 +966,11 @@
+ 	}
+ 	else for (; optind < argc; optind++)
+ 	{
+-
++		if (NULL != rootpath) {
++			QPRINTF("%s:  labeling files, pretending %s is /\n",
++				argv[0], rootpath);
++		}
++		
+ 		if (flask_enabled) {
+ 			QPRINTF("%s:  labeling files under %s\n", argv[0],
+ 			       argv[optind]);
