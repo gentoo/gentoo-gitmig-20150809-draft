@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 d2e4725e0ba758d0f457441afdd692ea ChangeLog 7977
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aa9ae7aba0c5d850e7b3ab27fbafb632 nautilus-cd-burner-0.6.1.ebuild 1086
 MD5 5eb2ecd0d94100a8dd2bbca718de79d9 nautilus-cd-burner-2.6.0.ebuild 907
 MD5 d852be913dbb99b634ce3d92ba051a3c nautilus-cd-burner-2.6.1.ebuild 906
 MD5 63a1e1a52c71d207683b44ac69512b93 nautilus-cd-burner-2.8.2.ebuild 1015
 MD5 c8c983d4c1846baff2ea69bfcb896791 nautilus-cd-burner-2.8.5.ebuild 901
-MD5 9e760f406009b126c26ec38df50a670c nautilus-cd-burner-2.8.6.ebuild 901
+MD5 874eca8708d1c5d7db0dd3ee6eca57a7 nautilus-cd-burner-2.8.6.ebuild 905
 MD5 fec90eb10e14333fa56861f84a8fa497 nautilus-cd-burner-2.8.7.ebuild 905
 MD5 c88ec070b6c4281ec586602badcfce1c nautilus-cd-burner-2.10.0.ebuild 909
-MD5 c4439163d03b7d364f15ee061253bdbc ChangeLog 7865
 MD5 5c5b2951cc6f2fe0138c0f5ac4bc97d4 files/digest-nautilus-cd-burner-0.6.1 77
 MD5 702d573787368750b57e5684afc42a5e files/digest-nautilus-cd-burner-2.6.0 77
 MD5 1fc86a0e02dd11f81a22586a0abccbb9 files/digest-nautilus-cd-burner-2.6.1 77
@@ -22,9 +22,9 @@ MD5 0cc10acbcdaa96ade28aa3b589287e72 files/nautilus-cd-burner-0.6.1-gcc2_fix.pat
 MD5 b3b37b460d957cfd8119734f70ea599a files/nautilus-cd-burner-2.8.2-bacon_nodrive.patch 1456
 MD5 86395a29bcac00ddc56fd80e232bebb5 files/digest-nautilus-cd-burner-2.10.0 78
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCLn/NXjcVihsel0ERAuyQAKDA/HVfXjYlVbE2pwYfbDlVinzqnACfY54z
-QRiKGYha9xyIWG1PBCwzDPM=
-=fVm3
+iD8DBQFCL69UKRy60XGEcJIRAqP4AKCWW8oCahALscisBwLckqNL67Xu8QCZAbCr
+quUGAWUcNnEMIfix+QsMoDQ=
+=edwu
 -----END PGP SIGNATURE-----
