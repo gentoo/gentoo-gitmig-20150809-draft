@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>, Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0-r1.ebuild,v 1.2 2002/04/27 12:53:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0-r1.ebuild,v 1.3 2002/04/27 14:02:50 seemant Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="ntop is a unix tool that shows network usage like top"
@@ -71,8 +71,11 @@ src_install () {
 
     make \
 		prefix=${D}/usr \
-		sysconfdir=/${D}/usr/share \
+		sysconfdir=/${D}/etc \
 		mandir=${D}/usr/share/man \
+		datadir=${D}/usr/share \
+		DATAFILE_DIR=${D}/usr/share/ntop \
+		CONFIGFILE_DIR=${D}/etc/ntop \
 		install || die
 
     # fixme: bad handling of plugins (in /usr/lib with unsuggestive names)
