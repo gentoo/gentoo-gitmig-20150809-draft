@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r3.ebuild,v 1.8 2003/04/23 05:50:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r3.ebuild,v 1.9 2003/04/23 09:07:14 msterret Exp $
 
-IUSE="nls build"
+IUSE="nls build static"
 
 inherit eutils       || die "I lost my eutils inheritence"
 inherit flag-o-matic || die "I lost my flag-o-matic inheritence"
@@ -21,6 +21,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
+	>=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )
 	!build? ( sys-apps/texinfo sys-apps/help2man )"
@@ -50,20 +51,17 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
-	[ -z "`use nls`" ] && myconf="--disable-nls"
+	econf --build=${CHOST} `use_enable nls` || die "econf"
 
-	econf --build=${CHOST} ${myconf} || die "econf"
-
-	emake || die
+	if [ "`use static`" ] ; then
+		emake LDFLAGS=-static || die
+	else
+		emake || die
+	fi
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		datadir=${D}/usr/share \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-		install || die "make install"
+	einstall
 
 	if [ -z "`use build`" ] ; then
 		dodoc COPYING ChangeLog NEWS README

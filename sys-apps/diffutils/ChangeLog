@@ -1,11 +1,16 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.20 2003/04/23 06:05:33 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.21 2003/04/23 09:07:14 msterret Exp $
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
 
 *diffutils-2.8.4-r3 (04 Feb 2003)
+
+  22 Apr 2003; <msterret@gentoo.org> diffutils-2.8.4-r3.ebuild:
+  Added support for USE=static Added use_enable nls to cleanup myconf
+  (>=sys-apps/portage-2.0.47-r10 in DEPEND) Use einstall instead of big make
+  line
 
   22 Apr 2003; Michael Sterrett <msterret@gentoo.org>
   diffutils-2.8.4-r3.ebuild:
