@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-meanwhile/gaim-meanwhile-1.0.1.ebuild,v 1.2 2004/10/21 15:39:33 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-meanwhile/gaim-meanwhile-1.0.1.ebuild,v 1.3 2005/01/16 21:49:27 weeve Exp $
 
 inherit debug
 
