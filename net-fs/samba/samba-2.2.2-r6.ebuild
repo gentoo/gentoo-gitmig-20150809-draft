@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.2-r6.ebuild,v 1.1 2001/10/17 06:02:52 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.2-r6.ebuild,v 1.2 2001/12/14 15:09:35 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Samba :)"
@@ -28,6 +28,9 @@ src_unpack() {
 		cd ${S}
 		patch -p0 < ${FILESDIR}/patch.221a.10 || die
 	fi
+
+	cd ${S}
+	patch -p0 < ${FILESDIR}/patch-smbmount-2.2.2 || die
 
 	if [ ! "`use cups`" ] ; then
 		cd ${S}/source
@@ -82,9 +85,9 @@ src_install() {
 	rm -rf ${D}/usr/private
 	diropts -m 0700 ; dodir /etc/smb/private
 
-	# move smbmount from /usr/sbin to /sbin, and rename it to mount.smbfs
+	# link /usr/bin/smbmount to /sbin/mount.smbfs
 	# which allows it to work transparently with standard 'mount' command
-	mv ${D}/usr/bin/smbmount ${D}/sbin/mount.smbfs
+	dosym /usr/bin/smbmount /sbin/mount.smbfs
 
 	cd ${S}/source/script
 	exeinto /usr/sbin
