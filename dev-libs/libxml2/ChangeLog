@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.56 2003/10/22 11:56:28 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.57 2003/10/29 17:44:01 foser Exp $
+
+*libxml2-2.6.1 (29 Oct 2003)
+
+  29 Oct 2003; foser <foser@gentoo.org> libxml2-2.6.1.ebuild :
+  New version, readded ia64 keyword that seems to have vanished
+  esthetic ebuild cleanups
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> libxml2-2.5.11.ebuild:
   set ppc in keywords
