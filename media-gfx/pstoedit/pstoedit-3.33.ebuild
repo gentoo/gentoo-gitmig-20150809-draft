@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.33.ebuild,v 1.6 2004/02/02 21:07:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.33.ebuild,v 1.7 2004/02/16 10:46:57 obz Exp $
 
 inherit libtool
 
 # see bug #29724. please don't re-enable flash support until
 # ming has the patches applied <obz@gentoo.org>
-# IUSE="flash"
+# secondly, we're not enabling libemf via a use flag, until it's
+# actually switchable via configure, see bug #39557
+# IUSE="flash libemf"
 IUSE=""
 
 DESCRIPTION="translates PostScript and PDF graphics into other vector formats"
@@ -17,9 +19,10 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
 
-DEPEND="media-libs/libpng
-	media-libs/libexif
-	sys-libs/zlib"
+DEPEND="sys-libs/zlib
+	media-libs/libemf
+	media-libs/libpng
+	media-libs/libexif"
 #	flash? ( media-libs/ming )"
 
 RDEPEND="${DEPEND}
