@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.9.0.ebuild,v 1.1 2003/04/22 23:40:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.9.0.ebuild,v 1.2 2003/04/23 16:12:24 foser Exp $
 
 inherit eutils
 
@@ -33,6 +33,21 @@ DEPEND="virtual/x11
 	!app-shells/bash-completion"
 
 # FIXME : do 'real' use switching, add gucharmap support
+
+src_unpack() {
+	unpack ${A}
+
+	# Patch to make the wv.h tests work 
+	# 
+	# wv wants libole2 which in it's turn wants glib 1.2
+	# glib.h includes glibconfig.h which is in a non-included path
+	# and makes the tests fail, this patch adds those paths to configure.
+	# Compiling without specifying the path anywhere goes fine.
+	#
+	# April 1st 2003 <foser@gentoo.org>
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-1.1.4-wv_configure_fooling.patch
+}
 
 src_compile() {
 	local myconf
