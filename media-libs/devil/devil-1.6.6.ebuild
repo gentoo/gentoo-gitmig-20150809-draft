@@ -1,17 +1,16 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.6.ebuild,v 1.1 2003/10/02 06:04:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.6.ebuild,v 1.2 2004/02/08 01:36:28 vapier Exp $
 
 inherit libtool
 
-S=${WORKDIR}/DevIL
 DESCRIPTION="DevIL image library"
 HOMEPAGE="http://www.imagelib.org/"
 SRC_URI="mirror://sourceforge/openil/DevIL-${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~sparc"
+SLOT="0"
+KEYWORDS="x86 ppc ~sparc"
 IUSE="X gif png sdl jpeg tiff opengl"
 
 RDEPEND="X? ( x11-base/xfree )
@@ -21,6 +20,8 @@ RDEPEND="X? ( x11-base/xfree )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( media-libs/tiff )
 	opengl? ( virtual/opengl )"
+
+S=${WORKDIR}/DevIL
 
 src_compile() {
 	elibtoolize
