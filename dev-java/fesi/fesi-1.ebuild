@@ -1,13 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.ebuild,v 1.2 2000/10/05 00:12:58 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.ebuild,v 1.3 2000/11/01 06:27:07 achim Exp $
 
 P=fesi
 A="fesikit.zip"
 S=${WORKDIR}/${P}
 DESCRIPTION="JavaScript Interpreter writte in Java"
 SRC_URI="http://home.worldcom.ch/jmlugrin/fesi/fesikit.zip"
+
+DEPEND=">=dev-lang/jdk-1.2.2"
 
 src_unpack() {
 #  jar -xf ${DISTDIR}/fesisrc.zip
