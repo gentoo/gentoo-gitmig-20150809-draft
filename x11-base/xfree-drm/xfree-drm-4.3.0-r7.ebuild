@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.1 2003/12/08 07:34:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.2 2003/12/14 08:31:40 spyderous Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -12,7 +12,7 @@ inherit eutils xfree
 RESTRICT="nostrip"
 
 SNAPSHOT="20031202"
-PATCHVER="0.1"
+PATCHVER="0.2"
 PATCHDIR="${WORKDIR}/patch"
 EXCLUDED="${PATCHDIR}/excluded"
 S="${WORKDIR}/drm"
@@ -216,11 +216,13 @@ patch_prepare() {
 		einfo "Updating for mach64 build..."
 		# Also exclude all non-mach64 patches
 		# mv -f ${PATCHDIR}/3* ${EXCLUDED}
+		mv -f ${PATCHDIR}/004* ${EXCLUDED}
 	elif use gatos
 	then
 		einfo "Updating for gatos build..."
 		# This Makefile.linux might be more work to port to alanh's version
 		# Exclude all non-gatos patches
+		mv -f ${PATCHDIR}/004* ${EXCLUDED}
 		mv -f ${PATCHDIR}/2* ${EXCLUDED}
 	else # standard case
 		einfo "Updating for standard build..."

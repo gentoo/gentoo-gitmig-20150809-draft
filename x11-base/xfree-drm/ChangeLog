@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.46 2003/12/08 07:34:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.47 2003/12/14 08:31:40 spyderous Exp $
+
+  14 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r7.ebuild:
+  PATCH_VER 0.2. Added 004_all_radeon-rage128-pci-id-updates.patch to try to
+  help newer cards work better. For standard DRM only.
 
 *xfree-drm-4.3.0-r7 (08 Dec 2003)
 
