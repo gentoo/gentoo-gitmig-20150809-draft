@@ -1,5 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.2.17.ebuild,v 1.2 2004/01/13 20:40:28 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -59,11 +60,11 @@ pkg_postinst() {
 	einfo "     advmenu -default"
 	einfo "To generate a config file"
 	ewarn "In order to use advmenu, you must properly configure it!"
-	einfo 
+	einfo
 	einfo "An example emulator config found in advmenu.rc:"
 	einfo "     emulator \"snes9x\" generic \"/usr/games/bin/snes9x\" \"%f\""
 	einfo "     emulator_roms \"snes9x\" \"/home/user/myroms\""
 	einfo "     emulator_roms_filter \"snes9x\" \"*.smc;*.sfc\""
-	einfo 
+	einfo
 	einfo "For more information, see the advmenu man page."
 }
