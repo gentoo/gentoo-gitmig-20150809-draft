@@ -1,14 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.11 2002/10/04 06:30:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.12 2002/10/12 19:43:29 azarah Exp $
 
 inherit libtool
-KEYWORDS="x86 sparc sparc64 alpha"
+
+S="${WORKDIR}/${P}"
 HOMEPAGE="http://shadow.pld.org.pl/"
-S=${WORKDIR}/${P}
 DESCRIPTION="Utilities to deal with user accounts"
 SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
+
 LICENSE="BSD"
+SLOT="0"
+KEYWORDS="x86 sparc sparc64 alpha"
 
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
@@ -17,7 +20,6 @@ DEPEND=">=sys-libs/pam-0.75-r4
 RDEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3"
 
-SLOT="0"
 
 pkg_preinst() { 
 	rm -f ${ROOT}/etc/pam.d/system-auth.new
@@ -72,6 +74,9 @@ src_install() {
 	insopts -m0600 ; doins ${FILESDIR}/securetty
 	insopts -m0600 ; doins ${S}/etc/login.access
 	insopts -m0644 ; doins ${S}/etc/limits
+
+	# needed for 'adduser -D'
+	keepdir /etc/default
 
 # From sys-apps/pam-login now
 #	insopts -m0644 ; doins ${FILESDIR}/login.defs

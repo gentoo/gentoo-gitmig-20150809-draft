@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.14 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.15 2002/10/12 19:43:29 azarah Exp $
+
+  12 Oct 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3.ebuild :
+
+  Fix bug #9031 (add /etc/default/ to fix adduser -D).
 
 *shadow-4.0.2-r4.ebuild (14 July 2002)
 
