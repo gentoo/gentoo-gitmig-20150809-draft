@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.307 2004/08/17 16:41:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.308 2004/08/18 03:55:12 lv Exp $
+
+  17 Aug 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.1-r2.ebuild,
+  gcc-3.4.1.ebuild:
+  made gcc depend on media-libs/libart_lgpl when gcj is in USE
 
   17 Aug 2004; Luca Barbato <lu_zero@gentoo.org> gcc-3.4.1-r2.ebuild:
   Marked ~ppc
