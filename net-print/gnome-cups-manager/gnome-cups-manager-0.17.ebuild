@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.17.ebuild,v 1.6 2003/10/05 13:38:33 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.17.ebuild,v 1.7 2003/10/08 09:46:34 obz Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
 	>=gnome-base/libgnome-2
-	>=gnome-base/libgnomeui-2
+	>=gnome-base/libgnomeui-2.2
 	>=gnome-base/libglade-2
 	>=gnome-base/libbonobo-2
 	>=net-print/libgnomecups-0.1.5"
