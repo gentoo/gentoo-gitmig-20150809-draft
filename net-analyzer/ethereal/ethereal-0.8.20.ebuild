@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.8.20.ebuild,v 1.1 2001/10/15 14:14:16 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.8.20.ebuild,v 1.2 2002/04/12 16:56:07 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A commercial-quality network protocol analyzer"
@@ -10,7 +10,7 @@ HOMEPAGE="http://ethereal.zing.org/"
 
 RDEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3
-	>=dev-libs/glib-1.2.0
+	=dev-libs/glib-1.2*
 	snmp? ( >=net-analyzer/ucd-snmp-4.1.2 )
 	X? ( virtual/x11 >=x11-libs/gtk+-1.2.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
