@@ -21,7 +21,7 @@ src_compile() {
     then
       myconf="$myconf --enable-mitshm"
     fi
-    try ./configure --prefix=/opt/kde2.1 --host=${CHOST} \
+    try ./configure --prefix=${KDEDIR} --host=${CHOST} \
 		--with-kde-version=2 $myconf
     try make
 
