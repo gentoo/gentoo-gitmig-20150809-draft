@@ -1,18 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.3.1.ebuild,v 1.5 2004/04/20 17:26:11 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.3.1.ebuild,v 1.6 2004/04/27 01:03:07 zx Exp $
 
 inherit java-pkg gnome2
 
 DESCRIPTION="Gnome Java Accessibility Bridge"
 HOMEPAGE="http://www.gnome.org/"
-
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~amd64"
-
 IUSE=""
-
 RDEPEND=">=gnome-base/libbonobo-2
 	>=gnome-extra/at-spi-1.3.9
 	>=virtual/jdk-1.4"
@@ -22,8 +19,7 @@ DEPEND="${RDEPEND}
 	dev-java/java-config"
 
 DOCS="AUTHORS ChangeLog COPYING NEWS README"
-JAVAHOME=$(java-config --jdk-home)
-G2CONF="${G2CONF} --with-java-home=${JAVAHOME}"
+G2CONF="${G2CONF} --with-java-home=${JAVA_HOME}"
 
 src_install() {
 	gnome2_src_install
@@ -35,13 +31,12 @@ src_install() {
 
 	rm -rf ${D}/usr/share/jar
 
+	einfo "Installing symbolic links into ${JAVA_HOME}/jre/lib"
 
-	einfo "Installing symbolic links into ${JAVAHOME}/jre/lib"
-
-	dodir ${JAVAHOME}/jre/lib/ext
+	dodir ${JAVA_HOME}/jre/lib/ext
 	dosym \
 		${ROOT}/usr/share/${PN}/accessibility.properties \
-		${JAVAHOME}/jre/lib/accessibility.properties
+		${JAVA_HOME}/jre/lib/accessibility.properties
 
 	local jarfile
 	for jar in ${D}/usr/share/${PN}/lib/*.jar
@@ -49,7 +44,7 @@ src_install() {
 		jarfile=$(basename $jar)
 		dosym \
 			${ROOT}/usr/share/${PN}/lib/$jarfile \
-			${JAVAHOME}/jre/lib/ext/$jarfile
+			${JAVA_HOME}/jre/lib/ext/$jarfile
 	done
 }
 
