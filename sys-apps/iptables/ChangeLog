@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.12 2002/09/25 13:38:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.13 2002/11/20 14:22:43 aliz Exp $
 
 *iptables-1.2.7a (27 Aug 2002)
+
+  20 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild :
+  Added patch for iptables-restore. Contributed by fridtjof@fbunet.de in #10736.
 
   25 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> files/iptables-1.2.7a-imq.diff-3 :
   Closes #8046.
