@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2682 2004/02/06 17:37:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2683 2004/02/07 05:02:44 strider Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -131,6 +131,7 @@ net-misc/zebra
 # <strider@gentoo.org> (10 Jan 2004)
 # Masking since its a beta release.
 >=dev-java/sun-jdk-1.4.99
+>=dev-java/java-sdk-docs-1.4.99
 
 # <nakano@gentoo.org> (09 Jan 2004)
 # masking bincimap-1.2.4 because the author has announced it's unstable.
