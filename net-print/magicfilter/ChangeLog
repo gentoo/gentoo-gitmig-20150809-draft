@@ -1,6 +1,9 @@
 # ChangeLog for net-print/magicfilter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.6 2003/07/15 13:03:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.7 2003/07/29 13:36:21 lanius Exp $
+
+  29 Jul 2003; lanius@gentoo.org magicfilter-1.2-r4.ebuild:
+  stable bump
 
 *magicfilter-1.2-r4 (15 Jul 2003)
 

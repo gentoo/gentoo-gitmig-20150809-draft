@@ -1,6 +1,9 @@
 # ChangeLog for net-print/xpp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/ChangeLog,v 1.7 2003/07/15 12:57:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/ChangeLog,v 1.8 2003/07/29 13:37:23 lanius Exp $
+
+  29 Jul 2003; lanius@gentoo.org xpp-1.1-r2.ebuild:
+  stable bump
 
 *xpp-1.1-r2 (15 Jul 2003)
 

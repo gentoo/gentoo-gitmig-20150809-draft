@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/magicfilter-1.2-r4.ebuild,v 1.1 2003/07/15 13:03:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/magicfilter-1.2-r4.ebuild,v 1.2 2003/07/29 13:36:21 lanius Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/linux/system/printing/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=app-text/ghostscript-6.50-r2
 	>=sys-apps/groff-1.16.1-r1
