@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libnids
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.14 2005/01/29 21:19:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.15 2005/02/25 00:43:39 ka0ttic Exp $
+
+*libnids-1.20 (24 Feb 2005)
+
+  24 Feb 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/libnids-1.20-chksum.c-ebx.patch, libnids-1.18.ebuild,
+  +libnids-1.20.ebuild:
+  Version bump for bug 81689; also fixed src_install (setting install_prefix
+  to ${D} caused part of ${D} to be installed).
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> libnids-1.18.ebuild:
   Transition dependancy from net-libs/libpcap to virtual/libpcap

@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 29a55f34472da99e9eee320d0b50e431 ChangeLog 2287
+MD5 e536a09f03c36c1fd0fb3810f9dc07d8 libnids-1.20.ebuild 864
+MD5 63a3d2a973f75fb51900c6b610a3f5bd libnids-1.18.ebuild 904
+MD5 23180ce4f2ff962ae39c1954ce4080a6 ChangeLog 2574
 MD5 c9a3c259574bc6c3d7583402ad67e763 metadata.xml 311
-MD5 56872b47c16ba5065fc9b99e3b7c56bf libnids-1.18.ebuild 991
-MD5 4f1acaf2ec159ddfba1e456f21c99112 files/libnids-1.18-chksum.c-ebx.patch 615
+MD5 9562afeb0aef6794b0b94779fab9c381 files/libnids-1.20-chksum.c-ebx.patch 718
 MD5 b8821b8ac4cbf9a8d5c0ce7eadc5f710 files/digest-libnids-1.18 64
+MD5 8c22ab811547cb71906e15bee2d4160e files/digest-libnids-1.20 64
+MD5 4f1acaf2ec159ddfba1e456f21c99112 files/libnids-1.18-chksum.c-ebx.patch 615
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB+/4DmdTrptrqvGERAtOlAJ4k7stxnz+G6KQ/kdkjHSaQD/O0xQCdFkzt
-8JgaXS8CtuS1FHe+Q71ZP78=
-=5hDl
+iD8DBQFCHnVWEZCkKN40op4RAnVIAKCipo2TDT9WD89vvxUVbLl1yPOTBwCglZDq
+u0Kpg02Q/kGKpV1TcfPnJ2Y=
+=WQVy
 -----END PGP SIGNATURE-----
