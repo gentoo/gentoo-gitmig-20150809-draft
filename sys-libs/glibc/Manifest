@@ -14,8 +14,8 @@ MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r7 143
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r8 143
 MD5 439cce38dd07f6669b9bb50f0c211b41 files/digest-glibc-2.3.1-r2 141
 MD5 439cce38dd07f6669b9bb50f0c211b41 files/digest-glibc-2.3.1-r3 141
-MD5 ca905d3e80744237818b2a36abda88be files/digest-glibc-2.3.1-r4 4698
-MD5 e13bb987c07c61465df20c0ae86491e8 files/digest-glibc-2.3.2-r1 4762
+MD5 439cce38dd07f6669b9bb50f0c211b41 files/digest-glibc-2.3.1-r4 141
+MD5 ab42c21ee076dc4627576d2434a7e33f files/digest-glibc-2.3.2-r1 143
 MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
 MD5 b712a49b5113fccb4c8b0ada2a30d390 files/glibc-manpages-2.2.5.tar.bz2 14610
 MD5 457a28df7cdef5c2860b89d6ee73262c files/digest-glibc-2.3.2 205
