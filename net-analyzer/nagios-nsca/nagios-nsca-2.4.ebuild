@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/nagios-nsca-2.3-r1.ebuild,v 1.3 2003/11/26 18:34:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/nagios-nsca-2.4.ebuild,v 1.1 2003/11/26 18:34:52 mholzer Exp $
+
 DESCRIPTION="Nagios $PV NSCA  - Nagios Service Check Acceptor"
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagios/nsca-${PV}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 DEPEND=">=net-analyzer/nagios-plugins-1.3.0
 	>=libmcrypt-2.5.1-r4"
