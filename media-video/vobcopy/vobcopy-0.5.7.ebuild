@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/vobcopy-0.5.7.ebuild,v 1.1 2003/04/16 19:53:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/vobcopy-0.5.7.ebuild,v 1.2 2003/04/16 20:02:16 mholzer Exp $
 
 DESCRIPTION="copies DVD .vob files to harddisk, decrypting them on the way"
 HOMEPAGE="http://lpn.rnbhq.org/"
@@ -20,4 +20,5 @@ src_compile() {
 src_install() {
 	dodir /usr/bin
 	make PREFIX=${D}/usr/ install || die
+	dodoc Changelog README TODO Release-Notes 
 }
