@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.14 2004/04/18 02:25:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.15 2004/04/18 23:15:59 dragonheart Exp $
+
+  19 Apr 2004; Daniel Black <dragonheart@gentoo.org> kmyfirewall-0.4.5.ebuild,
+  kmyfirewall-0.9.4.ebuild, kmyfirewall-0.9.5.ebuild,
+  kmyfirewall-0.9.6.2.ebuild:
+  version 0.9.6.2 stable on x86 sparc alpha. removed version 0.4.5. Added
+  iptables depend to versions 0.9.4 0.9.5. Thanks again to Federico Zenith
+  <zenith@chemeng.ntnu.no>
 
   18 Apr 2004; Daniel Black <dragonheart@gentoo.org>
   kmyfirewall-0.9.6.2.ebuild, kmyfirewall-0.9.6.ebuild, metadata.xml:
