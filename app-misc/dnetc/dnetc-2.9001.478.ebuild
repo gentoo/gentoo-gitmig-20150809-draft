@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.1 2002/12/03 13:36:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.2 2002/12/03 13:49:18 aliz Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -11,11 +11,16 @@ SRC_URI="ppc? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-l
 	x86? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-x86-elf.tar.gz )"
 LICENSE="distributed.net"
 SLOT="0"
-KEYWORDS="x86 ppc -sparc -sparc64 -alpha"
+KEYWORDS="x86 ~ppc -sparc -sparc64 -alpha"
 IUSE=""
 DEPEND=""
 #RDEPEND=""
-S="${WORKDIR}"
+if [ `use x86` ]; then
+	S="${WORKDIR}/dnetc${MIN_PV}-linux-x86-elf"
+elif [ `use ppc` ]; then
+	S="${WORKDIR}/dnetc${MIN_PV}-linux-ppc"
+fi
+
 RESTRICT="nomirror"
 
 src_install() {
@@ -23,7 +28,7 @@ src_install() {
 	doexe dnetc
 
 	doman dnetc.1
-	dodoc docs/*
+	dodoc CHANGES.txt dnetc.txt readme.*
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/dnetc.init dnetc
 	insinto /etc/conf.d ; newins ${FILESDIR}/dnetc.conf dnetc
