@@ -4,8 +4,8 @@ MD5 baa2676aae2eccc9f5b80248ff0164a0 libxml2-2.5.9.ebuild 1807
 MD5 d6e3d197694805e94cb094f7ab9b08fa libxml2-2.5.4.ebuild 1679
 MD5 82e1d16f095d6d7fb6d257113812b028 libxml2-2.4.30.ebuild 1477
 MD5 c783dc9ef1cba91cae2d3a360b5156a4 libxml2-2.5.8.ebuild 1905
-MD5 1def42c15d2f34825b4759684a048b5f libxml2-2.5.11.ebuild 1692
-MD5 32d8569112618b89ce28d5849faf845f ChangeLog 6829
+MD5 36dea21e724710d62aef1b2eb5194da7 libxml2-2.5.11.ebuild 1686
+MD5 8c05bcf69baffb7266e3f9d0bee93354 ChangeLog 6914
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 49743757cf83cdff77f25886c42592e2 files/digest-libxml2-2.5.4 67
 MD5 46b436e9d358547dbee7e9101d5eed45 files/digest-libxml2-2.5.7 67
