@@ -1,3 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.4 2004/03/14 04:23:53 kumba Exp $
+
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
@@ -12,4 +14,38 @@ java
 # acl doesn't build on mips atm.  Mask it so that vim quits
 # complaining
 acl
+
+
+# Flags which aren't applicable to mips (Mostly copied from sparc)
+3dfx
+3dnow
+acpi
+afs
+altivec
+apm
+icc
+icc-pgo
+informix
+firebird
+lirc
+mmx
+oci8
+sse
+svga
+tcc
+trusted
+voodoo3
+
+
+# And arch keyword flags that don't work
+
+x86
+ppc
+alpha
+hppa
+arm
+amd64
+ia64
+ppc64
+s390
 
