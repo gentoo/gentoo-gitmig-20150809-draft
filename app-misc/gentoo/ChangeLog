@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.7 2002/06/12 23:24:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.8 2002/06/22 15:21:49 seemant Exp $
+
+*gentoo-0.11.27 (22 Jun 2002)
+
+  22 Jun 2002; Seemant Kulleen <seemant@gentoo.org> gentoo-0.11.27.ebuild
+  files/digest-gentoo-0.11.27 :
+
+  Version bump.
 
 *gentoo-0.11.26 (12 Jun 2002)
 
