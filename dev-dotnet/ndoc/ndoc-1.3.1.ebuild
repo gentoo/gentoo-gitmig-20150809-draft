@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndoc/ndoc-1.3.1.ebuild,v 1.3 2005/04/02 19:05:35 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndoc/ndoc-1.3.1.ebuild,v 1.4 2005/04/02 19:15:35 urilith Exp $
 
 inherit mono
 
@@ -49,7 +49,5 @@ src_install() {
 	doins NDocConsole.exe
 	dobin ndoc
 
-	if use doc; then
-		dohtml -a gif,html,css,js ${S}/doc/sdk
-	fi
+	use doc && dohtml -a gif,html,css,js -r ${S}/doc/sdk
 }
