@@ -1,6 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ChangeLog,v 1.2 2002/05/05 06:47:41 kain Exp $
+# $Id: ChangeLog,v 1.3 2002/05/27 00:12:35 kain Exp $
+
+*ppc-sources-2.4.19-r4 (26 May 2002)
+
+  26 May 2002; Kain <kain@kain.org> all :
+
+  Firewire works again.  This kernel implements the O(1) scheduler, XFS,
+  the rmap VM, and the HZ=1000 timer.
 
 *ppc-sources-2.4.19-r3 <kain@kain.org> :
 
