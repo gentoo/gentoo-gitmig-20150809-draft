@@ -1,3 +1,4 @@
-MD5 884f1ec18f894b7411bdf95b111b75ef libnids-1.16.ebuild 880
-MD5 6e8849585d7f8639ee148028bedd27ac ChangeLog 963
+MD5 e57ae303970eb9d8101b4e3b1fbe584a ChangeLog 1095
+MD5 f34490257d1dd67bba0ed258b077ebf5 libnids-1.16.ebuild 983
 MD5 e62f7085ef37a208a914cbe30524e74b files/digest-libnids-1.16 63
+MD5 071001548c5f912faf9da3fa07870ba1 files/libnids_gcc33_fix.gz 1181
