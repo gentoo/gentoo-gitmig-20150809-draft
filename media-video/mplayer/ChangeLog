@@ -1,6 +1,6 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.100 2003/12/14 12:46:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.101 2003/12/20 14:11:34 gmsoft Exp $
 
   14 Dec 2003; Martin Holzer <mholzer@gentoo.org> mplayer-1.0_pre3.ebuild:
   Changing matroska version. Closes #35787
@@ -10,6 +10,9 @@
   butters@opengames.net and its duplicates
 
 *mplayer-1.0_pre3 (11 Dec 2003)
+
+  20 Dec 2003; Guy Martin <gmsoft@gentoo.org> mplayer-1.0_pre3.ebuild :
+  Fixed detection of hppa boxes.
 
   11 Dec 2003; Seemant Kulleen <seemant@gentoo.org> mplayer-1.0_pre3.ebuild,
   files/mplayer-1.0-gtk2.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3.ebuild,v 1.5 2003/12/18 00:12:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3.ebuild,v 1.6 2003/12/20 14:11:34 gmsoft Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick"
 
@@ -105,6 +105,8 @@ src_unpack() {
 	# Fix mencoder segfaulting with bad arguments
 	cd ${S}; epatch ${FILESDIR}/mencoder-segfault.patch
 
+	# Fix hppa detection
+	[ "${ARCH}" = "hppa" ] && sed -i -e "s/9000*/parisc*/" "${S}/configure"
 
 	if [ "`use svga`" ]
 	then
