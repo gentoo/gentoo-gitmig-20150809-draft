@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/hotwayd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.14 2005/01/10 02:35:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.15 2005/01/13 15:14:51 ticho Exp $
+
+*hotwayd-0.8.2-r1 (13 Jan 2005)
+
+  13 Jan 2005; Andrej Kacian <ticho@gentoo.org> files/hotwayd-0.8.xinetd,
+  files/hotwayd.xinetd, hotwayd-0.7.4.ebuild, hotwayd-0.8-r1.ebuild,
+  +hotwayd-0.8.2-r1.ebuild, hotwayd-0.8.2.ebuild, hotwayd-0.8.ebuild:
+  Added "smtp" USE flag for building hotsmtpd SMTP proxy. Closes bug #77629,
+  reported by Scott <s_aldinger@hotmail.com>.
 
   09 Jan 2005; Jason Wever <weeve@gentoo.org> hotwayd-0.8.2.ebuild:
   Added ~sparc keyword wrt bug #76591.

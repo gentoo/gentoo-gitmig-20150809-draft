@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.7.4.ebuild,v 1.6 2005/01/13 15:14:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8.2-r1.ebuild,v 1.1 2005/01/13 15:14:51 ticho Exp $
+
+inherit eutils
 
 DESCRIPTION="Hotmail to pop3 daemon"
 HOMEPAGE="http://hotwayd.sourceforge.net/"
@@ -8,17 +10,13 @@ SRC_URI="mirror://sourceforge/hotwayd/${P}.tar.bz2"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 
-IUSE=""
+IUSE="smtp"
 
 DEPEND="virtual/inetd
-	dev-libs/libxml2"
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
+	dev-libs/libxml2
+	smtp? ( >=dev-libs/cyrus-sasl-2 )"
 
 src_install () {
 	# The original make install is broken, since it also tries to install 
@@ -26,6 +24,11 @@ src_install () {
 	# linked into the executable.
 	# Lets just copy the (one) file manually...
 	dosbin hotwayd
+	if use smtp; then
+		dosbin hotsmtpd/hotsmtpd
+		insinto /etc/xinetd.d
+		newins hotsmtpd/hotsmtpd.xinetd hotsmtpd
+	fi
 
 	dodoc AUTHORS NEWS README
 
@@ -52,4 +55,8 @@ pkg_postinst () {
 	einfo "   # rc-update add xinetd default "
 	einfo "   # /etc/init.d/xinetd start "
 	einfo ""
+	if use smtp; then
+		einfo "You chose to install hotsmtpd, a SMTP proxy for hotmail. Please"
+		einfo "Configure /etc/xinetd.d/hotsmtpd and restart xinetd to start using it."
+	fi
 }

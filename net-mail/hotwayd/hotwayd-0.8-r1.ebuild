@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8-r1.ebuild,v 1.5 2005/01/10 02:35:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8-r1.ebuild,v 1.6 2005/01/13 15:14:51 ticho Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_install () {
 	dodoc AUTHORS NEWS README
 
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/${P}.xinetd hotwayd
+	newins ${FILESDIR}/${PN}.xinetd ${PN}
 }
 
 pkg_postinst () {
