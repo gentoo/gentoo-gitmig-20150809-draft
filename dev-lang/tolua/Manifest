@@ -1,3 +1,4 @@
-MD5 796716205dcf6112f7537cff54710826 ChangeLog 329
-MD5 505b7fdc55dafdb59c6b6fa27fe71408 tolua-5.0.ebuild 937
+MD5 9289efd6e6998897aa932a4bdba2dadc tolua-5.0.ebuild 971
+MD5 91578618f954cd0862542c4ae8cb85ef ChangeLog 402
+MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
 MD5 8e839d58ded054bfa49ba75a9e769951 files/digest-tolua-5.0 60
