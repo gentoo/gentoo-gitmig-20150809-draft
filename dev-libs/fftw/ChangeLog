@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fftw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.16 2004/03/04 09:37:42 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.17 2004/03/09 13:03:49 aliz Exp $
+
+  09 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> fftw-2.1.5-r1.ebuild:
+  Adding amd64 keyword. Closing #44068.
 
 *fftw-2.1.5-r1 (04 Mar 2004)
 

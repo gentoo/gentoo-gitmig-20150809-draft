@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.1 2004/03/04 09:37:42 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.2 2004/03/09 13:03:50 aliz Exp $
 
 inherit flag-o-matic
 
@@ -16,14 +16,16 @@ SLOT="2.1"
 LICENSE="GPL-2"
 
 #remove ~'s on ppc and sparc when removig on x86 (as per recent discussion on -core)
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha ~amd64"
 
 #this one is reported to cause trouble on pentium4 m series
 filter-mfpmath "sse"
 
 #here I need (surprise) to increase optimization:
 #--enable-i386-hacks requires -fomit-frame-pointer to work properly
-is-flag "-fomit-frame-pointer" || append-flags "-fomit-frame-pointer"
+if [ "${ARCH}" != "amd64" ]; then
+	is-flag "-fomit-frame-pointer" || append-flags "-fomit-frame-pointer"
+fi
 
 pkg_setup() {
 	einfo ""
@@ -54,6 +56,13 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use mpi && myconf="${myconf} --enable-mpi"
+
+	if [ "${ARCH}" == "amd64" ]; then
+		myconf="${myconf} --disable-i386-hacks"
+	else
+		myconf="${myconf} --enable-i386-hacks"
+	fi
+
 	#mpi is not a valid flag yet. In this revision it is used merely to block --enable-mpi option
 	#it might be needed if it is decided that lam is an optional dependence
 
@@ -63,7 +72,6 @@ src_compile() {
 		--enable-threads \
 		--enable-type-prefix \
 		--enable-float \
-		--enable-i386-hacks \
 		--enable-vec-recurse \
 		${myconf} || die "./configure failed"
 	emake || die
@@ -74,7 +82,6 @@ src_compile() {
 		--enable-shared \
 		--enable-threads \
 		--enable-type-prefix \
-		--enable-i386-hacks \
 		--enable-vec-recurse \
 		${myconf} || die "./configure failed"
 	emake || die
