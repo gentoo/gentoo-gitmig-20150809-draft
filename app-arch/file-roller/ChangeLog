@@ -1,11 +1,16 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.39 2003/09/11 21:55:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.40 2003/09/12 19:12:34 liquidx Exp $
 
 *file-roller-2.4.0.1 (11 Sep 2003)
 
   11 Sep 2003; <spider@gentoo.org> file-roller-2.4.0.1.ebuild:
   Final gnome 2.4 version
+
+  12 Sep 2003; Alastair Tse <liquidx@gentoo.org> file-roller-2.2.1.ebuild,
+  file-roller-2.2.2.ebuild, file-roller-2.2.4.ebuild,
+  file-roller-2.2.5.ebuild:
+  removed bonobo-activation dep
 
 *file-roller-2.3.6 (07 Sep 2003)
 

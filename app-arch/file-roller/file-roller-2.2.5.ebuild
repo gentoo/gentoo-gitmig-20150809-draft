@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.2.5.ebuild,v 1.5 2003/09/05 01:26:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.2.5.ebuild,v 1.6 2003/09/12 19:12:34 liquidx Exp $
 
 inherit gnome2
 
@@ -17,7 +17,6 @@ DEPEND=">=dev-libs/glib-2
 	>=gnome-base/libgnomeui-2.1
 	>=gnome-base/gnome-vfs-2.2
 	>=gnome-base/libglade-2
-	>=gnome-base/bonobo-activation-1
 	>=gnome-base/libbonobo-2
 	>=gnome-base/libbonoboui-2"
 
