@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmbattery
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.10 2004/07/16 23:09:32 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.11 2004/07/31 22:48:59 s4t4n Exp $
+
+  01 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmbattery-2.19-r1.ebuild:
+  Stable for x86.
+  wmbattery-2.19.ebuild, wmbattery-1.2.1-r1.ebuild:
+  Remove older ebuilds.
 
 *wmbattery-2.19-r1 (17 Jul 2004)
 
