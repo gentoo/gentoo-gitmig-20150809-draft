@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.ebuild,v 1.7 2003/09/05 02:03:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.ebuild,v 1.8 2003/09/08 02:13:16 azarah Exp $
 
 IUSE="nls"
 
@@ -16,9 +16,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm"
 
-DEPEND="virtual/glibc
-	nls? ( sys-devel/gettext )
-	>=sys-devel/libtool-1.3.5-r2"
+DEPEND="virtual/glibc 
+	!bootstrap? ( >=sys-devel/libtool-1.3.5-r2 )
+	nls? ( sys-devel/gettext )"
 
 RDEPEND="virtual/glibc"
 
