@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-0.8.12.ebuild,v 1.5 2004/01/04 11:10:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-0.8.12.ebuild,v 1.6 2004/06/10 19:39:12 agriffis Exp $
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -44,7 +44,7 @@ src_install() {
 	dodoc AUTHORS COPYING COPYING.LIB ChangeLog NEWS \
 		README THANKS doc/TODO
 
-	if [ "`use doc`" ] ; then
+	if use doc ; then
 		dodoc doc/README.autoconf doc/tex/gnutls.ps
 		docinto examples
 		dodoc doc/examples/*.c
