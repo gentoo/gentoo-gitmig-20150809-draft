@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.92 2005/02/11 13:00:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.93 2005/03/08 21:08:20 foser Exp $
+
+*gstreamer-0.8.9-r2 (08 Mar 2005)
+
+  08 Mar 2005; foser <foser@gentoo.org> gstreamer-0.8.9-r2.ebuild :
+  Add dataprotocol by zaheerm patch for bug which showed on 64 bit platforms
 
 *gstreamer-0.8.9-r1 (11 Feb 2005)
 
