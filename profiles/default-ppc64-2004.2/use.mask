@@ -1,7 +1,6 @@
 # this is a list of USE flags
 # that should not be used on PPC64
 # Tom Gall <tgall@gentoo.org> manages this list
-acl
 afs
 acpi
 3dfx
@@ -72,10 +71,6 @@ sybase-ct
 
 # dietlibc
 diet
-
-# Added because of xmms-plugin.eclass.  Please test out
-# media-sound/beep-media-player and remove if   
-bmp
 
 # aqua USE flag is only valid on Mac OS X
 aqua
