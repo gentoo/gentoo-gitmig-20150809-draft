@@ -71,6 +71,6 @@ emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
 emerge $myBASELAYOUT $myGETTEXT $myBINUTILS $myGCC || cleanup 1
 #make.conf has been overwritten, so we explicitly export our original settings
 export USE="$ORIGUSE bootstrap"
-emerge $myPORTAGE $myGLIBC $myBASELAYOUT $myGETTEXT $myBINUTILS $myGCC || cleanup 1
+emerge $myGLIBC $myBASELAYOUT $myGETTEXT $myBINUTILS $myGCC $myPORTAGE || cleanup 1
 #restore original make.conf
 cleanup 0
