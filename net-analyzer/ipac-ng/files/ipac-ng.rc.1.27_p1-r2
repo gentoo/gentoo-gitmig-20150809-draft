@@ -1,0 +1,42 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/files/ipac-ng.rc.1.27_p1-r2,v 1.1 2004/02/28 06:55:01 mboman Exp $
+
+depend() {
+	need net logger
+}
+
+start() {
+	ebegin "Setting up ipac-ng iptables chains"
+	/usr/sbin/fetchipac -S
+	/usr/sbin/fetchipac
+	eend $?
+}
+
+stop() {
+	## fetch so we dont loose data
+	/usr/sbin/fetchipac
+
+	IPT=/sbin/iptables
+	ebegin "Removing ipac-ng iptables settings"
+
+	${IPT} -D INPUT -s 0/0 -d 0/0 -j ipac~o
+	${IPT} -D OUTPUT -s 0/0 -d 0/0 -j ipac~i
+	${IPT} -D FORWARD -s 0/0 -d 0/0 -j ipac~fi
+	${IPT} -D FORWARD -s 0/0 -d 0/0 -j ipac~fo
+	
+	${IPT} -F ipac~i
+	${IPT} -F ipac~o
+	${IPT} -F ipac~fi
+	${IPT} -F ipac~fo
+	
+	${IPT} -X ipac~i
+	${IPT} -X ipac~o
+	${IPT} -X ipac~fi
+	${IPT} -X ipac~fo
+
+	rm -f /var/run/ipac.rules /var/run/ipac.status
+
+	eend $?
+}

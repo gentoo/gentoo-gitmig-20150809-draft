@@ -1,0 +1,195 @@
+# Example config file with accounting rules
+# Install as /etc/ipac-ng/rules.conf.iptables
+#
+# Format:
+# Name of rule|direction|interface|protocol|source|destination
+# WARNING!!!! spaces are not allowed before and after '|'.
+#
+# where
+# Name of rule		Any string to identify this rule
+# direction		ipac~fi  - forward in
+#			ipac~fo  - forward out
+#			ipac~i   - outgoing from machine with ipac-ng to other host(/net)
+#					(or incoming to otherhost)
+#			ipac~o   - incoming to machine with ipac-ng
+#					(or outgoing from otherhost)
+#
+# interface		interface name, '+' means all interfaces (dont try to use ip numbers here!)
+# protocol		tcp | udp | icmp | all
+# source		\
+# destination		both as described in ipfwadm(8), or empty
+#
+# incoming:
+
+
+###
+###    W A R N I N G ! ! !
+###
+### Don't use symbols other than '0-9A-z[space]' in rules names. You may encounter 
+### some strange troubles.
+
+# lets demonstrate this by following rules.
+# Example 1:
+# there are some hosts in our net 192.168.0.0/24
+# our ipac-ng host has two interfaces - eth0 connected to local net
+#				    and eth1 to internet
+
+
+# lets count all traffic incoming to our net
+
+# forwarded from inet (0/0) to localnet (192.168.0.0/24)
+#incoming all to my net|ipac~fi||all||192.168.0.0/24
+
+# incoming to localnet from ipac-ng host (specify ipac-ng ip's here, to avoid
+#					doubling forwarded traffic when using NAT)
+#incoming all to my net|ipac~i||all|192.168.0.1|192.168.0.0/24
+
+
+# same for outgoing:
+#outgoing all from my net|ipac~fo||all|192.168.0.0/24|
+#outgoing all from my net|ipac~o||all|192.168.0.0/24|192.168.0.1
+
+
+
+# and now we want to know, how much there is traffic to our ipac host from inet
+#incoming inet to ipac host|ipac~o|eth1|all||
+
+# same for outgoing for this host
+#outgoing inet from ipac host|ipac~i|eth1|all||
+
+# please note, that chains 'ipac~i' and 'ipac~o' are reversed for the host with ipac
+
+# wanna count traffic to squid that resides on the host with ipac-ng? here you are :)
+#incoming to squid|ipac~o|eth1|all|0/0 80 81 82 83 8080|
+# sure, this rule is only valid in the case when you don't eat traffic from these ports
+# by hopping on the web from ipac-ng host (maybe you like to use links :)
+
+# our net is using squid heavily, let's count them all together:
+#outgoing from squid to mynet|ipac~i||all|192.168.0.1 squid|192.168.0.0/24
+
+
+# now lets count traffic for hosts mary (192.168.0.12) and fred (192.168.0.13)
+
+# incoming:
+#incoming all to mary|ipac~fi||all||192.168.0.12
+#incoming all to mary|ipac~i||all|192.168.0.1|192.168.0.12
+
+# and outgoing:
+#outgoing all from mary|ipac~fo||all|192.168.0.12|
+#outgoing all from mary|ipac~o||all|192.168.0.12|192.168.0.1
+
+
+# same for fred
+# incoming:
+#incoming all to mary|ipac~fi||all||192.168.0.13
+#incoming all to mary|ipac~i||all|192.168.0.1|192.168.0.13
+
+# and outgoing:
+#outgoing all from fred|ipac~fo||all|192.168.0.13|
+#outgoing all from fred|ipac~o||all|192.168.0.13|192.168.0.1
+
+
+# we also wants http and ssh traffic statistics
+
+# http incoming
+#incoming http to my net|ipac~fi||all|0/0 http squid 8080|192.168.0.0/24
+#incoming http to my net|ipac~i||all|192.168.0.1 http squid|192.168.0.0/24
+# please note, that the last rule includes rule 'outgoing from squid to mynet'
+
+
+# outgoing:
+#outgoing http from my net|ipac~fo||all|192.168.0.0/24|0/0 http squid 8080
+#outgoing http from my net|ipac~o||all|192.168.0.0/24|192.168.0.1 http squid
+
+
+# ssh incoming
+#incoming ssh to my net|ipac~fi||all|0/0 ssh|192.168.0.0/24
+#incoming ssh to my net|ipac~i||all|192.168.0.1 ssh|192.168.0.0/24
+
+# outgoing:
+#outgoing ssh from my net|ipac~fo||all|192.168.0.0/24|0/0 ssh
+#outgoing ssh from my net|ipac~o||all|192.168.0.0/24|192.168.0.1 ssh
+
+
+# there is somenet of our friend. we wanna know how much traffic it generates
+# note: that net cidrs is contained in CONFIGDIR (/etc/ipac-ng by default) 
+#						'friendnet' file
+
+#incoming from somenet to mynet|ipac~fi||all||@/friendnet@in_some_to_my~fi
+# first field here ('incoming from somenet to mynet') contains rule name.
+# you'll see all statistics under this name 
+# other fields are same as above but now we are interested in the last one -
+#						@/frendnet@in_some_to_my~fi
+# 'friendnet' represents file with cidr's of that net, one in a line
+# 'in_some_to_my' represents chains name that will be created. there is no sense
+#	for ipac-ng of that name. but it may be usefull for you to give 
+#					"speaking" name to that chain
+
+# same for outgoing
+#outgoing to somenet from mynet|ipac~fo||all|@/friendnet@out_some_to_my~fo|
+
+# denote absense of rules targetted to 'ipac~i' and 'ipac~o'
+# we just don't want to count traffic from\to our ipac-ng host to\from friendnet
+
+# and now we want to count traffic to our other net 192.168.1.0/24 for every host
+# lets separate /24 subnet to some smaller ones to lower latence. /26 for e.g.
+#%chain% incoming to othernet0~fi|ipac~fi||all||192.168.1.0/26
+#%chain% incoming to othernet1~fi|ipac~fi||all||192.168.1.64/26
+#%chain% incoming to othernet2~fi|ipac~fi||all||192.168.1.128/26
+#%chain% incoming to othernet3~fi|ipac~fi||all||192.168.1.192/26
+
+#%chain% outgoing from othernet0~fo|ipac~fo||all|192.168.1.0/26|
+#%chain% outgoing from othernet1~fo|ipac~fo||all|192.168.1.64/26|
+#%chain% outgoing from othernet2~fo|ipac~fo||all|192.168.1.128/26|
+#%chain% outgoing from othernet3~fo|ipac~fo||all|192.168.1.192/26|
+
+# and every single host follows
+#incoming to 192.168.1.2|incoming to othernet0~fi||all||192.168.1.2
+#incoming to 192.168.1.3|incoming to othernet0~fi||all||192.168.1.3
+#incoming to 192.168.1.4|incoming to othernet0~fi||all||192.168.1.4
+#
+# and so on :)
+#incoming to 192.168.1.63|incoming to othernet0~fi||all||192.168.1.63
+
+# same for outgoing 
+#outgoing from 192.168.1.2|outgoing from othernet0~fo||all|192.168.1.2|
+#outgoing from 192.168.1.3|outgoing from othernet0~fo||all|192.168.1.3|
+#outgoing from 192.168.1.4|outgoing from othernet0~fo||all|192.168.1.4|
+
+# and the last
+#outgoing from 192.168.1.63|outgoing from othernet0~fo||all|192.168.1.63|
+
+# repeat for other chains and hosts
+
+#incoming to 192.168.1.64|incoming to othernet1~fi||all||192.168.1.64
+#incoming to 192.168.1.65|incoming to othernet1~fi||all||192.168.1.65
+#incoming to 192.168.1.66|incoming to othernet1~fi||all||192.168.1.66
+
+# and so on :)
+#incoming to 192.168.1.127|incoming to othernet1~fi||all||192.168.1.127
+
+# same for outgoing 
+#outgoing from 192.168.1.64|outgoing from othernet1~fo||all|192.168.1.64|
+#outgoing from 192.168.1.65|outgoing from othernet1~fo||all|192.168.1.65|
+#outgoing from 192.168.1.66|outgoing from othernet1~fo||all|192.168.1.66|
+
+# and the last
+#outgoing from 192.168.1.127|outgoing from othernet1~fo||all|192.168.1.127|
+
+# and so on :)
+
+# please note that chain names must ends with one of: '~i', '~o', '~fi' or '~fo'
+# which one is necessary is defined by the parent chain.
+
+
+##############################
+#just a simple example
+#note that outgoing from this host is ipac~i
+#and incoming is ipac~o
+
+outgoing eth0|ipac~i|eth0|all||
+incoming eth0|ipac~o|eth0|all||
+traffic eth0|ipac~i|eth0|all||
+traffic eth0|ipac~o|eth0|all||
+
+
