@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.3.4_beta5.ebuild,v 1.3 2005/01/01 13:51:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.3.3-r1.ebuild,v 1.1 2005/01/12 18:09:48 mkennedy Exp $
 
-inherit elisp
+inherit elisp eutils
 
 IUSE=""
 
@@ -11,21 +11,27 @@ HOMEPAGE="http://jdee.sunsite.dk/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64 ~ppc"
 
 DEPEND="virtual/emacs
-	>=virtual/jdk-1.3
-	app-emacs/elib
-	>=app-emacs/cedet-1.0_beta3"
+	>=virtual/jdk-1.2.2
+	app-emacs/eieio
+	app-emacs/semantic
+	app-emacs/elib"
 
-S=${WORKDIR}/${P/_beta/beta}
+src_unpack() {
+	unpack ${A}
+	# Fix for CVS versions of Emacs http://www.mail-archive.com/jde@sunsite.dk/msg07917.html
+	epatch ${FILESDIR}/${PV}-jde-new-buffer-menu-gentoo.patch || die
+}
 
 src_compile() {
 	cd ${S}/lisp
-	cat >jde-compile-script-init <<EOF
-(load "${SITELISP}/cedet/common/cedet")
-(add-to-list 'load-path "$PWD")
-EOF
+	rm -f jde-compile-script-init
+	for i in ${SITELISP}/eieio ${SITELISP}/semantic ${PWD}
+	do
+		echo "(add-to-list 'load-path \"$i\")" >>jde-compile-script-init
+	done
 	emacs -batch -l jde-compile-script-init -f batch-byte-compile *.el
 }
 

@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/jde
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.11 2005/01/01 13:51:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.12 2005/01/12 18:09:48 mkennedy Exp $
+
+*jde-2.3.3-r1 (12 Jan 2005)
+
+  12 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
+  +files/2.3.3-jde-new-buffer-menu-gentoo.patch, -jde-2.2.8.ebuild,
+  -jde-2.3.2.ebuild, +jde-2.3.3-r1.ebuild, -jde-2.3.4_beta5.ebuild,
+  +jde-2.3.5.ebuild:
+  Minor version update; Resolves Bug #73837; Added fix for JDE 2.3.3 when used
+  with CVS Emacs (see also Bug #73837); Removed old ebuilds.
 
   21 Sep 2004; Thomas Matthijs <axxo@gentoo.org> jde-2.3.3.ebuild:
   x86
