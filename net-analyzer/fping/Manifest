@@ -1,5 +1,5 @@
-MD5 18fd62f3e376e329c294565193665a09 ChangeLog 1236
-MD5 bdbad997982e61f2a8cfd2cee38d8deb fping-2.4_beta2-r1.ebuild 606
+MD5 e0ee996d45a88110184e0ec2bc50dbf3 ChangeLog 1343
+MD5 fcf2bb831de99c0ff9d51c08c92ed133 fping-2.4_beta2-r1.ebuild 619
 MD5 e7d30cc0d1e0c7404adea0f207cf8f97 fping-2.4_beta2.ebuild 598
 MD5 3fc4637fca91307d9fe148cb1924a508 files/digest-fping-2.4_beta2 70
 MD5 d6a3fe0582b016b9ce82c2ef6b07ba55 files/digest-fping-2.4_beta2-r1 65
