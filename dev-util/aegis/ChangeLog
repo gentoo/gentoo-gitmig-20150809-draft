@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/aegis
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.1 2002/04/13 21:55:07 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.2 2002/05/15 09:27:50 seemant Exp $
+
+*aegis-4.4 (15 May 2002)
+
+  15 May 2002; Seemant Kulleen <seemant@gentoo.org> aegis-4.4.ebuild
+  files/digest-aegis-4.4 :
+
+  Update submitted by peter@biolateral.com.au (Peter Maxwell) in bug report
+  # 2689
 
 *aegis-4.2 (13 Apr 2002)
 
