@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.51 2003/04/07 22:04:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.52 2003/04/10 06:43:32 vladimir Exp $
 
 *evolution-1.2.4 (05 Apr 2003)
 
@@ -12,6 +12,9 @@
   version bump
 
 *evolution-1.2.3 (21 Mar 2003)
+
+  09 Apr 2003; Graham Forest <vladimir@gentoo.org> evolution-1.2.3.ebuild:
+  Downgraded to ~ppc, excessive dep problems
 
   21 Mar 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.3.ebuild:
   version bump. fixes security advisory (#17856). marked as x86 stable.
