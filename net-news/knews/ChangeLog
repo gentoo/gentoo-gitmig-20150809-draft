@@ -1,0 +1,8 @@
+# ChangeLog for net-news/knews
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-news/knews/ChangeLog,v 1.1 2002/04/12 21:38:58 spider Exp $
+
+*knews-1.0.1b-r1 (12 Apr 2002)
+  12 Apr 2002; Spider <spider@gentoo.org>:
+  Create Changelog
+  new revision with updated libpng dependency
