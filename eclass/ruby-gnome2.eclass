@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.2 2003/10/19 11:50:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.3 2003/10/31 03:11:55 agriffis Exp $
 #
 # This eclass simplifies installation of the various pieces of
 # ruby-gnome2 since they share a very common installation procedure.
@@ -15,14 +15,26 @@ EXPORT_FUNCTIONS src_compile src_install
 IUSE=""
 
 subbinding=${PN#ruby-} ; subbinding=${subbinding%2}
-S=${WORKDIR}/ruby-gnome2-${PV}/${subbinding}
-SRC_URI="mirror://sourceforge/ruby-gnome2/ruby-gnome2-${PV}.tar.gz"
+if [[ ${PV} == 0.5.0 ]]; then
+	S=${WORKDIR}/ruby-gnome2-${PV}/${subbinding}
+	SRC_URI="mirror://sourceforge/ruby-gnome2/ruby-gnome2-${PV}.tar.gz"
+else
+	S=${WORKDIR}/ruby-gnome2-all-${PV}/${subbinding}
+	SRC_URI="mirror://sourceforge/ruby-gnome2/ruby-gnome2-all-${PV}.tar.gz"
+fi
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 LICENSE="Ruby"
 SLOT="0"
 
-DEPEND="${DEPEND} >=dev-lang/ruby-1.6"
-RDEPEND="${RDEPEND} >=dev-lang/ruby-1.6"
+if [[ ${PV} == 0.5.0 ]]; then
+	DEPEND="${DEPEND} >=dev-lang/ruby-1.6"
+	RDEPEND="${RDEPEND} >=dev-lang/ruby-1.6"
+else
+	# Not necessarily true, but nobody's testing the newer ruby-gnome2
+	# with the older ruby...
+	DEPEND="${DEPEND} >=dev-lang/ruby-1.8"
+	RDEPEND="${RDEPEND} >=dev-lang/ruby-1.8"
+fi
 
 ruby-gnome2_src_compile() {
 	ruby extconf.rb || die "extconf.rb failed"
