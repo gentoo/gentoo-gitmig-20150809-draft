@@ -1,0 +1,13 @@
+--- oo_1.1_src/solenv/bin/checkdll.sh.org	2003-11-13 10:54:00.000000000 -0600
++++ oo_1.1_src/solenv/bin/checkdll.sh	2003-11-13 10:54:15.000000000 -0600
+@@ -52,8 +52,8 @@
+         export LD_LIBRARY_PATH;;
+     esac
+ 
+-    $checkdll "$*"
+-    if [ $? -ne 0 ]; then exit 1 ; fi
++#    $checkdll "$*"
++#    if [ $? -ne 0 ]; then exit 1 ; fi
+     
+     for parameter in $*; do
+         library=$parameter;

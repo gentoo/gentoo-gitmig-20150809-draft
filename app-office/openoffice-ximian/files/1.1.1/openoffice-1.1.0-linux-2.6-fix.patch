@@ -1,0 +1,16 @@
+Submitted By: Mark Hymers <markh AT linuxfromscratch DOT org>
+Date: 2003-10-05
+Initial Package Version: 1.1.0
+Origin: http://archive.linuxfromscratch.org/mail-archives/blfs-dev/2003-September/003771.html
+Description: Fixes critical segmentation fault on linux-2.6.0 based systems
+--- oo_1.1_src/tools/source/solar/solar.c	2003-04-15 12:55:43.000000000 -0500
++++ oo_1.1_src/tools/source/solar/solar.c.new	2003-10-05 12:31:58.000000000 -0500
+@@ -76,7 +76,7 @@
+ #include <varargs.h>
+ #endif
+ 
+-#define NO_USE_FORK_TO_CHECK
++#define USE_FORK_TO_CHECK
+ #ifdef USE_FORK_TO_CHECK
+ #include <sys/wait.h>
+ #else
