@@ -291,10 +291,6 @@ dev-lisp/cmucl-bin
 =kde-base/kdebase-3.2.0_rc1
 =kde-base/arts-1.2.0_rc1
 
-# <lu_zero@gentoo.org> (04 Sep 2003)
-# Not working for me, still builds fine
-media-video/lives
-
 # <spider@gentoo.org> (01 Sep 2003)
 # This one requires more testing. Appears to be buggier than the i
 # previous version
@@ -409,10 +405,6 @@ net-www/opera-static
 x11-terms/xterm
 sys-apps/utempter
 media-fonts/chkfontpath
-
-# <lu_zero@gentoo.org> (14 May 2003)
-# Not yet ready, sadly
-=media-video/cinelerra-1.1.6
 
 # <mkennedy@gentoo.org> (8 May 2003)
 # waiting for jboss user to be added to passwd
