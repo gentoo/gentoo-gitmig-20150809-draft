@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/bastille
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/ChangeLog,v 1.1 2003/08/02 10:13:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/ChangeLog,v 1.2 2003/08/03 03:12:17 solar Exp $
+
+  02 Aug 2003; <solar@gentoo.org> bastille-2.1.1.ebuild:
+  Added support for console only building. Server installs are a place
+  that I think most admins/users would want the functionality of something 
+  like bastille without having to install X
 
 *bastille-2.1.1 (02 Aug 2003)
 
