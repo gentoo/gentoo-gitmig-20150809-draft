@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.2 2002/04/12 22:24:31 spider Exp $
+
+
+
+*mrtg-2.9.7-r1 (11 Apr 2002)
+  11 Apr 2002; Spider <spider@gentoo.org> 
+  Update libpng dependency
+
 
 *mrtg-2.9.7 (1 Feb 2002)
 
