@@ -4,8 +4,9 @@ MD5 0d0b886c6d1f81ec1c30752210de8e70 gedit-0.9.6-r1.ebuild 903
 MD5 eb67912bf9e81408c283f720c3ff1c29 gedit-2.6.0.ebuild 859
 MD5 e571e4929f75c136060c2ffb2e91c9f0 gedit-2.4.1.ebuild 1204
 MD5 9a5ece2a4b2a0dbe070f362045f49548 gedit-2.6.2.ebuild 868
-MD5 87b522dd13af82006e3ebb92f62fc1d9 ChangeLog 8674
+MD5 793e5121f53a4359de61fd9043079d99 ChangeLog 8782
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 b7be57955648bf8b99fbd0bc1adfb3b9 gedit-2.8.0.ebuild 873
 MD5 871bd845733e2e5c91dd3b17f1103037 files/gedit-2.4.0-64bit-fix.patch 433
 MD5 f6238e63bd76f7217d37c9993476dba5 files/gedit-2.6.1-highlight_fix.patch 6941
 MD5 b1cd4f5d4adf64b0c6ce68ebe818a495 files/digest-gedit-0.9.6-r1 64
@@ -14,3 +15,4 @@ MD5 a3fb1841d3eff85ac58e00977c2c009c files/digest-gedit-2.4.1 65
 MD5 e3f41ced499666436b48a9c143e048d3 files/digest-gedit-2.6.0 65
 MD5 eb7fc2623c2ebfe67125e5bc1fd3850d files/digest-gedit-2.6.1 65
 MD5 6d591a38f842abf41b8f4462dea4ec3f files/digest-gedit-2.6.2 65
+MD5 3559e65cd6237e86af0f0074bdfc4c6d files/digest-gedit-2.8.0 65

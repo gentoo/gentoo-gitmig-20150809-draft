@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.72 2004/08/22 12:20:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.73 2004/09/16 15:54:37 foser Exp $
+
+*gedit-2.8.0 (16 Sep 2004)
+
+  16 Sep 2004; foser <foser@gentoo.org> gedit-2.8.0.ebuild :
+  Gnome 2.8 commit
 
   22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gedit-2.6.2.ebuild:
   Stable on alpha.
