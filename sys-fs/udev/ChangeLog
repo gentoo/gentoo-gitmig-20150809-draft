@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.51 2004/06/24 22:54:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.52 2004/06/26 00:47:46 gregkh Exp $
+
+*udev-028 (25 Jun 2004)
+
+  25 Jun 2004; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-028.ebuild:
+  version bump, hopefully will fix the lvm issue
 
   19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> udev-024-r1.ebuild,
   udev-025-r1.ebuild:
