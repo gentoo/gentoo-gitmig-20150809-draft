@@ -1,26 +1,36 @@
-MD5 5be2ef3871d08d23d19770f7afa23cdb pam-login-3.12-r1.ebuild 2383
-MD5 3a7b3edda94bc08adb1aed2f3b0aa706 pam-login-3.14.ebuild 2683
-MD5 8c7833ea57d0677abcad4d5ef3575e5d pam-login-3.6-r2.ebuild 1926
-MD5 d0e155e9dd4d8b526dd03f93be02e481 pam-login-3.11.ebuild 2120
-MD5 f576eeeee354c0f1d13b9b25e3ef406a pam-login-3.11-r1.ebuild 2265
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 16f0359f1a8e262f8400f667bf866a26 pam-login-3.6-r1.ebuild 1824
-MD5 c5ed6062fda4be1d6b754bf4c59809d5 pam-login-3.7.ebuild 1977
 MD5 1bc895a5e5feed8e7a599ae05b195e39 pam-login-3.10.ebuild 1976
-MD5 288e8dd8147aaa9856e6e5337fb298b7 ChangeLog 5381
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 8c7833ea57d0677abcad4d5ef3575e5d pam-login-3.6-r2.ebuild 1926
 MD5 2698ed19bc580e2f348c18f931f0e764 pam-login-3.12.ebuild 2338
+MD5 9ffa4f5d57b75063ac634902beda9952 pam-login-3.14.ebuild 2816
+MD5 5be2ef3871d08d23d19770f7afa23cdb pam-login-3.12-r1.ebuild 2383
+MD5 c5ed6062fda4be1d6b754bf4c59809d5 pam-login-3.7.ebuild 1977
+MD5 2ebe1a6361a41ae9c23294400450d2ed ChangeLog 5586
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 f576eeeee354c0f1d13b9b25e3ef406a pam-login-3.11-r1.ebuild 2265
+MD5 d0e155e9dd4d8b526dd03f93be02e481 pam-login-3.11.ebuild 2120
+MD5 128c7d12948df01d7348a7edede0c2fb files/pam-login-3.14-query_user_context.diff 635
+MD5 97fac4bd3167fadfc2abaeaa819ccbde files/pam_login-Werror-off-ppc64.patch 511
 MD5 918ba376dc33a5a1c9f9b0bd048b484b files/digest-pam-login-3.6-r1 66
+MD5 387e811b73906d5f0e5d4417cccfed0e files/digest-pam-login-3.11 67
+MD5 21df4caf263fa2ed75e574f9a067b72e files/login.defs 3229
+MD5 7761083b62bdcb822f1b9533aab2e06c files/pam-login-3.11-lastlog-fix.patch 362
+MD5 1a6af2fd3c929133af86b14f62589872 files/digest-pam-login-3.12 67
 MD5 918ba376dc33a5a1c9f9b0bd048b484b files/digest-pam-login-3.6-r2 66
 MD5 387e811b73906d5f0e5d4417cccfed0e files/digest-pam-login-3.11-r1 67
-MD5 1a6af2fd3c929133af86b14f62589872 files/digest-pam-login-3.12-r1 67
-MD5 a5e9be8a38e1b8f784d3cf558cff7a6b files/digest-pam-login-3.10 67
-MD5 387e811b73906d5f0e5d4417cccfed0e files/digest-pam-login-3.11 67
-MD5 1a6af2fd3c929133af86b14f62589872 files/digest-pam-login-3.12 67
 MD5 bd631a67641c2ecb9f2da34226ca80a8 files/digest-pam-login-3.14 67
-MD5 128c7d12948df01d7348a7edede0c2fb files/pam-login-3.14-query_user_context.diff 635
-MD5 7761083b62bdcb822f1b9533aab2e06c files/pam-login-3.11-lastlog-fix.patch 362
-MD5 b3602716045d7154356137da6f5dcbad files/pam-login-3.6-SUPATH.patch 438
 MD5 0021ec2d8f5fc517f0e74f7233fc16c9 files/pam-login-3.11-gcc33.patch 527
-MD5 97fac4bd3167fadfc2abaeaa819ccbde files/pam_login-Werror-off-ppc64.patch 511
-MD5 21df4caf263fa2ed75e574f9a067b72e files/login.defs 3229
+MD5 a5e9be8a38e1b8f784d3cf558cff7a6b files/digest-pam-login-3.10 67
+MD5 1a6af2fd3c929133af86b14f62589872 files/digest-pam-login-3.12-r1 67
 MD5 7febd6315d85fcd5196b602732789573 files/digest-pam-login-3.7 66
+MD5 b3602716045d7154356137da6f5dcbad files/pam-login-3.6-SUPATH.patch 438
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA35pqGFJQsIJWJy4RAlBLAJ4lWArp8kzO0u/Y+EeWzWNnOCS7YACeM7af
+MEs2G6Y3mwtnBSoYVhkyRuQ=
+=XHpu
+-----END PGP SIGNATURE-----

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.15 2004/06/24 22:20:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.16 2004/06/28 04:11:10 pebenito Exp $
 
 inherit gnuconfig eutils
 
-IUSE="nls selinux"
+IUSE="livecd nls selinux"
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -35,7 +35,9 @@ src_unpack() {
 	epatch ${FILESDIR}/pam-login-3.11-lastlog-fix.patch
 
 	# enable query_user_context selinux code (only affects selinux)
-	epatch ${FILESDIR}/pam-login-3.14-query_user_context.diff
+	# but we dont want it on the selinux livecd, since it can
+	# cause the login to timeout if the user isnt ready
+	use livecd || epatch ${FILESDIR}/pam-login-3.14-query_user_context.diff
 
 	use ppc64 && epatch ${FILESDIR}/pam_login-Werror-off-ppc64.patch
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.39 2004/06/24 22:20:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.40 2004/06/28 04:11:10 pebenito Exp $
+
+  27 Jun 2004; Chris PeBenito <pebenito@gentoo.org> pam-login-3.14.ebuild:
+  Change the query_user_context patch to not apply with USE=livecd, since it can
+  cause login timeouts if the user isn't ready.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> pam-login-3.11-r1.ebuild,
   pam-login-3.12.ebuild, pam-login-3.14.ebuild:
