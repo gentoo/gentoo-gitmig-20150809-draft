@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 60db1859ccf62d2e5e5df600d25f1326 metadata.xml 256
-MD5 eccb2a95847b9ed6146f9e008b133943 ChangeLog 3541
-MD5 4cc3703c4f6a489c97b7eb19e72f5f31 patchutils-0.2.23.ebuild 633
 MD5 90c5a80c816335923e4da0ca8fa5cb4b patchutils-0.2.29.ebuild 636
-MD5 44f71656e2059bd3b5f741f93851aa8f patchutils-0.2.30.ebuild 635
+MD5 0f7f27c634a40d8911e1fba130ad5b70 patchutils-0.2.30.ebuild 636
+MD5 4cc3703c4f6a489c97b7eb19e72f5f31 patchutils-0.2.23.ebuild 633
+MD5 8487ba005e7f94173439dfa3838808e0 ChangeLog 3637
+MD5 60db1859ccf62d2e5e5df600d25f1326 metadata.xml 256
 MD5 22be6f937a2129f82c1d22e8b935a964 files/digest-patchutils-0.2.23 70
 MD5 2092e7d99d49c2176a47e872cc84b792 files/digest-patchutils-0.2.29 70
 MD5 43656e651c3eaaf2b1dd96d735417f0b files/digest-patchutils-0.2.30 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCO96M60LfUIagIAkRAraLAKCt9G6jZqyRyo8S08s4QpoAP8JIGACfW5YP
-+gXIgkSlvpfJhJ+/Zcls4EU=
-=WUZg
------END PGP SIGNATURE-----
