@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.30 2003/09/17 08:22:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.31 2003/11/01 08:19:15 mr_bones_ Exp $
+
+*libsdl-1.2.6-r2 (01 Nov 2003)
+
+  01 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.6-r2.ebuild,
+  files/libsdl-1.2.6-fullscreen.patch:
+  add patch to fix bug 31235; disable nasm for 1.2.6 since
+  BlitRGBtoRGBPixelAlphaMMX3DNOW seems to be buggy (bunch of bugs about
+  this...bug 31345 is the "parent") add more error checking/messages
 
   17 Sep 2003; Michael Sterrett <msterret@gentoo.org> libsdl-1.2.6-r1.ebuild:
   >=sys-apps/sed-4 is close enough
