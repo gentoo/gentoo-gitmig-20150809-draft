@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/glabels-1.90.0.ebuild,v 1.3 2003/06/29 23:17:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/glabels-1.90.0.ebuild,v 1.4 2003/07/28 09:55:57 foser Exp $
 
 DESCRIPTION="Program for creating labels and business cards"
 HOMEPAGE="http://snaught.com/glabels/"
@@ -17,7 +17,6 @@ DEPEND=">=x11-libs/gtk+-2.0.5
     >=gnome-base/libgnomecanvas-2.0.1
 	>=gnome-base/libgnomeui-2.0.1
 	>=gnome-base/libbonobo-2
-    media-libs/gdk-pixbuf
 	>=dev-util/pkgconfig-0.8
 	>=dev-util/intltool-0.21"
 
