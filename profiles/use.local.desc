@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.479 2004/07/13 17:53:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.480 2004/07/14 11:13:08 axxo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -127,6 +127,7 @@ dev-java/ant-optional:xalan - Enable Xalan support
 dev-java/ant-optional:xerces - Enable Xerces support
 dev-java/ant:optional-tasks - Enable Optional Tasks Support
 dev-java/gnu-classpath:native - Compile native .so libraries
+dev-java/gnu-javamail:javadoc - Generate API documentation
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
 dev-java/quartz:dbcp - Enable dbcp support
 dev-java/quartz:jboss - Enable jboss support
