@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.11 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.12 2002/12/02 23:37:44 wwoods Exp $
+
+inherit gnuconfig
 
 IUSE="X gif"
 
@@ -15,6 +17,12 @@ DEPEND="X? ( virtual/x11 )"
 SLOT="0"
 LICENSE="as-is|BSD"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
+
+src_unpack() {
+	unpack ${A} || die
+	cd ${S}
+	use alpha && gnuconfig_update
+}
 
 src_compile() {
 
