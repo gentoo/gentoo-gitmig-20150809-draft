@@ -1,5 +1,6 @@
 MD5 cc3be0924f0e27647f1c45587a5f687b ezmlm-idx-0.40-r2.ebuild 2373
 MD5 3fcbeed252cf6b1038aaf62e2e481ef0 ChangeLog 1338
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 31baef31f2ce0c9343530c3467220a60 files/from-header.patch 6165
 MD5 b82b4c09c356dc91fcbe907a24326b52 files/ezmlm-0.53-errno.patch 270
 MD5 59964884f060bc70dcbf6657b9e67c57 files/digest-ezmlm-idx-0.40-r2 456

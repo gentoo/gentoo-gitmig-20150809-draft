@@ -1,3 +1,4 @@
-MD5 699b53b1a713d738aa1008c6cd0b4f29 files/digest-nbsmtp-0.8 57
 MD5 95316923eb819b3cd01637826aad8233 nbsmtp-0.8.ebuild 593
 MD5 d3aefcc589b9e1eff773941370eb42b9 ChangeLog 1396
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 699b53b1a713d738aa1008c6cd0b4f29 files/digest-nbsmtp-0.8 57

@@ -1,3 +1,4 @@
-MD5 478bde42ed4cbed7f9a62e34be244e68 files/digest-drac-1.12 54
 MD5 aeb516e74fb7848a1747cea481ee384b drac-1.12.ebuild 1634
 MD5 0f76b180522099fb6bb4d93dd3a4c9eb ChangeLog 378
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 478bde42ed4cbed7f9a62e34be244e68 files/digest-drac-1.12 54

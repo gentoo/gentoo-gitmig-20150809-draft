@@ -1,5 +1,6 @@
 MD5 e3dd4dfeda93e93b369068cd89fc500d vimap-2002c.ebuild 2763
 MD5 40bc76c575b34d3cc7b39a4abbdd22f5 ChangeLog 1294
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 7d8d4b8b665f8fddabb6b2427c40e574 files/uw-ipop2.xinetd 559
 MD5 ec90fc7f6186f57ea8bcbbcecc099e5f files/uw-ipop3s.xinetd 469
 MD5 a2431cd0bc30744ed8b22b717a3bc1d7 files/uw-imap.xinetd 487

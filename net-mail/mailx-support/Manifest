@@ -1,4 +1,5 @@
-MD5 d3316e5dd4f24cf9547db37e9b53805c ChangeLog 1036
 MD5 8c61fbf339f89c13bde94a411eb5a74c mailx-support-20030215.ebuild 582
+MD5 d3316e5dd4f24cf9547db37e9b53805c ChangeLog 1036
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 e30d4b2f8fe8b19ca55cc584def34557 files/digest-mailx-support-20030215 73
 MD5 bf68aec6f17ac9cf58299e322196621d files/mailx-support-20030215-gentoo.patch 1793

@@ -4,6 +4,7 @@ MD5 21b95822aed6cd9ccb2aa398e521fe52 bogofilter-0.13.7.3.ebuild 1936
 MD5 45a6ff499c9ef8a4bd331e79998a9f73 bogofilter-0.13.6.2.ebuild 1802
 MD5 97136bf9cbd4e16c39323977d199224b bogofilter-0.13.7.2.ebuild 1933
 MD5 a2a2a8d944fee15e8796c7da89d55a10 ChangeLog 2993
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 99b78224a48cb1a8c062dc29d40f00ce files/digest-bogofilter-0.13.6.2 71
 MD5 efc05dcba28085b716cc0e64166bd03b files/digest-bogofilter-0.13.7.2 71
 MD5 23dea37013aa783a31cd6a713e040752 files/digest-bogofilter-0.13.7.3 71

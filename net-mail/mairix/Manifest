@@ -1,3 +1,4 @@
-MD5 ab9d43e123c86585e3151bbe915d0424 files/digest-mairix-0.10 62
 MD5 f69a733fdc03993fd68f5ef0f080f64e mairix-0.10.ebuild 666
 MD5 e2d22808f815c05948fded6c081f1c18 ChangeLog 393
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 ab9d43e123c86585e3151bbe915d0424 files/digest-mairix-0.10 62

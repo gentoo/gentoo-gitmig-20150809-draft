@@ -1,3 +1,4 @@
-MD5 1288bea62a320ffa52af6c5e4fa16100 files/digest-bmf-0.9.4 60
-MD5 36f7fc6c0159f39305774ae990a1d7f3 ChangeLog 370
 MD5 90311c82ca189fd583529e29eb237929 bmf-0.9.4.ebuild 977
+MD5 36f7fc6c0159f39305774ae990a1d7f3 ChangeLog 370
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 1288bea62a320ffa52af6c5e4fa16100 files/digest-bmf-0.9.4 60

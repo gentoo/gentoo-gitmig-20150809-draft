@@ -2,6 +2,7 @@ MD5 87a5aa74895d0451874662279d4acbcb ripmime-1.3.0.3.ebuild 590
 MD5 b7e0c2c939fc152e5a6d47187a390c7a ripmime-1.2.16.16.ebuild 594
 MD5 3b8b0ed649197cc5de3ed6a56c957c2a ripmime-1.3.0.4.ebuild 591
 MD5 39ec20d98f74c4c56e19d635c86d8b95 ChangeLog 717
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 90ac15d08d9a2b4a80c402fd6b9f69fe files/digest-ripmime-1.2.16.16 68
 MD5 05f52ca937d795026efa5f3c2364e95a files/digest-ripmime-1.3.0.3 66
 MD5 4d30f88ea4b22ebbf7f1c675c792cd30 files/digest-ripmime-1.3.0.4 66

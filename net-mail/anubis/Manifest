@@ -1,3 +1,4 @@
-MD5 24def86bd1cfb613e6c0dcf55194d449 files/digest-anubis-3.6.2 64
-MD5 6a00798394e99043903a205890457359 ChangeLog 395
 MD5 35f3c216cf6486aa1fa27031b281cfdb anubis-3.6.2.ebuild 999
+MD5 6a00798394e99043903a205890457359 ChangeLog 395
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 24def86bd1cfb613e6c0dcf55194d449 files/digest-anubis-3.6.2 64

@@ -1,3 +1,4 @@
-MD5 547c57be8e5d7e6cfa45ffe3a093fda9 files/digest-checkpassword-pam-0.96 73
 MD5 4d0b2cd0da69af1ad48aa69798c00c13 checkpassword-pam-0.96.ebuild 682
 MD5 76e32b8819b54f1395879ffe64f6f9f2 ChangeLog 439
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 547c57be8e5d7e6cfa45ffe3a093fda9 files/digest-checkpassword-pam-0.96 73
