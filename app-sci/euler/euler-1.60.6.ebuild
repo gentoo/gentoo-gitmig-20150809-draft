@@ -1,6 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6.ebuild,v 1.6 2004/03/15 14:26:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6.ebuild,v 1.7 2004/03/26 12:08:04 phosphan Exp $
+
+inherit eutils
+IUSE=""
 
 #euler only uses two major numners internally, need to do some mangling
 MajVer="$(echo ${PV}|cut -d '.' -f 1,2)"

@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/euler
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.6 2004/03/15 14:26:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.7 2004/03/26 12:08:04 phosphan Exp $
+
+  26 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> euler-1.60.6-r1.ebuild,
+  euler-1.60.6.ebuild:
+  Adding "inherit eutils" and IUSE=""
 
 *euler-1.60.6-r1 (15 Mar 2004)
 
