@@ -5,7 +5,11 @@
 		The app-dicts category contains dictionary and word-list packages.
 	</longdescription>
 	<longdescription lang="de">
-		The Kategorie app-dicts enthält Wörterbücher und Wortlisten.
+		The Kategorie app-dicts enthÃ¤lt WÃ¶rterbÃ¼cher und Wortlisten.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría app-dicts contiene paquetes de diccionarios y 
+		para listar palabras.
 	</longdescription>
 </catmetadata>
 
