@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmusic
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmusic/ChangeLog,v 1.9 2004/10/19 09:04:05 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmusic/ChangeLog,v 1.10 2004/11/25 15:49:05 weeve Exp $
+
+  25 Nov 2004; Jason Wever <weeve@gentoo.org> wmusic-1.5.0.ebuild:
+  Added ~sparc keyword.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmusic-1.5.0.ebuild:
   Stable on amd64.
