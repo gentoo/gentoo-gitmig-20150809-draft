@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/portagemaster-0.2.0.ebuild,v 1.5 2002/12/09 04:17:35 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/portagemaster-0.2.0.ebuild,v 1.6 2002/12/15 01:14:49 blauwers Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A java portage browser and installer."
@@ -22,7 +22,7 @@ pkg_setup() {
 	foo=`java-config --java-version 2>&1 | grep "1.4."`
 	if [ -z "$foo" ] ; then
 		eerror "You have to set the 1.4.0 JDK as your system default to compile this package."
-		enfo "Use java-config --set-system-vm=sun-jdk-1.4.0 (or more recent) to set it."
+		einfo "Use java-config --set-system-vm=sun-jdk-1.4.0 (or more recent) to set it."
 		exit 1
 	fi
 }
