@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.200 2003/12/31 17:07:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.201 2003/12/31 19:00:55 taviso Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -101,8 +101,8 @@ kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages Sys
 media-gfx/grace:fftw - Enables FFTW support for grace
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
-media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled patched version.
-media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled patched version.
+media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled optimised version.
+media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled version optimised specifically for use with png.
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/libgd:freetype-version-1 - if for some reason you want to use freetype v1 instead of v2
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
