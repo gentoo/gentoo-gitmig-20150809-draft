@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/mod_scgi-1.2_alpha2.ebuild,v 1.4 2004/08/16 17:36:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/mod_scgi-1.2_alpha2.ebuild,v 1.5 2004/08/30 23:31:35 dholm Exp $
 
 detectapache() {
 	local domsg=
@@ -45,7 +45,7 @@ URI_BASE="http://www.mems-exchange.org/software"
 HOMEPAGE="${URI_BASE}/scgi/"
 SRC_URI="${URI_BASE}/files/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="CNRI"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="apache2"
 DEPEND="${DEPEND}
 		www-apps/scgi
