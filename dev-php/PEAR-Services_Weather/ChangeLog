@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Services_Weather
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Weather/ChangeLog,v 1.4 2005/03/09 17:49:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Weather/ChangeLog,v 1.5 2005/03/12 12:20:26 sebastian Exp $
+
+  12 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Services_Weather-1.3.1.ebuild:
+  Stable on x86 and amd64, see bug 84525.
 
   09 Mar 2005; Markus Rothe <corsair@gentoo.org>
   PEAR-Services_Weather-1.3.1.ebuild:
