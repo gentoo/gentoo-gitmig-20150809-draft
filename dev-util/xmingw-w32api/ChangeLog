@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xmingw-w32api
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.7 2004/10/14 16:57:31 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.8 2004/10/25 16:36:02 cretin Exp $
+
+  25 Oct 2004; Stefan Jones <cretin@gentoo.org>
+  +xmingw-w32api-3.1-include.patch :
+  Slight bug in the supplied makefile causing bootstrap to fail.
 
 *xmingw-w32api-3.1 (14 Oct 2004)
 
