@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36-r1.ebuild,v 1.1 2002/11/12 12:36:49 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36-r1.ebuild,v 1.2 2002/11/12 12:56:31 cretin Exp $
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 
@@ -32,6 +32,7 @@ src_compile() {
 		    --infodir=/usr/share/info \
 		    --mandir=/usr/share/man \
 			--enable-static \
+			--enable-build-12 --enable-build-20 --enable-build-21 \
 		    --with-x || die "./configure failed"
 	emake CFLAGS="${CFLAGS}" || die
 	
