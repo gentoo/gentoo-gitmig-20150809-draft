@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/qmamecat/qmamecat-0.44.45.ebuild,v 1.3 2004/05/27 02:02:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/qmamecat/qmamecat-0.44.45.ebuild,v 1.4 2004/05/27 21:32:49 mr_bones_ Exp $
+
+inherit kde
 
 MY_PV="${PV/45/b45}"
 DESCRIPTION="QT mame catalog and frontend"
@@ -16,9 +18,12 @@ DEPEND="virtual/glibc
 	virtual/x11
 	x11-libs/qt"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_compile() {
+	# See bug #41006
+	kde_src_compile none
+
 	# emake is horribly broken
 	make COPTIM="${CFLAGS}" || die
 }
@@ -27,6 +32,6 @@ src_install() {
 	rm bin/{Makefile,make.cfg}
 	dobin bin/*
 	doman doc/*.6
-	rm doc/*.6
+	rm doc/{*.6,COPYING}
 	dodoc doc/*
 }
