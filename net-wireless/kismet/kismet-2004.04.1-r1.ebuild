@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.04.1-r1.ebuild,v 1.1 2004/10/18 14:56:51 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.04.1-r1.ebuild,v 1.2 2004/10/19 08:50:27 zypher Exp $
 
 inherit gnuconfig eutils
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="acpi gps ethereal"
 
-DEPEND="gps? ( >=dev-libs/expat-1.95.4 dev-libs/gmp media-gfx/imagemagick dev-perl/libwww-perl)
+DEPEND="gps? ( >=dev-libs/expat-1.95.4 dev-libs/gmp media-gfx/imagemagick dev-perl/libwww-perl )
 	>=sys-devel/autoconf-2.58"
 RDEPEND="net-wireless/wireless-tools"
 
