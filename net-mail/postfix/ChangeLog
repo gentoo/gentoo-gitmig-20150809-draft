@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.71 2003/06/13 22:36:56 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.72 2003/06/13 22:49:38 lostlogic Exp $
+
+  13 Jun 2003; Brandon Low <lostlogic@gentoo.org> postfix-2.0.10-r1.ebuild,
+  postfix-2.0.9.ebuild:
+  Fix bug 15252 in stable versions as well
 
 *postfix-2.0.12 (13 Jun 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.9.ebuild,v 1.2 2003/04/19 02:55:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.9.ebuild,v 1.3 2003/06/13 22:49:38 lostlogic Exp $
 
 inherit eutils
 
@@ -43,6 +43,39 @@ pkg_setup() {
 	if ! grep -q ^mail:.*postfix /etc/group ; then
 		usermod -G mail postfix || die "problem adding user postfix to group mail"
 	fi
+	
+	# Prevent mangling the smtpd.conf file
+	if [ ! -L ${ROOT}/usr/lib/sasl2/smtpd.conf ]
+	then
+		if [ -f ${ROOT}/usr/lib/sasl2/smtpd.conf ]
+		then
+			ebegin "Protecting your smtpd.conf file"
+			if [ ! -d ${ROOT}/etc/sasl2 ]
+			then
+				mkdir -p ${ROOT}/etc/sasl2
+			fi
+
+			# This shouldn't be necessary, but apparently
+			# Without it things can still get messy.
+			if [ -L ${ROOT}/etc/sasl2/smtpd.conf ]
+			then
+				rm ${ROOT}/etc/sasl2/smtpd.conf
+			fi
+
+			# If both files exist, make sure that we 
+			# preserve a copy of each with the ._cfg
+			# system
+			if [ -f ${ROOT}/etc/sasl2/smtpd.conf ]
+			then
+				mv ${ROOT}/usr/lib/sasl2/smtpd.conf \
+					${ROOT}/etc/sasl2/._cfg0000_smtpd.conf
+			else
+				mv ${ROOT}/usr/lib/sasl2/smtpd.conf ${ROOT}/etc/sasl2
+			fi
+			eend
+		fi
+	fi
+
 }
 
 src_unpack() {
