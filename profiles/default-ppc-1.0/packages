@@ -33,6 +33,26 @@
 
 # PPC PROFILE
 
+# KDE was umasked to the world with no testing, we _will_ test it in ppc
+# as to prevent a huge stream of bugs
+# Gerk - July 3/02
+<kde-base/kde-3.0.2
+<kde-base/kdeaddons-3.0.2
+<kde-base/kdeadmin-3.0.2
+<kde-base/kdeartwork-3.0.2
+<kde-base/kdebase-3.0.2
+<kde-base/kdebindings-3.0.2
+<kde-base/kdeedu-3.0.2
+<kde-base/kdegames-3.0.2
+<kde-base/kdegraphics-3.0.2
+<kde-base/kdelibs-3.0.2
+<kde-base/kdemultimedia-3.0.2
+<kde-base/kdenetwork-3.0.2
+<kde-base/kdepim-3.0.2
+<kde-base/kdesdk-3.0.2
+<kde-base/kdetoys-3.0.2
+<kde-base/kdeutils-3.0.2
+
 # x86 asm in this one, might be fixable at a later date (?) Gerk - june 24 2002
 ~media-video/drip
 
