@@ -39,6 +39,7 @@
 =kde-base/kdesdk-3.0.5b
 =kde-base/kdetoys-3.0.5b
 =kde-base/kdeutils-3.0.5b
+=kde-base/kde-3.0.5b
 
 # <danarmak@gentoo.org> (08 Apr 2003)
 # mask until released. see -core message(s).
@@ -46,6 +47,7 @@
 =app-doc/kdelibs-apidocs-3.1.1a
 =kde-base/kdebase-3.1.1a
 =kde-base/kdegraphics-3.1.1a
+=kde-base/kde-3.1.1a
 
 # <zwelch@gentoo.org> (06 Apr 2003)
 # New versions of packages that have new cross-compiling support
