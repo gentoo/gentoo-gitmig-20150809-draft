@@ -1,0 +1,9 @@
+#define BRAG "WavTools %d.%d Written by Colin Ligertwood.\nThis software is provided as is. No waranty is offered, implied or included.\n"
+
+#define WAVR "USE: %s <options> \n	-c #		Number of channels. 1, 2. (default 1)\n	-d #		Sample depth in bits. 8, 16. (default 8)\n	-f <name.wav>	Filename of wav. (default \"untitled.wav\")	-l #		Length of recording in seconds. (Optional)\n	-r #		Sample rate.  44100 22050 11025 8000. (default 8000)\n	-s <c|l|m>	Recording source. (default mic)\n	c = cd; l = line; m = mic\n"
+			
+#define WAVP "USE: %s <file.wav>\n"
+
+#define PLAYING "Playing [FILE: %s] [LENGTH: %u]\n[RATE: %u] [BPS: %u] [DEPTH: %u] [CHANNELS: %u]\n"
+
+#define RECORDING "Recording [FILE: %s] [LENGTH: %u]\n[RATE: %u] [BPS: %u] [DEPTH: %u] [CHANNELS: %u]\n"

@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/lletters
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.4 2003/10/29 10:49:25 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.5 2004/02/13 04:10:17 mr_bones_ Exp $
+
+  12 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  lletters-0.1.95-r1.ebuild, files/tellhow.h.gentoo:
+  fix tellhow.h to work with gcc 3.3 (bug #41440)
 
   29 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> lletters-0.1.95.ebuild:
   clean old ebuild
