@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/numlockx
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.5 2003/11/04 03:40:44 abhishek Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.6 2004/02/03 07:14:14 augustus Exp $
+
+  03 Feb 2004; <augustus@gentoo.org> numlockx-1.0.ebuild:
+  Added keyword ~amd64.  Bug # 40145.
 
   03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
   Added metadata.xml
