@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-5.2.0.ebuild,v 1.2 2005/01/25 17:14:38 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-5.2.0.ebuild,v 1.3 2005/04/05 22:57:13 angusyoung Exp $
 
 inherit eutils
 
@@ -36,7 +36,6 @@ src_compile() {
 		`use_enable http`  \
 		`use_enable icp` \
 		`use_with idn libidn` \
-		`use_enable icp` \
 		`use_enable smtp` \
 		`use_enable tos` \
 		`use_enable priority` \
