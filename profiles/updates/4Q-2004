@@ -46,3 +46,4 @@ move app-misc/mwavem net-dialup/mwavem
 move net-misc/linesrv net-dialup/linesrv
 move net-misc/tftp-hpa net-ftp/tftp-hpa
 move net-wireless/wpa-supplicant net-wireless/wpa_supplicant
+move net-dialup/capi4k-firmware net-dialup/isdn-firmware
