@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <hannes@gentoo.org> (15 Dec 2002)
+# masking arts-1.0.4-r1, because it may be the solution to bug #10338,
+# but it's not sure.
+=kde-base/arts-1.0.4-r1
+
 # <mkennedy@gentoo.org> (14 Dec 2002)
 # see dev-db/postgresql #11822, net-im/sim #11654, and net-misc/mico
 # (btw, all the other distros are using 2.5.4a)
