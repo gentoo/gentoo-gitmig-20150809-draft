@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r1.ebuild,v 1.1 2002/07/25 09:21:15 jayskwak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r1.ebuild,v 1.2 2002/07/25 15:11:42 jayskwak Exp $
 
 S=${WORKDIR}/qt-x11-free-${PV}
 
@@ -38,7 +38,7 @@ src_unpack() {
 
 	# qt patch - for ami, fixed on the spot bug. 
 	cd ${S}
-	use nls && patch -p1 < ${DISTDIR}/qt-x11-free-3.0.5-ko_input.patch || die
+	use nls && patch -p1 < ${DISTDIR}/qt-x11-free-3.0.5-ko_input.patch
 
 	cd ${S}
 	cp configure configure.orig
