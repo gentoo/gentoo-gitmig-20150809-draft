@@ -1,0 +1,47 @@
+--- rpm-4.2/lib/rpmrc.c.jj	2004-11-05 12:14:16.961834816 -0800
++++ rpm-4.2/lib/rpmrc.c	2004-11-05 12:17:43.567425992 -0800
+@@ -892,7 +892,7 @@
+ #ifdef	__LCLINT__
+     *eax = *ebx = *ecx = *edx = 0;
+ #endif
+-#ifdef PIC
++#ifdef __PIC__
+ 	__asm__("pushl %%ebx; cpuid; movl %%ebx,%1; popl %%ebx"
+ 		: "=a"(*eax), "=g"(*ebx), "=&c"(*ecx), "=&d"(*edx)
+ 		: "a" (op));
+@@ -912,7 +912,7 @@
+ {
+ 	unsigned int val;
+ 
+-#ifdef PIC
++#ifdef __PIC__
+ 	__asm__("pushl %%ebx; cpuid; popl %%ebx"
+ 		: "=a" (val) : "a" (op) : "ecx", "edx");
+ #else
+@@ -927,7 +927,7 @@
+ {
+ 	unsigned int tmp, val;
+ 
+-#ifdef PIC
++#ifdef __PIC__
+ 	__asm__("pushl %%ebx; cpuid; movl %%ebx,%1; popl %%ebx"
+ 		: "=a" (tmp), "=g" (val) : "a" (op) : "ecx", "edx");
+ #else
+@@ -941,7 +941,7 @@
+ 	/*@*/
+ {
+ 	unsigned int tmp, val;
+-#ifdef PIC
++#ifdef __PIC__
+ 	__asm__("pushl %%ebx; cpuid; popl %%ebx"
+ 		: "=a" (tmp), "=c" (val) : "a" (op) : "edx");
+ #else
+@@ -956,7 +956,7 @@
+ 	/*@*/
+ {
+ 	unsigned int tmp, val;
+-#ifdef PIC
++#ifdef __PIC__
+ 	__asm__("pushl %%ebx; cpuid; popl %%ebx"
+ 		: "=a" (tmp), "=d" (val) : "a" (op) : "ecx");
+ #else
