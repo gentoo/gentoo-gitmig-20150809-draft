@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.37 2004/01/30 22:32:06 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.38 2004/02/15 09:07:07 azarah Exp $
+
+  14 Feb 2004; Martin Schlemmer <azarah@gentoo.org> files/ac-wrapper-2.pl:
+  Fix ac-wrapper.pl to also work with AC_PREREQ(2.50) (note the 2.50 and not
+  2.5).
 
   30 Jan 2004; <tuxus@gentoo.org> autoconf-2.58.ebuild:
   stable on mips.
