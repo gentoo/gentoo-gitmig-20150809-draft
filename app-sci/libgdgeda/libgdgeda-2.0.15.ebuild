@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/libgdgeda/libgdgeda-2.0.15.ebuild,v 1.3 2004/03/30 17:33:29 spyderous Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/app-sci/libgdgeda/libgdgeda-2.0.15.ebuild,v 1.4 2004/04/19 11:20:56 phosphan Exp $
 
 HOMEPAGE="http://www.geda.seul.org"
 DESCRIPTION="libgdgeda - a PNG creation library for gEDA"
