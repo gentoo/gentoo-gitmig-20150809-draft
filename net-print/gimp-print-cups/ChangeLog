@@ -1,8 +1,11 @@
 # ChangeLog for net-print/gimp-print-cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/ChangeLog,v 1.7 2002/07/14 20:41:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/ChangeLog,v 1.8 2002/09/18 14:31:28 doctomoe Exp $
 
 *gimp-print-cups-4.3.0-r2 (1 Jul 2002)
+
+  18 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> gimp-print-cups-4.3.0-r2.ebuild:
+  Added PPC KEYWORD.
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> gimp-print-cups-4.3.0.ebuild :
   Added KEYWORDS.
