@@ -1,10 +1,21 @@
 # ChangeLog for app-emulation/zsnes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.5 2002/07/06 18:06:04 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.6 2002/07/08 21:49:09 sunflare Exp $
 
-*zsnes-1.35 (06 Jun 2002)
+*zsnes-1.35-r1 (08 Jul 2002)
 
-  06 Jun 2002; Phil Bordelon <sunflare@gentoo.org> zsnes-1.35.ebuild :
+  08 Jul 2002; Phil Bordelon <sunflare@gentoo.org> zsnes-1.35-r1.ebuild zsnes-1.337-r2.ebuild :
+
+  There are a number of problems with raw ZSNES 1.35.  Thomas Weidner
+  alerted us to the problem and submitted both a patch against ZSNES
+  CVS and an updated ebuild.  Changed the description string, but
+  otherwise the ebuild is identical.  See Bug #4704 for details.
+
+  I also updated zsnes-1.337-r2.ebuild to make repoman happy.
+
+*zsnes-1.35 (06 Jul 2002)
+
+  06 Jul 2002; Phil Bordelon <sunflare@gentoo.org> zsnes-1.35.ebuild :
 
   Updated to the latest version.  Brought the ebuild up to current repoman
   and lintool specs.  The patch in -r2 is no longer needed.  The Author in
