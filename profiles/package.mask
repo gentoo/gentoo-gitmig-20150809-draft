@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+#for developers only -- right now (drobbins, 16 Apr 2002)
+=sys-apps/portage-1.9.0
+
 =sys-apps/portage-1.8.9.3
 
 # Since azarah is the opengl dude here, i'll mask this untill he looks at 
