@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.58 2004/01/26 13:56:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.59 2004/01/28 13:54:21 gustavoz Exp $
+
+  28 Jan 2004; <gustavoz@gentoo.org> cups-1.1.20.ebuild:
+  stable on hppa
 
   26 Jan 2004; <gustavoz@gentoo.org> cups-1.1.20.ebuild:
   stable on sparc
