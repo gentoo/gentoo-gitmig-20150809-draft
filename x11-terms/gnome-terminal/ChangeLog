@@ -1,7 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.10 2002/08/02 19:45:03 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.11 2002/08/05 20:58:42 spider Exp $
 
+
+*gnome-terminal-2.0.1 (05 Aug 2002)
+  05 Aug 2002; Spider <spider@gentoo.org> gnome-terminal-2.0.1.ebuild :
+  new version
 
 *gnome-terminal-2.0.0-r1 (27 Jun 2002)
   02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
