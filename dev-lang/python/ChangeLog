@@ -1,7 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.16 2002/10/15 19:50:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.17 2002/10/20 23:07:15 jnelson Exp $
 
+*python-2.2.2 (20 Oct 2002)
+  20 Oct 2002; Jon Nelson <jnelson@gentoo.org> :
+  2.2.2 is released
+  
 *python-2.2.1-r5 (03 Oct 2002)
 
   15 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
