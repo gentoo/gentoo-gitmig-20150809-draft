@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.627 2004/09/18 14:18:09 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.628 2004/09/19 00:58:58 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -105,7 +105,6 @@ app-sci/prosite:no-rawdb - Do not install the original database files (keep only
 app-sci/rebase:no-emboss - Do not index the database files for use with EMBOSS
 app-sci/rebase:no-rawdb - Do not install the original database files (keep only indexed files)
 app-sci/scilab:atlas - Add support for the atlas library
-app-sci/staden:emboss - Build tcl/tk GUIs for EMBOSS/EMBASSY applications.
 app-sci/transfac:no-emboss - Do not index the database files for use with EMBOSS
 app-sci/transfac:no-rawdb - Do not install the original database files (keep only indexed files)
 app-sci/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
