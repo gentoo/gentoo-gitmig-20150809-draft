@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-1.0.9.ebuild,v 1.5 2000/11/03 02:47:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-1.0.9.ebuild,v 1.6 2000/11/03 09:11:33 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,10 +9,7 @@ DESCRIPTION="libgtop"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/"${A}
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=sys-libs/glibc-2.1.3
-	>=sys-libs/gpm-1.19.3
-	>=sys-libs/ncurses-5.1
-	>=gnome-base/gnome-libs-1.2.4"
+DEPEND=">=gnome-base/gnome-libs-1.2.4"
 
 src_compile() {                           
   cd ${S}
