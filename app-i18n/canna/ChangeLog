@@ -1,8 +1,17 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.4 2002/10/10 01:15:02 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.5 2002/11/16 05:35:58 nakano Exp $
 
-*cana-3.5_beta2_r2 (22 Jul 2002)
+*canna-3.6 (16 Nov 2002)
+
+  16 Nov 2002; Masatomo Nakano <nakano@gentoo.org> canna-3.6.ebuild
+	files/canna-3.6-gentoo.diff files/canna.initd files/canna.confd
+	digest-canna-3.6 ChangeLog :
+
+  New version.
+	Thanks to: matsuu@7501.net (MATSUU Takuto)
+
+*canna-3.5_beta2_r2 (22 Jul 2002)
 
   22 Jul 2002; Stuart Bouyer <stubear@gentoo.org> 
   files/canna-3.5_beta-r2/canna.initd ChangeLog :
