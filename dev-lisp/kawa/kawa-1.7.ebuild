@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/kawa/kawa-1.7.ebuild,v 1.3 2004/07/13 06:31:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/kawa/kawa-1.7.ebuild,v 1.4 2004/10/16 23:10:44 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="Kawa, the Java-based Scheme system"
 HOMEPAGE="http://www.gnu.org/software/kawa/"
@@ -28,7 +30,7 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 	rm -rf ${D}/usr/share/kawa/ ${D}/usr/share/java/
-	dojar kawa-${PV}.jar
+	java-pkg_dojar kawa-${PV}.jar
 	dodoc COPYING TODO README NEWS
 	doinfo doc/kawa.info*
 	dodir /usr/bin

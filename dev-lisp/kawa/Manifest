@@ -1,6 +1,16 @@
-MD5 3586b96d5af85279256e008b24a078cc ChangeLog 670
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6d3e4f804b95495fa0eaccdc3a559b94 kawa-1.6.97.ebuild 896
-MD5 3e12d93f484e45707ecded16ae8a2e75 kawa-1.7.ebuild 1092
+MD5 200ff94ea0da330e7b5603e0ab08a4d2 ChangeLog 760
+MD5 edb96652c300b3dec91ae88ad79da247 kawa-1.7.ebuild 1114
 MD5 cf90bd62fdd0a240342f112c1c57fdfe files/digest-kawa-1.6.97 64
-MD5 30a723d0ba2b93d35cf50bf8b3ce5765 files/kawa-1.6.97.sh 159
 MD5 236658aea956f85e3e8e3beb65e4b53c files/digest-kawa-1.7 61
+MD5 30a723d0ba2b93d35cf50bf8b3ce5765 files/kawa-1.6.97.sh 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcap+/rLF9B432nYRAgFbAKCz3T/tY9mQ1nW4IyWIsIs9Hu9XjACfcolV
+3lzfJv1/4CawSV0UEHxINMo=
+=LoMd
+-----END PGP SIGNATURE-----
