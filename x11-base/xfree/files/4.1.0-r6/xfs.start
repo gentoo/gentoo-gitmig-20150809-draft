@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.1.0-r6/xfs.start,v 1.1 2001/12/19 03:53:59 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.1.0-r6/xfs.start,v 1.2 2003/02/14 23:29:31 vapier Exp $
 
 depend() {
 	use logger
