@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.38 2002/10/28 15:43:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.39 2002/10/30 18:33:14 azarah Exp $
+
+  30 Oct 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.4.1.ebuild :
+
+  Add poweroff symlink, closing bug #9857 thanks to
+  Jose Fonseca <j_r_fonseca@yahoo.co.uk>.
 
 *baselayout-1.8.4.1 (28 Oct 2002)
 
