@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.15 2004/08/06 18:03:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.16 2004/09/27 10:33:35 mcummings Exp $
+
+  27 Sep 2004; Michael Cummings <mcummings@gentoo.org>
+  Authen-SASL-2.04.ebuild, Authen-SASL-2.08.ebuild:
+  mirror syntax
 
   06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> Authen-SASL-2.04.ebuild:
   Keyworded ppc64 to satisfy perl_ldap and hence samba
