@@ -1,14 +1,19 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.4 2003/07/23 15:43:49 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.5 2003/08/21 05:10:43 vapier Exp $
+
+*dsniff-2.3-r1 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Patch to compile against SLOT-ed libnet-1.0.x #17772.
+
+*dsniff-2.3 (14 Nov 2002)
 
   23 Jul 2003; Tavis Ormandy <taviso@gentoo.org> dsniff-2.3.ebuild:
   ~alpha
 
   02 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> dsniff-2.3.ebuild :
   Closes #14689.
-
-*dsniff-2.3 (14 Nov 2002)
 
   14 Nov 2002; Jared Hudson <jhhudso@gentoo.org> : Initial import. Ebuild
   submitted by foser <foser@gentoo.org>. Bug #6906
