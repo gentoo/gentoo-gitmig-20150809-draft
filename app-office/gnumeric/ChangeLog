@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.32 2003/05/04 19:04:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.33 2003/05/14 00:09:43 foser Exp $
+
+*gnumeric-1.1.17 (13 May 2003)
+
+  13 May 2003; foser <foser@gentoo.org> gnumeric-1.1.17.ebuild :
+  New dev version, bonobo USE flag added, removed nls and perl flags
+  general cleanup and dep fixes
 
   04 May 2003; Alastair Tse <liquidx@gentoo.org> gnumeric-1.1.16-r1.ebuild:
   changed to use new gnome2_omf_fix
