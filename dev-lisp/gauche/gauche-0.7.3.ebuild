@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.3.ebuild,v 1.3 2004/02/14 05:48:57 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.3.ebuild,v 1.4 2004/02/20 14:09:14 hattya Exp $
 
 inherit flag-o-matic
 
@@ -41,7 +41,7 @@ src_compile() {
 	rm -f src/Makefile.in
 	mv src/Makefile.in.tmp src/Makefile.in
 
-	filter-flags -fforce-addr
+	strip-flags
 
 	mycflags=${CFLAGS}
 	unset CFLAGS CXXFLAGS
