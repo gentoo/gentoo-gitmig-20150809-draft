@@ -1,6 +1,11 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.12 2004/10/22 23:20:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.13 2004/11/09 08:39:08 obz Exp $
+
+*planner-0.12.1 (09 Nov 2004)
+
+  09 Nov 2004; Mike Gardiner <obz@gentoo.org> +planner-0.12.1.ebuild:
+  New version, a bugfix release, as requested in bug #62265
 
   23 Oct 2004; Alastair Tse <liquidx@gentoo.org> planner-0.11.ebuild,
   planner-0.12-r1.ebuild:
