@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/ChangeLog,v 1.2 2002/03/15 15:06:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/ChangeLog,v 1.3 2002/08/08 12:19:01 seemant Exp $
+
+*bbmail-0.8.2 (08 Aug 2002)
+
+  08 Aug 2002; Seemant Kulleen <seemant@gentoo.org> bbmail-0.8.2.ebuild :
+
+  Version bump, thanks to an ebuild submitted by:
+  gwenn.gueguen@libertysurf.fr (Gwenn) in bug #6064.
 
 *bbmail-0.6.11-r2 (15 Mar 2002)
 
