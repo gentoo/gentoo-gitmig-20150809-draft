@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.2 2004/01/03 04:48:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.3 2004/01/25 23:01:25 vapier Exp $
 
-inherit gcc
+inherit gcc flag-o-matic
 
 DESCRIPTION="A high-quality data compressor used extensively by Gentoo Linux"
 HOMEPAGE="http://sources.redhat.com/bzip2/"
@@ -11,29 +11,29 @@ SRC_URI="ftp://sources.redhat.com/pub/bzip2/v102/${P}.tar.gz"
 LICENSE="BZIP2"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64 ppc64"
-IUSE="build static"
+IUSE="build static debug"
 
 DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
-	cp Makefile Makefile.orig
 	# for optimizations, we keep -fomit-frame-pointer and -fno-strength-reduce
 	# for speed.  -fstrength-reduce seems to slow down the code slightly on x86.
 	# (drobbins)
-	use static && CFLAGS="${CFLAGS} -static"
-	sed -e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' \
+	use static && append-flags -static
+	use debug && sed -i 's:-fomit-frame-pointer::g' Makefile
+	sed -i \
+		-e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' \
 		-e "s:-O2:${CFLAGS}:g" \
-		Makefile.orig > Makefile || die
-	cp Makefile-libbz2_so Makefile-libbz2_so.orig
-	sed -e "s:-O2:${CFLAGS}:g" \
-		Makefile-libbz2_so.orig > Makefile-libbz2_so || die
+		Makefile || die
+	sed -i \
+		-e "s:-O2:${CFLAGS}:g" \
+		Makefile-libbz2_so || die
 }
 
 src_compile() {
-	if [ -z "`use build`" ]
+	if [ ! `use build` ]
 	then
 		emake CC="$(gcc-getCC)" CXX="$(gcc-getCXX)" -f Makefile-libbz2_so all || die "Make failed"
 	fi
@@ -41,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	if [ -z "`use build`" ]
+	if [ ! `use build` ]
 	then
 		make PREFIX=${D}/usr install || die
 		mv ${D}/usr/bin ${D}

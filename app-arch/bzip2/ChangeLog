@@ -1,8 +1,11 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.3 2004/01/03 04:48:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.4 2004/01/25 23:01:25 vapier Exp $
 
 *bzip2-1.0.2-r3 (28 Dec 2003)
+
+  25 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Remove -fomit-frame-pointer if debug is in USE #39377 Ciaran McCreesh.
 
   02 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
   Change ${CC} ${CXX} to $(gcc-getCC) $(gcc-getCXX) from gcc.eclass #36987.
