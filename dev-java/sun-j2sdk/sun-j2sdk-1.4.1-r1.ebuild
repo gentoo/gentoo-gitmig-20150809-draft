@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.1 2003/05/24 15:59:41 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.2 2003/05/28 13:31:46 tberman Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -50,8 +50,8 @@ PROVIDE="virtual/jre-1.4.1
 
 pkg_setup() {	
 	#Check if we have enough space
-	if [ `df -P ${PORTAGE_TMPDIR}/portage/ | tail -n 1 | awk '{ print $4 }'` -le 2097152 ] ; then
-		eerror "You need about 2G of disk space to compile this at ${PORTAGE_TMPDIR}/portage,"
+	if [ `df -P ${PORTAGE_TMPDIR}/portage/ | tail -n 1 | awk '{ print $4 }'` -le 2597152 ] ; then
+		eerror "You need about 2.5G of disk space to compile this at ${PORTAGE_TMPDIR}/portage,"
 		eerror "it seems you don't have that much, quiting, sorry!"
 		die "Not enough disk space"
 	fi
