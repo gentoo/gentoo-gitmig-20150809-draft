@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnome-jabber/gnome-jabber-0.4.ebuild,v 1.8 2004/11/07 03:02:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnome-jabber/gnome-jabber-0.4.ebuild,v 1.9 2004/12/03 17:04:57 tester Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://gnome-jabber.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0.4
@@ -27,5 +27,6 @@ DOCS="AUTHORS COPYING ChangeLog README NEWS TODO"
 src_unpack () {
 	unpack ${A}
 	cd ${S}
+	sed -i -e 's:/usr/local:/usr:g' gnome-jabber.schemas.in
 	intltoolize -f && aclocal && autoconf && automake -a || die
 }
