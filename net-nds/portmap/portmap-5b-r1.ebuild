@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r1.ebuild,v 1.5 2001/05/28 05:24:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r1.ebuild,v 1.6 2001/09/04 21:26:57 lamer Exp $
 
 P=portmap-5b
 A=portmap_5beta.tar.gz
@@ -33,8 +33,8 @@ src_install() {
 	into /usr
 	dosbin pmap_dump pmap_set
 	doman portmap.8 pmap_dump.8 pmap_set.8
-	dodir /etc/rc.d/init.d
-	cp ${O}/files/portmap ${D}/etc/rc.d/init.d
+	insinto /etc/rc.d/init.d
+	doins ${FILESDIR}/portmap
 	dodoc BLURB CHANGES README
 }
 
