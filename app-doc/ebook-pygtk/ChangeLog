@@ -4,6 +4,10 @@
 
 *ebook-pygtk-2.0 (09 May 2002)
 
+  01 Aug 2004; José Alberto Suárez López <bass@gentoo.org>
+  ebook-pygtk-2.0.ebuild:
+  Fixed #39486 partialy.
+
   09 May 2002; Francisco Gimeno <kikov@fco-gimeno.com> ebook-pygtk-2.0.ebuild: 
   
   Initial Release of the ebook to the devhelp tool.
