@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/cmfcollectorng
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfcollectorng/ChangeLog,v 1.4 2003/06/21 08:32:03 kutsuya Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfcollectorng/ChangeLog,v 1.5 2004/03/27 17:10:24 lanius Exp $
+
+  27 Mar 2004; Heinrich Wendel <lanius@gentoo.org> cmfcollectorng-0.20.ebuild:
+  fix broken ppc keyword
 
   21 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> cmfcollectorng-0.20.ebuild:
   ~ppc -> ppc. Added MYDOC variable.
