@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.23 2004/12/06 21:26:58 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.24 2004/12/07 01:09:52 swegener Exp $
+
+  07 Dec 2004; Sven Wegener <swegener@gentoo.org> :
+  Removed stray digests.
 
   06 Dec 2004; John Mylchreest <johnm@gentoo.org> :
   Fixing bug #73545 and adding timeout options. Thanks go to Ervin Németh for
