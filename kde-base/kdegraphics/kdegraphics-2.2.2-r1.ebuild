@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.2.2-r1.ebuild,v 1.3 2003/02/12 16:57:06 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.2.2-r1.ebuild,v 1.4 2003/02/12 16:59:11 hannes Exp $
 inherit kde-dist eutils
 
 IUSE="tetex gphoto2"
@@ -10,7 +10,7 @@ DEPEND="$DEPEND sys-devel/perl
 	media-gfx/sane-backends
 	tetex? ( >=app-text/tetex-1.0.7 )"
 
-newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 >=media-libs/libgpio-20010607 )"
+newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 )"
 
 SRC_URI="${SRC_URI}
 	mirror://kde/security_patches/post-${PV}-${PN}.diff"
