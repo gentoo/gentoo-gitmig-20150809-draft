@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kid3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.5 2004/07/14 10:40:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.6 2004/07/19 20:19:24 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> kid3-0.4.ebuild:
+  Stable x86.
 
   14 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/kid3-0.4-gcc34.patch:
