@@ -1,0 +1,146 @@
+diff -urN vcr-1.09/src/capproc.cc vcr-1.09-modified/src/capproc.cc
+--- vcr-1.09/src/capproc.cc	2001-11-11 08:39:22.000000000 -0600
++++ vcr-1.09-modified/src/capproc.cc	2002-10-21 14:29:55.000000000 -0500
+@@ -5,6 +5,7 @@
+ #include <avifile.h>
+ #include <videoencoder.h>
+ #include <iostream>
++#include <sstream>
+ 
+ #ifdef OLDAVIFILE
+ #  include <aviutil.h>
+diff -urN vcr-1.09/src/capproc.h vcr-1.09-modified/src/capproc.h
+--- vcr-1.09/src/capproc.h	2001-07-27 17:05:54.000000000 -0500
++++ vcr-1.09-modified/src/capproc.h	2002-10-21 14:44:31.000000000 -0500
+@@ -1,6 +1,6 @@
+ #include <queue>
+ #include <string>
+-#include <strstream>
++#include <sstream>
+ #include <pthread.h>
+ #include "v4lxif.h"
+ #include "vcr.h"
+@@ -88,8 +88,8 @@
+ 	int comp_drop;
+ 	long long starttime;
+ 
+-	std::strstream* messenger;
+-	std::strstream def_mess;
++	std::ostringstream* messenger;
++	std::ostringstream def_mess;
+ 
+ 	std::string filename;
+ 	int segment_size;			
+@@ -187,7 +187,7 @@
+ 	{
+ 		m_quit = 1;
+ 	}
+-	void setMessenger(std::strstream& mess)
++	void setMessenger(std::ostringstream& mess)
+ 	{
+ 		messenger=&mess;
+ 	}
+diff -urN vcr-1.09/src/main.cc vcr-1.09-modified/src/main.cc
+--- vcr-1.09/src/main.cc	2001-11-11 08:38:36.000000000 -0600
++++ vcr-1.09-modified/src/main.cc	2002-10-21 15:00:16.000000000 -0500
+@@ -16,7 +16,7 @@
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
+ #include	<fcntl.h>
+-#include <iostream.h>
++#include <iostream>
+ /* Custom headerfiles */
+ 
+ #include "vcr.h"
+@@ -134,7 +134,7 @@
+ 	resolution_width = 0,
+ 	resolution_height = 0;
+ #ifdef OLDAVIFILE
+-vector<AttributeInfo>
++std::vector<AttributeInfo>
+ #else
+ avm::vector<AttributeInfo>
+ #endif
+@@ -498,10 +498,9 @@
+ 	fprintf(stderr, "\n");
+ }
+ 
+-void
+-list_codecs()
++void list_codecs()
+ {
+-	vector<CodecInfo>::iterator it;
++	avm::vector<CodecInfo>::iterator it;
+ 
+ 	fprintf(stderr, "Available codecs: \n\n");
+ 
+@@ -549,14 +548,14 @@
+ 		return;
+ 
+ #ifdef OLDAVIFILE
+-	vector<AttributeInfo> encinfo = video_codecs[idx].encoder_info;
++	std::vector<AttributeInfo> encinfo = video_codecs[idx].encoder_info;
+ #else
+ 	avm::vector<AttributeInfo> encinfo = video_codecs[idx].encoder_info;
+ #endif
+ 
+ 	fprintf(stderr, "These attributes are supported for this codec:\n\n");
+ 
+-	vector<AttributeInfo>::const_iterator it;
++	avm::vector<AttributeInfo>::const_iterator it;
+ 	for(it=encinfo.begin(); it!=encinfo.end(); it++)
+ 	{
+ #ifdef OLDAVIFILE
+@@ -587,9 +586,9 @@
+ 			fprintf(stderr, "\tPossible values: ");
+ 
+ #ifdef OLDAVIFILE
+-			vector<string>::const_iterator sit;
++			std::vector<string>::const_iterator sit;
+ #else
+-			vector<avm::string>::const_iterator sit;
++			avm::vector<avm::string>::const_iterator sit;
+ #endif
+ 			for (sit=(it->options).begin(); sit!=(it->options).end(); sit++)
+ 				fprintf(stderr, "\"%s\" ", sit->c_str());
+@@ -805,7 +804,7 @@
+ 	int
+ 		found_codec = -1;
+ 
+-	vector<CodecInfo>::iterator it;
++	avm::vector<CodecInfo>::iterator it;
+ 
+ 	for (it = video_codecs.begin(); it != video_codecs.end(); it++)
+ 	{
+@@ -1003,7 +1002,7 @@
+ int
+ get_codec_index(int fourcc)
+ {
+-	vector<CodecInfo>::iterator it;
++	avm::vector<CodecInfo>::iterator it;
+ 	int i = 0;
+ 
+ 	for (it = video_codecs.begin(); it != video_codecs.end(); it++)
+@@ -1017,19 +1016,18 @@
+ }
+ 
+ //TODO: It ignores fourcc currently..
+-short
+-set_attribute(int fourcc, const char *attr, const char *val)
++short set_attribute(int fourcc, const char *attr, const char *val)
+ {
+ 	int setval = 0;
+ 	int retval = 0;
+ 
+-	vector<AttributeInfo>::const_iterator it;
++	avm::vector<AttributeInfo>::const_iterator it;
+ 	int idx = get_codec_index(fourcc);
+ 	if (idx < 0)
+ 		return 0;
+ 
+ #ifdef OLDAVIFILE
+-	vector<AttributeInfo> encinfo = video_codecs[idx].encoder_info;
++	std::vector<AttributeInfo> encinfo = video_codecs[idx].encoder_info;
+ #else
+ 	avm::vector<AttributeInfo> encinfo = video_codecs[idx].encoder_info;
+ #endif
