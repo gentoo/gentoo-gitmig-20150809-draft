@@ -1,11 +1,15 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.9 2003/08/24 00:56:07 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.10 2003/09/30 17:54:24 kumba Exp $
+
+
+*colordiff-1.0.3 (17 Jul 2003)
+
+  30 Sep 2003; Joshua Kinard <kumba@gentoo.org> colordiff-1.0.3.ebuild:
+  Added ~mips to KEYWORDS
 
   24 Aug 2003; Tavis Ormandy <taviso@gentoo.org> colordiff-1.0.3.ebuild:
   ~alpha
-
-*colordiff-1.0.3 (17 Jul 2003)
 
   17 Jul 2003; Donnie Berkholz <spyderous@gentoo.org>; colordiff-1.0.3.ebuild:
   Bump. Also fixed some silly ebuild mistakes.
