@@ -1,8 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.29 2003/01/02 18:44:34 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.30 2003/01/07 00:17:53 raker Exp $
 
 *xine-lib-1_beta2 (02 Jan 2003)
+
+  06 Jan 2003; Nick Hadaway <raker@gentoo.org> xine-lib-1_beta2.ebuild :
+  Added some einfo comments to postinstall with notes on upgrading
+  from previous library versions.
 
   02 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
