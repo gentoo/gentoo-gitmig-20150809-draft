@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.43 2004/02/11 01:08:08 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.44 2004/04/17 07:51:52 lv Exp $
+
+  17 Apr 2004; Travis Tilley <lv@gentoo.org> man-1.5m.ebuild:
+  added missing ~amd64 keyword
 
   10 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
   Make sure cache directories are created with correct permissions #40322.
