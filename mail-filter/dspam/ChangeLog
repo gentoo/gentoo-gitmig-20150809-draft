@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.13 2004/09/06 00:55:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.14 2004/09/07 13:14:20 st_lim Exp $
+
+*dspam-3.1.2 (07 Sep 2004)
+
+  07 Sep 2004; Lim Swee Tat <st_lim@gentoo.org> +dspam-3.1.2.ebuild:
+  Version bump to 3.1.2 but without sqlite support
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> dspam-3.1.0.ebuild,
   dspam-3.1.1.ebuild:
