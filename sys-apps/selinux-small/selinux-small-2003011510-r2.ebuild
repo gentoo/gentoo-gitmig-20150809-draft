@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r2.ebuild,v 1.2 2003/03/21 19:19:02 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r2.ebuild,v 1.3 2003/03/24 02:24:13 method Exp $
 
 DESCRIPTION="SELinux policy compiler and example policies"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -18,7 +18,7 @@ LIBSECURE="-I${S}/libsecure/include -L${S}/libsecure/src"
 KEYWORDS="~x86"
 IUSE="selinux"
 DEPEND="<sys-libs/glibc-2.3.2
-	>=selinux-sources-2.4.20-r1"
+	>=sys-kernel/selinux-sources-2.4.20-r1"
 
 pkg_setup() {
 	use selinux || eend 1 "You must have selinux USE var"
