@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0-r1.ebuild,v 1.1 2003/06/08 20:19:20 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0-r1.ebuild,v 1.2 2003/06/16 14:30:06 phosphan Exp $
 
 inherit flag-o-matic
 
@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 	patch -p 1 <../${P}-sensors-detect-gentoo.diff || die
+	patch -p 0 < ${FILESDIR}/${PV}-wrong-headers.patch || die
 }
 
 src_compile()  {
