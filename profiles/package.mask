@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3539 2005/01/28 04:48:27 dragonheart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3540 2005/01/29 01:27:42 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Jeremy Huddleston <eradicator@gentoo.org> (28 Jan 2004)
+# Added alpha 4.0 gcc by request for testing.  It is not ready for prime time,
+# so if you use it and it breaks your system it's your fault.
+>=sys-devel/gcc-4.0.0_alpha20050123
 
 # <xmerlin@gentoo.org> (27 Jan 2005)
 # Masked for a memory corruption bug
