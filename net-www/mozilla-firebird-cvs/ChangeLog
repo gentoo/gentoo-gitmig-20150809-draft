@@ -1,6 +1,12 @@
 # ChangeLog for net-www/phoenix-cvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/ChangeLog,v 1.1 2003/06/06 00:58:02 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/ChangeLog,v 1.2 2003/06/08 17:12:33 brad Exp $
+
+*mozilla-firebird-cvs-0.6-r1 (08 Jun 2003)
+
+  08 Jun 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-cvs-0.6-r1.ebuild:
+  Strip -msse2 out of the build if this is a Pentium4 and we're using GCC 3.2.x.
+  Otherwise, build will fail with a messy assembly error.
 
 *mozilla-firebird-cvs-0.6 (05 Jun 2003)
 
@@ -25,7 +31,7 @@
   30 Mar 2003; phoen][x <phoenix@gentoo.org>; phoenix-cvs-0.5-r2.ebuild,
   files/digest-phoenix-cvs-0.5-r2, files/phoenix:
   Seth asked me to take a look into -r1. I cleaned up a few things:
-  - Added the missing $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/ChangeLog,v 1.1 2003/06/06 00:58:02 brad Exp $
+  - Added the missing $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/ChangeLog,v 1.2 2003/06/08 17:12:33 brad Exp $
   - made ebuild use flag-o-matic over ${CFLAGS//}
   - made ebuild use nsplugins.eclass for easy plugin integration
   TODO:
