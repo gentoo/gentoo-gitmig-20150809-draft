@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.44 2002/11/23 16:53:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.45 2002/11/24 21:29:55 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 
 ECLASS=kde-functions
@@ -51,6 +51,26 @@ need-kde() {
 
 	# determine install locations
 	set-kdedir $KDEVER
+
+	# ask for autotools
+	case "$KDEVER" in
+		2*)	
+			need-autoconf 2.1
+			need-automake 1.4
+			;;
+		3.1*)	# actually, newer 3.0.x stuff uses this too, but i want to make a clean switch
+			need-automake 1.6
+			need-autoconf 2.5
+			;;
+		3*)	# a generic call for need-kde 3 - automake 1.4 works most often
+			need-autoconf 2.5
+			need-automake 1.4
+			;;
+		5*)
+			need-autoconf 2.5
+			need-automake 1.6
+			;;
+	esac
 	
 	# if we're a kde-base package, we need an exact version of kdelibs
 	# to compile correctly.
@@ -89,30 +109,7 @@ set-kdedir() {
 
 	debug-print-function $FUNCNAME $*
 
-	# is this a kde-base ebuid?
-	if [ "${INHERITED//kde-dist}" != "$INHERITED" ] || [ "$PN" == kdelibs ] || [ "$PN" == arts ]; then
-		export KDEBASE="true"
-	fi
 
-	case "$1" in
-		2*)	
-			need-autoconf 2.1
-			need-automake 1.4
-			;;
-		3.1*)	# actually, newer 3.0.x stuff uses this too, but i want to make a clean switch
-			need-automake 1.6
-			need-autoconf 2.5
-			;;
-		3*)	# a generic call for need-kde 3 - automake 1.4 works most often
-			need-autoconf 2.5
-			need-automake 1.4
-			;;
-		5*)
-			need-autoconf 2.5
-			need-automake 1.6
-			;;
-	esac
-	
 	# set install location:
 	# - 3rd party apps go into /usr, and have SLOT="0".
 	# - kde-base category ebuilds go into /usr/kde/$MAJORVER.$MINORVER,
@@ -409,4 +406,10 @@ set_enable_final() {
 
 }
 
+# is this a kde-base ebuid?
+case $PN in kde-i18n*|arts|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils)
+		debug-print "$ECLASS: KDEBASE ebuild recognized"
+		export KDEBASE="true"
+		;;
+esac
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.66 2002/11/23 21:10:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.67 2002/11/24 21:29:55 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -10,24 +10,6 @@ IUSE="$IUSE ppc"
 
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
-
-# is this a kde-base ebuid?
-case $PN in
-	kde-i18n*|arts|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils)
-		
-		debug-print "$ECLASS: KDEBASE ebuild recognized"
-	
-		export KDEBASE="true"
-		
-		# fixups for certain versions
-		# already in kde-dist.eclass!
-		#case $PV in
-		#	3.1_alpha1)	export S="$WORKDIR/$PN-3.0.6" ;;
-		#	3.1_beta1)	export S="$WORKDIR/$PN-3.0.7" ;;
-		#	3.1_beta2)	export S="$WORKDIR/$PN-3.0.8" ;;
-		#esac
-	    ;;
-esac
 
 # deps on the build tools
 if [ -n "$KDEBASE" -a -n "`use ppc`" -a "${PV//3.1}" != "$PV" ]; then
