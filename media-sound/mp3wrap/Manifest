@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f0ef028d74bc07dd892b2597e01fd6e4 ChangeLog 631
+MD5 50ba670e271a35d1c18dd0bbcaded432 ChangeLog 725
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 79f27add4cfe00a118781678bd7f8e4a mp3wrap-0.5.ebuild 622
+MD5 ded6d22b02894a1317e7c07b8cd16ebc mp3wrap-0.5.ebuild 621
 MD5 1994c1fb3d9fb7df05b514eb9543a5d8 files/digest-mp3wrap-0.5 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBowgxArHZZzCEUG0RAjmdAJ4mvhWeSZEPYFJWmx12RypL8qMGcACdEX5T
-LbB9dgDysvzEjbbbUphXC0Q=
-=o7jW
+iD8DBQFBxRhFArHZZzCEUG0RAkCPAJ959MiTD3e2mKOHrGd8nXrfyM44JQCfZis6
+VTg/sNBMD2I5PkSAIi59bx4=
+=K8F5
 -----END PGP SIGNATURE-----

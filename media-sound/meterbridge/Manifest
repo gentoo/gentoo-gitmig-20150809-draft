@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 54eb83e9af806c489ef869b77e52838e ChangeLog 1150
+MD5 494f15b17e4be395841e80f88d9cc55b ChangeLog 1252
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 e133c0604d65895e1c861d93b96f5ac2 meterbridge-0.9.0.ebuild 646
-MD5 e16863918d8be02f6b6b14cfb4ecb1ed meterbridge-0.9.2.ebuild 626
+MD5 8c95551d2bcd681003ad7e4f9921759e meterbridge-0.9.2.ebuild 626
 MD5 c50f792290721fb1e38d3eb3f55be86e files/digest-meterbridge-0.9.0 69
 MD5 5cb258c131d546109669030240fc59ab files/digest-meterbridge-0.9.2 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBowY2ArHZZzCEUG0RAuBJAJ91K9mkUas/vRHVMSFWbRyy5sdLpACgh7/7
-+DEbXsob7YtkARpTMeqX+VE=
-=s4y4
+iD8DBQFBxReBArHZZzCEUG0RAg+tAJwMjACfrURdBLBReATpgfGmZGHTfQCdHlGp
+yBXyNdeTEfIwLCFu/Fo1DzY=
+=b73O
 -----END PGP SIGNATURE-----
