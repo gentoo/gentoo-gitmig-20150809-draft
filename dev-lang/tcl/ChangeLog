@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.47 2005/03/19 05:51:07 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.48 2005/03/19 08:03:00 cardoe Exp $
+
+  19 Mar 2005; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  Changing to proper herd
 
 *tcl-8.4.9 (19 Mar 2005)
 
