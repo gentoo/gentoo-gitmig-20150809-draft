@@ -1,0 +1,21 @@
+diff -urN log4cxx-0.9.7.orig/src/smtpappender.cpp log4cxx-0.9.7/src/smtpappender.cpp
+--- log4cxx-0.9.7.orig/src/smtpappender.cpp	2004-12-22 09:26:21.000000000 -0500
++++ log4cxx-0.9.7/src/smtpappender.cpp	2004-12-22 09:59:25.247244129 -0500
+@@ -134,7 +134,7 @@
+ 	for (i = recipients.begin(); i != recipients.end(); i++)
+ 	{
+ 		if (::libsmtp_add_recipient(LIBSMTP_REC_TO,
+-			(TCHAR *)T2A(i->c_str()),
++			T2A((TCHAR *)i->c_str()),
+ 			(libsmtp_session_struct *)session) != 0)
+ 		{
+ 			LogLog::error(_T("Could not add recipient ")+*i+_T("."));
+@@ -316,6 +316,8 @@
+ */
+ void SMTPAppender::sendBuffer()
+ {
++	USES_CONVERSION;
++
+ 	// Note: this code already owns the monitor for this
+ 	// appender. This frees us from needing to synchronize on 'cb'.
+ 	try

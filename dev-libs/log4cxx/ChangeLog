@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.4 2004/07/02 04:51:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.5 2004/12/22 15:17:16 ka0ttic Exp $
+
+*log4cxx-0.9.7 (22 Dec 2004)
+
+  22 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  +files/log4cxx-0.9.7-gentoo.diff, +log4cxx-0.9.7.ebuild:
+  Version bump; closes bugs 75260 and 72021. Also, added support for USE flags
+  doc, unicode, odbc, and smtp. Updated metadata.xml.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> log4cxx-0.9.5.ebuild:
   virtual/glibc -> virtual/libc

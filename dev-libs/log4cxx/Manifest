@@ -1,4 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 839e6262a6479c9c33123a3d77a195b7 log4cxx-0.9.5.ebuild 848
-MD5 ad25286cb8d5388cf5ff10ba407d0b60 ChangeLog 624
-MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
+MD5 ffb450be4deeb4891228f57b60103afd ChangeLog 907
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 17408c0384a26ed7a4f70ee154ca61c3 log4cxx-0.9.7.ebuild 1468
+MD5 50fe13b5c404fa59faeaebe40f36b6be files/log4cxx-0.9.7-gentoo.diff 750
 MD5 1135167eb4745c4a16791f44317ba88b files/digest-log4cxx-0.9.5 65
+MD5 a94dc071335f2e2545d523996053a685 files/digest-log4cxx-0.9.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByZAFEZCkKN40op4RAuxHAJwJ3R0aLzG4TCvlGv3Kg8MyU1a1zgCbBat8
+G5NqJOHmkM+FwQ0VnB+L60A=
+=Folc
+-----END PGP SIGNATURE-----
