@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.14 2004/07/21 21:14:19 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.15 2004/09/18 19:47:15 ka0ttic Exp $
+
+*tmpwatch-2.9.1.1 (18 Sep 2004)
+
+  18 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  +files/tmpwatch.cron, tmpwatch-2.9.0.ebuild, +tmpwatch-2.9.1.1.ebuild:
+  Version bump; Fixed outdated HOMEPAGE/SRC_URI and cleaned up ebuild. Added
+  cron script (disabled by default) to close bug #54443. Updated metadata info.
 
   21 Jul 2004; Tom Gall <tgall@gentoo.org> tmpwatch-2.9.0.ebuild:
   stable on ppc64, bug #57577
