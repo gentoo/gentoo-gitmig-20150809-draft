@@ -1,13 +1,14 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.6 2002/12/03 00:12:35 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.7 2002/12/03 17:25:23 hannes Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 # check need for glib >=1.3.3 (we have 1.2.10 only; configure has no glib flag but searches for it)
 
 PATCHES="${FILESDIR}/${P}-kimageeffect.patch
-	${FILESDIR}/${P}-kmdcodec.patch"
+	${FILESDIR}/${P}-kmdcodec.patch
+	${FILESDIR}/${P}-ssl.patch"
 DESCRIPTION="KDE libraries needed by all kde programs" 
 KEYWORDS="x86"
 HOMEPAGE="http//www.kde.org/"
