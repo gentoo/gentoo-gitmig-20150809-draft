@@ -2,10 +2,6 @@
 # Copyright 1999-2000 Daniel Robbins, Gentoo Technologies, Inc.
 # Distributed under the GPL
 
-export PROXY
-export HTTP_PROXY
-export FTP_PROXY
-
 if [ "`whoami`" != "root" ]
 then
     echo "Since ebuild can modify critical system files, only root is"
@@ -14,6 +10,10 @@ then
 fi
 
 source /etc/make.conf
+export PROXY
+export HTTP_PROXY
+export FTP_PROXY
+
 
 initvars() {
 	#fix up ROOT path so that it always has a / after it
@@ -154,9 +154,17 @@ digest_check() {
     then
 	echo
 	echo '!!!'" No message digest found for ${1}."
-	echo '!!!'" Maintainer: ebuild digest to update message digests."
-	echo
-	return 1
+	if [ -n "$MAINTAINER" ]
+	then
+		echo '>>> Maintainer mode: auto-computing digests.'
+		dyn_digest
+		echo
+		return 0
+	else
+		echo '!!!'" Maintainer: ebuild digest to update message digests."
+		echo
+		return 1
+	fi
     fi
     local mydigest=`md5sum ${DISTDIR}/${1} | cut -f1 -d" "`
     if [ "$mycdigest" != "$mydigest" ]
@@ -210,7 +218,7 @@ dyn_fetch() {
 		digest_check ${y}
 		if [ $? -ne 0 ]
 		then
-			exit 1
+				exit 1
 		fi
 	done
 }
