@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.12.ebuild,v 1.1 2004/07/14 20:25:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.12.ebuild,v 1.2 2004/07/15 16:38:06 axxo Exp $
 
 IUSE="doc mozilla"
 
@@ -51,23 +51,25 @@ src_unpack() {
 	chmod +x install.sfx
 	./install.sfx
 	rm install.sfx
+
+	sed "s/head -1/head -n 1/" -i ${MY_P}/bin/.java_wrapper
 }
 
 src_install () {
-	local dirs="bin include include-old jre lib"
+	local dirs="bin include include-old jre lib man"
 	dodir /opt/${P}
 
 	for i in ${dirs} ; do
 		if [ "${i}" == "bin" ] ; then
 			dodir /opt/${P}/${i}
-			cp -a ${i}/.java_wrapper ${D}/opt/${P}/bin/
-			cp -a ${i}/* ${D}/opt/${P}/bin/
+			cp -dPR ${i}/.java_wrapper ${D}/opt/${P}/bin/
+			cp -dPR ${i}/* ${D}/opt/${P}/bin/
 		elif [ "${i}" == "jre" ] ; then
 			dodir /opt/${P}/${i}
 			dodir /opt/${P}/${i}/bin
-			cp -a ${i}/bin/.java_wrapper ${D}/opt/${P}/${i}/bin/
-			cp -a ${i}/bin/* ${D}/opt/${P}/${i}/bin/
-			cp -a 	${i}/CHANGES \
+			cp -dPR ${i}/bin/.java_wrapper ${D}/opt/${P}/${i}/bin/
+			cp -dPR ${i}/bin/* ${D}/opt/${P}/${i}/bin/
+			cp -dPR	${i}/CHANGES \
 				${i}/COPYRIGHT \
 				${i}/ControlPanel.html \
 				${i}/LICENSE \
@@ -77,14 +79,12 @@ src_install () {
 				${i}/plugin \
 				${D}/opt/${P}/${i}/
 		else
-			cp -a ${i} ${D}/opt/${P}/
+			cp -dPR ${i} ${D}/opt/${P}/
 		fi
 	done
 
 	dodoc COPYRIGHT README LICENSE
 	dohtml README.html
-
-	doman man/man1/*.1
 
 	dodir /opt/${P}/share/
 	cp -a demo src.jar ${D}/opt/${P}/share/
