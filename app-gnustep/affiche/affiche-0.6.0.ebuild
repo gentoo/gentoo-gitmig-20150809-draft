@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/affiche/affiche-0.6.0.ebuild,v 1.3 2003/10/18 20:20:36 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/affiche/affiche-0.6.0.ebuild,v 1.4 2004/02/18 09:16:12 dholm Exp $
 
 inherit gnustep
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.collaboration-world.com/affiche.data/releases/Stable/${P/a/A
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=dev-util/gnustep-gui-0.8.5"
 

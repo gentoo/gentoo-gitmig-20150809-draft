@@ -1,6 +1,9 @@
 # ChangeLog for app-gnustep/gorm
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gorm/ChangeLog,v 1.4 2003/10/18 20:17:38 raker Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gorm/ChangeLog,v 1.5 2004/02/18 09:23:06 dholm Exp $
+
+  18 Feb 2004; David Holm <dholm@gentoo.org> gorm-0.3.0.ebuild:
+  Added to ~ppc.
 
   18 Oct 2003; Nick Hadaway <raker@gentoo.org> gorm-0.3.0.ebuild:
   Removed stale ebuilds and fixed the policy violation of setting ${A}
