@@ -2,20 +2,26 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.6.ebuild,v 1.1 2001/11/15 22:45:58 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7-r1.ebuild,v 1.1 2001/12/08 22:37:35 woodchip Exp $
 
-SV=1.1.8
+SV=1.2.2
 S=${WORKDIR}/rc-scripts-${SV}
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 
+#needed for the new RESTORE devfsd function
+RDEPEND=">=sys-apps/devfsd-1.3.20"
+
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 
 src_compile() {
-	cp ${S}/init.d/runscript.c ${T}
+	cp ${S}/sbin/runscript.c ${T}
+	cp ${S}/sbin/start-stop-daemon.c ${T}
+
 	cd ${T}
-	gcc ${CFLAGS} runscript.c -o runscript
+	gcc ${CFLAGS} runscript.c -o runscript || die "cant compile runscript.c"
+	gcc ${CFLAGS} start-stop-daemon.c -o start-stop-daemon || die "cant compile start-stop-daemon.c"
 	echo ${ROOT} > ${T}/ROOT
 }
 
@@ -51,6 +57,7 @@ src_install()
 	keepdir /sbin
 	exeinto /sbin
 	doexe ${T}/runscript
+	doexe ${T}/start-stop-daemon
 
 	keepdir /usr
 	keepdir /usr/bin
@@ -95,7 +102,7 @@ src_install()
 		dosym ../../share/info	/usr/X11R6/share/info
 		#end FHS compatibility symlinks stuff
 		
-		doman ${FILESDIR}/MAKEDEV.8
+		doman ${FILESDIR}/MAKEDEV.8 ${S}/man/*
 		dodoc ${FILESDIR}/copyright 
 		keepdir /usr/X11R6/lib /usr/X11R6/man
 		keepdir /var/log/news
@@ -106,11 +113,7 @@ src_install()
 		#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/services
 		#end supervise stuff
 	
-# Drobbins or Hallski please check this!
 		keepdir /opt
-#		keepdir /opt/gnome/man
-#		keepdir /opt/gnome/share
-#		dosym ../man /opt/gnome/share/man
 	fi
 
 #the .keep file messes up Portage when looking in /var/db/pkg
@@ -154,42 +157,67 @@ src_install()
 	if [ $altmerge -eq 1 ]
 	then
 		#rootfs and devfs
-		keepdir /dev-state
-		dosym /usr/sbin/MAKEDEV /dev-state/MAKEDEV
-		keepdir /dev-state/pts /dev-state/shm
-		cd ${D}/dev-state
+		keepdir /lib/dev-state
+		dosym /usr/sbin/MAKEDEV /lib/dev-state/MAKEDEV
+		#this is not needed anymore, and causes /sbin/init to lock on
+		#boot (the .keep files in /lib/dev-state/{pts,shm})
+		#NOTE: this is only when using 'try' with moving /lib/dev-state
+		#      to /dev
+		#keepdir /lib/dev-state/pts /lib/dev-state/shm
+		cd ${D}/lib/dev-state
 	else
 		#normal
 		keepdir /dev
-		keepdir /dev-state
+		keepdir /lib/dev-state
 		keepdir /dev/pts /dev/shm
 		dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
 		cd ${D}/dev
 	fi	
-	#These devices are also needed by many people and should be included
-	echo "Making device nodes... (this could take a minute or so...)"
-	${S}/sbin/MAKEDEV generic-i386
-	${S}/sbin/MAKEDEV sg
-	${S}/sbin/MAKEDEV scd
-	${S}/sbin/MAKEDEV rtc 
-	${S}/sbin/MAKEDEV audio
-	${S}/sbin/MAKEDEV hde
-	${S}/sbin/MAKEDEV hdf
-	${S}/sbin/MAKEDEV hdg
-	${S}/sbin/MAKEDEV hdh
+
+	# we dont want to create devices if this is not a bootstrap and devfs
+	# is used, as this was the cause for all the devfs problems we had
+	if [ ! $altmerge -eq 1 ]
+	then
+		#These devices are also needed by many people and should be included
+		echo "Making device nodes... (this could take a minute or so...)"
+		${S}/sbin/MAKEDEV generic-i386
+		${S}/sbin/MAKEDEV sg
+		${S}/sbin/MAKEDEV scd
+		${S}/sbin/MAKEDEV rtc 
+		${S}/sbin/MAKEDEV audio
+		${S}/sbin/MAKEDEV hde
+		${S}/sbin/MAKEDEV hdf
+		${S}/sbin/MAKEDEV hdg
+		${S}/sbin/MAKEDEV hdh
+	fi
 
 	cd ${S}/sbin
 	into /
 	dosbin init rc rc-update
 
 	#env-update stuff
-	dodir /etc/env.d
+	keepdir /etc/env.d
 	insinto /etc/env.d
 	doins ${S}/etc/env.d/00basic
 	
-	dodir /etc/modules.d
+	keepdir /etc/modules.d
 	insinto /etc/modules.d
 	doins ${S}/etc/modules.d/aliases ${S}/etc/modules.d/i386
+
+	keepdir /etc/conf.d
+	insinto /etc/conf.d
+	for foo in ${S}/etc/conf.d/*
+	do
+		[ -f $foo ] && doins $foo
+	done
+	#/etc/conf.d/net.ppp* should only be readible by root
+	chmod 0600 ${D}/etc/conf.d/net.ppp*
+
+	#this seems the best place for templates .. any ideas ?
+	#NB: if we move this, then $TEMPLATEDIR in net.ppp0 need to be updated as well
+	keepdir /etc/ppp
+	insinto /etc/ppp
+	doins ${S}/etc/ppp/chat-default
 
 	dodir /etc/init.d
 	exeinto /etc/init.d
@@ -197,8 +225,13 @@ src_install()
 	do
 		[ -f $foo ] && doexe $foo
 	done
-	#not the greatest location for this file; should move it on cvs at some point
-	rm ${S}/init.d/runscript.c
+
+	dodir /etc/skel
+	insinto /etc/skel
+	for foo in `find ${S}/etc/skel -type f -maxdepth 1`
+	do
+		[ -f $foo ] && doins $foo
+	done
 
 	#skip this if we are merging to ROOT
 	[ "$ROOT" = "/" ] && return
@@ -207,7 +240,7 @@ src_install()
 	local bar
 	for foo in default boot nonetwork single
 	do
-		dodir /etc/runlevels/${foo}
+		keepdir /etc/runlevels/${foo}
 		for bar in `cat ${S}/rc-lists/${foo}`
 		do
 			[ -e ${S}/init.d/${bar} ] && dosym /etc/init.d/${bar} /etc/runlevels/${foo}/${bar}
@@ -226,4 +259,47 @@ pkg_postinst() {
 	do
 		[ -e ${ROOT}var/${x} ] || touch ${ROOT}var/${x}
 	done
+
+	#kill the old /dev-state directory if it exists
+	[ "`mount |grep 'on /dev-state'`" ] && umount /dev-state >/dev/null 2>&1
+	[ -e /dev-state ] && rm -rf /dev-state
+	
+	#remove /lib/dev-state/{pts,shm}, as the .keep files cause init to lock
+#	rm -rf /lib/dev-state/{pts,shm} >/dev/null 2>&1
+	
+	#force update of /etc/devfsd.conf
+	#just until everybody upgrade that is ...
+	if [ -e /etc/devfsd.conf ]
+	then
+		mv /etc/devfsd.conf /etc/devfsd.conf.old
+		install -m0644 ${S}/etc/devfsd.conf /etc/devfsd.conf
+
+		echo
+		echo "*********************************************************"
+		echo "* This release use a new form of /dev management, so    *"
+		echo "* /etc/devfsd.conf have moved from the devfsd package   *"
+		echo "* to this one.  Any old versions will be renamed to     *"
+		echo "* /etc/devfsd.conf.old.  Please verify that it actually *"
+		echo "* do not save your settings before adding entries, and  *"
+		echo "* if you really need to, just add missing entries and   *"
+		echo "* try not to delete lines from the new devfsd.conf.     *"
+		echo "*********************************************************"
+		echo
+		
+	fi
+	
+	#restart devfsd
+	#we dont want to restart devfsd when bootstrapping, because it will
+	#create unneeded entries in /lib/dev-state, which will override the
+	#symlinks (to /dev/sound/*, etc) and cause problems.
+	if [ -z "`use build`" ]
+	then
+		if [ "`ps -A |grep devfsd`" ]
+		then
+			killall -HUP devfsd >/dev/null 2>&1
+		elif [ -x /sbin/devfsd ]
+		then
+			/sbin/devfsd /dev >/dev/null 2>&1
+		fi
+	fi
 }
