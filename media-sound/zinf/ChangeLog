@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/zinf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.19 2004/02/16 20:45:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.20 2004/02/18 18:57:57 eradicator Exp $
+
+  18 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> :
+  Yet another new tarball of the same name from zinf... new digest...
 
   16 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> zinf-2.2.5.ebuild,
   zinf-2.2.5_beta1.ebuild:
