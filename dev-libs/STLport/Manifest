@@ -1,5 +1,5 @@
 MD5 2b2f878004e600e92d8015e40bd7025e STLport-4.5.3-r2.ebuild 1044
-MD5 9361f06e4ba8f5d41abfdf99e9b65561 STLport-4.5.3-r1.ebuild 892
+MD5 0e919795f884dee2673f84407143b0f1 STLport-4.5.3-r1.ebuild 891
 MD5 bc0407b16f270096da93493ca82f45b8 ChangeLog 1737
 MD5 e498e4970e5cbcf92ec1466d70be88c1 files/STLport-4.5.3-gcc3.patch 640
 MD5 71f426e2327ad577fdeaa14cf17f7b19 files/digest-STLport-4.5.3-r1 65
