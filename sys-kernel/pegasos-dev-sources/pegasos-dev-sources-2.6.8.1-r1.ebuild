@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/pegasos-dev-sources-2.6.8.1.ebuild,v 1.1 2004/08/16 00:56:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/pegasos-dev-sources-2.6.8.1-r1.ebuild,v 1.1 2004/08/17 14:17:13 dholm Exp $
 
 ETYPE="sources"
 inherit kernel-2
 detect_version
 
 # Version of gentoo patchset
-GPV=8.1.0
+GPV=8.1.1
 GPV_SRC="mirror://gentoo/pegpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}.tar.bz2"
 
 KEYWORDS="ppc"
