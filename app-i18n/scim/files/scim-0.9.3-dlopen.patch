@@ -1,0 +1,22 @@
+--- scim-0.9.3/src/Makefile.in.bak	2004-03-20 21:42:43.644342264 +0800
++++ scim-0.9.3/src/Makefile.in	2004-03-20 21:42:18.178213704 +0800
+@@ -357,7 +357,7 @@
+ 
+ scim_config_agent_SOURCES = scim_config_agent.cpp
+ scim_config_agent_LDADD = libscim.la
+-scim_config_agent_LDFLAGS = @INTLLIBS@
++scim_config_agent_LDFLAGS = @INTLLIBS@ -ldl
+ subdir = src
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+--- scim-0.9.3/configure.bak	2004-03-20 22:00:59.292778384 +0800
++++ scim-0.9.3/configure	2004-03-20 22:00:25.969844240 +0800
+@@ -19428,7 +19428,7 @@
+   fi
+   if $PKG_CONFIG --exists "gtk+-2.0 >= 2.3.5" ; then
+     SCIM_HAS_GTK2_4=yes
+-    GTK_VERSION=2.3.5
++    GTK_VERSION=2.4.0
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_GTK_DRAW_INSERTION_CURSOR 1
