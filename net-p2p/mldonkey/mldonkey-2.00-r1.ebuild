@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.00-r1.ebuild,v 1.1 2002/12/09 20:53:22 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.00-r1.ebuild,v 1.2 2002/12/09 23:48:32 hannes Exp $
 
 IUSE="gtk"
 DESCRIPTION="edonkey, opennap,... client written in ocaml"
 HOMEPAGE="http://www.nongnu.org/mldonkey/"
 SRC_URI="http://savannah.nongnu.org/download/mldonkey/stable/${P}.sources.tar.gz
-	http://concept.free.free.fr/mldonkey/goodies/diff-2.00-2.00+2.patch.gz
-	http://concept.free.free.fr/mldonkey/pango-20021208a.tar.gz"
+	http://concept.free.free.fr/mldonkey/patches-against-CVS2.00+2/diff-2.00-2.00+2.patch.gz
+	http://concept.free.free.fr/mldonkey/patches-against-CVS2.00+2/pango-20021208a.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
