@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.48 2003/01/31 21:24:09 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.49 2003/02/03 10:14:30 pvdabeel Exp $
 
   04 Dec 2002: Michael Cummings <mcummings@gentoo.org>
   postgresql-7.3.ebuild: 
@@ -9,8 +9,13 @@
 
 *postgresql-7.3.1 (31 Dec 2002)
 
+  02 Feb 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> postgresql-7.3.1.ebuild :
+  Changed java dep back to virtual/jdk because sun-jdk is x86-only. 
+  Uncomment the x86 ? keyword line if you want a sun-jdk dependency or emerge sun-jdk manually
+
   31 Jan 2003; Ryan Phillips <rphillips@gentoo.org> postgresql-7.3.1.ebuild :
   Changed java dep to be sun-jdk for compatibility
+
 
   31 Dec 2002; Ryan Phillips <rphillips@gentoo.org> postgresql-7.3.1.ebuild :
   Version bump.. Masked for testing.
