@@ -1,6 +1,29 @@
 # ChangeLog for sys-kernel/rsbac-dev-sources
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.21 2005/01/12 22:31:13 johnm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.22 2005/01/18 22:47:14 kang Exp $
+
+*rsbac-sources-2.6.10-r1 (18 Jan 2005)
+
+  18 Jan 2005; Guillaume Destuynder <kang@gentoo.org>
+  -files/2.6.7-cmdline.patch, -files/rsbac-bugfix-v1.2.3-6.diff,
+  -files/rsbac-bugfix-v1.2.3-ao-01.diff,
+  -files/rsbac-bugfix-v1.2.3-kang-01.diff,
+  -files/rsbac-dev-sources-2.6.7-62524-ptmx.patch,
+  -files/rsbac-dev-sources-2.6.7-70681-binfmt.patch,
+  -files/rsbac-dev-sources-2.6.7-AF_UNIX.patch,
+  -files/rsbac-dev-sources-2.6.7-CAN-2004-0883.patch,
+  -files/rsbac-dev-sources-2.6.7-dos_mem_disc1.patch,
+  -files/rsbac-dev-sources-2.6.7-dos_mem_disc2.patch,
+  -files/rsbac-dev-sources-CAN-2004-0497.patch,
+  -files/rsbac-dev-sources-CAN-2004-0596.patch,
+  -files/rsbac-dev-sources-CAN-2004-0816.patch,
+  -files/rsbac-dev-sources-CAN-2004-1069.patch,
+  -files/rsbac-dev-sources-iptables-dos.patch,
+  -files/rsbac-dev-sources-v1.2.3-3.patch, -rsbac-dev-sources-2.6.10.ebuild,
+  -rsbac-dev-sources-2.6.7-r11.ebuild, -rsbac-dev-sources-2.6.7-r12.ebuild,
+  -rsbac-dev-sources-2.6.9.ebuild, +rsbac-sources-2.6.10-r1.ebuild:
+  Mirroring changes from rsbac-sources. Please see rsbac-sources ChangeLog for
+  more information.
 
 *rsbac-dev-sources-2.6.7-r11 (20 Dec 2004)
 
