@@ -1,8 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.18 2003/03/23 19:20:05 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.19 2003/04/12 17:01:01 seemant Exp $
+
+inherit eutils
 
 IUSE="selinux"
+
 MY_P=${P/vcron/vixie-cron}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="The Vixie cron daemon"
@@ -12,15 +15,16 @@ HOMEPAGE="http://www.vix.com/"
 KEYWORDS="x86 ppc sparc alpha arm mips"
 SLOT="0"
 LICENSE="as-is"
-inherit eutils
 
-DEPEND="virtual/glibc
+DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=sys-apps/sed-4.0.5
 	selinux? ( sys-apps/selinux-small )"
 
 RDEPEND="!virtual/cron
 	 sys-apps/cronbase
 	 virtual/mta
 	 selinux? ( sys-apps/selinux-small )"
+
 PROVIDE="virtual/cron"
 
 src_unpack() {
@@ -28,12 +32,11 @@ src_unpack() {
 
 	cd ${S}
 
-	patch -p1 < ${FILESDIR}/${MY_P}-gentoo.patch || die
+	epatch ${FILESDIR}/${MY_P}-gentoo.patch
 
 	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
 
-	cp Makefile Makefile.orig
-	sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
+	sed -i "s:-O2:${CFLAGS}:" Makefile
 }
 
 src_compile() {
