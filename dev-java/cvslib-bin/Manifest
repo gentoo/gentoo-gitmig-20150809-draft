@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8413a02f7f42046b8c0d77ee28472627 cvslib-bin-3.6.ebuild 844
-MD5 fbaaca79064ab712a81aa13771bc2626 cvslib-bin-3.5.ebuild 817
-MD5 00471c1dfeb8c4fb963ff64aa0eb4766 ChangeLog 612
+MD5 3e1d0b8ef892b65224415b1e4f8c8ed6 ChangeLog 618
+MD5 7b90e4af3afc4978981dab0ae6d65dc8 cvslib-bin-3.5.ebuild 823
+MD5 b9b35f88cb38cf1a450e096ac170dcb8 cvslib-bin-3.6.ebuild 850
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 70c62181f6094ef6288c1611472172dc files/digest-cvslib-bin-3.5 118
 MD5 7443a5dae142af526e70f0a18b551a09 files/digest-cvslib-bin-3.6 118
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVYQ/rLF9B432nYRAvw7AKDBdSRp/jTU/eumEQD9Tv802WPPgwCdFbid
-P4F0woMYQXJvd7ptlCjC+C0=
-=TVo2
------END PGP SIGNATURE-----

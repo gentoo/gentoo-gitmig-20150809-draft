@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5b064bc71950d5a0b9199e10463ac662 commons-dbcp-1.2.1.ebuild 1279
-MD5 0d3c95380e254833b248ef16189ad8b4 ChangeLog 2719
+MD5 c0d1932d4b76a5d581625964079c68e6 ChangeLog 2725
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 562ae54148217ac40047c756783ee3e9 commons-dbcp-1.2.1.ebuild 1285
 MD5 51ec667c831b7a9628a4a9b5054597ae files/digest-commons-dbcp-1.2.1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBgjzl/rLF9B432nYRAlyJAJ9bycF7SPn+OWbBnMdpVd5tKXYgZwCgkNvi
-1j3hT1dZtTPORkP7bSFmIrI=
-=gWJc
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4e7f45a5bdc98a4eb3be10b41d6bcd7 dom4j-1.4-r1.ebuild 851
-MD5 d69c2d2138587f5e5cb7b4aabe31a31d dom4j-1.5.ebuild 923
-MD5 546d33088809111dd38ee17f3cf8c169 ChangeLog 1788
+MD5 72adcc844690601f4f0fc4cf1ed101ec ChangeLog 1794
+MD5 5e8b5293df994443cc41a842cde7c91b dom4j-1.4-r1.ebuild 853
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 48544058c2c90c92b7e7a2bd9c9de6d0 files/digest-dom4j-1.4-r1 63
+MD5 6ec773d62fd9b8f4074aa97d3439ba73 dom4j-1.5.ebuild 929
 MD5 08461e3c2f9380aa2a055cfb2f9865e1 files/digest-dom4j-1.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcjSQ/rLF9B432nYRAvVLAJ9xyttfONYMVQIVM85KFxe/Y3gBTwCeKJ7K
-pqR7CEWjOb4IqFh67Ao/ttM=
-=1ey6
------END PGP SIGNATURE-----
+MD5 48544058c2c90c92b7e7a2bd9c9de6d0 files/digest-dom4j-1.4-r1 63

@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5322b2cf9c5a1c2e1692c9c9a061350c commons-httpclient-2.0-r1.ebuild 1288
-MD5 553af19721ec40d5c3b9c87f65346eae commons-httpclient-2.0.2.ebuild 1566
-MD5 bcfc32c14af82dda33f83ef45d1a33e8 commons-httpclient-2.0.1.ebuild 1577
-MD5 eb59635eb8facad86b3884aa5aced6e7 ChangeLog 1954
+MD5 5db2c3a2895e0d28b62802762b184f91 ChangeLog 1960
+MD5 ada26f8e6e6cf1f83b528939ee75f522 commons-httpclient-2.0-r1.ebuild 1294
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 080d6d83b0bfda3ba1f776e9922f44e2 commons-httpclient-2.0.1.ebuild 1579
+MD5 4aa2352249c3d3c77d3314cb24100255 commons-httpclient-2.0.2.ebuild 1572
+MD5 70dbd7a345c0a9f6a17998de0191f13e files/digest-commons-httpclient-2.0-r1 79
+MD5 35bcb566781a909ae25bac9979bf497c files/gentoo.diff 444
 MD5 22c430c6bf50bc578f8095df5fd64cc4 files/digest-commons-httpclient-2.0.1 81
 MD5 63acee983ed2a9669cd20bc47743b8d3 files/digest-commons-httpclient-2.0.2 81
-MD5 35bcb566781a909ae25bac9979bf497c files/gentoo.diff 444
-MD5 70dbd7a345c0a9f6a17998de0191f13e files/digest-commons-httpclient-2.0-r1 79
 MD5 20316ee59dc3bf35dd5c04778ae6882f files/jikes.diff 955
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBzJ47/rLF9B432nYRAhGqAJ9GtPVIl8q7BIcrVvRN3i2Zcl7DyACgjzgR
-JONLKvDyeOfsTo3p5SuYf9Q=
-=KT39
------END PGP SIGNATURE-----

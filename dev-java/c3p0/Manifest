@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 99329dca0f773ebffb36cad25269df0f c3p0-0.8.5_pre9.ebuild 1057
-MD5 b4323ab336a40fff79175ed98f8a3a0b c3p0-0.8.4.5.ebuild 1020
-MD5 d7d8f5b9ba954abd0537d9ede4f2e225 ChangeLog 1164
+MD5 87b595c54f18d849d1cc4bb105a4f811 ChangeLog 1167
+MD5 a8b1c27e51f0944f5ba500eaaf003391 c3p0-0.8.4.5.ebuild 1022
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 6273008fc918b79083cf736c1dee3d0e c3p0-0.8.5_pre9.ebuild 1061
 MD5 a681652e2025f1c0806f596fa54dce17 files/digest-c3p0-0.8.4.5 65
 MD5 345082f23a9374aea4f95ea617a9d969 files/digest-c3p0-0.8.5_pre9 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0HSEI1lqEGTUzyQRArowAJ9pVwPfxMv806N0RBuhX+sRz3Mi3QCfXJq3
-yrZzt9x3Zx8z5xSDJBYykeo=
-=5NcJ
------END PGP SIGNATURE-----

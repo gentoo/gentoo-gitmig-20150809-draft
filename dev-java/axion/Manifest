@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fdb4354464a095e0d287e7f3999206e4 axion-1.0_rc2.ebuild 1577
-MD5 82a3f7528e6993c5db7cbbcc000cfcdd ChangeLog 921
+MD5 d8851f7a6ebaff97b20452e0fbbe5eda ChangeLog 928
+MD5 b7f19b4fbb7ecc7c94c2382e709dee25 axion-1.0_rc2.ebuild 1584
 MD5 1efa58c8ec21eb8f929a4abccb0a543e metadata.xml 515
 MD5 40a767f2792e03e5e7b536b901a4417d files/digest-axion-1.0_rc2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVPK/rLF9B432nYRAgdbAKCDisFjBeyo9hxdRB2RK0oK0xYksACfSZPc
-cxxJkVJUy4KhXD9alyY/L4A=
-=WrBl
------END PGP SIGNATURE-----
