@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r3.ebuild,v 1.6 2004/06/24 22:16:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r3.ebuild,v 1.7 2004/06/28 04:17:04 agriffis Exp $
 
 inherit virtualx eutils
 
@@ -35,7 +35,7 @@ pkg_setup() {
 		ewarn 'Please uninstall it with "emerge unmerge scilab" before continuig'
 		die
 	fi
-	use ifc || if [ -z `which g77` ]; then
+	if ! use ifc && [ -z `which g77` ]; then
 		#if ifc is defined then the dep was already checked
 		eerror "No fortran compiler found on the system!"
 		eerror "Please add f77 to your USE flags and reemerge gcc!"
