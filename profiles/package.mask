@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org>
+>=x11-base/xfree-4.3.0-r2
+
 # <utx@gentoo.org> (17 Apr 2003)
 # new tcl/tk should be quite stable, but requires fixes and updates of other ebuilds
 >=dev-lang/tcl-8.4.0
