@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.0.4.1.ebuild,v 1.7 2002/12/09 04:17:38 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.0.4.1.ebuild,v 1.8 2002/12/16 02:22:30 hannes Exp $
 # qt-copy-3.0.4 (released with kde-3.0.1)
 
 NPV=3.0.4
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.trolltech.com/"
 DEPEND="=x11-libs/qt-3*"
 RDEPEND="$DEPEND sys-devel/gcc"
 DESCRIPTION="Documentation for the QT ${NPV} API"
-KEYWORDS="x86 sparc  ppc"
+KEYWORDS="x86 sparc ppc"
 SLOT="3"
 LICENSE="QPL-1.0"
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/qt-docs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/ChangeLog,v 1.8 2002/12/13 10:56:04 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/ChangeLog,v 1.9 2002/12/16 02:22:30 hannes Exp $
+
+  15 Dec 2002; Hannes Mehnert <hannes@gentoo.org> qt-docs-3.1.0.ebuild:
+  changed KEYWORDS to stable for all archs. Thanks to gilles_gros@yahoo.com
+  (Gilles G) (bug #12135)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
