@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xfsamba/xfsamba-0.47.ebuild,v 1.9 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xfsamba/xfsamba-0.47.ebuild,v 1.10 2004/02/25 17:26:48 aliz Exp $
 
 IUSE="nls"
 
@@ -9,7 +9,7 @@ DESCRIPTION="A GUI SMB network navigator"
 SRC_URI="http://xfsamba.sourceforge.net/archive/${P}.tar.gz"
 HOMEPAGE="http://xfsamba.sourceforge.net/"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc ~amd64"
 SLOT="0"
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*

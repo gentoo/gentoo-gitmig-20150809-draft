@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/xfsamba
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xfsamba/ChangeLog,v 1.5 2003/02/12 08:35:28 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xfsamba/ChangeLog,v 1.6 2004/02/25 17:26:48 aliz Exp $
+
+  25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> xfsamba-0.47.ebuild:
+  Adding amd64 keyword. Closing #42789.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
