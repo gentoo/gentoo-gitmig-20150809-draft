@@ -1,3 +1,6 @@
 MD5 23d3d60e921d0c5498feed47cfcf436f sbcl-0.8.18-source.tar.bz2 2492978
 MD5 9e3030e991d57b0ae40c197d4307b176 sbcl-0.8.18-html.tar.bz2 108955
 MD5 6c193e328cdb472787ef78401ee5294c sbcl-0.8.1-x86-linux-binary.tar.bz2 6348098
+MD5 b5a5c93185ae03392ff6000a4a425222 sbcl-0.8.8-ppc-linux-binary.tar.bz2 6831954
+MD5 7cb56cd42b1f5797d26316e79aaccb06 sbcl-0.7.13-sparc-linux-binary.tar.bz2 5670293
+MD5 29ad145f1fc45c65b8d65b39013bc43f sbcl-0.7.10-mips-linux-binary.tar.gz 7473873
