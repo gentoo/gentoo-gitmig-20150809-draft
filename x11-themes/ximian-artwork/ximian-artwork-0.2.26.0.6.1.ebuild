@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.26.0.6.1.ebuild,v 1.1 2003/06/18 20:53:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.26.0.6.1.ebuild,v 1.2 2003/06/21 14:32:26 liquidx Exp $
 
-inherit eutils
+inherit eutils rpm
 
 # bash magic to extract last 2 versions as XIMIAN_V, 
 # third last version as RPM_V and the rest as MY_PV
@@ -23,7 +23,6 @@ IUSE="xmms"
 # even though we want =x11-libs/gtk+-1.2 and >=x11-libs/gtk+-2
 DEPEND="sys-devel/autoconf
 	sys-devel/automake
-	app-arch/rpm2targz
 	>=media-libs/gdk-pixbuf-0.2.5
 	>=x11-libs/gtk+-1.2"
 
@@ -33,12 +32,12 @@ RDEPEND=""
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_unpack() {
-	cd ${WORKDIR}
-	rpm2targz ${DISTDIR}/${A}
-	tar xzf ${PN}-${MY_PV}-${RPM_V}.ximian.${XIMIAN_V}.src.tar.gz
-	tar xzf ${PN}-${MY_PV}.tar.gz
-}
+#src_unpack() {
+#	cd ${WORKDIR}
+#	rpm2targz ${DISTDIR}/${A}
+#	tar xzf ${PN}-${MY_PV}-${RPM_V}.ximian.${XIMIAN_V}.src.tar.gz
+#	tar xzf ${PN}-${MY_PV}.tar.gz
+#}
 
 src_compile() {
 	econf || die
