@@ -1,5 +1,5 @@
 MD5 7c642f4865fe3906c99b88c4a5919f5c ChangeLog 8893
-MD5 afc5f4e97f7afcef3bfda7f447a07758 man-1.5m-r2.ebuild 4086
+MD5 0f145f7fcb48c4832fdd6c3610783280 man-1.5m-r2.ebuild 4089
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 7e4bd368680d1c95bdaa6c6d5ee556f1 files/man-1.5m-locale-order.patch 454
 MD5 a1fe892ffb27e5e044ed342b611d2db1 files/makewhatis.cron 126
