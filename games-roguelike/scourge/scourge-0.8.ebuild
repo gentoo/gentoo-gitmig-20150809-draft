@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.6.ebuild,v 1.3 2005/01/28 16:07:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.8.ebuild,v 1.1 2005/01/28 16:07:52 wolf31o2 Exp $
 
 inherit games
 
@@ -10,22 +10,20 @@ SRC_URI="mirror://sourceforge/scourge/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="virtual/x11
 	virtual/glu
 	virtual/opengl
 	>=media-libs/freetype-2
-	>=media-libs/libsdl-1.2"
+	>=media-libs/libsdl-1.2
+	media-libs/sdl-net
+	media-libs/sdl-mixer"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}/src"
-	sed -i \
-		-e "s:\"data/:\"${GAMES_DATADIR}/${PN}/data/:g" \
-		shapepalette.cpp text.cpp \
-		|| die "sed failed"
 	find "${S}" -name .DS_Store -exec rm -f \{\} \;
 	find "${S}/data" -type f -exec chmod a-x \{\} \;
 }
@@ -34,7 +32,6 @@ src_compile() {
 	egamesconf \
 		--with-data-dir="${GAMES_DATADIR}/${PN}/data" \
 		|| die
-
 	emake || die "emake failed"
 }
 
