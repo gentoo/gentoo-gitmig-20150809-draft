@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gambas
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.8 2004/03/08 21:18:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.9 2004/03/14 16:11:48 genone Exp $
+
+*gambas-0.91 (14 Mar 2004)
+
+  14 Mar 2004; Marius Mauch <genone@gentoo.org> gambas-0.91.ebuild:
+  version bump
 
   08 Mar 2004; Marius Mauch <genone@gentoo.org> gambas-0.90-r1.ebuild:
   move /usr/lib/info/* to /usr/lib/gambas/info/
