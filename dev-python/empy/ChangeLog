@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/empy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.3 2004/06/25 01:29:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.4 2004/07/09 00:22:10 pythonhead Exp $
+
+  08 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> empy-3.3.ebuild:
+  Marked stable on x86
 
 *empy-3.3 (01 Apr 2004)
 
