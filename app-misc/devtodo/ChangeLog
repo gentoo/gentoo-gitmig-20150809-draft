@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.27 2004/11/07 02:49:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.28 2004/11/11 10:37:54 ka0ttic Exp $
+
+*devtodo-0.1.18-r1 (11 Nov 2004)
+
+  11 Nov 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +files/devtodo-0.1.18-invalid-ptr.patch, +devtodo-0.1.18-r1.ebuild:
+  Added a patch to fix tdr segfaults with gcc-3.4.x; devtodo's support.cc
+  doesn't like -O2 at all, so we now use replace-flags. Also, run autoreconf
+  rather than just automake after patching.
 
   06 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> devtodo-0.1.18.ebuild:
   Use pkg_postinst provided by bash-completion.eclass
