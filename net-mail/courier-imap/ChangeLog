@@ -1,6 +1,23 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.98 2004/11/16 17:29:55 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.99 2004/11/19 06:26:16 langthang Exp $
+
+*courier-imap-3.0.8.20041116 (18 Nov 2004)
+
+  18 Nov 2004; Tuan Van <langthang@gentoo.org>
+  +files/courier-imap-3.0.8.20041116-courier-imapd-ssl.rc6,
+  +files/courier-imap-3.0.8.20041116-courier-imapd.rc6,
+  +files/courier-imap-3.0.8.20041116-courier-pop3d-ssl.rc6,
+  +files/courier-imap-3.0.8.20041116-courier-pop3d.rc6,
+  +files/courier-imap-3.0.8.20041116-db4-bdbobj_configure.in.patch,
+  +files/courier-imap-3.0.8.20041116-db4-configure.in.patch,
+  +files/courier-imap-3.0.8.20041116-disable-fam-configure.in.patch,
+  +files/courier-imap-3.0.8.20041116-gentoo-imapd-ssl.rc,
+  +files/courier-imap-3.0.8.20041116-gentoo-imapd.rc,
+  +files/courier-imap-3.0.8.20041116-gentoo-pop3d-ssl.rc,
+  +files/courier-imap-3.0.8.20041116-gentoo-pop3d.rc,
+  +courier-imap-3.0.8.20041116.ebuild:
+  Commit for testing only. Do not use.
 
   16 Nov 2004; Tuan Van <langthang@gentoo.org> courier-imap-3.0.8.ebuild:
   Add virtual/imapd blocking. Bug #55309.
