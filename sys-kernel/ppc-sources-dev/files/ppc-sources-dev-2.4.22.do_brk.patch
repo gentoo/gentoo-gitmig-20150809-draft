@@ -1,0 +1,12 @@
+--- a/mm/mmap.c Fri Sep 12 06:44:06 2003
++++ b/mm/mmap.c Thu Oct  2 01:18:19 2003
+@@ -1248,6 +1248,9 @@
+	if (!len)
+		return addr;
+ 
++ 	if ((addr + len) > TASK_SIZE || (addr + len) < addr)
++ 		return -EINVAL;
++ 
+	/*
+	 * mlock MCL_FUTURE?
+	 */

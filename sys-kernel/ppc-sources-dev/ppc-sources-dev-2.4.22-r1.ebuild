@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.22.ebuild,v 1.4 2004/01/08 21:30:08 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.22-r1.ebuild,v 1.1 2004/01/08 21:30:08 plasmaroo Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -64,8 +64,12 @@ src_unpack()
 	fi
 
 	kernel_src_unpack
-	(cd ${S} && epatch ${FILESDIR}/ppc-sources-dev-2.4.22-r1.via-pmu.diff) || \
-		die "patch failed"
+	cd ${S}
+	epatch ${FILESDIR}/ppc-sources-dev-2.4.22-r1.via-pmu.diff || die "patch failed"
+	epatch ${FILESDIR}/${P}.do_brk.patch || die "Failed to patch do_brk() vulnerability!"
+	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+
 }
 
 pkg_postinst()

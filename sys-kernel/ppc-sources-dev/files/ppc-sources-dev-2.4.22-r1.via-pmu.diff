@@ -11,13 +11,3 @@ diff -Naur linux-2.4.22.orig/drivers/macintosh/via-pmu.c linux-2.4.22/drivers/ma
  		proc_pmu_info = create_proc_read_entry("info", 0, proc_pmu_root,
  					proc_get_info, NULL);
  		proc_pmu_irqstats = create_proc_read_entry("interrupts", 0, proc_pmu_root,
-@@ -1373,8 +1375,8 @@
- #endif /* CONFIG_PMAC_BACKLIGHT */
- 		}
- 	/* Tick interrupt */
--	else if ((1 << pirq) & PMU_INT_TICK) {
- #ifdef CONFIG_PMAC_PBOOK
-+	else if ((1 << pirq) & PMU_INT_TICK) {
- 		/* Environement or tick interrupt, query batteries */
- 		if (pmu_battery_count) {
- 			if ((--query_batt_timer) == 0) {
