@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.42-r1.ebuild,v 1.2 2003/07/22 13:11:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.42-r1.ebuild,v 1.3 2003/09/01 10:29:32 aliz Exp $
 
 inherit perl-module flag-o-matic
 
@@ -23,10 +23,13 @@ RDEPEND="tcltk? ( dev-lang/tcl )"
 TCLVER=""
 
 pkg_setup() {
-	use tcltk && \
+	if [ "`use tcltk`" ]; then
 		TCLVER=`awk -F\' '/TCL_VERSION/ {print $2}' /usr/lib/tclConfig.sh`
+	fi
 
-	use perl && perl-module_pkg_setup
+	if [ "`use perl`" ]; then
+		perl-module_pkg_setup
+	fi
 }
 
 src_compile() {
