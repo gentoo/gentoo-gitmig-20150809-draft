@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.00.04.ebuild,v 1.2 2005/03/30 17:35:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.00.04.ebuild,v 1.3 2005/03/31 17:27:10 ka0ttic Exp $
 
 inherit flag-o-matic
 
@@ -15,6 +15,8 @@ IUSE="debug gif jpeg mmx nls png tiff truetype xinerama"
 
 DEPEND="virtual/libc
 	virtual/x11
+	media-libs/freetype
+	debug? ( !ppc? ( dev-util/efence ) )
 	png? ( >=media-libs/libpng-1.2.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	gif?  ( >=media-libs/giflib-4.1.0 )
@@ -25,38 +27,15 @@ S="${WORKDIR}/AfterStep-${PV}"
 src_compile() {
 	local myconf
 
-	use nls && myconf="--enable-i18n" \
-		|| myconf="--enable-i18n=no"
+	use debug && myconf="--enable-gdb --enable-warn --enable-gprof
+		--enable-audit --enable-trace --enable-trace-x"
 
-	use png && myconf="${myconf} --with-png" \
-		|| myconf="${myconf} --with-png=no"
-
-	use jpeg && myconf="${myconf} --with-jpeg" \
-		|| myconf="${myconf} --with-jpeg=no"
-
-	use gif && myconf="${myconf} --with-gif" \
-		|| myconf="${myconf} --with-gif=no"
-
-	use tiff && myconf="${myconf} --with-tiff" \
-		|| myconf="${myconf} --with-tiff=no"
-
-	use truetype && myconf="${myconf} --with-ttf --enable-reuse-font=no" \
-		|| myconf="${myconf} --with-ttf=no"
-
-	use xinerama && myconf="${myconf} --enable-xinerama" \
-		|| myconf="${myconf} --enable-xinerama=no"
-
-	use mmx && myconf="${myconf} --enable-mmx-optimization" \
-		|| myconf="${myconf} --enable-mmx-optimization=no"
-
-	use debug && myconf="${myconf} --enable-gdb --enable-warn --enable-gprof --enable-audit --enable-trace --enable-trace-x"
-
-	use !ppc && use debug && myconf="${myconf} --with-libefence"
-
+	if ! use ppc && use debug ; then
+		myconf="${myconf} --with-libefence"
+	fi
 
 	#implied intent of debug means you need the frame pointers.
 	use debug && filter-flags -fomit-frame-pointer
-
 
 	# Explanation of configure options
 	# ================================
@@ -65,9 +44,15 @@ src_compile() {
 	# --with-ungif=no - Use giflib instead of libungif
 	# --disable-availability - So we can use complete paths for menuitems
 	# --enable-ascp - The AfterStep ControlPanel is abandoned
-	#
 
 	econf \
+		$(use_enable nls i18n) \
+		$(use_enable mmx mmx-optimization) \
+		$(use_enable xinerama) \
+		$(use_with png) \
+		$(use_with jpeg) \
+		$(use_with gif) \
+		$(use_with tiff) \
 		--with-helpcommand="xterm -e man" \
 		--with-ungif=no \
 		--disable-availability \
@@ -81,6 +66,11 @@ src_compile() {
 src_install() {
 	# see bug #31541
 	dodir /usr/share/gnome/wm-properties
+
+	# afterstep tries to detect the current resolution
+	# for documentation generation, causing access violations
+	# for the video device.  bug #87356
+	unset DISPLAY
 
 	make DESTDIR=${D} install || die "make install failed"
 

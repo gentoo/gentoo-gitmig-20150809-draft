@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.31 2005/03/30 20:29:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.32 2005/03/31 17:27:09 ka0ttic Exp $
+
+  31 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> afterstep-2.00.04.ebuild:
+  unset DISPLAY so the build will not try to check display resolution causing
+  access violations bug 87326. Also cleaned up src_compile quite a bit. As
+  usual thanks to Nathan.
 
   30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   afterstep-2.00.02.ebuild:
