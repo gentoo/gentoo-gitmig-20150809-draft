@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/oro
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/ChangeLog,v 1.7 2003/04/06 08:15:17 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/ChangeLog,v 1.8 2003/04/23 02:30:35 absinthe Exp $
+
+*oro-2.0.7 (22 Apr 2003)
+
+  22 Apr 2003; Dylan Carlson <absinthe@gentoo.org> oro-2.0.7.ebuild:
+  Version bump.
 
 *oro-2.0.6-r2 (16 Mar 2003)
 
