@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.3.ebuild,v 1.1 2004/06/28 02:34:37 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.3.ebuild,v 1.2 2004/07/03 12:19:17 kloeri Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="X"
 
-RDEPEND="X? ( >=dev-python/wxPython-2.2 )
+RDEPEND="X? ( >=dev-python/wxpython-2.2 )
 	 >=dev-lang/python-2.0
 	 !virtual/bittorrent"
 
