@@ -14,7 +14,7 @@ library_names='libOSMesa.so.3.3 libOSMesa.so.3 libOSMesa.so'
 old_library=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/usr/X11R6/lib -lGL -lSM -lICE -lXmu -lXt -lXext -lXi -lX11 -ldl -lpthread '
+dependency_libs=' -L/usr/lib -L/usr/X11R6/lib -lGL -lSM -lICE -lXmu -lXt -lXext -lXi -lX11 -ldl -lpthread '
 
 # Version information for libOSMesa.
 current=4
