@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.44 2004/10/03 10:20:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.45 2004/10/23 23:14:32 lanius Exp $
+
+  24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> -files/3.10.10/apache.conf,
+  -files/3.10.10/apccontrol.diff, -files/3.10.10/apcupsd.in.patch,
+  -files/3.10.10/smtp.patch, -files/3.10.10/ucd-snmp.patch,
+  -files/3.10.8/apache.conf, -files/3.10.8/apcupsd.in.patch,
+  -files/3.10.8/smtp.patch, -files/3.10.8/ucd-snmp.patch,
+  -files/3.10.9/apache.conf, -files/3.10.9/apcupsd.in.patch,
+  -files/3.10.9/smtp.patch, -files/3.10.9/ucd-snmp.patch,
+  -apcupsd-3.10.10-r1.ebuild, -apcupsd-3.10.10-r2.ebuild,
+  -apcupsd-3.10.10.ebuild, apcupsd-3.10.15-r1.ebuild, -apcupsd-3.10.8.ebuild,
+  -apcupsd-3.10.9.ebuild:
+  remove old versions; mark 3.10.15 stable on x86
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   apcupsd-3.10.10-r1.ebuild:
