@@ -1,10 +1,11 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.47 2003/01/16 20:12:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.48 2003/01/16 20:36:42 mcummings Exp $
 
   16 Jan 2003; Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r9;
 
   Typo fix, this one in an einfo.
+  Incorporate flag-o-matic per bug 13952 - the -Os flag doesn't work with perl
 
 *perl-5.8.0-r9 (15 Jan 2003)
 
