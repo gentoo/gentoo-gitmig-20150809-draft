@@ -74,3 +74,4 @@ move gnome-extra/libgnomemm dev-cpp/libgnomemm
 move gnome-extra/libgnomeuimm dev-cpp/libgnomeuimm
 move x11-misc/shinonome media-fonts/shinonome
 move dev-perl/Common dev-perl/perl-MDK-Common
+move app-misc/bonnie++ app-benchmarks/bonnie++
