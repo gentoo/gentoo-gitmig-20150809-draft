@@ -1,0 +1,11 @@
+--- Makefile.in.in.orig	2003-05-22 11:11:19.000000000 +0900
++++ Makefile.in.in	2004-01-01 05:41:35.063426256 +0900
+@@ -32,7 +32,7 @@
+ GENCAT = @GENCAT@
+ GMSGFMT = PATH=../src:$$PATH @GMSGFMT@
+ MSGFMT = @MSGFMT@
+-XGETTEXT = PATH=../src:$$PATH @XGETTEXT@
++XGETTEXT = PATH=../src:$$PATH @XGETTEXT@ --from-code=EUC-JP
+ MSGMERGE = PATH=../src:$$PATH msgmerge
+ 
+ DEFS = @DEFS@
