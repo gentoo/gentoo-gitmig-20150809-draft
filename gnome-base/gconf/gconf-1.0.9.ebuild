@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.10 2004/06/24 21:55:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.11 2004/07/31 06:38:55 spider Exp $
 
 inherit libtool gnome.org eutils
 
@@ -8,7 +8,7 @@ IUSE="nls"
 
 MY_PN=GConf
 MY_P=${MY_PN}-${PV}
-PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+PVP=(${PV//[-\._]/ })
 S=${WORKDIR}/GConf-${PV}
 
 S=${WORKDIR}/${MY_P}

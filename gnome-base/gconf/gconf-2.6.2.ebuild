@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.6.2.ebuild,v 1.3 2004/07/31 03:51:02 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.6.2.ebuild,v 1.4 2004/07/31 06:38:55 spider Exp $
 
 inherit eutils gnome2
 
 MY_PN=GConf
 MY_P=${MY_PN}-${PV}
-PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+PVP=(${PV//[-\._]/ })
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Gnome Configuration System and Daemon"
@@ -37,10 +37,8 @@ src_install() {
 	gnome2_src_install
 
 	# hack hack
-	dodir /etc/gconf/gconf.xml.mandatory
-	dodir /etc/gconf/gconf.xml.defaults
-	touch ${D}/etc/gconf/gconf.xml.mandatory/.keep${SLOT}
-	touch ${D}/etc/gconf/gconf.xml.defaults/.keep${SLOT}
+	dodir /etc/gconf/gconf.xml.mandatory /etc/gconf/gconf.xml.defaults
+	touch ${D}/etc/gconf/gconf.xml.mandatory/.keep${SLOT} ${D}/etc/gconf/gconf.xml.defaults/.keep${SLOT}
 
 }
 
@@ -74,11 +72,8 @@ pkg_setup () {
 pkg_preinst () {
 
 	kill_gconf
-
-	dodir /etc/env.d
+	dodir /etc/env.d /root/.gconfd
 	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > ${D}/etc/env.d/50gconf
-
-	dodir /root/.gconfd
 
 }
 

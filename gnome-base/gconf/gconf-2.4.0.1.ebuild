@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.4.0.1.ebuild,v 1.14 2004/06/24 21:55:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.4.0.1.ebuild,v 1.15 2004/07/31 06:38:55 spider Exp $
 
 inherit gnome2
 
 MY_PN=GConf
 MY_P=${MY_PN}-${PV}
-PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+PVP=(${PV//[-\._]/ })
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Gnome Configuration System and Daemon"
