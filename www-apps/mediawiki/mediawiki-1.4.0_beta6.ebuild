@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.4.0_beta6.ebuild,v 1.1 2005/02/17 02:02:48 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.4.0_beta6.ebuild,v 1.2 2005/02/17 04:28:54 trapni Exp $
 
 inherit webapp
 
@@ -19,7 +19,8 @@ DEPEND="math? ( >=dev-lang/ocaml-3.0.6 )"
 RDEPEND="virtual/php
 		 >=dev-db/mysql-4
 		 math? ( app-text/tetex
-		 		 app-text/ghostscript )
+		 		 app-text/ghostscript
+				 media-gfx/imagemagick )
 		 imagemagick? ( media-gfx/imagemagick )"
 
 src_compile() {
@@ -108,6 +109,6 @@ src_install() {
 		webapp_serverowned ${MY_HTDOCSDIR}/images/tmp
 	fi
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en ${FILESDIR}/postinstall-1.4-en.txt
 	webapp_src_install
 }
