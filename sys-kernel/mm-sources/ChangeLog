@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.72 2003/08/31 16:09:59 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.73 2003/08/31 22:18:41 plasmaroo Exp $
+
+*mm-sources-2.6.0_beta4-r4 (31 Aug 2003)
+
+  31 Aug 2003; <plasmaroo@gentoo.org> mm-sources-2.6.0_beta4-r4.ebuild:
+  Fixed broken bzcat line [bug #27667]
 
 *mm-sources-2.6.0_beta4-r4 (31 Aug 2003)
 
