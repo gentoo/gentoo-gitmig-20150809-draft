@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12.ebuild,v 1.3 2003/05/11 10:10:21 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12.ebuild,v 1.4 2003/06/22 20:49:38 prez Exp $
 
 DESCRIPTION="A perl module which integrates virus scanning software with your MTA"
 HOMEPAGE="http://www.amavis.org"
@@ -41,17 +41,9 @@ S="${WORKDIR}/${P/_/}"
 
 pkg_setup() {
 
-	if ! grep -q ^amavis: /etc/group ; then
-                groupadd -g 10025 amavis \
-			|| die "problem adding the amavis group"
-		grpconv || die "failed running grpconv"
-        fi
-
-	if ! grep -q ^amavis: /etc/passwd ; then
-                useradd -u 10025 -g amavis amavis \
-			|| die "problem adding the amavis user"
-		pwconv || die "failed running pwconv"
-        fi
+	enewgroup amavis
+	enewuser amavis -1 /bin/false /dev/null amavis
+	pwconv || die
 
 	if ! grep -a ^virusalert: /etc/mail/aliases ; then
 		cp /etc/mail/aliases /etc/mail/aliases.orig
