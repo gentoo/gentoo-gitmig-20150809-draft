@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.7 2004/04/01 07:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.8 2004/04/04 22:16:49 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gawk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc sparc alpha mips hppa ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64 ppc64 s390"
 IUSE="nls build"
 
 DEPEND="virtual/glibc
@@ -41,11 +41,11 @@ src_compile() {
 		${myconf} \
 		|| die
 
-	emake || die
+	emake || die "make failed"
 
 	einfo "Building filefuncs module ..."
 	cd ${WORKDIR}/filefuncs
-	make AWKINCDIR=${S} || die
+	make AWKINCDIR=${S} || die "filefuncs make failed"
 }
 
 src_install() {
@@ -57,13 +57,13 @@ src_install() {
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		libexecdir=${D}/usr/lib/awk \
-		install || die
+		install || die "install failed"
 
 	einfo "Installing filefuncs module ..."
 	cd ${WORKDIR}/filefuncs
 	make DESTDIR=${D} \
 		AWKINCDIR=${S} \
-		install || die
+		install || die "filefuncs install failed"
 
 	dodir /usr/bin
 	# In some rare cases, (p)gawk gets installed as (p)gawk- and not
