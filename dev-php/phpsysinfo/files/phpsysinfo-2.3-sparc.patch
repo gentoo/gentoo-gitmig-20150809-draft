@@ -1,5 +1,5 @@
---- phpsysinfo-dev/includes/os/class.Linux.inc.php.orig	2004-06-07 03:06:47.185996319 +0200
-+++ phpsysinfo-dev/includes/os/class.Linux.inc.php	2004-06-07 03:07:15.387538984 +0200
+--- includes/os/class.Linux.inc.php.orig	2005-04-02 06:55:28.000000000 +0000
++++ includes/os/class.Linux.inc.php	2005-04-02 06:55:50.000000000 +0000
 @@ -176,6 +176,38 @@
        fclose($fd);
      } 
