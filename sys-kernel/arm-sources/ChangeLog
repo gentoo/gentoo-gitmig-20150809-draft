@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/arm-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/ChangeLog,v 1.4 2003/04/06 04:00:22 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/ChangeLog,v 1.5 2003/12/02 03:26:57 iggy Exp $
+
+  01 Dec 2003; Brian Jackson <iggy@gentoo.org> arm-sources-2.4.19-r1.ebuild,
+  arm-sources-2.4.19.ebuild, files/do_brk_fix.patch:
+  fix do_brk vuln
 
 *arm-sources-2.4.19-r1 (05 Apr 2003)
 
