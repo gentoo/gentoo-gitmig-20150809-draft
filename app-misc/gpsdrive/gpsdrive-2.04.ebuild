@@ -1,15 +1,14 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.04.ebuild,v 1.4 2003/11/11 15:43:40 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.04.ebuild,v 1.5 2004/02/21 00:33:27 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="displays GPS position on a map"
 HOMEPAGE="http://gpsdrive.kraftvoll.at"
 SRC_URI="http://gpsdrive.kraftvoll.at/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 
 IUSE="nls"
 DEPEND="sys-devel/gettext
