@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.65 2005/01/23 11:24:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.66 2005/01/25 16:04:18 corsair Exp $
+
+*alsa-tools-1.0.8-r1 (25 Jan 2005)
+
+  25 Jan 2005; Markus Rothe <corsair@gentoo.org> +alsa-tools-1.0.8-r1.ebuild:
+  sb16_csp won't build on ppc64
 
 *alsa-tools-1.0.8 (23 Jan 2005)
 
