@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.44 2005/03/28 19:52:15 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.45 2005/03/29 11:52:45 stkn Exp $
+
+  29 Mar 2005; Stefan Knoblich <stkn@gentoo.org> -digest-asterisk-1.0.7,
+  asterisk-1.0.7.ebuild:
+  Added additional built_with_use checks for perl and libperl, because res_perl
+  requires both to have ithreads support. Removed duplicate digest file in wrong
+  directory.
 
   28 Mar 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/1.0.0/res_perl-1.0.7-bristuff-0.2.0.diff, asterisk-1.0.7.ebuild:

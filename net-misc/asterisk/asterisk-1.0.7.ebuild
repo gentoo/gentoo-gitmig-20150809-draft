@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7.ebuild,v 1.3 2005/03/28 19:52:15 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7.ebuild,v 1.4 2005/03/29 11:52:45 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 
@@ -45,9 +45,11 @@ pkg_setup() {
 	einfo "Running some pre-flight checks..."
 	if use resperl; then
 		# res_perl pre-flight check...
-		if ! $(perl -V | grep -q "usemultiplicity=define"); then
-			eerror "Embedded perl add-on needs Perl with built-in threads support"
-			eerror "(rebuild perl with ithreads use-flag enabled)"
+		if ! $(perl -V | grep -q "usemultiplicity=define") ||\
+		   ! built_with_use perl ithreads || ! built_with_use libperl ithreads
+		then
+			eerror "Embedded perl add-on needs Perl and libperl with built-in threads support"
+			eerror "(rebuild perl and libperl with ithreads use-flag enabled)"
 			die "Perl w/o threads support..."
 		fi
 		einfo "Perl with ithreads support found"
