@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.11 2003/03/24 21:37:51 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.12 2003/04/03 11:40:38 sethbc Exp $
 
 IUSE="kde gnome"
 
@@ -35,8 +35,7 @@ DEPEND="virtual/glibc
 	app-arch/zip
 	app-arch/unzip
 	>=virtual/jdk-1.3.1
-	!app-office/openoffice
-	virtual/lpr"
+	!app-office/openoffice"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
