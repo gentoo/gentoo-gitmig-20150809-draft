@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.5.6.ebuild,v 1.2 2003/09/05 00:57:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.5.6.ebuild,v 1.3 2003/09/06 13:21:31 sergey Exp $
 
 DESCRIPTION="Utility to place icons on the root window"
 HOMEPAGE="http://idesk.timmfin.net"
@@ -41,7 +41,8 @@ src_install() {
 	exeinto /usr/bin
 	doexe idesk
 	dodoc README
-	doman ${FILESDIR}/idesk.1 ${FILESDIR}/ideskrc.5
+	newman ${FILESDIR}/idesk05.1 idesk.1
+	newman ${FILESDIR}/ideskrc05.5 ideskrc.5
 }
 
 pkg_postinst() {
