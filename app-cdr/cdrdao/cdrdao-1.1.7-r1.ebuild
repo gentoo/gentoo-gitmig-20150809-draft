@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r1.ebuild,v 1.14 2003/11/21 19:13:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r1.ebuild,v 1.15 2004/01/08 06:03:28 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,7 +19,8 @@ RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
 	x86? ( perl? ( oggvorbis? ( dev-perl/libvorbis-perl ) ) )
 	dev-perl/MP3-Info
 	dev-perl/Audio-Wav
-	dev-perl/Audio-Tools"
+	dev-perl/Audio-Tools
+	virtual/cdrtools"
 DEPEND=">=dev-util/pccts-1.33.24-r1
 	${RDEPEND}"
 
