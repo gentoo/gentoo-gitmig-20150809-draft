@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtermcontrol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.7 2005/02/08 20:24:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.8 2005/03/18 01:24:52 obz Exp $
+
+  18 Mar 2005; Mike Gardiner <obz@gentoo.org> xtermcontrol-2.4.ebuild:
+  Keyworded ppc
 
   08 Feb 2005; Aron Griffis <agriffis@gentoo.org> xtermcontrol-2.4.ebuild:
   Add ~alpha and ~ia64
