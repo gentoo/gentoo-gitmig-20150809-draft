@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ksymoops
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.7 2003/02/12 09:17:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.8 2003/06/01 07:50:28 kumba Exp $
+
+
+*ksymoops-2.4.9 (01 Jun 2003)
+
+  01 Jun 2003; Joshua Kinard <kumba@gentoo.org>
+  ksymoops-2.4.8.ebuild, ksymoops-2.4.9.ebuild:
+  New Version available (Was released 20 Mar 2003)
+  Added ~mips to KEYWORDS in 2.4.8 and 2.4.9
 
 *ksymoops-2.4.8 (25 Nov 2002)
  
