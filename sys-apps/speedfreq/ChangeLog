@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/speedfreq
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/ChangeLog,v 1.9 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/ChangeLog,v 1.10 2004/10/09 09:33:28 cardoe Exp $
+
+  09 Oct 2004; Doug Goldstein <cardoe@gentoo.org>
+  +speedfreq-0.7.2-r2.ebuild, +files/battery-new.sh:
+  added support for BAT0 and BAT1 (bug #66670)
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   speedfreq-0.7.2.ebuild:
