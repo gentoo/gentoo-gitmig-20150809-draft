@@ -1,5 +1,5 @@
-MD5 5d22fc6f725cd7bbe945de154aec9184 ChangeLog 1915
-MD5 4d01a1ee92d18a404cb9475d30034529 beecrypt-3.1.0-r1.ebuild 1319
+MD5 75280fc3158b196f334fd588b1866c05 ChangeLog 2009
+MD5 35bdab8dd85c567652cd548c3ffee55d beecrypt-3.1.0-r1.ebuild 1326
 MD5 76a71f4dabbf3e9dcf9a2648292d9d74 beecrypt-3.1.0.ebuild 869
 MD5 9801ec0e3201addd45f08dea31ac5324 files/beecrypt-3.1.0-alpha.patch 321
 MD5 1c56cad20612ef6cbb3d1b56fa3c0b2e files/digest-beecrypt-3.1.0 66

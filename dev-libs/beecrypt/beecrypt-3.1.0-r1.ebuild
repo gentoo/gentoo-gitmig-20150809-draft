@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.4 2004/01/14 03:13:11 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.5 2004/01/15 19:02:06 agriffis Exp $
 
 DESCRIPTION="Beecrypt is a general-purpose cryptography library."
 HOMEPAGE="http://sourceforge.net/projects/beecrypt"
 SRC_URI="mirror://sourceforge/beecrypt/${P}.tar.gz"
 
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~amd64 ia64"
 SLOT="0"
 
 DEPEND="python? ( =dev-lang/python-2.2* )
