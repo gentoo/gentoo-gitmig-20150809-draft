@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.12 2004/04/27 21:37:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.13 2004/06/14 22:07:47 hansmi Exp $
 
 inherit gnuconfig eutils
 
@@ -30,6 +30,9 @@ src_unpack() {
 	mv ${WORKDIR}/usb.ids-${USB_IDS_VER} ${S}/usb.ids || die "unable to replace usb.ids"
 
 	use ppc64 && ( cd ${S}; epatch ${FILESDIR}/0.11/ppc64-usbutils-kheaderfix.patch )
+
+	# Fix endian-issues
+	( cd "${S}" && epatch "${FILESDIR}/0.11/lsusb-endian.patch" )
 }
 
 src_compile() {
