@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-1.1.ebuild,v 1.2 2005/03/31 01:54:51 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-1.1.ebuild,v 1.3 2005/03/31 03:25:52 killsoft Exp $
 
 DESCRIPTION="GTK+ Amateur Radio logging program"
 HOMEPAGE="http://www.qsl.net/pg4i/linux/xlog.html"
@@ -22,12 +22,13 @@ DEPEND="sys-devel/libtool
 	>=dev-util/pkgconfig-0.12.0"
 
 src_compile() {
+
 	econf --enable-hamlib \
 		|| die "configure failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	einstall || die "install failed"
-	make_desktop_entry xlog XLog xlog.xpm HamRadio
+
+	make DESTDIR="${D}" install || die "install failed"
 }
