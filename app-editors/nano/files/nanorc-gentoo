@@ -14,7 +14,7 @@
 # color red "\<(ARCH|HOMEPAGE|DESCRIPTION|IUSE|SRC_URI|LICENSE|SLOT|KEYWORDS|FILESDIR|WORKDIR|(P|R)?DEPEND|PROVIDE|DISTDIR|RESTRICT)\>"
 # color red "\<(S|D|T|PV|PF|P|PN|A)\>" "\<C(XX)?FLAGS\>"
 ## Highlight portage commands
-# color magenta "\<use(_(with|enable))?\> [a-z0-9X ]*" "inherit.*"
+# color magenta "\<use(_(with|enable))?\> [!a-z0-9X -]*" "inherit.*"
 # color brightblue "e(begin|end|conf|install|make|warn|infon?|error|patch)"
 # color brightblue "\<die\>" "\<use(_(with|enable))?\>" "\<inherit\>" "\<has\>" "\<(has|best)_version\>" "\<unpack\>"
 # color brightblue "\<(do|new)(ins|s?bin|doc|lib(|\.so|\.a)|man|info|exe)\>"
