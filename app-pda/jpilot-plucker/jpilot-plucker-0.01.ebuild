@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/jpilot-plucker-0.01.ebuild,v 1.2 2004/07/06 11:03:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/jpilot-plucker-0.01.ebuild,v 1.3 2004/07/09 23:48:22 mr_bones_ Exp $
 
 DESCRIPTION="Plucker plugin for jpilot"
 SRC_URI="http://jasonday.home.att.net/code/jpilot-plucker/${P}.tar.gz"
