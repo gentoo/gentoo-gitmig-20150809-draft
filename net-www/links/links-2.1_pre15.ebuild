@@ -1,22 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.13 2004/09/22 15:24:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.14 2004/09/27 21:34:22 vapier Exp $
 
 inherit eutils
 
-IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg unicode"
-
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
-
 # To handle pre-version ...
 MYP="${P/_/}"
 S="${WORKDIR}/${MYP}"
 SRC_URI="${HOMEPAGE}/download/${MYP}.tar.bz2"
 
-SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha ~mips ~hppa ~amd64 ~ia64 macos ~ppc64 ppc-macos"
+SLOT="2"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 ppc-macos s390 sparc x86"
+IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg unicode"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
 # mode. libpng is required to compile links in graphic mode
