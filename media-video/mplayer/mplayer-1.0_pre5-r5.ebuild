@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.15 2005/01/23 21:06:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.16 2005/01/30 07:10:13 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
+RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas network nls nvidia oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
@@ -299,6 +300,7 @@ src_compile() {
 	fi
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
+	myconf="${myconf} $(use_enable real)"
 
 	#############
 	# Video Output #
@@ -428,7 +430,6 @@ src_compile() {
 		--disable-runtime-cpudetection \
 		--enable-largefiles \
 		--enable-menu \
-		--enable-real \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
 		${myconf} || die

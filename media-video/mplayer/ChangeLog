@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.261 2005/01/24 22:07:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.262 2005/01/30 07:10:13 chriswhite Exp $
+
+  30 Jan 2005; Chris White <chriswhite@gentoo.org>
+  mplayer-1.0_pre5-r5.ebuild, mplayer-1.0_pre6.ebuild:
+  Fixed real being force enabled (instead of USE flag configured..) and
+  RESTRICT=nostrip to hopefully fix bug #71672.
 
   24 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> mplayer-1.0_pre6.ebuild:
   added dv to IUSE, it was already used by the ebuild. fixes bug #79319
