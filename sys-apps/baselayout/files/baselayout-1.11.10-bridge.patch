@@ -1,0 +1,105 @@
+Index: lib/rcscripts/net.modules.d/bridge
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/net-scripts/net.modules.d/bridge,v
+retrieving revision 1.9.4.7
+diff -u -B -r1.9.4.7 bridge
+--- lib/rcscripts/net.modules.d/bridge	8 Mar 2005 16:07:30 -0000	1.9.4.7
++++ lib/rcscripts/net.modules.d/bridge	23 Mar 2005 13:11:04 -0000
+@@ -113,20 +113,20 @@
+ 	for i in ${ports}; do
+ 		interface_exists ${i} && continue 
+ 		eerror "interface ${i} does not exist"
+-		bridge_stop ${iface} &>/dev/null
+ 		return 1
+ 	done
+ 
+ 	for i in ${ports}; do
+ 		ebegin "${i}"
+-		e=$( brctl addif ${iface} ${i} 2>&1 \
+-			&& interface_del_addresses ${i} \
+-			&& interface_set_flag ${i} promisc true \
+-			&& interface_up ${i} )
++		interface_set_flag ${i} promisc true
++		interface_up ${i}
++		e=$( brctl addif ${iface} ${i} 2>&1 )
+ 		if [[ -n ${e} ]]; then
+ 			eend 1 "${e}"
++			interface_set_flag ${i} promisc false
+ 			return 1
+ 		fi
++		eend 0
+ 	done
+ 	eoutdent
+ 
+@@ -150,7 +150,6 @@
+ 	eindent
+ 	for i in ${ports}; do
+ 		ebegin "Removing port ${i}"
+-		interface_down ${i}
+ 		interface_set_flag ${i} promisc false
+ 		brctl delif ${iface} ${i} &>${devnull}
+ 		eend $?
+Index: lib/rcscripts/net.modules.d/ifconfig
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/net-scripts/net.modules.d/ifconfig,v
+retrieving revision 1.21.4.7
+diff -u -B -r1.21.4.7 ifconfig
+--- lib/rcscripts/net.modules.d/ifconfig	31 Jan 2005 11:17:29 -0000	1.21.4.7
++++ lib/rcscripts/net.modules.d/ifconfig	23 Mar 2005 13:11:04 -0000
+@@ -150,6 +150,9 @@
+ 	# We don't remove addresses from aliases
+ 	[[ ${iface} == *:* ]] && return 0
+ 
++	# If the interface doesn't exist, don't try and delete
++	ifconfig_exists ${iface} || return 0
++
+ 	# iproute2 can add many addresses to an iface unlike ifconfig ...
+ 	# iproute2 added addresses cause problems for ifconfig
+ 	# as we delete an address, a new one appears, so we have to
+Index: lib/rcscripts/net.modules.d/iwconfig
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/net-scripts/net.modules.d/iwconfig,v
+retrieving revision 1.7.2.17
+diff -u -B -r1.7.2.17 iwconfig
+--- lib/rcscripts/net.modules.d/iwconfig	21 Mar 2005 16:06:04 -0000	1.7.2.17
++++ lib/rcscripts/net.modules.d/iwconfig	23 Mar 2005 13:11:05 -0000
+@@ -890,7 +890,10 @@
+ # Configures ESSID variable
+ # Always returns 0
+ iwconfig_pre_stop() {
+-	ESSID=$( iwconfig_get_essid ${1} )
+-	ESSIDVAR=${ESSID//[![:word:]]/_}
++	unset ESSID ESSIDVAR
++	if iwconfig_check_extensions $1 ; then
++		ESSID=$( iwconfig_get_essid $1 )
++		ESSIDVAR=${ESSID//[![:word:]]/_}
++	fi
+ 	return 0
+ }
+Index: lib/rcscripts/net.modules.d/wpa_supplicant
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/net-scripts/net.modules.d/wpa_supplicant,v
+retrieving revision 1.2.2.12
+diff -u -B -r1.2.2.12 wpa_supplicant
+--- lib/rcscripts/net.modules.d/wpa_supplicant	4 Mar 2005 08:00:25 -0000	1.2.2.12
++++ lib/rcscripts/net.modules.d/wpa_supplicant	23 Mar 2005 13:11:05 -0000
+@@ -217,6 +217,19 @@
+ 	return 0
+ }
+ 
++# bool wpa_supplicant_pre_stop(char *iface)
++#
++# Configures ESSID variable
++# Always returns 0
++wpa_supplicant_pre_stop() {
++	unset ESSID ESSIDVAR
++	if wpa_supplicant_check_extensions $1 ; then
++		ESSID=$( iwconfig_get_essid $1 )
++		ESSIDVAR=${ESSID//[![:word:]]/_}
++	fi
++	return 0
++}
++
+ # bool wpa_supplicant_post_stop(char *iface)
+ #
+ # Stops wpa_supplicant on an interface

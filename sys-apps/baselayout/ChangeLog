@@ -1,9 +1,21 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.220 2005/03/16 09:38:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.221 2005/03/23 14:50:22 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.12.0_alpha1-r3 (23 Mar 2005)
+*baselayout-1.11.10-r3 (23 Mar 2005)
+
+  23 Mar 2005; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.11.10-bridge.patch,
+  +files/baselayout-1.12.0_alpha1-bridge.patch, +baselayout-1.11.10-r3.ebuild,
+  +baselayout-1.12.0_alpha1-r3.ebuild:
+  bridge stops removing IP addresses from bridge ports.
+  iwconfig no longer tries to get an ESSID from non-wireless interfaces.
+  ifconfig no longer errors when deleting addresses on a non-existant
+  interface.
 
   16 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
   baselayout-1.12.0_alpha1-r2.ebuild:
