@@ -1,0 +1,11 @@
+# ChangeLog for net-www/gorua
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/ChangeLog,v 1.1 2003/09/10 20:33:20 usata Exp $
+
+*gorua-0.16 (11 Sep 2003)
+
+  11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org>
+  gorua-0.16.ebuild, files/bookmarks_sample, files/goRua.sh,
+  files/gorua-bbsmenu-update-gentoo.diff:
+  Initial import
+
