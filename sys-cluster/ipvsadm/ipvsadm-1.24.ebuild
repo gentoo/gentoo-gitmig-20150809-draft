@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.8 2005/01/21 18:26:44 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.9 2005/03/08 02:48:14 xmerlin Exp $
 
 inherit check-kernel
 
@@ -14,7 +14,7 @@ DEPEND="virtual/libc
 SRC_URI="http://www.linuxvirtualserver.org/software/kernel-2.5/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 pkg_setup() {
