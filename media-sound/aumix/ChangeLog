@@ -1,9 +1,6 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.25 2004/05/04 03:51:52 eradicator Exp $
-
-  28 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> aumix-2.8-r1.ebuild:
-  Removed gnome form IUSE.
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.26 2004/05/04 03:55:08 eradicator Exp $
 
   28 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> aumix-2.8-r1.ebuild:
   Removed gnome form IUSE.
