@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.1.ebuild,v 1.1 2004/12/14 02:47:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.1.ebuild,v 1.2 2004/12/19 08:38:37 blubb Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SRC_URI="http://files.scapecaster.com/posit/${PSOURCE}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 RDEPEND="virtual/x11
