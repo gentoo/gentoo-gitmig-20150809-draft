@@ -1,3 +1,5 @@
+$Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/README,v 1.22 2005/01/13 22:50:42 eradicator Exp $
+
 HOWTO upgrade from 2004.3 and 2004.3/lib64 to 2005.0
 
 You can trust/test eradicator's script to do it or just run through it
