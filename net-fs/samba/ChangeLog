@@ -1,6 +1,18 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.47 2003/09/25 19:08:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.48 2003/09/26 00:18:46 woodchip Exp $
+
+*samba-3.0.0-r1 (25 Sep 2003)
+
+  25 Sep 2003; Donny Davies <woodchip@gentoo.org> samba-3.0.0-r1.ebuild,
+  files/smb.conf.example-samba3, files/winbind-init:
+  This is what should have been samba-3.0.0.ebuild; was out of my control,
+  sigh.  Added three more VFS modules: cap, default_quota, readonly.  Added
+  the IDEALX scripts for managing LDAP backend user accounts, also the
+  mkntpwd utility.  Added the clamav vscan plugin.  Added a decent
+  smb.conf.example file, which documents important Samba-3 options.
+  Tidied up the winbind rc-script.  Some documentation fixes.
+  Various miscellaneous ebuild housekeeping.
 
   26 Sep 2003; Martin Holzer <mholzer@gentoo.org> samba-3.0.0.ebuild:
   minor ebuild fixes.
