@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.225 2004/02/01 08:01:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.226 2004/02/01 20:23:57 spock Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -230,6 +230,8 @@ net-www/w3m:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdispl
 sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:uclibc - Compile with uclibc :)
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
+sys-apps/memtest86:serial - Compile with serial console support
+sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tcng:tcsim - enable traffic simulator
