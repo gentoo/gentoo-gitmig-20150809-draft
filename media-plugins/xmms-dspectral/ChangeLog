@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-dspectral
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectral/ChangeLog,v 1.14 2004/09/03 21:21:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectral/ChangeLog,v 1.15 2004/11/27 20:20:58 corsair Exp $
+
+  27 Nov 2004; Markus Rothe <corsair@gentoo.org> xmms-dspectral-1.2.1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72243
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-dspectral-1.2.1.ebuild:
