@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-odcl/cl-odcl-1.3.3.ebuild,v 1.1 2003/06/19 03:16:02 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-odcl/cl-odcl-1.3.3.ebuild,v 1.2 2003/06/19 05:19:30 mkennedy Exp $
 
 inherit common-lisp
 
@@ -25,8 +25,13 @@ src_unpack() {
 }
 
 src_install() {
-	common-lisp-install *.lisp odcl.asd
-	common-lisp-system-symlink 
+	common-lisp-install *.lisp odcl.asd odcl.system
+	dodir /usr/share/common-lisp/systems
+	dosym /usr/share/common-lisp/source/odcl/odcl.asd \
+		/usr/share/common-lisp/systems/odcl.asd
+	dosym /usr/share/common-lisp/source/odcl/odcl.system \
+		/usr/share/common-lisp/systems/odcl.system
+
 	insinto /usr/share/common-lisp/source/odcl/tests
 	doins tests/*.lisp
 	dodoc COPYING ChangeLog NEWS README VERSION
