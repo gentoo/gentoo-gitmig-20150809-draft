@@ -1,0 +1,11 @@
+--- kmplot/kmplot/View.cpp	Sat Jun 22 14:29:30 2002
++++ kmplot/kmplot/View.cpp	Sat Jul 13 21:35:16 2002
+@@ -115,7 +115,7 @@
+ 		{	ps.setparameter(ix,ps.fktext[ix].k_liste[k]);
+ 			mflg=2;
+ 			for(x=dmin; x<dmax; x+=dx)
+-			{	int errno=0;
++			{	errno=0;
+ 				switch(p_mode)
+ 				{  case 0:	y=ps.fkt(ix, x); break;
+ 				   case 1:	y=ps.a1fkt(ix, x); break;
