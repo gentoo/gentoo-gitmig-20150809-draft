@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.0.7.ebuild,v 1.8 2004/05/22 18:06:06 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.0.7.ebuild,v 1.9 2004/06/04 12:21:20 dragonheart Exp $
 
 DESCRIPTION="Gentoo Linux official release metatool"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
@@ -16,7 +16,7 @@ RDEPEND="dev-lang/python
 	sys-apps/portage
 	dev-util/ccache
 	amd64? ( sys-apps/linux32 )
-	cdr? ( app-cdr/cdrtools app-misc/zisofs-tools sys-apps/squashfs-tools )"
+	cdr? ( app-cdr/cdrtools app-misc/zisofs-tools sys-fs/squashfs-tools )"
 
 S=${WORKDIR}/${PN}
 
