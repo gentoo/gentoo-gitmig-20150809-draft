@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r11.ebuild,v 1.7 2005/03/06 15:36:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r11.ebuild,v 1.8 2005/04/01 18:07:06 blubb Exp $
 
 inherit perl-module eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.perl.org/"
 IUSE="gnome opengl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 DEPEND="${DEPEND}
 	media-libs/gdk-pixbuf

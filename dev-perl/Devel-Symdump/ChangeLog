@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Symdump
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.10 2004/12/29 23:31:28 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.11 2005/04/01 18:01:17 blubb Exp $
+
+  01 Apr 2005; Simon Stelling <blubb@gentoo.org> Devel-Symdump-2.03.ebuild:
+  stable on amd64
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

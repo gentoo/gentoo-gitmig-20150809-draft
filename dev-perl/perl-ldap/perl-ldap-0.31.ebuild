@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.31.ebuild,v 1.10 2004/10/19 08:20:34 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.31.ebuild,v 1.11 2005/04/01 18:10:16 blubb Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/G/GB/GBARR/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm ia64 s390 hppa ppc64 ~amd64"
+KEYWORDS="x86 ppc sparc mips alpha arm ia64 s390 hppa ppc64 amd64"
 IUSE="sasl xml ssl"
 
 DEPEND="dev-perl/Convert-ASN1

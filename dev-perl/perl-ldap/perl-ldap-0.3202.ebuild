@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.3202.ebuild,v 1.3 2004/10/19 08:20:34 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.3202.ebuild,v 1.4 2005/04/01 18:10:16 blubb Exp $
 
 inherit perl-module
 
