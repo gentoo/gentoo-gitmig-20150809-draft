@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r11.ebuild,v 1.14 2004/09/29 05:24:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r2.ebuild,v 1.1 2004/10/07 22:24:28 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
 # Branch update support.  Following will disable:
 #  BRANCH_UPDATE=
-BRANCH_UPDATE="20031115"
+BRANCH_UPDATE="20040420"
 
 
 # Minimum kernel version for --enable-kernel
@@ -16,34 +16,36 @@ export MIN_KV="2.4.1"
 #       you are doing !
 export MIN_NPTL_KV="2.6.0"
 
-MY_PV="${PV/_}"
-S="${WORKDIR}/${P%_*}"
+#MY_PV="${PV/_}"
+MY_PV="2.3.2"
+#S="${WORKDIR}/${P%_*}"
+S="${WORKDIR}/${PN}-${MY_PV}"
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-${MY_PV}.tar.bz2
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${MY_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-linuxthreads-${MY_PV}.tar.bz2
-	mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2
-	hppa? ( mirror://gentoo/${P}-hppa-patches-p1.tar.bz2 )"
+	mirror://gentoo/${PN}-2.3.3-branch-update-${BRANCH_UPDATE}.patch.bz2
+	hppa? ( mirror://gentoo/${PN}-${MY_PV}-hppa-patches-p1.tar.bz2 )"
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
-IUSE="nls pic build nptl debug"
-RESTRICT="nostrip" # we'll handle stripping ourself #46186
+#KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
+KEYWORDS="x86 ppc sparc"
+IUSE="nls pic build nptl erandom debug hardened"
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
 DEPEND=">=sys-devel/gcc-3.2.3-r1
-	x86? ( nptl? ( >=sys-devel/gcc-3.3.1-r1 ) )
+	nptl? ( >=sys-devel/gcc-3.3.1-r1 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
-PDEPEND="ppc? ( >=sys-kernel/linux-headers-2.4.22 )"
 PROVIDE="virtual/glibc virtual/libc"
+
 
 # Try to get a kernel source tree with version equal or greater
 # than $1.  We basically just try a few default locations.  The
@@ -64,13 +66,13 @@ get_KHV() {
 	then
 		headers="$2"
 	else
-		# We try to find the current kernel's headers first,
-		# as we would rather build against linux 2.5 headers ...
-		headers="/lib/modules/`uname -r`/build/include \
+		# Things should be pretty stable kernel side now, so try
+		# /usr/include first, then the current kernel's headers.
+		headers="${ROOT}/usr/include \
+		         /lib/modules/`uname -r`/build/include \
 		         ${ROOT}/lib/modules/`uname -r`/build/include \
 				 /usr/src/linux/include \
-				 ${ROOT}/usr/src/linux/include \
-		         ${ROOT}/usr/include"
+				 ${ROOT}/usr/src/linux/include"
 	fi
 
 	for x in ${headers}
@@ -119,7 +121,7 @@ use_nptl() {
 					return 0
 				fi
 				;;
-			"alpha"|"amd64"|"mips"|"ppc"|"sparc")
+			"alpha"|"amd64"|"ia64"|"mips"|"ppc"|"sparc")
 				return 0
 				;;
 			*)
@@ -139,6 +141,7 @@ glibc_setup() {
 	#old_version="${old_version/sys-libs\/glibc-/}"
 	#
 	#if [ "$old_version" ]; then
+	# The vercmp fails if this ebuild is -r[0-9..] Please fix.
 	#	if [ `python -c "import portage; print int(portage.vercmp(\"${PV}\",\"$old_version\"))"` -lt 0 ]; then
 	#		if [ "${FORCE_DOWNGRADE}" ]; then
 	#			ewarn "downgrading glibc, still not recommended, but we'll do as you wish"
@@ -242,10 +245,12 @@ glibc_setup() {
 
 src_unpack() {
 
-	unpack glibc-${MY_PV}.tar.bz2
+	local LOCAL_P="${PN}-${MY_PV}"
 
 	# we only need to check this one time. Bug #61856
 	glibc_setup
+
+	unpack glibc-${MY_PV}.tar.bz2
 
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir -p ${S}/man; cd ${S}/man
@@ -253,22 +258,24 @@ src_unpack() {
 
 	cd ${S}
 	# Extract our threads package ...
-	if (! use_nptl) && [ -z "${BRANCH_UPDATE}" ]
+	if ! use_nptl && [ -z "${BRANCH_UPDATE}" ]
 	then
 		unpack glibc-linuxthreads-${MY_PV}.tar.bz2
 	fi
 
 	if [ -n "${BRANCH_UPDATE}" ]
 	then
-		epatch ${DISTDIR}/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2
+		epatch ${DISTDIR}/${PN}-2.3.3-branch-update-${BRANCH_UPDATE}.patch.bz2
 	fi
 
 	if use_nptl
 	then
-		epatch ${FILESDIR}/2.3.2/${P}-redhat-nptl-fixes.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-redhat-nptl-fixes.patch
 	else
-		epatch ${FILESDIR}/2.3.2/${P}-redhat-linuxthreads-fixes.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-redhat-linuxthreads-fixes.patch
 	fi
+
+	epatch ${FILESDIR}/glibc-sec-hotfix-20040804.patch
 
 	# To circumvent problems with propolice __guard and
 	# __guard_setup__stack_smash_handler
@@ -276,8 +283,48 @@ src_unpack() {
 	#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
 	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" ]
 	then
-		cd ${S}; epatch ${FILESDIR}/${PV}/${P}-propolice-guard-functions-v2.patch
+		cd ${S}
+		epatch ${FILESDIR}/2.3.3/${LOCAL_P}-propolice-guard-functions-v3.patch
+		cp ${FILESDIR}/2.3.3/ssp.c ${S}/sysdeps/unix/sysv/linux || \
+			die "failed to copy ssp.c to ${S}/sysdeps/unix/sysv/linux/"
+		# gcc 3.4 nukes ssp without this patch
+		if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+		then
+			epatch ${FILESDIR}/2.3.3/glibc-2.3.3-ssp-gcc34-after-frandom.patch
+		fi
 	fi
+
+	# sparc fails when building the components for the normal crt1.o
+	# with -K PIC automatically via hardened PIE and SSP specs files
+	if use sparc && use hardened
+	then
+		einfo "adding crt1.o bugfix for hardened gcc on sparc glibc"
+		sed -i "s|CPPFLAGS += -DHAVE_INITFINI|CPPFLAGS += -DHAVE_INITFINI -fno-pie -fno-PIE|" \
+			"${WORKDIR}/glibc-2.3.2/csu/Makefile"
+
+		# check if it worked
+		grep -q "CPPFLAGS += -DHAVE_INITFINI -fno-pie -fno-PIE" \
+			"${WORKDIR}/glibc-2.3.2/csu/Makefile"
+
+		if [ $? -ne 0 ]
+		then
+			eerror "sed failure: could not add sparc crt1.o PIC bugfix"
+			exit 1
+		fi
+	fi
+
+	# patch this regardless of architecture, although it's ssp-related
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-frandom-detect.patch
+
+	#
+	# *** PaX related patches starts here ***
+	#
+
+	# localedef contains nested function trampolines, which trigger
+	# segfaults under PaX -solar
+	# Debian Bug (#231438, #198099)
+	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch
+
 
 	# With latest versions of glibc, a lot of apps failed on a PaX enabled
 	# system with:
@@ -287,7 +334,21 @@ src_unpack() {
 	# This is due to PaX 'exec-protecting' the stack, and ld.so then trying
 	# to make the stack executable due to some libraries not containing the
 	# PT_GNU_STACK section.  Bug #32960.  <azarah@gentoo.org> (12 Nov 2003).
-	epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-dl_execstack-PaX-support.patch
+	cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch
+
+	# Program header support for PaX.
+	cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-pt_pax.diff
+
+	# Suppress unresolvable relocation against symbol `main' in Scrt1.o
+	# can be reproduced with compiling net-dns/bind-9.2.2-r3 using -pie
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-got-fix.diff
+
+	#
+	# *** PaX related patches ends here ***
+	#
+
+	# Fix an assert when running libc.so from commandline, bug #34733.
+#	cd ${S}; epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-rtld-assert-fix.patch
 
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
 #	cd ${S}/io; epatch ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
@@ -327,14 +388,11 @@ src_unpack() {
 	#
 	#   http://bugs.gentoo.org/show_bug.cgi?id=27142
 	#
-	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-fix-omitted-operand-in-mathinline_h.patch
+#	cd ${S}; epatch ${FILESDIR}/2.3.2/${LOCAL_P}-fix-omitted-operand-in-mathinline_h.patch
 
 	# We do not want name_insert() in iconvconfig.c to be defined inside
-	# write_output() as it causes issues with PaX.
-	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-iconvconfig-name_insert.patch
-
-	# Fix broken reverse resolving for IPv6 addresses, bug #42492.
-	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-ipv6-bytestring-fix.patch
+	# write_output() as it causes issues with trampolines/PaX.
+	cd ${S}; epatch ${FILESDIR}/2.3.2/${LOCAL_P}-iconvconfig-name_insert.patch
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
 	# do can be found in the patch headers.
@@ -344,12 +402,16 @@ src_unpack() {
 	then
 		cd ${S}
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
-		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libgcc-compat-mips.patch
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-add-n32-n64-sysdep-cancel.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-configure-for-n64-symver.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-pread-linux2.5.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-fix-nested-entend-pairs.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-add-n32-n64-sysdep-cancel.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-configure-for-n64-symver.patch
+		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-dl-machine-calls.diff
+		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-incl-sgidefs.diff
+		epatch ${FILESDIR}/2.3.3/mips-addabi.diff
+		epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
+		epatch ${FILESDIR}/2.3.3/semtimedop.diff
+		epatch ${FILESDIR}/2.3.3/mips-sysify.diff
+#####		epatch ${FILESDIR}/2.3.3/mips-n32n64regs.diff
 	fi
 
 	if [ "${ARCH}" = "alpha" ]
@@ -358,16 +420,15 @@ src_unpack() {
 		# Fix compatability with compaq compilers by ifdef'ing out some
 		# 2.3.2 additions.
 		# <taviso@gentoo.org> (14 Jun 2003).
-		epatch ${FILESDIR}/2.3.2/${P}-decc-compaq.patch
+		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-decc-compaq.patch
 
 		# Fix compilation with >=gcc-3.2.3 (01 Nov 2003 agriffis)
-		epatch ${FILESDIR}/2.3.2/${P}-alpha-pwrite.patch
-		epatch ${FILESDIR}/2.3.2/${P}-alpha-crti.patch
+#		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-alpha-pwrite.patch
 	fi
 
 	if [ "${ARCH}" = "amd64" ]
 	then
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-amd64-nomultilib.patch
+		cd ${S}; epatch ${FILESDIR}/2.3.2/${LOCAL_P}-amd64-nomultilib.patch
 	fi
 
 	if [ "${ARCH}" = "ia64" ]
@@ -378,51 +439,34 @@ src_unpack() {
 		#
 		#   http://sources.redhat.com/ml/libc-alpha/2003-09/msg00165.html
 		#
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-ia64-LOAD_ARGS-fixup.patch
+		#cd ${S}; epatch ${FILESDIR}/2.3.2/${LOCAL_P}-ia64-LOAD_ARGS-fixup.patch
+		:
 	fi
 
 	if [ "${ARCH}" = "hppa" ]
 	then
+		local x=
+
 		cd ${WORKDIR}
-		unpack ${P}-hppa-patches-p1.tar.bz2
+		unpack ${LOCAL_P}-hppa-patches-p1.tar.bz2
 		cd ${S}
-		EPATCH_EXCLUDE="010* 020* 030* 040* 050* 055*"
-		for i in ${EPATCH_EXCLUDE}
+		EPATCH_EXCLUDE="0[123459]0* 055* 1[2379]0* 200* 230*"
+		for x in ${EPATCH_EXCLUDE}
 		do
-			rm -f ${WORKDIR}/${P}-hppa-patches/$i
+			rm -f ${WORKDIR}/${LOCAL_P}-hppa-patches/${x}
 		done
-		for i in ${WORKDIR}/${P}-hppa-patches/*
+		for x in ${WORKDIR}/${LOCAL_P}-hppa-patches/*
 		do
-			einfo Applying `basename $i`...
-			patch -p1 < $i
+			epatch ${x}
 		done
-		einfo Applying glibc23-07-hppa-atomicity.dpatch...
-		patch -p 1 < ${FILESDIR}/2.3.1/glibc23-07-hppa-atomicity.dpatch
+		epatch ${FILESDIR}/2.3.1/glibc23-07-hppa-atomicity.dpatch
 	fi
 
-	if [ "${ARCH}" = "s390" ]
-	then
-		# The deprecated ustat.h causes problems on s390
-		#
-		#   http://sources.redhat.com/ml/bug-glibc/2003-08/msg00020.html
-		#
-		# Closes Bug 47415
-		cd ${S}/sysdeps/unix/sysv/linux; epatch ${FILESDIR}/2.3.2/${P}-s390-deprecated-ustat-fixup.patch
-	fi
+	cd ${S}
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-hardened-sysdep-shared.patch
 
-	if [ "${ARCH}" == "arm" ]
-	then
-		cd ${S}
-		# sjlj exceptions causes undefined frame variables (ported from cvs)
-		epatch ${FILESDIR}/2.3.2/${P}-framestate-USING_SJLJ_EXCEPTIONS.patch
-		# BUS_ISA is needed in ioperm.c but is defined in linux/input.h
-		epatch ${FILESDIR}/2.3.2/${P}-arm-bus-defines.patch
-		# armformat fixes the linker script creation (taken from netwinder.org glibc rpm)
-		epatch ${FILESDIR}/2.3.2/${P}-armformat.patch
-	fi
-
-	# Fix info leakage #59526
-	cd ${S}; epatch ${FILESDIR}/glibc-sec-hotfix-20040804.patch
+	# Improved handled temporary files. bug #66358
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-tempfile.patch
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
@@ -464,6 +508,11 @@ setup_flags() {
 		fi
 	fi
 
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
+		# broken in 3.4.x
+		replace-flags -march=pentium-m -mtune=pentium3
+	fi
+
 	# We don't want these flags for glibc
 	filter-flags -fomit-frame-pointer -malign-double
 	filter-ldflags -pie
@@ -484,6 +533,8 @@ src_compile() {
 	unset LANGUAGE LANG LC_ALL
 
 	use nls || myconf="${myconf} --disable-nls"
+
+	use erandom || myconf="${myconf} --disable-dev-erandom"
 
 	if use_nptl
 	then
@@ -556,11 +607,6 @@ src_install() {
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} \
 		install -C ${buildtarget} || die
-	# now, strip everything but the thread libs #46186
-	mkdir ${T}/thread-backup
-	mv ${D}/lib/lib{pthread,thread_db}* ${T}/thread-backup/
-	env -uRESTRICT prepallstrip
-	mv ${T}/thread-backup/* ${D}/lib/
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]
@@ -586,12 +632,10 @@ EOF
 
 	if ! use build
 	then
-		if ! has noinfo ${FEATURES} ; then
-			einfo "Installing Info pages..."
-			make PARALLELMFLAGS="${MAKEOPTS}" \
-				install_root=${D} \
-				info -C ${buildtarget} || die
-		fi
+		einfo "Installing Info pages..."
+		make PARALLELMFLAGS="${MAKEOPTS}" \
+			install_root=${D} \
+			info -C ${buildtarget} || die
 
 		einfo "Installing Locale data..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
@@ -638,7 +682,7 @@ EOF
 
 	# Is this next line actually needed or does the makefile get it right?
 	# It previously has 0755 perms which was killing things.
-	fperms 4755 /usr/lib/misc/pt_chown
+	fperms 4711 /usr/lib/misc/pt_chown
 
 	# Currently libraries in  /usr/lib/gconv do not get loaded if not
 	# in search path ...
@@ -684,3 +728,4 @@ pkg_postinst() {
 		/sbin/init U &> /dev/null
 	fi
 }
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.26 2004/10/07 13:42:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.1 2004/10/07 22:24:28 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -516,6 +516,9 @@ src_unpack() {
 
 	# fix for using nptl's pthread.h with g++
 	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-nptl-pthread.h-g++-fix.patch
+
+	# Improved handled temporary files. bug #66358
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-tempfile.patch
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh

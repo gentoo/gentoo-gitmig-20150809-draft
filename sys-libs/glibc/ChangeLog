@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.267 2004/10/07 18:01:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.268 2004/10/07 22:24:27 lv Exp $
+
+*glibc-2.3.2-r12 (07 Oct 2004)
+
+  07 Oct 2004; Travis Tilley <lv@gentoo.org>
+  +files/2.3.3/glibc-2.3.3-tempfile.patch, -glibc-2.3.2-r11.ebuild,
+  +glibc-2.3.2-r12.ebuild, -glibc-2.3.3.20040420-r1.ebuild,
+  +glibc-2.3.3.20040420-r2.ebuild, -glibc-2.3.4.20040619-r1.ebuild,
+  +glibc-2.3.4.20040619-r2.ebuild, +glibc-2.3.4.20040808-r1.ebuild,
+  -glibc-2.3.4.20040808.ebuild, glibc-2.3.4.20041006.ebuild:
+  added a patch to fix insecure tempfile handling, closes bug 66358
 
 *glibc-2.3.4.20041006 (07 Oct 2004)
 

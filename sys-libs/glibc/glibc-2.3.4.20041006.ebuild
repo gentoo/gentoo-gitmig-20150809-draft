@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041006.ebuild,v 1.1 2004/10/07 18:01:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041006.ebuild,v 1.2 2004/10/07 22:24:28 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -545,6 +545,9 @@ src_unpack() {
 
 	# multicast DNS aka rendezvous support
 	epatch ${FILESDIR}/2.3.4/glibc-2.3.3-mdns-resolver.diff
+
+	# Improved handled temporary files. bug #66358
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-tempfile.patch
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
