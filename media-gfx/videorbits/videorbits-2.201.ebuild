@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/videorbits/videorbits-2.201.ebuild,v 1.4 2003/08/07 03:47:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/videorbits/videorbits-2.201.ebuild,v 1.5 2003/10/08 01:27:15 brandy Exp $
 
 DESCRIPTION="a collection of programs for creating high dynamic range images"
 HOMEPAGE="http://comparametric.sourceforge.net/"
@@ -10,7 +10,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	virtual/x11
+	sys-libs/zlib
+	media-libs/libpng
+	media-libs/jpeg"
 
 src_unpack() {
 	unpack ${A}
