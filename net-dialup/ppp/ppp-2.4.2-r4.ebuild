@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r4.ebuild,v 1.2 2004/09/27 11:28:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r4.ebuild,v 1.3 2004/09/27 11:33:52 lanius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="ipv6 activefilter pam atm mppe-mppc"
 
 RDEPEND="virtual/libc
-	>=net-libs/libpcap-0.8
+	activefilter? ( <=net-libs/libpcap-0.7.2-r1 )
 	atm? ( x86? ( net-dialup/linux-atm ) )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/mpls.patch.gz
 	epatch ${FILESDIR}/${PV}/killaddr-smarter.patch.gz
 	epatch ${FILESDIR}/${PV}/cflags.patch
-	epatch ${FILESDIR}/${PV}/pcap.patch
+	#epatch ${FILESDIR}/${PV}/pcap.patch
 	epatch ${FILESDIR}/${PV}/control_c.patch
 
 	use mppe-mppc && {
@@ -42,7 +42,7 @@ src_unpack() {
 	fi
 
 	use activefilter || {
-		einfo "Enabling active-filter"
+		einfo "Disabling active-filter"
 		sed -i -e "s/^FILTER=y/#FILTER=y/" pppd/Makefile.linux || die
 	}
 
