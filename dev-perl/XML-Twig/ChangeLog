@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.2 2003/02/12 06:27:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.3 2003/07/16 15:28:33 mcummings Exp $
+
+  16 Jul 2003; Michael Cummings <mcummings@gentoo.org> XML-Twig-3.09.ebuild:
+  Added specific version to XML-Parser dep
 
 *XML-Twig-3.09 (21 Dec 2002)
 
