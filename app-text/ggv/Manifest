@@ -1,13 +1,23 @@
-MD5 079490c56df1c90847541ea6ca828c8c ggv-1.1.94.ebuild 1605
-MD5 0b3e84128385273c670c74a231c6faeb ggv-2.8.0.ebuild 678
-MD5 ec5e18abeb1d4ca178ef326dd912ef32 ggv-2.6.1.ebuild 673
-MD5 326d49b5ad96378df8d7af531beb94aa ggv-2.6.0.ebuild 673
-MD5 48f0c7caa7bb54a73aa39517bdca6512 ChangeLog 8105
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 023115fbce8aa9bbbee68f496449f9ac ChangeLog 8287
+MD5 803fe4183bf6f18ce9c1771687ea2ff0 ggv-1.1.94.ebuild 1630
+MD5 c27816e73e959dbd1f53a3fedcf5aefe ggv-2.6.0.ebuild 701
+MD5 ebdd9e4c82821b74488b17eb475ffe34 ggv-2.6.1.ebuild 701
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 9cac0cf4cde702463f875989bc6a7b81 ggv-2.4.1.ebuild 803
+MD5 698ee85dfe586a22e3d33f24ad7328c7 ggv-2.4.1.ebuild 831
+MD5 190e93f3f9f552321bee4138f35998e3 ggv-2.8.0.ebuild 706
 MD5 9839595041edeb9a62751cae70d30ea1 files/digest-ggv-1.1.94 62
 MD5 68688e676f5d0f61aeb97e413dfdb041 files/digest-ggv-2.4.1 63
 MD5 d14e7cb9a428e2a46f909b7d1da5cfab files/digest-ggv-2.6.0 63
 MD5 5e8c7421876ca58a1e41e3075a394852 files/digest-ggv-2.6.1 63
-MD5 0af782d2299128f802179dfd6b10cded files/digest-ggv-2.8.0 63
 MD5 515619d60d10dc4e10d15e9b93af4541 files/ggv-2.4-fix_gtk+-2.4_build.patch 951
+MD5 0af782d2299128f802179dfd6b10cded files/digest-ggv-2.8.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfLGjVWNWqTUmv+0RAr2IAKCU4mN2bkxqZQsnF7Jy9YndODSH5wCeMGi6
+GJyadWVaKf0d/l9hXNZ7p2k=
+=TqwO
+-----END PGP SIGNATURE-----
