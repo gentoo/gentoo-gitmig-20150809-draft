@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6111.ebuild,v 1.5 2005/01/10 21:51:14 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6111-r1.ebuild,v 1.1 2005/01/28 23:02:56 cyfred Exp $
 
 inherit eutils
 
@@ -82,7 +82,15 @@ src_install() {
 	local NV_ROOT="/usr/lib/opengl/nvidia"
 
 	# The X module
-	exeinto /usr/X11R6/lib/modules/drivers
+	# Since we moved away from libs in /usr/X11R6 need to check this
+	if has_version ">=x11-base/xorg-x11-6.8.0-r4" ; then
+		local X11_LIB_DIR="/usr/$(get_libdir)"
+	else
+		local X11_LIB_DIR="/usr/X11R6/$(get_libdir)"
+	fi
+
+	# The X module
+	exeinto ${X11_LIB_DIR}/modules/drivers
 	doexe usr/X11R6/lib/modules/drivers/nvidia_drv.o
 
 	# The GLX extension
@@ -114,9 +122,9 @@ src_install() {
 	doexe usr/bin/tls_test
 	doexe usr/bin/tls_test_dso.so
 
-	insinto /usr/X11R6/lib
+	insinto ${X11_LIB_DIR}
 	doins usr/X11R6/lib/libXvMCNVIDIA.a
-	exeinto /usr/X11R6/lib
+	exeinto ${X11_LIB_DIR}
 	doexe usr/X11R6/lib/libXvMCNVIDIA.so.${PV}
 
 	# Closing bug #37517 by letting virtual/x11 provide system wide glext.h
