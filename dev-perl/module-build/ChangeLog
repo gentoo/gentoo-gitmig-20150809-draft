@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/module-build
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.18 2004/12/30 19:04:00 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.19 2005/03/11 17:32:33 mcummings Exp $
+
+*module-build-0.26.08 (11 Mar 2005)
+
+  11 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  +module-build-0.26.08.ebuild:
+  New version, fixes some bugs, nothing that has cropped up (yet)
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
