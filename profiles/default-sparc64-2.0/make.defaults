@@ -10,7 +10,7 @@ svga tcpd truetype X xml2 xmms xv zlib"
 COMPILER="gcc3"
 
 #
-# $Id: make.defaults,v 1.8 2002/08/20 01:23:24 murphy Exp $
+# $Id: make.defaults,v 1.9 2002/08/20 01:53:11 murphy Exp $
 #
 # $Log: not supported by cvs2svn $
 # Revision 1.1  2002/08/14 15:56:36  murphy

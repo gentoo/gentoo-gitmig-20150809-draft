@@ -112,7 +112,7 @@
 *sys-libs/zlib
 *net-misc/openssh
 *sys-apps/devfsd
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-2.0/packages,v 1.9 2002/08/20 01:23:24 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-2.0/packages,v 1.10 2002/08/20 01:53:11 murphy Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
@@ -128,7 +128,7 @@
 !net-misc/vnc
 
 # Get a decent editor
-*app-editors/nvi
+*app-editors/levee
 
 # Sed replacement
 *sys-apps/supersed

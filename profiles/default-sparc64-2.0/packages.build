@@ -27,4 +27,4 @@ net-misc/wget
 net-misc/rsync
 app-editors/nano
 sys-apps/net-tools
-app-editors/nvi
+app-editors/levee
