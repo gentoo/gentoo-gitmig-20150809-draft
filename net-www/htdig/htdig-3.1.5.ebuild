@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.5.ebuild,v 1.3 2000/11/01 04:44:23 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.5.ebuild,v 1.4 2000/11/05 12:59:09 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -37,6 +37,8 @@ src_install () {
 	SEARCH_DIR=${D}/usr/local/httpd/htdocs/htdig \
 	IMAGE_DIR=${D}/usr/local/httpd/htdocs/images/htdig \
 	exec_prefix=${D}/usr install
+    dosed /etc/httpd/htdig.conf /usr/bin/rundig
+    dodoc ChangeLog COPYING README
 
 }
 
