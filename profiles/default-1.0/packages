@@ -53,7 +53,7 @@
 *net-misc/netkit-telnetd
 *net-misc/rsync
 *net-misc/wget
-*sys-apps/bash
+*<sys-apps/bash-2.05b
 *sys-apps/bzip2
 *sys-apps/kbd
 *sys-apps/cpio
