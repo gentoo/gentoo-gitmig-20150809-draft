@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.5.ebuild,v 1.7 2004/01/26 19:36:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.5.ebuild,v 1.8 2004/02/02 03:22:07 avenj Exp $
 
 DESCRIPTION="A text-mode window environment"
 SRC_URI="mirror://sourceforge/twin/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://twin.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~amd64"
 IUSE="X gtk ggi"
 
 DEPEND="X? ( virtual/x11 )
