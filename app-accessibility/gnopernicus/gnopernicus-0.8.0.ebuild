@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.8.0.ebuild,v 1.2 2004/04/19 18:44:33 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.8.0.ebuild,v 1.3 2004/04/20 18:18:07 leonardop Exp $
 
 inherit gnome2
 
@@ -30,7 +30,8 @@ RDEPEND=">=gnome-base/gconf-1.1.5
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	app-text/scrollkeeper"
 
 G2CONF="${G2CONF} \
 	--with-default-fonts-path=${D}/usr/share/fonts/default/Type1 \
