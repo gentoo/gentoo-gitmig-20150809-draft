@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/icesndcfg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/ChangeLog,v 1.4 2003/02/12 09:29:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/ChangeLog,v 1.5 2003/05/19 14:00:14 phosphan Exp $
+
+*icesndcfg-1.0 (19 May 2003)
+
+  19 May 2003; Patrick Kursawe <phosphan@gentoo.org> icesndcfg-1.0.ebuild:
+  Version bump. Rewritten, uses Qt instead of GTK now.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
