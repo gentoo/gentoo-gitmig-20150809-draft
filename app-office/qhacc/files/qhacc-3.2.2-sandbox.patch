@@ -1,0 +1,506 @@
+diff -r -u plugins.orig/aqbank/Makefile.in plugins/aqbank/Makefile.in
+--- plugins.orig/aqbank/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/aqbank/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -230,7 +230,7 @@
+ target_alias = @target_alias@
+ @AQB_TRUE@noinst_HEADERS = aqbplugin.h
+ @AQB_TRUE@lib_LTLIBRARIES = libaqbio.la
+-@AQB_TRUE@pidir = $(prefix)/plugins
++@AQB_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @AQB_TRUE@dbdir = $(pidir)/db
+ @AQB_TRUE@importdir = $(pidir)/import
+ @AQB_TRUE@exportdir = $(pidir)/export
+@@ -277,7 +277,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -412,7 +412,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/archiver/Makefile.in plugins/archiver/Makefile.in
+--- plugins.orig/archiver/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/archiver/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -228,7 +228,7 @@
+ target_alias = @target_alias@
+ @ARC_TRUE@noinst_HEADERS = arcplugin.h
+ @ARC_TRUE@lib_LTLIBRARIES = libarcio.la
+-@ARC_TRUE@pidir = $(prefix)/plugins
++@ARC_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @ARC_TRUE@importdir = $(pidir)/import
+ @ARC_TRUE@exportdir = $(pidir)/export
+ @ARC_TRUE@libarcio_la_SOURCES = arcplugin.cpp
+@@ -274,7 +274,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -401,7 +401,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/cliimp/Makefile.in plugins/cliimp/Makefile.in
+--- plugins.orig/cliimp/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/cliimp/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -230,7 +230,7 @@
+ target_alias = @target_alias@
+ @CLIIMP_TRUE@noinst_HEADERS = cliimpplugin.h
+ @CLIIMP_TRUE@lib_LTLIBRARIES = libcliimpio.la
+-@CLIIMP_TRUE@impdir = $(prefix)/plugins/import
++@CLIIMP_TRUE@impdir = $(DESTDIR)/$(prefix)/plugins/import
+ @CLIIMP_TRUE@libcliimpio_la_SOURCES = cliimpplugin.cpp $(top_srcdir)/src/guiconstants.cpp
+ @CLIIMP_TRUE@RELEASE = 2:0:0
+ @CLIIMP_TRUE@libcliimpio_la_LIBADD = -l$(QHACCQT) -lfiledbio -lqhacc
+@@ -274,7 +274,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -409,7 +409,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+@@ -529,8 +529,8 @@
+ @CLIIMP_TRUE@	rm -f *.o *.core core *~ .*~ *.la *.lo
+ 
+ @CLIIMP_TRUE@install-data-local:
+-@CLIIMP_TRUE@	mkdir -p $(impdir)
+-@CLIIMP_TRUE@	if test ! -L $(impdir)/libcliimpio.so ; then cd $(impdir) && ln -s $(libdir)/libcliimpio.so $(impdir) ; fi
++@CLIIMP_TRUE@	mkdir -p $(DESTDIR)/$(impdir)
++@CLIIMP_TRUE@	if test ! -L $(DESTDIR)/$(impdir)/libcliimpio.so ; then cd $(DESTDIR)/$(impdir) && ln -s $(DESTDIR)/$(libdir)/libcliimpio.so $(DESTDIR)/$(impdir) ; fi
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+diff -r -u plugins.orig/extprg/Makefile.in plugins/extprg/Makefile.in
+--- plugins.orig/extprg/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/extprg/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -236,7 +236,7 @@
+ target_alias = @target_alias@
+ @PRG_TRUE@noinst_HEADERS = extprgplugin.h
+ @PRG_TRUE@lib_LTLIBRARIES = libextprgio.la
+-@PRG_TRUE@pidir = $(prefix)/plugins
++@PRG_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @PRG_TRUE@dbdir = $(pidir)/db
+ @PRG_TRUE@importdir = $(pidir)/import
+ @PRG_TRUE@exportdir = $(pidir)/export
+@@ -283,7 +283,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -410,7 +410,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/generator/Makefile.in plugins/generator/Makefile.in
+--- plugins.orig/generator/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/generator/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -236,7 +236,7 @@
+ target_alias = @target_alias@
+ @GEN_TRUE@noinst_HEADERS = genplugin.h
+ @GEN_TRUE@lib_LTLIBRARIES = libgenio.la
+-@GEN_TRUE@exportdir = $(prefix)/plugins/export
++@GEN_TRUE@exportdir = $(DESTDIR)/$(prefix)/plugins/export
+ @GEN_TRUE@libgenio_la_SOURCES = genplugin.cpp genplugin.h
+ @GEN_TRUE@RELEASE = 1:0:0
+ @GEN_TRUE@libgenio_la_LIBADD = -l$(QHACCQT) -lfiledbio -lqhaccext
+@@ -280,7 +280,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -407,7 +407,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/gpg/Makefile.in plugins/gpg/Makefile.in
+--- plugins.orig/gpg/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/gpg/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -236,7 +236,7 @@
+ target_alias = @target_alias@
+ @GPG_TRUE@noinst_HEADERS = gpgplugin.h
+ @GPG_TRUE@lib_LTLIBRARIES = libgpgio.la
+-@GPG_TRUE@pidir = $(prefix)/plugins
++@GPG_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @GPG_TRUE@dbdir = $(pidir)/db
+ @GPG_TRUE@importdir = $(pidir)/import
+ @GPG_TRUE@exportdir = $(pidir)/export
+@@ -283,7 +283,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -410,7 +410,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/graphs/Makefile.in plugins/graphs/Makefile.in
+--- plugins.orig/graphs/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/graphs/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -276,7 +276,7 @@
+ @PGPH_TRUE@									libdoublelinegraph.la libsinglebargraph.la \
+ @PGPH_TRUE@									libdoublebargraph.la libpiegraph.la
+ 
+-@PGPH_TRUE@pidir = $(prefix)/plugins
++@PGPH_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @PGPH_TRUE@graphdir = $(pidir)/graph
+ @PGPH_TRUE@libgraphbase_la_SOURCES = grapher.cpp
+ @PGPH_TRUE@libmonthlygraph_la_SOURCES = monthlygraph.cpp
+@@ -340,7 +340,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -485,7 +485,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/Makefile.in plugins/Makefile.in
+--- plugins.orig/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -380,7 +380,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+@@ -398,7 +398,7 @@
+ 	list='$(DIST_SUBDIRS)'; for subdir in $$list; do \
+ 	  if test "$$subdir" = .; then :; else \
+ 	    test -d "$(distdir)/$$subdir" \
+-	    || $(mkdir_p) "$(distdir)/$$subdir" \
++	    || $(mkdir_p) "$(DESTDIR)/$(distdir)/$$subdir" \
+ 	    || exit 1; \
+ 	    distdir=`$(am__cd) $(distdir) && pwd`; \
+ 	    top_distdir=`$(am__cd) $(top_distdir) && pwd`; \
+diff -r -u plugins.orig/mysql/Makefile.in plugins/mysql/Makefile.in
+--- plugins.orig/mysql/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/mysql/Makefile.in	2004-10-29 01:13:28.000000000 +0200
+@@ -236,7 +236,7 @@
+ target_alias = @target_alias@
+ @MYSQL_TRUE@noinst_HEADERS = mysqlplugin.h
+ @MYSQL_TRUE@lib_LTLIBRARIES = libmysqlio.la
+-@MYSQL_TRUE@pidir = $(prefix)/plugins
++@MYSQL_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @MYSQL_TRUE@dbdir = $(pidir)/db
+ @MYSQL_TRUE@importdir = $(pidir)/import
+ @MYSQL_TRUE@exportdir = $(pidir)/export
+@@ -283,7 +283,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -410,7 +410,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+@@ -533,9 +533,9 @@
+ @MYSQL_TRUE@	mkdir -p $(dbdir)
+ @MYSQL_TRUE@	if test ! -L $(dbdir)/libmysqlio.so ; then cd $(dbdir); ln -s $(libdir)/libmysqlio.so $(dbdir) ; fi
+ @MYSQL_TRUE@	mkdir -p $(importdir)
+-@MYSQL_TRUE@	if test ! -L $(importdir)/libmysqlio.so ; then cd $(importdir); ln -s ../../lib/libmysqlio.so $(importdir) ; fi
++@MYSQL_TRUE@	if test ! -L $(importdir)/libmysqlio.so ; then cd $(importdir); ln -s $(libdir)/lib/libmysqlio.so $(importdir) ; fi
+ @MYSQL_TRUE@	mkdir -p $(exportdir)
+-@MYSQL_TRUE@	if test ! -L $(exportdir)/libmysqlio.so ; then cd $(exportdir); ln -s ../../lib/libmysqlio.so $(exportdir) ; fi
++@MYSQL_TRUE@	if test ! -L $(exportdir)/libmysqlio.so ; then cd $(exportdir); ln -s $(libdir)/lib/libmysqlio.so $(exportdir) ; fi
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+diff -r -u plugins.orig/ofx/Makefile.in plugins/ofx/Makefile.in
+--- plugins.orig/ofx/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/ofx/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -229,7 +229,7 @@
+ target_alias = @target_alias@
+ @OFX_TRUE@noinst_HEADERS = ofxplugin.h
+ @OFX_TRUE@lib_LTLIBRARIES = libofxio.la
+-@OFX_TRUE@pidir = $(prefix)/plugins
++@OFX_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @OFX_TRUE@dbdir = $(pidir)/db
+ @OFX_TRUE@importdir = $(pidir)/import
+ @OFX_TRUE@exportdir = $(pidir)/export
+@@ -276,7 +276,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -411,7 +411,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/psql/Makefile.in plugins/psql/Makefile.in
+--- plugins.orig/psql/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/psql/Makefile.in	2004-10-29 01:13:02.000000000 +0200
+@@ -236,7 +236,7 @@
+ target_alias = @target_alias@
+ @PSQL_TRUE@noinst_HEADERS = psqlplugin.h
+ @PSQL_TRUE@lib_LTLIBRARIES = libpsqlio.la
+-@PSQL_TRUE@pidir = $(prefix)/plugins
++@PSQL_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @PSQL_TRUE@dbdir = $(pidir)/db
+ @PSQL_TRUE@importdir = $(pidir)/import
+ @PSQL_TRUE@exportdir = $(pidir)/export
+@@ -283,7 +283,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -410,7 +410,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+@@ -533,9 +533,9 @@
+ @PSQL_TRUE@	mkdir -p $(dbdir)
+ @PSQL_TRUE@	if test ! -L $(dbdir)/libpsqlio.so ; then cd $(dbdir); ln -s $(libdir)/libpsqlio.so $(dbdir) ; fi
+ @PSQL_TRUE@	mkdir -p $(importdir)
+-@PSQL_TRUE@	if test ! -L $(importdir)/libpsqlio.so ; then cd $(importdir); ln -s ../../lib/libpsqlio.so $(importdir) ; fi
++@PSQL_TRUE@	if test ! -L $(importdir)/libpsqlio.so ; then cd $(importdir); ln -s $(libdir)/libpsqlio.so $(importdir) ; fi
+ @PSQL_TRUE@	mkdir -p $(exportdir)
+-@PSQL_TRUE@	if test ! -L $(exportdir)/libpsqlio.so ; then cd $(exportdir); ln -s ../../lib/libpsqlio.so $(exportdir) ; fi
++@PSQL_TRUE@	if test ! -L $(exportdir)/libpsqlio.so ; then cd $(exportdir); ln -s $(libdir)/lib/libpsqlio.so $(exportdir) ; fi
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+diff -r -u plugins.orig/qif/Makefile.in plugins/qif/Makefile.in
+--- plugins.orig/qif/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/qif/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -228,7 +228,7 @@
+ target_alias = @target_alias@
+ @QIF_TRUE@noinst_HEADERS = qifplugin.h
+ @QIF_TRUE@lib_LTLIBRARIES = libqifio.la
+-@QIF_TRUE@pidir = $(prefix)/plugins
++@QIF_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @QIF_TRUE@dbdir = $(pidir)/db
+ @QIF_TRUE@importdir = $(pidir)/import
+ @QIF_TRUE@exportdir = $(pidir)/export
+@@ -275,7 +275,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -402,7 +402,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/reports/Makefile.in plugins/reports/Makefile.in
+--- plugins.orig/reports/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/reports/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -309,7 +309,7 @@
+ @PGPH_TRUE@									libaves.la libbudget.la libmbudget.la libjournal.la \
+ @PGPH_TRUE@									libtrans.la libacct.la libtbal.la
+ 
+-@PGPH_TRUE@pidir = $(prefix)/plugins
++@PGPH_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @PGPH_TRUE@reportdir = $(pidir)/report
+ @PGPH_TRUE@noinst_LIBRARIES = libtemp.a
+ @PGPH_TRUE@libtemp_a_SOURCES = reporter.cpp
+@@ -394,7 +394,7 @@
+ 	$(RANLIB) libtemp.a
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -552,7 +552,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/sqlite/Makefile.in plugins/sqlite/Makefile.in
+--- plugins.orig/sqlite/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/sqlite/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -243,7 +243,7 @@
+ target_alias = @target_alias@
+ @SQLL_TRUE@noinst_HEADERS = sqliteplugin.h lfsqliteplugin.h
+ @SQLL_TRUE@lib_LTLIBRARIES = libsqliteio.la liblfsqliteio.la
+-@SQLL_TRUE@pidir = $(prefix)/plugins
++@SQLL_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @SQLL_TRUE@dbdir = $(pidir)/db
+ @SQLL_TRUE@importdir = $(pidir)/import
+ @SQLL_TRUE@exportdir = $(pidir)/export
+@@ -293,7 +293,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -423,7 +423,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/upgrade/Makefile.in plugins/upgrade/Makefile.in
+--- plugins.orig/upgrade/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/upgrade/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -236,7 +236,7 @@
+ target_alias = @target_alias@
+ @UPG_TRUE@noinst_HEADERS = upgplugin.h
+ @UPG_TRUE@lib_LTLIBRARIES = libupgradeio.la
+-@UPG_TRUE@pidir = $(prefix)/plugins
++@UPG_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @UPG_TRUE@dbdir = $(pidir)/db
+ @UPG_TRUE@libupgradeio_la_SOURCES = upgplugin.cpp upgplugin.h
+ @UPG_TRUE@RELEASE = 2:0:0
+@@ -281,7 +281,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -408,7 +408,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \
+diff -r -u plugins.orig/xml/Makefile.in plugins/xml/Makefile.in
+--- plugins.orig/xml/Makefile.in	2004-10-29 01:07:10.000000000 +0200
++++ plugins/xml/Makefile.in	2004-10-29 01:10:21.000000000 +0200
+@@ -236,7 +236,7 @@
+ target_alias = @target_alias@
+ @XML_TRUE@noinst_HEADERS = xmlplugin.h
+ @XML_TRUE@lib_LTLIBRARIES = libxmlio.la
+-@XML_TRUE@pidir = $(prefix)/plugins
++@XML_TRUE@pidir = $(DESTDIR)/$(prefix)/plugins
+ @XML_TRUE@dbdir = $(pidir)/db
+ @XML_TRUE@importdir = $(pidir)/import
+ @XML_TRUE@exportdir = $(pidir)/export
+@@ -283,7 +283,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -410,7 +410,7 @@
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+ 	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+ 	    dir="/$$dir"; \
+-	    $(mkdir_p) "$(distdir)$$dir"; \
++	    $(mkdir_p) "$(DESTDIR)/$(distdir)$$dir"; \
+ 	  else \
+ 	    dir=''; \
+ 	  fi; \

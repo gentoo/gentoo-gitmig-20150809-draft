@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.2.1.ebuild,v 1.9 2004/10/29 19:00:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.2.2.ebuild,v 1.1 2004/10/29 19:00:00 carlo Exp $
 
 inherit libtool kde-functions eutils
 
@@ -10,13 +10,15 @@ SRC_URI="mirror://sourceforge/qhacc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha ~hppa"
-IUSE="doc mysql postgres sqlite"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE="doc mysql ofx postgres sqlite"
 
-DEPEND="mysql? ( dev-db/mysql++ )
+DEPEND="ofx? ( ~dev-libs/libofx-0.7.0 )
+	mysql? ( dev-db/mysql++ )
 	postgres? ( dev-db/postgresql )
 	sqlite? ( dev-db/sqlite )"
-RDEPEND="mysql? ( dev-db/mysql++ )
+RDEPEND="ofx? ( ~dev-libs/libofx-0.7.0 )
+	mysql? ( dev-db/mysql++ )
 	postgres? ( dev-db/postgresql )
 	sqlite? ( dev-db/sqlite )"
 need-qt 3
@@ -32,7 +34,8 @@ src_compile() {
 	local myconf="--libdir=/usr/lib/qhacc --bindir=/usr/bin --includedir=/usr/include --datadir=/usr/share/qhacc
 			$(use_enable mysql)
 			$(use_enable postgres psql)
-			$(use_enable sqlite)"
+			$(use_enable sqlite)
+			$(use_enable ofx) $(use_with ofx ofx-includes /usr/include/libofx)"
 
 	econf ${myconf} || die "./configure failed"
 	emake -j 1 || die "make failed"
@@ -40,8 +43,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
-	# can't do this and I'm too lazy to patch all the Makefiles
-	# mv ${D}/usr/plugins ${D}/usr/lib/qhacc
 	dodir /usr/share/doc/${PF}
 	use doc && mv ${D}/usr/share/qhacc/doc/* ${D}/usr/share/doc/${PF}
 	rm -rf ${D}/usr/share/qhacc/doc

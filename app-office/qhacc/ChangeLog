@@ -1,6 +1,12 @@
 # ChangeLog for app-office/qhacc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.19 2004/10/21 02:58:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.20 2004/10/29 19:00:00 carlo Exp $
+
+*qhacc-3.2.2 (29 Oct 2004)
+
+  29 Oct 2004; Carsten Lohrke <carlo@gentoo.org>
+  +files/qhacc-3.2.2-sandbox.patch, qhacc-3.2.1.ebuild, +qhacc-3.2.2.ebuild:
+  version bump
 
   20 Oct 2004; Jason Wever <weeve@gentoo.org> qhacc-3.2.1.ebuild:
   Stable on sparc wrt bug #67169.
