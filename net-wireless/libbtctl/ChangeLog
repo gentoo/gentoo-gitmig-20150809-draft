@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.11 2004/07/20 23:10:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.12 2004/10/16 17:40:26 liquidx Exp $
+
+*libbtctl-0.4.1-r1 (16 Oct 2004)
+
+  16 Oct 2004; Alastair Tse <liquidx@gentoo.org> +libbtctl-0.4.1-r1.ebuild,
+  libbtctl-0.4.1.ebuild:
+  remove mono support in 0.4.1 to let it become stable, introduce 0.4.1-r1
+  with optional mono support for unstable users.
 
   20 Jul 2004; Alastair Tse <liquidx@gentoo.org> libbtctl-0.4.1.ebuild:
   fixing shared/static linking problem with libtool and openobex for libbtctl
