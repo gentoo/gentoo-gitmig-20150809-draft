@@ -1,0 +1,10 @@
+# ChangeLog for app-text/convertlit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.1 2004/09/02 04:26:40 usata Exp $
+
+*convertlit-1.8 (02 Sep 2004)
+
+  02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +convertlit-1.8.ebuild:
+  Initial import. Thanks to Thomas R. (TRauMa)
+  <gentoo-bugs@digital-trauma.de>, closing bug #25432.
+
