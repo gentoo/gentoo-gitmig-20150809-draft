@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.0-r2.ebuild,v 1.10 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.0-r2.ebuild,v 1.11 2002/07/25 05:06:50 gerk Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -16,7 +16,7 @@ RDEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2"
 HOMEPAGE="http://www.gnu.org/software/gdb/gdb.html"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 

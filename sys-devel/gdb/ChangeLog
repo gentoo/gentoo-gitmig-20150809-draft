@@ -1,6 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.5 2002/06/02 16:07:28 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.6 2002/07/25 05:06:50 gerk Exp $
 
 *gdb-5.1.1-r2 (2 June 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   2 June 2002; Olivier Reisch <doctomoe@gentoo.org> gdb-5.1.1-r2.ebuild
 
