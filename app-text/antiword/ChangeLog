@@ -1,6 +1,12 @@
 # ChangeLog for app-text/antiword
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.19 2004/09/08 02:05:35 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.20 2004/12/26 18:00:42 seemant Exp $
+
+*antiword-0.36.1 (26 Dec 2004)
+
+  26 Dec 2004; Seemant Kulleen <seemant@gentoo.org> -antiword-0.33.ebuild,
+  -antiword-0.34.ebuild, +antiword-0.36.1.ebuild:
+  version bump thanks to: Marc-?ric Dupuis <baal@megaoctet.net> in bug #75698
 
   06 Sep 2004; Tom Gall <tgall@gentoo.org> antiword-0.35.ebuild:
   stable on ppc64, bug #63054

@@ -1,28 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.33.ebuild,v 1.14 2004/06/24 22:27:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.36.1.ebuild,v 1.1 2004/12/26 18:00:42 seemant Exp $
 
 IUSE="kde"
-
-DESCRIPTION="free MS Word reader for Linux and RISC OS"
+DESCRIPTION="free MS Word reader"
 SRC_URI="http://www.winfield.demon.nl/linux/${P}.tar.gz"
 HOMEPAGE="http://www.winfield.demon.nl"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="~x86 amd64 ppc sparc alpha ~hppa ppc64"
 
-DEPEND=">=sys-apps/sed-4.0.5
-	virtual/ghostscript"
+DEPEND="virtual/ghostscript"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	sed -i \
-		-e 's/-pedantic//' \
-		-e 's/$(CFLAGS)/$(CFLAGS) -D$(DB)/' \
-		Makefile.Linux
 }
 
 src_compile() {
@@ -36,7 +30,11 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins Resources/*
 
+	insinto /usr/share/${PN}/examples
+	doins Docs/testdoc.doc Docs/antiword.php
+
 	cd Docs
 	doman antiword.1
-	dodoc COPYING ChangeLog FAQ History Netscape QandA ReadMe
+	dodoc COPYING ChangeLog Exmh Emacs FAQ History Netscape \
+	QandA ReadMe Mozilla Mutt
 }
