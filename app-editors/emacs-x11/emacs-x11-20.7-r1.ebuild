@@ -20,7 +20,7 @@ DEPEND=">=sys-libs/ncurses-4.0
 
 src_compile() {
     cd ${S}
-    try ./configure --prefix=/usr --libexecdir=/usr/X11R6/lib --host=${CHOST} --with-x
+    try ./configure --prefix=/usr --libexecdir=/usr/lib --host=${CHOST} --with-x
     try make
 }
 
