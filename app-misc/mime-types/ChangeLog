@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.12 2004/08/09 21:20:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.13 2004/08/12 10:27:49 slarti Exp $
+
+  12 Aug 2004; Tom Martin <slarti@gentoo.org> mime-types-1.0-r1.ebuild,
+  mime-types-1.0.ebuild:
+  Added ~s390 and s390 respectively, as required for metamail. This package only
+  doins's one file, so there should be no problem.
 
   09 Aug 2004; Tom Martin <slarti@gentoo.org> mime-types-1.0-r1.ebuild:
   Added ~mips on behalf of hardave
