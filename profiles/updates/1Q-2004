@@ -32,3 +32,10 @@ move app-misc/spicctrl app-laptop/spicctrl
 move games-action/stepmania games-arcade/stepmania
 move games-action/twobowl-tactics games-action/towbowl-tactics
 move x11-misc/xloadimage media-gfx/xloadimage
+move sys-apps/powerbook-tools app-laptop/powerbook-tools
+move sys-apps/gtkpbbuttons app-laptop/gtkpbbuttons
+move sys-apps/pbbuttonsd app-laptop/pbbuttonsd
+move x11-plugins/wmbatppc app-laptop/wmbatppc
+move x11-plugins/gkrellm-pmu app-laptop/gkrellm-pmu
+move sys-apps/pmud app-laptop/pmud
+move sys-apps/powerprefs app-laptop/powerprefs
