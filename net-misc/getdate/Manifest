@@ -1,15 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4258874ddda7ec14b6e601934014ac7 getdate-1.2.ebuild 781
-MD5 4c87be3bd46ef64161b3b5b908827b73 ChangeLog 855
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
+MD5 355380231fe8291da17990b56702c534 ChangeLog 957
+MD5 709c2595e5572e849692bdd26657b31e getdate-1.2.ebuild 785
 MD5 d2ce55fde628cfd4d7493625da97c22e files/digest-getdate-1.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFCDswZPpIsIjIzwiwRAlJ3AKC4ctEcL3x9zqbejwTpGq9sinbg1ACg6EPy
-X6Wb/RfIQTQwazH3oWyEUXg=
-=L0Cn
------END PGP SIGNATURE-----
