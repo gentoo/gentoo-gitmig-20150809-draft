@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.5 2003/04/27 12:18:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.6 2003/05/28 21:34:32 taviso Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ LICENSE="BSD"
 
 SLOT="0"
 
-KEYWORDS="x86 ~alpha"
+KEYWORDS="x86 alpha"
 
 DEPEND="virtual/glibc"
 #RDEPEND=""
