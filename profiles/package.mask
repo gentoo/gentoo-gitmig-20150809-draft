@@ -2,7 +2,7 @@
 #(12/22/01 - drobbins)
 
 #untested/not approved stuff, please do not use
->=sys-apps/portage-9
+>=sys-apps/portage-1.9
 
 #incomplete and very dangerous < Danarmak >
 >=app-office/openoffice-641b
