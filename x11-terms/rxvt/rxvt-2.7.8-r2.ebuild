@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r1.ebuild,v 1.1 2002/03/27 22:49:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r2.ebuild,v 1.1 2002/05/04 04:00:26 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="rxvt -- nice small x11 terminal"
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 
 
 src_compile() {
-	./configure 	\
+	./configure \
 		--host=${CHOST}	\
 		--prefix=/usr \
 		--mandir=/usr/share/man	\
@@ -28,15 +28,15 @@ src_compile() {
 		--enable-smart-resize \
 		--enable-menubar \
 		--enable-shared \
-		--enable-keepscrolling
+		--enable-keepscrolling || die
 
 	emake || die
 }
 
 src_install() {
 	make 	\
-		prefix=${D}/usr	\
-		mandir=${D}/usr/share/man	\
+		prefix=${D}/usr \
+		mandir=${D}/usr/share/man/man1 \
 		install || die
 
 	cd ${S}/doc
