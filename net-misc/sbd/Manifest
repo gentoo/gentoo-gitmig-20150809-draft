@@ -1,4 +1,14 @@
-MD5 36fd88c153bb3bcfa87bdaaffe33b4fe sbd-1.31.ebuild 668
-MD5 42c7d586c6eae2e1121259365534bc57 ChangeLog 430
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bfbdef110c471768a47ee4e6a2369ec1 metadata.xml 597
+MD5 1f3c16ce58fe2c726193fa24b1a5b532 sbd-1.31.ebuild 667
+MD5 65f52b4006f8ff158f0584c2fe721e9e ChangeLog 522
 MD5 05ad1cd9c3c8310ba1e14c571cd09f6b files/digest-sbd-1.31 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCZcRAXomK8S72HoRAocYAJ9dDLtFZcgpe+emGlrauMGunaFdTACdE8q8
+Bxh/tfXqwdd15jm+6/WkGfI=
+=Wqe4
+-----END PGP SIGNATURE-----
