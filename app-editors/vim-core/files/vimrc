@@ -10,7 +10,7 @@ set nocompatible        " Use Vim defaults (much better!)
 set bs=2                " Allow backspacing over everything in insert mode
 set ai                  " Always set auto-indenting on
 "set backup             " Keep a backup file
-set viminfo='20,\"50    " read/write a .viminfo file -- limit to only 50
+set viminfo='20,\"500   " read/write a .viminfo file -- limit regs to 500 lines
 set history=50          " keep 50 lines of command history
 set ruler               " Show the cursor position all the time
 
