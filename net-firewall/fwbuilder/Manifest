@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c2bb0c600dab2a5ce5e882c9f92059a1 ChangeLog 7129
-MD5 11e6f232f520cdf75476e709f2b3bc7e fwbuilder-1.1.2.ebuild 1390
-MD5 3fa6fa9b1139da67bb478856fb0e5b4a fwbuilder-2.0.0.ebuild 834
-MD5 1155a6757dc0702e0fa6ddda4c095534 fwbuilder-2.0.1.ebuild 819
-MD5 4986eb03aa05e3480972643cdc42afa9 fwbuilder-2.0.2.ebuild 850
+MD5 722cf2123d40a573c31ae76fef28f523 ChangeLog 7236
 MD5 76e4de6ec9b217c66c524497197dae75 fwbuilder-2.0.3.ebuild 945
+MD5 8a017f5bc53605d9ec3cfb1fe107f3c4 fwbuilder-2.0.6.ebuild 865
+MD5 11e6f232f520cdf75476e709f2b3bc7e fwbuilder-1.1.2.ebuild 1390
+MD5 4986eb03aa05e3480972643cdc42afa9 fwbuilder-2.0.2.ebuild 850
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
+MD5 1155a6757dc0702e0fa6ddda4c095534 fwbuilder-2.0.1.ebuild 819
 MD5 eb9856bc5402a9a226e2325d9192e453 fwbuilder-2.0.4.ebuild 866
 MD5 8719c7510feae1b658a046b360130d03 fwbuilder-2.0.5.ebuild 866
-MD5 34aeebdae82f9ebe0346cc59c30656d1 fwbuilder-2.0.6.ebuild 868
+MD5 3fa6fa9b1139da67bb478856fb0e5b4a fwbuilder-2.0.0.ebuild 834
 MD5 c1a7d072ddaa87c67e47e135f6cbd1cf files/digest-fwbuilder-1.1.2 68
-MD5 c1fa80e0d8e4fecdab2f4954a4331849 files/digest-fwbuilder-2.0.0 67
-MD5 8e082dd18bf1a4f65177d623d336457c files/digest-fwbuilder-2.0.1 67
-MD5 ffe7fa3e450755fc36ccc950afcbd31b files/digest-fwbuilder-2.0.2 67
-MD5 c0a74a19faa5841b76a422ac2997a887 files/digest-fwbuilder-2.0.3 67
-MD5 b7ecd1d8440ad584eead03ccddd2a800 files/fwbuilder-1.1.2-nls_fix.patch 382
-MD5 44b9d595271946adccdbfaa63eca4c5f files/fwbuilder-2.0.3-errno.patch 407
 MD5 53d2a461d760b41716b37876d0ef6d51 files/digest-fwbuilder-2.0.4 68
-MD5 9f20f25d4d825eab6d030825464b9c64 files/digest-fwbuilder-2.0.5 68
 MD5 70fea7193b1f73a34e3cf49a2ac9c9c7 files/digest-fwbuilder-2.0.6 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCOe9uKRy60XGEcJIRAoj/AJ987xjwv8pgfDh4Oa+lADNpEsPBsACffetA
-oP9wxBI7FKFZkUDeXqy1MTY=
-=DadQ
------END PGP SIGNATURE-----
+MD5 9f20f25d4d825eab6d030825464b9c64 files/digest-fwbuilder-2.0.5 68
+MD5 8e082dd18bf1a4f65177d623d336457c files/digest-fwbuilder-2.0.1 67
+MD5 c1fa80e0d8e4fecdab2f4954a4331849 files/digest-fwbuilder-2.0.0 67
+MD5 b7ecd1d8440ad584eead03ccddd2a800 files/fwbuilder-1.1.2-nls_fix.patch 382
+MD5 ffe7fa3e450755fc36ccc950afcbd31b files/digest-fwbuilder-2.0.2 67
+MD5 44b9d595271946adccdbfaa63eca4c5f files/fwbuilder-2.0.3-errno.patch 407
+MD5 c0a74a19faa5841b76a422ac2997a887 files/digest-fwbuilder-2.0.3 67
