@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/nfbtrans-7.70.ebuild,v 1.2 2004/05/02 11:53:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/nfbtrans-7.70.ebuild,v 1.3 2004/06/03 04:08:42 williamh Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nfb.org/nfbtrans.htm"
 SRC_URI="http://www.nfb.org/braille/nfbtrans/nfbtr770.zip"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
