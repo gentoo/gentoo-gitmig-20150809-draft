@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/mailx-support
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx-support/ChangeLog,v 1.1 2003/06/09 19:01:08 raker Exp $
+
+*mailx-support-20030215 (09 Jun 2003)
+
+  09 Jun 2003; Nick Hadaway <raker@gentoo.org> mailx-support-20030215.ebuild,
+  files/digest-mailx-support-20030215, files/mailx-support-20030215/*,
+  files/mailx-support-20030215-gentoo.patch:
+  Added to support >=mailx-8.1.2's need for /usr/libexec/lockspool
