@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.65.ebuild,v 1.2 2004/12/30 09:40:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.65.ebuild,v 1.3 2004/12/30 22:08:56 vapier Exp $
 
 inherit games
 
@@ -15,7 +15,7 @@ SRC_URI="http://nwdownloads.bioware.com/neverwinternights/standaloneserver/NWNDe
 	linguas_it? ( ${DIALOG_URL_BASE}/italian/NWNItalian${PV}dialog.zip )
 	linguas_es? ( ${DIALOG_URL_BASE}/spanish/NWNSpanish${PV}dialog.zip )
 	!linguas_de? ( !linguas_fr? ( !linguas_es? ( !linguas_it? (
-		${PATCH_URL_BASE}eng.tar.gz ${DIALOG_URL_BASE}/english/NWNEnglish${PV}dialog.zip
+		${DIALOG_URL_BASE}/english/NWNEnglish${PV}dialog.zip
 	) ) ) )"
 
 LICENSE="NWN-EULA"

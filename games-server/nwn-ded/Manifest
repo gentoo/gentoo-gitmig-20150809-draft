@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 45736e70909a17be9a4b1d3f51e25629 ChangeLog 1055
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 22471dec2fc010ccaf00eb144527f087 nwn-ded-1.65.ebuild 1679
+MD5 a48b47999ab878e298bb9be1624e271c nwn-ded-1.65.ebuild 1651
 MD5 bfdcf278d621e5f6ec577235fa7a4947 files/nwserver 45
 MD5 41149c425cd32af8f35787d80c81c9ab files/digest-nwn-ded-1.65 502
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB080wroRuSHgZdywRAjwrAJ4tKxAh3OqS541pwmAi1ylN02j1NACfXfSh
-etHVXuKqz6ee8FzK1lzHKD4=
-=Tfco
+iD8DBQFB1Hx/roRuSHgZdywRAkbHAJ93Udfp+WTlTYgc5W+gO717LzmiaACggVdy
+o8ekOFr1+3N17HYo23hGCxI=
+=Y966
 -----END PGP SIGNATURE-----
