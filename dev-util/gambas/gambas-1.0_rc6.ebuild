@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0_rc4.ebuild,v 1.2 2004/12/29 17:12:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0_rc6.ebuild,v 1.1 2004/12/29 17:12:10 genone Exp $
 
 inherit eutils
 
-MY_P="${PN}-0.99.RC4"
+MY_P="${PN}-0.99.RC6"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="a RAD tool for BASIC"

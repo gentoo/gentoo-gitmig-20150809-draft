@@ -3,17 +3,19 @@ Hash: SHA1
 
 MD5 622720c5c5e309d4457ff037f8a4175f metadata.xml 222
 MD5 3fff42865e3cad317fd7de9c28b8dc10 gambas-0.99.ebuild 1925
-MD5 e309b843d9a696186085f424900dd459 ChangeLog 4365
-MD5 2c4b72c89c276929fea0de1229a9999c gambas-1.0_rc4.ebuild 2344
+MD5 d2f0460e3dcf9f356257345cb6b92350 ChangeLog 4562
+MD5 23bcb8ef492a772ac978fe6b4408f9f8 gambas-1.0_rc4.ebuild 2397
+MD5 8199ef65dc1da1f70dc955a4a3d80117 gambas-1.0_rc6.ebuild 2397
 MD5 39016f3bbaf4069a963b10796d8f48f1 files/WebHome.html 692
 MD5 13a65dd33d4fd1d346206b80aaf3a1ff files/Makefile.am-0.97a 1528
 MD5 36441908c5da6408e450be896bf7e7b3 files/digest-gambas-0.99 65
 MD5 cb40c4d6cc8de988f3e5d60e53108472 files/Makefile.am-1.0_rc2 1508
 MD5 d44e34632944c6de65049fdb24a4f608 files/digest-gambas-1.0_rc4 69
+MD5 c5601d63fb89742f66717244a9aee121 files/digest-gambas-1.0_rc6 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBtsLI6J2i8a8J4okRAkH2AJ946DprRYXA42CostarLjN9t+2OYACgtRnM
-frpjpy7rLiwJR4r7vFBtjhM=
-=FjQw
+iD8DBQFB0uWy6J2i8a8J4okRAj1lAKDa/Z6JjHIqwYhtm/qf4BYYVnYOAQCeIxN6
+fUTvWXhORMNoVStn+lyyHmg=
+=R90P
 -----END PGP SIGNATURE-----
