@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.1 2003/07/08 23:49:00 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.2 2003/07/18 01:04:47 raker Exp $
+
+*mythmusic-0.10-r1 (17 Jul 2003)
+
+  17 Jul 2003; Nick Hadaway <raker@gentoo.org> mythmusic-0.10-r1.ebuild:
+  Replaced media-sound/mad with media-libs/{libmad,libid3tag}
 
   03 Jul 2003; Max Kalika <max@lsit.ucsb.edu> mythmusic-0.8.ebuild:
   Set KEYWORDS to ~x86.
