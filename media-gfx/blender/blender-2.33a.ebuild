@@ -1,9 +1,8 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.33a.ebuild,v 1.1 2004/07/12 16:45:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.33a.ebuild,v 1.2 2004/07/13 22:57:43 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
-replace-flags -march=pentium4 -march=pentium3
 
 IUSE="sdl jpeg png mozilla truetype static fmod"
 IUSE="${IUSE} blender-game" #blender-plugin"
@@ -19,9 +18,9 @@ KEYWORDS="-*"
 
 RDEPEND="virtual/x11
 	!amd64? ( dev-games/ode )
-	media-libs/libsdl 
-	media-libs/jpeg 
-	media-libs/libpng 
+	media-libs/libsdl
+	media-libs/jpeg
+	media-libs/libpng
 	>=media-libs/freetype-2.0
 	>=media-libs/openal-20020127
 	>=media-libs/libsdl-1.2
@@ -44,7 +43,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	
+
+	replace-flags -march=pentium4 -march=pentium3
 	scons -q
 
 	# SDL Support
@@ -78,7 +78,7 @@ src_compile() {
 	sed -i -e "s:BUILD_GAMEENGINE = 'true':BUILD_GAMEENGINE = 'false':" \
 	${S}/config.opts )
 
-	# Build the plugin 
+	# Build the plugin
 #	use blender-plugin && \
 #	( einfo "enabling mozilla plugin"
 #	sed -i -e "s:BUILD_BLENDER_PLUGIN = 'false':PLUGIN = 'true':" \
