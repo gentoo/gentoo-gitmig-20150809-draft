@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/geomview/geomview-1.8.1-r3.ebuild,v 1.2 2004/04/19 09:44:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/geomview/geomview-1.8.1-r3.ebuild,v 1.3 2004/04/19 09:46:23 phosphan Exp $
+
+inherit eutils
 
 DESCRIPTION="Interactive Geometry Viewer"
 SRC_URI="http://ftp1.sourceforge.net/geomview/geomview-1.8.1.tar.gz"
@@ -21,9 +23,9 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-stdiostream.diff || die
-	patch -p1 < ${FILESDIR}/${P}-configure.diff || die
-	}
+	epatch ${FILESDIR}/${P}-stdiostream.diff
+	epatch ${FILESDIR}/${P}-configure.diff
+}
 
 src_compile() {
 	econf || die "could not configure"
