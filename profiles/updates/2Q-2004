@@ -49,3 +49,4 @@ move net-mail/mutt mail-client/mutt
 move net-mail/nail mail-client/nail
 move net-mail/nmh mail-client/nmh
 move net-mail/pine mail-client/pine
+move net-mail/pine-maildir mail-client/pine-maildir
