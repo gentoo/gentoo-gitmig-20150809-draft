@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/x70talk
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/x70talk/ChangeLog,v 1.1 2004/09/20 11:03:16 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/x70talk/ChangeLog,v 1.2 2004/09/29 22:53:27 swegener Exp $
+
+  30 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest. Added missing IUSE.
 
 *x70talk-0.1.4 (20 Sep 2004)
 
