@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/mythweather-0.10.ebuild,v 1.2 2003/08/07 04:03:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/mythweather-0.10.ebuild,v 1.3 2003/08/08 05:15:27 max Exp $
 
 inherit flag-o-matic
 
@@ -12,8 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND=">=media-tv/mythtv-${PV}
-	>=sys-apps/sed-4"
+DEPEND=">=sys-apps/sed-4
+	|| ( >=media-tv/mythtv-${PV} >=media-tv/mythfrontend-${PV} )"
 
 src_unpack() {
 	unpack ${A}
