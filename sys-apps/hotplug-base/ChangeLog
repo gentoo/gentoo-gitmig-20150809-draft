@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hotplug-base
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug-base/ChangeLog,v 1.5 2004/04/15 17:18:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug-base/ChangeLog,v 1.6 2004/06/19 15:54:18 kugelfang Exp $
+
+  19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
+  hotplug-base-20040401.ebuild:
+  Marked stable on amd64.
 
 *hotplug-base-20040401 (15 Apr 2004)
 
