@@ -539,10 +539,6 @@ x11-themes/gtk-thinice-theme
 x11-themes/gtk-xenophilia-engine
 x11-themes/gtk-xfce-engine
 
-# lamer <lamer@gentoo.org> (4 Aug 2002)
-# Kismet package is new please test
-=net-wireless/kismet-2.4.6
-
 # <carpaski@gentoo.org> (04 Aug 2002)
 # Testing...
 =net-ftp/kbear-2.0_beta1
@@ -656,31 +652,9 @@ sys-apps/mkisofs
 # functions correctly.  Masking while incompatible pointers are figured out
 =x11-libs/libwmfun-0.0.4
 
-# lamer@gentoo.org (16 Jul 2002)
-# Brand spanking shiny new ebuild! Needs testing!
-=net-mail/mailman-2.0.12
-
-# lamer@gentoo.org (16 Jul 2002)
-# initscript needs testing, I don't run a system wide fetchmail so can't
-# verify.
-=net-mail/fetchmail-5.9.11-r1
-
-# lamer@gentoo.org (15 Jul 2002)
-# Needs socks testing
-=net-irc/irssi-0.8.5-r1
-
 # Remote DoS
 # http://online.securityfocus.com/bid/5055
 =net-irc/irssi-0.8.4
-
-# lamer@gentoo.org (15 Jul 2002)
-# Needs more testing, removed patch application in src_unpack
-=net-misc/dante-1.1.13
-
-# lamer@gentoo.org (21 Jul 2002)
-# Needs more testing, got word from someone on the devel team for this
-# upstream who's a gentoo user that it's b0rken. I can only test on x86
-=app-games/boson-0.6.1-r1
 
 # sunflare@gentoo.org (09 Jul 2002)
 # Masked because readline-4.2 is masked in default-1.0.
@@ -844,8 +818,6 @@ dev-lang/php
 
 # Security fix (reported by M0rpheus)
 <=net-mail/exim-3.33
-# Needs more testing (lamer@gentoo.org)
-=net-mail/exim-4.04
 
 #previous versions had a security hole (bug #212)
 <net-misc/stunnel-3.22
