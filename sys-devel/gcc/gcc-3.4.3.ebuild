@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.13 2004/12/04 02:08:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.14 2004/12/05 17:19:04 lv Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -14,7 +14,7 @@ KEYWORDS="-* amd64 ~mips ~ppc64 ~x86 -hppa ~ppc ~sparc"
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
 RDEPEND="virtual/libc
-	>=sys-devel/gcc-config-1.3.1
+	>=sys-devel/gcc-config-1.3.6-r4
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
 	!uclibc? (
