@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.8 2004/05/10 10:42:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.9 2004/05/12 10:43:18 wolf31o2 Exp $
+
+  12 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> +files/quake3.png,
+  quake3-1.32b-r3.ebuild:
+  Adding PNG icon and closing bug #50806.
 
   10 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> quake3-1.32b-r3.ebuild:
   Moving dir variable to global context.

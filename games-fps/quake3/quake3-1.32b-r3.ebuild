@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.9 2004/05/10 10:42:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.10 2004/05/12 10:43:18 wolf31o2 Exp $
 
 inherit games
 
@@ -53,10 +53,11 @@ src_install() {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/q3ded.rc q3ded
 	insinto /etc/conf.d ; newins ${FILESDIR}/q3ded.conf.d q3ded
 	insinto /usr/share/pixmaps
-	doins quake3.xpm
+	doins ${FILESDIR}/quake3.png
+	#doins quake3.xpm
 
 	prepgamesdirs
-	make_desktop_entry quake3 "Quake III Arena" quake3.xpm
+	make_desktop_entry quake3 "Quake III Arena" quake3.png
 }
 
 pkg_postinst() {
