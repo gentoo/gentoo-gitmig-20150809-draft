@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cfv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.17 2005/02/06 14:42:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.18 2005/03/27 00:37:23 hansmi Exp $
+
+  27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> cfv-1.17.ebuild:
+  Stable on ppc.
 
   06 Feb 2005; Sven Wegener <swegener@gentoo.org> cfv-1.17.ebuild:
   Marked stable on x86.
