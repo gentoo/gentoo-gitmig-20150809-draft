@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/cstetex-2.0.2-r1.ebuild,v 1.2 2005/01/20 20:08:53 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/cstetex-2.0.2-r1.ebuild,v 1.3 2005/04/05 17:11:42 usata Exp $
 
-inherit tetex eutils flag-o-matic
+inherit tetex-2
 
 IUSE=""
 DESCRIPTION="a complete TeX distribution with Czech and Slovak support"
@@ -18,7 +18,7 @@ done
 KEYWORDS="x86 ~amd64"
 
 src_unpack() {
-	tetex_src_unpack
+	tetex-2_src_unpack
 
 	cd ${S}
 	for FILE in ${CSTEX}; do
@@ -39,7 +39,7 @@ src_unpack() {
 }
 
 src_install() {
-	tetex_src_install
+	tetex-2_src_install
 
 	einfo "Installing Czech files..."
 	dodir /usr/share/texmf/tex/enctex
