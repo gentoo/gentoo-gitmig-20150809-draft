@@ -1,4 +1,4 @@
-MD5 0c818ebf98d1fc202b8119cd34f279b8 config-general-2.21.ebuild 546
-MD5 78d57ce66479fc49e8550bcf670c524f ChangeLog 576
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d1d509b94522b1939cc5589ca2837c2b ChangeLog 675
+MD5 c75c5a40267d17ea9a974f461fe7781e config-general-2.21.ebuild 542
 MD5 214984e441e1a76252a3a17f8ada0e35 files/digest-config-general-2.21 70
