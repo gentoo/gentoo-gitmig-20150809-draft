@@ -1,0 +1,245 @@
+--- src/aclocal.m4	2004-02-20 20:20:39.000000000 +0000
++++ src/aclocal.m4	2004-02-20 20:28:51.410375799 +0000
+@@ -1229,10 +1229,13 @@
+     AC_CHECK_LIB(socket, socket, LIBS="-lsocket -lnsl $LIBS", , -lnsl)))
+   KRB5_AC_ENABLE_DNS
+   if test "$enable_dns" = yes ; then
+-    AC_CHECK_FUNC(res_search, , AC_CHECK_LIB(resolv, res_search,
+-	LIBS="$LIBS -lresolv" ; RESOLV_LIB=-lresolv,
+-	AC_MSG_ERROR(Cannot find resolver support routine res_search in -lresolv.)
+-    ))
++    AC_CHECK_FUNC(res_search, , 
++      AC_CHECK_LIB(resolv, res_search, LIBS="$LIBS -lresolv" ; RESOLV_LIB=-lresolv,
++        AC_CHECK_LIB(resolv, __res_search, LIBS="$LIBS -lresolv" ; RESOLV_LIB=-lresolv,
++	  AC_MSG_ERROR(Cannot find resolver support routine res_search in -lresolv.)
++        )
++      )
++    )
+   fi
+   AC_SUBST(RESOLV_LIB)
+   ])
+--- src/util/et/configure.in	2004-02-20 20:47:01.000000000 +0000
++++ src/util/et/configure.in	2004-02-20 20:53:12.210333060 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(error_table.y)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_C_CONST
+ AC_PROG_LEX
+--- src/util/ss/configure.in	2004-02-20 20:47:01.000000000 +0000
++++ src/util/ss/configure.in	2004-02-20 20:53:12.210333060 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(ct.y)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_LEX
+ AC_PROG_YACC
+--- src/util/profile/configure.in	2004-02-20 23:11:24.520950563 +0000
++++ src/util/profile/configure.in	2004-02-20 23:11:50.930442490 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(prof_parse.c)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_C_CONST
+ AC_CHECK_SIZEOF(short)
+--- src/util/pty/configure.in	2004-02-20 23:17:03.410278953 +0000
++++ src/util/pty/configure.in	2004-02-20 23:17:09.530765003 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(getpty.c)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_AWK
+ AC_CHECK_FUNCS(fchmod fchown revoke vhangup killpg _getpty)
+--- src/util/db2/configure.in	2004-02-20 23:18:59.747505213 +0000
++++ src/util/db2/configure.in	2004-02-20 23:19:23.904531279 +0000
+@@ -1,5 +1,6 @@
+ dnl Process this file with autoconf to produce a configure script.
+ AC_INIT(db/db.c)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ AC_CONFIG_HEADER(include/config.h include/db-config.h)
+ CONFIG_RULES
+ 
+--- src/include/configure.in	2004-02-20 23:23:28.726003568 +0000
++++ src/include/configure.in	2004-02-20 23:23:34.241640248 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../aclocal.m4])
+ CONFIG_RULES
+ dnl
+ AH_TEMPLATE([HAVE_STRUCT_SOCKADDR_STORAGE], 
+--- src/lib/crypto/configure.in	2004-02-20 23:34:33.750669450 +0000
++++ src/lib/crypto/configure.in	2004-02-20 23:34:57.086901780 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ 
+ AC_CHECK_HEADERS(memory.h unistd.h)
+--- src/lib/krb5/configure.in	2004-02-20 23:40:17.561718584 +0000
++++ src/lib/krb5/configure.in	2004-02-20 23:40:24.975887197 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_AWK
+ dnl
+--- src/lib/des425/configure.in	2004-02-20 23:43:17.515274152 +0000
++++ src/lib/des425/configure.in	2004-02-20 23:43:24.600524519 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_CHECK_SIZEOF(short)
+ AC_CHECK_SIZEOF(int)
+--- src/lib/kdb/configure.in	2004-02-20 23:48:47.903708354 +0000
++++ src/lib/kdb/configure.in	2004-02-20 23:49:11.884789515 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_CHECK_HEADERS(unistd.h)
+ AC_TYPE_MODE_T
+--- src/lib/gssapi/configure.in	2004-02-20 23:57:43.218633025 +0000
++++ src/lib/gssapi/configure.in	2004-02-20 23:58:02.372908951 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_AWK
+ AC_CHECK_HEADERS(stdlib.h sys/types.h limits.h memory.h)
+--- src/lib/rpc/configure.in	2004-02-21 00:04:53.088639962 +0000
++++ src/lib/rpc/configure.in	2004-02-21 00:04:59.751997406 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(auth_gssapi.c)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_CONFIG_SUBDIRS(unit-test)
+ AC_CHECK_HEADERS(sys/uio.h)
+--- src/lib/rpc/unit-test/configure.in	2004-02-21 11:09:19.126971488 +0000
++++ src/lib/rpc/unit-test/configure.in	2004-02-21 11:09:32.756622070 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(client.c)
++AC_CONFIG_SRCDIR([../../../aclocal.m4])
+ CONFIG_RULES
+ dnl sets $(krb5_cv_host)
+ KRB5_BUILD_PROGRAM
+--- src/lib/kadm5/configure.in	2004-02-21 11:12:53.954126360 +0000
++++ src/lib/kadm5/configure.in	2004-02-21 11:13:00.109608561 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_LEX
+ AC_PROG_AWK
+--- src/kdc/configure.in	2004-02-21 11:34:23.492251841 +0000
++++ src/kdc/configure.in	2004-02-21 11:34:33.670742220 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(main.c)
++AC_CONFIG_SRCDIR([../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_INSTALL
+ AC_CHECK_HEADERS(syslog.h stdarg.h sys/select.h sys/sockio.h ifaddrs.h unistd.h)
+--- src/kadmin/configure.in	2004-02-21 11:39:36.309134276 +0000
++++ src/kadmin/configure.in	2004-02-21 11:39:50.281690189 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_INSTALL
+ AC_PROG_YACC
+--- src/slave/configure.in	2004-02-21 11:44:32.197209945 +0000
++++ src/slave/configure.in	2004-02-21 11:44:41.446930561 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(kprop.c)
++AC_CONFIG_SRCDIR([../aclocal.m4])
+ CONFIG_RULES
+ AC_TYPE_MODE_T
+ AC_PROG_INSTALL
+--- src/clients/configure.in	2004-02-21 11:49:07.637341321 +0000
++++ src/clients/configure.in	2004-02-21 11:49:15.256464177 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_INSTALL
+ KRB5_BUILD_PROGRAM
+--- src/appl/configure.in	2004-02-21 11:53:32.972976196 +0000
++++ src/appl/configure.in	2004-02-21 11:53:41.243938861 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_INSTALL
+ AC_CHECK_HEADERS(unistd.h stdlib.h string.h)
+--- src/appl/bsd/configure.in	2004-02-21 12:44:08.589164829 +0000
++++ src/appl/bsd/configure.in	2004-02-21 12:44:33.750963123 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(krlogind.c)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ LOGINLIBS=
+ AC_ARG_WITH([afs],
+--- src/appl/gssftp/configure.in	2004-02-21 12:48:13.998683719 +0000
++++ src/appl/gssftp/configure.in	2004-02-21 12:48:22.651551451 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(README.gssftp)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_C_CONST
+ AC_PROG_INSTALL
+--- src/appl/telnet/configure.in	2004-02-21 14:31:20.888588427 +0000
++++ src/appl/telnet/configure.in	2004-02-21 14:31:35.367033388 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_CONFIG_SUBDIRS(libtelnet telnet telnetd)
+ V5_AC_OUTPUT_MAKEFILE
+--- src/appl/telnet/libtelnet/configure.in	2004-02-21 14:34:54.130228583 +0000
++++ src/appl/telnet/libtelnet/configure.in	2004-02-21 14:35:04.842598213 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(auth.c)
++AC_CONFIG_SRCDIR([../../../aclocal.m4])
+ CONFIG_RULES
+ AC_REPLACE_FUNCS([strcasecmp strdup setsid strerror strftime getopt herror parsetos])
+ AC_CHECK_FUNCS(setenv unsetenv getenv gettosbyname cgetent)
+--- src/appl/telnet/telnet/configure.in	2004-02-21 14:37:44.213459181 +0000
++++ src/appl/telnet/telnet/configure.in	2004-02-21 14:37:53.220246506 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(telnet.c)
++AC_CONFIG_SRCDIR([../../../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_INSTALL
+ AC_FUNC_VFORK
+--- src/appl/telnet/telnetd/configure.in	2004-02-21 14:40:21.547807347 +0000
++++ src/appl/telnet/telnetd/configure.in	2004-02-21 14:40:34.278679803 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(telnetd.c)
++AC_CONFIG_SRCDIR([../../../aclocal.m4])
+ CONFIG_RULES
+ AC_PROG_INSTALL
+ AC_CHECK_LIB(util,main)
+--- src/tests/configure.in	2004-02-21 14:43:26.160454386 +0000
++++ src/tests/configure.in	2004-02-21 14:43:35.246222333 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../aclocal.m4])
+ CONFIG_RULES
+ KRB5_RUN_FLAGS
+ KRB5_BUILD_PROGRAM
+--- src/lib/krb4/configure.in	2004-02-21 14:48:36.077319065 +0000
++++ src/lib/krb4/configure.in	2004-02-21 14:48:43.785425471 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(configure.in)
++AC_CONFIG_SRCDIR([../../aclocal.m4])
+ CONFIG_RULES
+ AC_TYPE_MODE_T
+ AC_TYPE_UID_T
+--- src/krb524/configure.in	2004-02-21 14:52:49.127154403 +0000
++++ src/krb524configure.in	2004-02-21 14:52:58.079955050 +0000
+@@ -1,4 +1,5 @@
+ AC_INIT(krb524d.c)
++AC_CONFIG_SRCDIR([../aclocal.m4])
+ CONFIG_RULES
+ KRB5_BUILD_LIBRARY_STATIC
+ KRB5_BUILD_LIBOBJS
