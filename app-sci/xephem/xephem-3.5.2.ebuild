@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/xephem-3.5.2.ebuild,v 1.4 2002/08/19 00:32:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/xephem-3.5.2.ebuild,v 1.5 2002/09/02 02:08:05 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XEphem is the X Windows Ephemeris, and provides a scientific-grade solar system model, star charts, sky views, plus a whole lot more."
@@ -11,11 +11,9 @@ SLOT="0"
 LICENSE="as-is"
 DEPEND="x11-libs/openmotif"
 
-pkg_setup() {
-	if [ ! -f ${DISTDIR}/${P}.tar.gz ] ; then
-		die "Please download ${P}.tar.gz from ${HOMEPAGE} and move it to ${DISTDIR}"
-	fi
-}
+if [ ! -f ${DISTDIR}/${P}.tar.gz ] ; then
+	die "Please download ${P}.tar.gz from ${HOMEPAGE} and move it to ${DISTDIR}"
+fi
 
 src_compile() {
 
