@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-ldap-py21
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap-py21/ChangeLog,v 1.2 2003/04/05 21:43:34 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap-py21/ChangeLog,v 1.3 2003/06/23 08:10:12 kutsuya Exp $
+
+  23 Jun 2003; Jason Shoemaker <kustsuya@gentoo.org>
+  python-ldap-py21-2.0.0_pre05-r1.ebuild, python-ldap-py21-2.0.0_pre06.ebuild:
+  ~ppc -> ppc
 
 *python-ldap-py21-2.0.0_pre06 (29 Mar 2003)
 
