@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.2 2002/06/28 17:16:12 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.3 2002/06/29 13:34:42 verwilst Exp $
 
 
 inherit  kde-dist
@@ -71,9 +71,12 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 
     #backup splashscreen images, so they can be put back when unmerging 
     #mosfet or so.
-    cd ${D}/${KDEDIR}/share/apps
-    cp -rf ksplash/ ksplash.default
-
+    if [ ! -d ${D}/${KDEDIR}/share/apps/ksplash.default ]
+    then
+        cd ${D}/${KDEDIR}/share/apps
+        cp -rf ksplash/ ksplash.default
+    fi
+    
     # Show gnome icons when choosing new icon for desktop shortcut
     mkdir -p ${D}/usr/share/pixmaps
     mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
