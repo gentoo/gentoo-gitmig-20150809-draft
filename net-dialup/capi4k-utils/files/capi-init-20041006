@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi-init-20041006,v 1.1 2004/10/30 13:13:58 dragonheart Exp $
+
+depend() {
+	after isapnp
+}
+
+start() {
+	if [ ! -e /etc/capi.conf ] ; then
+		eerror "You're missing /etc/capi.conf (comes with a capi-driver)."
+		eerror "Emerge net-dialup/fcpci if you are having an AVM Fritz!Card PCI"
+		return 1
+	fi
+	ebegin "Starting CAPI"
+	/sbin/capiinit start
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping CAPI"
+	/sbin/capiinit stop
+	eend $?
+}

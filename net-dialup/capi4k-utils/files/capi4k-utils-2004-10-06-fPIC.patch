@@ -1,0 +1,10 @@
+--- capi20/Makefile.am_old	2004-10-30 13:15:45.099518775 +0200
++++ capi20/Makefile.am	2004-10-30 13:16:13.422481911 +0200
+@@ -14,6 +14,7 @@
+ 
+ libcapi20dyn_a_SOURCES = capidyn.c
+ libcapi20dyn_a_CFLAGS = -fPIC
++CFLAGS = -fPIC
+ # libcapi20_la_LIBADD = $(LIBADD_DL)
+ 
+ $(OBJECTS): libtool

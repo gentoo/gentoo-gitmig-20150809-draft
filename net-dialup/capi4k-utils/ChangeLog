@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.14 2004/10/14 20:08:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.15 2004/10/30 13:13:58 dragonheart Exp $
+
+*capi4k-utils-20041006 (30 Oct 2004)
+
+  30 Oct 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/capi-init-20041006, +files/capi4k-utils-2004-10-06-fPIC.patch,
+  +files/capi4k-utils-2004-10-06.patch, +capi4k-utils-20041006.ebuild:
+  New version bump thanks to Torsten Veller <torsten@veller.net>
 
   14 Oct 2004; David Holm <dholm@gentoo.org> capi4k-utils-20040810.ebuild:
   Added to ~ppc.
