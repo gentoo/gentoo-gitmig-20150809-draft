@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.41 2004/11/09 16:12:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.42 2004/11/30 20:07:59 carlo Exp $
+
+  30 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kde-i18n-3.2.0.ebuild:
+  removed kde-i18n-st, since it isn't available upstream anymore and the digest
+  is missing
 
   09 Nov 2004; Lars Weiler <pylon@gentoo.org> kde-i18n-3.3.1.ebuild:
   Stable on ppc.
