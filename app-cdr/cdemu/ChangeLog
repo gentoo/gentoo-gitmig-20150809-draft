@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.6 2004/11/22 13:58:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.7 2004/12/05 17:58:35 kingtaco Exp $
+
+  05 Dec 2004; Mike Doty <kingtaco@gentoo.org> cdemu-0.7.ebuild:
+  ~amd64 keyword added
 
 *cdemu-0.7 (22 Nov 2004)
 
