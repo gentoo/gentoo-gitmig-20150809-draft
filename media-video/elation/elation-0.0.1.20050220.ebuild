@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/elation/elation-0.0.1.20040807.ebuild,v 1.2 2004/08/12 04:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/elation/elation-0.0.1.20050220.ebuild,v 1.1 2005/02/21 12:04:31 vapier Exp $
 
 inherit enlightenment
 
