@@ -1,10 +1,14 @@
 # ChangeLog for media-sound/rip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/ChangeLog,v 1.2 2002/04/08 04:13:13 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/ChangeLog,v 1.3 2002/08/28 14:16:36 cselkirk Exp $
 
 *rip-1.01 (7 Apr 2002)
 
   7 Apr 2002; G. Shapovalov <george@gentoo.org> Changelog:
+  
+  28 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> rip-1.01-r1 :
+
+  Added ppc to KEYWORDS.
 
   Initial release of this ebuild. Contains rip-1.01 and rip-1.01-r1
   rip-1.01.ebuild:
