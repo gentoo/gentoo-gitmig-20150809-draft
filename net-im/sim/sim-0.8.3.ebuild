@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.3.ebuild,v 1.9 2004/01/13 13:51:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.3.ebuild,v 1.10 2004/04/16 13:53:25 caleb Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils
@@ -43,7 +43,7 @@ src_compile() {
 	fi
 
 	need-automake 1.6
-	need-autoconf 2.5
+#	need-autoconf 2.5
 
 	make -f admin/Makefile.common
 
