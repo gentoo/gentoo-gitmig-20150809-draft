@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/xp
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xp/ChangeLog,v 1.1 2004/11/14 18:52:41 axxo Exp $
+
+*xp-0.5 (14 Nov 2004)
+
+  14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> +files/build.xml,
+  +xp-0.5.ebuild:
+  initial import, submitted by Jan Brinkmann <lucky@the-luckyduck.de>
+
