@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.24 2003/07/13 13:32:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.25 2003/07/23 04:00:49 iggy Exp $
+
+*courier-0.42.2-r2 (22 Jul 2003)
+
+  22 Jul 2003; <iggy@gentoo.org> courier-0.42.2-r2.ebuild, files/courier-init:
+  fixed bug 25028, and switched to single init script
 
   03 Jul 2003; ,,, <iggy@gentoo.org> metadata.xml:
   added metadata.xml
