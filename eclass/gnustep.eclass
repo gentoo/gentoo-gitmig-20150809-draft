@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.8 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.9 2004/06/29 15:16:23 vapier Exp $
 
 ECLASS=gnustep
 INHERITED="$INHERITED $ECLASS"
@@ -10,8 +10,8 @@ DESCRIPTION="Based on the gnustep eclass."
 DEPEND="dev-util/gnustep-make
 	dev-util/gnustep-base
 	sys-devel/gcc
-	virtual/glibc"
-RDEPEND="virtual/glibc"
+	virtual/libc"
+RDEPEND="virtual/libc"
 
 getsourcedir() {
 	if [ ! -d "${S}" ] ; then

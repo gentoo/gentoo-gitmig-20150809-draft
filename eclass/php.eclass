@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.99 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.100 2004/06/29 15:16:23 vapier Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This eclass is the old style of php, that was used before php-core was
@@ -91,8 +91,8 @@ RDEPEND="
    dev-libs/expat
    sys-libs/zlib 
    virtual/mta
-	 virtual/glibc"
-# virtual/glibc line added as a fix for an rsync issue regarding cache
+   virtual/libc"
+# virtual/libc line added as a fix for an rsync issue regarding cache
 # regeneration. It's harmless, but it causes that particular issue to
 # disappear. (sys-apps -> app-arch move stuff)
 
