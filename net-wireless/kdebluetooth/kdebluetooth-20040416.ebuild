@@ -1,27 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-20040128.ebuild,v 1.2 2004/02/05 19:50:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-20040416.ebuild,v 1.1 2004/04/16 18:45:44 caleb Exp $
 
 inherit kde
 need-kde 3
 
 DESCRIPTION="KDE Bluetooth Framework"
 HOMEPAGE="http://kde-bluetooth.sourceforge.net/"
-SRC_URI="http://members.xoom.virgilio.it/motaboy/kdebluetooth-${PV}.tar.bz2"
+SRC_URI="http://members.xoom.virgilio.it/motaboy/kdebluetooth-0.0.${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86"
+RESTRICT="nomirror"
 
 DEPEND=">=dev-libs/openobex-1
 	>=net-wireless/bluez-libs-2
 	>=net-wireless/bluez-sdp-1"
-
-need-automake 1.6
-need-autoconf 2.5
-
-src_install() {
-		kde_src_install
-}
 
 pkg_postinst() {
 	einfo "This new version of kde-bluetooth provide a replacement for the"
