@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.4 2004/07/14 23:58:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.5 2004/07/20 12:29:46 jmglov Exp $
+
+*gip-1.2.0.1 (20 Jul 2004)
+
+  20 Jul 2004; Josh Glover <jmglov@gentoo.org> gip-1.2.0.1.ebuild:
+  Version bump
 
 *gip-1.1.0.1 (08 Jul 2004)
 
