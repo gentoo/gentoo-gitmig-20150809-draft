@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.5.ebuild,v 1.1 2003/09/12 07:10:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.5.ebuild,v 1.2 2003/11/12 22:22:14 genone Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -15,7 +15,7 @@ S2=${WORKDIR}/${MY_GS}
 DESCRIPTION="Bleeding edge version of Sylpheed"
 HOMEPAGE="http://sylpheed-claws.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
-	pdflib? ( mirror://sourceforge/${PN}/${MY_GS}.tar.bz2)"
+	pdflib? ( mirror://sourceforge/${PN}/${MY_GS}.tar.bz2 )"
 
 SLOT="0"
 LICENSE="GPL-2"
