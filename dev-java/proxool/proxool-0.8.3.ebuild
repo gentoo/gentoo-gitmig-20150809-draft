@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3.ebuild,v 1.1 2004/12/27 15:22:11 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3.ebuild,v 1.2 2004/12/27 15:24:29 st_lim Exp $
 
 inherit java-pkg
 
@@ -31,7 +31,8 @@ src_compile() {
 }
 
 src_install () {
-	java-pkg_dojar build/${P}.jar || die "installation failed"
+	mv build/${P}.jar build/${PN}.jar
+	java-pkg_dojar build/${PN}.jar || die "installation failed"
 	dodoc README.txt
 	use doc && java-pkg_dohtml -r doc/*
 }
