@@ -187,6 +187,16 @@ digest_check() {
 	return 0
 }
 
+dyn_check() {
+
+    dopython portage.dep_frontend
+    if [ $? -ne 0 ]
+    then
+      exit $?
+    fi
+
+}
+
 dyn_batchdigest() {
     local x
     if [ ! -e ${FILESDIR}/digest-${PF} ]
@@ -703,83 +713,75 @@ src_menu() {
 	prerm|postrm|preinst|postinst|config)
 	    pkg_${MYfoo}
 	    ;;
-	help|batchdigest|touch|clean|fetch|digest|pkginfo|pkgloc|unmerge|install)
+	help|batchdigest|touch|clean|fetch|digest|pkginfo|pkgloc|unmerge|install|check)
 	    dyn_${MYfoo}
 	    ;;
 	package)
-        dopython portage.dep_frontend
-		if [ $? -ne 0 ]
-		then
-			exit $?
-		fi
+		dyn_check
 		dyn_fetch
-	local PNAME=${PF}.${PACKAGE}
-	if [ ! -d ${PKGDIR} ]
-	then
-		install -d ${PKGDIR}
-	fi
-	if [ ! -d ${PKGDIR}/All ]
-	then
-		install -d ${PKGDIR}/All
-	fi	
-	if [ ! -d ${PKGDIR}/${CATEGORY} ]
-	then
-		install -d ${PKGDIR}/${CATEGORY}
-	fi
-    	if [ -e ${PKGDIR}/All/${PNAME} ]
-    	then
-		if [ ! -d ${PKGDIR}/${CATEGORY}/${PNAME} ]
+		local PNAME=${PF}.${PACKAGE}
+		if [ ! -d ${PKGDIR} ]
 		then
-			ln -sf ${PKGDIR}/All/${PNAME} ${PKGDIR}/${CATEGORY}/${PNAME}
+			install -d ${PKGDIR}
 		fi
-    		local x
-    		local dopackage
-    		dopackage="no"
-    		for x in ${A} ${EBUILD}
-    		do
-			if [ ${x} -nt ${PKGDIR}/All/${PNAME} ]
+		if [ ! -d ${PKGDIR}/All ]
+		then
+			install -d ${PKGDIR}/All
+		fi	
+		if [ ! -d ${PKGDIR}/${CATEGORY} ]
+		then
+			install -d ${PKGDIR}/${CATEGORY}
+		fi
+    		if [ -e ${PKGDIR}/All/${PNAME} ]
+	    	then
+			if [ ! -d ${PKGDIR}/${CATEGORY}/${PNAME} ]
 			then
-				dopackage="yes"
-				break
+				ln -sf ${PKGDIR}/All/${PNAME} ${PKGDIR}/${CATEGORY}/${PNAME}
 			fi
-    		done
-		if [ "$dopackage" = "no" ]
-		then
-			echo
-			echo ">>> Package ${PNAME} appears to be up-to-date."
-			echo ">>> To force rebuild, touch ${EBUILD}."
-			echo
-			continue
-		fi
-    	fi
-        dyn_unpack
-	dyn_compile
-	dyn_install
-	dyn_package
-	;;
+	    		local x
+    			local dopackage
+    			dopackage="no"
+	    		for x in ${A} ${EBUILD}
+    			do
+				if [ ${x} -nt ${PKGDIR}/All/${PNAME} ]
+				then
+					dopackage="yes"
+					break
+				fi
+	    		done
+			if [ "$dopackage" = "no" ]
+			then
+				echo
+				echo ">>> Package ${PNAME} appears to be up-to-date."
+				echo ">>> To force rebuild, touch ${EBUILD}."
+				echo
+				continue
+			fi
+    		fi
+
+	        dyn_unpack
+		dyn_compile
+		dyn_install
+		dyn_package
+		;;
+
 	qmerge)
 	    dyn_merge
 	    ;;
+
  	merge)
-        merge_check
-		dopython portage.dep_frontend
-		if [ $? -ne 0 ]
-		then
-			exit $?
-		fi
-		dyn_fetch
+
+	    dyn_check
 	    dyn_unpack
 	    dyn_compile
             dyn_install
             dyn_merge
 	    ;;
+
 	rpm)
-        dopython portage.dep_frontend
-		if [ $? -ne 0 ]
-		then
-			exit $?
-		fi
-	            dyn_fetch
+
+	    dyn_check
+            dyn_fetch
 	    dyn_unpack
 	    dyn_compile
             dyn_install	
