@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.6.0.ebuild,v 1.8 2004/07/03 19:17:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.6.0.ebuild,v 1.9 2004/09/08 17:42:22 vapier Exp $
 
 inherit gnome2
 
 DESCRIPTION="User Interface routines for Gnome"
 HOMEPAGE="http://www.gnome.org/"
 
-IUSE="doc jpeg"
-SLOT="0"
-KEYWORDS="x86 ppc alpha ~sparc hppa amd64 ~ia64 mips"
 LICENSE="GPL-2 LGPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc alpha ~sparc hppa amd64 ia64 mips"
+IUSE="doc jpeg"
 
 RDEPEND=">=x11-libs/gtk+-2.3.5
 	>=x11-libs/pango-1.1.2

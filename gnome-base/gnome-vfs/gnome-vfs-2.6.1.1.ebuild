@@ -1,18 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.1.1.ebuild,v 1.11 2004/08/22 13:00:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.1.1.ebuild,v 1.12 2004/09/08 17:40:52 vapier Exp $
 
 inherit gnome2 eutils
-
-IUSE="doc ssl gnutls  samba ipv6"
-
-SLOT="2"
 
 DESCRIPTION="Gnome Virtual Filesystem"
 HOMEPAGE="http://www.gnome.org/"
 
-KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~mips ~ia64 ppc64"
 LICENSE="GPL-2 LGPL-2"
+SLOT="2"
+KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~mips ia64 ppc64"
+IUSE="doc ssl gnutls  samba ipv6"
 
 RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gconf-1.2
