@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.38.14-r1.ebuild,v 1.10 2002/08/09 03:06:49 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.38.14-r1.ebuild,v 1.11 2002/08/09 03:17:22 agenkin Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 LICENSE="GPL-2"
@@ -38,9 +38,9 @@ src_install() {
 
 pkg_config() {
 
-	conffile="/etc/ssmtp/ssmtp.conf"
-	hostname=`hostname -f`
-	domainame=`hostname -d`
+	local conffile="/etc/ssmtp/ssmtp.conf"
+	local hostname=`hostname -f`
+	local domainame=`hostname -d`
 	mv ${conffile} ${conffile}.orig
 	sed -e "s:rewriteDomain\=:rewriteDomain\=${domainame}:g" \
 		-e "s:_HOSTNAME_:${hostname}:" \
