@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1-r1.ebuild,v 1.5 2004/07/13 16:14:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1-r1.ebuild,v 1.6 2004/07/14 08:59:45 aliz Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X"
+IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv debug"
 
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -144,6 +144,12 @@ src_compile() {
 		sed -e 's:CONFIG += using_xv:#CONFIG += using_xv:' \
 			-e 's:EXTRA_LIBS += -L/usr/X11:#EXTRA_LIBS += -L/usr/X11:' \
 		-i 'settings.pro' || die "disable xv failed"
+	fi
+
+	if use debug ; then
+		sed -e 's:#CONFIG += debug:CONFIG += debug:' \
+			-e 's:CONFIG += release:#CONFIG += release:' \
+		-i 'settings.pro' || die "enable debug failed"
 	fi
 
 	sed -i -e "s:-O3::g" -e "s:-fomit-frame-pointer::g" settings.pro
