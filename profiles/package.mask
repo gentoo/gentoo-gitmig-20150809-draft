@@ -662,7 +662,6 @@ gnome-extra/gnome-vfs-extras
 gnome-extra/libgnomeprint
 gnome-extra/libgnomeprintui
 gnome-extra/libgtkhtml
-gnome-extra/libgail-gnome
 x11-terms/gnome-terminal
 
 >=media-gfx/eog-0.110.0
@@ -675,7 +674,6 @@ gnome-extra/metatheme
 gnome-extra/nautilus-gtkhtml
 gnome-extra/gconf-editor
 gnome-extra/gal2
-gnome-extra/at-spi
 >=app-text/ggv-1.99.0
 # this fails to compile until new gtk+ is out 
 =app-text/ggv-1.99.5
@@ -695,6 +693,11 @@ dev-libs/libmrproject
 >=dev-util/glade-1.1.0
 >=gnome-base/gdm-2.3.90.3
 
+
+# at-spi doesn't install all headers so libgail-gnome doesn't build ok.
+# therefore at-poke isn't in portage since it can't be tested
+gnome-extra/libgail-gnome
+gnome-extra/at-spi
 
 
 # mkennedy@gentoo.org 14 Apr 2002
