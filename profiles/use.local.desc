@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.514 2004/07/27 07:28:46 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.515 2004/07/28 11:31:02 plasmaroo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -463,6 +463,7 @@ sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
 sys-kernel/alpha-sources:usagi - adds USAGI (Linux IPv6 Development Project) support
 sys-kernel/development-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/development-sources:vanilla - keep the kernel sources in a vanilla state and do not apply anything from genpatches.
+sys-kernel/genkernel:bootsplash - Installs bootsplash support if you request it and it is not already available.
 sys-kernel/gentoo-sources:aavm - adds Andrea Arcangeli's vm support (removes rmap by Rik van Riel which is the default)
 sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
 sys-kernel/gentoo-sources:evms2 - adds EVMS 2.0 support drop EVMS 1.2.1
