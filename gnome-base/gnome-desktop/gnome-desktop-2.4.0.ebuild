@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.0.ebuild,v 1.1 2003/09/11 23:19:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.0.ebuild,v 1.2 2003/09/12 12:00:32 spider Exp $
 
 inherit gnome2 eutils
 
@@ -16,8 +16,12 @@ RDEPEND=">=x11-libs/gtk+-2.1.2
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/gnome-vfs-2
 	>=x11-libs/startup-notification-0.5
+	>=gnome-base/libbonoboui-2.3
+	>=gnome-base/libbonobo-2
 	!gnome-base/gnome-core"
 
+# ugh, we don't need libbonobo really, but people bug about it. 
+# remove in 2.4.1 release.
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7.2
 	>=dev-util/intltool-0.22
