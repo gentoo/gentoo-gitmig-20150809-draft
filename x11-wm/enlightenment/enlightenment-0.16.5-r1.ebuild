@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r1.ebuild,v 1.5 2001/06/06 16:55:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r1.ebuild,v 1.6 2001/08/11 05:32:14 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/fnlib-0.5
 
 src_compile() {
   
-  try CFLAGS="\"${CFLAGS} -I/opt/gnome/include\"" LDFLAGS="-L/opt/gnome/lib" \
+  try CFLAGS="${CFLAGS} -I/opt/gnome/include" LDFLAGS="-L/opt/gnome/lib" \
 	./configure --host=${CHOST} --prefix=/usr/X11R6
   try make
 }

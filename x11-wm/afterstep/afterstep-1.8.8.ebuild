@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.8.ebuild,v 1.3 2001/06/03 09:54:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.8.ebuild,v 1.4 2001/08/11 05:32:14 drobbins Exp $
 
 #P=
 A=AfterStep-${PV}.tar.bz2
@@ -22,7 +22,7 @@ RDEPEND="virtual/glibc virtual/x11
 
 src_compile() {
     try ./configure --prefix=/usr/X11R6 --host=${CHOST} \
-	--with-helpcommand=\""xterm -e man"\" \
+	--with-helpcommand="xterm -e man" \
 	--disable-availability \
 	--disable-staticlibs
     try make
