@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.1-r6.ebuild,v 1.18 2004/01/30 11:31:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.1-r6.ebuild,v 1.19 2004/02/23 00:17:07 agriffis Exp $
 
 # OLD14 = 1.4
 # OLD15 = 1.5
@@ -47,7 +47,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 	mirror://gnu/${PN}/${OLD14_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha arm"
+KEYWORDS="x86 ppc sparc alpha "
 
 DEPEND="dev-lang/perl
 	>=sys-devel/autoconf-2.53-r1"
