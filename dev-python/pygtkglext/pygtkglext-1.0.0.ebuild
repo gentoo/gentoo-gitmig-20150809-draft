@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-0.1.0.ebuild,v 1.4 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.0.0.ebuild,v 1.1 2003/09/21 14:22:58 liquidx Exp $
 
 DESCRIPTION="Python bindings to GtkGLExt"
 HOMEPAGE="http://gtkglext.sourceforge.net/"
@@ -11,15 +11,18 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=dev-lang/python-2.2
-	>=dev-python/pygtk-1.99
+	>=dev-python/pygtk-2
 	>=dev-libs/glib-2.0
 	>=x11-libs/gtk+-2.0
-	>=x11-libs/gtkglext-0.99.1
+	>=x11-libs/gtkglext-1.0.0
 	virtual/x11
 	virtual/opengl
 	virtual/glu"
 
 src_compile() {
+	# ugly hack for sandbox (opens file readwrite, but only really reads)
+	addwrite /usr/share/pygtk/2.0/codegen
+
 	econf
 	emake || die
 }
