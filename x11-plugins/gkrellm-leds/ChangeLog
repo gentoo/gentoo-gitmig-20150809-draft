@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-leds
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/ChangeLog,v 1.13 2004/12/28 22:15:51 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/ChangeLog,v 1.14 2005/01/28 16:58:12 luckyduck Exp $
+
+  28 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> gkrellm-leds-0.8.1.ebuild:
+  added ~amd64 to KEYWORDS. fixes #79781
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/gkrellm-leds-0.6.1.ebuild,v 1.7 2004/06/24 22:55:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/gkrellm-leds-0.6.1.ebuild,v 1.8 2005/01/28 16:58:12 luckyduck Exp $
 
 IUSE=""
 MY_P=${P/rellm-/}
