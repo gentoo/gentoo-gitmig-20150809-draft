@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2.ebuild,v 1.2 2004/03/21 01:57:24 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2.ebuild,v 1.3 2004/04/06 02:59:46 vapier Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig flag-o-matic
+
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
 RESTRICT="nomirror"
