@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/emu10k1-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-cvs/ChangeLog,v 1.4 2003/09/17 19:46:09 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-cvs/ChangeLog,v 1.5 2004/02/07 16:50:21 ferringb Exp $
+
+  07 Feb 2004; Brian Harring <ferringb@gentoo.org>;
+  Checked with johnm about this, removing this package from 
+  the tree.  If people request it be brought back, we'll 
+  restore it- upstream isn't particularly active anymore.
 
   17 Sep 2003; John Mylchreest <johnm@gentoo.org>;
   emu10k1-cvs-16042003.ebuild, files/emu10k1-gcc-3.3.diff:
