@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 588df5ad8867c87cd3e2fb25dad453ca ChangeLog 2258
-MD5 6b400b57345a7c0b3f7eb2db3902543b imhangul-0.9.11-r1.ebuild 1226
+MD5 51d9519d44ab4622d05d9c86f92728de ChangeLog 2352
+MD5 a731161302e84377027629ad079ae958 imhangul-0.9.11-r1.ebuild 1225
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 29ca1708b3c4cb733920cdd8d384d720 imhangul-0.9.11.ebuild 970
 MD5 5147a4fa4c75d57208363685a8d0b838 files/digest-imhangul-0.9.11-r1 68
 MD5 5147a4fa4c75d57208363685a8d0b838 files/digest-imhangul-0.9.11 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCIqF6VWNWqTUmv+0RAuH4AKCirT0792uHtQyOvmctwxZChfI9fgCfcEs8
-f0ZwlpVbZ12Z8vwQjb0iyjk=
-=AJVQ
+iD8DBQFCPwX8VWNWqTUmv+0RAmAcAKCwrLS5+4Hh2EvSFyrzu7YpRyEgoQCgqR5N
+WslMzLCbt7afHtHn1bymyKs=
+=dXYy
 -----END PGP SIGNATURE-----
