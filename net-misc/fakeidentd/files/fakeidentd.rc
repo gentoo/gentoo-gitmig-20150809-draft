@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/files/fakeidentd.rc,v 1.5 2004/07/14 23:58:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/files/fakeidentd.rc,v 1.6 2004/09/20 00:17:10 vapier Exp $
 
 depend() {
 	need net
@@ -15,8 +15,8 @@ start() {
 
 stop() {
 	ebegin "Stopping fakeidentd"
-	[ -e /var/run/fakeidentd.pid ] \
-		&& kill `cat /var/run/fakeidentd.pid` \
-		&& rm -f /var/run/fakeidentd.pid
-	eend $?
+	start-stop-daemon --stop --pidfile /var/run/fakeidentd.pid
+	local ret=$?
+	rm -f /var/run/fakeidentd.pid
+	eend ${ret}
 }
