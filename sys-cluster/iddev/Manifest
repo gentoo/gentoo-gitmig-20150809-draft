@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 9b4c907ffd65cbf1738a9b4d699bd433 iddev-1.1.ebuild 602
-MD5 27e3d45d08a7c4cc09efe66b855b5a1a ChangeLog 454
-MD5 444b99804a5cc584d1d3c6de30a62ad0 iddev-1.9.ebuild 607
+MD5 ebac1ae5fb82cbc43a33ecaccde12391 ChangeLog 544
+MD5 0d5582d38b7334fe7e6330fc9d4d516c iddev-1.9.ebuild 607
 MD5 36114c36120797439dfdbca13f7e8dbe files/digest-iddev-1.1 59
 MD5 0224fb98effd6aff2382a9438ff4a2c8 files/digest-iddev-1.9 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCQNvzgMUyd/cdjWsRAn5ZAJ47wz8mDN7PpcZ5Fakfzi4OyNzUuACbBBBZ
+BZqR6t8pWOGyfywA1NcbKoc=
+=Ty8b
+-----END PGP SIGNATURE-----
