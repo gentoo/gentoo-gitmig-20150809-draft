@@ -1,0 +1,9 @@
+# ChangeLog for dev-lisp/cl-modlisp
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-modlisp/ChangeLog,v 1.1 2004/10/18 15:25:02 mkennedy Exp $
+
+*cl-modlisp-0.6 (18 Oct 2004)
+
+  18 Oct 2004; <mkennedy@gentoo.org> +metadata.xml, +cl-modlisp-0.6.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
