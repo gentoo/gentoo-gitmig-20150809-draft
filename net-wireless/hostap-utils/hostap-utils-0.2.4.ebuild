@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/hostap-utils-0.2.4.ebuild,v 1.1 2004/09/14 16:25:15 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/hostap-utils-0.2.4.ebuild,v 1.2 2004/10/26 10:36:59 brix Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND=">=net-wireless/hostap-driver-0.2.4"
 
 src_compile() {
-	emake CC="${CC}" CFLAGS="${CFLAGS}" || die
+	emake CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
