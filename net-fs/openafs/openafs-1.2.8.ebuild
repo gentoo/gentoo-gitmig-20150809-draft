@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /home/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.1.1.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp
+# /home/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.5.ebuild,v 1.0 2002/07/10 09:52:39 pm Exp
 
 
 S=${WORKDIR}/${P}
@@ -12,12 +12,12 @@ an architecture geared towards system management, along with the tools
 to perform important management tasks. For a user, AFS is a familiar yet
 extensive UNIX environment for accessing files easily and quickly."
 
-SRC_URI="http://www.openafs.org/dl/openafs/${PV}/openafs-${PV}-src.tar.gz"
+SRC_URI="http://openafs.org/dl/openafs/${PV}/${P}-src.tar.bz2"
 HOMEPAGE="http://www.openafs.org/"
 
 SLOT="0"
 LICENSE="IPL-1"
-KEYWORDS="~x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc "
 SANDBOX_DISABLED="1"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -29,16 +29,23 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}/src/config
-	cp Makefile.in Makefile.in.old
+	cp Makefile.i386_linux24.in Makefile.i386_linux24.in.old
 	sed -e "s|/usr/lib/libncurses.so|-lncurses|g" \
-		Makefile.in.old > Makefile.in
-	rm Makefile.in.old
+		Makefile.i386_linux24.in.old > Makefile.i386_linux24.in
+	rm Makefile.i386_linux24.in.old
 }
 
 src_compile() {
+	patch -p0 < ${FILESDIR}/openafs-1.2.6.patch
+
 	./configure \
 		--with-afs-sysname=i386_linux24 \
 		--enable-transarc-paths || die
+	cp src/pam/Makefile src/pam/Makefile.old
+	sed -e "s|-I/usr/include/sys| |g" \
+			src/pam/Makefile.old > src/pam/Makefile
+	rm src/pam/Makefile.old
+
 	make || die
 	make dest || die
 }
@@ -89,7 +96,7 @@ src_install () {
 	dodoc ${FILESDIR}/README
 
 	dodir /etc/env.d
-	echo 'CONFIG_PROTECT_MASK="/etc/afs/C /etc/afs/afsws"' > ${D}/etc/env.d/01${PN}
+	echo 'CONFIG_PROTECT_MASK="/etc/afs/C /etc/afs/afsws"' >> ${D}/etc/env.d/01${PN}
 	echo 'PATH=/usr/afsws/bin:/etc/afs/afsws' >> ${D}/etc/env.d/01${PN}
 	echo 'ROOTPATH=/usr/afsws/bin:/etc/afs/afsws:/usr/afs/bin' >> ${D}/etc/env.d/01${PN}
 }
