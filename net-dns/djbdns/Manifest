@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 36b5689f6571f5a3380f65be2073f235 ChangeLog 8915
+MD5 846095f122ba9f56f24b37cb023b314f ChangeLog 9011
 MD5 15dd81e4a014438258ad1bcd8db09b92 djbdns-1.05-r10.ebuild 2842
 MD5 9dc7624c94d5665ae986626557e52235 djbdns-1.05-r11.ebuild 3223
 MD5 1d2065fbc2f1da45047580c3c92a7751 djbdns-1.05-r12.ebuild 4864
 MD5 05f530c579d1e3c621a22ea66850bfda djbdns-1.05-r13.ebuild 4794
-MD5 c2b640de9116a4d03736f30b7ad3b355 djbdns-1.05-r14.ebuild 4801
+MD5 d6c2599eaed2afe42388429628b57001 djbdns-1.05-r14.ebuild 4804
 MD5 6bb1dfe1539de32c3ec141f9f4262c4a djbdns-1.05-r3.ebuild 1721
 MD5 796fa513fa098170a488164359eccb69 djbdns-1.05-r7.ebuild 1973
 MD5 acec383220d1f1fabfb588ef7705860b djbdns-1.05-r8.ebuild 2077
@@ -29,10 +26,3 @@ MD5 dfd675b2775efcbb604413a84db8bf1a files/dnsroots.patch 349
 MD5 46e046747b9dd8a0a1300a52c142f423 files/fwdzone-fix.patch 438
 MD5 625d040d68fa3f87d67688c0e15eb2f4 files/headtail.patch 1781
 MD5 d1844f9853a9bb56738a6a0eb6e04de4 files/tinydns-setup 3206
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB+AMOGSBEIeh4AEYRAu4dAJ9QotgR2H9zne4vAckRo31czAoikQCeLiWn
-wQk18qE/YV6fmzvtE+mzpow=
-=ARD6
------END PGP SIGNATURE-----
