@@ -1,11 +1,21 @@
-MD5 93d2766975ebc8de54b0b48274d0dfa0 ChangeLog 1979
-MD5 5dea796a7f3e380693bd0185bd5b35cd kadu-0.3.6.ebuild 609
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1f7aaa3f93e0f05f64757918f4675e60 kadu-0.3.7.ebuild 830
-MD5 5e151d09475513534e380cbfa03ab642 kadu-0.3.8.ebuild 878
 MD5 0c7f5954e938cc1da4570b3adeff7223 kadu-0.3.9.ebuild 1755
-MD5 c3e9694f242b9cf8c66d746d2c1e51fd metadata.xml 401
+MD5 5dea796a7f3e380693bd0185bd5b35cd kadu-0.3.6.ebuild 609
+MD5 5e151d09475513534e380cbfa03ab642 kadu-0.3.8.ebuild 878
+MD5 93d2766975ebc8de54b0b48274d0dfa0 ChangeLog 1979
+MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
 MD5 5d82fddca529f0af79869df2a55db7f1 files/digest-kadu-0.3.6 63
 MD5 d6cc7076216ed7aa0d0ab8b3ff154d41 files/digest-kadu-0.3.7 63
 MD5 7259b6aef0a2d10501b79c455fe4b763 files/digest-kadu-0.3.8 63
 MD5 9c405497d2804fa81d6b2d48c00e227f files/digest-kadu-0.3.9 63
 MD5 878470dcf216da170b3878d17b0f59a2 files/kadu-0.3.9-nas-gentoo.diff 986
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw0vKI1lqEGTUzyQRAr7RAJ97TjfksF53wrleElgBP2vGVfv00wCfSpIa
+PyRfwHr/cdggmn17XJY1fNY=
+=utKD
+-----END PGP SIGNATURE-----
