@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.5 2004/01/28 15:38:10 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.6 2004/01/30 05:29:07 drobbins Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	>=sys-apps/sed-4
 	sys-devel/libtool
-	sys-devel/autoconf
+	>=sys-devel/autoconf-2.58
 	sys-devel/automake
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	ldap? ( >=net-nds/openldap-2.0.25 )
