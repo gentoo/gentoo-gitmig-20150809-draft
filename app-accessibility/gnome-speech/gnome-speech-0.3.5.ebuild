@@ -1,19 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.5.ebuild,v 1.2 2005/01/01 10:49:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.5.ebuild,v 1.3 2005/01/22 07:12:43 vapier Exp $
 
 inherit java-pkg gnome2
-
-# Local USE flags: freetts
-IUSE="java freetts"
 
 DESCRIPTION="Simple general API for producing text-to-speech output"
 HOMEPAGE="http://www.gnome.org/"
 
-SLOT="1"
-
-KEYWORDS="~x86 ~ppc ~hppa ~alpha ~ia64 ~sparc ~amd64"
 LICENSE="LGPL-2"
+SLOT="1"
+KEYWORDS="~x86 ~ppc ~hppa ~alpha ~ia64 ~sparc ~amd64"
+IUSE="java freetts"
 
 RDEPEND=">=gnome-base/libbonobo-1.97
 	>=gnome-base/orbit-2.3.94
