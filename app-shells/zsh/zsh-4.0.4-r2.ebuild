@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # This ebuild by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.4-r2.ebuild,v 1.6 2002/08/01 11:58:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.4-r2.ebuild,v 1.7 2002/08/16 02:37:45 murphy Exp $
 
 
 S=${WORKDIR}/${P}
@@ -14,7 +14,7 @@ LICENSE="ZSH"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {
 	./configure --prefix=/ --host=${CHOST} \

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.10-r3.ebuild,v 1.3 2002/07/16 03:12:06 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.10-r3.ebuild,v 1.4 2002/08/16 02:37:45 murphy Exp $
       
 S=${WORKDIR}/${P}.00
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc
     perl? ( sys-devel/perl )"
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="BSD"
 
 src_unpack() {

@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/psh-0.009-r1.ebuild,v 1.5 2002/08/01 11:58:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/psh-0.009-r1.ebuild,v 1.6 2002/08/16 02:37:45 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Combines the interactive nature of a Unix shell with the power of Perl"
 SRC_URI="http://www.focusresearch.com/gregor/psh/${P}.tar.gz"
 HOMEPAGE="http://www.focusresearch.com/gregor/psh/"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 
 DEPEND=">=sys-devel/perl-5"

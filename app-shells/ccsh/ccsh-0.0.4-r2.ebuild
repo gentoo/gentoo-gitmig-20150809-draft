@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ccsh/ccsh-0.0.4-r2.ebuild,v 1.6 2002/07/29 02:49:46 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ccsh/ccsh-0.0.4-r2.ebuild,v 1.7 2002/08/16 02:37:45 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="UNIX Shell for people already familiar with the C language"
 SRC_URI="http://download.sourceforge.net/ccsh/${P}.tar.gz"
 HOMEPAGE="http://ccsh.sourceforge.net"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 

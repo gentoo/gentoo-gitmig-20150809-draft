@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r5.ebuild,v 1.4 2002/07/25 15:39:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r5.ebuild,v 1.5 2002/08/16 02:37:45 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small static UNIX Shell with readline suppport"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
 
 RDEPEND=""
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 	unpack ${P}.tar.gz
