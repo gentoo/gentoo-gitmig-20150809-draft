@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.11 2003/07/29 19:07:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.12 2003/08/31 12:24:54 mholzer Exp $
+
+*cacti-0.8.3 (31 Aug 2003)
+
+  31 Aug 2003; Martin Holzer <mholzer@gentoo.org> cacti-0.8.3.ebuild:
+  Version bumped.
 
 *cacti-0.8.2a (30 Jul 2003)
 
