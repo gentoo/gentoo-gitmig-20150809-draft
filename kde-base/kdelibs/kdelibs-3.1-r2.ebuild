@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.1 2003/02/04 19:26:01 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.2 2003/02/06 00:20:00 hannes Exp $
 
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
@@ -75,4 +75,8 @@ LDPATH=${PREFIX}/lib
 CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/49kdelibs-${PV} # number goes down with version upgrade
 
 	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/56kdedir-${PV} # number goes up with version upgrade
+
+	# kdelibs-apidocs is provided by kdelibs-apidocs ebuild, kdelibs ebuild
+	# shouldn't install anything into kdelibs-apidocs (bug #15102)
+	rm -r ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
 }

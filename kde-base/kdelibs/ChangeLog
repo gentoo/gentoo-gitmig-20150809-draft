@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.49 2003/02/04 19:26:01 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.50 2003/02/06 00:20:00 hannes Exp $
+
+  05 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.1-r2.ebuild:
+  removing $KDEDIR/share/doc/HTML/en/kdelibs-apidocs (is provided by
+  app-doc/kdelibs-apidocs), fixes bug #15102
 
 *kdelibs-3.1-r2 (04 Feb 2003)
 
