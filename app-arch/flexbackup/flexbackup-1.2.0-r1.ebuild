@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.0-r1.ebuild,v 1.2 2003/08/06 06:43:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.0-r1.ebuild,v 1.3 2003/08/08 18:11:23 max Exp $
 
 DESCRIPTION="Flexible backup script using perl."
 HOMEPAGE="http://flexbackup.sourceforge.net/"
@@ -23,8 +23,8 @@ src_install() {
 	dodir /etc /usr/bin
 	einstall CONFFILE="${D}/etc/flexbackup.conf" BINPATH="${D}/usr/bin"
 
-	dosed '/^$type = /s:afio:tar:' /etc/flexbackup.conf
-	dosed '/^$buffer = /s:buffer:false:' /etc/flexbackup.conf
+	dosed "/^\$type = /s:'afio':'tar':" /etc/flexbackup.conf
+	dosed "/^\$buffer = /s:'buffer':'false':" /etc/flexbackup.conf
 
 	dodoc CHANGES COPYING CREDITS INSTALL README TODO
 	dohtml faq.html
