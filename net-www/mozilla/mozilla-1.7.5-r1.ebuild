@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.5-r1.ebuild,v 1.1 2005/03/03 06:21:57 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.5-r1.ebuild,v 1.2 2005/03/05 22:12:59 eradicator Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
-inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
+inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit multilib
 
 IUSE="java crypt ssl moznomail postgres"
 
@@ -116,8 +116,8 @@ src_compile() {
 	mozconfig_use_enable ldap ldap-experimental
 	mozconfig_use_enable mozsvg svg
 	mozconfig_use_enable mozsvg svg-renderer-cairo
-	mozconfig_annotate '' --prefix=/usr/lib/mozilla
-	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/lib/mozilla
+	mozconfig_annotate '' --prefix=/usr/$(get_libdir)/mozilla
+	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/$(get_libdir)/mozilla
 
 	if use moznomail && ! use mozcalendar; then
 		mozconfig_annotate "+moznomail -mozcalendar" --disable-mailnews
@@ -190,34 +190,34 @@ src_compile() {
 
 src_install() {
 	# Install, don't create tarball
-	dodir /usr/lib
+	dodir /usr/$(get_libdir)
 	cd ${S}/xpinstall/packager
 	einfo "Installing mozilla into build root..."
 	make MOZ_PKG_FORMAT="RAW" TAR_CREATE_FLAGS="-chf" > /dev/null || die "make failed"
-	mv -f ${S}/dist/mozilla ${D}/usr/lib/mozilla
+	mv -f ${S}/dist/mozilla ${D}/usr/$(get_libdir)/mozilla
 
 	einfo "Installing includes and idl files..."
 	# Copy the include and idl files
-	dodir /usr/lib/mozilla/include/idl /usr/include
+	dodir /usr/$(get_libdir)/mozilla/include/idl /usr/include
 	cd ${S}/dist
-	cp -LfR include/* ${D}/usr/lib/mozilla/include
-	cp -LfR idl/* ${D}/usr/lib/mozilla/include/idl
-	dosym /usr/lib/mozilla/include /usr/include/mozilla
+	cp -LfR include/* ${D}/usr/$(get_libdir)/mozilla/include
+	cp -LfR idl/* ${D}/usr/$(get_libdir)/mozilla/include/idl
+	dosym /usr/$(get_libdir)/mozilla/include /usr/include/mozilla
 
 	# Install the development tools in /usr
 	dodir /usr/bin
-	mv ${D}/usr/lib/mozilla/{xpcshell,xpidl,xpt_dump,xpt_link} ${D}/usr/bin
+	mv ${D}/usr/$(get_libdir)/mozilla/{xpcshell,xpidl,xpt_dump,xpt_link} ${D}/usr/bin
 
 	# Install the NSS/SSL libs, headers and tools
 	if use ssl; then
 		einfo "Installing Mozilla NSS..."
 		# Install the headers ('make install' do not work for headers ...)
-		insinto /usr/lib/mozilla/include/nss
+		insinto /usr/$(get_libdir)/mozilla/include/nss
 		[ -d ${S}/dist/public/nss ] && doins ${S}/dist/public/nss/*.h
 		[ -d ${S}/dist/public/seccmd ] && doins ${S}/dist/public/seccmd/*.h
 		[ -d ${S}/dist/public/security ] && doins ${S}/dist/public/security/*.h
 		# These come with zlib ...
-		rm -f ${D}/usr/lib/mozilla/include/nss/{zconf.h,zlib.h}
+		rm -f ${D}/usr/$(get_libdir)/mozilla/include/nss/{zconf.h,zlib.h}
 
 		cd ${S}/security/nss
 
@@ -228,7 +228,7 @@ src_install() {
 		make install || die "make failed"
 		# Gets installed as symbolic links ...
 		cp -Lf ${WORKDIR}/nss/bin/* ${D}/usr/bin
-		cp -Lf ${WORKDIR}/nss/lib/* ${D}/usr/lib/mozilla
+		cp -Lf ${WORKDIR}/nss/lib/* ${D}/usr/$(get_libdir)/mozilla
 
 		# Need to unset these incase we want to rebuild, else the build
 		# gets newked.
@@ -240,10 +240,10 @@ src_install() {
 	# Fix mozilla-config and install it
 	perl -pi -e "s:/lib/mozilla-${MY_PV}::g" mozilla-config
 	perl -pi -e "s:/mozilla-${MY_PV}::g" mozilla-config
-	exeinto /usr/lib/mozilla
+	exeinto /usr/$(get_libdir)/mozilla
 	doexe mozilla-config
 	# Fix pkgconfig files and install them
-	insinto /usr/lib/pkgconfig
+	insinto /usr/$(get_libdir)/pkgconfig
 	for x in *.pc; do
 		if [[ -f ${x} ]]; then
 			perl -pi -e "s:/lib/mozilla-${MY_PV}::g" ${x}
@@ -260,24 +260,24 @@ src_install() {
 	dodoc LEGAL LICENSE README/mozilla/README*
 
 	# Install rebuild script
-	exeinto /usr/lib/mozilla/
+	exeinto /usr/$(get_libdir)/mozilla/
 	doexe ${FILESDIR}/mozilla-rebuild-databases.pl
 
 	# Move plugins dir
-	src_mv_plugins /usr/lib/mozilla/plugins
+	src_mv_plugins /usr/$(get_libdir)/mozilla/plugins
 
 	# Update Google search plugin to use UTF8 charset ...
-	insinto /usr/lib/mozilla/searchplugins
+	insinto /usr/$(get_libdir)/mozilla/searchplugins
 	doins ${FILESDIR}/google.src
 
 	if [[ -f "${WORKDIR}/.xft" ]]; then
 		# We are using Xft, so change the default font
-		insinto /usr/lib/mozilla/defaults/pref
+		insinto /usr/$(get_libdir)/mozilla/defaults/pref
 		doins ${FILESDIR}/xft.js
 	fi
 
 	# Fix icons to look the same everywhere
-	insinto /usr/lib/mozilla/icons
+	insinto /usr/$(get_libdir)/mozilla/icons
 	doins ${S}/widget/src/gtk/mozicon16.xpm
 	doins ${S}/widget/src/gtk/mozicon50.xpm
 
@@ -290,34 +290,34 @@ src_install() {
 	# Take care of non root execution
 	# (seems the problem is that not all files are readible by the user)
 	einfo "Fixing Permissions..."
-	chmod -R g+r,o+r ${D}/usr/lib/mozilla
-	find ${D}/usr/lib/mozilla/ -type d -exec chmod 0755 {} \; || :
+	chmod -R g+r,o+r ${D}/usr/$(get_libdir)/mozilla
+	find ${D}/usr/$(get_libdir)/mozilla/ -type d -exec chmod 0755 {} \; || :
 }
 
 pkg_preinst() {
 	# Move old plugins dir
-	pkg_mv_plugins /usr/lib/mozilla/plugins
+	pkg_mv_plugins /usr/$(get_libdir)/mozilla/plugins
 
 	if true; then
 		# Remove entire installed instance to solve various problems,
 		# for example see bug 27719
-		rm -rf ${ROOT}/usr/lib/mozilla
+		rm -rf ${ROOT}/usr/$(get_libdir)/mozilla
 	else
 		# Stale components and chrome files break when unmerging old
-		rm -rf ${ROOT}/usr/lib/mozilla/components
-		rm -rf ${ROOT}/usr/lib/mozilla/chrome
+		rm -rf ${ROOT}/usr/$(get_libdir)/mozilla/components
+		rm -rf ${ROOT}/usr/$(get_libdir)/mozilla/chrome
 
 		# Remove stale component registry.
-		rm -f ${ROOT}/usr/lib/mozilla/component.reg
-		rm -f ${ROOT}/usr/lib/mozilla/components/compreg.dat
+		rm -f ${ROOT}/usr/$(get_libdir)/mozilla/component.reg
+		rm -f ${ROOT}/usr/$(get_libdir)/mozilla/components/compreg.dat
 
 		# Make sure these are removed.
-		rm -f ${ROOT}/usr/lib/mozilla/lib{Xft,Xrender}.so*
+		rm -f ${ROOT}/usr/$(get_libdir)/mozilla/lib{Xft,Xrender}.so*
 	fi
 }
 
 pkg_postinst() {
-	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
+	export MOZILLA_FIVE_HOME="${ROOT}/usr/$(get_libdir)/mozilla"
 
 	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
@@ -341,8 +341,8 @@ pkg_postinst() {
 
 pkg_postrm() {
 	# Regenerate component.reg in case some things changed
-	if [[ -e ${ROOT}/usr/lib/mozilla/regxpcom ]]; then
-		export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
+	if [[ -e ${ROOT}/usr/$(get_libdir)/mozilla/regxpcom ]]; then
+		export MOZILLA_FIVE_HOME="${ROOT}/usr/$(get_libdir)/mozilla"
 
 		if [[ -x ${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl ]]; then
 			${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl

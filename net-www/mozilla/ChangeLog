@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.223 2005/03/03 06:21:57 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.224 2005/03/05 22:12:59 eradicator Exp $
+
+  05 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  mozilla-1.7.5-r1.ebuild:
+  Multilib fixes.
 
 *mozilla-1.7.5-r1 (03 Mar 2005)
 
