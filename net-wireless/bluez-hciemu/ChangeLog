@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/bluez-hciemu
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/ChangeLog,v 1.1 2003/03/18 07:02:12 phosphan Exp $
+
+*bluez-hciemu-1.0 (18 Mar 2003)
+
+  18 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> ChangeLog,
+  files/digest-bluez-hciemu-1.0, bluez-hciemu-1.0.ebuild :
+  Initial import. Ebuild submitted by Patrik Kullman 
+  <patrik.kullman@netsafe.se> in bug #17293.
