@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.8 2004/09/25 15:10:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.9 2004/10/02 15:16:56 kloeri Exp $
 
 inherit eutils kmod
 
@@ -42,7 +42,7 @@ HOMEPAGE="http://www.lirc.org"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="doc"
-KEYWORDS="x86 ~ppc ~alpha ~ia64 ~amd64 ~ppc64"
+KEYWORDS="x86 ~ppc alpha ~ia64 ~amd64 ~ppc64"
 
 DEPEND="virtual/linux-sources"
 

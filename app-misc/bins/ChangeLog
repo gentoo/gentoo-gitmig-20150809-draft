@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.23 2004/09/30 01:04:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.24 2004/10/02 15:14:33 kloeri Exp $
+
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> bins-1.1.26-r1.ebuild:
+  Stable on alpha.
 
   29 Sep 2004; Michael Cummings <mcummings@gentoo.org>
   files/bins-1.1.26-install.patch:
