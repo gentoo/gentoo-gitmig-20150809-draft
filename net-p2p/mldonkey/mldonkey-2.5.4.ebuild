@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.4.ebuild,v 1.5 2003/11/30 21:26:51 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.4.ebuild,v 1.6 2003/12/18 20:45:06 lanius Exp $
 
 inherit eutils
 
@@ -25,11 +25,6 @@ DEPEND="gtk? ( >=lablgtk-1.2.4 )
 RDEPEND="net-misc/wget"
 
 MLUSER="p2p"
-
-pkg_setup() {
-	# add user
-	enewuser ${MLUSER} -1 /bin/bash /home/p2p users
-}
 
 src_compile() {
 	use gtk || export GTK_CONFIG="no"
@@ -76,6 +71,9 @@ src_install() {
 
 	insinto /etc/conf.d; newins ${FILESDIR}/mldonkey.confd mldonkey
 	exeinto /etc/init.d; newexe ${FILESDIR}/mldonkey.initd mldonkey
+
+	# add user
+	enewuser ${MLUSER} -1 /bin/bash /home/p2p users
 }
 
 pkg_postinst() {

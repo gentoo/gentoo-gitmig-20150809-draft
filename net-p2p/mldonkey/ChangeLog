@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.24 2003/11/30 21:26:51 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.25 2003/12/18 20:45:06 lanius Exp $
+
+  18 Dec 2003; Heinrich Wendel <lanius@gentoo.org> mldonkey-2.5.4.ebuild:
+  Moved enewuser to src_install, so the home directory is created.
+  It was in pkg_setup but the image dir will be cleaned before src_install.
 
   30 Nov 2003; Jeremy Maitin-Shepard <jbms@gentoo.org>
   mldonkey-2.5.3-r1.ebuild, mldonkey-2.5.3-r2.ebuild, mldonkey-2.5.4.ebuild:
