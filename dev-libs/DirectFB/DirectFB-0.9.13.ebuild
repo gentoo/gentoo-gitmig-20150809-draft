@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.13.ebuild,v 1.3 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.13.ebuild,v 1.4 2002/10/12 11:32:36 seemant Exp $
 
 IUSE="gif quicktime mpeg png truetype flash jpeg mmx"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.directfb.org"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 DEPEND="sys-devel/perl
 	gif? ( media-libs/giflib )
