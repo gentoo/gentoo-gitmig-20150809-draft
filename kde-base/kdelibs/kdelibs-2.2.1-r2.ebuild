@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.1-r2.ebuild,v 1.1 2001/11/16 12:50:42 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.1-r2.ebuild,v 1.2 2001/11/22 19:25:04 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -28,7 +28,6 @@ DEPEND="$COMMONDEPEND
 	sys-devel/automake"
 
 RDEPEND="$COMMONDEPEND
-	~kde-base/kde-env-${PV}
 	app-text/sgml-common
 	cups? ( net-print/cups )
 	dev-lang/python"
