@@ -1,10 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-1.117.2-r1.ebuild,v 1.1 2002/06/05 21:09:05 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-1.117.2-r1.ebuild,v 1.2 2002/07/11 06:30:26 drobbins Exp $
 
 
 
-# Author and maintainer : Spider  <spider@gentoo.org>
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
 RESTRICT="nostrip"

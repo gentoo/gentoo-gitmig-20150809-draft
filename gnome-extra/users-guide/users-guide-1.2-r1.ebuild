@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/users-guide/users-guide-1.2-r1.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/users-guide/users-guide-1.2-r1.ebuild,v 1.3 2002/07/11 06:30:26 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-users-guide"

@@ -1,11 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.0.0.ebuild,v 1.1 2002/06/07 13:06:37 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.0.0.ebuild,v 1.2 2002/07/11 06:30:26 drobbins Exp $
 
 inherit gnome2
 
-# Author: Spider  <spider@gentoo.org>
-# Maintainer: Spider <spider@gentoo.org>
 S=${WORKDIR}/${P}
 DESCRIPTION="Canvas library"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.14-r1.ebuild,v 1.4 2002/04/12 19:19:29 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.14-r1.ebuild,v 1.5 2002/07/11 06:30:25 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-performance, lightweight CORBA ORB aiming for CORBA 2.2 compliance"

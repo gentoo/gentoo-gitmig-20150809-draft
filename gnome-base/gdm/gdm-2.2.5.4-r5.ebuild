@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.5 2002/07/10 01:41:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.6 2002/07/11 06:30:25 drobbins Exp $
 
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="http://www.gnome.org/"

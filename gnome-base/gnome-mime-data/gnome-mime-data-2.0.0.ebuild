@@ -3,7 +3,6 @@
 # $Header
 
 inherit gnome2
-# Maintainer: Spider  <spider@gentoo.org>
 
 S=${WORKDIR}/${P}
 DESCRIPTION="MIME database for Gnome"

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r1.ebuild,v 1.3 2002/05/23 06:50:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r1.ebuild,v 1.4 2002/07/11 06:30:26 drobbins Exp $
 
 MY_P=${P/guppi/Guppi}
 S=${WORKDIR}/${MY_P}

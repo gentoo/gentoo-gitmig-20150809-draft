@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.8.ebuild,v 1.6 2002/06/30 17:52:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.8.ebuild,v 1.7 2002/07/11 06:30:25 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Core components of the GNOME desktop environment"
