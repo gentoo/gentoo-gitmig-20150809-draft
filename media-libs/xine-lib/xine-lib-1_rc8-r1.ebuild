@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.9 2004/12/26 21:05:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.10 2004/12/26 22:23:12 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -34,6 +34,8 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	theora? ( media-libs/libtheora )
 	speex? ( media-libs/speex )"
 DEPEND="${RDEPEND}
+	>=sys-devel/automake-1.7
+	>=sys-devel/autoconf-2.59
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}-${PV/_/-}${MY_PKG_SUFFIX}
@@ -55,20 +57,11 @@ src_unpack() {
 	# plasmaroo: Kernel 2.6 headers patch
 	epatch ${FILESDIR}/${PN}-1_rc7-2.6.patch
 
-	# force 32 bit userland
-	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/xine-lib-1_rc7-configure-sparc.patch
-
 	# fixes #74475 security bug
 	epatch ${FILESDIR}/djb_demux_aiff.patch
 
 	# fixes bad X11 directories
 	epatch ${FILESDIR}/${PN}-x11.patch
-
-	# Bad version included... may drop .so
-	#libtoolize --copy --force
-
-	# bug #40317
-	elibtoolize
 
 	# Fix building on amd64, #49569
 	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
@@ -76,7 +69,20 @@ src_unpack() {
 	use pic && epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
-	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure
+	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure.ac
+
+	# Fix detection of sparc64 systems
+	use sparc && epatch ${FILESDIR}/xine-lib-1_rc7-configure-sparc.patch
+
+	# Makefile.ams and configure.ac get patched, so we need to rerun
+	# autotools
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.7
+	aclocal -I m4
+	libtoolize --copy --force
+	autoheader
+	automake -a -f -c
+	autoconf
 }
 
 src_compile() {
@@ -165,7 +171,6 @@ src_compile() {
 		$(use_enable sdl sdltest) \
 		$(use_enable ipv6) \
 		$(use_enable directfb) \
-		$(use_enable xv shared-xv) \
 		${myconf} || die "Configure failed"
 
 	emake -j1 || die "Parallel make failed"
