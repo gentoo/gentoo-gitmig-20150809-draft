@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <zwelch@gentoo.org> (06 Apr 2003)
+# New versions of packages that have new cross-compiling support
+#  These will be unmasked once everything has been fully tested 
+>=sys-devel/gcc-config-1.4
+
 # <lu_zero@gentoo.org> (06 Apr 2003)
 # Has issues
 =media-video/ati-drivers-2.9.6
