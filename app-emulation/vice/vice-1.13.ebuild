@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.13.ebuild,v 1.1 2003/10/03 09:21:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.13.ebuild,v 1.2 2003/11/03 20:14:16 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -30,6 +30,12 @@ src_unpack() {
 			-e '/^SUBDIRS =/s:po::' ${S}/Makefile.in || \
 				die "sed Makefile.in failed"
 	fi
+	# DESTDIR fix for bug 32544
+	sed -i \
+		-e '/^install:/ s/$/ install-am/' \
+		-e 's:cd $(prefix):cd $(DESTDIR)$(prefix):' \
+			${S}/data/fonts/Makefile.in || \
+				die "sed data/fonts/Makefile.in failed"
 }
 
 src_compile() {
@@ -55,4 +61,5 @@ src_install() {
 		${docdir}/{cbm_basic_tokens.txt,drive_info.txt,mon.txt,serial.txt} || \
 			die "dodoc failed"
 	rm -rf ${docdir}
+	prepgamesdirs
 }

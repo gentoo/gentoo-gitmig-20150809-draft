@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.7 2003/10/03 09:21:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.8 2003/11/03 20:14:16 mr_bones_ Exp $
+
+  03 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> vice-1.13.ebuild:
+  DESTDIR fix for bug 32544; add prepgamesdirs
 
 *vice-1.13 (03 Oct 2003)
 
