@@ -1,5 +1,5 @@
 MD5 f25cc7876434522c442ccd365198233f ChangeLog 13508
-MD5 034b59d6de30822e3283686cbc82e4a8 openssh-3.8.1_p1-r1.ebuild 4206
+MD5 096f48da7b05ad8a851958ca4220963a openssh-3.8.1_p1-r1.ebuild 4206
 MD5 70b5b39bcf5ca69bc20329e9c7399afc openssh-3.8_p1.ebuild 4211
 MD5 10b54f20dc56d77a8c0418f73ef2b390 openssh-3.7.1_p2-r1.ebuild 4099
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
@@ -24,6 +24,6 @@ MD5 9e179b1c0e3a139a5a9067c6e5bd6595 files/openssh-3.7.1_p1-selinux.diff 3389
 MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r2 142
 MD5 319cf9de283116bf886d3aab3d036249 files/openssh-3.8.1_p1-resolv_functions.patch 422
 MD5 8f72054fc8c55107b5bf7ce13a8ad083 files/openssh-3.7.1_p2-chroot.patch 2884
-MD5 b0acbb28e9584ee3fcffeaad5051e8f4 files/sshd.rc6 1286
+MD5 4beeae34bb68e56f245a31ea0c979caf files/sshd.rc6 1285
 MD5 319cf9de283116bf886d3aab3d036249 files/openssh-3.8_p1-resolv_functions.patch 422
 MD5 8f72054fc8c55107b5bf7ce13a8ad083 files/openssh-3.8.1_p1-chroot.patch 2884
