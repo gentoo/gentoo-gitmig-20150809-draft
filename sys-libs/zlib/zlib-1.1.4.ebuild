@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.4.ebuild,v 1.9 2002/10/04 06:37:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.4.ebuild,v 1.10 2002/11/05 20:38:54 azarah Exp $
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="Standard (de)compression library"
 SRC_URI="http://www.gzip.org/zlib/${P}.tar.bz2"
 HOMEPAGE="http://www.gzip.org/zlib"
+
 LICENSE="ZLIB"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="0"
@@ -16,9 +17,9 @@ src_compile() {
 
 	./configure --shared --prefix=/usr || die
 
-	if [ ${ARCH} = "alpha" ] ; then
-        emake CFLAGS="$CFLAGS -fPIC" || die
-    else
+	if [ "${ARCH}" = "alpha" ] ; then
+        emake CFLAGS="${CFLAGS} -fPIC" || die
+	else
 		emake || die
 	fi
 
