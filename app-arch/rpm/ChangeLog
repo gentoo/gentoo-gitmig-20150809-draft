@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.30 2003/11/14 13:32:45 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.31 2003/11/29 23:23:21 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> rpm-4.0.4-r5.ebuild,
+  rpm-4.2.1.ebuild:
+  amd64 flags
 
   14 Nov 2003; <tuxus@gentoo.org> rpm-4.2.1.ebuild:
   changed mips in ~mips
