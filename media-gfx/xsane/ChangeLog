@@ -1,7 +1,12 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.9 2003/05/15 13:49:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.10 2003/07/22 18:33:36 brad Exp $
 
+*xsane-0.91 (22 Jul 2003)
+
+  22 Jul 2003; Brad Laue <brad@gentoo.org> xsane-0.90.ebuild,
+  xsane-0.91.ebuild:
+  Version bump.
 
   15 May 2003; Luca Barbato <lu_zero@gentoo.org> xsane-0.90.ebuild : 
   Make sure that gimp-1.3 won't think that xsane is a gimp plugin
