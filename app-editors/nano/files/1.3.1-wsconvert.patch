@@ -84,7 +84,7 @@ diff -ur nano-1.3.1.orig/src/nano.h nano-1.3.1/src/nano.h
  #define TOGGLE_MAC_KEY		NANO_ALT_O
  #define TOGGLE_SMOOTH_KEY	NANO_ALT_S
  #define TOGGLE_NOCONVERT_KEY	NANO_ALT_N
-+#define TOGGLE_WSCONVERT_KEY	NANO_ALT_V
++#define TOGGLE_WSCONVERT_KEY	NANO_ALT_E
  #define TOGGLE_BACKUP_KEY	NANO_ALT_B
  #define TOGGLE_SYNTAX_KEY	NANO_ALT_Y
  #endif /* !NANO_SMALL */
