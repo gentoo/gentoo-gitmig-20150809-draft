@@ -1,3 +1,6 @@
+#apparently conflicts with Python tcl/tk support; verify before removing this next line...
+>=dev-lang/tcl-tk-8.4.2
+
 #still not working:
 =sys-libs/ncurses-5.2-r4
 
