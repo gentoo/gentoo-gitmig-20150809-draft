@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ytalk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ChangeLog,v 1.10 2004/09/05 17:10:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ChangeLog,v 1.11 2004/11/25 22:20:53 sekretarz Exp $
+
+  25 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> ytalk-3.1.1.ebuild:
+  Stable on amd64
 
   05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> ytalk-3.1.1.ebuild:
   Added amd64 keyword, closing #58831.
