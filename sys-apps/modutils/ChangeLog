@@ -1,13 +1,18 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.24 2003/04/16 02:41:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.25 2003/05/09 20:06:22 mholzer Exp $
 
 *modutils-2.4.25 (31 Mar 2003)
+
+  09 May 2003; Martin Holzer <mholzer@gentoo.org> modutils-2.4.16-r2.ebuild,
+  modutils-2.4.16-r3.ebuild, modutils-2.4.19.ebuild, modutils-2.4.20.ebuild,
+  modutils-2.4.22.ebuild, modutils-2.4.23.ebuild, modutils-2.4.24.ebuild,
+  modutils-2.4.25.ebuild:
+  Updated SRC_URI to use mirror://kernel
 
   16 Apr 2003; Guy Martin <gmsoft@gentoo.org> modutils-2.4.24.ebuild,
   modutils-2.4.25.ebuild :
   Marked stable on hppa.
-  
 
   07 Apr 2003; Brandon Low <lostlogic@gentoo.org> modutils-2.4.24.ebuild,
   modutils-2.4.25.ebuild:
@@ -45,7 +50,6 @@
   Added hppa to keywords.
 
   09 Jan 2002; Seemant Kulleen <seemant@gentoo.org> modutils-2.4.22.ebuild :
-
   filter-flags to remove -fPIC, which causes compilation to fail, since
   insmod needs to be compiled static.
 
@@ -57,7 +61,6 @@
  
   25 Nov 2002; Brandon Low <lostlogic@gentoo.org> modutils-2.4.22.ebuild
   files/digest-modutils-2.4.22 :
-
   Version bump still unstable for the moment, lets try to stabilize
   this quickly.
 
@@ -65,7 +68,6 @@
 
   02 Nov 2002; Seemant Kulleen <seemant@gentoo.org> modutils-2.4.20.ebuild
   files/digest-modutils-2.4.20 :
-
   Version bump thanks to Doug Goldstein <cardoe@cardoe.com>
 
 *modutils-2.4.19 (21 Aug 2002)
@@ -75,7 +77,6 @@
 
   21 Aug 2002; phoen][x <phoenix@gentoo.org> modutils-2.4.19.ebuild,
   files/digest-modutils-2.4.19 :
-
   Bumped to new version - this should take care of bug #6730.
 
 *modutils-2.4.16-r3 (14 July 2002)
@@ -111,13 +112,11 @@
 *modutils-2.4.16 (6 May 2002)
 
   6 May 2002; Martin Schlemmer <azarah@gentoo.org> modutils-2.4.16.ebuild :
-
   Enable zlib compression if in use.  Slotify.
 
 *modutils-2.4.12 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
