@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.70.ebuild,v 1.4 2004/06/24 21:42:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.70.ebuild,v 1.5 2004/07/14 01:37:38 agriffis Exp $
 
 DESCRIPTION="GUI for iPod using GTK2"
 
@@ -24,7 +24,6 @@ DEPEND=">=x11-libs/gtk+-2.0.0
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 #RDEPEND=""
 
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die
