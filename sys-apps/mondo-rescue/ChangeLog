@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mondo-rescue
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.6 2003/02/12 09:03:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.7 2003/06/19 08:37:05 johnm Exp $
+
+*mondo-rescue-1.65 (19 Jun 2003)
+
+  19 Jun 2003; John Mylchreest <johnm@gentoo.org>; mondo-rescue-1.65.ebuild:
+  Version Bump
 
 *mondo-rescue-1.61 (17 Jan 2003)
 
