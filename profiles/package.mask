@@ -286,7 +286,7 @@ sys-devel/spython
 
 # <woodchip@gentoo.org> (17 Jun 2003)
 # It is alpha after all.
->=app-crypt/mit-krb5-1.3_alpha
+=app-crypt/mit-krb5-1.3_alpha1
 
 # <twp@gentoo.org> 10 Jun 2003
 # Needs testing (I can't test it)
