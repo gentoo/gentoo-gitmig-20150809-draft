@@ -1,3 +1,6 @@
-MD5 d0d2af5b753be97ec233d761d7f06e20 ChangeLog 538
+MD5 3692f24cb99ab4d8922ab3c24efb3813 ChangeLog 762
 MD5 e9d60877a54faaeff23c5dae302db819 glukalka-0.67.ebuild 1085
+MD5 4c7f67fce0798a7a713d1c80600ac56f glukalka-0.90.1.ebuild 1185
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 7d60f81894db7604b4b460a59eb06892 files/digest-glukalka-0.67 66
+MD5 3ed009a076160256494cfe67d2250f1f files/digest-glukalka-0.90.1 68
