@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.4.ebuild,v 1.1 2003/07/08 13:47:54 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.4.ebuild,v 1.2 2003/07/30 10:16:45 phosphan Exp $
 
 DESCRIPTION="IceWM Control Center (only main program, see icewm-tools for the rest)"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://icecc.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 
 DEPEND=">=x11-libs/qt-3.0.0"
