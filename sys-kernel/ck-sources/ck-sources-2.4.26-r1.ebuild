@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.23-r1.ebuild,v 1.4 2004/04/27 21:57:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.26-r1.ebuild,v 1.1 2004/05/28 22:20:39 plasmaroo Exp $
 
-IUSE="build"
+IUSE=""
 
 # OKV=original kernel version, KV=patched kernel version.  
 
@@ -11,7 +11,7 @@ ETYPE="sources"
 inherit kernel eutils
 
 # CKV=con kolivas release version
-CKV=ck${PR/r/}
+CKV=lck${PR/r/}
 # KV=patched kernel version
 KV="${PV/_/-}-${CKV}"
 # OKV=original kernel version as provided by ebuild
@@ -33,18 +33,18 @@ BASE="`echo ${KV}|sed -e s:${EXTRAVERSION}::`"
 if [ ${PRERC} ]; then
 	OURKERNEL="2.4.${OKVLASTPR}"
 	SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
-		http://members.optusnet.com.au/ckolivas/kernel/patch-${KV}.bz2
+		http://www.plumlocosoft.com/kernel/patches/2.4/${PV}/${KV}/patch-${KV}.bz2
 		mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
 else
 	OURKERNEL="2.4.${OKVLAST}"
 	SRC_URI="mirror://kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
-		http://ck.kolivas.org/patches/2.4/${BASE}/${KV}/patch-${KV}.bz2"
+		http://www.plumlocosoft.com/kernel/patches/2.4/${PV}/${KV}/patch-${KV}.bz2"
 fi
 
 DESCRIPTION="Full sources for the Stock Linux kernel Con Kolivas's high performance patchset"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
 
-KEYWORDS="x86 -ppc"
+KEYWORDS="~x86 -ppc"
 SLOT="${KV}"
 
 src_unpack() {
@@ -57,11 +57,7 @@ src_unpack() {
 		bzcat ${DISTDIR}/patch-${PV/_/-}.bz2|patch -p1 || die "-marcelo patch failed"
 	fi
 
-	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-ck patch failed"
-
-	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
-	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
-
+	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-lck patch failed!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
 	kernel_universal_unpack
 }
-
