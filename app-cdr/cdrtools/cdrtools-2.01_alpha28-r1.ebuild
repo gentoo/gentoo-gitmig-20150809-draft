@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha28-r1.ebuild,v 1.10 2004/07/08 23:49:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha28-r1.ebuild,v 1.11 2004/07/11 03:08:24 pvdabeel Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -12,6 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64 ppc64 mips"
 IUSE=""
+
+## MacOS comment: builds fine on OS X, needs a modified src_install to install the binaries
 
 DEPEND="virtual/libc"
 PROVIDE="virtual/cdrtools"
