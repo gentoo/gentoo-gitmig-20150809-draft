@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.26 2005/02/06 17:23:53 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.27 2005/02/07 06:58:57 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -424,7 +424,7 @@ src_compile() {
 			fi
 		fi
 	fi
-	
+
 	if use xanim
 	then
 		myconf="${myconf} --with-xanimlibdir=/usr/lib/xanim/mods"
