@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Jerry Alexandratos <jerry@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.2.ebuild,v 1.1 2002/01/26 05:18:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.3.ebuild,v 1.1 2002/02/03 07:19:19 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
@@ -67,8 +67,10 @@ src_install () {
 	insinto /etc/postfix/sample
 	doins access aliases canonical relocated transport
 	doins pcre_table regexp_table postfix-script* *.cf
-	exeinto /etc/postfix ; newexe postfix-script-sgid postfix-script
-	insinto /etc/postfix ; doins ${FILESDIR}/main.cf ${S}/conf/master.cf
+	exeinto /etc/postfix
+	doexe postfix-script post-install postfix-files || die
+	insinto /etc/postfix
+	doins ${FILESDIR}/main.cf master.cf || die
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/postfix.rc6 postfix
 }
@@ -78,8 +80,8 @@ pkg_postinst() {
 	echo "***************************************************************"
 	echo "* NOTE:  Please add the 'postdrop' group, and also be sure    *"
 	echo "*        to update /etc/postfix/master.cf to the latest       *"
-	echo "*        as postfix 1.1.2's is not compadible with earlier    *"
-	echo "*        versions.                                            *"
+	echo "*        as postfix 1.1.1 and later versions' is not          *"
+	echo "*        compadible with earlier versions.                    *"
 	echo "***************************************************************"
 	echo
 }
