@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.9.ebuild,v 1.5 2003/09/05 22:57:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.9.ebuild,v 1.6 2003/09/08 02:00:39 caleb Exp $
 
 inherit kde-base
 need-kde 3.1
@@ -13,7 +13,7 @@ HOMEPAGE="http://k3b.sourceforge.net/"
 SRC_URI="mirror://sourceforge/k3b/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="debug"
 
 newdepend ">=media-sound/mpg123-0.59
