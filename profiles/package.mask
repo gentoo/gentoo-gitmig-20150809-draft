@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3785 2005/04/02 10:37:20 zaheerm Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3786 2005/04/02 12:09:40 griffon26 Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Maurice van der Pot <griffon26@gentoo.org> (02 Apr 2005)
+# Segfaults on everything. Masking until I get some time to
+# fix it, which should be in a couple of days.
+=dev-util/valgrind-2.4.0
 
 # Peter Johanson <latexer@gentoo.org> (31 Mar 2005)
 # Masking the new monodevelop and it's couple new deps.
