@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.01-r1.ebuild,v 1.11 2004/04/06 03:02:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.01-r1.ebuild,v 1.12 2004/04/27 18:13:01 agriffis Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="UCL: The UCL Compression Library"
 HOMEPAGE="http://www.oberhumer.com/opensource/ucl/"
@@ -23,3 +25,4 @@ src_compile() {
 src_install() {
 	make install DESTDIR=${D} || die
 }
+

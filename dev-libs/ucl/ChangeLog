@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.10 2004/03/25 04:06:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.11 2004/04/27 18:13:01 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> ucl-1.01-r1.ebuild:
+  Add flag-o-matic for bug 49179
 
   24 Mar 2004; Jason Wever <weeve@gentoo.org> ucl-1.01-r1.ebuild:
   Stable on sparc.
