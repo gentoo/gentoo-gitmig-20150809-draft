@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.18 2004/09/09 18:41:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.19 2004/10/29 22:39:41 spyderous Exp $
+
+*cabextract-1.1 (29 Oct 2004)
+
+  29 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +cabextract-1.1.ebuild:
+  Version bump. Includes security fix: If the files within a cabinet file
+  include "../" in their filenames, this will be changed to "xx/", so cabinets
+  cannot access the parent directory of where you want to extract them
+  (#69315).
 
   09 Sep 2004; Guy Martin <gmsoft@gentoo.org> cabextract-1.0.ebuild:
   Stable on hppa.
