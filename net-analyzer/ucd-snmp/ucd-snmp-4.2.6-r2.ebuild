@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r2.ebuild,v 1.14 2004/08/19 03:50:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r2.ebuild,v 1.15 2004/09/03 20:54:56 pvdabeel Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/net-snmp/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc sparc ~hppa alpha ppc64 s390"
+KEYWORDS="x86 amd64 ppc sparc ~hppa alpha ppc64 s390"
 IUSE="ssl ipv6 tcpd"
 
 PROVIDE="virtual/snmp"
