@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.7 2004/08/25 02:42:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.8 2004/09/05 18:06:43 malc Exp $
 
 inherit eutils gcc
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/lvempeg/lve-040322.src.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND="virtual/x11
 	>=media-libs/libsdl-1.2.6-r3
 	>=x11-libs/qt-3.3.0-r1"

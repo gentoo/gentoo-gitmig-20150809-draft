@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lve
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/ChangeLog,v 1.7 2004/08/25 02:42:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/ChangeLog,v 1.8 2004/09/05 18:06:43 malc Exp $
+
+  05 Sep 2004; Malcolm Lashley <malc@gentoo.org> lve-040322.ebuild:
+  ~amd64 closes 59091
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> lve-040322.ebuild:
   Changed SRC_URI to use mirror:// syntax.

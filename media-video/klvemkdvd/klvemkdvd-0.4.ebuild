@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/klvemkdvd/klvemkdvd-0.4.ebuild,v 1.6 2004/08/25 02:43:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/klvemkdvd/klvemkdvd-0.4.ebuild,v 1.7 2004/09/05 18:07:23 malc Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="DVD filesystem Builder"
 HOMEPAGE="http://lvempeg.sourceforge.net"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/lvempeg/klvemkdvd-0.4.src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND=">=media-video/lve-040322
@@ -19,6 +19,13 @@ DEPEND=">=media-video/lve-040322
 	>=media-video/dvdauthor-0.5.0
 	>=app-cdr/dvd+rw-tools-5.13.4.7.4
 	>=media-video/mplayer-0.92-r1"
+
+src_unpack() {
+	kde_src_unpack
+
+	epatch ${FILESDIR}/${P}-gcc3.4.patch
+}
+
 
 src_install() {
 	cd ${WORKDIR}/lveripdvd
