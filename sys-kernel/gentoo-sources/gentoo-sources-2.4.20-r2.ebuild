@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r2.ebuild,v 1.2 2003/03/21 07:17:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r2.ebuild,v 1.3 2003/03/21 20:08:48 pfeifer Exp $
 
-IUSE="build crypt xfs"
+IUSE="build"
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -20,7 +20,7 @@ ETYPE="sources"
 inherit kernel || die
 OKV="2.4.20"
 # Documentation on the patches contained in this kernel will be installed
-# to /usr/share/doc/lolo-sources-${PV}/patches.txt.gz
+# to /usr/share/doc/gentoo-sources-${PV}/patches.txt.gz
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
@@ -29,8 +29,6 @@ HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips -arm"
 SLOT="${KV}"
-DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl >=sys-apps/modutils-2.4.2 sys-devel/make"
 
 
 src_unpack() {
@@ -40,7 +38,6 @@ src_unpack() {
 	cd ${KV}
 	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
-
 	# If the compiler isn't gcc3 drop the gcc3 patches
 	if [[ "${COMPILER}" == "gcc3" ]];then
 		einfo "You are using gcc3.x"
@@ -55,17 +52,6 @@ src_unpack() {
 		done
 	fi
 
-	# This is the ratified crypt USE flag, enables IPSEC & USAGI
-	if [ -z "`use crypt`" ]; then
-		einfo "No Cryptographic support, dropping patches..."
-		for file in 6* 7* 8* ;do
-			einfo "Dropping ${file}..."
-			rm -f ${file}
-		done
-	else
-		einfo "Cryptographic support enabled..."
-	fi
-
 	kernel_src_unpack
 }
 
@@ -73,6 +59,9 @@ pkg_postinst() {
 
 	kernel_pkg_postinst
 
+	ewarn "Gentoo sources no longer contains support for xfs."
+	ewarn "Use xfs-sources if you need xfs support in your kernel."
+	echo
 	einfo "Please be warned, you have just installed a unstable"
 	einfo "patchset of the Gentoo Linux kernel sources."
 	einfo "This set contains the ptrace patch."
