@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.72 2004/09/09 02:51:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.73 2004/09/09 02:55:16 mr_bones_ Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -127,7 +127,7 @@ games_pkg_setup() {
 	[ "${GAMES_USER_DED}" != "root" ] && \
 		enewuser "${GAMES_USER_DED}" 36 /bin/bash /usr/games "${GAMES_GROUP}"
 
-	# Dear carpaski and portage-dev team, we are so sorry.  Lot's of love, games team
+	# Dear carpaski and portage-dev team, we are so sorry.  Lots of love, games team
 	# See Bug #61680
 	[ "$(getent passwd ${GAMES_USER_DED} | cut -f7 -d:)" == "/bin/false" ] && \
 		usermod "${GAMES_USER_DED}" -l /bin/bash
