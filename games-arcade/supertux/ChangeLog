@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/supertux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/ChangeLog,v 1.10 2004/06/24 22:12:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/ChangeLog,v 1.11 2004/08/25 20:36:07 mr_bones_ Exp $
+
+*supertux-0.1.2 (25 Aug 2004)
+
+  25 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> +supertux-0.1.2.ebuild:
+  version bump (bug #61600)
 
   21 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> -supertux-0.0.6.ebuild,
   -supertux-0.1.1.ebuild:
