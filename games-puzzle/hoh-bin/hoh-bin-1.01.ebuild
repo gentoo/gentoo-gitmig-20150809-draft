@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/hoh-bin-1.01.ebuild,v 1.2 2004/05/12 09:02:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/hoh-bin-1.01.ebuild,v 1.3 2004/06/04 19:35:23 jhuebel Exp $
 
 inherit games
 
@@ -12,10 +12,11 @@ SRC_URI="http://retrospec.sgn.net/download.php?id=63\&path=games/hoh/bin/hohlin-
 RESTRICT="nostrip"
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
-DEPEND="virtual/x11"
+DEPEND="virtual/x11
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
 src_compile() {
 	cat > "${T}/hoh" <<-EOF
