@@ -1,4 +1,5 @@
 MD5 d9bbdd7bb616b50f0076a9c8839d81ac gail-1.2.2.ebuild 623
+MD5 587e30f0311db4db3fe664915e09a147 gail-1.4.0.ebuild 623
 MD5 475cd5014306f5409b1aae7b96dab817 gail-1.2.1.ebuild 641
 MD5 5162925d5368780740d618efe55815aa ChangeLog 2007
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -8,3 +9,4 @@ MD5 d6dff5b7ba7338819c62f310e0092bc6 files/digest-gail-0.17 62
 MD5 bbee916a354ec7d8c3059f8891cac1ef files/digest-gail-1.2.0 63
 MD5 684bdefe5998128ba29fd14c64f48d79 files/digest-gail-1.2.1 63
 MD5 2950f432fa302076a3ef0e12501f8e73 files/digest-gail-1.2.2 63
+MD5 9267a99f8801de1ab7759d75f18eab41 files/digest-gail-1.4.0 63

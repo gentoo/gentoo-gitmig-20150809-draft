@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.47 2003/08/24 17:12:59 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.48 2003/09/07 23:31:39 foser Exp $
+
+*gnome-panel-2.3.91 (07 Sep 2003)
+
+  07 Sep 2003; foser <foser@gentoo.org> gnome-panel-2.3.91.ebuild :
+  Gnome 2.4 rc1
 
   25 Aug 2003; Mike Gardiner <obz@gentoo.org> gnome-panel-2.2.2.2.ebuild:
   Moved to stable on x86
