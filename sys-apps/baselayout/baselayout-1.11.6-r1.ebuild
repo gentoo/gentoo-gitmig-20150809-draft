@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.6-r1.ebuild,v 1.3 2004/11/12 15:37:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.6-r1.ebuild,v 1.4 2004/12/02 14:27:20 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -454,9 +454,13 @@ pkg_postinst() {
 	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
 	# new users do not update them properly...  see src_install() for why they
 	# are in /usr/share/baselayout/
-	if use build || use bootstrap; then
-		cp ${ROOT}/usr/share/baselayout/{passwd,shadow,group,fstab} ${ROOT}/etc
-	fi
+	for x in passwd shadow group fstab ; do
+		if [[ -e ${ROOT}/etc/${x} ]] ; then
+			touch "${ROOT}/etc/${x}"
+		else
+			cp "${ROOT}/usr/share/baselayout/${x}" "${ROOT}/etc/${x}"
+		fi
+	done
 
 	# Under what circumstances would mtab be a symlink?  It would be
 	# nice if there were an explanatory comment here

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d75a9d0fcbd0a904f053081895b4db81 ChangeLog 42866
 MD5 fffe698bc7055dadfc973ee21c7ea811 baselayout-1.10.3.ebuild 15557
 MD5 5a82dc04429fe73bebe1c286125d31ef baselayout-1.10.4.ebuild 15557
@@ -7,7 +10,7 @@ MD5 2d858926cc45dafb070e01636521da3b baselayout-1.9.4-r5.ebuild 16779
 MD5 5a6e60d4a0e6baf8f051488786595d0c baselayout-1.9.4-r6.ebuild 16833
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 d8a976d600ec13746edc697941c49452 baselayout-1.11.5.ebuild 16300
-MD5 0b538c59295398a0726db9113bbe3104 baselayout-1.11.6-r1.ebuild 16453
+MD5 14278861a1ae53f620f07c07e168ac8c baselayout-1.11.6-r1.ebuild 16524
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r3 134
 MD5 ab3b5bbd5ce8a8b1386c834ff4a118b4 files/digest-baselayout-1.10.3 69
@@ -22,3 +25,10 @@ MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
 MD5 3d1b5592b9b3398edb36d29422dc0143 files/rc-scripts-1.4.16-livecd.patch 672
 MD5 2830f69d5bf36a3db710e893a5dc501f files/digest-baselayout-1.11.5 69
 MD5 91e3a9eebc03ba2f2d2226ee4f78a177 files/digest-baselayout-1.11.6-r1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBryZYroRuSHgZdywRAhGQAJ9EzbM0Qj8TiKyAp0J8jlbn+VOYAACfWhL5
+N7fj4wasK97JAg+i1+dSb2U=
+=a5/9
+-----END PGP SIGNATURE-----
