@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vcdimager
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.4 2003/02/24 17:13:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.5 2003/04/11 16:16:17 aliz Exp $
+
+*vcdimager-0.7.14 (11 Apr 2003)
+
+  11 Apr 2003; Daniel Ahlbegr <aliz@gentoo.org> vcdimager-0.7.14.ebuild :
+  Version bump.
 
 *vcdimager-0.7.13 (24 Feb 2003)
 
