@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.53.ebuild,v 1.3 2004/11/07 09:01:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.53.ebuild,v 1.4 2004/11/11 23:39:11 suka Exp $
 
 inherit rpm
 
@@ -187,7 +187,6 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "******************************************************************"
 	einfo " To start Ximian-OpenOffice.org, run:"
 	einfo
 	einfo "   $ xooffice"
@@ -196,11 +195,6 @@ pkg_postinst() {
 	einfo
 	einfo "   xoocalc, xoodraw, xooimpress, xoomath, xooweb or xoowriter"
 	einfo
-	einfo "******************************************************************"
-	einfo
-	einfo "******************************************************************"
 	einfo " If you are upgrading from an older Ximian-OpenOffice.org"
 	einfo " you will have to redo your settings."
-	einfo
-	einfo "******************************************************************"
 }

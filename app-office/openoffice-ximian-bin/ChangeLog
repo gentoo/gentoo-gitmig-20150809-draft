@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice-ximian-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/ChangeLog,v 1.7 2004/08/20 20:42:23 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/ChangeLog,v 1.8 2004/11/11 23:39:11 suka Exp $
+
+  12 Nov 2004; suka@gentoo.org openoffice-ximian-bin-1.1.53.ebuild:
+  fix ewarn issues
 
   20 Aug 2004; suka@gentoo.org openoffice-ximian-bin-1.1.53.ebuild:
   fix for some sandbox issues
