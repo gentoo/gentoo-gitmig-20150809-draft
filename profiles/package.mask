@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (08 Apr 2003)
+# mask for severe testing
+=x11-base/xfree-4.3.0-r2
+
 # <hannes@gentoo.org> (08 Apr 2003)
 # mask until released
 =kde-base/arts-1.0.5b
