@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0.ebuild,v 1.1 2003/08/06 01:19:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0.ebuild,v 1.2 2003/08/11 01:34:51 agriffis Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -61,8 +61,8 @@ src_install() {
 
 pkg_postinst() {
 	ewarn
-	ewarn "Warning: You might need to remerge vim if it doesn't work"
-	ewarn "with this version of ruby.  If vim starts up okay, then"
-	ewarn "there is no need to remerge it."
+	ewarn "Warning: Vim won't work if you've just updated ruby from"
+	ewarn "1.6.8 to 1.8.0 due to the library version change."
+	ewarn "In that case, you will need to remerge vim."
 	ewarn
 }
