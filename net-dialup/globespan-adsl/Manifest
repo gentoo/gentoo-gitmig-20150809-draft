@@ -1,4 +1,6 @@
 MD5 73b15c9d0832ed8ff7fa5f1cdcd00bfd globespan-adsl-0.8-r1.ebuild 1231
-MD5 d5417ffde8d21c7d22de29f6bd8405fe ChangeLog 826
 MD5 70ce62627e1d0046ec3ca4082ad0ef16 metadata.xml 383
+MD5 b37f4ecd2b33eb07a450e5f8ea524460 ChangeLog 1032
+MD5 2dca4ff60851c02f15badca5ec919703 globespan-adsl-0.9.ebuild 1476
+MD5 11a028d498831e42bca49a9fa83af136 files/digest-globespan-adsl-0.9 72
 MD5 607f1328e222264b4c8de4661311c2f1 files/digest-globespan-adsl-0.8-r1 73
