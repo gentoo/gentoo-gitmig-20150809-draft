@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/files/rc.init,v 1.3 2004/07/07 20:01:15 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/files/rc.init,v 1.4 2004/07/18 22:25:57 aliz Exp $
 
 depend() {
 	use localmount
@@ -9,7 +9,7 @@ depend() {
 
 start() {
 	ebegin "Starting syndaemon"
-	syndaemon ${SYNDAEMON_OPTS}
+	/usr/X11R6/bin/syndaemon ${SYNDAEMON_OPTS}
 	eend $?
 }
 
