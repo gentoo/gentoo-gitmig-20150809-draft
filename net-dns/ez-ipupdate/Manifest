@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d2f3e8f358560a2268ef93ebf23caeb9 ez-ipupdate-3.0.11_beta8-r1.ebuild 912
-MD5 3c02f41ed1ecbd7b1f48e08ffbadbe82 ChangeLog 1923
+MD5 f4ad9aeaf2a00fbbbe49f843df2ba3bd ez-ipupdate-3.0.11_beta8-r1.ebuild 908
+MD5 fedc0f173e198239dc59f80a90104cec ChangeLog 2057
 MD5 cce1451ebc90d2c8a8068f6fe7d7a875 files/ez-ipupdate.rc6 1226
 MD5 fc53ff461d5187c04a36e96c42f0d7e2 files/digest-ez-ipupdate-3.0.11_beta8-r1 71
 MD5 a4f8cd6940114080f701918bd00b1800 files/ez-ipupdate-3.0.11_beta8-syslog.patch 300
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBkO2W94CCfB4KcwwRAnzlAJ4tmTM0rt8F0HgY90dunRR2fSup1wCgi+xU
-wc2cow6/LK+fuaFgdfJ3e2I=
-=NwMw
+iD8DBQFBu1YmI1lqEGTUzyQRAg5BAKCQOLKRSwfhpbXHZN+0F61J+SWHpgCfULsj
+QDd73cenuXrEEOcu4QR36jI=
+=dD10
 -----END PGP SIGNATURE-----
