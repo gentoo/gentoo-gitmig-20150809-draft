@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jfreechart
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.5 2004/11/06 09:56:01 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.6 2005/01/08 02:09:28 karltk Exp $
+
+  08 Jan 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  jfreechart-0.9.21.ebuild:
+  Added ~amd64, as Jan tested it. Fixes #75534.
 
 *jfreechart-0.9.21 (06 Nov 2004)
 
