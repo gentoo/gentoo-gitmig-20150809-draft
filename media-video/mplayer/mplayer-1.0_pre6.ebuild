@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.7 2005/01/06 09:19:37 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.8 2005/01/06 22:10:26 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -203,6 +203,7 @@ src_compile() {
 	if use x86 ; then
 		replace-flags -O0 -O2
 		replace-flags -O3 -O2
+		filter-flags -fPIC -fPIE
 	fi
 
 	local myconf=
