@@ -1,6 +1,6 @@
 # Copyright 2001-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.15-r1.ebuild,v 1.5 2002/07/08 15:08:29 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.16.ebuild,v 1.1 2002/07/08 15:08:29 sunflare Exp $
 
 DESCRIPTION="Doxygen is a documentation system for C++, Java, IDL (Corba, Microsoft and KDE-DCOP flavors) and C"
 HOMEPAGE="http://www.doxygen.org"

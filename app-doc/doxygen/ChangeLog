@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.5 2002/06/11 11:07:54 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.6 2002/07/08 15:08:29 sunflare Exp $
+
+#doxygen-1.2.16 (08 Jul 2002)
+
+  08 Jul 2002; Phil Bordelon <sunflare@gentoo.org> doxygen-1.2.15.ebuild doxygen-1.2.15-r1.ebuild doxygen-1.2.16.ebuild :
+  Did a version bump.  Also lintool'd and repoman'd the ebuild so that
+  it matches modern form.  Added KEYWORDs and SLOTs to the old ebuilds
+  as well.
 
 *doxygen-1.2.15-r1 (11 May 2002)
 

@@ -1,13 +1,16 @@
 # Copyright 2001-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Sean Mitchell <sean@arawak.on.ca>, updated Tom von Schwerdtner <tvon@etria.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.15.ebuild,v 1.1 2002/04/18 02:43:46 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.15.ebuild,v 1.2 2002/07/08 15:08:29 sunflare Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Doxygen is a documentation system for C++, Java, IDL (Corba, Microsoft and KDE-DCOP flavors) and C"
 
 SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 HOMEPAGE="http://www.doxygen.org"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="qt? ( =x11-libs/qt-2* )"
 
