@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.46 2004/12/01 14:58:11 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.47 2004/12/06 01:48:12 tseng Exp $
+
+*hardened-dev-sources-2.6.7-r17 (05 Dec 2004)
+
+  05 Dec 2004; Brandon Hale <tseng@gentoo.org>
+  +hardened-dev-sources-2.6.7-r17.ebuild:
+  The Battle of Who Could Care Less release. Guest starring Jay Pfeifer.
+  Produced by Adam Mondl. This release merges applicable patches from
+  genpatches-base 7.53 into hardened-patches. There was no effort to make the
+  patch dir pretty, look at your own risk. We'll clean this up later.
 
   01 Dec 2004; Brandon Hale <tseng@gentoo.org> :
   Version bump for several security fixes, see 0000_README
