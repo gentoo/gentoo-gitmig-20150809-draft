@@ -1,4 +1,4 @@
-MD5 55a5bee2cd9089545a3b10f1833f5a9a files/digest-tuxnes-0.75 63
-MD5 9369efb94f81b1043189d4f72ae048d7 files/configure.in-tuxnes-0.75-gentoo.diff 1739
-MD5 551c7291bef6029504f706e2a067d841 tuxnes-0.75.ebuild 1116
 MD5 de8e82c6f03130349ff12ee56629e149 ChangeLog 451
+MD5 d376936f4b7e62d8f8af03b32453b091 tuxnes-0.75.ebuild 1107
+MD5 9369efb94f81b1043189d4f72ae048d7 files/configure.in-tuxnes-0.75-gentoo.diff 1739
+MD5 55a5bee2cd9089545a3b10f1833f5a9a files/digest-tuxnes-0.75 63
