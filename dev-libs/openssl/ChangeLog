@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.43 2003/09/03 02:49:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.44 2003/09/16 22:09:11 aliz Exp $
+
+*openssl-0.9.7b-r2 (16 Sep 2003)
+
+  16 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7b-r2.ebuild :
+  This version optionally installs openssl-0.9.6 if upgrading, and leaves it out
+  if installing from scratch. Libraries from openssl-0.9.6 are needed becuse every
+  program linking to openssl links directly to the version named library instead of
+  the symlink.
 
 *openssl-0.9.7b-r1 (02 Sep 2003)
 
