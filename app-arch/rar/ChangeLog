@@ -2,18 +2,21 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.5 2002/05/31 01:48:14 seemant Exp
 
+*rar-3.1.1 (05 Feb 2003)
+
+  05 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #15101 and removed env.d file in favor of symlinks in /opt/bin.
+
 *rar-3.1.0 (23 Dec 2002)
 
   23 Dec 2002; Seemant Kulleen <seemant@gentoo.org> rar-3.1.0.ebuild
   files/digest-rar-3.1.0 :
-
   Version bump thanks to: gentoo-bugzilla@hummelink.xs4all.nl (Ronald
   Hummelink) in bug #12557.
 
 *rar-3.0 (29 May 2002)
 
   23 Dec 2002; Seemant Kulleen <seemant@gentoo.org> rar-3.0.ebuild :
-
   Added lib-compat as a dependency (especially for gcc-3 systems).  Closes
   bug #12557 by gentoo-bugzilla@hummelink.xs4all.nl (Ronald Hummelink)
 
@@ -32,7 +35,6 @@
 
   29 May 2002; Seemant Kulleen <seemant@gentoo.org> rar-3.0.ebuild
   files/digest-rar-3.0 :
-
   Version bump to newest stable. steve_flack@ntlworld.com (Steve Flack) in
   bug # 3123 gave in the update.
 
@@ -43,21 +45,18 @@
 
   12 May 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   rar-3.0_beta7.ebuild, files/digest-rar-3.0_beta7 :
-
   Version bump to new beta.
 
 *rar-3.0_beta5 (14 Apr 2002)
 
   14 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   rar-3.0_beta5.ebuild, files/10rar, files/digest-rar-3.0_beta5 :
-
   Moved RAR into /opt since it is a binary-only item (proprietary, no
   source). See also bug #1662.
 
 *rar-2.90 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
