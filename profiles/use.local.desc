@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.142 2003/10/17 03:17:33 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.143 2003/10/18 19:23:54 brad_mssw Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -163,6 +163,7 @@ sys-apps/busybox:uclibc - Compile with uclibc :)
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tinylogin:uclibc - Compile with uclibc :)
 sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
+sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
