@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.3.ebuild,v 1.1 2004/12/11 17:32:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.3.ebuild,v 1.2 2004/12/11 23:45:01 swegener Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ DESCRIPTION="Mozilla widget for wxWindows"
 SRC_URI="mirror://sourceforge/wxmozilla/${P}.tar.gz"
 HOMEPAGE="http://wxmozilla.sourceforge.net/"
 
-DEPEND=">=mozilla-1.3
+DEPEND=">=net-www/mozilla-1.3
 	python? ( dev-lang/python >=dev-python/wxpython-2.4 )
 	>=x11-libs/wxGTK-2.4"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxmozilla
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/ChangeLog,v 1.1 2004/12/11 17:32:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/ChangeLog,v 1.2 2004/12/11 23:45:01 swegener Exp $
+
+  12 Dec 2004; Sven Wegener <swegener@gentoo.org> wxmozilla-0.5.3.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *wxmozilla-0.5.3 (11 Dec 2004)
 
