@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/licq-osd/licq-osd-1.2.7.5.ebuild,v 1.2 2004/09/03 01:08:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/licq-osd/licq-osd-1.2.7.5-r1.ebuild,v 1.1 2005/03/15 12:51:03 voxus Exp $
 
 MY_PN="licq_osd_plugin"
 DESCRIPTION="On Screen Display for licq"
@@ -28,10 +28,7 @@ src_compile() {
 }
 
 src_install() {
-#	make DESTDIR=${D} install || die
 	einstall || die
 
 	dodoc README licq_osd.conf TODO AUTHORS
-
-	dosym /usr/lib/licq/licq_osd /usr/lib/licq/licq_osd.so
 }
