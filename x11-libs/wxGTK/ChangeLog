@@ -1,8 +1,20 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.20 2002/12/30 17:21:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.21 2003/01/02 03:09:15 raker Exp $
+
+*wxGTK-2.4.0 (01 Jan 2003)
+
+  01 Jan 2003; Nick Hadaway <raker@gentoo.org> wxGTK-2.4.0.ebuild,
+  files/digest-wxGTK-2.4.0 :
+  Version bump.  Currently marked unstable.  There are problems with
+  wxGTK-2.3.4 and wxPython-2.3.4.? so I am hoping that wxPython-2.4.0.?
+  will be here soon.  Depending on the timetable I may have to bring
+  wxGTK-2.3.3 to stable.  Moved unicode configure option behind use gtk2.
 
 *wxGTK-2.3.4 (18 Dec 2002)
+
+  01 Jan 2003; Nick Hadaway <raker@gentoo.org> wxGTK-2.3.4.ebuild :
+  Moved unicode configure option behind use gtk2.
 
   18 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
   Version bumpage #12380 + re-enabling support for gtk2.
