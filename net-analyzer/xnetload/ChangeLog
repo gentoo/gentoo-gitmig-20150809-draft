@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/xnetload
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.7 2004/08/28 01:41:58 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.8 2005/03/03 16:50:19 luckyduck Exp $
+
+  03 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> xnetload-1.11.3.ebuild:
+  added ~amd64 to KEYWORDS. fixes #59348
 
   27 Aug 2004; Tom Gall <tgall@gentoo.org> xnetload-1.11.3.ebuild:
   stable on ppc64, bug #59348
