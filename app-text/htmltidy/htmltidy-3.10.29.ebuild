@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.11 2004/09/08 03:23:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.12 2004/09/13 15:02:00 usata Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ S=${WORKDIR}/tidy
 DESCRIPTION="Tidy the layout and correct errors in HTML and XML documents"
 HOMEPAGE="http://tidy.sourceforge.net/"
 SRC_URI="http://tidy.sourceforge.net/src/old/${MY_P}.tgz
-		 http://tidy.sourceforge.net/docs/tidy_docs.tgz
+		 http://tidy.sourceforge.net/docs/tidy_docs_040317.tgz
 		 xml? ( http://www.cise.ufl.edu/~ppadala/tidy/html2db.tar.gz )"
 
 DEPEND="virtual/libc
