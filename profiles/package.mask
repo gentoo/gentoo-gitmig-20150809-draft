@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (06 Apr 2003)
+# permamasked and will be removed from portage at some point since unmaintained usptream
+media-plugins/xmms-arts
+
 # <malverian@gentoo.org> (03 Apr 2003)
 # Commited CVS ebuilds, both install to same dirs
 # These ebuilds create broken binaries on glibc-2.3.2 systems
