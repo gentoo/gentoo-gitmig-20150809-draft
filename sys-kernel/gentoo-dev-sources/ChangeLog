@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.51 2004/03/15 13:04:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.52 2004/03/16 00:13:44 gregkh Exp $
+
+*gentoo-dev-sources-2.6.4-r1 (15 Mar 2004)
+
+  15 Mar 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  gentoo-dev-sources-2.6.4-r1.ebuild:
+  fixing up amd64 compat work and some other minor changes
 
 *gentoo-dev-sources-2.6.4 (14 Mar 2004)
 
