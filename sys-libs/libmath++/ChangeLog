@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libmath++
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/ChangeLog,v 1.3 2004/03/01 20:14:38 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/ChangeLog,v 1.4 2004/04/18 02:17:38 randy Exp $
+
+  17 Apr 2004; Michael McCabe <randy@gentoo.org> libmath++-0.0.3.ebuild:
+  added s390 to keywords
 
 *libmath++-0.0.3 (1 Aug 2002)
 
