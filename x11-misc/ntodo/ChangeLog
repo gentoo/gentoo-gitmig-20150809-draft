@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ntodo
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ChangeLog,v 1.2 2003/12/07 00:25:36 pyrania Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ChangeLog,v 1.3 2004/02/06 04:20:43 agriffis Exp $
+
+  05 Feb 2004; Aron Griffis <agriffis@gentoo.org> ntodo-1.0.ebuild:
+  stable on alpha
 
   07 Dec 2003; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
   ntodo-1.0.ebuild:
