@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.17.ebuild,v 1.1 2005/01/25 10:22:06 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.17.ebuild,v 1.2 2005/02/24 01:47:08 vapier Exp $
 
 inherit libtool gnome.org flag-o-matic gnuconfig
 
@@ -9,13 +9,14 @@ HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="python readline ipv6"
 
-DEPEND="sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
-	hppa? ( >=sys-devel/binutils-2.15.92.0.2 )
 	readline? ( sys-libs/readline )"
+DEPEND="${RDEPEND}
+	hppa? ( >=sys-devel/binutils-2.15.92.0.2 )"
 
 src_unpack() {
 
