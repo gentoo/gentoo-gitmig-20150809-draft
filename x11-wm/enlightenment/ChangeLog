@@ -1,14 +1,16 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.4 2002/08/13 01:39:22 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.5 2002/10/14 18:29:53 vapier Exp $
 
 *enlightenment-0.16.5-r4 (19 Mar 2002)
+
+  14 Oct 2002; Mike Frysinger <vapier@gentoo.org> enlightenment-0.16.5-r4.ebuild :
+  Removed duplicate install of man pages (1 into ${D}) #9083
 
   12 Aug 2002; Mark Guertin <gerk@gentoo.org> enlightenment-0.16.5-r4.ebuild :
   Added ppc to keywords
 
   19 Mar 2002; Seemant Kulleen <seemant@gentoo.org> enlightenment-0.16.5-r4.ebuild :
-
   There was an issue where the path to the enlightenment binary was not being 
   put into englightenment.install script.  The Makefile in scripts/ should have
   done that, but it didn't resolve the name correctly.  So, this has been

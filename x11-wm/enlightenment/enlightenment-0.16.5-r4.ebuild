@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.11 2002/10/05 05:39:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.12 2002/10/14 18:29:53 vapier Exp $
 
 IUSE="nls"
 
@@ -35,9 +35,6 @@ src_compile() {
 }
 
 src_install() {
-	mv man/Makefile man/Makefile_orig
-	sed -e "s:\(DESTDIR\ =\):\1\ ${D}:" man/Makefile_orig > man/Makefile
-
 	# this fixes an issue where enlightenment.install has an incomplete
 	# path to the englightenment binary
 	mv scripts/${PN}.install.in scripts/${PN}.install.in.orig
@@ -51,7 +48,6 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		install || die
   
-	doman man/enlightenment.1
 	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING FAQ INSTALL NEWS README
 	docinto sample-scripts
 	dodoc sample-scripts/*
