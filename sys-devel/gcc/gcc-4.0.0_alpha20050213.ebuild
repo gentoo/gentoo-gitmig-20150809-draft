@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0_alpha20050123.ebuild,v 1.6 2005/02/12 20:58:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0_alpha20050213.ebuild,v 1.1 2005/02/26 12:40:21 eradicator Exp $
 
 GCC_MANPAGE_VERSION="none"
 ETYPE="gcc-compiler"
@@ -44,3 +44,12 @@ DEPEND="${RDEPEND}
 
 PDEPEND="sys-devel/gcc-config
 	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
+
+pkg_postinst() {
+	toolchain_pkg_postinst
+
+	einfo "This gcc-4 ebuild is provided for your convenience, and the use"
+	einfo "of this compiler is not supported by the Gentoo Developers."
+	einfo "Please file bugs related to gcc-4 with upstream developers."
+	einfo "Compiler bugs should be filed at http://gcc.gnu.org/bugzilla/"
+}
