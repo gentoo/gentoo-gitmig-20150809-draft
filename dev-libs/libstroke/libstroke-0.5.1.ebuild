@@ -1,30 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.12 2004/08/07 21:57:05 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.13 2004/11/04 05:17:22 vapier Exp $
 
 inherit gnuconfig
 
 DESCRIPTION="A Stroke and Gesture recognition Library"
-SRC_URI="http://www.etla.net/${PN}/${P}.tar.gz"
-HOMEPAGE="http://www.etla.net/libstroke"
+HOMEPAGE="http://www.etla.net/libstroke/"
+SRC_URI="http://www.etla.net/libstroke/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc alpha ppc amd64 ppc64"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND=">=sys-libs/glibc-2.1.3
-	>=x11-libs/gtk+-1.2.10
+DEPEND="virtual/libc
+	=x11-libs/gtk+-1*
 	virtual/x11"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
 	gnuconfig_update
-
-	econf || die
-	emake || die
 }
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc COPYING COPYRIGHT CREDITS ChangeLog README
+	dodoc CREDITS ChangeLog README
 }

@@ -1,6 +1,16 @@
-MD5 4f43472ceaf040b71f2d7b004d9c2f36 libstroke-0.5.1.ebuild 705
-MD5 5372189e0a44253f6db3a2b21b122407 libstroke-0.4.ebuild 633
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2694ea099d8f43da5b99d449d20daa2d ChangeLog 1988
+MD5 5372189e0a44253f6db3a2b21b122407 libstroke-0.4.ebuild 633
+MD5 34d9736979ced454502d5d46828d2a5f libstroke-0.5.1.ebuild 674
 MD5 a5c50833bcc05f696a75e5dc8bb9eb4d metadata.xml 225
 MD5 0ed300488be87ed223f0356a3fc2d0bc files/digest-libstroke-0.4 65
 MD5 f326e3b555cd7ab918577090c330cc42 files/digest-libstroke-0.5.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBibuLHTu7gpaalycRAmNJAJ4tANkIzceesbAty6pvZIh0WE3/1QCg0nxv
+tCGkAcoE50kvk0iiRiKcHB4=
+=MKi6
+-----END PGP SIGNATURE-----
