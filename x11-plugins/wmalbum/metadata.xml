@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>desktop-dock</herd>
+<longdescription>
+WMAlbum is a dock applet that displays album covers for songs being played by XMMS. You must already have images of the album covers stored near the file being played. WMAlbum provides a handy circular menu for play/skip/etc, and can replace wmxmms. Although dock applets are designed for the WindowMaker window manager, they also work in other window managers including openbox and blackbox.
+</longdescription>
+</pkgmetadata>
