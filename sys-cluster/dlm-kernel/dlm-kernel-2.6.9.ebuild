@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-2.6.9.ebuild,v 1.1 2005/01/27 04:32:45 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-2.6.9.ebuild,v 1.2 2005/01/27 15:35:32 xmerlin Exp $
 
 inherit eutils linux-mod check-kernel
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/linux-sources
-	sys-cluster/cman-kernel"
+	>=sys-cluster/cman-kernel-2.6.9"
 
 S="${WORKDIR}/${MY_P}"
 
