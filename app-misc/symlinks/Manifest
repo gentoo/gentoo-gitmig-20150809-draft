@@ -1,3 +1,4 @@
-MD5 666d1377e011bc239345c67bf9f6f274 files/digest-symlinks-1.2 129
-MD5 95b7092ec228fe8acf7169b5927d086f ChangeLog 401
 MD5 5c026891f0968db9bd619089e5a9c7df symlinks-1.2.ebuild 985
+MD5 95b7092ec228fe8acf7169b5927d086f ChangeLog 401
+MD5 41aa1eb06478bb0ceb9630dc224f0320 metadata.xml 596
+MD5 666d1377e011bc239345c67bf9f6f274 files/digest-symlinks-1.2 129
