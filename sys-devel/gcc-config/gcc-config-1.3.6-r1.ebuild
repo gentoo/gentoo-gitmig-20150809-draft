@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.6-r1.ebuild,v 1.3 2004/08/26 15:51:47 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.6-r1.ebuild,v 1.4 2004/08/31 18:41:09 gustavoz Exp $
 
 # Version of .c wrapper to use
 W_VER="1.4.2"
@@ -14,7 +14,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha arm ~hppa amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ~ppc sparc ~mips ~alpha arm ~hppa amd64 ~ia64 ~ppc64 ~s390"
 IUSE=""
 
 DEPEND="virtual/libc
