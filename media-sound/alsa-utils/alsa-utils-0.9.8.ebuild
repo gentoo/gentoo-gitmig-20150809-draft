@@ -1,29 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.8.ebuild,v 1.8 2004/04/20 17:13:41 eradicator Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.8.ebuild,v 1.9 2004/06/06 04:28:39 vapier Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
+SRC_URI="mirror://alsaproject/utils/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0.9"
+KEYWORDS="x86 ppc amd64"
+IUSE=""
+
 DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/alsa-lib-0.9.8"
 
-SLOT="0.9"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc amd64"
-
-SRC_URI="mirror://alsaproject/utils/${P}.tar.bz2"
-RESTRICT="nomirror"
-
-src_compile() {
-
-	econf || die "./configure failed"
-	emake || die "Parallel Make Failed"
-}
-
 src_install() {
-	local ALSA_UTILS_DOCS="COPYING ChangeLog README TODO
+	local ALSA_UTILS_DOCS="ChangeLog README TODO
 		seq/aconnect/README.aconnect
 		seq/aseqnet/README.aseqnet"
 
