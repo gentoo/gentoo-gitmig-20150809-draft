@@ -50,7 +50,7 @@ src_install() {
 	 bitmaps/amod.gif bitmaps/tclfish.xbm bitmaps/tkcvs32.xbm \
 	 bitmaps/tkcvs48.xbm bitmaps/tkcvs32_mask.xbm bitmaps/tclfish_fly.xbm \
 	 bitmaps/modbrowse.xbm bitmaps/trace.xbm 
-   doman tkcvs/tkcvs.n
+   newman tkcvs/tkcvs.n tkcvs.1
 
    # Add docs...this is important
    dodoc CHANGELOG COPYING FAQ README.tkcvs README.windows
