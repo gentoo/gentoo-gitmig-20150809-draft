@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/wavsplit
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/ChangeLog,v 1.7 2004/09/03 20:34:07 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/ChangeLog,v 1.8 2005/01/18 20:26:39 centic Exp $
+
+*wavsplit-1.2.1 (18 Jan 2005)
+
+  18 Jan 2005; Dominik Stadler <centic@gentoo.org>
+  +files/wavsplit-1.2.1-large-files.patch, +wavsplit-1.2.1.ebuild:
+  Add Version 1.2.1 and include patch to enable using wav files larger than 2G
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   wavsplit-1.1.0.ebuild:
