@@ -1,7 +1,6 @@
 # This file contains a list of useflags that cannot be used on s390.
 cdr
 qt
-jpeg
 gpm
 3dfx
 3dnow
@@ -18,18 +17,12 @@ firebird
 lirc
 mmx
 oci8
-pic
 sse
 svga
 trusted
 voodoo3
 wavelan
 java
-X
-vim-with-x
-
-# I need to have some of the bad tcltk uses fixed, until then...
-tcltk
 
 # don't quite know about this one, I'll need to revisit
 socks5
@@ -58,7 +51,11 @@ fdftk
 
 
 # masked until xorg builds
-X
 xv
 gtk
 gtk2
+X
+vim-with-x
+
+# I need to have some of the bad tcltk uses fixed, until then...
+tcltk
