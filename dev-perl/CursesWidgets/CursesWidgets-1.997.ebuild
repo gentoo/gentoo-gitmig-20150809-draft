@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CursesWidgets/CursesWidgets-1.997.ebuild,v 1.4 2003/12/05 12:41:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CursesWidgets/CursesWidgets-1.997.ebuild,v 1.5 2004/04/18 02:11:13 randy Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.digitalmages.com/perl/CursesWidgets/downloads/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc sparc"
+KEYWORDS="x86 amd64 ppc sparc s390"
 
 DEPEND="${DEPEND}
 	>=sys-libs/ncurses-5

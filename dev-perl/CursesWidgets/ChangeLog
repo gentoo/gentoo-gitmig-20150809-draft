@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CursesWidgets
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CursesWidgets/ChangeLog,v 1.3 2003/12/05 12:41:21 weeve Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CursesWidgets/ChangeLog,v 1.4 2004/04/18 02:11:13 randy Exp $
+
+  17 Apr 2004; Michael McCabe <randy@gentoo.org>
+  CursesWidgets-1.997.ebuild:
+  added s390 keywords
 
   05 Dec 2003; Jason Wever <weeve@gentoo.org> CursesWidgets-1.997.ebuild:
   Marked stable on sparc to fix broken dependencies.
