@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.11.ebuild,v 1.3 2004/06/11 07:44:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.11.ebuild,v 1.4 2004/06/17 06:37:40 mr_bones_ Exp $
 
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
 
@@ -36,14 +36,6 @@ DEPEND=">=sys-libs/db-3.2
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
-
-is_postfix_installed() {
-	if [ -d /etc/postfix ] ; then
-		return 1
-	fi
-
-	return 0
-}
 
 pkg_setup() {
 	if ! grep -q ^postdrop: /etc/group ; then
