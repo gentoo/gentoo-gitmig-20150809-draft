@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amrita
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.14 2004/11/01 20:10:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.15 2004/11/12 19:45:56 kumba Exp $
+
+  12 Nov 2004; Joshua Kinard <kumba@gentoo.org> amrita-1.8.2-r1.ebuild:
+  Marked stable on mips.
 
   01 Nov 2004; Markus Rothe <corsair@gentoo.org>
 
