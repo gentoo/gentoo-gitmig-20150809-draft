@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.1 2003/03/23 21:26:06 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.2 2003/07/04 05:09:05 kumba Exp $
+
+
+*mips-headers-2.4.21_pre4-r1 (04 Jul 2003)
+
+  04 Jul 2003; Joshua Kinard <kumba@gentoo.org> :
+  Added ebuild for CVS Snapshot (20030703) of linux-mips.org kernel, tagged linux_2_4
+  Includes patch to fix r4k cache handling, and patches for fixing
+  arch/mips/Makefile depending if the compiler is gcc-3.2 or gcc-3.3
+
 
 *mips-headers-2.4.21 (23 Mar 2003)
 
