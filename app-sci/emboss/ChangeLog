@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/emboss
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/ChangeLog,v 1.4 2004/01/28 22:22:34 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/ChangeLog,v 1.5 2004/01/31 01:46:27 sediener Exp $
+
+*emboss-2.8.0-r1 (30 Jan 2004)
+
+  30 Jan 2004; Stephen Diener <sediener@gentoo.org> emboss-2.8.0-r1.ebuild:
+  Modified to use X and png properly for servers
 
   28 Jan 2004; Stephen Diener <sediener@gentoo.org> emboss-2.8.0.ebuild:
   Modified 2.8.0 ebuild to require X not just USE it.
