@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/gnu-efi
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.6 2004/07/01 21:46:11 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.7 2005/01/23 11:33:41 plasmaroo Exp $
+
+  23 Jan 2005; <plasmaroo@gentoo.org> gnu-efi-3.0a.ebuild:
+  Adding missing pcituils dependency; solves merge failures on bootstrapping.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gnu-efi-3.0a.ebuild:
   virtual/glibc -> virtual/libc

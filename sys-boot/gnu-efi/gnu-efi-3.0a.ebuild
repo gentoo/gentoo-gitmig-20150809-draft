@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.7 2004/10/28 16:03:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.8 2005/01/23 11:33:41 plasmaroo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="ia64 x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	sys-apps/pciutils"
 
 src_unpack() {
 	unpack ${A}
