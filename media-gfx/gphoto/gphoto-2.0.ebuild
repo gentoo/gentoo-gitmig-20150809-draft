@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
 
-MY_P="${PN}-`echo ${PV} |sed -e 's:_::'`"
+MY_P="${PN}2-`echo ${PV} |sed -e 's:_::'`"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="free, redistributable digital camera software application"
 SRC_URI="http://www.gphoto.net/dist/${MY_P}.tar.gz"
 HOMEPAGE="http://www.gphoto.org/"
 
 DEPEND="virtual/glibc
-	>=dev-libs/libusb-0.1.3b
+	>=dev-libs/libusb-0.1.5
 	>=dev-libs/glib-1.2.10
 	>=sys-libs/zlib-1.1.3"
 
