@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/gperiodic
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/ChangeLog,v 1.7 2004/06/24 22:01:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/ChangeLog,v 1.8 2004/11/17 16:04:34 ribosome Exp $
+
+*gperiodic-2.0.7 (17 Nov 2004)
+
+  17 Nov 2004; Olivier Fisette <ribosome@gentoo.org> +gperiodic-2.0.7.ebuild:
+  Updated version. Thanks to Marcus Hanwell <marcus@cryos.net> for his work.
 
   15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> gperiodic-1.3.2.ebuild:
   PROVIDE is for virtuals
