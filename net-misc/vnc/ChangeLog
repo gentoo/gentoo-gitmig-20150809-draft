@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.16 2003/02/12 08:34:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.17 2003/02/21 18:02:07 aliz Exp $
+
+*vnc-3.3.6-r1 (21 Feb 2003)
+
+  21 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
 *vnc-3.3.6 (11 Dec 2002)
 
