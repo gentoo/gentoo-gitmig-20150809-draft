@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-2.8.1.ebuild,v 1.1 2004/12/08 02:32:31 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-2.8.1.ebuild,v 1.2 2004/12/10 13:11:01 obz Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -38,5 +38,7 @@ src_unpack() {
 	cd ${S}
 	# fix sec vuln (#69662)
 	epatch ${FILESDIR}/${PN}-xpdf_goo_sizet.patch
+	# disable the tests, see bug #73882
+	sed -i -e "s:test-files::" Makefile.in
 
 }

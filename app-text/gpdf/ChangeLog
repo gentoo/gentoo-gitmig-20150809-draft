@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.58 2004/12/08 02:32:31 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.59 2004/12/10 13:11:01 obz Exp $
+
+  10 Dec 2004; Mike Gardiner <obz@gentoo.org> gpdf-2.8.1.ebuild:
+  Don't compile the test-files, see bug #73882. They cause tex problems
 
 *gpdf-2.8.1 (08 Dec 2004)
 
