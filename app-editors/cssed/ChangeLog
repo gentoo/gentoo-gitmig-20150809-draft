@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/cssed
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.7 2004/06/24 21:52:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.8 2004/06/30 02:28:53 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> cssed-0.1.1_pre.ebuild,
+  cssed-0.2.0.ebuild:
+  sync IUSE (-X, -gnome, -gtk), trim trailing whitespace
 
 *cssed-0.2.1 (18 Jun 2004)
 
