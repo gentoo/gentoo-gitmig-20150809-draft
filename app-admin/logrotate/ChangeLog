@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.11 2003/04/12 16:55:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.12 2003/04/13 13:38:21 cybersystem Exp $
 
 *logrotate-3.6.5 (20 Dec 2002)
+
+  13 Apr 2003; Sascha Schwabbauer <cybersystem@gentoo.org> logrotate-3.6.5.ebuild:
+  Marked this as stable for x86, since it is working perfectly on three boxes.
 
   12 Apr 2003; Seemant Kulleen <seemant@gentoo.org> logrotate-3.6.5.ebuild:
   depend on portage-r10 instead of inheriting eutils -- this fixes broken
