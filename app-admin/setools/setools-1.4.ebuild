@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.4.ebuild,v 1.2 2004/06/25 03:02:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.4.ebuild,v 1.3 2004/07/24 18:02:27 method Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -15,9 +15,11 @@ DEPEND="sys-devel/bison
 	sys-devel/flex
 	dev-libs/libxml2
 	dev-util/pkgconfig
+	selinux? ( sys-libs/libselinux )
 	X? ( dev-lang/tk gtk? ( >=gnome-base/libglade-2.0 ) )"
 
 RDEPEND="dev-libs/libxml2
+	selinux? ( sys-libs/libselinux )
 	X? (
 		dev-lang/tk
 		>=dev-tcltk/bwidget-1.4.1
