@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/makeme-0.02-r1.ebuild,v 1.1 2001/12/15 01:07:52 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/makeme-0.02-r1.ebuild,v 1.2 2001/12/15 01:20:18 karltk Exp $
 
 S=${WORKDIR}/${P}
 
@@ -38,6 +38,6 @@ src_install () {
 	exeinto /usr/bin
 	newexe ${FILESDIR}/makeme.sh makeme
 	doman doc/makeme.1
-	echo "/usr/share/makeme/makeme.jar" > ${D}/usr/share/makeme/eclasspath
+	echo "/usr/share/makeme/makeme.jar" > ${D}/usr/share/makeme/classpath.env
 }
 

@@ -1,9 +1,9 @@
 #! /bin/sh
 
 if [ -z "$CLASSPATH" ]  ; then
-	CLASSPATH=`cat /usr/share/kissme/eclasspath`
+	CLASSPATH=`cat /usr/share/kissme/classpath.env`
 else
-	CLASSPATH=`cat /usr/share/kissme/eclasspath`:${CLASSPATH}
+	CLASSPATH=`cat /usr/share/kissme/classpath.env`:${CLASSPATH}
 fi
 
 if [ -z "$*" ] ; then 

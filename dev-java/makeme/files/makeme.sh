@@ -7,7 +7,7 @@ fi
 
 newcp=""
 for i in antlr makeme ; do
-	newcp=`cat < /usr/share/$i/eclasspath`:${newcp}
+	newcp=`cat < /usr/share/$i/classpath.env`:${newcp}
 done
 
 CLASSPATH=${newcp}:${CLASSPATH}

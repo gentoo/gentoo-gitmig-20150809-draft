@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jndi/jndi-1.2.1-r2.ebuild,v 1.1 2001/12/15 01:07:52 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jndi/jndi-1.2.1-r2.ebuild,v 1.2 2001/12/15 01:20:18 karltk Exp $
 
 Arse=jndi1_2_1.zip
 P=jndi-1.2.1
@@ -33,7 +33,7 @@ src_install() {
 	doins lib/jndi.jar
 	dodoc COPYRIGHT README.txt 
 	dohtml -r doc/*
-	echo "/usr/share/jndi/jndi.jar" > /usr/share/jndi/eclasspath
+	echo "/usr/share/jndi/jndi.jar" > /usr/share/jndi/classpath.env
 }
 
 
