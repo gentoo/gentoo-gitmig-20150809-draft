@@ -1,16 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.40.ebuild,v 1.8 2004/10/05 13:34:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.40.ebuild,v 1.9 2004/11/02 14:45:50 vapier Exp $
 
-IUSE=""
-
-DESCRIPTION="Program for identifying or deleting duplicate files residing within specified directories."
-SRC_URI="http://netdial.caribe.net/~adrian2/programs/${P}.tar.gz"
+DESCRIPTION="identify/delete duplicate files residing within specified directories"
 HOMEPAGE="http://netdial.caribe.net/~adrian2/fdupes.html"
+SRC_URI="http://netdial.caribe.net/~adrian2/programs/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86 ~amd64 ~sparc ~mips ppc64 ppc"
+SLOT="0"
+KEYWORDS="~amd64 arm hppa ia64 ~mips ppc ppc64 s390 ~sparc x86"
+IUSE=""
 
 DEPEND=""
 
@@ -19,8 +18,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin fdupes
+	dobin fdupes || die
 	doman fdupes.1
 	dodoc CHANGES CONTRIBUTORS INSTALL README TODO
 }
-
