@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.0.8.ebuild,v 1.2 2004/08/19 03:10:58 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.0.8.ebuild,v 1.3 2004/08/19 16:54:07 squinky86 Exp $
 
 DESCRIPTION="Limewire Java Gnutella client"
 HOMEPAGE="http://www.limewire.com"
-SRC_URI="http://www3.limewire.com/download/LimeWireLinux.tgz"
+SRC_URI="http://dev.gentoo.org/~squinky86/files/LimeWireLinux-${PV}.tgz"
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="x86"
@@ -12,9 +12,7 @@ DEPEND="virtual/jre
 	virtual/x11"
 IUSE=""
 S=${WORKDIR}
-RESTRICT="nomirror"
 PREFIX="/opt/limewire"
-
 
 src_compile() {
 	( echo \#!/bin/sh
