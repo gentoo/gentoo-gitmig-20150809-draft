@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.7 2002/08/12 09:40:25 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.8 2002/08/14 19:45:05 danarmak Exp $
 
 # This is for kde-base cvs ebuilds. Read comments about settings.
 # It uses $S and sets $SRC_URI, so inherit it as late as possible (certainly after any other eclasses).
@@ -82,7 +82,7 @@ kde-source_src_unpack() {
 	# which is also needed
 	if [ ! -d "$S/admin" ]; then
 		ECVS_MODULE="kde-common" ECVS_SUBDIR="admin" cvs_src_unpack
-    	mv ${WORKDIR}/kde-common/admin $WORKDIR/$ECVS_MODULE
+        	mv ${WORKDIR}/kde-common/admin $WORKDIR/$ECVS_MODULE
 	fi
 
 	# make sure we give them a clean cvs checkout

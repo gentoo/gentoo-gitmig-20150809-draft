@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.22 2002/08/13 12:24:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.23 2002/08/14 19:45:05 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -47,21 +47,30 @@ need-kde() {
 
 	debug-print-function $FUNCNAME $*
 	KDEVER="$1"
+
+	# determine install locations
+	set-kdedir $KDEVER
 	
 	# if we're a kde-base package, we need an exact version of kdelibs
 	# to compile correctly.
 	if [ "${INHERITED//kde-dist}" != "$INHERITED" ]; then
-	    newdepend "~kde-base/kdelibs-${KDEVER}"
-	    set-kdedir $KDEVER
+		newdepend "~kde-base/kdelibs-${KDEVER}"
+	elif [ -n "$KDEAPPENDAGE" ]; then
+		# special status - installs into $KDEDIR not $PREFIX
+		# and needs an exact minor version of kde.
+		# this exists for stuff that is part of a kde-base package,
+		# but also has older standalone ebuilds which must then go
+		# into the older kde's directory and cannot work with the
+		# newer kde.
+		newdepend "=kde-base/kdelibs-${KDEVER}*"
+		export PREFIX="$KDEDIR"
 	else
-	    # everyone else only needs a minimum version	
-	    set-kdedir $KDEVER
-	    
-	    if [ "$KDEMAJORVER" == "2" ]; then
-		newdepend "=kde-base/kdelibs-2.2*"
-	    else
-		min-kde-ver $KDEVER
-		newdepend ">=kde-base/kdelibs-${selected_version}"
+		# everything else only needs a minimum version	
+		if [ "$KDEMAJORVER" == "2" ]; then
+			newdepend "=kde-base/kdelibs-2.2*"
+		else
+			min-kde-ver $KDEVER
+			newdepend ">=kde-base/kdelibs-${selected_version}"
 	    fi
 	fi
 
@@ -69,11 +78,7 @@ need-kde() {
 	need-qt $selected_version
 	
 	if [ -n "$KDEBASE" ]; then
-	    #if [ "$PV" = "5" ]; then
-	    #	SLOT="cvs"
-	    #else
 	    SLOT="$KDEMAJORVER.$KDEMINORVER"
-	    #fi
 	else
 	    SLOT="0"
 	fi
@@ -192,7 +197,7 @@ set-kdedir() {
 	#[ "${INHERITED//kde-dist}" != "${INHERITED}" -a -z "$KDEDIR" ] && die "$ECLASS: Error: couldn't set kdelibs location, consult log"
 	[ -z "$KDEDIR" ] && die "$FUNCNAME: Error: couldn't set kdelibs location, consult log"
 
-	debug-print "$FUNCNAME: Will use the kdelibs installed in $KDEDIR, and install into $PREFIX."
+	einfo "$FUNCNAME: Will use the kdelibs installed in $KDEDIR, and install into $PREFIX."
 
 }
 
@@ -203,7 +208,7 @@ need-qt() {
 
 	case $QTVER in
 	    2*)	newdepend "=x11-libs/qt-2.3*" ;;
-	    3*)	newdepend ">=x11-libs/qt-3.0.4" ;;
+	    3*)	newdepend ">=x11-libs/qt-3" ;;
 	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
 	esac
 
@@ -237,8 +242,8 @@ qtver-from-kdever() {
 
 	case $1 in
 		2*)	ver=2.3.1;;
-		3*)	ver=3.0.3;;
-		5)	ver=3.0.3;; # cvs version
+		3*)	ver=3.0.4;;
+		5)	ver=3.0.4;; # cvs version
 		*)	echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
