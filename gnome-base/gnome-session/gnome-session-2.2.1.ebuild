@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.2.1.ebuild,v 1.8 2003/07/19 23:22:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.2.1.ebuild,v 1.9 2003/08/12 22:36:50 weeve Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="the Gnome2 session manager"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc ~alpha ~sparc hppa amd64"
+KEYWORDS="x86 ppc ~alpha sparc hppa amd64"
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 
 RDEPEND=">=x11-libs/gtk+-2.1
