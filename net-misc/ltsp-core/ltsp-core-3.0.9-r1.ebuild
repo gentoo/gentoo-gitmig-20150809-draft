@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r1.ebuild,v 1.9 2004/05/12 11:23:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r1.ebuild,v 1.10 2004/06/14 22:47:38 agriffis Exp $
 
 
 IUSE="gnome kde"
@@ -273,12 +273,12 @@ src_install() {
 	modify_exports
 	modify_xdm_xdm_config
 	modify_xdm_Xservers
-	if [ -n `use kde` ]; then
+	if use kde; then
 		modify_xdm_kdmrc
 	fi
 
 	# gdm requires a custom config
-	if [ -n `use gnome` ]; then
+	if use gnome; then
 		modify_gdm_gdm_conf
 		ltsp_copy_config /etc/X11/gdm/Default
 

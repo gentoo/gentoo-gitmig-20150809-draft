@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.15 2004/04/26 19:04:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.16 2004/06/14 22:51:22 agriffis Exp $
+
+  14 Jun 2004; Aron Griffis <agriffis@gentoo.org> sitecopy-0.10.12-r1.ebuild,
+  sitecopy-0.12.1.ebuild, sitecopy-0.13.4-r1.ebuild, sitecopy-0.13.4.ebuild:
+  Fix use invocation
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> sitecopy-0.13.4-r1.ebuild:
   Add die following econf for bug 48950

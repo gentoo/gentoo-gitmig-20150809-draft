@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.13.4-r1.ebuild,v 1.5 2004/04/26 19:04:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.13.4-r1.ebuild,v 1.6 2004/06/14 22:51:22 agriffis Exp $
 
 IUSE="ssl xml xml2 gnome"
 
@@ -24,7 +24,7 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	local myconf=""
-	if [ "`use xml`" ] && [ "`use xml2`" ] ; then
+	if use xml && use xml2 ; then
 		myconf="${myconf} --with-libxml2 --without-libxml1"
 	else
 	use xml \
@@ -45,7 +45,7 @@ src_compile() {
 
 	emake || die "emake failed"
 
-	if [ "`use gnome`" ]; then
+	if use gnome; then
 		econf ${myconf} --with-gnomefe || die "econf failed"
 
 		# gnome compile fix
@@ -61,7 +61,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install-sitecopy || die "install failed"
 
-	if [ "`use gnome`" ]; then
+	if use gnome; then
 		make DESTDIR=${D} install-xsitecopy || die "install failed"
 		dobin sitecopy
 	fi

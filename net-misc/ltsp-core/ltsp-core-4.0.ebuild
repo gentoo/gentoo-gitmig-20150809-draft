@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0.ebuild,v 1.4 2004/05/12 11:23:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0.ebuild,v 1.5 2004/06/14 22:47:38 agriffis Exp $
 
 IUSE="X debug"
 
@@ -122,7 +122,7 @@ src_install() {
 	done
 
 	# debug stuff
-	if [ `use debug` ]; then
+	if use debug; then
 		echo "Installing debug packages..."
 		for FILE in ${LTSP_DEBUG}
 		do
@@ -131,7 +131,7 @@ src_install() {
 	fi
 
 	# X stuff
-	if [ `use X` ]; then
+	if use X; then
 		echo "Installing X packages..."
 		for FILE in ${LTSP_X}
 		do

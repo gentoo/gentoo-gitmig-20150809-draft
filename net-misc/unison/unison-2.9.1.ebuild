@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.13 2004/06/08 08:49:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.14 2004/06/14 22:52:56 agriffis Exp $
 
 IUSE="gtk"
 
@@ -30,7 +30,7 @@ src_compile() {
 
 	local myconf
 
-	if [ `use gtk` ]; then
+	if use gtk; then
 		myconf="$myconf UISTYLE=gtk"
 	else
 		myconf="$myconf UISTYLE=text"
