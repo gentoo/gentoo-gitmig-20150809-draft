@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1763517eb84a7d951fa3b6888d0a38fd ChangeLog 630
+MD5 2fd188b82ded0c59a7719050198d51bd transfusion-bin-1.01.ebuild 1315
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 703defd42e6bea71a0ee830a476e9099 transfusion-bin-1.01.ebuild 1291
 MD5 bb61fedc5e54bc874cbb937a0696103e files/digest-transfusion-bin-1.01 160
 MD5 29086edf8b4ad73829f8b3c59088042b files/transfusion 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCZXHTu7gpaalycRAp92AJ0WQRLtEjPUa3beL9LPadtIWlVcYgCfTCpo
+QosBiBpo32+xxxz9y6NVdJw=
+=o7n9
+-----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
-MD5 d0dd4d50959031c2e7f97134480b6fae unreal-tournament-strikeforce-1.81.ebuild 1206
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d17e5d15e2ad00632eae48033b24e637 ChangeLog 801
+MD5 5e5f7cce1afa65507db0401f33679046 unreal-tournament-strikeforce-1.81.ebuild 1232
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 dc5645fc1a3601d357c12d9c3c17be0e unreal-tournament-strikeforce-1.75.ebuild 1112
-MD5 ee428f0ea13ccf661f15b2c5456e3d5f files/digest-unreal-tournament-strikeforce-1.75 187
 MD5 b4175cea6bbee6364950f9db8d734b32 files/digest-unreal-tournament-strikeforce-1.81 219
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCaOHTu7gpaalycRAs6rAKDGk0uua3tnPGrli0VzfUlfTHcihQCgq948
+S4/TPKh4GxVAv2UiOkgerSw=
+=0xaD
+-----END PGP SIGNATURE-----

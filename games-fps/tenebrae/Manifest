@@ -1,5 +1,15 @@
-MD5 972d5c712303ec2c8584410c46bdf601 tenebrae-1.04.ebuild 1479
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fa4dbf1a205bda179c04495734731ddf ChangeLog 543
 MD5 b251632170bb367c509d598998524a4b metadata.xml 625
+MD5 963e7e37e0094d258800e468c449d342 tenebrae-1.04.ebuild 1514
 MD5 af27eea7293c16e6182d5d0099bf0ba6 files/1.04-nvidia-opengl.patch 2587
 MD5 101db2b4d5a51dc6f63c6c5433dee3c0 files/digest-tenebrae-1.04 125
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCZKHTu7gpaalycRAnQsAJ4pvjEAxUFhQfXV8NVaEOkKYEQB/gCgkVsw
+3yrYYp+AJrdYnmsrVfNJyVA=
+=zJ6G
+-----END PGP SIGNATURE-----
