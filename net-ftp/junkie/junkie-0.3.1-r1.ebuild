@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/junkie/junkie-0.3.1-r1.ebuild,v 1.1 2004/12/30 23:01:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/junkie/junkie-0.3.1-r1.ebuild,v 1.2 2005/01/19 01:31:52 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -16,9 +16,7 @@ KEYWORDS="x86 ~ppc ~sparc"
 DEPEND=">=x11-libs/gtk+-2.0.3
 	>=dev-libs/glib-2.0.0"
 
-
-src_install()
-{
+src_install() {
 	# Files "AUTHORS" and "COPYING" should also be here, but they are empty and dodoc can do nothing with them
 
 	GNOME_LINKS_DIR="/usr/share/applications"
@@ -35,7 +33,7 @@ src_install()
 		do
 			cp ${S}/$x ${D}/${GNOME_ICONS_DIR}/junkie-$x
 		done
-		
+
 		cp ${FILESDIR}/junkie.desktop ${D}/${GNOME_LINKS_DIR}
 	fi
 
@@ -54,5 +52,4 @@ src_install()
 	fi
 
 	dodoc ChangeLog INSTALL NEWS README
-
 }
