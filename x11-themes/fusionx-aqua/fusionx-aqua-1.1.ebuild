@@ -1,19 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.1 2003/06/19 11:38:11 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.2 2003/06/27 14:07:55 vapier Exp $
 
-inherit kde-base || die "Can't inherit kde-base!"
+inherit kde-base
 need-kde 3.1
 
 MY_P="FusionX-Aqua-${PV}"
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="The stylish \"Fusion X Aqua\" theme for KDE 3.1. This was inspired by Max Rudberg's BBX appearance theme designed for use with Apple's OS X operating system."
+DESCRIPTION="stylish \"Fusion X Aqua\" theme for KDE"
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=5296"
 SRC_URI="http://www.kdelook.org/content/files/5296-${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-DEPEND="kde-base/kdebase"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
+
+DEPEND="kde-base/kdebase"
 
 src_compile(){
 	# nothing to compile, but don't want the eclass to try to compile anything
@@ -45,5 +47,4 @@ pkg_postinst(){
 	einfo "execute the following command from a shell or the"
 	einfo "KDE \"Run Command\" dialog:"
 	einfo "   kinstalltheme"
-
 }
