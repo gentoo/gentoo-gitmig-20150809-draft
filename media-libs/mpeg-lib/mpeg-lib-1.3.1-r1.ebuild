@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mpeg-lib/mpeg-lib-1.3.1-r1.ebuild,v 1.21 2004/07/14 20:19:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mpeg-lib/mpeg-lib-1.3.1-r1.ebuild,v 1.22 2005/01/12 22:19:15 kugelfang Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}
@@ -26,7 +26,7 @@ src_compile() {
 
 src_install () {
 
-	make prefix=${D}/usr install || die
+	make INSTALL_LIBRARY="${D}/usr/$(get_libdir)" prefix="${D}/usr" install || die
 	dodoc CHANGES README
 	docinto txt
 	dodoc doc/image_format.eps doc/mpeg_lib.*
