@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.64 2004/02/21 20:48:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.65 2004/02/24 21:58:52 aliz Exp $
+
+*openssh-3.8_p1 (24 Feb 2004)
+
+  24 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> openssh-3.8_p1.ebuild:
+  Version bump.
 
   21 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> openssh-3.7.1_p2-r2.ebuild:
   Fix openssh to work with multipe kerbers5 libs. Closing #30310.
