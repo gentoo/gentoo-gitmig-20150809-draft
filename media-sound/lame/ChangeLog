@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.5 2002/08/07 18:11:01 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.6 2002/09/09 00:04:48 jmorgan Exp $
 
 *lame-3.92 (23 Apr 2002)
+  09 Sep 2002; Jack Morgan <jmorgan@gentoo.org> :
+  Added sparc/saprc64 keywords
+
   07 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Adjusted nasm dep for x86 only
 
