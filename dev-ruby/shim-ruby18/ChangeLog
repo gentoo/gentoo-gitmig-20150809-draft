@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/shim-ruby18
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/ChangeLog,v 1.1 2003/11/18 06:45:13 usata Exp $
+
+*shim-ruby18-1.8.1_pre2 (17 Nov 2003)
+
+  17 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  shim-ruby18-1.8.1_pre2.ebuild:
+  Initial import
+
