@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mtxdrivers-pro
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/ChangeLog,v 1.12 2004/06/25 00:46:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/ChangeLog,v 1.13 2004/10/04 06:33:52 spyderous Exp $
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  mtxdrivers-pro-1.1.0_beta-r2.ebuild:
+  Update info on how to get this. Matrox no longer requires an email -- they're
+  downloadable after registration.
 
   25 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
   mtxdrivers-pro-1.1.0_beta-r2.ebuild:

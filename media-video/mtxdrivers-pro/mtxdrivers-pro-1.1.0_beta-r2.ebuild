@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/mtxdrivers-pro-1.1.0_beta-r2.ebuild,v 1.4 2004/07/14 22:07:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/mtxdrivers-pro-1.1.0_beta-r2.ebuild,v 1.5 2004/10/04 06:33:52 spyderous Exp $
 
 inherit matrox
 
@@ -23,11 +23,11 @@ RDEPEND="x11-base/opengl-update
 PROVIDE="virtual/opengl"
 
 pkg_nofetch() {
-	einfo "Matrox requires you e-mail them for the 'pro' version of their drivers"
-	einfo "(i.e., the ones with OpenGL support).  If you do not need OpenGL, please"
-	einfo "emerge mtxdrivers. Otherwise, e-mail cad-support@matrox.com and request"
-	einfo "the Matrox Parhelia drivers with OpenGL support.  Please remember to"
-	einfo "download the RH9.0 driver once you are given the site address."
+	einfo "You must go to:"
+	einfo "http://www.matrox.com/mga/registration/driverhub.cfm?aid=103&dtype=3&osid=7&prodid=40"
+	einfo "(for the RH9.0 drivers) and log in (or create an account) to download the"
+	einfo "Matrox Parhelia drivers. Remember to right-click and use Save Link As when"
+	einfo "downloading the driver."
 }
 
 src_install() {
