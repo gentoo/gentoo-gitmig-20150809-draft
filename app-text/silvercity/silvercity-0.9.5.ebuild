@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/silvercity-0.9.5.ebuild,v 1.3 2004/09/03 16:55:39 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/silvercity-0.9.5.ebuild,v 1.4 2004/10/24 02:03:45 weeve Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ppc"
+KEYWORDS="~x86 ppc ~sparc"
 IUSE=""
 RESTRICT="nomirror"
 
