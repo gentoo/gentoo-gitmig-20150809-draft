@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.37 2004/04/12 00:07:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.38 2004/04/12 00:33:26 mr_bones_ Exp $
+
+  11 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> rsync-2.6.0.ebuild:
+  add patch from Sascha Silbe to fix use static linking (bug #47361)
 
   11 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> rsync-2.6.0.ebuild:
   add IUSE (bug #47358); don't rdepend on sed; error check sed; tidy
