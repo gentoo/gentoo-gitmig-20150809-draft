@@ -1,15 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2a.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2a.ebuild,v 1.3 2003/10/03 01:06:34 hillster Exp $
 
 MY_P="TkPasMan-${PV}"
-
-SRC_URI="http://www.xs4all.nl/~wbsoft/linux/projects/${MY_P}.tar.gz"
-LICENSE="GPL-2"
-KEYWORDS="~x86"
 S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="A useful and reliable personal password manager, written in Tcl/Tk"
+HOMEPAGE="http://www.xs4all.nl/~wbsoft/linux/tkpasman.html"
+SRC_URI="http://www.xs4all.nl/~wbsoft/linux/projects/${MY_P}.tar.gz"
+
+LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~x86"
 IUSE="ssl"
 
 DEPEND=">=dev-lang/tcl-8.3
@@ -21,13 +23,13 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	>=dev-lang/tcl-8.3"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A} && cd "${S}"
 
 	use ssl || sed -i "s:^USE_OPENSSL=true:USE_OPENSSL=false:g" config
 }
 
 src_compile() {
-	make || die
+	make || die "compile failed"
 }
 
 src_install() {
