@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.11.1.ebuild,v 1.1 2005/03/28 17:41:16 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.11.1-r1.ebuild,v 1.1 2005/03/29 16:42:38 pythonhead Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ DESCRIPTION="ruby on rails is a web-application and persistance framework"
 HOMEPAGE="http://www.rubyonrails.org"
 # The URL depends implicitly on the version, unfortunately. Even if you
 # change the filename on the end, it still downloads the same file.
-SRC_URI="http://rubyforge.org/frs/download.php/3590/${P}.gem"
+SRC_URI="http://rubyforge.org/frs/download.php/3692/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"
