@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.51 2003/10/22 12:03:12 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.52 2003/10/27 07:29:34 obz Exp $
+
+*libgtkhtml-2.4.1 (27 Oct 2003)
+
+  27 Oct 2003; Mike Gardiner <obz@gentoo.org> libgtkhtml-2.4.1.ebuild:
+  New version
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> libgtkhtml-2.4.0.ebuild:
   set ppc in keywords
