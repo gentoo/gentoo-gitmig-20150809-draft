@@ -1,6 +1,9 @@
 # ChangeLog for net-news/yydecode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/yydecode/ChangeLog,v 1.5 2004/06/25 00:27:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/yydecode/ChangeLog,v 1.6 2004/07/30 00:18:09 swegener Exp $
+
+  30 Jul 2004; Sven Wegener <swegener@gentoo.org> yydecode-0.2.10.ebuild:
+  Marked stable on x86.
 
 *yydecode-0.2.10 (19 Jun 2004)
 
