@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2739 2004/03/08 21:56:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2740 2004/03/09 23:40:29 vapier Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <vapier@gentoo.org> (09 Mar 2004)
+# CVS ebuild to help out developers
+=x11-wm/enlightenment-0.16.9999
 
 # <foser@gentoo.org> (08 Mar 2004)
 # configure stuff broken on a lot of systems
