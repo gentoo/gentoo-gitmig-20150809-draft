@@ -1,0 +1,107 @@
+diff -ur tse3-0.2.7.orig/src/tse3/Midi.h tse3-0.2.7/src/tse3/Midi.h
+--- tse3-0.2.7.orig/src/tse3/Midi.h	2004-07-13 13:42:54.171911848 -0400
++++ tse3-0.2.7/src/tse3/Midi.h	2004-07-13 13:44:05.282101456 -0400
+@@ -819,6 +819,6 @@
+                 const MidiEvent &e1;
+         };
+     };
+-};
++}
+ 
+ #endif
+diff -ur tse3-0.2.7.orig/src/tse3/Mutex.h tse3-0.2.7/src/tse3/Mutex.h
+--- tse3-0.2.7.orig/src/tse3/Mutex.h	2004-07-13 13:42:54.188909264 -0400
++++ tse3-0.2.7/src/tse3/Mutex.h	2004-07-13 13:51:01.925761992 -0400
+@@ -315,7 +315,7 @@
+ #endif
+                 }
+         };
+-    };
++    }
+ }
+ 
+ #endif
+diff -ur tse3-0.2.7.orig/src/tse3/Notifier.h tse3-0.2.7/src/tse3/Notifier.h
+--- tse3-0.2.7.orig/src/tse3/Notifier.h	2004-07-13 13:42:54.171911848 -0400
++++ tse3-0.2.7/src/tse3/Notifier.h	2004-07-13 13:46:50.128041064 -0400
+@@ -290,7 +290,7 @@
+                 const p4_type       &p4;                                 // (*)
+         };
+ 
+-    };
++    }
+ 
+     /**************************************************************************
+      * Public Notifier framework API
+@@ -367,7 +367,7 @@
+              */
+             typedef Listener<interface_type> listener_type;
+ 
+-            friend class listener_type;
++            friend class Listener<interface_type>;
+ 
+         protected:
+ 
+@@ -602,7 +602,7 @@
+                 if (notifiers.erase(notifier)) notifier->detach(this);
+             }
+ 
+-            friend class notifier_type;
++            friend class Notifier<interface_type>;
+ 
+         protected:
+ 
+diff -ur tse3-0.2.7.orig/src/tse3/app/Application.h tse3-0.2.7/src/tse3/app/Application.h
+--- tse3-0.2.7.orig/src/tse3/app/Application.h	2004-07-13 13:42:54.149915192 -0400
++++ tse3-0.2.7/src/tse3/app/Application.h	2004-07-13 13:50:10.297610664 -0400
+@@ -35,12 +35,12 @@
+     namespace Cmd
+     {
+         class CommandHistory;
+-    };
++    }
+ 
+     namespace Ins
+     {
+         class Destination;
+-    };
++    }
+ 
+     /**
+      * The App namespace contains classes that use the @ref TSE3
+diff -ur tse3-0.2.7.orig/src/tse3/app/Record.h tse3-0.2.7/src/tse3/app/Record.h
+--- tse3-0.2.7.orig/src/tse3/app/Record.h	2004-07-13 13:42:54.152914736 -0400
++++ tse3-0.2.7/src/tse3/app/Record.h	2004-07-13 13:50:33.187130928 -0400
+@@ -36,7 +36,7 @@
+     namespace Cmd
+     {
+         class CommandHistory;
+-    };
++    }
+ 
+     namespace App
+     {
+diff -ur tse3-0.2.7.orig/src/tse3/plt/Arts.cpp tse3-0.2.7/src/tse3/plt/Arts.cpp
+--- tse3-0.2.7.orig/src/tse3/plt/Arts.cpp	2004-07-13 13:42:54.158913824 -0400
++++ tse3-0.2.7/src/tse3/plt/Arts.cpp	2004-07-13 13:49:02.575905928 -0400
+@@ -74,7 +74,7 @@
+ 
+     ArtsCommon *artsCommon     = 0;
+     int         artsCommonInit = 0;
+-};
++}
+ 
+ 
+ ArtsMidiScheduler::ArtsMidiScheduler()
+diff -ur tse3-0.2.7.orig/src/tse3/util/MulDiv.h tse3-0.2.7/src/tse3/util/MulDiv.h
+--- tse3-0.2.7.orig/src/tse3/util/MulDiv.h	2004-07-13 13:42:54.169912152 -0400
++++ tse3-0.2.7/src/tse3/util/MulDiv.h	2004-07-13 13:48:05.942515512 -0400
+@@ -34,7 +34,7 @@
+          * @return val * num / div (which coped with integer overflows)
+          */
+         extern int muldiv(int val, int num, int div);
+-    };
++    }
+ }
+ 
+ #endif
