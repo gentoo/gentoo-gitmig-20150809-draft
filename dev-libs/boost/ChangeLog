@@ -1,8 +1,17 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.6 2003/08/25 00:58:02 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.7 2003/12/19 16:44:07 george Exp $
 
-*boost-1.30.0 (24 Aug 2003)
+*boost-1.31.0_alpha1 (18 Dec 2003)
+
+  18 Dec 2003; George Shapovalov <george@gentoo.org> boost-1.31.0_alpha1.ebuild :
+  SInce 1.30 stopped working with python 2.3 (see #35268) and 1.31 is not yet out 
+  I am adding this cvs snapshot. Note: !!!do not just copy this one over!!! 
+  Adjust a few vars inside if you do update it!
+  This one also incorporates build tools installation from #35718 (thanks to 
+  Chris Mayo <mayo@clara.co.uk> for suggestion).
+
+*boost-1.30.2 (24 Aug 2003)
 
   24 Aug 2003; George Shapovalov <george@gentoo.org> boost-1.30.2.ebuild :
   looks like I got stuck with this ebuild :),
