@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-6.1_pre21.ebuild,v 1.2 2005/03/19 22:04:36 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-6.1_pre21.ebuild,v 1.3 2005/03/22 13:59:10 xmerlin Exp $
 
 inherit linux-mod
 
@@ -46,9 +46,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/gfs
-	doexe ${FILESDIR}/gfs-mount
+	exeinto /etc/init.d ; newexe ${FILESDIR}/gfs.rc gfs || die
 }
 
 pkg_postinst() {

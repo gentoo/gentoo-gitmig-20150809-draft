@@ -1,0 +1,124 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs.rc,v 1.1 2005/03/22 13:59:10 xmerlin Exp $
+
+depend() {
+	use dns logger
+	use net gnbd-client
+	need cluster-manager cluster-locking-manager fenced
+	provide cluster
+}
+
+start() {
+	einfo "Starting gfs cluster:"
+	
+	if [ ! -f /etc/ntp.conf ] ; then
+		eerror "Please create /etc/ntp.conf"
+		eerror "Sample conf: /usr/share/ntp/ntp.conf"
+		eend 1
+	fi
+	
+	local module
+	
+	# detect cluster/locking manager cman+dlm or gulm ?
+	if [ -d /proc/cluster/config/cman ]; then
+		if [ ! -d /proc/cluster/lock_dlm ]; then
+			modules="${modules} lock_dlm"
+		fi
+	else
+		if [ ! -d /proc/cluster/lock_gulm ]; then
+			modules="${modules} lock_gulm"
+		fi
+	fi
+
+	if [ ! -f /proc/fs/gfs ]; then
+		modules="${modules} gfs"
+	fi
+	
+	for module in ${modules}; do
+		ebegin "Loading ${module} kernel module"
+		modprobe ${module}
+		
+		if [ "$?" -ne 0 ]
+		then
+			ewend 1 "Failed to load ${module} kernel module"
+		else
+			eend 0
+		fi
+	done
+	
+	ebegin "Mounting GFS filesystems"
+	mount -at gfs >/dev/null
+	
+	if [ "$?" -ne 0 ]
+	then
+		ewend 1 "Could not mount all GFS filesystems!"
+	else
+		eend 0
+	fi
+	
+	return 0
+}
+
+stop() {
+	einfo "Stopping gfs cluster:"
+	
+	local sig retry
+	local remaining="$(awk '$3 ~ /gfs/ { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
+
+	if [ -z "${remaining}" ]
+	then
+		ebegin "Unmounting GFS filesystems"
+		eend 0
+	else
+	        sig=
+	        retry=3
+	        while [ -n "${remaining}" -a "${retry}" -gt 0 ]
+	        do
+	                if [ "${retry}" -lt 3 ]
+			then
+	                        ebegin "Unmounting GFS filesystems (retry)"
+	                        umount ${remaining} &>/dev/null
+	                        eend $? "Failed to unmount GFS filesystems this retry"
+	                else
+	                        ebegin "Unmounting GFS filesystems"
+	                        umount ${remaining} &>/dev/null
+	                        eend $? "Failed to unmount GFS filesystems"
+	                fi
+	                remaining="$(awk '$3 ~ /gfs/ { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
+	                [ -z "${remaining}" ] && break
+	                /bin/fuser -k -m ${sig} ${remaining} &>/dev/null
+	                sleep 5
+	                retry=$((${retry} -1))
+	                sig=-9
+	        done
+	fi
+
+	local module modules
+	
+	if [ -f /proc/fs/gfs ]; then
+		modules="gfs"
+	fi
+	if [ -d /proc/cluster/lock_dlm ]; then
+		modules="${modules} lock_dlm"
+	fi
+	if [ -d /proc/cluster/lock_gulm ]; then
+		modules="${modules} lock_gulm"
+	fi
+	
+	local module
+	for module in ${modules}; do
+		ebegin "Unloading ${module} kernel module"
+		modprobe -r ${module}
+		
+		if [ "$?" -ne 0 ]
+		then
+			ewend 1 "Failed to unload ${module} kernel module"
+		else
+			eend 0
+		fi
+	done
+	
+	return 0
+}
