@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/ginac
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ginac/ChangeLog,v 1.1 2002/10/30 00:42:59 george Exp $
+
+*ginac-1.0.9 (29 Oct 2002)
+  
+  29 Oct 2002; G.Shapovalov <georges@its.caltech.edu> ginac-1.0.9.ebuild :
+
+  initial release. 
+  "GiNaC is a CAS as well as a C++ library providing algebraic capabilities."
+  ebuild submitted by Pierre-Henri Jondot <Pierre-Henri.Jondot@wanadoo.fr>
