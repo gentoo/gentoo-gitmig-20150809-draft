@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-3-r2.ebuild,v 1.9 2003/07/17 16:54:57 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-3-r2.ebuild,v 1.10 2003/08/03 05:39:17 tester Exp $
 
 DESCRIPTION="Sets up some env.d files for kde"
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org/"
 DEPEND=""
-KEYWORDS="x86 ppc sparc alpha hppa" # works everywhere - nothing to compile, no deps
+KEYWORDS="x86 ppc sparc alpha hppa amd64" # works everywhere - nothing to compile, no deps
 # needs the new portage to process the CONFIG_PROTECT values correctly
 RDEPEND=">=sys-apps/portage-2.0.36"
 DEPEND=""
