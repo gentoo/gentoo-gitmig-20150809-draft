@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.38.ebuild,v 1.1 2004/10/17 02:14:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.38.ebuild,v 1.2 2004/11/13 17:15:18 swegener Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://ne.dsi.unimi.it/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
