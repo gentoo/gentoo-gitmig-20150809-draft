@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r7.ebuild,v 1.1 2002/12/22 22:16:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r7.ebuild,v 1.2 2003/01/02 16:04:57 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard linux net thingees -- inetd, ping"
@@ -10,15 +10,16 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="BSD"
 DEPEND="virtual/glibc"
+inherit eutils
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	
 	if [ ${ARCH} == "alpha" ]; then
-		patch -p1 < ${FILESDIR}/netkit-base-0.17-alpha-ping-fix.patch || die
+		epatch ${FILESDIR}/netkit-base-0.17-alpha-ping-fix.patch
 	fi
-	patch -p1 < ${FILESDIR}/netkit-base-0.17-wrong-byte-fix.patch || die
+	epatch ${FILESDIR}/netkit-base-0.17-wrong-byte-fix.patch
 }
 
 src_compile() {

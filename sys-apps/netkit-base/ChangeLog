@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/netkit-base
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.7 2002/12/22 22:16:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.8 2003/01/02 16:04:57 raker Exp $
 
 *netkit-base-0.17-r7 (22 Dec 2002)
+
+  02 Jan 2002; Nick Hadaway <raker@gentoo.org> netkit-base-0.17-r7.ebuild :
+  Now using epatch.
 
   22 Dec 2002; Nick Hadaway <raker@gentoo.org>
   netkit-base-0.17-r7.ebuild,
