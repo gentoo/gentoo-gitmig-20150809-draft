@@ -823,7 +823,3 @@ x11-libs/gdkxft
 # lostlogic@gentoo.org 06 Jun 2002
 # Masked because installs headers in wrong location
 =media-libs/id3lib-3.8.0_pre2-r2
-
-# lostlogic@gentoo.org 07 Jun 2002
-# Masked for testing new version with gcc-3.1 fixes
-=net-im/centericq-4.7.2
