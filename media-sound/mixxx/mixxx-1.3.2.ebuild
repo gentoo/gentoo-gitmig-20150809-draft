@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.3.2.ebuild,v 1.1 2004/10/08 07:17:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.3.2.ebuild,v 1.2 2004/10/08 07:18:21 eradicator Exp $
 
 IUSE="jack"
 
@@ -41,9 +41,9 @@ src_unpack() {
 
 src_compile() {
 	./configure `use_enable jack Jack` || die "configure failed"
-	
-        sed -i -e "s/CFLAGS *= -pipe -w -O2/CFLAGS   = ${CFLAGS} -w/" \
-               -e "s/CXXFLAGS *= -pipe -w -O2/CXXFLAGS   = ${CXXFLAGS} -w/" Makefile
+
+	sed -i -e "s/CFLAGS *= -pipe -w -O2/CFLAGS   = ${CFLAGS} -w/" \
+	       -e "s/CXXFLAGS *= -pipe -w -O2/CXXFLAGS   = ${CXXFLAGS} -w/" Makefile
 
 	addpredict  ${QTDIR}/etc/settings
 	emake || die "make failed"

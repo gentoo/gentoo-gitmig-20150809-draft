@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 03b534c750ae098495aa2578cb82a9b9 ChangeLog 2915
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 56663f1bbadbe0cc8bba404dfe7c64c1 mixxx-1.2.1.ebuild 1486
-MD5 77e6b71779dde8b2d977e03e06eca2de mixxx-1.3.2.ebuild 1294
+MD5 af1c2791c0a95cb290025b8dcc4f4f4c mixxx-1.3.2.ebuild 1279
 MD5 5794a39e6d1cd6f615c7c853b050f19d files/mixxx-1.3.2-gentoo.patch 3606
 MD5 f3543ce61c9d39860076bad6d555d3bb files/digest-mixxx-1.2.1 64
 MD5 e7c3a488b82537d2e1912239a42453c0 files/mixxx.pro 13666
@@ -12,7 +12,7 @@ MD5 064add22fc8473743fee7feedb5256f0 files/digest-mixxx-1.3.2 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZj8TArHZZzCEUG0RAkaNAJ0bPxf4SwBxOlMNwOGTNLTEwGfP+wCeKrZi
-Wzmx5mZiz+iks4yP9o98X1k=
-=gGSq
+iD8DBQFBZj9HArHZZzCEUG0RAqKCAJ0YkwyNpJi2Afht4IUnxmIUiHB6xACfZHL3
+/zPKm6wtU4cXpYwA6f1cCe0=
+=CaOC
 -----END PGP SIGNATURE-----
