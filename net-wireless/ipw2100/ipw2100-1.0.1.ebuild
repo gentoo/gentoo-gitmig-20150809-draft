@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.1.ebuild,v 1.2 2004/11/20 17:41:24 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.1.ebuild,v 1.3 2005/01/02 15:17:24 brix Exp $
 
 inherit kernel-mod eutils
 
