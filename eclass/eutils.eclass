@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.113 2004/10/05 05:15:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.114 2004/10/06 04:21:08 usata Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -565,7 +565,7 @@ mymktemp() {
 #
 # egetent(database, key)
 egetent() {
-	if use macos || use ppc-macos ; then
+	if useq macos || useq ppc-macos ; then
 		case "$2" in
 		  *[!0-9]*) # Non numeric
 			nidump $1 . | awk -F":" "{ if (\$1 ~ /^$2$/) {print \$0;exit;} }"
@@ -641,7 +641,7 @@ enewuser() {
 	if [ "${euid}" == "next" ]
 	then
 		local pwrange
-		if use macos || use ppc-macos || [ "${USERLAND}" == "BSD" ] ; then
+		if [ "${USERLAND}" == "BSD" ] ; then
 			pwrange="`jot 898 101`"
 		else
 			pwrange="`seq 101 999`"
@@ -720,7 +720,7 @@ enewuser() {
 	local eextra="$@"
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if use macos || use ppc-macos ;
+	if useq macos || useq ppc-macos ;
 	then
 		### Make the user
 		if [ -z "${eextra}" ]
@@ -812,7 +812,7 @@ enewgroup() {
 		then
 			if [ -z "`egetent group ${egid}`" ]
 			then
-				if use macos || use ppc-macos ; then
+				if useq macos || useq ppc-macos ; then
 					opts="${opts} ${egid}"
 				else
 					opts="${opts} -g ${egid}"
@@ -836,7 +836,7 @@ enewgroup() {
 	# add the group
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if use macos || use ppc-macos ;
+	if useq macos || useq ppc-macos ;
 	then
 		if [ ! -z "${eextra}" ];
 		then
