@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.772 2004/11/30 07:15:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.773 2004/11/30 23:14:49 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -631,7 +631,8 @@ sys-boot/arcboot:cobalt - Disables support for Cobalt Microserver hardware (Qube
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/lam-mpi:f77 - Adds support for f77
-sys-devel/binutils:multitarget - Adds support to binutils for canadian cross compiling. (does not work with gas)
+sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
+sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checking (disables PIE and SSP building in gcc)
 sys-devel/gcc:fortran - Build support for the fortran language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
