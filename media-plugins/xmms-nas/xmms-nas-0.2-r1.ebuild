@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/xmms-nas-0.2-r1.ebuild,v 1.13 2004/11/17 06:18:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/xmms-nas-0.2-r1.ebuild,v 1.14 2004/11/17 06:35:01 eradicator Exp $
 
 IUSE=""
 
@@ -30,6 +30,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die
+	exeinto `xmms-config --input-plugin-dir`
+	doexe .libs/libnas.so || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
