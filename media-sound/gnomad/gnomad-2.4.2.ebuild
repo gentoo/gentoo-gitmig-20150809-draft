@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.4.2.ebuild,v 1.1 2004/03/04 11:09:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.4.2.ebuild,v 1.2 2004/03/30 03:10:57 mr_bones_ Exp $
 
-inherit gnome2
+inherit flag-o-matic gnome2
 
 ALLOWED_FLAGS=""
 strip-flags
