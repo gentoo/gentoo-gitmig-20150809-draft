@@ -51,7 +51,8 @@
 *>=sys-apps/findutils-4.1.7-r3
 *>=sys-apps/procps-3.1.8
 *>=sys-apps/tar-1.13.25-r3
-*>=net-misc/openssh-3.5_p1-r1
+#*>=net-misc/openssh-3.5_p1-r1
+*=net-misc/openssh-3.6.1_p2-r3
 *>=sys-apps/pam-login-3.11
 
 # (file|sh-|text)utils have been replaced by coreutils
