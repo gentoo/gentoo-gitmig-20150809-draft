@@ -1,0 +1,23 @@
+--- Makefile.orig	2004-09-24 18:54:09.000000000 +0100
++++ Makefile	2004-11-14 13:45:06.804421168 +0000
+@@ -2,9 +2,9 @@
+ VERSION = 1.1-alpha10
+ 
+ CC = g++
+-CPPFLAGS  = -Wall -fPIC -DPIC -O2 -march=i686 -pipe -DPOSIX -D_REENTRANT -DVERSION=\"$(VERSION)\"
+-INCLUDE =  -I/usr/include/musepack `pkg-config --cflags gtk+-2.0` -pthread
+-LIBS = `pkg-config --cflags --libs gtk+-2.0` -lpthread -lm -lmusepack
++CPPFLAGS  = -Wall -fPIC -DPIC ${CXXFLAGS} -DPOSIX -D_REENTRANT -DVERSION=\"$(VERSION)\"
++INCLUDE = $(shell pkg-config --cflags bmp) -pthread -I/usr/include/musepack
++LIBS = $(shell pkg-config --libs bmp) -lpthread -lmusepack
+ 
+ SOURCES :=$(wildcard *.cpp)
+ HEADERS :=$(wildcard *.h)
+@@ -21,6 +21,6 @@
+ 	rm -f  libmpc.so
+ 
+ install: libmpc.so
+-	install ${installopts} libmpc.so /usr/lib/bmp/Input/.
++	install ${installopts} libmpc.so $(shell pkg-config --variable=input_plugin_dir bmp)
+ 	
+ #END OF FILE
