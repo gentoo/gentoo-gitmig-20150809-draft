@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.8.ebuild,v 1.1 2005/01/09 00:12:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.8.ebuild,v 1.2 2005/01/10 01:58:20 stkn Exp $
 
 inherit eutils
 
@@ -46,4 +46,14 @@ src_install() {
 	# Fix the perms on the init scripts
 	fperms a+x /etc/init.d/nifd /etc/init.d/mDNSResponder
 
+	# howl-0.9.8 introduces a change in library naming,
+	# preserve old libraries to not break things
+	preserve_old_lib /usr/$(get_libdir)/libhowl-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]
+	preserve_old_lib /usr/$(get_libdir)/libmDNSResponder-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]
+}
+
+pkg_postinst() {
+	# inform user about library changes
+	preserve_old_lib_notify /usr/$(get_libdir)/libhowl-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]
+	preserve_old_lib_notify /usr/$(get_libdir)/libmDNSResponder-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]
 }
