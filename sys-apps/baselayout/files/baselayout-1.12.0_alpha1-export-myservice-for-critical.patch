@@ -1,0 +1,16 @@
+Index: sbin/rc
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/sbin/rc,v
+retrieving revision 1.114
+diff -u -r1.114 rc
+--- sbin/rc	11 Mar 2005 06:02:07 -0000	1.114
++++ sbin/rc	15 Mar 2005 20:59:22 -0000
+@@ -406,6 +406,8 @@
+ 		(
+ 		local retval=
+ 		local service=$1
++		# Needed for some addons like dm-crypt that starts in critical services
++		local myservice=$1
+ 
+ 		source "/etc/init.d/${service}" || eerror "Failed to source /etc/init.d/${service}"
+ 		retval=$?
