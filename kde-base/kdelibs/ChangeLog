@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.21 2002/09/11 07:45:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.22 2002/10/09 16:50:50 danarmak Exp $
+
+*kdelibs-3.0.4 (09 Oct 2002)
+
+  09 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  KDE 3.0.4, the latest bugfix release.
 
 *kdelibs-2.2.2a (11 Sep 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4.ebuild,v 1.1 2002/10/05 19:29:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4.ebuild,v 1.2 2002/10/09 16:50:50 danarmak Exp $
 inherit kde-dist
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba qt31patch"
@@ -90,11 +90,11 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
     exeinto /etc/X11/Sessions
     doexe kde-${PV}
 
-    cd ${D}/${KDEDIR}/share/config/kdm || die
+    cd ${D}/${PREFIX}/share/config/kdm || die
     mv kdmrc kdmrc.orig
-	sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
-	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:"  kdmrc.orig > kdmrc    
-	rm kdmrc.orig
+    sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
+	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:" kdmrc.orig > kdmrc
+    rm kdmrc.orig
 
     #backup splashscreen images, so they can be put back when unmerging 
     #mosfet or so.

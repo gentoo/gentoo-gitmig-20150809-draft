@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.26 2002/10/05 19:29:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.27 2002/10/09 16:50:50 danarmak Exp $
+
+*kdebase-3.0.4 (09 Oct 2002)
+
+  09 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  KDE 3.0.4, the latest bugfix release. This incorporates all the fixes from
+  kdebase-3.0.3-r1, which wasn't unmasked.
 
   05 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
