@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acpid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.10 2003/06/12 20:51:29 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.11 2003/07/27 17:20:02 twp Exp $
+
+  27 Jul 2003; Tom Payne <twp@gentoo.org> acpid-1.0.2-r2.ebuild :
+  Fix bug # 22238 (default.sh broken).
 
   12 Jun 2003; Hanno Boeck <hanno@gentoo.org> acpid-1.0.2-r1.ebuild:
   Changed ~x86 to x86.
