@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/lgrind
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.1 2003/10/02 15:28:23 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.2 2004/02/20 18:35:47 usata Exp $
+
+*lgrind-3.67-r1 (21 Feb 2004)
+
+  21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> lgrind-3.67-r1.ebuild,
+  files/99lgrind:
+  Fixed "cannot find lgrindef" problem. Thanks to Fernando A. Serboncini
+  <fserb@terra.com.br> for reporting a solution. This closes bug #35097
 
 *lgrind-3.67 (02 Oct 2003)
 
