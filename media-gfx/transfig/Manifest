@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ca526fb60f53d8a5883281e73cf92f82 ChangeLog 2400
+MD5 e23342694065d8b061ef37c6bd611f12 ChangeLog 2504
 MD5 c79bb2d8e4e2c25d12c2420048c00baf metadata.xml 235
 MD5 49fe10083e271086f0ec1c08564ac3ff transfig-3.2.3d-r1.ebuild 1081
-MD5 2b58760fbcc38cfe20e94ee6ca8b7df8 transfig-3.2.4-r1.ebuild 1272
+MD5 115ef4a64bb134cb2141574d383cf4f4 transfig-3.2.4-r1.ebuild 1278
 MD5 53f48f3d7488c71858bade168e3c5720 transfig-3.2.4-r2.ebuild 1486
 MD5 db86c631cd0071efe757e7ea210f777c files/digest-transfig-3.2.3d-r1 67
 MD5 f9974d3952eb7a7aaef9145c8970f371 files/digest-transfig-3.2.4-r1 66
+MD5 ff90232bbf79ef8dcf25771dcd286a0a files/digest-transfig-3.2.4-r2 144
 MD5 4649eef8f14275cfba64c077532d6aad files/transfig-3.2.3d.patch 1532
 MD5 71a0fff063c73b598780da48ef56b943 files/transfig-3.2.4-gcc-3.3.patch 1895
 MD5 c1e84814be65ba288f57ef4df07f1dad files/transfig-3.2.4.patch 2042
-MD5 ff90232bbf79ef8dcf25771dcd286a0a files/digest-transfig-3.2.4-r2 144
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZKdWArHZZzCEUG0RAuy1AJ4sk1dk/Cwgnm3cdUBOXaHo9+gy+gCfQMLI
-iHI0nNg6lLReDd70NvyNdig=
-=JWWR
------END PGP SIGNATURE-----
