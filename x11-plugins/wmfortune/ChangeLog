@@ -1,0 +1,8 @@
+# ChangeLog for x11-plugins/wmfortune
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.1 2003/06/26 12:46:33 vapier Exp $
+
+*wmfortune-0.241 (26 Jun 2003)
+
+  26 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Susie Edgeworth <arienadean@yahoo.com> #18997.
