@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.7 2004/08/22 07:49:48 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.8 2004/08/22 12:51:04 obz Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -30,20 +30,20 @@ RDEPEND="!gnome-base/gnome-core
 	>=dev-libs/glib-2.4.6
 	>=dev-libs/atk-1.6.1
 	>=x11-libs/gtk+-2.4.7
-	>=x11-libs/pango-1.4.1
+	>=x11-libs/pango-1.4.1-r1
 
 	hppa? ( >=dev-libs/libxml2-2.6.9 )
 	!hppa? ( >=dev-libs/libxml2-2.6.11 )
-	>=dev-libs/libxslt-1.1.8
+	>=dev-libs/libxslt-1.1.8-r1
 
 	>=x11-libs/libxklavier-1.02
-	>=media-libs/audiofile-0.2.6
+	>=media-libs/audiofile-0.2.6-r1
 	>=media-sound/esound-0.2.35
 	>=gnome-base/gnome-mime-data-2.4.1
 	>=media-libs/libart_lgpl-2.3.16
 
 	>=dev-libs/libIDL-0.8.3
-	>=gnome-base/orbit-2.10.3
+	>=gnome-base/orbit-2.10.4
 
 	>=gnome-base/gconf-2.6.2
 	>=gnome-base/gnome-keyring-0.2.1
@@ -71,7 +71,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-gfx/eog-2.6.1
 	!hppa? ( !mips? ( >=net-www/epiphany-1.2.7-r1 ) )
 	>=app-arch/file-roller-2.6.1
-	>=gnome-extra/gcalctool-4.3.51
+	>=gnome-extra/gcalctool-4.4.16
 	>=gnome-extra/gconf-editor-2.6.2
 	>=gnome-base/gdm-2.6.0.4
 	>=app-editors/gedit-2.6.2
@@ -102,13 +102,13 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-system-monitor-2.6
 
 	>=gnome-base/librsvg-2.6.5
-	>=x11-libs/libwnck-2.6.2
+	>=x11-libs/libwnck-2.6.2.1
 	>=x11-wm/metacity-2.8.1
 
-	>=x11-libs/startup-notification-0.6
+	>=x11-libs/startup-notification-0.7
 
 	>=gnome-extra/yelp-2.6.1
-	>=x11-libs/vte-0.11.11
+	>=x11-libs/vte-0.11.11-r1
 	>=gnome-extra/zenity-2.6.2
 	>=net-analyzer/gnome-netstatus-2.6.2
 
@@ -119,8 +119,8 @@ RDEPEND="!gnome-base/gnome-core
 		>=gnome-extra/libgail-gnome-1.0.4
 		>=gnome-base/gail-1.6.6
 		>=gnome-extra/at-spi-1.4.2
-		>=app-accessibility/dasher-3.2.10
-		>=app-accessibility/gnome-speech-0.3.2
+		>=app-accessibility/dasher-3.2.10-r1
+		>=app-accessibility/gnome-speech-0.3.2-r1
 		>=app-accessibility/gnome-mag-0.10.11
 		>=app-accessibility/gok-0.10.2
 		>=app-accessibility/gnopernicus-0.8.4 )"
