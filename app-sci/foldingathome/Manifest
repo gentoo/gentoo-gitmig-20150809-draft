@@ -1,6 +1,7 @@
 MD5 5c26c03a2b43eb175769a75e941badec foldingathome-3.14.ebuild 1117
 MD5 15f7e18c0ed8c0c09dd792eb75c57125 foldingathome-3.24-r1.ebuild 1602
-MD5 1a83aa658cf629d1d036251bdf030178 ChangeLog 1310
+MD5 878521df361afc58a6cad888ac382758 foldingathome-4.0.0.ebuild 1400
+MD5 d8f348863fc49a6b100410fbbb6df6cf ChangeLog 1468
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 e95be0e5334a02a9e9d86940c433b1d4 foldingathome-3.24.ebuild 1310
 MD5 91f88a421f87928d798002ede77fa8f9 files/initfolding 80
@@ -10,3 +11,4 @@ MD5 398541541417353090c2a40cb4fe4a3b files/folding-init.d-r1 746
 MD5 aec1f2de50cf95bf1797d61ae94b3b04 files/folding.sh 88
 MD5 507a00167f75ffe5044d132a477cdd8b files/digest-foldingathome-3.14 66
 MD5 ad7ecc18b7b0f523434d668ba40295f4 files/digest-foldingathome-3.24 143
+MD5 6c633c6cc20e087d9da4585c5d9563dc files/digest-foldingathome-4.0.0 66

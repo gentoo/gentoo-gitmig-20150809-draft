@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/foldingathome
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.7 2004/03/01 13:09:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.8 2004/03/03 11:33:11 phosphan Exp $
+
+*foldingathome-4.0.0 (03 Mar 2004)
+
+  03 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
+  foldingathome-4.0.0.ebuild:
+  Version bump inspired by bug #34859
 
 *foldingathome-3.24-r1 (01 Mar 2004)
 
