@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.39.ebuild,v 1.4 2002/09/02 23:17:41 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.39.ebuild,v 1.5 2002/09/05 17:11:38 cselkirk Exp $
 
 DESCRIPTION="RedHat's Bluecurve theme for GTK1, GTK2, KDE3, GDM, Metacity and Nautilus"
 HOMEPAGE="http://www.redhat.com"
 SRC_URI="ftp://ftp.sunet.se/pub/Linux/distributions/redhat/redhat/linux/rawhide/SRPMS/SRPMS/${P}-1.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 # Needed to build...
 DEPEND="sys-devel/autoconf
