@@ -1,7 +1,11 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.2 2002/03/31 12:13:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.3 2002/05/07 10:31:40 spider Exp $
 
+*sgml-common-0.6.3 (08 May 2002)
+  08 May 2002; Spider <spider@gentoo.org> sgml-common-0.6.3.ebuild:
+  the old version was removed from the server, responding to bug on irc.
+  
 *sgml-common-0.6.1-r1 (31 Mar 2002)
 
   31 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sgml-common-0.6.1-r1.ebuild:
