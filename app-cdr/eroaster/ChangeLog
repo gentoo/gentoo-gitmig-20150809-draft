@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/eroaster
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.19 2004/02/24 14:31:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.20 2004/02/24 14:55:52 bazik Exp $
+
+  24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> eroaster-2.2.0_pre6.ebuild:
+  Stable on sparc.
 
   24 Feb 2004; Heinrich Wendel <lanius@gentoo.org> eroaster-2.2.0_pre6.ebuild:
   remove zinf dep; bug #41786
