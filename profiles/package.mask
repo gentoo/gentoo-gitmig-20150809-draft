@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <foser@gentoo.org> (16 Jan 2004)
+# development release
+>=gnome-extra/gnome-network-1.99
+
 # <rphillips@gentoo.org> (15 Jan 2004)
 # prerelease version, but first that support signing
 >=dev-util/tla-20040113
