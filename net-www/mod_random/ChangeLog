@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_random
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/ChangeLog,v 1.5 2004/06/25 01:03:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/ChangeLog,v 1.6 2004/07/06 00:59:13 zul Exp $
+
+*mod_random-1.4 (07 Jul 2004)
+
+  07 Jul 2004; Chuck Short <zul@gentoo.org> mod_random-1.4.ebuild:
+  Added mod_random for apache1.
 
   04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
   mod_random-2.0.ebuild:
