@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3302 2004/11/06 17:08:33 danarmak Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3303 2004/11/06 21:49:30 avenj Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -51,10 +51,6 @@ kde-base/xparts
 # masked until considered official; atm it would overwrite the same plugin as installed
 # by x11-lib/qt
 dev-db/qt-unixODBC
-
-# <avenj@gentoo.org> (22 Oct 2004)
-# breaks with gcc 3.4
-=net-dns/dnsmasq-2.16
 
 # <foser@gentoo.org> (22 Oct 2004)
 # no good release #68514 & #68034
