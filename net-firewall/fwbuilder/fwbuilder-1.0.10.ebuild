@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.0.10.ebuild,v 1.1 2003/05/27 07:15:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.0.10.ebuild,v 1.2 2003/06/08 16:32:40 aliz Exp $
 
 DESCRIPTION="A firewall GUI"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
@@ -17,7 +17,8 @@ DEPEND="sys-devel/autoconf
 	>=media-libs/gdk-pixbuf-0.16.0
 	=x11-libs/gtkmm-1.2*
 	=dev-libs/libsigc++-1.0*
-	nls? ( >=sys-devel/gettext-0.11 )"
+	nls? ( >=sys-devel/gettext-0.11 )
+	~net-libs/libfwbuilder-1.0.0"
 RDEPEND="$DEPEND"
 
 src_compile() {
