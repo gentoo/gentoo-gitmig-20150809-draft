@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.100 2003/12/28 14:47:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.101 2003/12/30 22:48:03 gmsoft Exp $
 
   28 Dec 2003; Caleb Tennis <caleb@gentoo.org> qt-3.3.0_beta1.ebuild:
   Make qt-cvs and qt-3.3 look the same
@@ -29,6 +29,9 @@
   mark stable on amd64
 
 *qt-3.2.3 (14 Nov 2003)
+
+  30 Dec 2003; Guy Martin <gmsoft@gentoo.org> qt-3.2.3.ebuild :
+  Removed no more usefull hppa tweaks.
 
   14 Nov 2003; Caleb Tennis <caleb@gentoo.org> qt-3.2.3.ebuild, files/45qt3:
   New Qt version

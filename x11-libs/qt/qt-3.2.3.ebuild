@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.3.ebuild,v 1.5 2003/12/13 14:08:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.3.ebuild,v 1.6 2003/12/30 22:48:03 gmsoft Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -58,14 +58,7 @@ src_unpack() {
 		sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
 
-	# hppa and alpha people, please review the following
-
-	# hppa need some additional flags
-	if [ "${ARCH}" = "hppa" ]; then
-		echo "QMAKE_CFLAGS += -fPIC -ffunction-sections" >> qmake.conf
-		echo "QMAKE_CXXFLAGS += -fPIC -ffunction-sections" >> qmake.conf
-		echo "QMAKE_LFLAGS += -ffunction-sections -Wl,--stub-group-size=25000" >> qmake.conf
-	fi
+	# alpha people, please review the following
 
 	# on alpha we need to compile everything with -fPIC
 	if [ ${ARCH} == "alpha" ]; then
