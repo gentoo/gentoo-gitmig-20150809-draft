@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-0.27.0.ebuild,v 1.4 2004/02/22 09:35:15 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-0.27.0.ebuild,v 1.5 2004/02/28 18:06:14 aliz Exp $
 
 inherit libtool
 
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 IUSE=""
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND=">=dev-libs/libxml2-2.5.1"
 
