@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.3 2004/05/12 22:30:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.4 2004/05/17 00:30:02 george Exp $
 
 Name="blas"
 DESCRIPTION="FORTRAN reference implementation of the BLAS (linear algebra lib)"
@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE="ifc"
 
 DEPEND="app-sci/blas-config
-	sys-devel/libtool
+	>=sys-devel/libtool-1.5
 	ifc? ( dev-lang/ifc )"
 
 RDEPEND="ifc? ( dev-lang/ifc )" # Need ifc runtime libraries

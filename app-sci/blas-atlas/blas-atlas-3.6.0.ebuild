@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.3 2004/05/13 01:48:32 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.4 2004/05/17 00:31:07 george Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="doc"
 
 DEPEND="app-sci/blas-config
-	sys-devel/libtool"
+	>=sys-devel/libtool-1.5"
 
 RDEPEND=""
 
