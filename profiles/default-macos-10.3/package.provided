@@ -26,6 +26,7 @@ dev-libs/icu-3.13
 dev-libs/libedit-20020225
 dev-libs/libiconv-1.9
 dev-libs/libxml2-2.6.7
+dev-libs/openssl-0.9.7b
 dev-php/mod_php-4.2
 dev-tcltk/expect-5.32
 dev-util/cscope-15.3
@@ -62,7 +63,6 @@ net-misc/efax-0.9a
 net-misc/gsasl-2.1.1
 net-misc/mdnsresponder-58
 net-misc/openssh-3.6.1_p1
-net-misc/openssl-0.9.7b
 net-misc/rsync-2.5.7
 net-nds/openldap-2.1.22
 net-nds/portmap-8.1
