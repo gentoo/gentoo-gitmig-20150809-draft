@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.3 2004/02/03 21:40:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.4 2004/06/03 20:53:50 agriffis Exp $
 
 inherit eutils games
 
@@ -30,7 +30,7 @@ src_unpack() {
 	[ "${gl}" == "nvidia" ] && epatch ${FILESDIR}/${PV}-nvidia-opengl.patch
 	sed -i "s:-mpentiumpro.*:${CFLAGS} \\\\:" Makefile
 
-#	if [ `use sdl` ] ; then
+#	if use sdl ; then
 #		cd ${S}/sdl
 #		./autogen.sh || die "autogen failed"
 #	fi
@@ -40,7 +40,7 @@ src_compile() {
 	cd linux
 	emake MASTER_DIR=${GAMES_DATADIR}/quake-data build_release || die
 
-#	if [ `use sdl` ] ; then
+#	if use sdl ; then
 #		cd ${S}/sdl
 #		export GAMEDIR=${GAMES_DATADIR}/quake-data
 #		egamesconf || die

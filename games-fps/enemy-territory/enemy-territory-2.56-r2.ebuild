@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.4 2004/05/11 12:53:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.5 2004/06/03 20:54:42 agriffis Exp $
 
 inherit games
 
@@ -52,7 +52,7 @@ src_install() {
 
 	dogamesbin ${FILESDIR}/et
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/et
-	if [ `use dedicated` ] ; then
+	if use dedicated ; then
 		dogamesbin ${FILESDIR}/et-ded
 		dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/et-ded
 		exeinto /etc/init.d ; newexe ${FILESDIR}/et-ded.rc et-ded
@@ -77,7 +77,7 @@ pkg_postinst() {
 	einfo "To play the game run:"
 	einfo " et"
 
-	if [ `use dedicated` ] ; then
+	if use dedicated ; then
 		echo
 		einfo "To start a dedicated server run:"
 		einfo " /etc/init.d/et-ded start"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.1 2004/05/16 08:57:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.2 2004/06/03 20:49:01 agriffis Exp $
 
 inherit eutils games
 
@@ -39,7 +39,7 @@ src_unpack() {
 src_compile() {
 	#i should do this at some point :x ... i guess if you disable all shared stuff
 	#and enable all the static options explicitly, static works ... (or so ive been told)
-	#if [ -z "`use static`" ] ; then
+	#if ! use static ; then
 	#	myconf="${myconf} --enable-shared=yes --enable-static=no"
 	#else
 	#	myconf="${myconf} --enable-shared=no --enable-static=yes"

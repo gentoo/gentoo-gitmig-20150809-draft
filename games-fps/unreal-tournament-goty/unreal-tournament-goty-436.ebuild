@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.4 2004/03/02 16:19:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.5 2004/06/03 20:49:59 agriffis Exp $
 
 inherit games eutils
 
@@ -38,7 +38,7 @@ src_install() {
 	###########
 	### PRE ###
 	# System
-	if [ `use 3dfx` ] ; then
+	if use 3dfx ; then
 		tar -zxf Glide.ini.tar.gz -C ${Ddir} || die "install Glide ini"
 	else
 		tar -zxf OpenGL.ini.tar.gz -C ${Ddir} || die "install OpenGL ini"
@@ -62,7 +62,7 @@ src_install() {
 	# Help, Logs, Music, Sounds, Textures, Web
 	cp -rf "${CDROM_ROOT}"/{Help,Logs,Music,Textures,Web} ${Ddir}/ || die "copy Help, Logs, Music, Textures, Web CD1"
 	dodir ${dir}/Sounds
-	if [ `use nls` ] ; then
+	if use nls ; then
 		cp -rf "${CDROM_ROOT}"/Sounds/* ${Ddir}/Sounds/ || die "copy Sounds CD1"
 	else
 		cp -rf "${CDROM_ROOT}"/Sounds/*.uax ${Ddir}/Sounds/ || die "copy Sounds CD1"
@@ -70,7 +70,7 @@ src_install() {
 
 	# System
 	dodir ${dir}/System
-	if [ `use nls` ] ; then
+	if use nls ; then
 		cp "${CDROM_ROOT}"/System/*.{est,frt,itt,int,u} ${Ddir}/System/ || die "copy System data CD1"
 	else
 		cp "${CDROM_ROOT}"/System/*.{int,u} ${Ddir}/System/ || die "copy System data CD1"
@@ -98,7 +98,7 @@ src_install() {
 	cp -rf "${CDROM_ROOT}"/{Help,Sounds} ${Ddir}/ || die "copy Help, Sounds CD2"
 
 	# S3TC Textures
-	if [ `use S3TC` ] ; then
+	if use S3TC ; then
 		cp -rf "${CDROM_ROOT}"/Textures ${Ddir}/ || die "copy S3TC Textures CD2"
 	else
 		cp -rf "${CDROM_ROOT}"/Textures/{JezzTex,Jezztex2,SnowDog,chaostex{,2}}.utx ${Ddir}/Textures/ || die "copy Textures CD2"

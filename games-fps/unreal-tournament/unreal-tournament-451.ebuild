@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.8 2004/05/14 00:20:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.9 2004/06/03 20:51:40 agriffis Exp $
 
 inherit eutils games
 
@@ -51,7 +51,7 @@ src_install() {
 	cp -rf ${CDROM_ROOT}/Sounds/*.uax ${Ddir}/Sounds/ || die "copy Sounds"
 
 	# System
-	if [ `use 3dfx` ] ; then
+	if use 3dfx ; then
 		tar -zxf Glide.ini.tar.gz -C ${Ddir} || die "install Glide ini"
 	else
 		tar -zxf OpenGL.ini.tar.gz -C ${Ddir} || die "install OpenGL ini"

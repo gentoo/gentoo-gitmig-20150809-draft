@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament-goty
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.2 2003/09/10 16:05:45 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.3 2004/06/03 20:49:59 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  unreal-tournament-goty-436.ebuild, unreal-tournament-goty-451.ebuild:
+  Fix use invocation
 
 *unreal-tournament-goty-451 (11 Jul 2003)
 
