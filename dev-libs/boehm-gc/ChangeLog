@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.22 2004/10/13 23:11:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.23 2004/10/14 06:40:14 usata Exp $
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> boehm-gc-6.3-r1.ebuild,
+  boehm-gc-6.3.ebuild, -boehm-gc-6.3_alpha6.ebuild:
+  Stable on x86, alpha, ppc and ppc-macos.
 
   13 Oct 2004; <agriffis@gentoo.org> boehm-gc-6.2-r1.ebuild,
   boehm-gc-6.3-r1.ebuild:

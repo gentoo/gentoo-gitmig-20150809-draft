@@ -1,10 +1,18 @@
-MD5 0982e95c1a2e84c550050e67c0e46929 ChangeLog 2472
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 78b9ac6807fb26649fb5b77c9a1e651b ChangeLog 2638
+MD5 3efa3e21b9e8d2bdc3e2172eaafb724b boehm-gc-6.3.ebuild 1074
+MD5 325d9bdbc06d2bc07c84d0000aee8f40 boehm-gc-6.3-r1.ebuild 1158
 MD5 038e9bee5ec3f1e15aed3230bd1b9279 boehm-gc-6.2-r1.ebuild 987
-MD5 cd87d7289cf14901c8a36c1fabe41dd1 boehm-gc-6.3_alpha6.ebuild 977
-MD5 a81b9769f7aa8098a4e46e97be98b278 boehm-gc-6.3.ebuild 1081
-MD5 877f4dae67faa396b99919882373bca0 boehm-gc-6.3-r1.ebuild 1165
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 6cc733152c37395a1f0f51588a932f13 files/digest-boehm-gc-6.3 57
-MD5 e5924c4e5fbe66db9e1e936c7fc66114 files/digest-boehm-gc-6.2-r1 57
-MD5 93a3f31956e3a84ac00d69f8b995ec6e files/digest-boehm-gc-6.3_alpha6 63
 MD5 6cc733152c37395a1f0f51588a932f13 files/digest-boehm-gc-6.3-r1 57
+MD5 e5924c4e5fbe66db9e1e936c7fc66114 files/digest-boehm-gc-6.2-r1 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBbh37VWNWqTUmv+0RAnahAKCI3l2orQDZvZszI+B1RRZK2pNykACgil4n
+yUewUcJtBDFFbPdeNOYf3+I=
+=JE1r
+-----END PGP SIGNATURE-----
