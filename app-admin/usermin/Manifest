@@ -10,7 +10,7 @@ MD5 990bf7fe2948e8a6ee94f64d234ab0fb files/digest-usermin-1.030 66
 MD5 b534264bfd7919ee69fcb6ed08a7009c files/digest-usermin-1.070 66
 MD5 29bc2b77db966f5dcda6194daa7d9f2b files/digest-usermin-1.060-r1 66
 MD5 a5311bbc9c1fc378a6b0bfb3ca1b2394 files/usermin.pam 431
-MD5 e2f5025cf9807f69f24c1e580038f7a8 files/init.d.usermin 871
+MD5 0fcbd9e8ddca335a087f7ead3deb1efb files/init.d.usermin 878
 MD5 3a7d31f2e22610f8807888f7daa5f1a9 files/patch/usermin 478
 MD5 132cc62364a676b308f4ad7da4ea889b files/patch/setup.sh 16690
 MD5 3b136185745fbd0f394df41aabbc06d9 files/patch/usermin-init 1355
