@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.19 2004/06/16 03:56:16 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.20 2004/06/16 04:36:46 tseng Exp $
+
+*hardened-dev-sources-2.6.5-r5 (16 Jun 2004)
+
+  16 Jun 2004; Brandon Hale <tseng@gentoo.org>
+  +hardened-dev-sources-2.6.5-r5.ebuild:
+  Another rev bump to fix a local DoS vuln in PaX, thanks to x1bncwn for
+  producing a patch.
 
   15 Jun 2004; Brandon Hale <tseng@gentoo.org>
   -hardened-dev-sources-2.6.4-r4.ebuild,
