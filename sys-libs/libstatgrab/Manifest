@@ -1,4 +1,4 @@
-MD5 14eaa3974d788ba760bd63f1a4ef54cd ChangeLog 510
-MD5 20a755801eafd4ffe19986fcd9413bb9 libstatgrab-0.10.ebuild 1116
+MD5 5b8bc344ba505693f564591830a476f8 libstatgrab-0.10.ebuild 1111
+MD5 af4bca829fa91e637d80ba9c84dab14c ChangeLog 505
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 MD5 de876db041af220fa9dbec5f31ee01e8 files/digest-libstatgrab-0.10 68

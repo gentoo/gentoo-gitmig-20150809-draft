@@ -1,4 +1,4 @@
-MD5 71da9169269f9e075ff20213372b0fc7 ChangeLog 533
-MD5 2793a609b8e2e79a07abc421ffad1b5a libxcrypt-2.0.ebuild 743
+MD5 27bc3b50c03a0fde13ca0a5a5df10d43 libxcrypt-2.0.ebuild 737
+MD5 a503e7712e534ab6113da8086be0f65d ChangeLog 527
 MD5 b631fdbc12856dd67816db640abe536c metadata.xml 523
 MD5 1cafd0c372aaba855d7b2bb02cd06576 files/digest-libxcrypt-2.0 66
