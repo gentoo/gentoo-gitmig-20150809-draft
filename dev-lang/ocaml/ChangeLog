@@ -1,0 +1,15 @@
+# ChangeLog for dev-lang/ocaml
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.1 2002/02/07 21:30:10 karltk Exp $
+
+*ocaml-3.04 ( 7 Feb 2002 )
+
+  7 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog ocaml-3.04.ebuild files/digest-ocaml-3.04 :
+  
+  Objective Caml is a fast modern type-inferring functional programming 
+  language descended from the ML (Meta Language) family.
+
+  This builds a runtime environment and native compiler for ocaml.
+ 
+  Submitted by Sean Mitchell.
+
