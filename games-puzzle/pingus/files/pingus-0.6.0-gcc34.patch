@@ -1,5 +1,9 @@
---- src/story_screen.cxx.orig	2004-09-12 17:09:51.000000000 -0700
-+++ src/story_screen.cxx	2004-09-12 17:10:43.000000000 -0700
+Make sure we type the cast properly.
+
+http://bugs.gentoo.org/show_bug.cgi?id=63773
+
+--- src/story_screen.cxx
++++ src/story_screen.cxx
 @@ -142,7 +142,7 @@
  
    if (!page_displayed_completly)
