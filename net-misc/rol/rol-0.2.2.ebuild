@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rol/rol-0.2.2.ebuild,v 1.6 2003/09/22 02:54:46 seemant Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rol/rol-0.2.2.ebuild,v 1.7 2003/12/01 17:47:32 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A RSS/RDF Newsreader"
@@ -16,7 +14,8 @@ KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
 DEPEND="virtual/x11
 	dev-libs/libxml
-	>=x11-libs/gtk+-2.0.9"
+	>=x11-libs/gtk+-2.0.9
+	>=gnome-base/gconf-2"
 
 src_compile() {
 	emake || die
