@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.24 2004/08/08 00:46:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.25 2004/09/21 17:37:49 mcummings Exp $
+
+  21 Sep 2004; Michael Cummings <mcummings@gentoo.org> SGMLSpm-1.03-r5.ebuild:
+  Fixes in -r5 fix more bugs than -r4 is worth. Marking stable on x86. See bug
+  64861 for an example.
 
   07 Aug 2004; Travis Tilley <lv@gentoo.org> SGMLSpm-1.03-r5.ebuild:
   stable on amd64
