@@ -29,11 +29,11 @@ asoundcfg=/etc/asound.state
 aconnect=/usr/bin/aconnect
 alsascrdir=/etc/alsa.d
 
-function depend() {
+depend() {
   provide alsa-modules
 }
 
-function start() {
+start() {
 
   # Start driver if it isn't already up.
   if [ -d /proc/asound ]
@@ -89,7 +89,7 @@ function start() {
   done
 }
 
-function terminate() {
+terminate() {
   #
   # Kill processes holding open sound devices
   #
@@ -107,7 +107,7 @@ function terminate() {
   fi
 }
 
-function stop() {
+stop() {
 
   if [ ! -d /proc/asound ]
   then
