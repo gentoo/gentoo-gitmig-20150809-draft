@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/yosucker-55.ebuild,v 1.3 2004/06/24 23:32:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/yosucker-55.ebuild,v 1.4 2004/09/06 00:49:26 ciaranm Exp $
 
 inherit eutils
 
@@ -43,10 +43,6 @@ pkg_postinst() {
 	ewarn
 	ewarn "The Yahoo! Mail interface has changed and you will need to log in to it manually before yosucker works again."
 	ewarn
-	for TICKER in 1 2 3 4 5; do
-		# Double beep here.
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
-	done
-	sleep 8
+	ebeep 5
+	epause 8
 }

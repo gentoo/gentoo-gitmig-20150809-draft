@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.14 2004/06/26 08:03:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.15 2004/09/06 00:49:26 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> yosucker-55.ebuild,
+  yosucker-59.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
 *yosucker-59 (26 Jun 2004)
 
