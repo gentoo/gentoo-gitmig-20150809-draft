@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.18 2003/12/06 16:19:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.19 2003/12/06 17:48:40 mholzer Exp $
+
+  06 Dec 2003; Martin Holzer <mholzer@gentoo.org> xmule-1.6.1.ebuild:
+  adding nls IUSE.
 
   06 Dec 2003; Martin Holzer <mholzer@gentoo.org> xmule-1.6.0a-r1.ebuild,
   xmule-1.6.0a.ebuild, xmule-1.6.1.ebuild:
