@@ -1,61 +1,68 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.17 2002/07/11 01:32:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.18 2002/07/14 23:03:47 seemant Exp $
 
-*fluxbox-0.19-r5 (10 Jul 2002)
+*fluxbox-0.1.10 (14 Jul 2002)
 
-  10 Jul 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.19-r5.ebuild
-  files/fluxbox-0.19-gentoo.diff files/digest-fluxbox-0.19-r5 :
+  14 Jul 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.10.ebuild
+  files/digest-fluxbox-0.1.10 :
+
+  Version bump, and now uses the commonbox eclass.
+
+*fluxbox-0.1.9-r5 (10 Jul 2002)
+
+  10 Jul 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.9-r5.ebuild
+  files/fluxbox-0.1.9-gentoo.diff files/digest-fluxbox-0.1.9-r5 :
 
   Added transient window patch to avoid xine hardlocking things up.  Patch
   from some fluxbox developer through: matt@oddprocess.org (Matthew
   Daubenspeck) in bug #4837
 
-*fluxbox-0.19-r4 (7 Jul 2002)
+*fluxbox-0.1.9-r4 (7 Jul 2002)
   
   7 Jul 2002; Daniel Robbins <drobbins@gentoo.org> : xinerama (multi-monitor
   support) is now enabled by default.  This closes bug #4514.
 
-*fluxbox-0.19-r3 (1 Jul 2002)
+*fluxbox-0.1.9-r3 (1 Jul 2002)
   
-  1 Jul 2002; Owen Stampflee <owen@gentoo.org> fluxbox-0.19-r3.ebuild
+  1 Jul 2002; Owen Stampflee <owen@gentoo.org> fluxbox-0.1.9-r3.ebuild
   Fixed a slight syntax error in the -r2 ebuild.
 
-*fluxbox-0.19-r2 (1 Jul 2002)
+*fluxbox-0.1.9-r2 (1 Jul 2002)
 
-  1 Jul 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.19-r2.ebuild
-  files/digest-fluxbox-0.19-r2 :
+  1 Jul 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.9-r2.ebuild
+  files/digest-fluxbox-0.1.9-r2 :
 
   Added Oly's antialiasing patch, as suggested in bug #4376 by:
   depairet@gmx.de (dominik) who also submitted a patched ebuild for it.
 
-*fluxbox-0.19-r1 (19 Jun 2002)
+*fluxbox-0.1.9-r1 (1.9 Jun 2002)
 
-  19 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> fluxbox-0.19-r1.ebuild
+  19 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> fluxbox-0.1.9-r1.ebuild
   
   Upstream bugfix patch (#2) applied. Also closes (#3864).
   
-*fluxbox-0.19 (24 May 2002)
+*fluxbox-0.1.9 (24 May 2002)
 
-  24 May 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.19.ebuild
-  files/digest-fluxbox-0.19 :
+  24 May 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.9.ebuild
+  files/digest-fluxbox-0.1.9 :
 
   Version bump.
 
-*fluxbox-0.18-r2 (14 May 2002)
+*fluxbox-0.1.8-r2 (14 May 2002)
 
   14 May 2002; Grant Goodyear <g2boojum@gentoo.org> :
 
   Upstream bugfix patch (#2) applied.  Old 0.1.8 versions removed.
 
-*fluxbox-0.18-r1 (29 Apr 2002)
+*fluxbox-0.1.8-r1 (29 Apr 2002)
 
   29 Apr 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.8-r1.ebuild.
-  files/fluxbox-0.18-bugfix1.patch, files/diges-fluxbox-0.1.8-r1 :
+  files/fluxbox-0.1.8-bugfix1.patch, files/diges-fluxbox-0.1.8-r1 :
 
   Upstream bugfix patch applied.
 
-*fluxbox-0.18 (19 Apr 2002)
+*fluxbox-0.1.8 (1.9 Apr 2002)
 
   19 Apr 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.8.ebuild,
   files/digest-fluxbox-0.1.8 :
