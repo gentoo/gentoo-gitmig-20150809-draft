@@ -27,7 +27,7 @@ sys-apps/lvm-user
 sys-apps/silo
 sys-apps/modutils
 sys-apps/net-tools
-sys-apps/netkit-base
+sys-apps/xinetd
 sys-apps/portage
 sys-apps/procps
 sys-apps/psmisc

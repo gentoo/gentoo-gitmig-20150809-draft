@@ -50,7 +50,7 @@
 *sys-apps/man-pages
 *sys-apps/modutils
 *sys-apps/net-tools
-*sys-apps/netkit-base
+*sys-apps/xinetd
 *sys-apps/procps
 *sys-apps/psmisc
 *sys-apps/raidtools
@@ -140,7 +140,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.38 2003/04/12 12:05:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.39 2003/08/12 04:39:02 vapier Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh

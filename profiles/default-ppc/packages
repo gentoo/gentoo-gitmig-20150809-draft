@@ -97,7 +97,7 @@ net-misc/rsync
 *sys-apps/man-pages
 *sys-apps/modutils
 *sys-apps/net-tools
-*sys-apps/netkit-base
+*sys-apps/xinetd
 *sys-apps/procps
 *sys-apps/psmisc
 *sys-apps/raidtools

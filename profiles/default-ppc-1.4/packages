@@ -56,7 +56,7 @@
 *sys-apps/kbd
 *sys-apps/less
 *sys-apps/net-tools
-*sys-apps/netkit-base
+*sys-apps/xinetd
 *sys-apps/mac-fdisk
 *sys-apps/man
 *sys-apps/man-pages
