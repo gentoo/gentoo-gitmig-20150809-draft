@@ -1,6 +1,11 @@
 # ChangeLog for media-video/quickrip
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.5 2003/07/04 07:22:06 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.6 2003/10/14 23:29:09 pythonhead Exp $
+
+*quickrip-0.8 (14 Oct 2003)
+
+  14 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> quickrip-0.8.ebuild:
+  Version bump, added man pages. Thanks Tom Chance <tomchance@gmx.net>
 
 *quickrip-0.7 (04 Jul 2003)
   
