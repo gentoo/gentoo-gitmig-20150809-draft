@@ -1,5 +1,5 @@
-MD5 060f56dd1367eb2c17c407cfeff8a0b2 ChangeLog 1080
+MD5 030f3a888a78098b3336b75b5b87171c ChangeLog 1177
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
-MD5 e27ec6d1bb426c56e13cfd71266812ba sphinx2-0.4.ebuild 678
+MD5 02cbdfed71129afa9cb06da07fab6f34 sphinx2-0.4.ebuild 681
 MD5 661f3a7fe20835f0211d5b65728792ec files/digest-sphinx2-0.4 64
 MD5 5a2847b2fd0380db77d31a3111c5fdc9 files/sphinx2-gcc3.4.patch 892

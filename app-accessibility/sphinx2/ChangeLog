@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinx2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/ChangeLog,v 1.6 2004/08/29 20:35:04 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/ChangeLog,v 1.7 2004/09/24 15:54:29 blubb Exp $
+
+  24 Sep 2004; <blubb@gentoo.org> sphinx2-0.4.ebuild:
+  added ~amd64 which wasn't done by kugelfang
 
   29 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> sphinx2-0.4.ebuild:
   Marked ~amd64. gnuconfig_update allows successfull ./configure on amd64.
