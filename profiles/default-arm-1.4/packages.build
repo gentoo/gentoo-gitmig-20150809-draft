@@ -13,7 +13,7 @@ sys-apps/gzip
 sys-apps/portage
 sys-apps/sed
 sys-apps/coreutils
-sys-apps/tar
+app-arch/tar
 sys-devel/binutils
 sys-devel/bison
 sys-devel/flex

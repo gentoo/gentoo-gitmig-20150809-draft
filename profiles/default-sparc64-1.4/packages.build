@@ -14,7 +14,7 @@ sys-apps/gzip
 sys-apps/portage
 sys-apps/sed
 sys-apps/sh-utils
-sys-apps/tar
+app-arch/tar
 sys-apps/textutils
 sys-devel/binutils
 sys-devel/bison
