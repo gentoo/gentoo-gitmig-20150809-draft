@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.122 2004/10/31 04:34:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.123 2004/11/11 04:10:40 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -247,7 +247,7 @@ epatch() {
 			local EPATCH_SOURCE="$1/*.${EPATCH_SUFFIX}"
 		fi
 	else
-		if [ ! -d ${EPATCH_SOURCE} ]
+		if [ ! -d ${EPATCH_SOURCE} ] || [ -n "$1" ]
 		then
 			if [ -n "$1" -a "${EPATCH_SOURCE}" = "${WORKDIR}/patch" ]
 			then
