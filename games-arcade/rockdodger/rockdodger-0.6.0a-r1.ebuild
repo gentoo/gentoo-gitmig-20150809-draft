@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.1 2004/12/02 01:07:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.2 2004/12/11 05:50:28 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Dodge the rocks for as long as possible until you die. Kill greeblies to make the universe safe for non-greeblie life once again."
 HOMEPAGE="http://spacerocks.sourceforge.net/"
