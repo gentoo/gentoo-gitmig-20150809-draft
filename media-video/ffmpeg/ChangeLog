@@ -1,8 +1,12 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.6 2002/12/13 10:59:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.7 2002/12/13 19:05:47 kain Exp $
 
-*ffmpeg-0.4.5.20021212 (12 Dec 2002)
+*ffmpeg-0.4.5.20021212 (13 Dec 2002)
+  
+  13 Dec 2002; Bryon Roche <kain@gentoo.org> ffmpeg-0.4.5.20021212.ebuild :
+  ffmpeg isn't REALLY x86 specific.  Giving ppc and sparc a nice big ~.
+  
   12 Dec 2002; Joshua Brindle <method@gentoo.org> ffmpeg-0.4.5.20021212.ebuild :
   cvs snapshot so that streaming will work, also added mp3lame and oggvorbis
   support with encode and oggvorbis use vars.
