@@ -1,11 +1,292 @@
---- src/lib/llseek.c.old	2005-02-19 20:12:10.897625032 +1100
-+++ src/lib/llseek.c	2005-02-19 20:12:41.027044664 +1100
-@@ -23,6 +23,8 @@
- #endif
- #ifdef __linux__
- #define BLKGETSIZE _IO(0x12,96)		/* from <linux/fs.h> */
+--- src/drivers/oldworld/scsi_main.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/oldworld/scsi_main.c	2004-12-13 19:14:53.286913872 +0100
+@@ -14,6 +14,10 @@
+  *   
+  */
+ 
++#ifdef __linux__
 +#define _FILE_OFFSET_BITS 64
 +#define _LARGE_FILES
- #endif
++#endif
+ #include "mol_config.h"
  
- ulong
+ #include "booter.h"
+--- src/drivers/oldworld/include/scsi_main.h-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/oldworld/include/scsi_main.h	2004-12-13 19:14:59.434979224 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #ifndef _H_SCSI_MAIN
+ #define _H_SCSI_MAIN
+ 
+--- src/drivers/oldworld/scsi-unit.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/oldworld/scsi-unit.c	2004-12-13 19:15:05.629037584 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ 
+ /* #define VERBOSE  */
+--- src/drivers/oldworld/swim3.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/oldworld/swim3.c	2004-12-13 19:15:15.750498888 +0100
+@@ -20,6 +20,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include <pthread.h>
+   
+--- src/drivers/nvram.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/nvram.c	2004-12-13 19:15:22.200518336 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ 
+ #include <sys/param.h>
+--- src/drivers/include/swim_hw.h-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/include/swim_hw.h	2004-12-13 19:15:27.816664552 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #ifndef _H_SWIM_HW
+ #define _H_SWIM_HW
+ 
+--- src/drivers/osi_driver.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/osi_driver.c	2004-12-13 19:15:32.895892392 +0100
+@@ -15,6 +15,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include "promif.h"
+ #include "booter.h"
+--- src/drivers/disk/ablk.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/disk/ablk.c	2004-12-13 19:15:39.655864720 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include <sys/uio.h>
+ #include <sys/resource.h>
+--- src/drivers/disk/disk_open.c-orig	2004-12-13 19:09:16.799067000 +0100
++++ src/drivers/disk/disk_open.c	2004-12-13 19:15:45.009050912 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ 
+ #include <sys/ioctl.h>
+--- src/drivers/disk/blkdev.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/disk/blkdev.c	2004-12-13 19:15:57.653128720 +0100
+@@ -15,6 +15,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ 
+ #include <sys/time.h>
+--- src/drivers/disk/ablk-cd.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/disk/ablk-cd.c	2004-12-13 19:16:04.395103784 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include <sys/uio.h>
+ #include <sys/ioctl.h>
+--- src/drivers/disk/pseudofs.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/drivers/disk/pseudofs.c	2004-12-13 19:16:09.277361568 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include <sys/stat.h>
+ #include "pseudofs.h"
+--- src/cpu/mpc107/init.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/cpu/mpc107/init.c	2004-12-13 19:16:14.513565544 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include <sys/mman.h>
+ #include <sys/file.h>
+--- src/booter/elf.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/booter/elf.c	2004-12-13 19:16:18.943892032 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include <sys/param.h>
+ #include "booter.h"
+--- src/main/promif.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/main/promif.c	2004-12-13 19:16:23.810152248 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include <sys/param.h>
+ #include <stdarg.h>
+--- src/main/memory.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/main/memory.c	2004-12-13 19:16:29.296318224 +0100
+@@ -13,6 +13,11 @@
+  *   as published by the Free Software Foundation
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include <sys/mman.h>
+ #include "debugger.h"
+--- src/main/session.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/main/session.c	2004-12-13 19:16:34.306556552 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include "session.h"
+ #include "verbose.h"
+--- src/include/llseek.h-orig	2004-03-21 23:20:39.000000000 +0100
++++ src/include/llseek.h	2004-12-13 19:16:42.670285072 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #ifndef _H_LONG_LSEEK
+ #define _H_LONG_LSEEK
+ 
+--- src/lib/llseek.c-orig	2004-12-13 19:09:16.798067000 +0100
++++ src/lib/llseek.c	2004-12-13 19:16:52.386807936 +0100
+@@ -14,6 +14,11 @@
+  *   
+  */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include <sys/ioctl.h>
+ #include <sys/file.h>
+--- src/lib/elfload.c-orig	2004-03-21 23:20:40.000000000 +0100
++++ src/lib/elfload.c	2004-12-13 19:17:08.754319696 +0100
+@@ -29,6 +29,11 @@
+    (at your option) any later version.
+ */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include "elfload.h"
+ #include "byteorder.h"
+--- util/nvs/nvs.c-orig	2004-03-21 23:20:39.000000000 +0100
++++ util/nvs/nvs.c	2004-12-13 19:17:18.003913544 +0100
+@@ -1,5 +1,10 @@
+ /* Modified version of nvsetenv */
+ 
++#ifdef __linux__
++#define _FILE_OFFSET_BITS 64
++#define _LARGE_FILES
++#endif
++
+ #include "mol_config.h"
+ #include <stdio.h>
+ #include <fcntl.h>
