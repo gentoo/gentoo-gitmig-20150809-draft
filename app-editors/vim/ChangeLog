@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.125 2004/10/05 12:19:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.126 2004/10/20 14:19:45 hattya Exp $
+
+  20 Oct 2004; Akinori Hattori <hattya@gentoo.org> vim-6.3-r1.ebuild:
+  stable on ia64, bug #66772
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> vim-6.3-r1.ebuild:
   Masked vim-6.3-r1.ebuild stable for ppc
