@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.7 2004/07/14 16:44:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.8 2004/09/20 01:17:41 swtaylor Exp $
 
 DESCRIPTION="Mail delivery agent/filter"
 SRC_URI="http://www.procmail.org/${P}.tar.gz"
 HOMEPAGE="http://www.procmail.org/"
 IUSE="mbox"
-DEPEND="virtual/libc
-	virtual/mta"
+DEPEND="virtual/libc !mail-mta/courier virtual/mta"
 RDEPEND="virtual/libc"
 PROVIDE="virtual/mda"
 SLOT="0"

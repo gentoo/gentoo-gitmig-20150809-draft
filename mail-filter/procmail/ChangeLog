@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/procmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.7 2004/07/18 15:40:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.8 2004/09/20 01:17:41 swtaylor Exp $
+
+  19 Sep 2004; Scott W Taylor <swtaylor@gentoo.org> procmail-3.22-r6.ebuild:
+  procmail is part of courier. don't install it separately
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   procmail-3.22-r6.ebuild:
