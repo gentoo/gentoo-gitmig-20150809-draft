@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20.ebuild,v 1.4 2004/02/16 22:31:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20.ebuild,v 1.5 2004/03/07 22:00:16 avenj Exp $
 
 MY_P="FreeWnn-${PV/_alpha/-a0}"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.freewnn.org/pub/FreeWnn/alpha/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc alpha ia64"
+KEYWORDS="x86 sparc alpha ia64 amd64"
 IUSE="X ipv6"
 
 DEPEND="virtual/glibc
