@@ -1,12 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.3 2003/05/14 16:44:46 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.4 2003/05/15 01:37:01 absinthe Exp $
 
 inherit base
 ECLASS=java-pkg
 INHERITED="${INHERITED} ${ECLASS}"
 IUSE="${IUSE}"
 SLOT="${SLOT}"
+
+java-pkg_doclass()
+{
+	debug-print-function ${FUNCNAME} $*
+	java-pkg_dojar $*
+}
 
 java-pkg_dojar()
 {
@@ -158,5 +164,11 @@ java-pkg_dowar()
 		# Install files
 		install -m 0644 "${mysrc}" "${D}${wardest}"
 	done
+}
+
+java-pkg_dozip()
+{
+	debug-print-function ${FUNCNAME} $*
+	java-pkg_dojar $*
 }
 
