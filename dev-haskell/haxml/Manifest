@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dc8c20d8d77f143d3e31d1507dd9d515 haxml-1.12.ebuild 1844
+MD5 33c91af0fa580aa90702b0467de15afc ChangeLog 468
+MD5 a4de292547a7d4fbe157a4ecb4ce2193 metadata.xml 821
+MD5 7f9a42c4c18a163851e48c1d330940bf files/digest-haxml-1.12 62
+MD5 455bf2e99824303d40686c0dd9cc7de3 files/HaXml-1.12.cabal 1081
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCUpflOKSBj1ObwosRAgKVAJ97CvP7rBxPTCIVudKiMYK5n09JFwCfbF9K
+HF23qRCVdoagt723x4vGHVI=
+=Myby
+-----END PGP SIGNATURE-----
