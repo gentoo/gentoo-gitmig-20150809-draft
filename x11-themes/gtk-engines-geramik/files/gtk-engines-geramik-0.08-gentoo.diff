@@ -1,0 +1,12 @@
+diff -NurB Geramik-0.08/theme/gtk-2.0/gtkrc-template Geramik-0.08-patched/theme/gtk-2.0/gtkrc-template
+--- Geramik-0.08/theme/gtk-2.0/gtkrc-template	2002-11-26 08:10:35.000000000 -0500
++++ Geramik-0.08-patched/theme/gtk-2.0/gtkrc-template	2003-01-14 02:00:58.000000000 -0500
+@@ -6,8 +6,6 @@
+ #
+ ####################################################################
+ 
+-pixmap_path "DATA_DIR/themes/Geramik/gtk"
+-
+ style "EventBox" {
+     bg_pixmap[NORMAL]      = "<parent>"
+     bg_pixmap[INSENSITIVE] = "<parent>"
