@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-0.8.0.ebuild,v 1.3 2004/08/14 12:01:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-0.8.0.ebuild,v 1.4 2005/01/27 15:22:40 swegener Exp $
 
 inherit eutils
 
