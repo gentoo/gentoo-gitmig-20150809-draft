@@ -1,0 +1,12 @@
+# ChangeLog for dev-lang/helium
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.1 2003/05/09 10:31:07 kosmikus Exp $
+
+*helium-1.1 (09 May 2003)
+
+  09 May 2003; Andres Loeh <kosmikus@gentoo.org> helium-1.1.ebuild,
+  files/helium-1.1-readline.patch, files/helium-wrapper:
+  Initial import. Helium is a pure functional programming language that provides
+  a subset of Haskell. It is designed to be simple and easy to learn. The
+  compiler has excellent error messages.
+
