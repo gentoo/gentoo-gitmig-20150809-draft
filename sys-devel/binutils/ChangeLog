@@ -1,11 +1,17 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.58 2003/07/01 15:24:53 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.59 2003/07/12 23:46:42 kumba Exp $
 
-  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> binutils-2.14.90.0.2.ebuild:
-  set stable on sparc
 
 *binutils-2.14.90.0.4.1-r1 (28 Jun 2003)
+
+  12 Jul 2003; Joshua Kinard <kumba@gentoo.org> binutils-2.14.90.0.4.1-r1.ebuild:
+  Changed -mips to ~mips in KEYWORDS. Experimentation seems to prove that
+  binutils-2.14.90.0.2 has some issue triggered at random in which a compile
+  errors out claiming "linking abicalls to non-abicalls". Some google searching
+  indicates binutils-2.14.90.0.4 or greater fixes this issue.
+  Has been tested in a mips stage1 rebuild and is currently used in building a 
+  mipsel stage1 for Cobalt servers.
 
   28 Jun 2003; Martin Schlemmer <azarah@gentoo.org>
   binutils-2.14.90.0.4.1-r1.ebuild, files/2.14/binutils-2.14.90.0.4-cfi.patch,
@@ -77,6 +83,9 @@
   now uses mirror://kernel
 
 *binutils-2.14.90.0.2 (17 May 2003)
+
+  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> binutils-2.14.90.0.2.ebuild:
+  set stable on sparc
 
   17 May 2003; Martin Schlemmer <azarah@gentoo.org>
   binutils-2.14.90.0.2.ebuild:
