@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r10.ebuild,v 1.9 2004/03/19 17:31:58 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r10.ebuild,v 1.10 2004/03/22 03:35:02 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
+use debug && inherit debug
 
 IUSE="nls perl spell nas cjk debug crypt gnome"
 
@@ -60,7 +61,6 @@ src_compile() {
 	use spell || myconf="${myconf} --disable-gtkspell"
 	use nls  || myconf="${myconf} --disable-nls"
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
-	use debug  && myconf="${myconf} --enable-debug"
 
 	NSS_LIB=/usr/lib
 	NSS_INC=/usr/include
