@@ -31,7 +31,7 @@ PROVIDE="virtual/mta"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc alpha"
 
 src_unpack() {
 

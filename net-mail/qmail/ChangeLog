@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.21 2003/02/22 00:44:28 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.22 2003/03/16 23:14:33 wwoods Exp $
 
 *qmail-1.03-r10 (01 Feb 2003)
+
+  16 Mar 2003; Will Woods <wwoods@gentoo.org> qmail-1.03-r10.ebuild,
+  qmail-1.03-r8.ebuild:
+  Added alpha keywords
 
   21 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild :
   Small fix0r so .qmail-* files aren't overwritten if they exist from
