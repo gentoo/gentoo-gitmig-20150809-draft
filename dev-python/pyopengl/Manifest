@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 40f86531eb525617825860c42b56c237 pyopengl-2.0.0.44.ebuild 1597
 MD5 2006c688f1d16d74e3d4e004f3075149 ChangeLog 3476
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 c0c0fba72c122fa300ace86ed4f9fd35 pyopengl-2.0.0.44.ebuild 1594
 MD5 67d2ad027cfd6d411a585b0e346606a8 files/config.diff 1175
 MD5 9feca450998c720327067463fea8cdc0 files/digest-pyopengl-2.0.0.44 70
 MD5 ba0f0760a4a22fa7666205b8a5f4f514 files/pyopengl-2.0.0.44-disable_togl.patch 406
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOsAGI1lqEGTUzyQRAniTAJ9DOBV8pY/+Kt1b19Z+cuIuVvDN3QCggbRr
-n4sp009tXo/54N5Sqm+wr44=
-=beoj
------END PGP SIGNATURE-----

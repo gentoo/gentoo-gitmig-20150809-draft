@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0530269018e43f6533cc183f05bb5c65 ChangeLog 2289
-MD5 6fa9551680a911323c3d0cd618f1c7ec pyrex-0.9.3.ebuild 832
-MD5 9d55329f00fe6945ba6b56a3dbf514ec pyrex-0.5.ebuild 815
-MD5 db701b8f7a26952a12c46cf06f76a573 pyrex-0.9.2.1.ebuild 798
+MD5 de12ddb1b20c8b978d78fbae7726e219 ChangeLog 2372
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 9d55329f00fe6945ba6b56a3dbf514ec pyrex-0.5.ebuild 815
 MD5 bee6a3c03e4555157b758959faf34f78 pyrex-0.8.2.ebuild 798
-MD5 7d69959a16c0c50c7b8ae652573c8748 files/pyrex-0.9.1.1-gentoo.patch 313
+MD5 db701b8f7a26952a12c46cf06f76a573 pyrex-0.9.2.1.ebuild 798
+MD5 b61db7ee2e8d17f2e345f32dec58c253 pyrex-0.9.3.ebuild 836
+MD5 698060ff43e70bea481dc39d85b60432 files/digest-pyrex-0.5 61
 MD5 5c46cd453275b56cabe9cd981a306fa5 files/digest-pyrex-0.8.2 63
 MD5 eb81fc8a96e07a88c85802a248fa0ac4 files/digest-pyrex-0.9.2.1 65
 MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3 63
-MD5 698060ff43e70bea481dc39d85b60432 files/digest-pyrex-0.5 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBhpm/ugEuf3OQ0akRAnidAKCKdMjw1pG4RMiBvvIFiSMQ8nSVEgCghwnx
-UB6aJicIbujcxQPnkVZi0SI=
-=fvSM
------END PGP SIGNATURE-----
+MD5 7d69959a16c0c50c7b8ae652573c8748 files/pyrex-0.9.1.1-gentoo.patch 313
