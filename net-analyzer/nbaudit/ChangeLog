@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nbaudit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/ChangeLog,v 1.7 2004/07/10 11:57:22 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/ChangeLog,v 1.8 2004/08/24 10:37:22 eldad Exp $
+
+  24 Aug 2004; Eldad Zack <eldad@gentoo.org> nbaudit-1.0.ebuild:
+  Fixed -lshadow linking problem. Thanks to wernfried haas
+  <w.haas@xover.htu.tuwien.ac.at> for pointing it out. Closes bug #61437.
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   nbaudit-1.0.ebuild:

@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.15 2004/07/10 11:57:22 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.16 2004/08/24 10:37:22 eldad Exp $
 
-
-# Its officially called nat10 but the name conflicts with other projects
+# It is officially called nat10 but the name conflicts with other projects
 # so I'm following the *BSDs suggestion of calling it nbaudit
 
 MY_P=nat10
@@ -21,10 +20,7 @@ IUSE=""
 
 src_compile() {
 
-	mv Makefile Makefile.old
-	sed -e "s/# \(FLAGSM = -DLINUX -DSHADOW_PWD\)/\1 -DNO_ASMSIGNALH/" \
-		-e "s/# LIBSM = -lshadow/LIBSM = -lshadow/" \
-		Makefile.old > Makefile
+	sed -i -e "s/# \(FLAGSM = -DLINUX -DSHADOW_PWD\)/\1 -DNO_ASMSIGNALH/; s;# LIBSM = -lshadow;LIBSM = -lshadow -L/usr/X11R6/lib/modules ;" Makefile
 
 	# NOTE: DO NOT SET CFLAGS OR THE PROGRAM WILL SEGFAULT
 	make all || die
@@ -32,7 +28,6 @@ src_compile() {
 }
 
 src_install () {
-
 	mv nat nbaudit
 	dobin nbaudit
 
