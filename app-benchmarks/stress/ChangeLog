@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/stress
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.8 2003/08/04 18:14:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.9 2003/08/11 17:31:37 mholzer Exp $
+
+  12 Aug 2003; Martin Holzer <mholzer@gentoo.org> stress-0.18.1.ebuild:
+  Marked x86 stable.
 
 *stress-0.18.1 (05 Aug 2003)
 
