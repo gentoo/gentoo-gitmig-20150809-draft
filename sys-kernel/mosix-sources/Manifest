@@ -1,7 +1,0 @@
-MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
-MD5 892d639a49e9c1782221c9f5c8f15548 mosix-sources-2.4.19.ebuild 3519
-MD5 e56735670ffadeee3fed9c2d50ab813d ChangeLog 864
-MD5 37bdf205d8de30e056ffe2499328744f mosix-sources-2.4.20.ebuild 3246
-MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
-MD5 3adfe9d3a1872c001424fd95063352dc files/digest-mosix-sources-2.4.20 147
-MD5 d3214f81fb35526e9d64cba9c8d8b7f0 files/digest-mosix-sources-2.4.19 229
