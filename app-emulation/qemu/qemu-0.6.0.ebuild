@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.0.ebuild,v 1.3 2004/09/25 11:29:30 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.0.ebuild,v 1.4 2004/10/28 07:11:14 lu_zero Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://fabrice.bellard.free.fr/qemu/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -alpha -sparc"
+KEYWORDS="~x86 ppc -alpha -sparc"
 IUSE="softmmu qemu-fast sdl"
 RESTRICT="nostrip"
 
@@ -56,6 +56,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo ">> You will need the Universal TUN/TAP driver compiled into"
-	echo ">> kernel or as a module to use the virtual network device."
+	einfo "You will need the Universal TUN/TAP driver compiled into"
+	einfo "kernel or as a module to use the virtual network device."
+	use softmmu || \
+	(
+	ewarn "You have the softmmu useflag disabled."
+	ewarn "In order to have the full system emulator (qemu) you have"
+	ewarn "to emerge qemu again with the softmmu useflag enabled"
+	)
 }

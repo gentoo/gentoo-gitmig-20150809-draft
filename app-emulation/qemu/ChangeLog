@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.16 2004/09/25 11:29:30 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.17 2004/10/28 07:11:14 lu_zero Exp $
+
+  28 Oct 2004; Luca Barbato <lu_zero@gentoo.org> qemu-0.6.0.ebuild:
+  Marked ppc, added some ewarn in the postinst as requested in bug #69206
 
   25 Sep 2004; Hanno Boeck <hanno@gentoo.org> +files/qemu_gcc34.patch.gz,
   qemu-0.6.0.ebuild:
