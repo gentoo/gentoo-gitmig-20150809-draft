@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.4.ebuild,v 1.5 2005/01/21 02:49:24 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.3.0.ebuild,v 1.1 2005/01/21 02:49:24 pfeifer Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.openswan.org/code/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* x86 amd64 ~ppc"
+KEYWORDS="-* ~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND="!net-misc/strongswan
@@ -118,7 +118,6 @@ src_install() {
 		INC_MANDIR=share/man \
 		install || die
 
-	dodoc INSTALL CREDITS BUGS CHANGES README doc/*
 	dosym /etc/ipsec/ipsec.d /etc/ipsec.d
 
 	exeinto /etc/init.d/

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.5.ebuild,v 1.4 2004/10/19 12:33:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.5.ebuild,v 1.5 2005/01/21 02:49:24 pfeifer Exp $
 
 inherit eutils
 
