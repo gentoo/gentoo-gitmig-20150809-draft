@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.4 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.5 2003/07/30 23:46:46 raker Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${PN}_${PV}.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gentoo.diff
+	epatch ${FILESDIR}/wrongshell.patch
 }
 
 src_compile() {
