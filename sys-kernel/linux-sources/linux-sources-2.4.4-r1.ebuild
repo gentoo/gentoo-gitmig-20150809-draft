@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.4-r1.ebuild,v 1.3 2001/04/29 02:00:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.4-r1.ebuild,v 1.4 2001/04/29 02:55:01 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version
 OKV=2.4.4
@@ -90,7 +90,7 @@ src_unpack() {
     # the -l option allows this patch to apply cleanly (ignore whitespace changes)
     try patch -l -p1 < ${S}/extras/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
   
-    if [ "`use alsa`" ]
+    if [ -n "`use alsa`" ]
     then  
         #unpack alsa drivers
         echo "Unpacking ALSA drivers..."
@@ -159,6 +159,9 @@ src_compile() {
 	    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
 	    
 	fi
+fi
+	if [ "$PN" = "linux" ]
+then 
 	if [ "`use alsa`" ]
 	then
 	    cd ${S}/extras/alsa-driver-${AV}
