@@ -20,6 +20,7 @@
 3dnow - Adds support for 3dnow multimedia processor instructions
 aalib - Adds support for media-libs/aalib (ASCI-Graphics Library)
 acl - Adds support for sys-apps/acl (XFS dump/restore utilities)
+acpi - Adds support for Advanced Configuration and Power Interface
 afs - Adds OpenAFS support (distributed file system)
 alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
 apm - Adds APM (Advanced Power Management) support
@@ -54,6 +55,7 @@ gif - Adds GIF image support
 gnome - Adds GNOME support
 gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
+gps - Adds support for Global Positioning System
 gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
 gtk2 - use  gtk+-2.0.0 over gtk+-1.2 in cases where a program supports both. beware that gtk+-2 support can be bad.
 gtkhtml - Adds support for gnome-extra/gtkhtml
