@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a-r1.ebuild,v 1.3 2004/04/24 15:22:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.3b-r4.ebuild,v 1.1 2004/04/24 15:22:30 wolf31o2 Exp $
 
-MY_PV=${PV/a/.A-k9}
+inherit eutils
+
+MY_PV=${PV/b/.B-k9}
 DESCRIPTION="Cisco VPN Client (3DES)"
 HOMEPAGE="http://www.cisco.com/en/US/products/sw/secursw/ps2308/index.html"
 SRC_URI="vpnclient-linux-${MY_PV}.tar.gz"
@@ -11,6 +13,7 @@ LICENSE="cisco-vpn-client"
 SLOT="${KV}"
 KEYWORDS="-* x86"
 RESTRICT="fetch"
+IUSE=""
 
 DEPEND="virtual/glibc
 	virtual/linux-sources
@@ -18,7 +21,7 @@ DEPEND="virtual/glibc
 
 S=${WORKDIR}/vpnclient
 
-VPNDIR=/etc/CiscoSystemsVPNClient
+VPNDIR="/etc/CiscoSystemsVPNClient"
 
 pkg_nofetch() {
 	eerror "Please goto:"
@@ -31,12 +34,17 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	[ "${KV:0:3}" == "2.6" ] && epatch ${FILESDIR}/${PV}-linux26-gentoo.patch
 
 	# Patch to allow use of alternate CC.  Patch submitted to bug #33488 by
-	# Jesse Becker (jbecker@speakeasy.net)
+	# Jesse Becker <jbecker@speakeasy.net>
 	epatch ${FILESDIR}/driver_build_CC.patch
-
+	# Patch to allow module to work with kernel 2.6.x.  Patch submitted to bug
+	# #40730 by Kent Skaar <skaar@aol.net>.  Patch originally submitted to LMKL
+	# by Gertjan van Wingerde <gwingerde@home.nl>.
+	epatch ${FILESDIR}/register_netdevice.patch
+	# Patch to allow module to work with Atheros chipsets.  Patch submitted to
+	# bug #48680 by Dominic Battre <dominic.battre@gmx.de>
+	epatch ${FILESDIR}/atheros.patch
 }
 
 src_compile () {
@@ -49,7 +57,8 @@ src_compile () {
 
 src_install() {
 	exeinto /etc/init.d
-	newexe vpnclient_init vpnclient
+	#newexe vpnclient_init vpnclient
+	newexe ${FILESDIR}/vpnclient.rc vpnclient
 
 	exeinto /usr/bin
 	exeopts -m0711
