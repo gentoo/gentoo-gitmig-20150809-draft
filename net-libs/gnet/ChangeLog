@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.32 2004/11/15 03:18:19 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.33 2004/12/23 15:06:13 corsair Exp $
+
+  23 Dec 2004; Markus Rothe <corsair@gentoo.org> gnet-2.0.5.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #75350
 
   14 Nov 2004; Kito <kito@gentoo.org> gnet-2.0.5.ebuild:
   added ~ppc-macos
