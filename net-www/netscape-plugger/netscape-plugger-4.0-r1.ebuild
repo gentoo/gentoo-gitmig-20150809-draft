@@ -21,8 +21,10 @@ src_install() {
 	dobin plugger-4.0
 	dosym plugger-4.0 /usr/bin/plugger
 
-	use mozilla && \
-		into /usr/lib/mozilla/plugins;
-		dosym /opt/netscape/plugins/plugger.so /usr/lib/mozilla/plugins/plugger.so
+	if use mozilla; then
+		into /usr/lib/mozilla/plugins
+		dosym /opt/netscape/plugins/plugger.so \
+			/usr/lib/mozilla/plugins/plugger.so
+	fi
   
 }
