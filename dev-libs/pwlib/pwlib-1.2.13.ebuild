@@ -1,23 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.2.13.ebuild,v 1.2 2002/03/29 05:00:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.2.13.ebuild,v 1.3 2002/03/29 14:19:44 seemant Exp $
 
-S="${WORKDIR}/pwlib"
-SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/pwlib_1.2.12.tar.gz"
+S="${WORKDIR}/${PN}"
 DESCRIPTION="Libs needed for GnomeMeeting"
+SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
+HOMEPAGE="http://www.openh323.org"
 
 DEPEND="virtual/glibc
 	>=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a"
-
-src_unpack() {
-
-	unpack pwlib_1.2.12.tar.gz
-	cd ${S}
-	patch -p0 < ${FILESDIR}/${PN}-gentoo.diff
-
-}
 
 src_compile() {
 
