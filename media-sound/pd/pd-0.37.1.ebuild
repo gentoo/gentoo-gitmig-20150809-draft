@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.6 2004/04/08 07:22:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.7 2004/04/23 16:47:43 eradicator Exp $
 
 inherit eutils
 
@@ -14,8 +14,8 @@ SRC_URI="http://www-crca.ucsd.edu/~msp/Software/${MY_P}.src.tar.gz"
 
 LICENSE="BSD | as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
-IUSE="X alsa"
+KEYWORDS="x86 ~ppc"
+IUSE="X alsa debug"
 
 RDEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
