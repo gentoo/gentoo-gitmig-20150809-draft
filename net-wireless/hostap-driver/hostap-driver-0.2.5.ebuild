@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.2.5.ebuild,v 1.1 2004/10/25 15:15:30 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.2.5.ebuild,v 1.2 2004/10/26 10:15:24 brix Exp $
 
 inherit pcmcia kernel-mod eutils
 
@@ -34,9 +34,6 @@ src_unpack() {
 
 	# unpack the pcmcia-cs sources if needed
 	pcmcia_src_unpack
-
-	# set compiler options
-	sed -i "s:gcc:${CC}:" ${S}/Makefile
 
 	# fix for new coreutils (#31801)
 	sed -i "s:tail -1:tail -n 1:" ${S}/Makefile

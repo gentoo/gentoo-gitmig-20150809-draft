@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostap-driver
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.15 2004/10/25 15:15:30 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.16 2004/10/26 10:15:24 brix Exp $
+
+  26 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
+  hostap-driver-0.2.5.ebuild:
+  Do not substitute gcc in the Makefile. Hopefully fixes bug #68537.
 
 *hostap-driver-0.2.5 (25 Oct 2004)
 
