@@ -247,3 +247,14 @@ move app-games/spacehulk games-strategy/spacehulk
 move app-games/uqm games-strategy/uqm
 move app-games/xarchon games-strategy/xarchon
 move app-games/xscorch games-strategy/xscorch
+move app-games/adonthell games-rpg/adonthell
+move app-games/egoboo games-rpg/egoboo
+move app-games/freedroid games-rpg/freedroid
+move app-games/freedroidrpg games-rpg/freedroidrpg
+move app-games/gwiz games-rpg/gwiz
+move app-games/nwn games-rpg/nwn
+move app-games/openglad games-rpg/openglad
+move app-games/openrpg games-rpg/openrpg
+move app-games/planeshift games-rpg/planeshift
+move app-games/vegastrike games-rpg/vegastrike
+move app-games/wastesedge games-rpg/wastesedge
