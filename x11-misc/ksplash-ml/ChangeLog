@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/ksplash-ml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ksplash-ml/ChangeLog,v 1.7 2003/02/12 09:29:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ksplash-ml/ChangeLog,v 1.8 2003/06/12 22:21:34 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> ksplash-ml-0.95.2-r1.ebuild,
+  ksplash-ml-0.95.2.ebuild, ksplash-ml-0.95.3.ebuild:
+  fix Header
 
 *ksplash-ml-0.95.3 (21 Nov 2002)
 

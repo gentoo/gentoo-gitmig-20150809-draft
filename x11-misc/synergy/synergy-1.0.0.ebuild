@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.0.0.ebuild,v 1.3 2003/06/12 22:22:10 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lets you easily share a single mouse and keyboard between multiple computers."

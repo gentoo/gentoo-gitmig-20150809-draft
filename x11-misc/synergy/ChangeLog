@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.6 2003/05/15 07:36:32 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.7 2003/06/12 22:22:10 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> synergy-0.9.13.ebuild,
+  synergy-1.0.0.ebuild, synergy-1.0.2.ebuild:
+  fix Header
 
 *synergy-1.0.8 (15 May 2003)
 
