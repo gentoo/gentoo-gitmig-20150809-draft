@@ -2,8 +2,8 @@ MD5 54ddb487c75a6be9ae3d04cca06eddf6 gputils-0.11.7.ebuild 684
 MD5 44c3415eac4a19790000d3a3bacc91c0 gputils-0.10.6.ebuild 626
 MD5 689a4a2994c5f7472fab701a07194a44 gputils-0.11.4.ebuild 628
 MD5 45ddf7d776cff73281cc765380e9b05b gputils-0.11.6.ebuild 628
-MD5 54ddb487c75a6be9ae3d04cca06eddf6 gputils-0.11.8.ebuild 684
-MD5 7a950e64e8da91cab9051b89d978af60 ChangeLog 1394
+MD5 443d78cba43226478eff8e0d69aa9f19 gputils-0.11.8.ebuild 716
+MD5 c4f302c2edd473fd8f8a236c5e722774 ChangeLog 1517
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
 MD5 c838ece021b05bda0e3bb95f6bd73da1 gputils-0.10.2.ebuild 626
 MD5 1b1000c348899c307c17c1e823173181 files/digest-gputils-0.10.2 66
