@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 
+*apache-1.3.26-r4 (3 Jul 2002)
+
+  3 Jul 2002; Brandon Low <lostlogic@gentoo.org> apache-1.3.26-r4.ebuild:
+
+  Just .keep some directories we make so that they will be handled more 
+  sanely in unmerge and clean operations.
+
 *apache-1.3.26-r3 (2 Jul 2002)
 
   2 Jul 2002; Jon Nelson <jnelson@gentoo.org> apache-1.3.26-r3.ebuild:
