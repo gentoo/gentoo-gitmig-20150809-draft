@@ -1,0 +1,9 @@
+# ChangeLog for app-text/uvconv
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/uvconv/ChangeLog,v 1.1 2004/11/22 09:50:04 pclouds Exp $
+
+*uvconv-1.1.3b (22 Nov 2004)
+
+  22 Nov 2004; <pclouds@gentoo.org> +metadata.xml, +uvconv-1.1.3b.ebuild:
+  Initial ebuild
+
