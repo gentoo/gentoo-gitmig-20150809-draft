@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5eaa59ef8b50dcac5c77885d2c97c9a3 ChangeLog 1875
+MD5 e9d16671e8367e8e538c34a1887d748a ChangeLog 2057
 MD5 7a0593bbdbf62897c84b4d686dbb3888 crack-attack-1.1.10.ebuild 1159
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6a872f69c6993ed8df358581f873b6b2 files/1.1.10-GL.patch 922
-MD5 131162585001d8d65c1b8750ca2aa4a7 files/digest-crack-attack-1.1.10 71
+MD5 9f618aa6ba07962ceeff5fbe132aaf1a crack-attack-1.1.11.ebuild 909
 MD5 63bc39c1a6f83860c8091e344e4613fa files/1.1.10-gcc34.patch 4824
 MD5 0f64d6304af0ffe9d461d703d901cee8 files/1.1.10-i865g.patch 543
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA91dEHTu7gpaalycRAgHfAJ97n1TbvswyecoALk6SSy0dVgrT5wCfVYgF
-uxrluxV5Vj61d74OaQVVKoA=
-=EXl7
------END PGP SIGNATURE-----
+MD5 131162585001d8d65c1b8750ca2aa4a7 files/digest-crack-attack-1.1.10 71
+MD5 6a872f69c6993ed8df358581f873b6b2 files/1.1.10-GL.patch 922
+MD5 44a8bc17b38cb5b705e71a989621527c files/digest-crack-attack-1.1.11 71
