@@ -10,7 +10,7 @@
 
 # mask older packages due to version change .. new one will be seen
 # by portage as older ....
-#>=net-mail/postfix-2001000
+>=net-mail/postfix-20010000
 
 # add GLU and DRI to xfree .. need some testing first
 >=x11-base/xfree-4.2.0-r4
