@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.4 2004/03/15 17:13:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.5 2004/03/31 06:26:12 mr_bones_ Exp $
 
-inherit games eutils gcc
+inherit eutils gcc games
 
 DESCRIPTION="Rogue-like D&D curses game similar to nethack (BUT BETTER)"
 HOMEPAGE="http://remarque.org/~grabiner/moria.html"
@@ -17,11 +17,12 @@ LICENSE="Moria"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/glibc
-	>=sys-apps/sed-4
+RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
-S=${WORKDIR}/umoria
+S="${WORKDIR}/umoria"
 
 src_unpack() {
 	unpack ${A}
@@ -38,7 +39,8 @@ src_unpack() {
 		-e "s:David Grabiner:root:" \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
 		-e "s:GENTOO_STATEDIR:${GAMES_STATEDIR}:" \
-		config.h
+		config.h \
+			|| die "sed config.h failed"
 	sed -i \
 		-e "/^STATEDIR =/s:=.*:=\$(DESTDIR)${GAMES_STATEDIR}:" \
 		-e "/^BINDIR = /s:=.*:=\$(DESTDIR)${GAMES_BINDIR}:" \
@@ -47,16 +49,13 @@ src_unpack() {
 		-e "/^OWNER = /s:=.*:=${GAMES_USER}:" \
 		-e "/^GROUP = /s:=.*:=${GAMES_GROUP}:" \
 		-e "/^CC = /s:=.*:=$(gcc-getCC):" \
-		Makefile
-}
-
-src_compile() {
-	emake || die "make failed"
+		Makefile \
+			|| die "sed Makefile failed"
 }
 
 src_install() {
-	dodir ${GAMES_BINDIR} ${GAMES_DATADIR}/${PN} ${GAMES_STATEDIR}
-	make install DESTDIR=${D} || die
+	dodir "${GAMES_BINDIR}" "${GAMES_DATADIR}/${PN}" "${GAMES_STATEDIR}"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	doman doc/moria.6
 	rm doc/moria.6
