@@ -1,4 +1,4 @@
-MD5 1fdf22ebe9baaf123299287f31dfdabe ChangeLog 1308
-MD5 666aacb39ae221b24aa576b705bc9564 monkey-bubble-0.1.6.ebuild 844
-MD5 3f11aaf297b2fe67404a96cda13e9bfe metadata.xml 251
 MD5 55d8d3b5c8d9359875c2d4b313806155 files/digest-monkey-bubble-0.1.6 72
+MD5 1fdf22ebe9baaf123299287f31dfdabe ChangeLog 1308
+MD5 3f11aaf297b2fe67404a96cda13e9bfe metadata.xml 251
+MD5 fde14da2b3ec4113468c447fcd50ab4b monkey-bubble-0.1.6.ebuild 830
