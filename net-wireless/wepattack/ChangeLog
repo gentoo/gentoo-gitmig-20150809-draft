@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wepattack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/ChangeLog,v 1.5 2004/06/25 00:47:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/ChangeLog,v 1.6 2004/08/03 05:01:37 avenj Exp $
+
+  03 Aug 2004; Jon Portnoy <avenj@gentoo.org> wepattack-0.1.3-r1.ebuild :
+  AMD64 keywords.
 
 *wepattack-0.1.3-r1 (25 Apr 2004)
 
