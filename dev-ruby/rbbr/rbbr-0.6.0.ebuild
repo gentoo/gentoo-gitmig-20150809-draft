@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.; acid DOT punk AT gmx DOT net
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.6.0.ebuild,v 1.1 2004/04/15 23:41:20 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.6.0.ebuild,v 1.2 2004/04/16 15:03:20 dholm Exp $
 
 DESCRIPTION="Ruby Browser for modules/classes hierarchy and their constants and methods"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/hiki.cgi?rbbr"
 SRC_URI="mirror://sourceforge/ruby-gnome2/${P}-withapi.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="Ruby"
 IUSE="nls cjk"
