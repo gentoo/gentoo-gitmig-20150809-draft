@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.2.0.ebuild,v 1.1 2005/02/11 10:51:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.2.3.ebuild,v 1.1 2005/03/22 13:15:00 ka0ttic Exp $
 
 inherit eutils bash-completion
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-specify-logfile.patch
+	epatch ${FILESDIR}/${PN}-1.2.1-create-tmpdir.diff
 }
 
 src_install() {
