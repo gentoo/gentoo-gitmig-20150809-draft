@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.23.ebuild,v 1.6 2003/03/21 17:44:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.23.ebuild,v 1.7 2003/03/29 02:46:11 agriffis Exp $
 
 IUSE="nls doc"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc "
+KEYWORDS="x86 ~ppc sparc ~alpha"
 
 RDEPEND=">=dev-libs/libxml-1.8.16
          >=gnome-base/gnome-print-0.34

@@ -1,6 +1,6 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.25 2003/03/21 17:44:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.26 2003/03/29 02:46:11 agriffis Exp $
 
 *gal-1.99.2 (13 Mar 2003)
 
@@ -16,6 +16,9 @@
   gal-0.*.
 
 *gal-0.23 (04 Mar 2003)
+
+  28 Mar 2003; Aron Griffis <agriffis@gentoo.org> gal-0.23.ebuild:
+  Add ~alpha to KEYWORDS
 
   21 Mar 2003; Jason Wever <weeve@gentoo.org> gal-0.23.ebuild:
   Changed ~sparc keyword to sparc.
