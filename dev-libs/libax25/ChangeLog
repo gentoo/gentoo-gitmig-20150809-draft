@@ -1,7 +1,8 @@
 # ChangeLog for dev-libs/libax25
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.2 2003/07/31 19:54:57 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.3 2004/03/02 10:10:29 aliz Exp $
 
+*libax25-0.0.11-r1 (31 Jul 2003)
 *libax25-0.0.11 (19 Jun 2003)
 
   31 Jul 2003; Ryan Phillips <rphillips@gentoo.org> libax25-0.0.11-r1.ebuild:

@@ -1,6 +1,8 @@
 # ChangeLog for dev-libs/pcl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcl/ChangeLog,v 1.1 2003/11/04 14:01:45 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcl/ChangeLog,v 1.2 2004/03/02 10:10:30 aliz Exp $
+
+*pcl-1.2 (04 Nov 2003)
 
   04 Nov 2003; Kurt Lieber,,, <klieber@gentoo.org> :
   initial ebuild, originally submitted by Brian O'Kelley.  Minor tweaks to license and header.  Closes bug 32662
