@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.67 2004/06/07 23:54:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.68 2004/06/19 11:15:16 eradicator Exp $
+
+*alsa-lib-1.0.5-r1 (19 Jun 2004)
+
+  19 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +alsa-lib-1.0.5-r1.ebuild:
+  Add symlink to alsa driver headers if alsa-drivers is not installed. This
+  should take care of problems like bug #54381.
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-lib-0.9.8.ebuild, alsa-lib-1.0.2.ebuild:
+  Getting rid of virtual/jack.
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> alsa-lib-1.0.2.ebuild:
   Fix use invocation
