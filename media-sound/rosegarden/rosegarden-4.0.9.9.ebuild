@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.9.ebuild,v 1.1 2004/08/06 20:39:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.9.ebuild,v 1.2 2004/09/30 23:37:52 eradicator Exp $
 
 IUSE="jack"
 
@@ -20,7 +20,6 @@ SLOT="0"
 KEYWORDS="-*"
 
 RDEPEND=">=kde-base/kdelibs-3.0
-	kde-base/kdemultimedia
 	>=x11-libs/qt-3
 	media-libs/alsa-lib
 	jack? ( media-sound/jack-audio-connection-kit )
