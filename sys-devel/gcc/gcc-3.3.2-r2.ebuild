@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r2.ebuild,v 1.4 2003/11/02 10:44:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r2.ebuild,v 1.5 2003/11/19 03:17:42 gmsoft Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -288,6 +288,9 @@ src_compile() {
 		fi
 		myconf="${myconf} --disable-multilib"
 	fi
+
+	#Fix linking problem with c++ apps which where linked agains a 3.2.2 libgcc
+	[ "${ARCH}" = "hppa" ] && myconf="${myconf} --enable-sjlj-exceptions"
 
 	# In general gcc does not like optimization, and add -O2 where
 	# it is safe.  This is especially true for gcc-3.3 ...
