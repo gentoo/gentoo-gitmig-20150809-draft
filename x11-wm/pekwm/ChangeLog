@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.4 2003/06/08 23:17:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.5 2003/07/27 15:10:43 bcowan Exp $
+
+*pekwm-0.1.3-r1 (27 Jul 2003)
+
+  27 Jul 2003; Brad Cowan <bcowan@gentoo.org> pekwm-0.1.3-r1.ebuild:
+  Fixes.
 
   08 Jun 2003; Seemant Kulleen <seemant@gentoo.org> :
   version bump
