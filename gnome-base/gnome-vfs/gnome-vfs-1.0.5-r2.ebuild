@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r2.ebuild,v 1.4 2002/07/23 21:40:09 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r2.ebuild,v 1.5 2002/07/25 01:55:09 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Virtual File System."
@@ -10,8 +10,7 @@ KEYWORDS="x86 ppc"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1"
 
-RDEPEND="( >=gnome-base/gconf-1.0.6
-			<gnome-base/gconf-1.1 )	
+RDEPEND="( =gnome-base/gconf-1.0* )	
 	 >=gnome-base/gnome-libs-1.4.1.2
 	 >=gnome-base/gnome-mime-data-1.0.1
 	 >=sys-apps/bzip2-1.0.2
