@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.37 2004/10/29 07:13:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.38 2004/10/29 15:57:06 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -111,7 +111,7 @@ RDEPEND="
 		>=dev-libs/expat-1.95.3
 		>=media-libs/freetype-2.1.4
 		>=media-libs/fontconfig-2.1-r1
-		>=x11-base/opengl-update-1.7.2
+		opengl? ( >=x11-base/opengl-update-1.99 )
 		media-libs/libpng
 		>=sys-libs/ncurses-5.1
 		!x11-base/xfree

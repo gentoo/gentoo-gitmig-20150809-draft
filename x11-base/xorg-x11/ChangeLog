@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.182 2004/10/29 07:13:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.183 2004/10/29 15:57:06 spyderous Exp $
+
+  29 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r2.ebuild:
+  Sync opengl-update deps in DEPEND and RDEPEND.
 
   29 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
