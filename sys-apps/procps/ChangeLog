@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.95 2005/01/02 23:46:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.96 2005/01/10 17:02:42 gustavoz Exp $
+
+  10 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> procps-3.2.4.ebuild:
+  Stable on sparc
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
