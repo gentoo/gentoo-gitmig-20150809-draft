@@ -31,13 +31,20 @@
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 
-# PPC PROFILE
+# PPC 1.0 PROFILE
+
+#
+# Temporary masking here only please (permanent ones at bottom)
+#
 
 # Not fully tagged for keywords yet
-<=sys-apps/portage-2.0.13
+# unmasking for now, not sure how many problems/compalints this will
+# cause with missing keywords, but it will ensure we keyword missing stuff
+# as we've tested about as much as the devs can so far :(
+#<=sys-apps/portage-2.0.13
 
 # not working, needs attention - Gerk Jul 30 2002
-# upstream problems reported by OlafH of suse
+# upstream problems reported by OlafH of suse ppc
 <media-sound/alsa-driver-0.9.0_rc2
 
 # syslog-ng segfaults on usage
@@ -70,59 +77,14 @@
 # tightvnc works, so masking this for now - Gerk June 26 2002
 ~net-misc/vnc
 
-# ebuilds installing precompiled stuff:
-
-~net-www/netscape-communicator
-~net-www/netscape-flash
-~net-www/netscape-navigator
-~net-www/netscape-plugger
-
-# more precompiled and/or x86 only ebuilds
-# not avail for ppc (gerk)
-~app-text/acroread
-~app-emulation/vmware-workstation
-~app-emulation/wine
-~app-emulation/winesetuptk
-~app-emulation/winex
-~dev-java/ibm-jdk
-~dev-java/sun-jdk
-~dev-java/sun-j2ee
-~dev-java/ibm-jre
-~app-emulation/basiliskII
-~sys-apps/yard
-~app-emulation/dosemu
-~net-www/opera
-~net-www/opera-static
-~app-games/quake3
-~app-games/quake3-cpma
-~app-games/quake3-osp
-~app-emulation/psemu-cdr
-~app-emulation/psemu-cdriso
-~app-emulation/psemu-gpupetemesagl
-~app-emulation/psemu-padjoy
-~app-emulation/psemu-padxwin
-~app-emulation/psemu-peopssoftgpu
-~app-emulation/psemu-peopsspu
-~dev-util/cvsup
-~media-video/realplayer
-
 # temp (to fix) currently x86 only builds 
 # that can be adjusted for ppc (gerk)
 ~media-gfx/blender
 ~media-video/ati-gatos
 
-# makes no sense on ppc
-~sys-apps/lilo
-~sys-apps/grub 
-
-# x86 and sparc only kernels (gerk)
-~sys-kernel/gentoo-sources
-~sys-kernel/crypto-sources
-~sys-kernel/openmosix-sources
-~sys-kernel/redhat-sources
-~sys-kernel/sparc-sources
-~sys-kernel/usermode-sources
-~sys-kernel/xfs-sources
+#
+# Profile specific pkgs start here
+#
 
 *app-arch/ncompress
 *sys-apps/baselayout
@@ -132,10 +94,6 @@
 *~sys-libs/glibc-2.2.5
 *sys-apps/texinfo
 
-# Only 2.4.19 is patched for ppc
-# temporarily commented out (debugging)
-#>=sys-kernel/linux-headers-2.4.18
-#>=sys-kernel/linux-sources-2.4.18
 sys-kernel/ppc-sources
 >=sys-kernel/linux-headers-2.4.18
 
@@ -147,11 +105,7 @@ sys-apps/sysklogd
 *sys-apps/hfsutils
 *sys-apps/yaboot
 *sys-apps/mac-fdisk
-
-
-# sash - static shell for system recovery
 *app-shells/sash
-
 *sys-devel/perl
 *net-ftp/ftp
 *net-misc/dhcpcd
@@ -259,3 +213,59 @@ net-misc/rsync
 >=net-www/wwwoffle-2.6d-r6
 >=net-www/squid-2.4.2s-r6
 >=net-dialup/ppp-2.4.1-r6
+
+#
+# From here down are premanently 'locked down' builds
+# that are either precompiled bin for x86 or things
+# that don't work on ppc and wont in the future on ppc
+#
+
+# These are ebuilds installing precompiled stuff:
+
+~net-www/netscape-communicator
+~net-www/netscape-flash
+~net-www/netscape-navigator
+~net-www/netscape-plugger
+
+# more precompiled and/or x86 only ebuilds
+# not avail for ppc (gerk)
+~app-text/acroread
+~app-emulation/vmware-workstation
+~app-emulation/wine
+~app-emulation/winesetuptk
+~app-emulation/winex
+~dev-java/ibm-jdk
+~dev-java/sun-jdk
+~dev-java/sun-j2ee
+~dev-java/ibm-jre
+~app-emulation/basiliskII
+~sys-apps/yard
+~app-emulation/dosemu
+~net-www/opera
+~net-www/opera-static
+~app-games/quake3
+~app-games/quake3-cpma
+~app-games/quake3-osp
+~app-emulation/psemu-cdr
+~app-emulation/psemu-cdriso
+~app-emulation/psemu-gpupetemesagl
+~app-emulation/psemu-padjoy
+~app-emulation/psemu-padxwin
+~app-emulation/psemu-peopssoftgpu
+~app-emulation/psemu-peopsspu
+~dev-util/cvsup
+~media-video/realplayer
+
+# makes no sense on ppc
+~sys-apps/lilo
+~sys-apps/grub 
+
+# x86 and sparc only kernels (gerk)
+~sys-kernel/gentoo-sources
+~sys-kernel/crypto-sources
+~sys-kernel/openmosix-sources
+~sys-kernel/redhat-sources
+~sys-kernel/sparc-sources
+~sys-kernel/usermode-sources
+~sys-kernel/xfs-sources
+
