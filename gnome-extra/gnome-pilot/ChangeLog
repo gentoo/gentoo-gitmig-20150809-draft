@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-pilot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.3 2002/03/27 05:58:03 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.4 2002/04/24 22:52:42 spider Exp $
+
+*gnome-pilot-0.1.65 (24 Apr 2002)
+  24 Apr 2002; Spider <spider@gentoo.org> gnome-pilot-0.1.65.ebuild :
+  update SRC_URI (now uses bz2 files)
+  bump version  
 
 *gnome-pilot-0.1.64-r2 (27 Mar 2002)
 
