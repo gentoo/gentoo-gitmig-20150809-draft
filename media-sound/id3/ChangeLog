@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/id3
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3/ChangeLog,v 1.3 2003/02/12 07:29:18 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3/ChangeLog,v 1.4 2004/02/10 07:15:03 augustus Exp $
+
+  10 Feb 2004; <augustus@gentoo.org> id3-0.12-r1.ebuild:
+  Added ~amd64 keyword.
 
   18 Jan 2002; Bryon Roche <kain@kain.org> ChangeLog, id3-0.12-r1.ebuild :
 
