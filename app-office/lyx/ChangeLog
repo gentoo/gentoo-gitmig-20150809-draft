@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.44 2004/06/02 02:18:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.45 2004/06/19 05:25:27 weeve Exp $
+
+  18 Jun 2004; Jason Wever <weeve@gentoo.org> lyx-1.3.4.ebuild:
+  Stable on sparc.
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> lyx-1.3.4.ebuild:
   Fix use invocation
