@@ -1,0 +1,69 @@
+diff --exclude='*~' -urN rkhunter.orig/files/development/rkhunter.8 rkhunter/files/development/rkhunter.8
+--- rkhunter.orig/files/development/rkhunter.8	2005-02-10 22:35:07.000000000 -0500
++++ rkhunter/files/development/rkhunter.8	2005-02-11 00:16:43.261318112 -0500
+@@ -60,9 +60,10 @@
+ Use another configuration file, instead of the default one
+ .TP
+ .B
+---createlogfile
++--createlogfile <file>
+ A plain text file summarizing \fBrkhunter\fP's findings will be
+-output to the path/filename specified after the switch
++output to the path/filename specified after the switch.  If no
++filename is specified, a default of /var/log/rkhunter.log is used.
+ .TP
+ .B
+ --cronjob
+diff --exclude='*~' -urN rkhunter.orig/files/rkhunter rkhunter/files/rkhunter
+--- rkhunter.orig/files/rkhunter	2005-02-10 22:35:07.000000000 -0500
++++ rkhunter/files/rkhunter	2005-02-11 00:46:10.174706448 -0500
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/bin/bash
+ 
+ #################################################################################
+ #
+@@ -151,6 +151,11 @@
+       --createlogfile | --createlog | --create-log | --create-logfile)
+ 	  DEBUG=1
+           DEBUGLOG=1
++	  if [[ "$2" != -* ]]
++	    then
++		shift
++		LOGFILE=$1
++	    fi
+ 	  ;;
+       --dbdir)
+           shift
+@@ -230,9 +235,19 @@
+     # Through the drain...
+     DEBUGFILE="/dev/null"
+   else
+-    if [ -d "/var/log" ]
++    if [[ -n "${LOGFILE}" ]]
+       then
+-        DEBUGFILE="/var/log/rkhunter.log"
++	if ( [[ "${LOGFILE}" == */* ]] && [ -d "${LOGFILE%/*}" ] ) || [ -w ./ ]
++	    then
++		DEBUGFILE="${LOGFILE}"
++	    fi
++
++      elif [[ -d "/var/log" ]]
++        then
++	    DEBUGFILE="/var/log/rkhunter.log"
++	    [[ -n "${LOGFILE}" ]] && echo \
++		"${LOGFILE%/*} doesn't exist... trying ${DEBUGFILE}"
++	
+       else
+         echo "/var/log doesn't exists... no log file created"
+ 	DEBUGFILE="/dev/null"
+@@ -4982,7 +4997,8 @@
+     echo $ECHOOPT ""
+     echo $ECHOOPT "Valid parameters:"
+     echo $ECHOOPT "--checkall (-c)           : Check system"
+-    echo $ECHOOPT "--createlogfile*          : Create logfile"
++    echo $ECHOOPT "--createlogfile <file>*   : Create logfile (file is optional, defaults to"
++    echo $ECHOOPT "			     : /var/log/rkhunter.log)"
+     echo $ECHOOPT "--cronjob                 : Run as cronjob (removes colored layout)"
+     echo $ECHOOPT "--display-logfile         : Show logfile at end of the output"    
+     echo $ECHOOPT "--help (-h)               : Show this help"
