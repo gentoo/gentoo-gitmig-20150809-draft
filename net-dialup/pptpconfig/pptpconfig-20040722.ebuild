@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/pptpconfig-20040722.ebuild,v 1.1 2004/09/27 13:39:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/pptpconfig-20040722.ebuild,v 1.2 2004/11/07 13:09:40 mrness Exp $
 
 DESCRIPTION="Configuration and management program for PPTP Client tunnels"
 HOMEPAGE="http://pptpclient.sourceforge.net/"
@@ -13,7 +13,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-php/php-gtk
-	net-dialup/pptpclient"
+	net-dialup/pptpclient
+	sys-apps/iproute2"
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"

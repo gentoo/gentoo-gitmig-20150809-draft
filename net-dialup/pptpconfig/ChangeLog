@@ -1,7 +1,11 @@
 # ChangeLog for net-dialup/pptpconfig
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/ChangeLog,v 1.3 2004/09/27 20:18:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/ChangeLog,v 1.4 2004/11/07 13:09:40 mrness Exp $
 
+  07 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  pptpconfig-20040722.ebuild: 
+  Add sys-apps/iproute2 to RDEPEND. Closes bug #69967.
+  
   27 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
 
