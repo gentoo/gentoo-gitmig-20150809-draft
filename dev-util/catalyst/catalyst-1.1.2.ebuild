@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.2.ebuild,v 1.1 2005/01/14 20:02:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.2.ebuild,v 1.2 2005/01/15 21:13:03 wolf31o2 Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="dev-lang/python
 	cdr? ( app-cdr/cdrtools app-misc/zisofs-tools >=sys-fs/squashfs-tools-2.1 )
 	>=sys-kernel/genkernel-3.1.0a"
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${P}
 
 pkg_setup() {
 	if use ccache; then
@@ -34,26 +34,26 @@ pkg_setup() {
 
 src_install() {
 	insinto /usr/lib/${PN}/arch
-	doins arch/*
+	doins arch/* || die "copying arch/*"
 	insinto /usr/lib/${PN}/modules
-	doins modules/*
+	doins modules/* || die "copying modules/*"
 	insinto /usr/lib/${PN}/livecd/cdtar
-	doins livecd/cdtar/*
+	doins livecd/cdtar/* || die "copying cdtar/*"
 	exeinto /usr/lib/${PN}/livecd/isogen
-	doexe livecd/isogen/*
+	doexe livecd/isogen/* || die "copying isogen/*"
 	exeinto /usr/lib/${PN}/livecd/runscript
-	doexe livecd/runscript/*
+	doexe livecd/runscript/* || die "copying runscript/*"
 	exeinto /usr/lib/${PN}/livecd/runscript-support
-	doexe livecd/runscript-support/*
+	doexe livecd/runscript-support/* || die "copying runscript-support/*"
 	insinto /usr/lib/${PN}/livecd/files
-	doins livecd/files/*
+	doins livecd/files/* || die "copying files/*"
 	for x in targets/*
 	do
 		exeinto /usr/lib/${PN}/$x
-		doexe $x/*
+		doexe $x/* || die "copying ${x}"
 	done
 	exeinto /usr/lib/${PN}
-	doexe catalyst
+	doexe catalyst || die "copying catalyst"
 	dodir /usr/bin
 	dosym /usr/lib/${PN}/catalyst /usr/bin/catalyst
 	insinto /etc/catalyst
