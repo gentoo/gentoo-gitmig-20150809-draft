@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.24 2003/04/17 16:24:42 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.25 2003/04/21 14:48:08 liquidx Exp $
+
+*libgtkhtml-3.0.2 (21 Apr 2003)
+
+  21 Apr 2003; Alastair Tse <liquidx@gentoo.org> libgtkhtml-3.0.2.ebuild:
+  evo-1.3.2 version bump. this contains an unpleasent workaround for libtool
+  problems.
 
 *libgtkhtml-2.2.3 (17 Apr 2003)
 
