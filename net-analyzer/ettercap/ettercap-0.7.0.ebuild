@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0.ebuild,v 1.3 2004/08/05 23:33:43 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0.ebuild,v 1.4 2004/08/13 16:36:05 eldad Exp $
 
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
@@ -41,10 +41,17 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
+	local myconf
+
+	if use ssl; then
+		myconf="${myconf} --with-openssl=/usr"
+	else
+		myconf="${myconf} --without-openssl"
+	fi
+
+	econf ${myconf} \
 		`use_enable gtk gtk` \
 		`use_enable debug debug` \
-		`use_with ssl openssl=/usr` \
 		`use_with ncurses ncurses` \
 		|| die "econf failed"
 
