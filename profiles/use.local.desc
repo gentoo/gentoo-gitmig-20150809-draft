@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.543 2004/08/09 01:26:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.544 2004/08/09 15:47:11 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -222,8 +222,8 @@ kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages Sys
 kde-base/kdemultimedia:cdparanoia - Enables build support for the cdparanoia package
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-mail-client/mozilla-thunderbird:mozsvg - Enable SVG support in mozilla (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
+mail-client/mozilla-thunderbird:mozplaintext - Disallow HTML editing for email
 mail-client/mutt:nntp - Adds support for nntp via patch
 mail-client/mutt:vanilla - Refrain from patching additional functionality into mutt
 mail-client/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
@@ -428,19 +428,20 @@ net-www/elinks:lua - enable lua support
 net-www/kazehakase:migemo - enable migemo support for Japanese incremental search.
 net-www/kazehakase:estraier - enable estraier support for full-text search in history.
 net-www/links:javascript - enable javascript support
-net-www/mozilla-firefox:mozdomi - Enable DOM inspector in firefox
+net-www/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 net-www/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-net-www/mozilla-firefox:mozsvg - Enable SVG support in mozilla (also firefox, thunderbird)
 net-www/mozilla-firefox:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
 net-www/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
 net-www/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
+net-www/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
 net-www/mozilla:moznocompose - Disable building of mozilla's web page composer
 net-www/mozilla:moznoirc - Disable building of mozilla's IRC client
 net-www/mozilla:moznomail - Disable building mozilla's mail client
 net-www/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 net-www/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
-net-www/mozilla:mozsvg - Enable SVG support in mozilla (also firefox, thunderbird)
+net-www/mozilla:mozplaintext - Disallow HTML editing for email
+net-www/mozilla:mozsvg - Enable SVG support in mozilla
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/mozilla:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
