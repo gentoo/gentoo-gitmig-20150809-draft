@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc5.ebuild,v 1.5 2004/08/24 17:37:32 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc5.ebuild,v 1.6 2004/09/24 00:09:30 vapier Exp $
 
 inherit wxwidgets
 
@@ -9,14 +9,13 @@ MY_P=${MY_P/_/}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="aMule, the all-platform eMule p2p client"
-HOMEPAGE="http://www.amule.org"
+HOMEPAGE="http://www.amule.org/"
 SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug gtk2 nls remote stats unicode gd"
-
 
 # USE "stats" enables external utilities (statistics and other)
 # USE "remote" enables remote controlling utilities (webserver, text client)
@@ -59,21 +58,21 @@ pkg_setup() {
 }
 
 src_compile() {
-
-	EXTRA_ECONF="--disable-optimise \
+	econf \
+		--disable-optimise \
 		--with-wx-config=${WX_CONFIG} \
-		--with-wxbase-config=${WX_CONFIG}"
-
-	econf `use_enable nls` \
-	`use_enable remote amulecmd` \
-	`use_enable remote amulecmdgui` \
-	`use_enable remote webserver` \
-	`use_enable remote webservergui` \
-	`use_enable stats cas` \
-	`use_enable stats wxcas` \
-	`use_enable stats alc` \
-	`use_enable stats alcc` \
-	`use_enable debug` || die
+		--with-wxbase-config=${WX_CONFIG} \
+		`use_enable nls` \
+		`use_enable remote amulecmd` \
+		`use_enable remote amulecmdgui` \
+		`use_enable remote webserver` \
+		`use_enable remote webservergui` \
+		`use_enable stats cas` \
+		`use_enable stats wxcas` \
+		`use_enable stats alc` \
+		`use_enable stats alcc` \
+		`use_enable debug` \
+		|| die
 
 	emake -j1 || die
 }
