@@ -15,7 +15,6 @@ then
 fi
 
 #allow any envvars to be set like QTDIR, even if Qt was just installed
-eval `/usr/sbin/env-update echo`
 export PATH=/usr/lib/portage/bin:${PATH}
 eval `import-settings PROXY HTTP_PROXY FTP_PROXY DEBUG MAKEOPTS MAINTAINER CHOST CFLAGS CXXFLAGS PORTDIR DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM ROOT`
 eval `import-configsettings FETCHCOMMAND PACKAGE USE GENTOO_MIRRORS PLATFORM`
