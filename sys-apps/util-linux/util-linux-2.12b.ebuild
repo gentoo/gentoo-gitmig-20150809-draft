@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12b.ebuild,v 1.1 2004/09/03 18:05:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12b.ebuild,v 1.2 2004/09/04 01:19:30 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -47,7 +47,7 @@ src_unpack() {
 	epatch ${FILESDIR}/no-symlink-resolve.patch
 
 	# access() is a macro which uses R_OK however
-	# R_OK is not defined on sparc during a bootstrap 
+	# R_OK is not defined on sparc during a bootstrap
 	# unless we actually include unistd.h -solar (May 07 2004)
 	epatch ${FILESDIR}/${PN}-2.12-swapon-unistd.patch
 
@@ -63,7 +63,7 @@ src_unpack() {
 	# Add NFS4 support (kernel 2.5/2.6).
 #	use crypt \
 #		&& epatch ${FILESDIR}/${PN}-2.11z-01-nfsv4-crypt.dif \
-#		|| 
+#		||
 	epatch ${FILESDIR}/${PN}-2.11z-01-nfsv4.dif
 
 	# <solar@gentoo.org> This patch should allow us to remove -fPIC
@@ -84,7 +84,7 @@ src_unpack() {
 	# Add support to read fat/fat32 labels, bug #36722
 	epatch ${FILESDIR}/${P}-fat-LABEL-support.patch
 
-	# Add support for gcloop 
+	# Add support for gcloop
 	use crypt || epatch ${FILESDIR}/${P}-gcloop.patch
 	use crypt && epatch ${FILESDIR}/${P}-gcloop-with-crypt.patch
 
@@ -103,7 +103,7 @@ src_unpack() {
 		-e "s:usr/info:usr/share/info:" \
 		-e "s:SUIDMODE=.*4755:SUIDMODE=4711:" \
 		MCONFIG || die "MCONFIG sed"
-	
+
 	if ! use nls ; then
 		sed -i -e 's/DISABLE_NLS=no/DISABLE_NLS=yes/' MCONFIG ||
 			die "MCONFIG nls sed"
