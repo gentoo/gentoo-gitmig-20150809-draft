@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/wmmemload-0.1.4.ebuild,v 1.6 2004/03/26 23:10:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/wmmemload-0.1.4.ebuild,v 1.7 2004/04/13 18:30:43 rizzo Exp $
 
 IUSE=""
 DESCRIPTION="dockapp that displays memory and swap space usage."
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc amd64"
 LICENSE="GPL-2"
 
-DEPEND="x11-base/xfree"
+DEPEND="virtual/x11"
 
 src_compile() {
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmemmon
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.5 2003/10/16 07:02:44 raker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.6 2004/04/13 18:29:39 rizzo Exp $
+
+  13 Apr 2004; Don Seiler <rizzo@gentoo.org>; wmmemmon-0.7.0.ebuild,
+  wmmemmon-1.0.1.ebuild:
+  Changed dependency to virtual/x11 to work with x11-base/xorg-x11
 
 *wmmemmon-1.0.1 (16 Oct 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.8.ebuild,v 1.2 2004/04/12 16:42:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.8.ebuild,v 1.3 2004/04/13 18:27:58 rizzo Exp $
 
 DESCRIPTION="WindowMaker DockApp/Grellm2 pluggin that fetches the DSL usage information for Australian ISP Internode"
 
@@ -17,7 +17,7 @@ KEYWORDS="x86"
 IUSE="gtk"
 
 DEPEND="virtual/glibc
-	x11-base/xfree
+	virtual/x11
 	media-libs/xpm
 	dev-libs/openssl
 	gtk? ( >=x11-libs/gtk+-2* )
@@ -25,7 +25,7 @@ DEPEND="virtual/glibc
 	gtk? ( dev-util/pkgconfig )"
 
 RDEPEND="virtual/glibc
-	x11-base/xfree
+	virtual/x11
 	media-libs/xpm
 	dev-libs/openssl
 	gtk? ( >=x11-libs/gtk+-2* )

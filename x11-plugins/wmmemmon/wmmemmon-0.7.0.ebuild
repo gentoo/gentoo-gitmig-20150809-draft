@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-0.7.0.ebuild,v 1.6 2003/10/16 16:10:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-0.7.0.ebuild,v 1.7 2004/04/13 18:29:39 rizzo Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc amd64"
 SLOT="0"
 
-DEPEND="virtual/glibc x11-base/xfree"
+DEPEND="virtual/glibc virtual/x11"
 
 src_compile() {
 

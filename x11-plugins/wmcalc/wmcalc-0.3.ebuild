@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.3.ebuild,v 1.8 2004/03/19 10:04:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.3.ebuild,v 1.9 2004/04/13 18:35:48 rizzo Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/w/wmcalc/${PN}_${PV}.orig.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
-DEPEND="x11-base/xfree"
+DEPEND="virtual/x11"
 
 S=${WORKDIR}/${P}.orig
 

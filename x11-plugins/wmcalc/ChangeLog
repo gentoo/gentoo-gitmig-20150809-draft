@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcalc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.4 2004/03/19 10:04:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.5 2004/04/13 18:35:48 rizzo Exp $
+
+  13 Apr 2004; Don Seiler <rizzo@gentoo.org>; wmcalc-0.3.ebuild:
+  Changed dependency to virtual/x11 to work with x11-base/xorg-x11
 
   19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmcalc-0.3.ebuild:
   Inherit eutils.
