@@ -1,0 +1,45 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/files/dotnet.init,v 1.1 2003/05/12 16:32:20 scandium Exp $
+
+
+start() {
+	ebegin "Registering .NET IL binaries with ${CLR}"
+
+	if [ ! -d /proc/sys/fs/binfmt_misc ]; then
+		eerror "You need support for \"misc binaries\" in your kernel!"
+		exit 1
+	fi
+
+	mount | grep -q binfmt_misc
+	if [ $? != 0 ]; then
+		mount -t binfmt_misc binfmt_misc /proc/sys/fs/binfmt_misc
+		if [ $? != 0 ]; then
+			eend 1
+			exit 1
+		fi
+	fi
+
+	case "${CLR}" in
+	
+	mono )	echo ':CLR:M::MZ::/usr/bin/mono:' > /proc/sys/fs/binfmt_misc/register
+		eend 0
+		;;
+	ilrun )	echo ':CLR:M::MZ::/usr/bin/ilrun:' > /proc/sys/fs/binfmt_misc/register
+		eend 0
+		;;
+	* )	eerror 'Please enter a valid option in /etc/conf.d/dotnet'
+		eend 1
+		;;
+	esac
+}
+
+stop() {
+	ebegin "Unregistering .NET IL binaries"
+
+	if [ -f /proc/sys/fs/binfmt_misc/CLR ]; then
+		echo '-1' > /proc/sys/fs/binfmt_misc/CLR
+	fi
+	eend $?
+}
