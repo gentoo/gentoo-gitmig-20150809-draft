@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmbiff/ChangeLog,v 1.1 2002/02/07 08:09:44 vitaly Exp $
+
+*wmbiff-0.3.5 (7-Feb-2002)
+
+  7 Feb 2002; Vitaly Kushneriuk <vitaly@gentoo.org> wmbiff-0.3.5.ebuild :
+  
+  Just added to portage.

@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmsysmon/ChangeLog,v 1.1 2002/02/07 08:09:45 vitaly Exp $
+
+*wmsysmon-0.7.6 (7-Feb-2002)
+
+  7 Feb 2002; Vitaly Kushneriuk <vitaly@gentoo.org> wmsysmon-0.7.6.ebuild :
+  
+  Just added to portage.
