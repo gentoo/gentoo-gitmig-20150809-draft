@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/mc/mc-4.5.51.ebuild,v 1.4 2000/10/14 11:38:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/mc/mc-4.5.51.ebuild,v 1.5 2000/11/03 09:11:33 achim Exp $
 
 P=mc-4.5.51
 A=${P}.tar.gz
@@ -9,6 +9,12 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Midnight Commander"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/mc/"${A}
 HOMEPAGE="http://www.gnome.org/mc/"
+
+DEPEND=">=sys-libs/pam-0.72
+	>=sys-libs/slang-1.4.2
+	>=sys-apps/e2fsprogs-1.19
+	>=gnome-base/gnome-libs-1.2.4
+	|| ( >=net-www/navigator-4.75 >=net-www/netscape-4.75 )"
 
 src_unpack() {
   unpack ${A}
