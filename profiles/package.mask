@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <hannes@gentoo.org> (12 Oct 2002)
+# Masking kvim-6.1.141 (configure called twice, bug #8985)
+=app-editors/kvim-6.1.141
+
 # <mjc@gentoo.org> (12 Oct 2002)
 # Masking new quake3 for testing and such
 =app-games/quake3-1.32
