@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.60 2004/05/26 01:18:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.61 2004/06/04 04:44:08 geoman Exp $
+
+  04 Jun 2004; Stephen P. Becker <geoman@gentoo.org>
+  gnome-terminal-2.6.0.ebuild:
+  Stable on mips.
 
   26 May 2004; Guy Martin <gmsoft@gentoo.org> gnome-terminal-2.6.0.ebuild:
   Marked stable on hppa.
