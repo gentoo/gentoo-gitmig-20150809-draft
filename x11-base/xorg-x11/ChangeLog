@@ -1,0 +1,10 @@
+# ChangeLog for x11-base/xorg-x11
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.1 2004/04/07 08:56:25 spyderous Exp $
+
+*xorg-x11-6.7.0 (07 Apr 2004)
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml,
+  xorg-x11-6.7.0.ebuild:
+  Initial commit.
+
