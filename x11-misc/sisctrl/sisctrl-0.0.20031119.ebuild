@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20031119.ebuild,v 1.1 2003/11/23 17:59:23 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20031119.ebuild,v 1.2 2004/03/21 09:48:08 mholzer Exp $
 
 IUSE=""
 
@@ -12,9 +12,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-RDEPEND=">=xfree-4.3
-	 >=glib-2.0
-	 >=gtk+-2.0"
+RDEPEND=">=x11-base/xfree-4.3
+	 >=dev-libs/glib-2.0
+	 >=x11-libs/gtk+-2.0"
 
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"

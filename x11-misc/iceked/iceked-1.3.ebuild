@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceked/iceked-1.3.ebuild,v 1.1 2003/07/08 13:59:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceked/iceked-1.3.ebuild,v 1.2 2004/03/21 09:46:08 mholzer Exp $
 
 DESCRIPTION="IceWM keys editor"
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE="http://icecc.sourceforge.net/"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND=">=qt-3.0.0"
+DEPEND=">=x11-libs/qt-3.0.0"
 
 SLOT="0"
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/icemc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.10 2004/02/23 07:25:55 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.11 2004/03/21 09:52:51 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> icemc-1.6.1.ebuild,
+  icemc-1.8.ebuild:
+  adding categorie. see 45110 for details
 
 *icemc-1.8 (23 Feb 2004)
 

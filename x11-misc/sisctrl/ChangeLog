@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sisctrl
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.1 2003/11/23 17:59:23 port001 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.2 2004/03/21 09:48:08 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> sisctrl-0.0.20031119.ebuild:
+  adding categorie. see 45110 for details
 
 *sisctrl-0.0.20031119 (23 Nov 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icewoed
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/ChangeLog,v 1.6 2003/07/30 10:22:24 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/ChangeLog,v 1.7 2004/03/21 09:43:32 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> icewoed-1.5.ebuild:
+  adding categorie. see 45110 for details
 
   30 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> icewoed-1.3.ebuild:
   Cleanup

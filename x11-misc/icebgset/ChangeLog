@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/icebgset
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icebgset/ChangeLog,v 1.9 2004/02/04 10:15:17 phosphan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icebgset/ChangeLog,v 1.10 2004/03/21 09:49:29 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> icebgset-1.0.ebuild,
+  icebgset-1.1.ebuild:
+  adding categorie. see 45110 for details
 
 *icebgset-1.1 (04 Feb 2004)
 
