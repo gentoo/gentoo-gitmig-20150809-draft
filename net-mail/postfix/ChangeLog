@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.19 2002/07/09 14:07:21 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.20 2002/07/19 15:06:39 g2boojum Exp $
+
+*postfix-1.1.11-r4 (19 Jul 2002)
+
+  19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  removed /usr/bin/mail symlink; that's what mailx and nail are for.
+  Removed old versions.  Bumped -r since that symlink really should be yanked.
+  Closes bug #5096
 
 *postfix-1.1.11-r1 (09 Jul 2002)
 

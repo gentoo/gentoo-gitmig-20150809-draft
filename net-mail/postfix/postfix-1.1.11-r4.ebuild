@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r3.ebuild,v 1.2 2002/07/17 05:07:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r4.ebuild,v 1.1 2002/07/19 15:06:39 g2boojum Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -109,7 +109,6 @@ src_install () {
 	chown root.postdrop ${D}/usr/sbin/{postdrop,postqueue}
 	chmod 2755 ${D}/usr/sbin/{postdrop,postqueue}
 
-	dosym /usr/sbin/sendmail /usr/bin/mail
 	dosym /usr/sbin/sendmail /usr/bin/mailq
 	dosym /usr/sbin/sendmail /usr/bin/newaliases
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
