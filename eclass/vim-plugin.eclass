@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.6 2004/09/02 14:34:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.7 2004/09/05 00:22:54 ciaranm Exp $
 #
 # This eclass simplifies installation of app-vim plugins into
 # /usr/share/vim/vimfiles.  This is a version-independent directory
@@ -109,7 +109,7 @@ display_vim_plugin_help() {
 	elif [[ -n "${VIM_PLUGIN_HELPTEXT}" ]] ; then
 		einfo " "
 		while read h ; do
-			einfo $h
+			einfo "$h"
 		done <<<"${VIM_PLUGIN_HELPTEXT}"
 		einfo " "
 
