@@ -4,17 +4,17 @@ Hash: SHA1
 MD5 58192c39da8a6d39e0812a710d6d7450 xdoclet-1.2.2.ebuild 1497
 MD5 da2aec9f21ea9d13774a5a0833669677 xdoclet-1.2.0_beta1.ebuild 970
 MD5 95b9698b240a8e6c91880e3ceb860b92 xdoclet-1.2.1.ebuild 1601
-MD5 e8532cb3c1158f51665fbee674533acc ChangeLog 1741
+MD5 fcdbc4334683064f6fd297c9db0751c2 ChangeLog 1878
 MD5 2f0b8cbc0e0adf36b678725712a3e3b7 metadata.xml 511
 MD5 36b04e593588b126ef0e905e4ead4fcf files/xdoclet-1.2.2-buildfile.patch 2518
-MD5 ba866caf35dbc476ac2cf334e9b4e5f8 files/xdoclet-1.2.2-interface.patch 10839
+MD5 0c3cfa2caf87830c10fb14bc83840c98 files/xdoclet-1.2.2-interface.patch 10893
 MD5 cf001749ad1559c92f75e64bf7939974 files/digest-xdoclet-1.2.0_beta1 73
 MD5 6d6f9189f4ecffc98c1b539a0b647cc3 files/digest-xdoclet-1.2.1 139
 MD5 5a7e75c3d62a58edfa3c2416acfbb69a files/digest-xdoclet-1.2.2 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCT2qq06ebR+OMO78RAkEaAJ0QTVrKA17gHH3nChHVHAxZmdMLegCeIhs1
-ZS9tTkPD5CYlHNp8OyelGNI=
-=9cip
+iD8DBQFCT+8I06ebR+OMO78RAubWAJsH4Bcj39NdwElzbIcX20I3eKXA+wCdGEzV
+1Gw1qBnJYCNjBA/K24cv4Uw=
+=M+2m
 -----END PGP SIGNATURE-----

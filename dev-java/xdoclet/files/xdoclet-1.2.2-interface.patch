@@ -1,107 +1,6 @@
-Index: modules/hibernate/src/xdoclet/modules/hibernate/resources/hibernate-properties.xdt
-===================================================================
---- modules/hibernate/src/xdoclet/modules/hibernate/resources/hibernate-properties.xdt	(.../v1.2.2)	(revision 2286)
-+++ modules/hibernate/src/xdoclet/modules/hibernate/resources/hibernate-properties.xdt	(.../trunk)	(revision 2286)
-@@ -1,4 +1,4 @@
--    <XDtMethod:ifHasMethodTag tagName="hibernate.property">
-+    <XDtMethod:ifHasMethodTag tagName="hibernate.property" superclasses="false">
-         <property
-             name="<XDtMethod:propertyName />"
-             type="<XDtMethod:methodTagValue tagName="hibernate.property" paramName="type" default="<XDtMethod:methodType/>"/>"
-@@ -20,7 +20,7 @@
-             </XDtHibernate:setCurrentTag>
-         </XDtMethod:ifHasMethodTag>
- 
--    <XDtMethod:ifHasMethodTag tagName="hibernate.many-to-one">
-+    <XDtMethod:ifHasMethodTag tagName="hibernate.many-to-one" superclasses="false">
-         <many-to-one
-             name="<XDtMethod:propertyName/>"
-             class="<XDtMethod:methodTagValue tagName="hibernate.many-to-one" paramName="class" default="<XDtMethod:methodType/>" />"
-@@ -43,7 +43,7 @@
-           </XDtHibernate:setCurrentTag>
-     </XDtMethod:ifHasMethodTag>
- 
--     <XDtMethod:ifHasMethodTag tagName="hibernate.one-to-one">
-+     <XDtMethod:ifHasMethodTag tagName="hibernate.one-to-one" superclasses="false">
-         <one-to-one
-             name="<XDtMethod:propertyName/>"
-             class="<XDtMethod:methodTagValue tagName="hibernate.one-to-one" paramName="class" default="<XDtMethod:methodType/>"/>"
-@@ -59,7 +59,7 @@
-         />
-      </XDtMethod:ifHasMethodTag>
- 
--     <XDtMethod:ifHasMethodTag tagName="hibernate.component">
-+     <XDtMethod:ifHasMethodTag tagName="hibernate.component" superclasses="false">
-         <component
-             name="<XDtMethod:propertyName />"
-             class="<XDtMethod:methodTagValue tagName="hibernate.component" paramName="class" default="<XDtMethod:methodType/>"/>"
-@@ -84,7 +84,7 @@
-         />
-      </XDtMethod:ifHasMethodTag>
- 
--        <XDtMethod:ifHasMethodTag tagName="hibernate.set">
-+        <XDtMethod:ifHasMethodTag tagName="hibernate.set" superclasses="false">
-         <set
-             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
-           <XDtMethod:ifHasMethodTag tagName="hibernate.set" paramName="table">
-@@ -114,7 +114,7 @@
-         </set>
-         </XDtMethod:ifHasMethodTag>
- 
--        <XDtMethod:ifHasMethodTag tagName="hibernate.bag">
-+        <XDtMethod:ifHasMethodTag tagName="hibernate.bag" superclasses="false">
-         <bag
-             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
-           <XDtMethod:ifHasMethodTag tagName="hibernate.bag" paramName="table">
-@@ -143,7 +143,7 @@
-         </bag>
-         </XDtMethod:ifHasMethodTag>
- 
--    <XDtMethod:ifHasMethodTag tagName="hibernate.list">
-+    <XDtMethod:ifHasMethodTag tagName="hibernate.list" superclasses="false">
-         <list
-             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
-           <XDtMethod:ifHasMethodTag tagName="hibernate.list" paramName="table">
-@@ -166,7 +166,7 @@
-         </list>
-         </XDtMethod:ifHasMethodTag>
- 
--        <XDtMethod:ifHasMethodTag tagName="hibernate.map">
-+        <XDtMethod:ifHasMethodTag tagName="hibernate.map" superclasses="false">
-         <map
-             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
-           <XDtMethod:ifHasMethodTag tagName="hibernate.map" paramName="table">
-@@ -193,7 +193,7 @@
-         </map>
-         </XDtMethod:ifHasMethodTag>
- 
--        <XDtMethod:ifHasMethodTag tagName="hibernate.array">
-+        <XDtMethod:ifHasMethodTag tagName="hibernate.array" superclasses="false">
-         <array
-             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
-           <XDtMethod:ifHasMethodTag tagName="hibernate.array" paramName="table">
-@@ -218,7 +218,7 @@
-         </array>
-         </XDtMethod:ifHasMethodTag>
- 
--        <XDtMethod:ifHasMethodTag tagName="hibernate.primitive-array">
-+        <XDtMethod:ifHasMethodTag tagName="hibernate.primitive-array" superclasses="false">
-         <primitive-array
-             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
-           <XDtMethod:ifHasMethodTag tagName="hibernate.primitive-array" paramName="table">
-@@ -236,7 +236,7 @@
-         </primitive-array>
-         </XDtMethod:ifHasMethodTag>
- 
--          <XDtMethod:ifHasMethodTag tagName="hibernate.any">
-+          <XDtMethod:ifHasMethodTag tagName="hibernate.any" superclasses="false">
-               <any
-                   name="<XDtMethod:propertyName />"
-                   id-type="<XDtMethod:methodTagValue tagName="hibernate.any" paramName="id-type"/>"
-Index: modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java
-===================================================================
---- modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java	(.../v1.2.2)	(revision 2286)
-+++ modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java	(.../trunk)	(revision 2286)
+diff -uprN xdoclet-1.2.2.orig/modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java xdoclet-1.2.2/modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java
+--- xdoclet-1.2.2.orig/modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java	2004-10-14 04:39:06.000000000 +0200
++++ xdoclet-1.2.2/modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java	2005-04-03 15:20:31.000000000 +0200
 @@ -4,10 +4,7 @@
   */
  package xdoclet.modules.hibernate;
@@ -114,7 +13,7 @@ Index: modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java
  
  import org.apache.commons.logging.Log;
  import org.apache.tools.ant.types.Parameter;
-@@ -48,6 +45,18 @@
+@@ -48,6 +45,18 @@ public class HibernateTagsHandler
  
      private Parameter currentOtherMapping;
  
@@ -133,7 +32,7 @@ Index: modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java
      /**
       * Returns full path of hibernate file for the current class.
       *
-@@ -594,9 +603,11 @@
+@@ -594,9 +603,11 @@ public class HibernateTagsHandler
                  log.debug("typeName=" + typeName);
  
              Collection classes = getXJavaDoc().getSourceClasses();
@@ -146,7 +45,7 @@ Index: modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java
                  clazz = (XClass) i.next();
  
                  log.debug("clazz=" + clazz);
-@@ -604,8 +615,13 @@
+@@ -604,8 +615,13 @@ public class HibernateTagsHandler
                  if (DocletSupport.isDocletGenerated(clazz)) {
                      log.debug("isDocletGenerated");
                  }
@@ -162,7 +61,7 @@ Index: modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java
  
                      XClass current = getCurrentClass();
  
-@@ -735,10 +751,108 @@
+@@ -735,10 +751,108 @@ public class HibernateTagsHandler
          //TODO: Why do we need this!!??
      }
  
@@ -271,3 +170,102 @@ Index: modules/hibernate/src/xdoclet/modules/hibernate/HibernateTagsHandler.java
 +    }
  }
  
+diff -uprN xdoclet-1.2.2.orig/modules/hibernate/src/xdoclet/modules/hibernate/resources/hibernate-properties.xdt xdoclet-1.2.2/modules/hibernate/src/xdoclet/modules/hibernate/resources/hibernate-properties.xdt
+--- xdoclet-1.2.2.orig/modules/hibernate/src/xdoclet/modules/hibernate/resources/hibernate-properties.xdt	2004-10-10 11:43:05.000000000 +0200
++++ xdoclet-1.2.2/modules/hibernate/src/xdoclet/modules/hibernate/resources/hibernate-properties.xdt	2005-04-03 15:20:31.000000000 +0200
+@@ -1,4 +1,4 @@
+-    <XDtMethod:ifHasMethodTag tagName="hibernate.property">
++    <XDtMethod:ifHasMethodTag tagName="hibernate.property" superclasses="false">
+         <property
+             name="<XDtMethod:propertyName />"
+             type="<XDtMethod:methodTagValue tagName="hibernate.property" paramName="type" default="<XDtMethod:methodType/>"/>"
+@@ -20,7 +20,7 @@
+             </XDtHibernate:setCurrentTag>
+         </XDtMethod:ifHasMethodTag>
+ 
+-    <XDtMethod:ifHasMethodTag tagName="hibernate.many-to-one">
++    <XDtMethod:ifHasMethodTag tagName="hibernate.many-to-one" superclasses="false">
+         <many-to-one
+             name="<XDtMethod:propertyName/>"
+             class="<XDtMethod:methodTagValue tagName="hibernate.many-to-one" paramName="class" default="<XDtMethod:methodType/>" />"
+@@ -43,7 +43,7 @@
+           </XDtHibernate:setCurrentTag>
+     </XDtMethod:ifHasMethodTag>
+ 
+-     <XDtMethod:ifHasMethodTag tagName="hibernate.one-to-one">
++     <XDtMethod:ifHasMethodTag tagName="hibernate.one-to-one" superclasses="false">
+         <one-to-one
+             name="<XDtMethod:propertyName/>"
+             class="<XDtMethod:methodTagValue tagName="hibernate.one-to-one" paramName="class" default="<XDtMethod:methodType/>"/>"
+@@ -59,7 +59,7 @@
+         />
+      </XDtMethod:ifHasMethodTag>
+ 
+-     <XDtMethod:ifHasMethodTag tagName="hibernate.component">
++     <XDtMethod:ifHasMethodTag tagName="hibernate.component" superclasses="false">
+         <component
+             name="<XDtMethod:propertyName />"
+             class="<XDtMethod:methodTagValue tagName="hibernate.component" paramName="class" default="<XDtMethod:methodType/>"/>"
+@@ -84,7 +84,7 @@
+         />
+      </XDtMethod:ifHasMethodTag>
+ 
+-        <XDtMethod:ifHasMethodTag tagName="hibernate.set">
++        <XDtMethod:ifHasMethodTag tagName="hibernate.set" superclasses="false">
+         <set
+             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
+           <XDtMethod:ifHasMethodTag tagName="hibernate.set" paramName="table">
+@@ -114,7 +114,7 @@
+         </set>
+         </XDtMethod:ifHasMethodTag>
+ 
+-        <XDtMethod:ifHasMethodTag tagName="hibernate.bag">
++        <XDtMethod:ifHasMethodTag tagName="hibernate.bag" superclasses="false">
+         <bag
+             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
+           <XDtMethod:ifHasMethodTag tagName="hibernate.bag" paramName="table">
+@@ -143,7 +143,7 @@
+         </bag>
+         </XDtMethod:ifHasMethodTag>
+ 
+-    <XDtMethod:ifHasMethodTag tagName="hibernate.list">
++    <XDtMethod:ifHasMethodTag tagName="hibernate.list" superclasses="false">
+         <list
+             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
+           <XDtMethod:ifHasMethodTag tagName="hibernate.list" paramName="table">
+@@ -166,7 +166,7 @@
+         </list>
+         </XDtMethod:ifHasMethodTag>
+ 
+-        <XDtMethod:ifHasMethodTag tagName="hibernate.map">
++        <XDtMethod:ifHasMethodTag tagName="hibernate.map" superclasses="false">
+         <map
+             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
+           <XDtMethod:ifHasMethodTag tagName="hibernate.map" paramName="table">
+@@ -193,7 +193,7 @@
+         </map>
+         </XDtMethod:ifHasMethodTag>
+ 
+-        <XDtMethod:ifHasMethodTag tagName="hibernate.array">
++        <XDtMethod:ifHasMethodTag tagName="hibernate.array" superclasses="false">
+         <array
+             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
+           <XDtMethod:ifHasMethodTag tagName="hibernate.array" paramName="table">
+@@ -218,7 +218,7 @@
+         </array>
+         </XDtMethod:ifHasMethodTag>
+ 
+-        <XDtMethod:ifHasMethodTag tagName="hibernate.primitive-array">
++        <XDtMethod:ifHasMethodTag tagName="hibernate.primitive-array" superclasses="false">
+         <primitive-array
+             <XDtHibernate:roleAttribute/>="<XDtMethod:propertyName/>"
+           <XDtMethod:ifHasMethodTag tagName="hibernate.primitive-array" paramName="table">
+@@ -236,7 +236,7 @@
+         </primitive-array>
+         </XDtMethod:ifHasMethodTag>
+ 
+-          <XDtMethod:ifHasMethodTag tagName="hibernate.any">
++          <XDtMethod:ifHasMethodTag tagName="hibernate.any" superclasses="false">
+               <any
+                   name="<XDtMethod:propertyName />"
+                   id-type="<XDtMethod:methodTagValue tagName="hibernate.any" paramName="id-type"/>"
