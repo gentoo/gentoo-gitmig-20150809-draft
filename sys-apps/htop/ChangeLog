@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/htop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/htop/ChangeLog,v 1.4 2004/06/10 09:15:51 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/htop/ChangeLog,v 1.5 2004/06/10 09:17:40 wschlich Exp $
+
+*htop-0.3.2 (10 Jun 2004)
+
+  10 Jun 2004; Wolfram Schlich <wschlich@gentoo.org> htop-0.3.2.ebuild:
+  version bump
 
   10 Jun 2004; Wolfram Schlich <wschlich@gentoo.org> htop-0.3.1.ebuild:
   added debug options
