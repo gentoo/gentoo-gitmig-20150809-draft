@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.132 2003/11/20 15:58:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.133 2003/11/20 16:25:33 brad Exp $
+
+*mozilla-1.6a (20 Nov 2003)
+
+  20 Nov 2003; Brad Laue <brad@gentoo.org> mozilla-1.6a.ebuild:
+  Introducing Mozilla 1.6a, to aid in the release of new final versions.
 
   20 Nov 2003; Aron Griffis <agriffis@gentoo.org> mozilla-1.5-r1.ebuild:
   Minor fix to alpha/ia64 CFLAGS handling
