@@ -1,6 +1,11 @@
 # ChangeLog for app-text/texi2html
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.18 2004/07/01 19:28:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.19 2004/10/30 07:00:37 usata Exp $
+
+*texi2html-1.70 (30 Oct 2004)
+
+  30 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +texi2html-1.70.ebuild:
+  Version bumped.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   texi2html-1.64-r1.ebuild, texi2html-1.64.ebuild:
