@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.26.ebuild,v 1.1 2002/05/06 13:34:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.28-r1.ebuild,v 1.1 2002/06/29 02:20:00 seemant Exp $
+
+inherit libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Enlightened Sound Daemon"
@@ -9,6 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/esound/${P}.tar.bz2
 ftp://download.sourceforge.net/pub/mirrors/gnome/stable/sources/esound/${P}.tar.bz2"
 HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
 SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	>=media-libs/audiofile-0.1.9
@@ -20,7 +22,7 @@ RDEPEND="virtual/glibc
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )"
 
 src_compile() {
-	libtoolize --copy --force
+	elibtoolize
 
 	local myconf=""
 	use tcpd && myconf="${myconf} --with-libwrap" \
@@ -29,9 +31,7 @@ src_compile() {
 	use alsa && myconf="${myconf} --enable-alsa" \
 		|| myconf="${myconf} --enable-alsa=no"
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
+	econf \
 		--sysconfdir=/etc/esd \
 		${myconf} || die
 
@@ -39,11 +39,13 @@ src_compile() {
 }
 
 src_install() {                               
-	make prefix=${D}/usr sysconfdir=${D}/etc/esd install || die
+	einstall \
+		sysconfdir=${D}/etc/esd \
+		|| die
 
 	dodoc AUTHORS COPYING* ChangeLog README TODO NEWS TIPS
 	dodoc docs/esound.ps
 
-	dohtml docs/html/*.html
+	dohtml -r docs/html
 }
 
