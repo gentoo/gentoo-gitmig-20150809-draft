@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/moosic
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.4 2003/05/25 13:45:47 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.5 2004/01/01 16:02:30 mholzer Exp $
+
+*moosic-1.4.10 (01 Jan 2004)
+
+  01 Jan 2004; Martin Holzer <mholzer@gentoo.org> moosic-1.4.10.ebuild:
+  Version bumped. Closes 36681
 
 *moosic-1.4.3 (25 May 2003)
 
