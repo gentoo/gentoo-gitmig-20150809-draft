@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/prelude-nids
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.1 2003/06/21 17:16:05 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.2 2003/06/28 15:51:44 solar Exp $
+
+*prelude-nids-0.8.1-r1 (28 Jun 2003)
+
+  28 Jun 2003; Ned Ludd <solar@gentoo.org> prelude-nids-0.8.1-r1.ebuild:
+  convert_ruleset added, ruleset moved to /usr/share/prelude/nids/ with symlink
+  /etc/prelude-nids/ruleset pointing to it (so we don't need to re-write the
+  default config) suggested by Michael Boman Closes Bug#: 23487
 
 *prelude-nids-0.8.1 (21 Jun 2003)
 
