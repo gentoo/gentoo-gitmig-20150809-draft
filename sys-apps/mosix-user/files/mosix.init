@@ -1,4 +1,4 @@
-#!/bin/runscript
+#!/sbin/runscript
 
 depend() {
 	need net
@@ -13,17 +13,16 @@ stop() {
 
 start() {
 	ebegin "Starting MOSIX"
-	#do some first-time setup if MOSIX isn't configured
-	[ ! -f /etc/mosix.map ] && firstsetup
-	
 	if [ -s /etc/overheads -a -f /proc/mosix/admin/overheads ]
 	then
-		 /bin/grep -v '^#' /etc/overheads > /proc/mosix/admin/overheads
+		 grep -v '^#' /etc/overheads > /proc/mosix/admin/overheads
 	fi
 	if [ -s /etc/mfscosts -a -f /proc/mosix/admin/mfscosts ]
 	then
-		 /bin/grep -v '^#' /etc/mfscosts > /proc/mosix/admin/mfscosts
+		 grep -v '^#' /etc/mfscosts > /proc/mosix/admin/mfscosts
 	fi
+	local a1
+	local a2
 	a1=
 	[ -s /etc/mospe ] && a1="-p `cat /etc/mospe`"
 	a2=
