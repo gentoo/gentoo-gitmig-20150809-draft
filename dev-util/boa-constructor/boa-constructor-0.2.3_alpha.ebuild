@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.2.3_alpha.ebuild,v 1.1 2003/04/19 23:56:42 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.2.3_alpha.ebuild,v 1.2 2003/04/20 00:14:33 blauwers Exp $
 
 BOA=${P/_alpha/}
 S=${WORKDIR}/${BOA}
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
 
 RDEPEND=">=dev-lang/python-2.0
-	>=dev-python/wxPython-2.3
+	>=dev-python/wxPython-2.4.0.6
 	dev-libs/expat"
 
 DEPEND="${RDEPEND}
