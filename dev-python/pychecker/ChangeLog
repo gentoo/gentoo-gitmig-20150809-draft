@@ -1,10 +1,19 @@
 # ChangeLog for dev-python/pychecker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.2 2002/04/13 21:38:31 karltk Exp $
+
+*pychecker-0.8.10 (13 Apr 2002)
+
+  13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> pychecker-0.8.3.ebuild files/digest-pychecker-0.8.3 pychecker-0.8.7.ebuild files/digest-pychecker-0.8.7 pychecker-0.8.10.ebuild files/digest-pychecker-0.8.10 :
+
+  New upstream version.
+
+  Removed old versions.
 
 *pychecker-0.8.7 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+
   
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
