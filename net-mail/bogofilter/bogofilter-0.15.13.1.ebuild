@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.15.13.1.ebuild,v 1.4 2004/02/22 16:12:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.15.13.1.ebuild,v 1.5 2004/05/27 06:14:29 vapier Exp $
 
 IUSE=""
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~hppa ~amd64 ~mips ~ppc64"
 
 DEPEND="virtual/glibc
 	>=sys-libs/db-3
-	!arm? ( !mips? ( !ppc64? ( doc? ( app-text/xmlto ) ) ) )"
+	!mips? ( !ppc64? ( doc? ( app-text/xmlto ) ) )"
 
 RDEPEND="virtual/glibc
 	>=sys-libs/db-3"
