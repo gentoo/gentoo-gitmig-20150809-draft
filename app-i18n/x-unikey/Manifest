@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 475c7d9e25c26f30062aa4af173c7b25 ChangeLog 571
+MD5 b4c6c08ad7a5c649a1fe6e1fa4f41eac ChangeLog 678
 MD5 a4ed50393aff561363e1175069e94196 metadata.xml 219
 MD5 0add0217dbbd76fb2c9e3e37e9a013de x-unikey-0.9.1d.ebuild 1471
+MD5 f2fbc194671ecf3afbbc53f29892d928 x-unikey-0.9.2.ebuild 1465
 MD5 1dde1fca1d63782ce2ddec87e2b914a4 files/01x-unikey 214
 MD5 4adcaedf501ae83fe35f6b2906073c27 files/digest-x-unikey-0.9.1d 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYHd2I1lqEGTUzyQRAsrDAJ4rQ2+WLU6klFKCaNVuijguv5FqXgCg3wfz
-qN6uxmVzqRrKVT8K+ufej5g=
-=u67G
------END PGP SIGNATURE-----
+MD5 3c858d6b8599e48df25ae3d46e0f1202 files/digest-x-unikey-0.9.2 67
