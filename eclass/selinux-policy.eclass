@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.4 2003/08/02 03:18:53 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.5 2003/08/11 01:38:27 pebenito Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the policy
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-S="${WORKDIR}/policy"
+S="${WORKDIR}/${PN/selinux-}"
 
 IUSE=""
 
@@ -45,19 +45,19 @@ selinux-policy_src_install() {
 	if [ -n "${TEFILES}" ]; then
 		debug-print "TEFILES is \"${TEFILES}\""
 		insinto ${POLICYDIR}/domains/program
-		doins ${TEFILES}
+		doins ${TEFILES} || die
 	fi
 
 	if [ -n "${FCFILES}" ]; then
 		debug-print "FCFILES is \"${FCFILES}\""
 		insinto ${POLICYDIR}/file_contexts/program
-		doins ${FCFILES}
+		doins ${FCFILES} || die
 	fi
 
 	if [ -n "${MACROS}" ]; then
 		debug-print "MACROS is \"${MACROS}\""
 		insinto ${POLICYDIR}/macros/program
-		doins ${MACROS}
+		doins ${MACROS} || die
 	fi
 }
 
