@@ -1,1 +1,2 @@
 move app-emacs/wl app-emacs/wanderlust
+move app-misc/bluej dev-java/bluej
