@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.2 2005/03/04 02:59:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.3 2005/03/04 03:27:27 vapier Exp $
 
 source /sbin/functions.sh || exit 1
 die() {
@@ -88,11 +88,12 @@ hr() {
 	echo ${br}
 }
 
-#################
+##################
+### setup vars ###
 EOPTS=
 UOPTS=
 TARCH=
-HARCH=
+HARCH=$(env -uARCH portageq envvar ARCH)
 CTARGET=
 STAGE=3
 BVER="[latest]"
@@ -118,8 +119,18 @@ done
 [[ -z ${CTARGET} ]] && usage 1
 [[ ${CTARGET} == *-uclibc ]] && LPKG="uclibc"
 
-#################
-HARCH=$(env -uARCH portageq envvar ARCH)
+#####################
+### sanity checks ###
+if [[ -z $(portageq best_version / binutils-config) ]] ; then
+	eerror "Sorry, but your host system needs to have binutils-config"
+	eerror "in order to keep from screwing things up."
+	eerror "That means you must be running unstable versions of"
+	eerror "both binutils and binutils-config."
+	exit 1
+fi
+
+#####################
+### do the emerge ###
 PORTDIR_OVERLAY=$(portageq envvar PORTDIR_OVERLAY)
 PORTDIR=$(portageq envvar PORTDIR)
 PORT_LOGDIR=$(portageq envvar PORT_LOGDIR)
