@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt-vc-query
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt-vc-query/ChangeLog,v 1.4 2004/12/29 00:14:57 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt-vc-query/ChangeLog,v 1.5 2005/01/29 21:58:02 luckyduck Exp $
+
+  29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> mutt-vc-query-002.ebuild:
+  added ~amd64 to KEYWORDS. fixes #79988
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
