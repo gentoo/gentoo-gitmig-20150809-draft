@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.26 2003/05/22 22:11:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.27 2003/05/24 02:27:27 lu_zero Exp $
+
+  24 May 2003; Luca Barbato <lu_zero@gentoo.org> rsync-2.5.6-r2.ebuild:
+  added ~ppc keyword
 
 *rsync-2.5.6-r2 (23 May 2003)
 
