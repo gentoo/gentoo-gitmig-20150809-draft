@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ktrack/ktrack-0.3.0_rc1.ebuild,v 1.4 2004/12/09 02:53:46 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ktrack/ktrack-0.3.0_rc1.ebuild,v 1.5 2005/02/16 05:19:51 killsoft Exp $
 
 inherit kde
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://ktrack.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ktrack/${MY_P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 IUSE=""
 
