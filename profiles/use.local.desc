@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.623 2004/09/17 02:52:08 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.624 2004/09/17 20:04:36 taviso Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -14,6 +14,7 @@ app-accessibility/gnopernicus:brltty - Adds support for braille displays using b
 app-admin/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
+app-admin/sudo:skey - Add support for one time passwords (single use passwords)
 app-admin/webalizer:geoip - Enable support for IP country lookup
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
 app-cdr/k3b:monkey - Enable support for Monkey's audio codec
