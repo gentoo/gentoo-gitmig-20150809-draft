@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.79 2005/01/01 17:41:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.80 2005/01/11 17:25:05 twp Exp $
+
+  11 Jan 2005; Tom Payne <twp@gentoo.org> -phpmyadmin-2.6.0_p2.ebuild,
+  -phpmyadmin-2.6.0_p3.ebuild, phpmyadmin-2.6.1_rc1.ebuild:
+  Change dependency from mod_php to virtual/php. Bug # 76623. Removed old
+  versions.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

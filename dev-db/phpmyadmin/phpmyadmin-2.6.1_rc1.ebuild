@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.1_rc1.ebuild,v 1.7 2005/01/01 17:41:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.1_rc1.ebuild,v 1.8 2005/01/11 17:25:05 twp Exp $
 
 inherit eutils webapp
 
@@ -15,7 +15,7 @@ KEYWORDS="alpha ppc hppa sparc x86 amd64 ~mips"
 IUSE=""
 DEPEND=">=net-www/apache-1.3
 	>=dev-db/mysql-3.23.32 <dev-db/mysql-5.1
-	>=dev-php/mod_php-4.1.0
+	virtual/php
 	sys-apps/findutils
 	!<=dev-db/phpmyadmin-2.5.6"
 S=${WORKDIR}/${MY_P}
