@@ -552,7 +552,8 @@ x11-libs/gtkmm-addons
 # Test please, as this is going to be the next stable
 # moz (also for galeon-1.2.6)
 # worksforme // Spider
->=net-www/mozilla-1.0.2
+# need this out to get 1.2 in tree. <azarah@gentoo.org>
+#>=net-www/mozilla-1.0.2
 
 # <raker@gentoo.org> (25 Sep 2002)
 # version bump.  ssl and other fixes
@@ -758,7 +759,8 @@ app-misc/ldapbrowser
 
 # <cardoe@genoo.org> (25 Jul 2002)
 # Moz 1.1beta (don't kill me Azarah for putting this here!)
->=net-www/mozilla-1.1
+# need this outta here to get 1.2 in.  <azarah@gentoo.org>
+#>=net-www/mozilla-1.1
 
 # <azarah@gentoo.org> (25 Jul 2002)
 # gawk is very flexible and can be used instead
