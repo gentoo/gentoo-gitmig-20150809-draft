@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.19.ebuild,v 1.6 2004/04/25 23:03:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.19.ebuild,v 1.7 2004/05/18 05:46:53 usata Exp $
 
 IUSE="truetype"
 
@@ -16,7 +16,7 @@ SLOT="1"
 DEPEND=">=dev-lang/python-2.2.1-r2"
 
 RDEPEND=">=dev-lang/python-2.2.2
-	>=app-text/tetex-1.0.7-r12
+	virtual/tetex
 	>=app-text/t1utils-1.25
 	>=media-gfx/autotrace-0.30
 	truetype? ( >=media-gfx/pfaedit-030512 )"
