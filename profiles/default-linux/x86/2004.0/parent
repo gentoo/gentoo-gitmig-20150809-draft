@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.0/parent,v 1.1 2004/03/19 21:58:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.0/parent,v 1.2 2004/03/22 16:41:11 seemant Exp $
 
 # This file describes the parent profile to this.  In most cases this will
 # just be the name of the parent directory
-.
+..
