@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/amavis-0.3.12.ebuild,v 1.4 2004/06/24 22:19:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/amavis-0.3.12.ebuild,v 1.5 2004/07/07 22:56:01 langthang Exp $
 
 inherit eutils
 
@@ -55,10 +55,9 @@ pkg_setup() {
 		echo "virusalert: root" >> /etc/mail/aliases
 		newaliases || die "check your /etc/mail/aliases for problems"
 	fi
-
+	mymta=$(portageq best_version / virtual/mta | awk -F/ '{print $2}' | awk -F- '{print $1}')
+	einfo "My MTA is: ${mymta}"
 }
-
-mymta=`grep "^virtual/mta mail-mta\/\(exim\|postfix\|qmail\|sendmail\)" /var/cache/edb/virtuals | awk -F/ '{print $3}'`
 
 src_unpack() {
 
