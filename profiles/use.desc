@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.230 2005/03/09 02:26:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.231 2005/03/25 00:08:25 wschlich Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -271,6 +271,7 @@ selinux - !!internal use only!! Security Enhanced Linux support, this must be se
 session - Adds persistent session support
 sharedext - Adds support for building shared extensions in php
 sharedmem - Adds support for shared memory use
+shorten - Adds support for the shorten audio compressor
 simplexml - support for simplexml
 skey - Enable S/Key (Single use password) authentication support
 smartcard - Enables smartcard support
