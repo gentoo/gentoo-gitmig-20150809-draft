@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.120 2004/01/18 13:09:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.121 2004/01/20 00:48:02 vapier Exp $
+
+  19 Jan 2004; Mike Frysinger <vapier@gentoo.org> glibc-2.3.2-r9.ebuild :
+  Remove nptl support since people dont understand nptl and this is now x86 stable.
+  See Bug #38622 for some good examples.  This is OK because 2.3.3_preXXX has
+  nptl support and it's unstable and it covers all the archs 2.3.2-r9 does.
 
 *glibc-2.3.3_pre20040117 (18 Jan 2004)
 
