@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/cpio-2.5.ebuild,v 1.9 2003/03/01 19:08:47 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/cpio-2.5.ebuild,v 1.10 2003/03/01 22:13:09 mholzer Exp $
 
 DESCRIPTION="A file archival tool which can also read and write tar files"
 SRC_URI="mirror://gnu/cpio/${P}.tar.gz"
@@ -26,6 +26,5 @@ src_install() {
 	#our official mt is now the mt in app-arch/mt-st (supports Linux 2.4, unlike this one)
 	dobin cpio
 	doman cpio.1
-	doinfo cpio.info
-	dodoc COPYING* ChangeLog NEWS README
+	dodoc COPYING* ChangeLog NEWS README INSTALL
 }
