@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.1_alpha20030708.ebuild,v 1.2 2003/07/22 18:01:22 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.2_alpha20030813.ebuild,v 1.1 2003/08/17 16:43:48 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -8,7 +8,7 @@ inherit makeedit flag-o-matic gcc nsplugins
 replace-sparc64-flags
 
 S=${WORKDIR}/mozilla
-MOZ_CO_DATE="20030708"
+MOZ_CO_DATE="20030813"
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
@@ -79,6 +79,7 @@ src_compile() {
       --disable-dtd-debug \
       --disable-logging \
       --enable-reorder \
+	  --enable-optimize="-O3" \
       --enable-strip \
       --enable-strip-libs \
       --enable-cpp-rtti \
@@ -122,6 +123,7 @@ src_compile() {
 
    edit_makefiles
    emake MOZ_THUNDERBIRD=1 || die
+
 }
 
 src_install() {
@@ -134,5 +136,42 @@ src_install() {
    chown -R root.root ${D}/usr/lib/MozillaThunderbird
    
    dobin ${FILESDIR}/MozillaThunderbird
+
+	# Install icon and .desktop for menu entry
+	if [ "`use gnome`" ]
+	then
+		insinto /usr/share/pixmaps
+		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png
+
+		# Fix comment of menu entry
+		cd ${S}/build/package/rpm/SOURCES
+		cp mozilla.desktop mozillathunderbird.desktop
+		perl -pi -e 's:Name=Mozilla:Name=Mozilla Thunderbird:' mozillathunderbird.desktop
+		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Thunderbird Mail Client:' mozillathunderbird.desktop
+		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/MozillaThunderbird:' mozillathunderbird.desktop
+		cd ${S}
+		insinto /usr/share/gnome/apps/Internet
+		doins ${S}/build/package/rpm/SOURCES/mozillathunderbird.desktop
+	fi
+
 }
 
+pkg_postinst() {
+
+	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaThunderbird"
+
+	# Needed to update the run time bindings for REGXPCOM 
+	# (do not remove next line!)
+	env-update
+	# Register Components and Chrome
+	einfo "Registering Components and Chrome..."
+	LD_LIBRARY_PATH=/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regxpcom
+	LD_LIBRARY_PATH=/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regchrome
+	# Fix permissions of component registry
+	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
+	# Fix directory permissions
+	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 0755 {} \; || :
+	# Fix permissions on chrome files
+	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
+
+}
