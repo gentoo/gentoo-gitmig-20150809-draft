@@ -1,12 +1,22 @@
 # ChangeLog for app-admin/fam-oss
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.3 2002/03/24 08:31:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.4 2002/05/29 05:11:29 mkennedy Exp $
+
+*fam-oss-2.6.7-r1 (28 Mar 2002)
+
+  28 Mar 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  fam-oss-2.6.7-r1.ebuild, files/digest-fam-oss-2.6.7-r1,
+  files/fam-oss-2.6.7-r1-gentoo.patch, ChangeLog :
+
+  Support for gcc3.1 -- thanks to lostlogic@lostlogicx.com and
+  rufiao@gmx.net of bug #3149. Tested on gcc3.1 and gcc2.95.3.
+
+*fam-oss-2.6.7 (16 Mar 2002)
 
   24 Mar 2002; M.Schlemmer <azarah@gentoo.org> :
 
   Update rc-script to properly put fam to the background.
 
-*fam-oss-2.6.7 (16 Mar 2002)
 
 *fam-oss-2.6.4-r1 (1 Feb 2002)
 
