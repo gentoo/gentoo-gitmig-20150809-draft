@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.38 2004/04/07 08:29:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.39 2004/04/10 19:39:08 eradicator Exp $
+
+  10 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> webmin-1.140.ebuild:
+  Fixed deps.  See bug #45950.
 
 *webmin-1.140 (07 Apr 2004)
 

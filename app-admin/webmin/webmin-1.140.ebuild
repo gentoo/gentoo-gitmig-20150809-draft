@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.140.ebuild,v 1.1 2004/04/07 08:29:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.140.ebuild,v 1.2 2004/04/10 19:39:08 eradicator Exp $
 
 inherit eutils
 
@@ -15,8 +15,10 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
-DEPEND="dev-lang/perl
-	ssl? ( dev-perl/Net-SSLeay )"
+DEPEND=""
+RDEPEND="dev-lang/perl
+	ssl? ( dev-perl/Net-SSLeay )
+	dev-perl/XML-Generator"
 
 src_install() {
 	rm -f mount/freebsd-mounts*
