@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.2 2003/02/10 11:17:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.3 2003/05/18 20:20:58 mholzer Exp $
 
 inherit eutils
 
@@ -8,8 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="The BPF Traffic Collector"
 SRC_URI="ftp://ftp.riss-telecom.ru/pub/dev/trafd/${P}.tgz 
 	http://metalab.unc.edu/pub/Linux/system/network/management/tcpdump-richard-1.7.tar.gz
-	mirror://gentoo/${P}-gentoo.tar.bz2
-	http://cvs.gentoo.org/~seemant/${P}-gentoo.tar.bz2"
+	mirror://gentoo/${P}-gentoo.tar.bz2"
 HOMEPAGE="ftp://ftp.riss-telecom.ru/pub/dev/trafd/"
 
 SLOT="0"
