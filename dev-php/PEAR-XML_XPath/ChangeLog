@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-XML_XPath
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/ChangeLog,v 1.4 2003/10/14 03:41:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/ChangeLog,v 1.5 2003/12/25 12:03:47 coredumb Exp $
+
+*PEAR-XML_XPath-1.2-r1 (25 Dec 2003)
+
+  25 Dec 2003; Tal Peer <coredumb@gentoo.org> PEAR-XML_XPath-1.2-r1.ebuild:
+  Converted to new eclass
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
