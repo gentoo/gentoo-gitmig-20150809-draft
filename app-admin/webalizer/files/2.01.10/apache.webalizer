@@ -1,7 +1,7 @@
 #
 # This is the config snippet for Webalizer
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/files/2.01.10/apache.webalizer,v 1.1 2003/11/02 22:32:59 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/files/2.01.10/apache.webalizer,v 1.2 2004/07/18 02:25:49 dragonheart Exp $
 
 Alias /webalizer "/var/www/webalizer"
 
