@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.38.14-r1.ebuild,v 1.17 2002/12/15 10:44:21 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.38.14-r1.ebuild,v 1.18 2003/02/12 12:28:26 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,7 +12,7 @@ RDEPEND="!virtual/mta net-mail/mailbase"
 PROVIDE="virtual/mta"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 LICENSE="GPL-2"
 
 src_compile() {						   
