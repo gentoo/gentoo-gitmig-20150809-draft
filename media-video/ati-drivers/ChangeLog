@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.60 2005/01/18 22:23:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.61 2005/01/19 09:33:06 lu_zero Exp $
+
+  19 Jan 2005; Luca Barbato <lu_zero@gentoo.org> :
+  fixed amd64 digests
 
   18 Jan 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.8.25.ebuild:
   Added support for amd64, multilib support should work, converted to the
