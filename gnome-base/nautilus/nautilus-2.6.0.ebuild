@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.0.ebuild,v 1.1 2004/03/22 22:36:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.0.ebuild,v 1.2 2004/03/24 01:43:08 foser Exp $
 
 inherit gnome2
 
@@ -31,11 +31,11 @@ RDEPEND=">=dev-libs/glib-2.3
 	dev-libs/popt
 	app-admin/fam
 	sys-apps/eject
-	cups? ( net-print/libgnomecups )
+	cups? ( net-print/libgnomecups 
+		net-print/gnome-cups-manager )
 	!gstreamer? ( oggvorbis? ( media-sound/vorbis-tools ) )
 	gstreamer? ( >=media-libs/gstreamer-0.6
 		>=media-libs/gst-plugins-0.6 )"
-#		>=net-print/gnome-cups-manager-0.17-r03202004 )
 
 # FIXME : what to do with exif/jpeg config stuff ?
 
