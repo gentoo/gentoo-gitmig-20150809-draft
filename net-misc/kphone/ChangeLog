@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/kphone
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.1 2002/07/08 18:10:11 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.2 2002/09/13 16:43:21 wmertens Exp $
+
+*kphone-1.0.2 (12 September 2002)
+
+  13 Sep 2002; Wout Mertens <wmertens@gentoo.org> :
+  New upstream version, made it compile against KDE 3.
 
 *kphone-0.9.6 (08 July 2002)
 
