@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.7.ebuild,v 1.3 2004/05/04 15:10:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.7.ebuild,v 1.4 2004/06/07 00:06:15 dragonheart Exp $
 
 MY_PV=$(echo ${PV} | sed 's/\.\([0-9]\)$/f\1/')
 S="${WORKDIR}"
@@ -10,7 +10,8 @@ SRC_URI="ftp://scon155.phys.msu.su/pub/russian/ispell/rus-ispell-${MY_PV}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~sparc alpha ~mips ~hppa"
+IUSE=""
+KEYWORDS="~ppc x86 ~sparc alpha ~mips ~hppa"
 
 DEPEND="app-text/ispell"
 

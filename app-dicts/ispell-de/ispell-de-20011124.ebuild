@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ispell-de-20011124.ebuild,v 1.8 2004/05/14 04:44:00 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ispell-de-20011124.ebuild,v 1.9 2004/06/06 23:56:40 dragonheart Exp $
 
 MY_P=igerman98-${PV}
 S=${WORKDIR}/${MY_P}
@@ -10,6 +10,7 @@ HOMEPAGE="http://lisa.goe.net/~bjacke/igerman98/dict"
 
 SLOT="0"
 LICENSE="GPL-2"
+IUSE=""
 KEYWORDS="ppc x86 sparc alpha mips hppa amd64"
 
 DEPEND="app-text/ispell"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ispell-es-1.7.ebuild,v 1.5 2004/03/14 00:50:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ispell-es-1.7.ebuild,v 1.6 2004/06/06 23:57:48 dragonheart Exp $
 
 MY_P="espanol-"${PV}
 S=${WORKDIR}/${MY_P/n/~n}
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.datsi.fi.upm.es/~coes/"
 
 SLOT="0"
 LICENSE="GPL-2"
+IUSE=""
 KEYWORDS="ppc x86 sparc alpha mips hppa"
 
 DEPEND="app-text/ispell"
