@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.1 2003/09/10 06:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.2 2003/10/27 00:01:33 dholm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ DESCRIPTION="virtual fantasy world MMORPG"
 
 LICENSE="GPL-2 | Planeshift"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="net-ftp/curl
 	dev-games/crystalspace
