@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.5 2005/01/01 15:55:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.6 2005/01/09 23:20:47 dams Exp $
+
+*profuse-0.14 (10 Jan 2005)
+
+  10 Jan 2005; <dams@gentoo.org> +profuse-0.14.ebuild:
+  version 0.14 : redundancy setting, search feature, debug
 
 *profuse-0.13 (08 Dec 2004)
 
