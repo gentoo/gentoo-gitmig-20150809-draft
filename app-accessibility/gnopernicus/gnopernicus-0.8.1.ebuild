@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.8.1.ebuild,v 1.4 2004/04/24 08:58:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.8.1.ebuild,v 1.5 2004/04/28 22:40:14 gustavoz Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Software tools for blind and visually impaired in Gnome 2"
 HOMEPAGE="http://www.baum.ro/gnopernicus.html"
 
 SLOT="1"
-KEYWORDS="x86 ~sparc ~hppa ~alpha ~ia64 ~ppc ~amd64"
+KEYWORDS="x86 sparc ~hppa ~alpha ~ia64 ~ppc ~amd64"
 LICENSE="LGPL-2"
 
 # libgail-gnome is only required during runtime

@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.4 2004/04/12 15:53:52 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.5 2004/04/28 22:37:14 gustavoz Exp $
+
+  28 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> brltty-3.4.1.ebuild:
+  Stable on sparc
 
   12 Apr 2004; Chris Aniszczyk <zx@gentoo.org> brltty-3.4.1.ebuild:
   Marking stable on hppa
