@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <styx@gentoo.org> (8 Sep 2002)
+# Masking for b0rkage... again :-/
+>dev-util/glimmer-1.2.1-r3
+
 # <karltk@gentoo.org> (08 Sep 2002)
 # This fixes a few problems, but should not be unmasked 
 # before it's properly tested, probably not before 1.4
