@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r3.ebuild,v 1.8 2005/01/21 17:31:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r3.ebuild,v 1.9 2005/01/30 22:44:58 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -34,17 +34,17 @@ S="${WORKDIR}/xc"
 HOMEPAGE="http://xorg.freedesktop.org/"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/${P}-patches-${PATCH_VER}.tar.bz2"
+X_PATCHES="http://dev.gentoo.org/~spyderous/xorg-x11/${PN}/patchsets/${PV}/${P}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS=""
 #	mirror://gentoo/${P}-drivers-via-${VIADRV_VER}.tar.bz2"
 # Latest Savage drivers:  http://www.probo.com/timr/savage40.html
 # Latest SIS drivers:  http://www.winischhofer.net/
 
-GENTOO_FILES="http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/${P}-files-${FILES_VER}.tar.bz2"
+GENTOO_FILES="http://dev.gentoo.org/~spyderous/xorg-x11/${PN}/patchsets/${PV}/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
-	http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2
+	http://dev.gentoo.org/~spyderous/xorg-x11/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2
 	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
 	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	${GENTOO_FILES}

@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.306 2005/01/30 07:15:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.307 2005/01/30 22:44:58 spyderous Exp $
+
+  30 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r3.ebuild:
+  (#80131) Update some URLs for patchsets.
 
   29 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.902-r1.ebuild:
