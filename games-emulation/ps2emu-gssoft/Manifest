@@ -1,4 +1,3 @@
-MD5 01d21af1bbe9f5f447154e46a7430496 files/0.5-makefile.patch 806
-MD5 4a8e97848fc551a45b1e00021333f575 files/digest-ps2emu-gssoft-0.5 59
-MD5 25824ccde54c84317f13cfaa0abf5739 ps2emu-gssoft-0.5.ebuild 1087
-MD5 1bfbea460c576747b6f50474aabc9a65 ChangeLog 369
+MD5 a1009be2d1e95d9ceaacdb2f481c82fc files/digest-ps2emu-gssoft-0.61 60
+MD5 2764374e12bb045c9ad0ac75e29f98ae ps2emu-gssoft-0.61.ebuild 856
+MD5 3d0e9870679cd7a57d5ef6243aa32460 ChangeLog 476

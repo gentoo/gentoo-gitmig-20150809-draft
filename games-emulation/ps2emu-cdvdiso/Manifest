@@ -1,4 +1,3 @@
-MD5 fdaa16c333aac38e52823d86f45c8053 files/0.2-makefile.patch 443
-MD5 98ef7264ce8a7cfde2d664a0fb3dbabb files/digest-ps2emu-cdvdiso-0.2 60
-MD5 dac30ae119941c8434817a689eb0b0d9 ps2emu-cdvdiso-0.2.ebuild 819
-MD5 2c9b503f5c9fee875a8dfa8589c39772 ChangeLog 372
+MD5 fec7661eda4bca1577244c61d9d729a3 files/digest-ps2emu-cdvdiso-0.3 59
+MD5 68917509d0313c3cf03a7cf2f6d51504 ps2emu-cdvdiso-0.3.ebuild 872
+MD5 93a82bc252ba4b97de14053085b38fcf ChangeLog 479
