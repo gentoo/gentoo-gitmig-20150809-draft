@@ -1,16 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha5.ebuild,v 1.7 2004/09/21 23:30:14 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha5.ebuild,v 1.8 2004/09/26 21:15:25 morfic Exp $
 
 inherit eutils gcc
 
 IUSE="java tcpd"
 
-DLFILE="`echo ${P} | sed s:_alpha:dev:`"
-
 S="${WORKDIR}/vnc_unixsrc"
 DESCRIPTION="A great client/server software package allowing remote network access to graphical desktops."
-SRC_URI="mirror://sourceforge/vnc-tight/${DLFILE}_unixsrc.tar.bz2"
+SRC_URI="mirror://sourceforge/vnc-tight/${P/_alpha/dev}_unixsrc.tar.bz2"
 HOMEPAGE="http://www.tightvnc.com/"
 
 #can't test on anything but x86
@@ -35,10 +33,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-imake-tmpdir.patch
 	epatch ${FILESDIR}/x86.patch
 
-	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
-	then
-		epatch ${FILESDIR}/${P}-gcc34.patch
-	fi
+	[ "$(gcc-version)" == "3.4" ] && epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 src_compile() {
