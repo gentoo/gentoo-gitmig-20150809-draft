@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 1f51175c42915545f5adef2c669bbd4a povray-3.5.ebuild 3923
 MD5 eb81ead17e6d263b563613b2ce985af2 povray-3.1g-r5.ebuild 3497
-MD5 d6e2bd93481686bffeb889d064341ed7 povray-3.6.1-r1.ebuild 1143
-MD5 119ae9264eecc13ecc648f1313812d26 ChangeLog 6532
+MD5 8460e23645b2481a4863a338b25222e5 povray-3.6.1-r1.ebuild 1278
+MD5 66941c09f3affcda510142e921c4bdb7 ChangeLog 6679
 MD5 48eaa040015831c1b8e6bc2e0e6ce522 metadata.xml 262
 MD5 05e59113d8c2485e9c60b679e834dff2 files/gentoo-3.5.patch 247
 MD5 21a61dd7740c2a3bec0cc8b27327fae2 files/digest-povray-3.5 58
@@ -17,7 +17,7 @@ MD5 c46bc643339b324f376236e2a9df237b files/digest-povray-3.6.1-r1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBtpmQUpKYMelfdYERAlPAAJ9X8Vz2RLFPESywGazXK+BHKheZlACeOvwi
-vaUjmNCYBnLxVoZerEqYBVU=
-=D/ly
+iD8DBQFBu+S/UpKYMelfdYERApagAKCMvdoi/bi6hl7upU3keS6rPNn/JgCfR51M
+ig6cPklokPan/wir6TvVUk4=
+=aeCq
 -----END PGP SIGNATURE-----
