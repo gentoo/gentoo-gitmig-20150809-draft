@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/xfwm4-themes-4.0.6.ebuild,v 1.6 2004/08/30 18:49:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/xfwm4-themes-4.0.6.ebuild,v 1.7 2004/09/18 16:46:36 tgall Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ia64 x86 ppc alpha sparc ~amd64 hppa ~mips"
+KEYWORDS="~ia64 x86 ppc alpha sparc ~amd64 hppa ~mips ppc64"
 
 RDEPEND=">=x11-libs/gtk+-2.0.6
 	dev-libs/libxml2
