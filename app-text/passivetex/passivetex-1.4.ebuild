@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.4.ebuild,v 1.12 2003/10/22 10:23:54 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.4.ebuild,v 1.13 2004/02/01 14:30:07 usata Exp $
 
 S=${WORKDIR}
 DESCRIPTION="A namespace-aware XML parser written in Tex"
-SRC_URI="http://users.ox.ac.uk/~rahtz/passivetex/${PN}.zip"
-HOMEPAGE="http://users.ox.ac.uk/~rahtz/passivetex/"
+SRC_URI="http://www.tei-c.org.uk/Software/passivetex/${PN}.zip"
+HOMEPAGE="http://www.tei-c.org.uk/Software/passivetex/"
 LICENSE="freedist"
 
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 SLOT="0"
 IUSE=""
 
