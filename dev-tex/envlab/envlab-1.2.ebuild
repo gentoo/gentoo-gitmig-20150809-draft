@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/envlab-1.2.ebuild,v 1.6 2004/10/09 21:39:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/envlab-1.2.ebuild,v 1.7 2004/12/28 20:41:22 absinthe Exp $
 
 inherit latex-package
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://planck.psu.edu/~boris/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 SLOT="0"
 DEPEND="virtual/tetex"
-KEYWORDS="x86 ~amd64 ~sparc"
+KEYWORDS="x86 amd64 ~sparc"
 IUSE=""
 
 src_compile() {

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 82a73481cbc8f7c0af41a70e5f396946 ChangeLog 744
-MD5 ce2362a65d012f175a22be90779e4a0e envlab-1.2.ebuild 837
+MD5 0447c726e3180926f3c5627671b59712 ChangeLog 837
+MD5 9795b570db47740c519d4aa04fcb702c envlab-1.2.ebuild 839
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 a5d8cf11c9da96cad20198bee9d35b5c files/digest-envlab-1.2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaFk1VWNWqTUmv+0RAvwaAJ4nbzu7VhmshnFjK/0etAkroQTdfgCeJ1DX
-L8tFraEENzJePVWkKrIPiKY=
-=+Cm3
------END PGP SIGNATURE-----
