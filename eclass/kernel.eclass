@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.41 2003/11/18 19:43:09 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.42 2003/11/20 07:52:16 lostlogic Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -10,22 +10,9 @@
 ECLASS=kernel
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
-# OKV=original kernel version, KV=patched kernel version.  They can be the same.
-[ -z "${OKV}" ] && OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
-
-if [ -z "${EXTRAVERSION}" -a "${PN/-*/}" != "linux" -a "${PN/-*/}" != "vanilla" ]
-then
-	EXTRAVERSION="-${PN/-*/}"
-	[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
-	KV="${OKV}${EXTRAVERSION}"
-fi
-
-S=${WORKDIR}/linux-${KV}
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 IUSE="${IUSE} build"
-#IUSE="${IUSE} doc tcltk"
-KERNEL_DIR="${KERNEL_DIR:-${S}}"
 
 if [ "${ETYPE}" = "sources" ]
 then
@@ -33,16 +20,11 @@ then
 	DEPEND="!build? ( sys-apps/sed
 			  >=sys-devel/binutils-2.11.90.0.31 )
 		app-admin/addpatches"
-		# This causes kernels to pull X when they really shouldn't
-		# doc? ( app-text/docbook-sgml-utils
-		#        media-gfx/transfig )
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
 			   dev-lang/perl
 			   virtual/modutils
 			   sys-devel/make )"
-		# This also causes kernels to pull X when it shouldn't...
-		# tcltk? dev-lang/tk
 	PROVIDE="virtual/linux-sources"
 	
 elif [ "${ETYPE}" = "headers" ]
@@ -55,25 +37,11 @@ fi
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
 
-kernel_getversion() {
-	[ -h ${KERNEL_DIR} ] && KERNEL_DIR="$(readlink -f ${KERNEL_DIR})"
-	if [ ! -d ${KERNEL_DIR} ]
-	then
-		eerror "Unable to locate kernel directory"
-		die
-	fi
-
-	KERNEL_VERSION="${KERNEL_DIR/*\linux-/}"
-	KERNEL_VERSION="${KERNEL_VERSION/-*/}"
-	KERNEL_VERSION="${KERNEL_VERSION/\/work*/}"
-
-	KV_MAJOR=$(echo ${KERNEL_VERSION} | cut -d. -f1)
-	KV_MINOR=$(echo ${KERNEL_VERSION} | cut -d. -f2)
-	KV_PATCH=$(echo ${KERNEL_VERSION} | cut -d. -f3)
-}
+KV_MAJOR=$(echo ${KV} | cut -d. -f1)
+KV_MINOR=$(echo ${KV} | cut -d. -f2)
+KV_PATCH=$(echo ${KV} | cut -d. -f3)
 
 kernel_is_2_4() {
-	kernel_getversion
 	if [ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 4 ]
 	then
 		return 0
@@ -83,7 +51,6 @@ kernel_is_2_4() {
 }
 
 kernel_is_2_6() {
-	kernel_getversion
 	if [ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 5 -o ${KV_MINOR} -eq 6 ]
 	then
 		return 0
@@ -111,17 +78,10 @@ kernel_universal_unpack() {
 	cd ${S}
 	mv Makefile Makefile.orig
 	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
+		-e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
-
-	# <kumba@gentoo.org> (16 Nov 2003)
-	# We don't need to append an EXTRAVERSION all the time, so see if EXTRAVERSION contains 1 space
-	# If it does, don't run this sed command
-	if [ "${EXTRAVERSION}" != " " ]; then
-		sed -e "s:^\(EXTRAVERSION =\).*:\1 -$(echo ${KV} | cut -d- -f2,3,4,5):" \
-			Makefile.orig >Makefile || die # test, remove me if Makefile ok
-	fi
 	rm Makefile.orig
-	
+
 	if [ -d "${S}/Documentation/DocBook" ]
 	then
 		cd ${S}/Documentation/DocBook
@@ -219,8 +179,6 @@ kernel_pkg_postinst() {
 		ln -sf linux-${KV} ${ROOT}/usr/src/linux
 	fi
 
-	KERNEL_DIR="${ROOT}/usr/src/linux"
-	kernel_getversion
 	einfo "After installing a new kernel of any version, it is important"
 	einfo "that you have the appropriate /etc/modules.autoload.d/kernel-X.Y"
 	einfo "created (X.Y is the first 2 parts of your new kernel version)"
