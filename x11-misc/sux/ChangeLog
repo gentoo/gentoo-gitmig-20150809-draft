@@ -1,5 +1,6 @@
+# ChangeLog for x11-misc/sux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.7 2004/07/03 12:04:20 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.8 2004/07/17 21:17:28 aliz Exp $
 
   03 Jul 2004; Tom Martin <slarti@gentoo.org> sux-1.0-r1.ebuild:
   Marked ~amd64.
