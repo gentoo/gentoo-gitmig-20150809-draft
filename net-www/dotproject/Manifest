@@ -1,0 +1,6 @@
+MD5 896fd6c6cf1cc17017d444061bb19d7e dotproject-1.0.2.ebuild 913
+MD5 88b2c84c1b3552228d711637cb7d9269 metadata.xml 274
+MD5 229ab201f3aa1bd787e3f5165de99d0c ChangeLog 413
+MD5 c31cbdbd8f336b876284208f18c75c30 files/digest-dotproject-1.0.2 70
+MD5 d7249d4eb677c96cb5cda527a66dc333 files/1.0.2/install-en.txt 815
+MD5 422ed5a572051eeefd96067df44bc1f8 files/1.0.2/postinstall.sh 176

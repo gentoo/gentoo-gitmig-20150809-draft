@@ -1,0 +1,31 @@
+To complete your installation ...
+=================================
+
+1. Create a new database for dotproject in mysql:
+
+	mysql> CREATE DATABASE dotpoject;
+	mysql> GRANT ALL PRIVILEGES ON dotproject.*
+	       TO dotproject@localhost IDENTIFIED BY
+	       "yourpassword" WITH GRANT OPTION
+
+2. Edit the configuration file
+
+	${MY_INSTALLDIR}/includes/config.php
+
+   You need to set 'dbuser' and 'dbpass' for sure. You will probably want
+   to edit 'company_name', 'page_title', 'base_url' and 'site_domain' too.
+
+2. Run the script:
+
+	bash$ mysql dotproject < ${MY_SQLSCRIPTSDIR}/mysql/${PVR}_create.sql
+
+3. Point your web browser at:
+
+	http://${VHOST_HOSTNAME}/${MY_INSTALLDIR}/
+
+   You should see a login page.
+
+   Username: admin
+   Password: passwd
+
+4. Once you're in, change the admin password as soon as possible!
