@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.8.ebuild,v 1.3 2005/01/28 19:16:36 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.8.ebuild,v 1.4 2005/01/29 12:05:50 suka Exp $
 
 # Notes:
 #
@@ -24,7 +24,7 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit eutils fdo-mime flag-o-matic toolchain-funcs
+inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
 IUSE="curl gnome hardened java kde nptl zlib"
 
@@ -90,6 +90,8 @@ DEPEND="${RDEPEND}
 	!dev-util/dmake
 	java? ( >=virtual/jdk-1.4.1 )
 	!java? ( dev-libs/libxslt )"
+
+PROVIDE="virtual/ooo"
 
 pkg_setup() {
 
@@ -296,9 +298,6 @@ src_unpack() {
 	einfo "Applying Ximian OO.org Patches"
 	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=${DISTRO} || die "Ximian patches failed"
 
-	use nptl && epatch ${PATCHDIR}/patches/gcc34/gcc34-nptl-fix.diff
-	use gnome && epatch ${PATCHDIR}/patches/gcc34/gcc34-gnome.diff
-
 	#Fix for hardened
 	if use hardened; then
 		epatch ${FILESDIR}/${OO_VER}/pthreadlink-fix.patch
@@ -362,6 +361,8 @@ src_compile() {
 	then
 		MYCONF="${MYCONF} --with-system-zlib"
 	fi
+
+	use kde && set-kdedir 3
 
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
 	# get linker errors due to the ABI being different (STLport will be
