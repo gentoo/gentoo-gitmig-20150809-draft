@@ -1,6 +1,6 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jules Gagnon <eonwe@users.sourceforge.net>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r1.ebuild,v 1.1 2001/10/06 10:08:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.1 2001/12/03 12:55:32 hallski Exp $
 
 
 A=${P}.tar.gz
@@ -33,15 +33,20 @@ src_compile() {
   then
     myconf="${myconf} --disable-nls"
   fi
-  try ./configure --host=${CHOST} --prefix=${myprefix} \
-       --with-licq-includes=/usr/include/licq ${myconf}
-  try make
+
+  CXXFLAGS="${CXXFLAGS} `orbit-config --cflags client`"
+
+  ./configure --host=${CHOST} --prefix=${myprefix} \
+       --with-licq-includes=/usr/include/licq 	   \
+	${myconf}  || die
+	
+  emake || die
 }
 
 src_install() {
   local myprefix
   myprefix="usr"
-  try make prefix=${D}/${myprefix} install
+  make prefix=${D}/${myprefix} install || die
   dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
   mkdir -p ${D}/usr/lib/licq
   cd ${D}/usr/lib/licq
