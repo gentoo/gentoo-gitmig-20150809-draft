@@ -1,39 +1,45 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.7 2004/12/09 20:01:05 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.1 2004/12/09 20:01:05 squinky86 Exp $
 
+CROSSWIREFTP="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip"
 DESCRIPTION="a collection of modules for the sword project"
 HOMEPAGE="http://www.crosswire.org/sword/"
-SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/KJV.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/StrongsGreek.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/StrongsHebrew.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ASV.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/AKJV.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ISBE.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ISV.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/WebstersDict.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/KJVD.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/SME.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Robinson.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/WEB.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Packard.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Vulgate.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Josephus.zip
+SRC_URI="${CROSSWIREFTP}/KJV.zip
+	${CROSSWIREFTP}/StrongsGreek.zip
+	${CROSSWIREFTP}/StrongsHebrew.zip
+	${CROSSWIREFTP}/ASV.zip
+	${CROSSWIREFTP}/AKJV.zip
+	${CROSSWIREFTP}/ISBE.zip
+	${CROSSWIREFTP}/ISV.zip
+	${CROSSWIREFTP}/WebstersDict.zip
+	${CROSSWIREFTP}/KJVD.zip
+	${CROSSWIREFTP}/SME.zip
+	${CROSSWIREFTP}/Robinson.zip
+	${CROSSWIREFTP}/WEB.zip
+	${CROSSWIREFTP}/Packard.zip
+	${CROSSWIREFTP}/Vulgate.zip
+	${CROSSWIREFTP}/Josephus.zip
+	${CROSSWIREFTP}/Jubilee2000.zip
+	${CROSSWIREFTP}/MHC.zip
 	offensive? (mirror://gentoo/BoM.zip
 		mirror://gentoo/Jasher.zip
 		mirror://gentoo/Quran.zip)
-	intl? (http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerElb.zip
-		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerElb1871.zip
-		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerLut.zip
-		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerLut1545.zip
-		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerSch.zip)"
+	intl? (${CROSSWIREFTP}/GerElb.zip
+		${CROSSWIREFTP}/GerElb1871.zip
+		${CROSSWIREFTP}/GerLut.zip
+		${CROSSWIREFTP}/GerLut1545.zip
+		${CROSSWIREFTP}/GerSch.zip
+		${CROSSWIREFTP}/SpaRV.zip
+		${CROSSWIREFTP}/FreLSG.zip
+		${CROSSWIREFTP}/ItaRive.zip)"
 # must wait for the betamodules to return.
 #	http://www.crosswire.org/ftpmirror/pub/sword/betamodules/win/QuranShakir.zip
 
 RESTRICT="nomirror"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="offensive intl"
 
 S=${WORKDIR}
@@ -59,6 +65,8 @@ src_unpack() {
 	unpack Packard.zip > /dev/null
 	unpack Vulgate.zip > /dev/null
 	unpack Josephus.zip > /dev/null
+	unpack Jubilee2000.zip > /dev/null
+	unpack MHC.zip > /dev/null
 
 	if use intl; then
 		unpack GerElb.zip > /dev/null
@@ -66,6 +74,9 @@ src_unpack() {
 		unpack GerLut.zip > /dev/null
 		unpack GerLut1545.zip > /dev/null
 		unpack GerSch.zip > /dev/null
+		unpack SpaRV.zip > /dev/null
+		unpack FreLSG.zip > /dev/null
+		unpack ItaRive > /dev/null
 	fi
 
 	if use offensive; then
