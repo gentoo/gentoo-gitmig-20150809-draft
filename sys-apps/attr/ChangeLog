@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.17 2003/08/12 01:42:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.18 2003/08/28 23:41:03 robbat2 Exp $
+
+*attr-2.4.7-r1 (28 Aug 2003)
+
+  28 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> attr-2.4.7-r1.ebuild:
+  migrate binaries and shared library to / filesystem for use when /usr is not
+  available, as per bug #27064
 
 *attr-2.4.7 (11 Aug 2003)
 
