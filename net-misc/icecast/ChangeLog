@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.20 2004/04/05 21:20:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.21 2004/04/07 04:09:54 raker Exp $
+
+  06 Apr 2004; Nick Hadaway <raker@gentoo.org> icecast-2.0.0.ebuild:
+  oggvorbis is a requirement, not an optional dependancy.  See
+  the icecast docs and bug #46963.
 
   05 Apr 2004; Jason Wever <weeve@gentoo.org> icecast-2.0.0.ebuild:
   Marked stable on sparc.
