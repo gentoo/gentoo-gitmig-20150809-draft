@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r6.ebuild,v 1.2 2004/02/15 11:45:49 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r6.ebuild,v 1.3 2004/02/17 11:40:39 tigger Exp $
 
 inherit eutils
 
@@ -162,7 +162,7 @@ pkg_postinst() {
 	einfo "  rc-update add nagios default"
 	einfo
 
-	if [ -z "`use noweb`"]; then
+	if [ -z "`use noweb`" ]; then
 		einfo "This does not include cgis that are perl-dependent"
 		einfo "Currently traceroute.cgi is perl-dependent"
 		einfo "To have ministatus.cgi requires copying of ministatus.c"
@@ -171,17 +171,17 @@ pkg_postinst() {
 		einfo "1. Execute the command:"
 		einfo " \"ebuild /var/db/pkg/net-analyzer/${PF}/${PF}.ebuild config\""
 
-		if [ -z "`use apache2`" ]; then
+		if [ -n "`use apache2`" ]; then
 			insinto /etc/apache2/conf/modules.d
 			doins ${FILESDIR}/99_nagios.conf
 
-			einfo " 2. Edit /etc/conf.d/apache and add \"-D NAGIOS\""
+			einfo " 2. Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
 		else
 			insinto /etc/apache/conf/addon-modules
 			doins ${FILESDIR}/nagios.conf
 			echo "Include  conf/addon-modules/nagios.conf" >> ${ROOT}/etc/apache/conf/apache.conf
 
-			einfo " 2. Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
+			einfo " 2. Edit /etc/conf.d/apache and add \"-D NAGIOS\""
 		fi
 
 		einfo

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.18 2004/02/15 11:45:49 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.19 2004/02/17 11:40:39 tigger Exp $
+
+  17 Feb 2004; rob holland <tigger@gentoo.org> nagios-core-1.1-r6.ebuild:
+  Corrected apache2 handling and shell error.
 
 *nagios-core-1.1-r6 (15 Feb 2004)
 
