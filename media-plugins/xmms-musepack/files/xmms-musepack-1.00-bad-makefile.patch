@@ -1,0 +1,41 @@
+diff -Naur xmms-musepack-1.00.orig/Makefile xmms-musepack-1.00/Makefile
+--- xmms-musepack-1.00.orig/Makefile	2004-06-25 04:24:47.000000000 -0700
++++ xmms-musepack-1.00/Makefile	2004-07-06 16:59:19.598800902 -0700
+@@ -1,6 +1,6 @@
+ CC      = gcc
+ VERSION = 1.00
+-OPTIONS = -Wall -shared -O3 -march=pentium --fast-math -DPOSIX -D_REENTRANT -DREENTRANT -I.. -DMPP_ENCODER
++OPTIONS = -Wall -shared $(CFLAGS) -fPIC -DPIC -DPOSIX -D_REENTRANT -DREENTRANT -I.. -DMPP_ENCODER
+ 
+ 
+ SOURCE  = in_mpc.c bitstream.c huffsv46.c huffsv7.c requant.c synth_filter.c mpc_dec.c equalizer.c equal.c tags.c
+@@ -12,22 +12,22 @@
+ 
+ 
+ install-test:   all
+-	ln -f -s `pwd`/xmms-musepack-`echo $(VERSION)`.so \
+-	~/.xmms/Plugins/xmms-musepack-`echo $(VERSION)`.so
++	ln -f -s `pwd`/xmms-musepack-$(VERSION).so \
++	~/.xmms/Plugins/xmms-musepack-$(VERSION).so
+ 
+ install:        all
+ 	install -g root -o root -m 755 \
+-	  ./xmms-musepack-`echo $(VERSION)`.so \
+-	  `xmms-config --input-plugin-dir`/xmms-musepack-`echo $(VERSION)`.so
++	  ./xmms-musepack-$(VERSION).so \
++	  `xmms-config --input-plugin-dir`/xmms-musepack-$(VERSION).so
+ 
+ xmms-musepack-$(VERSION).so: $(SOURCE) $(HEADER) $(EQUAL) Makefile
+ 	@echo
+ 	@echo
+-	$(CC) -s -DVERSION=\"$(VERSION)\" $(OPTIONS) `xmms-config --cflags --libs` `gtk-config --cflags --libs` -o xmms-musepack-`echo $(VERSION)`.so $(SOURCE) 2>&1 | grep -v '/usr/'
++	$(CC) -s -DVERSION=\"$(VERSION)\" $(OPTIONS) `xmms-config --cflags --libs` `gtk-config --cflags --libs` -o xmms-musepack-$(VERSION).so $(SOURCE) 2>&1 | grep -v '/usr/'
+ 
+ 
+ clean:
+-	rm -f *.o xmms-musepack-`echo $(VERSION)`.so
++	rm -f *.o xmms-musepack-$(VERSION).so
+ 
+ uninstall:
+-	rm -f `xmms-config --input-plugin-dir`/xmms-musepack-`echo $(VERSION)`.so
++	rm -f `xmms-config --input-plugin-dir`/xmms-musepack-$(VERSION).so
