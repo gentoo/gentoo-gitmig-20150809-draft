@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/golden-xcursors
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/ChangeLog,v 1.13 2004/11/24 02:40:28 geoman Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/ChangeLog,v 1.14 2005/02/19 19:10:13 corsair Exp $
+
+  19 Feb 2005; Markus Rothe <corsair@gentoo.org> golden-xcursors-0.8.ebuild:
+  Stable on ppc64
 
   23 Nov 2004; Stephen P. Becker <geoman@gentoo.org>
   golden-xcursors-0.8.ebuild:
