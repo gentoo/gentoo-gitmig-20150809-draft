@@ -1,0 +1,9 @@
+# ChangeLog for dev-ml/xstr
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xstr/ChangeLog,v 1.1 2005/03/08 23:21:03 mattam Exp $
+
+*xstr-0.2.1 (09 Mar 2005)
+
+  09 Mar 2005; Matthieu Sozeau <mattam@gentoo.org> +metadata.xml,
+  +xstr-0.2.1.ebuild:
+  xstr is a library for thread safe manipulation of strings.
