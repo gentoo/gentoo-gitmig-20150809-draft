@@ -3,9 +3,14 @@
 <pkgmetadata>
 <herd>hardened</herd>
 <maintainer>
-  <email>pebenito@gentoo.org</email>
-  <name>Chris PeBenito</name>
+  <email>method@gentoo.org</email>
+  <name>Joshua Brindle</name>
   <description>Primary Maintainer</description>
 </maintainer>
-<longdescription>Python bindings for sid related libsecure fuctions, donated by torbenh@freenode</longdescription>
+<maintainer>
+  <email>pebenito@gentoo.org</email>
+  <name>Chris PeBenito</name>
+  <description>Backup Maintainer</description>
+</maintainer>
+<longdescription>Python bindings for SELinux libselinux fuctions</longdescription>
 </pkgmetadata>
