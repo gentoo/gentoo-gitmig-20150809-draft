@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2823 2004/04/17 11:25:46 lanius Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2824 2004/04/17 11:45:20 lanius Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -26,9 +26,10 @@
 # Latest snapshot
 =sys-devel/gcc-3.3.3_pre20040408-r1
 
-# <lanius@gentoo.org> (12 Apr 2004)
+# <lanius@gentoo.org> (12 Apr 2004) (upd. 17 Apr 2004)
 # this is an alpha version
 =media-gfx/gimp-print-5.0.0_alpha1
+=media-gfx/gimp-print-5.0.0_alpha2
 
 # <carpaski@gentoo.org> (11 Apr 2004)
 # Internal testing phase
