@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2888 2004/05/30 07:47:03 robbat2 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2889 2004/05/30 08:04:54 usata Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -588,10 +588,6 @@ sys-devel/spython
 # It is alpha after all.
 =app-crypt/mit-krb5-1.3_alpha1
 
-# <twp@gentoo.org> 10 Jun 2003
-# Needs testing (I can't test it)
-=dev-ruby/optparse-0.12
-
 # <robbat2@gentoo.org> 29 May 2003
 # ebuild was previously masked only in the ebuild
 # This is the correct place for it.
@@ -667,10 +663,6 @@ media-video/lumiere
 # see dev-db/postgresql #11822, net-im/sim #11654, and net-misc/mico
 # (btw, all the other distros are using 2.5.4a)
 >=sys-devel/flex-2.5.23
-
-# <mkennedy@gentoo.org> (14 Dec 2002)
-# needs to be assimilated with app-emacs/psgml
-app-text/psgml
 
 # <phoenix@gentoo.org> (21 Nov 2002)
 # The huge nsplugins mask. These plugins use
