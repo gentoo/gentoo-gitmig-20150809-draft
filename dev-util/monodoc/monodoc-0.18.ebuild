@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-0.18.ebuild,v 1.2 2004/07/09 00:38:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-0.18.ebuild,v 1.3 2004/10/26 21:53:58 latexer Exp $
 
 inherit mono
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=dev-dotnet/mono-0.97
-		>=x11-libs/gtk-sharp-0.99"
+		>=dev-dotnet/gtk-sharp-0.99"
 
 src_compile() {
 	econf || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-0.16.ebuild,v 1.4 2004/06/25 02:41:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-0.16.ebuild,v 1.5 2004/10/26 21:53:58 latexer Exp $
 
 inherit mono
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=dev-dotnet/mono-0.95
-		>=x11-libs/gtk-sharp-0.93"
+		>=dev-dotnet/gtk-sharp-0.93"
 
 pkg_setup() {
 	# This is needed as monodoc emerges just hang if previous versions are around

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.0.1.ebuild,v 1.1 2004/09/22 01:12:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.0.1.ebuild,v 1.2 2004/10/26 21:53:58 latexer Exp $
 
 inherit mono
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=dev-dotnet/mono-1.0.1
-		>=x11-libs/gtk-sharp-1.0"
+		>=dev-dotnet/gtk-sharp-1.0"
 
 src_unpack() {
 	if [ ! -f ${ROOT}/usr/lib/mono/gtk-sharp/gtkhtml-sharp.dll ]

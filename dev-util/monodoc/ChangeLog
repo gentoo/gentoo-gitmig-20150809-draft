@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.23 2004/09/22 14:40:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.24 2004/10/26 21:53:58 latexer Exp $
+
+  26 Oct 2004; <peter@gentoo.org> monodoc-0.15.ebuild, monodoc-0.16.ebuild,
+  monodoc-0.17.ebuild, monodoc-0.18.ebuild, monodoc-1.0.1.ebuild,
+  monodoc-1.0.2.ebuild, monodoc-1.0.ebuild:
+  Move gtk-sharp dep from x11-libs -> dev-dotnet
 
 *monodoc-1.0.2 (22 Sep 2004)
 
