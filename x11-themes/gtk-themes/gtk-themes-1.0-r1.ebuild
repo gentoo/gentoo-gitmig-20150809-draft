@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-1.0-r1.ebuild,v 1.6 2003/08/31 03:14:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-1.0-r1.ebuild,v 1.7 2003/10/15 00:36:54 liquidx Exp $
 
 DESCRIPTION="Some nice themes for GTK+ 1"
 LICENSE="GPL-2"
@@ -56,7 +56,6 @@ DEPEND="=x11-themes/gtk-engines-begtk-1.0.1*
 	=x11-themes/gtk-engines-cleanice-0.8.5*
 	=x11-themes/gtk-engines-eazel-0.3*
 	=x11-themes/gtk-engines-flat-0.1*
-	=x11-themes/gtk-engines-geramik-0.08*
 	=x11-themes/gtk-engines-gtkstep-2.2*
 	=x11-themes/gtk-engines-icegradient-0.0.5*
 	=x11-themes/gtk-engines-mac2-1.0.3*
