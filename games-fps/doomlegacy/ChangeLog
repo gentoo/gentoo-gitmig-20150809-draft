@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomlegacy
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/ChangeLog,v 1.6 2004/02/12 20:24:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/ChangeLog,v 1.7 2004/03/31 06:47:45 mr_bones_ Exp $
+
+  30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  doomlegacy-1.41-r1.ebuild:
+  don't rdepend on nasm, sed
 
   12 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org>
   doomlegacy-1.41-r1.ebuild, metadata.xml:

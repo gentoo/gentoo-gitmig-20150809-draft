@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.41-r1.ebuild,v 1.4 2004/02/12 20:24:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.41-r1.ebuild,v 1.5 2004/03/31 06:47:45 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="Doom legacy, THE doom port"
 HOMEPAGE="http://legacy.newdoom.com/"
@@ -15,14 +15,19 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="sdl X dga esd"
 
-DEPEND="x86? ( >=dev-lang/nasm-0.98 )
-	>=sys-apps/sed-4
+RDEPEND="
 	virtual/opengl
 	virtual/x11
 	esd? ( media-sound/esound )
-	sdl? ( media-libs/libsdl media-libs/sdl-mixer )"
+	sdl? (
+		media-libs/libsdl
+		media-libs/sdl-mixer
+	)"
+DEPEND="${RDEPEND}
+	x86? ( >=dev-lang/nasm-0.98 )
+	>=sys-apps/sed-4"
 
-S=${WORKDIR}/legacy_${PV//.}_src
+S="${WORKDIR}/legacy_${PV//.}_src"
 
 src_unpack() {
 	unpack ${A}
@@ -57,8 +62,8 @@ src_compile() {
 	local makeopts=""
 	local redosnd=0
 	local interfaces=""
-	[ `use sdl` ] && interfaces="${interfaces} SDL"
-	[ `use X` ] && interfaces="${interfaces} X"
+	use sdl && interfaces="${interfaces} SDL"
+	use X && interfaces="${interfaces} X"
 	[ -z "${interfaces}" ] && interfaces="X"
 	mkdir ${WORKDIR}/my-bins
 	for i in ${interfaces} ; do
@@ -68,9 +73,9 @@ src_compile() {
 				makeopts="SDL=1";;
 			X)
 				makeopts="LINUX=1 X=1"
-				[ `use x86` ] && makeopts="${makeopts} USEASM=1"
-				[ `use dga` ] && makeopts="${makeopts} WITH_DGA=1"
-				[ `use esd` ] && makeopts="${makeopts} HAVE_ESD=1";;
+				use x86 && makeopts="${makeopts} USEASM=1"
+				use dga && makeopts="${makeopts} WITH_DGA=1"
+				use esd && makeopts="${makeopts} HAVE_ESD=1";;
 		esac
 		emake EXTRAOPTS="${CFLAGS}" ${makeopts} || redosnd=1
 		if [ ${redosnd} -eq 1 ] ; then
