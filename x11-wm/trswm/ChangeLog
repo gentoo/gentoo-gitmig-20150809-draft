@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/trswm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/trswm/ChangeLog,v 1.1 2003/06/17 20:02:33 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/trswm/ChangeLog,v 1.2 2003/11/05 12:03:03 obz Exp $
+
+*trswm-0.4.9 (05 Nov 2003)
+
+  05 Nov 2003; Mike Gardiner <obz@gentoo.org> trswm-0.4.9.ebuild, files/trswm:
+  New version, 0.4.9, with re-written ebuild. Includes a wrapper script to
+  handle per user configuration, in place of the trswm binary which is now
+  trswm.bin. trswm --help should give more information on it's usage, and it is
+  a complete launcher, so adding exec trswm to ~/.xinitrc is all that's 
+  required to launch trswm.
 
 *trswm-0.3 (17 Jun 2003)
 
