@@ -1,0 +1,149 @@
+# <plasmaroo>	Bug #77666; this is a ck-sources modified version; attID #48582
+#		minus hunk 2.
+#
+# ChangeSet #3
+#   2005/01/12 08:09:20-08:00 torvalds@ppc970.osdl.org
+#   Handle two threads both trying to expand their stack simultaneously.
+#
+#   We had all the locking right, but we didn't check whether one of the
+#   threads now no longer needed to expand, so we could incorrectly _shrink_
+#   the stack in the other thread instead (not only causing segfaults, but
+#   since we didn't do a proper unmap, we'd possibly leak pages too).
+#
+#   So re-check the need for expand after getting the lock.
+#
+#   Noticed by Paul Starzetz.
+#
+# ChangeSet #2
+#   2005/01/10 11:23:42-08:00 torvalds@ppc970.osdl.org
+#   Clean up stack growth checks and move them into a common function.
+#
+#   The grows-up and grows-down cases had all the same issues, but
+#   differered in the details. Additionlly, historical evolution of
+#   the tests had caused the result to be pretty unreadable with some
+#   rather long and complex conditionals.
+#
+#   Fix it all up in a more readable helper function.
+#
+#   This also adds the missing RLIMIT_MEMLOCK test.
+#
+# ChangeSet #1
+#   2005/01/11 07:40:07-08:00 chrisw@osdl.org 
+#   [PATCH] acct_stack_growth nitpicks
+#   
+#   - allow CAP_IPC_LOCK to override mlock rlimit during stack expansion as
+#     in all other cases
+#   
+#   Signed-off-by: Chris Wright <chrisw@osdl.org>
+#   Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+# 
+# mm/mmap.c
+#   2005/01/10 19:34:05-08:00 chrisw@osdl.org +1 -1
+#   acct_stack_growth nitpicks
+#
+diff -urNp linux-2.6.10/mm/mmap.c linux-2.6.10.plasmaroo/mm/mmap.c
+--- linux-2.6.10/mm/mmap.c	2004-12-24 21:35:00.000000000 +0000
++++ linux-2.6.10.plasmaroo/mm/mmap.c	2005-01-15 21:49:26.000000000 +0000
+@@ -1319,13 +1319,57 @@ out:
+ 	return prev ? prev->vm_next : vma;
+ }
+ 
++/*
++ * Verify that the stack growth is acceptable and
++ * update accounting. This is shared with both the
++ * grow-up and grow-down cases.
++ */
++static int acct_stack_growth(struct vm_area_struct * vma, unsigned long size, unsigned long grow)
++{
++	struct mm_struct *mm = vma->vm_mm;
++	struct rlimit *rlim = current->signal->rlim;
++
++	/* address space limit tests */
++	rlim = current->signal->rlim;
++	if (mm->total_vm + grow > rlim[RLIMIT_AS].rlim_cur >> PAGE_SHIFT)
++		return -ENOMEM;
++
++	/* Stack limit test */
++	if (size > rlim[RLIMIT_STACK].rlim_cur)
++		return -ENOMEM;
++
++	/* mlock limit tests */
++	if (vma->vm_flags & VM_LOCKED) {
++		unsigned long locked;
++		unsigned long limit;
++		locked = mm->locked_vm + grow;
++		limit = rlim[RLIMIT_MEMLOCK].rlim_cur >> PAGE_SHIFT;
++		if (locked > limit && !capable(CAP_IPC_LOCK))
++			return -ENOMEM;
++	}
++
++	/*
++	 * Overcommit..  This must be the final test, as it will
++	 * update security statistics.
++	 */
++	if (security_vm_enough_memory(grow))
++		return -ENOMEM;
++
++	/* Ok, everything looks good - let it rip */
++	mm->total_vm += grow;
++	if (vma->vm_flags & VM_LOCKED)
++		mm->locked_vm += grow;
++	__vm_stat_account(mm, vma->vm_flags, vma->vm_file, grow);
++	return 0;
++}
++
+ #ifdef CONFIG_STACK_GROWSUP
+ /*
+  * vma is the first one with address > vma->vm_end.  Have to extend vma.
+  */
+ int expand_stack(struct vm_area_struct * vma, unsigned long address)
+ {
+-	unsigned long grow;
++	int error;
+ 
+ 	if (!(vma->vm_flags & VM_GROWSUP))
+ 		return -EFAULT;
+@@ -1407,29 +1448,23 @@ int expand_stack(struct vm_area_struct *
+ 	 * anon_vma lock to serialize against concurrent expand_stacks.
+ 	 */
+ 	address &= PAGE_MASK;
+-	grow = (vma->vm_start - address) >> PAGE_SHIFT;
++	error = 0;
+ 
+-	/* Overcommit.. */
+-	if (security_vm_enough_memory(grow)) {
+-		anon_vma_unlock(vma);
+-		return -ENOMEM;
+-	}
+-	
+-	if (vma->vm_end - address > current->signal->rlim[RLIMIT_STACK].rlim_cur ||
+-			((vma->vm_mm->total_vm + grow) << PAGE_SHIFT) >
+-			current->signal->rlim[RLIMIT_AS].rlim_cur) {
+-		anon_vma_unlock(vma);
+-		vm_unacct_memory(grow);
+-		return -ENOMEM;
++	/* Somebody else might have raced and expanded it already */
++	if (address < vma->vm_start) {
++		unsigned long size, grow;
++
++		size = vma->vm_end - address;
++		grow = (vma->vm_start - address) >> PAGE_SHIFT;
++
++		error = acct_stack_growth(vma, size, grow);
++		if (!error) {
++			vma->vm_start = address;
++			vma->vm_pgoff -= grow;
++		}
+ 	}
+-	vma->vm_start = address;
+-	vma->vm_pgoff -= grow;
+-	vma->vm_mm->total_vm += grow;
+-	if (vma->vm_flags & VM_LOCKED)
+-		vma->vm_mm->locked_vm += grow;
+-	__vm_stat_account(vma->vm_mm, vma->vm_flags, vma->vm_file, grow);
+ 	anon_vma_unlock(vma);
+-	return 0;
++	return error;
+ }
+ 
+ struct vm_area_struct *
