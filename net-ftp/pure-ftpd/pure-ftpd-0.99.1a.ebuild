@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-0.99b.ebuild,v 1.1 2001/08/14 16:22:46 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-0.99.1a.ebuild,v 1.1 2001/08/21 09:20:57 pm Exp $
 
-A=pure-ftpd-0.99b.tar.gz
+A=pure-ftpd-0.99.1a.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A Fast Production Quality FTP Server - Bug fixes backported from 0.99 . No new feature. Use this version on production servers."
 SRC_URI="http://prdownloads.sourceforge.net/pureftpd/${A}"
@@ -18,7 +18,7 @@ src_compile() {
     try ./configure --prefix=/usr  --with-throttling --with-virtualhosts \
 	--with-ratios --with-largefile --with-cookie --with-welcomemsg \
 	--with-altlog --with-ftpwho --with-uploadscript --infodir=/usr/share/info \
-	--mandir=/usr/share/man --host=${CHOST}
+	--mandir=/usr/share/man --with-pam
     try make
 
 }
@@ -30,9 +30,11 @@ src_install () {
     dodoc COPYING ChangeLog README README.Configuration-File 
     dodoc README.Contrib README.LDAP README.Netfilter
     dodir /etc/pure-ftpd
+    dodir /etc/pam.d
     dodir /home/ftp	
     dodir /home/ftp/pub
     dodir /home/ftp/incoming
+    cp $S/pam/pure-ftpd ${D}/etc/pam.d/
     cp $S/configuration-file/*.pl ${D}/usr/sbin/
     cp $S/configuration-file/*.py ${D}/usr/sbin/
     cp $S/configuration-file/pure-ftpd.conf ${D}/etc/pure-ftpd/pure-ftpd.conf

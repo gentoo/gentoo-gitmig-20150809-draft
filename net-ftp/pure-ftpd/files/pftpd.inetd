@@ -1,6 +1,6 @@
 # ----------------
 # Pure-FTPd Server
 # ----------------
-ftp		stream	tcp	nowait	root	/usr/sbin/pure-ftpd pure-ftpd -4 -B -b -N -w -W -O clf:/var/log/pureftpd.log
+ftp		stream	tcp	nowait	root	/usr/sbin/pure-ftpd pure-ftpd -4 -B -b -N -w -W -O stats:/var/log/pureftpd.log
 
 
