@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/freeze
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.6 2004/08/15 22:10:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.7 2004/08/28 21:54:41 tgall Exp $
+
+  28 Aug 2004; Tom Gall <tgall@gentoo.org> freeze-2.5.0.ebuild:
+  stable on ppc64, bug #60194
 
   15 Aug 2004; Jason Wever <weeve@gentoo.org> freeze-2.5.0.ebuild:
   Added ~sparc keyword wrt bug #59010.
