@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xaos
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.6 2004/04/14 09:09:02 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.7 2004/04/19 13:26:58 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> xaos-3.1.ebuild,
+  xaos-3.1_pre5.ebuild:
+  Cleanup, stable for ppc
 
   07 Jan 2003; George Shapovalov <george@gentoo.org> xaos-3.1.ebuild, metadata.xml :
   marked 3.1 stable, added metadata
