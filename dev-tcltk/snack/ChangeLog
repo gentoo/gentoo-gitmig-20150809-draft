@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/snack
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.5 2004/04/25 18:21:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.6 2004/06/16 08:03:44 eradicator Exp $
+
+  16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> snack-2.2.4.ebuild:
+  Stable amd64.  Added ~sparc.
 
   25 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> snack-2.2.4.ebuild:
   marked ~amd64.
