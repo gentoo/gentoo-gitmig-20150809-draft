@@ -1,0 +1,12 @@
+# ChangeLog for dev-perl/Lingua-EN-Numbers-Ordinate
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Numbers-Ordinate/ChangeLog,v 1.1 2003/02/12 02:59:05 seemant Exp $
+
+*Lingua-EN-Numbers-Ordinate-0.01 (11 Feb 2003)
+
+  11 Feb 2003; Seemant Kulleen <seemant@gentoo.org> ChangeLog
+  Lingua-EN-Numbers-Ordinate-0.01.ebuild
+  files/digest-Linugua-EN-Numbers-Ordinate-0.01 :
+
+  New ebuild, required for mythtv.  Submitted by Tony Clark
+  <tclark@telia.com> in bug #13034.

@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Lingua-Preferred
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.1 2003/02/12 03:03:02 seemant Exp $
+
+*Lingua-Preferred-0.2.1 (11 Feb 2003)
+
+  11 Feb 2003; Seemant Kulleen <seemant@gentoo.org> ChangeLog
+  Lingua-Preferred-0.2.1 files/digest-Lingua-Preferred-0.2.1 :
+
+  New perl module, required by mythtv.  Ebuild submitted by: Tony Clark
+  <tclark@telia.com> in bug #13035.
