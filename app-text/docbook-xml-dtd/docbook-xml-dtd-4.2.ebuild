@@ -1,21 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2.ebuild,v 1.18 2004/03/21 08:46:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2.ebuild,v 1.19 2004/04/26 11:30:52 obz Exp $
 
 MY_P="docbook-xml-4.2"
-S=${WORKDIR}/${P}
 DESCRIPTION="Docbook DTD for XML"
 SRC_URI="http://www.oasis-open.org/docbook/xml/${PV}/${MY_P}.zip"
-
 HOMEPAGE="http://www.oasis-open.org/docbook/"
-SLOT="4.2"
 LICENSE="X11"
+
+SLOT="4.2"
+IUSE=""
+KEYWORDS="x86 ia64 ppc sparc alpha hppa amd64 mips"
 
 DEPEND=">=app-arch/unzip-5.41
 	>=dev-libs/libxml2-2.4
 	>=app-text/docbook-xsl-stylesheets-1.45"
-
-KEYWORDS="x86 ia64 ppc sparc alpha hppa amd64 mips"
 
 src_unpack() {
 	mkdir ${S}
