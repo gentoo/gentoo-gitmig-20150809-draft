@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbgrab
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.7 2004/06/24 22:36:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.8 2004/07/03 14:37:15 kugelfang Exp $
+
+  03 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> fbgrab-1.0.ebuild:
+  Marked ~amd64.
 
   29 Mar 2004; <SeJo@gentoo.org> fbgrab-1.0.ebuild,
   fbgrab-1.0_beta1-r1.ebuild:
