@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/embassy-2.10.0.ebuild,v 1.1 2005/03/25 01:43:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/embassy-2.10.0.ebuild,v 1.2 2005/03/25 17:47:52 ribosome Exp $
 
 DESCRIPTION="A meta-package for installing all EMBASSY packages (EMBOSS add-ons)"
 HOMEPAGE="http://www.emboss.org/"
@@ -21,6 +21,8 @@ IUSE=""
 RDEPEND="!=sci-biology/emboss-2.9*
 	=sci-biology/emboss-2.10*
 	=sci-biology/embassy-construct-1.0.0
+	=sci-biology/embassy-domainatrix-1.0.0-r1
+	=sci-biology/embassy-emnu-1.05-r1
 	=sci-biology/embassy-esim4-1.0.0-r1
 	=sci-biology/embassy-hmmer-2.1.1-r1
 	=sci-biology/embassy-meme-2.3.1-r1
