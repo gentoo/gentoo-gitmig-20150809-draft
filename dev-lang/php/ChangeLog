@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.29 2002/06/17 07:54:56 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.30 2002/07/08 15:24:35 blizzy Exp $
+
+*php-4.2.1-r2 (08 Jul 2002)
+
+  08 Jul 2002; Maik Schreiber <bZ@iq-computing.de> :
+
+  Changed dependency from >=net-www/apache-1.3.24-r1 to
+  >=net-www/apache-1.3.26-r2 (Apache 1.3.26 includes a
+  fix for the "chunked encoding" issue).
 
   27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
 
