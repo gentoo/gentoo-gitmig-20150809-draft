@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r3.ebuild,v 1.2 2001/09/29 17:29:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r3.ebuild,v 1.3 2001/09/30 12:10:43 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -54,4 +54,16 @@ src_install() {
 	#install nice, clean-looking gtk+ style
 	insinto /usr/X11R6/share/themes/Gentoo/gtk
 	doins ${FILESDIR}/gtkrc
+}
+
+pkg_postinst() {
+	echo
+	echo **********************************************************************
+	echo * Older versions added /etc/X11/gtk/gtkrc which changed settings for *
+	echo * all themes it seems.  Please remove it manually as it will not due *
+	echo * to /env protection.                                                *
+	echo *                                                                    *
+	echo * NB:  The old gtkrc is available through the new Gentoo gtk theme.  *
+	echo **********************************************************************
+	echo
 }
