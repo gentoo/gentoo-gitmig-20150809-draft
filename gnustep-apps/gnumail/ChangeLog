@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/gnumail
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.5 2004/09/28 17:51:40 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.6 2004/10/04 01:18:00 fafhrd Exp $
+
+*gnumail-1.2.0_pre20040916 (03 Oct 2004)
+
+  03 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  gnumail-1.2.0_pre20040916.ebuild, gnumail-1.2.0_pre20040927.ebuild:
+  Updated to use GENTOO_GNUSTEP_ROOT variable from gnustep.eclass
 
 *gnumail-1.2.0_pre20040927 (28 Sep 2004)
 

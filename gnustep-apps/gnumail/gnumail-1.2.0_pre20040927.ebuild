@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20040927.ebuild,v 1.1 2004/09/28 17:51:40 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20040927.ebuild,v 1.2 2004/10/04 01:18:00 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="Sophos.ca:/opt/cvsroot"
@@ -62,9 +62,9 @@ src_install() {
 		egnustep_doc || die
 	fi
 
-	use xface && cp -a ${S}/Bundles/Face/Face.bundle ${D}usr/GNUstep/System/Library/GNUMail/
-	use crypt && cp -a ${S}/Bundles/PGP/PGP.bundle ${D}usr/GNUstep/System/Library/GNUMail/
-	use emoticon && cp -a ${S}/Bundles/Emoticon/Emoticon.bundle ${D}usr/GNUstep/System/Library/GNUMail/
+	use xface && cp -a ${S}/Bundles/Face/Face.bundle ${D}${GENTOO_GNUSTEP_ROOT}/System/Library/GNUMail/
+	use crypt && cp -a ${S}/Bundles/PGP/PGP.bundle ${D}${GENTOO_GNUSTEP_ROOT}/System/Library/GNUMail/
+	use emoticon && cp -a ${S}/Bundles/Emoticon/Emoticon.bundle ${D}${GENTOO_GNUSTEP_ROOT}/System/Library/GNUMail/
 
 	egnustep_package_config
 }
