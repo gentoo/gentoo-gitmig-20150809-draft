@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/selinux-base-policy
+# ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.2 2003/07/30 02:10:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.3 2003/07/31 04:54:52 vapier Exp $
 
 *selinux-base-policy-20030729 (29 Jul 2003)
 
