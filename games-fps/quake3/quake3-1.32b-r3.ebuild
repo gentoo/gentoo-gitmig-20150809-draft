@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.8 2004/05/10 09:54:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.9 2004/05/10 10:42:09 wolf31o2 Exp $
 
 inherit games
 
@@ -21,6 +21,8 @@ RDEPEND="virtual/glibc
 	amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
 S=${WORKDIR}
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 pkg_setup() {
 	check_license
@@ -32,15 +34,14 @@ src_unpack() {
 }
 
 src_install() {
-	dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir ${dir}
 
 	insinto ${dir}/baseq3
 	doins baseq3/*.pk3
-	mv Docs ${D}/${dir}/
+	mv Docs ${Ddir}/
 	insinto ${dir}/missionpack
 	doins missionpack/*.pk3
-	mv pb ${D}/${dir}/
+	mv pb ${Ddir}/
 
 	exeinto ${dir}
 	insinto ${dir}
