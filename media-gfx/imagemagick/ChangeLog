@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.104 2004/11/28 00:08:57 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.105 2004/12/04 22:34:44 sekretarz Exp $
+
+  04 Dec 2004; Karol Wojtaszek <sekretarz@gentoo.org> :
+  Version bump, bug #72920
 
   27 Nov 2004; Hardave Riar <hardave@gentoo.org> imagemagick-6.1.3.4.ebuild:
   Stable on mips, bug #71953.
