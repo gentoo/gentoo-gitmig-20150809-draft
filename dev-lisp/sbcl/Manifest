@@ -1,4 +1,4 @@
-MD5 074206fdc532a3b51dc5c931085bdfa7 sbcl-0.8.4.ebuild 2564
+MD5 c4fad0c97a08164fd44dea56a258a475 sbcl-0.8.4.ebuild 2560
 MD5 30af45636c7e7d046f5ad5a732473742 sbcl-0.8.3.68.ebuild 2545
 MD5 215c765767ee81f9cbae0696e4fc0c53 sbcl-0.7.6-r1.ebuild 1482
 MD5 f67859fbfee204bba3ee73ee8abe994a sbcl-0.6.12.ebuild 1053
@@ -6,7 +6,7 @@ MD5 6c9f9c96627678efaa377d40692ea969 sbcl-0.8.1.ebuild 1534
 MD5 a6e113337aada357e7aa8b93dce9c82a sbcl-0.7.5.ebuild 1372
 MD5 d913694a716b741d4edb240f3d8049b3 sbcl-0.8.3.ebuild 2562
 MD5 3f7c2bc02639ca69e478db920d8b3704 sbcl-0.7.7.ebuild 1479
-MD5 4d4ef20febb79207307da1b071eaf530 ChangeLog 2878
+MD5 d34c4b0ca7fbb657c7f118b0f21aca19 ChangeLog 3174
 MD5 6e40a080b566cc78dfe522ae34eec0a7 files/install-clc.lisp 1338
 MD5 2821ba30af598f01018a43b370010e7c files/sbcl.rc 251
 MD5 149ae58f2a3254c2746b71452292abf2 files/sbcl.sh 2170
