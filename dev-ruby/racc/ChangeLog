@@ -1,13 +1,15 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.7 2003/04/10 12:09:37 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.8 2003/05/23 11:53:27 twp Exp $
+
+  23 May 2003; Tom Payne <twp@gentoo.org> racc-1.4.3.ebuild :
+  Marked stable on all ARCHs. Added IUSE. Re-formated ChangeLog.
 
   10 Apr 2003; Tom Payne <twp@gentoo.org> racc-1.4.3.ebuild :
-
   Updated homepage.
 
-	07 Jan 2003; Chris Houser <chouser@gentoo.org> racc-1.4.1.ebuild :
-	Added "alpha" to KEYWORDS
+  07 Jan 2003; Chris Houser <chouser@gentoo.org> racc-1.4.1.ebuild :
+  Added "alpha" to KEYWORDS
 
 *racc-1.4.3 (31 Jan 2003)
 
@@ -16,22 +18,19 @@
 
 *racc-1.4.1 (17 Aug 2002)
 
-	17 Aug 2002; Aron Griffis <agriffis@gentoo.org> racc-1.4.1.ebuild:
-
-	Updated to version 1.4.1 and modified the ebuild to work correctly for the
-	new version.
+  17 Aug 2002; Aron Griffis <agriffis@gentoo.org> racc-1.4.1.ebuild:
+  Updated to version 1.4.1 and modified the ebuild to work correctly for the
+  new version.
 
 *racc-1.2.4 (1 Feb 2002)
 
-	1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-	
-	Added initial ChangeLog which should be updated whenever the package is
-	updated in any way. This changelog is targetted to users. This means that
-	the comments should well explained and written in clean English. The
-	details about writing correct changelogs are explained in the
-	skel.ChangeLog file which you can find in the root directory of the
-	portage repository.
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that
+  the comments should well explained and written in clean English. The
+  details about writing correct changelogs are explained in the
+  skel.ChangeLog file which you can find in the root directory of the
+  portage repository.
 
-	07 Jul 2002; Aron Griffis <agriffis@gentoo.org> racc-1.2.4.ebuild:
-
-	Added LICENSE, KEYWORDS, SLOT.
+  07 Jul 2002; Aron Griffis <agriffis@gentoo.org> racc-1.2.4.ebuild:
+  Added LICENSE, KEYWORDS, SLOT.

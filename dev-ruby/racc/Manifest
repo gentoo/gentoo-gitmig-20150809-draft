@@ -1,0 +1,7 @@
+MD5 99282b7bc2f549b1a535a3cb630ffbbd ChangeLog 1378
+MD5 044ce019963d7443c586636db2f542fa racc-1.2.4.ebuild 832
+MD5 d32934d8724c19edd54e2a392a65fef7 racc-1.4.1.ebuild 890
+MD5 85cab566bd4b85d25ef9c7f37c2abcc1 racc-1.4.3.ebuild 954
+MD5 efcb5da376170b1fad0b53c9ad570fdb files/digest-racc-1.2.4 61
+MD5 fd66b659f20f9189514b44f19affe979 files/digest-racc-1.4.1 66
+MD5 e427d87d0d84f2e6a6913b7b964601ea files/digest-racc-1.4.3 126
