@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.2-r1.ebuild,v 1.1 2003/10/07 18:16:23 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.2-r2.ebuild,v 1.1 2003/10/21 02:25:21 pebenito Exp $
 
 IUSE=""
 
@@ -21,6 +21,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/libselinux-1.2-gentoo.diff
 	epatch ${FILESDIR}/libselinux-1.2-const.diff
+
+	# use sys-apps/attr with headers older than 2.4.20
+	has_version '>=sys-kernel/linux-headers-2.4.20' && epatch ${FILESDIR}/libselinux-1.2-attr.diff
 }
 
 src_compile() {
