@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.38.ebuild,v 1.2 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.43.ebuild,v 1.1 2002/10/27 09:00:44 carpaski Exp $
 
 IUSE="build"
 
@@ -23,7 +23,7 @@ src_unpack() {
 	cd ${WORKDIR}; tar xjf ${FILESDIR}/portage-${PV}.tar.bz2
 }
 
-src_compile() {                           
+src_compile() {
 	cd ${S}/src; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
 	cd ${S}/src/sandbox-1.1
 	if [ "${ARCH}" = "x86" ]; then
@@ -166,8 +166,7 @@ pkg_postinst() {
 	echo
 	echo
 	einfo "WARNING: The default behavior for 'emerge rsync' is to have --clean enabled."
-	einfo "Please back up any modified files in your Portage tree before running emerge"
-	einfo "rsync."
+	einfo "Please back up any modified files in your Portage tree before emerge rsync."
 	echo
 	einfo "You may want to move any custom ebuilds to a new directory, and then set"
 	einfo "PORTDIR_OVERLAY (in /etc/make.conf) to point to this directory.  For example,"
@@ -175,6 +174,15 @@ pkg_postinst() {
 	einfo "Then set PORTDIR_OVERLAY=\"/usr/portage.local\"  Portage should see your"
 	einfo "personal ebuilds.  NOTE: PORTDIR_OVERLAY support is *beta* code; it may not"
 	einfo "work correctly yet."
+	echo
+	einfo "NOTICE: PLEASE update your make.globals. All user changes to varaibles"
+	einfo "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
+	einfo "AUTOCLEAN's default has been changed to 'yes' to ensure that libraries are"
+	einfo "treated properly during merges. NOT updating make.globals may result in you"
+	einfo "experiencing missing symlinks, failed compiles, and the inability to log in"
+	einfo "to your system. Running 'ldconfig' should fix the majority of these problems,"
+	einfo "but you may need to boot from a gentoo cd and execute the following:"
+	einfo "chroot /mnt/gentoo /sbin/ldconfig"
 	echo
 	echo
 	}
