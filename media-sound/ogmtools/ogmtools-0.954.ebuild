@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-0.954.ebuild,v 1.2 2003/02/13 13:17:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-0.954.ebuild,v 1.3 2003/02/14 17:12:03 mholzer Exp $
 
 IUSE=""
 
@@ -11,7 +11,8 @@ KEYWORDS="~x86"
 HOMEPAGE="http://www.bunkus.org/videotools/ogmtools/"
 SRC_URI="http://www.bunkus.org/videotools/${PN}/${P}.tar.bz2"
 
-DEPEND="media-sound/vorbis-tools"
+DEPEND=">=sys-devel/automake-1.6.0
+		media-sound/vorbis-tools"
 
 
 src_compile() {
