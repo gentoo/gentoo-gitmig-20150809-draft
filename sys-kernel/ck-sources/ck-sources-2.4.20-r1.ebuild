@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
-#/home/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.20.ebuild,v1.2 2002/11/28 18:24:38 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.20-r1.ebuild,v 1.2 2002/12/08 20:20:22 lostlogic Exp $
 
 IUSE="build"
 
