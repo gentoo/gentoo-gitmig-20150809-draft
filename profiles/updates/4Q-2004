@@ -164,3 +164,4 @@ move app-sci/oregano sci-electronics/oregano
 move app-sci/pcb sci-electronics/pcb
 move app-sci/petrify sci-electronics/petrify
 move app-sci/spice sci-electronics/spice
+move app-sci/systemc sci-electronics/systemc
