@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.19 2005/03/07 20:21:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.20 2005/03/26 14:41:39 mrness Exp $
+
+  26 Mar 2005; Alin Nastac <mrness@gentoo.org> ltmodem-8.31_alpha10-r1.ebuild,
+  -ltmodem-8.31_alpha10.ebuild, ltmodem-8.31_alpha8.ebuild:
+  Correct info messages when installed against a 2.4 kernel (#86658).
+  Mark 8.31_alpha10-r1 as stable on x86 and remove obsolete version 8.31_alpha10.
 
 *ltmodem-8.31_alpha10-r1 (07 Mar 2005)
 
