@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.2.3.ebuild,v 1.2 2003/01/02 22:06:55 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.2.3.ebuild,v 1.3 2003/01/21 19:55:01 mkeadle Exp $
 
 IUSE="nls"
 
@@ -15,7 +15,8 @@ SLOT="2"
 LICENSE="BSD"
 KEYWORDS="~x86"
 
-DEPEND="x11-libs/xft"
+DEPEND="$DEPEND
+		x11-libs/xft"
 
 mydoc="CHANGE* TODO LICENSE data/README*"
 myconf="--enable-xinerama"
