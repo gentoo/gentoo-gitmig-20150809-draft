@@ -1,20 +1,36 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/files/smartd.rc,v 1.3 2004/07/15 00:51:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/files/smartd.rc,v 1.4 2004/10/10 01:19:01 vapier Exp $
 
-depend() {
-	need localmount
+opts="${opts} reload"
+
+checkconfig() {
+	if [ ! -f "/etc/smartd.conf" ] ; then
+		eerror "You should setup your /etc/smartd.conf file!"
+		eerror "See sample conf: /etc/smartd.conf.example"
+		return 1
+	fi
+	return 0
 }
 
 start() {
+	checkconfig || return 1
+
 	ebegin "Starting S.M.A.R.T. monitoring daemon"
-	start-stop-daemon --start --exec /usr/sbin/smartd
+	start-stop-daemon --start --exec /usr/sbin/smartd \
+		-- -p /var/run/smartd.pid ${SMARTD_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping S.M.A.R.T. monitoring daemon"
-	start-stop-daemon --stop --exec /usr/sbin/smartd
+	start-stop-daemon --stop --pid /var/run/smartd.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading configuration"
+	killall -HUP smartd &>/dev/null
 	eend $?
 }
