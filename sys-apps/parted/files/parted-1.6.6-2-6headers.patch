@@ -1,0 +1,17 @@
+--- parted-1.6.6/libparted/linux.c	2003-02-15 21:30:03.000000000 +0000
++++ parted-1.6.6/libparted/linux.c	2004-02-02 17:38:16.000000000 +0000
+@@ -215,6 +215,14 @@
+ #define I2O_MAJOR7		86
+ #define I2O_MAJOR8		87
+ 
++/* plasmaroo@gentoo.org :: 2.6 Compatibility */
++
++#undef _IOR
++#undef _IOWR
++
++#define _IOR(type,nr,size) _IOC(_IOC_READ,(type),(nr),sizeof(size))
++#define _IOWR(type,nr,size) _IOC(_IOC_READ|_IOC_WRITE,(type),(nr),sizeof(size))
++
+ #define SCSI_BLK_MAJOR(M) (						\
+ 		(M) == SCSI_DISK0_MAJOR 				\
+ 		|| (M) == SCSI_CDROM_MAJOR				\

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6.ebuild,v 1.12 2004/01/30 20:14:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6.ebuild,v 1.13 2004/02/02 17:54:50 plasmaroo Exp $
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
@@ -22,8 +22,9 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/parted-${PV}-hfs-8.patch
-	epatch ${FILESDIR}/parted-${PV}-gcc-3.3.patch
+	epatch ${FILESDIR}/${P}-hfs-8.patch
+	epatch ${FILESDIR}/${P}-gcc-3.3.patch
+	epatch ${FILESDIR}/${P}-2-6headers.patch
 }
 
 src_compile() {
