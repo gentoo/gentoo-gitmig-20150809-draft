@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.6-r1.ebuild,v 1.1 2003/07/31 19:59:40 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.6-r1.ebuild,v 1.2 2003/09/07 00:03:17 msterret Exp $
 
 DESCRIPTION="Basic AX.25 (Amateur Radio) user tools, additional daemons"
 HOMEPAGE="http://ax25.sourceforge.net/"
@@ -12,26 +12,25 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/glibc
-        >=dev-libs/libax25-0.0.7"
+	>=dev-libs/libax25-0.0.7"
 
 src_install() {
-    make DESTDIR=${D} install installconf || die
+	make DESTDIR=${D} install installconf || die
 
-    exeinto /etc/init.d ; newexe ${FILESDIR}/ax25ipd.rc ax25ipd
-    newexe ${FILESDIR}/ax25mond.rc ax25mond
-    newexe ${FILESDIR}/ax25rtd.rc ax25rtd
+	exeinto /etc/init.d ; newexe ${FILESDIR}/ax25ipd.rc ax25ipd
+	newexe ${FILESDIR}/ax25mond.rc ax25mond
+	newexe ${FILESDIR}/ax25rtd.rc ax25rtd
 
-    # Make the documentation installation more Gentoo-like
-    rm -rf ${D}/usr/share/doc/ax25-apps
-    dodoc AUTHORS COPYING NEWS README ax25ipd/COPYING.ax25ipd \
+	# Make the documentation installation more Gentoo-like
+	rm -rf ${D}/usr/share/doc/ax25-apps
+	dodoc AUTHORS COPYING NEWS README ax25ipd/COPYING.ax25ipd \
 	ax25ipd/README.ax25ipd ax25rtd/README.ax25rtd \
 	ax25ipd/HISTORY.ax25ipd ax25rtd/TODO.ax25rtd
 
-    # FIXME: Configuration protect logic for the ax25rtd cache
-    #   or move these files
-    # Moving might require changes to ax25rtd/ax25rtctl 
-    insinto /var/lib/ax25/ax25rtd
-    newins ${FILESDIR}/ax25rtd.blank ax25_route
-    newins ${FILESDIR}/ax25rtd.blank ip_route
-
+	# FIXME: Configuration protect logic for the ax25rtd cache
+	#   or move these files
+	# Moving might require changes to ax25rtd/ax25rtctl
+	insinto /var/lib/ax25/ax25rtd
+	newins ${FILESDIR}/ax25rtd.blank ax25_route
+	newins ${FILESDIR}/ax25rtd.blank ip_route
 }
