@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.2 2004/11/12 12:28:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.3 2004/11/19 11:20:03 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -76,8 +76,8 @@ SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
 
 # Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND
 # through the sneaky eclass dep mangling portage does.
-DEPEND="kdexdeltas? ( dev-util/xdelta )"
-RDEPEND=""
+DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
+#RDEPEND=""
 
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
 
