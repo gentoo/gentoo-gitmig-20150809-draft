@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8ba51ffb8fc821c147098a38125f086 koctave-0.65.ebuild 594
-MD5 ad9fb078cc14b991d01136a36995fe22 ChangeLog 879
+MD5 9145eeacef118db5e5f4e1ecd6b923c8 koctave-0.65.ebuild 623
+MD5 89ff1b498a36a974f4ce15028b2833ad ChangeLog 1245
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 c118f6e51940e1810fd2907f9edde38f files/digest-koctave-0.65 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0b3uI1lqEGTUzyQRAnUkAKDWCicgjTcySKDdgn2dNlFzl9Pz3ACgiIHs
-LE6jn6Re2GIP0ym2WDhxeO4=
-=1Nhy
------END PGP SIGNATURE-----
