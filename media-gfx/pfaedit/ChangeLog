@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pfaedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.10 2003/12/03 15:33:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.11 2003/12/03 15:55:11 agriffis Exp $
+
+  03 Dec 2003; Aron Griffis <agriffis@gentoo.org> pfaedit-031123.ebuild:
+  Stable on alpha to support lilypond-1.8.2
 
 *pfaedit-031123 (03 Dec 2003)
 

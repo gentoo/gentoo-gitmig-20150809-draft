@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.5 2003/09/16 19:10:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.6 2003/12/03 15:53:55 agriffis Exp $
+
+  03 Dec 2003; Aron Griffis <agriffis@gentoo.org> autotrace-0.31.1-r1.ebuild:
+  Stable on alpha to support lilypond-1.8.2
 
   16 Sep 2003; Aron Griffis <agriffis@gentoo.org> autotrace-0.31.1-r1.ebuild:
   Add ~alpha
