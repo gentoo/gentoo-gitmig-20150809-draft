@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.8 2001/08/23 07:32:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.9 2001/08/23 23:42:06 drobbins Exp $
 
 SV=1.1.3
 S=${WORKDIR}/rc-scripts-${SV}
@@ -111,7 +111,10 @@ src_install()
 	dodir /var/db/pkg 
 	keepdir /var/spool /var/tmp /var/lib/misc
 	chmod 1777 ${D}/var/tmp
-	keepdir /root /proc
+	keepdir /root
+	
+	#/proc is very likely mounted right now so a keepdir will fail on merge
+	dodir /proc	
 	
 	chmod go-rx ${D}/root
 	keepdir /tmp
