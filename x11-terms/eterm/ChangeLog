@@ -1,9 +1,15 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.12 2003/01/24 15:39:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.13 2003/01/24 16:25:21 seo Exp $
 
   24 Jan 2003; Jason Wever <weeve@gentoo.org> eterm-0.9.2-r3.ebuild :
   Added ~sparc to keywords.
+
+*eterm-0.9.2-r4 (24 Jan 2003)
+
+  24 Jan 2003; Jungmin Seo <seo@gentoo.org> eterm-0.9.2-r4.ebuild,
+  ChangeLog, digest-eterm-0.9.2-r4 :
+  Added 'cjk' USE flag, based on -r3
 
 *eterm-0.9.2-r3 (22 Nov 2002)
 
