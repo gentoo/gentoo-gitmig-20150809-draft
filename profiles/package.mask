@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <phosphan@gentoo.org> (11 Nov 2003)
+# does not compile with current ffmpeg, and old version is
+# no longer in portage - should be fixed upstream instead of
+# keeping old stuff around
+media-tv/nvrec
+
 # <liquidx@gentoo.org> (10 Nov 2003)
 # stability problems
 =net-www/straw-0.20
