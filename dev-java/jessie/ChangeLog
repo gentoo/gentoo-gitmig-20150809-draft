@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jessie
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/ChangeLog,v 1.1 2004/04/01 15:45:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/ChangeLog,v 1.2 2004/04/07 13:12:13 st_lim Exp $
+
+  07 Apr 2004; Lim Swee Tat <st_lim@gentoo.org> jessie-0.9.7.ebuild:
+  Fixed a problem where it requires gnu-crypto
 
 *jessie-0.9.7 (01 Apr 2004)
 
