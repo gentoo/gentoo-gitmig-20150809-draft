@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.30 2004/01/05 12:53:03 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.31 2004/01/14 03:02:02 avenj Exp $
+
+  13 Jan 2004; Jon Portnoy <avenj@gentoo.org> webmin-1.110.ebuild :
+  Stable on AMD64.
 
   05 Jan 2004; Jason Wever <weeve@gentoo.org> webmin-1.080.ebuild,
   webmin-1.110.ebuild, webmin-1.121.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.03-r1.ebuild,v 1.4 2004/01/04 17:07:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.03-r1.ebuild,v 1.5 2004/01/14 02:54:45 avenj Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sourceforge.net/projects/pwgen/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc hppa ~amd64 ~alpha"
+KEYWORDS="x86 ~ppc sparc hppa amd64 ~alpha"
 
 DEPEND="virtual/glibc"
 
