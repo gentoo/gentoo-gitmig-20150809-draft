@@ -325,10 +325,6 @@ net-misc/nt
 # Needs more investigation as to why.
 dev-java/sun-j2sdk
 
-# <george@gentoo.org> (28 Aug 2002)
-# masked for testing
-=app-emulation/pose-3.5-r1
-
 # <mcummings@gentoo.org> (28 Jul 2002)
 # new version of perl - incompatible with 5.6 IO model
 # tested on 05 Aug 2002 on ppc by pvdabeel@gentoo.org
@@ -406,10 +402,6 @@ dev-perl/CDDB-File
 # <danarmak@gentoo.org> (20 Aug 2002)
 # masked for extensive testing
 x11-libs/qt-embedded
-
-# <george@gentoo.org> (19 Aug 2002) 
-# masked for testing
-=dev-libs/korelib-1.0
 
 # <leonardop@gentoo.org> (19 Aug 2002)
 # Masked for, guess what... testing
