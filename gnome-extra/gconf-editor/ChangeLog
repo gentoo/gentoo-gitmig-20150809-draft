@@ -1,12 +1,14 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.2 2002/05/23 19:15:17 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.3 2002/07/25 03:14:32 spider Exp $
 
 *gconf-editor-0.2 (23 May 2002)
   23 May 2002 ;  Spider <spider@gentoo.org> gconf-editor-0.2.ebuild: 
   new version around
-
-
+ 
+  25 Jul 2002; Spider <spider@gentoo.org>
+  SLOT KEYWORDS and LICENSE added
+    
 *gconf-editor-0.1-r4 (22 May 2002)
   22 May 2002 ;  Spider <spider@gentoo.org> gconf-editor-0.1-r4.ebuild: 
   an editor for gconf data 
