@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/affiche/affiche-0.6.0.ebuild,v 1.6 2004/06/24 21:39:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/affiche/affiche-0.6.0.ebuild,v 1.7 2004/07/22 21:40:12 fafhrd Exp $
 
-inherit gnustep
+inherit gnustep-old
 
 S=${WORKDIR}/${PN/a/A}
 

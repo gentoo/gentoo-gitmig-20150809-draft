@@ -1,6 +1,14 @@
 # ChangeLog for app-gnustep/helpviewer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/helpviewer/ChangeLog,v 1.4 2004/06/24 21:41:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/helpviewer/ChangeLog,v 1.5 2004/07/22 21:42:50 fafhrd Exp $
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  helpviewer-0.3.ebuild:
+  Changing the eclass to gnustep-old
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  helpviewer-0.3.ebuild:
+  Changing the eclass to gnustep-old
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> helpviewer-0.3.ebuild:
   Added IUSE=

@@ -1,6 +1,12 @@
 # ChangeLog for app-gnustep/jigs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/jigs/ChangeLog,v 1.3 2004/06/24 21:41:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/jigs/ChangeLog,v 1.4 2004/07/22 21:43:40 fafhrd Exp $
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> jigs-1.5.5.ebuild:
+  Changing the eclass to gnustep-old
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> jigs-1.5.5.ebuild:
+  Changing the eclass to gnustep-old
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> jigs-1.5.5.ebuild:
   Added IUSE=
