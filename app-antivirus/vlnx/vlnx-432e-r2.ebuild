@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/vlnx-432e-r2.ebuild,v 1.4 2005/01/30 13:13:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/vlnx-432e-r2.ebuild,v 1.5 2005/01/30 13:24:58 ticho Exp $
 
 MY_P="${P/-/}"
 S="${WORKDIR}"
@@ -16,7 +16,8 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="net-misc/wget
+RDEPEND="sys-libs/lib-compat
+	net-misc/wget
 	dev-lang/perl
 	app-arch/unzip"
 PROVIDE="virtual/antivirus"
