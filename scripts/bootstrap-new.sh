@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.1 2005/01/26 12:33:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.2 2005/02/04 16:22:46 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -78,7 +78,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.1 2005/01/26 12:33:43 wolf31o2 Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.2 2005/02/04 16:22:46 wolf31o2 Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -141,9 +141,9 @@ cleanup() {
 			mv -f /etc/make.conf.build /etc/make.conf
 		fi
 		if [ ${BOOTSTRAP_STAGE} -le 3 ] ; then
-			cp -f /var/cache/edb/mtimedb /var/run/boostrap-mtimedb
+			cp -f /var/cache/edb/mtimedb /var/run/bootstrap-mtimedb
 		else
-			rm -f /var/run/boostrap-mtimedb
+			rm -f /var/run/bootstrap-mtimedb
 		fi
 	fi
 	exit $1
