@@ -2,23 +2,22 @@
 Hash: SHA1
 
 MD5 cd30257dfb2bafb1560f0ce3b2b68cbf grsec-sources-2.4.28.2.0.2-r1.ebuild 1253
-MD5 17008d2d71faef9a97b8a2ce86f455ef grsec-sources-2.4.27.2.0.1-r4.ebuild 1738
-MD5 7b224fc44044267d7d658337926ef322 grsec-sources-2.4.28.2.0.2.ebuild 1202
-MD5 a78dc3d996298501c32772e017ba18b2 ChangeLog 8435
+MD5 90c06150068d30bac2c7f7eb43215bc4 grsec-sources-2.4.28.2.0.2-r2.ebuild 1281
+MD5 a14125aea9814c68efe8c1053f1e7469 ChangeLog 8697
 MD5 0b2ea9b53b5d526e39afbdc5040ff07a metadata.xml 487
 MD5 3dac23b6e285462a7cda41505cc698e1 files/2.4.26-CAN-2004-0394.patch 319
-MD5 f0aff4d717032ce77283fe63d6df94ec files/digest-grsec-sources-2.4.27.2.0.1-r4 462
 MD5 b293289df61d6f42ff54e4e0ceae53cf files/2.4.24-x86.config 2397
-MD5 c829ff92477a5a9e4fcbc370303217f8 files/digest-grsec-sources-2.4.28.2.0.2 144
 MD5 4a0215139f9aebfe2cc2747743763f08 files/2.4.28-binfmt_a.out.patch 1887
 MD5 c829ff92477a5a9e4fcbc370303217f8 files/digest-grsec-sources-2.4.28.2.0.2-r1 144
+MD5 c829ff92477a5a9e4fcbc370303217f8 files/digest-grsec-sources-2.4.28.2.0.2-r2 144
+MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/CAN-2004-1016.patch 2835
 MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iQCVAwUBQb3S454WFLgrx1GWAQKGdQP/SgFTIMWcUJbFzOIwxhwg0J7iom4l5U3g
-0Yw2VusoMebFa3+fWn4pnXAhFfMdeQ+YVSMBzpOBNJHNNHzJfxAJyxAeA9m0Hu2X
-uJY24HWzT5X7FxneIBuvS0ccOirpNyT7z5aIB1r7DDapyqxgFES3gJ+BY0ImxUZm
-NMTPCI03vlE=
-=bDQL
+iQCVAwUBQb/gt54WFLgrx1GWAQK9DAP9FFdjyk3JVh3bODTbw9U7TD/ti7Qvhxe4
+QplUkSIjTemJIxxjwab3cR1KfSng/cxjzOaZIuvDfiR+iMnT0JdR+6RVoPWWUQ38
+OHTvjJqtHa8LlFFEx094tW8Ly3k8gZ+/kow2Y5WIxlCRnX9QkB+cN30CnWaYewpi
+B7kMGXKXpa4=
+=IkEh
 -----END PGP SIGNATURE-----

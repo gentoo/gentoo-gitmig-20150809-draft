@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.28.2.0.2.ebuild,v 1.3 2004/11/26 17:14:49 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.28.2.0.2-r2.ebuild,v 1.1 2004/12/15 06:59:46 solar Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="yes"
@@ -23,7 +23,9 @@ KEYWORDS="x86 sparc ppc alpha amd64 -hppa"
 RESTRICT="buildpkg"
 IUSE=""
 
-UNIPATCH_LIST="${DISTDIR}/${PATCH_SRC_BASE}"
+UNIPATCH_LIST="${DISTDIR}/${PATCH_SRC_BASE} \
+	${FILESDIR}/2.4.28-binfmt_a.out.patch
+	${FILESDIR}/CAN-2004-1016.patch"
 
 src_unpack() {
 	kernel-2_src_unpack
