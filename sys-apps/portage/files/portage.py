@@ -72,7 +72,7 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 			"gnome-office","kde-apps", "kde-base", "kde-libs", "media-gfx", "media-libs", "media-sound", "media-video", 
 			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-irc", "net-libs", "net-mail", "net-misc", "net-nds", 
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
-			"x11-terms", "x11-wm")
+			"x11-terms", "x11-wm","virtual")
 
 def gen_archnames():
 	"generate archive names from URL list"
@@ -227,6 +227,42 @@ def merge(mycategory,mypackage,mystart):
 	outfile=open(contentsfile,"w")
 	mergefiles(outfile,mystart)
 	outfile.close()
+
+	#begin provides/virtual package code
+	mypfn=root+"var/db/pkg/"+mycategory+"/"+mypackage+"/PROVIDES"
+	if os.path.exists(mypfn):
+		#this package provides some (possibly virtual) packages
+		mypfile=open(mypfn,"r")
+		myprovides=mypfile.readlines()
+		mypfile.close()
+		for x in myprovides:
+			#remove trailing newline
+			x=x[:-1]
+			mypsplit=string.split(x,"/")
+			if len(mypsplit)!=2:
+				print "!!! Invalid PROVIDES string:",x
+				sys.exit(1)	
+			providesdir=root+"var/db/pkg/"+x
+			if os.path.exists(providesdir):
+				#if there's a non-virtual package there, we won't overwrite it
+				#if it's a virtual package, we'll claim it as our own
+				if not os.path.exists(providesdir+"/VIRTUAL"):
+					#non-virtual, skip it
+					print ">>> Existing package",x,"is non-virtual; skipping"
+					continue
+			if not os.path.exists(providesdir):
+				if not os.path.exists(root+"var/db/pkg/"+mypsplit[0]):
+					os.mkdir(root+"var/db/pkg/"+mypsplit[0])
+				os.mkdir(providesdir)
+			#create empty contents file
+			mytouch=open(providesdir+"/CONTENTS","w")
+			mytouch.close()
+			#create virtual file containing name of this package
+			myvirtual=open(providesdir+"/VIRTUAL","w")
+			myvirtual.write(mycategory+"/"+mypackage+"\n")
+			myvirtual.close()
+	#end provides/virtual package code
+	
 	print
 	print ">>>",mypackage,"merged."
 	print
@@ -246,6 +282,38 @@ def unmerge(category,pkgname):
 	except:
 		print "Error -- could not open CONTENTS file for", pkgname+".  Aborting."
 		return	
+		
+	#begin virtual/provides package code
+	mypname=root+"var/db/pkg/"+category+"/"+pkgname+"/PROVIDES"
+	if os.path.exists(mypname):
+		mypfile=open(mypname,"r")
+		myprovides=mypfile.readlines()
+		mypfile.close()
+		pos=0
+		for x in myprovides:
+			#zap trailing newline
+			x=x[:-1]
+			if len(x)==0:
+				continue
+			#zap virtual packages
+			if os.path.isdir(root+"var/db/pkg/"+x):
+				if os.path.exists(root+"var/db/pkg/"+x+"/VIRTUAL"):
+					#this is a virtual package, we can zap it if it contains our package name
+					myvirtual=open(root+"var/db/pkg/"+x+"/VIRTUAL","r")
+					myvpkgname=myvirtual.readlines()[0][:-1]
+					if myvpkgname != (category+"/"+pkgname):
+						print ">>> Virtual package",x,"has been claimed by another package, skipping."
+						continue
+					zapme=os.listdir(root+"var/db/pkg/"+x)
+					for y in zapme:
+						os.unlink(root+"var/db/pkg/"+x+"/"+y)
+					os.rmdir(root+"var/db/pkg/"+x)
+					#virtual package removed
+				else:
+					print ">>>",x,"(provided by",category+"/"+pkgname+") is not a virtual package, keeping."
+					continue
+	#end virtual/provides package code
+
 	pkgfiles={}
 	for line in contents.readlines():
 		mydat=string.split(line)
@@ -287,15 +355,19 @@ def unmerge(category,pkgname):
 	# in the CONTENTS file.  We'll do after everything else has 
 	# completed successfully.
 	myebuildfile=os.path.normpath(root+"var/db/pkg/"+category+"/"+pkgname+"/"+pkgname+".ebuild")
-	if pkgfiles.has_key(myebuildfile):
-		del pkgfiles[myebuildfile]
-
+	if os.path.exists(myebuildfile):
+		if pkgfiles.has_key(myebuildfile):
+			del pkgfiles[myebuildfile]
+	else:
+		myebuildfile=None
+		
 	mykeys=pkgfiles.keys()
 	mykeys.sort()
 	mykeys.reverse()
 	
 	#prerm script
-	pkgscript("prerm",myebuildfile)
+	if myebuildfile:
+		pkgscript("prerm",myebuildfile)
 	
 	for obj in mykeys:
 		obj=os.path.normpath(obj)
@@ -353,7 +425,8 @@ def unmerge(category,pkgname):
 			print "<<<       ","dev",obj
 
 	#postrm script
-	pkgscript("postrm",myebuildfile)	
+	if myebuildfile:
+		pkgscript("postrm",myebuildfile)	
 	#recursive cleanup
 	for thing in os.listdir(root+"var/db/pkg/"+category+"/"+pkgname):
 		os.unlink(root+"var/db/pkg/"+category+"/"+pkgname+"/"+thing)
@@ -620,7 +693,7 @@ def isjustname(mypkg):
 
 def isspecific(mypkg):
 	mysplit=string.split(mypkg,"/")
-	if len(mysplit)>1:
+	if len(mysplit)==2:
 		if not isjustname(mysplit[1]):
 			return 1
 	return 0
@@ -1151,7 +1224,14 @@ def port_insttree():
 		if not os.path.isdir(os.getcwd()+"/"+x):
 			continue
 		for y in os.listdir(os.getcwd()+"/"+x):
-			fullpkg=x+"/"+y
+			if x=="virtual":
+				#virtual packages don't require versions, if none is found, add a "1.0" to the end
+				if isjustname(y):
+					fullpkg=x+"/"+y+"-1.0"
+				else:
+					fullpkg=x+"/"+y
+			else:
+				fullpkg=x+"/"+y
 			mysplit=catpkgsplit(fullpkg)
 			mykey=x+"/"+mysplit[1]
 			if not installeddict.has_key(mykey):
