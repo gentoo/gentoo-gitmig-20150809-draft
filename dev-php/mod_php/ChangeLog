@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.183 2004/09/27 19:27:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.184 2004/09/27 21:19:53 kloeri Exp $
+
+  27 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> mod_php-4.3.9.ebuild:
+  Stable on alpha, bug 64223.
 
   27 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> mod_php-4.3.9.ebuild:
   Stable on sparc wrt #64223
