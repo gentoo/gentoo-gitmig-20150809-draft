@@ -2,7 +2,7 @@ MD5 6edbe26f81fbd488b6fbffd1bbd27ca9 files/digest-atftp-0.6 61
 MD5 6edbe26f81fbd488b6fbffd1bbd27ca9 files/digest-atftp-0.6-r1 61
 MD5 ef1244d13cccdfbe2dff44442e0c3d1f files/atftp-0.6-security.patch 1019
 MD5 6edbe26f81fbd488b6fbffd1bbd27ca9 files/digest-atftp-0.6-r2 61
-MD5 012a9872f3a23e36b38d026603860494 atftp-0.6-r1.ebuild 867
+MD5 0311a0a7dc063a18738d44abbc081432 atftp-0.6-r1.ebuild 864
 MD5 d0d92fe2366bef6deb301fa6608a2b28 atftp-0.6.ebuild 758
 MD5 6cd381e65146f06880cba8b7d2de7408 ChangeLog 774
 MD5 61e561d32d66c0382cbc43933a5b30a3 atftp-0.6-r2.ebuild 961

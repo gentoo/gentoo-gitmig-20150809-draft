@@ -14,8 +14,8 @@ MD5 2ef7d85b3290f9d192f9d20045b61052 files/vsftpd.xinetd.ipv6 484
 MD5 767d44cc19f7afc4085da8fd837193e4 files/digest-vsftpd-1.2.0 64
 MD5 12157a137e6633887fad5c7a8e1e1ae3 files/vsftpd-1.2.0-gentoo.diff.bz2 2078
 MD5 3f5cf714b4de6ff10f590a7239803cc2 vsftpd-1.0.1-r1.ebuild 1341
-MD5 1702821b33b583bbaa5b84e131256d93 vsftpd-1.1.2.ebuild 1573
+MD5 297f0cf7a839f5471830f77f9fff74d7 vsftpd-1.1.2.ebuild 1570
 MD5 e60d581d0c83694c9abc7cfff1da03b0 ChangeLog 1599
-MD5 2ecdd087d9cd0514aec3b55cbc7b8f3c vsftpd-1.1.3.ebuild 1897
-MD5 75c2033e59f1d793acfa0bf124de2dc9 vsftpd-1.1.3-r1.ebuild 2073
-MD5 d5533aff21c8f0d2b6015fc6b03c4b20 vsftpd-1.2.0.ebuild 2008
+MD5 9db5296545956ff6f426197c6be2444c vsftpd-1.1.3.ebuild 1893
+MD5 b9087d5dc32704a9c607971cd6679ac0 vsftpd-1.1.3-r1.ebuild 2068
+MD5 45e0c3f7ff5c347e023d7f9f47dd721c vsftpd-1.2.0.ebuild 2006

@@ -11,10 +11,10 @@ MD5 f8e266b6e509c4af2f1d7c63b0e3d43a files/pure-ftpd.rc6-r1 800
 MD5 86b7638f0ed01530fff30204ba6b5ce7 files/pure-ftpd.xinetd 238
 MD5 9e563ab73369a22aac0cd7057d71de87 files/digest-pure-ftpd-1.0.15 69
 MD5 0252a914ff69f2e3b4e82eaf78fdb607 pure-ftpd-1.0.11-r1.ebuild 1698
-MD5 34e6e9855e8de040e615a0269c8cdc95 pure-ftpd-1.0.12-r1.ebuild 2005
-MD5 9a70cbc22165c91b7103db86a6830c8b pure-ftpd-1.0.12.ebuild 1981
-MD5 f20d83d21d6f82a6b5226b50245e86c0 pure-ftpd-1.0.13a.ebuild 1884
+MD5 8111b04699fdb1b690e91560908553e3 pure-ftpd-1.0.12-r1.ebuild 2002
+MD5 69962f7d89d738c1151fa15491e3eb7f pure-ftpd-1.0.12.ebuild 1978
+MD5 fc9bcedcf23457ad3f51e5929b443c37 pure-ftpd-1.0.13a.ebuild 1881
 MD5 347009af58280306b542bf15394b1b0a pure-ftpd-1.0.14.ebuild 2083
 MD5 fb4de1fa12d896d1126ae2d6a8d9f50e pure-ftpd-1.0.8-r1.ebuild 1433
-MD5 36f5fced92b15e0e9401aa601a5192bf ChangeLog 2235
+MD5 3bc01b716d99b26541ef0e5bba8540af ChangeLog 2354
 MD5 793846c61fe989a72e8886b98b9d21f3 pure-ftpd-1.0.15.ebuild 2083
