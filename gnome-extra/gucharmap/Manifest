@@ -1,4 +1,5 @@
 MD5 9104f3b300a0e860a1ff8d93e42d0bb2 gucharmap-1.2.0.ebuild 1128
+MD5 68834ad0a5700af2ebf21ff4d3b60d73 gucharmap-1.4.1.ebuild 852
 MD5 68834ad0a5700af2ebf21ff4d3b60d73 gucharmap-1.4.0.ebuild 852
 MD5 805190d51610a910cdb4d9e22401684c gucharmap-1.0.0.ebuild 1012
 MD5 5c7f260354d8a16fa212157e9d58aa79 ChangeLog 3125
@@ -7,3 +8,4 @@ MD5 2d194fe17e6be8b8c4c7c23ffd02f87b files/gucharmap-1.2.0-gcc2_fix.patch 516
 MD5 36fb8d54a4e85ae8f4ca7506325e73d6 files/digest-gucharmap-1.0.0 69
 MD5 83a76bca1a1ecdfd6fe04aa8ef5536d6 files/digest-gucharmap-1.2.0 69
 MD5 ab38904d42f796e4893ea53e55137db5 files/digest-gucharmap-1.4.0 69
+MD5 a0bdcf85c74456f55df0f5b0c721d961 files/digest-gucharmap-1.4.1 69
