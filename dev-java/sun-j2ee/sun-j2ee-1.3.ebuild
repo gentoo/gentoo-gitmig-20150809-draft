@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.ebuild,v 1.1 2002/01/13 01:08:53 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.ebuild,v 1.2 2002/01/18 16:06:26 karltk Exp $
 
 At=j2sdkee-1_3_01-linux.tar.gz
 S=${WORKDIR}/j2sdkee1.3
 DESCRIPTION="Sun's Java 2 Enterprise Edition Development Kit"
-SRC_URI="$At"
+SRC_URI=""
 HOMEPAGE="http://java.sun.com/j2ee/download.html#sdk"
 
 DEPEND="virtual/glibc"
@@ -16,7 +16,7 @@ RDEPEND=">=virtual/jre-1.3"
 PROVIDE="virtual/j2ee-1.3"
 
 src_unpack() {
-	if [ -f ${DISDIR}/${At} ] ; then
+	if [ ! -f ${DISTDIR}/${At} ] ; then
 		die "Please download ${At} from ${HOMEPAGE}"
 	fi
 	unpack ${At}
