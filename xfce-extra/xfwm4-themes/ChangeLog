@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfwm4-themes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.33 2004/11/01 03:20:04 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.34 2004/11/25 05:40:04 bcowan Exp $
+
+*xfwm4-themes-4.1.99.1 (25 Nov 2004)
+
+  25 Nov 2004; Brad Cowan <bcowan@gentoo.org> +xfwm4-themes-4.1.99.1.ebuild:
+  Version bump for beta version of 4.2 release.
 
 *xfwm4-themes-4.1.91 (31 Oct 2004)
 
