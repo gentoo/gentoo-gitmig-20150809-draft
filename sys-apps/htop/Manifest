@@ -1,4 +1,6 @@
 MD5 eb4bbf8601e9cc359a1f91d669379c1a metadata.xml 568
 MD5 1ebb0f5d6faaa1b5682692171e24ebc6 htop-0.3.ebuild 670
-MD5 ce44b64590882e6ff687aeb86e3350dc ChangeLog 296
+MD5 2514c2e6655f7ef09a6dcefedf7d0554 ChangeLog 411
+MD5 49c2ba38525bdf48ab67ca0aa2890d52 htop-0.3.1.ebuild 672
 MD5 8123f72d136ab55139efee23411e3ab6 files/digest-htop-0.3 59
+MD5 47f1850a95a3c5c1447a7606ca9ff1ad files/digest-htop-0.3.1 61
