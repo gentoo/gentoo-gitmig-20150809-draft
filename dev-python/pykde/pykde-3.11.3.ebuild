@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.3.ebuild,v 1.2 2004/10/26 21:12:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.3.ebuild,v 1.3 2004/11/23 19:42:12 carlo Exp $
 
 inherit eutils distutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/pykde/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="debug doc kjs"
 
 DEPEND="virtual/libc
