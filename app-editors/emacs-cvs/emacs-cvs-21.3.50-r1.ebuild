@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50-r1.ebuild,v 1.2 2004/10/03 08:20:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50-r1.ebuild,v 1.3 2004/10/14 03:48:44 usata Exp $
 
 ECVS_AUTH="ext"
 export CVS_RSH="ssh"
@@ -15,6 +15,7 @@ ECVS_SSH_HOST_KEY="savannah.gnu.org,199.232.41.3 ssh-rsa AAAAB3NzaC1yc2EAAAABIwA
 inherit elisp-common cvs alternatives flag-o-matic eutils
 
 IUSE="X Xaw3d gif gnome gtk jpeg nls png spell tiff"
+#IUSE="${IUSE} aqua"
 
 S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Emacs is the extensible, customizable, self-documenting real-time display editor."
@@ -44,7 +45,7 @@ PROVIDE="virtual/emacs virtual/editor"
 
 SLOT="21.3.50"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc-macos"
 
 DFILE=emacs-${SLOT}.desktop
 
@@ -52,43 +53,59 @@ src_compile() {
 
 	strip-flags
 	epatch ${FILESDIR}/emacs-subdirs-el-gentoo.diff
+	use ppc-macos && epatch ${FILESDIR}/${P}-nofink.diff
 
 	local myconf
 
 	use nls || myconf="${myconf} --disable-nls"
 
-	myconf="${myconf} $(use_with X x)"
-
 	if use X; then
-		myconf="${myconf} --with-xpm"
+		myconf="${myconf} --with-x"
+		myconf="${myconf} --with-xpm --with-toolkit-scroll-bars"
 		myconf="${myconf} $(use_with jpeg) $(use_with tiff)"
 		myconf="${myconf} $(use_with gif) $(use_with png)"
 		if use gtk; then
 			einfo "Configuring to build with GTK support"
-			myconf="${myconf} --with-x-toolkit=gtk
-				--with-toolkit-scroll-bars"
+			myconf="${myconf} --with-x-toolkit=gtk"
 		elif use Xaw3d; then
 			einfo "Configuring to build with Xaw3d support"
-			myconf="${myconf} --with-x-toolkit=athena
-				--with-toolkit-scroll-bars"
+			myconf="${myconf} --with-x-toolkit=athena"
 		else
-			einfo "Configuring to build without X toolkit support"
-			myconf="${myconf} --without-gtk"
-			myconf="${myconf} --with-x-toolkit=no"
-			myconf="${myconf} --without-toolkit-scroll-bars"
+			einfo "Configuring to build with lucid toolkit support"
+			myconf="${myconf} --with-x-toolkit=lucid"
 		fi
 	fi
 
-	econf --enable-debug \
-		--program-suffix=-${SLOT} \
-		${myconf} || die
+#	if use aqua ; then
+#		einfo "Configuring to build with Carbon Emacs"
+#		econf --enable-debug \
+#			--enable-carbon-app=/Applications/Gentoo \
+#			--without-x \
+#			$(use_with jpeg) $(use_with tiff) \
+#			$(use_with gif) $(use_with png) \
+#			 || die "econf carbon emacs failed"
+#		make bootstrap || die "make carbon emacs bootstrap failed"
+#	fi
 
-	make bootstrap || die
+	econf --enable-debug \
+		--program-suffix=-${PV} \
+		--without-carbon \
+		${myconf} || die "econf emacs failed"
+
+	make bootstrap || die "make emacs bootstrap failed"
 }
 
 src_install () {
 	einstall || die
 	rm ${D}/usr/bin/emacs-${SLOT}-${SLOT}
+
+#	if use aqua ; then
+#		einfo "Installing Carbon Emacs..."
+#		dodir /Applications/Gentoo/Emacs.app
+#		pushd mac/Emacs.app
+#		tar -chf - . | ( cd ${D}/Applications/Gentoo/Emacs.app; tar -xf -)
+#		popd
+#	fi
 
 	# fix info documentation
 	einfo "Fixing info documentation..."
@@ -117,7 +134,7 @@ src_install () {
 
 	if use gnome; then
 		insinto /usr/share/gnome/apps/Application
-		doins ${FILESDIR}/${DFILE}
+		doins ${FILESDIR}/${DFILE} || die "install desktop file failed"
 	fi
 }
 
@@ -129,9 +146,9 @@ update-alternatives() {
 }
 
 pkg_postinst() {
-	update-alternatives
+	use ppc-macos || update-alternatives
 }
 
 pkg_postrm() {
-	update-alternatives
+	use ppc-macos || update-alternatives
 }

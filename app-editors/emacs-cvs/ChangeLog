@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.22 2004/10/03 08:20:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.23 2004/10/14 03:48:44 usata Exp $
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/emacs-cvs-21.3.50-nofink.diff, emacs-cvs-21.3.50-r1.ebuild:
+  Added to ~ppc-macos. This closes bug #64352.
 
   03 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/50emacs-21.3.50.envd, +files/emacs-21.3.50.desktop,
