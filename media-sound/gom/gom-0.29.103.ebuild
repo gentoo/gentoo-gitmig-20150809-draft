@@ -1,19 +1,19 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103.ebuild,v 1.1 2001/05/02 16:19:21 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103.ebuild,v 1.2 2001/05/03 11:34:01 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Console Mixer Program for OSS"
-SRC_URI="http://www.fh-worms.de/~suerken/code/c/gom/{A}"
+SRC_URI="http://www.Fh-Worms.DE./~inf222/code/c/gom/released/{A}"
 HOMEPAGE="http://www.fh-worms.de/~inf222"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
 src_compile() {
 
-    try ./configure --prefix=/usr
+    try ./configure --prefix=/usr --mandir=/usr/share/man
     try make CFLAGS=\"${CFLAGS}\"
 
 }
