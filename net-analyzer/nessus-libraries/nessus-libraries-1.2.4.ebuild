@@ -1,46 +1,31 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-1.2.4.ebuild,v 1.4 2002/10/05 05:39:17 drobbins Exp $
-
-IUSE="ssl"
-
-S=${WORKDIR}/${PN}
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-1.2.4.ebuild,v 1.5 2002/11/12 06:45:37 vapier Exp $
 
 DESCRIPTION="A remote security scanner for Linux (nessus-libraries)"
 HOMEPAGE="http://www.nessus.org/"
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )"
-RDEPEND=${DEPEND}
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc -sparc -sparc64"
+IUSE="ssl"
+
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )"
+
+S=${WORKDIR}/${PN}
 
 src_compile() {
-
+	local myconf=""
 	use ssl && myconf="--with-ssl=/usr/lib" \
 		|| myconf="--without-ssl" 
 
-	econf \
-		${myconf} || die "configure failed"
-
-
+	econf ${myconf}
 	emake || die "emake failed"
-
 }
 
 src_install() {
-
-	make \
-		prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		localstatedir=${D}/var/lib \
-		mandir=${D}/usr/share/man \
-		install || die "make install failed"
-
-	cd ${S}
+	einstall
 	docinto nessus-libraries
 	dodoc README*
-
 }
