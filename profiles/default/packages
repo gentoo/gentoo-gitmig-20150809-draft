@@ -78,7 +78,7 @@
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch
-*sys-devel/perl
+*dev-lang/perl
 *dev-perl/ExtUtils-MakeMaker
 *sys-devel/spython
 *sys-libs/cracklib  

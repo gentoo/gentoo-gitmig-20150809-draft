@@ -42,7 +42,7 @@
 *dev-lang/python
 >=x11-base/xfree-4.1.0-r12
 *app-shells/sash
-*sys-devel/perl
+*dev-lang/perl
 *virtual/editor
 *net-ftp/ftp
 *net-misc/dhcpcd

@@ -37,7 +37,7 @@ nls		sys-devel/gettext
 oggvorbis	media-libs/libvorbis
 opengl		virtual/opengl
 pam		sys-libs/pam
-perl		sys-devel/perl
+perl		dev-lang/perl
 png		media-libs/libpng
 postgres	dev-db/postgresql
 python		dev-lang/python
