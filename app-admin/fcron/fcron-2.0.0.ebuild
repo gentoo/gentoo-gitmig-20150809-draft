@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry A! <jerry@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fcron/fcron-2.0.0.ebuild,v 1.1 2001/11/27 07:20:03 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fcron/fcron-2.0.0.ebuild,v 1.2 2001/11/27 07:21:34 woodchip Exp $
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
@@ -48,8 +48,8 @@ src_install() {
 	doman doc/*.{1,3,5,8}
 
 	dodoc MANIFEST VERSION doc/{CHANGES,README,LICENSE,FAQ,INSTALL,THANKS}
-	docinto html ; dodoc doc/*.html
 	newdoc files/fcron.conf fcron.conf.sample
+	docinto html ; dodoc doc/*.html
 
 	insinto /etc/fcron
 	insopts -m 640 -o root -g cron ; doins files/{fcron.allow,fcron.deny}
