@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-vfs-extras
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-vfs-extras/ChangeLog,v 1.13 2003/02/28 13:17:36 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-vfs-extras/ChangeLog,v 1.14 2003/07/25 21:38:46 foser Exp $
+
+*gnome-vfs-extras-0.99.11 (25 Jul 2003)
+
+  25 Jul 2003; foser <foser@gentoo.org> gnome-vfs-extras-0.99.11.ebuild :
+  samba module now requires full samba package, added dep
 
 *gnome-vfs-extras-0.99.10 (28 Feb 2003)
 
