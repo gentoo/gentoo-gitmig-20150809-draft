@@ -1,8 +1,12 @@
 # ChangeLog for net-im/centericq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.8 2002/07/26 16:15:17 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.9 2002/07/29 16:16:44 aliz Exp $
 
 *centericq-4.7.8 (26 Jul 2002)
+
+  28 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> centericq-4.7.8.ebuild :
+
+  Fixed #5712 - Access violation errors.
 
   26 Jul 2002; Brandon Low <lostlogic@gentoo.org> centericq-4.7.8.ebuild :
 
