@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.8 2004/06/24 23:52:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.9 2004/07/07 21:51:11 eradicator Exp $
+
+  07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/beep-media-player-0.9.6.1-gcc34.patch:
+  gcc-3.4 fixes submitted by Matthew Kennedy <mkennedy@gentoo.org> in bug
+  #55352. Removed old version.  -amd64
 
   29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   beep-media-player-0.9.6.1-r1.ebuild:
