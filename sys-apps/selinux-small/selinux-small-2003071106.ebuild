@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003071106.ebuild,v 1.5 2003/09/08 08:02:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003071106.ebuild,v 1.6 2003/10/21 04:58:30 pebenito Exp $
 
 DESCRIPTION="SELinux libraries and policy compiler"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 S="${WORKDIR}/selinux"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 amd64 ppc alpha sparc"
 IUSE="selinux static"
 DEPEND="sys-devel/flex
 	sys-libs/pam
