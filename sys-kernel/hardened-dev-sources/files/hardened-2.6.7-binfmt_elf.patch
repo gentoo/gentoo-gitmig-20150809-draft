@@ -1,0 +1,72 @@
+--- linux-2.6.7-hardened-r10/fs/binfmt_elf.c	2004-11-13 13:44:36.000000000 -0500
++++ linux-2.6.7-hardened-r11/fs/binfmt_elf.c	2004-11-13 13:58:33.000000000 -0500
+@@ -347,9 +347,12 @@
+ 		goto out;
+ 
+ 	retval = kernel_read(interpreter,interp_elf_ex->e_phoff,(char *)elf_phdata,size);
+-	error = retval;
+-	if (retval < 0)
++	error = -EIO;
++	if (retval != size) {
++		if (retval < 0)
++			error = retval;
+ 		goto out_close;
++	}
+ 
+ #ifdef CONFIG_PAX_SEGMEXEC
+ 	if (current->flags & PF_PAX_SEGMEXEC)
+@@ -767,8 +770,11 @@
+ 		goto out;
+ 
+ 	retval = kernel_read(bprm->file, elf_ex.e_phoff, (char *) elf_phdata, size);
+-	if (retval < 0)
++	if (retval != size) {
++		if (retval >= 0)
++			retval = -EIO;
+ 		goto out_free_ph;
++	}
+ 
+ 	files = current->files;		/* Refcounted so ok */
+ 	retval = unshare_files();
+@@ -815,8 +821,14 @@
+ 			retval = kernel_read(bprm->file, elf_ppnt->p_offset,
+ 					   elf_interpreter,
+ 					   elf_ppnt->p_filesz);
+-			if (retval < 0)
++			if (retval != elf_ppnt->p_filesz) {
++				if (retval >= 0)
++					retval = -EIO;
+ 				goto out_free_interp;
++			}
++			/* make sure path is NULL terminated */
++			elf_interpreter[elf_ppnt->p_filesz - 1] = '\0';
++			
+ 			/* If the program interpreter is one of these two,
+ 			 * then assume an iBCS2 image. Otherwise assume
+ 			 * a native linux image.
+@@ -851,8 +863,11 @@
+ 			if (IS_ERR(interpreter))
+ 				goto out_free_interp;
+ 			retval = kernel_read(interpreter, 0, bprm->buf, BINPRM_BUF_SIZE);
+-			if (retval < 0)
++			if (retval != BINPRM_BUF_SIZE) {
++				if (retval >= 0)
++					retval = -EIO;
+ 				goto out_free_dentry;
++			}
+ 
+ 			/* Get the exec headers */
+ 			interp_ex = *((struct exec *) bprm->buf);
+@@ -1105,8 +1120,10 @@
+ 			}
+ #endif
+ 
+-			if (BAD_ADDR(error))
+-				continue;
++			if (BAD_ADDR(error)) {
++				send_sig(SIGKILL, current, 0);
++				goto out_free_dentry;
++			}
+ 
+ 			/* PaX: mirror at a randomized base */
+ 			down_write(&current->mm->mmap_sem);
