@@ -1,14 +1,25 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.4 2002/06/12 19:27:53 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.5 2002/07/08 14:29:18 blizzy Exp $
 
-*squirrelmail-1.2.6-r1 (12 June 2002)
+*squirrelmail-1.2.7 (08 Jul 2002)
 
-  12 June 2002; Grant Goodyear <g2boojum@gentoo.org> :
+  08 Jul 2002; Maik Schreiber <bZ@iq-computing.de> :
 
-  Fixed postisnt message to mention /etc/php4/php.ini, not
+  SquirrelMail will be installed into /home/httpd/htdocs/squirrelmail
+  directly instead of into a version-dependant directory and
+  symlinking to it.
+
+  Fixed SRC_URI.
+
+  Removed dependency on net-www/apache and virtual/imapd.
+
+*squirrelmail-1.2.6-r1 (12 Jun 2002)
+
+  12 Jun 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  Fixed postinst message to mention /etc/php4/php.ini, not
   /etc/PHP4/php.ini.  Thanks to Roman Weber.
-
   
 *squirrelmail-1.2.6 (21 May 2002)
 
