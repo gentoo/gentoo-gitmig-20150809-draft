@@ -14,7 +14,7 @@ start() {
 	fi
 	if [ ! -d "$JBOSS_HOME/server/$JBOSS_CONF/tmp" ]; then
 		mkdir "$JBOSS_HOME/server/$JBOSS_CONF/tmp"
-		chown jboss.jboss "$JBOSS_HOME/server/$JBOSS_CONF/tmp"
+		chown jboss:jboss "$JBOSS_HOME/server/$JBOSS_CONF/tmp"
 	fi
 	cd $JBOSS_HOME/server/$JBOSS_CONF/tmp
 	if [ -z "$SUBIT" ]; then
