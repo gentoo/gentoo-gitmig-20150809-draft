@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gtick
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.14 2004/09/14 16:33:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.15 2004/12/18 13:35:05 chainsaw Exp $
+
+*gtick-0.3.4 (18 Dec 2004)
+
+  18 Dec 2004; Tony Vroon <chainsaw@gentoo.org> +gtick-0.3.4.ebuild:
+  Version bump, closes bug #73416.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> gtick-0.3.0.ebuild:
   Stable amd64, sparc.
