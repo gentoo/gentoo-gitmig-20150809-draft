@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r2.ebuild,v 1.1 2003/03/18 00:00:15 ska-fan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r2.ebuild,v 1.2 2003/05/09 01:57:54 gmsoft Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ DESCRIPTION="Text formatter used for man pages"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/groff/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips hppa ~arm"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -45,7 +45,14 @@ src_compile() {
 	# Fix problems with not finding g++
 	[ -z "${CC}" ] && export CC="gcc"
 	[ -z "${CXX}" ] && export CXX="g++"
-	
+
+	#-march=2.0 makes groff unable to finish the compile process
+	if [ "${ARCH}" = "hppa" ]; then
+		export CFLAGS="${CFLAGS/-march=2.0/}"
+		export CXXFLAGS="${CXXFLAGS/-march=2.0/}"
+	fi
+						
+
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
