@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.998 2005/03/10 00:15:35 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.999 2005/03/10 14:34:11 xmerlin Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -695,6 +695,7 @@ sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/magma-plugins:nogulm - Removes gulm support to magma-plugins
+sys-cluster/ocfs:aio - Add aio support
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building an SGI IP28 kernel
