@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.13 2003/04/03 20:52:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.14 2003/04/04 16:03:02 absinthe Exp $
 
 *rrdtool-1.0.41 (13 Mar 2003)
+
+  04 Apr 2003; Dylan Carlson <absinthe@gentoo.org> rrdtool-1.0.41.ebuild:
+  Added "-ffast-math" to filter-flags.
 
   03 Apr 2003; Dylan Carlson <absinthe@gentoo.org> rrdtool-1.0.35-r3.ebuild,
   rrdtool-1.0.35-r3.ebuild, rrdtool-1.0.39.ebuild, rrdtool-1.0.39.ebuild,
