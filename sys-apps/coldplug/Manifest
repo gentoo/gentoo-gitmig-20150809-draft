@@ -1,5 +1,5 @@
-MD5 53bbb11387ce57e950cf9f6e63d1dea0 ChangeLog 1123
+MD5 cacb140cbe9a52880086ffb43097488c ChangeLog 1218
+MD5 cd70cdc058fff0161d0f4f3a9d72f244 coldplug-20040920.ebuild 842
 MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
-MD5 f6700c66b39c8b587cecc2c58c2a27c8 coldplug-20040920.ebuild 842
 MD5 84f35322799b9d850051ed12b17a1f11 files/coldplug.rc 692
 MD5 6038bb8c3af43a0e6f0aa876e4307df6 files/digest-coldplug-20040920 69
