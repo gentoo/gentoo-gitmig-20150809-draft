@@ -1,8 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.107 2003/03/09 14:16:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.108 2003/03/09 21:16:16 gmsoft Exp $
 
 *xfree-4.3.0-r1 (09 Mar 2003)
+
+  09 Mar 2003; Guy Martin <gmsoft@gentoo.org> xfree-4.3.0-r1.ebuild :
+  Added ~hppa to keywords.
 
   09 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r1.ebuild:
   added a patch for sparc keyboards from the xfree86 mailing list:
@@ -22,6 +25,10 @@
   roma1390 <roma1390@uosis.mif.vu.lt>, bug #16794.
 
 *xfree-4.3.0 (27 Feb 2003)
+
+  09 Mar 2003; Guy Martin <gmsoft@gentoo.org> xfree-4.3.0.ebuild :
+  Patched for hppa (thanks to Stephane Wirtel for his help).
+  Added hppa to keywords.
 
   27 Feb 2003; Mark Guertin <gerk@gentoo.org> xfree-4.3.0.ebuild files/4.3.0-patches/XFree86-4.3.0-enable-nv-on-ppc.patch :
   updated nv patch for 4.3.0
