@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/gsmlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/ChangeLog,v 1.9 2005/01/23 20:43:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/ChangeLog,v 1.10 2005/01/26 14:26:32 liquidx Exp $
+
+*gsmlib-1.11_pre041028 (26 Jan 2005)
+
+  26 Jan 2005; Alastair Tse <liquidx@gentoo.org> -gsmlib-1.10-r1.ebuild,
+  gsmlib-1.11_pre030826.ebuild, +gsmlib-1.11_pre041028.ebuild:
+  version bump. fixed for amd64 with -fPIC. (#59104,#64121)
 
   23 Jan 2005; Simon Stelling <blubb@gentoo.org>
   +files/gsmlib-1.11-include-gcc34-fix.patch, gsmlib-1.11_pre030826.ebuild:
