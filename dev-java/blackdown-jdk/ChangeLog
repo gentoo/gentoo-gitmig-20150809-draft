@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.5 2002/04/17 04:19:32 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.6 2002/04/24 18:56:22 karltk Exp $
+
+*blackdown-jdk-1.3.1-r5 (24 Apr 2002)
+
+  24 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r5.ebuild files/digest-blackdown-jdk-1.3.1-r5:
+
+  When compiling certain versions of PHP with Blackdown, libhpi.so was not 
+  found. A workaround whereby the proper directories for Blackdown are added
+  to the system's LDPATH is included in this revision. This should also take 
+  care of other malfunctioning configure scripts like PHP's.
+
+  Removed blackdown-jdk-1.3.1-r4.ebuild files/digest-blackdown-jdk-1.3.1-r4
 
 *blackdown-jdk-1.3.1-r4 (16 Apr 2002)
 
