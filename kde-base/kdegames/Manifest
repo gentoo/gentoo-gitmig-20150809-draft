@@ -1,18 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 07f789f332b4b4e765b83a48f3698ad1 ChangeLog 12948
-MD5 a4936a2ad6fc0ba6f8ce8d61c6d36d8d kdegames-3.2.0.ebuild 447
 MD5 8ba9e5892cbba3b56a2722148308e8c8 kdegames-3.2.2.ebuild 345
 MD5 f644f48e85e8aa1da397da0b36dcf039 kdegames-3.2.3.ebuild 338
-MD5 4a802f73292ccbc77a3b1dfe3c6f96b6 kdegames-3.3.0.ebuild 338
 MD5 6bc5c5e5c4293e5ac929dd6bccb54b48 kdegames-3.3.1.ebuild 345
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 531dffa86e071e432c27ac0c4bd250f9 kdegames-3.3.2.ebuild 344
+MD5 a4936a2ad6fc0ba6f8ce8d61c6d36d8d kdegames-3.2.0.ebuild 447
+MD5 4a802f73292ccbc77a3b1dfe3c6f96b6 kdegames-3.3.0.ebuild 338
+MD5 f7f9c8a27a698ace79c5336b33edf627 kdegames-3.3.2.ebuild 348
 MD5 f7345e3470c3b053fdeb0a990f770913 kdegames-3.4.0_beta1.ebuild 326
-MD5 8dee289265c813122c9c3a55db255487 files/digest-kdegames-3.2.0 68
 MD5 e9e4660d2c0ca4df27cd9f64ecc294e9 files/digest-kdegames-3.2.2 68
+MD5 8dee289265c813122c9c3a55db255487 files/digest-kdegames-3.2.0 68
 MD5 fcaeca5ce40daabbb3e08064ce4f6fe4 files/digest-kdegames-3.2.3 68
-MD5 efd56c6f807f499080e754df0cb4298b files/digest-kdegames-3.3.0 68
-MD5 b97d7ec731787d316e1bb03809efc87c files/digest-kdegames-3.3.1 68
 MD5 7d6fbdf1de6bf3f31317d3548f79451a files/ktron.patch 16022
 MD5 c44cfa7482d22fa260c49360755ba3ab files/libksirtet.patch 6905
+MD5 b97d7ec731787d316e1bb03809efc87c files/digest-kdegames-3.3.1 68
+MD5 efd56c6f807f499080e754df0cb4298b files/digest-kdegames-3.3.0 68
 MD5 800905445ecab590b4dd377979174cce files/digest-kdegames-3.3.2 68
 MD5 8cc5e1b305ac4856dc041e1c4730fecc files/digest-kdegames-3.4.0_beta1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB9Z+9roRuSHgZdywRAvMfAKCQ2Viz78loImXfZ2vSkt8ArnbJ0QCdHru6
+m+J08+Hwdj+NHM71sSObdfU=
+=TxlI
+-----END PGP SIGNATURE-----
