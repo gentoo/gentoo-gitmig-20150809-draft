@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.3 2002/08/01 18:02:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.4 2002/08/02 13:47:44 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XML version 1 parser for Gnome"
@@ -17,12 +17,7 @@ DEPEND="${RDEPEND}
 	>=sys-libs/readline-4.1"
 
 src_compile() {
-	LDFLAGS="-lncurses" \
-	configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var/lib || die
+	LDFLAGS="-lncurses" econf || die
 
 	make || die # Doesn't work with -j 4 (hallski)
 }
