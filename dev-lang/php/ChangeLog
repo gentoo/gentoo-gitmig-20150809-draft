@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.7 2002/02/25 20:30:22 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.8 2002/02/28 05:29:22 blocke Exp $
+
+*php-4.1.2 (28 Feb 2002)
+
+  28 Feb 2002; Bruce A. Locke <blocke@shivan.org> php-4.1.2.ebuild :
+
+  Major security fixes in this version.  All php users are urged
+  to upgrade to this version.
 
 *php-4.1.1-r5 ( 25 Feb 2002 )
 
