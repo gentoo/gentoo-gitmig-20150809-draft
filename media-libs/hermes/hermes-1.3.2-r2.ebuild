@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.7 2002/12/09 04:26:11 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.8 2003/02/11 00:15:13 agriffis Exp $
+
+inherit gnuconfig
 
 MY_P=${P/h/H}
 S=${WORKDIR}/${MY_P}
@@ -10,11 +12,17 @@ HOMEPAGE="http://hermes.terminal.at"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc ~alpha"
 
 DEPEND="sys-devel/libtool
 	sys-devel/automake 
 	sys-devel/autoconf" 
+
+src_unpack() {
+	unpack ${A} || die
+	cd ${S} || die
+	use alpha && gnuconfig_update
+}
 
 src_compile() {
 
