@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/pnetc-0.6.12.ebuild,v 1.2 2005/01/29 21:40:32 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/pnetc-0.6.12.ebuild,v 1.3 2005/02/06 19:56:58 scandium Exp $
 
 MY_P=${P/c/C}
 S=${WORKDIR}/${MY_P}
@@ -17,6 +17,6 @@ IUSE=""
 DEPEND="=dev-dotnet/pnetlib-${PV}*"
 
 src_install() {
-	einstall DESTDIR=${D} || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL README doc/HACKING
 }
