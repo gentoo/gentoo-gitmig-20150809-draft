@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.111 2005/03/10 22:37:55 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.112 2005/03/13 00:27:19 r3pek Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -470,10 +470,10 @@ unipatch() {
 				for((y=0; y<$((6 - ${#STRICT_COUNT})); y++));
 					do z="${z}0";
 				done
-				STRICT_COUNT="${z}${STRICT_COUNT}"
+				PATCH_ORDER="${z}${STRICT_COUNT}"
 
-				mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
-				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR}/${STRICT_COUNT}/ 1>/dev/null
+				mkdir -p ${KPATCH_DIR}/${PATCH_ORDER}/
+				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR}/${PATCH_ORDER}/ 1>/dev/null
 			else
 				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR} 1>/dev/null
 			fi
@@ -519,10 +519,10 @@ unipatch() {
 					for((y=0; y<$((6 - ${#STRICT_COUNT})); y++));
 						do z="${z}0";
 					done
-					STRICT_COUNT="${z}${STRICT_COUNT}"
+					PATCH_ORDER="${z}${STRICT_COUNT}"
 
-					mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
-					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch${PATCH_LEVEL})
+					mkdir -p ${KPATCH_DIR}/${PATCH_ORDER}/
+					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${PATCH_ORDER}/${x}.patch${PATCH_LEVEL})
 				else
 					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch${PATCH_LEVEL})
 				fi
@@ -552,7 +552,7 @@ unipatch() {
 			STDERR_T="${STDERR_T/.patch*/.err}"
 
 			[ -z ${i/*.patch*/} ] && PATCH_DEPTH=${i/*.patch/}
-			[ -z ${i/*.diff*/} ]  && PATCH_DEPTH=${i/*.diff/}
+			#[ -z ${i/*.diff*/} ]  && PATCH_DEPTH=${i/*.diff/}
 
 			if [ -z "${PATCH_DEPTH}" ]; then PATCH_DEPTH=0; fi
 
