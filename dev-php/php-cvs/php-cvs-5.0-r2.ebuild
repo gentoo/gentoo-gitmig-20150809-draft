@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0-r2.ebuild,v 1.2 2003/10/26 04:16:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0-r2.ebuild,v 1.3 2004/06/25 01:23:47 agriffis Exp $
 
 ECVS_SERVER="cvs.php.net:/repository"
 ECVS_MODULE="php-src"

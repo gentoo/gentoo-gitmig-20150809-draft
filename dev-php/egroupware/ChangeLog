@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/egroupware
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/ChangeLog,v 1.12 2004/05/30 23:34:12 kloeri Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/ChangeLog,v 1.13 2004/06/25 01:16:28 agriffis Exp $
 
   31 May 2004; Bryan Østergaard <kloeri@gentoo.org>
   egroupware-0.9.99.008.ebuild:

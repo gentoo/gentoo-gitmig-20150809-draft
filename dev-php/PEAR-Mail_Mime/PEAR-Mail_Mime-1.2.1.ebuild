@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/PEAR-Mail_Mime-1.2.1.ebuild,v 1.9 2004/04/17 15:02:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/PEAR-Mail_Mime-1.2.1.ebuild,v 1.10 2004/06/25 01:19:43 agriffis Exp $
 
 MY_P=${PN/PEAR-//}-${PV}
 DESCRIPTION="Provides classes to deal with creation and manipulation of mime messages."

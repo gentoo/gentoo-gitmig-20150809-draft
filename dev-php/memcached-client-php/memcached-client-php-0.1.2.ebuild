@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/memcached-client-php/memcached-client-php-0.1.2.ebuild,v 1.2 2004/04/26 07:38:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/memcached-client-php/memcached-client-php-0.1.2.ebuild,v 1.3 2004/06/25 01:17:09 agriffis Exp $
 
 DESCRIPTION="Alternative high-speed PHP classes for interaction with MemCached"
 HOMEPAGE="http://phpca.cytherianage.net/memcached"

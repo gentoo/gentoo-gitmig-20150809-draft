@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.22.ebuild,v 1.5 2004/04/17 15:02:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.22.ebuild,v 1.6 2004/06/25 01:25:20 agriffis Exp $
 
 PHP_EXT_NAME="mmcache"
 PHP_EXT_ZENDEXT="yes"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/PECL-apc-2.0.ebuild,v 1.2 2004/05/30 18:20:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/PECL-apc-2.0.ebuild,v 1.3 2004/06/25 01:22:23 agriffis Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_NAME="apc"

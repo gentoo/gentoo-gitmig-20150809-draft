@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.008.ebuild,v 1.9 2004/06/19 03:34:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.008.ebuild,v 1.10 2004/06/25 01:16:28 agriffis Exp $
 
 inherit webapp-apache
 

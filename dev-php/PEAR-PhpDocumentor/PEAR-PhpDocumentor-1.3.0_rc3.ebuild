@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/PEAR-PhpDocumentor-1.3.0_rc3.ebuild,v 1.1 2004/05/28 14:36:53 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/PEAR-PhpDocumentor-1.3.0_rc3.ebuild,v 1.2 2004/06/25 01:20:53 agriffis Exp $
 
 inherit php-pear
 

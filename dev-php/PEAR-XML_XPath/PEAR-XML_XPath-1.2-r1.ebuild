@@ -1,7 +1,7 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Authore: Tom von Schwerdtner <tvon@etria.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/PEAR-XML_XPath-1.2-r1.ebuild,v 1.3 2004/05/30 18:14:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/PEAR-XML_XPath-1.2-r1.ebuild,v 1.4 2004/06/25 01:22:13 agriffis Exp $
 
 inherit php-pear
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/xdebug-1.2.0.ebuild,v 1.6 2004/04/17 15:02:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/xdebug-1.2.0.ebuild,v 1.7 2004/06/25 01:25:30 agriffis Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="xdebug"
