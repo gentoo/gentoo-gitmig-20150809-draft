@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.12 2004/07/07 00:33:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.13 2004/07/09 23:27:56 rac Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/screen/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 arm s390 ~sparc ~ppc hppa ~amd64 mips alpha ia64 ~ppc64"
-IUSE="pam"
+IUSE="pam nethack"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	pam? ( >=sys-libs/pam-0.75 )"
@@ -54,6 +54,7 @@ src_compile() {
 	# max-number of windows allowed by screen.
 	append-flags "-DPTYMODE=0620 -DPTYGROUP=5"
 	use pam && append-flags "-DUSE_PAM"
+	use nethack && append-flags "-DNETHACK"
 
 	econf \
 		$(use_enable pam) \
