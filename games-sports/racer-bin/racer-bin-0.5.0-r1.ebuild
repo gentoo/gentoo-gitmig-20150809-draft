@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/racer-bin-0.5.0-r1.ebuild,v 1.3 2004/03/20 12:59:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/racer-bin-0.5.0-r1.ebuild,v 1.4 2004/05/04 02:19:04 mr_bones_ Exp $
 
 inherit games
 
@@ -12,13 +12,14 @@ SRC_URI="http://download.tdconline.dk/pub/boomtown/racesimcentral/rr_data${PV}.t
 LICENSE="Racer"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE=""
 
 RDEPEND="virtual/opengl
 	media-libs/libsdl
 	sys-libs/lib-compat
 	>=media-libs/fmod-3.61"
 
-S=${WORKDIR}/racer${PV}
+S="${WORKDIR}/racer${PV}"
 
 src_compile() {
 	einfo "Binary package. Nothing to compile"
@@ -31,10 +32,10 @@ src_install( ) {
 
 	dodoc *.txt || die "dodoc failed"
 	rm -f *.txt
-	cp -R ${S}/* ${D}/${dir}/ || die "cp failed"
+	cp -R ${S}/* "${D}/${dir}/" || die "cp failed"
 
-	sed -e "s:GENTOO_DIR:${dir}:" ${FILESDIR}/racer-skel > racer-skel || \
-		die "sed failed"
+	sed -e "s:GENTOO_DIR:${dir}:" "${FILESDIR}/racer-skel" > racer-skel \
+		|| die "sed failed"
 
 	for f in carlab gplex modeler pacejka racer tracked
 	do
