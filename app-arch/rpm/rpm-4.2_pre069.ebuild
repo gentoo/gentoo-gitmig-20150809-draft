@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.4 2003/09/05 22:49:03 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.5 2003/09/20 05:05:53 genone Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -65,6 +65,10 @@ src_install() {
 
 	use nls || rm -rf ${D}/usr/share/man/{ko,ja,fr,pl,ru,sk}
 
+	# create /usr/src/redhat/ and co for rpmbuild
+	for d in /usr/src/redhat/{BUILD,RPMS,SOURCES,SPECS,SRPMS}; do
+		dodir "${d}"
+	done
 }
 
 pkg_postinst() {
