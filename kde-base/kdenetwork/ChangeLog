@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.103 2004/08/30 19:52:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.104 2004/09/02 14:38:04 caleb Exp $
+
+  02 Sep 2004; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.3.0.ebuild,
+  files/3.3.0-kget.diff:
+  Patch to fix a crash (#62296)
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   kdenetwork-3.1.5.ebuild, kdenetwork-3.2.1.ebuild, kdenetwork-3.2.3.ebuild,
