@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-#
 # Gentoo Linux Dependency Checking Code
 # Copyright 1998-2000 Daniel Robbins, Gentoo Technologies, Inc.
 # Distributed under the GNU Public License

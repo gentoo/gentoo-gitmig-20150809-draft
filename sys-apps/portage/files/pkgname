@@ -1,4 +1,4 @@
-#!/usr/bin/env spython
+#!/usr/bin/spython
 
 import portage
 import sys
