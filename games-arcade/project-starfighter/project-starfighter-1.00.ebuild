@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.00.ebuild,v 1.3 2004/06/24 22:10:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.00.ebuild,v 1.4 2004/07/01 03:08:07 mr_bones_ Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ S="${WORKDIR}/Starfighter"
 # Parallel Realities seems to always use the same name for releases.
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"

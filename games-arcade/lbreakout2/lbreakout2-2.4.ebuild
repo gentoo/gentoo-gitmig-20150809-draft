@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.4.ebuild,v 1.7 2004/06/24 22:07:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.4.ebuild,v 1.8 2004/07/01 03:08:07 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	media-libs/libpng
 	sys-libs/zlib
 	>=media-libs/libsdl-1.1.5

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5.ebuild,v 1.6 2004/06/24 22:04:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5.ebuild,v 1.7 2004/07/01 03:08:07 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/x11
-	virtual/glibc
+	virtual/libc
 	media-libs/libsdl
 	media-libs/sdl-image"
 DEPEND="${RDEPEND}
