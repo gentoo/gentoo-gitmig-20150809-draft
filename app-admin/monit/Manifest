@@ -1,5 +1,15 @@
-MD5 54d35f4ad4817c0f2e85b638f852c577 monit-4.2.1.ebuild 1067
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cbfb013920b78d11c1efd5ab1ca5d9d4 ChangeLog 1225
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 b368197a6a0db09fed662aadce79141f monit-4.2.1.ebuild 1041
 MD5 e046f9b22ab549e59bf3917a649ee97c files/digest-monit-4.2.1 63
-MD5 377589d898bc2185f7713c47dd8f5a51 files/monit.initd 630
+MD5 5ea376de61512d4c3dabb43eb21cd108 files/monit.initd 631
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3GljHTu7gpaalycRAmnOAKCorIOjwMXaN9xx7wk2uivMdLGHkgCg3qiF
+n4Q0N7SEvtmVkEKeoDmVa1Y=
+=9u3b
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
-MD5 ac57a039e82f1adffe101da1aaf80af9 mbr-1.1.5.ebuild 787
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 218cbb1727310d555066902d6cd5e012 ChangeLog 414
+MD5 141eddb662ef14b203f69ad23d40f307 mbr-1.1.5.ebuild 770
 MD5 dab70c182aba9bb9798106af2197ac3f files/digest-mbr-1.1.5 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3Gk7HTu7gpaalycRAvsFAKCOyVVNMILybR+zJnCVdCZMtMQTCACgwJQj
+a+wnWv1v5YwJH3ETjSjXEBE=
+=1nCS
+-----END PGP SIGNATURE-----
