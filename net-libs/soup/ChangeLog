@@ -1,11 +1,12 @@
 # ChangeLog for net-libs/soup
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.4 2002/11/09 12:18:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.5 2002/11/09 12:20:13 azarah Exp $
 
 *soup-0.7.4-r1 (9 Nov 2002)
 
   9 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
-  Change it to compile against libxml1, as evo-1.[12] needs it this way.
+  Change it to compile against libxml1, as evo-1.[12] needs it this way,
+  thanks to ska-fan for this bit.
 
 *soup-0.7.4 (28 Sep 2002)
 
