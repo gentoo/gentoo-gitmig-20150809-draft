@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/silver-xcursors
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.6 2004/03/24 21:44:09 jmaynard Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.7 2004/03/24 22:29:14 dholm Exp $
+
+  24 Mar 2004; David Holm <dholm@gentoo.org> silver-xcursors-0.4.ebuild:
+  Added to ~ppc.
 
   24 Mar 2004; Jay Maynard <jmaynard@gentoo.org> silver-xcursors-0.4.ebuild:
   Mark 0.4 testing on Alpha.
