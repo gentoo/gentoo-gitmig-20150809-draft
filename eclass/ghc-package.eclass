@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.6 2005/03/18 23:31:48 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.7 2005/03/23 13:55:06 kosmikus Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
@@ -12,7 +12,8 @@ inherit versionator
 ECLASS="ghc-package"
 INHERITED="${INHERITED} ${ECLASS}"
 
-PATH="${PATH}:/opt/ghc/bin"
+# promote /opt/ghc/bin to a better position in the search path
+PATH="/usr/bin:/opt/ghc/bin:${PATH}"
 
 # for later configuration using environment variables/
 # returns the name of the ghc executable
@@ -110,11 +111,13 @@ ghc-install-pkg() {
 ghc-register-pkg() {
 	local localpkgconf
 	localpkgconf="$(ghc-confdir)/$1"
-	for pkg in $(ghc-listpkg ${localpkgconf}); do
-		einfo "Registering ${pkg} ..."
-		$(ghc-getghcpkgbin) -f ${localpkgconf} -s ${pkg} \
-			| $(ghc-getghcpkg) -u --force
-	done
+	if [[ -f ${localpkgconf} ]]; then
+		for pkg in $(ghc-listpkg ${localpkgconf}); do
+			einfo "Registering ${pkg} ..."
+			$(ghc-getghcpkgbin) -f ${localpkgconf} -s ${pkg} \
+				| $(ghc-getghcpkg) -u --force
+		done
+	fi
 }
 
 # re-adds all available .conf files to the global
@@ -136,10 +139,12 @@ ghc-reregister() {
 ghc-unregister-pkg() {
 	local localpkgconf
 	localpkgconf="$(ghc-confdir)/$1"
-	for pkg in $(ghc-reverse "$(ghc-listpkg ${localpkgconf})"); do
-		einfo "Unregistering ${pkg} ..."
-		$(ghc-getghcpkg) -r ${pkg} --force
-	done
+	if [[ -f ${localpkgconf} ]]; then
+		for pkg in $(ghc-reverse "$(ghc-listpkg ${localpkgconf})"); do
+			einfo "Unregistering ${pkg} ..."
+			$(ghc-getghcpkg) -r ${pkg} --force
+		done
+	fi
 }
 
 # help-function: reverse a list
