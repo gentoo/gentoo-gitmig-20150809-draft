@@ -4,7 +4,7 @@
 
 DESCRIPTION="GTick is a metronome application supporting different meters and speeds ranging"
 HOMEPAGE="http://www.antcom.de/gtick/"
-SRC_URI="http://savannah.nongnu.org/download/gtick/default.pkg/0.2.1/${P}.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/gtick/default.pkg/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
