@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.11.ebuild,v 1.3 2003/09/10 19:08:48 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.11.ebuild,v 1.4 2003/09/17 06:34:33 max Exp $
 
 DESCRIPTION="A collection of themes for the MythTV project."
 HOMEPAGE="http://www.mythtv.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.mythtv.org/modules/My_eGallery/gallery/MainThemes/Photo-Them
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND="|| ( >=media-tv/mythtv-${PV} >=media-tv/mythfrontend-${PV} )"
 
