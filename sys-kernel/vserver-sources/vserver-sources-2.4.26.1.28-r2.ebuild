@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.26.1.28-r1.ebuild,v 1.2 2004/07/15 05:29:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.26.1.28-r2.ebuild,v 1.1 2004/08/05 11:47:55 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -21,7 +21,8 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Linux kernel with DEVEL version ctx-/vserver-patch"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	http://www.13thfloor.at/vserver/s_release/${VEXTRAVERSION/-vs/v}/linux-vserver-${VEXTRAVERSION/-vs/}.tar.bz2"
+	http://www.13thfloor.at/vserver/s_release/${VEXTRAVERSION/-vs/v}/linux-vserver-${VEXTRAVERSION/-vs/}.tar.bz2
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
 HOMEPAGE="http://www.kernel.org/ http://www.13thfloor.at/vserver/ http://www.linux-vserver.org/"
 
 KEYWORDS="~x86 -ppc"
@@ -39,6 +40,7 @@ src_unpack() {
 	cd linux-${KV}${VEXTRAVERSION}-${PR}
 	epatch ${WORKDIR}/patch-${KV}${VEXTRAVERSION}.diff
 	epatch ${FILESDIR}/${PN}-2.4.26.1.3.9.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${DISTDIR}/linux-${OKV}-CAN-2004-0415.patch || die "Failed to add the CAN-2004-0415 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.26.1.3.9.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.26.1.3.9.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.26.1.3.9.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
