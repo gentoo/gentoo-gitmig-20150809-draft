@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.9 2004/07/02 04:20:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.10 2004/08/04 12:52:54 axxo Exp $
+
+  04 Aug 2004; Thomas Matthijs <axxo@gentoo.org> ibm-jre-bin-1.4.1-r1.ebuild,
+  ibm-jre-bin-1.4.1.ebuild:
+  fix src_uri
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ibm-jre-bin-1.4.1-r1.ebuild, ibm-jre-bin-1.4.1.ebuild:

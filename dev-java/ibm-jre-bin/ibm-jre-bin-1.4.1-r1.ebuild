@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1-r1.ebuild,v 1.9 2004/07/14 02:06:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1-r1.ebuild,v 1.10 2004/08/04 12:52:54 axxo Exp $
 
 inherit java nsplugins
 
 S="${WORKDIR}/j2sdk${PV}"
 DESCRIPTION="IBM Java Development Kit ${PV}"
-SRC_URI="ppc?(mirror://IBMJava2-JRE-141.ppc.tgz)
-	ppc64?(mirror://IBMJava2-JRE-141.ppc64.tgz)
-	x86?(mirror://IBMJava2-JRE-141.tgz)"
+SRC_URI="ppc?(mirror://gentoo/IBMJava2-JRE-141.ppc.tgz)
+	ppc64?(mirror://gentoo/IBMJava2-JRE-141.ppc64.tgz)
+	x86?(mirror://gentoo/IBMJava2-JRE-141.tgz)"
 PROVIDE="virtual/jre-1.4.1
 	virtual/java-scheme-2"
 IUSE=""
