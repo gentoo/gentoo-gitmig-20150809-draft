@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/winex-cvs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.20 2004/06/24 22:37:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.21 2004/08/14 13:25:23 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> winex-cvs-3000.ebuild:
+  Fixed CVS Header.
 
   02 Aug 2003; Sergey Kuleshov <svyatogor@gentoo.org> winex-cvs-3000.ebuild:
   Fixed a small typo in einfo message.
