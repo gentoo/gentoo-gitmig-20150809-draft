@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <rendhalver@gentoo.org> (03 Jan 2002)
+# new XEmacs version masking for testing xemacs without sandbox disable
+>=app-editors/xemacs-21.4.11
+
 # <azarah@gentoo.org> (07 Jan 2002)
 # new alpha release.  do not use tmpfs by default for dep cache, and
 # move dep cache dir to /var/state/init.d.  also some raid updates.
