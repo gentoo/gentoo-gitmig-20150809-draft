@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 5b1985ba1b0d09da6118a7825bf50f16 jmf-bin-2.1.1e-r1.ebuild 1836
 MD5 d5f379a7b909e61aad0147a86f4ade74 jmf-bin-2.1.1e.ebuild 1833
+MD5 e53a759e9f86f713ff7bb8c3b321fdee ChangeLog 1410
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 a2709f4f0c61fd1ec164984744b869de ChangeLog 1199
+MD5 ac93b98c6a37bc7d9cf98e4ba8c154d1 files/jmfinit 801
+MD5 ac10f570840222bc9e1815908fe02b4a files/digest-jmf-bin-2.1.1e-r1 68
+MD5 323c4e791ffe63129f18b06f6f14876b files/jmfcustomizer 819
+MD5 2592b60b76309bed70aeed7df1214107 files/jmstudio 804
+MD5 dd61ae1de6ff6e0c1aae7d75ef4ecc67 files/jmfregistry 813
 MD5 ac10f570840222bc9e1815908fe02b4a files/digest-jmf-bin-2.1.1e 68
-MD5 678f7b98802fb9e65fe314f9ac260b07 files/jmfcustomizer 815
-MD5 769dfe741e050d995df3dfbaf727215b files/jmfinit 797
-MD5 f6359655e62cd3f2b2b0310fa77df2ef files/jmfregistry 809
-MD5 0a44b6657e3b6fd4802c64fd2c352a88 files/jmstudio 800
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOrwsI1lqEGTUzyQRAg5mAJ9wwom7swiASbfO2NjfaXihPyh6oACePNj2
-/B0vMUkx+1mtgViQ/1BlT40=
-=NnOS
+iD8DBQFBpeHd/rLF9B432nYRAmIvAJ48jQnHJA/4ZRJCaCfVgAzCNgJiGgCggXCL
+8pwq4aT3O0FY96vmp1maxHM=
+=zL6m
 -----END PGP SIGNATURE-----
