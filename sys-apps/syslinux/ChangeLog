@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/syslinux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: ChangeLog,v 1.5 2002/12/13 11:00:33 blizzy Exp $
+# $Id: ChangeLog,v 1.6 2003/02/02 00:19:39 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*syslinux-1.75 (28 June 2002)
+*syslinux-2.01 (01 Feb 2003)
+
+  01 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump for ma floppy.
+
+*syslinux-1.75 (28 Jun 2002)
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
   updated keywords (-ppc -sparc -sparc64)
