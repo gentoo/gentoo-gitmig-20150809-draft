@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.14-r1.ebuild,v 1.2 2002/07/17 20:43:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.15.ebuild,v 1.1 2002/07/19 01:13:33 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
@@ -33,6 +33,11 @@ src_install () {
 	doman ${FILESDIR}/scripts/qpkg.1
 	fowners root:wheel /usr/bin/qpkg
 	fperms 0750 /usr/bin/qpkg
+
+	dobin ${FILESDIR}/scripts/dep-clean
+	doman ${FILESDIR}/scripts/dep-clean.1
+	fowners root:wheel /usr/bin/depend
+	fperms 0750 /usr/bin/depend
 
 	dobin ${FILESDIR}/scripts/pkg-size
 	dobin ${FILESDIR}/scripts/useflag

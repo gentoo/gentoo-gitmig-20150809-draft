@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.29 2002/07/15 21:58:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.30 2002/07/19 01:13:33 lostlogic Exp $
+
+*gentoolkit-0.1.15 (18 Jul 2002)
+
+  18 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/dep-clean files/scripts/dep-clean.1 :
+
+  New applicion, dep-clean (many people have used this 
+  script under the name "depend" from gentoo.lostlogicx.com, 
+  it now has a manpage thanks to Paul Belt <gaarde at users dot
+  sourceforge dot net>.  Original script and idea thanks to
+  Jerry Haltom <ssrit at larvalstage dot net>.  Script final 
+  version by me.
 
 *gentoolkit-0.1.14-r1 (15 Jul 2002)
 
