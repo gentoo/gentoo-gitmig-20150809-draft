@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5-r1.ebuild,v 1.1 2004/02/01 23:19:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5-r1.ebuild,v 1.2 2004/02/02 12:05:25 esammer Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ OV="orinoco-0.13e"
 
 DESCRIPTION="PCMCIA tools for Linux"
 SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
-		http://dev.gentoo.org/~latexer/files/${P}-module-init-tools.diff.gz
+		http://dev.gentoo.org/~latexer/files/patches/${P}-module-init-tools.diff.gz
 		http://dev.gentoo.org/~latexer/files/${P}-orinoco-monitor.diff.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
