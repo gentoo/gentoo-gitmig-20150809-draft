@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.100 2004/08/23 13:28:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.101 2004/08/25 18:15:14 caleb Exp $
+
+  25 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.2.3-r1.ebuild:
+  x86 stable
 
   23 Aug 2004; Carsten Lohrke <carlo@gentoo.org> kdenetwork-3.3.0.ebuild:
   jabber use flag is useless, since kdelibs depends on net-dns/libidn now
