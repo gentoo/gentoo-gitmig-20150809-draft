@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sloccount
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/Changelog,v 1.1 2003/06/04 13:59:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.1 2003/06/27 07:18:45 msterret Exp $
+
+  27 Jun 2003; <msterret@gentoo.org> sloccount-2.22.ebuild:
+  tidy ebuild; use sed -i; use dohtml for html files
 
 *sloccount-2.22 (04 Jun 2003)
 
