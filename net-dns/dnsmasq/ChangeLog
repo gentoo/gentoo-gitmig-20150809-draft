@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.46 2004/08/02 19:38:25 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.47 2004/08/12 23:35:37 avenj Exp $
+
+*dnsmasq-2.12 (12 Aug 2004)
+
+  12 Aug 2004; Jon Portnoy <avenj@gentoo.org> dnsmasq-2.12.ebuild :
+  Version bump, minor documentation/default config changes.
+  Also altered description in ebuild (dnsmasq isn't limited to local
+  networks).
 
 *dnsmasq-2.11 (02 Aug 2004)
 
