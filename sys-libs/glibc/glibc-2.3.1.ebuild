@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1.ebuild,v 1.1 2002/10/20 05:45:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1.ebuild,v 1.2 2002/10/20 18:00:23 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -122,8 +122,8 @@ src_compile() {
 	
 	einfo "Building GLIBC..."
 	make PARALLELMFLAGS="${MAKEOPTS}" || die
-	einfo "Doing GLIBC checks..."
-	make check
+#	einfo "Doing GLIBC checks..."
+#	make check
 }
 
 
