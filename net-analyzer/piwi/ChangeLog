@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/piwi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.17 2004/08/23 11:48:14 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.18 2004/09/06 18:58:36 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  piwi-0.8.0.20031109-r2.ebuild, piwi-0.8.0.20031109-r3.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
 *piwi-0.8.0.20031109-r3 (23 Aug 2004)
 

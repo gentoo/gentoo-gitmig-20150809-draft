@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20031109-r2.ebuild,v 1.6 2004/07/11 10:36:09 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20031109-r2.ebuild,v 1.7 2004/09/06 18:58:36 ciaranm Exp $
+
+inherit eutils
 
 DESCRIPTION="(Prelude|Perl) IDS Web Interface"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -94,5 +96,5 @@ pkg_postinst() {
 	ewarn ""
 	ewarn "Consider yourself warned"
 	# Make sure that the user pay attention
-	echo -ne "\a"; sleep 0.25 ; echo -ne "\a"; sleep 0.25
+	ebeep 3
 }
