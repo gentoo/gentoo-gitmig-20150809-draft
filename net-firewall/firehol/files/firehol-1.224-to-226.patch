@@ -5,24 +5,6 @@ retrieving revision 1.226
 diff -u -r1.224 -r1.226
 --- firehol/firehol/firehol.sh	2005/01/24 22:24:48	1.224
 +++ firehol/firehol/firehol.sh	2005/01/25 21:28:19	1.226
-@@ -10,7 +10,7 @@
- #
- # config: /etc/firehol/firehol.conf
- #
--# $Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
-+# $Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
- #
- 
- # Make sure only root can run us.
-@@ -114,7 +114,7 @@
- # Find our minor version
- firehol_minor_version() {
- ${CAT_CMD} <<"EOF" | ${CUT_CMD} -d ' ' -f 3 | ${CUT_CMD} -d '.' -f 2
--$Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
-+$Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
- EOF
- }
- 
 @@ -144,7 +144,7 @@
  # Directories and files
  
@@ -90,39 +72,3 @@ diff -u -r1.224 -r1.226
  	
  elif [ -f "/lib/modules/`${UNAME_CMD} -r`/build/.config" ]
  then
-@@ -5121,7 +5121,7 @@
- 		else
- 		
- 		${CAT_CMD} <<EOF
--$Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
-+$Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
- (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
- FireHOL is distributed under GPL.
- 
-@@ -5307,7 +5307,7 @@
- 	
- 	${CAT_CMD} <<EOF
- 
--$Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
-+$Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
- (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
- FireHOL is distributed under GPL.
- Home Page: http://firehol.sourceforge.net
-@@ -5601,7 +5601,7 @@
- 	
- 	"${CAT_CMD}" >&2 <<EOF
- 
--$Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
-+$Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
- (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
- FireHOL is distributed under GPL.
- Home Page: http://firehol.sourceforge.net
-@@ -5684,7 +5684,7 @@
- 	echo "# "
- 
- 	${CAT_CMD} <<EOF
--# $Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
-+# $Id: firehol-1.224-to-226.patch,v 1.1 2005/01/27 17:44:47 centic Exp $
- # (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
- # FireHOL is distributed under GPL.
- # Home Page: http://firehol.sourceforge.net
