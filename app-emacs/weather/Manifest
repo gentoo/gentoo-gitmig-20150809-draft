@@ -1,5 +1,5 @@
-MD5 38397111f19e91cc681977170cd23b99 weather-2.2.ebuild 909
-MD5 4601b30d7d8c21dba18d04cb26a256c9 ChangeLog 405
+MD5 efafe2e678ea700decaa8c3b946b6efd weather-2.2.ebuild 903
+MD5 412f4062da519f1ffcb7f8c22ad3a9f4 ChangeLog 399
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 3cbc1109038bdd800d3866bee3079b7a files/digest-weather-2.2 62
 MD5 9b25a1a13acb1189e635430d930f753d files/50weather-gentoo.el 105

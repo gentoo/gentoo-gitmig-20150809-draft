@@ -1,5 +1,5 @@
-MD5 f6a6d93310679c52a016771a1b8179e1 uboat-1.2.ebuild 865
-MD5 1cc7b9b36f38fa64bd5fa7ed24b60cfa ChangeLog 473
+MD5 0613e2494d317a1f3bff9a35df37d2cd uboat-1.2.ebuild 859
+MD5 d0b97c5458a7c4ae07e4b64c8733c965 ChangeLog 468
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 e77864e97845475d959f49d817cf37cc files/50uboat-gentoo.el 130
 MD5 251e6e5fd25e7967446e22a1f68e40c8 files/digest-uboat-1.2 60

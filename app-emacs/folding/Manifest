@@ -1,5 +1,5 @@
-MD5 9e75fd60bbfab42bc648018bb5a2956d ChangeLog 381
-MD5 8e97cbdf1e104997b9a0f3ffa35f55bc folding-2.97.ebuild 500
+MD5 f97e0ed3451d5ead4472ae8a77939979 folding-2.97.ebuild 491
+MD5 421ebc1d71701f3b5d69874b685d3ab9 ChangeLog 372
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 1e5aa98f03e60ca6655ecab74c279d0d files/70folding-gentoo.el 264
 MD5 25486bb9ab4fcedfb9a41bc02ee8823e files/digest-folding-2.97 63

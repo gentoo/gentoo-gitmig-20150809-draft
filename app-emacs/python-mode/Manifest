@@ -1,5 +1,5 @@
-MD5 09fcfe0f62774658c5aad4a1acd79bfc python-mode-4.6.ebuild 775
-MD5 ef4bd77cd42da24f74aab4384e0297fc ChangeLog 602
+MD5 7f933b878841d23a6d20ed318469993b python-mode-4.6.ebuild 769
+MD5 5082cef66da2528d76387f4cc6c6116c ChangeLog 597
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 7842a604f7fbeda6be9d9b86f6d143bb files/digest-python-mode-4.6 67
 MD5 b16866ae5b915c74ccb69ff8591a4ada files/50python-mode-gentoo.el 334
