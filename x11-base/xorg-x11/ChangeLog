@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.124 2004/09/18 05:27:22 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.125 2004/09/18 10:26:25 kloeri Exp $
+
+  18 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  xorg-x11-6.8.0-r1.ebuild:
+  Add ~alpha to keywords.
 
   18 Sep 2004; Stephen P. Becker <geoman@gentoo.org> xorg-x11-6.7.0-r2.ebuild,
   xorg-x11-6.8.0-r1.ebuild:
