@@ -1,4 +1,4 @@
---- connectivity/source/drivers/jdbc/DriverPropertyInfo.cxx	24 Apr 2003 13:20:29 -0000	1.4
+--- connectivity/source/drivers/jdbc/DriverPropertyInfo.cxx	24 Apr 2003 13:20:29 -0000
 +++ connectivity/source/drivers/jdbc/DriverPropertyInfo.cxx	27 Dec 2004 09:35:38 -0000
 @@ -184,7 +184,12 @@
  	{
@@ -14,7 +14,7 @@
  	} //t.pEnv
  	return Sequence< ::rtl::OUString>();
  }
---- connectivity/source/inc/java/tools.hxx	1 Nov 2002 10:58:49 -0000	1.5
+--- connectivity/source/inc/java/tools.hxx	1 Nov 2002 10:58:49 -0000
 +++ connectivity/source/inc/java/tools.hxx	27 Dec 2004 09:35:42 -0000
 @@ -101,7 +101,7 @@
  
