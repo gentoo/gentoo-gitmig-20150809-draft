@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PECL-apc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/ChangeLog,v 1.7 2004/12/30 20:37:57 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/ChangeLog,v 1.8 2005/02/13 19:00:39 stuart Exp $
+
+  13 Feb 2005; Stuart Herbert <stuart@gentoo.org> PECL-apc-2.0.ebuild:
+  Added hard dependency on PHP 4.x; APC does not work with PHP 5.x yet
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
