@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.18 2004/08/08 23:55:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.19 2004/08/09 00:13:30 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -302,6 +302,9 @@ php5-sapi_pkg_setup () {
 
 php5-sapi_src_unpack () {
 	unpack ${A}
+	# Fix for HTTP auth bug, #59755 
+	epatch ${FILESDIR}/php-5.0.0-httpauthfix.patch
+
 	cd ${S}
 
 	# Patch PHP to show Gentoo as the server platform
@@ -311,8 +314,6 @@ php5-sapi_src_unpack () {
 
 	# Patch for session persistence bug
 	epatch ${FILESDIR}/php5_soap_persistence_session.diff
-	# Fix for HTTP auth bug, #59755 
-	epatch ${FILESDIR}/php-5.0.0-httpauthfix.patch
 
     # stop php from activating the apache config, as we will do that ourselves
 	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
