@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9.ebuild,v 1.12 2004/06/24 23:05:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9.ebuild,v 1.13 2004/07/07 22:42:52 swegener Exp $
 
 IUSE="nls ipv6 perl ssl socks5"
 
@@ -10,20 +10,15 @@ DESCRIPTION="A modular textUI IRC client with IPv6 support."
 SRC_URI="http://irssi.org/files/${P}.tar.bz2"
 HOMEPAGE="http://irssi.org/"
 
-DEPEND="!net-irc/irssi-cvs
-	>=dev-libs/glib-2.2.1
-	sys-libs/ncurses
-	>=sys-apps/sed-4
-	ssl? ( dev-libs/openssl )
-	perl? ( dev-lang/perl )
-	socks5? ( >=net-misc/dante-1.1.13 )"
-
-RDEPEND="nls? ( sys-devel/gettext )
+RDEPEND="!net-irc/irssi-cvs
 	>=dev-libs/glib-2.2.1
 	sys-libs/ncurses
 	ssl? ( dev-libs/openssl )
 	perl? ( dev-lang/perl )
 	socks5? ( >=net-misc/dante-1.1.13 )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
+	>=sys-apps/sed-4"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.49 2004/06/24 23:05:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.50 2004/07/07 22:42:52 swegener Exp $
+
+  08 Jul 2004; Sven Wegener <swegener@gentoo.org> -irssi-0.8.6-r5.ebuild,
+  irssi-0.8.6-r6.ebuild, irssi-0.8.9.ebuild:
+  Updated dependencies and ebuild cleanup.
 
   18 Jun 2004; Sven Wegener <swegener@gentoo.org> irssi-0.8.9.ebuild:
   Added dev-libs/glib to RDEPEND. Closes bug #54323.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.5 2004/06/24 23:06:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.6 2004/07/07 22:42:15 swegener Exp $
 
 ECVS_SERVER="cvs.irssi.org:/home/cvs"
 ECVS_MODULE="irssi"
@@ -15,12 +15,13 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~alpha hppa ~mips"
 IUSE="nls ipv6 perl ssl"
 
-DEPEND=">=dev-libs/glib-2.2.1
-		sys-libs/ncurses
-		perl? ( dev-lang/perl )
-		!net-irc/irssi
-		>=sys-devel/autoconf-2.58"
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND=">=dev-libs/glib-2.2.1
+	sys-libs/ncurses
+	perl? ( dev-lang/perl )
+	!net-irc/irssi"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
+	>=sys-devel/autoconf-2.58"
 
 S=${WORKDIR}/${ECVS_MODULE}
 
