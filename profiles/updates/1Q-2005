@@ -57,3 +57,4 @@ slotmove sys-libs/chipcard-server 0 2
 move sys-libs/chipcard-client sys-libs/libchipcard
 move sys-libs/chipcard-server sys-libs/libchipcard
 move app-misc/tinyca app-crypt/tinyca
+move sci-biology/MrBayes sci-biology/mrbayes
