@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eed59b073aa324aba1ae624ec28e711e ChangeLog 1045
+MD5 113679ac0592054410c927de98fde6ff ChangeLog 1152
 MD5 8175b2a5cde0f9ed8fe3fd5b0c08a159 config-general-2.21.ebuild 542
-MD5 e35ef9d9421c890988aac3527f8eb2b9 config-general-2.26.ebuild 564
 MD5 f264c8f1988d4fcdb3f513a5b6b06c5b config-general-2.27.ebuild 569
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 214984e441e1a76252a3a17f8ada0e35 files/digest-config-general-2.21 70
-MD5 b5733521d065815be4268d1365d4174c files/digest-config-general-2.26 70
+MD5 e35ef9d9421c890988aac3527f8eb2b9 config-general-2.26.ebuild 564
 MD5 9ab5d871612b2f207deb51ada8a49c98 files/digest-config-general-2.27 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBzCd260LfUIagIAkRAkspAJ9wu2GhTPqADy+0RCmhVbwg0hxWHwCfQsIQ
-BgRBTVNx13FX+XVIpae5YWY=
-=ir/f
------END PGP SIGNATURE-----
+MD5 b5733521d065815be4268d1365d4174c files/digest-config-general-2.26 70
+MD5 214984e441e1a76252a3a17f8ada0e35 files/digest-config-general-2.21 70

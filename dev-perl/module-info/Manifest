@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 4a4a102ed433bf954cfebb010e9e2f74 module-info-0.20.ebuild 602
-MD5 76d7a5a4253b7a699aa3b246e8fd42ac module-info-0.24.ebuild 616
-MD5 39ca1093c579d1865036f889acb07ead ChangeLog 1379
 MD5 3ce1c0a7ca2860aedae6c18c4429e263 module-info-0.26.ebuild 623
-MD5 18663cc44364f4bed4075ed501e97aeb files/digest-module-info-0.20 67
-MD5 93077da735990dd056ec357368579397 files/digest-module-info-0.24 67
+MD5 76d7a5a4253b7a699aa3b246e8fd42ac module-info-0.24.ebuild 616
+MD5 4a4a102ed433bf954cfebb010e9e2f74 module-info-0.20.ebuild 602
+MD5 998bf51a5840023e2f1fab476137c369 ChangeLog 1486
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3c184afb8a1c566d42f6ae18ab3906d1 files/digest-module-info-0.26 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFByWAf60LfUIagIAkRAlQ8AKD5TMkkivWnpCQmJkNeLEXsZ6N6FACeNnQt
-0s5JoV+u8eELLlxkMFdyTcM=
-=5s/G
------END PGP SIGNATURE-----
+MD5 93077da735990dd056ec357368579397 files/digest-module-info-0.24 67
+MD5 18663cc44364f4bed4075ed501e97aeb files/digest-module-info-0.20 67
