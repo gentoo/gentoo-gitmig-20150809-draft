@@ -1,6 +1,16 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.57 2004/07/19 10:24:49 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.58 2004/08/06 01:01:08 cyfred Exp $
+
+*nvidia-glx-1.0.6111 (06 Aug 2004)
+
+  06 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +files/1.0.6111/NVIDIA_glx-1.0.6111-defines.patch,
+  +files/1.0.6111/NVIDIA_glx-1.0.6111-glheader.patch,
+  +files/1.0.6111/NVIDIA_glx-1.0.6111-makefile.patch,
+  +nvidia-glx-1.0.6111.ebuild:
+  Version bump for 6111; nVidia haven't changed their GL headers in this release
+  so still applying the patches
 
 *nvidia-glx-1.0.4499-r1 (19 Jul 2004)
 
