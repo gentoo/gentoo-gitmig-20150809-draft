@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3606a90574c2440fb6d469a21381cbc9 ChangeLog 4267
-MD5 5fb2ddc8e13fc3d498f656ebba18a26d latex2html-2002.2.1_pre20041025.ebuild 2772
-MD5 f26e4b0e8b41f52fe3f69634019e8888 latex2html-2002.2.ebuild 2134
+MD5 30831c821653394f0530efb4232c59e0 ChangeLog 4380
+MD5 cefde952e638cca7656944bd15d840ad latex2html-2002.2.1_pre20041025.ebuild 2769
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 f26e4b0e8b41f52fe3f69634019e8888 latex2html-2002.2.ebuild 2134
 MD5 b4c0404c2535e091016053386676d0bc files/digest-latex2html-2002.2 70
 MD5 0eb4f31ba18d25c8fd3229a00e5aad2e files/digest-latex2html-2002.2.1_pre20041025 81
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCHfbGKRy60XGEcJIRArMqAJ40fjqtMaBczMkuX8EqwXkGcRnx4wCePvwR
-1Cw5H1z9K5z/iugxZF+Pciw=
-=R2Y1
+iD8DBQFCPC/jugEuf3OQ0akRApO8AJ0TX1tD/uyqg6fBEtBF7tgr3P+v3QCfXx9u
+osjCfvN4SWObvRz41WuKKGs=
+=QhYL
 -----END PGP SIGNATURE-----
