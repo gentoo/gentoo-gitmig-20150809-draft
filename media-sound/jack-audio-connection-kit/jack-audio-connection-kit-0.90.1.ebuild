@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.90.1.ebuild,v 1.3 2004/01/19 07:48:09 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.90.1.ebuild,v 1.4 2004/02/04 21:45:53 ferringb Exp $
 
 inherit flag-o-matic
 
@@ -21,9 +21,18 @@ DEPEND=">=media-libs/alsa-lib-0.9.1
 	dev-util/pkgconfig
 	sys-libs/ncurses
 	doc? ( app-doc/doxygen )
+	sys-devel/autoconf
 	!media-sound/jack-cvs"
 
 PROVIDE="virtual/jack"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-doc-option.patch || \
+		die "Configure doc-option patch failed"
+	autoconf || die "Couldn't regenerate configure file, failing"
+}
 
 src_compile() {
 	local myconf
@@ -35,8 +44,8 @@ src_compile() {
 	cd $S
 	sed -i "s/^CFLAGS=\$JACK_CFLAGS/CFLAGS=\"\$JACK_CFLAGS $myarch\"/" configure
 	use doc \
-		&& myconf="--with-html-dir=/usr/share/doc/${PF}/html" \
-		|| myconf="--without-html-dir"
+		&& myconf="--enable-html-docs --with-html-dir=/usr/share/doc/${PF}" \
+		|| myconf="--disable-html-docs"
 
 	use jack-tmpfs && myconf="${myconf} --with-default-tmpdir=/dev/shm"
 	use debug && myconf="${myconf} --enable-debug"
@@ -48,15 +57,12 @@ src_compile() {
 }
 
 src_install() {
-
-	use doc && dodir /usr/share/doc/${PF}/html
-
 	make DESTDIR=${D} \
 		datadir=${D}/usr/share \
 		install || die
-
-	use doc && mv \
-		${D}/usr/share/jack-audio-connection-kit/reference/html/* \
-		${D}/usr/share/doc/${PF}/html
-	use doc && rm -rf ${D}/usr/share/jack-audio-connection-kit
+	if use doc; then
+		mv ${D}/usr/share/doc/${PF}/reference/html \
+		   ${D}/usr/share/doc/${PF}/
+		rmdir ${D}/usr/share/doc/${PF}/reference
+	fi
 }

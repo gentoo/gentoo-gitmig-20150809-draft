@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.80.0.ebuild,v 1.6 2004/02/01 12:59:26 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.80.0.ebuild,v 1.7 2004/02/04 21:45:53 ferringb Exp $
 
 inherit flag-o-matic
 
@@ -30,6 +30,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-alsalib-fix.patch || \
 		die "Alsalib-1.0 patch failed"
+	epatch ${FILESDIR}/${PN}-doc-option.patch || \
+		die "Documentation configure option patch failed"
+	autoconf
 }
 
 src_compile() {
@@ -42,8 +45,8 @@ src_compile() {
 	cd $S
 	sed -i "s/^CFLAGS=\$JACK_CFLAGS/CFLAGS=\"\$JACK_CFLAGS $myarch\"/" configure
 	use doc \
-		&& myconf="--with-html-dir=/usr/share/doc/${PF}/html" \
-		|| myconf="--without-html-dir"
+		&& myconf="--enable-html-docs --with-html-dir=/usr/share/doc/${PF}/html" \
+		|| myconf="--disable-html-docs"
 
 	use jack-tmpfs && myconf="${myconf} --with-default-tmpdir=/dev/shm"
 	use debug && myconf="${myconf} --enable-debug"

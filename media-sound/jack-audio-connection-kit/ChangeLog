@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.23 2004/02/01 12:59:26 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.24 2004/02/04 21:45:53 ferringb Exp $
+
+*jack-audio-connection-kit-0.94.0 (04 Feb 2004)
+
+  04 Feb 2004; Brian Harring <ferringb@gentoo.org>
+  jack-audio-connection-kit-0.80.0.ebuild,
+  jack-audio-connection-kit-0.90.1-r1.ebuild,
+  jack-audio-connection-kit-0.90.1.ebuild,
+  jack-audio-connection-kit-0.91.1.ebuild,
+  jack-audio-connection-kit-0.94.0.ebuild,
+  files/jack-audio-connection-kit-doc-option.patch:
+  Closing documentation installation bug 35749, affects all versions. Patch
+  being sent upstream, if integrated the sys-devel/autoconf dep can be removed.
 
   01 Feb 2004; Brian Harring <ferringb@gentoo.org>
   jack-audio-connection-kit-0.80.0.ebuild,
