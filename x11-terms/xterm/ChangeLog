@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.54 2004/12/28 17:26:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.55 2004/12/28 17:27:44 seemant Exp $
+
+  28 Dec 2004; Seemant Kulleen <seemant@gentoo.org> -xterm-179.ebuild,
+  -xterm-184.ebuild, -xterm-191.ebuild, -xterm-194.ebuild:
+  clean out crufty versions
 
 *xterm-197 (28 Dec 2004)
 
