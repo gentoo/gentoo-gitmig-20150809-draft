@@ -5,8 +5,7 @@
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="gtkhtml"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gtkhtml/${A}
-         ftp://gnome.eazel.com/pub/gnome/unstable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gtkhtml/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=gnome-base/gal-0.6
