@@ -1,14 +1,28 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.15 2003/03/25 03:04:29 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.16 2003/03/25 18:06:59 azarah Exp $
+
+*gawk-3.1.2-r2 (25 Mar 2003)
+
+  25 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gawk-3.1.2-r2.ebuild :
+  Add filefuncs module from baselayout, as it is very closly tied to the gawk
+  version running.  While we are at it, version the module (filefuncs.so.0.0.1,
+  with soname of filefuncs.so.0 for now).  Do not install acconfig.h into
+  /usr/include/awk, as it is redundant.  This should fix bug #18127.
+
+*gawk-3.1.2-r1 (25 Mar 2003)
+
+  25 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gawk-3.1.2-r1.ebuild :
+  Version that should not really have hit portage, but I was busy at work
+  and closing time caught me.
 
 *gawk-3.1.2 (24 Mar 2003)
 
-  24 Mar 2003; Brandon Low <lostlogic@gentoo.org> gawk-3.1.2.ebuild:
+  24 Mar 2003; Brandon Low <lostlogic@gentoo.org> gawk-3.1.2.ebuild :
   -* keyword, and get the -r1 ebuild stuff that I somehow ignored into it, a -r1
   which will be ~ rather than - will be forthcoming
 
-  24 Mar 2003; Brandon Low <lostlogic@gentoo.org> gawk-3.1.2.ebuild:
+  24 Mar 2003; Brandon Low <lostlogic@gentoo.org> gawk-3.1.2.ebuild :
   Bump
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> gawk-3.1.1-r1.ebuild :
