@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/gnewspost-0.6.ebuild,v 1.12 2004/07/19 09:40:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/gnewspost-0.6.ebuild,v 1.13 2004/07/25 16:53:08 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="A graphical frontend for newspost, a binary news poster"
 HOMEPAGE="http://www.vectorstar.net/~ash/gnewspost.html"
-SRC_URI="http://www.vectorstar.net/~ash/files/${P}.tar.gz"
+SRC_URI="http://www.vectorstar.net/~ash/files/${P}.tar.gz
+	http://gentoo.mirror.at.stealer.net/files/${P}.tar.gz"
 IUSE="nls"
 
 LICENSE="BSD"
@@ -39,8 +40,7 @@ src_compile() {
 }
 
 src_install () {
-	einstall \
-		icondir=${D}/usr/share/pixmaps || die "Installation failed"
+	einstall icondir=${D}/usr/share/pixmaps || die "Installation failed"
 
 	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING HACKING README TODO
 }
