@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a0bc6a1b30b863ff477e789457cad381 dclib-0.2.20.ebuild 728
-MD5 b4175895ae7fa12e492f935023e6bd0f dclib-0.3.3.ebuild 723
-MD5 433c76e2ef9e0f414295e8133645bad0 dclib-0.3.0.ebuild 721
-MD5 a963cafaae52387b315288cb245d76fb dclib-0.3.2.ebuild 723
-MD5 3aac8f154de18b20af0dc6c53cb6d290 dclib-0.2.21.ebuild 730
 MD5 7233142fd59c459009c4033fcb45d55e ChangeLog 6348
+MD5 a0bc6a1b30b863ff477e789457cad381 dclib-0.2.20.ebuild 728
+MD5 3aac8f154de18b20af0dc6c53cb6d290 dclib-0.2.21.ebuild 730
+MD5 e041abe99036edd93134a444f6a2ce3f dclib-0.3.0.ebuild 719
+MD5 68781321fb016a7323f70249bdc2de00 dclib-0.3.2.ebuild 721
+MD5 277659eba13f1b5473bdd461c599cded dclib-0.3.3.ebuild 721
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.2.20-gcc2.patch 318
+MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.2.21-gcc2.patch 318
 MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.0-gcc2.patch 318
 MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.2-gcc2.patch 318
 MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.3-gcc2.patch 318
 MD5 6d7f9ee5723f2c699934aa8a6b5dae29 files/digest-dclib-0.2.20 65
 MD5 0e80e3d1905179f858af0d704dfcee8e files/digest-dclib-0.2.21 65
-MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.2.20-gcc2.patch 318
 MD5 baa8778c127486a1084a097e98405a9a files/digest-dclib-0.3.0 64
 MD5 a30765ec8cc97673a37d8a6c6ac4a64f files/digest-dclib-0.3.2 64
 MD5 c973c56c5bf413e3d4421444ae796b01 files/digest-dclib-0.3.3 64
-MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.2.21-gcc2.patch 318
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXOtncAgAdbxYsnERAuFHAKCgDLppGiidE/dOv4jk3jDQ5ZrkxwCcCTCV
-ZgOlPWyU5uYU9vm3VYVMEOc=
-=PFbt
------END PGP SIGNATURE-----

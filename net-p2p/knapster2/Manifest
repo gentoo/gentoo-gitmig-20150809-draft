@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d6a45d0a7f219fde4d8c5e2ad951d372 ChangeLog 1209
 MD5 ab906f167334cfd37d3f264232e29dd2 knapster2-0.4.ebuild 540
-MD5 b2d16c11b6a295b82bf687ec0de8bfd6 knapster2-0.5.ebuild 518
+MD5 561959196b22aa052ae6112aecf8a3af knapster2-0.5.ebuild 517
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 f070170f010493775166e99ad51360e9 files/digest-knapster2-0.4 65
 MD5 a66f99428528ab3e33c6ea806157c488 files/digest-knapster2-0.5 65
 MD5 6a69ca2de36cb1c0d360beae2dcf8690 files/knapster2-0.4-gcc3.2.diff 15623
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHid0I1lqEGTUzyQRAlMCAKDOWW9zlIF0pziufzTD+Q3G5UsqZACfVNsD
-rPJbjf+tFPumIStQPi1WQhc=
-=FMRY
------END PGP SIGNATURE-----
