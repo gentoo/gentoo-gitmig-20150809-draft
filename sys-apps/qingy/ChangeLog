@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.10 2004/07/19 19:33:45 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.11 2004/07/27 23:46:47 s4t4n Exp $
+
+*qingy-0.4.1 (28 July 2004)
+
+  28 July 2004; Michele Noberasco <s4t4n@gentoo.org> qingy-0.4.1.ebuild:
+  Version bump. This is going to be the next unmasked version ;-)
 
   19 Jul 2004; <malc@gentoo.org> qingy-0.4.0.ebuild:
   Add ~amd64 keyword, fixes bug #55461
