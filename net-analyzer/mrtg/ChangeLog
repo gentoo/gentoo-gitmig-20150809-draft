@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.29 2004/11/01 09:08:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.30 2004/11/06 02:21:14 kloeri Exp $
+
+  06 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> mrtg-2.10.15.ebuild:
+  Stable on alpha.
 
   01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> mrtg-2.10.15.ebuild:
   ~alpha keyword.
