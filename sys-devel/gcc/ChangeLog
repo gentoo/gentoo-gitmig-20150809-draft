@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.369 2005/01/11 13:34:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.370 2005/01/11 13:44:48 eradicator Exp $
 
   11 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> gcc-3.3.5-r1.ebuild:
   Stable on sparc
@@ -20,7 +20,7 @@
   abstract. Fixed up multilib support. Fixed some problems moving libs to
   incorrect destinations or not moving some libs. Fixed a few
   cross-compilation problems (but not all yet). Closes bug #76884. Updated
-  src_unpack to do patches based on instead of .
+  src_unpack to do patches based on ${CTARGET} instead of ${ARCH}.
 
   09 Jan 2005; Joshua Kinard <kumba@gentoo.org>
   +files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers.patch, gcc-3.4.3-r1.ebuild:
