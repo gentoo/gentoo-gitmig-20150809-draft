@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.25 2004/04/22 02:32:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.26 2004/04/22 02:38:04 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -75,7 +75,7 @@ fi
 DEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.2
 	!build? ( >=sys-libs/ncurses-5.2-r2
-	          nls? ( sys-devel/gettext ) )"
+		nls? ( sys-devel/gettext ) )"
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.2.3
 	>=sys-libs/zlib-1.1.4

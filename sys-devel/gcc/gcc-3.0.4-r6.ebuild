@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.16 2004/02/26 20:36:49 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.17 2004/04/22 02:38:05 vapier Exp $
 
-IUSE="nls bootstrap static build"
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -12,24 +11,25 @@ inherit libtool
 TV=4.0
 GCC_SUFFIX=-3.0
 LOC=/usr
-SLOT="3.0"
-S=${WORKDIR}/${P}
+
+DESCRIPTION="Modern GCC C/C++ compiler and an included, upgraded version of texinfo to boot"
+HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
 	ftp://ftp.funet.fi/pub/mirrors/sourceware.cygnus.com/pub/gcc/releases/${P}/${P}.tar.bz2
 	ftp://ftp.gnu.org/pub/gnu/texinfo/texinfo-${TV}.tar.gz
 	ftp://ftp.ibiblio.org/pub/linux/distributions/gentoo/distfiles/texinfo-${TV}.tar.gz"
-DESCRIPTION="Modern GCC C/C++ compiler and an included, upgraded version of texinfo to boot"
-HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
-LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 sparc -ppc"
 
-DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc >=sys-libs/zlib-1.1.4"
-if [ -z "`use build`" ]
-then
-	DEPEND="$DEPEND nls? ( sys-devel/gettext ) >=sys-libs/ncurses-5.2-r2"
-	RDEPEND="$RDEPEND >=sys-libs/ncurses-5.2-r2"
-fi
+LICENSE="GPL-2 LGPL-2.1"
+SLOT="3.0"
+KEYWORDS="x86 sparc -ppc"
+IUSE="nls bootstrap static build"
+
+DEPEND="virtual/glibc
+	!build? ( >=sys-libs/ncurses-5.2-r2
+		nls? ( sys-devel/gettext ) )"
+RDEPEND="virtual/glibc
+	>=sys-libs/zlib-1.1.4
+	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 build_multiple() {
 	#try to make sure that we should build multiple
@@ -57,8 +57,7 @@ src_unpack() {
 	rm -rf ${S}/texinfo
 	mv ${S}/texinfo-${TV} ${S}/texinfo
 	cd ${S}/texinfo
-	if [ "`use build`" ]
-	then
+	if use build ; then
 		patch -p0 < ${FILESDIR}/texinfo-${TV}-no-ncurses-gentoo.diff || die
 		touch *
 	fi
@@ -79,13 +78,11 @@ src_compile() {
 	local myconf=""
 	# use the system zlib!!!
 	myconf="--with-system-zlib"
-	if [ -z "`use build`" ]
+	use build \
+		&& myconf="${myconf} --enable-languages=c" \
+		|| myconf="${myconf} --enable-shared"
+	if ! use nls || use build
 	then
-		myconf="${myconf} --enable-shared"
-	else
-		myconf="${myconf} --enable-languages=c"
-	fi
-	if [ -z "`use nls`" ] || [ "`use build`" ] ; then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
@@ -103,9 +100,7 @@ src_compile() {
 	fi
 
 	# gcc does not like optimization
-
-	export CFLAGS="${CFLAGS/-O?/}"
-	export CXXFLAGS="${CXXFLAGS/-O?/}"
+	filter-flags -O?
 
 	#build in a separate build tree
 	cd ${WORKDIR}
@@ -187,7 +182,7 @@ src_install() {
 
 	#make sure we dont have stuff lying around that
 	#can nuke multiple versions of gcc
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${FULLPATH_D}
 		#move symlinks to compiler-specific dir
@@ -243,7 +238,7 @@ src_install() {
 	rm -f ${D}${LOC}/lib/libgcc_s.so*
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		#do a full texinfo-${TV} install
 
@@ -327,4 +322,3 @@ pkg_postrm() {
 		ln -sf gcc ${ROOT}/usr/bin/cc
 	fi
 }
-
