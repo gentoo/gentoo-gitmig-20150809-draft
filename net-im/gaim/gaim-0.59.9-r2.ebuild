@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.9-r2.ebuild,v 1.1 2003/04/22 21:26:55 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.9-r2.ebuild,v 1.2 2003/04/22 21:28:16 sethbc Exp $
 
 inherit kde-functions eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2
 	ssl? ( mirror://sourceforge/gaim-encryption/encrypt-${EV}.tar.gz )"
 HOMEPAGE="http://gaim.sourceforge.net/"
 
-SLOT="1"
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
 IUSE="nas nls esd gnome arts perl ssl"
