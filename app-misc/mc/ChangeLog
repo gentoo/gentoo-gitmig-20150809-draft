@@ -8,6 +8,9 @@
   Made a small edition to mc which allows it to chdir to the current
   working directory on exit.
 
+  06 May 2003; Michael Nazaroff <naz@gentoo.org> chdir-4.6.0.gentoo:
+  Made small change to chdir script to fix a mc crash on startup problem.
+
 *mc-4.6.0 (05 Feb 2003)
 
   31 Mar 2003; Christian Birchinger <joker@gentoo.org> mc-4.6.0.ebuild:
