@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/filepp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/filepp/ChangeLog,v 1.6 2004/06/28 05:18:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/filepp/ChangeLog,v 1.7 2004/06/28 05:19:47 ciaranm Exp $
+
+  28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> filepp-1.6.0.ebuild:
+  QA: Added IUSE
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> filepp-1.6.0.ebuild:
   Added ~sparc, ~mips
