@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.6 2002/07/01 14:54:11 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.7 2002/07/16 19:56:15 stroke Exp $
+
+*gthumb-1.102 (16 Jul 2002)
+  16 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gthumb-1.102.ebuild :
+  New version. (Gnome2).
+
+*gthumb-0.13 (16 Jul 2002)
+  16 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gthumb-0.13.ebuild:
+  New version. (Gnome1).
 
 *gthumb-1.101-r1 (01 Jul 2002)
   01 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gthumb-1.101-r1.ebuild :
