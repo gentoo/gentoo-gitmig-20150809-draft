@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.275 2005/01/20 05:27:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.276 2005/01/20 05:37:21 spyderous Exp $
+
+  19 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r3.ebuild:
+  (#77589, #71642) keyword ia64, spanky-approved.
 
   19 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xorg-x11-6.8.1.901.ebuild:
