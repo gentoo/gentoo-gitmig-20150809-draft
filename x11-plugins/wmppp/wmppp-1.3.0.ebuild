@@ -1,11 +1,11 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmppp/wmppp-1.3.0.ebuild,v 1.1 2002/08/30 07:44:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmppp/wmppp-1.3.0.ebuild,v 1.2 2002/09/21 04:27:27 vapier Exp $
 
 S=${WORKDIR}/wmppp.app/wmppp
 DESCRIPTION="Network monitoring dock.app"
 SRC_URI="http://web.cs.mun.ca/~gstarkes/wmaker/dockapps/files/${P}.tar.gz"
-HOMEPAGE="http://www.linux.tucows.com"
+HOMEPAGE="http://windowmaker.mezaway.org/" #but this site has been dead for a while ;(
 
 DEPEND="virtual/x11"
 
