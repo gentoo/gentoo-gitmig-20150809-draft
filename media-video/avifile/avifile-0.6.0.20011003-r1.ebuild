@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011003-r1.ebuild,v 1.1 2001/10/06 15:30:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011003-r1.ebuild,v 1.2 2001/10/07 08:05:06 danarmak Exp $
 
 P=${PN}-0.6.0-20011003
 S=${WORKDIR}/${PN}-0.6.0
@@ -23,8 +23,6 @@ src_compile() {
     local myconf
     if [ -z "`use qt`" ] ; then
       myconf="$myconf --disable-qt"
-    else
-      myconf="$myconf --with-qt-includes=$QTDIR/include --with-qt-libraries=$QTDIR/lib"
     fi
     if [ "`use nas`" ] ; then
 	LDFLAGS="-L/usr/X11R6/lib -lXt"
