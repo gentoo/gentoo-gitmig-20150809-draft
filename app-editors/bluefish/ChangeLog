@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.7 2002/11/14 17:06:11 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.8 2002/11/16 10:16:18 hanno Exp $
+
+*bluefish-2002.11.08 (16 Nov 2002)
+
+  16 Nov 2002; Hanno Boeck <hanno@gentoo.org> bluefish-2002.11.08.ebuild :
+  New version of gtk2 port.
 
 *bluefish-0.7-r3 (14 Nov 2002)
 
