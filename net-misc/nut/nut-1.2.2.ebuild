@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.2.ebuild,v 1.9 2004/06/25 00:00:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.2.ebuild,v 1.10 2004/06/30 18:31:27 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Network-UPS Tools"
-SRC_URI="http://www.exploits.org/nut/release/${PV%.*}/${P}.tar.gz"
 HOMEPAGE="http://www.exploits.org/nut/"
-KEYWORDS="x86 sparc"
+SRC_URI="http://www.exploits.org/nut/release/${PV%.*}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND=""
 RDEPEND=">=sys-apps/baselayout-1.8.2"
@@ -22,7 +23,7 @@ function setapache() {
 }
 
 if [ -n "${APACHE}" ]; then
-	DEPEND="${DEPEND} =sys-libs/zlib-1* =media-libs/libgd-1* =media-libs/libpng-1.2*"
+	DEPEND="${DEPEND} =sys-libs/zlib-1* =media-libs/gd-1* =media-libs/libpng-1.2*"
 	RDEPEND="${RDEPEND} net-www/apache"
 fi
 RDEPEND="${RDEPEND} ${DEPEND}"

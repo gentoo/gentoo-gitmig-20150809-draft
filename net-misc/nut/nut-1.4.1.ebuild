@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.4.1.ebuild,v 1.5 2004/06/25 00:00:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.4.1.ebuild,v 1.6 2004/06/30 18:31:27 vapier Exp $
 
 DESCRIPTION="Network-UPS Tools."
 HOMEPAGE="http://www.networkupstools.org/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc"
 IUSE="cgi"
 
-RDEPEND="cgi? ( =media-libs/libgd-1* )"
+RDEPEND="cgi? ( =media-libs/gd-1* )"
 DEPEND="$RDEPEND
 	>=sys-apps/sed-4
 	>=sys-devel/autoconf-2.58"
