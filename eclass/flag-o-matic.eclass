@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.17 2003/04/27 20:57:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.18 2003/06/17 14:38:32 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -8,10 +8,11 @@ ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
 
 #
-#### filter-flags <flag> ####
+#### filter-flags <flags> ####
 # Remove particular flags from C[XX]FLAGS
+# Matches only complete flags
 #
-#### append-flags <flag> ####
+#### append-flags <flags> ####
 # Add extra flags to your current C[XX]FLAGS
 #
 #### replace-flags <orig.flag> <new.flag> ###
@@ -19,7 +20,7 @@ INHERITED="$INHERITED $ECLASS"
 #
 #### is-flag <flag> ####
 # Returns "true" if flag is set in C[XX]FLAGS
-# Matches only complete flag
+# Matches only complete a flag
 #
 #### strip-flags ####
 # Strip C[XX]FLAGS of everything except known
@@ -41,45 +42,40 @@ ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
 # NOTE:  currently -Os have issues with gcc3 and K6* arch's
 UNSTABLE_FLAGS="-Os -O3 -freorder-blocks -fprefetch-loop-arrays"
 
-filter-flags () {
-
-	for x in $1
-	do
-		export CFLAGS="${CFLAGS/${x}}"
-		export CXXFLAGS="${CXXFLAGS/${x}}"
+filter-flags() {
+	# we do this fancy spacing stuff so as to not filter
+	# out part of a flag ... we want flag atoms ! :D
+	export CFLAGS=" ${CFLAGS} "
+	export CXXFLAGS=" ${CXXFLAGS} "
+	for x in $@ ; do
+		export CFLAGS="${CFLAGS/ ${x} / }"
+		export CXXFLAGS="${CXXFLAGS/ ${x} / }"
 	done
-
+	export CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
+	export CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
 }
 
-append-flags () {
-
+append-flags() {
 	CFLAGS="${CFLAGS} $1"
 	CXXFLAGS="${CXXFLAGS} $1"
-
 }
 
-replace-flags () {
-
+replace-flags() {
 	CFLAGS="${CFLAGS/${1}/${2} }"
 	CXXFLAGS="${CXXFLAGS/${1}/${2} }"
-
 }
 
 is-flag() {
-
-	for x in ${CFLAGS} ${CXXFLAGS}
-	do
-	    if [ "${x}" = "$1" ]
-		then
+	for x in ${CFLAGS} ${CXXFLAGS} ; do
+		if [ "${x}" == "$1" ] ; then
 			echo true
-			break
-	    fi
+			return 0
+		fi
 	done
-
+	return 1
 }
 
 strip-flags() {
-
 	local NEW_CFLAGS=""
 	local NEW_CXXFLAGS=""
 
@@ -143,8 +139,7 @@ get-flag() {
 	done
 }
 
-replace-sparc64-flags () {
-
+replace-sparc64-flags() {
 	local SPARC64_CPUS="ultrasparc v9"
 
  	if [ "${CFLAGS/mtune}" != "${CFLAGS}" ]
@@ -172,5 +167,4 @@ replace-sparc64-flags () {
 			CXXFLAGS="${CXXFLAGS/-mcpu=${x}/-mcpu=v8 -mtune=${x}}"
 		done
 	fi
-	
 }
