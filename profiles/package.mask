@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2788 2004/03/31 21:57:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2789 2004/04/01 08:35:02 klieber Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,26 @@
 ##
 ##   End example
 ##
+
+# <klieber@gentoo.org> (01 Apr 2004)
+# The following packages contain a remotely-exploitable
+# security vulnerability and have been hard masked accordingly.
+# 
+# Please see http://bugs.gentoo.org/show_bug.cgi?id=44351 for more info
+#
+# You may unmask this package by placing an appropriate entry in your
+# /etc/portage/package.unmask file
+games-fps/unreal
+games-fps/unreal-tournament
+games-fps/unreal-tournament-goty
+games-fps/unreal-tournament-infiltration
+games-fps/unreal-tournament-strikeforce
+games-fps/unreal-tournament-bonuspacks
+games-fps/ut2003-bonuspack-epic
+games-fps/ut2003
+games-fps/ut2003-demo
+games-server/ut2003-ded
+games-fps/americas-army
 
 # <suka@gentoo.org> (31 Mar 2004)
 # Also short term mask the new OOo source build
