@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.1 2003/09/11 06:22:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.2 2003/12/29 15:50:08 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -24,10 +24,6 @@ LICENSE="public-domain"
 # cannadic source is basically plain text and will run on any platform
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hpps ~arm ~amd64"
 SLOT="0"
-
-# I don't add Canna as a dependency because Anthy also uses cannadic
-DEPEND="${DEPEND}
-	canna? ( app-i18n/canna )"
 
 S="${WORKDIR}"
 
