@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/medusa
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.1 2002/12/17 07:45:56 tad Exp $
+  
+  16 Dec 2002; Troy Dack <tad@gentoo.org> medusa-0.5.2.ebuild ChangeLog :
+
+* medusa-0.5.2 (16 Dec 2002)
+
+  Initial ebuild thanks to Chris Bainbridge <chrb@dcs.ed.ac.uk>
