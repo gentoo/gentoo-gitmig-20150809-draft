@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/mkl-5.1.ebuild,v 1.6 2002/10/04 05:17:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/mkl-5.1.ebuild,v 1.7 2002/11/28 12:16:59 zwelch Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel(R) Math Kernel Library"
 HOMEPAGE="http://developer.intel.com/software/products/mkl/mkl52/"
 SRC_URI="http://developer.intel.com/software/products/mkl/downloads/mkleval-514.tar"
 
+IUSE=""
 
 # No need to, there aren't any executables and it takes a long time.
 RESTRICT="nostrip"
@@ -19,7 +20,7 @@ KEYWORDS="x86 sparc sparc64"
 DEPEND="sys-apps/cpio
 	app-arch/rpm"
 
-RDEPEND=">=sys-kernel/linux-sources-2.4
+RDEPEND=">=sys-kernel/linux-headers-2.4
 	>=sys-libs/glibc-2.2.2"
 
 src_compile() {
@@ -34,7 +35,7 @@ src_compile() {
 	sed s@\<INSTALLTIMECOMBOPACKAGEID\>@mkl_eval-5.1-4@g \
 		< opt/intel/mkl/mklsupport \
 		> opt/intel/mkl/mklsupport.abs
-	mv opt/intel/mkl/mklsupport.abs opt/intel/mkl/mklsupport 
+	mv opt/intel/mkl/mklsupport.abs opt/intel/mkl/mklsupport
 }
 
 src_install () {
