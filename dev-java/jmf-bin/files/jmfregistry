@@ -2,7 +2,7 @@
 # jmfregistry
 # Author: Dylan Carlson
 # May 2003
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf/files/jmfregistry,v 1.2 2004/07/18 02:52:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/files/jmfregistry,v 1.1 2004/07/30 20:51:22 axxo Exp $
 
 JAVA_HOME=`/usr/bin/java-config --jdk-home`
 if [ -z "${JAVA_HOME}" ] ; then

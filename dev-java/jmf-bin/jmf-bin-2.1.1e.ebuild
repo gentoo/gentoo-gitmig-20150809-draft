@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf/jmf-2.1.1e.ebuild,v 1.10 2004/07/14 02:32:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/jmf-bin-2.1.1e.ebuild,v 1.1 2004/07/30 20:51:22 axxo Exp $
 
 inherit java-pkg
 
-At="${PN}-2_1_1e-alljava.zip"
+At="${PN/-bin}-2_1_1e-alljava.zip"
 S=${WORKDIR}/JMF-2.1.1e
 DESCRIPTION="The Java Media Framework API (JMF) enables audio, video and other time-based media to be added to Java applications and applets."
 SRC_URI="${At}"
@@ -60,6 +60,6 @@ src_install() {
 		${FILESDIR}/jmstudio
 	dohtml ${S}/doc/*.html
 	java-pkg_dojar ${S}/lib/*.jar
-	insinto /usr/share/${PN}/lib
+	insinto /usr/share/${PN/-bin}/lib
 	doins lib/jmf.properties
 }
