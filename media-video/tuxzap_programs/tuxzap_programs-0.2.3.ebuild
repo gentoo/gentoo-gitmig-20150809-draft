@@ -1,0 +1,37 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap_programs/tuxzap_programs-0.2.3.ebuild,v 1.1 2003/03/07 15:19:07 lordvan Exp $
+
+DESCRIPTION="mpegtools package for manipulation of various MPEG file formats"
+HOMEPAGE="http://www.metzlerbros.org/dvb/"
+SRC_URI="http://www.metzlerbros.org/dvb/${P}.tar.gz"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
+IUSE="gtk"
+DEPEND=">=media-video/linuxtv-dvb-1.0.0_pre2
+	>=media-video/libdvb-0.2.1
+	gtk? ( =x11-libs/gtk+-1.2* )"
+#RDEPEND=""
+S=${WORKDIR}/${P}
+
+src_compile() {
+    MYCONF='--with-dvb-path=/usr/lib'
+    # not using X use var because gtk is needed too anyway
+    use gtk || MYCONF=${MYCONF}' --without-x'
+    econf ${MYCONF}
+    # still assumes to be in the DVB dir 
+    mv ${S}/src/Makefile ${S}/src/Makefile_orig
+    sed -e s%../../../libdvb%/usr/include/libdvb%g  \
+	-e s%../../../include%/usr/include%g \
+	${S}/src/Makefile_orig > ${S}/src/Makefile
+    emake || die 'compile failed'
+}
+
+src_install() {
+    make DESTDIR=${D} install || die
+    
+    # docs
+    dodoc ${S}/README ${S}/AUTHORS ${S}/NEWS ${S}/ChangeLog
+}
+
