@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.22.ebuild,v 1.1 2003/09/17 18:23:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.22.ebuild,v 1.2 2003/10/02 19:58:36 avenj Exp $
 
 IUSE=""
 
@@ -23,10 +23,11 @@ KV="${KV/-r0//}"
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/gentoo-sources-${PV}/patches.txt.gz
 
-MYCSET="1.1063.2.37-to-1.1088"
+#MYCSET="1.1063.2.37-to-1.1088"
+MYSNAPSHOT="030909"
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-http://www.kernel.org/pub/linux/kernel/ports/ia64/v2.4/testing/cset/cset-${MYCSET}.txt.gz"
+http://www.kernel.org/pub/linux/kernel/ports/ia64/v2.4/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2"
 
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
@@ -38,8 +39,10 @@ src_unpack() {
 	cd ${WORKDIR}
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
 	cd ${WORKDIR}/linux-${KV}
-	[ ! -e ${DISTDIR}/cset-${MYCSET}.txt.gz ] && die "patch file not found"
-	cat ${DISTDIR}/cset-${MYCSET}.txt.gz | gzip -d | patch -f -p1
+#	[ ! -e ${DISTDIR}/cset-${MYCSET}.txt.gz ] && die "patch file not found"
+#	cat ${DISTDIR}/cset-${MYCSET}.txt.gz | gzip -d | patch -f -p1
+	[ ! -e ${DISTDIR}/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2 ] && die "patch not found"
+	cat ${DISTDIR}/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2 | bzip2 -d | patch -f -p1
 	kernel_universal_unpack
 }
 
