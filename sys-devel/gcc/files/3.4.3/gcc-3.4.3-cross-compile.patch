@@ -63,7 +63,7 @@
 +#endif /* inhibit_libc */
 --- gcc/config/rs6000/linux64.h
 +++ gcc/config/rs6000/linux64.h
-@@ -579,6 +579,7 @@
+@@ -561,13 +579,12 @@
  /* Do code reading to identify a signal frame, and set the frame
     state data appropriately.  See unwind-dw2.c for the structs.  */
  
@@ -71,10 +71,26 @@
  #ifdef IN_LIBGCC2
  #include <signal.h>
  #ifdef __powerpc64__
-@@ -603,6 +604,7 @@
+ #include <sys/ucontext.h>
+ 
+-enum { SIGNAL_FRAMESIZE = 128 };
+-
+ #else
+ 
+ /* During the 2.5 kernel series the kernel ucontext was changed, but
+@@ -581,10 +598,15 @@
+   struct sigcontext_struct uc_mcontext;
+   sigset_t          uc_sigmask;
+ };
+-enum { SIGNAL_FRAMESIZE = 64 };
  #endif
  
  #endif
++#endif /* inhibit_libc */
++#ifdef __powerpc64__
++enum { SIGNAL_FRAMESIZE = 128 };
++#else
++enum { SIGNAL_FRAMESIZE = 64 };
 +#endif
  
  #ifdef __powerpc64__
