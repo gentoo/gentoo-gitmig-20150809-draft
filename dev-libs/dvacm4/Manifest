@@ -1,5 +1,7 @@
 MD5 5532588ce6a8b88f14d1f2f262290388 dvacm4-0.3.3.ebuild 604
 MD5 efc862c98bb9083e994a63201ecd8345 dvacm4-0.3.4.ebuild 605
 MD5 8bd4010f15bd1e8409b274f331301ad5 ChangeLog 744
+MD5 c9d98d8918796a3c111a77b8b45f809f dvacm4-0.3.1.ebuild 604
+MD5 f55cb8c538fcf14ab1ce850940960bd1 files/digest-dvacm4-0.3.1 64
 MD5 d9e03105b18ae233a7a49623edc80360 files/digest-dvacm4-0.3.3 64
 MD5 53f66f3aae17ee76dfe4098362fb221a files/digest-dvacm4-0.3.4 64
