@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.3 2003/10/22 16:01:48 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.4 2003/10/24 17:42:37 max Exp $
 
 inherit eutils flag-o-matic
 
@@ -90,6 +90,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	chown dhcp:dhcp /var/lib/dhcp
+
 	einfo "You can edit /etc/conf.d/dhcp to customize dhcp settings"
 	einfo
 	einfo "The DHCP ebuild now includes chroot support."

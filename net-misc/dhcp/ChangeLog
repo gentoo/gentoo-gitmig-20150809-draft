@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.23 2003/10/22 16:01:48 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.24 2003/10/24 17:42:37 max Exp $
+
+  24 Oct 2003; Max Kalika <max@gentoo.org> dhcp-3.0_p2-r2.ebuild:
+  Fix ownership as part of pkg_postinst(). Fixes bug 31840.
 
   22 Oct 2003; Max Kalika <max@gentoo.org> dhcp-3.0_p2-r2.ebuild:
   Use enewuser() from eutils.eclass.
