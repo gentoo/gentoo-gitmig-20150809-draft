@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.20 2004/02/29 22:45:09 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.21 2004/02/29 22:50:36 pyrania Exp $
+
+*chkrootkit-0.43 (29 Feb 2004)
+
+  29 Feb 2004; Markus Nigbur <pyrania@gentoo.org> chkrootkit-0.43.ebuild:
+  Version bump. Closing #41040.
 
   29 Feb 2004; Markus Nigbur <pyrania@gentoo.org> chkrootkit-0.42b.ebuild:
   Stable on x86
