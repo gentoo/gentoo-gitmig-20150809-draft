@@ -35,6 +35,6 @@ src_install() {
 	dodoc doc/*.txt
 	insinto /etc
 	doins conf/pwdb.conf
-	insinto /etc/pam.d
-	doins ${FILESDIR}/passwd
+#	insinto /etc/pam.d
+#	doins ${FILESDIR}/passwd
 }
