@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/drivel
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.14 2004/12/06 09:04:32 joem Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.15 2005/02/03 01:33:46 joem Exp $
+
+*drivel-1.2.4 (02 Feb 2005)
+
+  02 Feb 2005; Joe McCann <joem@gentoo.org> +drivel-1.2.4.ebuild:
+  Version bump. I have added the local useflag rhythmbox, which lets drivel
+  grab the currently playing song from rhythmbox.
 
   06 Dec 2004; Joe McCann <joem@gentoo.org> drivel-1.0.2.ebuild,
   drivel-1.2.1.ebuild, drivel-1.2.3.ebuild:
