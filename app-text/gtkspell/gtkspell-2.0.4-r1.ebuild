@@ -1,23 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4.ebuild,v 1.11 2003/10/26 19:56:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4-r1.ebuild,v 1.1 2003/10/26 19:56:57 foser Exp $
 
 inherit eutils
 
-DESCRIPTION="spell library for GTK2"
+DESCRIPTION="Spell chechking widget for GTK2"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
 SRC_URI="http://${PN}.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ppc ~alpha hppa"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa"
 IUSE="doc"
 
 DEPEND=">=x11-libs/gtk+-2
-	virtual/aspell-dict
+	>=app-text/enchant-1
 	doc? ( >=dev-util/gtk-doc-0.6 )"
 
 src_unpack() {
+
 	unpack ${A}
 
 	# fix the config script's gtkdoc check (bug #16997)
@@ -26,9 +27,14 @@ src_unpack() {
 
 	# workaround missing docbook 4.2 xml dtd in /etc/xml/docbook
 	epatch ${FILESDIR}/${P}-docbookx.patch
+
+	# use enchant as backend
+	epatch ${FILESDIR}/${P}-enchant.patch
+
 }
 
 src_compile() {
+
 	local myconf
 
 	use doc \
@@ -37,9 +43,12 @@ src_compile() {
 
 	econf ${myconf} || die
 	emake || die "compile failure"
+
 }
 
 src_install() {
+
 	einstall || die
 	dodoc AUTHORS ChangeLog NEWS README
+
 }
