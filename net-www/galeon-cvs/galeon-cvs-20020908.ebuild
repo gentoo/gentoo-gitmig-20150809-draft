@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.5 2002/09/08 16:12:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.6 2002/09/08 16:18:03 spider Exp $
 
 
 # ECVS_TOP_DIR="${PORTAGE_TMPDIR}"
@@ -28,16 +28,19 @@ DEPEND="virtual/x11
 
 RDEPEND="${DEPEND}"
 
-
-
-src_compile() {
-	elibtoolize
+pkg_setup () {
 	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk2.so ]
-		then
+	then
 		eerror "you need mozilla-1.1-r1 or higher compiled against gtk+-2"
 		eerror "export USE=\"gtk2\" ;emerge mozilla -p "
 		die "Need Mozilla compiled with gtk+-2.0!!"
 	fi
+			
+}
+
+
+src_compile() {
+	elibtoolize
 	cd ${S}
 	local myconf=" --with-mozilla-snapshot --disable-werror"
 	local baseopts="--prefix=/usr\
