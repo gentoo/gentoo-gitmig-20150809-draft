@@ -2,6 +2,7 @@ MD5 fef4a1b1a2fed04c2aa9a9d522aa012d gnome-session-2.4.1.ebuild 1282
 MD5 2458df03e82772e1001325be7eaace2c gnome-session-2.2.2.ebuild 1344
 MD5 b56cac7440398cae56af6432418991d7 gnome-session-2.2.0.2.ebuild 1162
 MD5 80b671305c525b0b2c2ff9baa7a60b46 gnome-session-2.4.0.ebuild 1466
+MD5 45e4175346140852731d35118f866c5b gnome-session-2.4.2.ebuild 1285
 MD5 d0659f6ea919f9bd59d80a9ba526b5fe ChangeLog 7091
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 b10dbd1b6388f5fdf9feee0e56525ea5 files/Gnome 2464
@@ -9,6 +10,7 @@ MD5 f02a80d3f1435547a479312c15cc1030 files/gnome-splash.png 78064
 MD5 7a5241ff158ca1c840c035cb0ae9340d files/digest-gnome-session-2.2.2 72
 MD5 ebfde736b9aa58793476ac3dbf09fe23 files/digest-gnome-session-2.4.0 72
 MD5 4022794e99a461f04b831f82c4d823e8 files/digest-gnome-session-2.4.1 72
+MD5 c7dd76860a26aa54145fafa215e0aa42 files/digest-gnome-session-2.4.2 72
 MD5 e9d19abecd2642091611b90e094ef342 files/digest-gnome-session-2.2.0.2 74
 MD5 9b6a487176c392343b5ce7eab34297af files/gnome-session-2.4-defaults.patch 1004
 MD5 73b0d3a312160d827670731c38f3f2ce files/gnome-session-2.0.9-64bit.patch 889
