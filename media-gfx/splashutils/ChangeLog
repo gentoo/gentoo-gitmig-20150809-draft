@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.18 2005/03/07 21:19:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.19 2005/03/08 17:34:22 spock Exp $
+
+  08 Mar 2005; Michael Januszewski <spock@gentoo.org>
+  splashutils-0.9.1.ebuild, -splashutils-0.9_pre09.ebuild,
+  -splashutils-0.9_pre10.ebuild, splashutils-0.9_rc1.ebuild:
+  Removed old ebuilds. Updated the remaining ebuilds to work with KBUILD_OUTPUT.
 
   07 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   splashutils-0.9.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_rc1.ebuild,v 1.5 2005/02/11 18:40:34 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_rc1.ebuild,v 1.6 2005/03/08 17:34:22 spock Exp $
 
 MISCSPLASH="miscsplashutils-0.1.2"
 GENTOOSPLASH="splashutils-gentoo-0.1.3"
@@ -50,18 +50,14 @@ src_unpack() {
 	fi
 
 	if [ ! -e /usr/src/linux/include/asm ]; then
-
-		t=$(readlink /usr/src/linux)
-		t=${t#/usr/src/}
-
-		if [ -z "${KBUILD_OUTPUT_PREFIX}" ] ||
-		   [ ! -e "${KBUILD_OUTPUT_PREFIX}/${t/linux-}/include/asm" ]; then
+		if [ -z "${KBUILD_OUTPUT}" ] ||
+		   [ ! -e "${KBUILD_OUTPUT}/include/asm" ]; then
 			eerror "It appears that your kernel has not been configured. Please run at least"
 			eerror "\`make prepare\` before merging splashutils."
 			die "Kernel not configured"
 		else
-			t2=$(readlink ${KBUILD_OUTPUT_PREFIX}/${t/linux-}/include/asm)
-			ln -s /usr/src/linux/include/${t2} ${T}/asm
+			t=$(readlink ${KBUILD_OUTPUT}/include/asm)
+			ln -s /usr/src/linux/include/${t} ${T}/asm
 			sed -e "s@#CHANGEME#@${T}/@" -i ${S}/libs/klibc-${KLIBC_VERSION}/klibc/makeerrlist.pl
 		fi
 	fi
@@ -77,10 +73,8 @@ src_compile() {
 
 	local miscincs
 
-	if [ -n "${KBUILD_OUTPUT_PREFIX}" ]; then
-		t=$(readlink /usr/src/linux)
-		t=${t#/usr/src/}
-		miscincs="-I${T} -I${KBUILD_OUTPUT_PREFIX}/${t/linux-}/include"
+	if [ -n "${KBUILD_OUTPUT}" ]; then
+		miscincs="-I${T} -I${KBUILD_OUTPUT}/include"
 	fi
 
 	emake -j1 MISCINCS="${miscincs}"
