@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.27 2004/03/22 17:06:21 anti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.28 2004/05/03 03:07:37 anti Exp $
+
+  02 May 2004; Ray Russell Reese III <anti@gentoo.org> :
+  Version bump, also fixes a jikes compile problem, and startup locking problem
 
 *jedit-4.2_pre11 (22 Mar 2004)
 
