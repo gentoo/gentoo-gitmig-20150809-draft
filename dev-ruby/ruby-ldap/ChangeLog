@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-ldap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.4 2004/06/25 02:00:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.5 2004/09/01 08:39:08 usata Exp $
+
+*ruby-ldap-0.8.2 (01 Sep 2004)
+
+  01 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -ruby-ldap-0.7.2.ebuild,
+  -ruby-ldap-0.8.0.ebuild, ruby-ldap-0.8.1.ebuild, +ruby-ldap-0.8.2.ebuild:
+  Version bumped; bug #62475. Marked 0.8.1 stable on x86 and ppc. Removed old
+  ebuilds.
 
   03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ruby-ldap-0.8.1.ebuild:
   Stable on alpha.
