@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.3 2003/08/24 22:10:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.4 2003/11/18 15:05:10 matsuu Exp $
 
 MY_P="${PN}-v${PV}"
 DESCRIPTION="A Japanese input server which supports the XIM protocol"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nec.co.jp/canna/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ~ppc sparc ~amd64"
 IUSE="canna freewnn"
 
 DEPEND="virtual/glibc
@@ -39,7 +39,6 @@ src_unpack() {
 	use canna || use freewnn \
 		|| mysed="${mysed} -e 's:/\* \(\#define UseCanna\) \*/:\\1:'"
 
-	echo ${mysed}
 	cp ${S}/Kinput2.conf ${T}
 	eval sed ${mysed} ${T}/Kinput2.conf > ${S}/Kinput2.conf || die
 }
