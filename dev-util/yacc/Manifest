@@ -1,3 +1,5 @@
+MD5 7751ed920f8a33e1805f84fcee4be183 ChangeLog 1577
+MD5 85c9b31b808057d03362e15c2daf7935 yacc-1.9.1-r1.ebuild 1074
 MD5 afeab71394d9c421389458f63b2cb173 files/digest-yacc-1.9.1-r1 60
-MD5 25c6079a4f563ae521eecd107853e881 ChangeLog 1341
-MD5 2ccfd053c6b416ca2f635f793da37c86 yacc-1.9.1-r1.ebuild 779
+MD5 c5a221a78a10f6156ea9ddb2ade30598 files/yacc-1.9.1-ia64.patch 504
+MD5 df645d0e6382050201af35e3002dfc5b files/mkstemp.patch 413

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/yacc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.10 2004/03/05 14:18:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.11 2004/04/05 04:03:23 agriffis Exp $
+
+  05 Apr 2004; Aron Griffis <agriffis@gentoo.org> yacc-1.9.1-r1.ebuild,
+  files/mkstemp.patch, files/yacc-1.9.1-ia64.patch:
+  Propogate CFLAGS to Makefile in a sed-safe way. Use 64-bit patch from bug
+  46233 (also applied to byacc)
 
   05 Mar 2004; Tom Gall <tgall@gentoo.org> yacc-1.9.1-r1.ebuild:
   Stable on ppc64
