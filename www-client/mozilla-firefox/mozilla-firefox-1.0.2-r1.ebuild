@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.2-r1.ebuild,v 1.2 2005/03/25 20:03:41 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.2-r1.ebuild,v 1.3 2005/03/26 07:00:14 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -11,7 +11,6 @@ HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 MY_PV=${PV/_rc/rc}
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2"
 
-FF_VER="1.0.2"
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
@@ -119,33 +118,33 @@ src_install() {
 	dodir /usr/$(get_libdir)/MozillaFirefox
 	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/$(get_libdir)/MozillaFirefox
 
-		einfo "Installing includes and idl files..."
-		# Copy the include and idl files
-		dodir /usr/$(get_libdir)/MozillaFirefox/include/idl /usr/include
-		cd ${S}/dist
-		cp -LfR include/* ${D}/usr/$(get_libdir)/MozillaFirefox/include
-		cp -LfR idl/* ${D}/usr/$(get_libdir)/MozillaFirefox/include/idl
-		dosym /usr/$(get_libdir)/MozillaFirefox/include /usr/include/MozillaFirefox
+	einfo "Installing includes and idl files..."
+	# Copy the include and idl files
+	dodir /usr/$(get_libdir)/MozillaFirefox/include/idl /usr/include
+	cd ${S}/dist
+	cp -LfR include/* ${D}/usr/$(get_libdir)/MozillaFirefox/include
+	cp -LfR idl/* ${D}/usr/$(get_libdir)/MozillaFirefox/include/idl
+	dosym /usr/$(get_libdir)/MozillaFirefox/include /usr/include/MozillaFirefox
 
-		# Dirty hack to get some applications using this header running
-		dosym /usr/$(get_libdir)/MozillaFirefox/include/necko/nsIURI.h /usr/lib/MozillaFirefox/include/nsIURI.h
+	# Dirty hack to get some applications using this header running
+	dosym /usr/$(get_libdir)/MozillaFirefox/include/necko/nsIURI.h /usr/lib/MozillaFirefox/include/nsIURI.h
 
-		cd ${S}/build/unix
-		# Fix firefox-config and install it
-		sed -i -e "s:/lib/firefox-${FF_VER}::g" firefox-config
-		sed -i -e "s:/firefox-${FF_VER}::g" firefox-config
-		exeinto /usr/$(get_libdir)/MozillaFirefox
-		doexe firefox-config
-		# Fix pkgconfig files and install them
-		insinto /usr/$(get_libdir)/pkgconfig
-		for x in *.pc; do
-				if [[ -f ${x} ]]; then
-						sed -i -e "s:/lib/firefox-${FF_VER}::g" ${x}
-						sed -i -e "s:/firefox-${FF_VER}::g" ${x}
-						doins ${x}
-				fi
-		done
-		cd ${S}
+	cd ${S}/build/unix
+	# Fix firefox-config and install it
+	sed -i -e "s:/lib/firefox-${MY_PV}::g" firefox-config
+	sed -i -e "s:/firefox-${MY_PV}::g" firefox-config
+	exeinto /usr/$(get_libdir)/MozillaFirefox
+	doexe firefox-config
+	# Fix pkgconfig files and install them
+	insinto /usr/$(get_libdir)/pkgconfig
+	for x in *.pc; do
+			if [[ -f ${x} ]]; then
+					sed -i -e "s:/lib/firefox-${MY_PV}::g" ${x}
+					sed -i -e "s:/firefox-${MY_PV}::g" ${x}
+					doins ${x}
+			fi
+	done
+	cd ${S}
 
 
 	#fix permissions
