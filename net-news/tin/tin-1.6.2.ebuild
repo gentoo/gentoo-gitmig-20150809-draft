@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/tin/tin-1.6.2.ebuild,v 1.1 2004/01/27 21:25:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/tin/tin-1.6.2.ebuild,v 1.2 2004/02/22 15:18:22 aliz Exp $
 
-IUSE="ncurses"
+IUSE="ncurses ipv6"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A threaded NNTP and spool based UseNet newsreader"
@@ -12,18 +12,19 @@ HOMEPAGE="http://www.tin.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ia64"
+KEYWORDS="~x86 ~ia64 ~amd64"
 
 DEPEND="ncurses? ( sys-libs/ncurses )"
 
 src_compile() {
 	local myconf
-
-	use ncurses && myconf="--enable-curses --with-ncurses"
 	[ -f /etc/NNTP_INEWS_DOMAIN ] \
 		&& myconf="${myconf} --with-domain-name=/etc/NNTP_INEWS_DOMAIN"
 
 	./configure \
+		`use_enable ncurses curses` \
+		`use_with ncurses` \
+		`use_enable ipv6` \
 		--verbose \
 		--enable-nntp-only \
 		--enable-prototypes \
