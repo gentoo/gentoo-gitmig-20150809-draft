@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.5 2004/06/24 23:13:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.6 2004/06/28 20:52:33 agriffis Exp $
 
 IUSE="alsa oss"
 
@@ -9,7 +9,8 @@ SRC_URI="http://freakzone.net/gordon/src/${PN}-2.0b4.tar.gz"
 HOMEPAGE="http://freakzone.net/gordon/#wmmixer"
 
 DEPEND="virtual/x11
-	alsa? ( media-libs/alsa-lib )"
+	alsa? ( media-libs/alsa-lib )
+	>=sys-apps/sed-4"
 
 SLOT="0"
 LICENSE="GPL-2"
