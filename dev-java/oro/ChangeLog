@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/oro
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/ChangeLog,v 1.5 2003/02/12 05:54:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/ChangeLog,v 1.6 2003/03/16 23:51:54 absinthe Exp $
+
+*oro-2.0.6-r2 (16 Mar 2003)
+
+  16 Mar 2003; Dylan Carlson <absinthe@gentoo.org> oro-2.0.6-r2.ebuild:
+  Added 'doc' flag for API documentation, and 'jikes'.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
