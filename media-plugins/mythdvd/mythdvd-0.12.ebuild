@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.12.ebuild,v 1.1 2003/10/20 03:25:53 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.12.ebuild,v 1.2 2003/10/28 16:18:27 max Exp $
 
 inherit flag-o-matic
 
@@ -32,7 +32,7 @@ src_compile() {
 	local myconf="--enable-vcd"
 	myconf="${myconf} `use_enable transcode`"
 
-	local cpu="`get-flag march`"
+	local cpu="`get-flag march || get-flag mcpu`"
 	if [ "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
 	fi
