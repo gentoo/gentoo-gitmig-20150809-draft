@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.13 2005/02/12 03:53:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.14 2005/02/13 03:41:16 robbat2 Exp $
+
+  12 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> ethtool-2.ebuild,
+  ethtool-3.ebuild:
+  Add ~mips for my XXS1500 hardware.
 
 *ethtool-3 (11 Feb 2005)
 

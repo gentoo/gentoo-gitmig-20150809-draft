@@ -1,8 +1,19 @@
-MD5 bc6fb9d74a9e92ac5e5975bc78db4434 ChangeLog 1422
-MD5 0da73311655e282ac34f026fbafa09d8 ethtool-3.ebuild 587
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 52c7ed2ac84f1da4fe1fe036943ef90a ethtool-2.ebuild 590
+MD5 ac26630ce6eab9660d2c93d1842e4ab2 ethtool-3.ebuild 594
+MD5 a108c4cfe5e3e90c5e96ac19406f5055 ChangeLog 1552
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b5d0a094f67d9512b27d329dfe294ce2 ethtool-1.8.ebuild 552
-MD5 4ff86ce8bbbd5349781b0175466df1be ethtool-2.ebuild 583
-MD5 966d55d939d32d2c01231666796eeccb files/digest-ethtool-3 61
 MD5 a3bc02ee4d82e2319bade1d5505b67aa files/digest-ethtool-1.8 62
 MD5 c1a3131f24e207f5697559ccca02b37b files/digest-ethtool-2 61
+MD5 966d55d939d32d2c01231666796eeccb files/digest-ethtool-3 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFCDsyPPpIsIjIzwiwRAl5bAJ9zRi0s5oQpL8zFWTh8h9b2h8bjOQCgvdlI
+8Mig2tfqpyhxzu/T0Kv5iWo=
+=fSA1
+-----END PGP SIGNATURE-----
