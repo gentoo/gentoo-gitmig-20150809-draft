@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.31 2003/08/20 15:14:48 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.32 2003/08/21 09:37:42 lanius Exp $
+
+  21 Aug 2003; Heinrich Wendel <lanius@gentoo.org> icewm-1.2.10.ebuild,
+  icewm-1.2.7.ebuild, icewm-1.2.8.ebuild, files/icewm,
+  files/icewm-1.2.7-gentoo.patch:
+  - cleaned out old versions
+  - fixed bug #25739 (artwiz-fonts)
+  - fixed bug #27030 (gnome-desktop dep)
 
   20 Aug 2003; Brad Cowan <bcowan@gentoo.org> icewm-1.2.11.ebuild:
   Removed sessions support as upstream says its a buggy hack for PDAs only not
