@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/yiff
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.5 2004/06/30 07:22:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.6 2004/07/09 11:35:12 eradicator Exp $
+
+  09 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> yiff-2.14.2.ebuild:
+  Removing mikmod dependency stuff as it is borked... does not provide libkmid.h
 
   30 Jun 2004; David Holm <dholm@gentoo.org> yiff-2.14.2.ebuild:
   Added to ~ppc.

@@ -1,4 +1,4 @@
-MD5 89fbffb562fe25eb8f9c9e4ad6681c88 ChangeLog 592
-MD5 6d8357affd562acfea7801ff18462a42 yiff-2.14.2.ebuild 1042
+MD5 3f60121c3ba62ef5c549edc99c551bc1 yiff-2.14.2.ebuild 1004
+MD5 5a607a79f4ef97dfe7f0cf60210e94e2 ChangeLog 756
 MD5 8bf3317f7549f6be736e2a237a5ed26d files/2.14.2-gcc3.patch 3137
 MD5 731dde7e0d27725a199275a23aaec33e files/digest-yiff-2.14.2 64
