@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.54 2002/08/26 09:49:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.55 2002/08/26 10:07:10 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -65,6 +65,9 @@ kde_src_compile() {
 			    # stop make from regenerating stuff
 			    touch -t 199001010000 acinclude.m4.in
 			    cd $S
+			    
+			    # regenerate configure
+			    rm -f configure configure.in config.h.in *.m4
 			    
 			fi
 
