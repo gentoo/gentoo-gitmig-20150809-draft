@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/ChangeLog,v 1.12 2003/07/06 11:03:51 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/ChangeLog,v 1.13 2004/01/10 02:55:47 agriffis Exp $
+
+  09 Jan 2004; <agriffis@gentoo.org> libxml-1.8.17-r2.ebuild:
+  stable on ia64
 
   30 Mar 2003; phoen][x <phoenix@gentoo.org> libxml-1.8.17-r2.ebuild :
   Updated SRC_URI. Thanks to 'noidd' in #zaurus for the contribution.
