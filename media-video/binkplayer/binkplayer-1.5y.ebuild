@@ -1,8 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.5y.ebuild,v 1.1 2003/11/17 21:42:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.5y.ebuild,v 1.2 2003/12/01 23:03:52 vapier Exp $
 
-S="${WORKDIR}"
 DESCRIPTION="Bink Video! Player"
 HOMEPAGE="http://www.radgametools.com/default.htm"
 # No version on the archives
@@ -10,22 +9,17 @@ HOMEPAGE="http://www.radgametools.com/default.htm"
 SRC_URI="mirror://gentoo/${P}.zip"
 
 DEPEND="app-arch/unzip"
-RDEPEND="media-libs/smpeg
-	media-libs/libogg
-	media-libs/libvorbis
-	media-libs/nas
-	sys-libs/slang
-	media-libs/aalib
-	media-libs/libgii
-	dev-libs/DirectFB
+RDEPEND="virtual/glibc
 	media-libs/libsdl
 	media-libs/sdl-mixer"
 
-KEYWORDS="-* ~x86"
 LICENSE="as-is"
 SLOT="0"
-IUSE=""
+KEYWORDS="-* ~x86"
 
-src_install () {
+S=${WORKDIR}
+
+src_install() {
+	into /opt
 	dobin BinkPlayer || die "dobin failed"
 }
