@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.4 2004/01/25 23:57:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.5 2004/01/30 05:17:29 drobbins Exp $
 
 IUSE="X nls motif leim gnome Xaw3d"
 
@@ -26,7 +26,8 @@ DEPEND="sys-libs/ncurses
 		motif? ( >=x11-libs/openmotif-2.1.30 )
 	)
 	nls? ( sys-devel/gettext )
-	gnome? ( gnome-base/gnome-desktop )"
+	gnome? ( gnome-base/gnome-desktop )
+	>=sys-devel/autoconf-2.58"
 
 PROVIDE="virtual/emacs virtual/editor"
 SANDBOX_DISABLED="1"
