@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/bogofilter
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/ChangeLog,v 1.28 2004/02/10 18:56:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/ChangeLog,v 1.29 2004/02/22 16:12:07 agriffis Exp $
+
+  22 Feb 2004; Aron Griffis <agriffis@gentoo.org> bogofilter-0.13.7.3.ebuild,
+  bogofilter-0.14.5.4.ebuild, bogofilter-0.15.13.1.ebuild,
+  bogofilter-0.16.4.ebuild, bogofilter-0.17.1.ebuild:
+  Remove arm keywords
 
 *bogofilter-0.17.1 (10 Feb 2004)
 *bogofilter-0.16.4 (10 Feb 2004)
