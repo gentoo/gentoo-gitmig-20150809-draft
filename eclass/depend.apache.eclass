@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.4 2004/07/24 08:47:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.5 2004/07/24 08:50:23 robbat2 Exp $
 
 ECLASS="depend.apache"
 INHERITED="$INHERITED $ECLASS"
@@ -11,7 +11,7 @@ IUSE="apache apache2"
 # SLOT="apache? ( 1{$MY_SLOT} ) apache2? ( 2{$MY_SLOT} ) !apache1? ( !apache2? ( 2${MY_SLOT} ) )"
 
 DEPEND="$DEPEND apache? ( =net-www/apache-1* ) apache2? ( =net-www/apache-2* )
-	    !apache? ( !apache2? ( net-www/apache-2* ) )"
+	    !apache? ( !apache2? ( =net-www/apache-2* ) )"
 
 # call this function to work out which version of the apache web server
 # your ebuild should be installing itself to use
@@ -36,7 +36,7 @@ detect_apache_installed() {
 	has_version '=net-www/apache-1*' && HAS_APACHE1=1 && HAS_APACHE_ANY=1
 	has_version '=net-www/apache-2*' && HAS_APACHE2=1 && HAS_APACHE_ANY=1
 
-	[ -n "${HAVE_APACHE1}" ] && [ -n "${HAVE_APACHE2}" && HAVE_APACHE_MULTIPLE=1
+	[ -n "${HAVE_APACHE1}" ] && [ -n "${HAVE_APACHE2}" ] && HAVE_APACHE_MULTIPLE=1
 }
 
 # call this function from your pkg_setup
