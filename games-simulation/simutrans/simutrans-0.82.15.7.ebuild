@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.82.15.7.ebuild,v 1.1 2004/01/13 02:45:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.82.15.7.ebuild,v 1.2 2004/01/13 02:52:24 mr_bones_ Exp $
 
 inherit games
 
@@ -11,9 +11,10 @@ HOMEPAGE="http://www.simutrans.de/"
 SRC_URI="http://www.s-line.de/homepages/simutrans/data/simubase-${MY_PV}exp.zip
 	http://www.s-line.de/homepages/simutrans/data/simulinux-${MY_PV}exp.tar.gz"
 
+KEYWORDS="-* x86"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86"
+IUSE=""
 
 DEPEND="app-arch/unzip"
 RDEPEND="media-libs/libsdl"
