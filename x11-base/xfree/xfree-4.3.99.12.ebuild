@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.12.ebuild,v 1.2 2003/09/16 14:30:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.12.ebuild,v 1.3 2003/10/06 10:27:03 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
-IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc ipv6 debug static"
+IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc ipv6 debug static pam"
 
 filter-flags "-funroll-loops"
 
@@ -47,7 +47,7 @@ XCUR_VER="0.3.1"
 SISDRV_VER="090903-1"
 SAVDRV_VER="1.1.27t"
 MGADRV_VER="1_3_0beta"
-SYNDRV_VER="0.11.3p11"
+SYNDRV_VER="0.11.7"
 #VIADRV_VER="0.1"
 
 BASE_PV="${PV}"
