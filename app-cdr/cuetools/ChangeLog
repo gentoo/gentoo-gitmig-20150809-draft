@@ -1,0 +1,8 @@
+# ChangeLog for app-cdr/cuetools
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuetools/ChangeLog,v 1.1 2003/12/13 06:30:54 vapier Exp $
+
+*cuetools-0.2 (13 Dec 2003)
+
+  13 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Per Wigren <wigren@home.se> #35656.
