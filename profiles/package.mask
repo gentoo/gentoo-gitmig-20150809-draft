@@ -207,7 +207,11 @@ dev-python/pycrypto
 
 # <azarah@gentoo.org> (03 Sep 2002)
 # new version. PLEASE test!
-=sys-apps/lilo-22.3.3
+# <woodchip@gentoo.org> (22 Sep 2002)
+# added a patch for animations and spiff
+# up everything a bit.  tests okay here,
+# will hopefully unmask very soon...
+>=sys-apps/lilo-22.3.3
 
 # <raker@gentoo.org> (02 Sep 2002)
 # new ucspi-tcp with ssl support
