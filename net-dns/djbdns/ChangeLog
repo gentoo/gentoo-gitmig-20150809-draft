@@ -1,7 +1,11 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.18 2003/05/09 10:54:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.19 2003/05/24 09:58:57 jhhudso Exp $
 
+  24 May 2003; Jared Hudson <jhhudso@gentoo.org> : Added MAKEOPTS="-j1" to
+  all djbdns ebuilds due to SMP compile problems when -j set higher than 1
+  Bug ID: #18291
+	
 *djbdns-1.05-r8 (9 May 2003)
 
   09 May 2003; Guy Martin <gmsoft@gentoo.org> :
