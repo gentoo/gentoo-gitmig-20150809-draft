@@ -2,7 +2,7 @@ MD5 60caeb98e7f14cec4fd61c1fc67d1591 ettercap-0.7.0_pre1.ebuild 1551
 MD5 34ea7a19f197cd2153cbbd2ab538df3a ettercap-0.6.10-r1.ebuild 1849
 MD5 8389aa846c6b073f7defacb8ac33b7f7 ettercap-0.6.11.ebuild 1747
 MD5 f24539f4215edb745550e5c878b7ac06 ettercap-0.6.7.ebuild 1079
-MD5 372ad92f21f4f3dd2a1357c01db8f3ad ChangeLog 2933
+MD5 a2d42d82db6a3423b1c64cf2435fd812 ChangeLog 2969
 MD5 61da3c68a3ae57136cdc2a17fbaedfaf metadata.xml 223
 MD5 f27375ece48970341172a7b5605bd806 files/digest-ettercap-0.6.7 66
 MD5 246f99782dc4d414577367958a09cab2 files/digest-ettercap-0.7.0_pre1 74
