@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/giftui-0.4.1.ebuild,v 1.6 2004/08/08 17:53:56 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/giftui-0.4.1.ebuild,v 1.7 2004/08/08 17:56:13 squinky86 Exp $
 
 inherit gnome2 eutils
 
@@ -18,7 +18,8 @@ RDEPEND=">=x11-libs/gtk+-2.4.3
 	>=gconf-2.6.0"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7.8
-	>=sys-devel/autoconf-2.58"
+	>=sys-devel/autoconf-2.58
+	sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}
