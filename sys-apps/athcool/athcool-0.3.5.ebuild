@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/athcool-0.3.0.ebuild,v 1.3 2004/05/30 09:23:33 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/athcool-0.3.5.ebuild,v 1.1 2004/05/30 09:23:33 lisa Exp $
 
 DESCRIPTION="small utility to toggle Powersaving mode for AMD Athlon/Duron processors"
 HOMEPAGE="http://members.jcom.home.ne.jp/jacobi/linux/softwares.html#athcool"
