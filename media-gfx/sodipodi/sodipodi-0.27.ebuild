@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.27.ebuild,v 1.1 2002/10/22 11:42:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.27.ebuild,v 1.2 2002/10/24 21:56:07 foser Exp $
 
-IUSE="xml2 nls bonobo"
+IUSE="xml2 nls bonobo wmf"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Vector illustration application for GNOME"
@@ -18,7 +18,8 @@ RDEPEND=">=gnome-base/gnome-print-0.35
 	>=gnome-extra/gal-0.13
 	media-libs/gdk-pixbuf
 	bonobo? ( gnome-base/bonobo )
-	xml2? ( dev-libs/libxml2 )"
+	xml2? ( dev-libs/libxml2 )
+	wmf? ( >=media-libs/libwmf-0.2.1 )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
@@ -33,6 +34,10 @@ src_compile() {
 	use xml2 \
 		&& myconf="${myconf} --with-gnome-xml2" \
 		|| myconf="${myconf} --without-gnome-xml2"
+
+	use wmf \
+		&& myconf="${myconf} --with-libwmf" \
+		|| myconf="${myconf} --without-libwmf"
 
 	use nls || myconf="${myconf} --disable-nls"
 
