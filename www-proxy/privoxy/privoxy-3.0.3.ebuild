@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/privoxy-3.0.3.ebuild,v 1.1 2004/08/08 18:05:31 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/privoxy-3.0.3.ebuild,v 1.2 2004/08/15 18:35:46 stuart Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="selinux? ( sec-policy/selinux-privoxy )"
 
-pkg_preinst() {
+pkg_setup() {
 	enewgroup privoxy
 	enewuser privoxy -1 /bin/false /etc/privoxy privoxy
 }

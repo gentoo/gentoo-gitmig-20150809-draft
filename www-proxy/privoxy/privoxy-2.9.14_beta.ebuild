@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/privoxy-2.9.14_beta.ebuild,v 1.1 2004/08/08 18:05:31 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/privoxy-2.9.14_beta.ebuild,v 1.2 2004/08/15 18:35:46 stuart Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SLOT="2"
 KEYWORDS="x86 sparc"
 LICENSE="GPL-2"
 
-pkg_preinst() {
+pkg_setup() {
 	enewgroup privoxy
 	enewuser privoxy -1 /bin/false /etc/privoxy privoxy
 }
