@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.26 2003/07/12 18:05:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.27 2003/07/29 21:17:55 mholzer Exp $
+
+  30 Jul 2003; Martin Holzer <mholzer@gentoo.org> libsdl-1.2.5-r1.ebuild,
+  libsdl-1.2.5-r2.ebuild:
+  Adding aalib in DEPEND. Closes #21928.
 
   12 Jun 2003; Seemant Kulleen <seemant@gentoo.org> libsdl-1.2.5-r2.ebuild:
   unmasked on x86, thanks to Magnade in #gentoo-dev

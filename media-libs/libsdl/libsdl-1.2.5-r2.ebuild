@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r2.ebuild,v 1.6 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r2.ebuild,v 1.7 2003/07/29 21:17:55 mholzer Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa"
 
@@ -17,6 +17,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 	X? ( >=x11-base/xfree-4.3.0 )
 	esd? ( >=media-sound/esound-0.2.19 )
 	ggi? ( >=media-libs/libggi-2.0_beta3 )
+	aalib? ( media-libs/aalib )
 	nas? ( media-libs/nas )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
