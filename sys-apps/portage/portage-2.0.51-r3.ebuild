@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r3.ebuild,v 1.6 2004/11/07 16:13:57 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r3.ebuild,v 1.7 2004/11/08 19:07:02 genone Exp $
 
 IUSE="build selinux"
 inherit flag-o-matic
@@ -11,7 +11,7 @@ inherit eutils
 export SANDBOX_DISABLED="1"
 
 S=${WORKDIR}/${PF}
-SLOT="0"
+SLOT=0
 DESCRIPTION="The Portage Package Management System (Similar to BSD's ports). The primary package management and distribution system for Gentoo."
 SRC_URI="http://zarquon.twobit.net/gentoo/portage/${PF}.tar.bz2 http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
