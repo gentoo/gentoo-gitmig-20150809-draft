@@ -1,6 +1,19 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.118 2004/11/09 16:29:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.119 2004/11/12 04:38:19 agriffis Exp $
+
+*subversion-1.1.1-r1 (11 Nov 2004)
+
+  11 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  +subversion-1.1.1-r1.ebuild:
+  Install svn_load_dirs.pl as /usr/bin/svn-load-dirs #57715
+  Install more hook-scripts in /usr/share/doc #50593
+  Don't tell the user to su apache #53233
+  Install hot-backup.py as /usr/bin/svn-hot-backup #54304
+  Install bash-completion snippet #43179
+  Fix svn-config to omit references to @SVN_DB_*@ #64634
+  Fix perl bindings Makefile.PL bug #65230 #62979
+  Install perl bindings in vendor_perl instead of site_perl #66712
 
   09 Nov 2004; Aron Griffis <agriffis@gentoo.org> subversion-1.1.1.ebuild:
   Replace ~ppc64 and ~ia64 keywords which went missing
