@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.3.ebuild,v 1.1 2004/07/13 15:13:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.3.ebuild,v 1.2 2004/07/17 10:55:44 usata Exp $
 
 inherit gnome2 eutils
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl"
 PDEPEND="|| ( app-i18n/scim-m17n
 		app-i18n/scim-uim
-		app-i18n/scim-tables )"
+		>=app-i18n/scim-tables-0.4.0 )"
 
 ELTCONF="--reverse-deps"
 SCROLLKEEPER_UPDATE="0"
@@ -75,6 +75,13 @@ pkg_postinst() {
 	einfo
 	einfo "where 'your_language' can be zh_CN, zh_TW, ja_JP.eucJP or any other"
 	einfo "UTF-8 locale such as en_US.UTF-8 or ja_JP.UTF-8"
+	einfo
+	einfo "To use Chinese input methods:"
+	einfo "	# emerge app-i18n/scim-tables app-i18n/scim-chinese"
+	einfo "To use Japanese input methods:"
+	einfo "	# emerge app-i18n/scim-uim"
+	einfo "To use various input methods (more than 30 languages):"
+	einfo "	# emerge app-i18n/scim-m17n"
 	einfo
 
 	gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules

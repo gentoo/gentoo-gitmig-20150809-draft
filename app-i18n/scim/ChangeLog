@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.22 2004/07/13 15:13:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.23 2004/07/17 10:55:44 usata Exp $
+
+  17 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> scim-0.9.7.ebuild,
+  -scim-0.99.1.ebuild, -scim-0.99.2.ebuild, scim-0.99.3.ebuild:
+  Marked 0.9.7 stable. Removed old testing ebuilds.
 
 *scim-0.99.3 (14 Jul 2004)
 
