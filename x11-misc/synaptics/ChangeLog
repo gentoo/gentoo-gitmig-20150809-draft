@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.12 2004/04/01 05:02:27 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.13 2004/04/07 08:52:43 spyderous Exp $
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  synaptics-0.12.5.ebuild:
+  Add xorg-x11 to possible.
 
 *synaptics-0.12.5 (31 Mar 2004)
 

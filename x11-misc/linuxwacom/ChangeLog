@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.1 2004/02/19 15:47:35 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.2 2004/04/07 08:51:54 spyderous Exp $
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.0.ebuild:
+  Add xorg-x11 to possible.
 
 *linuxwacom-0.6.0 (19 Feb 2004)
 

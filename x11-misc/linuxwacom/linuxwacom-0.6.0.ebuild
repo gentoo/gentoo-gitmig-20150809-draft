@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.0.ebuild,v 1.1 2004/02/19 15:47:35 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.0.ebuild,v 1.2 2004/04/07 08:51:54 spyderous Exp $
 
 DESCRIPTION="Input driver for Wacom tablets and drawing devices"
 HOMEPAGE="http://linuxwacom.sourceforge.net/"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=x11-base/xfree-4.3.0-r6"
+DEPEND="|| (>=x11-base/xfree-4.3.0-r6 x11-base/xorg-x11 )"
 
 pkg_setup() {
 	if [ ! "`grep sdk /var/db/pkg/x11-base/xfree-[0-9]*/USE`" ]
