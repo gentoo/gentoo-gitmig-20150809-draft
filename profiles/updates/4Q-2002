@@ -14,3 +14,5 @@ move sys-apps/wireless-tools net-wireless/wireless-tools
 move sys-apps/linux-wlan-ng net-wireless/linux-wlan-ng
 move x11-plugins/gkrellmwireless net-wireless/gkrellmwireless
 move x11-misc/asclock x11-plugins/asclock
+move x11-misc/ascpu x11-plugins/ascpu
+move x11-misc/asapm x11-plugins/asapm
