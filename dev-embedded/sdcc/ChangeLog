@@ -1,8 +1,15 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.2 2004/03/01 12:48:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.3 2004/03/05 02:13:07 dragonheart Exp $
 
-*sdcc-20040218 (19 Feb 2004)
+*sdcc-2.4.0 (05 Mar 2004)
+
+  05 Mar 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  sdcc-2.4.0.ebuild, sdcc-2.4.0_p20040304.ebuild, sdcc-20040218.ebuild:
+  Version bump to stable version 2.4.0 - Thanks to Laurence Withers
+  <lwithers@users.sf.net> for the ebuild in bug #43040. Added version
+  sdcc-2.4.0_p20040304 too. Removed sdcc-20040218.ebuild due to old
+  naming scheme.
 
   19 Feb 2004; Daniel Black <dragonheart@gentoo.org> :
   Initial import. bug #38473 thanks to Simon Smith supersi2000@hotmail.com
