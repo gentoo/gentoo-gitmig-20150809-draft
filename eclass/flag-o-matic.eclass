@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.66 2004/07/28 02:18:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.67 2004/08/07 04:24:41 agriffis Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -176,7 +176,8 @@ is-flag() {
 	local x
 
 	for x in ${CFLAGS} ${CXXFLAGS} ; do
-		if [ "${x}" == "$1" ] ; then
+		# Note this should work with globs like -mcpu=ultrasparc*
+		if [[ ${x} == ${1} ]]; then
 			echo true
 			return 0
 		fi

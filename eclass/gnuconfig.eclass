@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.23 2004/07/13 21:43:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.24 2004/08/07 04:24:41 agriffis Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -29,7 +29,12 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 gnuconfig_update() {
 	local startdir	# declared here ... used in gnuconfig_do_update
 
-	if [[ $1 == /* ]]; then
+	local x
+	for ((x = 1; x <= $#; x = x + 1)); do
+		echo "gnuconfig_update arg$x = [${!x}]"
+	done
+
+	if [[ $1 == */* ]]; then
 		startdir=$1
 		shift
 	else
