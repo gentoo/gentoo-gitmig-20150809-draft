@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-gtkhtml/nautilus-gtkhtml-0.3.2.ebuild,v 1.12 2004/02/22 20:53:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-gtkhtml/nautilus-gtkhtml-0.3.2.ebuild,v 1.13 2004/03/17 22:48:23 aliz Exp $
 
 inherit debug
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~amd64"
 
 RDEPEND=">=gnome-base/nautilus-1.1.10
 	=gnome-extra/libgtkhtml-2*"
