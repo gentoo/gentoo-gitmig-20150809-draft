@@ -1,7 +1,7 @@
 MD5 ad12767019b879b7c9fdd216bf02992c mod_php-4.3.2.ebuild 3396
 MD5 9a9440cc176c36cf06f31d0a2cd96129 mod_php-4.3.3-r2.ebuild 5287
 MD5 2ffcbd3deb771e2765ea62a15aa6160f mod_php-4.3.2-r5.ebuild 5113
-MD5 102240490b25b7503488fab4a31dd575 mod_php-4.3.4-r1.ebuild 5334
+MD5 34ba436f2267c5eb3efff830afbdd4e8 mod_php-4.3.4-r1.ebuild 5367
 MD5 baaa4e7f9b1f85ece366d0a48203ffd4 mod_php-4.3.3_rc3.ebuild 5132
 MD5 3224efbbbd51297bd8a9999a79c7a1df mod_php-4.3.4.ebuild 5289
 MD5 70c4a70166685022a7ef99e972141843 mod_php-4.3.2-r2.ebuild 3699
@@ -10,7 +10,7 @@ MD5 36eecb3ee3e24ff2838a2d43cc09dc54 mod_php-4.3.2-r4.ebuild 4982
 MD5 97acd0f21caff5ff8dde4e11fc76a00b mod_php-4.3.3.ebuild 4902
 MD5 5bfd28d68e2b59143eda617bac0335af mod_php-4.3.3-r3.ebuild 5290
 MD5 5580ac72681bb57c10b3e8f86e88c0d1 mod_php-4.3.2-r1.ebuild 2763
-MD5 d0c116b059f958e20badc21779b4641e ChangeLog 22355
+MD5 ac0c692ebc0cc285128c24d94fd565de ChangeLog 22490
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 4cb22f3a36dbc2cc5a6d5a2f3e02b567 mod_php-4.3.2-r3.ebuild 4942
 MD5 cceddd5c262e0ffef31d45b7da269851 files/mod_php.conf 148
