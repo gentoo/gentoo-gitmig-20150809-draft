@@ -11,10 +11,10 @@ HOMEPAGE="http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="=app-admin/gkrellm-2*
-	sys-apps/supersed
+	>=sys-apps/sed-4.0.5
 	>=net-misc/wget-1.5.3"
 
 RDEPEND="${DEPEND}
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	ssed -i \
+	sed -i \
 		-e "s:/usr/local/bin:/usr/share/gkrellm:g" \
 		-e "s:GrabWeather:GrabWeather2:g" \
 		gkrellweather.c
