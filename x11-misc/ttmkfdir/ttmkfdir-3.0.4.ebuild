@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.4.ebuild,v 1.3 2003/01/03 19:06:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.4.ebuild,v 1.4 2003/01/08 19:05:53 azarah Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.joerg-pommnitz.de/TrueType/xfsft.html"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha"
+KEYWORDS="x86 ~sparc ~ppc ~alpha"
 
 DEPEND=">=media-libs/freetype-2.0.8
 	>=sys-devel/flex-2.5.4a-r5
