@@ -20,3 +20,4 @@ move x11-misc/ascpu x11-plugins/ascpu
 move x11-misc/asapm x11-plugins/asapm
 move dev-util/snavigator dev-util/sourcenav
 move sys-apps/ami x11-misc/ami
+move app-text/pktrace app-text/mftrace
