@@ -85,7 +85,7 @@
  select_makefile:
 --- conftest.sh.old	2004-07-01 13:54:41.750507456 +1000
 +++ conftest.sh	2004-07-01 13:55:08.910378528 +1000
-@@ -7,16 +7,18 @@
+@@ -7,16 +7,19 @@
  
  CC="$1"
  ISYSTEM=`$CC -print-file-name=include`
@@ -100,6 +100,7 @@
 --I $HEADERS -I $HEADERS/asm/mach-default \
 +-I $SOURCE_HEADERS -I $SOURCE_HEADERS/asm/mach-default \
 +-I $BUILT_HEADERS -I $BUILT_HEADERS/../include2/asm/mach-default \
++-I $BUILT_HEADERS/../include2 \
  -Wimplicit-function-declaration"
  
 -case "$3" in

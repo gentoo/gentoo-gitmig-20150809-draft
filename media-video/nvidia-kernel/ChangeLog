@@ -1,6 +1,15 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.80 2004/07/13 16:04:23 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.81 2004/07/26 13:15:27 cyfred Exp $
+
+*nvidia-kernel-1.0.6106-r1 (26 Jul 2004)
+
+  26 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  files/1.0.6106/NVIDIA_kernel-1.0-6106-koutput-support.patch,
+  +nvidia-kernel-1.0.6106-r1.ebuild:
+  Thanks very much goes to Georgi for providing a solution to the udev + nvidia
+  thing on bug #58294 .. udev will now correctly create the devices for the
+  module.
 
   13 Jul 2004; Travis Tilley <lv@gentoo.org> nvidia-kernel-1.0.6106.ebuild:
   the previous amd64 nvidia drivers arent exactly what i would call stable, but

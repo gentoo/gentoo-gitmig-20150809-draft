@@ -1,3 +1,4 @@
+MD5 b147f8936eff38e937fab7ac8d177101 nvidia-kernel-1.0.6106-r1.ebuild 3623
 MD5 3053f15b348d5db0a3b6629236e6c8b8 nvidia-kernel-1.0.4499.ebuild 4017
 MD5 b12c2d1e31ef49711cba646493176aad nvidia-kernel-1.0.5332-r1.ebuild 4246
 MD5 e60bb759e8c782e296caf4c5f9ec29a6 nvidia-kernel-1.0.5336-r3.ebuild 4619
@@ -5,7 +6,7 @@ MD5 510b63d87ead7c18ba3e69e97a46ca11 nvidia-kernel-1.0.5328-r1.ebuild 4455
 MD5 498cce7943971f5f2dcafe34d97ffc9c nvidia-kernel-1.0.4496-r3.ebuild 4276
 MD5 ecdc3ce7ea1a04cf4740da7af4244223 nvidia-kernel-1.0.4363-r3.ebuild 4061
 MD5 9d1c149259777e6a289b58ce4752c584 nvidia-kernel-1.0.5336-r2.ebuild 4656
-MD5 dbd8cbe62ec763f60eae50ae2b80196c ChangeLog 19451
+MD5 83e5a34ed3c8e17d691640e22682642d ChangeLog 19814
 MD5 2e350a0784b0810b89809d761e499bea metadata.xml 301
 MD5 90008c0e137ec067fba0f55da5a584c4 nvidia-kernel-1.0.6106.ebuild 3488
 MD5 d8008e9fd34e643ba85c473c91f40539 nvidia-kernel-1.0.5336-r4.ebuild 4783
@@ -14,8 +15,8 @@ MD5 cf7b2bb276c568f0f66d10951b4ce3ad files/digest-nvidia-kernel-1.0.5332-r1 83
 MD5 1316f73c0eecd8832bb362a3d5ca4892 files/digest-nvidia-kernel-1.0.5336-r2 80
 MD5 1316f73c0eecd8832bb362a3d5ca4892 files/digest-nvidia-kernel-1.0.5336-r3 80
 MD5 1316f73c0eecd8832bb362a3d5ca4892 files/digest-nvidia-kernel-1.0.5336-r4 80
+MD5 50ffea0f5eb12d252905f379bc7be2d6 files/digest-nvidia-kernel-1.0.6106-r1 163
 MD5 046ed3744551619863faea8c5c83db02 files/digest-nvidia-kernel-1.0.4499 74
-MD5 50ffea0f5eb12d252905f379bc7be2d6 files/digest-nvidia-kernel-1.0.6106 163
 MD5 089e6829e7e8497a603ba9dc9563a722 files/nvidia 30
 MD5 56ebaa3ba92e9db848baea746a6aef1a files/digest-nvidia-kernel-1.0.4363-r3 74
 MD5 a88479c177f936b6ef19fc73bb39d149 files/digest-nvidia-kernel-1.0.4496-r3 80
@@ -37,4 +38,4 @@ MD5 d48d291f79542df558588d1d3575d51c files/1.0.5336/NVIDIA_kernel-1.0-5336-kbuil
 MD5 442f1483c003d291a90dfcc87903b045 files/1.0.5336/NVIDIA_kernel-1.0-5336-2.6-20040521.patch 18711
 MD5 5dc4b9a2463cb459721ae3e642f6239f files/1.0.5336/NVIDIA_kernel-1.0-5336-fix-makefile-for-2.6.patch 886
 MD5 7bf40e44b8f2181a1047ddfd13acd6b3 files/1.0.5336/NVIDIA_kernel-1.0-5336-basic-sysfs-support.patch 5439
-MD5 2cf3b7ec2c51b4ee10af01e94fe92df8 files/1.0.6106/NVIDIA_kernel-1.0-6106-koutput-support.patch 6626
+MD5 bc61be48f85d84f91d2035fa3cc92a47 files/1.0.6106/NVIDIA_kernel-1.0-6106-koutput-support.patch 6659
