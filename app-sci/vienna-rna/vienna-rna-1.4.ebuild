@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/vienna-rna/vienna-rna-1.4.ebuild,v 1.1 2004/06/22 17:20:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/vienna-rna/vienna-rna-1.4.ebuild,v 1.2 2004/06/23 18:48:57 dholm Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tbi.univie.ac.at/~ivo/RNA/ViennaRNA-${PV}.tar.gz"
 LICENSE="vienna-rna"
 
 SLOT=0
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="no-utils no-readseq perl"
 
 DEPEND="perl? ( dev-lang/perl )
