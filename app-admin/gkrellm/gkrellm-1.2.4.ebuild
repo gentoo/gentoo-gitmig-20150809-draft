@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jerry Alexandratos <jerry@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.2-r1.ebuild,v 1.1 2001/10/06 13:20:34 azarah Exp
+# Author Jerry A! <jerry@thehutt.org>
+# $Id: gkrellm-1.2.4.ebuild,v 1.3 2001/11/27 07:45:29 jerrya Exp $
 
 
 
