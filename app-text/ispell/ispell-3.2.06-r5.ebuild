@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r5.ebuild,v 1.1 2002/07/17 11:43:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r5.ebuild,v 1.2 2002/08/16 02:42:01 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ispell is a fast screen-oriented spelling checker"
@@ -15,7 +15,7 @@ DEPEND="sys-devel/bison
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
 	

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r2.ebuild,v 1.5 2002/08/02 17:42:50 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r2.ebuild,v 1.6 2002/08/16 02:42:02 murphy Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/sgmltools-lite/${P}.tar.gz
@@ -19,7 +19,7 @@ DEPEND="virtual/python
 	app-text/openjade
 	net-www/lynx"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 src_unpack() {
 	cd ${WORKDIR}
 	unpack ${P}.tar.gz

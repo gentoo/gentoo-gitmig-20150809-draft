@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r10.ebuild,v 1.4 2002/08/14 16:26:24 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r10.ebuild,v 1.5 2002/08/16 02:42:02 murphy Exp $
 
 TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
 
@@ -24,7 +24,7 @@ DEPEND="sys-apps/ed
 RDEPEND=">=sys-devel/perl-5.2
 	dev-util/dialog"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 

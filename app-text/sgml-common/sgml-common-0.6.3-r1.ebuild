@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r1.ebuild,v 1.4 2002/08/02 17:42:50 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r1.ebuild,v 1.5 2002/08/16 02:42:02 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Base ISO character entities and utilities for SGML"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.kde.org/pub/kde/devel/docbook/SOURCES/${P}.tgz
 HOMEPAGE="http://www.iso.ch/cate/3524030.html"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 src_unpack() {
 
 	unpack ${A}

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2000.1b.ebuild,v 1.6 2002/08/02 17:42:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2000.1b.ebuild,v 1.7 2002/08/16 02:42:01 murphy Exp $
 
 #darn weird naming...
 MY_P=${PN}-2K.1beta
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="as-is"
 
 DEPEND="virtual/glibc"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 RDEPEND="sys-devel/perl
 	app-text/ghostscript
 	media-libs/netpbm

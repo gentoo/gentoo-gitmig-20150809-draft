@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.ebuild,v 1.3 2002/08/02 17:42:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.ebuild,v 1.4 2002/08/16 02:42:01 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LATEX2HTML is a convertor written in Perl that converts LATEX documents to HTML."
@@ -9,7 +9,7 @@ SRC_URI="http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/${P}.tar.gz"
 HOMEPAGE="http://www.latex2html.org"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 DEPEND="virtual/glibc"
 
 RDEPEND="app-text/ghostscript

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5.ebuild,v 1.7 2002/08/14 11:56:08 pvdabeel Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5.ebuild,v 1.8 2002/08/16 02:42:01 murphy Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A PostScript viewer for X11"
 SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ghostview/"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 

@@ -8,7 +8,7 @@ DESCRIPTION=" small util that converts from dos<->unix"
 SRC_URI="http://people.freenet.de/tfaehr/${PN}.tgz"
 HOMEPAGE="http://people.freenet.de/tfaehr/linux.htm"
 LICENSE=""
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 
 
