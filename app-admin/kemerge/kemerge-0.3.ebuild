@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Yannick Koehler <ykoehler@hotmail.com>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kemerge/kemerge-0.2.ebuild,v 1.1 2002/04/06 12:04:11 verwilst Exp $
+# Maintainer: Bart Verwilst <verwilst@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kemerge/kemerge-0.3.ebuild,v 1.1 2002/04/10 12:04:01 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -10,3 +10,6 @@ SLOT="0"
 DESCRIPTION="Graphical KDE emerge tool"
 SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://${PN}.sourceforge.net/"
+NEWDEPEND=">=app-admin/kebuildpart-0.1
+	   >=app-admin/kebuild-0.1"
+
