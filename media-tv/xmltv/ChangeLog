@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.16 2004/03/09 00:43:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.17 2004/03/10 03:33:26 max Exp $
+
+*xmltv-0.5.30 (09 Mar 2004)
+
+  09 Mar 2004; Max Kalika <max@gentoo.org> xmltv-0.5.30.ebuild:
+  Bump to version 0.5.30. Clean up dependencies. Add support for 4 extra
+  grabbers.
 
   09 Mar 2004; David Holm <dholm@gentoo.org> xmltv-0.5.29.ebuild:
   Added to ~ppc.
