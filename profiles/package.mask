@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <phoen][x@gentoo.org> 23 Jul 2002
+# Masked fping-2.4_beta2-r1 for testing
+=net-analyzer/fping-2.4_beta2-r1
+
 # <aliz@gentoo.org> 23 Jul 2002
 # Masked nt-2.02 for GCC 3.1 testing
 =net-misc/nt-2.02
