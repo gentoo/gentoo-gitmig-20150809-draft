@@ -1,0 +1,88 @@
+.TH ebuild "1" "January 2001" "portage 1.4-r4" 
+.SH NAME
+ebuild \- manual page for ebuild 
+.SH SYNOPSIS
+.B ebuild
+[\fIFILE\fR] [\fIOPTION\fR]
+.SH DESCRIPTION
+Todo
+.PP
+.SH OPTIONS 
+\fBFILE:\fR
+.TP
+This must be a valid ebuild script. For further information read ebuild(5).
+.TP
+\fBOPTIONS:\fR
+.TP
+\fBcheck\fR 
+Checks if all build-dependecies get resolved
+.TP
+\fBclean\fR
+Cleans the build directory
+.TP
+\fBfetch\fR
+Checks if the all sources are available and have a valid
+md5 checksum. Downloads sources from the internet if not
+localy available. Exits with a waring if md5-checksums 
+differ.
+.TP
+\fBunpack\fR
+Extracts the sources to the \fIbuild directory\fR 
+by running the \fIsrc_unpack\fR
+function
+.TP
+\fBcompile\fR
+Compiles the sources in the \fIbuild directory\fR 
+by running the \fIsrc_compile\fR
+function
+.TP
+\fBinstall\fR
+Installs the package to the temporary \fIinstall directory\fR 
+by running the \fIsrc_install\fR function
+.TP
+\fBqmerge\fR
+This function installs the package from the \fIinstall directory\fR
+to the live filesystem. By running \fIpkg_preinst\fR function first.
+Then the files get copied from \fIinstall directory\fR to the live
+filesystem and a list of installed files with md5 checksums gets
+build in \fI/var/db/pkg/[category]/[package]/CONTENTS\fR. After
+that the functions \fIpkg_postinst\fR gets executed.
+.TP
+\fBmerge\fR
+This function first checks if the package is installed. If not it executes
+the \fIinstall\fR and \fIqmerge\fR functions.
+.TP
+\fBremerge\fR
+Does the same as \fImerge\fR without checking if the package is installed.
+.TP
+\fBunmerge\fR
+This function first executes the \fIpkg_prerm\fR function. Then it 
+removes all files from the live filesystem that have a valid
+md5 checksum and mtime in the package contents file.
+Finaly it runs \fIpkg_postrm\fR. It is save to merge
+a new version of a package first and then unmerge th old one.
+.TP
+\fBpackage\fR
+Builds a package from the files in the temporary \fIinstall directory\fR
+.TP
+\fBrpm\fR
+Builds a redhat package from the files in the temporary \fIinstall
+directory\fR. Ebuild's dependencies methods are not integrated in rpm
+package management at the moment.
+.TP
+.SH AUTHOR
+Achim Gottinger <achim@gentoo.org>
+.SH "SEE ALSO"
+ebuild(5) make.defaults(5) make.conf(5)
+.TP
+The \fI/usr/bin/ebuild\fR script. 
+The helper apps in \fI/usr/lib/portage/bin\fR.
+.SH FILES
+\fB/etc/make.conf\fR 
+Contains variables for the build-process and 
+overwrites those in make.defaults
+.TP
+\fB/etc/make.defaults\fR 
+Contains the default variables for the build-process, 
+you should edit \fI/etc/make.conf\fR instead.
+.TP
