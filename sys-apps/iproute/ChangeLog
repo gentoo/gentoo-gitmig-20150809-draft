@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/iproute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.17 2003/04/17 15:33:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.18 2003/05/04 09:46:36 aliz Exp $
+
+*iproute-20010824-r3 (04 May 2003)
+
+  04 May 2003; Daniel Ahlberg <aliz@gentoo.org> iproute-20010824-r3.ebuild :
+  Updated to latest Debian patch which includes htb3.
 
   27 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> iproute-20010824-r2.ebuild :
   Move binaries to / instead of /usr. Closes #15430.
