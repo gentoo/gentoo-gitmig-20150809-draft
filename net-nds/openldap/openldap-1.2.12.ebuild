@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.12.ebuild,v 1.3 2001/09/25 01:20:38 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.12.ebuild,v 1.4 2002/07/08 06:35:42 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
 SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/${P}.tgz"
 HOMEPAGE="http://www.OpenLDAP.org/"
+LICENSE="OPENLDAP"
 
 DEPEND="virtual/glibc
         tcpd? ( >=sys-apps/tcp-wrappers-7.6 )

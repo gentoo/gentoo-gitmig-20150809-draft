@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.4-r3.ebuild,v 1.1 2002/04/27 21:23:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.4-r3.ebuild,v 1.2 2002/07/08 06:35:42 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NIS Tools"
@@ -9,6 +9,7 @@ SRC_URI="ftp://ftp.de.kernel.org/pub/linux/utils/net/NIS/${P}.tar.gz
 	 ftp://ftp.uk.kernel.org/pub/linux/utils/net/NIS/${P}.tar.gz
 	 ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${P}.tar.gz"
 HOMEPAGE="http://www.suse.de/~kukuk/nis/yp-tools/index.html"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 
