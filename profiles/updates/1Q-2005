@@ -160,3 +160,4 @@ move sys-apps/acct sys-process/acct
 move sys-apps/atop sys-process/atop
 move sys-apps/time sys-process/time
 move sys-apps/minit sys-process/minit
+move sys-apps/runit sys-process/runit
