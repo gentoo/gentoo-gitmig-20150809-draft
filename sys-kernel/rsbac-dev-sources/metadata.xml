@@ -7,5 +7,5 @@
   <name>Guillaume Destuynder</name>
   <description>RSBAC lead</description>
 </maintainer>
-<longdescription>The RSBAC kernel is a security enhanced kernel based on the Gentoo hardened kernel, but featuring RSBAC instead of SELinux.</longdescription>
+<longdescription>The RSBAC kernel is a security enhanced kernel based on the Gentoo hardened kernel, but featuring RSBAC instead of SELinux or GrSec.</longdescription>
 </pkgmetadata>
