@@ -17,9 +17,11 @@ informix
 firebird
 lirc
 mmx
+mmx2
 oci8
 pic
 sse
+sse2
 svga
 tcc
 trusted
