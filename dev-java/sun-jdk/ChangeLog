@@ -1,8 +1,10 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.19 2002/08/26 16:47:25 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.20 2002/09/06 21:27:21 owen Exp $
 
 *sun-jdk-1.4.1_rc1 (23 Aug 2002)
+  06 Sep 2002; Owen Stampflee <owen@gentoo.org>:
+  Added "." to CLASSPATH in the env.d scripts.
 
   26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> sun-jdk-1.4.1_rc1.ebuild:
   SLOT is now 1.4. If no VM is installed, it becomes default system VM. Added
