@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.136 2005/03/24 14:44:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.137 2005/03/25 21:50:08 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -890,7 +890,7 @@ gcc-library-configure() {
 
 gcc-compiler-configure() {
 	# multilib support
-	if is_multilib; then
+	if is_multilib || [[ ${CTARGET} == "avr" ]] ; then
 		confgcc="${confgcc} --enable-multilib"
 	else
 		confgcc="${confgcc} --disable-multilib"
