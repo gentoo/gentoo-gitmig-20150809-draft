@@ -1,6 +1,8 @@
 # ChangeLog for media-gfx/pfaedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.1 2002/11/12 07:49:38 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.2 2003/01/08 05:29:22 jrray Exp $
+
+  07 Jan 2003; J Robert Ray <jrray@gentoo.org> : Unmasked for x86.
 
 *pfaedit-021105 (11 Nov 2002)
 

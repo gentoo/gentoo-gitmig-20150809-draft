@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-021105.ebuild,v 1.2 2002/11/17 09:42:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-021105.ebuild,v 1.3 2003/01/08 05:29:22 jrray Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="postscript font editor and converter"
@@ -9,7 +9,7 @@ HOMEPAGE="http://pfaedit.sourceforge.net/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="png gif jpeg tiff truetype X"
 
 DEPEND="png? ( >=media-libs/libpng-1.2.4 )
