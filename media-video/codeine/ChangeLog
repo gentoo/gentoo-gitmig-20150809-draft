@@ -1,0 +1,11 @@
+# ChangeLog for media-video/codeine
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/ChangeLog,v 1.1 2004/10/24 05:40:28 chriswhite Exp $
+
+*codeine-1.0_beta1 (24 Oct 2004)
+
+  24 Oct 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +codeine-1.0_beta1.ebuild:
+  Initial import to the tree.  Fixes bug #68497.  Thanks to Ian Monroe 
+  <gentoo@monroe.nu> for submitting the ebuild.
+
