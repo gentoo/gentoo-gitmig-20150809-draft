@@ -1,9 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Daniel Robbins <drobbins@gentoo.org>
 # Adapted for courier MTA by Andreas Erhart <andi@as-computer.de> and
 # Alex Hartmann <alex@as-computer.de>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.39.1.ebuild,v 1.1 2002/07/04 04:17:55 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.39.1.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An MTA designed specifically for maildirs"

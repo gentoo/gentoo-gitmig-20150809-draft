@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.24.ebuild,v 1.4 2002/07/11 02:36:26 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.24.ebuild,v 1.5 2002/07/11 06:30:47 drobbins Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${P}

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r6.ebuild,v 1.4 2002/05/21 18:14:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r6.ebuild,v 1.5 2002/07/11 06:30:47 drobbins Exp $
 
 #provide Xmake and Xemake
 

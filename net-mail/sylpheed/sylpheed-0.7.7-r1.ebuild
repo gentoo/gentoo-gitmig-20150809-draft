@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.7.7-r1.ebuild,v 1.1 2002/06/10 01:07:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.7.7-r1.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A lightweight email client and newsreader"

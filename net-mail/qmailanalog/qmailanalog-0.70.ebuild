@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Vitaly Kushneriuk <vitaly_kushneriuk@yahoo.com>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/qmailanalog-0.70.ebuild,v 1.2 2002/06/17 14:27:17 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/qmailanalog-0.70.ebuild,v 1.3 2002/07/11 06:30:47 drobbins Exp $
 
 S=${WORKDIR}/${P}
 

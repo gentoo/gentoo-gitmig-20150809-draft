@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Cristian Martinez <cfuga@itam.mx>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a.ebuild,v 1.3 2002/02/23 21:08:38 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a.ebuild,v 1.4 2002/07/11 06:30:48 drobbins Exp $
 
 PN0=imap
 S=${WORKDIR}/${PN0}-${PV}

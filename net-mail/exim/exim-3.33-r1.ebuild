@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-3.33-r1.ebuild,v 1.2 2001/12/26 19:15:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-3.33-r1.ebuild,v 1.3 2002/07/11 06:30:47 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"

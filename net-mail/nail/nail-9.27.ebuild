@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nail/nail-9.27.ebuild,v 1.3 2001/07/08 17:44:37 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nail/nail-9.27.ebuild,v 1.4 2002/07/11 06:30:47 drobbins Exp $
 
 #Remeber to add the proper Author line, above.  Don't worry about the fourth line;
 #it'll get automatically fixed when the ebuild is checked in.

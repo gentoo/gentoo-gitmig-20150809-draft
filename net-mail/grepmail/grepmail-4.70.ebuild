@@ -1,7 +1,6 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70.ebuild,v 1.3 2002/07/11 06:30:47 drobbins Exp $
 
 DESCRIPTION="Search normal or compressed mailbox using a regular expression or dates."
 HOMEPAGE="http://grepmail.sourceforge.net/"

@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.44-r3.ebuild,v 1.1 2002/02/23 21:11:03 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.44-r3.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="Pine 'a Program for Internet News & Email', email client"

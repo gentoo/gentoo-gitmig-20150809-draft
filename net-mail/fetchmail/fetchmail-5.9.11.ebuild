@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.9.11.ebuild,v 1.1 2002/05/26 02:31:45 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.9.11.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
 
 DESCRIPTION="Fetchmail is a full-featured remote-mail retrieval and forwarding utility"
 HOMEPAGE="http://www.tuxedo.org/~esr/fetchmail/"

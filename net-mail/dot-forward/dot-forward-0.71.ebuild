@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71.ebuild,v 1.1 2001/12/05 02:33:04 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Dot-forward reads sendmail's .forward files under qmail."

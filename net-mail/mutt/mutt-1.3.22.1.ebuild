@@ -1,11 +1,9 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Server Team <server@gentoo.org>
-# Authors: Achim Gottinger <achim@gentoo.org>,
 #          Daniel Robbins <drobbins@gentoo.org>, 
 #          Anonymous,
 #          Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.3.22.1.ebuild,v 1.1 2001/09/26 12:06:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.3.22.1.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
 
 S=$WORKDIR/$P
 DESCRIPTION="a small but very powerful text-based mail client"

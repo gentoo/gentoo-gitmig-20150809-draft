@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.33.ebuild,v 1.2 2001/05/15 21:26:47 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.33.ebuild,v 1.3 2002/07/11 06:30:47 drobbins Exp $
 
 A="pine4.33.tar.gz pine-maildir-4.33"
 S=${WORKDIR}/pine4.33

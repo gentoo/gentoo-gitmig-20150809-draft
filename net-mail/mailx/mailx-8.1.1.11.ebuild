@@ -1,6 +1,5 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Martin Schlemmer <azarah@gentoo.org>
 
 MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig
