@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.06.ebuild,v 1.2 2003/09/08 07:25:15 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.06.ebuild,v 1.3 2003/09/08 07:25:40 msterret Exp $
 
 DESCRIPTION="TiLP is a linking program for Texas Instruments' graphing calculators."
 HOMEPAGE="http://tilp.sourceforge.net/"
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-libs/libticables
-        dev-libs/libticalcs
-		dev-libs/libtifiles
-		=x11-libs/gtk+-1.2*"
+	dev-libs/libticalcs
+	dev-libs/libtifiles
+	=x11-libs/gtk+-1.2*"
 
 src_compile() {
 	# Note the special option --with-fontpath-prefix below.
