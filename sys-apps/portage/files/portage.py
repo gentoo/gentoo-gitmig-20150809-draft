@@ -130,7 +130,7 @@ def pkgscript(x,myebuildfile):
 	if myresult[0]:
 		print "Error code from",pkgname,x,"script --",myresult[0]
 	if myresult[1]:
-		print "Output from",pkgname,x,"script:"
+		print "Output from",myebuildfile,x,"script:"
 		print
 		print myresult[1]
 
