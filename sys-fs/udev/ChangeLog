@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.25 2004/02/08 16:59:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.26 2004/02/13 20:12:40 azarah Exp $
+
+*udev-017 (13 Feb 2004)
+
+  13 Feb 2004; Martin Schlemmer <azarah@gentoo.org> udev-017.ebuild,
+  files/udev-017-no-wait-for-sleep.patch:
+  Update version.
 
 *udev-016-r1 (08 Feb 2004)
 
