@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130.ebuild,v 1.3 2005/02/02 18:25:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130.ebuild,v 1.4 2005/02/02 18:38:44 eradicator Exp $
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~eradicator/gcc/"
 #GCC_MANPAGE_VERSION="3.3.5"
@@ -16,7 +16,7 @@ ETYPE="gcc-compiler"
 
 # arch/libc configurations known to be stable with {PIE,SSP}-by-default
 SSP_STABLE="x86 sparc amd64"
-SSP_UCLIBC_STABLE=""
+SSP_UCLIBC_STABLE="arm mips ppc x86"
 PIE_GLIBC_STABLE="x86 sparc amd64"
 PIE_UCLIBC_STABLE="x86 mips ppc"
 
