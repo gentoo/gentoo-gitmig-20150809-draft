@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/amule
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.7 2003/12/06 16:22:39 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.8 2004/01/06 04:48:26 avenj Exp $
+
+  05 Jan 2004; Jon Portnoy <avenj@gentoo.org> amule-1.1.2.ebuild :
+  AMD64 keywords.
 
   06 Dec 2003; Martin Holzer <mholzer@gentoo.org> amule-1.1.0.ebuild,
   amule-1.1.2.ebuild:
