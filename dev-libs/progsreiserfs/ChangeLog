@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/progsreiserfs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/progsreiserfs/ChangeLog,v 1.1 2002/06/09 03:09:51 woodchip Exp $
+
+*progsreiserfs-0.3.0.3 (7 Jun 2002)
+
+  7 Jun 2002; Donny Davies <woodchip@gentoo.org> :
+  New port.
