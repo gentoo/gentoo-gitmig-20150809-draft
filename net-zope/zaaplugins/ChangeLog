@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zaaplugins
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/ChangeLog,v 1.1 2004/09/26 21:08:52 radek Exp $
+
+*zaaplugins-2.12 (26 Sep 2004)
+
+  26 Sep 2004; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
+  +zaaplugins-2.12.ebuild:
+  Initial relase based on work by Ernst <ernst@cypres.demon.nl>. Bug #46958.
+
