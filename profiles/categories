@@ -107,6 +107,13 @@ sys-devel
 sys-fs
 sys-kernel
 sys-libs
+www-apache
+www-apps
+www-client
+www-misc
+www-plugin
+www-proxy
+www-servers
 x11-base
 x11-libs
 x11-misc
