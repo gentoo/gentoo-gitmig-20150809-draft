@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.4.ebuild,v 1.9 2004/06/28 03:30:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.4.ebuild,v 1.10 2004/06/28 07:20:50 spyderous Exp $
 
 DESCRIPTION="Colorizes output of diff"
 HOMEPAGE="http://colordiff.sourceforge.net/"
@@ -13,6 +13,10 @@ IUSE=""
 
 DEPEND="sys-apps/diffutils"
 
+src_compile() {
+:
+}
+
 src_install() {
 	newbin colordiff.pl colordiff || die
 	insinto /etc
@@ -20,4 +24,5 @@ src_install() {
 	fowners root:root /etc/colordiffrc /etc/colordiffrc-lightbg
 	fperms 644 /etc/colordiffrc /etc/colordiffrc-lightbg
 	dodoc BUGS CHANGES README TODO
+	doman colordiff.1
 }

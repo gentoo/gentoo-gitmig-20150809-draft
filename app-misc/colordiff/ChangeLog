@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.22 2004/06/28 01:00:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.23 2004/06/28 07:20:50 spyderous Exp $
+
+  28 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; colordiff-1.0.3.ebuild,
+  colordiff-1.0.4.ebuild:
+  Fix breakage by adding a null src_compile(). Also install man page.
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> colordiff-1.0.4.ebuild:
   Add ~mips back in
