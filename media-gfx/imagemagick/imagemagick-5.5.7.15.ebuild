@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7.15.ebuild,v 1.9 2004/07/17 21:47:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7.15.ebuild,v 1.10 2004/09/08 00:11:37 vapier Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -16,11 +16,10 @@ S=${WORKDIR}/${MY_P2}
 DESCRIPTION="A collection of tools and libraries for many image formats"
 HOMEPAGE="http://www.imagemagick.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
-RESTRICT="nomirror"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 mips ppc64 ia64"
 IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig"
 
 DEPEND=">=sys-apps/sed-4
