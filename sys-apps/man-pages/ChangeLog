@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.4 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.5 2002/07/29 08:40:25 seemant Exp $
+
+*man-pages-1.52 (29 Jul 2002)
+
+  29 Jul 2002; Seemant Kulleen <seemant@gentoo.org> man-pages-1.52.ebuild
+  files/digest-man-pages-1.52 :
+  
+  Version bump.
 
 *man-pages-1.51 (11 Jun 2002)
 
