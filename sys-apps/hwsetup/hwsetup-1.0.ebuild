@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.0.ebuild,v 1.2 2003/03/04 20:02:51 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.0.ebuild,v 1.3 2003/03/26 19:01:12 livewire Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hardware setup program"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.knopper.net"
 
 KEYWORDS="~x86 -ppc -sparc -alpha -mips"
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 
 DEPEND="sys-apps/kudzu"
 RDEPEND="virtual/glibc"
