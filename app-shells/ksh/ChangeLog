@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.6 2003/09/22 11:32:43 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.7 2003/10/11 22:48:49 weeve Exp $
+
+  11 Oct 2003; Jason Wever <weeve@gentoo.org> ksh-93.20030724.ebuild:
+  Added ~sparc keyword, resolves bug #25668.
 
   22 Sep 2003; <paul@gentoo.org> metadata.xml:
   Fix metadata.xml
