@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.9.3.ebuild,v 1.2 2003/02/13 16:03:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.9.3.ebuild,v 1.3 2003/03/18 10:44:41 wmertens Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="User-mode filesystem implementation"
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_install () {
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/${P} lufs
+	newexe ${FILESDIR}/${P}-init lufs
 
 	dodoc AUTHORS COPYING ChangeLog Contributors INSTALL \
 		NEWS README THANKS TODO 

@@ -1,7 +1,11 @@
 # ChangeLog for sys-apps/lufs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.6 2003/02/12 22:33:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.7 2003/03/18 10:44:41 wmertens Exp $
 
+  18 Mar 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.3.ebuild
+  Fixed typo in install, -init was missing from the init script. Didn't
+  bump revision since the people that have it running probably
+  figured that out by themselves.
 
 *lufs-0.9.31 (12 Feb 2003)
 
