@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.5.ebuild,v 1.2 2002/12/04 19:53:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.5.ebuild,v 1.3 2002/12/05 09:21:58 vapier Exp $
 
 DESCRIPTION="BDF font editor for X"
 SRC_URI="http://clr.nmsu.edu/~mleisher/${P}.tar.gz
@@ -8,7 +8,7 @@ SRC_URI="http://clr.nmsu.edu/~mleisher/${P}.tar.gz
 HOMEPAGE="http://clr.nmsu.edu/~mleisher/xmbdfed.html"
 
 SLOT="0"
-LICNSE="as-is"
+LICENSE="as-is"
 KEYWORDS="~x86"
 IUSE="truetype"
 
