@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.9 2002/09/14 15:57:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.10 2002/11/03 09:38:13 azarah Exp $
+
+*nvidia-kernel-1.0.3123-r1 (3 Nov 2002)
+
+  3 Nov 2002; Martin Schlemmer <azarah@gentoo.org>:
+  Add page_alloc and linux-2.5 kernel patches.  Closes bug #9704.
 
   14 Sep 2002; Martin Schlemmer <azarah@gentoo.org>:
   Remove ftp in SRC_URI, as it seems to give some people problems.
