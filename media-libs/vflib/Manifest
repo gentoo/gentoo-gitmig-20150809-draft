@@ -1,4 +1,7 @@
 MD5 9f75eab8747294b6319e64c5a47fd536 vflib-2.25.6.ebuild 1092
 MD5 06dbe5e6dcebbdfb9743397f7270babf ChangeLog 587
+MD5 89a0d95c50203f9f699bf9d242443c70 vflib-2.25.6-r1.ebuild 1096
 MD5 50efe8124f340f0676e03138de0119c3 files/vflib-2.25.6-gentoo.diff 838
 MD5 f2223bbd37edae5723444c23273e3e49 files/digest-vflib-2.25.6 65
+MD5 f45ceea0958084403bc069d0526d68a0 files/vflib-2.25.6-r1-gentoo.diff 1807
+MD5 f2223bbd37edae5723444c23273e3e49 files/digest-vflib-2.25.6-r1 65
