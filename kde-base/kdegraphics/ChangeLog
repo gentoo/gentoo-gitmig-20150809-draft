@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.12 2002/10/09 16:50:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.13 2002/10/20 12:25:30 danarmak Exp $
+
+  20 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix #9271: Add a dep on libieee1284 on x86 if scanner is in use.
 
 *kdegraphics-3.0.4 (09 Oct 2002)
 
