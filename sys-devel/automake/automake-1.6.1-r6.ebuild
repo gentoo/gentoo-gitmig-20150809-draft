@@ -205,6 +205,9 @@ src_install() {
 
 	cd ${OLD14_S}
 	fix_bins "1.4"
+
+	# Ignore duplicates like automake-1.5 and 1.6
+	patch -p0 <${FILESDIR}/${PN}-1.4_p5-ignore-duplicates.patch || die
 	
 	make DESTDIR=${D} \
 		pkgdatadir=/usr/share/automake-1.4 \
@@ -247,6 +250,64 @@ pkg_preinst() {
 	if [ -d ${ROOT}/usr/share/automake ]
 	then
 		rm -rf ${ROOT}/usr/share/automake
+	fi
+
+	# Make sure we move all the macros not installed with automake
+	# to the non version specific aclocal dir.
+	if [ ! -d ${ROOT}/usr/share/aclocal ]
+	then
+		mkdir -p ${ROOT}/usr/share/aclocal
+	fi
+	if [ -d ${OLD14_S}/m4 ] && [ -d ${ROOT}/usr/share/aclocal-1.4 ]
+	then
+		for x in ${ROOT}/usr/share/aclocal-1.4/*.m4
+		do
+			if [ ! -f ${OLD14_S}/m4/${x##*/} ]
+			then
+				if [ ! -f ${ROOT}/usr/share/aclocal/${x##*/} ]
+				then
+					einfo "Moving ${x} to aclocal..."
+					mv -f ${x} ${ROOT}/usr/share/aclocal
+				else
+					einfo "Deleting duplicate ${x}..."
+					rm -f ${x}
+				fi
+			fi
+		done
+	fi
+	if [ -d ${OLD15_S}/m4 ] && [ -d ${ROOT}/usr/share/aclocal-${OLD15_PV} ]
+	then
+		for x in ${ROOT}/usr/share/aclocal-${OLD15_PV}/*.m4
+		do
+			if [ ! -f ${OLD15_S}/m4/${x##*/} ]
+			then
+				if [ ! -f ${ROOT}/usr/share/aclocal/${x##*/} ]
+				then
+					einfo "Moving ${x} to aclocal..."
+					mv -f ${x} ${ROOT}/usr/share/aclocal
+				else
+					einfo "Deleting duplicate ${x}..."
+					rm -f ${x}
+				fi
+			fi
+		done
+	fi
+	if [ -d ${S}/m4 ] && [ -d ${ROOT}/usr/share/aclocal-${NEW_PV} ]
+	then
+		for x in ${ROOT}/usr/share/aclocal-${NEW_PV}/*.m4
+		do
+			if [ ! -f ${S}/m4/${x##*/} ]
+			then
+				if [ ! -f ${ROOT}/usr/share/aclocal/${x##*/} ]
+				then
+					einfo "Moving ${x} to aclocal..."
+					mv -f ${x} ${ROOT}/usr/share/aclocal
+				else
+					einfo "Deleting duplicate ${x}..."
+					rm -f ${x}
+				fi
+			fi
+		done
 	fi
 }
 
