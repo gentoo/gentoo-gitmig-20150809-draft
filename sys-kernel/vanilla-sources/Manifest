@@ -1,8 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7e0d988504ab8096deffacf5009cf7a6 vanilla-sources-2.6.10.ebuild 472
-MD5 c9f4ec8e215e861a23ce284de799370e vanilla-sources-2.6.8.1.ebuild 452
+MD5 1cbe43ad9a9aeb8b0f99c7b917cb8a45 vanilla-sources-2.6.10.ebuild 475
 MD5 5e5cffe00b203d438fa15e1b0b9373a8 vanilla-sources-2.4.25.ebuild 534
 MD5 31eb28103b65ea473ff4926f43f02455 vanilla-sources-2.4.20.ebuild 515
 MD5 1b0bfa0114e892a7f294531c22c7084c vanilla-sources-2.6.5.ebuild 450
@@ -11,11 +10,10 @@ MD5 83b70dd75d9c8783e7b29e19cf2f2d5c vanilla-sources-2.4.27.ebuild 472
 MD5 d354a53c79720fe471a144852d850fc3 vanilla-sources-2.0.40.ebuild 2739
 MD5 0f5406c0ec524fa666bc9334a3f81499 vanilla-sources-2.4.22.ebuild 519
 MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
-MD5 76348a2338f66e79052bdfd8de84941d vanilla-sources-2.6.9.ebuild 454
-MD5 1eeee6f00e9b44428a3c8b7d154b923e vanilla-sources-2.6.11_rc1.ebuild 479
+MD5 64acc4686f01553a3c28e0e322ef5589 vanilla-sources-2.6.11_rc1.ebuild 484
 MD5 7eeaa66d6ef9652cf01be43981c99574 vanilla-sources-2.4.26.ebuild 472
 MD5 7fd084c8e807a3d8b7a26921764e4687 vanilla-sources-2.4.21.ebuild 565
-MD5 50ce629930b58fd97c55cb56b45cfaf2 ChangeLog 9299
+MD5 8900de9290226b8d7a61f813450bdd63 ChangeLog 9507
 MD5 17ded3e049cc5ea4571a590f031fd463 metadata.xml 449
 MD5 97ebbee3ab02255ccaa15c4280e8ace2 vanilla-sources-2.4.28.ebuild 472
 MD5 d3fe4307495d4302c375f45795afcca7 vanilla-sources-2.4.23.ebuild 472
@@ -37,12 +35,10 @@ MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
 MD5 d8266c3fd31880277da566681a943098 files/digest-vanilla-sources-2.4.24-r1 67
 MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-vanilla-sources-2.6.5 66
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-vanilla-sources-2.6.7 66
-MD5 c8049633904d58c1e059003850ae10fc files/digest-vanilla-sources-2.6.9 66
-MD5 18bed04a1b45de515096089cc10913ec files/digest-vanilla-sources-2.6.8.1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB5q+Lm/TpOlox+n8RArt5AJ4wy23gibK4XFd+2ixQMRDOu2UbCQCdGk5M
-72yxQpHUkmDpuQnWDmw8xU0=
-=IfTE
+iD8DBQFB8Y6UiJcSIUGNthERAszQAJ9/NK8pyRJPeXKc1QStWMvhss76fgCdHBXw
+8NrFVGdJdLIUaDbuGLR2H2A=
+=/kBC
 -----END PGP SIGNATURE-----
