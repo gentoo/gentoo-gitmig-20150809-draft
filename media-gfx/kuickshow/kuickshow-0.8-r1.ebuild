@@ -8,7 +8,8 @@ DESCRIPTION="Kuickshow image loader for kde2"
 SRC_URI="http://master.kde.org/~pfeiffer/kuickshow/${A}"
 HOMEPAGE="http://master.kde.org/~pfeiffer/kuickshow/"
 
-DEPEND=">=kde-base/kdelibs-2.1.1"
+DEPEND=">=kde-base/kdelibs-2.1.1
+	>=media-libs/imlib-1.9.10"
 
 RDEPEND=$DEPEND
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8-r2.ebuild,v 1.2 2001/04/28 12:48:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8-r2.ebuild,v 1.3 2001/05/15 09:45:25 achim Exp $
 
 P=esh-0.8      
 A=${P}.tar.gz
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 src_compile() {
 
 	cp Makefile Makefile.orig
-	sed -e "s:^CFLAGS=:CFLAGS=${CFLAGS} :" \
+	sed -e "s:^CFLAGS=:CFLAGS=${CFLAGS/-fomit-frame-pointer/} :" \
 	    -e "s:^LIB=:LIB=-lncurses :" Makefile.orig > Makefile
 	try make
 }

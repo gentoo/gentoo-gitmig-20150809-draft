@@ -13,9 +13,9 @@ sys-apps/gzip
 sys-apps/portage
 sys-apps/sed
 sys-apps/sh-utils
-sys-apps/sharutils
 sys-apps/tar
 sys-apps/textutils
+sys-apps/vim-nogui
 sys-devel/binutils
 sys-devel/bison
 sys-devel/flex
@@ -23,6 +23,8 @@ sys-devel/gcc
 sys-devel/make
 sys-devel/patch
 sys-devel/spython
+net-misc/wget
+net-misc/rsync
 
 
 
