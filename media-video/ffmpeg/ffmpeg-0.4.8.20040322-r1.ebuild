@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.20040322-r1.ebuild,v 1.3 2004/06/09 21:50:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.20040322-r1.ebuild,v 1.4 2004/06/09 21:57:03 lordvan Exp $
 
 inherit eutils flag-o-matic
 
@@ -52,7 +52,7 @@ src_compile() {
 	use encode && myconf="${myconf} --enable-mp3lame"
 	use oggvorbis && myconf="${myconf} --enable-vorbis"
 	use faad && myconf="${myconf} --enable-faad --enable-faadbin"
-	if [ !use ia64 || !use alpha ]; then
+	if ! use ia64 && ! use alpha; then
 	    use faac && myconf="${myconf} --enable-faac"
 	fi
 	use dvd && myconf="${myconf} --enable-a52"
