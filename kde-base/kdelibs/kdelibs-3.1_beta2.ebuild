@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_beta2.ebuild,v 1.3 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_beta2.ebuild,v 1.4 2002/10/16 19:10:17 bjb Exp $
 
 IUSE="ssl cups ipv6 alsa"
 inherit kde kde.org 
@@ -9,7 +9,7 @@ inherit kde kde.org
 # check need for glib >=1.3.3 (we have 1.2.10 only; configure has no glib flag but searches for it)
 
 DESCRIPTION="KDE $PV - base libraries needed by all kde programs" 
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"

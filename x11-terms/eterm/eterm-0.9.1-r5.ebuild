@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r5.ebuild,v 1.4 2002/10/04 06:46:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r5.ebuild,v 1.5 2002/10/16 19:10:17 bjb Exp $
 
 MY_PN=${PN/et/Et}
 MY_P=${MY_PN}-${PV}
@@ -13,7 +13,7 @@ HOMEPAGE="http://eterm.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc alpha"
 
 DEPEND="virtual/x11
 	>=x11-libs/libast-0.4-r1

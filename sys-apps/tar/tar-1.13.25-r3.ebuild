@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r3.ebuild,v 1.3 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r3.ebuild,v 1.4 2002/10/16 19:10:17 bjb Exp $
 
 IUSE="nls static build"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/tar/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 
 DEPEND="sys-apps/gzip
 	sys-apps/bzip2

@@ -1,6 +1,6 @@
 # Copyright 1999 - 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.1 2002/10/12 18:28:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.2 2002/10/16 19:10:17 bjb Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
 DEPEND=">=dev-util/pccts-1.33.24-r1
 	${RDEPEND}"
 
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 alpha"
 
 src_compile() {
 	

@@ -1,10 +1,10 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.ebuild,v 1.2 2002/10/04 05:40:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.ebuild,v 1.3 2002/10/16 19:10:17 bjb Exp $
 inherit kde-base flag-o-matic
 
 SRC_URI="mirror://kde/unstable/kde-3.1-beta2/src/${P}.tar.bz2"
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 HOMEPAGE="http://multimedia.kde.org"
 DESCRIPTION="KDE Sound Server"
 set-kdedir 3.1_beta2
