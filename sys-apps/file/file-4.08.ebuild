@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.1 2004/03/23 16:04:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.2 2004/03/30 02:51:04 vapier Exp $
 
 inherit flag-o-matic gnuconfig
 
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
+HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 	ftp://ftp.astron.com/pub/file/${P}.tar.gz"
-HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~ppc64 ~s390"
-SLOT="0"
 LICENSE="as-is"
-IUSE=""
+SLOT="0"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha hppa ~mips ~ia64 ~ppc64 ~s390"
 
 DEPEND="virtual/glibc"
 
@@ -36,7 +35,8 @@ src_compile() {
 	# file command segfaults on hppa -  reported by gustavo@zacarias.com.ar
 	[ ${ARCH} = "hppa" ] && filter-flags "-mschedule=8000"
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--datadir=/usr/share/misc \
 		--host=${CHOST} || die
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	if [ -z "`use build`" ] ; then
+	if ! use build ; then
 		dodoc ChangeLog LEGAL.NOTICE MAINT README || die "dodoc failed"
 	else
 		rm -rf ${D}/usr/share/man

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.71.ebuild,v 1.1 2004/03/24 18:18:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.71.ebuild,v 1.2 2004/03/30 02:49:47 vapier Exp $
 
 inherit flag-o-matic
 
@@ -11,12 +11,12 @@ HOMEPAGE="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README"
 SRC_URI="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.gz
 	ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/${MY_P}.tar.gz"
 
-DEPEND="virtual/glibc"
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha hppa ~mips ~ia64"
 IUSE="static"
+
+DEPEND="virtual/glibc"
 
 #This pkg appears to be highly kernel-dependent.
 
@@ -52,9 +52,9 @@ src_compile() {
 
 src_install() {
 	#/usr/sbin is a good location -- drobbins
-	dosbin lsof
+	dosbin lsof || die
 	# .a libs not needed during boot so they go in /usr/lib -- drobbins
-	dolib lib/liblsof.a
+	dolib lib/liblsof.a || die
 	insinto /usr/share/lsof/scripts
 	doins scripts/*
 	doman lsof.8
