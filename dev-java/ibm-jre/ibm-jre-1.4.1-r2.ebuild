@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.4.1-r2.ebuild,v 1.1 2004/01/09 09:24:34 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.4.1-r2.ebuild,v 1.2 2004/03/18 06:42:20 zx Exp $
 
 inherit nsplugins
 
@@ -9,13 +9,13 @@ DESCRIPTION="IBM JRE 1.4.1"
 SRC_URI="IBMJava2-JRE-141.tgz"
 HOMEPAGE="https://www6.software.ibm.com/dl/lxdk/lxdk-p"
 RESTRICT="fetch"
-IUSE=""
 DEPEND="virtual/glibc
 	  >=dev-java/java-config-0.2.5"
 RDEPEND="${DEPEND}"
 PROVIDE="virtual/jre-1.4.1
 		 virtual/java-scheme-2"
 LICENSE="IBM-ILNWP"
+IUSE=""
 SLOT="1.4"
 KEYWORDS="x86 -ppc -sparc -alpha"
 

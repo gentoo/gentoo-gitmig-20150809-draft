@@ -1,35 +1,31 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.1-r2.ebuild,v 1.3 2003/02/10 14:02:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.1-r2.ebuild,v 1.4 2004/03/18 06:42:20 zx Exp $
 
 inherit nsplugins
 
-IUSE=""
-
 At=IBMJava2-JRE-131.tgz
-S=${WORKDIR}/IBMJava2-131
 DESCRIPTION="IBM JRE 1.3.1"
-SRC_URI=""
+SRC_URI="${At}"
 HOMEPAGE="http://www6.software.ibm.com/dl/dklx130/dklx130-p"
-
 DEPEND=">=dev-java/java-config-0.2.5"
-
 PROVIDE="virtual/jre-1.3.1
-	virtual/java-scheme-2"
-
+		virtual/java-scheme-2"
 SLOT="1.3"
+IUSE=""
+RESTRICT="fetch"
 LICENSE="IBM-ILNWP"
 KEYWORDS="x86 -ppc -sparc"
 
-src_unpack() {
-	if [ ! -f ${DISTDIR}/${At} ] ; then
-		die "Please download ${At} from ${HOMEPAGE}"
-	fi
-	unpack ${At} || die
+S=${WORKDIR}/IBMJava2-131
+
+pkg_nofetch() {
+	die "Please download ${At} from ${HOMEPAGE}"
 }
 
+src_compile() { :; }
 
-src_install () {
+src_install() {
 
 	dodir /opt/${P}
 	cp -dpR jre/* ${D}/opt/${P}/
