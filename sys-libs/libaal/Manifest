@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 36be982fe5ca02c8f6337d50aa9db826 ChangeLog 1036
-MD5 384d61a35851e6630b09e3d77464eac9 libaal-0.5.2.ebuild 742
+MD5 f63840f8346043827b423512f434ba9b libaal-0.5.1.ebuild 741
+MD5 1f9b6cb13301beea8f28b6e08fec568a libaal-0.5.2.ebuild 736
+MD5 1ef186012989d314a50f66380bf5a685 ChangeLog 1030
 MD5 e204859e37f5c66efadbae832356f236 metadata.xml 330
-MD5 5936217d277210c5c34be8e2092f36e1 libaal-0.5.1.ebuild 750
 MD5 f19b2f14583ddbf6ec14ce9aafbfdfa0 files/digest-libaal-0.5.1 64
 MD5 22590455c06b9e53ca11f8dea3aca28c files/digest-libaal-0.5.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA0h5DHTu7gpaalycRAkRJAKCZuVvZNaVG8y4W71qsFqdcs48O9QCeI3xB
-kwFYC/jyLOZXl5EBp9GtiZY=
-=Bycu
------END PGP SIGNATURE-----
