@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20040902.ebuild,v 1.1 2004/11/22 09:42:57 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20040902.ebuild,v 1.2 2004/11/24 08:20:30 josejx Exp $
 
 inherit webapp-apache
 
@@ -10,7 +10,7 @@ SRC_URI="http://twiki.org/swd/TWiki${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 
 S=${WORKDIR}/${PN}
 
