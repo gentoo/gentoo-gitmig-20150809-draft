@@ -1,0 +1,11 @@
+# ChangeLog for sys-kernel/selinux-sources
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.1 2002/10/30 18:23:44 styx Exp $
+
+*selinux-sources-2.4.19 (30 Oct 2002)
+
+  30 Oct 2002; Joachim Blaabjerg <styx@gentoo.org>
+  selinux-sources-2.4.19.ebuild, ChangeLog, files/digest-selinux-sources-2.4.19:
+
+  Initial submission. Ebuild originally written by Joshua Brindle
+  <method@gentoo.org>.
