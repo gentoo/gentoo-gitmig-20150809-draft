@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.4.0_beta1.ebuild,v 1.2 2005/01/19 15:38:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.4.0_beta1.ebuild,v 1.3 2005/01/19 15:43:10 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -16,8 +16,10 @@ DEPEND="~kde-base/kdebase-${PV}
 	!net-misc/ksambaplugin"
 
 RDEPEND="${DEPEND}
+	dev-lang/perl
 	ssl? ( app-crypt/qca-tls
 	       dev-perl/IO-Socket-SSL )"
+# perl: for KSirc
 # qca-tls: for Kopete jabber plugin.
 # IO-Socket-SSL: for SSL support in KSirc.
 
