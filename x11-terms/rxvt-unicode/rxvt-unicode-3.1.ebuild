@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.1.ebuild,v 1.3 2004/06/29 07:18:15 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.1.ebuild,v 1.4 2004/09/02 16:47:28 pvdabeel Exp $
 
 IUSE="xgetdefault"
 
@@ -10,7 +10,7 @@ SRC_URI="http://rxvt-unicode-dist.plan9.de/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="~x86 ~sparc ~mips ppc"
 
 DEPEND="virtual/libc
 	virtual/x11
