@@ -82,3 +82,4 @@ move net-mail/imapfilter mail-filter/imapfilter
 move net-mail/maildrop mail-filter/maildrop
 move net-mail/mailfilter mail-filter/mailfilter
 move net-mail/popfile mail-filter/popfile
+move net-mail/procmail mail-filter/procmail
