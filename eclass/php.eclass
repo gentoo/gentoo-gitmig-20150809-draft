@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.20 2003/05/23 16:25:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.21 2003/05/23 16:38:17 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -48,7 +48,7 @@ DEPEND="${DEPEND}
     gd? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
     gdbm? ( >=sys-libs/gdbm-1.8.0 )
     imap? ( >=net-mail/uw-imap-2001a-r1 )
-	java? ( =virtual/jdk-1.4* )
+	java? ( =virtual/jdk-1.4* dev-java/java-config )
     jpeg? ( >=media-libs/jpeg-6b )
     ldap? ( >=net-nds/openldap-1.2.11 )
 	mcal? ( dev-libs/libmcal )
@@ -185,6 +185,16 @@ php_src_compile() {
 #		static) myconf="${myconf} --enable-embed=static" ;;
 #		*) myconf="${myconf} --disable-embed" ;;
 #	esac;
+
+	if [ -n "`use java`" ];  then
+		JAVAVER=`java-config --java-version 2>&1|grep -i 'version' | xargs -n1 |grep '\.'|cut -c1-3`
+		einfo "JDK ${JAVAVER}.* detected"
+		if [ "${JAVAVER}" != "1.4" ]; then
+			ERRORMSG="Please use java-config to select a 1.4 JDK"
+			eerror ${ERRORMSG}
+			die ${ERRORMSG}
+		fi;
+	fi
 
 	[ -x "/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
 
