@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/clamassassin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.3 2004/08/06 12:02:58 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.4 2004/08/28 12:48:52 slarti Exp $
+
+*clamassassin-1.2.0-r1 (28 Aug 2004)
+
+  28 Aug 2004; Tom Martin <slarti@gentoo.org> +clamassassin-1.2.0-r1.ebuild:
+  Fix issues with Portage exporting $TMP and breaking the script - $TMP was
+  going inside /var/tmp/portage/clamassassin-${VER}/temp, which is not
+  writeable by anyone so caused data loss. Thanks to Andrej Kacian
+  <andrej@kacian.sk> for the fix, and spider <spider@gentoo.org> for
+  reporting. Bug 61806.
 
   06 Aug 2004; Tom Martin <slarti@gentoo.org> clamassassin-1.2.0.ebuild:
   Use $() instead of ``, replace use_enable subject_rewrite with subject-rewrite.
