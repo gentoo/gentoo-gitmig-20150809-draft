@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 b5d8dd35d7a04de7a73ce74c3a43a66d gmt-4.0.ebuild 3630
 MD5 c0505f45636cfb70135febbef230171a gmt-3.4.4-r1.ebuild 3184
-MD5 c831f91689daaf85267578179dc77a4c ChangeLog 2158
+MD5 8803e4e674cfbd0db64871b6341b8437 ChangeLog 2319
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 eb664b10894e3ad4684892cff8b36494 files/digest-gmt-3.4.4-r1 647
-MD5 79607acabc6963de96f4dbdf435e36bd files/digest-gmt-4.0 637
+MD5 690450b38a7f2291092a30af66868191 files/digest-gmt-4.0 637
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCHJBkntT9W3vfTuoRAs0MAJ49vocDYxPLCR3webiD2d8eb7YXoQCglMtx
-zkNA2ntc26YRIDVIXCX3mmc=
-=nsBt
+iD8DBQFCHPdxntT9W3vfTuoRAqFeAJoDPZUtwrH30r8I/g3rBlUS46GNmgCeIjUs
+bzd0Hi5+7LEXgTqEdVuX8bU=
+=BqzN
 -----END PGP SIGNATURE-----

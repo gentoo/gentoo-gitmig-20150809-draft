@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gmt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.4 2005/02/23 14:16:37 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.5 2005/02/23 21:36:16 cryos Exp $
+
+  23 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> :
+  Updating digest for gmt-4.0 as GMT_share.tar.bz2 has been changed on their
+  server - closes bug 83084.
 
 *gmt-4.0 (23 Feb 2005)
 
