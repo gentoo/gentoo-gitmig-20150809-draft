@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.2 2004/02/08 21:33:38 vapier Exp $
 
-inherit games
+inherit games eutils
 
-IUSE=""
 DESCRIPTION="Soldier of Fortune - First-person shooter based on the mercinary trade"
 HOMEPAGE="http://www.lokigames.com/products/sof/"
 SRC_URI="ftp://ftp.planetmirror.com/pub/lokigames/updates/sof/sof-${PV}-cdrom-x86.run
@@ -26,6 +25,7 @@ Ddir=${D}/${dir}
 
 pkg_setup() {
 	ewarn "The installed game takes about 725MB of space!"
+	cdrom_get_cds sof.xpm
 	games_pkg_setup
 }
 
@@ -35,19 +35,17 @@ src_unpack() {
 
 src_install() {
 	dodir ${dir}
-	games_get_cd sof.xpm
-	games_verify_cd "Soldier of Fortune"
 	einfo "Copying files... this may take a while..."
 	exeinto /opt/soldieroffortune
-	doexe ${GAMES_CD}/bin/x86/glibc-2.1/sof
+	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/sof
 	insinto /opt/soldieroffortune
 
-	cp ${GAMES_CD}/{README,kver.pub,sof.xpm} ${Ddir}
+	cp ${CDROM_ROOT}/{README,kver.pub,sof.xpm} ${Ddir}
 
 	cd ${Ddir}
 
-	tar xzf ${GAMES_CD}/paks.tar.gz || die "uncompressing data"
-	tar xzf ${GAMES_CD}/binaries.tar.gz || die "uncompressing binaries"
+	tar xzf ${CDROM_ROOT}/paks.tar.gz || die "uncompressing data"
+	tar xzf ${CDROM_ROOT}/binaries.tar.gz || die "uncompressing binaries"
 
 	cd ${S}
 	bin/Linux/x86/loki_patch --verify patch.dat
@@ -62,15 +60,14 @@ src_install() {
 	dogamesbin ${FILESDIR}/sof
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/sof
 	insinto /usr/share/pixmaps
-	doins ${GAMES_CD}/sof.xpm
+	doins ${CDROM_ROOT}/sof.xpm
 
 	prepgamesdirs
 	make_desktop_entry sof "Soldier of Fortune" "sof.xpm"
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "To play the game run:"
 	einfo " sof"
-
-	games_pkg_postinst
 }

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/d1x/d1x-20040118.ebuild,v 1.2 2004/02/03 21:43:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/d1x/d1x-20040118.ebuild,v 1.3 2004/02/08 21:30:56 vapier Exp $
 
-inherit eutils games
+inherit games eutils
 
 DESCRIPTION="Descent 1 Source Project"
 HOMEPAGE="http://d1x.warpcore.org"
@@ -10,8 +10,9 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2 mirror://gentoo/descent1.5-patch.tar.bz2"
 
 LICENSE="Descent1 D1X"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="opengl"
+
 DEPEND=">=dev-lang/nasm-0.97
 	media-libs/libsdl
 	opengl? (
@@ -20,11 +21,10 @@ DEPEND=">=dev-lang/nasm-0.97
 		sys-libs/zlib
 	)"
 
-S="${WORKDIR}/d1x"
+S=${WORKDIR}/${PN}
 
 pkg_setup () {
-	games_get_cd descent
-	games_verify_cd "Descent 1"
+	cdrom_get_cds descent
 	games_pkg_setup
 }
 
@@ -35,7 +35,7 @@ src_unpack () {
 	mkdir "${dir}" || die
 
 	# Copy data files
-	local src="${GAMES_CD}/descent"
+	local src="${CDROM_ROOT}/descent"
 	cd "${src}" || die
 
 	for x in chaos.hog chaos.msn descent.b50 descent.dem descent.hog \
@@ -72,8 +72,7 @@ src_compile () {
 	make || die
 }
 
-src_install () {
-
+src_install() {
 	# Install D1X documentation
 	cd "${S}"
 	dodoc d1x.faq d1x.txt d1x140.txt readme.d1x readme.org todo.txt \
@@ -130,7 +129,7 @@ src_install () {
 	prepgamesdirs
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	games_pkg_postinst
 	echo
 	einfo "You may want to install the additional map package, which contains"
