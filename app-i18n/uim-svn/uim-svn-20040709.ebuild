@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.7 2005/01/14 23:34:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.8 2005/01/29 13:10:49 greg_g Exp $
 
-inherit subversion flag-o-matic
+inherit subversion flag-o-matic kde-functions
 
 IUSE="X canna dict debug fep gtk kde m17n-lib nls"
 
@@ -49,13 +49,15 @@ src_compile() {
 	emake || die
 
 	if use X && use kde; then
+		set-qtdir 3
+		set-kdedir 3
+
 		local abs_top_dir=`pwd`
 
 		! use gtk && sed -ie "52s:NULL:\"uim-helper-candwin-qt\":" xim/canddisp.cpp
 
 		cd qt/uim-kdehelper
 
-		addwrite /usr/qt/3/etc/settings
 		WANT_AUTOCONF=2.5 ./bootstrap
 		econf \
 			`use_enable nls` \

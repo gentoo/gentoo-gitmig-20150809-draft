@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim-svn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.14 2005/01/14 23:34:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.15 2005/01/29 13:10:49 greg_g Exp $
+
+  29 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> uim-svn-20040709.ebuild:
+  Proper usage of kde eclasses, to make sure KDEDIR is defined (#33079).
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> uim-svn-20040709.ebuild:
   Changed dep on kdebase to accept kdebase-meta, the split 'meta' package.
