@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r13.ebuild,v 1.1 2005/02/12 04:53:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r13.ebuild,v 1.2 2005/02/14 18:58:50 agriffis Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # alpha was removed because it doesnt satisfy DEPEND.  See bug #66572.
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~alpha"
 
 IUSE="nls esd mmx oggvorbis 3dnow mikmod directfb alsa oss arts jack sndfile lirc flac mad mp3"
 
