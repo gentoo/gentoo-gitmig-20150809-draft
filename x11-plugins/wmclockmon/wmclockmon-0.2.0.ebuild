@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Ebuild by AutoBot (autobot@midsouth.rr.com)
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.2.0.ebuild,v 1.4 2003/06/12 22:27:14 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.2.0.ebuild,v 1.5 2003/08/18 01:38:12 g2boojum Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
 
 DESCRIPTION="digital clock dockapp with three different styles."
 SRC_URI="http://tnemeth.free.fr/projets/programmes/${P}.tar.gz"
@@ -13,19 +13,11 @@ SLOT="0"
 KEYWORDS="x86"
 LICENSE="GPL-2"
 
-DEPEND="x11-base/xfree"
-
-src_compile() {
-
-	econf || die "configure failed"
-
-	emake || die "parallel make failed"
-
-}
+DEPEND="x11-base/xfree
+	=x11-libs/gtk+-1.2*"
 
 src_install () {
-
 	einstall || die "make install failed"
 
+	dodoc AUTHORS BUGS ChangeLog THANKS TODO doc/sample.wmclockmonrc
 }
-
