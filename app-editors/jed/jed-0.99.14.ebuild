@@ -1,14 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.14.ebuild,v 1.2 2001/07/03 14:42:53 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.14.ebuild,v 1.3 2001/11/10 02:54:28 hallski Exp $
 
-#P=
 P0=${PN}-B0.99-14
-A=${P0}.tar.bz2
 S=${WORKDIR}/${P0}
 DESCRIPTION="Console S-Lang-based editor"
-SRC_URI="ftp://space.mit.edu/pub/davis/jed/v0.99/${A}"
+SRC_URI="ftp://space.mit.edu/pub/davis/jed/v0.99/${P0}.tar.bz2"
 HOMEPAGE="http://space.mit.edu/~davis/jed/"
 
 DEPEND="virtual/glibc

@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2-r1.ebuild,v 1.2 2001/05/29 17:28:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2-r1.ebuild,v 1.3 2001/11/10 02:54:28 hallski Exp $
 
-A=${P}.tgz
 S=${WORKDIR}/${P}
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"
-SRC_URI="ftp://dickey.his.com/vile/${A}"
+SRC_URI="ftp://dickey.his.com/vile/${P}.tgz"
 HOMEPAGE="http://www.clark.net/pub/dickey/vile/vile.html"
 
 DEPEND="virtual/glibc

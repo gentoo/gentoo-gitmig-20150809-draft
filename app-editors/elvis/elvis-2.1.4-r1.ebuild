@@ -1,12 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.1 2001/06/04 00:07:02 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.2 2001/11/10 02:54:28 hallski Exp $
 
-A=elvis-2.1_4.tar.gz
 S=${WORKDIR}/elvis-2.1_4
 DESCRIPTION="A vi/ex clone"
-SRC_URI="ftp://ftp.cs.pdx.edu/pub/elvis/${A}"
+SRC_URI="ftp://ftp.cs.pdx.edu/pub/${PN}/${PN}-2.1_4.tar.gz"
 HOMEPAGE="ftp://ftp.cs.pdx.edu/pub/elvis/"
 
 DEPEND="virtual/glibc

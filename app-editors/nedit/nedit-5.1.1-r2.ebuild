@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.1.1-r2.ebuild,v 1.1 2001/10/06 15:30:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.1.1-r2.ebuild,v 1.2 2001/11/10 02:54:28 hallski Exp $
 
-A=${P}-src.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="NEdit is a multi-purpose text editor for the X Window System"
-SRC_URI="ftp://ftp.nedit.org/pub/v5_1_1/${A}"
+SRC_URI="ftp://ftp.nedit.org/pub/v5_1_1/${P}-src.tar.gz"
 HOMEPAGE="http://nedit.org/"
 
 DEPEND="virtual/glibc

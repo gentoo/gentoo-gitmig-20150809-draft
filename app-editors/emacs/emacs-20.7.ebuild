@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-20.7.ebuild,v 1.3 2001/08/31 03:23:38 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-20.7.ebuild,v 1.4 2001/11/10 02:54:28 hallski Exp $
 
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="An incredibly powerful, extensible text editor"
-SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${A}"
+SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/emacs"
 
 DEPEND=">=sys-libs/ncurses-5.2

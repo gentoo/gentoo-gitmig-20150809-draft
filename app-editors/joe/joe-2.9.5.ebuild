@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.5.ebuild,v 1.1 2001/03/30 02:13:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.5.ebuild,v 1.2 2001/11/10 02:54:28 hallski Exp $
 
-A=${P}.tgz
 S=${WORKDIR}/${P}
 DESCRIPTION="A free ASCII-Text Screen Editor for UNIX"
-SRC_URI="http://ftp1.sourceforge.net/joe-editor/${A}"
+SRC_URI="http://ftp1.sourceforge.net/joe-editor/${P}.tgz"
 HOMEPAGE="http://sourceforge.net/projects/joe-editor/"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
