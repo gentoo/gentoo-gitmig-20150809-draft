@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.4.ebuild,v 1.8 2003/09/20 22:44:24 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.4.ebuild,v 1.9 2003/09/21 01:55:00 mkennedy Exp $
 
-inherit elisp gnuconfig
+inherit gnuconfig elisp-common
 
 S=${WORKDIR}/${P}
 DESCRIPTION="CScope - interactively examine a C program"
@@ -40,15 +40,24 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc NEWS AUTHORS TODO COPYING Changelog INSTALL README*
+	dodoc NEWS AUTHORS TODO COPYING ChangeLog INSTALL README*
 
 	if use emacs
 	then
 		cd ${S}/contrib/xcscope
-		elisp-install ${PN} *.el *.elc
-		elisp-site-file-install ${FILESDIR}/${SITEFILE}
+		insinto /usr/share/emacs/site-lisp/xcscope
+		doins ${PN} *.el *.elc
+		insinto /usr/share/emacs/site-lisp
+		doins ${FILESDIR}/${SITEFILE}
 		dobin cscope-indexer
 	fi
-
 	cp -r ${S}/contrib/webcscope ${D}/usr/share/doc/${P}/
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
