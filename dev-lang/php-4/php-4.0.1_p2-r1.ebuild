@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.1_p2-r1.ebuild,v 1.2 2000/09/15 20:08:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.1_p2-r1.ebuild,v 1.3 2000/10/05 18:22:51 achim Exp $
 
 P=php-4.0.1pl2
 A="${P}.tar.gz number4.tar.gz"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.php.net/"
 src_compile() {
 
     export LD_FLAGS="$LD_FLAGS -ltiff -ljpeg -L/usr/X11R6/lib"
-    try ./configure --with-mysql=yes --enable-safe-mode \
+    ./configure --with-mysql=yes --enable-safe-mode \
 	--enable-sysvsem --enable-sysvshm --with-zlib=yes --enable-bcmath \
 	--with-readline --with-gettext --enable-calendar --with-ldap\
 	--with-gd --with-ttf --with-t1lib --with-jpeg-dir=/usr/lib \
