@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/n32/2004.2/packages,v 1.1 2004/09/27 09:12:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/n32/2004.2/packages,v 1.2 2004/11/10 10:57:31 kumba Exp $
 
 # mips64 n32 packages
 
@@ -20,5 +20,5 @@
 *<sys-devel/gcc-3.4.2
 
 # n32 needs a relatively modern glibc
--*<sys-libs/glibc-2.3.4.20040808
+-~sys-libs/glibc-2.3.4.20040808
 *>=sys-libs/glibc-2.3.4.20040808
