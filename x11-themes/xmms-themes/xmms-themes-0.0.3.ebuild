@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.8 2004/06/24 23:38:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.9 2004/07/19 00:00:27 kloeri Exp $
 
 DESCRIPTION="Collection of XMMS themes"
 HOMEPAGE="http://www.xmms.org"
@@ -101,7 +101,7 @@ SRC_URI="${THEME_URI}/AbsoluteE_Xmms.zip
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="x86 ppc sparc ~alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 
 IUSE=""
 

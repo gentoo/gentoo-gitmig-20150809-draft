@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-lighthouseblue/gtk-engines-lighthouseblue-0.7.0.ebuild,v 1.8 2004/06/25 22:02:53 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-lighthouseblue/gtk-engines-lighthouseblue-0.7.0.ebuild,v 1.9 2004/07/19 00:03:49 kloeri Exp $
 
 inherit gtk-engines2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://lighthouseblue.sf.net/"
 SRC_URI="mirror://sourceforge/lighthouseblue/lighthouseblue-gtk1-${GTK1_VER}.tar.gz
 	mirror://sourceforge/lighthouseblue/lighthouseblue-gtk2-${GTK2_VER}.tar.gz"
 
-KEYWORDS="x86 ppc ~alpha sparc hppa amd64"
+KEYWORDS="x86 ppc alpha sparc hppa amd64"
 LICENSE="GPL-2"
 SLOT="2"
 
