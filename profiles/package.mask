@@ -321,4 +321,5 @@ dev-lang/tcl-tk
 >=sys-devel/libtool-1.4.2
 
 # Failed to build for at least me and "wouzer" Bugzilla issue: #243
->=x11-base/xfree-4.2.0
+=x11-base/xfree-4.2.0
+=x11-base/xfree-4.2.0-r1
