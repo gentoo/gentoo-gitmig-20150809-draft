@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.15 2003/12/13 18:03:55 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.16 2003/12/30 02:46:10 weeve Exp $
+
+  29 Dec 2003; Jason Wever <weeve@gentoo.org> xsane-0.92.ebuild:
+  ~sparc, taking the world by storm since 1492.
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> xsane-0.92.ebuild:
   mark stable on amd64
