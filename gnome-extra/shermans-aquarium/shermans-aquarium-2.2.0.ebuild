@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.6 2004/05/29 03:46:59 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.7 2004/06/03 23:37:52 agriffis Exp $
 
 MY_P=${PN/-/_}-${PV}
 DESCRIPTION="A gnome/wm applet displaying comical fish"
@@ -36,11 +36,11 @@ src_compile( ) {
 	cd ${S}
 	local myconf
 	# if we dont want gtk2 support
-	if [ -z "`use gtk2`" ]; then
+	if ! use gtk2; then
 		myconf="${myconf} --disable-gtk2 --disable-gnome2"
 	fi
 	# if we dont want sdl (fullscreen support)
-	if [ -z "`use sdl`" ]; then
+	if ! use sdl; then
 		myconf="${myconf} --disable-fullscreen"
 	fi
 
@@ -54,7 +54,7 @@ src_install( ) {
 	# we need to create some dirs that arent created in the
 	# Makefile. which ones depend on whether we're building
 	# for gtk1 or gtk2
-	if [ -n "`use gtk2`" ]; then
+	if use gtk2; then
 		dodir /usr/lib/bonobo/servers /usr/share/gnome-2.0/ui
 	else
 		dodir /etc/CORBA/servers /usr/share/applets/Amusements
