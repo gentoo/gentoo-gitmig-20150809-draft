@@ -1,0 +1,1 @@
+find / -type f -perm -1 -maxdepth 9 -exec echo -n '__guard at GCC check in: {} ' \; -exec qpkg -f {} \; -exec readelf -s {} \; 2>&1 | grep __guard | grep -B1 '__guard\@GCC'
