@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.47 2004/07/08 23:52:17 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.48 2004/07/09 14:21:48 lv Exp $
+
+  09 Jul 2004; Travis Tilley <lv@gentoo.org> libtool-1.5.6.ebuild:
+  added back keywords for all supported archs
 
 *libtool-1.5.6 (08 Jul 2004)
 
