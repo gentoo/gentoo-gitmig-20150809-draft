@@ -5,9 +5,9 @@ inherit games
 
 DESCRIPTION="Return to Castle Wolfenstein - Long awaited sequel to Wolfenstein 3D"
 SRC_URI="ftp://ftp.idsoftware.com/idstuff/wolf/linux/wolf-linux-1.4-full.x86.run
-	ftp://3dgamers.in-span.net/pub/3dgamers3/games/returnwolfenstein/wolf-linux-1.4-full.x86.run
+	ftp://3dgamers.in-span.net/pub/3dgamers4/games/returnwolfenstein/wolf-linux-1.4-full.x86.run
 	ftp://ftp.idsoftware.com/idstuff/wolf/linux/wolf-linux-update-${PV}.x86.run
-	ftp://3dgamers.in-span.net/pub/3dgamers3/games/returnwolfenstein/wolf-linux-update-${PV}.x86.run"
+	ftp://3dgamers.in-span.net/pub/3dgamers4/games/returnwolfenstein/wolf-linux-update-${PV}.x86.run"
 
 HOMEPAGE="http://games.activision.com/games/wolfenstein/"
 
