@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/lvm-user
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.5 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.6 2002/07/21 20:14:23 gerk Exp $
 
 *lvm-user-1.0.4 (23 Jun 2002)
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (-ppc), this relies on x86 kernel ATM
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> lvm-user-1.0.4.ebuild :
   Added KEYWORDS.
