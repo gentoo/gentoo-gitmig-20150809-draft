@@ -1,9 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.123 2005/01/05 17:46:53 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.124 2005/01/05 18:24:34 pythonhead Exp $
 
   05 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> python-2.4.ebuild:
-  Removed 2.4 lib64 patch until fixed
+  Only apply lib64 patch on CONF_LIBDIR == lib64
 
   04 Jan 2005; Rob Cakebread <pythonhead@gentoo.org>
   +files/python-2.4-lib64.patch, python-2.4.ebuild:
@@ -71,7 +71,7 @@
   Made python-2.1 stable on ppc as there are still some ebuilds which require
   this version.
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> python-2.3.3-r1.ebuild:
+  03 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> python-2.3.3-r1.ebuild:
   Stable on alpha.
 
   03 Jul 2004; Grant Goodyear <g2boojum@gentoo.org> python-2.3.4.ebuild:
@@ -104,7 +104,7 @@
 
 *python-2.3.4 (04 Jun 2004)
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> +python-2.3.4.ebuild:
+  04 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> +python-2.3.4.ebuild:
   Bump version.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> python-2.3.3-r1.ebuild:
@@ -158,7 +158,7 @@
   Removing portage version check again as it's preventing new installations.
   Bug #43036
 
-  25 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org> python-2.3.3.ebuild:
+  25 Feb 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> python-2.3.3.ebuild:
   Reinstating portage version check as people keep upgrading python without
   upgrading portage.
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.ebuild,v 1.3 2005/01/05 17:46:53 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.ebuild,v 1.4 2005/01/05 18:24:34 pythonhead Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -54,8 +54,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-${PYVER}-disable_modules_and_ssl.patch
 	epatch ${FILESDIR}/${PN}-${PYVER}-mimetypes_apache.patch
 	epatch ${FILESDIR}/${PN}-${PYVER}-db4.2.patch
-	#This needs fixing:
-	#epatch ${FILESDIR}/${PN}-${PYVER}-lib64.patch
+	# installs to lib64
+	# This needs testing, lib64 people:
+	[ "${CONF_LIBDIR}" == "lib64" ] && epatch ${FILESDIR}/python-${PYVER}-lib64.patch
 }
 
 src_configure() {
