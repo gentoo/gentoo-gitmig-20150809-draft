@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.0.ebuild,v 1.13 2004/07/14 19:47:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.0.ebuild,v 1.14 2004/07/15 14:45:12 vapier Exp $
 
 inherit enlightenment flag-o-matic eutils
 
@@ -20,6 +20,8 @@ DEPEND="=media-libs/freetype-2*
 	jpeg? ( media-libs/jpeg )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	virtual/x11"
+
+S=${WORKDIR}/${P}
 
 src_unpack() {
 	enlightenment_src_unpack
