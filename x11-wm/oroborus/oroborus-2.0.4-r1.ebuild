@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.4-r1.ebuild,v 1.15 2004/06/28 02:53:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.4-r1.ebuild,v 1.16 2004/07/15 01:14:27 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Yet another window manager"
 SRC_URI="http://www.kensden.pwp.blueyonder.co.uk/Oroborus/files/${P}.tar.gz"
 HOMEPAGE="http://www.kensden.pwp.blueyonder.co.uk/Oroborus"
@@ -41,4 +40,3 @@ src_install () {
 
 	dodoc README INSTALL ChangeLog TODO NEWS AUTHORS example.oroborusrc
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.17.ebuild,v 1.10 2004/07/07 02:12:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.17.ebuild,v 1.11 2004/07/15 01:11:43 agriffis Exp $
 
 MY_P="${PN}_${PV}.orig"
 S=${WORKDIR}/${MY_P/_/-}
@@ -40,4 +40,3 @@ src_install () {
 	doman evilwm.1
 	dodoc ChangeLog README* INSTALL TODO
 }
-
