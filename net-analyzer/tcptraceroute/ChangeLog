@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/tcptraceroute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.7 2003/03/07 23:33:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.8 2003/04/29 00:40:35 zwelch Exp $
 
 *tcptraceroute-1.4 (18 Aug 2002)
+
+  28 Apr 2003; Zach Welch <zwelch@gentoo.org> tcptraceroute-1.4.ebuild:
+  add arm keyword
 
   07 Mar 2003; Martin Holzer <mholzer@gentoo.org> tcptraceroute-1.4.ebuild :
   Fixed Depend to libnet-1.0*. Closes #17017.
