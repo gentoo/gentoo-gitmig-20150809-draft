@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/aewm++-1.0.22.ebuild,v 1.1 2002/11/20 17:22:11 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/aewm++-1.0.22.ebuild,v 1.2 2002/11/20 17:48:15 mkennedy Exp $
 
 IUSE=""
 
@@ -21,7 +21,9 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} XROOT=usr/ install || die
 	dodoc ChangeLog INSTALL README LICENSE
+}
 
+pkg_postinst() {
 	einfo "Edit your ~/.xinitrc and add: exec aewm++"
 	einfo ""
 	einfo "The goodies are now in x11-wm/aem"
