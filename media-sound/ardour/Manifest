@@ -1,4 +1,4 @@
-MD5 d20e0aaa416ef820fd3c6767245288e8 files/digest-ardour-0.9_beta11-r1 72
-MD5 c30cfa18e107070848a14598da1d164e ChangeLog 3079
+MD5 48d169a4038af52090f61378762bc13e ardour-0.9_beta11-r1.ebuild 1213
+MD5 a4d87d324c5eea7dedfd45d5415bd785 ChangeLog 3191
 MD5 bf663ce8a92c2873735ff360edf99f5a metadata.xml 220
-MD5 ccb138f2fb3119e7d4c809fc0f90e9da ardour-0.9_beta11-r1.ebuild 1208
+MD5 d20e0aaa416ef820fd3c6767245288e8 files/digest-ardour-0.9_beta11-r1 72
