@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/envtest/envtest-1.2.3-r4.ebuild,v 1.5 2004/06/24 21:48:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/envtest/envtest-1.2.3-r4.ebuild,v 1.6 2004/07/14 01:47:44 agriffis Exp $
 
 DESCRIPTION="This ebuild display the environment for an ebuild. It's for portage-testing purposes only and will _always_ fail."
 HOMEPAGE="http://foo.bar.com/"
@@ -10,7 +10,6 @@ SLOT="0"
 KEYWORDS="~x86 sparc ppc alpha mips"
 IUSE=""
 DEPEND=">=sys-apps/portage-2.0.47-r10"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	set

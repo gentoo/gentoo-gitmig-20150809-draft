@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.0.ebuild,v 1.7 2004/07/13 18:53:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.0.ebuild,v 1.8 2004/07/14 01:44:32 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Patch system for Gentoo sources.  Retains MD5 codes"
 HOMEPAGE="http://deltup.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
