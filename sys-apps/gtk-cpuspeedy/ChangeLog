@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gtk-cpuspeedy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-cpuspeedy/ChangeLog,v 1.9 2004/05/11 07:47:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-cpuspeedy/ChangeLog,v 1.10 2004/05/12 00:13:24 dragonheart Exp $
+
+  12 May 2004; Daniel Black <dragonheart@gentoo.org> gtk-cpuspeedy-0.1.ebuild,
+  gtk-cpuspeedy-0.3.0.ebuild:
+  cpuspeedy stable now - forgot to commit last time. gtk-cpuspeed stable x86 now
 
   11 May 2004; Michael Sterrett <mr_bones_@gentoo.org>
   gtk-cpuspeedy-0.1.ebuild, gtk-cpuspeedy-0.3.0.ebuild:
