@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kkeyled
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkeyled/ChangeLog,v 1.4 2004/11/23 22:48:45 carlo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkeyled/ChangeLog,v 1.5 2005/04/01 21:29:05 centic Exp $
+
+*kkeyled-0.8.11 (01 Apr 2005)
+
+  01 Apr 2005; Dominik Stadler <centic@gentoo.org> +kkeyled-0.8.11.ebuild:
+  Add new Version 0.8.11, fixes Bug 86922
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kkeyled-0.8.9.ebuild:
   stable on x86
