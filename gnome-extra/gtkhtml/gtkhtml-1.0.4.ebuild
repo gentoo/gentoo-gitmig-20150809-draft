@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.4.ebuild,v 1.1 2002/08/19 00:32:28 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.4.ebuild,v 1.2 2002/09/15 10:43:22 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtkhtml"
@@ -21,7 +21,8 @@ RDEPEND=">=gnome-extra/gal-0.19
 	>=gnome-base/bonobo-1.0.18
 	gnome? ( <gnome-base/gconf-1.1.0 )
 	nls? ( sys-devel/gettext
-		>=dev-util/intltool-0.11 )"
+		>=dev-util/intltool-0.11 )
+	<gnome-base/libglade-0.99.0"
 
 DEPEND="${RDEPEND}"
 
