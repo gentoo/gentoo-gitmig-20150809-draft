@@ -1,18 +1,18 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/files/pbbuttonsd.rc5,v 1.1 2002/06/04 03:15:05 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/files/pbbuttonsd.rc5,v 1.2 2002/06/04 04:29:52 gerk Exp $
 
 
 start() {
         ebegin "Starting pbbuttonsd"
-        start-stop-daemon --start --quiet --pidfile /var/run/pbbuttons.pid
+        start-stop-daemon --start --quiet --exec /usr/bin/pbbuttonsd
         eend $?
 }
 
 stop() {
         ebegin "Stopping pbbuttonsd"
-        start-stop-daemon --stop --quiet --pidfile /var/run/pbbuttonsd.pid
+        start-stop-daemon --stop --quiet --exec /usr/bin/pbbuttonsd
         eend $?
 }
 
