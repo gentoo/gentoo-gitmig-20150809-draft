@@ -1,0 +1,11 @@
+If your version of Portage dies for some reason, try using the
+portage-rescue package as follows:
+
+# tar xjpUvf portage-rescue-1.8.8-r1.tbz2 -C /
+
+That should get Portage up and running again.
+
+Best Regards,
+
+Daniel Robbins
+13 Mar 2002
