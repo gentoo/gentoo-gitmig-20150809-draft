@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.7.10.ebuild,v 1.1 2000/08/14 19:44:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.7.10.ebuild,v 1.2 2000/08/16 04:38:03 drobbins Exp $
 
 P=abiword-0.7.10
 A="abi-0.7.10.tar.gz abidistfiles-0.7.10.tar.gz expat-0.7.10.tar.gz 
    unixfonts-0.7.10.tar.gz wv-0.7.10.tar.gz"
 S=${WORKDIR}/abi-0.7.10
-CATEGORY="gnome-office"
 DESCRIPTION="Framework for creating database applications"
 SRC_URI="http://download.abisource.com/releases/0.7.10/src/lf/abi-0.7.10.tar.gz
 	 http://download.abisource.com/releases/0.7.10/src/lf/abidistfiles-0.7.10.tar.gz 
