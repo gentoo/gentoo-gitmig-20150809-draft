@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.5_pre20040719.ebuild,v 1.1 2004/08/04 20:51:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.5_pre20040719.ebuild,v 1.2 2004/08/08 13:31:58 usata Exp $
 
 S="${WORKDIR}/${PN}"
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="nls"
 
-RDEPEND="!=app-i18n/scim-0.99.5
-	>=app-i18n/scim-0.99.2
+RDEPEND="=app-i18n/scim-0.99.4
 	>=x11-libs/qt-3.3.2
 	nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
