@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.62 2003/12/09 17:47:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.63 2003/12/23 15:27:02 caleb Exp $
+
+  23 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdegraphics-3.1.4.ebuild,
+  kdegraphics-3.2.0_beta2.ebuild:
+  Remove gpio/libgpio dependencies as it's not needed anymore.
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> kdegraphics-3.0.4.ebuild,
   kdegraphics-3.0.5b.ebuild, kdegraphics-3.1.2.ebuild,
