@@ -1,36 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.14 2003/02/13 17:46:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.15 2003/03/09 02:54:17 vapier Exp $
 
-IUSE="nls"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Enlightenment Window Manager"
 SRC_URI="ftp://ftp.enlightenment.org/enlightenment/enlightenment/${P}.tar.gz"
 HOMEPAGE="http://www.enlightenment.org/"
+
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
+IUSE="nls"
 
 DEPEND=">=media-libs/fnlib-0.5
-	>=media-sound/esound-0.2.19
+	esd? ( >=media-sound/esound-0.2.19 )
 	~media-libs/freetype-1.3.1
 	>=gnome-base/libghttp-1.0.9-r1"
-
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
-
 	local myconf
-	use nls || myconf="${myconf} --disable-nls"
-  
-	./configure \
-		--host=${CHOST} \
+	use esd \
+		&& soundconf="--enable-sound=yes" \
+		|| soundconf="--enable-sound=no"
+	econf \
+		`use_enable nls` \
 		--enable-fsstd \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		${myconf} || die
+		${soundconf} || die
 	emake || die
 }
 
@@ -40,20 +35,13 @@ src_install() {
 	mv scripts/${PN}.install.in scripts/${PN}.install.in.orig
 	sed 's:\(^EBIN=\).*:\1@prefix@/bin:' \
 		scripts/${PN}.install.in.orig > scripts/${PN}.install.in
-	
-	make prefix=${D}/usr \
-		localedir=${D}/usr/share/locale \
-		gnulocaledir=${D}/usr/share/locale \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die
-  
-	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING FAQ INSTALL NEWS README
+
+	make install DESTDIR=${D} || die
+
+	dodoc ABOUT-NLS AUTHORS ChangeLog FAQ INSTALL NEWS README
 	docinto sample-scripts
 	dodoc sample-scripts/*
-	
+
 	exeinto /etc/X11/Sessions
 	doexe $FILESDIR/enlightenment
-	
 }
-
