@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.5 2003/09/06 08:39:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.6 2003/09/20 10:17:25 genone Exp $
 
 #SNAPSHOT="20020825"
 TVISIONVER="2.0.1"
@@ -41,7 +41,8 @@ DEPEND="virtual/glibc
 	>=sys-libs/gpm-1.20.0
 	>=sys-libs/ncurses-5.2
 	aalib? ( media-libs/aalib )
-	X? ( virtual/x11 )"
+	X? ( virtual/x11 )
+	>=sys-apps/sed-4.0.7"
 
 src_unpack() {
 	unpack ${A}
@@ -53,16 +54,16 @@ src_unpack() {
 	# Update snapshot version
 	if [ -n "${SNAPSHOT}" ]
 	then
-		perl -pi -e "s|1998-11-29|${SNAPSHOT}|" ${S}/idemain.cc
+		sed -i -e "s|1998-11-29|${SNAPSHOT}|" ${S}/idemain.cc
 	else
-		perl -pi -e "s|1998-11-29|`date +%F`|" ${S}/idemain.cc
+		sed -i -e "s|1998-11-29|`date +%F`|" ${S}/idemain.cc
 	fi
 
 	cd ${S}
 	# Fix invalid "-O2" in CFLAGS and CXXFLAGS
 	for x in configure $(find . -name '*.mak') $(find . -name 'makefile.src')
 	do
-		[ -f "${x}" ] && perl -pi -e 's:-O2::g' ${x}
+		[ -f "${x}" ] && sed -i -e 's:-O2::g' ${x}
 	done
 
 	# Update setedit macro's
@@ -72,8 +73,13 @@ src_unpack() {
 	done
 
 	# Hack to uncomment a needed variable
-	perl -pi -e 's|//cmcUpdateCodePage|cmcUpdateCodePage|' \
+	sed -i -e 's|//cmcUpdateCodePage|cmcUpdateCodePage|' \
 		${WORKDIR}/${SETEDIT_S}/include/ced_coma.h
+
+	# fix codepage bug
+	has_version ">=sys-devel/gettext-0.12" && sed -i -e \
+		's:--add-location $(po_list_l):--add-location --from-code=iso-8859-1 $(po_list_l):' \
+		"${WORKDIR}/setedit/internac/gnumake.in"
 }
 
 src_compile() {
@@ -95,7 +101,7 @@ src_compile() {
 			--cxxflags='${DUMMYFLAGS}' || die
 
 		# Only build the static libs
-		perl -pi -e 's/all: static-lib dynamic-lib/all: static-lib/' Makefile
+		sed -i -e 's/all: static-lib dynamic-lib/all: static-lib/' Makefile
 
 		# -j breaks build
 		make || die
@@ -117,7 +123,7 @@ src_compile() {
 			`use_with aalib aa` || die
 
 		# Latest texinfo breaks docs, so disable for now ...
-		perl -pi -e 's/needed: internac doc-basic/needed: internac/' \
+		sed -i -e 's/needed: internac doc-basic/needed: internac/' \
 			Makefile
 
 		# -j breaks build
@@ -163,7 +169,7 @@ src_compile() {
 		if [ "${have_xfree}" = "Yes" ]
 		then
 			einfo "Compiling with XFree86 support..."
-			perl -pi -e 's|LDFLAGS= |LDFLAGS= -L/usr/X11R6/lib -lXmu|' \
+			sed -i -e 's|LDFLAGS= |LDFLAGS= -L/usr/X11R6/lib -lXmu|' \
 				${S}/config.env
 
 			touch ${WORKDIR}/.tvision-with-X11
