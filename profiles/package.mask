@@ -38,6 +38,7 @@ net-www/zope
 # my kde3pre ebuilds, you can unmask and emerge these as well. - danarmak
 >=net-misc/qtella-0.4.1
 >=net-misc/krfb-0.6
+>=net-misc/kio_fish-1.1
 
 # Mozilla installs correctly, but there is a java-config error with the plugin
 # This is more a java-config bug ....
