@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.51 2003/11/05 20:08:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.52 2003/11/25 18:07:37 lanius Exp $
+
+  25 Nov 2003; Heinrich Wendel <lanius@gentoo.org>  cups-1.1.20.ebuild:
+  version bump, removed libjpeg patch
 
   05 Nov 2003; Heinrich Wendel <lanius@gentoo.org> files/cupsd.rc6:
   bug #32768 (hotplug dep)
