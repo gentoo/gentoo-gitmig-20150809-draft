@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/sgi-fonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sgi-fonts/ChangeLog,v 1.1 2004/10/01 18:48:19 usata Exp $
+
+*sgi-fonts-1.0 (02 Oct 2004)
+
+  02 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +sgi-fonts-1.0.ebuild:
+  Initial import. Ebuild submitted by Tobias Klauser <tklauser@nuerscht.ch>,
+  closing bug #65785.
+
