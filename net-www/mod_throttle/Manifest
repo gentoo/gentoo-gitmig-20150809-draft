@@ -1,5 +1,15 @@
-MD5 94d00484d6cb6dd8bfd92b49695d1f50 mod_throttle-3.1.2-r1.ebuild 1275
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c4fdfee9f03bfb2a60a301a1032fe548 ChangeLog 932
+MD5 94d00484d6cb6dd8bfd92b49695d1f50 mod_throttle-3.1.2-r1.ebuild 1275
 MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
 MD5 758dec7efa2b34d6c0b42a8b911ae163 files/digest-mod_throttle-3.1.2-r1 63
-MD5 4a46e6ffa79445bf5ab527f42b81a89b files/mod_throttle.conf 525
+MD5 d4ffd33a5f0149ab2dfae75270f26d94 files/mod_throttle.conf 528
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+f2GmdTrptrqvGERAubHAJ4sqTRd5ezAEPvZDiib7UpPfCJZGACfemsb
+9qTqBW6eqqOuBvSRmvuU3Eo=
+=05CD
+-----END PGP SIGNATURE-----
