@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.3-r3.ebuild,v 1.2 2003/11/05 10:33:58 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.3-r3.ebuild,v 1.3 2003/11/07 20:50:49 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -154,7 +154,7 @@ pkg_postinst() {
 		apache2msg
 	else
 		einfo "1. Execute the command:"
-		einfo " \"ebuild /var/db/pkg/dev-php/${PF}/${PF}.ebuild config\""
+		einfo " \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
 		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP4\" to APACHE_OPTS"
 		einfo "That will include the php mime types in your configuration"
 		einfo "automagically and setup Apache to load php when it starts."
