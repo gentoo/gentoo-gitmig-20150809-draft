@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.3.ebuild,v 1.9 2003/09/05 23:58:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.3.ebuild,v 1.10 2003/10/03 18:43:16 leonardop Exp $
 
 IUSE="nls esd gnome"
 
@@ -15,7 +15,7 @@ DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
 	>=sys-libs/gdbm-1.8.0
 	=gnome-base/libglade-0.17*
 	>=media-libs/gdk-pixbuf-0.9.0
-	>=net-libs/gnet-1.1.0
+	<net-libs/gnet-2
 	gnome? ( =gnome-base/gnome-panel-1.4* )
 	esd? ( >=media-sound/esound-0.2.23 )"
 
