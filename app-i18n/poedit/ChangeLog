@@ -1,6 +1,9 @@
-# ChangeLog for dev-util/poedit
+# ChangeLog for app-i18n/poedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.6 2004/08/30 16:48:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.7 2004/09/05 05:56:45 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   30 Aug 2004; Sven Wegener <swegener@gentoo.org> poedit-1.2.5.ebuild:
   When moving patches from files/ to mirrors SRC_URI should be updated, as
