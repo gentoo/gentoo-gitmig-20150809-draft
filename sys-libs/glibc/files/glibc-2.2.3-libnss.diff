@@ -1,0 +1,51 @@
+RCS file: /cvs/glibc/libc/nis/nss-nis.h,v
+retrieving revision 1.2
+retrieving revision 1.3
+diff -u -r1.2 -r1.3
+--- nis/nss-nis.h       2001/04/26 13:43:15     1.2
++++ nis/nss-nis.h       2001/04/28 02:17:52     1.3
+@@ -31,9 +31,9 @@
+ static inline enum nss_status
+ yperr2nss (int errval)
+ {
+-  if ((unsigned int) errval > __yperr2nss_count)
++  if ((unsigned int) errval >= __yperr2nss_count)
+     return NSS_STATUS_UNAVAIL;
+-  return __yperr2nss_tab[errval];
++  return __yperr2nss_tab[(unsigned int) errval];
+ }
+
+ #endif /* nis/nss-nis.h */
+Index: nis/nss-nisplus.h
+===================================================================
+RCS file: /cvs/glibc/libc/nis/nss-nisplus.h,v
+retrieving revision 1.4
+retrieving revision 1.5
+diff -u -r1.4 -r1.5
+--- nis/nss-nisplus.h   2001/04/26 13:52:40     1.4
++++ nis/nss-nisplus.h   2001/04/28 02:19:00     1.5
+@@ -32,9 +32,9 @@
+ static inline enum nss_status
+ niserr2nss (int errval)
+ {
+-  if ((unsigned int) errval > __niserr2nss_count)
++  if ((unsigned int) errval >= __niserr2nss_count)
+     return NSS_STATUS_UNAVAIL;
+-  return __niserr2nss_tab[errval];
++  return __niserr2nss_tab[(unsigned int) errval];
+ }
+
+ #endif /* nis/nss-nisplus.h */
+Index: nis/Makefile
+===================================================================
+--- nis/Makefile~	Tue May  8 04:08:19 2001
++++ nis/Makefile	Tue May  8 04:13:17 2001
+@@ -55,7 +55,7 @@
+ 		  nis_clone_res
+ 
+ libnss_compat-routines	:= $(addprefix compat-,grp pwd spwd initgroups) \
+-			   nisplus-parser nss-nis
++			   nisplus-parser nss-nis nss-nisplus
+ libnss_compat-inhibit-o	= $(filter-out .os,$(object-suffixes))
+ 
+ libnss_nis-routines	:= $(addprefix nis-,$(databases)) nis-initgroups \
