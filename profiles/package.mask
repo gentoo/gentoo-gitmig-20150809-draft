@@ -54,10 +54,6 @@
 # needs to be assimilated with app-emacs/psgml
 app-text/psgml
 
-# <blizzy@gentoo.org> (10 Dec 2002)
-# masked for intensive testing
-=net-misc/rsync-2.5.6_pre20021105
-
 # <danarmak@gentoo.org> (08 Dec 2002)
 # kde 3.1 rc5: masked permanently
 =kde-base/arts-1.1.0_rc5
