@@ -5,7 +5,8 @@
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
-S=${WORKDIR}/${P}
+need-kde 2.2
+
 DESCRIPTION="KDE AIM Messenger"
 SRC_URI="http://ftp1.sourceforge.net/kinkatta/${P}.tar.gz"
 
