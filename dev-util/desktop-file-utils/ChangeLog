@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.14 2004/10/03 22:52:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.15 2004/10/04 22:59:58 liquidx Exp $
+
+*desktop-file-utils-0.9 (04 Oct 2004)
+
+  04 Oct 2004; Alastair Tse <liquidx@gentoo.org>
+  +desktop-file-utils-0.9.ebuild:
+  version bump (#66271)
 
   04 Oct 2004; Guy Martin <gmsoft@gentoo.org> desktop-file-utils-0.8.ebuild:
   Added ~hppa to KEYWORDS.
