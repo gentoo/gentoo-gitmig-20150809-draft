@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.2.2.ebuild,v 1.1 2003/09/10 18:53:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.2.2.ebuild,v 1.2 2004/01/25 11:11:06 vapier Exp $
 
 inherit games
 
@@ -12,8 +12,8 @@ SRC_URI="mirror://sourceforge/atlas/${MY_P}.tar.gz"
 
 INSDESTTREE="/usr/games/lib/FlightGear"
 LICENSE="GPL-2"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="x86 ~hppa"
 
 DEPEND=">=flightgear-0.8.0
 	>=libpng-1.2.5
