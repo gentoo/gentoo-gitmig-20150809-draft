@@ -21,7 +21,7 @@ DEPEND="virtual/x11
 	>=dev-libs/glib-2.0
 	=x11-libs/gtk+-2*
 	dev-libs/libxml2
-	app-games/gnuchess
+	games-board/gnuchess
 	sys-apps/texinfo
 	app-text/texi2html
 	python? ( dev-lang/python )
