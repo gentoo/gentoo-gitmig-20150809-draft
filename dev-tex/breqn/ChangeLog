@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/breqn
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/breqn/ChangeLog,v 1.1 2004/10/09 10:24:50 usata Exp $
+
+*breqn-0.94 (09 Oct 2004)
+
+  09 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +breqn-0.94.ebuild:
+  Initial import. Ebuild submitted by P.L.Hayes <paul@wolfbone.ath.cx>;
+  bug #60148.
+
