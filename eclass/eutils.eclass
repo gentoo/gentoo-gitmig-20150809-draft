@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.83 2004/02/27 20:39:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.84 2004/02/29 07:17:27 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -498,13 +498,8 @@ enewuser() {
 		die "Cannot call enewuser without a username"
 	fi
 
-	# setup a file for testing usernames/groups
-	local tmpfile="`mymktemp ${T}`"
-	chown ${euser} ${tmpfile} >& /dev/null
-	local realuser="`ls -l ${tmpfile} | awk '{print $3}'`"
-
-	# see if user already exists
-	if [ "${euser}" == "${realuser}" ]
+	# lets see if the username already exists
+	if [ "${euser}" == "`getent passwd \"${euser}\" | cut -d: -f1`" ]
 	then
 		return 0
 	fi
@@ -519,21 +514,24 @@ enewuser() {
 	then
 		if [ "${euid}" -gt 0 ]
 		then
-			chown ${euid} ${tmpfile} >& /dev/null
-			realuser="`ls -l ${tmpfile} | awk '{print $3}'`"
-			if [ "${realuser//[0-9]}" != "" ]
+			if [ ! -z "`getent passwd ${euid}`" ]
 			then
-				euid="uid is taken; using next available"
-			else
-				opts="${opts} -u ${euid}"
+				euid="next"
 			fi
 		else
 			eerror "Userid given but is not greater than 0 !"
 			die "${euid} is not a valid UID"
 		fi
 	else
-		euid="next available"
+		euid="next"
 	fi
+	if [ "${euid}" == "next" ]
+	then
+		for euid in `seq 101 999` ; do
+			[ -z "`getent passwd ${euid}`" ] && break
+		done
+	fi
+	opts="${opts} -u ${euid}"
 	einfo " - Userid: ${euid}"
 
 	# handle shell
@@ -627,13 +625,8 @@ enewgroup() {
 		die "Cannot call enewgroup without a group"
 	fi
 
-	# setup a file for testing groupname
-	local tmpfile="`mymktemp ${T}`"
-	chgrp ${egroup} ${tmpfile} >& /dev/null
-	local realgroup="`ls -l ${tmpfile} | awk '{print $4}'`"
-
 	# see if group already exists
-	if [ "${egroup}" == "${realgroup}" ]
+	if [ "${egroup}" == "`getent group \"${egroup}\" | cut -d: -f1`" ]
 	then
 		return 0
 	fi
@@ -648,13 +641,11 @@ enewgroup() {
 	then
 		if [ "${egid}" -gt 0 ]
 		then
-			chgrp ${egid} ${tmpfile} >& /dev/null
-			realuser="`ls -l ${tmpfile} | awk '{print $3}'`"
-			if [ "${realuser//[0-9]}" != "" ]
+			if [ -z "`getent group ${egid}`" ]
 			then
-				euid="gid is taken; using next available"
-			else
 				opts="${opts} -g ${egid}"
+			else
+				egid="next available; requested gid taken"
 			fi
 		else
 			eerror "Groupid given but is not greater than 0 !"
