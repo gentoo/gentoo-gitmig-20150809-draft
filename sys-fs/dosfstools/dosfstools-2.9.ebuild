@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-2.9.ebuild,v 1.1 2003/09/17 02:43:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-2.9.ebuild,v 1.2 2003/12/01 01:24:25 solar Exp $
 
 inherit eutils
 
@@ -19,6 +19,11 @@ src_unpack() {
 	epatch ${FILESDIR}/errno.patch
 	sed -i "s:PREFIX\ \=:PREFIX\ \=\ \/usr:" Makefile
 	sed	-i "s:\/usr\/man:\/share\/man:" Makefile
+
+	# Bug: 34785 hardened-gcc transparently adds -fPIC so we must filter 
+	# that away because this package cant cope. (Nov 30 2003 -solar)
+	has_version 'sys-devel/hardened-gcc' && \
+		sed -i -e "s:^DEBUGFLAGS.*:DEBUGFLAGS=-yet_exec:g" Makefile
 }
 
 src_compile() {
