@@ -11,7 +11,7 @@ DESCRIPTION="Perl Mail::SpamAssassin - A program to filter spam"
 SRC_URI="http://www.spamassassin.org/released/${P}.tar.gz"
 HOMEPAGE="http://www.spamassassin.org"
 
-DEPEND="dev-perl/Net-DNS"
+DEPEND="dev-perl/Net-DNS dev-perl/Time-HiRes"
 LICENSE="GPL-2 | Artistic"
 
 mydoc="License TODO"
