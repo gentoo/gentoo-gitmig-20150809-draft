@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap/files/0.4.2a-snipsnap,v 1.1 2003/04/27 19:08:18 tberman Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting snipsnap"
+	start-stop-daemon -o --quiet --start --startas /opt/snipsnap/run.sh \
+	    --pidfile /var/run/snipsnap.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping snipsnap"
+	start-stop-daemon -o --quiet --stop --pidfile /var/run/snipsnap.pid
+	rm /var/run/snipsnap.pid
+	eend $?
+}
+
