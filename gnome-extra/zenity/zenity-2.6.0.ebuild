@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.5.91.ebuild,v 1.1 2004/03/21 16:55:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.6.0.ebuild,v 1.1 2004/03/31 22:07:50 foser Exp $
 
 inherit gnome2
 
@@ -14,7 +14,6 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.3.1
 	>=gnome-base/libglade-2
-	>=gnome-base/gconf-2
 	>=gnome-base/libgnomecanvas-2
 	dev-libs/popt"
 
@@ -24,3 +23,14 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README THANKS TODO"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	# Don't set the UTF-8 codeset before parsing command line arguments.
+	# Closes bug #45204.
+	epatch ${FILESDIR}/${PN}-1.8-utf8_fix.patch
+
+}
+
