@@ -149,3 +149,4 @@ move kde-base/konqueror-smbmounter kde-base/konq-plugins
 move kde-base/konqueror-uachanger kde-base/konq-plugins
 move kde-base/konqueror-validators kde-base/konq-plugins
 move kde-base/konqueror-webarchiver kde-base/konq-plugins
+move sys-libs/device-mapper sys-fs/device-mapper
