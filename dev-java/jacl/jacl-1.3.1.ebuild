@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.1.ebuild,v 1.3 2004/06/24 22:29:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.1.ebuild,v 1.4 2004/08/24 04:20:57 zx Exp $
 
 inherit java-pkg
 
@@ -9,15 +9,14 @@ HOMEPAGE="http://tcljava.sourceforge.net"
 SRC_URI="mirror://sourceforge/tcljava/${P//-}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 IUSE="jikes doc"
 
 DEPEND=">=virtual/jdk-1.1
-		jikes? ( >=dev-java/jikes-1.19 )"
-
+	jikes? ( >=dev-java/jikes-1.19 )"
 RDEPEND=">=dev-lang/tcl-8.4.5
-		>=virtual/jdk-1.1"
+	>=virtual/jdk-1.1"
 
 S=${WORKDIR}/${P//-}
 
