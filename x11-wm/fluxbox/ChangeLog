@@ -1,6 +1,25 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.35 2002/10/05 08:54:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.36 2002/10/26 05:05:41 mkeadle Exp $
+
+*fluxbox-0.1.12-r2 (26 Oct 2002)
+
+  26 Oct 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.12-r2.ebuild
+  files/digest-fluxbox-0.1.12-r2 :
+
+  Added the remember patch. This patch adds an extra submenu to the WindowMenu
+  that allows you store each windows workspace, deminsions, position, shaded
+  state, tab state, decoration state, and sticky state and also to save the
+  settings on application close. It also enabled the use of a Startup submenu
+  in your applications menu. Any items in this submenu will be automatically
+  started when you start fluxbox.
+
+  There are scant warnings about crashes with this patch, but neither I nor
+  anyone I have spoken with have experienced any issues. As allways, report
+  any problems to http://bugs.gentoo.org/.
+
+  Fluxbox with the remember patch will not install with "-nls" in your USE.
+			
 
 *fluxbox-0.1.12-r1 (17 Sep 2002)
 
