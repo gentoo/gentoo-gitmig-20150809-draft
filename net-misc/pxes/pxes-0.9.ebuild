@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.9.ebuild,v 1.2 2004/08/16 17:39:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.9.ebuild,v 1.3 2004/08/24 19:08:43 wolf31o2 Exp $
 
 IUSE="cdr"
 MY_PV=${PV}-1
@@ -42,10 +42,14 @@ src_install() {
 	dodir ${dir}
 	cd ${Ddir}
 	cp -r ${S}/stock ${Ddir} || die "Copying files"
-	cp -a ${S}/tftpboot ${D}
+	cp -a ${S}/tftpboot ${D} || die "Copying tftpboot"
 	dodoc Documentation/ChangeLog
 	dohtml -r Documentation/html/*
 	cd ${WORKDIR}/pxesconfig-${PV}
 	perl-module_src_install || die
-	dosym /usr/bin/cpio /bin/cpio
+	# Cleanup from improper install
+	cp -r ${D}/${D}/usr ${D}
+	rm -rf ${D}/var
+	dodir bin
+	dosym /usr/bin/cpio /bin/cpio || die
 }
