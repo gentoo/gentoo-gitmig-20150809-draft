@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wordpress/wordpress-1.0.2.ebuild,v 1.1 2004/05/01 12:29:21 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wordpress/wordpress-1.0.2.ebuild,v 1.2 2004/05/01 17:33:48 agriffis Exp $
 # Mostly ripped off from the squirrelmail ebuild!
 # By Peter Westwood <peter.westwood@ftwr.co.uk>
 
-inherit webapp
+inherit webapp eutils
 
 #Wordpress releases have a release name tagged on the end of the version on the tar.gz files
 MY_EXT="blakey"
