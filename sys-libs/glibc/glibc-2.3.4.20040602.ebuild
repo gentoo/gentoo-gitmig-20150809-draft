@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.3 2004/06/03 23:40:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.4 2004/06/04 02:12:21 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck"
 
@@ -38,7 +38,7 @@ export CXXFLAGS="${CFLAGS}"
 export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
-SRC_URI="http://dev.gentoo.org/~lv/glibc-2.3.4-20040602.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~lv/${P}.tar.bz2"
 HOMEPAGE="http://sources.redhat.com/glibc/"
 
 #KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
@@ -56,7 +56,7 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	nptl? ( >=sys-devel/gcc-3.3.1-r1 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	virtual/os-headers
-	nptl? ( =sys-kernel/linux-headers-2.6.6 )
+	nptl? ( =sys-kernel/linux-headers-2.6* )
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/os-headers
 	sys-apps/baselayout
@@ -143,9 +143,9 @@ install_locales() {
 }
 
 setup_locales() {
-	if use nls
+	if (use nls || use makecheck)
 	then
-		einfo "nls in USE, installing -ALL- locales..."
+		einfo "nls or makecheck in USE, installing -ALL- locales..."
 		install_locales
 	fi
 
@@ -384,10 +384,9 @@ src_install() {
 	cd ${WORKDIR}/build
 
 	einfo "Installing GLIBC..."
-	# use -i till i can fix the info pages
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} \
-		install -i
+		install || die
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]
@@ -415,9 +414,6 @@ EOF
 	then
 		cd ${WORKDIR}/build
 
-		# we make the CVS snapshot info pages with -i, as they're occasionally
-		# broken and it really has zero functional effect on the glibc
-		# install other than a lack of documentation :)
 		einfo "Installing Info pages..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
