@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.2 2005/03/31 00:30:02 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.3 2005/03/31 00:47:05 pythonhead Exp $
 #
 # Author: Rob Cakebread <pythonhead@gentoo.org>
 # Current Maintainer: Rob Cakebread <pythonhead@gentoo.org>
@@ -45,10 +45,8 @@ gems_src_install() {
 
 	if [ -z "${MY_P}" ]; then
 		GEM_SRC=${DISTDIR}/${P}
-		einfo ${GEM_SRC}
 	else
 		GEM_SRC=${DISTDIR}/${MY_P}
-		einfo ${GEM_SRC}
 	fi
 
 	dodir ${GEMSDIR}
