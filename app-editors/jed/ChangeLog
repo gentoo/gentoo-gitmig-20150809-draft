@@ -1,8 +1,12 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.5 2002/12/15 05:00:24 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.6 2003/01/06 11:20:22 seemant Exp $
 
 *jed-0.99.16 (14 Dec 2002)
+
+  06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  PROVIDE virtual/editor
 
   14 Dec 2002; Matthew Kennedy <mkennedy@gentoo.org> jed-0.99.16.ebuild,
   ChangeLog, files/digest-jed-0.99.16 :

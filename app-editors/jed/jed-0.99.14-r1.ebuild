@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.14-r1.ebuild,v 1.8 2002/12/09 04:17:39 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.14-r1.ebuild,v 1.9 2003/01/06 11:20:22 seemant Exp $
 
 IUSE="X gpm"
 
@@ -10,11 +10,11 @@ DESCRIPTION="Console S-Lang-based editor"
 SRC_URI="ftp://space.mit.edu/pub/davis/jed/v0.99/${P0}.tar.bz2"
 HOMEPAGE="http://space.mit.edu/~davis/jed/"
 
-DEPEND="virtual/glibc
-	>=sys-libs/slang-1.3.11
+DEPEND=">=sys-libs/slang-1.3.11
 	X? ( virtual/x11 )
 	gpm? ( sys-libs/gpm )"
-RDEPEND=""
+
+PROVIDE="virtual/editor"
 
 SLOT="0"
 KEYWORDS="x86 ppc sparc "
