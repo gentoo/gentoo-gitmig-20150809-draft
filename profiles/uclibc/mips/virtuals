@@ -1,0 +1,8 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/mips/virtuals,v 1.1 2004/10/23 00:13:57 vapier Exp $
+
+virtual/bootloader			sys-boot/dvhtool
+virtual/kernel				sys-kernel/mips-headers
+virtual/linux-sources		sys-kernel/mips-sources
+virtual/os-headers			sys-kernel/mips-headers

@@ -1,4 +1,7 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/virtuals,v 1.11 2004/10/23 00:13:57 vapier Exp $
+
 virtual/libc			dev-libs/uclibc
-virtual/logger			app-admin/sysklogd
 virtual/os-headers		sys-kernel/linux-headers
 virtual/linux-sources	sys-kernel/vanilla-sources

@@ -1,1 +1,8 @@
-virtual/os-headers		sys-kernel/linux26-headers
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/arm/virtuals,v 1.2 2004/10/23 00:13:57 vapier Exp $
+
+virtual/bootloader			sys-boot/nettrom
+virtual/dev-manager			sys-fs/udev
+virtual/kernel				sys-kernel/development-sources
+virtual/os-headers			sys-kernel/linux26-headers
