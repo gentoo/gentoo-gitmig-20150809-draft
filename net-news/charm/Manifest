@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 4d94d65461ccd66e8d7f41303cd56abf ChangeLog 1019
+MD5 993e65d44dd4f7baeba6b2e70477a889 charm-1.3.0.ebuild 555
+MD5 85b20efa0441ee9dc8a0acb570c94606 charm-1.4.0.ebuild 538
+MD5 2bfe14f74dd92c85f83320ef851284d6 charm-1.5.0.ebuild 539
 MD5 eccd3e44b1e8fc954692d4faf329cf38 metadata.xml 218
-MD5 e2eb0d1b746cd379c1f9419cbd202b82 charm-1.5.0.ebuild 537
-MD5 add09c016f11712ee7e27fe0a340c58a charm-1.4.0.ebuild 536
-MD5 d329209de5941bfff414dfdc786830a1 ChangeLog 838
-MD5 9073508f0e0733d4946a493c451fcf21 charm-1.3.0.ebuild 553
-MD5 2c545d5cea5a8550e79b5ca9c2566167 files/digest-charm-1.4.0 62
 MD5 721b93b101edec629af244dbec63a4a1 files/digest-charm-1.3.0 62
+MD5 2c545d5cea5a8550e79b5ca9c2566167 files/digest-charm-1.4.0 62
 MD5 6e5de7ff61779a0103bfd45515eff0dc files/digest-charm-1.5.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD4DBQFCDRNRugEuf3OQ0akRApJdAJY9J74supiGcrGAgnV1iPK5iXYXAJ43+CbZ
-d8udk0VGexG97Oe/fZ3cjA==
-=bocI
------END PGP SIGNATURE-----
