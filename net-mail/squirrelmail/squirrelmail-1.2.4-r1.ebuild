@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.4.ebuild,v 1.1 2002/01/28 23:18:42 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.4-r1.ebuild,v 1.1 2002/02/23 15:40:24 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 HTTPD_ROOT="/usr/local/httpd/htdocs"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.squirrelmail.org"
 DEPEND="dev-lang/php
         net-www/apache"
 
-RDEPEND="virtual/imap"
+RDEPEND="virtual/imapd"
 
 src_compile() {
 	#nothing to compile
