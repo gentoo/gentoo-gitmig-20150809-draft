@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Generator
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.3 2004/04/10 21:34:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.4 2004/04/15 03:01:09 randy Exp $
+
+  14 Apr 2004; Michael McCabe <randy@gentoo.org> XML-Generator-0.99.ebuild:
+  adding s390 keywords
 
   10 Apr 2004; Travis Tilley <lv@gentoo.org> XML-Generator-0.99.ebuild:
   added ~amd64 keyword
