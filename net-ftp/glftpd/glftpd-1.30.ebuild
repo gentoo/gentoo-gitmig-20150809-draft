@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.30.ebuild,v 1.4 2003/07/23 13:38:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.30.ebuild,v 1.5 2003/07/25 03:56:27 vapier Exp $
 
 MY_P=${P/-/-LNX_}
 DESCRIPTION="a HIGHLY configurable ftp server"
@@ -13,6 +13,7 @@ KEYWORDS="-* x86"
 
 DEPEND=""
 RDEPEND="sys-apps/xinetd"
+PDEPEND="net-ftp/glftpd-tls"
 
 S=${WORKDIR}/${MY_P}
 GLROOT=${D}/opt/glftpd/
