@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.7 2002/04/13 00:14:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.8 2002/04/17 05:04:03 seemant Exp $
+
+*qt-2.3.2-r1 and qt-3.0.3-r1 (16 Apr 2002)
+
+  16 Apr 2002; Seemant Kulleen <seemant@gentoo.org> qt-2.3.2-r1.ebuild
+  qt-3.0.3-r1.ebuild :
+
+  Added optional gif dependency, since we now have a USE flag (in make.defaults)
+  for it.
 
 *qt-2.3.2-r1 and qt-3.0.3-r1 (12 Apr 2002)
 
