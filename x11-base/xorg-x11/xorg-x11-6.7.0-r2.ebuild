@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.29 2004/10/14 14:48:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.30 2004/10/21 01:09:22 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -12,7 +12,7 @@
 #   TARGET: patchset 1.3
 #		Nothing yet =)
 
-inherit eutils flag-o-matic gcc xfree
+inherit eutils flag-o-matic toolchain-funcs x11
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -64,7 +64,7 @@ SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	bigelow-holmes-urw-gmbh-luxi christopher-g-demetriou national-semiconductor
 	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
-	MIT SGI-B BSD FTL | GPL-2"
+	MIT SGI-B BSD || ( FTL GPL-2 )"
 SLOT="0"
 KEYWORDS="arm alpha amd64 hppa ia64 mips ppc ppc64 ~sparc x86"
 
@@ -257,7 +257,7 @@ host_def_setup() {
 			echo "#define HasLinuxInput YES" >> config/cf/host.def
 		fi
 
-		echo "#define CcCmd $(gcc-getCC)" >> config/cf/host.def
+		echo "#define CcCmd $(tc-getCC)" >> config/cf/host.def
 		echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> config/cf/host.def
 		echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS} GccAliasingArgs" >> config/cf/host.def
 

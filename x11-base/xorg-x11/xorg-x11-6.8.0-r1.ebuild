@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.29 2004/10/19 06:13:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.30 2004/10/21 01:09:22 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -15,7 +15,7 @@
 #   TARGET: patchset 0.2
 #		Nothing yet =)
 
-inherit eutils flag-o-matic gcc xfree
+inherit eutils flag-o-matic toolchain-funcs x11
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -71,7 +71,7 @@ SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	bigelow-holmes-urw-gmbh-luxi christopher-g-demetriou national-semiconductor
 	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
-	MIT SGI-B BSD FTL GPL-2"
+	MIT SGI-B BSD || ( FTL GPL-2 )"
 SLOT="0"
 KEYWORDS="arm ~alpha amd64 hppa ~ia64 mips ~ppc sparc x86"
 
@@ -308,7 +308,7 @@ host_def_setup() {
 			echo "#define HasLinuxInput YES" >> ${HOSTCONF}
 		fi
 
-		echo "#define CcCmd $(gcc-getCC)" >> ${HOSTCONF}
+		echo "#define CcCmd $(tc-getCC)" >> ${HOSTCONF}
 		echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> ${HOSTCONF}
 		echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS} GccAliasingArgs" >> ${HOSTCONF}
 

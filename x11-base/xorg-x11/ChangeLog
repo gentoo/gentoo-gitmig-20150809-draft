@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.170 2004/10/20 02:43:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.171 2004/10/21 01:09:21 spyderous Exp $
+
+  20 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r2.ebuild, xorg-x11-6.8.0-r1.ebuild,
+  xorg-x11-6.8.0-r2.ebuild:
+  Update inherit to toolchain-funcs instead of gcc and x11 instead of xfree.
+  Update license syntax so I can commit.
 
   19 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
