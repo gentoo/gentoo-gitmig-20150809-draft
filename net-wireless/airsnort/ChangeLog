@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/airsnort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.6 2003/02/12 08:44:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.7 2003/03/26 01:18:45 latexer Exp $
+
+  25 Mar 2003; Peter Johanson <latexer@gentoo.org> airsnort-0.2.1b.ebuild :
+  Marked stable for x86
 
 *airsnort-0.2.1b (24 Jan 2003)
 
