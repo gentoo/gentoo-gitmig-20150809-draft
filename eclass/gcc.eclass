@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.3 2002/09/11 00:40:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.4 2002/09/11 00:42:55 azarah Exp $
 # This eclass contains (or should) functions to get common info about gcc
 ECLASS=gcc
 INHERITED="$INHERITED $ECLASS"
@@ -80,21 +80,21 @@ gcc-libpath() {
 	echo "/usr/lib/gcc-lib/$($(gcc-getCC) -dumpmachine)/$(gcc-fullversion)"
 }
 
-gcc-libstdc-version() {
+gcc-libstdcxx-version() {
 
 	if [ "$(gcc-major-version)" -ge 3 ]
 	then
-		local libstdc="$(ls $(gcc-libpath)/libstdc++.so.?.?.?)"
+		local libstdcxx="$(ls $(gcc-libpath)/libstdc++.so.?.?.?)"
 
-		libstdc="${libstdc##*/}"
-		echo "${libstdc/libstdc++.so.}"
+		libstdcxx="${libstdcxx##*/}"
+		echo "${libstdcxx/libstdc++.so.}"
 	else
 		echo
 	fi
 }
 
-gcc-libstdc-major-version() {
+gcc-libstdcxx-major-version() {
 
-	echo "$(echo $(gcc-libstdc-version) | cut -f1 -d.)"
+	echo "$(echo $(gcc-libstdcxx-version) | cut -f1 -d.)"
 }
 
