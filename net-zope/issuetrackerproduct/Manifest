@@ -1,4 +1,4 @@
-MD5 3503c210dafbba750bf2a6cd342981ee files/digest-issuetrackerproduct-0.5.0b 151
-MD5 9c6af8a57bc8792c9fe96923f656a4da issuetrackerproduct-0.5.0b.ebuild 641
-MD5 4b8df23d2d95a6537468ca96cccf5bec ChangeLog 500
+MD5 18c7a83c353a9ebf9bfc9d175c37c302 ChangeLog 632
+MD5 fbf2d57a21b137769ffba98588c7832a issuetrackerproduct-0.5.0b.ebuild 643
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 3503c210dafbba750bf2a6cd342981ee files/digest-issuetrackerproduct-0.5.0b 151

@@ -1,4 +1,4 @@
-MD5 bf5d5ce9b92cc8daa4c1786642d40c59 files/digest-localfs-1.0.0 61
-MD5 94b40b930b394e2cc0f00244a62ebc37 localfs-1.0.0.ebuild 545
-MD5 596295d09cfb74d730371881c82b36bb ChangeLog 704
+MD5 52d773d73c8a2a63a669e5ec8accdc4a ChangeLog 821
+MD5 3a8da068a9ecb3d94003ef001f050e57 localfs-1.0.0.ebuild 547
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 bf5d5ce9b92cc8daa4c1786642d40c59 files/digest-localfs-1.0.0 61
