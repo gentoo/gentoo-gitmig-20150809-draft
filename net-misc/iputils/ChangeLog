@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.1 2002/07/16 18:01:45 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.2 2002/08/16 19:53:04 satai Exp $
+
+*iputils-020124-r1 (16 Aug 2002)
+  16 Aug 2002; Matthew Turk <satai@gentoo.org> ChangeLog:
+
+  Updated by enabling documentation; recent changes in DocBook ebuilds have
+  fixed the outstanding issues.
 
 *iputils-020124 (16 Jul 2002)
 
