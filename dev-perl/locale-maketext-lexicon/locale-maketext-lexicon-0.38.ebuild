@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/locale-maketext-lexicon-0.38.ebuild,v 1.2 2004/06/25 00:43:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/locale-maketext-lexicon-0.38.ebuild,v 1.3 2004/07/14 18:52:12 agriffis Exp $
 
 inherit perl-module
 
@@ -14,6 +14,7 @@ SRC_URI="http://www.cpan.org/authors/id/A/AU/AUTRIJUS/${MY_P}.tar.gz"
 LICENSE="Artistic | GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+IUSE=""
 
 DEPEND="dev-perl/locale-maketext
 	dev-perl/regexp-common"
