@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.45 2003/10/27 09:21:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.46 2003/11/01 20:15:46 liquidx Exp $
+
+  01 Nov 2003; Alastair Tse <liquidx@gentoo.org> python-2.2.3-r5.ebuild,
+  python-2.3.2-r1.ebuild, files/python-2.2.3-disable_modules_and_ssl.patch,
+  files/python-2.3.2-disable_modules_and_ssl.patch:
+  reordered deps to allow minimal python build for USE='build'. makes python
+  respect useflags explicitly even if the dependency exists. added support to
+  disable SSL. tweaked python_mod_optimize.
 
 *python-2.2.3-r5 (27 Oct 2003)
 
