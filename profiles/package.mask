@@ -22,10 +22,13 @@
 ##   End example
 ##
 
+# <woodchip@gentoo.org> (04 Aug 2002)
+# add new package submission #1315
+=dev-db/metakit
+
 # Michael Cummings <mcummings@gentoo.org> (04 Aug 2002)
 # Found hardcoded refs for i686 in ebuild - please test
 =sys-devel/perl-5.6.1-r6
-
 
 # Seemant Kulleen <seemant@gentoo.org> (04 Aug 2002)
 # Maksed for testing
