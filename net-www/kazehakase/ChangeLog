@@ -1,6 +1,17 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.7 2004/06/06 17:21:27 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.8 2004/06/14 16:52:48 brad Exp $
+
+*kazehakase-0.1.6 (14 Jun 2004)
+
+  14 Jun 2004; Brad Laue <brad@gentoo.org> kazehakase-0.1.4.ebuild,
+  +kazehakase-0.1.6.ebuild:
+  0.1.4 stable on x86, 0.1.6 coming shortly.
+
+*kazehakase-0.1.6 (14 Jun 2004)
+
+  14 Jun 2004; Brad Laue <brad@gentoo.org> +kazehakase-0.1.6.ebuild:
+  Version bump.
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> kazehakase-0.1.4.ebuild:
   Marked stable on amd64.
