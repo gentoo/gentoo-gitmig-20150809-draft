@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ppc-sources-dev-2.4.19.ebuild,v 1.2 2002/08/17 21:01:55 trance Exp $ 
+# $Id: ppc-sources-dev-2.4.19.ebuild,v 1.3 2002/08/17 21:03:28 trance Exp $ 
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -25,7 +25,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc"
+KEYWORDS="-ppc -x86 -sparc -sparc64"
 
 src_unpack() {
 	cd ${WORKDIR}
