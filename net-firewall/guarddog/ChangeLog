@@ -1,7 +1,7 @@
-# ChangeLog for net-misc/guarddog
+# ChangeLog for net-firewall/guarddog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.1 2003/05/01 11:11:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.2 2003/06/20 04:18:04 vapier Exp $
 
 *guarddog-2.0.0 (01 May 2003)
 
