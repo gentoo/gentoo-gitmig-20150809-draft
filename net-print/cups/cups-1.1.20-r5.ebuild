@@ -1,19 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.21-r2.ebuild,v 1.1 2004/10/21 14:02:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20-r5.ebuild,v 1.1 2004/11/01 14:37:18 lanius Exp $
 
 inherit eutils flag-o-matic
 
-MY_P=${P/_/}
-
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org/"
-SRC_URI="ftp://ftp2.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2 ftp://ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2 ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
+SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
-IUSE="ssl slp pam samba"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+IUSE="ssl slp pam"
 
 DEP="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
@@ -25,18 +23,19 @@ DEP="virtual/libc
 DEPEND="${DEP}
 	>=sys-devel/autoconf-2.58"
 RDEPEND="${DEP}
-	!virtual/lpr
-	samba? ( net-fs/samba )"
+	!virtual/lpr"
 PROVIDE="virtual/lpr"
-
-S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/disable-strip.patch
+	epatch ${FILESDIR}/${P}-str633.patch
+	epatch ${FILESDIR}/${P}-zero-len-udp-dos.patch
 	epatch ${FILESDIR}/str920.patch
 	( cd pdftops; epatch ${FILESDIR}/${P}-xpdf-CESA-2004-007.patch.bz2 )
+	( cd pdftops; epatch ${FILESDIR}/xpdf-goo-sizet.patch )
+	( cd pdftops; epatch ${FILESDIR}/${P}-xpdf2-underflow.patch )
 	WANT_AUTOCONF=2.5 autoconf || die
 }
 
@@ -108,10 +107,6 @@ src_install() {
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/cups.xinetd cups-lpd
 
 	#insinto /etc/cups; newins ${FILESDIR}/cupsd.conf-1.1.18 cupsd.conf
-
-	# allow raw printing
-	sed -i -e "s:#application/octet-stream:application/octet-stream" ${D}/etc/cups/mime.types
-	sed -i -e "s:#application/octet-stream:application/octet-stream" ${D}/etc/cups/mime.conv
 }
 
 pkg_postinst() {

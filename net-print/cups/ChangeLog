@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.93 2004/10/21 14:02:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.94 2004/11/01 14:37:18 lanius Exp $
+
+*cups-1.1.22 (01 Nov 2004)
+
+  01 Nov 2004; <heino@gentoo.org> +files/xpdf-goo-sizet.patch,
+  +cups-1.1.20-r5.ebuild, -cups-1.1.21-r2.ebuild, +cups-1.1.22.ebuild:
+  fix secrutiy issue in pdftops, bug #69662
 
 *cups-1.1.21-r2 (21 Oct 2004)
 
