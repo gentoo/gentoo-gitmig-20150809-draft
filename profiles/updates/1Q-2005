@@ -3,3 +3,4 @@ move x11-base/xfree x11-base/xorg-x11
 move net-dialup/hsflinmodem net-dialup/hsfmodem
 move dev-libs/memcached-api-perl dev-perl/Cache-Memcached
 move sci-calculators/qalculate-gtk sci-calculators/qalculate
+move games-emulation/blight-uhleaudio games-emulation/mupen-blight-uhleaudio
