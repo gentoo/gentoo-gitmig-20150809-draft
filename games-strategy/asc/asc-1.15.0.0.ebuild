@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.15.0.0.ebuild,v 1.5 2004/09/22 05:16:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.15.0.0.ebuild,v 1.6 2004/09/24 07:33:48 mr_bones_ Exp $
 
 inherit games
 
@@ -22,8 +22,7 @@ RDEPEND="virtual/libc
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	>=media-libs/sdlmm-0.1.8
-	=dev-libs/libsigc++-1.2*
-	>=media-libs/paragui-1.0.1"
+	=dev-libs/libsigc++-1.2*"
 DEPEND="${RDEPEND}
 	app-arch/zip"
 
