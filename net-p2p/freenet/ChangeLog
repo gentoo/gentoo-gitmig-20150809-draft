@@ -1,6 +1,20 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.16 2003/07/22 16:12:22 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.17 2003/07/23 19:39:53 lostlogic Exp $
+
+*freenet-0.5.2.1-r2 (23 Jul 2003)
+
+  23 Jul 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.0.5.ebuild,
+  freenet-0.5.0.6.ebuild, freenet-0.5.1.ebuild, freenet-0.5.2.1-r1.ebuild,
+  freenet-0.5.2.1.ebuild, freenet-0.5.2_rc3.ebuild, freenet-0.5.ebuild, 
+  files/freenet, files/rc.freenet:
+  Cleanout old stuff
+
+*freenet-0.5.2.1-r2 (23 Jul 2003)
+
+  23 Jul 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.2.1-r2.ebuild,
+  files/rc.freenet:
+  Minor bump so that nptl doesn't break us
 
   22 Jul 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.2.1-r1.ebuild:
   Grr, annoying, another fix
