@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tinycdb
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.2 2004/09/03 15:28:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.3 2004/09/16 15:34:15 hattya Exp $
+
+  17 Sep 2004; Akinori Hattori <hattya@gentoo.org> tinycdb-0.74.ebuild:
+  add ~ia64.
 
   03 Sep 2004; David Holm <dholm@gentoo.org> tinycdb-0.74.ebuild:
   Added to ~ppc.

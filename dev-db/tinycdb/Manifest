@@ -1,5 +1,5 @@
-MD5 10ff8a2833131b191e52c0490d2fc3bd ChangeLog 453
+MD5 46d38794398aec59e4510b9cd7336fb6 ChangeLog 540
 MD5 c9f54ac0eadf3d14a44e5dc692f0df73 metadata.xml 230
-MD5 c0a3ba05df7c54004ff097de18c3d20c tinycdb-0.74.ebuild 762
+MD5 9a6b8761598e75e9689a5f216ee6a96b tinycdb-0.74.ebuild 769
 MD5 5135db2bb58eb563213ef9273329cd9f files/digest-tinycdb-0.74 63
 MD5 244663b6896ea4d20caec08ea5e0cba3 files/tinycdb-libbase.diff 385
