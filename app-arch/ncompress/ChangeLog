@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ncompress
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.5 2003/01/18 19:15:24 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.6 2003/02/09 17:22:03 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> ncompress-4.2.4.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
