@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r1.ebuild,v 1.1 2004/07/29 23:22:34 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r1.ebuild,v 1.2 2004/08/03 05:25:36 rac Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -107,6 +107,13 @@ src_unpack() {
 	# uclibc support
 	epatch ${FILESDIR}/perl-5.8.2-uclibc.patch
 
+	# this one only affects sparc64, as best weeve and rac can tell,
+	# but seems sane for all linux.  we don't have to worry about
+	# drifting into obscure SysV non-posix semantics, and the current
+	# code in IO.xs that checks for this sort of thing dies in LDAP on
+	# sparc64.
+
+	epatch ${FILESDIR}/${P}-nonblock.patch
 }
 
 src_configure() {
