@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.10 2003/10/29 11:52:56 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.11 2003/12/09 10:08:11 mksoft Exp $
 
 *firebird-1.0.3 (15 Jun 2003)
+  08 Dec 2003; Meir Kriheli <mksoft@gentoo.org> firebird-1.0.3.ebuild:
+  Added strip-flags -funroll-loops. Closes bug #33584
+
   29 Oct 2003; Meir Kriheli <mksoft@gentoo.org> firebird-1.0.3.ebuild:
   Modified firebird-1.0.3-gentoo.patch; Closes bug #28685
   
