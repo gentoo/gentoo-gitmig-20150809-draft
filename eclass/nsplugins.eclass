@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.12 2003/05/13 04:42:54 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.13 2003/06/16 15:35:16 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -54,9 +54,9 @@ inst_plugin() {
 		#	dosym ${1} ${ROOT}/usr/lib/${PLUGINS_DIR}
 		echo dosym ${1} /usr/lib/${PLUGINS_DIR}
 		dosym ${1} /usr/lib/${PLUGINS_DIR}
-		einfo "Symlinked the java plugin into the mozilla/phoenix/galeon plugin directory."
+		einfo "Symlinked the plugin into the mozilla/firebird/galeon plugin directory"
 	else
-		einfo "Not creating symlink for the java plugin, because there already is a java plugin installed."
+		einfo "Not creating symlink for the plugin, because one already exists"
 	fi
 }
 
