@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.3.ebuild,v 1.5 2003/12/09 18:03:34 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.3.ebuild,v 1.6 2003/12/31 04:05:53 obz Exp $
 
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="nls cups qt debug gnome"
 
 # these dependencies need looking at.
