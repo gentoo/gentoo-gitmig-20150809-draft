@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b0b439a5fc011901ddc50c3226495066 lazarus-0.9.6.ebuild 2138
+MD5 2e2c3e076e0a920ac9a015742173ae31 metadata.xml 372
+MD5 2537b0f4be5fe2d48f2c45d0c36a2197 ChangeLog 417
+MD5 2c5da358e9346c528a1a6b76f1eff1d1 files/digest-lazarus-0.9.6 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCTZNmFdQwWVoAgN4RAgoBAJ9M1sw/Qb6stAmQ3IbDZudTiYV+6ACff9mw
+xEKv+pDyQEmCaRQ8hPbM6aQ=
+=cK8j
+-----END PGP SIGNATURE-----
