@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.8.ebuild,v 1.8 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.8.ebuild,v 1.9 2003/02/27 11:14:05 carpaski Exp $
 
 IUSE="bootstrap build"
 
@@ -338,6 +338,10 @@ src_install() {
 	exeinto /sbin
 	doexe ${S}/sbin/runscript.sh
 	doexe ${S}/sbin/functions.sh
+	cp ${S}/sbin/functions.sh ${S}/sbin/functions.sh.orig
+	sed '/logger/s: \$\*: "$*":' < ${S}/sbin/functions.sh.orig > ${S}/sbin/functions.sh 2>/dev/null
+	rm -f ${S}/sbin/functions.sh.orig
+
 	doexe ${S}/sbin/rc-daemon.sh
 	doexe ${S}/sbin/rc-help.sh
 	# Compat symlinks (some stuff have hardcoded paths)
@@ -559,4 +563,3 @@ pkg_postrm() {
 	ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
 	ln -snf ../X11R6/lib/X11 ${ROOT}/usr/lib/X11
 }
-
