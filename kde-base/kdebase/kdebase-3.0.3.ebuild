@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.3.ebuild,v 1.7 2002/11/10 10:00:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.3.ebuild,v 1.8 2002/11/30 01:43:37 vapier Exp $
 
 IUSE="ssl opengl motif ldap encode samba cups oggvorbis pam"
 inherit kde-dist
@@ -83,7 +83,7 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
     fi
     
     # Show gnome icons when choosing new icon for desktop shortcut
-    mkdir -p ${D}/usr/share/pixmaps
+    dodir /usr/share/pixmaps
     mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
     rm -rf ${D}/${KDEDIR}/share/apps/kdesktop/pics/
     cd ${D}/${KDEDIR}/share/apps/kdesktop/
