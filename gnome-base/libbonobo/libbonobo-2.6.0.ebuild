@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.6.0.ebuild,v 1.1 2004/03/19 16:09:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.6.0.ebuild,v 1.2 2004/04/25 20:29:55 foser Exp $
 
 inherit gnome2
 
@@ -24,3 +24,5 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
+
+USE_DESTDIR="1"
