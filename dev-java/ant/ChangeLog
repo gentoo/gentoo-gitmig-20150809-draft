@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.30 2003/04/18 08:05:42 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.31 2003/04/23 11:09:08 absinthe Exp $
+
+*ant-1.5.3-r2 (23 Apr 2003)
+
+  23 Apr 2003; Dylan Carlson <absinthe@gentoo.org> ant-1.5.3-r2.ebuild:
+  Many fixes, improvements:
+   - ant now builds from source instead of using the binaries
+     (thanks to Ryan Shaw in # 10364, belatedly)
+   - fixed SRC_URI
+   - fixed HOMEPAGE (ant.apache.org now)
+   - improved DESCRIPTION
 
 *ant-1.5.3-r1 (18 Apr 2003)
 
