@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.65 2003/11/15 02:50:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.66 2003/12/13 00:33:10 gmsoft Exp $
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gnome-panel-2.4.0-r2.ebuild:
   Stable on ia64
@@ -38,6 +38,9 @@
   New version, includes drawers fixes which obsolete the patch against 2.4.0
 
 *gnome-panel-2.4.0-r2 (10 Oct 2003)
+
+  13 Dec 2003; Guy Martin <gmsoft@gentoo.org> gnome-panel-2.4.0-r2.ebuild :
+  Marked stable on hppa.
 
   10 Oct 2003; L. Boshell <leonardop@gentoo.org> gnome-panel-2.4.0-r2.ebuild,
   gnome-panel-2.4.0-drawers_fix.patch:
