@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.19 2005/01/02 03:42:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.20 2005/01/02 06:21:19 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -48,7 +48,7 @@ BINPATH="/usr/${CTARGET}/binutils-bin/${PV}"
 DATAPATH="/usr/share/binutils-data/${CTARGET}/${PV}"
 MY_BUILDDIR="${WORKDIR}/build"
 
-is_cross() { [ "${CHOST}" != "${CTARGET}" ] ; }
+is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
 
 toolchain-binutils_src_unpack() {
 	unpack ${A}
@@ -58,10 +58,10 @@ toolchain-binutils_src_unpack() {
 apply_binutils_updates() {
 	cd ${S}
 
-	[ -n "${PATCHVER}" ] && epatch ${WORKDIR}/patch
-	if [ -n "${UCLIBC_PATCHVER}" ] ; then
+	[[ -n ${PATCHVER} ]] && epatch ${WORKDIR}/patch
+	if [[ -n ${UCLIBC_PATCHVER} ]] ; then
 		epatch ${WORKDIR}/uclibc-patches
-	elif [[ ${PORTAGE_LIBC} = uClibc ]] ; then
+	elif [[ ${PORTAGE_LIBC} = "uClibc" ]] ; then
 		die "sorry, but this binutils doesn't yet support uClibc :("
 	fi
 	
@@ -89,7 +89,7 @@ toolchain-binutils_src_compile() {
 		&& myconf="${myconf} --without-included-gettext" \
 		|| myconf="${myconf} --disable-nls"
 	use multitarget && myconf="${myconf} --enable-targets=all"
-	[ -n "${CBUILD}" ] && myconf="${myconf} --build=${CBUILD}"
+	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
 	${S}/configure \
 		--prefix=/usr \
 		--host=${CHOST} \
@@ -149,7 +149,7 @@ toolchain-binutils_src_install() {
 		insinto ${INCPATH}
 		doins "${S}/include/libiberty.h"
 	fi
-	if [ -d "${D}"/${LIBPATH}/lib ] ; then
+	if [[ -d ${D}/${LIBPATH}/lib ]] ; then
 		mv "${D}"/${LIBPATH}/lib/* "${D}"/${LIBPATH}/
 		rm -r "${D}"/${LIBPATH}/lib
 	fi
@@ -201,6 +201,9 @@ EOF
 		docinto opcodes
 		dodoc opcodes/ChangeLog*
 	fi
+	# Punt all the fun stuff if user doesn't want it :)
+	has noinfo ${FEATURES} && rm -r "${D}"/${DATAPATH}/info
+	has noman ${FEATURES} && rm -r "${D}"/${DATAPATH}/man
 }
 
 toolchain-binutils_pkg_postinst() {
