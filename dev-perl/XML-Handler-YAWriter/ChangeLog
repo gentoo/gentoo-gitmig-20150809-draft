@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Handler-YAWriter
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Handler-YAWriter/ChangeLog,v 1.9 2003/12/16 01:28:21 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Handler-YAWriter/ChangeLog,v 1.10 2004/02/16 23:14:04 agriffis Exp $
+
+  16 Feb 2004; Aron Griffis <agriffis@gentoo.org>
+  XML-Handler-YAWriter-0.23-r1.ebuild:
+  stable on alpha and ia64
 
   15 Dec 2003; Jason Wever <weeve@gentoo.org>
   XML-Handler-YAWriter-0.23-r1.ebuild:

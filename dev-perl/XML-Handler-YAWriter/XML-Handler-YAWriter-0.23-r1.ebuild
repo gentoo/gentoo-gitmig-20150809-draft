@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Handler-YAWriter/XML-Handler-YAWriter-0.23-r1.ebuild,v 1.6 2003/12/16 01:28:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Handler-YAWriter/XML-Handler-YAWriter-0.23-r1.ebuild,v 1.7 2004/02/16 23:14:04 agriffis Exp $
 
 inherit perl-module
 
@@ -13,6 +13,6 @@ SRC_URI="http://cpan.org/modules/by-module/XML/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc ~sparc"
+KEYWORDS="x86 amd64 ppc ~sparc alpha ia64"
 
 DEPEND=">=dev-perl/libxml-perl-0.07-r1"
