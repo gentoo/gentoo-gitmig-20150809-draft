@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1043 2005/03/25 12:35:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1044 2005/03/25 21:39:40 voxus Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -525,8 +525,9 @@ net-dialup/ppp:activefilter - enable activefilter support
 net-dialup/ppp:atm - enable support for pppoatm
 net-dialup/ppp:dhcp - enable the dhcp plugin
 net-dialup/ppp:mppe-mppc - enable support for mppe-mppc
-net-dns/bind:bind-mysql - enables mysql support for bind
+net-dns/bind:bind-mysql - enables mysql support for bind (non-dlz)
 net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
+net-dns/bind:idn - enables support for Internalized Domain Names
 net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
 net-dns/djbdns:cnamefix - changes the CNAME behavior of dnscache
 net-dns/djbdns:fwdzone - enables forward zone patch
