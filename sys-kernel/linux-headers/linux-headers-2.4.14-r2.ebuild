@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.14-r1.ebuild,v 1.1 2001/11/09 20:45:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.14-r2.ebuild,v 1.1 2001/11/18 12:32:17 azarah Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -31,11 +31,11 @@ fi
 # lm-sensors           N         lm_sensors        Need to move this to its own ebuild
 
 # Patch Versions
-ACPIV=20011102
+ACPIV=20011109
 LVMV=1.0.1-rc4
 EXT3V=0.9.15
 LOWLV=2.4.14
-PREEV="${KV}-1"
+PREEV="${KV}-2"
 
 EXT3P="ext3-2.4-${EXT3V}-`echo ${KV} |sed -e 's:\.::g' -e 's:-::'`"
 
@@ -51,7 +51,13 @@ ftp://ftp.kernel.org/pub/linux/kernel/people/rml/preempt-kernel/2.4/preempt-kern
 http://www.uow.edu.au/~andrewm/linux/${LOWLV}-low-latency.patch.gz
 http://www.zip.com.au/~akpm/${EXT3P}.gz
 http://developer.intel.com/technology/iapc/acpi/downloads/acpi-${ACPIV}.diff.gz"
-	
+
+# Make live easier for creating the LVM patch when packaging
+# The patch will be copied to /tmp/kpatches.  Maybe some other
+# stuff can make use of this?
+[ "$MAKEPATCH" != "yes" ] && SRC_URI="${SRC_URI}
+http://www.ibiblio.org/gentoo/distfiles/lvm-${LVMV}-${PVR}.patch.bz2"
+
 [ "$PN" != "linux-extras" ] && PROVIDE="virtual/kernel"
 
 HOMEPAGE="http://www.kernel.org/
@@ -114,21 +120,31 @@ src_unpack() {
 	#generate the kernel patch, and apply it
 	cd ${S2}
 	unpack lvm_${LVMV}.tar.gz
-	S_LVM="${S2}/LVM/${LVMV}"
-	cd ${S_LVM}
-	./configure --with-kernel_dir=${S} || die
-	cd ${S_LVM}/PATCHES
-	mv Makefile Makefile.orig
-	sed -e 's:/usr/src/linux:${S}:' Makefile.orig >Makefile || die
-	make || die
-	mv ${S_LVM}/PATCHES/lvm-${LVMV}-${KV}.patch ${WORKDIR}
-	mv Makefile.orig Makefile
-	cd ${S_LVM}
-	make distclean
-	#the LVM patch is included to replace the old version, irregardless if USE lvm is set
-	cd ${S}
-	patch -l -p1 <${WORKDIR}/lvm-${LVMV}-${KV}.patch || die
-	rm -f ${WORKDIR}/lvm-${LVMV}-${KV}.patch
+
+	#Generate the patch, and cp it to /tmp/kpatches
+	if [ "$MAKEPATCH" = "yes" ] ; then
+		local S_LVM="${S2}/LVM/${LVMV}"
+		cd ${S_LVM}
+		./configure --with-kernel_dir=${S} || die
+		cd ${S_LVM}/PATCHES
+		mv Makefile Makefile.orig
+		sed -e 's:/usr/src/linux:${S}:' Makefile.orig >Makefile || die
+		make || die
+		mv ${S_LVM}/PATCHES/lvm-${LVMV}-${KV}.patch ${WORKDIR}
+		mv Makefile.orig Makefile
+		cd ${S_LVM}
+		make distclean
+		#the LVM patch is included to replace the old version, irregardless if USE lvm is set
+		cd ${S}
+		patch -l -p1 <${WORKDIR}/lvm-${LVMV}-${KV}.patch || die
+		mkdir /tmp/kpatches
+		bzip2 -c ${WORKDIR}/lvm-${LVMV}-${KV}.patch >/tmp/kpatches/lvm-${LVMV}-${PVR}.patch.bz2
+		
+	#normar merge, just patch with patch from gentoo mirror
+	else
+		cd ${S}
+		cat ${DISTDIR}/lvm-${LVMV}-${PVR}.patch.bz2 | bzip2 -dc | patch -l -p1 || die
+	fi
 	
 	#apply low-latency patch
 	cd ${S}
