@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.7_pre5.ebuild,v 1.2 2004/07/15 01:11:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.7_pre5.ebuild,v 1.3 2004/07/23 18:03:16 tgall Exp $
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/enlightenment/enlightenment-${PV/_/-}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ppc64"
 IUSE="doc esd nls nothemes xrandr"
 
 DEPEND="esd? ( >=media-sound/esound-0.2.19 )
