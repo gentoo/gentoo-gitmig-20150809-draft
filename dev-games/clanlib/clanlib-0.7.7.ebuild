@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.7.ebuild,v 1.9 2004/06/24 22:09:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.7.ebuild,v 1.10 2004/06/29 18:17:50 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,7 +20,8 @@ DEPEND=">=media-libs/hermes-1.3.2
 	sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )
 	mikmod? ( >=media-libs/libmikmod-3.1.9 )
-	oggvorbis? ( media-libs/libvorbis )"
+	oggvorbis? ( media-libs/libvorbis )
+	>=sys-apps/sed-4"
 
 S=${WORKDIR}/ClanLib-${PV}
 
