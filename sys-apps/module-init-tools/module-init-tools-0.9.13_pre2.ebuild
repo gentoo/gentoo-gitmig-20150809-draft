@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.13_pre2.ebuild,v 1.4 2003/09/23 14:51:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.13_pre2.ebuild,v 1.5 2003/10/09 19:36:17 pappy Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -62,10 +62,23 @@ src_unpack() {
 src_compile() {
 	local myconf=
 
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	has_version 'sys-devel/hardened-gcc' && append-flags '-yet_exec'
-
 	filter-flags -fPIC
+
+    # http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
+    if [ "${ARCH}" != "hppa" ] && [ "${ARCH}" != "hppa64" ] && has_version "sys-devel/hardened-gcc"
+    then
+        append-flags "-yet_exec -fstack-protector"
+    fi
+
+    if [ "${ARCH}" == "hppa" ] && has_version 'sys-devel/hardened-gcc'
+    then
+        append-flags "-yet_exec"
+    fi
+
+    if [ "${ARCH}" == "hppa64" ] && has_version 'sys-devel/hardened-gcc'
+    then
+        append-flags "-yet_exec"
+    fi
 
 	einfo "Building modutils..."
 	cd ${WORKDIR}/modutils-${MODUTILS_PV}
