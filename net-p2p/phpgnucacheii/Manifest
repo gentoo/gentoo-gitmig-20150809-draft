@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2009df5b8b381c8fa39203eeee30330 phpgnucacheii-2.1.1.ebuild 2239
-MD5 22799abba9792c16d91b46c15a3e1ff9 ChangeLog 462
+MD5 044d3b7f37d463b0f257da8b3a2284b0 ChangeLog 549
 MD5 38f5d2fc5324ff4b77d0473e67408a9e metadata.xml 269
-MD5 e76dbeb5689d27e85fde516ee00303c0 files/postinstall-en.txt 454
+MD5 64a9df7eb3424816fd4929873c0e88e4 phpgnucacheii-2.1.1.ebuild 2240
 MD5 a1751e1f10a3b96b05d0401c97e72008 files/confightaccess 14
-MD5 f62bdc2cf590a0c0995eae3b7c437f63 files/expert.phpgnucacheii.schema 1009
 MD5 edf2f90308c3d97bfe06c91e632ea318 files/digest-phpgnucacheii-2.1.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBVw7dcAgAdbxYsnERAhQMAKCd7iXuqUk70aRRNdjJCPC5wB7HxQCff8IG
-ily09K9jLs/vB7yxQpUPjz0=
-=FNkD
------END PGP SIGNATURE-----
+MD5 f62bdc2cf590a0c0995eae3b7c437f63 files/expert.phpgnucacheii.schema 1009
+MD5 e76dbeb5689d27e85fde516ee00303c0 files/postinstall-en.txt 454

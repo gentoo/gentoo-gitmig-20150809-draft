@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f914553cc6f496b6f5bf9990bcf97c62 perlgcache-0.8.3.ebuild 1445
+MD5 5dc27b8ae4e09db4f7fae7e1ef813f79 ChangeLog 993
+MD5 38f5d2fc5324ff4b77d0473e67408a9e metadata.xml 269
 MD5 d82c38be5dc01024050d72f9c456a728 perlgcache-0.7.9.ebuild 1354
 MD5 c1c11a03a40cd6ac96a7c656b6f6a723 perlgcache-0.8.2-r1.ebuild 1448
-MD5 0722d14745455c303e294cdbf5cbabc4 ChangeLog 909
-MD5 38f5d2fc5324ff4b77d0473e67408a9e metadata.xml 269
-MD5 e76dbeb5689d27e85fde516ee00303c0 files/postinstall-en.txt 454
-MD5 748575edff7131da6bdf2137a65914c1 files/digest-perlgcache-0.8.2-r1 67
+MD5 7b2c68be918f29a2a51d27376b0da049 perlgcache-0.8.3.ebuild 1446
 MD5 373539db89cbc3c2b82563eaf33558b0 files/digest-perlgcache-0.7.9 67
-MD5 2454ac0b46f189f9a4d746fe34949edf files/digest-perlgcache-0.8.3 67
+MD5 e76dbeb5689d27e85fde516ee00303c0 files/postinstall-en.txt 454
 MD5 9f9a481a1206db66657e42007c45728c files/reconfig 278
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBbBNecAgAdbxYsnERAsauAJwOxLYHMoyvujrXadN8mx0Xl9fUCgCglWcl
-H0/xrtrEw/p/y8Y6PqQlEiU=
-=GWbG
------END PGP SIGNATURE-----
+MD5 748575edff7131da6bdf2137a65914c1 files/digest-perlgcache-0.8.2-r1 67
+MD5 2454ac0b46f189f9a4d746fe34949edf files/digest-perlgcache-0.8.3 67
