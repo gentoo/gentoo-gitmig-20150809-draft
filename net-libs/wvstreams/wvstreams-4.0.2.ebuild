@@ -1,23 +1,23 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.2 2005/03/30 18:39:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.3 2005/04/03 05:48:54 lu_zero Exp $
 
 inherit eutils
 
 DESCRIPTION="A network programming library in C++"
 HOMEPAGE="http://open.nit.ca/wiki/?page=WvStreams"
-SRC_URI="http://people.nit.ca/~sfllaw/${P}.tar.gz"
+SRC_URI="http://www.csclub.uwaterloo.ca/~ja2morri/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="gtk qt oggvorbis speex fam qdbm pam slp doc fftw tcltk debug"
+IUSE="gtk qt vorbis speex fam qdbm pam slp doc fftw tcltk debug"
 
 RDEPEND="virtual/libc
 	dev-libs/xplc
 	gtk? ( >=x11-libs/gtk+-2.2.0 )
 	qt? ( =x11-libs/qt-3* )
-	oggvorbis? ( >=media-libs/libogg-1.0
+	vorbis? ( >=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )
 	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
 	fam? ( virtual/fam )
@@ -59,8 +59,8 @@ src_compile() {
 	fi
 	econf ${myconf} \
 		`use_with gtk` \
-		`use_with oggvorbis ogg` \
-		`use_with oggvorbis vorbis` \
+		`use_with vorbis ogg` \
+		`use_with vorbis` \
 		`use_with speex` \
 		`use_with fam` \
 		`use_with qdbm` \

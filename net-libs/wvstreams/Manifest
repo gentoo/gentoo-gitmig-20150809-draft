@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cfe93e4d7a16d678b6ea85b453d1c833 wvstreams-4.0.1-r2.ebuild 2162
-MD5 a528382013bf5eaec881046eeae17dbe wvstreams-4.0.2.ebuild 2164
-MD5 88beb02e20267e4fc08543358e899909 wvstreams-4.0-r1.ebuild 1872
-MD5 48dde7ca67ddb199c694ae1ed90da36b ChangeLog 7689
 MD5 7c8d69f73480b56621770449d11a2e17 metadata.xml 235
+MD5 88beb02e20267e4fc08543358e899909 wvstreams-4.0-r1.ebuild 1872
+MD5 cfe93e4d7a16d678b6ea85b453d1c833 wvstreams-4.0.1-r2.ebuild 2162
+MD5 802fd621f4e0d476d793af92bf4f04a6 wvstreams-4.0.2.ebuild 2158
+MD5 eca1150136a1e6413b6d590ceed3515c ChangeLog 7810
 MD5 16733d2b49133ec4fd75fa7dbca890ea files/wvstreams-4.0.2-MOC-fix.patch 479
-MD5 9c69b24927d041fa398d060e4e5f1bb1 files/wvstreams-4.0.1-linux-serial.patch 7563
-MD5 f4e61e52cab6cac5470b77a7bd3358a9 files/digest-wvstreams-4.0.1-r2 68
 MD5 26127f51d3c7e77edb001d4cb33882d0 files/wvstreams-4.0.2-linux-serial.patch 6412
-MD5 f606f86f5ef7d07937128fc8dc043c83 files/wvstreams-4.0-tcl_8_4.patch 822
-MD5 7c5ceff9d19db13318a9c8c6de08e7ef files/digest-wvstreams-4.0-r1 66
-MD5 a48902f93ab5425fc59a483df42f3d0a files/wvstreams-4.0.1-without-pam.patch 418
-MD5 722051cdd8d4e8747f83c0d512f3ec2a files/digest-wvstreams-4.0.2 68
 MD5 03b73077a83c635ab211f235c7a429bf files/wvstreams-4.0.1-tcl_8_4.patch 822
-MD5 b65b1449a0bc6ff06e8c843b37717f05 files/wvstreams-4.0.2-speex-const.patch 951
+MD5 a48902f93ab5425fc59a483df42f3d0a files/wvstreams-4.0.1-without-pam.patch 418
+MD5 f4e61e52cab6cac5470b77a7bd3358a9 files/digest-wvstreams-4.0.1-r2 68
+MD5 9c69b24927d041fa398d060e4e5f1bb1 files/wvstreams-4.0.1-linux-serial.patch 7563
 MD5 0b5b1b03e323747aa3ce30492fe18cc1 files/wvstreams-4.0.2-tcl_8_4.patch 1022
 MD5 16733d2b49133ec4fd75fa7dbca890ea files/wvstreams-4.0.1-MOC-fix.patch 479
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCSvJfjiC39V7gKu0RAsjzAJ0TG8Fal1TiuktE78cjpEmMtob4EwCgvpX0
-AZP+bxQ+3ViR3NN2GlOyjDs=
-=suJ2
------END PGP SIGNATURE-----
+MD5 722051cdd8d4e8747f83c0d512f3ec2a files/digest-wvstreams-4.0.2 68
+MD5 b65b1449a0bc6ff06e8c843b37717f05 files/wvstreams-4.0.2-speex-const.patch 951
+MD5 7c5ceff9d19db13318a9c8c6de08e7ef files/digest-wvstreams-4.0-r1 66
+MD5 f606f86f5ef7d07937128fc8dc043c83 files/wvstreams-4.0-tcl_8_4.patch 822
