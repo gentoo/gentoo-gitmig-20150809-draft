@@ -968,6 +968,8 @@ def dep_wordreduce(mydeplist):
 	return deplist
 
 def dep_eval(deplist):
+	if len(deplist)==0:
+		return 1
 	if deplist[0]=="||":
 		#or list; we just need one "1"
 		for x in deplist[1:]:
@@ -1306,6 +1308,9 @@ class packagetree:
 		
 		if mysplit==None:
 			return [0,"Parse Error (parenthesis mismatch or || abuse?)"]
+		elif mysplit==[]:
+			#dependencies were reduced to nothing
+			return [1,None]
 		mysplit2=mysplit[:]
 		mysplit2=self.dep_wordreduce(mysplit2)
 		if mysplit2==None:
