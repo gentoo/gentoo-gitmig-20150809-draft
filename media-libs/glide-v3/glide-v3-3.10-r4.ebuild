@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r4.ebuild,v 1.4 2004/06/14 15:28:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r4.ebuild,v 1.5 2004/06/14 19:51:54 spyderous Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -10,8 +10,8 @@ inherit eutils
 S=${WORKDIR}/${PN/-v3/3x}
 DESCRIPTION="Hardware support for the voodoo3, voodoo4 and voodoo5"
 HOMEPAGE="http://glide.sourceforge.net/"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/glide3x-${PV}.tar.gz
-	http://www.ibiblio.org/gentoo/distfiles/swlibs-${PV}.tar.gz
+SRC_URI="mirror://gentoo/glide3x-${PV}.tar.gz
+	mirror://gentoo/swlibs-${PV}.tar.gz
 	mirror://gentoo/${P}-fixes.patch.bz2"
 # check for future updates here
 # http://telia.dl.sourceforge.net/mirrors/slackware/slackware-8.0/contrib/contrib-sources/3dfx/voodoo4_voodoo5/

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5fc8aca4efa80b816494f854b00f207d ChangeLog 2210
+MD5 0c17cc2e60aa341650c596ce6bbf4d79 ChangeLog 2343
 MD5 5cd98e2a43319c206eae95d03f597aea glide-v3-3.10-r3.ebuild 2029
-MD5 928f5458be94ddd987f2fd9af765e98e glide-v3-3.10-r4.ebuild 2202
+MD5 187fe3b67bacdf24402fab1ed1ed3bfa glide-v3-3.10-r4.ebuild 2157
 MD5 768d204d12c78e272cffb63c0b193f47 files/digest-glide-v3-3.10-r3 128
 MD5 fdd303f0ee6622cb6e52a415a19d7819 files/digest-glide-v3-3.10-r4 200
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAzcRMHTu7gpaalycRApe4AJ4w0Tn43rG0E5EBjbhHA5cmYtj7eQCgpOFn
-8qG9h+rY6gR8RDvMxWEQZ7Y=
-=Wddg
------END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/glide-v3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.13 2004/06/14 15:28:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.14 2004/06/14 19:51:54 spyderous Exp $
+
+  14 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  glide-v3-3.10-r4.ebuild:
+  Change a couple tarballs to mirror://gentoo.
 
 *glide-v3-3.10-r4 (13 Jun 2004)
 
