@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.0,v 1.1 2004/11/14 08:50:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.0,v 1.2 2004/11/30 06:22:37 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -188,7 +188,7 @@ for x in "$@" ; do
 	esac
 done
 
-HOST="$(portageq envvar CHOST)"
+[ "${DOIT}" != "list_profiles" ] && HOST="$(portageq envvar CHOST)"
 [ -z "${PROFILE}" ] && PROFILE="${HOST}"
 eval ${DOIT}
 
