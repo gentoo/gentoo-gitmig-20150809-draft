@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040902.ebuild,v 1.2 2004/09/05 10:58:52 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20041219.ebuild,v 1.1 2004/12/19 18:28:47 twp Exp $
 
 inherit eutils subversion
 
@@ -19,6 +19,7 @@ DEPEND="virtual/x11
 
 ESVN_REPO_URI="http://tao.uab.es/ion/svn/ion/trunk"
 ESVN_PROJECT="ion-snapshot"
+ESVN_BOOTSTRAP="./predist.sh -snapshot"
 
 src_compile() {
 
@@ -50,6 +51,10 @@ src_install() {
 		MANDIR=${D}/usr/share/man \
 		DOCDIR=${D}/usr/share/doc/${PF} \
 		LOCALEDIR=${D}/usr/share/locale \
+		LIBDIR=${D}/usr/lib \
+		MODULEDIR=${D}/usr/lib/ion3/mod \
+		LCDIR=${D}/usr/lib/ion3/lc \
+		VARDIR=${D}/var/cache/ion3 \
 		install || die
 
 	prepalldocs

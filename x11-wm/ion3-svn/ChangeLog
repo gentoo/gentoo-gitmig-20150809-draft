@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/ion3-svn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ChangeLog,v 1.8 2004/09/05 10:58:52 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ChangeLog,v 1.9 2004/12/19 18:28:47 twp Exp $
+
+*ion3-svn-20041219 (19 Dec 2004)
+
+  19 Dec 2004; Tom Payne <twp@gentoo.org> -ion3-svn-20040902.ebuild,
+  +ion3-svn-20041219.ebuild:
+  Update to match latest snapshot. Bug # 74422. Thanks Arnaud Vrac.
 
   05 Sep 2004; Malcolm Lashley <malc@gentoo.org> ion3-svn-20040902.ebuild:
   Add ~amd64 closes bug #62762
