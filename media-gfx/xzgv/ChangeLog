@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/xzgv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.4 2003/02/12 07:05:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.5 2003/10/07 04:09:29 brandy Exp $
+
+*xzgv-0.8 (07 Oct 2003)
+
+  07 Oct 2003; Brandy Westcott brandy@gentoo.org xzgv-0.8.ebuild:
+  Version bump. This version will compile with gcc-3.3. Added sys-apps/gawk as a
+  dependency
 
 *xzgv-0.7-r1 (28 Jun 2002)
 
