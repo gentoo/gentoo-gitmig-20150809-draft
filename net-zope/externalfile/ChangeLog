@@ -1,6 +1,8 @@
 # ChangeLog for net-zope/externalfile
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externalfile/ChangeLog,v 1.1 2004/04/18 21:45:16 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externalfile/ChangeLog,v 1.2 2004/04/27 09:28:28 aliz Exp $
+
+*externalfile-1.2.0 (18 Apr 2004)
 
   18 Apr 2004; Jodok Batlogg <batlogg@gentoo.org>; :
   #47251 thanks to Salim Fadhley <sal@stodge.org>
