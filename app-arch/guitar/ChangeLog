@@ -1,10 +1,13 @@
 # ChangeLog for app-arch/guitar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.6 2003/01/01 00:56:32 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.7 2003/01/21 01:14:03 nall Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *guitar-0.1.4 (21 May 2002)
+
+  20 Jan 2003; Jon Nall <nall@gentoo.org> guitar-0.1.4.ebuild :
+  changed to -ppc since app-arch/rar is x86 binary only
 
   31 Dec 2002; Joshua Brindle <method@gentoo.org> guitar-0.1.4.ebuild :
   changed sparc to -sparc because dependancy app-arch/rar is x86 binary only
