@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muse
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.6 2004/04/18 20:01:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.7 2004/04/18 22:44:01 dholm Exp $
+
+  19 Apr 2004; David Holm <dholm@gentoo.org> muse-0.9.ebuild:
+  Added to ~ppc.
 
 *muse-0.9 (18 Apr 2004)
 

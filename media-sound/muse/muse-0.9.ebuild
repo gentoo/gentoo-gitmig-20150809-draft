@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.ebuild,v 1.1 2004/04/18 20:01:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.ebuild,v 1.2 2004/04/18 22:44:01 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="Multiple Streaming Engine, an icecast source streamer"
 SRC_URI="ftp://ftp.dyne.org/muse/releases/${MY_P}.tar.gz"
 HOMEPAGE="http://muse.dyne.org/"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="ncurses gtk debug"
