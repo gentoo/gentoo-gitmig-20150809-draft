@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.1 2004/03/03 00:55:56 stuart Exp $
+
+*webapp-config-1.0 (03 Mar 2004)
+
+  03 Mar 2004; Stuart Herbert <stuart@gentoo.org> metadata.xml,
+  webapp-config-1.0.ebuild:
+  Initial commit
+
