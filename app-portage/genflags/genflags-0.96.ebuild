@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/genflags-0.96.ebuild,v 1.1 2004/01/19 02:54:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/genflags-0.96.ebuild,v 1.2 2004/02/22 07:14:34 mr_bones_ Exp $
 
 DESCRIPTION="Gentoo CFLAGS generator"
 HOMEPAGE="http://www.gentoo.org/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}-bin.tar.bz2
 LICENSE="OSL-1.1"
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 amd64 arm hppa ppc mips sparc alpha ia64"
+KEYWORDS="x86 amd64 hppa ppc mips sparc alpha ia64"
 # should also work on : m68k cris s390 sh
 # This is all explictly specified as might want this in early stages
 DEPEND=""

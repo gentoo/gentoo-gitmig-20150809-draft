@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/genflags-0.94.ebuild,v 1.2 2003/11/24 03:44:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/genflags-0.94.ebuild,v 1.3 2004/02/22 07:14:34 mr_bones_ Exp $
 
 DESCRIPTION="Gentoo CFLAGS generator"
 
