@@ -1,12 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.33 2003/02/24 02:10:48 azarah Exp $
-
-  24 Feb 2003; Martin Schlemmer <azarah@gentoo.org binutils-2.13.90.0.18.ebuild :
-  Mark stable for x86.  Rip out static stuff as it anyhow do not work.
-
-  22 Feb 2003; Guy Martin <gmsoft@gentoo.org> binutils-2.13.90.0.18.ebuild :
-  Commited stable for hppa.
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.34 2003/02/24 03:12:12 agriffis Exp $
 
   18 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
@@ -15,6 +9,12 @@
   Added hppa to keywords.
 
 *binutils-2.13.90.0.18 (26 Jan 2003)
+
+  24 Feb 2003; Martin Schlemmer <azarah@gentoo.org> binutils-2.13.90.0.18.ebuild :
+  Mark stable for x86.  Rip out static stuff as it anyhow do not work.
+
+  22 Feb 2003; Guy Martin <gmsoft@gentoo.org> binutils-2.13.90.0.18.ebuild :
+  Commited stable for hppa.
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> binutils-2.13.90.0.18.ebuild :
   Mark stable on alpha
