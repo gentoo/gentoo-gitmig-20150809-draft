@@ -128,6 +128,12 @@ cp -af /usr/share/terminfo .
 echo "Populating /lib/modules"
 cd ${ROOT}/lib
 cp -af /lib/modules .
+cd ${ROOT}/lib/modules/2*
+for i in modules.* 
+do
+  rm $i
+  ln -sf ../../../initrd/lib/modules/current/$i .
+done
 
 echo "Populating /usr/lib/security"
 cd ${ROOT}/usr/lib
