@@ -5,7 +5,7 @@ if (-e /etc/csh.env) then
 endif
 
 if ($USER == "root") then
-	set path = (/bin /sbin /usr/bin /usr/sbin $ROOTPATH)
+	setenv PATH "/bin:/sbin:/usr/bin:/usr/sbin:$ROOTPATH"
 	#077 would be more secure, but 022 is generally quite realistic
 	umask 022
 else
