@@ -1,8 +1,11 @@
 # ChangeLog for net-dialup/xc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/ChangeLog,v 1.3 2003/02/12 07:54:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/ChangeLog,v 1.4 2003/05/23 07:57:52 killian Exp $
 
 *xc-4.3.2 (06 Sep 2002)
+
+  23 May 2003; Chuck Brewer <killian@gentoo.org>:
+  Added manifest.
 
   06 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Initial import. xc is needed for xmodem transfers, found by Paul Ruhland <pruhland@rochester.rr.com>
