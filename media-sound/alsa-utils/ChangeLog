@@ -1,6 +1,22 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.2 2002/02/04 04:55:10 tod Exp $
+
+*alsa-utils-0.9.0.1_beta10 (3 Feb 2002)
+
+  3 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog :
+
+  Upgraded version to latest beta.
+  The issue below seems to be fixable by creating a link in the alsa-lib
+  ebuild from libasound.so.2 to libasound.so.1, but I'm leaving the warning
+  until further testing is done.
+  ##WARNING## Upgrading to this version will require massive recompiling
+  of pretty much everything linked against sound.  libasound.so.1 is
+  no longer provided in the package, it is now libasound.so.2.  Sound
+  apps will be broken until recompiled against the new lib.  For example,
+  if you use the Gnome Desktop, you will have to recompile almost everything
+  just to start it up.  Good news is you don't have to upgrade now if you
+  don't want to.  Bad news is that you will eventually.
 
 *alsa-utils-0.5.10-r7 (1 Feb 2002)
 
