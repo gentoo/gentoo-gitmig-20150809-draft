@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040211.ebuild,v 1.1 2004/02/11 10:15:38 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040211-r2.ebuild,v 1.1 2004/03/14 12:22:01 twp Exp $
 
 inherit eutils
 
@@ -62,6 +62,8 @@ src_install() {
 		DOCDIR=${D}/usr/share/doc/${PF} \
 		install || die
 
+	prepalldocs
+
 	insinto /usr/include/ion
 	doins *.h *.mk mkexports.lua
 	for i in de floatws ioncore ionws luaextl menu query; do
@@ -75,5 +77,8 @@ src_install() {
 	echo -e "#!/bin/sh\n/usr/bin/pwm" > ${T}/pwm
 	exeinto /etc/X11/Sessions
 	doexe ${T}/ion ${T}/pwm
+
+	insinto /usr/share/xsessions
+	doins ${FILESDIR}/ion2.desktop
 
 }

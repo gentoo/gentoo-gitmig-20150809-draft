@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.3 2004/02/28 10:02:12 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.4 2004/03/14 12:22:01 twp Exp $
+
+  14 Mar 2004; Tom Payne <twp@gentoo.org> ion2-20040211-r2.ebuild, ion2-20040207.ebuild, ion2-20040211.ebuild :
+  Install ion2.desktop for gdm, remove old versions.
 
 *ion2-20040211-r1 (28 Feb 2004)
 
