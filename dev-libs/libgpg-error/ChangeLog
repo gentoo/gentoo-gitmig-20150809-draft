@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.4 2004/02/29 19:21:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.5 2004/05/01 22:11:59 kloeri Exp $
+
+*libgpg-error-0.7 (02 May 2004)
+
+  02 May 2004; Bryan Østergaard <kloeri@gentoo.org> +libgpg-error-0.7.ebuild:
+  Version bump, bug #49620.
 
   29 Feb 2004; Jason Wever <weeve@gentoo.org> libgpg-error-0.6.ebuild:
   Keep on ~sparcin'
