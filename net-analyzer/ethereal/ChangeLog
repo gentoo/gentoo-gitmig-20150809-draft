@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.35 2003/06/26 15:25:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.36 2003/07/25 20:15:47 lanius Exp $
+
+*ethereal-0.9.14 (25 Jul 2003)
+
+  25 Jul 2003; lanius@gentoo.org ethereal-0.9.14.ebuild:
+  version bump, cleanups
 
   26 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> ethereal-0.9.13.ebuild:
   Copied the addwrite line to compile - fixes bug 23514 and should definitely
