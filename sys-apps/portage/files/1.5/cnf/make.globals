@@ -20,6 +20,8 @@ DISTDIR=${PORTDIR}/distfiles
 PKGDIR=${PORTDIR}/packages
 RPMDIR=${PORTDIR}/rpm
 CURRENTFILE=${PORTDIR}/current-packages
+SYSPROFILE=default
+SYSPROFILEDIR=${PORTDIR}/profiles
 PLATFORM=$CHOST
 
 # Options passed to make during the build process

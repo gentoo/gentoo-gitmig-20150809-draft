@@ -343,17 +343,28 @@ def getsetting(mykey,root="/",env=1,recdepth=0):
 	else:
 		print "!!! Error:",root+"etc/make.globals not found."
 		sys.exit(1)
-	if os.path.exists(root+"etc/make.profile/make.defaults"):
-		configdefaults=getconfig(root+"etc/make.profile/make.defaults")
-	else:
-		print "!!! Error:",root+"etc/make.profile/make.defaults not found."
-		print "!!! (make.profile should be a symlink pointing to your current system profile)"
-		sys.exit(1)
 	if os.path.exists(root+"etc/make.conf"):
 		configsettings=getconfig(root+"etc/make.conf")
 	else:
 		configsettings={}
-		
+
+	myvals={"SYSPROFILE":None, "SYSPROFILEDIR":None}
+	for x in myvals.keys():
+		if configsettings.has_key(x):
+			myvals[x]=configsettings[x]
+		elif configglobals.has_key(x):
+			myvals[x]=configglobals[x]
+		else:
+			print "!!! Error: couldn't find",x,"setting in /etc/make.conf or /etc/make.globals"
+			sys.exit(1)
+	
+	myprofile=os.path.normpath(root+myvals["SYSPROFILEDIR"]+"/"+myvals["SYSPROFILE"])
+	if os.path.exists(myprofile):
+		configdefaults=getconfig(myprofile)
+	else:
+		print "!!! Error: SYSPROFILEDIR/SYSPROFILE specify a non-existent profile."
+		sys.exit(1)
+	
 	mystring=None
 	if env:
 		if os.environ.has_key(mykey):
