@@ -6,8 +6,9 @@ MD5 992ba06da79506825be40df50ff3bcb0 binutils-2.13.90.0.18.ebuild 4570
 MD5 69954925de777b2ba73326e70a3b70b1 binutils-2.14.90.0.6-r3.ebuild 6016
 MD5 ed2d18cc790be6727df44072d0be509e binutils-2.14.90.0.7-r1.ebuild 5618
 MD5 5fa33a572680fbbb08ac3676ff923ef4 binutils-2.13.90.0.16-r1.ebuild 4659
+MD5 6ba6818abdb2161ba1bb13c406ebca85 binutils-2.14.90.0.8.ebuild 4589
 MD5 2f09d893da75b581d574a939be29aa62 binutils-2.12.90.0.15.ebuild 3499
-MD5 555fbb2e17b27d9802ba80c4f20597f6 ChangeLog 21498
+MD5 8426fd2c56f7e875d2d2a57f8a8cafd6 ChangeLog 21782
 MD5 04a12a8278727d11476a189b20b6ef64 binutils-2.14.90.0.6-r7.ebuild 6741
 MD5 531a75f2ef944442c80e56c440128051 binutils-2.11.92.0.7.ebuild 2322
 MD5 da40f04058c215a45279b51798b1084e binutils-2.11.92.0.12.3-r2.ebuild 3044
@@ -37,6 +38,7 @@ MD5 6c32de9a9503293bb03048f09dadc182 files/digest-binutils-2.11.92.0.7 74
 MD5 c19b60c5d77c4e0779d7820598b3b749 files/digest-binutils-2.14.90.0.7-r2 75
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r3 75
 MD5 e6b97971464cab854a321254d84ae44f files/digest-binutils-2.12.90.0.15 75
+MD5 4f815f7f13b34c24939c85733607774b files/digest-binutils-2.14.90.0.8 159
 MD5 c19b60c5d77c4e0779d7820598b3b749 files/digest-binutils-2.14.90.0.7 75
 MD5 fe5fb935b171a472f5eb1a8bca63c136 files/binutils-2.12.90.0.14-glibc21.patch 7936
 MD5 c16f13adaeb21909a350b0a562b8a4d5 files/2.13/binutils-2.13.90.0.16-ia64-bootstrap.patch 3535

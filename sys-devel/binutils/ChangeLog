@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.99 2004/01/18 09:59:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.100 2004/01/18 13:23:29 azarah Exp $
+
+*binutils-2.14.90.0.8 (18 Jan 2004)
+
+  18 Jan 2004; Martin Schlemmer <azarah@gentoo.org>
+  binutils-2.14.90.0.8.ebuild:
+  Update version.  Move patches to tarball.  Many thanks to
+  Kumba <kumba@gentoo.org> for updating the pni (prescott support) patch
+  and the mips-brswap patch.
 
 *binutils-2.14.90.0.7-r4 (18 Jan 2004)
 
