@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>dev-tools</herd>
+<herd>app-doc</herd>
 <maintainer>
   <email>nerdboy@gentoo.org</email>
   <name>Steve Arnold</name>
 </maintainer>
-<description>A dOxygen-style documentation tool for makefiles.</description>
+<longdescription>A doxygen-style documentation tool for makefiles (requires doxygen).</longdescription>
 </pkgmetadata>
