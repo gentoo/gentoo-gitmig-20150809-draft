@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.7 2004/07/24 13:28:03 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.8 2004/07/25 13:35:01 eldad Exp $
 
 DESCRIPTION="tool that shows network usage like top"
 HOMEPAGE="http://www.ntop.org/ntop.html"
@@ -46,7 +46,7 @@ src_install () {
 	dohtml ntop.html
 
 	keepdir /var/lib/ntop
-	chown -R nobody:nobody /var/lib/ntop
+	chown -R nobody:nobody ${D}/var/lib/ntop
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/ntop-init ntop
 	insinto /etc/conf.d ; newins ${FILESDIR}/ntop-confd ntop

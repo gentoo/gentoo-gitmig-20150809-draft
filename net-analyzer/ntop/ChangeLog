@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.25 2004/07/24 13:28:03 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.26 2004/07/25 13:35:01 eldad Exp $
+
+  25 Jul 2004; Eldad Zack <eldad@gentoo.org> ntop-3.0.ebuild:
+  Fixed sandbox violation. Thanks to Dennis Freise <cat@final-frontier.ath.cx>.
+  Closes #58271.
 
   24 Jul 2004; Eldad Zack <eldad@gentoo.org> ntop-3.0.ebuild:
   chown /var/lib/ntop to ntop's running user (nobody). Closes #46969.
