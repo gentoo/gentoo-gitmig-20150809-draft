@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.29 2003/06/12 22:01:21 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.30 2003/06/14 21:55:15 aliz Exp $
+
+  14 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> ethereal-0.9.13.ebuild, ethereal-0.9.11.ebuild,
+						ethereal-0.9.10.ebuild :
+  Closing #20475.
 
   12 Jun 2003; Brandon Low <lostlogic@gentoo.org> ethereal-0.9.8-r1.ebuild:
   Fix depends in 0.9.8-r1

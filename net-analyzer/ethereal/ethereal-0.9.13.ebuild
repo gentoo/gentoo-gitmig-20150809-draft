@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.13.ebuild,v 1.1 2003/06/12 22:01:21 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.13.ebuild,v 1.2 2003/06/14 21:55:15 aliz Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 
@@ -38,18 +38,18 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	if [ "`use gtk2`" ]
-	then
-		myconf="--enable-gtk2"
-	elif [ -z "`use gtk`" ]
-	then
-		myconf="--disable-ethereal"
+
+	if [ -z "`use gtk`" ] && [ -z "`use gtk2`" ]; then
+		myconf="${myconf} --disable-ethereal"
 	fi
-	
+
+	use gtk2 && myconf="${myconf} --enable-gtk2"
 	use ssl || myconf="${myconf} --without-ssl"
 	use snmp || myconf="${myconf} --without-ucdsnmp"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
-	use gtk || myconf="${myconf} --disable-ethereal"
+
+	echo $myconf
+exit 1
 	
 	addwrite "/usr/share/snmp/mibs/.index" 
 	
