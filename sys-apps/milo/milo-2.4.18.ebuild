@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/milo/milo-2.4.18.ebuild,v 1.6 2003/09/07 02:57:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/milo/milo-2.4.18.ebuild,v 1.7 2003/09/17 03:56:33 seemant Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -49,7 +49,7 @@ IUSE="ev6"
 
 DEPEND="sys-apps/kbd
 	>=sys-apps/sed-4"
-RDEPEND="app-admin/mtools"
+RDEPEND="sys-fs/mtools"
 
 PROVIDE="virtual/bootloader"
 
