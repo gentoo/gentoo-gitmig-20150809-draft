@@ -1,6 +1,11 @@
 # ChangeLog for media-video/motiontrack
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/ChangeLog,v 1.3 2004/07/23 23:39:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/ChangeLog,v 1.4 2004/10/20 00:24:56 chriswhite Exp $
+
+*motiontrack-0.1.2 (19 Oct 2004)
+
+  19 Oct 2004; Chris White <chriswhite@gentoo.org> +motiontrack-0.1.2.ebuild:
+  Bumped to version 0.1.2.  Thanks to upstream for reporting :).
 
   23 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   motiontrack-0.1.0.ebuild:
@@ -10,6 +15,11 @@
 
   23 Jul 2004; Jon Hood <squinky86@gentoo.org> motiontrack-0.1.0.ebuild:
   Change virtual/glibc -> virtual/libc.
+
+*motiontrack-0.1.0 (23 Jul 2004)
+
+  23 Jul 2004; Chris White <chriswhite@gentoo.org> motiontrack-0.1.0.ebuild:
+  Replaced virtual/glibc with virtual/libc.
 
   20 Jul 2004; Chris White <chriswhite@gentoo.org> :
   Initial addition to the tree. Thanks to gentoo <eric.noack@gemia.de> for
