@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.5 2004/07/15 08:45:42 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.6 2004/07/15 16:37:01 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -507,6 +507,17 @@ src_install() {
 
 	# Remove unneeded stuff
 	rm -rf ${D}${INSTDIR}/share/cde
+
+	# Fix instdb.ins, to *not* install local copies of these
+	for entry in Kdeapplnk Kdemimetext Kdeicons Gnome_Apps Gnome_Icons Gnome2_Apps; do
+		perl -pi -e "/^File gid_File_Extra_$entry/ .. /^End/ and (\
+			s|^\tSize\s+\= .*|\tSize\t\t = 0;\r| or \
+			s|^\tArchiveFiles\s+\= .*|\tArchiveFiles\t = 0;\r| or \
+			s|^\tArchiveSize\s+\= .*|\tArchiveSize\t = 0;\r| or \
+			s|^\tContains\s+\= .*|\tContains\t = ();\r| or \
+			s|\t\t\t\t\t\".*|\r|g)" \
+			${INSTDIR}/program/instdb.ins
+	done
 
 	# Make sure these do not get nuked.
 	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb} ${INSTDIR}/user/psprint/{driver,fontmetric} ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.52 2004/07/13 21:41:03 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.53 2004/07/15 16:37:01 suka Exp $
+
+  15 Jul 2004; suka@gentoo.org openoffice-ximian-1.1.55.ebuild,
+  openoffice-ximian-1.1.59.ebuild, openoffice-ximian-1.1.60.ebuild:
+  Do not install unneeded old gnome and kde menu items in the user dir, thanks
+  to brad[] for pointing out
 
   13 Jul 2004; suka@gentoo.org +files/1.1.2/nativefix.diff,
   -files/1.1.2/nativewidgets-vcl.diff, openoffice-ximian-1.1.60.ebuild:
