@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.4.ebuild,v 1.5 2001/01/09 23:04:11 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5.ebuild,v 1.1 2001/01/09 23:04:11 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -22,7 +22,6 @@ src_install()
 	fi
 	dodir /boot
 	dodir /usr/include /usr/src
-	dosym /var/log /usr/adm
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../src/linux/include/linux /usr/include/linux
 	dosym ../src/linux/include/asm-i386 /usr/include/asm
@@ -38,7 +37,14 @@ src_install()
 	dodir /dev
   	dodir /dev/pts
 	dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
-	dodir /usr/share /usr/bin/ /usr/doc
+	dodir /usr/share/man /usr/share/info /usr/bin/ /usr/doc
+
+#FHS 2.1 stuff
+	dosym share/man /usr/man
+	dosym share/doc /usr/doc
+	dosym share/info /usr/info
+#end FHS 2.1 stuff
+	
 	dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
 	dodir /usr/X11R6/lib 
 	dodir /var /var/shm /var/run /var/log/news
@@ -46,10 +52,14 @@ src_install()
 	touch ${D}/var/run/utmp
 	touch ${D}/var/log/wtmp
 	dodir /var/db/pkg /var/spool
+
+#supervise stuff
 	dodir /var/lib/supervise
 	install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/control
 	install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/services
-	dodir /root /opt /home/ftp /etc/modules /proc
+#end supervise stuff
+	dodir /root /opt /etc/modules /proc
+
 	chmod go-rx ${D}/root
 	dodir /tmp
 	chmod 1777 ${D}/tmp
@@ -108,9 +118,12 @@ src_install()
 	sed -e 's:##OSNAME##:Gentoo Linux:g' -e 's:##ARCH##:i686a:g' runlevels.orig > runlevels
 	rm runlevels.orig
 
+#env-update stuff
 	dodir /etc/env.d
 	insinto /etc/env.d
 	doins ${FILESDIR}/00basic
+#end env-update stuff
+
 }
 
 
