@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fmradio/xmms-fmradio-1.5.ebuild,v 1.6 2004/06/24 23:39:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fmradio/xmms-fmradio-1.5.ebuild,v 1.7 2004/06/29 16:42:55 dholm Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://silicone.free.fr/xmms-FMRadio/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 
 RDEPEND="media-sound/xmms"
 
