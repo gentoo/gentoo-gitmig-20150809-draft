@@ -1,0 +1,617 @@
+diff -ru kmail/antispamwizard.cpp /home/carsten/a/antispamwizard.cpp
+--- kmail/antispamwizard.cpp	2004-08-05 21:26:52.000000000 +0200
++++ /home/carsten/a/antispamwizard.cpp	2004-09-03 13:58:25.000000000 +0200
+@@ -141,6 +141,7 @@
+                     << mVirusRulesPage->selectedFolderName() << endl;
+ 
+   KMFilterActionDict dict;
++  QPtrList<KMFilter> filterList;
+ 
+   // Let's start with virus detection and handling,
+   // so we can avoid spam checks for viral messages
+@@ -168,7 +169,7 @@
+         pipeFilter->setStopProcessingHere( FALSE );
+         pipeFilter->setConfigureShortcut( FALSE );
+ 
+-        KMKernel::self()->filterMgr()->appendFilter( pipeFilter );
++        filterList.append( pipeFilter );
+       }
+     }
+ 
+@@ -213,7 +214,7 @@
+       virusFilter->setStopProcessingHere( TRUE );
+       virusFilter->setConfigureShortcut( FALSE );
+ 
+-      KMKernel::self()->filterMgr()->appendFilter( virusFilter );
++      filterList.append( virusFilter );
+     }
+   }
+   else { // AntiSpam mode
+@@ -240,7 +241,7 @@
+         pipeFilter->setStopProcessingHere( FALSE );
+         pipeFilter->setConfigureShortcut( FALSE );
+ 
+-        KMKernel::self()->filterMgr()->appendFilter( pipeFilter );
++        filterList.append( pipeFilter );
+       }
+     }
+ 
+@@ -288,7 +289,7 @@
+       spamFilter->setStopProcessingHere( TRUE );
+       spamFilter->setConfigureShortcut( FALSE );
+ 
+-      KMKernel::self()->filterMgr()->appendFilter( spamFilter );
++      filterList.append( spamFilter );
+     }
+ 
+     if ( mSpamRulesPage->classifyRulesSelected() )
+@@ -323,7 +324,8 @@
+       classSpamFilter->setApplyOnExplicit( FALSE );
+       classSpamFilter->setStopProcessingHere( TRUE );
+       classSpamFilter->setConfigureShortcut( TRUE );
+-      KMKernel::self()->filterMgr()->appendFilter( classSpamFilter );
++      classSpamFilter->setConfigureToolbar( TRUE );
++      filterList.append( classSpamFilter );
+ 
+       // Classify messages manually as not Spam / as Ham
+       KMFilter* classHamFilter = new KMFilter();
+@@ -350,92 +352,15 @@
+       classHamFilter->setApplyOnExplicit( FALSE );
+       classHamFilter->setStopProcessingHere( TRUE );
+       classHamFilter->setConfigureShortcut( TRUE );
+-      KMKernel::self()->filterMgr()->appendFilter( classHamFilter );
++      classHamFilter->setConfigureToolbar( TRUE );
++      filterList.append( classHamFilter );
+ 
+-      // add the classification filter actions to the toolbar
+-      QString filterNameSpam =
+-          QString( "Filter %1" ).arg( classSpamFilterPattern->name() );
+-      filterNameSpam = filterNameSpam.replace( " ", "_" );
+-      QString filterNameHam =
+-          QString( "Filter %1" ).arg( classHamFilterPattern->name() );
+-      filterNameHam = filterNameHam.replace( " ", "_" );
+-
+-      // FIXME post KDE 3.2
+-      // The following code manipulates the kmmainwin.rc file directly. Usuallay
+-      // one would expect to let the toolbar write back it's change from above
+-      // i.e. the new structure including the two added actions.
+-      // In KDE 3.2 there is no API for that so I only fund the way to read in
+-      // the XML file myself, to change it and write it out then.
+-      // As soon as an API is available, the following part can certainly get
+-      // replaced by one or two statements.
+-      // (a.gungl@gmx.de)
+-
+-      // make the toolbar changes persistent - let's be very conservative here
+-      QString config =
+-          KXMLGUIFactory::readConfigFile( "kmmainwin.rc", KMKernel::self()->xmlGuiInstance() );
+-#ifndef NDEBUG
+-      kdDebug(5006) << "Read kmmainwin.rc contents (last 1000 chars printed):" << endl;
+-      kdDebug(5006) << config.right( 1000 ) << endl;
+-      kdDebug(5006) << "#####################################################" << endl;
+-#endif
+-      QDomDocument domDoc;
+-      domDoc.setContent( config );
+-      QDomNodeList domNodeList = domDoc.elementsByTagName( "ToolBar" );
+-      if ( domNodeList.count() > 0 )
+-        kdDebug(5006) << "ToolBar section found." << endl;
+-      else
+-        kdDebug(5006) << "No ToolBar section found." << endl;
+-      for ( unsigned int i = 0; i < domNodeList.count(); i++ )
+-      {
+-        QDomNode domNode = domNodeList.item( i );
+-        QDomNamedNodeMap nodeMap = domNode.attributes();
+-        kdDebug(5006) << "name=" << nodeMap.namedItem( "name" ).nodeValue() << endl;
+-        if ( nodeMap.namedItem( "name" ).nodeValue() == "mainToolBar" )
+-        {
+-          kdDebug(5006) << "mainToolBar section found." << endl;
+-          bool spamActionFound = false;
+-          bool hamActionFound = false;
+-          QDomNodeList domNodeChildList = domNode.childNodes();
+-          for ( unsigned int j = 0; j < domNodeChildList.count(); j++ )
+-          {
+-            QDomNode innerDomNode = domNodeChildList.item( j );
+-            QDomNamedNodeMap innerNodeMap = innerDomNode.attributes();
+-            if ( innerNodeMap.namedItem( "name" ).nodeValue() == filterNameSpam )
+-              spamActionFound = true;
+-            if ( innerNodeMap.namedItem( "name" ).nodeValue() == filterNameHam )
+-              hamActionFound = true;
+-          }
+-
+-          // append the new actions if not yet existing
+-          if ( !spamActionFound )
+-          {
+-            QDomElement domElemSpam = domDoc.createElement( "Action" );
+-            domElemSpam.setAttribute( "name", filterNameSpam );
+-            domNode.appendChild( domElemSpam );
+-            kdDebug(5006) << "Spam action added to toolbar." << endl;
+-          }
+-          if ( !hamActionFound )
+-          {
+-            QDomElement domElemHam = domDoc.createElement( "Action" );
+-            domElemHam.setAttribute( "name", filterNameHam );
+-            domNode.appendChild( domElemHam );
+-            kdDebug(5006) << "Ham action added to toolbar." << endl;
+-          }
+-          if ( !spamActionFound || !hamActionFound )
+-          {
+-#ifndef NDEBUG
+-            kdDebug(5006) << "New kmmainwin.rc structur (last 1000 chars printed):" << endl;
+-            kdDebug(5006) << domDoc.toString().right( 1000 ) << endl;
+-            kdDebug(5006) << "####################################################" << endl;
+-#endif
+-            // write back the modified resource file
+-            KXMLGUIFactory::saveConfigFile( domDoc, "kmmainwin.rc",
+-                KMKernel::self()->xmlGuiInstance() );
+-          }
+-        }
+-        else
+-          kdDebug(5006) << "No mainToolBar section found." << endl;
+-      }
++      /* Now that all the filters have been added to the list, tell
++       * the filter manager about it. That will emit filterListUpdate
++       * which will result in the filter list in kmmainwidget being 
++       * initialized. This should happend only once. */
++      KMKernel::self()->filterMgr()->appendFilters( filterList );
++      
+     }
+   }
+ 
+diff -ru kmail/kmail_part.cpp /home/carsten/a/kmail_part.cpp
+--- kmail/kmail_part.cpp	2004-08-05 21:26:53.000000000 +0200
++++ /home/carsten/a/kmail_part.cpp	2004-09-03 13:58:38.000000000 +0200
+@@ -58,7 +58,7 @@
+ 
+ KMailPart::KMailPart(QWidget *parentWidget, const char *widgetName,
+ 		     QObject *parent, const char *name, const QStringList &) :
+-  DCOPObject("KMailIface"), KParts::ReadOnlyPart(parent, name),
++  DCOPObject("KMailIface"), KPIM::Part(parent, name),
+   mParentWidget( parentWidget )
+ {
+   kdDebug(5006) << "KMailPart()" << endl;
+@@ -94,6 +94,8 @@
+   kmsetSignalHandler(kmsignalHandler);
+   kapp->dcopClient()->resume(); // Ok. We are ready for DCOP requests.
+ 
++  connect( kmailKernel, SIGNAL( showMailCalled() ), SIGNAL( raise() ) );
++
+   // create a canvas to insert our widget
+   QWidget *canvas = new QWidget(parentWidget, widgetName);
+   canvas->setFocusPolicy(QWidget::ClickFocus);
+@@ -118,7 +120,8 @@
+   setXMLFile( "kmmainwin.rc" );
+   kmkernel->inboxFolder()->close();
+ #else
+-  mainWidget = new KMMainWidget( canvas, "mainWidget", actionCollection(), kapp->config());
++  mainWidget = new KMMainWidget( canvas, "mainWidget", this, actionCollection(), 
++                                 kapp->config());
+   QVBoxLayout *topLayout = new QVBoxLayout(canvas);
+   topLayout->addWidget(mainWidget);
+   mainWidget->setFocusPolicy(QWidget::ClickFocus);
+@@ -237,6 +240,7 @@
+   return mParentWidget;
+ }
+ 
++
+ KMailBrowserExtension::KMailBrowserExtension(KMailPart *parent) :
+   KParts::BrowserExtension(parent, "KMailBrowserExtension")
+ {
+diff -ru kmail/kmfilter.cpp /home/carsten/a/kmfilter.cpp
+--- kmail/kmfilter.cpp	2004-05-22 22:58:05.000000000 +0200
++++ /home/carsten/a/kmfilter.cpp	2004-09-03 13:58:02.000000000 +0200
+@@ -180,6 +180,8 @@
+ 
+     bStopProcessingHere = config->readBoolEntry("StopProcessingHere", true);
+     bConfigureShortcut = config->readBoolEntry("ConfigureShortcut", false);
++    bConfigureToolbar = config->readBoolEntry("ConfigureToolbar", false);
++    bConfigureToolbar = bConfigureToolbar && bConfigureShortcut;
+     mIcon = config->readEntry( "Icon", "gear" );
+ 
+     int i, numActions;
+@@ -251,6 +253,7 @@
+ 
+     config->writeEntry( "StopProcessingHere", bStopProcessingHere );
+     config->writeEntry( "ConfigureShortcut", bConfigureShortcut );
++    config->writeEntry( "ConfigureToolbar", bConfigureToolbar );
+     config->writeEntry( "Icon", mIcon );
+ 
+     QString key;
+diff -ru kmail/kmfilter.h /home/carsten/a/kmfilter.h
+--- kmail/kmfilter.h	2004-05-22 22:58:05.000000000 +0200
++++ /home/carsten/a/kmfilter.h	2004-09-03 13:57:48.000000000 +0200
+@@ -154,10 +154,42 @@
+   void setStopProcessingHere( bool aStop ) { bStopProcessingHere = aStop; }
+   bool stopProcessingHere() const { return bStopProcessingHere; }
+ 
+-  void setConfigureShortcut( bool aShort ) { bConfigureShortcut = aShort; }
++  /** Set whether this filter should be plugged into the filter menu.
++  */
++  void setConfigureShortcut( bool aShort ) { 
++    bConfigureShortcut = aShort; 
++    bConfigureToolbar = bConfigureToolbar && bConfigureShortcut; 
++  }
++  
++  /** @return TRUE if this filter should be plugged into the filter menu, 
++      FALSE otherwise.
++      @see setConfigureShortcut
++  */
+   bool configureShortcut() const { return bConfigureShortcut; }
+ 
++  /** Set whether this filter should be plugged into the toolbar.
++      This can be done only if a shortcut is defined.
++      @see setConfigureShortcut
++  */
++  void setConfigureToolbar( bool aTool ) { 
++    bConfigureToolbar = aTool && bConfigureShortcut; 
++  }
++  
++  /** @return TRUE if this filter should be plugged into the toolbar, 
++      FALSE otherwise.
++      @see setConfigureToolbar
++  */
++  bool configureToolbar() const { return bConfigureToolbar; }
++
++  /** Set the icon to be used if plugged into the filter menu 
++      or toolbar. Default is the gear icon.
++      @see setConfigureShortcut setConfigureToolbar
++  */
+   void setIcon( QString icon ) { mIcon = icon; }
++  
++  /** @return The name of the icon to be used. 
++      @see setIcon
++  */
+   QString icon() const { return mIcon; }
+ 
+   /**
+@@ -191,6 +223,7 @@
+   bool bApplyOnExplicit : 1;
+   bool bStopProcessingHere : 1;
+   bool bConfigureShortcut : 1;
++  bool bConfigureToolbar : 1;
+ };
+ 
+ #endif /*kmfilter_h*/
+diff -ru kmail/kmmainwidget.cpp /home/carsten/a/kmmainwidget.cpp
+--- kmail/kmmainwidget.cpp	2004-08-09 11:27:48.000000000 +0200
++++ /home/carsten/a/kmmainwidget.cpp	2004-09-03 13:55:55.000000000 +0200
+@@ -101,8 +101,9 @@
+ static KStaticDeleter<QPtrList<KMMainWidget> > mwlsd;
+ 
+ //-----------------------------------------------------------------------------
+-KMMainWidget::KMMainWidget(QWidget *parent, const char *name,
+-			   KActionCollection *actionCollection, KConfig* config ) :
++KMMainWidget::KMMainWidget(QWidget *parent, const char *name, 
++                           KXMLGUIClient *aGUIClient,
++                           KActionCollection *actionCollection, KConfig* config ) :
+     QWidget(parent, name),
+     mQuickSearchLine( 0 )
+ {
+@@ -120,10 +121,15 @@
+   mDestructed = false;
+   mActionCollection = actionCollection;
+   mTopLayout = new QVBoxLayout(this);
+-  mFilterActions.setAutoDelete(true);
++  mFilterMenuActions.setAutoDelete(true);
++  mFilterTBarActions.setAutoDelete(false);
+   mFilterCommands.setAutoDelete(true);
+   mJob = 0;
+   mConfig = config;
++  mGUIClient = aGUIClient;
++  // FIXME This should become a line separator as soon as the API
++  // is extended in kdelibs.
++  mToolbarActionSeparator = new KActionSeparator( actionCollection );
+ 
+   if( !s_mainWidgetList )
+     mwlsd.setObject( s_mainWidgetList, new QPtrList<KMMainWidget>() );
+@@ -2086,12 +2092,11 @@
+ 
+     menu->insertSeparator();
+ 
+-    // these two only make sense if there is a reader window.
+-    // I guess. Not sure about view source ;). Till
++    // this one only make sense if there is a reader window.
+     if (mMsgView) {
+       toggleFixFontAction()->plug(menu);
+-      viewSourceAction()->plug(menu);
+     }
++    viewSourceAction()->plug(menu);
+ 
+     menu->insertSeparator();
+     mPrintAction->plug( menu );
+@@ -2715,6 +2720,9 @@
+ 		     SLOT(slotCollapseAllThreads()),
+ 		     actionCollection(), "collapse_all_threads" );
+ 
++  mViewSourceAction = new KAction( i18n("&View Source"), Key_V, this,
++                                   SLOT(slotShowMsgSrc()), actionCollection(),
++                                   "view_source" );
+ 
+   //----- Go Menu
+   new KAction( KGuiItem( i18n("&Next Message"), QString::null,
+@@ -2881,6 +2889,19 @@
+   mHeaders->slotExpandOrCollapseAllThreads( false ); // collapse
+ }
+ 
++//-----------------------------------------------------------------------------
++void KMMainWidget::slotShowMsgSrc()
++{
++  KMMessage *msg = mHeaders->currentMsg();
++  if ( !msg )
++    return;
++  KMCommand *command = new KMShowMsgSrcCommand( this, msg,
++                                                mMsgView
++                                                ? mMsgView->isFixedFont()
++                                                : false );
++  command->start();
++}
++
+ 
+ //-----------------------------------------------------------------------------
+ void KMMainWidget::moveSelectedToFolder( int menuId )
+@@ -3007,9 +3028,7 @@
+     replyListAction()->setEnabled( single_actions );
+     redirectAction()->setEnabled( single_actions );
+     printAction()->setEnabled( single_actions );
+-    if (mMsgView) {
+-      viewSourceAction()->setEnabled( single_actions );
+-    }
++    viewSourceAction()->setEnabled( single_actions );
+ 
+     mSendAgainAction->setEnabled( single_actions &&
+              ( mHeaders->currentMsg() && mHeaders->currentMsg()->isSent() )
+@@ -3137,6 +3156,9 @@
+   connect( kmkernel->filterMgr(), SIGNAL( filterListUpdated() ),
+ 	   this, SLOT( initializeFilterActions() ));
+ 
++  // plug shortcut filter actions now
++  initializeFilterActions();
++  
+   QString newFeaturesMD5 = KMReaderWin::newFeaturesMD5();
+   if ( kmkernel->firstStart() ||
+        GlobalSettings::previousNewFeaturesMD5() != newFeaturesMD5 ) {
+@@ -3153,7 +3175,7 @@
+   if ( !startup )
+     startup = kmkernel->inboxFolder();
+ 
+-  if ( mFolderTree ) 
++  if ( mFolderTree )
+   {
+     mFolderTree->reload();
+     mFolderTree->showFolder( startup );
+@@ -3175,6 +3197,7 @@
+ //-----------------------------------------------------------------------------
+ void KMMainWidget::slotChangeCaption(QListViewItem * i)
+ {
++  if ( !i ) return;
+   // set the caption to the current full path
+   QStringList names;
+   for ( QListViewItem * item = i ; item ; item = item->parent() )
+@@ -3256,12 +3279,22 @@
+ {
+   QString filterName, normalizedName;
+   KMMetaFilterActionCommand *filterCommand;
+-  KAction *filterAction;
+-  mApplyFilterActionsMenu->popupMenu()->clear();
+-  mFilterActions.clear();
++  KAction *filterAction = 0;
++  
++  if ( !mFilterTBarActions.isEmpty() ) {
++    if ( mGUIClient->factory() )
++      mGUIClient->unplugActionList( "toolbar_filter_actions" );
++    mFilterTBarActions.clear();
++  }
++  if ( !mFilterMenuActions.isEmpty() ) {
++    mApplyFilterActionsMenu->popupMenu()->clear();
++    if ( mGUIClient->factory() )
++      mGUIClient->unplugActionList( "menu_filter_actions" );
++    mFilterMenuActions.clear();
++  }
+   mFilterCommands.clear();
+   for ( QPtrListIterator<KMFilter> it(*kmkernel->filterMgr()) ;
+-        it.current() ; ++it )
++        it.current() ; ++it ) {
+     if (!(*it)->isEmpty() && (*it)->configureShortcut()) {
+       filterName = QString("Filter %1").arg((*it)->name());
+       normalizedName = filterName.replace(" ", "_");
+@@ -3276,26 +3309,26 @@
+       filterAction = new KAction(as, icon, 0, filterCommand,
+                                  SLOT(start()), actionCollection(),
+                                  normalizedName.local8Bit());
+-      mFilterActions.append(filterAction);
++      filterAction->plug( mApplyFilterActionsMenu->popupMenu() );
++      mFilterMenuActions.append(filterAction);
++      // FIXME
++      // uncomment the next if statement after the filter dialog supports
++      // separate activation of filters for the toolbar - currently 
++      // we better use the coupled way
++      // if ( (*it)->configureToolbar() )
++        mFilterTBarActions.append(filterAction);
+     }
+-
+-  plugFilterActions(mApplyFilterActionsMenu->popupMenu());
++  }
++  if ( !mFilterMenuActions.isEmpty() && mGUIClient->factory() )
++    mGUIClient->plugActionList( "menu_filter_actions", mFilterMenuActions );
++  if ( !mFilterTBarActions.isEmpty() && mGUIClient->factory() ) {
++    mFilterTBarActions.prepend( mToolbarActionSeparator );
++    mGUIClient->plugActionList( "toolbar_filter_actions", mFilterTBarActions );
++  }
+ }
+ 
+ 
+ //-----------------------------------------------------------------------------
+-void KMMainWidget::plugFilterActions(QPopupMenu *menu)
+-{
+-  for (QPtrListIterator<KMFilter> it(*kmkernel->filterMgr()); it.current(); ++it)
+-      if (!(*it)->isEmpty() && (*it)->configureShortcut()) {
+-	  QString filterName = QString("Filter %1").arg((*it)->name());
+-	  filterName = filterName.replace(" ","_");
+-	  KAction *filterAction = action(filterName.local8Bit());
+-	  if (filterAction && menu)
+-	      filterAction->plug(menu);
+-      }
+-}
+-
+ void KMMainWidget::slotSubscriptionDialog()
+ {
+   if (!mFolder) return;
+@@ -3355,7 +3388,6 @@
+   AntiSpamWizard wiz( AntiSpamWizard::AntiSpam,
+                       this, folderTree(), actionCollection() );
+   wiz.exec();
+-  emit modifiedToolBarConfig();
+ }
+ 
+ //-----------------------------------------------------------------------------
+@@ -3364,7 +3396,6 @@
+   AntiSpamWizard wiz( AntiSpamWizard::AntiVirus,
+                       this, folderTree(), actionCollection() );
+   wiz.exec();
+-  //emit modifiedToolBarConfig();
+ }
+ 
+ //-----------------------------------------------------------------------------
+diff -ru kmail/kmmainwidget.h /home/carsten/a/kmmainwidget.h
+--- kmail/kmmainwidget.h	2004-08-05 21:26:53.000000000 +0200
++++ /home/carsten/a/kmmainwidget.h	2004-09-03 13:55:26.000000000 +0200
+@@ -9,6 +9,7 @@
+ #define __KMMAINWIDGET
+ 
+ #include <kurl.h>
++#include <kxmlguiclient.h>
+ #include <qlistview.h>
+ #include <qvbox.h>
+ 
+@@ -67,7 +68,8 @@
+ 
+ public:
+   KMMainWidget(QWidget *parent, const char *name,
+-	       KActionCollection *actionCollection,
++               KXMLGUIClient *aGUIClient,
++               KActionCollection *actionCollection,
+          KConfig*config = KMKernel::config() );
+   virtual ~KMMainWidget();
+   void destruct();
+@@ -116,6 +118,7 @@
+   KAction *findInMessageAction() const { return mFindInMessageAction; }
+   KAction *saveAttachmentsAction() const { return mSaveAttachmentsAction; }
+   KAction *openAction() const { return mOpenAction; }
++  KAction *viewSourceAction() { return mViewSourceAction; }
+ 
+   KActionMenu *statusMenu()  const{ return mStatusMenu; }
+   KActionMenu *threadStatusMenu() const { return mThreadStatusMenu; }
+@@ -128,7 +131,6 @@
+ 
+   // Forwarded to the reader window.
+   KToggleAction *toggleFixFontAction() { return mMsgView->toggleFixFontAction(); }
+-  KAction *viewSourceAction() { return mMsgView->viewSourceAction(); }
+ 
+   KMHeaders *headers() const { return mHeaders; }
+   void toggleSystemTray();
+@@ -186,7 +188,6 @@
+ signals:
+   void messagesTransfered( bool );
+   void captionChangeRequest( const QString & caption );
+-  void modifiedToolBarConfig( void );
+ 
+ protected:
+   void setupActions();
+@@ -257,6 +258,7 @@
+   void slotExpandAllThreads();
+   void slotCollapseThread();
+   void slotCollapseAllThreads();
++  void slotShowMsgSrc();
+   void slotSetMsgStatusNew();
+   void slotSetMsgStatusUnread();
+   void slotSetMsgStatusRead();
+@@ -348,8 +350,6 @@
+   void removeDuplicates();
+   /** Create actions for marked filters */
+   void initializeFilterActions();
+-  /** Plug filter actions into a popup menu */
+-  void plugFilterActions(QPopupMenu*);
+ 
+   /** Slot to reply to a message */
+   void slotReplyToMsg();
+@@ -373,7 +373,7 @@
+   // Message actions
+   KAction *mTrashAction, *mDeleteAction, *mSaveAsAction, *mEditAction,
+     *mSendAgainAction, *mApplyFiltersAction, *mFindInMessageAction,
+-    *mSaveAttachmentsAction, *mOpenAction;
++    *mSaveAttachmentsAction, *mOpenAction, *mViewSourceAction;
+   // Composition actions
+   KAction *mPrintAction, *mReplyAction, *mReplyAllAction, *mReplyAuthorAction,
+       *mReplyListAction,
+@@ -460,15 +460,18 @@
+ 
+   QGuardedPtr<KMail::Vacation> mVacation;
+   KActionCollection *mActionCollection;
++  KActionSeparator  *mToolbarActionSeparator;
+   QVBoxLayout *mTopLayout;
+   bool mDestructed, mForceJumpToUnread;
+-  QPtrList<KAction> mFilterActions;
++  QPtrList<KAction> mFilterMenuActions;
++  QPtrList<KAction> mFilterTBarActions;
+   QPtrList<KMMetaFilterActionCommand> mFilterCommands;
+   QGuardedPtr <KMail::FolderJob> mJob;
+ 
+   KMSystemTray  *mSystemTray;
+   KConfig *mConfig;
+-
++  KXMLGUIClient *mGUIClient;
++  
+   static QPtrList<KMMainWidget>* s_mainWidgetList;
+ };
+ 
+diff -ru kmail/kmmainwin.cpp /home/carsten/a/kmmainwin.cpp
+--- kmail/kmmainwin.cpp	2004-08-05 21:26:53.000000000 +0200
++++ /home/carsten/a/kmmainwin.cpp	2004-09-03 13:54:47.000000000 +0200
+@@ -27,7 +27,7 @@
+       mReallyClose( false )
+ {
+   kapp->ref();
+-  mKMMainWidget = new KMMainWidget( this, "KMMainWidget", actionCollection() );
++  mKMMainWidget = new KMMainWidget( this, "KMMainWidget", this, actionCollection() );
+   mKMMainWidget->resize( 450, 600 );
+   setCentralWidget(mKMMainWidget);
+   setupStatusBar();
+@@ -44,8 +44,9 @@
+ 
+   KStdAction::quit( this, SLOT(slotQuit()), actionCollection());
+   createGUI( "kmmainwin.rc", false );
++  // Don't use conserveMemory() because this renders dynamic plugging
++  // of actions unusable!
+ 
+-  conserveMemory();
+   applyMainWindowSettings(KMKernel::config(), "Main Window");
+ 
+   connect( KPIM::BroadcastStatus::instance(), SIGNAL( statusMsg( const QString& ) ),
+diff -ru kmail/kmmainwin.rc /home/carsten/a/kmmainwin.rc
+--- kmail/kmmainwin.rc	2004-07-17 21:16:37.000000000 +0200
++++ /home/carsten/a/kmmainwin.rc	2004-09-03 13:57:00.000000000 +0200
+@@ -1,5 +1,5 @@
+ <!DOCTYPE kpartgui>
+-<kpartgui version="77" name="kmmainwin" >
++<kpartgui version="78" name="kmmainwin" >
+  <MenuBar>
+   <Menu noMerge="1" name="file" >
+    <text>&amp;File</text>
+@@ -110,7 +110,11 @@
+    <Action name="thread_ignored" />
+    <Separator/>
+    <Action name="apply_filters" />
+-   <Action name="apply_filter_actions" />
++   <Separator/>
++   <Menu name="apply_filter_actions" >
++     <text>A&amp;pply Filter</text>
++     <ActionList name="menu_filter_actions" />
++   </Menu>
+   </Menu>
+   <Menu noMerge="1" name="tools">
+    <text>&amp;Tools</text>
+@@ -163,5 +167,6 @@
+   <Action name="move_to_trash" />
+   <Separator/>
+   <Action name="search_messages" />
++  <ActionList name="toolbar_filter_actions" />
+  </ToolBar>
+ </kpartgui>
