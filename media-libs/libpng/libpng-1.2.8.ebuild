@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.8.ebuild,v 1.1 2005/01/03 21:58:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.8.ebuild,v 1.2 2005/01/19 04:46:40 gongloo Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -36,9 +36,9 @@ src_unpack() {
 		-e '/^prefix=/s:/local::' \
 		-e '/^MANPATH=/s:/man:/share/man:' \
 		-e "/^LIBPATH=/s:/lib:/$(get_libdir):" \
-		-e '/^OBJSDLL =/s:=:= -lz -lm :' \
 		-e 's:mkdir:mkdir -p:' \
 		${makefilein} > Makefile
+	use ppc-macos || sed -i -e '/^OBJSDLL =/s:=:= -lz -lm :' Makefile
 }
 
 src_compile() {
