@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99-r1.ebuild,v 1.1 2003/03/18 00:31:53 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99-r1.ebuild,v 1.2 2003/04/03 00:10:45 liquidx Exp $
 
 inherit gnome2 
 
@@ -22,10 +22,10 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 	>=net-libs/gnet-1.1.4
 	>=app-text/scrollkeeper-0.3.5
 	>=dev-util/pkgconfig-0.12.0
-	>=dev-util/intltool-0.22"
+	>=dev-util/intltool-0.22
+	>=gnome-base/gconf-2.0
+	sys-devel/gettext"
 # the dependency on gnome-panel was wrong in configure.in
-
-RDEPEND="sys-devel/gettext"
 
 src_unpack () {
 	unpack ${A}
