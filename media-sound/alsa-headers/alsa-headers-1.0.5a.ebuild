@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.5a.ebuild,v 1.3 2004/07/19 19:23:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.5a.ebuild,v 1.4 2004/07/20 05:46:55 eradicator Exp $
 
-IUSE="oss"
+IUSE=""
 
 inherit kernel-mod flag-o-matic eutils
 
