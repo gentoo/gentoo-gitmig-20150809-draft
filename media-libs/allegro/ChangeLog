@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.3 2002/04/30 09:09:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.4 2002/05/13 06:09:54 mkennedy Exp $
+
+*allegro-4.0.1 (30 Apr 2002)
+
+  13 May 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  allegro-4.0.1-r2.ebuild
+  files/digest-allegro-4.0.1-r2, ChangeLog :
+
+  Fixed dependencies. Fixed tetex sandbox violations. Fixed build
+  flags.
 
 *allegro-4.0.1 (30 Apr 2002)
 
