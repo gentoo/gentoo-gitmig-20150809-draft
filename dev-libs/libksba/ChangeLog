@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.5 2003/03/05 04:40:15 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.6 2003/04/07 19:44:40 danarmak Exp $
+
+*libksba-0.4.7 (07 Apr 2003)
+
+  07 Apr 2003; Dan Armak <danarmak@gentoo.org> libksba-0.4.7.ebuild:
+  New upstream version. Fixes, for me, a build problem where a missing makefile
+  dependancy caused emake to fail.
 
 *libksba-0.4.6 (31 Jan 2003)
 
