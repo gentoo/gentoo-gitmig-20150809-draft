@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/qt-dcgui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/ChangeLog,v 1.5 2002/12/01 05:27:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/ChangeLog,v 1.6 2002/12/02 21:15:54 vapier Exp $
+
+*qt-dcgui-0.2_beta5 (02 Dec 2002)
+
+  02 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump
 
 *qt-dcgui-0.2_beta4 (01 Dec 2002)
 
