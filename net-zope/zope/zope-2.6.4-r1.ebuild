@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.8 2004/07/01 22:51:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.9 2004/07/20 01:06:14 pylon Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz"
 LICENSE="ZPL"
 SLOT="${PV}"
 
-KEYWORDS="x86 sparc ~ppc ~alpha"
+KEYWORDS="x86 sparc ppc ~alpha"
 IUSE="unicode"
 
 # This is for developers that wish to test Zope with virtual/python.
