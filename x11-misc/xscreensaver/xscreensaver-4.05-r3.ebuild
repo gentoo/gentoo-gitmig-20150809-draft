@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.10 2003/02/13 17:21:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.11 2003/03/29 00:24:03 liquidx Exp $
 
 IUSE="pam gtk motif gnome opengl"
 
@@ -13,7 +13,7 @@ SLOT="0"
 
 DEPEND="virtual/x11 sys-devel/bc
 	gtk? ( x11-libs/gtk+ )
-	motif? ( >=x11-libs/openmotif-2.1.30 )
+	motif? ( virtual/motif )
 	opengl? ( virtual/opengl >=media-libs/gle-3.0.1 )
 	gnome? ( media-libs/gdk-pixbuf
 		>=gnome-base/control-center-1.4.0.1-r1 )
