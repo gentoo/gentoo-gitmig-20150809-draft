@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkimlib/ruby-gdkimlib-0.34.ebuild,v 1.3 2003/08/07 03:10:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkimlib/ruby-gdkimlib-0.34.ebuild,v 1.4 2004/01/09 14:58:04 agriffis Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/gdkimlib
 DESCRIPTION="Ruby GdkImlib bindings"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/ruby-gnome/ruby-gnome-all-${PV}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="x86 ~alpha"
+KEYWORDS="x86 alpha"
 
 DEPEND=">=dev-lang/ruby-1.6.4-r1
 	=x11-libs/gtk+-1.2*
