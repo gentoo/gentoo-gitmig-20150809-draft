@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.5.0.ebuild,v 1.1 2003/09/05 16:32:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.5.0.ebuild,v 1.2 2003/09/09 20:14:54 mholzer Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 DEPEND="virtual/glibc
-	~media-libs/libebml-${PV}"
+	~media-libs/libebml-0.5.1"
 
 src_compile() {
 	cd ${S}/make/linux

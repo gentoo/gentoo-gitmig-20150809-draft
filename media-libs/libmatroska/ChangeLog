@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.2 2003/09/05 16:32:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.3 2003/09/09 20:14:54 mholzer Exp $
+
+  09 Sep 2003; Martin Holzer <mholzer@gentoo.org> libmatroska-0.5.0.ebuild:
+  Changed depend.
 
 *libmatroska-0.5.0 (05 Sep 2003)
 
