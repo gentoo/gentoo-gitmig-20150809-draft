@@ -1,0 +1,62 @@
+diff -urN icecast-1.3.12/Makefile.in icecast-1.3.12-modified/Makefile.in
+--- icecast-1.3.12/Makefile.in	Wed Apr 10 17:51:24 2002
++++ icecast-1.3.12-modified/Makefile.in	Tue Jul 23 18:16:26 2002
+@@ -59,17 +59,17 @@
+ POST_UNINSTALL = :
+ CC = @CC@
+ CRYPTLIB = @CRYPTLIB@
+-ICECAST_BINDIR = @ICECAST_BINDIR@
+-ICECAST_DOCDIR = @ICECAST_DOCDIR@
+-ICECAST_ETCDIR = @ICECAST_ETCDIR@
+-ICECAST_ETCDIR_INST = @ICECAST_ETCDIR_INST@
+-ICECAST_LOGDIR = @ICECAST_LOGDIR@
+-ICECAST_LOGDIR_INST = @ICECAST_LOGDIR_INST@
+-ICECAST_SBINDIR = @ICECAST_SBINDIR@
+-ICECAST_STATICDIR = @ICECAST_STATICDIR@
+-ICECAST_STATICDIR_INST = @ICECAST_STATICDIR_INST@
+-ICECAST_TEMPLATEDIR = @ICECAST_TEMPLATEDIR@
+-ICECAST_TEMPLATEDIR_INST = @ICECAST_TEMPLATEDIR_INST@
++ICECAST_BINDIR = /usr/bin
++ICECAST_DOCDIR = /usr/share/doc/${P}
++ICECAST_ETCDIR = /etc/icecast
++ICECAST_ETCDIR_INST = /etc/icecast
++ICECAST_LOGDIR = /var/log/icecast
++ICECAST_LOGDIR_INST = /var/log/icecast
++ICECAST_SBINDIR = /usr/sbin
++ICECAST_STATICDIR = /usr/share/icecast/static
++ICECAST_STATICDIR_INST = /usr/share/icecast/static
++ICECAST_TEMPLATEDIR = /usr/share/icecast/templates
++ICECAST_TEMPLATEDIR_INST = /usr/share/icecast/templates
+ MAINT = @MAINT@
+ MAKEINFO = @MAKEINFO@
+ PACKAGE = @PACKAGE@
+diff -urN icecast-1.3.12/conf/icecast.conf.dist.in icecast-1.3.12-modified/conf/icecast.conf.dist.in
+--- icecast-1.3.12/conf/icecast.conf.dist.in	Fri Dec 10 22:11:02 1999
++++ icecast-1.3.12-modified/conf/icecast.conf.dist.in	Tue Jul 23 18:31:02 2002
+@@ -210,7 +210,7 @@
+ ######################
+ 
+ #staticdir c:\windows\desktop
+-staticdir @ICECAST_STATICDIR_INST@
++staticdir /usr/share/icecast/static
+ 
+ ############################# Templates ######################################
+ # the icecast server uses templtes to format output for list.cgi and
+@@ -218,7 +218,7 @@
+ # please use absolute paths if possible
+ #############################
+ 
+-templatedir @ICECAST_TEMPLATEDIR_INST@
++templatedir /usr/share/icecast/templates
+ 
+ ############################# Statistics ######################################
+ # The icecast server dumps statistics to a file on a regular basis.
+@@ -228,7 +228,7 @@
+ # X > 0 means dump stats every X seconds to the file specified by stats_log
+ #############################
+ 
+-logdir @ICECAST_LOGDIR_INST@
++logdir /var/log/icecast
+ stats_log stats.log
+ statshtml_log stats.html
+ stats_time 60

@@ -1,10 +1,20 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.4 2002/07/07 08:12:08 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.5 2002/07/24 00:09:55 raker Exp $
+
+*icecast-1.3.12-r1 (23 Jul 2002)
+
+  23 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  icecast-1.3.12-r1.ebuild, files/digest-icecast-1.3.12-r1,
+  files/variables.diff :
+
+  Fixed ebuild so that it installs files in an FHS compliant manner.
+  Also adjust icecast.conf.dist so that by default it is pointing to
+  the proper static, templates, and logging directories.
 
 *icecast-1.3.12 (25 Apr 2002)
 
-  07 Jul 2002: phoen][x <phoenix@gentoo.org> icecast-1.3.12.ebuild :
+  07 Jul 2002; phoen][x <phoenix@gentoo.org> icecast-1.3.12.ebuild :
   Added KEYWORDS, LICENSE, SLOT.
 
   25 Apr 2002: M.Jones <ashmodai@gentoo.org> icecast-1.3.12.ebuild :
