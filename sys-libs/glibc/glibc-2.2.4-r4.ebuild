@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.1 2001/12/07 19:14:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.2 2001/12/07 19:15:45 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -135,7 +135,7 @@ pkg_preinst()
 		fi
 	done
     
-   [ ! -e ${ROOT}etc/localtime ] && "Please remember to set your timezone using the zic command."
+   [ ! -e ${ROOT}etc/localtime ] && echo "Please remember to set your timezone using the zic command."
 }
 
 pkg_postinst()
