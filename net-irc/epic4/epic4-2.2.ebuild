@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.2.ebuild,v 1.2 2005/02/28 23:56:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.2.ebuild,v 1.3 2005/03/01 00:03:45 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,7 +21,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
 
 pkg_setup() {
-	if built_with_use dev-lang/perl ithreads
+	if use perl && built_with_use dev-lang/perl ithreads
 	then
 		error "You need perl compiled with USE=\"-ithreads\" to be able to compile epic4."
 		die "perl with USE=\"ithreads\" needed"
