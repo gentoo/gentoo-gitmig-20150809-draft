@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.0.ebuild,v 1.8 2004/06/25 23:03:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.0.ebuild,v 1.9 2004/07/21 21:14:19 tgall Exp $
 
 RPM_V="2"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.redhat.com/pub/redhat/linux/rawhide/SRPMS/SRPMS/${P}-${RPM_V}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha ia64 ~amd64"
+KEYWORDS="x86 ppc alpha ia64 ~amd64 ppc64"
 IUSE=""
 
 DEPEND="virtual/libc
