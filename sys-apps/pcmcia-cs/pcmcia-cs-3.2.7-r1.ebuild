@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.7-r1.ebuild,v 1.2 2004/09/27 05:23:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.7-r1.ebuild,v 1.3 2004/10/04 05:11:18 iggy Exp $
 
 inherit eutils
 
@@ -91,14 +91,7 @@ src_compile() {
 		myconf="${myconf} --cardbus"
 	fi
 
-	# x86 is not a valid arch for configure... use a case statement
-	# here to make it easy for other arches to add their own
-	# workarounds.
-	case "${ARCH}" in
-		x86) myarch="i386" ;;
-		*)   myarch="${ARCH}" ;;
-	esac
-
+	set_arch_to_kernel
 	# Use $CFLAGS for user tools, but standard kernel optimizations
 	# for the kernel modules (for compatibility).
 	#
@@ -122,6 +115,7 @@ src_compile() {
 
 src_install () {
 	make PREFIX=${D} install || die "failed installing"
+	set_arch_to_portage
 
 	# remove included rc scripts since we have our own
 	rm -rf ${D}/etc/rc*.d
