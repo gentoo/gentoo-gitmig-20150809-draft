@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/pvm-povray
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/ChangeLog,v 1.1 2003/09/09 19:45:09 tantive Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/ChangeLog,v 1.2 2004/04/20 15:41:06 mholzer Exp $
+
+  20 Apr 2004; Martin Holzer <mholzer@gentoo.org> pvm-povray-3.1g.ebuild:
+  fixing src_uri to use mirror://sf
 
 *pvm-povray-3.1g (09 Sep 2003)
 
