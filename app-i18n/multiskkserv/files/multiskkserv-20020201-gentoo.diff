@@ -1,0 +1,130 @@
+diff -Naru before/cdb-0.75/Makefile after/cdb-0.75/Makefile
+--- before/cdb-0.75/Makefile	2000-02-19 20:42:05.000000000 +0000
++++ after/cdb-0.75/Makefile	2003-12-27 04:39:11.000000000 +0000
+@@ -22,7 +22,7 @@
+ 
+ auto_home.c: \
+ auto-str conf-home
+-	./auto-str auto_home `head -1 conf-home` > auto_home.c
++	./auto-str auto_home `head -n 1 conf-home` > auto_home.c
+ 
+ auto_home.o: \
+ compile auto_home.c
+@@ -126,14 +126,14 @@
+ cdbmake-12: \
+ warn-auto.sh cdbmake-12.sh conf-home
+ 	cat warn-auto.sh cdbmake-12.sh \
+-	| sed s}HOME}"`head -1 conf-home`"}g \
++	| sed s}HOME}"`head -n 1 conf-home`"}g \
+ 	> cdbmake-12
+ 	chmod 755 cdbmake-12
+ 
+ cdbmake-sv: \
+ warn-auto.sh cdbmake-sv.sh conf-home
+ 	cat warn-auto.sh cdbmake-sv.sh \
+-	| sed s}HOME}"`head -1 conf-home`"}g \
++	| sed s}HOME}"`head -n 1 conf-home`"}g \
+ 	> cdbmake-sv
+ 	chmod 755 cdbmake-sv
+ 
+@@ -167,7 +167,7 @@
+ compile: \
+ warn-auto.sh conf-cc
+ 	( cat warn-auto.sh; \
+-	echo exec "`head -1 conf-cc`" '-c $${1+"$$@"}' \
++	echo exec "`head -n 1 conf-cc`" '-c $${1+"$$@"}' \
+ 	) > compile
+ 	chmod 755 compile
+ 
+@@ -210,7 +210,7 @@
+ warn-auto.sh conf-ld
+ 	( cat warn-auto.sh; \
+ 	echo 'main="$$1"; shift'; \
+-	echo exec "`head -1 conf-ld`" \
++	echo exec "`head -n 1 conf-ld`" \
+ 	'-o "$$main" "$$main".o $${1+"$$@"}' \
+ 	) > load
+ 	chmod 755 load
+@@ -249,7 +249,7 @@
+ rts: \
+ warn-auto.sh rts.sh conf-home
+ 	cat warn-auto.sh rts.sh \
+-	| sed s}HOME}"`head -1 conf-home`"}g \
++	| sed s}HOME}"`head -n 1 conf-home`"}g \
+ 	> rts
+ 	chmod 755 rts
+ 
+@@ -284,8 +284,8 @@
+ systype: \
+ find-systype.sh conf-cc conf-ld trycpp.c x86cpuid.c
+ 	( cat warn-auto.sh; \
+-	echo CC=\'`head -1 conf-cc`\'; \
+-	echo LD=\'`head -1 conf-ld`\'; \
++	echo CC=\'`head -n 1 conf-cc`\'; \
++	echo LD=\'`head -n 1 conf-ld`\'; \
+ 	cat find-systype.sh; \
+ 	) | sh > systype
+ 
+diff -Naru before/multiskkserv-20020201/aclocal.m4 after/multiskkserv-20020201/aclocal.m4
+--- before/multiskkserv-20020201/aclocal.m4	2002-01-31 17:50:23.000000000 +0000
++++ after/multiskkserv-20020201/aclocal.m4	2003-12-27 04:39:29.000000000 +0000
+@@ -1853,7 +1853,7 @@
+     # If the export-symbols file already is a .def file (1st line
+     # is EXPORTS), use it as is.
+     # If DATA tags from a recent dlltool are present, honour them!
+-    archive_expsym_cmds='if test "x`head -1 $export_symbols`" = xEXPORTS; then
++    archive_expsym_cmds='if test "x`head -n 1 $export_symbols`" = xEXPORTS; then
+ 	cp $export_symbols $output_objdir/$soname-def;
+       else
+ 	echo EXPORTS > $output_objdir/$soname-def;
+@@ -3792,7 +3792,7 @@
+   lt_cv_file_magic_cmd='/usr/bin/file -L'
+   case "$host_os" in
+   rhapsody* | darwin1.[[012]])
+-    lt_cv_file_magic_test_file=`echo /System/Library/Frameworks/System.framework/Versions/*/System | head -1`
++    lt_cv_file_magic_test_file=`echo /System/Library/Frameworks/System.framework/Versions/*/System | head -n 1`
+     ;;
+   *) # Darwin 1.3 on
+     lt_cv_file_magic_test_file='/usr/lib/libSystem.dylib'
+diff -Naru before/multiskkserv-20020201/config.guess after/multiskkserv-20020201/config.guess
+--- before/multiskkserv-20020201/config.guess	2002-01-12 20:23:16.000000000 +0000
++++ after/multiskkserv-20020201/config.guess	2003-12-27 04:39:35.000000000 +0000
+@@ -319,7 +319,7 @@
+ 	echo m68k-sun-sunos${UNAME_RELEASE}
+ 	exit 0 ;;
+     sun*:*:4.2BSD:*)
+-	UNAME_RELEASE=`(head -1 /etc/motd | awk '{print substr($5,1,3)}') 2>/dev/null`
++	UNAME_RELEASE=`(head -n 1 /etc/motd | awk '{print substr($5,1,3)}') 2>/dev/null`
+ 	test "x${UNAME_RELEASE}" = "x" && UNAME_RELEASE=3
+ 	case "`/bin/arch`" in
+ 	    sun3)
+@@ -506,7 +506,7 @@
+ 	fi
+ 	exit 0 ;;
+     *:AIX:*:[45])
+-	IBM_CPU_ID=`/usr/sbin/lsdev -C -c processor -S available | head -1 | awk '{ print $1 }'`
++	IBM_CPU_ID=`/usr/sbin/lsdev -C -c processor -S available | head -n 1 | awk '{ print $1 }'`
+ 	if /usr/sbin/lsattr -El ${IBM_CPU_ID} | grep ' POWER' >/dev/null 2>&1; then
+ 		IBM_ARCH=rs6000
+ 	else
+diff -Naru before/multiskkserv-20020201/configure after/multiskkserv-20020201/configure
+--- before/multiskkserv-20020201/configure	2002-01-31 17:50:26.000000000 +0000
++++ after/multiskkserv-20020201/configure	2003-12-27 04:39:45.000000000 +0000
+@@ -2590,7 +2590,7 @@
+   lt_cv_file_magic_cmd='/usr/bin/file -L'
+   case "$host_os" in
+   rhapsody* | darwin1.[012])
+-    lt_cv_file_magic_test_file=`echo /System/Library/Frameworks/System.framework/Versions/*/System | head -1`
++    lt_cv_file_magic_test_file=`echo /System/Library/Frameworks/System.framework/Versions/*/System | head -n 1`
+     ;;
+   *) # Darwin 1.3 on
+     lt_cv_file_magic_test_file='/usr/lib/libSystem.dylib'
+@@ -4311,7 +4311,7 @@
+     # If the export-symbols file already is a .def file (1st line
+     # is EXPORTS), use it as is.
+     # If DATA tags from a recent dlltool are present, honour them!
+-    archive_expsym_cmds='if test "x`head -1 $export_symbols`" = xEXPORTS; then
++    archive_expsym_cmds='if test "x`head -n 1 $export_symbols`" = xEXPORTS; then
+ 	cp $export_symbols $output_objdir/$soname-def;
+       else
+ 	echo EXPORTS > $output_objdir/$soname-def;

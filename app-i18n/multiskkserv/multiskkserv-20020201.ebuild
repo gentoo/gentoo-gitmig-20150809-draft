@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.4 2003/12/08 18:47:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.5 2003/12/27 05:10:55 nakano Exp $
 
 inherit eutils
 
@@ -33,6 +33,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${CDB_P}-errno.diff
 
 	cp ${FILESDIR}/multiskkserv.conf ${S}
+
+	cd ${WORKDIR}
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
