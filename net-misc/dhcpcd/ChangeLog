@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.23 2003/10/03 19:36:08 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.24 2003/10/09 19:44:22 pappy Exp $
+
+  09 Oct 2003; Alexander Gabert <pappy@gentoo.org> dhcpcd-1.3.22_p4-r1.ebuild:
+  removed hardened-gcc -lc
 
   03 Oct 2003; Alexander Gabert <pappy@gentoo.org> dhcpcd-1.3.22_p4-r1.ebuild:
   added -static -lc for propolice
