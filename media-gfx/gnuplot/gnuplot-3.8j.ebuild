@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j.ebuild,v 1.8 2004/06/24 22:39:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j.ebuild,v 1.9 2004/06/30 17:29:41 vapier Exp $
 
 MY_P="${P}.0"
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc ~sparc alpha amd64 ia64"
 IUSE="X readline svga plotutils pdflib doc"
 
 # Old png driver seems to have problems; switching to gd instead
-DEPEND=">=media-libs/libgd-2
+DEPEND=">=media-libs/gd-2
 	pdflib? ( media-libs/pdflib )
 	doc? ( virtual/tetex )
 	X? ( virtual/x11 )
