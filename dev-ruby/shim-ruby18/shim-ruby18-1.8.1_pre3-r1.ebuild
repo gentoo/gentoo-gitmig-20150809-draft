@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/shim-ruby18-1.8.1_pre3-r1.ebuild,v 1.1 2004/08/19 17:29:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/shim-ruby18-1.8.1_pre3-r1.ebuild,v 1.2 2004/10/03 14:37:23 usata Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/shim/${MY_P}.tar.bz2"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ppc"
 
 IUSE=""
 # don't define USE_RUBY since shim-ruby only supports ruby16

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/shim-ruby18
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/ChangeLog,v 1.8 2004/08/19 17:29:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/ChangeLog,v 1.9 2004/10/03 14:37:23 usata Exp $
+
+  03 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  shim-ruby18-1.8.1_pre3-r1.ebuild, -shim-ruby18-1.8.1_pre3.ebuild:
+  Stable on x86 and ppc.
 
 *shim-ruby18-1.8.1_pre3-r1 (20 Aug 2004)
 
