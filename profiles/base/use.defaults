@@ -8,6 +8,7 @@ directfb					dev-libs/DirectFB
 esd							media-sound/esound
 gdbm						sys-libs/gdbm
 ggi							media-libs/libggi
+gif							media-libs/giflib
 gnome						gnome-base/gnome
 gphoto2						media-gfx/gphoto2
 gpm							sys-libs/gpm
@@ -23,10 +24,12 @@ motif						x11-libs/openmotif
 mozilla						net-www/mozilla
 mysql						dev-db/mysql
 nas							media-libs/nas
+nls							sys-devel/gettext
 oggvorbis					media-libs/libvorbis
 opengl						virtual/opengl
 pam							sys-libs/pam
 perl						dev-lang/perl
+png							media-libs/libpng
 postgres					dev-db/postgresql
 python						dev-lang/python
 qt							x11-libs/qt
@@ -41,5 +44,6 @@ svga						media-libs/svgalib
 tcltk						dev-lang/tcl dev-lang/tk
 tcpd						sys-apps/tcp-wrappers
 tetex						app-text/tetex
+tiff						media-libs/tiff
 ungif						media-libs/ungif
 X							x11-base/xfree

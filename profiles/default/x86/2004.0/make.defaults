@@ -1,0 +1,4 @@
+# Copyright 2002-2004 Gentoo Technologies, Inc.
+# System-wide defaults for the gcc 3 Portage system
+
+COMPILER="gcc3"

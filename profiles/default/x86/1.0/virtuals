@@ -1,0 +1,4 @@
+virtual/linux-sources				sys-kernel/gentoo-sources
+virtual/xemacs						app-editors/xemacs
+virtual/winkernel					sys-kernel/win4lin-sources
+virtual/wine						app-emulation/wine
