@@ -1,0 +1,12 @@
+diff -ur wvstreams-4.0.1.orig/wvrules.mk wvstreams-4.0.1/wvrules.mk
+--- wvstreams-4.0.1.orig/wvrules.mk	2005-03-05 17:11:10.000000000 +0100
++++ wvstreams-4.0.1/wvrules.mk	2005-03-05 17:11:57.000000000 +0100
+@@ -284,7 +284,7 @@
+ %.E: %.cc;	$(call wvcxx,$@,$<,$*,,-E)
+ %.E: %.cpp;	$(call wvcxx,$@,$<,$*,,-E)
+ 
+-%.moc: %.h;	moc -o $@ $<
++%.moc: %.h;	$(MOC) -o $@ $<
+ 
+ ../%.so:;	@echo "Shared library $@ does not exist!"; exit 1
+ ../%.a:;	@echo "Library $@ does not exist!"; exit 1

@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.46 2005/03/24 01:50:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.47 2005/03/29 09:20:10 mrness Exp $
+
+*wvstreams-4.0.2 (29 Mar 2005)
+
+  29 Mar 2005; Alin Nastac <mrness@gentoo.org>
+  +files/wvstreams-4.0.2-MOC-fix.patch,
+  +files/wvstreams-4.0.2-linux-serial.patch,
+  +files/wvstreams-4.0.2-tcl_8_4.patch, -wvstreams-4.0.1-r1.ebuild,
+  -wvstreams-4.0.1.ebuild, +wvstreams-4.0.2.ebuild:
+  Version bump. Remove old test versions.
 
   23 Mar 2005; Jason Wever <weeve@gentoo.org> wvstreams-4.0.1-r2.ebuild:
   Stable on SPARC wrt bug #84817.

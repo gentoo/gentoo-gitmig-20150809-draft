@@ -1,0 +1,193 @@
+diff -Nru wvstreams-4.0.2.orig/config.guess wvstreams-4.0.2/config.guess
+--- wvstreams-4.0.2.orig/config.guess	2005-03-24 04:01:23.000000000 +0200
++++ wvstreams-4.0.2/config.guess	2005-03-29 12:02:45.364438808 +0300
+@@ -3,7 +3,7 @@
+ #   Copyright (C) 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
+ #   2000, 2001, 2002, 2003, 2004 Free Software Foundation, Inc.
+ 
+-timestamp='2004-08-13'
++timestamp='2004-11-12'
+ 
+ # This file is free software; you can redistribute it and/or modify it
+ # under the terms of the GNU General Public License as published by
+@@ -319,6 +319,9 @@
+     *:OS/390:*:*)
+ 	echo i370-ibm-openedition
+ 	exit 0 ;;
++    *:z/VM:*:*)
++	echo s390-ibm-zvmoe
++	exit 0 ;;
+     *:OS400:*:*)
+         echo powerpc-ibm-os400
+ 	exit 0 ;;
+@@ -342,7 +345,7 @@
+     DRS?6000:unix:4.0:6*)
+ 	echo sparc-icl-nx6
+ 	exit 0 ;;
+-    DRS?6000:UNIX_SV:4.2*:7*)
++    DRS?6000:UNIX_SV:4.2*:7* | DRS?6000:isis:4.2*:7*)
+ 	case `/usr/bin/uname -p` in
+ 	    sparc) echo sparc-icl-nx7 && exit 0 ;;
+ 	esac ;;
+@@ -824,6 +827,12 @@
+     cris:Linux:*:*)
+ 	echo cris-axis-linux-gnu
+ 	exit 0 ;;
++    crisv32:Linux:*:*)
++	echo crisv32-axis-linux-gnu
++	exit 0 ;;
++    frv:Linux:*:*)
++    	echo frv-unknown-linux-gnu
++	exit 0 ;;
+     ia64:Linux:*:*)
+ 	echo ${UNAME_MACHINE}-unknown-linux-gnu
+ 	exit 0 ;;
+@@ -1241,7 +1250,10 @@
+ 	    A*) echo alpha-dec-vms && exit 0 ;;
+ 	    I*) echo ia64-dec-vms && exit 0 ;;
+ 	    V*) echo vax-dec-vms && exit 0 ;;
+-	esac
++	esac ;;
++    *:XENIX:*:SysV)
++	echo i386-pc-xenix
++	exit 0 ;;
+ esac
+ 
+ #echo '(No uname command or uname output not recognized.)' 1>&2
+diff -Nru wvstreams-4.0.2.orig/config.sub wvstreams-4.0.2/config.sub
+--- wvstreams-4.0.2.orig/config.sub	2005-03-24 04:01:23.000000000 +0200
++++ wvstreams-4.0.2/config.sub	2005-03-29 12:02:45.365438656 +0300
+@@ -3,7 +3,7 @@
+ #   Copyright (C) 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
+ #   2000, 2001, 2002, 2003, 2004 Free Software Foundation, Inc.
+ 
+-timestamp='2004-06-24'
++timestamp='2004-11-30'
+ 
+ # This file is (in principle) common to ALL GNU software.
+ # The presence of a machine in this file suggests that SOME GNU software
+@@ -267,7 +267,7 @@
+ 	| tahoe | thumb | tic4x | tic80 | tron \
+ 	| v850 | v850e \
+ 	| we32k \
+-	| x86 | xscale | xstormy16 | xtensa \
++	| x86 | xscale | xscalee[bl] | xstormy16 | xtensa \
+ 	| z8k)
+ 		basic_machine=$basic_machine-unknown
+ 		;;
+@@ -343,8 +343,8 @@
+ 	| tron-* \
+ 	| v850-* | v850e-* | vax-* \
+ 	| we32k-* \
+-	| x86-* | x86_64-* | xps100-* | xscale-* | xstormy16-* \
+-	| xtensa-* \
++	| x86-* | x86_64-* | xps100-* | xscale-* | xscalee[bl]-* \
++	| xstormy16-* | xtensa-* \
+ 	| ymp-* \
+ 	| z8k-*)
+ 		;;
+@@ -457,6 +457,9 @@
+ 	crds | unos)
+ 		basic_machine=m68k-crds
+ 		;;
++	crisv32 | crisv32-* | etraxfs*)
++		basic_machine=crisv32-axis
++		;;
+ 	cris | cris-* | etrax*)
+ 		basic_machine=cris-axis
+ 		;;
+@@ -486,6 +489,10 @@
+ 		basic_machine=m88k-motorola
+ 		os=-sysv3
+ 		;;
++	djgpp)
++		basic_machine=i586-pc
++		os=-msdosdjgpp
++		;;
+ 	dpx20 | dpx20-*)
+ 		basic_machine=rs6000-bull
+ 		os=-bosx
+@@ -1026,6 +1033,10 @@
+ 		basic_machine=hppa1.1-winbond
+ 		os=-proelf
+ 		;;
++	xbox)
++		basic_machine=i686-pc
++		os=-mingw32
++		;;
+ 	xps | xps100)
+ 		basic_machine=xps100-honeywell
+ 		;;
+@@ -1294,6 +1305,9 @@
+ 	-kaos*)
+ 		os=-kaos
+ 		;;
++	-zvmoe)
++		os=-zvmoe
++		;;
+ 	-none)
+ 		;;
+ 	*)
+diff -Nru wvstreams-4.0.2.orig/debian/control wvstreams-4.0.2/debian/control
+--- wvstreams-4.0.2.orig/debian/control	2005-03-24 04:01:23.000000000 +0200
++++ wvstreams-4.0.2/debian/control	2005-03-29 12:02:45.367438352 +0300
+@@ -3,7 +3,7 @@
+ Priority: optional
+ Maintainer: Simon Law <sfllaw@debian.org>
+ Uploaders: James Morrison <phython@debian.org>, Patrick Patterson <ppatters@debian.org>
+-Build-Depends: debhelper (>> 4.0.0), fftw-dev, libdb4.2-dev, libfam-dev, libpam0g-dev, libqt3-mt-dev, libslp-dev, libspeex-dev, libssl-dev, libvorbis-dev, libxplc0.3.10-dev, zlib1g-dev
++Build-Depends: debhelper (>> 4.0.0), fftw-dev, libdb4.2-dev, libfam-dev, libpam0g-dev, libqt3-mt-dev, libslp-dev, libspeex-dev, libssl-dev, libvorbis-dev, libxplc0.3.10-dev, zlib1g-dev, doxygen
+ Build-Depends-Indep: doxygen
+ Standards-Version: 3.6.1
+ 
+@@ -99,7 +99,7 @@
+ Package: libwvstreams-dev
+ Architecture: any
+ Section: libdevel
+-Depends: libwvstreams4.0-base, libwvstreams4.0-extras, libuniconf4.0, libwvstreams4.0-fft, libwvstreams4.0-qt, libwvstreams4.0-speex, libwvstreams4.0-vorbis, ${misc:Depends}
++Depends: libwvstreams4.0-base, libwvstreams4.0-extras, libuniconf4.0, libwvstreams4.0-fft, libwvstreams4.0-qt, libwvstreams4.0-speex, libwvstreams4.0-vorbis, libxplc0.3.10-dev, ${misc:Depends}
+ Provides: libwvstreams4.0-dev
+ Description: Development libraries and header files for libwvstreams4.0
+  Contains the header files and static libraries for use in rapid 
+diff -Nru wvstreams-4.0.2.orig/streams/wvmodem.cc wvstreams-4.0.2/streams/wvmodem.cc
+--- wvstreams-4.0.2.orig/streams/wvmodem.cc	2005-03-24 04:01:23.000000000 +0200
++++ wvstreams-4.0.2/streams/wvmodem.cc	2005-03-29 12:09:25.258645648 +0300
+@@ -192,22 +192,22 @@
+     drain();
+     
+ #if HAVE_LINUX_SERIAL_H
+-    struct serial_struct old_sinfo, sinfo;
+-    sinfo.reserved_char[0] = 0;
+-    if (ioctl(getrfd(), TIOCGSERIAL, &old_sinfo) < 0)
+-	seterr("Cannot get information for serial port.");
+-    else
+-    {
+-	sinfo = old_sinfo;
+-	// Why there are two closing wait timeouts, is beyond me
+-	// but there are... apparently the second one is deprecated
+-	// but why take a chance...
+-	sinfo.closing_wait = ASYNC_CLOSING_WAIT_NONE;
+-	sinfo.closing_wait2 = ASYNC_CLOSING_WAIT_NONE;
+-
+-	if (ioctl(getrfd(), TIOCSSERIAL, &sinfo) < 0)
+-	    seterr("Cannot set information for serial port.");
+-    }
++ 	if (getuid() == 0)
++ 	{
++     	struct serial_struct sinfo;
++     	if (ioctl(getrfd(), TIOCGSERIAL, &sinfo) >= 0) //Ignore errors because some modems (at least slmodem) do not support this
++     	{
++     		// Why there are two closing wait timeouts, is beyond me
++     		// but there are... apparently the second one is deprecated
++     		// but why take a chance...
++     		sinfo.closing_wait = ASYNC_CLOSING_WAIT_NONE;
++     		sinfo.closing_wait2 = ASYNC_CLOSING_WAIT_NONE;
++ 
++     		//Ignore errors because ltmodem module implement TIOCGSERIAL but do not implement TIOCSSERIAL (go figure...) 
++			//see http://bugs.gentoo.org/show_bug.cgi?id=85754
++			ioctl(getrfd(), TIOCSSERIAL, &sinfo); 
++ 		}
++ 	}
+ #endif
+ 
+     // set up the terminal characteristics.

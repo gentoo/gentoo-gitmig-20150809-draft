@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.1.ebuild,v 1.5 2005/02/17 19:59:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.1 2005/03/29 09:20:10 mrness Exp $
 
 inherit eutils
 
@@ -10,13 +10,13 @@ SRC_URI="http://people.nit.ca/~sfllaw/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="gtk qt oggvorbis speex fam qdbm pam slp doc fftw tcltk debug"
 
 RDEPEND="virtual/libc
 	dev-libs/xplc
 	gtk? ( >=x11-libs/gtk+-2.2.0 )
-	qt? ( >=x11-libs/qt-3.0.5 )
+	qt? ( =x11-libs/qt-3* )
 	oggvorbis? ( >=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )
 	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
@@ -38,15 +38,26 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
+	epatch ${FILESDIR}/${P}-linux-serial.patch
+
 	if useq tcltk; then
 		epatch ${FILESDIR}/${P}-tcl_8_4.patch
 		env WANT_AUTOCONF=2.59 autoconf || die "autoconf failed"
 	fi
+
+	useq qt && epatch ${FILESDIR}/${P}-MOC-fix.patch
 }
 
 src_compile() {
-	econf `use_with gtk` \
-		`use_with qt` \
+	local myconf
+	if useq qt; then
+		myconf="--with-qt=/usr/qt/3/"
+		export MOC="/usr/qt/3/bin/moc"
+	else
+		myconf="--without-qt"
+	fi
+	econf ${myconf} \
+		`use_with gtk` \
 		`use_with oggvorbis ogg` \
 		`use_with oggvorbis vorbis` \
 		`use_with speex` \

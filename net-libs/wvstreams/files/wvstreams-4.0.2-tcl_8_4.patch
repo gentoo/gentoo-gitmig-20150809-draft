@@ -1,0 +1,24 @@
+diff -Nru wvstreams-4.0.2.orig/configure.ac wvstreams-4.0.2/configure.ac
+--- wvstreams-4.0.2.orig/configure.ac	2005-03-24 04:01:23.000000000 +0200
++++ wvstreams-4.0.2/configure.ac	2005-03-29 12:11:53.268144784 +0300
+@@ -474,9 +474,9 @@
+ # tcl
+ if test "$with_tcl" != "no"; then
+     CPPFLAGS_save="$CPPFLAGS"
+-    WV_APPEND(CPPFLAGS, -I/usr/include/tcl8.3)
++    WV_APPEND(CPPFLAGS, -I/usr/include)
+     AC_CHECK_HEADERS(tcl.h,, [with_tcl=no])
+-    AC_CHECK_LIB(tcl8.3, TclInterpInit,, [with_tcl=no])
++    AC_CHECK_LIB(tcl8.4, TclInterpInit,, [with_tcl=no])
+     if test "$with_tcl" != "no"; then
+         CPPFLAGS="$CPPFLAGS_save"
+     fi
+diff -Nru wvstreams-4.0.2.orig/vars.mk wvstreams-4.0.2/vars.mk
+--- wvstreams-4.0.2.orig/vars.mk	2005-03-24 04:01:23.000000000 +0200
++++ wvstreams-4.0.2/vars.mk	2005-03-29 12:11:53.267144936 +0300
+@@ -251,3 +251,5 @@
+ 
+ libwvgtk.a libwvgtk.so: $(call objects,gtk)
+ libwvgtk.so: -lgtk -lgdk libwvstreams.so libwvutils.so
++
++libuniconf_tcl.so: bindings/uniconf_tcl.o -ltcl8.4 -luniconf
