@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.10 2004/12/04 07:23:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.11 2004/12/05 20:47:32 solar Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -461,7 +461,7 @@ do_ssp_patches() {
 	# __guard_setup__stack_smash_handler
 	#
 	#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if use hppa ; then
+	if use !hppa ; then
 		epatch ${FILESDIR}/2.3.3/glibc-2.3.2-propolice-guard-functions-v3.patch
 		cp ${FILESDIR}/2.3.3/ssp.c ${S}/sysdeps/unix/sysv/linux || \
 			die "failed to copy ssp.c to ${S}/sysdeps/unix/sysv/linux/"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.295 2004/12/05 20:17:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.296 2004/12/05 20:47:32 solar Exp $
+
+  05 Dec 2004; <solar@gentoo.org> glibc-2.3.4.20041102.ebuild:
+  - q/a - missed glibc-2.3.4.20041102 in last fix
 
   05 Dec 2004; <solar@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
   - q/a fix - hppa is the only arch with an upwords growing stack and thus can
