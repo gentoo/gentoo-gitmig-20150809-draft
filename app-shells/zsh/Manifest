@@ -1,20 +1,30 @@
-MD5 389fa0d5214faeb6e8e73846ccfffb5a ChangeLog 12542
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2bf50d400e90becee76c3a818ed47fb2 ChangeLog 12634
+MD5 26886d0a410d5883eced6bda50cf2f1c zsh-4.2.3.ebuild 4196
 MD5 28ed8ea6cdccb353e2e8ad783eb51f5b metadata.xml 506
-MD5 098d736807ff3563a226941d19c0dfe5 zsh-4.2.4.ebuild 4314
 MD5 873300be2c00a4a9a80c51456c0e1bc0 zsh-4.2.0-r1.ebuild 3721
-MD5 5e543600fe0832f8380521842d906542 zsh-4.2.3.ebuild 4197
 MD5 28ae3771eb1a6ebb64171197c8d390e7 zsh-4.0.9-r4.ebuild 2893
 MD5 ce3c37b881d639cfe4b58bba59bad159 zsh-4.2.1-r1.ebuild 4194
+MD5 098d736807ff3563a226941d19c0dfe5 zsh-4.2.4.ebuild 4314
+MD5 46563792d80acf9492dd3afeaf4b19fd files/prompt_gentoo_setup 1612
+MD5 f6644a412295c3d80658438cc5f1b7f0 files/digest-zsh-4.2.3 199
 MD5 2b2644eb02a13fb95086cb89a920d921 files/digest-zsh-4.2.4 199
-MD5 d401be6503fc2e34341d56e99ee25e94 files/_portage-20040204 10954
+MD5 de58f149f41740c394800ba8d2cdf361 files/digest-zsh-4.0.9-r4 199
 MD5 b862cd1ab51c87c0d1ec2b2c5c21c230 files/_portage-20040730 13907
 MD5 9c5e675b40ea6a43fd461f262df24fb4 files/digest-zsh-4.2.0-r1 199
-MD5 46563792d80acf9492dd3afeaf4b19fd files/prompt_gentoo_setup 1612
-MD5 5f0bb4d1bbe63c42a104eb0cab8a28d3 files/zprofile 403
 MD5 eaa2f7dff9e7ca62087f9786cea84897 files/zsh-init.d-gentoo.diff 1389
-MD5 81e325aacd554d2c5f6d14efe45d1ffd files/zsh-strncmp.diff 354
-MD5 de0db046f0f40cb1cc3cd3f6e6b2645a files/zshenv 318
-MD5 f6644a412295c3d80658438cc5f1b7f0 files/digest-zsh-4.2.3 199
-MD5 e6a9690e5c9b23757e887e14da621c9c files/zsh-4.2.1-gentoo.diff 735
-MD5 de58f149f41740c394800ba8d2cdf361 files/digest-zsh-4.0.9-r4 199
 MD5 557ebe931aae8efc7e1221e1a6985f2f files/digest-zsh-4.2.1-r1 199
+MD5 81e325aacd554d2c5f6d14efe45d1ffd files/zsh-strncmp.diff 354
+MD5 5f0bb4d1bbe63c42a104eb0cab8a28d3 files/zprofile 403
+MD5 de0db046f0f40cb1cc3cd3f6e6b2645a files/zshenv 318
+MD5 e6a9690e5c9b23757e887e14da621c9c files/zsh-4.2.1-gentoo.diff 735
+MD5 d401be6503fc2e34341d56e99ee25e94 files/_portage-20040204 10954
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCRoJgugEuf3OQ0akRAjs5AJ4h5c59YFc2iM20gTmZ7bNwIaxnMgCaAz2m
+HSUvAfN2be7DMksAeAKFDGk=
+=GciL
+-----END PGP SIGNATURE-----
