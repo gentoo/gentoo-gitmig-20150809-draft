@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.142 2005/01/23 20:47:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.143 2005/01/26 16:19:12 ka0ttic Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1560,7 +1560,7 @@ preserve_old_lib_notify() {
 	fi
 }
 
-# Hack for people to figure out if a package was built with 
+# Hack for people to figure out if a package was built with
 # certain USE flags
 #
 # Usage: built_with_use [-a|-o] <DEPEND ATOM> <List of USE flags>
@@ -1591,7 +1591,7 @@ built_with_use() {
 	[[ ${opt} = "-a" ]]
 }
 
-# Many configure scripts wrongly bail when a C++ compiler 
+# Many configure scripts wrongly bail when a C++ compiler
 # could not be detected. #73450
 epunt_cxx() {
 	local dir=$1
@@ -1602,4 +1602,23 @@ epunt_cxx() {
 		patch -p0 "${f}" "${PORTDIR}/eclass/ELT-patches/nocxx/nocxx.patch" > /dev/null
 	done
 	eend 0
+}
+
+# dopamd [ file ] [ new file ]
+#
+# Install pam auth config file in /etc/pam.d
+#
+#   The first argument, 'file' is required.  Install as 'new file', if
+#   specified.
+
+dopamd() {
+	local pamd="$1" newpamd="${2:-$1}"
+	[[ -z "$1" ]] && die "dopamd requires at least one argument."
+
+	use pam || return 0
+
+	insinto /etc/pam.d
+	# these are the default doins options, but be explicit just in case
+	insopts -m 0644 -o root -g root
+	newins ${pamd} ${newpamd} || die "failed to install ${newpamd}"
 }
