@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip_x86/gzip_x86-0.90.ebuild,v 1.1 2002/10/19 22:03:16 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip_x86/gzip_x86-0.90.ebuild,v 1.2 2002/10/19 22:04:02 mjc Exp $
 
 # NOTE: The comments in this file are for instruction and documentation.
 # They're not meant to appear with your final, production ebuild.  Please
@@ -12,7 +12,7 @@
 # generated to contain the correct data.
 
 # Short one-line description of this package.
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="gzip_x86 is an optimized gzip for x86 arch.  5-45% speed increase is offered during decompression"
 
 # Homepage, not used by Portage directly but handy for developer reference
 HOMEPAGE="ftp://spruce.he.net/pub/jreiser"
