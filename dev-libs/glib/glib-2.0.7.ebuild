@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.7.ebuild,v 1.8 2002/12/17 22:24:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.7.ebuild,v 1.9 2003/02/04 06:02:09 spider Exp $
 
 IUSE="doc"
 
@@ -33,7 +33,7 @@ src_compile() {
 	local myconf=""
 	use doc && myconf="${myconf} --enable-gtk-doc"
 	use doc || myconf="${myconf} --disable-gtk-doc"
-	if [ -n "$DEBUG" ]; then
+	if [ -n "$DEBUGBUILD" ]; then
 		myconf="${myconf}  --enable-debug=yes"
     fi
 

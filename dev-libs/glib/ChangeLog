@@ -1,11 +1,21 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.31 2003/01/18 13:38:30 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.32 2003/02/04 06:02:09 spider Exp $
+
+
+*glib-2.2.1 (04 Feb 2003)
+
+  04 Feb 2003; Spider <spider@gentoo.org> glib-2.2.1.ebuild :
+  new version, fix some and clean the old cruft DEBUG variable out
+  
+
+*glib-2.2.0 (22 Dec 2002)
+
+  04 Feb 2003; Spider <spider@gentoo.org> glib-2.2.0.ebuild :
+  changed DEBUG to DEBUGBUILD
 
   01 Jan 2003; Aron Griffis <agriffis@gentoo.org> glib-2.2.0.ebuild :
   Add ~alpha to KEYWORDS
-
-*glib-2.2.0 (22 Dec 2002)
 
   25 Dec 2002; Martin Holzer <mholzer@gentoo.org> glib-2.2.0.ebuild ChangeLog :
   Fixed dep pkg-config. Closes #12678
@@ -24,6 +34,9 @@
 
 *glib-2.0.7 (04 Nov 2002)
   
+  04 Feb 2003; Spider <spider@gentoo.org> glib-2.0.7.ebuild :
+  move DEBUG to DEBUGBUILD
+
   11 Nov 2002; Spider <spider@gentoo.org> glib-2.0.7.ebuild :
   marked stable for x86
  
@@ -41,6 +54,9 @@
   Libtoolize the sucker.
 
 *glib-2.0.6-r1 (4 aug 2002)
+
+  04 Feb 2003; Spider <spider@gentoo.org> glib-2.0.6-r1.ebuild :
+   move DEBUG to DEBUGBUILD
 
   13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   Added ppc keyword
