@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r1.ebuild,v 1.2 2005/03/11 06:47:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r1.ebuild,v 1.3 2005/03/16 00:24:05 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -104,7 +104,7 @@ src_compile() {
 	${myconf} \
 	|| die "Configure failed"
 
-
+	emake || die "Make Failed"
 }
 
 src_install() {
