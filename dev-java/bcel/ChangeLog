@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.1 2003/05/15 06:58:30 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.2 2003/12/25 20:06:46 weeve Exp $
+
+  25 Dec 2003; Jason Wever <weeve@gentoo.org> bcel-5.1.ebuild:
+  Changed sparc keyword to ~sparc since regex dependencies had NO sparc keywords.
 
 *bcel-5.1 (15 May 2003)
 

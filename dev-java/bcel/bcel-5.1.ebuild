@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.4 2003/12/25 20:06:51 weeve Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://jakarta.apache.org/builds/jakarta-bcel/release/v${PV}/${PN}-${PV
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 ppc ~sparc alpha mips hppa arm"
 IUSE="doc jikes"
 
 DEPEND=""
