@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp-freetype
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.12 2004/06/24 22:38:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.13 2004/07/07 21:57:50 kugelfang Exp $
+
+  07 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> gimp-freetype-0.5.ebuild:
+  Marked ~amd64.
 
   22 Jun 2004; Leonardo Boshell <leonardop@gentoo.org>
   gimp-freetype-0.5.ebuild:
