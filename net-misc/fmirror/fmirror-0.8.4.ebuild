@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fmirror/fmirror-0.8.4.ebuild,v 1.2 2002/08/14 12:08:07 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fmirror/fmirror-0.8.4.ebuild,v 1.3 2002/09/21 02:41:40 vapier Exp $
 
 DESCRIPTION="FTP mirror utility"
 HOMEPAGE="http://freshmeat.net/projects/fmirror"
 SRC_URI="ftp://ftp.guardian.no/pub/free/ftp/fmirror/${P}.tar.gz"
-HOMEPAGE=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc sparc64"
