@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/grub
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.2 2002/02/04 12:52:58 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.3 2002/02/05 01:31:13 drobbins Exp $
+
+*grub-0.90-r6 (4 Feb 2002)
+*grub-0.91-r1 (4 Feb 2002)
+
+  4 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: grub-0.90-r6.ebuild,
+  grub-0.91-r1.ebuild: unset CFLAGS to ensure that GRUB code is i486-compatible,
+  a good thing for a boot loader.  Upgraded /boot mounting code to be compatible
+  with systems without a dedicated /boot filesystem.  Tweaked GRUB installation
+  so that the /boot/grub/*stage* files don't get overwritten, since this could
+  mess up the currently-in-the-MBR GRUB.  These fixes also close bug #527.
 
 *grub-0.90-r5 (4 Feb 2002)
 
