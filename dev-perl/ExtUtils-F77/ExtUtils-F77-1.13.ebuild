@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ExtUtils-F77-1.13.ebuild,v 1.3 2000/11/01 04:44:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ExtUtils-F77-1.13.ebuild,v 1.4 2000/11/04 12:54:30 achim Exp $
 
 P=ExtUtils-F77-1.13
 A=${P}.tar.gz
@@ -15,7 +15,7 @@ DEPEND=">=sys-devel/perl-5"
 src_compile() {
 
     cd ${S}
-    perl Makefile.PL $PERLINSTALL
+    perl Makefile.PL 
     try make
     try make test
 
@@ -24,7 +24,7 @@ src_compile() {
 src_install () {
 
     cd ${S}
-    try make install
+    try make PREFIX=${D}/usr install
     prepman
     dodoc CHANGES README MANIFEST
 }
