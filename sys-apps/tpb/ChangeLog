@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tpb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpb/ChangeLog,v 1.2 2003/04/15 14:04:35 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpb/ChangeLog,v 1.3 2003/06/30 19:45:24 latexer Exp $
+
+  30 Jun 2003; Peter Johanson <latexer@gentoo.org> tpb-0.5.1.ebuild,
+  files/tpb-0.5.1-configure-fix.patch:
+  Added patch to correct enable/disable xosd support
 
 *tpb-0.5.1 (16 Apr 2003)
 
