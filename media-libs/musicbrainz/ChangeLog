@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.8 2003/02/12 07:14:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.9 2003/03/23 09:22:39 jje Exp $
+
+*musicbrainz-2.0.1 (23 Mar 2003)
+
+  23 Mar 2003; jje <jje@gentoo.org> musicbrainz-2.0.1.ebuild:
+  New ebuild for Music Brainz 2.0.1.
+  
+  Submitted by: John Steele Scott <toojays@toojays.net>
 
   10 Jan 2003; Aron Griffis <agriffis@gentoo.org> musicbrainz-1.0.1-r1.ebuild :
   add alpha to KEYWORDS
