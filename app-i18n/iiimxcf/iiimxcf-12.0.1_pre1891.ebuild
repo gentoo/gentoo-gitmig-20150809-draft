@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimxcf/iiimxcf-11.4.1467.ebuild,v 1.5 2004/06/24 21:46:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimxcf/iiimxcf-12.0.1_pre1891.ebuild,v 1.1 2004/09/13 19:59:51 usata Exp $
 
 inherit iiimf eutils
 
@@ -9,13 +9,17 @@ DESCRIPTION="X client framework for IIIMF"
 KEYWORDS="~x86 -alpha"
 IUSE=""
 
-DEPEND="dev-libs/libiiimp
+RDEPEND="dev-libs/libiiimp
 	dev-libs/libiiimcf"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/xiiimp.so
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd ${S}/xiiimp.so/iiimp
+	sed -i -e 's,$(IM_LIBDIR)/iiimcf,/usr/lib,g' \
+		-e 's,$(IM_LIBDIR)/iiimp,/usr/lib,g' \
+		Makefile.am || die "sed Makefile.am failed."
 }
 
 src_compile() {

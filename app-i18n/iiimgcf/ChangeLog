@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/iiimgcf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimgcf/ChangeLog,v 1.5 2004/06/30 03:29:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimgcf/ChangeLog,v 1.6 2004/09/13 20:02:11 usata Exp $
+
+*iiimgcf-12.0.1_pre1891 (14 Sep 2004)
+*iiimgcf-11.4_p1467 (14 Sep 2003)
+
+  14 Sep 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/iiimgcf-11.4.1467-gentoo.diff, -iiimgcf-11.4.1467.ebuild,
+  +iiimgcf-11.4_p1467.ebuild, +iiimgcf-12.0.1_pre1891.ebuild:
+  Added a snapshot. Renamed previous ebuild and marked it stable.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> iiimgcf-11.4.1467.ebuild:
   sync IUSE (+gtk)
