@@ -229,3 +229,4 @@ move net-www/snownews net-news/snownews
 move net-www/liferea net-news/liferea
 move net-www/httrack www-client/httrack
 move net-www/surfraw www-client/surfraw
+move media-gfx/pfaedit media-gfx/fontforge
