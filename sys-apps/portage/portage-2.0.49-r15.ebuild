@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r15.ebuild,v 1.1 2003/10/22 02:15:05 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r15.ebuild,v 1.2 2003/11/01 06:37:51 drobbins Exp $
 
 IUSE="build"
 
@@ -201,13 +201,17 @@ pkg_postinst() {
 		fi
 
 		# Changes in the size of auxdbkeys can cause aux_get() problems.
+			# Changes in the size of auxdbkeys can cause aux_get() problems.
 		echo -n ">>> Clearing invalid entries in dependency cache..."
 		cd ${ROOT}var/cache/edb/dep
-		# 2>&1 >/dev/null <---- Kills stdout, replaces it with stderr
-		AUXDBKEYLEN="$(python -c 'import portage,sys; sys.stderr.write(str(len(portage.auxdbkeys)))' 2>&1 >/dev/null)"
+		#Nick, I changed the following to deal with situations where stderr spits out stuff like: "!!! CANNOT IMPORT FTPLIB:"
+		#which causes an infinite loop. (drobbins)
+		python -c 'import portage; myf=open("/tmp/auxdbkl","w"); myf.write(str(len(portage.auxdbkeys))); myf.close()' 
+		AUXDBKEYLEN=`cat /tmp/auxdbkl`
+		rm -f /tmp/auxdbkl
 		find ${ROOT}var/cache/edb/dep -type f -exec wc -l {} \; | egrep -v "^ *${AUXDBKEYLEN}" | sed 's:^ \+[0-9]\+ \+\([^ ]\+\)$:\1:' 2>/dev/null | xargs -n 50 -r rm -f
 		echo " ...done!"
-	fi # PORTAGE_TESTING
+fi # PORTAGE_TESTING
 
 	#fix cache (could contain staleness)
 	if [ ! -d ${ROOT}var/cache/edb/dep ]
