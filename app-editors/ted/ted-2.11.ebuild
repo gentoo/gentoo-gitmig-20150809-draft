@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.11.ebuild,v 1.10 2003/02/28 23:12:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.11.ebuild,v 1.11 2003/03/21 18:29:03 mholzer Exp $
 
 DESCRIPTION="X-based rich text editor"
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -33,6 +33,7 @@ src_compile() {
 
 	# The makefile doesn't really allow parallel make, but it does
 	# no harm either.
+	cd ${S}
 	emake DEF_AFMDIR=-DAFMDIR=\\\"/usr/share/Ted/afm\\\" \
 		DEF_INDDIR=-DINDDIR=\\\"/usr/share/Ted/ind\\\" \
 		package.shared || die "couldnt emake"
