@@ -1,8 +1,11 @@
 # ChangeLog for dev-lisp/apel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/apel/ChangeLog,v 1.1 2002/06/26 01:27:31 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/apel/ChangeLog,v 1.2 2002/09/21 00:07:42 vapier Exp $
 
 *apel-2002.06.21.0106.ebuild (25 Jun 2002)
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  The old HOMEPAGE has been moved
 
   25 Jun 2002; G Shapovalov <george@gentoo.org> all :
 
