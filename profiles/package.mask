@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <verwilst@gentoo.org> (12 Nov 2002)
+# Still under construction, DOES NOT WORK YET
+=net-im/jabber-server-1.4.2-r2
 
 # <hannes@gentoo.org> (12 Nov 2002)
 # kde 3.1 rc3: masked permanently
