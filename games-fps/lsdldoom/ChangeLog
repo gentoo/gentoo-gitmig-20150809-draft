@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/lsdldoom
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/ChangeLog,v 1.6 2004/12/29 00:04:45 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/ChangeLog,v 1.7 2005/01/15 09:12:46 vapier Exp $
+
+  15 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/1.4.4.4-gcc34.patch, +files/1.4.4.4-gentoo-paths.patch,
+  lsdldoom-1.4.4.4.ebuild:
+  Clean up ebuild: add games.eclass support, fix stupid paths, and fix gcc
+  errors #77846 by Pinky.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
