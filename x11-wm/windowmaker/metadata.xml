@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>gnustep</herd>
 <maintainer>
+  <email>fafhrd@gentoo.org</email>
+</maintainer>
+<maintainer>
   <email>raker@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
