@@ -141,6 +141,10 @@ if ( !$xuid ) {
 	<form action="useredit.php" method="post">
 	<table border=0 cellpadding=2 cellspacing=0>
 	<tr>
+		<td align="right"><b>uid:</b></td>
+		<td><?=$dude['uid'];?></td>
+	</tr>
+	<tr>
 		<td align="right"><b>Real Name:</b></td>
 		<td><input type="text" name="realname" maxlength=200 value="<?=$dude['realname'];?>"></td>
 	</tr>

@@ -59,9 +59,9 @@ global $uid, $dbusername; ?>
 <table width="100%" height=96 border=0 cellpadding=0 cellspacing=0>
 <tr>
 	<td align="left"><img src="images/title.gif" width=292 height=96 alt="gentoo linux dev-wiki"></td>
-	<td align="right" background="images/titlebg.gif" width="100%" valign="top">&nbsp;<?php
-		if ( $uid ) { print "<p style=\"margin:0;padding:0 5px 0 0;color:#e0e0e0;\">Logged in as $dbusername.</p>\n<a href=\"index.php?action=logout\"><img src=\"images/logout.gif\" border=0></a>"; }
-	?></p></td>
+	<td align="right" background="images/titlebg.gif" width="100%" valign="top"><?php
+		if ( $uid ) { print "<p style=\"margin:0;padding:5px 5px 0 0;color:#e0e0e0;\">Logged in as $dbusername.<br><a href=\"index.php?action=logout\"><img src=\"images/logout.gif\" border=0></a></p>"; } else { print '&nbsp;'; }
+	?></td>
 </tr>
 </table>
 

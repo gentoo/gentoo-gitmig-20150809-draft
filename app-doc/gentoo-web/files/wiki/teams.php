@@ -166,10 +166,16 @@
 <p><b>Team Members</b></p>
 <ul>
 <?php
-	$result = mysql_query( "select username,title,email,realname,location from users where team like '%$team_num%'" );
+	$result = mysql_query( "select username,team,title,email,realname,location from users where team like '%$team_num%'" );
 	while ( $dude = mysql_fetch_array($result) ) {
+		$dude['team'] = explode( ',', $dude['team'] );
+		$tmp = 0;
+		while ($each = each($dude['team']) ) {
+			if ($each['value'] == $team_num) { $tmp=1; break; }
+		}
+		if (!$tmp) continue;
 ?>
-	<li> <a href="mailto:<?=$dude['email'];?>"><?=$dude['realname'];?></a> (aka <?=$dude['username'];?>) - <?=$dude['title'];?> from <?=$dude['location'];?>
+		<li> <a href="mailto:<?=$dude['email'];?>"><?=$dude['realname'];?></a> (aka <?=$dude['username'];?>) - <?=$dude['title'];?><?php if ($dude['location']) print ' from '.$dude['location']; ?>
 <?php
 	}
 ?>

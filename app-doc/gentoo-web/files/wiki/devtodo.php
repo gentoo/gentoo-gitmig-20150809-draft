@@ -4,11 +4,94 @@
 	main_header( 'Todo by developer' );
 
 	if ( !$devid ) $devid = $uid;
-	$username = mysql_query( "select username from users where uid=$devid" );
-	list( $username ) = mysql_fetch_row( $username );
-
+	$dude = mysql_query( "select * from users where uid=$devid" );
+	$dude = mysql_fetch_array( $dude );
 ?>
-<p style="font-size:medium;font-weight:bold;"><?=$username;?>'s uncompleted todos</p>
+<p style="font-size:medium;font-weight:bold;"><?=$dude['username'];?>'s Bio</p>
+<table width="95%" border=0 cellpadding=5 cellspacing=0>
+<tr>
+	<td width=150 valign="top"><table border=0 cellpadding=1 cellspacing=0 bgcolor="black"><tr><td><img src="bios/<?php if (file_exists('bios/'.$dude['uid'].'.png')) print $dude['uid'].'.png'; else print '0.png'; ?>" width=150 height=150 alt="<?=$dude['username'];?>"></td></tr></table></td>
+
+	<td valign="top">
+	<table border=0 cellpadding=2 cellspacing=0>
+	<tr>
+		<td><b>Real Name:</b></td>
+		<td><?=$dude['realname'];?></td>
+	</tr>
+	<tr>
+		<td><b>Title:</b></td>
+		<td><?=$dude['title'];?></td>
+	</tr>
+	<tr>
+		<td><b>Location:</b></td>
+		<td><?=$dude['location'];?></td>
+	</tr>
+	<tr>
+		<td><b>Email:</b></td>
+		<td><a href="mailto:<?=$dude['email'];?>"><?=$dude['email'];?></a></td>
+	</tr>
+	<tr>
+		<td valign="top"><b>Teams:</b></td>
+		<td>
+		<table border=0 cellpadding=1 cellspacing=0 bgcolor="black"><tr><td>
+		<table border=0 cellpadding=2 cellspacing=0 bgcolor="#bdbacc">
+		<tr>
+			<td>&nbsp;</td>
+			<td align="center"><b>Unaffiliated&nbsp;&nbsp;</b></td>
+			<td align="center"><b>Regular&nbsp;&nbsp;</b></td>
+			<td align="center"><b>Leader</b></td>
+		</tr>
+		<?php
+		// get team info
+		$xteams = $dude['team'];
+		$xteams = explode( ',', $xteams );
+		while ( $each = each($teams) ) {
+			if ( $each['key'] == 0 || $each['key'] == 1 ) continue; // skip 'none' and 'all'
+			$tm = 'u'; // set the default
+			if ( $devid != 'new' ) {
+				// are they a simple member? ...
+				reset( $xteams );
+				while ( $cur = each($xteams) ) {
+					if ( $cur['value'] == $each['key'] ) { $tm = 'r'; break; }
+				}
+				// are they the team LEADER?!?! :)
+				$ldr = mysql_query( 'select leader,gid from teams where gid='.$each['key'] );
+				list( $ldr, $thegid ) = mysql_fetch_row( $ldr );
+				$ldr = explode( ',', $ldr );
+				reset( $ldr );
+				while ( $pair = each($ldr) ) {
+					if ( $pair['value'] == $devid ) {
+						$tm = 'l';
+						$oldlead[] = $thegid;
+						break;
+					}
+				}
+			}
+			if ($tm!='u') {
+			?>
+		<tr>
+			<td><b><?=$each['value'];?></b></td>
+			<td align="center"><?php if ($tm=='u') print '<img src="images/dot.gif" width=10 height=10 alt="">'; else print '&nbsp;'; ?></td>
+			<td align="center"><?php if ($tm=='r') print '<img src="images/dot.gif" width=10 height=10 alt="">'; else print '&nbsp;'; ?></td>
+			<td align="center"><?php if ($tm=='l') print '<img src="images/dot.gif" width=10 height=10 alt="">'; else print '&nbsp;'; ?></td>
+		</tr>
+			<?php
+			}
+		}
+		?>
+		</table>
+		</td></tr></table>
+		</td>
+	</tr>
+	</table>
+	</td>
+
+</tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p style="font-size:medium;font-weight:bold;"><?=$dude['username'];?>'s uncompleted todos</p>
 <table width="95%" border=0 cellpadding=2 cellspacing=2>
 <?php if ( $uid == $devid ) { ?>
 <tr>
@@ -56,7 +139,7 @@
 
 <p>&nbsp;</p>
 
-<p style="font-size:medium;font-weight:bold;"><?=$username;?>'s completed todos</p>
+<p style="font-size:medium;font-weight:bold;"><?=$dude['username'];?>'s completed todos</p>
 <table width="95%" border=0 cellpadding=2 cellspacing=2>
 <tr>
 	<td bgcolor="#dddaec"><b>Title</b></td>
