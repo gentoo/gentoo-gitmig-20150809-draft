@@ -1,0 +1,73 @@
+diff -Naur fvwm-2.5.8/fvwm/fvwm.h fvwm/fvwm/fvwm.h
+--- fvwm-2.5.8/fvwm/fvwm.h	2003-09-24 11:15:20.000000000 +0200
++++ fvwm/fvwm/fvwm.h	2003-11-25 00:53:26.000000000 +0100
+@@ -467,8 +467,9 @@
+ #define PLACE_TILECASCADE       0x5
+ #define PLACE_CASCADE_B         0x6
+ #define PLACE_MINOVERLAP        0x7
+-#define PLACE_MASK              0x7
+-	unsigned placement_mode : 3;
++#define PLACE_UNDERMOUSE        0x8
++#define PLACE_MASK              0x8
++    unsigned placement_mode : 4;
+ 	unsigned ewmh_placement_mode : 2; /* see ewmh.h */
+ #define WS_CR_MOTION_METHOD_AUTO CR_MOTION_METHOD_AUTO
+ #define WS_CR_MOTION_METHOD_USE_GRAV CR_MOTION_METHOD_USE_GRAV
+diff -Naur fvwm-2.5.8/fvwm/placement.c fvwm/fvwm/placement.c
+--- fvwm-2.5.8/fvwm/placement.c	2003-07-08 00:22:20.000000000 +0200
++++ fvwm/fvwm/placement.c	2003-11-25 00:53:26.000000000 +0100
+@@ -1156,7 +1156,35 @@
+ 				fw, sflags, &screen_g, &xl, &yt, pdeltax,
+ 				pdeltay, 0);
+ 			flags.is_smartly_placed = True;
+-			break;
++
++	    case PLACE_UNDERMOUSE:
++    	   {
++	       int mx;
++           int my;
++          FQueryPointer(dpy, Scr.Root, &JunkRoot, &JunkChild,
++            &mx, &my, &JunkX, &JunkY, &JunkMask);
++          xl = mx - (fw->frame_g.width / 2);
++          yt = my - (fw->frame_g.height / 2);
++          if (xl + fw->frame_g.width > screen_g.x + screen_g.width)
++          {
++            xl = screen_g.x + screen_g.width - fw->frame_g.width;
++          }
++          if (yt + fw->frame_g.height > screen_g.y + screen_g.height)
++          {
++            yt = screen_g.y + screen_g.height - fw->frame_g.height;
++          }
++          if (xl < screen_g.x)
++          {
++            xl = screen_g.x;
++          }
++          if (yt < screen_g.y)
++          {
++          yt = screen_g.y;
++          }
++          attr_g->x = xl;
++          attr_g->y = yt;
++        }
++ 			break;
+ 		default:
+ 			/* can't happen */
+ 			break;
+diff -Naur fvwm-2.5.8/fvwm/style.c fvwm/fvwm/style.c
+--- fvwm-2.5.8/fvwm/style.c	2003-08-23 06:27:43.000000000 +0200
++++ fvwm/fvwm/style.c	2003-11-25 00:53:26.000000000 +0100
+@@ -3738,7 +3738,13 @@
+ 		break;
+ 
+ 	case 'u':
+-		if (StrEquals(token, "UsePPosition"))
++        if (StrEquals(token, "UnderMousePlacement"))
++        {
++            ps->flags.placement_mode = PLACE_UNDERMOUSE;
++            ps->flag_mask.placement_mode = PLACE_MASK;
++            ps->change_mask.placement_mode = PLACE_MASK;
++        }
++        else if (StrEquals(token, "UsePPosition"))
+ 		{
+ 			ps->flags.use_no_pposition = !on;
+ 			ps->flag_mask.use_no_pposition = 1;
