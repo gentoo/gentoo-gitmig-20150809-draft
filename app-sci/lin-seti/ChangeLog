@@ -1,7 +1,11 @@
 # ChangeLog for app-sci/lin-seti
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/ChangeLog,v 1.15 2004/06/30 07:48:03 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/ChangeLog,v 1.16 2004/07/06 09:37:07 s4t4n Exp $
 
+
+  06 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> :
+  lin-seti-0.8.0.ebuild:
+  Wipe out old masked ebuilds...
   30 Jun 2004; Michele Noberasco <s4t4n@gentoo.org> :
   lin-seti-0.8.1.ebuild:
   Stable on x86.
