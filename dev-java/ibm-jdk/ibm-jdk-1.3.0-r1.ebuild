@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.0-r1.ebuild,v 1.1 2002/02/07 21:05:08 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.0-r1.ebuild,v 1.2 2002/02/25 18:42:09 karltk Exp $
 
 At=IBMJava2-SDK-13.tgz
 S=${WORKDIR}/IBMJava2-13
@@ -45,12 +45,12 @@ src_install () {
 	fi
 
 	dodir /etc/env.d
-        echo "PATH=/opt/${P}/bin" > /etc/env.d/21jdk
-        echo "JDK_HOME=/opt/${P}" >> /etc/env.d/21jdk
-        echo "JAVA_HOME=/opt/${P}" >> /etc/env.d/21jdk
-        echo "ROOTPATH=/opt/${P}/bin" >> /etc/env.d/21jdk
-        echo "CLASSPATH=/opt/${P}/jre/lib/rt.jar" >> /etc/env.d/21jdk
-        echo "LDPATH=/opt/${P}/jre/bin" >> /etc/env.d/21jdk
+        echo "PATH=/opt/${P}/bin" > ${D}/etc/env.d/21jdk
+        echo "JDK_HOME=/opt/${P}" >> ${D}/etc/env.d/21jdk
+        echo "JAVA_HOME=/opt/${P}" >> ${D}/etc/env.d/21jdk
+        echo "ROOTPATH=/opt/${P}/bin" >> ${D}/etc/env.d/21jdk
+        echo "CLASSPATH=/opt/${P}/jre/lib/rt.jar" >> ${D}/etc/env.d/21jdk
+        echo "LDPATH=/opt/${P}/jre/bin" >> ${D}/etc/env.d/21jdk
 }
 
 src_postinst() {
