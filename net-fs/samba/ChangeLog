@@ -1,13 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.18 2002/10/26 23:32:04 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.19 2002/10/26 23:41:50 nall Exp $
 
 *samba-2.2.6-r1 (Oct 26 2002)
+
   26 Oct 2002; Jon Nall <nall@gentoo.org> :
   samba expects ldap to depend on sasl in order for libresolv.so to
   get linked in, but ldap need not be compiled with sasl support. in
   this case samba needs to link in libresolv.so
-
 
 *samba-2.2.6 (Oct 24 2002)
 
