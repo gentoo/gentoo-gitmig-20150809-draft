@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.4.ebuild,v 1.7 2003/12/25 02:00:40 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.4.ebuild,v 1.8 2004/02/07 02:10:08 vapier Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -79,6 +79,7 @@ src_unpack() {
 			cp ${FILESDIR}/enigmail/Makefile-enigmail ${S}/extensions/enigmail/Makefile
 	fi
 
+	use amd64 && epatch ${FILESDIR}/mozilla-thunderbird-amd64.patch
 }
 
 src_compile() {
