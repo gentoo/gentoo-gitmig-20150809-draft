@@ -2,4 +2,15 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>cjk</herd>
+<maintainer>
+  <email>yakina@gentoo.org</email>
+  <name>YAMAKURA Makoto</name>
+</maintainer>
+<longdescription>
+IM-JA is a Japanese input module for GTK+2. It supports kanji
+conversion using either the Canna or the (Free)Wnn kanji conversion
+engine. IM-JA can also do kanji character recognition, you can draw
+kanji into a widget using the mouse. This feature is based on the
+KanjiPad application which has been enhanced in IM-JA.
+</longdescription>
 </pkgmetadata>
