@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/dbunit
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.1 2004/04/11 21:53:12 zx Exp $
+
+*dbunit-2.0 (11 Apr 2004)
+
+  11 Apr 2004; Chris Aniszczyk <zx@gentoo.org> dbunit-2.0.ebuild,
+  metadata.xml:
+  Initial Import. Closes #46064
+  Thanks to Pavel <hlobil@sympatico.ca> for the initial ebuild.
+
