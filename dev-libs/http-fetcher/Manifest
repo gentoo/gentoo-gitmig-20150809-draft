@@ -1,11 +1,18 @@
-MD5 f9e95ec09eeed47e2695009df1db63c2 http-fetcher-1.0.1-r1.ebuild 1136
-MD5 fe0b2860eadd02e64831b933f038573a http-fetcher-1.0.2.ebuild 767
-MD5 487ec283ce779f55c781fb3d23a4168c ChangeLog 1935
-MD5 95c77f24e9555beddab6a9b833c9f04b http-fetcher-1.0.1.ebuild 870
-MD5 3139a4ce7c5ce95e44f8021df50e888b http-fetcher-1.0.3.ebuild 772
-MD5 986a8927fbf78398c94af18534ae8786 files/digest-http-fetcher-1.0.1-r1 70
-MD5 66353698efa4a7df0b6f6834299152aa files/digest-http-fetcher-1.0.3 70
-MD5 5bed14995f10b0fafebd610a6b74deaf files/buffer-overflow-gentoo.patch 1173
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a8e4bcfc756caaf4270525763c11cfba http-fetcher-1.0.3.ebuild 762
+MD5 4f2dfbbbe171fcdf14add4de3d19932d http-fetcher-1.0.2.ebuild 743
+MD5 8fccd30ee6f6d27098f2501efa9e6d0f http-fetcher-1.1.0.ebuild 882
+MD5 b8ee8f282b742fcc5675a665ea7ef133 ChangeLog 2308
+MD5 d4c8b46f106b5227d676a585a0f84063 metadata.xml 255
 MD5 eac0ac4773ed1cbe44374680c329353f files/digest-http-fetcher-1.0.2 70
-MD5 81ec499439ffb3a7dd72c50fa3285a26 files/errno-link-gentoo.patch 584
-MD5 986a8927fbf78398c94af18534ae8786 files/digest-http-fetcher-1.0.1 70
+MD5 66353698efa4a7df0b6f6834299152aa files/digest-http-fetcher-1.0.3 70
+MD5 d180063664e90028ec3453192662c0fb files/digest-http-fetcher-1.1.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDJnrEZCkKN40op4RAj/2AJ9DYzia66FIWExudXGy/knuXNgjcQCfXVIB
+1o3ypz8fb16OwFfjNl15APw=
+=dSPR
+-----END PGP SIGNATURE-----
