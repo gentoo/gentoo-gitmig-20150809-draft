@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.7.ebuild,v 1.1 2002/06/27 00:53:44 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.8.ebuild,v 1.1 2002/06/27 17:28:15 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -152,13 +152,20 @@ pkg_postinst() {
 	fi
 
 	#fix cache (could contain staleness)
-	if [ -d ${ROOT}var/cache/edb/dep ]
+	if [ ! -d ${ROOT}var/cache/edb/dep/sys-apps ]
 	then
-		#avoid using "*" below as it can overwhelm rm
-		rm -rf ${ROOT}var/cache/edb/dep
-	fi	
-	#ok, set setgid wheel on the cache directory so that "wheel" users can cache stuff too.
-	install -m2775 -o root -g wheel -d ${ROOT}var/cache/edb/dep
+		if [ -d ${ROOT}var/cache/edb/dep ]
+		then
+			#avoid using "*" below as it can overwhelm rm
+			rm -rf ${ROOT}var/cache/edb/dep
+		fi	
+		#ok, set setgid wheel on the cache directory so that "wheel" users can cache stuff too.
+		install -m2775 -o root -g wheel -d ${ROOT}var/cache/edb/dep
+	
+	else
+		chown -R root.wheel ${ROOT}var/cache/edb/dep/*
+		chmod g+sw ${ROOT}var/cache/edb/dep/*
+	fi
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/portage.py[co]
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/portage.py')" || die
