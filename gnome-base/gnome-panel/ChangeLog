@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-panel
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.67 2004/01/14 13:45:46 obz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.68 2004/01/16 17:46:16 foser Exp $
+
+*gnome-panel-2.4.2 (16 Jan 2003)
+
+  16 Jan 2004; foser <foser@gentoo.org> gnome-panel-2.4.2.ebuild :
+  New release
 
   14 Jan 2004; Mike Gardiner <obz@gentoo.org> gnome-panel-2.4.1.ebuild:
   Stable on x86 as part of GNOME-2.4.1
