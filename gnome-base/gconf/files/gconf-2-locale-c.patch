@@ -1,0 +1,12 @@
+diff -ur GConf-2.8.1/backends/markup-tree.c GConf-2.8.1-patched/backends/markup-tree.c
+--- GConf-2.8.1/backends/markup-tree.c	2004-08-26 05:12:42.000000000 +0800
++++ GConf-2.8.1-patched/backends/markup-tree.c	2004-11-29 15:07:31.829661696 +0800
+@@ -1502,7 +1502,7 @@
+             }
+ 
+           /* Quit as soon as we have the best possible locale */
+-          if (local_schemas[0] != NULL)
++	  if (local_schemas[0] != NULL && c_local_schema != NULL)
+             break;
+ 
+           tmp = tmp->next;
