@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r5.ebuild,v 1.7 2004/11/05 16:57:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r5.ebuild,v 1.8 2004/11/06 12:50:22 corsair Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="motif nodrm"
 
 DEPEND="motif? ( virtual/x11
@@ -75,19 +75,20 @@ src_install() {
 	insinto /etc
 	newins ${FILESDIR}/xpdfrc.1 xpdfrc
 
-	# install languages
-	use linguas_ar && install_lang turkish
-	use linguas_zh_CN && install_lang chinese-simplified
-	use linguas_zh_TW && install_lang chinese-traditional
-	use linguas_ru && install_lang cyrillic
-	use linguas_el && install_lang greek
-	use linguas_he && install_lang hebrew
-	use linguas_ja && install_lang japanese
-	use linguas_ko && install_lang korean
-	use linguas_la && install_lang latin2
-	use linguas_th && install_lang thai
-	use linguas_tr && install_lang turkish
-
+	# install languages, but not on ppc64 (produces crashes...)
+	if use !ppc64; then
+		use linguas_ar && install_lang turkish
+		use linguas_zh_CN && install_lang chinese-simplified
+		use linguas_zh_TW && install_lang chinese-traditional
+		use linguas_ru && install_lang cyrillic
+		use linguas_el && install_lang greek
+		use linguas_he && install_lang hebrew
+		use linguas_ja && install_lang japanese
+		use linguas_ko && install_lang korean
+		use linguas_la && install_lang latin2
+		use linguas_th && install_lang thai
+		use linguas_tr && install_lang turkish
+	fi
 }
 
 install_lang() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.55 2004/11/05 16:57:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.56 2004/11/06 12:50:22 corsair Exp $
+
+  06 Nov 2004; Markus Rothe <corsair@gentoo.org> xpdf-3.00-r5.ebuild:
+  Stable on ppc64; bug #68661
 
   06 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> files/xpdfrc.1,
   xpdf-3.00-r4.ebuild, xpdf-3.00-r5.ebuild:
