@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bbgallery/bbgallery-1.1.0.ebuild,v 1.2 2002/08/30 11:24:36 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bbgallery/bbgallery-1.1.0.ebuild,v 1.3 2002/09/09 21:49:01 mcummings Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Webpage image gallery creation perl script"
@@ -12,8 +12,11 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 RDEPEND="media-gfx/gimp
+	 sys-devel/perl
 	 media-gfx/imagemagick
-	 sys-devel/perl"
+	 dev-perl/URI
+	 dev-perl/libwww-perl
+	 dev-perl/HTML-Parser"
 
 DEPEND="sys-apps/sed"
 
