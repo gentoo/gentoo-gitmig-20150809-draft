@@ -1,5 +1,5 @@
 # Copyright (c) 2002, Per Wigren <wigren@home.se>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.1 2002/06/25 10:26:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.2 2002/07/15 16:26:21 bass Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Freenet server"
@@ -8,6 +8,8 @@ HOMEPAGE="http://freenetproject.org"
 DEPEND="virtual/jdk"
 RDEPEND="${DEPEND}"
 SLOT="0"
+KEYWORDS="x86"
+LICENSE="GPL"
 
 src_compile () {
     cd ${S}
@@ -67,4 +69,11 @@ pkg_postinstall () {
 	einfo "files. So you can use the version of freenet for update"
 	einfo "it. Simply use the update-freenet script."
 	einfo "*********************************************************"
+}
+
+pkg_postinstall () {
+
+	einfo "Note that if updates freenat after emerge, the /var/freenet"
+	einfo "dir don't is removed in unemerge. Please do it manually"
+	einfo "(rm -rf /var/freenat) if you want it."
 }
