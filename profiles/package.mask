@@ -509,3 +509,4 @@ dev-lang/tcl-tk
 #seemant@gentoo.org 2 Apr 2002
 #testing a way to make this compile without being in X
 =net-mail/evolution-1.0.3-r2
+=media-libs/gdk-pixbuf-0.16.0-r7
