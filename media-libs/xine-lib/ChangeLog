@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.193 2005/02/07 21:10:03 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.194 2005/02/17 18:12:45 corsair Exp $
+
+  17 Feb 2005; Markus Rothe <corsair@gentoo.org> xine-lib-1.0.ebuild:
+  Stable on ppc64
 
   08 Feb 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
   Fixed bug #76090 (aalib and libcaca hard links).
