@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/gforth
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.1 2003/01/05 06:16:38 george Exp $
+
+*gforth-0.5.0.ebuild (04 ñÎ× 2003)
+
+  04 Jan 2003; George Shapovalov <george@gentoo.org> ChangeLog, gforth-0.5.0.ebuild, files/digest-gforth-0.5.0 :
+  initial release (#11677)
+  GNU Forth is a fast and portable implementation of the ANS Forth language
+  ebuild submitted by Rafael R. Sevilla  <dido@imperium.ph>
