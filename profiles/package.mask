@@ -955,7 +955,7 @@ net-mail/spamassassin
 >=dev-util/gnustep-make-1.3.0
 >=dev-util/gnustep-base-1.3.0
 # test this build.  doesn't require gnustep-env :)
->=x11-wm/WindowMaker-0.80.1-r2
+#>=x11-wm/WindowMaker-0.80.1-r2
 
 # agriffis@gentoo.org 06 Jul 2002
 # ruby-libglade-1.2 is OLD.  The 0.2[789] versions represent new
