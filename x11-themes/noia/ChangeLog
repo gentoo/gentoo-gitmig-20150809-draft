@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.1 2002/11/20 04:40:40 satai Exp $
+
+*noia-111902 (19 Nov 02)
+
+  19 Nov 2002; Matthew Turk <satai@gentoo.org> :
+  Noia Icon package.  Iconset for KDE with higher contrast than crystal.  Very
+  bubbly.
