@@ -30,7 +30,7 @@ src_install() {
 	insinto ${dir}/cfg
 	doins hugo.ini
 
-	dodoc *.fr *.txt *.es changes faq 
+	dodoc *.fr *.txt *.es changes faq
 
 	games_make_wrapper hugo ./hugo ${dir}
 
