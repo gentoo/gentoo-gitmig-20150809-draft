@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a-r2.ebuild,v 1.10 2003/02/13 14:42:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a-r2.ebuild,v 1.11 2003/03/20 17:21:05 gmsoft Exp $
 
 PN0=imap
 S=${WORKDIR}/${PN0}-${PV}
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc >=sys-libs/pam-0.72 ssl? ( dev-libs/openssl )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc hppa"
 IUSE="ssl"
 
 src_unpack() {
