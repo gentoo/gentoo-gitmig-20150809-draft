@@ -1,9 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.37 2003/09/12 14:30:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.38 2003/09/12 14:33:33 foser Exp $
 
   12 Sep 2003; foser <foser@gentoo.org> metacity-*.ebuild :
-  Corrected all SLOT to be 0
+  Corrected all SLOT to be 0 and fixed HOMEPAGE in 2.6.1
 
 *metacity-2.6.1 (12 Sep 2003)
 
