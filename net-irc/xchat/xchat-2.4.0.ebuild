@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.1.1.ebuild,v 1.1 2004/08/05 22:59:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.0.ebuild,v 1.1 2004/08/14 22:16:51 swegener Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Graphical IRC client"
-SRC_URI="http://www.xchat.org/files/source/2.1/${P}.tar.bz2
+SRC_URI="http://www.xchat.org/files/source/2.4/${P}.tar.bz2
 	xchatdccserver? ( http://dfx.at/xchat/xchat-dccserver-0.4.patch )"
 HOMEPAGE="http://www.xchat.org/"
 
@@ -47,22 +47,16 @@ src_compile() {
 	# instead of python-config (#25943)
 	unset PYTHONPATH
 
-	# test for local usage of xchatnogtk
-	local gtkconf=""
-	use xchatnogtk \
-		&& gtkconf="--disable-gtkfe" \
-		|| gtkconf="--enable-gtkfe"
-
 	econf \
-		${gtkconf} \
-		`use_enable ssl openssl` \
-		`use_enable perl` \
-		`use_enable python` \
-		`use_enable tcltk tcl` \
-		`use_enable mmx` \
-		`use_enable ipv6` \
-		`use_enable nls` \
-		`use_enable xchattext textfe` \
+		$(use_enable ssl openssl) \
+		$(use_enable perl) \
+		$(use_enable python) \
+		$(use_enable tcltk tcl) \
+		$(use_enable mmx) \
+		$(use_enable ipv6) \
+		$(use_enable nls) \
+		$(use_enable xchattext textfe) \
+		$(use_enable !xchatnogtk gtkfe) \
 		--program-suffix=-2 \
 		|| die "Configure failed"
 
