@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-0.9.ebuild,v 1.1 2004/02/24 23:32:06 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-0.9.ebuild,v 1.2 2004/03/24 17:19:52 mholzer Exp $
 
 DESCRIPTION="GTK Blog - post entries to your blog"
 HOMEPAGE="http://blogtk.sourceforge.net"
@@ -18,7 +18,7 @@ DEPEND=""
 
 RDEPEND=">=dev-python/pygtk-2.0.0
 	>=gnome-base/gconf-2.2.0
-	>=dev-python/gnome-python"
+	dev-python/gnome-python"
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
 
