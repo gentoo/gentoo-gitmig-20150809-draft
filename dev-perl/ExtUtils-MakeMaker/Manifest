@@ -1,4 +1,4 @@
-MD5 793f7c392d0eaab56080ba3a4b1cc1d4 ExtUtils-MakeMaker-6.16-r1.ebuild 2656
+MD5 e534b0fc2d08f4aace28db7c7357e9d7 ExtUtils-MakeMaker-6.16-r1.ebuild 2657
 MD5 bea673604201055db8644ab4cc36aeba ExtUtils-MakeMaker-6.16.ebuild 3628
 MD5 b2e38359efbfae258a33855895880411 ExtUtils-MakeMaker-6.11.ebuild 3626
 MD5 cb5f6eef2a64f6fac21a88ca47e3fff6 ExtUtils-MakeMaker-6.05-r6.ebuild 3605
@@ -7,7 +7,7 @@ MD5 60be35002dc52ac86742616b4b91e4d5 ExtUtils-MakeMaker-6.15-r1.ebuild 2656
 MD5 297afa5846457777a5059dde962050f3 ExtUtils-MakeMaker-6.11-r1.ebuild 2654
 MD5 d6b0d71c662c11eb5ab81df820f19201 ExtUtils-MakeMaker-6.15.ebuild 3628
 MD5 b018d3ad768b8fd54d336d0f044c9c4f ExtUtils-MakeMaker-6.05-r5.ebuild 3305
-MD5 cec9993b7340c4aaeda0926ffd7dc7bd ChangeLog 5116
+MD5 559111d4aec86bdcd3bfce16a09d5860 ChangeLog 5200
 MD5 cce76c65438e7d254027eae29f206b1f ExtUtils-MakeMaker-6.05-r4.ebuild 3304
 MD5 2cc7445bb2472696df202d4f1eccae98 files/digest-ExtUtils-MakeMaker-6.05-r4 75
 MD5 2cc7445bb2472696df202d4f1eccae98 files/digest-ExtUtils-MakeMaker-6.05-r5 75
