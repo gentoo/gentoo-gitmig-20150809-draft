@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.2 2005/01/17 23:08:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.3 2005/01/27 03:39:50 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -174,7 +174,7 @@ src_unpack() {
 
 	# we need to do it independently of hardened to get ssp.c built into libc
 	sed -i -e "s:# UCLIBC_SECURITY.*:UCLIBC_SECURITY=y:" .config
-	echo "UCLIBC_HAS_SSP=y:" >> .config
+	echo "UCLIBC_HAS_SSP=y" >> .config
 	echo "PROPOLICE_BLOCK_ABRT=n" >> .config
 	if use debug ; then
 		echo "PROPOLICE_BLOCK_SEGV=y" >> .config
@@ -279,12 +279,15 @@ src_install() {
 	# scsi is uclibc's own directory since cvs 20040212
 	rm -r "${D}"$(alt_prefix)/include/{asm,linux,asm-generic}
 
-	[[ ${CTARGET} != ${CHOST} ]] && return 0
+	# Make sure we install the sys-include symlink so that when 
+	# we build a 2nd stage cross-compiler, gcc finds the target 
+	# system headers correctly.  See gcc/doc/gccinstall.info
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
+		dosym include $(alt_prefix)/sys-include
+		return 0
+	fi
 
 	if [[ ${CHOST} == *-uclibc ]] ; then
-#		rm -f "${D}"$(alt_prefix)/lib/lib*_pic.a
-#		! use static && use build && rm -f "${D}"$(alt_prefix)/lib/lib*.a
-
 		emake PREFIX="${D}" install_utils || die "install-utils failed"
 		dodir /usr/bin
 		exeinto /usr/bin

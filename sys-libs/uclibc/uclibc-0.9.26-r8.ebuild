@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.5 2005/01/17 23:08:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.6 2005/01/27 03:39:50 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -177,7 +177,7 @@ src_unpack() {
 	# we need to do it independently of hardened to get ssp.c built into libc
 	sed -i -e "s:# UCLIBC_SECURITY.*:UCLIBC_SECURITY=y:" .config
 	einfo "Enable Stack Smashing Protections support in ${P}"
-	echo "UCLIBC_HAS_SSP=y:" >> .config
+	echo "UCLIBC_HAS_SSP=y" >> .config
 	echo "PROPOLICE_BLOCK_ABRT=n" >> .config
 	if use debug ; then
 		echo "PROPOLICE_BLOCK_SEGV=y" >> .config
