@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/PerlQt
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/ChangeLog,v 1.1 2003/05/13 03:23:12 caleb Exp $
+
+*PerlQt-3.006 (May 12 2003)
+
+  12 May 2003; Caleb Tennis <caleb@gentoo.org> PerlQt-3.006.ebuild:
+  Initial import (thanks to Christian Plessl).  Fixed bug #16431.
+
