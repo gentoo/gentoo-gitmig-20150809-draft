@@ -1,0 +1,10 @@
+#!/sbin/runscript
+ 
+depend() {
+    need
+}
+ 
+start() {
+    ebegin "Create XF86Config"
+    /usr/sbin/mkxf86config.sh
+}
