@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/align
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.27 2005/02/18 18:44:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.28 2005/02/18 19:20:14 slarti Exp $
+
+  18 Feb 2005; Tom Martin <slarti@gentoo.org> align-30-r1.ebuild:
+  amd64 stable.
 
   18 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org> align-30-r1.ebuild,
   -align-30.ebuild:
