@@ -1,0 +1,14 @@
+# ChangeLog for app-sci/staden
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/ChangeLog,v 1.1 2004/09/15 01:46:36 ribosome Exp $
+
+*staden-1.4.1 (14 Sep 2004)
+
+  14 Sep 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/staden-1.4.1-env, +files/staden-1.4.1-gap4.patch,
+  +files/staden-1.4.1-getopt.patch, +files/staden-1.4.1-iwidgetsrc.new,
+  +files/staden-1.4.1-mutscan.patch, +files/staden-1.4.1-prefinish.patch,
+  +files/staden-1.4.1-tk_utils.patch, +files/staden-1.4.1-tracediff.patch,
+  +staden-1.4.1.ebuild:
+  Initial import.
+
