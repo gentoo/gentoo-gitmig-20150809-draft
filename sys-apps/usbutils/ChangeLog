@@ -1,0 +1,12 @@
+# ChangeLog for sys-apps/usbutils
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.1 2002/02/25 01:17:01 blocke Exp $
+
+*usbutils-0.9 (24 Feb 2002)
+
+  24 Feb 2002; Bruce A. Locke <blocke@gentoo.org> usbutils-0.9.ebuild :
+
+  Ebuild contributed by Scott Worley (folokai@earthlink.net)
+
+
+
