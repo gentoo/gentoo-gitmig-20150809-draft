@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/jfsutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.14 2004/06/24 22:51:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.15 2004/07/07 20:31:19 lv Exp $
+
+  07 Jul 2004; Travis Tilley <lv@gentoo.org> jfsutils-1.1.4.ebuild:
+  stable on amd64
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> jfsutils-1.1.3.ebuild,
   jfsutils-1.1.4.ebuild:
