@@ -5,7 +5,10 @@
 		The games-server category contains game servers.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie games-server enthält Spieleserver.
+		Die Kategorie games-server enthÃ€lt Spieleserver.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría games-server contiene servidores de juegos.
 	</longdescription>
 </catmetadata>
 

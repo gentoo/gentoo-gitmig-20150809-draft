@@ -6,8 +6,12 @@
 		style.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie games-roguelike enthält Spiele die sich am Stil von
+		Die Kategorie games-roguelike enthÃ€lt Spiele die sich am Stil von
 		Rogue orientieren (z.B. NetHack).
+	</longdescription>
+	<longdescription lang="es">
+		La categoría games-roguelike contiene juegos que recrean el estilo del
+		Rogue.
 	</longdescription>
 </catmetadata>
 

@@ -5,7 +5,10 @@
 		The games-mud category contains multi-user dungeon games.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie games-mud enthält Multi-User Dungeon (MUD) Clients und Spiele.
+		Die Kategorie games-mud enthÃ€lt Multi-User Dungeon (MUD) Clients und Spiele.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría games-mud contiene juegos de tipo MUD multijugador.
 	</longdescription>
 </catmetadata>
 

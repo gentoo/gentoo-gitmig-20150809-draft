@@ -6,8 +6,12 @@
 		into other games- categories.
 	</longdescription>
 	<longdescription lang="de">
-	    Die Kategorie games-misc enthält verschiedenste Spiele die sich nicht
+	    Die Kategorie games-misc enthÃ€lt verschiedenste Spiele die sich nicht
 	    in andere Kategorien einordnen lassen.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría games-misc contiene juegos que no encajan en ninguna de las
+		otras categorías games-.
 	</longdescription>
 </catmetadata>
 
