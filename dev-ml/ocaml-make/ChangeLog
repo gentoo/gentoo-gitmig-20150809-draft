@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-make
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ChangeLog,v 1.2 2004/03/01 12:20:27 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ChangeLog,v 1.3 2004/03/13 10:07:40 mr_bones_ Exp $
+
+  13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  ocaml-make-5.04.0.ebuild:
+  ppc needs deps first; don't assign default to S; header fix
 
 *ocaml-make-5.04.0 (19 Jun 2003)
 
