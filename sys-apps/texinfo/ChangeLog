@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.46 2005/01/04 03:24:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.47 2005/01/30 20:51:38 vapier Exp $
+
+  30 Jan 2005; Mike Frysinger <vapier@gentoo.org> texinfo-4.8.ebuild:
+  Don't install texi2pdf anymore since tetex does #76812 by Marius Mauch.
 
 *texinfo-4.8 (03 Jan 2005)
 
