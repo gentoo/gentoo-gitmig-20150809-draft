@@ -1,6 +1,6 @@
-# ChangeLog for net-analyzer/pipes
+# ChangeLog for net-misc/pipes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/ChangeLog,v 1.1 2003/09/24 12:55:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/ChangeLog,v 1.2 2003/09/26 05:52:52 vapier Exp $
 
 *pipes-1.15 (22 Sep 2003)
 
