@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/eurosym-1.2.ebuild,v 1.8 2004/05/06 15:57:03 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/eurosym-1.2.ebuild,v 1.9 2004/06/14 17:44:12 aliz Exp $
 
 inherit latex-package
 S=${WORKDIR}/${PN}
@@ -12,7 +12,7 @@ LICENSE="as-is"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 ~sparc"
 
 SUPPLIER="public"
 
