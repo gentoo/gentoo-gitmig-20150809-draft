@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.3 2004/11/21 21:31:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.4 2004/11/21 21:40:32 mrness Exp $
 
 inherit kernel-mod rpm eutils
 
@@ -80,10 +80,6 @@ pkg_setup() {
 	kernel-mod_check_modules_supported
 }
 
-src_unpack() {
-	rpm_src_unpack ${A} || die "Could not unpack RPM package."
-}
-
 src_compile() {
 	set_arch_to_kernel
 	for ((CARD=0; CARD < ${#FCDSL_IDS[*]}; CARD++)); do
@@ -116,10 +112,6 @@ src_install() {
 		dosym /lib/firmware/${PN}_${FCDSL_FIRMWARES[CARD]} /usr/lib/isdn/${FCDSL_FIRMWARES[CARD]}
 	done
 
-	if ! [ "${FCDSL_MODULE}" == "" ]; then
-		sed -si "s/^#\(options ${FCDSL_MODULE} VPI=1 VCI=32 VCC=1\)/\1/" ${D}/etc/modules.d/fcdsl
-	fi
-
 	insinto /etc/drdsl
 	doins ${S}/drdsl.ini
 
@@ -140,10 +132,11 @@ pkg_postinst() {
 	einfo "If you want to setup your DSL card driver and create a peer file, please run:"
 	einfo "    etc-update"
 	einfo "    ebuild /var/db/pkg/net-dialup/${PF}/${PF}.ebuild config"
-	einfo "    capiinit start"
+	einfo "    /etc/init.d/capi start"
 	einfo "    drdsl -n"
 	einfo "    nano /etc/modules.d/fcdsl"
 	einfo "    update-modules"
+	einfo "    /etc/init.d/capi restart"
 	epause 10
 }
 
