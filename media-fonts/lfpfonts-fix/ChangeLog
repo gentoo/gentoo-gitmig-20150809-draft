@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/lfpfonts-fix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/ChangeLog,v 1.7 2004/09/29 07:45:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/ChangeLog,v 1.8 2004/09/29 07:52:24 usata Exp $
+
+*lfpfonts-fix-0.83-r2 (29 Sep 2004)
+
+  29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +lfpfonts-fix-0.83-r2.ebuild:
+  Use font.eclass. This closes bug #44840.
 
   29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> lfpfonts-fix-0.82-r1.ebuild,
   lfpfonts-fix-0.83-r1.ebuild:
