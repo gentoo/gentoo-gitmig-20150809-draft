@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/sather
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.1 2002/03/21 09:52:43 gbevin Exp $
+
+*ibpp-1.0.5.2 (21 Mar 2002)
+
+  21 Mar 2002; G.Bevin <gbevin@gentoo.org> ibpp-1.0.5.2.ebuild
+  files/digest-ibpp-1.0.5.2 digest/ibpp-1.0.5.2.patch:
+  
+  Initial package for the ibpp c++ firebird library.
