@@ -1,10 +1,15 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.5 2002/05/02 21:21:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.6 2002/05/08 05:03:10 kain Exp $
+
+*rsync-2.5.5-r1 (07 May 2002)
+
+  07 May 2002; Kain <kain@kain.org> rsync-2.5.5-r1.ebuild : Fix dependency to
+  libpopt again so that build images not made from a virgin install will work.
 
 *rsync-2.5.5 (02 May 2002)
 
-  20 May 2002; Daniel Robbins <drobbins@gentoo.org>: new ebuild to hopefully
+  02 May 2002; Daniel Robbins <drobbins@gentoo.org>: new ebuild to hopefully
   fix some "dead rsync --daemon" processes... the problem that just won't go
   away.
 
