@@ -108,3 +108,4 @@ move net-www/horde-chora www-apps/horde-chora
 move net-www/horde-forwards www-apps/horde-forwards
 move net-www/horde-imp www-apps/horde-imp
 move net-www/horde-kronolith www-apps/horde-kronolith
+move net-www/horde-mnemo www-apps/horde-mnemo
