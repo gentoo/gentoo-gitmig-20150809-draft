@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkDPS
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.5 2003/07/28 21:29:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.6 2003/09/16 18:27:11 agriffis Exp $
+
+  16 Sep 2003; Aron Griffis <agriffis@gentoo.org> gtkDPS-0.3.4.ebuild:
+  Add ~alpha
 
 *gtkDPS-0.3.4 (28 Jul 2003)
 
