@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.115 2004/09/14 23:34:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.116 2004/09/15 17:54:47 spyderous Exp $
+
+  15 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.8.0.ebuild:
+  Fix SRC_URI inconsistency issues (#64117).
 
   14 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.8.0.ebuild:
   FILES_VER 0.2. Support any future display managers (#23957) and update MANPATH

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.14 2004/09/14 23:34:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.15 2004/09/15 17:54:47 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -47,7 +47,7 @@ X_DRIVERS=""
 # Latest SIS drivers:  http://www.winischhofer.net/
 
 GENTOO_FILES="mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2
-	http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-files-${PATCH_VER}.tar.bz2
+	http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-files-${FILES_VER}.tar.bz2
 	http://dev.gentoo.org/~cyfred/distfiles/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
