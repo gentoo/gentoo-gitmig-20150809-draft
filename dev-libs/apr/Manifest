@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 2f6362c45b625459eb1262391c3ac4f3 apr-0.9.5-r2.ebuild 2286
-MD5 c461e45f7df99db7a21bc64e68aea8b4 ChangeLog 2902
+MD5 52e2d0428679bbffc8d66203ade32109 apr-0.9.5-r2.ebuild 2335
+MD5 6525cc877cba906579e2bab4ad86f6eb ChangeLog 3034
 MD5 aadbec5bc76c5f1060218e1625157190 apr-0.9.6-r1.ebuild 2237
 MD5 86a4c96972b87a34fd0b2159e9f336cf apr-0.9.5-r1.ebuild 2237
 MD5 a9e11dd361abd1efb067c9003fab657a apr-0.9.5.ebuild 2176
-MD5 899775f295a9ed4da6100a5a82fadce5 apr-0.9.6-r2.ebuild 2286
+MD5 03b622d4896a7c5344fc35089c61d507 apr-0.9.6-r2.ebuild 2335
 MD5 068e4d83429849cbae32d8194086efb2 apr-0.9.6.ebuild 2176
 MD5 a90539853bca24e2f0e77192d41e5a01 files/digest-apr-0.9.5-r2 62
 MD5 a90539853bca24e2f0e77192d41e5a01 files/digest-apr-0.9.5-r1 62
@@ -16,9 +16,9 @@ MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6 62
 MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6-r2 62
 MD5 a90539853bca24e2f0e77192d41e5a01 files/digest-apr-0.9.5 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCNOYCjUHll2nfF60RAnJ3AJ9p99+ffasnBdmwejW5s+vUo5RQAgCgwmaM
-szyG7MjdXDYuIacdBzAHsj0=
-=66PB
+iD8DBQFCPyPSjUHll2nfF60RAsrmAJ9VX9aGKmjNtWCQfAt4LXIovFoNfgCeKyBf
+OB+gOJyWu7Q82PtwPXbwRXM=
+=oms0
 -----END PGP SIGNATURE-----
