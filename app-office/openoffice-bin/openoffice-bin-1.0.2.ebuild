@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.10 2003/03/19 05:30:37 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.11 2003/03/24 21:37:51 sethbc Exp $
 
 IUSE="kde gnome"
 
@@ -35,7 +35,8 @@ DEPEND="virtual/glibc
 	app-arch/zip
 	app-arch/unzip
 	>=virtual/jdk-1.3.1
-	!app-office/openoffice"
+	!app-office/openoffice
+	virtual/lpr"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
@@ -178,6 +179,11 @@ src_install() {
 
 	# Unneeded, as they get installed into /usr/share...
 	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
+
+	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
+		echo 'Categories=Application;Office;' >> ${f}
+	done
+
 
 	# Make sure these do not get nuked.
 	keepdir ${INSTDIR}/user/config/registry/instance/org/openoffice/{Office,ucb}

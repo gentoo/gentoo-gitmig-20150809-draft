@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.14 2003/03/20 04:50:26 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.15 2003/03/24 21:37:51 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -74,6 +74,7 @@ RDEPEND=">=sys-libs/glibc-2.1
 	app-arch/unzip
 	dev-libs/expat
 	>=virtual/jdk-1.3.1
+	virtual/lpr
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
 	>=sys-devel/gcc-3.2 )" # needed for sqrtl patch recently introduced
 
@@ -549,7 +550,7 @@ src_install() {
 	# Unneeded, as they get installed into /usr/share...
 	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
 
-	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/ ; do
+	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
 		echo 'Categories=Application;Office;' >> ${f}
 	done
 
