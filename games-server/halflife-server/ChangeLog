@@ -1,7 +1,7 @@
 # ChangeLog for games-server/halflife-server
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author:  Alexander Gretencord <arutha@gmx.de>
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/ChangeLog,v 1.2 2003/09/10 15:49:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/ChangeLog,v 1.3 2004/01/05 21:49:03 aliz Exp $
 
 *halflife-server-3.1.1.1d (10 Jul 2003)
 
@@ -14,6 +14,7 @@
   I like patches, dont you ?
 
 *halflife-server-3.1.1.1 (08 Jul 2003)
+*halflife-server-3.1.1.0 (08 Jul 2003)
 
   08 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
   Ah, about time this guy was updated.  Only took mmmmmmmm a year ...
