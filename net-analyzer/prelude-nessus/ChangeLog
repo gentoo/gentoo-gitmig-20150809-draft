@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/prelude-nessus
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nessus/ChangeLog,v 1.1 2003/08/13 12:57:13 phosphan Exp $
+
+*prelude-nessus-20021107 (13 Aug 2003)
+
+  13 Aug 2003; Patrick Kursawe <phosphan@gentoo.org>
+  prelude-nessus-20021107.ebuild:
+  Initial import, suggested in bug 19673
+
