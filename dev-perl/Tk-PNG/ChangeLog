@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Tk-PNG
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-PNG/ChangeLog,v 1.1 2003/12/23 06:16:56 rac Exp $
+
+*Tk-PNG-2.005 (22 Dec 2003)
+
+  22 Dec 2003; <rac@gentoo.org> Tk-PNG-2.005.ebuild:
+  Initial version, based on bug 22745
+
