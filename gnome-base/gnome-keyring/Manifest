@@ -1,4 +1,4 @@
+MD5 d2f8db71125e9a9479a3e4d562f68e57 files/digest-gnome-keyring-0.2.0 72
 MD5 ea409431a67c36cf0c455a04084b44d2 ChangeLog 852
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 06d3748d4b11dd30787ee3a8b80e47ab gnome-keyring-0.2.0.ebuild 587
-MD5 d2f8db71125e9a9479a3e4d562f68e57 files/digest-gnome-keyring-0.2.0 72
+MD5 37f241260f94ff8ef33041f27eccca46 gnome-keyring-0.2.0.ebuild 584
