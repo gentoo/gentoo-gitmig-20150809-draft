@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.32 2004/04/11 19:06:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.33 2004/04/22 17:56:00 eradicator Exp $
+
+  22 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> lame-3.95.1.ebuild:
+  Removed buggy version.
 
 *lame-3.96 (11 Apr 2004)
 
