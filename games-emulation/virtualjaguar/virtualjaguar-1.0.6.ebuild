@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.6.ebuild,v 1.1 2003/09/26 07:44:53 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.6.ebuild,v 1.2 2003/09/27 08:28:15 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 S="${WORKDIR}/${P}-src"
 DESCRIPTION="an Atari Jaguar emulator"
@@ -26,6 +26,7 @@ src_unpack() {
 	sed -i \
 		-e "s:-O3:${CFLAGS}:" Makefile.unix || \
 			die "sed Makefile.unix failed"
+	epatch ${FILESDIR}/gcc331.patch
 }
 
 src_compile() {

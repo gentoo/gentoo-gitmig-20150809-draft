@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/virtualjaguar
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.2 2003/09/26 07:44:52 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.3 2003/09/27 08:28:15 mr_bones_ Exp $
+
+  27 Sep 2003; Michael Sterrett <msterret@gentoo.org>
+  virtualjaguar-1.0.6.ebuild, files/gcc331.patch:
+  Added gcc331.patch from Daniel Goller via bug 29642
 
 *virtualjaguar-1.0.6 (26 Sep 2003)
 
