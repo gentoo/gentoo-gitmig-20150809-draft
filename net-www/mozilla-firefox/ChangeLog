@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.58 2004/08/08 19:18:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.59 2004/08/13 09:44:28 kloeri Exp $
+
+  13 Aug 2004; <kloeri@gentoo.org> mozilla-firefox-0.9.3.ebuild:
+  Stable on alpha, bug 59419.
 
 *mozilla-firefox-0.9.3-r1 (08 Aug 2004)
 
