@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.81 2004/08/19 13:25:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.82 2004/08/19 15:35:48 usata Exp $
+
+  20 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-1.6.8-r11.ebuild,
+  ruby-1.8.0-r7.ebuild, ruby-1.8.2_pre2.ebuild:
+  Stable on x86 for the fix of CGI::Session's insecure permission issue.
+  See bug #60525.
 
 *ruby-1.8.0-r7 (19 Aug 2004)
 
