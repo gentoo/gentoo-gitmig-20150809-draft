@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-200404.ebuild,v 1.1 2004/03/31 19:48:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-200404.ebuild,v 1.2 2004/05/09 18:33:20 usata Exp $
 
 IUSE=""
 
@@ -11,12 +11,10 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha ppc"
 
 DEPEND="app-arch/gzip"
 RDEPEND=""
-
-S=${WORKDIR}/${P}
 
 src_install () {
 
