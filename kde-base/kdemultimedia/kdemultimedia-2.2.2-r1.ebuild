@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2-r1.ebuild,v 1.1 2003/01/17 20:31:28 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2-r1.ebuild,v 1.2 2003/02/01 20:07:51 jmorgan Exp $
 
 IUSE="nas esd motif gtk slang alsa"
 inherit kde-dist
@@ -9,7 +9,7 @@ SRC_URI="${SRC_URI}
 	mirror://kde/security_patches/post-${PV}-${PN}.diff"
 
 DESCRIPTION="KDE $PV - multimedia apps"
-KEYWORDS="x86 ~sparc "
+KEYWORDS="x86 sparc "
 MAKEOPTS="${MAKEOPTS} -j1"
 newdepend ">=sys-libs/ncurses-5.2
     >=media-sound/cdparanoia-3.9.8
