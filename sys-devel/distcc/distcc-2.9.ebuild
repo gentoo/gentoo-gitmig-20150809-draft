@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.9.ebuild,v 1.2 2003/08/08 13:25:37 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.9.ebuild,v 1.3 2003/08/11 01:56:36 pebenito Exp $
 
 inherit eutils gcc flag-o-matic
 [ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -18,7 +18,8 @@ DEPEND=">=sys-apps/portage-2.0.46-r11
 	>=sys-devel/gcc-config-1.3.1
 	sys-apps/shadow"
 
-RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.1 )"
+RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.1 )
+	selinux? ( sec-policy/selinux-distcc )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.5-r1.ebuild,v 1.3 2003/08/08 13:25:37 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.5-r1.ebuild,v 1.4 2003/08/11 01:56:36 pebenito Exp $
 
 inherit eutils
 
@@ -21,6 +21,8 @@ DEPEND=">=sys-apps/portage-2.0.46-r11
 	>=sys-devel/gcc-config-1.3.1
 	sys-apps/shadow
 	dev-libs/popt"
+
+RDEPEND="selinux? ( sec-policy/selinux-distcc )"
 
 src_compile() {
 	econf || die "econf failed"
