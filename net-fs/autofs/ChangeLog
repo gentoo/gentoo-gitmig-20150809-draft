@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.5 2002/04/17 04:34:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.6 2002/04/30 22:13:33 sandymac Exp $
+
+  30 Apr 2002; William McArthur <sandymac@gentoo.org> autofs-3.1.7-r3.ebuild :
+
+  Added HOMEPAGE, LICENSE and made the DESCRIPTION a little more so.
 
 *autfofs-3.1.7-r3 (16 Apr 2002)
 

@@ -1,10 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r3.ebuild,v 1.1 2002/04/17 04:34:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r3.ebuild,v 1.2 2002/04/30 22:13:33 sandymac Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Automounter"
+DESCRIPTION="Kernel based automounter"
+HOMEPAGE="http://www.linux-consulting.com/Amd_AutoFS/autofs.html"
+LICENSE="GPL-2"
 SRC_URI="ftp://ftp.kernel.org/pub/linux/daemons/autofs/${P}.tar.bz2
 	ftp://ftp.de.kernel.org/pub/linux/daemons/autofs/${P}.tar.bz2
 	ftp://ftp.uk.kernel.org/pub/linux/daemons/autofs/${P}.tar.bz2"
