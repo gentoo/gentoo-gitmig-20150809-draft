@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.3 2004/03/27 10:04:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.4 2004/04/13 18:50:29 vapier Exp $
 
 inherit eutils gcc games
 
@@ -22,12 +22,11 @@ IUSE="svga X sdl aalib opengl noqmax rogue xatrix"
 # default to X11 if svga/X/sdl/aalib are not in USE
 RDEPEND="virtual/glibc
 	opengl? ( virtual/opengl )
-	|| (
-		svga? ( media-libs/svgalib )
-		X? ( virtual/x11 )
-		sdl? ( media-libs/libsdl )
-		aalib? ( media-libs/aalib )
-		virtual/x11 )
+	svga? ( media-libs/svgalib )
+	X? ( virtual/x11 )
+	sdl? ( media-libs/libsdl )
+	aalib? ( media-libs/aalib )
+	!svga? ( !X? ( !sdl? ( !aalib? ( virtual/x11 ) ) ) )
 	arts? ( kde-base/arts )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
