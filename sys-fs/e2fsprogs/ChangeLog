@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.14 2004/01/14 23:44:08 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.15 2004/01/15 14:05:31 gustavoz Exp $
+
+  15 Jan 2004; <gustavoz@gentoo.org> e2fsprogs-1.32-r2.ebuild,
+  e2fsprogs-1.33.ebuild, e2fsprogs-1.34-r1.ebuild, e2fsprogs-1.34.ebuild:
+  backed out restrict=nomirror since it's hardly justified in logs or bugs
 
 *e2fsprogs-1.34-r1 (14 Jan 2004)
 
