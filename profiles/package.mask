@@ -306,10 +306,6 @@ sys-devel/spython
 # Masked for testing
 >=dev-util/anjuta-1.1.1
 
-# <caleb@gentoo.org> 29 May 2003
-# Still in testing phases
-=x11-libs/qt-3.2*
-
 # <robbat2@gentoo.org> 29 May 2003
 # ebuild was previously masked only in the ebuild
 # This is the correct place for it.
