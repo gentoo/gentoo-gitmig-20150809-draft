@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r3.ebuild,v 1.5 2005/01/24 23:54:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r4.ebuild,v 1.1 2005/01/25 01:38:24 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -19,14 +19,14 @@ LICENSE="NVIDIA"
 SLOT="0"
 
 # This revision just changes behavior on amd64 2005.0
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~x86"
 
 RESTRICT="nostrip multilib-pkg-force"
 IUSE=""
 
 DEPEND="virtual/libc
 	virtual/x11
-	>=x11-base/opengl-update-1.8.1
+	>=x11-base/opengl-update-2.1_pre1
 	~media-video/nvidia-kernel-${PV}
 	!app-emulation/emul-linux-x86-nvidia"
 
@@ -159,7 +159,7 @@ src_install-libs() {
 	    -e "s:\${ver1}:${ver1}:" \
 	    -e "s:\${ver2}:${ver2}:" \
 	    -e "s:\${ver3}:${ver3}:" \
-	    -e "s:\${libdir}:${inslibdir}:" \
+	    -e "s:\${libdir}:${NV_ROOT}/lib:" \
 	    ${FILESDIR}/libGL.la-r1 > ${D}/${NV_ROOT}/lib/libGL.la
 
 	# The GLX extension
