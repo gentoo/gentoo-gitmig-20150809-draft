@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021027.ebuild,v 1.5 2002/10/28 17:10:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021027.ebuild,v 1.6 2002/11/16 01:04:36 vapier Exp $
 
 IUSE="pic X mmx truetype opengl"
 
@@ -70,10 +70,12 @@ src_install() {
 	############
 
 	### imlib2 ###
+	# mmx support in imlib2 makes other things complain it would seem ...
+	# *shrug*, worked for me ;D
 	cd ${S}/libs/imlib2
-	addconf=
+	addconf="--disable-mmx"
 	use X		&& addconf="${addconf} --with-x"
-	use mmx		&& addconf="${addconf} --enable-mmx"
+#	use mmx		&& addconf="${addconf} --enable-mmx"
 	use truetype	&& addconf="${addconf} --with-ttf=/usr"
 	env USER=BS ./autogen.sh ${baseconf} ${addconf} || die "could not autogen imlib2"
 	make || die "could not make imlib2"
