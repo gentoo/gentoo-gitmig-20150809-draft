@@ -1,0 +1,14 @@
+diff -ur openldap-2.1.27.orig/build/openldap.m4 openldap-2.1.27/build/openldap.m4
+--- openldap-2.1.27.orig/build/openldap.m4	2003-12-02 10:05:49.000000000 -0800
++++ openldap-2.1.27/build/openldap.m4	2004-03-28 20:46:04.000000000 -0800
+@@ -320,6 +320,10 @@
+ OL_BERKELEY_DB_TRY(ol_cv_db_db_41,[-ldb-41])
+ OL_BERKELEY_DB_TRY(ol_cv_db_db_4_dot_1,[-ldb-4.1])
+ OL_BERKELEY_DB_TRY(ol_cv_db_db_4_1,[-ldb-4-1])
++OL_BERKELEY_DB_TRY(ol_cv_db_db40,[-ldb40])
++OL_BERKELEY_DB_TRY(ol_cv_db_db_40,[-ldb-40])
++OL_BERKELEY_DB_TRY(ol_cv_db_db_4_dot_0,[-ldb-4.0])
++OL_BERKELEY_DB_TRY(ol_cv_db_db_4_0,[-ldb-4-0])
+ OL_BERKELEY_DB_TRY(ol_cv_db_db_4,[-ldb-4])
+ OL_BERKELEY_DB_TRY(ol_cv_db_db4,[-ldb4])
+ OL_BERKELEY_DB_TRY(ol_cv_db_db,[-ldb])
