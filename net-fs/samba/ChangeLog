@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.155 2005/03/19 17:10:10 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.156 2005/03/24 09:28:42 satya Exp $
+
+  24 Mar 2005; Christian Andreetta <satya@gentoo.org> files/samba-init:
+  slapd init scripts precedence: bug #86464
 
 *samba-3.0.12 (19 Mar 2005)
 
@@ -34,10 +37,10 @@
   25 Jan 2005; Guy Martin <gmsoft@gentoo.org> samba-3.0.10.ebuild:
   Stable on hppa.
 
-  22 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> samba-3.0.10.ebuild:
+  22 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org> samba-3.0.10.ebuild:
   Stable on alpha.
 
-  19 Jan 2005; Olivier Crête <tester@gentoo.org> samba-3.0.10.ebuild:
+  19 Jan 2005; Olivier CrÃªte <tester@gentoo.org> samba-3.0.10.ebuild:
   Stable on x86 wrt bug #77734
 
   14 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> samba-3.0.10.ebuild:
@@ -114,7 +117,7 @@
   10 Nov 2004; Joshua Kinard <kumba@gentoo.org> samba-3.0.8.ebuild:
   Marked stable on mips.
 
-  10 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> samba-3.0.8.ebuild:
+  10 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> samba-3.0.8.ebuild:
   Stable on alpha, bug 70429.
 
   09 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> samba-3.0.8.ebuild:
@@ -200,7 +203,7 @@
   09 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> samba-3.0.6-r4.ebuild:
   Stable on sparc
 
-  09 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> samba-3.0.6-r4.ebuild:
+  09 Sep 2004; Bryan Ãstergaard <kloeri@gentoo.org> samba-3.0.6-r4.ebuild:
   Stable on alpha, bug 62476.
 
   08 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> samba-3.0.6-r4.ebuild:
@@ -269,7 +272,7 @@
   22 Jul 2004; Michael Glauche <mglauche@gentoo.org> samba-3.0.5.ebuild:
   Version bump, fixes 2 buffer overruns.
 
-  14 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> samba-3.0.4-r1.ebuild:
+  14 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> samba-3.0.4-r1.ebuild:
   Stable on alpha.
 
   01 Jul 2004; Tom Gall <tgall@gentoo.org> samba-3.0.4-r1.ebuild:
@@ -339,7 +342,7 @@
   27 Apr 2004; Jason Wever <weeve@gentoo.org> samba-3.0.2a-r2.ebuild:
   Stable on sparc wrt bug #41800.
 
-  27 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> samba-3.0.2a-r2.ebuild:
+  27 Apr 2004; Bryan Ãstergaard <kloeri@gentoo.org> samba-3.0.2a-r2.ebuild:
   Keyworded alpha, see bug #41800.
 
 *samba-3.0.2a-r2 (26 Apr 2004)

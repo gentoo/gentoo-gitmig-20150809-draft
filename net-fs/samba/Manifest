@@ -7,7 +7,7 @@ MD5 636cefb79b33da2114659a179850f094 samba-3.0.6-r3.ebuild 14258
 MD5 7b437485608a9d4133c07e606ab9fda8 samba-3.0.9-r1.ebuild 16411
 MD5 4ec9fc723b0d9801152c2ddfd4442de9 samba-3.0.10.ebuild 16380
 MD5 8df69d51a4a13d38c421f32cbf82d2a6 samba-3.0.8.ebuild 16847
-MD5 047738f48361e5b4bbbee2f91c770609 ChangeLog 27386
+MD5 b795c37e4ec9315bcdf0a8e96708d986 ChangeLog 27515
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
 MD5 e93b50dfb3a4e2824e428757fc4f70ee samba-3.0.12.ebuild 15520
 MD5 e561c6780260096813f060bcbd96b61f samba-3.0.8-r1.ebuild 17161
@@ -22,7 +22,7 @@ MD5 cbaa5a39d9bd67b13f8131b426a4256b files/samba-2.2.5-gp-reloc-fix.patch 431
 MD5 e17a1638ad9f30f2e39db4c8981a2fcd files/vscan-0.3.5-libclamav.patch 523
 MD5 7ee5edc70bf80888c776f5808f865996 files/nsswitch.conf-wins 392
 MD5 341521b710d02d57a70acd49b1d4c06b files/samba-conf 1291
-MD5 f1bd70937bb822e70fcd5a81efba02d2 files/samba-init 1090
+MD5 4911565359fa56d39c1f69be84c6f22d files/samba-init 1102
 MD5 b836e258befae9d6c66cb3f158769b25 files/samba-3.0.x-libdirsymlink.patch 592
 MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
 MD5 e5dbea6345ee39a97bc8783f5772bf49 files/samba-3.0.6-winbind_getpwnam_v1.patch 2521
