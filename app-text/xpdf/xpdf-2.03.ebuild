@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.03.ebuild,v 1.8 2004/01/31 19:05:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.03.ebuild,v 1.9 2004/06/22 21:53:09 malc Exp $
 
 MY_PV=${PV/.1/pl1}
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa ~amd64 ia64"
+KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ia64"
 IUSE="motif"
 
 DEPEND="motif? ( virtual/x11
