@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/reiserfsprogs-3.6.4-r1.ebuild,v 1.7 2003/03/11 06:04:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/reiserfsprogs-3.6.4-r1.ebuild,v 1.8 2003/04/25 19:15:18 mholzer Exp $
 
 inherit flag-o-matic eutils
 
@@ -8,7 +8,7 @@ filter-flags -fPIC
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Reiserfs Utilities"
-SRC_URI="ftp://ftp.namesys.com/pub/reiserfsprogs/${P}.tar.gz"
+SRC_URI="http://www.namesys.com/pub/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.namesys.com"
 
 SLOT="0"
