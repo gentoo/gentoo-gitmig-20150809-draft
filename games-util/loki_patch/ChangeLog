@@ -1,6 +1,9 @@
 # ChangeLog for games-util/loki_patch
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.1 2004/09/21 22:40:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.2 2004/10/17 09:53:32 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> loki_patch-20040916.ebuild:
+  Added to ~ppc.
 
 *loki_patch-20040916 (21 Sep 2004)
 
