@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/serialmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.8 2004/07/29 03:33:43 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.9 2004/07/29 16:10:59 langthang Exp $
+
+  29 Jul 2004; Tuan Van <langthang@gentoo.org>
+  -files/serialmail-0.75-gentoo.patch, -files/serialmail-0.75-smtpauth.patch,
+  -files/serialmail-0.75-smtpauth_comp.patch, serialmail-0.75-r2.ebuild:
+  Move patches to $DISTDIR.
 
 *serialmail-0.75-r2 (28 Jul 2004)
 

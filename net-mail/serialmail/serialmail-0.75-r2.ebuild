@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r2.ebuild,v 1.1 2004/07/29 03:33:43 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r2.ebuild,v 1.2 2004/07/29 16:10:59 langthang Exp $
 
 inherit eutils
 
 DESCRIPTION="A serialmail is a collection of tools for passing mail across serial links."
 HOMEPAGE="http://cr.yp.to/serialmail.html"
-SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
+SRC_URI="http://cr.yp.to/software/${P}.tar.gz
+	mirror://gentoo/${P}-patch.tar.bz2"
 
 DEPEND="virtual/glibc
 	sys-apps/groff
@@ -25,9 +26,9 @@ IUSE="static"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/${P}-smtpauth.patch
-	epatch ${FILESDIR}/${P}-smtpauth_comp.patch
+	epatch ${WORKDIR}/${P}-gentoo.patch
+	epatch ${WORKDIR}/${P}-smtpauth.patch
+	epatch ${WORKDIR}/${P}-smtpauth_comp.patch
 	sed -i "s:@CFLAGS@:${CFLAGS}:" conf-cc
 	use static && LDFLAGS="${LDFLAGS} -static"
 	sed -i "s:@LDFLAGS@:${LDFLAGS}:" conf-ld
