@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.2 2003/09/09 23:44:19 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.3 2003/10/08 00:23:58 vapier Exp $
 
 inherit games eutils
 
@@ -45,7 +45,7 @@ src_install() {
 	dosym ${GAMES_PREFIX_OPT}/unreal-tournament/System/Core.so ${dir}/System/Core.so
 
 	dogamesbin ${FILESDIR}/unreal
-	dosed "s:GENTOO_DIR:${GAMES_BINDIR}:" ${GAMES_BINDIR}/unreal
+	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/unreal
 
 	prepgamesdirs
 }
