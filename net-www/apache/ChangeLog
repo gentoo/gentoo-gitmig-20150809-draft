@@ -1,8 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.50 2003/04/05 06:34:01 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.51 2003/05/22 23:24:02 woodchip Exp $
 
 *apache-2.0.45 (06 Apr 2003)
+
+  22 May 2003; Donny Davies <woodchip@gentoo.org> commonapache2.conf:
+  Close #12006.
 
   06 Apr 2003; Donny Davies <woodchip@gentoo.org> apache-2.0.45.ebuild,
   files/apache-2.0.45-gentoo.diff, files/2.0.40/40_mod_ssl.conf,
