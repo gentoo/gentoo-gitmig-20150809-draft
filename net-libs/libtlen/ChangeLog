@@ -1,0 +1,15 @@
+# ChangeLog for net-libs/libtlen
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.1 2003/11/15 07:18:55 seemant Exp $
+
+*libtlen-20031114 (14 Nov 2003)
+
+  14 Nov 2003; Seemant Kulleen <seemant@gentoo.org> libtlen-20031114.ebuild,
+  metadata.xml:
+  library for an instant messaging (SMS) system in Poland. Ebuild submitted by:
+  Marcin Jurczuk <spock@stars.eu.org> in bug #30370. However, I updated the
+  snapshot date to 1114 (he subkmitted 1029), because the submitted version is
+  no longer on the upstream mirrors. The 1114 snapshot has been copied to our
+  mirrors. Please note that Marcin is the third party maintainer of this package
+  through me.
+
