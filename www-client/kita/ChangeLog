@@ -1,6 +1,10 @@
 # ChangeLog for www-client/kita
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.5 2004/11/30 03:49:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.6 2004/12/03 04:57:32 usata Exp $
+
+  03 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.160.0.ebuild,
+  -kita-0.171.0.ebuild, kita-0.172.0.ebuild, kita-0.173.0.ebuild:
+  Changed fam to virtual/fam; bug #67170.
 
 *kita-0.173.0 (30 Nov 2004)
 

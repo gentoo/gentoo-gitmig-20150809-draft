@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kita/kita-0.160.0.ebuild,v 1.1 2004/09/08 13:40:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kita/kita-0.160.0.ebuild,v 1.2 2004/12/03 04:57:32 usata Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/libc
 	>=dev-libs/libpcre-4.2
 	>=dev-libs/expat-1.95.6
 	>=sys-libs/zlib-1.1.4
-	>=app-admin/fam-2.6.9
+	virtual/fam
 	>=media-libs/libpng-1.2.5
 	>=media-libs/jpeg-6b
 	>=media-libs/freetype-2.1.4
