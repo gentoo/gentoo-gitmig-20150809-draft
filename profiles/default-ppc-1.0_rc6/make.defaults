@@ -1,6 +1,0 @@
-# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
-# System-wide defaults for the Portage system
-
-ARCH="ppc"
-
-USE="oss slang readline gpm berkdb gdbm tcpd pam libwww ssl nls mitshm perl python esd gif imlib sdl vorbis ogg gnome gtk X qt kde motif opengl mozilla"
