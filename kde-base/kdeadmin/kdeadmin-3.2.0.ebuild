@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.2.0.ebuild,v 1.4 2004/02/10 14:26:09 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.2.0.ebuild,v 1.5 2004/02/14 08:52:22 vapier Exp $
+
 inherit kde-dist
 
-IUSE="pam"
 DESCRIPTION="KDE administration tools (user manager, etc.)"
-KEYWORDS="x86 ~sparc ~amd64 ppc"
+
+KEYWORDS="x86 ppc ~sparc ~hppa ~amd64"
+IUSE="pam"
 
 DEPEND="~kde-base/kdebase-${PV}
 	pam? ( >=sys-libs/pam-0.72 )"
-RDEPEND="$DEPEND"
 
 myconf="$myconf --without-rpm"
 DO_NOT_COMPILE="$DO_NOT_COMPILE kpackage ksysv"
