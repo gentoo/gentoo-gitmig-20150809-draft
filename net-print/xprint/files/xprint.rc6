@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/files/xprint.rc6,v 1.1 2003/07/20 11:10:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/files/xprint.rc6,v 1.2 2003/12/13 13:31:54 lanius Exp $
+
+opts="${opts} get_xpserverlist lsprinters"
 
 depend() {
 	use cupsd
@@ -11,6 +13,14 @@ start() {
 	ebegin "Starting xprint"
 	/usr/sbin/xprint start > /dev/null
 	eend $?
+}
+
+get_xpserverlist() {
+	/usr/sbin/xprint get_xpserverlist
+}
+
+lsprinters() {
+	/usr/sbin/xprint lsprinters
 }
 
 stop() {

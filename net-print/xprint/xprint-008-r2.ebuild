@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/xprint-008-r2.ebuild,v 1.2 2003/12/08 11:22:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/xprint-008-r2.ebuild,v 1.3 2003/12/13 13:31:54 lanius Exp $
 
 DESCRIPTION="An advanced printing system which enables X11 applications to use devices like printers in formats like PostScript, PDF, PCL, etc."
 HOMEPAGE="http://xprint.mozdev.org"
@@ -35,7 +35,7 @@ src_install() {
 	dodoc ${D}/usr/X11R6/lib/X11/xserver/README
 	rm -f ${D}/usr/X11R6/lib/X11/xserver/README
 
-	echo "XPCONFIGDIR=/usr/share/Xprint/xserver/C/print" > ${D}/etc/env.d/97xprint
+	sed -i -e 's:XPCUSTOMGLUE=default:XPCUSTOMGLUE=DebianGlue:' ${D}/usr/sbin/xprint
 }
 
 pkg_postinst() {
