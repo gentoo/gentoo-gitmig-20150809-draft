@@ -1,6 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 0f6dc4748a976ee808edc65507d793d6 razor-2.67.ebuild 2737
 MD5 75c5d3ad1bc48ae038b747d8f104c1c6 razor-2.40-r1.ebuild 2735
 MD5 1739456d96ab6c4384fefc08c437fe6d razor-2.66.ebuild 2735
 MD5 7ca5dc039abf88fcb6cb36870cd2e173 razor-2.61.ebuild 2730
@@ -13,11 +14,12 @@ MD5 86ce0f71341d41a9cf561083b241c9fb files/digest-razor-2.36-r1 68
 MD5 24b659c729fbfbf960ca1521df9840da files/digest-razor-2.40-r1 68
 MD5 8fcc1e253bebf4448a7b0f2562ac3609 files/digest-razor-2.61 68
 MD5 1b6d9c47c56378a23bc89814de8a8033 files/digest-razor-2.66 68
+MD5 7a82279f793cdd8926569fcc1f2c51e6 files/digest-razor-2.67 68
 MD5 cf27167873572ac8be99c5195762d630 files/razor_uninstall.patch 1765
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBsLPhCHk4+ZoBpvsRAmXgAKC2mK1RLEy9IDw5BBWxDzbNp0MM6gCgvJUO
-bOPI/QKcH7bnfPcQXEoebOM=
-=hY0Z
+iD8DBQFBwOGShVOnUoxP5pwRAp/xAKCl9tpLQbxXdOqwLMpiIVDosBevnwCgyGMi
+q1goz+SdfizDl9uJnK/5JXE=
+=3G2T
 -----END PGP SIGNATURE-----
