@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gantoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.1.ebuild,v 1.1 2002/04/14 17:43:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.1.ebuild,v 1.2 2002/04/14 18:15:23 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Allegro is a cross-platform multimedia library"
@@ -70,7 +70,7 @@ src_compile() {
 		|| confopts="${confopts} --disable-svgalib"
 	
 	# Have fbcon support
-	use fb \
+	use fbcon \
 		&& confopts="${confopts} --enable-fbcon" \
 		|| confopts="${confopts} --disable-fbcon"
 
@@ -100,4 +100,3 @@ src_install () {
 	dodoc allegro.txt 
 	
 }
-
