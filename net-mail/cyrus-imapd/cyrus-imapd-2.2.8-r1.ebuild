@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.8-r1.ebuild,v 1.2 2004/10/20 21:22:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.8-r1.ebuild,v 1.3 2004/10/24 00:55:01 langthang Exp $
 
 inherit eutils ssl-cert gnuconfig fixheadtails
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~hppa"
-IUSE="afs drac kerberos pam snmp ssl tcpd"
+IUSE="afs drac idled kerberos pam snmp ssl tcpd"
 
 PROVIDE="virtual/imapd"
 RDEPEND=">=sys-libs/db-3.2
@@ -30,10 +30,73 @@ DEPEND="$RDEPEND
 	sys-devel/automake
 	>=sys-apps/sed-4"
 
+# "borrow" this from eldad in bug 60495 util portage can handle dep USE flags.
+check_useflag() {
+	local my_pkg=$(best_version ${1})
+	local my_flag=${2}
+
+	if [[ $(grep -wo ${my_flag} /var/db/pkg/${my_pkg}/USE) ]]; then
+		return 0
+	fi
+
+	return 1
+}
+
+tcpd_flag_check() {
+	local tcpd_flag
+	local cyrus_imapd_has_tcpd_flag
+	local my_pkg=${1}
+	einfo "${my_pkg} found"
+	check_useflag ${my_pkg} tcpd
+	tcpd_flag="$?"
+
+	if [ "${tcpd_flag}" == "0" ]; then
+		einfo "\"${my_pkg}\" has been emerged with \"tcpd\" USE flag"
+	else
+		einfo "\"${my_pkg}\" has been emerged without \"tcpd\" USE flag"
+	fi
+
+	if use tcpd; then
+		cyrus_imapd_has_tcpd_flag="0"
+	else
+		cyrus_imapd_has_tcpd_flag="1"
+	fi
+
+	if [ "${tcpd_flag}" != "${cyrus_imapd_has_tcpd_flag}" ]; then
+		eerror "both \"net-mail/cyrus-imapd\" and \"${my_pkg}\" have to be emerged"
+		eerror "with or without \"tcpd\" USE flag if you want to emerge"
+		eerror "this package with \"snmp\" USE flag. Bug #68254"
+		die "see above error message."
+	fi
+}
+
 net-snmp_check() {
-	# an atemptto solve bug #67411. Is there a better solution?
+	if has_version ucd-snmp; then
+		tcpd_flag_check net-analyzer/ucd-snmp
+	fi
+
 	if has_version net-snmp; then
-		einfo "\"net-snmp\" found."
+		tcpd_flag_check net-analyzer/net-snmp
+		# check for minimal USE flag.
+		local has_minimal
+		check_useflag net-analyzer/net-snmp minimal
+		has_minimal="$?"
+		if [ "${has_minimal}" == "0" ]; then
+			eerror "If you want to emerge this package with \"snmp\" USE flag"
+			eerror "reemerge \"net-snmp\" without \"minimal\" USE flag"
+			die "see error message above"
+		fi
+
+		# check for tcpd USE flag in sync for both packages.
+
+		if [ "${net_snmp_has_tcpd_flag}" != "${cyrus_imapd_has_tcpd_flag}" ]; then
+			eerror "both \"cyrus-imapd\" and \"net-snmp\" have to be emerged"
+			eerror "with or without \"tcpd\" USE flag if you want to emerge"
+			eerror "this package with \"snmp\" USE flag. Bug #68254"
+			die "see above error message."
+		fi
+
+		# an atemptto solve bug #67411. Is there a better solution?
 		# check for net-snmp-config exit and executable.
 		if [ -x "$(type -p net-snmp-config)" ]; then
 			einfo "$(type -p net-snmp-config) is found and executable."
@@ -65,8 +128,11 @@ net-snmp_check() {
 }
 
 pkg_setup() {
-	net-snmp_check
+	if use snmp; then
+		net-snmp_check
+	fi
 }
+
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
@@ -75,24 +141,24 @@ src_unpack() {
 
 	# Add drac database support.
 	if use drac ; then
-		epatch "${S}/contrib/drac_auth.patch"
+		epatch "${S}/contrib/drac_auth.patch" || die "epatch failed"
 	fi
 
 	# Add libwrap defines as we don't have a dynamicly linked library.
 	if use tcpd ; then
-		epatch "${FILESDIR}/${PN}-libwrap.patch"
+		epatch "${FILESDIR}/${P}-libwrap.patch" || die "epatch failed"
 	fi
 
 	# DB4 detection and versioned symbols.
-	epatch "${FILESDIR}/${P}-db4.patch"
+	epatch "${FILESDIR}/${P}-db4.patch" || die "epatch failed"
 
 	# Fix master(8)->cyrusmaster(8) manpage.
 	for i in `grep -rl -e 'master\.8' -e 'master(8)' "${S}"` ; do
 		sed -e 's:master\.8:cyrusmaster.8:g' \
 			-e 's:master(8):cyrusmaster(8):g' \
-			-i "${i}" || die "sed failed"
+			-i "${i}" || die "sed failed" || die "sed failed"
 	done
-	mv man/master.8 man/cyrusmaster.8
+	mv man/master.8 man/cyrusmaster.8 || die "mv failed"
 	sed -e "s:MASTER:CYRUSMASTER:g" \
 		-e "s:Master:Cyrusmaster:g" \
 		-e "s:master:cyrusmaster:g" \
@@ -112,12 +178,18 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="${myconf} `use_with afs`"
-	myconf="${myconf} `use_with drac`"
-	myconf="${myconf} `use_with ssl openssl`"
-	myconf="${myconf} `use_with snmp ucdsnmp`"
-	myconf="${myconf} `use_with tcpd libwrap`"
-	myconf="${myconf} `use_enable kerberos gssapi`"
+	myconf="${myconf} $(use_with afs)"
+	myconf="${myconf} $(use_with drac)"
+	myconf="${myconf} $(use_with ssl openssl)"
+	myconf="${myconf} $(use_with snmp ucdsnmp)"
+	myconf="${myconf} $(use_with tcpd libwrap)"
+	myconf="${myconf} $(use_enable kerberos gssapi)"
+
+	if use idled; then
+		myconf="${myconf} --with-idle=idled"
+	else
+		myconf="${myconf} --with-idle=poll"
+	fi
 
 	econf \
 		--enable-murder \

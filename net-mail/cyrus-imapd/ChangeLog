@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.53 2004/10/20 21:22:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.54 2004/10/24 00:55:01 langthang Exp $
+
+  23 Oct 2004; Tuan Van <langthang@gentoo.org>
+  +files/cyrus-imapd-2.2.8-libwrap.patch, cyrus-imapd-2.2.8-r1.ebuild:
+  add logic to detect if cyrus-imapd and {ucd,net}-snmp have "tpcd" USE 
+  flag sync (ie both emerge with or without "tcpd".) Bug #68254.
+  add logic to check for net-snmp "mininal USE flag. Thanks to 
+  weeve@gentoo.org. Bug #67411.
+  add "idled" local use flag. Bug #62959. Thanks to sbriesen@gmx.de, 
+  swegener@gentoo.org, junkmonkey@gmail.com.
 
   20 Oct 2004; Sven Wegener <swegener@gentoo.org> cyrus-imapd-2.2.3.ebuild,
   cyrus-imapd-2.2.8-r1.ebuild, cyrus-imapd-2.2.8.ebuild:
