@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.22 2004/03/29 10:51:41 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.23 2004/03/30 08:45:25 lordvan Exp $
+
+  30 Mar 2004; Thomas Raschbacher <lordvan@gentoo.org> clamav-0.68.1.ebuild,
+  clamav-0.68.ebuild, clamav-0.70_rc.ebuild:
+  added depend for dev-libs/gmp when crypt is in USE
 
 *clamav-0.68.1 (29 Mar 2004)
 
