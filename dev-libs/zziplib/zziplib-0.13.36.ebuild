@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.36.ebuild,v 1.5 2005/01/01 22:30:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.36.ebuild,v 1.6 2005/02/09 20:08:15 vapier Exp $
 
 inherit fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/zziplib/${P}.tar.bz2"
 
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 x86 ppc"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE="sdl"
 
 RDEPEND="virtual/libc
