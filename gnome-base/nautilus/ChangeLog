@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.115 2004/12/19 06:08:59 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.116 2004/12/19 17:18:01 joem Exp $
+
+  19 Dec 2004; Joe McCann <joem@gentoo.org> :
+  fix Manifest, close bug 74943
 
   19 Dec 2004; Mike Gardiner <obz@gentoo.org> nautilus-2.8.2-r1.ebuild:
   Keyworded x86 and ppc for GNOME 2.8.1
