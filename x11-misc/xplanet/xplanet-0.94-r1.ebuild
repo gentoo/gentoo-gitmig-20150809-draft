@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94-r1.ebuild,v 1.9 2003/09/12 01:54:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94-r1.ebuild,v 1.10 2004/01/25 22:40:44 pyrania Exp $
 
 DESCRIPTION="A program to render images of the earth into the X root window"
 HOMEPAGE="http://xplanet.sourceforge.net/"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
