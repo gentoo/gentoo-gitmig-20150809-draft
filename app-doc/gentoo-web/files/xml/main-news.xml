@@ -1,0 +1,82 @@
+<?xml version='1.0'?>
+<mainpage id="news">
+<title>Gentoo Linux News</title>
+<author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
+
+<version>1.0.3</version>
+<date>14 Aug 2001</date>
+
+<newsitems>
+	<news align="left" graphic="/images/icon-stick1.png">
+		<poster>drobbins</poster>
+		<date>14 Aug 2001</date>
+		<title>Web site updates</title>
+		<body>
+		<p>
+		<b>Welcome to the new gentoo.org!</b>  Yes, we <e>finally</e> have news on the site; I hope
+		you like the new look and functionality.  Now that we have a news page, we can keep everyone
+		up-to-date with the latest Gentoo Linux developments much more easily.
+		</p>
+		<p>
+		
+Right now, the XML component of the news system is complete, and Thread (dev-wiki coder) is working
+		on a news database backend.  When finished, you'll be able to post comments relating to the
+		news items.  Should be pretty neat.  
+		</p><p>
+		<e>I'm sure that you've also noticed the recent addition
+		of advertising to the site</e>.  The purpose of these ads is (as you might guess) to help offset
+		costs involved with Gentoo Linux development.  <e>I should also mention that <b>I actually use</b> and have very high opinions of all the
+		products that you see advertised here.</e>  Both <c>cvs.gentoo.org</c>
+		and <c>inventor.gentoo.org</c> use Crucial RAM; I (and the Gentoo Linux development team) rely on it daily. 
+		</p><p>
+		And while you may be surprised to see an ad for an online auto loan company on gentoo.org, I absolutely <e>love</e>
+		PeopleFirst.com.  Thanks to PeopleFirst, I was able to get a car loan with an APR <e>2%
+		lower</e> than what I could get from local credit unions, saving me hundreds of dollars.  And they have
+		always been great to deal with, from the moment I first contacted them.  If you have any questions
+		about our advertisers, please feel free to <mail link="drobbins@gentoo.org">email me</mail> or chat with
+		me on <c>#gentoo</c>.  <e>I want <b>you</b> (and myself!) to feel comfortable with the advertising
+		on the site, so I will only advertise top-quality products.</e> 
+		</p>
+		<p>
+		Special thanks to Thread for his work on the dev-wiki and his current work on the News database
+		backend, and much thanks to Jano for providing us with the cool stickman graphic that you see on
+		the left. :)
+		</p>
+		</body>
+	</news>
+	<news align="right" graphic="/images/icon-clock.png">
+		<poster>drobbins</poster>
+		<date>14 Aug 2001</date>
+		<title>Gentoo Linux 1.0_rc6 status update</title>
+		<body>
+		<p>
+		I tend to get <e>a lot</e> of questions about our next release of Gentoo Linux, so why not kick off
+		our news page with a in-depth Gentoo Linux 1.0_rc6 status update?
+		</p>
+		<p>
+		<b>Release candidate 6 is coming along nicely.</b>  Currently, we have the <b>new dependency-based
+		initscripts</b> completed and working.  I wasn't really satisfied with any of the current dependency-based
+		init systems available, so we implemented our own system using a bit of <c>bash</c> wizardry.  We designed
+		our new dep-based scripts to work with the standard <c>/sbin/init</c>, so no newfangled version of <c>init</c>
+		is required.  These new scripts are <e>really fast</e> and <e>really slick</e>.  We are also now using a
+		brand new <path>modules.conf</path> generation system straight from <uri link="http://www.debian.org">Debian</uri>,
+		which seems to be working quite well.
+		</p>
+		<p><b>I just released the first version of the rc6 build image last night (13 Aug)</b>.   For those who don't know, a build
+		image is a minimal chrootable self-building environment used as the foundation for building a complete Gentoo Linux release.
+		You can't actually boot it, and right now, it's only for developers who are working to get their packages 
+		Gentoo Linux 1.0_rc6-ready, but if you'd like to play with it, you can download it <uri link="http://www.ibiblio.org/gentoo/snapshots/build/ix86-linux-gnu/">here</uri>.
+		This new build image has <e>lots</e> of improvements over rc5.  We now install kernel headers into
+		<path>/usr/include/linux</path> and <path>/usr/include/asm</path> directly, rather than using symlinks to point
+		to the appropriate directories in <path>/usr/src/linux</path>.  This is a good thing; it's recommended that you
+		keep the set of kernel headers that you used to build <e>glibc</e>, and we're doing that now.  Also, <c>vim</c>
+		is out and <c>nano</c> (a lean and mean <c>pico</c> clone) is in as the default build image editor.  <b>The new dependency-based initscripts are in.</b>
+		Our <e>glibc</e> has been tweaked so that rc6 will be IBM, Sun and Blackdown Java-compatible.  Not only that,
+		but the current rc6 build image is 3.8Mb <e>smaller</e> (13.1Mb) than our rc5 build image (16.9Mb)!  And you
+		can expect it to shrink by at least another Megabyte when we replace <c>nano</c> with <c>e3</c>, an editor written
+		in assembly that supports <c>vi</c>, <c>emacs</c> and <c>pico</c> keybindings.  Fun, fun, fun!
+		</p>
+		</body>
+	</news>
+</newsitems>
+</mainpage>

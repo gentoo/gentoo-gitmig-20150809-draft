@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.13 2001/08/11 06:42:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.14 2001/08/15 07:26:08 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -23,7 +23,7 @@ src_install() {
 	insinto /usr/local/httpd/htdocs/doc
 	cd ${FILESDIR}
 	local x
-	for x in build desktop xml-guide portage-user gentoo-howto faq nvidia_tsg 
+	for x in build desktop xml-guide portage-user gentoo-howto faq nvidia_tsg openafs
 	# (9/13/2001) cvs-tutorial
 	do
 		xsltproc xsl/guide-main.xsl xml/${x}.xml > ${D}/usr/local/httpd/htdocs/doc/${x}.html
@@ -31,7 +31,7 @@ src_install() {
 	dodir /usr/local/httpd/htdocs/images
 	insinto /usr/local/httpd/htdocs/images
 	cd ${FILESDIR}/images
-	doins gtop-s.jpg gbot-s.gif gridtest.gif gentoo-new.gif install*.gif fishhead.gif line.gif
+	doins gtop-s.jpg gbot-s.gif gridtest.gif gentoo-new.gif install*.gif fishhead.gif line.gif icon-*
 	insinto /usr/local/httpd/htdocs
 	doins favicon.ico
 	#dynamic firewalls tools page
@@ -48,7 +48,8 @@ src_install() {
 	
 	insinto /usr/local/httpd/htdocs
 
-	xsltproc xsl/guide-main.xsl xml/main-about.xml > ${D}/usr/local/httpd/htdocs/index.html
+	xsltproc xsl/guide-main.xsl xml/main-news.xml > ${D}/usr/local/httpd/htdocs/index.html
+	xsltproc xsl/guide-main.xsl xml/main-about.xml > ${D}/usr/local/httpd/htdocs/index-about.html
 	xsltproc xsl/guide-main.xsl xml/main-download.xml > ${D}/usr/local/httpd/htdocs/index-download.html
 	xsltproc xsl/guide-main.xsl xml/main-projects.xml > ${D}/usr/local/httpd/htdocs/index-projects.html
 		

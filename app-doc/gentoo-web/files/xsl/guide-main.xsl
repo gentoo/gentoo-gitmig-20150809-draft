@@ -135,8 +135,18 @@
 				</td>
 				</tr>
 				<tr>
-				<td class="alttext">
+				<td align="center" class="alttext">
 					Updated <xsl:value-of select="/guide/date"/>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+				<tr>
+				<td class="alttext">
+				<xsl:apply-templates select="/guide/author"/>
 				</td>
 				</tr>
 				<tr>
@@ -169,10 +179,12 @@
 				</td>
 				</tr>
 				<tr>
-				<td>
-					<a href="http://www.qksrv.net/click-477620-5032687" target="_top" >
-					<img src="http://www.qksrv.net/image-477620-5032687" width="125" height="125" alt="DDR Memory at Crucial.com" border="0"/></a>
-				</td></tr>
+				<td align="center">
+					<p class="alttext">Purchase RAM using this link, and a percentage
+of your sale will go towards further Gentoo Linux development.</p>
+<a href="http://www.qksrv.net/click-477620-5032687" target="_top" ><img src="http://www.qksrv.net/image-477620-5032687" width="125" height="125" alt="DDR Memory at Crucial.com" border="0"/></a>
+						<p class="alttext">Why these guys?  Because <b>cvs.gentoo.org</b> and <b>inventor.gentoo.org</b> use high-quality Crucial RAM. We know that it's good stuff because we rely on it ourselves.</p>
+</td></tr>
 			<tr>
 				<td>
 				<img src="/images/line.gif"/>
@@ -221,11 +233,19 @@
 			<td colspan="2" valign="bottom" align="left" bgcolor="#000000">
 				<p class="menu">
 					<xsl:choose>
-						<xsl:when test="/mainpage/@id='about'">
-							<a class="highlight" href="/index.html"> About Gentoo Linux</a> |
+						<xsl:when test="/mainpage/@id='news'">
+							<a class="highlight" href="/index.html"> gentoo.org News</a> |
 						</xsl:when>
 						<xsl:otherwise>
-							<a class="menulink" href="/index.html"> About Gentoo Linux</a> |
+							<a class="menulink" href="/index.html"> gentoo.org News</a> |
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:choose>
+						<xsl:when test="/mainpage/@id='about'">
+							<a class="highlight" href="/index-about.html"> About Gentoo Linux</a> |
+						</xsl:when>
+						<xsl:otherwise>
+							<a class="menulink" href="/index-about.html"> About Gentoo Linux</a> |
 						</xsl:otherwise>
 					</xsl:choose>
 					<xsl:choose>
@@ -277,6 +297,7 @@ User Docs:<br/>
 						<font color="#ff0000">Updated!</font> <a class="altlink" href="/doc/faq.html">FAQ</a><br/>
 						<a class="altlink" href="/doc/desktop.html">Desktop Guide</a><br/>
 						<a class="altlink" href="/doc/portage-user.html">Portage User Guide</a><br/>
+						<font color="#ff0000">New!</font> <a class="altlink" href="/doc/openafs.html">OpenAFS Installation Guide</a><br/>
 						<a class="altlink" href="/doc/build.html">Build CD Install Guide</a><br/>
 						<a class="altlink" href="/index-download.html">Binary CD Install Guide</a><br/>
 						<a class="altlink" href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a><br/>
@@ -308,12 +329,21 @@ User Docs:<br/>
 				<table border="0" cellspacing="5" cellpadding="0" width="100%">
 				<tr>
 					<td class="content" valign="top" align="left">
-				<!--		<img src="/images/gentoo-new.gif"/><br/>
-						<p class="subhead"><xsl:value-of select="/mainpage/title"/></p> -->
-						<br/>
-						<xsl:apply-templates select="chapter"/> 
-						<br/>
-						<br/>
+					<xsl:choose>
+						<xsl:when test="/mainpage/@id='news'">
+							<img src="/images/gentoo-new.gif"/>
+							<br/>
+							<br/>
+							<xsl:apply-templates select="newsitems"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<p class="subhead"><xsl:value-of select="/mainpage/title"/></p> -->
+							<br/>
+							<xsl:apply-templates select="chapter"/> 
+							<br/>
+							<br/>
+						</xsl:otherwise>
+					</xsl:choose>
 						<!--content end-->
 					</td>
 				</tr>
@@ -327,7 +357,7 @@ User Docs:<br/>
 				</td>
 				</tr>
 				<tr>
-				<td class="alttext">
+				<td align="center" class="alttext">
 					Updated <xsl:value-of select="/mainpage/date"/>
 				</td>
 				</tr>
@@ -337,9 +367,11 @@ User Docs:<br/>
 				</td>
 				</tr>
 <tr>
-				<td>
-					<a href="http://www.qksrv.net/click-477620-5032687" target="_top" >
-					<img src="http://www.qksrv.net/image-477620-5032687" width="125" height="125" alt="DDR Memory at Crucial.com" border="0"/></a>
+				<td align="center">
+					<p class="alttext">Purchase RAM using this link, and a percentage
+of your sale will go towards further Gentoo Linux development.</p>
+<a href="http://www.qksrv.net/click-477620-5032687" target="_top" ><img src="http://www.qksrv.net/image-477620-5032687" width="125" height="125" alt="DDR Memory at Crucial.com" border="0"/></a>
+						<p class="alttext">Why these guys?  Because <b>cvs.gentoo.org</b> and <b>inventor.gentoo.org</b> use high-quality Crucial RAM. We know that it's good stuff because we rely on it ourselves.</p>
 				</td></tr>
 			<tr>
 				<td>
@@ -373,14 +405,63 @@ User Docs:<br/>
 
 </xsl:template>
 
+<xsl:template match="newsitems">
+	<xsl:apply-templates select="news"/>
+</xsl:template>
+
+<xsl:template match="news">
+	<table width="100%" border="0" cellspacing="5" cellpadding="0">
+	<tr>
+		<td colspan="2" class="ncontent" bgcolor="#bbffbb"><p class="note"><font color="#7a5ada"><b><xsl:value-of select="title"/></b></font></p></td>
+	</tr>
+	<tr>
+	<xsl:choose>
+		<xsl:when test="@align='left'">
+			<td rowspan="2" valign="top" width="1">
+				<img src="{@graphic}"/>
+			</td>		
+			<td class="alttext">
+					<font color="#808080">Posted by <xsl:value-of select="poster"/> on <xsl:value-of select="date"/></font>
+			</td>
+		</xsl:when>
+		<xsl:otherwise>
+			<td class="alttext">
+					<font color="#808080">Posted by <xsl:value-of select="poster"/> on <xsl:value-of select="date"/></font>
+			</td>
+			<td rowspan="2" valign="top" width="1">
+				<img src="{@graphic}"/>
+			</td>		
+		</xsl:otherwise>
+	</xsl:choose>
+	</tr>
+	<tr>
+		<td class="content" valign="top">
+			<xsl:apply-templates select="body"/>
+		</td>
+	</tr>
+	</table>
+	<br/>
+	<table width="100%">
+	<tr>
+		<td height="1" bgcolor="#c0c0c0"></td>
+	</tr>
+	</table>
+	<br/>
+</xsl:template>
+
 <xsl:template match="mail">
 	<a href="mailto:{@link}"><xsl:value-of select="."/></a>
 </xsl:template>
 
+<xsl:template match="author/mail">
+	<b><a class="altlink" href="mailto:{@link}"><xsl:value-of select="."/></a></b>
+</xsl:template>
+
 <xsl:template match="author">
 	<xsl:apply-templates />
-	<xsl:if test="@title">, <i><xsl:value-of select="@title"/></i>
+	<xsl:if test="@title"><br/><i><xsl:value-of select="@title"/></i>
 	</xsl:if>	
+	<br/>
 	<br/>
 </xsl:template>
 
@@ -457,7 +538,7 @@ User Docs:<br/>
 <xsl:template match="impo">
 	<table class="ncontent" width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr><td bgcolor="#ffffbb">
-	<p class="impo"><b>Important: </b>
+	<p class="note"><b>Important: </b>
 	<xsl:apply-templates />
 	</p>
 	</td></tr></table>
@@ -466,7 +547,7 @@ User Docs:<br/>
 <xsl:template match="warn">
 	<table class="ncontent" width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr><td bgcolor="#ffbbbb">
-	<p class="warn"><b>Warning: </b>
+	<p class="note"><b>Warning: </b>
 	<xsl:apply-templates />
 	</p>
 	</td></tr></table>
