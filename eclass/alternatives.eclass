@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.1 2003/10/07 17:21:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.2 2003/10/07 20:26:50 liquidx Exp $
 
 # Author :     Alastair Tse <liquidx@gentoo.org> (03 Oct 2003)
 # Short Desc:  Creates symlink to the latest version of multiple slotted
@@ -52,7 +52,8 @@ alternatives_auto_makesym() {
 	SOURCE=$1
 	REGEX=$2
 
-	ALT="`ls -1 ${ROOT}${REGEX} | sort -r | xargs`"
+	ALT="`ls -1 --color=never ${ROOT}${REGEX} | sed -e "s:^${ROOT}::" | sort -r | xargs`"
+	einfo "alternatives: $ROOT $REGEX $ALT"
 	if [ -n "${ALT}" ]; then
 		alternatives_makesym ${SOURCE} ${ALT}
 	else
@@ -78,7 +79,9 @@ alternatives_makesym() {
 				rm -f ${ROOT}${SOURCE}
 			fi
 			einfo "Linking ${alt} to ${SOURCE}"
-			ln -s ${alt} ${ROOT}${SOURCE}
+			# we do this instead of ${ROOT}${SOURCE} because if
+			# ROOT=/, then a symlink to //usr/bin/python confuses distutils
+			cd ${ROOT}; ln -s ${alt} ${SOURCE}
 			break
 		fi
 	done
