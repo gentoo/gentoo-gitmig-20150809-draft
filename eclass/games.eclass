@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.64 2004/04/09 22:09:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.65 2004/06/14 14:18:13 wolf31o2 Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -82,7 +82,8 @@ dogameslib.so() { gameswrapper ${FUNCNAME/games} "$@"; }
 newgamesbin() { gameswrapper ${FUNCNAME/games} "$@"; }
 newgamessbin() { gameswrapper ${FUNCNAME/games} "$@"; }
 
-gamesowners() { chown ${GAMES_USER}:${GAMES_GROUP} "$@"; }
+#gamesowners() { chown ${GAMES_USER}:${GAMES_GROUP} "$@"; }
+gamesowners() { chown root:${GAMES_GROUP} "$@"; }
 gamesperms() { chmod u+rw,g+r-w,o-rwx "$@"; }
 prepgamesdirs() {
 	local dir=""
