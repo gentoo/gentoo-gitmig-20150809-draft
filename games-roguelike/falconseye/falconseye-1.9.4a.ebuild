@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.4 2004/02/03 20:48:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.5 2004/02/24 05:47:48 vapier Exp $
 
 inherit eutils games
 
@@ -18,7 +18,7 @@ DEPEND="media-libs/libsdl
 	dev-util/byacc"
 RDEPEND="media-libs/libsdl
 	media-sound/timidity++
-	media-sound/mpg123"
+	virtual/mpg123"
 
 S=${WORKDIR}/nethack-341-jtp-194a
 
