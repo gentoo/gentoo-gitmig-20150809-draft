@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.24 2004/07/24 07:04:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.25 2004/07/24 16:58:09 liquidx Exp $
+
+*nss-3.9.2 (24 Jul 2004)
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org> +files/nss-3.9.2-ppc64.patch,
+  +nss-3.9.2.ebuild:
+  version bump. add ppc64 patch (#58169). thanks to Markus Rothe
+  <markus@unixforces.net>
 
   24 Jul 2004; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
   added provisions for alternative ROOT (#55350)
