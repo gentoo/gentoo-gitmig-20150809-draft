@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.133 2004/12/29 18:19:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.134 2004/12/30 21:48:23 seemant Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1596,10 +1596,10 @@ preserve_old_lib() {
 }
 
 preserve_old_lib_notify() {
-        LIB=$1
+	LIB=$1
 
-        if [ -n "${LIB}" -a -f "${ROOT}${LIB}" ]; then
-                SONAME=`basename ${LIB}`
+	if [ -n "${LIB}" -a -f "${ROOT}${LIB}" ]; then
+		SONAME=`basename ${LIB}`
 
 		einfo "An old version of an installed library was detected on your system."
 		einfo "In order to avoid breaking packages that link against is, this older version"
@@ -1609,7 +1609,7 @@ preserve_old_lib_notify() {
 		einfo
 		einfo "After doing that, you can safely remove ${LIB}"
 		einfo "Note: 'emerge gentoolkit' to get revdep-rebuild"
-        fi
+	fi
 }
 
 # Hack for people to figure out if a package was built with 
