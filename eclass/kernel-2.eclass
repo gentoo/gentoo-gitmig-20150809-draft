@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.95 2005/02/08 21:57:48 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.96 2005/02/08 22:24:02 hollow Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -55,7 +55,7 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install \
 	pkg_preinst pkg_postinst
 
 export CTARGET=${CTARGET:-${CHOST}}
-if [[ ${CTARGET} == ${CHOST} && ${CATEGORY/cross-} != ${CATEGORY}]]; then
+if [[ ${CTARGET} == ${CHOST} && ${CATEGORY/cross-} != ${CATEGORY} ]]; then
 	export CTARGET=${CATEGORY/cross-}
 fi
 
@@ -515,7 +515,7 @@ unipatch() {
 			[ -z ${i/*.patch*/} ] && PATCH_DEPTH=${i/*.patch/}
 			[ -z ${i/*.diff*/} ]  && PATCH_DEPTH=${i/*.diff/}
 
-			if [ -z "${PATCH_DEPTH}" ]; then PATCH_DEPTH=0 fi
+			if [ -z "${PATCH_DEPTH}" ]; then PATCH_DEPTH=0; fi
 
 			ebegin "Applying ${i/*\//} (-p${PATCH_DEPTH}+)"
 			while [ ${PATCH_DEPTH} -lt 5 ]; do
