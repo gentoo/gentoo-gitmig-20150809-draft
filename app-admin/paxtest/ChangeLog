@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/paxtest
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.1 2003/08/04 17:32:53 solar Exp $
+
+*paxtest-0.9.1 (04 Aug 2003)
+
+  04 Aug 2003; <solar@gentoo.org> metadata.xml, paxtest-0.9.1.ebuild:
+  Initial import of paxtest into portage, PaX regression test suite developed by
+  Peter Busser
+
