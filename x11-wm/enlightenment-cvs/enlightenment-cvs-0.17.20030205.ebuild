@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20030205.ebuild,v 1.1 2003/02/06 07:27:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20030205.ebuild,v 1.2 2003/02/10 04:18:03 vapier Exp $
 
 ECVS_SERVER="cvs.enlightenment.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e17"
@@ -444,7 +444,7 @@ src_install() {
 	# make an env.d entry
 	insinto /etc/env.d
 	echo "PATH=${E_PREFIX}/bin:${E_PREFIX}/sbin" > e.env.d
-	echo "ROOTPATH=${E_PREFIX}/sbin" >> e.env.d
+	echo "ROOTPATH=${E_PREFIX}/bin:${E_PREFIX}/sbin" >> e.env.d
 	echo "LDPATH=${E_PREFIX}/lib" >> e.env.d
 	newins e.env.d 50enlightenment
 	rm -f e.env.d
