@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.3.0_p1-r3.ebuild,v 1.2 2000/12/23 00:32:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.3.0_p1-r3.ebuild,v 1.3 2000/12/24 05:26:02 drobbins Exp $
 
 P=openssh-2.3.0p1
 A=${P}.tar.gz
@@ -37,10 +37,10 @@ src_install() {
     donewins ${FILESDIR}/sshd.pam sshd
     exeinto /etc/rc.d/init.d
     doexe ${FILESDIR}/sshd
-	exeinto /etc/svc.d/services/sshd
+	exeinto /var/supervise/sshd
 	newexe ${FILESDIR}/sshd-run run
-	dodir /etc/svc.d/control
-	dosym ../services/sshd /etc/svc.d/control/sshd
+	dodir /etc/supervise
+	dosym /var/supervise/sshd /etc/supervise/sshd
 }
 
 

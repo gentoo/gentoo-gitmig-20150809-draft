@@ -44,14 +44,14 @@ supervise_start() {
                 gen_keys
 
 		ebegin "Starting $SERVICE supervised..."
-		/usr/bin/svc -u /etc/svc.d/control/sshd
+		/usr/bin/svc -u /etc/supervise/sshd
 		eend $? "Started $SERVICE." "Error Starting $SERVICE supervised."
 }
 
 supervise_stop() {
 
 		ebegin "Stopping $SERVICE supervised..."
-		/usr/bin/svc -d /etc/svc.d/control/sshd
+		/usr/bin/svc -d /etc/supervise/sshd
 		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE supervised."
 }
 
