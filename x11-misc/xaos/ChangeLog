@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.4 2003/06/03 05:03:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.5 2004/01/08 02:42:13 george Exp $
+
+  07 Jan 2003; George Shapovalov <george@gentoo.org> xaos-3.1.ebuild, metadata.xml :
+  marked 3.1 stable, added metadata
 
   2 June 2003; George Shapovalov <george@gentoo.org> xaos-3.1_pre5.ebuild :
   disabled ggi completely in _pre5 as well as the release is in testing still.
