@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.99 2004/12/06 20:54:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.100 2004/12/07 20:42:51 hardave Exp $
+
+  07 Dec 2004; Hardave Riar <hardave@gentoo.org> perl-5.8.5-r2.ebuild:
+  Stable on mips, bug #66360
 
   06 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> perl-5.8.5-r2.ebuild:
   Stable on sparc wrt #66360
