@@ -92,3 +92,4 @@ move net-www/publicfile www-servers/publicfile
 move net-www/resin www-servers/resin
 move net-www/resin-ee www-servers/resin-ee
 move net-www/thttpd www-servers/thttpd
+move net-www/tomcat www-servers/tomcat
