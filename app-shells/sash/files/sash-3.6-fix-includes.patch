@@ -6,6 +6,6 @@ diff -ruN sash-3.6.orig/Makefile sash-3.6/Makefile
  	-DMOUNT_TYPE=$(MOUNT_TYPE)
  
 -LDFLAGS = -static -s
-+LDFLAGS = -all-static -s
++LDFLAGS = --disable-shared -static -s
  LIBS = -lz
 

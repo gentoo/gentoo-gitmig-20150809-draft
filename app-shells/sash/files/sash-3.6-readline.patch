@@ -9,7 +9,7 @@ diff -ruN sash-3.6/Makefile sash-3.6.readline/Makefile
 +	-DMOUNT_TYPE=$(MOUNT_TYPE) \
 +	-DHAVE_READLINE
  
- LDFLAGS = -all-static -s
+ LDFLAGS = --disable-shared -static -s
 -LIBS = -lz
 +LIBS = -lz -lreadline -lncurses
  
