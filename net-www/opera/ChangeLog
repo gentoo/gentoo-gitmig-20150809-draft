@@ -1,6 +1,12 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.64 2004/05/28 21:53:45 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.65 2004/06/03 12:24:40 lanius Exp $
+
+*opera-7.51 (03 Jun 2004)
+
+  03 Jun 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.51.ebuild:
+  version bump, add spell use flag, mark stable because of security issues, bug
+  #52867
 
   28 May 2004; Danny van Dyk <kugelfang@gentoo.org> opera-7.50-r1.ebuild:
   Refixed dependency problem on amd64 (BUG #51281).
