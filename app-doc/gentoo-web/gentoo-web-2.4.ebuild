@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.11 2002/11/06 04:25:08 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.12 2002/11/07 18:45:49 zhen Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -44,6 +44,7 @@ src_unpack() {
 		else
 			# give it a nice default
 			WEBROOT=/home/httpd/htdocs
+			GENTOO_SRCDIR=/data/gentoo-src
 		fi
 	fi
 
@@ -70,7 +71,7 @@ src_install() {
 	
 	local x
 	local y
-	for y in en es fr nl cz de ja
+	for y in en es fr nl cz
 	do
 		cd ${S}/xml/doc/${y}
 		for x in *.xml
@@ -85,7 +86,8 @@ src_install() {
 	for z in *.html
 	do
 		z=`basename ${z} .html`
-		lynx -dump ${z}.html &> ${D}${WEBROOT}/doc/txt/${z}.txt || die
+		lynx -dump ${z}.html | awk 'BEGIN { DOIT=0; } { if ($0 ~ /Updated/) DOIT=1; if (DOIT != 1) print $0}'i | sed -e '1,3d'  \
+		&> ${D}${WEBROOT}/doc/txt/${z}.txt || die
 	done
 	
 	cd ${S}
