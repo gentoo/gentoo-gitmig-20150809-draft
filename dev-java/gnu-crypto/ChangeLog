@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-crypto
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.10 2005/03/26 01:59:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.11 2005/03/29 13:24:30 corsair Exp $
+
+  29 Mar 2005; Markus Rothe <corsair@gentoo.org> gnu-crypto-2.0.1.ebuild:
+  Stable on ppc64; bug #86799
 
   26 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> gnu-crypto-2.0.1.ebuild:
   jikes support disabled, doesnt work: #86655
