@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.2 2001/03/06 05:27:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.3 2001/04/09 05:38:09 achim Exp $
 
 A=db.${PV}.tar.gz
 S=${WORKDIR}/db.${PV}
@@ -43,10 +43,10 @@ src_install () {
 	insinto /usr/include/db1
 	doins include/db.h include/mpool.h
 
-    insinto /usr/include
-    doins include/ndbm.h
-	dosed "s:<db.h>:<db1/db.h>:" /usr/include/ndbm.h
-
+	insinto /usr/include/db1
+        doins include/ndbm.h
+	dosed "s:<db.h>:<db1/db.h>:" /usr/include/db1/ndbm.h
+        dosym db1/ndbm.h /usr/include/ndbm.h
 	cp db_dump185 db1_dump185
 	dobin db1_dump185
 
