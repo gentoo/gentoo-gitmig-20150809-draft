@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.8.ebuild,v 1.1 2003/12/01 05:36:46 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.8.ebuild,v 1.2 2004/01/01 15:26:02 spider Exp $
 
 inherit flag-o-matic libtool
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://sourceforge/${PN}/${PN}-docs-${DOC_VER}.tar.gz"
 HOMEPAGE="http://www.gnucash.org/"
 
-KEYWORDS="~x86 ~alpha ~ppc"
+KEYWORDS="x86 ~alpha ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
