@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r6.ebuild,v 1.5 2003/08/06 07:45:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r6.ebuild,v 1.6 2003/09/20 19:31:44 pappy Exp $
 
 inherit eutils
 
@@ -34,10 +34,16 @@ src_compile() {
 	cp configure{,.orig}
 	sed -i "s:-Wpointer-arith::" configure
 
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	has_version 'sys-devel/hardened-gcc' && CFLAGS="-yet_exec ${CFLAGS}"
+
 	econf \
 		--build=${CHOST} \
 		`use_enable parse-clocks` \
 		|| die
+
+	has_version 'sys-devel/hardened-gcc' && find ${W} -name "Makefile" -type f -exec sed -i "s,-yet_exec,," {} \;
+	
 	emake || die
 }
 
