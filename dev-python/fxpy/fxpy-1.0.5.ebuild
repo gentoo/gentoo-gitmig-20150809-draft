@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/fxpy-1.0.5.ebuild,v 1.1 2003/10/06 00:18:40 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/fxpy-1.0.5.ebuild,v 1.2 2004/05/07 22:39:47 kloeri Exp $
 
 inherit distutils
 
@@ -20,7 +20,7 @@ DEPEND=">=dev-lang/python-2.1
 src_unpack() {
 	unpack ${A} || die
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die "Patch failed."
+	epatch ${FILESDIR}/${P}-gentoo.diff || die "Patch failed."
 }
 
 src_install() {
@@ -33,4 +33,3 @@ src_install() {
 	insinto /usr/share/doc/${PF}/contrib
 	doins contrib/*
 }
-

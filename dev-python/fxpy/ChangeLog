@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fxpy
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/ChangeLog,v 1.1 2003/10/06 00:18:40 pythonhead Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/ChangeLog,v 1.2 2004/05/07 22:39:47 kloeri Exp $
+
+  08 May 2004; Bryan Østergaard <kloeri@gentoo.org> fxpy-1.0.5.ebuild:
+  Use epatch.
 
 *fxpy-1.0.5 (05 Oct 2003)
 
