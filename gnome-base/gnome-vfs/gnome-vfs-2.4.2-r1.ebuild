@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.4.2-r1.ebuild,v 1.5 2004/03/09 23:22:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.4.2-r1.ebuild,v 1.6 2004/03/13 19:37:27 geoman Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SLOT="2"
 
 DESCRIPTION="Gnome Virtual Filesystem"
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ia64"
+KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ia64 ~mips"
 LICENSE="GPL-2 LGPL-2.1"
 
 RDEPEND=">=dev-libs/glib-2
