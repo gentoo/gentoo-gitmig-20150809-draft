@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/supervise-scripts-3.5.ebuild,v 1.4 2003/09/26 22:25:43 hhg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/supervise-scripts-3.5.ebuild,v 1.5 2003/11/06 20:07:56 robbat2 Exp $
 
 inherit fixheadtails
 DESCRIPTION="Starting and stopping daemontools managed services."
@@ -28,7 +28,8 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	# does NOT support parallel make
+	make || die
 }
 
 src_install() {
