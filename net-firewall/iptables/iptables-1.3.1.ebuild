@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1.ebuild,v 1.1 2005/03/09 10:16:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1.ebuild,v 1.2 2005/03/09 16:37:57 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -51,10 +51,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-files/install_all_dev_files.patch-${PV}.bz2
 
 	# Both of these have been merged upstream
-	# EPATCH_OPTS="-p1" epatch ${FILESDIR}/${PV}-files/round-robin.patch 
+	# EPATCH_OPTS="-p1" epatch ${FILESDIR}/${PV}-files/round-robin.patch
 	# security bug 70240
-	# EPATCH_OPTS="-p2" epatch ${FILESDIR}/${PV}-files/CAN-2004-0986.patch 
-	
+	# EPATCH_OPTS="-p2" epatch ${FILESDIR}/${PV}-files/CAN-2004-0986.patch
+
 	# this provide's grsec's stealth match
 	EPATCH_OPTS="-p0" \
 	epatch ${FILESDIR}/${PV}-files/grsecurity-1.2.8-iptables.patch-${PV}.bz2
@@ -75,7 +75,7 @@ src_defs() {
 	# these are used in both of src_compile and src_install
 	myconf="${myconf} PREFIX="
 	myconf="${myconf} LIBDIR=/lib"
-	myconf="${myconf} BINDIR=/sbin" 
+	myconf="${myconf} BINDIR=/sbin"
 	myconf="${myconf} MANDIR=/usr/share/man"
 	myconf="${myconf} INCDIR=/usr/include"
 	# iptables and libraries are now installed to /sbin and /lib, so that
