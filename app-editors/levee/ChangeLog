@@ -1,8 +1,8 @@
 # ChangeLog for app-editors/levee
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/ChangeLog,v 1.6 2003/02/12 03:48:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/ChangeLog,v 1.7 2003/09/30 08:18:22 aliz Exp $
 
-*levee-3.4o (28 Apr, 2002)
+*levee-3.4o (28 Apr 2002)
 
   10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> levee-3.4o.ebuild :
 
