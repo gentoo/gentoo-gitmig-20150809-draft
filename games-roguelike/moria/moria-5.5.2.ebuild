@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.7 2004/07/01 05:21:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.8 2004/10/31 05:16:46 vapier Exp $
 
 inherit eutils gcc games
 
@@ -12,15 +12,13 @@ SRC_URI="ftp://ftp.greyhelm.com/pub/Games/Moria/source/um${PV}.tar.Z
 	http://alge.anart.no/ftp/pub/games/RPG/moria/um${PV}.tar.Z
 	ftp://kane.evendata.net/pub/${PN}-extras.tar.bz2"
 
-KEYWORDS="x86 amd64 ~ppc"
 LICENSE="Moria"
 SLOT="0"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="virtual/libc
 	>=sys-libs/ncurses-5"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 S="${WORKDIR}/umoria"
 
