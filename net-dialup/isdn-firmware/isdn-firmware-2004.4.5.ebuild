@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/isdn-firmware-2004.4.5.ebuild,v 1.1 2004/11/21 22:10:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/isdn-firmware-2004.4.5.ebuild,v 1.2 2004/11/21 22:26:27 mrness Exp $
 
 inherit rpm
 
 MY_P=${P/isdn-firmware/i4lfirm}
-DESCRIPTION="ISDN firmware for active ISDN cards"
+DESCRIPTION="ISDN firmware files for active cards"
 HOMEPAGE="http://www.isdn4linux.de/"
 SRC_URI="ftp://ftp.suse.com/pub/suse/i386/9.1/suse/i586/${MY_P}-0.i586.rpm"
 
