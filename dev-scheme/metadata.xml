@@ -5,5 +5,9 @@
 		The dev-scheme category contains libraries and utilities relevant to the
 		Scheme programming language.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-scheme enthält Bibliotheken und Werkzeuge für die
+		Programmiersprache Scheme.
+	</longdescription>
 </catmetadata>
 
