@@ -23,3 +23,12 @@ diff -ur clockspeed-0.62.orig/conf-ld clockspeed-0.62/conf-ld
 +gcc
  
  This will be used to link .o files into an executable.
+--- clockspeed-0.62/clockview.c~	Tue Oct 13 19:37:49 1998
++++ clockspeed-0.62/clockview.c	Thu Apr 26 01:11:43 2001
+@@ -1,5 +1,5 @@
+ #include <sys/types.h>
+-#include <sys/time.h>
++#include <time.h>
+ #include "substdio.h"
+ #include "readwrite.h"
+ #include "strerr.h"
