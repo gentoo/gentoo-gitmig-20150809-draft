@@ -1,3 +1,6 @@
 MD5 db8b98cb3cbb2e1ebd78ebfd49606be8 ChangeLog 655
 MD5 520274a60364e53c79aacc8607c5b57d gtkdiskfree-1.8.4.ebuild 721
+MD5 4240da21789929ff05c18c00e59e37cc gtkdiskfree-1.9.3.ebuild 645
+MD5 390a3375492ccfb80614b0c1291c358a .gtkdiskfree-1.9.3.ebuild.swp 12288
 MD5 a15ee35b017849079ceebb72997d1104 files/digest-gtkdiskfree-1.8.4 69
+MD5 46985ea76022b80753931414d58952cc files/digest-gtkdiskfree-1.9.3 69

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.4 2003/03/28 10:26:54 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.5 2003/04/18 18:34:41 avenj Exp $
+
+*gtkdiskfree-1.9.3 (18 Apr 2003)
+
+  18 Apr 2003; Jon Portnoy <avenj@gentoo.org> gtkdiskfree-1.9.3.ebuild :
+  New ~arch-masked development-tree gtkdiskfree using GTK-2.
 
 *gtkdiskfree-1.8.4 (06 Nov 2002)
 
