@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.730 2004/11/11 12:55:16 mglauche Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.731 2004/11/11 14:54:50 ka0ttic Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -118,6 +118,7 @@ app-sci/transfac:no-emboss - Do not index the database files for use with EMBOSS
 app-sci/transfac:no-rawdb - Do not install the original database files (keep only indexed files)
 app-sci/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
 app-sci/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities.
+app-shells/dash:diet - Compile and link with dietlibc 
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
 app-text/a2ps:vanilla - Do not add extra patches which change default behaviour
 app-text/acroread:noplugin - Do not install the acroread browser plugin
