@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxvideostudio/linuxvideostudio-0.1.7.ebuild,v 1.1 2003/09/29 08:46:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxvideostudio/linuxvideostudio-0.1.7.ebuild,v 1.2 2004/02/23 19:13:24 zypher Exp $
 
 DESCRIPTION="small-'n-simple GUI for the MJPEG-tools"
 HOMEPAGE="http://ronald.bitfreak.net/"
@@ -14,6 +14,7 @@ IUSE="lirc"
 
 DEPEND=">=media-video/mjpegtools-1.6.0-r7
 		=x11-libs/gtk+-1.2*
+		media-libs/gdk-pixbuf
 		media-libs/libpng
 		media-libs/jpeg
 		lirc? ( app-misc/lirc )"
