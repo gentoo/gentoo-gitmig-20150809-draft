@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0-r2.ebuild,v 1.1 2003/06/16 04:08:44 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0-r2.ebuild,v 1.2 2003/07/29 02:20:39 zhen Exp $
 
 MY_PV=${PV//./_}
 
@@ -30,7 +30,7 @@ src_compile() {
 src_install () {
 	cd src/xercesc
 	make PREFIX="${D}/usr" install
-	dolib lib/libxerces-c.so.23.0
+	dolib lib/libxerces-c.so.2.3.0
 	
 	if [ "`use doc`" ]; then
 		dodir /usr/share/doc/${P}
@@ -39,7 +39,7 @@ src_install () {
 	fi
 
 	cd ${S}
-	dodoc STATUS LICENSE LICENSE.txt credits.txtles version.incl xerces-c.spec
+	dodoc STATUS LICENSE LICENSE.txt credits.txt version.incl xerces-c.spec
 	dohtml Readme.html
 		
 	unset XERCESCROOT
