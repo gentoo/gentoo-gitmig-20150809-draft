@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.22 2004/06/25 02:41:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.23 2004/12/31 01:59:39 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> netbeans-3.4.1.ebuild,
   netbeans-3.5.1.ebuild, netbeans-3.6-r1.ebuild:
@@ -10,7 +13,7 @@
   netbeans-3.4.ebuild, netbeans-3.5.ebuild, netbeans-3.6.ebuild:
   clean older ebuilds
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> netbeans-3.5.1.ebuild:
+  04 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> netbeans-3.5.1.ebuild:
   Stable on alpha.
 
 *netbeans-3.6-r1 (26 Apr 2004)

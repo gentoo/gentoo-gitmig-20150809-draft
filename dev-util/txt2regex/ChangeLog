@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/txt2regex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/txt2regex/ChangeLog,v 1.8 2004/11/14 15:43:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/txt2regex/ChangeLog,v 1.9 2004/12/31 02:04:47 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org> txt2regex-0.8.ebuild:
   sparc, mips, x86 stable
@@ -19,7 +22,7 @@
   16 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> txt2regex-0.7.ebuild:
   Stable on sparc, mips
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> txt2regex-0.7.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> txt2regex-0.7.ebuild:
   Marked ~alpha, bug #50552.
 
 *txt2regex-0.7 (24 May 2004)

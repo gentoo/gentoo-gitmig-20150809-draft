@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/documancer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/ChangeLog,v 1.5 2004/08/16 17:45:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/ChangeLog,v 1.6 2004/12/31 01:56:01 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   documancer-0.1.7.ebuild:
@@ -11,6 +14,6 @@
   Don't assign default to S; header fix
 
 *documancer-0.1.7 (16 Mar 2003)
-  16 Mar 2003; J.Alberto Su·rez LÛpez <bass@gentoo.org> swish-e-2.2.2.ebuild:
+  16 Mar 2003; J.Alberto Su√°rez L√≥pez <bass@gentoo.org> swish-e-2.2.2.ebuild:
   initial ebuild by Lars Trieloff <lars@trieloff.net>
 

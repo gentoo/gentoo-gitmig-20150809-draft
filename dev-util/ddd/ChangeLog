@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.24 2004/11/27 12:02:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.25 2004/12/31 01:53:25 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *ddd-3.3.10 (27 Nov 2004)
 
@@ -15,7 +18,7 @@
   07 Jul 2004; Martin Holzer <mholzer@gentoo.org> ddd-3.3.9.ebuild:
   Version bumped. Closes 56000
 
-  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ddd-3.3.8.ebuild:
+  03 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ddd-3.3.8.ebuild:
   Stable on alpha.
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> ddd-3.3.8.ebuild:

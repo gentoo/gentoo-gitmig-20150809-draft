@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/visual-regexp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/ChangeLog,v 1.5 2004/10/10 13:27:06 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/ChangeLog,v 1.6 2004/12/31 02:05:24 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   10 Oct 2004; Tom Martin <slarti@gentoo.org> visual-regexp-3.0.ebuild:
   Marked ~amd64.
@@ -13,7 +16,7 @@
 
 *visual-regexp-3.0 (02 May 2004)
 
-  02 May 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
+  02 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +metadata.xml,
   +files/visualregexp-icon.png, +files/visualregexp.desktop,
   +visual-regexp-3.0.ebuild:
   Initial commit, bug #46194.

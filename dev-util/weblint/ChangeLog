@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/weblint
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weblint/ChangeLog,v 1.7 2004/06/25 02:50:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weblint/ChangeLog,v 1.8 2004/12/31 02:07:17 ciaranm Exp $
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> weblint-1.020.ebuild:
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  04 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> weblint-1.020.ebuild:
   Stable on alpha.
 
   30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> weblint-1.020.ebuild:

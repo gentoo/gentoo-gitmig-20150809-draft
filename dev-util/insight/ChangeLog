@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/insight
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.19 2004/11/04 20:30:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.20 2004/12/31 01:58:26 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   04 Nov 2004; Olivier Crete <tester@gentoo.org> insight-6.0.ebuild,
   insight-6.1.ebuild:
@@ -12,7 +15,7 @@
   05 Aug 2004; <tester@gentoo.org> insight-6.1.ebuild:
   Marked stable on x86
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> insight-6.1.ebuild:
+  04 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> insight-6.1.ebuild:
   Stable on alpha.
 
   22 May 2004; Travis Tilley <lv@gentoo.org> insight-6.1.ebuild:

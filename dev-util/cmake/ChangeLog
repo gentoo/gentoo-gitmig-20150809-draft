@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.8 2004/11/24 21:51:16 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.9 2004/12/31 01:48:41 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> cmake-2.0.3.ebuild:
   Added to ~amd64, bug #72299
@@ -15,7 +18,7 @@
   02 Jul 2004; Lisa Seelye <lisa@gentoo.org> +cmake-2.0.2.ebuild:
   version bump for bug #55558
 
-  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> cmake-1.8.3.ebuild:
+  03 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> cmake-1.8.3.ebuild:
   Stable on alpha.
 
 *cmake-1.8.3 (24 Feb 2004)

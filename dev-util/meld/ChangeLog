@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.17 2004/12/06 16:30:14 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.18 2004/12/31 01:59:04 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   06 Dec 2004; Mike Gardiner <obz@gentoo.org> meld-0.9.4.1.ebuild:
   Fixed .desktop file to display proper icon, see bug #73550
@@ -14,7 +17,7 @@
   Marked ~amd64, resolving bug 60244. Thanks to Jukka Holappa
   <jukkaho@mail.student.oulu.fi> for reporting.
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> meld-0.9.2.ebuild:
+  04 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> meld-0.9.2.ebuild:
   Stable on alpha.
 
 *meld-0.9.2 (14 Feb 2004)

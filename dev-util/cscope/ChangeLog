@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.44 2004/12/16 18:51:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.45 2004/12/31 01:49:37 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Simon Stelling <blubb@gentoo.org> cscope-15.5-r3.ebuild:
   stable on amd64; bug #71595
@@ -76,7 +79,7 @@
   01 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> cscope-15.5.ebuild:
   Stable on x86, sparc
 
-  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> cscope-15.5.ebuild:
+  03 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> cscope-15.5.ebuild:
   Stable on alpha.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> cscope-15.5.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.131 2004/12/30 16:12:37 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.132 2004/12/31 02:03:29 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *subversion-1.1.2 (30 Dec 2004)
 
@@ -136,7 +139,7 @@
   01 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> +subversion-1.1.0.ebuild:
   New upstream version
 
-  27 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  27 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   subversion-1.0.8.ebuild:
   Stable on alpha, bug 65085.
 
@@ -204,7 +207,7 @@
   23 Jul 2004; Guy Martin <gmsoft@gentoo.org> subversion-1.0.6.ebuild:
   Marked stable on hppa.
 
-  23 Jul 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  23 Jul 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   subversion-1.0.6.ebuild:
   Stable on alpha, see bug #57747.
 
@@ -228,7 +231,7 @@
   11 Jun 2004; Guy Martin <gmsoft@gentoo.org> subversion-1.0.4-r1.ebuild:
   Marked stable on hppa.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   subversion-1.0.4-r1.ebuild:
   Stable on alpha, bug #53555.
 
@@ -256,7 +259,7 @@
   set amd64 to stable on 1.0.3. Add a new upstream version in 1.0.4 and 
   make it even more hard to merge subversion with autoconf-2.58
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> subversion-1.0.3.ebuild:
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> subversion-1.0.3.ebuild:
   Keyworded ~alpha, requested in bug #51550.
 
 *subversion-1.0.3 (20 May 2004)

@@ -1,17 +1,20 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.13 2004/10/02 15:32:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.14 2004/12/31 02:01:58 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *spe-0.5.1f (02 Oct 2004)
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> spe-0.5.1d.ebuild,
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> spe-0.5.1d.ebuild,
   +spe-0.5.1f.ebuild:
   Stable 0.5.1d and add new version.
 
-  12 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> -spe-0.4.2c.ebuild:
+  12 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> -spe-0.4.2c.ebuild:
   Remove old version.
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> spe-0.4.2c.ebuild,
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> spe-0.4.2c.ebuild,
   spe-0.5.1a.ebuild, spe-0.5.1d.ebuild:
   Change wxPython to wxpython.
 
@@ -20,7 +23,7 @@
 
 *spe-0.5.1d (24 May 2004)
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> metadata.xml,
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> metadata.xml,
   +spe-0.5.1d.ebuild:
   Version bumped, removed ~ppc due to one unsatisfied dependency and changed
   maintainer to kloeri@gentoo.org, see bug #51928.
@@ -30,16 +33,16 @@
 
 *spe-0.5.1a (08 May 2004)
 
-  08 May 2004; Bryan Østergaard <kloeri@gentoo.org> -spe-0.4.1d-r1.ebuild,
+  08 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> -spe-0.4.1d-r1.ebuild,
   -spe-0.4.1d.ebuild, +spe-0.5.1a.ebuild:
   Bump version, remove old versions.
 
-  29 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> files/spe_setup.patch:
+  29 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> files/spe_setup.patch:
   Add missing patch.
 
 *spe-0.4.2c (28 Dec 2003)
 
-  28 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> spe-0.4.2c.ebuild:
+  28 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> spe-0.4.2c.ebuild:
   Version bump. Closes bug 35374 and 36079.
 
 *spe-0.4.1d-r1 (22 Oct 2003)

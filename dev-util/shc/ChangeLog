@@ -1,12 +1,15 @@
 # ChangeLog for dev-util/shc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.8 2004/07/02 05:13:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.9 2004/12/31 02:01:22 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> shc-3.4.ebuild,
   shc-3.6.ebuild, shc-3.7.ebuild:
   virtual/glibc -> virtual/libc
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> shc-3.7.ebuild:
+  04 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> shc-3.7.ebuild:
   Stable on alpha.
 
 *shc-3.7 (29 Dec 2003)

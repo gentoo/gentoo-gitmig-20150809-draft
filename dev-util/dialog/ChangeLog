@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.45 2004/12/11 18:36:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.46 2004/12/31 01:53:59 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   dialog-1.0.20040731.ebuild:
@@ -46,7 +49,7 @@
   dialog-0.9_beta20031207-r1.ebuild:
   add unicode support
 
-  03 Jun 2004; Bryan �stergaard <kloeri@gentoo.org>
+  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   dialog-0.9_beta20031207.ebuild:
   Stable on alpha.
 
