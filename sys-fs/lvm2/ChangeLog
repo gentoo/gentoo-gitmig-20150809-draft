@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.20 2004/11/14 16:32:05 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.21 2004/11/14 17:26:58 max Exp $
+
+*lvm2-2.00.25 (14 Nov 2004)
+
+  14 Nov 2004; <max@gentoo.org> +lvm2-2.00.25.ebuild:
+  Bump to version 2.0.25. Greatly simplify static support. Add optional readline
+  (lvm shell) support. Fixes bugs #54535 and #64455.
 
   14 Nov 2004; <max@gentoo.org> lvm2-2.00.15-r1.ebuild, lvm2-2.00.15.ebuild:
   Fix SRC_URI to reflect reality.
