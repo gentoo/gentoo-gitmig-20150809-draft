@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ogmrip-0.6.2.ebuild,v 1.1 2005/01/08 18:53:02 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ogmrip-0.6.2.ebuild,v 1.2 2005/01/19 01:19:15 mr_bones_ Exp $
 
 inherit gnome2 eutils
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.4.6
 	gnome? ( >=gnome-base/gconf-2.6
 		>=gnome-base/libgnomeui-2.6
 		>=gnome-base/libglade-2.4 )
-	subp? ( >=app-text/gocr-0.39 
+	subp? ( >=app-text/gocr-0.39
 		>=app-text/enchant-1.1 )"
 
 DEPEND="${RDEPEND}
@@ -34,7 +34,7 @@ G2CONF="${G2CONF} $(use_enable gnome gnome-support) $(use_enable debug maintaine
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
 
-pkg_setup () {
+pkg_setup() {
 	if ! which mencoder 2> /dev/null; then
 		eerror "Unable to find mencoder in the PATH. You need mencoder to use OGMRip."
 		eerror "Please, add encode to your USE flags and emerge mplayer again."
@@ -47,4 +47,3 @@ pkg_setup () {
 		die "Mplayer is not build with XviD support. OGMRip requires XviD support in mplayer."
 	fi
 }
-
