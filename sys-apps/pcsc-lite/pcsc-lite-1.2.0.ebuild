@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.0.ebuild,v 1.1 2004/03/22 08:33:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.0.ebuild,v 1.2 2004/03/23 19:39:25 dragonheart Exp $
 
 inherit eutils
 
@@ -24,11 +24,12 @@ DEPEND="sys-devel/make
 	dev-libs/libusb
 	dev-util/pkgconfig
 	sys-devel/gcc
-	${RDEPEND}"
+	virtual/glibc
+	dev-libs/libusb"
 
 src_compile() {
 	econf \
-		--enable-usbdropdir=/usr/share/pcsc/drivers \
+		--enable-usbdropdir=/usr/lib/readers/usb \
 		--enable-muscledropdir=/usr/share/pcsc/services \
 		`use_enable static` || die "./configure failed"
 	emake || die
