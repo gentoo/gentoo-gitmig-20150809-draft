@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/root
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/ChangeLog,v 1.5 2005/03/12 23:00:30 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/ChangeLog,v 1.6 2005/03/29 16:36:44 fmccor Exp $
+
+  29 Mar 2005; Ferris McCormick <fmccor@gentoo.org> root-4.02.00.ebuild:
+  Add -sparc keyword to make explicit that as distributed, this package cannot
+  build on sparc.  Supported architectures are hardwired in a tgz file included
+  within the package: xrootd/src/xrootd-20041124-0752.src.tgz, and in
+  unix/src/TUnixSystem.cxx, and linux:sparc is not among them.  There is no
+  apparent for this package not to work on sparc, but as constituted, it cannot
+  without upstream support.
 
   12 Mar 2005; Patrick Kursawe <phosphan@gentoo.org> root-4.02.00.ebuild:
   No bugs for this version for about two months -> stable

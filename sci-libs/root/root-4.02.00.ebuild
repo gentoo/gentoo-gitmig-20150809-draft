@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-4.02.00.ebuild,v 1.2 2005/03/12 23:00:30 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-4.02.00.ebuild,v 1.3 2005/03/29 16:36:44 fmccor Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://root.cern.ch/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 -sparc"
 IUSE="afs kerberos ldap mysql opengl postgres python qt"
 
 DEPEND="virtual/x11
