@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.22 2003/07/12 00:13:44 sindian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.23 2003/07/14 04:36:39 latexer Exp $
+
+*development-sources-2.6.0_beta1 (14 Jul 2003)
+
+  14 Jul 2003; Peter Johanson <latexer@gentoo.org>
+  development-sources-2.6.0_beta1.ebuild:
+  Finally into 2.6.0-testX stage. Test! submit bug reports!
 
   11 Jul 2003; <sindian@gentoo.org> development-sources-2.5.75.ebuild:
   Added warnings about how to properly configure a 2.5.x kernel. Thanks to Peter
