@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.20 2002/08/16 12:20:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.21 2002/09/09 21:51:14 mcummings Exp $
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
@@ -13,7 +13,15 @@ INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_compile src_install src_test
 
-DEPEND=">=sys-devel/perl-5"
+eval `perl '-V:version'`
+	if [ ${version} == '5.6.1' ];
+	then
+	DEPEND=">=sys-devel/perl-5 \
+	dev-perl/ExtUtils-MakeMaker"
+	else
+	DEPEND=">=sys-devel/perl-5"
+	fi
+
 
 SRC_PREP="no"
 
@@ -21,13 +29,8 @@ perl-module_src_prep() {
 
 	SRC_PREP="yes"
 	eval `perl '-V:version'`
-	if [ ${version} == '5.6.1' ];
-	then
-		perl Makefile.PL ${myconf}
-	else
-		perl Makefile.PL ${myconf} \
-		PREFIX=${D}/usr 
-	fi
+	perl Makefile.PL ${myconf} \
+	PREFIX=${D}/usr 
 }
 
 perl-module_src_compile() {
@@ -63,15 +66,19 @@ perl-module_src_install() {
 
 	if [ -f ${D}${ARCH_LIB}/perllocal.pod ];
 	then
-	sed -e "s:${D}::g" ${D}${ARCH_LIB}/perllocal.pod > ${D}/${POD_DIR}/${P}.pod
-	cp ${D}/${POD_DIR}/${P}.pod ${D}/${POD_DIR}/${P}.pod.arch
+	touch ${D}/${POD_DIR}/${P}.pod
+	sed -e "s:${D}::g" ${D}${ARCH_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
+	touch ${D}/${POD_DIR}/${P}.pod.arch
+	cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.arch
 	rm -f ${D}/${ARCH_LIB}/perllocal.pod
 	fi
 	
 	if [ -f ${D}${SITE_LIB}/perllocal.pod ];
 	then 
-	sed -e "s:${D}::g" ${D}${SITE_LIB}/perllocal.pod > ${D}/${POD_DIR}/${P}.pod
-	cp ${D}/${POD_DIR}/${P}.pod ${D}/${POD_DIR}/${P}.pod.site
+	touch ${D}/${POD_DIR}/${P}.pod
+	sed -e "s:${D}::g" ${D}${SITE_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
+	touch ${D}/${POD_DIR}/${P}.pod.site
+	cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.site
 	rm -f ${D}/${SITE_LIB}/perllocal.pod
 	fi
 
