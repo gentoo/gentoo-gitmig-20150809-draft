@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ocrad
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.8 2004/11/04 16:07:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.9 2004/12/09 11:28:38 usata Exp $
+
+  09 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> ocrad-0.9.ebuild:
+  Stable on x86 and ppc.
 
 *ocrad-0.9 (05 Nov 2004)
 

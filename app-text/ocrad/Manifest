@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 35069e10f9167cbed4c611eb516d72f3 ChangeLog 964
+MD5 222e5914c5ed4b00a94ccf49ffe2e6ad ChangeLog 1057
 MD5 cf6fae23c926d0a529f52619cea00222 metadata.xml 415
 MD5 582e6a0a7c7b589bd55f949f0f54930b ocrad-0.8.ebuild 745
-MD5 3bdf59fb3f4689696bbb9a673e8d8d00 ocrad-0.9.ebuild 747
+MD5 865239d6b6c6d2cf03d764bfa7e85bd9 ocrad-0.9.ebuild 745
 MD5 3d73b676885b98273bec8b5b10017ccd files/digest-ocrad-0.8 61
 MD5 4e4cdcfaa9582353a5ac2a22d1ae712a files/digest-ocrad-0.9 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBilJaVWNWqTUmv+0RAgDbAJ4tUbMRkXSLUOQjQqYvNrrPdsFWBACgnXPq
-BxxYp48GVrZ+q5NWf5E6dQ4=
-=MUCW
+iD8DBQFBuDU2VWNWqTUmv+0RAon8AJ4hixNAMGqkiTM/T5JpwPldxMpaBQCfWpus
+WIcnlyavsFKPrU9bTJZjLF4=
+=UJ/s
 -----END PGP SIGNATURE-----
