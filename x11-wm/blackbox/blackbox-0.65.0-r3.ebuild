@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r3.ebuild,v 1.9 2004/04/27 21:30:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r3.ebuild,v 1.10 2004/05/06 16:37:31 tseng Exp $
 
-IUSE="nls"
+IUSE=""
 
 inherit commonbox eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A small, fast, full-featured window manager for X - with mousewheel patch"
 SRC_URI="mirror://sourceforge/blackboxwm/${P}.tar.gz"
 HOMEPAGE="http://blackboxwm.sf.net/"
