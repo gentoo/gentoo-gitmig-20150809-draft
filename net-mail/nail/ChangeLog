@@ -1,7 +1,13 @@
 # ChangeLog for net-mail/nail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nail/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nail/ChangeLog,v 1.2 2002/04/13 23:55:16 g2boojum Exp $
 
+*nail-9.30 (13 Apr 2002)
+
+  13 Apr 2002; Grant Goodyear <g2boojum@gentoo.org> :
+  
+  New version
+  
 *nail-9.27 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
