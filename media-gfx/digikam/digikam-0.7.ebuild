@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.7.ebuild,v 1.1 2004/11/08 18:01:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.7.ebuild,v 1.2 2004/11/30 13:40:45 carlo Exp $
 
 inherit kde
 
@@ -21,7 +21,8 @@ DEPEND=">=media-gfx/gphoto2-2.0-r1
 	media-libs/imlib2
 	media-libs/libkexif
 	media-libs/libkipi
-	sys-libs/gdbm"
+	sys-libs/gdbm
+	!media-plugins/digikamplugins"
 RDEPEND=">=media-gfx/gphoto2-2.0-r1
 	media-libs/imlib
 	media-libs/imlib2
