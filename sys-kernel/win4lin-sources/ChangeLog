@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/win4lin-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.32 2004/08/05 18:54:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.33 2004/08/08 21:07:16 plasmaroo Exp $
+
+*win4lin-sources-2.4.26-r5 (08 Aug 2004)
+
+  08 Aug 2004; <plasmaroo@gentoo.org> -win4lin-sources-2.4.26-r4.ebuild,
+  +win4lin-sources-2.4.26-r5.ebuild,
+  +files/win4lin-sources-2.4.26.CAN-2004-0685.patch:
+  Version bump for CAN-2004-0685, bug #59769.
 
   05 Aug 2004; <plasmaroo@gentoo.org> win4lin-sources-2.6.7-r4.ebuild:
   Added a fix for bug #58008 to the 2.6 ebuild.
