@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: system@gentoo.org
-# /space/gentoo/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.03-r4.ebuild,v 1.1 2002/04/14 08:40:31 seemant Exp
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.03-r5.ebuild,v 1.2 2002/04/26 03:54:08 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Just another screensaver application for X"
@@ -17,39 +17,24 @@ DEPEND="virtual/x11 media-libs/freetype
 	# gtk? ( x11-libs/gtk+ )
 
 src_compile() {
-
 	local myconf
-
-	use pam \
-		&& myconf="${myconf} --enable-pam" \
+	use pam && myconf="${myconf} --enable-pam" \
 		|| myconf="${myconf} --disable-pam --enable-xlockrc"
-
-	use nas \
-		|| myconf="${myconf} --without-nas"
-
-	use esd \
-		&& myconf="${myconf} --with-esound"
-
-	use opengl \
-		|| myconf="${myconf} --without-opengl"
-
-	use truetype \
-		|| myconf="${myconf} --without-ttf"
-
-	use esd \
-		&& myconf="${myconf} --with-esound"
+	use nas || myconf="${myconf} --without-nas"
+	use esd && myconf="${myconf} --with-esound"
+	use opengl || myconf="${myconf} --without-opengl"
+	use truetype || myconf="${myconf} --without-ttf"
 
 	#use motif || myconf="${myconf} --without-motif"
 	#use gtk || myconf="${myconf} --without-gtk"
 	# sigh... broken configure script and/or makefile...
 	myconf="${myconf} --without-motif --without-gtk"
 
-	./configure 	\
-		--prefix=/usr	\
-		--mandir=${prefix}/share/man/man1	\
-		--sharedstatedir=/usr/share/xlockmore 	\
-		--host=${CHOST}	\
-		${myconf} || die
+	./configure \
+		--prefix=/usr \
+		--mandir=${prefix}/share/man/man1 \
+		--sharedstatedir=/usr/share/xlockmore \
+		--host=${CHOST} ${myconf} || die
 
 	#xlock resets to -j1
 	make || die
@@ -67,17 +52,13 @@ src_compile() {
 	#	cd ${S}/xmlock
 	#	make all || die
 	#fi
-
-    
 }
 
-src_install () {
-
-	make 	\
-		prefix=${D}/usr	\
-		mandir=${D}/usr/share/man/man1	\
-		xapploaddir=${D}/usr/X11R6/lib/X11/app-defaults	\
-		install || die
+src_install() {
+	make install \
+		prefix=${D}/usr \
+		mandir=${D}/usr/share/man/man1 \
+		xapploaddir=${D}/usr/X11R6/lib/X11/app-defaults || die
 
 	#Install pam.d file and unset setuid root 
 	if use pam; then
@@ -85,7 +66,7 @@ src_install () {
 		newins etc/xlock.pamd xlock
 		chmod 111 ${D}/usr/bin/xlock
 	fi
-	
+
 	insinto /usr/share/xlockmore/sounds
 	doins sounds/*
 
@@ -94,5 +75,4 @@ src_install () {
 
 	dodoc docs/* README 
 #	use gtk && dodoc xglock/xglockrc xglock/README.xglock
-
 }
