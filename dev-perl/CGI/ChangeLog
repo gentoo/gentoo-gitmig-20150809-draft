@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.9 2003/03/26 21:41:40 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.10 2003/03/27 00:14:28 rac Exp $
+
+*CGI-2.81 (26 Mar 2003)
+
+  26 Mar 2003; <rac@gentoo.org> CGI-2.81.ebuild, CGI-2.91.ebuild:
+  We had a situation (bug #18150) where the version of dev-perl/CGI was
+  between that in the perl 5.6.1 and the 5.8.0 core.  After discussions
+  with dragon, avenj, carpaski, and lostlogic, it seemed most prudent to
+  bring the stable standalone CGI.pm version to 2.81 (same as in the
+  5.8.0 core).
 
 *CGI-2.78-r3 (26 Mar 2003)
 
