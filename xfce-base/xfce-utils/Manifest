@@ -3,7 +3,7 @@ MD5 8e023154c1c0a646871c13bfcc770659 xfce-utils-3.99.1.ebuild 995
 MD5 59f35d246a060344b7fadb33cff6f02d xfce-utils-3.99.2.ebuild 995
 MD5 0ca027d47e353fff052a51b114009572 xfce-utils-3.99.3.ebuild 993
 MD5 d3d8c0ffc992c820f4db97f7fd42e3a6 xfce-utils-3.99.4.ebuild 1000
-MD5 5c9196ab38c667f91151a699c8fd995d xfce-utils-4.0.0.ebuild 993
+MD5 ae5a1b751d961b61c69fa64d4b8a220c xfce-utils-4.0.0.ebuild 998
 MD5 ef4218ddac196b3864971df7d549f868 files/digest-xfce-utils-3.99.1 69
 MD5 c4ccd8714accc111e4f7417d6ed2f5ab files/digest-xfce-utils-3.99.2 69
 MD5 89b08f5401760326d3ffa37963ec9096 files/digest-xfce-utils-3.99.3 70

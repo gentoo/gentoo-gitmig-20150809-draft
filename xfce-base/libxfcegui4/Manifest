@@ -3,7 +3,7 @@ MD5 ebfede596dc038aa583d3f328d72ee64 libxfcegui4-3.99.1.ebuild 857
 MD5 da2f6421852c2053b69a14c9a811fd15 libxfcegui4-3.99.2.ebuild 857
 MD5 6ce404dc08ec1f6d6430497580f153f9 libxfcegui4-3.99.3.ebuild 855
 MD5 b4aa9f14e2ab6bc75221e424bea0a21c libxfcegui4-3.99.4.ebuild 862
-MD5 a36a919aff8fb2ddd3fc07dc0e8a72ba libxfcegui4-4.0.0.ebuild 845
+MD5 c1729c092431796121bfdc5c22b8c2d5 libxfcegui4-4.0.0.ebuild 850
 MD5 6b60872c4bcbec0899983f4c908c425f files/digest-libxfcegui4-3.99.1 70
 MD5 339c0e85ad928a6ddae0aa1bd64ceb28 files/digest-libxfcegui4-3.99.2 70
 MD5 40dc750573aa0f079f1c8c6de0feedc0 files/digest-libxfcegui4-3.99.3 70

@@ -3,7 +3,7 @@ MD5 c2efc619b3d640044e5182516a453134 xfprint-3.99.1.ebuild 797
 MD5 280969df80287c0a9df974f158d69979 xfprint-3.99.2.ebuild 797
 MD5 c32d0c568be056293d737325924655e0 xfprint-3.99.3.ebuild 795
 MD5 6b7f0ca09b9f1f9ce65d293c10d98f56 xfprint-3.99.4.ebuild 802
-MD5 eba5dc0f6b52e80ced9b531b34741cfb xfprint-4.0.0.ebuild 786
+MD5 93d29afe43baf7b23628f45a3d4cf8df xfprint-4.0.0.ebuild 791
 MD5 92e9a1bb07ac35a32c8b723c64556f31 files/digest-xfprint-3.99.1 66
 MD5 5c50fe66674535ef72fbeb2862e932fd files/digest-xfprint-3.99.2 66
 MD5 1ce36328b8013def3213b41b1ea4009b files/digest-xfprint-3.99.3 66
