@@ -439,15 +439,6 @@ sys-apps/mkisofs
 net-mail/exmh
 
 
-# azarah@gentoo.org (07 Jul 2002)
-# Add a snapshot for gcc-3.1.1, which also resolves bug #4411,
-# and also should enable a bootstrap && emerge system with
-# CFLAGS="-march=pentium4 -O3 -pipe" (at least for me), as 
-# gcc-3.1 is too buggy.
-# NOTE: you must also unmask glibc-2.2.5-r5, as gcc-3.1.1 have
-#       stricker checking, and will fail otherwise
->=sys-devel/gcc-3.1.1
-
 # <danarmak@gentoo.org> (06 July 2002)
 # short-term mask for testing - see core post for details
 =x11-libs/qt-3.0.4.20020606-r2
