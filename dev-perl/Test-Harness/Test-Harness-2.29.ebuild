@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/Test-Harness-2.29.ebuild,v 1.1 2003/07/18 00:13:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/Test-Harness-2.29.ebuild,v 1.2 2004/02/22 20:50:36 agriffis Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://search.cpan.org/search?dist=Test-Harness"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~arm"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 
 DEPEND="dev-perl/File-Spec"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/DBI-1.37.ebuild,v 1.5 2003/07/20 16:13:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/DBI-1.37.ebuild,v 1.6 2004/02/22 20:39:02 agriffis Exp $
 inherit perl-module
 
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/DBI/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ppc ~alpha sparc hppa ~arm"
+KEYWORDS="x86 amd64 ppc ~alpha sparc hppa"
 
 DEPEND="${DEPEND}
 	>=dev-perl/PlRPC-0.2"

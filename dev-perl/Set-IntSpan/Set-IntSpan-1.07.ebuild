@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/Set-IntSpan-1.07.ebuild,v 1.1 2003/12/24 05:01:44 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/Set-IntSpan-1.07.ebuild,v 1.2 2004/02/22 20:49:18 agriffis Exp $
 
 inherit perl-module
 
