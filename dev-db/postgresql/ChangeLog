@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.49 2003/02/03 10:14:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.50 2003/02/04 00:14:32 wwoods Exp $
+
+  03 Feb 2003: Will Woods <wwoods@gentoo.org> postgresql-7.3.1.ebuild:
+  added ~alpha keyword
 
   04 Dec 2002: Michael Cummings <mcummings@gentoo.org>
   postgresql-7.3.ebuild: 
