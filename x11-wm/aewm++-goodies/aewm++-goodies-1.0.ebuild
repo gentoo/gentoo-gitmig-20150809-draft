@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/aewm++-goodies-1.0.ebuild,v 1.4 2004/01/08 02:05:03 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/aewm++-goodies-1.0.ebuild,v 1.5 2004/05/07 21:09:18 tseng Exp $
 
 IUSE=""
 
@@ -19,7 +19,8 @@ GOODIES="ae_fspanel-1.0 appbar-1.0 setrootimage-1.0"
 src_unpack() {
 	unpack ${A}
 	# compatibility with ANSI C++ and GCC3.2
-	cd ${S} && patch -p1 <${FILESDIR}/aewm++-goodies-gcc3-gentoo.patch || die
+	cd ${S}
+	epatch ${FILESDIR}/aewm++-goodies-gcc3-gentoo.patch
 }
 
 src_compile() {
