@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gtksee
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtksee/ChangeLog,v 1.14 2004/08/19 11:09:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtksee/ChangeLog,v 1.15 2004/09/23 00:38:35 mr_bones_ Exp $
+
+  22 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> gtksee-0.5.6.ebuild:
+  tidy src_install
 
   19 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> -gtksee-0.5.5.1.ebuild:
   clean older version
