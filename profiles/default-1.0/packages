@@ -180,3 +180,6 @@
 #This is the last version working with gcc-2.95
 =media-video/mjpegtools-1.6.0-r5
 
+# Needs gcc-3
+~dev-libs/elfutils-0.5
+~sys-devel/prelink
