@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.2.ebuild,v 1.3 2003/12/16 17:01:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.2.ebuild,v 1.4 2004/01/04 18:29:46 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -71,6 +71,10 @@ src_compile()  {
 		echo
 		ewarn "WARNING:- Specified and running kernels do not match!"
 		ewarn "WARNING:- This package will be slotted as ${SLOT}!"
+	fi
+
+	if [ ! -e ${MYI2C}/linux/i2c.h ]; then
+		cp $LINUX/include/linux/i2c* ${MYI2C}/linux
 	fi
 
 	echo; einfo "You may safely ignore any errors from compilation"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.1.ebuild,v 1.3 2003/12/26 10:33:13 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.1.ebuild,v 1.4 2004/01/04 18:29:46 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 SLOT="${KV}"
 
 # Dependencies here are either for I2C or gentoo-sources 2.4.22
-KEYWORDS="~x86 ~amd64 -ppc -sparc"
+KEYWORDS="x86 ~amd64 -ppc -sparc"
 LICENSE="GPL-2"
 
 DEPEND="|| (	>=sys-apps/i2c-2.8.1
