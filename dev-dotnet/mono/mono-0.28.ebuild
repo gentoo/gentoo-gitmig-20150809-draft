@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.28.ebuild,v 1.1 2003/10/04 20:07:21 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.28.ebuild,v 1.2 2003/10/28 15:25:14 scandium Exp $
 
 inherit mono
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.go-mono.com/"
 LICENSE="GPL-2 | LGPL-2 | X11"
 SLOT="0"
 
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 
 DEPEND="virtual/glibc
 	>=dev-libs/glib-2.0
