@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.12 2004/06/24 22:21:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.13 2004/06/27 17:23:28 zx Exp $
+
+  27 Jun 2004; Chris Aniszczyk <zx@gentoo.org> commons-dbcp-1.1.ebuild:
+  Marking stable on ppc
 
   08 May 2004; Chris Aniszczyk <zx@gentoo.org> -commons-dbcp-1.0-r2.ebuild:
   Clean up.

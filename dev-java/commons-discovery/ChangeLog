@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-discovery
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.7 2004/06/24 22:21:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.8 2004/06/27 17:24:24 zx Exp $
+
+  27 Jun 2004; Chris Aniszczyk <zx@gentoo.org>
+  commons-discovery-0.2-r1.ebuild:
+  Stable on ppc
 
   16 May 2004; Chris Aniszczyk <zx@gentoo.org> -commons-discovery-0.2.ebuild:
   Clean up
