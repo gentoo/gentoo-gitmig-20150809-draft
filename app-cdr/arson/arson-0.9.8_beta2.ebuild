@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.5 2004/06/28 06:13:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.6 2004/06/28 13:03:16 vapier Exp $
 
 inherit kde eutils gcc
 need-kde 3
 
 MY_P=${P/_/}
 
-DESCRIPTION="A KDE frontend to CD burning and CD ripping tools."
+DESCRIPTION="A KDE frontend to CD burning and CD ripping tools"
 HOMEPAGE="http://arson.sourceforge.net/"
 SRC_URI="mirror://sourceforge/arson/${MY_P}.tar.bz2"
 
@@ -42,9 +42,6 @@ base_src_unpack() {
 }
 
 src_compile() {
-	use oggvorbis \
-		&& myconf="$myconf --with-vorbis" \
-		|| myconf="$myconf --without-vorbis"
-	myconf="$myconf --with-flac"
+	myconf="$myconf --with-flac `use_with oggvorbis vorbis`"
 	kde_src_compile
 }

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.11 2004/06/24 21:29:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.12 2004/06/28 13:03:16 vapier Exp $
 
 inherit kde eutils
 need-kde 3
 
-DESCRIPTION="A KDE frontend to CD burning and CD ripping tools."
+DESCRIPTION="A KDE frontend to CD burning and CD ripping tools"
 HOMEPAGE="http://arson.sourceforge.net/"
 SRC_URI="mirror://sourceforge/arson/${P}-kde3.tar.bz2"
 LICENSE="GPL-2"
