@@ -1,3 +1,6 @@
 MD5 2474dc80de3f2983d702bf01bda64cf7 files/digest-inform-6.21.3 124
-MD5 6fbfa7f193036a53346dc07724cbbb26 ChangeLog 382
+MD5 923565593fb09926c934ecbecb5d0027 files/digest-inform-6.21.4 124
+MD5 b2038ee8d7b037fecb6a7efb38dcba3b ChangeLog 525
 MD5 17a4c9965f30171363ca81ba00dc5084 inform-6.21.3.ebuild 1780
+MD5 c38827226877c41b9e3ffad18cfc5c80 metadata.xml 2460
+MD5 9237bef3d102a27dbae12042325e3fb6 inform-6.21.4.ebuild 1817
