@@ -1,0 +1,6 @@
+MD5 a85f878d12ecf53dc8f6afaece742d55 ChangeLog 597
+MD5 18d087cdcd8e767a0f438dfa0b56cdf7 highline-4.1.ebuild 874
+MD5 11a37e06c9300f05e71a4ff89062b6dc highline-4.2.ebuild 876
+MD5 94e3da255f578ed3dc43997221898250 files/50highline-gentoo.el 633
+MD5 2df16e9a999d56b6fae206ef424879be files/digest-highline-4.1 63
+MD5 e9d9aa1a197c734a9377f2f19b2a5a0b files/digest-highline-4.2 63

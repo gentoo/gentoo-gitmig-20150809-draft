@@ -1,0 +1,7 @@
+MD5 3b1788eda7ebd591e5e89417d1b0d5e6 ChangeLog 543
+MD5 342002d23cfc78d7d1126103c85f2a4c w3-4.0_pre47-r1.ebuild 1109
+MD5 3acd0b1a841aab3e8e6a35a380a659aa w3-4.0_pre47.ebuild 1161
+MD5 1111a1056b86b4af4110fc8fb4cf64a0 files/50w3-gentoo.el 172
+MD5 617f044f554d5c0d861eec032905596c files/digest-w3-4.0_pre47 64
+MD5 617f044f554d5c0d861eec032905596c files/digest-w3-4.0_pre47-r1 64
+MD5 296c9f7da82ed330c6b8138e1d7bc272 files/w3-gentoo.patch 1098

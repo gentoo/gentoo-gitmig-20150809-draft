@@ -1,0 +1,6 @@
+MD5 c7f6f798454dc7f2da1768c972aecebf ChangeLog 721
+MD5 6d27fd67d91bedf2c413ccd7253239ea ilisp-5.12.0-r1.ebuild 1019
+MD5 f651a41b4beb6aac131db9d24438020b ilisp-5.12.0.ebuild 1004
+MD5 9b253aa445c6c9f0a5583cfae4b471de files/50ilisp-gentoo.el 4832
+MD5 dd5718993606fbd26e5e7a9d01baefcb files/digest-ilisp-5.12.0 64
+MD5 dd5718993606fbd26e5e7a9d01baefcb files/digest-ilisp-5.12.0-r1 64

@@ -1,0 +1,7 @@
+MD5 8c687cf865567fade1330af5181bdc2d ChangeLog 560
+MD5 d70bc090808929ef0df6d822cce2b2dd vm-7.07-r1.ebuild 1167
+MD5 a3a1ac31a64f213e461baab75f489fdc vm-7.15.ebuild 1174
+MD5 a3ccada98fbc3181244e33f7d19c3212 files/50vm-gentoo.el 639
+MD5 b1bb4656409854a8c1a2c6f50f7a6948 files/digest-vm-7.07-r1 59
+MD5 21ac98df00464ffd4510939bb172672b files/digest-vm-7.15 59
+MD5 29f46fa938e55c708ae3e691bcaf69b9 files/vm-direntry-fix-gentoo.patch 271
