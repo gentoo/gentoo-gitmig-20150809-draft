@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jzlib
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.5 2004/03/23 20:29:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.6 2004/03/27 05:40:09 zx Exp $
+
+*jzlib-1.0.4 (30 Mar 2004)
+
+  30 Mar 2004; Chris Aniszczyk <zx@gentoo.org> jzlib-1.0.3.ebuild,
+  jzlib-1.0.4.ebuild:
+  Clean up. Version bump. Closes #45708
+  Thanks to Pavel <hlobil@sympatico.ca> for the cleaned up ebuild.
 
   23 Mar 2004; David Holm <dholm@gentoo.org> jzlib-1.0.3.ebuild:
   Backed out of ~ppc.

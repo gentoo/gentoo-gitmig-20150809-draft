@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.3.ebuild,v 1.6 2004/03/23 20:29:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.4.ebuild,v 1.1 2004/03/27 05:40:09 zx Exp $
 
 inherit java-pkg
 
@@ -19,22 +19,24 @@ DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.17 )"
 RDEPEND=">=virtual/jdk-1.4"
 
+
+src_unpack() {
+	unpack ${A}
+	cp ${FILESDIR}/jzlib_build.xml ${S}/build.xml
+	mkdir ${S}/src
+	mv ${S}/com/ ${S}/src/
+}
+
 src_compile() {
-	cp ${FILESDIR}/jzlib_build.xml build.xml
-	mkdir src
-	mv com/ src/
-	local myc
-
-	if [ -n "`use jikes`" ] ; then
-		myc="${myc} -Dbuild.compiler=jikes"
-	fi
-
-	ANT_OPTS=${myc} ant || die "Failed Compiling"
+	local antflags="dist"
+	use doc && antflags="${antflags} javadoc"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	ant ${antflags} || die "compilation failed"
 }
 
 src_install() {
-	mv dist/lib/jzlib-${PV}.jar dist/lib/jzlib.jar
-	java-pkg_dojar dist/lib/jzlib.jar || die "Failed Installing"
+	mv dist/lib/jzlib{*,}.jar
+	java-pkg_dojar dist/lib/jzlib.jar || die "installation failed"
+	use doc && dohtml -r javadoc/*
 	dodoc LICENSE.txt README ChangeLog
-	cp -r example ${D}/usr/share/doc/${PN}-${PV}
 }
