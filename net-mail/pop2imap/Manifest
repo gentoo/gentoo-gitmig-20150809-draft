@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3a8c414b1372cde7b2f0d9f68d93c47f pop2imap-1.12.ebuild 597
+MD5 314cb2158d9a7b5422b9b7dd5c24d519 ChangeLog 358
+MD5 c210c664e9140fdaf19ccc64e19e0fbf metadata.xml 163
+MD5 d225fc9eacac6c1b597557f168051e7e files/digest-pop2imap-1.12 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCUD+uViELBEf1JB0RAq+4AJ4r2l0MtbUrB8PEZyvSvJNTio4F6QCfTRLV
+j2bJ/Cg6b+EG+JPj797Ld9c=
+=PiVV
+-----END PGP SIGNATURE-----

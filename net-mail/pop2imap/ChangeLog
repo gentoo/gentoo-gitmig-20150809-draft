@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/pop2imap
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.1 2005/04/03 19:10:11 ferdy Exp $
+
+*pop2imap-1.12 (03 Apr 2005)
+
+  03 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org> +metadata.xml,
+  +pop2imap-1.12.ebuild:
+  initial commit wrt #68832
+
