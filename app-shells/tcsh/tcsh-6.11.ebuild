@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.11.ebuild,v 1.1 2002/07/09 13:29:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.11.ebuild,v 1.2 2002/07/16 03:12:06 owen Exp $
 			
 S=${WORKDIR}/${P}.00
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.tcsh.org/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="*"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A}
