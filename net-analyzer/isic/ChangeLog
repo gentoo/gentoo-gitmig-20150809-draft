@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/isic
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/ChangeLog,v 1.5 2004/07/10 12:12:19 eldad Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/ChangeLog,v 1.6 2005/01/08 10:02:57 dragonheart Exp $
+
+*isic-0.06 (08 Jan 2005)
+
+  08 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/isic-0.06-makefile.patch, +isic-0.06.ebuild:
+  version bump as per bug #75193. Thanks to Vanquirius <marcelogoes@gmail.com>
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   isic-0.05-r1.ebuild, isic-0.05.ebuild:

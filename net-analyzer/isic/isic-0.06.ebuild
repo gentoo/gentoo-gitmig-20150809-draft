@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/isic-0.05-r1.ebuild,v 1.8 2005/01/08 10:02:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/isic-0.06.ebuild,v 1.1 2005/01/08 10:02:57 dragonheart Exp $
 
 inherit eutils
 
@@ -10,27 +10,23 @@ SRC_URI="http://www.packetfactory.net/projects/ISIC/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND="<net-libs/libnet-1.1
-	>=net-libs/libnet-1.0.2a-r3"
-
-DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
+DEPEND=">=net-libs/libnet-1.1"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-libnet-1.0.patch
-	env WANT_AUTOCONF=2.5 autoconf || die
+	epatch ${FILESDIR}/${P}-makefile.patch || die "patch failed"
 }
 
 src_compile() {
-	econf || die
-	emake || die
+	econf --bindir=/usr/bin || die "configure died"
+	emake || die "make died"
 }
 
 src_install() {
-	make install PREFIX=${D}/usr || die
+	make install DESTDIR=${D} || die
 	dodoc README
 }
