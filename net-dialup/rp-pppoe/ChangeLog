@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.31 2004/10/07 18:50:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.32 2004/10/07 22:06:53 eradicator Exp $
+
+  07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> files/rp-pppoe.rc:
+  provide net -> use net to clear up 'Cannot add provide 'net', as a service
+  with the same name exists\!' bug. This is not the best solution to this
+  problem as this package both needs and provides net. The best thing to do is
+  create predown and postup in /etc/init.d/net.eth0.
 
   07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   rp-pppoe-3.5-r2.ebuild:
