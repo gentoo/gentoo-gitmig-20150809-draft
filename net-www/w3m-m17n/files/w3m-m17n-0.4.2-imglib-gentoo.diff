@@ -1,0 +1,130 @@
+diff -urN w3m-0.4.2.ORIG/acinclude.m4 w3m-0.4.2/acinclude.m4
+--- w3m-0.4.2.ORIG/acinclude.m4	2003-09-25 18:16:27.000000000 +0900
++++ w3m-0.4.2/acinclude.m4	2003-10-05 07:02:28.000000000 +0900
+@@ -515,6 +515,12 @@
+ 	  enable_image=x11,fb
+         fi;;
+     esac
++    AC_ARG_WITH(imglib,
++    [  --with-imglib=IMGLIB	image library to link
++			(IMGLIB should be either gdk_pixbuf, imlib or imlib2.
++			Note that you need to use gdk_pixbuf or imlib2 to enable
++			inline image handler support for framebuffer device.)],
++    [test x"$with_imglib" = xyes || imglib="$with_imglib"])
+   fi   
+   save_ifs="$IFS"; IFS=",";
+   for img in $enable_image; do
+@@ -555,19 +561,25 @@
+ 	[have_imlib2="yes"],
+ 	[have_imlib2="no"])])
+   if test x"$x11" = xyes; then
+-   if test x"$have_gdkpixbuf" = xyes; then
++   if test x"$have_gdkpixbuf" = xyes \
++     -a -z "$with_imglib" \
++     -o x"$with_imglib" = xgdk_pixbuf; then
+      AC_DEFINE(USE_W3MIMG_X11)
+      AC_DEFINE(USE_GDKPIXBUF)
+      IMGOBJS="$IMGOBJS w3mimg/x11/x11_w3mimg.o"
+      IMGX11CFLAGS="`${GDKPIXBUF_CONFIG} --cflags`"
+      IMGX11LDFLAGS="`${GDKPIXBUF_CONFIG} --libs` -lgdk_pixbuf_xlib"
+-   elif test x"$have_imlib" = xyes; then
++   elif test x"$have_imlib" = xyes \
++     -a -z "$with_imglib" \
++     -o x"$with_imglib" = ximlib; then
+      AC_DEFINE(USE_W3MIMG_X11)
+      AC_DEFINE(USE_IMLIB)
+      IMGOBJS="$IMGOBJS w3mimg/x11/x11_w3mimg.o"
+      IMGX11CFLAGS="`${IMLIB_CONFIG} --cflags`"
+      IMGX11LDFLAGS="`${IMLIB_CONFIG} --libs`"
+-   elif test x"$have_imlib2" = xyes; then
++   elif test x"$have_imlib2" = xyes \
++     -a -z "$with_imglib" \
++     -o x"$with_imglib" = ximlib2; then
+      AC_DEFINE(USE_W3MIMG_X11)
+      AC_DEFINE(USE_IMLIB2)
+      IMGOBJS="$IMGOBJS w3mimg/x11/x11_w3mimg.o"
+@@ -578,13 +590,17 @@
+    fi
+   fi
+   if test x"$fb" = xyes; then
+-   if test x"$have_gdkpixbuf" = xyes; then
++   if test x"$have_gdkpixbuf" = xyes \
++     -a -z "$with_imglib" \
++     -o x"$with_imglib" = xgdk_pixbuf; then
+      AC_DEFINE(USE_W3MIMG_FB)
+      AC_DEFINE(USE_GDKPIXBUF)
+      IMGOBJS="$IMGOBJS w3mimg/fb/fb_w3mimg.o w3mimg/fb/fb.o w3mimg/fb/fb_img.o"
+      IMGFBCFLAGS="`${GDKPIXBUF_CONFIG} --cflags`"
+      IMGFBLDFLAGS="`${GDKPIXBUF_CONFIG} --libs`"
+-   elif test x"$have_imlib2" = xyes; then
++   elif test x"$have_imlib2" = xyes \
++     -a -z "$with_imglib" \
++     -o x"$with_imglib" = ximlib2; then
+      AC_DEFINE(USE_W3MIMG_FB)
+      AC_DEFINE(USE_IMLIB2)
+      IMGOBJS="$IMGOBJS w3mimg/fb/fb_w3mimg.o w3mimg/fb/fb.o w3mimg/fb/fb_img.o"
+diff -urN w3m-0.4.2.ORIG/aclocal.m4 w3m-0.4.2/aclocal.m4
+--- w3m-0.4.2.ORIG/aclocal.m4	2003-09-25 18:16:27.000000000 +0900
++++ w3m-0.4.2/aclocal.m4	2003-10-05 07:03:49.000000000 +0900
+@@ -527,6 +527,12 @@
+ 	  enable_image=x11,fb
+         fi;;
+     esac
++    AC_ARG_WITH(imglib,
++    [  --with-imglib=IMGLIB	image library to link
++				(IMGLIB should be either gdk_pixbuf, imlib or imlib2.
++				Note that you need to use gdk_pixbuf or imlib2 to enable
++				inline image handler support for framebuffer device.)],
++    [test x"$with_imglib" = xyes || imglib="$with_imglib"])
+   fi   
+   save_ifs="$IFS"; IFS=",";
+   for img in $enable_image; do
+@@ -567,19 +573,25 @@
+ 	[have_imlib2="yes"],
+ 	[have_imlib2="no"])])
+   if test x"$x11" = xyes; then
+-   if test x"$have_gdkpixbuf" = xyes; then
++   if test x"$have_gdkpixbuf" = xyes \
++     -a -z "$with_imglib" \
++     -o x"$with_imglib" = xgdk_pixbuf; then
+      AC_DEFINE(USE_W3MIMG_X11)
+      AC_DEFINE(USE_GDKPIXBUF)
+      IMGOBJS="$IMGOBJS w3mimg/x11/x11_w3mimg.o"
+      IMGX11CFLAGS="`${GDKPIXBUF_CONFIG} --cflags`"
+      IMGX11LDFLAGS="`${GDKPIXBUF_CONFIG} --libs` -lgdk_pixbuf_xlib"
+-   elif test x"$have_imlib" = xyes; then
++   elif test x"$have_imlib" = xyes \
++     -a -z "$with_imglib" \
++     -o x"$with_imglib" = ximlib; then
+      AC_DEFINE(USE_W3MIMG_X11)
+      AC_DEFINE(USE_IMLIB)
+      IMGOBJS="$IMGOBJS w3mimg/x11/x11_w3mimg.o"
+      IMGX11CFLAGS="`${IMLIB_CONFIG} --cflags`"
+      IMGX11LDFLAGS="`${IMLIB_CONFIG} --libs`"
+-   elif test x"$have_imlib2" = xyes; then
++   elif test x"$have_imlib2" = xyes \
++     -a -z "$with_imglib" \
++     -o x"$with_imglib" = ximlib2; then
+      AC_DEFINE(USE_W3MIMG_X11)
+      AC_DEFINE(USE_IMLIB2)
+      IMGOBJS="$IMGOBJS w3mimg/x11/x11_w3mimg.o"
+@@ -590,13 +602,17 @@
+    fi
+   fi
+   if test x"$fb" = xyes; then
+-   if test x"$have_gdkpixbuf" = xyes; then
++   if test x"$have_gdkpixbuf" = xyes \
++     -a -z "$with_imglib" \
++     -o x"$with_imglib" = xgdk_pixbuf; then
+      AC_DEFINE(USE_W3MIMG_FB)
+      AC_DEFINE(USE_GDKPIXBUF)
+      IMGOBJS="$IMGOBJS w3mimg/fb/fb_w3mimg.o w3mimg/fb/fb.o w3mimg/fb/fb_img.o"
+      IMGFBCFLAGS="`${GDKPIXBUF_CONFIG} --cflags`"
+      IMGFBLDFLAGS="`${GDKPIXBUF_CONFIG} --libs`"
+-   elif test x"$have_imlib2" = xyes; then
++   elif test x"$have_imlib2" = xyes \
++     -a -z "$with_imglib" \
++     -o x"$with_imglib" = ximlib2; then
+      AC_DEFINE(USE_W3MIMG_FB)
+      AC_DEFINE(USE_IMLIB2)
+      IMGOBJS="$IMGOBJS w3mimg/fb/fb_w3mimg.o w3mimg/fb/fb.o w3mimg/fb/fb_img.o"

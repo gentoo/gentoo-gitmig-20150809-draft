@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.1 2003/09/25 09:50:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.2 2003/10/04 22:21:45 usata Exp $
 
-IUSE="imlib gtk xface gpm ssl"
+IUSE="X imlib imlib2 gtk xface migemo gpm ssl"
 #IUSE="nls"
 
 W3M_CVS_PV="1.862"
@@ -25,16 +25,20 @@ SLOT="0"
 LICENSE="w3m"
 KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 
-DEPEND=">=sys-libs/ncurses-5.2-r3
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
+	>=sys-devel/autoconf-2.57"
+RDEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
 	dev-lang/perl
 	>=dev-libs/boehm-gc-6.2
-	gtk? ( =x11-libs/gtk+-1.2*
-		media-libs/gdk-pixbuf )
-	!gtk? ( imlib? ( media-libs/imlib
-			media-libs/libungif ) )
+	X? ( || ( !nopixbuf? ( >=media-libs/gdk-pixbuf-0.22.0 )
+		imlib2? ( >=media-libs/imlib2-1.0.5 )
+		imlib? ( >=media-libs/imlib-1.9.8 ) )
+	)
 	xface? ( media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
+	migemo? ( >=app-text/migemo-0.40 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
 PROVIDE="virtual/textbrowser
@@ -51,28 +55,43 @@ src_unpack() {
 	unpack libwc-${LIBWC_PV}.tar.gz
 
 	unpack ${W3M_M17N_P}-1.diff.gz
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	sed -i -e "/^--- w3m\/version.c.in/,+8d" ${W3M_M17N_P}-1.diff || die
 	epatch ${W3M_M17N_P}-1.diff
+	sed -i -e "s/0.4.2/0.4.2-m17n-20030308/" version.c.in || die
 
 	epatch ${FILESDIR}/w3m-w3mman-gentoo.diff
 	#use nls && epatch ${DISTDIR}/${W3M_M17N_P}-nls-1.diff.gz
+	epatch ${FILESDIR}/${P}-imglib-gentoo.diff
 }
 
 src_compile() {
 
-	local myconf migemo_command
+	local myconf migemo_command imglib
 
-	if [ -n "`use imlib`" -o -n "`use gtk`" ] ; then
+	if [ -n "`use X`" ] ; then
 		myconf="${myconf} --enable-image=x11,fb `use_enable xface`"
+		if [ ! -n "`use nopixbuf`" ] ; then
+			imglib="gdk_pixbuf"
+		elif [ -n "`use imlib2`" ] ; then
+			imglib="imlib2"
+		elif [ -n "`use imlib`" ] ; then
+			imglib="imlib"
+		else
+			# defaults to gdk_pixbuf
+			imglib="gdk_pixbuf"
+		fi
 	else
 		myconf="${myconf} --enable-image=no"
 	fi
 
-	if has_version 'app-emacs/migemo' ; then
+	if [ -n "`use migemo`" ] ; then
 		migemo_command="migemo -t egrep /usr/share/migemo/migemo-dict"
 	else
 		migemo_command="no"
 	fi
+
+	export WANT_AUTOCONF_2_5=1
+	autoconf || die
 
 	econf --program-suffix=-m17n \
 		--enable-keymap=w3m \
@@ -80,6 +99,7 @@ src_compile() {
 		--with-mailer=/bin/mail \
 		--with-browser=/usr/bin/mozilla \
 		--with-termlib=ncurses \
+		--with-imglib="${imglib}" \
 		--with-migemo="${migemo_command}" \
 		`use_enable gpm mouse` \
 		`use_enable ssl digest-auth` \
