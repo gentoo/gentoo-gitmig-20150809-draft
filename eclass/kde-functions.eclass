@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.30 2002/09/10 18:49:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.31 2002/09/10 19:15:48 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -54,10 +54,12 @@ need-kde() {
 	# if we're a kde-base package, we need an exact version of kdelibs
 	# to compile correctly.
 	if [ "${INHERITED//kde-dist}" != "$INHERITED" ]; then
-	    # kde 3.0.3 is a special case: it has kdelibs-3.0.3a.
+	    # kde 3.0.3 and 2.2.2 are special cases, because 3.0.3a and 2.2.2a exist.
 	    # goes to show this code is awfully inflexible, i guess.
 	    if [ "$PV" == "3.0.3" ]; then
 		newdepend "=kde-base/kdelibs-3.0.3*"
+	    elif [ "$PV" == "2.2.2" ]; then
+		newdepend "=kde-base/kdelibs-2.2.2*"
 	    else
 		newdepend "~kde-base/kdelibs-${KDEVER}"
 	    fi
