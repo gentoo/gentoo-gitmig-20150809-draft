@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/ultimate
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.1 2003/10/25 01:44:43 zul Exp $
+
+*ultimate-2.8.7 (24 Oct 2003)
+
+  24 Oct 2003; Chuck Short <zul@gentoo.org> ultimate-2.8.7.ebuild,
+  files/Ultimate-2.8.7-gentoo.patch, files/setup.h, files/ultimateircd.conf,
+  files/ultimateircd.rc:
+  Initial version, closes #31466.
+
