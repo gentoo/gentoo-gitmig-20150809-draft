@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.5.ebuild,v 1.3 2004/11/15 19:59:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.5.ebuild,v 1.4 2004/11/16 08:51:12 dragonheart Exp $
 
 inherit gnome2
 
 DESCRIPTION="gnome front end to gnupg"
 HOMEPAGE="http://seahorse.sourceforge.net/"
-SRC_URI="mirror://gnome/sources/seahorse/0.7/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +16,17 @@ RDEPEND="virtual/x11
 	>=app-crypt/gpgme-1.0.0
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
-	>=app-editors/gedit-2.8.0"
+	>=x11-libs/gtk+-2
+	>=gnome-base/eel-2
+	>=gnome-base/gnome-mime-data-2
+	>=gnome-base/libbonobo-2
+	>=gnome-base/libbonoboui-2
+	>=gnome-base/gnome-vfs-2
+	>=app-editors/gedit-2.8.0
+	dev-util/intltool
+	dev-libs/glib"
+
+#no ~ppc64 keyword yet 	>=gnome-base/bonobo-activation-2
 
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3
@@ -25,8 +34,3 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
 IUSE="doc"
-
-src_compile() {
-	gnome2_src_configure
-	gnome2_src_compile
-}
