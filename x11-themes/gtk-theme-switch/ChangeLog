@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/gtk-theme-switch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.4 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.5 2004/01/03 00:56:14 seemant Exp $
+
+*gtk-theme-switch-1.0.1-r1 (02 Jan 2004)
+
+  02 Jan 2004; Seemant Kulleen <seemant@gentoo.org>
+  gtk-theme-switch-1.0.1-r1.ebuild:
+  added a patch to make switch1 not read any gtk2 themes. The patch is courtesy
+  of: Peter Willis <psyphreak@phreaker.net> (psypete)
 
   16 Mar 2003; foser <foser@gentoo.org> gtk-theme-switch*.ebuild :
   Fixed KEYWORDS, removed *
