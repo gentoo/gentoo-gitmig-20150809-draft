@@ -1,8 +1,8 @@
 # ChangeLog for app-office/qhacc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.4 2004/01/04 01:57:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.5 2004/01/04 02:03:42 caleb Exp $
 
-  03 Jan 2004; root <root@gentoo.org> qhacc-2.9.ebuild:
+  03 Jan 2004; Caleb Tennis <caleb@gentoo.org> qhacc-2.9.ebuild:
   Put the qt dependency directly in the ebuild, remove the need kde as I don't
   believe it's needed anymore.
 
