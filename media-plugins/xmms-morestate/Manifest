@@ -1,4 +1,5 @@
-MD5 2c98f9cdf4b9fb1dd6c792d66069df14 xmms-morestate-1.2.ebuild 705
-MD5 cda6e2d0171564e250d3671845c46d40 ChangeLog 920
+MD5 bfbabf0ba99c1d6b65997e8f1371c8a5 ChangeLog 1067
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 e8bb140773a9ab3f7b4bc2d01b890849 xmms-morestate-1.2.ebuild 795
 MD5 54950263964f0968677422bd0155c99d files/digest-xmms-morestate-1.2 69
+MD5 d4c21d00cce659fde6fe62daf31fcf85 files/xmms-morestate-1.2-Makefile.patch 1044

@@ -1,0 +1,22 @@
+diff -Naur xmms-morestate-1.2.orig/Makefile.am xmms-morestate-1.2/Makefile.am
+--- xmms-morestate-1.2.orig/Makefile.am	2003-01-29 00:09:00.000000000 -0800
++++ xmms-morestate-1.2/Makefile.am	2004-07-07 14:14:20.197617116 -0700
+@@ -1,5 +1,5 @@
+ bin_PROGRAMS = libmorestate.so
+ libmorestate_so_SOURCES = autoplay.c config.c win_config.c win_about.c misc.c
+ noinst_HEADERS = autoplay.h
+-AM_CFLAGS = -Wall -shared -mcpu=i386
++AM_CFLAGS = -Wall -shared -fPIC -DPIC
+ bindir = @libdir@
+diff -Naur xmms-morestate-1.2.orig/Makefile.in xmms-morestate-1.2/Makefile.in
+--- xmms-morestate-1.2.orig/Makefile.in	2003-08-20 02:12:05.000000000 -0700
++++ xmms-morestate-1.2/Makefile.in	2004-07-07 14:14:34.563223588 -0700
+@@ -106,7 +106,7 @@
+ bin_PROGRAMS = libmorestate.so
+ libmorestate_so_SOURCES = autoplay.c config.c win_config.c win_about.c misc.c
+ noinst_HEADERS = autoplay.h
+-AM_CFLAGS = -Wall -shared -mcpu=i386
++AM_CFLAGS = -Wall -shared -fPIC -DPIC
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
