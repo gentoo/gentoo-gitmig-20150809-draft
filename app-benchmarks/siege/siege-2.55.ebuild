@@ -1,16 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.55.ebuild,v 1.1 2002/07/20 18:29:13 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.55.ebuild,v 1.2 2002/07/25 14:57:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An http regression testing and benchmarking utility"
 SRC_URI="ftp://ftp.armstrong.com/pub/siege/${P}.tar.gz"
 HOMEPAGE="http://www.joedog.org/siege"
+
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS="x86"
 LICENSE="GPL-2"
-DEPEND="virtual/glibc
-		ssl? ( >=dev-libs/openssl-0.9.6d )"
+
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )"
 
 src_compile() {
 
@@ -34,4 +35,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING INSTALL KNOWNBUGS NEWS MACHINES README
 }
-
