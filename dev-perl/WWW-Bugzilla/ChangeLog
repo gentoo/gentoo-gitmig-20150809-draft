@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-Bugzilla
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.2 2004/03/02 18:02:23 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.3 2004/03/24 23:11:38 mholzer Exp $
+
+  25 Mar 2004; Martin Holzer <mholzer@gentoo.org> WWW-Bugzilla-0.2.ebuild:
+  fixing depend. see 45343
 
   02 Mar 2004; Dylan Carlson <absinthe@gentoo.org> WWW-Bugzilla-0.2.ebuild:
   Added amd64 to KEYWORDS.
