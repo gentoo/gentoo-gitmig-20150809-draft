@@ -217,3 +217,4 @@ move app-sci/cdf sci-libs/cdf
 move app-sci/netcdf sci-libs/netcdf
 move app-sci/comedilib sci-libs/comedilib
 move app-sci/libgdgeda sci-libs/libgdgeda
+move app-sci/libgeda sci-libs/libgeda
