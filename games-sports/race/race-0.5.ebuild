@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.3 2004/02/04 20:07:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.4 2004/02/29 21:20:06 vapier Exp $
 
 inherit games gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://users.freebsd.org.uk/pub/foobar2k/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 RDEPEND="virtual/opengl
 	virtual/glu
@@ -36,11 +36,11 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin race                           || die "dogamesbin failed"
+	dogamesbin race || die "dogamesbin failed"
 	insinto ${GAMES_SYSCONFDIR}
-	newins config race.conf                   || die "newins failed"
-	dodir ${GAMES_DATADIR}/${PN}              || die "dodir failed"
+	newins config race.conf || die "newins failed"
+	dodir ${GAMES_DATADIR}/${PN}
 	cp -r data/* ${D}/${GAMES_DATADIR}/${PN}/ || die "cp failed"
-	dodoc README                              || die "dodoc failed"
+	dodoc README
 	prepgamesdirs
 }
