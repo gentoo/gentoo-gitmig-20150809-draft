@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.4-r1.ebuild,v 1.4 2003/12/13 17:59:08 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.4-r1.ebuild,v 1.5 2004/03/25 10:27:13 kumba Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.xfig.org/xfigdist/${MY_P}.full.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa amd64"
 
 DEPEND="virtual/x11
 	x11-libs/Xaw3d
