@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.7.ebuild,v 1.2 2004/11/22 18:56:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.7.ebuild,v 1.3 2004/11/23 12:58:23 eradicator Exp $
 
 IUSE=""
 
@@ -57,4 +57,13 @@ pkg_postinst() {
 	einfo "and run modules-update. You can do this like so:"
 	einfo "	# nano -w /etc/modules.d/alsa && modules-update"
 	echo
+
+	if use sparc; then
+		ewarn "Old versions of alsa-drivers had a broken snd-ioctl32 module"
+		ewarn "which causes sparc64 machines to lockup on such tasks as"
+		ewarn "changing the volume.  Because of this, it is VERY important"
+		ewarn "that you do not use the snd-ioctl32 modules contained in"
+		ewarn "development-sources or <=gentoo-dev-sources-2.6.7-r14.  Doing so"
+		ewarn "may result in an unbootable system if you start alsasound at boot."
+	fi
 }

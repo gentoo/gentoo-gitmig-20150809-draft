@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.78 2004/11/22 18:56:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.79 2004/11/23 12:58:23 eradicator Exp $
+
+  23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-utils-1.0.7.ebuild:
+  Added a warning to sparc users about the dangers of bad ioctl32.
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-utils-1.0.7.ebuild:
