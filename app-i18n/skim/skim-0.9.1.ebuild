@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-0.9.1.ebuild,v 1.1 2004/07/11 10:13:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-0.9.1.ebuild,v 1.2 2004/07/18 17:16:36 usata Exp $
 
 DESCRIPTION="Smart Common Input Method (SCIM) optimized for KDE"
 HOMEPAGE="http://scim.freedesktop.org/Software/ScimKDE"
-SRC_URI="http://freedesktop.org/~cougar/skim/downloads/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,7 +31,21 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "User manual can be found at:"
-	einfo "	http://freedesktop.org/~cougar/skim/doc/user/"
+	einfo "If you want to use Chinese interface, edit your startup script"
+	einfo "such as .xinitrc to incorporate"
+	einfo
+	einfo '	export XMODIFIERS=@im=SCIM'
+	einfo '	export LANG="zh_CN.GBK"'
+	einfo '	startkde'
+	einfo
+	einfo "or if you prefer English interface,"
+	einfo
+	einfo '	export XMODIFIERS=@im=SCIM'
+	einfo '	export LC_CTYPE="zh_CN.GBK"'
+	einfo '	startkde'
+	einfo
+	einfo "and start skim and SCIM by"
+	einfo
+	einfo "	% skim -d"
 	einfo
 }
