@@ -1,0 +1,116 @@
+# ChangeLog for sys-process/cronbase
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.1 2005/03/04 23:24:54 ciaranm Exp $
+
+*cronbase-0.2.1-r3 (04 Mar 2005)
+
+  04 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +files/README, +files/run-crons-0.2.1, +files/run-crons-0.3,
+  +files/run-crons-0.3.1, +cronbase-0.2.1-r3.ebuild, +cronbase-0.3.1.ebuild,
+  +cronbase-0.3.ebuild:
+  Move sys-apps/cronbase -> sys-process/cronbase
+
+  08 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
+  Updated metadata to reflect new cron herd.
+
+  18 Aug 2004; Aron Griffis <agriffis@gentoo.org> cronbase-0.3.1.ebuild:
+  stable everywhere
+
+  26 Jul 2004; Aron Griffis <agriffis@gentoo.org> files/run-crons-0.3.1:
+  Polish that locking 'til it gleams
+
+*cronbase-0.3.1 (25 Jul 2004)
+
+  25 Jul 2004; Aron Griffis <agriffis@gentoo.org> +files/run-crons-0.3.1,
+  +cronbase-0.3.1.ebuild:
+  Polish up locking code, thanks to Nahor for diagnosing the problems #58137
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> cronbase-0.3.ebuild:
+  stable everywhere
+
+  25 May 2004; Aron Griffis <agriffis@gentoo.org> files/run-crons-0.3:
+  Fix bash typo in run-crons-0.3
+
+*cronbase-0.3 (24 May 2004)
+
+  24 May 2004; Aron Griffis <agriffis@gentoo.org> -files/run-crons,
+  -cronbase-0.2.1-r2.ebuild, cronbase-0.2.1-r3.ebuild, +cronbase-0.3.ebuild:
+  Fix bug 45155 (run-crons and /var/spool/cron/lastrun/lock problems) by
+  re-writing the locking code to be non-racy
+
+  08 Apr 2004; Joshua Kinard <kumba@gentoo.org> cronbase-0.2.1-r2.ebuild,
+  cronbase-0.2.1-r3.ebuild:
+  Marked stable on mips.
+
+  08 Apr 2004; Luca Barbato <lu_zero@gentoo.org> :
+  Marked ppc
+
+  07 Apr 2004; <kloeri@gentoo.org> cronbase-0.2.1-r3.ebuild:
+  Stable on Alpha.
+
+  29 Mar 2004; Jon Portnoy <avenj@gentoo.org> cronbase-0.2.1-r3.ebuild :
+  Stable on AMD64
+
+  29 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  cronbase-0.2.1-r3.ebuild:
+  stable on sparc
+
+  26 Mar 2004; Seemant Kulleen <seemant@gentoo.org> cronbase-0.2.1-r3.ebuild:
+  move to stable x86
+
+  26 Dec 2003; Guy Martin <gmsoft@gentoo.org> cronbase-0.2.1-r3.ebuild:
+  Marked stable on hppa.
+
+*cronbase-0.2.1-r3 (19 Nov 2003)
+
+  19 Nov 2003; Preston A. Elder <prez@gentoo.org> run-crons :
+  Added code to ensure only one run-crons instance runs at once.
+
+*cronbase-0.2.1-r2 (31 Jan 2003)
+
+  17 Sep 2003; Jon Portnoy <avenj@gentoo.org> cronbase-0.2.1-r2.ebuild :
+  ia64 keywords.
+
+  20 Feb 2003; Zach Welch <zwelch@gentoo.org> cronbase-0.2.1-r2.ebuild :
+  Added arm to keywords.
+
+  07 Feb 2003; Guy Martin <gmsoft@gentoo.org> cronbase-0.2.1-r2.ebuild :
+  Added hppa to keywords.
+
+  31 Jan 2003; Preston A. Elder <prez@gentoo.org> run-crons :
+  Chaged month delay from 30 to 31 days, as per Bug #14862
+
+*cronbase-0.2.1-r1 (13 Nov 2002)
+
+  22 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Removed duplicate keepdir func definition
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  13 Nov 2002; Donny Davies <woodchip@gentoo.org> run-crons : Fix #10409.
+
+*cronbase-0.2.1 (27 Jun 2002)
+
+  22 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Removed duplicate keepdir func definition
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> cronbase-0.2.1.ebuild :
+  Added KEYWORDS, SLOT.
+
+  26 Jun 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :
+  rethought rewrite and fixed a race. thanks go to jnelseon and george.
+
+*cronbase-0.2 (24 Jun 2002)
+
+  23 Jun 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :
+  minor fixors/cleanups - suggested by jon nelson
+
+  20 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :  
+  moved lastrun to /var/spool/cron/lastrun
+
+*cronbase-0.01 (19 Apr 2002)
+
+  19 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog : initial release.

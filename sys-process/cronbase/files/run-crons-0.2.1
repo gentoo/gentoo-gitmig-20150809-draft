@@ -1,0 +1,83 @@
+#!/bin/sh
+#
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/files/run-crons-0.2.1,v 1.1 2005/03/04 23:24:54 ciaranm Exp $
+#
+# 23 Jun 2002; Jon Nelson <jnelson@gentoo.org> run-crons:
+#
+# fixed a race condition, where cron jobs and run-crons wanted to delete
+# touch files
+#
+# 20 Apr 2002; Thilo Bangert <bangert@gentoo.org> run-crons:
+#
+# moved lastrun directory to /var/spool/cron/lastrun
+#
+# Author: Achim Gottinger <achim@gentoo.org>
+#
+# Mostly copied from SuSE
+#
+# this script looks into /etc/cron.[hourly|daily|weekly|monthly]
+# for scripts to be executed. The info about last run is stored in 
+# /var/spool/cron/lastrun
+
+mkdir -p /var/spool/cron/lastrun
+
+# Make sure its not running multiple instances at once.
+if test -f /var/spool/cron/lastrun/lock
+then
+    cronpid=`cat /var/spool/cron/lastrun/lock`
+    if `kill -0 $cronpid >/dev/null 2>&1`
+    then
+	exit 0
+    fi
+fi
+
+echo "$$" >/var/spool/cron/lastrun/lock
+
+for BASE in hourly daily weekly monthly
+do
+    CRONDIR=/etc/cron.${BASE}
+
+    test -d $CRONDIR || continue
+
+    if test -e /var/spool/cron/lastrun/cron.$BASE
+    then
+	case $BASE in
+	    hourly)
+		#>= 1 hour, 5 min -=> +65 min
+		TIME="-cmin +65" ;;
+	    daily)
+		#>= 1 day, 5 min -=> +1445 min
+		TIME="-cmin +1445"  ;;
+	    weekly)
+		#>= 1 week, 5 min -=> +10085 min
+		TIME="-cmin +10085"  ;;
+	    monthly)
+		#>= 31 days, 5 min -=> +44645 min
+		TIME="-cmin +44645" ;;
+	esac
+	find /var/spool/cron/lastrun -name cron.$BASE $TIME -exec rm {} \;
+    fi
+
+    # if there is no touch file, make one then run the scripts 
+    if test ! -f /var/spool/cron/lastrun/cron.$BASE
+    then
+
+	touch /var/spool/cron/lastrun/cron.$BASE
+
+	set +e
+	for SCRIPT in $CRONDIR/*
+	do
+	    test -d $SCRIPT && continue
+	    if test -x $SCRIPT ; then
+		$SCRIPT
+	    fi
+	done
+    fi
+done
+
+# Remove lock, we're done.
+rm -f /var/spool/cron/lastrun/lock
+
+touch /var/spool/cron/lastrun
+find /var/spool/cron/lastrun -newer /var/spool/cron/lastrun -exec /bin/rm -f {} \;
+

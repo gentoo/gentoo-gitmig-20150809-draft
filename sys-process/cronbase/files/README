@@ -1,0 +1,119 @@
+
+$Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/files/README,v 1.1 2005/03/04 23:24:54 ciaranm Exp $
+
+22 Apr 2oo2; Thilo Bangert <bangert@gentoo.org>
+
+initial release
+
+
+
+The Gentoo Linux Cron README
+============================
+  
+Subject: New Cron Layout
+Date: Mon, 22 Apr 2002 21:35:26 +0200
+From: Thilo Bangert <bangert@gentoo.org>
+To: gentoo-dev@gentoo.org, gentoo-announce@gentoo.org,
+gentoo-user@gentoo.org, gentoo-newbies@gentoo.org
+
+ Hi,
+
+I have just unmasked
+
+ sys-apps/cronbase-0.01
+ sys-apps/dcron-2.7-r9
+ sys-apps/fcron-2.0.0-r1
+ sys-apps/vcron-3.0.1-r1
+
+Users of
+
+ sys-apps/dcron
+ sys-apps/fcron (or app-admin/fcron )
+ sys-apps/vcron
+
+should read the following before updating to the new cron layout.
+
+
+Features
+--------
+
+The new cron layout incorporates the following features:
+
+  - to be able to use cron, a user must be part of the "cron" group.
+
+  - cron spool files are located at /var/spool/cron/ for all cron's
+
+  - all crons run /etc/cron.{hourly|daily|weekly|monthly} (fcron and
+    dcron users see notice below).
+
+  - all crons PROVIDE=virtual/cron and future ebuilds will make use of
+    this. Ebuild developers are encourged to use it where applicable.
+
+  - max one cron per system.
+
+  - dcron is the Gentoo Linux "default" (ie. dcron gets installed if
+    something depends on virtual/cron and no cron has been installed
+    yet).
+
+
+Upgrade instructions
+--------------------
+
+sys-apps/dcron:
+
+  NOTE: fcron has been moved from the app-admin category to the
+        sys-apps category.
+
+  to install the new dcron, do
+  # emerge --pretend sys-apps/dcron
+  # emerge sys-apps/dcron
+
+  NOTE: to make use of /etc/cron.{hourly|daily|weekly|monthly} the root
+        crontab must include the contents of /etc/crontab.
+
+  # crontab /etc/crontab
+
+  !! This will REPLACE root's current crontab !!
+
+
+sys-apps/fcron:
+
+  to install the new fcron, do
+  # emerge --pretend sys-apps/fcron
+  # emerge sys-apps/fcron
+
+  The default location for crontabs for fcron has been changed to
+  /var/spool/cron/fcrontabs. To make use of previous crontabs, copy
+  them to the new location. Make sure your new /etc/fcron/fcron.conf
+  reflects this.
+
+  NOTE: to make use of /etc/cron.{hourly|daily|weekly|monthly} the root
+        crontab must include the contents of /etc/crontab.
+
+  # crontab /etc/crontab
+
+  !! This will REPLACE root's current crontab !!
+
+  NEW: To be able to use cron as a user, the user must be part of the
+       "cron" group.
+
+
+sys-apps/vcron:
+
+  to install the new vcron, do
+  # emerge --pretend sys-apps/vcron
+  # emerge sys-apps/vcron
+
+  NEW: To be able to use cron as a user, the user must be part of the
+       "cron" group.
+
+
+Although the new layout has been tested, bugs may be present.
+Please report them on http://bugs.gentoo.org and assign them
+to bangert@gentoo.org.
+
+Thank you.
+
+regards
+Thilo Bangert <bangert@gentoo.org>
+
