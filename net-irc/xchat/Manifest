@@ -7,8 +7,8 @@ MD5 701b6821a7318100bac450d2e9851df4 xchat-2.0.10-r3.ebuild 2538
 MD5 f289ed2366a298f3116d32d37f05c880 xchat-2.0.7-r1.ebuild 2072
 MD5 7e4082c7073373ded4fb1aeb399fdc87 xchat-2.0.8-r1.ebuild 2072
 MD5 b180a836aa7fffc22028cc8987c6f9ad xchat-2.0.9.ebuild 2122
-MD5 0ccbb5595d87cab98995abb517fe06ea ChangeLog 18820
-MD5 6dfcdf6ebcea27c88dab5b2702cdca15 xchat-2.4.0.ebuild 2302
+MD5 c5a1e1a858a034f8f4d8a9bdd226e015 xchat-2.4.0.ebuild 2309
+MD5 0bd41cba77c0aad2049ebd0c17a9418c ChangeLog 19006
 MD5 3d228dd6bbf6d081f6888dd7b3d2a6af files/2.0.10-preeditstring.patch 820
 MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
 MD5 28706a4c0068f4066e78bc9f93945fc2 files/digest-xchat-2.0.10-r3 135
@@ -23,7 +23,7 @@ MD5 3ddde600db975d5c534197fa4fe2b1b7 files/digest-xchat-2.4.0 134
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBH343I1lqEGTUzyQRAu4HAKDTc+Z3xvxt0NA43A1A0f1/g4BYGgCeLCog
-SFCuEEZU+adzxcEATC8SPDk=
-=VHPT
+iD8DBQFBH7w+I1lqEGTUzyQRAtPYAKCc/Iq8CkUyqW0FKcDTFdLruJOwjgCgiUBC
+0IIoaAWqhj450gVYpAh8Cvw=
+=QDmu
 -----END PGP SIGNATURE-----
