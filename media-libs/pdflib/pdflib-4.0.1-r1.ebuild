@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Grant Goodyear <g2boojum@hotmail.com>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r1.ebuild,v 1.1 2002/01/14 00:50:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r1.ebuild,v 1.2 2002/01/14 01:07:22 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for generating PDF on the fly"
@@ -114,9 +114,9 @@ pkg_postinst() {
 
 	echo
 	echo "******************************************************"
-	echo "* Add /usr/share/pdflib to you $CLASSPATH, or copy   *"
+	echo "* Add /usr/share/pdflib to you \$CLASSPATH, or copy   *"
 	echo "* /usr/share/pdflib/pdflib.jar to a directory in     *"
-	echo "* your $CLASSPATH.                                   *"
+	echo "* your \$CLASSPATH.                                   *"
 	echo "******************************************************"
 	echo
 }
