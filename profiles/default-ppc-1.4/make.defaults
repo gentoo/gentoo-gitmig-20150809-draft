@@ -22,7 +22,7 @@ CXXFLAGS=${CFLAGS}
 
 USE="oss dvd xv slang readline gpm berkdb gdbm tcpd pam libwww ssl jpeg
 nls mitshm perl python esd gif imlib sdl oggvorbis gnome gtk X qt kde
-motif opengl mozilla png truetype ppc"
+motif opengl mozilla png truetype ppc cups foomaticdb"
 
 # The following USE should _not_ bet set on ppc as they can cause breakage
 # in some pacakges (are mostly x86 only options)

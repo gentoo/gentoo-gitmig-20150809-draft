@@ -20,7 +20,7 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="arts apm avi berkdb crypt cups encode esd fbcon gdbm gif gtk gnome imlib java jpeg kde
+USE="arts apm avi berkdb crypt cups encode esd fbcon foomaticdb gdbm gif gtk gnome imlib java jpeg kde
  libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline 
  slang sdl spell ssl tcpd truetype X xv xml2 xmms zlib"
 

@@ -21,7 +21,7 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="arts berkdb crypt fbcon gdbm gtk imlib java jpeg kde gnome libwww mikmod motif mad mpeg
+USE="arts berkdb crypt cups fbcon foomaticdb gdbm gtk imlib java jpeg kde gnome libwww mikmod motif mad mpeg
  ncurses nls opengl pam perl png python qt readline slang spell ssl tcpd truetype X xv zlib"
 
 # The following USE flags are NOT recommended for sparc32 and might cause breakage...

@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the gcc 3.2 Gentoo Reference Platform Portage system
 
-USE="x86 apm acl afs alsa arts avi berkdb bonobo canna cdr cjk crypt cups dga doc dvd encode esd evo fbcon flash freewnn gb gd gdbm ggi gif gnome gphoto2 gpm gtk gtk2 gtkhtml guile imap imlib innodb ipv6 java jpeg kde kerberos lcms ldap leim libg++ libgda libwww maildir mbox mikmod motif mozilla mpeg mule mysql nas ncurses nls odbc oggvorbis opengl oss pam pcmcia pda pdflib perl pic plotutils png postgres python qt quicktime readline ruby samba sasl scanner sdl slang slp snmp socks5 spell ssl svga tcltk tcpd tetex tiff truetype trusted  X xface xml xml2 xmms xv zlib"
+USE="x86 apm acl afs alsa arts avi berkdb bonobo canna cdr cjk crypt cups dga doc dvd encode esd evo fbcon flash foomaticdb freewnn gb gd gdbm ggi gif gnome gphoto2 gpm gtk gtk2 gtkhtml guile imap imlib innodb ipv6 java jpeg kde kerberos lcms ldap leim libg++ libgda libwww maildir mbox mikmod motif mozilla mpeg mule mysql nas ncurses nls odbc oggvorbis opengl oss pam pcmcia pda pdflib perl pic plotutils png postgres python qt quicktime readline ruby samba sasl scanner sdl slang slp snmp socks5 spell ssl svga tcltk tcpd tetex tiff truetype trusted  X xface xml xml2 xmms xv zlib"
 
 ARCH="x86"
 COMPILER="gcc3"

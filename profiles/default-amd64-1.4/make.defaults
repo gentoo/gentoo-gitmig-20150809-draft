@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the gcc 3.2 Portage system
 
-USE="x86 oss 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
+USE="x86 oss 3dnow apm arts avi berkdb crypt cups encode foomaticdb gdbm gif gpm gtk imlib
 java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis
 opengl pam pdflib png python qt quicktime readline sdl slang spell ssl
 svga tcpd truetype X xml2 xmms xv zlib"

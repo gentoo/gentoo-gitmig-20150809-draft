@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the gcc 3.2 Portage system
 
-USE="arm berkdb crypt cups encode gdbm gif gpm
+USE="arm berkdb crypt cups encode foomaticdb gdbm gif gpm
 jpeg libg++ libwww mpeg ncurses nls
 pam png perl python readline slang spell ssl
 svga tcpd truetype zlib"
