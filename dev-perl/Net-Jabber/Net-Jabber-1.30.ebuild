@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Jabber/Net-Jabber-1.30.ebuild,v 1.3 2004/07/14 19:46:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Jabber/Net-Jabber-1.30.ebuild,v 1.4 2004/09/04 17:11:14 axxo Exp $
 
 inherit perl-module
 
@@ -16,4 +16,4 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/XML-Stream
-	>=dev-perl/Digest-SHA1"
+	dev-perl/Digest-SHA1"

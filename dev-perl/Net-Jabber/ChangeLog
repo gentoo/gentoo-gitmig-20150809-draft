@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Jabber
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Jabber/ChangeLog,v 1.2 2004/06/25 00:48:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Jabber/ChangeLog,v 1.3 2004/09/04 17:11:14 axxo Exp $
+
+  04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> Net-Jabber-1.30.ebuild:
+  fix depend syntax 58347
 
 *Net-Jabber-1.30 (06 Jun 2004)
 
