@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.10 2003/03/31 18:03:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.11 2003/07/18 05:12:07 gmsoft Exp $
 
 *libmpeg3-1.5-r1 (15 Apr 2002)
+
+  18 Jul 2003; Guy Martin <gmsoft@gentoo.org> libmpeg3-1.5-r1.ebuild :
+  Added -fPIC to CFLAGS and hppa to KEYWORDS.
 
   31 Mar 2003; Aron Griffis <agriffis@gentoo.org> libmpeg3-1.5-r1.ebuild:
   Add -fPIC on alpha for bug 10943

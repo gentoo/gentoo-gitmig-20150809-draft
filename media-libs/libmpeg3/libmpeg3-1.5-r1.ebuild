@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.15 2003/03/31 18:03:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.16 2003/07/18 05:12:07 gmsoft Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://heroinewarrior.com/libmpeg3.php3"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc ~alpha"
+KEYWORDS="x86 sparc ppc ~alpha hppa"
 
 RDEPEND="sys-libs/zlib 
 	media-libs/jpeg"
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 filter-flags -fPIC
 filter-flags -fno-common
 [ $ARCH = alpha ] && append-flags -fPIC
+[ $ARCH = hppa ] && append-flags -fPIC
 
 src_unpack() {
 
