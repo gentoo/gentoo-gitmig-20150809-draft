@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2762 2004/03/21 19:20:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2763 2004/03/21 20:54:59 eradicator Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -23,8 +23,9 @@
 ##   End example
 ##
 
-# <eradicator@gentoo.org> (21 Mar 2004)
+# <eradicator@gentoo.org> (22 Mar 2004)
 # Just in for testing... will unmask once I get to a machine with sound..
+app-accessibility/festival-gaim
 app-accessibility/eflite
 
 # <raker@gentoo.org> (18 Mar 2004)
