@@ -11,7 +11,7 @@ if [ ! -d ~/.epsxe ] ; then
 	mkdir memcards bios cfg cheats snap sstates patches plugins
 	cp /opt/epsxe/keycodes.lst keycodes.lst
 
-	ln -s /usr/lib/psemu/plugins/* plugins/ >& /dev/null
+	ln -s /usr/games/lib/psemu/plugins/* plugins/ >& /dev/null
 	ln -s /opt/epsxe/epsxe epsxe >& /dev/null
 
 	cd bios
@@ -27,8 +27,8 @@ fi
 
 cd ~/.epsxe
 
-ln -s /usr/lib/psemu/plugins/* plugins/ >& /dev/null
-ln -s /usr/lib/psemu/cfg/* cfg/ >& /dev/null
-ln -s /usr/lib/psemu/cheats/* cheats/ >& /dev/null
+ln -s /usr/games/lib/psemu/plugins/* plugins/ >& /dev/null
+ln -s /usr/games/lib/psemu/cfg/* cfg/ >& /dev/null
+ln -s /usr/games/lib/psemu/cheats/* cheats/ >& /dev/null
 
 exec ./epsxe "$@"
