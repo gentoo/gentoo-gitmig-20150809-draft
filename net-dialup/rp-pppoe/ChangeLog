@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.42 2005/01/23 08:52:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.43 2005/02/12 09:54:33 mrness Exp $
+
+  12 Feb 2005; Alin Nastac <mrness@gentoo.org>
+  -files/rp-pppoe-3.5-netscripts.patch, -rp-pppoe-3.5-r5.ebuild,
+  rp-pppoe-3.5-r6.ebuild:
+  Mark revision 6 as stable on x86 and remove old testing ebuild.
 
 *rp-pppoe-3.5-r6 (23 Jan 2005)
 
