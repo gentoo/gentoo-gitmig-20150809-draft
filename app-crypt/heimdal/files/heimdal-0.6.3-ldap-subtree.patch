@@ -1,0 +1,20 @@
+--- lib/hdb/hdb-ldap.c.orig	2004-07-30 10:50:38.883167858 +0200
++++ lib/hdb/hdb-ldap.c	2004-07-30 10:52:18.101664881 +0200
+@@ -585,7 +585,7 @@
+ 	goto out;
+     }
+ 
+-    rc = ldap_search_s((LDAP *) db->db, db->name, LDAP_SCOPE_ONELEVEL, filter, 
++    rc = ldap_search_s((LDAP *) db->db, db->name, LDAP_SCOPE_SUBTREE, filter, 
+ 		       krb5kdcentry_attrs, 0, msg);
+     if (rc != LDAP_SUCCESS) {
+ 	krb5_set_error_string(context, "ldap_search_s: %s", ldap_err2string(rc));
+@@ -931,7 +931,7 @@
+     }
+ 
+     msgid = ldap_search((LDAP *) db->db, db->name,
+-			LDAP_SCOPE_ONELEVEL, "(objectclass=krb5KDCEntry)",
++			LDAP_SCOPE_SUBTREE, "(objectclass=krb5KDCEntry)",
+ 			krb5kdcentry_attrs, 0);
+     if (msgid < 0) {
+ 	return HDB_ERR_NOENTRY;

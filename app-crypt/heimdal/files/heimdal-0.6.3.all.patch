@@ -1,0 +1,62 @@
+diff -ru heimdal-0.6.3.orig/appl/kx/rxtelnet.in heimdal-0.6.3/appl/kx/rxtelnet.in
+--- heimdal-0.6.3.orig/appl/kx/rxtelnet.in	2002-03-19 03:07:34.000000000 +0930
++++ heimdal-0.6.3/appl/kx/rxtelnet.in	2004-09-13 23:34:02.154228824 +0930
+@@ -2,7 +2,7 @@
+ # $Id: heimdal-0.6.3.all.patch,v 1.1 2004/09/13 15:40:34 dragonheart Exp $
+ #
+ usage="Usage: $0 [-l username] [-k] [-f] [-t args_to_telnet] [-x args_to_xterm] [-K args_to_kx] [-w term_emulator] [-b telnet_binary] [-n] [-v] [-h | --help] [--version] host [port]"
+-binary=telnet
++binary=ktelnet
+ term=
+ kx_args=-P
+ while true
+Only in heimdal-0.6.3/appl/kx: rxtelnet.in.orig
+diff -ru heimdal-0.6.3.orig/appl/kx/rxterm.in heimdal-0.6.3/appl/kx/rxterm.in
+--- heimdal-0.6.3.orig/appl/kx/rxterm.in	2002-03-19 03:07:34.000000000 +0930
++++ heimdal-0.6.3/appl/kx/rxterm.in	2004-09-13 23:34:02.155227672 +0930
+@@ -2,7 +2,7 @@
+ # $Id: heimdal-0.6.3.all.patch,v 1.1 2004/09/13 15:40:34 dragonheart Exp $
+ #
+ usage="Usage: $0 [-l username] [-k] [-f] [-r rsh_args] [-x xterm_args] [-K kx_args] [-w term_emulator] [-b rsh_binary][-v] [-h | --help] [--version] host"
+-binary=rsh
++binary=krsh
+ term=xterm
+ while true
+ do
+Only in heimdal-0.6.3/appl/kx: rxterm.in.orig
+diff -ru heimdal-0.6.3.orig/cf/db.m4 heimdal-0.6.3/cf/db.m4
+--- heimdal-0.6.3.orig/cf/db.m4	2002-09-10 23:59:47.000000000 +0930
++++ heimdal-0.6.3/cf/db.m4	2004-09-13 23:37:13.174919192 +0930
+@@ -14,6 +14,8 @@
+ if test "$enable_berkeley_db" != no; then
+ 
+   AC_CHECK_HEADERS([				\
++	db4.2/db.h				\
++	db4.1/db.h				\
+ 	db4/db.h				\
+ 	db3/db.h				\
+ 	db.h					\
+@@ -24,6 +26,10 @@
+ 
+   AC_FIND_FUNC_NO_LIBS(db_create, db4 db3 db, [
+   #include <stdio.h>
++  #ifdef HAVE_DB4_2_DB_H
++  #include <db4.2/db.h>
++  #ifdef HAVE_DB4_1_DB_H
++  #include <db4.1/db.h>
+   #ifdef HAVE_DB4_DB_H
+   #include <db4/db.h>
+   #elif defined(HAVE_DB3_DB_H)
+diff -ru heimdal-0.6.3.orig/lib/editline/Makefile.am heimdal-0.6.3/lib/editline/Makefile.am
+--- heimdal-0.6.3.orig/lib/editline/Makefile.am	2002-08-13 23:18:15.000000000 +0930
++++ heimdal-0.6.3/lib/editline/Makefile.am	2004-09-13 23:30:53.917327832 +0930
+@@ -47,6 +47,9 @@
+ 
+ EXTRA_DIST = $(man_MANS)
+ 
++$(libeditline_la_OBJECTS): %.lo: %.c
++	$(LTCOMPILE) -fPIC -c -o $@ `test -f '$<' || echo '$(srcdir)/'`$<
++
+ snprintf.c:
+ 	$(LN_S) $(srcdir)/../roken/snprintf.c .
+ strdup.c:

@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.46 2004/07/17 21:25:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.47 2004/09/13 15:40:34 dragonheart Exp $
+
+*heimdal-0.6.3 (14 Sep 2004)
+
+  14 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/heimdal-0.6.3-ldap-subtree.patch, +files/heimdal-0.6.3.all.patch,
+  +files/krb5-kdc.schema, +files/krb5.conf, +heimdal-0.6.3.ebuild:
+  Version bump to fix bugs #61412 - Security vulnerabilty - ftpd Signal
+  Handling. bug #58799 LDAP support and bug #54421 header file layout
 
 *heimdal-0.6.2-r1 (16 Jul 2004)
 
