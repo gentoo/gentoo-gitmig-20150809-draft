@@ -1,12 +1,12 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.25 2002/01/02 21:06:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.26 2002/01/02 21:13:36 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
 TEMPLATE="xsl/guide-main.xsl"
-S=${WORKDIR}/${P}/gentoo-src
+S=${WORKDIR}/gentoo-src/gentoo-web
 DESCRIPTION="www.gentoo.org website"
 SRC_URI="http://www.red-bean.com/cvs2cl/cvs2cl.pl"
 HOMEPAGE="http://www.gentoo.org"
@@ -20,7 +20,7 @@ src_unpack() {
 		echo "Beware -- maintainers only."
 	fi
 	cd ${WORKDIR}/${P}
-	cvs co -d /home/cvsroot gentoo-src
+	cvs -d /home/cvsroot co gentoo-src
 }
 
 src_install() {
@@ -59,7 +59,7 @@ src_install() {
 	doins dynfw/dynfw-1.0.1.tar.gz 
 	
 	cd ..
-	tar czvf ${D}${WEBROOT}/projects/guide-xml-latest.tar.gz files 
+	tar czvf ${D}${WEBROOT}/projects/guide-xml-latest.tar.gz gentoo-web 
 	cd ${S}
 	
 	insinto ${WEBROOT}
