@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyosd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/ChangeLog,v 1.1 2004/01/20 01:55:57 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/ChangeLog,v 1.2 2004/04/15 21:02:55 pythonhead Exp $
+
+*pyosd-0.2.9 (15 Apr 2004)
+
+  15 Apr 2004; Rob Cakebread <pythonhead@gentoo.org> +pyosd-0.2.9.ebuild:
+  Version bump thanks to Jonathan Hitchcock <vhata-gentoo@rucus.ru.ac.za> bug#
+  45396
 
 *pyosd-0.2.7 (19 Jan 2004)
 
