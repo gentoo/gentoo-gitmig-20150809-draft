@@ -1,4 +1,6 @@
 MD5 57062fbdcf018e4c1dfd0f3e8d3fe016 ibm-acpi-0.10.ebuild 1510
-MD5 47c80f9fb6b0b123e89d58b6b448f84d ChangeLog 2722
+MD5 271ec23ac7c3f8a4e314be54588a78a8 ibm-acpi-0.11.ebuild 1511
+MD5 23ee56eeef5b91488bcbbe64475626b9 ChangeLog 2846
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 d206fe5459cdac396c96a997cc59b537 files/digest-ibm-acpi-0.10 64
+MD5 d070ee489dc550a69fcd3af725513d81 files/digest-ibm-acpi-0.11 64
