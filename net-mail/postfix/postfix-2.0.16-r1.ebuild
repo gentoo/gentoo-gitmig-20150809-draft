@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.10 2004/01/14 20:38:12 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.11 2004/01/16 16:44:03 max Exp $
 
 inherit eutils ssl-cert
 
@@ -109,7 +109,11 @@ src_compile() {
 		mylibs="${mylibs} -lmysqlclient -lm -lz"
 	fi
 	if [ "`use postgres`" ] ; then
-		mycc="${mycc} -DHAS_PGSQL -I/usr/include/postgresql"
+		if [ "`best_version '=dev-db/postgresql-7.3*'`" ] ; then
+			mycc="${mycc} -DHAS_PGSQL -I/usr/include/postgresql"
+		else
+			mycc="${mycc} -DHAS_PGSQL -I/usr/include/postgresql/pgsql"
+		fi
 		mylibs="${mylibs} -lpq"
 	fi
 	if [ "`use ssl`" ] ; then
