@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mosfet-liquid-widgets
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/ChangeLog,v 1.14 2004/06/24 23:35:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/ChangeLog,v 1.15 2004/06/28 22:44:08 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  mosfet-liquid-widgets-0.9.6_pre4.ebuild:
+  spelling correction: ISUE -> IUSE
 
   19 Jun 2004; <pyrania@gentoo.org> mosfet-liquid-widgets-0.9.5-r1.ebuild,
   mosfet-liquid-widgets-0.9.6_pre4.ebuild:
