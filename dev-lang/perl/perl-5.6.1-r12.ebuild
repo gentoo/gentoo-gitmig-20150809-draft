@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r12.ebuild,v 1.1 2003/06/02 07:33:46 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r12.ebuild,v 1.2 2003/06/07 01:13:25 rac Exp $
 
 IUSE="berkdb gdbm"
 
@@ -22,6 +22,7 @@ RDEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
 
 DEPEND="sys-apps/groff
 	>=sys-apps/portage-2.0.45-r5
+	>=sys-apps/sed-4
 	${RDEPEND}"
 		
 src_unpack() {
@@ -41,7 +42,7 @@ src_unpack() {
 	# do so will result in things like DynaLoader.a languishing in
 	# blib directories, and not being useful.
 
-	sed -ie "s/INSTALLDIRS=perl/INSTALLDIRS=perl PERL_CORE=1/" ${S}/ext/util/make_ext
+	sed -ie "s/INSTALLDIRS=perl/INSTALLDIRS=perl PERL_CORE=1/" ${S}/ext/util/make_ext || die "make_ext patch failed"
 }
 
 src_compile() {
