@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.71 2003/09/17 18:44:35 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.72 2003/09/20 18:32:04 solar Exp $
+
+  20 Sep 2003; <solar@gentoo.org> binutils-2.14.90.0.6-r3.ebuild,
+  files/2.14/binutils-2.14.90.0.6-bfd-elf-interp.patch:
+  A change that defines expected section attributes for a select set of
+  hardcoded section names was incorrectly added to binutils by redhat. This fix
+  is for bfd/elf.c for the .interp entry which should have SHF_ALLOC instead of
+  0
 
 *binutils-2.14.90.0.6-r3 (13 Sep 2003)
 
