@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.958 2005/02/19 02:58:13 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.959 2005/02/19 10:15:50 stuart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -551,7 +551,7 @@ net-misc/mindterm:examples - Install example source code
 net-misc/ntp:nodroproot - Disable support for running ntpd as a non-root user
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
-net-misc/nxserver-freenx: commercial - Add support for the commerial nxclient
+net-misc/nxserver-freenx:commercial - Add support for the commerial nxclient
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support.
 net-misc/openssh:sftplogging - Enables sftplogging patch
