@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.23 2004/11/06 08:51:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.24 2004/11/17 11:23:20 kloeri Exp $
+
+  17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> bluez-libs-2.10.ebuild:
+  Stable on alpha.
 
   06 Nov 2004; Markus Rothe <corsair@gentoo.org> bluez-libs-2.10.ebuild:
   Marked ~ppc64; bug #67291

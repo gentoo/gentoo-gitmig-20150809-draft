@@ -1,7 +1,17 @@
-MD5 31b45195bcab6d7a6c7184211e3467a1 ChangeLog 3267
-MD5 031e1d2665291ee825898691370b2b6b bluez-libs-2.10.ebuild 643
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ca60be17881283df194f7db99af51914 ChangeLog 3363
 MD5 bb5e63a53a97752bbd9dabf3e68e45c4 bluez-libs-2.7.ebuild 531
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
+MD5 2f6cdf5f0393de924eb513ece89d4163 bluez-libs-2.10.ebuild 642
 MD5 de3e6042ceea4fbca926d59617ffdb36 files/bluez-libs-2.10-handsfree.patch 1030
-MD5 3582cb4d2e7e3578ac75f23798b13d25 files/digest-bluez-libs-2.10 67
 MD5 e9e80d4297e7ac6f8e8018d52f9a082c files/digest-bluez-libs-2.7 66
+MD5 3582cb4d2e7e3578ac75f23798b13d25 files/digest-bluez-libs-2.10 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBmzSwugEuf3OQ0akRAvr5AKCRvSXkWp+K7YdNc9RnLAU+wbSgYwCfRFIB
+X5Uza3MlnlaveQKCdge3Ilw=
+=z30+
+-----END PGP SIGNATURE-----
