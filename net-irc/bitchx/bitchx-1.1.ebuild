@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1.ebuild,v 1.4 2004/04/15 23:30:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1.ebuild,v 1.5 2004/04/26 01:27:08 lv Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc hppa ~alpha"
+KEYWORDS="x86 ~ppc sparc hppa ~alpha amd64"
 IUSE="ssl esd gnome xmms ipv6 gtk cjk"
 
 DEPEND=">=sys-libs/ncurses-5.1
@@ -32,12 +32,14 @@ src_unpack() {
 	use cjk && epatch ${FILESDIR}/${PV}/${P}-cjk.patch
 	epatch ${FILESDIR}/${PV}/${P}-hebrew.patch
 	epatch ${FILESDIR}/${PV}/${P}-freenode.patch
+	use amd64 && epatch ${FILESDIR}/BitchX-64bit.patch
 }
 
 src_compile() {
 	# BitchX needs to be merged with -fPIC on alpha/hppa boxes #10932
 	[ "${ARCH}" == "alpha" ] && append-flags "-fPIC"
 	[ "${ARCH}" == "hppa" ] && append-flags "-fPIC"
+	[ "${ARCH}" == "amd64" ] && append-flags "-fPIC"
 	replace-flags -O[3-9] -O2
 
 	local myconf

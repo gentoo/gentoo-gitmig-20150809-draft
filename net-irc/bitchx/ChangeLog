@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.39 2004/04/15 23:30:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.40 2004/04/26 01:27:08 lv Exp $
+
+  25 Apr 2004; Travis Tilley <lv@gentoo.org> +files/BitchX-64bit.patch,
+  bitchx-1.1.ebuild:
+  ported to amd64
 
   15 Apr 2004; Jason Wever <weeve@gentoo.org> bitchx-1.1.ebuild:
   Stable on sparc.
