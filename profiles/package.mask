@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> (27 Aug 2002)
+# Masked for the freeze.
+# Adding to portage to address problems experienced in bug #4885
+=sys-apps/star-1.5_alpha06
 
 # <spider@gentoo.org> (26 Aug 2002)
 # Masked for testing -- tore out the broken id3lib included and
