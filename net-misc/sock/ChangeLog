@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sock
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sock/ChangeLog,v 1.8 2004/06/25 00:13:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sock/ChangeLog,v 1.9 2004/11/12 18:23:17 blubb Exp $
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org> sock-1.1.ebuild:
+  added ~amd64
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
