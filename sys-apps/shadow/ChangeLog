@@ -1,7 +1,15 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.7 2002/04/03 22:25:21 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.8 2002/04/04 05:32:40 jhhudso Exp $
 
+*shadow-4.0.2-r3 (3 Apr 2002)
+
+  3 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org>
+
+  Cleaned up earlier fix to account for all possibilities, such as
+  binary packages, different ROOT's, and an already existing good
+  system-auth file.
+	
 *shadow-4.0.2-r2 (3 Apr 2002)
 
   3 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org>
