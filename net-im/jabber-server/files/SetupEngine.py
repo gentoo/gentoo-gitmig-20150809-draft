@@ -73,21 +73,21 @@ YahooData['name'] = ''
 def ShowIntro():
 	print " "
 	print " Choose one of the following options: "
-	print "   [1] General Server Configuration "
-        print "   [2] JUD Configuration "
-        print "   [3] Conference Configuration "
-        print "   [4] AIM Transport Configuration "
-        print "   [5] ICQ Transport Configuration "
-        print "   [6] MSN Transport Configuration "
-        print "   [7] Yahoo! Transport Configuration "
-        print "   [8] Server Security Configuration "
-	print "   [9] Write Configuration File "
-	print "   [0] Quit "
+	print "   [\x1b[32;01m1\x1b[0m] General Server Configuration "
+        print "   [\x1b[32;01m2\x1b[0m] JUD Configuration "
+        print "   [\x1b[32;01m3\x1b[0m] Conference Configuration "
+        print "   [\x1b[32;01m4\x1b[0m] AIM Transport Configuration "
+        print "   [\x1b[32;01m5\x1b[0m] ICQ Transport Configuration "
+        print "   [\x1b[32;01m6\x1b[0m] MSN Transport Configuration "
+        print "   [\x1b[32;01m7\x1b[0m] Yahoo! Transport Configuration "
+        print "   [\x1b[32;01m8\x1b[0m] Server Security Configuration "
+	print "   [\x1b[32;01m9\x1b[0m] Write Configuration File "
+	print "   [\x1b[32;01m0\x1b[0m] Quit "
 	print " "
 
 def SetupGeneral():
 	print " "
-	print "<---| General Server Configuration |--------------------------------->"
+	print "<---\x1b[33;02m| General Server Configuration |\x1b[0m--------------------------------->"
 	GeneralData['domainname'] = raw_input("  Server DomainName (eg. myjabberserver.com):\n  # ")
 	GeneralData['vcard_subject'] = raw_input("  Server vCard: Subject (eg. Jabber Server):\n  # ")
 	GeneralData['vcard_desc'] = raw_input("  Server vCard: Description (eg. My Jabber Server!):\n  # ")
@@ -121,14 +121,14 @@ def SetupGeneral():
 
 
 	print " "
-	print " *** General Server Configuration Finished SuccessFully! ***"
+	print " *** \x1b[32;02mGeneral Server Configuration Finished SuccessFully!\x1b[0m ***"
 	print " "
 	ShowIntro()
 
 
 def JUDConfig():
         print " "
-	print "<---| Jabber User Directory Configuration |--------------------------------->"
+	print "<---\x1b[33;02m| Jabber User Directory Configuration |\x1b[0m--------------------------------->"
 
         a = raw_input(" Do you want to add a second JUD (eg. Intranet JUD?) ([yes]|no):\n  # ")
         if a == "yes" or a == "ye" or a == "y" or a == "":
@@ -146,11 +146,13 @@ def JUDConfig():
 
 def CONConfig():
         print " "
-	print "<---| Conference Configuration |--------------------------------->"
+	print "<---\x1b[33;02m| Conference Configuration |\x1b[0m--------------------------------->"
         a = raw_input(" Do you want to enable Conferencing on your server? ([yes]|no):\n  # ")
         if a == "yes" or a == "ye" or a == "y" or a == "":
                 CONData['enable_con'] = 1
                 CONData['jid'] = raw_input("    Enter Prefix for the Conference Host (default: conference):\n      # ")
+                if CONData['jid'] == "":
+                        CONData['jid'] = "conference"
                 CONData['name'] = raw_input("    Enter Name for Conference Transport (eg. My Own Conf. Transport):\n      # ")
 	else:
 		print "   * No extra JUD will be configured *"
@@ -163,11 +165,13 @@ def CONConfig():
 
 def AIMConfig():
         print " "
-	print "<---| AIM Transport Configuration |--------------------------------->"
+	print "<---\x1b[33;02m| AIM Transport Configuration |\x1b[0m--------------------------------->"
         a = raw_input(" Do you want to enable the AIM Transport on your server? ([yes]|no):\n  # ")
         if a == "yes" or a == "ye" or a == "y" or a == "":
                 AIMData['enable_aim'] = 1
                 AIMData['jid'] = raw_input("    Enter Prefix for the AIM Host (default: aim):\n      # ")
+                if AIMData['jid'] == "":
+                        AIMData['jid'] = "aim"
                 AIMData['name'] = raw_input("    Enter Name for AIM Transport (eg. My Own AIM Transport):\n      # ")
 	else:
 		print "   * AIM Transport will NOT be installed *"
@@ -180,11 +184,13 @@ def AIMConfig():
 
 def ICQConfig():
         print " "
-	print "<---| ICQ Transport Configuration |--------------------------------->"
+	print "<---\x1b[33;02m| ICQ Transport Configuration |\x1b[0m--------------------------------->"
         a = raw_input(" Do you want to enable the ICQ Transport on your server? ([yes]|no):\n  # ")
         if a == "yes" or a == "ye" or a == "y" or a == "":
                 ICQData['enable_icq'] = 1
                 ICQData['jid'] = raw_input("    Enter Prefix for the ICQ Host (default: icq):\n      # ")
+                if ICQData['jid'] == "":
+                        ICQData['jid'] = "icq"
                 ICQData['name'] = raw_input("    Enter Name for ICQ Transport (eg. My Own ICQ Transport):\n      # ")
 	else:
 		print "   * ICQ Transport will NOT be installed *"
@@ -197,11 +203,13 @@ def ICQConfig():
 
 def MSNConfig():
         print " "
-	print "<---| MSN Transport Configuration |--------------------------------->"
+	print "<---\x1b[33;02m| MSN Transport Configuration |\x1b[0m--------------------------------->"
         a = raw_input(" Do you want to enable the MSN Transport on your server? ([yes]|no):\n  # ")
         if a == "yes" or a == "ye" or a == "y" or a == "":
                 MSNData['enable_msn'] = 1
                 MSNData['jid'] = raw_input("    Enter Prefix for the MSN Host (default: msn):\n      # ")
+                if MSNData['jid'] == "":
+                        MSNData['jid'] = "msn"
                 MSNData['name'] = raw_input("    Enter Name for MSN Transport (eg. My Own MSN Transport):\n      # ")
 	else:
 		print "   * MSN Transport will NOT be installed *"
@@ -214,11 +222,13 @@ def MSNConfig():
 
 def YahooConfig():
         print " "
-	print "<---| Yahoo! Transport Configuration |--------------------------------->"
+	print "<---\x1b[33;02m| Yahoo! Transport Configuration |\x1b[0m--------------------------------->"
         a = raw_input(" Do you want to enable the Yahoo! Transport on your server? ([yes]|no):\n  # ")
         if a == "yes" or a == "ye" or a == "y" or a == "":
                 YahooData['enable_yahoo'] = 1
                 YahooData['jid'] = raw_input("    Enter Prefix for the Yahoo! Host (default: msn):\n      # ")
+                if YahooData['jid'] == "":
+                        YahooData['jid'] = "yahoo"
                 YahooData['name'] = raw_input("    Enter Name for Yahoo! Transport (eg. My Own Yahoo! Transport):\n      # ")
 	else:
 		print "   * Yahoo! Transport will NOT be installed *"
@@ -231,7 +241,7 @@ def YahooConfig():
 
 def SecurityConfig():
         print " "
-	print "<---| Server Security Configuration |--------------------------------->"
+	print "<---\x1b[33;02m| Server Security Configuration |\x1b[0m--------------------------------->"
 
         print " "
 	print " *** Server Security Configuration Finished SuccessFully! ***"

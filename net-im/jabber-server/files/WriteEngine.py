@@ -32,7 +32,7 @@ def WriteConfig():
 
         if JUDData['extra_jud'] == 1:
                extra_jud_1 = """
-        <service type="jud" jid=\"""" + JUDData['jid'] + """\" name=\"""" + JUDData['name'] + """\">
+        <service """ + "type=\"jud\" jid=\"" + JUDData['jid'] + "\" name=\"" + JUDData['name'] + """\">
           <ns>jabber:iq:search</ns>
           <ns>jabber:iq:register</ns>
         </service>"""
@@ -52,9 +52,9 @@ def WriteConfig():
                 extra_jud_2 = " "
 
         if CONData['enable_con'] == 1:
-               enable_con_1 = "\n<conference type=\"private\" jid=\"" + CONData['jid'] + "\" name=\"" + CONData['name'] + """\"/>"""
-               enable_con_2 = "\n<service id=\"" + CONData['jid'] + "." + GeneralData['domainname'] + "\">" + """
-        <load><conference>./conference-0.4/conference.so</conference></load>
+                enable_con_1 = "\n<conference type=\"private\" jid=\"" + CONData['jid'] + "\" name=\"" + CONData['name'] + """\"/>"""
+                enable_con_2 = "\n<service id=\"" + CONData['jid'] + "." + GeneralData['domainname'] + "\">" + """
+        <load><conference>./conference-0.4.1/conference.so</conference></load>
           <conference xmlns="jabber:config:conference">
           <vCard>
           <FN>Conferencing Service</FN>
@@ -78,7 +78,7 @@ def WriteConfig():
 
         if AIMData['enable_aim'] == 1:
                enable_aim_1 = """
-        <service type="aim" jid=\"""" + AIMData['jid'] + """\" name=\"""" + AIMData['name'] + """\">
+        <service """ + "type=\"aim\" jid=\"" + AIMData['jid'] + "\" name=\"" + AIMData['name'] + """\">
           <ns>jabber:iq:gateway</ns>
           <ns>jabber:iq:search</ns>
           <ns>jabber:iq:register</ns>
@@ -103,13 +103,13 @@ def WriteConfig():
 
         if ICQData['enable_icq'] == 1:
                enable_icq_1 = """
-        <service type="icq" jid=\"""" + ICQData['jid'] + """\" name=\"""" + ICQData['name'] + """\">
+        <service """ + "type=\"icq\" jid=\"" + ICQData['jid'] + "\" name=\"" + ICQData['name'] + """\">
           <ns>jabber:iq:gateway</ns>
           <ns>jabber:iq:search</ns>
           <ns>jabber:iq:register</ns>
         </service>"""
                enable_icq_2 = "<service id=" + ICQData['jid'] + "." + GeneralData['domainname'] + """>
-        <!-- <aimtrans xmlns='jabber:config:aimtrans'> ?? -->
+        <!-- ?? <aimtrans xmlns='jabber:config:aimtrans'> ?? -->
         <icqtrans xmlns="jabber:config:icqtrans">
         <instructions>Please enter your ICQ number (in the "username" field),
         nickname, and password. Leave the "username" field blank
@@ -132,8 +132,35 @@ def WriteConfig():
         </service>
         """
         else:
-                enable_icq_1 = " "
-                enable_icq_2 = " "
+               enable_icq_1 = " "
+               enable_icq_2 = " "
+
+
+        if MSNData['enable_msn'] == 1:
+               enable_msn_1 = """
+        <service """ + "type=\"msn\" jid=\"" + MSNData['jid'] + "\" name=\"" + MSNData['name'] + """\">
+          <ns>jabber:iq:gateway</ns>
+          <ns>jabber:iq:register</ns>
+        </service>"""
+               enable_msn_2 = "<service id=" + MSNData['jid'] + "." + GeneralData['domainname'] + """>
+        <msntrans xmlns="jabber:config:msntrans">
+        <instructions>Enter your MSN Messenger account and password. Example: user1@hotmail.com. Nickname is optional.</instructions>
+        <search>Search for ICQ users</search>
+        <vCard>
+          <FN>MSN Transport</FN>
+          <DESC>The MSN Transport</DESC>
+          <URL>""" + GeneralData['vcard_url'] + """</URL>
+        </vCard>
+          </msntrans>
+            <load>
+             <msntrans>./msn-transport-1.1/msntrans.so</msntrans>
+            </load>
+        </service>
+        """
+        else:
+                enable_msn_1 = " "
+                enable_msn_2 = " "
+
 
 
         f = open('jabber.xml', 'w')
@@ -315,7 +342,7 @@ def WriteConfig():
 
 </jabber>""")
 
-
+        f.close()
 
 
 
