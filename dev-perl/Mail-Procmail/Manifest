@@ -1,5 +1,7 @@
 MD5 879fcc238f2902d4b70c463bbf2d3c45 ChangeLog 1178
 MD5 e784217e3e71db9bd1493d4668dd007d Mail-Procmail-1.02-r1.ebuild 607
 MD5 92e297b328376e68fad6b6c023e5ef5c Mail-Procmail-1.02.ebuild 605
+MD5 921477def79dcca4bf8b84eb0fd09c57 Mail-Procmail-1.05.ebuild 518
 MD5 0edd1bf94395efc6727139f282c546c2 files/digest-Mail-Procmail-1.02 69
 MD5 0edd1bf94395efc6727139f282c546c2 files/digest-Mail-Procmail-1.02-r1 69
+MD5 0e20a399b9f641aad86d9cf45afda026 files/digest-Mail-Procmail-1.05 69
