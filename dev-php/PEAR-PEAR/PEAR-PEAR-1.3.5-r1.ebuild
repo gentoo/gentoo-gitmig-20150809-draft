@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.3 2005/03/09 06:28:03 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.4 2005/03/09 07:38:11 sebastian Exp $
 
 ARCHIVE_TAR="1.2"
 CONSOLE_GETOPT="1.2"
@@ -42,7 +42,7 @@ bootstrap_pear() {
 	cp ${WORKDIR}/PEAR-${PEAR}/scripts/pearcmd.php ${WORKDIR}/PEAR/pearcmd.php
 	cp ${WORKDIR}/PEAR-${PEAR}/scripts/pear.sh ${WORKDIR}/PEAR/pear
 	sed -i 's:@php_bin@:/usr/bin/php:g' ${WORKDIR}/PEAR/pear || die
-	sed -i 's:@php_dir@:/usr/lib/php:g' ${WORKDIR}/PEAR/pear || die
+	sed -i 's:@php_dir@:/usr/share/php:g' ${WORKDIR}/PEAR/pear || die
 
 	cp -r ${WORKDIR}/Archive_Tar-${ARCHIVE_TAR}/Archive ${WORKDIR}/PEAR/Archive
 
@@ -52,14 +52,22 @@ bootstrap_pear() {
 	cp ${WORKDIR}/XML_RPC-${XML_RPC}/Server.php ${WORKDIR}/PEAR/XML/RPC/Server.php
 
 	cd ${WORKDIR}/PEAR
-	insinto /usr/lib/php
+	insinto /usr/share/php
 	doins -r Archive Console OS PEAR XML *.php
 	dobin pear
 }
 
 install_pear_after_bootstrap() {
+	/usr/bin/php -d include_path=".:${D}/usr/share/php"	${D}/usr/share/php/pearcmd.php config-set doc_dir /usr/share/php/doc || die
+	/usr/bin/php -d include_path=".:${D}/usr/share/php"	${D}/usr/share/php/pearcmd.php config-set data_dir /usr/share/php/data || die
+	/usr/bin/php -d include_path=".:${D}/usr/share/php"	${D}/usr/share/php/pearcmd.php config-set php_dir /usr/share/php || die
+	/usr/bin/php -d include_path=".:${D}/usr/share/php"	${D}/usr/share/php/pearcmd.php config-set test_dir /usr/share/php/test || die
+
+	mkdir ${D}/etc
+	cp $HOME/.pearrc ${D}/etc/pear.conf
+
 	prepare_pear_install
-	/usr/bin/php -d include_path=".:${D}/usr/lib/php" ${D}/usr/lib/php/pearcmd.php install --nodeps -R ${D} package.xml || die
+	/usr/bin/php -d include_path=".:${D}/usr/share/php" ${D}/usr/share/php/pearcmd.php install --nodeps -R ${D} package.xml || die
 }
 
 install_pear_without_bootstrap() {
