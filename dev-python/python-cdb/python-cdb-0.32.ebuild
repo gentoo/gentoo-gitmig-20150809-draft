@@ -11,7 +11,7 @@ HOMEPAGE="http://pilcrow.madison.wi.us/#pycdb"
 SLOT="0"
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-lang/python-2.2
 	dev-db/cdb"
