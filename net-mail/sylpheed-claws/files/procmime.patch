@@ -28,7 +28,7 @@
  		mime_type->sub_type = g_strdup(delim + 1);
  
 -		while (*p && isspace(*p)) p++;
-+		while (*p && (isspace(*p)||(*p='*')||(*p='.'))) p++;
++		while (*p && (isspace(*p)||(*p=='*')||(*p=='.'))) p++;
 +		g_print("%s\n",p);
  		if (*p)
  			mime_type->extension = g_strdup(p);
