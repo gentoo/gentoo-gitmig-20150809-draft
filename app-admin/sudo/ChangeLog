@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.28 2004/11/11 23:15:15 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.29 2004/11/13 09:44:29 taviso Exp $
+
+  13 Nov 2004; Tavis Ormandy <taviso@gentoo.org> files/sudoers:
+  new release
 
 *sudo-1.6.8_p1-r2 (11 Nov 2004)
 

@@ -19,7 +19,7 @@ Defaults	env_reset
 # Defaults:%wheel	!env_reset
 
 # Allow people in group users to export specific variables
-# Defaults:%users	env_keep=POSIXLY_CORRECT
+# Defaults:%users	env_keep=TZ
 
 # Runas alias specification
 
