@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.124 2005/02/11 13:07:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.125 2005/02/12 21:26:51 j4rg0n Exp $
+
+  12 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> +files/glib-2-macos.patch,
+  glib-2.4.8.ebuild:
+  Fix for Bug #73708. Kudos to kito for the append-ldflags fix.
 
 *glib-2.6.2-r1 (11 Feb 2005)
 
@@ -40,7 +44,7 @@
   21 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> glib-2.4.8.ebuild:
   Stable on sparc
 
-  21 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> glib-2.4.8.ebuild:
+  21 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> glib-2.4.8.ebuild:
   Stable on alpha.
 
   20 Dec 2004; Dylan Carlson <absinthe@gentoo.org> glib-2.4.8.ebuild:
@@ -90,7 +94,7 @@
   11 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> glib-1.2.10-r5.ebuild:
   Fixed shared libraries compilation on macos. This closes bug #60580.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> glib-2.4.6.ebuild:
+  10 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> glib-2.4.6.ebuild:
   Stable on alpha.
 
 *glib-2.4.7 (09 Oct 2004)
@@ -107,7 +111,7 @@
   06 Sep 2004; Guy Martin <gmsoft@gentoo.org> glib-2.4.5.ebuild:
   Marked stable on hppa.
 
-  06 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> glib-2.4.5.ebuild:
+  06 Sep 2004; Bryan Ãstergaard <kloeri@gentoo.org> glib-2.4.5.ebuild:
   Stable on alpha.
 
   31 Aug 2004; Michael Hanselmann <hansmi@gentoo.org> glib-1.2.10-r5.ebuild:
@@ -121,7 +125,7 @@
   19 Aug 2004; foser <foser@gentoo.org> glib-2.4.6.ebuild :
   New release
 
-  08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> glib-2.4.4.ebuild:
+  08 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> glib-2.4.4.ebuild:
   Stable on alpha.
 
   07 Aug 2004; Travis Tilley <lv@gentoo.org> glib-2.4.4.ebuild:
@@ -166,7 +170,7 @@
   19 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> glib-2.4.1.ebuild:
   sparc stable
 
-  16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> glib-2.4.1.ebuild:
+  16 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> glib-2.4.1.ebuild:
   Stable on alpha.
 
 *glib-2.4.2 (15 Jun 2004)
