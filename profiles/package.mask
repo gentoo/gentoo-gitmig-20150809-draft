@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lu_zero@gentoo.org> (20 Feb 2003)
+# no more present
+=net-www/amaya-7.0
+
 # <rendhalver@gentoo.org> (20 Feb 2003)
 # moving this one to app-xemacs/xemacs-ispell
 # cause it clashes with the real ispell ebuild
