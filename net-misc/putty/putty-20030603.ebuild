@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20030603.ebuild,v 1.1 2003/06/03 15:57:53 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20030603.ebuild,v 1.2 2003/06/03 16:15:26 taviso Exp $
 
 cvs_update="20030603"
 DESCRIPTION="UNIX port of the famous Windows SSH client"
@@ -55,9 +55,4 @@ src_install() {
 
 	# docs...
 	dodoc README README.txt LICENSE doc/*
-}
-
-pkg_postinst() {
-	einfo "Please note that pterm will not work without UNIX98 PTYS support"
-	einfo "If you want to use pterm, you may have to enable it."
 }
