@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a84f2d4e432154e42cc9df877971c47a ChangeLog 802
+MD5 a87fd5437a23f8f0c4db71ac670e9a33 ChangeLog 924
 MD5 50249a96d20836552ab420e0f66e6ac6 emul-linux-x86-sdl-1.0.ebuild 607
-MD5 f18d4260a3aac37605c8ee65d252b697 emul-linux-x86-sdl-1.2.8-r1.ebuild 634
+MD5 2793e471ac413c4699e1a8fb2511d16a emul-linux-x86-sdl-1.2.8-r1.ebuild 680
 MD5 6941ee95bd0d4cf8454d1f8310d0ce36 files/digest-emul-linux-x86-sdl-1.0 75
-MD5 58005c33ce26b17f42a5bde5d2377c17 files/digest-emul-linux-x86-sdl-1.2.8-r1 77
+MD5 0ab366267973396b8f5bcbae06a8a884 files/digest-emul-linux-x86-sdl-1.2.8-r1 78
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCPnc4ArHZZzCEUG0RAhz0AJwOYEuLIfqvDeUhru16rsxzwf+p/wCeNHE/
-B/1KTC/lDnrdN0ypuX4OIfU=
-=4Cr5
+iD8DBQFCPnsnArHZZzCEUG0RAmEEAJ4xBEm1mKANu9ErFVaJjOu9aeTI0QCeKaWm
+HCuhX7tXIca+isUU0g3/mq4=
+=i8j+
 -----END PGP SIGNATURE-----
