@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.6 2004/03/02 16:38:01 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.7 2004/03/21 22:24:47 kumba Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 # Official patches
 PLEVEL="x001 x002 x003 x004 x005"
@@ -34,6 +34,9 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Detect mips systems properly
+	use mips && gnuconfig_update
 
 	econf --with-curses || die
 
