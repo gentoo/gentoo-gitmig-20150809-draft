@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.133 2004/03/08 23:54:42 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.134 2004/03/11 20:13:37 latexer Exp $
+
+*mm-sources-2.6.4-r1 (11 Mar 2004)
+
+  11 Mar 2004; Peter Johanson <latexer@gentoo.org> mm-sources-2.6.3-r1.ebuild,
+  mm-sources-2.6.3-r2.ebuild, mm-sources-2.6.3-r3.ebuild,
+  mm-sources-2.6.4-r1.ebuild, files/2.6.4-r1-debug-spinlock-fix.diff,
+  files/2.6.4-r1-tty-fix.diff:
+  Bump, including a few small fixes from LKML. Cleaned out some older stuff too.
 
 *mm-sources-2.6.4_rc2-r1 (08 Mar 2004)
 

@@ -1,0 +1,10 @@
+--- 25/fs/mpage.c~mpage-locking-bug	2004-03-11 00:29:21.000000000 -0800
++++ 25-akpm/fs/mpage.c	2004-03-11 00:29:25.000000000 -0800
+@@ -672,7 +672,6 @@ mpage_writepages(struct address_space *m
+ 		}
+ 		pagevec_release(&pvec);
+ 	}
+-	spin_unlock_irq(&mapping->tree_lock);
+ 	if (bio)
+ 		mpage_bio_submit(WRITE, bio);
+ 	return ret;

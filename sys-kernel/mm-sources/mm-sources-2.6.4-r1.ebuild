@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.3-r1.ebuild,v 1.1 2004/02/18 14:36:40 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.4-r1.ebuild,v 1.1 2004/03/11 20:13:37 latexer Exp $
 
-UNIPATCH_LIST="${DISTDIR}/${KV}.bz2"
+UNIPATCH_LIST="${DISTDIR}/${KV}.bz2 ${FILESDIR}/${PVR}-debug-spinlock-fix.diff ${FILESDIR}/${PVR}-tty-fix.diff"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 
@@ -21,6 +21,3 @@ existing bug. Only create a new bug if you have not found one that matches
 your issue. It is best to do an advanced search as the initial search has a
 very low yield. Please assign your bugs to x86-kernel@gentoo.org.
 Please read the ChangeLog and associated docs for more information."
-
-K_EXTRAEWARN="NOTE: processor selection has changed. You'll need to make sure you
-select the proper cpu type during make oldconfig"
