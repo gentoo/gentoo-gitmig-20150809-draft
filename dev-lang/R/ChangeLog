@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.37 2005/02/02 13:46:17 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.38 2005/02/17 21:59:57 kloeri Exp $
+
+  17 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> R-1.9.1.ebuild:
+  ~alpha keyword.
 
   02 Feb 2005; Danny van Dyk <kugelfang@gentoo.org> R-2.0.0.ebuild:
   GNU Fortran 77 profile name changed to g77 in fortran.eclass
