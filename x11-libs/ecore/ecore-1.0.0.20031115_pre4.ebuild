@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-1.0.0.20031115_pre4.ebuild,v 1.1 2003/11/15 23:38:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-1.0.0.20031115_pre4.ebuild,v 1.2 2003/11/15 23:59:27 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -15,6 +15,7 @@ DEPEND="${DEPEND}
 	opengl? ( virtual/opengl )"
 
 src_compile() {
+	use alpha && append-flags -fPIC
 	# X and fb have to be enabled otherwise it fails right now ;)
 	export MY_ECONF="
 		--enable-ecore-x \
