@@ -72,7 +72,11 @@ while test $# -gt 0; do
 	    ;;
 
 	--version)
-	    echo $version
+	    if [ -n "${FAKE_XMMS_VERSION}" ]; then
+		echo ${FAKE_XMMS_VERSION}
+	    else
+	        echo $version
+	    fi
 	    ;;
 
 	--cflags)
