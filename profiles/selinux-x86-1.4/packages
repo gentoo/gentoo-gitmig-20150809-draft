@@ -54,6 +54,7 @@
 *>=sys-apps/util-linux-2.11z-r1
 *>=sys-apps/tar-1.13.25-r3
 *>=net-misc/openssh-3.5_p1-r1
+>=sys-apps/pam-login-3.11
 
 # (file|sh-|text)utils have been replaced by coreutils
 *>=sys-apps/coreutils-4.5.10
@@ -65,10 +66,6 @@
 >=sys-apps/stat-2.5
 >=app-admin/logrotate-3.6.5
 >=sys-apps/vcron-3.0.1-r1
-
-# we use the login from sys-apps/shadow, as its patched for SELinux.  
-# pam-login shouldn't be installed, or it could overwrite the good login.
-!sys-apps/pam-login
 ##############################################################################
 
 *app-shells/bash
