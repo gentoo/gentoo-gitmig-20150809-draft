@@ -1,0 +1,41 @@
+--- src/endpoint.cpp.orig	2004-11-25 21:12:40.000000000 +0200
++++ src/endpoint.cpp	2004-12-23 17:22:40.000000000 +0200
+@@ -2315,8 +2315,6 @@
+                               BOOL set, 
+ 			      unsigned int &vol) 
+ {
+-  H323Connection *con = NULL;
+-
+ #ifdef HAS_IXJ
+   GMLid *l = NULL;
+ #endif
+@@ -2326,10 +2324,6 @@
+ 
+   call_token = GetCurrentCallToken ();
+ 
+-  con = FindConnectionWithLock (call_token);
+-
+-  if (con) {
+-
+ #ifdef HAS_IXJ
+     if (set) {
+ 
+@@ -2339,8 +2333,6 @@
+         l->SetVolume (is_encoding, vol);
+         l->Unlock ();
+ 
+-        con->Unlock ();
+-
+         return TRUE; /* Ignore the sound channel if a LID is used. Hopefully,
+                         OpenH323 will be fixed soon */
+       }
+@@ -2365,9 +2357,6 @@
+       }
+     }
+ 
+-    con->Unlock ();
+-  }
+-
+   return err;
+ }
+ 
