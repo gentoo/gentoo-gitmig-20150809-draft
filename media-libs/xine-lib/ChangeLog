@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.188 2005/01/06 00:54:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.189 2005/01/06 09:25:45 eradicator Exp $
+
+  06 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -xine-lib-1_rc5-r3.ebuild, -xine-lib-1_rc6.ebuild, -xine-lib-1_rc7.ebuild,
+  -xine-lib-1_rc8.ebuild:
+  Purging insecure versions from the tree.
 
   05 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   xine-lib-1_rc6-r1.ebuild:
