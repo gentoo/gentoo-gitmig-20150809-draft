@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r1.ebuild,v 1.4 2004/04/17 04:38:05 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r1.ebuild,v 1.5 2004/04/27 21:53:44 agriffis Exp $
 
-inherit kmod
+inherit kmod eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="User-mode filesystem implementation"

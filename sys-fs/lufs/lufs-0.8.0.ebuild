@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.8.0.ebuild,v 1.1 2003/09/15 17:46:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.8.0.ebuild,v 1.2 2004/04/27 21:53:44 agriffis Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="User-mode filesystem implementation"
