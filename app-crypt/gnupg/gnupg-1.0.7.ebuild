@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnupg.org/pub/gcrypt/gnupg/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND=">=sys-libs/zlib-1.1.3"
 RDEPEND="nls? ( sys-devel/gettext )"
@@ -27,9 +27,12 @@ src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
 
+	if [ "${ARCH}" != "sparc" -a "${ARCH}" != "sparc64" ]; then
+		myconf="${myconf} --enable-m-guard"
+	fi
 	econf \
 		--enable-static-rnd=linux \
-		--enable-m-guard --host="${CHOST}" \
+		--host="${CHOST}" \
 		${myconf} || die
 
 	emake || make || die
