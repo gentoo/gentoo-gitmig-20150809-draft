@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.315 2004/08/28 16:16:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.316 2004/08/31 18:49:29 gustavoz Exp $
+
+  31 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> gcc-3.3.4-r1.ebuild:
+  Stable on sparc
 
   28 Aug 2004; <solar@gentoo.org> gcc-3.4.1-r2.ebuild, gcc-3.4.1.ebuild:
   We don't want a PDEPEND of libstd++v3 on uclibc.
