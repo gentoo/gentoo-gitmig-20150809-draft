@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.7.2.ebuild,v 1.1 2004/04/10 14:46:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.7.2.ebuild,v 1.2 2004/04/10 22:18:13 dholm Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://noflushd.sourceforge.net"
 SRC_URI="mirror://sourceforge/noflushd/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 -ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 SLOT="0"
 
 DEPEND="virtual/glibc"
