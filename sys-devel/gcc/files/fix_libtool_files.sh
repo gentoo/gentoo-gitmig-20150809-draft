@@ -1,5 +1,10 @@
 #!/bin/bash
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# Author:  Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/fix_libtool_files.sh,v 1.2 2002/11/24 01:26:21 azarah Exp $
 
+source /etc/profile
 source /etc/init.d/functions.sh
 
 if [ "`id -u`" -ne 0 ]
