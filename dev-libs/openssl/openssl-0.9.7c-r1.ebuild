@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.14 2004/01/17 07:26:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.15 2004/01/17 20:29:35 gmsoft Exp $
 
 inherit eutils flag-o-matic
 
@@ -115,6 +115,11 @@ src_compile() {
 
 		./Configure ${mipsarch} --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
+	# We have to force the target for hppa because detection
+	# is broken on SMP box
+	elif [ "`uname -m`" = "parisc" -o "`uname -m`" = "parisc64" ]; then
+		./Configure linux-parisc --prefix=/usr --openssldir=/etc/ssl \
+			shared threads || die
 	else
 		./config --prefix=/usr --openssldir=/etc/ssl shared threads || die
 	fi
@@ -129,7 +134,7 @@ src_compile() {
 
 		if [ "$PROFILE_ARCH" = "sparc" -a "`uname -m`" = "sparc64" ]; then
 			SSH_TARGET="linux-sparcv8"
-		elif [ "`uname -m`" = "parisc64" ]; then
+		elif [ "`uname -m`" = "parisc" -o "`uname -m`" = "parisc64" ]; then
 			SSH_TARGET="linux-parisc"
 		elif [ "`use mips`" ]; then
 			if [ "`echo ${CHOST} | grep "mipsel"`" ]; then

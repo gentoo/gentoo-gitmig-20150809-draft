@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.67 2004/01/17 07:26:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.68 2004/01/17 20:29:35 gmsoft Exp $
 
 *openssl-0.9.7b-r3 (17 Jan 2004)
 
@@ -11,6 +11,9 @@
   and replaced $(gcc-version) calls with a ${gcc_version} variable defined by
   calling gcc -dumpversion directly. The reason for this was to resolve
   dependency issues reported by repoman.
+
+  17 Jan 2004; Guy Martin <gmsoft@gentoo.org> openssl-0.9.7c-r1.ebuild:
+  Fixed detection of the target on hppa smp box.
 
   13 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7c-r1.ebuild:
   More CFLAGS filtering, Closing #34261.
