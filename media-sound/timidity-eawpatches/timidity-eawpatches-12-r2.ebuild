@@ -1,27 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r2.ebuild,v 1.4 2004/03/01 05:37:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r2.ebuild,v 1.5 2004/03/19 16:51:07 vapier Exp $
 
-S=${WORKDIR}/eawpats
 DESCRIPTION="Eric Welsh's GUS patches for TiMidity"
-SRC_URI="http://5hdumat.samizdat.net/music/eawpats${PV}_full.tar.gz"
 HOMEPAGE="http://www.stardate.bc.ca/eawpatches/html/default.htm"
+SRC_URI="http://5hdumat.samizdat.net/music/eawpats${PV}_full.tar.gz"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="~x86 ppc"
 
 DEPEND="media-sound/timidity++"
 
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS="~x86 ~ppc"
+S=${WORKDIR}/eawpats
 
 src_unpack() {
-unpack ${A}
-cd ${S}/linuxconfig
-cp timidity.cfg timidity.cfg.orig
-sed -e "s:dir /home/user/eawpats/:dir /usr/share/timidity/eawpatches:" timidity.cfg.orig > timidity.cfg
-rm -f timidity.cfg.orig
+	unpack ${A}
+	cd ${S}/linuxconfig
+	sed -i -e "s:dir /home/user/eawpats/:dir /usr/share/timidity/eawpatches:" timidity.cfg
 }
 
-src_install () {
+src_install() {
 	local instdir=/usr/share/timidity
 
 	# Install base timidity configuration
