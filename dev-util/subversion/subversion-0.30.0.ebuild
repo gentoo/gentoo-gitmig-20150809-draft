@@ -1,22 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.27.0.ebuild,v 1.6 2003/09/28 11:29:59 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.30.0.ebuild,v 1.1 2003/09/28 11:29:59 pauldv Exp $
 
-inherit libtool
+inherit elisp-common
 
-DB_VERSION="4.0.14"
 DESCRIPTION="A compelling replacement for CVS"
-SRC_URI="berkdb? ( http://www.sleepycat.com/update/snapshot/db-${DB_VERSION}.tar.gz )
-	http://subversion.tigris.org/files/documents/15/5642/${PN}-${PV}.tar.gz"
+SRC_URI="http://svn.collab.net/tarballs/${P}.tar.gz"
 HOMEPAGE="http://subversion.tigris.org/"
+BACKUP_ADMIN="/usr/lib/subversion/bin/svnadmin-pre0.28"
 
 SLOT="0"
 LICENSE="Apache-1.1"
 KEYWORDS="~x86"
-IUSE="ssl apache2 berkdb python"
+IUSE="ssl apache2 berkdb python emacs"
 
 S=${WORKDIR}/${PN}-${PV}
 
+#Allow for custion repository locations
 if [ "${SVN_REPOS_LOC}x" = "x" ]; then
 	SVN_REPOS_LOC="/home/svn"
 fi
@@ -34,16 +34,13 @@ DEPEND="python? ( >=dev-lang/python-2.0 )
 	>=sys-apps/diffutils-2.7.7
 	>=sys-devel/libtool-1.4.1-r1
 	>=sys-devel/bison-1.28-r3
-	apache2? ( >=net-www/apache-2.0.45 )
+	apache2? ( >=net-www/apache-2.0.47 )
 	!apache2? ( !>=net-www/apache-2* )
 	!dev-libs/apr
 	~sys-devel/m4-1.4
 	python? ( >=dev-lang/swig-1.3.16 )
-	>=net-misc/neon-0.23.8"
-
-RDEPEND="python? ( >=dev-lang/python-2.0 )
-	>=sys-apps/diffutils-2.7.7
-	~sys-devel/m4-1.4"
+	>=net-misc/neon-0.24.2
+	berkdb? ( =sys-libs/db-4* )"
 
 pkg_setup() {
 	if use apache2; then
@@ -60,43 +57,18 @@ pkg_setup() {
 src_unpack() {
 	cd ${WORKDIR}
 	unpack ${PN}-${PV}.tar.gz
-	use berkdb && ( has_version =db-4* || (
-		unpack db-${DB_VERSION}.tar.gz
-	) )
 	cd ${S}
-	elibtoolize ${S}
+
 	patch -p1 <${FILESDIR}/subversion-db4.patch
+	export WANT_AUTOCONF_2_5=1
 	autoconf
+	(cd apr; autoconf)
+	(cd apr-util; autoconf)
+	sed -e -i 's,\(subversion/svnversion/svnversion\)\(>.*svn-revision.txt\),echo "external" \2,'
 }
 
 src_compile() {
 	local myconf
-	use berkdb && ( has_version =db-4* || (
-		cd ${S_DB}
-		../dist/configure \
-			--prefix=/usr \
-	                --mandir=/usr/share/man \
-			--infodir=/usr/share/info \
-			--datadir=/usr/share \
-			--sysconfdir=/etc \
-			--localstatedir=/var/lib \
-			--disable-compat185 \
-			--disable-cxx \
-			--disable-tcl \
-			--disable-java \
-			--disable-shared \
-			--with-uniquename
-		emake || make || die "db make failed"
-		[ -e ${WORKDIR}/dbinst ] && rm -rf ${WORKDIR}/dbinst
-		mkdir -p ${WORKDIR}/dbinst/lib
-		make prefix=${WORKDIR}/dbinst install ||die
-		mkdir ${WORKDIR}/dbinst/include/db4
-		cp ${WORKDIR}/dbinst/include/*.h ${WORKDIR}/dbinst/include/db4
-		mv ${WORKDIR}/dbinst/lib/libdb.a ${WORKDIR}/dbinst/lib/libdb4.a
-		cat <<EOF >${WORKDIR}/dbinst/lib/libdb4.so
-GROUP( ${WORKDIR}/dbinst/lib/libdb4.a /usr/lib/libdb.so)
-EOF
-	) ) #no db4
 
 	cd ${S}
 	use ssl && myconf="${myconf} --with-ssl"
@@ -106,20 +78,14 @@ EOF
 		--with-apr=/usr --with-apr-util=/usr"
 	use apache2 || myconf="${myconf} --without-apxs"
 
-	if use berkdb; then
-		has_version =db-4* && myconf="${myconf} --with-berkeley-db"
-		has_version =db-4* || myconf="${myconf} --with-berkeley-db=${WORKDIR}/dbinst"
-	else
-		myconf="${myconf} --without-berkeley-db"
-	fi
+	use berkdb && myconf="${myconf} --with-berkeley-db"
+	use berkdb || myconf="${myconf} --without-berkeley-db"
 
 	use python && myconf="${myconf} --with-python=/usr/bin/python --with-swig"
 	use python || myconf="${myconf} --without-python --without-swig"
 
-	echo "myconf=${myconf}"
 	econf ${myconf} \
 		--with-neon=/usr \
-		--disable-experimental-libtool \
 		--disable-mod-activation ||die "configuration failed"
 
 
@@ -127,34 +93,24 @@ EOF
 	# Also apparently the included apr does have a libtool that doesn't like
 	# -L flags. So not specifying it at all when not building apache modules
 	# and only specify it for internal parts otherwise
-	if use apache2; then
-		( emake external-all && emake LT_LDFLAGS="-L${D}/usr/lib" local-all ) || die "make of subversion failed"
-	else
-		( emake external-all && emake local-all ) || die "make of subversion failed"
-	fi
+	( emake external-all && emake local-all ) || die "make of subversion failed"
 
 	#building fails without the apache apr-util as includes are wrong.
 	#Also the python bindings do not work without db installed
 	if use python; then
 		if use berkdb; then
-			if use apache2; then
-				emake swig-py || die "subversion python bindings failed"
-			else
-				emake SVN_APR_INCLUDES="-I${S}/apr/include -I${S}/apr-util/include" swig-py || die "subversion python bindings failed"
-			fi
+			emake swig-py || die "subversion python bindings failed"
 		fi
+	fi
+	if use emacs; then
+		emacs -batch -f batch-byte-compile contrib/client-side/vc-svn.el
+		emacs -batch -f batch-byte-compile contrib/client-side/psvn/psvn.el
 	fi
 }
 
 
 src_install () {
-	mkdir -p ${D}/etc/apache2/conf
-	mkdir -p ${D}/etc/share
-
-	use berkdb && ( has_version =db-4* || (
-		mkdir -p ${D}/usr/share/subversion/bin
-		cp ${WORKDIR}/dbinst/bin/* ${D}/usr/share/subversion/bin/
-	) )
+	use apache2 && mkdir -p ${D}/etc/apache2/conf
 
 	make DESTDIR=${D} install || die "Installation of subversion failed"
 	if [ -e ${D}/usr/lib/apache2 ]; then
@@ -163,7 +119,7 @@ src_install () {
 
 	if use python; then
 		if use berkdb; then
-			make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D} || die "Installation of subversion python bindings failed"
+			make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D}  LD_LIBRARY_PATH="-L${D}/usr/lib" || die "Installation of subversion python bindings failed"
 			# install cvs2svn
 			dobin tools/cvs2svn/cvs2svn.py
 			mv ${D}/usr/bin/cvs2svn.py ${D}/usr/bin/cvs2svn
@@ -188,9 +144,33 @@ src_install () {
 	do
 		[ -f ${f} ] && dodoc ${f}
 	done
+	if has_version \<dev-util/subversion-0.28; then
+		mkdir -p ${D}`dirname ${BACKUP_ADMIN}`
+		cp -p /usr/bin/svnadmin ${D}${BACKUP_ADMIN}
+	elif [ -x ${BACKUP_ADMIN} ]; then
+		mkdir -p ${D}`dirname ${BACKUP_ADMIN}`
+		cp -p ${BACKUP_ADMIN} ${D}${BACKUP_ADMIN}
+		#touch the file to make sure it is not removed when the old
+		#subversion gets unmerged
+		touch ${D}${BACKUP_ADMIN}
+	fi
+
 	cd ${S}
 	echo "installing html book"
 	dohtml -r doc/book/book/book.html doc/book/book/styles.css doc/book/book/images
+
+	# install emacs lisps
+	if use emacs; then
+		insinto /usr/share/emacs/site-lisp/subversion
+		doins contrib/client-side/psvn/psvn.el*
+		doins  contrib/client-side/vc-svn.el*
+
+		elisp-site-file-install ${FILESDIR}/70svn-gentoo.el
+	fi
+
+
+
+	#Install apache module config
 	if use apache2; then
 		mkdir -p ${D}/etc/apache2/conf/modules.d
 		cat <<EOF >${D}/etc/apache2/conf/modules.d/47_mod_dav_svn.conf
@@ -212,6 +192,8 @@ EOF
 }
 
 pkg_postinst() {
+
+	use emacs && elisp-site-regen
 	if use berkdb; then
 		if use apache2; then
 			einfo "Subversion has multiple server types. To enable the http based version"
@@ -219,20 +201,35 @@ pkg_postinst() {
 			einfo ""
 		fi
 		einfo "A repository needs to be created using the ebuild ${PN} config command"
-		if has_version =sys-libs/db-4*; then
-			einfo "If you upgraded from an older version of berkely db and experience"
-			einfo "problems with your repository then run the following command:"
-			einfo "    su apache -c \"db4_recover -h /path/to/repos\""
-		fi
+		einfo ""
+		einfo "If you upgraded from an older version of berkely db and experience"
+		einfo "problems with your repository then run the following command:"
+		einfo "    su apache -c \"db4_recover -h /path/to/repos\""
+
 		if use apache2; then
+			einfo ""
 			einfo "To allow web access a htpasswd file needs to be created using the"
 			einfo "following command:"
 			einfo "   htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
+		fi
+
+		if [ -x ${BACKUP_ADMIN} ]; then
+			ewarn ""
+			ewarn "The subversion database format has been changed. For that reason the"
+			ewarn "old admin utility was kept, and can now be found at the following"
+			ewarn "location: ${BACKUP_ADMIN}"
+			ewarn ""
+			ewarn "For more information look at:"
+			ewarn "http://svn.collab.net/repos/svn/trunk/notes/repos_upgrade_HOWTO"
 		fi
 	else
 		einfo "Your subversion is client only as the server is only build when"
 		einfo "the berkdb flag is set"
 	fi
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
 
 pkg_config() {

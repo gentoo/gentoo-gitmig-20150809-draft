@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.24.2-r1.ebuild,v 1.5 2003/09/25 17:06:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.24.2-r1.ebuild,v 1.6 2003/09/28 11:29:59 pauldv Exp $
 
 inherit libtool
 
@@ -33,7 +33,7 @@ DEPEND="python? ( >=dev-lang/python-2.0 )
 	>=sys-devel/libtool-1.4.1-r1
 	>=sys-devel/bison-1.28-r3
 	apache2? ( >=net-www/apache-2.0.45 )
-	!apache2? ( !>=apache-2* )
+	!apache2? ( !>=net-www/apache-2* )
 	!dev-libs/apr
 	~sys-devel/m4-1.4
 	python? ( >=dev-lang/swig-1.3.16 )
