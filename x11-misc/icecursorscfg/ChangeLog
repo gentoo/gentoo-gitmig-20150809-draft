@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icecursorscfg
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecursorscfg/ChangeLog,v 1.2 2003/03/17 09:50:04 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecursorscfg/ChangeLog,v 1.3 2003/04/24 14:08:02 phosphan Exp $
+
+  24 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> : icecursorscfg-0.6.ebuild :
+  stable for x86
 
 *icecursorscfg-0.6 (17 Mar 2003)
 
