@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/qjackconnect-0.0.3b.ebuild,v 1.1 2003/01/16 01:45:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/qjackconnect-0.0.3b.ebuild,v 1.2 2003/02/13 13:17:53 vapier Exp $
 
 DESCRIPTION="A QT based patchbay for the JACK Audio Connection Kit"
 HOMEPAGE="http://www.suse.de/~mana/jack.html"

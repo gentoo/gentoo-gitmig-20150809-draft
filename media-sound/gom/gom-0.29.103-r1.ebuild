@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103-r1.ebuild,v 1.7 2002/10/04 05:53:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103-r1.ebuild,v 1.8 2003/02/13 13:12:55 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console Mixer Program for OSS"

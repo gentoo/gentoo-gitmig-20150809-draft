@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mix2000/mix2000-1.0.ebuild,v 1.5 2002/10/04 05:54:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mix2000/mix2000-1.0.ebuild,v 1.6 2003/02/13 13:15:51 vapier Exp $
 
 S=${WORKDIR}/mix-2000
 DESCRIPTION="The OSS sound mixer from the bcast2000 people; now orphaned."

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/shorten-3.3.ebuild,v 1.7 2002/12/15 15:47:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/shorten-3.3.ebuild,v 1.8 2003/02/13 13:18:59 vapier Exp $
 
 DESCRIPTION="shorten is a fast, low complexity waveform coder (i.e. audio compressor)"
 HOMEPAGE="http://etree.org/shnutils/shorten/"

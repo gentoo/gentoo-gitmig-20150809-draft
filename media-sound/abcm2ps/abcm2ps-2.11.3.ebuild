@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-2.11.3.ebuild,v 1.1 2002/11/16 06:57:22 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-2.11.3.ebuild,v 1.2 2003/02/13 13:05:15 vapier Exp $
 
 DESCRIPTION="A program to convert abc files to Postscript files"
 HOMEPAGE="http://moinejf.free.fr/"

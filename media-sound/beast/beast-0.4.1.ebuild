@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.4.1.ebuild,v 1.3 2002/11/03 06:13:24 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.4.1.ebuild,v 1.4 2003/02/13 13:08:22 vapier Exp $
 
 DESCRIPTION="BEAST - the Bedevilled Sound Engine"
 HOMEPAGE="http://beast.gtk.org"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/dcd-0.95.ebuild,v 1.3 2002/11/14 21:58:52 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/dcd-0.95.ebuild,v 1.4 2003/02/13 13:09:50 vapier Exp $
 
 S=${WORKDIR}/dcd-0.95
 DESCRIPTION="A simple command-line based CD Player"

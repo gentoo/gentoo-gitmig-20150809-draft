@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pmidi/pmidi-1.5.5.ebuild,v 1.2 2002/12/21 04:09:38 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pmidi/pmidi-1.5.5.ebuild,v 1.3 2003/02/13 13:17:44 vapier Exp $
 
 DESCRIPTION="Command line midi player for ALSA."
 HOMEPAGE="http://www.parabola.demon.co.uk/alsa/pmidi.html"
