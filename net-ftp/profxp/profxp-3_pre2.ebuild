@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/profxp-3_pre2.ebuild,v 1.1 2003/12/08 08:11:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/profxp-3_pre2.ebuild,v 1.2 2003/12/08 19:00:47 vapier Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://duncanthrax.net/profxp/"
 SRC_URI="http://duncanthrax.net/profxp/profxp-v${PV/_/-}-src.tar.gz
 	http://search.cpan.org/src/CLINTDW/SOCKS-0.03/lib/Net/SOCKS.pm"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
 
