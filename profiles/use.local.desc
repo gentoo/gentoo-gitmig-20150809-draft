@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.962 2005/02/21 18:05:30 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.963 2005/02/22 16:06:24 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -134,6 +134,8 @@ dev-java/ant-tasks:noregexp - Disable Apache Regexp Ant task -- Warning: Enablin
 dev-java/ant-tasks:norhino - Disable Rhin Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/ant-tasks:noxalan - Disable Xalan Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/ant-tasks:noxerces - Disable Xerces Ant task -- Warning: Enabling this could break some of the Java packages!!
+dev-java/avalon-logkit:javamail - Enable support for javamail
+dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
 dev-java/bsf:jython - Enable Jython support
 dev-java/bsf:rhino - Enable Rhino support
 dev-java/fop:jai - Enable jai support
