@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.4 2002/04/26 08:44:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.5 2002/04/26 19:11:20 spider Exp $
+
+*imlib2-1.0.6-r1 (26 Apr 2002)
+  26 Apr 2002; Spider <spider@gentoo.org> imlib2-1.0.6-r1.ebuild :
+  libtoolize
+
 
 *imlib2-1.0.6 (26 Apr 2002)
 
