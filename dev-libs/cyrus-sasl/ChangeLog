@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/cyrus-sasl
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.33 2003/02/07 19:27:39 raker Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.34 2003/02/12 06:02:38 vapier Exp $
 
 *cyrus-sasl-2.1.12 (06 Feb 2003)
 

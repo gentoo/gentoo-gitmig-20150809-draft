@@ -1,7 +1,7 @@
 # ChangeLog for dev-libs/fftw
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.6 2003/02/11 03:37:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.7 2003/02/12 06:03:21 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

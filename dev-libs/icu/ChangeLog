@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/icu
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.6 2002/12/13 10:56:29 blizzy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.7 2003/02/12 06:04:10 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libextractor
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.5 2003/02/05 08:40:12 raker Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.6 2003/02/12 06:05:11 vapier Exp $
 
 *libextractor-0.2.0 (05 Feb 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/judy
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.1 2002/11/12 11:21:06 jrray Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.2 2003/02/12 06:04:25 vapier Exp $
 
 *judy-20020627 (12 Nov 2002)
 

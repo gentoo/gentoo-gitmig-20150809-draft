@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/STLport
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.9 2002/12/16 03:01:44 azarah Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.10 2003/02/12 05:59:39 vapier Exp $
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> STLport-4.5.3-r2.ebuild :
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/sucs
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/ChangeLog,v 1.1 2002/10/23 16:03:30 jrray Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/ChangeLog,v 1.2 2003/02/12 06:09:56 vapier Exp $
 
 *sucs-0.7.0 (23 Oct 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libiconv
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.4 2003/01/04 01:09:10 spider Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.5 2003/02/12 06:06:04 vapier Exp $
 
   04 Jan 2003; Spider <spider@gentoo.org> : updated DESCRIPTION to be more truthful
 

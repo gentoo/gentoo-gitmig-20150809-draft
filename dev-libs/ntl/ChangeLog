@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/ntl
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.1 2002/11/08 08:52:32 george Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.2 2003/02/12 06:08:19 vapier Exp $
 
 *ntl-5.3 (07 Nov 2002)
 

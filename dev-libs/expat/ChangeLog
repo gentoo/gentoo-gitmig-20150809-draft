@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/expat
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.13 2003/02/08 01:44:33 gmsoft Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.14 2003/02/12 06:03:02 vapier Exp $
 
   07 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.

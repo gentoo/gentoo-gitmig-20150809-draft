@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/cfitsio
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cfitsio/ChangeLog,v 1.1 2003/01/05 05:51:19 george Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cfitsio/ChangeLog,v 1.2 2003/02/12 06:01:43 vapier Exp $
 
 *cfitsio-2.430.ebuild (04 ñÎ× 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/ode
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ChangeLog,v 1.1 2002/11/08 04:44:30 george Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ChangeLog,v 1.2 2003/02/12 06:08:24 vapier Exp $
 
 *ode-0.03 (07 Nov 2002)
 
