@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.75 2004/03/18 13:23:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.76 2004/03/23 10:05:06 aliz Exp $
+
+  23 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> openssh-3.7.1_p2-r1.ebuild,
+  openssh-3.7.1_p2-r2.ebuild, openssh-3.8_p1.ebuild:
+  Change download URI for X509 patches temporarily.
 
   18 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> files/sshd.rc6, openssh-3.8_p1.ebuild:
   Add mkdir -p /var/empty to initscript. Closing #42936.
