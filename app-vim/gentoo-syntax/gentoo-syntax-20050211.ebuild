@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20050211.ebuild,v 1.1 2005/02/11 22:14:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20050211.ebuild,v 1.2 2005/02/11 22:49:53 ciaranm Exp $
 
 inherit eutils vim-plugin
 
@@ -22,6 +22,7 @@ VIM_PLUGIN_MESSAGES="filetype"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${P}-fix-escapes.patch
 	if use ignore-glep31 ; then
 		for f in ftplugin/*.vim ; do
 			ebegin "Removing UTF-8 rules from ${f} ..."

@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.34 2005/02/11 22:14:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.35 2005/02/11 22:49:53 ciaranm Exp $
+
+  11 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/gentoo-syntax-20050211-fix-escapes.patch,
+  gentoo-syntax-20050211.ebuild:
+  Add patch to fix up escapes
 
 *gentoo-syntax-20050211 (11 Feb 2005)
 
