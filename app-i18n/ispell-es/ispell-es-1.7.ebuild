@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-es/ispell-es-1.7.ebuild,v 1.6 2002/06/27 09:32:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-es/ispell-es-1.7.ebuild,v 1.7 2002/07/11 10:38:28 seemant Exp $
 
 MY_P="espanol-"${PV}
 S=${WORKDIR}/${MY_P/n/~n}
@@ -8,8 +8,9 @@ DESCRIPTION="A Spanish dictionary for ispell"
 SRC_URI="ftp://ftp.fi.upm.es/pub/unix/${MY_P}.tar.gz"
 HOMEPAGE="http://www.datsi.fi.upm.es/~coes/"
 
-SLOT=""
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="app-text/ispell"
 
@@ -24,7 +25,9 @@ src_compile() {
 }
 
 src_install () {
+	
 	insinto /usr/lib/ispell
 	doins espa~nol.aff espa~nol.hash
+	fperms 444 /usr/lib/ispell/espa~nol.*
 	dodoc LEAME README
 }
