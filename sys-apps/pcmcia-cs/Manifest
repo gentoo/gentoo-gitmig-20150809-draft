@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d94253e6b6db5a107754140b8b5a6384 pcmcia-cs-3.2.4.ebuild 4308
-MD5 085114f9d0a8e1b95cc2efebb8ec140d pcmcia-cs-3.2.7-r2.ebuild 4891
-MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
+MD5 2a088eafbf7cb60de626424b36677999 pcmcia-cs-3.2.7-r1.ebuild 4815
 MD5 9cb0e20339d778261fa9b617a9bd9b6e pcmcia-cs-3.1.34-r8.ebuild 4089
-MD5 d09a33244321e10c96e2bbfa69864ae1 ChangeLog 16098
-MD5 d264ebebd9b9cc4cf613efe9648b1c08 pcmcia-cs-3.2.7.ebuild 4873
 MD5 f801e40c6bcb9ef932085cb198a8c579 pcmcia-cs-3.2.5-r1.ebuild 5375
 MD5 27b6ad5ee172657a5676ed4137d4132e pcmcia-cs-3.2.5.ebuild 4540
-MD5 2a088eafbf7cb60de626424b36677999 pcmcia-cs-3.2.7-r1.ebuild 4815
-MD5 c1034d56e6decdb7d4f732bfff70088a files/digest-pcmcia-cs-3.1.34-r8 133
-MD5 8662e0e954d0cde8b84f76691c910e7a files/digest-pcmcia-cs-3.2.4 652
+MD5 085114f9d0a8e1b95cc2efebb8ec140d pcmcia-cs-3.2.7-r2.ebuild 4891
+MD5 d264ebebd9b9cc4cf613efe9648b1c08 pcmcia-cs-3.2.7.ebuild 4873
+MD5 3b2709d636c900c5dc7a4d0419e1f454 ChangeLog 16235
+MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 MD5 157ac5bc22e938e1c2268c1f2610420c files/digest-pcmcia-cs-3.2.5-r1 379
-MD5 8621a69779c0a084e6092f495ac08cde files/gentoo-pcmcia-cs-3.1.34.patch 589
-MD5 f8f190b2ddbf95e58f3abf55fc303d27 files/digest-pcmcia-cs-3.2.5 150
 MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7-r1 287
 MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7-r2 287
-MD5 3046f6b0a3025d78a1ecbefac12484b0 files/pcmcia.conf 549
 MD5 693d508b7dd24e64735b5ba4a16e699b files/pcmcia.rc 2038
+MD5 8662e0e954d0cde8b84f76691c910e7a files/digest-pcmcia-cs-3.2.4 652
+MD5 f8f190b2ddbf95e58f3abf55fc303d27 files/digest-pcmcia-cs-3.2.5 150
+MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7 287
+MD5 8621a69779c0a084e6092f495ac08cde files/gentoo-pcmcia-cs-3.1.34.patch 589
+MD5 da3f5dc50768f0a5d9868dd5bd227329 files/network 768
+MD5 614f873dfdb6afcff9a631d64eada8e5 files/ppc.config.opts 1687
+MD5 e4879f03bbdbfbdc094c1f1b6486846b files/pcmcia.conf 549
+MD5 ec6d7ed3b83d1af45933e3e8af41796a files/pcmcia-cs-3.2.7-move-pnp-ids-to-usr-share-misc.patch 1436
 MD5 0f50b04b5efd5cad60974dc51c6ce470 files/cardinfo-install-3.2.7.patch 857
 MD5 6c67e080235f83a3cb14be6cf3d2c872 files/hermes.conf 1859
-MD5 614f873dfdb6afcff9a631d64eada8e5 files/ppc.config.opts 1687
-MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7 287
-MD5 ec6d7ed3b83d1af45933e3e8af41796a files/pcmcia-cs-3.2.7-move-pnp-ids-to-usr-share-misc.patch 1436
-MD5 da3f5dc50768f0a5d9868dd5bd227329 files/network 768
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZ6VLFhz/XBeRBtARAsSCAKCWF5yiAXUbkLvuRKkUAgFibjUaiACeMaiq
-LfwfAYtJ+/A1l02/S4r5W+c=
-=TxoI
------END PGP SIGNATURE-----
+MD5 c1034d56e6decdb7d4f732bfff70088a files/digest-pcmcia-cs-3.1.34-r8 133
