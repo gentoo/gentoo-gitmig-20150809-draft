@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1.ebuild,v 1.12 2004/08/14 19:49:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1.ebuild,v 1.13 2004/09/19 18:55:47 azarah Exp $
 
 inherit eutils
 
@@ -44,4 +44,5 @@ src_install () {
 	make install
 	dodir /usr
 	cp -rfL dist/* ${D}/usr
+	rm -rf ${D}/usr/bin/lib*.so
 }

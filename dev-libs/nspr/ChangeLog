@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.25 2004/08/14 19:49:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.26 2004/09/19 18:55:47 azarah Exp $
+
+  19 Sep 2004; Martin Schlemmer <azarah@gentoo.org> nspr-4.4.1.ebuild:
+  Do not install libs in /usr/bin.
 
   14 Aug 2004; Tom Gall <tgall@gentoo.org> nspr-4.4.1.ebuild:
   stable on ppc64, bug #58170
