@@ -12,9 +12,6 @@ dev-lang/nhc98
 # ebuild incomplete
 media-gfx/k3studio
 
-# This one could break pda support ... Azarah - 09 Jun 2002
-=net-mail/evolution-1.0.5-r2
-
 # NOOO, please check with the maintainer!  the rc3-r5* releases
 # added gtk+-2.0 support, but breaks galeon, nautilus and co
 #
