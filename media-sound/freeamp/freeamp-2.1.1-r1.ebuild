@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.3 2002/05/23 06:50:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.4 2002/07/02 05:09:08 seemant Exp $
 use arts && 
 use arts && inherit kde-functions && set-kdedir
 
@@ -9,16 +9,20 @@ SRC_URI="http://www.freeamp.org/download/src/${P}.tar.bz2"
 HOMEPAGE="http://www.freeamp.org/"
 S=${WORKDIR}/freeamp
 
-RDEPEND="virtual/glibc
+RDEPEND="=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*
-	=x11-libs/gtk+-1.2*
-	>=sys-libs/zlib-1.1.3 >=sys-libs/ncurses-5.2
-	~media-libs/freetype-1.3.1 >=media-libs/musicbrainz-1.0.1
-	esd? ( media-sound/esound ) alsa? ( media-libs/alsa-lib )
-	gnome? ( gnome-base/ORBit )
+	=media-libs/freetype-1*
+	sys-libs/zlib
+	sys-libs/ncurses
+	>=media-libs/musicbrainz-1.0.1
+	X? ( virtual/x11 )
+	esd? ( media-sound/esound )
 	gtk? ( >=media-libs/gdk-pixbuf-0.8 )
-	X? ( virtual/x11 ) arts? ( kde-base/kdelibs )
+	alsa? ( media-libs/alsa-lib )
+	arts? ( kde-base/kdelibs )
+	gnome? ( gnome-base/ORBit )
 	oggvorbis? ( media-libs/libvorbis )"
+
 DEPEND="${RDEPEND} dev-lang/nasm sys-devel/perl"
 LICENSE="GPL-2"
 SLOT="0"
