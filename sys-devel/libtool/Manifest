@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 889d32a032aea8d5fa4e92d1ecd8cb72 ChangeLog 9745
-MD5 bdf79b29f58d0f07e24a1be734d38230 libtool-1.5.10.ebuild 5993
-MD5 7b1ab8e073eb3e256d88f090fd961197 libtool-1.5.2-r5.ebuild 5890
+MD5 36f4ffb0b2fb2c36e105d0cdaaff8bcc libtool-1.5.10.ebuild 6006
+MD5 8fbefdb6af5cab0e9ec3ec281b8b71a7 libtool-1.5.2-r5.ebuild 5890
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b7cac5f77ff3ac3ce0bcfe39a6c47fe4 libtool-1.5.2-r6.ebuild 6114
+MD5 cfbf501e65f6883cf8891c386b89a624 libtool-1.5.2-r6.ebuild 6178
 MD5 3b92d43ab25bc1ad32ee87d89660f268 files/digest-libtool-1.5.2-r6 131
 MD5 bd27a462a2a9fe3662d3d34179ed3200 files/libltdl-uclibc.patch 4590
 MD5 63416d5eb60364fb1b758f487fb81a8a files/digest-libtool-1.5.10 132
@@ -62,7 +62,7 @@ MD5 6dd0c1d0f23c427ef0b48346e207dbfc files/1.5.2/libtool-1.5-filter-host-tags.pa
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBi7GiHTu7gpaalycRAmiOAJ9gWs5Z79CuO36BWDMKcD41sbKVzgCgtudr
-gk32hK/tSsU5OBEYITalv1E=
-=eW85
+iD8DBQFBjG0EHTu7gpaalycRAhOlAJ9kOe4AgjQ3br21OgAT5+uTNFlFcgCgwX1A
+dtyXgighuj88LlnWPVMMLdo=
+=IPEf
 -----END PGP SIGNATURE-----
