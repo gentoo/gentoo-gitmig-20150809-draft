@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.4 2002/07/15 00:03:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.5 2002/07/15 01:39:33 seemant Exp $
 
 # The commonbox eclass is designed to allow easier installation of the box
 # window managers such as blackbox and fluxbox and commonbox
@@ -97,5 +97,5 @@ commonbox_src_install() {
 	
 	dodir /etc/X11/Sessions
 	echo "/usr/bin/${MYBIN}" > ${D}/etc/X11/Sessions/${MYBIN}
-	fperms 755 /etc/X11/Sessions/${MYBIN}
+	fperms a+x /etc/X11/Sessions/${MYBIN}
 }
