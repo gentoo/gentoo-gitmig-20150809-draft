@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/dircproxy
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.1 2002/04/13 23:04:52 verwilst Exp $
+
+
+*evilwm-0.3.11 (14 April 2002)
+
+  14 April 2002; Bart Verwilst <verwilst@gentoo.org> Changelog :
+
+  Initial ebuild, added to Portage (added SLOT)
+
