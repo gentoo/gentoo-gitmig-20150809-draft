@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6.ebuild,v 1.14 2003/02/13 09:44:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6.ebuild,v 1.15 2003/06/28 16:00:37 mholzer Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ replace-flags "-march=pentium4" "-march=pentium3"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Convert files between various character sets."
-SRC_URI="ftp://gnu.wwc.edu/recode/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/recode/"
 
 DEPEND="virtual/glibc
