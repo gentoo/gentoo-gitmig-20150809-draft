@@ -1,10 +1,17 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.64 2004/01/04 04:12:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.65 2004/01/04 20:42:16 liquidx Exp $
 
   03 Jan 2004; Jason Wever <weeve@gentoo.org> python-2.2.3-r5.ebuild:
   Marked stable on sparc as portage-2.0.49-r20 really depends on this version of
   python rather than what the portage ebuild says. Fixes bug #36954 on sparc.
+
+*python-2.3.3 (03 Jan 2004)
+
+  03 Jan 2004; Alastair Tse <liquidx@gentoo.org> python-2.3.2-r2.ebuild,
+  python-2.3.3.ebuild, files/python-2.3.2-disable_modules_and_ssl.patch:
+  version bump to 2.3.3, re-add python disable_modules_and_ssl patch and changed
+  ebuild to build 'socket' module under USE=build
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> python-2.2.3-r5.ebuild:
   Move to mips stable (~mips -> mips)
