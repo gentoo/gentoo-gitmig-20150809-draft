@@ -1,0 +1,219 @@
+README openafs for gentoo linux
+-------------------------------
+
+Changelog:
+
+04.06.2001 initial release
+
+
+1. Overview
+-----------
+
+- There's an openafs faq available on 
+  http://www.angelfire.com/hi/plutonic/afs-faq.html
+- Openafs main page is at http://www.openafs.com
+- AFS was originally developed by Transarc which is now owned by IBM.
+  You can find some information about AFS on 
+  http://www.transarc.ibm.com/Product/EFS/AFS/index.html
+
+2. Client installation
+----------------------
+
+NOTE: You need to have access to a running afs-server in your network.
+First edit ThisCell and CellServDB according to your local network structure.
+If you're unsure what to put there, either read the afs documentation or contact 
+your local administrators. Just run emerge openafs-1.0.4.ebuild on your gentoo 
+linux machine to build the client. After building  add the afs start script with
+rc-update add afs. Now you're ready to go !!
+
+3. Server installation
+----------------------
+
+NOTE: This is a quick quick beginnings manual !!! If you really want to use afs 
+download and print out the afs documentation !!!
+
+3.1 Installing your afs server
+
+  1. Startup main afs server process
+     /usr/afs/bin/bosserver -noauth &
+     Verify that /usr/vice/etc/ThisCell and CellServDB got created
+
+  2. Give your cell a name !!
+     /usr/afs/bin/bos setcellname <server name> <cell name> -noauth
+     e.g.: /usr/afs/bin/bos setcellname darks.net-labs.local gentoo -noauth
+     Verify that ThisCell and CellServDB got updated !!!
+
+  3. Startup authentification, backup, protection and volume loction servers
+
+     /usr/afs/bin/bos create <server name> kaserver simple /usr/afs/bin/kaserver -cell <cell name> -noauth
+     e.g: /usr/afs/bin/bos create darks.net-labs.local kaserver simple /usr/afs/bin/kaserver -cell gentoo -noauth
+
+     /usr/afs/bin/bos create <server name> buserver simple /usr/afs/bin/buserver -cell <cell name> -noauth
+     e.g: /usr/afs/bin/bos create darks.net-labs.local buserver simple /usr/afs/bin/buserver -cell gentoo -noauth
+
+     /usr/afs/bin/bos create <server name> ptserver simple /usr/afs/bin/ptserver -cell <cell name> -noauth
+     e.g: /usr/afs/bin/bos create darks.net-labs.local ptserver simple /usr/afs/bin/ptserver -cell gentoo -noauth
+
+     /usr/afs/bin/bos create <server name> vlserver simple /usr/afs/bin/vlserver -cell <cell name> -noauth
+     e.g: /usr/afs/bin/bos create darks.net-labs.local vlserver simple /usr/afs/bin/vlserver -cell gentoo -noauth
+
+     Verify that all servers are running:
+     /usr/afs/bin/bos status <server name> -noauth
+     e.g.: /usr/afs/bin/bos status darks.net-labs.local -noauth
+
+  4. Initialize Cell Security
+     .. which basically means creating afs admin account.
+
+     /usr/afs/bin/kas -cell <cell name> -noauth
+     This should give you the ka> prompt.
+
+     ka> create afs
+     initial_password:
+     Verifying, please re-enter initial_password:
+     ka> create admin
+     initial_password:
+     Verifying, please re-enter initial_password:
+     ka>
+
+     Verfiy that users got created and set admin flag for user admin:
+
+     ka> examine afs
+ 
+     User data for afs
+       key (0) cksum is 2651715259, last cpw: Mon Jun  4 20:49:30 2001
+       password will never expire.
+       An unlimited number of unsuccessful authentications is permitted.
+       entry never expires.  Max ticket lifetime 100.00 hours.
+       last mod on Mon Jun  4 20:49:30 2001 by <none>
+       permit password reuse
+     ka> setfields admin -flags admin
+     ka> examine admin
+ 
+     User data for admin (ADMIN)
+       key (0) cksum is 2651715259, last cpw: Mon Jun  4 20:49:59 2001
+       password will never expire.
+       An unlimited number of unsuccessful authentications is permitted.
+       entry never expires.  Max ticket lifetime 25.00 hours.
+       last mod on Mon Jun  4 20:51:10 2001 by <none>
+       permit password reuse
+     ka>
+
+     Create users in the afs enviroment:
+
+     /usr/afs/bin/bos adduser <server name> admin -cell <cell name> -noauth
+     e.g.: /usr/afs/bin/bos adduser darks.net-labs.local admin -cell gentoo -noauth
+
+     /usr/afs/bin/bos addkey <server name> -kvno 0 -cell <cell name> -noauth
+     e.g.:  /usr/afs/bin/bos addkey  darks.net-labs.local -kvno 0 -cell gentoo -noauth
+            input key:
+            Retype input key:
+     NOTE: you need to give the password you provided for the afs account above
+
+     Create a protection database entry for the admin user:
+
+     /usr/afs/bin/pts createuser -name admin -cell <cell name> [-id <AFS UID>] -noauth
+     MATCH UNIX ID'S AND AFS UID'S WITH THE -id FLAG !!
+     e.g.: /usr/afs/bin/pts createuser -name admin -cell gentoo -noauth
+           User admin has id 1
+
+     /usr/afs/bin/pts adduser admin system:administrators -cell <cell name> -noauth
+     e.g.: /usr/afs/bin/pts adduser admin system:administrators -cell gentoo -noauth
+
+     Check admin privileges:
+
+     /usr/afs/bin/pts membership admin -cell gentoo -noauth
+     Groups admin (id: 1) is a member of:
+       system:administrators
+
+     Restart afs processes:
+
+     /usr/afs/bin/bos restart <server name> -all -cell <cell name> -noauth
+     e.g.: /usr/afs/bin/bos restart darks.net-labs.local -all -cell gentoo -noauth
+
+  5. Start the file and volume servers and the salvager
+
+     /usr/afs/bin/bos create <server name> fs fs /usr/afs/bin/fileserver /usr/afs/bin/volserver /usr/afs/bin/salvager -cell <cell name> -noauth
+     e.g.: /usr/afs/bin/bos create darks.net-labs.local fs fs /usr/afs/bin/fileserver /usr/afs/bin/volserver /usr/afs/bin/salvager -cell gentoo -noauth
+
+     Verify that all processe are running:
+
+     /usr/afs/bin/bos status darks.net-labs.local -long -noauth
+     Instance kaserver, (type is simple) currently running normally.
+         Process last started at Mon Jun  4 21:07:17 2001 (2 proc starts)
+         Last exit at Mon Jun  4 21:07:17 2001
+         Command 1 is '/usr/afs/bin/kaserver'
+ 
+     Instance buserver, (type is simple) currently running normally.
+         Process last started at Mon Jun  4 21:07:17 2001 (2 proc starts)
+         Last exit at Mon Jun  4 21:07:17 2001
+         Command 1 is '/usr/afs/bin/buserver'
+ 
+     Instance ptserver, (type is simple) currently running normally.
+         Process last started at Mon Jun  4 21:07:17 2001 (2 proc starts)
+         Last exit at Mon Jun  4 21:07:17 2001
+         Command 1 is '/usr/afs/bin/ptserver'
+ 
+     Instance vlserver, (type is simple) currently running normally.
+         Process last started at Mon Jun  4 21:07:17 2001 (2 proc starts)
+         Last exit at Mon Jun  4 21:07:17 2001
+         Command 1 is '/usr/afs/bin/vlserver'
+ 
+     Instance fs, (type is fs) currently running normally.
+         Auxiliary status is: file server running.
+         Process last started at Mon Jun  4 21:09:30 2001 (2 proc starts)
+         Command 1 is '/usr/afs/bin/fileserver'
+         Command 2 is '/usr/afs/bin/volserver'
+         Command 3 is '/usr/afs/bin/salvager'        
+     
+  6. Create the main volume or synchronize with existing servers
+    
+     a) This is the first server:
+
+        /usr/afs/bin/vos create <server name> <partition name> root.afs -cell <cell name> -noauth
+        e.g.: /usr/afs/bin/vos create darks.net-labs.local /vicepa root.afs -cell gentoo -noauth
+
+     b) You're installing a backup server:
+
+        /usr/afs/bin/vos syncvldb <server name> -cell <cell name> -verbose -noauth
+        /usr/afs/bin/vos syncserv <server name> -cell <cell name> -verbose -noauth
+
+  7. Start the Update Server
+     
+     /usr/afs/bin/bos create <server name> upserver simple "/usr/afs/bin/upserver -crypt /usr/afs/etc -clear /usr/afs/bin" -cell <cell name> -noauth
+     e.g.: /usr/afs/bin/bos create darks.net-labs.local upserver simple "/usr/afs/bin/upserver -crypt /usr/afs/etc -clear /usr/afs/bin" -cell gentoo -noauth
+     
+  8. Modifiy /etc/afs/afs.conf
+
+     Edit afs.conf to start afs server
+
+  That's it !! Your afs server should hopefully be up and running !!!
+
+3.2 Configuring the Top Level of the AFS filespace
+
+  1. Let anyuser lookup /afs
+     /usr/afs/bin/fs setacl /afs system:anyuser rl
+
+  2. Create root volume
+     
+     /usr/afs/bin/vos create <server name> <partition name> root.cell
+     /usr/afs/bin/fs mkmount /afs/cellname root.cell
+     e.g.: /usr/afs/bin/fs mkmount /afs/gentoo root.cell 
+     /usr/afs/bin/fs setacl /afs/cellname system:anyuser rl 
+
+     Create read/write mountpoint
+     
+     /usr/afs/bin/fs mkmount /afs/.cellname root.cell -rw
+     e.g.: /usr/afs/bin/fs mkmount /afs/.gentoo root.cell -rw 
+
+
+OK .. you're ready to go !! Now it's time to read AFS documentation and learn how to 
+create volumes, create users and groups, set acl's and so on .. Have Fun :))
+     
+     
+  
+  
+
+       
+
+
+
