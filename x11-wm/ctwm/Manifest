@@ -1,2 +1,5 @@
-MD5 dd746733410e199ac777df49278955a6 ctwm-3.6.ebuild 766
+MD5 65891f3e43bfd4e3c611f08aac4a982c ctwm-3.6.ebuild 939
+MD5 fe2f0a492565eb0ae0831e308df50664 metadata.xml 158
+MD5 c07099fb45eaa5226ec264c7c9f2c3a9 ChangeLog 380
 MD5 f1cb976f1a64837f5e8b7ec456b3a4aa files/digest-ctwm-3.6 60
+MD5 2bf6805304e3e475eba4dae4818102e4 files/ctwm-3.6-gentoo.diff 1169
