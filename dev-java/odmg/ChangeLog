@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/odmg
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/odmg/ChangeLog,v 1.1 2004/10/30 20:39:36 axxo Exp $
+
+*odmg-3.0 (30 Oct 2004)
+
+  30 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +files/build-odmg.xml, +odmg-3.0.ebuild:
+  inital import, ebuild contributed by Dan <dan@intuitivelyobvious.net>
+

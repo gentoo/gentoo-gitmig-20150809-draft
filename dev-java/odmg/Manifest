@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5872f879bfe0bbcea26ab97ffe3cea90 odmg-3.0.ebuild 1108
+MD5 0bd523a1f718bce80b1ebab6ef588d32 ChangeLog 402
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 764aee18b261c1931a3c984539ae6271 files/digest-odmg-3.0 66
+MD5 de93d09394178058eb9ed6cae1919ae6 files/build-odmg.xml 872
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBg/wS/rLF9B432nYRAtmaAKDC8GKc3uhNhW0nQjjzC9EKuzbQFgCgzHEY
+vpisuMjyxps0WOvmb6A0Ptg=
+=DsLh
+-----END PGP SIGNATURE-----

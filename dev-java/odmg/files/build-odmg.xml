@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+	Builds the ODMG 3.0 Java Binding from the Apache DB OJB project.
+
+	Written by Daniel Solano.
+-->
+<project name="ODMG-3.0" default="all" basedir=".">
+	<property file="build.properties"/>
+
+	<target name="init">
+		<ant target="init"/>
+	</target>
+
+	<target name="clean">
+		<ant target="clean"/>
+	</target>
+
+	<target name="prepare" depends="init">
+		<ant target="prepare"/>
+	</target>
+
+	<target name="compile" depends="prepare">
+		<javac srcdir="${build.src}" destdir="${build.dest}">
+			<include name="org/odmg/*.java"/>
+		</javac>
+	</target>
+	
+	<target name="jar" depends="compile">
+		<jar destfile="${dist}/odmg.jar" basedir="${build.dest}"/>
+	</target>
+
+	<target name="javadoc" depends="compile">
+		<javadoc destdir="${build.javadoc}">
+			<packageset dir="${build.src}" includes="org/odmg"/>
+		</javadoc>
+	</target>
+</project>
