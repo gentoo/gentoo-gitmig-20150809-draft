@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/openmosix-user
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.8 2003/04/12 17:34:35 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.9 2003/05/01 21:38:46 tantive Exp $
+
+* openmosix-user-0.3.-r1 (01 May 2003)
+
+  01 May 2003; Michael Imhof <tantive@gentoo.org>
+  Add sed magic to make sure openmosix.config get's installed into /etc and not into /etc/openmosix
+  as the init script looks into /etc.
 
 * openmosix-user-0.3 (12 Apr 2003)
 
