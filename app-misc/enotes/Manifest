@@ -1,4 +1,14 @@
-MD5 e7394d0cbafbac4f8de7f6171c7f02a6 enotes-0.1.20040508.ebuild 568
-MD5 b4fd876915e29cfd770c8c7ed59f371c ChangeLog 329
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 91d16a32bdce501e73977a2e91accf33 enotes-0.1.20040508.ebuild 521
 MD5 0d6c15228e442abb1953a5780281dc13 metadata.xml 527
+MD5 b4fd876915e29cfd770c8c7ed59f371c ChangeLog 329
 MD5 fc77ae46e0403e8d74e5fb3638b3a6d6 files/digest-enotes-0.1.20040508 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBGta8HTu7gpaalycRArnLAJ9q4YeouAXA91Se69ZmicvnzSwcEwCgnhoA
+XnFD0fKwijJ+zEYM6/QB3kM=
+=Uui8
+-----END PGP SIGNATURE-----
