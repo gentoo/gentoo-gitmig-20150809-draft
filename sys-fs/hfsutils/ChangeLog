@@ -1,0 +1,42 @@
+# ChangeLog for sys-fs/hfsutils
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/ChangeLog,v 1.1 2003/09/15 17:46:25 seemant Exp $
+
+*hfsutils-3.2.6 (15 Sep 2003)
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> hfsutils-3.2.6-r1.ebuild,
+  hfsutils-3.2.6-r2.ebuild, hfsutils-3.2.6-r3.ebuild, hfsutils-3.2.6.ebuild,
+  files/hfsutils-3.2.6-errno.patch:
+  moved to sys-fs
+
+*hfsutils-3.2.6-r3 (11 Apr 2003)
+
+  11 Apr 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> hfsutils-3.2.6-r3.ebuild:
+  Now also makes and installs hfsck
+
+*hfsutils-3.2.6-r2 (31 Mar 2003)
+
+  31 Mar 2003; Luca Barbato <lu_zero@gentoo.org> hfsutils-3.2.6-r2.ebuild:
+  Fix the errno issue on glibc-2.3.2
+
+*hfsutils-3.2.6-r1 (04 Feb 2003)
+
+  04 Feb 2002; Jon Nall <nall@gentoo.org> hfsutils-3.2.6-r1.ebuild,
+  files/digest-hfsutils-3.2.6-r1 :
+  added tcltk dependency if tcltk use var is set
+
+*hfsutils-3.2.6 (Sun Mar 17 23:27:28 CST 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> hfsutils-3.2.6.ebuild :
+  Added KEYWORDS.
+
+June 21 2002 Gerk (gerk@gentoo.org)
+
+	Added ARCH checks
+
+
+Sun Mar 17 23:29:06 CST 2002; Kain <kain@kain.org> all:
+
+	This is an initial .ebuild for hfsutils 3.2.6 for ppc machines.

@@ -1,0 +1,26 @@
+# ChangeLog for sys-fs/mkisofs
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mkisofs/ChangeLog,v 1.1 2003/09/15 17:46:25 seemant Exp $
+
+*mkisofs-1.13-r2 (15 Sep 2003)
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> mkisofs-1.13-r2.ebuild:
+  moved to sys-fs
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*mkisofs-1.13-r2 (1 Feb 2002)
+
+  17 Apr 2003; Will Woods <wwoods@gentoo.org> mkisofs-1.13-r2.ebuild:
+  Fixed ebuild for alpha, added alpha to KEYWORDS
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (ppc)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> mkisofs-1.13-r2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  11 May 2002; Arcady Genkin <agenkin@thpoon.com> mkisofs-1.13-r2.ebuild :
+  
+  Added explicit src_compile function.  No user-visible changes.  This
+  closes bug 2488.

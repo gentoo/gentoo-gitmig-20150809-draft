@@ -1,0 +1,85 @@
+# ChangeLog for sys-fs/evms
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.1 2003/09/15 17:46:24 seemant Exp $
+
+*evms-2.0.0-r1 (15 Sep 2003)
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> evms-1.2.0-r1.ebuild,
+  evms-1.2.0.ebuild, evms-1.2.1-r1.ebuild, evms-1.2.1.ebuild,
+  evms-2.0.0-r1.ebuild, evms-2.0.1.ebuild, evms-2.1.0.ebuild, files/evms-init,
+  files/evms2-init:
+  moved to sys-fs
+
+*evms-2.1.0 (13 Jul 2003)
+
+  13 Jul 2003; Jay Pfeifer <pfeifer@gentoo.org>:
+  Version bump.
+  Kernel support for 2.1.0 is in pfeifer-sources-2.4.21-pre3
+
+*evms-2.0.1 (10 May 2003)
+
+  10 May 2003; Jay Pfeifer <pfeifer@gentoo.org>:
+  Version bump.
+  Kernel support for 2.0.1 is in gentoo-sources-2.4.20-r5
+
+*evms-2.0.0-r1 (08 Apr 2003)
+
+  08 Apr 2003; Michael Imhof <tantive@gentoo.org>:
+  Version bumped to -r1 as -r0 was borked. Removed -r0.
+  Added new init-script for 2.0.0
+  Should close #18835.
+
+*evms-2.0.0 (06 Apr 2003)
+
+  06 Apr 2003; Michael Imhof <tantive@gentoo.org>:
+  Version bumped.
+
+*evms-1.2.1-r1 (05 Mar 2003)
+
+  03 Apr 2003; Graham Forest <vladimir@gentoo.org> evms-1.2.1-r1.ebuild:
+  set ~ppc in keywords
+
+  05 Mar 2003; Brandon Low <lostlogic@gentoo.org> evms-1.2.1-r1.ebuild:
+  Set keyword stable to match gentoo-sources release
+
+*evms-1.2.1 (27 Dec 2002)
+
+  27 Dec 2002; Seth Chandler <sethbc@gentoo.org>: added evms 1.2.1 to 
+  portage ~masked
+
+*evms-1.2.0 (02 Oct 2002)
+
+  02 Oct 2002; Donny Davies <woodchip@gentoo.org>: New evms-1.2.0 release
+  which is backwards compatible with 1.1.0 kernel drivers.  Now builds
+  independent of /usr/src/linux headers.  Thanks lnx1138@us.ibm.com.
+
+*evms-1.1.0 (07 Aug 2002)
+
+  27 Aug 2002; Donny Davies <woodchip@gentoo.org>: Removed the LVM clone tools.
+
+  07 Aug 2002; Daniel Robbins <drobbins@gentoo.org>: New release version of evms 1.1.0.
+
+*evms-1.1.0_pre4 (31 Jul 2002)
+
+  31 Jul 2002; Daniel Robbins <drobbins@gentoo.org>: New version for evms 1.1.0 systems.
+
+*evms-1.0.1 (08 May 2002)
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>: updated keywords (-ppc)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> evms-1.0.1.ebuild : Added KEYWORDS.
+
+  08 May 2002; Donny Davies <woodchip@gentoo.org>: Updated to 1.0.1.
+
+*evms-1.0.0-r1 (30 Apr 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> evms-1.0.0-r1.ebuild : Added KEYWORDS.
+
+  30 Apr 2002; Donny Davies <woodchip@gentoo.org>: Moved the plugins to
+  /lib/evms, where they belong.  Please unmerge the older version of this
+  package if you had it installed.
+
+*evms-1.0.0 (27 Apr 2002)
+
+  27 Apr 2002; Donny Davies <woodchip@gentoo.org>: Made a package for IBM's
+  Enterprise Volume Management System.

@@ -1,0 +1,59 @@
+# ChangeLog for sys-fs/lufs
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.1 2003/09/15 17:46:25 seemant Exp $
+
+*lufs-0.8.0 (15 Sep 2003)
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> lufs-0.7.0.ebuild,
+  lufs-0.8.0-r1.ebuild, lufs-0.8.0.ebuild, lufs-0.9.3.ebuild,
+  lufs-0.9.4.ebuild, lufs-0.9.5.ebuild, files/lufs-0.7.0-init,
+  files/lufs-0.8.0-init, files/lufs-0.9.3-init:
+  moved to sys-fs
+
+  26 Apr 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.5.ebuild :
+  Fix sandbox failure for kernel 2.5. No revision bump because it just didn't
+  build for 2.5. Fixes #18740, thanks to Jedi/Sector One.
+
+*lufs-0.9.5 (05 Apr 2003)
+  05 Apr 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.5.ebuild :
+  New upstream version, and it builds and works fine on all my test systems,
+  and nothing depends on it. Only, if you do ldd /usr/bin/lufsd, you
+  get many dependencies, and I want to have them in DEPEND before I
+  declare these ebuilds stable.
+
+*lufs-0.9.4 (18 Mar 2003)
+  18 Mar 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.4.ebuild :
+  Turns out there was a new upstream version, and the init script and
+  lufs user don't make sense any more because the daemon was rewritten.
+
+  18 Mar 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.3.ebuild :
+  Fixed typo in install, -init was missing from the init script. Didn't
+  bump revision since the people that have it running probably
+  figured that out by themselves.
+
+*lufs-0.9.3 (12 Feb 2003)
+
+  12 Feb 2003; Luca Barbato <lu_zero@gentoo.org> lufs-0.9.3.ebuild
+  files/digest-lufs-0.9.3 lufs-0.9.3-init
+  ebuild submitted by Fred Point <fpoint@club-internet.fr>
+  
+*lufs-0.8.0-r1 (24 Nov 2002)
+
+  24 Nov 2002; Matt Keadle <mkeadle@gentoo.org> lufs-0.8.0-r1.ebuild
+  files/digest-lufs-0.8.0-r1
+
+  Fixed a symlink creation that has it's parameters reversed.
+
+*lufs-0.8.0 (20 Nov 2002)
+
+  20 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Initial import.
+
+*lufs-0.7.0 (01 Nov 2002)
+
+  20 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> lufs-0.7.0.ebuild :
+  Fixed a typo, updated HOMEPAGE. Jan Andersson <janneand@yahoo.com> in #10992 found the typo.
+  Repoman:ed and lintool:ed.
+
+  01 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Initial import. Ebuild submitted by Marko Mikulicic <marko@seul.org> in #7314.

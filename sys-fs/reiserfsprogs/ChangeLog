@@ -1,0 +1,132 @@
+# ChangeLog for sys-fs/reiserfsprogs
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.1 2003/09/15 17:46:25 seemant Exp $
+
+*reiserfsprogs-3.6.4-r1 (15 Sep 2003)
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  reiserfsprogs-3.6.10.ebuild, reiserfsprogs-3.6.11.ebuild,
+  reiserfsprogs-3.6.3.ebuild, reiserfsprogs-3.6.4-r1.ebuild,
+  reiserfsprogs-3.6.8.ebuild, reiserfsprogs-3.6.9.ebuild,
+  files/reiserfsprogs-3.6.4-bitops.patch,
+  files/reiserfsprogs-3.6.5-flush_buffers-bug.patch:
+  moved to sys-fs
+
+*reiserfsprogs-3.6.11 (05 Aug 2003)
+
+  05 Aug 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.11.ebuild:
+  Bump
+
+*reiserfsprogs-3.6.10 (27 Jul 2003)
+
+  27 Jul 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.10.ebuild:
+  Bump
+
+*reiserfsprogs-3.6.9 (16 Jul 2003)
+
+  16 Jul 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.9.ebuild:
+  Bump
+
+  31 May 2003; Daniel Robbins <drobbins@gentoo.org> reiserfsprogs-3.6.8.ebuild:
+  Bumping to x86 stable.
+
+*reiserfsprogs-3.6.8 (20 May 2003)
+
+  20 May 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.8.ebuild:
+  Bump
+
+*reiserfsprogs-3.6.7 (02 May 2003)
+
+  02 May 2003; root <root@gentoo.org> reiserfsprogs-3.6.5-r1.ebuild,
+  reiserfsprogs-3.6.6.ebuild, reiserfsprogs-3.6.7.ebuild:
+  Ok, so both 3.6.5 and 3.6.6 have been declared 'do not use' by the namesys
+  people, those using either of these versions may need to rebuild their SBs
+  AGAIN (thats why they were unstable still).
+
+*reiserfsprogs-3.6.6 (24 Apr 2003)
+
+  25 Apr 2003; Martin Holzer <mholzer@gentoo.org> reiserfsprogs-3.6.2.ebuild,
+  reiserfsprogs-3.6.3.ebuild, reiserfsprogs-3.6.4-r1.ebuild,
+  reiserfsprogs-3.6.5-r1.ebuild, reiserfsprogs-3.6.6.ebuild:
+  Now downloading via http. Closes #19933.
+
+  24 Apr 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.6.ebuild:
+  Bump to latest from namesys, this version includes the bugfix from 3.6.5-r1
+  and a couple other MINOR things. Explicitely released as a bugfix only
+  release, so it will move to stable soon.
+
+*reiserfsprogs-3.6.5-r1 (01 Apr 2003)
+
+  01 Apr 2003; Brandon Low <lostlogic@gentoo.org>
+  reiserfsprogs-3.6.5-r1.ebuild,
+  files/reiserfsprogs-3.6.5-flush_buffers-bug.patch:
+  This -r should fix the issues with boot that people were having.
+
+*reiserfsprogs-3.6.5 (21 Mar 2003)
+
+  17 Apr 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.5.ebuild,
+  reiserfsprogs-3.6.5.ebuild:
+  cleanup
+
+  21 Mar 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.5.ebuild:
+  Many bugfixes, one critical fix, upgrade recommended.
+
+*reiserfsprogs-3.6.4-r1 (02 Nov 2002)
+
+  03 May 2003; Graham Forest <vladimir@gentoo.org>
+  reiserfsprogs-3.6.4-r1.ebuild:
+  set ppc in keywords
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  reiserfsprogs-3.6.4-r1.ebuild:
+  use epatch instead
+
+  11 Jan 2003; Seemant Kulleen <seemant@gentoo.org>
+  reiserfsprogs-3.6.4-r1.ebuild :
+
+  filtered -fPIC
+  
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  02 Nov 2002; Jon Nall <nall@gentoo.org> reiserfsprogs-3.6.4-r1.ebuild,
+  files/reiserfsprogs-3.6.4-bitops.patch :
+  Fixed compile for ppc
+
+*reiserfsprogs-3.6.4 (27 Oct 2002)
+
+  27 Oct 2002; Brandon Low <lostlogic@@gentoo.org> reiserfsprogs-3.6.4.ebuild :
+
+  Version bump minor changes upstream, briefly ~arched.
+
+*reiserfsprogs-3.6.3 (02 Sep 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
+
+  02 Sep 2002; Brandon Low <lostlogic@@gentoo.org> reiserfsprogs-3.6.3.ebuild :
+  Critical fixes from upstream.
+
+*reiserfsprogs-3.6.2 (10 Jul 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> reiserfsprogs-3.6.2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  10 Jul 2002; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.2.ebuild : 
+
+  Latest release HOT off the namesys presses, verified to be thelatest
+  safe release with Vitaly Fertman of Namesys, despite what the namesys
+  website says.
+
+*reiserfsprogs-3.1c (06 Mar 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> reiserfsprogs-3.1c.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  06 Mar 2002; Daniel Robbins <drobbins@gentoo.org>: New 3.x.1c-pre3
+  reiserfsprogs release.  This package replaces sys-fs/reiserfs-utils.

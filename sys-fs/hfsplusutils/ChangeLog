@@ -1,0 +1,37 @@
+# ChangeLog for sys-fs/hfsplusutils
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.1 2003/09/15 17:46:25 seemant Exp $
+
+*hfsplusutils-1.0.4 (15 Sep 2003)
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  hfsplusutils-1.0.4-r1.ebuild, hfsplusutils-1.0.4.ebuild,
+  files/hfsplusutils-1.0.4-errno.patch, files/hfsplusutils-1.0.4-glob.patch:
+  moved to sys-fs
+
+  03 Jun 2003; Luca Barbato <lu_zero@gentoo.org> : hfsplusutils-1.0.4-r1.ebuild
+  unmasked on ppc
+
+*hfsplusutils-1.0.4-r1 (March 30, 2003)
+
+  30 Mar 2003; Luca Barbato <lu_zero@gentoo.org> : hfsplusutils-1.0.4-r1.ebuild
+  Made sure it works on glibc-2.3.2.
+ 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*hfsplusutils-1.0.4 (June 17, 2002)
+
+  09 Oct 2002; Mark Guertin <gerk@gentoo.org> hfsplusutils-1.0.4.ebuild :
+  Added patch for fixups with gcc 3.2 9also still works on 2.95.3), thanks
+  Johnathon Nall (nall), closes bug #8289.  Also added -alpha to keywords
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> hfsplusutils-1.0.4.ebuild :
+  Added KEYWORDS.
+
+June 21 2002 Gerk (gerk@gentoo.org)
+	
+  Added ARCH check, no revision bump
+
+June 20, 2002; Gerk <gerk@gentoo.org>:
+
+  This is an initial ebuild for hfsplusutils 1.0.4 for ppc machines.

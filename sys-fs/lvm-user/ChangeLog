@@ -1,0 +1,101 @@
+# ChangeLog for sys-fs/lvm-user
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.1 2003/09/15 17:46:25 seemant Exp $
+
+*lvm-user-1.0.4 (15 Sep 2003)
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  lvm-user-1.0.1_rc4-r1.ebuild, lvm-user-1.0.1_rc4.ebuild,
+  lvm-user-1.0.3.ebuild, lvm-user-1.0.4.ebuild, lvm-user-1.0.5.ebuild,
+  lvm-user-1.0.6.ebuild, lvm-user-1.0.7.ebuild:
+  moved to sys-fs
+
+  02 Sep 2003; Max Kalika <max@gentoo.org> lvm-user-1.0.1_rc4-r1.ebuild,
+  lvm-user-1.0.1_rc4.ebuild, lvm-user-1.0.3.ebuild, lvm-user-1.0.4.ebuild,
+  lvm-user-1.0.5.ebuild, lvm-user-1.0.6.ebuild, lvm-user-1.0.7.ebuild:
+  Add !sys-fs/lvm2 block to RDEPEND. No rev bump needed.
+
+*lvm-user-1.0.7 (25 Mar 2002)
+
+  28 Jul 2003; Guy Martin <gmsoft@gentoo.org> lvm-user-1.0.7.ebuild :
+  Marked stable for hppa.
+
+  09 Apr 2003; Todd Sunderlin <todd@gentoo.org> lvm-user-1.0.7.ebuild:
+  Marked stable for sparc.
+
+  28 Mar 2003; Guy Martin <gmsoft@gentoo.org> lvm-user-1.0.7.ebuild :
+  Added ~hppa to keywords.
+
+  25 Mar 2003; Daniel Robbins <drobbins@gentoo.org> lvm-user-1.0.7.ebuild:
+  new upstream release.
+  
+  23 Jan 2003; Daniel Robbins <drobbins@gentoo.org> lvm-user-1.0.6.ebuild:
+  misplaced sed dependency is now a DEPEND rather than an RDEPEND. No
+  rev bump.
+  
+  05 Dec 2003; Daniel Ahlberg <aliz@gentoo.org> lvm-user-1.0.6.ebuild :
+  Unmasked for x86.  
+
+  16 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> lvm-user-1.0.5.ebuild :
+  Closes #12219, added filter-flags.  
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*lvm-user-1.0.6 (07 Nov 2002)
+
+  07 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
+
+*lvm-user-1.0.5 (01 Aug 2002)
+
+  25 Feb 2003; Brandon Low <lostlogic@gentoo.org> lvm-user-1.0.1_rc4-r1.ebuild
+  lvm-user-1.0.1_rc4.ebuild lvm-user-1.0.3.ebuild lvm-user-1.0.4.ebuild
+  lvm-user-1.0.5.ebuild : Fix nesteddies
+
+  01 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> lvm-user-1.0.5.ebuild :
+  
+  Version bump, ebuild cleanup.
+
+*lvm-user-1.0.4 (23 Jun 2002)
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (-ppc), this relies on x86 kernel ATM
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> lvm-user-1.0.4.ebuild :
+  Added KEYWORDS.
+
+ 23 Jun 2002; Jon Nelson <jnelson@gentoo.org>: lvm-user-1.0.4.ebuild
+ Update to 1.0.4
+ 1.0.4 vgscan creates /etc/lvmtab and /etc/lvmtab.d by default (closes #2293)
+ 
+ LVM is under the GPL version 2
+ The LVM library is under the LGPL version 2
+ 
+*lvm-user-1.0.3 (9 Apr 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> lvm-user-1.0.3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+ 9 Apr 2002; Jon Nelson <jnelson@jamponi.net>: lvm-user-1.0.3.ebuild
+ Update to 1.0.3
+ 
+*lvm-user-1.0.1_rc4-r1 (8 Feb 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> lvm-user-1.0.1_rc4.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> lvm-user-1.0.1_rc4-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  8 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: remove "-fomit-frame-pointer"
+  from $CFLAGS if it's in there.  This closes bug #598.
+
+*lvm-user-1.0.1_rc4 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
