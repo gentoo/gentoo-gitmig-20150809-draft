@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.22.ebuild,v 1.2 2003/12/01 22:59:57 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.22.ebuild,v 1.3 2003/12/02 03:17:53 iggy Exp $
 
 IUSE="build crypt"
 
@@ -62,8 +62,10 @@ src_unpack() {
 	else
 		einfo "Cryptographic support enabled..."
 	fi
-	
+
 	#IMPORTANT! Root Exploit!
-	epatch ${FILESDIR}/do_brk_fix.patch
+	cd ${S}
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+
 	kernel_src_unpack
 }

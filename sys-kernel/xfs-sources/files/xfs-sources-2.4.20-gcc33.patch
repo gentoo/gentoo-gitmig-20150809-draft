@@ -129,22 +129,6 @@ diff -u -r linux-2.4.20-xfs-r3/drivers/ide/ide-cd.h linux-2.4.20-xfs-r4/drivers/
  };
  
  
-diff -u -r linux-2.4.20-xfs-r3/drivers/net/bcm4400/b44.h linux-2.4.20-xfs-r4/drivers/net/bcm4400/b44.h
---- linux-2.4.20-xfs-r3/drivers/net/bcm4400/b44.h	2003-10-11 11:38:33.000000000 +0200
-+++ linux-2.4.20-xfs-r4/drivers/net/bcm4400/b44.h	2003-10-11 11:48:41.000000000 +0200
-@@ -1079,10 +1079,10 @@
- /******************************************************************************/
- 
- #define REG_RD(pDevice, OffsetName)                                         \
--        __raw_readl(&((pDevice)->pMemView->##OffsetName))
-+        __raw_readl(&((pDevice)->pMemView->OffsetName))
- 
- #define REG_WR(pDevice, OffsetName, Value32)                                \
--        (void) __raw_writel(Value32, &((pDevice)->pMemView->##OffsetName))
-+        (void) __raw_writel(Value32, &((pDevice)->pMemView->OffsetName))
- 
- #define REG_RD_OFFSET(pDevice, Offset)                                      \
-     __raw_readl(((LM_UINT8 *) (pDevice)->pMemView + Offset))
 diff -u -r linux-2.4.20-xfs-r3/drivers/net/fealnx.c linux-2.4.20-xfs-r4/drivers/net/fealnx.c
 --- linux-2.4.20-xfs-r3/drivers/net/fealnx.c	2003-10-11 11:38:33.000000000 +0200
 +++ linux-2.4.20-xfs-r4/drivers/net/fealnx.c	2003-10-11 11:54:07.000000000 +0200
