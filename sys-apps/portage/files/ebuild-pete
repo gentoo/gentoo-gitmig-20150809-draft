@@ -632,7 +632,7 @@ dyn_help() {
 	echo
 	echo "ebuild [-i] {packagename.ebuild} [command [command [command ...]]]"
 	echo 
-	echo "The first argument after any switches to ebuild should be an existing
+	echo "The first argument after any switches to ebuild should be an existing"
 	echo ".ebuild file."
         echo
 	echo "One or more of the following switches can be used."
