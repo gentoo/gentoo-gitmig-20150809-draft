@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.13 2002/11/12 20:03:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.14 2002/11/23 14:05:19 danarmak Exp $
+
+  23 Nov 2002; Dan Armak <danarmak@gentoo.org> kdepim-3.1_rc3.ebuild,
+  kdepim-3.1.ebuild :
+
+  Enforce MAKEOPTS+=-j1 - reported by DocTomoe as necessary for ppc at least.
 
 *kdepim-3.1_rc3 (12 Nov 2002)
 

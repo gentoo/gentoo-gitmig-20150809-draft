@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.1_rc3.ebuild,v 1.1 2002/11/12 20:03:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.1_rc3.ebuild,v 1.2 2002/11/23 14:05:19 danarmak Exp $
 inherit kde-dist 
 
 DESCRIPTION="KDE $PV - PIM (Personal Information Management) apps: korganizer..."
@@ -12,6 +12,9 @@ newdepend "pda? ( >=dev-libs/pilot-link-0.11.1-r1 )
 	    ~kde-base/kdenetwork-$PV" # mimelib is needed for support of some stuff with exchange servers
 
 use pda && myconf="$myconf --with-extra-includes=/usr/include/libpisock"
+
+# reported by doctomoe on ppc
+MAKEOPTS="$MAKEOPTS -j1"
 
 src_install() {
 	kde_src_install
