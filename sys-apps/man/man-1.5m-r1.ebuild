@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.14 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.15 2004/09/04 21:33:45 solar Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 NV="1.5m2"
 DESCRIPTION="Standard commands to read man pages"
@@ -71,6 +71,12 @@ src_unpack() {
 	# (bug 23848)
 	#  -taviso@gentoo.org
 	epatch ${FILESDIR}/${P}-defmanpath-symlinks.patch
+
+	# use non-lazy binds for man. And let portage handling stripping.
+	append-ldflags -Wl,-z,now
+	sed -i -e \
+		s/'LDFLAGS = -s'/"LDFLAGS:=${LDFLAGS}"/g ${S}/src/Makefile.in \
+		|| die "failed to edit default LDLFAGS"
 }
 
 src_compile() {
