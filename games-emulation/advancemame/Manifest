@@ -1,12 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0bf79059dff66d2da024588c422a2e1c ChangeLog 3485
-MD5 2061f6bbfc9c94c600a4c2adfe012dca advancemame-0.83.1.ebuild 1787
 MD5 972b8c9f939a33a7074e0819fb55455c metadata.xml 962
-MD5 71665035230bdb022335d87d4695e352 advancemame-0.81.0.ebuild 1786
-MD5 227f0055e8722dcf45b52a59263d488e advancemame-0.82.0.ebuild 1786
-MD5 0008364d64ccb7b2aff9ce23610a3ee7 advancemame-0.83.0.ebuild 1786
-MD5 294fc07ed3973a7d271dee86ea52428f advancemame-0.85.0.ebuild 1762
-MD5 ee0a57ec88b18ce44341779976f667a9 files/digest-advancemame-0.83.1 72
+MD5 a67ea9d0aba6813bf7099ba0533ba44d advancemame-0.85.0.ebuild 1820
 MD5 0fcd53e6dc55e784545e640310890175 files/digest-advancemame-0.85.0 72
-MD5 ee6170be60235d6f49882f80dadd122d files/digest-advancemame-0.81.0 72
-MD5 944467fa089d4a3c69a91dabc23bcd85 files/digest-advancemame-0.82.0 72
-MD5 c03af8387d57223eeee1df21818e6ca9 files/digest-advancemame-0.83.0 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBMoTDHTu7gpaalycRAgZEAJ0RMiEir+70b7ZQrgF4WjwFRGX4sgCgvrfn
+zdBBYZCf60Afh4r04JE3kYY=
+=ZWJU
+-----END PGP SIGNATURE-----

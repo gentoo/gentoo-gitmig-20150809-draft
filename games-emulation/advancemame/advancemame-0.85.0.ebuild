@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.85.0.ebuild,v 1.1 2004/08/25 05:38:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.85.0.ebuild,v 1.2 2004/08/30 01:36:53 vapier Exp $
 
 inherit eutils games
 
@@ -54,9 +54,13 @@ src_compile() {
 }
 
 src_install() {
-	local m
+	local f
 
-	dogamesbin adv* || die "dogamesbin failed"
+	for f in adv* ; do
+		if [ -L "${f}" ] ; then
+			dogamesbin "${f}" || die "dogamesbin failed"
+		fi
+	done
 
 	insinto "${GAMES_DATADIR}/advance"
 	doins support/event.dat
@@ -66,8 +70,8 @@ src_install() {
 	cd obj/doc
 	dodoc *.txt
 	dohtml *.html
-	for m in *.1 ; do
-		newman ${m} ${m/1/6}
+	for f in *.1 ; do
+		newman ${f} ${f/1/6}
 	done
 
 	prepgamesdirs
