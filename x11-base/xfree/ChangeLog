@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.10 2002/04/04 14:44:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.11 2002/04/07 05:41:58 azarah Exp $
+
+*xfree-4.2.0-r9 (7 Apr 2002)
+
+  7 Apr 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r9.ebuild,
+                                                   files/4.2.0-r9/opengl-update :
+
+  Update for dynamic libGL switching with nvidia drivers.
 
   4 Apr 2002; Seemant Kulleen <seemant@gentoo.org> files/4.2.0-r8/xdm :
 
