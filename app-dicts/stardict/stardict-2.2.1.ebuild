@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.2.1.ebuild,v 1.2 2003/07/09 17:24:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.2.1.ebuild,v 1.3 2003/07/16 15:22:04 pvdabeel Exp $
 
 inherit gnome2
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/stardict/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # when adding keywords, remember to add to stardict.eclass
-KEYWORDS="~x86"
+KEYWORDS="~x86 ppc"
 
 
 RDEPEND=">=gnome-base/libbonobo-2.2.0
