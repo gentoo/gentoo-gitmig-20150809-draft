@@ -1,12 +1,20 @@
 # ChangeLog for dev-perlgtk-perlChangeLog/dev-perlgtk-perl-gladeChangeLog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/ChangeLog,v 1.4 2002/10/30 07:20:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/ChangeLog,v 1.5 2002/11/30 02:46:24 mcummings Exp $
+
+*gtk-perl-glade-0.7008 (29 Nov 2002)
+
+  29 Nov 2002; Michael Cummings <mcummings@gentoo.org> 
+  gtk-perl-glade-0.7008.ebuild:
+
+  Until I can get this out of here and merged completely with the mainline 
+  of gtk-perl, here's the latest stable version, tested.
+
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
 
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
   forced version bump to install into correct locations
+  
 # ChangeLog for dev-perl/gtk-perl-glade
 
 *gtk-perl-glade-0.7004-r2 (6 May 2002)
