@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0.ebuild,v 1.7 2004/09/23 15:29:00 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0.ebuild,v 1.8 2004/09/28 04:29:15 eradicator Exp $
 
 IUSE="altivec alsa caps doc debug jack-tmpfs oss portaudio"
 
@@ -82,4 +82,10 @@ src_install() {
 	fi
 
 	rm -rf ${D}/usr/share/doc/${PF}/reference
+}
+
+pkg_postinst() {
+	einfo "Because of some ABI changes in jack, you may need to re-emerge."
+	einfo "packages that use jack by running the following:"
+	einfo "  revdep-rebuild --soname libjack.so.0"
 }
