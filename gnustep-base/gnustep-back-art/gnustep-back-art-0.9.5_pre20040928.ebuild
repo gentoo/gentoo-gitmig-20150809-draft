@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.5_pre20040928.ebuild,v 1.2 2004/10/09 22:06:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.5_pre20040928.ebuild,v 1.3 2004/10/25 03:21:22 weeve Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -17,7 +17,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="libart_lgpl back-end component for the GNUstep GUI Library."
 HOMEPAGE="http://www.gnustep.org"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
