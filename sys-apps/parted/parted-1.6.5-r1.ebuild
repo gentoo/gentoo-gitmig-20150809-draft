@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5-r1.ebuild,v 1.15 2004/04/27 21:23:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5-r1.ebuild,v 1.16 2004/06/05 21:38:03 vapier Exp $
 
 inherit eutils
 
@@ -14,15 +14,12 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc amd64 alpha"
-IUSE="nls static readline debug noreiserfs"
+IUSE="nls static readline debug"
 
 DEPEND=">=sys-fs/e2fsprogs-1.27
 	>=sys-libs/ncurses-5.2
 	nls? ( sys-devel/gettext )
 	readline? ( >=sys-libs/readline-4.1-r4 )"
-
-RDEPEND="${DEPEND}
-	!noreiserfs? ( =sys-fs/progsreiserfs-0.3.0* )"
 
 PATCHDIR=${WORKDIR}/patches
 
