@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/nxml-mode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.7 2004/10/06 07:19:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.8 2004/11/01 11:21:25 usata Exp $
+
+*nxml-mode-20041004 (01 Nov 2004)
+
+  01 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> -nxml-mode-20031031.ebuild,
+  nxml-mode-20040910.ebuild, +nxml-mode-20041004.ebuild:
+  Version bumped.
 
   06 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
   files/80nxml-mode-gentoo.el:

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 570d3035ebe77d1c0ed2e3d3b1b78382 ChangeLog 1277
+MD5 62c455980c9b8fda59cbeb59c8f1f25f ChangeLog 1465
 MD5 978dcb27c1a4a35bdd750de737cb45cc metadata.xml 416
-MD5 f52ee31b59c57e6d08ee5bf89d6e910a nxml-mode-20031031.ebuild 986
-MD5 7f6a3cca650c0a68d6250b8fe23fb80a nxml-mode-20040910.ebuild 1088
-MD5 ca04cb4a463ca0758093963bbba71e02 files/80nxml-mode-gentoo.el 226
-MD5 01cabe3620c0754d28c746f3ba6c0f10 files/digest-nxml-mode-20031031 70
+MD5 a20a35aafed07dfb70ba8de3b1c56de0 nxml-mode-20041004.ebuild 1091
+MD5 1887189e94e8df6642982439578e784c nxml-mode-20040910.ebuild 1062
 MD5 c1d6fe5318d3057d3259e6be46a54013 files/digest-nxml-mode-20040910 150
+MD5 ca04cb4a463ca0758093963bbba71e02 files/80nxml-mode-gentoo.el 226
+MD5 7e2fa8cb8461e6416fc84e96eeb95263 files/digest-nxml-mode-20041004 150
 MD5 b6c0ed2561e83b43a58c2bd8cae88b55 files/nxml-mode-info-gentoo.patch 412
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBY5szVWNWqTUmv+0RAjJlAKCs+4mfDPXTqWBGkcnRWLCOIm2CZACfdQMS
-50jK67hsdUPQ+SLkyUpnFLQ=
-=NMaq
------END PGP SIGNATURE-----
