@@ -1,4 +1,5 @@
-MD5 7027b6788e3cc94bca2115d733215aa4 ksms-0.1.2.1.ebuild 652
-MD5 33b57f3113984edb5fdb2cb620ddda59 ChangeLog 350
+MD5 e0014b5d6f61f7403397e212f76f5168 ksms-0.1.2.1.ebuild 619
+MD5 9fbfa39986454925d103f976fa22dab9 ChangeLog 313
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 0a133a035198c2b1b93889e64ae59428 files/ksms-0.1.2.1-empty-store.diff 1146
 MD5 554f3eec8b69c94af56775b44b8593a6 files/digest-ksms-0.1.2.1 64
