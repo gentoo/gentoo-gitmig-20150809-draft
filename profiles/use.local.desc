@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.870 2005/01/15 14:01:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.871 2005/01/15 21:10:51 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -623,6 +623,7 @@ net-wireless/hostap-driver:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap-driver:hostap-noplx - Set to not install hostap_plx driver
 net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
+net-wireless/ndiswrapper:4kstacks - Allow the use of 4kstacks in ndiswrapper for some users
 net-wireless/obexftp:bluetooth - Install bluez so obexftp can detect and build BT support.
 net-wireless/libbtctl:mono - Add Mono Bluetooth bindings
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
