@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.3 2002/04/16 14:30:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.4 2002/04/17 16:40:15 seemant Exp $
+
+  17 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gettext-0.11.1-r1.ebuild :
+
+  Vitaly reports that glibc doesn't have libs, but contains the functioality
+  of the gettext libs.  this ebuild is unnecessary.
 
 *gettext-0.11.1-r1 (16 Apr 2002)
 
