@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlms
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlms/ChangeLog,v 1.7 2004/08/12 21:14:12 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlms/ChangeLog,v 1.8 2005/03/28 00:13:18 chriswhite Exp $
+
+  28 Mar 2005; Chris White <chriswhite@gentoo.org>
+  +files/0.2.2-vlf-cr-fix.patch, vlms-0.2.2.ebuild:
+  Fixes bug #41496.  Thanks to swegner for the patch.
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding missing metadata.xml. Taking over as maintainer.

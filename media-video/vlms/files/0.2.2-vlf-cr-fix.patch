@@ -1,0 +1,11 @@
+--- vlf.c.orig	2004-02-13 20:55:04.517391789 +0000
++++ vlf.c	2004-02-13 20:55:17.165108651 +0000
+@@ -83,7 +83,7 @@
+ 	   length = recv(infd, (void *)&c, PACKET_SIZE, 0);
+ 	   counter++; bytes+=length;
+ 
+-           if ( !(counter & 0xf ) ) fprintf(stderr,"%Li packets received (%Li bytes)", counter, bytes);
++           if ( !(counter & 0xf ) ) fprintf(stderr,"\r%Li packets received (%Li bytes)", counter, bytes);
+ 	   sendto(outfd, (void *)&c, PACKET_SIZE, 0, (struct sockaddr *) &serv_addr, sizeof(serv_addr));
+     }
+ 

@@ -1,4 +1,15 @@
-MD5 c9808d73233cf80020d0f08b4b5a60b3 vlms-0.2.2.ebuild 698
-MD5 d752b05bd2fb8e3f80c4fd8a494b719e ChangeLog 575
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5a56134ecaaaec08a03cf310a428aa01 ChangeLog 733
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
+MD5 6a975f7f1275ef1db31dd3d871e62b13 vlms-0.2.2.ebuild 813
 MD5 4b2e25eb6b6aad18af4d68e4cad32d1a files/digest-vlms-0.2.2 62
+MD5 d721233a6b3031aec0aae03ee169a349 files/0.2.2-vlf-cr-fix.patch 523
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCR0SEFdQwWVoAgN4RAi97AJ9a8ZzxCJPsFN/xepWAXjOsgheOeQCgqeCd
+sNVLRr/kxN7Y4zO3N7EhBTY=
+=SPbF
+-----END PGP SIGNATURE-----
