@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.16-r1.ebuild,v 1.3 2003/08/05 16:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.16-r1.ebuild,v 1.4 2003/09/11 01:08:23 msterret Exp $
 
 inherit eutils
 
@@ -55,7 +55,7 @@ src_install() {
 	rm ${D}/usr/bin/hmake*
 	rm ${D}/usr/bin/{harch,hi}
 	rm -rf ${D}/usr/lib/hmake
-        rm ${D}/usr/share/man/man1/hmake*
+	rm ${D}/usr/share/man/man1/hmake*
 }
 
 pkg_postinst() {

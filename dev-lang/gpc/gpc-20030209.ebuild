@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20030209.ebuild,v 1.3 2003/02/16 00:15:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20030209.ebuild,v 1.4 2003/09/11 01:08:23 msterret Exp $
 
 #inherit flag-o-matic libtool
 inherit flag-o-matic
@@ -73,24 +73,24 @@ src_compile() {
 	unset P
 
 	einfo "Configuring GCC for GPC inclusion..."
-    	${S}/configure --prefix=${LOC} \
-        	--mandir=${DATAPATH}/man \
-        	--infodir=${DATAPATH}/info \
-        	--enable-shared \
-        	--host=${CHOST} \
-        	--target=${CCHOST} \
-        	--with-system-zlib \
-        	--enable-languages=pascal \
-        	--enable-threads=posix \
-        	--enable-long-long \
-        	--disable-checking \
-        	--enable-cstdio=stdio \
-        	--enable-clocale=generic \
-        	--enable-__cxa_atexit \
-        	--enable-version-specific-runtime-libs \
-        	--with-gxx-include-dir=${STDCXX_INCDIR} \
-        	--with-local-prefix=${LOC}/local \
-        	${myconf} || die
+	${S}/configure --prefix=${LOC} \
+		--mandir=${DATAPATH}/man \
+		--infodir=${DATAPATH}/info \
+		--enable-shared \
+		--host=${CHOST} \
+		--target=${CCHOST} \
+		--with-system-zlib \
+		--enable-languages=pascal \
+		--enable-threads=posix \
+		--enable-long-long \
+		--disable-checking \
+		--enable-cstdio=stdio \
+		--enable-clocale=generic \
+		--enable-__cxa_atexit \
+		--enable-version-specific-runtime-libs \
+		--with-gxx-include-dir=${STDCXX_INCDIR} \
+		--with-local-prefix=${LOC}/local \
+		${myconf} || die
 
 	einfo "Building GPC..."
 	# Fix for our libtool-portage.patc

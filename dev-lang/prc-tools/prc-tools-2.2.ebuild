@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc. and Tim Yamin [plasmaroo@gentoo.org]
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.2.ebuild,v 1.1 2003/09/04 18:05:20 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.2.ebuild,v 1.2 2003/09/11 01:08:23 msterret Exp $
 
 DESCRIPTION="GNU-Based Palm C++ Development Suite"
 
@@ -9,8 +9,8 @@ GDB_V="gdb-5.3"
 GCC_V="gcc-2.95.3"
 PRC_X="prc-tools-20030213"
 
-      # A working patch from a non-working CVS snapshot is needed
-      # to get GDB to compile under Gentoo 1.2.x. See #23652...
+# A working patch from a non-working CVS snapshot is needed
+# to get GDB to compile under Gentoo 1.2.x. See #23652...
 
 SRC_URI="http://dl.sourceforge.net/sourceforge/prc-tools/${P}.tar.gz
 	http://prc-tools.sourceforge.net/misc/${PRC_X}.tar.gz

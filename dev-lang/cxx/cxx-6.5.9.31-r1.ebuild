@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.5 2003/09/06 22:27:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.6 2003/09/11 01:08:23 msterret Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -59,13 +59,13 @@ src_unpack() {
 
 	# :-NULL safeguards against bash bug.
 	einfo "Decrypting cxx distribution..."
-        gpg --quiet \
-                --homedir=${T} --no-permission-warning \
-                --no-mdc-warning \
-                --passphrase-fd 0 \
-                --output ${cxx_rpm} \
-                --decrypt ${DISTDIR}/${cxx_rpm}.crypt \
-                <<< ${CXX_LICENSE_KEY:-NULL}
+	gpg --quiet \
+		--homedir=${T} --no-permission-warning \
+		--no-mdc-warning \
+		--passphrase-fd 0 \
+		--output ${cxx_rpm} \
+		--decrypt ${DISTDIR}/${cxx_rpm}.crypt \
+		<<< ${CXX_LICENSE_KEY:-NULL}
 
 	ebegin "Unpacking cxx distribution..."
 	# This is the same as using rpm2targz then extracting 'cept that

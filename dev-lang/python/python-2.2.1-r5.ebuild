@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r5.ebuild,v 1.10 2003/09/06 22:27:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r5.ebuild,v 1.11 2003/09/11 01:08:24 msterret Exp $
 
 IUSE="readline tcltk berkdb bootstrap"
 
@@ -40,7 +40,7 @@ src_unpack() {
 }
 
 src_compile() {
-        filter-flags -malign-double
+	filter-flags -malign-double
 
 	if [ "${ARCH}" = "alpha" ]; then
 		CFLAGS="${CFLAGS} -fPIC"

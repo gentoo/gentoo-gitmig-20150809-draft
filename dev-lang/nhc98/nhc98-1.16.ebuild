@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.16.ebuild,v 1.5 2003/08/05 16:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.16.ebuild,v 1.6 2003/09/11 01:08:23 msterret Exp $
 
 inherit eutils
 
@@ -55,16 +55,16 @@ pkg_postinst() {
 
 	einfo "Adjusting... hmakerc"
 	MACHINE=`/usr/bin/harch`
-        /usr/bin/hmake-config \
+	/usr/bin/hmake-config \
 		/usr/lib/hmake/${MACHINE}/hmakerc add /usr/bin/nhc98
 	/usr/bin/hmake-config \
 		/usr/lib/hmake/${MACHINE}/hmakerc add nhc98 ||\
-          	einfo "(This error message is harmless)"
+		einfo "(This error message is harmless)"
 	/usr/bin/hmake-config \
 		/usr/lib/hmake/${MACHINE}/hmakerc \
 			default /usr/bin/nhc98
 	# remove temporary build version of nhc98 from config
-        /usr/bin/hmake-config \
+	/usr/bin/hmake-config \
 		/usr/lib/hmake/${MACHINE}/hmakerc \
 			delete ${S}/script/nhc98
 }

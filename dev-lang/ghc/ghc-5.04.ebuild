@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.ebuild,v 1.8 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.ebuild,v 1.9 2003/09/11 01:08:23 msterret Exp $
 
 IUSE="opengl"
 
@@ -90,8 +90,8 @@ if test -z "${GHC}"; then
 	echo I will bootstrap from HC files.
 	boot_from_hc=yes
 
-    # This is the version of our "base GHC", that is, the one we will use
-    # for the first build from Haskell source. It's the stage 1's
+	# This is the version of our "base GHC", that is, the one we will use
+	# for the first build from Haskell source. It's the stage 1's
 	# version if there is no outside GHC, or that one's version
 	# otherwise (see else clause below).
 	BASE_GHC_VERSION=${STAGE1_PV}

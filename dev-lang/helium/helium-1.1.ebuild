@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.6 2003/09/06 22:27:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.7 2003/09/11 01:08:23 msterret Exp $
 
 DESCRIPTION="Helium (for learning Haskell)"
 HOMEPAGE="http://www.cs.uu.nl/~afie/helium"
@@ -51,7 +51,7 @@ src_install() {
 	cd heliumNT/src || die
 	make prefix=${D}/usr \
 		bindir=${D}/usr/lib/helium/bin \
-        	libdir=${D}/usr/lib/helium/lib \
+		libdir=${D}/usr/lib/helium/lib \
 		demodir=${D}/usr/lib/helium/demo \
 		install || die
 	# install hint

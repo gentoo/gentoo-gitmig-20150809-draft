@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.2.5.ebuild,v 1.3 2003/09/06 22:27:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.2.5.ebuild,v 1.4 2003/09/11 01:08:24 msterret Exp $
 
 DESCRIPTION="Highly-portable Smalltalk-80 implementation"
 HOMEPAGE="http://www.squeak.org/"
@@ -14,13 +14,13 @@ IUSE="X oss mmx mozilla"
 DEPEND="virtual/glibc
 	X? ( x11-base/xfree )"
 RDEPEND="=dev-lang/squeak-vm-3.2*
-         virtual/glibc
+	virtual/glibc
 	 X? ( x11-base/xfree )"
 
 S="${WORKDIR}/Squeak-3.2-5"
 
 src_compile() {
-        local myconf=""
+	local myconf=""
 
 	use X || myconf="--without-x"
 	use oss && myconf="${myconf} --with-audio=oss"
@@ -76,7 +76,7 @@ src_install() {
 		npsqueakregister.in > npsqueakregister
 	sed 's|^ensurefile|ensurefile "${HOME}/.npsqueak/SqueakPlugin.changes" "${SQ_DIR}/npsqueak.changes"\nensurefile|' npsqueakrun.in.2 > npsqueakrun
 
-        exeinto /usr/lib/squeak
+	exeinto /usr/lib/squeak
 	doexe npsqueakregister
 	exeinto /usr/lib/squeak/3.2-5
 	doexe npsqueakrun

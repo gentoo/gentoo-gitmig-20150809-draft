@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.42.ebuild,v 1.1 2003/04/03 10:38:52 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.42.ebuild,v 1.2 2003/09/11 01:08:24 msterret Exp $
 
 IUSE=""
 
@@ -40,7 +40,7 @@ src_unpack() {
 	for i in $dirs; do
 		if test "$i" != "config" -a "$i" != ${ARCH_BOOT}; then
 			mv ${WORKDIR}/${i} ${WORKDIR}/src
-    	fi
+		fi
 	done
 
 	printf ${GEN_POSIX_NAMES_PATCH} | ed -s ${WORKDIR}/src/runtime/config/gen-posix-names.sh
