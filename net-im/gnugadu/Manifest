@@ -4,15 +4,17 @@ Hash: SHA1
 MD5 07cccd6795112b4a9914a7b69dc9e07b gnugadu-2.2.0.ebuild 1611
 MD5 c7c6f0781462ffe8129950b0f14bb4c8 gnugadu-2.0.6.ebuild 1613
 MD5 ff665d452faa6efdcadfaa7a0017662a gnugadu-2.0.5.ebuild 1613
-MD5 6850edc40b6be9333e107f6b8e5231d2 ChangeLog 3859
+MD5 04666af6f0e29327bbc09a3b6ffced81 ChangeLog 3982
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+MD5 e99195a66d9df3685277c2cae8d47dd5 gnugadu-2.2.1.ebuild 1611
 MD5 8785333b8cac4f85424dd57b133ff275 files/digest-gnugadu-2.0.5 62
 MD5 fe366f7737ad55e66f707209f6617a08 files/digest-gnugadu-2.0.6 62
 MD5 5f5efab8f464157178c4781651d220fb files/digest-gnugadu-2.2.0 62
+MD5 aaf0cb808f9d77d6e5a5e3d75806f9d1 files/digest-gnugadu-2.2.1 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBeBzBchej4aZK9/cRAicpAJ4xDEP4zx6JGjoPhvQ30WNyHT+4CQCffayf
-xHbgV9OampJWx/W/tLeSLhQ=
-=/q5E
+iD8DBQFBeloqchej4aZK9/cRAu++AJwNkhF1Jpvev8MQXFESTdf/A+L4AACfaIzz
+AyJurXsOnZ3nKyLhfaPymAs=
+=sSYS
 -----END PGP SIGNATURE-----
