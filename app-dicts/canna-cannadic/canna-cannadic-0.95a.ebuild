@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/canna-cannadic-0.95a.ebuild,v 1.3 2004/03/19 11:23:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/canna-cannadic-0.95a.ebuild,v 1.4 2004/06/01 23:19:34 agriffis Exp $
 
 inherit cannadic
 
@@ -25,7 +25,7 @@ DICSDIRFILE="${FILESDIR}/05cannadic.dics.dir"
 
 src_compile() {
 
-	if [ -n "`use canna`" ] ; then
+	if use canna ; then
 		make maindic || die
 	fi
 }
