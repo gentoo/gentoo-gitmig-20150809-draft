@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gnunet
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.14 2003/10/10 00:57:27 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.15 2004/01/14 23:11:54 mholzer Exp $
+
+*gnunet-0.6.1a (15 Jan 2004)
+
+  15 Jan 2004; Martin Holzer <mholzer@gentoo.org> gnunet-0.6.1a.ebuild:
+  Version bumped. Closes 37837
 
 *gnunet-0.6.0a (09 Oct 2003)
 
