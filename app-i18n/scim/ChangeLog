@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.1 2003/05/25 15:10:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.2 2003/06/11 00:25:44 liquidx Exp $
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> scim-0.4.1.ebuild:
+  changed useflag from gtk to gnome to signify gconf usage. (#22551)
 
 *scim-0.4.1 (25 May 2003)
 
