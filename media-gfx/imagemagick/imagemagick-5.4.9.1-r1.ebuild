@@ -1,9 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.9.1-r1.ebuild,v 1.4 2003/01/03 19:42:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.9.1-r1.ebuild,v 1.5 2003/01/22 17:33:53 mholzer Exp $
 
 inherit libtool
 inherit perl-module
+inherit flag-o-matic
+replace-flags "-march=k6-3" "-march=i586"
+replace-flags "-march=k6-2" "-march=i586"
+replace-flags "-march=k6" "-march=i586"
 
 MY_PN=ImageMagick
 MY_P=${MY_PN}-${PV%.*}-${PV#*.*.*.}

@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.26 2003/01/03 19:42:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.27 2003/01/22 17:33:53 mholzer Exp $
 
 *imagemagick-5.5.3.2 (03 Jan 2003)
 
@@ -10,6 +10,9 @@
   Version bump to latest.
 
 *imagemagick-5.4.9.1 (05 Nov 2002)
+
+  22 Jan 2003; Martin Holzer <mholzer@gentoo.org> imagemagick-5.4.7.4-r1.ebuild
+  using flag-o-magic to force i586 for k6. Closes #14343.
 
   16 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
   Added dosed's to remove -I/usr/include from the -config scripts. #11649
