@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/cpudyn-0.99.0.ebuild,v 1.1 2004/03/09 02:47:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/cpudyn-0.99.0.ebuild,v 1.2 2004/04/18 14:24:52 lv Exp $
 
 DESCRIPTION="A daemon to control laptop power consumption via cpufreq and disk standby"
 HOMEPAGE="http://mnm.uib.es/~gallir/${PN}/"
 SRC_URI="http://mnm.uib.es/~gallir/${PN}/download/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc amd64"
 IUSE=""
 S=${WORKDIR}/${PN}
 
