@@ -3,6 +3,9 @@ MD5 c8ccdb5ab7f71dde09b9603067dbc83c Net-Daemon-0.36-r1.ebuild 536
 MD5 de31c9b0b73e8fe63c7813dc2b87e1e2 Net-Daemon-0.36.ebuild 529
 MD5 798a21645a20ac1e9352bc773981d5d3 Net-Daemon-0.37.ebuild 544
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 798a21645a20ac1e9352bc773981d5d3 Net-Daemon-0.38.ebuild 544
+MD5 3dddd3f5382e318c78c847f966dd5217 .Net-Daemon-0.38.ebuild.swp 12288
 MD5 9369c0b110db55b481c73d2a6c95767f files/digest-Net-Daemon-0.36 66
 MD5 4002082d67a56eb054de657960d580a7 files/digest-Net-Daemon-0.36-r1 134
 MD5 5815baff389f4302b61bb3704594263e files/digest-Net-Daemon-0.37 66
+MD5 32a7d3ae277afff805b5641a8d9e98cf files/digest-Net-Daemon-0.38 66
