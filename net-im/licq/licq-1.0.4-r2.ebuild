@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r2.ebuild,v 1.6 2002/07/17 09:08:09 seemant Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r2.ebuild,v 1.7 2002/07/27 13:54:45 danarmak Exp $
 use kde && inherit kde-base
 
 S=${WORKDIR}/${P}
@@ -12,7 +11,7 @@ DEPEND="${DEPEND}
 	qt?  ( >=x11-libs/qt-2.2.0 )"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="2"
 KEYWORDS="x86"
 
 use kde && need-kde 2.1
