@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.4.1-r7.ebuild,v 1.3 2005/01/02 15:34:38 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.4.1-r7.ebuild,v 1.4 2005/01/03 01:49:46 ribosome Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="The Staden Package - Biological sequence handling and analysis"
 HOMEPAGE="http://staden.sourceforge.net/"
@@ -55,10 +55,7 @@ src_unpack() {
 
 	# The following Makefiles are more or less broken. Libraries are missing,
 	# or their directories are not included, or the variables are not set
-	# correctly and must be replaced by hardcoded library names. The
-	# top-level Makefile is also changed to avoid compiling documentation
-	# (which is provided prebuilt because of numerous compilation/dead links
-	# problems).
+	# correctly and must be replaced by hardcoded library names.
 	cd ${S}
 	einfo "Patching Staden Package Makefiles:"
 	epatch ${FILESDIR}/${P}-top.patch
@@ -69,22 +66,15 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-tracediff.patch
 	cd ${S}/src/mk
 	# Remove the "-fpic" flag. This will be replaced by "-fPIC".
-	sed -i -e 's/SHLIB_CFLAGS		= -fpic/SHLIB_CFLAGS		= /' linux.mk \
-		&& einfo "Successfully applied sed script to patch linux.mk." \
-		|| eerror "Failed to apply sed script to patch linux.mk."
+	sed -i -e 's/SHLIB_CFLAGS		= -fpic/SHLIB_CFLAGS		= /' linux.mk
 	cd ${S}/src/mutlib
 	cd ${S}
 	echo
-
 
 	einfo "Patching Staden Package code:"
 
 	# "getopt" is incorrectly included as an extern (for Win32 compatibility).
 	epatch ${FILESDIR}/${P}-getopt.patch
-
-	# The "create_emboss_files" program needs more flexibility to respect the
-	# Gentoo FSH.
-	epatch ${FILESDIR}/${P}-emboss.patch
 
 	# The original iwidgetsrc crashes...
 	einfo 'Replacing broken iwidgetsrc'
@@ -104,29 +94,21 @@ src_unpack() {
 
 	# Documentation build process cannot find "update-nodes.el".
 	cd ${S}/doc/manual/tools
-	sed -i -e 's%emacs -batch $1 -l ${DOCDIR:-.}/tools/update-nodes.el%emacs -batch $1 -l ${DOCDIR:-..}/manual/tools/update-nodes.el%' update-nodes \
-		&& einfo "Successfully applied sed script to patch update-nodes." \
-		|| eerror "Failed to apply sed script to patch update-nodes."
+	sed -i -e 's%emacs -batch $1 -l ${DOCDIR:-.}/tools/update-nodes.el%emacs -batch $1 -l ${DOCDIR:-..}/manual/tools/update-nodes.el%' update-nodes
 
 	# Perl scripts search for "pearl" in "/usr/local".
 	for SCRIPT in *.pl texi2html; do
-		sed -i -e 's%/usr/local/bin/perl%/usr/bin/perl%' ${SCRIPT} \
-			&& einfo "Successfully applied sed script to patch ${SCRIPT}." \
-			|| eerror "Failed to apply sed script to patch ${SCRIPT}."
+		sed -i -e 's%/usr/local/bin/perl%/usr/bin/perl%' ${SCRIPT}
 	done
 
 	# The "convert" tool from Imagemagick is searched for in "/usr/X11R6".
-	sed -i -e 's%/usr/X11R6/bin/convert%/usr/bin/convert%' make_ps \
-		&& einfo "Successfully applied sed script to patch make.ps." \
-		|| eerror "Failed to apply sed script to patch make.ps."
+	sed -i -e 's%/usr/X11R6/bin/convert%/usr/bin/convert%' make_ps
 
 	# Solves issues with images in the exercise* texi files.
 	cd ${S}/course/texi
 	for FILE in exercise*.texi; do
 		sed -i -e 's/,,8in}/,,8in,,eps}/' ${FILE} && \
-			sed -i -e 's/,6in}/,6in,,,eps}/' ${FILE} \
-			&& einfo "Successfully applied sed scripts to patch ${FILE}." \
-			|| eerror "Failed to apply sed scripts to patch ${FILE}."
+			sed -i -e 's/,6in}/,6in,,,eps}/' ${FILE}
 	done
 	echo
 
@@ -134,12 +116,8 @@ src_unpack() {
 	# system global Makefile. We also want only "-fPIC" shared libraries.
 	einfo "Applying user-defined compilation/linking flags:"
 	cd ${S}/src/mk
-	sed -i -e "s/COPT		= -O2 -g3 -DNDEBUG/COPT = ${CFLAGS:-"-O2 -g3 -DNDEBUG"} -fPIC/" global.mk \
-		&& einfo "Successfully applied sed script to set CFLAGS." \
-		|| eerror "Failed to apply sed script to set CFLAGS."
-	sed -i -e "s/FOPT		= -O2 -g3 -DNDEBUG/FOPT = ${FFLAGS:-"-O2 -g3 -DNDEBUG"} -fPIC/" global.mk \
-		&& einfo "Successfully applied sed script to set FFLAGS." \
-		|| eerror "Failed to apply sed script to set FFLAGS."
+	sed -i -e "s/COPT		= -O2 -g3 -DNDEBUG/COPT = ${CFLAGS:-"-O2 -g3 -DNDEBUG"} -fPIC/" global.mk
+	sed -i -e "s/FOPT		= -O2 -g3 -DNDEBUG/FOPT = ${FFLAGS:-"-O2 -g3 -DNDEBUG"} -fPIC/" global.mk
 }
 
 src_compile() {
@@ -159,9 +137,9 @@ src_compile() {
 		MACHINE="linux" \
 		JOB="all" \
 		O="linux-binaries" \
-		CC=$(gcc-getCC) \
-		CXX=$(gcc-getCXX) \
-		F77=${F77:-g77} \
+		CC=$(tc-getCC) \
+		CXX=$(tc-getCXX) \
+		F77=g77 \
 		|| die "Package compilation failed."
 
 	# Build documentation.
@@ -172,10 +150,10 @@ src_compile() {
 		MACHINE="linux" \
 		JOB="all" \
 		O="linux-binaries" \
-		CC=$(gcc-getCC) \
-		CXX=$(gcc-getCXX) \
-		F77=${F77:-g77} \
-		|| die "Package compilation failed."
+		CC=$(tc-getCC) \
+		CXX=$(tc-getCXX) \
+		F77=g77 \
+		|| die "Document compilation failed."
 
 	# Moves executables in "${S}/linux-bin" and libraries to ${S}/lib.
 	cd ${S}
@@ -216,12 +194,12 @@ src_compile() {
 	ln -s /usr/$(get_libdir)/libitcl3.2.so ${S}/lib/itcl3.3/libitcl3.3.so
 	ln -s /usr/$(get_libdir)/libitk3.2.so ${S}/lib/itk3.3/libitk3.3.so
 
-	# Remove the prebuilt EMBOSS tcl/tk GUIs.
+	# Remove the broken prebuilt EMBOSS tcl/tk GUIs.
 	rm ${S}/tables/emboss_menu
 	rm -r ${S}/lib/spin2_emboss/acdtcl
 	rm -r ${S}/lib/spin_emboss/acdtcl
 
-	# Patch just built hypertext documentation.
+	# Patch hypertext documentation.
 	cd ${S}/doc/manual
 	for FILE in *.html; do
 		sed -i -e 's%<a href="../staden_home.html"><img src="i/nav_home.gif" alt="home"></a>%%' ${FILE}

@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/staden
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/ChangeLog,v 1.4 2005/01/02 15:34:38 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/ChangeLog,v 1.5 2005/01/03 01:49:46 ribosome Exp $
+
+  02 Jan 2005; Olivier Fisette <ribosome@gentoo.org>
+  -files/staden-1.4.1-emboss.patch, staden-1.4.1-r7.ebuild:
+  Use the toolchain-funcs rather than the gcc eclass. Removed useless patch.
 
   02 Jan 2005; Olivier Fisette <ribosome@gentoo.org> staden-1.4.1-r7.ebuild:
   Added to x86.
