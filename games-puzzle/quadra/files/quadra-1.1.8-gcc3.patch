@@ -69,3 +69,15 @@ diff -urN quadra-1.1.8/source/quadra.cpp quadra-1.1.8-kacsa/source/quadra.cpp
  				msgbox("Exception caught from ecran->draw_zone(): %s\n", e->what());
  			}
  
+--- quadra-1.1.8/source/net_server.cpp.orig	2004-01-29 04:44:28.493992136 -0500
++++ quadra-1.1.8-herpies/source/net_server.cpp	2004-01-29 04:44:47.181151256 -0500
+@@ -406,7 +406,8 @@
+ 			if(game->server_max_players && game->net_list.size() >= game->server_max_players)
+ 				playeraccepted.accepted = 5; // game is full, can't join
+ 			if(game->server_max_teams && game->net_list.count_teams() >= game->server_max_teams) {
+-				for(unsigned i=0; i<MAXPLAYERS; ++i) {
++				unsigned i;
++				for(i=0; i<MAXPLAYERS; ++i) {
+ 					Canvas* c=game->net_list.get(i);
+ 					if(c && c->color==p->team)
+ 						break;
