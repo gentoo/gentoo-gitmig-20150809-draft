@@ -1,0 +1,55 @@
+diff -ur kdesdk-3.3.0/kbabel/kbabel/kbhighlighting.cpp kdesdk-3.3.0_patched/kbabel/kbabel/kbhighlighting.cpp
+--- kdesdk-3.3.0/kbabel/kbabel/kbhighlighting.cpp	2004-08-05 21:27:09.000000000 +0200
++++ kdesdk-3.3.0_patched/kbabel/kbabel/kbhighlighting.cpp	2004-08-29 18:06:57.000000000 +0200
+@@ -67,6 +67,7 @@
+ 
+ void KBabelHighlighter::highlight( )
+ {
++  kdDebug(KBABEL) << this << ": Highlight started" << endl;
+   // no updates while we're highlighting
+   _edit->blockSignals( true );
+   _edit->setUpdatesEnabled( false );
+@@ -140,6 +141,8 @@
+   _edit->blockSignals( false );
+   _edit->updateContents( );
+   _edit->ensureCursorVisible();
++
++  kdDebug(KBABEL) << this << ": Highlight finished" << endl;
+ }
+ 
+ void KBabelHighlighter::doHighlighting( HighlightType type, int pos, int length )
+diff -ur kdesdk-3.3.0/kbabel/kbabel/mymultilineedit.cpp kdesdk-3.3.0_patched/kbabel/kbabel/mymultilineedit.cpp
+--- kdesdk-3.3.0/kbabel/kbabel/mymultilineedit.cpp	2004-05-22 22:58:49.000000000 +0200
++++ kdesdk-3.3.0_patched/kbabel/kbabel/mymultilineedit.cpp	2004-08-29 18:08:53.000000000 +0200
+@@ -561,6 +561,7 @@
+                 _diffAddColor(Qt::darkGreen),
+                 _diffDelColor(Qt::darkRed),
+ 		_currentUnicodeNumber(0),
++		highlighter(0),
+ 		_tagStartPara(0), _tagStartIndex(0), _tagEndPara(0), _tagEndIndex(0)
+ {
+    diffPos.setAutoDelete(true);
+@@ -594,6 +595,12 @@
+    connect( this, SIGNAL( textChanged() ), this, SLOT( emittedTextChanged() ) );
+ }
+ 
++MsgMultiLineEdit::~MsgMultiLineEdit ()
++{
++	if(highlighter)
++		delete highlighter;
++}
++
+ void MsgMultiLineEdit::setText(const QString& s)
+ {
+     QString str = s;
+diff -ur kdesdk-3.3.0/kbabel/kbabel/mymultilineedit.h kdesdk-3.3.0_patched/kbabel/kbabel/mymultilineedit.h
+--- kdesdk-3.3.0/kbabel/kbabel/mymultilineedit.h	2004-05-22 22:58:49.000000000 +0200
++++ kdesdk-3.3.0_patched/kbabel/kbabel/mymultilineedit.h	2004-08-29 18:09:31.000000000 +0200
+@@ -144,6 +144,7 @@
+    enum TextColor { NormalColor, ErrorColor };
+ 
+    MsgMultiLineEdit(int ID, KSpell* spell=0, QWidget* parent=0,const char* name=0);
++   virtual ~MsgMultiLineEdit();
+ 
+    /** is displaying surrounding quotes enabled? */
+    bool quotes() const { return _quotes;}
