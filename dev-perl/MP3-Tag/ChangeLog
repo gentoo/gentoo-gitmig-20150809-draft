@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/MP3-Tag
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.1 2004/10/20 03:50:41 eradicator Exp $
+
+*MP3-Tag-0.94 (19 Oct 2004)
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +MP3-Tag-0.94.ebuild:
+  Added to portage for bpmdj RDEPEND.
+
