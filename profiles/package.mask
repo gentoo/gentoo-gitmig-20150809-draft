@@ -177,7 +177,7 @@ net-misc/gupsc
 app-admin/gwcc
 gnome-extra/libgda
 gnome-extra/libole2
-gnome-extra/librsvg
+gnome-base/librsvg
 dev-libs/libunicode
 dev-libs/libxml
 dev-libs/libxml2
