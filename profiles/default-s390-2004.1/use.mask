@@ -65,3 +65,5 @@ solid
 sybase
 sybase-ct
 fdftk
+gtk
+gtk2
