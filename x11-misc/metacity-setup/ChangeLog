@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/metacity-setup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/metacity-setup/ChangeLog,v 1.12 2003/02/12 09:30:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/metacity-setup/ChangeLog,v 1.13 2003/07/09 17:17:18 liquidx Exp $
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org>
+  metacity-setup-0.7.1-r1.ebuild:
+  added pkgconfig deps
 
   23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
   Fix glib and gtk+ deps, as it works with versions 2.2.0 ...
