@@ -17,13 +17,13 @@ MD5 0a9bf5ed8bd319f635be39d5a0d93da7 gentoo-dev-sources-2.6.7-r14.ebuild 1401
 MD5 6110a95b1e2c55d3974bfa63b3628669 gentoo-dev-sources-2.6.9-r12.ebuild 1616
 MD5 2b4740847685e1f591c391225e56c198 gentoo-dev-sources-2.6.9-r6.ebuild 1540
 MD5 c4cdbf548f6c74581afc24ce8bc443d5 gentoo-dev-sources-2.6.9-r1.ebuild 1399
-MD5 bea30dbcb17326953b4ab0e356406cbf gentoo-dev-sources-2.6.10-r4.ebuild 1598
+MD5 a800eef65228cb7000a1b5b3d0ae0438 gentoo-dev-sources-2.6.10-r4.ebuild 1597
 MD5 9440372e5aca222ba16252a968a9ce84 gentoo-dev-sources-2.6.9-r8.ebuild 1541
 MD5 6f05344dd430dac697417cafa31d017b gentoo-dev-sources-2.6.9-r3.ebuild 1555
 MD5 f1a6a754557b365205727128a224e9d0 gentoo-dev-sources-2.6.10-r1.ebuild 2082
 MD5 90ac8e777c8edbe8c41e0c285f4e4bf6 gentoo-dev-sources-2.6.9-r11.ebuild 1604
 MD5 7cf2f47c612ca7b40f3cf91a06629e12 gentoo-dev-sources-2.6.9-r5.ebuild 1543
-MD5 dcc792f5125bb321825e138c12f8f677 ChangeLog 34172
+MD5 862ff5be808b0b86ee75fc30c2808c2d ChangeLog 34273
 MD5 65fdf499c51b16c0d9c52dd05b569e44 gentoo-dev-sources-2.6.8-r3.ebuild 1402
 MD5 1b8c89170c8fd1603b5f09adfa0ed5e9 metadata.xml 549
 MD5 1e38e19a9a40233417a80e2831eff637 gentoo-dev-sources-2.6.10-r3.ebuild 1598
@@ -57,7 +57,7 @@ MD5 980949de52189c7d9c1d791b7f5cc27e files/2.6-do_munmap.patch 743
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB4IJPiJcSIUGNthERAvuSAJ4p4XfM9rUapg4bvwOucTJl3htccACgr7G9
-ucT5cJlo3T+HTlYCEO3O6N0=
-=zZis
+iD8DBQFB4XQYiJcSIUGNthERAjyBAJ4l2iGAYTrzx4kW2mdyIBIewPimBACfWSSE
+FqDD6JLr0i2JrMoJ7agTUh0=
+=UPIi
 -----END PGP SIGNATURE-----
