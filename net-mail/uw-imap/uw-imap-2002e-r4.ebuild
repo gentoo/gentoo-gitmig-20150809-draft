@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r4.ebuild,v 1.6 2004/10/31 19:06:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r4.ebuild,v 1.7 2004/11/24 09:28:34 ticho Exp $
 
 MY_P=imap-${PV}
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.washington.edu/imap/"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc hppa alpha ~amd64"
-IUSE="ssl mbox pic kerberos"
+IUSE="ssl pic kerberos"
 
 PROVIDE="virtual/imapd"
 PROVIDE="${PROVIDE} virtual/imap-c-client"

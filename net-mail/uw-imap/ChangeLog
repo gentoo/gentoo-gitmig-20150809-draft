@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.39 2004/10/31 19:06:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.40 2004/11/24 09:28:34 ticho Exp $
+
+  24 Nov 2004; Andrej Kacian <ticho@gentoo.org> uw-imap-2002e-r4.ebuild,
+  uw-imap-2004a.ebuild:
+  Removed mbox USE flag from 2002e-r4 and 2004a, as it is not used at all.
+  Inherit flag-o-matic.
 
   31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   uw-imap-2002e-r4.ebuild:
