@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/ntlmaps/ntlmaps-0.9.8.ebuild,v 1.3 2004/10/02 17:18:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/ntlmaps/ntlmaps-0.9.8.ebuild,v 1.4 2004/10/31 05:32:34 vapier Exp $
 
 inherit eutils
 
@@ -11,10 +11,12 @@ SRC_URI="mirror://sourceforge/ntlmaps/${MY_P_URL}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~arm ~ppc ~x86 ~alpha"
+KEYWORDS="~alpha ~arm ~ia64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-1.5"
+RDEPEND=">=dev-lang/python-1.5"
+DEPEND="${RDEPEND}
+	>=sys-apps/portage-2.0.51"
 
 S=${WORKDIR}/${MY_P_URL}
 
@@ -29,14 +31,12 @@ src_install() {
 	exeinto /usr/${PN}
 	doexe main.py || die
 	insinto /usr/${PN}/lib
-	doins lib/*
+	doins lib/* || die
 
 	dodoc Install.txt changelog.txt readme.txt research.txt
 	insinto /usr/share/doc/${P}/doc
 	doins doc/*
 
-	insinto /etc/conf.d
-	newins ${S}/server.cfg ${PN}.cfg
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PN}.init ${PN}
+	newconfd ${S}/server.cfg ${PN}
+	newinitd ${FILESDIR}/${PN}.init ${PN}
 }
