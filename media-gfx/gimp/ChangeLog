@@ -1,14 +1,22 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.3 2002/02/15 04:33:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.4 2002/02/23 01:56:44 drobbins Exp $
 
+*gimp-1.2.3-r2 (22 Feb 2002)
+
+  22 Feb 2002; Daniel Robbins <drobbins@gentoo.org> added gimptool symlink, 
+  closing bug #810.
+  
+*gimp-1.2.3-r1 (15 Feb 2002)
+  
   15 Feb 2002; Martin Schlemmer <azarah@gentoo.org> gimp-1.2.3-r1.build:
 
   Fix /usr/bin/gimp symlink.
 
 *gimp-1.2.3 (14 Feb 2002)
 
-  14 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog digest/digest-gimp-1.2.3 gimp-1.2.3.ebuild files/gimp-1.2.3-gentoo.diff:
+  14 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog
+  digest/digest-gimp-1.2.3 gimp-1.2.3.ebuild files/gimp-1.2.3-gentoo.diff:
 
   New upstream version.
 
