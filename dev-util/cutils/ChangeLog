@@ -1,0 +1,17 @@
+# ChangeLog for dev-util/cutils
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.1 2002/08/03 04:19:45 george Exp $
+
+*cutils-1.6 (01 Aug 2002)
+
+  1 Aug 2002; George Shapovalov <george@gentoo.org> cutils-1.6.ebuildi, cutils-1.6-gentoo.diff :
+
+  initial release
+  
+  The C language utilities collection is composed of: cdecl and cundecl (decode
+  and encode C type declarations), cobfusc (make a C source file unreadable but
+  compilable), chilight (highlight C source files), cunloop (unloop C loops),
+  yyextract (extract grammar rules from yacc grammar), and yyref (generate a
+  cross-reference for yacc input).
+
+  ebuild submitted by: Marius Bernklev <mariube@unixcore.com>
