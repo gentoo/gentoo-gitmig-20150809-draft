@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.8 2004/01/18 22:55:43 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.9 2004/02/10 20:02:32 lostlogic Exp $
+
+*reiserfsprogs-3.6.12 (10 Feb 2004)
+
+  10 Feb 2004; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.12.ebuild:
+  Bump
 
   18 Jan 2004; <tuxus@gentoo.org> reiserfsprogs-3.6.9.ebuild:
   Added ~mips to KEYWORDS.
