@@ -7,7 +7,7 @@ SRC_URI="http://unc.dl.sourceforge.net/sourceforge/plptools/${P}.tar.gz"
 LICENSE="as-is"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 DEPEND="virtual/glibc"
 S="${WORKDIR}/${P}"
 
