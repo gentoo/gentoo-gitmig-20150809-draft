@@ -12,9 +12,8 @@ KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="${RDEPEND}
 	>=dev-java/ant-1.5.3
-	>=sys-apps/sh-utils-2.0.15
 	>=sys-apps/findutils-4.1.7
-	>=app-shells/tcsh-6.12"
+	>=app-shells/tcsh-6.11"
 
 # removed since the bin lives in /opt and this in /usr
 #	!dev-util/eclipse-platform-bin
@@ -209,6 +208,7 @@ src_install() {
 		fi
 	fi
 
+	insinto /usr/lib/eclipse
 	doins plugins/org.eclipse.platform/.eclipseproduct
 
 	cp -dpR features icon.xpm plugins splash.bmp startup.jar \
