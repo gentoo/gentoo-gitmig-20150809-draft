@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvorakng
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.1 2003/08/27 21:03:00 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.2 2003/10/08 12:16:06 hillster Exp $
+
+  08 Oct 2003; Joel Hill <hillster@gentoo.org> dvorakng-0.6.0.ebuild:
+  cleanup, marking stable
 
 *dvorakng-0.6.0 (27 Aug 2003)
 
