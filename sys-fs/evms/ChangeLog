@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/evms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.21 2004/09/03 19:16:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.22 2004/09/20 15:28:36 eradicator Exp $
+
+*evms-2.4.0 (20 Sep 2004)
+
+  20 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> +evms-2.4.0.ebuild:
+  Version bump, and get_libdir support.  This version fixes the
+  problem in 2.3.x where you could not use evmsn to format your
+  volumes.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   evms-1.2.1-r1.ebuild, evms-2.2.2.ebuild, evms-2.3.2-r1.ebuild,
