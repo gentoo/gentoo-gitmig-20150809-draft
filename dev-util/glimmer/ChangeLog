@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/glimmer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/ChangeLog,v 1.5 2002/08/13 14:59:43 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/ChangeLog,v 1.6 2002/09/08 18:23:45 styx Exp $
+
+*glimmer-1.2.1-r4 (8 Sep 2002)
+
+  9 Sep 2002; Joachim Blaabjerg <styx@gentoo.org> glimmer-1.2.1-r4.ebuild :
+
+  Can't this god damn package stop hunting me? ;) Fixed another sandbox 
+  violation, and removed a couple of old revisions.
 
 *glimmer-1.2.1-r3 (13 Aug 2002)
 
