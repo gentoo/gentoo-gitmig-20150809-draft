@@ -1,12 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9_pre26.ebuild,v 1.1 2003/01/08 19:10:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9_pre26.ebuild,v 1.2 2003/01/09 22:46:47 mholzer Exp $
 
 MY_P="${P/_/}"
 DESCRIPTION="Great Video editing/encoding tool"
 HOMEPAGE="http://fixounet.free.fr/avidemux/"
-SRC_URI="http://fixounet.free.fr/avidemux/${MY_P}.tgz
-	 http://fixounet.free.fr/avidemux/ADM_vidFont.cpp.diff.gz"
+SRC_URI="http://fixounet.free.fr/avidemux/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -27,7 +26,7 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${MY_P}.tgz || die
-	gunzip -c ${DISTDIR}/ADM_vidFont.cpp.diff.gz | patch ${S}/avidemux/ADM_video/ADM_vidFont.cpp || die
+	gunzip -c ${FILESDIR}/ADM_vidFont.cpp.diff.gz | patch ${S}/avidemux/ADM_video/ADM_vidFont.cpp || die
 }
 
 src_compile() {
