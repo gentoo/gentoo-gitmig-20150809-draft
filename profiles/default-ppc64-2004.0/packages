@@ -57,7 +57,7 @@
 *sys-apps/less
 *sys-apps/net-tools
 *sys-apps/xinetd
-*sys-apps/mac-fdisk
+*sys-fs/mac-fdisk
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/pam-login

@@ -49,7 +49,7 @@
 *sys-apps/hdparm
 *sys-apps/kbd
 *sys-apps/less
-*sys-apps/mac-fdisk
+*sys-fs/mac-fdisk
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/net-tools

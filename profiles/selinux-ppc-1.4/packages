@@ -82,7 +82,7 @@
 *sys-apps/kbd
 *sys-apps/less
 *sys-apps/net-tools
-*sys-apps/mac-fdisk
+*sys-fs/mac-fdisk
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/sed

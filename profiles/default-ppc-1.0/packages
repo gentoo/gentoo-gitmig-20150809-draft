@@ -85,7 +85,7 @@ sys-apps/sysklogd
 #*app-editors/vim # Vim emerges xfree ... this sucks
 *sys-fs/hfsutils
 *virtual/bootloader
-*sys-apps/mac-fdisk
+*sys-fs/mac-fdisk
 *app-shells/sash
 *dev-lang/perl
 *dev-perl/ExtUtils-MakeMaker
