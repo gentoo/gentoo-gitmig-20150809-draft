@@ -1,7 +1,9 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.18 2002/12/03 15:00:29 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.19 2002/12/04 19:29:48 foser Exp $
 
+  04 Dec 2002; foser <foser@gentoo.org> gnome-session-2.0.9.ebuild :
+  Changed default config to not show the disfunctional logout dialog anymore
 
 *gnome-session-2.0.9 (16 Nov 2002)
   

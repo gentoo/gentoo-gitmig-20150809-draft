@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.9.ebuild,v 1.2 2002/12/01 18:06:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.9.ebuild,v 1.3 2002/12/04 19:29:48 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="the Gnome2 session manager"
@@ -29,6 +29,12 @@ DEPEND="${RDEPEND}
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
 
 DOC="AUTHORS COPY* README HACKING INSTALL NEWS TODO ChangeLog"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch ${FILESDIR}/${PN}-2.0-defaults.patch
+}
 
 src_install() {
 	gnome2_src_install
