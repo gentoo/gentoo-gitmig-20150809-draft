@@ -1,6 +1,9 @@
 # ChangeLog for net-www/privoxy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.12 2003/06/09 23:21:00 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.13 2003/06/11 20:25:07 avenj Exp $
+
+  11 Jun 2003; Jon Portnoy <avenj@gentoo.org> privoxy-3.0.2.ebuild :
+  Removed textbrowser dependency to fix bug #20265.
 
   09 Jun 2003; <msterret@gentoo.org> privoxy-3.0.0.ebuild,
   privoxy-3.0.2.ebuild:
