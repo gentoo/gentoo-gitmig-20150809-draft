@@ -1,0 +1,61 @@
+#!/bin/sh
+#RCUPDATE:1 2 3 4 5:19:This line is required for script management
+
+klog="/usr/sbin/klogd"
+slog="/usr/sbin/syslogd"
+
+. /etc/rc.d/config/functions
+. /etc/rc.d/config/basic
+
+SERVICE=sysklogd
+opts="start stop restart reconfig"
+
+start() {
+    ebegin "Starting syslogd, klogd"
+    start-stop-daemon --start --exec $slog -- $SYSLOGD 1>&2
+    retval=$?
+    start-stop-daemon --start --exec $klog -- $KLOGD 1>&2
+    retval=$(( $retval + $? ))
+    eend $retval 
+}
+
+stop() {
+    ebegin "Stopping klogd, syslogd"
+    start-stop-daemon --stop --pidfile /var/run/klogd.pid 1>&2
+    retval=$?
+    start-stop-daemon --stop --pidfile /var/run/syslogd.pid 1>&2
+    retval=$(( $retval + $? ))
+    eend $retval 
+}
+supervise_start() {
+    ebegin "Starting supervised syslog and klog"
+    local retval
+	local x
+	retval=0
+
+	for x in klog syslog
+	do
+		/usr/bin/svc -u /etc/svc.d/control/${x}
+		retval=$(( $? + $retval ))
+	done
+    eend $retval
+}
+
+supervise_stop() {
+    ebegin "Stopping supervised syslog and klog"
+   	/usr/bin/svc -d /etc/svc.d/control/klog /etc/svc.d/control/syslog
+    eend $?
+}
+
+restart() {
+
+    stop
+    start
+
+}
+
+
+doservice ${@}
+
+
+

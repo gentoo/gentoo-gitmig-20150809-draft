@@ -2,24 +2,65 @@
 #RCUPDATE:2 3 4:75:This line is required for script management
 
 . /etc/rc.d/config/functions
+. /etc/rc.d/config/basic
 
-SERVICE="supervised OpenSSH"
+SERVICE="OpenSSH"
 opts="start stop restart"
 
 PIDFILE=/var/run/sshd.pid
 EXE=/usr/sbin/sshd
 
+if [ "`supervised`" ]
+then
+  echo "Super"
+else
+  echo "$SUPERVISE"
+  echo $0
+fi
+
+gen_keys() {
+
+  	if [ ! -e /etc/ssh/ssh_host_key ] ; then
+  		  einfo "Generate Hostkey..."
+		  /usr/bin/ssh-keygen -b 1024 -f /etc/ssh/ssh_host_key -N ''
+		fi
+
+		if [ ! -e /etc/ssh/ssh_host_dsa_key ] ; then
+		  einfo "Generate DSA-Hostkey..."
+		  /usr/bin/ssh-keygen -d -f /etc/ssh/ssh_host_dsa_key -N ''
+        fi
+
+}
+
 start() {
+                gen_keys
 
 		ebegin "Starting $SERVICE..."
-		/usr/bin/svc -u /etc/svc.d/control/sshd 
+     		start-stop-daemon --start --quiet --exec $EXE
 		eend $? "Started $SERVICE." "Error Starting $SERVICE."
 }
 
 stop() {
+
 		ebegin "Stopping $SERVICE..."
-		/usr/bin/svc -d /etc/svc.d/control/sshd
+		start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
 		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+}
+
+supervise_start() {
+
+                gen_keys
+
+		ebegin "Starting $SERVICE supervised..."
+		/usr/bin/svc -u /etc/svc.d/control/sshd
+		eend $? "Started $SERVICE." "Error Starting $SERVICE supervised."
+}
+
+supervise_stop() {
+
+		ebegin "Stopping $SERVICE supervised..."
+		/usr/bin/svc -d /etc/svc.d/control/sshd
+		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE supervised."
 }
 
 restart() {
@@ -28,5 +69,8 @@ restart() {
 }
 
 doservice ${@}
+
+
+
 
 
