@@ -33,7 +33,7 @@
 # <hanno@gentoo.org> (7 Oct 2003)
 # Old and broken cvs-releases of sidplay, to be removed soon.
 # sidplay-libs-2.1.0 and sidplay-2.0.8 should replace everything
-media-libs/libsidplay
+=media-libs/libsidplay-2.1.0.20021111
 media-libs/resid-builder
 media-sound/libsidutils
 =media-sound/sidplay-2.0.8.20021111
