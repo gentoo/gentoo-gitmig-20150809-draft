@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.60.1.ebuild,v 1.3 2003/02/13 09:35:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.60.1.ebuild,v 1.4 2003/06/20 01:20:46 msterret Exp $
 
 S=${WORKDIR}/docbook-xsl-${PV}
 DESCRIPTION="XSL Stylesheets for Docbook"
@@ -15,29 +15,33 @@ KEYWORDS="~x86 ~hppa"
 
 src_install() {
 	DEST="/usr/share/sgml/docbook/xsl-stylesheets-${PV}"
-	dodir ${DEST}
-	dodir /usr/share/doc/${P}
+	dodir ${DEST} /usr/share/doc/${P}
+
 	cp -af doc ${D}/usr/share/doc/${P}/html
 	cp VERSION ${D}/${DEST}
 
 	for i in common extensions fo html htmlhelp images javahelp lib template xhtml
 	do
 		cd ${S}
-		cp -af ${i} ${D}/${DEST} 
+		cp -af ${i} ${D}/${DEST}
 		cd ${D}/${DEST}/${i}
 
 		for j in ChangeLog LostLog README
 		do
 			if [ -e ${j} ]
 			then
-				mv ${j} ${D}/usr/share/doc/${P}/${j}.${i} 
+				mv ${j} ${D}/usr/share/doc/${P}/${j}.${i}
 	   		fi
 		done
 	done
 
-	prepalldocs
 	cd ${S}
 	dodoc BUGS TODO WhatsNew
+
+	# Only a few things in /usr/share/doc make sense to compress.
+	# Everything else needs to be uncompressed to be useful. (bug 23048)
+	find ${D}/usr/share/doc/${P} -name "ChangeLog" -exec gzip -f -9 \{\} \;
+	gzip -f -9 ${D}/usr/share/doc/${P}/{README,ChangeLog,LostLog}.*
 
 	dodir /etc/xml
 }
@@ -73,15 +77,12 @@ pkg_postinst() {
 	/usr/bin/xmlcatalog --noout --add "rewriteURI" \
 			"http://docbook.sourceforge.net/release/xsl/current" \
 			"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
-
 }
 
 pkg_postrm() {
 	CATALOG=/etc/xml/catalog
 
 	# Let's clean up after ourselves.
-
 	/usr/bin/xmlcatalog --noout --del \
 		"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
-
 }
