@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/qlogtools
+# ChangeLog for net-mail/nullmailer
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/ChangeLog,v 1.1 2003/08/01 09:17:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/ChangeLog,v 1.2 2003/08/03 06:49:32 vapier Exp $
 
 *nullmailer-1.00_rc7 (01 Aug 2003)
 
