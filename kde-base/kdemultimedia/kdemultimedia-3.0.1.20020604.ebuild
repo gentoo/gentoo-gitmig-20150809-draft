@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.1.20020604.ebuild,v 1.2 2002/06/08 16:24:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.1.20020604.ebuild,v 1.3 2002/06/10 19:56:23 danarmak Exp $
 
 inherit kde-patch kde-dist
 
@@ -28,7 +28,7 @@ myconf="$myconf --enable-xaw --enable-ncurses"
 
 #use alsa	&& myconf="$myconf --with-alsa --with-arts-alsa" && myaudio="$myaudio,alsa" ||
 myconf="$myconf --without-alsa --disable-alsa"
-use nas		&& myaudio="$myaudio,nas"					|| myconf="$myconf --disable-nas"
+use nas		&& myaudio="$myaudio,nas --with-nas-library=/usr/X11R6/lib/libaudio.so --with-nas-includes=/usr/X11R6/include" || myconf="$myconf --disable-nas"
 use esd		&& myaudio="$myaudio,esd"					|| myconf="$myconf --disable-esd"
 use motif	&& myinterface="$myinterface,motif" && myconf="$myconf --enable-motif"
 use gtk		&& myinterface="$myinterface,gtk"   && myconf="$myconf --enable-gtk"

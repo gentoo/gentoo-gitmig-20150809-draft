@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.6 2002/05/26 16:23:53 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.7 2002/06/10 19:56:23 danarmak Exp $
+
+  10 Jun 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  
+  Pass the correct parameters to configure to enable it to find NAS.
 
 *kdemultimedia-3.0.1 (24 May 2002)
 
