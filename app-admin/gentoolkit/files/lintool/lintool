@@ -346,6 +346,7 @@ def parse_opts(argv):
               'showFullStatus': 0,
               'showShort': 1,
               'listTests': 0
+	      'desiredTests': 0
             }
 
   opts = (('', 'show-separate',
