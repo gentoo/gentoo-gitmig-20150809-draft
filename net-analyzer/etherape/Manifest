@@ -1,6 +1,7 @@
 MD5 bebb737316bd844f8a0fb29e46c8a043 etherape-0.8.2-r1.ebuild 1164
 MD5 b26a75ae4bde73cc9017925db3f9781f etherape-0.9.0.ebuild 1223
 MD5 ce22170e77cd4a26ea9d0a3afabd9734 ChangeLog 1726
+MD5 d8307d213e01909e87c072d2b3e9450c metadata.xml 254
 MD5 0015559610bab6a40691241598863f72 files/etherape-0.9.0-libpcap-include.patch 399
 MD5 efc64f22a1d8e39060fd684f5b105078 files/etherape-0.8.2-gcc3-gentoo.patch 518
 MD5 878e13dfd52ac79ec511a2ff1d259b73 files/etherape-0.9.0-res_mkquery.patch 466
