@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.7 2003/01/22 18:39:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.8 2003/02/03 17:38:58 satai Exp $
+
+  03 Feb 2003; Matthew Turk <satai@gentoo.org> jadetex-3.12.ebuild :
+  Added un-sandboxing to work with tetex-2.0.
+  
 
   22 Jan 2003; Aron Griffis <agriffis@gentoo.org> jadetex-3.12.ebuild :
   Add alpha to KEYWORDS
