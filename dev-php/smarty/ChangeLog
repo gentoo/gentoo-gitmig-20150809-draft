@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.25 2005/01/16 15:18:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.26 2005/02/10 16:19:44 tomk Exp $
+
+*smarty-2.6.7 (10 Feb 2005)
+
+  10 Feb 2005; Tom Knight <tomk@gentoo.org> -smarty-2.6.6.ebuild,
+  +smarty-2.6.7.ebuild:
+  Version bumped to 2.6.7 and removed 2.6.6 for a security fix
 
   16 Jan 2005; Guy Martin <gmsoft@gentoo.org> smarty-2.6.5.ebuild:
   Stable on hppa.
