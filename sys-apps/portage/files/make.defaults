@@ -18,7 +18,6 @@ CHOST=i686-pc-linux-gnu
 BUILD_PREFIX=/tmp/portage
 
 PORTDIR=/usr/portage
-DBDIR=/var/db/pkg
 DISTDIR=${PORTDIR}/distfiles
 PKGDIR=${PORTDIR}/packages
 RPMDIR=${PORTDIR}/rpm

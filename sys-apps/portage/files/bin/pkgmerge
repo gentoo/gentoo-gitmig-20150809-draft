@@ -57,8 +57,9 @@ for x in sys.argv[1:]:
 		print "!!! Error:",mypkg,"is already installed.  Unmerge first."
 		cleanup()
 		continue
-	portage.doebuild("var/db/pkg/"+mycat+"/"+mypkg+".ebuild","preinst")	
+	
+	portage.doebuild("var/db/pkg/"+mycat+"/"+mypkg+"/"+mypkg+".ebuild","preinst")	
 	portage.merge(mycat,mypkg,os.getcwd())
-	portage.doebuild("var/db/pkg/"+mycat+"/"+mypkg+".ebuild","postinst")	
+	portage.doebuild(portage.root+"var/db/pkg/"+mycat+"/"+mypkg+"/"+mypkg+".ebuild","postinst")	
 	cleanup()
 print ">>> Done."

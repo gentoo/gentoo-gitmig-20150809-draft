@@ -55,7 +55,7 @@ from commands import *
 import md5
 from stat import *
 import fchksum,types
-
+import sys
 # parsever:
 # This function accepts an 'inter-period chunk' such as
 # "3","4","3_beta5", or "2b" and returns an array of three
@@ -111,17 +111,13 @@ def getmtime(x):
 def md5(x):
 	return string.upper(fchksum.fmd5t(x)[0])
 
-def prepare_db(mycategory,mypackage):
-    if not os.path.isdir(root+"var"):
+def prep_dbdir():
+	if not os.path.isdir(root+"var"):
 		os.mkdir(root+"var",0755)
-    if not os.path.isdir(root+"var/db"):
+	if not os.path.isdir(root+"var/db"):
 		os.mkdir(root+"var/db",0755)
-    if not os.path.isdir(root+"var/db/pkg"):
+	if not os.path.isdir(root+"var/db/pkg"):
 		os.mkdir(root+"var/db/pkg",0755)
-    if not os.path.isdir(root+"var/db/pkg/"+mycategory):
-		os.mkdir(root+"var/db/pkg/"+mycategory,0755)
-    if not os.path.isdir(root+"var/db/pkg/"+mycategory+"/"+mypackage):
-		os.mkdir(root+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
 
 def pathstrip(x,mystart):
     cpref=os.path.commonprefix([x,mystart])
@@ -211,7 +207,11 @@ def merge(mycategory,mypackage,mystart):
 	elif not os.path.isdir(root):
 		print "!!! Error: ROOT setting points to a non-directory.  Exiting."
 		return
-	prepare_db(mycategory,mypackage)
+	prep_dbdir()
+	if not os.path.isdir(root+"var/db/pkg/"+mycategory):
+		os.mkdir(root+"var/db/pkg/"+mycategory,0755)
+	if not os.path.isdir(root+"var/db/pkg/"+mycategory+"/"+mypackage):
+		os.mkdir(root+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
 	outfile=open(root+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS","w")
 	mergefiles(outfile,mystart)
 	outfile.close()
@@ -620,10 +620,10 @@ def isspecific(mypkg):
 
 def isinstalled(mycatpkg):
 	global installcache
-	mycatpkg2=string.split(mycatpkg,"/")
 	if not installcache:
 		installcache=port_insttree()
 		#initialize cache
+	mycatpkg2=string.split(mycatpkg,"/")
 	
 	if isjustname(mycatpkg2[1]):
 		if installcache.has_key(mycatpkg):
@@ -1124,16 +1124,15 @@ def port_currtree():
 def port_insttree():
 	"""
 	This function builds a dictionary of installed packages on the system, based on
-	the contents of DBDIR.  Dictionary format is:
+	the contents of ROOT/var/db/pkg.  Dictionary format is:
 	mydict["cat/pkg"]=[
 					["cat/fullpkgname",["cat","pkg","ver","rev"]
 					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
 					]
 	"""
 	installeddict={}
-	dbdir=getsetting("DBDIR")
-	if not os.path.isdir(dbdir):
-		return
+	dbdir=root+"var/db/pkg"
+	prep_dbdir()	
 	origdir=os.getcwd()
 	os.chdir(dbdir)
 	for x in os.listdir(os.getcwd()):
@@ -1191,6 +1190,16 @@ def init():
 		root="/"
 	elif root[-1]!="/":
 		root=root+"/"
+	if not os.path.exists(root[:-1]):
+		print "!!! Error: ROOT",root[:-1],"does not exist.  Please correct this."
+		print "!!! Exiting."
+		print
+		sys.exit(1)
+	elif not os.path.isdir(root[:-1]):
+		print "!!! Error: ROOT",root[:-1],"is not a directory.  Please correct this."
+		print "!!! Exiting."
+		print
+		sys.exit(1)
 	ERRPKG=""
 	ERRVER=""
 	installcache=None
