@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/wash
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/ChangeLog,v 1.4 2005/03/24 21:32:08 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/ChangeLog,v 1.5 2005/03/25 00:31:05 kosmikus Exp $
+
+  25 Mar 2005; Andres Loeh <kosmikus@gentoo.org> wash-2.0.6.ebuild,
+  wash-2.3.1.ebuild:
+  WASH does currently not compile with ghc-6.4, and is thus blocked by this
+  compiler version.
 
 *wash-2.3.1 (24 Mar 2005)
 

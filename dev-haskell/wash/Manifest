@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ce1b49a9775ad09524d5afba39ff22df ChangeLog 842
+MD5 00d3e43edc0b378f2e75a709f693c56c wash-2.3.1.ebuild 1384
+MD5 83aa0233869acf8839485568a755f102 wash-2.0.6.ebuild 1385
+MD5 57581dc2ab4fd7851c9ac9d89f0b7e06 ChangeLog 1030
 MD5 e0ce59fd27b9382896cdb87d5fa48f89 metadata.xml 286
-MD5 92470778f2f82f246af74a61cbe5733b wash-2.3.1.ebuild 1362
-MD5 3f2cb7b34318ee851cae6e9442c44696 wash-2.0.6.ebuild 1363
 MD5 ce436420e114151be54e562439be9a55 files/digest-wash-2.0.6 62
 MD5 d03948a8a97cbef24d3e7b59c1597280 files/digest-wash-2.3.1 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCQzICBQBy/eDH5uERAhblAKDUlVLA/Z/OwF/QgpGj+OYrXO4H/ACeKCoi
-voSo5skGKvcN6BMR4k11iEY=
-=1iXf
+iD8DBQFCQ1zzOKSBj1ObwosRAq9jAJ9uk1g+FPgb2Fc4Y+bOKnZ8I/9TTgCghjwh
+ihK4pAUU/9CQ3GrO2kZrOWg=
+=HZmx
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.3.1.ebuild,v 1.1 2005/03/24 21:32:08 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.3.1.ebuild,v 1.2 2005/03/25 00:31:05 kosmikus Exp $
 
 inherit ghc-package
 
@@ -18,6 +18,7 @@ KEYWORDS="~x86"
 IUSE="doc postgres"
 
 DEPEND=">=virtual/ghc-6.2
+	!>=virtual/ghc-6.4
 	postgres? ( dev-haskell/c2hs
 		>=dev-db/postgresql-7.4.3 )"
 
