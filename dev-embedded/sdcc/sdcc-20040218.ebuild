@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-20040218.ebuild,v 1.1 2004/02/19 04:31:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-20040218.ebuild,v 1.2 2004/02/22 19:48:21 agriffis Exp $
 
 inherit eutils
 S=${WORKDIR}/${PN}
