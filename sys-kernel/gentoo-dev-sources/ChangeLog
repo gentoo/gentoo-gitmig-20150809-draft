@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.170 2005/01/10 07:30:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.171 2005/01/10 18:57:15 dsd Exp $
+
+  10 Jan 2005; Daniel Drake <dsd@gentoo.org>
+  -gentoo-dev-sources-2.6.10-r3.ebuild, -gentoo-dev-sources-2.6.10.ebuild,
+  -gentoo-dev-sources-2.6.7-r14.ebuild, -gentoo-dev-sources-2.6.7-r19.ebuild,
+  -gentoo-dev-sources-2.6.8-r10.ebuild, -gentoo-dev-sources-2.6.8-r12.ebuild,
+  -gentoo-dev-sources-2.6.9-r1.ebuild, -gentoo-dev-sources-2.6.9-r10.ebuild,
+  -gentoo-dev-sources-2.6.9-r11.ebuild, -gentoo-dev-sources-2.6.9-r2.ebuild,
+  -gentoo-dev-sources-2.6.9-r3.ebuild, -gentoo-dev-sources-2.6.9-r4.ebuild,
+  -gentoo-dev-sources-2.6.9-r5.ebuild, -gentoo-dev-sources-2.6.9-r6.ebuild,
+  -gentoo-dev-sources-2.6.9-r7.ebuild, -gentoo-dev-sources-2.6.9-r8.ebuild,
+  -gentoo-dev-sources-2.6.9.ebuild:
+  Remove old versions
 
 *gentoo-dev-sources-2.6.9-r14 (09 Jan 2005)
 
