@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.1 2003/12/28 18:40:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.2 2004/01/03 04:48:04 vapier Exp $
+
+inherit gcc
 
 DESCRIPTION="A high-quality data compressor used extensively by Gentoo Linux"
 HOMEPAGE="http://sources.redhat.com/bzip2/"
@@ -33,9 +35,9 @@ src_unpack() {
 src_compile() {
 	if [ -z "`use build`" ]
 	then
-		emake CC="${CC}" CXX="${CXX}" -f Makefile-libbz2_so all || die "Make failed"
+		emake CC="$(gcc-getCC)" CXX="$(gcc-getCXX)" -f Makefile-libbz2_so all || die "Make failed"
 	fi
-	emake CC="${CC}" CXX="${CXX}" all || die "Make failed"
+	emake CC="$(gcc-getCC)" CXX="$(gcc-getCXX)" all || die "Make failed"
 }
 
 src_install() {
