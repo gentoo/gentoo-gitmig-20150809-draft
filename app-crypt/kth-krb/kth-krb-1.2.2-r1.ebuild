@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r1.ebuild,v 1.8 2004/04/06 03:31:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r1.ebuild,v 1.9 2004/05/01 00:14:41 rphillips Exp $
 
 inherit eutils
 
@@ -37,15 +37,15 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr/athena \
-		sysconfdir=${D}/etc \
+	
+	make DESTDIR=${D} sysconfdir=${D}/etc \
 		install || die
 
 	# Doesn't get install otherwise (for some reason, look into this).
 	if use ssl ; then
 		cd ${S}/lib/des
 
-		make prefix=${D}/usr/athena \
+		make DESTDIR=${D}/usr/athena \
 	 		install || die
 
 		cd ${S}
