@@ -1,7 +1,17 @@
 # ChangeLog for dev-python/bonobo-python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/ChangeLog,v 1.3 2002/12/09 04:21:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/ChangeLog,v 1.4 2002/12/10 19:13:00 lordvan Exp $
 
+*bonobo-python-0.2.0-r3 (10 Dec 2002)
+  10 Dec 2002; Thomas Raschbacher (lordvan@gentoo.org>:
+  fixed install bug in nautilus/Makefile (fixes bug #4779 finally!)
+  added IUSE
+
+  09 Dec 2002: foser@gentoo.org:
+  fixed DEPEND (gnome-python1 required)
+  fixed configure problem
+  and fixed dependency (gnome-python1)
+	
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  

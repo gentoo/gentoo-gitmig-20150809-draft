@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/bonobo-python-0.2.0-r2.ebuild,v 1.2 2002/12/10 19:13:00 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/bonobo-python-0.2.0-r3.ebuild,v 1.1 2002/12/10 19:13:00 lordvan Exp $
+
+IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Bonobo bindings for Python"
