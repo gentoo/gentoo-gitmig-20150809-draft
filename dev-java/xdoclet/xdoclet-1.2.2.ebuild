@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.2.ebuild,v 1.1 2005/04/03 03:59:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.2.ebuild,v 1.2 2005/04/03 04:01:35 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -39,7 +39,7 @@ src_unpack() {
 	java-pkg_jar-from log4j
 	java-pkg_jar-from mockobjects
 	java-pkg_jar-from commons-logging
-	java-pkg_jar-from commons-collections 
+	java-pkg_jar-from commons-collections
 	java-pkg_jar-from velocity
 }
 
