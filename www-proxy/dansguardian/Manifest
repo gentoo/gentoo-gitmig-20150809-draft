@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 97bb7ff08e648d39c5e871b62a6eb21d ChangeLog 3059
 MD5 9784ebc5f6db269aad74f00dd3fd6c70 dansguardian-2.7.1.ebuild 1160
 MD5 91dae09f46aca5aabca602c1367bc4fb dansguardian-2.7.6.ebuild 1277
+MD5 faa9198afba7824086f3a8bb9f34709c dansguardian-2.8.0.2.ebuild 1278
 MD5 d8b191afbd43c921e2630e8be3e45e13 metadata.xml 567
-MD5 3f7e6294bc00f9b693e3ebe939a8a60a dansguardian-2.8.0.2.ebuild 1269
-MD5 81018538c83e037e6b3fba4ddc1eea01 ChangeLog 2954
 MD5 6313b934a33da7e4308812e834494074 files/dansguardian-xnaughty-2.7.6-1.diff 2325
 MD5 5ce5f528871f5d206fbc89e2cd534ce6 files/dansguardian.init 552
 MD5 bcf1d489bd7407662079ad6eb5086868 files/digest-dansguardian-2.7.1 79
 MD5 dbb7df85d7384d34a2f0bf8defc5c03c files/digest-dansguardian-2.7.6 79
 MD5 2eac5634ff8ad0ba6701815c2befce6b files/digest-dansguardian-2.8.0.2 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOtoXI1lqEGTUzyQRAsiXAKCwmaTyfOoLmuxIsp1fwuxlUQHi7ACgkT0a
-g7DLIq8rHLGqQkbhXSP3lxk=
-=npFW
------END PGP SIGNATURE-----
