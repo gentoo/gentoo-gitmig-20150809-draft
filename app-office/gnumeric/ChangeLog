@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.67 2004/08/12 02:16:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.68 2004/08/15 09:30:54 obz Exp $
+
+  15 Aug 2004; Mike Gardiner <obz@gentoo.org> gnumeric-1.2.12.ebuild,
+  gnumeric-1.2.13.ebuild, gnumeric-1.2.2.ebuild, gnumeric-1.2.6.ebuild:
+  Updated HOMEPAGE, as noted in but #60394
 
   12 Aug 2004; Guy Martin <gmsoft@gentoo.org> gnumeric-1.2.12.ebuild:
   Stable on hppa.

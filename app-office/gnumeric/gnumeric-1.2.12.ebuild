@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.12.ebuild,v 1.6 2004/08/12 02:16:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.12.ebuild,v 1.7 2004/08/15 09:30:54 obz Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils flag-o-matic
 
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
-HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
+HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
 LICENSE="GPL-2"
 
 SLOT="0"
