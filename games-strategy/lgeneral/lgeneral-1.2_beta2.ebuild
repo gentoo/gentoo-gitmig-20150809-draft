@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta2.ebuild,v 1.2 2004/06/24 23:28:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta2.ebuild,v 1.3 2004/07/24 02:45:25 mr_bones_ Exp $
 
 inherit eutils games
 
-DATA=lgeneral-data-1.1.3
+DATA=pg-data
 MY_P="${P/_/}"
 MY_P="${MY_P/beta/beta-}"
 DESCRIPTION="A Panzer General clone written in SDL"
@@ -22,19 +22,33 @@ DEPEND=">=media-libs/libsdl-1.2.4
 
 S="${WORKDIR}/${MY_P}"
 
+src_unpack() {
+	unpack ${A}
+	# Build a temporary lgc-pg that knows about /var/tmp/portage in work/lgc-pg:
+	cp -a "${S}" "${WORKDIR}/lgc-pg" || die "cp failed."
+}
+
 src_compile() {
-	egamesconf --datadir="${GAMES_DATADIR}/../"
+	egamesconf --datadir="${GAMES_DATADIR}/../" || die
 	emake || die "emake failed"
 
-	cd "${WORKDIR}/${DATA}"
-	egamesconf --datadir="${GAMES_DATADIR}/../"
-	emake || die "emake failed (data)"
+	# Build the temporary lgc-pg:
+	cd "${WORKDIR}/lgc-pg"
+	egamesconf --datadir="${D}/${GAMES_DATADIR_BASE}" || die
+	cd lgc-pg
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL README TODO
-	cd "${WORKDIR}/${DATA}"
-	make DESTDIR="${D}" install || die "make install failed (data)"
+	make DESTDIR="${D}" install || die "make install failed."
+	keepdir "${GAMES_DATADIR}/${PN}/"{ai_modules,music}
+
+	# Generate scenario data:
+	"${WORKDIR}/lgc-pg/lgc-pg/lgc-pg" \
+		-s "${WORKDIR}/${DATA}" \
+		-d "${D}/${GAMES_DATADIR}/lgeneral" \
+		|| die "Failed to generate scenario data."
+
+	dodoc AUTHORS ChangeLog INSTALL README.lgeneral README.lgc-pg TODO
 	prepgamesdirs
 }
