@@ -1,7 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.58 2004/01/03 15:21:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.59 2004/01/04 12:02:17 aliz Exp $
 
+  04 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> openssh-3.7.1_p2-r1.ebuild:
+  Changeing sshd user shell. Closing #35063.
 
   03 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> openssh-3.7.1_p2-r1.ebuild:
   Change adding sshd user and group to user enewuser and enewgroup. Should
