@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.44 2003/01/17 20:31:28 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.45 2003/01/28 12:03:59 danarmak Exp $
+
+*kdelibs-3.1-r1, kdelibs-3.0.5a-r1 (28 Jan 2003)
+
+  28 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog :
+
+  New revisions to fix bug #7179. This part of the fix removes KDEDIRS
+  settings from kdelibs' env.d files. This is a bug/fix almost noone cares
+  about, so no need to upgrade unless you know what this is. Masked at first
+  for initial testing.
 
 *kdelibs-2.2.2a-r1 (17 Jan 2003)
 
