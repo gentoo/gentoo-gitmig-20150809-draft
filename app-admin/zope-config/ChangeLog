@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.19 2004/07/20 00:34:19 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.20 2004/07/24 20:52:20 batlogg Exp $
+
+*zope-config-0.4-r1 (24 Jul 2004)
+
+  24 Jul 2004; Jodok Batlogg <batlogg@gentoo.org>; +files/0.4-r1/zope-config,
+  +files/0.4-r1/zope-config.conf, +zope-config-0.4-r1.ebuild:
+  version bump (required by zope ebuild changes)
 
   20 Jul 2004; Lars Weiler <pylon@gentoo.org> zope-config-0.3.ebuild:
   Stable on ppc.
