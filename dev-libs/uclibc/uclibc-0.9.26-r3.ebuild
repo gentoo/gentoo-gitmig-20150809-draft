@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r3.ebuild,v 1.2 2004/07/13 22:33:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r3.ebuild,v 1.3 2004/07/14 02:30:20 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -21,7 +21,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm"
 IUSE="build ipv6 uclibc hardened" # nls is not supported yet
 
 DEPEND="sys-devel/gcc"
-PROVIDE="virtual/libc"
+PROVIDE="virtual/glibc virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 

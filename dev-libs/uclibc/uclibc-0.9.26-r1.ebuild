@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r1.ebuild,v 1.8 2004/07/05 08:21:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r1.ebuild,v 1.9 2004/07/14 02:30:20 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips arm"
 IUSE="pie"
 
 DEPEND="sys-devel/gcc"
-PROVIDE="virtual/libc"
+PROVIDE="virtual/glibc virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 

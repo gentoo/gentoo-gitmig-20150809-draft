@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.21.ebuild,v 1.8 2004/07/05 08:21:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.21.ebuild,v 1.9 2004/07/14 02:30:20 vapier Exp $
 
 inherit eutils
 
@@ -12,9 +12,10 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~mips"
+IUSE=""
 
 DEPEND="sys-devel/gcc"
-PROVIDE="virtual/libc"
+PROVIDE="virtual/glibc virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 
