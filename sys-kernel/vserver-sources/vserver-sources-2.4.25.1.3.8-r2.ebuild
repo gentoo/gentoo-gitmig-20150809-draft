@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.25.1.3.8-r1.ebuild,v 1.1 2004/04/15 12:58:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.25.1.3.8-r2.ebuild,v 1.1 2004/04/17 14:09:07 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel
@@ -37,6 +37,8 @@ src_unpack() {
 	cd linux-${KV}${EXTRAVERSION}
 	epatch ${WORKDIR}/patch-${KV}${VEXTRAVERSION}.diff
 	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 
 	kernel_universal_unpack
 }
