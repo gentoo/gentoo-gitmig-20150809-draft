@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.18.ebuild,v 1.3 2004/12/31 22:38:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.18-r2.ebuild,v 1.1 2005/01/30 08:40:52 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="minimalist system monitor for X"
 HOMEPAGE="http://torsmo.sourceforge.net/"
@@ -9,10 +11,11 @@ SRC_URI="mirror://sourceforge/torsmo/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
-IUSE=""
+IUSE="truetype"
 
 RDEPEND="virtual/libc
-	virtual/x11"
+	virtual/x11
+	truetype? ( >=media-libs/freetype-2*)"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.4
 	sys-devel/autoconf
@@ -20,8 +23,16 @@ DEPEND="${RDEPEND}
 	sys-apps/sed
 	sys-devel/gcc"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}.xwin.patch || die "patch failed"
+}
+
 src_compile() {
-	econf --x-libraries=/usr/X11R6/lib/ || die "econf failed"
+	econf \
+	   `use_enable truetype xft` \
+	   --x-libraries=/usr/X11R6/lib/ || die "econf failed"
 	emake || die "compile failed"
 }
 
