@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.12 2004/08/12 17:31:43 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.13 2004/08/18 06:24:01 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbdev gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mpeg mythtv nas network nls oggvorbis opengl oss png rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama X xmms xv xvid gnome"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mmx2 mpeg mythtv nas network nls oggvorbis opengl oss png rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 xinerama X xmms xv xvid gnome"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -15,6 +15,7 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 SRC_URI="mirror://mplayer/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+	mirror://gentoo/${P}-mga-kernel2.6.patch.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )"
 # Only install Skin if GUI should be build (gtk as USE flag)
@@ -79,8 +80,9 @@ KEYWORDS="x86 ppc alpha amd64 ~ia64 ~hppa ~sparc"
 pkg_setup() {
 	echo
 	einfo "Please note that we do not use C[XX]FLAGS from /etc/make.conf"
-	einfo "or the environment, as the MPlayer guys then do not give support"
-	einfo "in case of bug reports!."
+	einfo "or the environment, as the upstream maintainers will then"
+	einfo "ignore bug reports and refuse support."
+
 	echo
 	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
 	echo -ne "\a" ; sleep 1
@@ -99,6 +101,9 @@ src_unpack() {
 	use gtk && unpack Blue-${BLUV}.tar.bz2
 
 	cd ${S}
+
+	# fixes bug reported by email from Selwyn Tang
+	epatch ${FILESDIR}/${P}-mpst.patch
 
 	# fixes bug #55456 for amd64 and fullscreen Bug #43010
 	epatch ${FILESDIR}/gui_vuln_code.patch
@@ -134,7 +139,7 @@ src_unpack() {
 	#Setup the matrox makefile
 	if use matrox; then
 		get_kernel_info
-		epatch ${FILESDIR}/mplayer-1.0_pre4-mga-kernel2.6.patch
+		epatch ${DISTDIR}/${P}-mga-kernel2.6.patch.tar.bz2
 		sed -i -e \
 		"s:^#KERNEL_OUTPUT_PATH=: \
 		KERNEL_OUTPUT_PATH =${KV_OUTPUT}:" \
@@ -208,16 +213,12 @@ src_compile() {
 		myconf="${myconf} $(use_enable matrox xmga)"
 	fi
 
-	if ! use 3dnow; then
-		myconf="${myconf} --disable-3dnow --disable-3dnowex";
-	fi
-
-	if ! use sse; then
-		myconf="${myconf} --disable-sse --disable-sse2";
-	fi
-	if use !mmx && use !3dnow && use !sse; then
-		myconf="${myconf} --disable-mmx --disable-mmx2";
-	fi
+	myconf="${myconf} $(use_enable 3dnow)"
+	myconf="${myconf} $(use_enable 3dnowex)"
+	myconf="${myconf} $(use_enable sse)"
+	myconf="${myconf} $(use_enable sse2)"
+	myconf="${myconf} $(use_enable mmx)"
+	myconf="${myconf} $(use_enable mmx2)"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]; then
 		einfo "Setting REALLIBDIR to /opt/RealPlayer9/Real/Codecs..."
@@ -284,7 +285,7 @@ src_compile() {
 		$(use_enable aalib aa)		\
 		$(use_enable directfb)		\
 		$(use_enable dvb)		\
-		$(use_enable fbdev)		\
+		$(use_enable fbcon fbdev)		\
 		$(use_enable ggi)		\
 		$(use_enable libcaca caca) 	\
 		$(use_enable opengl gl) 	\

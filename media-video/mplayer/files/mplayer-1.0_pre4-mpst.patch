@@ -1,0 +1,10 @@
+--- libmpdemux/open.c	11 Jun 2004 20:57:03 -0000	1.97
++++ libmpdemux/open.c	25 Jun 2004 15:19:11 -0000	1.98
+@@ -484,6 +484,7 @@
+   if (strncmp("tv://", filename, 5) && strncmp("mf://", filename, 5) &&
+     strncmp("vcd://", filename, 6) && strncmp("dvb://", filename, 6) &&
+     strncmp("cdda://", filename, 7) && strncmp("cddb://", filename, 7) &&
++    strncmp("mpst://", filename, 7) &&
+     strstr(filename, "://")) {
+      url = url_new(filename);
+     }

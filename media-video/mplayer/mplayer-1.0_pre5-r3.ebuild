@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.16 2004/08/18 06:24:01 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.1 2004/08/18 06:24:01 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mythtv nas network nls oggvorbis opengl oss rtc samba sdl sse svga tga theora truetype v4l v4l2 X xinerama xmms xv xvid"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas network nls nvidia oggvorbis opengl oss png rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -15,6 +15,7 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 SRC_URI="mirror://mplayer/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+	mirror://gentoo/mplayer-1.0_pre4-mga-kernel2.6.patch.tar.bz2
 	mirror://gentoo/${P}-alsa-gui.patch.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )"
@@ -55,7 +56,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	lirc? ( app-misc/lirc )
 	lzo? ( dev-libs/lzo )
 	mad? ( media-libs/libmad )
-	matroska? ( >=media-libs/libmatroska-0.6.0 )
+	matroska? ( >=media-libs/libmatroska-0.7.0 )
 	mpeg? ( media-libs/faad2 )
 	nas? ( media-libs/nas )
 	nls? ( sys-devel/gettext )
@@ -67,7 +68,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	svga? ( media-libs/svgalib )
 	!ia64? (
 		theora? ( media-libs/libtheora )
-		live? ( >=media-plugins/live-2004.03.27 )
+		live? ( >=media-plugins/live-2004.07.20 )
 		)
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
@@ -80,14 +81,15 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~ia64 ~hppa sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~ia64 ~hppa ~sparc"
 
 
 pkg_setup() {
 	echo
 	einfo "Please note that we do not use C[XX]FLAGS from /etc/make.conf"
-	einfo "or the environment, as the MPlayer guys then do not give support"
-	einfo "in case of bug reports!."
+	einfo "or the environment, as the upstream maintainers will then"
+	einfo "ignore bug reports and refuse support."
+
 	echo
 	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
 	echo -ne "\a" ; sleep 1
@@ -141,7 +143,7 @@ src_unpack() {
 	#mplayer gui uses oss all the time.
 	#this patch enables true alsa output in
 	#gmplayer.  Fixes Bug #58619.
-	use alsa && epatch ${DISTDIR}/${P}-alsa-gui.patch
+	use alsa && epatch ${DISTDIR}/${P}-alsa-gui.patch.tar.bz2
 
 	#Setup the matrox makefile
 	if use matrox; then
@@ -265,6 +267,35 @@ src_compile() {
 	myconf="${myconf} $(use_enable svga)"
 	myconf="${myconf} $(use_enable tga)"
 
+	( use xvmc && use nvidia ) \
+		&& myconf="${myconf} --enable-xvmc --with-xvmclib=XvMCNVIDIA"
+
+	( use xvmc && use i8x0 ) \
+		&& myconf="${myconf} --enable-xvmc --with-xvmclib=I810XvMC"
+
+	( use xvmc && use nvidia && use i8x0 ) \
+		&& {
+			eerror "Invalid combination of USE flags"
+			eerror "When building support for xvmc, you may only"
+			eerror "include support for one video card:"
+			eerror "   nvidia, i8x0"
+			eerror ""
+			eerror "Emerge again with different USE flags"
+
+			exit 1
+		}
+
+	( use xvmc && ! use nvidia && ! use i8x0 ) && {
+		ewarn "You tried to build with xvmc support."
+		ewarn "No supported graphics hardware was specified."
+		ewarn ""
+		ewarn "No xvmc support will be included."
+		ewarn "Please one appropriate USE flag and re-emerge:"
+		ewarn "   nvidia or i8x0"
+
+		myconf="${myconf} --disable-xvmc"
+	}
+
 	#############
 	# Audio Output #
 	#############
@@ -278,15 +309,12 @@ src_compile() {
 	#################
 	# Advanced Options #
 	#################
-	if ! use 3dnow; then
-		myconf="${myconf} --disable-3dnow --disable-3dnowex";
-	fi
-	if ! use sse; then
-		myconf="${myconf} --disable-sse --disable-sse2";
-	fi
-	if use !mmx && use !3dnow && use !sse; then
-		myconf="${myconf} --disable-mmx --disable-mmx2"
-	fi
+	myconf="${myconf} $(use_enable 3dnow)"
+	myconf="${myconf} $(use_enable 3dnowex)";
+	myconf="${myconf} $(use_enable sse)"
+	myconf="${myconf} $(use_enable sse2)";
+	myconf="${myconf} $(use_enable mmx)"
+	myconf="${myconf} $(use_enable mmx2)"
 	myconf="${myconf} $(use_enable 3dnow) $(use_enable 3dnow 3dnowex)"
 	myconf="${myconf} $(use_enable altivec)"
 	myconf="${myconf} $(use_enable debug)"
@@ -380,9 +408,11 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README
 	# Install the documentation; DOCS is all mixed up not just html
-	find "${S}/DOCS" -type d | xargs -- chmod 0755
-	find "${S}/DOCS" -type f | xargs -- chmod 0644
-	cp -r "${S}/DOCS" "${D}/usr/share/doc/${PF}/" || die
+	if use doc ; then
+		find "${S}/DOCS" -type d | xargs -- chmod 0755
+		find "${S}/DOCS" -type f | xargs -- chmod 0644
+		cp -r "${S}/DOCS" "${D}/usr/share/doc/${PF}/" || die
+	fi
 
 	# Copy misc tools to documentation path, as they're not installed directly
 	# and yes, we are nuking the +x bit.
