@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/pilot-link
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.9 2002/09/09 01:23:29 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.10 2002/11/03 21:11:03 vapier Exp $
+
+*pilot-link-0.11.5 (28 Oct 2002)
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + added proper support for USE flags.
+  Disabled perl for now while upstream fixes problems.
 
 *pilot-link-0.11.3 (08 Aug 2002)
 
@@ -8,7 +14,6 @@
   Added PPC to KEYWORDS.
 
   08 Aug 2002; Matthew Turk <satai@gentoo.org> ChangeLog  :
-
   Update to latest version, fixing numerous problems, particularly the numbering
   of contact fields.  Suggested recompile of all applications using this -
   gnome-pilot, gnome-pilot-conduits, jpilot and evolution.
@@ -16,44 +21,37 @@
 *pilot-link-0.11.1-r1 (30 Jul 2002)
 
   30 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
-
   Fix bug #5615 (headers installing into the filesystem root).
 
   22 Jul 2002; Owen Stampflee <owen@gentoo.org> :
-
   Added PPC to KEYWORDS.
 
 *pilot-link-0.11.1 (21 Jul 2002)
 
   21 Jul 2002; Seemant Kulleen <seemant@gentoo.org> pilot-link-0.11.1.ebuild
   files/digest-pilot-link-0.11.1 :
-
   Version bump.
 
 *pilot-link-0.11.0 (14 Jul 2002)
 
   14 Jul 2002; Seemant Kulleen <seemant@gentoo.org> pilot-link-0.11.0.ebuild
   files/digest-pilot-link-0.11.0 :
-
   Version bump to newest stable.
 
 *pilot-link-0.10.99 (20 May 2002)
 
   20 May 2002; Seemant Kulleen <seemant@gentoo.org>
   pilot-link-0.10.99.ebuild files/digest-pilot-link-0.10.99 :
-
   This is a developer release of pilot-link, but it works with a wider
   variety of hardware.  gnome-pilot had to be patched for it as well.  the
   new gnome-pilot and this are masked for the present.
 
- 06 Apr 2002; G.Bevin <gbevin@gentoo.org> files/pilot-link-0.9.6-gcc3.diff :
-
+  06 Apr 2002; G.Bevin <gbevin@gentoo.org> files/pilot-link-0.9.6-gcc3.diff :
   C++ compliancy fixes for correct compilation with gcc3
 
 *pilot-link-0.9.6-r3 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
