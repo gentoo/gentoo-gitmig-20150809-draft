@@ -1,0 +1,9 @@
+# ChangeLog for sys-cluster/openmosix-user
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-monitor-core/ChangeLog,v 1.1 2003/06/09 21:51:28 tantive Exp $
+
+* ganglia-monitor-core-2.5.3 (09 Jun 2003)
+
+  09 Jun 2003; Michael Imhof <tantive@gentoo.org>
+  Initial import. Ebuild submitted by Chad Schmutzer 
+  <schmutze@its.caltech.edu>. Should close #22305.
