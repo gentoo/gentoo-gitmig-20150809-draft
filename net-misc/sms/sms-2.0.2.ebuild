@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/sms-2.0.2.ebuild,v 1.1 2004/11/25 21:09:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/sms-2.0.2.ebuild,v 1.2 2004/11/29 12:49:38 mr_bones_ Exp $
 
 DESCRIPTION="Command line program for sending SMS to Polish GSM mobile phone users"
 HOMEPAGE="http://ceti.pl/~miki/komputery/sms.html"
@@ -25,6 +25,6 @@ src_compile() {
 
 src_install() {
 	dobin sms smsaddr
-	dodoc README README.smsrc Changelog doc/readme.html 
+	dodoc README README.smsrc Changelog doc/readme.html
 	dodoc contrib/mimecut contrib/procmailrc
 }
