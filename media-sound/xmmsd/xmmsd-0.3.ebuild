@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Ebuild by Jeremy Huddleston <jeremyhu@cory.eecs.berkeley.edu>
+# $ Header: $
 
 DESCRIPTION="Web interface for controlling xmms"
 HOMEPAGE="http://xmmsd.sourceforge.net/"
