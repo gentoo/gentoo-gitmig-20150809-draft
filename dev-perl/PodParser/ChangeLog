@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PodParser
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PodParser/ChangeLog,v 1.8 2004/06/25 00:55:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PodParser/ChangeLog,v 1.9 2004/07/21 21:48:32 tgall Exp $
+
+  21 Jul 2004; Tom Gall <tgall@gentoo.org> PodParser-1.28.ebuild:
+  stable on ppc64, bug #57585
 
   06 Jun 2004; Robert Coie <rac@gentoo.org> PodParser-1.22.ebuild:
   allow perl to fulfill the File-Spec dep
