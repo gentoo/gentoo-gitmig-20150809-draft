@@ -119,7 +119,7 @@ fi
 # libperl - this is a sanity check among other things
 
 cd /var/db/pkg
-LIBS_LIST=`grep -ls "usr\/lib\/perl" */*/CONTENTS | sed 's|/CONTENTS||g'  | grep -v "sys-devel/perl" | grep -v "dev-perl"`
+LIBS_LIST=`grep -ls "usr\/lib\/perl" */*/CONTENTS | sed 's|/CONTENTS||g'  | grep -v "dev-lang/perl" | grep -v "dev-perl"`
 
 REBUILD_LIST=`echo ${LIBS_LIST} ${REBUILD_PRELIST} | sort -u`
 

@@ -1,6 +1,6 @@
-# ChangeLog for sys-devel/perl
+# ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.1 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.2 2003/03/11 21:23:27 mholzer Exp $
 
 *perl-5.8.0-r10 (11 Mar 2003)
 
