@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/speechd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/speechd/ChangeLog,v 1.4 2003/12/08 06:22:40 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/speechd/ChangeLog,v 1.5 2004/02/19 04:02:22 augustus Exp $
+
+  18 Feb 2004; <augustus@gentoo.org> speechd-0.56.ebuild:
+  Added amd64 to keywords. Works great with festival. Made stable as it's the
+  only version available.
 
   07 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> speechd-0.56.ebuild:
   chown x.y -> chown x:y (bug 35127)
