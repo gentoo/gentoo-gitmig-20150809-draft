@@ -1,6 +1,23 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.25 2004/02/18 21:41:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.26 2004/02/23 10:48:55 kumba Exp $
+
+*mips-sources-2.4.25 (23 Feb 2004)
+
+  23 Feb 2004; Joshua Kinard <kumba@gentoo.org> mips-sources-2.4.21-r7.ebuild,
+  mips-sources-2.4.22-r10.ebuild, mips-sources-2.4.23-r6.ebuild,
+  mips-sources-2.4.25.ebuild, files/CAN-2003-0961-do_brk.patch,
+  files/CAN-2003-0985-mremap.patch, files/CAN-2004-0010-ncpfs.patch,
+  files/CAN-2004-0077-do_munmap.patch, files/do_brk_fix.patch,
+  files/do_munmap-fix.patch,
+  files/mipscvs-2.4.23-makefile-inlinelimit-fix.patch,
+  files/mipscvs-2.4.23-makefile-inlinelimit.patch,
+  files/mipscvs-2.4.25-makefile-fix.patch,
+  files/mipscvs-2.4.25-makefile-inlinelimit.patch,
+  files/mremap-fix-try2.patch, files/pax-linux-2.4.25-200402192035.patch:
+  More cleanups, mainly in renaming the security-based patches to include their
+  CVE number for easy reference on their purpose. Also added an ebuild for
+  2.4.25 kernel, taken from linux-mips CVS on 20040222.
 
 *mips-sources-2.4.23-r6 (18 Feb 2004)
 

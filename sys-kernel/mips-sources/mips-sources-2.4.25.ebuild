@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r10.ebuild,v 1.3 2004/02/23 10:48:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25.ebuild,v 1.1 2004/02/23 10:48:55 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20031015"
+CVSDATE="20040222"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
-COBALTPATCHVER="1.0"
+COBALTPATCHVER="1.1"
+PAXDATE="200402192035"
 
 # Miscellaneous stuff
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
@@ -20,12 +21,11 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 15 Oct 2003
+# 2) linux-mips.org CVS snapshot diff from 28 Nov 2003
 # 3) patch to fix arch/mips[64]/Makefile to pass appropriate CFLAGS
-# 4) do_brk fix
-# 5) mremap fix
-# 6) RTC fixes
-# 7) Patches for Cobalt support
+# 4) patch to fix the mips64 Makefile to allow building of mips64 kernels
+# 5) added PaX patch (http://pax.grsecurity.net)
+# 6) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -35,7 +35,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 HOMEPAGE="http://www.linux-mips.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources"
-KEYWORDS="-* mips"
+KEYWORDS="-* ~mips"
 
 
 src_unpack() {
@@ -49,17 +49,11 @@ src_unpack() {
 	# Patch arch/mips/Makefile for gcc (Pass -mips3/-mips4 for r4k/r5k cpus)
 	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-fix.patch
 
-	# MIPS RTC Fixes (Fixes memleaks, backport from 2.4.24)
-	epatch ${FILESDIR}/rtc-fixes.patch
+	# Patch to fix mips64 Makefile so that -finline-limit=10000 gets added to CFLAGS
+	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-inlinelimit.patch
 
-	# Security Fixes
-	echo -e ""
-	ebegin "Applying Security Fixes"
-		epatch ${FILESDIR}/CAN-2003-0961-do_brk.patch
-		epatch ${FILESDIR}/CAN-2003-0985-mremap.patch
-		epatch ${FILESDIR}/CAN-2004-0010-ncpfs.patch
-		epatch ${FILESDIR}/CAN-2004-0077-do_munmap.patch
-	eend
+	# Add in PaX support to the kernel
+	epatch ${FILESDIR}/pax-linux-${OKV}-${PAXDATE}.patch
 
 	# Cobalt Patches
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
