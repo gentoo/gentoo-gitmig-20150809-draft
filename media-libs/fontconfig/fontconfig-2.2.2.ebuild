@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.2.ebuild,v 1.5 2004/06/02 12:44:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.2.ebuild,v 1.6 2004/06/11 12:58:50 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="A library for configuring and customizing font access."
+DESCRIPTION="A library for configuring and customizing font access"
 HOMEPAGE="http://freedesktop.org/Software/fontconfig"
 #SRC_URI="http://pdx.freedesktop.org/software/fontconfig/releases/${P}.tar.gz"
 SRC_URI="http://freedesktop.org/~fontconfig/release/${P}.tar.gz"
@@ -12,13 +12,13 @@ SRC_URI="http://freedesktop.org/~fontconfig/release/${P}.tar.gz"
 LICENSE="fontconfig"
 SLOT="1.0"
 KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha arm hppa amd64 ~ia64 ~ppc64"
+IUSE=""
 
 DEPEND=">=sys-apps/sed-4
 	>=media-libs/freetype-2.1.4
 	>=dev-libs/expat-1.95.3"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 
@@ -68,15 +68,10 @@ src_install() {
 
 	cd ${S}
 
-	mv fc-cache/fc-cache.man fc-cache/fc-cache.1
-	mv fc-list/fc-list.man fc-list/fc-list.1
-	mv src/fontconfig.man src/fontconfig.3
-	for x in fc-cache/fc-cache.1 fc-list/fc-list.1 src/fontconfig.3
-	do
-		doman ${x}
-	done
-
-	dodoc AUTHORS COPYING ChangeLog NEWS README
+	newman fc-cache/fc-cache.man fc-cache.1
+	newman fc-list/fc-list.man fc-list.1
+	newman src/fontconfig.man fontconfig.3
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {

@@ -1,7 +1,10 @@
-MD5 4898850c8bd03fa4d5928545b005ff96 ChangeLog 7837
-MD5 c05cccfb182ab78707d61f65158ce764 fontconfig-2.1-r1.ebuild 2674
-MD5 2c446e637ed1fa6c2a41d1dd6dd8bd08 fontconfig-2.2.1.ebuild 3149
-MD5 ac45dc6a58349d778a559e4caea0754e fontconfig-2.2.2.ebuild 2867
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 25ab66787ddb03f37c53064001e8bffb ChangeLog 7838
+MD5 40d7bdb66fe2be1b0536d91b0edb080b fontconfig-2.1-r1.ebuild 2559
+MD5 e640a625308991c2710ae19521c21fa1 fontconfig-2.2.1.ebuild 2718
+MD5 c352f09586fd5f75b3c7d53bd8d1e1b3 fontconfig-2.2.2.ebuild 2768
 MD5 ae7171ca850597a2455b8b10c72a8de1 metadata.xml 419
 MD5 fd11506a1969709b4d447084344006ba files/digest-fontconfig-2.1-r1 140
 MD5 88bdeed6518b90c6230b5ea155936c8f files/digest-fontconfig-2.2.1 68
@@ -10,3 +13,10 @@ MD5 37e60cdff43bf3f04e9db8931e0d1f47 files/patch/fontconfig-2.1-slighthint.patch
 MD5 1636083efd15746d8f194aff41aa6e02 files/patch/fontconfig-2.2-blacklist.patch 1216
 MD5 4b5453071b61ecef4bb530b0bca695e1 files/patch/fontconfig-2.2-local_fontdir-r1.patch 487
 MD5 4d77167b56a7dff0d7c7b5b8168b85ba files/patch/fontconfig-2.2-remove_subpixel_test.patch 441
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFAyayUHTu7gpaalycRAl4EAKCSSTjXif/Jdo7FdPLGUjVlKS9CtgCg7boi
+mFJ4MWz2mlTQ1mFzZur1U3M=
+=pG9s
+-----END PGP SIGNATURE-----

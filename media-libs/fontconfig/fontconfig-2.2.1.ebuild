@@ -1,31 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.1.ebuild,v 1.16 2004/06/02 12:44:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.1.ebuild,v 1.17 2004/06/11 12:58:50 vapier Exp $
 
-inherit eutils
+inherit eutils gcc
 
-S=${WORKDIR}/${P}
-DESCRIPTION="A library for configuring and customizing font access."
+DESCRIPTION="A library for configuring and customizing font access"
 HOMEPAGE="http://freedesktop.org/Software/fontconfig"
 SRC_URI="http://pdx.freedesktop.org/software/fontconfig/releases/${P}.tar.gz"
 
-IUSE=""
 LICENSE="fontconfig"
 SLOT="1.0"
-
-# Note about keywords here:
-# >=kde-base/kdebase-3.1.2 has a fix needed to work with fontconfig 2.2 and higher,
-# so don't mark this ebuild stable on archs where kde 3.1.2 is only ~.
-# this of course doesn't apply to archs where kde has no keywords at all :-)
-# -- danarmak@gentoo.org
-KEYWORDS="x86 alpha ppc sparc ~mips hppa ia64 amd64 ppc64"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ia64 ppc64"
+IUSE=""
 
 DEPEND=">=sys-apps/sed-4
 	>=media-libs/freetype-2.1.4
 	>=dev-libs/expat-1.95.3
 	>=sys-apps/ed-0.2"
-
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
@@ -47,7 +38,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	[ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ] && \
 		die "Dont compile fontconfig with ccc, it doesnt work very well"
 
@@ -61,7 +51,7 @@ src_compile() {
 	# this triggers sandbox, we do this ourselves
 	sed -i "s:fc-cache/fc-cache -f -v:sleep 0:" Makefile
 
-	emake || die
+	emake -j1 || die
 
 	# remove Luxi TTF fonts from the list, the Type1 are much better
 	sed -i "s:<dir>/usr/X11R6/lib/X11/fonts/TTF</dir>::" fonts.conf
@@ -78,15 +68,10 @@ src_install() {
 
 	cd ${S}
 
-	mv fc-cache/fc-cache.man fc-cache/fc-cache.1
-	mv fc-list/fc-list.man fc-list/fc-list.1
-	mv src/fontconfig.man src/fontconfig.3
-	for x in fc-cache/fc-cache.1 fc-list/fc-list.1 src/fontconfig.3
-	do
-		doman ${x}
-	done
-
-	dodoc AUTHORS COPYING ChangeLog NEWS README
+	newman fc-cache/fc-cache.man fc-cache.1
+	newman fc-list/fc-list.man fc-list.1
+	newman src/fontconfig.man fontconfig.3
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
