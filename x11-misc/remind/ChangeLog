@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/remind
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.1 2003/12/26 00:26:05 pyrania Exp $
+
+*remind-03.00.22 (26 Dec 2003)
+
+  26 Dec 2003; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
+  remind-03.00.22.ebuild:
+  Initial import.
+
