@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.5 2004/04/07 22:57:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.6 2004/04/08 01:57:17 spyderous Exp $
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-179.ebuild,
+  xterm-184.ebuild:
+  Add sys-libs/libtermcap-compat to DEPEND. Reported by Mike Frysinger
+  <vapier@gentoo.org>.
 
   07 Apr 2004; Seemant Kulleen <seemant@gentoo.org> xterm-179.ebuild,
   xterm-184.ebuild:
