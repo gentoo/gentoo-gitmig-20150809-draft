@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Jcode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.14 2004/06/25 00:40:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.15 2004/07/30 16:33:42 mcummings Exp $
+
+*Jcode-0.87 (30 Jul 2004)
+
+  30 Jul 2004; Michael Cummings <mcummings@gentoo.org> +Jcode-0.87.ebuild:
+  New version on CPAN
 
   16 Apr 2004; Michael Cummings <mcummings@gentoo.org> Jcode-0.83.ebuild:
   Syntax fix for newdepend, bug 29064

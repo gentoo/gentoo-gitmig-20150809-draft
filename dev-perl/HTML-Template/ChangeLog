@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/HTML-Template
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/ChangeLog,v 1.11 2004/06/25 00:37:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/ChangeLog,v 1.12 2004/07/30 16:35:46 mcummings Exp $
+
+*HTML-Template-2.7 (30 Jul 2004)
+
+  30 Jul 2004; Michael Cummings <mcummings@gentoo.org>
+  +HTML-Template-2.7.ebuild:
+  New version on CPAN
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org>
   HTML-Template-2.6-r1.ebuild:
