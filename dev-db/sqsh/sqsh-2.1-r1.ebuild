@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.9 2005/04/06 20:48:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.10 2005/04/06 20:50:37 seemant Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_compile() {
 	local myconf
 
 	use motif && myconf="--with-motif"
-	
+
 	econf \
 		$(use_with readline) \
 		$(use_with X x) \
