@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 -ppc -sparc -alpha -mips"
 RESTRICT="nostrip"
 
-MY_PV="${PV}-43"
+MY_PV="${PV}-49"
 SRC_URI="http://www.nomachine.com/download/snapshot/nxbinaries/Linux/${PN}-${MY_PV}.i386.rpm"
 
 DEPEND=">=media-libs/jpeg-6b-r3
@@ -37,7 +37,7 @@ src_install() {
 	exeinto /usr/NX/bin
 #	doexe usr/NX/bin/nxartsdstatus
 	doexe usr/NX/bin/nxclient
-#	doexe usr/NX/bin/nxproxy
+	doexe usr/NX/bin/nxproxy
 #	doexe usr/NX/bin/nxssh
 
 #	insinto /usr/NX/lib
