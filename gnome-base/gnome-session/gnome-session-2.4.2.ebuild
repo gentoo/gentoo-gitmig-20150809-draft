@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.2.ebuild,v 1.1 2004/01/16 18:05:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.2.ebuild,v 1.2 2004/01/18 21:09:08 foser Exp $
 
 inherit gnome2
 
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.10.40
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.22
-	!gnome-base/gnome-core"
+	!gnome-base/gnome-core
+	dev-perl/XML-Parser"
 # gnome-base/gnome-core overwrites /usr/bin/gnome-session
 
 DOCS="AUTHORS ChangeLog COPYING* HACKING INSTALL NEWS README"
