@@ -4,7 +4,7 @@ MD5 04fc10eeeca52f5260403f36d3783130 distcc-2.11.1.ebuild 3930
 MD5 64fa725331fe2a01ca5aead2de0e9e66 distcc-2.12.1.ebuild 4245
 MD5 2fb1d3745b45a323d791c7c6bd198528 distcc-2.9.ebuild 3454
 MD5 6e7845f012b8418afdae5ae3c80ee90f distcc-2.11.2-r1.ebuild 4054
-MD5 1dd2acbb69d56a04efa394311fcf0d19 ChangeLog 16264
+MD5 9e908dfca2e036bd390fb5917c1dec14 ChangeLog 16382
 MD5 70619e7eb5fa4fd0aa4f3588579cd50d metadata.xml 443
 MD5 68dbe381db08b1286622ad4435b0adfc distcc-2.11.2.ebuild 4051
 MD5 c09d755beeab4ae675a8352f4ee04c63 files/digest-distcc-2.11.2-r1 66
@@ -30,4 +30,4 @@ MD5 c8ff220b60c105fcede2c72f274995db files/2.11/init 630
 MD5 1ebd94379f324ed4563036a24f36f342 files/2.11/distcc-config 7572
 MD5 66c4af6f8dd87d270e5da50341ca6e14 files/2.11.1p/conf 658
 MD5 606dd55609a04a0f21b9875259148332 files/2.11.1p/init 633
-MD5 35b0266b4b044f1c04727f4b2a166d9c files/2.11.1p/distcc-config 4838
+MD5 0d27e364d11fcecd8fdd7eb1c4be732a files/2.11.1p/distcc-config 4839
