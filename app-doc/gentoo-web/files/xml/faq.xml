@@ -6,8 +6,8 @@
 
 <abstract>This FAQ is a collection of questions and answers collected from the gentoo-dev mailing list and from IRC -- if you have any questions (or answers!) to add, please contact an author.</abstract>
 
-<version>1.0.4</version>
-<date>02 Sep 2001</date>
+<version>1.0.5</version>
+<date>06 Sep 2001</date>
 
 <chapter>
 	<title>Getting Started</title>
@@ -40,6 +40,16 @@ link="/index-download.html">Download/Install page</uri> for updates.</p>
 	</body>
 	</section>
 
+	<section>
+		<title>I have a Sony Super-Slim VAIO laptop, and the Gentoo Linux CD is having problems finding my PCMCIA ATAPI CD-ROM.</tile>
+		<body>
+		<p>Make sure the second IDE port is set to CDROM (it unsets itself if the device isn't attached on boot) then do the following at the isolinux <c>boot:</c> prompt:</p>
+<pre>
+boot: <i>rescue ide2=0x180,0x386</i>
+</pre>
+<p>If you are using a 1.0_rc5 or earlier boot CD, type <c>gentoo</c> instead of <c>rescue</c>, above.</p>
+</body>
+</section>
 	<section>
 		<title>I'm finding things to be really unstable and I'm using "-O9 -ffast-math -fomit-frame-pointer" optimizations.  What gives?</title>
 		<body>
