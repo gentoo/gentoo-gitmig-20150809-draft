@@ -1,3 +1,5 @@
-MD5 57af9c8eaee1b00a0105f9f47b26c4f3 ChangeLog 1994
-MD5 4ea94e25e936e363874d90b2a472539d libwww-5.4.0-r1.ebuild 1094
+MD5 1ff2575ec8fb3281ed4976f87fc3836e ChangeLog 2218
+MD5 c1e97421401927e555c37694aec02d36 libwww-5.4.0-r1.ebuild 1188
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 23078d7f8b1327132caea8473ffae786 files/digest-libwww-5.4.0-r1 66
+MD5 507c03693bfa1c4f9974efbc3644c682 files/libwww-5.4.0-gentoo.diff 1089
