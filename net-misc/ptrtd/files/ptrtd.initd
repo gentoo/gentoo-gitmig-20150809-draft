@@ -1,0 +1,38 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ptrtd/files/ptrtd.initd,v 1.1 2003/05/31 19:34:44 latexer Exp $
+
+# Init script for the ptrtd daemon.
+# 
+# Peter Johanson <latexer@gentoo.org>
+
+depends() {
+	need net
+}
+
+checkconfig() {
+	if [ -z ${IPV6_PREFIX} ]
+	then
+		eerror "You must define IPV6_PREFIX in /etc/conf.d/ptrtd"
+		return 1
+	else
+		return 0
+	fi
+}
+start() {
+	
+	checkconfig || return 1
+
+	ebegin "Starting ptrtd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/ptrtd \
+		-- -p ${IPV6_PREFIX} &> /dev/null
+	eend $?
+}
+
+stop() {
+	
+	ebegin "Stopping ptrtd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/ptrtd
+	eend $?
+}
