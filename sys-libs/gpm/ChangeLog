@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.20 2003/06/16 08:44:50 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.21 2003/06/24 14:35:37 agriffis Exp $
+
+  24 Jun 2003; Aron Griffis <agriffis@gentoo.org> gpm-1.20.1.ebuild:
+  Mark stable on alpha
 
   16 Jun 2003; Michael Nazaroff <naz@gentoo.org> gpm-1.20.1.ebuild:
   Marked ebuild stable for x86.
