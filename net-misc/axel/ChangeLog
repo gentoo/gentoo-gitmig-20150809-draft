@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/axel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.14 2005/02/18 00:37:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.15 2005/03/06 05:53:06 dragonheart Exp $
+
+  06 Mar 2005; Daniel Black <dragonheart@gentoo.org> axel-1.0a.ebuild:
+  Homepage update as per bug #84123 thanks to Nicholas McGovern
+  <hydroxides@yahoo.co.uk>
 
   17 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> axel-1.0a.ebuild:
   fix typo (bug #82319); tidy
