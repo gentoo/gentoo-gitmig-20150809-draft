@@ -1,0 +1,26 @@
+# ChangeLog for app-sci/systemc
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.1 2004/12/27 20:23:41 ribosome Exp $
+
+*systemc-2.0.1 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +systemc-2.0.1.ebuild:
+  Moved from app-sci/systemc to sci-electronics/systemc.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> systemc-2.0.1.ebuild:
+  virtual/glibc -> virtual/libc
+
+  07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> systemc-2.0.1.ebuild:
+  dyn_fetch() -> pkg_nofetch()
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> systemc-2.0.1.ebuild:
+  Add die following econf for bug 48950
+
+*systemc-2.0.1 (05 Dec 2002)
+  
+  05 Dec 2002; George Shapovalov <george@gentoo.org> systemc-2.0.1.ebuild : 
+
+  initial release. 
+  A C++ based modeling platform for VLSI and system-level co-design.
+  ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk>
