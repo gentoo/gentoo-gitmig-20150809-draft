@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.50 2005/01/29 07:00:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.51 2005/02/12 04:16:58 vapier Exp $
+
+*gawk-3.1.4-r2 (11 Feb 2005)
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gawk-3.1.3-getpgrp_void.patch, +files/gawk-3.1.4-flonum.patch,
+  +files/gawk-3.1.4-nextc.patch, +files/gawk-3.1.4-uplow.patch,
+  -gawk-3.1.4-r1.ebuild, +gawk-3.1.4-r2.ebuild:
+  Add some patches from Fedora and xmlgawk support #57857 by Alcino Dall Igna
+  Junior.
 
 *gawk-3.1.4-r1 (29 Jan 2005)
 

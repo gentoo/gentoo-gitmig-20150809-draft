@@ -1,30 +1,37 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r1.ebuild,v 1.1 2005/01/29 07:00:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r2.ebuild,v 1.1 2005/02/12 04:16:58 vapier Exp $
 
 inherit eutils toolchain-funcs
 
+XML_PATCH=patch_3.1.4__xml_20040813
 DESCRIPTION="GNU awk pattern-matching language"
 HOMEPAGE="http://www.gnu.org/software/gawk/gawk.html"
-SRC_URI="mirror://gnu/gawk/${P}.tar.gz"
+SRC_URI="mirror://gnu/gawk/${P}.tar.gz
+	xml? ( http://home1.vr-web.de/~Juergen.Kahrs/${XML_PATCH} )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="nls build uclibc"
+IUSE="nls build xml"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 
 	# Copy filefuncs module's source over ...
 	cp -PR "${FILESDIR}"/filefuncs "${WORKDIR}"/ || die "cp failed"
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-disable-DFA.patch #78227
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-disable-DFA.patch #78227
+	epatch "${FILESDIR}"/${PN}-3.1.3-getpgrp_void.patch #fedora
+	epatch "${FILESDIR}"/${P}-flonum.patch #fedora
+	epatch "${FILESDIR}"/${P}-nextc.patch #fedora
+	epatch "${FILESDIR}"/${P}-uplow.patch #fedora
+	use xml && epatch "${DISTDIR}"/${XML_PATCH} #57857
 	# support for dec compiler.
 	[[ $(tc-getCC) == "ccc" ]] && epatch ${FILESDIR}/${PN}-3.1.2-dec-alpha-compiler.diff
 }
@@ -92,7 +99,7 @@ src_install() {
 	done
 
 	if ! use build ; then
-		cd ${S}
+		cd "${S}"
 		dosym gawk.1.gz /usr/share/man/man1/awk.1.gz
 		dodoc AUTHORS ChangeLog FUTURES LIMITATIONS NEWS PROBLEMS POSIX.STD README
 		docinto README_d
