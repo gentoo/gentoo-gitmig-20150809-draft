@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pcre-ocaml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.3 2003/02/23 21:26:25 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.4 2003/06/20 00:59:25 george Exp $
+
+*pcre-ocaml-5.03.3 (19 Jun 2003)
+
+  19 Jun 2003; George Shapovalov <george@gentoo.org> pcre-ocaml-5.03.3 :
+  new version (#22278), mirrored source on this one as well.
 
 *pcre-ocaml-4.33.0 (23 Feb 2003)
 
