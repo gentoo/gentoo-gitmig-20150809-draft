@@ -1,8 +1,8 @@
 # ChangeLog for media-gfx/frontline
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/frontline/ChangeLog,v 1.1 2003/03/13 01:32:51 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/frontline/ChangeLog,v 1.2 2004/03/01 12:25:17 aliz Exp $
 
-*frontline-0.5.4.ebuild (12 Mar 2003)
+*frontline-0.5.4 (12 Mar 2003)
 
   12 Mar 2003; George Shapovalov <george@gentoo.org> ChangeLog, frontline-0.5.4.ebuild, files/digest-frontline-0.5.4 :
   initial release
