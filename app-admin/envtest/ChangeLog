@@ -1,7 +1,9 @@
 # ChangeLog for app-admin/envtest
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/envtest/ChangeLog,v 1.1 2003/03/28 03:14:08 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/envtest/ChangeLog,v 1.2 2003/04/02 06:43:23 carpaski Exp $
 
 *envtest* (26 Mar 2003)
   Added as an aide to testing repoman and seeing portage environment
-	settings from the inside of portage.
+  settings from the inside of portage.
+
+Testing it again...
