@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r5.ebuild,v 1.6 2004/06/24 21:42:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r5.ebuild,v 1.7 2004/06/29 19:52:46 agriffis Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
-IUSE="geoip"
+IUSE="apache2 geoip"
 
 DEPEND="=sys-libs/db-1*
 	>=sys-libs/zlib-1.1.4

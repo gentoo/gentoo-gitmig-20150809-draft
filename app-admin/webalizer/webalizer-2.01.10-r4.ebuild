@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.11 2004/06/24 21:42:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.12 2004/06/29 19:52:46 agriffis Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc hppa ~amd64"
-IUSE=""
+IUSE="apache2"
 
 DEPEND="=sys-libs/db-1*
 	>=sys-libs/zlib-1.1.4
