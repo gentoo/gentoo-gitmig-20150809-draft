@@ -1,14 +1,14 @@
-F77LIBS="-L/usr/lib/blas/atlas -lblas"
+F77LIBS="-L/usr/$(get_libdir)/blas/atlas -lblas"
 
 setup() {
- 
-einfo "/usr/lib/libblas.so -> blas/atlas/libblas.so"
-ln -sf blas/atlas/libblas.so /usr/lib/libblas.so
+MY_LIBDIR="$(get_libdir)" 
+einfo "/usr/${MY_LIBDIR}/libblas.so -> blas/atlas/libblas.so"
+ln -sf blas/atlas/libblas.so /usr/${MY_LIBDIR}/libblas.so
 
-einfo "/usr/lib/libblas.so.0 -> blas/atlas/libblas.so.0"
-ln -sf blas/atlas/libblas.so.0 /usr/lib/libblas.so.0
+einfo "/usr/${MY_LIBDIR}/libblas.so.0 -> blas/atlas/libblas.so.0"
+ln -sf blas/atlas/libblas.so.0 /usr/${MY_LIBDIR}/libblas.so.0
  
-einfo "/usr/lib/libblas.a -> blas/atlas/libblas.a"
-ln -sf blas/atlas/libblas.a /usr/lib/libblas.a
+einfo "/usr/${MY_LIBDIR}/libblas.a -> blas/atlas/libblas.a"
+ln -sf blas/atlas/libblas.a /usr/${MY_LIBDIR}/libblas.a
 
 }
