@@ -3,6 +3,9 @@
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
 *xcdroast-0.98_alpha13 (04 Jan 2003)
+
+  13 Feb 2003; Yannick Koehler <ykoehler@gentoo.org> xcdroast-0.98_alpha13.ebuild :
+  Added 'nls' USE flag to IUSE.
  
   05 Jan 2002; Seemant Kulleen <seemant@gentoo.org>
   xcdroast-0.98_alpha13.ebuild :
