@@ -1,4 +1,4 @@
-MD5 1f223eb8bf70f1dd188abeb3064589aa apt-proxy-1.3.0.ebuild 1806
+MD5 0c41c8ac481e0d2e15031bf709eded13 apt-proxy-1.3.0.ebuild 1787
 MD5 076dfede41ce6038ce30b9e7d7dc51d4 ChangeLog 540
 MD5 53f976abbe98f7765b80a2471282dcde files/digest-apt-proxy-1.3.0 66
 MD5 1490f2b8b736c9a2e867916fa179ea62 files/apt-proxy-1.3.0-sh.patch 438
