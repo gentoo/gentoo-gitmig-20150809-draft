@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-ladspa
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.4 2003/12/06 23:06:37 spider Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.5 2004/02/02 09:52:33 eradicator Exp $
+
+*xmms-ladspa-0.7 (02 Feb 2004)
+
+  02 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xmms-ladspa-0.7.ebuild:
+  Version bump.  Closes bug #40064.
 
   07 Dec 2003; <spider@gentoo.org> xmms-ladspa-0.6.ebuild:
   removed unnecessary alsa dep
