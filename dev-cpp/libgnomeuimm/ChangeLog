@@ -1,6 +1,8 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.11 2004/05/09 16:35:05 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.12 2004/05/12 07:58:07 aliz Exp $
+
+*libgnomeuimm-2.6.0 (09 May 2004)
 
   09 May 2004; Yi Qiang <khai@gentoo.org> libgnomeuimm-2.0.0.ebuild:
   Version bump
