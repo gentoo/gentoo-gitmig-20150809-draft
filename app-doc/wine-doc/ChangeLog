@@ -1,9 +1,16 @@
 # ChangeLog for app-doc/wine-doc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/wine-doc/ChangeLog,v 1.1 2002/06/14 13:53:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/wine-doc/ChangeLog,v 1.2 2002/07/29 17:42:33 phoenix Exp $
+
+*wine-doc-20020710 (29 Jul 2002)
+
+  29 Jul 2002; phoen][x <phoenix@gentoo.org> wine-doc-20020710.ebuild :
+  Bumped to new version. This closes bug #4863.
 
 *wine-doc-20020605 (14 Jun 2002)
 
-  14 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+  29 Jul 2002; phoen][x <phoenix@gentoo.org> wine-doc-20020605.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
 
+  14 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
   First version - docs only (split from app-emulation/wine).
