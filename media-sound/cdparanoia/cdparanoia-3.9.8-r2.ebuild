@@ -1,22 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r2.ebuild,v 1.2 2004/09/22 01:50:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r2.ebuild,v 1.3 2004/11/12 08:22:11 eradicator Exp $
+
+IUSE=""
 
 inherit eutils flag-o-matic gnuconfig
 
 MY_P=${PN}-III-alpha9.8
+S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="an advanced CDDA reader with error correction"
 HOMEPAGE="http://www.xiph.org/paranoia/"
 SRC_URI="http://www.xiph.org/paranoia/download/${MY_P}.src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa amd64 ~ia64 ~mips ~ppc64"
-IUSE=""
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 
 DEPEND="virtual/libc"
-
-S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
