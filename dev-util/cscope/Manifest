@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f9812a55dfeb753c61bda359c0561597 ChangeLog 3782
+MD5 9c4453db350fa7e0be4a033797581338 ChangeLog 3875
 MD5 ead17de1adabd6d6f1a2857cdde5751d cscope-15.3.ebuild 793
 MD5 6208c71296e871f63093462eeb65a490 cscope-15.4-r1.ebuild 1256
 MD5 0e1fb615b73acdaf069936e3779ec01f cscope-15.4.ebuild 1355
-MD5 2d1621c7e969b35caf21bb5578b4840f cscope-15.5.ebuild 1420
+MD5 2b0b0fe15da372362706adb4188eecd9 cscope-15.5.ebuild 1418
 MD5 79094d1585cb050b3855fbfe440f22b9 metadata.xml 790
 MD5 28ddc553966bf7045758be324600f5c8 files/50xcscope-gentoo.el 95
 MD5 326b4f2785a741e10f370a6accfd1c28 files/digest-cscope-15.3 63
 MD5 ae33cee910261c162094e95a82523f6c files/digest-cscope-15.4 63
 MD5 ae33cee910261c162094e95a82523f6c files/digest-cscope-15.4-r1 63
 MD5 25ad9fe446a7cabf4c482bbe150c7eaa files/digest-cscope-15.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBPnBKHTu7gpaalycRAu3NAJwJMYTX1nk6iiEpRdbpC5aJ8WozPgCgsg4T
-MEZMTe4G3R9xtUQ6w0A7Pq8=
-=jgzx
------END PGP SIGNATURE-----
