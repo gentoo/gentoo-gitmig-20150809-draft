@@ -1,15 +1,19 @@
-MD5 53aeb1ff2f21f165f43f8396fb1d6824 ChangeLog 12141
-MD5 2808ffa8657fb38606b151f497b7813e cyrus-imapd-2.2.8-r1.ebuild 8706
-MD5 052fda8a30a6419a70ed968ff2089642 cyrus-imapd-2.2.8.ebuild 5336
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8a3b7be7104b16ea09f3bbbea27983ff cyrus-imapd-2.2.10.ebuild 8796
-MD5 fe1bbab93ddd6cf3a9c4aacc111154d4 files/cyrus-imapd-2.2.8-db4.patch 1604
-MD5 88f50354abbcae1950a2d11c74db5fe5 files/cyrus-imapd-2.2.8-libwrap.patch 390
-MD5 d91b5eaa87ced6cb7efc8c716fc7476a files/cyrus.conf 1354
+MD5 67c38e1e0ba17ab2434435cf9d1487e5 ChangeLog 12351
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 375e343e1080fa924b085d5495e13588 files/cyrus.rc6 556
-MD5 6453c70342b78c99a073a06292b7e757 files/digest-cyrus-imapd-2.2.8 70
-MD5 6453c70342b78c99a073a06292b7e757 files/digest-cyrus-imapd-2.2.8-r1 70
-MD5 ef68faa77664a88f939cee2f12019507 files/imap.pam 195
 MD5 66137eb399ec7760afc24491a10d8bd7 files/imapd.conf 1587
+MD5 ef68faa77664a88f939cee2f12019507 files/imap.pam 195
 MD5 88f50354abbcae1950a2d11c74db5fe5 files/cyrus-imapd-2.2.10-libwrap.patch 390
 MD5 5a1c49cf6018aa400e8836ee03238140 files/digest-cyrus-imapd-2.2.10 71
+MD5 d91b5eaa87ced6cb7efc8c716fc7476a files/cyrus.conf 1354
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpu/P5FrxP71izLARAhzDAJ43saxjJn2BbsJVmhlCqkipQaUjbACfY1RU
+S60f/KapNArbAn0RphmHC6Y=
+=xCCO
+-----END PGP SIGNATURE-----
