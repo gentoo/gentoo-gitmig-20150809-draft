@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.2 2002/07/26 11:09:41 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.3 2002/07/26 11:33:10 carpaski Exp $
 
 # TODO: all ldap, sybase support
 S=${WORKDIR}/${P}
@@ -117,7 +117,7 @@ src_install () {
 	dodoc README README.* RELEASE.NOTES UPGRADE.*
 	dodoc doc/doc_html/* doc/man_html/*
 	rm -rf ${D}/${VPOP_HOME}/doc
-	dosym /usr/share/doc/${P}-r1/ ${VPOP_HOME}/doc
+	dosym /usr/share/doc/${PVR}/ ${VPOP_HOME}/doc
 	chown vpopmail.vpopmail ${D}/${VPOP_HOME}/doc
 
 	# Create symlink in /usr/bin for executables
