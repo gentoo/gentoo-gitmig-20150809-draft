@@ -11,3 +11,33 @@
 # You will need to unmask binutils as well. Bug #54059
 # echo '=sys-devel/binutils-2.15.91.0.1-r2 -* x86 ~x86' >> /etc/portage/packge.unmask
 ###############################################################################
+
+
+mkdir -p /etc/portage/
+cat <<EOF>> /etc/portage/package.keywords
+
+>=sys-devel/gcc-config-1.3.6 ~x86
+>=sys-devel/binutils-2.14.90.0.6-r1 -* x86 ~x86
+>=sys-devel/gcc-3.4.0 -* x86 ~x86
+
+# faulty on uclibc
+#app-arch/tar ~x86
+dev-libs/uclibc ~x86
+net-misc/iputils ~x86
+net-misc/openssh ~x86
+sys-apps/modutils ~x86
+sys-apps/shadow ~x86
+sys-devel/binutils ~x86
+sys-devel/gcc ~x86
+# stable libtool works too
+sys-devel/libtool ~x86
+sys-devel/automake ~x86
+sys-fs/devfsd ~x86
+sys-libs/zlib ~x86
+sys-libs/db ~x86
+sys-libs/ncurses ~x86
+sys-devel/libperl ~x86
+dev-lang/perl ~x86
+sys-libs/cracklib ~x86
+
+EOF
