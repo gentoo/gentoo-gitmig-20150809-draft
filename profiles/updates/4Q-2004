@@ -120,3 +120,4 @@ move app-sci/kunit sci-calculators/kunit
 move app-sci/pgcalc2 sci-calculators/pgcalc2
 move app-sci/qalculate-gtk sci-calculators/qalculate-gtk
 move app-sci/snac sci-calculators/snac
+move app-sci/tilp sci-calculators/tilp
