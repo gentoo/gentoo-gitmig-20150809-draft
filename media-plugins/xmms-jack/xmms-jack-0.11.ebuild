@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.11.ebuild,v 1.4 2005/02/06 18:38:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.11.ebuild,v 1.5 2005/04/02 20:45:15 lu_zero Exp $
 
 IUSE=""
 
@@ -28,6 +28,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.11-sysbio2jack.patch
+	#quick endianess fix
+	sed -i -e "s:FMT_S16_LE:FMT_S16_NE:g" jack.c
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
 	aclocal
