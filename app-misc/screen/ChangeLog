@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.39 2003/11/15 02:48:13 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.40 2003/11/16 00:38:01 seemant Exp $
+
+  15 Nov 2003; Seemant Kulleen <seemant@gentoo.org> screen-3.9.13-r4.ebuild,
+  screen-3.9.15-r1.ebuild, screen-3.9.15.ebuild, screen-4.0.1.ebuild:
+  HOMEPAGE update thanks to: Hartwig Brandl
+  <hartwigbrandl@users.sourceforge.net> in bug #33576
 
   15 Nov 2003; Lars Weiler <pylon@gentoo.org> screen-4.0.1.ebuild:
   Masked stable on x86 and sparc (with ciaranm permission). Added testing

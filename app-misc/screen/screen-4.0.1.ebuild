@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1.ebuild,v 1.5 2003/11/15 02:48:13 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1.ebuild,v 1.6 2003/11/16 00:38:01 seemant Exp $
 
 inherit flag-o-matic
 
 IUSE="pam"
 DESCRIPTION="Screen is a full-screen window manager that multiplexes a physical terminal between several processes"
-HOMEPAGE="http://www.math.fu-berlin.de/~guckes/screen/"
+HOMEPAGE="http://www.guckes.net/screen/"
 SRC_URI="ftp://ftp.uni-erlangen.de/pub/utilities/screen/${P}.tar.gz"
 
 SLOT="0"
