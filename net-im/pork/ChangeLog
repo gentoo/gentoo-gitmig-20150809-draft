@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pork
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.13 2003/11/20 01:14:00 lostlogic Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.14 2004/04/26 04:46:37 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> pork-0.99.1.ebuild,
+  pork-0.99.2.ebuild:
+  Add die following econf for bug 48950
 
 *pork-0.99.2 (19 Nov 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.85-r1.ebuild,v 1.2 2004/03/25 12:11:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.85-r1.ebuild,v 1.3 2004/04/26 04:45:32 agriffis Exp $
 
 inherit eutils
 
@@ -55,7 +55,7 @@ src_compile() {
 	use oscar || myconf="${myconf} --oscar=0"
 	use yahoo || myconf="${myconf} --yahoo=0"
 
-	econf --datadir=/usr/share/bitlbee --etcdir=/etc/bitlbee ${myconf}
+	econf --datadir=/usr/share/bitlbee --etcdir=/etc/bitlbee ${myconf} || die "econf failed"
 	emake || die "make failed"
 
 	# make bitlbeed forking server
