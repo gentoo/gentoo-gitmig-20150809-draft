@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.168 2004/07/15 11:24:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.169 2004/07/22 18:47:27 stuart Exp $
+
+  22 Jul 2004; Stuart Herbert <stuart@gentoo.org> mod_php-5.0.0.ebuild:
+  Added missing PROVIDE
 
   15 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mod_php-4.3.8.ebuild:
   Stable on alpha, see bug #56985.

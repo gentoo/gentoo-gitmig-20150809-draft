@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.0.ebuild,v 1.2 2004/07/14 09:53:34 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.0.ebuild,v 1.3 2004/07/22 18:47:27 stuart Exp $
 
 IUSE="${IUSE} apache2"
 
 KEYWORDS="-x86 -ppc -sparc -alpha -hppa -ia64 -amd64 -s390"
+PROVIDE="virtual/php-${PV}"
 
 detectapache() {
 	local domsg=
@@ -110,10 +111,6 @@ src_install() {
 
 apache2msg() {
 	einfo "Edit /etc/conf.d/apache2 and add \"-D PHP5\" to APACHE2_OPTS"
-}
-
-pkg_preinst() {
-	php5-sapi_pkg_preinst
 }
 
 pkg_postinst() {
