@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pwdb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.20 2004/01/22 02:32:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.21 2004/02/03 01:13:07 darkspecter Exp $
+
+  03 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> pwdb-0.62.ebuild:
+  set ppc in keywords
 
   21 Jan 2004; Chris PeBenito <pebenito@gentoo.org>
   files/pwdb-0.62-selinux.patch:

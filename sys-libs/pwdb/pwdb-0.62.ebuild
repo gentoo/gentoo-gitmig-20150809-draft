@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.3 2003/12/21 16:47:52 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.4 2004/02/03 01:13:07 darkspecter Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="BSD | GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 ppc64"
+KEYWORDS="amd64 ~x86 ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 ppc64"
 
 DEPEND="virtual/glibc
 	selinux? ( sys-libs/libselinux )"
