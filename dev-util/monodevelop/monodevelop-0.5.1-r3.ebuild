@@ -1,28 +1,39 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.5.ebuild,v 1.4 2004/10/26 21:53:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.5.1-r3.ebuild,v 1.1 2005/02/09 12:42:46 latexer Exp $
 
 inherit mono eutils
 
 DESCRIPTION="MonoDevelop is a project to port SharpDevelop to Gtk#"
-SRC_URI="http://www.go-mono.com/archive/1.0/${P}.tar.gz"
+SRC_URI="http://www.go-mono.com/archive/1.0.2/${P}.tar.gz
+		mirror://gentoo/${P}-mono-1.1.x-compat.diff.bz2"
 HOMEPAGE="http://monodevelop.com/"
 LICENSE="GPL-2"
 
 IUSE=""
 DEPEND=">=dev-libs/icu-2.6
-	>=dev-dotnet/gtksourceview-sharp-0.5
-	>=dev-dotnet/gecko-sharp-0.5-r2
 	>=dev-dotnet/mono-1.0
 	>=dev-util/monodoc-1.0
-	>=dev-dotnet/gtk-sharp-1.0"
+	>=dev-dotnet/gtk-sharp-1.0.4-r1
+	>=dev-dotnet/glade-sharp-1.0.4
+	>=dev-dotnet/gnome-sharp-1.0.4
+	>=dev-dotnet/gconf-sharp-1.0.4
+	>=dev-dotnet/gtkhtml-sharp-1.0.4
+	>=dev-dotnet/gtksourceview-sharp-0.5
+	>=dev-dotnet/gecko-sharp-0.5-r2
+	>=sys-devel/automake-1.8"
 
 KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-compat.diff
+	cd ${S}
+	epatch ${WORKDIR}/${P}-mono-1.1.x-compat.diff || die
+	epatch ${FILESDIR}/${P}-nemerle-gtk-sharp.diff || die
+	export WANT_AUTOMAKE=1.8
+	aclocal || die
+	automake || die
 }
 
 src_compile() {

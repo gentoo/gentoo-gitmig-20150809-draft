@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/monodevelop
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.16 2004/12/01 23:58:26 latexer Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.17 2005/02/09 12:42:46 latexer Exp $
+
+*monodevelop-0.5.1-r3 (08 Feb 2005)
+
+  08 Feb 2005; Peter Johanson <latexer@gentoo.org>
+  -files/monodevelop-0.5-compat.diff, +monodevelop-0.5.1-r3.ebuild,
+  -monodevelop-0.5.1.ebuild, -monodevelop-0.5.ebuild:
+  Revision bump with mono-1.1.x compat, and remove a few older versions.
 
 *monodevelop-0.5.1-r2 (01 Dec 2004)
 

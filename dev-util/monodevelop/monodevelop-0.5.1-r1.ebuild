@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.5.1-r1.ebuild,v 1.2 2004/10/26 21:53:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.5.1-r1.ebuild,v 1.3 2005/02/09 12:42:46 latexer Exp $
 
 inherit mono eutils
 
