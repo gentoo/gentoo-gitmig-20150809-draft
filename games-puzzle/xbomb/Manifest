@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f6171d9039c8fa2ada2063a29faaceb8 ChangeLog 705
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 93217803f89efd4ef780c0e845d868aa xbomb-2.1-r1.ebuild 1125
+MD5 0cdc087d88cdebf97e6ff904651eeb1f xbomb-2.1-r1.ebuild 1140
 MD5 15fe72ff47158963cb27d563903a0427 files/digest-xbomb-2.1-r1 57
 MD5 7919f1ad93b19f5c12e3432dd2487d46 files/xbomb-2.1.diff 957
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBoXbZHTu7gpaalycRAs+yAKDuF9/t7gNtu2yeEROt8U3SQX64FgCfeOQb
+29514nJjuiObyoVtTxuXwjc=
+=z1JJ
+-----END PGP SIGNATURE-----
