@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/jsx-1.0.7.4.ebuild,v 1.4 2004/10/22 11:17:57 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/jsx-1.0.7.4.ebuild,v 1.5 2005/03/08 15:21:40 luckyduck Exp $
 
 inherit java-pkg
 

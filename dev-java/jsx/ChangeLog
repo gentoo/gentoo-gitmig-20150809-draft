@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsx
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/ChangeLog,v 1.6 2004/10/29 12:36:33 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/ChangeLog,v 1.7 2005/03/08 15:21:40 luckyduck Exp $
+
+  08 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> jsx-1.0.7.5.ebuild:
+  stable on amd64 and x86
 
   29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jsx-1.0.7.5.ebuild:
   removed nomirror
