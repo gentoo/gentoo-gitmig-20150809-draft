@@ -1,0 +1,7 @@
+MD5 f35899d792cd9c605297824fa4c7a2dd ChangeLog 3766
+MD5 2da62ad7b736635552bf97e8e59ad7ab texinfo-4.3-r1.ebuild 1764
+MD5 bcb7409ffe72b0f10012dcd8e93267cd texinfo-4.5.ebuild 1733
+MD5 3173c3b67a3ef4e594cf5ce1b8253504 files/digest-texinfo-4.3-r1 64
+MD5 e5c1b120747cf28d4ff1885b64f608a6 files/digest-texinfo-4.5 64
+MD5 b8ed9b84ca8ab4c2ac4e628a8f928dcb files/install-info.patch 729
+MD5 690fb86d0c0215155b1d18671099115a files/mkinfodir 7318
