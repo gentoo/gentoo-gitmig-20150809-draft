@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <woodchip@gentoo.org> (25 Aug 2002)
+# Latest stable release, test.
+=dev-db/mysql-3.23.52
+
 # <azarah@gentoo.org> (25 Aug 2002)
 # Contains the hacked sandbox.  Needs testing.
 =sys-apps/portage-2.0.30_alpha
