@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-meanwhile/gaim-meanwhile-0.82.ebuild,v 1.2 2004/09/08 18:17:50 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-meanwhile/gaim-meanwhile-0.82.ebuild,v 1.3 2004/09/18 01:11:58 rizzo Exp $
 
 inherit debug
 
@@ -11,7 +11,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 DEPEND="~net-libs/meanwhile-0.3
-	>=net-im/gaim-${PV}"
+	>=net-im/gaim-${PV}
+	<net-im/gaim-1.0.0"
 IUSE=""
 
 src_install() {

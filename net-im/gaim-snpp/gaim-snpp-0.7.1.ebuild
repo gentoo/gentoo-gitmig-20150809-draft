@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-snpp/gaim-snpp-0.7.1.ebuild,v 1.2 2004/09/03 13:20:25 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-snpp/gaim-snpp-0.7.1.ebuild,v 1.3 2004/09/18 01:09:31 rizzo Exp $
 
 inherit debug
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND=">=net-im/gaim-0.82"
+DEPEND=">=net-im/gaim-0.82
+	<net-im/gaim-1.0.0"
 #RDEPEND=""
 
 src_install() {
