@@ -833,6 +833,7 @@ net-mail/spamassassin
 # rphillips@gentoo.org 14 Jun 2002
 # Testing
 =dev-db/postgresql-7.2.1
+=dev-db/postgresql-7.2.1-r1
 
 # g2boojum@gentoo.org 14 June 2002
 # works, but can't log in (meaning it really _doesn't_ work)
