@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.3.ebuild,v 1.6 2004/10/01 22:28:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.4.ebuild,v 1.1 2004/10/01 22:28:53 dragonheart Exp $
 
 inherit eutils
 
@@ -10,17 +10,17 @@ SRC_URI="http://www.capisuite.de/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND="<net-dialup/capi4k-utils-20040810
+RDEPEND="net-dialup/capi4k-utils
 	dev-lang/python"
 
 DEPEND="sys-devel/patch
 	media-sound/sox
 	media-libs/tiff
 	virtual/ghostscript
-	<net-dialup/capi4k-utils-20040810"
+	net-dialup/capi4k-utils"
 
 src_unpack() {
 

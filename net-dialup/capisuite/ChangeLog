@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.5 2004/06/24 22:24:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.6 2004/10/01 22:28:53 dragonheart Exp $
+
+*capisuite-0.4.4 (02 Oct 2004)
+
+  02 Oct 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/capisuite-0.4.4-gentoo.patch, capisuite-0.4.3.ebuild,
+  +capisuite-0.4.4.ebuild:
+  version bump as per bug #37311. ebuild thanks to Kai Leibrandt
+  <k_leibrandt@hotmail.com>. x86 stable on 0.4.3. Depandancies fixed.
 
   22 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> capisuite-0.4.3.ebuild:
   fix DESCRIPTION, HOMEPAGE, SRC_URI (bug #54714)
