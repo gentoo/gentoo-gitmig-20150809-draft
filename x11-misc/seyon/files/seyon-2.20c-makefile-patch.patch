@@ -1,0 +1,12 @@
+--- seyon-2.20c/Makefile	2004-02-11 06:58:43.501496784 +1100
++++ seyon_2.20c_new/Makefile	2004-02-11 06:56:08.673034288 +1100
+@@ -1150,9 +1150,6 @@
+ 	fi
+ 	$(INSTALL) $(INSTALLFLAGS) $(INSTDATFLAGS) seyon.help $(DESTDIR)$(LIBDIR)/seyon.help
+ 
+-install::
+-	@if [ ! -d $(HOME)/.seyon ]; then mkdir $(HOME)/.seyon; fi; 	echo "=== Copying example files (no overwrite) to $(HOME)/.seyon ..."; 	for i in phonelist protocols startup script.*; do 		if [ ! -f $(HOME)/.seyon/$$i ]; then cp $$i $(HOME)/.seyon; fi;	done;
+-
+ cleandir::
+ 	rm -f version.h y.tab.* SeParse.c
+ 

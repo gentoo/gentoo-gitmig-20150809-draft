@@ -1,0 +1,32 @@
+--- seyon-2.20c/config.h	1993-07-02 10:01:42.000000000 +1000
++++ seyon-2.20c-new/config.h	2004-02-12 10:31:45.716008808 +1100
+@@ -101,7 +101,8 @@
+ #define HAVE_SELECT         YES
+ #define LF_USE_ASCII_PID    YES
+ #define LF_USE_DEV_NUMBERS  YES
+-#define LF_PATH             "/usr/spool/locks"
++//#define LF_PATH             "/usr/spool/locks"
++#define LF_PATH		    "/var/lock/uucp"
+ #define LF_PREFIX           "LK."
+ #endif
+ 
+@@ -199,7 +200,8 @@
+ #define HAVE_SELECT         YES
+ #define LF_USE_ASCII_PID    NO
+ #define LF_USE_DEV_NUMBERS  NO
+-#define LF_PATH             "/usr/spool/locks"
++//#define LF_PATH             "/usr/spool/locks"
++#define LF_PATH		    "/var/lock/uucp"
+ #define LF_PREFIX           "LCK.."
+ #define B19200              16
+ #define B38400              17
+@@ -319,7 +321,8 @@
+  */
+ 
+ #ifndef LF_PATH
+-#define LF_PATH             "/usr/spool/uucp"
++//#define LF_PATH             "/usr/spool/uucp"
++#define LF_PATH		    "/var/lock/uucp"
+ #endif
+ 
+ /* 

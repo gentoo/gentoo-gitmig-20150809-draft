@@ -1,0 +1,7 @@
+# ChangeLog for x11-misc/seyon
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/seyon/ChangeLog,v 1.1 2004/03/01 09:28:33 cyfred Exp $
+
+  01 Mar 2004; Andrew Bevitt <cyfred@gentoo.org>; :
+  New package. Thanks to James Dumay for working through this, bug 38264
+
