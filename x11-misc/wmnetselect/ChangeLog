@@ -1,0 +1,14 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmnetselect/ChangeLog,v 1.1 2002/02/07 08:49:58 vitaly Exp $
+
+*wmnetselect-0.8 (7-Feb-2002)
+
+  7 Feb 2002; Vitaly Kushneriuk <vitaly@gentoo.org> wmnetselect-0.8.ebuild :
+
+  Fixed and added to portage.
+
+  7 Feb 2002; Arcady Genkin <agenkin@thpoon.com>  wmnetselect-0.8.ebuild :
+
+  First version of the package.
+		
