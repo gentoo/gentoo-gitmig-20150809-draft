@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.12 2003/06/12 18:59:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.13 2003/10/18 19:59:19 raker Exp $
+
+*afterstep-2.0_beta2 (18 Oct 2003)
+
+  18 Oct 2003; Nick Hadaway <raker@gentoo.org> afterstep-2.00_beta2.ebuild:
+  Afterstep is almost 2.00 revisions old! :)
 
   12 Jun 2003; <msterret@gentoo.org> afterstep-1.8.11-r1.ebuild,
   afterstep-1.8.11-r2.ebuild:
