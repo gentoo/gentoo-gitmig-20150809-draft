@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174.ebuild,v 1.1 2005/04/01 12:15:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174.ebuild,v 1.2 2005/04/01 19:53:34 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -68,11 +68,11 @@ src_unpack() {
 	# Patchs go below here, add breif description
 	cd ${S}
 	# nVidia wants us to use nvidia-installer, removing warning.
-	epatch ${NV_PATCH_PREFIX//7174/6629}-makefile.patch
+	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-makefile.patch
 	# Use the correct defines to make gtkglext build work
-	epatch ${NV_PATCH_PREFIX//7174/6629}-defines.patch
+	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
-	epatch ${NV_PATCH_PREFIX//7174/6629}-glheader.patch
+	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-glheader.patch
 
 	# Closing bug #37517 by letting virtual/x11 provide system wide glext.h
 	# 16 July 2004, opengl-update is now supplying glext.h for system wide

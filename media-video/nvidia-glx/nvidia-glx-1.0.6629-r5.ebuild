@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r5.ebuild,v 1.2 2005/02/09 10:54:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r5.ebuild,v 1.3 2005/04/01 19:53:34 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -19,7 +19,7 @@ LICENSE="NVIDIA"
 SLOT="0"
 
 # This revision just changes behavior on amd64 2005.0
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 
 RESTRICT="nostrip multilib-pkg-force"
 IUSE=""
