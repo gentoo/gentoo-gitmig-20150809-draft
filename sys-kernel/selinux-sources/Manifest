@@ -1,4 +1,4 @@
-MD5 5a5af68e355dd461f41c3f14c20d748a selinux-sources-2.4.24-r2.ebuild 1008
+MD5 20ea8dd17795fe9e56ab24041a3e793d selinux-sources-2.4.24-r2.ebuild 994
 MD5 6e43e37aec320a4eddb99ba3dbad942c ChangeLog 4822
 MD5 f455fbb5d96167058282b93599457a4f metadata.xml 470
 MD5 174438d215b70cad5ffb00ca8123c062 files/selinux-sources-2.4.24.munmap.patch 837
