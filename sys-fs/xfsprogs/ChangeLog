@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.10 2004/04/18 16:43:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.11 2004/04/25 08:15:13 kumba Exp $
+
+  25 Apr 2004; Joshua Kinard <kumba@gentoo.org> xfsprogs-2.6.3.ebuild:
+  Tweaked the arch check to see if PLATFORM needed to be unset and added mips to
+  that arch list.
 
   18 Apr 2004; Luca Barbato <lu_zero@gentoo.org> xfsprogs-2.6.0.ebuild, 
   xfsprogs-2.6.3.ebuild:
