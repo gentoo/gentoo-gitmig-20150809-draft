@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.0.3-r3.ebuild,v 1.1 2003/04/18 06:37:42 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.0.3-r3.ebuild,v 1.2 2003/07/23 01:40:52 george Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/gmetadom/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="
 	>=findlib-0.8
