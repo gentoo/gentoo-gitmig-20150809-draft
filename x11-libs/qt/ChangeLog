@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.188 2005/01/30 20:17:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.189 2005/01/31 16:54:26 caleb Exp $
+
+*qt-3.3.4-r1 (31 Jan 2005)
+
+  31 Jan 2005; Caleb Tennis <caleb@gentoo.org>
+  +files/qt-3.3.4-flickerfree_qiconview_buffered.patch,
+  +files/qt-3.3.4-flickerfree_qscrollview_fixwindowactivate.patch,
+  +files/qt-3.3.4-qclipboard-hack.patch, +qt-3.3.4-r1.ebuild:
+  Bump 3.3.4 for patches
 
   31 Jan 2005; Mamoru KOMACHI <usata@gentoo.org> qt-3.3.4.ebuild:
   Updated immqt patch; bug #80056.
