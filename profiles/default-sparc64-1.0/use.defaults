@@ -9,6 +9,7 @@
 #oss
 #qtmt
 #sse
+gnome-libs	gnome-base/gnome-libs
 aalib		media-libs/aalib	
 alsa		media-libs/alsa-lib
 arts		kde-base/kdelibs
