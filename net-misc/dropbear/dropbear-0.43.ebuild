@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.43.ebuild,v 1.1 2004/08/15 17:43:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.43.ebuild,v 1.2 2004/09/24 00:45:36 vapier Exp $
 
 inherit gnuconfig
 
@@ -24,19 +24,19 @@ src_unpack() {
 src_compile() {
 	econf `use_enable zlib` || die
 
+	local maketarget=""
 	if use multicall ; then
 		sed -i \
 			-e '/define DROPBEAR_MULTI/s:/\* *::' \
 			-e '/define DROPBEAR_MULTI/s:\*/::' \
 			options.h
-		if use static ; then
-			emake dropbearmultistatic || die "multi static failed"
-		else
-			emake dropbearmulti || die "multi failed"
-		fi
+		use static \
+			&& maketarget="dropbearmultistatic" \
+			|| maketarget="dropbearmulti"
 	else
-		emake || die "make failed"
+		use static && maketarget="static"
 	fi
+	emake ${maketarget} || die "make ${maketarget} failed"
 }
 
 src_install() {
@@ -49,7 +49,9 @@ src_install() {
 		dosym ${multibin} /usr/bin/dropbearconvert || die
 		dosym ../bin/${multibin} /usr/sbin/dropbear || die
 	else
-		make install DESTDIR=${D} || die
+		local maketarget="install"
+		use static && maketarget="install-static"
+		make ${maketarget} DESTDIR=${D} || die "make ${maketarget} failed"
 	fi
 	exeinto /etc/init.d ; newexe ${FILESDIR}/dropbear.init.d dropbear
 	insinto /etc/conf.d ; newins ${FILESDIR}/dropbear.conf.d dropbear
