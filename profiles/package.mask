@@ -59,8 +59,11 @@ app-editors/gtk-xemacs
 >=dev-db/unixODBC-2.0.8
 =sys-devel/spython-2.0-r5
 =app-arch/unzip-5.42 
-#OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
 
+# Segfault? someone test this
+=app-misc/bbweather-0.3
+
+#OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
 =sys-kernel/linux-sources-2.4.4-r5
 =sys-kernel/linux-extras-2.4.4-r5
 =sys-kernel/linux-2.4.4-r5
