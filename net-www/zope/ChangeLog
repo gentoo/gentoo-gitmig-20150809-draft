@@ -1,10 +1,18 @@
 # ChangeLog for net-www/zope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/ChangeLog,v 1.8 2003/02/12 08:54:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/ChangeLog,v 1.9 2003/02/17 03:57:23 kutsuya Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*zope-2.6.1 (23 Nov 2002)
+06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords  
+
+*zope-2.6.0-r2 (16 Feb 2003)
+
+  16 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> : A major revison.
+  New rcscript (along with zope-config) makes it possible to have several zope
+  instances runing at the same time. Also has better PID management fixing 
+  #14173. /etc/env.d/zope and /etc/conf.d/zope are now placed in 
+  /etc/conf.d/zope-2_6_0. Also added a DateTime patch. Improved security.
+  
+*zope-2.6.0-r1 (23 Nov 2002)
 
   23 Nov 2002; Grant Goodyear <g2boojum@gentoo.org> zope-2.6.0-r1.ebuild :
   Added ebuild from Bug #10758 (thanks to Maurizio Disimino!) which should
@@ -17,6 +25,7 @@
   Security update. Ebuild contributed by Jason S <kutsuya1@yahoo.com> in #9474.
 
 *zope-2.5.1 (2 Jul 2002)
+	
   2 Jul 2002; Jon Nelson <jnelson@gentoo.org> zope-2.5.1.ebuild:
   Use python 2.1.3 ebuild explicitly  
   Thanks for Matt Behrens <matt@zigg.com>
@@ -31,10 +40,5 @@
 
 *zope-2.4.0-r6 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog : Initial import.
   
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
