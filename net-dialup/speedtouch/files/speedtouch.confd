@@ -12,3 +12,7 @@ VERBOSE="0"
 # Set the peer filename
 # This should be in /etc/ppp/peers/
 PEER="adsl"
+
+# Extra options to modem_run
+# Some modems will need -s, if in doubt then leave blank
+#MODEM_RUN_EXTRAOPTS="-s"

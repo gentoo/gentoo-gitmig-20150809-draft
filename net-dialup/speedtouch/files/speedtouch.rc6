@@ -21,7 +21,7 @@ check_modem_run() {
 sleep 1
 
 ## Let's check if modem_run is UP. If not let's try lauching it (again)?
-( ps -e | grep -q modem_run ) || $MODEM_RUN -v $VERBOSE -m -f $MICROCODE
+( ps -e | grep -q modem_run ) || $MODEM_RUN -v $VERBOSE -m $MODEM_RUN_EXTRAOPTS -f $MICROCODE
 RETURNED=$?
 
 sleep 1
