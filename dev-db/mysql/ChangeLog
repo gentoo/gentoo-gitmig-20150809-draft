@@ -1,8 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.45 2003/04/06 16:26:54 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.46 2003/04/22 10:00:18 robbat2 Exp $
 
 *mysql-4.0.12 (22 Mar 2003)
+
+  22 Apr 2003; Robin Johnson <robbat2@gentoo.org> files/mysql-4.0.rc6,
+  files/mysql.init:
+  Change dir=`awk...` line to use sed instead in a more reliable manner
+  fixes bug #18833
 
   06 Apr 2003; Zach Welch <zwelch@gentoo.org> mysql-4.0.12.ebuild:
   add arm keyword

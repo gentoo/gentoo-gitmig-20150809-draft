@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-4.0.rc6,v 1.4 2003/02/14 22:39:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-4.0.rc6,v 1.5 2003/04/22 10:00:18 robbat2 Exp $
 
 depend() {
 	need net
@@ -13,7 +13,7 @@ checkconfig() {
 		eerror "No /etc/mysql/my.cnf file exists!"
 	fi
 
-	dir=`awk '{ if ( $0 ~ /^datadir[ \t]+=/ ) { print $3 } }' < /etc/mysql/my.cnf`
+    dir=`my_print_defaults mysqld | grep -- --datadir | sed -e "s|^.*=\(.*\)|\1|"`
 
 	if [ ! -d $dir/mysql ] ; then
 		eerror "You dont appear to have the mysql database installed yet."
