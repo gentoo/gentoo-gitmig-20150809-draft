@@ -1,3 +1,4 @@
-MD5 8d394c267868a5cf2302311301a8b0aa files/digest-pyframer-0.2 63
-MD5 118573c6f3adf7e459686038e8f2e3e6 pyframer-0.2.ebuild 590
 MD5 02a9dade60bf19c30e789cd90210d3dc ChangeLog 586
+MD5 8a41a2605b3b54e7cb972eba19c9991f pyframer-0.2.ebuild 555
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 8d394c267868a5cf2302311301a8b0aa files/digest-pyframer-0.2 63
