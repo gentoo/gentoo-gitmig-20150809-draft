@@ -1,4 +1,4 @@
-MD5 e7a62b967018eb99af1f073a09a1fc0a ChangeLog 622
+MD5 bb1bc41f054413aaa245d76edc87be98 ChangeLog 782
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 837312b19e7629617eaf18f0f2cf7815 mod_auth_pgsql-0.9.12.ebuild 1446
+MD5 b7fe895817d585785cf511ae063a2c25 mod_auth_pgsql-0.9.12.ebuild 1447
 MD5 33aa974738c1fa067c57329de84f8f98 files/digest-mod_auth_pgsql-0.9.12 72
