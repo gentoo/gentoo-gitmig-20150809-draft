@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gtk-xemacs/gtk-xemacs-21.1.12_p3.ebuild,v 1.2 2000/10/23 11:27:12 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gtk-xemacs/gtk-xemacs-21.1.12_p3.ebuild,v 1.3 2000/10/29 20:36:58 achim Exp $
 
 A=gtk-xemacs-09252000.tar.bz2
 S=${WORKDIR}/gtk-xemacs
@@ -11,8 +11,7 @@ HOMEPAGE="http://www.cs.indiana.edu/elisp/gui-xemacs/"
 
 src_compile() {                           
   cd ${S}
-  try ./configure --prefix=/usr/X11R6 \
-	--without-gnome
+  try ./configure --prefix=/usr/X11R6 
   try make
 }
 
