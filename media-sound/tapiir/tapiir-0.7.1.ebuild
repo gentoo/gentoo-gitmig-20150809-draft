@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/tapiir-0.7.1.ebuild,v 1.11 2004/09/15 17:38:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/tapiir-0.7.1.ebuild,v 1.12 2004/10/07 03:30:37 eradicator Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="--with-fltk-prefix=/usr/lib/fltk-1.1 \
+	myconf="--with-fltk-prefix=/usr/$(get_libdir)/fltk-1.1 \
 		--with-fltk-inc-prefix=/usr/include/fltk-1.1"
 	econf ${myconf} || die
 	emake || die

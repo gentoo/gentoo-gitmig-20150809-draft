@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.5.ebuild,v 1.2 2004/09/03 18:22:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.5.ebuild,v 1.3 2004/10/07 03:30:00 eradicator Exp $
 
 inherit python
 
@@ -35,7 +35,7 @@ pkg_setup() {
 	#  which needs X11, and breaks in console)
 	use gtkhtml \
 		&& python_version \
-		&& [ ! -f ${ROOT}usr/lib/python${PYVER}/site-packages/gtk-2.0/gtkhtml2.so ] \
+		&& [ ! -f ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0/gtkhtml2.so ] \
 		&& eerror "Could not find the GTKHtml2 python module, whereas gtkhml is in your flags." \
 		&& eerror "Please re-emerge \"dev-python/gnome-python\" with \"gtkhtml\" USE flag on." \
 		&& die "You will have to re-emerge gnome-python."

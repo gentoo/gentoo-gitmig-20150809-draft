@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.6.ebuild,v 1.2 2004/09/23 08:28:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.6.ebuild,v 1.3 2004/10/07 03:23:54 eradicator Exp $
 
 IUSE="X"
 
@@ -55,7 +55,7 @@ src_compile() {
 	gnuconfig_update
 
 	# hdspmixer requires fltk
-	export LDFLAGS="-L/usr/lib/fltk-1.1"
+	export LDFLAGS="-L/usr/$(get_libdir)/fltk-1.1"
 	export CPPFLAGS="-I/usr/include/fltk-1.1"
 
 	# hdspmixer is missing depconf - copy from the hdsploader directory

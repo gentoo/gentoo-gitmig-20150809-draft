@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0.ebuild,v 1.10 2004/09/15 19:38:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0.ebuild,v 1.11 2004/10/07 03:28:39 eradicator Exp $
 
 IUSE=""
 
@@ -37,8 +37,8 @@ src_install() {
 	dobin jack
 
 	distutils_python_version
-	dodir /usr/lib/python${PYVER}/site-packages
-	insinto /usr/lib/python${PYVER}/site-packages
+	dodir /usr/$(get_libdir)/python${PYVER}/site-packages
+	insinto /usr/$(get_libdir)/python${PYVER}/site-packages
 	doins jack_*py
 
 	newman jack.man jack.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.8.ebuild,v 1.4 2004/09/14 16:31:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.8.ebuild,v 1.5 2004/10/07 03:27:43 eradicator Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND="sys-apps/sed"
 
 RDEPEND=">=dev-lang/perl-5.8.0"
 
-LIBDIR=/usr/lib/gnump3d
+LIBDIR=/usr/$(get_libdir)/gnump3d
 
 pkg_setup() {
 	enewuser gnump3d '' '' '' nogroup || die

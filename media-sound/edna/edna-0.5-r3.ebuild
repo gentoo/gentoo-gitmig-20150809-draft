@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r3.ebuild,v 1.8 2004/09/14 07:38:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r3.ebuild,v 1.9 2004/10/07 03:27:00 eradicator Exp $
 
 IUSE=""
 
@@ -22,18 +22,18 @@ src_install() {
 	insopts -m 755
 	newins ${FILESDIR}/edna.gentoo edna
 
-	dodir /usr/bin /usr/lib/edna /usr/lib/edna/templates
+	dodir /usr/bin /usr/$(get_libdir)/edna /usr/$(get_libdir)/edna/templates
 	exeinto /usr/bin ; newexe edna.py edna
-	exeinto /usr/lib/edna ; doexe ezt.py
-	exeinto /usr/lib/edna ; doexe MP3Info.py
-	insinto /usr/lib/edna/templates
+	exeinto /usr/$(get_libdir)/edna ; doexe ezt.py
+	exeinto /usr/$(get_libdir)/edna ; doexe MP3Info.py
+	insinto /usr/$(get_libdir)/edna/templates
 	insopts -m 644
 	doins templates/*
 
 	insinto /etc/edna
 	insopts -m 644
 	doins edna.conf
-	dosym /usr/lib/edna/templates /etc/edna/templates
+	dosym /usr/$(get_libdir)/edna/templates /etc/edna/templates
 
 	dodoc COPYING README ChangeLog
 	dohtml -r www/*

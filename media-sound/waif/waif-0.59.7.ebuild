@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.7.ebuild,v 1.11 2004/09/15 17:43:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.7.ebuild,v 1.12 2004/10/07 03:31:20 eradicator Exp $
 
 IUSE="xmms oggvorbis"
 
@@ -46,7 +46,7 @@ src_install() {
 	tclv=$(grep TCL_VER /usr/include/tcl.h | sed 's:^.*"\(.*\)".*:\1:')
 
 	cd ${S}
-	insinto /usr/lib/tcl${tclv}/Waif
+	insinto /usr/$(get_libdir)/tcl${tclv}/Waif
 	doins Waif/*
 
 	into /usr

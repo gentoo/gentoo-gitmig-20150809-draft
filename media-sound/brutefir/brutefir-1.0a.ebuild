@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0a.ebuild,v 1.3 2004/09/28 19:01:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0a.ebuild,v 1.4 2004/10/07 03:26:05 eradicator Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ DEPEND=">=media-libs/alsa-lib-0.9.1
 src_install() {
 
 	mkdir -p ${D}/usr/bin
-	mkdir -p ${D}/usr/lib/brutefir
+	mkdir -p ${D}/usr/$(get_libdir)/brutefir
 
 	einstall DESTDIR=${D} \
 		INSTALL_PREFIX=${D}/usr	|| die
