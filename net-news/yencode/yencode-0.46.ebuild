@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Per Wigren <wigren@home.se>
-# $Header: /var/cvsroot/gentoo-x86/net-news/yencode/yencode-0.46.ebuild,v 1.1 2002/05/02 06:09:27 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/yencode/yencode-0.46.ebuild,v 1.2 2002/05/14 18:33:28 g2boojum Exp $
 
 S=${WORKDIR}/${P}
-SRC_URI="http://prdownloads.sourceforge.net/yencode/${P}.tar.gz"
+SRC_URI="http://unc.dl.sourceforge.net/sourceforge/yencode/${P}.tar.gz"
 HOMEPAGE="http://www.yencode.org"
 DESCRIPTION="yEnc encoder/decoder package"
 DEPEND=""
