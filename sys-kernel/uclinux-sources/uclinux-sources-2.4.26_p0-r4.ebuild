@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.26_p0-r3.ebuild,v 1.1 2004/07/09 16:25:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.26_p0-r4.ebuild,v 1.1 2004/08/05 11:15:48 plasmaroo Exp $
 
 IUSE=""
 
 ETYPE="sources"
 inherit kernel eutils
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+POV="${PN}-${OKV}"
 
 EXTRAVERSION="uc${PV/*_p/}"
 [ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
@@ -27,7 +28,8 @@ MY_P=linux-${PV/_p/-uc}
 S=${WORKDIR}/linux-${KV}
 DESCRIPTION="uCLinux kernel patches for CPUs without MMUs"
 SRC_URI="mirror://kernel/v${MMV}/linux-${OKV}.tar.bz2
-	http://www.uclinux.org/pub/uClinux/uClinux-${MMV}.x/${MY_P/linux/${base}}.${patch}.gz"
+	http://www.uclinux.org/pub/uClinux/uClinux-${MMV}.x/${MY_P/linux/${base}}.${patch}.gz
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${POV}-CAN-2004-0415.patch"
 
 HOMEPAGE="http://www.uclinux.org/"
 KEYWORDS="~x86 -ppc"
@@ -45,6 +47,7 @@ src_unpack() {
 	rm ../${MY_P/linux/${base}}.${patch}
 
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${DISTDIR}/${POV}-CAN-2004-0415.patch || die "Failed to add the CAN-2004-0415 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
