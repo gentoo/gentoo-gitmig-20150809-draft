@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.95 2003/05/09 20:19:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.96 2003/05/15 21:15:41 robbat2 Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -59,6 +59,7 @@ icc-pgo - Enable PGO data generation or use when use icc.
 imap - Adds support for IMAP
 imlib - Adds support for media-libs/imlib (Image loading and rendering library)
 innodb - Adds innodb support for mySQL (transaction support)
+informix - Adds support for Informix database
 ipv6 - Adds support for IP version 6
 java - Adds support for Java
 jikes - Compile Java source code with jikes (faster)
