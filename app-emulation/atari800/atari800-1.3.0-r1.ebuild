@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.3.0-r1.ebuild,v 1.1 2003/09/02 13:05:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.3.0-r1.ebuild,v 1.2 2003/09/02 13:08:56 aliz Exp $
 
 DESCRIPTION="Atari 800 emulator"
 HOMEPAGE="http://atari800.sourceforge.net/"
@@ -56,7 +56,7 @@ src_install () {
 	# global file, if it exists.  Run "atari800 -configure" to
 	# have the emulator prompt for new values
 	insinto /etc
-	doins ${FILESDIR}/${PVR}/atari800.cfg
+	doins ${FILESDIR}/${PV}/atari800.cfg
 }
 
 pkg_postinst() {

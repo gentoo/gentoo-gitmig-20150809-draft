@@ -2,7 +2,7 @@ MD5 46037dfe0663878ef107638761a375ee ChangeLog 1602
 MD5 c5bf64554932c20c82274ffa4da1e657 atari800-1.2.2.ebuild 3346
 MD5 42b378ca93f05136b76feed30454a761 atari800-1.2.5.ebuild 3161
 MD5 d6367a6430215ead5cdf775e1547b609 atari800-1.3.0.ebuild 2770
-MD5 7cf23383e393b50c1bf6185a55abdc6d atari800-1.3.0-r1.ebuild 2842
+MD5 0d72e0754224da7df03a9cdad24aedde atari800-1.3.0-r1.ebuild 2841
 MD5 eb8a8b62973cd8789aad8dee8a839842 files/atari800-1.2.2-gentoo.diff 378
 MD5 51143eeb7bd76c8cca8a80bbf5ab7e88 files/atari800-1.2.5-gentoo.diff 1876
 MD5 39a9ab82d0c6639ee234c9d422aa6fb2 files/digest-atari800-1.2.2 119
