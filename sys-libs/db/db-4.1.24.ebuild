@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.24.ebuild,v 1.8 2003/03/01 22:24:47 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.24.ebuild,v 1.9 2003/05/24 08:35:24 pauldv Exp $
 
 IUSE="tcltk java"
 
@@ -36,6 +36,7 @@ src_compile() {
 		--localstatedir=/var/lib \
 		--enable-compat185 \
 		--enable-cxx \
+                --with-uniquename \
 		${myconf} || die
 
 	emake || make || die

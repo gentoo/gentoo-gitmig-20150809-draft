@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.13 2003/02/13 16:48:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.14 2003/05/24 08:35:24 pauldv Exp $
 
 IUSE="tcltk java"
 
@@ -36,8 +36,13 @@ src_compile() {
 		--localstatedir=/var/lib \
 		--enable-compat185 \
 		--enable-cxx \
-		--enable-posixmutexes \
+		--with-uniquename \
 		${myconf} || die
+
+#	disable posix mutexes as they are not available in linuxthreads from
+#	the standard profile and they should be autodetected if available
+#
+#		--enable-posixmutexes \
 
 	emake || make || die
 }

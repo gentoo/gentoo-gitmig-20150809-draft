@@ -1,9 +1,14 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.25 2003/05/19 21:20:34 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.26 2003/05/24 08:35:24 pauldv Exp $
 
   19 May 2003; Zach Welch <zwelch@gentoo.org> db-3.2.9-r2.ebuild:
   Mark all platforms stable in 3.2.9-r2 KEYWORDS
+
+  06 May 2003; Paul de Vrieze <pauldv@gentoo.org> db-4.0.14.ebuild,
+  db-4.1.24.ebuild:
+  Change db-4.* ebuilds to build with versioned (unique) symbols, to allow for
+  parallel db versions to be installed and used
 
 *db-3.2.9-r2 (23 Feb 2003)
 
