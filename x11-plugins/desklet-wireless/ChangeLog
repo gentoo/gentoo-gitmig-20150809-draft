@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/desklet-wireless
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-wireless/ChangeLog,v 1.1 2004/07/18 09:34:26 obz Exp $
+
+*desklet-wireless-0.2 (18 Jul 2004)
+
+  18 Jul 2004; Mike Gardiner <obz@gentoo.org> +metadata.xml,
+  +desklet-wireless-0.2.ebuild:
+  First version of the wireless monitoring display and sensor
+
