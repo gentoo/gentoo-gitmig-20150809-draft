@@ -6,6 +6,7 @@ MD5 7189786b648cd42056a9ec54b603ae48 gnat-3.15p-r3.ebuild 5892
 MD5 f44a1458554adef6e9794dc5d4fbb719 gnat-3.15p.ebuild 5667
 MD5 fa8ad8b6758fae34bc0c3322f540bfaa gnat-5.0_pre20030822.ebuild 4328
 MD5 4b8299d1078b0c3a88969f43c9ae6a64 metadata.xml 927
+MD5 8083993e309a21bfa17a9403189aab49 gnat-5.0_pre20031005.ebuild 4772
 MD5 59500f81e672cff22232586fc278547b files/digest-gnat-3.14p 213
 MD5 737e39907fb4f28640a1b4cbbc1cdc78 files/digest-gnat-3.15p 216
 MD5 419f46c7076e98eee00cf04ce2199ab0 files/digest-gnat-3.15p-r1 288
@@ -16,3 +17,4 @@ MD5 6055ef6f0b3cd0df65743bfedb9de925 files/gnat-3.15p-gentoo-nonx86.patch.bz2 21
 MD5 f2825770e20893d32738f4106cd3d628 files/gnat-3.15p-gentoo.patch.bz2 3754
 MD5 6c454f942791a6212d8b5cf5c92aa2d0 files/gnat-3.15p-i686-pc-linux-gnu-bin.patch 605
 MD5 7fabcf7198fb4001adfba250899e0024 files/gnat-3.15p-noaddr2line.patch.bz2 542
+MD5 fa1efc205527dc0290e6f232998f3e4f files/digest-gnat-5.0_pre20031005 232
