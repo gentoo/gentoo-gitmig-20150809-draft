@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.26 2002/12/15 18:30:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.27 2002/12/17 07:34:27 lostlogic Exp $
+
+* perl-5.8.0-r5 (17 Dec 2002)
+
+  17 Dec 2002; Brandon Low <lostlogic@gentoo.org> perl-5.8.0-r5.ebuild:
+
+  Fix threading use flag thingus, it doesn't put things in ${D}/${D} later 
+  now.  Fix messages to only display if needed.  You will need to remerge
+  all your perl modules after you install this with threads.
 
 * perl-5.8.0-r4 (15 Dec 2002)
 

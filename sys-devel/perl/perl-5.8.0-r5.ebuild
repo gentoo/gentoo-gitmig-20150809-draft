@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r4.ebuild,v 1.3 2002/12/17 07:34:27 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r5.ebuild,v 1.1 2002/12/17 07:34:27 lostlogic Exp $
 
 IUSE="berkdb gdbm"
 
@@ -12,7 +12,7 @@ LICENSE="Artistic GPL-2"
 SLOT="0"
 # devs, please email if this tests ok on your platform rather than
 # unmasking it - mcummings@gentoo.org
-KEYWORDS="-x86 -sparc -ppc -alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 
 DEPEND="sys-apps/groff 
 	berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) 
@@ -22,27 +22,30 @@ RDEPEND="berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
     
 pkg_setup() {
-	eerror ""
-	eerror "*** PLEASE NOTE: If you wish to compile perl-5.8 with "
-	eerror "*** threading enabled, you must restart this emerge "
-	eerror "*** with USE=threads emerge...."
-	eerror "*** Threading is not supported by all applications "
-	eerror "*** that compile against perl. You use threading at "
-	eerror "*** your own discretion. "
-	eerror ""
-	sleep 15
-
+	if [ -z "`use threads`" ]
+	then
+		ewarn ""
+		ewarn "PLEASE NOTE: If you wish to compile perl-5.8 with "
+		ewarn "threading enabled, you must restart this emerge "
+		ewarn "with USE=threads emerge...."
+		ewarn "Threading is not supported by all applications "
+		ewarn "that compile against perl. You use threading at "
+		ewarn "your own discretion. "
+		ewarn ""
+		sleep 15
+	fi
 }
 src_compile() {
 	export LC_ALL=C
     local myconf
 	if [ "`use threads`" ]
 	then
+		einfo "using threads"
+		mythreading="-multi"
 		myconf="-Dusethreads ${myconf}"
-		myarch="${CHOST%%-*}-linux-thread-mutli"
-	else
-		myarch="${CHOST%%-*}-linux-thread-mutli"
 	fi
+	myarch="${CHOST%%-*}-linux-thread"
+
 	if [ "`use gdbm`" ]
 	then
 	 myconf="${myconf} -Di_gdbm"
@@ -192,8 +195,8 @@ EOF
 
 # This removes ${D} from Config.pm
 
-	dosed /usr/lib/perl5/${PV}/${myarch}/Config.pm
-	dosed /usr/lib/perl5/${PV}/${myarch}/.packlist
+	dosed /usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm
+	dosed /usr/lib/perl5/${PV}/${myarch}${mythreading}/.packlist
 
 	 
 
