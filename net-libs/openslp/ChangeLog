@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.28 2005/03/17 15:30:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.29 2005/03/18 04:40:28 kugelfang Exp $
+
+  18 Mar 2005; Danny van Dyk <kugelfang@gentoo.org> openslp-1.0.11.ebuild,
+  openslp-1.0.9a.ebuild, openslp-1.2.1.ebuild:
+  Marked -amd64 as they don't pass make check. Additionally package.mask'ed on
+  amd64 and slp USE flag masked as well wrt Security BUG #85347
 
   17 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> openslp-1.2.1.ebuild:
   Stable on sparc wrt #85347
@@ -8,7 +13,7 @@
   17 Mar 2005; Hardave Riar <hardave@gentoo.org> openslp-1.2.1.ebuild:
   Stable on mips, bug #85347.
 
-  16 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> openslp-1.2.1.ebuild:
+  16 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> openslp-1.2.1.ebuild:
   Stable on alpha, bug 85347.
 
   16 Mar 2005; Markus Rothe <corsair@gentoo.org> openslp-1.2.1.ebuild:
