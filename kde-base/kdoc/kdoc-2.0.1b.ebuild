@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdoc/kdoc-2.0.1b.ebuild,v 1.1 2000/12/08 17:21:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdoc/kdoc-2.0.1b.ebuild,v 1.2 2000/12/11 17:40:23 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${PN}-2.0.1
@@ -16,12 +16,9 @@ DEPEND=">=sys-devel/perl-5"
 RDEPEND=$DEPEND
 
 src_compile() {
-#    try autoconf
+    QTBASE=/usr/X11R6/lib/qt
     try ./configure --prefix=/opt/kde2 --host=${CHOST} \
-		--with-qt-dir=/usr/lib/qt \
-		--with-qt-includes=/usr/lib/qt/include \
-		--with-qt-libs=/usr/lib/qt/lib \
-		--with-rpm --with-pam
+		--with-qt-dir=$QTDIR
     try make
 }
 

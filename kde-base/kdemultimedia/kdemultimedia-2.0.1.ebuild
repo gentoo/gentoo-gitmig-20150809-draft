@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.0.1.ebuild,v 1.2 2000/12/08 17:21:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.0.1.ebuild,v 1.3 2000/12/11 17:40:22 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -21,10 +21,9 @@ src_unpack () {
   unpack ${A}
 }
 src_compile() {
+    QTBASE=/usr/X11R6/lib/qt
     try ./configure --prefix=/opt/kde2 --host=${CHOST} \
-		--with-qt-dir=/usr/lib/qt \
-		--with-qt-includes=/usr/lib/qt/include \
-		--with-qt-libs=/usr/lib/qt/lib \
+		--with-qt-dir=$QTBASE \
 		--with-alsa --enable-audio=alsa,nas
     cp Makefile Makefile.orig
     try make

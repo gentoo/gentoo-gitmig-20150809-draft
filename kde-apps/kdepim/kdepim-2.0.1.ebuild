@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-apps/kdepim/kdepim-2.0.1.ebuild,v 1.1 2000/12/07 16:37:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/kdepim/kdepim-2.0.1.ebuild,v 1.2 2000/12/11 17:40:22 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -16,10 +16,9 @@ DEPEND=">=kde-base/kdelibs-${PV}"
 RDEPEND=$DEPEND
 
 src_compile() {
+    QTBASE=/usr/X11R6/lib/qt
     try ./configure --prefix=/opt/kde2 --host=${CHOST} \
-		--with-qt-dir=/usr/lib/qt \
-		--with-qt-includes=/usr/lib/qt/include \
-		--with-qt-libs=/usr/lib/qt/lib
+		--with-qt-dir=$QTBASE
     try make
 }
 
