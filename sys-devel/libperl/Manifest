@@ -1,5 +1,5 @@
-MD5 de77032af0c89afdc2cc40fbb03050b5 ChangeLog 2058
-MD5 33f4622f7659d04a7c5141851e4386e7 libperl-5.8.0.ebuild 13597
+MD5 68c6a266239ded96e82d999a6d62d9a5 ChangeLog 2152
+MD5 ab78fa79cfa9a1feca07df70618d2ea8 libperl-5.8.0.ebuild 13599
 MD5 0c6d18a9b91723fbe5e4a45e0a37fa70 libperl-5.8.1_rc1.ebuild 10854
 MD5 f2ad7d92162164ab6c2464dab3ae11e5 libperl-5.8.1_rc2.ebuild 10857
 MD5 8605f033c451df987f4631bbf9d7b481 files/digest-libperl-5.8.0 64

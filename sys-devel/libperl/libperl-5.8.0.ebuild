@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.15 2003/09/05 02:02:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.16 2003/09/17 21:08:48 avenj Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -83,7 +83,7 @@ fi
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 
 LICENSE="Artistic GPL-2"
-KEYWORDS="amd64 x86 sparc ppc alpha mips hppa arm"
+KEYWORDS="amd64 x86 sparc ppc alpha mips hppa arm ia64"
 
 DEPEND="sys-apps/groff
 	berkdb? ( amd64? sys-libs/db : ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) )

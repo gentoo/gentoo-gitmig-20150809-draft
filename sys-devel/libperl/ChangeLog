@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.13 2003/07/23 21:32:57 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.14 2003/09/17 21:08:48 avenj Exp $
 
 *libperl-5.8.1_rc2 (23 Jul 2003)
+
+  17 Sep 2003; Jon Portnoy <avenj@gentoo.org> libperl-5.8.0.ebuild :
+  Added ia64 keywords
 
   23 Jul 2003; <rac@gentoo.org> libperl-5.8.1_rc2.ebuild:
   Add 5.8.1-rc2
