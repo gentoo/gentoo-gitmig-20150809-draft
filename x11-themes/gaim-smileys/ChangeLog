@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gaim-smileys
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/ChangeLog,v 1.2 2003/04/17 17:11:41 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/ChangeLog,v 1.3 2003/05/09 15:36:56 liquidx Exp $
+
+  09 May 2003; Alastair Tse <liquidx@gentoo.org> gaim-smileys-20030413.ebuild:
+  updated location of some themes
 
 *gaim-smileys-20030413 (13 Apr 2003)
 

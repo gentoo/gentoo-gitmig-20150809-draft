@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/gaim-smileys-20030413.ebuild,v 1.3 2003/04/17 17:11:41 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/gaim-smileys-20030413.ebuild,v 1.4 2003/05/09 15:36:56 liquidx Exp $
 
 RESTRICT="${RESTRICT} nostrip"
 
@@ -17,8 +17,8 @@ SRC_URI="http://www.ics.uci.edu/~swrobel/Jimmac.tar.gz
 	http://www.freestructure.net/~reivec/CrystalAIM.tar.gz
 	http://www.politicalunrest.net/dl/iboard.tar.gz
 	http://www.freestructure.net/~reivec/EasterAIM.tar.gz
-	http://www.xeron.cc/smileys/burger.tar.gz
-	http://www.xeron.cc/smileys/kitties.tar.gz
+	http://www.xeron.cc/main/files/burger.tar.gz
+	http://www.xeron.cc/main/files/kitties.tar.gz
 	http://www.gnomepro.com/smallsmiles/SmallSmiles.tar.gz
 	http://users.skynet.be/xterm/tweak-0.1.2.tar.gz"
 
