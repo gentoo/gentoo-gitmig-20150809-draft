@@ -1,0 +1,13 @@
+# ChangeLog for dev-util/aegis
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.1 2002/04/13 21:55:07 karltk Exp $
+
+*aegis-4.2 (13 Apr 2002)
+
+  13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> aegis-4.2.ebuild files/digest-aegis-4.2 :
+  
+  Aegis is a transaction-based software configuration management system. It 
+  provides a framework within which a team of developers may work on many 
+  changes to a program independently, and Aegis coordinates integrating these 
+  changes back into the master source of the program, with as little 
+  disruption as possible.
