@@ -1,4 +1,14 @@
-MD5 c86e68affb2ab21367a7876728142a7b aranym-0.8.6_beta.ebuild 1517
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d6ea3267313386902e7737825e609562 ChangeLog 454
+MD5 8ac6ed231031a7c15b7fb679bb1273a4 aranym-0.8.6_beta.ebuild 1508
 MD5 c5adfd2f910938e12793f487a3790f53 metadata.xml 713
 MD5 31f6327245354bd8a3dd5cb0ef529b5a files/digest-aranym-0.8.6_beta 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA31G5HTu7gpaalycRAti7AJ9E8Y4sDkfNN1rjbgY9UkaFknD4lgCgvyie
+ZwalXfpzVuRF9B7s97Qg/dU=
+=8CVh
+-----END PGP SIGNATURE-----

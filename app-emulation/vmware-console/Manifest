@@ -1,6 +1,16 @@
-MD5 ce68823e4988f257f96d6ba210ac3c95 vmware-console-3.0.0.7592.ebuild 2608
-MD5 41d98beb4804886524546cd640ba58ff vmware-console-2.5.1.5336.ebuild 994
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b709dc064ccc9802740f171a17e49ce3 ChangeLog 1079
 MD5 42799bbd6476a6166f6ab16962d9628d metadata.xml 331
+MD5 8945e555de813b9a0983773faa1d6b4a vmware-console-2.5.1.5336.ebuild 990
+MD5 f550757e09c67b3c0173425212d34007 vmware-console-3.0.0.7592.ebuild 2604
 MD5 481a0d1dcbaa9ab5162fbc4dd9a847f2 files/digest-vmware-console-2.5.1.5336 78
 MD5 63c753940be74f7933bb1ebbc6c525bc files/digest-vmware-console-3.0.0.7592 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA31N/HTu7gpaalycRAm6YAJ4iDmwTZZVFWug6MAtNCG8WOUWgvACeKilY
+Cf1CkLqV+j+BMwb57q09mWA=
+=fddN
+-----END PGP SIGNATURE-----
