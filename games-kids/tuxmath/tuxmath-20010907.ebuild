@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-20010907.ebuild,v 1.2 2004/02/20 06:42:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-20010907.ebuild,v 1.3 2004/05/27 03:26:38 mr_bones_ Exp $
 
 inherit games
 
@@ -9,30 +9,32 @@ DESCRIPTION="Educational arcade game where you have to solve math problems"
 SRC_URI="mirror://sourceforge/tuxmath/${MY_P}.tar.gz"
 HOMEPAGE="http://www.newbreedsoftware.com/tuxmath/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.1.5
 	>=media-libs/sdl-image-1.2.2
 	>=media-libs/sdl-mixer-1.2.4"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_compile() {
 	emake \
 		DATA_PREFIX=${GAMES_DATADIR}/${PN} \
 		BIN_PREFIX=${GAMES_BINDIR} \
-		|| die
+		|| die "emake failed"
 }
 
 src_install() {
 	find -name CVS -type d -exec rm -rf '{}' \;
 
-	dogamesbin tuxmath
+	dogamesbin tuxmath || die "dogamesbin failed"
 
-	dodir ${GAMES_DATADIR}/${PN}
-	mv data/{images,sounds} ${D}/${GAMES_DATADIR}/${PN}/
+	dodir "${GAMES_DATADIR}/${PN}"
+	cp -r data/{images,sounds} "${D}/${GAMES_DATADIR}/${PN}/" \
+		|| die "cp failed"
 
 	dodoc docs/*.txt
 	prepgamesdirs
