@@ -1,8 +1,11 @@
 # ChangeLog for net-news/pan
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.28 2003/05/07 06:43:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.29 2003/05/07 13:11:43 foser Exp $
 
 *pan-0.14.0 (07 May 2003)
+
+  07 May 2003; foser <foser@gentoo.org> pan-0.14.0.ebuild :
+  Fixed gnet dep to 1.x branch
 
   07 May 2003; Patrick Kursawe <phosphan@gentoo.org> pan-0.14.0.ebuild:
   Version bump
