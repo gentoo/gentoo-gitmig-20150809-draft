@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.3-r1.ebuild,v 1.3 2004/11/17 17:17:01 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.3-r1.ebuild,v 1.4 2004/11/27 04:18:23 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -25,7 +25,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 			!<dev-perl/ExtUtils-MakeMaker-6.17 )
 	spell? ( >=app-text/gtkspell-2.0.2 )
 	gnutls? ( net-libs/gnutls )
-	!gnutls? ( >=dev-libs/nss-3.9.2-r1 )
+	!gnutls? ( >=dev-libs/nss-3.9.2-r2 )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )"
 	#eds? ( gnome-extra/evolution-data-server )"
 
@@ -63,12 +63,6 @@ print_gaim_warning() {
 	einfo
 	einfo "Note that we are now filtering all unstable flags in C[XX]FLAGS."
 	einfo
-	if ! use gnutls ; then
-	ewarn
-	ewarn "If you receive errors due to NSS, please re-emerge"
-	ewarn "dev-libs/nss and then emerge gaim again."
-	ewarn
-	fi
 	ebeep 5
 	epause 3
 }
@@ -111,7 +105,7 @@ src_compile() {
 		myconf="${myconf} --enable-gnutls=no"
 		myconf="${myconf} --with-nspr-includes=/usr/include/nspr"
 		myconf="${myconf} --with-nss-includes=/usr/include/nss"
-		myconf="${myconf} --with-nspr-libs=/usr/lib"
+		myconf="${myconf} --with-nspr-libs=/usr/lib/nspr"
 		myconf="${myconf} --with-nss-libs=/usr/lib/nss"
 	fi
 
