@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/ibm-acpi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.18 2005/01/16 18:51:24 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.19 2005/02/06 12:33:14 brix Exp $
+
+  06 Feb 2005; Henrik Brix Andersen <brix@gentoo.org> ibm-acpi-0.10.ebuild:
+  Stable on x86.
 
 *ibm-acpi-0.10 (16 Jan 2005)
 
