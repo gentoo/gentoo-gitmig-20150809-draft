@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-tclink
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/ChangeLog,v 1.5 2004/06/24 23:55:55 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/ChangeLog,v 1.6 2005/02/08 07:02:25 mkennedy Exp $
+
+  08 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
+  +files/3.3.1-gentoo.patch, cl-tclink-3.3.1-r1.ebuild,
+  -cl-tclink-3.3.1.ebuild:
+  Remove #'REQUIRE's from system definition; Fix load path for glue code.
 
   18 May 2004; Mamoru KOMACHI <usata@gentoo.org> cl-tclink-3.3.1-r1.ebuild,
   cl-tclink-3.3.1.ebuild:

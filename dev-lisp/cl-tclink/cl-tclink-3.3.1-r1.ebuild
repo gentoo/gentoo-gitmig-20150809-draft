@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1-r1.ebuild,v 1.5 2004/06/24 23:55:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1-r1.ebuild,v 1.6 2005/02/08 07:02:25 mkennedy Exp $
 
 inherit common-lisp eutils
 
 DEB_PV=3
 
-DESCRIPTION="A library of Common Lisp bindings to the TrustCommerce transaction authorization system. Now you have no excuse for not doing Business with Common Lisp!"
+DESCRIPTION="Common Lisp TrustCommerce transaction authorization system."
 HOMEPAGE="http://www.cliki.net/CL-TCLink http://www.mapcar.org/~mrd/cl-tclink/"
 SRC_URI="http://www.mapcar.org/~mrd/debs/unstable/source/${PN}_${PV}.orig.tar.gz
 	http://www.mapcar.org/~mrd/debs/unstable/source/${PN}_${PV}-${DEB_PV}.diff.gz"
@@ -27,7 +27,8 @@ CLPACKAGE=tclink
 
 src_unpack() {
 	unpack ${A}
-	epatch ${PN}_${PV}-${DEB_PV}.diff
+	epatch ${PN}_${PV}-${DEB_PV}.diff || die
+	epatch ${FILESDIR}/${PV}-gentoo.patch || die
 }
 
 src_compile() {
