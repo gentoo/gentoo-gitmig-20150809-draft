@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7c851b4fc532b753a6cf333298915f0e vimbuddy-0.9.1.ebuild 505
 MD5 f8042b2057e592a02453664359f2a690 ChangeLog 548
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 6889d1aee6acc81296868374f3b6e74d vimbuddy-0.9.1.ebuild 492
 MD5 9c0337695e108d207088b8d12847ebb0 files/digest-vimbuddy-0.9.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCFlGGCHk4+ZoBpvsRAqNgAJ0a+uBNYBnF/Vp+KhTK23VaymM2uACfb9zL
-xBJdAUp/FZMxsPQ8fOqAX18=
-=pPWN
------END PGP SIGNATURE-----

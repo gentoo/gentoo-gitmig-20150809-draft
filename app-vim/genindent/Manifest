@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7c459f09e2ef5d1ada4aa997142cb30b genindent-1.0.ebuild 565
 MD5 3dbc5f6d3f5d88478edb967bf065bc5f ChangeLog 852
-MD5 6f821894121aa42b828892a7bc100d2c genindent-1.0.ebuild 552
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 272032f9cfcee33224456a8656a9b98b files/digest-genindent-1.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCFkk6CHk4+ZoBpvsRAiwIAKDDA5auPeluUwihI7g2MpGzCQi8LACgqkYx
-5bf7JM1N7HOgcP2kLMmKJWI=
-=pqDw
------END PGP SIGNATURE-----
