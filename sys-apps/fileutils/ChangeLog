@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.16 2003/03/15 18:15:21 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.17 2003/06/23 14:55:08 lostlogic Exp $
+
+  23 Jun 2003; Brandon Low <lostlogic@gentoo.org> fileutils-4.1.11-r1.ebuild:
+  Fix KEYWORDS
 
   20 Feb 2003; Zach Welch <gmsoft@gentoo.org> fileutils-4.1.11.ebuild :
   Added arm to keywords.

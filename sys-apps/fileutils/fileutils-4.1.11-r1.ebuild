@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11-r1.ebuild,v 1.4 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11-r1.ebuild,v 1.5 2003/06/23 14:55:08 lostlogic Exp $
 
 IUSE="acl nls build"
 ACLPV=4.1.11acl-0.8.25
@@ -10,7 +10,7 @@ DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls, etc)"
 SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${P}.tar.gz http://cvs.gentoo.org/~styx/fileutils-${ACLPV}.diff.gz"
 HOMEPAGE="http://www.gnu.org/software/fileutils/fileutils.html"
 
-KEYWORDS="x86 "
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
 SLOT="0"
 LICENSE="GPL-2"
 
