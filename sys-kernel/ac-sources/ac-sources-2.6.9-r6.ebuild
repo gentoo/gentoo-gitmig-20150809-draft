@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.6.9-r6.ebuild,v 1.1 2004/11/01 15:08:03 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.6.9-r6.ebuild,v 1.2 2005/01/07 19:02:42 dsd Exp $
 
 UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2"
 K_PREPATCHED="yes"

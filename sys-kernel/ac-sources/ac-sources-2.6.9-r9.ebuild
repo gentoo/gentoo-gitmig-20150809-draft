@@ -1,14 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.6.9-r9.ebuild,v 1.1 2004/11/16 15:36:14 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.6.9-r9.ebuild,v 1.2 2005/01/07 19:02:42 dsd Exp $
 
-UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 
 ETYPE="sources"
 inherit kernel-2
 detect_version
+UNIPATCH_LIST="${DISTDIR}/patch-${KV_FULL}.bz2"
 K_NOSETEXTRAVERSION="don't_set_it"
 RESTRICT="nomirror"
 DESCRIPTION="Alan Cox's kernel, mostly stuff destined for mailine or RedHat's vendor kernel"

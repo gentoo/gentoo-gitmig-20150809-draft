@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.208 2005/01/06 22:39:42 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.209 2005/01/07 19:00:10 dsd Exp $
+
+  07 Jan 2005; Daniel Drake <dsd@gentoo.org> mm-sources-2.6.10-r1.ebuild,
+  mm-sources-2.6.10-r2.ebuild:
+  Update to use KV_FULL
 
 *mm-sources-2.6.10-r2 (06 Jan 2005)
 
