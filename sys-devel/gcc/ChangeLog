@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.382 2005/02/12 08:52:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.383 2005/02/12 19:32:22 plasmaroo Exp $
+
+  12 Feb 2005; <plasmaroo@gentoo.org> gcc-3.3.5.20050130.ebuild:
+  Mark -ia64 as bootstrapping fails with this version.
 
   12 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gcc-3.3.5-r1.ebuild, gcc-3.3.5.20050130.ebuild, gcc-3.4.3-r1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130.ebuild,v 1.7 2005/02/12 09:07:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130.ebuild,v 1.8 2005/02/12 19:32:22 plasmaroo Exp $
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~eradicator/gcc/"
 #GCC_MANPAGE_VERSION="3.3.5"
@@ -37,7 +37,7 @@ inherit toolchain eutils
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~mips ~sh ~sparc ~x86"
 
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
