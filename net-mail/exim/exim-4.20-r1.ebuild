@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.20-r1.ebuild,v 1.4 2003/07/08 23:07:30 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.20-r1.ebuild,v 1.5 2003/07/16 14:25:25 pvdabeel Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan exiscan-acl maildir lmtp"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc hppa"
+KEYWORDS="~x86 ~sparc hppa ~ppc"
 
 PROVIDE="virtual/mta"
 
