@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.24 2005/02/21 03:47:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.25 2005/03/15 01:46:19 hardave Exp $
+
+  14 Mar 2005; Hardave Riar <hardave@gentoo.org> ssmtp-2.61.ebuild:
+  Stable on mips, bug #82380.
 
   20 Feb 2005; Aron Griffis <agriffis@gentoo.org> ssmtp-2.61.ebuild:
   stable on alpha and ia64
