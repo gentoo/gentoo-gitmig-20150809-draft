@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/twiki-20030201.ebuild,v 1.3 2004/01/27 23:18:40 mholzer Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/twiki-20030201.ebuild,v 1.4 2004/03/10 20:02:33 mholzer Exp $ 
 
 inherit webapp-apache
 
@@ -18,16 +18,13 @@ RDEPEND="virtual/php
 
 IUSE="apache2"
 
-webapp-detect || NO_WEBSERVER=1
-
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing for ${WEBAPP_SERVER}"
 }
 
 src_unpack() {
-	mkdir ${P}
-	cd ${S}
 	unpack ${A}
 
 	sed -i -e 's:\/home\/httpd:\/var\/www:g' lib/TWiki.cfg
