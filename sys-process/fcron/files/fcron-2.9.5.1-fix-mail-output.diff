@@ -5,7 +5,7 @@
  
      /* set stdin to the job's output */
 -    if ( fseek(mailf, 0, SEEK_SET ) != 0) die_e("Can't fseek()");
-+    if ( lseek(fileno(mailf), 0, SEEK_SET ) != 0) die_e("Can't lseek()");
++    if ( lseek(fileno(mailf), 0, SEEK_SET ) == -1) die_e("Can't lseek()");
      if ( dup2(fileno(mailf), 0) != 0 ) die_e("Can't dup2(fileno(mailf))");
  
      xcloselog();

@@ -1,26 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-2.9.5.1.ebuild,v 1.2 2005/03/16 10:51:29 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-2.9.6.ebuild,v 1.1 2005/03/16 10:51:29 ka0ttic Exp $
 
-inherit eutils flag-o-matic
+inherit cron
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
 SRC_URI="http://fcron.free.fr/archives/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~mips ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~hppa ~amd64"
 IUSE="pam doc selinux"
 
 DEPEND="virtual/editor
 	doc? ( >=app-text/docbook-dsssl-stylesheets-1.77 )
 	selinux? ( sys-libs/libselinux )
 	pam? ( >=sys-libs/pam-0.77 )"
-RDEPEND="!virtual/cron
-	>=sys-process/cronbase-0.2.1-r3
-	virtual/mta"
-PROVIDE="virtual/cron"
 
 pkg_setup() {
 	# bug #65263
@@ -38,12 +33,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-2.0.0-configure.diff
+	epatch ${FILESDIR}/${PN}-2.9.5.1-fix-mail-output.diff
 	# respect LDFLAGS
 	sed -i "s:\(@LIBS@\):\$(LDFLAGS) \1:" Makefile.in || die "sed failed"
 }
 
 src_compile() {
-	local myconf=
+	local myconf
 	use doc && \
 		myconf="--with-dsssl-dir=/usr/share/sgml/stylesheets/dsssl/docbook"
 
@@ -72,17 +68,15 @@ src_compile() {
 }
 
 src_install() {
-	dodir /var/spool
-	diropts -m 0770 -o cron -g cron
-	keepdir /var/spool/cron/fcrontabs
+	docrondir /var/spool/cron/fcrontabs -m0770 -o cron -g cron
+	docron fcron -m0110 -o root -g root
+	docrontab fcrontab -m6110 -o cron -g cron
 
-	insinto /usr/sbin
-	insopts -o root -g root -m0110 ; doins fcron
 	insinto /usr/bin
-	insopts -o cron -g cron -m6110 ; doins fcrontab fcrondyn
 	insopts -o root -g cron -m6110 ; doins fcronsighup
-	dosym fcrontab /usr/bin/crontab
+	insopts -o cron -g cron -m6110 ; doins fcrondyn
 
+	# /etc stuff
 	insinto /etc/fcron
 	insopts -m 640 -o root -g cron
 	doins files/fcron.{allow,deny,conf}
@@ -97,6 +91,7 @@ src_install() {
 
 	newinitd ${FILESDIR}/fcron.rc6 fcron || die "newinitd failed"
 
+	# doc stuff
 	dodoc MANIFEST VERSION doc/txt/*.txt
 	newdoc files/fcron.conf fcron.conf.sample
 	use doc && dohtml doc/HTML/*.html
@@ -108,16 +103,5 @@ src_install() {
 pkg_postinst() {
 	einfo "Each user who uses fcron should be added to the cron group"
 	einfo "in /etc/group and also be added in /etc/fcron/fcron.allow"
-	einfo
-	einfo "To activate /etc/cron.{hourly|daily|weekly|montly} please run: "
-	einfo "crontab /etc/crontab"
-	einfo
-	einfo "!!! That will replace root's current crontab !!!"
-	einfo
-
-	echo
-	einfo "You may wish to read the Gentoo Linux Cron Guide, which can be"
-	einfo "found online at:"
-	einfo "    http://www.gentoo.org/doc/en/cron-guide.xml"
-	echo
+	cron_pkg_postinst
 }

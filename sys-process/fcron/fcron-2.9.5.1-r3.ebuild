@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-2.9.5.1-r3.ebuild,v 1.1 2005/03/08 13:23:17 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-2.9.5.1-r3.ebuild,v 1.2 2005/03/16 10:51:29 ka0ttic Exp $
 
 inherit cron
 
@@ -24,9 +24,8 @@ pkg_setup() {
 	if [[ "${EDITOR}" != */* ]] ; then
 		einfo "Attempting to deduce absolute path of ${EDITOR}"
 		EDITOR=$(which ${EDITOR} 2>/dev/null)
-		if [ ! -x "${EDITOR}" ] ; then
+		[[ -x "${EDITOR}" ]] || \
 			die "Please set the EDITOR env variable to the path of a valid executable."
-		fi
 	fi
 }
 
@@ -37,13 +36,14 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fix-mail-output.diff
 	# respect LDFLAGS
 	sed -i "s:\(@LIBS@\):\$(LDFLAGS) \1:" Makefile.in || die "sed failed"
-	autoconf || die "autoconf failed"
 }
 
 src_compile() {
 	local myconf
 	use doc && \
 		myconf="--with-dsssl-dir=/usr/share/sgml/stylesheets/dsssl/docbook"
+
+	autoconf || die "autoconf failed"
 
 	# QA security notice fix; see "[gentoo-core] Heads up changes in suid
 	# handing with portage >=51_pre21" for more details.
@@ -79,27 +79,29 @@ src_install() {
 	# /etc stuff
 	insinto /etc/fcron
 	insopts -m 640 -o root -g cron
-	doins ${FILESDIR}/fcron.{allow,deny}
-	newins ${FILESDIR}/fcron.conf-${PV} fcron.conf
+	doins files/fcron.{allow,deny,conf}
+	dosed 's:^\(fcrontabs.*=.*\)$:\1/fcrontabs:' /etc/fcron/fcron.conf \
+		|| die "dosed fcron.conf failed"
 
-	newpamd ${FILESDIR}/fcron.pam fcron
-	newpamd ${FILESDIR}/fcrontab.pam fcrontab
+	newpamd files/fcron.pam fcron
+	newpamd files/fcrontab.pam fcrontab
 
 	insinto /etc
 	doins ${FILESDIR}/crontab
-	newinitd ${FILESDIR}/fcron.rc6 fcron
+
+	newinitd ${FILESDIR}/fcron.rc6 fcron || die "newinitd failed"
 
 	# doc stuff
 	dodoc MANIFEST VERSION doc/txt/*.txt
-	newdoc ${FILESDIR}/fcron.conf-${PV} fcron.conf.sample
+	newdoc files/fcron.conf fcron.conf.sample
 	use doc && dohtml doc/HTML/*.html
 	dodoc ${FILESDIR}/crontab
 
-	doman doc/man/*.{1,3,5,8}
+	doman doc/man/*
 }
 
 pkg_postinst() {
 	einfo "Each user who uses fcron should be added to the cron group"
 	einfo "in /etc/group and also be added in /etc/fcron/fcron.allow"
-	cron-pkg_postinst
+	cron_pkg_postinst
 }
