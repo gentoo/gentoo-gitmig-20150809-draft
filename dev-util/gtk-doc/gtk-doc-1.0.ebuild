@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.0.ebuild,v 1.8 2003/03/19 19:45:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.0.ebuild,v 1.9 2003/04/10 01:43:46 satai Exp $
 
 inherit gnome.org
 
@@ -18,7 +18,8 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=app-text/docbook-dsssl-stylesheets-1.40
 	>=dev-lang/perl-5
 	dev-libs/libxslt
-	>=dev-libs/libxml2-2.3.6"
+	>=dev-libs/libxml2-2.3.6
+	!app-text/xhtml1"
 
 src_compile() {
 	local myconf
