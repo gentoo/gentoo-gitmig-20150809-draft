@@ -1,11 +1,14 @@
 # ChangeLog for dev-java/ibm-jre
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ChangeLog,v 1.13 2002/12/09 04:20:57 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ChangeLog,v 1.14 2002/12/12 11:29:26 strider Exp $
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *ibm-jre-1.4.0 (04 Dec 2002)
+
+  12 Dec 2002; Adrian Almenar <strider@gentoo.org> ibm-jre-1.4.0.ebuild:
+  Changed slot from 1.3 to 1.4 fixes #11984.
 
   04 Dec 2002; Adrian Almenar <strider@gentoo.org> ibm-jre-1.4.0.ebuild files/digest-ibm-jre-1.4.0 files/ibm-jre-1.4.0:
   New upstream version. Masked on packages.mask.
