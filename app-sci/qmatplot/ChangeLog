@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/qmatplot
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qmatplot/ChangeLog,v 1.1 2003/11/12 12:01:02 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qmatplot/ChangeLog,v 1.2 2004/01/04 02:12:59 caleb Exp $
+
+  03 Jan 2004; Caleb Tennis <caleb@gentoo.org> qmatplot-0.4.2.ebuild:
+  Remove need-qt, add it directly as a dep
+  Also remove inherit kde-functions
 
 *qmatplot-0.4.2 (12 Nov 2003)
 

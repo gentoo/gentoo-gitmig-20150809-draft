@@ -1,12 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qmatplot/qmatplot-0.4.2.ebuild,v 1.1 2003/11/12 12:01:02 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qmatplot/qmatplot-0.4.2.ebuild,v 1.2 2004/01/04 02:12:59 caleb Exp $
 
-
-
-inherit kde-functions
 inherit eutils
-need-qt 3
 
 DESCRIPTION="gnuplot-like tool for plotting data sets in either two or three dimensions"
 HOMEPAGE="http://qmatplot.sourceforge.net/"
@@ -16,7 +12,8 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="0"
 
-DEPEND=">=app-sci/octave-2.1
+DEPEND=">=x11-libs/qt-3
+	>=app-sci/octave-2.1
 	>=app-sci/scilab-2.6"
 
 src_unpack() {
