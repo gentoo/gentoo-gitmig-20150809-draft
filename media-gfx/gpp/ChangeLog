@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gpp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/ChangeLog,v 1.5 2004/06/24 22:40:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/ChangeLog,v 1.6 2004/11/23 16:41:54 leonardop Exp $
+
+*gpp-0.6.4 (23 Nov 2004)
+
+  23 Nov 2004; Leonardo Boshell <leonardop@gentoo.org> gpp-0.6.4.ebuild:
+  Version bump.
 
   21 Jan 2004; L. Boshell <leonardop@gentoo.org> gpp-0.6.ebuild,
   gpp-0.6.3.ebuild:
