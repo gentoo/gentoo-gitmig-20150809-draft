@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.941 2005/02/09 07:47:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.942 2005/02/10 08:50:28 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -174,6 +174,7 @@ dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-libs/qsa:examples - build the examples that come with qsa
 dev-libs/qsa:ide - enable the qsa ide
 dev-lisp/cl-sql:sqlite3 - build support for sqlite3
+dev-lisp/cmucl:nosource - don't include source code for CMUCL in installation
 dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl-cvs:dlopen - build a GCL which uses dlopen for linking
 dev-lisp/gcl-cvs:gprof - build a GCL with profiling support
