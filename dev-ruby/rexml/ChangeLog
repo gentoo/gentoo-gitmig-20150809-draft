@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.14 2004/06/25 01:56:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.15 2004/10/11 01:49:51 weeve Exp $
+
+  10 Oct 2004; Jason Wever <weeve@gentoo.org> rexml-3.0.2.ebuild:
+  Stable on sparc.
 
 *rexml-3.0.4 (24 Apr 2004)
 
