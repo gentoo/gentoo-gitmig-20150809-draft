@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r4.ebuild,v 1.1 2003/11/19 06:49:16 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r4.ebuild,v 1.2 2003/11/19 19:43:58 seemant Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 	selinux? ( sys-libs/libselinux )"
 
 RDEPEND="!virtual/cron
-	 sys-apps/cronbase-0.2.1-r3
+	>=sys-apps/cronbase-0.2.1-r3
 	 virtual/mta
 	 selinux? ( sys-libs/libselinux )"
 

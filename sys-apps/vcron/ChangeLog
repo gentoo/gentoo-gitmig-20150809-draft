@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.23 2003/11/19 06:49:16 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.24 2003/11/19 19:43:58 seemant Exp $
+
+  19 Nov 2003; Seemant Kulleen <seemant@gentoo.org> vcron-3.0.1-r4.ebuild:
+  fix RDEPEND syntax on cronbase -- people need to learn repoman
 
 *vcron-3.0.1-r4 (19 Nov 2003)
 
