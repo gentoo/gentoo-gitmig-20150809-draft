@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.7.2.ebuild,v 1.2 2004/01/06 13:08:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.7.2.ebuild,v 1.3 2004/01/11 17:03:04 usata Exp $
 
 inherit ruby
 
@@ -29,11 +29,6 @@ EXTRA_ECONF="--with-prime-docdir=/usr/share/doc/${PF}/html
 src_install() {
 
 	einstall || die
-	# sary-ruby has been patched and now prime can work with both
-	# ruby 1.6 and 1.8 (25 Dec 2003)
-	#if [ -x "/usr/bin/ruby16" ] ; then
-	#	dosed "s:/usr/bin/env ruby:/usr/bin/ruby16:g" /usr/bin/prime
-	#fi
 	make DESTDIR=${D} install-etc || die
 
 	erubydoc
