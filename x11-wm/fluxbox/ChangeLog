@@ -1,13 +1,14 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.26 2002/09/10 09:12:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.27 2002/09/10 09:17:58 seemant Exp $
 
 *fluxbox-0.1.11-r2 (10 Sep 2002)
 
   10 Sep 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.11-r2.ebuild
   files/digest-fluxbox-0.1.11-r2 :
 
-  upstream bugfix1 patch.
+  upstream bugfix1 patch.  Thanks to: matt@oddprocess.org (Matthew
+  Daubenspeck) in bug #7717
 
 *fluxbox-0.1.11-r1 (04 Sep 2002)
 
