@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.29 2003/09/20 07:03:44 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.30 2003/09/26 08:26:53 obz Exp $
+
+  26 Sep 2003; Mike Gardiner <obz@gentoo.org> lyx-1.3.2-r1.ebuild,
+  lyx-1.3.2.ebuild:
+  Really fixed the missing Aiksaurus header problem, by really using all of
+  brandy's patch, bug # as before.
 
   20 Sep 2003; Mike Gardiner <obz@gentoo.org> lyx-1.3.2-r1.ebuild,
   lyx-1.3.2.ebuild, files/lyx-1.3.2-nomktex.patch:
