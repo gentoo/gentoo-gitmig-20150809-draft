@@ -1,0 +1,28 @@
+#!/bin/bash
+
+mount -n -t proc none /proc
+
+# see if selinuxfs is available
+for i in $(cat /proc/filesystems); do
+	[ "$i" == "selinuxfs" ] && ENABLED=y
+done
+
+umount -n /proc
+
+if [ -n ${ENABLED} ]; then
+	# only try to load policy on SELinux kernels
+
+	mount -n -t selinuxfs none /selinux
+
+	# determine the policy version
+	[ -f /selinux/policyvers ] && \
+		POLICYVER=$(cat /selinux/policyvers) || \
+		POLICYVER=15
+
+	# load the policy if it exists
+	[ -f /etc/security/selinux/policy.${POLICYVER} ] && \
+		/usr/sbin/load_policy /etc/security/selinux/policy.${POLICYVER} || \
+		echo "Unable to load policy: /etc/security/selinux/policy.${POLICYVER} missing."
+fi
+
+exec /sbin/init
