@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.26 2003/09/28 12:32:30 azarah Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.27 2004/02/21 21:44:11 brad_mssw Exp $
+
+  21 Feb 2004; Brad House <brad_mssw@gentoo.org> readline-4.3-r5.ebuild:
+  stable on amd64 for 2004.0 release
 
 *readline-4.3-r5 (28 Sep 2003)
 
