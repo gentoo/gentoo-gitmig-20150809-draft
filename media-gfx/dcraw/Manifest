@@ -1,4 +1,6 @@
 MD5 f78c827bc477a685547949b958050814 dcraw-6.08.ebuild 1239
+MD5 7eed382769c82ae3b92e27d76114b62a dcraw-6.09.ebuild 1329
 MD5 9ec463cfd8dec8ebebb2d61eb070ada3 metadata.xml 728
-MD5 124bfc7d913b8c4b33ee4fb4034ba381 ChangeLog 340
+MD5 0806acab6d12248283cf9765fe61a752 ChangeLog 456
 MD5 75a3faedfe2fbc457ef792c7438bf2ef files/digest-dcraw-6.08 62
+MD5 75a3faedfe2fbc457ef792c7438bf2ef files/digest-dcraw-6.09 62
