@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141.ebuild,v 1.10 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141.ebuild,v 1.11 2003/07/02 16:16:33 agriffis Exp $
 
 IUSE="python gpm nls ruby perl"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.freehackers.org/${PN}"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc "
 PATCHES="${FILESDIR}/${P}.patch"
-newdepend ">=app-editors/vim-core-6.1
+newdepend "~app-editors/vim-core-6.1
 	dev-util/cscope
 	>=sys-libs/ncurses-5.2-r2
 	gpm?    ( >=sys-libs/gpm-1.19.3 )

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.10 2003/02/12 03:48:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.11 2003/07/02 16:16:33 agriffis Exp $
+
+  02 Jul 2003; Aron Griffis <agriffis@gentoo.org> kvim-6.1.141.ebuild:
+  Make kvim-6.1.141 use ~vim-core-6.1 since it breaks with vim-core-6.2
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
