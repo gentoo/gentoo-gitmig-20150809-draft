@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7-r1.ebuild,v 1.7 2004/10/10 23:02:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7-r1.ebuild,v 1.8 2004/10/15 18:17:36 mglauche Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -358,6 +358,8 @@ pkg_postinst() {
 	ewarn ""
 	einfo "If you experience client locks in file transfers _only_, try the parameter"
 	einfo "         use sendfile = no (man smb.conf(5), man sendfile(2))"
+	einfo "There also seem some problems with the smbfs implementation of the recent 2.6.x kernels"
+	einfo "If you experience problems (lockups) with smbfs, try cifs as an alternative"
 	einfo ""
 	if use ldap; then
 		ewarn "If you are upgrading from prior to 3.0.2, and you are using LDAP"
