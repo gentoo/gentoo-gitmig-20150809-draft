@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmifs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/ChangeLog,v 1.5 2003/02/12 09:41:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/ChangeLog,v 1.6 2003/11/02 07:45:17 seemant Exp $
+
+*wmifs-1.3_beta1-r1 (01 Nov 2003)
+
+  01 Nov 2003; Seemant Kulleen <seemant@gentoo.org> wmifs-1.3_beta1-r1.ebuild:
+  using the Debian patch which allows for longer interface names and prettifies
+  the output in wmifs for long names. Thanks to: Georgi Georgiev
+  <chutz@chubaka.net> in bug #26249
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
