@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.5.ebuild,v 1.2 2004/02/10 07:31:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.5.ebuild,v 1.3 2004/03/25 22:56:22 jhuebel Exp $
 
 inherit kde
 
 DESCRIPTION="KDE ${PV} - i18n: ${PN}"
 HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc amd64"
 SLOT="$KDEMAJORVER.$KDEMINORVER"
 RESTRICT="nomirror"
 
