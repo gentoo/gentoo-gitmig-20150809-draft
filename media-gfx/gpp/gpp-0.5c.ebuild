@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/gpp-0.5c.ebuild,v 1.3 2004/01/21 22:05:41 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/gpp-0.5c.ebuild,v 1.4 2004/06/24 22:40:25 agriffis Exp $
 
 # No real need to inherit from gnome2 eclass (yet)
 #inherit gnome2

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.0.1.ebuild,v 1.2 2004/02/02 11:45:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.0.1.ebuild,v 1.3 2004/06/24 22:42:02 agriffis Exp $
 
 inherit kde-base
 need-kde 3

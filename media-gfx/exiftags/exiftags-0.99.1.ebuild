@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/exiftags-0.99.1.ebuild,v 1.3 2004/06/18 19:57:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/exiftags-0.99.1.ebuild,v 1.4 2004/06/24 22:36:15 agriffis Exp $
 
 DESCRIPTION="Extracts JPEG EXIF headers from digital camera photos"
 HOMEPAGE="http://johnst.org/sw/exiftags/"

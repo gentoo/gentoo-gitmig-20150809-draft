@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/jpegoptim-1.2.2.ebuild,v 1.1 2003/11/26 00:49:21 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/jpegoptim-1.2.2.ebuild,v 1.2 2004/06/24 22:44:00 agriffis Exp $
 
 DESCRIPTION="JPEG file optimiser"
 HOMEPAGE="http://www.cc.jyu.fi/~tjko/projects.html"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.2.ebuild,v 1.1 2004/04/24 10:11:59 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.2.ebuild,v 1.2 2004/06/24 22:49:48 agriffis Exp $
 
 inherit kde-base
 need-kde 3.1

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/surf/surf-1.0.4.ebuild,v 1.1 2003/10/04 22:25:51 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/surf/surf-1.0.4.ebuild,v 1.2 2004/06/24 22:50:30 agriffis Exp $
 
 DESCRIPTION="a tool to visualize algebraic curves and algebraic surfaces"
 HOMEPAGE="http://surf.sourceforge.net/"

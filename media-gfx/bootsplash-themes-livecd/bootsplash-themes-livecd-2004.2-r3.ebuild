@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes-livecd/bootsplash-themes-livecd-2004.2-r3.ebuild,v 1.1 2004/06/15 18:33:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes-livecd/bootsplash-themes-livecd-2004.2-r3.ebuild,v 1.2 2004/06/24 22:34:01 agriffis Exp $
 
 IUSE="livecd"
 S=${WORKDIR}/livecd-${PV}

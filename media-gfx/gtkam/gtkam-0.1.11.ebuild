@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.11.ebuild,v 1.6 2004/06/09 18:01:59 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.11.ebuild,v 1.7 2004/06/24 22:41:41 agriffis Exp $
 
 inherit eutils gnome2
 

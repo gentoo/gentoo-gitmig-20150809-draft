@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/xsvg-0.1.2.ebuild,v 1.5 2004/06/04 09:44:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/xsvg-0.1.2.ebuild,v 1.6 2004/06/24 22:53:17 agriffis Exp $
 
 DESCRIPTION="X11 SVG viewer"
 HOMEPAGE="http://xsvg.org/"

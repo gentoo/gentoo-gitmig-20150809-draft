@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.21-r1.ebuild,v 1.8 2004/04/13 10:07:26 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.21-r1.ebuild,v 1.9 2004/06/24 22:36:36 agriffis Exp $
 
 DESCRIPTION="fbi a framebuffer image viewer"
 HOMEPAGE="http://www.strusel007.de/linux/fbi.html"

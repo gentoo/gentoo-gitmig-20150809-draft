@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.3.10.ebuild,v 1.6 2004/04/27 21:50:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.3.10.ebuild,v 1.7 2004/06/24 22:51:01 agriffis Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/sam2p
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.6 2004/05/31 13:36:00 twp Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.7 2004/06/24 22:49:06 agriffis Exp $
 
   31 May 2004; <twp@gentoo.org> sam2p-0.44.ebuild:
   Stable on x86

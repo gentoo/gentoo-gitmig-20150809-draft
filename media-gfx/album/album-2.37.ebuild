@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-2.37.ebuild,v 1.3 2003/09/08 07:40:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-2.37.ebuild,v 1.4 2004/06/24 22:32:43 agriffis Exp $
 
 DESCRIPTION="HTML photo album generator"
 HOMEPAGE="http://MarginalHacks.com/Hacks/album/"

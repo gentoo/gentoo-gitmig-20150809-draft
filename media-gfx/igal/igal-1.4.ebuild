@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/igal-1.4.ebuild,v 1.3 2003/04/06 08:37:56 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/igal-1.4.ebuild,v 1.4 2004/06/24 22:42:34 agriffis Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Static HTML image gallery generator"

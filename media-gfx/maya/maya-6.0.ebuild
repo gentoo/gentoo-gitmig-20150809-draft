@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.0.ebuild,v 1.3 2004/06/19 20:54:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.0.ebuild,v 1.4 2004/06/24 22:45:12 agriffis Exp $
 
 # Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
 # variable to the location of your maya RPMS and documentation:

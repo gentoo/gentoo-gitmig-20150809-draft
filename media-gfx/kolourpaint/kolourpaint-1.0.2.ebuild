@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kolourpaint/kolourpaint-1.0.2.ebuild,v 1.1 2004/05/16 21:56:41 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kolourpaint/kolourpaint-1.0.2.ebuild,v 1.2 2004/06/24 22:44:51 agriffis Exp $
 
 inherit kde
 need-kde 3

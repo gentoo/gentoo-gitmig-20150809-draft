@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.4.0.ebuild,v 1.1 2004/06/01 12:33:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.4.0.ebuild,v 1.2 2004/06/24 22:41:30 agriffis Exp $
 
 inherit gnome2
 

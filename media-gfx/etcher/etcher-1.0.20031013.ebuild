@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/etcher/etcher-1.0.20031013.ebuild,v 1.4 2004/04/05 22:09:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/etcher/etcher-1.0.20031013.ebuild,v 1.5 2004/06/24 22:36:04 agriffis Exp $
 
 inherit enlightenment
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/lprof-1.09.ebuild,v 1.4 2004/04/27 21:46:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/lprof-1.09.ebuild,v 1.5 2004/06/24 22:45:01 agriffis Exp $
 
 inherit eutils
 

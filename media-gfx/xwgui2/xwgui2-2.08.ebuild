@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xwgui2/xwgui2-2.08.ebuild,v 1.2 2004/04/05 17:14:23 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xwgui2/xwgui2-2.08.ebuild,v 1.3 2004/06/24 22:53:39 agriffis Exp $
 
 DESCRIPTION="xwGUI2 is an image and photo layout application aimed for printing"
 HOMEPAGE="http://xwgui.automatix.de/"

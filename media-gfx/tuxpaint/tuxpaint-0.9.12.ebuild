@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.12.ebuild,v 1.6 2004/06/07 22:04:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.12.ebuild,v 1.7 2004/06/24 22:51:12 agriffis Exp $
 
 DESCRIPTION="Drawing program designed for young children (kids ages 3 and up)"
 HOMEPAGE="http://www.newbreedsoftware.com/tuxpaint/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.9.ebuild,v 1.5 2003/09/06 23:56:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.9.ebuild,v 1.6 2004/06/24 22:52:56 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XPaint is an image editor which supports most standard paint program options."

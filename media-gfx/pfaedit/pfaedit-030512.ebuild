@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030512.ebuild,v 1.10 2004/05/17 17:26:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030512.ebuild,v 1.11 2004/06/24 22:46:17 agriffis Exp $
 
 inherit flag-o-matic
 
