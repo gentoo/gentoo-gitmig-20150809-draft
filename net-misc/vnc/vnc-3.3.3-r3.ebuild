@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r3.ebuild,v 1.2 2002/09/09 13:43:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r3.ebuild,v 1.3 2002/09/21 03:00:12 vapier Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ DESCRIPTION="A remote display system which allows you to view a computing 'deskt
 SRC_URI="http://www.uk.research.att.com/vnc/dist/${MY_P}_unixsrc.tgz
 	mirror://gentoo/${P}-gentoo-extra.tar.bz2
 	java? mirror://gentoo/tightvnc-1.1p9_javabin.tar.bz2"
-HOMEPAGE="http://www.uk.research.att.com/vnc/index.html"
+HOMEPAGE="http://www.uk.research.att.com/vnc/"
 
 SLOT="0"
 LICENSE="GPL-2"
