@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.5 2002/06/04 10:08:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.6 2002/06/08 02:11:36 seemant Exp $
+
+*alsaplayer-0.99.71.20020607 (7 Jun 2002)
+
+  7 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  alsaplayer-0.99.71.20020607.ebuild
+  files/digest-alsaplayer-0.99.71.20020607 :
+
+  Version bump to newest CVS snapshot, which sorts the gcc-3.1 bug out and
+  also works with alsa5 for those users who still need that.
 
 *alsaplayer-0.99.70-r1 (4 Jun 2002)
 
