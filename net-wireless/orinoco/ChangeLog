@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/orinoco
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.1 2004/11/01 12:22:47 brix Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.2 2005/01/04 00:05:28 brix Exp $
+
+*orinoco-0.15_rc2-r1 (04 Jan 2005)
+
+  04 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +orinoco-0.15_rc2-r1.ebuild:
+  Ported to use linux-mod.eclass, bumping because of modules.d file additions.
 
   01 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml:
   Initial check-in, ebuild by me. Thanks to all who commented on bug #57031.
