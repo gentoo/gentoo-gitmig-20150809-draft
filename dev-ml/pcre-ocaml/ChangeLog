@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/pcre-ocaml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.5 2004/03/13 19:47:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.6 2004/03/23 01:16:28 mattam Exp $
+
+  23 Mar 2004; Matthieu Sozeau <mattam@gentoo.org> pcre-ocaml-5.03.3.ebuild,
+  metadata.xml:
+  Added ppc keyword and moved x86 to stable. Added metadata.xml.
 
   13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   pcre-ocaml-4.26.3.ebuild, pcre-ocaml-4.33.0.ebuild,
