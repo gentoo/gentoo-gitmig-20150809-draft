@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.1.ebuild,v 1.6 2004/07/14 17:11:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.1-r2.ebuild,v 1.1 2004/08/09 18:45:56 foser Exp $
 
-inherit eutils rpm
+inherit eutils rpm font
 
 DESCRIPTION="free good quality fonts gpl'd by URW++"
 HOMEPAGE=""
@@ -17,13 +17,15 @@ IUSE=""
 #DEPEND comes from rpm.eclass
 
 S=${WORKDIR}
-FONTPATH="/usr/share/fonts/${PN}"
+FONT_S="${S}"
+FONT_SUFFIX="afm pfb"
+DOCS="ChangeLog README* TODO"
 
-src_install() {
-	insinto ${FONTPATH}
-	doins *.afm *.pfb fonts.*
-	if [ -x /usr/bin/fc-cache ] ; then
-		/usr/bin/fc-cache -f ${D}${FONTPATH}
-	fi
-	dodoc ChangeLog README* TODO
+src_install () {
+
+	font_src_install
+
+	# don't touch our fonts.conf
+	rm -fr ${D}/etc
+
 }
