@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r4.ebuild,v 1.12 2005/02/07 00:35:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r4.ebuild,v 1.13 2005/02/19 17:44:24 vapier Exp $
 
 # r3 change by me (danarmak): there's a contrib dir inside the freetype1
 # sources with important utils: ttf2bdf, ttf2pfb, ttf2pk, ttfbanner.
@@ -13,7 +13,7 @@
 # When we update to freetype-pre1.4 or any later version, we should use
 # the included contrib directory and not download any additional files.
 
-inherit gnuconfig eutils
+inherit eutils libtool
 
 P2=${PN}1-contrib
 DESCRIPTION="TTF-Library"
@@ -40,7 +40,7 @@ src_unpack() {
 	cd ${S}
 	unpack ${P2}.tar.gz
 
-	gnuconfig_update
+	uclibctoolize
 }
 
 src_compile() {
@@ -61,8 +61,7 @@ src_compile() {
 
 	use tetex && myconf="${myconf} --with-kpathsea-dir=/usr/lib"
 
-	for x in ttf2bdf ttf2pfb ttf2pk ttfbanner
-	do
+	for x in ttf2bdf ttf2pfb ttf2pk ttfbanner ; do
 		cd ${S}/freetype1-contrib/${x}
 		econf ${myconf} || die
 		make || die
