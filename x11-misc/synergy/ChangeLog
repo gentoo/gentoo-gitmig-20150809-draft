@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.11 2004/04/03 06:48:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.12 2004/04/11 17:18:07 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> synergy-0.9.13.ebuild,
+  synergy-1.0.0.ebuild, synergy-1.0.14.ebuild, synergy-1.0.2.ebuild,
+  synergy-1.0.8.ebuild:
+  Marked stable on x86. Ebuild fixup.
 
   03 Apr 2004; Lars Weiler <pylon@gentoo.org> synergy-1.0.14.ebuild:
   stable on ppc
