@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/acovea
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.1 2004/05/07 17:16:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.2 2004/06/14 16:45:55 aliz Exp $
+
+  14 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> acovea-4.0.0.ebuild:
+  Unmasked on x86 and amd64.
 
 *acovea-4.0.0 (07 May 2004)
 
