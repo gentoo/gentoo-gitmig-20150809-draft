@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.23-r1.ebuild,v 1.1 2004/02/21 12:08:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.23-r1.ebuild,v 1.2 2004/02/21 12:09:42 lanius Exp $
 
-IUSE="static"
+IUSE="static operanom2"
 
 OPERAVER="7.23-20031119"
 
@@ -12,13 +12,13 @@ HOMEPAGE="http://www.opera.com/linux/"
 
 # that's an ugly workaround for the broken src_uri syntax
 if [ `use static` ]; then
-	SRC_URI="x86? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 )
-	ppc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 )
-	sparc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/sparc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 )"
-else
 	SRC_URI="x86? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
 	ppc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )
 	sparc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
+else
+	SRC_URI="x86? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 )
+	ppc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 )
+	sparc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/sparc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 )"
 fi
 
 SLOT="0"
