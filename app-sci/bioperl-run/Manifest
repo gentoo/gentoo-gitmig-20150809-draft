@@ -1,5 +1,7 @@
+MD5 cbd39470a0274952539c7b01b68850a5 bioperl-run-1.4.ebuild 1322
 MD5 48dbd04688a838b44dd76c2b02194e62 bioperl-run-1.2.2.ebuild 1475
 MD5 54a369cdab631e4e3a56fa32c761bf1b ChangeLog 542
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
+MD5 47db6a1f839dd45f8c891b5f6ab2ff2a files/digest-bioperl-run-1.4 67
 MD5 21ad123058f1e670f289ee1a87de4e82 files/bioperl-run-Pise-test-patch.diff 722
 MD5 b23d441d6d3f1d4ed3dead4c3dc2799b files/digest-bioperl-run-1.2.2 69
