@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.35 2004/07/27 13:30:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.36 2004/10/04 09:20:45 dragonheart Exp $
+
+*pdnsd-1.1.12_pre3 (04 Oct 2004)
+
+  04 Oct 2004; Daniel Black <dragonheart@gentoo.org> +files/pdnsd.conf.test,
+  pdnsd-1.1.11.ebuild, +pdnsd-1.1.12_pre3.ebuild:
+  version bump as per bug #66219. -fbsd masked 1.1.11 due to upstream notice -
+  fixed in later versions. Thanks for the notification Daniel Webert
+  <rockoo@rockoo.homelinux.org>
 
   27 Jul 2004; Daniel Black <dragonheart@gentoo.org> pdnsd-1.1.10.ebuild,
   pdnsd-1.1.11.ebuild, pdnsd-1.1.9.ebuild, -pdnsd-1.1.7a.ebuild:
