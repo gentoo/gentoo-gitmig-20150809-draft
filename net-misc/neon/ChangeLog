@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.44 2004/11/01 18:53:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.45 2004/11/02 21:41:28 agriffis Exp $
+
+  04 Nov 2004; Aron Griffis <agriffis@gentoo.org> neon-0.24.7.ebuild:
+  add ia64 keyword
 
   01 Nov 2004; Markus Rothe <corsair@gentoo.org>
 
