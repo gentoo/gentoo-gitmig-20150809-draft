@@ -1,6 +1,6 @@
-# by Robert Cernansky
+# Copyright 1999-2003 Gentoo Technologies, Inc. and Robert Cernansky
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/glukalka/glukalka-0.67.ebuild,v 1.1 2003/09/02 07:42:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/glukalka/glukalka-0.67.ebuild,v 1.2 2003/09/04 01:21:32 msterret Exp $
 
 DESCRIPTION="Emulator of ZX Spectrum 48K/128K and clones"
 HOMEPAGE="http://glukalka.sourceforge.net"

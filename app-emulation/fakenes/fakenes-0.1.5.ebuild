@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fakenes/fakenes-0.1.5.ebuild,v 1.1 2003/07/13 05:58:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fakenes/fakenes-0.1.5.ebuild,v 1.2 2003/09/04 01:24:18 msterret Exp $
 
 inherit games eutils
 
