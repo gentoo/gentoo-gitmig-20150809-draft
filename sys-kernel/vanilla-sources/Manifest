@@ -12,11 +12,12 @@ MD5 d354a53c79720fe471a144852d850fc3 vanilla-sources-2.0.40.ebuild 2739
 MD5 0f5406c0ec524fa666bc9334a3f81499 vanilla-sources-2.4.22.ebuild 519
 MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
 MD5 9b4eb4b258ac28ddde823f42eeb05c39 vanilla-sources-2.6.11_rc4.ebuild 487
+MD5 cf226acb54a03c4e89a07e378c358a89 vanilla-sources-2.4.29.ebuild 476
 MD5 64acc4686f01553a3c28e0e322ef5589 vanilla-sources-2.6.11_rc1.ebuild 484
 MD5 7eeaa66d6ef9652cf01be43981c99574 vanilla-sources-2.4.26.ebuild 472
 MD5 7fd084c8e807a3d8b7a26921764e4687 vanilla-sources-2.4.21.ebuild 565
 MD5 447993921185b57a86d870426511e9cf vanilla-sources-2.6.11_rc3.ebuild 487
-MD5 cd71bc73a12c49a49895f6991713d39a ChangeLog 10044
+MD5 d906f5c5599347682281deaec0fb1e52 ChangeLog 10233
 MD5 17ded3e049cc5ea4571a590f031fd463 metadata.xml 449
 MD5 97ebbee3ab02255ccaa15c4280e8ace2 vanilla-sources-2.4.28.ebuild 472
 MD5 d3fe4307495d4302c375f45795afcca7 vanilla-sources-2.4.23.ebuild 472
@@ -36,15 +37,16 @@ MD5 df6b4c19f4a4cb2b3d3a2a0107d7853d files/digest-vanilla-sources-2.4.25 67
 MD5 2574d3f1b776f2df365737f456bfe435 files/digest-vanilla-sources-2.4.26 67
 MD5 14e2a1ac85955957aae295a309749807 files/digest-vanilla-sources-2.4.27 67
 MD5 6228c1417a2403fb6ea20450802429b1 files/digest-vanilla-sources-2.4.28 67
+MD5 0c40e3512bb71ce6e1581275735fe4b0 files/digest-vanilla-sources-2.4.29 67
 MD5 78b4470aebd0088d0560ca3f88387b83 files/digest-vanilla-sources-2.6.10 67
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
 MD5 d8266c3fd31880277da566681a943098 files/digest-vanilla-sources-2.4.24-r1 67
 MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-vanilla-sources-2.6.5 66
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-vanilla-sources-2.6.7 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCD0opchej4aZK9/cRAjcpAJ95uhTv/rU6DWDw9eSTCWicsmmr0QCfQ0JG
-3trB2TQ0OukGCAdTVr4w084=
-=+SpV
+iD8DBQFCD62siJcSIUGNthERAngzAJ0RvIBS59gsui5cRDG/MATUaPNrwgCguyQH
+xfNhPmPzAndIhyXDLZ2f3Q4=
+=TTi1
 -----END PGP SIGNATURE-----
