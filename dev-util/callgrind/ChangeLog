@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/callgrind
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/ChangeLog,v 1.6 2005/03/28 13:33:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/ChangeLog,v 1.7 2005/04/04 12:50:09 caleb Exp $
+
+*callgrind-0.9.11 (04 Apr 2005)
+
+  04 Apr 2005; Caleb Tennis <caleb@gentoo.org> +callgrind-0.9.11.ebuild:
+  version bump
 
   28 Mar 2005; Caleb Tennis <caleb@gentoo.org> callgrind-0.9.10-r1.ebuild:
   Seems like this version is not compatible with newer valgrinds - change dep
