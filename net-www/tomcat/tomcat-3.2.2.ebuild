@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.2.2.ebuild,v 1.2 2001/07/10 02:00:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.2.2.ebuild,v 1.3 2001/07/10 02:23:50 achim Exp $
 
 A="jakarta-tomcat-3.2.2-src.tar.gz jakarta-servletapi-3.2.2-src.tar.gz jakarta-ant-1.3-src.tar.gz"
 S=${WORKDIR}
@@ -64,8 +64,8 @@ src_install() {
   rm -r ${D}/opt/jakarta/tomcat/lib/{ant,jaxp,parser}.jar
   insinto /usr/lib/apache
   doins ${S}/jakarta-tomcat/src/native/apache1.3/mod_jk.so
-  #insinto /etc/httpd
-  #doins ${FILESDIR}/httpd.tomcat
+  insinto /etc/httpd
+  doins ${FILESDIR}/httpd.tomcat
   insinto /etc/rc.d/init.d
   insopts -m755
   doins ${FILESDIR}/tomcat
