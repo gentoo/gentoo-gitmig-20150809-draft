@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.6.ebuild,v 1.2 2003/08/13 07:54:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.6.ebuild,v 1.3 2003/09/08 04:24:16 msterret Exp $
 
 inherit elisp
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="x86 alpha ~ppc ~sparc"
 
 DEPEND="virtual/emacs
-        || ( >=net-www/w3m-0.3.1 net-www/w3m-m17n )
-        >=app-emacs/apel-10.3
-        virtual/flim"
+	|| ( >=net-www/w3m-0.3.1 net-www/w3m-m17n )
+	>=app-emacs/apel-10.3
+	virtual/flim"
 
 S=${WORKDIR}/${P}
 

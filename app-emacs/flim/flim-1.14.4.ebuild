@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/flim-1.14.4.ebuild,v 1.2 2003/02/13 07:05:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/flim-1.14.4.ebuild,v 1.3 2003/09/08 04:26:36 msterret Exp $
 
 inherit elisp
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/emacs
-         >=app-emacs/apel-10.3"
+	>=app-emacs/apel-10.3"
 
 PROVIDE="virtual/flim-1.14.4"
 S="${WORKDIR}/${P}"
@@ -30,7 +30,7 @@ src_install() {
 		LISPDIR=${D}/${SITELISP} \
 		VERSION_SPECIFIC_LISPDIR=${D}/${SITELISP} install || die
 
- 	elisp-site-file-install ${FILESDIR}/60flim-gentoo.el
+	elisp-site-file-install ${FILESDIR}/60flim-gentoo.el
 
 	dodoc FLIM-API.en NEWS VERSION README* Changelog
 }

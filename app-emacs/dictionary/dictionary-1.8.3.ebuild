@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/dictionary-1.8.3.ebuild,v 1.2 2003/02/13 07:04:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/dictionary-1.8.3.ebuild,v 1.3 2003/09/08 04:21:55 msterret Exp $
 
 inherit elisp
 
@@ -24,8 +24,8 @@ src_compile() {
 }
 
 src_install() {
- 	elisp-install ${PN} *.el *.elc
- 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp-install ${PN} *.el *.elc
+	elisp-site-file-install ${FILESDIR}/${SITEFILE}
 
 	dodoc ChangeLog GPL README
 	einfo "Documentation for ${P} can be found at http://www.myrkr.in-berlin.de/dictionary/using.html"
