@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0.ebuild,v 1.4 2005/03/19 00:31:24 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0.ebuild,v 1.5 2005/03/21 16:46:32 carlo Exp $
 
 inherit kde-dist eutils
 
@@ -18,7 +18,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	flac? ( media-libs/flac )
 	encode? ( media-sound/lame )
 	oggvorbis? ( media-sound/vorbis-tools )
-	xine? ( >=media-libs/xine-lib-1_beta12 )
+	xine? ( >=media-libs/xine-lib-1.0 )
 	alsa? ( media-libs/alsa-lib )
 	speex? ( media-libs/speex )
 	theora? ( media-libs/libtheora )

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.156 2005/03/18 18:06:32 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.157 2005/03/21 16:46:32 carlo Exp $
+
+  21 Mar 2005; Carsten Lohrke <carlo@gentoo.org> kdemultimedia-3.4.0.ebuild:
+  depend on xine-lib-1.0, #86136
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kdemultimedia-3.4.0.ebuild:
   Added to ~ppc
