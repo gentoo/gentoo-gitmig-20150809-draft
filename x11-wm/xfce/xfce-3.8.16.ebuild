@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.7 2002/06/19 14:36:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.8 2002/06/19 19:36:49 seemant Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="XFce is a lightweight desktop environment for various UNIX systems."
@@ -20,7 +20,7 @@ src_compile() {
 
 	use gtk && myconf="--enable-imlib=no --enable-gdk-pixbuf=/usr"
 
-	if [ "`use fooz`" ]
+#	if [ "`use fooz`" ]
 	if [ "`use gnome`" ]
 	then
 		myconf="${myconf} --enable-gdm"
