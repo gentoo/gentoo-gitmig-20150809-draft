@@ -349,7 +349,7 @@ x11-terms/powershell
 
 # <mcummings@gentoo.org> (14 Sep 2002)
 # These should *never* have made it out
-=media-libs/libgd-2.0.1
+>=media-libs/libgd-2.0.1
 =dev-perl/GD-2.01
 
 # <lostlogic@gentoo.org> (13 Sep 2002)
