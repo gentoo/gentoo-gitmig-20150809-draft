@@ -1,0 +1,12 @@
+diff -urN lcdproc-0.4.4/server/parse.c lcdproc-0.4.4-fixed/server/parse.c
+--- lcdproc-0.4.4/server/parse.c	2004-03-16 17:06:12.000000000 -0300
++++ lcdproc-0.4.4-fixed/server/parse.c	2004-03-31 13:49:23.000000000 -0300
+@@ -158,7 +158,7 @@
+ 
+ 
+ 					argc++;
+-				} while (*p);
++				} while (*p && i < MAX_ARGUMENTS);
+ 
+ 				/*debug(RPT_DEBUG, "exiting string scan...");*/
+ 
