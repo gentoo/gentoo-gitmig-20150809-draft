@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9-r4.ebuild,v 1.4 2004/02/26 04:48:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9-r4.ebuild,v 1.5 2004/04/27 21:11:18 agriffis Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
-inherit libtool gnome.org
+inherit libtool gnome.org eutils
 
 DESCRIPTION="GNOME http client library"
 LICENSE="LGPL-2 GPL-2"

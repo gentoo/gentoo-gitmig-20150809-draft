@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.2.ebuild,v 1.9 2004/03/30 19:44:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.2.ebuild,v 1.10 2004/04/27 21:12:10 agriffis Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A filemanager for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"

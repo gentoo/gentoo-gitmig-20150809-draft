@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.6.1.ebuild,v 1.1 2004/04/21 13:40:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.6.1.ebuild,v 1.2 2004/04/27 21:10:27 agriffis Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Gnome session manager"
 HOMEPAGE="http://www.gnome.org/"

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r5.ebuild,v 1.9 2004/03/31 07:53:03 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r5.ebuild,v 1.10 2004/04/27 21:08:11 agriffis Exp $
 
-inherit libtool
+inherit libtool eutils
 
 IUSE="nls"
 
