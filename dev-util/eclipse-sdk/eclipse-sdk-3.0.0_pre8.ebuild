@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8.ebuild,v 1.1 2004/05/07 02:18:36 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8.ebuild,v 1.2 2004/05/09 14:41:21 karltk Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
@@ -116,7 +116,11 @@ src_unpack() {
 	# for users with the 2.3 series, they should upgrade, dunno which 2.3.x all this
 	#  stuff broke in anyway.
 	if pkg-config --atleast-version 2.4 gtk+-2.0 ; then
-		sed -e "s:#define GTK_DISABLE_DEPRECATED::g" -i os.h
+		einfo "Applying gtk+-2.4 patches"
+		sed -r \
+			-e "s:#define GTK_DISABLE_DEPRECATED::g" \
+			-e "s:(^void gtk_progress_bar_set_bar_style.*):/* \1 */:" \
+			-i os.h
 	fi
 
 	cd ${S}/"${motif_swt_src_dir}"
@@ -201,6 +205,7 @@ src_compile() {
 	set_dirs
 
 	# First build all java code
+
 
 	if ( use gtk || ! ( use gtk || use motif || use kde ) ); then
 		einfo "Building GTK+ frontend"

@@ -1,4 +1,4 @@
-MD5 db35787e57f936c73d1fc658ffc831a4 ChangeLog 3802
+MD5 8551736c678453c4456859c4ef1883db ChangeLog 3958
 MD5 1b3d0712db8c4a4d345f6f4744acc496 eclipse-sdk-2.1.ebuild 82878
 MD5 1599279350669a35135a2bb9b79a89b6 eclipse-sdk-2.1.1.ebuild 7553
 MD5 9cc8d5162e981d7b7fc1ef9fa1ac0e65 metadata.xml 919
@@ -7,7 +7,7 @@ MD5 1b7dd5acbe8da5ca6f3a967eb7a63916 eclipse-sdk-2.1.2.ebuild 7619
 MD5 ecb312b5736947c1d7151e98676f11eb eclipse-sdk-2.1.3.ebuild 7825
 MD5 98c827d4c23fe349b30e507705eeb077 eclipse-sdk-3.0.0_pre5.ebuild 8992
 MD5 005ac1f796bbcd631db64c907369c7e6 eclipse-sdk-2.1.3-r1.ebuild 8972
-MD5 dd02ecaf7919fc49d102f722012b9ae0 eclipse-sdk-3.0.0_pre8.ebuild 9867
+MD5 3c74af338cad7cc521a7443f8e4008dd eclipse-sdk-3.0.0_pre8.ebuild 9980
 MD5 5bea1174eca3d2e368ad728e5086b24a files/digest-eclipse-sdk-2.1 86
 MD5 06d244ce5f95763470623f0e023314c8 files/eclipse-3 958
 MD5 76c2f3ddbb548ca9d3f1522498f51bc0 files/digest-eclipse-sdk-2.1.1 88
