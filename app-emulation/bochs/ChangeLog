@@ -1,6 +1,13 @@
-# ChangeLog for app-emulation/darcnes
+# ChangeLog for app-emulation/bochs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.4 2002/07/16 02:52:22 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.5 2002/07/22 21:41:22 danarmak Exp $
+
+*bochs-1.4.1 (23 Jul 2002)
+
+  23 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New version 1.4.1. Also fix #5381 (configure parameters) and #5312 (new
+  version notice).
 
 *bochs-1.4 (7 May 2002): 
 
