@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Kevin Koltzau <kevin@plop.org>
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/synce-kde-0.6.1.ebuild,v 1.3 2004/03/14 17:22:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/synce-kde-0.6.1.ebuild,v 1.4 2004/06/02 12:36:41 agriffis Exp $
 
 inherit kde
 
@@ -35,7 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ `use avantgo` ]; then
+	if use avantgo; then
 		cd ${S}/../agsync-0.2-pre
 		emake
 		cd ${S}
