@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/doxygen-syntax
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/doxygen-syntax/ChangeLog,v 1.1 2005/01/06 04:07:05 ciaranm Exp $
+
+*doxygen-syntax-1.8 (06 Jan 2005)
+
+  06 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +doxygen-syntax-1.8.ebuild:
+  New package
+

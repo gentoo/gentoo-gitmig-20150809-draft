@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8bc513cb3158c8ba15cd042e3d01960a ChangeLog 365
+MD5 95f794e23584f508d4bfe821f4b824e1 doxygen-syntax-1.8.ebuild 1048
+MD5 8886b7d7a5037909f7ad8bc2c955e9bf metadata.xml 429
+MD5 fed73c9f93212a6cc8b372aceea48690 files/digest-doxygen-syntax-1.8 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3LmjLLFUmVNQ7rkRAmHpAJ0dVMRugxZjZ7pmOPHFIHqihfrNCwCgzjDQ
+QTnpFsCLh/jrjKuoZtJ+8EM=
+=Hnu+
+-----END PGP SIGNATURE-----
