@@ -1,0 +1,59 @@
+diff -urN evms-1.1.0-pre4/engine/Plugins/reiserfsim/reiserfs.c evms-1.1.0-pre4.fixed/engine/Plugins/reiserfsim/reiserfs.c
+--- evms-1.1.0-pre4/engine/Plugins/reiserfsim/reiserfs.c	Wed Jun 19 16:54:20 2002
++++ evms-1.1.0-pre4.fixed/engine/Plugins/reiserfsim/reiserfs.c	Tue Jul 23 11:49:16 2002
+@@ -563,14 +563,18 @@
+ 				if ((ver = strstr(buffer, "3.x.0"))) {
+ 					reiser_version = 0;
+ 					end = strstr(ver,"\n");
+-					strncpy(reiser_version_text,ver,min((int)end - (int)ver,31));
++					strncpy(reiser_version_text,ver,min(end - ver,31));
+ 					rc = 0;
+ 				} else if ((ver =strstr(buffer, "3.x.1"))) {
+ 					end = strstr(ver,"\n");
+ 					strncpy(reiser_version_text,ver,min(end - ver,31));
+-//					strncpy(reiser_version_text,ver,31);
+ 					reiser_version = 1;
+ 					rc = 0;
++				} else if ((ver = strstr(buffer, "3.6."))) {
++					end = strstr(ver,"\n");
++					strncpy(reiser_version_text,ver,min(end - ver,31));
++					reiser_version = 2;
++					rc = 0;
+ 				}
+ 			}
+ 		}
+@@ -818,9 +822,9 @@
+ 	LOGENTRY();
+ 
+ 	/* don't expand if mounted */
+-	if (EngFncs->is_mounted(volume->name, NULL)) {
+-		return EBUSY;
+-	}
++//	if (EngFncs->is_mounted(volume->name, NULL)) {
++//		return EBUSY;
++//	}
+ 
+ 	rc = pipe(fds1);
+ 	if (rc) {
+@@ -1671,9 +1675,9 @@
+ 	int  rc = 0;
+ 
+ 	LOGENTRY();
+-	if (EngFncs->is_mounted(volume->name, NULL)) {
+-		rc = EBUSY; // If mounted, can't expand
+-	} else {
++//	if (EngFncs->is_mounted(volume->name, NULL)) {
++//		rc = EBUSY; // If mounted, can't expand
++//	} else {
+ 		fs_get_fs_limits( volume,		   // reset limits.
+ 				  &volume->min_fs_size,
+ 				  &volume->max_vol_size,
+@@ -1681,7 +1685,7 @@
+ 		if (volume->fs_size + *delta > volume->max_fs_size) {
+ 			*delta = volume->max_fs_size - volume->fs_size;
+ 		}
+-	}
++//	}
+ 	LOGEXITRC();
+ 	return rc;
+ 

@@ -1,0 +1,24 @@
+diff -urN evms-1.1.0-pre4/engine/Plugins/gptsegmgr/Makefile evms-1.1.0-pre4.fixed/engine/Plugins/gptsegmgr/Makefile
+--- evms-1.1.0-pre4/engine/Plugins/gptsegmgr/Makefile	Tue Apr 30 11:36:48 2002
++++ evms-1.1.0-pre4.fixed/engine/Plugins/gptsegmgr/Makefile	Tue Jul 23 11:29:45 2002
+@@ -28,7 +28,7 @@
+ 	rm -f $(DESTDIR)$(PLUGINS_DIR)/$(TARGET)
+ 
+ $(TARGET): $(OBJS)
+-	$(CC) $(SO_CFLAGS) -luuid  -Wl,-soname,$(SONAME) -o $(TARGET) $(OBJS)
++	$(CC) $(SO_CFLAGS) -Wl,-soname,$(SONAME) -o $(TARGET) $(OBJS) -luuid
+ 
+ clean:
+ 	rm -f .depend *.o *.so $(TARGET)
+diff -urN evms-1.1.0-pre4/engine/Plugins/jfsfsim/Makefile evms-1.1.0-pre4.fixed/engine/Plugins/jfsfsim/Makefile
+--- evms-1.1.0-pre4/engine/Plugins/jfsfsim/Makefile	Fri May 17 14:05:04 2002
++++ evms-1.1.0-pre4.fixed/engine/Plugins/jfsfsim/Makefile	Tue Jul 23 11:30:02 2002
+@@ -28,7 +28,7 @@
+ 	rm -f $(DESTDIR)$(PLUGINS_DIR)/$(TARGET)
+ 
+ $(TARGET): $(OBJS)
+-	$(CC) $(SO_CFLAGS) -luuid -Wl,-soname,$(SONAME) -o $(TARGET) $(OBJS)
++	$(CC) $(SO_CFLAGS) -Wl,-soname,$(SONAME) -o $(TARGET) $(OBJS) -luuid
+ 
+ clean:
+ 	rm -f .depend *.o *.so $(TARGET)
