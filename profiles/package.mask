@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> 22 Jul 2002
+# New snazzy postfix ebuild with ipv6,tls, and saslv2 support
+=net-mail/postfix-1.1.11.20020613
+
 # <owen@gentoo.org> 22 Jul 2002
 # Broken against latest FLTK. Hopefully will be fixed with a new POSE.
 <=app-emulation/pose-3.5
