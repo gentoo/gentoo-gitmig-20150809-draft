@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r7.ebuild,v 1.4 2003/03/13 09:14:10 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r7.ebuild,v 1.5 2003/03/28 16:52:44 gmsoft Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc alpha arm"
+KEYWORDS="~x86 ~ppc ~sparc alpha arm hppa"
 
 src_unpack() {
 	unpack ${A}
