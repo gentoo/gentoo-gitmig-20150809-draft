@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/gl117
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/ChangeLog,v 1.12 2004/12/20 22:19:32 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/ChangeLog,v 1.13 2005/01/25 07:00:22 mr_bones_ Exp $
+
+  25 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org> -gl117-1.2.ebuild,
+  gl117-1.3.1.ebuild, -gl117-1.3.ebuild:
+  fix HOMEPAGE; clean old ebuilds
 
 *gl117-1.3.1 (20 Dec 2004)
 
