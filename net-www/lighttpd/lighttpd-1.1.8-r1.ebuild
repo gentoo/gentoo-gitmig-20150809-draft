@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/lighttpd-1.1.8-r1.ebuild,v 1.2 2004/06/25 00:57:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/lighttpd-1.1.8-r1.ebuild,v 1.3 2004/06/25 20:10:19 agriffis Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ pkg_setup() {
 
 src_compile() {
 	epatch ${FILESDIR}/lighttpd-1.1.8-gentoo.diff
-	if [ `use ssl` ]; then
+	if use ssl; then
 		USE_SSL="--with-openssl"
 	fi
 	econf --libdir=/usr/lib/${PN} \
