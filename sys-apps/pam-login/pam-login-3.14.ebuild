@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.12 2004/03/09 23:38:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.13 2004/03/31 02:21:11 tgall Exp $
 
 inherit gnuconfig
 
@@ -36,6 +36,8 @@ src_unpack() {
 
 	# enable query_user_context selinux code (only affects selinux)
 	epatch ${FILESDIR}/pam-login-3.14-query_user_context.diff
+
+	use ppc64 && epatch ${FILESDIR}/pam_login-Werror-off-ppc64.patch
 }
 
 src_compile() {
