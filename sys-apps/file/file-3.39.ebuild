@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.39.ebuild,v 1.11 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.39.ebuild,v 1.12 2003/09/03 17:58:07 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
@@ -15,13 +15,13 @@ LICENSE="as-is"
 DEPEND="virtual/glibc"
 
 src_unpack() {
-    unpack ${A}
+	unpack ${A}
 
-    if [ "${ARCH}" = "mips" ]
-            then
-    cd ${S}
-    patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
-    fi
+	if [ "${ARCH}" = "mips" ]
+		then
+	cd ${S}
+	patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
+	fi
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.02.ebuild,v 1.7 2003/08/11 18:24:23 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.02.ebuild,v 1.8 2003/09/03 17:58:07 mholzer Exp $
 
 inherit flag-o-matic
 
@@ -25,7 +25,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--datadir=/usr/share/misc \
 		--host=${CHOST} || die
-	
+
 	#unfortunately, parallel make doesn't work with 4.01
 	emake -j1 || die
 }
