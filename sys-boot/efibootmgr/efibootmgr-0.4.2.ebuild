@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.4.2.ebuild,v 1.1 2004/01/21 20:41:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.4.2.ebuild,v 1.2 2004/03/04 22:42:15 agriffis Exp $
 
 DESCRIPTION="Interact with the EFI Boot Manager on IA-64 Systems"
 HOMEPAGE="http://developer.intel.com/technology/efi"
@@ -14,7 +14,7 @@ HOMEPAGE="http://developer.intel.com/technology/efi"
 # prior to use.  `modprobe efivars` should do the trick.
 
 SRC_URI="http://domsch.com/linux/ia64/${PN}/${P}.tar.gz"
-KEYWORDS="~ia64"
+KEYWORDS="ia64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
