@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23-r1.ebuild,v 1.2 2003/12/09 23:24:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23-r1.ebuild,v 1.3 2004/01/05 22:22:57 plasmaroo Exp $
 
 IUSE="build"
 
@@ -60,6 +60,9 @@ src_unpack() {
 
 	bzcat ${DISTDIR}/${KV/-}.bz2|patch -p1 || die "-aa patch failed"
 	sed -e '51i \				   qsort.o \\' -i fs/xfs/support/Makefile
+
+	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch
+	epatch ${FILESDIR}/${P}.rtc_fix.patch
 
 	kernel_universal_unpack
 }
