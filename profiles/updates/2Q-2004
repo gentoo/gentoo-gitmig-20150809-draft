@@ -1,3 +1,5 @@
+move dev-java/jaf dev-java/sun-jaf-bin
+move dev-java/javamail dev-java/sun-javamail-bin
 move dev-libs/libextractor media-libs/libextractor
 move dev-java/activation dev-java/gnu-activation
 move sys-apps/brltty app-accessibility/brltty
