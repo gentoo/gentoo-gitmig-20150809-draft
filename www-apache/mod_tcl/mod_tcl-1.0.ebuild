@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/mod_tcl-1.0.ebuild,v 1.1 2004/08/15 17:22:51 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/mod_tcl-1.0.ebuild,v 1.2 2004/08/30 16:30:41 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/${P}
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 DEPEND="dev-lang/tcl =net-www/apache-2*"
 LICENSE="Apache-1.1"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 SLOT="0"
 

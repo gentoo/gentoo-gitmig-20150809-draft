@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/mod_survey-3.2.0.ebuild,v 1.1 2004/08/18 21:34:40 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/mod_survey-3.2.0.ebuild,v 1.2 2004/08/30 16:30:28 dholm Exp $
 
 inherit webapp
 
 DESCRIPTION="XML-defined web questionnaires as a plug-in module for Apache"
 HOMEPAGE="http://gathering.itm.mh.se/modsurvey/"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="apache2 postgres mysql"
 MY_P=${P/mod_survey/modsurvey}
