@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>sound</herd>
+<maintainer>
+ <email>morfic@gentoo.org</email>
+ <name>Daniel Goller</name>
+</maintainer>
+<longdescription>
+xmms-xf86audio is a simple plugin which enables the multimedia keys on many modern keyboards to control XMMS playback.
+</longdescription>
+</pkgmetadata>

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 86a012f57bfadf660686ebbd58506336 metadata.xml 403
+MD5 ae51c0e59da560c3fb249e607a787193 ChangeLog 469
+MD5 0c5f994d4e1d20555252e23f53e543c6 xmms-xf86audio-0.4.2.ebuild 615
+MD5 4e2545466ebe2f87366350e1384d2e53 files/digest-xmms-xf86audio-0.4.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+Z1YUpKYMelfdYERAmEqAJ0XcuS2VcasEK/yykCO58aWEg0BwwCffIgu
+KnY4uFgUUVda803urVdvZtw=
+=nSoO
+-----END PGP SIGNATURE-----
