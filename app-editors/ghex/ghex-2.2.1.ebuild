@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-2.2.1.ebuild,v 1.5 2004/06/24 21:54:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-2.2.1.ebuild,v 1.6 2004/06/30 02:32:29 agriffis Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://pluton.ijs.si/~jaka/gnome.html"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
 KEYWORDS="x86 ~amd64"
-IUSE="nls"
+IUSE=""
 
 RDEPEND=">=gnome-base/gail-0.17
 	>=gnome-base/gconf-1.2

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.17 2004/06/24 21:54:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.18 2004/06/30 02:32:29 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> ghex-2.2.1.ebuild:
+  sync IUSE (-nls)
 
   16 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> ghex-2.2.1.ebuild:
   Marked ~amd64.
