@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.27 2003/05/27 21:06:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.28 2003/05/31 22:51:53 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -33,16 +33,16 @@ if [ -z "$SRC_URI" ]; then
 		http://cvs.gentoo.org/~robbat2/distfiles/${MY_P}-db4.diff.gz"
 fi
 
-IUSE="${IUSE} X berkdb cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype xml xml2 zlib "
-#removed: gmp
-#causes breakage
+IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype xml xml2 zlib "
+
+# Berkdb is disabled due to DB4 and changes in PHP4.3.2
+#DEPEND="${DEPEND} berkdb? ( >=sys-libs/db-4.1.25 )"
+#IUSE="${IUSE} berkdb"
 
 DEPEND="${DEPEND}
 	>=sys-libs/cracklib-2.7-r7
 	sys-apps/bzip2
-	sys-libs/db 
     X? ( virtual/x11 )
-    berkdb? ( >=sys-libs/db-3 )
     crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
     curl? ( >=net-ftp/curl-7.10.2 )
     firebird? ( >=dev-db/firebird-1.0 )
@@ -51,7 +51,7 @@ DEPEND="${DEPEND}
     gd? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
     gdbm? ( >=sys-libs/gdbm-1.8.0 )
     imap? ( >=net-mail/uw-imap-2001a-r1 )
-	java? ( >=virtual/jdk-1.4 )
+	java? ( =virtual/jdk-1.4* dev-java/java-config )
     jpeg? ( >=media-libs/jpeg-6b )
     ldap? ( >=net-nds/openldap-1.2.11 )
 	mcal? ( dev-libs/libmcal )
@@ -63,7 +63,7 @@ DEPEND="${DEPEND}
     png? ( >=media-libs/libpng-1.2.5 )
     postgres? ( >=dev-db/postgresql-7.1 )
     qt? ( >=x11-libs/qt-2.3.0 )
-    snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
+    snmp? ( net-analyzer/net-snmp )
     spell? ( app-text/aspell )
     ssl? ( >=dev-libs/openssl-0.9.5 )
     tiff? ( >=media-libs/tiff-3.5.5 )
@@ -120,6 +120,14 @@ PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules install-pear install-b
 #fixes bug #14067
 replace-flags "-march=k6*" "-march=i586"
 
+php_check_java_config() {
+	JDKHOME="`java-config --jdk-home`"
+	NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
+	if [ -z "${JDKHOME}" ] || [ ! -d "${JDKHOME}" ]; then
+		eerror "${NOJDKERROR}"
+		die "${NOJDKERROR}"
+	fi
+}
 
 php_src_unpack() {
 	ewarn "This ebuild is intended for ~x86 testing presently. Heavy testing welcome."
@@ -134,8 +142,8 @@ php_src_unpack() {
     chmod 755 configure
 
     # fix PEAR installer
-    cp pear/PEAR/Registry.php pear/PEAR/Registry.old
-    sed "s:\$pear_install_dir\.:\'$D/usr/lib/php/\' . :g" pear/PEAR/Registry.old > pear/PEAR/Registry.php
+	cp pear/PEAR/Registry.php pear/PEAR/Registry.old
+	sed "s:\$pear_install_dir\.:\'$D/usr/lib/php/\' . :g" pear/PEAR/Registry.old > pear/PEAR/Registry.php
 	
 	## ----- Obsolete, pending removal ------
 	#if [ "`use java`" ] ; then
@@ -168,13 +176,17 @@ php_src_unpack() {
 	# pear's world writable files is a php issue fixed in their cvs tree.
 	# http://bugs.php.net/bug.php?id=20978
 	# http://bugs.php.net/bug.php?id=20974
-	EPATCH_SINGLE_MSG="Applying fix for PEAR world writable files"
-	epatch ${FILESDIR}/pear_config.diff || die "epatch failed"
+	if [ -z "${EXCLUDE_PEAR_FIX}" ]; then
+		EPATCH_SINGLE_MSG="Applying fix for PEAR world writable files"
+		epatch ${FILESDIR}/pear_config.diff || die "epatch failed"
+	fi
 
-	EPATCH_SINGLE_MSG="Applying DB4 patch"
-	epatch ${DISTDIR}/php-${PV}-db4.diff.gz
-	cd ${S}
-	autoconf
+	if [ -z "${EXCLUDE_DB4_FIX}" ]; then
+		EPATCH_SINGLE_MSG="Applying DB4 patch"
+		epatch ${DISTDIR}/php-${PV}-db4.diff.gz
+		cd ${S}
+		autoconf
+	fi
 }
 
 
@@ -197,13 +209,19 @@ php_src_compile() {
 
 	[ -x "/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
 
-	#Hack to use db4
-	if has_version =sys-libs/db-4* && grep -q -- '--with-db4' configure; then
-		einfo "Enabling db4"
-		use berkdb && myconf="${myconf} --with-db4=/usr"
-	else
-		einfo "enabling db3"
-		use berkdb && myconf="${myconf} --with-db3=/usr"
+	# BerkDB is disabled due to DB4 and changes in PHP4.3.2
+	myconf="${myconf} --without-db3 --without-db4 --without-db2"
+	if use berkdb; then
+		ewarn "BerkDB is disabled due to DB4 issues and changes in PHP 4.3.2 presently."
+		ewarn "If you need BerkDB support, please do NOT upgrade at this time"
+	#	#Hack to use db4
+	#	if has_version =sys-libs/db-4* && grep -q -- '--with-db4' configure; then
+	#		einfo "Enabling DB4"
+	#		myconf="${myconf} --with-db4=/usr"
+	#	else
+	#		einfo "Enabling DB3"
+	#		myconf="${myconf} --with-db3=/usr"
+	#	fi
 	fi
 
 	use cjk && myconf="${myconf} --enable-mbstring --enable-mbregex"
@@ -348,8 +366,9 @@ php_src_install() {
 	insinto /usr/lib/php/build
 	doins build/* pear/pear.m4 acinclude.m4 configure.in Makefile.global scan_makefile_in.awk
 
-    #revert Pear patch
-    rm ${D}/usr/lib/php/PEAR/Registry.php
+    
+	#revert Pear patch
+	rm ${D}/usr/lib/php/PEAR/Registry.php
 	#should this possibly result to the SAME original value it was ? (\$pear_install_dir)
-    cat ${S}/pear/PEAR/Registry.old | sed -e 's:${PORTAGE_TMPDIR}/${PF}::' > ${D}/usr/lib/php/PEAR/Registry.php
+	cat ${S}/pear/PEAR/Registry.old | sed -e 's:${PORTAGE_TMPDIR}/${PF}::' > ${D}/usr/lib/php/PEAR/Registry.php
 }
