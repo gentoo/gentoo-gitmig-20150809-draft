@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.5 2004/04/16 11:25:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.6 2004/05/05 18:01:48 sediener Exp $
+
+  05 May 2004; Stephen Diener <sediener@gentoo.org> Graph-0.20101.ebuild:
+  bumped to stable on alpha for bioperl-1.2 stable bump
 
   16 Apr 2004; Michael Cummings <mcummings@gentoo.org> Graph-0.20101.ebuild:
   Syntax fix for newdepend, bug 29064
