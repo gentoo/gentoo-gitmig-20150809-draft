@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r1.ebuild,v 1.5 2000/10/05 01:32:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r1.ebuild,v 1.6 2000/10/29 20:37:00 achim Exp $
 
 P=qmail-1.03
 A="qmail-1.03.tar.gz checkpassword-0.81.tar.gz"
@@ -21,7 +21,7 @@ src_compile() {
 src_unpack() {
     unpack qmail-1.03.tar.gz
     cd ${S}
-#    patch -p0 < ${O}/files/qmail-linksync.patch
+    patch -p0 < ${O}/files/qmail-linksync.patch
     unpack checkpassword-0.81.tar.gz
 }
 
@@ -180,6 +180,7 @@ pkg_postinst() {
 
 pkg_config() {
 
+    export QmailHost=`uname -n`
     ${ROOT}/usr/sbin/rc-update add qmail
     if [ ${ROOT} = "/" ] ; then
 

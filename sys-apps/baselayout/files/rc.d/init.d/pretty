@@ -13,7 +13,7 @@ if [ -e /usr/bin/consolechars ]
 then
 	/usr/bin/consolechars -f ${CONSOLEFONT}
 fi
-einfo "Booting Enoch 0.75"
+einfo "Booting Gentoo Linux 1.0 (Release Candidate 2)"
 einfo "(All boot info logged to /var/log/boot)"
 echo
 sleep 1

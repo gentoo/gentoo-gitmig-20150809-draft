@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r1.ebuild,v 1.4 2000/10/27 23:56:30 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r1.ebuild,v 1.5 2000/10/29 20:35:22 achim Exp $
 
 P=raidtools-0.90-1
 A=raidtools-dangerous-0.90-20000116.tar.gz
@@ -33,6 +33,9 @@ src_install() {
 }
 pkg_postinst() {
     echo "Creating Raid-devices..."
+
+    . ${ROOT}/etc/rc.d/config/functions
+    einfo "Creating Raid-devices..."
 
     for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
     do
