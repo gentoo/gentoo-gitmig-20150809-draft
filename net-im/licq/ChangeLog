@@ -1,6 +1,9 @@
 # ChangeLog for net-im/licq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.27 2003/07/07 18:29:49 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.28 2003/07/09 16:28:43 mholzer Exp $
+
+  09 Jul 2003; Martin Holzer <mholzer@gentoo.org> licq-1.2.7.ebuild:
+  Adding doc dir for docs. Closes #24026
 
   07 Jul 2003; Brad Laue <brad@gentoo.org> licq-1.2.7.ebuild:
   Marking 1.2.7 stable on x86 - calling all architecture people, this one needs
