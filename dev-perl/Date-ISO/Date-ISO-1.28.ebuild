@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/Date-ISO-1.28.ebuild,v 1.2 2002/07/25 04:13:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/Date-ISO-1.28.ebuild,v 1.3 2002/07/27 18:27:15 aliz Exp $
 
 inherit perl-module
 
@@ -18,6 +18,6 @@ newdepend "dev-perl/Date-ICal
 	dev-perl/Memoize"
 
 src_compile() {
-	base_src_compile
-	base_src_test || die "test failed"
+	perl-module_src_compile
+	perl-module_src_test || die "test failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/Parse-RecDescent-1.80-r2.ebuild,v 1.6 2002/07/26 04:38:34 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/Parse-RecDescent-1.80-r2.ebuild,v 1.7 2002/07/27 18:27:16 aliz Exp $
 
 inherit perl-module
 
@@ -15,6 +15,6 @@ KEYWORDS="x86 ppc"
 
 src_install () {
 	
-	base_src_install
+	perl-module_src_install
 	dohtml -r tutorial
 }

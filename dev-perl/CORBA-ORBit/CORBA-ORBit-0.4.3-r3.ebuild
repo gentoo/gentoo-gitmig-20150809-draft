@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/CORBA-ORBit-0.4.3-r3.ebuild,v 1.3 2002/07/23 22:29:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/CORBA-ORBit-0.4.3-r3.ebuild,v 1.4 2002/07/27 18:27:15 aliz Exp $
 
 inherit perl-module
 
@@ -20,12 +20,12 @@ DEPEND="${DEPEND}
 
 src_compile() {
 
-	base_src_prep makemake
+	perl-module_src_prep makemake
 
 	cp Makefile Makefile.orig
 	sed -e "s:-I/usr/include/orbit-1.0:-I/usr/include/orbit-1.0 -I/usr/include/libIDL-1.0:" \
 		Makefile.orig > Makefile
 
-	base_src_compile makemake
-	base_src_compile test
+	perl-module_src_compile makemake
+	perl-module_src_compile test
 }

@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MakeMethods/Class-MakeMethods-1.005.ebuild,v 1.2 2002/07/23 22:29:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MakeMethods/Class-MakeMethods-1.005.ebuild,v 1.3 2002/07/27 18:27:15 aliz Exp $
 
 inherit perl-module
 
@@ -16,6 +16,6 @@ LICENSE="Artistic | GPL-2"
 KEYWORDS="x86"
 
 src_compile() {
-	base_src_compile
-	base_src_test || die "test failed"
+	perl-module_src_compile
+	perl-module_src_test || die "test failed"
 }

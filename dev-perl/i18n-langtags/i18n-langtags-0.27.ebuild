@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/i18n-langtags/i18n-langtags-0.27.ebuild,v 1.3 2002/07/25 05:23:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/i18n-langtags/i18n-langtags-0.27.ebuild,v 1.4 2002/07/27 18:27:16 aliz Exp $
 
 inherit perl-module
 
@@ -15,6 +15,6 @@ LICENSE="Artistic | GPL-2"
 KEYWORDS="x86"
 
 src_compile() {
-	base_src_compile
-	base_src_test || die "test failed"
+	perl-module_src_compile
+	perl-module_src_test || die "test failed"
 }
