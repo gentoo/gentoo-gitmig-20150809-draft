@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.1.ebuild,v 1.2 2003/03/19 14:14:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.1.ebuild,v 1.3 2003/03/29 02:49:27 agriffis Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ S="${WORKDIR}/${P}"
 DESCRIPTION="Gnome spellchecking component."
 HOMEPAGE="http://www.gnome.org/"
 
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 SLOT="1"
 LICENSE="GPL-2"
 
