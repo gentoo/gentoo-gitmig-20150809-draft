@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3385 2004/12/10 08:29:59 phosphan Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3386 2004/12/11 03:16:36 obz Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -520,8 +520,11 @@ app-accessibility/speechd-up
 # gnome meta update tracker
 =gnome-base/gnome-2.6.1_p1
 =gnome-base/gnome-2.6.3_pre*
-# masking 2.8.1
-=gnome-base/gnome-2.8.1
+
+# libglade-2.4.1 is buggy/incompatible, see bug #73868
+# Applications will need to be adjusted to work with the
+# new toolbar, icon class
+>=gnome-base/libglade-2.4.1
 
 # <lanius@gentoo.org> (12 Apr 2004) (upd. 25 Aug 2004)
 # these are beta version
