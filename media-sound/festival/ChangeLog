@@ -3,7 +3,7 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
-*festival-1.4.2-r1 (16 Nov 2002)
+*festival-1.4.2-r2 (16 Nov 2002)
 
   16 Nov 2002; Matt Keadle <mkeadle@gentoo.org> festival-1.4.2-r2.ebuild
   files/digest-festival-1.4.2-r2 ChangeLog
