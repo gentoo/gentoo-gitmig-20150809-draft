@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.0.ebuild,v 1.4 2005/01/20 06:57:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.0.ebuild,v 1.5 2005/01/23 03:04:40 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="alsa debug mad oggvorbis sdl zlib"
+IUSE="alsa debug flac mad oggvorbis sdl zlib"
 RESTRICT="maketest"  # it only looks like there's a test there #77507
 
 RDEPEND="virtual/libc
@@ -24,6 +24,7 @@ RDEPEND="virtual/libc
 	)
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	mad? ( media-libs/libmad )
+	flac? ( media-libs/flac )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
@@ -38,10 +39,13 @@ src_compile() {
 		|| myconf="${myconf} --disable-debug"
 
 	# not an autoconf script so dont call econf
+	# mpeg2 support needs vorbis (bug #79149) so turn it off if -oggvorbis
 	./configure \
 		$(use_enable alsa) \
 		$(use_enable mad) \
+		$(use_enable flac) \
 		$(use_enable oggvorbis vorbis) \
+		$(use_enable oggvorbis mpeg2) \
 		$(use_enable zlib) \
 		$(use_enable x86 nasm) \
 		${myconf} \
@@ -53,8 +57,7 @@ src_install() {
 	dogamesbin scummvm || die "dobin failed"
 	doman scummvm.6
 	dodoc NEWS README TODO
-	insinto /usr/share/pixmaps
-	doins scummvm.xpm || die "doins failed"
+	doicon scummvm.xpm
 	make_desktop_entry scummvm ScummVM
 	prepgamesdirs
 }
