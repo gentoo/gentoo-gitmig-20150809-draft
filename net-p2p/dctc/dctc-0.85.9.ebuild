@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.9.ebuild,v 1.9 2004/09/11 10:09:31 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.9.ebuild,v 1.10 2004/10/18 12:32:36 weeve Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://ac2i.homelinux.com/dctc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64 ~sparc"
 
 DEPEND="=dev-libs/glib-2*
 	>=sys-libs/db-3

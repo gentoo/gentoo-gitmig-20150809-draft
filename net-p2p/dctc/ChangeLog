@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dctc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.27 2004/09/11 10:09:31 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.28 2004/10/18 12:32:36 weeve Exp $
+
+  18 Oct 2004; Jason Wever <weeve@gentoo.org> dctc-0.85.9.ebuild:
+  Added ~sparc keyword.
 
   11 Sep 2004; Tom Martin <slarti@gentoo.org> dctc-0.85.9.ebuild:
   Marked ~amd64, resolves bug #59417. Thanks to Michael Cohen <mjc@gentoo.org>.
