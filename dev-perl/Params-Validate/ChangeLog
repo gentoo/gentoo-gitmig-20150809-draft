@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Params-Validate
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.20 2005/03/12 11:03:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.21 2005/03/14 11:46:02 mcummings Exp $
+
+  14 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  Params-Validate-0.24-r2.ebuild, Params-Validate-0.59.ebuild,
+  Params-Validate-0.72.ebuild, Params-Validate-0.74.ebuild,
+  Params-Validate-0.76.ebuild:
+  Removed dep for Attribute-Handlers as the core perl install has provided
+  0.78_01 for the last three stable releases
 
   12 Mar 2005; Markus Rothe <corsair@gentoo.org> Params-Validate-0.76.ebuild:
   Added ~ppc64 to KEYWORDS

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/Params-Validate-0.76.ebuild,v 1.2 2005/03/12 11:03:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/Params-Validate-0.76.ebuild,v 1.3 2005/03/14 11:46:02 mcummings Exp $
 
 inherit perl-module
 
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc ~ppc64"
 IUSE=""
 
-DEPEND="${DEPEND}
-	dev-perl/Attribute-Handlers"
+DEPEND="${DEPEND}"
 
 src_install () {
 
