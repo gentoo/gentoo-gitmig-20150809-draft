@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0d69c57a1d3b7043a97f5a3d11461f01 ChangeLog 656
-MD5 3abbde42082acdfc04c135e14ecbd0d6 chipcard-client-1.9.4_beta.ebuild 954
+MD5 51a3203e2a08adfb40fd42a568e50b85 ChangeLog 776
+MD5 cf4cdc7d4afddb88c3549c5ca006f60c chipcard-client-1.9.4_beta.ebuild 963
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 70afb989678e71e9cda593d13bfd18a3 files/digest-chipcard-client-1.9.4_beta 78
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBz2bOugEuf3OQ0akRAjh4AJ0Z/MpkGlxMQ3gIMMQSaQS0ATFLhgCgmxoM
-7LvdXQXypX6iPj5zuMPTHk4=
-=dO3u
+iD8DBQFB2DsmFdQwWVoAgN4RAveWAJ0RkZajOBffeMxVM87ZTtI5z8XG5gCg4x3l
+ojvje3Ijlan37QKQADc37AA=
+=l0bp
 -----END PGP SIGNATURE-----
