@@ -38,7 +38,7 @@
 +		/bin/mkdir .kde3.4
 +	fi
 +fi
-+/bin/ln -sf .kde3.3 .kde
++/bin/ln -sf .kde3.4 .kde
 +
 +# Gentoo part ends
 +
