@@ -1,0 +1,61 @@
+diff -u MuSE-0.9.1/src/pipe.cpp MuSE-0.9.1-fixed/src/pipe.cpp
+--- MuSE-0.9.1/src/pipe.cpp	2005-01-20 15:07:37.659868128 +0100
++++ MuSE-0.9.1-fixed/src/pipe.cpp	2005-01-20 15:03:48.514703488 +0100
+@@ -225,9 +225,9 @@
+       (data, start,
+        blk / read_copy_cb->src_samplesize);
+     
+-    (char*)start += blk;
++    start = (int*)( (char*)start + blk );
+     len -= blk;
+-    (char*)data += blk;
++    data = (int*)( (char*)data + blk );
+     worklen -= blk;
+     if ((end!=buffer) && (start==bufferEnd))
+       start = buffer;
+@@ -238,8 +238,8 @@
+ 	(data, start,
+ 	 len / read_copy_cb->src_samplesize);
+       
+-      (char*)data += len;
+-      (char*)start += len;
++      data = (int*)( (char*)data + len );
++      start = (int*)( (char*)start + len );
+       worklen -= len;
+       if ((end!=buffer) && (start==bufferEnd))
+ 	start = buffer;
+@@ -304,9 +304,9 @@
+       (end, data,
+        blk / write_copy_cb->dst_samplesize);
+ 
+-      (char*)end += blk;
++      end = (int*)( (char*)end + blk );
+       len -= blk;
+-      (char*)data += blk;
++      data = (int*)( (char*)data + blk );
+       worklen -= blk;
+       if ((start!=buffer)
+ 	  && (end==bufferEnd))
+@@ -318,8 +318,8 @@
+ 	(end, data,
+ 	 len / write_copy_cb->dst_samplesize);
+ 
+-      (char*)data += len;
+-      (char*)end += len;
++      data = (int*)( (char*)data + len );
++      end = (int*)( (char*)end + len );
+       worklen -= len;
+       
+       if ((start!=buffer)
+diff -u MuSE-0.9.1/src/radiosched.cpp MuSE-0.9.1-fixed/src/radiosched.cpp
+--- MuSE-0.9.1/src/radiosched.cpp	2004-12-15 19:18:06.000000000 +0100
++++ MuSE-0.9.1-fixed/src/radiosched.cpp	2005-01-20 15:04:28.541618472 +0100
+@@ -762,7 +762,7 @@
+ parse_xml_sched_file( sched_rec_callb callb, void *udata, sched_rec *sr )
+ {
+     gchar *buf=NULL; 
+-	guint len;
++	gsize len;
+ 	xml_user_data calldata = {callb, udata, sr};
+ 	
+ 	g_file_get_contents(sched_file_path(), &buf, &len, NULL); 

@@ -1,20 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c5ed8fab2a305bb023e26616dc79b02 ChangeLog 1508
+MD5 92720495f557964f0ed682102113bf9e muse-0.9.ebuild 1208
+MD5 da84149aaa0d49db3463359f7dcf1ae7 muse-0.9.1.ebuild 1277
+MD5 9f498ff5588bada98a349b751484d339 muse-0.7.2.ebuild 1683
+MD5 56ccc8924a2ab5abe876d352b5d13b6b ChangeLog 1815
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 1afcc83cba22580b142a0134ae1c3589 muse-0.7.2.ebuild 1684
-MD5 6e32eed19f4306b008de826143295b13 muse-0.8.1-r1.ebuild 1153
-MD5 8fb17446b52f3611203e914061ca102a muse-0.9.ebuild 1209
-MD5 c8ff39e0c7d648cde748b5bc727f8622 files/digest-muse-0.7.2 62
-MD5 db2be964bea7450de6d4cbfb7f071c34 files/digest-muse-0.8.1-r1 62
-MD5 45c92a3f89ef7adfee831d69fe5ea32f files/digest-muse-0.9 61
-MD5 ca45a20943701e9471058cb047e25b9a files/muse-0.8.1-strings.patch 7870
+MD5 5002f92e5fd0f22e6ef9a03ff8333157 muse-0.8.1-r1.ebuild 1154
+MD5 4ae600228fc21c5df407174af307f157 files/muse-0.9.1-miscfixes.patch 1914
 MD5 e3cdfa1976dbb65fae01a6e45ed737f8 files/muse-0.9-locale-Makefile.patch 267
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxRtDArHZZzCEUG0RAuryAJ9xSZJS8V3Wz2kWokh88bSw1RYaHgCfQmvu
-/2f6us7jXHizgZFORGjVqBI=
-=QgS+
------END PGP SIGNATURE-----
+MD5 7c0ac892f30b155f79f3588857ab378f files/muse-0.9.1-include.patch 549
+MD5 ca45a20943701e9471058cb047e25b9a files/muse-0.8.1-strings.patch 7870
+MD5 db2be964bea7450de6d4cbfb7f071c34 files/digest-muse-0.8.1-r1 62
+MD5 c8ff39e0c7d648cde748b5bc727f8622 files/digest-muse-0.7.2 62
+MD5 7163bb4ec5bd71ef481511af79dfe698 files/digest-muse-0.9.1 63
+MD5 45c92a3f89ef7adfee831d69fe5ea32f files/digest-muse-0.9 61

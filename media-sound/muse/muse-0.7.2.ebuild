@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.7.2.ebuild,v 1.7 2004/07/01 10:59:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.7.2.ebuild,v 1.8 2005/01/21 21:29:29 luckyduck Exp $
 
 IUSE="ncurses oggvorbis X"
 
