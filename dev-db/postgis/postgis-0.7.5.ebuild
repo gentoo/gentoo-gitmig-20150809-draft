@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5.ebuild,v 1.2 2003/08/05 18:46:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5.ebuild,v 1.3 2003/09/29 13:34:43 aliz Exp $
 
 MY_PGSQL="postgresql-7.3.3"
 DESCRIPTION="adds support for geographic objects to PostgreSQL"
@@ -11,6 +11,7 @@ SRC_URI="http://postgis.refractions.net/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE="tcltk python perl java ssl nls libg++"
 
 DEPEND="~postgresql-7.3.3
 	dev-libs/proj
