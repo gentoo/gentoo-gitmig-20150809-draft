@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/opera-static-6.1.ebuild,v 1.1 2002/10/31 16:57:08 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/opera-static-6.1.ebuild,v 1.2 2002/11/03 06:11:41 agenkin Exp $
 
 DESCRIPTION="Opera web browser, statically built."
 HOMEPAGE="http://www.opera.com/linux/"
@@ -8,7 +8,7 @@ LICENSE="OPERA"
 
 DEPEND="virtual/x11
 	x11-libs/lesstif"
-KEYWORDS="x86 -ppc sparc sparc64"
+KEYWORDS="~x86 -ppc -sparc -sparc64"
 SLOT="0"
 
 NV=6.10-20021029.1-static-qt.i386
