@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/snarf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/ChangeLog,v 1.8 2003/08/01 15:50:57 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/ChangeLog,v 1.9 2003/08/01 15:58:02 taviso Exp $
 
 *snarf-7.0-r2 (01 Aug 2003)
 
@@ -12,6 +12,8 @@
   only display the basename of the output, useful for use with 
   FETCHCOMMAND.
 
+  Setting myself as Maintainer, as gbevin has retired.
+  
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *snarf-7.0-r1 (30 Aug 2002)
