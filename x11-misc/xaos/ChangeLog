@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.14 2005/02/07 09:15:32 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.15 2005/04/01 19:17:49 gustavoz Exp $
+
+  01 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> xaos-3.1.1.ebuild:
+  Back into ~sparc reality, it's working now
 
 *xaos-3.1.1 (07 Feb 2005)
 
