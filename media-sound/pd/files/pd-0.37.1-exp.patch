@@ -1,0 +1,55 @@
+diff -Naur pd-0.37-1.orig/extra/expr~/vexp_if.c pd-0.37-1/extra/expr~/vexp_if.c
+--- pd-0.37-1.orig/extra/expr~/vexp_if.c	2003-06-16 11:39:09.000000000 -0700
++++ pd-0.37-1/extra/expr~/vexp_if.c	2004-03-24 17:03:17.000000000 -0800
+@@ -44,7 +44,7 @@
+ 
+ static char *exp_version = "0.4";
+ 
+-extern struct ex_ex *ex_eval(struct expr *exp, struct ex_ex *eptr,
++extern struct ex_ex *ex_eval(struct expr *exptr, struct ex_ex *eptr,
+ 						struct ex_ex *optr, int n);
+ 
+ #ifdef PD
+@@ -888,7 +888,7 @@
+  *  the result pointer 
+  */
+ int
+-max_ex_tab(struct expr *exp,fts_symbol_t s,struct ex_ex *arg,struct ex_ex *optr)
++max_ex_tab(struct expr *exptr,fts_symbol_t s,struct ex_ex *arg,struct ex_ex *optr)
+ {
+ #ifdef PD
+ 	t_garray *garray;
+@@ -900,7 +900,7 @@
+ 	{
+ 		optr->ex_type = ET_FLT;
+ 		optr->ex_flt = 0;
+-		pd_error(exp, "no such table '%s'", s->s_name);
++		pd_error(exptr, "no such table '%s'", s->s_name);
+ 		return (1);
+ 	}
+ 	optr->ex_type = ET_FLT;
+@@ -915,7 +915,7 @@
+ 		break;
+ 
+ 	default:	/* do something with strings */
+-		pd_error(exp, "expr: bad argument for table '%s'\n", fts_symbol_name(s));
++		pd_error(exptr, "expr: bad argument for table '%s'\n", fts_symbol_name(s));
+ 		indx = 0;
+ 	}
+ 	if (indx < 0) indx = 0;
+@@ -933,13 +933,13 @@
+ }
+ 
+ int
+-max_ex_var(struct expr *exp, fts_symbol_t var, struct ex_ex *optr)
++max_ex_var(struct expr *exptr, fts_symbol_t var, struct ex_ex *optr)
+ {
+ 	optr->ex_type = ET_FLT;
+ 	if (value_getfloat(var, &(optr->ex_flt))) {
+ 		optr->ex_type = ET_FLT;
+ 		optr->ex_flt = 0;
+-		pd_error(exp, "no such var '%s'", var->s_name);
++		pd_error(exptr, "no such var '%s'", var->s_name);
+ 		return (1);
+ 	}
+ 	return (0);

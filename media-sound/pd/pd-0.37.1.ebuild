@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.0.ebuild,v 1.3 2004/03/25 02:56:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.1 2004/03/25 02:56:28 eradicator Exp $
 
 inherit eutils
 
@@ -24,8 +24,7 @@ DEPEND=">=dev-lang/tcl-8.3.3
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-jack-fix.patch || die "Jack-audio-connection-kit fix failed"
+	epatch ${FILESDIR}/${P}-exp.patch
 }
 
 src_compile() {
@@ -35,10 +34,15 @@ src_compile() {
 		`use_with X x` \
 		`use_enable debug` \
 		|| die "./configure failed"
+
+	# Fix borkage
+	sed -i 's:cp -pr ../doc ../extra $(INSTDIR)/lib/pd/:#:' ${S}/src/makefile
+
 	emake || die "parallel make failed"
 }
 
 src_install() {
 	cd src
+	# -k to bypass the errors about doc missing, etc...
 	make DESTDIR=${D} install || die "install failed"
 }
