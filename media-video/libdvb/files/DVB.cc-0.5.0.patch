@@ -1,4 +1,0 @@
-3147c3147
-< 	event.status = (enum fe_status_t) 0;
----
-> 	event.status = (fe_status_t) 0;
