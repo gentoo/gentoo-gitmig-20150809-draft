@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.15 2003/05/09 15:19:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.16 2003/05/21 18:59:06 mholzer Exp $
 
 *whois-4.6.5 (09 May 2003)
+
+  21 May 2003; Martin Holzer <mholzer@gentoo.org> whois-4.6.5.ebuild:
+  Marked stable on x86.
 
   09 May 2003; Martin Holzer <mholzer@gentoo.org> whois-4.5.31.ebuild,
   whois-4.5.31.ebuild, whois-4.5.33.ebuild, whois-4.5.33.ebuild,
