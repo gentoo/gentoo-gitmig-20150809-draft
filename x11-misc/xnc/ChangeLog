@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/ChangeLog,v 1.6 2004/04/11 17:41:03 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/ChangeLog,v 1.7 2004/06/10 10:25:51 kugelfang Exp $
+
+  10 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> xnc-5.0.4.ebuild:
+  Marked ~amd64.
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> xnc-5.0.4.ebuild:
   Marked stable on x86.
