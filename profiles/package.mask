@@ -307,3 +307,6 @@ dev-util/poedit
 # and then tcl-tk should be removed, have two schemes present is too confusing
 dev-lang/tcl
 dev-lang/tk
+
+# untested, / Hallski
+>=sys-devel/libtool-1.4.2
