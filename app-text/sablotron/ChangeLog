@@ -1,6 +1,13 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.17 2003/06/18 15:39:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.18 2003/09/12 16:07:56 obz Exp $
+
+*sablotron-1.0 (13 Sep 2003)
+
+  13 Sep 2003; Mike Gardiner <obz@gentoo.org> sablotron-0.97.ebuild,
+  sablotron-1.0.ebuild:
+  New version, marked ~ on all archs, stabilise as you can. Added
+  metadata.xml. Thanks to Nicolas GRANDCLAUDE for help with bug #26317.
 
   18 Jun 2003; Jason Wever <weeve@gentoo.org> sablotron-0.97.ebuild:
   Changed ~sparc keyword to sparc to fix dependency problem from recent php glsa.
