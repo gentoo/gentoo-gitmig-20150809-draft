@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r3.ebuild,v 1.5 2003/01/30 19:40:19 danarmak Exp $
-inherit kde-dist
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r3.ebuild,v 1.6 2003/02/12 16:30:33 hannes Exp $
+inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
 
@@ -18,10 +18,10 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	cups? ( net-print/cups )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	opengl? ( virtual/opengl )
-	samba? ( net-fs/samba )" 
+	samba? ( net-fs/samba )
+	sys-apps/gzip"
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
 
-DEPEND="$DEPEND sys-apps/gzip"
 
 myconf="$myconf --with-dpms --with-cdparanoia"
 
@@ -51,90 +51,87 @@ pkg_setup() {
 }
 
 src_unpack() {
-    
+
 	kde_src_unpack
 
-        # It will patch nsplugins/viewer dir to cvs HEAD status.
+	# It will patch nsplugins/viewer dir to cvs HEAD status.
 	# THIS MAY BE UNSTABLE
-        # Also note that kdebase3.0.3 will compile just fine with all version of QT.
-        # However kdebase 3.0.4 introduced an nspluginviewer fix that
+	# Also note that kdebase3.0.3 will compile just fine with all version of QT.
+	# However kdebase 3.0.4 introduced an nspluginviewer fix that
 	# necessitates this
 	cd ${S}
-	/bin/zcat "$FILESDIR/${PVR}/$P-nspluginviewer-qt31.diff.gz" | patch -p0 --
+	epatch "$FILESDIR/${PVR}/$P-nspluginviewer-qt31.diff.gz"
 
 	# Apply this only if we are using a hacked Xft-1.1 Xft.h.
 	if [ -n "`grep "End of Gentoo hack" /usr/X11R6/include/X11/Xft/Xft.h`" ]
 	then
-		cd ${S}; patch -p1 < ${FILESDIR}/${PVR}/${P}-xft1.1-fix.diff || die
+		cd ${S}; epatch ${FILESDIR}/${PVR}/${P}-xft1.1-fix.diff
 	fi
 
 	# fix konsole crashing for qt-3.1
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${PVR}/${P}-konsole-qt31.diff
+	epatch ${FILESDIR}/${PVR}/${P}-konsole-qt31.diff
 }
 
 src_compile() {
-
-    kde_src_compile myconf configure
-    kde_remove_flag kdm/kfrontend -fomit-frame-pointer
-    kde_src_compile make
-
+	kde_src_compile myconf configure
+	kde_remove_flag kdm/kfrontend -fomit-frame-pointer
+	kde_src_compile make
 }
 
 src_install() {
 
-    kde_src_install
+	kde_src_install
 
-    # cf bug #5953
-    insinto /etc/pam.d
-    newins ${FILESDIR}/kscreensaver.pam kscreensaver
-    newins ${FILESDIR}/kde.pam kde
+	# cf bug #5953
+	insinto /etc/pam.d
+	newins ${FILESDIR}/kscreensaver.pam kscreensaver
+	newins ${FILESDIR}/kde.pam kde
 
-    # startkde script
-    cd ${D}/${KDEDIR}/bin
-    patch -p0 < ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff || die
-    mv startkde startkde.orig
-    sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
-    rm startkde.orig
-    chmod a+x startkde
+	# startkde script
+	cd ${D}/${KDEDIR}/bin
+	epatch ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff
+	mv startkde startkde.orig
+	sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
+	rm startkde.orig
+	chmod a+x startkde
 
-    # x11 session script
-    cd ${T}
-    echo "#!/bin/sh
+	# x11 session script
+	cd ${T}
+	echo "#!/bin/sh
 ${KDEDIR}/bin/startkde" > kde-${PV}
-    chmod a+x kde-${PV}
-    # old scheme - compatibility
-    exeinto /usr/X11R6/bin/wm
-    doexe kde-${PV}
-    # new scheme - for now >=xfree-4.2-r3 only
-    exeinto /etc/X11/Sessions
-    doexe kde-${PV}
+	chmod a+x kde-${PV}
+	# old scheme - compatibility
+	exeinto /usr/X11R6/bin/wm
+	doexe kde-${PV}
+	# new scheme - for now >=xfree-4.2-r3 only
+	exeinto /etc/X11/Sessions
+	doexe kde-${PV}
 
-    cd ${D}/${PREFIX}/share/config/kdm || die
-    mv kdmrc kdmrc.orig
-    sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
+	cd ${D}/${PREFIX}/share/config/kdm || die
+	mv kdmrc kdmrc.orig
+	sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
 	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:" kdmrc.orig > kdmrc
-    rm kdmrc.orig
+	rm kdmrc.orig
 
-    #backup splashscreen images, so they can be put back when unmerging 
-    #mosfet or so.
-    if [ ! -d ${KDEDIR}/share/apps/ksplash.default ]
-    then
-        cd ${D}/${KDEDIR}/share/apps
-        cp -rf ksplash/ ksplash.default
-    fi
+	#backup splashscreen images, so they can be put back when unmerging 
+	#mosfet or so.
+	if [ ! -d ${KDEDIR}/share/apps/ksplash.default ]
+	then
+		cd ${D}/${KDEDIR}/share/apps
+		cp -rf ksplash/ ksplash.default
+	fi
     
-    # Show gnome icons when choosing new icon for desktop shortcut
-    dodir /usr/share/pixmaps
-    mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
-    rm -rf ${D}/${KDEDIR}/share/apps/kdesktop/pics/
-    cd ${D}/${KDEDIR}/share/apps/kdesktop/
-    ln -sf /usr/share/pixmaps/ pics
+	# Show gnome icons when choosing new icon for desktop shortcut
+	dodir /usr/share/pixmaps
+	mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
+	rm -rf ${D}/${KDEDIR}/share/apps/kdesktop/pics/
+	cd ${D}/${KDEDIR}/share/apps/kdesktop/
+	ln -sf /usr/share/pixmaps/ pics
 
-    rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
-
+	rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
 }
 
 pkg_postinst() {
-    mkdir -p ${KDEDIR}/share/templates/.source/emptydir
+	mkdir -p ${KDEDIR}/share/templates/.source/emptydir
 }

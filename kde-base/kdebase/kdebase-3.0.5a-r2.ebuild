@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r2.ebuild,v 1.5 2003/02/11 21:28:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r2.ebuild,v 1.6 2003/02/12 16:30:33 hannes Exp $
 NEED_KDE_DONT_ADD_KDELIBS_DEP=1 # we're a special case, see below
 inherit eutils flag-o-matic kde-dist
 
@@ -19,10 +19,10 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	cups? ( net-print/cups )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	opengl? ( virtual/opengl )
-	samba? ( net-fs/samba )" 
+	samba? ( net-fs/samba )
+	sys-apps/gzip"
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
 
-DEPEND="${DEPEND} sys-apps/gzip"
 
 # special case, contd.: we need kdelibs >=3.0.5a-r1, but not so that we get a version !=3.0.5a
 # so we told kde-functions:need-kde not to add a dep on kdelibs, and now we'll do it manually
@@ -74,14 +74,14 @@ get_xft_setup() {
 		export HAVE_XFT_2="yes"
 
 		[ -n "${BUILDDEBUG}" ] && einfo "We have Xft2.0 support"
-		
+
 	elif [ "${XFT_HDR_VER}" != "${XFT_LIB_VER}" ]
 	then
 		# Xft support are broken (mixed header and lib versions) ...
 		export HAVE_XFT_2="broken"
 
 		[ -n "${BUILDDEBUG}" ] && einfo "We have broken Xft support"
-		
+
 	elif [ "${XFT_HDR_VER}" -eq "1" -a "${XFT_LIB_VER}" -eq "1" ]
 	then
 		# Nope, we only have Xft1 installed ...
@@ -135,7 +135,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-    
+
 	kde_src_unpack
 
 	cd ${S}; epatch ${FILESDIR}/${PVR}/${P}-nspluginviewer-qt31.diff.gz

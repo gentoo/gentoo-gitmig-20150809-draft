@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.ebuild,v 1.7 2003/02/01 18:58:11 jmorgan Exp $
-inherit kde-dist 
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.ebuild,v 1.8 2003/02/12 16:30:33 hannes Exp $
+inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
@@ -34,64 +34,63 @@ use opengl	&& myconf="$myconf --with-gl"		|| myconf="$myconf --without-gl"
 use ssl		&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
 use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
 use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
+
 src_compile() {
-
-    kde_src_compile myconf configure
-    kde_remove_flag kdm/kfrontend -fomit-frame-pointer
-    kde_src_compile make
-
+	kde_src_compile myconf configure
+	kde_remove_flag kdm/kfrontend -fomit-frame-pointer
+	kde_src_compile make
 }
 
 src_install() {
 
-    kde_src_install
+	kde_src_install
 
-    # cf bug #5953
-    insinto /etc/pam.d
-    #newins ${FILESDIR}/kscreensaver.pam kscreensaver
-    newins ${FILESDIR}/kde.pam kde
+	# cf bug #5953
+	insinto /etc/pam.d
+	#newins ${FILESDIR}/kscreensaver.pam kscreensaver
+	newins ${FILESDIR}/kde.pam kde
 
-    # startkde script
-    cd ${D}/${KDEDIR}/bin
-    patch -p0 < ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff || die
-    mv startkde startkde.orig
-    sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
-    rm startkde.orig
-    chmod a+x startkde
+	# startkde script
+	cd ${D}/${KDEDIR}/bin
+	epatch ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff
+	mv startkde startkde.orig
+	sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
+	rm startkde.orig
+	chmod a+x startkde
 
-    # x11 session script
-    cd ${T}
-    echo "#!/bin/sh
+	# x11 session script
+	cd ${T}
+	echo "#!/bin/sh
 ${KDEDIR}/bin/startkde" > kde-${PV}
-    chmod a+x kde-${PV}
-    exeinto /etc/X11/Sessions
-    doexe kde-${PV}
+	chmod a+x kde-${PV}
+	exeinto /etc/X11/Sessions
+	doexe kde-${PV}
 
-    cd ${D}/${KDEDIR}/share/config/kdm || die
-    sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
+	cd ${D}/${KDEDIR}/share/config/kdm || die
+	sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
 	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:" \
 	${FILESDIR}/${PVR}/kdmrc > kdmrc
-    cp ${FILESDIR}/${PVR}/backgroundrc .
+	cp ${FILESDIR}/${PVR}/backgroundrc .
 
-    #backup splashscreen images, so they can be put back when unmerging 
-    #mosfet or so.
-    if [ ! -d ${KDEDIR}/share/apps/ksplash.default ]
-    then
-        cd ${D}/${KDEDIR}/share/apps
-        cp -rf ksplash/ ksplash.default
-    fi
-    
-    # Show gnome icons when choosing new icon for desktop shortcut
-    dodir /usr/share/pixmaps
-    mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
-    rm -rf ${D}/${KDEDIR}/share/apps/kdesktop/pics/
-    cd ${D}/${KDEDIR}/share/apps/kdesktop/
-    ln -sf /usr/share/pixmaps/ pics
+	#backup splashscreen images, so they can be put back when unmerging 
+	#mosfet or so.
+	if [ ! -d ${KDEDIR}/share/apps/ksplash.default ]
+	then
+		cd ${D}/${KDEDIR}/share/apps
+		cp -rf ksplash/ ksplash.default
+	fi
 
-    rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
+	# Show gnome icons when choosing new icon for desktop shortcut
+	dodir /usr/share/pixmaps
+	mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
+	rm -rf ${D}/${KDEDIR}/share/apps/kdesktop/pics/
+	cd ${D}/${KDEDIR}/share/apps/kdesktop/
+	ln -sf /usr/share/pixmaps/ pics
+
+	rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
 
 }
 
 pkg_postinst() {
-    mkdir -p ${KDEDIR}/share/templates/.source/emptydir
+	mkdir -p ${KDEDIR}/share/templates/.source/emptydir
 }
