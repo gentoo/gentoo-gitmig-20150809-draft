@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.35 2003/12/26 14:22:03 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.36 2004/01/31 23:51:26 mholzer Exp $
+
+  01 Feb 2004; Martin Holzer <mholzer@gentoo.org> gift-0.11.4.ebuild:
+  adding RESTRICT=nomirror
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> gift-0.11.4.ebuild:
   Marked stable on sparc to fix the broken dependencies of  net-p2p/giftcurs.
