@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.8.ebuild,v 1.6 2003/12/26 12:20:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.8.ebuild,v 1.7 2004/01/09 17:59:48 solar Exp $
 
 inherit libtool
 
@@ -16,7 +16,7 @@ IUSE="jack"
 DEPEND="virtual/glibc
 	>=sys-devel/automake-1.7.2
 	>=sys-devel/autoconf-2.57-r1
-	jack? ( virtual/jack )"
+	!ppc? ( jack? ( virtual/jack ) )"
 
 SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 RESTRICT="nomirror"

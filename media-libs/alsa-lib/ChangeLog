@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.45 2003/12/26 12:20:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.46 2004/01/09 17:59:47 solar Exp $
+
+*alsa-lib-1.0.0_rc2-r1 (09 Jan 2004)
+
+  09 Jan 2004; <solar@gentoo.org> alsa-lib-0.5.10b.ebuild,
+  alsa-lib-0.9.0_rc2.ebuild, alsa-lib-0.9.2.ebuild, alsa-lib-0.9.6.ebuild,
+  alsa-lib-0.9.7.ebuild, alsa-lib-0.9.8.ebuild, alsa-lib-1.0.0_rc1.ebuild,
+  alsa-lib-1.0.0_rc2-r1.ebuild, alsa-lib-1.0.0_rc2.ebuild,
+  files/alsa-lib-1.0.0_rc2-notextrel-notrampoline.patch:
+  remove trampoline and text relocations
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> alsa-lib-0.5.10b.ebuild,
   alsa-lib-0.9.0_rc2.ebuild, alsa-lib-0.9.2.ebuild, alsa-lib-0.9.6.ebuild,

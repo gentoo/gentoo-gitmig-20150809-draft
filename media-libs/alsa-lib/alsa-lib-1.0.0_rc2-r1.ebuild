@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.0_rc2.ebuild,v 1.2 2003/12/26 12:20:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.0_rc2-r1.ebuild,v 1.1 2004/01/09 17:59:48 solar Exp $
 
 inherit libtool
 
@@ -16,13 +16,23 @@ IUSE="jack"
 DEPEND="virtual/glibc
 	>=sys-devel/automake-1.7.2
 	>=sys-devel/autoconf-2.57-r1
-	jack? ( virtual/jack )"
+	!ppc? ( jack? ( virtual/jack ) )"
 
 MY_P=${P/_rc/rc}
 SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${MY_P}.tar.bz2"
 #SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 #RESTRICT="nomirror"
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# - remove trampolines and text relocations - <solar@gentoo>
+	## send this patch upstream after we have tested fully 
+	## on the various arches for inclusion in 1.x final
+	epatch ${FILESDIR}/${PN}-${PV}-notextrel-notrampoline.patch
+}
 
 src_compile() {
 	elibtoolize
