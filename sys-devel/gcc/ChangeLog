@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.152 2003/12/08 16:32:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.153 2003/12/08 22:32:28 gmsoft Exp $
 
   30 Nov 2003; Alexander Gabert <pappy@gentoo.org> gcc-3.2.3-r3.ebuild,
   gcc-3.3.2-r3.ebuild:
@@ -67,7 +67,10 @@
 
 *gcc-3.3.2 (21 Oct 2003)
 
-  19 Nov 2003; Guy Martin <gmsoft@gentoo.org> gcc-3.3.2.ebiomd :
+  08 Dec 2003; Guy Martin <gmsoft@gentoo.org> gcc-3.3.2.ebuild :
+  Marked stable on hppa.
+
+  19 Nov 2003; Guy Martin <gmsoft@gentoo.org> gcc-3.3.2.ebuild :
   Added --enable-sjlj-exceptions to ${myconf} on hppa.
 
   21 Oct 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.2.ebuild,
