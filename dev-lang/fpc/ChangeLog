@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.13 2005/01/21 00:50:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.14 2005/03/31 01:48:28 chriswhite Exp $
+
+*fpc-2.0.0_rc2 (31 Mar 2005)
+
+  31 Mar 2005; Chris White <chriswhite@gentoo.org> +fpc-2.0.0_rc2.ebuild:
+  Closing part 1 of 2 for Bug #87337.  Thanks to expose for the ebuild.
 
 *fpc-1.9.5_pre20040820 (21 Jan 2005)
 
