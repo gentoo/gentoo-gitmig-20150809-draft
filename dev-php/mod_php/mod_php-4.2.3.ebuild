@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.3.ebuild,v 1.7 2002/11/20 05:30:56 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.3.ebuild,v 1.8 2002/12/05 21:06:47 rphillips Exp $
 
 IUSE="freetype postgres tiff libwww nls jpeg ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -115,11 +115,14 @@ src_compile() {
 	use freetype && myconf="${myconf} --with-ttf --with-t1lib"
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
 	use gd && myconf="${myconf} --with-gd"
-	use png && myconf="${myconf} --with-png-dir=/usr"	
 	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
 
-        # optional support for oracle oci8
+	# only include support for png if pdflib is not in USE
+	# fixes #5444
+	use pdflib || (use png && myconf="${myconf} --with-png-dir=/usr")
+	
+	# optional support for oracle oci8
 	if [ "`use oci8`" ] ; then
 	        if [ "$ORACLE_HOME" ] ; then
 		        myconf="${myconf} --with-oci8=${ORACLE_HOME}"
