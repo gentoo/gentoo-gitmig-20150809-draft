@@ -3,7 +3,7 @@ MD5 a00b04d3bd63c0f6585d3c52b703ec5d blassic-0.5.4.ebuild 555
 MD5 86c5e180297b3b7ca7bd92cbbdff3f23 blassic-0.7.2.ebuild 604
 MD5 161648a71c6e30291c65378c52e8ea7e metadata.xml 565
 MD5 a35dfd74ece791aecef693456792ecfc blassic-0.8.0.ebuild 809
-MD5 31457db04995589c4a8f6360a3f65036 blassic-0.8.1.ebuild 810
+MD5 aedf38eaa32b6590b9d234f4983b96c1 blassic-0.8.1.ebuild 809
 MD5 d23bf719eb32ac00cfa4f5a2799d7c65 files/digest-blassic-0.5.4 62
 MD5 a363716c3a6e833cce79e5064ec2886a files/digest-blassic-0.7.2 62
 MD5 2a9945ae0d69fd3cec24624a6d90b8da files/digest-blassic-0.8.0 62
