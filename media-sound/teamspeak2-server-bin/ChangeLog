@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/teamspeak2-server-bin
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.1 2003/09/27 11:27:47 jje Exp $
+
+*teamspeak2-server-bin-2.0.19.40 (27 Sep 2003)
+
+  27 Sep 2003; jje <jje@gentoo.org> teamspeak2-server-bin-2.0.19.40.ebuild:
+  Initial revision. Still not sure that all of the file locations are correct, putting this out for review.
+
+  Submitted by: Jeremy Johnson <jeremy@ic.ucsb.edu>
