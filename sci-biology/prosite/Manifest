@@ -1,10 +1,20 @@
-MD5 ad15788d597d8132164264bf5a47152e prosite-18.41.ebuild 1053
-MD5 1dc5f78c8c1ddac5f64b607d3415258e prosite-18.39.ebuild 1052
-MD5 1f57fc61b02617b80c7a46013804997e prosite-18.40.ebuild 1052
-MD5 9e6b6b03257c738eef4fc8d1244c10a4 ChangeLog 1717
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a79d4a650c205c0a74ffdb8deb95beac prosite-18.41.ebuild 1057
+MD5 c71c3b9c6d2bc7cffce9ec5accf7c209 prosite-18.39.ebuild 1056
+MD5 cd2996a0ecf3febdab87e65b99b7a9c7 prosite-18.40.ebuild 1056
+MD5 2447e8448e3cb6a169d61e6561cd7940 ChangeLog 1973
 MD5 81b73af5f2f4778bea2dde0b55620129 metadata.xml 810
-MD5 c04f92d03ee5c94d9d769acfb3c9a949 prosite-18.38.ebuild 1052
+MD5 56e978c14aa05aa19cbc4d0d4d48a90e prosite-18.38.ebuild 1056
 MD5 681e2770cee55b9f73f52416d5afff8b files/digest-prosite-18.38 67
 MD5 be30a2901bbe78916e8e5ba3121a7262 files/digest-prosite-18.39 67
 MD5 72e0289273b3085b31e4244ba04f1b13 files/digest-prosite-18.40 67
 MD5 9c2f10f8894ca2905205055e4b8d0063 files/digest-prosite-18.41 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBy4AyI1lqEGTUzyQRApfaAJ9OVItyFv5evB8oFgktZyu4iUahkQCeKjoY
+TXtFAhuemZribKRf9kGsN58=
+=V4AH
+-----END PGP SIGNATURE-----

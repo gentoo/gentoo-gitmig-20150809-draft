@@ -1,4 +1,14 @@
-MD5 93acc378715490b14d7d7364ef5f8ab8 ChangeLog 536
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 219ef87818141d30a0a6c487a5dc7071 ChangeLog 747
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
-MD5 de00dd56d8b07991fd3a4c1d99299cf3 emboss-kaptain-0.97.ebuild 1199
+MD5 4e89b3685d75a0c76ecd7c6056f2bfeb emboss-kaptain-0.97.ebuild 1203
 MD5 25e58e7c514be03e50f128e66179551d files/digest-emboss-kaptain-0.97 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBy397I1lqEGTUzyQRAgRjAJ9SU5SCbbbsB2Xh8vBirPozfYfx+wCguF7E
+Mr+vqUNAJt6t+LRER3J3Wd8=
+=fnoq
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 3dfcbfa98dcdf0382e9e6657be56eab3 primer3-1.0.0.ebuild 701
-MD5 8d47023a5fd0eb0143352ba613597cd6 ChangeLog 885
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c67041142b7812af1d8f9569af7927fe primer3-1.0.0.ebuild 705
+MD5 02c44a075aa511300d89347afb282270 ChangeLog 1070
 MD5 a3a36dab6877af45d7b14ec9edea31d9 metadata.xml 713
 MD5 fc13dfb772f9bdd09bc788514faa4abe files/digest-primer3-1.0.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBy3/rI1lqEGTUzyQRAqQ3AJ9pD2Qeboi9FXjQuF8bKemeTfFI8wCfSY/E
+LY1hyAjG3iKcwRvVTaCTx4Y=
+=g54q
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 37d6cebb002c878e806f353ffb23d7d5 embassy-esim4-1.0.0.ebuild 355
-MD5 811e59dd852b9af1dae93dacd91a71a8 ChangeLog 570
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7a51650650d0057c4cb2c2fa65a3db4b embassy-esim4-1.0.0.ebuild 359
+MD5 726eedd481f5a2f8e114c6063bc9c2b8 ChangeLog 779
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 b87bf359afdf01a0ebe6eb9454ee5ff0 files/digest-embassy-esim4-1.0.0 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBy35lI1lqEGTUzyQRAiE4AKCuD544gQ21Ci/fcQsGZRgglYffuwCfQ+/d
+w99U7dUYYkG18tDDdpdimAA=
+=Yjj8
+-----END PGP SIGNATURE-----

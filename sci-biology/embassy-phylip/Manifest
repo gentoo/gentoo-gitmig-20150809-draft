@@ -1,4 +1,14 @@
-MD5 b6f52f9836ef1af65d2a4aff9a8eeb2d embassy-phylip-3.57c.ebuild 367
-MD5 f0ccb279df7318a5807ac5b930ce0893 ChangeLog 576
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 05a7ce2d991b13c7598526aa3af1edc3 embassy-phylip-3.57c.ebuild 371
+MD5 13d46b551347be0557e8c8af65d78954 ChangeLog 789
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 a2da9004f85665295ba90fe9b08c7025 files/digest-embassy-phylip-3.57c 130
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBy37qI1lqEGTUzyQRAnraAKDd8jpznoLjq/m4tMKq/xTIqn90WgCdHYmg
+apublnreGHtte2LuzQPpT0A=
+=mGS0
+-----END PGP SIGNATURE-----
