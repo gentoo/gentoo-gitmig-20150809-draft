@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.10.2-r1.ebuild,v 1.1 2004/08/23 17:05:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.10.2-r1.ebuild,v 1.2 2004/10/17 22:21:19 liquidx Exp $
 
-IUSE="ssl zlib"
 
-inherit gnome2
+inherit gnome2 eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SCREEM (Site CReating and Editing EnvironmenMent) is an
@@ -15,6 +14,7 @@ HOMEPAGE="http://www.screem.org"
 KEYWORDS="~x86 ~sparc ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="ssl zlib"
 
 RDEPEND=">=gnome-base/libgnome-2.2.0
 	>=gnome-base/libgnomeui-2.2.0
@@ -44,11 +44,17 @@ use zlib || G2CONF="$G2CONF --without-zlib"
 
 DOCS="ABOUT-NLS AUTHORS BUGS ChangeLog INSTALL NEWS README TODO"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
 
 	sed -i -e 's:@pixmapsdir@:${prefix}/share/screem/pixmaps:g' \
 		${S}/pixmaps/Makefile.in
 
+	cd ${S}/libegg/toolbar
+	epatch ${FILESDIR}/${P}-eggtoolbar.patch
+}
+
+src_compile() {
 	gnome2_src_configure
 	emake  || die "make failed"
 }
