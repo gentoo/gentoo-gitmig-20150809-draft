@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5.ebuild,v 1.4 2005/02/14 02:05:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5.ebuild,v 1.5 2005/02/14 02:07:57 ticho Exp $
 
 IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa unicode"
 
@@ -24,7 +24,7 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	alsa? ( media-libs/alsa-lib )
 	>=media-libs/libao-0.8.4
 	sys-libs/zlib
-	!media-sound/mpd"
+	!media-sound/mpd-svn"
 
 pkg_setup() {
 	enewuser mpd '' '' '' audio || die "problem adding user mpd"
