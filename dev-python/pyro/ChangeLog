@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.7 2005/01/28 17:15:58 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.8 2005/02/07 04:46:02 fserb Exp $
+
+  07 Feb 2005; Fernando Serboncini <fserb@gentoo.org> pyro-3.3.ebuild:
+  stable on x86
 
 *pyro-3.4 (28 Jan 2005)
 

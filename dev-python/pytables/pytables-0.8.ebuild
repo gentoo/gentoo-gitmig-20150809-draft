@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-0.8.ebuild,v 1.4 2004/12/28 20:39:04 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-0.8.ebuild,v 1.5 2005/02/07 04:43:45 fserb Exp $
 
 inherit distutils
 
@@ -14,6 +14,6 @@ DEPEND=">=dev-lang/python-2.2
 	dev-python/numarray"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="as-is"
 IUSE=""
