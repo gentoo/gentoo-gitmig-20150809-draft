@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.4-r5.ebuild,v 1.4 2003/06/18 01:38:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.1 2003/06/18 01:38:26 seemant Exp $
 
 IUSE="build static"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utility to apply diffs to files"
 HOMEPAGE="http://www.gnu.org/software/patch/patch.html"
-SRC_URI="ftp://ftp.gnu.org/gnu/patch/${P}.tar.gz"
+SRC_URI="http://alpha.gnu.org/gnu/patch/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="virtual/glibc"
 
