@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 360db8e4b7444a1753f4983df0732ccb prelude-lml-0.8.6.ebuild 1250
 MD5 53fdec25bed9a35486e32267340c1deb ChangeLog 1498
-MD5 149f52c962ec981f2477de6707347a2c metadata.xml 341
+MD5 92be665e7bf354958af6da4fc1c5dbdd metadata.xml 228
 MD5 72bb637b3c8e10303a6e27a000441f48 files/digest-prelude-lml-0.8.6 69
 MD5 8fccd3e051b7ed5e076d67fcd4011eaa files/gentoo.conf 171
 MD5 abe3205a75d6aa4ea8e088d2e4f77529 files/gentoo.init 577
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBKgh2T+MN7JbqCpMRAvhOAJ9lW47y4lrlL9gZbI5srIQlAIJcuACdFptR
+BufCBtpNIQYW6nSqMYeEcm0=
+=V5/5
+-----END PGP SIGNATURE-----
