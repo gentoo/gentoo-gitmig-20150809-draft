@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8a761c93719f538a1a02cf453f381671 flinker-1.72.ebuild 633
 MD5 473fada806680b31350c7e97b2e0e245 ChangeLog 442
 MD5 48a21ea118ce63eac99c8d041489f8f2 metadata.xml 429
-MD5 9fbb52d4e959847b8531986732dc26f2 flinker-1.72.ebuild 588
 MD5 649af0cfa99d3120c7adca156c2d2337 files/digest-flinker-1.72 53
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCIJHTu7gpaalycRAp3hAKC9TeEfbrFcNqhimBI+izgV6NqL8ACgqSlx
+Q6qnLVsYWMV2GBue03anLl4=
+=CZLA
+-----END PGP SIGNATURE-----

@@ -1,18 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 de549e4e21324348326e131ad8cba231 ChangeLog 1388
-MD5 35e63b79df7a7c17756d0741ed5a90af irrlicht-0.5.ebuild 1086
 MD5 ad41838cd74c70f9c72295bda4662786 metadata.xml 790
-MD5 e14ac59c2f21d6e2775fdc40bed6b5bd irrlicht-0.7.ebuild 1260
-MD5 e4c3785a3a806840c09ca3521f3d7a73 irrlicht-0.6-r1.ebuild 1139
-MD5 33d681a58fa24489d6bdf9f48346ed08 files/0.7-jpeg.patch 536
-MD5 5429bde56275c9f5201369a080f03f57 files/0.7-system-libs.patch 617
-MD5 3d0c46bd872601ae474803a089531688 files/0.7-opengl.patch 189
+MD5 36aca77faebf66883a28e8eb918d092d irrlicht-0.7.ebuild 1202
 MD5 4e4c2231872c550c336ebc8f7c148eb7 files/digest-irrlicht-0.7 63
-MD5 33d681a58fa24489d6bdf9f48346ed08 files/0.5-jpeg.patch 536
-MD5 3d0c46bd872601ae474803a089531688 files/0.5-opengl.patch 189
-MD5 7b37375664460afe01f8a7e43267fc32 files/0.5-system-libs.patch 608
-MD5 28cea3cba0224c39fac23e8735d46d52 files/digest-irrlicht-0.5 63
-MD5 33d681a58fa24489d6bdf9f48346ed08 files/0.6-jpeg.patch 536
-MD5 3d0c46bd872601ae474803a089531688 files/0.6-opengl.patch 189
-MD5 7b37375664460afe01f8a7e43267fc32 files/0.6-system-libs.patch 608
-MD5 649feea18262ca019ba09afd0e683da2 files/digest-irrlicht-0.6-r1 63
-MD5 e649d039e3bedf6bd1808eaab999e98e files/0.6-matrix4.patch 1538
+MD5 33d681a58fa24489d6bdf9f48346ed08 files/0.7-jpeg.patch 536
+MD5 3d0c46bd872601ae474803a089531688 files/0.7-opengl.patch 189
+MD5 5429bde56275c9f5201369a080f03f57 files/0.7-system-libs.patch 617
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCJ2HTu7gpaalycRAv9NAKCgp3tV7+15oMyxa0dQEXtRRfXgYACfXec+
+U40jnS0fQEdtgnamUAOSiF0=
+=Qg2F
+-----END PGP SIGNATURE-----
