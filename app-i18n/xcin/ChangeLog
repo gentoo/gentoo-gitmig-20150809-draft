@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/xcin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/ChangeLog,v 1.7 2004/05/03 10:23:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/ChangeLog,v 1.8 2004/06/21 15:51:56 usata Exp $
+
+*xcin-2.5.3_pre3 (22 Jun 2004)
+
+  22 Jun 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/xcin-chewing.diff, +xcin-2.5.3_pre3.ebuild:
+  Applied libchewing patch. Special thanks to Palatis <palatis@gentoo.org.tw>
+  and Benny Chuang <bennyc@gentoo.org>, closing bug #52133
 
   03 May 2004; David Holm <dholm@gentoo.org> xcin-2.5.3_pre2.ebuild:
   Added to ~ppc.

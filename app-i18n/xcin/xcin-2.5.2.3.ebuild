@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.2.3.ebuild,v 1.6 2004/05/03 10:23:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.2.3.ebuild,v 1.7 2004/06/21 15:51:56 usata Exp $
+
+inherit eutils
 
 IUSE="nls"
 
@@ -17,7 +19,7 @@ S=${WORKDIR}/${PN}
 src_unpack () {
 	unpack ${A}
 	cd ${S}/po
-	patch -p0 < ${FILESDIR}/xcin-gentoo.patch || die
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
