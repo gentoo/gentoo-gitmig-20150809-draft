@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.94.ebuild,v 1.3 2004/04/27 21:41:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.94.ebuild,v 1.4 2004/06/15 06:02:27 solar Exp $
 
 inherit eutils gnuconfig
 
@@ -50,6 +50,7 @@ src_install() {
 	cd "${S}"
 	if use build ; then
 		rm -rf "${D}/usr/share"
+		rm -f ${D}/usr/sbin/rmt ${D}/etc/rmt
 	else
 		dodoc AUTHORS ChangeLog* NEWS README* PORTS THANKS
 		doman "${FILESDIR}/tar.1"

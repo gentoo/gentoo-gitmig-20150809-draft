@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.17 2004/05/26 21:11:01 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.18 2004/06/15 06:02:27 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> tar-1.13.92-r3.ebuild, tar-1.13.94.ebuild,
+  tar-1.14.ebuild:
+  USE=build cleanups
 
   26 May 2004; <tuxus@gentoo.org> tar-1.13.92-r3.ebuild:
   Stable on mips
