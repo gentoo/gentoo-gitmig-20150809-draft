@@ -1,13 +1,11 @@
 --- acinclude.m4	2001-04-19 16:56:23.000000000 +0000
-+++ acinclude.m4	2004-02-06 12:04:04.119738872 +0000
-@@ -131,8 +131,8 @@
++++ acinclude.m4	2004-02-06 13:13:55.497552592 +0000
+@@ -131,8 +131,6 @@
  	fi
  
  	# Pcap header checks
 -	AC_CHECK_HEADER(net/bpf.h,,
 -	    AC_MSG_ERROR([[Header file net/bpf.h not found; if you installed libpcap from source, did you also do \"make install-incl\"?]]))
-+	AC_CHECK_HEADER(pcap-bpf.h,,
-+	    AC_MSG_ERROR([[Header file pcap-bpf.h not found; if you installed libpcap from source, did you also do \"make install-incl\"?]]))
  	AC_CHECK_HEADER(pcap.h,, AC_MSG_ERROR(Header file pcap.h not found.))
  
  	#

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/etherape
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.9 2004/02/06 12:55:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.10 2004/02/06 13:16:54 aliz Exp $
+
+  06 Feb 2004; Daniel Ahlberg <aliz@gentoo.org>
+  files/etherape-0.9.0-libpcap-include.patch:
+  Fix backward compatiblity, remove check for net/bpf.h
 
   06 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> etherape-0.9.0.ebuild:
   Fix libpcap include and other things, amd64 keyword. Closing #37443.
