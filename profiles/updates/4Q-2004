@@ -136,3 +136,4 @@ move app-sci/molden sci-chemistry/molden
 move app-sci/moldy sci-chemistry/moldy
 move app-sci/mpqc sci-chemistry/mpqc
 move app-sci/nmrview sci-chemistry/nmrview
+move app-sci/openbabel sci-chemistry/openbabel
