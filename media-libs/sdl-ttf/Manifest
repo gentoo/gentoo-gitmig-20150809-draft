@@ -1,4 +1,5 @@
-MD5 4139d2332bc6139e735552a50746067d ChangeLog 1597
-MD5 37da2a05e278d4769e0a20b20463e3d1 sdl-ttf-2.0.6.ebuild 716
+MD5 b4fddc55482d094f4f8e26fade4c3b52 ChangeLog 1770
+MD5 0b6b63f5bd63ce7cac0cd2dccd1908b3 sdl-ttf-2.0.6.ebuild 809
 MD5 c31d06a3fb205ae41a5572206e43c2e8 metadata.xml 396
 MD5 65f14a95508d9bc0c81cc8d8282b23ef files/digest-sdl-ttf-2.0.6 66
+MD5 d871a02468d1158e842e5faaf344beba files/ft2build.patch 340

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.6.ebuild,v 1.11 2004/07/01 03:21:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.6.ebuild,v 1.12 2004/07/01 03:31:27 mr_bones_ Exp $
+
+inherit eutils
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="library that allows you to use TrueType fonts in SDL applications"
@@ -16,6 +18,12 @@ DEPEND=">=media-libs/libsdl-1.2.4
 	>=media-libs/freetype-2.0.1"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/ft2build.patch"
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"

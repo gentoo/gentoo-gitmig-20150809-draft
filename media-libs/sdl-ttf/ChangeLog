@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.13 2004/06/24 23:22:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.14 2004/07/01 03:31:27 mr_bones_ Exp $
+
+  30 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> +files/ft2build.patch,
+  sdl-ttf-2.0.6.ebuild:
+  Add patch from Ming Zhao via bug #55746 to support latest freetype
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> sdl-ttf-2.0.6.ebuild:
   mark stable on amd64
