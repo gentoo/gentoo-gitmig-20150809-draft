@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4_beta5-r1.ebuild,v 1.1 2004/11/06 12:35:34 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4_beta5-r1.ebuild,v 1.2 2005/03/12 15:50:32 satya Exp $
 
 inherit eutils
 

@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/skunkweb
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.5 2004/12/29 01:56:18 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.6 2005/03/12 15:50:32 satya Exp $
+
+*skunkweb-3.4.0-r1 (12 Mar 2005)
+
+  12 Mar 2005; Christian Andreetta <satya@gentoo.org>
+  +files/100_mod_skunkweb.conf, +skunkweb-3.4.0-r1.ebuild:
+  Uses new apache-module eclass: bug #79434 (thanks to Elfyn McBratney)
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
