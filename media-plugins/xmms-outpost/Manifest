@@ -1,4 +1,5 @@
-MD5 0d2806ee71f9758be157006cd7e3dffa xmms-outpost-0.15.ebuild 690
-MD5 3fc2c8f3a7335e1357b7d627ec6bd11c ChangeLog 887
+MD5 0153b817c92194be2a04e22452e58667 ChangeLog 1078
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 c90b2c0963e5717bc451224d52ad732f xmms-outpost-0.15.ebuild 833
 MD5 9280bff3620c411f7c5adfe2e6a0ec8e files/digest-xmms-outpost-0.15 64
+MD5 cece0840a904e47897cb04150a800d48 files/xmms-outpost-0.15-Makefile.patch 1376

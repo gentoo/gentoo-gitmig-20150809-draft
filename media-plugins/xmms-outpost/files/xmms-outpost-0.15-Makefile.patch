@@ -1,0 +1,39 @@
+diff -Naur outpost.orig/Makefile outpost/Makefile
+--- outpost.orig/Makefile	2003-09-21 06:39:03.000000000 -0700
++++ outpost/Makefile	2004-07-07 00:42:29.180523430 -0700
+@@ -12,8 +12,8 @@
+ CXX      = g++
+ LEX      = flex
+ YACC     = yacc
+-CFLAGS   = -pipe -Wall -W -O2 -fomit-frame-pointer -pipe -march=i586 -mcpu=pentiumpro -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT
+-CXXFLAGS = -pipe -Wall -W -O2 -fomit-frame-pointer -pipe -march=i586 -mcpu=pentiumpro -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT
++MYCFLAGS   = -Wall -W -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT $(CFLAGS)
++MYCXXFLAGS = -Wall -W -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT $(CXXFLAGS)
+ LEXFLAGS = 
+ YACCFLAGS= -d
+ INCPATH  = -I$(QTDIR)/mkspecs/default -I. `xmms-config --cflags` -I$(QTDIR)/include -I/$(KDEDIR)/include
+@@ -72,19 +72,19 @@
+ .SUFFIXES: .c .cpp .cc .cxx .C
+ 
+ .cpp.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
++	$(CXX) -c $(MYCXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .cc.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
++	$(CXX) -c $(MYCXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .cxx.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
++	$(CXX) -c $(MYCXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .C.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
++	$(CXX) -c $(MYCXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .c.o:
+-	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
++	$(CC) -c $(MYCFLAGS) $(INCPATH) -o $@ $<
+ 
+ ####### Build rules
+ 

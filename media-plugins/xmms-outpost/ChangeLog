@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-outpost
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-outpost/ChangeLog,v 1.6 2004/07/03 22:21:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-outpost/ChangeLog,v 1.7 2004/07/07 07:56:09 eradicator Exp $
+
+  07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-outpost-0.15.ebuild, files/xmms-outpost-0.15-Makefile.patch:
+  Added Makefile patch to honor user CFLAGS.  Added ~sparc.
 
   04 Jul 2004; Carsten Lohrke <carlo@gentoo.org> xmms-outpost-0.15.ebuild:
   QA: need-kde after R/DEPEND
