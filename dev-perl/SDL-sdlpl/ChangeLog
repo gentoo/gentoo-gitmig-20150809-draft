@@ -1,6 +1,13 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/ChangeLog,v 1.3 2002/05/31 03:28:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/ChangeLog,v 1.4 2002/06/04 10:30:46 seemant Exp $
+
+*SDL-sdlpl-1.18 (4 Jun 2002)
+
+  4 Jun 2002; Seemant Kulleen <seemant@gentoo.org> SDL-sdlpl-1.18.2.ebuild
+  files/digest-SDL-sdlpl-1.18.2 :
+
+  Version bump.
 
 *SDL-sdlpl-1.18 (30 May 2002)
 
