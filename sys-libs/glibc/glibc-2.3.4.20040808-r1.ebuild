@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.24 2005/01/05 01:53:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.25 2005/01/11 02:42:26 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -54,7 +54,7 @@ LICENSE="LGPL-2"
 #        after ~2.3.3.20040420 break blackdown-jdk on sparc.
 KEYWORDS="x86 amd64 hppa ppc64 ~ppc -mips ~sparc"
 IUSE="nls pic build nptl erandom hardened multilib debug userlocales"
-RESTRICT="nostrip" # we'll handle stripping ourself #46186
+RESTRICT="nostrip multilib-pkg" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
 # We also need linux26-headers if using NPTL. Including kernel headers is
@@ -136,6 +136,9 @@ setup_flags() {
 		fi
 
 		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
+			# We change our CHOST, so set this right here
+			export CC="$(tc-getCC)"
+
 			# glibc isn't too smart about guessing our flags.  It
 			# will default to -xarch=v9, but assembly in sparc64 glibc
 			# requires v9a or greater...
@@ -144,27 +147,40 @@ setup_flags() {
 				if [ "${ABI}" = "sparc32" ]; then
 					CTARGET="sparcv9b-unknown-linux-gnu"
 					CHOST="${CTARGET}"
-					CFLAGS_ABI="$(get_abi_var CFLAGS)"
 				else
 					CTARGET="sparc64b-unknown-linux-gnu"
 					CHOST="${CTARGET}"
-					CFLAGS_ABI="$(get_abi_var CFLAGS) -Wa,-xarch=v9b"
+					export CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9b"
 				fi
 			else
 				if [ "${ABI}" = "sparc32" ]; then
 					CTARGET="sparcv9-unknown-linux-gnu"
 					CHOST="${CTARGET}"
-					CFLAGS_ABI="$(get_abi_var CFLAGS)"
 				else
 					CTARGET="sparc64-unknown-linux-gnu"
 					CHOST="${CTARGET}"
-					CFLAGS_ABI="$(get_abi_var CFLAGS) -Wa,-xarch=v9a"
+					export CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9a"
 				fi
 			fi
 
 			filter-flags -mvis -m32 -m64 -Wa,-xarch -Wa,-A
-			export CC="${ORIG_CC} ${CFLAGS_ABI}"
 		fi
+	fi
+
+	# AMD64 multilib
+	if use amd64; then
+		# We change our CHOST, so set this right here
+		export CC="$(tc-getCC)"
+
+		if [ "${ABI}" = "amd64" ]; then
+			CTARGET="x86_64-pc-linux-gnu"
+			CHOST="${CTARGET}"
+		else
+			CTARGET="i686-pc-linux-gnu"
+			CHOST="${CTARGET}"
+		fi
+
+		filter-flags -m32 -m64
 	fi
 
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
@@ -590,15 +606,16 @@ src_unpack() {
 	chmod u+x ${S}/scripts/*.sh
 }
 
+
 src_compile() {
-	if [ "${PROFILE_ARCH}" = "sparc64-multilib" -a -z "${ABI}" ]; then
-		export ORIG_CC="$(tc-getCC)"
+	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" ] && ! hasq multilib-pkg ${FEATURES}; then
+		OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 			einfo "Compiling ${ABI} glibc"
 			src_compile && mv ${WORKDIR}/build ${WORKDIR}/build.${ABI}
 		done
-		unset ABI
+		ABI="${OABI}"
 		return 0
 	fi
 
@@ -656,14 +673,26 @@ src_compile() {
 }
 
 src_install() {
-	if [ "${PROFILE_ARCH}" = "sparc64-multilib" -a -z "${ABI}" ]; then
+	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" ] && ! hasq multilib-pkg ${FEATURES}; then
+		OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 			mv ${WORKDIR}/build.${ABI} ${WORKDIR}/build
 			src_install && mv ${WORKDIR}/build ${WORKDIR}/build.${ABI}
+
+			# Handle stupid lib32 BS
+			if use amd64 && [ "${ABI}" = "x86" -a "$(get_abi_LIBDIR x86)" != "lib" ]; then
+				mv ${D}/lib ${D}/$(get_abi_LIBDIR x86)
+				mv ${D}/usr/lib ${D}/usr/$(get_abi_LIBDIR x86)
+				mkdir ${D}/lib
+				dosym ../$(get_abi_LIBDIR x86)/ld-linux.so.1 /lib/ld-linux.so.1
+				dosym ../$(get_abi_LIBDIR x86)/ld-linux.so.2 /lib/ld-linux.so.2
+				dosed "s:/lib/:/$(get_abi_LIBDIR x86)/:g" /usr/$(get_abi_LIBDIR x86)/libc.so /usr/$(get_abi_LIBDIR x86)/libpthread.so
+			fi
+
 		done
-		unset ABI
 		return 0
+		ABI="${OABI}"
 	fi
 
 	setup_flags
@@ -823,12 +852,7 @@ pkg_preinst() {
 	# decide to be multilib compatible and FHS compliant. note that this 
 	# chunk of FHS compliance only applies to 64bit archs where 32bit
 	# compatibility is a major concern (not IA64, for example).
-	use amd64 && [ "$(get_libdir)" == "lib64" ] && fix_lib64_symlinks
-
-	# note that PPC64 doesn't comply with documents that aren't
-	# a standard yet and there is little support in the 
-	# community for them. But post 2004.3 we'll figure it out
-	use ppc64 && [ "$(get_libdir)" == "lib64" ]
+	use amd64 && [ "$(get_libdir)" == "lib64" -a -z "${MULTILIB_ABIS}" ] && fix_lib64_symlinks
 }
 
 pkg_postinst() {
