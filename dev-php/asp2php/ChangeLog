@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/asp2php
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/ChangeLog,v 1.6 2003/12/18 18:11:05 coredumb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/ChangeLog,v 1.7 2004/03/15 13:55:00 aliz Exp $
+
+  15 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> asp2php-0.76.19.ebuild:
+  Adding amd64 keyword.
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
