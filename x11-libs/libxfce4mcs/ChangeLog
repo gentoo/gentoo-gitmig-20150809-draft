@@ -1,0 +1,9 @@
+# ChangeLog for x11-libs/libxfce4mcs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxfce4mcs/ChangeLog,v 1.1 2003/06/13 18:34:52 bcowan Exp $
+
+*libxfce4mcs-3.90.0 (13 Jun 2003)
+
+  13 Jun 2003; Brad Cowan <bcowan@gentoo.org> libxfce4mcs-3.90.0.ebuild:
+  Initial import.
+
