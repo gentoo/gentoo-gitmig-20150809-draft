@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ferite
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.9 2003/02/12 05:55:56 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.10 2004/03/05 15:53:22 gustavoz Exp $
+
+  05 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> ferite-0.99.6.ebuild:
+  stable on sparc
 
 *ferite-0.99.6 (09 Jan 2003)
 
