@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ooextras-20050216.ebuild,v 1.2 2005/03/30 10:26:09 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ooextras-20050216.ebuild,v 1.3 2005/03/30 20:07:45 gustavoz Exp $
 
 DESCRIPTION="OOExtras: Extra Templates for OpenOffice.org!"
 HOMEPAGE="http://ooextras.sourceforge.net/"
@@ -11,7 +11,7 @@ S="${WORKDIR}/downloads"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="x86 ~amd64 ~ppc sparc"
 IUSE=""
 RDEPEND="virtual/ooo"
 DEPEND="${RDEPEND}"
