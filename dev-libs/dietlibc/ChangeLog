@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.10 2003/03/28 22:59:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.11 2003/03/31 10:45:10 aliz Exp $
+
+*dietlibc-0.22-r1 (30 Mar 2003)
+
+  30 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> dietlibc-0.22-r1.ebuild :
+  Forgot to apply a patch. Applied patch is from Debian's dietblic-0.22-2 release.
 
 *dietlibc-0.22 (28 Mar 2003)
 

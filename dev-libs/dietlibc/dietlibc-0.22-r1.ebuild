@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.22.ebuild,v 1.4 2003/03/31 10:45:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.22-r1.ebuild,v 1.1 2003/03/31 10:45:10 aliz Exp $
+
+inherit eutils
 
 DESCRIPTION="A minimal libc"
 SRC_URI="http://www.kernel.org/pub/linux/libs/dietlibc/${P}.tar.bz2"
@@ -8,10 +10,13 @@ HOMEPAGE="http://www.fefe.de/dietlibc/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~hppa"
+KEYWORDS="x86 sparc hppa"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
+
+	epatch ${FILESDIR}/${P}_xdr_security_fix.patch
+
 	mv Makefile Makefile.orig
 
 	sed -e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \
