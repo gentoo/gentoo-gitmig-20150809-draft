@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.28 2002/06/06 06:00:16 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.29 2002/06/17 07:54:56 rphillips Exp $
 
   27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
 
@@ -18,6 +18,12 @@
 
   Hmm, and I did not edit the ChangeLog for some reason to say that the mhash
   and mcrypt flags are encapsulated by the crypt flag now.
+
+*php-4.2.1-r1 (17 Jun 2002)
+
+  17 Jun 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.1-r1.ebuild :
+
+  added oci8 use variable to support Oracle databases
 
 *php-4.2.1-r1 (21 May 2002)
 

@@ -100,6 +100,13 @@ src_compile() {
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
 
+	# optional support for oracle oci8
+	if [ "`use oci8`" ] ; then
+		if [ "$ORACLE_HOME" ] ; then
+			myconf="${myconf} --with-oci8=${ORACLE_HOME}"
+		fi
+	fi
+
 	use qt && ( \
 		export QTDIR=/usr/qt/2 #hope this helps - danarmak
 		myconf="${myconf} --with-qtdom" 
