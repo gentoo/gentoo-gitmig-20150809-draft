@@ -1,6 +1,6 @@
-# Copyright 2004-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta11.ebuild,v 1.1 2004/02/20 12:44:06 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta11.ebuild,v 1.2 2004/02/28 14:24:04 dholm Exp $
 
 IUSE="nls ardour-ksi"
 
@@ -10,7 +10,7 @@ SRC_URI="http://ardour.org/b/${P/_/}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 S="${WORKDIR}/${P/_/}"
 
