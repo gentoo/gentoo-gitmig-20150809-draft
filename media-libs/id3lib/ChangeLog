@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.15 2003/04/21 18:55:11 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.16 2003/12/01 22:52:03 ciaranm Exp $
+
+  01 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> id3lib-3.8.3-r1.ebuild:
+  Moved to stable on sparc for easytag
 
 *id3lib-3.8.3-r1 (05 Apr 2003)
 
