@@ -288,8 +288,8 @@ x11-libs/qt-embedded
 
 # <spider@gentoo.org> (16 Aug 2002 )
 # Masking for testing, new gnome2.eclass mungling with schemas
-=gnome-base/gnome-applets-2.0.1-r1
-=media-libs/gst-plugins-0.4.0-r1
+# =gnome-base/gnome-applets-2.0.1-r1
+# =media-libs/gst-plugins-0.4.0-r1
 
 # <mjc@gentoo.org> (15 Aug 2002)
 # new ebuild, thanks to carpaski =)
