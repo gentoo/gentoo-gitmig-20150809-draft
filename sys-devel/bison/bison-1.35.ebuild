@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.35.ebuild,v 1.17 2003/09/08 02:14:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.35.ebuild,v 1.18 2003/09/08 06:04:02 msterret Exp $
 
 IUSE="nls static build" # icc"
 
@@ -19,7 +19,7 @@ DEPEND="nls? ( sys-devel/gettext )"
 src_compile() {
 
 	local myconf=
-	
+
 	use nls || myconf="--disable-nls"
 #	use icc && CC="iccbin" CXX="iccbin" LD="iccbin"
 
