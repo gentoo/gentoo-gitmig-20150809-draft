@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60.ebuild,v 1.3 2002/01/06 17:10:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60.ebuild,v 1.4 2002/01/13 22:33:18 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -9,7 +9,7 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 # Only install Skin if GUI should be build (gtk as USE flag)
 SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
-	 gtk? ( default-skin-0.1.tar.bz2 )"
+	 gtk? ( http://www.ibiblio.org/gentoo/distfiles/default-skin-0.1.tar.bz2 )"
 #	 This is to get the digest problem fixed.
 #	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
 DESCRIPTION="Media Player for Linux"
