@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvrec/nvrec-0.1_pre20030316.ebuild,v 1.4 2003/09/07 00:06:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvrec/nvrec-0.1_pre20030316.ebuild,v 1.5 2003/12/31 00:48:56 bazik Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="dev-lang/perl
 	sdl? ( media-libs/libsdl )
 	sdl? ( media-sound/mad )
 	=media-libs/divx4linux-20020418*
-	!media-libs/divx4linux-2003*
+	!=media-libs/divx4linux-2003*
 	media-sound/lame
 	media-video/ffmpeg"
 RDEPEND="avi? ( media-video/avifile )
@@ -31,7 +31,7 @@ RDEPEND="avi? ( media-video/avifile )
 	sdl? ( media-libs/libsdl )
 	sdl? ( media-sound/mad )
 	=media-libs/divx4linux-20020418*
-	!media-libs/divx4linux-2003*
+	!=media-libs/divx4linux-2003*
 	media-sound/lame"
 
 S=${WORKDIR}/${PN}-${MY_VER}
