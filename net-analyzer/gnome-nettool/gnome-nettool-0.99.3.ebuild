@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-0.99.3.ebuild,v 1.5 2004/09/30 19:29:53 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-0.99.3.ebuild,v 1.6 2004/10/03 22:46:48 gmsoft Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnome-network/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~mips"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~mips ~hppa"
 
 IUSE=""
 
