@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.5.1.ebuild,v 1.2 2004/06/28 14:24:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.5.1.ebuild,v 1.3 2004/07/26 13:22:18 liquidx Exp $
 
-inherit python gnome2 eutils
+inherit distutils gnome2 eutils
 
 DESCRIPTION="Gnome2 Bluetooth integration suite."
 HOMEPAGE="http://usefulinc.com/software/gnome-bluetooth/"
@@ -27,7 +27,8 @@ RDEPEND=">=gnome-base/libgnomeui-2
 	>=dev-libs/openobex-1
 	>=net-wireless/bluez-libs-2.7
 	>=net-wireless/libbtctl-0.4.1
-	>=dev-python/pygtk-2.0"
+	>=dev-python/pygtk-2.0
+	>=dev-python/gnome-python-2"
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
@@ -38,11 +39,11 @@ MAKEOPTS="${MAKEOPTS} -j1"
 PYTHON_MODNAME="gnomebt"
 
 pkg_postinst() {
-	python_pkg_postinst
-	gnome_pkg_postinst
+	distutils_pkg_postinst
+	gnome2_pkg_postinst
 }
 
 pkg_postrm() {
-	python_pkg_postrm
-	gnome_pkg_postrm
+	distutils_pkg_postrm
+	gnome2_pkg_postrm
 }

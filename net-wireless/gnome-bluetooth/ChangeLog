@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.10 2004/06/28 14:24:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.11 2004/07/26 13:22:18 liquidx Exp $
+
+  26 Jul 2004; Alastair Tse <liquidx@gentoo.org> gnome-bluetooth-0.5.1.ebuild:
+  fix distutils/python/gnome eclass issues. add gnome-python to dependencies
 
   28 Jun 2004; Alastair Tse <liquidx@gentoo.org> gnome-bluetooth-0.5.1.ebuild:
   add missing gob-2 dependency (#55312)
