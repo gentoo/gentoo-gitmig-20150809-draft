@@ -1,10 +1,14 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.5 2002/12/13 10:59:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.6 2003/02/03 20:40:33 nall Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *yafc-0.7.10 (10 Oct 2002)
+
+  03 Feb 2003; Jon Nall <nall@gentoo.org>) yafc-0.7.10.ebuild :
+  added ~ppc
+
   10 Oct 2002; Jack Morgan <jmorgan@gentoo.org> :
   Updated version number to fix an issue with sparc64
 
