@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Phillip Lemon (AITD) <plemon@gwi.net>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.3-r1.ebuild,v 1.1 2002/05/27 22:37:58 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.3-r1.ebuild,v 1.2 2002/05/28 08:29:12 rphillips Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="DOSEmu 1.1.3 (Developer)"
+DESCRIPTION="DOS Emulator"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/dosemu/dosemu-freedos-bin.tgz
          http://telia.dl.sourceforge.net/sourceforge/dosemu/dosemu-1.1.3.tgz"
 HOMEPAGE="http://www.dosemu.org"
@@ -18,12 +18,12 @@ src_compile() {
 ### ./configure script, by passing it cli arguments, we bypass the usual
 ### DOSemu installation script routines :)
 
-	chmod +x $S/base-configure	
+	chmod +x base-configure	
 
 	local myflags
 
 ### mitshm will bork ./base-configure entirely, so we disable it here	
-	myflags="--enable-mitshm=yes"
+	myflags="--enable-mitshm=no"
 	myflags="${myflags} --enable-experimental"
 
 ### and then set build paramaters based on USE variables
@@ -32,7 +32,7 @@ src_compile() {
 
 ### this is really a ./configure (honestly)
 	./base-configure \
-	${myflags} || die "DOSemu Base Configuration Failed"
+		${myflags} || die "DOSemu Base Configuration Failed"
 	
 ### We HAVE to do this, or the build will fail due to strange additional
 ### files in the downloaded tarball!
@@ -49,15 +49,15 @@ src_install () {
 ### We'll pass our portage image directory as the fs root, and 'install'
 ### as normal, this seems to stick with the usual gentoo standards
 
-	./install_systemwide -fd /usr/portage/distfiles/dosemu-freedos-bin.tgz -r /var/tmp/portage/${PF}/image
+	./install_systemwide -fd ${DISTDIR}/dosemu-freedos-bin.tgz -r ${D}
 	
 ### install_systemwide doesn't pay attention to our man/info locations
 ### we'll install them to the correct location with doman now that they've
 ### been created and remove them from the new source tree before emerge
 ### installs everything to our 'real' filesystem
 
-doman man/*.1 
-rm -rf ${D}opt/dosemu/man
+	doman man/*.1 
+	rm -rf ${D}/opt/dosemu/man/
 
 }
 
