@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ttyrec
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.5 2004/07/29 00:52:13 alexander Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.6 2004/07/31 03:00:09 tgall Exp $
+
+  31 Jul 2004; Tom Gall <tgall@gentoo.org> ttyrec-1.0.6.ebuild:
+  stable on ppc64, bug #57143
 
   27 Jul 2004; Alexander Plank <alexander@gentoo.org> ttyrec-1.0.6.ebuild:
   add macos keyword
