@@ -1,0 +1,9 @@
+# ChangeLog for app-vim/multiplesearch
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/multiplesearch/ChangeLog,v 1.1 2003/10/31 02:55:31 agriffis Exp $
+
+*multiplesearch-1.2.1 (30 Oct 2003)
+
+  30 Oct 2003; Aron Griffis <agriffis@gentoo.org> multiplesearch-1.2.1.ebuild:
+  Add multiplesearch plugin.  Ebuild submitted by Ciaran McCreesh in bug 32286
+
