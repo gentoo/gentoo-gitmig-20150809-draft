@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-cclan
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cclan/ChangeLog,v 1.5 2004/06/24 23:42:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cclan/ChangeLog,v 1.6 2004/08/04 15:42:57 mkennedy Exp $
+
+*cl-cclan-1.84 (04 Aug 2004)
+
+  04 Aug 2004; <mkennedy@gentoo.org> +cl-cclan-1.84.ebuild:
+  New upstream version
 
 *cl-cclan-1.81-r1 (12 Feb 2004)
 
