@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/atool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.4 2004/01/30 13:07:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.5 2004/03/10 13:20:42 pyrania Exp $
+
+*atool-0.27.0 (10 Mar 2004)
+
+  10 Mar 2004; Markus Nigbur <pyrania@gentoo.org> atool-0.27.0.ebuild:
+  Version bump.
 
   30 Jan 2004; <gustavoz@gentoo.org> atool-0.25.0.ebuild:
   keyworded sparc
