@@ -1,0 +1,13 @@
+diff -Naur totem-0.99.22/src/video-utils.c totem-0.99.22.new/src/video-utils.c
+--- totem-0.99.22/src/video-utils.c	2004-10-14 14:55:46.000000000 +0200
++++ totem-0.99.22.new/src/video-utils.c	2004-11-21 01:08:54.553510768 +0100
+@@ -3,8 +3,8 @@
+ 
+ #include "video-utils.h"
+ 
+-#include <glib/gi18n.h>
+ #include <libintl.h>
++#include <glib/gi18n.h>
+ 
+ #include <gdk/gdk.h>
+ #include <gdk/gdkx.h>
