@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.0.ebuild,v 1.1 2003/12/20 17:00:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.0.ebuild,v 1.2 2004/02/09 12:24:33 eradicator Exp $
+
+inherit kde-functions
 
 DESCRIPTION="Protux - Libary"
 HOMEPAGE="http://www.nognu.org/protux"
@@ -18,9 +20,10 @@ DEPEND="virtual/x11
 	>=x11-libs/qt-3
 	media-libs/alsa-lib"
 
-RDEPEND=${DEPEND}
+set-qtdir 3
 
 src_compile() {
+	export QT_MOC=${QTDIR}/bin/moc
 	local myconf
 	myconf="--with-gnu-ld"
 	use static || myconf="${myconf} --enable-static=no"

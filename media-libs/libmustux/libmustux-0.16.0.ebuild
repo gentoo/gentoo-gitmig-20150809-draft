@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.16.0.ebuild,v 1.4 2004/02/01 12:47:54 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.16.0.ebuild,v 1.5 2004/02/09 12:24:33 eradicator Exp $
+
+inherit kde-functions
 
 DESCRIPTION="Protux - Libary"
 HOMEPAGE="http://www.nognu.org/protux"
@@ -16,6 +18,8 @@ DEPEND="virtual/x11
 	>=x11-libs/qt-3
 	media-libs/alsa-lib"
 
+set-qtdir 3
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -24,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-
+	export QT_MOC=${QTDIR}/bin/moc
 	cd ${S}
 	make -f admin/Makefile.common
 	econf

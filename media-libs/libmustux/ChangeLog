@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmustux
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.4 2004/02/01 12:47:54 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.5 2004/02/09 12:24:33 eradicator Exp $
+
+  09 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libmustux-0.16.0.ebuild, libmustux-0.17.5.ebuild, libmustux-0.20.0.ebuild:
+  Fixing qt's moc detection (Bug #38966).
 
   01 Feb 2004; Brian Harring <ferringb@gentoo.org> libmustux-0.16.0.ebuild,
   files/libmustux-0.16.0-alsalib-fix.patch:
