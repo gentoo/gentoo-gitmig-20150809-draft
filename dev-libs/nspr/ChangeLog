@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/nspr
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.1 2002/02/10 21:21:28 karltk Exp $
+
+*nspr-4.1.2 ( 10 Feb 2002 )
+
+  10 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog files/digest-nspr-4.1.2 nspr-4.1.2.ebuild :
+  
+  Netscape Portable Runtime (NSPR) provides a platform-neutral API for system
+  level and libc like functions. The API is used in the Mozilla client, many
+  of Netscape/AOL/iPlanet's and other software offerings.  
