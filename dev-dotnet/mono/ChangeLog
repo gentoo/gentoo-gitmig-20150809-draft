@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.51 2005/02/22 14:30:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.52 2005/03/07 19:59:16 latexer Exp $
+
+*mono-1.0.5-r5 (07 Mar 2005)
+
+  07 Mar 2005; Peter Johanson <latexer@gentoo.org> +mono-1.0.5-r5.ebuild:
+  Revision bump to remove gmcs script when installing mono-1.0.5. We don't
+  install the 2.0 profile stuff, including gmcs, on mono-1.0.x.
 
   22 Feb 2005; Peter Johanson <latexer@gentoo.org> mono-1.1.4.ebuild:
   Change pnet blocker to allow people to install a new enough pnet along side
