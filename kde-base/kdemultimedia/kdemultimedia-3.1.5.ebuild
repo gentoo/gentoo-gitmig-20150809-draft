@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.5.ebuild,v 1.4 2004/01/29 12:53:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.5.ebuild,v 1.5 2004/02/09 19:57:13 agriffis Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="nas esd motif slang tcltk oggvorbis cdr"
@@ -10,7 +10,7 @@ KEYWORDS="x86 ~sparc ~ppc hppa ~amd64 alpha ia64"
 DEPEND=">=sys-libs/ncurses-5.2
 	>=media-sound/cdparanoia-3.9.8
 	>=media-libs/libvorbis-1.0_beta4
-	!hppa? ( >=media-video/xanim-2.80.1 )
+	!hppa? ( !ia64? ( >=media-video/xanim-2.80.1 ) )
 	nas? ( >=media-libs/nas-1.4.1 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	motif? ( x11-libs/openmotif )
