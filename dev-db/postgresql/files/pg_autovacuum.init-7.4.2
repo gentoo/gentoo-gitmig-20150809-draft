@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/pg_autovacuum.init-7.4.2,v 1.1 2004/03/11 20:11:28 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/pg_autovacuum.init-7.4.2,v 1.2 2004/05/25 15:57:26 nakano Exp $
 
 depend() {
 	need postgresql logger
@@ -20,7 +20,7 @@ start() {
 		eerror " stats_start_collector = true"
 		eerror " stats_row_level = true"
 
-		eerror "Please read /usr/share/doc/postgresql-7.4.1/contrib/README.pg_autovacuum for details."
+		eerror "Please read ___DOCDIR___/contrib/README.pg_autovacuum for details."
 		eend 1
 	fi
 }

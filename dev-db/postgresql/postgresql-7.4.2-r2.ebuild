@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.4 2004/05/14 14:56:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.5 2004/05/25 15:57:26 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -29,9 +29,9 @@ DEPEND="virtual/glibc
 	readline? ( >=sys-libs/readline-4.1 )
 	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
-	python? ( !mips? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base ) )
-	java? ( !amd64? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3
-		dev-java/java-config ) )
+	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
+	java? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3
+		dev-java/java-config )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	nls? ( sys-devel/gettext )"
 # java dep workaround for portage bug
@@ -41,7 +41,7 @@ RDEPEND="virtual/glibc
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
-	java? ( !amd64? ( >=virtual/jdk-1.3* ) )
+	java? ( >=virtual/jdk-1.3* )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
 
 PG_DIR="/var/lib/postgresql"
@@ -94,17 +94,15 @@ src_unpack() {
 src_compile() {
 	filter-flags -ffast-math
 
-	if [ "`use java`" -a ! "`use amd64`" ]; then
+	if [ "`use java`" ]; then
 		check_java_config
 	fi
 
 	local myconf
 	use tcltk && myconf="--with-tcl"
-	use python && use mips || myconf="$myconf --with-python"
+	use python && myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
-	if [ "`use java`" -a ! "`use amd64`" ]; then
-		myconf="$myconf --with-java"
-	fi
+	use jave && myconf="$myconf --with-java"
 	use ssl && myconf="$myconf --with-openssl"
 	use nls && myconf="$myconf --enable-nls"
 	use libg++ && myconf="$myconf --with-CXX"
@@ -159,9 +157,9 @@ src_install() {
 
 	exeinto /usr/bin
 
-	if [ "`use java`" -a ! "`use amd64`" ]; then
+	if [ "`use java`" ]; then
 		dojar ${D}/usr/share/postgresql/java/postgresql.jar || die
-		rm ${D}/usr/share/postgresql/java/postgresql.jar
+#		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi
 
 	dodir /usr/include/postgresql/pgsql
@@ -185,6 +183,7 @@ src_install() {
 	exeinto /etc/init.d/
 	newexe ${FILESDIR}/postgresql.init-${PV} postgresql || die
 	newexe ${FILESDIR}/pg_autovacuum.init-${PV} pg_autovacuum || die
+	dosed "s:___DOCDIR___:/usr/share/doc/${PF}:" /etc/init.d/pg_autovacuum
 
 	insinto /etc/conf.d/
 	newins ${FILESDIR}/postgresql.conf-${PV} postgresql || die

@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.97 2004/05/14 14:56:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.98 2004/05/25 15:57:26 nakano Exp $
+
+  25 May 2004; Masatomo Nakano <nakano@gentoo.org>
+  files/pg_autovacuum.init-7.4.2, postgresql-7.4.2-r1.ebuild,
+  postgresql-7.4.2-r2.ebuild:
+  Fixed a reference to pg_autovacuum document(#51723). Fixed Java problem on
+  amd64.
 
   14 May 2004; Guy Martin <gmsoft@gentoo.org> postgresql-7.4.2-r2.ebuild,
   files/postgresql-7.4.1-hppa-testandset.patch:

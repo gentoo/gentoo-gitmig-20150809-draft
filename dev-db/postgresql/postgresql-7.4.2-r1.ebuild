@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r1.ebuild,v 1.3 2004/05/04 09:34:34 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r1.ebuild,v 1.4 2004/05/25 15:57:26 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -181,6 +181,7 @@ src_install() {
 	exeinto /etc/init.d/
 	newexe ${FILESDIR}/postgresql.init-${PV} postgresql || die
 	newexe ${FILESDIR}/pg_autovacuum.init-${PV} pg_autovacuum || die
+	dosed "s:___DOCDIR___:/usr/share/doc/${PF}:" /etc/init.d/pg_autovacuum
 
 	insinto /etc/conf.d/
 	newins ${FILESDIR}/postgresql.conf-${PV} postgresql || die
