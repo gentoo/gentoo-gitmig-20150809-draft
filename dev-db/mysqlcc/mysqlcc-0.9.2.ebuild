@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.9.2.ebuild,v 1.2 2003/05/09 15:27:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.9.2.ebuild,v 1.3 2003/08/15 18:37:31 caleb Exp $
 
-inherit eutils
+inherit eutils kde-functions
+need-qt 3.0.5
 
 S=${WORKDIR}/${P}-src
 DESCRIPTION="a MySQL GUI Client"
@@ -11,11 +12,10 @@ SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQLC
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="X qt"
 
 DEPEND="virtual/glibc
-	>=x11-libs/qt-3.0.5
 	>=dev-db/mysql-4.0.0"
 RDEPEND=""
 
@@ -44,8 +44,8 @@ src_compile() {
 	QMAKESPEC="linux-g++" LIBS=${LIBS} econf --with-qt=${QTDIR} || die
 
 	cp Makefile Makefile.orig
-	sed -e "s:CFLAGS   = -pipe -Wall -W -g:CFLAGS   = ${CFLAGS}:" \
-		-e "s:CXXFLAGS = -pipe -Wall -W -g:CXXFLAGS = ${CXXFLAGS}:" \
+	sed -e "s:CFLAGS   = -pipe -Wall -W -O2:CFLAGS   = ${CFLAGS}:" \
+		-e "s:CXXFLAGS = -pipe -Wall -W -O2:CXXFLAGS = ${CXXFLAGS}:" \
 		Makefile.orig > Makefile
 		
 	QTDIR=$QTDIR

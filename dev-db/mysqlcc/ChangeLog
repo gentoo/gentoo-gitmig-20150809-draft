@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysqlcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.10 2003/06/12 20:29:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.11 2003/08/15 18:37:31 caleb Exp $
+
+  15 Aug 2003; <caleb@gentoo.org> mysqlcc-0.9.2.ebuild:
+  Minor CFLAGS (see bug 26669).  Changed qt dependecy to rely on need-qt from
+  kde-functions.eclass.  Marked stable on x86.
 
   12 Jun 2003; <msterret@gentoo.org> mysqlcc-0.8.7-r1.ebuild:
   fix Header
