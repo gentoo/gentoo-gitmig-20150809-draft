@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r1.ebuild,v 1.6 2003/09/27 01:48:48 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r1.ebuild,v 1.7 2003/10/02 04:29:37 darkspecter Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Access control list utilities, libraries and headers"
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~amd64 ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
-DEPEND="sys-apps/attr
+DEPEND=">=sys-apps/attr-2.4
 	sys-devel/autoconf"
 
 src_compile() {
