@@ -1,36 +1,40 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.9 2004/11/29 03:02:43 eradicator Exp $
-
-ETYPE="headers"
-inherit kernel eutils
-
-OKV="${PV/_/-}"
-KV="${OKV}"
-S=${WORKDIR}/linux-${OKV}
-EXTRAVERSION=""
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.10 2004/12/02 15:26:00 vapier Exp $
 
 # What's in this kernel?
 
 # INCLUDED:
 # 1) linux sources from kernel.org
 
+ETYPE="headers"
+inherit kernel eutils
+
+OKV="${PV/_/-}"
+KV="${OKV}"
+EXTRAVERSION=""
+
 DESCRIPTION="Linux ${OKV} headers from kernel.org"
-SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2"
+
 LICENSE="GPL-2"
-SLOT="0"
-PROVIDE="virtual/kernel virtual/os-headers"
+SLOT="${CTARGET}"
 KEYWORDS="-* amd64 arm hppa ~ia64 ~ppc ppc64 ~sparc sh ~x86"
 IUSE=""
 
 DEPEND="!virtual/os-headers"
+PROVIDE="virtual/kernel virtual/os-headers"
+
+S=${WORKDIR}/linux-${OKV}
 
 headers___fix() {
-	sed -i	-e "s/\([ "$'\t'"]\)u8\([ "$'\t'"]\)/\1__u8\2/g;" \
+	sed -i \
+		-e "s/\([ "$'\t'"]\)u8\([ "$'\t'"]\)/\1__u8\2/g;" \
 		-e "s/\([ "$'\t'"]\)u16\([ "$'\t'"]\)/\1__u16\2/g;" \
 		-e "s/\([ "$'\t'"]\)u32\([ "$'\t'"]\)/\1__u32\2/g;" \
-		-e "s/\([ "$'\t'"]\)u64\([ "$'\t'"]\)/\1__u64\2/g;" $@
+		-e "s/\([ "$'\t'"]\)u64\([ "$'\t'"]\)/\1__u64\2/g;" \
+		"$@"
 }
 
 pkg_setup() {
@@ -44,7 +48,7 @@ pkg_setup() {
 		;;
 	esac
 }
-
+/
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -77,10 +81,12 @@ src_unpack() {
 src_compile() {
 	# autoconf.h isnt generated unless it already exists. plus, we have
 	# no guarantee that any headers are installed on the system...
-	[ -f ${ROOT}/usr/include/linux/autoconf.h ] || \
-		touch ${S}/include/linux/autoconf.h
+	[ -f "${ROOT}"/usr/include/linux/autoconf.h ] \
+		|| touch include/linux/autoconf.h
+
 	# if there arent any installed headers, then there also isnt an asm
-	# symlink in /usr/include/, and make defconfig will fail.
+	# symlink in /usr/include/, and make defconfig will fail, so we have
+	# to force an include path with $S.
 	set_arch_to_kernel
 	ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
 	make defconfig HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/" || die "defconfig failed"
@@ -93,8 +99,7 @@ src_install() {
 	kernel_src_install
 
 	# If this is sparc, then we need to place asm_offsets.h in the proper location(s)
-	if [ "${PROFILE_ARCH}" = "sparc64" ]; then
-
+	if [ "${PROFILE_ARCH}" = "sparc64" ] ; then
 		# We don't need /usr/include/asm, generate-asm-sparc will take care of this
 		rm -Rf ${D}/usr/include/asm
 
@@ -109,7 +114,6 @@ src_install() {
 
 		# Check if generate-asm-sparc exists
 		if [ -a "${FILESDIR}/generate-asm-sparc" ]; then
-
 			# Copy generate-asm-sparc into the sandox
 			cp ${FILESDIR}/generate-asm-sparc ${WORKDIR}/generate-asm-sparc
 
