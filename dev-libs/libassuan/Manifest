@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2f8e0a05aec1e9e1e2696c3caafb1f19 ChangeLog 1315
+MD5 8373e12417099e85ed13d1a8936c7118 ChangeLog 1421
 MD5 35d6557138836a84cb47422505e3f349 libassuan-0.6.2.ebuild 530
 MD5 cace534816e9e68eccf02f84c43f1db5 libassuan-0.6.4.ebuild 547
 MD5 3b26ed0c1dde28b2fd1c08b52a02034e libassuan-0.6.5.ebuild 554
 MD5 5dcc686f6feb378c907a42f64872ba19 libassuan-0.6.6.ebuild 638
-MD5 771af4f11a3ace521e9fa01cfcf2ac91 libassuan-0.6.9.ebuild 641
+MD5 deb38f536c8cc52a86163e2a64074df9 libassuan-0.6.9.ebuild 650
 MD5 b1a4c3f100342f9335a6974737f5e5ec metadata.xml 872
 MD5 9a906ee3977f8f5e815569ae8fd8d056 files/digest-libassuan-0.6.2 67
 MD5 90eb33ade8aa7d88927db4aa64468bc6 files/digest-libassuan-0.6.4 67
@@ -14,9 +14,9 @@ MD5 3be340d734ec0f4d8c8eb662a3921cac files/digest-libassuan-0.6.5 67
 MD5 a671c7c7d83bec2b32067b3ab449e125 files/digest-libassuan-0.6.6 67
 MD5 47b669d380236521b14ebaa0a9972533 files/digest-libassuan-0.6.9 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB17B6roRuSHgZdywRAg1PAJ9e7Hsy0Zvj6RgjF6z9l3ZScKRjlgCfTVx0
-2mX0LoY5CVzJGXua8HKLoKY=
-=iZb1
+iD8DBQFB2cCNKRy60XGEcJIRAvPiAKCdSy+Z8ivAP/LV30iiFXabERcB5wCgsFZV
+43cmSiAWEkjen4TY9TFdibA=
+=Fe4t
 -----END PGP SIGNATURE-----
