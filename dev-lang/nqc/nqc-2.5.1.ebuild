@@ -1,6 +1,6 @@
 # Copyright 2002 Alexander Holler
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.1 2003/06/21 07:03:06 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.2 2003/07/23 01:44:41 george Exp $
 
 My_PV="`echo $PV|cut -d. -f1,2`.r`echo $PV|cut -d. -f3`"
 My_P="${PN}-${My_PV}"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.baumfamily.org/nqc/"
 
 SLOT="0"
 LICENSE="MPL-1.0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/glibc"
