@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.4 2004/05/12 07:58:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.5 2004/05/21 13:33:07 kugelfang Exp $
+
+  21 May 2004; Danny van Dyk <kugelfang@gentoo.org> glibmm-2.4.1.ebuild:
+  Added aclocal/automake/autoconf before gnome2_src_compile; necessary on amd64.
+  Marked ~amd64.
 
   12 May 2004; Daniel Ahlberg <aliz@gentoo.org> glibmm-2.4.1.ebuild:
   Added IUSE.
