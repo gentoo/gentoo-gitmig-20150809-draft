@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.5 2003/12/15 00:55:36 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.6 2003/12/15 00:56:27 brad_mssw Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -549,7 +549,7 @@ pkg_postinst() {
 	defaltmerge
 	# We dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
-	
+
 	# Added devfs check 
 	# brad_mssw@gentoo.org 12/14/2003
 	if [ "${altmerge}" -eq "0" -a ! -e "${ROOT}/dev/.udev" -a ! -e "${ROOT}/dev/.devfsd" -a \
