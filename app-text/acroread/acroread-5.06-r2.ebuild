@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r2.ebuild,v 1.2 2003/01/14 22:31:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r2.ebuild,v 1.3 2003/01/18 17:34:17 mholzer Exp $
 
 inherit nsplugins
 
@@ -21,8 +21,8 @@ INSTALLDIR=/opt/Acrobat5
 
 src_compile () {
 	
-	tar xvf LINUXRDR.TAR
-	tar xvf COMMON.TAR
+	tar -xvf LINUXRDR.TAR --no-same-owner
+	tar -xvf COMMON.TAR --no-same-owner
 
 	sed -e "s:REPLACE_ME:${INSTALLDIR}/Reader:" \
 		bin/acroread.sh > acroread
@@ -34,8 +34,8 @@ src_install () {
 	for i in Browsers Reader Resource
 	do
 		if [ -d ${i} ] ; then
-		chown -R root.root ${i}
-		cp -a ${i} ${D}${INSTALLDIR}
+		chown -R --dereference root.root ${i}
+		cp -Rd ${i} ${D}${INSTALLDIR}
 		fi
 	done
 	
