@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1.ebuild,v 1.5 2003/09/07 02:23:45 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1.ebuild,v 1.6 2003/09/10 05:22:24 msterret Exp $
 
 IUSE="nls build"
 
@@ -18,13 +18,13 @@ DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
-        unpack ${A}
-        echo ${PROFILE_ARCH}
-        if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc" ]
-        then
-                cd ${S}
-                epatch ${FILESDIR}/gentoo-sparc32-dfa.patch || die
-        fi
+	unpack ${A}
+	echo ${PROFILE_ARCH}
+	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/gentoo-sparc32-dfa.patch || die
+	fi
 }
 
 src_compile() {
