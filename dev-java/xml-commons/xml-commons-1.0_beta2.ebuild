@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.3 2005/01/15 18:23:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.4 2005/01/15 19:03:16 compnerd Exp $
 
 inherit java-pkg
 
@@ -20,12 +20,14 @@ RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}/xml-commons-1.0.b2
 
 src_compile() {
-	local antflags="jars"
+	local antflags="jar"
 
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	use doc && antflags="${antflags} javadoc"
+	use doc && antflags="${antflags} javadocs"
 
-	ant ${antflags} || die "Compile failed"
+	cd ${S}/java
+	ant -f resolver.xml ${antflags} || die "XML-Resolver Compile failed"
+	ant -f which.xml ${antflags} || die "XML-Which Compile failed"
 }
 
 src_install() {
