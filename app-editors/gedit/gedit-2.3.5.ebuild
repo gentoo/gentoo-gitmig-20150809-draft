@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.3.5.ebuild,v 1.2 2003/09/08 04:12:42 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.3.5.ebuild,v 1.3 2003/09/08 11:48:20 foser Exp $
 
 inherit gnome2
 
@@ -16,7 +16,7 @@ RDEPEND=">=gnome-base/libglade-2
 	>=gnome-base/eel-2.2
 	>=gnome-base/libgnomeui-2.2
 	>=gnome-base/libbonobo-2
-	=gnome-base/libgnomeprintui-2.2*
+	>=gnome-base/libgnomeprintui-2.2
 	>=x11-libs/gtksourceview-0.2.1
 	spell? ( virtual/aspell-dict )"
 
