@@ -1,47 +1,47 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r1.ebuild,v 1.4 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r2.ebuild,v 1.1 2003/09/08 13:08:17 taviso Exp $
+
+inherit ccc
 
 DESCRIPTION="Classic TECO editor, Predecessor to EMACS."
-HOMEPAGE="http://www.ibiblio.org/pub/linux/apps/editors/tty/"
+HOMEPAGE="http://www.ibiblio.org/pub/linux/apps/editors/tty/ http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco"
 SRC_URI="http://www.ibiblio.org/pub/linux/apps/editors/tty/teco.tar.gz
-	doc? ( http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/tecolore.txt
-		http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/tech.txt
-		http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/teco.doc
-		http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/tecoprog.doc )"
+	doc? ( mirror://gentoo/tecolore.txt.gz
+		mirror://gentoo/tech.txt.gz
+		mirror://gentoo/teco.doc.gz
+		mirror://gentoo/tecoprog.doc.gz )"
 LICENSE="freedist"
+
 SLOT="0"
 KEYWORDS="alpha x86"
 IUSE="doc"
+
 DEPEND="virtual/glibc
 	sys-libs/libtermcap-compat
 	>=sys-apps/sed-4"
 RDEPEND="virtual/glibc
 	sys-libs/libtermcap-compat"
-
-inherit ccc
+PROVIDE="virtual/editor"
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack teco.tar.gz || die "sorry, couldnt unpack teco."
-}
-
 src_compile() {
+	# Remove hardcoded compiler and CFLAGS
 	sed -i 's/CFLAGS = -O//' Makefile
-	is-ccc && replace-cc-hardcode
+	replace-cc-hardcode
 
 	emake || die "compilation failed"
 
 	echo
-	size te
+	size te; ls -l te
 	echo
 }
 
 src_install() {
 	dobin te
 	dodoc sample.tecorc sample.tecorc2 READ.ME MANIFEST
-	use doc && dodoc ${DISTDIR}/{tecolore.txt,tech.txt,teco.doc,tecoprog.doc}
+	use doc && dodoc tecolore.txt tech.txt teco.doc tecoprog.doc
 	doman te.1
 }
 
