@@ -1,19 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.22.ebuild,v 1.1 2002/10/28 13:32:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.22.ebuild,v 1.2 2002/11/08 18:11:34 foser Exp $
 
-inherit libtool gnome.org debug
+inherit libtool gnome.org
 
+IUSE="python"
 S=${WORKDIR}/${P}
 DESCRIPTION="XSLT libraries and tools"
-#SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
-
 SLOT="0"
-LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 sparc sparc64 ppc alpha"
+LICENSE="MIT"
+KEYWORDS="~x86 ~sparc ~sparc64 ~ppc ~alpha"
 
-RDEPEND=">=dev-libs/libxml2-2.4.25"
+RDEPEND=">=dev-libs/libxml2-2.4.23
+	python? ( dev-lang/python )"
 
 DEPEND="${RDEPEND}
 	sys-devel/perl"
@@ -22,10 +22,14 @@ src_compile() {
 	# Fix .la files of python site packages
 	elibtoolize
 
-	econf || die
+	local myconf
+
+	use python && myconf="--with-python" || myconf="--without-python"
+
+	econf ${myconf} || die
+
 	#libxslt-1.0.19 didn't like parallel make; test a good deal before re-enabling
 	#(drobbins, 24 Jul 2002)
-	patch -p0 < ${FILESDIR}/Makefile-py.patch
 	make || die
 }
 
