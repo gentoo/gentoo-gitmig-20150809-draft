@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.5 2004/02/14 00:07:00 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.6 2004/02/27 03:41:32 mkennedy Exp $
+
+  26 Feb 2004; <mkennedy@gentoo.org> metadata.xml:
+  Added metadata.xml; Move out postinst, prerm states to eclass; Fix ebuild to
+  build against openmotif or lesstif
 
 *cmucl-18e-r3 (13 Feb 2004)
 
