@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r3.ebuild,v 1.1 2001/02/27 15:41:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r3.ebuild,v 1.2 2001/02/27 17:27:20 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/flex-2.5.4
@@ -34,7 +34,7 @@ src_install() {
     then
         dodoc COPYING NEWS README
     else
-        rm -rf ${D}/usr/share/man ${D}/usr/include ${D}/usr/lib
+        rm -rf ${D}/usr/share ${D}/usr/include ${D}/usr/lib
     fi
 
 }
