@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r22.ebuild,v 1.1 2004/08/02 11:11:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r22.ebuild,v 1.2 2004/08/03 13:24:15 vapier Exp $
 
 IUSE="aavm crypt evms2 usagi"
 
@@ -17,7 +17,7 @@ IUSE="aavm crypt evms2 usagi"
 
 ETYPE="sources"
 
-inherit kernel eutils
+inherit kernel eutils gcc
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 EXTRAVERSION="-${PN/-*/}"
 [ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
@@ -58,7 +58,7 @@ src_unpack() {
 	fi
 
 	# If the compiler isn't gcc>3.1 drop the gcc>=3.1 patches
-	if [[ "${COMPILER}" == "gcc3" ]]; then
+	if [[ "`gcc-major-version`" == "3" ]]; then
 		einfo "Enabling gcc > 3.1 processor optimizations..."
 		einfo "To use them, choose the processor families labelled with (gcc>31)"
 		einfo "in \"Processor type and features -> Processor Family\""
