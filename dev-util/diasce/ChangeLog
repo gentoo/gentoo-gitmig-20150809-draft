@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/diasce
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/ChangeLog,v 1.1 2002/11/07 18:55:50 foser Exp $
+
+*diasce-1.2 (07 Nov 2002)
+
+  07 Nov 2002; foser <foser@gentoo.org> diasce-1.2.ebuild ChangeLog :
+  Updated version and namechange
+  Ebuild adapted from submission by Ferdy <ferdy@ferdyx.org>
