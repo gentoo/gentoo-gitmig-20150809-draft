@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-20031202.ebuild,v 1.6 2004/08/13 10:19:13 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-20031202.ebuild,v 1.7 2004/10/26 14:10:35 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DEB_PVER=2
 MY_P=${PN}_${PV}
@@ -13,7 +13,7 @@ SRC_URI="http://farm9.org/Cryptcat/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~amd64"
+KEYWORDS="~amd64 ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 	export XFLAGS="-DLINUX"
 	export XLIBS="-lstdc++"
-	CC="gcc ${CFLAGS}" make -e cryptcat || die
+	CC="$(tc-getCC) ${CFLAGS}" make -e cryptcat || die
 }
 
 src_install() {
