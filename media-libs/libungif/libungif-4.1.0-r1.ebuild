@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0-r1.ebuild,v 1.12 2002/12/09 04:26:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0-r1.ebuild,v 1.13 2002/12/15 10:44:20 bjb Exp $
 
 IUSE="X gif"
 
@@ -13,7 +13,7 @@ DEPEND="X? ( virtual/x11 )"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 src_compile() {
 
