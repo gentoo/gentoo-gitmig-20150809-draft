@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.17 2004/10/24 07:14:33 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.18 2004/10/25 03:35:04 weeve Exp $
+
+  24 Oct 2004; Jason Wever <weeve@gentoo.org> windowmaker-0.90.0.ebuild:
+  Added ~sparc keyword wrt bug #68729.
 
 *windowmaker-0.90.0 (24 Oct 2004)
 

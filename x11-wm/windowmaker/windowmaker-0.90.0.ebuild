@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.90.0.ebuild,v 1.1 2004/10/24 07:14:33 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.90.0.ebuild,v 1.2 2004/10/25 03:35:04 weeve Exp $
 
 
 inherit eutils gnustep
@@ -24,7 +24,7 @@ RDEPEND="nls? ( >=sys-devel/gettext-0.10.39 )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~sparc"
 
 src_compile() {
 	local myconf
