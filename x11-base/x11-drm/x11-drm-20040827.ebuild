@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.4 2004/10/29 06:34:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.5 2004/11/04 21:29:43 battousai Exp $
 
-inherit eutils x11 kmod
+inherit eutils x11 kernel-mod
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx ffb i810 i830 i915 mach64 matrox rage128 radeon savage sis via"
@@ -41,12 +41,6 @@ pkg_setup() {
 		die "Please set at least one video card in VIDEO_CARDS in make.conf or the environment. Possible VIDEO_CARDS values are: ${IUSE_VIDEO_CARDS}."
 	fi
 
-#	if [ "`is_kernel 2 6`" -a ! "`is_koutput`" -a "${KV_PATCH}" -lt 6 ]
-#	then
-#			eerror "Building DRM against 2.6 kernels without proper build systems is unsupported."
-#			die "Non-koutput and non-M 2.6 kernel tree"
-#	fi
-
 	if [ "${ARCH}" != "sparc" ] && use video_cards_ffb
 	then
 		die "The ffb driver is for sparc-specific hardware. Please remove it from your VIDEO_CARDS."
@@ -59,8 +53,11 @@ pkg_setup() {
 		then
 			die "Remove gatos from your USE flags. It does not work with cards other than radeon and rage128."
 		fi
-		is_kernel 2 6 && die "GATOS does not work with 2.6 kernels. Only 2.4 is supported at this time."
+		kernel-mod_is_2_6_kernel && die "GATOS does not work with 2.6 kernels. Only 2.4 is supported at this time."
 	fi
+
+	ewarn "Using koutput kernels is now deprecated. If you use a koutput kernel, please"
+	ewarn "switch to kernel >=2.6.6 with a normal build system."
 
 	# Set video cards to build for.
 	set_vidcards
@@ -93,11 +90,10 @@ src_unpack() {
 src_compile() {
 	einfo "Building DRM..."
 
-	# This now uses a kmod-driven build system. Makefile does most of the work.
+	# This now uses an M= build system. Makefile does most of the work.
 	unset ARCH
 	make M="${S}" \
 		LINUXDIR="${ROOT}/usr/src/linux" \
-		LINUXOUTPUT="${KV_OUTPUT}" \
 		DRM_MODULES="${VIDCARDS}" \
 		DRMSRCDIR="${S}" \
 		modules || die_error
@@ -115,7 +111,6 @@ src_install() {
 	unset ARCH
 	make KV="${KV}" \
 		LINUXDIR="${ROOT}/usr/src/linux" \
-		LINUXOUTPUT="${KV_OUTPUT}" \
 		DRM_MODULES="${VIDCARDS}" \
 		DESTDIR="${D}" \
 		install || die "Install failed."
@@ -138,11 +133,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ "${ROOT}" = "/" ]
-	then
-		/sbin/modules-update
-	fi
-
 	if use video_cards_sis
 	then
 		einfo "SiS direct rendering only works on 300 series chipsets."
@@ -156,11 +146,22 @@ pkg_postinst() {
 		einfo "For more information, see:"
 		einfo "http://dri.sourceforge.net/cgi-bin/moin.cgi/ATIMach64?value=CategoryHardwareChipset."
 	fi
+
+	einfo "Checking kernel module dependencies"
+	test -r "${ROOT}/usr/src/linux/System.map" && \
+		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
 }
 
 # Functions used above are defined below:
 
 set_vidcards() {
+	if kernel-mod_is_2_6_kernel
+	then
+		KV_OBJ="ko"
+	else
+		KV_OBJ="o"
+	fi
+
 	# To get the kernel module extension
 #	get_kernel_info
 
@@ -199,8 +200,8 @@ patch_prepare() {
 	#     GATOS (2xx*) vs. Standard trees (1xx*)
 	#     2.4 vs. 2.6 kernels
 
-	is_kernel 2 4 && mv -f ${PATCHDIR}/*kernel-2.6* ${EXCLUDED}
-	is_kernel 2 6 && mv -f ${PATCHDIR}/*kernel-2.4* ${EXCLUDED}
+	kernel-mod_is_2_4_kernel && mv -f ${PATCHDIR}/*kernel-2.6* ${EXCLUDED}
+	kernel-mod_is_2_6_kernel && mv -f ${PATCHDIR}/*kernel-2.4* ${EXCLUDED}
 
 	if use gatos
 	then
@@ -217,7 +218,7 @@ patch_prepare() {
 die_error() {
 	eerror "Portage could not build the DRM modules. If you see an ACCESS DENIED error,"
 	eerror "this could mean that you were using an unsupported kernel build system. All"
-	eerror "2.4 kernels are supported, but only 2.6 kernels with koutput enabled or"
-	eerror "kernels 2.6.6 and above are supported."
+	eerror "2.4 kernels are supported, but only 2.6 kernels at least as new as 2.6.6"
+	eerror "are supported."
 	die "Unable to build DRM modules."
 }

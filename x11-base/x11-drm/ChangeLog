@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.6 2004/11/01 02:26:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.7 2004/11/04 21:29:43 battousai Exp $
+
+  04 Nov 2004; Bryan Stine <battousai@gentoo.org> x11-drm-20040827.ebuild:
+  Updated 20040827 snapshot ebuild for the kmod deprecation. Thanks to Stefan
+  Schweizer <sschweizer@gmail.com> for the patch. This closes bug #68453.
 
   31 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; :
   Restore changelog entries from when it was xfree-drm.
