@@ -699,8 +699,11 @@ gnome-extra/at-poke
 media-libs/monkey-sound
 media-sound/rhythmbox
 
-# This application is broken and has been removed
-=app-text/ggv-1.99.5
+gnome-extra/gconfmm
+gnome-extra/libglademm
+gnome-extra/libgnomecanvasmm
+gnome-extra/libgnomemm
+gnome-extra/libgnomeuimm
 
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
