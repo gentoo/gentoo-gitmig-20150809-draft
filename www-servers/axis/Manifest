@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 01cf71c8af255dd1100918c5984da440 axis-1.2_rc2.ebuild 2125
-MD5 ed18caafd3ebd61f93a5a3c415e4ea88 ChangeLog 647
+MD5 dbec94762e2a21729f99bf24881f4c8a axis-1.2_rc2.ebuild 2123
+MD5 274382c664f06e4b1f419f881f2b99e8 ChangeLog 770
 MD5 aa938bc7f143d74b90cfa34d1ac729ad metadata.xml 746
 MD5 8c7cc290e3dabad081a6b8856d01cb66 files/digest-axis-1.2_rc2 68
 MD5 46179f667d9c1eefb6b60ae7282c049e files/axis-1.2-gentoo.patch 2907
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCTAnz/rLF9B432nYRAqBdAJ4+bbA3kHGZJyo04gh5iQEHS5s3xQCfZ6jC
-urTHVYnNTnxK63b9ie1BHXQ=
-=o4Fu
+iD8DBQFCUVbE/rLF9B432nYRAuAOAJ97/79pFaO6OG5GqvQtOCEXQAnxVwCgmYKo
+OzCLbNpfYxpwKmF2oGe83Kk=
+=XjjI
 -----END PGP SIGNATURE-----
