@@ -1,10 +1,6 @@
 # ChangeLog for net-dialup/gnome-ppp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.11 2005/02/12 08:03:04 mrness Exp $
-
-  12 Feb 2005; Alin Nastac <mrness@gentoo.org> :
-  Fix broken dependencies (move dev-perl/XML-Parser from RDEPEND to DEPEND). 
-  See bug #81544.
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.12 2005/02/12 08:09:18 mrness Exp $
 
 *gnome-ppp-0.3.19 (06 Feb 2005)
 
