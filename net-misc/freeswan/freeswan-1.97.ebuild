@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.97.ebuild,v 1.8 2003/02/13 14:50:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.97.ebuild,v 1.9 2003/05/29 00:43:00 weeve Exp $
 
 S=${WORKDIR}/freeswan-1.97
 DESCRIPTION="FreeS/WAN IPSec Userspace Utilities"
@@ -12,7 +12,7 @@ DEPEND="dev-libs/gmp
 LICENSE="GPL-2"
 RDEPEND=""
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 -sparc "
 
 pkg_setup() {
 	[ -d /usr/src/linux/net/ipsec ] || {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.98b-r2.ebuild,v 1.2 2003/02/13 14:50:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.98b-r2.ebuild,v 1.3 2003/05/29 00:43:00 weeve Exp $
 
 X509_PATCH=0.9.15
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 LICENSE="GPL-2"
 RDEPEND=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 -sparc"
 
 pkg_setup() {
     [ -d /usr/src/linux/net/ipsec ] || {
