@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.24 2003/03/01 03:39:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.25 2003/03/03 04:53:16 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -18,6 +18,7 @@ EXPORT_FUNCTIONS pkg_postinst pkg_setup
 export GAMES_PREFIX="/usr/games"
 export GAMES_PREFIX_OPT="/opt"
 export GAMES_DATADIR="/usr/share/games"
+export GAMES_DATADIR_BASE="/usr/share/" # some packages auto append 'games'
 export GAMES_SYSCONFDIR="/etc/games"
 export GAMES_STATEDIR="/var/games"
 export GAMES_LIBDIR="/usr/games/lib"
