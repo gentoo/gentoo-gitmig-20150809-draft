@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3275 2004/10/23 01:04:10 avenj Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3276 2004/10/23 14:10:40 usata Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -56,6 +56,7 @@ x11-misc/xeasyconf
 
 # <usata@gentoo.org> (17 Oct 2004)
 # masked tetex-beta. jadetex and xmltex don't work with it.
+=app-text/xdvik-22.84.3-r1
 >=app-text/tetex-2.96
 
 # <dsd@gentoo.org> (17 Oct 2004)
