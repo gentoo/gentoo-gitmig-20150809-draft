@@ -1,5 +1,5 @@
-MD5 c82fb5f76654d2c31ab69c2f30eead22 ChangeLog 713
-MD5 ef0e60c81f5a7ef6336670a2ddcf35d7 kid3-0.4.ebuild 634
+MD5 eca0e016cd493baa886332bebee2e339 ChangeLog 802
+MD5 454de5e6dfa70d2e58a062646cfe5111 kid3-0.4.ebuild 633
 MD5 15a028c1f8fff178682119240f0189be metadata.xml 181
 MD5 befd953f34b4f39db828edf76972c91b files/digest-kid3-0.4 60
 MD5 3c81a9d033c0c38f02e0cd32a5803a0f files/kid3-0.4-gcc34.patch 414
