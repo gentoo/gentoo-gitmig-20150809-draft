@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.5.ebuild,v 1.7 2004/09/02 18:09:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.7.ebuild,v 1.1 2004/09/04 10:59:23 lanius Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ LICENSE="LGPL-2"
 
 DEPEND="virtual/python"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 src_install () {
