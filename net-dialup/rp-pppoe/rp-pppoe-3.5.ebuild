@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5.ebuild,v 1.14 2003/09/15 19:08:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5.ebuild,v 1.15 2003/11/03 20:19:45 lanius Exp $
 
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
 SRC_URI="http://www.roaringpenguin.com/pppoe/${P}.tar.gz"
@@ -18,6 +18,8 @@ S=${WORKDIR}/${P}/src
 
 src_compile() {
 	addpredict /dev/ppp
+	# sanbdox violation workaround
+	sed -i -e 's/modprobe/#modprobe/' configure
 	econf || die
 	emake || die "Failed to compile"
 
