@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r4.ebuild,v 1.1 2005/02/19 17:56:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r4.ebuild,v 1.2 2005/02/19 18:59:29 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,51 +20,55 @@ RDEPEND="virtual/libc
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
+SXML=${WORKDIR}/xmlgawk
+SFFS=${WORKDIR}/filefuncs
+
 src_unpack() {
 	unpack ${P}.tar.gz
 
 	# Copy filefuncs module's source over ...
-	cp -PR "${FILESDIR}"/filefuncs "${WORKDIR}"/ || die "cp failed"
+	cp -PR "${FILESDIR}"/filefuncs "${SFFS}"/ || die "cp failed"
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-disable-DFA.patch #78227
 	epatch "${FILESDIR}"/${PN}-3.1.3-getpgrp_void.patch #fedora
-	epatch "${FILESDIR}"/${P}-flonum.patch #fedora
 	epatch "${FILESDIR}"/${P}-nextc.patch #fedora
 	epatch "${FILESDIR}"/${P}-uplow.patch #fedora
 	# support for dec compiler.
 	[[ $(tc-getCC) == "ccc" ]] && epatch ${FILESDIR}/${PN}-3.1.2-dec-alpha-compiler.diff
 
 	if use xml ; then
-		mkdir xmlgawk
-		cd xmlgawk
-		unpack ${P}.tar.gz
-		epatch "${DISTDIR}"/${XML_PATCH} #57857
+		mkdir "${SXML}"
+		cp -r "${S}"/* "${SXML}"/
+		cd "${SXML}"
+		EPATCH_OPTS="-p2 -g0" epatch "${DISTDIR}"/${XML_PATCH} #57857
 	fi
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-flonum.patch #fedora
 }
 
 src_compile() {
 	econf --bindir=/bin $(use_enable nls) || die
 	emake || die "emake failed"
 	if use xml ; then
-		cd xmlgawk/${P}
+		cd "${SXML}"
 		econf $(use_enable nls) || die
 		emake || die "xmlgawk make failed"
-		cd ../..
 	fi
 
-	cd ../filefuncs
+	cd "${SFFS}"
 	emake AWKINCDIR="${S}" CC=$(tc-getCC) || die "filefuncs emake failed"
 }
 
 src_install() {
 	make install DESTDIR="${D}" || die "install failed"
 	if use xml ; then
-		newbin xmlgawk/${P}/gawk xmlgawk || die "xmlgawk failed"
+		newbin "${SXML}"/gawk xmlgawk || die "xmlgawk failed"
 		insinto /usr/include/awk
-		doins xmlgawk/${P}/xml_puller.h || die "xml inc failed"
+		doins "${SXML}"/xml_puller.h || die "xml inc failed"
 	fi
-	cd ../filefuncs
+	cd "${SFFS}"
 	make \
 		DESTDIR="${D}" \
 		AWKINCDIR="${S}" \
