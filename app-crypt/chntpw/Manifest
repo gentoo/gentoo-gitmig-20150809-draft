@@ -1,4 +1,14 @@
-MD5 70c106d014701bd149e1c6b37e5f7726 ChangeLog 507
-MD5 409a627bb468331ae6e977f567626aa1 chntpw-0.99.3.20040818.ebuild 676
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7e1a5896b58b59fa82a2a1e1ed549180 ChangeLog 650
+MD5 b4e173374010ae522d7dd4dc9087151e chntpw-0.99.3.20040818.ebuild 696
 MD5 a5ab3618f9cd3d7433bdfa40ae257618 metadata.xml 222
 MD5 67f4823ebe707ddcadb41da795b88a5f files/digest-chntpw-0.99.3.20040818 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBif1ImdTrptrqvGERAhtYAJ9gilmMrL4tGDdjid3unXsq3LCm2ACfTeiz
+Y+WzkBAVq9dzvGnYbNJ+UfY=
+=pm+N
+-----END PGP SIGNATURE-----
