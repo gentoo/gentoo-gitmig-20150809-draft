@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2.ebuild,v 1.2 2003/05/23 01:45:32 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2.ebuild,v 1.3 2003/06/08 05:01:37 tberman Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Mailman, the mailing list server with webinterface"
@@ -10,6 +10,8 @@ HOMEPAGE="http://www.list.org/"
 SLOT="O"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc "
+
+IUSE=""
 
 DEPEND=">=dev-lang/python-1.5.2
 	virtual/mta
