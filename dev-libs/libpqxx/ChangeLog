@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.8 2004/07/02 04:48:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.9 2004/08/16 13:38:30 matsuu Exp $
+
+*libpqxx-2.2.7 (11 Aug 2004)
+
+  11 Aug 2004; MATSUU Takuto <matsuu@gentoo.org> +libpqxx-2.2.7.ebuild:
+  Version bumped.
+  Added to ~amd64.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> libpqxx-2.2.1.ebuild:
   virtual/glibc -> virtual/libc
