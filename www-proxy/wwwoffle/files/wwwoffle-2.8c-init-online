@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/files/wwwoffle-2.8c-init-online,v 1.1 2004/09/19 07:18:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/files/wwwoffle-2.8c-init-online,v 1.2 2004/11/19 10:10:01 dragonheart Exp $
 
 depend() {
 	need wwwoffled dns
@@ -18,7 +18,7 @@ depend() {
 start() {
 	ebegin "Starting wwwoffled-online"
 	wwwoffle -online -c /etc/wwwoffle/wwwoffle.conf
-	wwwoffle -fetch -c /etc/wwwoffle/wwwoffle.conf
+	wwwoffle -fetch -c /etc/wwwoffle/wwwoffle.conf & > /dev/null
 	eend $?
 }
 
