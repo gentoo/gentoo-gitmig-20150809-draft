@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.68-r1.ebuild,v 1.1 2004/03/29 14:35:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.68-r1.ebuild,v 1.2 2004/03/30 10:10:13 phosphan Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND=">=dev-libs/libticables-3.7.7
 		>=dev-libs/libticalcs-4.4.4
 		>=dev-libs/libtifiles-0.5.5
 		app-text/dos2unix
-		=x11-libs/gtk+-2.2*"
+		>=x11-libs/gtk+-2"
 
 src_unpack() {
 	unpack ${A}
@@ -27,6 +27,7 @@ src_unpack() {
 
 src_compile() {
 	# Note the special option --with-fontpath-prefix below.
+	sed -e 's/GTK_DISABLE_DEPRECATED/GTK_DEPRECATED/g' -i src/Makefile.in
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
