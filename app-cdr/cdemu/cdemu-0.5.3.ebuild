@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc., 2002-2003 Mike Frysinger
+# Copyright 1999-2004 Gentoo Technologies, Inc., 2002-2003 Mike Frysinger
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.5.3.ebuild,v 1.1 2003/09/18 17:01:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.5.3.ebuild,v 1.2 2004/01/24 22:39:01 liquidx Exp $
 
-inherit gcc
+inherit gcc python
 
 MY_P=${PN}_${PV}
 DESCRIPTION="mount bin/cue cd images"
@@ -35,7 +35,8 @@ src_compile() {
 
 src_install() {
 	dobin cdemu
-	insinto /usr/lib/python2.2/site-packages
+	python_version
+	insinto /usr/lib/python${PYVER}/site-packages
 	doins libcdemu.py
 
 	insinto /lib/modules/${KV}/kernel/fs/cdemu

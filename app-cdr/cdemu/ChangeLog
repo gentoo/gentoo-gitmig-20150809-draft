@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemu
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.1 2003/09/18 17:01:46 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.2 2004/01/24 22:39:01 liquidx Exp $
+
+  24 Jan 2004; Alastair Tse <liquidx@gentoo.org> cdemu-0.5.3.ebuild:
+  fix hardcoded python2.2 paths (#39284)
 
 *cdemu-0.5.3 (18 Sep 2003)
 
