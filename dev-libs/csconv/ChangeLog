@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/csconv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/ChangeLog,v 1.6 2004/09/13 19:55:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/ChangeLog,v 1.7 2004/09/20 16:34:56 usata Exp $
+
+  21 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> csconv-11.4_p1467.ebuild:
+  cd ${S} before applying epatch; bug #64296.
 
 *csconv-12.0.1_pre1891 (14 Sep 2004)
 *csconv-11.4_p1467 (14 Sep 2003)
