@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.00b.ebuild,v 1.4 2005/01/07 20:33:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.00b.ebuild,v 1.5 2005/02/03 13:38:21 solar Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -35,10 +35,6 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PV}-dev.patch #75168
 	epatch ${FILESDIR}/${PV}-cpuid-PIC.patch #61947
-
-	# cpuid.cc uses inline asm and can not be linked when
-	# position independent code is desired.
-	filter-flags -fPIC
 }
 
 src_compile() {

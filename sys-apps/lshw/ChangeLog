@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.16 2005/01/21 16:34:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.17 2005/02/03 13:38:21 solar Exp $
+
+  03 Feb 2005; <solar@gentoo.org> -lshw-01.08a.ebuild, lshw-02.00b.ebuild,
+  lshw-02.02b.ebuild:
+  - removing filter-flags -fPIC from ebuild now that the cpuid patch exists.
+  Removing broken lshw-01.08a
 
 *lshw-02.02b (22 Jan 2005)
 
