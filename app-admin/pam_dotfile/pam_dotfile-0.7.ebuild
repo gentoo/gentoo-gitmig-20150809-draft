@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/pam_dotfile-0.7.ebuild,v 1.6 2004/06/24 21:33:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/pam_dotfile-0.7.ebuild,v 1.7 2004/07/13 17:11:44 aliz Exp $
 
 MY_P="${P/_beta/beta}"
 S="${WORKDIR}/${MY_P}"
@@ -11,9 +11,23 @@ SRC_URI="http://www.stud.uni-hamburg.de/users/lennart/projects/pam_dotfile/${MY_
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
-IUSE=""
-DEPEND=">=sys-libs/pam-0.72"
+KEYWORDS="x86 ~amd64"
+IUSE="doc"
+DEPEND="doc? ( net-www/lynx )
+	>=sys-libs/pam-0.72" 
+
+src_compile() {
+	local myconf
+
+	if use doc; then
+		myconf="--enable-lynx"
+	else
+		myconf="--disable-lynx"
+	fi	
+
+	econf ${myconf} || die
+	emake || die
+}
 
 src_install() {
 	make -C src DESTDIR=${D} install
