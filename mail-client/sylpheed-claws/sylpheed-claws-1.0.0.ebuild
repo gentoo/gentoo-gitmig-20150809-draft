@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.13.ebuild,v 1.2 2005/01/19 22:30:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.0.ebuild,v 1.1 2005/01/19 22:30:08 genone Exp $
 
-IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir mbox calendar xface"
+IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir xface"
 
 inherit eutils
 
@@ -10,12 +10,13 @@ inherit eutils
 GS_VERSION="ghostscript-viewer-0.8"
 PGP_VERSION="pgpinline-0.5"
 MAILDIR_VERSION="maildir-0.7"
-MBOX_VERSION="mailmbox-0.9"
-VCAL_VERSION="vcalendar-0.4"
 
 DESCRIPTION="Bleeding edge version of Sylpheed"
 HOMEPAGE="http://sylpheed-claws.sf.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+# sourceforge is broken atm
+#SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2 http://dev.gentoo.org/~genone/distfiles/${P}.tar.bz2"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha"

@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.29 2004/12/29 00:17:52 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.30 2005/01/19 22:30:08 genone Exp $
+
+  19 Jan 2005; Marius Mauch <genone@gentoo.org> :
+  Version bump, tarball only available on Gentoo mirrors for now as SF mirrors
+  aren't working.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
