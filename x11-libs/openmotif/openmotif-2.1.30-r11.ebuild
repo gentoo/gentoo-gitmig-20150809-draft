@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r11.ebuild,v 1.3 2005/03/07 19:48:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r11.ebuild,v 1.4 2005/03/10 14:26:55 lanius Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -160,6 +160,15 @@ pkg_postinst() {
 	motif-config --install openmotif-2.1
 }
 
-pkg_prerm() {
-	motif-config --uninstall openmotif-2.1
+is_upgrade() {
+	vdb_path=`portageq vdb_path`
+	if [ "`grep -r SLOT $vdb_path/${CATEGORY}/${PN}* | grep $SLOT`" ]; then
+		return 0
+	else
+		return 1
+	fi
+}
+
+pkg_postrm() {
+	is_upgrade || motif-config --uninstall openmotif-2.1
 }
