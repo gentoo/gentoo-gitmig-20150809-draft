@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bogosort
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/ChangeLog,v 1.1 2004/12/14 22:58:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/ChangeLog,v 1.2 2004/12/15 22:50:04 hansmi Exp $
+
+  15 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> +files/xmalloc.patch,
+  bogosort-0.4.2.ebuild:
+  Fixed compilation error in xmalloc.c and added to ~ppc.
 
 *bogosort-0.4.2 (14 Dec 2004)
 
