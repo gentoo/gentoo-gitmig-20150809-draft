@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.1.1-r1.ebuild,v 1.6 2001/06/26 16:06:44 darks Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.1.1-r1.ebuild,v 1.7 2001/07/15 16:17:05 g2boojum Exp $
 
 V="2.1"
 A=${P}.tar.bz2
@@ -66,6 +66,7 @@ src_install() {
   dodoc AUTHORS ChangeLog README*
   sed -e "s:^#\!/bin/sh:#\!/bin/sh --login:" ${D}/opt/kde2.1/bin/startkde > ${D}/opt/kde2.1/bin/startkde.tmp
   mv ${D}/opt/kde2.1/bin/startkde.tmp ${D}/opt/kde2.1/bin/startkde
+  chmod a+x ${D}/opt/kde2.1/bin/startkde
 }
 
 
