@@ -25,7 +25,7 @@ MD5 7353213c0eaadb42e684fb98fe8f4ff0 files/kdelibs-3.1.1-zip.diff 2906
 MD5 7353213c0eaadb42e684fb98fe8f4ff0 files/kdelibs-3.1-zip.diff 2906
 MD5 41d30ba8cf8d36ad3caebeedb1ddfd0e files/kdelibs-3.1.1a-kjs-alphaev6-gcc3-workaround.patch 477
 MD5 185c0cca81183c5659b62f91fd240771 files/digest-kdelibs-3.1.1 68
-MD5 d93637de0cd50cb926c9eda49dd105a0 files/digest-kdelibs-3.1.2 68
+MD5 adfd3d17be1f45423f07f22cd0c73427 files/digest-kdelibs-3.1.2 68
 MD5 41d30ba8cf8d36ad3caebeedb1ddfd0e files/kdelibs-3.1.2-kjs-alphaev6-gcc3-workaround.patch 477
 MD5 41d30ba8cf8d36ad3caebeedb1ddfd0e files/kdelibs-3.1-kjs-alphaev6-gcc3-workaround.patch 477
 MD5 bcd0e223c0be9cc4d1af5f2b5578a096 files/kdelibs-3.0.5a-dontcrash.diff 500

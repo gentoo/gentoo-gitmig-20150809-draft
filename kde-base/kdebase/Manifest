@@ -23,7 +23,7 @@ MD5 7a40dbe0a3460fa95aa08d1a6df1af8a files/digest-kdebase-3.1.1-r1 68
 MD5 79fc6f0cd8a9dfcaf9acec89c1e53685 files/digest-kdebase-2.2.2-r4 135
 MD5 63e277899292d5e8e765367ab6f4234c files/digest-kdebase-2.2.2-r5 210
 MD5 7a40dbe0a3460fa95aa08d1a6df1af8a files/digest-kdebase-3.1.1 68
-MD5 a334359c05af3ac3fc8a19e22381d538 files/digest-kdebase-3.1.2 68
+MD5 0adc482a9a0abeccb1b9fd70435c3646 files/digest-kdebase-3.1.2 68
 MD5 94f7c5a331319b84b9a54094c2e6641e files/digest-kdebase-3.1 66
 MD5 7db6d7353b1bfbb47d44e9df63be1410 files/3.1/kdmrc 17661
 MD5 a500709e4a41d613bd4a59bcc7d9a11c files/3.1/startkde-3.1-gentoo.diff 1848

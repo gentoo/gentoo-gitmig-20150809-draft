@@ -12,7 +12,7 @@ MD5 b3f1fb8b67a5fdac84127f754bb42b12 kdegraphics-3.0.5a.ebuild 1504
 MD5 994f2eb077cf2e821a8477b918ee40b2 files/kdegraphics-3.0.4-kghostviewrc 335
 MD5 34693477929f801abd54b37a58efa7f0 files/digest-kdegraphics-3.0.4 71
 MD5 63149da878e9e69a3ddfbe1eb56ed03b files/digest-kdegraphics-3.1.1 71
-MD5 49295b39c501de3a7099e5929374d569 files/digest-kdegraphics-3.1.2 71
+MD5 8182772f29e4abe216202a61593265ee files/digest-kdegraphics-3.1.2 71
 MD5 7529309378c3a5c51c9fa77374ecb9dc files/digest-kdegraphics-3.0.5a 72
 MD5 fcdc3bd9bfe2c49726ccc6d61cfb7fd4 files/digest-kdegraphics-3.0.5b 72
 MD5 97072669c0e368449bc80181888ab4d7 files/digest-kdegraphics-3.1.1a 142

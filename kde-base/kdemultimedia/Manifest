@@ -20,7 +20,7 @@ MD5 86d8f1ace438437515940f470b8d4ddd files/kdemultimedia-2.2.2-r1-gentoo.diff 24
 MD5 86d8f1ace438437515940f470b8d4ddd files/kdemultimedia-2.2.2-gentoo.diff 2416
 MD5 bd16249f1d390fb635238b000fc0e1ef files/digest-kdemultimedia-3.0.4 73
 MD5 448728e6c262cd057b361af52d1f0c16 files/digest-kdemultimedia-3.1.1 73
-MD5 494e1ad0c3920f997f704dc75f9af4b1 files/digest-kdemultimedia-3.1.2 73
+MD5 c40a9c32c318c81150a0d45d13501e75 files/digest-kdemultimedia-3.1.2 73
 MD5 fe58e9a2bdef8ba1e3b8268714ff5fa7 files/kdemultimedia-3.1.1-ln-sf.diff 1278
 MD5 fe58e9a2bdef8ba1e3b8268714ff5fa7 files/kdemultimedia-3.1.2-ln-sf.diff 1278
 MD5 617c96da71ee9854ff09217902c45ac0 files/digest-kdemultimedia-3.1 71
