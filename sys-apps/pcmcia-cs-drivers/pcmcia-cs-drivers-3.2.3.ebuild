@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.3.ebuild,v 1.10 2004/07/09 22:23:53 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.3.ebuild,v 1.11 2004/07/15 02:23:42 agriffis Exp $
 
 MY_P=${P/-drivers/}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ DEPEND="virtual/os-headers
 	>=sys-apps/sed-4"
 RDEPEND=""
 SLOT="0"
-IUSE="trusted apm pnp nocardbus build"
+IUSE="apm nocardbus pnp trusted"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.4.ebuild,v 1.7 2004/07/09 22:23:53 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.4.ebuild,v 1.8 2004/07/15 02:23:42 agriffis Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ DEPEND="virtual/os-headers
 	>=sys-apps/sed-4"
 RDEPEND=""
 SLOT="0"
-IUSE="trusted apm pnp nocardbus build"
+IUSE="apm nocardbus pnp trusted"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 

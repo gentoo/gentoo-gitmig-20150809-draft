@@ -1,5 +1,5 @@
-MD5 b33e7c89394c4a5e20a624459bd80f4a pcmcia-cs-drivers-3.2.4.ebuild 4166
-MD5 fc4ade4098c6c5851ad80da6a64426e7 pcmcia-cs-drivers-3.2.3.ebuild 4459
+MD5 eb6d8248e158cb5f9fd6bfd6f79fb410 pcmcia-cs-drivers-3.2.4.ebuild 4166
+MD5 acba3383b7c1022d0246fefeabe41557 pcmcia-cs-drivers-3.2.3.ebuild 4459
 MD5 85190d9039d8f1a6712f82b22f3d53cc ChangeLog 1606
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 8c814c1d24b600cfaa48cd9a669d0143 files/ppc.config.opts 228
