@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.69 2004/02/08 21:17:29 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.70 2004/02/09 16:47:18 gustavoz Exp $
+
+  09 Feb 2004; <gustavoz@gentoo.org> libxml2-2.6.4.ebuild:
+  stable on hppa and sparc
 
   08 Feb 2004; <spider@gentoo.org> libxml2-2.6.4.ebuild:
   x86 stable
