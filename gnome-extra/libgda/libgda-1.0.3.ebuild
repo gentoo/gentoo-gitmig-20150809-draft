@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.0.3.ebuild,v 1.3 2004/02/22 14:43:10 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.0.3.ebuild,v 1.4 2004/04/01 11:52:42 leonardop Exp $
 
 inherit gnome2
 
@@ -42,6 +42,9 @@ MAKEOPTS="${MAKEOPTS} -j1"
 src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix ${S}/doc/Makefile.in
+	cd ${S}
+	# Fix libgda's manual source. See bug #46337.
+	epatch ${FILESDIR}/${P}-gtkdoc_fixes.patch
 }
 
 src_compile() {
