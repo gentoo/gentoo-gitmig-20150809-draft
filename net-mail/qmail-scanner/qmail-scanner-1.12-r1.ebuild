@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.12.ebuild,v 1.1 2002/06/10 21:11:19 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.12-r1.ebuild,v 1.1 2002/06/12 21:26:00 g2boojum Exp $
 
 DESCRIPTION="E-Mail virus scanner for qmail."
 HOMEPAGE="http://qmail-scanner.sourceforge.net"
@@ -10,7 +10,8 @@ DEPEND=">=sys-devel/perl-5.6.1-r1
         >=net-mail/f-prot-3.12a
         >=net-mail/maildrop-1.3.9
         >=dev-perl/DB_File-1.803
-        >=net-mail/qmail-1.03-r8"
+        >=net-mail/qmail-1.03-r8
+		>=app-arch/unzip-5.42-r1"
 
 #RDEPEND=""
 
@@ -19,14 +20,12 @@ SRC_URI="http://dl.sourceforge.net/qmail-scanner/${P}.tgz"
 S=${WORKDIR}/${P}
 
 src_compile () {
-    # Do nothing
-    echo
-}
-
-src_install () {
     yes | PATH=${PATH}:/opt/f-prot ./configure \
         --domain localhost \
            || die "./configure failed!"
+}
+
+src_install () {
 
     # Create Directory Structure
     diropts -m 755 -o qmailq -g qmail
@@ -64,9 +63,9 @@ pkg_postinst () {
     /var/qmail/bin/qmail-scanner-queue.pl -z
     /var/qmail/bin/qmail-scanner-queue.pl -g
 
-    echo
-    echo "NOTICE:"
-    echo "Set QMAILQUEUE=/var/qmail/bin/qmail-scanner-queue.pl"
-    echo "in your /etc/tcp.smtp file to activate qmail-scanner."
-    echo
+    einfo
+    einfo "NOTICE:"
+    einfo "Set QMAILQUEUE=/var/qmail/bin/qmail-scanner-queue.pl"
+    einfo "in your /etc/tcp.smtp file to activate qmail-scanner."
+    einfo
 }
