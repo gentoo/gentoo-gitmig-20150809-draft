@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.5-r2.ebuild,v 1.3 2005/01/01 17:46:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.5-r2.ebuild,v 1.4 2005/03/11 03:15:16 latexer Exp $
 
 inherit mono
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND=">=dev-dotnet/mono-1.0
+DEPEND=">=dev-lang/mono-1.0
 	>=dev-dotnet/gtk-sharp-1.0
 	net-www/mozilla"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/winelib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/ChangeLog,v 1.8 2005/01/01 17:50:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/ChangeLog,v 1.9 2005/03/11 03:16:48 latexer Exp $
+
+  10 Mar 2005; Peter Johanson <latexer@gentoo.org> winelib-0.3-r1.ebuild,
+  winelib-0.3.ebuild:
+  mono moved from dev-dotnet -> dev-lang
 
 *winelib-0.3-r1 (30 Jun 2004)
 

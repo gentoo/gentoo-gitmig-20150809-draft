@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.10.ebuild,v 1.4 2005/01/01 17:49:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.10.ebuild,v 1.5 2005/03/11 03:16:25 latexer Exp $
 
 DESCRIPTION="Portable. NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64"
 IUSE=""
 
 DEPEND=">=dev-util/treecc-0.3.0
-	!dev-dotnet/mono"
+	!dev-lang/mono"
 
 src_install() {
 	einstall || die
@@ -22,8 +22,8 @@ src_install() {
 	dohtml doc/*.html
 
 	# init script
-	exeinto /etc/init.d ; newexe ${PORTDIR}/dev-dotnet/mono/files/dotnet.init dotnet
-	insinto /etc/conf.d ; newins ${PORTDIR}/dev-dotnet/mono/files/dotnet.conf dotnet
+	exeinto /etc/init.d ; newexe ${PORTDIR}/dev-lang/mono/files/dotnet.init dotnet
+	insinto /etc/conf.d ; newins ${PORTDIR}/dev-lang/mono/files/dotnet.conf dotnet
 }
 
 pkg_postinst() {

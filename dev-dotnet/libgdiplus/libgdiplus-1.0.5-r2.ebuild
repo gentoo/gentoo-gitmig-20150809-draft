@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.0.5-r2.ebuild,v 1.1 2005/01/29 20:01:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.0.5-r2.ebuild,v 1.2 2005/03/11 03:16:04 latexer Exp $
 
 inherit libtool eutils
 
@@ -23,7 +23,7 @@ DEPEND="sys-devel/libtool
 		jpeg? ( media-libs/jpeg )
 		png? ( media-libs/libpng )"
 
-RDEPEND=">=dev-dotnet/mono-${PV}"
+RDEPEND=">=dev-lang/mono-${PV}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gtkgl-sharp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkgl-sharp/ChangeLog,v 1.5 2005/01/01 17:47:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkgl-sharp/ChangeLog,v 1.6 2005/03/11 03:14:54 latexer Exp $
+
+  10 Mar 2005; Peter Johanson <latexer@gentoo.org> gtkgl-sharp-0.05.ebuild:
+  mono moved from dev-dotnet -> dev-lang
 
   26 Oct 2004; <peter@gentoo.org> gtkgl-sharp-0.05.ebuild:
   Move gtk-sharp dep from x11-libs -> dev-dotnet

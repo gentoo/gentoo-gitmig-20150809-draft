@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.23 2005/02/06 16:03:29 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.24 2005/03/11 03:16:25 latexer Exp $
+
+  10 Mar 2005; Peter Johanson <latexer@gentoo.org> pnet-0.6.10.ebuild,
+  pnet-0.6.12.ebuild:
+  mono moved from dev-dotnet -> dev-lang
 
   06 Feb 2005; Rainer Groesslinger <scandium@gentoo.org> pnet-0.6.12.ebuild:
   fix use of DESTDIR (bug #80941)

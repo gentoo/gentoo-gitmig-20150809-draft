@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.12.ebuild,v 1.4 2005/02/06 16:03:29 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.12.ebuild,v 1.5 2005/03/11 03:16:25 latexer Exp $
 
 DESCRIPTION="Portable.NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 
-	# Rename file names conflicting with dev-dotnet/mono
+	# Rename file names conflicting with dev-lang/mono
 	# This should be removed again once we have 'dotnet-config'
 	# bug 39369
 	mv ${D}/usr/bin/al ${D}/usr/bin/al.pnet
@@ -44,8 +44,8 @@ src_install() {
 	dohtml doc/*.html
 
 	# init script
-	exeinto /etc/init.d ; newexe ${PORTDIR}/dev-dotnet/mono/files/dotnet.init dotnet
-	insinto /etc/conf.d ; newins ${PORTDIR}/dev-dotnet/mono/files/dotnet.conf dotnet
+	exeinto /etc/init.d ; newexe ${PORTDIR}/dev-lang/mono/files/dotnet.init dotnet
+	insinto /etc/conf.d ; newins ${PORTDIR}/dev-lang/mono/files/dotnet.conf dotnet
 }
 
 pkg_postinst() {
