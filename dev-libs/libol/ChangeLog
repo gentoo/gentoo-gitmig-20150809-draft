@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libol
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.7 2002/10/24 18:58:46 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.8 2002/10/25 17:33:41 woodchip Exp $
+
+*libol-0.2.23 (25 Oct 2002)
+
+  25 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Arrgh.  This is the *stable version of libol, and according to our friends on
+  #9278, the only branch currently with working UDP/TCP support.  I've marked the
+  development versions with ~, and this one stable :/
 
 *libol-0.3.5 (23 Oct 2002)
 
