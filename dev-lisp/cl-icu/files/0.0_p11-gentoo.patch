@@ -1,0 +1,40 @@
+diff -ur cl-icu--dev--0.0--patch-11.orig/src/calendar.lisp cl-icu--dev--0.0--patch-11/src/calendar.lisp
+--- cl-icu--dev--0.0--patch-11.orig/src/calendar.lisp	2004-12-28 17:49:51.000000000 -0600
++++ cl-icu--dev--0.0--patch-11/src/calendar.lisp	2005-01-11 09:50:02.000000000 -0600
+@@ -49,7 +49,7 @@
+   (make-date (ucal-getnow)))
+ 
+ (defmethod make-date ((millis number))
+-  (make-date (coerce 'double-float millis)))
++  (make-date (coerce millis 'double-float)))
+ 
+ (defmethod make-date ((millis double-float))
+   (make-instance 'date :uobject millis))
+diff -ur cl-icu--dev--0.0--patch-11.orig/src/init-icu.lisp cl-icu--dev--0.0--patch-11/src/init-icu.lisp
+--- cl-icu--dev--0.0--patch-11.orig/src/init-icu.lisp	2004-12-28 17:49:51.000000000 -0600
++++ cl-icu--dev--0.0--patch-11/src/init-icu.lisp	2005-01-11 09:47:49.000000000 -0600
+@@ -14,7 +14,7 @@
+   "The namse of the libraries we need to load for ICU support.")
+ 
+ ;; the output of 'icu-config --ldflags-searchpath'
+-(defvar *icu-lib-install-dir* "/home/baringer/ucw/icu/binary/lib/"
++(defvar *icu-lib-install-dir* "/usr/lib/"
+   "The directory where the ICU libraries can be found.")
+ 
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+diff -ur cl-icu--dev--0.0--patch-11.orig/src/locale.lisp cl-icu--dev--0.0--patch-11/src/locale.lisp
+--- cl-icu--dev--0.0--patch-11.orig/src/locale.lisp	2004-12-28 17:49:51.000000000 -0600
++++ cl-icu--dev--0.0--patch-11/src/locale.lisp	2005-01-11 09:51:15.000000000 -0600
+@@ -11,11 +11,7 @@
+ 
+ (defun make-locale (id)
+   (make-instance 'locale
+-                 :uobject (convert-to-foreign-string (typecase id
+-                                                       (simple-string id)
+-                                                       (string (map-into (make-string (length id))
+-                                                                         #'identity
+-                                                                         id))))))
++                 :uobject id))
+ 
+ (defun default-locale ()
+   (make-instance 'locale :uobject (uloc-getDefault)))

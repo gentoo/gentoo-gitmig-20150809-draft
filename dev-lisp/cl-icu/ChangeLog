@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-icu
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-icu/ChangeLog,v 1.1 2005/01/11 16:53:53 mkennedy Exp $
+
+*cl-icu-0.0_p11 (11 Jan 2005)
+
+  11 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +files/0.0_p11-gentoo.patch, +cl-icu-0.0_p11.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
