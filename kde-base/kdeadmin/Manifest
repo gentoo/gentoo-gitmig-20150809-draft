@@ -1,4 +1,5 @@
 MD5 d727d206ddd8b2778cf4d2f437f6858d kdeadmin-3.1.4.ebuild 1386
+MD5 d7c75a6f37872dabdf0773415de93c16 kdeadmin-3.2.0_rc1.ebuild 1048
 MD5 b2bdd0b01b78395be6bcb5d5af6a4d4b kdeadmin-3.0.5b.ebuild 791
 MD5 4b814e1828f9b286c828e94bec18aca7 kdeadmin-3.2.0_beta1.ebuild 1243
 MD5 9451fa715374ab69819d76ba9057ae92 kdeadmin-3.1.5.ebuild 1388
@@ -14,4 +15,5 @@ MD5 9d9790e505ef8279e0aa0b2ab12e7330 files/digest-kdeadmin-3.1.2 68
 MD5 8227cd79fb23631f6457559bb65559a6 files/digest-kdeadmin-3.1.4 68
 MD5 89f969232ae263ab1480a42928ebf694 files/digest-kdeadmin-3.1.5 68
 MD5 e741759e72657c73057f606db0adc641 files/kdeadmin-qt311-gentoo.diff 608
+MD5 be64d061dbf92295abc10a78374ca566 files/digest-kdeadmin-3.2.0_rc1 69
 MD5 b48f8a01e6d8bc732551640dbae3fcba files/digest-kdeadmin-3.0.5b 69
