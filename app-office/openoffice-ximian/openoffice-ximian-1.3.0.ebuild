@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.0.ebuild,v 1.5 2004/08/21 19:34:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.0.ebuild,v 1.6 2004/08/22 20:39:47 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -41,6 +41,7 @@ S="${WORKDIR}/oo_${OO_VER}_src"
 DESCRIPTION="Ximian-ized version of OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}_source.tar.gz
 	http://ooo.ximian.com/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
+	mirror://gentoo/OOo-gentoo-splash-1.1.tar.bz2
 	ooo-kde? ( http://kde.openoffice.org/files/${KDE_ICON_PATH}/ooo-KDE_icons-${KDE_ICON_VER}.tar.gz )
 	!ooo-kde? ( http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz )"
 
@@ -238,6 +239,9 @@ src_unpack() {
 	rm stlport/STLport-4.5.3.patch
 	epatch ${FILESDIR}/${OO_VER}/newstlportfix.patch
 
+	#Add our own splash screen
+	epatch ${FILESDIR}/${OO_VER}/gentoo-splash.diff
+
 	if use ooo-kde; then
 		DISTRO=KDE
 		ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
@@ -256,7 +260,7 @@ src_unpack() {
 	cp -avf ${ICONDIR}/* ${S}
 
 	einfo "Copying splash screens in place"
-	cp ${PATCHDIR}/src/open*.bmp ${S}/offmgr/res/
+	cp ${WORKDIR}/gentoo-splash/open*.bmp ${S}/offmgr/res/
 
 	einfo "Munging font mappings ..."
 	${PATCHDIR}/bin/font-munge ${S}/officecfg/registry/data/org/openoffice/VCL.xcu
@@ -283,9 +287,6 @@ src_unpack() {
 		${S}/solenv/inc/unxlngi4.mk
 	perl -pi -e "s|^CFLAGSCXX=.*|CFLAGSCXX=${CXXFLAGS}|g" \
 		${S}/solenv/inc/unxlngi4.mk
-
-	#Do our own branding by setting gentoo linux as the vendor
-	sed -i -e "s,\(//\)\(.*\)\(my company\),\2Gentoo Linux," ${S}/offmgr/source/offapp/intro/ooo.src
 }
 
 get_EnvSet() {

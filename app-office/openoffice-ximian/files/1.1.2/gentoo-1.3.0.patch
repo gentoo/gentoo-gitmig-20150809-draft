@@ -4,7 +4,7 @@
  NLD  : NovellBase, NLDOnly
  PLD  : PLDOnly, LinuxCommon, KDECommon, GlobalDesktopFiles, NonDebianCommon
  KDE  : LinuxCommon, KDEOnly
-+Gentoo : LinuxCommon, GnomeVFS, GlobalDesktopFiles, NonDebianCommon, NovellOnly, NLDOnly
++Gentoo : LinuxCommon, GnomeVFS, GlobalDesktopFiles, NonDebianCommon, NovellOnly
  
  # Odd one, very few patches:
  Ark : ArkOnly, LinuxCommon, GlobalDesktopFiles, ODKFixes, VBABits
