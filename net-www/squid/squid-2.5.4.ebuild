@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.4.ebuild,v 1.2 2003/10/18 18:46:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.4.ebuild,v 1.3 2003/11/02 19:10:34 woodchip Exp $
 
 IUSE="pam ldap ssl sasl snmp debug"
 
@@ -25,27 +25,30 @@ RDEPEND="virtual/glibc
 	sasl? ( >=dev-libs/cyrus-sasl-1.5.27 )"
 DEPEND="${RDEPEND} dev-lang/perl"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
 SLOT="0"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${A} || die
+	cd ${S} || die
 	#patch up to 2.5.STABLE4
-	epatch ../diff-2.5.STABLE3-2.5.STABLE4 || die
+	patch -p1 <../diff-2.5.STABLE3-2.5.STABLE4 || die
 
 	#do NOT just remove this patch.  yes, it's here for a reason.
 	#woodchip@gentoo.org (07 Nov 2002)
-	epatch ${FILESDIR}/squid-2.5.3-gentoo.diff || die
+	patch -p1 <${FILESDIR}/squid-2.5.3-gentoo.diff || die
 
 	#hmm #10865
 	cd helpers/external_acl/ldap_group
-	sed -i 's%^\(LINK =.*\)\(-o.*\)%\1\$(XTRA_LIBS) \2%' Makefile.in
+	cp Makefile.in Makefile.in.orig
+	sed -e 's%^\(LINK =.*\)\(-o.*\)%\1\$(XTRA_LIBS) \2%' \
+		Makefile.in.orig > Makefile.in
 
 	if [ -z "`use debug`" ]
 	then
 		cd ${S}
-		sed -i 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in
+		mv configure.in configure.in.orig
+		sed -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in.orig > configure.in
 		autoconf || die
 	fi
 }
@@ -65,7 +68,9 @@ src_compile() {
 				-e "s:NULL, NULL, NULL:NULL, NULL, NULL, NULL, NULL:" \
 				-e "s:strlen(password), \&errstr:strlen(password):" \
 				< sasl_auth.c.orig > sasl_auth.c
-			sed -i "s:-lsasl:-lsasl2:" Makefile.in
+			cp Makefile.in Makefile.in.orig
+			sed -e "s:-lsasl:-lsasl2:" \
+				< Makefile.in.orig > Makefile.in
 			cd ${S}
 		fi
 	fi
@@ -110,13 +115,15 @@ src_compile() {
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 		#--enable-icmp
 
-	sed -i "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 4096:" \
-		include/autoconf.h
+	mv include/autoconf.h include/autoconf.h.orig
+	sed -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 4096:" \
+		include/autoconf.h.orig > include/autoconf.h
 
 	if [ "${ARCH}" = "hppa" ]
 	then
-		sed -i "s:^#define HAVE_MALLOPT 1:#undef HAVE_MALLOPT:" \
-			include/autoconf.h
+		mv include/autoconf.h include/autoconf.h.orig
+		sed -e "s:^#define HAVE_MALLOPT 1:#undef HAVE_MALLOPT:" \
+			include/autoconf.h.orig > include/autoconf.h
 	fi
 
 	emake || die "compile problem"
