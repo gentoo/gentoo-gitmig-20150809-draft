@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.1-r3.ebuild,v 1.4 2002/06/30 22:04:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.1-r3.ebuild,v 1.5 2002/07/01 16:54:27 seemant Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mcrypt.hellug.gr/"
 
 DEPEND="virtual/glibc
 	>=sys-devel/automake-1.6.1
-	>=libtool-1.4.1-r8"
+	>=sys-devel/libtool-1.4.1-r8"
 RDEPEND="virtual/glibc"
 SLOT="0"
 LICENSE="GPL-2"
