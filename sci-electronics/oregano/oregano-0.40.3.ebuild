@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.3.ebuild,v 1.1 2005/02/02 15:55:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.3.ebuild,v 1.2 2005/02/24 19:36:00 gustavoz Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Oregano is an application for schematic capture and simulation of e
 SRC_URI="http://gforge.lug.fi.uba.ar/frs/download.php/56/${P}.tar.bz2"
 HOMEPAGE="http://oregano.gforge.lug.fi.uba.ar/"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 LICENSE="GPL-2"
 IUSE=""
 
