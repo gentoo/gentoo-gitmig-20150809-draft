@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.8 2003/12/28 14:59:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.9 2004/01/03 13:51:48 caleb Exp $
 inherit kde
 
 need-autoconf 2.5
@@ -24,7 +24,7 @@ DEPEND="app-arch/bzip2
 	dev-libs/libpcre
 	dev-libs/libxml2
 	ssl? ( dev-libs/openssl )
-	alsa? ( media-libs/alsa-lib virtual/alsa )
+	alsa? ( <=media-libs/alsa-lib-0.9.8 virtual/alsa )
 	cups? ( net-print/cups )
 	ldap? ( net-nds/openldap )
 	media-libs/tiff
