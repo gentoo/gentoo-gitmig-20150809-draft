@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libelf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.11 2004/06/24 23:16:08 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.12 2005/02/09 19:42:28 vapier Exp $
+
+*libelf-0.8.5 (09 Feb 2005)
+
+  09 Feb 2005; Mike Frysinger <vapier@gentoo.org> +libelf-0.8.5.ebuild:
+  Version bump.
 
   14 Nov 2003; Brad House <brad_mssw@gentoo.org> libelf-0.8.4.ebuild:
   add ~amd64 flag
