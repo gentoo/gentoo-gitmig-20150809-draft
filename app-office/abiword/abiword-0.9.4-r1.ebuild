@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.9.4-r1.ebuild,v 1.2 2001/10/29 18:23:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.9.4-r1.ebuild,v 1.3 2001/10/30 01:48:35 lordjoe Exp $
 
 S=${WORKDIR}/${P}/abi
 DESCRIPTION="Text processor"
@@ -65,7 +65,7 @@ src_install() {
 		localstatedir=${D}/var/lib	\
 		install || die
 	
-	cp ${D}/usr/bin/AbiWord ${WORKDIR}AbiWord.orig
+	cp ${D}/usr/bin/AbiWord ${WORKDIR}/AbiWord.orig
 	sed -e "s:${D}::" ${WORKDIR}/AbiWord.orig > ${D}/usr/bin/AbiWord
 	
 	rm -f ${D}/usr/bin/abiword
