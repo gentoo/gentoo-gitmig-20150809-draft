@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.23 2004/02/18 11:52:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.24 2004/03/30 01:17:01 pylon Exp $
+
+  30 Mar 2004; Lars Weiler <pylon@gentoo.org> mgetty-1.1.30.ebuild:
+  Masked ~ppc on user report
 
   18 Feb 2004; Guy Martin <gmsoft@gentoo.org> mgetty-1.1.30.ebuild :
   Marked stable on hppa.
