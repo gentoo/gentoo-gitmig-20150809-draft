@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.6 2004/10/07 02:28:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.7 2004/10/17 20:12:46 eradicator Exp $
 
 #unknowns
 afs
@@ -51,6 +51,7 @@ mmx2
 sse
 sse2
 3dnow
+3dnowex
 
 # 2004/06/22 - Taken from 2004.0 profile
 # Chris PeBenito <pebenito@gentoo.org>

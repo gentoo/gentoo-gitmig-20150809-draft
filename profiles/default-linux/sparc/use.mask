@@ -1,11 +1,12 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.5 2004/10/01 22:07:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.6 2004/10/17 20:12:46 eradicator Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
 3dfx
 3dnow
+3dnowex
 acpi
 afs
 alsa
