@@ -1,4 +1,6 @@
+MD5 ca390fb1bcf3724cc9d4e0303cf9fb23 ChangeLog 651
 MD5 24bad069581df1822f1fbdfd123dc6cf Proc-ProcessTable-0.38.ebuild 638
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b1ea386fbe1fd46f655b7eadeb41a47d ChangeLog 498
+MD5 b0f76cd458620d1172565aee15c04935 Proc-ProcessTable-0.39.ebuild 576
 MD5 8f3a80eceaad6648f9376d3018a1ff57 files/digest-Proc-ProcessTable-0.38 73
+MD5 61788da53bd4f64bcb1c7a6ba1bb3d10 files/digest-Proc-ProcessTable-0.39 73
