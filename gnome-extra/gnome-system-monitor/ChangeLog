@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.4 2002/07/25 04:42:17 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.5 2002/08/10 01:55:56 spider Exp $
+
+*gnome-system-monitor-2.0.1 (10 Aug 2002)
+  10 Aug 2002; Spider <spider@gentoo.org> gnome-system-monitor-2.0.1.ebuild :
+  new version, dep change
 
 gnome-system-monitor-2.0.0-r1 (22 Jun 2002)
   25 Jul 2002; Spider <spider@gentoo.org> :
