@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/SNMP_Session
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.2 2002/05/06 15:44:11 seemant Exp $
+
+*SNMP_Session-0.92 (6 May 2002)
+
+  6 May 2002; Seemant Kulleen <seemant@gentoo.org> SNMP-Session-0.92.ebuild
+  files/digest-SNMP-Session-0.92 :
+
+  Version bump and conversion to eclass.
 
 *SNMP_Session-0.83 (1 Feb 2002)
 
