@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/quanta-docs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.4 2003/11/30 14:44:46 caleb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.5 2004/02/18 18:00:13 absinthe Exp $
+
+  18 Feb 2004; Dylan Carlson <absinthe@gentoo.org> quanta-docs-1.0.ebuild,
+  quanta-docs-20030405.ebuild:
+  added amd64 keyword.
 
 *quanta-docs-20030405 (30 Nov 2003)
 
