@@ -1,0 +1,8 @@
+# ChangeLog for dev-tcltk/tkXwin
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.1 2003/02/02 03:31:04 agenkin Exp $
+
+*tkXwin-1.0 (01 Feb 2003)
+
+  01 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Initial version of the package.
