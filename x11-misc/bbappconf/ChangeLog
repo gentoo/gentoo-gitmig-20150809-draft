@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/bbappconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/ChangeLog,v 1.3 2002/12/09 04:41:50 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/ChangeLog,v 1.4 2002/12/12 22:41:38 mkeadle Exp $
+
+*bbappconf-0.0.2 (12 Dec 2002)
+
+  12 Dec 2002; Matt Keadle <mkeadle@gentoo.org> bbappconf-0.0.2.ebuild
+  files/digest-bbappconf-0.0.2
+
+  Bump to latest version. No longer requires patch to build with 
+  gcc 3.x
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
