@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.1 2003/08/06 09:08:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.2 2003/08/06 09:14:49 robbat2 Exp $
 
 IUSE="mysql ipalias"
 
@@ -127,13 +127,18 @@ src_install () {
 
 	# Create symlink in /usr/bin for executables
 	dodir /usr/bin/
-	for item in ${D}${VPOP_HOME}/bin/*; do dosym ${VPOP_HOME}/bin/${item} usr/bin/${item} ; done
+	einfo "Creating symlinks in /usr/bin"
+	for item in `ls -1 ${D}${VPOP_HOME}/bin`; do 
+		dosym ${VPOP_HOME}bin/${item} /usr/bin/${item} ; 
+	done
 
+	einfo "Locking down vpopmail permissions"
 	# secure things more, i don't want the vpopmail user being able to write this stuff!
 	fowner -R root.root ${VPOP_HOME}/{bin,etc,include}
 
 	# Create /etc/vpopmail.conf
 	if use mysql; then
+		einfo "Installing vpopmail mysql configuration file"
 		dodir /etc 
 		insinto /etc 
 		doins ${FILESDIR}/vpopmail.conf 
@@ -141,6 +146,7 @@ src_install () {
 	fi
 
 	# Install a proper cronjob instead of the old nastiness
+	einfo "Installing cronjob"
 	dodir /etc/cron.hourly
 	insinto /etc/cron.hourly
 	doins ${FILESDIR}/vpopmail.clearopensmtp
