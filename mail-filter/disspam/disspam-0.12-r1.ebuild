@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/disspam-0.12-r1.ebuild,v 1.2 2005/01/05 20:53:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/disspam-0.12-r1.ebuild,v 1.3 2005/02/07 06:56:12 ticho Exp $
 
 inherit eutils versionator
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.topfx.com/dist/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~hppa ~alpha ~mips"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.1
