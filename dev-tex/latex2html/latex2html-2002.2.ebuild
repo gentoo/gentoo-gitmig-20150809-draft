@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.ebuild,v 1.5 2004/02/09 08:24:49 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.ebuild,v 1.6 2004/04/26 01:43:47 agriffis Exp $
 
 MY_P=${P/./-}
 S=${WORKDIR}/${MY_P}
@@ -39,7 +39,7 @@ src_compile() {
 		--enable-paths \
 		--enable-wrapper"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	make || die
 	make check || die
 }
