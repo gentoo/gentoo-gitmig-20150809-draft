@@ -1,0 +1,11 @@
+--- src/eazel-theme-draw.c.old	2004-09-15 12:19:55.430300512 +0200
++++ src/eazel-theme-draw.c	2004-09-15 12:20:29.631101200 +0200
+@@ -1980,7 +1980,7 @@
+ 		    : EAZEL_ENGINE_TAB_TOP);
+ 	    break;
+ 
+-	default:			/* gcc drugging */
++	default:;			/* gcc drugging */
+ 	}
+ 	paint_background_area (style, window, state_type, area,
+ 			       x, y, width, height);

@@ -1,6 +1,15 @@
-MD5 b78524604a96fa02012c1f8c00e8ab8d gtk-engines-eazel-0.3-r1.ebuild 723
-MD5 d4f1efdad47c56d7fc2aab6aa947794a gtk-engines-eazel-0.3.ebuild 558
-MD5 7e28a4b5cc1d82d126ac178b1a4770ab ChangeLog 949
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f0ad2b1279fb3875c08d81aa8a86f96f ChangeLog 1195
+MD5 9d7a7e278f9518981e22ca330e9863ae gtk-engines-eazel-0.3-r1.ebuild 761
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 58775b48022699b0b61d243f0acffe19 files/digest-gtk-engines-eazel-0.3-r1 73
-MD5 58775b48022699b0b61d243f0acffe19 files/digest-gtk-engines-eazel-0.3 73
+MD5 45567ec196f867e6e9446ad117c495c5 files/gtk-engines-eazel-0.3-gcc34.patch 359
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcwXYRkyva5PS18kRAgYWAJ9fzplSx3Ws2EgGlukVX/yWqTRbTQCfTzQa
+sBQ3H16kEnEd1Ny1JsXfqYk=
+=ug19
+-----END PGP SIGNATURE-----

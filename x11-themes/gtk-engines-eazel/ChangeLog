@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gtk-engines-eazel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-eazel/ChangeLog,v 1.8 2004/07/09 21:37:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-eazel/ChangeLog,v 1.9 2004/10/17 23:52:11 liquidx Exp $
+
+  18 Oct 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/gtk-engines-eazel-0.3-gcc34.patch, gtk-engines-eazel-0.3-r1.ebuild,
+  -gtk-engines-eazel-0.3.ebuild:
+  added gcc3.4 patch thanks to Sebastian Dr√∂ge <sebastian.droege@gmx.de>
+  (#64109)
 
   09 Jul 2004; Bryan ÿstergaard <kloeri@gentoo.org>
   gtk-engines-eazel-0.3-r1.ebuild:
