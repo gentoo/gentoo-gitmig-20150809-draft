@@ -54,6 +54,7 @@ import string,os
 from commands import *
 import md5
 from stat import *
+import fchksum,types
 
 # parsever:
 # This function accepts an 'inter-period chunk' such as
@@ -72,6 +73,10 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-irc", "net-libs", "net-mail", "net-misc", "net-nds", 
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm")
+
+def isdev(x):
+	mymode=os.stat(x)[ST_MODE]
+	return ( S_ISCHR(mymode) or S_ISBLK(mymode))
 
 def isfifo(x):
 	mymode=os.stat(x)[ST_MODE]
@@ -121,25 +126,11 @@ def movefile(src,dest):
     #unlink src
     return 1
 
-def md5digest(x):
-    hexmap=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
-    m=md5.new()
-    mydata=""
-    myfile=open(x)
-    while (1):
-        #do 256K reads for enhanced performance
-        mydata=myfile.read(262144)
-        if mydata=="":
-            break
-        m.update(mydata)
-    myfile.close()
-    asciidigest=""
-    for mydigit in m.digest():
-        asciidigest=asciidigest+hexmap[((ord(mydigit) & 0xf0) >> 4)]+hexmap[(ord(mydigit) & 0xf)]
-    return asciidigest
-
 def getmtime(x):
 	 return `os.lstat(x)[-2]`
+
+def md5(x):
+	return string.upper(fchksum.fmd5t(x)[0])
 
 def prepare_db(myroot,mycategory,mypackage):
     if not os.path.isdir(myroot+"var/db"):
@@ -155,6 +146,16 @@ def pathstrip(x,myroot,mystart):
     cpref=os.path.commonprefix([x,mystart])
     return [myroot+x[len(cpref)+1:],x[len(cpref):]]
 
+def pkgscript(x,myebuildfile):
+	myresult=getstatusoutput("/usr/bin/ebuild "+myebuildfile+" "+x)
+	if myresult[0] or myresult[1]:
+		print
+	if myresult[0]:
+		print "Error code from",pkgname,x,"script --",myresult[0]
+	if myresult[1]:
+		print "Output from",pkgname,x,"script:"
+		print
+		print myresult[1]
 
 def mergefiles(outfile,myroot,mystart):
 	mycurpath=os.getcwd()
@@ -190,7 +191,7 @@ def mergefiles(outfile,myroot,mystart):
 			mergefiles(outfile,myroot,mystart)
 			os.chdir(mywd)
 		elif os.path.isfile(x):
-			mymd5=md5digest(mycurpath+"/"+x)
+			mymd5=md5(mycurpath+"/"+x)
 			if movefile(x,pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
 				zing="<<<"
 			else:
@@ -219,6 +220,8 @@ def mergefiles(outfile,myroot,mystart):
 			outfile.write("dev "+floc[1]+"\n")
 
 def merge(myroot,mycategory,mypackage,mystart):
+	if myroot=="":
+		myroot="/"
 	mystart=os.path.normpath(mystart)
 	os.chdir(mystart)
 	print 
@@ -231,6 +234,134 @@ def merge(myroot,mycategory,mypackage,mystart):
 	print
 	print ">>>",mypackage,"merged."
 	print
+
+def unmerge(myroot,category,pkgname):
+	if myroot=="":
+		myroot="/"
+	if os.path.isdir(os.path.normpath(myroot+"var/db/pkg/"+category+"/"+pkgname)):
+		if myroot=="/":
+			print "Unmerging",pkgname+"..."
+		else:
+			print "Unmerging",pkgname,"from",myroot+"..."
+		print
+	else:
+		print pkgname,"not installed"
+		return
+	try:	
+		contents=open(os.path.normpath(myroot+"var/db/pkg/"+category+"/"+pkgname+"/CONTENTS"))
+	except:
+		print "Error -- could not open CONTENTS file for", pkgname+".  Aborting."
+		return	
+	pkgfiles={}
+	for line in contents.readlines():
+		mydat=string.split(line)
+		# we do this so we can remove from non-root filesystems
+		# (use the ROOT var to allow maintenance on other partitions)
+		mydat[1]=os.path.normpath(myroot+mydat[1][1:])
+		if mydat[0]=="obj":
+			#format: type, mtime, md5sum
+			pkgfiles[mydat[1]]=[mydat[0], mydat[3], mydat[2]]
+		elif mydat[0]=="dir":
+			#format: type
+			pkgfiles[mydat[1]]=[mydat[0] ]
+		elif mydat[0]=="sym":
+			#format: type, mtime, dest
+			pkgfiles[mydat[1]]=[mydat[0], mydat[4], mydat[3]]
+		elif mydat[0]=="dev":
+			#format: type
+			pkgfiles[mydat[1]]=[mydat[0] ]
+		elif mydat[0]=="fif":
+			#format: type
+			pkgfiles[mydat[1]]=[mydat[0]]
+		else:
+			print "Error -- CONTENTS file for", pkgname, "is corrupt."
+			print ">>> "+line
+			return 
+	# we don't want to automatically remove the ebuild file listed
+	# in the CONTENTS file.  We'll do after everything else has 
+	# completed successfully.
+	myebuildfile=os.path.normpath(myroot+"var/db/pkg/"+category+"/"+pkgname+"/"+pkgname+".ebuild")
+	if pkgfiles.has_key(myebuildfile):
+		del pkgfiles[myebuildfile]
+
+	mykeys=pkgfiles.keys()
+	mykeys.sort()
+	mykeys.reverse()
+	
+	#prerm script
+	pkgscript("prerm",myebuildfile)
+	
+	for obj in mykeys:
+		obj=os.path.normpath(obj)
+		if not os.path.islink(obj):
+			#we skip this if we're dealing with a symlink
+			#because os.path.exists() will operate on the
+			#link target rather than the link itself.
+			if not os.path.exists(obj):
+				print "--- !found", pkgfiles[obj][0], obj
+				continue
+		if (pkgfiles[obj][0] not in ("dir","fif","dev")) and (getmtime(obj) != pkgfiles[obj][1]):
+			print "--- !mtime", pkgfiles[obj][0], obj
+			continue
+		if pkgfiles[obj][0]=="dir":
+			if not os.path.isdir(obj):
+				print "--- !dir  ","dir", obj
+				continue
+			if os.listdir(obj):
+				print "--- !empty","dir", obj
+				continue
+			os.rmdir(obj)
+			print "<<<       ","dir",obj
+		elif pkgfiles[obj][0]=="sym":
+			if not os.path.islink(obj):
+				print "--- !sym  ","sym", obj
+				continue
+			mydest=os.readlink(obj)
+			if os.path.exists(os.path.normpath(myroot+mydest)):
+				if mydest != pkgfiles[obj][2]:
+					print "--- !destn","sym", obj
+					continue
+			os.unlink(obj)
+			print "<<<       ","sym",obj
+		elif pkgfiles[obj][0]=="obj":
+			if not os.path.isfile(obj):
+				print "--- !obj  ","obj", obj
+				continue
+			mymd5=md5(obj)
+			if mymd5 != string.upper(pkgfiles[obj][2]):
+				print "--- !md5  ","obj", obj
+				continue
+			os.unlink(obj)
+			print "<<<       ","obj",obj
+		elif pkgfiles[obj][0]=="fif":
+			if not isfifo(obj):
+				print "--- !fif  ","fif", obj
+				continue
+			os.unlink(obj)
+			print "<<<       ","fif",obj
+		elif pkgfiles[obj][0]=="dev":
+			if not isdev(obj):
+				print "--- !dev  ","dev", obj
+				continue
+			os.unlink(obj)
+			print "<<<       ","dev",obj
+
+	#postrm script
+	pkgscript("postrm",myebuildfile)	
+	#recursive cleanup
+	for thing in os.listdir(myroot+"var/db/pkg/"+category+"/"+pkgname):
+		os.unlink(myroot+"var/db/pkg/"+category+"/"+pkgname+"/"+thing)
+	os.rmdir(myroot+"var/db/pkg/"+category+"/"+pkgname)
+	print
+	if myroot=="/":
+		print pkgname,"unmerged."
+	else:
+		print pkgname,"unmerged from",myroot+"."
+
+def getenv(mykey):
+	if os.environ.has_key(mykey):
+		return os.environ[mykey]
+	return ""
 
 def getsetting(mykey,recdepth=0):
 	"""perform bash-like basic variable expansion, recognizing ${foo} and $bar"""
@@ -474,24 +605,31 @@ def ververify(myval):
 		return 0
 		#invalid number!
 
-def justname(mypkg):
+def isjustname(mypkg):
 	myparts=string.split(mypkg,'-')
 	for x in myparts:
 		if ververify(x):
 			return 0
 	return 1
 
+def isspecific(mypkg):
+	mysplit=string.split(mypkg,"/")
+	if len(mysplit)>1:
+		if not isjustname(mysplit[1]):
+			return 1
+	return 0
+
 #isinstalled will tell you if a package is installed.  Call as follows:
 # isinstalled("sys-apps/foo") will tell you if a package called foo (any
 # version) is installed.  isinstalled("sys-apps/foo-1.2") will tell you
-# if foo-1.2 (any version) is installed.
+# if foo-1.2 (that version) is installed.
 
 def isinstalled(mycatpkg):
 	mycatpkg=string.split(mycatpkg,"/")
 	if not os.path.isdir("/var/db/pkg/"+mycatpkg[0]):
 		return 0
 	mypkgs=os.listdir("/var/db/pkg/"+mycatpkg[0])
-	if justname(mycatpkg[1]):
+	if isjustname(mycatpkg[1]):
 		# only name specified
 		for x in mypkgs:
 			thispkgname=pkgsplit(x)[0]
@@ -504,6 +642,26 @@ def isinstalled(mycatpkg):
 				return 1
 	return 0
 
+def installedcmp(mycatpkg):
+	"""Compares specific mycatpkg ("cat/pkg-1.2") against installed package version.
+		Assumes that mycatpkg is already installed.  Make sure it is before calling this.
+		Returns 0 if mycatpkg is installed (exact version).  Returns a positive number if
+		an older version is installed, and returns a negative number if a newer version
+		is installed."""
+		
+	mycatpkg=string.split(mycatpkg,"/")
+	mypkgs=os.listdir("/var/db/pkg/"+mycatpkg[0])
+	mypkglist=[]
+	for x in mypkgs:
+		mysplit=pkgsplit(x)
+		if x:
+			mypkglist.append(mysplit)
+	mysplit=pkgsplit(mycatpkg[1])
+	for x in mypkglist:
+		if x[0]==mysplit[0]:
+			#same package
+			return pkgcmp(mysplit,x)
+	
 # This function can be used as a package verification function, i.e.
 # "pkgsplit("foo-1.2-1") will return None if foo-1.2-1 isn't a valid
 # package (with version) name.  If it is a valid name, pkgsplit will
@@ -584,7 +742,9 @@ def vercmp(val1,val2):
 				return myret
 	return 0
 
+
 def pkgcmp(pkg1,pkg2):
+	"""if returnval is less than zero, then pkg2 is newer than pkg2, zero if equal and positive if older."""
 	mycmp=vercmp(pkg1[1],pkg2[1])
 	if mycmp>0:
 		return 1
@@ -598,19 +758,183 @@ def pkgcmp(pkg1,pkg2):
 		return -1
 	return 0
 
-def pkgsame(pkg1,pkg2):
-	if (string.split(pkg1,'-')[0])==(string.split(pkg2,'-')[0]):
-		return 1
+def dep_depreduce(mypkgdep):
+	if mypkgdep[0]=="!":
+		if isinstalled(mypkgdep[1:]):
+			return 0
+		else:
+			return 1
+	elif mypkgdep[0]=="=":
+		if isspecific(mypkgdep[1:]):
+			if isinstalled(mypkgdep[1:]):
+				return 1
+			else:
+				return 0
+		else:
+			return None
+	elif mypkgdep[0:2]==">=":
+		if not isspecific(mypkgdep[2:]):
+			return None
+		if installedcmp(mypkgdep[2:])<=0:
+			return 1
+		else:
+			return 0
+	elif mypkgdep[0:2]=="<=":
+		if not isspecific(mypkgdep[2:]):
+			return None
+		if installedcmp(mypkgdep[2:])>=0:
+			return 1
+		else:
+			return 0
+	elif mypkgdep[0]=="<":
+		if not isspecific(mypkgdep[1:]):
+			return None
+		if installedcmp(mypkgdep[1:])>0:
+			return 1
+		else:
+			return 0
+	elif mypkgdep[0]==">":
+		if not isspecific(mypkgdep[1:]):
+			return None
+		if installedcmp(mypkgdep[1:])<0:
+			return 1
+		else:
+			return 0
+	if not isspecific(mypkgdep):
+		if isinstalled(mypkgdep):
+			return 1
+		else:
+			return 0
 	else:
+		return None
+		
+def dep_parenreduce(mysplit,mypos):
+	"Accepts a list of strings, and converts '(' and ')' surrounded items to sub-lists"
+	while (mypos<len(mysplit)): 
+		if (mysplit[mypos]=="("):
+			firstpos=mypos
+			mypos=mypos+1
+			while (mypos<len(mysplit)):
+				if mysplit[mypos]==")":
+					mysplit[firstpos:mypos+1]=[mysplit[firstpos+1:mypos]]
+					mypos=firstpos
+					break
+				elif mysplit[mypos]=="(":
+					#recurse
+					mysplit=dep_parenreduce(mysplit,mypos)
+				mypos=mypos+1
+		mypos=mypos+1
+	return mysplit
+
+def dep_opconvert(mysplit,myuse):
+	"Does dependency operator conversion, such as moving '||' inside a sub-list, etc."
+	mypos=0
+	while mypos<len(mysplit):
+		if type(mysplit[mypos])==types.ListType:
+			mysplit[mypos]=dep_opconvert(mysplit[mypos],myuse)
+		elif mysplit[mypos]==")":
+			#mismatched paren, error
+			return None
+		elif mysplit[mypos]=="||":
+			if (mypos+1)<len(mysplit):
+				if type(mysplit[mypos+1])!=types.ListType:
+					# || must be followed by paren'd list
+					return None
+				else:
+					mynew=dep_opconvert(mysplit[mypos+1],myuse)
+					mysplit[mypos+1]=mynew
+					mysplit[mypos+1][0:0]=["||"]
+					del mysplit[mypos]
+			else:
+				#don't end a depstring with || :)
+				return None
+		elif mysplit[mypos][-1]=="?":
+			#uses clause, i.e "gnome? ( foo bar )"
+			if (mysplit[mypos][:-1]) in myuse:
+				#if the package is installed, just delete the conditional
+				del mysplit[mypos]
+			else:
+				#the package isn't installed, delete conditional and next item
+				del mysplit[mypos]
+				del mysplit[mypos]
+		mypos=mypos+1
+	return mysplit
+
+def dep_wordreduce(deplist):
+	"""Calls dep_depreduce() on all the items in the deplist"""
+	mypos=0
+	while mypos<len(deplist):
+		if type(deplist[mypos])==types.ListType:
+			#recurse
+			deplist[mypos]=dep_wordreduce(deplist[mypos])
+		else:
+			if deplist[mypos]=="||":
+				pass
+			else:
+				mydep=dep_depreduce(deplist[mypos])
+				if mydep!=None:
+					deplist[mypos]=mydep
+				else:
+					#encountered invalid string
+					return None
+		mypos=mypos+1
+	return deplist
+
+def dep_eval(deplist):
+	if deplist[0]=="||":
+		#or list; we just need one "1"
+		for x in deplist[1:]:
+			if type(x)==types.ListType:
+				if dep_eval(x)==1:
+					return 1
+			elif x==1:
+				return 1
 		return 0
+	else:
+		for x in deplist:
+			if type(x)==types.ListType:
+				if dep_eval(x)==0:
+					return 0
+			elif x==0:
+				return 0
+		return 1
 
-def pkg(myname):
-        return string.split(myname,'-')[0]
+def dep_print(deplist):
+	"Prints out a deplist in a human-understandable format"
+	if deplist[0]=="||":
+		for x in deplist[1:-1]:
+			print x,"OR",
+		print deplist[-1]
+	else:
+		for x in deplist[:-1]:
+			print x,"AND",
+		print deplist[-1]
 
-def ver(myname):
-        a=string.split(myname,'-')
-        return myname[len(a[0])+1:]
-
+def dep_parse(depstring,myuse):
+	"Evaluates a dependency string"
+	myusesplit=string.split(myuse)
+	mysplit=string.split(depstring)
+	#convert parenthesis to sublists
+	mysplit=dep_parenreduce(mysplit,0)
+	#mysplit can't be None here, so we don't need to check
+	mysplit=dep_opconvert(mysplit,myusesplit)
+	#if mysplit==None, then we have a parse error (paren mismatch or misplaced ||)
+	if mysplit==None:
+		return [0,"Parse Error (parenthesis mismatch or || abuse?)"]
+	dep_print(mysplit)
+	mysplit2=dep_wordreduce(mysplit)
+	if mysplit2==None:
+		return [0,"Invalid token"]
+	myeval=dep_eval(mysplit2)
+	if myeval:
+		return [1,None]
+	else:
+		#create list of failed dependencies
+		myreturn=[]
 
 configdefaults=getconfig("/etc/make.defaults")
 configsettings=getconfig("/etc/make.conf")
+"""print "first"
+dep_parse(">=net-misc/openssh-2.2.0 >=sys-libs/slang-1.4.2","foo")
+print "second"
+dep_print("=sys-libs/pam-0.72-r1 bar/foo || ( sys-libs/zlib foo/bar )")"""

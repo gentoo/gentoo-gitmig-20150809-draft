@@ -565,19 +565,13 @@ dyn_merge() {
 
 dyn_unmerge() {
     trap "" SIGINT SIGQUIT
-    #stub unmerge function for now
-    cd ${BUILDDIR}
-    /usr/sbin/portage-unmerge ${PF}
-    if [ $? -ne 0 ]
-    then
-	exit
-    fi
+    #/usr/sbin/portage-unmerge ${PF}
+    dopython portage.unmerge $ROOT $CATEGORY $PF
     trap SIGINT_SIGQUIT
 }
 
 
 dyn_spec() {
-    
     tar czf /usr/src/redhat/SOURCES/${PF}.tar.gz ${O}/${PF}.ebuild ${O}/files
 
     cat <<__END1__ > ${PF}.spec

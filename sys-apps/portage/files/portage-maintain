@@ -53,6 +53,8 @@ for x in mylines:
 	if x[:2]!="./":
 		continue
 	myline=string.split(string.strip(x)[2:-7],"/")
+	if len(myline)!=3:
+		continue
 	mysplit=portage.pkgsplit(myline[2])
 	mykey=myline[0]+"/"+myline[1]
 	if not currentdict.has_key(mykey):
