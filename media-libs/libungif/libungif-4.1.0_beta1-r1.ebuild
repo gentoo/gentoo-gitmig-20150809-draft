@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0b1-r1.ebuild,v 1.2 2000/08/16 04:38:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0_beta1-r1.ebuild,v 1.1 2000/08/16 16:45:45 achim Exp $
 
 P=libungif-4.1.0b1
 A=${P}.tar.gz
