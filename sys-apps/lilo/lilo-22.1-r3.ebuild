@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.13 2002/12/09 04:37:25 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.14 2003/01/06 09:06:29 seemant Exp $
 
 inherit mount-boot
 
@@ -8,12 +8,14 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/boot/lilo/${P}.tar.gz"
 HOMEPAGE="http://brun.dyndns.org/pub/linux/lilo/"
-KEYWORDS="x86 -ppc -sparc "
+
 SLOT="0"
 LICENSE="BSD"
-DEPEND="virtual/glibc >=sys-devel/bin86-0.15.5"
+KEYWORDS="x86 -ppc -sparc "
 
-RDEPEND="virtual/glibc"
+DEPEND=">=sys-devel/bin86-0.15.5"
+
+PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	unpack ${A}
