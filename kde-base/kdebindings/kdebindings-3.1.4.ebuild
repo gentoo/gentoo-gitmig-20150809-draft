@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.4.ebuild,v 1.3 2003/09/30 13:08:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.4.ebuild,v 1.4 2003/11/01 15:10:03 caleb Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist
 
@@ -18,7 +18,7 @@ newdepend "=kde-base/kdebase-${PV}*
 	mozilla? ( net-www/mozilla )"
 
 use python									|| myconf="$myconf --without-python"
-use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
+use java	&& myconf="$myconf --with-java=`java-config --jdk-home`"	|| myconf="$myconf --without-java"
 
 # obj bindings are officially broken
 #myconf="$myconf --enable-objc"
