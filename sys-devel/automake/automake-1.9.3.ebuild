@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.3.ebuild,v 1.4 2004/12/11 02:10:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.3.ebuild,v 1.5 2005/01/04 02:37:48 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -13,9 +13,10 @@ SLOT="${PV:0:3}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="uclibc"
 
-DEPEND="dev-lang/perl
+RDEPEND="dev-lang/perl
 	sys-devel/automake-wrapper
 	>=sys-devel/autoconf-2.59-r6
+	>=sys-apps/texinfo-4.7
 	sys-devel/gnuconfig"
 
 src_unpack() {
