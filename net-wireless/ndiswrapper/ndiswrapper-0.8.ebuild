@@ -1,13 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.6-r1.ebuild,v 1.3 2004/07/08 03:20:08 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.8.ebuild,v 1.1 2004/07/08 03:20:08 latexer Exp $
 
 inherit kernel-mod
 
-S=${WORKDIR}/${P}
+MY_P=${PN}-${PV}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Wrapper for using Windows drivers for some wireless cards"
 HOMEPAGE="http://ndiswrapper.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,6 +25,11 @@ src_unpack() {
 	sed -i -e "s:^KSRC.*:KSRC=${ROOT}/usr/src/linux:" \
 		-e "s:^KVERS.*:KVERS=${KV_MAJOR}${KV_MINOR}:" \
 		${S}/driver/Makefile
+
+	if [ ${KV_MINOR} -gt 5 ] && [ ${KV_PATCH} -gt 5 ]
+	then
+		sed -i 's:SUBDIRS=:M=:g' ${S}/driver/Makefile
+	fi
 }
 
 src_compile() {
@@ -49,13 +55,15 @@ src_install() {
 	doins ${S}/driver/ndiswrapper.${KV_OBJ}
 
 	insinto /etc/modules.d
-	newins ${FILESDIR}/${P}-modules.d ndiswrapper
+	newins ${FILESDIR}/${PN}-0.6-modules.d ndiswrapper
 
 	dodir /etc/ndiswrapper
 }
 
 pkg_postinst() {
-	kernel-mod_pkg_postinst
+	einfo "Checking kernel module dependancies"
+	test -r "${ROOT}/usr/src/linux/System.map" && \
+		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
 
 	einfo
 	einfo "ndiswrapper requires .inf and .sys files from a Windows(tm) driver"
