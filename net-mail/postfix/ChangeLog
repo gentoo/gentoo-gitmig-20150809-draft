@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.68 2003/06/10 00:48:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.69 2003/06/11 14:33:07 lostlogic Exp $
+
+*postfix-2.0.11 (11 Jun 2003)
+
+  11 Jun 2003; Brandon Low <lostlogic@gentoo.org> postfix-2.0.11.ebuild:
+  Easy bump
 
   09 Jun 2003; <msterret@gentoo.org> postfix-2.0.10-r1.ebuild:
   DEPEND on sed >= 4
