@@ -2,8 +2,5 @@ MD5 e57bfb0f201634021d50673b97ae1f53 ChangeLog 6652
 MD5 830296700ca3e0757345f801a5f47aff freenet-0.5.2.1-r7.ebuild 4542
 MD5 169efe0f216ade927538fab48315ecc7 files/conf.freenet 323
 MD5 3a391b52e5e7740c7bdafcba7a9ee4d3 files/digest-freenet-0.5.2.1-r7 68
-MD5 2102c07c25f233d96f3ee92f4d075704 files/rc.freenet2 1713
-MD5 f42bcccd602282dd4fad406f9be9b829 files/rc.freenet3 2213
-MD5 c790a3f14dce4b353ab89ed06df54d32 files/rc.freenet4 2218
 MD5 15c0d70946cdbbb23f48e9c13823a26b files/rc.freenet5 2215
 MD5 4ae956431fc61a4f535d971c2e908478 files/start-freenet.sh 330
