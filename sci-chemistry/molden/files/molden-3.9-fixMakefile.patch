@@ -1,0 +1,47 @@
+diff -urN molden3.9-orig/makefile molden3.9/makefile
+--- molden3.9-orig/makefile	2003-11-10 00:28:48.744433167 -0500
++++ molden3.9/makefile	2003-11-10 00:29:18.327453549 -0500
+@@ -16,9 +16,9 @@
+ LIBS =  -lX11 -lm
+ 
+ # Silicon Graphics
+-CFLAGS = -c -DDOBACK -DHASTIMER -DCOLOR_OFFSET=0.0
+-FFLAGS =   
+-LDR = f77 
++#CFLAGS = -c -DDOBACK -DHASTIMER -DCOLOR_OFFSET=0.0
++#FFLAGS =   
++#LDR = f77 
+ 
+ # Ultrix, Dec Alpha, Linux ( and best start for Unix other than below )
+ #
+@@ -40,11 +40,11 @@
+ #
+ # On 64-bit Alpha-Linux add -mieee to the FFLAGS
+ #
+-#CFLAGS = -c -I/usr/X11R6/include -DDOBACK -DHASTIMER -DCOLOR_OFFSET=0.0
+-#FC = g77
+-#FFLAGS =
+-#LIBS =  -L/usr/X11R6/lib -lX11 -lm
+-#LDR = g77   
++CFLAGS = -c -I/usr/X11R6/include -DDOBACK -DHASTIMER -DCOLOR_OFFSET=0.0
++FC = g77
++FFLAGS =
++LIBS =  -L/usr/X11R6/lib -lX11 -lm
++LDR = g77   
+ #
+ 
+ #
+@@ -160,11 +160,11 @@
+ # For The OpenGL Graphics library molden helper 'moldenogl'
+ # (make moldenogl)
+ #
+-LIBSG = -lglut -lGLU -lGL -lXmu -lX11 -lm
++#LIBSG = -lglut -lGLU -lGL -lXmu -lX11 -lm
+ #
+ # on linux :
+ #
+-#LIBSG = -L/usr/X11R6/lib -lglut -lGLU -lGL -lXmu -lX11 -lm
++LIBSG = -L/usr/X11R6/lib -lglut -lGLU -lGL -lXmu -lX11 -lm
+ #
+ # on linux with older Mesa installations try:
+ #

@@ -1,0 +1,73 @@
+# ChangeLog for app-sci/molden
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.1 2004/12/24 16:46:10 ribosome Exp $
+
+*molden-3.9 (24 Dec 2004)
+
+  24 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/molden-3.9-fixMakefile.patch, +molden-3.9.ebuild, +molden-4.0.ebuild,
+  +molden-4.1.ebuild:
+  Moved from app-sci/molden to sci-chemistry/molden.
+
+  23 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-4.1.ebuild:
+  x86.
+
+  20 Nov 2004; Danny van Dyk <kugelfang@gentoo.org> molden-4.1.ebuild:
+  Marked ~amd64.
+
+  26 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-3.9.ebuild,
+  molden-4.0.ebuild, molden-4.1.ebuild:
+  Move eclasses from gcc to toolchain-funcs. Get rid of ${CC} use (#68990).
+
+  28 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-3.9.ebuild,
+  molden-4.0.ebuild, molden-4.1.ebuild:
+  Search for a fortran compiler, since gcc doesn't compile one by default
+  anymore (#58628).
+
+  27 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-4.0.ebuild:
+  x86.
+
+*molden-4.1 (27 Jul 2004)
+
+  27 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; +molden-4.1.ebuild:
+  Version bump (#57960). Add virtual/libc and virtual/x11 to DEPEND. Upstream
+  changes include bugfixes and addition of interactive docking.
+
+  21 May 2004; Danny van Dyk <kugelfang@gentoo.org> :
+  Marked ~amd64.
+
+  15 May 2004; Danny van Dyk <kugelfang@gentoo.org> molden-4.0.ebuild:
+  Marked ~amd64.
+
+  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> molden-4.0.ebuild:
+  Stable on alpha.
+
+  21 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-4.0.ebuild:
+  ~alpha for agriffis.
+
+  21 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-4.0.ebuild:
+  Some wizardly bash replacements for sed by Aron Griffis <agriffis@gentoo.org>
+  (#46816).
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org> molden-3.9.ebuild,
+  molden-4.0.ebuild:
+  Add ia64 keywords for bug 46559
+
+  13 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; :
+  Upstream changed the tarball. Fixing digest.
+
+*molden-4.0 (28 Feb 2004)
+
+  28 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-4.0.ebuild:
+  Version bump. Uses 3.9 patch, so don't remove that when dropping 3.9.
+
+  28 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-3.9.ebuild:
+  Add missing glut dep for opengl USE.
+
+*molden-3.9 (10 Nov 2003)
+
+  10 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; molden-3.9.ebuild,
+  files/molden-3.9-fixMakefile.patch:
+  Thanks to Rossen Apostolov <rossen@protein.osaka-u.ac.jp> on bug #33001 for
+  the initial ebuild, with further modifications by me.
+
