@@ -2,9 +2,9 @@ MD5 e7c791f11872a1d509c1e225c3bc071c ChangeLog 2066
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 32e19cf9632fe640a367a6dabce76832 zetagrid-1.9.0.ebuild 1621
 MD5 e0b02ab55efc5adddce742f249d5fd3c zetagrid-1.9.1.ebuild 1621
+MD5 6df7b3d7149cbe2afdefc5895a8001a6 files/zeta.sh 1439
+MD5 2891501a095e1789c7867fa75495ae3c files/zeta_progress.sh 987
 MD5 68c0b0a9602b20f4e255b4e323114d9c files/digest-zetagrid-1.9.0 122
 MD5 7ed8339f5ea2f78678f91df84a4057c6 files/digest-zetagrid-1.9.1 122
 MD5 a994c331aadb23393e238d6684e89a6e files/zeta.cfg 4343
-MD5 90c2b469de1f84806b82dddca55328b6 files/zeta.sh 1445
-MD5 d27f6713882165b6e79321374fd63a1f files/zeta_progress.sh 993
-MD5 0049e8790f37b36a3a1e43bfe3a10450 files/zetagrid.init 1169
+MD5 bd38a9b80e6a8060d4a8e5db95c977a0 files/zetagrid.init 1163
