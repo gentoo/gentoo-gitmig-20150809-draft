@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/nxtvepg
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/ChangeLog,v 1.4 2003/10/17 12:32:23 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/ChangeLog,v 1.5 2004/04/15 07:03:03 phosphan Exp $
+
+*nxtvepg-2.7.0 (05 Apr 2004)
+
+  05 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> nxtvepg-2.5.2.ebuild,
+  nxtvepg-2.7.0.ebuild, files/nxtvepg-2.5.1.patch, files/nxtvepg-2.5.2.patch,
+  files/nxtvepg-2.7.0.patch:
+  Version bump, cleanup
 
 *nxtvepg-2.6.0 (17 Oct 2003)
 
