@@ -1,8 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.15 2002/07/31 16:13:30 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.16 2002/08/02 16:28:13 aliz Exp $
 
 *xine-lib-0.9.12-r2 (31 Jul 2002)
+
+  02 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> xne-lib-0.9.12-r2.ebuild:
+
+  Fixed directfb compilation issues. Closes #5866.
 
   31 Jul 2002; Brandon Low <lostlogic@gentoo.org> xine-lib-0.9.12-r2.ebuild:
 

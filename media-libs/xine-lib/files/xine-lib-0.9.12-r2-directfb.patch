@@ -1,0 +1,14 @@
+--- xine/xine-lib/src/video_out/Makefile.am	2002/07/16 19:33:37	1.46
++++ xine/xine-lib/src/video_out/Makefile.am	2002/07/22 17:48:40	1.47
+@@ -2,8 +2,8 @@
+ 
+ VIDIX_CFLAGS = -I$(top_builddir)/src/video_out/vidix -I$(top_srcdir)/src/video_out/vidix
+ 
+-CFLAGS = @CFLAGS@ $(X_CFLAGS) $(LIBMPEG2_CFLAGS) -DXINE_COMPILE $(SDL_CFLAGS) $(VIDIX_CFLAGS)
+-DEBUG_CFLAGS = @DEBUG_CFLAGS@ $(X_CFLAGS) $(LIBMPEG2_CFLAGS) -DXINE_COMPILE $(SDL_CFLAGS) $(VIDIX_CFLAGS)
++CFLAGS = @CFLAGS@ $(X_CFLAGS) $(LIBMPEG2_CFLAGS) -DXINE_COMPILE $(SDL_CFLAGS) $(VIDIX_CFLAGS) $(DIRECTFB_CFLAGS)
++DEBUG_CFLAGS = @DEBUG_CFLAGS@ $(X_CFLAGS) $(LIBMPEG2_CFLAGS) -DXINE_COMPILE $(SDL_CFLAGS) $(VIDIX_CFLAGS) $(DIRECTFB_CFLAGS)
+ 
+ LIBTOOL = $(SHELL) $(top_builddir)/libtool-nofpic
+ 
+

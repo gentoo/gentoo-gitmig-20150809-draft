@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12-r2.ebuild,v 1.1 2002/07/31 16:13:30 lostlogic Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12-r2.ebuild,v 1.2 2002/08/02 16:28:13 aliz Exp $ 
 
 inherit libtool
 
@@ -23,7 +23,8 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	arts? ( kde-base/kdelibs )
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
-	directfb? ( >=dev-libs/DirectFB-0.9.9 )"
+	directfb? ( >=dev-libs/DirectFB-0.9.9
+		    dev-util/pkgconfig )"
 
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
@@ -47,6 +48,7 @@ src_unpack() {
 
 	use directfb && ( \
 		patch -p0 < ${FILESDIR}/xineconfig.patch-${PV} || die "patch 2 failed"
+		patch -p2 < ${FILESDIR}/${P}-r2-directfb.patch || die "patch failed"
 	) || patch -p1 < ${FILESDIR}/xine-lib-disable-directfb.patch || die "patch 2 failed"
 }
 
