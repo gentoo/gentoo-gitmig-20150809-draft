@@ -3,9 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>karltk@gentoo.org</email>
-  <name>Karl Trygve Kalleberg</name>
-  <description>Temporary maintainer until a Lisp herd is created</description>
+	<email>hattya@gentoo.org</email>
+	<name>Akinori Hattori</name>
 </maintainer>
 
 <longdescription>
