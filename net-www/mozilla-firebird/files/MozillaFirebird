@@ -1,20 +1,75 @@
-#!/bin/sh
-
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+#!/bin/bash
+#
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/files/MozillaFirebird,v 1.1 2003/06/02 21:40:42 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/files/MozillaFirebird,v 1.2 2004/01/14 20:50:49 agriffis Exp $
 
-# This is the Gentoo Phoenix startup script
-# Additions, suggestions?
-# contact phoen][x <phoenix@gentoo.org>
+# Set to "window" if you prefer new Firebird windows instead of new tabs
+newtype=${MOZILLA_NEWTYPE:-"tab"}
 
+# Point this to your Firebird installation if not using the default
 export MOZILLA_FIVE_HOME="/usr/lib/MozillaFirebird"
-FIREBIRD_PATH="/usr/lib/MozillaFirebird"
+fbpath=${MOZILLA_FIVE_HOME}
 
-if [ -z "`/bin/ps x | /bin/grep \"[0-9] ${FIREBIRD_PATH}/MozillaFirebird-bin\"`" ]; then
-    # No MozillaFirebird running
-    ${FIREBIRD_PATH}/MozillaFirebird $@
-else
-    # MozillaFirebird running - open a new window
-    ${FIREBIRD_PATH}/MozillaFirebird -remote "openURL($@ ,new-window)"
+# Sanity check
+if [[ -z $DISPLAY ]]; then
+  echo "DISPLAY is unset!" >&2
+  exit 1
 fi
+
+# Validate the args and extract the url
+url=''
+declare -a args=($@)
+while [[ $# -ne 0 ]] ; do
+  if [[ $1 == -* ]] ; then
+    case ${1#-} in
+      height|width|CreateProfile|P|UILocale|contentLocale|remote|edit|chrome)
+        shift 2 ;;
+      *)
+        shift 1 ;;
+    esac
+  else
+    if [[ -n $url ]] ; then
+      echo "Usage error: more than one URL given" >&2
+      exit 255
+    else
+      url=$1
+      shift 1
+      if [[ $url != *:* ]] ; then
+        url=http://$url
+      fi
+    fi
+  fi
+done
+
+# Try to start in an existing session; check all screens
+declare -a screens=(
+  $(xdpyinfo | awk '
+    /^name of display:/ { 
+      disp = substr($NF, 0, index($NF, ".")-1) 
+    }
+    /^number of screens:/ {
+      for (i = 0; i < $NF; i++) printf("%s.%d\n", disp, i)
+    }')
+  )
+for s in $DISPLAY "${screens[@]}"; do 
+  DISPLAY=${s} ${fbpath}/mozilla-xremote-client "openURL($url, new-$newtype)" \
+  && exit 0
+done
+retval=$?
+
+if [[ $retval -eq 2 ]] ; then
+  # No running windows found, so start a new instance
+  ${fbpath}/MozillaFirebird "${args[@]}"
+  retval=$?
+elif [[ $retval -eq 1 ]] ; then
+  echo "Unable to connect to X server" >&2
+elif [[ $retval -eq 3 ]] ; then
+  echo "Unable to send command to running Mozilla Firebird instance" >&2
+else
+  echo "Unknown error $retval from mozilla-xremote-client" >&2
+fi
+
+exit $retval
+
+# vim:expandtab sw=2:

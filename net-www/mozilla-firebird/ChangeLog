@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firebird
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.31 2003/12/25 01:55:29 bazik Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.32 2004/01/14 20:50:49 agriffis Exp $
+
+  14 Jan 2004; Aron Griffis <agriffis@gentoo.org> files/MozillaFirebird:
+  Use more powerful MozillaFirebird startup script from bug 38102. Not doing a
+  rev-bump since it's not really necessary to make everybody rebuild for this
 
   25 Dec 2003; Sven Blumenstein <bazik@gentoo.org>
   mozilla-firebird-0.7-r1.ebuild:
