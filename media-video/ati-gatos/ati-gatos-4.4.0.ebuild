@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.4.0.ebuild,v 1.1 2004/09/30 22:17:01 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.4.0.ebuild,v 1.2 2004/10/04 06:20:11 spyderous Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ IUSE=""
 SNAPSHOT=20040930
 MYP=${P}-${SNAPSHOT}
 
-DESCRIPTION="ATI Multimedia-capable drivers for XFree86"
+DESCRIPTION="ATI Multimedia-capable drivers for Xorg"
 SRC_URI="mirror://gentoo/${MYP}.tar.bz2"
 HOMEPAGE="http://gatos.sourceforge.net/"
 
@@ -38,7 +38,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${P}-new-xorg.patch
 	fi
 
-	# Build makefiles against XFree SDK
+	# Build makefiles against Xorg SDK
 	imake -I/usr/X11R6/lib/Server/config/cf -DUseInstalled -DXF86DriverSDK
 
 	# Makefile fixes
@@ -56,14 +56,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To have XFree86 make use of the new GATOS modules, you should add the following"
+	einfo "To have Xorg make use of the new GATOS modules, you should add the following"
 	einfo "line to /etc/X11/XF86Config, in the files section and above any other"
 	einfo "ModulePath directives:"
 	einfo
 	einfo "      ModulePath \"/usr/X11R6/lib/modules-extra/gatos\""
 	einfo
 	einfo "Please note that you may need to uncomment or add another ModulePath line with"
-	einfo "the default module path in it. If XFree86 does not start after adding the line"
+	einfo "the default module path in it. If Xorg does not start after adding the line"
 	einfo "above, add this one under it:"
 	einfo
 	einfo "      ModulePath \"/usr/X11R6/lib/modules\""
@@ -72,7 +72,7 @@ pkg_postinst() {
 fix_makefile() {
 	cp Makefile Makefile.orig
 
-	# Add the XFree86 SDK include directories that gatos will use
+	# Add the Xorg SDK include directories that gatos will use
 	sed -i -e "s:\ *INCLUDES = \(.\+\):INCLUDES = \\1 -I/usr/X11R6/lib/Server/include -I/usr/X11R6/lib/Server/include/extensions:" Makefile
 
 	# Clean up the ugly sandbox violations

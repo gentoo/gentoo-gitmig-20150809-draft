@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ati-gatos
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.17 2004/09/30 22:17:01 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.18 2004/10/04 06:20:11 spyderous Exp $
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; ati-gatos-4.4.0.ebuild:
+  Update XFree references to Xorg.
 
 *ati-gatos-4.4.0 (30 Sep 2004)
 
