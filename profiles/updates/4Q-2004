@@ -76,3 +76,4 @@ move app-sci/staden sci-biology/staden
 move app-sci/bioperl sci-biology/bioperl
 move app-sci/bioperl-run sci-biology/bioperl-run
 move app-sci/bioperl-pipeline sci-biology/bioperl-pipeline
+move app-sci/biopython sci-biology/biopython
