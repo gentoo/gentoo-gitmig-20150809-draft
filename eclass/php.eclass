@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.21 2003/05/23 16:38:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.22 2003/05/24 12:44:48 pauldv Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -39,7 +39,7 @@ DEPEND="${DEPEND}
 	sys-apps/bzip2
 	sys-libs/db 
     X? ( virtual/x11 )
-    berkdb? ( >=sys-libs/db-3 )
+    berkdb? ( =sys-libs/db-3* )
     crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
     curl? ( >=net-ftp/curl-7.10.2 )
     firebird? ( >=dev-db/firebird-1.0 )
