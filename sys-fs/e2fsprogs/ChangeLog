@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.51 2005/03/22 17:22:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.52 2005/03/22 23:46:26 vapier Exp $
+
+*e2fsprogs-1.37 (22 Mar 2005)
+
+  22 Mar 2005; Mike Frysinger <vapier@gentoo.org> +e2fsprogs-1.37.ebuild:
+  Version bump for security #86257.
 
   22 Mar 2005; Aron Griffis <agriffis@gentoo.org> e2fsprogs-1.36-r2.ebuild:
   Mark stable on ia64 to match version of fsck included in FC3. This is
