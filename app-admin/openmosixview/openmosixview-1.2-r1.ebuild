@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/openmosixview-1.2-r1.ebuild,v 1.1 2002/11/04 21:30:31 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/openmosixview-1.2-r1.ebuild,v 1.2 2002/11/05 12:43:33 tantive Exp $
 
 S=${WORKDIR}/openmosixview
 DESCRIPTION="cluster-management GUI for OpenMosix"
@@ -10,12 +10,11 @@ IUSE=""
 
 DEPEND=">=x11-libs/qt-2.3.0
 	>=sys-cluster/openmosix-user-0.2.4
-	>=sys-kernel/openmosix-sources-2.4.18
-	<=sys-devel/autoconf-2.13"
+	>=sys-kernel/openmosix-sources-2.4.18"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc -sparc64 -alpha"
+KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
 
 src_unpack() {
 	cd ${WORKDIR}
