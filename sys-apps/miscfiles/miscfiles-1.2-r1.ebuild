@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.2-r1.ebuild,v 1.5 2002/07/17 01:20:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.2-r1.ebuild,v 1.6 2002/07/17 11:38:56 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Miscellaneous files"
 SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/directory/${PN}.html"
+HOMEPAGE="http://www.gnu.org/directory/miscfiles.html"
 KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL"
