@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.579 2004/08/25 10:18:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.580 2004/08/25 21:00:10 mattam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -182,6 +182,8 @@ dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
 dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)
 dev-ml/lablgl:glut - Enable glut support.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
+dev-ml/ocamlsdl:noimage - Disable sdl-image support
+dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
 dev-php/PEAR-HTML_Template_Flexy:javascript - Use the PEAR-HTML_Javascript package
 dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/adodb-py:postgresql - Support psycopg (python postgresql bindings)
