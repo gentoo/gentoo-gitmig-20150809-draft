@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.77 2004/06/19 22:48:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.78 2004/06/22 17:36:41 plasmaroo Exp $
+
+*linux-headers-2.6.6-r1 (22 Jun 2004)
+
+  22 Jun 2004; <plasmaroo@gentoo.org> +linux-headers-2.6.6-r1.ebuild,
+  +files/linux-headers-2.6.6-tcp_info-DRS-backport.patch:
+  Backporting the 2.6.7 TCP header change upstream so that iproute2 compiles
+  fine on amd64.
 
 *linux-headers-2.6.7 (19 Jun 2004)
 

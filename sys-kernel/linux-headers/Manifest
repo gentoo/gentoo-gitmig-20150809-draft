@@ -1,4 +1,4 @@
-MD5 f8fa29bdc44d8c143067f2385f226308 ChangeLog 17479
+MD5 cd4e60b08676ffbfdbe304a936c3af2a ChangeLog 17741
 MD5 2b2ea0604dbacd94af1979eda8da4e87 linux-headers-2.6.4.ebuild 4176
 MD5 8a6645e983461e0063420dea2d31d067 linux-headers-2.2.26.ebuild 2495
 MD5 3a3f44f6dbe62879c57b15a6a06f13c5 linux-headers-2.4.23.ebuild 3439
@@ -13,6 +13,7 @@ MD5 3f9120b3eae2755600a708a0928ce8da linux-headers-2.4.21.ebuild 3698
 MD5 e3cfc0d535561571835c127d340de787 linux-headers-2.4.25.ebuild 3416
 MD5 09c413a3e5b373bc6a3173bfd724ef1f linux-headers-2.6.1.ebuild 4132
 MD5 fd3f13163b8f014e745eb42b8c64aff6 linux-headers-2.6.7.ebuild 4174
+MD5 5bf9f7cdaef64b67395ef9cab3ed2e80 linux-headers-2.6.6-r1.ebuild 4323
 MD5 809c408ee5bef5f61c54835a26cecf30 linux-headers-2.0.40.ebuild 1790
 MD5 8a065c0dc3b8fac8747de35f1af75a2c files/linux-headers-2.6.0-fb.patch 386
 MD5 df6b4c19f4a4cb2b3d3a2a0107d7853d files/digest-linux-headers-2.4.25 67
@@ -28,6 +29,7 @@ MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21-r1 67
 MD5 fdddc53af65793602d2c14df57a2d970 files/linux-headers-2.6.7-appCompat.patch 28971
 MD5 7f5b6765680735a897bb2fb9e227f6b6 files/linux-headers-2.6.0-appCompat.patch 17983
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21 67
+MD5 b737234adedfb6dc585af6bbb40bf2d3 files/digest-linux-headers-2.6.6-r1 66
 MD5 aa9ba92e8479bdb5f69b03b5c72be866 files/linux-headers-2.6.4-unistd-nptl-fix.patch 362
 MD5 598136365858338b26557b7587c6725f files/linux-headers-2.6.3-strict-ansi-fix.patch 4166
 MD5 1a3b49dce5bc80827496967e767a4a04 files/digest-linux-headers-2.6.3-r1 66
@@ -41,3 +43,4 @@ MD5 a73786f0b9dda7e9ebacb91a192384f9 files/linux-headers-2.6.0-sysctl_h-compat.p
 MD5 459bc20c4015796630e3a9f3dc9125e6 files/linux-headers-strict-ansi-fix.patch 1486
 MD5 b737234adedfb6dc585af6bbb40bf2d3 files/digest-linux-headers-2.6.6 66
 MD5 ec3d195f7d40d599802d5c0c5ad8f502 files/linux-headers-2.6.4-appCompat.patch 17240
+MD5 830c6d1dcb1b22b9095e6f16f3ebdf85 files/linux-headers-2.6.6-tcp_info-DRS-backport.patch 288
