@@ -1,13 +1,13 @@
-# Copyrigth 1999-2000 Gentoo Technologies, Inc.
+# Copyrigth 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
 # Maintainer: Desktop Team
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11fonts-jmk/x11fonts-jmk-3.0.ebuild,v 1.1 2001/09/12 11:30:17 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11fonts-jmk/x11fonts-jmk-3.0.ebuild,v 1.2 2002/04/28 04:20:39 seemant Exp $
 
-A=jmk-x11-fonts-3.0.tar.gz
-S=${WORKDIR}/jmk-x11-fonts-3.0
+MY_P=jmk-x11-fonts-${PV}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="X11 Application Launch Feedback"
-SRC_URI="http://www.ntrnet.net/~jmknoble/fonts/${A}"
+SRC_URI="http://www.ntrnet.net/~jmknoble/fonts/${MY_P}.tar.gz"
 HOMEPAGE="http://www.ntrnet.net/~jmknoble/fonts/"
 
 DEPEND="virtual/x11"
