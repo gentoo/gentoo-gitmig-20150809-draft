@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r2.ebuild,v 1.5 2004/07/15 03:38:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r2.ebuild,v 1.6 2004/07/16 18:57:59 mr_bones_ Exp $
 
 inherit kmod eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lufs/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="debug disablekernelsupport lufsusermount nokernelsupport"
+IUSE="debug disablekernelsupport lufsusermount"
 
 DEPEND="virtual/linux-sources
 	sys-kernel/config-kernel"
@@ -55,11 +55,11 @@ src_compile() {
 
 src_install () {
 	kmod_make_linux_writable
-	dodoc AUTHORS COPYING ChangeLog Contributors INSTALL \
+	dodoc AUTHORS ChangeLog Contributors INSTALL \
 		NEWS README THANKS TODO
 	dohtml docs/lufs.html
 	env -u ARCH make DESTDIR=${D} install
-	if ! use nokernelsupport; then
+	if ! use disablekernelsupport; then
 		insinto ${ROOT}/lib/modules/${KV}/fs/lufs
 		doins kernel/Linux/2.${KV_PATCH}/lufs.$KV_OB
 	fi
