@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.7 2004/09/16 15:18:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7-r1.ebuild,v 1.1 2004/09/16 15:18:51 lanius Exp $
 
 inherit eutils kmod
 
@@ -42,7 +42,7 @@ HOMEPAGE="http://www.lirc.org"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="doc"
-KEYWORDS="x86 ~ppc ~alpha ~ia64 ~amd64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64 ~ppc64"
 
 DEPEND="virtual/linux-sources"
 
@@ -57,6 +57,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${DISTDIR}/01-add-2.6-devfs-and-sysfs-to-lirc_dev.patch
+	epatch ${FILESDIR}/lirc-0.7.0_pre7-streamzap.patch.bz2
 	sed	-i -e "s:-O2 -g:${CFLAGS}:" configure configure.in
 }
 
