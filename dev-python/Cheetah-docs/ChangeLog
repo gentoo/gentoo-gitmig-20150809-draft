@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/Cheetah-docs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah-docs/ChangeLog,v 1.1 2003/01/30 18:56:59 agenkin Exp $
+
+*Cheetah-docs-0.9.15_alpha1 (30 Jan 2003)
+
+  30 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Initial version of the ebuild.
