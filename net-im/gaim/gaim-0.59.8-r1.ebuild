@@ -1,20 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.8-r1.ebuild,v 1.1 2003/01/13 07:12:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.8-r1.ebuild,v 1.2 2003/01/15 03:19:31 vapier Exp $
 
 inherit kde-functions eutils
 
-IUSE="nas nls esd gnome arts perl ssl"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="GTK Instant Messenger client"
 SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2
 	ssl? ( mirror://sourceforge/gaim-encryption/encrypt.tar.gz )"
-HOMEPAGE="http://gaim.sourceforge.net"
+HOMEPAGE="http://gaim.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
+IUSE="nas nls esd gnome arts perl ssl"
 
 DEPEND="=sys-libs/db-1*
 	esd? ( >=media-sound/esound-0.2.22-r2 )
@@ -45,6 +43,8 @@ src_compile() {
 
 	# We always build a standalone version of gaim.
 	# In this build, GNOME is always disabled.
+	cp configure{,.old}		# fix for #13533
+	sed -e 's:-I\\$(top_srcdir)::' configure.old > configure
 	econf ${myconf} --disable-gnome || die
 	emake || die
 
