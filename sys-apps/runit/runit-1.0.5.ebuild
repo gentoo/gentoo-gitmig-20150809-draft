@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/runit/runit-1.0.5.ebuild,v 1.1 2004/10/10 02:09:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/runit/runit-1.0.5.ebuild,v 1.2 2004/10/21 05:43:44 mr_bones_ Exp $
 
 inherit gcc flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="static"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/admin/${P}
 

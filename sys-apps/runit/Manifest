@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 6c0cd248ea4b64148f724d8705f056dd ChangeLog 339
-MD5 197323b23555ef7ab64d572ee0d3588e runit-1.0.5.ebuild 1661
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 409b93fd717256e36666db62a210bc0b runit-1.0.5.ebuild 1663
 MD5 c40ea29a84ae96a8d38976a36c963335 files/1 175
 MD5 3b574bfad17bf4d2d22e025289d2bad7 files/2 551
 MD5 14c3375cd167d9c7b1b89febd8de64e6 files/3 377
-MD5 ca1dc1a0ccab2afbac7a8540c74bd612 files/finish.getty 30
 MD5 9f1dcf4c31a2d9df9336b8d1c9b13a83 files/ctrlaltdel 189
-MD5 2d1e9a75a18249dec3a71503c5266d55 files/run.getty 44
 MD5 0c9a4b2732a7c102b84593eae16b34c7 files/digest-runit-1.0.5 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBaJn2HTu7gpaalycRAlAhAJ4p5H76ewIAlZNqS1ZsezJ3uoTZLACfbRWx
-FIB/MToYAtMEH9pZHL4QnCw=
-=lUAe
------END PGP SIGNATURE-----
+MD5 ca1dc1a0ccab2afbac7a8540c74bd612 files/finish.getty 30
+MD5 2d1e9a75a18249dec3a71503c5266d55 files/run.getty 44
