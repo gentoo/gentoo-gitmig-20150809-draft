@@ -4,6 +4,8 @@
 # Masing Azarah's new baselayout until several problems are confirmed fixed.
 # 4 Mar 2002, Daniel Robbins
 =sys-apps/baselayout-1.7.2
+#this should fix most/all problem, but needs field testing first.
+=sys-apps/baselayout-1.7.3
 
 # 1 march 2002, danarmak
 # masking new wine ebuild until testing is finished
