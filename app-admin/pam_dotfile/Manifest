@@ -1,3 +1,4 @@
-MD5 f250a59d4af7d5ae6846230b9c42814e ChangeLog 395
-MD5 b3aff0bfd22ed593ce024d9053a3e2bb pam_dotfile-0.7.ebuild 795
+MD5 ce3fde0e2e4394fe1c156697b860ff98 ChangeLog 508
+MD5 ab91b407e5d545ddf8093ac5c2a8402c pam_dotfile-0.7.ebuild 803
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 30fbae2d4d9759fde9c1ff733dac16b2 files/digest-pam_dotfile-0.7 67
