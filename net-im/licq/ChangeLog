@@ -1,7 +1,14 @@
 # ChangeLog for net-im/licq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.2 2002/04/04 20:18:33 g2boojum Exp $
 
+*licq-1.0.4-r2 (4 Apr 2002)
+
+  4 Apr 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  Added patch from Paul de Vrieze to fix the problem that
+  kdeconf resets the cwd (to ${S}?).
+  
 *licq-1.0.4-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
