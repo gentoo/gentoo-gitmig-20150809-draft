@@ -1,6 +1,14 @@
 # ChangeLog for net-www/gorua
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/ChangeLog,v 1.3 2003/10/12 20:21:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/ChangeLog,v 1.4 2003/12/26 17:55:16 usata Exp $
+
+*gorua-0.16-r2 (27 Dec 2003)
+
+  27 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16-r1.ebuild,
+  gorua-0.16-r2.ebuild, gorua-0.16.ebuild,
+  files/gorua-0.16-ruby18-gentoo.diff:
+  Fixed runtime error on ruby 1.8. Forced ruby 1.6 for gorua-0.16-r1
+  and marked as stable.
 
 *gorua-0.16-r1 (13 Oct 2003)
 
