@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.16.ebuild,v 1.3 2003/07/30 16:40:30 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.16.ebuild,v 1.4 2003/09/05 00:56:25 msterret Exp $
 
 inherit gnuconfig
 
@@ -51,7 +51,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	
+
 	echo "#!/bin/bash" > fvwm2
 	echo "/usr/bin/fvwm2" >> fvwm2
 

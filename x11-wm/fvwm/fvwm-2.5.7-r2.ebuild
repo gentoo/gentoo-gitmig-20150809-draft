@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.8 2003/09/03 11:33:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.9 2003/09/05 00:56:25 msterret Exp $
 
 inherit gnuconfig
 
@@ -16,11 +16,11 @@ SLOT="0"
 KEYWORDS="~x86 ~alpha ~sparc"
 LICENSE="GPL-2 FVWM"
 
-RDEPEND="readline? ( >=sys-libs/readline-4.1 
+RDEPEND="readline? ( >=sys-libs/readline-4.1
 				ncurses? ( >=sys-libs/ncurses-5.3-r1 )
 				!ncurses? ( >=sys-libs/libtermcap-compat-1.2.3 ) )
-		gtk? ( =x11-libs/gtk+-1.2* 
-				imlib? ( >=media-libs/gdk-pixbuf-0.21.0 
+		gtk? ( =x11-libs/gtk+-1.2*
+				imlib? ( >=media-libs/gdk-pixbuf-0.21.0
 						>=media-libs/imlib-1.9.14-r1 ) )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 		rplay? ( >=media-sound/rplay-3.3.2 )
@@ -30,19 +30,19 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 		perl? ( tcltk? ( >=dev-lang/tk-8.3.4
 						>=dev-perl/perl-tk-800.024-r2
 						>=dev-perl/X11-Protocol-0.51 ) )
-		truetype? ( virtual/xft 
-					>=media-libs/fontconfig-2.1-r1 
+		truetype? ( virtual/xft
+					>=media-libs/fontconfig-2.1-r1
 					>=dev-libs/expat-1.95.6-r1 )
 		!noxpm? ( >=media-libs/netpbm-9.12-r4 )
-		>=dev-lang/perl-5.6.1-r10	
+		>=dev-lang/perl-5.6.1-r10
 		>=sys-libs/zlib-1.1.4-r1
 		virtual/x11"
 # XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
 # XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
-# XXX:	netpbm is used for some of the dynamic menu scripts, which can 
-# 		generate mini icons or thumbnails using netpbm utilities... im 
+# XXX:	netpbm is used for some of the dynamic menu scripts, which can
+# 		generate mini icons or thumbnails using netpbm utilities... im
 # 		assuming anyone with `use noxpm` will not want them.
-DEPEND="${RDEPEND} 
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	sys-devel/automake
 	sys-devel/autoconf
@@ -50,20 +50,20 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	
+
 	use alpha && gnuconfig_update
-	
+
 	# CFLAGS containing comma will break this, so change it for !
 	sed -i 's#\x27s,xCFLAGSx,$(CFLAGS),\x27#\x27s!xCFLAGSx!$(CFLAGS)!\x27#' ${S}/utils/Makefile.am
 
-	# Xft detection is totally b0rked if using pkg-config, this update from cvs.	
+	# Xft detection is totally b0rked if using pkg-config, this update from cvs.
 	cp ${FILESDIR}/acinclude.m4 ${S}/acinclude.m4
 }
 
 src_compile() {
 	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm"
 
-	# ImagePath should include /usr/share/icons/fvwm (x11-themes/fvwm_icons) 
+	# ImagePath should include /usr/share/icons/fvwm (x11-themes/fvwm_icons)
 	#
 	# Another iconset for fvwm, wm-icons, includes configurations and user
 	# configuration utilities to make them easy to use with fvwm, no need
@@ -83,23 +83,23 @@ src_compile() {
 		fi
 	fi
 
-	# fvwm configure doesnt provide a way to disable gtk support if the 
+	# fvwm configure doesnt provide a way to disable gtk support if the
 	# required libraries are found, this hides them from the script.
-	if ! use gtk; then 
+	if ! use gtk; then
 		myconf="${myconf} --with-gtk-prefix=${T} --with-imlib-prefix=${T}"
 	else
 		if ! use imlib; then
 			myconf="${myconf} --with-imlib-prefix=${T}"
 		fi
 	fi
-	
+
 	# link with the gnome libraries, for better integration with the gnome desktop.
 	if use gnome; then
-		myconf="${myconf} --with-gnome" 
+		myconf="${myconf} --with-gnome"
 	else
-		myconf="${myconf} --without-gnome" 
+		myconf="${myconf} --without-gnome"
 	fi
-	
+
 	# rplay is a cool, but little used way of playing sounds over a network
 	# Fvwm support is pretty good.
 	if ! use rplay; then
@@ -107,22 +107,22 @@ src_compile() {
 	fi
 
 	# Install perl bindings for FvwmPerl.
-	if use perl; then 
-		myconf="${myconf} --enable-perllib" 
+	if use perl; then
+		myconf="${myconf} --enable-perllib"
 	else
 		myconf="${myconf} --disable-perllib"
 	fi
-		
+
 	# xinerama support for those who have multi-headed machines.
 	if use xinerama; then
-		myconf="${myconf} --enable-xinerama" 
+		myconf="${myconf} --enable-xinerama"
 	else
 		myconf="${myconf} --disable-xinerama"
 	fi
 
 	# multibyte character support, chinese/japanese/korean/etc.
 	if use cjk; then
-		myconf="${myconf} --enable-multibyte" 
+		myconf="${myconf} --enable-multibyte"
 	else
 		myconf="${myconf} --disable-multibyte"
 	fi
@@ -138,7 +138,7 @@ src_compile() {
 	if ! use png; then
 		myconf="${myconf} --without-png-library"
 	fi
-	
+
 	# native language support
 	if use nls; then
 		myconf="${myconf} --enable-nls"
@@ -150,7 +150,7 @@ src_compile() {
 	if ! use stroke; then
 		myconf="${myconf} --without-stroke-library"
 	fi
-	
+
 	# more verbosity for module developers/hackers/etc.
 	if use debug; then
 		myconf="${myconf} --enable-debug-msgs --enable-command-log"
@@ -162,15 +162,15 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-xft"
 	fi
-	
-	# disable xsm protocol (session management) support? 
+
+	# disable xsm protocol (session management) support?
 	# `nosm` instead of `sm` as some people dont check USE flags
 	if use nosm; then
 		myconf="${myconf} --disable-sm"
 	else
 		myconf="${myconf} --enable-sm"
 	fi
-	
+
 	# disable xpm support? (maybe you only use png in your themes, or just solid colour?)
 	# `noxpm` instead of `xpm`, as most people will want this.
 	if use noxpm; then
@@ -180,7 +180,7 @@ src_compile() {
 	# Xft detection is broken in this release, the fix is in cvs
 	# which ive installed here, rerun automake to sort the problem.
 	einfo "Fixing Xft detection, please wait..."
- 	(	einfo "	Running aclocal..."
+	(	einfo "	Running aclocal..."
 		aclocal
 		einfo "	Running autoheader..."
 		autoheader
@@ -189,7 +189,7 @@ src_compile() {
 		einfo "	Running autoreconf..."
 		autoreconf ) 2>/dev/null
 	einfo "Fixed."
-	
+
 	# must specify PKG_CONFIG or Xft detection bombs.
 	econf ${myconf} PKG_CONFIG=/usr/bin/pkg-config || die
 	emake || die
@@ -199,15 +199,15 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 
-	if use perl; then 
-		
+	if use perl; then
+
 		local toolkits="gtk2 gtk tcltk"
-		
+
 		if use tcltk; then
 			# Install the very cool FvwmTabs module
 			# http://users.tpg.com.au/users/scottie7/FvwmTabs
 			einfo "Installing FvwmTabs module..."
-			
+
 			exeinto /usr/lib/fvwm/${PV}/
 			doexe ${WORKDIR}/FvwmTabs
 			dodoc ${WORKDIR}/fvwmtabrc ${WORKDIR}/README.fvwmtabs
@@ -216,7 +216,7 @@ src_install() {
 			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Tk.pm
 			toolkits=${toolkits/tcltk/}
 		fi
-		if ! use gtk; then 
+		if ! use gtk; then
 			# Remove gtk bindings (requires gtk-perl/gtk2-perl)
 			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk.pm \
 				${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk2.pm
@@ -245,7 +245,7 @@ src_install() {
 	# fvwm-convert-2.2 has a man page, but the script is no longer distributed.
 	rm -f ${D}/usr/bin/fvwm-convert-2.6 ${D}/usr/share/man/man1/fvwm-convert-2.6.1
 	rm -f ${D}/usr/share/man/man1/fvwm-convert-2.2.1
-	
+
 	# ive included `exec` to save a few bytes of memory.
 	echo "#!/bin/bash" > fvwm2
 	echo "exec /usr/bin/fvwm2" >> fvwm2
