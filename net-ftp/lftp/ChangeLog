@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.62 2004/10/11 19:07:41 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.63 2004/10/19 10:46:58 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> lftp-3.0.8.ebuild:
+  Stable on amd64.
 
   11 Oct 2004; Kito <kito@gentoo.org> lftp-3.0.9.ebuild:
   added ~ppc-macos keyword
