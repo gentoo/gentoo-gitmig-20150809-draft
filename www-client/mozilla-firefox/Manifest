@@ -7,13 +7,15 @@ MD5 23b4fff2c583750b346e47cbcf6f8f20 mozilla-firefox-0.9.3.ebuild 8430
 MD5 adfe2a8ca9ac2faeb3312f4637e74008 mozilla-firefox-1.0_rc1.ebuild 5151
 MD5 c4e65162128f83e136d1bfe123adc770 mozilla-firefox-1.0.ebuild 5061
 MD5 e6690598f65d73cb200fcafaf21b0eb5 mozilla-firefox-1.0.1-r1.ebuild 6624
-MD5 7ab725566d7a4f4f3fa6561791472dc8 ChangeLog 17451
+MD5 fd6d0d58695ad76b2e74102ae8e851e8 mozilla-firefox-1.0.2.ebuild 6616
+MD5 65517e7254073f1d5c6ad7174641f8a9 ChangeLog 17631
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 3961b39c763ff8f98b56098ac0cdbecc files/mozilla-firefox-1.0-kp_separator.patch 444
 MD5 47c899122e30bc898b5a899ed0e10129 files/digest-mozilla-firefox-1.0 73
 MD5 b16efe0e4066720b718d67348aeee757 files/mozilla-firefox-1.0-4ft2.patch 22294
 MD5 0c7804fd13815f9a0e7a1ef0eab6a871 files/digest-mozilla-firefox-0.9.3 75
 MD5 07f1e3ad740ebc825da0bb43e4d9a84e files/digest-mozilla-firefox-1.0.1 75
+MD5 7870df97e6382caede680d440af594c1 files/digest-mozilla-firefox-1.0.2 75
 MD5 07f1e3ad740ebc825da0bb43e4d9a84e files/digest-mozilla-firefox-1.0.1-r1 75
 MD5 88371b8f812caf799a1ede2b1b07c079 files/mozilla-firefox-mousebuttons.patch 17099
 MD5 5496222980a6faf8261066f43cd4c6a5 files/mozilla-hppa.patch 7785
