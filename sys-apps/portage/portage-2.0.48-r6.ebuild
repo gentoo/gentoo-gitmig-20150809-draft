@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r6.ebuild,v 1.1 2003/07/22 07:27:41 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r6.ebuild,v 1.2 2003/07/22 08:24:50 carpaski Exp $
 
 IUSE="build"
 
@@ -19,7 +19,9 @@ RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/pyt
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/pym
+
+	cd ${S}/bin
+	patch < ${FILESDIR}/emerge-2.0.48-r6-missingbins.diff
 }
 
 src_compile() {
