@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.36.0.ebuild,v 1.1 2004/12/18 14:33:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.36.0.ebuild,v 1.2 2004/12/30 03:42:36 swegener Exp $
+
+inherit eutils
 
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
@@ -10,8 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~hppa ~ppc ~sparc ~x86"
 IUSE="readline tcpd gnome mysql sqlite X static postgres wxwindows"
-
-inherit eutils
 
 #theres a local sqlite use flag. use it -OR- mysql, not both.
 #mysql is the reccomended choice ...

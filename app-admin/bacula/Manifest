@@ -1,21 +1,31 @@
-MD5 b7afa1ce2b52c103bd93d453a636cb45 bacula-1.34.1.ebuild 3602
-MD5 688745cdf10527823bdd0c2b71a6e33a bacula-1.32f.ebuild 3862
-MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
-MD5 86a94177d19b5e67aea59d73a89d64b7 bacula-1.34.4.ebuild 4242
-MD5 e09f5c4075b19793adb86c6f133365a5 ChangeLog 6308
-MD5 b006aa694189a2ed5b8c66696c0c8166 bacula-1.34.5.ebuild 4431
-MD5 90bb2459c037add7da9680e2d858a64c bacula-1.32f-r5.ebuild 3844
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 901c972893c8a7b35b4594c6710f27c1 bacula-1.36.0.ebuild 9228
 MD5 7112ddd07bdd4d073d2b63317afc9314 bacula-1.34.6.ebuild 4432
-MD5 a29266acdd6d40f6a66eca02e13e4a45 bacula-1.36.0.ebuild 9227
+MD5 b7afa1ce2b52c103bd93d453a636cb45 bacula-1.34.1.ebuild 3602
+MD5 b006aa694189a2ed5b8c66696c0c8166 bacula-1.34.5.ebuild 4431
+MD5 688745cdf10527823bdd0c2b71a6e33a bacula-1.32f.ebuild 3862
+MD5 90bb2459c037add7da9680e2d858a64c bacula-1.32f-r5.ebuild 3844
+MD5 c12d0bced5ceb6f09bcc5e1da7ebdb43 ChangeLog 6410
+MD5 86a94177d19b5e67aea59d73a89d64b7 bacula-1.34.4.ebuild 4242
+MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 c453d7375a93ff187e5bc03ede9417b8 files/digest-bacula-1.32f-r5 67
-MD5 f444bcaac48e16af2fd6fb2e247bf8b6 files/digest-bacula-1.34.1 66
 MD5 5ae33205251ec6fc552b97d578ae0aa7 files/digest-bacula-1.32f 65
+MD5 2552434ccc44047b9b503045a9cff932 files/bacula-3.6.0-configure.diff 7578
+MD5 d12f73af10ee40c23d29afc62f9a02b2 files/bacula-init 1916
+MD5 9238a842a0292637c8f00243c5967527 files/bacula-init2 2574
+MD5 f444bcaac48e16af2fd6fb2e247bf8b6 files/digest-bacula-1.34.1 66
 MD5 0b9309406bd6631e14ba47c132ef3b33 files/digest-bacula-1.34.4 66
 MD5 8e55a5f04a3cd9e096e9a5dfb46f1de7 files/digest-bacula-1.34.5 66
-MD5 d12f73af10ee40c23d29afc62f9a02b2 files/bacula-init 1916
 MD5 551003183e612a958cc974532d004224 files/digest-bacula-1.34.6 66
 MD5 aad89729d5313c52d3b3b0b9246f8f47 files/digest-bacula-1.36.0 66
-MD5 9238a842a0292637c8f00243c5967527 files/bacula-init2 2574
-MD5 2552434ccc44047b9b503045a9cff932 files/bacula-3.6.0-configure.diff 7578
 MD5 13dd37747df7f32ec471e6bdf7eadec2 files/1.32f/1.32f-2-eom-nextvol.patch 9992
 MD5 aba3c0108a7b301c99c8aa4f59a04081 files/1.32f/1.32f-1-weekofmonth.patch 1879
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB03k3I1lqEGTUzyQRAs17AJwPtIAhqKUDJ3W+wsT634OP0Bk9YQCgnnHv
+kFG9c6rPA4eAn2FfdJhUhyM=
+=d964
+-----END PGP SIGNATURE-----
