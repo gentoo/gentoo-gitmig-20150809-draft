@@ -1,0 +1,28 @@
+# ChangeLog for sys-apps/gpart
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/ChangeLog,v 1.1 2005/03/06 17:45:15 ciaranm Exp $
+
+*gpart-0.1h-r1 (06 Mar 2005)
+
+  06 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +files/gpart-0.1h-PIC.patch, +files/gpart-0.1h-errno.patch,
+  +files/gpart-0.1h-ntfs.patch, +files/gpart-0.1h-vfat.patch,
+  +gpart-0.1h-r1.ebuild:
+  Moved from sys-apps/gpart to sys-block/gpart.
+
+*gpart-0.1h-r1 (11 Feb 2005)
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gpart-0.1h-errno.patch, +files/gpart-0.1h-ntfs.patch,
+  +files/gpart-0.1h-vfat.patch, +files/gpart-0.1h-PIC.patch:
+  Add fix from reiserfs for #49732 by Brice Arnould.  Grab patches from Debian
+  to fix NTFS building #49878 by Hans-Christian Armingeon.  Fix building with 
+  hardened (PIC) #43440 by John Davis.
+
+*gpart-0.1h (09 Feb 2003)
+
+  22 Apr 2003; Stefan Jones <cretin@gentoo.org> gpart-0.1h.ebuild gpart-0.1h-errno.diff :
+  Added errno patch to fix compile on nwer glibc, bug #19302
+
+  15 Feb 2003: Seth Chandler <sethbc@gentoo.org> gpart-0.1h.ebuild:
+  added gpart to portage...
