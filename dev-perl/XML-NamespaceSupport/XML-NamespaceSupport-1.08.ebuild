@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/XML-NamespaceSupport-1.08.ebuild,v 1.3 2004/01/18 22:48:18 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/XML-NamespaceSupport-1.08.ebuild,v 1.4 2004/01/21 14:24:50 gustavoz Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Pro
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ~alpha ~sparc ~ppc ~mips"
+KEYWORDS="x86 amd64 ~alpha sparc ~ppc ~mips"
 
 DEPEND="${DEPEND}
 	>=dev-libs/libxml2-2.4.1"

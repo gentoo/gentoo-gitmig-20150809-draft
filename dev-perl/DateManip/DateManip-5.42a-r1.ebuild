@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-5.42a-r1.ebuild,v 1.2 2004/01/18 19:57:13 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-5.42a-r1.ebuild,v 1.3 2004/01/21 14:11:49 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cpan.org/modules/by-module/Date/SBECK/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~mips"
+KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha ~mips"
 
 mydoc="HISTORY TODO"
 
