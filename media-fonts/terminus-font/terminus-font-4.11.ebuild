@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.11.ebuild,v 1.4 2005/02/19 10:15:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.11.ebuild,v 1.5 2005/04/01 06:01:55 agriffis Exp $
 
 DESCRIPTION="A clean fixed font for the console and X11"
 HOMEPAGE="http://www.is-vn.bg/hamster/jimmy-en.html"
 SRC_URI="http://www.is-vn.bg/hamster/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ppc64"
+KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa ia64 ~amd64 ppc64"
 IUSE="X"
 
 DEPEND="sys-apps/gawk
