@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/meanwhile-gaim/meanwhile-gaim-0.79.ebuild,v 1.3 2004/07/08 15:03:29 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/meanwhile-gaim/meanwhile-gaim-0.79.ebuild,v 1.4 2004/07/08 15:05:42 rizzo Exp $
 
-inherit flag-o-matic eutils
 use debug && inherit debug
 
 LIB_PN="meanwhile"
