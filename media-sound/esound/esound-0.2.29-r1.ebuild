@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.29-r1.ebuild,v 1.1 2003/05/29 22:36:51 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.29-r1.ebuild,v 1.2 2003/05/29 23:13:52 utx Exp $
 
 IUSE="tcpd alsa"
 
@@ -56,8 +56,9 @@ src_install() {
 	newins ${FILESDIR}/esound.conf.d esound
 
         exeinto /etc/init.d
-	use tcpd && extradepend=" portmap" \
-		|| extradepend=""
+	extradepend=""
+	use tcpd && extradepend=" portmap"
+	use alsa && extradepend="$extradepend alsasound"
         sed "s/@extradepend@/$extradepend/" <${FILESDIR}/esound.init.d >${T}/esound
 	doexe ${T}/esound
 
