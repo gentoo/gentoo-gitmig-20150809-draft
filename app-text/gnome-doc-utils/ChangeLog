@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.2 2005/03/11 20:27:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.3 2005/03/20 02:58:32 kingtaco Exp $
+
+  19 Mar 2005; Mike Doty <kingtaco@gentoo.org> gnome-doc-utils-0.1.3.ebuild:
+  ~amd64, bug 85028
 
   11 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-doc-utils-0.1.3.ebuild:
