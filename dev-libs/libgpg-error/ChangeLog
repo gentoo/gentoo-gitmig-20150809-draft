@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.29 2004/11/19 18:14:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.30 2004/12/21 16:38:41 kloeri Exp $
+
+  21 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  libgpg-error-1.0-r1.ebuild:
+  Stable on alpha.
 
   20 Nov 2004; Daniel Black <dragonheart@gentoo.org>
   libgpg-error-1.0-r1.ebuild:
