@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.4 2002/11/04 11:59:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.5 2002/11/05 12:56:16 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -207,6 +207,20 @@ src_unpack() {
 			[ "${count}" -eq 5 ] && die "Failed Patch: ${x##*/}!"
 		fi
 	done
+	# Fix backspace in xterm not working.  This should be fixed in
+	# 002_all_4.2.0-xtermresources.patch with next revision.  Closes
+	# bug #10186.
+	einfo "  108_all_4.2.1-xterm-enable-backspace.patch.bz2..."
+	patch -p1 < ${FILESDIR}/${PVR}/108_all_4.2.1-xterm-enable-backspace.patch \
+		> /dev/null || die
+	# Fix xterm exiting immediately on PPC.  Closes bug #10245.
+	# Also see http://www.geocrawler.com/archives/3/3/2001/9/100/6633199/
+	einfo "  109_ppc_4.2.1-xterm-eightBitInput-fix.patch.bz2..."
+	if [ "${ARCH}" = "ppc" ]
+	then
+		patch -p1 < ${FILESDIR}/${PVR}/109_ppc_4.2.1-xterm-eightBitInput-fix.patch \
+			> /dev/null || die
+	fi
 	ebegin "Done with patching"; eend 0
 
 	# Update the Savage Driver
@@ -318,12 +332,15 @@ src_unpack() {
 	eend 0
 
 	# These are not included anymore as they are obsolete
-	rm -rf ${S}/xc/doc/hardcopy/{XIE,PEX5}
-	for x in ${S}/xc/programs/Xserver/hw/xfree86/{XF98Conf.cpp,XF98Config}
+	rm -rf ${S}/doc/hardcopy/{XIE,PEX5}
+	for x in ${S}/programs/Xserver/hw/xfree86/{XF98Conf.cpp,XF98Config}
 	do
-		cp ${x} ${x}.orig
-		grep -iv 'Load[[:space:]]*"\(pex5\|xie\)"' ${x}.orig > ${x}
-		rm -f ${x}.orig
+		if [ -f ${x} ]
+		then
+			cp ${x} ${x}.orig
+			grep -iv 'Load[[:space:]]*"\(pex5\|xie\)"' ${x}.orig > ${x}
+			rm -f ${x}.orig
+		fi
 	done
 
 	# Apply Xft quality patch from http://www.cs.mcgill.ca/~dchest/xfthack/
