@@ -23,7 +23,7 @@
 
 # <liquidx@gentoo.org> (03 Jul 2003)
 # python with db4 support and threads enabled
-=dev-lang/python-2.2.3-r1
+#=dev-lang/python-2.2.3-r1
 
 # <brain@gentoo.org> (03 Jul 2003)
 # beta version
