@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.8-r1.ebuild,v 1.6 2000/11/01 04:44:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.8-r1.ebuild,v 1.7 2000/12/19 00:21:38 achim Exp $
 
 # also, this script now has pre/post inst/rm support
 
@@ -23,12 +23,13 @@ src_compile() {
 
 src_install() {
   cd ${S}
-  try make install prefix=${D}/usr
+  try make install prefix=${D}/usr infodir=${D}/usr/info
   dodoc AUTHORS ChangeLog COPYING README* INSTALL NEWS
   cd docs
   docinto html
   dodoc glib.html glib_toc.html
 }
+
 
 
 
