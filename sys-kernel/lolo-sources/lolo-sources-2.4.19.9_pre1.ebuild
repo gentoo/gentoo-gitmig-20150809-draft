@@ -41,7 +41,7 @@ src_unpack() {
 
 	# Now we need to deal with the tarball of patches.
 	cd ${KV}
-	[ `use crypto` ] || rm 8*
+	[ `use crypt` ] || rm 8*
 	addpatches . ${WORKDIR}/linux-${KV}
 
 	cd ../linux-${KV}

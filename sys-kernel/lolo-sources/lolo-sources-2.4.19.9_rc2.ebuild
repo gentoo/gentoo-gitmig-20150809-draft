@@ -40,7 +40,7 @@ src_unpack() {
 
 	# Now we need to deal with the tarball of patches.
 	cd ${KV}
-	[ `use crypto` ] || rm 8*
+	[ `use crypt` ] || rm 8*
 	#Thers is some anti-grsecurity sentiment, so I'll
 	#make it easy not to patch it in.
 	#Uncomment the following line to not patch grsecurity.
