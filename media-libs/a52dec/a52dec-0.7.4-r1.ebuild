@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r1.ebuild,v 1.2 2004/06/24 22:54:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r1.ebuild,v 1.3 2004/07/01 07:53:52 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE="oss static djbfft"
 
 DEPEND=">=sys-devel/autoconf-2.52d-r1
 	x86? ( djbfft? ( dev-libs/djbfft ) )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 	append-flags -fPIC

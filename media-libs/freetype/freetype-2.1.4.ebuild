@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.4.ebuild,v 1.12 2004/06/24 23:00:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.4.ebuild,v 1.13 2004/07/01 07:55:56 eradicator Exp $
 
 IUSE="doc zlib bindist"
 
@@ -19,7 +19,7 @@ SLOT="2"
 LICENSE="FTL | GPL-2"
 KEYWORDS="x86 ppc sparc alpha hppa mips"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	zlib? ( sys-libs/zlib )"
 
 src_unpack() {

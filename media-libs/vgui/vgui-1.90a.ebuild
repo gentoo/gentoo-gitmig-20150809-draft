@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/vgui-1.90a.ebuild,v 1.3 2004/06/24 23:25:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/vgui-1.90a.ebuild,v 1.4 2004/07/01 08:04:57 eradicator Exp $
 
 MY_PN="v"
 MY_PV="${PV/a}"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/x11
-	virtual/glibc"
+	virtual/libc"
 S=${WORKDIR}/${P}
 
 src_unpack() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmad
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.20 2004/06/24 23:11:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.21 2004/07/01 07:58:45 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libmad-0.15.0b-r1.ebuild, libmad-0.15.1b.ebuild:
+  virtual/glibc -> virtual/libc
 
   20 Jun 2004; Tom Gall <tgall@gentoo.org> libmad-0.15.1b.ebuild:
   stable on ppc64

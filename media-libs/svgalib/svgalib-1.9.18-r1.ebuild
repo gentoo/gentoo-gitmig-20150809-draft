@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.10 2004/06/26 17:42:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.11 2004/07/01 08:04:29 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE="build"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 kernel_supports_modules() {
 	grep '^CONFIG_MODULES=y$' /usr/src/linux/.config >& /dev/null

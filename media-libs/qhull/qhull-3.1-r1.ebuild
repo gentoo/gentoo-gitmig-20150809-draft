@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.8 2004/06/24 23:20:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.9 2004/07/01 08:02:58 eradicator Exp $
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Geometry library"
@@ -12,7 +12,7 @@ LICENSE="BSD"
 KEYWORDS="x86 sparc ~ppc amd64"
 IUSE=""
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 

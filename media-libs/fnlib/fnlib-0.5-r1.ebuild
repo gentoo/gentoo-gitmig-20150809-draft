@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fnlib/fnlib-0.5-r1.ebuild,v 1.23 2004/06/24 23:00:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fnlib/fnlib-0.5-r1.ebuild,v 1.24 2004/07/01 07:55:36 eradicator Exp $
 
 inherit gnuconfig
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	media-libs/imlib"
 
 src_compile() {

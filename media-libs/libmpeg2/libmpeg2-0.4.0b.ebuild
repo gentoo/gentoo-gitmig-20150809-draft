@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.10 2004/06/24 23:12:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.11 2004/07/01 07:59:16 eradicator Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64 ~sparc"
 IUSE="sdl X"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )"
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2-r2.ebuild,v 1.12 2004/06/24 23:17:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2-r2.ebuild,v 1.13 2004/07/01 08:02:13 eradicator Exp $
 
 inherit libtool distutils eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc hppa alpha ~amd64"
 IUSE="python"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	dev-libs/expat"
 
 DEPEND="${RDEPEND}

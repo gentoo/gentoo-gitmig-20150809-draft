@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.1.ebuild,v 1.11 2004/06/24 23:26:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.1.ebuild,v 1.12 2004/07/01 08:05:11 eradicator Exp $
 
 DESCRIPTION="high performance/quality MPEG-4 video de-/encoding solution"
 HOMEPAGE="http://www.xvid.org/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	x86? ( >=dev-lang/nasm-0.98.30 )"
 
 S="${WORKDIR}/${PN}core-${PV}/build/generic"

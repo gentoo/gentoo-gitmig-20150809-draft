@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsamplerate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.14 2004/06/27 00:57:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.15 2004/07/01 08:00:04 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libsamplerate-0.0.13.ebuild, libsamplerate-0.0.14.ebuild,
+  libsamplerate-0.0.15.ebuild:
+  virtual/glibc -> virtual/libc
 
   26 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libsamplerate-0.1.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-1.0.9.ebuild,v 1.9 2004/06/24 23:14:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-1.0.9.ebuild,v 1.10 2004/07/01 08:00:18 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 sparc ~ppc"
 LICENSE="GPL-2"
 
 DEPEND="sys-devel/gcc
-	virtual/glibc"
+	virtual/libc"
 
 src_compile() {
 	./configure --prefix=/usr \

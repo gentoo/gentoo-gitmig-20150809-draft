@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-0.9.0_rc1.ebuild,v 1.18 2004/06/24 22:56:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-0.9.0_rc1.ebuild,v 1.19 2004/07/01 07:54:35 eradicator Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -sparc ppc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=media-libs/alsa-lib-0.9.0_rc1"
 
 src_compile() {

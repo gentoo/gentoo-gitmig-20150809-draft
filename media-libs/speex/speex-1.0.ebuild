@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.0.ebuild,v 1.9 2004/06/24 23:23:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.0.ebuild,v 1.10 2004/07/01 08:04:15 eradicator Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ LICENSE="BSD as-is"
 KEYWORDS="x86 ppc sparc ~amd64"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	econf || die

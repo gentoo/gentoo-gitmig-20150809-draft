@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.42 2004/06/26 17:42:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.43 2004/07/01 08:04:29 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  svgalib-1.4.3-r4.ebuild, svgalib-1.9.17-r3.ebuild, svgalib-1.9.18-r1.ebuild,
+  svgalib-1.9.19.ebuild:
+  virtual/glibc -> virtual/libc
 
   26 Jun 2004; Marius Mauch <genone@gentoo.org> svgalib-1.9.18-r1.ebuild,
   svgalib-1.9.19.ebuild:

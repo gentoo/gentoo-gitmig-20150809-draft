@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/divx4linux-20020418-r1.ebuild,v 1.8 2004/06/24 22:57:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/divx4linux-20020418-r1.ebuild,v 1.9 2004/07/01 07:55:23 eradicator Exp $
 
 DXVER="501"
 DESCRIPTION="Binary release of DivX Codec 5.0.1"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="-* x86"
 RESTRICT="nostrip"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_install() {
 	for lib in *.so ; do

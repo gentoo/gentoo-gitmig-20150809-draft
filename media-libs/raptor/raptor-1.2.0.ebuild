@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.2.0.ebuild,v 1.10 2004/06/24 23:20:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.2.0.ebuild,v 1.11 2004/07/01 08:03:13 eradicator Exp $
 
 DESCRIPTION="The RDF Parser Toolkit"
 HOMEPAGE="http://www.redland.opensource.ac.uk/raptor/"
@@ -11,13 +11,13 @@ SLOT="0"
 KEYWORDS="x86 ~ppc amd64 ~sparc"
 IUSE="curl xml2 gnome ssl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	gnome? ( >=dev-libs/glib-2.2.1 dev-util/pkgconfig )
 	xml2? ( >=dev-libs/libxml2-2.4.0 )
 	!xml2? ( dev-libs/expat )
 	ssl? ( dev-libs/openssl )
 	curl? ( net-misc/curl )"
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	gnome? ( >=dev-libs/glib-2.2.1 )
 	xml2? ( >=dev-libs/libxml2-2.4.0 )
 	!xml2? ( dev-libs/expat )
@@ -26,13 +26,13 @@ RDEPEND="virtual/glibc
 
 # compilation with libwww currently breaks and for using libfetch I didn't find the right USE flag
 #IUSE="curl xml2 libwww gnome"  
-#DEPEND="virtual/glibc
+#DEPEND="virtual/libc
 #	gnome? ( >=dev-libs/glib-2.2.1 dev-util/pkgconfig )
 #	xml2? ( >=dev-libs/libxml2-2.4.0 ) : ( dev-libs/expat )
 #	ssl? ( dev-libs/openssl )
 #	curl? ( net-misc/curl ) : ( !xml2? ( libwww? ( net-libs/libwww ) ) )
 #		"
-#RDEPEND="virtual/glibc
+#RDEPEND="virtual/libc
 #	gnome? ( >=dev-libs/glib-2.2.1 )
 #	xml2? ( >=dev-libs/libxml2-2.4.0 ) : ( dev-libs/expat )
 #	ssl? ( dev-libs/openssl )

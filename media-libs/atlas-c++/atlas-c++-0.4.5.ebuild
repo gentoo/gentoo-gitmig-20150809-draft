@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.4.5.ebuild,v 1.6 2004/06/24 22:56:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.4.5.ebuild,v 1.7 2004/07/01 07:54:48 eradicator Exp $
 
 MY_PN="Atlas-C++"
 MY_P=${MY_PN}-${PV}
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~sparc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	=dev-libs/libsigc++-1.0*"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.7.ebuild,v 1.2 2004/06/24 23:00:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.7.ebuild,v 1.3 2004/07/01 07:55:56 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ LICENSE="FTL GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64 ~ppc64"
 IUSE="zlib bindist cjk doc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	zlib? ( sys-libs/zlib )"
 
 src_unpack() {
