@@ -1,7 +1,8 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.90.0.27.ebuild,v 1.1 2001/08/28 04:27:58 drobbins Exp $
+# Maintainer: System Team <system@gentoo.org>
+# Author: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.90.0.27.ebuild,v 1.2 2001/08/28 16:53:43 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
