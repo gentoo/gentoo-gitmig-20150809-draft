@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.7 2002/12/16 04:27:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r6.ebuild,v 1.1 2002/12/16 04:27:29 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
-inherit flag-o-matic gcc
+inherit eutils flag-o-matic libtool
 
 # Compile problems with these (bug #6641 among others)...
 filter-flags "-fno-exceptions -fomit-frame-pointer"
@@ -31,10 +31,6 @@ filter-flags "-fno-exceptions -fomit-frame-pointer"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
-# Are we trying to compile with gcc3 ?  CFLAGS and CXXFLAGS needs to be
-# valid for gcc-2.95.3 ...
-gcc2_flags
-
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
 
@@ -45,13 +41,44 @@ MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
 LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
 BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
 DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
-# Dont install in /usr/include/g++/, but in gcc internal directory.
-# We will handle /usr/include/g++/ with gcc-config ...
-STDCXX_INCDIR="${LIBPATH}/include/g++"
+# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
+# We will handle /usr/include/g++-v3/ with gcc-config ...
+STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
-S="${WORKDIR}/${P}"
+# Patch tarball support ...
+#PATCH_VER="1.0"
+PATCH_VER=""
+
+# Snapshot support ...
+#SNAPSHOT="2002-08-12"
+SNAPSHOT=""
+
+# Branch update support ...
+#BRANCH_UPDATE="20021208"
+BRANCH_UPDATE="20021208"
+
+if [ -z "${SNAPSHOT}" ]
+then
+	S="${WORKDIR}/${P}"
+	SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2"
+	
+	if [ -n "${PATCH_VER}" ]
+	then
+		SRC_URI="${SRC_URI}
+		         mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
+	fi
+
+	if [ -n "${BRANCH_UPDATE}" ]
+	then
+		SRC_URI="${SRC_URI}
+		         mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+	fi
+else
+	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
+	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
+fi
+
 DESCRIPTION="Modern C/C++ compiler written by the GNU people"
-SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
@@ -92,29 +119,40 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	if [ -z "${SNAPSHOT}" ]
+	then
+		unpack ${P}.tar.bz2
+		
+		if [ -n "${PATCH_VER}" ]
+		then
+			unpack ${P}-patches-${PATCH_VER}.tar.bz2
+		fi
+	else
+		unpack gcc-${SNAPSHOT//-}.tar.bz2
+	fi
 
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
-	libtoolize --copy --force &> /dev/null
+	elibtoolize --portage --shallow
 
-	# This new patch for the atexit problem occured with glibc-2.2.3 should
-	# work with glibc-2.2.4.  This closes bug #3987 and #4004.
-	#
-	# Azarah - 29 Jun 2002
-	#
-	# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/08/0476.html
-	# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/08/0589.html
-	#
-	#
-	# Something to note, is that this patch makes gcc crash if its given
-	# the "-mno-ieee-fp" flag ... libvorbis is an good example of this.
-	# This however is on of those which one we want fixed most cases :/
-	#
-	# Azarah - 30 Jun 2002
-	#
-	einfo "Applying new-atexit patch..."
-	patch -l -p1 < ${FILESDIR}/${P}-new-atexit.diff > /dev/null || die
+	# Branch update ...
+	if [ -n "${BRANCH_UPDATE}" ]
+	then
+		epatch ${DISTDIR}/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2
+	fi
+
+	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2
+	if [ -n "${PATCH_VER}" ]
+	then
+		epatch ${WORKDIR}/patch
+	fi
+
+	# Patches from Redhat ...
+	epatch ${FILESDIR}/${PV}/gcc32-ada-make.patch
+	epatch ${FILESDIR}/${PV}/gcc32-shared-pthread.patch
+	use sparc && epatch ${FILESDIR}/${PV}/gcc32-sparc32-hack.patch
+	epatch ${FILESDIR}/${PV}/gcc32-testsuite.patch
+	epatch ${FILESDIR}/${PV}/gcc32-tls-reload-fix.patch
 
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
@@ -132,29 +170,54 @@ src_unpack() {
 		cp ${x} ${x}.orig
 		sed -e 's:bindir = @bindir@:bindir = $(FAKE_ROOT)@bindir@:' \
 			${x}.orig > ${x}
+
+		# Fix --exec-prefix=
+		cp ${x} ${x}.orig
+		sed -e 's:exec_prefix = @exec_prefix@:exec_prefix = $(FAKE_ROOT)@exec_prefix@:' \
+			${x}.orig > ${x}
 		
 		# Fix --with-gxx-include-dir=
 		cp ${x} ${x}.orig
-		sed -e 's:gxx_include_dir=${includedir}:gxx_include_dir=$(FAKE_ROOT)${includedir}:' \
+		sed -e 's:gxx_include_dir = @gxx_:gxx_include_dir = $(FAKE_ROOT)@gxx_:' \
+			-e 's:glibcppinstalldir = @gxx_:glibcppinstalldir = $(FAKE_ROOT)@gxx_:' \
+			${x}.orig > ${x}
+		
+		# Where java security stuff should be installed
+		cp ${x} ${x}.orig
+		sed -e 's:secdir = $(libdir)/security:secdir = $(FAKE_ROOT)$(LIBPATH)/security:' \
 			${x}.orig > ${x}
 		
 		rm -f ${x}.orig
 	done
+
+	# This next bit is for updating libtool linker scripts ...
+	OLD_GCC_VERSION="`gcc -dumpversion`"
+
+	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
+	then
+		echo "${OLD_GCC_VERSION}" > ${WORKDIR}/.oldgccversion
+	fi
 }
 
 src_compile() {
 	local myconf=""
+	local gcc_lang=""
 	if [ -z "`use build`" ]
 	then
 		myconf="${myconf} --enable-shared"
+		gcc_lang="c,c++,ada,f77,objc"
 	else
-		myconf="${myconf} --enable-languages=c"
+		gcc_lang="c"
 	fi
 	if [ -z "`use nls`" ] || [ "`use build`" ]
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
+	fi
+	if [ -n "`use java`" ] && [ -z "`use build`" ]
+	then
+		gcc_lang="${gcc_lang},java"
 	fi
 
 	# In general gcc does not like optimization, and add -O2 where
@@ -170,6 +233,7 @@ src_compile() {
 	addwrite "/dev/zero"
 	${S}/configure --prefix=${LOC} \
 		--bindir=${BINPATH} \
+		--exec-prefix=${LOC} \
 		--datadir=${DATAPATH} \
 		--mandir=${DATAPATH}/man \
 		--infodir=${DATAPATH}/info \
@@ -177,9 +241,15 @@ src_compile() {
 		--host=${CHOST} \
 		--target=${CCHOST} \
 		--with-system-zlib \
+		--enable-languages=${gcc_lang} \
 		--enable-threads=posix \
 		--enable-long-long \
+		--disable-checking \
+		--enable-cstdio=stdio \
+		--enable-clocale=generic \
+		--enable-__cxa_atexit \
 		--enable-version-specific-runtime-libs \
+		--with-gxx-include-dir=${STDCXX_INCDIR} \
 		--with-local-prefix=${LOC}/local \
 		${myconf} || die
 
@@ -191,13 +261,15 @@ src_compile() {
 		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
 		emake bootstrap-lean \
-			LIBPATH="${LIBPATH}" STAGE1_CFLAGS="-O" || die
+			LIBPATH="${LIBPATH}" \
+			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
 		# Above FLAGS optimize and speedup build, thanks
 		# to Jeff Garzik <jgarzik@mandrakesoft.com>
 	else
 		S="${WORKDIR}/build" \
 		emake LDFLAGS=-static bootstrap \
-			LIBPATH="${LIBPATH}" STAGE1_CFLAGS="-O" || die
+			LIBPATH="${LIBPATH}" \
+			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
 	fi
 }
 
@@ -218,6 +290,7 @@ src_install() {
 	S="${WORKDIR}/build" \
 	make prefix=${D}${LOC} \
 		bindir=${D}${BINPATH} \
+		exec_prefix=${D}${LOC} \
 		datadir=${D}${DATAPATH} \
 		mandir=${D}${DATAPATH}/man \
 		infodir=${D}${DATAPATH}/info \
@@ -245,6 +318,23 @@ src_install() {
 	exeinto /usr/bin
 	doexe ${FILESDIR}/cc
 	
+# This should be invalidated by the linker scripts we have as the latest
+# fix for bug #4411
+#
+#	# gcc-3.1 have a problem with the ordering of Search Directories.  For
+#	# instance, if you have libreadline.so in /lib, and libreadline.a in
+#	# /usr/lib, then it will link with libreadline.a instead of .so.  As far
+#	# as I can see from the source, /lib should be searched before /usr/lib,
+#	# and this also differs from gcc-2.95.3 and possibly 3.0.4, but ill have
+#	# to check on 3.0.4.  Thanks to Daniel Robbins for noticing this oddity,
+#	# bugzilla bug #4411
+#	#
+#	# Azarah - 3 Jul 2002
+#	#
+#	cd ${D}${LIBPATH}
+#	dosed -e "s:%{L\*} %(link_libgcc):%{L\*} -L/lib %(link_libgcc):" \
+#		${LIBPATH}/specs
+
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
 	if [ -z "`use build`" ]
@@ -268,6 +358,34 @@ src_install() {
 			[ -f ${x} ] && mv -f ${x} ${D}${LIBPATH}
 		done
 
+		# Move Java headers to compiler-specific dir
+		for x in ${D}${LOC}/include/gc*.h ${D}${LOC}/include/j*.h
+		do
+			[ -f ${x} ] && mv -f ${x} ${D}${LIBPATH}/include/
+		done
+		for x in gcj gnu java javax org
+		do
+			if [ -d ${D}${LOC}/include/${x} ]
+			then
+				dodir /${LIBPATH}/include/${x}
+				mv -f ${D}${LOC}/include/${x}/* ${D}${LIBPATH}/include/${x}/
+				rm -rf ${D}${LOC}/include/${x}
+			fi
+		done
+
+		# Move libgcj.spec to compiler-specific directories
+		[ -f ${D}${LOC}/lib/libgcj.spec ] && \
+			mv -f ${D}${LOC}/lib/libgcj.spec ${D}${LIBPATH}/libgcj.spec
+
+		# Rename jar because it could clash with Kaffe's jar if this gcc is
+		# primary compiler (aka don't have the -<version> extension)
+		cd ${D}${LOC}/${CCHOST}/gcc-bin/${MY_PV}
+		[ -f jar ] && mv -f jar gcj-jar
+
+		# Move <cxxabi.h> to compiler-specific directories
+		[ -f ${D}${STDCXX_INCDIR}/cxxabi.h ] && \
+			mv -f ${D}${STDCXX_INCDIR}/cxxabi.h ${D}${LIBPATH}/include/
+
 		# These should be symlinks
 		cd ${D}${BINPATH}
 		rm -f ${CCHOST}-{gcc,g++,c++,g77}
@@ -287,44 +405,73 @@ src_install() {
     if [ -z "`use build`" ]
     then
 		cd ${S}
-		docinto /       
-		dodoc COPYING COPYING.LIB README* FAQ MAINTAINERS
-		docinto html
-		dodoc faq.html
-		docinto gcc
+		docinto /${CCHOST}
+		dodoc COPYING COPYING.LIB ChangeLog FAQ GNATS MAINTAINERS README
+		docinto ${CCHOST}/html
+		dohtml *.html
+		cd ${S}/boehm-gc
+		docinto ${CCHOST}/boehm-gc
+		dodoc ChangeLog doc/{README*,barrett_diagram}
+		docinto ${CCHOST}/boehm-gc/html
+		dohtml doc/*.html
 		cd ${S}/gcc
-		dodoc BUGS ChangeLog* COPYING* FSFChangeLog* LANGUAGES NEWS PROBLEMS README* SERVICE TESTS.FLUNK
-		cd ${S}/libchill
-		docinto libchill
-		dodoc ChangeLog
+		docinto ${CCHOST}/gcc
+		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
 		cd ${S}/libf2c
-		docinto libf2c
-		dodoc ChangeLog changes.netlib README TODO
-		cd ${S}/libio
-		docinto libio
-		dodoc ChangeLog NEWS README
-		cd dbz
-		docinto libio/dbz
-		dodoc README
-		cd ../stdio
-		docinto libio/stdio
-		dodoc ChangeLog*
-		cd ${S}/libobjc
-		docinto libobjc
-		dodoc ChangeLog README* THREADS*
-		cd ${S}/libstdc++
-		docinto libstdc++
-		dodoc ChangeLog NEWS
+	    docinto ${CCHOST}/libf2c
+	    dodoc ChangeLog README TODO *.netlib
+		cd ${S}/libffi
+	    docinto ${CCHOST}/libffi
+	    dodoc ChangeLog* LICENSE README
+	    cd ${S}/libiberty
+	    docinto ${CCHOST}/libiberty
+	    dodoc ChangeLog COPYING.LIB README
+	    cd ${S}/libobjc
+	    docinto ${CCHOST}/libobjc
+	    dodoc ChangeLog README* THREADS*
+		cd ${S}/libstdc++-v3
+		docinto ${CCHOST}/libstdc++-v3
+		dodoc ChangeLog* README
+		docinto ${CCHOST}/libstdc++-v3/html
+		dohtml -r -a css,diff,html,txt,xml docs/html/*
+		cp -f docs/html/17_intro/[A-Z]* \
+			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
+		
+        if [ -n "`use java`" ]
+        then
+			cd ${S}/fastjar
+			docinto ${CCHOST}/fastjar
+			dodoc AUTHORS CHANGES COPYING ChangeLog NEWS README
+			cd ${S}/libjava
+			docinto ${CCHOST}/libjava
+			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
+        fi
     else
         rm -rf ${D}/usr/share/{man,info}
 	fi
+
+    # Fix ncurses b0rking
+    find ${D}/ -name '*curses.h' -exec rm -f {} \;
 }
 
 pkg_postinst() {
 
-	if [ "${ROOT}" = "/" -a "${COMPILER}" != "gcc3" -a "${CHOST}" == "${CCHOST}" ]
+	if [ "${ROOT}" = "/" -a "${COMPILER}" = "gcc3" -a "${CHOST}" == "${CCHOST}" ]
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
 	fi
+
+	# Update libtool linker scripts to reference new gcc version ...
+	if [ -f ${WORKDIR}/.oldgccversion -a "${ROOT}" = "/" ]
+	then 
+		OLD_GCC_VERSION="`cat ${WORKDIR}/.oldgccversion`"
+
+		cp -f ${FILESDIR}/fix_libtool_files.sh ${T}
+		chmod +x ${T}/fix_libtool_files.sh
+		${T}/fix_libtool_files.sh ${OLD_GCC_VERSION}
+	fi
+	
+	# Fix ncurses b0rking (if r5 isn't unmerged)
+	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 }
 
