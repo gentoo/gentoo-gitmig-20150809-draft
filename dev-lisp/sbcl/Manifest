@@ -1,4 +1,4 @@
-MD5 c726599a03d2a875c53e9f2787d77366 ChangeLog 4651
+MD5 515fc1a8b3f42837954f02e1fdd0de3a ChangeLog 5181
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 1b2f87556d9e5807c5347c764e18642b sbcl-0.8.5.ebuild 3891
 MD5 3f7c2bc02639ca69e478db920d8b3704 sbcl-0.7.7.ebuild 1479
@@ -8,7 +8,7 @@ MD5 2842b64ad2353ca9b97ab1563ddb1e35 sbcl-0.8.4-r1.ebuild 3569
 MD5 e05c3beb6da60089ea8766a573324876 sbcl-0.8.4-r2.ebuild 3894
 MD5 c4fad0c97a08164fd44dea56a258a475 sbcl-0.8.4.ebuild 2560
 MD5 0d220a5029f2c302fdeafadd3bd97b7f sbcl-0.8.5-r1.ebuild 4018
-MD5 5381801317e016d24a3dc74dbc51c3b5 sbcl-0.8.7.ebuild 4202
+MD5 141aeff5bf9d9e3d8beced995f0b36e1 sbcl-0.8.7.ebuild 4095
 MD5 ecf044f288fb93be779915b684e8d81f files/digest-sbcl-0.8.5 461
 MD5 1b52d1cb085fdfec090a08604c2fd4ed files/digest-sbcl-0.7.7 300
 MD5 1821ff9718a8d902b416c691258c9a40 files/digest-sbcl-0.8.1 304
@@ -23,7 +23,5 @@ MD5 149ae58f2a3254c2746b71452292abf2 files/sbcl.sh 2170
 MD5 ecf044f288fb93be779915b684e8d81f files/digest-sbcl-0.8.5-r1 461
 MD5 d4bfc144f303942ff574404fbd2e078d files/digest-sbcl-0.8.7 528
 MD5 f03239faafd7bab9fb5f858b3cdfdf3b files/0.8.7/posix-tests.lisp-sandbox-gentoo.patch 1860
-MD5 a2d8579a5a9cc200c62856255f3b1479 files/0.8.7/README.Gentoo 674
-MD5 a51ab5d4bd565e7aef5c82d075be96fa files/0.8.7/README.Gentoo~ 16
+MD5 6bd69b507b65c1673290970c034a307c files/0.8.7/README.Gentoo 695
 MD5 6f7e5b88d5e1e5eb21b00e008b8a23b5 files/0.8.7/customize-target-features.lisp 532
-MD5 0890be5a2899a56e02f2356795babb5f files/0.8.7/customize-target-features.lisp~ 777
