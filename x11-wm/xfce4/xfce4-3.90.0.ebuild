@@ -26,7 +26,7 @@ DEPEND=">=x11-libs/gtk+-2.0.6
 	=x11-misc/xfdesktop-3.90.0
 	=x11-misc/xfprint-3.90.0
 	=x11-misc/xfce4-iconbox-3.90.0
-	=x11-themes/gtk-xfce-engine-2.1.1
+	=x11-themes/gtk-engines-xfce-2.1.1
 	=x11-misc/xfce4-panel-3.90.0"
 
 src_install() {
