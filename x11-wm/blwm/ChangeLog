@@ -1,0 +1,11 @@
+# ChangeLog for x11-wm/blwm
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blwm/ChangeLog,v 1.1 2004/11/07 13:14:04 usata Exp $
+
+*blwm-1.0.4 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +blwm-1.0.4.ebuild:
+  Initial import. Ebuild submitted by Fernando Henrique R Silva
+  <xsl4v3@yahoo.com.br>; bug #65557.
+
