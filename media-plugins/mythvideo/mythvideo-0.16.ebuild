@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.16.ebuild,v 1.1 2004/09/10 19:43:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.16.ebuild,v 1.2 2004/09/15 14:34:10 aliz Exp $
 
 inherit myth eutils
 
@@ -16,6 +16,7 @@ DEPEND=">=sys-apps/sed-4
 	dev-perl/libwww-perl
 	dev-perl/HTML-Parser
 	dev-perl/URI
+	dev-perl/XML-Simple
 	|| ( media-video/mplayer media-video/xine-ui )
 	|| ( ~media-tv/mythtv-${PV} ~media-tv/mythfrontend-${PV} )"
 
