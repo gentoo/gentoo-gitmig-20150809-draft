@@ -1,8 +1,12 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.3 2002/09/16 00:28:28 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.4 2002/10/08 12:22:46 raker Exp $
 
 *wvdial-1.53 (27 Apr 2002)
+
+  08 Oct 2002; Nick Hadaway <raker@gentoo.org> wvdial-1.53.ebuild,
+  files/wvdial-1.53-crypt.patch :
+  Added -lcrypt to LIBS.  Thanks to moonwalker@astro.nu on bug #8763
 
   16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> wvdial-1.53.ebuild :
   Added sparc and sparc64 keywords.
