@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.31 2004/04/07 22:20:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.32 2004/04/25 20:44:40 squinky86 Exp $
+
+  25 Apr 2004; Jon Hood <squinky86@gentoo.org> nut-1.4.1.ebuild,
+  nut-1.5.12.ebuild:
+  added "die"
 
   07 Apr 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
   nut-1.0.0.ebuild, nut-1.2.1-r1.ebuild, nut-1.2.1.ebuild, nut-1.2.2.ebuild,

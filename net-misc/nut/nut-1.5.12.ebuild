@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.12.ebuild,v 1.1 2004/03/09 03:39:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.12.ebuild,v 1.2 2004/04/25 20:44:40 squinky86 Exp $
 
 inherit fixheadtails
 
@@ -62,7 +62,7 @@ src_compile() {
 	sed -e "s:= bestups:= hidups bestups:" \
 		-i drivers/Makefile || die "sed failed"
 	sed -e "s:= powercom.8:= hidups.8 powercom.8:" \
-		-i man/Makefile || "sed failed"
+		-i man/Makefile || die "sed failed"
 
 	emake || die "compile problem"
 
