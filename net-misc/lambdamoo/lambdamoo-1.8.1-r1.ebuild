@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/lambdamoo-1.8.1-r1.ebuild,v 1.1 2003/07/12 07:29:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/lambdamoo-1.8.1-r1.ebuild,v 1.2 2003/07/18 19:02:37 vapier Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="networked mud that can be used for different types of collaborative
 HOMEPAGE="http://sourceforge.net/projects/lambdamoo/"
 SRC_URI="mirror://sourceforge.net/lambdamoo/LambdaMOO-${PV}.tar.gz"
 
-LICENSE=""
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
 
