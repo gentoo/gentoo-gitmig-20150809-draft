@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.42 2004/09/11 08:08:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.43 2004/09/17 00:06:33 solar Exp $
+
+  16 Sep 2004; <solar@gentoo.org> busybox-1.00_rc3.ebuild:
+  marked busybox-1.00-rc3 stable for x86, other arches please follow so it can
+  be used for the next release cycle
 
   11 Sep 2004; Daniel Black <dragonheart@gentoo.org> busybox-1.00_pre8.ebuild,
   busybox-1.00_rc3.ebuild:
