@@ -2,7 +2,7 @@ MD5 fb4207cbb65f94bd9c203b46f625b348 ChangeLog 1406
 MD5 3f1cc8b3109f15a7a1a34219493e989a metadata.xml 596
 MD5 ef8d20561fb1057fe15bfcfbd3488890 mod_xslt-1.0.5a.ebuild 1496
 MD5 0bac226e1a1f12945be787d703534845 mod_xslt-1.0.5a-r1.ebuild 1356
-MD5 785c0ba6a357570b702dd5a80e138d2b mod_xslt-2.0.4.ebuild 752
+MD5 35627227bd59316b25eadf7ee6de761c mod_xslt-2.0.4.ebuild 727
 MD5 2779031f2b6ac43f6763189009bad231 files/25_mod_xslt.conf 350
 MD5 426f6f25b09522583bdfce52e8b2b8b8 files/digest-mod_xslt-1.0.5a 66
 MD5 8bbeeba1592af204503283d22a692202 files/mod-xslt-1.0.5a-content.patch 3616
