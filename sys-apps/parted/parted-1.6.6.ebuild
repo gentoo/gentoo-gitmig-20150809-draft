@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6.ebuild,v 1.18 2004/06/05 21:38:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6.ebuild,v 1.19 2004/06/16 00:26:21 lv Exp $
 
 inherit gnuconfig eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ia64 x86 ~ppc ~amd64 sparc hppa alpha"
+KEYWORDS="ia64 x86 ~ppc amd64 sparc hppa alpha"
 IUSE="nls static readline debug"
 
 DEPEND=">=sys-fs/e2fsprogs-1.27

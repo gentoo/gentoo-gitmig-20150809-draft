@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.49 2004/06/10 21:51:01 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.50 2004/06/16 00:26:21 lv Exp $
+
+  15 Jun 2004; Travis Tilley <lv@gentoo.org> parted-1.6.10-r1.ebuild,
+  parted-1.6.6.ebuild, parted-1.6.9.ebuild:
+  it seems that >=sys-apps/parted-1.6.9 are masked in package.mask, so i'm
+  marking 1.6.10-r1 ~amd64 and 1.6.6 stable on amd64
 
   10 Jun 2004; Travis Tilley <lv@gentoo.org> parted-1.6.10-r1.ebuild:
   stable on amd64 for gcc 3.4 fixes
