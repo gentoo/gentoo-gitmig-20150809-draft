@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-0.0.1.20040313.ebuild,v 1.1 2004/03/15 13:42:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-0.0.1.20040320.ebuild,v 1.1 2004/03/23 05:46:29 vapier Exp $
 
 inherit enlightenment
 
