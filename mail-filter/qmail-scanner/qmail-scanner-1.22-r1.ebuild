@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.22-r1.ebuild,v 1.3 2004/07/28 17:28:44 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.22-r1.ebuild,v 1.4 2004/08/09 08:25:54 robbat2 Exp $
 
 inherit fixheadtails gcc eutils
 
@@ -64,6 +64,7 @@ src_compile () {
 	--batch \
 	--log-details yes \
 	--mime-unpacker "ripmime" \
+	--skip-setuid-test \
 	${myconf} \
 	|| die "./configure failed!"
 
