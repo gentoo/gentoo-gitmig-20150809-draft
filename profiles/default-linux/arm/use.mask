@@ -1,3 +1,5 @@
+# things to test someday
+gnome
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
