@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (20 Aug 2002)
+# masked for extensive testing
+x11-libs/qt-embedded
+
 # <mjc@gentoo.org>    (20 Aug 2002)
 # masked for testing
 =sys-kernel/gentoo-sources-2.4.19-r8
