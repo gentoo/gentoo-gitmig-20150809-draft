@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24.ebuild,v 1.4 2003/04/10 06:57:32 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24.ebuild,v 1.5 2003/04/10 07:04:17 absinthe Exp $
 
 S=${WORKDIR}/jakarta-${P}
 At="jakarta-tomcat-${PV}.tar.gz"
@@ -109,7 +109,7 @@ pkg_postinst() {
 	einfo " 4.  Executables, libraries:  /usr/share/tomcat/"
 	einfo " "
 	einfo " "
-	einfo " STARTING AND STOPPING ORION:"
+	einfo " STARTING AND STOPPING TOMCAT:"
 	einfo "   /etc/init.d/tomcat start"
 	einfo "   /etc/init.d/tomcat stop"
 	einfo "   /etc/init.d/tomcat restart"
