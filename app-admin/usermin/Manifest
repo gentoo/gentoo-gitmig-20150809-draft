@@ -1,9 +1,19 @@
-MD5 6bbc17ab5e3a3f83ee2d94e186e54866 ChangeLog 5613
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 edc9ed5ac9acc6e9c609a0399fe8794f ChangeLog 5773
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
-MD5 72b3da5f3e255f83a909b3eb2abf240b usermin-1.080-r1.ebuild 2210
+MD5 8fa115b0807cd48800828d853c3c0480 usermin-1.100.ebuild 2212
 MD5 64c324d876af78b5ae970340f00290a3 usermin-1.090.ebuild 2219
-MD5 e6e25dc89f0ccd9ce1af4b508d27a5d6 files/digest-usermin-1.080-r1 66
+MD5 b3ae782d361d5f450212191c25bf4623 files/digest-usermin-1.100 66
+MD5 bd4b2cc177b4fb7b0f96edc60008a6b5 files/usermin-1.080-safestop.patch 620
 MD5 4a8c93084becc5ae5beb4488282df537 files/digest-usermin-1.090 66
 MD5 1a376ef687089bf1d727a6b403a17627 files/init.d.usermin 822
-MD5 bd4b2cc177b4fb7b0f96edc60008a6b5 files/usermin-1.080-safestop.patch 620
 MD5 a5311bbc9c1fc378a6b0bfb3ca1b2394 files/usermin.pam 431
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm+AkArHZZzCEUG0RArPtAJ964pjoHCnU5IU+5ETd39shAKKqdwCePYiD
+KV3tio0VbVR7rqJAXOWUa9Q=
+=zVic
+-----END PGP SIGNATURE-----

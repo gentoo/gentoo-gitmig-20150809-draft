@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080-r1.ebuild,v 1.7 2004/08/29 06:09:33 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.100.ebuild,v 1.1 2004/11/17 23:34:48 eradicator Exp $
+
+IUSE="ssl"
 
 inherit eutils
 
 DESCRIPTION="a web-based user administration interface"
 HOMEPAGE="http://www.webmin.com/index6.html"
 SRC_URI="mirror://sourceforge/webadmin/${P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 sparc alpha ppc amd64 ppc64"
-IUSE="ssl"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~hppa"
 
 RDEPEND="dev-lang/perl
 	sys-apps/lsof
@@ -31,7 +31,7 @@ src_unpack() {
 	# Bug #46273... missing config for gentoo
 	cp quota/generic-linux-lib.pl quota/gentoo-linux-lib.p
 
-	epatch ${FILESDIR}/${P}-safestop.patch
+	epatch ${FILESDIR}/${PN}-1.080-safestop.patch
 }
 
 src_install() {
