@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.6 2004/02/28 20:45:54 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.7 2004/03/15 22:43:57 mboman Exp $
+
+  16 Mar 2004; Michael Boman <mboman@gentoo.org> Geo-IP-1.21.ebuild:
+  Marked 1.21 stable on x86
 
   29 Feb 2004; Michael Boman <mboman@gentoo.org> metadata.xml:
   Moving the package to 'netmon' herd.
