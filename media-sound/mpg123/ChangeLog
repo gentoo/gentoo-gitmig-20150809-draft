@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.37 2004/04/12 09:40:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.38 2004/04/13 04:56:25 eradicator Exp $
+
+  12 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mpg123-0.59s-r3.ebuild:
+  Added missing oss to IUSE.
 
 *mpg123-0.59s-r3 (12 Apr 2004)
 
