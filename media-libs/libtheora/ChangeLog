@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libtheora
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.1 2004/02/24 19:12:28 mholzer Exp $
+
+*libtheora-1.0_alpha2 (24 Feb 2004)
+
+  24 Feb 2004; Martin Holzer <mholzer@gentoo.org> libtheora-1.0_alpha2.ebuild:
+  Initial ebuild. Submitted by MATSUU Takuto <matsuu@gentoo.org> in 41383
+
