@@ -1,6 +1,6 @@
 # Copyrigth 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.3.0.ebuild,v 1.1 2002/06/09 15:13:33 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.3.0.ebuild,v 1.2 2002/06/09 15:23:30 stroke Exp $
 
 S=${WORKDIR}/${P}
 
@@ -25,7 +25,9 @@ src_compile() {
 
 src_install() {
 
+	
 	mkdir -p ${D}/usr/bin
 	emake prefix=${D}/usr install
 
+        dodoc ChangeLog AUTHORS README BUGS NEWS
 }
