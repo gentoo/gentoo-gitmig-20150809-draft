@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.11 2002/10/13 09:35:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.12 2002/10/13 17:44:17 azarah Exp $
 
 *pam-0.75-r8 (13 Oct 2002)
 
@@ -9,7 +9,7 @@
   Add pam-0.75-pam_console-fix-fullpath-in-file-classes.patch to fix a small
   compat problem between pam-login and pam_console.so.  pam_console.so expects
   PAM_TTY to be set by login without prefixing "/dev/" it seems, which
-  pam-login did.
+  pam-login did.  This should close bug #6612.
 
   Synced with Mandrake and Redhat for latest patches.
 
