@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.3.ebuild,v 1.4 2003/09/30 20:34:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.3.ebuild,v 1.5 2003/12/07 14:19:55 mholzer Exp $
 
 inherit eutils
 
 DESCRIPTION="Tk Widget Set"
 HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
-SRC_URI="ftp://ftp.scriptics.com/pub/tcl/tcl8_4/${PN}${PV}-src.tar.gz"
-
+SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
+RESTRICT="nomirror"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~mips"
