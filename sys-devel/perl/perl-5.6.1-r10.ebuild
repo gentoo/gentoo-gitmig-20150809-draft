@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r10.ebuild,v 1.5 2002/12/28 02:13:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r10.ebuild,v 1.6 2003/01/03 16:37:03 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -78,11 +78,11 @@ src_compile() {
 		Makefile_orig > Makefile
     export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 	# fixes a bug in the make/testing on new systems
-	make -f Makefile depend || die
 	mv makefile makefile_orig
 	mv x2p/makefile x2p/makefile_orig
 		  egrep -v "(<built-in>|<command line>)" makefile_orig >makefile
 		  egrep -v "(<built-in>|<command line>)" x2p/makefile_orig >x2p/makefile
+	make -f Makefile depend || die
 	make -f Makefile libperl.so || die
 	mv libperl.so ${WORKDIR}
 
@@ -148,19 +148,21 @@ EOF
     
     #for some reason, this rm -f doesn't seem to actually do anything. So we explicitly use "Makefile"
     #(rather than the default "makefile") in all make commands below.
-    rm -f makefile x2p/makefile
-    make -f Makefile depend || die
+    #rm -f makefile x2p/makefile
     mv makefile makefile_orig
     mv x2p/makefile x2p/makefile_orig
     egrep -v "(<built-in>|<command line>)" makefile_orig >makefile
     egrep -v "(<built-in>|<command line>)" x2p/makefile_orig >x2p/makefile
-    make -f Makefile || die
+    #make -f Makefile depend || die
+    #make -f Makefile || die
+    make || die
 	cp ${O}/files/stat.t ./t/op/
     # Parallel make fails
 	# dont use the || die since some tests fail on bootstrap
 	if [ `expr "$PARCH" ":" "sparc"` -gt 4 ]; then
 		echo "Skipping tests on this platform"
 	else
+	    egrep -v "(<built-in>|<command line>)" x2p/makefile_orig >x2p/makefile
     	make -f Makefile test 
 	fi
 }
