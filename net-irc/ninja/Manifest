@@ -1,6 +1,14 @@
-MD5 344dd1897d73129be19cde1e5ff5d3eb ChangeLog 1545
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b95b5caa75ecaf16a2a3bafb10c7ba1f ChangeLog 1644
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 a0ef9008b88fc076478c0b4621b2ad6d ninja-1.5.9_pre9.ebuild 698
 MD5 8f013814041cd7fb7b0d5210a7ede1c4 ninja-1.5.9_pre12.ebuild 678
-MD5 02be0e2b992a6b7f6fedeaf868630586 files/digest-ninja-1.5.9_pre9 67
 MD5 fb1cc2d1a486b3113135d305d05e2292 files/digest-ninja-1.5.9_pre12 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBllrkI1lqEGTUzyQRAonAAKCsihNr0E/uhCCpzJi2zsGICXxENwCfZgk7
+CfAt6p5zMIjuwc2U4MkatuA=
+=OS0c
+-----END PGP SIGNATURE-----
