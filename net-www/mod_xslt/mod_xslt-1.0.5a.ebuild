@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/mod_xslt-1.0.5a.ebuild,v 1.7 2004/04/23 13:58:50 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/mod_xslt-1.0.5a.ebuild,v 1.8 2004/06/25 01:05:07 agriffis Exp $
 
 inherit eutils
 

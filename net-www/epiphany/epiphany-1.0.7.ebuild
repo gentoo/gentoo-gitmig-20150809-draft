@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.7.ebuild,v 1.9 2004/04/19 22:05:47 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.7.ebuild,v 1.10 2004/06/25 00:52:17 agriffis Exp $
 
 inherit gnome2
 

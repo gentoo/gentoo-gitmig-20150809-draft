@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-pear/horde-pear-1.3-r1.ebuild,v 1.4 2004/05/21 16:12:36 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-pear/horde-pear-1.3-r1.ebuild,v 1.5 2004/06/25 00:54:43 agriffis Exp $
 
 inherit horde
 

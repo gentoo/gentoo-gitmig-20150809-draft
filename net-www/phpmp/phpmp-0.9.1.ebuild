@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.9.1.ebuild,v 1.7 2004/03/21 09:09:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.9.1.ebuild,v 1.8 2004/06/25 01:09:24 agriffis Exp $
 
 inherit webapp-apache
 

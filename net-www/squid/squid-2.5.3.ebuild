@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.3.ebuild,v 1.10 2004/03/31 21:46:15 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.3.ebuild,v 1.11 2004/06/25 01:12:32 agriffis Exp $
 
 IUSE="pam ldap ssl sasl snmp debug"
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-www/tomcat
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.32 2004/06/08 10:08:50 kloeri Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.33 2004/06/25 01:14:15 agriffis Exp $
 
   08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> tomcat-5.0.18.ebuild:
   Stable on alpha.

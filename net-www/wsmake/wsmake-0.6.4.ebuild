@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wsmake/wsmake-0.6.4.ebuild,v 1.4 2003/09/06 02:05:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wsmake/wsmake-0.6.4.ebuild,v 1.5 2004/06/25 01:16:42 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Website Pre-processor"

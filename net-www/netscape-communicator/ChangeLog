@@ -1,6 +1,6 @@
 # ChangeLog for net-www/netscape-communicator
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.9 2003/10/17 12:57:47 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.10 2004/06/25 01:07:16 agriffis Exp $
 
   17 Oct 2003; Jason Wever <weeve@gentoo.org>
   netscape-communicator-4.79-r1.ebuild:

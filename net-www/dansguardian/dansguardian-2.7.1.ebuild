@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dansguardian/dansguardian-2.7.1.ebuild,v 1.4 2004/03/15 00:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dansguardian/dansguardian-2.7.1.ebuild,v 1.5 2004/06/25 00:51:13 agriffis Exp $
 
 MY_P="DansGuardian-${PV}"
 S="${WORKDIR}/${MY_P}"

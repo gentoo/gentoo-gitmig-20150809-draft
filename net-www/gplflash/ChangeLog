@@ -1,6 +1,6 @@
 # ChangeLog for net-www/gplflash
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.13 2003/10/04 01:11:15 hillster Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.14 2004/06/25 00:53:11 agriffis Exp $
 
   03 Oct 2003; Joel Hill <hillster@gentoo.org> gplflash-0.4.10-r3.ebuild:
   added einfo regarding support only for older flash and also changed

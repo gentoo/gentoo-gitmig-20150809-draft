@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/snownews-1.3.4.ebuild,v 1.2 2004/06/23 20:36:48 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/snownews-1.3.4.ebuild,v 1.3 2004/06/25 01:12:21 agriffis Exp $
 
 DESCRIPTION="Snownews, a text-mode RSS/RDF newsreader"
 HOMEPAGE="http://home.kcore.de/~kiza/software/snownews/"

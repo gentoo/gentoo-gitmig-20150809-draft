@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-2.0.1.ebuild,v 1.1 2004/03/30 04:13:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-2.0.1.ebuild,v 1.2 2004/06/25 00:58:53 agriffis Exp $
 
 inherit eutils
 

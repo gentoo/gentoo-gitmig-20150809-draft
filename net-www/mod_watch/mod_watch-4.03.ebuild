@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/mod_watch-4.03.ebuild,v 1.1 2004/04/21 18:39:43 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/mod_watch-4.03.ebuild,v 1.2 2004/06/25 01:04:56 agriffis Exp $
 
 DESCRIPTION="Bandwidth graphing for Apache with MRTG"
 HOMEPAGE="http://www.snert.com/Software/mod_watch/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50-r1.ebuild,v 1.3 2004/05/28 21:53:45 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50-r1.ebuild,v 1.4 2004/06/25 01:08:41 agriffis Exp $
 
 IUSE="static"
 

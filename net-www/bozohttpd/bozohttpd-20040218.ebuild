@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bozohttpd/bozohttpd-20040218.ebuild,v 1.1 2004/06/24 12:15:32 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bozohttpd/bozohttpd-20040218.ebuild,v 1.2 2004/06/25 00:49:38 agriffis Exp $
 
 DESCRIPTION="bozohttpd is a small and secure http server"
 HOMEPAGE="http://www.eterna.com.au/bozohttpd/"

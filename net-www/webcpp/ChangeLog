@@ -1,6 +1,6 @@
 # ChangeLog for net-www/webcpp
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webcpp/ChangeLog,v 1.4 2004/06/11 12:18:13 kloeri Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/webcpp/ChangeLog,v 1.5 2004/06/25 01:16:11 agriffis Exp $
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> webcpp-0.8.2.ebuild:
   Stable on alpha.

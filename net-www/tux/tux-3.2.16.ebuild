@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tux/tux-3.2.16.ebuild,v 1.2 2004/04/18 19:02:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tux/tux-3.2.16.ebuild,v 1.3 2004/06/25 01:14:35 agriffis Exp $
 
 DESCRIPTION="kernel level httpd"
 HOMEPAGE="http://people.redhat.com/mingo/TUX-patches/"

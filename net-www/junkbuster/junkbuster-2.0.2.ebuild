@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/junkbuster/junkbuster-2.0.2.ebuild,v 1.12 2004/06/02 20:51:39 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/junkbuster/junkbuster-2.0.2.ebuild,v 1.13 2004/06/25 00:56:26 agriffis Exp $
 
 S=${WORKDIR}/ijb20
 DESCRIPTION="Filtering HTTP proxy"

@@ -1,6 +1,6 @@
 # ChangeLog for net-www/mod_mp3
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/ChangeLog,v 1.16 2004/06/20 14:51:24 zul Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/ChangeLog,v 1.17 2004/06/25 01:03:04 agriffis Exp $
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_mp3-0.35-r1.ebuild,
   mod_mp3-0.35-r2.ebuild, mod_mp3-0.39.ebuild, mod_mp3-0.40.ebuild:

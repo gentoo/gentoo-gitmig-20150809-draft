@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_encoding/mod_encoding-20021209.ebuild,v 1.4 2004/05/22 22:31:32 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_encoding/mod_encoding-20021209.ebuild,v 1.5 2004/06/25 01:00:58 agriffis Exp $
 
 DESCRIPTION="Apache module for non-ascii filename interoperability"
 HOMEPAGE="http://webdav.todo.gr.jp/"

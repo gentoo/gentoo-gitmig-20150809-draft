@@ -1,6 +1,6 @@
 # ChangeLog for net-www/mini_httpd
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mini_httpd/ChangeLog,v 1.4 2004/04/23 11:10:21 stuart Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mini_httpd/ChangeLog,v 1.5 2004/06/25 00:59:04 agriffis Exp $
 
   23 Apr 2004; Stuart Herbert <stuart@gentoo.org>
   files/mini_httpd.conf.sample-1.19:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/mod_auth_pgsql-0.9.12.ebuild,v 1.7 2004/06/20 15:13:28 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/mod_auth_pgsql-0.9.12.ebuild,v 1.8 2004/06/25 01:00:18 agriffis Exp $
 
 DESCRIPTION="This module allows user authentication (and can log authethication requests) against information stored in a PostgreSQL database."
 SRC_URI="http://www.giuseppetanzilli.it/mod_auth_pgsql/dist/${P}.tar.gz"

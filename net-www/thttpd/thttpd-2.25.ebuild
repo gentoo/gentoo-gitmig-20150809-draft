@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/thttpd/thttpd-2.25.ebuild,v 1.2 2004/04/26 07:37:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/thttpd/thttpd-2.25.ebuild,v 1.3 2004/06/25 01:13:44 agriffis Exp $
 
 MY_P="${P}b"
 

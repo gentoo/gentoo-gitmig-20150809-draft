@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20040408.ebuild,v 1.1 2004/06/23 07:13:39 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20040408.ebuild,v 1.2 2004/06/25 00:48:12 agriffis Exp $
 
 DESCRIPTION="redirector for squid that intercepts advertising, page counters and some web bugs"
 HOMEPAGE="http://adzapper.sourceforge.net/"

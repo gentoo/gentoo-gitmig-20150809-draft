@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/online-bookmarks/online-bookmarks-0.2.6.ebuild,v 1.1 2004/06/17 12:32:11 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/online-bookmarks/online-bookmarks-0.2.6.ebuild,v 1.2 2004/06/25 01:08:19 agriffis Exp $
 
 inherit webapp
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-www/squid
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.51 2004/06/24 23:13:31 eradicator Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.52 2004/06/25 01:12:31 agriffis Exp $
 
   24 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   squid-2.5.5-r2.ebuild:

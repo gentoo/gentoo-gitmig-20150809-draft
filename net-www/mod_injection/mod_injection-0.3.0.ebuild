@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_injection/mod_injection-0.3.0.ebuild,v 1.4 2004/04/04 22:50:44 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_injection/mod_injection-0.3.0.ebuild,v 1.5 2004/06/25 01:01:40 agriffis Exp $
 
 inherit eutils
 

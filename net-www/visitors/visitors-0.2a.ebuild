@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/visitors/visitors-0.2a.ebuild,v 1.2 2004/06/12 09:22:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/visitors/visitors-0.2a.ebuild,v 1.3 2004/06/25 01:15:06 agriffis Exp $
 
 DESCRIPTION="Visitors - fast web log analyzer"
 HOMEPAGE="http://www.hping.org/visitors/"

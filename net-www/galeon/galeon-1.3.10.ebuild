@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.10.ebuild,v 1.9 2004/04/27 23:41:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.10.ebuild,v 1.10 2004/06/25 00:52:50 agriffis Exp $
 
 inherit gnome2 debug libtool eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-www/bugzilla
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.5 2004/04/23 17:10:08 stuart Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.6 2004/06/25 00:49:59 agriffis Exp $
 
 *bugzilla-2.17.6-r2 (23 Apr 2004)
 

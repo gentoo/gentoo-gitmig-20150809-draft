@@ -1,6 +1,6 @@
 # ChangeLog for net-www/squirm
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squirm/ChangeLog,v 1.4 2004/06/23 07:18:39 cyfred Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/squirm/ChangeLog,v 1.5 2004/06/25 01:13:03 agriffis Exp $
 
   23 Jun 2004; Andrew Bevitt <cyfred@gentoo.org>; :
   Adding metadata.xml

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12.ebuild,v 1.5 2004/01/11 13:48:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12.ebuild,v 1.6 2004/06/25 01:08:41 agriffis Exp $
 #
 # 1. static       # Statically linked libraries, default.
 # 2. shared-2.95  # Dynamically linked libaries, compiled with gcc 2.95.

@@ -1,6 +1,6 @@
 # ChangeLog for net-www/pound
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pound/ChangeLog,v 1.7 2004/06/11 11:47:04 kloeri Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/pound/ChangeLog,v 1.8 2004/06/25 01:09:56 agriffis Exp $
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pound-1.7.ebuild:
   Stable on alpha.

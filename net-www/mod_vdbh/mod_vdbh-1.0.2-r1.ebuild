@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_vdbh/mod_vdbh-1.0.2-r1.ebuild,v 1.2 2004/05/22 02:24:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_vdbh/mod_vdbh-1.0.2-r1.ebuild,v 1.3 2004/06/25 01:04:46 agriffis Exp $
 
 DESCRIPTION="An Apache2 DSO for mass virtual hosting using a MySQL database"
 HOMEPAGE="http://www.synthemesc.com/mod_vdbh/"

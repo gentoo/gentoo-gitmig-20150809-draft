@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.1.ebuild,v 1.5 2004/04/17 23:01:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.1.ebuild,v 1.6 2004/06/25 00:56:05 agriffis Exp $
 
 MY_P="${P}-src"
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-www/ids
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ChangeLog,v 1.6 2004/04/14 02:36:06 weeve Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ChangeLog,v 1.7 2004/06/25 00:55:44 agriffis Exp $
 
   13 Apr 2004; Jason Wever <weeve@gentoo.org> ids-0.83_beta2.ebuild:
   Added ~sparc keyword.
