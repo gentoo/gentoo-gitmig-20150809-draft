@@ -1,6 +1,6 @@
 # Copyright 2000-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2.
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-2.14.ebuild,v 1.1 2003/06/05 06:51:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-2.14.ebuild,v 1.2 2003/07/12 13:10:41 aliz Exp $
 
 DESCRIPTION="TCL MySQL Interface"
 HOMEPAGE="http://www.xdobry.de/mysqltcl/"
@@ -12,7 +12,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 IUSE=""
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 SRC_URI="http://www.xdobry.de/mysqltcl/${P}.tar.gz"
 S=${WORKDIR}/${P}
