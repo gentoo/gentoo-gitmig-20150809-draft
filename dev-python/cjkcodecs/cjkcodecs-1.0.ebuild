@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cjkcodecs/cjkcodecs-1.0.ebuild,v 1.1 2003/08/01 05:44:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cjkcodecs/cjkcodecs-1.0.ebuild,v 1.2 2003/10/08 10:07:24 liquidx Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/koco"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-lang/python-2.1"
 DOCS="doc/*"
