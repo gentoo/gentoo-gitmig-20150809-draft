@@ -27,7 +27,7 @@
 
 # <stubear@gentoo.org> (22 Aug 2002)
 # masked for testing
-=x11-misc/arphicfonts-0.1-r1
+#=x11-misc/arphicfonts-0.1-r1
 =x11-misc/shinonome-0.9.8
 
 # <danarmak@gentoo.org> (20 Aug 2002)
