@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.3 2002/07/18 14:07:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.4 2002/07/18 17:37:32 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -142,15 +142,6 @@ cvs_src_unpack() {
 	# delete them, so this has to be self-contained
     cp -Rf ${ECVS_TOP_DIR}/${ECVS_MODULE} $WORKDIR
 
-	# typically for kde cvs, the admin subdir lives in the kde-common module
-	# which is also needed
-	if [ ! -d "${WORKDIR}/${ECVS_MODULE}/admin" ]; then
-		ECVS_MODULE="kde-common" cvs_fetch
-	    einfo "Copying admin/ subdir from module kde-common, $ECVS_TOP_DIR..."
-		debug-print "Copying admin/ subdir from module kde-common, $ECVS_TOP_DIR..."
-    	cp -Rf ${ECVS_TOP_DIR}/${ECVS_MODULE} $WORKDIR
-	fi
-	
 }
 
 EXPORT_FUNCTIONS src_unpack
