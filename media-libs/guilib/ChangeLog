@@ -1,11 +1,14 @@
 # ChangeLog for media-libs/guilib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/ChangeLog,v 1.7 2004/10/01 22:56:05 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/ChangeLog,v 1.8 2004/12/29 00:44:38 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   02 Oct 2004; Markus Nigbur <pyrania@gentoo.org> guilib-1.1.0-r1.ebuild:
   Made epatch aware.
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> guilib-1.1.0-r1.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> guilib-1.1.0-r1.ebuild:
   Stable on alpha.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> guilib-1.1.0-r1.ebuild,

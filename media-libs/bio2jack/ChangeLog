@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/bio2jack
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.12 2004/12/19 13:31:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.13 2004/12/29 00:39:43 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Dec 2004; Luca Barbato <lu_zero@gentoo.org> bio2jack-0.4.ebuild:
   Fix libtool
@@ -25,7 +28,7 @@
   bio2jack-0.3-r1.ebuild:
   Stable amd64, sparc, x86.
 
-  17 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> bio2jack-0.3-r1.ebuild:
+  17 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> bio2jack-0.3-r1.ebuild:
   Add ~alpha keyword, bug 66571.
 
   28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.57 2004/11/20 03:58:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.58 2004/12/29 00:52:35 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *libpng-1.2.7-r1 (20 Nov 2004)
 
@@ -44,7 +47,7 @@
   06 Aug 2004; foser <foser@gentoo.org> libpng-1.0* :
   Remove all traces of libpng-1.0* (#59424)
 
-  06 Aug 2004; Bryan ƒŠstergaard,,, <kloeri@gentoo.org> libpng-1.2.5-r8.ebuild:
+  06 Aug 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> libpng-1.2.5-r8.ebuild:
   Stable on alpha, bug #59424.
 
   05 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> libpng-1.2.5-r8.ebuild:

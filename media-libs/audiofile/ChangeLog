@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.35 2004/08/07 18:17:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.36 2004/12/29 00:39:06 ciaranm Exp $
 
-  07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> audiofile-0.2.6-r1.ebuild:
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  07 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> audiofile-0.2.6-r1.ebuild:
   Stable on alpha.
 
   25 Jul 2004; Lina Pezzella <burgundy@gentoo.org> :

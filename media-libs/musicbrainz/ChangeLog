@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.43 2004/12/18 22:25:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.44 2004/12/29 00:58:36 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> musicbrainz-2.1.1.ebuild:
   Stable on ppc64
@@ -19,7 +22,7 @@
   07 Aug 2004; <agriffis@gentoo.org> musicbrainz-2.1.1.ebuild:
   stable on ia64 #54287
 
-  07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> musicbrainz-2.1.1.ebuild:
+  07 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> musicbrainz-2.1.1.ebuild:
   Stable on alpha.
 
   01 Jul 2004; Aron Griffis <agriffis@gentoo.org> musicbrainz-2.0.2-r2.ebuild,
@@ -38,7 +41,7 @@
   -musicbrainz-2.0.1.ebuild:
   Removing old, broken version.
 
-  22 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  22 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   musicbrainz-2.0.2-r2.ebuild:
   Stable on alpha.
 
@@ -83,11 +86,11 @@
   25 Feb 2004; Guy Martin <gmsoft@gentoo.org> musicbrainz-2.0.2-r1.ebuild:
   Marked stable on hppa.
 
-  19 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  19 Feb 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   files/musicbrainz-2.0.2.patch:
   Add missing patch.
 
-  19 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  19 Feb 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   musicbrainz-2.0.2-r2.ebuild:
   Python module didn't build correctly on new installs. Closes bug #41976.
 

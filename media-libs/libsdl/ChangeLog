@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.67 2004/12/24 10:31:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.68 2004/12/29 00:53:14 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Dec 2004; Mike Frysinger <vapier@gentoo.org>
   +files/1.2.8-gcc2-asm.patch, +files/1.2.8-gcc2.patch, libsdl-1.2.8.ebuild:
@@ -63,7 +66,7 @@
   +files/1.2.7-joystick2.patch, +libsdl-1.2.7-r2.ebuild:
   Updated joystick patch from libsdl CVS. (bug #52833)
 
-  14 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libsdl-1.2.7-r1.ebuild:
+  14 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libsdl-1.2.7-r1.ebuild:
   Stable on alpha.
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> libsdl-1.2.6-r3.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.29 2004/10/05 10:32:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.30 2004/12/29 00:45:07 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -id3lib-3.8.3-r2.ebuild:
@@ -23,7 +26,7 @@
   Fix ebuild installing extra stuff into the docs dir. Added IUSE=doc option for
   example files. Closes bug #56922.
 
-  11 Jul 2004; Bryan Østergaard,,, <kloeri@gentoo.org> id3lib-3.8.3-r2.ebuild:
+  11 Jul 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> id3lib-3.8.3-r2.ebuild:
   Stable on alpha, requested in bug 56498.
 
 *id3lib-3.8.3-r2 (08 Jul 2004)

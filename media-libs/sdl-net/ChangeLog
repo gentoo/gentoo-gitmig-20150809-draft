@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/sdl-net
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.13 2004/08/07 19:10:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.14 2004/12/29 01:00:11 ciaranm Exp $
 
-  07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> sdl-net-1.2.5.ebuild:
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  07 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> sdl-net-1.2.5.ebuild:
   Stable on alpha.
 
   29 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libogg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.32 2004/12/17 06:20:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.33 2004/12/29 00:51:58 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Dec 2004; Mike Frysinger <vapier@gentoo.org> libogg-1.1.2.ebuild:
   Remove useless C++ checks #74491.
@@ -62,7 +65,7 @@
   17 Apr 2004; Jason Wever <weeve@gentoo.org> libogg-1.1.ebuild:
   Stable on sparc.
 
-  17 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> libogg-1.1.ebuild:
+  17 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libogg-1.1.ebuild:
   Stable on Alpha.
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> libogg-1.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gdk-pixbuf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.40 2004/10/17 06:47:27 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.41 2004/12/29 00:43:15 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Oct 2004; Hardave Riar <hardave@gentoo.org> gdk-pixbuf-0.22.0-r3.ebuild:
   Stable on mips, bug #64230.
@@ -12,7 +15,7 @@
   gdk-pixbuf-0.22.0-r3.ebuild:
   get_libdir fixes.
 
-  20 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  20 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   gdk-pixbuf-0.22.0-r3.ebuild:
   Stable on alpha, bug 64240.
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.21 2004/12/27 08:09:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.22 2004/12/29 00:49:47 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Dec 2004; Markus Rothe <corsair@gentoo.org> libdvdnav-0.1.9.ebuild:
   I should have marked this ppc64 before
@@ -14,7 +17,7 @@
   06 Nov 2004; Luca Barbato <lu_zero@gentoo.org> libdvdnav-0.1.9.ebuild:
   Marked ppc
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> libdvdnav-0.1.9.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libdvdnav-0.1.9.ebuild:
   Stable on alpha.
 
   14 Apr 2004; Jason Wever <weeve@gentoo.org> libdvdnav-0.1.9.ebuild:

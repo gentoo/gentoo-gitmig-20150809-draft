@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.83 2004/12/16 05:43:59 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.84 2004/12/29 00:44:06 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> gstreamer-0.8.7.ebuild:
   Stable on amd64.
@@ -41,7 +44,7 @@
   07 Aug 2004; Travis Tilley <lv@gentoo.org> gstreamer-0.8.3-r1.ebuild:
   stable on amd64
 
-  07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gstreamer-0.8.3-r1.ebuild:
+  07 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gstreamer-0.8.3-r1.ebuild:
   Stable on alpha.
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
@@ -69,7 +72,7 @@
   11 Jul 2004; foser <foser@gentoo.org> gstreamer-0.8.3-r1.ebuild, gstreamer-0.8-reiser4_register.patch  :
   Add patch to fix reiser4 registering, patch by Ed Catmur in #49081
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gstreamer-0.8.1.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gstreamer-0.8.1.ebuild:
   Stable on alpha.
 
   01 Jul 2004; L. Boshell <leonardop@gentoo.org> gstreamer-0.8.3.ebuild,

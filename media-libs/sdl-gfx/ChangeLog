@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.25 2004/09/27 20:13:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.26 2004/12/29 00:59:42 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> sdl-gfx-2.0.12.ebuild:
   Stable on sparc
@@ -16,7 +19,7 @@
   30 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> +sdl-gfx-2.0.12.ebuild:
   version bump
 
-  07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> sdl-gfx-2.0.11.ebuild:
+  07 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> sdl-gfx-2.0.11.ebuild:
   Stable on alpha.
 
   02 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> sdl-gfx-2.0.11.ebuild:

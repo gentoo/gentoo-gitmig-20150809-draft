@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.44 2004/11/13 01:52:19 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.45 2004/12/29 00:47:36 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   12 Nov 2004; Kito <kito@gentoo.org> +files/libao-0.8.5-ppc-macos.patch,
   libao-0.8.5.ebuild:
@@ -26,7 +29,7 @@
   libao-0.8.5.ebuild:
   virtual/glibc -> virtual/libc
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> libao-0.8.5.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libao-0.8.5.ebuild:
   Stable on alpha.
 
   26 May 2004; Guy Martin <gmsoft@gentoo.org> libao-0.8.5.ebuild:
