@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3118 2004/08/29 15:47:51 twp Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3119 2004/08/31 05:19:31 axxo Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -559,11 +559,6 @@ x11-misc/med
 # <mkennedy@gentoo.org> (01 Oct 2003)
 # deprecated in favour of dev-lisp/cmucl (source package)
 dev-lisp/cmucl-bin
-
-# <strider@gentoo.org> (21 Sep 2003)
-# ant 1.5.4 the ebuild is ok but ant
-# script its no working too well
-=dev-java/ant-1.5.4
 
 # <msterret@gentoo.org> (17 Sep 2003)
 # No need for the cvs snap anymore since the beta is out.
