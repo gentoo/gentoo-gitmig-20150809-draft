@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/phprojekt/phprojekt-4.1.ebuild,v 1.1 2003/12/30 14:14:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/phprojekt/phprojekt-4.1.ebuild,v 1.2 2004/04/21 18:58:10 mholzer Exp $
 
 inherit webapp-apache
 
@@ -10,13 +10,12 @@ IUSE="apache2"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND="virtual/php"
 
-webapp-detect || NO_WEBSERVER=1
-
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
