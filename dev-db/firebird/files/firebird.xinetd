@@ -1,0 +1,11 @@
+service gds_db
+{
+	flags			= REUSE
+	socket_type		= stream
+	wait			= no
+	user			= root
+	log_on_success		+= USERID
+	log_on_failure 		+= USERID
+	server			= /opt/interbase/bin/gds_inet_server
+	disable			= yes
+}
