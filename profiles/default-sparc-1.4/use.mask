@@ -19,3 +19,7 @@ alpha
 mips
 hppa
 arm
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux

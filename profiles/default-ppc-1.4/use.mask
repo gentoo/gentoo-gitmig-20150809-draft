@@ -10,3 +10,7 @@ mmx
 svga
 sse
 scanner 
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux

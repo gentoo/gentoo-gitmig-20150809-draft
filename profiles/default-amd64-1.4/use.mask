@@ -28,3 +28,7 @@ firebird
 
 # DirectFB doesnt build on amd64
 directfb
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux

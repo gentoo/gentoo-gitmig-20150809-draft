@@ -20,3 +20,7 @@ alsa
 pda
 # Can't get USB working to test
 gphoto2
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux
