@@ -1,0 +1,152 @@
+# ChangeLog for app-misc/krusader
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.1 2004/10/30 17:48:33 carlo Exp $
+
+*krusader-1.40 (30 Oct 2004)
+
+  30 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +.#krusader-1.40.ebuild.1.5,
+  +.#krusader-1.50_beta1.ebuild.1.2, +metadata.xml, +krusader-1.40.ebuild,
+  +krusader-1.50_beta1.ebuild:
+  Moved from app-misc/krusader to kde-misc/krusader.
+
+  28 Oct 2004; Caleb Tennis <caleb@gentoo.org> krusader-1.50_beta1.ebuild:
+  Make sure all of kde_src_compile is used so that arts is picked up.
+  See bug #68303.
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> krusader-1.40.ebuild:
+  Stable on sparc.
+
+*krusader-1.50_beta1 (18 Oct 2004)
+
+  18 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +krusader-1.50_beta1.ebuild:
+  version bump
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  krusader-1.40.ebuild:
+  Masked krusader-1.40.ebuild stable for ppc
+
+  08 Sep 2004; Caleb Tennis <caleb@gentoo.org> -krusader-1.30.ebuild:
+  Removing old version
+
+  08 Sep 2004; Caleb Tennis <caleb@gentoo.org> krusader-1.40.ebuild:
+  Mark x86 stable
+
+*krusader-1.40 (22 Jul 2004)
+
+  22 Jul 2004; Carsten Lohrke <carlo@gentoo.org>
+  -files/krusader-1.40_beta1-gcc34-goodness.diff, +krusader-1.40.ebuild,
+  -krusader-1.40_beta1-r1.ebuild, -krusader-1.40_beta1.ebuild,
+  -krusader-1.40_beta2.ebuild:
+  version bump, removed beta ebuilds
+
+  01 Jul 2004; Aron Griffis <agriffis@gentoo.org> krusader-1.30.ebuild,
+  krusader-1.40_beta1-r1.ebuild, krusader-1.40_beta1.ebuild,
+  krusader-1.40_beta2.ebuild:
+  inherit eutils, inherit flag-o-matic, trim trailing whitespace
+
+*krusader-1.40_beta2 (28 Jun 2004)
+
+  28 Jun 2004; Carsten Lohrke <carlo@gentoo.org> krusader-1.30.ebuild,
+  krusader-1.40_beta1-r1.ebuild, krusader-1.40_beta1.ebuild,
+  +krusader-1.40_beta2.ebuild:
+  version bump, QA: IUSE, need-kde
+
+*krusader-1.40_beta1-r1 (22 Jun 2004)
+
+  22 Jun 2004; Dylan Carlson <absinthe@gentoo.org>
+  +files/krusader-1.40_beta1-gcc34-goodness.diff,
+  +krusader-1.40_beta1-r1.ebuild:
+  Minor GCC 3.4 fixes and KEYWORDS ~amd64.
+
+  02 Jun 2004; David Holm <dholm@gentoo.org> krusader-1.40_beta1.ebuild:
+  Added to ~ppc.
+
+*krusader-1.40_beta1 (17 May 2004)
+
+  17 May 2004; Caleb Tennis <caleb@gentoo.org> -krusader-1.29_beta1.ebuild,
+  +krusader-1.40_beta1.ebuild:
+  Version bump, remove old version
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> krusader-1.30.ebuild:
+  Added ~sparc keyword.
+
+*krusader-1.30 (16 Nov 2003)
+
+  16 Nov 2003; Caleb Tennis <caleb@gentoo.org> krusader-1.30.ebuild:
+  Version bump
+
+*krusader-1.29_beta1 (14 Oct 2003)
+
+  14 Oct 2003; Caleb Tennis <caleb@gentoo.org> krusader-1.20.ebuild,
+  krusader-1.29_beta1.ebuild:
+  New version, remove old version
+
+*krusader-1.25_beta1 (26 Aug 2003)
+
+  26 Aug 2003; Caleb Tennis <caleb@gentoo.org> krusader-1.25_beta1.ebuild:
+  Version bump.
+
+*krusader-1.21_beta1 (20 Jul 2003) 
+
+  20 Jul 2003; Caleb Tennis <caleb@gentoo.org> krusader-1.21_beta1.ebuild:
+  Version bump.
+
+  12 Jun 2003; Caleb Tennis <caleb@gentoo.org>:
+  Removed old ebuilds: krusader-1.00, krusader-1.11, krusader-1.12_beta{1,2}
+
+*krusader-1.20 (12 Jun 2003)
+
+  12 Jun 2003; Caleb Tennis <caleb@gentoo.org> krusader-1.20.ebuild:
+  version bump - closes bug #22622.
+
+*krusader-1.12_beta2 (May 12 2003)
+
+  12 May 2003; Caleb Tennis <caleb@gentoo.org> krusader-1.12_beta2.ebuild:
+  version bump - (slightly modified) ebuild provided by Dirk Eschler in #20788
+
+*krusader-1.12_beta1 (02 Jan 2003)
+
+  06 Apr 2003; Dan Armak <danarmak@gentoo.org> krusader-1.12_beta1.ebuild:
+  Add stable x86 keyword.
+
+  02 Jan 2003; Hannes Mehnert <hannes@gentoo.org> krusader-1.12_beta1.ebuild:
+  version bump, removed old ebuilds
+  
+*krusader-1.11 (18 Oct 2002)
+
+  18 Oct 2002; Hannes Mehnert <hannes@gentoo.org> krusader-1.11.ebuild:
+  version bump
+
+*krusader-1.10 (22 Aug 2002)
+
+  22 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New version.
+
+*krusader-1.0.3_beta2 (26 Jul 2002)
+
+  26 Jul 2002; Ryan Phillips <rphillips@gentoo.org> krusader-1.0.3_beta2.ebuild :
+
+  Updated version
+
+*krusader-1.0.3_beta1-r1 (14 Jun 2002)
+
+  14 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bug #3728 - wrong ${P}
+
+*krusader-1.03_beta1 (10 Jun 2002)
+
+  20 Jun 2002; Wout Mertens <wmertens@gentoo.org>:
+
+  Been using this for a while, seems just as stable as the 1.02, and fixes
+  some bugs, so making it available
+
+*krusader-1.02 (20 Apr 2002)
+
+  20 Apr 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  new (kde3) version.
+  
+
+*krusader-1.00 (1 Feb 2002)
