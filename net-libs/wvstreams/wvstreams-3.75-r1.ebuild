@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75-r1.ebuild,v 1.1 2004/11/16 13:07:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75-r1.ebuild,v 1.2 2004/12/29 03:02:46 ribosome Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	pam? ( >=sys-libs/pam-0.75 )
 	>=sys-libs/zlib-1.1.4
 	dev-libs/openssl
-	fftw? ( dev-libs/fftw )
+	fftw? ( sci-libs/fftw )
 	tcltk? ( dev-lang/tcl
 		dev-lang/swig )"
 
