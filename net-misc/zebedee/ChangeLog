@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zebedee
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.5 2004/02/20 23:00:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.6 2004/04/17 03:31:48 randy Exp $
+
+  16 Apr 2004; Michael McCabe <randy@gentoo.org> zebedee-2.5.2.ebuild:
+  adding s390 keywords
 
   20 Feb 2004; Seemant Kulleen <seemant@gentoo.org> zebedee-2.4.1.ebuild,
   zebedee-2.5.2.ebuild, files/zebedee-2.4.1-Makefile.patch:

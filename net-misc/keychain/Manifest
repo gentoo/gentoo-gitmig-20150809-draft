@@ -1,5 +1,5 @@
-MD5 f318c2c8b0177eb0d1c81ea364565669 ChangeLog 2032
+MD5 00ec3239eb0f72b5644b87278629804e ChangeLog 2123
 MD5 afd8a08adff7584efee5d9a968ad857e keychain-2.0.2.ebuild 650
-MD5 7e3b0ffc902a97c3c35d2f5d8bcb9f6f keychain-2.0.3.ebuild 758
+MD5 65ffc36e12ce365dce5c0f6adc7ee3e8 keychain-2.0.3.ebuild 759
 MD5 2dabec3f722f068e33172f030b151ffd files/digest-keychain-2.0.2 65
 MD5 f9a92a5e09d95e7ca604b94eb35e4a83 files/digest-keychain-2.0.3 66
