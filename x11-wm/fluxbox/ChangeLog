@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.115 2004/09/01 16:11:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.116 2004/09/03 20:12:04 blubb Exp $
+
+*fluxbox-0.9.10-r1 (03 Sep 2004)
+
+  03 Sep 2004; <blubb@gentoo.org> +files/fluxbox-0.9.10.amd64_fix.patch,
+  +fluxbox-0.9.10-r1.ebuild:
+  Fixed crash on amd64. See bug #62722.
 
 *fluxbox-0.9.10 (01 Sep 2004)
 

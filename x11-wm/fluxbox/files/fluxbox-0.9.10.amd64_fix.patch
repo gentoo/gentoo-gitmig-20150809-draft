@@ -1,0 +1,15 @@
+diff -I'^// \$Id' -Naur --exclude-from diff-exclude fluxbox.real/src/FbTk/XmbFontImp.cc fluxbox.toolbar/src/FbTk/XmbFontImp.cc
+--- fluxbox.real/src/FbTk/XmbFontImp.cc	2004-09-01 01:26:39.000000000 +1000
++++ fluxbox.toolbar/src/FbTk/XmbFontImp.cc	2004-09-04 03:03:16.000000000 +1000
+@@ -173,9 +173,9 @@
+     }
+ 
+     getFontElement(fontname, weight, FONT_ELEMENT_SIZE,
+-                   "-medium-", "-bold-", "-demibold-", "-regular-", 0);
++                   "-medium-", "-bold-", "-demibold-", "-regular-", NULL);
+     getFontElement(fontname, slant, FONT_ELEMENT_SIZE,
+-                   "-r-", "-i-", "-o-", "-ri-", "-ro-", 0);
++                   "-r-", "-i-", "-o-", "-ri-", "-ro-", NULL);
+     getFontSize(fontname, &pixel_size);
+ 
+     if (! strcmp(weight, "*")) 
