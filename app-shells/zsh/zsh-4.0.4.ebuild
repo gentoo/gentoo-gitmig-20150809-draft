@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # This ebuild by Parag Mehta <pm@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.2.ebuild,v 1.6 2001/11/10 03:07:01 hallski Exp
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.4.ebuild,v 1.2 2001/11/27 08:15:56 jerrya Exp $
 
 
 S=${WORKDIR}/${P}
