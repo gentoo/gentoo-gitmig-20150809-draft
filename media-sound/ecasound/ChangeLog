@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/ecasound-2.0.4.ebuild
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.5 2003/02/12 07:27:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.6 2003/03/25 22:18:29 seemant Exp $
 
 *ecasound-2.2.0 (29 Jan 2003)
 
@@ -25,7 +25,12 @@
   Thanks to Paul Thompson <thompson@pobox.com> for contribution
   and minor ebuild cleanups. Closes bug #12381.
 
-*ecasound-2.0.4.ebuild (04 Aug 2002)
+*ecasound-2.0.4 (04 Aug 2002)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> ecasound-2.0.4.ebuild,
+  ecasound-2.2.0.ebuild, ecasound-2.2.0_rc1.ebuild, ecasound-2.2.0_rc1.ebuild:
+  libmikmod to mikmod in USE, ffs, please check use.desc before adding flags
+  haphazardly
 
   04 Aug 2002; Michael Nazaroff <naz@gentoo.org> ecasound-2.0.4.ebuild: 
   
