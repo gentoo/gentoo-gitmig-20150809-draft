@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4.ebuild,v 1.19 2004/06/24 21:29:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4.ebuild,v 1.20 2004/06/25 17:39:58 vapier Exp $
+
+inherit gcc
 
 DESCRIPTION="A tool to read SMART information from harddiscs"
 HOMEPAGE="http://lightside.eresmas.com/"
@@ -11,18 +13,12 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc"
 IUSE=""
 
-DEPEND="virtual/glibc"
-
-src_unpack() {
-	unpack ${A} ; cd ${S}
-	rm ide-smart ide-smart.o
-	sed -i -e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \
-		-e "s:^#CC.*:CC = gcc:" \
-		Makefile
-}
+DEPEND="virtual/libc"
 
 src_compile() {
-	emake || die
+	emake \
+		CC="$(gcc-getCC)" PROF="${CFLAGS}" \
+		clean all || die
 }
 
 src_install() {

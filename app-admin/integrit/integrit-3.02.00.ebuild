@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-3.02.00.ebuild,v 1.10 2004/06/24 21:29:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-3.02.00.ebuild,v 1.11 2004/06/25 17:44:54 vapier Exp $
 
 DESCRIPTION="file integrity verification program"
-SRC_URI="http://www.noserose.net/e/integrit/download/${P}.tar.gz"
 HOMEPAGE="http://integrit.sourceforge.net/"
+SRC_URI="http://www.noserose.net/e/integrit/download/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-LICENSE="GPL-2"
-
-DEPEND="virtual/glibc"
 IUSE=""
+
+DEPEND="virtual/libc"
+
 S=${WORKDIR}/${PN}-3.02
 
 src_compile() {
@@ -26,11 +27,9 @@ src_compile() {
 }
 
 src_install() {
-	into /usr
-
-	dosbin integrit
+	dosbin integrit || die
 	dolib libintegrit.a
-	dodoc Changes HACKING INSTALL LICENSE README todo.txt
+	dodoc Changes HACKING INSTALL README todo.txt
 
 	cd ${S}/utils
 	dosbin i-viewdb
@@ -56,5 +55,4 @@ pkg_postinst() {
 	einfo "It is recommended that the integrit binary is copied to a secure"
 	einfo "location and re-copied at runtime or run from a secure medium."
 	einfo "You should also create a configuration file (see examples)."
-	echo
 }
