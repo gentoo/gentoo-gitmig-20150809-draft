@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-emf-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/ChangeLog,v 1.3 2004/09/30 00:36:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/ChangeLog,v 1.4 2004/11/03 11:43:32 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
+  eclipse-emf-bin-200403250631.ebuild:
+  depend on app-arch/unzip
 
 *eclipse-emf-bin-200403250631 (01 Jun 2004)
 

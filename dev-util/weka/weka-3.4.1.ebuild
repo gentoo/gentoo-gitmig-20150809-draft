@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.1.ebuild,v 1.4 2004/10/16 18:17:32 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.1.ebuild,v 1.5 2004/11/03 11:49:42 axxo Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,8 @@ HOMEPAGE="http://www.cs.waikato.ac.nz/ml/weka/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-DEPEND=">=virtual/jdk-1.4.1"
+DEPEND=">=virtual/jdk-1.4.1
+		app-arch/unzip"
 IUSE="doc"
 
 S=${WORKDIR}/${PN}-3-4

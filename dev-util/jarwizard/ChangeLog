@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jarwizard
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/ChangeLog,v 1.3 2004/06/25 02:37:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/ChangeLog,v 1.4 2004/11/03 11:47:56 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> jarwizard-2.34.ebuild:
+  depend on app-arch/unzip
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> jarwizard-2.34.ebuild:
   Fix use invocation

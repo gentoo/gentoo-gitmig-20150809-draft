@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jcvs-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs-bin/ChangeLog,v 1.4 2004/08/27 23:28:38 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs-bin/ChangeLog,v 1.5 2004/11/03 11:48:52 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> jcvs-bin-5.4.1.ebuild:
+  depend on app-arch/unzip
 
   28 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> jcvs-bin-5.4.1.ebuild:
   Marked ~amd64.

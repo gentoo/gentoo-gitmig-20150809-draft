@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio-me/sun-one-studio-me-4.1.ebuild,v 1.5 2004/06/25 02:48:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio-me/sun-one-studio-me-4.1.ebuild,v 1.6 2004/11/03 11:42:27 axxo Exp $
 
 DESCRIPTION="Sun ONE Studio Mobile Edition"
 HOMEPAGE="http://wwws.sun.com/software/sundev/jde/studio_me/index.html"
@@ -10,7 +10,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 RESTRICT="fetch"
 IUSE=""
-DEPEND=">=virtual/jdk-1.4.1"
+DEPEND=">=virtual/jdk-1.4.1
+		app-arch/unzip"
 
 pkg_nofetch() {
 	einfo "Please download ${SRC_URI} from ${HOMEPAGE} and move it to ${DISTDIR}"
