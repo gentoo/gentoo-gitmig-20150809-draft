@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.193 2005/02/22 02:03:41 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.194 2005/02/26 14:01:49 danarmak Exp $
+
+*kdelibs-3.4.0_rc1 (26 Feb 2005)
+
+  26 Feb 2005; Dan Armak <danarmak@gentoo.org>
+  +files/kdelibs-3.4.0_beta2-export-kio-symbols.diff,
+  +kdelibs-3.4.0_rc1.ebuild:
+  kdelibs 3.4.0_rc1. Note that this is still not released (i.e. no tarballs
+  are available to the general public).
 
   21 Feb 2005; Hardave Riar <hardave@gentoo.org> kdelibs-3.3.2-r2.ebuild:
   Stable on mips.
