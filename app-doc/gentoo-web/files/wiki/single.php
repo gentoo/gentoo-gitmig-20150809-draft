@@ -77,14 +77,14 @@
 
 <table width="90%" border=0 cellpadding=0 cellspacing=0 align="center"><tr><td>
 	<?php if ( $uid ) { // they're logged in. let's let them post a followup. ?>
-	<div width=200 style="float:right;">
+	<div style="float:right;">
 		<p>&nbsp;</p>
 		<table width=200 border=0 cellpadding=3 cellspacing=0 bgcolor="#46357c"><tr><td>
 		<table width="100%" border=0 cellpadding=5 cellspacing=0 bgcolor="white"><tr><td>
 			<form method="post" action="single.php?action=post_followup&tid=<?=$todo['tid'];?>">
 			<p style="font-weight:bold;">Post a Followup!</p>
 			<p>
-				<textarea cols=20 rows=5 name="followup"></textarea><br>
+				<textarea cols=40 rows=7 name="followup"></textarea><br>
 				<input type="submit" value="Post">
 			</p>
 			</form>

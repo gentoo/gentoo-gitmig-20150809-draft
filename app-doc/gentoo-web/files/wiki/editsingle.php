@@ -149,14 +149,14 @@
 </form>
 
 <?php if ( $action != 'new_todo' ) { ?>
-<div width=200 style="float:right;">
+<div style="float:right;">
 	<p>&nbsp;</p>
 	<table width=200 border=0 cellpadding=3 cellspacing=0 bgcolor="#46357c"><tr><td>
 	<table width="100%" border=0 cellpadding=5 cellspacing=0 bgcolor="white"><tr><td>
 		<form method="post" action="editsingle.php?action=post_followup&tid=<?=$tid;?>">
 		<p style="font-weight:bold;">Post a Followup!</p>
 		<p>
-			<textarea cols=20 rows=5 name="followup"></textarea><br>
+			<textarea cols=40 rows=7 name="followup"></textarea><br>
 			<input type="submit" value="Post">
 		</p>
 		</form>
