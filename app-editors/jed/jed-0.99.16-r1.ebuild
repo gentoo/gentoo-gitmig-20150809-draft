@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.2 2003/04/18 01:35:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.3 2003/06/04 14:06:13 liquidx Exp $
 
 IUSE="X gpm truetype"
 
@@ -80,6 +80,9 @@ src_install () {
 
 	insinto /etc
 	doins lib/jed.conf
+	
+	# replace IDE mode with EMACS mode
+	sed -i -e 's/\(_Jed_Default_Emulation = \).*/\1"emacs";/' ${D}/etc/jed.conf
 
 	cd ${D}
 	rm -rf usr/share/jed/info
