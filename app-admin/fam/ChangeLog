@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.4 2004/02/09 15:38:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.5 2004/02/10 02:00:25 vapier Exp $
+
+  09 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Libtool fixes #41013 (missing .so with 1.5).
 
   09 Feb 2004; <gustavoz@gentoo.org> fam-2.7.0.ebuild:
   stable on hppa and sparc
