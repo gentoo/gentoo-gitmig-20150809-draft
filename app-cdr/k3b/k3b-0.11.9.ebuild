@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.7 2004/04/26 20:05:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.8 2004/05/04 02:22:46 eradicator Exp $
 
 inherit kde
 
@@ -17,7 +17,7 @@ DEPEND="kde? ( >=kde-base/kdebase-3.1 )
 	>=media-sound/cdparanoia-3.9.8
 	>=media-libs/id3lib-3.8.0_pre2
 	flac? ( media-libs/flac )
-	mad? ( >=media-sound/mad-0.14.2b )
+	mad? ( >=media-sound/madplay-0.14.2b )
 	oggvorbis? ( media-libs/libvorbis )"
 
 need-kde 3.1
