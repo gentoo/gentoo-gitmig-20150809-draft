@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r5.ebuild,v 1.1 2004/08/09 04:41:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r5.ebuild,v 1.2 2004/08/09 14:42:19 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -83,6 +83,9 @@ src_unpack() {
 	else
 		epatch ${FILESDIR}/${PV}/${PN}-${PV}-noexecstack.patch
 	fi
+
+	# fix segfaults when running things like `emerge sync`
+	epatch ${FILESDIR}/${PV}/${PN}-${PV}-resolve-segfault.patch
 
 	# fixup for install perms
 	sed -i -e "s:-fa:-dRf:g" Makefile
