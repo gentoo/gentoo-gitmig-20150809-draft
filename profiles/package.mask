@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2686 2004/02/08 16:17:13 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2687 2004/02/09 05:10:05 spyderous Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -441,7 +441,7 @@ net-www/opera-static
 # 30 May, 2003 : Seems that xterm is in its own separate package as well, so
 # taking that out of -r3.  Added utempter, (dep for xterm to not install
 # suid)
-=x11-base/xfree-4.3.0-r4
+=x11-base/xfree-4.3.0-r5
 x11-terms/xterm
 sys-apps/utempter
 media-fonts/chkfontpath
