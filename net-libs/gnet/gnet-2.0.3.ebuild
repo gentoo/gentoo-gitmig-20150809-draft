@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.3.ebuild,v 1.5 2003/09/06 22:04:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.3.ebuild,v 1.6 2004/01/30 15:22:54 gustavoz Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnetlibrary.org/"
 
 SLOT="2"
 LICENSE="LGPL-2"
-KEYWORDS="x86 hppa"
+KEYWORDS="x86 hppa sparc"
 
 # yes, the >= is correct, this software can use both glib 1.2 and 2.0!
 RDEPEND=">=dev-libs/glib-1.2.0"
