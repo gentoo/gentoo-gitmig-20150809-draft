@@ -1,0 +1,40 @@
+# Copyright 2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/use.mask,v 1.1 2005/01/06 21:32:00 solar Exp $
+
+3dfx
+3dnow
+3dnowex
+acpi
+adabas
+afs
+aqua
+avi
+birdstep
+db2
+dbmaker
+esoob
+fdftk
+filepro
+firebird
+fmod
+hdf
+hyperwave
+icc
+icc-pgo
+ifc
+informix
+ingres
+mmx
+mmx2
+pfpro
+selinux
+solid
+sse
+sse2
+svga
+sybase
+sybase-ct
+tcc
+uclibc
+uml
