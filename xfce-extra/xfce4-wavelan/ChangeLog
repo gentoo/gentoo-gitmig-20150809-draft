@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-wavelan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/ChangeLog,v 1.4 2005/01/07 01:49:40 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/ChangeLog,v 1.5 2005/01/31 15:46:49 lanius Exp $
+
+  31 Jan 2005; lanius@gentoo.org xfce4-wavelan-0.4.1-r1.ebuild:
+  stable on amd64
 
 *xfce4-wavelan-0.4.1-r1 (06 Jan 2005)
 
