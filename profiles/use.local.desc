@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.784 2004/12/09 13:58:18 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.785 2004/12/09 23:42:14 ticho Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -745,3 +745,5 @@ x11-wm/icewm:silverxp - Apply ybuttons.cc.patch necessary for SilverXP theme
 x11-wm/metisse:freetype - Enable freetype font support
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
 x11-wm/windowmaker:vdesktop - Enable NEWTWM style virtual desktop support.
+net-mail/teapop:virtual - Enable teapop's virtual domain support.
+
