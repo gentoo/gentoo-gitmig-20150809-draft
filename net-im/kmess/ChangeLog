@@ -1,6 +1,15 @@
 # ChangeLog for net-im/kmess
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.1 2002/04/24 21:08:02 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.2 2002/04/26 22:10:33 verwilst Exp $
+
+*kmess-0.9.3 (26 April 2002)
+
+  26 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+
+  Release Note:  Added a button and shortcut for adding carriage returns
+  in chats; and a Spanish translation (untested). Re-enabled "you are 
+  typing".
+
 
 *kmess-0.9.2 (24 April 2002)
 
