@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r11.ebuild,v 1.10 2004/10/18 05:27:26 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r11.ebuild,v 1.11 2004/10/19 20:22:53 gmsoft Exp $
 
 IUSE="cjk"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://ruby/snapshots/${MY_P}.tar.gz
 
 LICENSE="Ruby"
 SLOT="1.6"
-KEYWORDS="x86 alpha ppc sparc ~hppa amd64 -ia64 mips"
+KEYWORDS="x86 alpha ppc sparc hppa amd64 -ia64 mips"
 
 DEPEND="virtual/libc
 	>=sys-libs/gdbm-1.8.0
