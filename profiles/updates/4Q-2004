@@ -213,3 +213,4 @@ move app-sci/ksimus-floatingpoint sci-mathematics/ksimus-floatingpoint
 move app-sci/snns sci-mathematics/snns
 move app-sci/acml sci-libs/acml
 move app-sci/beagle sci-libs/beagle
+move app-sci/cdf sci-libs/cdf
