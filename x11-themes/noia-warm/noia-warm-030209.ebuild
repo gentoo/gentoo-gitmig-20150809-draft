@@ -1,23 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/noia-warm-030209.ebuild,v 1.9 2004/06/30 22:38:57 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/noia-warm-030209.ebuild,v 1.10 2004/07/03 20:14:57 carlo Exp $
 
 inherit kde
 
-need-kde 3
-
 S="${WORKDIR}/noia-warm"
+
 DESCRIPTION="Noia Icon Set for KDE"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}.tar.gz"
 HOMEPAGE="http://www.carlitus.net"
-KEYWORDS="x86 ppc amd64"
+SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}.tar.gz"
+
 SLOT="0"
 LICENSE="as-is"
+KEYWORDS="x86 ppc amd64"
 IUSE=""
-DEPEND=">=sys-apps/sed-4"
 
 # stripping hangs and we've no binaries
-RESTRICT="$RESTRICT nostrip"
+RESTRICT="nostrip"
+
+DEPEND=">=sys-apps/sed-4"
+need-kde 3
 
 src_unpack() {
 	unpack ${P}.tar.gz
