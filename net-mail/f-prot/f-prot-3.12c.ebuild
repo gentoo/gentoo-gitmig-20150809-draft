@@ -16,7 +16,7 @@ RDEPEND=">=app-arch/unzip-5.42-r1
 
 SLOT="0"
 LICENSE="F-PROT"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc"
 
 IUSE=""
 
