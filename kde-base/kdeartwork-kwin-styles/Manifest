@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6f6e60f0145ada5ed5c7b36a90847329 kdeartwork-kwin-styles-3.4.0_beta2.ebuild 501
-MD5 8d6cf9a3ace4aab4ee5a0ed8e1797a24 kdeartwork-kwin-styles-3.4.0_rc1.ebuild 499
+MD5 8028b51f19566020f86984a1d43c0d9d kdeartwork-kwin-styles-3.4.0_rc1.ebuild 503
 MD5 5d406bf5feff159989ca164e6c37c67b kdeartwork-kwin-styles-3.4.0_beta1.ebuild 506
-MD5 3cad67c4fbda328d1eb60b0c169973db ChangeLog 983
+MD5 d214961ee8ad753a3b4c4b74d67bd628 ChangeLog 1134
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ace1aa288fc445334d417fd8ecc6fd1c files/digest-kdeartwork-kwin-styles-3.4.0_rc1 390
 MD5 09af1c83a94e3efb529eb66b885e7559 files/digest-kdeartwork-kwin-styles-3.4.0_beta1 224
 MD5 92c0fb40653b25f4d53c3ee2063819b9 files/digest-kdeartwork-kwin-styles-3.4.0_beta2 304
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLRDzntT9W3vfTuoRApWKAJ9MpxynjojuTw6eM7FiI1Vbp91AAACeIutq
+pKMfOCYXklj5Zlr99srHlKg=
+=oeqf
+-----END PGP SIGNATURE-----
