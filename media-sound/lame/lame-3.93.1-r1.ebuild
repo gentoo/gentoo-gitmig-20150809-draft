@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.14 2004/05/06 09:13:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.15 2004/06/08 00:57:58 agriffis Exp $
 
 inherit flag-o-matic gcc
 
@@ -39,7 +39,7 @@ src_compile() {
 		myconf="${myconf} --enable-mp3x"
 	fi
 
-	[ `use debug` ] \
+	use debug \
 		&& myconf="${myconf} --enable-debug=yes" \
 		|| myconf="${myconf} --enable-debug=no"
 

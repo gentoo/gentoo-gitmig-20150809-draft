@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.ebuild,v 1.4 2004/05/29 03:08:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.ebuild,v 1.5 2004/06/08 00:57:58 agriffis Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -40,7 +40,7 @@ src_compile() {
 	fi
 
 	# as of 3.95.1 changed from "yes" to "norm" ("alot" is also accepted)
-	[ `use debug` ] \
+	use debug \
 		&& myconf="${myconf} --enable-debug=norm" \
 		|| myconf="${myconf} --enable-debug=no"
 

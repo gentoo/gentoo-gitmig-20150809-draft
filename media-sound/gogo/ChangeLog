@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gogo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/ChangeLog,v 1.9 2004/04/22 06:23:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/ChangeLog,v 1.10 2004/06/08 00:57:12 agriffis Exp $
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org> gogo-3.10-r1.ebuild:
+  Fix use invocation
 
   21 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> gogo-3.10-r1.ebuild:
   debug added to IUSE.

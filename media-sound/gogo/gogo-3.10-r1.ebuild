@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.11 2004/04/22 06:23:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.12 2004/06/08 00:57:12 agriffis Exp $
 
 inherit eutils
 IUSE="debug"
@@ -28,16 +28,16 @@ S=${WORKDIR}/petit${MY_PV}
 
 src_compile() {
 	local myconf=""
-#	if [ "`use oggvorbis`" ] ; then
+#	if use oggvorbis ; then
 #		myconf="--with-vorbis"
 		myconf="--without-vorbis"
 #	else
 #		myconf="--without-vorbis"
 #	fi
-#	if [ "`use gtk`" ] ; then
+#	if use gtk ; then
 #		myconf="$myconf --enable-mp3x"
 #	fi
-	[ `use debug` ] \
+	use debug \
 		&& myconf="$myconf --enable-debug=yes" \
 		|| myconf="$myconf --enable-debug=no"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.18 2004/02/24 06:45:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.19 2004/06/08 00:57:58 agriffis Exp $
 
 inherit libtool
 
@@ -28,13 +28,13 @@ src_compile() {
 	elibtoolize
 
 	local myconf=""
-#	if [ "`use oggvorbis`" ] ; then
+#	if use oggvorbis ; then
 #		myconf="${myconf} --with-vorbis"
 #		myconf="${myconf} --without-vorbis"
 #	else
 		myconf="${myconf} --without-vorbis"
 #	fi
-	if [ "`use gtk`" ] ; then
+	if use gtk ; then
 		myconf="${myconf} --enable-mp3x"
 	fi
 	use debug \
