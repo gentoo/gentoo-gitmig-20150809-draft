@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.99 2004/07/23 17:00:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.100 2004/07/23 18:23:47 axxo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -88,7 +88,7 @@ kde_src_compile() {
 				else
 					myconf="$myconf --disable-debug --without-debug"
 				fi
-				myconf="$myconf `use_with arts`
+				myconf="$myconf `use_with arts`"
 				debug-print "$FUNCNAME: myconf: set to ${myconf}"
 				;;
 			configure)
