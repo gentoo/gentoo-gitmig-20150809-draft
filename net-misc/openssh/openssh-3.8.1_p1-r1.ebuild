@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.1 2004/05/30 04:33:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.2 2004/06/01 23:39:44 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -32,7 +32,7 @@ RDEPEND="virtual/glibc
 	!ppc64? ( skey? ( >=app-admin/skey-1.1.5-r1 ) )
 	>=dev-libs/openssl-0.9.6d
 	>=sys-libs/zlib-1.1.4
-	smartcard? ( dev-libs/opensc )
+	x86? ( smartcard? ( dev-libs/opensc ) )
 	!ppc64? ( tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) )"
 DEPEND="${RDEPEND}
 	virtual/os-headers
