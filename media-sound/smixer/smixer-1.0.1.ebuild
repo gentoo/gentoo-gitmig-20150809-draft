@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/smixer-1.0.1.ebuild,v 1.12 2004/04/20 17:34:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/smixer-1.0.1.ebuild,v 1.13 2004/06/22 17:45:37 gustavoz Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://centerclick.org/programs/smixer/${PN}${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc hppa amd64 ~sparc"
+KEYWORDS="x86 ppc hppa amd64 sparc"
 
 DEPEND="virtual/glibc"
 

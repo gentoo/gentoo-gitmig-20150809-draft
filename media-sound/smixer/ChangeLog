@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/smixer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/ChangeLog,v 1.6 2004/04/20 17:34:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/ChangeLog,v 1.7 2004/06/22 17:45:37 gustavoz Exp $
+
+  22 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> smixer-1.0.1.ebuild:
+  Stable on sparc after some time...
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> smixer-1.0.1.ebuild:
   Added IUSE.
