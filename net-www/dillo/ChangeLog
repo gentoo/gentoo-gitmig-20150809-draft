@@ -1,7 +1,23 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.5 2002/07/14 20:25:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.6 2002/08/16 16:01:18 seemant Exp $
 
+*dillo-0.6.6-r1 (16 Aug 2002)
+
+  16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> dillo-0.6.6-r1.ebuild :
+
+  This is a heavily patched version of dillo.  The following patches were
+  applied:
+
+  scaling: http://pigeond.net/dillo/  (try adding in your ~/.dillorc: panel_size=stack)
+  
+  gzip'd html support: http://twirl.mcc.ac.uk/dillo/dillo_gzip.html
+
+  embeddable dillo, local browsing, full window startup and command line
+  enhancements: http://melvin.hadasht.free.fr/home/dillo/sylpheed/
+
+  alternative icons: http://dillo.cipsga.org.br/Icons/
+  
 *dillo-0.6.6 (30 May 2002)
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> dillo-0.6.6.ebuild :
