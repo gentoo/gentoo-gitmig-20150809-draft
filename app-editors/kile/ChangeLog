@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.17 2003/06/29 18:24:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.18 2003/07/23 02:12:14 caleb Exp $
+
+*kile-1.5.2 (22 Jul 2003)
+
+  22 Jul 2003; Caleb Tennis <caleb@gentoo.org> kile-1.5.2.ebuild:
+  New version
 
   16 Jun 2003; Caleb Tennis <caleb@gentoo.org> kile-1.5.ebuild:
   Moving to stable x86
