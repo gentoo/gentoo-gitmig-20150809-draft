@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-1.9.1.ebuild,v 1.4 2004/10/12 19:35:23 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-1.9.1.ebuild,v 1.5 2004/10/16 18:13:51 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="Load test and measure performance on HTTP/FTP services, and databases."
 HOMEPAGE="http://jakarta.apache.org/jmeter/index.html"
@@ -28,5 +30,5 @@ src_install () {
 	dodir /opt/${PN}
 	cp -ar bin/ lib/ ${D}/opt/${PN}/
 	dodoc README
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }
