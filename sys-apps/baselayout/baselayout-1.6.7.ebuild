@@ -2,13 +2,16 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7.ebuild,v 1.3 2001/12/08 08:01:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7.ebuild,v 1.4 2001/12/08 16:14:18 azarah Exp $
 
 SV=1.2.1
 S=${WORKDIR}/rc-scripts-${SV}
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
+
+#needed for the new RESTORE devfsd function
+RDEPEND=">=sys-apps/devfsd-1.3.20"
 
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 
