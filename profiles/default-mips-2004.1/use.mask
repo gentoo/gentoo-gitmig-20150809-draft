@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-2004.1/use.mask,v 1.1 2004/04/28 21:26:06 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-2004.1/use.mask,v 1.2 2004/05/15 23:51:03 geoman Exp $
 
 
 # Chris PeBenito <pebenito@gentoo.org>
@@ -25,6 +25,7 @@ altivec
 apm
 arts
 directfb
+dvdr
 icc
 icc-pgo
 informix
@@ -51,4 +52,3 @@ amd64
 ia64
 ppc64
 s390
-
