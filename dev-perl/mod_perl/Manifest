@@ -2,14 +2,13 @@ MD5 9eb488a8d217058474db6e04e22c62fa mod_perl-1.99.09.ebuild 3613
 MD5 b04e594ce1aa3379787924322454aba5 mod_perl-1.27.ebuild 1416
 MD5 0bf9316fb68b93b9bd9b72555e81b41b mod_perl-1.27-r2.ebuild 1821
 MD5 8b395a2985103819def72cc269b3dbc8 mod_perl-1.99.10.ebuild 3811
-MD5 12704b63ae8ef6108061baccceb4c773 mod_perl-1.99.11.ebuild~ 3864
 MD5 ca7b02d02b05f693bb730fd5eb8e6627 mod_perl-1.27-r4.ebuild 2196
 MD5 026fbb84b447f735b4c86b46860f2afb mod_perl-1.99.08.ebuild 1244
 MD5 58ceed38b57307fa4190170a23408524 mod_perl-1.27-r1.ebuild 1421
-MD5 249d51b33f2a08cfa0a518b6fbe07a31 ChangeLog 3704
+MD5 58a23902bcc6b02377052c0fd8f8fac2 ChangeLog 3857
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 b8bea8f6d6e415b81c96ea0ff36478eb mod_perl-1.27-r3.ebuild 2031
-MD5 52e8dfe8403f30c8c5f5292c6539b54a mod_perl-1.99.11.ebuild 3869
+MD5 36e45151ca1f70491b941ed4707ea0c1 mod_perl-1.99.11.ebuild 3750
 MD5 e749acb150e339917257be38febb568e files/mod_perl-1.99.10-nonukes.patch 777
 MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r1 65
 MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r2 65
