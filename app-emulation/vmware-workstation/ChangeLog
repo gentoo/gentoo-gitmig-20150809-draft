@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.43 2004/06/14 12:27:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.44 2004/06/15 14:06:43 wolf31o2 Exp $
+
+  15 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-4.5.1.7568-r1.ebuild:
+  Modified to use vmware-any-any-update70 and closign bug #53928.
 
 *vmware-workstation-4.5.2.8848 (14 Jun 2004)
 
