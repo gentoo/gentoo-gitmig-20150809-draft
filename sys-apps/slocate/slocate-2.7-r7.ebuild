@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r7.ebuild,v 1.1 2004/10/20 16:55:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r7.ebuild,v 1.2 2005/02/13 00:30:42 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.geekreview.org/slocate/src/slocate-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="uclibc"
 
 DEPEND="sys-apps/shadow"
@@ -54,7 +54,7 @@ src_install() {
 	dodoc AUTHORS README ChangeLog
 
 	# man page fixing
-	rm -f "${D}/usr/share/man/man1/locate.1.gz"
+	rm -f "${D}"/usr/share/man/man1/locate.1.gz
 	dosym slocate.1.gz /usr/share/man/man1/locate.1.gz
 
 	insinto /etc
