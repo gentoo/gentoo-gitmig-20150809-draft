@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/psmisc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.46 2005/01/05 03:51:55 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.47 2005/02/07 17:39:04 gustavoz Exp $
+
+  07 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> psmisc-21.5.ebuild:
+  Stable on sparc
 
   04 Jan 2005; Chris PeBenito <pebenito@gentoo.org>
   +files/psmisc-21.5-selinux.diff.bz2, psmisc-21.5.ebuild:
