@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/sn/sn-0.3.6.ebuild,v 1.1 2003/03/06 03:13:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/sn/sn-0.3.6.ebuild,v 1.2 2004/03/20 07:32:10 mr_bones_ Exp $
 
 DESCRIPTION="Hassle-free Usenet news system for small sites"
 SRC_URI="http://infa.abo.fi/~patrik/sn/files/${P}.tar.bz2"
