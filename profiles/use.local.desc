@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.822 2004/12/28 11:50:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.823 2004/12/28 17:25:12 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -529,6 +529,7 @@ net-im/gaim:silc - Enable SILC protocol support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/kadu:kadu-modules - Enables modules in kadu
 net-im/kadu:kadu-voice - Enables voice chat in kadu
+net-im/psi:vanilla - Refrain from adding non official patches
 net-im/silc-toolkit:client - Enables silc client
 net-im/silc-toolkit:server - Enables silc server
 net-irc/bitchx:cdrom - Enables CD-ROM support
