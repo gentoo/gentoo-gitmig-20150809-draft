@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.87 2004/08/14 14:35:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.88 2004/08/24 15:06:39 plasmaroo Exp $
+
+*gentoo-sources-2.4.27-r1 (24 Aug 2004)
+
+  24 Aug 2004; <plasmaroo@gentoo.org> +gentoo-sources-2.4.27-r1.ebuild:
+  Version bump.
 
 *gentoo-sources-2.4.20-r25 (14 Aug 2004)
 

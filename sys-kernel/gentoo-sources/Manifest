@@ -1,6 +1,7 @@
 MD5 5f09a875cefa9e51717ad32ec2473277 gentoo-sources-2.4.19-r22.ebuild 4511
-MD5 edc396c81731fc9ccd344ca66dcebe79 ChangeLog 22478
+MD5 aaba83c29ee0aed3beff912f95e7d21b ChangeLog 22608
 MD5 9bfed9d1b655f1c44c334eec8f12daf9 gentoo-sources-2.4.20-r25.ebuild 7171
+MD5 dd5c0fff65d753c28b02383f459a2c8b gentoo-sources-2.4.27-r1.ebuild 560
 MD5 91ea2908f17a4069774ffce01264df0c metadata.xml 354
 MD5 6fffe862e04c9966186eb349d97f6384 gentoo-sources-2.4.25-r9.ebuild 1237
 MD5 73f2a20c7fd050c9ae715b904927d377 gentoo-sources-2.4.26-r9.ebuild 1015
@@ -39,6 +40,7 @@ MD5 147fec50180ad91b6260fc7201dcb90f files/gentoo-sources-2.4.CAN-2004-0010.patc
 MD5 60d25ff310fc6abfdce39ec9e47345af files/gentoo-sources-2.4.CAN-2004-0685.patch 2809
 MD5 6bd1b3d66aca4f2ae0cfd964caa28cc9 files/gentoo-sources-2.4.20-devfs-snd-fix.patch 1973
 MD5 152e60bd6e74485e08c4f0bd8f98250a files/gentoo-sources-2.4.19-gcc33.patch 8526
+MD5 dadfbefa3d709270f35294e23961a813 files/digest-gentoo-sources-2.4.27-r1 144
 MD5 5bf9836a632a861728d33f9736bb7431 files/gentoo-sources-2.4.CAN-2004-0133.patch 427
 MD5 e2e2b545b6fcdcecf49e33798efa5b84 files/gentoo-sources-2.4.22-rtc_fix.patch 7073
 MD5 0f66013f643c79c97fda489618a4e2fd files/gentoo-sources-2.4.CAN-2004-0535.patch 476
