@@ -1,6 +1,12 @@
 # ChangeLog for games-server/nwn-ded
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/ChangeLog,v 1.8 2004/12/30 09:40:38 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/ChangeLog,v 1.9 2005/01/03 02:49:47 vapier Exp $
+
+*nwn-ded-1.65-r1 (02 Jan 2005)
+
+  02 Jan 2005; Mike Frysinger <vapier@gentoo.org> +nwn-ded-1.65-r1.ebuild,
+  -nwn-ded-1.65.ebuild:
+  Fix array usage with $A so it actually works #76428 by Francois Guimond.
 
   30 Dec 2004; Mike Frysinger <vapier@gentoo.org> nwn-ded-1.65.ebuild:
   Add localization support #61260 by dju.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.65.ebuild,v 1.3 2004/12/30 22:08:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.65-r1.ebuild,v 1.1 2005/01/03 02:49:47 vapier Exp $
 
 inherit games
 
@@ -35,7 +35,7 @@ src_unpack() {
 	rm -f *dedserver*.{tar.gz,sit}
 
 	unpack linuxserverupdate1xxto165.tar.gz
-	local Aarray=(${A})
+	declare -a Aarray=(${A})
 	unpack ${Aarray[2]}
 }
 
