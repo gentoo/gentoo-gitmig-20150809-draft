@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5.ebuild,v 1.1 2003/02/24 21:46:31 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5.ebuild,v 1.2 2003/03/25 14:00:54 gmsoft Exp $
 
 IUSE="nls static readline"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/parted"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="~x86 ~ppc ~sparc ~hppa"
 DEPEND="virtual/glibc
 	>=sys-apps/e2fsprogs-1.27
 	>=sys-libs/ncurses-5.2
