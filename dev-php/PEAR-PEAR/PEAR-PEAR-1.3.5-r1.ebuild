@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.4 2005/03/09 07:38:11 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.5 2005/03/14 15:36:11 sebastian Exp $
 
 ARCHIVE_TAR="1.2"
 CONSOLE_GETOPT="1.2"
@@ -16,7 +16,7 @@ SRC_URI="http://pear.php.net/get/Archive_Tar-${ARCHIVE_TAR}.tgz
 
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc64 ~ppc ~ia64 ~sparc ~alpha ~hppa"
+KEYWORDS="x86 amd64 ~ppc64 ~ppc ~ia64 ~sparc ~alpha ~hppa"
 IUSE=""
 DEPEND="virtual/php dev-php/php"
 PDEPEND=">=dev-php/PEAR-Archive_Tar-1.1
