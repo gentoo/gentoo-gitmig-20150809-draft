@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r12.ebuild,v 1.8 2003/04/03 18:59:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r12.ebuild,v 1.9 2003/04/10 01:54:33 satai Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/
 	 ftp://ftp.dante.de/pub/tex/systems/unix/teTeX/1.0/contrib/ghibo/${TEXMFSRC}
 	 mirror://gentoo/ec-ready-mf-tfm.tar.gz
 	 mirror://teTeX-french.tar.gz"
-HOMEPAGE="http://tug.cs.umb.edu/tetex/"
+HOMEPAGE="http://tug.org/teTeX/"
 
 KEYWORDS="x86 ppc sparc alpha hppa"
 SLOT="0"
