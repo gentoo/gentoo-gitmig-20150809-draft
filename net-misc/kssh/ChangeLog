@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/komba2
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kssh/ChangeLog,v 1.1 2002/04/15 22:37:30 verwilst Exp $
+
+*kssh-0.6 (15 April 2002)
+
+  15 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+  
+  Initial ebuild.. kssh seems good to easily log in to several ssh 
+  accounts.. Have fun!
