@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.34 2002/11/18 12:34:26 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.35 2002/11/23 20:19:48 danarmak Exp $
+
+*qt-3.1.0-r1 (23 Nov 2002)
+
+  23 Nov 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New revision that fixes the library installation code (some libs weren't
+  being installed), adds -fast configure flag and generally cleans things
+  up. Also remove outdated src_postinst message about recompiling plugins.
 
   18 Nov 2002; Hannes Mehnert <hannes@gentoo.org> qt-3.0.5-r2.ebuild,
   qt-3.1.0.ebuild: added -prefix ${QTBASE} to configure, this solves
