@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.4 2002/07/18 17:37:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.5 2002/07/19 09:54:05 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -141,8 +141,20 @@ cvs_src_unpack() {
 	# is that in the future after copying the sources we might need to 
 	# delete them, so this has to be self-contained
     cp -Rf ${ECVS_TOP_DIR}/${ECVS_MODULE} $WORKDIR
+    
+    # implement some of base_src_unpack's functionality;
+    # note however that base.eclass may not have been inherited!
+    if [ -n "$PATCHES" ]; then
+	debug-print "$FUNCNAME: PATCHES=$PATCHES, S=$S, autopatching"
+	cd $S
+	for x in $PATCHES; do
+	    debug-print "patching from $x"
+	    patch -p0 < $x
+	done
+    fi
 
 }
 
 EXPORT_FUNCTIONS src_unpack
+
 
