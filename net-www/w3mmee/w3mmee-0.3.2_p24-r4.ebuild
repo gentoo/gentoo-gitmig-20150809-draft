@@ -1,10 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24.ebuild,v 1.3 2003/12/06 12:16:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24-r4.ebuild,v 1.1 2004/03/24 18:18:44 usata Exp $
 
-IUSE="cjk gpm imlib nls ssl"
+inherit alternatives
 
-MY_PV=${PV##*_}-18
+IUSE="gpm imlib nls ssl"
+
+MY_PV=${PV##*_}-20
 MY_P=${PN}-${MY_PV}
 GC_PV="6.2"
 MY_GC=gc${GC_PV}
@@ -16,12 +18,12 @@ HOMEPAGE="http://pub.ks-and-ks.ne.jp/prog/w3mmee/"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="x86 -alpha ppc ~sparc"
+KEYWORDS="~x86 -alpha ~sparc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
 	dev-lang/perl
-	cjk? ( >=dev-libs/libmoe-1.5.3 )
+	>=dev-libs/libmoe-1.5.3
 	imlib? ( >=media-libs/imlib-1.9.8
 		media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
@@ -43,6 +45,8 @@ src_unpack() {
 	# (Debian is the only Linux distribution that can compile it)
 	unpack ${MY_GC}.tar.gz
 	mv ${MY_GC} gc
+
+	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 }
 
 src_compile() {
@@ -79,16 +83,8 @@ src_compile() {
 		myuse="${myuse} use_image=n"
 	fi
 
-	if [ -n "`use cjk`" ] ; then
-		myconf="${myconf} -libmoe=/usr/lib
-		-mb_h=/usr/include/moe -mk_btri=/usr/libexec/moe"
-		mylang=MANY
-	else
-		mylang=EN
-	fi
-
 	cat >>config.param<<-EOF
-	lang=${mylang}
+	lang=MANY
 	accept_lang=en
 	EOF
 
@@ -101,10 +97,13 @@ src_compile() {
 		-mandir=/usr/share/man \
 		-sysconfdir=/etc/w3mmee \
 		-model=custom \
+		-libmoe=/usr/lib \
+		-mb_h=/usr/include/moe \
+		-mk_btri=/usr/libexec/moe \
 		-cflags=${CFLAGS} -ldflags=${LDFLAGS} \
 		${myconf} || die
 
-	emake || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -112,7 +111,7 @@ src_install() {
 	einstall DESTDIR=${D}
 
 	# w3mman and manpages conflict with those from w3m
-	mv ${D}/usr/bin/w3mman ${D}/usr/bin/w3mmeeman
+	mv ${D}/usr/bin/w3m{,mee}man
 	mv ${D}/usr/share/man/ja/man1/w3m{,mee}.1
 	mv ${D}/usr/share/man/man1/w3m{,mee}.1
 	mv ${D}/usr/share/man/man1/w3mman{,mee}.1
@@ -126,10 +125,32 @@ src_install() {
 
 pkg_postinst() {
 
+	w3m_alternatives
 	einfo
 	einfo "If you want to render multilingual text, please refer to"
 	einfo "/usr/share/doc/${P}/en/README.mee or"
 	einfo "/usr/share/doc/${P}/jp/README.mee"
 	einfo "and set W3MLANG variable respectively."
 	einfo
+}
+
+pkg_postrm() {
+
+	w3m_alternatives
+}
+
+w3m_alternatives() {
+
+	if [ ! -f /usr/bin/w3m ] ; then
+		alternatives_makesym /usr/bin/w3m \
+			/usr/bin/w3m{m17n,mee}
+		alternatives_makesym /usr/bin/w3mman \
+			/usr/bin/w3m{man-m17n,meeman}
+		alternatives_makesym /usr/share/man/ja/man1/w3m.1.gz \
+			/usr/share/man/ja/man1/w3m{m17n,mee}.1.gz
+		alternatives_makesym /usr/share/man/man1/w3m.1.gz \
+			/usr/share/man/man1/w3m{m17n,mee}.1.gz
+		alternatives_makesym /usr/share/man/man1/w3mman.1.gz \
+			/usr/share/man/man1/w3m{man-m17n,meeman}.1.gz
+	fi
 }
