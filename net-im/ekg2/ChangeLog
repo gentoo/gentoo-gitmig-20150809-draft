@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ekg2
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.5 2004/09/03 00:38:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.6 2004/09/15 19:24:40 sekretarz Exp $
+
+*ekg2-20040914 (15 Sep 2004)
+
+  15 Sep 2004; Karol Wojtaszek <sekretarz@gentoo.org> -ekg2-20040819.ebuild,
+  +ekg2-20040914.ebuild:
+  Version bump. Removing old ebuild
 
 *ekg2-20040831 (03 Sep 2004)
 
