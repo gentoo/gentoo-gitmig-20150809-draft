@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.7 2004/06/10 06:03:59 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.8 2004/06/17 03:01:03 agriffis Exp $
+
+*mozilla-thunderbird-0.7 (16 Jun 2004)
+
+  16 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/ipc-1.0.6-nsPipeChannel.patch, +files/thunderbird-0.7-init.tar.bz2,
+  +mozilla-thunderbird-0.7.ebuild:
+  First commit of version 0.7, but it doesn't completely build yet, so it's
+  package.masked
 
   10 Jun 2004; Brad Laue <brad@gentoo.org>
   +files/icon/mozillathunderbird.desktop, +files/icon/thunderbird-icon.png:
