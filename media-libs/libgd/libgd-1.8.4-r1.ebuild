@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r1.ebuild,v 1.2 2003/06/26 19:01:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r1.ebuild,v 1.3 2003/06/26 22:11:35 vapier Exp $
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
@@ -11,13 +11,13 @@ HOMEPAGE="http://www.boutell.com/gd/"
 SLOT="0"
 LICENSE="as-is | BSD"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa"
-IUSE="X jpeg truetype ttf"
+IUSE="X jpeg truetype freetype-version-1"
 
 DEPEND="media-libs/libpng
 	X? ( virtual/x11 )
 	jpeg? ( media-libs/jpeg )
 	|| (
-		ttf? ( =media-libs/freetype-1* )
+		freetype-version-1? ( =media-libs/freetype-1* )
 		truetype? ( =media-libs/freetype-2* )
 	)"
 
@@ -44,7 +44,7 @@ src_unpack() {
 	compopts="${compopts} -DHAVE_LIBPNG"
 	libsopts="${libsopts} -lpng"
 
-	if [ `use ttf` ] ; then
+	if [ `use freetype-version-1` ] ; then
 		compopts="${compopts} -DHAVE_LIBTTF"
 		libsopts="${libsopts} -lttf"
 		incopts="-I/usr/include/freetype"
