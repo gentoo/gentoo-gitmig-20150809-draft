@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3206 2004/09/30 23:29:25 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3207 2004/10/01 01:38:23 wolf31o2 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -401,7 +401,8 @@ sys-fs/progsreiserfs
 <dev-util/subversion-1.0.3
 
 # <wolf31o2@gentoo.org> (24 May 2004)
-# Doing this to keep users from breaking their systems
+# Doing this to keep users from breaking their systems by installing these
+# with USE=opengl until I close bug #51726.
 >=app-misc/livecd-tools-1.0.3
 
 # <kanaka@gentoo.org> (18 May 2004)
