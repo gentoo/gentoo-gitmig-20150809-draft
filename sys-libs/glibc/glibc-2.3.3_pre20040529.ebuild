@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.2 2004/05/30 02:15:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.3 2004/05/30 15:03:30 lv Exp $
 
 IUSE="nls pic build nptl erandom"
 
@@ -439,6 +439,20 @@ src_unpack() {
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
+
+	# disable -z relro
+	use hardened || sed -e 's/^have-z-relro.*/have-z-relro = no/' -i ${S}/config.make.in
+	# disables building nscd as pie
+	use hardened || sed -e 's/^have-fpie.*/have-fpie = no/' -i ${S}/config.make.in
+	# disable binutils -as-needed, useful, if glibc should not depend on libgcc_s.so
+	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
+	# disable execstack (the patch is used by rh for gcc < 3.3.3)
+	#use hardened || epatch ${FILESDIR}/2.3.3/glibc-execstack-disable.patch
+	#use hardened || sed -e 's/^ASFLAGS-config.*/ASFLAGS-config =/' -i ${S}/config.make.in
+	# mandatory, if binutils supports relro and the kernel is pax/grsecurity enabled
+	# solves almost all segfaults building the locale files on grsecurity enabled kernels
+	# lv_* remaining (it could depend on bind-now enabled later)
+	use hardened && sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig
 }
 
 setup_flags() {
@@ -492,6 +506,8 @@ src_compile() {
 	use nls || myconf="${myconf} --disable-nls"
 
 	use erandom || myconf="${myconf} --disable-dev-erandom"
+
+	use hardened && myconf="${myconf} --enable-bind-now"
 
 	if use_nptl
 	then
