@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/mouseemu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mouseemu/ChangeLog,v 1.5 2005/02/14 08:14:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mouseemu/ChangeLog,v 1.6 2005/03/05 11:37:10 josejx Exp $
+
+*mouseemu-0.14 (05 Mar 2005)
+
+  05 Mar 2005; Joseph Jezak <josejx@gentoo.org> +metadata.xml,
+  +mouseemu-0.14.ebuild:
+  Added metadata.xml and bumped to the latest version to fix issues with
+  scroll emulation. See bug #81961.
 
 *mouseemu-0.13 (14 Feb 2005)
 
