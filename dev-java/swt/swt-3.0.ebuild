@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.0.ebuild,v 1.4 2004/10/31 20:07:24 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.0.ebuild,v 1.5 2005/02/19 19:11:46 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -49,7 +49,7 @@ src_unpack() {
 
 src_compile() {
 	if use gnome ; then
-	    gnome_lib=`pkg-config --libs gnome-vfs-module-2.0 libgnome-2.0 libgnomeui-2.0 | sed -e "s:-pthread:-lpthread:" -e "s:-Wl,--export:--export:"`
+	    gnome_libs=`pkg-config --libs gnome-vfs-module-2.0 libgnome-2.0 libgnomeui-2.0 | sed -e "s:-pthread:-lpthread:" -e "s:-Wl,--export:--export:"`
 	fi
 
 	gtk_lib=`pkg-config --libs gtk+-2.0 gthread-2.0 | sed -e "s:-pthread:-lpthread:" -e "s:-Wl,--export:--export:"`
