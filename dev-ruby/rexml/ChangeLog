@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rexml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.6 2002/12/15 00:13:59 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.7 2002/12/26 21:13:28 rphillips Exp $
+
+*rexml-2.4.5 (26 Dec 2002)
+
+  26 Dec 2002; Ryan Phillips <rphillips@gentoo.org> :
+  Version bump
 
 *rexml-2.4.4 (5 Dec 2002)
 
