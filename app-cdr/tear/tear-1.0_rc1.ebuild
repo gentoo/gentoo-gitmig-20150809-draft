@@ -1,12 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tear/tear-1.0_rc1.ebuild,v 1.1 2002/10/26 07:40:35 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tear/tear-1.0_rc1.ebuild,v 1.2 2002/11/30 03:10:52 vapier Exp $
 
-S=${WORKDIR}/${P}
-
-DESCRIPTION="T.E.A.R Encodes And Rips CDs into mp3 or ogg files."
+DESCRIPTION="T.E.A.R. Encodes And Rips CDs into mp3 or ogg files."
 HOMEPAGE="http://tear.sourceforge.net/"
-
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
@@ -32,15 +29,12 @@ src_unpack() {
 	/usr/bin/groff -man -Tascii tear.1 > /dev/null
 }
 
-src_install () {
-	dodir /usr/bin /etc
+src_install() {
 	dobin tear
-	
+
 	insinto /etc
 	doins tear.conf	
 	
 	doman tear.1
-	
 	dodoc LICENSE README Changes
 }
-
