@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.11 2002/10/05 18:09:51 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.12 2003/02/09 23:31:12 mholzer Exp $
 
 IUSE="arts esd X gtk oggvorbis gnome alsa"
 
@@ -26,7 +26,8 @@ RDEPEND="=dev-libs/glib-1.2*
 	oggvorbis? ( media-libs/libvorbis )"
 
 DEPEND="x86? ( dev-lang/nasm ) 
-sys-devel/perl"
+	media-libs/id3lib
+	sys-devel/perl"
 
 SLOT="0"
 LICENSE="GPL-2"

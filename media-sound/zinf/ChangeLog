@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/zinf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.5 2003/02/07 22:25:01 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.6 2003/02/09 23:31:12 mholzer Exp $
 
 *zinf-2.2.3 (07 Feb 2003)
+
+  09 Feb 2003; Martin Holzer <mholzer@gentoo.org zinf-2.2.3.ebuild :
+  Added media-libs/id3lib to DEPEND cause it fails without. Closes #15322.
 
   07 Feb 2003; Ryan Phillips <rphillips@gentoo.org> ChangeLog:
   new version.
