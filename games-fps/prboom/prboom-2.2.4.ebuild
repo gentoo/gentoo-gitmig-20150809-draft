@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4.ebuild,v 1.3 2004/03/10 02:19:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4.ebuild,v 1.4 2004/03/10 17:31:31 vapier Exp $
 
 inherit games eutils gcc
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/prboom/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="opengl debug"
 
 DEPEND="virtual/x11
