@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.42.ebuild,v 1.10 2004/10/23 06:41:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.42.ebuild,v 1.11 2004/10/27 08:58:24 eldad Exp $
 
 inherit eutils
 
@@ -38,5 +38,5 @@ src_install() {
 	into /usr
 	dobin ngrep
 	doman ngrep.8
-	dodoc BUGS CHANGES COPYRIGHT CREDITS README TODO USAGE
+	dodoc BUGS CHANGES CREDITS README TODO USAGE
 }
