@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/fireflies
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.1 2004/01/04 15:06:44 port001 Exp $
+
+*fireflies-2.06 (04 Jan 2004)
+
+  04 Jan 2004; Ian Leitch <port001@gentoo.org> fireflies-2.06.ebuild,
+  files/fireflies-2.06-Make.include.in.patch,
+  files/fireflies-2.06-configure.patch:
+  Initial commit; #33738
+
