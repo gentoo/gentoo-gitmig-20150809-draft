@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gkrellm-themes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/ChangeLog,v 1.5 2004/06/24 23:27:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/ChangeLog,v 1.6 2004/09/05 23:44:04 pylon Exp $
+
+  06 Sep 2004; Lars Weiler <pylon@gentoo.org> gkrellm-themes-0.1.ebuild:
+  Stable on ppc.
 
   04 Jun 2004; Gustavo Felisberto <humpback@gentoo.org>;
   gkrellm-themes-0.1.ebuild:
