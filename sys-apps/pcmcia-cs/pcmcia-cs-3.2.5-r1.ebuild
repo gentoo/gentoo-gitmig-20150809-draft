@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5-r1.ebuild,v 1.2 2004/02/02 12:05:25 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5-r1.ebuild,v 1.3 2004/02/02 20:19:53 latexer Exp $
 
 inherit eutils
 
@@ -154,6 +154,8 @@ src_install () {
 pkg_postinst() {
 	if [ "${okvminor}" -lt "5" ]
 	then
+		depmod -a
+
 		einfo "To avail yourself of the pcmcia-cs drivers, you have to disable the"
 		einfo "PCMCIA support in the kernel.  (Otherwise, you might experience"
 		einfo "CardServices version mismatch errors)"
