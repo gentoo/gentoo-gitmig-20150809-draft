@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1-r3.ebuild,v 1.1 2004/01/15 17:03:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1-r3.ebuild,v 1.2 2004/06/03 18:41:49 karltk Exp $
 
 IUSE="doc"
 
@@ -43,6 +43,14 @@ src_install () {
 }
 
 pkg_postinst () {
-	# Set as default VM if none exists
-	java_pkg_postinst
+	if [ ! -e "${JAVAC}" ] ; then
+		java_pkg_postinst
+	fi
+}
+
+pkg_postrm() {
+	if [ ! -z "$(java-config -J) | grep ${P}" ] ; then
+		ewarn "It appears you are removing your default system VM!"
+		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
+	fi
 }
