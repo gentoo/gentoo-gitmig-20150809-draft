@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc4.ebuild,v 1.1 2004/09/26 10:32:11 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc4.ebuild,v 1.2 2004/09/26 20:04:04 carpaski Exp $
 
 IUSE="build multilib selinux"
 
@@ -67,8 +67,8 @@ src_compile() {
 			make CFLAGS="-O2 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
 			;;
 		*)
-			if useq macos || useq ppc-macos ; then
-				ewarn "NOT BUILDING SANDBOX ON Mac OS X"
+			if useq macos || useq ppc-macos || useq x86-fbsd; then
+				ewarn "NOT BUILDING SANDBOX ON $ARCH"
 			else
 				make || die
 			fi
