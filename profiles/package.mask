@@ -613,3 +613,8 @@ app-cdr/cddump
 # seemant@gentoo.org 29 Apr 2002
 # new package -- masking while testing.
 =x11-misc/bbrb-0.4.1
+
+# seemant@gentoo.org 29 Apr 2002
+# naz's patch has been placed on the ibiblio mirror
+# so masking this until the mirror is updated
+>=media-gfx/xv-3.10a-r1
