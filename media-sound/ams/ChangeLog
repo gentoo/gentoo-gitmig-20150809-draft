@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ams
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.10 2004/06/24 23:50:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.11 2004/07/04 20:28:29 fvdpol Exp $
+
+*ams-1.8.4 (04 Jul 2004)
+
+  04 Jul 2004; Frank van de Pol <fvdpol@gentoo.org> +ams-1.8.4.ebuild:
+  Version bump to 1.8.4.
 
   15 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> ams-1.8.2.ebuild:
   Stable x86 and amd64.
