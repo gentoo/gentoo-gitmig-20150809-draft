@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/cronbase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.11 2003/01/19 17:53:45 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.12 2003/01/23 04:19:55 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *cronbase-0.2.1-r1 (13 Nov 2002)
+
+  22 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Removed duplicate keepdir func definition
 
   19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
@@ -12,6 +15,9 @@
   13 Nov 2002; Donny Davies <woodchip@gentoo.org> run-crons : Fix #10409.
 
 *cronbase-0.2.1 (27 Jun 2002)
+
+  22 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Removed duplicate keepdir func definition
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> cronbase-0.2.1.ebuild :
   Added KEYWORDS, SLOT.

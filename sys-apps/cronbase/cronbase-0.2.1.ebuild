@@ -1,25 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/cronbase-0.2.1.ebuild,v 1.9 2002/12/15 10:44:21 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/cronbase-0.2.1.ebuild,v 1.10 2003/01/23 04:19:55 vapier Exp $
 
-DESCRIPTION="The is the base for all cron ebuilds."
+DESCRIPTION="The is the base for all cron ebuilds"
 HOMEPAGE="http://www.gentoo.org/"
+
 KEYWORDS="x86 ppc sparc alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
-#adds ".keep" files so that dirs aren't auto-cleaned
-keepdir() {
-	dodir $*
-	local x
-	for x in $*
-	do
-		touch ${D}/${x}/.keep
-	done
-}
-
-src_install () {
-
+src_install() {
 	exeinto /usr/sbin
 	doexe ${FILESDIR}/run-crons
 
@@ -33,5 +23,4 @@ src_install () {
 	diropts -m0750; keepdir /var/spool/cron/lastrun
 
 	dodoc ${FILESDIR}/README
-
 }
