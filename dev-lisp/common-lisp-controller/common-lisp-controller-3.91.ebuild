@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.91.ebuild,v 1.1 2004/08/01 22:34:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.91.ebuild,v 1.2 2004/11/04 17:13:09 mkennedy Exp $
 
 inherit eutils
 
@@ -13,14 +13,19 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc ~mips"
 IUSE=""
 
-DEPEND=">=cl-defsystem3-3.3i-r3
-	>=dev-lisp/cl-asdf-1.84
-	app-admin/realpath
+DEPEND="app-admin/realpath
 	virtual/logger"
+
+# DEPEND=">=cl-defsystem3-3.3i-r3
+#	>=dev-lisp/cl-asdf-1.84"
 
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${PV}/${PN}-gentoo.patch
+}
+
+src_compile() {
+	:							# we dont require the compiled portion
 }
 
 src_install() {
