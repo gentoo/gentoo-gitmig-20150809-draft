@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.90.ebuild,v 1.5 2003/10/18 21:34:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.90.ebuild,v 1.6 2003/11/07 16:44:55 vapier Exp $
 
 IUSE="nls objc"
 
@@ -26,7 +26,7 @@ fi
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha -hppa amd64 ~mips"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )"
