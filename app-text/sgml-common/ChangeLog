@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.30 2005/01/01 16:35:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.31 2005/01/02 22:45:04 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
   sgml-common-0.6.3-r4.ebuild:
@@ -12,7 +15,7 @@
   28 Jun 2004; Tom Gall <tgall@gentoo.org> sgml-common-0.6.3-r4.ebuild:
   stable on ppc64 bug #54792
 
-  13 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  13 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   sgml-common-0.6.3-r4.ebuild:
   Stable on alpha.
 

@@ -1,8 +1,11 @@
 # ChangeLog for app-text/pylize
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.5 2005/01/01 16:32:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.6 2005/01/02 22:43:50 ciaranm Exp $
 
-  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pylize-1.1b.ebuild:
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pylize-1.1b.ebuild:
   dev-python/Imaging renamed to dev-python/imaging.
 
   07 Jul 2003; Alastair Tse <liquidx@gentoo.org> pylize-1.1b.ebuild:

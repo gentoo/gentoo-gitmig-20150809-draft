@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.27 2005/01/01 16:42:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.28 2005/01/02 22:46:43 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Dec 2004; Dylan Carlson <absinthe@gentoo.org> wv2-0.2.2.ebuild:
   Stable on amd64.
@@ -20,7 +23,7 @@
   26 Aug 2004; Tom Gall <tgall@gentoo.org> wv-2-0.2.2.ebuild:
   stable on ppc64, bug #58711
 
-  14 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> wv2-0.2.ebuild:
+  14 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> wv2-0.2.ebuild:
   Stable on alpha.
 
 *wv2-0.2.2 (06 Jul 2004)
@@ -28,7 +31,7 @@
   06 Jul 2004; Hanno Boeck <hanno@gentoo.org> +wv2-0.2.2.ebuild:
   Version bump. Fixes gcc 3.4 issues.
 
-  14 May 2004; Bryan Østergaard <kloeri@gentoo.org> wv2-0.2.1.ebuild:
+  14 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> wv2-0.2.1.ebuild:
   Keyword ~alpha.
 
   05 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> wv2-0.2.ebuild:

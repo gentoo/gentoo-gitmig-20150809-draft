@@ -1,11 +1,14 @@
 # ChangeLog for app-text/xlhtml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.8 2005/01/01 16:43:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.9 2005/01/02 22:50:23 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>; xlhtml-0.5.ebuild:
   marked as stable on x86 and ppc
 
-  13 May 2004; Bryan Østergaard <kloeri@gentoo.org> xlhtml-0.5.ebuild:
+  13 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xlhtml-0.5.ebuild:
   Stable on alpha.
 
   02 Apr 2004; Todd Sunderlin <todd@gentoo.org> xlhtml-0.5.ebuild:
