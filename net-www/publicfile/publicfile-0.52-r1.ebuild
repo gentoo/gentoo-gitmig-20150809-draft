@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52-r1.ebuild,v 1.6 2004/06/25 01:10:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52-r1.ebuild,v 1.7 2004/07/27 10:47:24 tigger Exp $
 
 inherit eutils
 
@@ -47,10 +47,10 @@ src_install() {
 	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION
 }
 
-pkg_setup() {
-	groupadd nofiles
-	id ftp || useradd -g nofiles -d /home/public ftp
-	id ftplog || useradd -g nofiles -d /home/public ftplog
+pkg_preinst() {
+	enewgroup nofiles
+	enewuser ftp -1 /bin/false /home/public nofiles
+	enewuser ftplog -1 /bin/false /home/public nofiles
 }
 
 pkg_postinst() {

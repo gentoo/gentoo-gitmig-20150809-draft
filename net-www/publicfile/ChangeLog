@@ -1,6 +1,10 @@
 # ChangeLog for net-www/publicfile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/ChangeLog,v 1.13 2004/06/25 01:10:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/ChangeLog,v 1.14 2004/07/27 10:47:24 tigger Exp $
+
+  27 Jul 2004; Rob Holland <tigger@gentoo.org> publicfile-0.52-r1.ebuild,
+  publicfile-0.52.ebuild:
+  Fix user/group additions re #58526.
 
   06 Jun 2004; Jason Wever <weeve@gentoo.org> publicfile-0.52-r1.ebuild:
   Stable on sparc.
