@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2_beta3-r1.ebuild,v 1.4 2003/12/27 14:37:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2_beta3-r1.ebuild,v 1.5 2004/01/18 00:42:38 lanius Exp $
 
 MY_PV=${PV/_beta/b}
 MY_P=${PN}-${MY_PV}
@@ -43,17 +43,15 @@ src_unpack() {
 
 	einfo "Enabling CBCP"
 	sed -i 's/^#CBCP=y/CBCP=y/' pppd/Makefile.linux
+
+	einfo "Enabling radius"
+	sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe radius/' pppd/plugins/Makefile.linux
 }
 
 src_compile() {
-	cd ${S}
+	# compile radius better than their makefile does
+	(cd pppd/plugins/radius/radiusclient; econf; emake) || die
 
-	# compile radiusclient better than their makefile does
-	cd pppd/plugins/radius/radiusclient
-	econf
-	emake
-
-	cd ${S}
 	./configure --prefix=/usr || die
 	emake COPTS="${CFLAGS}" || die
 }
@@ -113,6 +111,16 @@ src_install() {
 	doins scripts/chatchat/*
 	insinto /usr/share/doc/${PF}/scripts
 	doins scripts/*
+
+	# install radius
+	cd pppd/plugins/radius
+	dolib.so radius.so
+	dolib.so radattr.so
+	dolib.so radrealms.so
+	doman pppd-radius.8
+	doman pppd-radattr.8
+	cd radiusclient
+	make DESTDIR=${D} install || die
 }
 
 pkg_postinst() {
