@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ifp-line-0.2.4.2.ebuild,v 1.2 2004/07/17 09:23:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ifp-line-0.2.4.2.ebuild,v 1.3 2004/09/01 08:46:28 eradicator Exp $
 
 DESCRIPTION="iRiver iFP open-source driver"
 HOMEPAGE="http://ifp-driver.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/ifp-driver/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 amd64 sparc ~ppc"
 IUSE=""
 
 DEPEND="dev-libs/libusb"
