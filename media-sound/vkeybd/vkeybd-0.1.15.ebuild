@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15.ebuild,v 1.8 2004/11/09 04:06:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15.ebuild,v 1.9 2004/12/19 07:18:56 eradicator Exp $
+
+IUSE="alsa oss ladcca"
 
 DESCRIPTION="A virtual MIDI keyboard for X"
 HOMEPAGE="http://www.alsa-project.org/~iwai/alsa.html"
@@ -8,8 +10,7 @@ SRC_URI="http://www.alsa-project.org/~iwai/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
-IUSE="alsa oss ladcca"
+KEYWORDS="amd64 ~sparc x86"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.5.0 )
 	>=dev-lang/tk-8.3
