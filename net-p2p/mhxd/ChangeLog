@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/mhxd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/ChangeLog,v 1.1 2004/06/06 22:10:25 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/ChangeLog,v 1.2 2004/06/07 20:28:53 kang Exp $
 
 *mhxd-0.4.9 (05 Jun 2004)
+
+  07 Jun 2004; Guillaume Destuynder <kang@gentoo.org>:
+  Minor cosmetic changes, seeing if the cvs var/home bug is also fixed
 
   05 Jun 2004; Guillaume Destuynder <kang@gentoo.org>:
   Initial import.  Ebuild submitted by myself.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.9.ebuild,v 1.1 2004/06/06 22:10:26 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.9.ebuild,v 1.2 2004/06/07 20:28:53 kang Exp $
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
@@ -20,10 +20,13 @@ SLOT="0"
 
 src_compile() {
 	econf \
-	`use_enable ssl idea cipher hope compress` \
+	`use_enable ssl idea` \
+	`use_enable ssl cipher` \
+	`use_enable ssl hope` \
+	`use_enable ssl compress` \
 	`use_enable ipv6` \
 	`use_enable mysql sql` \
-	--enable-acctedit --enable-irc || die "bad configure"
+	--enable-acctedit || die "bad configure"
 	emake || die "compile problem"
 	make install || die "compile problem"
 }
@@ -33,21 +36,23 @@ src_install() {
 	dodoc AUTHORS INSTALL PROBLEMS README* ChangeLog TODO NEWS run/hxd/hxd.conf
 
 	cpdirs="accounts files newsdir etc exec lib"
-	insinto /etc; doins run/hxd/hxd.conf
+	dodir /etc/mhxd
+	insinto /etc/mhxd; doins run/hxd/hxd.conf
 	dosbin run/hxd/bin/hxd
 	dobin run/hxd/bin/acctedit
 
-	dodir /var/hxd
+	dodir /var/mhxd
 	for d in ${cpdirs} ; do
-		insinto /var/hxd
-		cp -R run/hxd/${d} ${D}/var/hxd/${d}
+		insinto /var/mhxd
+		cp -R run/hxd/${d} ${D}/var/mhxd/${d}
 	done
-	insinto /var/hxd ; doins run/hxd/news
-	insinto /var/hxd; doins run/hxd/agreement
+	insinto /var/mhxd ; doins run/hxd/news
+	insinto /var/mhxd; doins run/hxd/agreement
+	insinto /var/mhxd; doins run/hxd/.common
 
-	keepdir /var/hxd/files
-	keepdir /var/hxd/lib
-	exeinto /etc/init.d ; newexe ${FILESDIR}/hxd.rc hxd
+	keepdir /var/mhxd/files
+	keepdir /var/mhxd/lib
+	exeinto /etc/init.d ; newexe ${FILESDIR}/hxd.rc mhxd
 }
 
 pkg_preinst() {
@@ -57,16 +62,17 @@ pkg_preinst() {
 	fi
 
 	if ! id hxd; then
-		useradd -s /dev/null -d /var/hxd -c "hxd added by portage" -g hxd hxd
+		useradd -d /var/hxd -c "hxd added by portage" -g hxd hxd
 		assert "Failed to create hxd user"
 	fi
 }
 
 pkg_postinst() {
 	#fowners don't do directories :(
-	chown -R hxd:hxd /var/hxd
+	chown -R hxd:hxd /var/mhxd
 	einfo
 	einfo "Welcome to Horline!"
+	einfo "Do '/etc/init.d/mhxd start' to start the server, then"
 	einfo "Login as admin and no password to your hotline server, and change the password"
 	einfo
 }
