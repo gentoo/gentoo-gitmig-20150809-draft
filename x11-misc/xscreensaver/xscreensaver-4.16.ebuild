@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.3 2004/07/24 08:50:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.4 2004/07/27 00:18:16 mr_bones_ Exp $
 
 inherit eutils
 
@@ -59,7 +59,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
-	if [ -n "`use kerberos`" -a -z "`use krb4`" ]; then
+	if use kerberos && ! use krb4 ; then
 		ewarn "You have enabled kerberos without krb4 support. Kerberos will be"
 		ewarn "disabled unless kerberos 4 support has been compiled with your"
 		ewarn "kerberos libraries. To do that, you should abort now and do:"
@@ -118,14 +118,16 @@ src_compile() {
 		|| myconf="${myconf} --disable-nls"
 
 
-	if [ -z "`use gtk2`" -a -n "`use gtk`" ]; then
-		if [ -n "`use gnome`" ]; then
+	if ! use gtk2 && use gtk ; then
+		if use gnome ; then
 			myconf="${myconf} --with-gnome --with-pixbuf"
 		fi
 	fi
 
-	use icc && export CC=icc
-	use icc && autoconf
+	if use icc ; then
+		export CC=icc
+		autoconf
+	fi
 
 	econf \
 		--enable-hackdir=/usr/lib/xscreensaver \
@@ -151,11 +153,11 @@ src_install() {
 	make install_prefix="${D}" install || die
 
 	# install correctly in gnome2
-	use gnome && ( \
+	if use gnome ; then
 		dodir /usr/share/gnome/capplets
 		insinto /usr/share/gnome/capplets
 		doins driver/screensaver-properties.desktop
-	)
+	fi
 
 	# install symlink to satisfy kde
 	use kde && dosym /usr/share/control-center/screensavers /usr/lib/xscreensaver/config
@@ -163,13 +165,13 @@ src_install() {
 	# Remove "extra" capplet
 	rm -f ${D}/usr/share/control-center/capplets/screensaver-properties.desktop
 
-	use gnome && ( \
+	if use gnome ; then
 		insinto /usr/share/pixmaps
 		newins ${S}/utils/images/logo-50.xpm xscreensaver.xpm
-	)
+	fi
 
-	use pam && ( \
+	if use pam ; then
 		insinto /etc/pam.d
 		doins ${FILESDIR}/pam.d/xscreensaver
-	)
+	fi
 }
