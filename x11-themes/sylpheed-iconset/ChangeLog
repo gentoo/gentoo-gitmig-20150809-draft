@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/sylpheed-iconset-0.8.3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/ChangeLog,v 1.5 2003/05/25 17:15:39 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/ChangeLog,v 1.6 2003/07/31 03:07:46 bcowan Exp $
+
+*sylpheed-iconset-20030712 (30 Jul 2003)
+
+  30 Jul 2003; Brad Cowan <bcowan@gentoo.org>
+  sylpheed-iconset-20030712.ebuild:
+  Version bump.
 
 *sylpheed-iconset-20030523 (25 May 2003)
 
