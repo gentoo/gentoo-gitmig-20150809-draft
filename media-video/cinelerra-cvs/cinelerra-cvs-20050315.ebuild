@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20050315.ebuild,v 1.1 2005/03/18 13:24:56 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20050315.ebuild,v 1.2 2005/03/30 10:49:39 lu_zero Exp $
 
 inherit gcc eutils flag-o-matic
 
@@ -16,8 +16,8 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-IUSE="3dnow alsa ffmpeg mmx oss static"
+KEYWORDS="~x86 ~amd64 ~ppc"
+IUSE="alsa ffmpeg oss static"
 
 DEPEND="!media-video/cinelerra
 	virtual/x11
@@ -25,6 +25,7 @@ DEPEND="!media-video/cinelerra
 	=sys-devel/gcc-3*
 	media-libs/libpng
 	media-libs/libdv
+	media-libs/faad2
 	media-video/mjpegtools
 	>=sys-libs/libavc1394-0.4.1
 	>=sys-libs/libraw1394-0.9.0
