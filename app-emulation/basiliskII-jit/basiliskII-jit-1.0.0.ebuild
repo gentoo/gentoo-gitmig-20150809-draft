@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0.ebuild,v 1.1 2004/03/21 14:18:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0.ebuild,v 1.2 2004/03/21 15:58:03 dholm Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ inherit flag-o-matic
 ### System ROMS can be retreived from a 'real' Mac, See info/man pages
 
 S="${WORKDIR}/BasiliskII-jit-1.0/src/Unix"
-DESCRIPTION="BasiliskII Macintosh Emulator"
+DESCRIPTION="Basilisk II/JIT Macintosh Emulator"
 HOMEPAGE="http://gwenole.beauchesne.online.fr/basilisk2/"
 SRC_URI="http://hometown.aol.de/wimdk/files/BasiliskII-jit-1.0-mdk-src.tar.bz2"
 
