@@ -95,7 +95,11 @@ app-editors/kvim
 
 # <phoenix@gentoo.org> (09 Sep 2002)
 # Testing a workaround in emerge-webrsync
-=app-admin/gentoolkit-0.1.17-r1
+# <mjc@gentoo.org> (14 Sep 2002)
+# it works for me behind a firewall, and 
+# emerge-webrsync is broken in previous
+# versions.. unmasking
+#=app-admin/gentoolkit-0.1.17-r1
 
 # <blocke@shivan.org> (8 Sep 2002)
 # Long waiting submitted ebuild added but masked due to freeze
