@@ -3,8 +3,8 @@ MD5 eff66c2ce4045f893a0fa28bcd6c9c6c cyrus-imapd-2.1.15.ebuild 6996
 MD5 f6d2321ea1338efbfad33139f0e27ae6 cyrus-imapd-2.1.12.ebuild 6876
 MD5 07c31fe7761d9093891605d9abe5bd7b cyrus-imapd-2.1.15-r1.ebuild 7052
 MD5 d81de1e1f8c8fc7c99d760fb09953b73 cyrus-imapd-2.1.14.ebuild 7014
-MD5 02b1d409ad96e62fd7236602e9c91c2a cyrus-imapd-2.2.3.ebuild 5247
-MD5 49c1ec8792a901b43daf435ef1b21db6 ChangeLog 8472
+MD5 1c1def214562f01c2e047546388e1377 cyrus-imapd-2.2.3.ebuild 5268
+MD5 327788eddd418e8c94bc063682681b17 ChangeLog 8589
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 fe1bbab93ddd6cf3a9c4aacc111154d4 files/cyrus-imapd-2.2.3-db4.patch 1604
 MD5 2c12219037539301a8d79b740ac090b0 files/cyrus.rc6 563
