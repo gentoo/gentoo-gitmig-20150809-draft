@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.14 2004/08/29 17:31:19 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.15 2004/10/06 10:55:31 usata Exp $
+
+  06 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> arphicfonts-0.1-r2.ebuild:
+  Stable on x86, alpha and ppc.
 
   29 Aug 2004; Tom Gall <tgall@gentoo.org> arphicfonts-0.1-r1.ebuild:
   marked ppc64 bug #60738
