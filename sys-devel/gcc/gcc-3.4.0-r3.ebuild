@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r3.ebuild,v 1.1 2004/05/19 13:13:43 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r3.ebuild,v 1.2 2004/05/20 04:24:27 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -123,7 +123,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 
 KEYWORDS="-*"
-#KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
+#KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -428,6 +428,8 @@ src_unpack() {
 	if [ ! -x /usr/bin/perl ]
 	then
 		cd ${S}; unpack ${P}-manpages.tar.bz2
+		mkdir -p ${WORKDIR}/build
+		cd ${WORKDIR}/build ; unpack ${P}-manpages.tar.bz2
 	fi
 
 	# Misdesign in libstdc++ (Redhat)
