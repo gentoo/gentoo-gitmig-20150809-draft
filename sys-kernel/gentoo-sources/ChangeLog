@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.76 2004/06/25 15:23:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.77 2004/07/08 22:27:30 plasmaroo Exp $
+
+  08 Jul 2004; <plasmaroo@gentoo.org> :
+  Version bump - FreeS/WAN is now replaced with OpenS/WAN.
 
   25 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   gentoo-sources-2.4.26-r3.ebuild:
