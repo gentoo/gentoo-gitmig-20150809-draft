@@ -1,8 +1,11 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.4 2002/10/17 14:31:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.5 2002/11/29 03:18:11 nall Exp $
 
 *gtkspell-2.0.2 (15 Oct 2002)
+
+  28 Nov 2002; Jon Nall <nall@gentoo.org> gtkspell-2.0.2.ebuild :
+  added ~ppc to KEYWORDS
 
   15 Oct 2002; foser <foser@gentoo.org> gtkspell-2.0.2.ebuild :
   New version
