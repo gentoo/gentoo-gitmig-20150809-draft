@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ksambaplugin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.5 2003/02/26 22:28:06 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.6 2003/06/20 02:11:44 caleb Exp $
+
+  19 Jun 2003; Caleb Tennis <caleb@gentoo.org>:
+  Remove 0.4b from portage as it is causing conflicts with version numbering.
+  Closes bug #23095
 
 *ksambaplugin-0.4b (15 Feb 2003)
 
