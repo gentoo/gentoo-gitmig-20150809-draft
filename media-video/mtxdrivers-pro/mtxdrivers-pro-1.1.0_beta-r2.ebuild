@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/mtxdrivers-pro-1.1.0_beta-r2.ebuild,v 1.1 2004/04/12 02:10:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/mtxdrivers-pro-1.1.0_beta-r2.ebuild,v 1.2 2004/04/25 20:43:52 spyderous Exp $
 
 inherit matrox
 
@@ -19,6 +19,7 @@ KEYWORDS="~x86"
 
 RDEPEND="x11-base/opengl-update
 	!media-video/mtxdrivers"
+PROVIDE="virtual/opengl"
 
 pkg_nofetch() {
 	einfo "Matrox requires you e-mail them for the 'pro' version of their drivers"

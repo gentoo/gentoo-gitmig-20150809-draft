@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.6-r1.ebuild,v 1.2 2004/04/09 06:19:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.6-r1.ebuild,v 1.3 2004/04/25 20:41:55 spyderous Exp $
 
 IUSE="qt kde gnome"
 
@@ -18,6 +18,7 @@ DEPEND=">=virtual/linux-sources-2.4
 	virtual/x11"
 
 RDEPEND="virtual/x11"
+PROVIDE="virtual/opengl"
 
 ATIBIN="${D}/opt/ati/bin"
 RESTRICT="nostrip"

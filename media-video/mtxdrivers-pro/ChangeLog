@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mtxdrivers-pro
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/ChangeLog,v 1.10 2004/04/12 02:10:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/ChangeLog,v 1.11 2004/04/25 20:43:52 spyderous Exp $
+
+  25 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  mtxdrivers-pro-1.1.0_beta-r2.ebuild:
+  Provide virtual/opengl (#30107).
 
 *mtxdrivers-pro-1.1.0_beta-r2 (11 Apr 2004)
 
