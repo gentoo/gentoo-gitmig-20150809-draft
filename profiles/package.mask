@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <mjc@gentoo.org> (12 Oct 2002)
+# Masking new quake3 for testing and such
+=app-games/quake3-1.32
 
 # <phoenix@gentoo.org> (11 Oct 2002)
 # Masking the new winex for testing
