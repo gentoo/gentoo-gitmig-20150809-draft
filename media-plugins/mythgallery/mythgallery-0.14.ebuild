@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.14.ebuild,v 1.1 2004/02/03 13:51:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.14.ebuild,v 1.2 2004/02/06 11:51:21 aliz Exp $
 
 inherit flag-o-matic
 
@@ -28,6 +28,8 @@ src_compile() {
 	if [ "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
 	fi
+
+	econf `use_enable opengl` || die
 
 	qmake -o "Makefile" "${PN}.pro"
 	emake || die "compile problem"

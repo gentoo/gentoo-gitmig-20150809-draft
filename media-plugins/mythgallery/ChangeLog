@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythgallery
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.12 2004/02/03 14:08:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.13 2004/02/06 11:51:21 aliz Exp $
+
+  06 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> mythgallery-0.14.ebuild:
+  Fix crippled package. Closing #40303.
 
 *mythgallery-0.14 (03 Feb 2004)
 
