@@ -1,27 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r1.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r1.ebuild,v 1.4 2003/09/07 01:20:32 msterret Exp $
 
 IUSE="nls selinux"
 
 DESCRIPTION="A set of tools that use the proc filesystem"
 HOMEPAGE="http://psmisc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz
-    selinux? mirror://gentoo/${P}-selinux.patch.bz2"
+	selinux? mirror://gentoo/${P}-selinux.patch.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha hppa arm mips"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
-    selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
+	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
 
 src_unpack() {
-    unpack ${A}
-    cd ${S}
+	unpack ${A}
+	cd ${S}
 
-    #necessary selinux patch 
-    use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
+	#necessary selinux patch
+	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
 }
 
 src_compile() {
