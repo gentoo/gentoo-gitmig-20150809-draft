@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.13 2003/11/19 18:50:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.14 2003/11/20 16:10:34 mholzer Exp $
 
 inherit flag-o-matic
 
@@ -15,8 +15,8 @@ KEYWORDS="x86 ~ppc ~sparc alpha"
 IUSE="gnome perl"
 
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
-	perl? ( dev-perl/libvorbis-perl )
-	>=dev-cpp/gnomemm-1.2.2 )"
+	>=dev-cpp/gnomemm-1.2.2 )
+	x86? ( perl? ( dev-perl/libvorbis-perl ) )"
 DEPEND=">=dev-util/pccts-1.33.24-r1
 	${RDEPEND}"
 
