@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.21.ebuild,v 1.1 2003/04/27 19:39:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.21.ebuild,v 1.2 2003/04/27 19:42:18 agriffis Exp $
 
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
@@ -50,7 +50,6 @@ src_install() {
 
 	dosbin ${FILESDIR}/scripts/pkg-clean
 	dosbin ${FILESDIR}/scripts/mkebuild
-#	dosbin ${FILESDIR}/scripts/epm
 
 #	dobin ${FILESDIR}/lintool/lintool
 #	doman ${FILESDIR}/lintool/lintool.1
@@ -58,6 +57,7 @@ src_install() {
 #	dodoc ${FILESDIR}/lintool/{checklist-for-ebuilds,ChangeLog}
 
 	dobin ${FILESDIR}/scripts/echangelog
+	doman ${FILESDIR}/scripts/echangelog.1
 	dobin ${FILESDIR}/scripts/ekeyword
 }
 
