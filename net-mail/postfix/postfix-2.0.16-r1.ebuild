@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.2 2003/11/04 00:08:13 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.3 2003/11/04 03:12:08 max Exp $
 
 inherit eutils ssl-cert
 
@@ -181,9 +181,9 @@ src_install () {
 	fi
 	if [ "`use ssl`" ] ; then
 		SSL_ORGANIZATION="Postfix SMTP Server"
-		insinto /etc/ssl/cyrus
+		insinto /etc/ssl/postfix
 		docert server
-		fowners postfix:mail /etc/ssl/cyrus/server.{key,pem}
+		fowners postfix:mail /etc/ssl/postfix/server.{key,pem}
 	fi
 	if [ "`use sasl`" ] ; then
 		insinto /etc/sasl2
