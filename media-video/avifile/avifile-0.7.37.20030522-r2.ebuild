@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522-r2.ebuild,v 1.6 2003/09/10 22:34:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522-r2.ebuild,v 1.7 2003/10/21 15:51:14 mholzer Exp $
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:3:3}
@@ -11,6 +11,7 @@ S="${WORKDIR}/${MY_S}"
 DESCRIPTION="Library for AVI-Files"
 HOMEPAGE="http://avifile.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0.7"

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.56 2003/09/17 06:15:45 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.57 2003/10/21 15:51:14 mholzer Exp $
+
+  22 Oct 2003; Martin Holzer <mholzer@gentoo.org>
+  avifile-0.7.37.20030522-r2.ebuild, avifile-0.7.38.20030710.ebuild:
+  adding RESTRICT="nomirror"
 
   16 Sep 2003; Max Kalika <max@gentoo.org> avifile-0.7.38.20030710.ebuild,
   metadata.xml:
