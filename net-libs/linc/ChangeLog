@@ -1,7 +1,15 @@
 # ChangeLog for net-libs/linc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.9 2002/10/27 15:10:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.10 2002/11/13 05:10:33 spider Exp $
 
+
+*linc-0.5.5 (13 Nov 2002) 
+  
+  13 Nov 2002; Spider <spider@gentoo.org> linc-0.5.5.ebuild :
+  new version in the stable tree. now, is this confusing or what?
+  reinstated the USE="ssl" variable as the compile of recent ORBit2 works with
+  linc built without ssl. Tested the combinations for both builds to make sure.  
+ 
 *linc-0.7.0 (27 Oct 2002)
 
   27 Oct 2002; foser <foser@gentoo.org> linc-0.7.0.ebuild :
