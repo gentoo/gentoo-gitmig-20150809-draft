@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 edc8267515b0e480ea28ae4481510b59 xchat-2.4.3.ebuild 2017
+MD5 003d14eea44fffffa8e920716582dddc xchat-2.4.3.ebuild 2112
 MD5 46410ec58328bede3461067d7ee63613 xchat-2.4.1-r1.ebuild 2102
 MD5 0be17dadd26963cc2616c76f0e6da87c xchat-2.4.0.ebuild 2235
 MD5 8ebf40ee60968abaf73442bfb9873e93 xchat-1.8.11-r1.ebuild 2267
 MD5 d22e0e2a5a132b2fcfdccdebc356475d xchat-2.0.9.ebuild 2059
-MD5 0b8789b6bf42364723583c321b71ddbe ChangeLog 23282
+MD5 bc57ef0b22793c34ccf7cb30299795c3 ChangeLog 23389
 MD5 fb5772136a872c08434566d4f0bcdc7f metadata.xml 179
 MD5 2effc9c4c2a5454c5abba3817894e865 files/digest-xchat-2.0.9 126
 MD5 3ddde600db975d5c534197fa4fe2b1b7 files/digest-xchat-2.4.0 134
@@ -20,7 +20,7 @@ MD5 4a066f82a7a8ab6fe970340332d70105 files/digest-xchat-2.4.1-r1 134
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCTBGfI1lqEGTUzyQRArmJAJ9xaZPG0cbEtwLPp3k8bzRpuJjycwCeOtQF
-37H6DHwNjmpv0/IHYrLsBEU=
-=rSiy
+iD8DBQFCTN18I1lqEGTUzyQRAmgeAKCmAAa2Hl0rD3oapDqkL4uGteu6bACgv+Sy
+SvFtwFBIQr3ypjLSOllyYPk=
+=Krro
 -----END PGP SIGNATURE-----
