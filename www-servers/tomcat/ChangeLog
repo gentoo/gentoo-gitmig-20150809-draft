@@ -1,6 +1,13 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.1 2004/08/08 18:39:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.2 2004/08/26 18:17:55 axxo Exp $
+
+*tomcat-5.0.27-r4 (26 Aug 2004)
+
+  26 Aug 2004; Thomas Matthijs <axxo@gentoo.org> files/4.1.30/tomcat.init,
+  files/5.0.27/tomcat.init, +tomcat-4.1.30-r5.ebuild,
+  +tomcat-5.0.27-r4.ebuild:
+  escape params in init script, bug 61822
 
 *tomcat-4.1.30-r4 (08 Aug 2004)
 
