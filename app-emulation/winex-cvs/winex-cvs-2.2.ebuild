@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.2.ebuild,v 1.3 2002/11/30 00:07:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.2.ebuild,v 1.4 2003/02/05 21:39:28 phoenix Exp $
 
 IUSE="cups opengl"
 
@@ -31,12 +31,13 @@ SLOT="0"
 KEYWORDS="x86 -ppc"
 LICENSE="Aladdin"
 
-newdepend "virtual/x11
-	sys-devel/gcc
+newdepend "sys-devel/gcc
 	sys-devel/flex
 	dev-util/yacc
 	>=media-libs/freetype-2.0.0
-	dev-lang/tcl dev-lang/tk
+	X? ( 	virtual/x11 
+		dev-lang/tcl 
+		dev-lang/tk ) 
 	opengl? ( virtual/opengl )
 	cups? ( net-print/cups )"
 
