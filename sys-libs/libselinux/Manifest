@@ -1,2 +1,5 @@
-MD5 5ae237cc290686460abe2cfa58cbe564 libselinux-1.0.ebuild 1066
+MD5 717f87e8763e0467b99cf5568fd27f91 libselinux-1.0.ebuild 746
+MD5 36bf0405b9d81999a4c53df2e5b6c748 metadata.xml 270
+MD5 78302725e325e2da99beeb1ede503b67 ChangeLog 396
 MD5 fa6cb6d507ae7a7c1b4ccc7e673d37cc files/digest-libselinux-1.0 62
+MD5 ee2480e816c5fb6bdc78e94cf0a4d1f5 files/libselinux-1.0-gentoo.diff 1242

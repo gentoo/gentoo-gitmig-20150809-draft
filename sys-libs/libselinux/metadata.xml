@@ -1,0 +1,9 @@
+<pkgmetadata>
+<herd>hardened</herd>
+<maintainer>
+	<email>pebenito@gentoo.org</email>
+	<name>Chris PeBenito</name>
+	<description>Primary Maintainer</description>
+</maintainer>
+<longdescription>Base required libraries for SELinux userland</longdescription>
+</pkgmetadata>
