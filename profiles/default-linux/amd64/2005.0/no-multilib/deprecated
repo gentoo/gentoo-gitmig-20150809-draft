@@ -1,7 +1,0 @@
-default-linux/amd64/2005.0
-# emerge -n '>=sys-apps/portage-2.0.51'
-# cd /etc/
-# rm make.profile
-# ln -s ../usr/portage/profiles/default-linux/default-linux/amd64/2005.0 make.profile
-
-This profile is still in testing.  Please continue to use 2004.3 or 2005.0.
