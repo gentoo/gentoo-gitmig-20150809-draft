@@ -1,0 +1,33 @@
+--- build/generic/Makefile.orig	2004-04-26 18:36:04.708813608 -0400
++++ build/generic/Makefile	2004-04-26 18:37:39.278436840 -0400
+@@ -135,15 +135,15 @@
+ 
+ install: $(BUILD_DIR)/$(STATIC_LIB) $(BUILD_DIR)/$(SHARED_LIB)
+ 	@echo "  D: $(libdir)"
+-	@$(INSTALL) -d $(libdir)
++	@$(INSTALL) -d $(DESTDIR)$(libdir)
+ 	@echo "  I: $(libdir)/$(SHARED_LIB)"
+-	@$(INSTALL) -m 755 $(BUILD_DIR)/$(SHARED_LIB) $(libdir)/$(SHARED_LIB)
++	@$(INSTALL) -m 755 $(BUILD_DIR)/$(SHARED_LIB) $(DESTDIR)$(libdir)/$(SHARED_LIB)
+ 	@echo "  I: $(libdir)/$(STATIC_LIB)"
+-	@$(INSTALL) -m 755 $(BUILD_DIR)/$(STATIC_LIB) $(libdir)/$(STATIC_LIB)
++	@$(INSTALL) -m 755 $(BUILD_DIR)/$(STATIC_LIB) $(DESTDIR)$(libdir)/$(STATIC_LIB)
+ 	@echo "  D: $(includedir)"
+-	@$(INSTALL) -d $(includedir)
++	@$(INSTALL) -d $(DESTDIR)$(includedir)
+ 	@echo "  I: $(includedir)/xvid.h"
+-	@$(INSTALL) -m 644 $(SRC_DIR)/xvid.h $(includedir)/xvid.h
++	@$(INSTALL) -m 644 $(SRC_DIR)/xvid.h $(DESTDIR)$(includedir)/xvid.h
+ 
+ #-----------------------------------------------------------------------------
+ # Platorm specific file -- dumb rules for people executing make before
+--- build/generic/platform.inc.in.orig	2004-04-26 18:36:51.928635104 -0400
++++ build/generic/platform.inc.in	2004-04-26 18:37:02.919964168 -0400
+@@ -55,6 +55,7 @@
+ # ============================================================================
+ 
+ INSTALL=@INSTALL@
++DESTDIR=
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ libdir=@libdir@
