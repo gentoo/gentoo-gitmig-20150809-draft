@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 bd3fbc4444536c78dd775fef183cf28b xmms-ir-1.2.10.ebuild 307
-MD5 c0c8beaf4be34620a1a148d8ed165be8 ChangeLog 305
+MD5 8ae6064013a3821011853afebf08b9e0 xmms-ir-1.2.10.ebuild 416
+MD5 29c8b362db2732ce2fda2355dc3efed9 ChangeLog 402
 MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-ir-1.2.10 142
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDXtAArHZZzCEUG0RArARAJwLt9S/yfJG0Pv3qlQT48Ws3HnypwCfYlsz
+XuYeWktjsfF0+nmmNpctlNs=
+=aLAx
+-----END PGP SIGNATURE-----
