@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ctrlxmms/ctrlxmms-1.1.ebuild,v 1.3 2004/03/27 02:46:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ctrlxmms/ctrlxmms-1.1.ebuild,v 1.4 2004/04/18 08:42:17 eradicator Exp $
 
 DESCRIPTION="A script to control XMMS from the command line"
-SRC_URI="http://www.smidsrod.no/download/ctrlxmms-1.1.tar.gz"
+SRC_URI="http://files.smidsrod.no/${P}.tar.gz"
 HOMEPAGE="http://www.smidsrod.no"
 SLOT="0"
 LICENSE="GPL-2"
