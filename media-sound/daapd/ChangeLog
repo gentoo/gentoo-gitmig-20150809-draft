@@ -1,10 +1,10 @@
 # ChangeLog for media-sound/daapd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.9 2004/12/14 12:01:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.10 2004/12/14 12:03:34 eradicator Exp $
 
   14 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   daapd-0.2.3d.ebuild:
-  Change USE flag to faad.
+  Back to aac
 
   19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -files/0.2.1d-makefile-gentoo.patch, -files/0.2.1d-zeroconf-gentoo.patch,
