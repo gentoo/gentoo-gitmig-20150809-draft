@@ -1,0 +1,50 @@
+*** electricsheep.c.bak	2003-11-14 00:02:30.000000000 -0800
+--- electricsheep.c	2003-11-14 00:03:27.000000000 -0800
+***************
+*** 1007,1013 ****
+      {
+  	char b[MAXBUF];
+  	char strips[MAXBUF];
+! 	sprintf(b, "nice -%d env in=%s time=%d out=%s quality=%d anim-flame",
+  		nice_level, cps_name, get_frame, jpg_name, jpeg_quality);
+  	if (debug) printf("about to render %s\n", b);
+  	if (mysystem(b, "render")) {
+--- 1007,1013 ----
+      {
+  	char b[MAXBUF];
+  	char strips[MAXBUF];
+! 	sprintf(b, "nice -n %d env in=%s time=%d out=%s quality=%d anim-flame",
+  		nice_level, cps_name, get_frame, jpg_name, jpeg_quality);
+  	if (debug) printf("about to render %s\n", b);
+  	if (mysystem(b, "render")) {
+***************
+*** 1745,1758 ****
+      reset_fuse = reset_fuse_length;
+  
+      if (proxy_name) {
+! 	sprintf(curl_cmd, "nice -%d curl --proxy %s",
+  		nice_level, proxy_name);
+  	if (proxy_user) {
+  	  strcat(curl_cmd, " --proxy-user ");
+  	  strcat(curl_cmd, proxy_user);
+  	}
+      } else
+! 	sprintf(curl_cmd, "nice -%d curl", nice_level);
+  
+      srandom(time(0));
+  
+--- 1745,1758 ----
+      reset_fuse = reset_fuse_length;
+  
+      if (proxy_name) {
+! 	sprintf(curl_cmd, "nice -n %d curl --proxy %s",
+  		nice_level, proxy_name);
+  	if (proxy_user) {
+  	  strcat(curl_cmd, " --proxy-user ");
+  	  strcat(curl_cmd, proxy_user);
+  	}
+      } else
+! 	sprintf(curl_cmd, "nice -n %d curl", nice_level);
+  
+      srandom(time(0));
+  

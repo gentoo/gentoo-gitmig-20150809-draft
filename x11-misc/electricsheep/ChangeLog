@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/electricsheep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.8 2003/09/29 16:55:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.9 2003/11/17 04:41:41 vapier Exp $
+
+*electricsheep-2.4-r1 (16 Nov 2003)
+
+  16 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add patch to fix nice option passing.
 
 *electricsheep-2.4 (01 Aug 2003)
 
