@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.1 2003/08/03 00:05:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.2 2003/08/25 14:46:38 wolf31o2 Exp $
+
+*pxes-0.6-r4 (25 Aug 2003)
+
+  25 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.6-r4.ebuild,
+  pxes-0.6.ebuild:
+  Marked as stable
+
+*pxes-0.6-r4 (25 Aug 2003)
+
+  25 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.6-r4.ebuild:
+  Bumped to latest version
 
   02 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> files/makedevices.sh,
   files/pxes-0.6-gentoo.patch:
