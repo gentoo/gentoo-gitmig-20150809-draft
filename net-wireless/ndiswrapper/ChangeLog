@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.3 2004/03/25 04:47:06 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.4 2004/03/30 03:46:13 latexer Exp $
+
+*ndiswrapper-0.6-r1 (29 Mar 2004)
+
+  29 Mar 2004; Peter Johanson <latexer@gentoo.org> ndiswrapper-0.6-r1.ebuild,
+  files/ndiswrapper-0.6-modules.d:
+  Bump, includes fixes from bug #45331 for module loading stuff. Thanks to
+  Juergen Nagel <juergen@nagel.homeip.net> for the changes.
 
 *ndiswrapper-0.6 (24 Mar 2004)
 
