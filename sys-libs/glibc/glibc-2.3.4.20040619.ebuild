@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.20 2004/07/22 12:22:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.21 2004/07/27 00:21:10 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -741,7 +741,7 @@ pkg_postinst() {
 		${ROOT}/usr/sbin/iconvconfig --prefix=${ROOT}
 	fi
 
-	if [ ! -e "${ROOT}/ld.so.1" -a "`use ppc64`" ]
+	if [ ! -e "${ROOT}/ld.so.1" ] && use ppc64
 	then
 		pushd ${ROOT}
 		cd ${ROOT}/lib
