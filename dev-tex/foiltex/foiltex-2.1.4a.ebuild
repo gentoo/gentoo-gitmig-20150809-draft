@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/foiltex-2.1.4a.ebuild,v 1.2 2004/10/09 21:15:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/foiltex-2.1.4a.ebuild,v 1.3 2004/10/30 19:49:10 weeve Exp $
 
 inherit latex-package
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="as-is"
 #for License details see /usr/share/doc/${PF}/foiltex.ins
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc sparc ~amd64"
 IUSE=""
 
 src_install () {

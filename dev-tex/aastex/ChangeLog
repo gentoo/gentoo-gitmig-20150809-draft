@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/aastex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/aastex/ChangeLog,v 1.9 2004/10/13 00:17:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/aastex/ChangeLog,v 1.10 2004/10/30 19:45:42 weeve Exp $
+
+  30 Oct 2004; Jason Wever <weeve@gentoo.org> aastex-5.2.ebuild:
+  Stable on sparc.
 
   13 Oct 2004; Guy Martin <gmsoft@gentoo.org> aastex-5.2.ebuild:
   Stable on hppa.
