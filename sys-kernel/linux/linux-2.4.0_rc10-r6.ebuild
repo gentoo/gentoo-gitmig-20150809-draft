@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r6.ebuild,v 1.3 2000/12/08 12:23:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r6.ebuild,v 1.4 2000/12/08 12:26:16 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-test10
@@ -208,7 +208,12 @@ src_install() {
 	fi
 }
 
-
+pkg_postinst() {
+    if [ "${ROOT}" = "/" ] ; then
+        echo "Creating sounddevices..."
+        /usr/sbin/snddevices
+    fi
+}
 
 
 
