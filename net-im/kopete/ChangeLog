@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kopete
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.6 2002/11/04 13:34:57 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.7 2003/01/03 11:06:27 hannes Exp $
+
+  03 Jan 2003; Hannes Mehnert <hannes@gentoo.org> kopete-0.5.ebuild:
+  fix for kde-3.0.5a, solves #12686
 
   04 Nov 2002; Hannes Mehnert <hannes@gentoo.org> kopete-0.5.ebuild:
   fix for >=qt-3.1, thanks to heliosc@mindspring.com (Rayiner Hashem)

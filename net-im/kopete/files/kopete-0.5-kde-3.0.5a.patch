@@ -1,0 +1,209 @@
+--- kopete/libkopete/kopeteprefs.cpp	2002-10-16 03:27:17.000000000 +0200
++++ kopete/libkopete/kopeteprefs.cpp	2003-01-03 11:16:45.000000000 +0100
+@@ -53,7 +53,7 @@
+ 	mIconTheme			= config->readEntry ( "EmoticonTheme", defaultTheme() );
+ 	mUseEmoticons		= config->readBoolEntry ( "Use Emoticons", true );
+ 	mShowOffline		= config->readBoolEntry ( "ShowOfflineUsers", true );
+-	#if KDE_VERSION >= 305	
++	#if KDE_VERSION > 305	
+ 	mNotifyOnline		= config->readBoolEntry ( "NotifyOnlineUsers", true );
+ 	#endif
+ 	mTreeView			= config->readBoolEntry ( "TreeView", true );
+@@ -77,7 +77,7 @@
+ 	config->writeEntry ( "EmoticonTheme", mIconTheme );
+ 	config->writeEntry ( "Use Emoticons", mUseEmoticons );
+ 	config->writeEntry ( "ShowOfflineUsers", mShowOffline );
+-	#if KDE_VERSION >= 305
++	#if KDE_VERSION > 305
+ 	config->writeEntry ( "NotifyOnlineUsers", mNotifyOnline );
+ 	#endif
+ 	config->writeEntry ( "TreeView", mTreeView );
+@@ -112,7 +112,7 @@
+ 	mShowOffline = value;
+ }
+ 
+-#if KDE_VERSION >= 305
++#if KDE_VERSION > 305
+ void KopetePrefs::setNotifyOnline( bool value )
+ {
+ 	mNotifyOnline = value;
+--- kopete/libkopete/kopeteprefs.h	2002-10-16 03:27:17.000000000 +0200
++++ kopete/libkopete/kopeteprefs.h	2003-01-03 11:16:45.000000000 +0100
+@@ -51,7 +51,7 @@
+ 	QString iconTheme() const { return mIconTheme; }
+ 	bool useEmoticons() const { return mUseEmoticons; }
+ 	bool showOffline() const { return mShowOffline; }
+-	#if KDE_VERSION >= 305
++	#if KDE_VERSION > 305
+ 	bool notifyOnline() const { return mNotifyOnline; }
+ 	#endif
+ 	bool treeView() const { return mTreeView; }
+@@ -70,7 +70,7 @@
+ 	void setIconTheme( const QString &value );
+ 	void setUseEmoticons( bool value );
+ 	void setShowOffline( bool value );
+-	#if KDE_VERSION >= 305
++	#if KDE_VERSION > 305
+ 	void setNotifyOnline( bool value );
+ 	#endif
+ 	void setTreeView( bool value );
+@@ -110,7 +110,7 @@
+ 	QString mIconTheme;
+ 	bool mUseEmoticons;
+ 	bool mShowOffline;
+-	#if KDE_VERSION >= 305
++	#if KDE_VERSION > 305
+ 	bool mNotifyOnline;
+ 	#endif
+ 	bool mTreeView;
+--- kopete/libkopete/ui/appearanceconfig.cpp	2002-10-16 03:27:17.000000000 +0200
++++ kopete/libkopete/ui/appearanceconfig.cpp	2003-01-03 11:16:45.000000000 +0100
+@@ -98,7 +98,7 @@
+ 	contactListLayout->addWidget( mTreeContactList, 0, 0 );
+ 	mShowOfflineUsers = new QCheckBox ( i18n("Show offline &users"), mContactListTab );
+ 	contactListLayout->addWidget( mShowOfflineUsers, 1, 0 );
+-	#if KDE_VERSION >= 305
++	#if KDE_VERSION > 305
+ 	mNotifyOnlineUsers = new QCheckBox ( i18n("Notify when a user comes online"), mContactListTab
+ );
+ 	contactListLayout->addWidget( mNotifyOnlineUsers, 2, 0 );
+@@ -170,7 +170,7 @@
+ 	p->setBeepNotify ( mBeepNotifyChk->isChecked() );
+ 	p->setSoundNotify ( mSoundNotifyChk->isChecked() );
+ 	p->setShowOffline ( mShowOfflineUsers->isChecked() );
+-	#if KDE_VERSION >= 305
++	#if KDE_VERSION > 305
+ 	p->setNotifyOnline ( mNotifyOnlineUsers->isChecked() );
+ 	#endif
+ 	p->setSendMessageEnter ( mSendMessageEnterChk->isChecked() );
+@@ -236,7 +236,7 @@
+ 	icon_theme_list->setEnabled ( p->useEmoticons() );
+ 
+ 	mShowOfflineUsers->setChecked( p->showOffline() );
+-	#if KDE_VERSION >= 305
++	#if KDE_VERSION > 305
+ 	mNotifyOnlineUsers->setChecked( p->notifyOnline() );
+ 	#endif
+ 	mTreeContactList->setChecked( p->treeView() );
+--- kopete/libkopete/ui/appearanceconfig.h	2002-10-16 03:27:17.000000000 +0200
++++ kopete/libkopete/ui/appearanceconfig.h	2003-01-03 11:16:45.000000000 +0100
+@@ -79,7 +79,7 @@
+ 		// Widgets for Contactlist TAB
+ 		QFrame* mContactListTab;
+ 		QCheckBox *mShowOfflineUsers;
+-		#if KDE_VERSION >= 305
++		#if KDE_VERSION > 305
+ 		QCheckBox *mNotifyOnlineUsers;
+ 		#endif
+ 		QCheckBox *mTreeContactList;
+--- kopete/libkopete/ui/kopetechatwindow.cpp	2002-10-16 03:27:17.000000000 +0200
++++ kopete/libkopete/ui/kopetechatwindow.cpp	2003-01-03 11:16:45.000000000 +0100
+@@ -39,7 +39,7 @@
+ #include "emoticonbutton.h"
+ 
+ #include <kdeversion.h>
+-#if KDE_VERSION < 305
++#if KDE_VERSION <= 305
+ #include <qtextedit.h>
+ #else
+ #include <ktextedit.h>
+@@ -322,7 +322,7 @@
+ 
+ 		case KopeteChatWindow::Multi:
+ 		{
+-#if KDE_VERSION < 305
++#if KDE_VERSION <= 305
+ 			m_multiLineEdit = new QTextEdit( this, "multilineedit" );
+ #else
+ 			m_multiLineEdit = new KTextEdit( this, "multilineedit" );
+--- kopete/libkopete/ui/kopetecontactviewitem.cpp	2002-10-16 03:27:17.000000000 +0200
++++ kopete/libkopete/ui/kopetecontactviewitem.cpp	2003-01-03 11:16:45.000000000 +0100
+@@ -31,7 +31,7 @@
+ #include <klocale.h>
+ /* Is now in KopeteMetaContact
+ #include <knotifyclient.h>
+-#if KDE_VERSION >= 305
++#if KDE_VERSION > 305
+ #include <kpassivepopup.h>
+ #endif
+ */
+@@ -130,7 +130,7 @@
+ 	/*
+ 	if (mContact->status() == KopeteContact::Online) {
+ 		KNotifyClient::event("kopete_online");
+-		#if KDE_VERSION >= 305
++		#if KDE_VERSION > 305
+ 		if ( KopetePrefs::prefs()->notifyOnline() )
+ 			KPassivePopup::message(i18n("%1 is now %2!").arg(mContact->displayName()).arg(mContact->statusText()), kopeteapp->systemTray());
+ 		#endif
+--- kopete/libkopete/ui/kopetemetacontactlvi.cpp	2002-10-16 03:27:17.000000000 +0200
++++ kopete/libkopete/ui/kopetemetacontactlvi.cpp	2003-01-03 11:16:45.000000000 +0100
+@@ -49,7 +49,7 @@
+ #include "systemtray.h"
+ 
+ 
+-#if KDE_VERSION >= 305
++#if KDE_VERSION > 305
+ #include <kpassivepopup.h>
+ #endif
+ 
+@@ -315,7 +315,7 @@
+ 	if ( m_metaContact->status() == KopeteMetaContact::Online )
+ 	{
+ 		KNotifyClient::event("kopete_online");
+-		#if KDE_VERSION >= 305
++		#if KDE_VERSION > 305
+ 		if ( KopetePrefs::prefs()->notifyOnline() )
+ 			KPassivePopup::message(i18n("%1 is now %2!").arg(m_metaContact->displayName()).arg(m_metaContact->statusString()), kopeteapp->systemTray());
+ 		#endif
+--- kopete/libkopete/ui/kopetewindow.cpp	2002-10-16 03:27:17.000000000 +0200
++++ kopete/libkopete/ui/kopetewindow.cpp	2003-01-03 11:16:45.000000000 +0100
+@@ -133,7 +133,7 @@
+ 	actionPrefs->plug( tm );
+ //	tm->insertSeparator();
+ 
+-#if KDE_VERSION >= 305
++#if KDE_VERSION > 305
+ 	connect(tray,SIGNAL(quitSelected()),this,SLOT(slotQuit()));
+ #endif
+ }
+@@ -244,7 +244,7 @@
+ 		return;
+ 	}
+ 	
+-#if KDE_VERSION >= 305
++#if KDE_VERSION > 305
+ 	KMessageBox::information( this,
+ 		i18n( "<qt>Closing the main window will keep Kopete running in the "
+ 		"system tray. Use Quit from the File menu to quit the "
+--- kopete/protocols/icq_new/icqchangestatus.cpp	2002-10-16 03:27:17.000000000 +0200
++++ kopete/protocols/icq_new/icqchangestatus.cpp	2003-01-03 11:16:45.000000000 +0100
+@@ -23,7 +23,7 @@
+ 
+ #include <klocale.h>
+ #include <kdeversion.h>
+-#if KDE_VERSION < 305
++#if KDE_VERSION <= 305
+ #include <qtextedit.h>
+ #else
+ #include <ktextedit.h>
+@@ -45,7 +45,7 @@
+ 		box );
+ 	lb->setAlignment( WordBreak );
+ 
+-#if KDE_VERSION < 305
++#if KDE_VERSION <= 305
+ 	m_edit = new QTextEdit( box );
+ #else
+ 	m_edit = new KTextEdit( box );
+--- kopete/protocols/irc/ircmessage.cpp	2002-10-16 03:27:17.000000000 +0200
++++ kopete/protocols/irc/ircmessage.cpp	2003-01-03 11:16:45.000000000 +0100
+@@ -52,7 +52,7 @@
+ 	KGlobal::config()->setGroup("IRC");
+ 	
+ 	// Add markup to URLs, only works with KDE > 3.0.x
+-#if KDE_VERSION >= 305
++#if KDE_VERSION > 305
+ 	message = KStringHandler::tagURLs(message);
+ #endif
+ 
