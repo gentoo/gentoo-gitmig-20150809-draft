@@ -1,6 +1,4 @@
-MD5 90a4c01841255614c1cb09d163f98448 libtompoly-0.03.ebuild 600
 MD5 25de75e3e0029e6fce571647edaae8f3 ChangeLog 445
 MD5 0fce715f564295c33ae07a4e5a5ef056 metadata.xml 820
-MD5 990acd4758a12f07f4143f13ce3e9b6e libtompoly-0.04.ebuild 600
-MD5 89c321e6d28bcd667476d5adadaed983 files/digest-libtompoly-0.03 61
+MD5 2da3d85a2467a057a34a795cefc008cc libtompoly-0.04.ebuild 573
 MD5 5decdc6eda9b722e7ab2ba11b31bb06f files/digest-libtompoly-0.04 61
