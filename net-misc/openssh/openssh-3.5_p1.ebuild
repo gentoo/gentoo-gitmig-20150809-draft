@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1.ebuild,v 1.2 2002/10/23 14:49:21 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1.ebuild,v 1.3 2002/11/22 20:18:26 wwoods Exp $
 
 IUSE="ipv6 static pam tcpd"
 
@@ -28,6 +28,12 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use alpha && patch < ${FILESDIR}/openssh-3.5_p1-gentoo-sshd-gcc3.patch || die
+}
 
 src_compile() {
 	local myconf
