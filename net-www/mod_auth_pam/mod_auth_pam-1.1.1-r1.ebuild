@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.1 2005/01/10 22:05:39 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.2 2005/01/23 13:06:47 trapni Exp $
 
 inherit eutils apache-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://pam.sourceforge.net/mod_auth_pam/"
 SRC_URI="http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-2.0-1.1.1.tar.gz"
 LICENSE="Apache-1.1"
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND="sys-libs/pam"
 SLOT="0"
