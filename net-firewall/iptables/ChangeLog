@@ -1,10 +1,13 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.10 2003/05/04 18:19:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.11 2003/05/05 12:36:51 aliz Exp $
+
+  05 May 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.8-r1.ebuild :
+  Unmasked on x86.
 
 *iptables-1.2.8-r1 (04 May 2003)
 
-  04 May May 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.8-r1.ebuild, files/iptables.init 
+  04 May 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.8-r1.ebuild, files/iptables.init 
 							files/iptables.confd, files/ip6tables.init
 							files/ip6tables.confd :
   Fixed ipv6 support. Closes #17155.
