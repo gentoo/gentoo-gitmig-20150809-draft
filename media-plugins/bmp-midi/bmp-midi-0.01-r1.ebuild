@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-midi/bmp-midi-0.01.ebuild,v 1.1 2004/12/20 21:44:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-midi/bmp-midi-0.01-r1.ebuild,v 1.1 2005/01/09 13:45:05 chainsaw Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://mitglied.lycos.de/mldoering/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="media-sound/beep-media-player
 	media-sound/timidity++"
@@ -25,11 +25,12 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING NEWS README
+	dodoc ChangeLog README TODO
 }
 
 pkg_postinst() {
-	ewarn "This plugin can not deal with multi-track MIDI files, this will segfault BMP."
+	ewarn "This plugin can not deal with RMI (RIFF-encoded MIDI) files, this will segfault BMP."
+	ewarn "You can use 'file' to check, as some people insist on renaming .rmi to .mid"
 	echo
 	einfo "You need to place a working timidity.cfg in /etc; timidity-config will normally"
 	einfo "arrange for this if you emerge timidity-eawpatches."
