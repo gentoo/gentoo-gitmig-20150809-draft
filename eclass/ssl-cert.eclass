@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.3 2004/04/11 05:46:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.4 2004/05/06 14:37:09 max Exp $
 #
 # Author: Max Kalika <max@gentoo.org>
 #
@@ -25,7 +25,7 @@ gen_cnf() {
 	SSL_SERIAL="${T}/${$}ca.ser"
 	# Location of some random files OpenSSL can use: don't use
 	# /dev/u?random here -- doesn't work properly on all platforms
-	SSL_RANDOM="${T}/evironment:${T}/eclass-debug.log:/etc/resolv.conf"
+	SSL_RANDOM="${T}/environment:${T}/eclass-debug.log:/etc/resolv.conf"
 
 	# These can be overridden in the ebuild
 	SSL_DAYS="${SSL_BITS:-730}"
