@@ -1,5 +1,5 @@
-MD5 e77e0153fe5e738dcbea953a8a3056b4 ChangeLog 1957
+MD5 8c6c093a9a0ba62f30583f4188d0c75b ChangeLog 2036
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 15454aab50220f9d82d46f357bb54c94 nss-3.8.ebuild 2359
+MD5 fd2f7696ccb6ee1be9baa6f08f83abca nss-3.8.ebuild 2365
 MD5 80da1f67cfbd587017f411109c5ca57b files/digest-nss-3.8 60
 MD5 d5948dfd93b61198742855ec3d2a254d files/nss-3.8-amd64.patch 8306
