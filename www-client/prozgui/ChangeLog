@@ -1,0 +1,26 @@
+# ChangeLog for net-www/prozgui
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/prozgui/ChangeLog,v 1.1 2005/03/15 21:49:08 seemant Exp $
+
+*prozgui-2.0.5 (15 Mar 2005)
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/prozgui-2.0.5-configure.patch, +files/prozgui-2.0.5-options.patch,
+  +prozgui-2.0.5.ebuild:
+  Moved from net-www/prozgui to www-client/prozgui.
+
+  09 Sep 2004; <blubb@gentoo.org> +files/prozgui-2.0.5-options.patch,
+  prozgui-2.0.5.ebuild:
+  added the options-patch to get the package compile and marked testing on amd64
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> prozgui-2.0.5.ebuild:
+  virtual/glibc -> virtual/libc
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> prozgui-2.0.5.ebuild:
+  Add inherit eutils
+
+*prozgui-2.0.5 (11 Oct 2003)
+
+  11 Oct 2003; Martin Holzer <mholzer@gentoo.org> Changelog,
+  prozgui-2.0.5.ebuild:
+  Initial ebuild. Submitted by Andrew S. <andrew-news@shaw.ca> in #25220
