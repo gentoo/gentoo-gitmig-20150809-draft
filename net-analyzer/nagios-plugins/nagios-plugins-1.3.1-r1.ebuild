@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.8 2004/08/20 15:08:50 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.9 2004/08/20 15:37:55 eldad Exp $
 
 inherit eutils
 
@@ -29,10 +29,9 @@ RDEPEND=">=dev-lang/perl-5.6.1-r7
 	nagios-ping? ( >=net-analyzer/fping-2.4_beta2-r1 )
 	nagios-ssh? ( >=net-misc/openssh-3.5_p1 )"
 
-pkg_preinst() {
+pkg_setup() {
 	enewgroup nagios
 	enewuser nagios -1 /bin/bash /dev/null nagios
-	chown -R nagios:nagios ${D}/usr/nagios/libexec || die "Failed Chown of ${D}/usr/nagios/libexec"
 }
 
 src_compile() {
@@ -65,6 +64,8 @@ src_install() {
 
 	dodir /usr/nagios/libexec/
 	mv ${S}/contrib ${D}/usr/nagios/libexec/contrib
+
+	chown -R nagios:nagios ${D}/usr/nagios/libexec || die "Failed Chown of ${D}/usr/nagios/libexec"
 }
 
 pkg_postinst() {
