@@ -1,5 +1,6 @@
 MD5 4734e42a854a538777495cacd433d7f5 ChangeLog 774
 MD5 c9a23333bdb5bb3b2cbc1a84ddb87885 qjackctl-0.0.8.ebuild 628
+MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 fe0db6dfa4b97bac68d0326e40e827f9 qjackctl-0.0.9a.ebuild 596
 MD5 d9b12e1bd6ebab08e5375f74d041664e qjackctl-0.1.3.ebuild 594
 MD5 f5d50b9205aab08eb660ec99ebecd791 files/digest-qjackctl-0.0.8 65
