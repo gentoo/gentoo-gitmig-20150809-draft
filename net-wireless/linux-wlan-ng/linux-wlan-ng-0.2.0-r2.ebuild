@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r2.ebuild,v 1.1 2003/04/09 21:43:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r2.ebuild,v 1.2 2003/04/14 19:40:57 latexer Exp $
 
 
 inherit eutils
@@ -28,7 +28,7 @@ DEPEND="sys-kernel/linux-headers
 		pcmcia?	( sys-apps/pcmcia-cs )"
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 # check arch for configure
 if [ ${ARCH} = "x86" ] ; then
