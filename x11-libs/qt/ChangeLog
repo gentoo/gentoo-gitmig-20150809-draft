@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.176 2004/12/02 12:07:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.177 2004/12/22 11:20:57 usata Exp $
+
+  07 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> qt-3.3.3-r1.ebuild:
+  Added to ~ppc-macos; bug #63440.
 
   02 Dec 2004; Caleb Tennis <caleb@gentoo.org> :
   Change CC to (tc-getCC)
