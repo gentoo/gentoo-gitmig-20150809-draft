@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.47 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.48 2004/07/19 18:58:30 vapier Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -69,6 +69,19 @@ kernel_exclude() {
 	done
 }
 
+set_arch_to_kernel() {
+	export KERNEL_ECLASS_PORTAGE_ARCH="${ARCH}"
+	case ${ARCH} in
+		x86)	export ARCH="i386";;
+		amd64)	export ARCH="x86_64";;
+		hppa)	export ARCH="parisc";;
+		*)		export ARCH="${ARCH}";;
+	esac
+}
+set_arch_to_portage() {
+	export ARCH="${KERNEL_ECLASS_PORTAGE_ARCH}"
+}
+
 kernel_universal_unpack() {
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
 
@@ -93,8 +106,10 @@ kernel_universal_unpack() {
 	then
 		# this file is required for other things to build properly, 
 		# so we autogenerate it
+		set_arch_to_kernel
 		make mrproper || die "make mrproper died"
 		make include/linux/version.h || die "make include/linux/version.h failed"
+		set_arch_to_portage
 		echo ">>> version.h compiled successfully."
 	fi
 }
@@ -111,11 +126,10 @@ kernel_src_unpack() {
 kernel_src_compile() {
 	if [ ${ETYPE} == "headers" ]
 	then
-		MY_ARCH=${ARCH}
-		unset ${ARCH}
+		set_arch_to_kernel
 		yes "" | make oldconfig
+		set_arch_to_portage
 		echo ">>> make oldconfig complete"
-		ARCH=${MY_ARCH}
 	fi
 }
 
