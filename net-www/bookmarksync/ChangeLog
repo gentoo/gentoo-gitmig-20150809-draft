@@ -1,6 +1,10 @@
 # ChangeLog for net-www/bookmarksync
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bookmarksync/ChangeLog,v 1.3 2003/10/14 20:30:57 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bookmarksync/ChangeLog,v 1.4 2003/11/23 00:24:27 mholzer Exp $
+
+  23 Nov 2003; Martin Holzer <mholzer@gentoo.org> bookmarksync-0.3.1.ebuild,
+  bookmarksync-0.3.2.ebuild:
+  adding RESTRICT="nomirror"
 
 *bookmarksync-0.3.2 (14 Oct 2003)
 
