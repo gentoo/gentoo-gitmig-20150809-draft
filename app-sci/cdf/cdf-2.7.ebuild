@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/cdf/cdf-2.7.ebuild,v 1.1 2003/12/22 10:23:38 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/cdf/cdf-2.7.ebuild,v 1.2 2003/12/22 10:24:31 phosphan Exp $
 
 MY_P="${P/-}"
 MY_P="${MY_P/.}"
@@ -12,7 +12,7 @@ SRC_URI="ftp://nssdcftp.gsfc.nasa.gov/standards/cdf/dist/${MY_P}/unix/${MY_P}-di
 LICENSE="CDF"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="ncurses"
+IUSE="ncurses java"
 
 RDEPEND="ncurses? ( sys-libs/ncurses )"
 DEPEND="${RDEPEND}
