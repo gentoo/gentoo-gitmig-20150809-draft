@@ -1,6 +1,12 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.24 2005/01/05 16:21:51 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.25 2005/01/05 22:24:11 humpback Exp $
+
+*skype-0.93.0.3-r3 (05 Jan 2005)
+
+  05 Jan 2005; Gustavo Felisberto <humpback@gentoo.org>; files/sDaemonWrapper,
+  -skype-0.93.0.3-r2.ebuild, +skype-0.93.0.3-r3.ebuild:
+  Error in wrapper script, fixing bug 76762.
 
   05 Jan 2005; Gustavo Felisberto <humpback@gentoo.org>; files/sDaemonWrapper:
   Changed ps x to ps ax for esd detection.

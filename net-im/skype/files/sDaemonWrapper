@@ -27,7 +27,7 @@ else
 	if [[ ${wrapsound} == "yes" && ${shellcheck1} == ${KDEDIR}/bin/artsshell && -n ${artsdcheck} ]]
 	then
 		echo "Running artsd found"
-		echo "Starting artsd wrapped ${progname}" | tee ---append "${logfile}"
+		echo "Starting artsd wrapped ${progname}" | tee --append "${logfile}"
 		skypecmd="artsdsp -m ${skypecmd}"
 	elif [[ ${wrapsound} == "yes" && ${shellcheck2} == /usr/bin/esd && -n ${esdcheck} ]]
 	then
