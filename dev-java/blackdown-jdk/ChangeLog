@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.26 2002/12/15 19:54:40 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.27 2003/01/27 20:31:40 gerk Exp $
+
+*blackdown-jdk-1.3.1-r9 (27 Jan 2003)
+  27 Jan 2003; Mark Guertin <gerk@gentoo.org> : blackdown-jdk-1.3.1-r9.ebuild,
+  files/digest-blackdown-jdk-1.3.1-r9 :
+  new version, set only as ~ppc for now (there are no other arches supported yet
+  for this revision, but it was desperately needed for ppc users using gcc 3.2.
+  Due to this promoting directly to stable and locking down older ones in 1.0
+  profiles
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
