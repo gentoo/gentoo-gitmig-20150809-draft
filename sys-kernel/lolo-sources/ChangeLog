@@ -1,14 +1,29 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.33 2003/01/02 08:43:44 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.34 2003/01/08 00:15:10 lostlogic Exp $
 
   TODO before gentoo-sources-2.4.20-r1:
   * Documentation
-  * Make sure hardware support is synched with xfs-sources
   * Test away
-  * Possibly KT400 pci.ids
   * USAGI patch from mattjf
   * Whatever else I'm forgetting
+
+*lolo-sources-2.4.20.1_rc3 (07 Jan 2003)
+
+  Changes from _rc2:
+  * Change encrypted loop back from loop-hvr to loop-jari
+  * Update all iptables modules from iptables CVS
+    A note about this:  To take advantage of some of the
+    modules included in the iptables patches we have here
+    you will need to build an iptables from CVS.  I'm
+    working on getting a CVS snapshot stability tested so
+    we can include it in portage.
+  * KT400 pci.ids thanks to viz
+  * AFAIK we are as close to having all the hardware
+    support of xfs-sources as this one is going to get
+  * Make rmap not change pte_offset to pte_offset_kernel
+    so that things built externally can build right
+    against this kernel
 
 *lolo-sources-2.4.20.1_rc2 (02 Jan 2003)
 
