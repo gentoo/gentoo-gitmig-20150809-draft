@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.32 2004/01/25 11:30:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.33 2004/01/27 09:23:45 usata Exp $
+
+*uim-0.2.7 (27 Jan 2004)
+
+  27 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> uim-0.2.7.ebuild,
+  uim-0.2.5.2.ebuild, uim-0.2.4.ebuild, uim-0.1.3.ebuild:
+  Version bumped. Blocks app-i18n/uim-svn.
 
   25 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> uim-0.2.5.2.ebuild:
   Added a notice for using uim-prime as it needs >=dev-libs/suikyo-1.3.0
