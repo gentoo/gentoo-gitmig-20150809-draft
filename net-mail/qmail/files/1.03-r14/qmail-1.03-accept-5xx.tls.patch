@@ -1,0 +1,20 @@
+diff -urbBw qmail-1.03.orig/qmail-remote.c qmail-1.03/qmail-remote.c
+--- qmail-1.03.orig/qmail-remote.c	2003-11-30 01:24:58.000000000 -0800
++++ qmail-1.03/qmail-remote.c	2003-11-30 01:32:11.000000000 -0800
+@@ -382,10 +382,14 @@
+    substdio_put(&smtpto,helohost.s,helohost.len);
+    substdio_puts(&smtpto,"\r\n");
+    substdio_flush(&smtpto);
+-   if (smtpcode() != 250) quit("ZConnected to "," but my name was rejected");
++   code = smtpcode();
++   if (code >= 500) quit("DConnected to "," but my name was rejected");
++   if (code != 250) quit("ZConnected to "," but my name was rejected");
+   }
+ #else
+-  if (smtpcode() != 250) quit("ZConnected to "," but my name was rejected");
++  code = smtpcode();
++  if (code >= 500) quit("DConnected to "," but my name was rejected");
++  if (code != 250) quit("ZConnected to "," but my name was rejected");
+ #endif
+ 
+  /* SMTP AUTH client */

@@ -1,0 +1,26 @@
+#!/bin/sh
+# Configuration System for Qmail
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/qmail-config-system,v 1.1 2003/11/30 11:32:06 robbat2 Exp $
+# This is a configuration system to make using and controlling the interesting parts of the qmail behavior simple
+# The only variable that needs to be set before running this is $SERVICE
+
+# this is to inherit QMAIL_CONTROLDIR
+. /etc/profile
+
+# now run
+# grab the common configuration
+[ -s ${QMAIL_CONTROLDIR}/conf-common ] && source ${QMAIL_CONTROLDIR}/conf-common
+
+# grab the per-service configuration
+[ -s ${QMAIL_CONTROLDIR}/conf-${SERVICE}d ] && source ${QMAIL_CONTROLDIR}/conf-${SERVICE}d
+# special case for qmail-send
+[ "${SERVICE}" = "send" -a -s ${QMAIL_CONTROLDIR}/conf-send ] && source ${QMAIL_CONTROLDIR}/conf-send
+
+# you may want to disable this at some point, so I give you the choice here
+if [ -s /var/qmail/bin/config-sanity-check -a -z "${QMAIL_DISABLE_SANITY_CHECK}" ]; then
+    source /var/qmail/bin/config-sanity-check
+else
+    echo "Failed to find sanity checker!"
+    sleep 30s
+    exit 1
+fi

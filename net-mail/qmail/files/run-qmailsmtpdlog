@@ -1,0 +1,6 @@
+#!/bin/sh
+# Gentoo Startup script for qmail's SMTP daemon (logging)
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/run-qmailsmtpdlog,v 1.1 2003/11/30 11:32:06 robbat2 Exp $
+SERVICE=smtp
+source /var/qmail/bin/qmail-config-system && \
+exec /usr/bin/setuidgid qmaill /usr/bin/multilog ${LOG_OPTS} ${LOG_DEST}

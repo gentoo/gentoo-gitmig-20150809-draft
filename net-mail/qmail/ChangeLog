@@ -1,6 +1,53 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.50 2003/11/30 03:00:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.51 2003/11/30 11:32:06 robbat2 Exp $
+
+*qmail-1.03-r14 (30 Nov 2003)
+
+  30 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r14.ebuild,
+  files/99qmail, files/conf-common, files/conf-pop3d, files/conf-qmqpd,
+  files/conf-qmtpd, files/conf-send, files/conf-smtpd,
+  files/config-sanity-check, files/dot_qmail, files/errno.patch,
+  files/mkservercert, files/qmail-config-system, files/qmail-genrsacert.sh,
+  files/rc, files/run-qmailpop3d, files/run-qmailpop3dlog,
+  files/run-qmailqmqpd, files/run-qmailqmqpdlog, files/run-qmailqmtpd,
+  files/run-qmailqmtpdlog, files/run-qmailsend, files/run-qmailsendlog,
+  files/run-qmailsmtpd, files/run-qmailsmtpdlog, files/servercert.cnf,
+  files/1.03-r14/auth-after-tls-only.patch,
+  files/1.03-r14/maildir-quota-fix.patch,
+  files/1.03-r14/nullenvsender-recipcount.tls.patch,
+  files/1.03-r14/qmail-1.03-accept-5xx.tls.patch,
+  files/1.03-r14/qmail-1.03-qregex-memleak-fix.patch,
+  files/1.03-r14/qmail-pop3d-capa-outputfix.patch,
+  files/1.03-r14/qmail-pop3d-stat.tls.patch,
+  files/1.03-r14/qmail-smtpd-esmtp-size-gentoo.patch,
+  files/1.03-r14/qmail-smtpd-relay-reject.gentoo.patch,
+  files/1.03-r14/smtp-auth-close3.patch:
+  This build is hardmasked for initial testing.
+  == Feature changes:
+  Added more control over daemon launching, including new control over logging
+  systems.
+  Added more configuration checks for sanity.
+  Simplified all daemon start scripts using a new launcher -
+  qmail-config-system.
+  Added variable to control qmail-pop3d maildir location.
+  == Bugs fixed: 
+  holdremote feature request - #31542 
+  auth-after-TLS only - #31426 
+  noauthcram option - #33818 
+  pop3d fix for evolution - #34646 
+  == Patches:
+  netscape progress bar fix: http://www.qmail.org/netscape-progress.patch 
+  update of 0.0.0.0 patch:
+  http://www.suspectclass.com/~sgifford/qmail/qmail-1.03-0.0.0.0-0.2.patch
+  ignore -N opts to sendmail:
+  http://www-dt.e-technik.uni-dortmund.de/~ma/djb/qmail/sendmail-ignore-N.patch
+  accept-5xx responses REDIFFED: 
+  http://www.qmail.org/accept-5xx.patch 
+  pop3d-stat REDIFFED:
+  http://www.dataloss.nl/software/patches/qmail-pop3d-stat.patch 
+  envrecip REDIFFED:
+  http://www.qcc.ca/~charlesc/software/misc/nullenvsender-recipcount.patch
 
   29 Nov 2003; Robin H. Johnson <robbat2@gentoo.org>
   files/1.03-r13/conf-smtpd:

@@ -1,0 +1,6 @@
+#!/bin/sh
+# gentoo qmail rc file to start qmail-start and thus qmail-send
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/rc,v 1.1 2003/11/30 11:32:06 robbat2 Exp $
+
+exec env - PATH="/var/qmail/bin:$PATH" \
+	qmail-start "`grep -v '^#' /var/qmail/control/defaultdelivery`"
