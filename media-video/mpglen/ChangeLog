@@ -1,6 +1,6 @@
-# ChangeLog for media-sound/mpglen
+# ChangeLog for media-video/mpglen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/ChangeLog,v 1.3 2004/10/06 20:18:25 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/ChangeLog,v 1.4 2004/10/07 15:03:05 swegener Exp $
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> mpglen-0.1.ebuild:
   Added to ~amd64.
