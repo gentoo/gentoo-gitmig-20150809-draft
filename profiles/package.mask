@@ -64,7 +64,7 @@ media-sound/mp3blaster
 # <carpaski@gentoo.org> (11 Dec 2003)
 # API change. All portage tools that meet this change in API
 # should be masked version-specific and follow immediately underneath.
->=sys-apps/portage-2.0.49-r19
+>sys-apps/portage-2.0.49-r19
 
 # <caleb@gentoo.org> (Dec 10 2004)
 =x11-libs/qt-3.3.0_beta1
