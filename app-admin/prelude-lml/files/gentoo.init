@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/files/gentoo.init,v 1.1 2003/06/21 17:05:10 solar Exp $
+
+PROGNAME=`basename $1`
+
+depend() {
+	need net
+	after prelude-manager
+}
+
+start() {
+	ebegin "Starting ${PROGNAME}..."
+	start-stop-daemon --start --quiet --exec /usr/bin/${PROGNAME} -- ${OPTIONS} -d
+	eend $? 
+}
+
+stop() {
+	ebegin "Stop ${PROGNAME}..."
+     	start-stop-daemon --stop --quiet --exec /usr/bin/${PROGNAME}
+	eend $? 
+}
