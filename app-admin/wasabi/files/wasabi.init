@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+	need clock hostname logger
+}
+
+start() {
+	ebegin "Starting wasabi"
+	start-stop-daemon --start --quiet --exec /usr/sbin/wasabi
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping wasabi"
+	start-stop-daemon --stop --quiet --exec /usr/bin/perl /usr/sbin/wasabi
+	eend $?
+}
