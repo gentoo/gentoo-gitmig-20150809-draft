@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.61.ebuild,v 1.1 2004/09/16 18:01:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.61.ebuild,v 1.2 2004/09/26 20:17:47 carlo Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
+	cd ${S}/qt
 	make all staticlib
 }
 
@@ -41,7 +42,9 @@ src_install() {
 	cp qscintilla*.qm ${D}/$QTDIR/translations
 	cp libqscintilla.a* ${D}/$QTDIR/lib
 	cp -d libqscintilla.so.* ${D}/$QTDIR/lib
-	use doc && ( dohtml ${S}/doc/html/*
+	if use doc ; then
+		dohtml ${S}/doc/html/*
 		insinto /usr/share/doc/${PF}/Scintilla
-		doins ${S}/doc/Scintilla/* )
+		doins ${S}/doc/Scintilla/*
+	fi
 }
