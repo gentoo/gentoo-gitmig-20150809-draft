@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <rac@gentoo.org> 03 Jun 2003
+# testing
+=dev-lang/perl-5.8.0-r11
+
 # <liquidx@gentoo.org> 02 Jun 2003
 # testing new stable bugfix python release
 =dev-lang/python-2.2.3*
