@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.6-r1.ebuild,v 1.1 2003/01/04 23:12:08 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.6-r1.ebuild,v 1.2 2003/01/27 07:12:08 seemant Exp $
 
 DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec."
 SRC_URI="mirror://sourceforge/ffmpeg/${P}.tar.gz"
@@ -9,7 +9,7 @@ HOMEPAGE="http://ffmpeg.sourceforge.net/"
 IUSE="mmx encode oggvorbis doc"
 
 inherit flag-o-matic
-filter-flags -fforce-addr
+filter-flags "-fforce-addr -fPIC"
 
 SLOT="0"
 LICENSE="GPL-2"
