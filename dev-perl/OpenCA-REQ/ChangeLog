@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlOpenCA-CRLChangeLog/dev-perlOpenCA-REQChangeLog
+# ChangeLog for dev-perl/OpenCA-REQ
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-REQ/ChangeLog,v 1.6 2002/12/13 10:56:39 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-REQ/ChangeLog,v 1.7 2002/12/17 19:29:31 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -11,7 +11,7 @@
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
 
   forced version bump to install into correct locations
-# ChangeLog for dev-perlOpenCA-X509ChangeLog/dev-perlOpenCA-REQChangeLog
+# ChangeLog for dev-perl/OpenCA-REQ
 
 *OpenCA-REQ-0.7.35.ebuild (31 Jul 2002)
   04 Aug 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog : 
