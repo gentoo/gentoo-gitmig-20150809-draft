@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cpuinfo/desklet-cpuinfo-0.1.4.ebuild,v 1.2 2003/09/10 12:18:35 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cpuinfo/desklet-cpuinfo-0.1.4.ebuild,v 1.3 2003/09/14 12:03:47 obz Exp $
 
 SENS_NAME="CPU"
 DISP_NAME="info"
@@ -18,8 +18,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~x86"
 
-DEPEND=">=gnome-extra/gdesklets-core-0.20
-	>=x11-plugins/desklet-external-0.21
+DEPEND=">=gnome-extra/gdesklets-core-0.21.2
 	>=x11-plugins/desklet-fontselector-0.1.5"
 
 # unfortunately, these are usually dependent on the particular
