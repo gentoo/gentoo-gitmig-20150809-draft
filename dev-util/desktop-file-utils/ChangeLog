@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/desktop-file-utils
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.22 2004/12/23 16:13:45 gmsoft Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.23 2005/01/08 23:18:40 slarti Exp $
+
+  08 Jan 2005; Tom Martin <slarti@gentoo.org> desktop-file-utils-0.9.ebuild:
+  Stable on amd64.
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> desktop-file-utils-0.9.ebuild:
   Stable on hppa.
