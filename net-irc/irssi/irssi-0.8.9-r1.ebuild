@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.5 2005/01/07 00:47:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.6 2005/03/06 19:11:11 gustavoz Exp $
 
 inherit perl-module eutils
 
@@ -34,6 +34,7 @@ src_unpack() {
 			die "sed doc/Makefile.in failed"
 
 	epatch ${FILESDIR}/${P}-64bit-exec-fix.patch
+	epatch ${FILESDIR}/irssi-socks-fix.patch
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.59 2005/02/28 23:41:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.60 2005/03/06 19:11:11 gustavoz Exp $
+
+  06 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> irssi-0.8.9-r1.ebuild:
+  Apply socks patch to 0.8.9 too to fix LiveCD
 
   01 Mar 2005; Sven Wegener <swegener@gentoo.org>
   +files/irssi-socks-fix.patch, irssi-0.8.10_rc5-r1.ebuild,
