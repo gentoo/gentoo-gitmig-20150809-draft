@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-3.3.4.ebuild,v 1.1 2003/08/29 15:29:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-3.3.4.ebuild,v 1.2 2003/09/18 11:56:28 usata Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.sra.co.jp/pub/misc/eb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	sys-libs/zlib
