@@ -44,6 +44,7 @@ dvd - Adds support for DVDs
 encode - Adds support for MEncoder or LaME encoder, wherever applicable
 esd - Adds support for media-sound/esound (Enlightened Sound Daemon)
 evo - Adds support for evolution in gnumeric
+ev6 - Assume Alpha processor is EV6 or better
 fbcon - Adds framebuffer support for the console, via the kernel
 flash - Adds support for creating flash files using Ming
 freewnn - Adds support for FreeWnn kana to kanji conversion engine
