@@ -2,15 +2,7 @@
 Hash: SHA1
 
 MD5 aeeda682120bacb5198594a914c76fa8 ChangeLog 5290
-MD5 2f2c9e67fde6062db025330bdb2b0696 sysklogd-1.4.1-r10.ebuild 1462
-MD5 e8b0979f71e097d248d82513aef5a13a sysklogd-1.4.1-r7.ebuild 1234
-MD5 e6d677c10f3c10d2b210e47382dc90a1 sysklogd-1.4.1-r8.ebuild 1260
-MD5 34b99bd88fbfefdcb34b683fd7645fad sysklogd-1.4.1-r9.ebuild 1305
-MD5 27e1fd10fa70fd36a13fb100e244ab3b sysklogd-1.4.1-r11.ebuild 1461
-MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r10 65
-MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r7 65
-MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r8 65
-MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r9 65
+MD5 058667bf7314735fb0b740bb5a03af83 sysklogd-1.4.1-r11.ebuild 1456
 MD5 e1376d40e02cf8026882cd4451267fed files/sysklogd-1.4.1-SO_BSDCOMPAT.patch 2523
 MD5 ee6c8a2e9ce3c67c0704ba954826d828 files/sysklogd-1.4.1-mips.patch 449
 MD5 e25d7b583b7e4bd8be503b89e1771e90 files/sysklogd.confd 113
@@ -24,7 +16,7 @@ MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r11 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBX7utHTu7gpaalycRArdUAKD21AhQJ5WXIJNBsJCd6vD+5wjNgQCdEU+x
-o7q4oAOTaY/V869Pp16ZeYE=
-=9SUg
+iD8DBQFBX7waHTu7gpaalycRAiwqAKDbilZcQFwQAAQnoFJ3Bt3NEO+X5ACfXjrz
+eJe36v7GCeaoLAOu90UmWkM=
+=nsEH
 -----END PGP SIGNATURE-----

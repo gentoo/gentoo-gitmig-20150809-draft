@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r11.ebuild,v 1.1 2004/07/24 21:38:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r11.ebuild,v 1.2 2004/10/03 08:45:08 vapier Exp $
 
 inherit eutils
 
@@ -10,11 +10,12 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 s390 x86"
 IUSE=""
 
 DEPEND="virtual/libc"
-RDEPEND="dev-lang/perl sys-apps/debianutils"
+RDEPEND="dev-lang/perl
+	sys-apps/debianutils"
 PROVIDE="virtual/logger"
 
 src_unpack() {
