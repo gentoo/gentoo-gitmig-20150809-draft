@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.2.0.ebuild,v 1.5 2004/04/18 08:57:20 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.2.0.ebuild,v 1.6 2004/06/04 12:53:51 vapier Exp $
 
 inherit gnome.org python
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/gnome/sources/pygtk/2.2/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 IUSE="gnome opengl"
 
 RDEPEND=">=dev-lang/python-2.2
@@ -22,12 +22,8 @@ RDEPEND=">=dev-lang/python-2.2
 	opengl? ( virtual/opengl
 		dev-python/PyOpenGL
 		>=x11-libs/gtkglarea-1.99 )"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
-
-# possible problems with parallel builds (#45776)
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
@@ -37,13 +33,15 @@ src_unpack() {
 }
 
 src_compile() {
+	use hppa && append-flags -ffunction-sections
 	econf --enable-thread || die
-	emake || die
+	# possible problems with parallel builds (#45776)
+	emake -j1 || die
 }
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL MAPPING NEWS README THREADS TODO
+	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README THREADS TODO
 
 	python_version
 	mv ${D}/usr/lib/python${PYVER}/site-packages/pygtk.py \
