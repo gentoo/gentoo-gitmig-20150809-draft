@@ -1,10 +1,20 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.8 2003/02/12 06:45:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.9 2003/05/21 18:28:51 kumba Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  
+
+*ltrace-0.3.31 (21 May 2003)
+
+  21 May 2003; Joshua Kinard <kumba@gentoo.org> ltrace-0.3.31.ebuild:
+  Bumped version
  
 *ltrace-0.3.26-r1 (28 Jun 2002)
+
+  21 May 2003; Joshua Kinard <kumba@gentoo.org> ltrace-0.3.26-r1.ebuild:
+  Masked for sparc and mips, as these targets do not exist in ltrace
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   06 Nov 2002; Jon Nall <nall@gentoo.org> ltrace-0.3.26-r1.ebuild :
   added ~ppc to KEYWORDS
