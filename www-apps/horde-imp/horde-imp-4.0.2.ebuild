@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/horde-ingo-1.0.ebuild,v 1.1 2004/12/24 07:56:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/horde-imp-4.0.2.ebuild,v 1.1 2005/02/23 23:02:56 vapier Exp $
 
 HORDE_PHP_FEATURES="imap"
 HORDE_MAJ="-h3"

@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/horde-imp-4.0.1.ebuild,v 1.1 2005/01/16 11:05:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/horde-mnemo-2.0.1.ebuild,v 1.1 2005/02/23 23:05:18 vapier Exp $
 
-HORDE_PHP_FEATURES="imap"
+HORDE_PHP_FEATURES="-o mysql odbc postgres ldap"
 HORDE_MAJ="-h3"
 inherit horde
 
-DESCRIPTION="Horde IMP provides webmail access to IMAP/POP3 mailboxes"
+DESCRIPTION="Mnemo is the Horde note manager"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
