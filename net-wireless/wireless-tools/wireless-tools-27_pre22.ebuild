@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27_pre22.ebuild,v 1.5 2004/07/01 22:41:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27_pre22.ebuild,v 1.6 2004/09/10 07:00:00 brix Exp $
 
 MY_P=wireless_tools.${PV/_/\.}
 S=${WORKDIR}/${MY_P/.pre22/}
@@ -11,7 +11,6 @@ KEYWORDS="~x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/libc"
-RDEPEND="${DEPEND}"
 IUSE="nls"
 
 src_unpack() {
