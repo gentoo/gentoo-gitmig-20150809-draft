@@ -23,34 +23,39 @@ if [ -n "$1" ]; then
 	export XSESSION="$1"
 fi
 
+# This next bit should be in the users ~/.xsession,
+# but we have it here as reference
+#
+#userdefaults=$HOME/.Xdefaults  
+#userresources=$HOME/.Xresources   
+#usermodmap=$HOME/.Xmodmap   
+#  
+##Xdefaults  
+#if [ -f "$userdefaults" ]; then  
+#	xrdb -merge "$userdefaults"  
+#fi  
+#Xresorces  
+#if [ -f "$userresources" ]; then  
+#	xrdb -merge "$userresources"  
+#fi  
+##Xmodmap  
+#if [ -f "$usermodmap" ]; then  
+#	xmodmap "$usermodmap"  
+#fi  
+
 startup=$HOME/.xsession
 
-userdefaults=$HOME/.Xdefaults  
-userresources=$HOME/.Xresources   
-usermodmap=$HOME/.Xmodmap   
-  
-#Xdefaults  
-if [ -f "$userdefaults" ]; then  
-	xrdb -merge "$userdefaults"  
-fi  
-#Xresorces  
-if [ -f "$userresources" ]; then  
-	xrdb -merge "$userresources"  
-fi  
-#Xmodmap  
-if [ -f "$usermodmap" ]; then  
-	xmodmap "$usermodmap"  
-fi  
-
-#xsession
+# First run ~/.xsession if it exists
 if [ -s "$startup" ]; then
 	if [ -x "$startup" ]; then
 		exec "$startup"
 	else
 		exec /bin/sh "$startup"
 	fi
+# If not, try the system default
 elif [ -n "`/etc/X11/chooser.sh`" ]; then
 	exec "`/etc/X11/chooser.sh`"
+# Lastly, xsm as failsafe
 else
 	exec xsm
 fi
