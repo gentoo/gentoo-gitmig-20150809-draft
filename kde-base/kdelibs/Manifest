@@ -4,7 +4,7 @@ MD5 8ae427fb79ac0bded83e551819b42719 kdelibs-3.2.2.ebuild 2495
 MD5 0259c3f239449f381dde6ee6a4619312 kdelibs-3.1.5-r1.ebuild 2056
 MD5 b707cac51f1876562c5dc8552788d09f kdelibs-3.2.2-r1.ebuild 2611
 MD5 bdbfa9147fb7f9dcb231ab624515d0c9 kdelibs-3.2.1.ebuild 2418
-MD5 0e76a1bb2f8bb01374d34f51d7ae0496 kdelibs-3.2.3.ebuild 2456
+MD5 0f0199c8ac44e5e9bf7acca24ce18578 kdelibs-3.2.3.ebuild 2452
 MD5 f2942d8ba47c3a60a191964b65609451 ChangeLog 23175
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 52e0e955204a77781505d33b9a3c341d files/post-3.2.2-kdelibs-ktelnetservice.patch 974
