@@ -1,18 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.33.ebuild,v 1.6 2005/01/01 16:25:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.1.2.ebuild,v 1.1 2005/02/12 13:11:52 usata Exp $
 
 IUSE="truetype"
 
 DESCRIPTION="traces TeX fonts to PFA or PFB fonts (formerly pktrace)"
 HOMEPAGE="http://www.cs.uu.nl/~hanwen/mftrace/"
 SRC_URI="http://www.cs.uu.nl/~hanwen/mftrace/${P}.tar.gz"
-LICENSE="GPL-1"
-KEYWORDS="alpha x86 ppc ~amd64 ~sparc"
+LICENSE="GPL-2"
+KEYWORDS="~alpha ~x86 ~ppc ~amd64 ~sparc"
 # SLOT 1 was used in pktrace ebuild
 SLOT="1"
 
-DEPEND=">=dev-lang/python-2.2.1-r2"
+DEPEND=">=dev-lang/python-2.2.2"
 
 RDEPEND=">=dev-lang/python-2.2.2
 	virtual/tetex
