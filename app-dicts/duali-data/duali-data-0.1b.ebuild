@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/duali-data-0.1b.ebuild,v 1.6 2004/06/24 21:39:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/duali-data-0.1b.ebuild,v 1.7 2004/06/29 20:18:03 agriffis Exp $
 
-IUSE="X gnome"
+IUSE=""
 
 DESCRIPTION="Dictionary data for the Arab dictionary project duali"
 HOMEPAGE="http://www.arabeyes.org/project.php?proj=Duali"

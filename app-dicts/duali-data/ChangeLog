@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/duali-data
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/ChangeLog,v 1.4 2004/06/24 21:39:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/ChangeLog,v 1.5 2004/06/29 20:18:03 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> duali-data-0.1b.ebuild:
+  sync IUSE (-X, -gnome)
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> duali-data-0.1b.ebuild,
   +metadata.xml:
