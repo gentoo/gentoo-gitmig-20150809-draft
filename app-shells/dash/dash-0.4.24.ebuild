@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.4.24.ebuild,v 1.1 2004/03/26 18:53:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.4.24.ebuild,v 1.2 2004/03/26 23:17:59 dholm Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/d/dash/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="sys-devel/pmake
 	sys-apps/sed 

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dash
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.1 2004/03/26 18:53:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.2 2004/03/26 23:17:59 dholm Exp $
+
+  27 Mar 2004; David Holm <dholm@gentoo.org> dash-0.4.24.ebuild:
+  Added to ~ppc.
 
 *dash-0.4.24 (26 Mar 2004)
 
