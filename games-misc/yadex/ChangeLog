@@ -1,0 +1,11 @@
+# ChangeLog for games-misc/yadex
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/ChangeLog,v 1.1 2004/01/14 03:53:50 mr_bones_ Exp $
+
+*yadex-1.7.0 (13 Jan 2004)
+
+  13 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  yadex-1.7.0.ebuild:
+  initial commit; ebuild based on the one provided by Daniel Fullmer via bug
+  37753
+
