@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.2 2003/12/08 15:37:25 foser Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.3 2004/01/16 20:46:09 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> fam-2.7.0.ebuild:
+  set ppc in keywords
 
 *fam-2.7.0 (07 Dec 2003)
 
