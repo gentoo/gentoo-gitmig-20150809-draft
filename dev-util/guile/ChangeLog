@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.17 2003/08/20 03:55:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.18 2003/08/24 13:01:23 gmsoft Exp $
 
   19 Aug 2003; Aron Griffis <agriffis@gentoo.org> guile-1.6.4.ebuild:
   Fix bug 26484 by filtering out -g3
@@ -12,6 +12,9 @@
   masking 1.5.x
 
 *guile-1.6.4 (28 Apr 2003)
+
+  24 Aug 2003; Guy Martin <gmsoft@gentoo.org> guile-1.6.4.ebuild :
+  Added hppa to KEYWORDS.
 
   28 Apr 2003; Alastair Tse <liquidx@gentoo.org> guile-1.6.4.ebuild:
   version bump to 1.6.x series using SLOT=12.
