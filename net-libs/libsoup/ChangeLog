@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.33 2004/08/06 18:28:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.34 2004/08/24 15:03:45 tseng Exp $
+
+*libsoup-2.1.13 (24 Aug 2004)
+
+  24 Aug 2004; Brandon Hale <tseng@gentoo.org> +libsoup-2.1.13.ebuild:
+  Version bump.
 
 *libsoup-2.1.12 (06 Aug 2004)
 
