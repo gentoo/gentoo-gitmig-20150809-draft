@@ -305,12 +305,6 @@ sys-apps/utempter
 =app-misc/mc-4.6.0_pre1-r2
 =app-misc/mc-4.6.0_pre1-r3
 
-# <azarah@gentoo.org> (27 Sep 2002)
-# latest gnome-spell (needed by evo-1.2 for spellcheck).
-#=app-text/gnome-spell-0.5
-# not compadible with 1.0, or at least not out of the box
-=gnome-extra/gtkhtml-1.1.2
-
 # <danarmak@gentoo.org> (1 Nov 2002)
 # old and broken. I hope there'll be a new release soon - there's a kwintv3 project that's basically
 # a rewrite and it's in alpha stages atm. I've a cs ebuild for it btw.
@@ -462,10 +456,6 @@ dev-python/anygui
 # Dan Armak <danarmak@gentoo.org> (30 Jul 2002)
 # masked for testing
 media-video/kxine
-
-# <raker@gentoo.org> (26 Jul 2002)
-# New libgda masked for testing.
-=gnome-extra/libgda-0.8.192
 
 # <seemant@gentoo.org> (25 Jul 2002)
 # masked because of unhealthy groupadd operation in postinst
@@ -683,15 +673,6 @@ app-admin/va-systemimager-client
 #seemant@gentoo.org 20 Mar 2002
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
 =gnome-extra/medusa-0.5.1-r4
-
-# spider@gentoo.org ; 21 May 2002;
-# this is the gnome2 mask!
-# (gnome-2 that is ;)
-# dependencies for theese arent fixed yet:
-# liquidx@gentoo.org ; 26 Apr 2003;
-# about time these are unmasked
-# gnome-extra/libgnomemm
-# gnome-extra/libgnomeuimm
 
 ## Non gnome-core packages, applications, extra libraries and so on
 >=media-gfx/gimp-1.3
