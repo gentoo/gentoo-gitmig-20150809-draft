@@ -1,21 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.5.ebuild,v 1.5 2004/01/07 00:01:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.5.ebuild,v 1.6 2004/02/23 19:43:06 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 
 RESTRICT="nomirror"
-P_HIERPG="hier-Pg7.3-0.4"
-HOMEPAGE="http://www.postgresql.org/ http://gppl.terminal.ru/index.eng.html"
+HOMEPAGE="http://www.postgresql.org/"
 SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 	mirror://postgresql/source/v${PV}/${PN}-opt-${PV}.tar.bz2
-	doc? ( mirror://postgresql/source/v${PV}/${PN}-docs-${PV}.tar.bz2 )
-	pg-hier? ( http://gppl.terminal.ru/${P_HIERPG}.tar.gz )"
+	doc? ( mirror://postgresql/source/v${PV}/${PN}-docs-${PV}.tar.bz2 )"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64 hppa ia64"
-IUSE="ssl nls java python tcltk perl libg++ pam readline zlib pg-hier"
+IUSE="ssl nls java python tcltk perl libg++ pam readline zlib"
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf
@@ -80,12 +78,6 @@ check_java_config() {
 
 src_unpack() {
 	unpack ${A} || die
-	if [ "`use pg-hier`" ]; then
-		cd ${WORKDIR} || die
-		mv readme.html README-${P_HIERPG}.html || die
-		cd ${S} || die
-		epatch ${WORKDIR}/${P_HIERPG}.diff || die
-	fi
 	cd ${S} || die
 }
 
@@ -148,9 +140,6 @@ src_install() {
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	cd ${S}
-	if [ "`use pg-hier`" ]; then
-		dodoc ${WORKDIR}/README-${P_HIERPG}.html
-	fi
 	dodoc COPYRIGHT HISTORY INSTALL README register.txt
 	dodoc contrib/adddepend/*
 
@@ -182,6 +171,8 @@ src_install() {
 
 	insinto /etc/conf.d/
 	newins ${FILESDIR}/postgresql.conf postgresql || die
+
+	keepdir /var/lib/postgresql
 }
 
 pkg_postinst() {
@@ -190,14 +181,6 @@ pkg_postinst() {
 	einfo "to setup the initial database environment."
 	einfo ""
 	einfo "Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell, or /bin/true"
-	if use pg-hier; then
-		ewarn ""
-		ewarn "REQUIRED!! After installing patched PostgreSQL by pg-hier"
-		ewarn "it is required to run 'initdb'. Without this Pg will fail "
-		ewarn "with error "
-		ewarn "ERROR: did not find '}' at end of input node. "
-		ewarn ""
-	fi
 }
 
 pkg_config() {

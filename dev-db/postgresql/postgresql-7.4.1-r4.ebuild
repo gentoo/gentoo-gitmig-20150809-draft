@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.1-r4.ebuild,v 1.1 2004/02/17 17:12:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.1-r4.ebuild,v 1.2 2004/02/23 19:43:06 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
@@ -72,8 +72,6 @@ src_unpack() {
 	unpack ${A} || die
 	epatch ${FILESDIR}/${P}-gentoo.patch
 	if use pg-hier; then
-		cd ${WORKDIR} || die
-		mv readme.html README-${P_HIERPG}.html || die
 		cd ${S} || die
 		epatch ${WORKDIR}/${P_HIERPG}.diff
 	fi

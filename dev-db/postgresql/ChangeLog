@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.84 2004/02/17 17:12:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.85 2004/02/23 19:43:06 nakano Exp $
+
+  23 Feb 2004; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.5-r1.ebuild,
+  postgresql-7.3.5-r2.ebuild, postgresql-7.3.5.ebuild,
+  postgresql-7.4.1-r1.ebuild, postgresql-7.4.1-r2.ebuild,
+  postgresql-7.4.1-r3.ebuild, postgresql-7.4.1-r4.ebuild,
+  postgresql-7.4.1.ebuild, files/postgresql-7.4-gentoo.patch,
+  files/postgresql.env-7.3.5, files/postgresql.env-7.4.1,
+  files/postgresql.init:
+  Fixed pg-hier bug for 7.4.1. Removed pg-hier patch from 7.3.5 because 
+  the patch doesn't apply against it. And cleanup unnecessary files.
+  This should fix #39589.
 
 *postgresql-7.4.1-r4 (17 Feb 2004)
 
