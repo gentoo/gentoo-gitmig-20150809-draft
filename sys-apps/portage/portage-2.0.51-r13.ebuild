@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r13.ebuild,v 1.2 2005/01/16 07:23:50 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r13.ebuild,v 1.3 2005/02/03 05:40:30 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -64,7 +64,7 @@ src_compile() {
 		ewarn "NOT BUILDING SANDBOX ON ${ARCH}"
 	elif [ -n "${MULTILIB_ABIS}" ]; then
 		OABI="${ABI}"
-		for ABI in $(get_abi_order); do
+		for ABI in $(get_install_abis); do
 			export ABI
 			make clean
 			make CFLAGS="-O1 -pipe -DSB_HAVE_64BIT_ARCH" libsandbox.so || die
