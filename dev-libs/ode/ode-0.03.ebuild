@@ -1,25 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ode-0.03.ebuild,v 1.3 2003/02/13 10:48:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ode-0.03.ebuild,v 1.4 2003/03/29 04:10:19 seemant Exp $
 
 IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Open Dynamics Engine SDK"
 SRC_URI="http://www.q12.org/ode/release/${P}.tgz"
-HOMEPAGE="http://www.q12.org/ode/"
+HOMEPAGE="http://opende.sourceforge.net"
 
+SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~ppc"
-SLOT="0"
 
-DEPEND="virtual/opengl"
+DEPEND=">=sys-apps/sed-4.0.5
+	virtual/opengl"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/config
-	sed s,'PLATFORM=msvc','PLATFORM=unix-gcc', user-settings >user-settings.gcc || die
-	mv user-settings.gcc user-settings || die
+	sed -i "s,'PLATFORM=msvc','PLATFORM=unix-gcc'," user-settings
 }
 
 src_compile() {
@@ -36,4 +36,3 @@ src_install() {
 
 	dodoc README CHANGELOG LICENSE.TXT
 }
-
