@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.51 2003/05/26 21:40:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.52 2003/05/27 23:48:46 gmsoft Exp $
 
 *binutils-2.14.90.0.4 (26 May 2003)
 
@@ -126,10 +126,12 @@
   18 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
 
-  08 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
-  Added hppa to keywords.
 
 *binutils-2.13.90.0.18 (26 Jan 2003)
+
+  27 May 2003; Guy Martin <gmsoft@gentoo.org> binutils-2.13.90.0.18.ebuild:
+  Remasking binutils 2.13.90.0.18 for hppa which cause random segfault on
+  hppa1.1 stations.
 
   29 Mar 2003; Christian Birchinger <joker@gentoo.org>
   binutils-2.13.90.0.18.ebuild:
@@ -152,6 +154,9 @@
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> binutils-2.13.90.0.18.ebuild :
   Mark stable on alpha
+
+  08 Feb 2003; Guy Martin <gmsoft@gentoo.org> binutils-2.13.90.0.18.ebuild :
+  Added hppa to keywords.
 
   01 Feb 2003; Jon Nall <nall@gentoo.org> binutils-2.13.90.0.18.ebuild :
   made stable for ppc. this is to allow kde to compile happily and closes bug

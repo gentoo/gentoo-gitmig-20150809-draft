@@ -1,4 +1,4 @@
-MD5 3fd9884f02a8b0472756c816e27addf2 ChangeLog 10103
+MD5 6408bf71062927de93c6d43dfd3a4f7a ChangeLog 10305
 MD5 aadd595cfe7c0c5bbcec70650b452401 binutils-2.11.92.0.12.3-r2.ebuild 3125
 MD5 011c5a33d84072e1af09ccf89cba6d61 binutils-2.11.92.0.7.ebuild 2357
 MD5 368c85b995c3ab74a32a09e573aba1f9 binutils-2.12.90.0.15.ebuild 3512
@@ -7,7 +7,7 @@ MD5 da61d04d133fef7fad5eb175bf409094 binutils-2.14.90.0.2.ebuild 4829
 MD5 5ed1c40a92233028ce782a0c337603d9 binutils-2.13.90.0.16-r1.ebuild 4740
 MD5 09ad052b0ffe98d08f857b1dffee38ab binutils-2.14.90.0.4.ebuild 4835
 MD5 2adeb2860e4df3cdcb96ef6cd5430ab1 binutils-2.13.90.0.18-r1.ebuild 5376
-MD5 92d499d1d77ed2571dda9ea61195fa05 binutils-2.13.90.0.18.ebuild 4580
+MD5 51bfea19ab266367baf39b3e6224be33 binutils-2.13.90.0.18.ebuild 4580
 MD5 d7b4cc81d5633b9a2bca55e3f0b7205e binutils-2.13.90.0.20-r1.ebuild 5006
 MD5 da65d51e66e6bdc13a3df7049bddf4ae binutils-2.14.90.0.1-r1.ebuild 5098
 MD5 fe5fb935b171a472f5eb1a8bca63c136 files/binutils-2.12.90.0.14-glibc21.patch 7936
