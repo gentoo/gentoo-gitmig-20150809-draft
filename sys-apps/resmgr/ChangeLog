@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/resmgr
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/resmgr/ChangeLog,v 1.1 2004/10/31 02:03:29 pylon Exp $
+
+*resmgr-1.0 (31 Oct 2004)
+
+  31 Oct 2004; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +files/README.gentoo, +files/desktopdev, +files/resmgrd.confd,
+  +files/resmgrd.rc, +resmgr-1.0.ebuild:
+  Thanks to Stefan Briesenick for this ebuild in Bug #38122.
+

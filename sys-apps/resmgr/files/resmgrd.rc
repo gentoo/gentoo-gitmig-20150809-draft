@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/resmgr/files/resmgrd.rc,v 1.1 2004/10/31 02:03:29 pylon Exp $
+
+depend() {
+	before cron
+	need hotplug
+}
+
+start() {
+	ebegin "Starting resource manager"
+	/sbin/resmgrd -- ${RESMGRD_OPTS}
+	eend $? "Failed to start the resource manager"
+}
+
+stop() {
+	ebegin "Stopping the resource manager"
+	/sbin/resmgrd -k
+	eend $?
+}

@@ -1,0 +1,39 @@
+
+
+Installing the resource manager
+
+In order to use the resource manager, all you need to do is add the
+pam_resmgr module to your PAM files, and adjust the access control lists
+in /etc/resmgr.conf.
+
+When adding pam_resmgr to "local" login facilities such as XDM,
+it makes sense to give all users access to certain resource classes,
+e.g. a resource class named "desktop" that includes all devices
+a typical desktop user may need. To do so, use the following
+line
+
+	session optional pam_resmgr.so grant=desktop
+
+If you want to support X terminals, you may want to limit
+access to desktop devices only to the local X session, but
+not give any access to remote X terminals. To do so, remove
+the "grant=desktop" statement and use the following access control
+rule in /etc/resmgr.conf:
+
+	allow desktop tty=:0
+
+You can also add resmgr support to SSH sessions by editing
+/etc/pam.d/ssh, and adding the following line:
+
+	session optional pam_resmgr.so fake_ttyname
+
+Again, there's probably no point in giving all users logging
+in via ssh access to any devices by default. However, it may
+be useful to grant specific users access to certains classes
+of devices. For instance, the following gives user "kf"
+access to the scanner device:
+
+	class scanners
+	add /dev/scanner scanners
+	allow scanners user=kf
+
