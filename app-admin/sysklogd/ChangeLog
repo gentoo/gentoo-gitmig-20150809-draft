@@ -1,9 +1,12 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.12 2003/05/15 01:32:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.13 2003/07/16 11:44:58 tuxus Exp $
 
 
 *sysklogd-1.4.1-r4 (11 May 2003)
+
+  16 Jul Jan Seidel <tuxus@gentoo.org> bc-1.06-r5.ebuild :
+  Mark stable on mips
 
   14 May 2003; Joshua Kinard <kumba@gentoo.org> sysklogd-1.4.1-r4.ebuild:
   Added ~mips to KEYWORDS
