@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.31 2005/01/12 05:17:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.32 2005/01/12 12:24:10 eradicator Exp $
 
-inherit eutils flag-o-matic gcc versionator
+inherit eutils multilib flag-o-matic gcc versionator
 
 # Branch update support.  Following will disable:
 #  BRANCH_UPDATE=
@@ -54,7 +54,7 @@ LICENSE="LGPL-2"
 #        after ~2.3.3.20040420 break blackdown-jdk on sparc.
 KEYWORDS="x86 amd64 hppa ppc64 ~ppc -mips ~sparc"
 IUSE="nls pic build nptl erandom hardened multilib debug userlocales emul-linux-x86"
-RESTRICT="nostrip multilib-pkg" # we'll handle stripping ourself #46186
+RESTRICT="nostrip multilib-pkg-force" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
 # We also need linux26-headers if using NPTL. Including kernel headers is
@@ -611,7 +611,8 @@ src_unpack() {
 
 
 src_compile() {
-	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" ] && ! hasq multilib-pkg ${FEATURES}; then
+	local MLTEST=$(type dyn_unpack)
+	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
 		local OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
@@ -622,6 +623,7 @@ src_compile() {
 		unset OABI
 		return 0
 	fi
+	unset MLTEST
 
 	setup_flags
 
@@ -677,7 +679,8 @@ src_compile() {
 }
 
 src_install() {
-	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" ] && ! hasq multilib-pkg ${FEATURES}; then
+	local MLTEST=$(type dyn_unpack)
+	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
 		local OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
@@ -720,7 +723,7 @@ src_install() {
 		unset OABI
 		return 0
 	fi
-
+	unset MLTEST
 	setup_flags
 
 	# Need to dodir first because it might not exist (bad amd64 profiles)
@@ -833,6 +836,9 @@ EOF
 	# This is our new config file for building locales
 	insinto /etc
 	doins ${FILESDIR}/locales.build
+
+	# Handle includes for different ABIs
+	prep_ml_includes
 }
 
 fix_lib64_symlinks() {

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.25 2005/01/12 05:17:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.26 2005/01/12 12:24:11 eradicator Exp $
 
-inherit eutils flag-o-matic gcc versionator
+inherit eutils multilib flag-o-matic gcc versionator
 
 # Branch update support.  Following will disable:
 #  BRANCH_UPDATE=
@@ -54,7 +54,7 @@ LICENSE="LGPL-2"
 #        samba-1.0.9 tarball.
 KEYWORDS="~amd64 ppc64 -hppa ~ia64 ~ppc ~x86 ~mips -sparc"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck emul-linux-x86"
-RESTRICT="nostrip multilib-pkg" # we'll handle stripping ourself #46186
+RESTRICT="nostrip multilib-pkg-force" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
 # We also need linux26-headers if using NPTL. Including kernel headers is
@@ -695,7 +695,8 @@ glibc_do_configure() {
 
 
 src_compile() {
-	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" ] && ! hasq multilib-pkg ${FEATURES}; then
+	local MLTEST=$(type dyn_unpack)
+	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
 		local OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
@@ -706,7 +707,8 @@ src_compile() {
 		unset OABI
 		return 0
 	fi
-
+	unset MLTEST
+	
 	# do the linuxthreads build unless we're using nptlonly
 	if use !nptlonly ; then
 		glibc_do_configure linuxthreads
@@ -723,7 +725,8 @@ src_compile() {
 }
 
 src_install() {
-	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" ] && ! hasq multilib-pkg ${FEATURES}; then
+	local MLTEST=$(type dyn_unpack)
+	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
 		local OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
@@ -766,6 +769,7 @@ src_install() {
 		unset OABI
 		return 0
 	fi
+	unset MLTEST
 
 	setup_flags
 
@@ -955,6 +959,9 @@ EOF
 	doins ${FILESDIR}/locales.build
 	# example host.conf with multicast dns disabled by default
 	doins ${FILESDIR}/2.3.4/host.conf
+
+	# Handle includes for different ABIs
+	prep_ml_includes
 }
 
 must_exist() {
