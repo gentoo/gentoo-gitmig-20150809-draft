@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/hspell-0.5.ebuild,v 1.1 2003/05/08 15:38:55 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/hspell-0.5.ebuild,v 1.2 2004/03/21 15:28:49 mholzer Exp $
 
 DESCRIPTION="A Hebrew spell checker"
 HOMEPAGE="http://www.ivrix.org.il/projects/spell-checker/"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 
-DEPEND=">=perl-5.6.1"
+DEPEND=">=dev-lang/perl-5.6.1"
 
 src_compile() {
 	mv Makefile Makefile.orig
