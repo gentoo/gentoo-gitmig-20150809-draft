@@ -1,6 +1,9 @@
-# ChangeLog for dev-python/PyClimate
+# ChangeLog for dev-python/pyclimate
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.5 2004/07/24 00:38:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.6 2004/09/05 07:27:15 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   24 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pyclimate-1.2.1-r1.ebuild,
   pyclimate-1.2.1.ebuild:
