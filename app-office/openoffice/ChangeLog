@@ -1,6 +1,15 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.17 2003/02/12 05:13:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.18 2003/03/31 22:51:27 sethbc Exp $
+
+*openoffice-1.0.2-r1 (31 Mar 2003)
+
+  31 Mar 2003; Seth Chandler <sethbc@gentoo.org>; 
+  openoffice-1.0.2-r1.ebuild,
+  files/1.0.2/openoffice-1.0.2-default-fonts.patch,
+  files/1.0.2/openoffice-1.0.2-ft-antialias-advice.patch:
+  big openoffice cleanups, introduction of 1.0.2-r1 with better AA text support
+  =)
 
 *openoffice-1.0.1-r3 (12 Dec 2002)
 
