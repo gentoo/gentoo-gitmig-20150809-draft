@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.5 2002/07/30 00:50:11 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.6 2002/08/21 02:47:33 gerk Exp $
   
 *pygtk-0.6.9 (19 Jun 2002)
 
@@ -13,6 +13,9 @@
   New version, updated dependencies. Close bug #3891
 
 *pygtk-1.99.10 (13 Jun 2002)
+  21 Aug 2002; Mark Guertin <gerk@gentoo.org> pygtk-1.99.10.ebuild :
+  Added ppc to keywords  
+
   13 Jun 2002; Spider <spider@gentoo.org> pygtk-1.99.10.ebuild :
   I've got a headache so this is a simple bump to the next level.  and remember kids dont play in the playgrounds.
   
