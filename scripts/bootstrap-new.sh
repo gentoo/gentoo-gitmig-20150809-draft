@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.3 2005/02/04 16:26:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.4 2005/02/04 18:28:47 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -78,7 +78,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.3 2005/02/04 16:26:45 wolf31o2 Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.4 2005/02/04 18:28:47 wolf31o2 Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -90,6 +90,7 @@ for opt in "$@" ; do
 	esac
 done
 
+RESUME=0
 if [[ -n ${STRAP_RUN} ]]  ; then
 	if [ ${BOOTSTRAP_STAGE} -ge 4 ] ; then
 		echo
@@ -289,7 +290,7 @@ export USE="${ORIGUSE} bootstrap ${STAGE1_USE}"
 # before fully bootstrapping. 
 if [ ${BOOTSTRAP_STAGE} -le 2 ] ; then
 	show_status 3 Emerging packages
-	if [ ${RESUME} -eq 1 ] ; then
+	if [[ ${RESUME} -eq 1 ]] ; then
 		STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --resume"
 		cp /var/run/bootstrap-mtimedb /var/cache/edb
 	else
