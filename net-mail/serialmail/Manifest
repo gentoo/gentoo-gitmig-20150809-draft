@@ -1,7 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 61ad30ac0aaaedce45c3ef54ac85076e serialmail-0.75-r1.ebuild 1225
 MD5 ae768524ad8d9dc8cfe98809c0cf82ba serialmail-0.75.ebuild 1162
-MD5 cc7e246879f4e45d1c3d2f7255c503f7 ChangeLog 857
+MD5 fbbcd857588944f52364ac6bb4ad59b6 ChangeLog 1220
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 ffe26d706221e4eb0bd74ed0061a187b serialmail-0.75-r2.ebuild 1327
 MD5 3339480edaf2f8d572600ce92d8ffa33 files/errno.patch 567
 MD5 9470e572fd04d86fc02411a70786ebbc files/digest-serialmail-0.75-r1 66
+MD5 9470e572fd04d86fc02411a70786ebbc files/digest-serialmail-0.75-r2 66
+MD5 8f109390fe5512c09577e7c517bac17e files/serialmail-0.75-smtpauth_comp.patch 553
+MD5 4ca33e2db464e51e47125ffac9cff2df files/serialmail-0.75-smtpauth.patch 23803
 MD5 9470e572fd04d86fc02411a70786ebbc files/digest-serialmail-0.75 66
+MD5 8dec28dd6f859ead373fd2f6cc3bee41 files/serialmail-0.75-gentoo.patch 4257
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCHNI5FrxP71izLARAhePAJ4/EKTeDJ76VJw45FZmSXYUhvKgdACgsBTV
+teS/1CWx9TbhimwMfSzjA+8=
+=SzVr
+-----END PGP SIGNATURE-----
