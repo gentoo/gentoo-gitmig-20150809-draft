@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/hercules
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.13 2005/01/01 14:13:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.14 2005/02/24 01:59:36 malc Exp $
+
+  24 Feb 2005; Malcolm Lashley <malc@gentoo.org> :
+  Version bump - add ~amd64 - Bugs #71067 #74192
 
   10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   hercules-2.17.1-r1.ebuild, hercules-3.00.ebuild, hercules-3.01.ebuild:
