@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.12 2003/10/15 05:42:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.1 2003/10/15 05:42:04 seemant Exp $
 
 inherit gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/wget/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ppc sparc alpha hppa arm mips ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ~amd64 ~ia64"
 IUSE="ssl nls static ipv6 debug"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
@@ -23,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 
 	cd ${S}/src
 	epatch ${WORKDIR}/wget-new-percentage/wnp-20011208-2.diff
@@ -33,6 +33,8 @@ src_unpack() {
 		cd ${S}
 		epatch ${WORKDIR}/${P}-ipv6-debian.patch
 	fi
+
+	epatch ${FILESDIR}/${P}-2Glimit.diff
 }
 
 src_compile() {
