@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.31 2003/04/18 18:48:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.32 2003/04/26 16:29:41 joker Exp $
 
 *sed-4.0.7 (11 Apr 2003)
+
+  26 Apr 2003; Christian Birchinger <joker@gentoo.org> sed-4.0.7.ebuild:
+  Added stable sparc keyword
 
   18 Apr 2003; Aron Griffis <agriffis@gentoo.org> sed-4.0.7.ebuild:
   Mark stable on alpha because otherwise bootstrap is failing due to a linking
