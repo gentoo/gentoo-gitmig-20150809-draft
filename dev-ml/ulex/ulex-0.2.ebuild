@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ulex-0.2.ebuild,v 1.1 2003/10/23 04:45:29 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ulex-0.2.ebuild,v 1.2 2004/03/22 23:22:50 mattam Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cduce.org"
 SRC_URI="http://www.cduce.org/download/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=dev-lang/ocaml-3.06
 	>=dev-ml/findlib-0.8"
