@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.2.20040111.ebuild,v 1.3 2004/01/25 23:20:56 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.3.ebuild,v 1.1 2004/02/01 23:23:45 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -9,13 +9,11 @@ S="${WORKDIR}/${MY_P}"
 MYI2C="${WORKDIR}/i2c-headers"
 
 DESCRIPTION="Hardware Sensors Monitoring by lm_sensors"
-SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/${PN}/${MY_P}.tar.gz"
+SRC_URI="http://www.lm-sensors.nu/archive/${MY_P}.tar.gz"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
 SLOT="${KV}"
-# gentoo-sources-2.4.20-r1 and xfs-sources-2.4.20-r1 will
-# have support for this package, do not change these to ~
-# until your arch has i2c-2.7.0 in it's kernel.
+
 KEYWORDS="~x86 ~amd64 -ppc -sparc"
 LICENSE="GPL-2"
 
@@ -74,7 +72,7 @@ src_compile()  {
 	fi
 
 	if [ ! -e ${MYI2C}/linux/i2c.h ]; then
-		cp $LINUX/include/linux/i2c* ${MYI2C}/linux
+		cp $LINUX/include/linux/i2c* ${MYI2C}/linux || die "No I2C Includes! Install I2C!"
 	fi
 
 	echo; einfo "You may safely ignore any errors from compilation"
@@ -85,6 +83,9 @@ src_compile()  {
 
 	cd ${S}
 	emake clean
+
+	rm kernel/chips/via686a.d
+	rm kernel/chips/vt1211.d
 	if [ ${UserModeOnly} == true ]; then
 		emake CC=${CC} I2C_HEADERS=${MYI2C} user || die "Could not compile user-mode utilities!"
 	else

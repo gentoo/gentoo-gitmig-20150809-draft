@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.17 2004/01/25 23:20:56 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.18 2004/02/01 23:23:45 plasmaroo Exp $
+
+*lm-sensors-2.8.3 (01 Feb 2004)
+
+  01 Feb 2004; <plasmaroo@gentoo.org> lm-sensors-2.8.2.20040111.ebuild,
+  lm-sensors-2.8.2.ebuild, lm-sensors-2.8.3.ebuild:
+  Version bump; closes bug #40112.
 
   25 Jan 2004; <plasmaroo@gentoo.org> lm-sensors-2.8.1.ebuild,
   lm-sensors-2.8.2.20040111.ebuild, lm-sensors-2.8.2.ebuild:

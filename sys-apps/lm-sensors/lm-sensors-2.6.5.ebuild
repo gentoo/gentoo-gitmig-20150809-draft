@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.6.5.ebuild,v 1.5 2004/01/04 18:29:46 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.6.5.ebuild,v 1.6 2004/02/01 23:23:45 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc -sparc"
+KEYWORDS="x86 ~amd64"
 
 DEPEND="virtual/linux-sources"
 
@@ -21,13 +21,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/no-isadump-ppc.patch
-
 }
 
 src_compile()  {
-
 	filter-flags -fPIC
-
 	emake clean all || die "lm_sensors requires the source of a compatible kernel\nversion installed in /usr/src/linux and i2c support built as a modules"
 }
 
