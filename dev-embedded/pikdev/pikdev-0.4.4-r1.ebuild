@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.4.4-r1.ebuild,v 1.1 2004/04/08 22:46:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.4.4-r1.ebuild,v 1.2 2004/04/15 15:18:16 dragonheart Exp $
 
 
 inherit kde
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 RDEPEND="	x11-libs/qt
-		x11-base/xfree
+		virtual/x11
 		sys-libs/zlib
 		dev-libs/expat
 		sys-devel/gcc
