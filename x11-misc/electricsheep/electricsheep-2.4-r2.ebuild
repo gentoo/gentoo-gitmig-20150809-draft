@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.4-r1.ebuild,v 1.1 2003/11/17 04:41:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.4-r2.ebuild,v 1.1 2003/12/04 15:06:05 vapier Exp $
 
 inherit eutils
 
@@ -40,14 +40,16 @@ src_install() {
 	sed -i "s/^install-data-local:$/install-data-local:\nmy-install-data-local:/" \
 		Makefile || die "sed Makefile failed"
 
-	# install the main stuff ... flame doesn't create /usr/bin so we have to.
-	dodir /usr/bin
-	make install DESTDIR=${D} || die "make install failed"
-
-	# remove header files that are installed over libmpeg2
-	rm -rf ${D}/usr/include
-
 	# install the xscreensaver config file
 	insinto /usr/share/control-center/screensavers
 	doins electricsheep.xml
+
+	# install the main stuff ... flame doesn't create /usr/bin so we have to.
+	dodir /usr/bin
+	make install DESTDIR=${D} || die "make install failed"
+	dodir /usr/share/electricsheep
+	mv ${D}/usr/share/electricsheep-* ${D}/usr/share/electricsheep/
+
+	# remove header files that are installed over libmpeg2
+	rm -rf ${D}/usr/include
 }
