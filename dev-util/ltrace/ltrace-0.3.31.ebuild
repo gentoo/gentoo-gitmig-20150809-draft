@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.4 2003/10/03 00:13:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.5 2003/10/10 14:03:41 taviso Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ltrace shows runtime library call information for dynamically linked executables"
@@ -19,7 +19,6 @@ src_compile() {
 	econf || die
 
 	# modify CFLAGS (hopefully in a more time friendly way)
-	mv Makefile Makefile.orig
 	sed -i "s/ -O2 / ${CFLAGS} /" Makefile
 
 	emake all || make all || die

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.10 2003/10/03 00:13:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.11 2003/10/10 14:03:41 taviso Exp $
+
+  10 Oct 2003; Tavis Ormandy <taviso@gentoo.org> ltrace-0.3.31.ebuild:
+  typo, moved Makefile then attempted inline sed.
 
   02 Oct 2003; Seemant Kulleen <seemant@gentoo.org> ltrace-0.3.31.ebuild:
   added an || make (unconfirmed emake failure), closing bug #28121 by Marc
