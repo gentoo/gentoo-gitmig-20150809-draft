@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.5.ebuild,v 1.1 2002/11/17 14:01:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.5-r1.ebuild,v 1.1 2002/11/19 22:26:52 foser Exp $
 
 IUSE="perl gnome ssl gtk python mmx ipv6 nls kde" 
 
@@ -83,11 +83,6 @@ src_install() {
 	sed -e "s:Exec=xchat:Exec=xchat-2:" -e "s:Name=XChat IRC:Name=XChat 2 IRC:" xchat.desktop.old > xchat.desktop
 
 	einstall install || die "Install failed"
-
-	use python &&
-	(	dosym /usr/lib/xchat/plugins/python.so-2 /usr/lib/xchat/plugins/python.so )
-	use perl &&
-	(	dosym /usr/lib/xchat/plugins/perl.so-2 /usr/lib/xchat/plugins/perl.so  )
 
 	dodoc AUTHORS COPYING ChangeLog README
 }
