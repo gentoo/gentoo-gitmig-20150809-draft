@@ -1,12 +1,16 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.10 2004/04/12 08:08:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.11 2004/04/14 13:03:55 lanius Exp $
 
 *amarok-1.0_beta1 (12 Apr 2004)
 
   12 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   amarok-1.0_beta1.ebuild:
   Version bump closes bug #47539.
+
+  14 Apr 2004; Heinrich Wendel <lanius@gentoo.org> amarok-0.7.0.ebuild,
+  amarok-0.8.3.ebuild, amarok-0.9.ebuild:
+  fix depend, mark 0.9 stable
 
   17 Mar 2004; David Holm <dholm@gentoo.org> amarok-0.9.ebuild:
   Added to ~ppc.

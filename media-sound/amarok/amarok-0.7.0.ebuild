@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-0.7.0.ebuild,v 1.2 2004/01/22 07:21:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-0.7.0.ebuild,v 1.3 2004/04/14 13:03:55 lanius Exp $
 
 inherit kde-base
 need-kde 3
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-newdepend "kde-base/kdemultimedia"
+DEPEND="kde-base/kdemultimedia"
 
 src_compile() {
 	PREFIX=`kde-config --prefix`
