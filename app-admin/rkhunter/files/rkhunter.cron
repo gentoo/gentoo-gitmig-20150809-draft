@@ -1,0 +1,41 @@
+#!/bin/sh
+
+### Begin Configuration ###
+
+# set this to 'yes' to enable
+ENABLE=no
+
+RKHUNTER_EXEC="/usr/bin/rkhunter"
+RKHUNTER_OPTS="--checkall --cronjob --skip-keypress"
+
+# set to 'yes' if you wish the output to be mailed to you
+SEND_EMAIL=no
+
+# NOTE: the rest of these options are only relevant 
+# if you set SEND_EMAIL to 'yes'
+
+EMAIL_SUBJECT="${HOSTNAME}: rkhunter output"
+EMAIL_RECIPIENT=root
+EMAIL_CMD="| mail -s \"${EMAIL_SUBJECT}\" ${EMAIL_RECIPIENT}"
+
+# set to 1 to recieve only warnings & errors
+# set to 2 to recieve ALL rkhunter output
+EMAIL_VERBOSITY=1
+
+### End Configuration ###
+
+if [ "${ENABLE}" = "yes" ]; then
+	CMD="${RKHUNTER_EXEC} ${RKHUNTER_OPTS}"
+
+	if [ "${SEND_EMAIL}" = "yes" ]; then
+		if [ "${EMAIL_VERBOSITY}" -eq 1 ]; then
+			CMD="${CMD} --quiet ${EMAIL_CMD}"
+		else
+			CMD="${CMD} ${EMAIL_CMD}"
+		fi
+	else
+		CMD="${CMD} &>/dev/null"
+	fi
+
+	eval exec "${CMD}"
+fi
