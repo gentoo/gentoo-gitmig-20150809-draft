@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.13 2004/05/14 00:25:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.14 2004/05/25 03:24:59 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox nntp vanilla"
 
@@ -129,8 +129,8 @@ src_install() {
 	make DESTDIR=${D} install || die
 	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
-		einfo "Not installing an /etc/Muttrc as mbox is default configuration"
-		einfo "with mutt"
+		insinto /etc/mutt
+		doins ${FILESDIR}/Muttrc.mbox
 	else
 		insinto /etc/mutt
 		doins ${FILESDIR}/Muttrc
