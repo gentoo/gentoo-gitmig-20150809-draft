@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.6-r1.ebuild,v 1.1 2003/07/11 13:03:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.6-r1.ebuild,v 1.2 2004/02/22 05:50:06 pfeifer Exp $
 
 IUSE=""
 
@@ -8,7 +8,7 @@ S="${WORKDIR}/radiusd-cistron-${PV}/src"
 DESCRIPTION="An authentication and accounting server for terminal servers that speak the RADIUS protocol."
 SRC_URI="ftp://ftp.radius.cistron.nl/pub/radius/radiusd-cistron-${PV}.tar.gz"
 HOMEPAGE="http://www.radius.cistron.nl/"
-KEYWORDS="~x86"
+KEYWORDS="x86 -*"
 LICENSE="GPL-2"
 SLOT="0"
 

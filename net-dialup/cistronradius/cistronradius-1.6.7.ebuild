@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.6.ebuild,v 1.1 2003/07/04 02:54:13 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.7.ebuild,v 1.1 2004/02/22 05:50:06 pfeifer Exp $
 
 IUSE=""
 
@@ -8,16 +8,17 @@ S="${WORKDIR}/radiusd-cistron-${PV}/src"
 DESCRIPTION="An authentication and accounting server for terminal servers that speak the RADIUS protocol."
 SRC_URI="ftp://ftp.radius.cistron.nl/pub/radius/radiusd-cistron-${PV}.tar.gz"
 HOMEPAGE="http://www.radius.cistron.nl/"
-KEYWORDS="~x86"
+KEYWORDS="~x86 -*"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="sys-devel/gcc"
+DEPEND="sys-devel/gcc
+	>=sys-apps/sed-4"
 RDEPEND=${DEPEND}
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${A} ; cd ${S}
+
 	sed -i -e "s:/usr/local:/usr:g" \
 	-e "s:-Wall -g:${CFLAGS}:g" \
 	Makefile || die
@@ -25,12 +26,11 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}
-	emake
+	emake || die
 }
 
 src_install() {
-	cd ${S}
+#	cd ${S}
 	dodir /usr/sbin
 	exeinto /usr/sbin
 	doexe ${S}/checkrad
