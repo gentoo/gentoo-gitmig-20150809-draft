@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.3-r1.ebuild,v 1.1 2004/09/14 13:38:11 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.3-r1.ebuild,v 1.2 2004/09/15 08:26:39 robbat2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,12 +19,19 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	sed -i -e "/install/s: --strip : :" Makefile
+	# Clean up the makefile
+	# firstly we want to control stripping
+	# and secondly these gcc flags have changed
+	sed -i Makefile \
+	-e '/install/s: --strip : :' \
+	-e '/ALL_CFLAGS += $(call check_gcc,-fweb,)/d' \
+	-e '/ALL_CFLAGS += $(call check_gcc,-Wstrict-aliasing=2,)/s,=2,,'
 
 	# mips 2.4.23 headers (and 2.6.x) don't allow PAGE_SIZE to be defined in
 	# userspace anymore, so this patch instructs procps to get the
 	# value from sysconf().
 	use mips && epatch ${FILESDIR}/${PN}-mips-define-pagesize.patch
+
 }
 
 src_compile() {

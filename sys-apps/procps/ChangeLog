@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.83 2004/09/14 13:41:20 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.84 2004/09/15 08:26:39 robbat2 Exp $
+
+  15 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> procps-3.2.3-r1.ebuild:
+  Make this compile with GCC3.4.
 
   14 Sep 2004; Brandon Low <lostlogic@gentoo.org>
   -files/procps-3.1.11-multipids.patch, -files/procps-3.1.12-selinux.diff.bz2,
