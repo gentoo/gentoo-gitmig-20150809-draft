@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.12 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.13 2003/09/07 11:50:05 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
@@ -20,9 +20,9 @@ KEYWORDS="x86 ppc sparc amd64"
 inherit flag-o-matic
 if [ ${ARCH} = "sparc" ]
 then
-        filter-flags "-O3"
-        filter-flags "-O2"
-        filter-flags "-O"
+	filter-flags "-O3"
+	filter-flags "-O2"
+	filter-flags "-O"
 fi
 # end fix
 
