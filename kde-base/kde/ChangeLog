@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.45 2003/11/29 23:26:06 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.46 2003/12/04 12:18:08 caleb Exp $
+
+*kde-3.2.0_beta2 (04 Dec 2003)
+
+  04 Dec 2003; Caleb Tennis <caleb@gentoo.org> kde-3.2.0_beta2.ebuild:
+  New beta version
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> kde-3.1.4.ebuild:
   mark stable on amd64
