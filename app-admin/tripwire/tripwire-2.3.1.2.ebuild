@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.1 2003/07/18 13:11:49 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.2 2003/07/19 08:45:27 taviso Exp $
 
 TW_VER="2.3.1-2"
 DESCRIPTION="Tripwire is an Open Source File Integrity Checker and IDS."
@@ -17,15 +17,14 @@ IUSE=""
 
 DEPEND="virtual/glibc
 	dev-util/patchutils
-	dev-libs/STLport
 	sys-devel/automake
 	app-arch/unzip
 	dev-libs/openssl"
 
 RDEPEND="virtual/glibc
-	dev-libs/STLport
 	virtual/cron
 	virtual/mta
+	net-mail/mailx
 	dev-libs/openssl"
 
 S="${WORKDIR}/tripwire-${TW_VER}"

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.2 2003/07/18 13:17:21 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.3 2003/07/19 08:45:26 taviso Exp $
+
+  19 Jul 2003; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2.ebuild:
+  no longer needs STL, but depend on mailx.
 
   18 Jul 2003; Tavis Ormandy <taviso@gentoo.org> metadata.xml:
   metadata
