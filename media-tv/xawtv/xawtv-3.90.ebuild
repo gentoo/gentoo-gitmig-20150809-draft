@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.90.ebuild,v 1.2 2003/10/21 22:27:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.90.ebuild,v 1.3 2003/10/26 03:59:01 brad_mssw Exp $
 
 inherit virtualx
 
@@ -32,6 +32,15 @@ DEPEND=">=sys-libs/ncurses-5.1
 	quicktime? ( virtual/quicktime )"
 
 src_compile() {
+
+#	mmx enables 32bit assembly which is not valid when compiling 64bit on amd64
+	if [ "${ARCH}" = "x86" ]
+	then
+		myconf="`use_enable mmx`"
+	else
+		myconf=""
+	fi
+
 	econf \
 		--with-x \
 		--enable-xfree-ext \
@@ -41,9 +50,9 @@ src_compile() {
 		`use_enable motif` \
 		`use_enable quicktime` \
 		`use_enable alsa` \
-		`use_enable mmx` \
 		`use_enable lirc` \
 		`use_enable opengl gl`\
+		${myconf} \
 		`use_enable aalib aa` || die " xawtv configure failed"
 
 	make || die
