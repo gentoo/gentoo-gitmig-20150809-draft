@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qhull
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.4 2003/02/12 07:16:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.5 2003/06/09 18:28:07 george Exp $
+
+  09 Jun 2003; George Shapovalov <george@gentoo.org> qhull-3.1-r1.ebuild, files/digest-qhull-3.1-r1 :
+  updated ebuild to make and install shared version of library in addition to static.
+  Thanks to Brent Redeker <bredeker@cc.edu> for submission
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
