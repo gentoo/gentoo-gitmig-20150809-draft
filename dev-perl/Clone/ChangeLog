@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Clone
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.1 2003/06/04 11:11:27 mcummings Exp $
+
+*Clone-0.13 (04 Jun 2003)
+
+  04 Jun 2003; Michael Cummings <mcummings@gentoo.org> Clone-0.13.ebuild:
+  Fills bug 21791
+
