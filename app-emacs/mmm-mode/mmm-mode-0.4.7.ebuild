@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/mmm-mode-0.4.7.ebuild,v 1.3 2003/09/06 22:01:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/mmm-mode-0.4.7.ebuild,v 1.4 2004/03/04 05:12:12 jhuebel Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mmm-mode.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 
 DEPEND="virtual/emacs"
 
