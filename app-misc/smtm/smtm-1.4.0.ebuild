@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/smtm-1.4.0.ebuild,v 1.9 2004/06/14 08:53:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/smtm-1.4.0.ebuild,v 1.10 2004/06/24 22:33:41 agriffis Exp $
 
 DESCRIPTION="Stock ticker, profit/loss calculator and chart tool"
 HOMEPAGE="http://eddelbuettel.com/dirk/code/smtm.html"

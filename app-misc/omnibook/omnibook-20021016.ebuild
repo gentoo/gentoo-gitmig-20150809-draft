@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/omnibook/omnibook-20021016.ebuild,v 1.5 2004/03/14 10:59:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/omnibook/omnibook-20021016.ebuild,v 1.6 2004/06/24 22:27:36 agriffis Exp $
 
 MY_PV="2002-10-16"
 MY_P=${PN}-${MY_PV}

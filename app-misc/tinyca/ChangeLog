@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/tinyca
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.9 2004/03/23 23:33:14 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.10 2004/06/24 22:35:37 agriffis Exp $
 
   23 Mar 2004; Jason Wever <weeve@gentoo.org> tinyca-0.5.4-r1.ebuild:
   Added ~sparc keyword.

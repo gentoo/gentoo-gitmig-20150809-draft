@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/freemind
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.9 2004/06/23 02:07:04 absinthe Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.10 2004/06/24 22:11:40 agriffis Exp $
 
   22 Jun 2004; Dylan Carlson <absinthe@gentoo.org> freemind-0.7.1.ebuild:
   Keywords amd64.

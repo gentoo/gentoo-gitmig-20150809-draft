@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01-r1.ebuild,v 1.5 2004/02/06 04:19:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01-r1.ebuild,v 1.6 2004/06/24 22:12:17 agriffis Exp $
 
 DESCRIPTION="The GNU Calendar - a replacement for cal"
 HOMEPAGE="http://www.gnu.org/software/gcal/gcal.html"

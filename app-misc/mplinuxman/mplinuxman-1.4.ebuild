@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.4.ebuild,v 1.3 2004/06/02 02:16:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.4.ebuild,v 1.4 2004/06/24 22:25:15 agriffis Exp $
 
 DESCRIPTION="A gtk2 frontend and drivers for mpman f50/55/60 mp3 players."
 HOMEPAGE="http://mplinuxman.sourceforge.net"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.3.3.ebuild,v 1.4 2004/03/15 07:50:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.3.3.ebuild,v 1.5 2004/06/24 22:30:45 agriffis Exp $
 
 DESCRIPTION="Command line tools for transfering mp3s to and from a Rio 600, 800, and Nike PSA/Play"
 HOMEPAGE="http://rioutil.sourceforge.net/"

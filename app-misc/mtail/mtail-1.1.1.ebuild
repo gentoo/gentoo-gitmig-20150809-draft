@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1.ebuild,v 1.3 2003/10/24 15:02:30 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1.ebuild,v 1.4 2004/06/24 22:25:26 agriffis Exp $
 
 DESCRIPTION="tail workalike, that performs output colourising"
 HOMEPAGE="http://matt.immute.net/src/mtail/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/largorecipes/largorecipes-0.9.0.3.ebuild,v 1.6 2004/05/05 16:36:21 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/largorecipes/largorecipes-0.9.0.3.ebuild,v 1.7 2004/06/24 22:21:09 agriffis Exp $
 
 # Based on an original ebuild by Per Wigren <wigren@home.se>
 

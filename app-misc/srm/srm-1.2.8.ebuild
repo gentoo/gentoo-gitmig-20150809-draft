@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.8.ebuild,v 1.3 2004/06/08 21:48:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.8.ebuild,v 1.4 2004/06/24 22:34:35 agriffis Exp $
 
 DESCRIPTION="A command-line compatible rm which destroys file contents before unlinking."
 HOMEPAGE="http://sourceforge.net/projects/srm"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/jive-1.1.ebuild,v 1.5 2004/04/06 23:11:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/jive-1.1.ebuild,v 1.6 2004/06/24 22:17:10 agriffis Exp $
 
 DESCRIPTION="Filter that converts English text to Jive, by Adam Douglas"
 HOMEPAGE="http://dev.gentoo.org/~brad/"

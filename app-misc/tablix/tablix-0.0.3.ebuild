@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/tablix-0.0.3.ebuild,v 1.3 2004/03/14 10:59:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/tablix-0.0.3.ebuild,v 1.4 2004/06/24 22:34:59 agriffis Exp $
 
 DESCRIPTION="Tablix is a high school timetable generator written in C."
 HOMEPAGE="http://users.kiss.si/~k4fe1336/tablix/"

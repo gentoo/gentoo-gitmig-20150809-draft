@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/secure-delete
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.7 2004/06/08 21:38:05 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.8 2004/06/24 22:32:47 agriffis Exp $
 
   09 Jun 2004; Daniel Black <dragonheart@gentoo.org> secure-delete-3.0.ebuild,
   +metadata.xml:

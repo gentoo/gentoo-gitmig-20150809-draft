@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.0.2.ebuild,v 1.3 2004/05/02 05:59:37 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.0.2.ebuild,v 1.4 2004/06/24 22:28:33 agriffis Exp $
 
 S=${WORKDIR}/${PN}
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/birthday-1.5.ebuild,v 1.8 2004/05/29 01:26:04 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/birthday-1.5.ebuild,v 1.9 2004/06/24 22:03:30 agriffis Exp $
 
 DESCRIPTION="Displays a list of events happening in the near future"
 HOMEPAGE="http://users.zetnet.co.uk/mortia/source/"

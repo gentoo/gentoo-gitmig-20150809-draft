@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5.ebuild,v 1.16 2004/06/14 08:52:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5.ebuild,v 1.17 2004/06/24 22:34:03 agriffis Exp $
 
 SRC_URI="http://www.devolution.com/~slouken/projects/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.devolution.com/~slouken/projects/splitvt"

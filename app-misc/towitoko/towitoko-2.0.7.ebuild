@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7.ebuild,v 1.6 2004/04/25 22:24:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7.ebuild,v 1.7 2004/06/24 22:36:20 agriffis Exp $
 
 DESCRIPTION="This library provides a driver for using Towitoko smartcard readers under UNIX environment."
 SRC_URI="http://www.geocities.com/cprados/files/${P}.tar.gz"

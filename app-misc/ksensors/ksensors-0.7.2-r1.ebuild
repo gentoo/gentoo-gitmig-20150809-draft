@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ksensors/ksensors-0.7.2-r1.ebuild,v 1.3 2004/05/02 11:31:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ksensors/ksensors-0.7.2-r1.ebuild,v 1.4 2004/06/24 22:20:37 agriffis Exp $
 
 inherit kde eutils
 need-kde 3.0

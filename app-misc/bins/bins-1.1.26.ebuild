@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.26.ebuild,v 1.3 2004/06/15 10:26:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.26.ebuild,v 1.4 2004/06/24 22:03:18 agriffis Exp $
 
 inherit eutils
 

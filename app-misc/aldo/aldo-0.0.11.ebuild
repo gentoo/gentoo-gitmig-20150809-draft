@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/aldo-0.0.11.ebuild,v 1.4 2004/04/10 16:17:04 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/aldo-0.0.11.ebuild,v 1.5 2004/06/24 22:01:31 agriffis Exp $
 
 DESCRIPTION="ALDO is a morse tutor."
 HOMEPAGE="http://aldo.sourceforge.net"

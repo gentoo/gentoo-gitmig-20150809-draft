@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/pms-0.94.ebuild,v 1.6 2004/06/19 03:39:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/pms-0.94.ebuild,v 1.7 2004/06/24 22:29:16 agriffis Exp $
 
 DESCRIPTION="Password Management System"
 HOMEPAGE="http://passwordms.sourceforge.net/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/mepl-0.45.ebuild,v 1.4 2003/11/20 09:43:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/mepl-0.45.ebuild,v 1.5 2004/06/24 22:24:13 agriffis Exp $
 
 SRC_URI="http://www.hof-berlin.de/mepl/mepl${PV}.tar.gz"
 HOMEPAGE="http://www.hof-berlin.de/mepl/"

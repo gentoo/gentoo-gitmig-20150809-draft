@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.3.ebuild,v 1.7 2004/06/07 06:03:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.3.ebuild,v 1.8 2004/06/24 22:14:15 agriffis Exp $
 
 DESCRIPTION="An open-source GIS with raster and vector functionality."
 HOMEPAGE="http://grass.itc.it/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dfm/dfm-0.99.9.ebuild,v 1.10 2004/06/14 09:15:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dfm/dfm-0.99.9.ebuild,v 1.11 2004/06/24 22:08:08 agriffis Exp $
 
 DESCRIPTION="Desktop Manager. Good replacement for gmc or nautilus"
 SRC_URI="http://www.kaisersite.de/dfm/${P}.tar.gz"

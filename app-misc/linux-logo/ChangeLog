@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/linux-logo
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.10 2004/06/20 18:51:25 fvdpol Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.11 2004/06/24 22:22:25 agriffis Exp $
 
   20 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> linux-logo-4.09.ebuild:
   Added ~amd64 keyword.

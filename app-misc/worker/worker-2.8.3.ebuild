@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.8.3.ebuild,v 1.4 2004/03/21 15:44:58 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.8.3.ebuild,v 1.5 2004/06/24 22:38:08 agriffis Exp $
 
 DESCRIPTION="Worker Filemanager: Amiga Directory Opus 4 clone."
 SRC_URI="http://www.boomerangsworld.de/worker/downloads/${P}.tar.bz2"

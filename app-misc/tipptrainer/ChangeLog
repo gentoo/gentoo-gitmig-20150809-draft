@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/tipptrainer
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tipptrainer/ChangeLog,v 1.2 2004/03/21 15:01:04 mholzer Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tipptrainer/ChangeLog,v 1.3 2004/06/24 22:35:47 agriffis Exp $
 
   21 Mar 2004; Martin Holzer <mholzer@gentoo.org> tipptrainer-0.5.0a.ebuild:
   adding categorie. see 45110 for details

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/zisofs-tools-1.0.4.ebuild,v 1.8 2004/06/20 08:05:55 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/zisofs-tools-1.0.4.ebuild,v 1.9 2004/06/24 22:38:29 agriffis Exp $
 
 DESCRIPTION="User utilities for zisofs"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/fs/zisofs/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox-session/rox-session-0.1.20.ebuild,v 1.4 2004/06/02 21:08:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox-session/rox-session-0.1.20.ebuild,v 1.5 2004/06/24 22:31:51 agriffis Exp $
 
 MY_PN="ROX-Session"
 DESCRIPTION="Rox-Session is a really simple session manager"

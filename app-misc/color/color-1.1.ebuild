@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.5 2004/03/27 17:12:11 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.6 2004/06/24 22:06:15 agriffis Exp $
 
 inherit ccc
 

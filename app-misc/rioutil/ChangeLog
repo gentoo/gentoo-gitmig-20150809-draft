@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/rioutil
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.13 2004/06/20 01:19:24 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.14 2004/06/24 22:30:45 agriffis Exp $
 
   20 Jun 2004; Daniel Black <dragonheart@gentoo.org> rioutil-1.4.4.ebuild:
   added depend on linuxheaders-2.4. It fails against linuxheaders-2.6. Bug

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9005.483.ebuild,v 1.7 2004/06/02 02:10:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9005.483.ebuild,v 1.8 2004/06/24 22:08:45 agriffis Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}

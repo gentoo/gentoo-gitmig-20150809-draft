@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/dtach-0.6.ebuild,v 1.2 2004/06/23 20:53:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/dtach-0.6.ebuild,v 1.3 2004/06/24 22:08:56 agriffis Exp $
 
 DESCRIPTION="A program that emulates the detach feature of screen"
 HOMEPAGE="http://dtach.sourceforge.net/"

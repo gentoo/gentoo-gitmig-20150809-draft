@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/splitvt
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.6 2004/04/23 10:24:32 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.7 2004/06/24 22:34:03 agriffis Exp $
 
   23 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> splitvt-1.6.5.ebuild:
   Unmask on amd64.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.2.ebuild,v 1.5 2004/01/15 19:04:48 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.2.ebuild,v 1.6 2004/06/24 22:37:24 agriffis Exp $
 
 DESCRIPTION="Console file manager with vi/vim-like keybindings"
 HOMEPAGE="http://vifm.sourceforge.net/"

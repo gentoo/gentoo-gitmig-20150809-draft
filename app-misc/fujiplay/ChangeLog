@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/fujiplay
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fujiplay/ChangeLog,v 1.5 2003/12/07 16:06:44 mholzer Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fujiplay/ChangeLog,v 1.6 2004/06/24 22:11:50 agriffis Exp $
 
   07 Dec 2003; Martin Holzer <mholzer@gentoo.org> fujiplay-1.33.ebuild:
   digest update. Closes #34931.

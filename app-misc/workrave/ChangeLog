@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/workrave
-# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.20 2004/06/02 02:13:35 agriffis Exp $
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.21 2004/06/24 22:38:18 agriffis Exp $
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> workrave-1.4.0-r1.ebuild,
   workrave-1.6.1.ebuild:

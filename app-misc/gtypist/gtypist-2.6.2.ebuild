@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.6.2.ebuild,v 1.6 2004/03/14 10:59:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.6.2.ebuild,v 1.7 2004/06/24 22:15:11 agriffis Exp $
 
 DESCRIPTION="universal typing tutor"
 SRC_URI="mirror://gnu/gtypist/${P}.tar.gz"

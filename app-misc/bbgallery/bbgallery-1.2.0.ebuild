@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bbgallery/bbgallery-1.2.0.ebuild,v 1.6 2004/05/04 16:33:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bbgallery/bbgallery-1.2.0.ebuild,v 1.7 2004/06/24 22:02:45 agriffis Exp $
 
 DESCRIPTION="Webpage image gallery creation perl script"
 HOMEPAGE="http://bbgallery.sourceforge.net/"

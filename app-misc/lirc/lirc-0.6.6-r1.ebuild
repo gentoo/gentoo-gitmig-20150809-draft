@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.6-r1.ebuild,v 1.9 2004/06/07 07:05:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.6-r1.ebuild,v 1.10 2004/06/24 22:22:37 agriffis Exp $
 
 inherit eutils
 
