@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.13 2004/09/06 00:21:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.14 2004/09/29 18:07:08 langthang Exp $
+
+  29 Sep 2004; Tuan Van <langthang@gentoo.org> :
+  stable on x86. Remove old ebuild.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> mailutils-0.5.ebuild:
   Switch to use epause and ebeep, bug #62950
