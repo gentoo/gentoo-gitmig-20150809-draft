@@ -2,15 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Script Revised by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-414e.ebuild,v 1.3 2001/07/04 14:51:22 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-414e-r1.ebuild,v 1.1 2001/08/13 02:21:35 pm Exp $
 
 P=vlnx414e
-A="${P}.tar.Z dat-4145.tar"
+A="${P}.tar.Z dat-4153.tar"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="McAfee VirusScanner for Unix/Linux(Shareware)"
 SRC_URI="http://download.mcafee.com/products/evaluation/virusscan/english/unix/linux/vlnx414e.tar.Z
-	 http://download.nai.com/products/datfiles/4.x/nai/dat-4145.tar"
+	 http://download.nai.com/products/datfiles/4.x/nai/dat-4153.tar"
 
 DEPEND=""
 RDEPEND="sys-devel/ld.so"
@@ -18,8 +18,8 @@ src_unpack() {
   cd ${WORKDIR}
   mkdir ${P}
   cd ${P}
-  unpack vlnx407e.tar.Z
-  tar -xf ${DISTDIR}/dat-4098.tar
+  unpack vlnx414e.tar.Z
+  tar -xf ${DISTDIR}/dat-4153.tar
 }
 
 src_compile() {                           
