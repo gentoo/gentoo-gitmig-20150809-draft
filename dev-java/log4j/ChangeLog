@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.13 2004/01/19 04:56:24 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.14 2004/03/22 23:11:19 zx Exp $
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> log4j-1.2.8.ebuild:
+  Clean up + QA stuff
 
   19 Jan 2004; Adrian Almenar <strider@gentoo.org> log4j-1.2.8.ebuild:
   Added amd64 keyword. Stable on ppc.
