@@ -1,0 +1,25 @@
+# ChangeLog for dev-perl/glib-perl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.1 2003/08/04 20:14:57 mcummings Exp $
+
+*glib-perl-0.92 (04 Aug 2003)
+
+  04 Aug 2003; Michael Cummings <mcummings@gentoo.org> glib-perl-0.26.ebuild,
+  glib-perl-0.90.ebuild, glib-perl-0.92.ebuild:
+  Moved to glib-perl to avoid conflict with other glib
+
+*glib-0.92 (03 Aug 2003)
+
+  03 Aug 2003; Michael Cummings <mcummings@gentoo.org> glib-0.92.ebuild:
+  CPAN Version bump
+
+*glib-0.90 (22 Jul 2003)
+
+  22 Jul 2003; Michael Cummings <mcummings@gentoo.org> glib-0.90.ebuild:
+  CPAN version bump
+
+*glib-0.26 (20 Jul 2003)
+
+  20 Jul 2003; Michael Cummings <mcummings@gentoo.org> glib-0.26.ebuild:
+  dep for new gtk2-perl, submitted by Rigo Ketelings <rigo@home.nl> in bug 24036
+
