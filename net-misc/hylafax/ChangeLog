@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.4 2002/07/07 08:06:20 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.5 2002/08/12 15:17:47 raker Exp $
+
+*hylafax-4.1.3 (12 Aug 2002)
+
+  12 Aug 2002; Nick Hadaway <raker@gentoo.org> hylafax-4.1.3.ebuild,
+  files/digest-hylafax-4.1.3 :
+  Version bump.  I have removed previous patches from the ebuild
+  temporarily until I can figure out which patches are still needed.
+  Taken from the release notes:
+    4.1.3 includes fixes for a remote format string vulnerability 
+    which could be abused in a denial of service attack. Also fixed 
+    is a buffer overflow condition when receiving fax image data 
+    which potentially could be exploited to execute arbitrary code as 
+    root. Also present in 4.1.3 are fixes for several other local remote 
+    format string vulnerabilities which, in some installations, could 
+    lead to elevated privileges by abuse. Everyone is advised to upgrade.
 
 *hylafax-4.1.2-r1 (24 Apr 2002)
 
