@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.4.3.ebuild,v 1.4 2003/01/06 05:37:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.4.3.ebuild,v 1.5 2003/01/22 18:42:49 mholzer Exp $
 
 IUSE="arts esd gnome nls"
 
@@ -14,6 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
+	media-libs/audiofile
 	arts? ( >=kde-base/arts-1.0.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.7 )
 	esd? ( >=media-sound/esound-0.2.28 )"
