@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.13 2004/05/04 22:56:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.14 2004/05/27 19:15:56 avenj Exp $
+
+  27 May 2004; Jon Portnoy <avenj@gentoo.org> libebml-0.7.0.ebuild :
+  Stable on AMD64.
 
   04 May 2004; Michael Sterrett <mr_bones_@gentoo.org> libebml-0.7.0.ebuild:
   inherit flag-o-matic

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.0.ebuild,v 1.2 2004/05/04 22:56:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.0.ebuild,v 1.3 2004/05/27 19:15:56 avenj Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.matroska.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~alpha ~ia64 ~sparc ~hppa ~mips"
+KEYWORDS="~x86 ~ppc amd64 ~alpha ~ia64 ~sparc ~hppa ~mips"
 
 DEPEND="virtual/glibc"
 
