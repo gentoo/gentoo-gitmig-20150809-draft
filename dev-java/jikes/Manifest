@@ -1,4 +1,16 @@
-MD5 4c4d45a30f2eb639f7e549bbe97bace4 ChangeLog 3112
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 22d5bb5b9e5100f090d8f6dda2af2872 jikes-1.21.ebuild 941
+MD5 3d436b62e655f8648c866d239f09b962 jikes-1.22.ebuild 877
+MD5 fdb8086bbfa42d2f6292f7b6442a189f ChangeLog 3226
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 bbe4f7862346b14d9cc597f108b07db6 files/digest-jikes-1.21 63
+MD5 69804c19e69a70f1d6c9bf2b837fbd8d files/digest-jikes-1.22 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBZATc/rLF9B432nYRAo/zAKC++L1Ud+lNJ19bEvC1uf+Fq/+o3gCaApyU
+DGdLAa8nr3eD9j6E1R3zEmM=
+=1DJl
+-----END PGP SIGNATURE-----
