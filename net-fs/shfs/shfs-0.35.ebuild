@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.35.ebuild,v 1.1 2004/06/26 21:55:47 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.35.ebuild,v 1.2 2004/12/15 06:40:23 stuart Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://shfs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 DEPEND="virtual/linux-sources
 		net-misc/openssh
 		amd? ( net-fs/am-utils )"
