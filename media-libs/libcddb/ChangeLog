@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcddb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.9 2004/09/15 17:31:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.10 2004/09/24 03:01:33 tgall Exp $
+
+  23 Sep 2004; Tom Gall <tgall@gentoo.org> libcddb-0.9.4.ebuild:
+  added ~ppc64
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> libcddb-0.9.4.ebuild:
   Stable sparc.
