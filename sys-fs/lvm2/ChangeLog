@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.21 2004/11/14 17:26:58 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.22 2004/11/25 12:02:59 gmsoft Exp $
+
+  25 Nov 2004; Guy Martin <gmsoft@gentoo.org> lvm2-2.00.25.ebuild:
+  Stable on hppa.
 
 *lvm2-2.00.25 (14 Nov 2004)
 
