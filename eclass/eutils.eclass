@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.129 2004/12/23 20:38:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.130 2004/12/24 07:16:14 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1530,21 +1530,32 @@ preserve_old_lib_notify() {
 # Hack for people to figure out if a package was built with 
 # certain USE flags
 #
-# Usage: built_with_use <DEPEND ATOM> <List of USE flags>
+# Usage: built_with_use [-a|-o] <DEPEND ATOM> <List of USE flags>
 #    ex: built_with_use xchat gtk2
+#
+# Flags: -a   all USE flags should be utilized
+#        -o   at least one USE flag should be utilized
+# Note: the default flag is '-a'
 built_with_use() {
-	local PKG=$(portageq best_version ${ROOT} $1)
+	local opt=$1
+	[[ ${opt:0:1} = "-" ]] && shift || opt="-a"
+
+	local PKG=$(best_version $1)
+	shift
+
 	local USEFILE="${ROOT}/var/db/pkg/${PKG}/USE"
 	[[ ! -e ${USEFILE} ]] && return 1
 
 	local USE_BUILT=$(<${USEFILE})
-
-	shift
-	while [ $# -gt 0 ] ; do
-		has $1 ${USE_BUILT} || return 1
+	while [[ $# -gt 0 ]] ; do
+		if [[ ${opt} = "-o" ]] ; then
+			has $1 ${USE_BUILT} && return 0
+		else
+			has $1 ${USE_BUILT} || return 1
+		fi
 		shift
 	done
-	return 0
+	[[ ${opt} = "-a" ]]
 }
 
 # Many configure scripts wrongly bail when a C++ compiler 
