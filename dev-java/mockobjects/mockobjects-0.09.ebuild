@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.8 2005/01/04 18:44:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.9 2005/03/16 18:26:00 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -35,18 +35,9 @@ src_unpack() {
 
 src_compile() {
 	local antflags="jar"
-	if use doc; then
-		antflags="${antflags} javadoc"
-	fi
-	if use jikes; then
-		antflags="${antflags} -Dbuild.compiler=jikes"
-	fi
-	if use junit; then
-		antflags="${antflags} junit"
-	fi
-	if use source; then
-		antflags="${antflags} sourcezip"
-	fi
+	use doc && antflags="${antflags} javadoc"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	use junit && antflags="${antflags} junit"
 	ant ${antflags} || die "ant build failed"
 }
 
@@ -58,7 +49,6 @@ src_install() {
 		java-pkg_dohtml -r out/doc/javadoc/*
 	fi
 	if use source; then
-		dodir /usr/share/doc/${PF}/source
-		cp out/${PN}-src.zip ${D}/usr/share/doc/${PF}/source
+		java-pkg_dosrc ${S}/src/*
 	fi
 }
