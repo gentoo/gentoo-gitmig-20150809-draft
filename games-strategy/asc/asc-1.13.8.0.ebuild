@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.13.8.0.ebuild,v 1.2 2003/11/14 20:06:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.13.8.0.ebuild,v 1.3 2003/11/18 16:23:38 vapier Exp $
 
 inherit games
 
@@ -12,8 +12,8 @@ SRC_URI="mirror://sourceforge/asc-hq/asc-source-${PV}.tar.gz
 	http://www.asc-hq.org/machine_wars.mp3"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=media-libs/libsdl-1.1.3
 	media-libs/sdl-image
