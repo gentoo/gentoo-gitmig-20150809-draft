@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.114 2004/07/27 17:16:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.115 2004/08/10 16:01:30 nakano Exp $
+
+*postgresql-8.0.0_beta1 (10 Aug 2004)
+
+  10 Aug 2004; Masatomo Nakano <nakano@gentoo.org>
+  +files/postgresql-8.0.0_beta1-gentoo.patch, +files/postgresql.conf-8.0.0,
+  +files/postgresql.init-8.0.0, +postgresql-8.0.0_beta1.ebuild:
+  Version bump. But this is hard masked because of beta version.
 
   27 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> postgresql-7.4.3-r1.ebuild:
   Fixed SHMMAX_MIN to calculate from MAX_CONNECTIONS.
