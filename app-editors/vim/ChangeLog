@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.20 2002/09/21 23:55:25 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.21 2002/09/25 03:34:53 jnelson Exp $
+
+*vim-6.1-r13.ebuild (24 Sep 2002)
+  24 Sep 2002; Jon Nelson <jnelson@gentoo.org> vim-6.1-r13.ebuild:
+  More careful application of patches
+  Patch 80 and 84 partially apply, manually fix and repair at
+   end of patch cycle.
+  Always use --without-x (that's what gvim is for)
+  This is a fix for bug 8327
 
 *vim-6.1-r12.ebuild (21 Sep 2002)
   
