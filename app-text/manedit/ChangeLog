@@ -1,9 +1,12 @@
 # ChangeLog for app-text/manedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.5 2002/12/13 10:56:19 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.6 2003/01/27 08:19:04 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*manedit-0.5.8 (27 Jan 2003)
+
+  27 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + FHS fix (/usr/man)
+
 *manedit-0.5.6-r1 (14 May, 2002)
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> manedit-0.5.6.ebuild :
@@ -13,13 +16,11 @@
   Added KEYWORDS.
 
   14 May 2002; Tod Neidt <tod@thpoon.com> manedit-0.5.6-r1.ebuild :
-  
   Fix to install in /usr (Bug# 2565), submitted by Nicholas Jones
   <carpaski@twobit.net>.  Also, fixed up formatting, etc to pass lintool.
 
 *manedit-0.5.6 (2 May, 2002)
 
   2 May 2002; Arcady Genkin <agenkin@thpoon.com> manedit-0.5.6.ebuild :
-  
   Initial version of the ebuild, submitted by Nicholas Jones
   <carpaski@twobit.net>.
