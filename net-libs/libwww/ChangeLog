@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.15 2003/10/03 08:30:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.16 2003/10/07 07:06:15 obz Exp $
+
+*libwww-5.4.0-r2 (07 Oct 2003)
+
+  07 Oct 2003; Mike Gardiner <obz@gentoo.org> libwww-5.4.0-r2.ebuild,
+  files/libwww-config-liborder.patch:
+  Added a new revision which includes a patch for the ordering of libraries in
+  libwww-config. This revision has been marked ~ on all archs because this patch
+  needs testing. Thanks to <barrachi@icc.uji.es> for help on bug #30185
 
 *libwww-5.4.0-r1 (05 Sep 2002)
 
