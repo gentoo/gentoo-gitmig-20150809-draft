@@ -255,3 +255,7 @@ gnome-apps/gnapster
 # Added this to fix ext3 kernel oops for me.  If drobbins
 # will have a look at it and verify
 =sys-kernel/linux-sources-2.4.13
+
+# gdm doesn't want to start with this imlib, might be that you have to remerge 
+# parts of GNOME. 
+>=media-libs/imlib-1.9.11
