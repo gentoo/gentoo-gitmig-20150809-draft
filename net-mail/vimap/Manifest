@@ -1,28 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0408d6498f1251da93815350d6825d61 ChangeLog 2302
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 b388d883757f5856bf9943ee4b46846e vimap-2002c.ebuild 2687
-MD5 be36d41a985ba8f1839742d888e4cd57 vimap-2002c-r1.ebuild 3631
+MD5 e22e585a5700d8782b3274ee82baf4e7 ChangeLog 2407
 MD5 290ee971bc40c8b98682c1eace7ec79f vimap-2002c-r2.ebuild 4110
-MD5 bd9ffc1daf91764efc45462277f5eea6 vimap-2002c-r3.ebuild 4925
+MD5 b388d883757f5856bf9943ee4b46846e vimap-2002c.ebuild 2687
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 831fa3cf3bc8342946264aafda45b9b2 vimap-2002c-r3.ebuild 4922
+MD5 be36d41a985ba8f1839742d888e4cd57 vimap-2002c-r1.ebuild 3631
+MD5 28c291d52426cc5d25be57406f14e096 files/uw-imap.pam-system-auth 344
+MD5 fbd30c975d120429f29509866d292745 files/uw-ipop3.xinetd 473
+MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c-r1 63
+MD5 b9265aebc1d378faf06199471ceabc4f files/uw-imap.xinetd 492
+MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c-r3 63
+MD5 c6e5f24322fad9b16d63b1e08ca3bee8 files/uw-ipop3s.xinetd 474
+MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c-r2 63
+MD5 2cc8deb01d6efd5a650d6fc5519289bd files/uw-ipop2.xinetd 564
 MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c 63
 MD5 0ec3cd52bf3e7064a3d9e60a5ac16291 files/imap-2002c-virtual.patch.bz2 10394
-MD5 28c291d52426cc5d25be57406f14e096 files/uw-imap.pam-system-auth 344
-MD5 b9265aebc1d378faf06199471ceabc4f files/uw-imap.xinetd 492
 MD5 a801fe6d35ae75b0abeb6e410b3b6ea2 files/uw-imaps.xinetd 487
-MD5 2cc8deb01d6efd5a650d6fc5519289bd files/uw-ipop2.xinetd 564
-MD5 fbd30c975d120429f29509866d292745 files/uw-ipop3.xinetd 473
-MD5 c6e5f24322fad9b16d63b1e08ca3bee8 files/uw-ipop3s.xinetd 474
-MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c-r1 63
 MD5 cde23dc2375a8c33998202c8f0c9ae0e files/vimap-2002c-amd64-so-fix.patch 675
-MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c-r2 63
-MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c-r3 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCKMFvKRy60XGEcJIRAlZyAKCXgPe45xpo7RGxAS2o9Eea3xHEPwCeIoQf
-fs/xBp9YrCqTvPrKfgl0BZY=
-=koFP
+iD8DBQFCKsZ3ugEuf3OQ0akRAg4lAJ9O3zN/CesDfQM6CfygryD4wt+UjwCcDZOP
+HJ+fp6SnJ3vTrhJlPcPYt5U=
+=kUbX
 -----END PGP SIGNATURE-----
