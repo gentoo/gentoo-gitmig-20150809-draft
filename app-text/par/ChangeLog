@@ -1,6 +1,9 @@
 # ChangeLog for app-text/par
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.1 2004/02/21 16:09:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.2 2004/04/02 11:14:15 mr_bones_ Exp $
+
+  02 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  removed bogus stuff from metadata.xml
 
 *par-1.52 (22 Feb 2004)
 
