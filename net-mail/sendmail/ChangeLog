@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.22 2003/01/23 22:00:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.23 2003/01/27 07:15:00 raker Exp $
+
+*sendmail-8.12.7-r4 (26 Jan 2003)
+
+  26 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7-r4.ebuild,
+  files/digest-sendmail-8.12.7-r4, files/sendmail-r4 :
+  Now the init script sends 'killall ${KILL_OPTS} /usr/sbin/sendmail'
+  This should stop all running instances?
 
 *sendmail-8.12.7-r3 (23 Jan 2003)
 
