@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.7.ebuild,v 1.3 2005/01/21 17:46:35 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.7.ebuild,v 1.4 2005/01/24 16:51:08 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
@@ -46,7 +46,7 @@ src_install() {
 	newexe ${FILESDIR}/drbd-0.7-init drbd || die
 
 	# needed by drbd startup script
-	keepdir /var/lib/drbd
+	#keepdir /var/lib/drbd
 
 	# docs
 	dodoc README ChangeLog COPYING
@@ -56,7 +56,8 @@ src_install() {
 	# it doesnt make sense to install a default conf in /etc
 	# put it to the docs
 	rm -f ${D}/etc/drbd.conf
-	dodoc scripts/drbd.conf
+	dodoc scripts/drbd.conf || die
+	dodoc upgrade_0.6.x_to_0.7.0.txt upgrade_0.7.0_to_0.7.1.txt || die
 }
 
 pkg_postinst() {
