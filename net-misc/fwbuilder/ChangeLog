@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/fwbuilder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fwbuilder/ChangeLog,v 1.9 2002/11/04 13:42:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fwbuilder/ChangeLog,v 1.10 2002/12/04 14:34:45 foser Exp $
+
+  04 Dec 2002; foser <foser@gentoo.org> fwbuilder-1.0.6.ebuild fwbuilder-1.0.7.ebuild :
+  Fixed gtkmm deps to gtk1 only
 
 *fwbuilder-1.0.7 (04 Nov 2002)
 
