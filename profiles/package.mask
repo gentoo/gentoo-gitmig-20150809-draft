@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3122 2004/09/03 16:25:15 foser Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3123 2004/09/03 19:09:54 caleb Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -810,7 +810,3 @@ app-cdr/cddump
 # lostlogic@gentoo.org 17 Jul 2002
 # masked because of sandbox problems in 2.0.12 and dep problems in 2.1.0
 <app-cdr/eroaster-2.1.0-r1
-
-# jnelson@gentoo.org 24 Sep 2002
-# mask todo-manager because it's really busted
-app-misc/todo-manager-bronze
