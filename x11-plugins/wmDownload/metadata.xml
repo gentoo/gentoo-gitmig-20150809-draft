@@ -1,0 +1,11 @@
+ [32;01m*[0m Generated metadata.xml:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>desktop-misc</herd>
+<longdescription>
+wmDownload is a small WindowMaker dockapp that sits there and displays how much 
+data you've recieved on each eth and ppp device installed on your machine.
+</longdescription>
+</pkgmetadata>
