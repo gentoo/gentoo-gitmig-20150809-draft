@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.56 2004/05/13 16:08:15 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.57 2004/05/26 02:51:31 vapier Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -40,7 +40,7 @@ if [ ${PN} != vim-core ]; then
 		RDEPEND="$RDEPEND ruby? ( dev-lang/ruby )"
 	fi
 
-	if [ ${PN} = vim ]; then
+	if [ ${PN} = vim ] && [ "${ARCH}" != "arm" ]; then
 		IUSE="$IUSE vim-with-x minimal"
 		DEPEND="$DEPEND vim-with-x? ( virtual/x11 )"
 		RDEPEND="$RDEPEND vim-with-x? ( virtual/x11 )"
