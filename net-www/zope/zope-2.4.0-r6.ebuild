@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Holger Brueckner <darks@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0.ebuild,v 1.3 2001/09/19 18:16:44 darks Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0-r6.ebuild,v 1.1 2001/09/19 18:16:44 darks Exp $
 
 A="Zope-${PV}-src.tgz ZEO-1.0b3.tgz"
 S=${WORKDIR}/Zope-${PV}-src
@@ -82,9 +82,9 @@ src_install () {
     sed -e "s:${WORKDIR}:${ZVAR}:g" stop > stop.tmp
     mv stop.tmp stop
     
-    dodir /etc/rc.d/init.d
-    exeinto /etc/rc.d/init.d
-    doexe ${FILESDIR}/zope
+    dodir /etc/init.d
+    exeinto /etc/init.d
+    newexe ${FILESDIR}/zope.rc6 zope
     chown nobody.users ${ZVAR}/var/*
 }
 

@@ -6,7 +6,9 @@
 # modified for gentoo linux by Holger Brueckner <darks@gentoo.org>
 #RCUPDATE:3 4:99
 
-.  /etc/rc.d/config/functions
+depend() {
+    need net
+}
 
 USEZEO="`/usr/lib/portage/bin/use zeo`"
 
@@ -197,4 +199,4 @@ status(){
 	fi
         }
 
-doservice ${@}
+
