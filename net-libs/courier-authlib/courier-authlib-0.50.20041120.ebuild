@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041120.ebuild,v 1.2 2004/11/27 04:47:35 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041120.ebuild,v 1.3 2004/11/27 08:40:33 swtaylor Exp $
 
 inherit eutils gnuconfig
 
@@ -10,8 +10,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-#KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
 IUSE="postgres ldap mysql berkdb gdbm pam crypt uclibc debug"
 
 DEPEND="virtual/libc
@@ -30,7 +29,9 @@ RDEPEND="virtual/libc
 src_unpack() {
 	if ! has_version 'dev-tcltk/expect' ; then
 		ewarn 'The dev-tcltk/expect package is not installed.'
-		einfo 'This only limits using webmail to change authpam passwords.'
+		einfo 'Without it, you will not be able to change system login passwords.'
+		einfo 'However non-system authentication modules (LDAP, MySQL, PostgreSQL,'
+		einfo 'and others) will work just fine.'
 	fi
 	unpack ${A}
 	cd ${S}
@@ -57,10 +58,9 @@ src_compile() {
 	if use berkdb ; then
 		use gdbm && \
 			einfo "Both gdbm and berkdb selected. Using gdbm." || \
-			myconf="${myconf} --with-db=db"
+				myconf="${myconf} --with-db=db"
 	fi
 	use gdbm && myconf="${myconf} --with-db=gdbm"
-
 
 	if [ -f /var/vpopmail/etc/lib_deps ]; then
 		myconf="${myconf} --with-authvchkpw --without-authmysql --without-authpgsql"
@@ -92,15 +92,33 @@ ewarn "${myconf}"
 	emake || die "Compile problem"
 }
 
+orderfirst() {
+	file="${D}/etc/courier/authlib/${1}" ; option="${2}" ; param="${3}"
+	if [ -e "${file}" ] ; then
+		orig="`grep \"^${option}=\" ${file} | cut -d'\"' -f 2`"
+		new="${option}=\"${param} `echo ${orig} | sed -e\"s/${param}//g\" -e\"s/  / /g\"`\""
+		sed -i -e"s/^${option}=.*$/${new}/" ${file}
+	fi
+}
+
 src_install() {
 	dodir /var/lib/courier
 	dodir /etc/courier/authlib
 	dodir /etc/init.d
+	keepdir /var/lib/courier
+	keepdir /etc/courier/authlib
 	emake install DESTDIR="${D}" || die "install"
 	emake install-migrate DESTDIR="${D}" || die "migrate"
 	emake install-configure DESTDIR="${D}" || die "configure"
 	rm ${D}/etc/courier/authlib/*.bak
 	chown mail:mail ${D}/etc/courier/authlib/*
+	for y in ${D}/etc/courier/authlib/*.dist ; do
+		[ ! -e "${y%%.dist}" ] && cp ${y} ${y%%.dist}
+	done
+	use pam && orderfirst authdaemonrc authmodulelist authpam
+	use ldap && orderfirst authdaemonrc authmodulelist authldap
+	use postgres && orderfirst authdaemonrc authmodulelist authpgsql
+	use mysql && orderfirst authdaemonrc authmodulelist authmysql
 	dodoc AUTHORS COPYING ChangeLog* INSTALL NEWS README
 	dohtml README.html README_authlib.html NEWS.html INSTALL.html README.authdebug.html
 	use ldap && dodoc authldap.schema
@@ -108,5 +126,13 @@ src_install() {
 	use postgres && dohtml README.authpostgres.html
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/courier-authlib-initd courier-authlib || die "init.d failed"
+
+	# Suggest cleaning out the following old files
+	list="`find /etc/courier -type f -maxdepth 1 | grep \"^/etc/courier/auth\"`"
+	if [ ! -z "${list}" ] ; then
+		ewarn "Courier authentication files are now in /etc/courier/authlib/"
+		einfo "The following files are now obsolete and can likely be removed:"
+		einfo " rm `echo \"${list}\" | xargs echo`"
+	fi
 }
 
