@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.213 2004/06/29 03:38:50 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.214 2004/06/29 07:56:43 eradicator Exp $
+
+  29 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  apache-2.0.49-r4.ebuild:
+  Stable amd64.  Fixed MANUAL_VERSION.
 
 *apache-2.0.49-r4 (28 Jun 2004)
 
