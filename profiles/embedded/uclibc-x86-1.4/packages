@@ -23,10 +23,8 @@ virtual/os-headers
 
 
 >=x11-base/xfree-4.1.0-r12
-*app-shells/sash
 *dev-lang/perl
 *virtual/editor
-*net-misc/dhcpcd
 *net-misc/iputils
 *net-misc/rsync
 *net-misc/wget
@@ -39,18 +37,13 @@ virtual/os-headers
 *sys-apps/diffutils
 *sys-fs/e2fsprogs
 *sys-apps/ed
-*sys-apps/fbset
 *sys-apps/file
 *sys-apps/findutils
-*sys-apps/slocate
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
 *sys-apps/gzip
-*sys-apps/hdparm
 *sys-apps/less
-*sys-apps/man
-*sys-apps/man-pages
 *sys-apps/net-tools
 *sys-apps/procps
 *sys-apps/psmisc
@@ -76,5 +69,3 @@ virtual/os-headers
 *sys-libs/cracklib  
 *<sys-libs/db-4.1.0
 *>=sys-libs/ncurses-5.2.20020112a
-
-*sys-fs/devfsd
