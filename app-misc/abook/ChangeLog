@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/abook
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.4 2003/03/28 12:57:06 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.5 2003/07/20 15:26:11 mcummings Exp $
+
+*abook-0.5.0 (20 Jul 2003)
+
+  20 Jul 2003; Michael Cummings <mcummings@gentoo.org> abook-0.5.0.ebuild:
+  Version update
 
 *abook-0.4.17 (08 Aug 2002)
 
