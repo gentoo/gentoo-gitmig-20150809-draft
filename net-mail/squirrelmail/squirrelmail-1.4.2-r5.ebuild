@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r5.ebuild,v 1.1 2004/04/30 21:27:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r5.ebuild,v 1.2 2004/05/02 10:20:20 eradicator Exp $
 
 inherit webapp eutils
 
@@ -153,7 +153,7 @@ src_install() {
 	cp -r . ${D}${MY_HTDOCSDIR}
 
 	# Identify the configuration files that this app uses
-	local configs="config/config.php config/config_local.php plugins/retrieveuserdata/config.php"
+	local configs="data config/config.php config/config_local.php plugins/retrieveuserdata/config.php"
 	use virus_scan && configs="${configs} plugins/virus_scan/config.php"
 	use crypt && configs="${configs} plugins/gpg/gpg_local_prefs.txt"
 	use ldap && configs="${configs} plugins/ldapuserdata/config.php"
@@ -174,7 +174,7 @@ src_install() {
 	#done
 
 	# virus scanning signatures needs to be owned by the server so it can update them
-	local server_owned
+	local server_owned="data index.php"
 	use virus-scan && server_owned="${server_owned} plugins/virus_scan/includes/virussignatures.php plugins/virus_scan/config.php"
 	for file in ${server_owned}; do
 		webapp_serverowned ${MY_HTDOCSDIR}/${file}
