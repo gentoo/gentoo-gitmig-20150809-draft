@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.5 2003/02/12 06:00:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.6 2003/04/23 21:00:21 sethbc Exp $
+
+*bglibs-1.009 (23 Apr 2003)
+
+  23 Apr 2003; Seth Chandler <sethbc@gentoo.org>; bglibs-1.009.ebuild:
+  version bumpthanks to Thilo Bangert <bangert@gentoo.org>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
