@@ -8,7 +8,7 @@ DESCRIPTION="libglade ebook for devhelp"
 EBOOKNAME="libglade"
 EBOOKVERSION="1.0"
 NOVERSION="1"
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook
 
 

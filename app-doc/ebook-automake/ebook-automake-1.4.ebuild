@@ -8,6 +8,6 @@ DESCRIPTION="Automake 1.4  EBook."
 EBOOKNAME="automake"
 EBOOKVERSION="1.4"
 NOVERSION="1"
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook
 

@@ -8,5 +8,5 @@ DESCRIPTION="Gdk 1.2 EBook."
 
 EBOOKNAME="gdk"
 EBOOKVERSION="1.2"
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook

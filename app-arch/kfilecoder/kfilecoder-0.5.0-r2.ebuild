@@ -1,8 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/kfilecoder/kfilecoder-0.5.0-r2.ebuild,v 1.1 2001/12/29 21:45:08 danarmak Exp $
-. /usr/portage/eclass/inherit.eclass
+# $Header: /var/cvsroot/gentoo-x86/app-arch/kfilecoder/kfilecoder-0.5.0-r2.ebuild,v 1.2 2002/05/21 18:14:04 danarmak Exp $
+
 inherit kde-base || die
 
 DESCRIPTION="Archiver with passwd management "

@@ -7,7 +7,7 @@ DESCRIPTION="EBook Documentation about Pango."
  
 EBOOKNAME="pango"
 EBOOKVERSION="1.0"
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook
 
 

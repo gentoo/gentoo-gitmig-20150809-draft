@@ -9,5 +9,5 @@ NOVERSION="1"
 EBOOKDESTDIR="libc-2.2.3"
 EBOOKSRCDIR="glibc"
 
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook

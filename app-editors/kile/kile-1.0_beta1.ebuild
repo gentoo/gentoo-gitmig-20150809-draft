@@ -1,8 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.0_beta1.ebuild,v 1.1 2002/05/02 18:00:20 danarmak Exp $
-. /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.0_beta1.ebuild,v 1.2 2002/05/21 18:14:04 danarmak Exp $
+
 inherit kde-base || die
 
 need-kde 3

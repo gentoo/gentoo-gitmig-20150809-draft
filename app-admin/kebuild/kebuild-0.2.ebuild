@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kebuild/kebuild-0.2.ebuild,v 1.1 2002/04/17 18:53:05 verwilst Exp $
-. /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kebuild/kebuild-0.2.ebuild,v 1.2 2002/05/21 18:14:04 danarmak Exp $
+
 inherit kde-base || die
 
 need-kde 3

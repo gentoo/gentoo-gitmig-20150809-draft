@@ -10,6 +10,6 @@ EBOOKVERSION="1.2"
 NOVERSION="1"
 EBOOKDESTDIR="libgnome"
 
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook
 

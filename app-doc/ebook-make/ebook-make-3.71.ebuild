@@ -8,6 +8,6 @@ DESCRIPTION="Make 3.71  EBook."
 EBOOKNAME="make"
 EBOOKVERSION="2.13"
 NOVERSION="1"
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook
 

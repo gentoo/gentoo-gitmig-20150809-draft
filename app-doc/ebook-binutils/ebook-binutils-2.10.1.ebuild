@@ -8,6 +8,6 @@ EBOOKVERSION="2.10.1"
 NOVERSION="1"
 EBOOKDESTDIR=${EBOOKNAME}-${EBOOKVERSION}
 
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook
 

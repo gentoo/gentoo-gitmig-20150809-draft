@@ -6,5 +6,5 @@
 EBOOKNAME="gtk"
 EBOOKVERSION="1.2"
 
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook

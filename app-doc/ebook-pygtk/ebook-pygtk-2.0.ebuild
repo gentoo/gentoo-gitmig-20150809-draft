@@ -9,6 +9,6 @@ NOVERSION="1"
 SRC="pygtk"
 EBOOKDESTDIR="pygtk-2.0"
 
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook
 

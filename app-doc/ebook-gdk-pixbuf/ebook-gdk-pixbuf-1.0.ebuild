@@ -9,5 +9,5 @@ DESCRIPTION="Gdk-Pixbuf 1.2 EBook."
 EBOOKNAME="gdk-pixbuf"
 EBOOKVERSION="1.2"
 NOVERSION="1"
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit ebook
