@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r2.ebuild,v 1.1 2004/03/28 21:57:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r2.ebuild,v 1.2 2004/03/29 04:07:58 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -213,7 +213,7 @@ src_install() {
 	# Plugin path setup (rescuing the existent plugins)
 	src_mv_plugins /usr/lib/MozillaFirefox/plugins
 
-	dosym mozilla-launcher /usr/bin/firefox
+	ln -sfn mozilla-launcher ${D}/usr/bin/firefox
 	insinto /etc/env.d
 	doins ${FILESDIR}/10MozillaFirefox
 
