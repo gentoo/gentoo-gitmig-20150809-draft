@@ -19,7 +19,7 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-
+DEPEND="$DEPEND net-www/webapp-config"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
 
