@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lxsplit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lxsplit/ChangeLog,v 1.5 2004/06/24 22:23:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lxsplit/ChangeLog,v 1.6 2004/07/10 13:57:41 slarti Exp $
+
+  10 Jul 2004; Tom Martin <slarti@gentoo.org> lxsplit-0.1.1.ebuild:
+  Marked ~amd64.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> lxsplit-0.1.1.ebuild:
   Don't assign default to S; header fix
