@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.04-r1.ebuild,v 1.1 2003/06/25 10:25:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.04-r1.ebuild,v 1.2 2003/07/11 15:05:25 aliz Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SLOT="0"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
-	epatch ${FILESDIR}/${PF}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-blinding.patch
 }
 
