@@ -1,6 +1,6 @@
 # ChangeLog for app-benchmarks/dbench
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.8 2004/04/12 16:10:28 zx Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.9 2004/06/24 21:27:48 agriffis Exp $
 
   12 Apr 2004; Chris Aniszczyk <zx@gentoo.org> dbench-2.0.ebuild,
   metadata.xml:

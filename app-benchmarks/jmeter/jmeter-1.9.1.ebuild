@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-1.9.1.ebuild,v 1.1 2004/02/26 05:17:17 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-1.9.1.ebuild,v 1.2 2004/06/24 21:28:19 agriffis Exp $
 
 DESCRIPTION="Load test and measure performance on HTTP/FTP services, and databases."
 HOMEPAGE="http://jakarta.apache.org/jmeter/index.html"
