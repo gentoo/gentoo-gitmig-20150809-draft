@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/gkrellmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.4 2002/10/16 07:53:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.5 2002/10/29 13:48:32 seemant Exp $
 
 *gkrellmms-0.5.8 (16 Oct 2002)
 
@@ -17,7 +17,8 @@
 
   New version for gkrellm2 (based on gtk2).  Thanks to:
   43fcmm6rz001@sneakemail.com (Tobias Quinn) in bug #7362, though this one
-  is a more updated version.
+  is a more updated version.  Also, pazzop@wanadoo.nl (AlterEgo) had
+  submitted an ebuild in bug #7384.
 
 *gkrellmms-0.5.6 (27 May 2002)
 
