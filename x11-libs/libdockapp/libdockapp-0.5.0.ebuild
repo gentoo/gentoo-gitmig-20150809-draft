@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.5.0.ebuild,v 1.4 2004/07/15 00:46:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.5.0.ebuild,v 1.5 2004/08/31 14:30:08 s4t4n Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://solfertje.student.utwente.nl/~dalroi/libdockapp/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="x86 ~sparc ~amd64 ~ppc"
 
 DEPEND="virtual/x11"
 

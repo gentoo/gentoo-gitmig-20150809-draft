@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>desktop-dock</herd>
 <maintainer>
-  <email>raker@gentoo.org</email>
+  <email>s4t4n@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
