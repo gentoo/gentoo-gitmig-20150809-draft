@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.14 2003/01/17 11:35:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.15 2003/01/21 17:25:54 azarah Exp $
+
+autoconf-2.57 (21 Jan 2003)
+
+  21 Jan 2003; Martin Schlemmer <azarah@gentoo.org> autoconf-2.57.ebuild :
+  New version.
 
   17 Jan 2003; Martin Schlemmer <azarah@gentoo.org> autoconf-2.54.ebuild :
   Depend on texinfo-4.3, else info pages breaks, bug #13041.

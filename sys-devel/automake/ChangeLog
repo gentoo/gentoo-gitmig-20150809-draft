@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.20 2002/12/14 19:56:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.21 2003/01/21 17:26:07 azarah Exp $
+
+*automake-1.7.2 (21 Jan 2003)
+
+  21 Jan 2003; Martin Schlemmer <azarah@gentoo.org> automake-1.7.2.ebuild :
+  Update version.  Change WANT_AUTOMAKE_1_?=1 selection scheme to
+  WANT_AUTOMAKE=<version>.
 
   14 Dec 2002; Martin Schlemmer <azarah@gentoo.org> automake-1.6.3.ebuild :
   Fix info pages to also get 1.5 and 1.6 in info DIR.
