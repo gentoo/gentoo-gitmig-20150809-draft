@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.5-r2.ebuild,v 1.3 2004/04/25 22:32:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.5-r2.ebuild,v 1.4 2004/06/02 12:45:06 agriffis Exp $
 
 inherit perl-module
 
@@ -79,7 +79,7 @@ src_compile() {
 #	java fails w/emake
 	make || die
 
-	if [ `use perl` ] ; then
+	if use perl ; then
 		cd ${S}/bindings/Perl
 		perl-module_src_prep
 		perl-module_src_compile
@@ -91,7 +91,7 @@ src_install() {
 
 	dodoc ChangeLog README doc/README* doc/TODO NEWS AUTHORS
 
-	if [ `use perl` ] ; then
+	if use perl ; then
 		cd ${S}/bindings/Perl
 		perl-module_src_install
 	fi
