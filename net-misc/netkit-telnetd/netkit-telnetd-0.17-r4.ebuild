@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r4.ebuild,v 1.8 2004/10/06 15:37:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r4.ebuild,v 1.9 2004/11/02 13:23:18 corsair Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-telnet-${PV}.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ~ppc64"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ppc64"
 IUSE="build"
 
 DEPEND=">=sys-libs/ncurses-5.2
