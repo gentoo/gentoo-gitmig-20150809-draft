@@ -1,14 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.1 2003/07/24 15:15:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.2 2003/07/25 10:42:59 stuart Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
 #
-# The php-ext eclass provides a unified interface for compiling and
-# installing standalone PHP extensions ('modules').
-
-inherit php-ext-base
+# The php-ext-source eclass provides a unified interface for compiling and
+# installing standalone PHP extensions ('modules') from source code
+#
+# To use this eclass, you must add the following to your ebuild:
+#
+# inherit php-ext-source php-ext-base
 
 ECLASS=php-ext-source
 INHERITED="$INHERITED $ECLASS"
@@ -28,14 +30,14 @@ DEPEND="${DEPEND}
 		=sys-devel/m4-1.4
 		>=sys-devel/libtool-1.4.3"
 
-php-ext-base_src_compile() {
+php-ext-source_src_compile() {
 	#phpize creates configure out of config.m4
 	phpize
 	econf $myconf
 	emake || die
 }
 
-php-ext-base_src_install() {
+php-ext-source_src_install() {
 	chmod +x build/shtool
 	#this will usually be /usr/lib/php/extensions/no-debug-no-zts-20020409/ 
 	#but i prefer not taking this risk

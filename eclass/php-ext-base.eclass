@@ -1,11 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.2 2003/07/24 19:06:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.3 2003/07/25 10:42:59 stuart Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
+# Author: Stuart Herbert <stuart@gentoo.org>
 #
-# The php-ext eclass provides a unified interface for compiling and
-# installing standalone PHP extensions ('modules').
+# The php-ext-base eclass provides a unified interface for adding standalone
+# PHP extensions ('modules') to the php.ini files on your system.
+#
+# Combined with php-ext-source, we have a standardised solution for supporting
+# PHP extensions
 
 ECLASS=php-ext-base
 INHERITED="$INHERITED $ECLASS"
@@ -62,18 +66,21 @@ php-ext-base_buildinilist () {
 php-ext-base_src_install() {
 	if [ "$PHP_EXT_INI" = "yes" ] ; then
 		php-ext-base_buildinilist
-		php-ext-base_addextension "${EXT_DIR}/${PHP_EXT_NAME}.so"
+		php-ext-base_addextension "${PHP_EXT_NAME}.so"
 	fi
 }
 
 php-ext-base_addextension () {
 	if [ "${PHP_EXT_ZENDEXT}" = "yes" ]; then
-		ext="zend_extension"
+		ext_type="zend_extension"
+		ext_file="${EXT_DIR}/$1"
 	else
-		ext="extension"
+		# we do *not* add the full path for the extension!
+		ext_type="extension"
+		ext_file="$1"
 	fi
 
-	php-ext-base_addtoinifiles "$ext" "$1" "Extension added"
+	php-ext-base_addtoinifiles "$ext_type" "$ext_file" "Extension added"
 }
 	
 php-ext-base_setting_is_present () {
@@ -99,7 +106,6 @@ php-ext-base_addtoinifile () {
 
 	php-ext-base_inifileinimage $3
 
-	echo "output to `pwd`/$3"
 	echo "$1=$2" >> $3
 
 	if [ -z "$4" ]; then
