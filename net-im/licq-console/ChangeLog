@@ -1,6 +1,10 @@
 # ChangeLog for net-im/licq-console
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq-console/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq-console/ChangeLog,v 1.2 2003/02/07 10:02:32 lordvan Exp $
+
+*licq-console-1.2.4 (07 Feb 2003)
+  07 Feb 2003; Thomas Raschbacher <lordvan@lordvan.com> licq-console-1.2.4.ebuild:
+  version bump
 
 *licq-console-1.0.2 (1 Feb 2002)
 
