@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.1 2004/02/24 20:16:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.2 2004/04/28 05:25:48 vapier Exp $
 
 inherit eutils
 
@@ -27,6 +27,9 @@ src_unpack() {
 
 	# Fix a small gcc33 issue
 	epatch ${FILESDIR}/${P}-gcc33.patch
+
+	# Fix a small gcc34 issue #48930
+	epatch ${FILESDIR}/${P}-gcc34.patch
 
 	# Get it to work with kernel 2.6
 	epatch ${FILESDIR}/${P}-linux2.6-v2.patch
