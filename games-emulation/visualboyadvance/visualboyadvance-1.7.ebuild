@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.ebuild,v 1.2 2004/01/03 23:57:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.ebuild,v 1.3 2004/03/31 06:57:03 mr_bones_ Exp $
 
 inherit games
 
@@ -14,14 +14,15 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="mmx debug"
 
-DEPEND="virtual/x11
-	mmx? ( dev-lang/nasm )
+RDEPEND="virtual/x11
 	media-libs/libpng
 	sys-libs/zlib
-	media-libs/libsdl
+	media-libs/libsdl"
+DEPEND="${RDEPEND}
+	mmx? ( dev-lang/nasm )
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/VisualBoyAdvance-${PV}
+S="${WORKDIR}/VisualBoyAdvance-${PV}"
 
 src_unpack() {
 	unpack ${A}
