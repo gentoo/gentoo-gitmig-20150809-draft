@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.2 2003/09/07 00:48:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.3 2003/09/18 22:57:51 avenj Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs extended attributes tools"
@@ -10,7 +10,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~amd64 ~mips ~ppc"
+KEYWORDS="~x86 ~amd64 ~mips ~ppc ia64"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
