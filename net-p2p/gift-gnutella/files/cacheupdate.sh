@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/files/cacheupdate.sh,v 1.1 2004/09/12 04:26:26 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/files/cacheupdate.sh,v 1.2 2004/09/13 10:29:07 squinky86 Exp $
 
 if [ -d ~/.giFT/Gnutella/ ]; then
 	cd ~/.giFT/Gnutella
@@ -10,6 +10,10 @@ if [ -d ~/.giFT/Gnutella/ ]; then
 	sed -i -e 's:u|::g' gwebcaches.new1
 	sed -i -e 's:|.*::g' gwebcaches.new1
 	mv gwebcaches.new1 gwebcaches
+	grep "h|" gwebcaches.new | grep -v "ph|" > nodes.new
+	sed -i -e 's:h|::g' nodes.new
+	sed -i -e 's:|.*::g' nodes.new
+	mv nodes.new nodes
 	rm gwebcaches.new
 else
 	echo "Please emerge gift-gnutella and run gift-setup."
