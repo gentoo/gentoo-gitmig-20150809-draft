@@ -1,8 +1,14 @@
 # ChangeLog for net-analyzer/trafshow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.1 2002/02/20 03:04:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.2 2002/07/07 02:04:33 agriffis Exp $
 
-*trafshow-3.1
+*trafshow-3.1-r1 (06 Jul 2002)
+
+	06 Jul 2002; Aron Griffis <agriffis@gentoo.org> trafshow-3.1-r1.ebuild:
+
+	Now honor setting of USE=slang to close bug #3411
+
+*trafshow-3.1 (19 Feb 2002)
 
 	19 Feb 2002; Aron Griffis <agriffis@gentoo.org> trafshow-3.1.ebuild, files/trafshow-3.1-gentoo.patch:
 
