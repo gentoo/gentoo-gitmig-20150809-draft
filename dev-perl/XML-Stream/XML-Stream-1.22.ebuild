@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/XML-Stream-1.22.ebuild,v 1.1 2004/11/18 19:59:57 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/XML-Stream-1.22.ebuild,v 1.2 2004/12/21 14:39:37 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~reatmon/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha"
 IUSE="ssl"
 
 SRC_TEST="do"
