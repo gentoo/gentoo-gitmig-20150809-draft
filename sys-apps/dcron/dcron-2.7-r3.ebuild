@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r3.ebuild,v 1.1 2001/02/07 15:51:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r3.ebuild,v 1.2 2001/02/27 14:58:17 achim Exp $
 
 A=dcron27.tgz
 S=${WORKDIR}/dcron
@@ -16,10 +16,7 @@ src_unpack() {
 
   unpack ${A}
   cd ${S}
-  cp Makefile Makefile.orig
-  sed -e "s:-O2:${CFLAGS}:" \
-      -e "s:strip.*::" Makefile.orig > Makefile
-
+  patch -p0 < ${FILESDIR}/${P}-Makefile-gentoo.diff
 }
 
 src_compile() {
@@ -30,15 +27,17 @@ src_compile() {
 
 src_install() {
 
+    try make DESTDIR=${D} install
 	#to use cron, you must be part of the "cron" group
 
-        dobin crontab
-	dosbin crond
-	chown root.wheel ${D}/usr/sbin/crond
-	chown root.cron ${D}/usr/bin/crontab
-	chmod 700 ${D}/usr/sbin/crond
-	chmod 4755 ${D}/usr/bin/crontab
-	doman *.[18]
+    #    dobin crontab
+	#dosbin crond
+	#chown root.wheel ${D}/usr/sbin/crond
+	#chown root.cron ${D}/usr/bin/crontab
+	#chmod 700 ${D}/usr/sbin/crond
+	#chmod 4755 ${D}/usr/bin/crontab
+	#doman *.[18]
+
 	diropts -m0750
 	dodir /var/spool/cron/crontabs /var/cron/lastrun
 
