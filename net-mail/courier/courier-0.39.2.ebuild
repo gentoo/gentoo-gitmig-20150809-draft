@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.39.2.ebuild,v 1.3 2002/10/05 05:39:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.39.2.ebuild,v 1.4 2002/11/30 02:38:16 vapier Exp $
 
-IUSE="gdbm tcltk postgres ldap berkdb mysql pam"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="An MTA designed specifically for maildirs"
 SRC_URI="http://ftp1.sourceforge.net/courier/${P}.tar.gz"
 HOMEPAGE="http://www.courier-mta.org/"
@@ -12,6 +9,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc -sparc64"
+IUSE="gdbm tcltk postgres ldap berkdb mysql pam"
 
 PROVIDE="virtual/mta
 	 virtual/imapd"
@@ -29,9 +27,7 @@ RDEPEND="virtual/glibc
 DEPEND="${RDEPEND} sys-devel/perl sys-apps/procps"
 
 src_unpack() {
-	unpack ${A}
-
-	cd ${S}
+	unpack ${A} ; cd ${S}
 	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff || die
 }
 
@@ -66,7 +62,7 @@ src_compile() {
 	emake || die "compile problem"
 }
 
-chg_cfg () {
+chg_cfg() {
 	file=${1}
 	key=${2}
 	value=${3}
@@ -76,7 +72,7 @@ chg_cfg () {
 	rm -f ${f}.tmp 1>/dev/null 2>&1
 }
 	
-set_mime () {
+set_mime() {
 	local files=$*
 
 	chk_badmime='##NAME: BOFHBADMIME:0'
@@ -104,7 +100,7 @@ BOFHBADMIME=accept\
 	done
 }
 
-set_maildir () {
+set_maildir() {
 	local files=$*
 
 	origmaildir='Maildir'
@@ -112,19 +108,18 @@ set_maildir () {
 
 	local f
 	for f in ${files}
-	do	
+	do
 		echo "changing ${origmaildir} in ${f} to ${newmaildir}"
 		sed -e"/^[^\#]/ s/${origmaildir}/${newmaildir}/g" ${f} > ${f}.tmp && chmod --reference ${f} ${f}.tmp && mv -f ${f}.tmp ${f}
 		rm -f ${f}.tmp 1> /dev/null 2>&1
 	done
 }						
 
-src_install () {
+src_install() {
 	dodir /var/lib/courier
-	mkdir -p ${D}/etc/pam.d
-	mkdir -p ${D}/var/run/courier
-	make install DESTDIR=${D}
-	
+	dodir /etc/pam.d /var/run/courier
+	make install DESTDIR=${D} || die
+
 	local f
 	cd ${D}/etc/courier
 	mv imapd.authpam imap.authpam
@@ -134,7 +129,7 @@ src_install () {
 		cp "${f}" "${D}/etc/pam.d/${f%%.authpam}"
 	done
 
-exeinto /etc/init.d
+	exeinto /etc/init.d
 	newexe ${FILESDIR}/courier courier
 	newexe ${FILESDIR}/courier-authdaemond courier-authdaemond
 	newexe ${FILESDIR}/courier-ldapaliasd courier-ldapaliasd
@@ -147,17 +142,17 @@ exeinto /etc/init.d
 	newexe ${FILESDIR}/courier-pop3d-ssl courier-pop3d-ssl
 	newexe ${FILESDIR}/courier-pop3d courier-pop3d
 
-einfo "Setting up maildirs by default in the account skeleton ..."
-    diropts -m 755 -o root -g root
-insinto /etc/skel
-    ${D}/usr/bin/maildirmake ${D}/etc/skel/.maildir
-    newins ${FILESDIR}/dot_courier .courier
-    fperms 644 /etc/skel/.courier
-    ${D}/usr/bin/maildirmake ${D}/var/spool/mail/.maildir
-insinto /etc/courier
-    newins ${FILESDIR}/bofh bofh
-    newins ${FILESDIR}/locallowercase locallowercase
-    newins ${FILESDIR}/sizelimit sizelimit
+	einfo "Setting up maildirs by default in the account skeleton ..."
+	diropts -m 755 -o root -g root
+	insinto /etc/skel
+	${D}/usr/bin/maildirmake ${D}/etc/skel/.maildir
+	newins ${FILESDIR}/dot_courier .courier
+	fperms 644 /etc/skel/.courier
+	${D}/usr/bin/maildirmake ${D}/var/spool/mail/.maildir
+	insinto /etc/courier
+	newins ${FILESDIR}/bofh bofh
+	newins ${FILESDIR}/locallowercase locallowercase
+	newins ${FILESDIR}/sizelimit sizelimit
 
 	dodoc AUTHORS BENCHMARKS ChangeLog* NEWS README TODO
 }
@@ -165,7 +160,7 @@ insinto /etc/courier
 pkg_preinst() {
 	# avoid name collisions in /usr/sbin
 	local y
-    cd ${D}/usr/share/courier
+	cd ${D}/usr/share/courier
 	set_maildir imapd imapd-ssl pop3d pop3d-ssl
 
 	cd ${D}/usr/sbin

@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.4.5-r3.ebuild,v 1.6 2002/10/05 05:39:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.4.5-r3.ebuild,v 1.7 2002/11/30 02:50:52 vapier Exp $
 
-IUSE="gdbm tcltk ldap berkdb mysql pam"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="http://ftp1.sourceforge.net/courier/${P}.tar.gz"
 HOMEPAGE="http://www.courier-mta.org/"
@@ -12,8 +9,10 @@ HOMEPAGE="http://www.courier-mta.org/"
 KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE="gdbm tcltk ldap berkdb mysql pam"
 
 PROVIDE="virtual/imapd"
+
 RDEPEND="virtual/glibc
 	>=dev-libs/openssl-0.9.6
 	pam? ( >=sys-libs/pam-0.75 )
@@ -62,14 +61,13 @@ src_compile() {
 	sed -e "s:^\(TLS_CERTFILE=\).*:\1/etc/courier-imap/pop3d.pem:" \
 		imap/pop3d-ssl.dist.old > imap/pop3d-ssl.dist
 
-
 	emake || die "compile problem"
 }
 
-src_install () {
+src_install() {
 	dodir /var/lib/courier-imap
-	mkdir -p ${D}/etc/pam.d
-	make install DESTDIR=${D}
+	dodir /etc/pam.d
+	make install DESTDIR=${D} || die
 
 	# avoid name collisions in /usr/sbin wrt imapd and pop3d
 	cd ${D}/usr/sbin
