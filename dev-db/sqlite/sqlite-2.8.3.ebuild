@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.3.ebuild,v 1.2 2003/09/06 22:25:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.3.ebuild,v 1.3 2003/12/17 19:21:07 gmsoft Exp $
 
 S=${WORKDIR}/sqlite
 DESCRIPTION="SQLite: An SQL Database Engine in a C Library."
@@ -10,7 +10,7 @@ DEPEND="virtual/glibc
 	dev-lang/tcl"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc ~alpha ~mips ~arm ~hppa"
+KEYWORDS="x86 ppc sparc ~alpha ~mips ~arm hppa"
 
 src_compile() {
 	local myconf

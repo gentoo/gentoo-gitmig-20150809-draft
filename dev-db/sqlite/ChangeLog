@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.18 2003/12/13 18:18:34 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.19 2003/12/17 19:21:07 gmsoft Exp $
+
+  17 Dec 2003; Guy Martin <gmsoft@gentoo.org> sqlite-2.8.3.ebuild:
+  Marked stable on hppa.
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> sqlite-2.8.6.ebuild:
   mark stable on amd64
