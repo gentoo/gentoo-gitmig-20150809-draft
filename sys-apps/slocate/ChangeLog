@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.46 2004/07/27 08:36:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.47 2004/07/27 08:47:30 mr_bones_ Exp $
+
+  27 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> slocate-2.7-r5.ebuild:
+  Use ROOT in pkg_postinst; error messages; error check sed
 
   27 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> -slocate-2.7-r2.ebuild,
   -slocate-2.7-r3.ebuild, -slocate-2.7-r4.ebuild:
