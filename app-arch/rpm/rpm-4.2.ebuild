@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.ebuild,v 1.1 2003/03/06 19:49:23 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.ebuild,v 1.2 2003/03/07 11:09:02 cretin Exp $
 
 inherit flag-o-matic
 
@@ -16,6 +16,7 @@ RDEPEND="=sys-libs/db-3.2*
 	>=sys-apps/bzip2-1.0.1
 	>=dev-libs/popt-1.7
 	>=app-crypt/gnupg-1.2
+	dev-libs/elfutils
 	nls? ( sys-devel/gettext )
 	python? ( =dev-lang/python-2.2* )
 	doc? ( app-doc/doxygen )"
