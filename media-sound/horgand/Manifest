@@ -1,6 +1,16 @@
-MD5 38a26258e75e062f0e5901aaa86ac0c7 ChangeLog 971
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a018e025c1929602f149714851ecb47a ChangeLog 1071
 MD5 27751442fc730c76fe0a4f3bd4224635 horgand-0.91.ebuild 757
-MD5 af0c8195a56a39ae53db4117c676d66d horgand-1.06.ebuild 665
+MD5 fe4d888bab3c6c33ba73f54343eb1496 horgand-1.06.ebuild 674
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3ddaec66640532a300bf88ed3f05fe47 files/digest-horgand-0.91 63
 MD5 81b9ca40ecea06bde638c645123ce5f4 files/digest-horgand-1.06 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBosuiArHZZzCEUG0RArzIAJ0WFdb1d0Ragt0TwCKZkVhTyOIjuACcD6Dy
+F+shsanlfj2H0iICQSsT1G8=
+=yA6u
+-----END PGP SIGNATURE-----

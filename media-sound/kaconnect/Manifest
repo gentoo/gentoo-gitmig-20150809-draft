@@ -1,4 +1,14 @@
-MD5 15f002e39c6cc52beea48c0c1c9bad4c ChangeLog 821
-MD5 bb1931430dc7649236f385e8308872e4 kaconnect-1.1.1.ebuild 829
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 06e8fbb62201a5e1f82481bbffde4c43 ChangeLog 924
+MD5 78c54ce4881dc565375e6b87646878a6 kaconnect-1.1.1.ebuild 829
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 98997067af96998c349ab336b8b097f9 files/digest-kaconnect-1.1.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBosyXArHZZzCEUG0RAmfAAJ9xqtqO1ZGayzaDkxg1r9PbF4U5TACfX4T0
+qHLHKLKtOKbA3PLDn6JDqm8=
+=/e+3
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 01bfcafd7c8b5ec2a59b13617fef5a6b ChangeLog 823
-MD5 ff0ba40cf4ac5772371d6db2c1a5a0cd gsm-1.0.10.ebuild 964
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 84ed6d38d44a3671142f8205006221f4 ChangeLog 920
+MD5 39c6a76b9ca144e513c9a420298a9296 gsm-1.0.10.ebuild 985
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 8179ccaf93a92a8a0dedf55cea8eb26f files/digest-gsm-1.0.10 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBossTArHZZzCEUG0RAgB7AJ9qD0OaXss3hYRAMUeXkt5SyAK2GgCfTpsB
+6VbcFW3BszgZX9VkSWfhuw0=
+=ONmp
+-----END PGP SIGNATURE-----
