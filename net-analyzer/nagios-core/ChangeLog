@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.49 2005/02/24 09:43:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.50 2005/03/01 09:21:44 eldad Exp $
+
+  01 Mar 2005; Eldad Zack <eldad@gentoo.org> nagios-core-1.2-r4.ebuild:
+  Changed /var/nagios/rw permissions as per suggested in nagios manual to 2770.
+  Thanks to Urs Joss <tschenturs@gmx.ch>. Closes #76011.
 
 *nagios-core-2.0b_p2 (24 Feb 2005)
 

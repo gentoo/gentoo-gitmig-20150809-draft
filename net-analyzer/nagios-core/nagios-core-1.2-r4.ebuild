@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r4.ebuild,v 1.2 2005/01/25 10:39:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r4.ebuild,v 1.3 2005/03/01 09:21:44 eldad Exp $
 
 inherit eutils depend.apache toolchain-funcs
 
@@ -194,7 +194,7 @@ pkg_preinst() {
 		chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	fi
 
-	chmod ug+s ${D}/var/nagios/rw || die "Failed Chmod of ${D}/var/nagios/rw"
+	chmod 2750 ${D}/var/nagios/rw || die "Failed Chmod of ${D}/var/nagios/rw"
 }
 
 pkg_postinst() {
