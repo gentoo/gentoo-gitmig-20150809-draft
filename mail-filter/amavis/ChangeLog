@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/amavis
+# ChangeLog for mail-filter/amavis
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/ChangeLog,v 1.9 2004/07/13 23:23:55 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/ChangeLog,v 1.10 2004/07/18 15:40:35 aliz Exp $
 
   13 Jul 2004; Tuan Van <langthang@gentoo.org> amavis-0.3.12.ebuild:
   use epatch instead of patch, trying not to use "awk."

@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/mailfilter
+# ChangeLog for mail-filter/mailfilter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.4 2004/07/01 19:51:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.5 2004/07/18 15:40:36 aliz Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mailfilter-0.4.0.ebuild, mailfilter-0.6.ebuild:

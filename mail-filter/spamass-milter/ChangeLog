@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/spamass-milter
+# ChangeLog for mail-filter/spamass-milter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.4 2004/06/26 21:27:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.5 2004/07/18 15:40:36 aliz Exp $
 
   26 Jun 2004; Jason Wever <weeve@gentoo.org> spamass-milter-0.2.0.ebuild:
   Stable on sparc.
