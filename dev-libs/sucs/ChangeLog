@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/sucs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/ChangeLog,v 1.1 2002/10/23 16:03:30 jrray Exp $
+
+*sucs-0.7.0 (23 Oct 2002)
+
+  23 Oct 2002; J Robert Ray <jrray@gentoo.org>
+
+  New ebuild submitted by Gav Wood <gav@indigoarchive.net>.
