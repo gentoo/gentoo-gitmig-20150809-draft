@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r4.ebuild,v 1.8 2004/10/15 13:17:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r4.ebuild,v 1.9 2004/10/16 20:47:20 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -63,6 +63,9 @@ src_unpack() {
 	# userdel has a bug when PAM is enabled that causes it to always exit 
 	# with an exit status of 1 #66687
 	epatch ${FILESDIR}/${P}-userdel-missing-brackets.patch
+
+	# don't install manpages if USE=-nls
+	epatch ${FILESDIR}/${P}-nls-manpages.patch
 
 	# Allows shadow configure detect newer systems properly
 	gnuconfig_update
