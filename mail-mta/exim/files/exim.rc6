@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/files/exim.rc6,v 1.1 2004/05/30 02:35:58 robbat2 Exp $
+
+depend() {
+	need logger net
+	provide mta
+}
+
+start() {
+	ebegin "Starting exim"
+	start-stop-daemon --start --quiet --exec /usr/sbin/exim -- ${EXIM_OPTS:--bd -q15m}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping exim"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/exim
+	eend $?
+}

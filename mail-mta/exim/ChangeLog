@@ -1,0 +1,310 @@
+# ChangeLog for net-mail/exim
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.1 2004/05/30 02:35:57 robbat2 Exp $
+
+*exim-4.24-r2 (29 May 2004)
+
+  29 May 2004; Robin H. Johnson <robbat2@gentoo.org> exim-4.10.ebuild,
+  exim-4.12.ebuild, exim-4.14.ebuild, exim-4.20-r1.ebuild,
+  exim-4.20-r2.ebuild, exim-4.20.ebuild, exim-4.21.ebuild, exim-4.22.ebuild,
+  exim-4.24-r1.ebuild, exim-4.24-r2.ebuild, exim-4.24-r3.ebuild,
+  exim-4.24.ebuild, exim-4.30-r1.ebuild, exim-4.30.ebuild, exim-4.31.ebuild,
+  exim-4.32-r1.ebuild, exim-4.32.ebuild, exim-4.33-r1.ebuild,
+  exim-4.33.ebuild, exim-4.34.ebuild, metadata.xml, files/auth_conf.sub,
+  files/configure, files/exim-4.10-gentoo.diff, files/exim-4.14-tail.patch,
+  files/exim-4.20-maildir.patch, files/exim-4.30-conf.patch,
+  files/exim-4.33-r1-header-syntax.patch, files/exim.confd, files/exim.rc6,
+  files/exiscan.conf, files/mailer.conf, files/pam.d-exim,
+  files/system_filter.exim:
+  Moved from net-mail/exim to mail-mta/exim.
+
+  14 May 2004; Luca Barbato <lu_zero@gentoo.org> exim-4.34.ebuild:
+  Marked ppc
+
+  13 May 2004; Colin Morey <peitolm@gentoo.org> exim-4.34.ebuild:
+  Bumping 4.34 to stable
+
+  11 May 2004; Guy Martin <gmsoft@gentoo.org> exim-4.34.ebuild:
+  Marked stable on hppa.
+
+  11 May 2004; Bryan Østergaard <kloeri@gentoo.org> exim-4.34.ebuild:
+  Stable on alpha, bug #50217.
+
+  11 May 2004; Jon Portnoy <avenj@gentoo.org> exim-4.34.ebuild :
+  AMD64 keywords per security bug.
+
+*exim-4.34 (10 May 2004)
+
+  10 May 2004; Colin Morey <peitolm@gentoo.org> exim-4.34.ebuild:
+  Version bump, should resolve bug #50217
+
+*exim-4.33-r1 (09 May 2004)
+
+  09 May 2004; Colin Morey <peitolm@gentoo.org> exim-4.33-r1.ebuild:
+  Security bump.
+
+*exim-4.33 (06 May 2004)
+
+  06 May 2004; Colin Morey <peitolm@gentoo.org> exim-4.33.ebuild:
+  Version bump, now using .bz2 source
+
+  02 May 2004; Colin Morey <peitolm@gentoo.org> exim-4.32-r1.ebuild:
+  Bumping to Stable. Latest exiscan-acl patch
+
+*exim-4.32-r1 (28 Apr 2004)
+
+  28 Apr 2004; Colin Morey <peitolm@gentoo.org> exim-4.32-r1.ebuild:
+  Bump of exiscan-acl patch
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> exim-4.12.ebuild,
+  exim-4.14.ebuild, exim-4.20-r1.ebuild, exim-4.20-r2.ebuild,
+  exim-4.20.ebuild, exim-4.21.ebuild, exim-4.22.ebuild, exim-4.24-r1.ebuild,
+  exim-4.24-r2.ebuild, exim-4.24-r3.ebuild, exim-4.24.ebuild,
+  exim-4.30-r1.ebuild, exim-4.30.ebuild, exim-4.31.ebuild, exim-4.32.ebuild:
+  Add inherit eutils
+
+*exim-4.32 (24 Apr 2004)
+
+  24 Apr 2004; Colin Morey <peitolm@gentoo.org> exim-4.31.ebuild,
+  exim-4.32.ebuild, metadata.xml:
+  Version bump, also fixes the following :
+    # Includes Typo fix for bug 47106
+    # enable optional exim_monitor support via X use flag bug #46778
+    # To fix bug 41196 (ipv6 breakage)
+
+  24 Apr 2004; Colin Morey <peitolm@gentoo.org> exim-4.31.ebuild,
+  metadata.xml:
+  Bumping exim-4.31 to stable
+
+*exim-4.30-r1 (30 Mar 2004)
+
+  30 Mar 2004; Colin Morey <peitolm@gentoo.org> exim-4.30-r1.ebuild:
+  provides fixes for, #40358 #28665 #27206
+
+*exim-4.31 (30 Mar 2004)
+
+  30 Mar 2004; Colin Morey <peitolm@gentoo.org> exim-4.31.ebuild:
+  Version Bump, also provides fixes for, #40358 #28665 #27206
+
+*exim-4.30 (29 Mar 2004)
+
+  29 Mar 2004; Jay Pfeifer <pfeifer@gentoo.org> exim-4.30.ebuild
+  Version bump. Closes bug #36486.
+
+*exim-4.24-r3 (23 Mar 2004)
+
+  23 Mar 2004; Grant Goodyear <g2boojum@hotmail.com> exim-4.24-r3.ebuild,
+  files/mailer.conf:
+  New revision that supports mailwrapper.
+
+  14 Mar 2004; Tom Gall <tgall@gentoo.org> exim-4.24-r1.ebuild,
+  exim-4.24-r2.ebuild:
+  remove ppc64 for now
+
+*exim-4.24-r2 (06 Mar 2004)
+
+  06 Mar 2004; Kurt Lieber <klieber@gentoo.org> exim-4.24-r2.ebuild:
+  change to allow extra LDFLAGS to be passed to exim
+
+  18 Jan 2004; Martin Holzer <mholzer@gentoo.org> files/exim.rc6:
+  adding provide mta. Closes #34544.
+
+  14 Jan 2004; Aron Griffis <agriffis@gentoo.org> exim-4.24-r1.ebuild:
+  add ~alpha (bug 21240)
+
+  14 Dec 2003; Lars Weiler <pylon@gentoo.org> exim-4.24-r1.ebuild:
+  Make stable on ppc
+
+*exim-4.24-r1 (07 Nov 2003)
+
+  07 Nov 2003; Kurt Lieber <klieber@gentoo.org> exim-4.24-r1.ebuild:
+  minor change to fix 32814. if the original ebuild emerged successfully for
+  you, there is no need to install this version.
+
+  05 Nov 2003; Kurt Lieber <klieber@gentoo.org> exim-4.22.ebuild,
+  exim-4.24.ebuild:
+  fixed #29881.  thanks to Marcin Jurczuk <spock@stars.eu.org> for the patch
+
+*exim-4.24 (05 Nov 2003)
+
+  05 Nov 2003; Kurt Lieber <klieber@gentoo.org> exim-4.24.ebuild,
+  version bump
+
+  21 Oct 2003; Tavis Ormandy <taviso@gentoo.org> exim-4.21.ebuild:
+  adding ~alpha keyword
+
+*exim-4.22 (18 Aug 2003)
+
+  18 Aug 2003; Nick Hadaway <raker@gentoo.org> exim-4.22.ebuild:
+  Upstream bug fixes for ipv6 and a compile warning among others.
+  No ebuild changes.
+
+*exim-4.21 (17 Aug 2003)
+
+  17 Aug 2003; Nick Hadaway <raker@gentoo.org> exim-4.21.ebuild:
+  exiscan support has been deprecated.  exiscan-acl is still around 
+  though.  ipv6 support has been added.  4.21 contains a patch for a 
+  recently announced security flaw.
+
+*exim-4.20-r2 (16 Aug 2003)
+
+  16 Aug 2003; Nick Hadaway <raker@gentoo.org> exim-4.20-r2.ebuild:
+  Added USE_DB=yes to ${S}/Local/Makefile so exim uses the "native"
+  dbm interface.  This Should resolve bug #25181.
+
+  18 Jul 2003; Olivier Crete <tester@gentoo.org> exim-4.14.ebuild,
+  exim-4.20-r1.ebuild, files/exim-4.14-tail.patch:
+  Posixify tail and add amd64
+
+  08 Jul 2003; Todd Berman <tberman@gentoo.org> exim-4.12.ebuild,
+  exim-4.14.ebuild, exim-4.20-r1.ebuild, exim-4.20.ebuild:
+  Updating the mailbase RDEPEND.
+
+*exim-4.20-r1 (27 Jun 2003)
+
+  30 Jun 2003; Guy Martin <gmsoft@gentoo.org> exim-4.20-r1.ebuild :
+  Added hppa to KEYWORDS.
+
+  27 Jun 2003; Todd Berman <tberman@gentoo.org> exim-4.20-r1.ebuild,
+  files/exim-4.20-maildir.patch:
+  Great fixup by srcerer <tschafer@hotmail.com>, including (but not limited to)
+  logging to /var/log/exim, maildir support via USE, exiscan and exiscan-acl
+  also follow maildir USE variable, assorted other small fixed and closed bugs
+  (#21513, #21480, #21302)
+
+  12 Jun 2003; <msterret@gentoo.org> exim-4.20.ebuild:
+  add Header
+
+  12 Jun 2003; <msterret@gentoo.org> exim-4.14.ebuild:
+  add Header
+
+*exim-4.20 (10 Jun 2003)
+
+  10 Jun 2003; Jack Morgan <jmorgan@gentoo.org> exim-4.20.ebuild:
+  Added new edbuild. Includes exiscan-acl support. Thanks to Tim Schafer <tschafer@hotmail.com>
+  Closes bug #21302
+
+*exim-4.14 (30 May 2003)
+
+  30 May 2003; Jack Morgan <jmorgan@gentoo.org> exim-4.14.ebuild:
+  Updates exiscan, closes bug #20613 
+
+*exim-4.12 (28 Jan 2003)
+
+  25 Apr 2003; Martin Holzer <mholzer@gentoo.org> exim-4.12.ebuild:
+  fixed wrong sed state. Closes #19886.
+
+  12 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  exim-4.12.ebuild:
+  added symlinks for rsmtp and rmail, closing bug #19126 by Stefan Fo"rster
+  <gentoo@stefan-foerster.de>
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> exim-4.12.ebuild:
+  removed suid bit on /etc/conf.d/exim thanks to: Benjamin Podszun (Blafasel @
+  irc) <Dar@Dar-Klajid.de> in bug #18148
+
+  07 Feb 2003; Nick Hadaway <raker@gentoo.org> exim-4.12.ebuild :
+  Marked stable for x86.
+
+  28 Jan 2003; Nick Hadaway <raker@gentoo.org> exim-4.12.ebuild,
+  files/digest-exim-4.12 :
+  Version bump.  Also bumped exiscan to 4.12-21.
+
+  16 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> : exim-4.10.ebuild
+  Marked stable.  
+
+  15 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> : exim-4.10.ebuild
+  Added patch to fix security issue.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*exim-4.10 (15 Nov 2002)
+
+  12 Apr 2003; Seemant Kulleen <seemant@gentoo.org> exim-4.10.ebuild:
+  same, but for the previous version as well
+
+  03 Feb 2003; Jon Nall <nall@gentoo.org> exim-4.10.ebuild :
+  added ~ppc
+
+  15 Nov 2002; Nick Hadaway <raker@gentoo.org> exim-4.10.ebuild,
+  files/digest-exim-4.10, files/exiscan.conf :
+  New exim ebuild with support for exiscan patched in.  Marked unstable.
+
+*exim-4.05 (29 Aug 2002)
+
+  15 Sep 2002; Nick Hadaway <raker@gentoo.org> exim-4.05.ebuild :
+  Fixed a typo.  -lpg to -lpq.  See bug #7878
+
+  11 Sep 2002; Nick Hadaway <raker@gentoo.org> exim-4.05.ebuild :
+  Updated ebuild to install convert4r{3,4} into /usr/sbin as suggested
+  by bug #7702 and changed use variable from pgsql to postgres.
+
+  03 Sep 2002; Nick Hadaway <raker@gentoo.org> exim-4.05.ebuild :
+  Still masked.  /etc/exim/configure.default is now installed as
+  /etc/exim/exim.conf.dist to match most other packages config file
+  name style.
+
+  01 Sep 2002; Nick Hadaway <raker@gentoo.org> exim-4.05.ebuild :
+  Changed use variables to coincide with already defined system variables.
+
+  29 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  exim-4.05.ebuild, files/digest-exim-4.05 :
+  Version bump.  Currently masked for portage tree freeze.
+  Removed nonexistant sample config.
+
+*exim-4.04-r2 (20 Aug 2002)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> exim-4.04-r2.ebuild:
+  changed pgsql USE to postgres, which exists
+
+  01 Sep 2002; Nick Hadaway <raker@gentoo.org> exim-4.04-r2.ebuild :
+  Changed use variables to coincide with already defined system variables.
+
+  29 Aug 2002; Nick Hadaway <raker@gentoo.org> exim-4.04-r2.ebuild :
+  Removed nonexistant sample config.
+
+  20 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  exim-4.04-r2.ebuild, files/digest-exim-4.04-r2 :
+  Updated ebuild with a cleaner LOOKUP_INCLUDE and LOOKUP_LIBS scheme
+  as suggested by Eric Renfro.  Added support for mta-pgsql USE variable 
+  and updated dependancies.
+
+*exim-4.04-r1 (15 Aug 2002)
+
+  15 Aug 2002; Nick Hadaway <raker@gentoo.org> exim-4.04-r1.ebuild :
+  Added LOOKUP_CDB to compile options.  This will add support for
+  Constant Database lookups which are in many cases faster than
+  linear lookups.  All CDB code is included in exim.  To learn more
+  about CDB check out http://cr.yp.to/cdb.html.
+
+  15 Aug 2002; Nick Hadaway <raker@gentoo.org> exim-4.04-r1.ebuild :
+  Updated ebuild to add LOOKUP_DSEARCH support.  This allows more
+  functionality to exim with virual hosts.
+
+*exim-3.36-r1 (18 Apr 2002)
+
+  18 Apr 2002; Ryan Phillips <rphillips@gentoo.org>
+  exim-3.36-r1.ebuild files/digest-exim-3.36-r1 :
+  Updated due to security exploit in exim-3.34
+  
+*exim-3.34-r2 (15 Apr 2002)
+
+  15 Apr 2002; Seemant Kulleen <seemant@gentoo.org>
+  exim-3.34-r2.ebuild files/digest-exim-3.34-r2 :
+  Updated the USE flags from mta-ldap, mta-tls and mta-mysql to the more general
+  and widely used ldap, ssl and mysql flags respectively.
+
+*exim-3.34-r1 (1 Apr 2002)
+
+  1 Apr 2002; Grant Goodyear <g2boojum@gentoo.org> :
+  Applied jnelson patches (bug #1444) to solve "missing exim binary"
+  problem.
+  
+*exim-3.34 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
