@@ -22,7 +22,7 @@
 # SELinux-patched packages
 *>=net-misc/openssh-3.7.1_p2
 *>=sys-apps/coreutils-5.0.91
-*>=sys-apps/findutils-4.1.20
+*>=sys-apps/findutils-4.1.20-r1
 *>=sys-apps/pam-login-3.14
 *=sys-apps/procps-3.1.12
 *>=sys-apps/psmisc-21.2-r4

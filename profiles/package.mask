@@ -91,10 +91,6 @@ games-sports/soccar
 # Beta release, not completly working
 =net-dialup/ppp-2.4.2_beta3
 
-# <pebenito@gentoo.org> (02 Oct 2003)
-# for new selinux api
->=dev-python/python-selinux-2.0
-
 # <agenkin@gentoo.org> (02 Oct 2003)
 # deprecated.  now comes as part of app-cdf/cdrtools
 # bug #18539
@@ -195,10 +191,6 @@ media-video/lives
 # uses old libnet and may contain secuirty hole.
 <=net-analyzer/hogwash-0.4
 
-# pebenito@gentoo.org (17 Aug 2003)
-# yet another masking for new selinux api
->=sec-policy/selinux-base-policy-20030817
-
 # robbat2@gentoo.org (14 Aug 2003)
 # This will be released along with scgi, mod_scgi, fastcgi, mod_fastcgi
 net-www/pcgi
@@ -207,11 +199,6 @@ net-www/mod_pcgi
 # lanius@gentoo.org (15 Aug 2003)
 # needs a lot more testing
 >net-misc/ltsp-core-3.0.9-r3
-
-# pebenito@gentoo.org (14 Aug 2003)
-# more masking for new selinux api
->=sys-kernel/selinux-sources-2.4.21-r2
->=sys-apps/selinux-small-2003081400
 
 # John Mylchreest <johnm@gentoo.org> (14 August 2003)
 # Headers have changed and break support with many video drivers such as
@@ -223,13 +210,6 @@ net-www/mod_pcgi
 # Masking until approved (or fixed) by the web-app folks
 net-www/scgi
 net-www/mod_scgi
-
-# pebenito@gentoo.org (03 Aug 2003)
-# new api/userland for selinux
->=dev-python/python-selinux-2.0
-sys-libs/libselinux
-sys-apps/checkpolicy
-sys-apps/policycoreutils
 
 # seemant@gentoo.org (02 Aug 2003)
 # masking openafs-1.3 series as it is really unstable and useless
