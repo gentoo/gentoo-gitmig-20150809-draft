@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.3 2002/11/10 15:17:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.4 2002/11/27 21:45:37 azarah Exp $
+
+*gcc-config-1.2.1 (27 Nov 2002)
+
+  27 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Update to only biatch about not being root if the user
+  tries to change the system profile, thanks rphillips!
 
 *gcc-config-1.2 (10 Nov 2002)
 
