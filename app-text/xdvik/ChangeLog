@@ -1,0 +1,9 @@
+# ChangeLog for app-text/xdvik
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.1 2003/07/26 16:31:11 usata Exp $
+
+*xdvik-22.40y (27 Jul 2003)
+
+  27 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> xdvik-22.40y.ebuild:
+  Initial import, closing bug #23130
+
