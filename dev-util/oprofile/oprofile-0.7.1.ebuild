@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.7.ebuild,v 1.4 2004/02/01 19:57:28 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.7.1.ebuild,v 1.1 2004/02/01 19:57:28 spock Exp $
 
 DESCRIPTION="A transparent low-overhead system-wide profiler"
 HOMEPAGE="http://oprofile.sourceforge.net"
@@ -11,8 +11,7 @@ SLOT="0"
 KEYWORDS="~x86"
 # IUSE: it also needs kernel sources but all gentoo users have them
 IUSE="qt"
-DEPEND="
-	>=dev-libs/popt-1.7-r1
+DEPEND=">=dev-libs/popt-1.7-r1
 	>=sys-devel/binutils-2.14.90.0.6-r3
 	>=sys-libs/glibc-2.3.2-r1
 	qt? ( >=x11-libs/qt-3.2.1-r2 )"

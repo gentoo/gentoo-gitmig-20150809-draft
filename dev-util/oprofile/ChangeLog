@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/oprofile
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.1 2003/10/23 22:48:16 cretin Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.2 2004/02/01 19:57:28 spock Exp $
+
+*oprofile-0.7.1 (01 Feb 2004)
+
+  01 Feb 2004; Michal Januszewski <spock@gentoo.org> metadata.xml,
+  oprofile-0.7.1.ebuild, oprofile-0.7.ebuild:
+  Version bump, closes #39715.
 
 *oprofile-0.7 (23 Oct 2003)
 
