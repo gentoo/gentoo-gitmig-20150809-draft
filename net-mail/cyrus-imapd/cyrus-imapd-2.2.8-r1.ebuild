@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.8-r1.ebuild,v 1.1 2004/10/19 23:46:56 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.8-r1.ebuild,v 1.2 2004/10/20 21:22:47 swegener Exp $
 
-inherit eutils ssl-cert gnuconfig
+inherit eutils ssl-cert gnuconfig fixheadtails
 
 DESCRIPTION="The Cyrus IMAP Server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -70,6 +70,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
+
+	ht_fix_file ${S}/imap/xversion.sh
 
 	# Add drac database support.
 	if use drac ; then
