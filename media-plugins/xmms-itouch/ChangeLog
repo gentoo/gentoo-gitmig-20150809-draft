@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-itouch
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-itouch/ChangeLog,v 1.1 2002/10/31 16:33:44 seemant Exp $
+
+*xmms-itouch-0.1.2 (31 Oct 2002)
+
+  31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xmms-itouch-0.1.2.ebuild
+  ChangeLog files/digest-xmms-itouch-0.1.2 :
+
+  XMMS plugin to configure multimedia keys to control xmms.  Can work with
+  regular keyboards as well.
