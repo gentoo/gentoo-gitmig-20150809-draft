@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.1 2003/10/15 05:42:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.2 2003/10/15 08:08:00 seemant Exp $
 
 inherit gnuconfig
 
@@ -23,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PF}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	cd ${S}/src
 	epatch ${WORKDIR}/wget-new-percentage/wnp-20011208-2.diff
