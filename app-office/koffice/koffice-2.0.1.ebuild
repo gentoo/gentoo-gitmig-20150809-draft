@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-2.0.1.ebuild,v 1.2 2000/12/11 17:40:23 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-2.0.1.ebuild,v 1.3 2001/03/29 23:57:34 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -17,7 +17,7 @@ RDEPEND=$DEPEND
 
 src_compile() {
     QTBASE=/usr/X11R6/lib/qt
-    try ./configure --prefix=/opt/kde2 --host=${CHOST} \
+    try ./configure --prefix=$KDEDIR --host=${CHOST} \
 		--with-qt-dir=$QTBASE
     try make
 }
