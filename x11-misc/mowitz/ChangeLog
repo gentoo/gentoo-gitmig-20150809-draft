@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/mowitz
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mowitz/ChangeLog,v 1.1 2002/06/05 04:02:54 lostlogic Exp $
+
+*mowitz-0.2.1 (4 Jun 2002)
+
+  4 Jun 2002; Brandon Low <lostlogic@gentoo.org> ChangeLog files/digest-mowitz-0.2.1 mowitz-0.2.1.ebuild
+  Initial package pretty straight forward, added because it is a
+  dependency of app-office/siag
