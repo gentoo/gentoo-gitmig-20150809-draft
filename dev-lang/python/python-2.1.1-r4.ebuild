@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.1-r4.ebuild,v 1.3 2002/04/29 21:20:00 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.1-r4.ebuild,v 1.4 2002/04/30 10:31:08 seemant Exp $
 
 S=${WORKDIR}/Python-${PV}
 FCHKSUM="python-fchksum-1.6"
@@ -124,4 +124,7 @@ src_install() {
 		mv "${S}/Tools/idle" "${D}/usr/lib/python2.1/tools/"
 		dosym /usr/lib/python2.1/tools/idle/idle.py /usr/bin/idle.py
 	fi
+
+	# man pages wind up in /usr/man for some reason
+	mv ${D}/usr/man ${D}/usr/share
 }
