@@ -1,9 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07_beta2.ebuild,v 1.3 2004/01/02 19:48:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07_beta2.ebuild,v 1.4 2004/02/27 19:38:42 seemant Exp $
 
 inherit flag-o-matic eutils
-filter-flags "-fstack-protector"
 
 DESCRIPTION="fast modern type-inferring functional programming language descended from the ML (Meta Language) family"
 HOMEPAGE="http://www.ocaml.org/"
@@ -36,6 +35,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags "-fstack-protector"
+
 	local myconf
 	use tcltk || myconf="-no-tk"
 
