@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 981ce0875599f9ccc7282cfb3be35d94 ChangeLog 1036
-MD5 50eca545bec63c207f49274a8e1db851 actionwebservice-0.5.0.ebuild 768
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 7f9dbe9097df5f002ee9008d23afc577 actionwebservice-0.6.0.ebuild 731
+MD5 ef9eca99056a36eb567454dd1c123aed actionwebservice-0.6.2.ebuild 755
 MD5 b6e2b85b0728f0eadb9eb34c57999fb2 actionwebservice-0.6.1.ebuild 761
-MD5 9032ebed4054e409f864b021d9a50bea actionwebservice-0.6.2.ebuild 761
+MD5 50eca545bec63c207f49274a8e1db851 actionwebservice-0.5.0.ebuild 768
+MD5 f619ea38fa199ce6abea73c59a48c952 ChangeLog 1123
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 196855d8443c00a0ec995f18bd8014f6 files/digest-actionwebservice-0.5.0 70
 MD5 71cf7a14ff66a29e20ae92361153dca5 files/digest-actionwebservice-0.6.0 70
 MD5 f11bba8e1ba7308a4ba7b5ff815ff671 files/digest-actionwebservice-0.6.1 70
 MD5 0d8ce6f5960d28512b70e990fdc7f4d7 files/digest-actionwebservice-0.6.2 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCSEEZz2gxt1z4IGYRAtGXAKDSyIbNaw4uDmbyJXLMZ0Ib1E6kbwCfafBK
-S6GicugFv7g0KRBwNBLzu/o=
-=0Qp1
------END PGP SIGNATURE-----

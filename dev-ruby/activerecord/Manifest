@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b79e8edb84ee62fa795dd79459d4c20 activerecord-1.6.0.ebuild 814
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 b8c06af65400a0483dda70864d0237b5 ChangeLog 994
-MD5 b0619e2add7ce4b12d8e13af706cb8c0 activerecord-1.7.0.ebuild 841
-MD5 ac277748a4c8315218f91d6868bc066a activerecord-1.8.0.ebuild 847
 MD5 b33129c36830f1880bc780beafa405de activerecord-1.9.0.ebuild 842
-MD5 ea3b1a1df6c7dcd0d92198afcfc6ea10 activerecord-1.9.1.ebuild 847
+MD5 0b79e8edb84ee62fa795dd79459d4c20 activerecord-1.6.0.ebuild 814
+MD5 b0619e2add7ce4b12d8e13af706cb8c0 activerecord-1.7.0.ebuild 841
+MD5 e65b62b4342d032a89260181794a16e8 activerecord-1.9.1.ebuild 841
+MD5 0fefb70561f3656a25a3a738efc23027 ChangeLog 1077
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 ac277748a4c8315218f91d6868bc066a activerecord-1.8.0.ebuild 847
 MD5 0bb4ff3c6365bbbba9cbece5c7d63763 files/digest-activerecord-1.6.0 67
 MD5 1256bcab2a566e95e89aa6d3dcdd8d26 files/digest-activerecord-1.7.0 67
 MD5 2eb4e69ef35d377ab4f7dbfaeaa65e49 files/digest-activerecord-1.8.0 67
 MD5 4a96f641e43406bb9f8e3bae38e81753 files/digest-activerecord-1.9.0 67
 MD5 41f6507f74e034f747ce0224e3951bb5 files/digest-activerecord-1.9.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCSD/lz2gxt1z4IGYRAh4QAJ9AV2XZwBjANMKxAndn0LnR/UQMsACeKnSG
-CoVgUv3h3BMAyZIvxseAyvQ=
-=FBu9
------END PGP SIGNATURE-----
