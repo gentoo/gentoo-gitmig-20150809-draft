@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.90.0.3.ebuild,v 1.2 2004/06/22 11:29:32 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.90.0.3.ebuild,v 1.3 2004/06/22 16:06:15 humpback Exp $
 
 SVER="0_90_0_3"
 RESTRICT="fetch"
@@ -27,7 +27,7 @@ pkg_nofetch() {
 	fi
 	einfo "and copy it to ${DISTDIR}"
 	einfo ""
-	einfo "Have a look at ${PORTDIR}/licenses/${PN} before running this software"
+	einfo "Have a look at ${PORTDIR}/licenses/${LICENSE} before running this software"
 }
 
 src_unpack() {
@@ -55,7 +55,7 @@ src_install() {
 	exeopts -m0755
 	exeinto /opt/skype
 	doexe skype
-	use arts && doexe skype.bin
+	( use arts || use esd ) && doexe skype.bin
 	insinto /opt/skype
 	doins call_in.wav
 	dodir /usr/share/applnk/Internet
@@ -69,7 +69,7 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
 		doins ${S}/icons/${SIZE}/${PN}.png
 	done
-	use arts && fowners root:audio /opt/skype/skype.bin
+	( use arts || use esd ) && fowners root:audio /opt/skype/skype.bin
 	fowners root:audio /opt/skype/skype
 	dodir /usr/bin/
 	dosym /opt/skype/skype /usr/bin/skype

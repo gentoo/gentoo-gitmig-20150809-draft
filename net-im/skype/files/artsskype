@@ -4,9 +4,9 @@ progpath="/opt/${progname}/"
 shellcheck1=` which artsshell 2> /dev/null `
 shellcheck2=` which esd 2> /dev/null `
 artsdcheck=` ps x | grep artsd | grep -v grep `
-esdcheck=` ps x | grep esd | grep -v grep `
+esdcheck=` ps -x | grep esd$ | grep -v grep `
 
-if [[ -z ${shellcheck1} || -z ${shellcheck2} ]]
+if [[ -z ${shellcheck1} && -z ${shellcheck2} ]]
 then
 	echo "No installed artsshell or esd found"
 	echo "Assuming you're running no sound daemon"
