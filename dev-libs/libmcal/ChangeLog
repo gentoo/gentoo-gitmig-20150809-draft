@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.4 2003/12/16 19:26:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.5 2004/01/08 09:19:59 robbat2 Exp $
+
+  08 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> libmcal-0.7-r1.ebuild,
+  libmcal-0.7.ebuild:
+  bump to ppc for deps
 
   16 Dec 2003; Jason Wever <weeve@gentoo.org> libmcal-0.7.ebuild:
   Marked stable on sparc to fix dev-php/mod_php's broken dependencies.
