@@ -425,12 +425,6 @@ dev-db/mergeant
 # It is alpha after all.
 >=net-fs/samba-3.0_alpha
 
-# <max@gentoo.org> (12 Sep 2003)
-# Commenting this out to allow people to try 1.6.1.90 version
-# Originally added by:
-# <mholzer@gentoo.org> (09 Feb 2003)
-#>=media-video/mjpegtools-1.6.1
-
 # <chadh@gentoo.org> (23 Jan 2003)
 # new pcmcia-cs ebuilds need testing and acceptance
 sys-apps/pcmcia-cs-tools
