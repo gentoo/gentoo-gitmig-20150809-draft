@@ -139,7 +139,6 @@ dev-perl/CDDB-File
 # masked for testing.  x3270 for version bump, and xmms for removal of avi
 # stuff, gpgme for version bump.
 =net-misc/x3270-3.2.19
-media-video/avi4xmms
 
 # <blizzy@gentoo.org> (23 Aug 2002)
 # masked for testing
