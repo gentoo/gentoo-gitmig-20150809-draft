@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.1-r1.ebuild,v 1.3 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.1-r1.ebuild,v 1.4 2002/08/01 17:33:40 karltk Exp $
 
 At=IBMJava2-JRE-131.tgz
 S=${WORKDIR}/IBMJava2-131
@@ -11,9 +11,11 @@ HOMEPAGE="http://www6.software.ibm.com/dl/dklx130/dklx130-p"
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.1"
 RDEPEND="$DEPEND"
-
 PROVIDE="virtual/jre-1.3
 	virtual/java-scheme-2"
+LICENSE="IBM-ILNWP"
+SLOT="0"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
