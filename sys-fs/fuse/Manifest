@@ -1,6 +1,6 @@
 MD5 aff81d5a47238572df29e9f30e8d4c5c fuse-1.4.ebuild 1150
 MD5 b013f85dfbc6a56f0c407b1c5a6df29c fuse-2.1.ebuild 1156
-MD5 bf103a5b6c7f0f2b89de1c5c7c0ccbaa ChangeLog 976
+MD5 3c330a327013997eb171f2ff226dbcff ChangeLog 1060
 MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
 MD5 86c18e0aa1b9961decf250349afc0fdc files/digest-fuse-1.4 60
 MD5 fd5c3c8819559265b221879ca45deae3 files/digest-fuse-2.1 60
