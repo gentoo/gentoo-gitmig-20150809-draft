@@ -1,22 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4.ebuild,v 1.12 2003/02/13 06:39:24 vapier Exp $
-
-IUSE="X"
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4.ebuild,v 1.13 2003/08/05 15:08:25 vapier Exp $
 
 MY_P="${PN}-2.1_4"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A vi/ex clone"
-SRC_URI="ftp://ftp.cs.pdx.edu/pub/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="ftp://ftp.cs.pdx.edu/pub/elvis/"
+SRC_URI="ftp://ftp.cs.pdx.edu/pub/${PN}/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ppc sparc "
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
+IUSE="X"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	X? ( virtual/x11 )"
-
 PROVIDE="virtual/editor"
 
 src_compile() {

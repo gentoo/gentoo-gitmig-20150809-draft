@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r7.ebuild,v 1.5 2003/06/29 18:24:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r7.ebuild,v 1.6 2003/08/05 15:08:52 vapier Exp $
 
-inherit vim
+inherit vim eutils
 
 VIM_VERSION="6.1"
 VIM_GENTOO_PATCHES="vim-6.1-gentoo-patches.tar.bz2"
