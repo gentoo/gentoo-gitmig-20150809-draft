@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.4.ebuild,v 1.1 2004/01/21 21:31:09 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.4.ebuild,v 1.2 2004/01/22 21:36:57 mattam Exp $
 
 SIMPLE_ELISP='nil'
 inherit elisp
@@ -11,8 +11,8 @@ PN="ProofGeneral"
 P="$PN-$PV"
 
 DESCRIPTION="Proof General is a generic interface for proof assistants"
-HOMEPAGE="http://www.proofgeneral.org/"
-SRC_URI="http://www.proofgeneral.org/${P}.tar.gz"
+HOMEPAGE="http://proofgeneral.inf.ed.ac.uk/"
+SRC_URI="http://proofgeneral.inf.ed.ac.uk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
@@ -45,7 +45,7 @@ src_install() {
 pkg_postinst() {
 	elisp-site-regen
 	einfo "Please register your use of Proof General on the web at:"
-	einfo "  http://www.proofgeneral.org/register "
+	einfo "  http://proofgeneral.inf.ed.ac.uk/register "
 	einfo "(see the REGISTER file for more information)"
 }
 
