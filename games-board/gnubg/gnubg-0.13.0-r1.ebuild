@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.13.0-r1.ebuild,v 1.1 2003/09/30 05:41:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.13.0-r1.ebuild,v 1.2 2003/09/30 07:23:12 mr_bones_ Exp $
 
 inherit games
 
@@ -16,22 +16,34 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="gtk gtk2 readline guile X gdbm truetype nls png esd arts nas"
 
-DEPEND="guile? ( dev-util/guile )
+# FIXME does this need to DEPEND on netpbm?
+RDEPEND="guile? ( dev-util/guile )
 	truetype? ( =media-libs/freetype-1* )
 	|| (
-		gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1* )
 		gtk2? ( =x11-libs/gtk+-2* =dev-libs/glib-2* )
+		gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1* )
 	)
 	readline? ( sys-libs/readline )
 	X? ( virtual/x11 )
 	gdbm? ( sys-libs/gdbm )
+	esd? ( media-sound/esound )
+	arts? ( kde-base/arts )
+	nas? ( media-libs/nas )
 	png? ( media-libs/libpng )"
+DEPEND="${RDEPEND}
+	nas? ( >=sys-apps/sed-4 )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	mv ../${PN}.weights-${WPV} ${S}/${PN}.weights
 	mv ../${PN}.bd ${S}
+	if  [ `use nas` ] ; then
+		# couldn't find -laudio without this.  Very odd.
+		sed -i \
+			-e "s:-laudio:-L/usr/X11R6/lib/ -laudio:" configure.in || \
+				die "sed configure.in failed"
+	fi
 }
 
 src_compile() {

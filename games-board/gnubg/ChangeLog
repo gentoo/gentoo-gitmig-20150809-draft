@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnubg
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.3 2003/09/30 05:41:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.4 2003/09/30 07:23:12 mr_bones_ Exp $
+
+  30 Sep 2003; Michael Sterrett <mr_bones_@gentoo.org> gnubg-0.13.0-r1.ebuild:
+  Failed to link with USE=nas so fix configure.in in this case.  Also, default
+  to gtk2; added more DEPENDs based on USE flags.
 
 *gnubg-0.13.0-r1 (29 Sep 2003)
 
