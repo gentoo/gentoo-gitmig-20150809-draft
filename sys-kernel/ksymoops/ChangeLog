@@ -1,9 +1,14 @@
 # ChangeLog for sys-kernel/ksymoops
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.5 2002/12/03 00:02:59 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.6 2003/02/10 06:37:50 seemant Exp $
 
 *ksymoops-2.4.8 (25 Nov 2002)
-  
+ 
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Changed the search/replace sed expressions to use : instead of / as a
+  delimiter.  Closes bug #15006 by Blu3 <david+gentoo.org@blue-labs.org>
+ 
   02 Dec 2002; Will Woods <wwoods@gentoo.org> ksymoops-2.4.8.ebuild :
   
   Added alpha keyword
