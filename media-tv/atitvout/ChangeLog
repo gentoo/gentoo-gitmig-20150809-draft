@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/atitvout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/atitvout/ChangeLog,v 1.2 2004/06/25 00:31:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/atitvout/ChangeLog,v 1.3 2004/07/01 10:50:33 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> atitvout-0.4.ebuild:
+  virtual/glibc -> virtual/libc
 
 *atitvout-0.4 (18 Jun 2003)
 
