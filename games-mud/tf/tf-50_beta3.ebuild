@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta3.ebuild,v 1.5 2004/07/01 11:21:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta3.ebuild,v 1.6 2004/08/31 21:38:09 mr_bones_ Exp $
 
 inherit games
 
@@ -23,9 +23,9 @@ DEPEND="virtual/libc
 
 src_compile() {
 	egamesconf \
-		`use_enable ssl` \
-		`use_enable debug core` \
-		`use_enable ipv6 inet6` \
+		$(use_enable ssl) \
+		$(use_enable debug core) \
+		$(use_enable ipv6 inet6) \
 		--enable-manpage || die
 	emake || die "emake failed"
 }
