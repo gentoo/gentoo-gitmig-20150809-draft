@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8aad45bb9e549e117d267d580ff9ba5c alsa-lib-1.0.7.ebuild 2067
-MD5 a756674725ca185818f8e0cd7b97cbc0 ChangeLog 14023
+MD5 defe18fdf4c88211214830ee5dc2d3f5 alsa-lib-1.0.7.ebuild 2066
+MD5 df4c4d5900085e112e21c066584edd6d ChangeLog 14269
 MD5 c70aa2eafab8da5100e86a0245d253aa alsa-lib-0.9.8.ebuild 1584
 MD5 6b11458adc5a923dd38d150f500179a1 alsa-lib-1.0.2.ebuild 1609
 MD5 48d169c269adb83d12a56b30f097e87a alsa-lib-1.0.6.ebuild 1911
@@ -20,7 +20,7 @@ MD5 ff6b3f2ba9f419d2e31c55f93da0e170 files/alsa-lib-1.0.7-pcm_wait.patch 342
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBlUF3ArHZZzCEUG0RAm4EAJ9N+uhHyv9csEWjnETGJD7/P6+qKwCZAQt4
-0uAcNfAfAVPc1lfZqUm8Fa4=
-=6XQi
+iD8DBQFBojYCArHZZzCEUG0RAgqqAJ9rVmD9FBB500oELUsv71eCFoRhYQCcCE7E
+2LAXq2j8jSVnWwrvaYgQOiI=
+=x7bH
 -----END PGP SIGNATURE-----

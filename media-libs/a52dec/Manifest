@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8ed2cbaf0da6820bd0e4aad3f5eafcdf a52dec-0.7.4-r3.ebuild 1308
+MD5 d52ca4a03cd8c90759293df813c48902 ChangeLog 3532
 MD5 de290c0400384a59257ecb5b48147c87 a52dec-0.7.4.ebuild 941
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 d52ca4a03cd8c90759293df813c48902 ChangeLog 3532
+MD5 60821924852b7a3d6abbe5a44a80850f a52dec-0.7.4-r3.ebuild 1304
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4 64
-MD5 3bb61e4ec18824ddab0068807ad43de8 files/a52dec-0.7.4-build.patch 1232
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r3 64
+MD5 3bb61e4ec18824ddab0068807ad43de8 files/a52dec-0.7.4-build.patch 1232
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBm8wgArHZZzCEUG0RAoVhAJ0bT/KkYCfGP5CoCbemtqckErhhewCfaRko
-+HR1a2OFYdw2Ak/GmfTgFPU=
-=D7R6
+iD8DBQFBojWVHTu7gpaalycRAhs4AKDWZ/EbhqdCbu73cO+Ag9SRHXAC4QCgodVj
+eJeWAHn89QEWlGIvesRfWw8=
+=Xfkg
 -----END PGP SIGNATURE-----

@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e6fa2ff26e1184db2cc3a53acd3e288c ChangeLog 2754
-MD5 d79a915c4bf4c60d90076f1478cc38e4 faac-1.23.5.ebuild 849
-MD5 4a4c1eae3e8a2f0497a6e5ed40e82860 faac-1.24.ebuild 836
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 3c7304d2a11a89df8123f8c096d11725 files/digest-faac-1.23.5 63
-MD5 927d4973537500e758398d0dd1daae88 files/digest-faac-1.24 61
+MD5 d79a915c4bf4c60d90076f1478cc38e4 faac-1.23.5.ebuild 849
+MD5 6c00325bca45c5588186f813caa398d2 faac-1.24.ebuild 856
 MD5 cdd79fb009d4c52796f1b1e31bf6ed20 files/fix-linefeeds.sh 122
 MD5 049efb5435eb21d0c652a01219932747 files/libsndfile-1.0.diff 1368
+MD5 3c7304d2a11a89df8123f8c096d11725 files/digest-faac-1.23.5 63
+MD5 927d4973537500e758398d0dd1daae88 files/digest-faac-1.24 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBojXXHTu7gpaalycRAnPBAKCGRtcbxE+1AmS0xp02LewrzocEVwCfTWMM
+sMfi3aPQasajJjMVgjl48sg=
+=kgV8
+-----END PGP SIGNATURE-----
