@@ -54,6 +54,8 @@
 #define BuildRender            YES
 
 /* Need this to build libs with -fPIC */
+#undef StaticNeedsPicForShared
+#undef BuildLibGlxWithoutPIC
 #define StaticNeedsPicForShared YES
 #define BuildLibGlxWithoutPIC   NO
 
