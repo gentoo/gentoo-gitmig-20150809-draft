@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040809.ebuild,v 1.1 2004/08/09 11:38:04 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040829.ebuild,v 1.1 2004/08/29 20:54:04 twp Exp $
 
 inherit eutils subversion
 
@@ -49,6 +49,7 @@ src_install() {
 		SHAREDIR=${D}/usr/share/ion3 \
 		MANDIR=${D}/usr/share/man \
 		DOCDIR=${D}/usr/share/doc/${PF} \
+		LOCALEDIR=${D}/usr/share/locale \
 		install || die
 
 	prepalldocs
