@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.09.30.ebuild,v 1.1 2004/10/01 10:22:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.09.30.ebuild,v 1.2 2004/10/07 03:16:20 eradicator Exp $
 
 IUSE=""
 
@@ -58,10 +58,10 @@ src_install() {
 		local dir
 		dir=$(basename $(dirname ${lib}))
 
-		insinto "/usr/lib/live/${dir}"
+		insinto "/usr/$(get_libdir)/live/${dir}"
 		doins "${lib}"
 
-		insinto "/usr/lib/live/${dir}/include"
+		insinto "/usr/$(get_libdir)/live/${dir}/include"
 		doins ${S}/${dir}/include/*h
 	done
 
