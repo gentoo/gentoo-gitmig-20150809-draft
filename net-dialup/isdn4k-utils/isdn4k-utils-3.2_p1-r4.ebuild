@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r4.ebuild,v 1.2 2004/02/18 19:03:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r4.ebuild,v 1.3 2004/04/26 18:44:41 agriffis Exp $
 
 IUSE="X"
 VBOX_V=0.1.9
@@ -83,7 +83,7 @@ src_compile() {
 	make || die
 
 	cd ${S}/../vbox3-${VBOX_V}
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 
