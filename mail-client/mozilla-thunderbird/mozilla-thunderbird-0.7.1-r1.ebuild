@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.6.ebuild,v 1.5 2004/07/14 16:20:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.1-r1.ebuild,v 1.1 2004/08/03 13:26:27 agriffis Exp $
 
-IUSE="crypt debug gnome gtk2 ipv6 ldap xinerama"
+IUSE="crypt debug gtk2 ipv6 ldap xinerama"
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
-inherit flag-o-matic gcc eutils nsplugins
+inherit flag-o-matic gcc eutils nsplugins mozilla-launcher
 
-EMVER="0.83.6"
-IPCVER="1.0.5"
+EMVER="0.85.0"
+IPCVER="1.0.7"
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/thunderbird-source-${PV}.tar.bz2
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/thunderbird-${PV}-source.tar.bz2
 	 crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 	   		  http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 
@@ -36,17 +36,30 @@ RDEPEND="virtual/x11
 	!gtk2? (
 		=x11-libs/gtk+-1.2*
 		>=gnome-base/ORBit-0.5.10-r1 )
-	crypt? ( >=app-crypt/gnupg-1.2.1 )"
+	crypt? ( >=app-crypt/gnupg-1.2.1 )
+	>=net-www/mozilla-launcher-1.7-r1"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	dev-lang/perl"
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/mozilla
 
-# needed by src_compile() and src_install()
+# Needed by src_compile() and src_install().
+# Would do in pkg_setup but that loses the export attribute, they
+# become pure shell variables.
 export MOZ_THUNDERBIRD=1
 export MOZ_ENABLE_XFT=1
+
+# Simulate the silly csh makemake script
+makemake() {
+	typeset m topdir
+
+	for m in $(find . -name Makefile.in); do
+		topdir=$(echo "$m" | sed -r 's:[^/]+:..:g')
+		sed -e "s:@srcdir@:.:g" -e "s:@top_srcdir@:${topdir}:g" \
+			< ${m} > ${m%.in} || die "sed ${m} failed"
+	done
+}
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
@@ -54,13 +67,12 @@ src_unpack() {
 
 	# Unpack the enigmail plugin
 	if use crypt; then
-		mv -f ${WORKDIR}/ipc ${S}/extensions/
-		mv -f ${WORKDIR}/enigmail ${S}/extensions/
-		cp ${FILESDIR}/enigmail/Makefile-enigmail ${S}/extensions/enigmail/Makefile
-		cp ${FILESDIR}/enigmail/Makefile-ipc ${S}/extensions/ipc/Makefile
+		for x in ipc enigmail; do
+			mv ${WORKDIR}/${x} ${S}/extensions || die
+			cd ${S}/extensions/${x} || die
+			makemake	# see function above
+		done
 	fi
-
-	#use amd64 && epatch ${FILESDIR}/mozilla-thunderbird-amd64.patch
 }
 
 src_compile() {
@@ -248,17 +260,25 @@ src_install() {
 	# fix permissions
 	chown -R root:root ${D}/usr/lib/MozillaThunderbird
 
-	dobin ${FILESDIR}/thunderbird
+	# use mozilla-launcher which supports thunderbird as of version 1.6.
+	# version 1.7-r1 moved the script to /usr/libexec
+	dodir /usr/bin
+	dosym /usr/libexec/mozilla-launcher /usr/bin/thunderbird
 
 	# Install icon and .desktop for menu entry
-	if use gnome; then
-		insinto /usr/share/pixmaps
-		doins ${FILESDIR}/icon/thunderbird-icon.png
+	insinto /usr/share/pixmaps
+	doins ${FILESDIR}/icon/thunderbird-icon.png
+	# Fix bug 54179: Install .desktop file into /usr/share/applications
+	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
+	insinto /usr/share/applications
+	doins ${FILESDIR}/icon/mozillathunderbird.desktop
 
-		# Fix comment of menu entry
-		insinto /usr/share/gnome/apps/Internet
-		doins ${FILESDIR}/icon/mozillathunderbird.desktop
-	fi
+	# Normally thunderbird-0.7.1 must be run as root once before it can
+	# be run as a normal user.  Drop in some initialized files to
+	# avoid this.
+	einfo "Extracting thunderbird-${PV} initialization files"
+	tar xjpf ${FILESDIR}/thunderbird-0.7-init.tar.bz2 \
+		-C ${D}/usr/lib/MozillaThunderbird
 }
 
 pkg_preinst() {
@@ -276,17 +296,32 @@ pkg_postinst() {
 	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
 	env-update
+
 	# Register Components and Chrome
 	einfo "Registering Components and Chrome..."
 	LD_LIBRARY_PATH=${ROOT}/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regxpcom
 	LD_LIBRARY_PATH=${ROOT}/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regchrome
+
 	# Fix permissions of component registry
 	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
+
 	# Fix directory permissions
 	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 0755 {} \; || :
+
 	# Fix permissions on chrome files
 	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
 
+	# This should be called in the postinst and postrm of all the
+	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
+	# thunderbird-bin ebuilds.
+	update_mozilla_launcher_symlinks
+
+	einfo
 	einfo "Please note that the binary name has changed from MozillaThunderbird"
-	einfo "to simply 'thunderbird'."
+	einfo "to simply thunderbird"
+	einfo
+}
+
+pkg_postrm() {
+	update_mozilla_launcher_symlinks
 }
