@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-musepack
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.27 2004/12/19 05:29:13 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.28 2005/01/05 09:17:53 eradicator Exp $
+
+*xmms-musepack-1.1-r1 (05 Jan 2005)
+
+  05 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/xmms-musepack-1.1-glib.patch, +xmms-musepack-1.1-r1.ebuild:
+  Fix character conversion bug #75218 thanks to Miles Egan <miles@caddr.com>.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-musepack-1.1.ebuild, -xmms-musepack-1.1_alpha10.ebuild:
