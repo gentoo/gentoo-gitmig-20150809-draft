@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.8 2004/07/02 08:48:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.9 2004/07/11 19:49:36 lv Exp $
+
+  11 Jul 2004; Travis Tilley <lv@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
+  gcc 3.3 doesnt support -mtune on numerous archs, so xgcc will fail if we have
+  it in CFLAGS. the ebuild now filters this flag.
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libstdc++-v3-3.3.3-r1.ebuild:

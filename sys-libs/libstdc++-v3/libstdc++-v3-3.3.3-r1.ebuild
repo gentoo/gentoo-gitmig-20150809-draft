@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.7 2004/07/02 08:48:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.8 2004/07/11 19:49:36 lv Exp $
 
 IUSE="nls"
 
@@ -38,9 +38,17 @@ do_filter_flags() {
 
 	if use amd64
 	then
+		# gcc 3.3 doesnt support -march=k8/etc on amd64, so xgcc will fail
 		setting="`get-flag march`"
 		[ ! -z "${setting}" ] && filter-flags -march="${setting}"
 	fi
+
+	# gcc 3.3 doesnt support -mtune on numerous archs, so xgcc will fail
+	mtsetting="`get-flag mcpu`"
+	[ ! -z "${mtsetting}" ] && filter-flags -mtune="${setting}"
+
+	# ...sure, why not?
+	strip-unsupported-flags
 }
 
 S=${WORKDIR}/gcc-${PV}
