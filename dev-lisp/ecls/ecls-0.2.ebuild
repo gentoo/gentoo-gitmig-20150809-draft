@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.2.ebuild,v 1.6 2002/08/05 09:02:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.2.ebuild,v 1.7 2002/09/21 00:12:41 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Embeddable Common Lisp 'Spain'"
 SRC_URI="mirror://sourceforge/ecls/${P}.tgz"
+HOMEPAGE="http://ecls.sourceforge.net/"
 
 SLOT="0"
 LICENSE="BSD LGPL-2"
