@@ -45,7 +45,7 @@ SLOT="1"
 # the names of all the architectures with which the ebuild works. We have
 # 4 official architecture names right now: "x86", "ppc", "sparc" and
 # "sparc64". So, if you've confirmed that your ebuild works on x86 and ppc,
-# you'd specify: KEYWORDS="x86"
+# you'd specify: KEYWORDS="x86 ppc"
 # For packages that are platform-independant (like Java, PHP or Perl
 # applications) specify KEYWORDS="*".
 KEYWORDS="x86"
