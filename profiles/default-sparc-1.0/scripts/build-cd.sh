@@ -172,8 +172,9 @@ copy_files() {
 		egrep -v ':dir ' |egrep -v 'MAKEDEV' | awk '{print $2}' | \
 		egrep -v '(/[.]keep$|/usr/src)' > ${TEMP}/filelist
 
-	find /usr/share/terminfo -name vt\* -o -name linux -o -name sun\* -o \
-							-name \*onsole\* -o -name xterm >> ${TEMP}/filelist
+	#find /usr/share/terminfo -name vt\* -o -name linux -o -name sun\* -o \
+							#-name \*onsole\* -o -name xterm >> ${TEMP}/filelist
+	find /usr/share/terminfo -type f |egrep -v 'pmconsole' >> ${TEMP}/filelist
 	tar -c --numeric-owner -T ${TEMP}/filelist -f - | ( cd $TO; tar xf - )
 	
 	# Copy the libraries we need
@@ -503,6 +504,7 @@ create_root() {
 }
 
 create_cd() {
+	chown -Rh root:root ${CDROOT}
 	cd ${CDROOT}
 	cp $USE_RAMDISK boot
 	mkisofs.debian -v -r -S boot/cd.b -s ${SILOCONFOUT} -o ${CDOUT} .

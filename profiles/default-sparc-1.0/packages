@@ -1,4 +1,4 @@
-# This file created automagically by scripts/generate-packages.sh on Tue May  7 02:46:03 CEST 2002
+# This file created automagically by scripts/generate-packages.sh on Wed May  8 02:53:09 CEST 2002
 
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
 
@@ -42,7 +42,7 @@
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 
->=x11-base/xfree-4.1.0-r2
+<x11-base/xfree-4.2.0
 
 # sash - static shell for system recovery
 *app-shells/sash
@@ -169,7 +169,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/packages,v 1.7 2002/05/07 03:38:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/packages,v 1.8 2002/05/08 01:23:04 murphy Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
