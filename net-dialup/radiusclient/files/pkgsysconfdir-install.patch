@@ -1,0 +1,32 @@
+diff -Nru radiusclient-0.3.2.orig/etc/Makefile.am radiusclient-0.3.2/etc/Makefile.am
+--- radiusclient-0.3.2.orig/etc/Makefile.am	1998-06-28 03:08:16.000000000 +0300
++++ radiusclient-0.3.2/etc/Makefile.am	2004-11-21 09:49:57.556532216 +0200
+@@ -26,9 +26,9 @@
+ 	    <$(srcdir)/radiusclient.conf.in >radiusclient.conf
+ 
+ install-data-local: servers
+-	$(mkinstalldirs) $(pkgsysconfdir); \
+-        echo " $(INSTALL) -m600 $(srcdir)/servers $(pkgsysconfdir)/servers"; \
+-        $(INSTALL) -m600 $(srcdir)/servers $(pkgsysconfdir)/servers
++	$(mkinstalldirs) $(DESTDIR)$(pkgsysconfdir); \
++        echo " $(INSTALL) -m600 $(srcdir)/servers $(DESTDIR)$(pkgsysconfdir)/servers"; \
++        $(INSTALL) -m600 $(srcdir)/servers $(DESTDIR)$(pkgsysconfdir)/servers
+ 
+ uninstall-local:
+ 	rm -f $(pkgsysconfdir)/servers
+diff -Nru radiusclient-0.3.2.orig/etc/Makefile.in radiusclient-0.3.2/etc/Makefile.in
+--- radiusclient-0.3.2.orig/etc/Makefile.in	2002-02-03 15:55:53.000000000 +0200
++++ radiusclient-0.3.2/etc/Makefile.in	2004-11-21 09:50:14.108016008 +0200
+@@ -229,9 +229,9 @@
+ 	    <$(srcdir)/radiusclient.conf.in >radiusclient.conf
+ 
+ install-data-local: servers
+-	$(mkinstalldirs) $(pkgsysconfdir); \
+-        echo " $(INSTALL) -m600 $(srcdir)/servers $(pkgsysconfdir)/servers"; \
+-        $(INSTALL) -m600 $(srcdir)/servers $(pkgsysconfdir)/servers
++	$(mkinstalldirs) $(DESTDIR)$(pkgsysconfdir); \
++        echo " $(INSTALL) -m600 $(srcdir)/servers $(DESTDIR)$(pkgsysconfdir)/servers"; \
++        $(INSTALL) -m600 $(srcdir)/servers $(DESTDIR)$(pkgsysconfdir)/servers
+ 
+ uninstall-local:
+ 	rm -f $(pkgsysconfdir)/servers
