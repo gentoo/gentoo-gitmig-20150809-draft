@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.12 2004/09/12 17:44:16 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.13 2004/09/13 16:55:50 obz Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -42,18 +42,18 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/gnome-mime-data-2.4.1
 	>=media-libs/libart_lgpl-2.3.16
 
-	>=dev-libs/libIDL-0.8.3
+	>=dev-libs/libIDL-0.8.4
 	>=gnome-base/orbit-2.10.4
 
 	>=gnome-base/gconf-2.6.2
 	>=gnome-base/gnome-keyring-0.2.1
-	>=gnome-base/gnome-vfs-2.6.1.1
+	>=gnome-base/gnome-vfs-2.6.2
 
 	!amd64? ( >=gnome-base/libbonobo-2.6.2 )
 	amd64? ( >=gnome-base/libbonobo-2.6.0 )
 
 	>=gnome-base/libbonoboui-2.6.1
-	>=gnome-base/libgnome-2.6.1.1-r1
+	>=gnome-base/libgnome-2.6.1.2
 	>=gnome-base/libgnomeui-2.6.1.1
 	>=gnome-base/libgnomecanvas-2.6.1.1
 	>=gnome-base/libglade-2.4
@@ -69,8 +69,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-media-2.6.2
 
 	>=media-gfx/eog-2.6.1
-	!hppa? ( !mips? ( >=net-www/epiphany-1.2.7-r1 ) )
-	>=app-arch/file-roller-2.6.1
+	!hppa? ( !mips? ( >=net-www/epiphany-1.2.9 ) )
+	>=app-arch/file-roller-2.6.2
 	>=gnome-extra/gcalctool-4.4.16
 	>=gnome-extra/gconf-editor-2.6.2
 	>=gnome-base/gdm-2.6.0.4-r1
@@ -85,7 +85,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/gnome-panel-2.6.2
 
 	>=x11-themes/gnome-icon-theme-1.2.3
-	>=x11-themes/gnome-themes-2.6.2
+	>=x11-themes/gnome-themes-2.6.3
 
 	>=x11-terms/gnome-terminal-2.6.1-r1
 	>=gnome-extra/gnome2-user-docs-2.6.0.1
@@ -107,10 +107,10 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=x11-libs/startup-notification-0.7
 
-	>=gnome-extra/yelp-2.6.1
+	>=gnome-extra/yelp-2.6.2
 	>=x11-libs/vte-0.11.11-r1
-	>=gnome-extra/zenity-2.6.2
-	>=net-analyzer/gnome-netstatus-2.6.2
+	>=gnome-extra/zenity-2.6.3
+	>=net-analyzer/gnome-netstatus-2.6.2.1
 
 	cdr? ( >=gnome-extra/nautilus-cd-burner-2.6.1 )
 	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.6.1 )
