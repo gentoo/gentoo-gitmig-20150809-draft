@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/powershell/powershell-0.8.ebuild,v 1.11 2004/06/28 22:01:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/powershell/powershell-0.8.ebuild,v 1.12 2004/07/15 01:01:47 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Terminal emulator, supports multiple terminals in a single window"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
