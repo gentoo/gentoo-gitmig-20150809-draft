@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.10 2004/02/17 21:32:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.11 2004/03/26 00:43:34 weeve Exp $
+
+  25 Mar 2004; Jason Wever <weeve@gentoo.org> libggi-2.0.1-r1.ebuild:
+  Stable on sparc.
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> libggi-2.0.1-r1.ebuild:
   stable on alpha and ia64
