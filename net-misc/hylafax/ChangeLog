@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.28 2004/04/19 22:12:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.29 2004/04/26 01:44:35 nerdboy Exp $
+
+  25 Apr 2004; Steve Arnold <nerdboy@gentoo.org> hylafax-4.1.8-r1.ebuild,
+  hylafax-4.1.8-r2.ebuild:
+  added more specific configure options and einfo for fax2tiff issue
+  also marked -r2 stable on previously stable arches
 
   20 Apr 2004; Danny van Dyk <kugelfang@gentoo.org>
   +files/hylafax-4.1.8-fPIC.patch, hylafax-4.1.8-r1.ebuild,

@@ -1,22 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8-r2.ebuild,v 1.3 2004/04/19 22:12:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8-r2.ebuild,v 1.4 2004/04/26 01:44:35 nerdboy Exp $
 
-# This is basically unchanged from the one supplied by Stephane Loeuillet
-# to Gentoo bug: http://bugs.gentoo.org/show_bug.cgi?id=28574
+# This was originally contributed by Stephane Loeuillet, via
+# Gentoo bug: http://bugs.gentoo.org/show_bug.cgi?id=28574
 # Nice job, and thanks :)
 # Now with autoreconf for new gcc, and a new gentoo init script.
 
+inherit eutils
+
 IUSE="jpeg"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Client-server fax package for class 1 and 2 fax modems."
 HOMEPAGE="http://www.hylafax.org"
 SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="~x86 ~sparc ~hppa ~alpha ~amd64"
+KEYWORDS="x86 sparc hppa ~alpha ~amd64"
 
 DEPEND="net-dialup/mgetty
 	>=sys-libs/zlib-1.1.4
@@ -50,10 +51,13 @@ src_compile() {
 		--with-PATH_VGETTY=/sbin/vgetty \
 		--with-PATH_GETTY=/sbin/agetty \
 		--with-HTML=no \
+		--with-PS=auto \
+		--with-PATH_GSRIP=/usr/bin/gs \
 		--with-PATH_DPSRIP=/var/spool/fax/bin/ps2fax \
 		--with-PATH_IMPRIP=/usr/share/fax/psrip \
 		--with-SYSVINIT=/etc/init.d \
 		--with-INTERACTIVE=no \
+		--with-LIBTIFF="-ltiff -ljpeg -lz" \
 		--with-OPTIMIZER="${CFLAGS}" || die
 	# no 'emake' for the same reason (might use an old automake version)
 	make || die
@@ -87,4 +91,13 @@ src_install() {
 
 	dohtml -r html/
 	keepdir /usr/share/doc/${P}
+}
+
+pkg_postinst() {
+	ewarn "Proper fax2tiff support now requires libtiff 3.5.5 until there"
+	ewarn "is an upstream fix for bug #48077.  You must use this version"
+	ewarn "of fax2tiff if you need conversion of G3 files, however, you"
+	ewarn "you must still build hylafax against tiff-3.5.7-r1 or better."
+	ewarn "I repeat: do not try to build hylafax or anything else against"
+	ewarn "tiff-3.5.5 because it won't work.  You've been warned."
 }
