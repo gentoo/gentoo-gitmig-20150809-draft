@@ -1,7 +1,11 @@
 # ChangeLog for dev-python/csv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/ChangeLog,v 1.2 2003/02/12 06:31:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/ChangeLog,v 1.3 2003/03/21 18:29:11 lordvan Exp $
 
+*csv-1.0.ebuild (21 Mar 2003)
+  21 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org> csv-1.0.ebuild :
+  new version
+	
 *csv-0.5.0 (13 Dec 2002)
 
   13 Dec 2002; B.Lauwers <blauwers@gentoo.org> :
