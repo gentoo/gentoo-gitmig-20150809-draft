@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/giram
-# Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/ChangeLog,v 1.4 2004/07/18 03:33:28 dragonheart Exp $
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/ChangeLog,v 1.5 2004/09/30 00:43:47 swegener Exp $
 
   18 Nov 2003; Brandy Westcott brandy@gentoo.org giram-0.3.4.ebuild:
   Fixed povfront segfaulting if no config file existed.
