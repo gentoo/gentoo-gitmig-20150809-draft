@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.16-r2.ebuild,v 1.1 2003/11/29 04:11:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.16-r2.ebuild,v 1.2 2004/01/29 05:26:42 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc ~arm ~hppa ~alpha ~mips"
+KEYWORDS="x86 sparc"
 
 inherit fixheadtails
 
