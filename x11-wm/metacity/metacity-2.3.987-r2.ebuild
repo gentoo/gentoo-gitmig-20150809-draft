@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.3.987-r2.ebuild,v 1.3 2002/08/02 19:49:17 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.3.987-r2.ebuild,v 1.4 2002/08/03 11:17:59 azarah Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 inherit gnome2
@@ -25,6 +25,6 @@ RDEPEND=">=dev-libs/glib-2.0.3
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
-G2CONF="${G2CONF} --enable-platform-gnome-2"
+G2CONF="${G2CONF} libexecdir=${D}/usr/lib/${PN} --enable-platform-gnome-2"
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README"
 
