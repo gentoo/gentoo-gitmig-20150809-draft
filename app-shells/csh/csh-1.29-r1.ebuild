@@ -1,13 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r1.ebuild,v 1.3 2003/06/12 22:10:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r1.ebuild,v 1.4 2003/06/13 09:21:59 taviso Exp $
 
 DESCRIPTION="Classic UNIX shell with C like syntax"
 HOMEPAGE="http://www.netbsd.org/"
 
-SRC_URI="http://cvs.gentoo.org/~taviso/${P}.tar.gz
-	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/src/etc/skel/dot.cshrc
-	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/src/etc/skel/dot.login"
+SRC_URI="http://cvs.gentoo.org/~taviso/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -34,8 +32,8 @@ src_compile() {
 	cd ${S}; cp ${WORKDIR}/printf.c \
 				${WORKDIR}/vis.h \
 				${WORKDIR}/vis.c \
-				${DISTDIR}/dot.login \
-				${DISTDIR}/dot.cshrc \
+				${FILESDIR}/dot.login \
+				${FILESDIR}/dot.cshrc \
 				${S} 
 				
 	# this parses the output of the bash builtin `kill`
