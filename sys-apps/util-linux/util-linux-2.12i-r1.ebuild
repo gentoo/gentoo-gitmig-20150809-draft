@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12i.ebuild,v 1.2 2004/11/12 21:24:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12i-r1.ebuild,v 1.1 2004/11/14 08:46:54 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,7 +8,11 @@ AES_VER="2.2d"
 DESCRIPTION="Various useful Linux utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.gz
-	crypt? ( http://loop-aes.sourceforge.net/loop-AES/loop-AES-v${AES_VER}.tar.bz2 )"
+	crypt? (
+		mirror://gentoo/util-linux-2.12i-cryptoapi-losetup.patch.bz2
+		http://dev.gentoo.org/~vapier/dist/util-linux-2.12i-cryptoapi-losetup.patch.bz2
+	)"
+#	crypt? ( http://loop-aes.sourceforge.net/loop-AES/loop-AES-v${AES_VER}.tar.bz2 )
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -32,7 +36,8 @@ src_unpack() {
 	cd ${S}
 
 	# crypto support, yummy #24458
-	use crypt && epatch ${WORKDIR}/loop-AES-v${AES_VER}/util-linux-*.diff
+	#use crypt && epatch ${WORKDIR}/loop-AES-v${AES_VER}/util-linux-*.diff
+	use crypt && epatch ${WORKDIR}/util-linux-2.12i-cryptoapi-losetup.patch
 
 	# Fix rare failures with -j4 or higher
 	epatch ${FILESDIR}/${PN}-2.11z-parallel-make.patch

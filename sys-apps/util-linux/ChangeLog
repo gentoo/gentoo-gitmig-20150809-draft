@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.90 2004/11/12 02:26:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.91 2004/11/14 08:46:54 vapier Exp $
+
+*util-linux-2.12i-r1 (14 Nov 2004)
+
+  14 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +util-linux-2.12i-r1.ebuild, -util-linux-2.12i.ebuild:
+  Disable aes-loop and forward port the cryptoapi patch. Devices encrypted
+  with the old cryptoapi arent compatible with the aes-loop work.
 
 *util-linux-2.12i (11 Nov 2004)
 
