@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-0.92.ebuild,v 1.2 2003/06/12 16:06:06 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-0.9.2.ebuild,v 1.1 2003/06/20 23:34:54 brad Exp $
 
 DESCRIPTION="A packet filter and firewall log analyzer"
 HOMEPAGE="http://cert.uni-stuttgart.de/projects/fwlogwatch/"
