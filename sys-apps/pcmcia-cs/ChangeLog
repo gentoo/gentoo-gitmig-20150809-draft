@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.53 2004/02/03 15:54:11 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.54 2004/02/04 22:35:32 latexer Exp $
+
+  04 Feb 2004; Peter Johanson <latexer@gentoo.org> files/pcmcia.conf,
+  files/pcmcia.rc:
+  Added ability to have two different PCIC modules attempted to the init system.
+  This should be useful for liveCDs as well as for people switching between 2.6
+  and 2.4 kernels potentially.
 
   03 Feb 2004; Peter Johanson <latexer@gentoo.org> pcmcia-cs-3.2.5-r1.ebuild,
   pcmcia-cs-3.2.5.ebuild:
