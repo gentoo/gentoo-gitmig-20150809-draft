@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/plustek-parallel/plustek-parallel-0.42.9.ebuild,v 1.2 2003/09/06 23:56:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/plustek-parallel/plustek-parallel-0.42.9.ebuild,v 1.3 2003/09/30 05:40:54 phosphan Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.gjaeger.de/scanner/current/plustek-module-0_42_9.tar.gz"
 S="${WORKDIR}/plustek_driver"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_compile() {
 	epatch ${FILESDIR}/${P}.patch
