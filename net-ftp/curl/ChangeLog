@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/curl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.29 2004/02/06 16:29:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.30 2004/03/03 04:29:25 tgall Exp $
+
+  02 Mar 2004; Tom Gall <tgall@gentoo.org> curl-7.11.0.ebuild:
+  stable on ppc64
 
   06 Feb 2004; <gustavoz@gentoo.org> curl-7.10.8-r1.ebuild:
   stable on sparc
