@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1053 2005/03/29 16:05:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1054 2005/03/29 19:44:23 nakano Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -796,6 +796,7 @@ www-client/elinks:lua - enable lua support
 www-client/kazehakase-cvs:estraier - enable estraier support for full-text search in history.
 www-client/kazehakase-cvs:thumbnail - enable thumbnail support.
 www-client/kazehakase:estraier - enable estraier support for full-text search in history.
+www-client/kazehakase:firefox - Use firefox's Gecko engine.
 www-client/kazehakase:thumbnail - enable thumbnail support.
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
