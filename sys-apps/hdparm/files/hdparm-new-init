@@ -1,7 +1,8 @@
 #!/sbin/runscript
-# Copyright 2003 Justin "Nagash" Jones
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/files/hdparm-new-init,v 1.1 2003/03/01 21:17:39 sethbc Exp $
+# Copyright 2003 Justin "Nagash" Jones Distributed under the terms of the GNU
+# General Public License, v2 or later $Header:
+# /home/cvsroot//gentoo-x86/sys-apps/hdparm/files/hdparm-new-init,v 1.1
+# 2003/03/01 21:17:39 sethbc Exp $
 
 depend() {
 	need localmount
@@ -16,7 +17,7 @@ checkconfig() {
 		if [ ! -n "`ls -la /dev/discs/${i} | grep scsi`" ]
 		then
 			all_discs="${all_discs} `basename ${i}`"
-		elif [ ! -n "${all_args}" ]
+		elif [ -n "${all_args}" ]
 		then
 			ewarn "Skipping $i hdparm does not support SCSI devices."
 		fi
@@ -26,7 +27,7 @@ checkconfig() {
 		if [ ! -n "`ls -la /dev/cdroms/${i} | grep scsi`" ]
 		then
 			all_cdroms="${all_cdroms} `basename ${i}`"
-		elif [ ! -n "${all_args}" ]
+		elif [ -n "${all_args}" ]
 		then
 			ewarn "Skipping $i hdparm does not support SCSI devices."
 		fi
