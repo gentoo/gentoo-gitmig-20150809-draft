@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/unsermake
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.7 2004/09/16 15:59:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.8 2004/10/13 00:01:57 caleb Exp $
+
+*unsermake-0.3.1.4280.0 (12 Oct 2004)
+
+  12 Oct 2004; Caleb Tennis <caleb@gentoo.org>
+  +unsermake-0.3.1.4280.0.ebuild:
+  Version bump
 
   16 Sep 2004; Caleb Tennis <caleb@gentoo.org>
   -unsermake-0.0_pre20040505.ebuild:
