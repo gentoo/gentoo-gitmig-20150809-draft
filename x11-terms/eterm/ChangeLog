@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.16 2003/02/15 14:12:19 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.17 2003/03/20 12:52:09 seemant Exp $
+
+*eterm-0.9.2-r4 (20 Mar 2003)
+
+  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org> eterm-0.9.1-r5.ebuild,
+  eterm-0.9.1-r5.ebuild, eterm-0.9.2-r1.ebuild, eterm-0.9.2-r1.ebuild,
+  eterm-0.9.2-r2.ebuild, eterm-0.9.2-r2.ebuild, eterm-0.9.2-r4.ebuild,
+  eterm-0.9.2.ebuild, eterm-0.9.2.ebuild:
+  get rid of the pic nonsense
 
   24 Jan 2003; Jason Wever <weeve@gentoo.org> eterm-0.9.2-r3.ebuild :
   Added ~sparc to keywords.

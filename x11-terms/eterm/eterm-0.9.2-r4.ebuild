@@ -1,24 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r5.ebuild,v 1.9 2003/02/13 17:34:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r4.ebuild,v 1.4 2003/03/20 12:52:09 seemant Exp $
 
-IUSE="cjk"
 MY_PN=${PN/et/Et}
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A vt102 terminal emulator for X"
 SRC_URI="http://www.eterm.org/download/${MY_P}.tar.gz
-	 http://www.eterm.org/download/${MY_PN}-bg-${PV}.tar.gz
-	 http://www.eterm.org/themes/0.9.1/glass-${MY_PN}-theme.tar.gz"
+	 http://www.eterm.org/download/${MY_PN}-bg-${PV}.tar.gz"
 HOMEPAGE="http://www.eterm.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 ppc alpha ~sparc"
+IUSE="pic"
 
 DEPEND="virtual/x11
-	>=x11-libs/libast-0.4-r1
-	media-libs/imlib2"
+	>=x11-libs/libast-0.5
+	media-libs/imlib2
+	>=sys-devel/binutils-2.13*"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
@@ -27,11 +27,10 @@ src_unpack() {
 }
 
 src_compile() {
-	
 	# always disable mmx because binutils 2.11.92+ seems to be broken for this package
-	local myconf="--disable-mmx"
+	local myconf="--disable-mmx --with-gnu-ld"
 
-	use cjk && myconf="${myconf} --enable-xim"
+	use pic && myconf="${myconf} --with-pic"
 
 	econf \
 		--with-imlib \
@@ -39,15 +38,15 @@ src_compile() {
 		--with-x \
 		--enable-multi-charset \
 		--with-delete=execute \
-		${myconf} || die
-		
-	emake || die
+		--with-backspace=auto \
+		--enable-escreen \
+		--enable-etwin \
+		${myconf}
 
+	emake || die
 }
 
-src_install () {
-
-	cd ${S}
+src_install() {
 	dodir /usr/share/terminfo
 	make \
 		DESTDIR=${D} \
@@ -56,6 +55,4 @@ src_install () {
 
 	dodoc COPYING ChangeLog README ReleaseNotes
 	dodoc bg/README.backgrounds
-	cd ${D}/usr/share/Eterm/themes
-	unpack glass-Eterm-theme.tar.gz
 }
