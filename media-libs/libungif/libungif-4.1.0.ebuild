@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.ebuild,v 1.1 2001/05/07 20:08:03 aj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.ebuild,v 1.2 2001/06/08 01:58:13 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -13,14 +13,23 @@ HOMEPAGE="http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml"
 DEPEND="virtual/glibc
 	X? ( virtual/x11 )"
 
-src_compile() {                           
-  cd ${S}
-  ./configure --host=${CHOST} --prefix=/usr
+src_compile() {
+
+  local myconf
+  if [ "`use X`" ]
+  then
+    myconf="--with-x"
+  else
+    myconf="--without-x"
+  fi
+
+  ./configure --host=${CHOST} --prefix=/usr $myconf
+
   make
 }
 
-src_install() {                               
-  cd ${S}
+src_install() {
+
   make prefix=${D}/usr install
   if [ "`use gif`" ]
   then
