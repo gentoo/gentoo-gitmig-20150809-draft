@@ -1,24 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1-r2.ebuild,v 1.1 2004/05/10 08:39:26 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1-r2.ebuild,v 1.2 2004/05/10 19:10:32 vapier Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
 
 inherit eutils libtool flag-o-matic
 
-PATCHVER="1.1"
+PATCHVER="1.2"
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2
-	http://dev.gentoo.org/~lv/binutils-2.15.90.0.1-patches-1.2.tar.bz2"
-#	mirror://gentoo/${PN}-2.15.90.0.1-patches-${PATCHVER}.tar.bz2"
+	mirror://gentoo/${PN}-2.15.90.0.1-patches-${PATCHVER}.tar.bz2"
 
 LICENSE="GPL-2 | LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="-* ~hppa ~amd64"
 IUSE="nls bootstrap build"
 
 DEPEND="virtual/glibc
