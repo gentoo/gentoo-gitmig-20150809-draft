@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.5.1.ebuild,v 1.4 2004/04/06 03:31:56 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.5.1.ebuild,v 1.5 2004/04/06 03:32:48 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="EBlook is an interactive search utility for electronic dictionaries"
 HOMEPAGE="http://openlab.ring.gr.jp/edict/eblook/"
 SRC_URI="http://openlab.ring.gr.jp/edict/eblook/dist/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
