@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.5 2004/01/13 03:42:23 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.6 2004/01/13 06:05:45 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 # NOTE: in README-PACKAGERS, guile recommends different versions be installed
 #       in parallel. They're talking about LIBRARY MAJOR versions and not
 #       the actual guile version that was used in the past.
-#     
+#
 #       So I'm slotting this as 12 beacuse of the library major version
 
 SLOT="12"
@@ -32,10 +32,10 @@ src_compile() {
 	# -g3, at least on some architectures.  (19 Aug 2003 agriffis)
 	filter-flags -g3
 
-    if [ "${ARCH}" = "amd64" ]; then
-        epatch ${FILESDIR}/guile-amd64.patch
-    fi
-		
+	if [ "${ARCH}" = "amd64" ]; then
+		epatch ${FILESDIR}/guile-amd64.patch
+	fi
+
 	econf \
 		--with-threads \
 		--with-modules || die
