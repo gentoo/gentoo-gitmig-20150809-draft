@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.4 2002/07/26 13:31:34 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.5 2002/07/30 13:32:20 raker Exp $
 
 # TODO: all ldap, sybase support
 S=${WORKDIR}/${P}
@@ -63,6 +63,11 @@ src_unpack() {
 		# Thanks to Nicholas Jones (carpaski@gentoo.org)
 		patch < ${DISTDIR}/vpopmail-5.2.1-mysql.diff
 	fi
+
+	# Thanks to Vadim Berezniker (vadim@berezniker.com)
+	# This patch backports a bug fix from the devel version re: logons
+	patch -p1 < ${FILESDIR}/vpopmail.diff
+
 }
 
 src_compile() {
