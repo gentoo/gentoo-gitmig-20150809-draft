@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre3.ebuild,v 1.2 2004/04/14 02:52:18 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre3.ebuild,v 1.3 2004/04/24 07:58:02 vapier Exp $
 
 IUSE="build"
 
@@ -16,8 +16,8 @@ HOMEPAGE="http://www.gentoo.org"
 
 
 # Contact carpaski with a reason before you modify any of these.
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
-#KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~s390 ~x86"
+KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64 s390"
+#KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390"
 
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) selinux? ( dev-python/python-selinux )"

@@ -1,17 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.4 2004/03/02 16:37:47 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.5 2004/04/24 08:00:26 vapier Exp $
 
-IUSE="static build"
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="A selection of tools from Debian"
 HOMEPAGE="http://packages.debian.org/unstable/base/debianutils.html"
 SRC_URI="mirror://gentoo/${PN}_${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2 BSD"
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa ia64 ppc64 s390"
+SLOT="0"
+KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64 s390"
+IUSE="static build"
 
 DEPEND="virtual/glibc"
 
@@ -46,9 +44,9 @@ src_compile() {
 
 src_install() {
 	into /
-	dobin tempfile mktemp
+	dobin tempfile mktemp || die
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		dobin run-parts
 		insopts -m755
