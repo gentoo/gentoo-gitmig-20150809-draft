@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r2.ebuild,v 1.2 2003/11/23 01:43:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r2.ebuild,v 1.3 2003/11/23 11:39:56 liquidx Exp $
 
 inherit flag-o-matic python
 
@@ -14,7 +14,7 @@ DESCRIPTION="A really great language"
 SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${MY_PV}.tgz"
 HOMEPAGE="http://www.python.org"
 
-IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build"
+IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2"
 LICENSE="PSF-2.2"
 SLOT="2.3"
 
@@ -39,6 +39,14 @@ RDEPEND="${DEPEND} dev-python/python-fchksum"
 
 PROVIDE="virtual/python"
 
+# this is to stop people shooting themselves in the foot. we can't
+# add portage to DEPENDS otherwise it'll create a circular dependency
+pkg_setup() {
+	if ! has_version ">=sys-apps/portage-2.0.49-r16"; then
+		eerror "Dependency Failed! Requires >=sys-apps/portage-2.0.49-r16"
+		die "Requires >=sys-apps/portage-2.0.49-r16"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -87,11 +95,17 @@ src_compile() {
 		myconf="--with-cxx=no"
 	fi
 
+	# super-secret switch. don't use this unless you know what you're
+	# doing. enabling UCS2 support will break your existing python
+	# modules
+	use ucs2 \
+		&& myconf="${myconf} --enable-unicode=ucs2" \
+		|| myconf="${myconf} --enable-unicode=ucs4"
+
 	src_configure
 
 	econf --with-fpectl \
 		--enable-shared \
-		--enable-unicode=ucs4 \
 		`use_enable ipv6` \
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man \
