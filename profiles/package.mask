@@ -492,3 +492,7 @@ dev-lang/tcl-tk
 # created shell script front ends for sgmltools-lite.  This needs to be
 # tested though.
 =app-text/sgmltools-lite-3.0.3-r4
+
+# moved theese to gphoto2
+=media-gfx/gphoto-2.0.0
+=media-gfx/gphoto-2.0.0-r1
