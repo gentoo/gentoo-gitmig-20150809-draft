@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.2.0.ebuild,v 1.8 2004/02/23 18:02:41 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.2.0.ebuild,v 1.9 2004/03/01 00:41:33 caleb Exp $
 
 inherit kde
 need-kde ${PV}
@@ -65,7 +65,8 @@ src_unpack() {
 	if [ -z ${LINGUAS} ]; then
 		ewarn
 		ewarn "You must define a LINGUAS environment variable that contains a list"
-		ewarn "of the country codes for which languages you would like to install."
+		ewarn "of the language codes for which languages you would like to install."
+		ewarn "e.g.: LINGUAS=\"se de pt\""
 		ewarn
 		die
 	fi
