@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.1 2002/05/27 01:24:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.2 2002/06/06 19:20:54 woodchip Exp $
+
+*yafc-0.7.9 (6 Jun 2002)
+  6 Jun 2002; Donny Davies <woodchip@gentoo.org> :
+  Add docs + ssh RDEPEND + $P; close #859.
 
 *yafc-0.7.2-r1 (26 May 2002)
 
