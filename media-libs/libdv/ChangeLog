@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.1 2002/04/02 22:07:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.2 2002/04/12 18:57:21 spider Exp $
+
+
+  11 Apr 2002; Spider <spider@gentoo.org>
+  Update all glib dependencies to use glib-1.2*  in preparation of
+unmasking the glib-2.0.1 packages
 
 *libdv-0.9 (2 Apr 2002)
 
