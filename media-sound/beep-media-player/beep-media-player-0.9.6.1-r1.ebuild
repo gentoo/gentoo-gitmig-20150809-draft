@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.6.1.ebuild,v 1.2 2004/02/07 19:22:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.6.1-r1.ebuild,v 1.1 2004/03/03 12:18:38 eradicator Exp $
 
 inherit eutils
 
@@ -13,8 +13,11 @@ SRC_URI="mirror://sourceforge/beepmp/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE="nls esd gnome opengl oggvorbis mikmod alsa"
+
+# Bug #42893
+replace-flags "-Os" "-O2"
 
 RDEPEND="app-arch/unzip
 	>=x11-libs/gtk+-2.2
