@@ -1,0 +1,11 @@
+# ChangeLog for games-engines/sarien
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/sarien/ChangeLog,v 1.1 2004/03/27 10:21:21 mr_bones_ Exp $
+
+*sarien-0.7.0 (27 Mar 2004)
+
+  27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  sarien-0.7.0.ebuild:
+  initial commit; ebuild based on the one submitted by Darren Hodges via bug
+  #45813
+
