@@ -1,0 +1,8 @@
+# ChangeLog for x11-plugins/wmrack
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrack/ChangeLog,v 1.1 2004/07/17 23:05:10 s4t4n Exp $
+
+*wmrack-1.2.0 (18 Jul 2004)
+
+  18 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmrack-1.2.0.ebuild:
+  Initial import. Thanks to Przemyslaw Maciag. Closes #54554.

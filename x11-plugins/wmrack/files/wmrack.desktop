@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=WmRack
+Comment=WindowMaker dock CD+sound applet
+Comment[pl]=Dokowalny aplet WindowMakera CD+dźwięku
+Exec=wmrack
+Type=Application
+Encoding=UTF-8
+Terminal=0
+Categories=Application;Audio;
