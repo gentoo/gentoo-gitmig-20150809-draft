@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.51 2004/08/06 01:34:08 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.52 2004/10/29 08:16:58 josejx Exp $
+
+  29 Oct 2004; Joseph Jezak <josejx@gentoo.org> libgda-1.0.3.ebuild:
+  Keyworded ppc to fix compiling with gcc 3.4
 
   05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> libgda-1.0.2.ebuild, 
   libgda-1.0.3.ebuild, libgda-1.0.4.ebuild:
