@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.36 2004/11/06 00:50:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.37 2004/11/06 04:53:54 dragonheart Exp $
+
+  06 Nov 2004; Daniel Black <dragonheart@gentoo.org> icecast-2.1.0.ebuild:
+  ~ppc keyworded as per bug #70096. Thanks Warren Dukes
+  <shank@mercury.chem.pitt.edu>
 
   06 Nov 2004; Ferris McCormick <fmccor@gentoo.org> icecast-2.1.0.ebuild:
   Add ~sparc keyword, as requested in Bug 70096.  Package builds, and the
