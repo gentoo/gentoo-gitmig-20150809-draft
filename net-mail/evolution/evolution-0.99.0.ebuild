@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.99.0.ebuild,v 1.1 2001/11/08 12:09:17 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.99.0.ebuild,v 1.2 2001/11/08 14:46:57 hallski Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
 SRC_URI="ftp://ftp.ximian.com/pub/source/${PN}/${P}.tar.gz
 	 ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz
+	 http://people.codefactory.se/~micke/${PN}/${P}.tar.gz
 	 http://www.sleepycat.com/update/3.1.17/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"
 
