@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/xsupplicant
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.6 2005/01/29 21:27:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.7 2005/02/19 11:10:36 hansmi Exp $
+
+  19 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
+  xsupplicant-1.0.1.ebuild:
+  Added to ~ppc, bug 82391.
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> xsupplicant-0.8b.ebuild:
   Transition dependancy from net-libs/libpcap to virtual/libpcap

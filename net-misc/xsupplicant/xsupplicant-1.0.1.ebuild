@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.0.1.ebuild,v 1.1 2005/01/09 14:46:01 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.0.1.ebuild,v 1.2 2005/02/19 11:10:36 hansmi Exp $
 
 DESCRIPTION="Open Source Implementation of IEEE 802.1x"
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/open1x/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
