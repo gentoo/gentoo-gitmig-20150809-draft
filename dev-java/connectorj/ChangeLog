@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/connectorj
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/connectorj/ChangeLog,v 1.6 2004/09/30 00:00:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/connectorj/ChangeLog,v 1.7 2004/10/22 08:57:32 s4t4n Exp $
+
+  22 Oct 2004; Michele Noberasco <s4t4n@gentoo.org> connectorj-3.0.15.ebuild:
+  Stable for x86.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Gentoo Technologies, Inc. -> Gentoo Foundation
