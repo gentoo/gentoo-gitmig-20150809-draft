@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.24 2003/07/10 12:06:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.25 2003/07/11 06:24:29 phosphan Exp $
+
+  11 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> lilo-22.5.6.ebuild:
+  Added entry with "obsolete" to SRC_URI which should work in the future.
 
 *lilo-22.5.6 (10 Jul 2003)
 

@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.6.ebuild,v 1.1 2003/07/10 12:06:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.6.ebuild,v 1.2 2003/07/11 06:24:29 phosphan Exp $
 
 inherit mount-boot eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard Linux boot loader"
-SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/boot/lilo/${P}.tar.gz"
+SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/boot/lilo/${P}.tar.gz
+		ftp://metalab.unc.edu/pub/Linux/system/boot/lilo/obsolete/${P}.tar.gz"
 #	mirror://gentoo/${P}-gentoo.diff.bz2"
 HOMEPAGE="http://brun.dyndns.org/pub/linux/lilo/"
 
