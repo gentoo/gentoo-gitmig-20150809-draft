@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.11 2005/01/18 17:55:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.12 2005/03/23 12:03:06 dragonheart Exp $
+
+  23 Mar 2005; Daniel Black <dragonheart@gentoo.org> -cmake-2.0.2.ebuild,
+  cmake-2.0.5.ebuild:
+  x86 stable as per bug #86292. Old version removal. Thanks to david somers
+  <dsomers@trevezel.com>
 
   18 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> cmake-2.0.3.ebuild:
   Stable on alpha.
