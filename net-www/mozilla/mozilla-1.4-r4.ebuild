@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r2.ebuild,v 1.6 2003/09/06 01:54:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r4.ebuild,v 1.1 2003/09/21 18:57:12 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -8,12 +8,6 @@ IUSE="${IUSE} mozsvg mozcalendar mozaccess mozp3p mozxmlterm"
 IUSE="${IUSE} moznoirc moznomail moznocompose moznoxft"
 
 inherit flag-o-matic gcc eutils nsplugins
-
-# Crashes on start when compiled with -fomit-frame-pointer
-filter-flags "-fomit-frame-pointer"
-
-# Sparc support ...
-replace-sparc64-flags
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -36,13 +30,29 @@ replace-sparc64-flags
 #
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
+#
+# Crashes on start when compiled with -fomit-frame-pointer
+filter-flags "-fomit-frame-pointer"
+filter-flags -ffast-math
+append-flags -s -fforce-addr
+
+# Sparc support ...
+replace-sparc64-flags
+
+#fix to avoid gcc-3.3.x micompilation issues.
+if [ "`use ppc`" -a "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -eq "3" ]
+then
+
+append-flags -fno-strict-aliasing
+
+fi
 
 # We set -O in ./configure to -O1, as -O2 cause crashes on startup ...
 # (bug #13287)
 export CFLAGS="${CFLAGS//-O?}"
 export CXXFLAGS="${CFLAGS//-O?}"
 
-EMVER="0.76.3"
+EMVER="0.76.7"
 IPCVER="1.0.3"
 
 PATCH_VER="1.0"
@@ -54,11 +64,11 @@ S="${WORKDIR}/mozilla"
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
 	crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
-	         http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )"
+			 http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )"
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
