@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0.ebuild,v 1.13 2003/11/29 23:11:28 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0.ebuild,v 1.14 2004/01/13 15:08:35 agriffis Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gnuconfig
 
 S=${WORKDIR}/${P}
 DESCRIPTION="MPEG-1 and MPEG-4 video encoding library"
@@ -11,24 +11,24 @@ HOMEPAGE="http://fame.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 DEPEND="virtual/glibc"
 
-replace-flags "-fprefetch-loop-arrays" " "
+src_unpack() {
+	unpack ${A} || die
+	cd ${S} || die
+
+	# This is needed for alpha and probably other newer arches
+	# (13 Jan 2004 agriffis)
+	gnuconfig_update
+
+	[[ "${ARCH}" == "amd64" ]] && libtoolize -c -f
+}
 
 src_compile() {
-	local myconf
-
-	if [ "${ARCH}" = "amd64" ]
-	then
-		libtoolize -c -f
-	fi
-
-	use mmx && myconf="${myconf} --enable-mmx"
-	use sse && myconf="${myconf} --enable-sse"
-
-	econf ${myconf} || die
+	filter-flags -fprefetch-loop-arrays
+	econf $(use_enable mmx) $(use_enable sse) || die
 	emake || die
 }
 
