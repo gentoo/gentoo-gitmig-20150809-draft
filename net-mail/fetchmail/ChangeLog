@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.53 2004/09/03 19:56:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.54 2004/10/20 23:38:23 ticho Exp $
 
 *fetchmail-6.2.5-r1 (03 Sep 2004)
 
@@ -8,7 +8,8 @@
   +files/fetchmail-6.2.5-broken-headers.patch, +fetchmail-6.2.5-r1.ebuild:
   Apply patch to fetchmail sources to receive mail even if it has broken
   headers, instead of deleting it, or choking up on it, for POP3 fetching.
-  Patch submitted by John Huttley <john@mwk.co.nz>, closes #34788.
+  Patch submitted by Philippe Weibel <philippe.weibel@free.fr>, closes
+  #34788.
 
   07 Aug 2004; Tom Knight <tomk@gentoo.org>
   +files/fetchmail-6.2.5-fetchsizelimit.patch, fetchmail-6.2.5.ebuild:
