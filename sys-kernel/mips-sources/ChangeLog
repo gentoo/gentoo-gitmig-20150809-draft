@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.69 2005/02/06 18:48:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.70 2005/03/25 02:30:09 kumba Exp $
+
+*mips-sources-2.6.12_rc1 (24 Mar 2005)
+
+  24 Mar 2005; Joshua Kinard <kumba@gentoo.org>
+  +mips-sources-2.6.12_rc1.ebuild:
+  Adding a 2.6.12-rc1 ebuild because of the constantly changing version of
+  2.6.11.x. Includes updated Octane support (w/ SMP), remaining cobalt bits that
+  have yet to be merged, and an experimental mips nptl patch for testing
+  purposes. IP28 support is not available in this release, though.
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> mips-sources-2.4.28-r1.ebuild,
   mips-sources-2.6.10-r1.ebuild:
