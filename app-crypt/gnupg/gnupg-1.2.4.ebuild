@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.11 2004/03/09 23:10:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.12 2004/03/13 12:37:49 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,7 +23,7 @@ RDEPEND="!static? ( ldap? ( net-nds/openldap )
 		caps? ( sys-libs/libcap )
 		app-arch/bzip2
 		sys-libs/zlib )
-	X? ( x11-misc/xloadimage )
+	X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
 	nls? ( sys-devel/gettext )
 	virtual/glibc
 	dev-lang/perl"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.0.ebuild,v 1.1 2004/01/06 17:46:23 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.0.ebuild,v 1.2 2004/03/13 12:37:49 usata Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ IUSE="X ldap nls caps"
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
 		caps? ( sys-libs/libcap )
 		sys-libs/zlib )
-	X? ( x11-misc/xloadimage )
+	X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
 	nls? ( sys-devel/gettext )
 	>=dev-libs/libgcrypt-1.1.42
 	>=dev-libs/libksba-0.4.7
@@ -55,7 +55,13 @@ src_compile() {
 	fi
 
 	if use X; then
-		myconf="${myconf} --with-photo-viewer=/usr/bin/xloadimage"
+		local viewer
+		if has_version 'media-gfx/xloadimage'; then
+			viewer=/usr/bin/xloadimage
+		else
+			viewer=/usr/bin/xli
+		fi
+		myconf="${myconf} --with-photo-viewer=${viewer}"
 	else
 		myconf="${myconf} --disable-photo-viewers"
 	fi
