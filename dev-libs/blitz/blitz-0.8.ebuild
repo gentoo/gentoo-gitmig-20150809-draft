@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.8.ebuild,v 1.1 2004/11/19 13:47:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.8.ebuild,v 1.2 2004/12/18 23:57:36 dragonheart Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="High-performance C++ numeric library"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -26,12 +26,17 @@ src_compile() {
 	# ICC: if we've got it, use it
 	use icc && myconf="--with-cxx=icc" || myconf="--with-cxx=gcc"
 
+	export CC=$(tc-getCC) CXX=$(tc-getCXX)
 	econf ${myconf} || die "econf failed"
 	if ! emake lib;
 	then
 		eerror 'If you got an error like "configure: error: Fortran 77 compiler cannot create executables'
 		die "Remerge gcc with the fortran use flag"
 	fi
+}
+
+src_test() {
+	make check-testsuite || die "selftest failed"
 }
 
 src_install () {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.13 2004/11/20 00:50:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.14 2004/12/18 23:57:36 dragonheart Exp $
+
+  19 Dec 2004; Daniel Black <dragonheart@gentoo.org> blitz-0.8.ebuild:
+  Added toolchain detections as per bug #71678. Added self test function as well
 
   20 Nov 2004; Daniel Black <dragonheart@gentoo.org> blitz-0.7.ebuild:
   ppc stable
