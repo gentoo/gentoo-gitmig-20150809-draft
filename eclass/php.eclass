@@ -1,11 +1,12 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.3 2003/04/23 22:03:19 robbat2 Exp $
-ECLASS=php
-INHERITED="$INHERITED $ECLASS"
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.4 2003/04/23 22:22:18 robbat2 Exp $
 
 inherit eutils flag-o-matic
+
+ECLASS=php
+INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install 
 
