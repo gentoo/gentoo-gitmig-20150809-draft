@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.2r.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.2r.ebuild,v 1.3 2002/07/25 20:53:33 kabau Exp $
 
 S=${WORKDIR}/vile-9.2
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"
@@ -23,7 +23,7 @@ SRC_URI="ftp://ftp.phred.org/pub/vile/vile-9.2.tgz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.2p.patch.gz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.2q.patch.gz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.2r.patch.gz"
-HOMEPAGE="http://www.clark.net/pub/dickey/vile/vile.html"
+HOMEPAGE="http://invisible-island.net/vile/"
 
 DEPEND="virtual/glibc
 	sys-devel/flex
@@ -33,6 +33,10 @@ DEPEND="virtual/glibc
 
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 
 src_unpack() {

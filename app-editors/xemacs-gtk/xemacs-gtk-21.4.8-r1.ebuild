@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r1.ebuild,v 1.1 2002/05/31 23:42:05 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r1.ebuild,v 1.2 2002/07/25 20:48:29 kabau Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
 
-LICENSE="GPL-2"
 
 REAL_P=${P//-gtk/}
 S="${WORKDIR}/${REAL_P}"
@@ -18,8 +17,6 @@ SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${REAL_P}.tar.gz
 	http://ftp.xemacs.org/packages/xemacs-base-${BASE}-pkg.tar.gz
 	http://ftp.xemacs.org/packages/mule-base-${MULE}-pkg.tar.gz"
 HOMEPAGE="http://www.xemacs.org"
-
-SLOT=""
 
 RDEPEND="virtual/glibc
 	!virtual/xemacs
@@ -52,6 +49,10 @@ DEPEND="${RDEPEND}
     
 PROVIDE="virtual/xemacs"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
 src_unpack() {
 	cd ${WORKDIR}
 	unpack ${REAL_P}.tar.gz
@@ -65,8 +66,8 @@ src_compile() {
 	if use X;
 	then
 		myconf="${myconf} 
-			--with-x
-			--with-gtk
+			--with-x 
+			--with-gtk 
 			--with-xpm 
 			--with-dragndrop 
 			--with-gif=no"
