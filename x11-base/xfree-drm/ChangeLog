@@ -1,9 +1,10 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.36 2003/08/12 05:51:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.37 2003/09/04 23:47:53 drobbins Exp $
 
-  12 Aug 2003; root <root@gentoo.org> xfree-drm-4.3.0-r6.ebuild:
-  Fixes for bug #25598 and bug #24415, general cleanup.
+  12 Aug 2003; Donnie Berkholz <spyderous@gentoo.org>
+  xfree-drm-4.3.0-r6.ebuild: Fixes for bug #25598 and bug #24415, general
+  cleanup.
 
   28 Jul 2003; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-drm-4.3.0-r6.ebuild:
