@@ -4,7 +4,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Colorizes output of diff"
-SRC_URI="http://colordiff.sourceforge.net/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/colordiff/${P}.tar.gz"
 HOMEPAGE="http://colordiff.sourceforge.net/"
 IUSE=""
 

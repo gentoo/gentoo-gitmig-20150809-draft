@@ -3,6 +3,11 @@
 # $Header
 
 *colordiff-1.0 (6 Nov 2002)
+
+  02 Dec 2002; Martin Holzer <mholzer@gentoo.org> colordiff-1.0.ebuild 
+  ChangeLog :
+
+  Changed SRC_URI to use sf mirror
   
   6 Nov 2002; Matt Keadle <mkeadle@gentoo.org> colordiff-1.0.ebuild 
   ChangeLog files/digest-colordiff-1.0 :
