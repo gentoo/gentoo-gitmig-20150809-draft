@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002e.ebuild,v 1.1 2003/10/26 06:46:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002e.ebuild,v 1.2 2003/12/23 01:20:12 robbat2 Exp $
 
 MY_PN=imap
 MY_P=${MY_PN}-${PV}
@@ -36,9 +36,9 @@ src_unpack() {
 	cd ${S}/src/osdep/unix/
 	cp Makefile Makefile.orig
 	sed \
-		-e 's,-g -fno-omit-frame-pointer -O6,${CFLAGS},g' \
-		-e 's,SSLDIR=/usr/local/ssl,SSLDIR=/usr,g' \
-		-e 's,SSLCERTS=$(SSLDIR)/certs,SSLCERTS=/etc/ssl/certs,g' \
+		-e "s:-g -fno-omit-frame-pointer -O6:${CFLAGS}:g" \
+		-e 's:SSLDIR=/usr/local/ssl:SSLDIR=/usr:g' \
+		-e 's:SSLCERTS=$(SSLDIR)/certs:SSLCERTS=/etc/ssl/certs:g' \
 		< Makefile.orig > Makefile
 
 	# Apply a patch to only build the stuff we need for c-client
