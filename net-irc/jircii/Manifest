@@ -1,4 +1,16 @@
-MD5 d9d4cffc857780143052122fd9f3ce7a ChangeLog 557
-MD5 c8cb6600830b02681c5d7ff768c46e37 jircii-1_beta10.ebuild 709
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 c8cb6600830b02681c5d7ff768c46e37 jircii-1_beta10.ebuild 709
+MD5 aecf1ddb21652158408911b6890f1548 ChangeLog 684
+MD5 d6ee8ba9efbf1eae2031928f02fab28b jircii-1_beta11.ebuild 712
 MD5 5a682c4fc15f917267eb0ae6db777ac0 files/digest-jircii-1_beta10 57
+MD5 a97b01a067a52ccd5d6297d9934f1a5a files/digest-jircii-1_beta11 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+xt4AXomK8S72HoRAl7/AJ9GZgCh7B3w0Eb5iLE8nqq+nFg/ewCggcEX
+cEpipRxvhRSO/6PaXcuUeXs=
+=kFMM
+-----END PGP SIGNATURE-----
