@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.45.ebuild,v 1.1 2001/05/08 00:24:40 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.45.ebuild,v 1.2 2001/05/16 11:36:45 achim Exp $
 
 A=xawtv_${PV}.tar.gz
 S=${WORKDIR}/${P}
@@ -25,7 +25,8 @@ src_compile() {
 
 src_install() {
 
-  try make prefix=${D}/usr mandir=${D}/usr/share/man install
+  try make prefix=${D}/usr mandir=${D}/usr/share/man \
+	resdir=${D}/etc/X11/app-defaults install
 
   dodoc COPYING Changes KNOWN_PROBLEMS Miro_gpio.txt Programming-FAQ
   dodoc README* Sound-FAQ TODO Trouble-Shooting UPDATE_TO_v3.0

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-20010215.ebuild,v 1.2 2001/05/09 10:21:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-20010215.ebuild,v 1.3 2001/05/16 11:36:45 achim Exp $
 
 
 A=${P}.tar.gz
@@ -24,7 +24,7 @@ src_compile() {
 
 src_install () {
 
-    try make prefix=${D}/usr/X11R6 install
+    try make DESTDIR=${D} install
     dodoc AUTHORS COPYING ChangeLog* LICENSE* NEWS README*
     docinto txt
     dodoc docs/qtcomponents.doxygen

@@ -48,7 +48,7 @@ src_install () {
     cd ${S}
     try make exec_prefix=${D}/usr  prefix=${D}/ \
 	datadir=${D}/usr/share localstatedir=${D}/var \
-	includedir=${D}/usr/include \
+	includedir=${D}/usr/include sysconfdir=${D}/etc \
 	MANDIR=${D}/usr/share/man PAMDIR=${D}/etc/pam.d \
 	INITDIR=${D}/etc/rc.d DOCDIR=${D}/usr/share/cups/doc \
 	install 
