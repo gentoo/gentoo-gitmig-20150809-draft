@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/bioperl-pipeline
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-pipeline/ChangeLog,v 1.1 2003/12/16 00:35:07 sediener Exp $
+
+*bioperl-pipeline-0.1 (15 Dec 2003)
+
+  15 Dec 2003; Stephen Diener <sediener@gentoo.org>
+  bioperl-pipeline-0.1.ebuild:
+  New ebuild -- initial release
+
