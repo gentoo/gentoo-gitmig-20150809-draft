@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.4.ebuild,v 1.10 2003/02/13 12:41:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.4.ebuild,v 1.11 2003/02/27 17:22:26 seemant Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities and library to convert to/from X-Face format"
@@ -13,9 +15,11 @@ KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/glibc"
 
-src_compile() {
-	econf || die
-	make || die
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-errno.diff
 }
 
 src_install () {
