@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/BSD-Resource
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.1 2003/05/07 02:15:26 agriffis Exp $
+
+*BSD-Resource-1.22 (06 May 2003)
+
+  06 May 2003; Aron Griffis <agriffis@gentoo.org> BSD-Resource-1.22.ebuild:
+  New ebuild for Perl BSD::Resource module
+
