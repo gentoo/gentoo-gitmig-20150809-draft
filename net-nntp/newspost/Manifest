@@ -2,20 +2,16 @@
 Hash: SHA1
 
 MD5 230a40d436e27b7f84ae15b7873b39f9 newspost-2.1.1-r1.ebuild 1065
-MD5 8054891e10866126dc47a80483eee824 newspost-2.0.ebuild 908
-MD5 18e106b26c4817c3b5bcdfbbca2bc39a newspost-2.1.1.ebuild 946
-MD5 92d235446ea7fc6a089671ce2b374552 newspost-2.0-r1.ebuild 1036
-MD5 6d38a62594cead7073b23de498d0ecc2 ChangeLog 2779
+MD5 4a2e089233f7f40c853307895576abb4 newspost-2.0-r1.ebuild 1028
+MD5 35299b0f04102c2bb1953a52275c42f2 ChangeLog 2912
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
 MD5 46899efb4a2b656aa05aa4d86f5792ba files/digest-newspost-2.0-r1 63
 MD5 b215709cb527d3080506432abfb71147 files/digest-newspost-2.1.1-r1 65
-MD5 b215709cb527d3080506432abfb71147 files/digest-newspost-2.1.1 65
 MD5 e72758703815a9480ba6c7b081011d30 files/CAN-2005-0101.patch 284
-MD5 46899efb4a2b656aa05aa4d86f5792ba files/digest-newspost-2.0 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB/7RwI1lqEGTUzyQRAlabAJ9CV++i9G1+abcEpVuYmJTs2QT6cACglWpd
-4Nt1jmnEMgENW3dlbUZdevg=
-=e/LN
+iD8DBQFCACA2I1lqEGTUzyQRAvKZAJ0XuCPdMSEFDwEURHl0MugSVW8o1wCeLubj
+rTvCdFE1+VydQHvztNFN7m0=
+=ErOH
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/newspost/newspost-2.0-r1.ebuild,v 1.2 2005/02/01 16:55:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/newspost/newspost-2.0-r1.ebuild,v 1.3 2005/02/02 00:34:52 swegener Exp $
 
 inherit eutils
 
@@ -37,5 +37,5 @@ src_compile() {
 src_install () {
 	dobin newspost || die "dobin failed"
 	doman man/man1/newspost.1 || die "doman failed"
-	dodoc README CHANGES COPYING || die "dodoc failed"
+	dodoc README CHANGES || die "dodoc failed"
 }
