@@ -1,0 +1,7 @@
+# ChangeLog for dev-java/javamake-bin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javamake-bin/ChangeLog,v 1.1 2005/03/18 01:07:44 compnerd Exp $
+
+  18 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> :
+  Initial import; Resolves bug #85551, modified ebuild from our own Betelgeuse
+
