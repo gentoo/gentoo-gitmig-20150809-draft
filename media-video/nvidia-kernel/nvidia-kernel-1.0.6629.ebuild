@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.1 2004/11/07 01:52:46 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.2 2004/11/07 23:30:45 cyfred Exp $
 
 inherit eutils kernel-mod
 
@@ -103,9 +103,6 @@ src_compile() {
 	# a non-standard build directory.
 	if [ ${KV_MINOR} -ge 6 -a ${KV_PATCH} -ge 7 ]
 	then
-		# Is this even needed at all?
-		unset ARCH
-
 		# Find the kbuild output
 		if [ -n "${KBUILD_OUTPUT_PREFIX}" ]
 		then
@@ -133,6 +130,7 @@ src_compile() {
 	# updated but the running kernel is still compiled with an older gcc.  This is
 	# needed for chrooted building, where the sanity check detects the gcc of the
 	# kernel outside the chroot rather than within.
+	unset ARCH
 	make IGNORE_CC_MISMATCH="yes" SYSSRC="${KERNEL_DIR}" SYSOUT="${OUTPUT}"  \
 		clean module V=1 || die "Failed to build module"
 }
