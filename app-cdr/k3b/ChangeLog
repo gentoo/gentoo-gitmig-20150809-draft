@@ -1,6 +1,14 @@
-# ChangeLog for app-cdr/k3b
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.46 2004/03/27 16:18:17 lanius Exp $
+# ChangeLog for app-cdr/k3b Copyright 2002-2004 Gentoo Technologies, Inc.;
+# Distributed under the GPL v2 $Header:
+# /home/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.46 2004/03/27 16:18:17
+# lanius Exp $
+
+*k3b-0.11.9 (06 Apr 2004)
+
+  06 Apr 2004; Heinrich Wendel <lanius@gentoo.org> k3b-0.11.9.ebuild:
+  version bump, add monkey use flag, bug #45459
+  add gnome deskto entry, bug #46546
+  add a better postinst message, bug #46245
 
   14 Mar 2004; Jason Wever <weeve@gentoo.org> k3b-0.11.6.ebuild:
   Added ~sparc keyword.
