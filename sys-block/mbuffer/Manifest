@@ -1,14 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 248fdcee7fee310d8fdaaf533e8ca937 mbuffer-20011008.ebuild 836
-MD5 71d49b538171462890119acd98a9fa83 ChangeLog 1049
+MD5 185d063d303e99ab8510990ef7cb17f9 ChangeLog 1241
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 b060003a65885c08d320a484571f61c2 mbuffer-20050125.ebuild 1100
+MD5 248fdcee7fee310d8fdaaf533e8ca937 mbuffer-20011008.ebuild 836
 MD5 99fb482d24377d87942e30e3ab9c73a9 files/digest-mbuffer-20011008 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCKvAFI1lqEGTUzyQRAuxoAJ4lfVbGpYOgVk14x4SHj3fsu4bWAwCg1xrj
-Dtn4IHxrIJnzkWzO9iKUBIk=
-=+82c
------END PGP SIGNATURE-----
+MD5 684d770f4361d6e49662792bc77a94a3 files/digest-mbuffer-20050125 64
+MD5 5cf71025ab5e5517fc579f652e7bee14 files/mbuffer-20050125-configure.patch 1757
