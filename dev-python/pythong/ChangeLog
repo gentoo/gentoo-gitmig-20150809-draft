@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pythong
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/ChangeLog,v 1.1 2003/05/10 16:28:39 liquidx Exp $
+
+*pythong-2.0.21.0 (10 May 2003)
+
+  10 May 2003; Alastair Tse <liquidx@gentoo.org> pythong-2.0.21.0.ebuild:
+  initial ebuild. thanks to Federico Moro <zayer@frikis.org>. Bug #20113.
+
