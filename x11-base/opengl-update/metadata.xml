@@ -2,5 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>xfree</herd>
-<longdescription>Utility to change the OpenGL interface being used. Used with nvidia or ati binary drivers.</longdescription>
+<maintainer>
+  <email>xfree@gentoo.org</email>
+</maintainer>
+<longdescription>Utility to switch opengl implementations between various providers.</longdescription>
 </pkgmetadata>
