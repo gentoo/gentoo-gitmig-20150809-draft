@@ -1,6 +1,18 @@
 # ChangeLog for dev-perl/BSD-Resource
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.1 2003/05/07 02:15:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.2 2003/12/24 21:33:04 mcummings Exp $
+
+*BSD-Resource-1.23 (24 Dec 2003)
+
+  24 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  BSD-Resource-1.23.ebuild:
+  No longer available on CPAN - removed
+
+*BSD-Resource-1.23 (24 Dec 2003)
+
+  24 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  BSD-Resource-1.23.ebuild:
+  New version on CPAN
 
 *BSD-Resource-1.22 (06 May 2003)
 

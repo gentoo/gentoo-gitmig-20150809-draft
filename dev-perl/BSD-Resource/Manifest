@@ -1,4 +1,6 @@
 MD5 03d44d9d71c934c9843534778eddeed5 BSD-Resource-1.22.ebuild 565
 MD5 2e4b1931573ace4ec969af9ff7f58e62 ChangeLog 380
 MD5 0a0f6e1776ef2c772bd38d1e1587b010 metadata.xml 309
+MD5 03d44d9d71c934c9843534778eddeed5 BSD-Resource-1.23.ebuild 565
 MD5 32d7bd8c727eadfccb4dd234cdb3ab5a files/digest-BSD-Resource-1.22 68
+MD5 0864dc089d8956d37dabee38530d7ad5 files/digest-BSD-Resource-1.23 68
