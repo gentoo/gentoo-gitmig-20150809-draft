@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.316 2005/02/12 20:45:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.317 2005/02/13 03:38:58 eradicator Exp $
+
+  12 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.4.20050125.ebuild:
+  Hack to allow USE=nptl when emerging a crosscompile glibc. More crosscompile
+  fixes for USE="nptl -nptlonly".  Multilib fixes.  Weworked sparc CHOST
+  setting logic to work better with crosscompiling.
 
   12 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20050125.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.12 2005/02/12 20:45:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.13 2005/02/13 03:38:58 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -125,8 +125,6 @@ S="${WORKDIR}/${PN}-${GLIBC_RELEASE_VER}"
 
 ### EXPORTED FUNCTIONS ###
 toolchain-glibc_src_unpack() {
-	crosscompile_setup
-
 	# Check NPTL support _before_ we unpack things to save some time
 	want_nptl && check_nptl_support
 
@@ -182,8 +180,6 @@ toolchain-glibc_src_unpack() {
 }
 
 toolchain-glibc_src_compile() {
-	crosscompile_setup
-
 	# do the linuxthreads build unless we're using nptlonly
 	if use !nptlonly ; then
 		glibc_do_configure linuxthreads
@@ -200,8 +196,6 @@ toolchain-glibc_src_compile() {
 }
 
 toolchain-glibc_src_test() {
-	crosscompile_setup
-
 	# This is wrong, but glibc's tests fail bad when screwing
 	# around with sandbox, so lets just punt it
 	unset LD_PRELOAD
@@ -234,20 +228,18 @@ toolchain-glibc_pkg_preinst() {
 
 	# it appears that /lib/tls is sometimes not removed. See bug
 	# 69258 for more info.
-	if [ -d /${ROOT}/$(get_libdir)/tls ] && use nptlonly ; then
-		addwrite /${ROOT}/$(get_libdir)/
-		ewarn "nptlonly in USE, removing /${ROOT}/$(get_libdir)/tls..."
-		rm -rf /${ROOT}/$(get_libdir)/tls || die
+	if [ -d /${ROOT}$(alt_libdir)/tls ] && use nptlonly ; then
+		addwrite /${ROOT}$(alt_libdir)/
+		ewarn "nptlonly in USE, removing /${ROOT}$(alt_libdir)/tls..."
+		rm -rf /${ROOT}$(alt_libdir)/tls || die
 	fi
 }
 
 toolchain-glibc_src_install() {
-	crosscompile_setup
-
 	setup_flags
 
 	# Need to dodir first because it might not exist (bad amd64 profiles)
-	dodir /usr/$(get_libdir)
+	dodir $(alt_usrlibdir)
 
 	# These should not be set, else the
 	# zoneinfo do not always get installed ...
@@ -275,63 +267,65 @@ toolchain-glibc_src_install() {
 
 	if tc-is-cross-compiler; then
 		# punt all the junk not needed by a cross-compiler
-		rm -rf "${D}"/usr/${CHOST}/{bin,etc,$(get_libdir)/gconv,sbin,share}
+		rm -rf "${D}"$(alt_prefix)/{bin,etc,$(get_libdir)/gconv,sbin,share}
 	fi
 
 	if use !nptlonly && want_nptl ; then
-		einfo "Installing NPTL to $(get_libdir)/tls/..."
+		einfo "Installing NPTL to $(alt_libdir)/tls/..."
 		cd ${WORKDIR}/build-${ABI}-${CHOST}-nptl
-		mkdir -p ${D}/$(get_libdir)/tls/
+		mkdir -p ${D}$(alt_libdir)/tls/
 
-		libcsofile=$(basename ${D}/$(get_libdir)/libc-*.so)
-		cp -a libc.so ${D}/$(get_libdir)/tls/${libcsofile} || die
-		dosym ${libcsofile} /$(get_libdir)/tls/$(ls libc.so.*)
+		libcsofile=$(basename ${D}$(alt_libdir)/libc-*.so)
+		cp -a libc.so ${D}$(alt_libdir)/tls/${libcsofile} || die
+		dosym ${libcsofile} $(alt_libdir)/tls/$(ls libc.so.*)
 
-		libmsofile=$(basename ${D}/$(get_libdir)/libm-*.so)
+		libmsofile=$(basename ${D}$(alt_libdir)/libm-*.so)
 		pushd math > /dev/null
-		cp -a libm.so ${D}/$(get_libdir)/tls/${libmsofile} || die
-		dosym ${libmsofile} /$(get_libdir)/tls/$(ls libm.so.*)
+		cp -a libm.so ${D}$(alt_libdir)/tls/${libmsofile} || die
+		dosym ${libmsofile} $(alt_libdir)/tls/$(ls libm.so.*)
 		popd > /dev/null
 
-		librtsofile=$(basename ${D}/$(get_libdir)/librt-*.so)
+		librtsofile=$(basename ${D}$(alt_libdir)/librt-*.so)
 		pushd rt > /dev/null
-		cp -a librt.so ${D}/$(get_libdir)/tls/${librtsofile} || die
-		dosym ${librtsofile} /$(get_libdir)/tls/$(ls librt.so.*)
+		cp -a librt.so ${D}$(alt_libdir)/tls/${librtsofile} || die
+		dosym ${librtsofile} $(alt_libdir)/tls/$(ls librt.so.*)
 		popd > /dev/null
 
-		libthreaddbsofile=$(basename ${D}/$(get_libdir)/libthread_db-*.so)
+		libthreaddbsofile=$(basename ${D}$(alt_libdir)/libthread_db-*.so)
 		pushd nptl_db > /dev/null
-		cp -a libthread_db.so ${D}/$(get_libdir)/tls/${libthreaddbsofile} || die
-		dosym ${libthreaddbsofile} /$(get_libdir)/tls/$(ls libthread_db.so.*)
+		cp -a libthread_db.so ${D}$(alt_libdir)/tls/${libthreaddbsofile} || die
+		dosym ${libthreaddbsofile} $(alt_libdir)/tls/$(ls libthread_db.so.*)
 		popd > /dev/null
 
-		libpthreadsofile=libpthread-${NEW_PV}.so
-		cp -a nptl/libpthread.so ${D}/$(get_libdir)/tls/${libpthreadsofile} || die
-		dosym ${libpthreadsofile} /$(get_libdir)/tls/libpthread.so.0
+		libpthreadsofile=libpthread-${GLIBC_RELEASE_VER}.so
+		cp -a nptl/libpthread.so ${D}$(alt_libdir)/tls/${libpthreadsofile} || die
+		dosym ${libpthreadsofile} $(alt_libdir)/tls/libpthread.so.0
 
 		# and now for the static libs
-		mkdir -p ${D}/usr/$(get_libdir)/nptl
+		mkdir -p ${D}$(alt_usrlibdir)/nptl
 		cp -a libc.a nptl/libpthread.a nptl/libpthread_nonshared.a rt/librt.a \
-			${D}/usr/$(get_libdir)/nptl
+			${D}$(alt_usrlibdir)/nptl
+
 		# linker script crap
-		sed "s~/$(get_libdir)/~/$(get_libdir)/tls/~" ${D}/usr/$(get_libdir)/libc.so \
-			> ${D}/usr/$(get_libdir)/nptl/libc.so
+		sed "s~/$(get_libdir)/~$(alt_libdir)/tls/~" ${D}$(alt_usrlibdir)/libc.so \
+			> ${D}$(alt_usrlibdir)/nptl/libc.so
 
-		sed "s~/$(get_libdir)/~/$(get_libdir)/tls/~" ${D}/usr/$(get_libdir)/libpthread.so \
-			> ${D}/usr/$(get_libdir)/nptl/libpthread.so
-		sed -i -e "s~/usr/lib64/~/usr/lib64/nptl/~" ${D}/usr/$(get_libdir)/nptl/libpthread.so
+		sed "s~/$(get_libdir)/~$(alt_libdir)/tls/~" ${D}$(alt_usrlibdir)/libpthread.so \
+			> ${D}/$(alt_usrlibdir)/nptl/libpthread.so
 
-		dosym ../${librtsofile} /usr/$(get_libdir)/nptl/librt.so
+		sed -i -e "s~/usr/$(get_libdir)/~$(alt_usrlibdir)/nptl/~" ${D}/$(alt_usrlibdir)/nptl/libpthread.so
+
+		dosym ../${librtsofile} $(alt_usrlibdir)/nptl/librt.so
 
 		# last but not least... headers.
-		mkdir -p ${D}/nptl ${D}/usr/include/nptl
+		mkdir -p ${D}/nptl ${D}$(alt_headers)/nptl
 		make install_root=${D}/nptl install-headers PARALLELMFLAGS="${MAKEOPTS}"
-		pushd ${D}/nptl/usr/include > /dev/null
+		pushd ${D}/nptl/$(alt_headers) > /dev/null
 			for i in `find . -type f`; do
-				if ! [ -f ${D}/usr/include/$i ] \
-					|| ! cmp -s $i ${D}/usr/include/$i; then
-				mkdir -p ${D}/usr/include/nptl/`dirname $i`
-				cp -a $i ${D}/usr/include/nptl/$i
+				if ! [ -f ${D}$(alt_headers)/$i ] \
+					|| ! cmp -s $i ${D}$(alt_headers)/$i; then
+				mkdir -p ${D}$(alt_headers)/nptl/`dirname $i`
+				cp -a $i ${D}$(alt_headers)/nptl/$i
 			fi
 		done
 		rm -rf ${D}/nptl
@@ -339,41 +333,41 @@ toolchain-glibc_src_install() {
 
 	# now, strip everything but the thread libs #46186
 	mkdir -p ${T}/thread-backup
-	mv ${D}/$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
+	mv ${D}$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
 	if use !nptlonly && want_nptl ; then
 		mkdir -p ${T}/thread-backup/tls
-		mv ${D}/$(alt_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
+		mv ${D}$(alt_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
 	fi
 	env -uRESTRICT CHOST=${CHOST} prepallstrip
-	cp -R -- ${T}/thread-backup/* ${D}/$(alt_libdir)/ || die
+	cp -R -- ${T}/thread-backup/* ${D}$(alt_libdir)/ || die
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
-	if [ -L "${D}/usr/$(get_libdir)/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
-		local LIBRTSO="`cd ${D}/$(get_libdir); echo librt.so.*`"
-		local LIBPTHREADSO="`cd ${D}/$(get_libdir); echo libpthread.so.*`"
+	if [ -L "${D}$(alt_usrlibdir)/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
+		local LIBRTSO="`cd ${D}$(alt_libdir); echo librt.so.*`"
+		local LIBPTHREADSO="`cd ${D}$(alt_libdir); echo libpthread.so.*`"
 
-		rm -f ${D}/usr/$(get_libdir)/librt.so
-		cat > ${D}/usr/$(get_libdir)/librt.so <<EOF
+		rm -f ${D}$(alt_usrlibdir)/librt.so
+		cat > ${D}$(alt_usrlibdir)/librt.so <<EOF
 /* GNU ld script
 	librt.so.1 needs libpthread.so.0 to come before libc.so.6*
 	in search scope.  */
 EOF
-		grep "OUTPUT_FORMAT" ${D}/usr/$(get_libdir)/libc.so >> ${D}/usr/$(get_libdir)/librt.so
-		echo "GROUP ( /$(get_libdir)/${LIBPTHREADSO} /$(get_libdir)/${LIBRTSO} )" \
-			>> ${D}/usr/$(get_libdir)/librt.so
+		grep "OUTPUT_FORMAT" ${D}$(alt_usrlibdir)/libc.so >> ${D}$(alt_usrlibdir)/librt.so
+		echo "GROUP ( $(alt_libdir)/${LIBPTHREADSO} $(alt_libdir)/${LIBRTSO} )" \
+			>> ${D}$(alt_usrlibdir)/librt.so
 
-		for x in ${D}/usr/$(get_libdir)/librt.so.[1-9]; do
+		for x in ${D}$(alt_usrlibdir)/librt.so.[1-9]; do
 			[ -L "${x}" ] && rm -f ${x}
 		done
 	fi
 
-	if use pic && ! use amd64 ; then
-		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/$(get_libdir)/soinit.o \;
-		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/$(get_libdir)/sofini.o \;
-		find ${S}/${buildtarget}/ -name "*_pic.a" -exec cp {} ${D}/$(get_libdir) \;
-		find ${S}/${buildtarget}/ -name "*.map" -exec cp {} ${D}/$(get_libdir) \;
+	if use pic && [[ $(tc-arch) != "amd64" ]]; then
+		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}$(alt_libdir)/soinit.o \;
+		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}$(alt_libdir)/sofini.o \;
+		find ${S}/${buildtarget}/ -name "*_pic.a" -exec cp {} ${D}$(alt_libdir) \;
+		find ${S}/${buildtarget}/ -name "*.map" -exec cp {} ${D}$(alt_libdir) \;
 
-		for i in ${D}/$(get_libdir)/*.map; do
+		for i in ${D}$(alt_libdir)/*.map; do
 			mv ${i} ${i%.map}_pic.map
 		done
 	fi
@@ -382,10 +376,10 @@ EOF
 	rm -f ${D}/etc/ld.so.cache
 
 	# Some things want this, notably ash.
-	dosym libbsd-compat.a /usr/$(get_libdir)/libbsd.a
+	dosym libbsd-compat.a $(alt_usrlibdir)/libbsd.a
 
 	# Handle includes for different ABIs
-	prep_ml_includes
+	prep_ml_includes $(alt_headers)
 
 	#################################################################
 	# EVERYTHING AFTER THIS POINT IS FOR NATIVE GLIBC INSTALLS ONLY #
@@ -503,9 +497,9 @@ toolchain-glibc_pkg_postinst() {
 alt_headers() {
 	if [ -z "${ALT_HEADERS}" ] ; then
 		if tc-is-cross-compiler; then
-			ALT_HEADERS="${ROOT}/usr/${CHOST}/include"
+			ALT_HEADERS="/usr/${CHOST}/include"
 		else
-			ALT_HEADERS="${ROOT}/usr/include"
+			ALT_HEADERS="/usr/include"
 		fi
 	fi
 	echo "${ALT_HEADERS}"
@@ -527,6 +521,14 @@ alt_libdir() {
 	fi
 }
 
+alt_usrlibdir() {
+	if tc-is-cross-compiler; then
+		echo /usr/${CHOST}/$(get_libdir)
+	else
+		echo /usr/$(get_libdir)
+	fi
+}
+
 setup_flags() {
 	# Over-zealous CFLAGS can often cause problems.  What may work for one
 	# person may not work for another.  To avoid a large influx of bugs
@@ -534,44 +536,18 @@ setup_flags() {
 	# problems as possible.
 	strip-flags
 	strip-unsupported-flags
+	filter-flags -m32 -m64 -mabi=*
 
 	if has_multilib_profile; then
 		# We change our CHOST, so set this right here
 		export CC="$(tc-getCC)"
-		local new_target
-
-		case ${ABI} in
-			sparc)
-				if is-flag "-mcpu=ultrasparc3"; then
-						new_target="sparcv9b-unknown-linux-gnu"
-				else
-						new_target="sparcv9-unknown-linux-gnu"
-				fi
-			;;
-			sparc64)
-				if is-flag "-mcpu=ultrasparc3"; then
-					new_target="sparc64b-unknown-linux-gnu"
-					CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9b"
-				else
-					new_target="sparc64-unknown-linux-gnu"
-					CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9a"
-				fi
-
-				filter-flags -Wa,-xarch -Wa,-A
-			;;
-			*)
-				new_target=$(get_abi_CHOST)
-			;;
-		esac
 
 		if tc-is-cross-compiler; then
-			CHOST="${new_target}"
+			CHOST_OPT="$(get_abi_CHOST)"
 		else
-			CHOST="${new_target}"
-			CBUILD="${new_target}"
+			CHOST="$(get_abi_CHOST)"
+			CBUILD="${CHOST}"
 		fi
-
-		filter-flags -m32 -m64 -mabi=*
 	fi
 
 	case $(tc-arch) in
@@ -585,16 +561,32 @@ setup_flags() {
 			filter-flags "-mvis"
 
 			# Sparc64 Only support...
-			if [ "${PROFILE_ARCH}" = "sparc64" ]; then
-				# Get rid of -mcpu options (the CHOST will fix this up) and flags
-				# known to fail
-				filter-flags -mcpu=ultrasparc -mcpu=v9
+			if has_multilib_profile || [ "${PROFILE_ARCH}" = "sparc64" ]; then
+				case ${ABI} in
+					default|sparc)
+						if is-flag "-mcpu=ultrasparc3"; then
+							CHOST_OPT="sparcv9b-unknown-linux-gnu"
+						else
+							CHOST_OPT="sparcv9-unknown-linux-gnu"
+						fi
+					;;
+					sparc64)
+						if is-flag "-mcpu=ultrasparc3"; then
+							CHOST_OPT="sparc64b-unknown-linux-gnu"
+							CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9b"
+						else
+							CHOST_OPT="sparc64-unknown-linux-gnu"
+							CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9a"
+						fi
 
-				# Setup the CHOST properly to insure "sparcv9"
-				# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
-				if [ "${CHOST}" = "sparc-unknown-linux-gnu" ]; then
-					CHOST="sparcv9-unknown-linux-gnu"
-					CBUILD="${CHOST}"
+						filter-flags -Wa,-xarch -Wa,-A
+					;;
+				esac
+			elif tc-is-cross-compiler && use nptl; then
+				if is-flag "-mcpu=ultrasparc3"; then
+					CHOST_OPT="sparcv9b-unknown-linux-gnu"
+				else
+					CHOST_OPT="sparcv9-unknown-linux-gnu"
 				fi
 			fi
 		;;
@@ -619,7 +611,7 @@ setup_flags() {
 }
 
 check_kheader_version() {
-	local header="$(alt_headers)/linux/version.h"
+	local header="${ROOT}$(alt_headers)/linux/version.h"
 
 	[ -z "$1" ] && return 1
 
@@ -782,7 +774,7 @@ glibc_do_configure() {
 	myconf="${myconf} --without-cvs
 			--enable-bind-now
 			--build=${CBUILD}
-			--host=${CHOST}
+			--host=${CHOST_OPT:-${CHOST}}
 			--disable-profile
 			--without-gd
 			--with-headers=$(alt_headers)
@@ -874,8 +866,11 @@ crosscompile_setup() {
 				amd64)
 					export CFLAGS_x86="${CFLAGS_x86--m32}"
 					export CHOST_x86="i686-pc-linux-gnu"
+					export LIBDIR_x86="lib"
+
 					export CFLAGS_amd64="${CFLAGS_amd64--m64}"
 					export CHOST_amd64="x86_64-pc-linux-gnu"
+					export LIBDIR_amd64="lib64"
 
 					export MULTILIB_ABIS="x86 amd64"
 					export DEFAULT_ABI="amd64"
@@ -883,10 +878,15 @@ crosscompile_setup() {
 				mips)
 					export CFLAGS_o32="${CFLAGS_o32--mabi=32}"
 					export CHOST_o32="mips-unknown-linux-gnu"
+					export LIBDIR_o32="lib"
+
 					export CFLAGS_n32="${CFLAGS_n32--mabi=n32}"
 					export CHOST_n32="mips64-unknown-linux-gnu"
+					export LIBDIR_n32="lib32"
+
 					export CFLAGS_n64="${CFLAGS_n64--mabi=64}"
 					export CHOST_n64="mips64-unknown-linux-gnu"
+					export LIBDIR_n64="lib64"
 
 					export MULTILIB_ABIS="n64 n32 o32"
 					export DEFAULT_ABI="o32"
@@ -894,8 +894,11 @@ crosscompile_setup() {
 				ppc64)
 					export CFLAGS_ppc="${CFLAGS_ppc--m32}"
 					export CHOST_ppc="powerpc-unknown-linux-gnu"
+					export LIBDIR_ppc="lib"
+
 					export CFLAGS_ppc64="${CFLAGS_ppc64--m64}"
 					export CHOST_ppc64="powerpc64-unknown-linux-gnu"
+					export LIBDIR_ppc64="lib64"
 
 					export MULTILIB_ABIS="ppc ppc64"
 					export DEFAULT_ABI="ppc64"
@@ -903,8 +906,11 @@ crosscompile_setup() {
 				sparc)
 					export CFLAGS_sparc="${CFLAGS_sparc--m32}"
 					export CHOST_sparc="sparc-unknown-linux-gnu"
+					export LIBDIR_sparc="lib"
+
 					export CFLAGS_sparc64="${CFLAGS_sparc64--m64}"
 					export CHOST_sparc64="sparc64-unknown-linux-gnu"
+					export LIBDIR_sparc64="lib64"
 
 					export MULTILIB_ABIS="sparc64 sparc"
 					export DEFAULT_ABI="sparc"
@@ -914,7 +920,6 @@ crosscompile_setup() {
 			export MULTILIB_ABIS="default"
 			export DEFAULT_ABI="default"
 		fi
-		export ABI="${DEFAULT_ABI}"
 	fi
 }
 
@@ -984,6 +989,8 @@ pkg_setup() {
 }
 
 src_unpack() {
+	crosscompile_setup
+
 	case $(tc-arch) in
 		hppa)
 			GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE:+${GLIBC_PATCH_EXCLUDE} }2000-all-2.3.2-propolice-guard-functions-v3.patch"
@@ -1005,7 +1012,7 @@ src_unpack() {
 			rm -f sysdeps/alpha/alphaev6/memcpy.S
 		;;
 		amd64)
-			if ! has_multilib_profile; then
+			if ! has_multilib_profile && ! tc-is-cross-compiler; then
 				# CONF_LIBDIR support
 				epatch ${FILESDIR}/2.3.4/glibc-gentoo-libdir.patch
 				sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):g" ${S}/sysdeps/unix/sysv/linux/configure
@@ -1023,9 +1030,17 @@ src_unpack() {
 	# Glibc is stupid sometimes, and doesn't realize that with a
 	# static C-Only gcc, -lgcc_eh doesn't exist.
 	# http://sources.redhat.com/ml/libc-alpha/2003-09/msg00100.html
+	# http://sourceware.org/ml/libc-alpha/2005-02/msg00042.html
 	echo 'int main(){}' > ${T}/gcc_eh_test.c
 	if ! $(tc-getCC) ${T}/gcc_eh_test.c -lgcc_eh 2>/dev/null ; then
 		sed -i -e 's:-lgcc_eh::' Makeconfig || die "sed gcc_eh"
+	fi
+
+	# nptl/sysdeps/pthread/configure isn't x-compile friendly
+	# http://sourceware.org/ml/libc-alpha/2005-02/msg00042.html
+	if tc-is-cross-compiler; then
+		rm ${S}/nptl/sysdeps/pthread/configure.in
+		rm ${S}/nptl/sysdeps/pthread/configure
 	fi
 
 	find . -type f -size 0 -o -name "*.orig" -exec rm -f {} \;
@@ -1036,6 +1051,8 @@ src_unpack() {
 }
 
 src_compile() {
+	crosscompile_setup
+
 	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
 	local MLTEST=$(type dyn_unpack)
 	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
@@ -1056,6 +1073,8 @@ src_compile() {
 }
 
 src_test() {
+	crosscompile_setup
+
 	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
 	local MLTEST=$(type dyn_unpack)
 	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
@@ -1076,6 +1095,8 @@ src_test() {
 }
 
 src_install() {
+	crosscompile_setup
+
 	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
 	local MLTEST=$(type dyn_unpack)
 	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
