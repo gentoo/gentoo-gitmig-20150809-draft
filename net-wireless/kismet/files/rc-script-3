@@ -1,13 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/files/rc-script-3,v 1.3 2004/07/15 00:23:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/files/rc-script-3,v 1.4 2004/10/26 09:49:12 brix Exp $
 
 # If you use this init script, you only need to run `kismet_client` to connect
 
 checkconfig() {
 	if [ ! -e /etc/kismet/kismet.conf ] ; then
-		eerror "You need an /etc/kimset/kismet.conf to run kimset_server."
+		eerror "You need an /etc/kismet/kismet.conf to run kismet_server."
 		return 1
 	elif [ -z "${WIFI_DEV}" ]; then
 		eerror "You must define WIFI_DEV in /etc/conf.d/kismet."
