@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.1.17-r1.ebuild,v 1.3 2000/11/30 23:14:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.1.17-r1.ebuild,v 1.4 2001/01/27 02:01:11 drobbins Exp $
 
 A=${P}-patched.tar.gz
 S=${WORKDIR}/${P}-patched/build_unix
@@ -15,8 +15,8 @@ DEPEND="$RDEPEND
 src_compile() {
 
     cd ${S}
-    try ../dist/configure --enable-compat185 --enable-dump185 --prefix=/usr --host=${CHOST} --enable-shared --enable-static --enable-rpc --enable-cxx
-
+    try ../dist/configure --enable-compat185 --enable-dump185 --prefix=/usr --host=${CHOST} --enable-shared --enable-static --enable-cxx
+	#enable-rpc hurts me
 	echo
     # Parallel make does not work
     echo "Building static libs..."
