@@ -1,5 +1,6 @@
 # ChangeLog for app-sci/pgcalc2
-# Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL
+# Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pgcalc2/ChangeLog,v 1.4 2004/10/02 15:20:59 swegener Exp $
 
   23 Jun 2004; David Holm <dholm@gentoo.org> pgcalc2-2.2.4.ebuild:
   Added to ~ppc.
