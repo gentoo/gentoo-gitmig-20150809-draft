@@ -1,4 +1,6 @@
+MD5 d84364af96d103e2f510230d214d84b3 mikmod-3.2.1.ebuild 774
 MD5 2d646e8123823dc5ae232b5384780373 ChangeLog 732
 MD5 b239eb3bcd8af2f6095ea1ce0273e5c9 mikmod-3.1.6a.ebuild 759
 MD5 3691ea094d354f67619abf35f5c69d98 files/digest-mikmod-3.1.6a 128
+MD5 5a79f789225e07ce736e284ecc3d989a files/digest-mikmod-3.2.1 64
 MD5 4543887d2f464e8562d5f5969c80fd6c files/mikmod-3.1.6-security.patch 2314
