@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/nap-1.5.1.ebuild,v 1.2 2003/02/13 15:21:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/nap-1.5.1.ebuild,v 1.3 2003/03/16 21:23:02 gerk Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Console Napster/OpenNap client"
@@ -11,7 +11,7 @@ LICENSE="as-is"
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 
 src_compile() {
 	./configure --prefix=${D}/usr || die "configure problem"

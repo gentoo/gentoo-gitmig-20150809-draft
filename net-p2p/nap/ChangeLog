@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/nap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.5 2003/02/12 08:40:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.6 2003/03/16 21:23:02 gerk Exp $
 
 *nap-1.5.1 (15 Dec 2002)
+
+  16 Mar 2003; Mark Guertin <gerk@gentoo.org> nap-1.5.1.ebuild:
+  set ppc in keywords
 
   15 Dec 2002; Ryan Phillips <rphillips@gentoo.org> :
   New version
