@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.3.1-r2.ebuild,v 1.13 2004/07/14 23:06:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.3.1-r2.ebuild,v 1.14 2004/09/27 12:33:50 dragonheart Exp $
 
 S=${WORKDIR}/QtWvDialer-${PV}
 DESCRIPTION="QT Frontend for wvdial"
@@ -24,6 +24,7 @@ src_compile() {
 	export TMAKEPATH="/usr/lib/tmake/linux-g++"
 	cp configure configure.orig
 	sed -e "s:TMAKEPATH/\.\./\.\./bin/tmake:TMAKEPATH/../../../bin/tmake:" \
+	    -e "s:gcc:g++:" \
 	configure.orig > configure
 	./configure || die
 	QTDIR=/usr/qt/2 make -e CFLAGS="$CFLAGS" || die
