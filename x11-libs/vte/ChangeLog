@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.35 2004/03/17 00:54:40 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.36 2004/04/20 14:49:38 leonardop Exp $
+
+*vte-0.11.10-r1 (20 Apr 2004)
+
+  20 Apr 2003; L. Boshell <leonardop@gentoo.org> vte-0.11.10-r1.ebuild,
+  files/vte-0.11.10-bg_fix.patch:
+  Added patch that resolves some inefficiency problems that caused
+  gnome-terminal to slow down dramatically under certain circumstances.
+  Closes bug #31830.
 
   16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> vte-0.11.10.ebuild:
   Added ~mips keyword.
