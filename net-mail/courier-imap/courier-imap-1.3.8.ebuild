@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.3.8.ebuild,v 1.3 2001/06/01 14:53:46 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.3.8.ebuild,v 1.4 2001/08/13 22:08:19 lamer Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -91,6 +91,8 @@ src_install () {
 	rm ${D}/usr/sbin/mkimapdcert
 	exeinto /usr/sbin
 	doexe ${FILESDIR}/mkimapdcert	
+	insinto /etc/pam.d
+	doins ${FILEDIR}/pam.d-imap
 }
 
 pkg_config() {

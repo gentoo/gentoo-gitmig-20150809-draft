@@ -152,6 +152,8 @@ src_install () {
     doins ${FILESDIR}/exim
 
     dodoc ${S}/doc/*
+	 insinto /etc/pam.d
+	 doins ${FILESDIR}/pam.d-exim
 }
 
 pkg_config() {
