@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50_pre10.ebuild,v 1.1 2004/01/06 14:59:37 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50_pre10.ebuild,v 1.2 2004/01/09 19:13:24 carpaski Exp $
 
 IUSE="build"
 
@@ -199,11 +199,7 @@ pkg_postinst() {
 		fi
 	fi
 	echo
-	if [ -e /etc/._cfg*make.globals ]; then
-		eerror "NOTICE: PLEASE *REPLACE* your make.globals. All user changes to variables"
-		eerror "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
-		echo
-	fi
+
 	einfo "Feature additions are noted in help and make.conf descriptions."
 	echo
 	einfo "Update configs using 'etc-update' please. Maintaining current configs"
@@ -302,4 +298,9 @@ pkg_postinst() {
 		chown -R portage:portage /var/tmp/ccache &> /dev/null
 		chmod -R g+rws /var/tmp/ccache &>/dev/null
 	fi
+
+	for X in ${ROOT}etc/._cfg????_make.globals; do
+		# Overwrite the globals file automatically.
+		[ -e "${X}" ] && mv -f "${X}" "${ROOT}etc/make.globals"
+	done
 }
