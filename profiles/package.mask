@@ -22,9 +22,10 @@
 ##   End example
 ##
 
-# seemant@gentoo.org (13 Jul 2002)
-# b0rked.
->=app-cdr/eroaster
+# seemant@gentoo.org (14 Jul 2002)
+# New implementation of the fluxbox ebuild.  blackbox and openbox coming
+# soon
+=x11-wm/fluxbox-0.1.10
 
 # seemant@gentoo.org (12 Jul 2002)
 # using securityfocus's perl wrapper script.  but the bug still inherently
