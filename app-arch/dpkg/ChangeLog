@@ -1,9 +1,14 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.13 2004/03/02 13:50:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.14 2004/03/05 23:22:02 lanius Exp $
 
   02 Mar 2004; Heinrich Wendel <lanius@gentoo.org> dpkg-1.10.18.ebuild:
   stable on x86
+
+*dpkg-1.10.18.1 (06 Mar 2004)
+
+  06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> dpkg-1.10.18.1.ebuild:
+  version bump; remove md5sum binary, bug #43814
 
   25 Jan 2004; Sven Blumenstein <bazik@gentoo.org> dpkg-1.10.18.ebuild:
   Stable on sparc.
