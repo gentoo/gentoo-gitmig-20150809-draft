@@ -1,4 +1,4 @@
 MD5 b9d5b1d5f70db976a728f55426205e87 files/digest-xmess-0.70.1 66
 MD5 13dc5b32bbff98dec74c41dd0c9b33a1 files/0.70.1-glx-fix.patch 597
-MD5 222671f6297c2cfc85d1abe9d0f1563e xmess-0.70.1.ebuild 4167
+MD5 1e8c4ab0ff31b18da42764ed4ceb645e xmess-0.70.1.ebuild 4166
 MD5 4617fd6bb63b3f7c3f66bb6ffbfd8733 ChangeLog 642
