@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.7.ebuild,v 1.2 2005/04/05 18:02:23 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.7.ebuild,v 1.3 2005/04/05 22:23:15 greg_g Exp $
 
 inherit kde
 
@@ -13,9 +13,9 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="|| ( kde-base/konqueror >=kde-base/kdebase-3.3 )"
+DEPEND="|| ( kde-base/konqueror >=kde-base/kdebase-3.4 )"
 
-need-kde 3.3
+need-kde 3.4
 
 S="${WORKDIR}/${PN}"
 
