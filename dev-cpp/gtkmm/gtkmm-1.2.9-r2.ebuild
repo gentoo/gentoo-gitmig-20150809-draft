@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.3 2003/08/01 20:49:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.4 2003/08/07 03:35:15 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="C++ interface for GTK+"
+HOMEPAGE="http://gtkmm.sourceforge.net/"
 SRC_URI="http://download.sourceforge.net/gtkmm/${P}.tar.gz"
 #	 ftp://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
 #	 http://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz"
-HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="1.2"
@@ -22,7 +24,7 @@ src_unpack() {
 	# this patch applies only to gtkmm-1.2.9. gtkmm has been fixed
 	# in CVS. It fixes a build problem with gcc3.1.
 	# (http://marc.theaimsgroup.com/?l=gtkmm&m=101879848701486&w=2)
-	patch -p0 <${FILESDIR}/gtkmm-1.2.9-gcc3.1-gentoo.patch
+	epatch ${FILESDIR}/gtkmm-1.2.9-gcc3.1-gentoo.patch
 }
 
 src_compile() {
