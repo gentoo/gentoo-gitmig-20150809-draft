@@ -1,24 +1,30 @@
+#! /sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/files/sal-client-init,v 1.1 2003/06/08 18:06:20 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/files/sal-client-init,v 1.2 2003/06/08 19:21:03 zhen Exp $
 
-TMP_DIR="tmp"
-FILE="audit"
+# NB: Config is in /etc/conf.d/auditd
 
-# forcibly delete the temporary directory if needed
-if [ -e $TMP_DIR ] 
-then
-  rm -rf $TMP_DIR
-fi
+depend() {
+	use net
+}
 
-# the below assumes that the certificate authority directory is /CA
+start() {
+	ebegin "Starting auditd"
+	
+	# forcibly delete the temporary files if needed
+  	if [ -e $TMP_DIR ]; then
+		rm -rf $TMP_DIR/*
+	fi
 
-# the audit daemon run as a background process
-# automatically creates the temporary directory if needed
-./daemon/auditd -d $TMP_DIR -b $FILE -r &
+	start-stop-daemon --start --quiet --exec /usr/sbin/auditd -- ${AUDITD_OPTS} &
+	/bin/pidof auditd > /var/run/auditd.pid
+	eend $? "Failed to start auditd"
+				
+}
 
-# the audit client run as a foreground process
-# sends the audit data to the terminal (stdout)
-# to send audit data to a server replace -v with -a x.x.x.x
-./client/auditclient -e -d $TMP_DIR -b $FILE -v
-
+stop() {
+	ebegin "Stopping auditd"
+	/bin/killall -s9 auditd
+	eend $? "Failed to stop auditd"
+}

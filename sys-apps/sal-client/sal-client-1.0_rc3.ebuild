@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.1 2003/06/08 18:06:20 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.2 2003/06/08 19:21:03 zhen Exp $
 
 MY_P=${P/_/-}
 
@@ -11,7 +11,7 @@ SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/secureaudit/${MY_P/rc3/RC3
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="-x86"
+KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/glibc \
@@ -43,3 +43,26 @@ src_install() {
 	dodoc ${S}/patches/README.todo.patches
 
 }
+
+pkg_postinst() {
+	echo
+	einfo "To create the necessary secure directory to hold your buffered logs,"
+	einfo "please remember to configure using the following line:"
+	echo 
+	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	echo
+	ewarn "Please note that using the above method is NOT secure. You will need to explore"
+	ewarn "either a crypto loopback filesystem, or other means of creating a secure jail"
+	ewarn "for these temporary log files. We assume no responsibility for security breaches"
+	ewarn "if you just use the above configure script."
+
+}
+
+pkg_config() {
+	einfo "Creating default temporary log directory in ${ROOT}/var/lib/auditd"
+	/bin/mkdir ${ROOT}/var/lib/auditd
+	/bin/chown root:root ${ROOT}/var/lib/auditd
+	/bin/chmod 0600 ${ROOT}/var/lib/auditd
+}
+	
+
