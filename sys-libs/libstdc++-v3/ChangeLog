@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.20 2004/08/28 15:51:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.21 2004/08/29 05:15:37 lv Exp $
+
+*libstdc++-v3-3.3.4 (29 Aug 2004)
+
+  29 Aug 2004; Travis Tilley <lv@gentoo.org> +libstdc++-v3-3.3.4.ebuild:
+  version bump
 
   28 Aug 2004; <solar@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
   added call to gnuconfig_update
