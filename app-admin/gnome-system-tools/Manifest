@@ -1,16 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4743546dfb3c2f99e5b20e5a056b8199 ChangeLog 3703
 MD5 65ac406c5106aaa74f453911dd4debe1 gnome-system-tools-0.33.0.ebuild 739
+MD5 0a88c243b3c32fba10c58cda47411101 metadata.xml 592
 MD5 3897441da1a32cca805b8cb358f8d980 gnome-system-tools-0.34.0-r1.ebuild 908
 MD5 9ff228c405b656106129d49928acf4c6 gnome-system-tools-0.92.0.ebuild 882
 MD5 27a714d27848c3a0f2fef3469c27def3 gnome-system-tools-1.0.0.ebuild 915
-MD5 0a88c243b3c32fba10c58cda47411101 metadata.xml 592
 MD5 306f8796c762dee824b9429e6b953647 gnome-system-tools-1.0.2.ebuild 919
-MD5 bad6abdc8c0321a71a01e608ff8638a9 gnome-system-tools-1.0.2-r1.ebuild 1138
+MD5 adfa58d8b3386cc423e553969bde04e9 gnome-system-tools-1.0.2-r1.ebuild 1135
 MD5 b19810539e97be86cb285492ef7ccc7e files/digest-gnome-system-tools-0.33.0 79
 MD5 deb1440d16f3601aecdc1811cc3f6667 files/digest-gnome-system-tools-0.34.0-r1 79
+MD5 059a3d1a89445a1ff4fdf30964148ca8 files/gnome-system-tools-0.34.0-fix-nopasswd-auth.patch 3545
 MD5 9511de777cfc95a4044ee4a201e595cc files/digest-gnome-system-tools-0.92.0 79
 MD5 82eb0b595d025b134b71d03a793adfc8 files/digest-gnome-system-tools-1.0.0 78
-MD5 059a3d1a89445a1ff4fdf30964148ca8 files/gnome-system-tools-0.34.0-fix-nopasswd-auth.patch 3545
 MD5 791a751973698f6f84222f0ab66c0dd5 files/digest-gnome-system-tools-1.0.2 78
 MD5 791a751973698f6f84222f0ab66c0dd5 files/digest-gnome-system-tools-1.0.2-r1 78
 MD5 d260438372974645549ff9e1490cc855 files/gnome-system-tools-1.0.2-ntp.patch 11173
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB8foxroRuSHgZdywRAnaRAJ4rNjvc/a0ImSLxhMULt+T+xkaalgCeJj8A
+fgh2Pr4tQfn7XdpWNcSF80s=
+=5Tmk
+-----END PGP SIGNATURE-----
