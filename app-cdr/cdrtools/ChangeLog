@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.65 2004/01/19 18:56:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.66 2004/01/27 02:11:47 pylon Exp $
+
+  27 Jan 2004; Lars Weiler <pylon@gentoo.org> cdrtools-2.01_alpha23.ebuild,
+  cdrtools-2.01_alpha25.ebuild:
+  Add CC=${CC} to emake, so that cross-compiling over distcc works.  See bug
+  #39507.
 
   19 Jan 2004; <gustavoz@gentoo.org> cdrtools-2.01_alpha23.ebuild:
   stable on sparc
