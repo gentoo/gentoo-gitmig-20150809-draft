@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.4 2002/03/04 18:06:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.5 2002/03/20 06:05:12 seemant Exp $
+
+*xscreensaver-4.02 (19 Mar 2002)
+
+  19 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xscreensaver-4.0.2.ebuild :
+
+  Copied over the 4.01-r1 ebuild to bump version.
+ 
+*screensaver-4.01-r1 (4 Mar 2002)
 
   4 March 2002; M.Schlemmer <azarah@gentoo.org> xscreensaver-4.01-r1,
                                                 ${FILESDIR}/pam.d/xscreensaver
