@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ff47ed97d51df4d1b7030dc173048956 gnupg-1.2.3-r5.ebuild 3628
 MD5 b6dca14848b7411efd8fb414b78fe65c gnupg-1.9.10.ebuild 2764
 MD5 5cf952300c6e6d393425894853e1b766 gnupg-1.2.4.ebuild 4173
 MD5 e67585ea4e6025b1918462ba737c8e2a gnupg-1.2.3-r2.ebuild 1659
 MD5 12d2a2a99d8604219a64b08c2969c41d gnupg-1.9.8.ebuild 2757
-MD5 f5ad505dc29c64c80051271ae1fb9b51 gnupg-1.2.6.ebuild 3816
+MD5 e7cb781a37279d94b7dc86b9a509de30 gnupg-1.2.6.ebuild 3571
 MD5 df041bf7bc487bd26079fc500e65925a gnupg-1.9.0.ebuild 2730
-MD5 7cfd46ab17c223e682864b2ddd52b747 ChangeLog 10946
+MD5 ec570541d773bd4dc7a073b9ae2446b6 ChangeLog 11161
 MD5 bf8f03fb22b2f44fd5f6a4395ab001dd metadata.xml 483
 MD5 eecb1b58574b61ddac7c3d12b0143b7d files/digest-gnupg-1.2.3-r2 65
 MD5 eecb1b58574b61ddac7c3d12b0143b7d files/digest-gnupg-1.2.3-r5 65
@@ -21,11 +18,3 @@ MD5 db3c4c4fe234f87d269216f6e0be8817 files/gnupg-1.2.3-hkp-format-string.diff 92
 MD5 c6114a5a40f10aeca63d07b59fed650f files/gnupg-1.2.4-hppa_unaligned_constant.patch 1213
 MD5 b12193638991111d4dc2c9864fa8e15a files/gnupg-1.2.3-disable-elgamal.diff 12554
 MD5 cdb57d67164c7a63a167c33426c0a7a3 files/gnupg-1.2.4.ppc64.patch 471
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-Comment: .//Manifest 1094506081
-
-iD8DBQFBPN/aPpIsIjIzwiwRAt3LAJ4j2CnZNp9tsM9uJ+yEZVQEoduY0QCghOhf
-zPlqHNXG+haXJq4IxVdcNnQ=
-=6grt
------END PGP SIGNATURE-----

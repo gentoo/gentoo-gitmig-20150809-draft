@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.2 2004/09/04 13:43:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.3 2004/09/17 13:30:08 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,12 +15,13 @@ KEYWORDS="~x86 ~amd64 ~sparc"
 IUSE="X ldap nls static idea"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
-		app-arch/bzip2
-		sys-libs/zlib )
+			app-arch/bzip2
+			sys-libs/zlib )
 		X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
 		nls? ( sys-devel/gettext )
 		dev-lang/perl
-		virtual/libc"
+		virtual/libc
+		virtual/mta"
 
 DEPEND="ldap? ( net-nds/openldap )
 		nls? ( sys-devel/gettext )
@@ -40,7 +41,8 @@ src_unpack() {
 
 	# Please read http://www.gnupg.org/why-not-idea.html
 	if use idea; then
-		mv ${WORKDIR}/idea.c ${S}/cipher/idea.c || ewarn "failed to insert IDEA module"
+		mv ${WORKDIR}/idea.c ${S}/cipher/idea.c || \
+			ewarn "failed to insert IDEA module"
 	fi
 
 	use ppc64 && epatch ${FILESDIR}/gnupg-1.2.4.ppc64.patch
@@ -116,19 +118,14 @@ pkg_postinst() {
 	einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
 	echo
 	if use idea; then
-		einfo "you've compiled ${PN} with support for the IDEA algorithm, this code"
-		einfo "is distributed under the GPL in countries where it is permitted to do so"
-		einfo "by law."
+		einfo "Please read http://www.gnupg.org/why-not-idea.html for more"
+		einfo "information on IDEA support."
 		einfo
-		einfo "Please read http://www.gnupg.org/why-not-idea.html for more information."
-		einfo
-		einfo "If you are in a country where the IDEA algorithm is patented, you are permitted"
-		einfo "to use it at no cost for 'non revenue generating data transfer between private"
-		einfo "individuals'."
+		einfo "If you are in a country where the IDEA algorithm is patented,"
+		einfo "you are permitted to use it at no cost for 'non revenue"
+		einfo "generating data transfer between private individuals'."
 		einfo
 		einfo "Countries where the patent applies are listed here"
 		einfo "http://www.mediacrypt.com/engl/Content/patent_info.htm"
-		einfo
-		einfo "Further information and other licenses are availble from http://www.mediacrypt.com/"
 	fi
 }
