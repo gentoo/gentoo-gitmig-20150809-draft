@@ -1,9 +1,8 @@
 # ChangeLog for dev-perl/IPC-ShareLite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.3 2002/12/09 04:21:07 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.4 2002/12/13 10:56:38 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *IPC-ShareLite-0.08 (13 Nov 2002)
 
