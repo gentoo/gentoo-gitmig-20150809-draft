@@ -3,7 +3,7 @@
 # Script for launching virtualjaguar 
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/files/virtualjaguar,v 1.1 2003/09/13 02:14:52 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/files/virtualjaguar,v 1.2 2003/09/26 07:44:53 msterret Exp $
 
 source /sbin/functions.sh
 
@@ -23,7 +23,7 @@ cd ~/.vj
 if [ -z "`cd ./bios && ls`" ] ; then
 	# if the bios directory is empty, then ... well ...
 	echo
-	eerror "    Put your BIOS file into ~/.vp/bios/"
+	eerror "    Put your BIOS file into ~/.vj/bios/"
 	eerror "    or virtualjaguar will not work!"
 	exit 1
 fi
