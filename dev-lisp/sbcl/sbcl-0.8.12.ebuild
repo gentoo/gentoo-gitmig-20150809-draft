@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.11.ebuild,v 1.3 2004/07/10 19:55:14 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.12.ebuild,v 1.1 2004/07/10 19:55:14 mkennedy Exp $
 
 inherit common-lisp-common eutils
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~mips"
 IUSE="threads doc nosource"
 
 DEPEND="dev-lisp/common-lisp-controller
@@ -101,7 +101,7 @@ src_install() {
 	insinto /usr/lib/sbcl
 	doins ${FILESDIR}/${PV}/install-clc.lisp	# Gentoo specific (from Debian)
 
-	doman ${FILESDIR}/${PV}/sbcl-asdf-install.1	# Gentoo specific (from Debian)
+	doman doc/sbcl-asdf-install.1
 
 	dodoc BUGS COPYING CREDITS INSTALL NEWS OPTIMIZATIONS PRINCIPLES README STYLE SUPPORT TLA TODO
 	dodoc ${FILESDIR}/${PV}/README.Gentoo
