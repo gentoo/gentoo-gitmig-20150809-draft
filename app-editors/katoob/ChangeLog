@@ -1,7 +1,10 @@
 # ChangeLog for app-editors/katoob
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.4 2003/11/04 22:08:12 leonardop Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.5 2004/03/16 10:37:06 leonardop Exp $
 
+  16 Mar 2004; L. Boshell <leonardop@gentoo.org> katoob-0.3.5.ebuild:
+  Inherit from eutils.
+  
   04 Nov 2003; L. Boshell <leonardop@gentoo.org> katoob-0.3.5.ebuild :
   Marked stable on x86.
   
