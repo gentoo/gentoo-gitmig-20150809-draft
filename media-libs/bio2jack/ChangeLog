@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/bio2jack
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.4 2004/09/28 06:56:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.5 2004/09/28 18:16:55 eradicator Exp $
+
+  28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  bio2jack-0.3-r1.ebuild:
+  Added static USE flag support.
 
 *bio2jack-0.3-r1 (27 Sep 2004)
 
