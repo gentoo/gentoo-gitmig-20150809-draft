@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-0.3-r1.ebuild,v 1.2 2004/08/28 19:22:00 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-0.3-r2.ebuild,v 1.1 2004/10/20 21:15:18 rizzo Exp $
 
 inherit flag-o-matic eutils debug
 

@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/meanwhile
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.6 2004/08/28 19:22:00 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.7 2004/10/20 21:15:18 rizzo Exp $
+
+*meanwhile-0.3-r2 (20 Oct 2004)
+
+  20 Oct 2004; Don Seiler <rizzo@gentoo.org> -meanwhile-0.3-r1.ebuild,
+  +meanwhile-0.3-r2.ebuild:
+  Revision bump to catch different distfile, fixes Bug #68306
 
   28 Aug 2004; Don Seiler <rizzo@gentoo.org> meanwhile-0.3-r1.ebuild:
   Stable on x86 and fixing debug inheritance
