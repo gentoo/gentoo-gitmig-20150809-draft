@@ -1,0 +1,9 @@
+# ChangeLog for app-emulation/visualboyadvance
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/visualboyadvance/ChangeLog,v 1.1 2003/03/02 07:40:19 vapier Exp $
+
+*visualboyadvance-1.4 (02 Mar 2003)
+
+  02 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Bret Towe <btowe@gbis.com> #10566
+  and Daniel Mannarino <thesnark@operamail.com> #13202.
