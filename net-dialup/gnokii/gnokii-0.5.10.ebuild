@@ -1,9 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.4.ebuild,v 1.2 2003/10/01 00:07:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.10.ebuild,v 1.1 2004/02/22 01:53:25 lanius Exp $
 
 DESCRIPTION="a client that plugs into your handphone"
-SRC_URI="http://freesoftware.fsf.org/download/${PN}/${P}.tar.bz2"
+SRC_URI="http://www.gnokii.org/download/${P}.tar.bz2"
 HOMEPAGE="http://www.gnokii.org"
 
 IUSE="nls X bluetooth irda"
@@ -22,7 +22,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-nounix98pty.patch
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-0.5.4-nounix98pty.patch
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.5.ebuild,v 1.1 2003/11/25 17:59:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.5.ebuild,v 1.2 2004/02/22 01:53:25 lanius Exp $
 
 DESCRIPTION="a client that plugs into your handphone"
 SRC_URI="http://freesoftware.fsf.org/download/${PN}/${P}.tar.bz2"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnokii.org"
 IUSE="nls X bluetooth irda"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND="X? ( =x11-libs/gtk+-1.2* )
 	bluetooth? ( net-wireless/bluez-libs )
