@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.26 2003/10/21 17:33:18 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.27 2003/10/27 14:21:26 agriffis Exp $
+
+  27 Oct 2003; Aron Griffis <agriffis@gentoo.org> rpm-4.2.1.ebuild:
+  Remove ~alpha KEYWORD until bug 31200 is resolved
 
   20 Sep 2003; Marius Mauch <genone@gentoo.org> rpm-4.2_pre069.ebuild:
   added /usr/src/redhat directories for rpmbuild
