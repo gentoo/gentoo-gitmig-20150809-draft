@@ -1,10 +1,10 @@
 # ChangeLog for media-plugins/rev-plugins
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/ChangeLog,v 1.3 2004/03/26 21:00:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/ChangeLog,v 1.4 2004/03/26 21:01:20 eradicator Exp $
 
   26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   rev-plugins-0.2.1.ebuild:
-  Cleaned up to make aliz's script happy.
+  Cleaned up to make aliz's script happy.  Stable on x86.
 
   27 Jan 2004; <torbenh@gentoo.org> metadata.xml:
   Added metadata.xml and removed wrong digest.
