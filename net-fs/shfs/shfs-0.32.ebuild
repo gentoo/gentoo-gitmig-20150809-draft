@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.32.ebuild,v 1.2 2003/11/11 16:23:01 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.32.ebuild,v 1.3 2003/11/11 19:28:54 mr_bones_ Exp $
 
 IUSE="amd doc"
 
@@ -52,7 +52,7 @@ src_install() {
 	else
 	doins shfs.o || die
 	fi
-	
+
 # Install binaries
 	cd ${S}/shfsmount
 	dobin shfsmount
