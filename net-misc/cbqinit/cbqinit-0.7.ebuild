@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.ebuild,v 1.4 2003/03/27 02:24:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.ebuild,v 1.5 2003/05/15 15:58:33 phosphan Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Sets up class-based queue traffic control (QoS) with iproute2"
@@ -23,8 +23,6 @@ src_compile() {
 	sed -i \
 		-e 's|^CBQ_PATH=.*|CBQ_PATH=/etc/cbqinit|' \
 		-e 's|CBQ_CACHE=.*|CBQ_CACHE=/var/cache/cbqinit|' \
-		-e 's|/sbin/tc|/usr/sbin/tc|' \
-		-e 's|/sbin/ip|/usr/sbin/ip|' \
 		cbq.init-v${PV}
 }
 
