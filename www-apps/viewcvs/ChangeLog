@@ -1,0 +1,77 @@
+# ChangeLog for net-www/viewcvs
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.1 2004/08/15 15:52:50 stuart Exp $
+
+*viewcvs-0.9.2-r2 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +viewcvs-0.9.2-r1.ebuild, +viewcvs-0.9.2-r2.ebuild,
+  +viewcvs-0.9.2-r3.ebuild, +viewcvs-0.9.2_p20030430-r1.ebuild,
+  +viewcvs-0.9.2_p20030430.ebuild:
+  Moved from net-www/viewcvs to www-apps/viewcvs.
+
+  30 May 2004; Robin H. Johnson <robbat2@gentoo.org> viewcvs-0.9.2-r1.ebuild,
+  viewcvs-0.9.2-r2.ebuild, viewcvs-0.9.2-r3.ebuild,
+  viewcvs-0.9.2_p20030430-r1.ebuild, viewcvs-0.9.2_p20030430.ebuild:
+  whitespace cleanup.
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org>
+  viewcvs-0.9.2_p20030430-r1.ebuild:
+  Added optional subversion dependency; see bug #44453
+
+*viewcvs-0.9.2_p20030430-r1 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org>
+  viewcvs-0.9.2_p20030430-r1.ebuild:
+  Added missing symlink for images and help; see bug #33729
+
+*viewcvs-0.9.2_p20030430-r1 (23 Feb 2004)
+
+  23 Feb 2004; Grant Goodyear <g2boojum@hotmail.com>
+  viewcvs-0.9.2_p20030430-r1.ebuild:
+  Removed 0.9.2_p20030430-r1 because the mcvs patch kills subversion.
+
+*viewcvs-0.9.2-r3 (18 Jan 2004)
+
+  18 Jan 2004; Lars Weiler <pylon@gentoo.org> viewcvs-0.9.2-r3.ebuild:
+  Mandatory changes as Documentroot moved to /var/www/localhost
+  stable on x86 and ppc
+
+  25 Nov 2003; Martin Holzer <mholzer@gentoo.org>
+  viewcvs-0.9.2_p20030430.ebuild:
+  updating path. Closes #30372.
+
+*viewcvs-0.9.2-r2 (19 Jul 2003)
+
+  19 Jul 2003; Lars Weiler <pylon@gentoo.org> viewcvs-0.9.2-r2.ebuild:
+  Configuration file for apache2 will be placed in the modules.d directory
+  automatically. No further server-configuration is needed.
+
+*viewcvs-0.9.2-r1 (16 Jul 2003)
+
+  16 Jul 2003; Lars Weiler <pylon@gentoo.org> viewcvs-0.9.2-r1.ebuild:
+  Changed the file-structure, due to queer habits of viewcvs' directory layout.
+  
+  The configuration files are now in /home/httpd/viewcvs/ but there is a symlink
+  from /etc/viewcvs/ to it. With this version the documentation (*docroot*) link
+  is working and the cvsgraph-configuration is found.
+  
+  Further masked stable on ppc.
+
+*viewcvs-0.9.2_p20030430 (21 May 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+  21 May 2003; Paul de Vrieze <pauldv@gentoo.org> viewcvs-0.9.2.ebuild,
+  viewcvs-0.9.2_p20030430.ebuild:
+  Remove dependency on enscript as it is only an optional dependency.
+
+*viewcvs-0.9.2 (01 May 2003)
+
+  01 May 2003; Paul de Vrieze <pauldv@gentoo.org> viewcvs-0.9.2.ebuild,
+  viewcvs-0.9.2_p20030430.ebuild:
+  Initial import of two view cvs ebuilds. The 0.9.2 version is the current
+  stable release whereas the snapshot version is a newer release that also works
+  with subversion
+
