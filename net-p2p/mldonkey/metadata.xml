@@ -3,9 +3,7 @@
 <pkgmetadata>
 <herd>net-p2p</herd>
 <maintainer>
-  <email>JulianHoch@web.de</email>
-  <name>Julian Hoch</name>
-  <description>caleb@gentoo.org passed the buck to Julian</description>
+  <email>squinky86@gentoo.org</email>
 </maintainer>
 <longdescription>An ocaml client to access the eDonkey network.</longdescription>
 </pkgmetadata>
