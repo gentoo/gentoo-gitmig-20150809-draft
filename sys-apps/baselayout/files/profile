@@ -1,5 +1,4 @@
-#eval `dircolors -b`
-#commented out because it causes problems with tcsh
+eval `dircolors`
 alias d="ls --color"
 alias ls="ls --color=auto"
 alias ll="ls --color -l"
