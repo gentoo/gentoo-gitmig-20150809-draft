@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/tmake-1.8-r1.ebuild,v 1.2 2002/07/04 08:14:29 seemant Exp $
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/tmake-1.8-r1.ebuild,v 1.3 2002/07/23 13:28:37 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Cross platform Makefile tool"
@@ -9,8 +9,9 @@ HOMEPAGE="http://www.trolltech.com/products/download/freebies/tmake.html"
 
 RDEPEND="sys-devel/perl"
 
+SLOT="0"
 LICENSE="as-is"
-SLOT=""
+KEYWORDS="x86"
 
 src_install () {
 
@@ -23,4 +24,3 @@ src_install () {
 	dodir /etc/env.d
 	echo "TMAKEPATH=/usr/lib/tmake/linux-g++" > ${D}/etc/env.d/51tmake
 }
-

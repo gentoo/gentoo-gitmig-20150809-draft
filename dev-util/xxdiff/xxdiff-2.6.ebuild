@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.6.ebuild,v 1.1 2002/07/02 05:05:40 seemant Exp $
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.6.ebuild,v 1.2 2002/07/23 13:28:37 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A graphical file comparator and merge tool simular to xdiff."
@@ -10,10 +10,12 @@ HOMEPAGE="http://xxdiff.sourceforge.net/"
 DEPEND="=x11-libs/qt-3*
 	>=dev-util/tmake-1.8-r1"
 
-RDEPEND="sys-apps/diffutils"
+RDEPEND="=x11-libs/qt-3*
+	sys-apps/diffutils"
 
-SLOT=""
-LICENSE="GPL"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 	cd src

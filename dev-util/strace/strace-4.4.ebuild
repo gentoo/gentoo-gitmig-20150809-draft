@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.4 2002/07/11 06:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.5 2002/07/23 13:28:37 seemant Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -20,8 +20,9 @@ SRC_URI3="http://belnet.dl.sourceforge.net/sourceforge/strace/strace_4.4-1.tar.g
 SRC_URI="${SRC_URI1} ${SRC_URI2} ${SRC_URI3}"
 HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
 
-LICENSE="as-is"
 SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc sys-devel/autoconf"
 RDEPEND="${DEPEND}"

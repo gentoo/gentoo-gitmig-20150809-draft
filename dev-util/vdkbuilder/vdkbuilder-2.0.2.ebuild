@@ -1,29 +1,33 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.2.ebuild,v 1.2 2002/06/20 00:12:16 bass Exp $
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.2.ebuild,v 1.3 2002/07/23 13:28:37 seemant Exp $
 
-S="${WORKDIR}/vdk-2.0.2"
+MY_P=${P/builder/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="A RAD Application Development tool based on VDK (The Visual Development Kit)."
-SRC_URI="mirror://sourceforge/vdkbuilder/vdk-2.0.2.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="vdkbuilder.sf.net"
-LICENSE="GPL-2"
-DEPEND="dev-libs/atk
-		x11-libs/pango
-		dev-libs/glib
-		dev-util/pkgconfig
-		>=x11-libs/gtk+-2.0.3
-		app-doc/doxygen
-gnome? ( gnome-base/libgnome )"
-RDEPEND="${DEPEND}"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="dev-libs/atk
+	x11-libs/pango
+	dev-libs/glib
+	dev-util/pkgconfig
+	>=x11-libs/gtk+-2.0.3
+	app-doc/doxygen
+	gnome? ( gnome-base/libgnome )"
 
 src_compile() {
 
     local myconf
-	    use nls \
+	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
-		use gnome \
+
+	use gnome \
 		&& myconf="${myconf} --enable-gnome=yes" \
 		|| myconf="${myconf} --enable-gnome=no"
 							  

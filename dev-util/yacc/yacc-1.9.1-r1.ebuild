@@ -1,11 +1,17 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.7 2002/07/11 06:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.8 2002/07/23 13:28:37 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Yacc"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/devel/compiler-tools/${P}.tar.Z"
-DEPEND=">=sys-libs/glibc-2.1.3"
+HOMEPAGE="http://dinosaur.compilertools.net/#yacc"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
+
+DEPEND="virtual/glibc"
 
 src_unpack () {
 	unpack ${A}

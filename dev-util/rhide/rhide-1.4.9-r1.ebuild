@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.4.9-r1.ebuild,v 1.3 2002/07/11 06:30:25 drobbins Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.4.9-r1.ebuild,v 1.4 2002/07/23 13:28:37 seemant Exp $
 
 TVISIONVER="1.1.3b"
 SETEDITVER="0.4.41"
@@ -9,15 +9,18 @@ GDBVER="5.0"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="RHIDE is a console IDE for various languages."
-SRC_URI="http://download.sourceforge.net/rhide/rhide-${PV}.tar.gz
+SRC_URI="http://download.sourceforge.net/rhide/${P}.tar.gz
 	 http://download.sourceforge.net/setedit/rhtvision-${TVISIONVER}.src.tar.gz
 	 http://download.sourceforge.net/setedit/setedit-${SETEDITVER}.tar.gz
 	 ftp://ftp.gnu.org/gnu/gdb/gdb-${GDBVER}.tar.gz"
 HOMEPAGE="http://www.rhide.com/"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
 # Ugly I know, but the build fails if teTeX not installed
-DEPEND="virtual/glibc
-	dev-libs/libpcre
+DEPEND="dev-libs/libpcre
 	sys-apps/texinfo
 	sys-devel/gettext
 	sys-libs/gpm
@@ -50,9 +53,9 @@ src_compile() {
 
 	DUMMYFLAGS=""
 
-	./configure --prefix=/usr				\
-		--fhs						\
-		--cflags='${DUMMYFLAGS}'			\
+	./configure --prefix=/usr \
+		--fhs \
+		--cflags='${DUMMYFLAGS}' \
 		--cxxflags='${DUMMYFLAGS}' || die
 	
 	# Only build the static libs
@@ -71,15 +74,15 @@ src_compile() {
 
 	cd ${WORKDIR}/setedit/
 
-	./configure --prefix=/usr				\
-		--fhs						\
+	./configure --prefix=/usr \
+		--fhs \
 		--libset || die
 
 	# Fix CFLAGS and CXXFLAGS
 	cd ${WORKDIR}/setedit/makes
 	cp rhide.env rhide.env.orig
-	sed -e "s:${CFLAGS}::g"					\
-		-e "s:${CXXFLAGS}::g" 				\
+	sed -e "s:${CFLAGS}::g" \
+		-e "s:${CXXFLAGS}::g" \
 		rhide.env.orig >rhide.env
 	make clean || die
 	make force-patch || die
@@ -114,18 +117,18 @@ src_compile() {
 	export TVOBJ="${RHIDESRC}/../tvision/linux"
 
 	# -j breaks build
-	make prefix=/usr			  		\
-		install_docdir=share/doc/${PF}			\
-		install_infodir=share/info			\
+	make prefix=/usr \
+		install_docdir=share/doc/${PF} \
+		install_infodir=share/info \
 		|| die
 
 	# Update and Fix DIR entry in .info files
 	cd ${S}/share/setedit/
-	sed -e 's:editor.inf:setedit.inf:g'			\
-		${WORKDIR}/setedit/doc/editor.inf >		\
+	sed -e 's:editor.inf:setedit.inf:g' \
+		${WORKDIR}/setedit/doc/editor.inf > \
 		setedit.inf || die
-	sed -e	's:infeng.inf:infview.inf:g'			\
-		${WORKDIR}/setedit/doc/infeng.inf >             \
+	sed -e	's:infeng.inf:infview.inf:g' \
+		${WORKDIR}/setedit/doc/infeng.inf > \
 		infview.inf || die
 	cd ${S}
 
@@ -135,10 +138,10 @@ src_compile() {
 
 src_install() {
 
-	make prefix=${D}/usr					\
-	install_docdir=share/doc/${PF}				\
-	install_infodir=share/info				\
-	install || die
+	make prefix=${D}/usr \
+		install_docdir=share/doc/${PF} \
+		install_infodir=share/info \
+		install || die
 
 	# Fix .info files
 	for file in ${D}/usr/share/info/*.inf ; do
@@ -149,7 +152,7 @@ src_install() {
 
 	# Install default CFG file and fix the paths
 	cd ${D}/usr/share/rhide
-	sed -e 's:/usr/local/share:/usr/share:g'		\
+	sed -e 's:/usr/local/share:/usr/share:g' \
 		rhide_.env >rhide.env
 	echo 'INFOPATH=/usr/share/info' >> rhide.env
 
@@ -157,4 +160,3 @@ src_install() {
 	insinto /etc/env.d
 	doins ${FILESDIR}/80rhide
 }
-

@@ -1,35 +1,34 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/sashxb-1.0.2.ebuild,v 1.1 2002/07/15 01:54:32 blizzy Exp $
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/sashxb-1.0.2.ebuild,v 1.2 2002/07/23 13:28:37 seemant Exp $
 
 S="${WORKDIR}/${P}"
 
 DESCRIPTION="Application environment for HTML and JS developers."
 HOMEPAGE="http://oss.software.ibm.com/developerworks/opensource/sashxb/"
 SRC_URI="http://oss.software.ibm.com/developerworks/opensource/sashxb/download/runtime/${P}.tar.gz"
-LICENSE="LGPL-2.1"
+
 SLOT="0"
+LICENSE="LGPL-2.1"
 KEYWORDS="x86"
 
-RDEPEND=">=virtual/glibc-2.2.3
-	>=net-www/mozilla-1.0
+RDEPEND=">=net-www/mozilla-1.0
 	>=dev-libs/gdome2-0.7
 	dev-libs/libxml2
-	sys-devel/gettext
 	gnome-base/libglade
 	gnome-base/ORBit
 	sys-apps/e2fsprogs
 	media-libs/gdk-pixbuf
 	gnome-base/gnome-core
 	gnome-base/gnome-libs"
-DEPEND="${RDEPEND}"
+
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 src_compile() {
 	patch -p1 -i ${FILESDIR}/${P}-mozilla.patch
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
+	econf \
 		--with-mozilla-lib=/usr/lib/mozilla \
 		--with-mozilla-include=/usr/include/mozilla \
 		--with-mozilla-idl=/usr/lib/mozilla/include/idl \
@@ -41,7 +40,7 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die "install problem"
 
-	dodoc ABOUT-NLS COPYING README TODO
+	dodoc COPYING README TODO
 }
 
 pkg_postinst() {

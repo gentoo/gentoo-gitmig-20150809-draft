@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.10_pre1.ebuild,v 1.2 2002/07/11 06:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.10_pre1.ebuild,v 1.3 2002/07/23 13:28:37 seemant Exp $
 
 S=${WORKDIR}/svn
 S_APACHE=${WORKDIR}/httpd-2.0
@@ -22,15 +22,17 @@ SRC_URI="http://www.sleepycat.com/update/4.0.14/db-4.0.14.tar.gz
 	http://www.gbevin.com/gentoo/svn-200202261456.tar.bz2"
 HOMEPAGE="http://subversion.tigris.org/"
 
-DEPEND="virtual/glibc
-	>=dev-lang/python-2.0
+SLOT="0"
+LICENSE="Apache-1.1"
+KEYWORDS="x86"
+
+DEPEND=">=dev-lang/python-2.0
 	>=sys-apps/diffutils-2.7.7
 	>=sys-devel/libtool-1.4.1-r1
 	>=sys-devel/bison-1.28-r3
 	>=sys-devel/m4-1.4o-r2
 	>=net-misc/neon-0.19.2"
-RDEPEND="virtual/glibc
-	>=dev-lang/python-2.0
+RDEPEND=">=dev-lang/python-2.0
 	>=sys-apps/diffutils-2.7.7
 	>=sys-devel/m4-1.4o-r2
 	>=net-misc/neon-0.19.2"
