@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.ebuild,v 1.19 2004/07/04 15:59:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.ebuild,v 1.20 2004/07/04 16:36:42 vapier Exp $
 
 inherit eutils
 
@@ -16,9 +16,10 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-	epatch ${FILESDIR}/sundries.diff || die "patch failed"
-	epatch ${FILESDIR}/${P}-alpha.diff || die "patch failed"
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/sundries.diff
+	epatch ${FILESDIR}/${P}-alpha.diff
 }
 
 src_compile() {
