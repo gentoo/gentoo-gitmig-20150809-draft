@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/daemontools-scripts
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools-scripts/ChangeLog,v 1.1 2004/11/20 17:09:43 kaiowas Exp $
+
+*daemontools-scripts-1.0.0 (20 Nov 2004)
+
+  20 Nov 2004; petre rodan <kaiowas@gentoo.org> +metadata.xml,
+  +daemontools-scripts-1.0.0.ebuild:
+  initial commit
+
