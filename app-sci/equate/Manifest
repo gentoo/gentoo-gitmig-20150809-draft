@@ -1,4 +1,14 @@
-MD5 10cff24080badf69b9e37b27184039ae equate-0.0.4.20040522.ebuild 442
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 11e6c3aa32287a04525d6ec4ba0e9641 ChangeLog 329
+MD5 05fa21fa270deb0d80497185751755d2 equate-0.0.4.20040710.ebuild 440
 MD5 a8d630633c20342ead6ddaae1cef9fcb metadata.xml 331
-MD5 251702c39b68c4ea5f4454a79cf42c06 files/digest-equate-0.0.4.20040522 74
+MD5 6168ce1505248ebcf58a31b69c6e20c0 files/digest-equate-0.0.4.20040710 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA8oWcHTu7gpaalycRAr70AJ43t8l7dzZe8qAh53W0+aTo0MNDcQCgrZxw
+6/CB5zeFFyyBWfkitdMHtJE=
+=JoP4
+-----END PGP SIGNATURE-----
