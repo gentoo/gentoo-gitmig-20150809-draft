@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.6 2002/08/15 22:24:50 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.7 2002/08/20 19:00:35 raker Exp $
+
+*exim-4.04-r2 (20 Aug 2002)
+
+  20 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  exim-4.04-r2.ebuild, files/digest-exim-4.04-r2 :
+  Updated ebuild with a cleaner LOOKUP_INCLUDE and LOOKUP_LIBS scheme
+  as suggested by Eric Renfro.  Added support for mta-pgsql USE variable 
+  and updated dependancies.
 
 *exim-4.04-r1 (15 Aug 2002)
 
