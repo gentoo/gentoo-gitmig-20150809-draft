@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 36f2774d10f15d6743c4b66d2f0fe932 ChangeLog 1203
-MD5 fd98c18149375a0a015e5a464f652584 Locale-gettext-1.01-r1.ebuild 619
-MD5 39bda78eefbb874b5c282dce35ea3b60 Locale-gettext-1.01.ebuild 603
+MD5 e585baa7e281d2e48045003b60717564 Locale-gettext-1.01-r1.ebuild 637
+MD5 977b3c0026c8238b33c61d3bf00ca77e Locale-gettext-1.01.ebuild 636
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 43b43f80fcf87cc21c06a61bb60b43b4 Locale-gettext-1.03.ebuild 618
+MD5 856b8383e4828bd274e2f0fcd3dce5fd Locale-gettext-1.03.ebuild 638
 MD5 7a77bd0cf42c547f577acc5aea88ad40 files/digest-Locale-gettext-1.01 62
 MD5 7a77bd0cf42c547f577acc5aea88ad40 files/digest-Locale-gettext-1.01-r1 62
 MD5 0b27b3100ea21c897a27c277ab38fc07 files/digest-Locale-gettext-1.03 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaIKJtG5z4I8BtQoRAv+7AJ9Dw3F5Tf4RRuHbWnaXlSTWSdar5gCgj1HS
-yZrylnA87oB90VwLGwpCAho=
-=nXkE
------END PGP SIGNATURE-----
