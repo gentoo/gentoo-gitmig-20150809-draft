@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.17 2003/02/12 09:17:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.18 2003/04/16 22:44:48 tantive Exp $
+
+*openmosix-sources-2.4.20-r3 (18 Apr 2003)
+
+  18 Apr 2003; Michael Imhof <tantive@gentoo.org>
+  Version bumped, including vanilla sources and openmosix-2.4.20-2
 
 *openmosix-sources-2.4.20-r2 (26 Jan 2003)
 
@@ -17,77 +22,3 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*openmosix-sources-2.4.19-r8 (19 Nov 2002)
-
-  19 Nov 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped: New openmosix-2.4.19-7 should fix problems with ext3
-  and is 100% gcc3 compatible.
-
-*openmosix-sources-2.4.19-r7 (18 Oct 2002)
-
-  18 Oct 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped: Including openmosix-2.4.19-6 and evms 1.2.0 (and the gcc3 compile patch).
-  This revision should fix most of the known issues.
-
-*openmosix-sources-2.4.19-r6 (05 Oct 2002)
-
-  05 Oct 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped: Including openmosix-2.4.19-4 and evms 1.2.0 (and the gcc3 compile patch).
-
-*openmosix-sources-2.4.19-r5 (18 Sep 2002)
-
-  18 Sep 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped: Including openmosix-2.4.19-4 and evms 1.1.0 (and the gcc3 compile patch).
-
-*openmosix-sources-2.4.18-r5 (16 Sep 2002)
-
-  16 Sep 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped: Including openmosix-2.4.18-4 and evms 1.1.0
-
-*openmosix-sources-2.4.19-r4 (08 Sep 2002)
-
-  08 Sep 2002; Michael Imhof <tantive@gentoo.org>
-  Added a patch to compile using gcc3.
-
-*openmosix-sources-2.4.19-r3 (02 Sep 2002)
-
-  02 Sep 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped: Including openmosix-2.4.19-3 and evms 1.1.0
-
-  03 Sep 2002; Michael Imhof <tantive@gentoo.org>
-  Verified that this kernel compiles on gcc-3.2 systems,
-  removed DEPEND="<sys-devel/gcc-3"
-  
-*openmosix-sources-2.4.19-r2 (27 Aug 2002)
-
-  27 Aug 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped: Including openmosix-2.4.19-2 and evms 1.1.0
-
-*openmosix-sources-2.4.19-r1 (27 Aug 2002)
-    
-  27 Aug 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped: Including openmosix-2.4.19-1 and evms 1.1.0
-	
-*openmosix-sources-2.4.18-r4 (16 Aug 2002)
-	
-  16 Aug 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped: This kernel now includes openmosix-2.4.18-3 and evms 1.1.0
-		    
-*openmosix-sources-2.4.18-r3 (08 Aug 2002)
-	    
-  08 Aug 2002; Michael Imhof <tantive@gentoo.org>
-  Added evms-1.1.0 patches.
-  This kernel now contains openmosix and evms.
-		  
-*openmosix-sources-2.4.18-r2 (07 Aug 2002)
-		  
-  07 Aug 2002; Michael Imhof <tantive@gentoo.org>
-  Updated to newer kernel version (2.4.18)
-		      
-*openmosix-sources-2.4.17-r2 (09 Jul 2002)
-
-  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
-  Added arch keywords (-ppc -sparc -sparc64)
-
-  09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog :
-  Added ChangeLog.
