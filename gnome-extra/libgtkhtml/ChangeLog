@@ -1,6 +1,6 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.32 2003/07/01 17:29:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.33 2003/07/04 19:57:57 gmsoft Exp $
 
   01 Jul 2003; Jason Wever <weeve@gentoo.org> libgtkhtml-3.0.5.ebuild:
   Added ~sparc to keywords to fix bug #23793.
@@ -9,6 +9,9 @@
   set ppc in keywords
 
 *libgtkhtml-3.0.5 (10 Jun 2003)
+
+  04 Juil 2003; Guy marin <gmsoft@gentoo.org> libgtkhtml-3.0.3.ebuild :
+  Added ~hppa to KEYWORDS.
 
   10 Jun 2003; Alastair Tse <liquidx@gentoo.org> libgtkhtml-3.0.3.ebuild,
   libgtkhtml-3.0.5.ebuild:
@@ -40,6 +43,9 @@
   problems.
 
 *libgtkhtml-2.2.3 (17 Apr 2003)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> libgtkhtml-2.2.3.ebuild :
+  Added hppa to KEYWORDS.
 
   17 Apr 2003; foser <foser@gentoo.org> libgtkhtml-2.2.3.ebuild :
   New version
