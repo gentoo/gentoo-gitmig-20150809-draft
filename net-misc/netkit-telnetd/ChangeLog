@@ -1,14 +1,17 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.14 2003/02/24 19:42:04 dragon Exp $
-
-  23 Feb 2003; Guy Martin <gmsoft@gentoo.org> netkit-telnetd-0.17-r3.ebuild :
-  Added hppa to keywords.
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.15 2003/04/09 19:05:33 mholzer Exp $
 
 *netkit-telnetd-0.17-r3 (1 May 2002)
 
+  09 Apr 2003; Martin Holzer <mholzer@gentoo.org> netkit-telnetd-0.17-r3.ebuild:
+  Corrected description. Closes #18965.
+
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> netkit-telnetd-0.17-r3.ebuild :
   Added stable mips keyword to the ebuild.
+
+  23 Feb 2003; Guy Martin <gmsoft@gentoo.org> netkit-telnetd-0.17-r3.ebuild :
+  Added hppa to keywords.
 
   10 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
   netkit-telnetd-0.17-r3.ebuild :

@@ -1,0 +1,6 @@
+MD5 aaa72d5592a277aa428710aa12ee0798 ChangeLog 2416
+MD5 360dc7b48b0ae7b00fc24dba42f03255 netkit-telnetd-0.17-r3.ebuild 1483
+MD5 248ab0551e59a480cbe3d64657fa586f files/digest-netkit-telnetd-0.17-r3 70
+MD5 6d23345a3ccb8e7b572752f14aee4860 files/net.issue.sample 117
+MD5 d741260d55b46b1e6ae6cf923b4542e5 files/netkit-telnetd-0.17-gentoo.patch 3155
+MD5 0bdd0131a5803a2e4a4ec8b3b9fb5039 files/telnetd.xinetd 205
