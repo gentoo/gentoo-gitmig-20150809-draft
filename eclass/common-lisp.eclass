@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.2 2003/06/08 00:24:48 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.3 2003/07/22 04:47:33 george Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -11,7 +11,7 @@ ECLASS=common-lisp
 INHERITED="$INHERITED $ECLASS"
 
 CLPACKAGE=
-DEPEND="dev-lisp/common-lisp-controller"
+newdepend "dev-lisp/common-lisp-controller"
 
 pkg_postinst() {
 	/usr/sbin/register-common-lisp-source $CLPACKAGE
