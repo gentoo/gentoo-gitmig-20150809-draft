@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack/lapack-3.0-r1.ebuild,v 1.3 2004/07/01 11:52:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack/lapack-3.0-r1.ebuild,v 1.4 2004/09/02 02:41:37 tgall Exp $
 
 DESCRIPTION="Linear Algebra PACKage for scientists, engineers, and mathematicians. This contains the libraries for creating programs that use LAPACK."
 HOMEPAGE="http://www.netlib.org/lapack/"
@@ -9,7 +9,7 @@ SRC_URI="http://www.netlib.org/lapack/lapack.tgz"
 LICENSE="lapack"
 SLOT="0"
 IUSE=""
-KEYWORDS="-* amd64"
+KEYWORDS="-* amd64 ~ppc64"
 
 DEPEND="virtual/libc
 	app-sci/blas"
