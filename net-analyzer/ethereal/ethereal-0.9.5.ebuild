@@ -22,12 +22,6 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=net-libs/libpcap-0.5.2"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-#	patch configure < ${FILESDIR}/${P}-gentoo.patch || die
-}
-
 src_compile() {
 	local myconf
 	use X || myconf="${myconf} --disable-ethereal"
