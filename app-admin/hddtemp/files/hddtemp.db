@@ -1,5 +1,5 @@
 #
-# DATABASE VERSION 039 (27/10/2003)
+# DATABASE VERSION 03B (30/11/2003)
 #
 # Insert a regular expression for support of the model or the serie of your hard drive.
 # If you don't know what to put in the second field, put the number
@@ -56,7 +56,7 @@
 "FUJITSU MHS2030AT"		194  C  "Fujitsu MHS2030AT"
 "FUJITSU MHS2040AT"		194  C  "Fujitsu MHS2040AT"
 "FUJITSU MHS2060AT"             194  C  "Fujitsu MHS2060AT (Apple PowerBook G4)"
-"FUJITSU MHT2030AT"		194  C  "Fujitsu MHT2030AT"
+"FUJITSU MHT2030AT"             194  C  "Fujitsu MHT2030AT"
 "FUJITSU MHT2040AT"		194  C  "Fujitsu MHT2040AT"
 "FUJITSU MPF3204AH"		194  C  "Fujitsu MPF3204AH"
 "FUJITSU MPG3204AT.*"		194  C  "Fujitsu MPG3204AT"
@@ -64,8 +64,6 @@
 "FUJITSU MPG3409AT.*"		194  C  "Fujitsu MPG3409AT E"
 "FUJITSU MPG3409AH.*"           194  C  "Fujitsu MPG3409AH E"
 "FUJITSU MPG3204AH"		194  C  "Fujitsu MPG3204AH"
-
-
 
 
 ########################################
@@ -79,7 +77,7 @@
 "HITACHI_DK23DA-[234]0"		194  C  "Hitachi DK23DA series"
 "HITACHI_DK23EA-[346]0"		194  C  "Hitachi DK23EA series"
 "HITACHI_DK23FB-60"		194  C  "Hitachi DK23FB60"
-
+"HTS726060M9AT00"		194  C  "Hitachi Travelstar 60GB"
 
 
 ########################################
@@ -155,14 +153,15 @@
 ########################################
 # somenone reported a problem with the SP8004H which reports a temperature
 # 10°C below the ambient temperature
-"SAMSUNG SW0434A"			0    C  "Samsung SW0434A"
-"SAMSUNG SP(2001|4002|6003|8004|40A2)H" 194  C  "Samsung SpinPoint P40 serie"
-"SAMSUNG SV0432A"			0    C  "Samsung SV0432A"
-"SAMSUNG SV3002H"			0    C  "Samsung SpinPoint V30 serie"
-"SAMSUNG SV(2001|4002|6003|8004)H"	194  C  "Samsung SpinPoint V40 serie"
-#"SAMSUNG SV(0221|0602|0813|1204)H"	9    C  "Samsung SpinPoint V60 serie"
-#"SAMSUNG SV1204H"                       194  C  "Samsung 120G"
-"SAMSUNG SV(0401|0802|1203|1604)N"      194  C  "Samsung SpinPoint V80 serie"
+"SAMSUNG SW0434A"					0    C  "Samsung SW0434A"
+"SAMSUNG SP(2001|4002|6003|8004|40A2)H"			194  C  "Samsung SpinPoint P40 serie"
+"SAMSUNG SP(0612|0802|1203|1604|0812|1213|1614)N"	194  C  "Samsung SpinPoint P80 serie"
+"SAMSUNG SV0432A"					0    C  "Samsung SV0432A"
+"SAMSUNG SV3002H"					0    C  "Samsung SpinPoint V30 serie"
+"SAMSUNG SV(2001|4002|6003|8004)H"			194  C  "Samsung SpinPoint V40 serie"
+#"SAMSUNG SV(0221|0602|0813|1204)H"			9    C  "Samsung SpinPoint V60 serie"
+#"SAMSUNG SV1204H"					194  C  "Samsung 120G"
+"SAMSUNG SV(0401|0802|1203|1604)N"			194  C  "Samsung SpinPoint V80 serie"
 
 
 ########################################
@@ -223,6 +222,7 @@
 "TOSHIBA MK3021GAS"			194  C  "Toshiba MK3021GAS"
 #"TOSHIBA MK4019GAX"			222  C  "Toshiba MK4019GAX"
 "TOSHIBA MK6021GAS"			194  C	"Toshiba MK6021GAS"
+"TOSHIBA MK2018GAS"			226  F  "Toshiba MK2018GAS"
 
 
 
@@ -234,6 +234,7 @@
 # WDC AC310100B and WDC AC2850F are reported not working
 # no more informations were given
 "WDC WD200BB-00AUA1"            0   C "Western Digital Caviar WD200BB"
+"WDC WD360GD-00FNA0"		194 C "Western Digital SATA Raptor 36.7GB"
 "WDC WD400BB-(18CA|00DE)A0"     0   C "Western Digital Caviar WD400BB"
 "WDC WD600BB-32BSA0"		0   C "Western Digital 600BB-32BSA0"
 "WDC WD800BB-00CAA1"		0   C "Western Digital WD800BB-00CAA1"
@@ -243,6 +244,7 @@
 "WDC WD800JB-00ETA0"            194 C "Western Digital 80GB Special Edition 8MB"
 "WDC WD1600JB-00EVA0"           194 C "Western Digital 160GB Special Edition 8MB"
 "WDC WD2000JB-34EVA0"		194 C "Western Digital 200GB Special Edition 8MB"
+"WDC WD2500JB-32FUA0"		194 C "Western Digital 250GB Special Edition 8MB"
 "WDC AC420400D"                 231 C "Western Digital Caviar AC420400D"
 "WDC AC418000D"			231 C "Western Digital AC418000D"
 "WDC WD135BA"			231 C "Wetsern Digital WD135BA"
@@ -251,4 +253,3 @@
 # "WDC WD800JB-00CRA1"		199 C "Western Digital Caviar WD800JB"
 # "WDC WD1200JB-00CRA1"		9   C "Western Digital 1200JB-00CRA1"
 # "WDC WD273BA"			9   C "Western Digital WD273BA"
-
