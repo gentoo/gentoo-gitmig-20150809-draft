@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.74 2004/09/09 07:36:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.75 2004/09/23 20:10:25 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -44,6 +44,7 @@ egamesconf() {
 			--datadir=${GAMES_DATADIR} \
 			--sysconfdir=${GAMES_SYSCONFDIR} \
 			--localstatedir=${GAMES_STATEDIR} \
+			${EXTRA_ECONF} \
 			"$@"
 		./configure \
 			--prefix=${GAMES_PREFIX} \
@@ -53,6 +54,7 @@ egamesconf() {
 			--datadir=${GAMES_DATADIR} \
 			--sysconfdir=${GAMES_SYSCONFDIR} \
 			--localstatedir=${GAMES_STATEDIR} \
+			${EXTRA_ECONF} \
 			"$@" || die "egamesconf failed"
 	else
 		die "no configure script found"
@@ -61,13 +63,14 @@ egamesconf() {
 
 egamesinstall() {
 	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
-		make prefix=${D}${GAMES_PREFIX} \
-		    mandir=${D}/usr/share/man \
-		    infodir=${D}/usr/share/info \
-		    datadir=${D}${GAMES_DATADIR} \
-		    sysconfdir=${D}${GAMES_SYSCONFDIR} \
-		    localstatedir=${D}${GAMES_STATEDIR} \
-		    "$@" install || die "einstall failed"
+		make \
+			prefix=${D}${GAMES_PREFIX} \
+			mandir=${D}/usr/share/man \
+			infodir=${D}/usr/share/info \
+			datadir=${D}${GAMES_DATADIR} \
+			sysconfdir=${D}${GAMES_SYSCONFDIR} \
+			localstatedir=${D}${GAMES_STATEDIR} \
+			"$@" install || die "einstall failed"
 	else
 		die "no Makefile found"
 	fi
