@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.1 2003/06/21 02:28:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.2 2003/12/23 06:25:42 rac Exp $
+
+*Apache-Test-1.07 (22 Dec 2003)
+
+  22 Dec 2003; <rac@gentoo.org> Apache-Test-1.07.ebuild:
+  upstream bump
 
 *Apache-Test-1.03 (20 Jun 2003)
 
