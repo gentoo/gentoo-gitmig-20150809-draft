@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/hashcash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.4 2004/07/01 21:06:36 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.5 2004/08/18 16:55:08 kloeri Exp $
+
+*hashcash-1.02 (18 Aug 2004)
+
+  18 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> +hashcash-1.02.ebuild:
+  Bump version.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> hashcash-0.27.ebuild:
   change virtual/glibc to virtual/libc, add IUSE
