@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030204.ebuild,v 1.1 2003/04/24 07:45:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030204.ebuild,v 1.2 2003/07/23 01:53:54 george Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/snapshots/${Name}-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 
 DEPEND="sys-devel/binutils
 	>=app-sci/lard-20030204
