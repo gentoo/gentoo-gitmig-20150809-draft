@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.4-r1.ebuild,v 1.13 2004/03/07 04:04:55 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.4-r1.ebuild,v 1.14 2004/03/30 05:22:29 spyderous Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -13,10 +13,7 @@ SLOT="2"
 KEYWORDS="x86 ppc alpha sparc amd64 hppa ia64 ~mips"
 IUSE="doc tiff jpeg"
 
-# virtual/x11
-# Need this specific xfree version to get bugfree xinput support (#20407)
-
-RDEPEND=">=x11-base/xfree-4.3.0-r3
+RDEPEND="virtual/x11
 	>=dev-libs/glib-2.2
 	>=dev-libs/atk-1.2
 	>=x11-libs/pango-1.2
