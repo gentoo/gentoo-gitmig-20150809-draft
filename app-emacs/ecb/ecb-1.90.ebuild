@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-1.90.ebuild,v 1.4 2003/06/29 19:00:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-1.90.ebuild,v 1.5 2003/09/08 04:22:45 msterret Exp $
 
 inherit elisp
 
@@ -23,11 +23,11 @@ S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${A}
- 	cd ${S} && patch -p1 <${FILESDIR}/${P}-gentoo.patch || die
- 	sed -e "s,@ECB_INFO@,/usr/share/info/ecb.info.gz,g" <ecb-help.el >ecb-help.el.new && \
- 		mv ecb-help.el.new ecb-help.el
- 	sed -e "s,@ECB_HTML@,/usr/share/doc/${P}/html/ecb.html,g" <ecb-help.el >ecb-help.el.new && \
- 		mv ecb-help.el.new ecb-help.el
+	cd ${S} && patch -p1 <${FILESDIR}/${P}-gentoo.patch || die
+	sed -e "s,@ECB_INFO@,/usr/share/info/ecb.info.gz,g" <ecb-help.el >ecb-help.el.new && \
+		mv ecb-help.el.new ecb-help.el
+	sed -e "s,@ECB_HTML@,/usr/share/doc/${P}/html/ecb.html,g" <ecb-help.el >ecb-help.el.new && \
+		mv ecb-help.el.new ecb-help.el
 }
 
 src_compile() {
@@ -35,8 +35,8 @@ src_compile() {
 }
 
 src_install() {
- 	elisp-install ${PN} *.el *.elc
- 	elisp-site-file-install ${FILESDIR}/50ecb-gentoo.el
+	elisp-install ${PN} *.el *.elc
+	elisp-site-file-install ${FILESDIR}/50ecb-gentoo.el
 	dodoc HISTORY README RELEASE_NOTES
 	makeinfo --force ecb.texi
 	doinfo ecb.info*
