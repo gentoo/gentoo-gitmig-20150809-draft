@@ -12,6 +12,8 @@ MD5 e2a45fc3f5fb20aa30f050735cef66b4 gyach-0.9.2.ebuild 954
 MD5 aa6fbdf4c6517ebf5ec2463677bc3d58 gyach-0.9.4.ebuild 949
 MD5 b89c1ccb88eec2e9e90dc536709ab99d gyach-0.9.4-r1.ebuild 1034
 MD5 0fe4256c20f4f9c383039ecc441fd452 gyach-0.9.5.ebuild 1010
+MD5 1506efd4e2b867f61ab1b77ab27ef253 gyach-0.9.6.ebuild 948
+MD5 0fe4256c20f4f9c383039ecc441fd452 gyach-0.9.6.ebuild~ 1010
 MD5 52415a7cdcc4713252d7977a8a8617fe files/digest-gyach-0.7.5 63
 MD5 52415a7cdcc4713252d7977a8a8617fe files/digest-gyach-0.7.5-r1 63
 MD5 df85c97e31ccc6a4fcf0538be8885926 files/digest-gyach-0.7.6 63
@@ -28,3 +30,4 @@ MD5 a728009e663a9684ea4704a2a772d47c files/gyach.desktop 113
 MD5 49016552809b43ed75eaa633c6803de6 files/protocol-gentoo.patch 444
 MD5 06ae75882ceb8d728f6043e4f72bedfe files/digest-gyach-0.9.4-r1 63
 MD5 8732aa913d254f6e78a8b5bd434b11db files/digest-gyach-0.9.5 63
+MD5 7f0438b71f5101f7b6e54996ba210383 files/digest-gyach-0.9.6 63
