@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-1.2.0.ebuild,v 1.5 2004/06/02 20:48:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-1.2.0.ebuild,v 1.6 2004/06/03 22:36:57 geoman Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~mips ~alpha arm hppa ~amd64 ~ia64"
+KEYWORDS="x86 ppc ~sparc mips ~alpha arm hppa ~amd64 ~ia64"
 IUSE=""
 
 DEPEND="sys-devel/gettext
