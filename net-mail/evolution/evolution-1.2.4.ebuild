@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.10 2003/06/10 15:10:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.11 2003/07/06 11:49:49 gmsoft Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.ximian.com/pub/ximian-evolution/source/${P}.tar.gz
 HOMEPAGE="http://www.ximian.com"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc hppa"
 
 RDEPEND="app-text/scrollkeeper
 	>=gnome-extra/bonobo-conf-0.16
