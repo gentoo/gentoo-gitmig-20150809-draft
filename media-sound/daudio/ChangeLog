@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/daudio
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daudio/ChangeLog,v 1.1 2004/06/19 15:58:20 squinky86 Exp $
+
+*daudio-0.3 (19 Jun 2004)
+
+  19 Jun 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +files/daudio.rc, +daudio-0.3.ebuild:
+  Initial commit. Ebuild by Sven Wegener <swegener@gentoo.org>. Closes #38121.
+
