@@ -1,0 +1,10 @@
+--- common.c.orig	2003-12-28 22:28:35.908693712 -0500
++++ common.c	2003-12-28 22:28:24.635407512 -0500
+@@ -1814,6 +1814,7 @@
+ 	}
+ 	COM_AddGameFS (userdir);
+ #endif
++	COM_AddGameFS (GENTOO_DATADIR);
+ //
+ // -path <dir or packfile> [<dir or packfile>] ...
+ // Fully specifies the exact serach path, overriding the generated one

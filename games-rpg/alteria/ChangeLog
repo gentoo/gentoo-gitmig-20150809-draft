@@ -1,0 +1,8 @@
+# ChangeLog for games-rpg/alteria
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/alteria/ChangeLog,v 1.1 2003/12/29 03:48:15 vapier Exp $
+
+*alteria-1.0 (28 Dec 2003)
+
+  28 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #33198.
