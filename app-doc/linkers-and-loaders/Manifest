@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 00b66d4254819f02eaa3b68fb9fd00e7 linkers-and-loaders-0.ebuild 765
+MD5 77625f44c62af6766144dd465e36eb31 linkers-and-loaders-0.ebuild 830
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 00036d23a7e3081d35750de1729407f5 ChangeLog 360
 MD5 ffa655c29d4726b25ed2a912be5badec files/digest-linkers-and-loaders-0 2194
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB6Gk6roRuSHgZdywRApj7AJ0WdqDZAR0cctOkXSiT9Tn3lGm/OQCeP63A
-zYBUuDlRySDAqUbZCI9s/0c=
-=3nL4
------END PGP SIGNATURE-----
