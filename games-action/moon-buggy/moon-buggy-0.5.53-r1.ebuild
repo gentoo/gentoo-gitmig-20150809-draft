@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-0.5.53-r1.ebuild,v 1.1 2004/08/02 09:20:24 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-0.5.53-r1.ebuild,v 1.2 2004/08/02 23:55:34 vapier Exp $
 
 inherit games
 
@@ -23,20 +23,20 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i \
-		-e '/$(DESTDIR)$(bindir)\/moon-buggy -c/d' Makefile.in || \
-			die "sed Makefile.in failed"
-	if use esd; then
-		epatch sound.patch || die "epatch failed"
-	fi
+		-e '/$(DESTDIR)$(bindir)\/moon-buggy -c/d' \
+		Makefile.am || die "sed Makefile.in failed"
+	use esd && epatch sound.patch
+	rm -f missing
+	autoreconf -i || die "autoreconf failed"
 }
 
 src_compile() {
-	egamesconf sharedstatedir="${GAMES_STATEDIR}" || die
+	egamesconf --sharedstatedir="${GAMES_STATEDIR}" || die
 	emake || die "emake failed"
 }
 
 src_install() {
-	egamesinstall sharedstatedir="${D}${GAMES_STATEDIR}" || die
+	make install DESTDIR=${D} || die
 	dodoc ANNOUNCE AUTHORS ChangeLog NEWS README* TODO
 	touch ${D}${GAMES_STATEDIR}/${PN}/mbscore
 	fperms 664 ${GAMES_STATEDIR}/${PN}/mbscore
