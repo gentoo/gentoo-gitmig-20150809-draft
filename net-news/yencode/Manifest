@@ -1,4 +1,14 @@
-MD5 f18bb6d51ed17e5c9466b8ea3f79489c ChangeLog 1384
-MD5 0436d9f25711fb3747c3bdcabfb44b75 yencode-0.46.ebuild 900
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 256715595d876fac9cabe77b10f3e9f3 yencode-0.46.ebuild 906
+MD5 441b9b716d4c1421f1be32336a66ffb5 ChangeLog 1489
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
 MD5 cedd69f1ace374e70c4cc9a3e92ada95 files/digest-yencode-0.46 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBw0o9Z/iYVBmujdURApRdAJ9WahvcecfuTMWran9Vl2mvmYtuegCeOEPP
+qpq0IdUAd+VPpi3Xz3+0Awk=
+=33Z8
+-----END PGP SIGNATURE-----
