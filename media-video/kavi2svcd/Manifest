@@ -1,5 +1,5 @@
-MD5 689168c8bd6bff8c6bda448b2205941b kavi2svcd-0.8.2.ebuild 798
-MD5 3990b96ee1cc0abc0ebee926c58cb0c5 ChangeLog 1093
+MD5 f38aa153e500250b5b7bd38b749a7ad1 kavi2svcd-0.8.2.ebuild 875
+MD5 4c05f92ee866badcd994f3a20849b8f6 ChangeLog 1293
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 da1cf7fb7841887e0312a44fabb23506 files/kavi2svcd-0.8.2-configure-arts.patch 3567
 MD5 79f3b71170b916ad066d39d29114815c files/digest-kavi2svcd-0.8.2 68

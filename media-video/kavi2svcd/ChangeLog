@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kavi2svcd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/ChangeLog,v 1.7 2004/11/29 09:43:20 motaboy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/ChangeLog,v 1.8 2005/01/20 16:59:08 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> kavi2svcd-0.8.2.ebuild:
+  added ~amd64 to KEYWORDS to fix #64530 and applied a patch to fix #78792.
+  thanks to Fabio Rossi <rossi.f@inwind.it>.
 
   29 Nov 2004; Simone Gotti <motaboy@gentoo.org>
   +files/kavi2svcd-0.8.2-configure-arts.patch, kavi2svcd-0.8.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/kavi2svcd-0.8.2.ebuild,v 1.9 2004/11/29 09:43:20 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/kavi2svcd-0.8.2.ebuild,v 1.10 2005/01/20 16:59:08 luckyduck Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kavi2svcd/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="cdr"
 
 DEPEND="sys-apps/sed
@@ -23,6 +23,7 @@ need-kde 3
 src_unpack() {
 	kde_src_unpack
 	sed -i 's:;;$:;:' ${S}/kavi2svcd/{prefclass,vcdclass}.h
+	sed -i -e 's@/usr/local/bin@/usr/bin@' ${S}/kavi2svcd/Makefile.in
 
 	use arts || epatch ${FILESDIR}/${P}-configure-arts.patch
 }
