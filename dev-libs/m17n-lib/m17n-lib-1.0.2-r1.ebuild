@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.0.2-r1.ebuild,v 1.9 2004/07/31 23:28:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.0.2-r1.ebuild,v 1.10 2005/01/01 16:20:58 usata Exp $
 
 inherit eutils flag-o-matic libtool
 
