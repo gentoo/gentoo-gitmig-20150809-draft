@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/gedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.30 2003/06/15 17:41:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.31 2003/07/04 21:38:16 gmsoft Exp $
 
 *gedit-2.2.2 (15 Jun 2003)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> gedit-2.2.2.ebuild :
+  Added ~hppa to KEYWORDS.
 
   15 Jun 2003; foser <foser@gentoo.org> gedit-2.2.2.ebuild :
   New version
@@ -12,6 +15,9 @@
   added ppc keyword
       
 *gedit-2.2.1 (16 Mar 2003)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> gedit-2.2.1.ebuild .
+  Added hppa to KEYWORDS.
 
   22 Apr 2003; Graham Forest <vladimir@gentoo.org> gedit-2.2.0.1.ebuild,
   gedit-2.2.1.ebuild:
