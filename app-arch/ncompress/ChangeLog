@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ncompress
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.9 2003/05/19 00:43:19 taviso Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.10 2004/03/05 18:08:54 iggy Exp $
+
+  02 Mar 2004; Brian Jackson <iggy@gentoo.org> ncompress-4.2.4.ebuild:
+  adding initial s390 support
 
   18 May 2003; Tavis Ormandy <taviso@gentoo.org> ncompress-4.2.4.ebuild:
   removing hardcoded compiler.
