@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/toshutils
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toshiba-utils/ChangeLog,v 1.1 2002/02/08 22:59:25 woodchip Exp $
+
+*toshutils-2.0.1 (8 Feb 2002)
+
+  8 Feb 2002; Donny Davies :
+
+  Checkin new package, first version.  Created a patch to ignore the
+  X programs if you dont USE=X.
+
