@@ -1,0 +1,11 @@
+# ChangeLog for app-text/dvibook
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvibook/ChangeLog,v 1.1 2004/09/02 05:22:19 usata Exp $
+
+*dvibook-20001129 (02 Sep 2004)
+
+  02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/dvibook-20001129.patch, +dvibook-20001129.ebuild:
+  Initial import. Ebuild submitted by Ulrich Mueller <ulm@kph.uni-mainz.de>,
+  closing bug #56468.
+
