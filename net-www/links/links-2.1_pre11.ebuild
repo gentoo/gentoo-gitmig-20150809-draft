@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre11.ebuild,v 1.3 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre11.ebuild,v 1.4 2003/09/09 09:35:05 seemant Exp $
 
-IUSE="ssl java png X gpm tiff fbcon svga jpeg"
+IUSE="ssl javascript png X gpm tiff fbcon svga jpeg"
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -22,13 +22,14 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	gpm? ( sys-libs/gpm )
-	java? ( >=sys-devel/flex-2.5.4a )
+	javascript? ( >=sys-devel/flex-2.5.4a )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	svga? ( >=media-libs/svgalib-1.4.3 >=media-libs/libpng-1.2.1 )
 	X? ( virtual/x11 >=media-libs/libpng-1.2.1 )
-	fbcon? ( >=media-libs/libpng-1.2.1 )"
+	directfb? ( dev-libs/DirectFB )
+	fbcon? ( >=media-libs/libpng-1.2.1 sys-libs/gpm )"
 
 PROVIDE="virtual/textbrowser"
 
@@ -61,11 +62,15 @@ src_compile (){
 		&& myconf="${myconf} --enable-graphics --with-fb" \
 		|| myconf="${myconf} --without-fb"
 
+	use directfb \
+		&& myconf="${myconf} --enable-graphics --with-directfb" \
+		|| myconf="${myconf} --without-directfb"
+
 	use ssl \
-		&& myconf="${myconf} --with-ssl" \
+		&& myconf="${myconf} --enable-graphics --with-ssl" \
 		|| myconf="${myconf} --without-ssl"
 
-	use java \
+	use javascript \
 		&& myconf="${myconf} --enable-javascript" \
 		|| myconf="${myconf} --disable-javascript"
 
@@ -75,7 +80,7 @@ src_compile (){
 	# 'sys-libs/gpm' is compiled on your system, you'll compile links
 	# with gpm support ...
 
-	econf ${myconf}
+	econf ${myconf} || die "configure failed"
 	emake || die "make failed"
 }
 

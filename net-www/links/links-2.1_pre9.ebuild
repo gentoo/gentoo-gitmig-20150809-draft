@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre9.ebuild,v 1.5 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre9.ebuild,v 1.6 2003/09/09 09:35:05 seemant Exp $
 
 IUSE="ssl java png X gpm tiff fbcon svga jpeg"
 
@@ -28,7 +28,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	svga? ( >=media-libs/svgalib-1.4.3 >=media-libs/libpng-1.2.1 )
 	X? ( virtual/x11 >=media-libs/libpng-1.2.1 )
-	fbcon? ( >=media-libs/libpng-1.2.1 )"
+	fbcon? ( >=media-libs/libpng-1.2.1 sys-libs/gpm )"
 
 PROVIDE="virtual/textbrowser"
 
