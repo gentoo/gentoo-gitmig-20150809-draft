@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <owen@gentoo.org> (30 Jun 2002 )
+# New ebuild for CCMSN. Masked For Testing.
+=net-im/ccmsn-0.3
+
 #<george@gentoo.org> ( 28 Jun 2002 )
 #I have difficulty fetching sources at some locations 
 #while ebuild submitter can do this fine
