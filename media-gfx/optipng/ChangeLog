@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.4 2004/03/13 15:53:16 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.5 2004/03/27 17:13:11 taviso Exp $
+
+  27 Mar 2004; Tavis Ormandy <taviso@gentoo.org> optipng-0.4.3-r1.ebuild:
+  stable
 
 *optipng-0.4.3-r1 (13 Mar 2004)
 
