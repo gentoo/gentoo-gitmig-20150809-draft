@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/hx
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/ChangeLog,v 1.2 2004/08/29 19:35:07 kang Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/ChangeLog,v 1.3 2005/03/13 13:03:35 kang Exp $
+
+*hx-0.4.10-r1 (13 Mar 2005)
+
+  13 Mar 2005; Guillaume Destuynder <kang@gentoo.org> +hx-0.4.10-r1.ebuild,
+  -hx-0.4.10.ebuild:
+  Removed ipv6 support option as its half broken upstream and causes all sort of
+  problems. Fixed libtoolization.
 
   29 Aug 2004; Guillaume Destuynder <kang@gentoo.org> hx-0.4.10.ebuild:
   Marked stable on x86 and ppc
