@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.50 2004/08/06 04:07:39 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.51 2004/08/06 14:31:44 gustavoz Exp $
+
+  06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> icewm-1.2.14.ebuild:
+  Stable on sparc
 
 *icewm-1.2.15_pre4 (05 Aug 2004)
 
