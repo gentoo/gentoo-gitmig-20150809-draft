@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/motif-config
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/ChangeLog,v 1.1 2005/02/14 19:04:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/ChangeLog,v 1.2 2005/02/16 14:02:24 lanius Exp $
+
+  16 Feb 2005; Heinrich Wendel <lanius@gentoo.org> +files/Mwm.defaults,
+  +files/bindings.tbz2, +files/bitmaps.tbz2, files/motif-config-0.1,
+  +files/system.mwmrc, motif-config-0.1.ebuild:
+  add default config files
 
 *motif-config-0.1 (14 Feb 2005)
 

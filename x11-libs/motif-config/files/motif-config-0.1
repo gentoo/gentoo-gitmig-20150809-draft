@@ -15,10 +15,10 @@ source /etc/make.profile/make.defaults || {
 umask 022
 
 # functions.sh returns a wrong libdir on multilib architectures
-get_libdir() {
-	libdirvar="LIBDIR_${DEFAULT_ABI}"
-	echo ${!libdirvar}
-}
+#get_libdir() {
+#	libdirvar="LIBDIR_${DEFAULT_ABI}"
+#	echo ${!libdirvar}
+#}
 
 PROFILE_PATH=/usr/$(get_libdir)/motif
 CONFIG_FILE=${PROFILE_PATH}/current
