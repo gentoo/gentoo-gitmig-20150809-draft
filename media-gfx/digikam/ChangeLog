@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.13 2004/08/05 16:09:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.14 2004/10/18 20:59:57 carlo Exp $
+
+*digikam-0.7_beta1 (18 Oct 2004)
+
+  18 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +digikam-0.7_beta1.ebuild:
+  version bump
 
   05 Aug 2004; Carsten Lohrke <carlo@gentoo.org> digikam-0.6.2.ebuild:
   stable on x86
