@@ -1,6 +1,16 @@
-MD5 899fd7b8dcf6d72d985d0febc72d1c3d ChangeLog 1262
-MD5 95f9a928170b3cbaa3d82dae1c33f79a sjeng-11.2.ebuild 626
-MD5 2607fd0be32fd25290f6de39293fc857 sjeng-11.2-r1.ebuild 674
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eb8fc8db9804f81fa0a6c79547e2378c sjeng-11.2-r1.ebuild 680
+MD5 003fefb0ce2d6edd257f5406d8e3e409 sjeng-11.2.ebuild 627
+MD5 85f8705917e3f025a852e45bd687675e ChangeLog 1376
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 642c55324abefa7826ee7985ceb5d3ec files/digest-sjeng-11.2 67
 MD5 642c55324abefa7826ee7985ceb5d3ec files/digest-sjeng-11.2-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCL1NU06ebR+OMO78RArL1AJ992q10rYlgKJLc05+PwNX26Ep1HwCglkIp
+RNVkGjFvE4ggTBJH5adc9zc=
+=yWOU
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for games-board/sjeng
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/sjeng/ChangeLog,v 1.6 2004/12/28 23:56:50 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/sjeng/ChangeLog,v 1.7 2005/03/09 19:49:26 luckyduck Exp $
+
+  09 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> sjeng-11.2-r1.ebuild:
+  added ~amd64 KEYWORD, fixes #72704
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
