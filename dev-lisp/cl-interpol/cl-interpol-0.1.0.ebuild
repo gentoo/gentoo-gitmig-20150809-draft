@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-interpol/cl-interpol-0.1.0.ebuild,v 1.1 2003/10/23 18:22:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-interpol/cl-interpol-0.1.0.ebuild,v 1.2 2003/10/26 17:26:16 mkennedy Exp $
 
 inherit common-lisp
 
-DESCRIPTION="Common Lisp package for MD5 Message Digests"
-HOMEPAGE="http://www.pmsf.de/resources/lisp/MD5.html
-	http://packages.debian.org/unstable/devel/cl-md5.html"
+DESCRIPTION="CL-INTERPOL is a library for Common Lisp which modifies the reader so that you can have interpolation within strings similar to Perl or Unix Shell scripts."
+HOMEPAGE="http://weitz.de/cl-interpol/
+	http://www.cliki.net/cl-interpol"
 SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz"
 LICENSE="BSD"
 SLOT="0"
