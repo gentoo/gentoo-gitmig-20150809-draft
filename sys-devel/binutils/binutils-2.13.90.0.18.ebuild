@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18.ebuild,v 1.8 2003/02/22 14:47:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18.ebuild,v 1.9 2003/02/24 02:10:49 azarah Exp $
 
-IUSE="nls bootstrap static build"
+IUSE="nls bootstrap build"
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -20,7 +20,7 @@ HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
 LICENSE="GPL-2|LGPL-2"
-KEYWORDS="~x86 ppc alpha ~sparc ~mips hppa arm"
+KEYWORDS="x86 ppc alpha ~sparc ~mips hppa arm"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
@@ -76,16 +76,8 @@ src_compile() {
 
 	make configure-bfd || die
 	make headers -C bfd || die
-		
-	if [ "`use static`" ]
-	then
-		emake tooldir="${ROOT}/usr/bin" \
-			-e LDFLAGS="-all-static" \
-			all || die
-	else
-		emake tooldir="${ROOT}/usr/bin" \
-			all || die
-	fi
+	emake tooldir="${ROOT}/usr/bin" \
+		all || die
 
 	if [ -z "`use build`" ]
 	then
