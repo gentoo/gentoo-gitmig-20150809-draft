@@ -1,4 +1,4 @@
-MD5 9702eccbd0dfe6895157e36c822d8ffd ChangeLog 13082
+MD5 6063dac8e70bf8afce548db499b63eb1 ChangeLog 13081
 MD5 39c137509f3ea2ab526bb092b10a9c54 binutils-2.11.92.0.12.3-r2.ebuild 3055
 MD5 011c5a33d84072e1af09ccf89cba6d61 binutils-2.11.92.0.7.ebuild 2357
 MD5 368c85b995c3ab74a32a09e573aba1f9 binutils-2.12.90.0.15.ebuild 3512
@@ -12,7 +12,7 @@ MD5 680471350a3b85f5c0616c3f626f7c13 binutils-2.14.90.0.2.ebuild 4845
 MD5 8e8914eebb88c363a128964a7941d66c binutils-2.14.90.0.4.1-r1.ebuild 5806
 MD5 8303a09e50b83d864db0735fd00cf7bd binutils-2.14.90.0.4.1.ebuild 4851
 MD5 e7df35e2bb31fb0268d2150da19b27b9 binutils-2.14.90.0.4.ebuild 4842
-MD5 c51a6dba6cb0ea4ec3fdd82dd417eaa3 binutils-2.14.90.0.5.ebuild 5128
+MD5 5690182afbd4c3cc29eff36bf253bdad binutils-2.14.90.0.5.ebuild 5127
 MD5 fe5fb935b171a472f5eb1a8bca63c136 files/binutils-2.12.90.0.14-glibc21.patch 7936
 MD5 f453b3f208b17cd18380bc3653936487 files/binutils-2.12.90.0.14-x86_64-libpic.patch 1184
 MD5 db3f89b51f6961b0cf92bdddf8127ea7 files/digest-binutils-2.11.92.0.12.3-r2 161
