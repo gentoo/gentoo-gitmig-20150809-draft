@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/biopython
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.3 2004/12/29 21:27:31 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.4 2005/02/20 01:16:50 ribosome Exp $
+
+*biopython-1.40b (19 Feb 2005)
+
+  19 Feb 2005; Olivier Fisette <ribosome@gentoo.org>
+  +biopython-1.40b.ebuild:
+  New version. Should fix bug #82498.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
