@@ -1,0 +1,9 @@
+# ChangeLog for app-crypt/rotix
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/ChangeLog,v 1.1 2002/12/20 23:37:01 avenj Exp $
+
+*rotix-0.83.ebuild (20 Dec 2002)
+
+   20 Dec 2002; Jon Portnoy <avenj@gentoo.org> rotix-0.83.ebuild :
+
+   Initial import into the tree.
