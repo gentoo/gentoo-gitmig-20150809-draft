@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10.ebuild,v 1.1 2001/09/28 00:01:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10.ebuild,v 1.2 2001/09/28 00:04:44 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -142,7 +142,7 @@ src_compile() {
 			cd ${KS2}/LVM/${LVMV}
 	
 			# This is needed for linux-extras
-			[ -f "Makefile" ]
+			if [ -f "Makefile" ]
 			then
 				make clean || die
 			fi
