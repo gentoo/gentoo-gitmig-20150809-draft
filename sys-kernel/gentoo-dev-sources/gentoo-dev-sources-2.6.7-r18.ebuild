@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.7-r18.ebuild,v 1.1 2004/12/01 23:59:50 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.7-r18.ebuild,v 1.2 2004/12/02 22:29:15 eradicator Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -25,6 +25,7 @@ DEPEND="${DEPEND} >=dev-libs/ucl-1"
 
 IUSE="ultra1"
 use ultra1 || UNIPATCH_EXCLUDE="1399_sparc-U1-hme-lockup.patch"
+use sparc && UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 4905_speakup-20040618.patch"
 
 pkg_postinst() {
 	postinst_sources
