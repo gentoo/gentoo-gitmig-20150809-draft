@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.10 2002/05/22 19:34:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.11 2002/05/23 21:02:29 azarah Exp $
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
@@ -13,9 +13,17 @@ EXPORT_FUNCTIONS src_compile src_install src_test
 
 newdepend ">=sys-devel/perl-5"
 
+SRC_PREP="no"
+
+base_src_prep() {
+
+	SRC_PREP="yes"
+	perl Makefile.PL ${myconf}
+}
+
 base_src_compile() {
 
-	perl Makefile.PL ${myconf}
+	[ "${SRC_PREP}" != "yes" ] && base_src_prep
 	make ${mymake} || die "compilation failed"
 }
 
