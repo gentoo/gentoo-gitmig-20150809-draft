@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r3.ebuild,v 1.1 2002/07/26 12:48:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r3.ebuild,v 1.2 2002/08/30 10:36:04 danarmak Exp $
 
 inherit libtool
 
@@ -18,7 +18,9 @@ RDEPEND="media-libs/jpeg
 	media-libs/libpng
 	=x11-libs/gtk+-1.2*
 	X? ( x11-base/xfree )
-	sdl? ( media-libs/libsdl )"
+	sdl? ( media-libs/libsdl )
+	media-libs/libdv
+	arts? ( kde-base/arts )"
 
 DEPEND="${RDEPEND}
 	media-libs/libmovtar
@@ -26,7 +28,9 @@ DEPEND="${RDEPEND}
 	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 )
 	mmx? ( dev-lang/nasm )
 	3dnow? ( dev-lang/nasm )
-	sse? ( dev-lang/nasm )"
+	sse? ( dev-lang/nasm )
+	media-libs/libdv
+	arts? ( kde-base/arts )"
 
 if [ `use mmx` ] ; then
 	RDEPEND="$RDEPEND media-libs/jpeg-mmx"

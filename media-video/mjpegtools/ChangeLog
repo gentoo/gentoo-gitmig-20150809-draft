@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mjpegtools
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.7 2002/07/26 12:48:15 aliz Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.8 2002/08/30 10:36:04 danarmak Exp $
+
+  30 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Add missing deps on libdv and arts (tha latter one is optional); see
+  bug #7081.
 
 *mjpegtools-1.6.0-r3 (26 Jul 2002)
 
