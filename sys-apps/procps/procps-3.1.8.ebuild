@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.8.ebuild,v 1.3 2003/04/17 16:54:42 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.8.ebuild,v 1.4 2003/04/26 16:45:48 joker Exp $
 
 IUSE="selinux"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://procps.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa arm ~mips"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa arm ~mips"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 DEPEND="${RDEPEND}
