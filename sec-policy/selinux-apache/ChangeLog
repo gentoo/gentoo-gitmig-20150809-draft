@@ -1,6 +1,6 @@
 # ChangeLog for sec-policy/selinux-apache
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.3 2004/04/27 01:33:58 pebenito Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.4 2004/06/28 00:10:36 pebenito Exp $
 
 *selinux-apache-20040426 (26 Apr 2004)
 

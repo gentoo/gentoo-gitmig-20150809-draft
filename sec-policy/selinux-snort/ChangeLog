@@ -1,6 +1,6 @@
 # ChangeLog for sec-policy/selinux-snort
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snort/ChangeLog,v 1.2 2004/04/12 21:06:48 pebenito Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snort/ChangeLog,v 1.3 2004/06/28 00:10:37 pebenito Exp $
 
 *selinux-snort-20040412 (12 Apr 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postfix/selinux-postfix-20040427.ebuild,v 1.1 2004/04/28 03:58:47 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postfix/selinux-postfix-20040427.ebuild,v 1.2 2004/06/28 00:10:37 pebenito Exp $
 
 TEFILES="postfix.te"
 FCFILES="postfix.fc"
