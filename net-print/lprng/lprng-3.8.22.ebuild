@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.22.ebuild,v 1.1 2003/09/26 19:23:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.22.ebuild,v 1.2 2003/10/07 15:20:55 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -69,4 +69,8 @@ src_install() {
 	doins ${FILESDIR}/printcap lpd.conf lpd.perms
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/lprng-init lprng
+}
+
+pkg_postinst() {
+	einfo "If printing does not work, try 'checkpc'/'checkpc -f'"
 }
