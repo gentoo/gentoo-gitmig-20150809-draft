@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.8.192.ebuild,v 1.1 2002/07/27 02:43:17 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.8.192.ebuild,v 1.2 2002/07/27 03:42:30 raker Exp $
 
 inherit gnome2
 
@@ -14,11 +14,12 @@ LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86"
 
 DEPEND=">=dev-libs/glib-2.0.4
-	>=x11-libs/gtk+-2.0.5
 	>=dev-libs/libxml2-2.4.23
-	>=gnome-base/ORBit-0.5.16
 	>=gnome-base/oaf-0.6.8
 	>=gnome-base/gconf-1.2.0
+	>=dev-libs/libxslt-1.0.19
+	>=dev-libs/popt-1.6.3
+	>=sys-libs/zlib-1.1.4
 	mysql? ( >=dev-db/mysql-3.23.51 )
 	postgres? ( >=dev-db/postgresql-7.2.1 )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
@@ -83,14 +84,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING.* ChangeLog NEWS README
 }
-
-pkg_postinst() {
-	echo ">>> Updating Scrollkeeper database..."
-	scrollkeeper-update >/dev/null 2>&1
-}
-
-pkg_postrm() {
-	echo ">>> Updating Scrollkeeper database..."
-	scrollkeeper-update >/dev/null 2>&1
-}
-
