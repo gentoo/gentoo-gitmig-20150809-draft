@@ -92,6 +92,7 @@ media-libs/gst-plugins-cdparanoia
 media-plugins/gst-plugins-esd
 media-plugins/gst-plugins-xvideo
 >=media-sound/sound-juicer-0.5.2
+>=media-sound/rhythmbox-0.5.3
 
 # <spider@gentoo.org> (04 Sep 2003)
 # <spider@gentoo.org> (08 Sep 2003)
