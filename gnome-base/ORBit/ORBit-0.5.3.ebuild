@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.3.ebuild,v 1.3 2000/09/15 20:08:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.3.ebuild,v 1.4 2000/10/14 11:38:33 achim Exp $
 
-P=ORBit-0.5.3
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-performance, lightweight CORBA ORB aiming for CORBA 2.2 compliance"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/ORBit/"${A}
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/"${A}
 HOMEPAGE="http://www.labs.redhat.com/orbit/"
 
 src_compile() {                           
