@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-jack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.13 2004/10/14 10:12:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.14 2004/10/19 23:04:19 eradicator Exp $
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-jack-0.10.ebuild:
+  Using xmms-plugins.eclass
 
 *xmms-jack-0.10 (14 Oct 2004)
 

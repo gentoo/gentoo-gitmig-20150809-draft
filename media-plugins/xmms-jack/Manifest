@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 dc6732668191f9d20db1b584102d3747 ChangeLog 1829
+MD5 479dea253a597a93003cf471e54fa15a ChangeLog 1940
 MD5 f706034859ccc5d8f430f25964d51692 xmms-jack-0.9.ebuild 644
-MD5 a712565d1776a529a6ff44bccf80b26b xmms-jack-0.10.ebuild 650
+MD5 d11b3d6b9696e87893a3c0db8d01ee76 xmms-jack-0.10.ebuild 623
 MD5 16ba3899dbe8858a6ac882b2a288c8c3 files/digest-xmms-jack-0.9 65
 MD5 dea9949d72527c2f6934d30116d23912 files/digest-xmms-jack-0.10 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBblGuArHZZzCEUG0RAgQ/AJ9BEAIBiN/XmBky9uKx2cxiWs5TkwCeJ3iG
-zrMZ+wXAFlFRmvliEfw6WWE=
-=1i1g
+iD8DBQFBdZ1+ArHZZzCEUG0RAgGBAJ9yaSoFGaRBmeG0i33TFBIQjpjryACeIres
+2fWg2F7xCXwnlSk9kR/OT7Y=
+=VSb3
 -----END PGP SIGNATURE-----
