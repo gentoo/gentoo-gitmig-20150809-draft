@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3.5-r2.ebuild,v 1.6 2005/01/21 20:50:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3.5-r2.ebuild,v 1.7 2005/01/29 14:48:52 motaboy Exp $
 
-inherit kde eutils
+inherit kde kde-functions eutils
 
 # TODO : mysql support
 # other refs from configure: jasper, qt-docs, doxygen, libxml2, libxslt, freetype, fontconfig, qt being built with sql support (???)
@@ -16,8 +16,14 @@ KEYWORDS="x86 amd64 ppc sparc alpha ppc64"
 
 IUSE=""
 SLOT="0"
+# add blockers on split packages derived from this one
+for x in $(get-child-packages ${CATEGORY}/${PN}); do
+	DEPEND="${DEPEND} !${x}"
+	RDEPEND="${RDEPEND} !${x}"
+done
 
-DEPEND=">=dev-lang/python-2.2.1
+DEPEND="${DEPEND}
+	>=dev-lang/python-2.2.1
 	>=media-libs/libart_lgpl-2.3.9
 	>=media-gfx/imagemagick-5.4.5
 	>=app-text/wv2-0.1.8
