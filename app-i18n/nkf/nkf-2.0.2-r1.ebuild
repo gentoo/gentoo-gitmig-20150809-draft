@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.2-r1.ebuild,v 1.4 2004/01/04 16:56:11 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.2-r1.ebuild,v 1.5 2004/04/16 23:10:01 nakano Exp $
 
 use perl && inherit perl-module
 
@@ -10,7 +10,6 @@ SRC_URI="http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/${MY_P}.tar.gz"
 HOMEPAGE="http://sourceforge.jp/projects/nkf/"
 DEPEND="virtual/glibc
 	$DEPEND"
-RDEPEND="$DEPEND"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE="perl cjk"
 LICENSE="public-domain"
