@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 54e1df0fb3a812264ea2fb9a04ebced2 qimhangul-0.0.1.ebuild 1278
+MD5 c524b74d5e43a6ae2e008e0886f5e4c6 qimhangul-0.0.1.ebuild 1271
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 0dd9f90fe94ae9181dc381acb97cc78d ChangeLog 378
 MD5 3733fe5702155ef1ce0988b30a13e04b files/digest-qimhangul-0.0.1 67
@@ -9,7 +9,7 @@ MD5 48935f4a1a76f440fb18dc3dda89b8ff files/qimhangul-0.0.1-thread-gentoo.diff 28
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBY5mSVWNWqTUmv+0RAvXyAKC0RkubysjVG0CHovkt6InPE+6L/QCgn0pg
-CqiXvMGJWPP/NeJoKLZWZ+g=
-=bM8f
+iD8DBQFBY5yAVWNWqTUmv+0RAkQ/AJwMIcUutmOLd59IkJfFJd7/HpjHXgCfbuH6
+Qwo9UTDe0HDy6CfrWcRmOdk=
+=6A4T
 -----END PGP SIGNATURE-----
