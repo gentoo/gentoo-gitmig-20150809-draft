@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.13 2004/02/21 23:32:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.14 2004/03/09 23:42:32 agriffis Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -38,7 +38,7 @@ SRC_URI="mirror://gentoo/${PF}-gentoo-${PATCHVER}.tar.bz2
 
 SLOT="${KV}"
 LICENSE="X11"
-KEYWORDS="x86 ~alpha ~ia64 ~ppc"
+KEYWORDS="x86 alpha ia64 ~ppc"
 
 # Need new portage for USE_EXPAND
 DEPEND=">=x11-base/xfree-${PV}
