@@ -1,0 +1,12 @@
+diff -urN netkit-ftp-0.17.old/ftp/ftp.c netkit-ftp-0.17.new/ftp/ftp.c
+--- netkit-ftp-0.17.old/ftp/ftp.c	2003-03-18 18:33:49.000000000 -0300
++++ netkit-ftp-0.17.new/ftp/ftp.c	2003-03-18 18:37:17.000000000 -0300
+@@ -1811,7 +1811,7 @@
+ 		 */
+ 		if (ssl_secure_flag)
+ 		    return ERROR;
+-	    } else if (n == CONTINUE ) {
++	    } else if (n == CONTINUE || n == COMPLETE) {
+ 		/* do SSL */
+ 		ssl_con=(SSL *)SSL_new(ssl_ctx);
+ 
