@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.5-r1.ebuild,v 1.1 2003/09/16 07:54:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.5-r1.ebuild,v 1.2 2003/09/25 22:49:55 genone Exp $
 
 IUSE="nls gnome gtk2 xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -42,11 +42,24 @@ DEPEND=">=sys-apps/sed-4
 
 PROVIDE="virtual/sylpheed"
 
+pkg_setup() {
+	if use gtk2; then
+		ewarn "Sylpheed-claws gtk2 support is experimental and breaks some"
+		ewarn "plugins and USE flags. The following things will be disabled"
+		ewarn "if sylpheed-claws is emerged with USE=\"gtk2\":"
+		ewarn "    aspell support, ghostview plugin, trayicon plugin"
+		sleep 2
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 
 	# Patch for GTK+-2
-	use gtk2 && epatch ${WORKDIR}/${MY_P}-gtk2-${PATCHVER}.diff
+	if use gtk2; then
+		epatch ${WORKDIR}/${MY_P}-gtk2-${PATCHVER}.diff
+		sed -i "s/GTK_WINDOW_DIALOG/GTK_WINDOW_POPUP/" "${S}/src/ssl_manager.c"
+	fi
 
 	# Change package name to sylpheed-claws ...
 	for i in `find ${S}/ -name 'configure*'`
@@ -70,7 +83,7 @@ src_compile() {
 	    && myconf="${myconf} --enable-imlib" \
 	    || myconf="${myconf} --disable-imlib"
 
-	use spell \
+	[ use spell -a ! use gtk2 ] \
 	    && myconf="${myconf} --enable-aspell" \
 	    || myconf="${myconf} --disable-aspell"
 
@@ -85,6 +98,8 @@ src_compile() {
 	use pda && myconf="${myconf} --enable-jpilot"
 
 	use nls || myconf="${myconf} --disable-nls"
+
+	use gtk2 && myconf="${myconf} --disable-trayicon-plugin"
 
 	#use gtkhtml \
 	#	&& myconf="${myconf} --enable-dillo-viewer-plugin" \
@@ -109,8 +124,7 @@ src_compile() {
 	emake || die
 
 	# build the ghostscript-viewer plugin
-	if use pdflib
-	then
+	if [ `use pdflib` -a -z `use gtk2` ]; then
 		cd ${S2}
 		econf \
 			--with-sylpheed-dir=${S} || die
@@ -146,8 +160,7 @@ src_install() {
 	doexe launch_firebird tb2sylpheed update-po uudec
 
 	# install the ghostscipt-viewer plugin
-	if use pdflib
-	then
+	if [ `use pdflib` -a -z `use gtk2` ]; then
 		cd ${S2}
 		make plugindir=${D}/usr/lib/${PN}/plugins install || die
 		docinto ${MY_GS}
