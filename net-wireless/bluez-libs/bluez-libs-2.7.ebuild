@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/bluez-libs-2.7.ebuild,v 1.3 2004/06/27 02:51:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/bluez-libs-2.7.ebuild,v 1.4 2004/08/21 04:26:37 puggy Exp $
 
 DESCRIPTION="Bluetooth Userspace Libraries"
 HOMEPAGE="http://bluez.sourceforge.net/"
 SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ppc ~amd64"
 IUSE=""
 DEPEND="!net-wireless/bluez-sdp"
 
