@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.10.11.ebuild,v 1.1 2004/04/22 06:18:32 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.10.11.ebuild,v 1.2 2004/04/28 17:22:30 eradicator Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ LICENSE="LGPL-2"
 SLOT="1"
 KEYWORDS="~x86 ~sparc ~hppa ~alpha ~ia64 ~amd64 ~ppc"
 
-IUSE="${IUSE}"
+IUSE=""
 
 RDEPEND=">=gnome-base/libbonobo-1.107
 	>=gnome-base/ORBit2-2.3.100
