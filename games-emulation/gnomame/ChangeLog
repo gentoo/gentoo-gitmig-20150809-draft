@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gnomame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomame/ChangeLog,v 1.5 2004/06/24 22:27:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomame/ChangeLog,v 1.6 2004/08/04 19:50:12 slarti Exp $
+
+  04 Aug 2004; Tom Martin <slarti@gentoo.org> gnomame-1.00_beta6.ebuild:
+  Marked ~amd64, resolving bug 59266.
 
   06 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   gnomame-1.00_beta6.ebuild:
