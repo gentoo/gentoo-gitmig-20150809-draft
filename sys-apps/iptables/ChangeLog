@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.22 2003/01/10 17:58:25 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.23 2003/02/07 06:41:14 gerk Exp $
 
 *iptables-1.2.7a-r3 (09 Jan 2003)
   
+  06 Feb 2003; Mark Guertin <gerk@gentoo.org> iptables-1.2.7a-r3.ebuild :
+  Added ppc keyword
+
   10 Jan 2003; Joshua Brindle <method@gentoo.org> iptables-1.2.7a-r3.ebuild :
   unmasked for x86, sparc, alpha re: bug #13466
   fixed sed string re: bug #13644
