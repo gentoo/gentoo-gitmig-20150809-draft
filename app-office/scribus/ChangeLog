@@ -1,6 +1,14 @@
 # ChangeLog for app-office/scribus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.4 2002/10/17 14:22:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.5 2002/10/27 19:17:40 hanno Exp $
+
+*scribus-0.8 (27 Oct 2002)
+
+  27 Oct 2002; Hanno Boeck <hanno@gentoo.org> scribus-0.8.ebuild :
+  Version updated.
+  Added two patches by the author and a compile fix for the CXXFLAGS.
+
+*scribus-0.7.4-r1 (09 Jun 2002)
 
   17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> scribus-0.7.4-r1.ebuild :
   Added IUSE.
@@ -9,8 +17,6 @@
 
   Make kde .desktop file installation routine use eclasses to find out kde's
   path instead of hardcoding it.
-
-*scribus-0.7.4-r1 (09 Jun 2002)
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
