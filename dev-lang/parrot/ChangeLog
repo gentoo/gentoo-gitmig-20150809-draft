@@ -1,0 +1,11 @@
+# ChangeLog for dev-lang/parrot
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.1 2004/12/20 14:48:38 mcummings Exp $
+
+*parrot-0.1.1 (20 Dec 2004)
+
+  20 Dec 2004; Michael Cummings <mcummings@gentoo.org> +parrot-0.1.1.ebuild:
+  Long overdue, the ebuild for parrot. Original version submitted in bug 74405
+  by Adrian Lambeck <adrian.lambeck@basicsedv.de>, cleaned up for a better
+  install.
+
