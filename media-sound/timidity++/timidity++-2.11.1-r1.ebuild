@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.11.1-r1.ebuild,v 1.1 2002/01/15 01:27:50 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.11.1-r1.ebuild,v 1.2 2002/03/28 23:11:12 seemant Exp $
 
 PN=TiMidity++-${PV}
 S=${WORKDIR}/${PN}
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/ncurses-5.0
 	esd? ( >=media-sound/esound-0.2.22 )
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
 	slang? ( >=sys-libs/slang-1.4 )
-	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
+	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
 src_compile() {
 	local myconf
@@ -45,7 +45,7 @@ src_compile() {
 		myconf="${myconf} --with-default-output=alsa"
 	fi
 	[ "`use esd`" ] && audios="${audios},esd"
-	[ "`use vorbis`" ] && audios="${audios},vorbis"
+	[ "`use oggvorbis`" ] && audios="${audios},vorbis"
 	[ "`use nas`" ] && audios="${audios},nas"
 		
 	./configure --prefix=/usr --host=${CHOST} --mandir=/usr/share/man\
