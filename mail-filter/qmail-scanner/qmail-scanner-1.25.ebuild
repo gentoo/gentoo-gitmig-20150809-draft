@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25.ebuild,v 1.2 2005/03/22 20:25:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25.ebuild,v 1.3 2005/04/05 08:25:10 st_lim Exp $
 
 inherit fixheadtails gcc eutils
 
@@ -58,6 +58,9 @@ src_unpack() {
 
 src_compile () {
 	local myconf
+
+	addpredict /var/log/kav/kavscan.log
+
 	use spamassassin && myconf="--virus-to-delete yes --sa-quarantine 2.1 --sa-delete 4.2 --sa-reject no --sa-subject SPAM: --sa-delta 0.5 --sa-alt yes"
 
 	PATH=${PATH}:/opt/f-prot:/opt/vlnx ./configure \
