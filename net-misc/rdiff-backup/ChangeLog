@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rdiff-backup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.16 2003/09/29 18:19:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.17 2003/10/05 11:09:14 mholzer Exp $
+
+*rdiff-backup-0.12.5-r1 (06 Oct 2003)
+
+  06 Oct 2003; Martin Holzer <mholzer@gentoo.org> rdiff-backup-0.12.4.ebuild,
+  rdiff-backup-0.12.5-r1.ebuild, rdiff-backup-0.12.5.ebuild,
+  rdiff-backup-0.8.0.ebuild, files/rdiff-backup-0.12.5-unreadable-files.patch:
+  Added patch. Closes #30307
 
 *rdiff-backup-0.12.5 (29 Sep 2003)
 
