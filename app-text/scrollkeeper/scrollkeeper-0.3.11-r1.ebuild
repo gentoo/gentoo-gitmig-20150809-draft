@@ -1,19 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.11-r1.ebuild,v 1.1 2002/09/04 10:03:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.11-r1.ebuild,v 1.2 2002/09/15 07:05:00 seemant Exp $
 
 inherit libtool
-KEYWORDS="x86 ppc sparc sparc64"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scrollkeeper"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-http://telia.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz
-http://unc.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz
-http://belnet.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://scrollkeeper.sourceforge.net"
+
 SLOT="0"
 LICENSE="FDL-1.1 LGPL-2.1"
+KEYWORDS="x86 ppc sparc sparc64"
 
 RDEPEND=">=dev-libs/libxml2-2.4.19
 	>=dev-libs/libxslt-1.0.14
@@ -46,12 +44,9 @@ src_compile() {
 	# hack around some to make sure we find the libxml2 includes. odd bug.
 	#CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml"
 				
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
+	econf \
 		--localstatedir=/var \
 		${myconf} || die
-
 	emake || die
 }
 
@@ -97,4 +92,3 @@ pkg_postrm() {
 		einfo ">>> you might want to clean up /var/lib/scrollkeeper."
 	fi
 }
-

@@ -1,8 +1,14 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.15 2002/09/04 10:03:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.16 2002/09/15 07:05:00 seemant Exp $
 
 *scrollkeeper-0.3.11-r1 (04 Sep 2002)
+
+  15 Sep 2002; Seemant Kulleen <seemant@gentoo.org>
+  scrollkeeper-0.3.11-r1.ebuild :
+
+  man page/LFH fixes.
+
   04 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> scrollkeeper-0.3.11.ebuild-r1 files/scrollkeeper-0.3.11-gentoo.diff :
   Security update.
 
