@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.16 2003/03/23 20:36:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.17 2003/03/24 22:11:05 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -102,7 +102,7 @@ LICENSE="vim"
 apply_vim_patches() {
 	einfo "Applying various patches (bugfixes/updates)..."
 
-	local content depends files p d f
+	local p
 
 	# Remove patches specifically excluded in the ebuild;
 	# note this approach is deprecated since now the patch scanner
@@ -135,7 +135,7 @@ apply_vim_patches() {
 				printing = 1
 			}
 			printing { print }
-			{ prevline = $0 }' > ${p%.gz}
+			{ prevline = $0 }' > ${p%.gz} || die
 
 		# Apply the patch now that it's filtered
 		[ -s ${p%.gz} ] && epatch ${p%.gz}
@@ -155,7 +155,7 @@ vim_src_unpack() {
 	# Fixup a script to use awk instead of nawk
 	cd ${S}/runtime/tools
 	mv mve.awk mve.awk.old
-	( read l; echo "#!/usr/bin/awk -f"; cat ) <mve.awk.old >mve.awk
+	( read l; echo "#!/usr/bin/awk -f"; cat ) <mve.awk.old >mve.awk || die
 
 	# Another set of patch's borrowed from src rpm to fix syntax error's etc.
 	cd ${S}
@@ -167,8 +167,7 @@ vim_src_unpack() {
 src_compile() {
 	local myconf
 
-	if [ ${PN} = vim-core ]
-	then
+	if [ ${PN} = vim-core ]; then
 		myconf="--with-features=tiny \
 			--enable-gui=no \
 			--without-x \
@@ -205,14 +204,12 @@ src_compile() {
 	fi
 
 	# This should fix a sandbox violation.
-	for file in /dev/pty/s*
-	do
+	for file in /dev/pty/s*; do
 		addwrite $file
 	done
 
 
-	if [ "${PN}" = "gvim" ]
-	then
+	if [ "${PN}" = "gvim" ]; then
 		myconf="${myconf} --with-vim-name=gvim --with-x"
 		if use gtk2; then
 			myconf="${myconf} --enable-gui=gtk2 --enable-gtk2-check"
@@ -229,7 +226,6 @@ src_compile() {
 
 	econf ${myconf} || die "vim configure failed"
 
-	
 	if [ "${PN}" = "vim-core" ]
 	then
 		make tools || die "vim make failed"
@@ -248,9 +244,7 @@ src_compile() {
 }
 
 src_install() {
-
-	if [ "${PN}" = "vim-core" ]
-	then
+	if [ "${PN}" = "vim-core" ]; then
 		dodir /usr/{bin,share/{man/man1,vim}}
 		cd src
 		make \
@@ -282,8 +276,7 @@ src_install() {
 		# both vim and gvim
 		insinto /etc/vim/
 		doins ${FILESDIR}/vimrc
-	elif [ "${PN}" = "gvim" ]
-	then
+	elif [ "${PN}" = "gvim" ]; then
 		dobin src/gvim
 		dosym gvim /usr/bin/gvimdiff
 		insinto /etc/vim
@@ -296,7 +289,6 @@ src_install() {
 		ln -s vim  ${D}/usr/bin/view
 		ln -s vim  ${D}/usr/bin/rview
 	fi
-
 }
 
 pkg_postinst() {
