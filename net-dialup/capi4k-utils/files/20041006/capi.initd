@@ -1,0 +1,54 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/20041006/capi.initd,v 1.1 2004/12/23 20:57:46 mrness Exp $
+
+opts="start stop info"
+
+depend() {
+	after isapnp
+}
+
+get_modules() {
+	/usr/bin/cut 2>/dev/null -f2 -d' ' /proc/capi/controller
+}
+
+start() {
+	if [ ! -e /etc/capi.conf ] ; then
+		eerror "You're missing /etc/capi.conf (comes with a capi-driver)."
+		eerror "Emerge net-dialup/fcpci if you are having an AVM Fritz!Card PCI"
+		return 1
+	fi
+
+	ebegin "Loading CAPI"
+
+	/usr/sbin/capiinit 2>/dev/null -c /dev/null prepare
+	/sbin/modprobe -s capidrv
+	
+	if /usr/sbin/capiinit activate ; then
+		while read INFO; do einfo "  $INFO"; done < /proc/capi/controller
+	fi
+	
+	eend $?
+}
+
+stop() {
+	local DRIVERS=$(get_modules)
+
+	ebegin "Unloading CAPI"
+
+	/sbin/modprobe -sqr capidrv	
+	/usr/sbin/capiinit 2>/dev/null stop
+	for DRV in $DRIVERS; do	/sbin/modprobe -sqr $DRV; done
+	
+	eend $?
+}
+
+info() {
+	if [ -e /proc/capi/controller ]; then
+		while read INFO; do einfo "$INFO"; done < /proc/capi/controller
+	else
+		eerror "ERROR: CAPI not loaded"
+		return 1
+	fi
+}

@@ -1,6 +1,20 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.23 2004/11/27 13:25:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.24 2004/12/23 20:57:46 mrness Exp $
+
+*capi4k-utils-20041006-r4 (23 Dec 2004)
+
+  23 Dec 2004; Alin Nastac <mrness@gentoo.org> -files/capi-init-20040810,
+  -files/capi-init-20041006, -files/capi4k-utils-2004-10-06-fPIC.patch,
+  -files/capi4k-utils-2004-10-06.patch, files/20041006/README.gentoo,
+  +files/20041006/capi.blacklist, +files/20041006/capi.confd,
+  +files/20041006/capi.hotplug, +files/20041006/capi.initd,
+  +files/20041006/capi.usermap, -capi4k-utils-20040810.ebuild,
+  -capi4k-utils-20041006-r2.ebuild, +capi4k-utils-20041006-r4.ebuild,
+  -capi4k-utils-20041006.ebuild:
+  Add hotplug support, thanks to Stefan Briesenick <sbriesen@gmx.de> (#75117).
+  The new standard path for firmware files is /lib/firmware, which now is the
+  first search path along with other usual paths. Cleaned up old ebuilds.
 
 *capi4k-utils-20041006-r3 (27 Nov 2004)
 

@@ -1,27 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r2.ebuild,v 1.8 2004/11/27 13:25:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r4.ebuild,v 1.1 2004/12/23 20:57:46 mrness Exp $
 
 inherit eutils
 
 YEAR_PV=${PV:0:4}
 MON_PV=${PV:4:2}
 DAY_PV=${PV:6:2}
-
-MY_FILES=${FILESDIR}/${PV}
 MY_P=${PN}-${YEAR_PV}-${MON_PV}-${DAY_PV}
-PPPVERSIONS="2.4.2"  # versions in portage
+PPPVERSIONS="2.4.2 2.4.3"  # versions in portage
 
 DESCRIPTION="CAPI4Linux Utils"
 HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc"
-IUSE=""
-S=${WORKDIR}/${PN}
 SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/${MY_P}.tar.gz
 	ftp://ftp.in-berlin.de/pub/capi4linux/OLD/${MY_P}.tar.gz
 	mirror://gentoo/${P}-patches.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~amd64 ~ppc"
+IUSE=""
 
 DEPEND="virtual/linux-sources
 	dev-lang/perl
@@ -32,13 +30,16 @@ DEPEND="virtual/linux-sources
 	sys-devel/libtool"
 RDEPEND=""
 
+S=${WORKDIR}/${PN}
+
 src_unpack() {
 	unpack ${A} || die "failed to unpack sources"
 	cd ${S}
 	# set our config
-	cp -f ${MY_FILES}/config .config
+	cp -f ${FILESDIR}/${PV}/config .config
 	# fix the little odd bugs
-	epatch ${WORKDIR}/${PN}.diff || die "patch failed"
+	EPATCH_OPTS="-p1"
+	epatch ${WORKDIR}/${PN}.diff ${WORKDIR}/ppp-2.4.3.diff || die "${PN} patch failed"
 	# patch includes of all *.c files
 	sed -i -e "s:linux/capi.h>$:linux/compiler.h>\n#include <linux/capi.h>:g" */*.c || die "sed failed"
 	# patch all Makefile.am and Rules.make to use our CFLAGS
@@ -47,6 +48,8 @@ src_unpack() {
 	sed -i -e "s:^\(libcapi20_la_CFLAGS = \):\1-fPIC :g" capi20/Makefile.am || die "sed failed"
 	# patch pppdcapiplugin/Makefile to use only the ppp versions we want
 	sed -i -e "s:^\(PPPVERSIONS = \).*$:\1${PPPVERSIONS}:g" pppdcapiplugin/Makefile || die "sed failed"
+	# patch capiinit/capiinit.c to look also in /lib/firmware
+	sed -i -e "/\"\/usr\/share\/isdn\"/i\"/lib/firmware\"," capiinit/capiinit.c || die "sed failed"
 }
 
 src_compile() {
@@ -66,16 +69,26 @@ src_compile() {
 
 src_install() {
 	dodir /dev
-	emake DESTDIR=${D} install || die "make install failed"
+	make DESTDIR=${D} install || die "make install failed"
 
 	# install docs
 	newdoc rcapid/README README.rcapid
 	newdoc pppdcapiplugin/README README.pppdcapiplugin
-	dodoc scripts/makedev.sh ${MY_FILES}/README.gentoo
+	dodoc scripts/makedev.sh ${FILESDIR}/${PV}/README.gentoo
 	docinto pppdcapiplugin.examples; dodoc pppdcapiplugin/examples/*
 
-	# install init-script
-	newinitd ${FILESDIR}/${PV}/capi.init capi
+	# install init-script + init-config
+	dodir /etc/conf.d  # BUG: w/o newconfd failes
+	newinitd ${FILESDIR}/${PV}/capi.initd capi
+	newconfd ${FILESDIR}/${PV}/capi.confd capi
+
+	# install USB hotplug stuff
+	insinto /etc/hotplug/blacklist.d
+	newins ${FILESDIR}/${PV}/capi.blacklist capi
+	insinto /etc/hotplug/usb
+	newins ${FILESDIR}/${PV}/capi.usermap capi.usermap
+	exeinto /etc/hotplug/usb
+	newexe ${FILESDIR}/${PV}/capi.hotplug capi
 
 	# example config
 	insinto /etc
@@ -97,9 +110,9 @@ pkg_postinst() {
 	einfo ""
 	einfo "Annotation for active AVM ISDN boards (B1 ISA/PCI, ...):"
 	einfo "If you run"
-	einfo "  emerge capi4k-firmware"
-	einfo "you will probably find your board's firmware in /usr/share/isdn."
+	einfo "  emerge isdn-firmware"
+	einfo "you will probably find your board's firmware in /lib/firmware."
 	einfo ""
 	einfo "If you have another active ISDN board, you should create"
-	einfo "/usr/share/isdn and copy there your board's firmware."
+	einfo "/lib/firmware and copy there your board's firmware."
 }

@@ -1,28 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8a68cd59daa9bd143ce9987778320b62 capi4k-utils-20040810.ebuild 1760
-MD5 22354caf6445da21e5ebe8609a9e7012 capi4k-utils-20041006.ebuild 2267
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 e5cbba6a97af8564ce8d7440b54a00af ChangeLog 3788
-MD5 14934f8116c6271b1b71056bd87ff126 capi4k-utils-20041006-r2.ebuild 3181
+MD5 d9f8efa555287b50181314e6ab7caa5c ChangeLog 4565
 MD5 0cbd50a0b8f76e4a8697ba30adeb0672 capi4k-utils-20041006-r3.ebuild 3238
-MD5 befd926d2f898c15846c2f7452853ec1 files/capi-init-20040810 609
-MD5 b1de4263d145b4fb13baf0e4791e49a0 files/capi-init-20041006 617
-MD5 9bc030e6ab061e50f16efb0def04f0b6 files/capi4k-utils-2004-10-06-fPIC.patch 286
-MD5 8b4a7394c2826badb822b9575dbfbd4d files/capi4k-utils-2004-10-06.patch 2144
-MD5 daf5a35ac5aeac77c4ac69274ed15395 files/digest-capi4k-utils-20040810 75
-MD5 f2524d2cc37ffcbc2096a4f0ac7177c7 files/digest-capi4k-utils-20041006 75
-MD5 5567e0f076f3d1faafcd0d4fa39a1c4e files/digest-capi4k-utils-20041006-r2 156
+MD5 d97441e319d8b2582c310520726f501d capi4k-utils-20041006-r4.ebuild 3738
 MD5 5567e0f076f3d1faafcd0d4fa39a1c4e files/digest-capi4k-utils-20041006-r3 156
-MD5 2c94e9d125d5c9af8c485d8b844f55a2 files/20041006/README.gentoo 1548
+MD5 5567e0f076f3d1faafcd0d4fa39a1c4e files/digest-capi4k-utils-20041006-r4 156
+MD5 e74f9b822b6f485ca6ff834c2699151a files/20041006/README.gentoo 1492
 MD5 f9d08e560e844f4556da1f58bb5513b4 files/20041006/capi.init 829
 MD5 edc50538053b658093927f9fb28c3aff files/20041006/config 195
 MD5 2fe94d2623c5b129780b72bacaf4a7bc files/20041006/rcapid.xinetd 236
+MD5 650c413593fe44524150e1365965cdb3 files/20041006/capi.blacklist 455
+MD5 fb9f9b4003d8d1647e23cf7b329386f6 files/20041006/capi.confd 424
+MD5 2ddf9c04a03949cb2301888586096bfe files/20041006/capi.hotplug 2435
+MD5 52be2456f464fdaca472a9e38d4aca03 files/20041006/capi.initd 1189
+MD5 fa4cf0be46c4a16a2ef6fd178ed54c01 files/20041006/capi.usermap 1504
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBqIBSjtv59x0+BrURAqq6AJ4lSs9FEgyRhYcS5tBRfJI9WOmDOQCeL/l7
-1nDG4Tn3oL5yn5JQikWPsnI=
-=j5Ui
+iD8DBQFByzFXjtv59x0+BrURAu7NAJ9vOAQp75qu06Mt4206/jkkVx3CvQCgmVYj
+QFsx3dzSTN8mzrHy1/Fvl2o=
+=tS4m
 -----END PGP SIGNATURE-----
