@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/bfm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.1 2004/11/12 23:46:51 s4t4n Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.2 2005/01/28 23:35:54 s4t4n Exp $
+
+  29 Jan 2005; Michele Noberasco <s4t4n@gentoo.org> bfm-0.6.4.ebuild:
+  Stable for x86. Fix copyright headers.
 
 *bfm-0.6.4 (13 Nov 2004)
 

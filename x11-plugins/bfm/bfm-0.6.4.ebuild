@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/bfm-0.6.4.ebuild,v 1.1 2004/11/12 23:46:51 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/bfm-0.6.4.ebuild,v 1.2 2005/01/28 23:35:54 s4t4n Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.jnrowe.ukfsn.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=x11-libs/gtk+-2.4.9-r1"
 
