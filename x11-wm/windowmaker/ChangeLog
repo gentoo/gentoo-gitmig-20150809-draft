@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.21 2004/10/29 19:58:05 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.22 2004/10/30 00:31:54 fafhrd Exp $
+
+*windowmaker-0.91.0 (29 Oct 2004)
+
+  29 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  windowmaker-0.90.0.ebuild, +windowmaker-0.91.0.ebuild:
+  Version bump; new version for upstream changes for better NETWM support;
+  keyworded for ~ppc
 
   29 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> :
   Added depend for media-libs/fontconfig to 0.90.0
