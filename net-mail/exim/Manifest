@@ -35,7 +35,7 @@ MD5 5d5aabea7d56a91803df1312c04d32c0 files/exim-4.14-tail.patch 446
 MD5 622b726ea7b32aae93a8fe9f3c2af9cd files/exim-4.20-maildir.patch 478
 MD5 117455c076e246e7c02d5fa464dd4be7 files/digest-exim-4.24 132
 MD5 117455c076e246e7c02d5fa464dd4be7 files/digest-exim-4.24-r1 132
-MD5 bf994e344cbca3ca289f3e94c579a32c files/digest-exim-4.31 62
+MD5 1e04cfda5987a9c439533a59dd015050 files/digest-exim-4.31 132
 MD5 117455c076e246e7c02d5fa464dd4be7 files/digest-exim-4.24-r2 132
 MD5 117455c076e246e7c02d5fa464dd4be7 files/digest-exim-4.24-r3 132
 MD5 fd6118c0a56fcc3a96052bf1ff19fd1f files/mailer.conf 995
