@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0-r1.ebuild,v 1.3 2004/06/24 23:32:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0-r1.ebuild,v 1.4 2004/06/28 08:47:33 robbat2 Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE="mysql ipalias clearpasswd"
-
+RESTRICT="nouserpriv"
 DEPEND_COMMON="mail-mta/qmail
 	mysql? ( >=dev-db/mysql-3.23* )"
 DEPEND="sys-apps/sed
