@@ -1,6 +1,17 @@
 # ChangeLog for x11-plugins/wmsysmon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/ChangeLog,v 1.10 2004/07/18 23:55:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/ChangeLog,v 1.11 2004/08/02 12:07:02 s4t4n Exp $
+
+*wmsysmon-0.7.6-r3 (August 02 2004)
+
+  02 Aug 2004; Michele Noberasco <s4t4n@gentoo.org>
+  wmsysmon-0.7.6-r3.ebuild, wmsysmon-0.7.6-high-ints.patch:
+  New patch to add support for minitoring 24 interrupts in Makefile.
+  New revision that makes use of alpha and high-ints USE flags
+  to decide wether to enable 24 interruputs monitoring support.
+  wmsysmon-0.7.6-r2.ebuild, files/wmsysmon-0.7.6-s4t4n.patch:
+  Change s4t4n patch to better handle CFLAGS stuff.
+  Change ebuild not to DEPEND on sed and still honour Gentoo CFLAGS.
 
   19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> wmsysmon-0.7.6-r2.ebuild:
   Stable on alpha.
