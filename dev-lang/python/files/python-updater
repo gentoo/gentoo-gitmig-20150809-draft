@@ -166,11 +166,11 @@ done
 # /usr/lib/python${OLD_PY_VER}
 #
 #
-OLD_MODULES_DIR=/usr/lib/python${OLD_PY_VER}
+OLD_MODULES_DIRS="/usr/lib/python${OLD_PY_VER} /usr/lib32/python${OLD_PY_VER} /usr/lib64/python${OLD_PY_VER}"
 OLD_INCLUDE_DIR=/usr/include/python${OLD_PY_VER}
 
 eloginfo "Starting Python Updater from ${OLD_PY_VER} to ${NEW_PY_VER} :"
-eloginfo "Searching for packages with files in ${OLD_MODULES_DIR} .."
+eloginfo "Searching for packages with files in ${OLD_MODULES_DIRS} .."
 
 # iterate thru all the installed package's contents
 for content in `find ${PKG_DBDIR} -name CONTENTS`; do
@@ -190,12 +190,14 @@ for content in `find ${PKG_DBDIR} -name CONTENTS`; do
        continue;
     fi
 
-    if fgrep "${OLD_MODULES_DIR}" ${content} > /dev/null; then
-       PKGS_TO_REMERGE="${PKGS_TO_REMERGE} ${CATPKGVER}"
-	   elogecho "Adding to list: ${CATPKGVER}"
+    for OLD_MODULES_DIR in ${OLD_MODULES_DIRS}; do
+        if fgrep "${OLD_MODULES_DIR}" ${content} > /dev/null; then
+            PKGS_TO_REMERGE="${PKGS_TO_REMERGE} ${CATPKGVER}"
+	    elogecho "Adding to list: ${CATPKGVER}"
 	elif fgrep "${OLD_INCLUDE_DIR}" ${content} > /dev/null; then
-		PKGS_TO_REMERGE="${PKGS_TO_REMERGE} ${CATPKGVER}"
-    fi
+            PKGS_TO_REMERGE="${PKGS_TO_REMERGE} ${CATPKGVER}"
+        fi
+    done
 done    
 
 # now we have to do each emerge seperately because if an installed version
