@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5-r5.ebuild,v 1.2 2005/03/11 21:43:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5-r5.ebuild,v 1.3 2005/03/20 10:48:41 mcummings Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -399,7 +399,7 @@ pkg_postinst() {
 cleaner_msg() {
 	eerror "You have changed versions of perl. It is recommended"
 	eerror "that you run"
-	eerror "${FILESDIR}/perl-cleaner "
+	eerror "dev-lang/perl/files/perl-cleaner "
 	eerror "to assist with this transition. This script is capable"
 	eerror "of cleaning out old .ph files, rebuilding modules for "
 	eerror "your new version of perl, as well as re-emerging"
