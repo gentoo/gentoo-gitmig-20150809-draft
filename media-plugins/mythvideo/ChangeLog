@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.7 2003/12/08 17:16:17 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.8 2003/12/11 21:55:47 aliz Exp $
+
+*mythvideo-0.13 (11 Dec 2003)
+
+  11 Dec 2003; Daniel Ahlberg <aliz@gentoo.org> mythvideo-0.13.ebuild:
+  Version bump.
 
   08 Dec 2003; <max@gentoo.org> mythvideo-0.10.ebuild:
   Remove stale version.
