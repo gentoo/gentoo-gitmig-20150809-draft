@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-0.1.3.ebuild,v 1.2 2002/08/13 04:03:44 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-0.1.3.ebuild,v 1.3 2002/08/13 19:25:21 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library for DVD navigation tools."
@@ -18,13 +18,6 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}/src
-
-	# This nice little patch that makes compilation work on gcc2
-	# breaks compilation on gcc-3.1 so, don't use it if we are
-	# going to be running gcc-3.1
-	[ -z "${CC}" ] && export CC=gcc
-	[[ "`${CC} -dumpversion`" != "3.1" ]] && \
-	( patch < ${FILESDIR}/${P}-gentoo.patch || die )
 
 }
 
