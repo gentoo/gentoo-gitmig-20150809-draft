@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r1.ebuild,v 1.4 2003/04/13 02:24:50 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r1.ebuild,v 1.5 2003/04/13 13:40:34 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Secure locate provides a secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
@@ -48,7 +48,7 @@ src_install() {
 
 	# Make a fake updatedb.conf file, to shut slocate up 
 	echo "# There is a sample config file in :" > updatedb.conf
-	echo "# /usr/share/doc/${P}/updatedb.conf.gz" >> updatedb.conf
+	echo "# /usr/share/doc/${PF}/updatedb.conf.gz" >> updatedb.conf
 	insinto /etc
 	doins updatedb.conf
 	fperms 0644 /etc/updatedb.conf
@@ -74,6 +74,5 @@ pkg_postinst() {
 	echo
 	einfo "Please note that the /etc/updatedb.conf file is EMPTY"
 	einfo "There is a sample configuration file in"
-	einfo "/usr/share/doc/${PN}-${PVR}"
-
+	einfo "/usr/share/doc/${PF}"
 }
