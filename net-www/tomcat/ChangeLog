@@ -1,6 +1,12 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.39 2004/07/29 13:22:16 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.40 2004/07/29 22:29:17 axxo Exp $
+
+*tomcat-4.1.30-r2 (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> files/4.1.30/gentoo.diff,
+  +tomcat-4.1.30-r2.ebuild:
+  fix patch to source the correct file, 58835
 
 *tomcat-5.0.27-r1 (29 Jul 2004)
 
