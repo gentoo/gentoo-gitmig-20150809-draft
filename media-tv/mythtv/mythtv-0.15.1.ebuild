@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1.ebuild,v 1.4 2004/06/25 00:32:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1.ebuild,v 1.5 2004/06/28 16:21:19 morfic Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gcc
 
 DESCRIPTION="Homebrew PVR project."
 HOMEPAGE="http://www.mythtv.org/"
@@ -61,6 +61,13 @@ src_unpack() {
 	done
 
 	use directfb && epatch ${FILESDIR}/mythtv-0.15-directfb.patch
+
+	#Applies patch for gcc-3.4.0 closing bug #52819
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	then
+	epatch ${FILESDIR}/gcc-3.4-fix.patch
+	fi
+
 }
 
 src_compile() {
