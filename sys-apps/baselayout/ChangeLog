@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.16 2002/03/20 23:21:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.17 2002/03/21 07:23:26 azarah Exp $
+
+  21 March 2002; M.Schlemmer <azarah@gentoo.org> :
+
+  Update the pkg_postinst() stuff to use the build USE flag when doing stuff
+  that really should not be done during bootstrap.
 
   20 March 2002; Daniel Robbins <drobbins@gentoo.org> : fixed pkg_postinst()
   that was changing dirs to ${D}/dev instead of ${ROOT}/dev.  No rev bump.
