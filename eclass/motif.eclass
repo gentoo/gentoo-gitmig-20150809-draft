@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/motif.eclass,v 1.2 2003/12/23 13:56:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/motif.eclass,v 1.3 2004/06/25 00:39:48 vapier Exp $
 #
 # Heinrich Wednel <lanius@gentoo.org>
 

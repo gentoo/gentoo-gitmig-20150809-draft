@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver.eclass,v 1.16 2004/06/25 00:39:48 vapier Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website

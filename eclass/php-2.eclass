@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.14 2004/03/29 00:54:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.15 2004/06/25 00:39:48 vapier Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl.eclass,v 1.2 2004/01/24 17:02:56 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl.eclass,v 1.3 2004/06/25 00:39:48 vapier Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #

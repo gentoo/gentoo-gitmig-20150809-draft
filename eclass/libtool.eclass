@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.27 2004/06/08 21:11:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.28 2004/06/25 00:39:48 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
