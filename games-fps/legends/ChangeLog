@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/legends
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.8 2004/12/04 17:53:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.9 2004/12/04 23:29:07 mr_bones_ Exp $
+
+  04 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> -legends-0.3.6.ebuild,
+  -legends-0.4.0.ebuild:
+  clean old
 
   04 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org> legends-0.3.6.ebuild,
   legends-0.4.0.ebuild, legends-0.4.1b.ebuild:
