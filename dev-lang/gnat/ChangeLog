@@ -1,10 +1,10 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.10 2003/09/28 10:25:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.11 2003/09/28 14:46:09 dholm Exp $
 
 *gnat-3.15p-r3 (28 Sep 2003)
 
-  28 Sep 2003; David Holm <david@realityrift.com> <avatar@gentoo.org>
+  28 Sep 2003; David Holm <dholm@gentoo.org>
   gnat-3.15p-r3.ebuild, files/gnat-3.15p-gentoo.patch.bz2,
   files/gnat-3.15p-noaddr2line.patch.bz2:
   Added gnat-3.15p-r3 which has now passed 26/26 of ACATS tests on x86 and 24/26
