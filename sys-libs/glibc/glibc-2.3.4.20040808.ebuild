@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.4 2004/08/11 04:02:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.5 2004/08/11 04:07:24 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -703,33 +703,33 @@ fix_lib64_symlinks() {
 	# since it wont even work without a lib64 symlink anyways. *rolls eyes*
 	# see bug 59710 for more information.
 	# Travis Tilley <lv@gentoo.org> (08 Aug 2004)
-	if [ -L /lib64 ] ; then
+	if [ -L ${ROOT}/lib64 ] ; then
 		ewarn "removing /lib64 symlink and moving lib to lib64..."
 		ewarn "dont hit ctrl-c until this is done"
-		addwrite /
-		rm /lib64
+		addwrite ${ROOT}/
+		rm ${ROOT}/lib64
 		# now that lib64 is gone, nothing will run without calling ld.so
 		# directly. luckily the window of brokenness is almost non-existant
-		/lib/ld-linux-x86-64.so.2 /bin/mv /lib /lib64
+		/lib/ld-linux-x86-64.so.2 /bin/mv ${ROOT}/lib ${ROOT}/lib64
 		# all better :)
 		ldconfig
-		ln -s lib64 /lib
+		ln -s lib64 ${ROOT}/lib
 		einfo "done! :-)"
-		einfo "fixed broken lib64/lib symlink in /"
+		einfo "fixed broken lib64/lib symlink in ${ROOT}"
 	fi
-	if [ -L /usr/lib64 ] ; then
-		addwrite /usr
-		rm /usr/lib64
-		mv /usr/lib /usr/lib64
-		ln -s lib64 /usr/lib
-		einfo "fixed broken lib64/lib symlink in /usr"
+	if [ -L ${ROOT}/usr/lib64 ] ; then
+		addwrite ${ROOT}/usr
+		rm ${ROOT}/usr/lib64
+		mv ${ROOT}/usr/lib ${ROOT}/usr/lib64
+		ln -s lib64 ${ROOT}/usr/lib
+		einfo "fixed broken lib64/lib symlink in ${ROOT}/usr"
 	fi
-	if [ -L /usr/X11R6/lib64 ] ; then
-		addwrite /usr/X11R6
-		rm /usr/X11R6/lib64
-		mv /usr/X11R6/lib /usr/X11R6/lib64
-		ln -s lib64 /usr/X11R6/lib
-		einfo "fixed broken lib64/lib symlink in /usr/X11R6"
+	if [ -L ${ROOT}/usr/X11R6/lib64 ] ; then
+		addwrite ${ROOT}/usr/X11R6
+		rm ${ROOT}/usr/X11R6/lib64
+		mv ${ROOT}/usr/X11R6/lib ${ROOT}/usr/X11R6/lib64
+		ln -s lib64 ${ROOT}/usr/X11R6/lib
+		einfo "fixed broken lib64/lib symlink in ${ROOT}/usr/X11R6"
 	fi
 }
 
