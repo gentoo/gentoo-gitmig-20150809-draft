@@ -6,6 +6,9 @@
 
 *mc-4.6.0-r1 (06 May 2003)
 
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> mc-4.6.0-r1.ebuild :
+  Marked stable on hppa.
+
   06 May 2003; Michael Nazaroff <naz@gentoo.org> mc-4.6.0-r1.ebuild,
   chdir-4.6.0.gentoo, mc.gentoo:
   Made a small edition to mc which allows it to chdir to the current
