@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pmd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.4 2004/09/17 13:49:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.5 2004/10/16 18:17:13 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> pmd-1.5-r1.ebuild,
+  pmd-1.5.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
 *pmd-1.5-r1 (17 Sep 2004)
 

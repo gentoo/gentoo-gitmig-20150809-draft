@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-1.5-r1.ebuild,v 1.1 2004/09/17 13:49:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-1.5-r1.ebuild,v 1.2 2004/10/16 18:17:13 axxo Exp $
 
 inherit java-pkg
 
@@ -38,5 +38,5 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar etc/${PN}.jar
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }

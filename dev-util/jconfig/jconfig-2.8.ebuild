@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/jconfig-2.8.ebuild,v 1.1 2004/09/01 07:43:02 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/jconfig-2.8.ebuild,v 1.2 2004/10/16 18:16:50 axxo Exp $
 
 inherit java-pkg
 
@@ -30,7 +30,7 @@ src_install() {
 	insinto /usr/share/${PN}/lib
 	doins lib/*
 
-	use doc && dohtml -r javadoc/*
+	use doc && java-pkg_dohtml -r javadoc/*
 
 	dodoc README
 }
