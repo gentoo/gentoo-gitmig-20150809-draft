@@ -1,6 +1,7 @@
 MD5 b6c5c5f80aa1cdff81ea13fd13fa2cb7 esearch-0.4.2-r1.ebuild 787
 MD5 27d8504f48f9a4a2e5a6ee7a5dbf1951 esearch-0.5.ebuild 800
 MD5 772ca09596b408f824fd0547a9f522f8 esearch-0.4.2.ebuild 757
+MD5 76f3c7752bb72c87a30f1170f0fb0d65 esearch-0.5.2.ebuild 812
 MD5 561ad6965fe6003123630cf47d83a890 ChangeLog 1530
 MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
 MD5 76f3c7752bb72c87a30f1170f0fb0d65 esearch-0.5.1.ebuild 812
@@ -8,4 +9,5 @@ MD5 01a64b9a33d6c132d3ed118f1a9588b7 files/digest-esearch-0.5 62
 MD5 b54833fe3cb895724136f0e824c7da2a files/digest-esearch-0.4.2-r1 64
 MD5 b54833fe3cb895724136f0e824c7da2a files/digest-esearch-0.4.2 64
 MD5 3e8df576f84456509fd17947fbe13881 files/digest-esearch-0.5.1 64
+MD5 0c184108277fbeacf636a78af2d804f7 files/digest-esearch-0.5.2 64
 MD5 2a26f4c19ebe15f5584973965e0e6ceb files/eupdatedb.cron 340
