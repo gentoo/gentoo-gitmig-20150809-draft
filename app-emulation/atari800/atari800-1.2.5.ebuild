@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.2.5.ebuild,v 1.2 2003/02/13 07:12:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.2.5.ebuild,v 1.3 2003/03/03 12:44:43 vladimir Exp $
 
 IUSE="sdl"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 # Haven't tested other architectures, but is reported to work on non-x86
 # platforms
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/x11
 	app-arch/unzip

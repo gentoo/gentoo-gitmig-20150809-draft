@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/atari800
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/ChangeLog,v 1.5 2003/02/12 03:58:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/ChangeLog,v 1.6 2003/03/03 12:44:43 vladimir Exp $
 
 *atari800-1.2.5 (31 Jan 2003)
+
+  03 Mar 2003; <vladimir@gentoo.org> atari800-1.2.5.ebuild:
+  Automated removal of remaining sparc64 KEYWORDS
 
   31 Jan 2003; Ryan Phillips <rphillips@gentoo.org> :
   new version. Fixes #11605

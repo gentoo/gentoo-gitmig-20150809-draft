@@ -8,7 +8,7 @@ HOMEPAGE="http://mupen64.emulation64.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc" 
 
 DEPEND="media-libs/libsdl
 	media-libs/freetype"

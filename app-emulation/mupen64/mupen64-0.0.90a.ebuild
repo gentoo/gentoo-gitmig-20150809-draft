@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mupen64/mupen64-0.0.90a.ebuild,v 1.2 2003/02/13 07:14:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mupen64/mupen64-0.0.90a.ebuild,v 1.3 2003/03/03 12:44:43 vladimir Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A Nintendo 64 (N64) emulator"
@@ -9,7 +9,7 @@ HOMEPAGE="http://mupen64.emulation64.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc" 
 
 DEPEND="=x11-libs/gtk+-1.2*
 	media-libs/libsdl
