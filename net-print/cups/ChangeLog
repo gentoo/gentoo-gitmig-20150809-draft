@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.124 2005/02/07 03:38:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.125 2005/03/08 15:13:25 lanius Exp $
+
+  08 Mar 2005; Heinrich Wendel <lanius@gentoo.org> -cups-1.1.23.ebuild,
+  -cups-1.1.23_rc1.ebuild:
+  cleanups
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> cups-1.1.23-r1.ebuild:
   Marked stable on mips.
