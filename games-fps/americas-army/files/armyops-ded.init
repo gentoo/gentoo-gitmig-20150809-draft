@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+        need net
+}
+
+start() {
+        ebegin "Starting Americas Army dedicated server"
+        screen -A -m -d -S armyops-ded su - games -c "/usr/games/bin/armyops-ded ${aa_OPTS}"
+        eend $?
+}
+
+stop() {
+        ebegin "Stopping Americas Army dedicated server"
+        local pid=`screen -list | grep armyops-ded | awk -F . '{print $1}' | sed -e s/.//`
+        if [ -z "${pid}" ] ; then
+                eend 1 "Lost screen session"
+        else
+                pid=`pstree -p ${pid} | sed -e 's:^.*server-bin::'`
+		pid=${pid:1:${#pid}-2}
+                if [ -z "${pid}" ] ; then
+                        eend 1 "Lost armyops-ded session"
+                else
+                        kill ${pid}
+                        eend $? "Could not kill armyops-ded"
+                fi
+        fi
+}
+
+status() {
+        screen -list | grep armyops-ded
+}
+

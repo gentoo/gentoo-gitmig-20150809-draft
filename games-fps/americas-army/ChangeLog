@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.26 2005/02/08 22:30:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.27 2005/02/12 18:11:16 wolf31o2 Exp $
+
+*americas-army-221-r1 (12 Feb 2005)
+
+  12 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/armyops-ded.conf, +files/armyops-ded.init,
+  +americas-army-221-r1.ebuild:
+  Updated init scripts to use screen for dedicated server and closing bug #79833.
 
   08 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   americas-army-221.ebuild:
