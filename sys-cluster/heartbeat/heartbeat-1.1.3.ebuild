@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.1.3.ebuild,v 1.2 2003/11/13 14:24:50 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.1.3.ebuild,v 1.3 2003/11/21 17:55:51 iggy Exp $
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -13,6 +13,14 @@ KEYWORDS="~x86 mips"
 DEPEND="dev-libs/popt
 	dev-libs/glib
 	net-libs/libnet"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	mv ltmain.sh ltmain.orig
+	echo "export _POSIX2_VERSION=199209" > ltmain.sh
+	cat ltmain.orig >> ltmain.sh
+}
 
 src_compile() {
 	./configure --prefix=/usr \
