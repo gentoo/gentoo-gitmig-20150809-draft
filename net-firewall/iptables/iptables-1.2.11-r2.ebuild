@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.3 2004/07/04 11:42:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.4 2004/07/05 18:11:34 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -103,6 +103,7 @@ src_install() {
 		make DESTDIR=${D} ${myconf} \
 			PREFIX= \
 			LIBDIR=/lib \
+			BINDIR=/sbin \
 			MANDIR=/usr/share/man \
 			INCDIR=/usr/include \
 			KERNEL_DIR=/usr/src/linux \
@@ -111,6 +112,7 @@ src_install() {
 		make DESTDIR=${D} ${myconf} \
 			PREFIX= \
 			LIBDIR=/usr/lib \
+			BINDIR=/sbin \
 			MANDIR=/usr/share/man \
 			INCDIR=/usr/include \
 			KERNEL_DIR=/usr/src/linux \
@@ -118,6 +120,7 @@ src_install() {
 	else
 		make DESTDIR=${D} ${myconf} \
 			LIBDIR=/lib \
+			BINDIR=/sbin \
 			MANDIR=/usr/share/man \
 			INCDIR=/usr/include \
 			KERNEL_DIR=/usr \
@@ -125,6 +128,7 @@ src_install() {
 
 		make DESTDIR=${D} ${myconf} \
 			LIBDIR=/usr/lib \
+			BINDIR=/sbin \
 			MANDIR=/usr/share/man \
 			INCDIR=/usr/include \
 			KERNEL_DIR=/usr \
