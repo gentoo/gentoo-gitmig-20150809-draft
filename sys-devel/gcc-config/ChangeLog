@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.82 2005/03/04 12:22:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.83 2005/03/04 17:53:19 eradicator Exp $
+
+  04 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  files/gcc-config-1.4.0:
+  Changing CTARGET_ALIASES to FAKE_TARGETS for consistency with binutils.
 
   04 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -files/fake-ctarget.sh, files/gcc-config-1.4.0, gcc-config-1.4.0.ebuild:
