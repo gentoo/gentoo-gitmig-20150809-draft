@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r2.ebuild,v 1.2 2002/12/19 00:45:16 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r2.ebuild,v 1.3 2002/12/19 22:18:03 carpaski Exp $
 
 IUSE="build"
 
@@ -21,7 +21,9 @@ src_unpack() {
 	cd ${WORKDIR}
 	echo tar xjf ${DISTDIR}/${PF}.tar.bz2
 	tar xjf ${DISTDIR}/${PF}.tar.bz2 || die "No portage tarball in distfiles."
-	echo $(python -c "import portage,string; print string.join(portage.pkgsplit(portage.best(portage.db[\"${ROOT}\"][\"vartree\"].dbapi.match(\"sys-apps/portage\"))))") > ${WORKDIR}/previous-version
+
+	#Not needed anymore.
+	#echo $(python -c "import portage,string; print string.join(portage.pkgsplit(portage.best(portage.db[\"${ROOT}\"][\"vartree\"].dbapi.match(\"sys-apps/portage\"))))") > ${WORKDIR}/previous-version
 }
 
 src_compile() {
@@ -217,18 +219,19 @@ pkg_postinst() {
 	echo
 	echo
 
-	OLDPV=$(< ${WORKDIR}/previous-version)
-	if ! use build; then
-		if python -c "import portage,string,sys; sys.exit(portage.pkgcmp(string.split(\"${OLDPV}\"),[\"sys-apps/portage\",\"2.0.45\",\"r5\"])>=0)"; then
-			# Previous version is older than the current db breaking one.
-			eerror "ATTENTION: Portage has merged successfully. You must restart your merge"
-			eerror "ATTENTION: manually if this was not the last package. A change in the db"
-			eerror "ATTENTION: cache prevents portage from continuing with this version. The"
-			eerror "ATTENTION: changes only require that portage be restarted after the change."
-			eerror "ATTENTION: This issue is handled automatically from this new version on."
-			eerror "ATTENTION: Sorry for any inconvenience. Exiting..."
-
-			ps wax | egrep 'python.*emerge' | sed 's:^[ ]*\([0-9]\+\).*:\1:' | xargs kill -INT
-		fi
-	fi
+	### Not needed anymore.
+	#OLDPV=$(< ${WORKDIR}/previous-version)
+	#if ! use build; then
+	#	if python -c "import portage,string,sys; sys.exit(portage.pkgcmp(string.split(\"${OLDPV}\"),[\"sys-apps/portage\",\"2.0.45\",\"r5\"])>=0)"; then
+	#		# Previous version is older than the current db breaking one.
+	#		eerror "ATTENTION: Portage has merged successfully. You must restart your merge"
+	#		eerror "ATTENTION: manually if this was not the last package. A change in the db"
+	#		eerror "ATTENTION: cache prevents portage from continuing with this version. The"
+	#		eerror "ATTENTION: changes only require that portage be restarted after the change."
+	#		eerror "ATTENTION: This issue is handled automatically from this new version on."
+	#		eerror "ATTENTION: Sorry for any inconvenience. Exiting..."
+	#
+	#		ps wax | egrep 'python.*emerge' | sed 's:^[ ]*\([0-9]\+\).*:\1:' | xargs kill -INT
+	#	fi
+	#fi
 }
