@@ -1,6 +1,11 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.40 2003/03/17 11:24:29 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.41 2003/03/20 15:43:34 g2boojum Exp $
+
+*galeon-1.2.9 (20 Mar 2003)
+
+  20 Mar 2003; Grant Goodyear <g2boojum@gentoo.org> galeon-1.2.9.ebuild:
+  New stable version that builds w/ moz 1.3.
 
 *galeon-1.3.3 (09 Mar 2003)
 
