@@ -1,12 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 414fc72e81c6331156dc186159478995 qmail-1.03-r14.ebuild 15791
 MD5 035e489d1b15d18e0a9c5edfbc780e10 qmail-1.03-r11.ebuild 11387
 MD5 1326fc29d4004be71ba6ea2898d23edc qmail-1.03-r9.ebuild 9889
 MD5 fee2da8e07fe53237fd81f4fd3e44039 qmail-1.03-r13.ebuild 14072
-MD5 8ca1b8421f31a1a4520c28a74354d551 qmail-1.03-r15.ebuild 16864
+MD5 1c6d466a6db8c2b4af62190284d90d98 qmail-1.03-r15.ebuild 16906
 MD5 56c3888ff57050f81ff0b4747e29e0ab qmail-1.03-r10.ebuild 11111
 MD5 99e11a3d000c4a33843a65fadc605c3f qmail-1.03-r8.ebuild 8062
 MD5 0339ddd1c43028c8a8c6ad53ac7008b3 qmail-1.03-r12.ebuild 13685
-MD5 3dacafb3eaba337ddcf7f0f8ebe34a70 ChangeLog 18752
+MD5 14b32075514221df65dfc201019f995b ChangeLog 18866
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 ed8621dc81c25323e10609fc05d861df files/rc 284
 MD5 b7e7c96254dabacdec5bf5904957c7b2 files/tcp.qmqp.sample 399
@@ -173,3 +176,11 @@ MD5 2a725c31201c59077cd389486407624f files/1.03-r14/qmail-smtpd-esmtp-size-gento
 MD5 d3997795df512803e6a27b5486d2b81e files/1.03-r14/qmail-smtpd-relay-reject.gentoo.patch 1433
 MD5 82945c7eee4a2bd8be0b9b9718114a7d files/1.03-r15/qmail-pop3d-top-outputfix.patch 574
 MD5 fe69ece20420ed8c2400dc423cdd5c22 files/1.03-r15/qmail-macos-dns-fix.patch 336
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBmwXFPpIsIjIzwiwRAkuKAKDKo7J1auYvCDVP8Ql9nCkgkJFjGwCg1i/O
+9BvYLLwxn+8aEzeobSwSQJs=
+=QWYf
+-----END PGP SIGNATURE-----

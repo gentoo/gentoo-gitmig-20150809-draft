@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.11 2004/11/15 14:52:41 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.12 2004/11/17 07:02:59 robbat2 Exp $
+
+  17 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r15.ebuild:
+  RDEPEND for selinux, bug #62906.
 
   15 Nov 2004; Michele Noberasco <s4t4n@gentoo.org> qmail-1.03-r12.ebuild,
   qmail-1.03-r13.ebuild, qmail-1.03-r14.ebuild, qmail-1.03-r15.ebuild:

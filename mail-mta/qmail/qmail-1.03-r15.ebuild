@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.9 2004/11/15 14:52:41 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.10 2004/11/17 07:02:59 robbat2 Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -51,7 +51,8 @@ RDEPEND="!virtual/mta
 	>=net-mail/checkpassword-0.90
 	>=net-mail/cmd5checkpw-0.22
 	>=net-mail/dot-forward-0.71
-	>=net-mail/queue-fix-1.4-r1"
+	>=net-mail/queue-fix-1.4-r1
+	selinux? ( sec-policy/selinux-qmail )"
 
 PROVIDE="virtual/mta
 	 virtual/mda"
