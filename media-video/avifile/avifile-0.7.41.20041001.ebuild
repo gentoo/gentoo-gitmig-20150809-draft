@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.8 2004/10/22 15:24:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.9 2004/10/23 14:35:42 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -133,6 +133,10 @@ src_install() {
 	dodoc README INSTALL
 	cd doc
 	dodoc CREDITS EXCEPTIONS TODO VIDEO-PERFORMANCE WARNINGS KNOWN_BUGS
+}
+
+src_test() {
+	ewarn "Testing disabled for this ebuild."
 }
 
 pkg_postinst() {

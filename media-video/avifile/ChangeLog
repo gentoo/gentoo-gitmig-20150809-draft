@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.80 2004/10/22 15:24:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.81 2004/10/23 14:35:42 eradicator Exp $
+
+  23 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  avifile-0.7.41.20041001.ebuild:
+  Disabling maketest for now because of bug #66740.
 
   22 Oct 2004; Patrick Kursawe <phosphan@gentoo.org>
   avifile-0.7.41.20041001.ebuild:
