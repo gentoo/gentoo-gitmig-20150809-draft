@@ -1,0 +1,29 @@
+--- gpdf-0.112/shell/gpdf.c	2004-01-17 22:09:01.000000000 +0100
++++ gpdf-0.112/shell/gpdf.c.fix	2004-02-05 21:12:41.770747056 +0100
+@@ -117,7 +117,7 @@
+ 	g_message ("Requested URI: '%s'", uri);
+ }
+ #endif
+-
++/*
+ static void
+ set_window_icon_default (void)
+ {
+@@ -132,7 +132,7 @@
+ 
+ 	g_object_unref (pixbuf);
+ }
+-
++*/
+ int
+ main (int argc, char **argv)
+ {
+@@ -155,7 +155,7 @@
+ 	if (bonobo_ui_init ("GNOME PDF Viewer", VERSION, &argc, argv) == FALSE)
+ 		g_error (_("Could not initialize Bonobo!\n"));
+ 
+-	set_window_icon_default ();
++	/* set_window_icon_default (); */
+ 
+ 	client = gnome_master_client ();
+ 	
