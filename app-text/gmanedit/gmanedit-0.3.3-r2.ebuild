@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gmanedit/gmanedit-0.3.3-r2.ebuild,v 1.8 2002/12/18 15:33:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gmanedit/gmanedit-0.3.3-r2.ebuild,v 1.9 2003/01/14 17:20:07 foser Exp $
 
 DESCRIPTION="Gnome based manpage editor"
 SRC_URI="http://gmanedit.sourceforge.net/files/${P}.tar.bz2"
@@ -9,7 +9,7 @@ HOMEPAGE="http://gmanedit.sourceforge.net/"
 KEYWORDS="x86 sparc"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="nls"
+IUSE=""
 
 DEPEND="virtual/x11
 	>=gnome-base/gnome-libs-1.4.1.4"
@@ -17,7 +17,7 @@ DEPEND="virtual/x11
 S=${WORKDIR}/${P}.orig
 
 src_compile() {
-	econf `use_enable nls`
+	econf --disable-nls
 	make || die
 }
 
