@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/hunkyfonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/ChangeLog,v 1.1 2004/09/29 08:21:06 usata Exp $
+
+*hunkyfonts-0.2.0 (29 Sep 2004)
+
+  29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +hunkyfonts-0.2.0.ebuild:
+  Initial import. Ebuild submitted by Przemyslaw Meciag <p_maciag@wp.pl>,
+  closing bug #61449.
+
