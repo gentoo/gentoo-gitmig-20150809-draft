@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+for x in `find /usr/portage -iname *.ebuild`
+do
+/usr/bin/ebuild ${x} fetch digest
+if [ $? -ne 0 ]
+then 
+	echo '!!!' couldn't download all files for ${x} >> /tmp/portage-download.log
+else
+	echo ${x} >> /tmp/portage-download.log
+fi
+done

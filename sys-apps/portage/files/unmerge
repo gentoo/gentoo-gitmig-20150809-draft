@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#This should be called like so: # unmerge mycategory/mypackage
 
 import sys
 import os
