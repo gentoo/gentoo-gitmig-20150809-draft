@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/krusader-1.40.ebuild,v 1.1 2004/07/22 11:20:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/krusader-1.40.ebuild,v 1.2 2004/07/23 19:13:42 mr_bones_ Exp $
 
-inherit kde
+inherit flag-o-matic kde
 
 MY_P=${P/_/"-"}
 S=${WORKDIR}/${MY_P}
