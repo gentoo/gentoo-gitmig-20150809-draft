@@ -1,7 +1,10 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.4 2002/10/21 01:08:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.5 2002/12/09 04:33:12 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *ncftp-3.1.5 (20 Oct 2002)
 
   20 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ncftp-3.1.5.ebuild

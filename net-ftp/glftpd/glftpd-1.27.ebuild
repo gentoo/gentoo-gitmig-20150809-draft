@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.27.ebuild,v 1.1 2002/10/23 15:51:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.27.ebuild,v 1.2 2002/12/09 04:33:12 manson Exp $
 
 DESCRIPTION="a HIGHLY configurable ftp server"
 HOMEPAGE="http://www.glftpd.com/"
@@ -8,7 +8,7 @@ MY_P=${P/-/-LNX_}
 SRC_URI="http://www.glftpd.com/files/${MY_P}.tgz"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
 
 DEPEND=""
 RDEPEND="sys-apps/xinetd"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.7.ebuild,v 1.9 2002/11/19 19:43:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.7.ebuild,v 1.10 2002/12/09 04:33:12 manson Exp $
 
 DESCRIPTION="A Client that groks URLs"
 SRC_URI="http://curl.haxx.se/download/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://curl.haxx.se"
 
 SLOT="0"
 LICENSE="MPL X11"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 IUSE="ssl"
 
 DEPEND=">=sys-libs/pam-0.75 

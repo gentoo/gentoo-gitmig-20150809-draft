@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.10 2002/10/20 05:11:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.11 2002/12/09 04:33:12 manson Exp $
 
 IUSE="gnome"
 
@@ -23,7 +23,7 @@ RESTRICT="fetch"
 
 SLOT="0"
 LICENSE="yahoo"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 
 pkg_setup() {
 	if [ ${ARCH} != "x86" ] ; then
