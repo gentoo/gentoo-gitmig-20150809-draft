@@ -1,13 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.20 2005/01/11 01:07:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.21 2005/01/11 04:23:42 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
 # This eclass contains (or should) functions to get common info 
 # about the toolchain (libc/compiler/binutils/etc...)
-
-inherit eutils
 
 ECLASS=toolchain-funcs
 INHERITED="$INHERITED $ECLASS"
@@ -61,7 +59,7 @@ tc-getBUILD_CC() {
 
 	local search=
 	if [[ -n ${CBUILD} ]] ; then
-		search=$(type -p "${CBUILD}-gcc")
+		search=$(type -p ${CBUILD}-gcc)
 		search=${search##*/}
 	else
 		search=gcc
@@ -91,7 +89,7 @@ tc-is-cross-compiler() {
 # Parse information from CBUILD/CHOST/CTARGET rather than 
 # use external variables from the profile.
 tc-ninja_magic_to_arch() {
-ninj() { [[ ${type} = "kern" ]] && echo $1 || echo $2 ; }
+ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 
 	local type=$1
 	local host=$2
