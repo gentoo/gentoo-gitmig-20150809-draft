@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r5.ebuild,v 1.2 2004/05/17 01:04:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r5.ebuild,v 1.3 2004/05/21 02:54:08 solar Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc debug"
 
@@ -107,9 +107,8 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie a
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-
-#desired KEYWORDS="~x86 ~sparc"
-KEYWORDS="-* arm"
+# SpanKY says hppa is a no go with any 3.3.x
+KEYWORDS="-* -hppa arm ~x86 ~sparc ~amd64"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -137,10 +136,8 @@ fi
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 DEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	!amd64? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040207 ) )
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.6-r1
-	hardened? ( x86? ( >=sys-devel/binutils-2.15.90.0.3-r1 ) )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
@@ -149,7 +146,6 @@ DEPEND="virtual/glibc
 
 RDEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	hardened? ( !amd64? ( >=sys-libs/glibc-2.3.3_pre20040207 ) )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -385,8 +381,7 @@ src_unpack() {
 	#use uclibc || epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
 
 	release_version="${release_version}, pie-${PIE_VER}"
-	if  ( ( use x86 && use hardened ) || ( use sparc && use hardened ) \
-		|| ( use amd64 && use hardened ) )
+	if  ( ( use hardened ) && ( use x86 || use sparc ||  use amd64) )
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
 		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
