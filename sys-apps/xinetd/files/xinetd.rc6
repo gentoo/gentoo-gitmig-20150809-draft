@@ -1,12 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/files/xinetd.rc6,v 1.17 2004/07/15 00:53:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/files/xinetd.rc6,v 1.18 2004/10/05 22:28:12 vapier Exp $
 
 opts="start stop reload restart dump check"
 
 depend() {
-	need net
+	use net
 }
 
 start() {
