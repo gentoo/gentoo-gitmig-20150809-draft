@@ -79,3 +79,51 @@ diff -u htmlinc/stringlist.h htmlinc-1/stringlist.h
  private:
      Stringlist::iterator getID(Bytevector id);
  	
+diff -Naur htmlinc-old/help.h htmlinc/help.h
+--- htmlinc/help.h	2000-08-08 09:04:28.000000000 -0400
++++ htmlinc-1/help.h	2004-03-01 19:43:43.770233421 -0500
+@@ -4,25 +4,25 @@
+ 
+ char * helpV[]=
+ {
+-{"HTML INCLUDE SYSTEM Version 1.0 beta1 - Compatible to Phase 5"},
+-{"Copyright (C) 2000 , Ulli Meybohm, www.meybohm.de (GNU General Public License)"},
+-{""},
+-{"Start:    "},
+-{"          htmlinc <include_dir> <htmlfile_1> <htmlfile_2> ... <htmlfile_n>"},
+-{""},
+-{"Options:"},
+-{"          <include_dir> = Directory of the Includefiles"},
+-{"	  <htmlfile_i>  = HTML-Files in which the includes should be updated"},
+-{""},
+-{"Examples:"},
+-{"          1:   htmlinc ~/www/inc/ *.html"},
+-{""},
+-{"          2:   cd ~/www"},
+-{"	       htmlinc inc/ `find * | grep \"\\\\.\"html`      (recursive)"},
+-{"	      "},
+-{""},
+-{"Report bugs to ulli@meybohm.de."},
+-{""}
++"HTML INCLUDE SYSTEM Version 1.0 beta1 - Compatible to Phase 5",
++"Copyright (C) 2000 , Ulli Meybohm, www.meybohm.de (GNU General Public License)",
++"",
++"Start:    ",
++"          htmlinc <include_dir> <htmlfile_1> <htmlfile_2> ... <htmlfile_n>",
++"",
++"Options:",
++"          <include_dir> = Directory of the Includefiles",
++"	  <htmlfile_i>  = HTML-Files in which the includes should be updated",
++"",
++"Examples:",
++"          1:   htmlinc ~/www/inc/ *.html",
++"",
++"          2:   cd ~/www",
++"	       htmlinc inc/ `find * | grep \"\\\\.\"html`      (recursive)",
++"	      ",
++"",
++"Report bugs to ulli@meybohm.de.",
++""
+ };
+ 
+ int helpC=18;
