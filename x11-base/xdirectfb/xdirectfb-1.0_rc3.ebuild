@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc3.ebuild,v 1.2 2002/11/18 06:49:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc3.ebuild,v 1.3 2002/12/09 04:41:17 manson Exp $
 
 MY_PN="XDirectFB"
 MY_PV=${PV/_/-}
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.directfb.org"
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc "
 
 PROVIDE="virtual/x11"
 

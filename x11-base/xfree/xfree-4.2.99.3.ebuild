@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.5 2002/12/07 08:45:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.6 2002/12/09 04:41:18 manson Exp $
 
 IUSE="3dfx"
 
@@ -30,7 +30,7 @@ SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-1.tar.bz2
 HOMEPAGE="http://www.xfree.org"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc "
 
 DEPEND=">=sys-libs/ncurses-5.1
 	pam? ( >=sys-libs/pam-0.75 )

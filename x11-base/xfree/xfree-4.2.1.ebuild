@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.28 2002/11/30 21:57:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.29 2002/12/09 04:41:17 manson Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -82,7 +82,7 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -192,12 +192,12 @@ src_unpack() {
 		#   30-39 - x86 stuff
 		#   40-49 - ppc stuff
 		#   50-59 - sparc stuff
-		#   60-69 - sparc64 stuff
+		#   60-69 -  stuff
 		#   70-79 - alpha stuff
 		#   80-89 - security stuff
 		#   90-?? - own stuff
 		#
-		# NOTE: can maybe thing about merging sparc and sparc64
+		# NOTE: can maybe thing about merging sparc and 
 		#
 		if [ -f ${x} ] && \
 		   [ "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ]

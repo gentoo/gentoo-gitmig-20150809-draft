@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.17 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.18 2002/12/09 04:41:17 manson Exp $
 
 IUSE="sse nls mmx 3dnow 3dfx"
 
@@ -44,7 +44,7 @@ SRC_URI="${SRC_PATH0}/X${MY_V}src-1.tgz
 HOMEPAGE="http://www.xfree.org"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/pam-0.75
