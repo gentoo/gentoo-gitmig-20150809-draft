@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.7.1.ebuild,v 1.1 2004/03/18 23:04:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.0.ebuild,v 1.1 2004/03/23 16:04:27 foser Exp $
 
 inherit gnome2
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.29"
 
-DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README"
+DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README *txt"
 
 G2CONF="${G2CONF} $(use_enable xinerama)"
 
