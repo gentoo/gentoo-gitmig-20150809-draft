@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/gtkskan
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkskan/ChangeLog,v 1.1 2002/02/10 21:03:50 karltk Exp $
+
+*gtkskan-0.2 ( 10 Feb 2002 )
+
+  10 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog files/digest-gtkskan-0.2 gtkskan-0.2.ebuild :
+  
+  A 802.11 network tool. It can detect networks and services using the
+  wireless extensions for Linux and reading/writing raw 802.11 frames. 
+
+  Initial support is for the wavelan/orinoco card.
