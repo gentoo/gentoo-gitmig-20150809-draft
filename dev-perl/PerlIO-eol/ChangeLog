@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/PerlIO-eol
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-eol/ChangeLog,v 1.1 2004/11/27 06:05:18 pclouds Exp $
+
+*PerlIO-eol-0.13 (27 Nov 2004)
+
+  27 Nov 2004; <pclouds@gentoo.org> +metadata.xml, +PerlIO-eol-0.13.ebuild:
+  New ebuild
+
