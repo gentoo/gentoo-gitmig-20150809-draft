@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0-r1.ebuild,v 1.1 2004/02/16 18:24:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0-r1.ebuild,v 1.2 2004/02/17 12:20:17 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -51,8 +51,6 @@ src_unpack() {
 src_compile() {
 	export QTDIR=${S}
 	export SYSCONF=${D}${QTBASE}/etc/settings
-	LD_LIBRARY_PATH_OLD=${LD_LIBRARY_PATH}
-	export LD_LIBRARY_PATH=${S}/lib:${LD_LIBRARY_PATH}
 
 	# Let's just allow writing to these directories during Qt emerge
 	# as it makes Qt much happier.
@@ -83,8 +81,10 @@ src_compile() {
 		-dlopen-opengl || die
 
 	export QTDIR=${S}
-	emake src-qmake src-moc sub-src sub-tools || die
-	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH_OLD}
+
+	emake src-qmake src-moc sub-src || die
+	export LD_PRELOAD="${LD_PRELOAD} ${QTDIR}/lib/libqt-mt.so"
+	emake sub-tools || die
 }
 
 src_install() {
