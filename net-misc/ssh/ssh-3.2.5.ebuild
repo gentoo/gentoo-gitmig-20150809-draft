@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.5.ebuild,v 1.2 2003/09/27 00:59:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.5.ebuild,v 1.3 2003/09/30 00:06:52 vapier Exp $
 
 DESCRIPTION="Ssh.com Non-Comercial Use ssh version"
 HOMEPAGE="http://www.ssh.com/"
 SRC_URI="ftp://ftp.ssh.com/pub/ssh/${P}.tar.gz"
 
-LICENSE="SSH"
+LICENSE="ssh"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="X ipv6 crypt openssh"
