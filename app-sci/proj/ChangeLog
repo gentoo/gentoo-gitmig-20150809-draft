@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/proj
+# ChangeLog for app-sci/proj
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/proj/ChangeLog,v 1.1 2003/08/30 09:58:07 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/proj/ChangeLog,v 1.2 2003/08/30 11:13:12 vapier Exp $
 
 *proj-4.4.7.ebuild (30 Aug 2003)
 
