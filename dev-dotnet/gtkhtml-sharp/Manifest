@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7525983cf001d6b67e47ed3d918e569 gtkhtml-sharp-1.0.4.ebuild 507
-MD5 bcefe0bfd0ffe567b46984b8b29939f5 ChangeLog 643
+MD5 7f0ae189e82209ac1c7ea2aaef3b340f ChangeLog 645
+MD5 4ee68dcfd8599f18e05354355de3cf7d gtkhtml-sharp-1.0.4.ebuild 509
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 b63c29f6761c048a9d7943713c15c78c files/digest-gtkhtml-sharp-1.0.4 147
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD4DBQFB1I8lI1lqEGTUzyQRAh4TAJQO2rvQmIY4N0q/KkJ9e0gzVOBqAKC11YnS
-4VHmEvEK7vaCNyoViqOsIw==
-=EU0v
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c83ece07294bf53932deb36fa7af4ec9 ml-pnet-0.6.10.ebuild 721
-MD5 61dda916d251678309a71a4fe267468d ChangeLog 2159
+MD5 37e367cdd454a3c53fe39ac1017f48f4 ChangeLog 2161
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
+MD5 ad4aa74f149f0cfcac1ebd8a821295f8 ml-pnet-0.6.10.ebuild 723
 MD5 f05441658a18742b29a7ee55dfb37d12 files/digest-ml-pnet-0.6.10 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBpyOLPgS8WLD64cERAhM+AJ40PDS+Y2vPLNMpjWwdYD085VOjsgCfeCmr
-eJXcrYNfrCDq7Rw/jeR/PFY=
-=1NcD
------END PGP SIGNATURE-----
