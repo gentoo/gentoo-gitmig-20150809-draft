@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041201.ebuild,v 1.1 2004/12/02 14:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041201.ebuild,v 1.2 2004/12/08 18:59:01 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -83,7 +83,7 @@ src_compile() {
 	emake -j1 depend || die "depend"
 	emake all || die "all"
 	if use doc ; then
-		emake -C documentation doc || die "docs"
+		emake -j1 -C documentation doc || die "docs"
 	fi
 }
 
