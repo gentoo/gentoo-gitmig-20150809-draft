@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/gjiten
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.5 2004/06/24 21:40:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.6 2004/09/07 07:42:15 usata Exp $
+
+  07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> gjiten-2.2.ebuild:
+  Stable on x86 and added to ppc.
 
 *gjiten-2.2 (16 Jun 2004)
 
