@@ -92,9 +92,6 @@ sys-apps/sysvinit
 #won't compile here
 #=media-sound/freeamp-2.1.1
 
-#hasn't built in months
->=net-ftp/kbear-1.2.1
-
 #glibc-2.2.4-r8 is working, it seems.  No longer a need to unmask it.
 #(12/22/01 - drobbins)
 
