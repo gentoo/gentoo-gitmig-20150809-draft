@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.45 2004/04/22 03:15:08 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.46 2004/04/23 22:23:09 leonardop Exp $
+
+  23 Apr 2004; L. Boshell <leonardop@gentoo.org>
+  libgnomeprint-2.4.2.ebuild, files/libgnomeprint-2.4.2-gtkdoc_fixes.patch:
+  Added patch to resolve API documentation problems. Resolves bug #45332.
 
 *libgnomeprint-2.6.1 (21 Apr 2004)
 

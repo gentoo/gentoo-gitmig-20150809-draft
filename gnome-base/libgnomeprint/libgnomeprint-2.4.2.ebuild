@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.4.2.ebuild,v 1.7 2004/03/16 02:49:49 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.4.2.ebuild,v 1.8 2004/04/23 22:23:09 leonardop Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Printer handling for Gnome"
 HOMEPAGE="http://www.gnome.org/"
@@ -29,3 +29,11 @@ DEPEND="${RDEPEND}
 G2CONF="${G2CONF} `use_with cups`"
 
 DOCS="AUTHORS COPYING* ChangeLog* INSTALL NEWS README"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix API documentation problems. See bug #45332.
+	epatch ${FILESDIR}/${P}-gtkdoc_fixes.patch
+}
