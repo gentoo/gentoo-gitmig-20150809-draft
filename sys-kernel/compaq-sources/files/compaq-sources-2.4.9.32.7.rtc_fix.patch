@@ -1,0 +1,52 @@
+diff -ur linux-2.4.20-wolk4.9s/drivers/char/efirtc.c linux-2.4.20-wolk4.9s.plasmaroo/drivers/char/efirtc.c
+--- linux-2.4.20-wolk4.9s/drivers/char/efirtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/drivers/char/efirtc.c	2004-01-05 23:47:53.000000000 +0000
+@@ -118,6 +118,7 @@
+ static void
+ convert_from_efi_time(efi_time_t *eft, struct rtc_time *wtime)
+ {
++	memset(wtime, 0, sizeof(struct rtc_time));
+ 	wtime->tm_sec  = eft->second;
+ 	wtime->tm_min  = eft->minute;
+ 	wtime->tm_hour = eft->hour;
+diff -ur linux-2.4.20-wolk4.9s/drivers/char/rtc.c linux-2.4.20-wolk4.9s.plasmaroo/drivers/char/rtc.c
+--- linux-2.4.20-wolk4.9s/drivers/char/rtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/drivers/char/rtc.c	2004-01-05 23:52:43.000000000 +0000
+@@ -370,6 +370,7 @@
+ 		 * tm_min, and tm_sec values are filled in.
+ 		 */
+ 
++		memset(&wtime, 0, sizeof(struct rtc_time));
+ 		get_rtc_alm_time(&wtime);
+ 		break; 
+ 	}
+@@ -417,6 +418,7 @@
+ 	}
+ 	case RTC_RD_TIME:	/* Read the time/date from RTC	*/
+ 	{
++		memset(&wtime, 0, sizeof(struct rtc_time));
+ 		get_rtc_time(&wtime);
+ 		break;
+ 	}
+diff -ur linux-2.4.20-wolk4.9s/drivers/macintosh/rtc.c linux-2.4.20-wolk4.9s.plasmaroo/drivers/macintosh/rtc.c
+--- linux-2.4.20-wolk4.9s/drivers/macintosh/rtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/drivers/macintosh/rtc.c	2004-01-05 23:54:15.000000000 +0000
+@@ -64,6 +64,7 @@
+ 	case RTC_RD_TIME:
+ 		if (ppc_md.get_rtc_time)
+ 		{
++			memset(&rtc_tm, 0, sizeof(struct rtc_time));
+ 			get_rtc_time(&rtc_tm);
+ 
+ 			if (copy_to_user((struct rtc_time*)arg, &rtc_tm, sizeof(struct rtc_time)))
+diff -ur linux-2.4.20-wolk4.9s/drivers/sbus/char/rtc.c linux-2.4.20-wolk4.9s.plasmaroo/drivers/sbus/char/rtc.c
+--- linux-2.4.20-wolk4.9s/drivers/sbus/char/rtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/drivers/sbus/char/rtc.c	2004-01-05 23:54:43.000000000 +0000
+@@ -89,6 +89,7 @@
+ 	switch (cmd)
+ 	{
+ 	case RTCGET:
++		memset(&rtc_tm, 0, sizeof(struct rtc_time));
+ 		get_rtc_time(&rtc_tm);
+ 
+ 		if (copy_to_user((struct rtc_time*)arg, &rtc_tm, sizeof(struct rtc_time)))
