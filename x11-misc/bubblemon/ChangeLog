@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/bubblemon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.5 2003/08/04 17:13:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.6 2003/11/02 01:20:05 pyrania Exp $
+
+*bubblemon-1.41 (02 Nov 2003)
+
+  02 Nov 2003; Markus Nigbur <pyrania@gentoo.org> bubblemon-1.41.ebuild:
+  Version bump.
 
   04 Aug 2003; Martin Holzer <mholzer@gentoo.org> bubblemon-1.4-r1.ebuild:
   Fixing sed state. closes #25300.
