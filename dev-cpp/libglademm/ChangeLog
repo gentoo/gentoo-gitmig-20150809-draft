@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.3 2004/04/12 17:06:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.4 2004/04/12 23:40:05 gmsoft Exp $
+
+  12 Apr 2004; Guy Martin <gmsoft@gentoo.org> libglademm-2.0.1.ebuild:
+  Marked stable on hppa.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> libglademm-2.0.1.ebuild:
   Added IUSE=.
