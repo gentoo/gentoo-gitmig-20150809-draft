@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.2.ebuild,v 1.1 2004/01/07 16:53:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.2.ebuild,v 1.2 2004/03/06 12:03:51 liquidx Exp $
 
 inherit gnome2
 
@@ -40,8 +40,8 @@ src_unpack() {
 src_install() {
 	gnome2_src_install
 	# dictionary index generation files
-	insinto /usr/share/stardict/tools
-	doins ${S}/src/tools/{dictd2dic,directory2dict,olddic2newdic,oxford2dic,pydict2dict,wquick2dict,stardict_dict_update}
+	exeinto /usr/share/stardict/tools
+	doexe ${S}/src/tools/{dictd2dic,directory2dict,olddic2newdic,oxford2dic,pydict2dict,wquick2dict,stardict_dict_update}
 }
 
 pkg_postinst() {
