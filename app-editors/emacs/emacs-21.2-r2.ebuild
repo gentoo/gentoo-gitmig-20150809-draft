@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2-r2.ebuild,v 1.12 2003/09/05 01:52:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2-r2.ebuild,v 1.13 2003/12/08 07:40:54 usata Exp $
 
 IUSE="X nls motif leim"
 
@@ -82,6 +82,5 @@ src_install () {
 	dodoc BUGS ChangeLog README
 
 	# Gives a warning if it doesn't exist
-	dodir /usr/share/emacs/21.2/leim
-	touch ${D}/usr/share/emacs/21.2/leim/.keep
+	keepdir /usr/share/emacs/21.2/leim
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r1.ebuild,v 1.5 2003/12/01 06:24:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r1.ebuild,v 1.6 2003/12/08 07:40:54 usata Exp $
 
 IUSE="X nls motif leim gnome Xaw3d"
 
@@ -76,8 +76,7 @@ src_install () {
 
 	dodoc BUGS ChangeLog README
 
-	dodir /usr/share/emacs/${PV}/leim
-	touch ${D}/usr/share/emacs/${PV}/leim/.keep
+	keepdir /usr/share/emacs/${PV}/leim
 
 	if use gnome
 	then
