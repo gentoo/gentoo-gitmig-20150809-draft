@@ -3,7 +3,7 @@ MD5 c61adb9263aaea4c593d90d7e752927a aterm-0.4.2-r8.ebuild 2085
 MD5 a2ca60a8178daa7cbe96df4d2a85d3fa aterm-0.4.2-r5.ebuild 1699
 MD5 366580a82bcdf781350a0d86d16fe67f aterm-0.4.2-r7.ebuild 1880
 MD5 d535b53a7c39be37614cab57ef5b88b4 ChangeLog 5757
-MD5 9af9ce6acdc64bf39422dc9845e541c9 aterm-0.4.2-r9.ebuild 2184
+MD5 2b46212d992635141e54497bf9ee1115 aterm-0.4.2-r9.ebuild 2166
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 8827b506401c73a1a7633d52d8c5228b aterm-0.4.2-r4.ebuild 1640
 MD5 c2aedeeb3e7cc1dcc9361a021a570973 files/aterm-0.4.2-paste.patch 2160
