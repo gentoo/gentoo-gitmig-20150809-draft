@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r2.ebuild,v 1.1 2004/05/10 05:56:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r2.ebuild,v 1.2 2004/05/11 07:30:22 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 		!net-mail/vimap
 		!virtual/imap-c-client
 		virtual/inetd"
-PROVIDE="virtual/imapd 
+PROVIDE="virtual/imapd
 		 virtual/imap-c-client"
 
 src_unpack() {
