@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.1.ebuild,v 1.3 2004/08/26 09:53:08 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.1.ebuild,v 1.4 2004/08/28 04:21:17 st_lim Exp $
 
 inherit eutils
 
@@ -191,7 +191,7 @@ src_install () {
 	# install some initial configuration
 	insinto ${HOMEDIR}
 	insopts -m0640 -o dspam -g dspam
-	doins ${FILESDIR}/trusted.users
+	[ ! -f ${HOMEDIR}/trusted.users ] && doins ${FILESDIR}/trusted.users
 	doins ${T}/untrusted.mailer_args
 	doins ${T}/default.prefs
 	doins ${T}/group
@@ -299,11 +299,8 @@ src_install () {
 	dosym ${LOGDIR}/dspam.messages ${HOMEDIR}/dspam.messages
 
 	# dspam enviroment
-	dodir /etc/env.d
-	keepdir /etc/env.d
-	insinto /etc/env.d
 	echo -ne "CONFIG_PROTECT_MASK=\"${HOMEDIR} ${CONFIGDIR}\"\n\n" > ${T}/40dspam
-	doins ${T}/40dspam || die
+	doenvd ${T}/40dspam || die
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.0.ebuild,v 1.1 2004/07/31 04:36:40 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.0.ebuild,v 1.2 2004/08/28 04:21:17 st_lim Exp $
 
 inherit eutils
 
@@ -146,7 +146,7 @@ src_install () {
 	# install some initial configuration
 	insinto ${HOMEDIR}
 	insopts -m0640 -o dspam -g dspam
-	doins ${FILESDIR}/trusted.users
+	[ -f ${HOMEDIR}/trusted.users ] || doins ${FILESDIR}/trusted.users
 	if use cyrus; then
 		echo "/usr/lib/cyrus/deliver %u" > ${T}/untrusted.mailer_args
 	elif use exim; then
