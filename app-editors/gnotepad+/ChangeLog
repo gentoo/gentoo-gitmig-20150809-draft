@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gnotepad+
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gnotepad+/ChangeLog,v 1.4 2004/06/24 21:55:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gnotepad+/ChangeLog,v 1.5 2004/08/10 13:33:29 fmccor Exp $
+
+  10 Aug 2004; Ferris McCormick <fmccor@gentoo.org> gnotepad+-1.3.3.ebuild:
+  Add ~sparc keyword (Bug 59944).  Builds and appears to run on sparc.
 
   13 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> gnotepad+-1.3.3.ebuild:
   Add IUSE; tidy
