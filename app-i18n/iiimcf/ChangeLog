@@ -1,9 +1,9 @@
 # ChangeLog for app-i18n/iiimcf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimcf/ChangeLog,v 1.1 2003/09/14 01:25:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimcf/ChangeLog,v 1.2 2003/09/14 01:48:07 usata Exp $
 
 *iiimcf-11.4.1467 (14 Sep 2003)
 
   14 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> iiimcf-11.4.1467.ebuild:
-  Initial import
+  Initial import. See Bug #28272
 
