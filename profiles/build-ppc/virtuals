@@ -21,3 +21,5 @@ virtual/flim		app-emacs/flim
 virtual/semi		app-emacs/semi
 virtual/tetex		app-text/tetex
 virtual/bittorrent	net-p2p/bittorrent
+virtual/logger		app-admin/sysklogd
+
