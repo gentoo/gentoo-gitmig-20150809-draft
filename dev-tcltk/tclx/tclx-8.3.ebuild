@@ -1,11 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.3 2002/10/05 05:39:12 drobbins Exp $
-
-IUSE="X"
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.4 2002/11/12 06:36:38 vapier Exp $
 
 DESCRIPTION="A set of extensions to TCL"
-
 HOMEPAGE="http://www.neosoft.com/TclX/"
 SRC_URI="ftp://ftp.slackware.com/pub/slackware/slackware-8.1/source/tcl/tclx/${PN}${PV}.tar.gz 
 	ftp://ftp.scriptics.com/pub/tcl/tcl8_3/tcl8.3.3.tar.gz 
@@ -14,10 +11,11 @@ SRC_URI="ftp://ftp.slackware.com/pub/slackware/slackware-8.1/source/tcl/tclx/${P
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
+IUSE="X"
 
 DEPEND="=dev-lang/tcl-8.3*
 	X? =dev-lang/tk-8.3*"
-RDEPEND=${DEPEND}
+
 S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
@@ -30,38 +28,28 @@ src_unpack() {
 src_compile() {
 	# we have to configure and build tcl before we can do tclx
 	cd ${WORKDIR}/tcl8.3.3/unix
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		|| die
-	emake CFLAGS="${CFLAGS}" || die
+	econf
+	emake CFLAGS="${CFLAGS}" || die "emake in tcl/unix failed"
 
-	use X && ( \
+	local myconf="--with-tcl=${WORKDIR}/tcl8.3.3/unix --enable-shared"
+
+	if [ `use X` ] ; then
 		# configure and build tk
 		cd ${WORKDIR}/tk8.3.3/unix
-		./configure --host=${CHOST} \
-			--prefix=/usr \
-			--mandir=/usr/share/man \
-			|| die
+		econf
 		emake CFLAGS="${CFLAGS}" || die
-	)
-
-	use X && myconf="--with-tk=${WORKDIR}/tk8.3.3/unix" || myconf="--enable-tk=no"
+		myconf="${myconf} --with-tk=${WORKDIR}/tk8.3.3/unix"
+	else
+		myconf="${myconf} --enable-tk=no"
+	fi
 
 	# configure and build tclx
 	cd ${S}/unix
-	./configure \
-		--with-tcl=${WORKDIR}/tcl8.3.3/unix \
-		${myconf} \
-		--enable-shared \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		|| die "./configure failed"
+	econf ${myconf}
 	make CFLAGS="${CFLAGS}" || die
 }
 
-src_install () {
+src_install() {
 	echo "installing tclx"
 	cd ${S}/unix
 	make INSTALL_ROOT=${D} install
@@ -69,4 +57,3 @@ src_install () {
 	dodoc CHANGES README TO-DO doc/CONVERSION-NOTES
 	doman doc/*.[n3]
 }
-
