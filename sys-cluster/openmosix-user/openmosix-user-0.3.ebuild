@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.ebuild,v 1.1 2003/04/12 17:34:35 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.ebuild,v 1.2 2003/04/13 20:01:41 tantive Exp $
 
 S=${WORKDIR}/openmosix-tools-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
@@ -29,8 +29,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cat Makefile | sed s/DIRS.*=/DIRS=autodiscovery/g > Makefile.tmp
-	mv Makefile.tmp Makefile
 	cat > configuration << EOF
 
 OPENMOSIX=/usr/src/linux
@@ -38,7 +36,7 @@ PROCDIR=/proc/hpc
 MONNAME=mmon
 CC=gcc
 INSTALLDIR=/usr
-CFLAGS=-I/m/include -I./ -I/usr/include -I\$(OPENMOSIX)/include ${CFLAGS}
+CFLAGS=-I/m/include -I./ -I/usr/include -I\${OPENMOSIX}/include -I${S}/moslib ${CFLAGS}
 INSTALL=/usr/bin/install
 EOF
 }
@@ -59,6 +57,7 @@ src_install() {
 		BINDIR=${D}/bin \
 		SBINDIR=${D}/sbin \
 		RCDIR=${D}/etc/init.d \
+		LIBDIR=${D}/usr/lib \
 		install
 
 	dodoc COPYING README
@@ -81,10 +80,11 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo " To complete openMosix installation, edit /etc/openmosix.map and then type:"
+	einfo " To complete openMosix installation, edit /etc/openmosix.map or"
+	einfo " delete it to use autodiscovery  and then type:"
 	einfo " # rc-update add openmosix default"
 	einfo " ...to add openMosix to the default runlevel.  This particular version of"
-	einfo " openmosix-user has been designed to work with the linux-2.4.18-openmosix-r1"
+	einfo " openmosix-user has been designed to work with the linux-2.4.18-openmosix-1"
 	einfo " or later kernel (>=sys-kernel/openmosix-sources-2.4.18)"
 	einfo
 }
