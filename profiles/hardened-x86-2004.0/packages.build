@@ -1,4 +1,4 @@
-sys-devel/hardened-gcc
+#sys-devel/hardened-gcc
 sys-apps/baselayout
 sys-libs/glibc
 sys-apps/texinfo

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-2004.0/packages,v 1.1 2004/02/01 20:33:55 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-2004.0/packages,v 1.2 2004/03/15 18:45:21 solar Exp $
 
 # base system stuff
 >dev-lang/gpc-2.1
@@ -10,7 +10,7 @@
 # toolchain stuff
 *>=sys-devel/binutils-2.13.90.0.6-r2
 *>=sys-devel/gcc-3.2.3-r2
-*>=sys-devel/hardened-gcc-2.4.5
+#*>=sys-devel/hardened-gcc-2.4.5
 *>=sys-libs/glibc-2.3.2-r1
 *virtual/modutils
 virtual/os-headers
