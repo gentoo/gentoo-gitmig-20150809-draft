@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/krusader
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.10 2003/02/12 05:02:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.11 2003/04/05 21:42:14 danarmak Exp $
 
 *krusader-1.12_beta1 (02 Jan 2003)
+
+  06 Apr 2003; root <root@gentoo.org> krusader-1.12_beta1.ebuild:
+  Add stable x86 keyword.
 
   02 Jan 2003; Hannes Mehnert <hannes@gentoo.org> krusader-1.12_beta1.ebuild:
   version bump, removed old ebuilds
