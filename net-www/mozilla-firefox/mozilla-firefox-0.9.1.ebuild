@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.14 2004/06/30 00:38:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9.1.ebuild,v 1.1 2004/06/30 00:38:24 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
@@ -8,9 +8,13 @@ S=${WORKDIR}/mozilla
 
 DESCRIPTION="The Mozilla Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
-SRC_URI="http://ftp.mozilla.org/pub/firefox/releases/${PV}/firefox-source-${PV}.tar.bz2"
+# Mirrors have it in one of the following places, depending on what
+# mirror you check and when you check it... :-(
+SRC_URI="
+	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/firefox-${PV}-source.tar.bz2
+	http://ftp.mozilla.org/pub/firefox/releases/${PV}/firefox-${PV}-source.tar.bz2"
 
-KEYWORDS="x86 ~ppc ~sparc alpha amd64 ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 IUSE="java gtk2 ipv6 gnome moznoxft truetype xinerama"
@@ -33,7 +37,6 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	virtual/glibc
 	dev-util/pkgconfig
-	dev-lang/perl
 	java? ( >=dev-java/java-config-0.2.0 )"
 
 # needed by src_compile() and src_install()
@@ -42,22 +45,12 @@ export MOZ_CALENDAR=0
 export MOZ_ENABLE_XFT=1
 
 src_unpack() {
-	unpack firefox-source-${PV}.tar.bz2 || die "unpack failed"
+	unpack firefox-${PV}-source.tar.bz2 || die "unpack failed"
 	cd ${S} || die "cd failed"
 
 	# alpha stubs patch from lfs project.
 	# <taviso@gentoo.org> (26 Jun 2003)
 	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
-	use amd64 && epatch ${FILESDIR}/mozilla-firebird-amd64.patch
-
-	# Backward/Forward mouse button support, from
-	# http://bugzilla.mozilla.org/show_bug.cgi?id=64485
-	# See bug 44646 (26 Apr 2004 agriffis)
-	epatch ${FILESDIR}/mozilla-firefox-mousebuttons.patch
-
-	# Fix compilation with gcc-3.4, bug 47870
-	# (26 Apr 2004 agriffis)
-	epatch ${FILESDIR}/firefox-0.8-gcc-3.4.patch
 }
 
 src_compile() {
@@ -238,26 +231,28 @@ src_install() {
 	if use gnome; then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/icon/firefox-icon.png
-		# Fix comment of menu entry
-		cd ${S}/build/package/rpm/SOURCES
-		cp mozilla.desktop mozillafirefox.desktop
-		perl -pi -e 's:Name=Mozilla:Name=Mozilla Firefox:' mozillafirefox.desktop
-		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Firefox Web Browser:' mozillafirefox.desktop
-		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/firefox:' mozillafirefox.desktop
-		perl -pi -e 's:Icon=mozilla-icon.png:Icon=firefox-icon.png:' mozillafirefox.desktop
-		cd ${S}
-		insinto /usr/share/gnome/apps/Internet
-		doins ${S}/build/package/rpm/SOURCES/mozillafirefox.desktop
+		# Fix bug 54179: Install .desktop file into /usr/share/applications
+		# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
+		insinto /usr/share/applications
+		doins ${FILESDIR}/icon/mozillafirefox.desktop
 	fi
+
+	# Normally firefox-0.9 must be run as root once before it can be
+	# run as a normal user.  Drop in some initialized files to avoid
+	# this.
+	einfo "Extracting firefox-${PV} initialization files"
+	tar xjpf ${FILESDIR}/firefox-0.9-init.tar.bz2 -C ${D}/usr/lib/MozillaFirefox
 }
 
 pkg_preinst() {
+	export MOZILLA_FIVE_HOME=${ROOT}/usr/lib/MozillaFirefox
+
 	# Remove the old plugins dir
 	pkg_mv_plugins /usr/lib/MozillaFirefox/plugins
 
 	# Remove entire installed instance to prevent all kinds of
 	# problems... see bug 44772 for example
-	rm -rf ${ROOT}/usr/lib/MozillaFirefox
+	rm -rf "${MOZILLA_FIVE_HOME}"
 }
 
 pkg_postinst() {
@@ -266,14 +261,18 @@ pkg_postinst() {
 	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
 	env-update
+
 	# Register Components and Chrome
 	einfo "Registering Components and Chrome..."
 	LD_LIBRARY_PATH=/usr/lib/MozillaFirefox ${MOZILLA_FIVE_HOME}/regxpcom
 	LD_LIBRARY_PATH=/usr/lib/MozillaFirefox ${MOZILLA_FIVE_HOME}/regchrome
+
 	# Fix permissions of component registry
 	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
+
 	# Fix directory permissions
 	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 0755 {} \; || :
+
 	# Fix permissions on chrome files
 	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
 
