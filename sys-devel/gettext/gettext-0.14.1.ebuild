@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.14 2004/11/05 03:11:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.15 2004/11/10 17:57:02 usata Exp $
 
 inherit eutils gnuconfig toolchain-funcs mono libtool
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-without_java.patch
 	epatch ${FILESDIR}/${P}-no-java-tests.patch
 
-	elibtoolize --reverse-deps
+	use ppc-macos || elibtoolize --reverse-deps
 	gnuconfig_update
 }
 
