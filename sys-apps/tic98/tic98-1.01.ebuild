@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tic98/tic98-1.01.ebuild,v 1.1 2002/10/19 22:40:21 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tic98/tic98-1.01.ebuild,v 1.2 2002/10/19 23:17:09 mjc Exp $
 
 # NOTE: The comments in this file are for instruction and documentation.
 # They're not meant to appear with your final, production ebuild.  Please
@@ -12,7 +12,7 @@
 # generated to contain the correct data.
 
 # Short one-line description of this package.
-DESCRIPTION="tic98 is one of the best compresssion systems as of March 1999"
+DESCRIPTION="tic98 is a compressor for black-and-white images, in particular scanned documents. It gets very good compression, better than AT&T's DjVu system.  tic98 also includes ppmd text compression (ppmd) and number compression (b_gamma_enc)"
 
 # Homepage, not used by Portage directly but handy for developer reference
 HOMEPAGE="http://www.cs.waikato.ac.nz/~singlis/"
@@ -100,8 +100,10 @@ src_compile() {
 	# to normal "make".
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
+	patch -p1 < $FILESDIR/${PN}.diff
 	emake all || die
 	emake all2 || die
+	#emake test || die
 	#make || die
 }
 
