@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios-imagepack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/ChangeLog,v 1.4 2004/06/24 22:08:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/ChangeLog,v 1.5 2004/07/08 23:20:31 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> nagios-imagepack-1.0.ebuild:
+  Added metadata
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> nagios-imagepack-1.0.ebuild:
+  Tidy up.
 
   15 Jan 2003; Dean Bailey <alron@gentoo.org> nagios-imagepack-1.0 :
   Changed ~x86 to x86 and added sparc and ppc keywords

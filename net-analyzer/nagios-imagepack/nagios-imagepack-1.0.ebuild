@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/nagios-imagepack-1.0.ebuild,v 1.6 2004/06/24 22:08:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/nagios-imagepack-1.0.ebuild,v 1.7 2004/07/08 23:20:31 eldad Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Nagios imagepacks - Icons and pictures for Nagios"
 HOMEPAGE="http://www.nagios.org"
 IMAGE_URI="mirror://sourceforge/nagios/"
@@ -22,6 +21,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc ~ppc ~amd64"
 
 RDEPEND="net-analyzer/nagios-core"
+
+IUSE=""
 
 src_unpack() {
 	local bn

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.2 2004/06/24 22:09:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.3 2004/07/08 23:24:36 eldad Exp $
 
 inherit eutils
 
@@ -28,8 +28,6 @@ RDEPEND=">=dev-lang/perl-5.6.1-r7
 	nagios-ntp? ( >=net-misc/ntp-4.1.1a )
 	nagios-ping? ( >=net-analyzer/fping-2.4_beta2-r1 )
 	nagios-ssh? ( >=net-misc/openssh-3.5_p1 )"
-
-S="${WORKDIR}/${P}"
 
 pkg_setup() {
 	enewgroup nagios
