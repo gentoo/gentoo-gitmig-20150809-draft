@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.96 2004/02/23 01:53:12 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.97 2004/03/02 17:23:01 lisa Exp $
+
+*distcc-2.13 (02 Mar 2004)
+
+  02 Mar 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.13.ebuild,
+  files/2.11.1p/conf, files/2.11.1p/init:
+  Version bump and to remove DISTCC_DIR remnants from the daemon config files
+  (see bug #42947). the config files are non critical, since an unuse envvar
+  never hurt anyone i will not bump 2.12.1.
 
   22 Feb 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.11.1.ebuild,
   distcc-2.11.2-r1.ebuild, distcc-2.11.2.ebuild, distcc-2.8-r2.ebuild,

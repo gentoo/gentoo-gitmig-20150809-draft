@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.11.1p/init,v 1.1 2003/10/18 20:18:15 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.11.1p/init,v 1.2 2004/03/02 17:23:01 lisa Exp $
 
 depend() {
 	need net
@@ -8,7 +8,6 @@ depend() {
 start() {
 	rm -f ${DISTCCD_PIDFILE}
 	ebegin "Starting distccd"
-	DISTCC_DIR="${DISTCC_DIR}" \
 	PATH="$(gcc-config --get-bin-path):${PATH}" \
 	/sbin/start-stop-daemon --start --quiet --startas ${DISTCCD_EXEC} \
 	--pidfile ${DISTCCD_PIDFILE} -- \
