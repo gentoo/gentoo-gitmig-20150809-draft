@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r1.ebuild,v 1.3 2004/05/10 14:07:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r1.ebuild,v 1.4 2004/06/07 13:31:11 aliz Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,7 +39,10 @@ src_unpack() {
 }
 
 src_compile() {
-	check_KV
+	# Only check_KV if /usr/src/linux exists
+	if [ -L ${ROOT}/usr/src/linux -o -d ${ROOT}/usr/src/linux ]; then
+		check_KV
+	fi
 
 	# prevent it from causing ICMP errors.
 	# http://bugs.gentoo.org/show_bug.cgi?id=23645
