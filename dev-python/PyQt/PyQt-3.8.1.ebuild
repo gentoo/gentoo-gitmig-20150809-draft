@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.8.1.ebuild,v 1.4 2004/02/26 19:01:28 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.8.1.ebuild,v 1.5 2004/03/02 18:09:42 kloeri Exp $
 
-inherit eutils distutils
+inherit distutils
 
 IUSE=""
 
@@ -34,8 +34,13 @@ src_unpack() {
 }
 
 src_compile() {
-
 	distutils_python_version
+
+	# fix qt-3.3 compile problem
+	if has_version '=x11-libs/qt-3.3*' ; then
+		epatch "${FILESDIR}/${P}-qt-3.3.patch"
+	fi
+
 	# standard qt sandbox problem workaround
 	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
 	dodir /usr/lib/python${PYVER}/site-packages
@@ -49,10 +54,11 @@ src_compile() {
 }
 
 src_install() {
+	distutils_python_version
+	dodir /usr/lib/python${PYVER}/site-packages
 	make DESTDIR=${D} install || die
 	dodoc README.Linux NEWS LICENSE README ChangeLog THANKS
 	dodir /usr/share/doc/${P}/
-	mv ${D}/usr/share/doc/* ${D}/usr/share/doc/${P}/
 	# I found out this location from the redhat rpm
 	insinto /usr/share/sip/qt
 	doins ${S}/sip/*

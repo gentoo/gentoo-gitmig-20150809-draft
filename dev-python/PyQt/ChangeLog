@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.28 2004/02/26 19:01:28 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.29 2004/03/02 18:09:42 kloeri Exp $
+
+  02 Mar 2004; <kloeri@gentoo.org> PyQt-3.8.1.ebuild,
+  files/PyQt-3.8.1-qt-3.3.patch:
+  Fix qt-3.3 compile problem. Close bug #43475.
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> PyQt-3.8.1.ebuild:
   Stable on sparc.
