@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/atool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.8 2004/06/24 21:27:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.9 2004/08/07 19:42:12 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> atool-0.25.0.ebuild,
+  atool-0.27.0.ebuild, atool-0.28.0.ebuild:
+  Typo in DESCRIPTION: managaging -> managing. Bug 59717.
 
 *atool-0.28.0 (20 Jun 2004)
 
