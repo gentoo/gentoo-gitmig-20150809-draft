@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.2 2003/06/21 13:43:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.3 2003/07/16 18:00:13 liquidx Exp $
 
 # Author: Alastair Tse <liquidx@gentoo.org>
 # 
@@ -59,6 +59,15 @@ if has_version ">=x11-libs/gtk+-2" || use gtk2; then
 	GTK2_FULL_VER=$(pkg-config gtk+-2.0 --modversion)
 	GTK2_MAJOR_VER=${GTK2_FULL_VER%.*}.0
 	GTK2_ENGINES_DIR=/usr/lib/gtk-2.0/${GTK2_MAJOR_VER}/engines
+fi
+
+# --- define some deps for binary packages
+if has_version "=x11-libs/gtk+-1.2*" && ! has_version ">=x11-libs/gtk+-2"; then
+	newdepend "=x11-libs/gtk+-1.2*"
+elif has_version "=x11-libs/gtk+-1.2*" && has_version ">=x11-libs/gtk+-2"; then
+	newdepend ">=x11-libs/gtk+-1.2"
+elif ! has_version "=x11-libs/gtk+-1.2*" && has_version ">=x11-libs/gtk+-2"; then
+	newdepend ">=x11-libs/gtk+-2"
 fi
 
 # --- if we don't have any gtk version, we depend on USE flags to tell us
