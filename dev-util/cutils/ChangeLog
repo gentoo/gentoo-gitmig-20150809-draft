@@ -1,12 +1,17 @@
 # ChangeLog for dev-util/cutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.4 2003/02/12 06:39:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.5 2003/09/09 17:28:54 george Exp $
+
+*cutils-1.6-r1 (09 Sep 2003)
+
+  09 Sep 2003; George Shapovalov <george@gentoo.org> cutils-1.6-r1.ebuild :
+  few cleanups + added MAKEOPTS=-j1 before emake, as per #27726
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *cutils-1.6 (01 Aug 2002)
 
-  1 Aug 2002; George Shapovalov <george@gentoo.org> cutils-1.6.ebuildi, cutils-1.6-gentoo.diff :
+  1 Aug 2002; George Shapovalov <george@gentoo.org> cutils-1.6.ebuild, cutils-1.6-gentoo.diff :
 
   initial release
   
