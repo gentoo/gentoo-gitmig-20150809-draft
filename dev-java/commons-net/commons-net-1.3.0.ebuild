@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.3.0.ebuild,v 1.4 2005/01/01 18:19:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.3.0.ebuild,v 1.5 2005/01/10 03:25:17 robbat2 Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,8 @@ HOMEPAGE="http://jakarta.apache.org/commons/net/"
 SRC_URI="mirror://apache/jakarta/commons/net/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-core-1.5.4
-	>=dev-java/oro-2.0.7"
+	>=dev-java/oro-2.0.7
+	junit? ( dev-java/junit )"
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-2.0"
 SLOT="0"
