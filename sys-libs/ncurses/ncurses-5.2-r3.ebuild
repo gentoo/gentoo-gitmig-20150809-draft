@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r3.ebuild,v 1.1 2001/03/09 10:26:59 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r3.ebuild,v 1.2 2001/04/23 04:17:55 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,15 +9,10 @@ DESCRIPTION="Linux console display libarary"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/ncurses/${A}
 	 ftp://ftp.gnu.org/pub/gnu/ncurses/${A}"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
-DEPEND="virtual/glibc gpm? ( >=sys-libs/gpm-1.19.3 )"
+DEPEND="virtual/glibc"
 
 src_compile() {
 
-    local myconf
-    if [ "`use gpm`" ]
-    then
-      myconf="--with-gpm"
-    fi
     if [ -z "$DEBUG" ]
     then
       myconf="${myconf} --without-debug"
