@@ -1,13 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.2.ebuild,v 1.2 2003/10/04 10:46:13 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.2.ebuild,v 1.3 2003/12/10 18:41:54 pappy Exp $
 
 DESCRIPTION="p0f performs passive OS detection based on SYN packets."
-SRC_URI="http://lcamtuf.coredump.cx/p0f.tgz"
+# the p0f.tgz always resembles the latest version, trashing the digest md5sum then, discovered and fixed by gustavoz
+SRC_URI="http://lcamtuf.coredump.cx/p0f/${P}.tgz"
 HOMEPAGE="http://lcamtuf.coredump.cx/p0f.shtml"
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND="net-libs/libpcap"
 
