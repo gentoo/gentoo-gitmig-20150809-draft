@@ -1,6 +1,6 @@
 # Copyright 2002 Maik Schreiber
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.0.ebuild,v 1.5 2002/10/19 12:22:53 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.0.ebuild,v 1.6 2002/11/29 23:28:25 vapier Exp $
 
 MY_PV=${PV//.}
 S="${WORKDIR}/jEdit"
@@ -27,8 +27,8 @@ src_compile() {
 }
 
 src_install () {
-	mkdir -m 755 -p ${D}/usr/jedit
-	mkdir -m 755 ${D}/usr/bin
+	dodir /usr/jedit
+	dodir /usr/bin
 
 	cp -R jedit.jar jars macros modes properties startup ${D}/usr/jedit
 	chmod -R u+rw,ug-s,go+u,go-w \
