@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.18 2003/04/16 16:06:00 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.19 2003/04/17 06:28:42 phosphan Exp $
+
+  16 Apr 2003; Patrick Kursawe <phosphan@gentoo.org>
+  digest-findutils-4.1.7-r4 :
+  digest for selinux patch was missing
 
 *findutils-4.1.7-r4 (11 Apr 2003)
 
