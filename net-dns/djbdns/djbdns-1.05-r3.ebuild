@@ -1,17 +1,25 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r2.ebuild,v 1.2 2002/07/11 06:30:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.1 2002/07/12 20:55:58 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Excellent high-performance DNS services"
-SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz"
+SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
+		 http://www.fefe.de/dns/djbdns-1.05-test17.diff.bz2"
 HOMEPAGE="http://cr.yp.to/djbdns.html"
 
 LICENSE="as-is"
+KEYWORDS="x86"
+SLOT="0"
 
 DEPEND="virtual/glibc"
 RDEPEND=">=sys-apps/daemontools-0.70
 	sys-apps/ucspi-tcp"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	use ipv6 && bzcat ${DISTDIR}/djbdns-1.05-test17.diff.bz2 | patch -d ${S} -p1
+}
 
 src_compile() {                           
 	echo "gcc ${CFLAGS}" > conf-cc
