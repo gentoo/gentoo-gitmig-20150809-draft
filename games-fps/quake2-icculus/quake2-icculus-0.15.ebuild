@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15.ebuild,v 1.2 2003/12/27 19:45:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15.ebuild,v 1.3 2003/12/30 04:01:17 mr_bones_ Exp $
 
 inherit games eutils gcc
 
@@ -35,7 +35,7 @@ src_unpack() {
 	cd ${S}
 	[ `gcc-major-version` == 3 ] && epatch ${FILESDIR}/${PV}-Makefile-gcc3.patch
 	epatch ${FILESDIR}/${PV}-Makefile-optflags.patch
-	ln -s `which echo` ${T}/more 
+	ln -s `which echo` ${T}/more
 	for g in `use rogue` `use xatrix` ; do
 		mkdir -p ${S}/src/${g}
 		cd ${S}/src/${g}
