@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.5 2004/10/11 23:10:52 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.6 2004/10/14 11:31:09 eldad Exp $
 
 inherit webapp
 
@@ -24,15 +24,24 @@ DEPEND="apache2? ( >=net-www/apache-2 )
 	dev-php/mod_php
 	net-analyzer/snort"
 
-pkg_setup() {
-	# Check if mod_php was emerged with GD
-	my_modphp=$(best_version dev-php/mod_php)
+check_useflag() {
+	local my_pkg=$(best_version ${1})
+	local my_flag=${2}
 
-	if [[ ! $(grep -wo gd /var/db/pkg/${my_modphp}/USE) ]];
+	if [[ $(grep -wo ${my_flag} /var/db/pkg/${my_pkg}/USE) ]]
 	then
-		eerror "${my_modphp} was compiled without gd support. Please reemerge it with USE=gd."
-		die "pkg_setup failed"
+		return 0
 	fi
+
+	eerror "${my_pkg} was compiled without ${my_flag}. Please re-emerge it with USE=${my_flag}"
+	die "check_useflag failed"
+
+}
+
+pkg_setup() {
+	webapp_pkg_setup
+
+	check_useflag dev-php/mod_php gd
 }
 
 src_compile () {
