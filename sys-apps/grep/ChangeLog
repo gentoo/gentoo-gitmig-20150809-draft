@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.31 2004/08/17 22:38:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.32 2004/08/19 16:24:07 lanius Exp $
+
+*grep-2.5.1-r5 (19 Aug 2004)
+
+  19 Aug 2004; Heinrich Wendel <lanius@gentoo.org> grep-2.5.1-r5.ebuild,
+  files/grep-2.5.1-fgrep.patch.bz2, files/grep-2.5.1-gofast.patch.bz2,
+  files/grep-2.5.1-i18n.patch.bz2, files/grep-2.5.1-oi.patch.bz2:
+  better performance on utf8 systems
 
   17 Aug 2004; Aron Griffis <agriffis@gentoo.org> grep-2.5.1-r4.ebuild:
   Move uclibc stuff forward from -r1. It appears solar only put it in -r1 for
