@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/xpvm-1.2.5-r2.ebuild,v 1.7 2004/08/14 13:45:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/xpvm-1.2.5-r2.ebuild,v 1.8 2004/09/03 19:44:42 pvdabeel Exp $
 
 DESCRIPTION="XPVM: A graphical console and monitor for PVM"
 SRC_URI="http://www.netlib.org/pvm3/xpvm/XPVM.src.1.2.5.tgz"
@@ -13,7 +13,7 @@ DEPEND=">=sys-cluster/pvm-3.4.1-r1
 RDEPEND=""
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="LGPL-2"
 
 src_unpack() {

@@ -1,6 +1,23 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.13 2004/08/30 14:01:50 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.14 2004/09/03 19:44:42 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  keepalived-1.1.3.ebuild, keepalived-1.1.5.ebuild, keepalived-1.1.6.ebuild,
+  keepalived-1.1.7.ebuild:
+  Masked keepalived-1.1.7.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  keepalived-1.1.3.ebuild, keepalived-1.1.5.ebuild, keepalived-1.1.6.ebuild:
+  Masked keepalived-1.1.6.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  keepalived-1.1.3.ebuild, keepalived-1.1.5.ebuild:
+  Masked keepalived-1.1.5.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  keepalived-1.1.3.ebuild:
+  Masked keepalived-1.1.3.ebuild stable for ppc
 
 *keepalived-1.1.7 (30 Aug 2004)
 
