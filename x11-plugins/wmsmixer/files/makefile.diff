@@ -1,0 +1,31 @@
+--- Makefile.orig	2002-10-04 10:53:52.000000000 -0500
++++ Makefile	2002-10-04 11:01:50.000000000 -0500
+@@ -150,12 +150,12 @@
+ 
+   BOOTSTRAPCFLAGS =
+ 
+-               CC = gcc
++               CC = g++
+                AS = as
+ 
+ .SUFFIXES: .cc
+ 
+-              CXX = c++
++              CXX = g++
+ 
+           CXXFILT = c++filt
+            CXXLIB =
+@@ -887,13 +887,6 @@
+ 	fi
+ 	$(INSTALL) $(INSTALLFLAGS) $(INSTPGMFLAGS)  wmsmixer $(DESTDIR)$(BINDIR)/wmsmixer
+ 
+-all:: wmsmixer.$(MANNEWSUFFIX)
+-
+-wmsmixer.$(MANNEWSUFFIX): wmsmixer.$(MANSRCSUFFIX)
+-	$(RM) $@
+-	cd `dirname wmsmixer` && \
+-	$(LN) `basename wmsmixer.$(MANSRCSUFFIX)` `basename $@`
+-
+ cleandir::
+ 	$(RM) wmsmixer.$(MANNEWSUFFIX)
+ 

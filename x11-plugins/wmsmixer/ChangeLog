@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmsmixer
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.1 2002/10/04 16:05:45 raker Exp $
+
+*wmsmixer-0.5 (04 Oct 2002)
+
+  04 Oct 2002; Nick Hadaway <raker@gentoo.org> wmsmixer-0.5.ebulid,
+  files/digest-wmsmixer-0.5, files/gcc3.diff, files/makefile.diff :
+  Initial add of ebuild to portage.
