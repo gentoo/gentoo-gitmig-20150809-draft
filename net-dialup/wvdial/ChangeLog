@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.11 2003/08/21 22:50:28 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.12 2003/09/12 13:59:18 seemant Exp $
+
+  12 Sep 2003; Seemant Kulleen <seemant@gentoo.org> wvdial-1.53-r1.ebuild:
+  added postinst blurb that users MUST be in BOTH the dialout and uucp groups to
+  use wvdial. Thanks to: Björn Michaelsen <bmichaelsen@t-email.de> in bug #27506
 
   21 Aug 2003; Will Woods <wwoods@gentoo.org> wvdial-1.53-r1.ebuild:
   Marked stable for alpha
