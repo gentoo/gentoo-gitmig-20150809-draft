@@ -1,10 +1,10 @@
 # ChangeLog for net-www/viewcvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/ChangeLog,v 1.1 2003/05/01 18:12:42 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/ChangeLog,v 1.2 2003/05/06 12:43:13 pauldv Exp $
 
 *viewcvs-0.9.2 (01 May 2003)
 
-  01 May 2003; Paul de Vrieze pauldv@gentoo.org viewcvs-0.9.2.ebuild,
+  01 May 2003; Paul de Vrieze <pauldv@gentoo.org> viewcvs-0.9.2.ebuild,
   viewcvs-0.9.2_p20030430.ebuild:
   Initial import of two view cvs ebuilds. The 0.9.2 version is the current
   stable release whereas the snapshot version is a newer release that also works
