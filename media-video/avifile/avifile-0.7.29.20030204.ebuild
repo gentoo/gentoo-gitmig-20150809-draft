@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.1 2003/02/05 00:57:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.2 2003/02/06 02:09:53 raker Exp $
 
 IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
 
@@ -31,13 +31,11 @@ DEPEND=">=media-libs/divx4linux-20020418
 	qt? ( >=x11-libs/qt-3.0.3 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	esd? ( >=media-sound/esound-0.2.28 )"
-
 SLOT="0.7"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 src_compile() {
-
 	local myconf=""
 	local kdepre=""
 
@@ -141,12 +139,10 @@ src_compile() {
 		--with-fpic \
 		--with-gnu-ld \
 		${myconf} || die
-		
 	emake || die
 }
 
 src_install () {
-
 	dodir /usr/lib /usr/bin
 	use avi && dodir /usr/lib/win32
 
@@ -159,3 +155,9 @@ src_install () {
 	dodoc VIDEO-PERFORMANCE WARNINGS
 }
 
+pkg_postinst() {
+	einfo "In order to use certain video modes, you must be root"
+	einfo "chmod +s /usr/bin/aviplay to suid root"
+	einfo "As this is considered a security risk on multiuser"
+	einfo "systems, this is not done by default"
+}
