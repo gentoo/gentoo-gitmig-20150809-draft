@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r1.ebuild,v 1.4 2000/10/02 03:35:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r1.ebuild,v 1.5 2000/10/03 16:02:07 achim Exp $
 
 P=perl-5.6.0
 A=${P}.tar.gz
@@ -58,9 +58,9 @@ STDH    =\$(wildcard /usr/include/linux/*.h) \$(wildcard /usr/include/asm/*.h) \
 	\$(wildcard /usr/include/scsi/*.h)
 GCCDIR  = \$(shell gcc --print-file-name include)
 
-PERLLIB = \$(D)/usr/lib/perl5/%{perlver}%{perlrel}
+PERLLIB = \$(D)/usr/lib/perl5/5.6.0
 PERL    = PERL5LIB=\$(PERLLIB) \$(D)/usr/bin/perl
-PHDIR   = \$(PERLLIB)/\${PARCH}-linux
+PHDIR   = \$(PERLLIB)/i686-linux
 H2PH    = \$(PERL) \$(D)/usr/bin/h2ph -d \$(PHDIR)/
 
 all: std-headers gcc-headers fix-config
@@ -76,15 +76,15 @@ fix-config: \$(PHDIR)/Config.pm
 
 EOF
 
-MainDir=$(pwd)
-cd modules
-for module in * ; do 
-    eval $($MainDir/perl '-V:installarchlib')
-    mkdir -p $D/$installarchlib
-    try make -C $module install PREFIX=$D/usr \
-        INSTALLMAN3DIR=$D/usr/man/man3
-done
-cd $MainDir
+#MainDir=$(pwd)
+#cd modules
+#for module in * ; do 
+#    eval $($MainDir/perl '-V:installarchlib')
+#    mkdir -p $D/$installarchlib
+#    try make -C $module install PREFIX=$D/usr \
+#        INSTALLMAN3DIR=$D/usr/man/man3
+#done
+#cd $MainDir
 
 
 #man pages

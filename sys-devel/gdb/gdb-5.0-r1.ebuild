@@ -1,13 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.0-r1.ebuild,v 1.3 2000/09/15 20:09:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.0-r1.ebuild,v 1.4 2000/10/03 16:02:07 achim Exp $
 
 P=gdb-5.0      
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU debugger"
-SRC_URI="ftp://sourceware.cygnus.com/pub/gdb/releases/${A}"
+SRC_URI="ftp://sourceware.cygnus.com/pub/gdb/releases/${A}
+	 ftp://ftp.freesoftware.com/pub/sourceware/gdb/releases/${A}"
+
 HOMEPAGE="http://www.gnu.org/software/gdb/gdb.html"
 
 src_compile() {                           

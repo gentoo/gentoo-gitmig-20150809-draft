@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17-r2.ebuild,v 1.1 2000/10/03 14:44:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17-r2.ebuild,v 1.2 2000/10/03 16:02:07 achim Exp $
 
 P=linux-UP-2.2.17
 A="linux-2.2.17.tar.bz2 i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz
@@ -19,7 +19,9 @@ SRC_URI="ftp://ftp.uk.kernel.org/pub/linux/kernel/v2.2/linux-2.2.17.tar.bz2
 	 http://devlinux.com/pub/namesys/linux-2.2.17-reiserfs-3.5.26-patch.gz
 	 http://people.redhat.com/mingo/raid-patches/raid-2.2.17-A0
 	 http://ishmael.nmh.northfield.ma.us/~zander/nv-agpgart/patch-2.2.16-agpgart.bz2
-	 ftp://ftp.kernel.org/pub/linux/kernel/people/hedrick/ide.2.2.17ide.2.2.17.all.20000904.patch.bz2
+	 ftp://ftp.kernel.org/pub/linux/kernel/people/hedrick/ide-2.2.17/ide.2.2.17.all.20000904.patch.bz2
+	 ftp://ftp.uk.kernel.org/pub/linux/kernel/people/hedrick/ide-2.2.17/ide.2.2.17.all.20000904.patch.bz2
+	 ftp://ftp.de.kernel.org/pub/linux/kernel/people/hedrick/ide-2.2.17/ide.2.2.17.all.20000904.patch.bz2
 	 http://www.davin.ottawa.on.ca/pppoe/pppoed0.47.tgz"
 
 HOMEPAGE="http://www.kernel.org/
