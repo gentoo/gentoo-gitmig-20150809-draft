@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9.ebuild,v 1.5 2004/07/15 03:42:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9.ebuild,v 1.6 2004/09/02 08:45:56 lv Exp $
 
 inherit kmod
 
@@ -15,7 +15,7 @@ DEPEND="virtual/linux-sources
 SLOT="${KV}"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 ~alpha ~ppc ~sparc ~amd64"
 
 if [ "${KV_MINOR}" == "4" ]
 then

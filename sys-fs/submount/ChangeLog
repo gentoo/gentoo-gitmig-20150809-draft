@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/submount
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.3 2004/06/24 22:53:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.4 2004/09/02 08:45:56 lv Exp $
+
+  02 Sep 2004; Travis Tilley <lv@gentoo.org> submount-0.9.ebuild:
+  added ~amd64 keyword
 
   28 Apr 2004; <coxj@gentoo.org> submount-0.9.ebuild:
   Fix 2.4 build
