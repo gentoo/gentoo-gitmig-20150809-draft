@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/pam_ldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.10 2004/02/08 20:23:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.11 2004/02/08 21:00:06 robbat2 Exp $
+
+*pam_ldap-167 (08 Feb 2004)
+
+  08 Feb 2004; Robin H. Johnson <robbat2@gentoo.org> pam_ldap-167.ebuild:
+  bug #23362 again, bump to 167.
 
   08 Feb 2004; Robin H. Johnson <robbat2@gentoo.org> pam_ldap-164.ebuild:
   bug #23362, version bump.
