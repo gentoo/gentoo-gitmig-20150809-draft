@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.8 2004/04/28 20:53:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.9 2004/04/29 08:47:41 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network Information Service server"
@@ -34,6 +34,7 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/ypserv.rc ypserv
 	newexe ${FILESDIR}/rpc.yppasswdd rpc.yppasswdd
+	newexe ${FILESDIR}/rpc.ypxfrd rpc.ypxfrd
 
 	# Save the old config into the new package as CONFIG_PROTECT
 	# doesn't work for this package.
