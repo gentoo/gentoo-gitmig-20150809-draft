@@ -1,5 +1,5 @@
-MD5 61130f2e7e26074ab8cb27b33b70ef99 udev-0.3.ebuild 1560
-MD5 a2cee961e939c63703a509cf8fb38967 ChangeLog 571
+MD5 eed728de6213759fb6f411579482ffb4 udev-0.3.ebuild 1592
+MD5 6d4c3b6ce986bccdb91d89b4837db7d8 ChangeLog 758
 MD5 d399ff00f6745741dfa78cfb944fc5b2 udev-0.2.ebuild 1448
 MD5 ebe0e5db30b74307da3dcbe4fa5c6709 files/digest-udev-0.2 60
 MD5 97e31caf42d33ffd640691e3aeed5a73 files/udev-0.2-major_minor-in-decimal.patch 1303
