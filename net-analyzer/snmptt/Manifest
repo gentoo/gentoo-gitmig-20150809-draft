@@ -1,6 +1,18 @@
-MD5 bf4b53ef0b454f32d54c054068740212 ChangeLog 1009
-MD5 193ab07812b3cd299e6fd2dd3d40d15c metadata.xml 215
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 298a7732050b79b557cf3f2c77d13398 snmptt-0.9-r1.ebuild 1268
+MD5 2ce46afb4c8c3bd5d58f75acaba15f3f snmptt-1.0.ebuild 1266
 MD5 f08470442acfc5d2ff62ad4075a4b15b snmptt-0.9.ebuild 1159
-MD5 38e0aa74b949f2853eaf1abc14bc984d snmptt-0.9-r1.ebuild 1269
-MD5 1563776a631f989d7d781026125a53d0 files/digest-snmptt-0.9 59
+MD5 a36d7792d5157be15d65f23aecf47738 ChangeLog 1132
+MD5 193ab07812b3cd299e6fd2dd3d40d15c metadata.xml 215
 MD5 1563776a631f989d7d781026125a53d0 files/digest-snmptt-0.9-r1 59
+MD5 1563776a631f989d7d781026125a53d0 files/digest-snmptt-0.9 59
+MD5 b6787c534ab58fab31a50732394c5027 files/digest-snmptt-1.0 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfPyMT+MN7JbqCpMRAhrrAKCQW+js+Gc5FIHPWinybJgb/mumwwCgkNfm
+1b6l9kkPGmd+H0xgvcpVEv0=
+=jeUP
+-----END PGP SIGNATURE-----
