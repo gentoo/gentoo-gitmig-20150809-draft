@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 41d6c0ba999d7b4af929e07368693a3f metadata.xml 261
+MD5 eb095528668f38d1814a450a718c1924 mod_bw-0.5_rc1.ebuild 720
+MD5 543d1b7f5a1d8bec846c74f1aea3550c ChangeLog 375
+MD5 3df4aa027274bb447f076aef3d2ba92f files/11_mod_bw.conf 518
+MD5 e115388638f885e2b23d665bae2bed12 files/digest-mod_bw-0.5_rc1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCENzumPFBzbX68WERAhS/AJ9fMfpYdmuvrUOkbiq6UoS8ANjuNwCfZ3dJ
+3yK0sPcOJ0xx9ZB8D49tMbg=
+=Uj5F
+-----END PGP SIGNATURE-----
