@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.0-r2.ebuild,v 1.2 2003/09/05 23:40:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.0-r2.ebuild,v 1.3 2003/11/26 18:25:20 mholzer Exp $
 inherit eutils
 
 DESCRIPTION="Nagios $PV plugins - Pack of plugins to make Nagios work properly"
 HOMEPAGE="http://www.nagios.org/"
-SRC_URI="mirror://sourceforge/nagiosplug/nagios-plugins-1.3.0.tar.gz"
+SRC_URI="mirror://sourceforge/nagiosplug/${P}.tar.gz"
+RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc"
@@ -24,7 +25,7 @@ DEPEND=">=net-dns/bind-tools-9.2.2_rc1
 		postgres? ( >=dev-db/postgresql-7.2 )
 		ldap? ( >=net-nds/openldap-2.0.25 )"
 
-S="${WORKDIR}/nagios-plugins-1.3.0"
+S="${WORKDIR}/${P}"
 
 pkg_setup() {
 	enewgroup nagios
