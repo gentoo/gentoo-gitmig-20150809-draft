@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# Donny Davies <woodchip@gentoo.org> (03 Aug 2002)
+# Needs to wait for the next baselayout release.
+=net-misc/nut-0.50.1
+
 # <george@gentoo.org> (03 Aug 2002)
 # masked for testing.
 # PLEASE DO NOT UNMASK ON SERVER! Insted please let me know if it tested Ok 
@@ -84,7 +88,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1169 2002/08/04 02:41:33 carpaski Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1170 2002/08/04 02:52:11 woodchip Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
