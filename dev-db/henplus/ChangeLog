@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/henplus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.5 2004/07/19 09:48:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.6 2004/07/23 09:25:20 axxo Exp $
+
+*henplus-0.9.5-r2 (23 Jul 2004)
+
+  23 Jul 2004; Thomas Matthijs <axxo@gentoo.org> files/henplus.patch,
+  +henplus-0.9.5-r2.ebuild:
+  Fixed patch to find readline thanks to Ole Langbehn <neurolabs@web.de> in 40197
 
   19 Jul 2004; David Holm <dholm@gentoo.org> henplus-0.9.5-r1.ebuild:
   Added to ~ppc.
