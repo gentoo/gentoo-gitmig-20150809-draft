@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.13 2003/05/11 17:21:39 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.14 2003/05/11 22:45:09 nakano Exp $
 
 *canna-3.6_p3 (11 May 2003)
+  11 May 2003; Masatomo Nakano <nakano@gentoo.org> files/canna-3.6_p3-gentoo.diff:
+  Fixed bug.
+
   11 May 2003; Masatomo Nakano <nakano@gentoo.org> canna-3.6_p1.ebuild,
   canna.initd,canna-3.6_p3-gentoo.diff:
 
