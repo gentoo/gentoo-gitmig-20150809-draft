@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.8 2002/12/17 19:36:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.9 2003/01/16 01:26:24 mcummings Exp $
+
+*libwww-perl-5.8 (15 Jan 2003)
+
+  15 Jan 2003; Michael Cummings <mcummings@gentoo.org> : libwww-perl-5.8.ebuild:
+
+  Version bump was for dep in MythTV, as well as bugs 12553 and 13045. 5.66
+  is no longer available, 5.8 is the next stable.
+
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
