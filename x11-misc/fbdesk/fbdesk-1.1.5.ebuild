@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.1.5.ebuild,v 1.8 2004/09/09 17:36:55 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.1.5.ebuild,v 1.9 2004/09/20 22:14:34 bcowan Exp $
 
 inherit eutils gcc
 
@@ -8,7 +8,7 @@ DESCRIPTION="fluxbox-util application that creates and manage icons on your Flux
 HOMEPAGE="http://www.fluxbox.org/fbdesk/"
 SRC_URI="http://www.fluxbox.org/download/${P}.tar.gz"
 IUSE=""
-LICENSE="GPL-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc ~ia64"
 
