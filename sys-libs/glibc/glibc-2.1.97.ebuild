@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.97.ebuild,v 1.1 2000/11/07 13:26:38 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.97.ebuild,v 1.2 2000/11/10 16:00:11 achim Exp $
 
-A="$P.tar.bz2 glibc-linuxthreads-${PV}.tar.gz"
+A="$P.tar.bz2 glibc-linuxthreads-${PV}.tar.gz glibc-compat-2.1.2.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 SRC_URI="ftp://sourceware.cygnus.com/pub/glibc/releases/glibc-${PV}.tar.bz2
@@ -13,25 +13,13 @@ SRC_URI="ftp://sourceware.cygnus.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 src_compile() {                           
-	if [ "$CHOST" = "i686-pc-linux-gnu" ]
-	then
-		CHOST=i586-pc-linux-gnu #this is so there's no PII specific stuff
-	fi
 
-	local myopts
-
-	if ["`use glibc-2.2`"]
-	then
-	  myopts="--prefix=/usr"
-	else
-	  myopts="--prefix=/opt/glibc-2.2-sdk"
-	fi
         rm -rf buildhere
 	mkdir buildhere
 	cd buildhere
 	try ../configure --host=${CHOST} --without-cvs \
-		--enable-add-ons=linuxthreads,crypt \
-		 --disable-profile $myopts
+		--enable-add-ons=linuxthreads,crypt,localedata \
+		 --disable-profile --prefix=/usr
 	try make 
 	make check
 }
@@ -40,10 +28,6 @@ src_unpack() {
     unpack glibc-${PV}.tar.bz2
     cd ${S}
     unpack glibc-linuxthreads-${PV}.tar.gz
-
-    # This patch is required to compile with binutils higher than
-    # 2.9.5.0.42
-    #cp ${O}/files/setjmp.S ${S}/sysdeps/i386/elf/setjmp.S
 }
 
 src_install() {
@@ -60,11 +44,8 @@ src_install() {
     install -m 755 ${O}/files/nscd ${D}/etc/rc.d/init.d/nscd
     dodir /var/db
     install -m 644 nss/db-Makefile ${D}/var/db/Makefile
-    strip ${D}/sbin/*
-    strip ${D}/usr/bin/*
-    strip ${D}/usr/sbin/*
-    prepinfo
-    prepman
+    rm ${D}/lib/ld-linux.so.2
+    rm ${D}/lib/libc.so.6
     rm -rf documentation
     mkdir documentation
     mkdir documentation/html
@@ -89,5 +70,23 @@ src_install() {
     #sed -e "s/ERR/GLIBCBUG/g" ucontext.h.orig > ucontext.h
 }
 
+pkg_preinst()
+{
+  echo "Saving ld-linux and libc6"
 
+  cp ${ROOT}lib/ld-linux.so.2 ${ROOT}tmp
+  sln ${ROOT}tmp/ld-linux.so.2 ${ROOT}lib/ld-linux.so.2
+  cp ${ROOT}lib/libc.so.6 ${ROOT}tmp
+  sln ${ROOT}tmp/libc.so.6 ${ROOT}lib/libc.so.6
+}
+
+pkg_postinst()
+{
+  echo "Setting ld-linux and libc6"
+
+  sln ${ROOT}lib/ld-2.1.3.so ${ROOT}lib/ld-linux.so.2
+  sln ${ROOT}lib/libc-2.1.3.so ${ROOT}lib/libc.so.6
+  rm  ${ROOT}tmp/ld-linux.so.2
+  rm  ${ROOT}tmp/libc.so.6
+}
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r3.ebuild,v 1.1 2000/11/10 11:55:21 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r3.ebuild,v 1.2 2000/11/10 16:00:11 achim Exp $
 
 P=glibc-2.1.3
 A="glibc-2.1.3.tar.gz glibc-crypt-2.1.tar.gz 
@@ -73,8 +73,8 @@ src_install() {
     install -m 755 ${O}/files/nscd ${D}/etc/rc.d/init.d/nscd
     dodir /var/db
     install -m 644 nss/db-Makefile ${D}/var/db/Makefile
-    preplib /usr
-    preplib /
+    rm ${D}/lib/ld-linux.so.2
+    rm ${D}/lib/libc.so.6
     rm -rf documentation
     mkdir documentation
     mkdir documentation/html
@@ -99,5 +99,24 @@ src_install() {
     sed -e "s/ERR/GLIBCBUG/g" ucontext.h.orig > ucontext.h
 }
 
+pkg_preinst()
+{
+  echo "Saving ld-linux and libc6"
+
+  cp ${ROOT}lib/ld-2.1.3.so ${ROOT}tmp
+  sln ${ROOT}tmp/ld-2.1.3.so ${ROOT}lib/ld-linux.so.2
+  cp ${ROOT}lib/libc-2.1.3.so ${ROOT}tmp
+  sln ${ROOT}tmp/libc-2.1.3.so ${ROOT}lib/libc.so.6
+}
+
+pkg_postinst()
+{
+  echo "Setting ld-linux and libc6"
+
+  sln ${ROOT}lib/ld-2.1.3.so ${ROOT}lib/ld-linux.so.2
+  sln ${ROOT}lib/libc-2.1.3.so ${ROOT}lib/libc.so.6
+  rm  ${ROOT}tmp/ld-2.1.3.so
+  rm  ${ROOT}tmp/libc-2.1.3.so
+}
 
 
