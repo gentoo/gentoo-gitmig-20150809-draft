@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/connectorj
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/connectorj/ChangeLog,v 1.1 2004/07/30 12:35:41 karltk Exp $
+
+*connectorj-3.0.14 (30 Jul 2004)
+
+  30 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org> connectorj-3.0.14.ebuild:
+  Initial import. Ebuild submitted by myself.
