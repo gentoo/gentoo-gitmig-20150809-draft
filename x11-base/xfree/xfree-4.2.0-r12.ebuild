@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.18 2002/12/09 04:41:17 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.19 2003/02/13 16:53:47 vapier Exp $
 
 IUSE="sse nls mmx 3dnow 3dfx"
 
