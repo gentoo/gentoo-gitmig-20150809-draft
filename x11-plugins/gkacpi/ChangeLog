@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkacpi
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkacpi/ChangeLog,v 1.3 2003/10/06 06:56:34 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkacpi/ChangeLog,v 1.4 2004/06/19 13:42:23 pyrania Exp $
+
+  19 Jun 2004; <pyrania@gentoo.org> gkacpi-0.5.ebuild:
+  Removed DEPEND.
 
   07 Oct 2003; Martin Holzer <mholzer@gentoo.org> gkacpi-0.5.ebuild:
   changed depend to gkrellm fixed version. Closes #27060.
