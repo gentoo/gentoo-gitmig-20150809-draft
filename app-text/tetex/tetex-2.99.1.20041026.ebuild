@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.1.20041026.ebuild,v 1.3 2004/11/05 07:07:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.1.20041026.ebuild,v 1.4 2004/11/11 23:19:43 vapier Exp $
 
 inherit tetex eutils flag-o-matic
 
@@ -22,7 +22,7 @@ SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	mirror://gentoo/${P}-gentoo.tar.gz
 	http://dev.gentoo.org/~usata/distfiles/${P}-gentoo.tar.gz"
 
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="motif lesstif Xaw3d"
 
 DEPEND="motif? ( lesstif? ( x11-libs/lesstif )
