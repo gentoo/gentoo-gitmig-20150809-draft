@@ -321,9 +321,6 @@ media-video/xine-d5d
 # blocke, March 7, 2002
 <=dev-lang/php-4.1.2-r1
 
-#per jnelson's request (30 Jan 2002, drobbins)
-=net-www/boa-0.94.12_pre3
-
 # Only use the mesa and mesa-glu provided with x11-base/xfree,
 # as the external ones gives problems in most cases with DRI/DRM.
 # Nvidia users do not use it anyhow, and tdfx users report that
@@ -789,9 +786,6 @@ app-cdr/cddump
 # add 4.1.71* too
 =net-misc/ntp-4.1.71*
 
-# jnelson@gentoo.org 29 May 2002
-#=dev-lang/python-2.2.1-r1
-
 # seemant@gentoo.org 5 May 2002
 # xpdf-1.00-r1 has a dependency on the masked freetype2
 =app-text/xpdf-1.00-r1
@@ -862,14 +856,7 @@ net-mail/spamassassin
 # Works but needs some testing an finishing startxdfb script, hint hint :o).
 x11-base/xdirectfb
 
-# jnelson@gentoo.org 24 Jun 2002
-# mask lvm-user 1.0.4 until it's had more testing
-# >=sys-apps/lvm-user-1.0.4
-
 # rphillips@gentoo.org 27 Jun 2002
 # masked since package is not released
 >=dev-db/mysql-4.0.1_alpha
 
-# jnelson@gentoo.org 2 Jul 2002
-# mask this for now
-=net-www/apache-1.3.26-r3
