@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/metacity-setup
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/metacity-setup/ChangeLog,v 1.7 2002/10/09 21:42:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/metacity-setup/ChangeLog,v 1.8 2002/12/09 00:17:37 foser Exp $
+
+  08 Dec 2002; foser <foser@gentoo.org> metacity-setup-0.7.1.ebuild :
+  Fixed deps to be more general (bug #11635)
 
 *metacity-setup-0.7.1-r1 (09 Oct 2002)
   09 Oct 2002; foser <foser@gentoo.org> metacity-setup-0.7.1-r1.ebuild :
