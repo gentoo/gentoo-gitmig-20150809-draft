@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.318 2004/04/25 22:18:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.319 2004/04/27 05:18:52 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -150,6 +150,7 @@ media-libs/libsdl:noaudio - Allow users to disable audio support completely (at 
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
 media-libs/sdl-sound:physfs - Enable physfs support
+media-libs/tiff:lzw-tiff - Enable the LZW Compression Toolkit (Unisys license)
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
