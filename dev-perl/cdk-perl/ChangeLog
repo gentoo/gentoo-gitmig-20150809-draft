@@ -1,13 +1,13 @@
-# ChangeLog for dev-perlcdk-perlChangeLog/
+# ChangeLog for dev-perl/cdk-perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.4 2002/12/13 10:56:40 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.5 2002/12/17 19:35:52 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
 
   forced version bump to install into correct locations
-# ChangeLog for dev-libs/cdk-perl
+# ChangeLog for dev-perl/cdk-perl
 
 *cdk-perl-20010421 (08 Jun 2002)
 
