@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.50 2004/08/23 02:41:35 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.51 2004/09/22 23:03:28 squinky86 Exp $
+
+  22 Sep 2004; Jon Hood <squinky86@gentoo.org> gift-0.11.7.ebuild:
+  See bug #63790- does not install required libraries correctly. KEYWORDS="-*"
 
 *gift-0.11.7 (22 Aug 2004)
 
