@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.6.ebuild,v 1.2 2001/06/22 05:57:21 thread Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.6.ebuild,v 1.3 2001/06/22 22:28:20 thread Exp $
 
 #P=
 S=${WORKDIR}/${P}
@@ -16,8 +16,6 @@ DEPEND="virtual/glibc sys-devel/gcc
 
 src_compile() {
 
-    cat Makefile | sed s:/usr/local:/usr: > tmp
-    mv tmp Makefile
     try make
 
 }
