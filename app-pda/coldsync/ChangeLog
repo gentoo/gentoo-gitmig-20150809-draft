@@ -1,0 +1,26 @@
+# ChangeLog for dev-libs/coldsync
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/ChangeLog,v 1.1 2003/08/30 09:04:05 liquidx Exp $
+
+*coldsync-2.2.5 (30 Aug 2003)
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> coldsync-2.2.5-r1.ebuild,
+  coldsync-2.2.5.ebuild, files/coldsync-2.2.5-gcc3.diff:
+  moving from dev-libs/coldsync to app-pda/coldsync
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*coldsync-2.2.5-r1 (15 Aug 2002)
+
+  11 Oct 2002; <mcummings@gentoo.org> : Added man path directives to make -
+  fixes bug 8536
+
+  15 Aug 2002; Matthew Turk <satai@gentoo.org> ChangeLog :
+
+  Bumped revision after fixing compile on GCC 3.1.  Closing bug 5750.
+
+*coldsync-2.2.5 (27 May 2002)
+
+  27 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  
+  Initial checkin of this package.  

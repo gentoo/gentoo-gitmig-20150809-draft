@@ -1,0 +1,10 @@
+--- coldsync-2.2.5/src/symboltable.cc-orig  Mon Aug 12 12:32:56 2002
++++ coldsync-2.2.5/src/symboltable.cc   Mon Aug 12 12:32:25 2002
+@@ -7,6 +7,7 @@
+  * $Id: coldsync-2.2.5-gcc3.diff,v 1.1 2003/08/30 09:04:05 liquidx Exp $
+  */
+
++using namespace std;
+ #include "config.h"
+ #include <string>
+ #include <map>
