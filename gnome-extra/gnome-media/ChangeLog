@@ -1,10 +1,11 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.6 2002/07/25 03:42:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.7 2002/07/25 04:43:28 spider Exp $
 
   25 Jul 2002; Spider <spider@gentoo.org>
   SLOT KEYWORDS and LICENSE added
- 
+   mirror://
+
 *gnome-media-2.0.0 (10 Jun 2002)
   10 Jun 2002; Spider <spider@gentoo.org> gnome-media-2.0.0.ebuild :
   New version. 
