@@ -3,6 +3,10 @@
 <pkgmetadata>
 <herd>desktop-wm</herd>
 <maintainer>
+ <email>morfic@gentoo.org</email>
+ <name>Daniel Goller</name>
+</maintainer>
+<maintainer>
  <email>bcowan@gentoo.org</email>
  <name>Brad Cowan</name>
 </maintainer>
