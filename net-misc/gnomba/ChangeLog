@@ -1,11 +1,13 @@
 # ChangeLog for net-misc/gnomba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/ChangeLog,v 1.1 2002/06/14 18:44:05 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/ChangeLog,v 1.2 2002/07/07 06:54:01 phoenix Exp $
 
 *gnomba-0.6.2 (14 June 2002)
 
-  14 June 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
-  
+  14 June 2002; phoen][x <phoenix@gentoo.org> gnomba-0.6.2.ebuild :  
+  Added KEYWORDS, LICENSE, SLOT.
+	
+  14 June 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/gnomba-0.6.2.ebuild,v 1.1 2002/06/14 18:44:05 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/gnomba-0.6.2.ebuild,v 1.2 2002/07/07 06:54:01 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Samba Browser"
 SRC_URI="http://gnomba.sourceforge.net/src/${P}.tar.gz"
 HOMEPAGE="http://gnomba.sourceforge.net"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+SLOT="0"
 
 DEPEND="virtual/glibc
 		gnome-libs"
