@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.17 2002/07/12 10:31:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.18 2002/07/13 21:16:25 cardoe Exp $
+
+*pcmcia-cs-3.1.34 (13 July 2002)
+  
+  13 July 2002; Doug Goldstein <cardoe@gentoo.org> pcmcia-cs-3.1.34-r8.ebuild
+
+  Corrected an issue where we were attempting "sed"ing the Configure file from the wrong directory so it
+  never happened. 
+  Includes chadh's cardmgr with -f patch (this was included in -r7 but someone didn't edit the ChangeLog)
+  Added the use of the wavelan USE var to disable the use of the Orinoco drivers if +wavelan is set.
+  Corrected a problem where pkg_postinst() was called src_postinst() so our post install info was never
+  being displayed 
 
 *pcmcia-cs-3.1.35_beta2 (12 July 2002)
 
