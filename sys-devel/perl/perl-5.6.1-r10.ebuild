@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r10.ebuild,v 1.2 2002/12/19 21:52:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r10.ebuild,v 1.3 2002/12/20 14:00:07 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.perl.org"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips"
+KEYWORDS="x86 ppc sparc alpha ~mips"
 
 RDEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-libs/db-3.2.3h-r3

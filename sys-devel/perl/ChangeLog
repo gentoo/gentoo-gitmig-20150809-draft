@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.30 2002/12/19 21:46:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.31 2002/12/20 14:00:07 mcummings Exp $
+
+  20 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  perl-5.6.1-r10.ebuild:
+
+  new ebuild confirmed by arch devs - Gerk did ppc, Alron did sparc
 
 * perl-5.6.1-r10 (19 Dec 2002)
 
