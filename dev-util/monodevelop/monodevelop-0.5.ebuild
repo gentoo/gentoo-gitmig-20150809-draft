@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.5.ebuild,v 1.1 2004/06/30 15:38:35 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.5.ebuild,v 1.2 2004/07/14 23:54:42 agriffis Exp $
 
 inherit mono
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.go-mono.com/archive/1.0/${P}.tar.gz"
 HOMEPAGE="http://monodevelop.com/"
 LICENSE="GPL-2"
 
-IUSE="nptl"
+IUSE=""
 DEPEND=">=dev-libs/icu-2.6
 	>=dev-dotnet/gtksourceview-sharp-0.5
 	>=dev-dotnet/gecko-sharp-0.5-r2
