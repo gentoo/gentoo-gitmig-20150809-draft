@@ -31,3 +31,4 @@ ACCEPT_KEYWORDS="ppc"
 COMPILER="gcc3"
 
 POLICYDIR="/etc/security/selinux/src/policy"
+FEATURES="strict sfperms"
