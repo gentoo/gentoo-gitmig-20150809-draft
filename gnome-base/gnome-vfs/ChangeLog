@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.39 2003/02/07 17:25:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.40 2003/02/10 17:10:32 foser Exp $
+
+*gnome-vfs-2.2.1 (10 Feb 2003)
+
+  10 Feb 2003; foser <foser@gentoo.org> gnome-vfs-2.2.1.ebuild :
+  New version, fixes gnome-theme-manager not loading bug
 
   07 Feb 2003; Aron Griffis <agriffis@gentoo.org> gnome-vfs-2.2.0.ebuild :
   Add ~alpha to KEYWORDS
