@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.13 2004/02/21 00:33:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.14 2004/02/27 17:50:47 latexer Exp $
+
+*gpsdrive-2.08 (27 Feb 2004)
+
+  27 Feb 2004; Peter Johanson <latexer@gentoo.org> gpsdrive-2.08.ebuild:
+  Bump. bug #37145.
 
   20 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> gpsdrive-1.33.ebuild,
   gpsdrive-2.03.ebuild, gpsdrive-2.04-r1.ebuild, gpsdrive-2.04.ebuild,
