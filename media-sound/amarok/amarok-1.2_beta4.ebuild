@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2_beta3.ebuild,v 1.7 2005/01/26 13:40:16 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2_beta4.ebuild,v 1.1 2005/02/01 15:08:05 greg_g Exp $
 
 inherit kde eutils
 
-MY_P="${P/_beta/-beta}"
+MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="amaroK is a media player for KDE"
@@ -21,20 +21,20 @@ KEYWORDS="~amd64 ~ppc -sparc ~x86"
 
 #	Not yet released:
 #	">=media-libs/libvisual-0.2.0
-DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
-	arts? ( || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia )
-		|| ( kde-base/akode kde-base/kdemultimedia )
-		kde-base/arts )
-	opengl? ( virtual/opengl )
-	xmms? ( >=media-sound/xmms-1.2 )
-	xine? ( >=media-libs/xine-lib-1_rc4 )
-	>=media-libs/tunepimp-0.3.0
-	>=dev-util/pkgconfig-0.9.0
-	>=media-libs/taglib-1.3.1
-	gstreamer? ( >=media-libs/gst-plugins-0.8.6
-	             >=media-plugins/gst-plugins-mad-0.8.6 )
-	mysql? ( >=dev-db/mysql-3 )"
-RDEPEND="${DEPEND}"
+RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
+	 arts? ( || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia )
+		 || ( kde-base/akode kde-base/kdemultimedia )
+		 kde-base/arts )
+	 opengl? ( virtual/opengl )
+	 xmms? ( >=media-sound/xmms-1.2 )
+	 xine? ( >=media-libs/xine-lib-1_rc4 )
+	 >=media-libs/tunepimp-0.3.0
+	 >=media-libs/taglib-1.3.1
+	 gstreamer? ( >=media-libs/gst-plugins-0.8.6
+	 	      >=media-plugins/gst-plugins-mad-0.8.6 )
+	 mysql? ( >=dev-db/mysql-3 )"
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.9.0"
 
 need-kde 3.2
 
@@ -55,8 +55,8 @@ src_compile() {
 	# it must be installed in the KDE install directory.
 	PREFIX="`kde-config --prefix`"
 
-	myconf="${myconf} `use_with arts` `use_with xine` `use_with gstreamer` `use_enable mysql`"
-	myconf="${myconf} `use_with opengl` `use_enable !noamazon amazon`"
+	myconf="$(use_with arts) $(use_with xine) $(use_with gstreamer) $(use_enable mysql) \
+		$(use_with opengl) $(use_enable !noamazon amazon)"
 
-	kde_src_compile myconf configure make || die
+	kde_src_compile
 }
