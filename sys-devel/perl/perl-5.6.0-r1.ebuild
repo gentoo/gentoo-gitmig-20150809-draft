@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r1.ebuild,v 1.7 2000/10/09 16:02:50 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r1.ebuild,v 1.8 2000/10/28 19:55:53 achim Exp $
 
 P=perl-5.6.0
 A=${P}.tar.gz
@@ -32,8 +32,9 @@ EOF
 #    sh Configure -d
 
     sh Configure -des -Dprefix=/usr -Dd_dosuid \
--Dd_semctl_semun -Di_db -Di_gdbm \
--Dman3dir=/usr/man/man3
+	-Dd_semctl_semun -Di_db -Di_gdbm \
+	-Dusethreads -Duse505threads
+	-Dman3dir=/usr/man/man3
 
     #Optimize ;)
     cp config.sh config.sh.orig
