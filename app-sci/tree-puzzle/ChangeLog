@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/tree-puzzle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/ChangeLog,v 1.3 2004/06/24 22:19:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/ChangeLog,v 1.4 2004/07/20 20:56:20 ribosome Exp $
+
+*tree-puzzle-5.2 (20 Jul 2004)
+
+  20 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  tree-puzzle-5.2.ebuild, metadata.xml:
+  New version and an updated ebuild supporting the compilation of the
+  parallelized version of the program (ppuzzle).
+  Set myself as maintainer.
 
 *tree-puzzle-5.1 (08 Jun 2004)
 
