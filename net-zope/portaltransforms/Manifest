@@ -1,4 +1,6 @@
-MD5 da5716a7aedd8c22d1d5a4a69cc809d8 files/digest-portaltransforms-1.0_alpha3 74
+MD5 3ebdd68853ccb5fec774698cb5b52acd portaltransforms-1.0.2.ebuild 829
 MD5 db8331916ed9a0c9fff8d6f2fff8b33a portaltransforms-1.0_alpha3.ebuild 1076
 MD5 fcebdb5b63ab0098d101325a9b5c1c36 ChangeLog 549
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 da5716a7aedd8c22d1d5a4a69cc809d8 files/digest-portaltransforms-1.0_alpha3 74
+MD5 eb73a1cc48ca6599280febb315b9551a files/digest-portaltransforms-1.0.2 77
