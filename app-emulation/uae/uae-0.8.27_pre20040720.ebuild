@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.27_pre20040720.ebuild,v 1.2 2004/07/21 08:28:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.27_pre20040720.ebuild,v 1.3 2004/07/23 19:45:32 dholm Exp $
 
 inherit eutils flag-o-matic
 
@@ -52,7 +52,7 @@ src_compile() {
 		--enable-cdtv \
 		--enable-cd32 \
 		--enable-scsi-device \
-		--enable-bsdsock-new \
+		--enable-bsdsock \
 		--with-libscg-includedir=/usr/include/scsilib \
 		|| die "./configure failed"
 
