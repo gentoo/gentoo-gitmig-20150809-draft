@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-itouch/bmp-itouch-1.0.0.ebuild,v 1.2 2004/11/07 17:09:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-itouch/bmp-itouch-1.0.0.ebuild,v 1.3 2004/12/29 13:39:16 absinthe Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 DEPEND="media-sound/beep-media-player
 	sys-devel/autoconf
