@@ -6,9 +6,11 @@ MD5 3cde9656f604318552895f65e4e5ab15 nmap-3.00.ebuild 1031
 MD5 dd0c1e5855906f5a8a0150cd770075c4 nmap-3.20.ebuild 1003
 MD5 0331ae61d0e68f911d83a798040f89e5 nmap-3.15_beta2.ebuild 1033
 MD5 a02eeeecc26f799d25ac44dd90eff205 ChangeLog 3850
+MD5 c098229b1a73a113820ff6db378bc7b0 nmap-3.27.ebuild 1009
 MD5 b974965bf7f0a11a9bbd7829b3f81e42 files/digest-nmap-3.00 58
 MD5 a708f7f4c522d8a8115977eccfb6c9ef files/digest-nmap-3.20 62
 MD5 6baa07b38837efc45bb5a1502be09870 files/digest-nmap-3.26 62
+MD5 4cc81212eef69222cc548cdea77aed43 files/digest-nmap-3.27 62
 MD5 c11a1492ad4a54b10a95ee5eeee22687 files/digest-nmap-3.15_beta1 64
 MD5 223ba1b7c70ebed51a9a7d00716ea66a files/digest-nmap-3.15_beta2 64
 MD5 fae93dfb09342de6e30a263bc530483a files/digest-nmap-3.15_beta3 67

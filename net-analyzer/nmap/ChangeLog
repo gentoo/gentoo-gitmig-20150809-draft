@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.25 2003/04/25 13:49:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.26 2003/04/29 02:39:08 lostlogic Exp $
+
+*nmap-3.27 (28 Apr 2003)
+
+  28 Apr 2003; Brandon Low <lostlogic@gentoo.org> nmap-3.26.ebuild,
+  nmap-3.26.ebuild, nmap-3.27.ebuild:
+  Bump, this is a VERY minor upstream bump that has ABSOLUTELY no effect on any
+  of OUR users, but we'll do it any way
 
 *nmap-3.26 (25 Apr 2003)
 
