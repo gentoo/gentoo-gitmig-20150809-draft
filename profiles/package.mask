@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <cselkirk@gentoo.org> (28 Aug 2002)
+# masked for testing
+=net-misc/keychain-2.0.2
+
 # <phoenix@gentoo.org> (28 Aug 2002)
 # masked new ppp release for testing
 =net-dialup/ppp-2.4.1-r11
