@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b839e16d39db66dddf37c09da6ce7b75 ChangeLog 530
+MD5 5739a8c4c9f4f26d401f36eed81fe138 ChangeLog 617
 MD5 031b4034edd60144a86913259cde6af0 metadata.xml 162
-MD5 52a03a3f5bce46b880ed415e67e14b1e ixbiff-0.03b.ebuild 1218
+MD5 a7040ea253354fff00d9158f526aa41d ixbiff-0.03b.ebuild 1217
 MD5 c720b5733cbd824a500afee72d8f7ec7 files/ixbiff_0.03b-config-gentoo.patch 877
 MD5 7266aea3c37e52463c266ad8039ea062 files/ixbiff_0.03b-main.c-gentoo.patch 200
 MD5 5cf770445bcadc42261f71d51c4b255a files/digest-ixbiff-0.03b 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBwDBrQlM6RnzZP+IRAk+NAJwJEdMNtStSFg/uD/J4K80Ll8vJ6gCeM+eS
-xSAwrXMzE2EqTxnI/lgx1XU=
-=6GX/
+iD8DBQFB6CjnQlM6RnzZP+IRApJFAJ9eO9qGGkltbYm4EmiMzkHnqACYUACgvhLA
+C8ehJGWD1Jsx7I8ptJ4Px6c=
+=kI1d
 -----END PGP SIGNATURE-----

@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 76bc385ded7a922186fed890ca0a5c9c ChangeLog 2732
+MD5 4529bed841e664eb259225c71a38c565 ChangeLog 2843
 MD5 9ad44953fae3ac30888d8f588638bbae hotwayd-0.7.4.ebuild 1750
 MD5 1a618945732c2b336257ac00726db4e1 hotwayd-0.8.2.ebuild 1709
-MD5 8e4dece472ea40db5a6a4444e6ac5643 hotwayd-0.8-r1.ebuild 1942
+MD5 8cbeb0862e389f0bbe8f4e826c337469 hotwayd-0.8-r1.ebuild 1941
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 fb6569e2e5b9ecea38f8238a8a0b6ba0 hotwayd-0.8.ebuild 1869
+MD5 cbedd6655aa04b6637cd48f5aca0057d hotwayd-0.8.ebuild 1868
 MD5 813f8aae1c2110d2ac750f7fb999fc6a hotwayd-0.8.2-r1.ebuild 2046
 MD5 2d2ee1259a0fd2a7f3e82f7b3449be37 files/hotwayd-0.8-amd64.patch 563
 MD5 dd6f3b429961f43d5dc98ae6cb7a7135 files/hotwayd-0.8.xinetd 1096
@@ -20,7 +20,7 @@ MD5 f1e3a435a01ea89b18857dbb690c41d7 files/hotwayd.xinetd 1097
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB5pB0QlM6RnzZP+IRApziAKCoTXBmrXCZBv4yVwJQuZ3FyesQ/QCfTQmh
-3uVAGyXx/pNbOmGzTaAzT9c=
-=S8bG
+iD8DBQFB6CiNQlM6RnzZP+IRAh2ZAJ4uXKWprDQ8aJONr6AiOdQ9CuprVQCfeQpC
+um8xVk3o+5WzNWeS7Hq+qeU=
+=ske5
 -----END PGP SIGNATURE-----
