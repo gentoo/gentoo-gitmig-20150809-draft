@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r1.ebuild,v 1.7 2004/11/07 23:27:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r1.ebuild,v 1.8 2004/11/09 14:02:57 urilith Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -362,14 +362,25 @@ select_modules_config() {
 pkg_postinst() {
 	set_filter_flags
 
+	# Fix for bug #65006 (urilith@gentoo.org)
 	#empty dirs...
-	install -d -m0755 -o apache -g apache ${ROOT}/var/lib/dav
-	install -d -m0755 -o root -g root ${ROOT}/var/log/apache2
-	install -d -m0755 -o apache -g apache ${ROOT}/var/cache/apache2
+	keepdir /var/lib/dav
+	fowners apache:apache /var/lib/dav
+	fperms 755 /var/lib/dav
+
+	keepdir /var/log/apache2
+	fowners apache:apache /var/log/apache2
+	fperms 755 /var/log/apache2
+
+	keepdir /var/cache/apache2
+	fowners apache:apache /var/cache/apache2
+	fperms 755 /var/cache/apache2
 
 	if use ssl; then
-	#	install -d -m0755 -o root -g root ${ROOT}/etc/apache2/conf/ssl
-	install -d -m0755 -o root -g root ${ROOT}/etc/apache2/conf/ssl
+		keepdir /etc/apache2/conf/ssl
+	fi
+
+	if use ssl; then
 		cd ${ROOT}/etc/apache2/conf/ssl
 		einfo
 		einfo "Generating self-signed test certificate in /etc/apache2/conf/ssl..."

@@ -1,9 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.301 2004/11/09 03:18:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.302 2004/11/09 14:02:57 urilith Exp $
 
   09 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> apache-1.3.33.ebuild:
   Stable on sparc wrt Stuart ;)
+
+  09 Nov 2004; Michael Tindal <urilith@gentoo.org>
+  files/2.0.49/40_mod_ssl.conf:
+  SELinux fixes for bugs
 
   07 Nov 2004; Joshua Kinard <kumba@gentoo.org> apache-1.3.32-r1.ebuild,
   apache-2.0.52-r1.ebuild:
