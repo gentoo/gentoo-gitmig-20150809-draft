@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3698 2005/03/09 10:31:09 joem Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3699 2005/03/09 13:01:04 kosmikus Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Andres Loeh <kosmikus@gentoo.org> (09 Mar 2005)
+# ghc-6.{3,4} is still in development
+>=dev-lang/ghc-6.3
 
 # Robin H. Johnson <robbat2@gentoo.org> (08 Mar 2005)
 # not entirely certain if this works on all kernels yet
