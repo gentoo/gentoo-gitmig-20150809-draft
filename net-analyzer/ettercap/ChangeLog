@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.25 2004/04/29 12:59:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.26 2004/05/22 14:46:35 squinky86 Exp $
+
+*ettercap-0.7.0_pre2 (22 May 2004)
+
+  22 May 2004; Jon Hood <squinky86@gentoo.org> +ettercap-0.7.0_pre2.ebuild:
+  version bump, closes #51305
 
   29 Apr 2004; Jason Wever <weeve@gentoo.org> ettercap-0.6.11.ebuild:
   Stable on sparc.
