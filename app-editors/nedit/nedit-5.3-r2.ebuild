@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r2.ebuild,v 1.9 2003/10/21 23:32:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r2.ebuild,v 1.10 2003/10/24 12:55:26 aliz Exp $
 
 inherit eutils
 
@@ -24,9 +24,8 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
-	cp ${S}/makefiles/Makefile.linux ${T}
-	sed "s:-O:${CFLAGS} -D__LINUX__:" \
-		${T}/Makefile.linux > ${S}/makefiles/Makefile.linux
+	sed -i "s:-O:${CFLAGS} -D__LINUX__:" \
+	 ${S}/makefiles/Makefile.linux
 }
 
 src_compile() {

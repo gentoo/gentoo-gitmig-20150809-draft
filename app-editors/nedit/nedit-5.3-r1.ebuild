@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r1.ebuild,v 1.7 2003/10/21 23:32:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r1.ebuild,v 1.8 2003/10/24 12:55:26 aliz Exp $
 
 MY_PV=${PV/./_}
 DESCRIPTION="multi-purpose Motif-based text editor for the X Window System"
@@ -18,9 +18,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}/makefiles
-	cp Makefile.linux Makefile.orig
-	sed -e "s:-O:${CFLAGS}:" -e "s/-lm/-lm -lXmu/" \
-	Makefile.orig > Makefile.linux || die
+	sed -i -e "s:-O:${CFLAGS}:" -e "s/-lm/-lm -lXmu/" \
+	 Makefile.linux || die
 }
 
 src_compile() {

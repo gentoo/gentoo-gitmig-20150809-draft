@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.9 2003/09/05 01:59:15 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.10 2003/10/24 12:55:26 aliz Exp $
 
 inherit eutils
 
@@ -66,10 +66,10 @@ src_unpack() {
 	unpack NeXT_XEmacs.tar.gz
 
 	cd ${S}
-	patch -p0 <${FILESDIR}/emodules.info-21.4.8-gentoo.patch || die
+	epatch ${FILESDIR}/emodules.info-21.4.8-gentoo.patch
 
 	if [ ${ARCH} = "ppc" ] ; then
-		patch -p0 < ${FILESDIR}/${P}-ppc.diff || die
+		epatch ${FILESDIR}/${P}-ppc.diff || die
 	fi
 	epatch ${FILESDIR}/quick-fix.patch
 	# copy Next_XEmacs icons into toolbar dir

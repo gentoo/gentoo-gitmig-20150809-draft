@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.4o.ebuild,v 1.12 2003/02/10 11:09:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.4o.ebuild,v 1.13 2003/10/24 12:55:26 aliz Exp $
 
 IUSE=""
 
@@ -16,8 +16,7 @@ KEYWORDS="x86 ppc sparc"
 DEPEND="sys-libs/ncurses"
 
 src_compile() {
-	sed -e "/^CFLAGS/ s:-O:${CFLAGS}:" < Makefile > Makefile.out
-	mv Makefile.out Makefile
+	sed -i -e "/^CFLAGS/ s:-O:${CFLAGS}:" Makefile
 	make LIBES=-lncurses || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r2.ebuild,v 1.6 2003/07/08 19:13:27 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r2.ebuild,v 1.7 2003/10/24 12:55:26 aliz Exp $
 
 IUSE="gpm postgres xface nas dnd X jpeg tiff png mule motif canna freewnn lucid athena neXt Xaw3d"
 
@@ -65,10 +65,10 @@ src_unpack() {
 	unpack ${P}.tar.gz
 
 	cd ${S}
-	patch -p0 <${FILESDIR}/emodules.info-21.4.8-gentoo.patch || die
+	epatch ${FILESDIR}/emodules.info-21.4.8-gentoo.patch
 
 	if [ ${ARCH} = "ppc" ] ; then
-		patch -p0 < ${FILESDIR}/${P}-ppc.diff || die
+		epatch ${FILESDIR}/${P}-ppc.diff
 	fi
 
 }

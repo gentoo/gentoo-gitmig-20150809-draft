@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.13 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.14 2003/10/24 12:55:26 aliz Exp $
 
 IUSE="gpm postgres xface tiff gtk jpeg mule nas esd X png gnome"
 
@@ -60,7 +60,7 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${REAL_P}.tar.gz
 	cd ${S}
-	patch -p0 <${FILESDIR}/emodules.info-21.4.8-gentoo.patch
+	epatch ${FILESDIR}/emodules.info-21.4.8-gentoo.patch
 }
 
 src_compile() {

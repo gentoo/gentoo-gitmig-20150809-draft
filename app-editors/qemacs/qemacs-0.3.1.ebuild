@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1.ebuild,v 1.2 2003/06/29 18:24:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1.ebuild,v 1.3 2003/10/24 12:55:26 aliz Exp $
 
 DESCRIPTION="QEmacs (for Quick Emacs) is a very small but powerful UNIX editor."
 HOMEPAGE="http://fabrice.bellard.free.fr/qemacs/"
@@ -16,7 +16,7 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} && patch -p1 <${FILESDIR}/qemacs-Makefile-gentoo.patch || die
+	cd ${S} && epatch ${FILESDIR}/qemacs-Makefile-gentoo.patch
 }
 
 src_compile() {
