@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2003.02.22.ebuild,v 1.3 2003/08/24 08:13:54 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2003.06.02.ebuild,v 1.1 2003/08/24 08:13:54 george Exp $
 
 DESCRIPTION="A collection of custom scripts, functions and extensions for GNU Octave"
 HOMEPAGE="http://octave.sourceforge.net/"
@@ -8,11 +8,11 @@ SRC_URI="mirror://sourceforge/octave/${P}.tar.gz"
 
 LICENSE="as-is"
 # I have only tested this library on x86
-KEYWORDS="x86"
+KEYWORDS="~x86"
 SLOT="0"
 IUSE="ginac qhull"
 
-DEPEND=">=app-sci/octave-2.1.44
+DEPEND=">=app-sci/octave-2.1.40
 		>=sys-apps/sed-4
 		sys-libs/libtermcap-compat
 		ginac? ( app-sci/ginac )
