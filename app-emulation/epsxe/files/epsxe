@@ -1,34 +1,34 @@
 #!/bin/sh
 
-if [ ! -d ~/.epsxe ]; then
-	echo You are running ePSXe for the first time.
-	echo Setting up your ePSXe environment... Please wait...
-	
-	mkdir -p $HOME/.epsxe
-	cd $HOME/.epsxe
-	mkdir memcards bios cfg cheats snap sstates patches plugins
-	cp /etc/epsxe/keycodes.lst keycodes.lst
+source /sbin/functions.sh
 
-	ln -s /usr/lib/psemu/plugins/* plugins/
-	ln -s /opt/epsxe/epsxe epsxe
+if [ ! -d ~/.epsxe ] ; then
+	einfo You are running ePSXe for the first time.
+	einfo Setting up your ePSXe environment... Please wait...
+
+	mkdir -p ~/.epsxe
+	cd ~/.epsxe
+	mkdir memcards bios cfg cheats snap sstates patches plugins
+	cp /opt/epsxe/keycodes.lst keycodes.lst
+
+	ln -s /usr/lib/psemu/plugins/* plugins/ >& /dev/null
+	ln -s /opt/epsxe/epsxe epsxe >& /dev/null
 
 	cd bios
-	if [ -f /usr/lib/psemu/bios/scph1001.bin ]; then
-		ln -s /usr/lib/psemu/bios/scph1001.bin .
+	if [ -f /usr/games/lib/psemu/bios/scph1001.bin ]; then
+		ln -s /usr/games/lib/psemu/bios/scph1001.bin .
 	else
-		echo -e "\007"
-		echo "*** Put your BIOS file into $HOME/.epsxe/bios,"
-		echo "    or ePSXe may not work!"
-		echo ""
-		echo " Hit enter key to continue..."
-		read
+		echo
+		ewarn "*** Put your BIOS file into ~/.epsxe/bios,"
+		ewarn "    or ePSXe may not work!"
+		echo
 	fi
 fi
 
-cd $HOME/.epsxe
+cd ~/.epsxe
 
-ln -s /usr/lib/psemu/plugins/* plugins/
-ln -s /usr/lib/psemu/cfg/* cfg/
-ln -s /usr/lib/psemu/cheats/* cheats/
+ln -s /usr/lib/psemu/plugins/* plugins/ >& /dev/null
+ln -s /usr/lib/psemu/cfg/* cfg/ >& /dev/null
+ln -s /usr/lib/psemu/cheats/* cheats/ >& /dev/null
 
-./epsxe
+exec ./epsxe "$@"

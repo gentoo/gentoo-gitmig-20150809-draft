@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/epsxe-1.6.0.ebuild,v 1.1 2003/08/05 19:47:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/epsxe-1.6.0-r1.ebuild,v 1.1 2003/08/14 06:20:27 vapier Exp $
+
+inherit games
 
 DESCRIPTION="ePSXe Playstation Emulator"
 HOMEPAGE="http://www.epsxe.com/"
@@ -8,8 +10,9 @@ SRC_URI="http://download.epsxe.com/files/epsxe160lin.zip"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="-* x86"
 IUSE="opengl"
+RESTRICT="nostrip" # For some strange reason, strip truncates the whole file
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=dev-libs/glib-1.2
@@ -25,20 +28,17 @@ RDEPEND=">=dev-libs/glib-1.2
 
 S=${WORKDIR}
 
-# For some strange reason, strip truncates the whole file
-RESTRICT="nostrip"
-
 src_install() {
-	dobin ${FILESDIR}/epsxe
-
-	exeinto /opt/epsxe
+	dogamesbin ${FILESDIR}/epsxe
+	exeinto ${GAMES_PREFIX_OPT}/${PN}
 	doexe epsxe
-
-	insinto /usr/lib/psemu/cheats
-	doins cheats/*
-
-	insinto /etc/epsxe
+	insinto ${GAMES_PREFIX_OPT}/${PN}
 	doins keycodes.lst
 
+	insinto ${GAMES_LIBDIR}/psemu/cheats
+	doins cheats/*
+
 	dodoc docs/*
+
+	prepgamesdirs
 }
