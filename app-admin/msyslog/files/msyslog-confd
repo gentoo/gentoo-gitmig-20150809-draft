@@ -1,0 +1,4 @@
+# Config file for /etc/init.d/msyslog
+
+# Passed to /usr/sbin/msyslogd...
+MSYSLOG_OPTS="-i unix /dev/log -i linux"
