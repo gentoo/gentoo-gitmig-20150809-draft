@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.1.5.ebuild,v 1.3 2004/01/11 13:54:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.1.5.ebuild,v 1.4 2004/04/27 17:21:50 pvdabeel Exp $
 
 IUSE="motif"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.jfc.org.uk/software/lwm.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 
 DEPEND="motif? ( x11-libs/openmotif >=sys-apps/sed-4 )
 	virtual/x11"

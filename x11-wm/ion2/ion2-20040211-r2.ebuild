@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040211-r2.ebuild,v 1.4 2004/03/31 00:30:57 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040211-r2.ebuild,v 1.5 2004/04/27 17:19:16 pvdabeel Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.iki.fi/tuomov/ion/"
 SRC_URI="http://modeemi.fi/~tuomov/dl/ion-2-20040207.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~mips ~ppc ~sparc x86"
+KEYWORDS="~alpha ~mips ppc ~sparc x86"
 IUSE="truetype xinerama"
 DEPEND="virtual/x11
 	app-misc/run-mailcap

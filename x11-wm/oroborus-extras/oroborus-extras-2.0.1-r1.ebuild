@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.1-r1.ebuild,v 1.12 2003/09/06 04:16:43 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.1-r1.ebuild,v 1.13 2004/04/27 17:29:12 pvdabeel Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Other stuff for oroborus"
@@ -10,7 +10,7 @@ SRC_URI="http://www.kensden.pwp.blueyonder.co.uk/Oroborus/files/deskmenu-1.3.0.t
 HOMEPAGE="http://www.kensden.pwp.blueyonder.co.uk/Oroborus/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 
 DEPEND="x11-wm/oroborus
 		=x11-libs/gtk+-1.2*"
