@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.174 2005/03/16 21:15:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.175 2005/03/18 22:17:08 chainsaw Exp $
+
+*development-sources-2.6.12_rc1 (18 Mar 2005)
+
+  18 Mar 2005; Tony Vroon <chainsaw@gentoo.org>
+  development-sources-2.6.11.4.ebuild,
+  +development-sources-2.6.12_rc1.ebuild:
+  2.6.11.4 stable on x86. Version bump to 2.6.12-rc1.
 
 *development-sources-2.6.11.4 (16 Mar 2005)
 
