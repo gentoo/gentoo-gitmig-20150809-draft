@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e335bba9729018e0f873fe7b89ebcd20 ChangeLog 5443
-MD5 475629439c6cc71bc10ec394f4da68cf metadata.xml 566
-MD5 b2b4064f6bd76cab08bc9035228b4d6c manpages-ja-20041115.ebuild 2084
+MD5 db6bb2a0bd5c26dde850ad65e0d68f69 ChangeLog 5550
 MD5 d48cb2f472d44ee0c02fb9276d8c4f97 manpages-ja-20040615.ebuild 1870
 MD5 aeb0dcf0967a875493ee9861f7f973a3 manpages-ja-20040915.ebuild 1918
-MD5 9ba4ab9843ce463a09144a4265e05e69 files/digest-manpages-ja-20041115 153
+MD5 475629439c6cc71bc10ec394f4da68cf metadata.xml 566
+MD5 60fe7e10d57a243cdc3938f57dc90749 manpages-ja-20041115.ebuild 2086
 MD5 fe1ea41c6d263adba6232159b147770c files/digest-manpages-ja-20040615 154
 MD5 0df2cea45b1b8531bcece297c9303154 files/digest-manpages-ja-20040915 153
+MD5 9ba4ab9843ce463a09144a4265e05e69 files/digest-manpages-ja-20041115 153
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCTjyNVWNWqTUmv+0RAqQiAJ9IyruvJsKBh6D/wZNho+mgXYCgZACfWDJV
-paE68AwzP4Ej4M2vRc/yqOQ=
-=Qibj
+iD8DBQFCUUVXKRy60XGEcJIRAsLsAJ43NkYdweo6hGqdJ2sMj0KM8V6WRwCgscX8
+JfcV3G+fa2f3EWWy7smMg9I=
+=i53V
 -----END PGP SIGNATURE-----
