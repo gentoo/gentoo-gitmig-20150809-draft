@@ -1,36 +1,38 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.90.ebuild,v 1.3 2003/02/13 12:39:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.90.ebuild,v 1.4 2003/04/25 13:07:11 vapier Exp $
 
-IUSE="gtk2"
-S=${WORKDIR}/${P}
-DESCRIPTION="XSane is a graphical scanning frontend"
+DESCRIPTION="graphical scanning frontend"
 SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
-HOMEPAGE="http://www.xsane.org"
+HOMEPAGE="http://www.xsane.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
+IUSE="gtk2 nls jpeg png tiff"
 
 DEPEND="media-gfx/sane-backends 
-	( gtk2? >=x11-libs/gtk+-2.0 : 
-		=x11-libs/gtk+-1.2* )"
+	|| (
+		gtk2? ( >=x11-libs/gtk+-2.0 )
+		=x11-libs/gtk+-1.2*
+	)"
 
 src_compile() {
-	local myconf
-	use nls || myconf="${myconf} --disable-nls"
-	use jpeg || myconf="${myconf} --disable-jpeg"
-	use png || myconf="${myconf} --disable-png"
-	use tiff || myconf="${myconf} --disable-tiff"
-	use gtk2 || myconf="${myconf} --disable-gtk2"
-	econf ${myconf} || die
+	econf \
+		`use_enable nls` \
+		`use_enable jpeg` \
+		`use_enable png` \
+		`use_enable tiff` \
+		`use_enable gtk2` \
+		|| die
 	emake || die
 }
 
-src_install () {
+src_install() {
 	einstall || die
 	dodoc xsane.[A-Z]*
 	dohtml -r doc
+
 	# link xsane so it is seen as a plugin in gimp
 	if [ -d /usr/lib/gimp/1.2 ]; then
 		dodir /usr/lib/gimp/1.2/plug-ins
