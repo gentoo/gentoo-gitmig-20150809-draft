@@ -1,0 +1,9 @@
+# ChangeLog for net-www/w3mir
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mir/ChangeLog,v 1.1 2003/05/07 22:04:57 rac Exp $
+
+*w3mir-1.0.10 (07 May 2003)
+
+  07 May 2003; <rac@gentoo.org> w3mir-1.0.10.ebuild:
+  Initial import.  Ebuild submitted by Mol <newsg@infofab.no> in bug #13164.
+
