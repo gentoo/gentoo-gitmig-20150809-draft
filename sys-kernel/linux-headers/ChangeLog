@@ -1,12 +1,23 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.54 2004/03/13 13:34:40 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.55 2004/03/14 06:42:18 seemant Exp $
 
 *linux-headers-2.6.4 (13 Mar 2004)
 
   13 Mar 2004; <plasmaroo@gentoo.org> linux-headers-2.6.4.ebuild,
   files/linux-headers-2.6.4-appCompat.patch:
   Version bump; also fixes bugs #40419 and #44265.
+
+  13 Mar 2004; Seemant Kulleen <seemant@gentoo.org>
+  linux-headers-2.2.20.ebuild, linux-headers-2.2.21_pre3.ebuild,
+  linux-headers-2.4.16-r1.ebuild, linux-headers-2.4.16-r3.ebuild,
+  linux-headers-2.4.16.ebuild, linux-headers-2.4.17-r3.ebuild,
+  linux-headers-2.4.17-r4.ebuild, linux-headers-2.4.17-r5.ebuild,
+  linux-headers-2.4.18-r1.ebuild, linux-headers-2.4.18-r2.ebuild,
+  linux-headers-2.4.18.ebuild, linux-headers-2.4.19-r1.ebuild,
+  linux-headers-2.4.19.ebuild:
+  console-tools has been PROVIDEd by sys-apps/kbd for the longest time, so
+  changed the dependency info to sys-apps/kbd from sys-apps/console-tools
 
   08 Mar 2004; Jason Wever <weeve@gentoo.org> linux-headers-2.4.23.ebuild:
   Added ~sparc keyword to help resolve bug #43233.

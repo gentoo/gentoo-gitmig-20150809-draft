@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r5.ebuild,v 1.19 2004/01/08 07:04:10 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r5.ebuild,v 1.20 2004/03/14 06:42:18 seemant Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -43,7 +43,7 @@ XFSV=20020124
 
 if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
 then
-	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
+	#sys-apps/kbd is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl >=sys-apps/xfsprogs-${XFSV} sys-apps/kbd >=sys-apps/dmapi-${XFSV} virtual/modutils sys-devel/make >=sys-apps/attr-${XFSV} >=sys-apps/acl-${XFSV} >=sys-apps/xfsdump-${XFSV}"
 fi

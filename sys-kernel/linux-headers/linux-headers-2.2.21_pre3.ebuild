@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.21_pre3.ebuild,v 1.18 2004/01/08 07:04:10 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.21_pre3.ebuild,v 1.19 2004/03/14 06:42:18 seemant Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -39,9 +39,9 @@ if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
 then
 	#The following two notes may not be true w/ 2.2, but 2.2 seems to work just fine
 	# with them, so they stay.
-	#console-tools is needed to solve the loadkeys fiasco.
+	#sys-apps/kbd is needed to solve the loadkeys fiasco.
 	#binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
-	DEPEND=">=sys-devel/binutils-2.11.90.0.31 sys-apps/console-tools virtual/modutils dev-lang/perl"
+	DEPEND=">=sys-devel/binutils-2.11.90.0.31 sys-apps/kbd virtual/modutils dev-lang/perl"
 
 	RDEPEND=">=sys-libs/ncurses-5.2 >=sys-apps/baselayout-1.7.4"
 fi
