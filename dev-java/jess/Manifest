@@ -1,4 +1,6 @@
 MD5 88b5e262a6f8fe958acad27f6ac97a77 jess-6.1.6.ebuild 1154
+MD5 1d2e4b2b8c50a7fd726329bd7e1b9fe4 jess-6.1.7.ebuild 1153
+MD5 2944d7cab55bfe9e4fa2ad77f7ae8c3c ChangeLog 523
 MD5 84b61e4d0f951e3bc117b54985f19b31 metadata.xml 244
-MD5 622f94b8c60baa0c42f0ca0db7f2f558 ChangeLog 413
 MD5 3e92706f2ad5d95ce855b9dd7ffa19e6 files/digest-jess-6.1.6 57
+MD5 db4d6fdd03ce9c6bd708421fe4729e97 files/digest-jess-6.1.7 57
