@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.3.ebuild,v 1.1 2002/12/21 05:36:58 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.3.ebuild,v 1.2 2002/12/27 17:35:21 agenkin Exp $
 
 DESCRIPTION="Graphical patch bay for the ALSA sequencer API."
 HOMEPAGE="http://pkl.net/~node/alsa-patch-bay.html"
@@ -12,7 +12,7 @@ DEPEND=">=x11-libs/gtkmm-2.0.2
 	>=media-libs/alsa-lib-0.9.0_rc1
 	>=media-sound/alsa-utils-0.9.0_rc1"
 
-KEYWORDS="-x86"
+KEYWORDS="~x86"
 
 # Alsa-patch-bay can use either gtkmm of fltk.	However, it fails to build
 # against Gentoo's fltk, I believe because Gentoo's fltk is built as static.
