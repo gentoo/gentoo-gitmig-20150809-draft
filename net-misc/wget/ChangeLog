@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.53 2005/03/06 06:07:54 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.54 2005/03/14 18:23:44 hardave Exp $
+
+  14 Mar 2005; Hardave Riar <hardave@gentoo.org> wget-1.9.1-r3.ebuild:
+  Stable on mips, bug #74008.
 
   06 Mar 2005; Olivier Crête <tester@gentoo.org> wget-1.9.1-r3.ebuild:
   Stable on x86 per security bug #74008
