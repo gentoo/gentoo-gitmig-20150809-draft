@@ -1,0 +1,21 @@
+diff -ur prevalence.orig/prevalence.lisp prevalence/prevalence.lisp
+--- prevalence.orig/prevalence.lisp	2003-06-10 05:53:58.000000000 -0500
++++ prevalence/prevalence.lisp	2004-01-09 23:30:42.118636816 -0600
+@@ -28,6 +28,7 @@
+    #:transaction
+    #:no-rollback-error
+    #:initiates-rollback)
++  #+cmu (:shadow #:close)
+   (:documentation "A proof of concept Common Lisp Prevalence system"))
+ 
+ (in-package :clp)
+@@ -146,7 +147,7 @@
+ (defmethod close ((system prevalence-system) &key abort)
+   (with-slots (transaction-log-stream) system
+     (when transaction-log-stream
+-      (close transaction-log-stream :abort abort)
++      (cl:close transaction-log-stream :abort abort)
+       (setf transaction-log-stream nil))))
+ 
+ (defmethod serializable-slots append ((transaction transaction))
+Only in prevalence: prevalence.lisp.~1.15.~
