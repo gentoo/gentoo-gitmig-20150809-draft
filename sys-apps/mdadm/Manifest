@@ -1,6 +1,6 @@
 MD5 832440cef8a582cd3d8e8bf7fbb923a8 mdadm-1.5.0.ebuild 989
 MD5 15cf6c7b4c26e78402340d65c05e0479 mdadm-1.6.0.ebuild 994
-MD5 624307681c5c916ba34b4dad38651b65 mdadm-1.2.0.ebuild 1035
+MD5 aa9825103b538c38cd8d399a91fce49e mdadm-1.2.0.ebuild 1015
 MD5 4765a44005fe051f4b4084f2c3aebb88 ChangeLog 1677
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 014cee9c27c5693a1d551858f4d93d27 files/digest-mdadm-1.2.0 59
