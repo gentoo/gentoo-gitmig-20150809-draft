@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.3 2003/08/15 13:01:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.4 2003/08/18 03:14:02 robbat2 Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -70,7 +70,7 @@ src_unpack() {
 	patch -p0 < ${FILESDIR}/${PN}-4.0.13-thrssl.patch || die
 
 	if use tcpd; then
-		patch -p1 -d ${S} < ${FILESDIR}/mysql-4.0.14-r2-tcpd-vars-fix.diff || die
+		patch -p1 -d ${S} < ${FILESDIR}/mysql-4.0.14-r1-tcpd-vars-fix.diff || die
 	fi
 }
 
