@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.4 2003/02/03 01:08:50 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.5 2003/02/05 01:46:09 raker Exp $
 
 IUSE="ssl"
 
@@ -264,25 +264,6 @@ pkg_postinst() {
 	echo -e "\e[32;01m and create the following links : \033[0m"
 	echo -e "\e[32;01m ln -s /var/qmail/supervise/qmail-send /service/qmail-send \033[0m"
 	echo -e "\e[32;01m ln -s /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd \033[0m"
-
-
-	if use ssl; then
-		echo "Creating a self-signed ssl-cert:"
-		/usr/bin/openssl req -new -x509 -nodes -out /var/qmail/control/servercert.pem -days 366 -keyout /var/qmail/control/servercert.pem
-		chmod 640 /var/qmail/control/servercert.pem
-		chown qmaild.qmail /var/qmail/control/servercert.pem
-		ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem
-
-		echo -e "\e[32;01m If You want to have a signed cert, do the following: \033[0m"
-		echo -e "\e[32;01m openssl req -new -nodes -out req.pem \ \033[0m"
-		echo -e "\e[32;01m -keyout /var/qmail/control/servercert.pem \033[0m"
-		echo -e "\e[32;01m chmod 640 /var/qmail/control/servercert.pem \033[0m"
-		echo -e "\e[32;01m chown qmaild.qmail /var/qmail/control/servercert.pem \033[0m"
-		echo -e "\e[32;01m ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem \033[0m"
-		echo -e "\e[32;01m Send req.pem to your CA to obtain signed_req.pem, and do: \033[0m"
-		echo -e "\e[32;01m cat signed_req.pem >> /var/qmail/control/servercert.pem \033[0m"
-	fi
-		
 }
 
 pkg_config() {
@@ -303,4 +284,22 @@ export qhost=`hostname`
 
 	tcprules /etc/tcp.smtp.cdb /etc/tcp.smtp.tmp < /etc/tcp.smtp
 
+	if [ `use ssl` ]; then
+	if [ ! -f /var/qmail/controll/servercert.pem ]; then
+		echo "Creating a self-signed ssl-cert:"
+		/usr/bin/openssl req -new -x509 -nodes -out /var/qmail/control/servercert.pem -days 366 -keyout /var/qmail/control/servercert.pem
+		chmod 640 /var/qmail/control/servercert.pem
+		chown qmaild.qmail /var/qmail/control/servercert.pem
+		ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem
+
+		echo -e "\e[32;01m If You want to have a signed cert, do the following: \033[0m"
+		echo -e "\e[32;01m openssl req -new -nodes -out req.pem \ \033[0m"
+		echo -e "\e[32;01m -keyout /var/qmail/control/servercert.pem \033[0m"
+		echo -e "\e[32;01m chmod 640 /var/qmail/control/servercert.pem \033[0m"
+		echo -e "\e[32;01m chown qmaild.qmail /var/qmail/control/servercert.pem \033[0m"
+		echo -e "\e[32;01m ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem \033[0m"
+		echo -e "\e[32;01m Send req.pem to your CA to obtain signed_req.pem, and do: \033[0m"
+		echo -e "\e[32;01m cat signed_req.pem >> /var/qmail/control/servercert.pem \033[0m"
+	fi
+	fi
 }

@@ -1,10 +1,14 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.13 2003/02/03 01:08:50 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.14 2003/02/05 01:46:09 raker Exp $
 
 *qmail-1.03-r10 (01 Feb 2003)
 
-  02 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r1.ebuild :
+  04 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild :
+  Moved the ssl cert creation to pkg_config() and it only goes through
+  the cert creation if the file doesn't already exist.  Thanks vapier.
+
+  02 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild :
   Added a missing qmail-todo.  Thanks to shadow@ines.ro on bug #14963
   for catching this so quickly.
 
