@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.8 2002/02/28 05:29:22 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.9 2002/03/13 20:49:20 g2boojum Exp $
+
+*php-4.1.2-r3 (13 Mar 2002)
+
+  13 Mar 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  Minor update to fix bug # 1042.
 
 *php-4.1.2 (28 Feb 2002)
 
