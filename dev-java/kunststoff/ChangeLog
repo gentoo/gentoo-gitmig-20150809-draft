@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/kunststoff
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/ChangeLog,v 1.1 2004/12/20 17:30:25 karltk Exp $
+
+*kunststoff-2.0.2 (20 Dec 2004)
+
+  20 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> kunststoff-2.0.2.ebuild:
+  Initial import. Ebuild submitted by Jan Brinkmann <lucky@the-luckyduck.de>, of 
+  course. Fixes #74923.
