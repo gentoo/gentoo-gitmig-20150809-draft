@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p1.ebuild,v 1.1 2004/01/18 18:52:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p1.ebuild,v 1.2 2004/03/27 08:35:59 mr_bones_ Exp $
+
+inherit flag-o-matic
 
 MY_PN="bcrypt"
 DESCRIPTION="commercially licensed transparent filesystem encryption"
@@ -15,8 +17,6 @@ DEPEND="virtual/linux-sources"
 
 S=${WORKDIR}/bcrypt
 
-filter-flags -fforce-addr
-
 pkg_setup() {
 	if [ -e /usr/src/linux/include/linux/modsetver.h ] &&
 	   [ ! -e /usr/src/linux/include/linux/modversions.h ]; then
@@ -27,6 +27,7 @@ pkg_setup() {
 }
 
 src_unpack() {
+	filter-flags -fforce-addr
 	unpack ${A}
 	for file in `find . -type f -iname Makefile*`;do
 		sed -i -e "s:-O[0-9]:${CFLAGS}:"	\

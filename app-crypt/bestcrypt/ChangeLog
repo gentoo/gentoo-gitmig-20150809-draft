@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.10 2004/01/18 18:52:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.11 2004/03/27 08:35:59 mr_bones_ Exp $
+
+  27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  bestcrypt-1.2_p6.ebuild, bestcrypt-1.4_p2.ebuild, bestcrypt-1.5_p1.ebuild:
+  inherit flag-o-matic; move filter-flags into src_unpack
 
 *bestcrypt-1.5_p1 (18 Jan 2004)
 

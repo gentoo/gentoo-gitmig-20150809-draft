@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.4_p2.ebuild,v 1.3 2004/03/13 21:50:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.4_p2.ebuild,v 1.4 2004/03/27 08:35:59 mr_bones_ Exp $
+
+inherit flag-o-matic
 
 MY_PN="bcrypt"
 DESCRIPTION="commercially licensed transparent filesystem encryption"
@@ -15,9 +17,8 @@ DEPEND="virtual/linux-sources"
 
 S=${WORKDIR}/bcrypt
 
-filter-flags -fforce-addr
-
 src_unpack() {
+	filter-flags -fforce-addr
 	unpack ${A}
 	for file in `find . -type f -iname Makefile*`;do
 		sed -i -e "s:-O[0-9]:${CFLAGS}:"	\
