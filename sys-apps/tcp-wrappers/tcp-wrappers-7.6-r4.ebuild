@@ -1,30 +1,35 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.14 2003/02/09 19:26:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.15 2003/02/10 09:05:33 seemant Exp $
 
-MY_P="tcp_wrappers_${PV}"
-PATCH0="${MY_P}.dif"
-PATCH1="${MY_P}-ipv6-1.6.diff.gz"
-PATCH2="${MY_P}-stdc.diff"
+inherit eutils
+
+MY_P=${P//-/_}
+
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="tcp wrappers"
-SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
+DESCRIPTION="TCP Wrappers"
+SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz
+	http://cvs.gentoo.org/~seemant/${PF}-gentoo.tar.bz2"
 HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+
 SLOT="0"
 LICENSE="freedist"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
+
 DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
-	
-	cd ${S}/
-	patch -p0 < ${FILESDIR}/${PATCH0} || die
-	gzip -dc ${FILESDIR}/${PATCH1} | patch -p2 || die
-	patch -p0 < ${FILESDIR}/${PATCH2} || die
+
+	PATCHDIR=${WORKDIR}/${PV}-patches
+
+	cd ${S}
+	epatch ${PATCHDIR}/${MY_P}-ipv6-1.6.diff
+	epatch ${PATCHDIR}/${MY_P}-stdc.diff
+	epatch ${PATCHDIR}/${MY_P}.diff
 	
 	cp Makefile Makefile.orig
-	sed -e "s/-O2/${CFLAGS} -fPIC/" \
+	sed -e "s:-O2:${CFLAGS} -fPIC:" \
 		-e "s:AUX_OBJ=.*:AUX_OBJ= \\\:" Makefile.orig > Makefile
 
 }

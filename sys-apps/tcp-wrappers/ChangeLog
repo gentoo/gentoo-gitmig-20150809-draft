@@ -1,11 +1,17 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.9 2003/02/09 19:26:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.10 2003/02/10 09:05:33 seemant Exp $
+
+*tcp-wrappers-7.6-r5.ebuild (16 Dec 2002)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Moved patchsets to tarballs on the gentoo mirrors.  Also, sed expression
+  delimiters converted from / to : closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
-
-*tcp-wrappers-7.6-r5.ebuild (16 Dec 2002)
 
   16 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> tcp-wrappers-7.6-r5.ebuild :
   Added compilation and installation of libwrap.so, closes #12014. 
