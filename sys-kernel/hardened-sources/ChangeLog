@@ -1,7 +1,14 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.25 2004/04/17 11:31:19 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.26 2004/05/29 18:14:25 scox Exp $
 
+*hardened-sources-2.4.26 (29 May 2004)
+
+ 29 May 2004; Andrea Luzzardi <scox@gentoo.org>
+ +hardened-sources-2.4.26.ebuild:
+ Updated hardened-sources for the 2.4.26 kernel
+ Removed broken components, updated almost everything.
+ 
 *hardened-sources-2.4.24-r3 (17 Apr 2004)
 
   17 Apr 2004; <plasmaroo@gentoo.org>
@@ -30,6 +37,7 @@
   Added the patch for the mremap/munmap vulnerability. Bug #42024.
 
 *hardened-sources-2.4.24 (06 Feb 2004)
+
   06 Feb 2004; Andrea Luzzardi <scox@gentoo.org>
   hardened-sources-2.4.24.ebuild:
   Version bump, updated most of the components.
