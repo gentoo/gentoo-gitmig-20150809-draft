@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrtools
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.63 2004/01/07 03:25:32 pylon Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.64 2004/01/17 22:13:26 pylon Exp $
+
+*cdrtools-2.01_alpha23 (17 Jan 2004)
+
+  17 Jan 2004; Lars Weiler <pylon@gentoo.org> cdrtools-2.01_alpha23.ebuild,
+  cdrtools-2.01_alpha25.ebuild:
+  Added the alpha25-version
+  Bumped the alpha23-version stable for both x86 and ppc
 
   07 Jan 2004; Lars Weiler <pylon@gentoo.org> :
   Version bump. New revision of Mandrake's DVD patch included. Thanks to

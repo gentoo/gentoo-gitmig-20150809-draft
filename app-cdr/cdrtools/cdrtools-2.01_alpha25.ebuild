@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~hppa ~sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~hppa ~sparc ~alpha ~amd64 ~ia64"
 IUSE="dvdr"
 
 DEPEND="virtual/glibc"
