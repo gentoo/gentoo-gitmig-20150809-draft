@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mindterm-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mindterm-bin/ChangeLog,v 1.3 2004/08/31 03:26:39 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mindterm-bin/ChangeLog,v 1.4 2004/11/03 11:56:31 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> mindterm-bin-2.4.2.ebuild:
+  depend on app-arch/unzip
 
 *mindterm-bin-2.4.2 (30 Aug 2004)
 

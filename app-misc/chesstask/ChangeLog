@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/chesstask
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/ChangeLog,v 1.6 2004/10/05 13:34:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/ChangeLog,v 1.7 2004/11/03 11:58:48 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> chesstask-1.3.ebuild,
+  chesstask-2.0.ebuild:
+  depend on app-arch/unzip
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   chesstask-1.3.ebuild, chesstask-2.0.ebuild:

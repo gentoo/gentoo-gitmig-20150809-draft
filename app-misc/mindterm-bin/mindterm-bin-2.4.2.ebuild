@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mindterm-bin/mindterm-bin-2.4.2.ebuild,v 1.1 2004/08/31 03:26:39 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mindterm-bin/mindterm-bin-2.4.2.ebuild,v 1.2 2004/11/03 11:56:31 axxo Exp $
 
 DESCRIPTION="A Java SSH Client"
 HOMEPAGE="http://www.appgate.com/products/80_MindTerm/"
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE=""
 RDEPEND="virtual/x11
 	virtual/jre"
-
+DEPEND="app-arch/unzip"
 S=${WORKDIR}
 
 src_install() {
