@@ -1,0 +1,12 @@
+# ChangeLog for dev-lisp/kawa
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/kawa/ChangeLog,v 1.1 2002/02/17 19:41:47 karltk Exp $
+
+*kawa-1.6.97 ( 17 Feb 2002 )
+
+  17 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> kawa-1.6.97.ebuild files/digest-kawa-1.6.97 ChangeLog
+
+
+  Kawa is a Scheme environment, written in Java, and that compiles Scheme 
+  code into Java byte-codes.
+
