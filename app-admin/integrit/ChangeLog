@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.1 2002/10/23 10:17:54 zwelch Exp $
+
+*integrit-3.02.00 (23 Oct 2002)
+
+  23 Oct 2002; Zach Welch <zwelch@gentoo.org> : 
+  Import from bug 9454, contributed by Danny Pansters <danny@ricin.com>
+
