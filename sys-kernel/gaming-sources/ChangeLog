@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gaming-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.10 2003/10/28 21:02:25 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.11 2003/12/01 22:40:53 iggy Exp $
+
+  01 Dec 2003; Brian Jackson <iggy@gentoo.org>
+  gaming-sources-2.4.20-r1.ebuild, gaming-sources-2.4.20-r2.ebuild,
+  gaming-sources-2.4.20-r3.ebuild, gaming-sources-2.4.20-r4.ebuild,
+  gaming-sources-2.4.20-r5.ebuild, gaming-sources-2.4.20-r6.ebuild,
+  files/do_brk_fix.patch:
+  fix do_brk vuln
 
 *gaming-sources-2.4.20-r6 (28 Oct 2003)
 
