@@ -25,10 +25,6 @@
 # doesn't compile
 >net-dialup/capi4k-utils-20020701
 
-# <fava@gentoo.org> (28 Apr 2003)
-# For testing
-=app-admin/ufed-0.31
-
 # <liquidx@gentoo.org> (28 Apr 2003)
 # gnucash-1.8.2 mask - needs testing as well.
 # may break guile dependent apps! at the very least it
