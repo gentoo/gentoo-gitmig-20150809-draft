@@ -1,0 +1,10 @@
+--- DVDStyler-1.05/configure.in.old	2004-07-29 20:25:02.495948232 +0930
++++ DVDStyler-1.05/configure.in	2004-07-29 20:25:29.651819912 +0930
+@@ -119,7 +119,6 @@
+ 
+ dnl vars
+ orig_prefix=$prefix
+-prefix=$prefix/dvdstyler
+ AC_SUBST(orig_prefix)
+ AC_SUBST(LDFLAGS)
+ AC_SUBST(CFLAGS)
