@@ -1,7 +1,7 @@
  
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/neoboard/neoboard-1.1.ebuild,v 1.1 2003/04/07 04:00:22 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/neoboard/neoboard-1.1.ebuild,v 1.2 2003/06/23 06:59:38 kutsuya Exp $
 
 inherit zproduct
 P_NEW="NeoBoard-${PV}"
@@ -10,7 +10,7 @@ DESCRIPTION="Threaded message boards w/articles, attachments, & i18n."
 HOMEPAGE="http://www.zoper.net/"
 SRC_URI="${HOMEPAGE}/Downloads/${P_NEW}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 RDEPEND="net-zope/neoportallibrary
 	${RDEPEND}"
 

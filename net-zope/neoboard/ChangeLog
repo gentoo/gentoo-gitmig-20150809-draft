@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/neoboard
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/neoboard/ChangeLog,v 1.1 2003/04/07 04:00:22 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/neoboard/ChangeLog,v 1.2 2003/06/23 06:59:38 kutsuya Exp $
+
+  22 Jun 2003; Jason Shoemaker <kustsuya@gentoo.org> neoboard-1.1.ebuild:
+  ~x86 ~ppc -> x86 ppc
 
 *neoboard-1.1 (06 Apr 2003)
 
