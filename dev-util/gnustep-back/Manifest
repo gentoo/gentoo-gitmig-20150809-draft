@@ -2,9 +2,9 @@ MD5 e6dd59702bbe30101994796e4e2367c6 gnustep-back-0.8.0.ebuild 1207
 MD5 30d6535e8f632ad9e79ae01750fee429 gnustep-back-0.8.5-r1.ebuild 1268
 MD5 9a1da12e45eb87e2c40e909c76acd366 gnustep-back-0.7.9.ebuild 1207
 MD5 092cf59cda1a3c5414bfeb19cf504a45 gnustep-back-0.8.7.ebuild 1266
-MD5 48ecd3f136e892a7063676f3e867ec00 gnustep-back-0.8.8.ebuild 1266
+MD5 b5e9a4a1d13a9bd0bdce72605e005c32 gnustep-back-0.8.8.ebuild 1266
 MD5 4106caf4a0b9180eaa6d8e72e2731391 gnustep-back-0.8.3.ebuild 1670
-MD5 dd7eb8907c9a3169da8c9902b06345a6 ChangeLog 2113
+MD5 5cc6dbe92f129e28f3140d247e178b55 ChangeLog 2262
 MD5 80699754a7e9adb6c02df33c8fa16fd6 metadata.xml 161
 MD5 d56965b96ae61be8dd1ab87c9eca515b gnustep-back-0.8.5.ebuild 1871
 MD5 c99de74ae7e80edaa3a313a9e552f6c0 files/digest-gnustep-back-0.8.5-r1 70
