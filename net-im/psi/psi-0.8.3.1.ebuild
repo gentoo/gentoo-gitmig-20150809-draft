@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.3.1.ebuild,v 1.1 2002/01/19 15:50:05 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.3.1.ebuild,v 1.2 2002/01/19 16:13:15 verwilst Exp $
 
 S=${WORKDIR}/${P}-src
 SRC_URI="http://www.affinix.com/~justin/programs/psi/${P}-src.tar.bz2"
@@ -34,7 +34,7 @@ src_install() {
 	mkdir -p ${D}/usr/share/psi/iconsets/licq
 
 	cd ${S}
-	cp image/*.png s{D}/usr/share/psi/image/
+	cp image/*.png ${D}/usr/share/psi/image/
 	cp iconsets/cosmic/* ${D}/usr/share/psi/iconsets/cosmic/
 	cp iconsets/icq2/* ${D}/usr/share/psi/iconsets/icq2/
 	cp iconsets/licq/* ${D}/usr/share/psi/iconsets/licq/
