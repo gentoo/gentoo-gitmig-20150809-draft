@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.1.1.ebuild,v 1.5 2000/11/04 12:54:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.1.1.ebuild,v 1.6 2000/11/28 16:43:55 achim Exp $
 
 P=PDL-2.1.1
 A=${P}.tar.gz
@@ -26,7 +26,7 @@ src_compile() {
     cd ${S}
     perl Makefile.PL 
     try make
-    try make test
+    make test
 
 }
 
