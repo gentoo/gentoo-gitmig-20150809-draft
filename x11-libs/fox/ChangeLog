@@ -1,8 +1,13 @@
 # ChangeLog for x11-libs/fox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.7 2003/06/10 14:43:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.8 2003/08/01 18:45:44 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*fox-1.0.43 (01 Aug 2003)
+
+  01 Aug 2003; Ryan Phillips <rphillips@gentoo.org> fox-1.0.43-ebuild:
+  version bump
  
 *fox-1.0.40 (10 Jun 2003)
 
