@@ -139,6 +139,7 @@ src_unpack() {
 	ewarn "that you compiled with it after uninstalling gcc 3.4, miscompiles"
 	ewarn "binutils at optimisation levels greater than -O2, eats your cat,"
 	ewarn "humps your leg, or pees on your rug. YOU HAVE BEEN WARNED!!!"
+	ewarn "ALSO DO NOT BOTHER TSENG OR GENTOO-HARDENED ABOUT GCC 3.4"
 
 	unpack ${A}
 	local release_version="Gentoo Linux ${PVR}"
