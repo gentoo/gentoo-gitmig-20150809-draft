@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/Cheetah-0.9.14.ebuild,v 1.9 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/Cheetah-0.9.14.ebuild,v 1.10 2003/09/06 23:32:28 msterret Exp $
 
 VERSION="0.9.14"
 S=${WORKDIR}/${P}
@@ -30,7 +30,7 @@ src_install() {
 
     docinto beginners_guide_src
 	dodoc docs/beginners_guide_src/*
-    
+
 	docinto devel_guide_src
 	dodoc docs/devel_guide_src/*
 
@@ -44,10 +44,10 @@ src_install() {
 
 	insinto usr/share/doc/${PF}/html/devel_guide_html_multipage
     doins docs/devel_guide_html_multipage/*
-	
+
 	insinto usr/share/doc/${PF}/html/users_guide_html
 	doins docs/users_guide_html/*
-	
+
 	insinto usr/share/doc/${PF}/html/users_guide_html_multipage
 	doins docs/users_guide_html_multipage/*
 }

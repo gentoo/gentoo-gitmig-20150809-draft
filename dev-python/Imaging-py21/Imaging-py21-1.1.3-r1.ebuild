@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/Imaging-py21-1.1.3-r1.ebuild,v 1.5 2003/06/22 23:17:12 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/Imaging-py21-1.1.3-r1.ebuild,v 1.6 2003/09/06 23:32:28 msterret Exp $
 
 PYTHON_SLOT_VERSION="2.1"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.pythonware.com/downloads/#pil"
 DEPEND=">=media-libs/jpeg-6a
 	>=sys-libs/zlib-0.95
 	tcltk? ( dev-lang/tk )"
-	
+
 SLOT="0"
 KEYWORDS="x86 ppc"
 LICENSE="as-is"
@@ -39,7 +39,7 @@ LICENSE="as-is"
 	distutils_src_compile
 }
 
-src_install () 
+src_install ()
 {
 	local mydoc="CHANGES* CONTENTS"
 	distutils_src_install

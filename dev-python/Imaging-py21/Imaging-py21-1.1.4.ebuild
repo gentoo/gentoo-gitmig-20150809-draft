@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/Imaging-py21-1.1.4.ebuild,v 1.1 2003/06/22 23:17:12 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/Imaging-py21-1.1.4.ebuild,v 1.2 2003/09/06 23:32:28 msterret Exp $
 
 PYTHON_SLOT_VERSION="2.1"
 
@@ -21,7 +21,7 @@ LICENSE="as-is"
 DEPEND=">=media-libs/jpeg-6a
 	>=sys-libs/zlib-0.95
 	tcltk? ( dev-lang/tk )"
-	
+
 src_compile() {
 	export OPT=${CFLAGS}
 
@@ -40,7 +40,7 @@ src_compile() {
 	#CFLAGS="$(CFLAGS) -DUSE_COMPOSITELESS_PHOTO_PUT_BLOCK" distutils_src_compile
 }
 
-src_install () 
+src_install ()
 {
 	local mydoc="CHANGES* CONTENTS"
 	distutils_src_install

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3-r1.ebuild,v 1.1 2003/07/07 23:39:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3-r1.ebuild,v 1.2 2003/09/06 23:32:28 msterret Exp $
 
 inherit distutils
 
@@ -56,7 +56,7 @@ src_install() {
 	do
 		install_txt_doc $doc
 	done
-	
+
 	# installing Gentoo GLEP tools. Uses versioned GLEP distribution
 	distutils_python_version
 	newbin ${GLEP_SRC}/glep.py docutils-glep.py

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.2.3.ebuild,v 1.2 2003/07/23 12:21:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.2.3.ebuild,v 1.3 2003/09/06 23:32:28 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML documentation for Python"
@@ -14,8 +14,8 @@ KEYWORDS="x86 ppc sparc alpha hppa"
 
 src_unpack() {
 	mkdir ${S}
-	cd ${S} 
-	unpack ${A} 
+	cd ${S}
+	unpack ${A}
 }
 
 

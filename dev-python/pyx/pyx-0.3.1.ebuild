@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.3.1.ebuild,v 1.5 2003/08/05 13:21:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.3.1.ebuild,v 1.6 2003/09/06 23:32:28 msterret Exp $
 
 IUSE=""
 
@@ -25,7 +25,7 @@ src_install() {
 
 	DOCS="manual/manual.ps"
 	distutils_src_install
-	
+
 	insinto /usr/share/doc/${PF}/examples
 	doins examples/*
 

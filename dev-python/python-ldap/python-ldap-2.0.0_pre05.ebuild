@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.0_pre05.ebuild,v 1.10 2003/06/22 12:16:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.0_pre05.ebuild,v 1.11 2003/09/06 23:32:28 msterret Exp $
 
 VERSION="2.0.0pre05"
 S=${WORKDIR}/${PN}-${VERSION}
@@ -21,7 +21,7 @@ src_compile() {
 	    -e "s|/usr/local/openldap2/include|/usr/include|" > setup.cfg \
 			|| die
 
-	base_src_compile 
+	base_src_compile
 }
 
 inherit distutils

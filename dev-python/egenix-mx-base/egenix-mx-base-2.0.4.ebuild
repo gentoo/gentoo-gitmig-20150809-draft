@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.4.ebuild,v 1.10 2003/08/06 12:20:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.4.ebuild,v 1.11 2003/09/06 23:32:28 msterret Exp $
 
 inherit distutils flag-o-matic
 
@@ -18,7 +18,7 @@ LICENSE="eGenixPublic"
 src_compile() {
 	replace-flags "-O[3s]" "-O2"
 	distutils_src_compile
-}	
+}
 
 src_install() {
 	distutils_src_install

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.8.ebuild,v 1.1 2003/08/27 15:53:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.8.ebuild,v 1.2 2003/09/06 23:32:29 msterret Exp $
 
 IUSE=""
 
@@ -37,7 +37,7 @@ src_compile(){
 		-b ${D}/usr/bin \
 		-d ${D}/usr/lib/python${PYVER}/site-packages \
 		-e ${D}/usr/include/python${PYVER}
-		
+
 	make || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.0.6.ebuild,v 1.4 2003/07/12 12:49:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.0.6.ebuild,v 1.5 2003/09/06 23:32:28 msterret Exp $
 
 inherit distutils
 
@@ -36,7 +36,7 @@ src_install() {
 		einfo "Moving documentation to correct location"
 		mv ${D}/usr/lib/python${PYVER}/site-packages/gnosis/doc ${D}/usr/share/doc/${PF}/doc
 	fi
-	
+
 	rm -f ${D}/usr/lib/python${PYVER}/site-packages/gnosis/{README,MANIFEST}
-	rm -f ${D}/usr/lib/python${PYVER}/site-packages/{README,MANIFEST}	
+	rm -f ${D}/usr/lib/python${PYVER}/site-packages/{README,MANIFEST}
 }

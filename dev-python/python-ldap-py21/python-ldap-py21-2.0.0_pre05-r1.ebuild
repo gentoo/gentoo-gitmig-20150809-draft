@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap-py21/python-ldap-py21-2.0.0_pre05-r1.ebuild,v 1.5 2003/06/23 08:10:12 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap-py21/python-ldap-py21-2.0.0_pre05-r1.ebuild,v 1.6 2003/09/06 23:32:28 msterret Exp $
 
 PYTHON_SLOT_VERSION=2.1
 
@@ -26,5 +26,5 @@ src_compile() {
 		-e "s|libs = ldap lber|libs = ldap lber resolv|" \
 		setup.cfg.orig > setup.cfg || die
 
-	distutils_src_compile 
+	distutils_src_compile
 }

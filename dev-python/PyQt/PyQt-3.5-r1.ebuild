@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.5-r1.ebuild,v 1.9 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.5-r1.ebuild,v 1.10 2003/09/06 23:32:28 msterret Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc README.Linux NEWS LICENSE README ChangeLog THANKS
 	dodir /usr/share/doc/${P}/
-	mv ${D}/usr/share/doc/* ${D}/usr/share/doc/${P}/ 
+	mv ${D}/usr/share/doc/* ${D}/usr/share/doc/${P}/
 	# I found out this location from the redhat rpm
 	insinto /usr/share/sip/qt
 	doins ${S}/sip/*

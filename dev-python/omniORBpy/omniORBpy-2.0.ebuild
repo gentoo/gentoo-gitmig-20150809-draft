@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniORBpy/omniORBpy-2.0.ebuild,v 1.6 2003/07/03 10:09:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniORBpy/omniORBpy-2.0.ebuild,v 1.7 2003/09/06 23:32:28 msterret Exp $
 
 DESCRIPTION="This is omniORBpy 2, a robust high-performance CORBA ORB for Python."
 HOMEPAGE="http://omniorb.sourceforge.net/"
@@ -18,13 +18,13 @@ S="${WORKDIR}/${P}"
 
 src_compile() {
     MY_CONF="--host=${CHOST} --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --with-omniorb=/usr"
-    
+
     use ssl && MY_CONF="${MY_CONF} --with-openssl=/usr"
-    
+
     MY_PY=/usr/bin/python`python -c "import sys; print sys.version[:3]"`
 	# install modules for python which is default python interpreter in
-	# the system    
-    
+	# the system
+
     PYTHON=${MY_PY} ./configure ${MY_CONF} || die "./configure failed"
     emake || die
 }
@@ -39,13 +39,13 @@ src_install() {
     mv python/dir.mk python/dir.mk_orig
     awk -v STR="Naming\\\.idl" '{ if (/^[[:space:]]*$/) flag = 0; tmpstr = $0; if (gsub(STR, "", tmpstr)) flag = 1; if (flag) print "#" $0; else print $0; }' python/dir.mk_orig > python/dir.mk
     make DESTDIR=${D} install || die
-    
+
     dodoc COPYING.LIB README README.Python
     dohtml doc/omniORBpy
     dodoc doc/omniORBpy.p* # ps,pdf
     dodoc doc/tex/* # .bib, .tex
 
     dodir /usr/share/doc/${P}/examples
-    cp -r examples/* ${D}/usr/share/doc/${P}/examples # doins doesn't do recursive 
+    cp -r examples/* ${D}/usr/share/doc/${P}/examples # doins doesn't do recursive
 }
 

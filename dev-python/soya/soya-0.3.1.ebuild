@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.3.1.ebuild,v 1.4 2003/07/12 12:49:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.3.1.ebuild,v 1.5 2003/09/06 23:32:29 msterret Exp $
 
 inherit distutils
 
 IUSE=""
-MY_P=${P/soya/Soya} 
+MY_P=${P/soya/Soya}
 DESCRIPTION="A high-level 3D engine for Python, designed with games in mind"
 SRC_URI="http://oomadness.tuxfamily.org/downloads/${MY_P}.tar.gz
 	http://www.nectroom.homelinux.net/pkg/${MY_P}.tar.gz
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/x11
 	virtual/opengl
 	>=dev-lang/python-2.2.2
-	>=dev-python/editobj-0.3.1	
+	>=dev-python/editobj-0.3.1
 	>=media-libs/libsdl-1.2.4
 	>=media-libs/sdl-gfx-2.0.3
 	>=media-libs/sdl-image-1.2.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.5.3.ebuild,v 1.11 2003/09/02 22:39:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.5.3.ebuild,v 1.12 2003/09/06 23:32:28 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="python bindings to sdl and other libs that facilitate game production"
@@ -24,7 +24,7 @@ inherit distutils
 src_install () {
 	mydoc=WHATSNEW
 	distutils_src_install
-        
+
 	dohtml -r docs/*
 	dodir /usr/share/doc/${PF}/examples
 	cp -r ${S}/examples ${D}usr/share/doc/${PF}/

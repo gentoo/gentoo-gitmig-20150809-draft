@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-1.2.ebuild,v 1.1 2003/07/30 01:20:51 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-1.2.ebuild,v 1.2 2003/09/06 23:32:28 msterret Exp $
 
 DESCRIPTION="Python bindings for SELinux functions"
 HOMEPAGE="http://selinux.dev.gentoo.org/python"
@@ -23,5 +23,5 @@ src_compile() {
 
 src_install() {
 	insinto /usr/lib/python2.2/site-packages
-	doins selinux.so 
+	doins selinux.so
 }

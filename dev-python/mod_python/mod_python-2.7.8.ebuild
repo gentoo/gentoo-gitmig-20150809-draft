@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.9 2003/07/10 03:09:21 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.10 2003/09/06 23:32:28 msterret Exp $
 
 DESCRIPTION="Python module for Apache 1.x, not for Apache 2.x"
 SRC_URI="http://www.modpython.org/dist/${P}.tgz"
@@ -16,7 +16,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# This patch from SuSE fixes the missing CFLAGS.
-	# If you remove it, your apache will most likely 
+	# If you remove it, your apache will most likely
 	# fail (lots of dieing pids in error_log).
 	patch -p0 < ${FILESDIR}/patch-2.7.8.diff
 }
@@ -53,8 +53,8 @@ src_install() {
 	rm ${D}usr/lib/python2.2/compileall.py
 
 	insinto /etc/apache/conf/addon-modules
-	doins ${FILESDIR}/mod_python.conf  
-	dodoc COPYRIGHT CREDITS NEWS README 
+	doins ${FILESDIR}/mod_python.conf
+	dodoc COPYRIGHT CREDITS NEWS README
 	insinto /usr/share/doc/${P}/html
 	doins doc-html/*
 	insinto /usr/share/doc/${P}/html/icons

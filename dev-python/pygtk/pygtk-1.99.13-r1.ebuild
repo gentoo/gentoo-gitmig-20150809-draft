@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.13-r1.ebuild,v 1.10 2003/08/29 03:26:35 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.13-r1.ebuild,v 1.11 2003/09/06 23:32:28 msterret Exp $
 
 # since its a development version
-inherit debug 
+inherit debug
 
 DESCRIPTION="GTK+2 bindings for Python"
 HOMEPAGE="http://www.daa.com.au/~james/pygtk/"

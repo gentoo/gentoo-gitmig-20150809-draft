@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.6.ebuild,v 1.3 2003/08/07 03:02:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.6.ebuild,v 1.4 2003/09/06 23:32:29 msterret Exp $
 
 inherit distutils
 
-DESCRIPTION="collection of servers and clients, which can be used either by developers of new applications or directly. Documentation included." 
+DESCRIPTION="collection of servers and clients, which can be used either by developers of new applications or directly. Documentation included."
 HOMEPAGE="http://www.twistedmatrix.com/"
 SRC_URI="http://twisted.sourceforge.net/Twisted-${PV}.tar.bz2"
 
@@ -22,18 +22,18 @@ S=${WORKDIR}/Twisted-${PV}
 
 src_install() {
 	distutils_src_install
-		
+
 	# of course it's documentation!
 	doman doc/man/*.[0-9n]
 	rm -rf doc/man	# don't dupe the man pages
-	
+
 	# next few lines will install docs: 9.4 megs!
 	if [ -n "`use doc`" ]; then
 		cd ${S}/doc
 		dodir /usr/share/doc/${PF}
 		cp -r . ${D}/usr/share/doc/${PF}
 	fi
-	
+
 	# use gtk2 if they so wish
 	if [ -n "`use gtk2`" ]; then
 		sed -e 's/import manhole/import manhole2/' \

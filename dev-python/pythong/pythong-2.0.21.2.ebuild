@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.0.21.2.ebuild,v 1.5 2003/08/07 03:07:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.0.21.2.ebuild,v 1.6 2003/09/06 23:32:28 msterret Exp $
 
 inherit distutils
 
@@ -41,15 +41,15 @@ src_compile() {
 
 src_install() {
 	distutils_python_version
-	
+
 	insinto /usr/lib/python${PYVER}/site-packages/
 	doins modulepythong.py
 	doins libpythong/fromidle.py
-	
+
 	exeinto /usr/bin
 	doexe pythong.py
-	
-	dodoc leeme.txt 
+
+	dodoc leeme.txt
 	cp -r ${S}/{LICENCIA,MANUAL,demos} ${D}/usr/share/doc/${PF}
 	rm -f ${D}/usr/share/doc/${PF}/demos/modulepythong.py
 

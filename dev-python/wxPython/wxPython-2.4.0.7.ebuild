@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.7.ebuild,v 1.5 2003/07/07 01:58:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.7.ebuild,v 1.6 2003/09/06 23:32:29 msterret Exp $
 
 IUSE="opengl gtk2"
 
@@ -23,7 +23,7 @@ pkg_setup() {
 	# xfree should not install these, remove until the fixed
 	# xfree is in main use.
 	rm -f /usr/X11R6/include/{zconf.h,zlib.h}
-    
+
     # make sure if you want gtk2, you have wxGTK with gtk2, and vice versa
     if [ -n "`use gtk2`" ]; then
     	if [ ! -f "/usr/bin/wxgtk2u-2.4-config" -a ! -f "/usr/bin/wxgtk2-2.4-config" ]; then
@@ -59,7 +59,7 @@ src_compile() {
 	else
 		myconf="${myconf} BUILD_GLCANVAS=0"
 	fi
-    
+
 	if [ `use gtk2` ]; then
 		myconf="${myconf} WXPORT=gtk2"
 	else

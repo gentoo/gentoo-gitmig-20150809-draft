@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.17.ebuild,v 1.1 2003/07/04 12:16:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.17.ebuild,v 1.2 2003/09/06 23:32:29 msterret Exp $
 
 #goofy tarball versioning
 vmaj=${PV%%.*}
@@ -20,10 +20,10 @@ LICENSE="as-is"
 KEYWORDS="x86 ~sparc ~alpha"
 
 src_compile() {
-	cp ${FILESDIR}/${PV}/setup.py .        
+	cp ${FILESDIR}/${PV}/setup.py .
 	python setup.py build
 }
-	
+
 src_install() {
 	python setup.py install --root=${D}
 	dodoc  README license.txt docs/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.6-r1.ebuild,v 1.4 2003/07/12 12:49:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.6-r1.ebuild,v 1.5 2003/09/06 23:32:28 msterret Exp $
 
 inherit eutils distutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 	distutils_python_version
 	# standard qt sandbox problem workaround
 	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
@@ -44,7 +44,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc README.Linux NEWS LICENSE README ChangeLog THANKS
 	dodir /usr/share/doc/${P}/
-	mv ${D}/usr/share/doc/* ${D}/usr/share/doc/${P}/ 
+	mv ${D}/usr/share/doc/* ${D}/usr/share/doc/${P}/
 	# I found out this location from the redhat rpm
 	insinto /usr/share/sip/qt
 	doins ${S}/sip/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-23.1.ebuild,v 1.1 2003/09/02 22:24:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-23.1.ebuild,v 1.2 2003/09/06 23:32:28 msterret Exp $
 
 inherit distutils
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-lang/python-2.2"
 src_install() {
 
 	distutils_src_install
-	distutils_python_version    
+	distutils_python_version
 
 	#Numerical Tutorial is nice for testing and learning
 	insinto /usr/lib/python${PYVER}/site-packages/NumTut

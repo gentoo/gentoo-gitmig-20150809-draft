@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.12 2003/08/29 13:17:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.13 2003/09/06 23:32:28 msterret Exp $
 
 IUSE="gnome opengl"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.daa.com.au/~james/gnome/"
 DEPEND="virtual/python
 	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
 		 <gnome-base/libglade-1.90.0
 		 <gnome-base/control-center-1.90.0 )
 	opengl? ( <x11-libs/gtkglarea-1.99.0 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyOpenSSL/pyOpenSSL-0.5.1.ebuild,v 1.9 2003/08/07 02:38:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyOpenSSL/pyOpenSSL-0.5.1.ebuild,v 1.10 2003/09/06 23:32:28 msterret Exp $
 
 inherit distutils
 
@@ -28,8 +28,8 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
- 
-	if [ "`use tetex`" ] ; then	
+
+	if [ "`use tetex`" ] ; then
 		dohtml ${S}/doc/html/*
 		dodoc ${S}/doc/pyOpenSSL.*
 	fi

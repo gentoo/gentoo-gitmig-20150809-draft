@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.6.ebuild,v 1.7 2003/08/07 02:34:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.6.ebuild,v 1.8 2003/09/06 23:32:28 msterret Exp $
 
 DESCRIPTION="set of LDAP utilities for use from the command line"
 HOMEPAGE="http://twistedmatrix.com/users/tv/ldaptor/"
@@ -25,7 +25,7 @@ src_install() {
 	python setup-ldaptor-utils.py install --root=${D} || die
 	python setup-ldaptor-webui.py install --root=${D} || die
 	python setup-python-ldaptor.py install --root=${D} || die
-	
+
 	dodoc README TODO rfc2251-status.txt
 
 	# install examples

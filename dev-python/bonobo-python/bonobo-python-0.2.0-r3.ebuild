@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/bonobo-python-0.2.0-r3.ebuild,v 1.5 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/bonobo-python-0.2.0-r3.ebuild,v 1.6 2003/09/06 23:32:28 msterret Exp $
 
 IUSE=""
 
@@ -43,7 +43,7 @@ src_install() {
 		mv ${S}/nautilus/Makefile ${S}/nautilus/Makefile.orig; \
 		sed s/'install-data-am: install-pysitePYTHON'/'install-data-am:'/ ${S}/nautilus/Makefile.orig > ${S}/nautilus/Makefile; \
 	)
-	
+
 	einstall || die
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
