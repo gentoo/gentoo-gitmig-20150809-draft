@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.32 2004/09/02 17:56:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.33 2004/12/09 07:25:12 robbat2 Exp $
+
+*autofs-4.1.3-r1 (08 Dec 2004)
+
+  08 Dec 2004; Robin H. Johnson <robbat2@gentoo.org> files/auto.master,
+  +files/auto.net, +files/autofs.confd9, +files/autofs.rc9,
+  +autofs-4.1.3-r1.ebuild:
+  Fixed bugs 16320,49477,58292,62819,65626,69309,70827. Apply upstream patches.
 
   02 Sep 2004; Sven Wegener <swegener@gentoo.org> -files/autofs,
   files/autofs.rc6, files/autofs.rc7, files/autofs.rc8:

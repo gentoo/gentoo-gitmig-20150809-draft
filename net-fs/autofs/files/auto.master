@@ -1,8 +1,9 @@
-# $Id: auto.master,v 1.1 2000/08/08 17:53:33 achim Exp $
+# $Id: auto.master,v 1.2 2004/12/09 07:25:12 robbat2 Exp $
 # Sample auto.master file
 # Format of this file:
 # mountpoint map options
 # For details of the format look at autofs(8).
+#/net	/etc/autofs/auto.net
 /misc	/etc/autofs/auto.misc
 #/home  /etc/autofs/auto.home
 
