@@ -1,27 +1,28 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/redhat-sources-2.4.18.0.13.ebuild,v 1.2 2002/04/28 05:35:05 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/redhat-sources-2.4.18.0.13.ebuild,v 1.3 2002/04/28 07:42:59 blocke Exp $
+#OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
+OKV=2.4.18
+KV=2.4.19-0.13-redhat
+S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 
 # INCLUDED:
 # Redhat Skipjack Beta 2 Kernel
 
-KERNVER="2.4.18-0.13"
-S=${WORKDIR}/linux-redhat-${KERNVER}
-
 DESCRIPTION="Full sources for the Redhat Linux kernel"
-SRC_URI="http://ftp.dulug.duke.edu/pub2/redhat/linux/beta/skipjack/en/os/i386/RedHat/RPMS/kernel-source-${KERNVER}.i386.rpm"
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://www.ibiblio.org/gentoo/distfiles/linux-${KV}.patch.bz2"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.redhat.com/" 
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
-	DEPEND=">=sys-devel/binutils-2.11.90.0.31 >=app-arch/rpm-4.0.4 sys-apps/cpio"
+	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 	RDEPEND=">=sys-libs/ncurses-5.2 sys-devel/perl >=sys-apps/modutils-2.4.2 sys-devel/make"
 fi
 
@@ -29,14 +30,16 @@ fi
 
 src_unpack() {
 	cd ${WORKDIR}
-	rpm2cpio ${DISTDIR}/kernel-source-${KERNVER}.i386.rpm | cpio -i --make-directories || die
-
-	mv usr/src/linux-${KERNVER} linux-redhat-${KERNVER} || die
-	rmdir usr/src usr
+	unpack linux-${OKV}.tar.bz2
+	mv linux linux-${KV} || die
 	cd ${S}
+	cat ${DISTDIR}/linux-${KV}.patch.bz2 | bzip2 -d | patch -p1 || die
 	
 	#sometimes we have icky kernel symbols; this seems to get rid of them
-	make distclean || die
+	make mrproper || die
+
+	#this file is required for other things to build properly, so we autogenerate it
+	#make include/linux/version.h || die
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
@@ -46,7 +49,7 @@ src_unpack() {
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	cd ${S}
 	mv Makefile Makefile.orig
-	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' -e 's|custom ||' \
+	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
 }
@@ -86,7 +89,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	[ "$ETYPE" = "headers" ] && return
-	cd ${ROOT}usr/src/linux-redhat-${KERNVER}
+	cd ${ROOT}usr/src/linux-${KV}
 	make mrproper
 	if [ -e "${ROOT}usr/src/linux/.config" ]
 	then
@@ -97,10 +100,10 @@ pkg_postinst() {
 		echo "Ignore any errors from the yes command above."
 		make dep
 	else
-		cp "${ROOT}usr/src/linux-redhat-${KERNVER}/arch/i386/defconfig" .config
+		cp "${ROOT}usr/src/linux-${KV}/arch/i386/defconfig" .config
 	fi
 	#remove /usr/src/linux symlink
 	rm -f ${ROOT}/usr/src/linux
 	#set up a new one
-	ln -sf linux-redhat-${KERNVER} ${ROOT}/usr/src/linux
+	ln -sf linux-${KV} ${ROOT}/usr/src/linux
 }
