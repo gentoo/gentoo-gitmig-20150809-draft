@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/vmnet-0.4.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/vmnet-0.4.ebuild,v 1.3 2003/10/27 10:56:09 aliz Exp $
 
 DESCRIPTION="A simple virtual networking program"
 HOMEPAGE="ftp://ftp.xos.nl/pub/linux/${PN}/"
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.xos.nl/pub/linux/${PN}/"
 # http://ftp.debian.org/debian/pool/main/${PN:0:1}/${PN}/${P/-/_}.orig.tar.gz
 # We use the debian patch anyway
 SRC_URI="ftp://ftp.xos.nl/pub/linux/${PN}/${P}.tar.gz
-	http://ftp.debian.org/debian/pool/main/${PN:0:1}/${PN}/${P/-/_}-1.diff.gz"
+	mirror://debian/pool/main/${PN:0:1}/${PN}/${P/-/_}-1.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
