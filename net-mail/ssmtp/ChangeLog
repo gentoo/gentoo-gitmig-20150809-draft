@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.13 2003/06/10 00:10:35 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.14 2003/06/14 17:38:28 raker Exp $
 
 *ssmtp-2.60.3 (09 Jun 2003)
+
+  14 Jun 2003; Nick Hadaway <raker@gentoo.org> ssmtp-2.60.3.ebuild:
+  Added some code so the config file has TLS enabled is ssl is in USE.
+  Thanks to ferdy again for this ebuild improvement.  Moved pkg_config()
+  code to pkg_postinst()
 
   09 Jun 2003; Nick Hadaway <raker@gentoo.org> ssmtp-2.60.3.ebuild,
   files/digest-ssmtp-2.60.3, files/starttls.diff:

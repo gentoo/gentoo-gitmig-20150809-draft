@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.3.ebuild,v 1.1 2003/06/10 00:10:35 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.3.ebuild,v 1.2 2003/06/14 17:38:28 raker Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 SRC_URI="ftp://ftp.es.debian.org/debian/pool/main/s/ssmtp/ssmtp_${PV}.tar.gz"
@@ -55,15 +55,37 @@ src_install() {
 	doins ssmtp.conf revaliases
 }
 
-pkg_config() {
+#pkg_config() {
+#
+#	local conffile="/etc/ssmtp/ssmtp.conf"
+#	local hostname=`hostname -f`
+#	local domainname=`hostname -d`
+#	mv ${conffile} ${conffile}.orig
+#	sed -e "s:rewriteDomain=:rewriteDomain=${domainname}:g" \
+#		-e "s:_HOSTNAME_:${hostname}:" \
+#		-e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
+#		${conffile}.orig > ${conffile}
+#}
 
-	local conffile="/etc/ssmtp/ssmtp.conf"
-	local hostname=`hostname -f`
-	local domainname=`hostname -d`
-	mv ${conffile} ${conffile}.orig
-	sed -e "s:rewriteDomain=:rewriteDomain=${domainname}:g" \
-		-e "s:_HOSTNAME_:${hostname}:" \
-		-e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
-		${conffile}.orig > ${conffile}
+pkg_postinst() {
+
+        local conffile="/etc/ssmtp/ssmtp.conf"
+        local hostname=`hostname -f`
+        local domainname=`hostname -d`
+        mv ${conffile} ${conffile}.orig
+        sed -e "s:rewriteDomain=:rewriteDomain=${domainname}:g" \
+                -e "s:_HOSTNAME_:${hostname}:" \
+                -e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
+                ${conffile}.orig > ${conffile}.pre
+
+        if [ `use ssl` ];
+        then
+                sed -e "s:^#UseTLS=YES:UseTLS=YES:g" \
+                        ${conffile}.pre > ${conffile}
+                mv ${conffile}.pre ${conffile}.orig
+        else
+                mv ${conffile}.pre ${conffile}
+        fi
 }
+
 
