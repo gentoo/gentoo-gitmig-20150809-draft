@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.44 2003/07/13 20:24:58 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.45 2003/07/23 20:28:43 gmsoft Exp $
 
   13 Jul 2003; Nick Hadaway <raker@gentoo.org> cyrus-sasl-2.1.14.ebuild:
   Changed kerberos dep to app-crypt/mit-krb5 and marked stbale for x86.
@@ -10,6 +10,9 @@
   Added sparc stable keyword
 
 *cyrus-sasl-2.1.14 (09 Jul 2003)
+
+  23 Jul 2003; Guy Martin <gmsoft@gentoo.org> cyrus-sasl-2.1.14.ebuild :
+  Added hppa to KEYWORDS.
 
   09 Jul 2003; Nick Hadaway <raker@gentoo.org> cyrus-sasl-2.1.14.ebuild,
   files/2.1.14-kerberos.patch, files/2.1.14-mysql.patch,
