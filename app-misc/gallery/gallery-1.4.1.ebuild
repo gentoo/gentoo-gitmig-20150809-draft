@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.1.ebuild,v 1.4 2003/12/14 00:54:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.1.ebuild,v 1.5 2003/12/14 22:34:47 spider Exp $
 
 inherit webapp-apache
 
@@ -47,8 +47,8 @@ src_install() {
 pkg_postinst() {
 	local DocumentRoot=${HTTPD_ROOT}
 	local destdir=${DocumentRoot}/${PN}
-#	chown -R apache.apache ${DST_PATH}
-	chown root.root ${destdir}/secure.sh ${destdir}/configure.sh
+#	chown -R apache:apache ${DST_PATH}
+	chown root:root ${destdir}/secure.sh ${destdir}/configure.sh
 	chmod 700 ${destdir}/secure.sh ${destdir}/configure.sh
 
 	einfo

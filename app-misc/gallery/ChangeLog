@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gallery
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/ChangeLog,v 1.18 2003/12/14 03:46:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/ChangeLog,v 1.19 2003/12/14 22:34:47 spider Exp $
+
+  14 Dec 2003; <spider@gentoo.org> gallery-1.4.1.ebuild:
+  QA: fixing chown user.group user:group, bug #35127
 
   14 Dec 2003; Guy Martin <gmsoft@gentoo.org> gallery-1.4.1.ebuild:
   Marked stable on hppa.
