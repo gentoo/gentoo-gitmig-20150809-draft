@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r2.ebuild,v 1.3 2003/11/13 09:43:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r2.ebuild,v 1.4 2003/11/14 09:00:17 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -327,6 +327,7 @@ get_EnvSet() {
 src_compile() {
 
 	if [ "$(gcc-version)" == "3.2" ]; then
+		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
 		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
 	fi
 
