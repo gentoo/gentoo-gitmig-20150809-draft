@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.82 2004/02/27 20:37:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.83 2004/02/27 20:39:19 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -12,7 +12,7 @@
 ECLASS=eutils
 INHERITED="$INHERITED $ECLASS"
 
-newdepend "!bootstrap? ( sys-devel/patch )"
+DEPEND="!bootstrap? ( sys-devel/patch )"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -648,7 +648,14 @@ enewgroup() {
 	then
 		if [ "${egid}" -gt 0 ]
 		then
-			opts="${opts} -g ${egid}"
+			chgrp ${egid} ${tmpfile} >& /dev/null
+			realuser="`ls -l ${tmpfile} | awk '{print $3}'`"
+			if [ "${realuser//[0-9]}" != "" ]
+			then
+				euid="gid is taken; using next available"
+			else
+				opts="${opts} -g ${egid}"
+			fi
 		else
 			eerror "Groupid given but is not greater than 0 !"
 			die "${egid} is not a valid GID"
