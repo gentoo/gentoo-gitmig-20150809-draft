@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.53.ebuild,v 1.5 2005/03/07 16:58:43 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.53.ebuild,v 1.6 2005/03/19 01:14:47 swegener Exp $
 
 inherit eutils gnuconfig
 
