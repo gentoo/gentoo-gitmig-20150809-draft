@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta10.ebuild,v 1.6 2004/07/07 12:55:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta10.ebuild,v 1.7 2004/10/10 20:39:06 eradicator Exp $
 
 MY_PV=${PV/_beta/beta}
 MY_P=${PN}-${MY_PV}
@@ -35,6 +35,6 @@ src_unpack() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL README* NEWS TODO
 }
