@@ -1,5 +1,5 @@
-MD5 1e3ddbf315ee49969230aeaf98f677d3 curphoo-0.3.11.ebuild 914
-MD5 b36ec9f24dfd8b23f0f1d3bcc8cc5104 ChangeLog 1681
+MD5 38eb7049479bbc5d5f185d8324ef8269 curphoo-0.3.11.ebuild 892
+MD5 3d4523a494d5a5910196841eee773e90 ChangeLog 1791
 MD5 764acbdbc75119813fd516d6132eb61f files/curphoo.sh 108
 MD5 bf702c387489441cb06e3c1239d0ba29 files/encodep.py-gentoo.patch 4290
 MD5 5ad580535a74a3a5735342833ba01c10 files/digest-curphoo-0.3.11 66
