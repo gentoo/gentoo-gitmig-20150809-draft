@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Unicode-String
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/ChangeLog,v 1.2 2002/05/06 16:06:27 seemant Exp $
+
+*Unicode-String-2.06-r1 (6 May 2002)
+
+  6 May 2002; Seemant Kulleen <seemant@gentoo.org>
+  Unicode-String-2.06-r1.ebuild files/digest-Unicode-String-2.06-r1 :
+
+  Using the perl-module eclass instead.
 
 *Unicode-String-2.06 (1 Feb 2002)
 
