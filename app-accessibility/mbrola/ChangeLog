@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.7 2004/09/05 06:37:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.8 2004/09/29 02:04:12 eradicator Exp $
+
+  28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mbrola-3.0.1h-r1.ebuild:
+  Added sparc, ppc, and alpha support.  Keyworded ~sparc.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
