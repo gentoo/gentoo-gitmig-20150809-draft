@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jsch
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.5 2004/02/15 09:29:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.6 2004/03/18 22:31:22 avenj Exp $
+
+  18 Mar 2004; Jon Portnoy <avenj@gentoo.org> jsch-0.1.12.ebuild,
+  jsch-0.1.13.ebuild :
+  Removed RESTRICT=nomirror. Policy now is to mirror sourceforge
+  files too.
 
   15 Feb 2004; David Holm <dholm@gentoo.org> jsch-0.1.13.ebuild:
   Added to ~ppc.

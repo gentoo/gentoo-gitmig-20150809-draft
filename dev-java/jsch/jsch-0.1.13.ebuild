@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.13.ebuild,v 1.4 2004/03/11 02:44:53 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.13.ebuild,v 1.5 2004/03/18 22:31:22 avenj Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,6 @@ LICENSE="jcraft"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc jikes"
-RESTRICT="nomirror"
 
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.4
