@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rfb/rfb-0.6.1.ebuild,v 1.7 2003/06/27 20:54:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rfb/rfb-0.6.1.ebuild,v 1.8 2003/06/28 19:37:16 vapier Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ KEYWORDS="x86 ppc ~sparc ~alpha"
 DEPEND="x11-libs/xclass"
 
 src_compile() {
-	cd ${S}
-	epatch ${FILESDIR}/gcc3.x-rfb-0.6.1.patch
+	epatch ${FILESDIR}/${P}-gcc3.x.patch
 
 	make depend || die "make depend failed"
 	make CXXFLAGS="-DUSE_ZLIB_WARREN -I../include ${CXXFLAGS}" || die "make failed"
