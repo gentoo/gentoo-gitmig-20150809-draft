@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/libelysiumui-0.2.0.ebuild,v 1.2 2003/06/20 08:52:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/libelysiumui-0.2.0.ebuild,v 1.3 2003/07/13 14:30:06 aliz Exp $
 
 DESCRIPTION="User Interface enhancements for Elysium GNU/Linux"
 HOMEPAGE="http://elysium-project.sourceforge.net"
 SRC_URI="mirror://sourceforge/elysium-project/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 
