@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.8.1-r1.ebuild,v 1.1 2003/04/20 11:10:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.8.1-r1.ebuild,v 1.2 2003/07/01 20:47:54 aliz Exp $
 
 inherit kde-base
 need-kde 3
@@ -10,7 +10,7 @@ DESCRIPTION="K3b, KDE CD Writing Software"
 SRC_URI="mirror://sourceforge/k3b/${P}.tar.gz"
 HOMEPAGE="http://k3b.sourceforge.net"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 newdepend ">=media-sound/mpg123-0.59
 	>=media-sound/cdparanoia-3.9.8
