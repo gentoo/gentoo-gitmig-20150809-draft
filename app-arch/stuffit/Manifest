@@ -1,3 +1,13 @@
-MD5 2d4deb2213892edd303d8c2d251c49aa ChangeLog 1203
-MD5 e6ad544e51b86c83760ea6b600b7b69c stuffit-5.2.0.611.ebuild 1893
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a2da1ea6d228a019a36a60004cf5b8c2 ChangeLog 1313
+MD5 abf4cc154a957e98802d6c4b4b58e06e stuffit-5.2.0.611.ebuild 1916
 MD5 aae2258184170ba7175ec7bfeba51e96 files/digest-stuffit-5.2.0.611 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB47UiArHZZzCEUG0RAqxmAKCKS2AK7j0RG2+vht9P4mtjKe0kWgCbBc4D
+08YEEMDC9zrmyMGCz3wRTRk=
+=5qwh
+-----END PGP SIGNATURE-----
