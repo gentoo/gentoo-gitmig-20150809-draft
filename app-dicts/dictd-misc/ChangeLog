@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-misc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-misc/ChangeLog,v 1.10 2005/01/01 12:49:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-misc/ChangeLog,v 1.11 2005/02/27 11:33:53 nigoro Exp $
+
+  27 Feb 2005; Yuta SATOH <nigoro@gentoo.org> dictd-misc-1.5b-r1.ebuild:
+  added ~ppc64
 
   30 Jul 2004; Anders Rune Jensen <arj@gentoo.org> metadata.xml:
   QA - IUSE fix and {add missing,correct} metatata.xml.
