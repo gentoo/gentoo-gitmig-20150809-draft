@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r2.ebuild,v 1.12 2003/04/17 17:04:13 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r2.ebuild,v 1.13 2003/04/17 17:10:40 wwoods Exp $
 # -r2 by Dan Armak
 
 DESCRIPTION="Premastering program for creating iso9660 volumes"
@@ -32,6 +32,7 @@ src_install() {
 	#these should work instead (sparc guys need to add theirs here too)
 	[ -d mkisofs/OBJ/x86-linux-cc ] && DIR=x86-linux-cc
 	[ -d mkisofs/OBJ/ppc-linux-cc ] && DIR=ppc-linux-cc
+	[ -d mkisofs/OBJ/alpha-linux-cc ] && DIR=alpha-linux-cc
 	
 	dobin mkisofs/OBJ/${DIR}/mkisofs
 	dobin mkisofs/diag/OBJ/${DIR}/devdump
