@@ -2,6 +2,7 @@ app-admin/sudo-1.6.6
 app-arch/bzip2-1.0.2
 app-arch/gzip-1.2.4
 app-arch/tar-1.13.25
+app-arch/unzip-5.20
 app-crypt/mit-krb5
 app-editors/emacs-21.2.1
 app-editors/vim-6.2
