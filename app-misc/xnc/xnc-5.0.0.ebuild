@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public Licensev2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xnc/xnc-5.0.0.ebuild,v 1.2 2003/08/05 18:26:44 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xnc/xnc-5.0.0.ebuild,v 1.3 2003/08/06 07:58:23 vapier Exp $
 
 DESCRIPTION="file manager for X Window system very similar to Norton Commander"
 HOMEPAGE="http://xnc.dubna.su/"
