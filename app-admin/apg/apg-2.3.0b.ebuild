@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b.ebuild,v 1.2 2003/11/16 05:04:28 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b.ebuild,v 1.3 2003/11/16 05:17:24 tad Exp $
 
 DESCRIPTION="Another Password Generator"
 SRC_URI="http://www.adel.nursat.kz/apg/download/${P}.tar.gz"
@@ -12,6 +12,10 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/glibc"
+src_unpack() {
+	unpack ${A}
+	chmod -R +w ${S}
+}
 
 src_compile() {
 	cp Makefile Makefile.orig
