@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/bluej-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej-bin/ChangeLog,v 1.8 2005/01/01 18:11:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej-bin/ChangeLog,v 1.9 2005/01/17 19:29:31 luckyduck Exp $
+
+*bluej-bin-2.0.4 (17 Jan 2005)
+
+  17 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +files/bluej-bin-2.0.4,
+  +bluej-bin-2.0.4.ebuild:
+  some generall improvements, fixed some deps and rewrote the startup script.
+  also removed a packed jar issue. version bump which fixes bug #78307.
 
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.

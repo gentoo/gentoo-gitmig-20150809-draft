@@ -1,0 +1,4 @@
+#!/bin/sh
+APPBASE="/usr/share/bluej-bin"
+CP=`java-config -p bluej-bin`:`java-config -p antlr`
+`java-config --java` -cp "${CP}" bluej.Boot $*
