@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.9.ebuild,v 1.15 2003/11/14 21:21:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.9.ebuild,v 1.16 2003/12/14 12:56:16 mholzer Exp $
 
 inherit eutils
 
@@ -32,12 +32,12 @@ src_compile() {
 	# passing --without-psql or --with-psql causes postgres to be enabled ...
 	# it's a broken configure.in file ... so lets just work around it
 	local myconf=""
-	use postgres && myconf="--with-psql"
+	use postgres && myconf="$myconf --with-psql"
+	use crypt    && myconf="$myconf --with-gcrypt"
 
 	econf \
 		`use_with zlib` \
 		`use_with nls locale` \
-		`use_with crypt gcrypt` \
 		--with-mhash \
 		--sysconfdir=/etc/aide \
 		--with-extra-lib=/usr/lib \
