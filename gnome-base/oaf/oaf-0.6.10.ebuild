@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.10.ebuild,v 1.18 2004/08/21 15:05:19 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.10.ebuild,v 1.19 2004/11/05 22:29:28 corsair Exp $
 
 IUSE="nls"
 
-inherit gnome.org libtool
+inherit gnome.org libtool gnuconfig
 
 DESCRIPTION="Object Activation Framework for GNOME"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64"
 
 RDEPEND="virtual/libc
 	>=dev-libs/popt-1.5
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	elibtoolize
+
+	use ppc64 && gnuconfig_update
 
 	local myconf=""
 	use nls || myconf="--disable-nls"
