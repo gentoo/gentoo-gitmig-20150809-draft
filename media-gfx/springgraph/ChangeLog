@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/springgraph
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/ChangeLog,v 1.8 2004/09/18 15:58:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/ChangeLog,v 1.9 2004/10/13 13:31:53 gmsoft Exp $
+
+  13 Oct 2004; Guy Martin <gmsoft@gentoo.org> springgraph-82.ebuild:
+  Stable on hppa.
 
   18 Sep 2004; Jason Wever <weeve@gentoo.org> springgraph-82.ebuild:
   Stable on sparc.
