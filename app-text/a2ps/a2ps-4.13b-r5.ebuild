@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.9 2003/10/31 20:13:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.10 2003/11/06 14:59:21 usata Exp $
 
 inherit gnuconfig eutils
 
@@ -25,6 +25,7 @@ IUSE="nls tetex cjk"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.57
 	>=dev-util/gperf-2.7.2
+	>=dev-util/yacc-1.9.1
 	cjk? ( >=sys-apps/sed-4 )"
 RDEPEND=">=app-text/ghostscript-6.23
 	>=app-text/psutils-1.17
@@ -44,6 +45,7 @@ src_unpack() {
 
 src_compile() {
 
+	export YACC=yacc
 	export WANT_AUTOCONF_2_5=1 ; autoreconf
 
 	econf --sysconfdir=/etc/a2ps \

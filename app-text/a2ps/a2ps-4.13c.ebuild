@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.4 2003/10/16 04:59:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.5 2003/11/06 14:59:21 usata Exp $
 
 inherit gnuconfig eutils
 
@@ -21,7 +21,6 @@ DEPEND=">=sys-devel/automake-1.6
 	>=dev-util/yacc-1.9.1
 	>=app-text/ghostscript-6.23
 	>=app-text/psutils-1.17
-	>=sys-apps/sed-4
 	tetex? ( virtual/tetex )"
 RDEPEND=">=app-text/ghostscript-6.23
 	>=app-text/psutils-1.17
@@ -59,7 +58,7 @@ src_install() {
 		lispdir=${D}/usr/share/emacs/site-lisp \
 		|| die "einstall failed"
 
-	sed -i -e "s,${D},,g" ${D}/etc/a2ps/a2ps.cfg
+	dosed /etc/a2ps/a2ps.cfg
 
 	dodoc ANNOUNCE AUTHORS ChangeLog FAQ NEWS README* THANKS TODO
 }

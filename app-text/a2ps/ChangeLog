@@ -1,6 +1,6 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.19 2003/10/30 18:03:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.20 2003/11/06 14:59:21 usata Exp $
 
 *a2ps-4.13c (27 Sep 2003)
 
@@ -15,6 +15,10 @@
   Version bumped(CVS snapshot).
 
 *a2ps-4.13b-r5 (16 Jul 2003)
+
+  06 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> a2ps-4.13b-r5.ebuild,
+  a2ps-4.13c.ebuild:
+  Force "yacc" instead of "bison -y". Closing bug #29691.
 
   31 Oct 2003; Mamoru KOMACHI <usata@gentoo.org>
   files/a2ps-4.13-autoconf-gentoo.diff:
