@@ -1,6 +1,6 @@
-# ChangeLog for sys-kernel/ppc-development-sources
+# ChangeLog for sys-kernel/ppc64-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-sources/ChangeLog,v 1.1 2004/03/31 04:32:27 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-sources/ChangeLog,v 1.2 2004/04/05 21:31:07 vapier Exp $
 
 *ppc64-sources-2.6.4 (30 Mar 2004)
 
