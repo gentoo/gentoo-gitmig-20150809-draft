@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.14 2002/12/13 10:59:52 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.15 2002/12/15 08:30:18 blizzy Exp $
+
+  15 Dec 2002; Maik Schreiber <blizzy@gentoo.org> files/named.rc6:
+  Added "use logger" (bug #8771).
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
