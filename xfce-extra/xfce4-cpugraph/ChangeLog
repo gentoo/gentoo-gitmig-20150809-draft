@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cpugraph
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/ChangeLog,v 1.2 2005/01/06 23:41:11 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/ChangeLog,v 1.3 2005/01/29 20:16:34 pylon Exp $
+
+  29 Jan 2005; Lars Weiler <pylon@gentoo.org>
+  xfce4-cpugraph-0.2.2-r1.ebuild:
+  Stable on ppc.
 
 *xfce4-cpugraph-0.2.2-r1 (06 Jan 2005)
 
