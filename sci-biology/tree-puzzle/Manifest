@@ -1,6 +1,16 @@
-MD5 045662b656ba3ff5f6f317604f1c5185 ChangeLog 1130
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d5a82f1ad1544c07fec98dec970f8689 tree-puzzle-5.2.ebuild 1347
+MD5 d3cb9eb158b98302c0e084c0e0cc26c4 tree-puzzle-5.1.ebuild 924
+MD5 16c8442d5d43646ef2a4d255908515d9 ChangeLog 1353
 MD5 d034503a05e54849a282d5baca880756 metadata.xml 1548
-MD5 37fd72859f823608b1d25b8d714e6081 tree-puzzle-5.2.ebuild 1343
-MD5 050406af0280d0ffc7a247df6a0bc6bc tree-puzzle-5.1.ebuild 919
 MD5 432840347efef142f52c23eb03c21e89 files/digest-tree-puzzle-5.1 67
 MD5 91165e7d2ebcd4a70e55b5e8bea21e43 files/digest-tree-puzzle-5.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFByyh+I1lqEGTUzyQRAppSAKCIGIgL3uzK5XHTRHEDWGO8k5kjOQCfUQwu
+oynE7fVLIHROarjJB5aENt8=
+=L/h9
+-----END PGP SIGNATURE-----

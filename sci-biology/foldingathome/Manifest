@@ -1,20 +1,30 @@
-MD5 b0af599249fff5886fef0f3856b09eaa foldingathome-4.0.0-r2.ebuild 1903
-MD5 6f2db7b7565ac75c66f6db8922e3f65c foldingathome-4.0.0.ebuild 1447
-MD5 d2c0fcac327152ebfbd2515a2f34729b ChangeLog 3176
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a2a811ff13eade173e115364c8a99b86 foldingathome-4.0.0-r2.ebuild 1907
+MD5 f2d6fa644e98fe50c624d6155dbea5fc foldingathome-4.0.0.ebuild 1451
+MD5 ea794ff1917a4d515eead0b4a732edd8 ChangeLog 3746
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 04d6c34d9f84f01b61fab60c2b904943 foldingathome-5.0.2.ebuild 2008
+MD5 152f7fdcd3864695551539231e04a476 foldingathome-5.0.2.ebuild 2013
 MD5 a586f7af900f3c15982e59730e7e082a files/folding-conf.d 1125
 MD5 91f88a421f87928d798002ede77fa8f9 files/initfolding 80
-MD5 9c9e4e6f2559cf1191b842ad06da6689 files/folding-init.d 535
+MD5 76b9bbe1167870a4cd58351bc530cc87 files/folding-init.d 538
 MD5 cd07557b5a0c08853562d0a5ae204d78 files/copy_client_config 756
 MD5 9c93f287339458f575ee4c5d20fffdfe files/initfolding-r1 656
 MD5 f3a9e0a439c14bd3d328cea6e3af1540 files/initfolding-r2 150
 MD5 3174784abb8ed1da2fc846d722aeffe5 files/folding-conf.d-r1 1172
 MD5 6c633c6cc20e087d9da4585c5d9563dc files/digest-foldingathome-4.0.0-r2 66
-MD5 f0462622685d1daf28447505a5f6cc85 files/folding-init.d-r1 738
-MD5 4a310628702e01fd17f5e7a9b8ec10f8 files/folding-init.d-r2 699
-MD5 84d1c6aa59e3e57a12742c5e1224050f files/folding-init.d-r3 637
-MD5 6a92a0cf0235a646731c882e19840b43 files/folding-init.d-r4 1155
+MD5 d2be64c34b80c66ca7f602576c15389d files/folding-init.d-r1 741
+MD5 91444f1e4aaea5f3561b53789f8596a8 files/folding-init.d-r2 702
+MD5 5c608b526b53375ad6003e76b9c8ba19 files/folding-init.d-r3 640
+MD5 514c0c505246323c8abb6fa13a8671c7 files/folding-init.d-r4 1160
 MD5 aec1f2de50cf95bf1797d61ae94b3b04 files/folding.sh 88
 MD5 6c633c6cc20e087d9da4585c5d9563dc files/digest-foldingathome-4.0.0 66
 MD5 2f181dd626be0626fc9000536fd0d4c4 files/digest-foldingathome-5.0.2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFByyfcI1lqEGTUzyQRApFSAJ9JyEoAicM+Kyg0Wv7gMJkqv+n4NACdFNzS
+hBG8EGR60U4Vp7/w/sB7/1U=
+=eI1v
+-----END PGP SIGNATURE-----
