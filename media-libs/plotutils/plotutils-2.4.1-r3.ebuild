@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r3.ebuild,v 1.10 2005/02/02 21:41:21 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r3.ebuild,v 1.11 2005/03/29 02:09:11 vapier Exp $
 
-IUSE="X"
-
-inherit libtool eutils
+inherit libtool eutils flag-o-matic
 
 #The plotutils package contains extra X fonts.  These fonts are not installed
 #in the current ebuild.  The commented out ebuild lines below are for future
@@ -14,22 +12,16 @@ inherit libtool eutils
 #See Bug# 30 at http://bugs.gentoo.org/show_bug.cgi?id=30
 
 DESCRIPTION="a powerful C/C++ function library for exporting 2-D vector graphics"
-SRC_URI="ftp://ftp.gnu.org/gnu/plotutils/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/plotutils/"
+SRC_URI="ftp://ftp.gnu.org/gnu/plotutils/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc alpha amd64 ~ia64 ppc64 ppc-macos"
+SLOT="0"
+KEYWORDS="alpha amd64 ia64 ~ppc ppc64 ppc-macos s390 sparc x86"
+IUSE="X"
 
 DEPEND="media-libs/libpng
 	X? ( virtual/x11 )"
-
-
-# Filter out k6 from the CFLAGS
-export CFLAGS="${CFLAGS/k6-3/i586}"
-export CFLAGS="${CFLAGS/k6-2/i586}"
-export CFLAGS="${CFLAGS/k6/i586}"
-export CXXFLAGS="${CFLAGS}"
 
 src_unpack() {
 	unpack ${A}
@@ -39,6 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
+	replace-cpu-flags i586 k6 k6-2 k6-3
 	elibtoolize
 
 	#enable build of C++ version
@@ -57,11 +50,10 @@ src_compile() {
 	emake || die "Parallel Make Failed"
 }
 
-src_install () {
-	einstall \
-		datadir=${D}/usr/share || die "Installation Failed"
+src_install() {
+	einstall datadir=${D}/usr/share || die "Installation Failed"
 
-	dodoc AUTHORS COMPAT COPYING ChangeLog INSTALL* \
+	dodoc AUTHORS COMPAT ChangeLog INSTALL* \
 		KNOWN_BUGS NEWS ONEWS PROBLEMS README THANKS TODO
 }
 
