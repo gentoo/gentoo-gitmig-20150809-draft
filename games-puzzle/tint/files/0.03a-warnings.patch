@@ -1,0 +1,31 @@
+--- tint.c.orig	2004-09-24 19:28:16.000000000 -0700
++++ tint.c	2004-09-24 19:28:27.000000000 -0700
+@@ -651,7 +651,7 @@
+ 				  shapecount[engine.curshape]++;
+ 				  break;
+ 				  /* shape moved down one line */
+-				case 1:
++				case 1:;
+ 			   }
+ 		  }
+ 	 }
+--- engine.c.orig	2004-09-24 19:26:04.000000000 -0700
++++ engine.c	2004-09-24 19:28:01.000000000 -0700
+@@ -27,6 +27,8 @@
+  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  */
+ 
++#include <stdlib.h>
++#include <string.h>
+ #include "typedefs.h"
+ #include "utils.h"
+ #include "io.h"
+@@ -94,7 +96,7 @@
+ 	  case 5:
+ 		real_rotate (shape,FALSE);
+ 		break;
+-	  case 3:	/* This one is not rotated at all */
++	  case 3:;	/* This one is not rotated at all */
+ 	 }
+ }
+ 

@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/tint
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/ChangeLog,v 1.1 2004/09/25 07:09:15 mr_bones_ Exp $
+
+*tint-0.03a (25 Sep 2004)
+
+  25 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.03a-warnings.patch, +tint-0.03a.ebuild:
+  initial commit - ebuild based on the one provided by LepeL via bug #65143
+
