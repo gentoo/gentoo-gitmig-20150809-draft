@@ -3,6 +3,9 @@
 
 =sys-apps/portage-1.8.9.3
 
+# Fails to compile... <Verwilst, 6 april 2002>
+=dev-libs/pwlib-1.2.13
+
 #Seems to cause binary incompatibility problems
 #(gbevin, 05 Apr 2002)
 =glibc-2.2.5-r3
