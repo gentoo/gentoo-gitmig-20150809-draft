@@ -10,5 +10,5 @@ einfo "/usr/${MY_LIBDIR}/libcblas.so.0 -> blas/threaded-atlas/libcblas.so.0"
 ln -sf blas/threaded-atlas/libcblas.so.0 /usr/${MY_LIBDIR}/libcblas.so.0
  
 einfo "/usr/${MY_LIBDIR}/libcblas.a -> blas/threaded-atlas/libcblas.a"
-ln -sf blas/threaded-atlas/libcblas.so.0 /usr/${MY_LIBDIR}/libcblas.a"
+ln -sf blas/threaded-atlas/libcblas.so.0 /usr/${MY_LIBDIR}/libcblas.a
 }
