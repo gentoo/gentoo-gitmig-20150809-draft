@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.1.ebuild,v 1.3 2004/10/06 04:41:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.2.ebuild,v 1.1 2004/10/13 18:24:16 agriffis Exp $
 
 inherit flag-o-matic eutils
 
-SV=1.6.1 		# rc-scripts version
+SV=1.6.2		# rc-scripts version
 SVREV=			# rc-scripts rev
 
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
@@ -125,6 +125,7 @@ src_install() {
 	kdir /etc/cron.weekly
 	kdir /etc/devfs.d
 	kdir /etc/env.d
+	dodir /etc/init.d			# .keep file might mess up init.d stuff
 	kdir /etc/modules.autoload.d
 	kdir /etc/modules.d
 	kdir /etc/opt
@@ -139,11 +140,14 @@ src_install() {
 		kdir /lib/dev-state
 		kdir /lib/udev-state
 	fi
+	kdir /lib/rcscripts/awk
+	kdir /lib/rcscripts/sh
+	dodir /lib/rcscripts/net.modules.d	# .keep file messes up net.lo
 	kdir /mnt
 	kdir -m 0700 /mnt/cdrom
 	kdir -m 0700 /mnt/floppy
 	kdir /opt
-	kdir -o root -g uucp -m0775 /var/lock
+	kdir -o root -g uucp -m0755 /var/lock
 	kdir /proc
 	kdir -m 0700 /root
 	kdir /sbin
@@ -185,6 +189,7 @@ src_install() {
 	kdir /usr/X11R6/share
 	kdir -m 1777 /tmp
 	kdir /var
+	dodir /var/db/pkg			# .keep file messes up Portage
 	kdir /var/lib/misc
 	kdir /var/lock/subsys
 	kdir /var/log/news
@@ -192,10 +197,6 @@ src_install() {
 	kdir /var/spool
 	kdir /var/state
 	kdir -m 1777 /var/tmp
-
-	dodir /etc/init.d			# .keep file might mess up init.d stuff
-	dodir /etc/net.modules.d	# .keep file messes up net.lo
-	dodir /var/db/pkg			# .keep file messes up Portage
 
 	# Symlinks so that LSB compliant apps work
 	# /lib64 is especially required since its the default place for ld.so
@@ -252,8 +253,6 @@ src_install() {
 
 	exeinto /etc/init.d
 	doexe ${S}/init.d/*
-	insinto /etc/net.modules.d
-	doins ${S}/etc/net.modules.d/*
 	insinto /etc/conf.d
 	doins ${S}/etc/conf.d/*
 	insinto /etc/env.d
@@ -264,8 +263,6 @@ src_install() {
 	doins ${S}/etc/modules.d/*
 	insinto /etc/skel
 	find ${S}/etc/skel -type f -maxdepth 1 -print0 | xargs --null doins
-
-	rm -f ${D}/etc/{conf,init}.d/net.ppp*	# now ships with net-dialup/ppp
 
 	# As of baselayout-1.10-1-r1, sysvinit is its own package again, and
 	# provides the inittab itself
@@ -321,7 +318,9 @@ src_install() {
 	dosym ../../sbin/functions.sh /etc/init.d/functions.sh
 
 	#
-	# Setup files in /lib/rcsripts/sh
+	# Setup files in /lib/rcscripts
+	# These are support files for other things in baselayout that needn't be
+	# under CONFIG_PROTECTed /etc
 	#
 	cd ${S}/sbin
 	exeinto /lib/rcscripts/sh
@@ -341,6 +340,11 @@ src_install() {
 		insinto /lib/rcscripts/awk
 		doins ${S}/src/awk/*.awk
 	fi
+
+	# Original design had these in /etc/net.modules.d but that is too
+	# problematic with CONFIG_PROTECT
+	insinto /lib/rcscripts/net.modules.d
+	doins ${S}/lib/rcscripts/net.modules.d/*
 
 	#
 	# Install baselayout documentation
