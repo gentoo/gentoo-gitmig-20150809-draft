@@ -45,8 +45,8 @@ Choose the sparc64-unknown-linux-gnu one you just emerged
 Use the stage1 gcc to build bootstrap multilib glibc
 # USE="-nptl" CBUILD="sparc-unknown-linux-gnu" emerge -v glibc
 
-Now, finally emerge your full glibc and gcc
-# emerge -v gcc glibc
+Now, finally emerge your multilib sandbox, full glibc and gcc
+# emerge -v portage gcc glibc
 
 This profile is purely for development purposes only and is subject to break or
 even disappear.  If if destroys your system, sorry, but you were warned...
