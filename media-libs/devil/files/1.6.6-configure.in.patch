@@ -1,7 +1,23 @@
-diff -ur DevIL.orig/configure.in DevIL/configure.in
---- DevIL.orig/configure.in	2003-08-12 14:24:28.000000000 +1000
-+++ DevIL/configure.in	2004-02-10 01:55:18.000000000 +1100
-@@ -90,131 +90,346 @@
+--- configure.in.orig	2004-05-30 02:46:40.188827272 -0400
++++ configure.in	2004-05-30 02:47:26.065852904 -0400
+@@ -48,12 +48,10 @@
+ AM_PROG_LIBTOOL
+ AM_MAINTAINER_MODE
+ 
+-LIBIL_CFLAGS="-Wall -O3  -funroll-loops -ffast-math  -fomit-frame-pointer \
+-              -fexpensive-optimizations"
+-LIBILU_CFLAGS="-Wall -O3  -funroll-loops -ffast-math  -fomit-frame-pointer \
+-               -fexpensive-optimizations"
+-LIBILUT_CFLAGS="-Wall -O3  -funroll-loops -ffast-math  -fomit-frame-pointer \
+-               -fexpensive-optimizations"
++CFLAGS="-Wall -funroll-loops -ffast-math -fomit-frame-pointer -fexpensive-optimizations $CFLAGS"
++LIBIL_CFLAGS="$CFLAGS"
++LIBILU_CFLAGS="$CFLAGS"
++LIBILUT_CFLAGS="$CFLAGS"
+ 
+ dnl
+ dnl Default supported formats : all except lcms
+@@ -90,131 +88,346 @@
  dnl
  AC_ARG_ENABLE(bmp,
  [  --disable-bmp           Doesn't compile bmp support],
@@ -380,10 +396,21 @@ diff -ur DevIL.orig/configure.in DevIL/configure.in
  
  if test "$debug_symbols" = "yes" ; then
    LIBIL_CFLAGS="-Wall -g"
-@@ -622,4 +837,4 @@
-            src-ILUT/include/Makefile \
-            include/Makefile \
-            include/IL/Makefile ])
--AC_OUTPUT
-\ No newline at end of file
-+AC_OUTPUT
+@@ -285,7 +498,7 @@
+ AC_SUBST(LIBTIFF)
+ 
+ if test "$no_png" = "no" ; then
+-   AC_CHECK_LIB(png, png_start_read_image, LIBPNG="-lpng", LIBPNG="", )
++   AC_CHECK_LIB(png, png_start_read_image, LIBPNG="-lpng", LIBPNG="", `libpng-config --libs`)
+    if test "$LIBPNG" != "-lpng" ; then
+      no_png="yes"
+    fi
+@@ -325,7 +538,7 @@
+     LIBSDL=""
+     HSDL=""
+   else
+-    LIBSDL=`sdl-conf --libs`
++    LIBSDL=`sdl-config --libs`
+     HSDL=`sdl-config --cflags`
+   fi
+ fi

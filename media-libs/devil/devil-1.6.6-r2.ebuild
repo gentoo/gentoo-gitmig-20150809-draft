@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.6.ebuild,v 1.4 2004/04/03 23:45:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.6-r2.ebuild,v 1.1 2004/05/30 06:53:10 vapier Exp $
 
-inherit libtool
+inherit eutils libtool
 
 DESCRIPTION="DevIL image library"
 HOMEPAGE="http://www.imagelib.org/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/openil/DevIL-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE="X gif png sdl jpeg tiff opengl"
 
 RDEPEND="X? ( virtual/x11 )
@@ -23,8 +23,16 @@ RDEPEND="X? ( virtual/x11 )
 
 S=${WORKDIR}/DevIL
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i 's:_vsnprintf:vsnprintf:' src-IL/src/il_tiff.c || die
+	epatch ${FILESDIR}/${PV}-configure.in.patch
+	autoconf || die
+	elibtoolize || die
+}
+
 src_compile() {
-	elibtoolize
 	econf \
 		`use_with X x` \
 		`use_enable gif` \
@@ -34,7 +42,8 @@ src_compile() {
 		`use_enable tiff` \
 		`use_enable opengl` \
 		--disable-directx \
-		--disable-win32 || die
+		--disable-win32 \
+		|| die
 
 	emake || die "emake failed"
 }
