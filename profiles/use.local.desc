@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.94 2003/08/26 18:40:22 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.95 2003/08/27 10:44:07 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -101,6 +101,7 @@ net-www/mozilla:mozp3p - blank
 net-www/mozilla:mozsvg - blank
 net-www/mozilla:mozxmlterm - blank
 sys-apps/busybox:uclibc - Compile with uclibc :)
+sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tinylogin:uclibc - Compile with uclibc :)
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
