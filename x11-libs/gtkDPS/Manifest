@@ -1,5 +1,5 @@
-MD5 9adb1103cc8ad01306ec65f325c41b1e ChangeLog 1000
+MD5 50df02bdeac949e2acfaf47a3f0fe9c8 ChangeLog 1116
 MD5 d037588e5b8730c7fdfbbe213ade6128 gtkDPS-0.3.3-r1.ebuild 890
-MD5 7a0bceac79bb53eb3131bc29c3d60dc5 gtkDPS-0.3.4.ebuild 992
+MD5 db1d0459b8e998151a53a9860e248313 gtkDPS-0.3.4.ebuild 991
 MD5 8f3772c51d414a6f9200895eb7aeb5df files/digest-gtkDPS-0.3.3-r1 64
 MD5 7ce6795f1acf0df797038cc2b116d66d files/digest-gtkDPS-0.3.4 64
