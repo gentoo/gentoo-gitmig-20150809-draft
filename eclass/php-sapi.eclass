@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.46 2004/08/03 02:51:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.47 2004/08/07 20:21:23 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -455,7 +455,7 @@ php-sapi_src_compile() {
 	myconf="${myconf} --enable-ftp"
 	myconf="${myconf} --with-mime-magic=/usr/share/misc/file/magic.mime"
 	myconf="${myconf} --enable-sockets"
-	myconf="${myconf} --enable-sysvsem --enable-sysvshm --enable-sysvipc"
+	myconf="${myconf} --enable-sysvsem --enable-sysvshm --enable-sysvmsg"
 	myconf="${myconf} --with-iconv"
 	myconf="${myconf} --enable-shmop"
 	myconf="${myconf} --enable-dio"
