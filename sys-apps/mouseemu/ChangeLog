@@ -1,0 +1,7 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mouseemu/ChangeLog,v 1.1 2004/08/20 00:02:35 pvdabeel Exp $
+
+*mouseemu-0.12 (20 Aug 2004)
+  20 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> all:
+  46848 - initial import
