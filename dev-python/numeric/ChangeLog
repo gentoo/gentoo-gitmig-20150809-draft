@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/numeric
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.1 2003/09/02 22:24:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.2 2004/01/29 21:57:49 gmsoft Exp $
 
 *numeric-23.1 (02 Sep 2003)
+
+  20 Jan 2004; Guy Martin <gmsoft@gentoo.org> numeric-23.1.ebuild :
+  Marked stable on hppa.
 
   02 Sep 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml,
   numeric-22.0.ebuild, numeric-23.0.ebuild, numeric-23.1.ebuild:
