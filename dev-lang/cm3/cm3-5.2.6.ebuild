@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/cm3-5.2.6.ebuild,v 1.8 2004/06/24 22:47:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/cm3-5.2.6.ebuild,v 1.9 2004/07/11 15:43:51 vapier Exp $
 
 inherit fixheadtails
 
@@ -17,6 +17,7 @@ RDEPEND="tcltk? ( dev-lang/tcl )"
 DEPEND="${RDEPEND}
 	sys-devel/gcc
 	dev-lang/cm3-bin"
+PROVIDE="virtual/m3"
 
 S=${WORKDIR}
 
