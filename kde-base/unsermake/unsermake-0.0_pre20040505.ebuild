@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/unsermake-0.0_pre20040505.ebuild,v 1.1 2004/05/05 21:52:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/unsermake-0.0_pre20040505.ebuild,v 1.2 2004/05/07 14:21:27 dholm Exp $
 
 IUSE=""
 DESCRIPTION="Unsermake - Advanced KDE build system"
 HOMEPAGE="http://www.kde.org"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT=0
 
