@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.3 2002/03/21 14:47:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.4 2002/04/03 09:52:00 woodchip Exp $
+
+*openssl-0.9.6c-r1 (3 Apr 2002)
+
+  3 Apr 2002; Donny Davies <woodchip@gentoo.org> openssl-0.9.6c-r1.ebuild,
+  openssl-0.9.6c-gcc3.patch, openssl-0.9.6c-Makefile.org-gentoo.diff:
+
+  Stop overwriting the passwd.1 and rand.3 manpages!  Remove the
+  patch from src_unpack; it was redundant.  Remove the manpage sed stuff
+  and pass MANDIR to make install instead.  Fix a longstanding annoyance
+  with the support scripts getting installed into /usr/ssl and install
+  them in the proper place: /usr/lib/ssl.  Add a patch for compiling with
+  gcc-3.  Fix a glitch with the html docs getting installed into a redundant
+  'doc' subdirectory.  Remove all old patches, digests and ebuilds.
 
   21 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : Fixed 0.9.6c ebuild so
   that it doesn't do 'sed -e "foo" | cat > Makefile', which breaks often.  Now
