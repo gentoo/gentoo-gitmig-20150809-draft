@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.0.45.ebuild,v 1.4 2003/02/13 16:15:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.0.45.ebuild,v 1.5 2003/03/10 17:19:04 vapier Exp $
 
 MY_P="${PN}-5.0-45"
 DESCRIPTION="control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.)"
@@ -14,7 +14,7 @@ KEYWORDS="x86 sparc"
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	emake || die
+	emake CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
