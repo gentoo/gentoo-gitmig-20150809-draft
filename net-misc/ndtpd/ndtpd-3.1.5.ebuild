@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.5 2004/01/03 16:19:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.6 2004/01/13 16:34:34 usata Exp $
 
 inherit eutils
 
@@ -67,7 +67,7 @@ src_install() {
 	newins ndtpd.conf{.sample,}
 
 	keepdir /var/lib/ndtpd
-	fowners ndtpuser.ndtpgrp /var/lib/ndtpd
+	fowners ndtpuser:ndtpgrp /var/lib/ndtpd
 	fperms 4710 /var/lib/ndtpd
 
 	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* UPGRADE*

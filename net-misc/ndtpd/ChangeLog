@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ndtpd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ChangeLog,v 1.5 2004/01/03 16:19:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ChangeLog,v 1.6 2004/01/13 16:34:34 usata Exp $
+
+  14 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> ndtpd-3.1.5.ebuild:
+  Changed uid.gid separator to :, closing bug #38038
 
   04 Jan 2004; <usata@gentoo.org> ndtpd-3.1.5.ebuild:
   Fixed compile bug when >=dev-libs/eb-4.0
