@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.74 2004/10/31 20:08:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.75 2004/11/19 17:18:00 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -9,6 +9,12 @@
 
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
+
+# since it's always possible, that kde_sandbox_patch() gets called, the dependency is needed
+# at least with the slotted autotools, we have the same problem identifying and adding the correct 
+# dependency like with the need-kde/qt functions. this needs to be changed
+DEPEND="sys-apps/sed"
+
 # convinience functions for requesting autotools versions
 need-automake() {
 
