@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/airsnort-0.2.1b.ebuild,v 1.4 2003/03/26 01:18:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/airsnort-0.2.1b.ebuild,v 1.5 2003/04/03 21:49:05 latexer Exp $
 
 MY_P=${P/a/A}
 S=${WORKDIR}/${MY_P}
@@ -29,4 +29,8 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc README README.crypt Authors ChangeLog TODO
+}
+pkg_postinst() {
+	einfo "Make sure to emerge linux-wlan-ng if you want support"
+	einfo "for Prism2 based cards in airsnort."
 }
