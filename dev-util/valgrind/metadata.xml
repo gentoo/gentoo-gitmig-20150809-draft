@@ -2,9 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>no-herd</herd>
+<!--
 	<maintainer>
 		<description>Package has no maintainer</description>
 	</maintainer>
+-->
 <longdescription>
 Valgrind is a GPL'd tool to help you find memory-management problems
 in your programs. When a program is run under Valgrind's supervision,
