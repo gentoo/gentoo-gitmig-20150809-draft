@@ -1,0 +1,93 @@
+diff -Naur gnome-pilot-2.0.10.orig/capplet/gnome-pilot-capplet.c gnome-pilot-2.0.10/capplet/gnome-pilot-capplet.c
+--- gnome-pilot-2.0.10.orig/capplet/gnome-pilot-capplet.c	2003-05-02 06:55:39.000000000 -0700
++++ gnome-pilot-2.0.10/capplet/gnome-pilot-capplet.c	2004-06-11 09:15:37.394071424 -0700
+@@ -171,18 +171,16 @@
+ 	priv->xml = glade_xml_new (GLADEDATADIR "/gpilotd-capplet.glade", "CappletMain", NULL);
+ 	if (!priv->xml) {
+ 		g_message ("gnome-pilot-capplet init(): Could not load the Glade XML file!");
+-		goto error;
++		return;
+ 	}
+ 	
+ 	if (!get_widgets (gpcap)) {
+ 		g_message ("gnome-pilot-capplet init(): Could not find all widgets in the XML file!");
+-		goto error;
++		return;
+ 	}
+ 	
+ 	fill_widgets (gpcap);
+ 	init_widgets (gpcap);
+-
+- error:
+ }
+ 
+ GnomePilotCapplet *
+diff -Naur gnome-pilot-2.0.10.orig/capplet/gnome-pilot-cdialog.c gnome-pilot-2.0.10/capplet/gnome-pilot-cdialog.c
+--- gnome-pilot-2.0.10.orig/capplet/gnome-pilot-cdialog.c	2003-04-22 13:51:06.000000000 -0700
++++ gnome-pilot-2.0.10/capplet/gnome-pilot-cdialog.c	2004-06-11 09:15:37.413068536 -0700
+@@ -112,17 +112,16 @@
+ 	priv->xml = glade_xml_new (GLADEDATADIR "/gpilotd-capplet.glade", "ConduitSettings", NULL);
+ 	if (!priv->xml) {
+ 		g_message ("gnome-pilot-cdialog init(): Could not load the Glade XML file!");
+-		goto error;
++		return;
+ 	}
+ 
+ 	if (!get_widgets (gpcd)) {
+ 		g_message ("gnome-pilot-cdialog init(): Could not find all widgets in the XML file!");
+-		goto error;
++		return;
+ 	}
+ 	
+ 	gnome_dialog_close_hides (GNOME_DIALOG (priv->dialog), TRUE);
+ 	
+- error:
+ }
+ 
+ 
+diff -Naur gnome-pilot-2.0.10.orig/capplet/gnome-pilot-ddialog.c gnome-pilot-2.0.10/capplet/gnome-pilot-ddialog.c
+--- gnome-pilot-2.0.10.orig/capplet/gnome-pilot-ddialog.c	2003-04-22 14:12:36.000000000 -0700
++++ gnome-pilot-2.0.10/capplet/gnome-pilot-ddialog.c	2004-06-11 09:15:37.413068536 -0700
+@@ -114,15 +114,14 @@
+ 	priv->xml = glade_xml_new (GLADEDATADIR "/gpilotd-capplet.glade", "DeviceSettings", NULL);
+ 	if (!priv->xml) {
+ 		g_message ("gnome-pilot-ddialog init(): Could not load the Glade XML file!");
+-		goto error;
++		return;
+ 	}
+ 
+ 	if (!get_widgets (gpdd)) {
+ 		g_message ("gnome-pilot-ddialog init(): Could not find all widgets in the XML file!");
+-		goto error;
++		return;
+ 	}
+ 
+- error:
+ }
+ 
+ 
+diff -Naur gnome-pilot-2.0.10.orig/capplet/gnome-pilot-druid.c gnome-pilot-2.0.10/capplet/gnome-pilot-druid.c
+--- gnome-pilot-2.0.10.orig/capplet/gnome-pilot-druid.c	2003-05-13 10:29:59.000000000 -0700
++++ gnome-pilot-2.0.10/capplet/gnome-pilot-druid.c	2004-06-11 09:15:37.414068384 -0700
+@@ -168,19 +168,17 @@
+ 	priv->xml = glade_xml_new (GLADEDATADIR "/gpilotd-capplet.glade", NULL, NULL);
+ 	if (!priv->xml) {
+ 		g_message ("gnome-pilot-druid init(): Could not load the Glade XML file!");
+-		goto error;
++		return;
+ 	}
+ 
+ 	if (!get_widgets (gpd)) {
+ 		g_message ("gnome-pilot-druid init(): Could not find all widgets in the XML file!");
+-		goto error;
++		return;
+ 	}
+ 
+ 	map_widgets (gpd);
+ 	fill_widgets (gpd);
+ 	init_widgets (gpd);
+-
+- error:
+ }
+ 
+ 

@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.12 2004/06/27 02:13:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.13 2004/07/12 18:59:03 eradicator Exp $
+
+  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/gnome-pilot-2.0.10-gcc34.patch:
+  Added gcc-3.4 fixes to close bug #53655
 
   27 Jun 2004; Alastair Tse <liquidx@gentoo.org>
   +files/gnome-pilot-2.0.10-clie.patch:
