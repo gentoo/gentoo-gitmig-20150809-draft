@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.16.ebuild,v 1.1 2003/02/02 10:23:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.16.ebuild,v 1.2 2003/06/13 12:58:40 seemant Exp $
 
 IUSE="quicktime flash imlib avi"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-DEPEND="=dev-libs/DirectFB-${PV}*
+DEPEND=">=dev-libs/DirectFB-${PV}*
 	quicktime? ( media-libs/openquicktime )
 	flash? ( media-libs/libflash )
 	imlib? ( media-libs/imlib2 )"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/DirectFB-extra
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.1 2003/02/02 10:23:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.2 2003/06/13 12:58:40 seemant Exp $
+
+  13 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  DirectFB-extra-0.9.16.ebuild:
+  works with higher versions of DirectFB. Thanks to: Steffen Weber
+  <email@steffenweber.net> in bug #17627
 
 *DirectFB-extra-0.9.16 (02 Feb 2003)
 
