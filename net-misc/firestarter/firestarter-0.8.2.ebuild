@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/firestarter-0.8.2.ebuild,v 1.11 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/firestarter-0.8.2.ebuild,v 1.12 2002/10/09 15:03:12 foser Exp $
 
 IUSE="nls"
 
@@ -14,6 +14,7 @@ LICENSE="GPL-2"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-base/gnome-libs-1.4.1.4
+	<gnome-base/gnome-panel-2
 	sys-apps/iptables"
 RDEPEND="nls? ( sys-devel/gettext )"
 SLOT="0"

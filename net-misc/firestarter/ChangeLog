@@ -1,7 +1,7 @@
 # ChangeLog for misc-net/firestarter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/ChangeLog,v 1.5 2002/10/07 17:26:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/ChangeLog,v 1.6 2002/10/09 15:03:12 foser Exp $
 
 *firestarter-0.9.0 (31 Jul 2002)
 
@@ -15,6 +15,9 @@
   Beta version, _only_ testing.
 
 *firestarter-0.8.2 (27 May 2002)
+
+  09 Oct 2002; foser <foser@gentoo.org> firestarter-0.8.2.ebuild:
+  Added gnome-panel dep (bug #2487)
 
   06 Jul 2002; phoen][x <phoenix@gentoo.org> firestarter-0.8.2.ebuild:
   Added KEYWORDS. Renamed Chanelog to ChangeLog.
