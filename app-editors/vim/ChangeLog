@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.6 2002/04/08 03:06:29 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.7 2002/04/09 00:57:06 azarah Exp $
+
+*vim-6.1-r3 (9 Apr 2002)
+
+	9 Apr 2002; M.Schlemmer <azarah@gentoo.org> :
+
+	I havent looked at 6.0, but it seems that in 6.1, $VIMRUNTIME is not
+	set in the Makefiles, and thus vim cant find its syntax files, etc. It
+	works for me ... Aron Griffis, please verify, and fix if it is not the
+	correct method.  Resolved by creating /etc/env.d/40vim in src_install().
 
 *vim-6.1-r2 (7 Apr 2002)
 
