@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b355fdd636ec0eebb4c43ec21082c6b7 gnome-swallow-1.2.ebuild 812
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 c1a88a6807fea97922552972288931ef ChangeLog 1221
 MD5 43792ff78aad51bdf38b07a43f3efd51 gnome-swallow-1.1.ebuild 804
-MD5 8c016a9ba385e93b7c3f7d5b76ff08ea ChangeLog 1120
-MD5 1bc1d0668cd5696f5a04307f1f84dc60 files/digest-gnome-swallow-1.2 68
+MD5 8fb40e71bfed2a20908809708ef72290 gnome-swallow-1.2.ebuild 811
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 fb082c6b6b354205d8026fde3ece3e7d files/digest-gnome-swallow-1.1 68
+MD5 1bc1d0668cd5696f5a04307f1f84dc60 files/digest-gnome-swallow-1.2 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB/kpHKRy60XGEcJIRAlFeAJ9FHfOfEkLwc5kD/iHh4jNvlx/2PgCghPvE
-CLXgABFKlX4IxrFlvkWUj8M=
-=gG9c
+iD8DBQFCHinZKRy60XGEcJIRAt7VAJ4jEoW1q5CUgMiTw7lQkRSS2ZjYzgCeO+48
+yM+dy9Odi/fL2sx6bzLiL1A=
+=j1kh
 -----END PGP SIGNATURE-----

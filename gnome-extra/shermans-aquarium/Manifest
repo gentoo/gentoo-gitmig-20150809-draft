@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bfb4a8078b3261c164662327cd409cd5 shermans-aquarium-2.2.0.ebuild 2024
+MD5 8bceb43876064ca8beec7cb3a0f69948 ChangeLog 1354
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 46d60b91d80ba622bda73d14004bf872 ChangeLog 1247
-MD5 db0ad320466766d2de4b54ef908f5639 files/shermans-aquarium-2.2.0-gcc-v.patch 508
+MD5 9f41a47a9bc3f5dfa79f36a5aafad6c5 shermans-aquarium-2.2.0.ebuild 2023
 MD5 2e8ccc0d3063621b87a0f12b69420b99 files/digest-shermans-aquarium-2.2.0 75
+MD5 db0ad320466766d2de4b54ef908f5639 files/shermans-aquarium-2.2.0-gcc-v.patch 508
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB/kfTKRy60XGEcJIRAsC1AJ9qCi0hsUn+UkGNmH8S/fcpaWqINQCfaHya
-tiMAJ78PRoNer4nTPd/QiPI=
-=5mGa
+iD8DBQFCHirvKRy60XGEcJIRApTIAJ0Rcvx2/34VOhDmxIlL1DfC0PDX/wCfeGuA
+sMdkKt9IPeMhMCssEF4crlE=
+=55Q3
 -----END PGP SIGNATURE-----
