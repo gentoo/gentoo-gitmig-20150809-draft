@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdebindings
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.48 2004/01/15 03:38:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.49 2004/01/19 04:03:24 caleb Exp $
+
+*kdebindings-3.2.0_rc1 (18 Jan 2004)
+
+  18 Jan 2004; Caleb Tennis <caleb@gentoo.org> kdebindings-3.0.4.ebuild,
+  kdebindings-3.1.2.ebuild, kdebindings-3.2.0_beta2.ebuild,
+  kdebindings-3.2.0_rc1.ebuild, files/x_QFont.cpp.diff,
+  files/x_QHBox.cpp.diff, files/x_Qt.cpp.diff:
+  New version, removing older versions
 
 *kdebindings-3.1.5 (14 Jan 2004)
 
