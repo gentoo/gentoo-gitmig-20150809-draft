@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.14.2.7.1.ebuild,v 1.3 2000/11/01 04:44:23 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.14.2.7.1.ebuild,v 1.4 2000/11/15 16:33:16 achim Exp $
 
 A="apache_1.3.14.tar.gz mod_ssl-2.7.1-1.3.14.tar.gz"
 S=${WORKDIR}/apache_1.3.14
@@ -25,6 +25,7 @@ src_compile() {
 	--mandir=/usr/man --logfiledir=/var/log/apache --localstatedir=/var/lock \
 	--proxycachedir=/var/cache/httpd --includedir=/usr/include/apache \
 	--enable-module=all --enable-module=ssl \
+	--disable-module=auth_dbm \
 	--enable-shared=max --enable-suexec --suexec-caller=wwwrun \
 	--suexec-userdir=public_html --suexec-uidmin=96 \
 	--suexec-gidmin=96 --suexec-safepath="/bin:/usr/bin"
