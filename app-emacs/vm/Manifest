@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ccd89620dbaed8b0dcb0e68c6aa4545 ChangeLog 1373
+MD5 2edc440644a206d1a100860a05552dc2 ChangeLog 1465
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 fdbd78e8fa2b49e96896893b719711b2 vm-7.18.ebuild 1136
-MD5 b182b04416c15fa9c86e288265c5fa09 vm-7.19.ebuild 1089
+MD5 441e33e1c32934b95d8a941cfc434bdc vm-7.19.ebuild 1091
 MD5 a3ccada98fbc3181244e33f7d19c3212 files/50vm-gentoo.el 639
-MD5 29f46fa938e55c708ae3e691bcaf69b9 files/vm-direntry-fix-gentoo.patch 271
-MD5 e53ed683597d0699c6c8784e83338b30 files/digest-vm-7.18 59
 MD5 c8728a086fd440115e985ba8bb0b7567 files/digest-vm-7.19 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBig4dVWNWqTUmv+0RAolwAKCPBoGDUzmJWowllUxi0ebb3foszACffiZF
-CoHdfWnOhkdUMAtUyPPx4II=
-=cyXv
------END PGP SIGNATURE-----
+MD5 e53ed683597d0699c6c8784e83338b30 files/digest-vm-7.18 59
+MD5 29f46fa938e55c708ae3e691bcaf69b9 files/vm-direntry-fix-gentoo.patch 271
