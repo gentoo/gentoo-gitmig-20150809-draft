@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linup
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.5 2003/12/22 04:03:44 lisa Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.6 2004/04/15 18:20:45 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> linup-1.1.1-r1.ebuild:
+  added s390 keywords
 
 *linup-1.1.1-r1 (21 Dec 2003)
 
