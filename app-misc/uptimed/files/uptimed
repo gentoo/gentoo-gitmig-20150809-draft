@@ -1,12 +1,24 @@
 #!/sbin/runscript
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/files/uptimed,v 1.2 2003/09/20 15:04:31 pyrania Exp $
+#
 # Copyright 2002 Sean Russell
 # Distributed under the terms of the GNU General Public License, v2 or later
+#
+# 	Edited to better integrate into Gentoo's initsystem.
+#	Markus Nigbur <pYrania@gentoo.org>
+#	September 20, 2003
 
 start() {
+	ebegin "Starting uptimed"
 	uptimed -b
 	start-stop-daemon --quiet --start --pidfile /var/run/uptimed --exec /usr/sbin/uptimed
+	
+	eend $?
 }
 
 stop() {
+	ebegin "Stopping uptimed"
 	start-stop-daemon --quiet --stop --pidfile /var/run/uptimed
+
+	eend $?
 }
