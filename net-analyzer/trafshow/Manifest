@@ -1,5 +1,5 @@
-MD5 a64f455a862d9b42dfbeb73ef2d67d17 ChangeLog 869
-MD5 e1bbc0445a957e5e56585e2269198ea0 trafshow-3.1-r1.ebuild 975
+MD5 60c23377ce25cc1fafa11b3d3f2e8d6b ChangeLog 976
 MD5 8e8b9393d38df263f07c394765553b01 metadata.xml 243
+MD5 38de6a51665eb0353102a848fd6fc1a6 trafshow-3.1-r1.ebuild 1025
 MD5 d8609a48097c656e14cb38dc49dbf629 files/digest-trafshow-3.1-r1 60
 MD5 de937e07ac952efc66dbe67616befc58 files/trafshow-3.1-gentoo.patch 492

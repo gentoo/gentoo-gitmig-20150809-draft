@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-3.1-r1.ebuild,v 1.12 2004/10/11 11:38:15 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-3.1-r1.ebuild,v 1.13 2004/11/01 20:53:38 corsair Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 IUSE="slang"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://soft.risp.ru/trafshow/index_en.shtml"
 
 SLOT="3"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="x86 sparc ~ppc ~ppc64"
 
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
+	use ppc64 && gnuconfig_update
 }
 
 src_compile() {
