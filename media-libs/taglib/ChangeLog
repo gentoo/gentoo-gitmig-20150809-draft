@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.5 2004/02/08 19:30:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.6 2004/02/10 06:12:14 pylon Exp $
+
+  10 Feb 2004; Lars Weiler <pylon@gentoo.org> taglib-1.0_beta2.ebuild:
+  Stable on ppc
 
   05 Feb 2004; Luca Barbato <lu_zero@gentoo.org> taglib-1.0_beta2.ebuild:
   Marked ~ppc
