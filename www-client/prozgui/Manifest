@@ -1,5 +1,5 @@
-MD5 4360913014c6f8da339a29ded2085283 ChangeLog 1013
 MD5 a56c399e9953301d2a6adb9d45dde181 prozgui-2.0.5.ebuild 1152
+MD5 31f5121b9c5bdbe84e28d0c13280d6f6 ChangeLog 1016
 MD5 5f739972c94b80abcd0b1eaa28ec0ae7 files/digest-prozgui-2.0.5 70
 MD5 c7d264f1704e0f1f206255359c6055f7 files/prozgui-2.0.5-configure.patch 668
 MD5 875e27636c38e715f3d93f8b51b24aa0 files/prozgui-2.0.5-options.patch 499
