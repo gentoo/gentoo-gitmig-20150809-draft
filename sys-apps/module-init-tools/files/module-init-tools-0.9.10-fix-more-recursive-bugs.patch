@@ -1,0 +1,45 @@
+--- module-init-tools-0.9.10/modprobe.c.orig	2003-03-09 13:02:52.000000000 +0200
++++ module-init-tools-0.9.10/modprobe.c	2003-03-09 13:17:05.000000000 +0200
+@@ -1096,12 +1096,14 @@
+ 	while ((opt = getopt_long(argc, argv, "vVC:o:rknqsclt:aif", options, NULL)) != -1){
+ 		switch (opt) {
+ 		case 'v':
++			setenv("MODPROBE_VERBOSE", "1", 1);
+ 			verbose = 1;
+ 			break;
+ 		case 'V':
+ 			puts(PACKAGE " version " VERSION);
+ 			exit(0);
+ 		case 'C':
++			setenv("MODPROBE_CONFIG", optarg, 1);
+ 			config = optarg;
+ 			break;
+ 		case 'o':
+@@ -1156,15 +1158,25 @@
+ 		}
+ 	}
+ 
++	/* Check MODPROBE_VERBOSE */
++	if ((getenv("MODPROBE_VERBOSE")) && (1 != verbose))
++		if (0 == strcmp(getenv("MODPROBE_VERBOSE"), "1"))
++			verbose = 1;
++
++	/* Check MODPROBE_CONFIG */
++	if ((getenv("MODPROBE_CONFIG")) && (NULL == config))
++		config = getenv("MODPROBE_CONFIG");
++
+ 	/* Check MODPROBE_QUIET */
+-	if (getenv("MODPROBE_QUIET"))
++	if ((getenv("MODPROBE_QUIET")) && 
++		(0 != fail_if_already) && (0 != fail_if_missing))
+ 		if (0 == strcmp(getenv("MODPROBE_QUIET"), "1")) {
+ 			fail_if_already = 0;
+ 			fail_if_missing = 0;
+ 		}
+ 
+ 	/* Check MODPROBE_LOG */
+-	if (getenv("MODPROBE_LOG"))
++	if ((getenv("MODPROBE_LOG")) && (1 != log))
+ 		if (0 == strcmp(getenv("MODPROBE_LOG"), "1"))
+ 			log = 1;
+ 
