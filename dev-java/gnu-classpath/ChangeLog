@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.4 2004/04/01 15:20:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.5 2004/04/26 00:09:34 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnu-classpath-0.06.ebuild:
+  Add die following econf for bug 48950
 
 *gnu-classpath-0.08_rc1 (01 Apr 2004)
 

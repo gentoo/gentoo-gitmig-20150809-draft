@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.06.ebuild,v 1.3 2004/03/23 20:32:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.06.ebuild,v 1.4 2004/04/26 00:09:34 agriffis Exp $
 
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the java programming language"
 SRC_URI="ftp://alpha.gnu.org/gnu/classpath/${P/gnu-}.tar.gz"
@@ -22,7 +22,7 @@ S=${WORKDIR}/${P/gnu-}
 src_compile() {
 	local myjavac="--with-java=`java-config -c`"
 	use jikes && myjavac="--with-jikes=/usr/bin/jikes"
-	econf --enable-jni --enable-gtk-peer --prefix=/usr/share/${PN} ${myjavac}
+	econf --enable-jni --enable-gtk-peer --prefix=/usr/share/${PN} ${myjavac} || die "econf failed"
 	emake
 }
 
