@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.7 2003/03/27 11:58:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.8 2003/06/11 21:40:36 johnm Exp $
 
 inherit libtool
 
@@ -33,6 +33,9 @@ pkg_setup() {
 }
 
 src_compile() {
+	epatch ${FILESDIR}/01-gcc3.3-assert.patch
+	epatch ${FILESDIR}/02-gcc3.3-constcast.patch
+
 	elibtoolize --reverse-deps
 
 	econf \
