@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.4 2003/12/13 22:15:50 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.5 2003/12/20 01:50:05 sediener Exp $
+
+*madwifi-driver-0.1_pre20031213-r1 (19 Dec 2003)
+
+  19 Dec 2003; Stephen Diener <sediener@gentoo.org>
+  madwifi-driver-0.1_pre20031213-r1.ebuild:
+  Modified to work with 2.6 kernels: thanks to flokno@gmx.net and Jani Vaarala
+  <flame@pymgyprojects.com> for debugging
 
 *madwifi-driver-0.1_pre20031213 (13 Dec 2003)
 
