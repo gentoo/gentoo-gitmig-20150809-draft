@@ -1,9 +1,0 @@
---- cream-0.29.orig/cream.desktop	2004-04-25 15:33:59.000000000 +0200
-+++ cream-0.29/cream.desktop	2004-04-25 15:48:28.000000000 +0200
-@@ -12,5 +12,5 @@
- MapNotify=false
- Encoding=UTF-8
- X-Desktop-File-Install-Version=0.4
--Categories=Application;Development;X-Red-Hat-Base;
-+Categories=Application;Development;
- 
