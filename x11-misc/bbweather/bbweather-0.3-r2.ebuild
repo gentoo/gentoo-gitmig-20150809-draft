@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.3-r2.ebuild,v 1.10 2003/02/13 17:09:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.3-r2.ebuild,v 1.11 2003/03/11 21:11:49 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox weather monitor"
@@ -12,7 +12,7 @@ KEYWORDS="x86 sparc "
 
 DEPEND="virtual/blackbox
 	>=net-misc/wget-1.7
-	>=sys-devel/perl-5.6.1"
+	>=dev-lang/perl-5.6.1"
 
 src_compile() {
 	./configure --prefix=/usr --host=${CHOST} || die

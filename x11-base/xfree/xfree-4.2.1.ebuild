@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.31 2003/02/13 16:54:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.32 2003/03/11 21:11:49 seemant Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -90,7 +90,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
 	sys-devel/libtool
-	sys-devel/perl
+	dev-lang/perl
 	>=media-libs/fontconfig-2.0
 	>=media-libs/freetype-${FT2_VER}
 	>=x11-base/opengl-update-1.4

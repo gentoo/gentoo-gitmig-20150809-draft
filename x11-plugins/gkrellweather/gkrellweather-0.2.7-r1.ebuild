@@ -17,7 +17,7 @@ DEPEND=">=app-admin/gkrellm-1.2*
 	>=net-misc/wget-1.5.3"
 
 RDEPEND="${DEPEND}
-	>=sys-devel/perl-5.6.1"
+	>=dev-lang/perl-5.6.1"
 
 src_compile() {
 	emake || die

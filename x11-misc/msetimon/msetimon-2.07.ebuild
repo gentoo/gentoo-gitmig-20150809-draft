@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/msetimon/msetimon-2.07.ebuild,v 1.6 2003/02/13 17:17:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/msetimon/msetimon-2.07.ebuild,v 1.7 2003/03/11 21:11:49 seemant Exp $
 
 DESCRIPTION="A GUI utility for monitoring the SETI@Home client"
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 sparc "
 INSTALLDIR=/usr/bin
 
 DEPEND="virtual/x11
-	sys-devel/perl
+	dev-lang/perl
 	dev-perl/perl-tk"
 
 S=${WORKDIR}/${PN}-perl-source-2-07

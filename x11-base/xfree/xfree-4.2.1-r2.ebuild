@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.25 2003/03/10 01:23:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.26 2003/03/11 21:11:49 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -100,7 +100,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/pam-0.75
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
-	sys-devel/perl
+	dev-lang/perl
 	>=media-libs/freetype-${FT2_VER}-r2
 	>=x11-base/opengl-update-1.4
 	>=x11-misc/ttmkfdir-2.0

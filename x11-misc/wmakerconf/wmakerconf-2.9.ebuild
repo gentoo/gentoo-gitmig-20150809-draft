@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.ebuild,v 1.11 2003/02/13 17:18:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.ebuild,v 1.12 2003/03/11 21:11:49 seemant Exp $
 
 IUSE="nls gnome imlib perl"
 
@@ -20,7 +20,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	
 
 RDEPEND="nls? ( sys-devel/gettext )
-	perl? ( sys-devel/perl
+	perl? ( dev-lang/perl
 		net-misc/wget )"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.3.ebuild,v 1.1 2003/03/10 12:53:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.3.ebuild,v 1.2 2003/03/11 21:11:49 seemant Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	sys-apps/groff
-	sys-devel/perl
+	dev-lang/perl
 	media-libs/libmpeg2"
 RDEPEND="virtual/x11
 	net-ftp/curl

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1.ebuild,v 1.5 2003/02/13 17:16:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1.ebuild,v 1.6 2003/03/11 21:11:49 seemant Exp $
 
 DESCRIPTION="ORNAMENTVM ROSACEVM INFERNVM PRATVLIS"
 HOMEPAGE="http://www.xiph.org/mgm/index.html"
@@ -11,7 +11,7 @@ KEYWORDS="x86 sparc "
 SLOT="0"
 LICENSE="as-is"
 
-RDEPEND=">=sys-devel/perl-5.6.1
+RDEPEND=">=dev-lang/perl-5.6.1
 	>=dev-perl/perl-tk-800.024"
 src_unpack()
 {

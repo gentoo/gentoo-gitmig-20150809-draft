@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-2.2.0.ebuild,v 1.3 2003/02/13 16:58:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-2.2.0.ebuild,v 1.4 2003/03/11 21:11:49 seemant Exp $
 
 inherit gnome.org
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ~ppc ~sparc "
 
 SLOT="2"
 DEPEND="virtual/glibc
-	>=sys-devel/perl-5.6.0
+	>=dev-lang/perl-5.6.0
 	>=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2
 	>=dev-libs/libsigc++-1.2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.19 2003/02/13 16:53:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.20 2003/03/11 21:11:49 seemant Exp $
 
 IUSE="sse nls mmx 3dnow 3dfx"
 
@@ -50,7 +50,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/pam-0.75
 	>=sys-libs/zlib-1.1.3-r2
 	sys-devel/flex
-	sys-devel/perl
+	dev-lang/perl
 	3dfx? ( >=media-libs/glide-v3-3.10 )"
 	
 RDEPEND=">=sys-libs/ncurses-5.1
