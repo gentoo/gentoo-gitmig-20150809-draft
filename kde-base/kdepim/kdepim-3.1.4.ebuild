@@ -1,17 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.1.4.ebuild,v 1.7 2003/11/29 23:20:39 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.1.4.ebuild,v 1.8 2003/12/28 03:45:05 caleb Exp $
 inherit kde-dist
 
 IUSE="pda"
 DESCRIPTION="KDE PIM (Personal Information Management) apps: korganizer..."
 KEYWORDS="x86 ppc sparc hppa amd64"
 
-newdepend "pda? ( >=app-pda/pilot-link-0.11.1-r1
-				>=dev-libs/libmal-0.31 )
-	dev-lang/perl
-	=kde-base/kdebase-${PV}*
+DEPEND="pda? ( >=app-pda/pilot-link-0.11.1-r1 >=dev-libs/libmal-0.31 )
+	~kde-base/kdebase-${PV}
 	~kde-base/kdenetwork-${PV}" # mimelib is needed for support of some stuff with exchange servers
+RDEPEND="$DEPEND"
 
 use pda && myconf="$myconf --with-extra-includes=/usr/include/libpisock"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.0_beta2.ebuild,v 1.5 2003/12/27 17:04:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.0_beta2.ebuild,v 1.6 2003/12/28 03:42:04 caleb Exp $
 inherit kde-dist
 
 IUSE="gphoto2 tetex scanner opengl"
@@ -19,7 +19,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	media-libs/tiff
 	x86? ( scanner? sys-libs/libieee1284 )"
 
-RDEPEND="$RDEPEND app-text/xpdf"
+RDEPEND="$DEPEND app-text/xpdf"
 
 use gphoto2	&& myconf="$myconf --with-kamera \
 				   --with-gphoto2-includes=/usr/include/gphoto2 \

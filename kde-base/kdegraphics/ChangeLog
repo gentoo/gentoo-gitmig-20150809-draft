@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.65 2003/12/27 17:04:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.66 2003/12/28 03:42:04 caleb Exp $
+
+  27 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdegraphics-3.1.4.ebuild,
+  kdegraphics-3.2.0_beta2.ebuild:
+  minor dep changes
 
   27 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdegraphics-3.2.0_beta2.ebuild:
   Don't use the bidi use flag - require fribidi as that gives us ksvg support
