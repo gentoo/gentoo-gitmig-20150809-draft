@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.9 2004/11/04 00:42:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.10 2004/11/05 03:47:19 weeve Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -13,11 +13,17 @@ alsa
 altivec
 apm
 directfb
+divx4linux
+djbfft
+dvb
+fdftk
 hal
 icc
 icc-pgo
+ifc
 informix
 firebird
+ladcca
 lirc
 mmx
 mmx2
@@ -28,6 +34,7 @@ sse2
 svga
 tcc
 trusted
+uml
 voodoo3
 wavelan
 
