@@ -1,15 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tim Raedisch <tim.raedisch@udo.edu>
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.4.ebuild,v 1.1 2003/02/07 22:30:26 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.4.ebuild,v 1.2 2003/02/10 16:21:53 seemant Exp $
 
-S="${WORKDIR}/${PN}2"
+S=${WORKDIR}/${PN}2
 DESCRIPTION="phpBB is a high powered, fully scalable, and highly customisable open-source bulletin board package."
-SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/phpbb/${P}.tar.gz"
 HOMEPAGE="http://www.phpbb.com/"
+SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/phpbb/${P}.tar.gz"
+
+SLOT="0"
 LICENSE="GPL-2"
-DEPEND="virtual/php"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+
+DEPEND="virtual/php"
 
 HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
 [ -z "${HTTPD_ROOT}" ] && HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache2/conf/apache.conf | cut -d\  -f2`"
