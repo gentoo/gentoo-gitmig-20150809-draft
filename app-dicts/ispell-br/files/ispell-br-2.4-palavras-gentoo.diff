@@ -1,0 +1,3281 @@
+diff -ru br.ispell-2.4.orig/E.ispell br.ispell-2.4/E.ispell
+--- E.ispell.orig	2003-01-14 19:51:28.000000000 -0200
++++ E.ispell	2003-01-14 20:28:27.000000000 -0200
+@@ -68,6 +68,7 @@
+ Andrade
+ André
+ Andréa
++Andréia
+ Andrômeda
+ Angola
+ Anselmo
+@@ -507,6 +508,7 @@
+ Luiz
+ Luís
+ Líbano
++Lívia
+ Lúcifer
+ Lúcio
+ MDC
+@@ -620,6 +622,7 @@
+ Raimundo
+ Ramos
+ Raquel
++Raul
+ Rebeca
+ Recife
+ Reinaldo
+@@ -767,6 +770,7 @@
+ abafado/P
+ abafamento/G
+ abaixado/P
++abaixamento/G
+ abaixo
+ abalado/P
+ abalo/G
+@@ -834,6 +838,7 @@
+ aborrecido/P
+ aborrecimento/G
+ abortado/P
++abortamento/G
+ abortivo/P
+ aborto/P
+ abortício/P
+@@ -957,6 +962,7 @@
+ acerbo/P
+ acerola/G
+ acertado/P
++acerto/G
+ acervo/G
+ aceso/G
+ aceso/P
+@@ -982,6 +988,7 @@
+ acidentalmente
+ acidez
+ acidificação
++acidose/G
+ acima
+ acinzentado/P
+ acionado/P
+@@ -1006,6 +1013,7 @@
+ acolchoamento
+ acolhido/P
+ acolhimento/G
++acolia/G
+ acolá
+ acometido/P
+ acometimento
+@@ -1076,6 +1084,7 @@
+ adega/G
+ ademais
+ adendo/G
++adenocarcinoma/G
+ adensado/P
+ adensamento
+ adentro
+@@ -1121,6 +1130,7 @@
+ adjudicatório/P
+ adjudicação/P
+ adjunto/P
++adjuvante/G
+ administrado/P
+ administrador/P
+ administrativo/P
+@@ -1156,6 +1166,7 @@
+ adquirido/P
+ adquirível/G
+ adrenalino/P
++adrenérgico/P
+ adro
+ adstringente/G
+ adstringência
+@@ -1205,6 +1216,8 @@
+ aeroportuário/P
+ aerossol
+ aeroviário/G
++aeróbico/P
++aeróbio/P
+ aeródromo/G
+ aerólito/G
+ aeróstato/G
+@@ -1217,7 +1230,7 @@
+ afastado/P
+ afastamento/G
+ afazer/G
+-afecção
++afecção/P
+ afegã
+ afegão
+ afegãos
+@@ -1273,6 +1286,7 @@
+ afogado/P
+ afogamento/G
+ afoito/P
++afonia
+ afonso
+ afora
+ aforismo/G
+@@ -1348,6 +1362,7 @@
+ agravante/G
+ agravo/G
+ agregado/P
++agregação/P
+ agremiação/P
+ agressivo/P
+ agressor/P
+@@ -1422,6 +1437,7 @@
+ alameda/G
+ alanina
+ alaranjado/P
++alarde/G
+ alargado/P
+ alargamento
+ alarido/G
+@@ -1451,6 +1467,7 @@
+ alcachofra/G
+ alcaide/G
+ alcalino/P
++alcalose/G
+ alcançado/P
+ alcançável/G
+ alcaparra/G
+@@ -1493,6 +1510,7 @@
+ alentador/P
+ alento/G
+ alergia/G
++alergênico/P
+ alerta/G
+ alertado/P
+ alevantado/P
+@@ -1532,6 +1550,7 @@
+ algibeira/G
+ algo
+ algodoeiro/G
++algodonoso/P
+ algodão
+ algoritmo/G
+ algoz/G
+@@ -1674,6 +1693,7 @@
+ alçado/P
+ alçapão/P
+ além
++alérgeno/G
+ alérgico/P
+ alínea/G
+ alíquota/G
+@@ -1718,6 +1738,7 @@
+ amassada/G
+ amassadela/G
+ amassado/P
++amaurose
+ amazona/G
+ amazonense/G
+ amazônico/P
+@@ -1759,6 +1780,7 @@
+ amianto/G
+ amicíssimo/P
+ amido/G
++amigdalite/G
+ amigo/P
+ amigona
+ amigonas
+@@ -1766,11 +1788,13 @@
+ amigável/G
+ amigão
+ amigões
++aminoglicosídeo/G
+ aminoácido/G
+ amistoso/P
+ amiudado/P
+ amizade/G
+ amiúde
++amniótico/P
+ amnésia/G
+ amnésico/P
+ amo/P
+@@ -1837,6 +1861,8 @@
+ anacoreta/G
+ anacronismo/G
+ anacrônico/P
++anacusia
++anaeróbico/P
+ anaeróbio/P
+ anagrama/G
+ anal/G
+@@ -1851,6 +1877,7 @@
+ analogia/G
+ analítico/P
+ analógico/P
++anamnese/G
+ ananases
+ ananás
+ anarquia/G
+@@ -1910,7 +1937,10 @@
+ angico/G
+ angina
+ angiografia/G
++angiogênese
++angioplastia/G
+ angiosperma
++angiotensina/G
+ anglicanismo
+ anglicano/P
+ anglicismo/G
+@@ -1998,14 +2028,18 @@
+ anti
+ antialérgico/G
+ antiaéreo/P
++antibioticoprofilaxia/G
++antibioticoterapia/G
+ antibiótico/G
+ anticlinal/G
++anticoagulante/G
+ anticonformista/G
+ anticorpo/G
+ antiespasmódico/P
+ antigamente
+ antigo/P
+ antiguidade
++antigênico/P
+ antigüidade/G
+ antilhano/P
+ antinomia/G
+@@ -2013,12 +2047,15 @@
+ antipapa
+ antipatia/G
+ antipirético/P
++antiplaquetário/P
+ antipático/P
+ antiquado/P
+ antiquário/G
+ antiqüíssimo/P
+-antisséptico/G
++antissepsia
++antisséptico/P
+ antitetânico/P
++antitripsina/G
+ antitético/P
+ antiácido/G
+ antologia/G
+@@ -2147,6 +2184,7 @@
+ apetitoso/P
+ apetrecho/G
+ apetência
++apical/G
+ apicultura/G
+ apinhado/P
+ apito/G
+@@ -2541,6 +2579,7 @@
+ artilheiro/G
+ artimanha/G
+ artista/G
++artralgia/G
+ artrite/G
+ artrose
+ artur
+@@ -2631,6 +2670,7 @@
+ assinante/G
+ assinatura/G
+ assindético/P
++assintomático/P
+ assintoticamente
+ assintótico/P
+ assinável/G
+@@ -2670,6 +2710,7 @@
+ assíntota/G
+ assírio/P
+ asteca/G
++astenia/G
+ asterisco/G
+ asteróide/G
+ astigmatismo
+@@ -2710,6 +2751,7 @@
+ atavio/G
+ atavismo/G
+ ataúde/G
++atelectasia/G
+ ateliê
+ atenas
+ atenciosamente
+@@ -2725,6 +2767,8 @@
+ atenuante/G
+ atenuação/P
+ atenção/P
++aterogênese
++aterosclerose
+ aterrado/P
+ aterrador/P
+ aterro/G
+@@ -2735,6 +2779,7 @@
+ ateísta/G
+ atingido/P
+ atingível/G
++atipia/G
+ atiradeira/G
+ atirado/P
+ atirador/P
+@@ -2763,6 +2808,7 @@
+ atomismo
+ atomista/G
+ atonal/G
++atonia
+ ator/G
+ atordoado/P
+ atordoamento
+@@ -2922,10 +2968,12 @@
+ avante
+ avançada/G
+ avançado/P
++avanço/G
+ avaramente
+ avarento/P
+ avareza
+ avaro/P
++avascular/G
+ ave/G
+ aveia
+ aveludado/P
+@@ -2972,7 +3020,7 @@
+ avulso/P
+ avícola/G
+ avó/G
+-avô
++avô/G
+ axial/G
+ axila/G
+ axilar/G
+@@ -3039,7 +3087,9 @@
+ bacharéis
+ bacia/G
+ baciada/G
++bacilar/G
+ bacilo/G
++bacteriano/P
+ bactericida/G
+ bacteriologia
+ bacteriologista/G
+@@ -3248,6 +3298,7 @@
+ barítono/G
+ barômetro/G
+ barões
++basal/G
+ basalto
+ base/G
+ baseado/P
+@@ -3268,6 +3319,7 @@
+ bastõezinhos
+ basáltico/P
+ basílica/G
++basófilo/G
+ batalhador/P
+ batalhão/P
+ batata
+@@ -3454,6 +3506,7 @@
+ bijeção/P
+ bijuteria/G
+ bilabial/G
++bilateral/G
+ bilhar/G
+ bilhete/G
+ bilheteiro/G
+@@ -3465,6 +3518,7 @@
+ bilionário/P
+ bilionésimo/P
+ bilirrubina
++bilióide/G
+ biltre/G
+ bimestral/G
+ bimestre/G
+@@ -3491,6 +3545,7 @@
+ biosfera/G
+ biotipo/G
+ biotério/G
++bipalpebral/G
+ bipartido/P
+ bipartição/P
+ biquíni/G
+@@ -3518,6 +3573,7 @@
+ bisturi/G
+ bisão
+ bit
++bitonal/G
+ bits
+ bivalência
+ bivaque
+@@ -3541,6 +3597,7 @@
+ blindagens
+ bloco/G
+ bloqueado/P
++bloqueador/P
+ bloqueante/G
+ bloqueio/G
+ blusa/G
+@@ -3806,7 +3863,11 @@
+ bromélia/G
+ bronco/P
+ broncopneumonia/G
++broncopneumonite/G
+ bronquial/G
++bronquiectasia/G
++bronquiolar/G
++bronquiolite
+ bronquite/G
+ bronquíolo/G
+ brontossauro/G
+@@ -3835,6 +3896,7 @@
+ bruços
+ brâmane/G
+ brânquia/G
++brônquico/P
+ brônquio/G
+ bubônico/P
+ bucal/G
+@@ -3855,6 +3917,7 @@
+ buldogue/G
+ bule/G
+ bulgária
++bulha/G
+ bulhufas
+ buliçoso/P
+ bulício/G
+@@ -3921,6 +3984,7 @@
+ búzio/G
+ caatinga/G
+ caatingueiro/P
++cabal/G/D
+ cabala
+ cabalístico/P
+ cabana/G
+@@ -4072,6 +4136,7 @@
+ calhau/G
+ calhorda/G
+ calibrado/P
++caliciforme/G
+ califa/G
+ califado/G
+ califórnia
+@@ -4187,6 +4252,7 @@
+ canaleta/G
+ canalha/G
+ canalhismo
++canalicular/G
+ canalização/P
+ canapé/G
+ canastra
+@@ -4200,6 +4266,7 @@
+ cancelamento/G
+ cancerologia
+ canceroso/P
++cancerígeno/P
+ cancha
+ cancioneiro/G
+ cancro/G
+@@ -4338,6 +4405,7 @@
+ caracol
+ caracter/G
+ caractere/G
++caracteristicamente
+ caracterizado/P
+ caracterização/P
+ característico/G
+@@ -4363,11 +4431,13 @@
+ carbonização
+ carbono/G
+ carbonífero/P
++carboxiemoglobina
+ carburação
+ carbureto
+ carbônico/P
+ carcaça/G
+ carcerário/P
++carcinoma/G
+ carcomido/P
+ cardeal/G
+ cardinal/G
+@@ -4377,7 +4447,10 @@
+ cardiografia/G
+ cardiologia
+ cardiologista/G
+-cardiopatia
++cardiopata/G
++cardiopatia/G
++cardiorrespiratório/P
++cardiovascular/G
+ cardo/G
+ cardume/G
+ cardápio/G
+@@ -4528,8 +4601,8 @@
+ cascudo/G
+ cascão
+ casebre/G
+-caseira/G
+ caseiro/P
++caseoso/P
+ caserna/G
+ casimira
+ casinha/G
+@@ -4599,6 +4672,7 @@
+ catedral/G
+ catedrático/P
+ categoria/G
++categorização/G
+ categórico/P
+ catenária/G
+ catequese/G
+@@ -4618,6 +4692,7 @@
+ catorze
+ catraca/G
+ catre/G
++catálise/G
+ catálogo/G
+ catástrofe/G
+ catódico/P
+@@ -4665,6 +4740,7 @@
+ caverninha/G
+ cavernoso/P
+ cavidade/G
++cavitação/P
+ caxumba
+ caça/G
+ caçado/P
+@@ -4686,7 +4762,10 @@
+ cedo
+ cedro/G
+ cefalia
++cefalosporina/G
+ cefaléia
++cefazolina
++cefoxitina
+ cefálico/P
+ cegamente
+ cegante/G
+@@ -4715,6 +4794,7 @@
+ celulite/G
+ celulose/G
+ celulóide/G
++celíaco/P
+ cem
+ cemitério/G
+ cena/G
+@@ -4743,6 +4823,8 @@
+ centrifugação
+ centrista/G
+ centro/G
++centroacinar/G
++centrolobular/G
+ centrífugo/P
+ centrípeto/P
+ centróide
+@@ -4768,6 +4850,7 @@
+ cerebelo
+ cerebral/G
+ cerebrino
++cerebrovascular/G
+ cereja/G
+ cerejeira/G
+ cerimonial/G
+@@ -4989,8 +5072,10 @@
+ cianose
+ cianureto
+ cianídrico/P
++cianótico/P
+ cibernético/P
+ cibório/G
++cicatricial/G
+ cicatriz/G
+ cicatrizado/P
+ cicatrização/P
+@@ -5018,6 +5103,7 @@
+ ciente
+ cientista/G
+ científico/P
++cifose
+ cifra
+ cifrado/P
+ cifragem
+@@ -5106,10 +5192,9 @@
+ circunvizinho/P
+ circunvolução/P
+ cirrose
+-cirurgia
++cirurgia/G
+ cirurgiã
+ cirurgiães
+-cirurgião
+ cirurgião/P
+ cirúrgico/P
+ cisalpino/P
+@@ -5119,14 +5204,17 @@
+ cisplatino/P
+ cisterciense/G
+ cisterna/G
++cisura/G
+ cisão/P
+ citadino/P
+ citado/P
+ citação/P
++citocina/G
+ citologia
+ citológico/P
+ citoplasma
+ citoplasmático/P
++citotoxicidade/G
+ citricultura/G
+ ciumeira/G
+ ciumento/P
+@@ -5191,9 +5279,11 @@
+ climatologia
+ climatológico/P
+ climático/P
++clindamicina
+ clips
+ clique/G
+ clitóris
++clivagem/G
+ cloaca/G
+ clonagem
+ clonagens
+@@ -5204,6 +5294,7 @@
+ cloro
+ clorofila
+ clorofórmio
++cloropsia
+ clorídrico/P
+ clube/G
+ clássico/P
+@@ -5219,6 +5310,7 @@
+ coado/P
+ coagido/P
+ coagulado/P
++coagulase/G
+ coagulação
+ coalhado/P
+ coator/P
+@@ -5267,6 +5359,7 @@
+ coesos
+ coesão
+ coevo/P
++coexistente/G
+ coexistência
+ cofre/G
+ cofrinho/G
+@@ -5286,6 +5379,7 @@
+ coisinha/G
+ coitadinho/P
+ coitado/P
++coitarca
+ coito/G
+ cola
+ cola/G
+@@ -5351,15 +5445,20 @@
+ colorido/P
+ colossal/G
+ colosso/G
++colostomia/G
++colovesical/G
+ coluna/G
+ colunata/G
+ colunista/G
++colágeno/P
+ colégio/G
+ colérico/P
+ colírio/G
+ colóquio/G
+ colômbia
+ colônia/G
++colônico/P
++colúria/G
+ com
+ comadre/G
+ comandado/P
+@@ -5427,6 +5526,7 @@
+ comodismo/G
+ comodista/G
+ comodoro/G
++comorbidade/G
+ comovedor/P
+ comovedoramente
+ comovente/G
+@@ -5565,12 +5665,14 @@
+ concedido/P
+ conceito/G
+ conceituado/P
++conceitual/G
+ conceitualmente
+ conceituação/P
+ concelebração/P
+ concentrado/P
+ concentração/P
+ concepcional/G
++conceptivo/G
+ concepção
+ concepção/G
+ concepção/P
+@@ -5637,6 +5739,7 @@
+ condicionado/P
+ condicional/G
+ condicionamento/G
++condicionante/G
+ condigno/G
+ condigno/P
+ condimento/G
+@@ -5675,6 +5778,7 @@
+ conferência/G
+ confessional/G
+ confessionário/G
++confiabilidade
+ confiado/P
+ confiante/G
+ confiança
+@@ -5708,6 +5812,7 @@
+ conformidade
+ conformismo
+ conformista/G
++confortável/G/D
+ confraria/G
+ confraternização/P
+ confrontado/P
+@@ -5720,6 +5825,7 @@
+ confusão/P
+ congelado/P
+ congestionamento
++congestivo/P
+ congestão
+ conglomeração
+ congratulação/P
+@@ -5737,6 +5843,7 @@
+ conhecedor/P
+ conhecido/P
+ conhecimento/G
++conivente/G
+ conivência/G
+ conjectura/G
+ conjugado/P
+@@ -5810,9 +5917,11 @@
+ constantemente
+ constantino
+ constantinopla
++constatação/P
+ constelação/P
+ consternado/P
+ consternação
++constipação
+ constitucional/G
+ constitucionalidade/G
+ constitucionalismo
+@@ -5824,6 +5933,7 @@
+ constituído/P
+ constrangido/P
+ constrangimento
++constrictivo/P
+ constrito/P
+ constritor/P
+ constrição
+@@ -5854,6 +5964,7 @@
+ contagem
+ contagens
+ contagioso/P
++contaminante/G
+ contaminação
+ contanto
+ contato/G
+@@ -5989,6 +6100,7 @@
+ convicção/P
+ convidado/P
+ convidativo/P
++convincente/G
+ convite/G
+ conviva/G
+ convivência/G
+@@ -6071,6 +6183,7 @@
+ coroinha/G
+ corola/G
+ corolário/G
++coronariana/G
+ coronel
+ coronha/G
+ coronhada/G
+@@ -6217,6 +6330,7 @@
+ cratera/G
+ cravado/P
+ cravo/G
++creatinina
+ creche/G
+ credencial/G
+ credenciamento/G
+@@ -6350,6 +6464,7 @@
+ cu/G
+ cubano/P
+ cubismo
++cubital/G
+ cubo/P
+ cubículo/G
+ cuca/G
+@@ -6457,6 +6572,7 @@
+ cápsula/G
+ cápua
+ cárcere/G
++cárie/G
+ cáspio
+ cátedra/G
+ cátodo/G
+@@ -6499,6 +6615,7 @@
+ cínico/P
+ círculo/G
+ círio/G
++cístico/P
+ cítara/G
+ cítrico/P
+ cíveis
+@@ -6529,7 +6646,6 @@
+ côngruo/G
+ côngruo/P
+ cônico/P
+-cônjuge
+ cônjuge/G
+ cônscio/P
+ cônsul
+@@ -6625,8 +6741,8 @@
+ decepcionado/P
+ decepção/P
+ decerto
+-decibel
+-decibéis
++decibel/G
++decibelímetro/G
+ decididamente
+ decidido/P
+ decidível/G
+@@ -6725,6 +6841,7 @@
+ deformado/P
+ deformante/G
+ deformação/P
++deformidade/G
+ defraudação
+ defronte
+ defumado/P
+@@ -6740,6 +6857,7 @@
+ degolamento/G
+ degolação
+ degradado/P
++degradante/G/D
+ degradação
+ degradação/P
+ degrau/G
+@@ -6754,6 +6872,7 @@
+ deixada/G
+ deixado/P
+ dejeto/G
++dejeção/G
+ delatado/P
+ delatador/G
+ delator/P
+@@ -6875,6 +6994,7 @@
+ denário/G
+ denúncia/G
+ deodoro
++deontologia
+ departamental/G
+ departamento/G
+ depauperado/P
+@@ -6885,6 +7005,7 @@
+ dependência/G
+ depilatório/P
+ depilação
++depleção
+ deploravelmente
+ deploração
+ deplorável/G
+@@ -7056,6 +7177,7 @@
+ descadastrado/P
+ descalabro
+ descalço/P
++descamação/P
+ descaminho/G
+ descampado/G
+ descansado/G
+@@ -7160,6 +7282,7 @@
+ desempregado/P
+ desemprego
+ desencadeado/P
++desencadeante/G
+ desencaminhado/P
+ desencaminhamento
+ desencantamento
+@@ -7229,6 +7352,7 @@
+ desgraçado/P
+ desguarnecido/P
+ desidratação
++desidrogenase/G
+ designado/P
+ designação
+ designação/P
+@@ -7253,6 +7377,7 @@
+ desjejum
+ desjejuns
+ deslavado/P
++desleal/G/D
+ desleixado/P
+ desleixo/G
+ desligado/P
+@@ -7352,6 +7477,7 @@
+ desperto/P
+ despesa/G
+ despido/P
++despojado/P
+ despojamento
+ despojo/G
+ despoluição
+@@ -7459,6 +7585,7 @@
+ desígnio/G
+ detalhado/P
+ detector/G
++detectável/G
+ detecção/P
+ detento/G
+ detentor/P
+@@ -7530,8 +7657,10 @@
+ diacrônico/P
+ diadema/G
+ diafragma/G
++diafragmático/P
++diagnosticado/P
+ diagnosticador/P
+-diagnóstico/G
++diagnóstico/P
+ diagonal/G
+ diagonalmente
+ diagrama/G
+@@ -7554,6 +7683,7 @@
+ diariamente
+ diarista/G
+ diarréia/G
++diastólico/P
+ diatermia
+ dica/G
+ dicionarista/G
+@@ -7667,10 +7797,12 @@
+ dioniso
+ dionisíaco/P
+ dioptria/G
++dipirona
+ diplomacia
+ diplomata/G
+ diplomação
+ diplomático/P
++diplopia
+ dique/G
+ direcionado/P
+ direcional/G
+@@ -7696,6 +7828,7 @@
+ discagens
+ discente/G
+ discernimento/G
++discinesia
+ disciplinado/P
+ disciplinador/P
+ disco/G
+@@ -7717,7 +7850,9 @@
+ discípulo/G
+ discóbolo/G
+ discórdia/G
++disfagia
+ disfarçado/P
++disfonia/G
+ disforme/G
+ disfunção
+ disjuntivo/P
+@@ -7732,14 +7867,17 @@
+ dispensado/P
+ dispensário/G
+ dispensável/G
++dispepsia/G
+ dispersa
+ dispersas
+ dispersivo/P
+ disperso
+ dispersos
+ dispersão
++displasia/G
+ displicente/G
+ displicência/G
++displásico/P
+ dispnéia
+ disponibilidade
+ disponibilidade/G
+@@ -7755,6 +7893,7 @@
+ disquete/G
+ disquinho/G
+ disruptivo/P
++dissecado/P
+ dissecação
+ disseminado/P
+ disseminação
+@@ -7779,6 +7918,7 @@
+ dissonância/G
+ dissuasivo/P
+ dissídio/G
++distal/G/D
+ distanciado/P
+ distante/G
+ distendido/P
+@@ -7987,6 +8127,8 @@
+ dublagens
+ ducado/G
+ ducha/G
++ductal/G
++ducto/G
+ duelista/G
+ duende/G
+ duetista/G
+@@ -8059,6 +8201,7 @@
+ ecletismo/G
+ eclosão
+ eclusa/G
++eclâmpsia
+ eclético/P
+ eclíptico/P
+ eco/G
+@@ -8073,7 +8216,9 @@
+ economista/G
+ econômico/P
+ ecossistema/G
++ectasia
+ ectoplasma/G
++ectásico/P
+ ecumenismo/G
+ ecumênico/P
+ eczema/G
+@@ -8096,7 +8241,7 @@
+ educador/P
+ educando/P
+ educandário/G
+-educativo/G
++educativo/P
+ educação
+ edícula/G
+ efedrina
+@@ -8254,6 +8399,7 @@
+ embolado/P
+ embolação
+ embolia
++embolismo
+ embora
+ emboscado/P
+ embotado/P
+@@ -8302,6 +8448,7 @@
+ emolumento/G
+ emotivo/P
+ emoção/P
++empachamento
+ empacotado/P
+ empacotamento
+ empada
+@@ -8331,6 +8478,7 @@
+ emperrado/P
+ emperradoro/P
+ emperramento
++empiema/G
+ empilhadeira/G
+ empilhado/P
+ empilhamento
+@@ -8457,6 +8605,8 @@
+ endiabrado/P
+ endinheirado/P
+ endividado/P
++endobrônquico/P
++endocardite/G
+ endocrinologia
+ endocrinologista/G
+ endocrinológico/P
+@@ -8468,11 +8618,14 @@
+ endoplasmático/P
+ endoplásmatico/P
+ endoscopia/G
++endotoxina/G
++endotraqueal/G
+ endurecida/G
+ endurecido/P
+ endurecimento
+ endêmico/P
+ endócrino/P
++endógeno/P
+ enegrecido/P
+ enegrecimento
+ energia/G
+@@ -8552,6 +8705,7 @@
+ enlouquecimento
+ enluarada/G
+ enobrecimento
++enoftalmia
+ enojado/P
+ enorme/G
+ enormidade
+@@ -8593,9 +8747,11 @@
+ entediado/P
+ entendido/P
+ entendimento/G
++enteral/G
+ enternecedor/P
+ enternecido/P
+ enternecimento
++enterorragia
+ enterrado/P
+ enterro/G
+ entibiadora
+@@ -8689,6 +8845,10 @@
+ enzima/G
+ enzimático/P
+ enérgico/P
++enésima
++eosinofilia/G
++eosinofílico/P
++eosinófilo/G
+ epiceno/G
+ epicentro/G
+ epicurismo
+@@ -8703,10 +8863,12 @@
+ epifania/G
+ epigrama/G
+ epigramático/P
++epigátrico/P
+ epilepsia
+ epiléptico/P
+ episcopado/G
+ episcopal/G
++epistaxe
+ epistemologia
+ epistolar/G
+ epistolário/P
+@@ -8716,6 +8878,7 @@
+ epitáfio/G
+ epitélio/G
+ epopéia/G
++epífora
+ epígrafe/G
+ epílogo/G
+ epístola/G
+@@ -8731,6 +8894,7 @@
+ equilibrista/G
+ equilátero/G
+ equilíbrio/G
++equimose/G
+ equinocial/G
+ equinócio/G
+ equipado/P
+@@ -8759,6 +8923,8 @@
+ erguido/P
+ erigido/P
+ erisipela
++eritromicina
++eritrócito/G
+ eriçado/P
+ ermida/G
+ ermitã
+@@ -8781,6 +8947,7 @@
+ erro/G
+ errático/P
+ errôneo/P
++eructação/P
+ erudito/P
+ erudição
+ eruptivo/P
+@@ -8834,6 +9001,7 @@
+ escapamento
+ escapatório/P
+ escapismo/G
++escapular/G
+ escapulido/P
+ escapulário/G
+ escara/G
+@@ -8874,6 +9042,7 @@
+ escolarização
+ escolhido/P
+ escolho/P
++escoliose
+ escoltado/P
+ escolástico/P
+ escombro/G
+@@ -8886,6 +9055,7 @@
+ escorado/P
+ escoramento
+ escorbuto/G
++escore
+ escoriado/P
+ escoriação/P
+ escorpião/P
+@@ -8898,6 +9068,7 @@
+ escoteiro/G
+ escotilha/G
+ escotismo
++escotoma/G
+ escova/G
+ escovadeira/G
+ escovação
+@@ -9004,6 +9175,9 @@
+ esmorecido/P
+ esmorecimento
+ esnobismo/G
++esofagiano/P
++esofagite/G
++esofágico/P
+ esotérico/P
+ espacial/G
+ espada/G
+@@ -9134,6 +9308,7 @@
+ espoliação
+ esponja/G
+ esponjoso/P
++espontaneamente
+ espontaneidade
+ espontâneo/P
+ esporada/G
+@@ -9154,6 +9329,7 @@
+ espremido/P
+ espumoso/P
+ espádua/G
++espástico/P
+ espátula/G
+ espécie/G
+ espírita
+@@ -9196,9 +9372,12 @@
+ esquisitos
+ esquisitão
+ esquisitões
++esquistosomose
++esquistossomo/P
+ esquivo/P
+ esquizofrenia
+ esquizofrênico/P
++esquizonte/G
+ esquálido/P
+ esse/P
+ essencial/G
+@@ -9248,6 +9427,7 @@
+ estatal/G
+ estatismo/G
+ estatista/G
++estatisticamente
+ estatueta/G
+ estatuinte/G
+ estatura/G
+@@ -9258,6 +9438,7 @@
+ estatístico/P
+ estação/P
+ este/P
++esteatose/G
+ esteio/G
+ esteira/G
+ estelionato/G
+@@ -9265,6 +9446,7 @@
+ estendido/P
+ estendível/G
+ estenografia
++estenose/G
+ estensível/G
+ estenógrafo/P
+ estepe/G
+@@ -9382,6 +9564,7 @@
+ estribo/G
+ estricnina
+ estridente/G
++estridor
+ estritamente
+ estrito/P
+ estrofe/G
+@@ -9441,6 +9624,7 @@
+ esverdeado/P
+ esôfago
+ etano
++etanol
+ etapa/G
+ etc
+ eteno
+@@ -9449,11 +9633,16 @@
+ eterno/P
+ eticamente
+ etileno
++etilismo
++etilista/G
+ etilo
+ etimologia
+ etimologista/G
+ etimológico/P
++etiologia/G
+ etiológico/P
++etiopatogenia/G
++etiopatogênese/G
+ etiópia
+ etnia
+ etnia/G
+@@ -9489,6 +9678,7 @@
+ eugenia
+ eugenismo
+ eugenista/G
++eugênico/P
+ eugênio
+ eunuco/G
+ eurasiano/P
+@@ -9640,11 +9830,13 @@
+ exigido/P
+ exigência/G
+ exigível/G
++existencial/G/D
+ existencialismo
+ existencialista/G
+ existente/G
+ existência/G
+ exoesqueleto/G
++exoftalmia
+ exoneração/P
+ exorbitância/G
+ exorcismo/G
+@@ -9653,6 +9845,7 @@
+ exortativo/P
+ exortação/P
+ exotismo/G
++exotoxina/G
+ exotérico/P
+ exotérmico/P
+ expandido/P
+@@ -9662,6 +9855,7 @@
+ expectante/G
+ expectativa/G
+ expectorante/G
++expectoração/P
+ expedicionário/P
+ expedido/P
+ expedidor/P
+@@ -9680,6 +9874,7 @@
+ expiatório/P
+ expiação/P
+ expirado/P
++expiratório/P
+ expiração
+ expiração/P
+ explanada
+@@ -9732,6 +9927,7 @@
+ expulsão/P
+ expurgado/P
+ expurgamento/G
++exsudação/P
+ extemporâneo/P
+ extensivo/P
+ extenso/P
+@@ -9795,6 +9991,7 @@
+ exíguo/P
+ exílio/G
+ exímio/P
++exógeno/P
+ exórdio/G
+ exótico/P
+ eólico/P
+@@ -9905,9 +10102,14 @@
+ farináceo/P
+ farisaico/P
+ farisaísmo
++farmacocinético/P
++farmacodinâmico/P
+ farmacologia
+ farmacologista/G
++farmacológico/P
+ farmacopéia
++farmacoterapia
++farmacoterápico/P
+ farmacêutica
+ farmacêutico/P
+ farmácia
+@@ -9929,6 +10131,7 @@
+ fartamente
+ farto/P
+ fartura
++faríngeo/P
+ faróis
+ fascinado/P
+ fascinante/G
+@@ -9984,6 +10187,7 @@
+ febril/G
+ febrilmente
+ fecal/G
++fecalóide/G
+ fechado/P
+ fechadona
+ fechadonas
+@@ -10069,6 +10273,7 @@
+ ferreira
+ ferreiro/G
+ ferrenho/P
++ferritina
+ ferro
+ ferro/G
+ ferroada/G
+@@ -10117,7 +10322,15 @@
+ fiasco/G
+ fiação
+ fibra/G
++fibrina
++fibrinogênio
++fibrinoso/P
++fibrinólise
++fibroblástico/P
++fibrogênico/P
+ fibroma
++fibrosante/G
++fibrose/P
+ fibroso/P
+ fichinha/G
+ fichário/G
+@@ -10179,6 +10392,7 @@
+ filtrado/P
+ filtragem
+ filtragens
++filtração/P
+ filtro/G
+ filão/P
+ filé
+@@ -10192,6 +10406,7 @@
+ finalizado/P
+ finalização
+ finalmente
++finalístico/P
+ financeiramente
+ financeiro/P
+ financiamento
+@@ -10236,6 +10451,7 @@
+ fisiológico/P
+ fisionomia/G
+ fisionômico/P
++fisiopatológico/P
+ fisioterapeuta/G
+ fisioterapia
+ fisioterápico/P
+@@ -10282,6 +10498,7 @@
+ flecheiro/P
+ fleumático/P
+ flexibilidade
++flexibilização
+ flexionada/G
+ flexão/P
+ flexível/G
+@@ -10326,6 +10543,7 @@
+ flâmula/G
+ fobia
+ foca/G
++focal/G
+ focalização
+ focinheira/G
+ focinho/G
+@@ -10582,6 +10800,7 @@
+ frito/P
+ fritura/G
+ frivolidade/G
++friável/G
+ friíssimo/P
+ frondoso/P
+ fronha/G
+@@ -10697,6 +10916,7 @@
+ fusco
+ fuselagem
+ fuselagens
++fusiforme/G
+ fuso/G
+ fusquinha/G
+ fustigado/P
+@@ -10721,6 +10941,7 @@
+ fábula/G
+ fáceis
+ fácil
++fármaco/G
+ fátuo/G
+ fã/G
+ fé
+@@ -10738,6 +10959,7 @@
+ fígado/G
+ física
+ físico/P
++fístula/G
+ fórceps
+ fórmica
+ fórmico
+@@ -10882,6 +11104,10 @@
+ gasometria
+ gasoso/P
+ gasto/G
++gastrite/G
++gastroduodenal/G
++gastroesofágico/P
++gastrointestinal/G
+ gastronomia
+ gastronômico/P
+ gastrônomo/P
+@@ -10903,6 +11129,7 @@
+ gazua/G
+ gaúcho/P
+ geada/G
++gel/G
+ geladeira/G
+ geladinho/P
+ gelado/G
+@@ -10932,11 +11159,13 @@
+ generosamente
+ generosidade/G
+ generoso/P
++geneticamente
+ gengiva/G
+ genial/G
+ genialidade
+ genioso/P
+ genital/G
++genitália/G
+ genocídio/G
+ genro/G
+ gentalha
+@@ -10995,6 +11224,7 @@
+ germe
+ germe/G
+ germicida/G
++germinativo/P
+ germinação
+ germânia
+ germânico/P
+@@ -11002,6 +11232,7 @@
+ gerência/G
+ gerúndio/G
+ gesso/G
++gestacional/G
+ gestante/G
+ gestatório/P
+ gestação/P
+@@ -11050,8 +11281,11 @@
+ glicemia
+ glicerina
+ glicerinado/P
++glicoproteína/G
+ glicosado/P
++glicose
+ glicídio/G
++glicólise
+ global/G
+ globalmente
+ globo/G
+@@ -11074,6 +11308,7 @@
+ glândula/G
+ glóbulo/G
+ glória/G
++glótico/P
+ glúteo/G
+ gnomo/G
+ gnosticismo
+@@ -11185,6 +11420,7 @@
+ granular/G
+ granulação
+ granulação/G
++granuloma/G
+ granuloso/P
+ granéis
+ granítico/P
+@@ -11246,6 +11482,7 @@
+ grotão
+ grotão/P
+ grudado/P
++grumo/G
+ grunhido/G
+ grupamento/G
+ grupinho/G
+@@ -11357,6 +11594,7 @@
+ hagiológico/P
+ hagiógrafo/P
+ haitiano/P
++halitose
+ halo/G
+ halogênio
+ halterofilista/G
+@@ -11407,8 +11645,11 @@
+ helênico/P
+ hem
+ hematita/G
++hematogênico/P
+ hematologia
+ hematoma/G
++hematoquesia
++hematêmese
+ hemisfério/G
+ hemocentro/G
+ hemoderivado/P
+@@ -11417,12 +11658,21 @@
+ hemofílico/P
+ hemoglobina
+ hemograma/G
++hemoptise/G
+ hemorragia/G
+ hemorrágico/P
+ hemorróida/G
+ hemorróidas
++hemossiderina/G
++hemostase
++hemostasia
++hemostático/P
++hemotransfusão/G
+ hemácia/G
+ henrique
++heparina/G
++hepatite/G
++hepatócito/G
+ heptágono/G
+ hepático/P
+ hera/G
+@@ -11467,6 +11717,7 @@
+ hexaedro/G
+ hexagonal/G
+ hexágono/G
++hialino/P
+ hiato/G
+ hibernante/G
+ hibernação
+@@ -11480,6 +11731,7 @@
+ hidrelétrica/G
+ hidrelétrico/P
+ hidroavião
++hidroaéreo/G
+ hidrocarboneto/G
+ hidroenergético/P
+ hidrofobia
+@@ -11494,6 +11746,7 @@
+ hidráulico/P
+ hidrófilo/G
+ hidrófobo/P
++hidrólise/G
+ hidróxido/G
+ hidrômetro/G
+ hiena/G
+@@ -11509,41 +11762,72 @@
+ higiênico/P
+ higrométrico/P
+ higrômetro/G
++hilar/G
+ hilariante/G
+ himalaia
+ hindu/G
+ hinduísmo
+ hino/G
+ hinário/G
++hiperativação/G
+ hiperbólico/P
++hipercapnia/G
+ hipercrítico/P
+ hipercubo/G
++hiperemia/G
++hiperemiado/P
+ hiperesfera/G
+-hiperglicemia
++hiperexpansão/P
++hiperfluxo
++hiperfonético/P
++hipergamaglobulinemia/G
++hiperglicemia/G
++hiperinsuflado/P
++hiperinsuflação/P
+ hipermercado/G
+ hipermetropia
+ hiperplano/G
++hiperplasia/G
++hiperprodução/P
++hipersensibilidade
++hipertenso/P
+ hipertensão
++hipertermia
+ hipertrofia/G
+ hipertônico/P
++hipervolêmico/P
+ hipismo
+ hipnose
+ hipnotismo
+ hipnotizador/P
+ hipnótico/P
++hipoacusia
+ hipocondria
+ hipocondríaco/P
++hipocratismo
+ hipocrisia/G
++hipocôndrio/G
+ hipodérmico/P
++hipofluxo
++hipofonético/P
++hipogamaglobulinemia/G
++hipoplasia/G
++hipoprodução/P
+ hipopótamo/G
++hiporexia/G
+ hipotecado/P
+ hipotecário/P
++hipotensão
+ hipotenusa/G
++hipotermia
+ hipotético/P
++hipovolêmico/P
++hipoxemia/G
+ hipérbole/G
+ hipócrita/G
+ hipódromo/G
+ hipótese/G
++hipóxia/G
+ hirsuto/G
+ hispanismo
+ hispanista/G
+@@ -11551,6 +11835,8 @@
+ histeria/G
+ histerismo/G
+ histograma/G
++histogênese/G
++histológico/P
+ historiador/P
+ historieta/G
+ historinha/G
+@@ -11581,6 +11867,8 @@
+ homeopata/G
+ homeopatia
+ homeopático/P
++homeostase
++homeostasia
+ homero
+ homicida/G
+ homicídio/G
+@@ -11723,6 +12011,7 @@
+ identificado/P
+ identificador/G
+ identificação/P
++identificável/G
+ ideografia
+ ideograma/G
+ ideologia/G
+@@ -11809,6 +12098,7 @@
+ imantação
+ imanência
+ imaterial/G
++imaturidade
+ imaturo/P
+ imbecil/G
+ imbecilidade/G
+@@ -11993,12 +12283,17 @@
+ imundo/P
+ imune/G
+ imunidade/G
++imunitário/P
+ imunização
+ imunobiológico/P
++imunodeficiência/G
++imunodeprimido/P
++imunofluorescência/G
+ imunológico/P
+ imutável/G
+ imóvel/G
+ inabalável/G
++inabilidade
+ inabitável/G
+ inabordável/G
+ inacabado/P
+@@ -12047,6 +12342,7 @@
+ incapacidade
+ incapacidade/G
+ incapacitado/P
++incapacitante/G
+ incaracterístico/P
+ incauto/P
+ incendiado/P
+@@ -12367,6 +12663,7 @@
+ infidelíssimo/P
+ infiel
+ infiltrado/P
++infiltrativo/P
+ infiltração/P
+ infindo/P
+ infinidade/G
+@@ -12404,6 +12701,7 @@
+ infrator/P
+ infravermelho/P
+ infração/P
++infringência/G
+ infrutuoso/P
+ infrutífero/P
+ infundado/P
+@@ -12431,6 +12729,7 @@
+ ingrediente/G
+ ingressante/G
+ ingresso/G
++inguinal/G
+ ingênito/G
+ ingênuo/P
+ inibido/P
+@@ -12546,6 +12845,7 @@
+ inspetoria/G
+ inspeção/P
+ inspirado/P
++inspiratório/P
+ instabilidade/G
+ instalado/P
+ instalação/P
+@@ -12654,6 +12954,7 @@
+ intercessão/P
+ intercomunicação
+ interconexão/P
++intercorrência/G
+ intercâmbio/G
+ interdepartamental/G
+ interdependência/G
+@@ -12676,6 +12977,7 @@
+ interiorano/P
+ interiormente
+ interjeição/P
++interleucina/G
+ interligado/P
+ interligação/P
+ interlocutor/P
+@@ -12725,6 +13027,7 @@
+ interrupção/P
+ intersecção/P
+ intersetorial/G
++intersticial/G
+ interstício/G
+ interunidade/G
+ interurbano/G
+@@ -12746,6 +13049,7 @@
+ intorcível/G
+ intoxicação/P
+ intracelular/G
++intracitoplasmático/P
+ intragável/G
+ intranqüilo/P
+ intransferível/G
+@@ -12753,8 +13057,10 @@
+ intransigência/G
+ intransitivo/P
+ intransponível/G
++intranuclear/G
+ intrapulmonar/G
+ intraracial/G
++intratorácico/P
+ intravenoso/P
+ intriga/G
+ intriguista/G
+@@ -12774,6 +13080,7 @@
+ intrépido/P
+ intrínseco/P
+ intróito/G
++intubação/G
+ intuicionismo/G
+ intuitivamente
+ intuitivo/P
+@@ -12887,6 +13194,7 @@
+ ironia/G
+ irracional/G
+ irracionalista/G
++irradiado/P
+ irradiante/G
+ irradiação/P
+ irreal/G
+@@ -12919,6 +13227,7 @@
+ irrestrito/P
+ irretratável/G
+ irreverente/G
++irreversível/G
+ irreverência/G
+ irrevogavelmente
+ irrevogável/G
+@@ -12947,6 +13256,7 @@
+ isolado/P
+ isolador/P
+ isolamento/G
++isolante/G
+ isolação
+ isomeria
+ isometria/G
+@@ -12959,6 +13269,7 @@
+ isotônico/P
+ isovolumétrico/P
+ isqueiro/G
++isquêmico/P
+ israelense/G
+ israelita/G
+ isso
+@@ -13123,6 +13434,7 @@
+ judéia
+ judô
+ jugo
++jugular/G
+ juiz
+ juizado
+ juizados
+@@ -13212,7 +13524,9 @@
+ laconismo/G
+ lacraia/G
+ lacrimação
++lacrimejamento
+ lacrimoso/P
++lactato
+ lactação
+ lactobacilo/G
+ lacuna/G
+@@ -13237,6 +13551,7 @@
+ lagarto/G
+ lago/G
+ lagoa/G
++lagoftalmo
+ lagosta/G
+ lagostim
+ lagostins
+@@ -13349,6 +13664,7 @@
+ lavado/P
+ lavador/G
+ lavador/P
++lavagem/G
+ lavanderia/G
+ lavatório/G
+ lavação
+@@ -13444,6 +13760,7 @@
+ letreiro/G
+ letárgico/P
+ leucemia
++leucometria/G
+ leucócito/G
+ levadiça/G
+ levado/P
+@@ -13557,6 +13874,11 @@
+ linearidade/G
+ linearmente
+ linfa/G
++linfocítico/P
++linfogranuloma/G
++linfonodal/G
++linfonodo/G
++linfotoxina/G
+ linfático/P
+ linfócito/G
+ linguado/G
+@@ -13580,8 +13902,10 @@
+ linóleo/G
+ liofilizado/P
+ liofilização/P
++lipoproteína/G
+ lipoprotéico/P
+ lipossolúvel/G
++lipotímia/G
+ lipídico/P
+ lipídio/G
+ liquefação/P
+@@ -13592,6 +13916,7 @@
+ lira/G
+ lirismo
+ lisboa
++lise/G
+ lisinho/P
+ liso/P
+ lisonja/G
+@@ -13644,8 +13969,8 @@
+ lixão
+ lição/P
+ lo/P
+-loba
+-lobas
++loba/G
++lobar/G
+ lobinho/P
+ lobisomem
+ lobisomens
+@@ -13705,6 +14030,7 @@
+ lopes
+ loquaz/G
+ lorde/G
++lordose
+ lorota/G
+ losango/G
+ lotado/P
+@@ -13789,6 +14115,7 @@
+ lácio
+ láctea
+ lácteo
++láctico/P
+ lágrima/G
+ lápis
+ lástima/G
+@@ -13868,7 +14195,9 @@
+ macrocosmo
+ macroeconômico/P
+ macroscopicamente
++macroscópico/P
+ macruro/G
++macrófago/G
+ macuco/G
+ macumba/G
+ macumbeiro/P
+@@ -13907,6 +14236,7 @@
+ magnetismo
+ magnetização
+ magnificência
++magnitude/G
+ magno/P
+ magnânimo/P
+ magnésia
+@@ -13996,6 +14326,8 @@
+ mamadeira/G
+ mamata/G
+ mameluco/G
++mamilar/G
++mamilo/G
+ mamoeiro/G
+ mamona/G
+ mamário/P
+@@ -14037,6 +14369,7 @@
+ manganês
+ mangue/G
+ mangueira/G
++manguito/G
+ manha
+ manhas
+ manhoso/P
+@@ -14146,6 +14479,7 @@
+ marisco/G
+ marista/G
+ maritacas
++marital/D
+ marmanjo/G
+ marmelada/G
+ marmelo/G
+@@ -14236,6 +14570,7 @@
+ matrona/G
+ matrícula/G
+ maturação/P
++maturidade
+ matutino/P
+ matuto/G
+ matéria/G
+@@ -14333,6 +14668,7 @@
+ melaço
+ melchior
+ meleca/G
++melena
+ melhor
+ melhorado/P
+ melhoramento/G
+@@ -14357,6 +14693,7 @@
+ memorização
+ memorável/G
+ memória/G
++menarca
+ mencionado/P
+ mendes
+ mendicância
+@@ -14434,6 +14771,8 @@
+ mesa/G
+ mesada/G
+ mesclado/P
++mesenquimal/G
++mesentérico/P
+ meses
+ mesinha/G
+ mesmice/G
+@@ -14458,6 +14797,7 @@
+ mestres
+ mesário/G
+ metabolismo
++metabolizado/P
+ metabólico/P
+ metade/G
+ metafísico/P
+@@ -14470,6 +14810,7 @@
+ metamorfose/G
+ metamórfico/P
+ metano
++metaplasia/G
+ metatarso
+ meteorito/G
+ meteoro/G
+@@ -14494,6 +14835,7 @@
+ metrópole/G
+ metáfora/G
+ metálico/P
++metástase/G
+ metódico/P
+ meu/G
+ mexerica/G
+@@ -14520,6 +14862,7 @@
+ microprocessador/G
+ microrregião/G
+ microscopia
++microscopicamente
+ microscópico/P
+ microscópio/G
+ micróbio/G
+@@ -14542,6 +14885,7 @@
+ milheiro/G
+ milho
+ milhão/P
++miliar/G
+ miliciano/P
+ miligrama/G
+ mililitro/G
+@@ -14790,6 +15134,7 @@
+ monástico/G
+ monástico/P
+ monção
++monócito/G
+ monóculo/G
+ monógamo/P
+ monóide/G
+@@ -14811,6 +15156,7 @@
+ moralmente
+ morango/G
+ moratória/G
++morbidade
+ morcego/G
+ mordaça/G
+ mordente/G
+@@ -14820,6 +15166,7 @@
+ moreno/P
+ morfina
+ morfismo/G
++morfofuncional/G
+ morfologia
+ morfológico/P
+ moribundo/P
+@@ -14880,6 +15227,7 @@
+ motorista/G
+ motorizado/P
+ motorzinho/G
++motricidade
+ motriz/G
+ motéis
+ moura
+@@ -14905,7 +15253,7 @@
+ mucambo/G
+ muco
+ muco/G
+-mucosa/G
++mucoso/P
+ mudado/P
+ mudança/G
+ mudez
+@@ -14929,11 +15277,13 @@
+ multicolorido/P
+ multicor
+ multicor/G
++multicêntrico/P
+ multidisciplinar/G
+ multidão/P
+ multiforme/G
+ multimilionário/P
+ multimídia/G
++multinucleação/P
+ multiplexado/P
+ multiplexador/P
+ multiplexação/P
+@@ -15145,11 +15495,15 @@
+ necessário/P
+ necrologia
+ necrológio
++necropsia/G
+ necrosado/P
+ necrotério/G
+ necrópole/G
++necrótico/P
+ nefando/P
+ nefasto/P
++nefropata/G
++nefropatia/G
+ negado/P
+ negativamente
+ negativismo
+@@ -15180,6 +15534,9 @@
+ nenê/G
+ neologismo/G
+ neolítico/P
++neonatal/G
++neonato/G
++neoplasia/G
+ nepotismo/G
+ nero
+ nervo/G
+@@ -15199,19 +15556,21 @@
+ neuralgia/G
+ neurastenia/G
+ neurastênico/P
+-neurocirurgia
+-neurocirurgias
+-neurocirurgiã
+-neurocirurgião
+-neurocirurgiãs
+-neurocirurgiões
++neurocirurgia/G
++neurocirurgiã/G
++neurocirurgião/P
++neurogênese
+ neurologia
+ neurologista/G
+ neurológico/P
++neuromuscular/G
++neuropatia/G
+ neurótico/P
+ neurônio/G
+ neutralização
+ neutro/P
++neutropenia/G
++neutrófilo/G
+ nevada/G
+ nevado/P
+ nevasca/G
+@@ -15257,6 +15616,7 @@
+ nocivo/P
+ nodal/G
+ nodoso/P
++nodular/G
+ noel
+ nogueira/G
+ noitada/G
+@@ -15296,6 +15656,8 @@
+ normandia
+ normando/G
+ normativo/P
++normofonético/P
++normotenso/P
+ noroeste
+ norte
+ norteado/P
+@@ -15431,6 +15793,8 @@
+ objeção/P
+ oblação/P
+ obliterado/P
++obliterante
++obliteração/P
+ oblongo/P
+ oblíquo/P
+ oboé
+@@ -15466,6 +15830,8 @@
+ obstetrícia
+ obstinado/P
+ obstinação/P
++obstipação
++obstrutivo/P
+ obstrução/P
+ obstruído/P
+ obstáculo/G
+@@ -15483,6 +15849,7 @@
+ ocasionalmente
+ ocasião/P
+ ocaso
++occipital/G
+ oceano/G
+ oceanografia
+ oceanográfico/P
+@@ -15518,6 +15885,7 @@
+ odiado/P
+ odiento/P
+ odilon
++odinofagia
+ odioso/P
+ odisséia/G
+ odontologia
+@@ -15579,6 +15947,7 @@
+ oligarca/G
+ oligarquia/G
+ oligopólio/G
++oligossintomático/P
+ oligárquico/P
+ olimpo
+ olimpíada/G
+@@ -15601,6 +15970,7 @@
+ omissões
+ omitido/P
+ omoplata/G
++oncótico/P
+ onda/G
+ onde
+ ondeado/P
+@@ -15634,7 +16004,7 @@
+ operador/P
+ operariado/G
+ operativo/P
+-operatório/G
++operatório/P
+ operação/P
+ opereta/G
+ operoso/P
+@@ -15688,6 +16058,7 @@
+ orfandade/G
+ organismo/G
+ organista/G
++organizacional/G
+ organizado/P
+ organizadoro/P
+ organização/P
+@@ -15738,7 +16109,9 @@
+ ortográfico/P
+ ortonormal/G
+ ortopedia
++ortopnéia/G
+ ortopédico/P
++ortostática/G
+ oráculo/G
+ orçamento/G
+ orçamentário/P
+@@ -15803,6 +16176,7 @@
+ oxalato
+ oxalá
+ oxidado/P
++oxidante/G
+ oxidação/P
+ oxigenado/P
+ oxigenação
+@@ -15900,6 +16274,8 @@
+ palmilhado/P
+ palmito/G
+ palmo/P
++palpação/P
++palpebral/G
+ palpitação/P
+ palpiteiro/P
+ palpável/G
+@@ -15912,6 +16288,8 @@
+ panca/G
+ pancada/G
+ pancadaria/G
++pancardite/G
++pancreatite/G
+ panda/G
+ pandarecos
+ pandeiro/G
+@@ -15927,6 +16305,7 @@
+ pangaré/G
+ panificadora/G
+ paninho/G
++panlobular/G
+ pano/G
+ panorama/G
+ panorâmico/P
+@@ -16013,6 +16392,7 @@
+ parapsicólogo/P
+ parasita/G
+ parasitismo
++parasseptal/G
+ paraíba/G
+ paraíso/G
+ parceiro/P
+@@ -16036,6 +16416,8 @@
+ parentela
+ parentesco/G
+ parentesco/P
++paresia/G
++parestesia/G
+ paridade/G
+ parisiense/G
+ paritário/P
+@@ -16048,7 +16430,9 @@
+ parnaíba
+ paroquial/G
+ paroquiano/P
++parotidite/G
+ paroxismo/G
++paroxístico/P
+ paroxítono/P
+ parque/G
+ parquímetro/G
+@@ -16058,6 +16442,7 @@
+ parteiro/P
+ particionamento/G
+ participado/P
++participante/G
+ participação/P
+ particular/G
+ particularidade/G
+@@ -16079,6 +16464,7 @@
+ paráclito/G
+ parágrafo/G
+ parâmetro/G
++parênquima/G
+ parêntese/G
+ parênteses
+ paródia/G
+@@ -16137,6 +16523,7 @@
+ patavina
+ patena/G
+ patente/G
++patenteável/G
+ paternalismo
+ paternalista/G
+ paternidade
+@@ -16150,6 +16537,7 @@
+ patinação
+ patins
+ pato/P
++patogenia/G
+ patogênico/P
+ patologia/G
+ patologista/G
+@@ -16177,8 +16565,9 @@
+ patuá/G
+ patético/P
+ patíbulo/G
++patógeno/G
+ pau/G
+-paula
++paucicelular/G
+ paulada/G
+ paulatino/P
+ paulista/G
+@@ -16340,6 +16729,7 @@
+ penúria/G
+ pepino/G
+ pepita/G
++peptídeo/G
+ pequenez
+ pequenininho/P
+ pequenino/P
+@@ -16401,6 +16791,9 @@
+ perfídia/G
+ pergaminho/G
+ perguntinha/G
++peribronquiolar/G
++peribrônquico/P
++pericardite/G
+ pericial/G
+ periclitante/G
+ pericárdio/G
+@@ -16429,6 +16822,7 @@
+ permissionário/P
+ permissivo/P
+ permissão/P
++permissível/G
+ permitido/P
+ permutação/P
+ perna/G
+@@ -16530,6 +16924,7 @@
+ peso/G
+ pesqueiro/G
+ pesqueiro/P
++pesquisado/P
+ pesquisador/G
+ pessegueira/G
+ pessegueiro/G
+@@ -16553,6 +16948,7 @@
+ petrolífero/P
+ petróleo
+ petulância
++petéquia/G
+ petúnia/G
+ peão/P
+ peçonha
+@@ -16654,6 +17050,7 @@
+ pirilampo/G
+ pirita/G
+ pirogravura/G
++pirose
+ pirotecnia
+ pirotécnico/P
+ pirraça/G
+@@ -16685,6 +17082,7 @@
+ piíssimo/P
+ placa/G
+ placar/G
++placebo/G
+ placenta/G
+ placentário/P
+ placidez
+@@ -16711,8 +17109,11 @@
+ planície/G
+ planímetro/G
+ plaqueta/G
++plaquetário/P
+ plasmado/P
+ plasmático/P
++plasmócito/G
++plasmódio/G
+ plasticidade/G
+ plastificado/P
+ plataforma/G
+@@ -16736,6 +17137,10 @@
+ plenário/P
+ pleonasmo/G
+ pleonástico/P
++pleura
++pleural/G
++pleurite/G
++plexo/G
+ pluma/G
+ plumoso/G
+ plural/G
+@@ -16757,8 +17162,13 @@
+ plástico/P
+ pneu/G
+ pneumococo/G
+-pneumonia
++pneumologista/G
++pneumonia/G
++pneumopata/G
++pneumopatia/G
++pneumotórax
+ pneumático/P
++pneumócito/G
+ pobre/G
+ pobretona
+ pobretonas
+@@ -16806,6 +17216,7 @@
+ policrômico/P
+ polido/P
+ poliedro/G
++polifagia
+ polifonia
+ poligamia
+ poliglota/G
+@@ -16813,12 +17224,13 @@
+ polimento
+ polimerização
+ polimorfismo
+-polimorfo/G
++polimorfo/P
+ polinizado/P
+ polinização/P
+ polinomial/G
+ polinésia
+ polinômio/G
++poliomielite
+ polissilábico/P
+ politeísmo
+ politeísta/G
+@@ -16834,6 +17246,7 @@
+ polpa/G
+ poltrona/G
+ poltrão
++poluente/G
+ poluição
+ poluído/P
+ polvo
+@@ -16865,6 +17278,7 @@
+ ponde
+ ponderado/P
+ ponderador/P
++ponderal/G
+ ponderação
+ ponderação/P
+ ponderável/G
+@@ -17053,6 +17467,7 @@
+ prainha/G
+ prancha/G
+ prancheta/G
++prandial/G
+ pranto/G
+ prata
+ prataria/G
+@@ -17084,6 +17499,7 @@
+ preciosíssimo/P
+ precipitadamente
+ precipitado/P
++precipitante/G
+ precipitação/P
+ precipuamente
+ precipício/G
+@@ -17097,6 +17513,7 @@
+ preconcebido/P
+ preconceito/G
+ preconceituoso/P
++precordial/G
+ precursor/P
+ precário/P
+ predador/G
+@@ -17170,6 +17587,7 @@
+ prelo
+ prelo/G
+ prelúdio/G
++prematuridade
+ prematuro/P
+ premeditado/P
+ premeditação
+@@ -17241,7 +17659,9 @@
+ pressuroso/P
+ presságio/G
+ pressão/P
++pressórico/P
+ prestado/P
++prestadora/G
+ prestativo/P
+ prestação/P
+ presteza
+@@ -17269,7 +17689,8 @@
+ pretoriano/P
+ pretérito
+ pretíssimo/P
+-prevalência
++prevalente/G
++prevalência/G
+ prevaricação/P
+ preventivo/P
+ prevenção/P
+@@ -17339,6 +17760,7 @@
+ problema/G
+ problemático/P
+ probática/G
++procedente/G
+ procedimento/G
+ procedural/G
+ procedência
+@@ -17361,6 +17783,7 @@
+ procuração/P
+ procópio
+ prodigioso/P
++prodrômico/P
+ produtividade/G
+ produtivo/P
+ produto/G
+@@ -17385,6 +17808,7 @@
+ profetismo
+ proficiência
+ profilaxia
++profilático/P
+ profissional/G
+ profissionalismo
+ profissionalização
+@@ -17438,6 +17862,7 @@
+ promissão
+ promissória/G
+ promitente/G
++promocional/G/D
+ promontório/G
+ promotor/P
+ promovido/P
+@@ -17493,8 +17918,9 @@
+ prospecção
+ prosperidade
+ prosseguimento
++prostaglandina/G
+ prostituição
+-prostituto/P
++prostituta/G
+ prostituído/P
+ prostração
+ prostíbulo/G
+@@ -17505,6 +17931,7 @@
+ protecionista/G
+ protegido/P
+ protelação/P
++proteolítico/P
+ protestado/P
+ protestante/G
+ protestantismo
+@@ -17518,6 +17945,7 @@
+ prototipagem
+ prototipagens
+ protozoário/G
++protrusão
+ protuberância/G
+ protéico/P
+ protético/G
+@@ -17555,6 +17983,7 @@
+ provável/G
+ provérbio/G
+ província/G
++proximal/G/D
+ proximidade
+ proximidade/G
+ prudente/G
+@@ -17595,7 +18024,9 @@
+ psicologia
+ psicológica/G
+ psicológico/P
++psicomotor/G
+ psicopata/G
++psicopatia/G
+ psicose/G
+ psicossomático/P
+ psicoterapia
+@@ -17609,6 +18040,7 @@
+ psíquico/P
+ pterodáctilo/G
+ pua/G
++pubarca
+ puberdade/G
+ pubiano/P
+ publicado/P
+@@ -17707,6 +18139,7 @@
+ pálido/P
+ pálpebra/G
+ páprica
++pápula/G
+ páreo/G
+ pároco/G
+ páscoa/G
+@@ -17912,6 +18345,7 @@
+ quádrica/G
+ quádruplo/P
+ quão
++quê
+ química
+ químico/P
+ qüinquagésimo/P
+@@ -17940,6 +18374,7 @@
+ radial/G
+ radialista/G
+ radianos
++radiante
+ radiativo/P
+ radiação/P
+ radical/G
+@@ -17988,6 +18423,7 @@
+ rancho/G
+ rancor/G
+ rancoroso/P
++randomizado/P
+ ranheta/G
+ ranhura/G
+ ranzinza/G
+@@ -18037,6 +18473,7 @@
+ ratoeira/G
+ ravina/G
+ ravioli
++razoavelmente
+ razoável/G
+ razão/P
+ raça/G
+@@ -18158,6 +18595,7 @@
+ recobrimento
+ recolhido/P
+ recolhimento/G
++recombinante/G
+ recomendado/P
+ recomendação/P
+ recomendável/G
+@@ -18374,6 +18812,7 @@
+ rejeição/P
+ rejuvenescimento
+ relacionado/P
++relacional/G
+ relacionamento/G
+ relance
+ relançamento/G
+@@ -18482,6 +18921,7 @@
+ reparacão/P
+ reparado/P
+ reparadoro/P
++reparativo/P
+ reparatório/P
+ reparação/P
+ reparo/G
+@@ -18702,6 +19142,7 @@
+ retraído/P
+ retribuição/P
+ retribuído/P
++retroalimentação/P
+ retroativamente
+ retroatividade
+ retroativo/P
+@@ -18739,9 +19180,11 @@
+ reverente/G
+ reversa
+ reversas
++reversibilidade
+ reverso
+ reversos
+ reversão
++reversível/G
+ revertido/P
+ reverência/G
+ reveses
+@@ -18803,7 +19246,9 @@
+ rimado/P
+ rincão
+ rincão/P
++rinite/G
+ rinoceronte/G
++rinorréia
+ rins
+ rio/G
+ riograndenses
+@@ -18946,6 +19391,7 @@
+ rubi/G
+ rublo/G
+ rubro/P
++rubéola
+ rude/G
+ rudemente
+ rudeza
+@@ -19138,6 +19584,7 @@
+ sanfona/G
+ sanfoneiro/G
+ sangradouro/G
++sangramento/G
+ sangrento/P
+ sangria/G
+ sangue
+@@ -19190,6 +19637,7 @@
+ saraivada/G
+ sarampo
+ sarcasmo/G
++sarcoma/G
+ sarcástico/P
+ sarcófago/G
+ sarda/G
+@@ -19262,6 +19710,7 @@
+ secundarista/G
+ secundário/P
+ secura
++secção
+ seda/G
+ sedativo/G
+ sede/G
+@@ -19380,6 +19829,7 @@
+ senoidal/G
+ sensacional/G
+ sensacionalismo
++sensacionalista/G
+ sensatez
+ sensato/P
+ sensação/P
+@@ -19417,6 +19867,10 @@
+ separatismo
+ separatista/G
+ separação/P
++sepse
++septal/G
++septicemia
++septo/G
+ septuagenário/P
+ septuagésima
+ septuagésimo
+@@ -19448,6 +19902,7 @@
+ seringa/G
+ seringueiro/P
+ sermão/P
++seroso/P
+ serpeante/G
+ serpejante/G
+ serpente/G
+@@ -19600,11 +20055,13 @@
+ sinalização/P
+ sinceridade
+ sincero/P
++sincicial/G
+ sincretismo
+ sincronia
+ sincronismo
+ sincronizado/P
+ sincronização/P
++sincício/G
+ sindical/G
+ sindicalismo
+ sindicalista/G
+@@ -19628,6 +20085,7 @@
+ sinopse/G
+ sintaxe/G
+ sintoma/G
++sintomatologia/G
+ sintomático/P
+ sintonia/G
+ sintonização
+@@ -19635,6 +20093,8 @@
+ sintético/P
+ sinuca/G
+ sinuoso/P
++sinusite/G
++sinusóide/G
+ sinédrio/G
+ sinônimo/P
+ sionismo
+@@ -19643,6 +20103,7 @@
+ sirene/G
+ siri/G
+ siririca/G
++sisal/G
+ sismografia
+ sismógrafo/G
+ siso
+@@ -19651,6 +20112,7 @@
+ sistematizado/P
+ sistematização/P
+ sistemático/P
++sistêmico/P
+ sistólico/P
+ sisudez
+ sisudo/P
+@@ -19706,6 +20168,7 @@
+ sobriedade/G
+ sobrinho/P
+ socado/P
++sociabilidade
+ social/G
+ socialismo
+ socialista/G
+@@ -19825,6 +20288,7 @@
+ sopinha/G
+ soprador/P
+ soprano/G
++sopro/G
+ sopé/G
+ soquete/G
+ soro/G
+@@ -19987,6 +20451,7 @@
+ sucção
+ sudeste
+ sudoeste
++sudorese
+ sudário/G
+ sudão
+ sueco/P
+@@ -20097,9 +20562,12 @@
+ suprido/P
+ suprimento/G
+ suprimido/P
++supurativo/P
++supuração/P
+ supérfluo/P
+ suquinho/G
+ surdamente
++surdez
+ surdina
+ surdo/P
+ surgido/P
+@@ -20112,6 +20580,7 @@
+ surrealismo
+ surrealista/G
+ surtido/P
++susceptível/G
+ suscetível/G
+ suscitado/P
+ suserano/G
+@@ -20162,7 +20631,9 @@
+ século
+ século/G
+ sépia
++séptico/P
+ séquito/G
++sérico/P
+ série/G
+ sério/P
+ sétima
+@@ -20170,6 +20641,7 @@
+ sêmen
+ sêxtuplo
+ sêxtuplo/P
++sífilis
+ sílaba/G
+ sílex
+ sílica
+@@ -20179,6 +20651,7 @@
+ síncope/G
+ síncrono/P
+ síndico/P
++síndrome/G
+ sínodo/G
+ síntese/G
+ síria
+@@ -20206,6 +20679,7 @@
+ tabacaria/G
+ tabaco/G
+ tabagismo
++tabagismo
+ tabagista/G
+ tabefe/G
+ tabelamento/G
+@@ -20365,10 +20839,12 @@
+ tecnólogo/G
+ tectônico/P
+ tedioso/P
++tegumento/G
+ teia/G
+ teimosia/G
+ teimoso/P
+ tela/G
++telarca
+ tele/G
+ telecomando
+ telecomunicação/P
+@@ -20443,6 +20919,7 @@
+ tendência/G
+ tenebroso/P
+ tenente/G
++tenesmo
+ tenista/G
+ tenor/G
+ tenro/P
+@@ -20471,7 +20948,10 @@
+ terapeuta/G
+ terapia/G
+ terapêutico/P
++teratogenicidade
++teratogênico/P
+ teratológico/P
++teratógeno/P
+ terceiro/P
+ terciário/P
+ tergiversação/P
+@@ -20555,6 +21035,7 @@
+ tido/P
+ tietê
+ tifo
++tifóide
+ tigela/G
+ tigelinha/G
+ tigre/G
+@@ -20590,12 +21071,13 @@
+ tirania/G
+ tirano/P
+ tirante/G
++tireóide/G
+ tiritante/G
+ tiro/G
+ tiro/P
+ tiroteio/G
+ tirânico/P
+-tiróide/G
++tissular/G
+ titica/G
+ titio/P
+ tito
+@@ -20845,8 +21327,10 @@
+ trapezista/G
+ trapo/G
+ trapézio/G
++traqueal/G
+ traquejado/P
+ traquejo
++traqueobrônquico/P
+ traquina/G
+ traquéia/G
+ trasbordamento/G
+@@ -20914,6 +21398,7 @@
+ triangulado/P
+ triangular/G
+ triangulação/P
++triatomíneo/G
+ tribal/G
+ tribo/G
+ tribulação/P
+@@ -20948,6 +21433,7 @@
+ trilionésimo/P
+ trilogia/G
+ trimestral/G
++trimestre/G
+ trincheira/G
+ trindade/G
+ trino/P
+@@ -20986,11 +21472,21 @@
+ trocadilho/G
+ trocado/P
+ troco/G
++trofoblástico/P
+ troglodita/G
+ trombada/G
+ trombeta/G
+ trombeteiro/G
++trombina
++trombo/G
++trombocitopenia
++tromboembolismo
++tromboembólico/P
++trombolítico/P
+ trombone/G
++tromboplastina
++trombose
++trombótico/P
+ trompa/G
+ trompete/G
+ tronco/G
+@@ -21052,7 +21548,9 @@
+ tulipa/G
+ tumba/G
+ tumefacto/P
++tumefação/G
+ tumor/G
++tumoral/G
+ tumulto/G
+ tumultuoso/P
+ tundra/G
+@@ -21136,6 +21634,7 @@
+ ui
+ uivado/P
+ uivo/G
++ulcerativo/P
+ ulceração/P
+ ulterior/G
+ ulteriormente
+@@ -21179,6 +21678,7 @@
+ uniformização/P
+ unigênito/G
+ unilateral/G
++unipalpebral/G
+ uniprocessado/P
+ unitarismo
+ unitarista/G
+@@ -21214,6 +21714,7 @@
+ urinação
+ urinário/P
+ urna/G
++urocultura/G
+ urologia
+ urologista/G
+ urológico/P
+@@ -21231,6 +21732,7 @@
+ uruguaio/P
+ urânio
+ uréia
++urêmico/P
+ usado/P
+ usança
+ usina/G
+@@ -21324,6 +21826,7 @@
+ valorosamente
+ valoroso/P
+ valsa/G
++valvar/G
+ valvulado/P
+ valência/G
+ vamos
+@@ -21361,8 +21864,10 @@
+ variavelmente
+ variação/P
+ varicela
++varicoso/P
+ variedade/G
+ varinha/G
++variz/G
+ variável/G
+ varonil/G
+ varonilmente
+@@ -21379,6 +21884,7 @@
+ vasilha/G
+ vasilhame/G
+ vaso/G
++vasoconstricção/P
+ vassalo/G
+ vassoura/G
+ vassourada/G
+@@ -21445,6 +21951,7 @@
+ veneziano/P
+ venezuelano/P
+ venezuelo/P
++venografia
+ venoso/P
+ ventania/G
+ ventilador/G
+@@ -21527,6 +22034,7 @@
+ versão/P
+ versículo/G
+ vertebrado/P
++vertebral/G
+ vertedouro/G
+ vertente/G
+ vertical/G
+@@ -21540,6 +22048,7 @@
+ verídico/P
+ verônicas
+ vesgo/P
++vesical/G
+ vesicular/G
+ vespa/G
+ vespeiro/G
+@@ -21566,6 +22075,7 @@
+ vez/G
+ veículo/G
+ viabilidade/G
++viabilização
+ viaduto/G
+ viagem
+ viagens
+@@ -21645,6 +22155,7 @@
+ vinhedo
+ vinheta/G
+ vinho/G
++vinhoso/P
+ vinhoto/G
+ vinicultura
+ vinte
+@@ -21669,6 +22180,7 @@
+ violão/P
+ violência/G
+ virado/P
++viral/G
+ viração
+ viração/P
+ virgem
+@@ -21680,6 +22192,7 @@
+ viril/G
+ virilha/G
+ virilidade
++virose/G
+ virtual/G
+ virtualmente
+ virtude/G
+@@ -21691,6 +22204,8 @@
+ virulência
+ vis
+ visada/G
++visceral/G
++viscosidade/G
+ viscoso/P
+ viseira/G
+ visibilidade/G
+@@ -21752,6 +22267,7 @@
+ viúvo/P
+ voador/P
+ vocabulário/G
++vocal/G
+ vocalização
+ vocativo/G
+ vocação/P
+@@ -21764,6 +22280,7 @@
+ vogal/G
+ volante/G
+ volatilização
++volemia
+ volitivo/P
+ volição
+ voltado/P
+@@ -21783,6 +22300,7 @@
+ voluntário/P
+ voluptuoso/P
+ volvido/P
++volêmico/P
+ volúpia
+ vomitado/P
+ vontade
+@@ -21854,6 +22372,7 @@
+ walter
+ xadrez
+ xale/G
++xantopsia
+ xaropada/G
+ xarope/G
+ xará/G
+@@ -21939,8 +22458,8 @@
+ ábaco/G
+ ábside/G
+ ácaro/G
+-ácida/G
+-ácido/G
++ácido/P
++ácino/G
+ ágape/G
+ ágata/G
+ ágeis
+@@ -22042,6 +22561,7 @@
+ órfãs
+ órgão
+ órgãos
++órtese/G
+ ósculo/G
+ ósseo/P
+ ótica/G
+diff -ru br.ispell-2.4.orig/br.aff br.ispell-2.4/br.aff
+--- br.aff.orig	2003-01-14 19:46:01.000000000 -0200
++++ br.aff	2002-04-10 15:41:36.000000000 -0300
+@@ -215,8 +215,15 @@
+ # posto
+ #
+     [AI]R       >       -R,DO           # cantado, partido
++    [AI]R       >       -R,DOS          # cantados, partidos
++    [AI]R       >       -R,DA           # cantada, partida
++    [AI]R       >       -R,DAS          # cantadas, partidas
+     E R         >       -ER,IDO         # vendido
++    E R         >       -ER,IDOS        # vendidos
++    E R         >       -ER,IDA         # vendida
++    E R         >       -ER,IDAS        # vendidas
+     O R         >       -R,STO          # posto
++    O R         >       -R,STOS         # postos
+ #
+ # 11. Gerúndio. Paradigma:
+ #
