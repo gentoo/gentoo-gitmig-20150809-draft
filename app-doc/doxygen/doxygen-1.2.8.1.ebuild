@@ -1,5 +1,5 @@
 # Author Sean Mitchell <sean@arawak.on.ca>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.8.1.ebuild,v 1.3 2001/08/31 03:23:38 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.8.1.ebuild,v 1.4 2002/02/03 21:38:59 danarmak Exp $
 
 
 S=${WORKDIR}/${P}
@@ -8,7 +8,7 @@ DESCRIPTION="Doxygen is a documentation system for C++, Java, IDL (Corba, Micros
 SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.2.8.1.src.tar.gz"
 HOMEPAGE="http://www.stack.nl/~dimitri/doxygen"
 
-DEPEND="qt? ( >=x11-libs/qt-x11-2.2.1 )"
+DEPEND="qt? ( =x11-libs/qt-x11-2.2* )"
 
 src_compile()
 {

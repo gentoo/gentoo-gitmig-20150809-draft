@@ -1,14 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-2.3.1.ebuild,v 1.1 2001/12/30 17:29:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-2.3.1.ebuild,v 1.2 2002/02/03 21:39:50 danarmak Exp $
 
 S=${WORKDIR}/qt-${PV}
 DESCRIPTION="QT ${PV} docs, manpages, examples and tutorials"
 SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-${PV}.tar.gz"
 HOMEPAGE="http://www.trolltech.com/"
 
-RDEPEND=">=x11-libs/qt-$PV"
+RDEPEND="=x11-libs/qt-2*"
 
 DEPEND="$RDEPEND
 	sys-devel/gcc"
