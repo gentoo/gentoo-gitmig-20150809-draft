@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-gcc/avr-gcc-3.4.2.ebuild,v 1.1 2004/09/23 15:57:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-gcc/avr-gcc-3.4.2.ebuild,v 1.2 2004/09/28 01:11:06 mr_bones_ Exp $
 
 IUSE="nls"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="-*"
 #KEYWORDS="~x86"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-embedded/avr-binutils-2.15"
 
 src_compile() {
