@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ia64-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.18 2004/07/09 15:35:50 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.19 2004/07/10 06:05:09 mr_bones_ Exp $
+
+  09 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  ia64-sources-2.4.24-r6.ebuild:
+  stabilize since this package provides virtual/linux-sources for ia64
 
 *ia64-sources-2.4.24-r6 (09 Jul 2004)
 
