@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.4.ebuild,v 1.8 2003/10/07 14:55:47 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.4.ebuild,v 1.9 2003/11/01 14:57:28 caleb Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -28,7 +28,6 @@ RDEPEND="$RDEPEND sys-apps/eject"
 myconf="$myconf --with-dpms --with-cdparanoia"
 
 use ldap	&& myconf="$myconf --with-ldap" 	|| myconf="$myconf --without-ldap"
-use pam		&& myconf="$myconf --with-pam"		|| myconf="$myconf --with-shadow"
 use motif	&& myconf="$myconf --with-motif"	|| myconf="$myconf --without-motif"
 use encode	&& myconf="$myconf --with-lame"		|| myconf="$myconf --without-lame"
 use cups	&& myconf="$myconf --with-cups"		|| myconf="$myconf --disable-cups"
