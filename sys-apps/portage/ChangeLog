@@ -1,17 +1,7 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.27 2003/11/06 15:42:29 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.28 2004/02/10 01:47:51 carpaski Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
-
-*portage-2.0.49-r15 (06 Nov 2003)
-
-  06 Nov 2003; Brad House <brad_mssw@gentoo.org> portage-2.0.49-r15.ebuild:
-  mark stable on amd64
-
-*portage-2.0.49-r16 (04 Nov 2003)
-
-  04 Nov 2003; Brad House <brad_mssw@gentoo.org> portage-2.0.49-r16.ebuild:
-  mark as stable for amd64
 

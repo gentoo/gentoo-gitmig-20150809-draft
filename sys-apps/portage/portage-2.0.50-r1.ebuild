@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r20.ebuild,v 1.3 2004/01/06 11:07:44 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r1.ebuild,v 1.1 2004/02/10 01:47:51 carpaski Exp $
 
 IUSE="build"
 
@@ -34,7 +34,8 @@ python_version() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's:^VERSION=.*:VERSION="2.0.49-r20":' pym/portage.py
+	bzip2 -dc ${FILESDIR}/regenworld.bz2 2>/dev/null > bin/regenworld
+	chmod a+rx bin/regenworld
 }
 
 src_compile() {
@@ -112,6 +113,7 @@ src_install() {
 
 	#install sandbox
 	cd ${S}/src/sandbox-1.1
+	make clean
 	make DESTDIR=${D} install || die "Failed to compile sandbox"
 
 	#symlinks
@@ -200,12 +202,11 @@ pkg_postinst() {
 		fi
 	fi
 	echo
-	if [ -e /etc/._cfg*make.globals ]; then
-		eerror "NOTICE: PLEASE *REPLACE* your make.globals. All user changes to variables"
-		eerror "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
-		echo
-	fi
-	einfo "Feature additions are noted in help and make.conf.example descriptions."
+
+	einfo "Feature additions are noted in help and make.conf descriptions."
+	echo
+	einfo "GENTOOLKIT will need to be updated to at least 0.2.0 for some tools"
+	einfo "to work properly."
 	echo
 	einfo "Update configs using 'etc-update' please. Maintaining current configs"
 	einfo "for portage and other system packages is fairly important for the"
@@ -232,40 +233,10 @@ pkg_postinst() {
 			echo "!!! This is a problem."
 			mv /var/cache/edb/counter.old /var/cache/edb/counter
 		fi
-
-		# Changes in the size of auxdbkeys can cause aux_get() problems.
-		echo -n ">>> Clearing invalid entries in dependency cache..."
-		cd ${ROOT}var/cache/edb/dep
-		#Nick, I changed the following to deal with situations where stderr spits out stuff like: "!!! CANNOT IMPORT FTPLIB:"
-		#which causes an infinite loop. (drobbins)
-		python -c 'import sys; sys.path = ["/usr/lib/portage/pym"]+sys.path; import portage; myf=open("/tmp/auxdbkl","w"); myf.write(str(len(portage.auxdbkeys))); myf.close()'
-		AUXDBKEYLEN=`cat /tmp/auxdbkl`
-		rm -f /tmp/auxdbkl
-		find ${ROOT}var/cache/edb/dep -type f -exec wc -l {} \; | egrep -v "^ *${AUXDBKEYLEN}" | sed 's:^ \+[0-9]\+ \+\([^ ]\+\)$:\1:' 2>/dev/null | xargs -n 50 -r rm -f
-		echo " ...done!"
 	fi # PORTAGE_TESTING
 
-	#fix cache (could contain staleness)
 	if [ ! -d ${ROOT}var/cache/edb/dep ]
 	then
-		#upgrade /var/db/pkg library; conditional required for build image creation
-		if [ -d ${ROOT}var/db/pkg ]
-		then
-			echo ">>> Database upgrade..."
-			cd ${ROOT}var/db/pkg
-			for x in *
-			do
-				[ ! -d "$x" ] && continue
-				#go into each category directory so we don't overload the python command-line
-				cd $x
-				#fix silly output from this command (hack)
-				python ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL` > /dev/null
-			cd ..
-			done
-			echo ">>> Database upgrade complete."
-			#remove old virtual directory to prevent virtual deps from getting messed-up
-			[ -d ${ROOT}var/db/pkg/virtual ] && rm -rf ${ROOT}var/db/pkg/virtual
-		fi
 		install -d -m0755 ${ROOT}var/cache/edb
 		install -d -m2775 -o root -g portage ${ROOT}var/cache/edb/dep
 	fi
@@ -286,21 +257,79 @@ pkg_postinst() {
 	chown -R root:portage ${ROOT}var/cache/edb/dep
 
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage.py')"
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage.py')"
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/output.py')"
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/output.py')"
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/cvstree.py')"
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/cvstree.py')"
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/getbinpkg.py')"
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/getbinpkg.py')"
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dispatch_conf.py')"
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dispatch_conf.py')"
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/emergehelp.py')"
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/emergehelp.py')"
 
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/cvstree.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/cvstree.py')"
+
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dcdialog.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dcdialog.py')"
+
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dispatch_conf.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dispatch_conf.py')"
+
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/getbinpkg.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/getbinpkg.py')"
+
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/output.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/output.py')"
+
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage.py')"
+	
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_db_anydbm.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_db_anydbm.py')"
+	
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_db_cpickle.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_db_cpickle.py')"
+	
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_db_flat.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_db_flat.py')"
+	
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_db_template.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_db_template.py')"
+	
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/xpak.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/xpak.py')"
+
+	
 	if has ccache $FEATURES && has userpriv $FEATURES; then
 		chown -R portage:portage /var/tmp/ccache &> /dev/null
 		chmod -R g+rws /var/tmp/ccache &>/dev/null
 	fi
+	
+
+#
+# Take a shot at fixing the world file...
+# This finds all specific-version ebuilds without modifiers.
+#
+	addwrite ${ROOT}var/cache/edb/
+	python -c "
+import portage
+world = portage.grabfile('${ROOT}var/cache/edb/world')
+newlist = []
+
+for x in world:
+	try:
+		if portage.catpkgsplit(x) and (x == portage.dep_getcpv(x)):
+			newlist.append('='+x)
+			continue
+	except:
+		pass
+	newlist.append(x)
+
+if newlist and (len(newlist) == len(world)):
+	myworld=open('${ROOT}var/cache/edb/world','w')
+	for x in newlist:
+		myworld.write(x+'\\n')
+
+	myworld.close()
+
+"
+
+	for X in ${ROOT}etc/._cfg????_make.globals; do
+		# Overwrite the globals file automatically.
+		[ -e "${X}" ] && mv -f "${X}" "${ROOT}etc/make.globals"
+	done
 }
