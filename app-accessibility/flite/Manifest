@@ -1,4 +1,6 @@
-MD5 ed68294dd1938ca2c8076fba41f7d857 ChangeLog 887
 MD5 f15ef515739fbdf9c8be076ad5be03df flite-1.0.ebuild 553
+MD5 6d0562a216f4524d881d482aff488153 flite-1.0-r1.ebuild 981
+MD5 c7d31eb3f322a255a6dcaf53fd66eb2f ChangeLog 1027
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
 MD5 174d10871c0102f325aa06478c76e1da files/digest-flite-1.0 68
+MD5 174d10871c0102f325aa06478c76e1da files/digest-flite-1.0-r1 68
