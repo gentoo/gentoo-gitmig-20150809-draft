@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.31 2004/09/07 00:04:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.32 2004/09/16 15:49:40 eradicator Exp $
+
+  16 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> files/nas.init.d:
+  Changed use to after in init's depend()
 
   06 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> -nas-1.6c-r1.ebuild,
   -nas-1.6c.ebuild:
