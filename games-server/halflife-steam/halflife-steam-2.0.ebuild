@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/halflife-steam-2.0.ebuild,v 1.4 2004/06/24 23:20:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/halflife-steam-2.0.ebuild,v 1.5 2004/09/12 10:35:31 mholzer Exp $
 
 inherit games eutils
 
@@ -21,7 +21,7 @@ pkg_nofetch() {
 	einfo "server: ftp.valvesoftware.com"
 	einfo "user: hlserver"
 	einfo "password: hlserver"
-	einfo "directory: Linux/steam"
+	einfo "directory: linux"
 }
 
 src_unpack() {
@@ -49,11 +49,11 @@ pkg_postinst() {
 	einfo '1. Run `steam` to update itself.'
 	einfo '2. Run `steam` again to get help menu.'
 	einfo '3. Create an account:'
-	einfo '     steam -create linux1@here.com comPlexPass "Your hint" "answer"'
+	einfo '     steam -command create -username foobar -email linux1@here.com -password comPlexPass -question "Your hint" -answer "answer"'
 	einfo '4. Update the halflife modules you want:'
-	einfo "     steam -update cstrike ${GAMES_PREFIX_OPT}/halflife linux1@here.com comPlexPass"
-	einfo "     steam -update tfc ${GAMES_PREFIX_OPT}/halflife linux1@here.com comPlexPass"
-	einfo "     steam -update valve ${GAMES_PREFIX_OPT}/halflife linux1@here.com comPlexPass"
+	einfo "     steam -command update -game cstrike -dir ${GAMES_PREFIX_OPT}/halflife -username -email linux1@here.com -password comPlexPass"
+	einfo "     steam -command update -game tfc -dir ${GAMES_PREFIX_OPT}/halflife -username -email linux1@here.com -password comPlexPass"
+	einfo "     steam -command update -game valve -dir ${GAMES_PREFIX_OPT}/halflife -username -email linux1@here.com -password comPlexPass"
 	einfo '     *Note: tfc contains tfc, dmc, and ricochet mods'
 	einfo '5. After your first update, you only have to run:'
 	einfo '     steam -update cstrike'
