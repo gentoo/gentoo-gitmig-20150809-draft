@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.20.ebuild,v 1.3 2004/09/01 17:45:57 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.20.ebuild,v 1.4 2004/09/17 23:45:42 humpback Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 src_compile() {
-	local myconf=""
+	local myconf="--with-privsep"
 
 	use pam && myconf="${myconf} --with-pam"
 	use ldap && myconf="${myconf} --with-ldap"

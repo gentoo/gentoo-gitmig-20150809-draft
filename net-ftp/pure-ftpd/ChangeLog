@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.39 2004/09/01 17:45:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.40 2004/09/17 23:45:42 humpback Exp $
+
+  18 Sep 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  pure-ftpd-1.0.20.ebuild:
+  Added privilege separation option to configure.
 
   01 Sep 2004; Gustavo Felisberto <humpback@gentoo.org>;
   pure-ftpd-1.0.20.ebuild:

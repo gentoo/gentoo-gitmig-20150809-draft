@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bcb26dbd195100ccad94a5b1eddf55c7 ChangeLog 5905
+MD5 dc87adca3bc843bd4ea6d67fa5e298fd ChangeLog 6040
 MD5 67d38509ecd6a60f600f15bd875bf8cc metadata.xml 446
 MD5 5f2eb27cbe3d7ccf25038cac9478899d pure-ftpd-1.0.16b.ebuild 2242
 MD5 0e9a7416fd0d7f5c82850c7814a2b36e pure-ftpd-1.0.16c.ebuild 2247
 MD5 f0f63cfcf24a058f13329e08b299bdf7 pure-ftpd-1.0.17a.ebuild 2254
 MD5 8833765ab4ada569c253196e5dea5c03 pure-ftpd-1.0.18.ebuild 2308
 MD5 eb817063f1ab88f67eacb2eb42366e25 pure-ftpd-1.0.18-r1.ebuild 2347
-MD5 0155cf484ef3c669e893f1fbdfcd3748 pure-ftpd-1.0.20.ebuild 2583
+MD5 64b35adffe441de849b0997a762a84f7 pure-ftpd-1.0.20.ebuild 2597
 MD5 0e2de54a63d8f1c4a44d15f95e38b044 files/digest-pure-ftpd-1.0.16b 70
 MD5 f1a1d4817df4539dc199812979aac307 files/digest-pure-ftpd-1.0.16c 70
 MD5 48f295e6b7a19f3b4da8388a21e2e435 files/digest-pure-ftpd-1.0.17a 70
@@ -24,7 +24,7 @@ MD5 0c2b784d8fe62db6dae7e77e6ac5a602 files/digest-pure-ftpd-1.0.20 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBNhjXKSoOBZY9iUIRAt9FAJwKkOFsVQM7cOb+Ku5aFURm8QKkvQCgi/bj
-AmpA+MXZXgTEPNmB+Qmi97M=
-=mJpu
+iD8DBQFBS3d3KSoOBZY9iUIRAkqvAJ9oz+2rCc37m3BpWMRNR17QlIcBHwCfddv9
+lyzKQjEIkbes+WQAjF2v8Bc=
+=61eZ
 -----END PGP SIGNATURE-----
