@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/snmplib
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.1 2004/11/08 17:33:21 citizen428 Exp $
+
+*snmplib-0.3.0 (08 Nov 2004)
+
+  08 Nov 2004; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +snmplib-0.3.0.ebuild:
+  Initial import. Ebuild submitted by pyon <gentoo@pyon.net>, closing bug #67047
+

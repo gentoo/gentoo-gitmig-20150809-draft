@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2a00b0054fa3943d20ff66d92c3b985 snmplib-0.3.0.ebuild 730
+MD5 d5b41622eda230092b522cd6981ee5b5 ChangeLog 413
+MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
+MD5 7307d50707895f91ba2f6360bfebf550 files/digest-snmplib-0.3.0 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBj63s/UDVUK2NELYRAvbyAJwKCd6x/VLA7cu4J0Egtes6NF68+gCfUBIz
+15C6RVmzk/Qi/d/YSpUgUqM=
+=IxR0
+-----END PGP SIGNATURE-----
