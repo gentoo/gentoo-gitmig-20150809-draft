@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 6898fef48712ea956efe5632b4211c0f ChangeLog 599
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 69888cc8a4137798f52f3835d986fff1 ChangeLog 477
-MD5 a05d41182ceb5829c632c77afe1f5a7c sylpheed-claws-maildir-0.6.ebuild 728
+MD5 64b14dcd295f1acdb54a30e5ceb52022 sylpheed-claws-maildir-0.6.ebuild 734
 MD5 5b78cadb23f22fec45820a96e3e5ed27 files/digest-sylpheed-claws-maildir-0.6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcvt66J2i8a8J4okRAuD7AKClnmSbuQIcZbrrUwpGA3L4kN8vJQCcD41i
-9ewkWi4+UcYQzxSrCZPNJcU=
-=hJ9f
------END PGP SIGNATURE-----
