@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ganttproject-1.9.11.ebuild,v 1.2 2004/08/24 03:10:36 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ganttproject-1.9.11.ebuild,v 1.3 2004/08/27 01:49:35 zx Exp $
 
 inherit eutils java-pkg
 
@@ -16,12 +16,6 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.5.4"
-
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/build.xml.patch
-	epatch ${FILESDIR}/ganttcalendar.patch
-}
 
 src_compile() {
 	ant || die "Failed building classes"
@@ -46,6 +40,6 @@ src_install () {
 		mkdir -p ${D}/usr/share/gnome/apps/Office/
 		mkdir -p ${D}/usr/share/pixmaps
 		cp ${FILESDIR}/ganttproject.desktop ${D}/usr/share/gnome/apps/Office/
-		cp data/resources/icons/ganttproject.png ${D}/usr/share/pixmaps
+		cp data/resources/icons/ganttproject.gif ${D}/usr/share/pixmaps
 	fi
 }
