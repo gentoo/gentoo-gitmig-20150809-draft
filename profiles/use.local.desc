@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.804 2004/12/19 03:00:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.805 2004/12/19 03:55:29 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -217,7 +217,8 @@ dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/boehm-gc:c++ - Adds support for C++
 dev-libs/cyrus-sasl:authdaemond - Enable Courier-IMAP authdaemond's unix socket support.
 dev-libs/cyrus-sasl:pam-mysql - Switch to deprecated pam_mysql authentication method
-dev-libs/gdal:geotiff - adds libgeotiff support
+dev-libs/gdal:fits - enables support for NASA's cfitsio library
+dev-libs/gdal:ogdi - enables support for the open geographic datastore interface
 dev-libs/gmetadom:ocaml - adds support/bindings for the Ocaml
 dev-libs/libcdio:cddb - use libcddb for CD database lookups
 dev-libs/libmix:no-net2 - disable libpcap and libnet support
