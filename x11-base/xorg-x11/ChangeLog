@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.353 2005/03/11 03:21:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.354 2005/03/12 02:47:50 spyderous Exp $
+
+  11 Mar 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r1.ebuild:
+  No need to add acecad to ExtraXInputDrivers, it's already in XInputDrivers.
 
   10 Mar 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r5.ebuild:
