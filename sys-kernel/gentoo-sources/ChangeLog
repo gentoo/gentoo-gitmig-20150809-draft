@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.70 2004/06/10 21:40:40 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.71 2004/06/14 20:37:48 plasmaroo Exp $
+
+*gentoo-sources-2.4.20-r18 (14 Jun 2004)
+
+  14 Jun 2004; <plasmaroo@gentoo.org> +gentoo-sources-2.4.19-r15.ebuild,
+  +gentoo-sources-2.4.20-r18.ebuild, +gentoo-sources-2.4.22-r11.ebuild,
+  +gentoo-sources-2.4.25-r4.ebuild, +gentoo-sources-2.4.26-r2.ebuild,
+  +files/gentoo-sources-2.4.FPULockup-53804.patch:
+  Added patches for the FPU-lockup issues; please see bug #58304 for details.
+  Old versions removed.
 
 *gentoo-sources-2.4.26-r1 (10 Jun 2004)
 
