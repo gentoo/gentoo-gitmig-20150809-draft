@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.51.ebuild,v 1.1 2002/06/12 01:23:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.51.ebuild,v 1.2 2002/06/12 01:24:07 seemant Exp $
 
 MY_PN=${PN/-/}
 S=${WORKDIR}/${P}
@@ -11,7 +11,8 @@ HOMEPAGE="http://www.win.tue.nl/~aeb/linux/man/"
 #	 ftp://ftp.suse.com/pub/people/ak/netman/netman-20000610.tgz"
 
 RDEPEND="sys-apps/man"
-
+LICENSE="GPL-2"
+SLOT=""
 
 src_unpack() {
 
