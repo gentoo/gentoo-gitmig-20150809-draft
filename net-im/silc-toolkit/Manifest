@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 94e862c8223d01b137e45337c64ab580 ChangeLog 4782
+MD5 5757973b86e3a81a2849ee71f1239650 ChangeLog 4874
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 c699dd70fe7f095babcf0c1651953069 silc-toolkit-0.9.12-r3.ebuild 2157
+MD5 37b4c106e092106700093e7587d4ab56 silc-toolkit-0.9.12-r3.ebuild 2151
 MD5 9a5e70dcc2b8cf19a19eb000d52e022d silc-toolkit-0.9.12-r2.ebuild 1598
 MD5 f5feddf04be28d35adc7b14360eac931 files/digest-silc-toolkit-0.9.12-r3 73
 MD5 6c8639c61522d4e5e7ee452088000fc3 files/silc-toolkit-0.9.12-64bit_goodness.patch 4563
 MD5 f5feddf04be28d35adc7b14360eac931 files/digest-silc-toolkit-0.9.12-r2 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXsjlArHZZzCEUG0RAmwmAJ4o/dWAY5Vk0GpT6FJEi1GG7/Ho4wCfQaN0
-ELy0zvN+6Qiuvn+Ien7daac=
-=hlvO
------END PGP SIGNATURE-----
