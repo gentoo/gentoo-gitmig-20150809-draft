@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.33 2003/06/06 20:42:29 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.34 2003/06/07 04:30:40 msterret Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-editors/vim:vim-with-x - Enables linking the console vim against X libs to enable some features in xterms
+app-games/scummvm:mad - disables media-sound/mad support if not set
 app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
