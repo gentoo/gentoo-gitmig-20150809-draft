@@ -97,5 +97,5 @@ net-misc/wget
 net-misc/netkit-telnetd
 net-misc/openssh
 net-ftp/ftp
-
+sys-kernel/linux
 
