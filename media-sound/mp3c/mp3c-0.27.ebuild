@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Felix Kurth <felix@fkurth.de>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.27.ebuild,v 1.1 2002/06/21 21:51:26 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.27.ebuild,v 1.2 2002/07/04 16:35:46 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="console based mp3 ripper, with cddb support"
 HOMEPAGE="http://mp3c.wspse.de/WSPse/Linux-MP3c.php3?lang=en"
-LICENSE="GPL­2"
+LICENSE="GPL-2"
 SRC_URI="ftp://excelsior.kullen.rwth-aachen.de/pub/linux/wspse/${P}.tar.gz"
 DEPEND=">=media-sound/bladeenc-0.94.2 \
 	>=media-sound/cdparanoia-3.9.8 \
