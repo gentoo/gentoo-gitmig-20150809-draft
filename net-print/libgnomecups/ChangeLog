@@ -1,6 +1,10 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.8 2003/10/17 13:25:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.9 2003/10/22 12:10:10 darkspecter Exp $
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org>
+  libgnomecups-0.1.6.ebuild:
+  set ppc in keywords
 
   17 Oct 2003; Aron Griffis <agriffis@gentoo.org> libgnomecups-0.1.6.ebuild:
   Stable on alpha
