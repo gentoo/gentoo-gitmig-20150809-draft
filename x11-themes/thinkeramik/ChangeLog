@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/thinkeramik
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.9 2004/02/29 23:58:12 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.10 2004/03/07 18:15:34 centic Exp $
+
+*thinkeramik-3.0.8 (07 Mar 2004)
+
+  07 Mar 2004; Dominik Stadler <centic@gentoo.org> metadata.xml, thinkeramik-3.0.8.ebuild:
+  Version bump to 3.0.8, thanks to Diego Pettenò <dgp85@users.sourceforge.net>
+  for updates to the ebuild, see Bug 41111. Also added a metadata.xml.
 
 *thinkeramik-3.0.6 (29 Feb 2004)
 
