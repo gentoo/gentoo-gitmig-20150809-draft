@@ -141,10 +141,6 @@ net-www/opera-static
 x11-terms/xterm
 sys-apps/utempter
 
-# <azarah@gentoo.org> (18 May 2003)
-# CVS snapshot, will need a bit of testing.
-=sys-libs/glibc-2.3.2-r2
-
 # <lu_zero@gentoo.org> (14 May 2003)
 # Not yet ready, sadly
 =media-video/cinelerra-1.1.6
