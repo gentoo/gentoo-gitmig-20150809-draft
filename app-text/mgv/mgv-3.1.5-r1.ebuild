@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5-r1.ebuild,v 1.2 2004/02/11 11:21:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5-r1.ebuild,v 1.3 2004/02/12 13:20:44 lanius Exp $
 
 inherit eutils
 
@@ -34,10 +34,9 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 	dohtml doc/*.sgml
 
-	# move config file to /etc
-	dodir /etc/
-	mv ${D}/usr/share/mgv/${PV}/MGv ${D}/etc/mgv.conf
-	dosym /etc/mgv.conf /usr/share/mgv/${PV}/MGv
+	# move config file to /etc/X11/app-defaults
+	dodir /etc/X11/app-defaults
+	mv ${D}/usr/share/mgv/${PV}/MGv ${D}/etc/X11/app-defaults
 }
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mgv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/ChangeLog,v 1.10 2004/02/11 11:21:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/ChangeLog,v 1.11 2004/02/12 13:20:44 lanius Exp $
+
+  12 Feb 2004; Heinrich Wendel <lanius@gentoo.org> mgv-3.1.5-r1.ebuild:
+  fix location of config file
 
 *mgv-3.1.5-r1 (11 Feb 2004)
 
