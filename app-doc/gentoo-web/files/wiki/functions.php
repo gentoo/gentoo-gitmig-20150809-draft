@@ -15,6 +15,7 @@
 		4 => 'Server',
 		5 => 'Tools',
 		6 => 'Infrastructure',
+		7 => 'Security',
 	);
 	$branches = array(
 		0 => 'none',
