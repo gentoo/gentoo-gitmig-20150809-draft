@@ -1,4 +1,14 @@
-MD5 a92e869d567fba5a876b10dbd7adb7df ChangeLog 422
-MD5 b03ee9e0ed7b8a663df1c5ecbf3ca25c breakpts-3.1.ebuild 555
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fabf485706ffc4571f0cbbb78218411c ChangeLog 527
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 ca7544749af1997bf96aa34fd15bce45 breakpts-3.1.ebuild 554
 MD5 b85f97ca7e788bade4791f9cdfc21c1f files/digest-breakpts-3.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBJixJLLFUmVNQ7rkRAjSUAKCyix7fKxgwvuM0Q8ahl3ATCox9CQCfUuQA
+PrbfiqiBIcol/Mleissfi/E=
+=+GZQ
+-----END PGP SIGNATURE-----
