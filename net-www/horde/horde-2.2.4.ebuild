@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.4.ebuild,v 1.4 2003/10/07 17:47:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.4.ebuild,v 1.5 2003/10/07 17:56:17 mholzer Exp $
 
 S=${WORKDIR}/${P}
 
@@ -59,5 +59,5 @@ pkg_postinst() {
 	einfo "    ==> 'file_uploads enabled = On'"
 	einfo "Please edit /etc/php4/php.ini."
 	einfo ""
-	einfo "Please read ${HTTPD_ROOT}/horde/docs/INSTALL !"
+	einfo "Please read /usr/share/doc/${PF}/INSTALL.gz !"
 }
