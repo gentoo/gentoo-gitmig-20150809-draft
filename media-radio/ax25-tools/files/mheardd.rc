@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/files/mheardd.rc,v 1.1 2003/07/31 20:04:41 rphillips Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting mheardd"
+	start-stop-daemon --start --quiet --background --exec /usr/sbin/mheardd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping mheardd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/mheardd
+	eend $?
+}
