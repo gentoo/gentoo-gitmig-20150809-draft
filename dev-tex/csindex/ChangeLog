@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/csindex
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.1 2004/02/26 20:09:11 usata Exp $
+
+*csindex-2.11c (27 Feb 2004)
+
+  27 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> csindex-2.11c.ebuild:
+  Initial import. Ebuild submitted by Jaromir Malenko <malenko@email.cz>,
+  see bug #31657
+
