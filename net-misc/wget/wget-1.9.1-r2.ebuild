@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r2.ebuild,v 1.20 2004/11/12 15:48:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r2.ebuild,v 1.21 2005/01/04 06:06:40 chriswhite Exp $
 
 inherit gnuconfig eutils
 
@@ -23,17 +23,10 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}+ipvmisc.patch
 	epatch ${FILESDIR}/${PN}-1.9-uclibc.patch
+	epatch ${FILESDIR}/${P}-locale.patch
 }
 
 src_compile() {
-	#fix bug 34515, REMOVE THIS AFTER 1.9.1
-	if use nls; then
-		cd po
-		cat de.po | iconv -f UTF-8 -t ISO-8859-1 > de.po.new
-		mv de.po.new de.po
-		cd ..
-	fi
-
 	# Make wget use up-to-date configure scripts
 	gnuconfig_update
 
