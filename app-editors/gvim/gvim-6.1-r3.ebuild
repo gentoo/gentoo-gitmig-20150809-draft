@@ -1,10 +1,10 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r3.ebuild,v 1.2 2002/10/28 07:20:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r3.ebuild,v 1.3 2002/11/08 03:46:50 rphillips Exp $
 
 inherit vim
 DESCRIPTION="graphical vim"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 DEPEND="dev-util/cscope
 	>=sys-libs/ncurses-5.2-r2
 	app-editors/vim-core
