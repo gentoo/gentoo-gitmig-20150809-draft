@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.63 2004/11/07 01:52:37 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.64 2004/11/07 02:00:47 cyfred Exp $
+
+  07 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
+  nvidia-glx-1.0.4363-r1.ebuild, nvidia-glx-1.0.4496-r2.ebuild,
+  nvidia-glx-1.0.4499-r1.ebuild, nvidia-glx-1.0.5328-r2.ebuild,
+  nvidia-glx-1.0.5332-r2.ebuild, nvidia-glx-1.0.5336-r2.ebuild,
+  nvidia-glx-1.0.6106-r3.ebuild:
+  Keywords masking as driver/glx being deprecated.
 
 *nvidia-glx-1.0.6629 (07 Nov 2004)
 

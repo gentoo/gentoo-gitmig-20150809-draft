@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4499.ebuild,v 1.10 2004/07/26 20:32:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4499.ebuild,v 1.11 2004/11/07 02:01:13 cyfred Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 # The slot needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
 SLOT="${KV}"
-KEYWORDS="-* amd64"
+KEYWORDS="-* -amd64"
 RESTRICT="nostrip"
 
 DEPEND="virtual/linux-sources"

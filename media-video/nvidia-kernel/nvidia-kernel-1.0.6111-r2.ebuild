@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6111-r2.ebuild,v 1.1 2004/10/04 11:03:24 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6111-r2.ebuild,v 1.2 2004/11/07 02:01:13 cyfred Exp $
 
 inherit eutils kmod
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}/usr/src/nv"
 # The slot needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
 SLOT="${KV}"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* -x86 -amd64"
 RESTRICT="nostrip"
 IUSE=""
 

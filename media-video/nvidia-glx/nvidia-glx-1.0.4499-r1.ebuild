@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4499-r1.ebuild,v 1.2 2004/09/19 01:14:42 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4499-r1.ebuild,v 1.3 2004/11/07 02:00:47 cyfred Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.nvidia.com/XFree86/linux-x86-64/${NV_V}/${NV_PACKAGE}.t
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* amd64"
+KEYWORDS="-* -amd64"
 IUSE=""
 RESTRICT="nostrip"
 

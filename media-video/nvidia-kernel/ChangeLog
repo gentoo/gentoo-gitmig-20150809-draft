@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.93 2004/11/07 01:52:46 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.94 2004/11/07 02:01:13 cyfred Exp $
+
+  07 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
+  nvidia-kernel-1.0.4363-r3.ebuild, nvidia-kernel-1.0.4496-r3.ebuild,
+  nvidia-kernel-1.0.4499.ebuild, nvidia-kernel-1.0.5328-r1.ebuild,
+  nvidia-kernel-1.0.5332-r1.ebuild, nvidia-kernel-1.0.5336-r4.ebuild,
+  nvidia-kernel-1.0.6106-r1.ebuild, -nvidia-kernel-1.0.6111-r1.ebuild,
+  -nvidia-kernel-1.0.6111.ebuild, nvidia-kernel-1.0.6111-r2:
+  Keywords masking as driver/glx being deprecated.
 
 *nvidia-kernel-1.0.6111-r3 (07 Nov 2004)
 
