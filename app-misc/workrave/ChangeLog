@@ -1,7 +1,11 @@
 # ChangeLog for app-misc/workrave
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.12 2004/01/06 20:11:13 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.13 2004/03/16 11:26:05 leonardop Exp $
 
+  16 Mar 2004; L. Boshell <leonardop@gentoo.org> workrave-1.4.0-r1.ebuild,
+  workrave-1.4.1.ebuild:
+  Inherit from eutils. Use 'sed -i'. Removed obsolete ebuilds.
+  
   06 Jan 2004; Jason Wever <weeve@gentoo.org> workrave-1.4.1.ebuild:
   Added ~sparc keyword.
 

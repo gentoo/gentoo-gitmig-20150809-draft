@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.5 2003/11/06 15:04:26 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.6 2004/03/16 11:26:05 leonardop Exp $
+
+inherit eutils
 
 IUSE="debug gnome nls xml2"
 # Internal USE flags
@@ -44,10 +46,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gcc2_fixes.patch
 
 	# need to remove the configure specified CFLAGS
-	sed -e "/CFLAGS/s/-O2//" -e "/CFLAGS/s/-g//" \
-		< configure > configure.sed
-	sed -e "/CXXFLAGS/s/-O2//" -e "/CFLAGS/s/-g//" \
-		< configure.sed > configure
+	sed -i \
+		-e "/CFLAGS/s/-O2//" -e "/CFLAGS/s/-g//" \
+		-e "/CXXFLAGS/s/-O2//" -e "/CFLAGS/s/-g//" \
+		configure
 }
 
 src_compile() {
