@@ -1,10 +1,11 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.29 2003/06/12 20:07:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.30 2003/06/12 20:18:58 mholzer Exp $
 
-*nmap-3.20-r1 (12 Jun 2003)
+*nmap-3.27-r1 (12 Jun 2003)
 
-  12 Jun 2003; Martin Holzer <mholzer@gentoo.org> nmap-3.20-r1.ebuild:
+  12 Jun 2003; Martin Holzer <mholzer@gentoo.org> nmap-3.27-r1.ebuild,
+  nmap-3.20-r1.ebuild:
   Added statistics patch. Closes #20250.
 
   04 Jun 2003; Christian Birchinger <joker@gentoo.org> nmap-3.27.ebuild:
