@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.40 2004/03/12 11:21:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.41 2004/03/16 21:37:09 solar Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -48,6 +48,10 @@ INHERITED="$INHERITED $ECLASS"
 #
 #### append-ldflags ####
 # Add extra flags to your current LDFLAGS
+#
+#### filter-ldflags <flags> ####
+# Remove particular flags from LDFLAGS
+# Matches only complete flags
 #
 #### etexec-flags ####
 # hooked function for hardened-gcc that appends 
@@ -293,6 +297,17 @@ replace-sparc64-flags() {
 
 append-ldflags() {
 	LDFLAGS="${LDFLAGS} $@"
+	return 0
+}
+
+filter-ldflags() {
+	# we do this fancy spacing stuff so as to not filter
+	# out part of a flag ... we want flag atoms ! :D
+	LDFLAGS=" ${LDFLAGS} "
+	for x in "$@" ; do
+		LDFLAGS="${LDFLAGS// ${x} / }"
+	done
+	LDFLAGS="${LDFLAGS:1:${#LDFLAGS}-2}"
 	return 0
 }
 
