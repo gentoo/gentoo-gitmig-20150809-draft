@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.13 2004/08/10 15:41:35 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.14 2004/08/10 16:17:33 slarti Exp $
+
+  10 Aug 2004; Tom Martin <slarti@gentoo.org> msmtp-1.2.1.ebuild:
+  Add virtual/libc DEPEND.
 
   10 Aug 2004; Tom Martin <slarti@gentoo.org> -msmtp-1.0.0.ebuild,
   -msmtp-1.1.2.ebuild:
