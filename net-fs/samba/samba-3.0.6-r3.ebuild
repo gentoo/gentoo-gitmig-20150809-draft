@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r3.ebuild,v 1.6 2004/10/29 09:45:09 mglauche Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r3.ebuild,v 1.7 2005/01/09 11:24:33 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,26 +21,26 @@ _CVS="-${PV/_/}"
 S=${WORKDIR}/${PN}${_CVS}
 
 SRC_URI="mirror://samba/${PN}${_CVS}.tar.gz
-	oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2
-	ldap? http://samba.idealx.org/dist/smbldap-tools-${SMBLDAP_TOOLS_VER}.tgz"
+	oav? ( mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2 )
+	ldap? ( http://samba.idealx.org/dist/smbldap-tools-${SMBLDAP_TOOLS_VER}.tgz )"
 
 _COMMON_DEPS="dev-libs/popt
-	readline? sys-libs/readline
+	readline? ( sys-libs/readline )
 	ldap? ( kerberos? ( virtual/krb5 ) )
 	mysql? ( dev-db/mysql sys-libs/zlib )
 	postgres? ( dev-db/postgresql sys-libs/zlib )
 	xml? ( dev-libs/libxml2 sys-libs/zlib )
 	xml2? ( dev-libs/libxml2 sys-libs/zlib )
-	acl? sys-apps/acl
-	cups? net-print/cups
+	acl? ( sys-apps/acl )
+	cups? ( net-print/cups )
 	ldap? ( net-nds/openldap dev-perl/Crypt-SmbHash )
-	pam? sys-libs/pam
-	python? dev-lang/python"
+	pam? ( sys-libs/pam )
+	python? ( dev-lang/python )"
 DEPEND="sys-devel/autoconf
 	>=sys-apps/sed-4
 	${_COMMON_DEPS}"
 #IDEALX scripts are now using Net::LDAP
-RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}"
+RDEPEND="ldap? ( dev-perl/perl-ldap ) ${_COMMON_DEPS}"
 
 # some archs are removed due to dependency tree integrity for ldap and
 #   dev-perl/Crypt-SmbHash flags
