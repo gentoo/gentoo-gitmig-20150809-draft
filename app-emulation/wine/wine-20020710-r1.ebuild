@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020710-r1.ebuild,v 1.5 2002/07/27 18:25:13 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020710-r1.ebuild,v 1.6 2002/07/28 04:29:17 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
@@ -100,7 +100,7 @@ pkg_postinst() {
 copy /etc/wine/config (global configuration) to ~/.wine/config
 and edit that for per-user configuration. Otherwise, wine will
 not run.
-Also, run \"regapi setValue < /etc/wine/winedefault.reg\" to setup
+Also, run \"wine regapi setValue < /etc/wine/winedefault.reg\" to setup
 per-user registry for using wine. More info in /usr/share/doc/wine-${PV}."
 
 }
