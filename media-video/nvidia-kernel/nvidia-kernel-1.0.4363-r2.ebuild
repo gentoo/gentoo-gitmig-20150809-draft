@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r2.ebuild,v 1.2 2003/06/22 15:02:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r2.ebuild,v 1.3 2003/06/23 04:17:22 azarah Exp $
 
 inherit eutils
 
@@ -91,8 +91,6 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/${NV_PACKAGE}-2.5-20030614.diff
 
 		# Kbuild have issues currently (sandbox related).
-		ln -snf Makefile.nvidia Makefile
-	else
 		ln -snf Makefile.nvidia Makefile
 	fi
 }

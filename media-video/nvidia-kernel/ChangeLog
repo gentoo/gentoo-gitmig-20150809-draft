@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.34 2003/06/22 15:02:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.35 2003/06/23 04:17:22 azarah Exp $
+
+  23 Jun 2003; Martin Schlemmer <azarah@gentoo.org>
+  nvidia-kernel-1.0.4363-r2.ebuild:
+  Do not write a symlink that is invalid over Makefile for 2.4 kernel.
+  Bug #23304.
 
   22 Jun 2003; Martin Schlemmer <azarah@gentoo.org> nvidia-kernel-1.0.4363-r2.ebuild,
   files/1.0.4363/NVIDIA_kernel-1.0-4363-2.5-20030614.diff:
