@@ -1,9 +1,19 @@
-MD5 dd981e72f0ad4344e970666b22b07bf1 ChangeLog 2809
-MD5 8bf7797cf5f498056a4d487ac67b0660 libusb-0.1.7-r1.ebuild 923
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 98dd7a6a9926caf28cfef85312347cbc libusb-0.1.7.ebuild 891
-MD5 d4e04cf320989a18cb80429cb63464d3 libusb-0.1.8.ebuild 1387
+MD5 3f0b0a380e3921f8d7716de92e2c9e7c libusb-0.1.8.ebuild 1358
+MD5 dd981e72f0ad4344e970666b22b07bf1 ChangeLog 2809
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 8bf7797cf5f498056a4d487ac67b0660 libusb-0.1.7-r1.ebuild 923
 MD5 9cb49945879f78000d198c898d197e54 files/digest-libusb-0.1.7 64
 MD5 9cb49945879f78000d198c898d197e54 files/digest-libusb-0.1.7-r1 64
 MD5 edf695ba0c7ee442c501401384faaa94 files/digest-libusb-0.1.8 64
 MD5 13b0f271f94755b89f904270daa0659d files/libusb-0.1.8-amd64-fPIC.patch 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBX8SJVWNWqTUmv+0RAqXhAKCIESduyDKikIIWMUlG2XfZm88siwCeOqff
+9xz0Gr1R7KGYFNJb9zE4KRI=
+=+52V
+-----END PGP SIGNATURE-----
