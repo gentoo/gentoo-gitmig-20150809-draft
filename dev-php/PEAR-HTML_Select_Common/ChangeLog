@@ -1,8 +1,8 @@
 # ChangeLog for dev-php/PEAR-HTML_Select_Common
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.1 2003/02/18 13:30:06 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.2 2003/07/12 10:57:51 aliz Exp $
 
-*PEAR-Date-1.1 (18 Feb 2003)
+*PEAR-HTML_Select_Common-1.1 (18 Feb 2003)
 
   18 Feb 2003; Troy Dack <tad@gentoo.org> 
   PEAR-HTML_Select_Common-1.1.ebuild ChangeLog : Initial import.
