@@ -1,6 +1,6 @@
 MD5 3ed7ebf62221997d28c3cb9940235bb1 zgv-5.8.ebuild 1221
 MD5 065dec6535104ab6218a95c2fedbeb20 zgv-5.7-r1.ebuild 1128
-MD5 29a83b333df6e1a99f21da378723fb98 ChangeLog 1546
+MD5 b00dbaba35d4f393907d22059146ddb7 ChangeLog 1547
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 1c0e7ed3b8b41a4715baee9702d8f75b files/digest-zgv-5.7-r1 59
 MD5 d41b7ec521804bd1ff821a49464f8688 files/zgv-5.7-gcc3.patch 7078
