@@ -1,10 +1,10 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.2 2003/04/24 12:29:21 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.3 2003/05/06 12:35:01 pauldv Exp $
 
 *hk_classes-0.6_pre3 (24 Apr 2003)
 
-  24 Apr 2003; Paul de Vrieze pauldv@gentoo.org Manifest,
+  24 Apr 2003; Paul de Vrieze <pauldv@gentoo.org> Manifest,
   hk_classes-0.6_pre3.ebuild:
   New version of hk_classes for a new knoda that works around some bugs in kde.
   It also corrects a python inclusion problem in the original pre3 (this is
@@ -12,6 +12,6 @@
 
 *hk_classes-0.5.6 (23 Apr 2003)
 
-  23 Apr 2003; Paul de Vrieze pauldv@gentoo.org hk_classes-0.5.6.ebuild:
+  23 Apr 2003; Paul de Vrieze <pauldv@gentoo.org> hk_classes-0.5.6.ebuild:
   Initial import, courtessy of Peter Ruskin <aoyu93@dsl.pipex.com>
 
