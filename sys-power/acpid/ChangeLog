@@ -1,0 +1,87 @@
+# ChangeLog for sys-apps/acpid
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.1 2005/03/15 19:15:53 ciaranm Exp $
+
+*acpid-1.0.4 (15 Mar 2005)
+*acpid-1.0.2-r2 (15 Mar 2005)
+*acpid-1.0.2-r1 (15 Mar 2005)
+*acpid-1.0.1 (15 Mar 2005)
+
+  15 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/acpid-1.0.4-default, +files/acpid-1.0.4-default.sh,
+  +files/acpid.rc6, +files/default.sh-gentoo.patch, +metadata.xml,
+  +acpid-1.0.1.ebuild, +acpid-1.0.2-r1.ebuild, +acpid-1.0.2-r2.ebuild,
+  +acpid-1.0.4.ebuild:
+  Moved from sys-apps/acpid to sys-power/acpid.
+
+  10 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> acpid-1.0.1.ebuild,
+  acpid-1.0.2-r1.ebuild, acpid-1.0.2-r2.ebuild, acpid-1.0.4.ebuild:
+  Added in a message with a link to the Power Management Guide, bug #77338
+
+*acpid-1.0.4 (19 Oct 2004)
+
+  19 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +files/acpid-1.0.4-default, +files/acpid-1.0.4-default.sh,
+  +acpid-1.0.4.ebuild:
+  Version bump.
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> acpid-1.0.2-r2.ebuild:
+  Add inherit eutils
+
+  28 Jan 2004; Aron Griffis <agriffis@gentoo.org> acpid-1.0.2-r2.ebuild:
+  stable on alpha and ia64
+
+  17 Oct 2003; Tom Payne <twp@gentoo.org> acpid-1.0.2-r2.ebuild :
+  Changed ~x86 to x86.
+
+*acpid-1.0.2-r2 (27 Jul 2003)
+  
+  27 Jul 2003; Tom Payne <twp@gentoo.org> acpid-1.0.2-r2.ebuild :
+  Fix bug # 22238 (default.sh broken).
+
+  12 Jun 2003; Hanno Boeck <hanno@gentoo.org> acpid-1.0.2-r1.ebuild:
+  Changed ~x86 to x86.
+
+*acpid-1.0.2-r1 (07 Jun 2003)
+
+  07 Jun 2003; Seemant Kulleen <seemant@gentoo.org> acpid-1.0.1-r1.ebuild,
+  acpid-1.0.2-r1.ebuild, acpid-1.0.2.ebuild:
+  NO OPTIMISATIONS. DO NOT CHANGE THAT. Closes bug #22365 by Sybren Harmsma
+  <S.Harmsma@student.rug.nl>
+
+*acpid-1.0.2 (14 May 2003)
+
+  14 May 2003; Hanno Boeck <hanno@gentoo.org> acpid-1.0.2.ebuild:
+  New version. Resolves #20852.
+
+*acpid-1.0.1-r1 (16 Oct 2002)
+
+  16 Oct 2002; Hanno Boeck <hanno@gmx.de> acpid-1.0.1-r1.ebuild :
+  Added use of CFLAGS. Must be tested.
+  Resolves bug #8976.
+
+*acpid-1.0.1 (21 May 2002)
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added -ppc to keywords
+
+  11 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Fix kernel virtual .. should not be versioned.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> acpid-1.0.1.ebuild :
+  Added KEYWORDS, SLOT.
+
+  21 May 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Updated version.  Resolves bug #2867.
+
+*acpid-1.0.0 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
