@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.20 2003/10/15 18:52:23 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.21 2004/02/07 23:03:11 drobbins Exp $
+
+*icc-8.0.055 (07 Feb 2004)
+
+  07 Feb 2004; Daniel Robbins <drobbins@gentoo.org> icc-8.0.055.ebuild:
+  New ebuild, partially rewritten from bug #35602. This ebuild is still
+  "iffy" and needs some work as I'm trying to get back to the rpm eclass
+  but haven't incorporated fixes from the most recent ebuild submission
+  on bugzilla. Thanks to Jeremy Warren for this ebuild as well as
+  everyone who helped.
 
   15 Oct 2003; Jon Portnoy <avenj@gentoo.org> icc-7.1.030.ebuild :
   Fix rpm_unpack call again.
