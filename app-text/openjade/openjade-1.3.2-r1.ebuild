@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.21 2004/08/07 21:38:24 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.22 2004/09/08 08:54:19 usata Exp $
 
-inherit libtool sgml-catalog eutils
+inherit libtool sgml-catalog eutils flag-o-matic
 
 DESCRIPTION="Jade is an implementation of DSSSL - an ISO standard for formatting SGML and XML documents"
 HOMEPAGE="http://openjade.sourceforge.net"
@@ -29,15 +29,14 @@ src_compile() {
 	# Please note!  Opts are disabled.  If you know what you're doing
 	# feel free to remove this line.  It may cause problems with
 	# docbook-sgml-utils among other things.
-	CFLAGS=""
-	CXXFLAGS=""
+	export ALLOWED_FLAGS="-O -O1 -O2 -pipe -g"
+	strip-flags
 
 	# Default CFLAGS and CXXFLAGS is -O2 but this make openjade segfault
 	# on hppa. Using -O1 works fine. So I force it here.
 	if [ "${ARCH}" = "hppa" ]
 	then
-		CFLAGS="-O1 -pipe"
-		CXXFLAGS="-O1 -pipe"
+		replace-flags -O[2] -O1
 	fi
 
 	ln -s config/configure.in configure.in
@@ -57,6 +56,7 @@ src_compile() {
 src_install() {
 	dodir /usr
 	dodir /usr/lib
+
 	make prefix=${D}/usr \
 	  	datadir=${D}/usr/share/sgml/${P} \
 		install || die

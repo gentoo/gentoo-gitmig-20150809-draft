@@ -1,6 +1,9 @@
 # ChangeLog for app-text/openjade
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.36 2004/08/07 21:38:24 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.37 2004/09/08 08:54:19 usata Exp $
+
+  08 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> openjade-1.3.2-r1.ebuild:
+  Don't unset C[XX]FLAGS. This closes bug #59514.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> openjade-1.3.1-r5.ebuild,
   openjade-1.3.1-r6.ebuild, openjade-1.3.2-r1.ebuild:
