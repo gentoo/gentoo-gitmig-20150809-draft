@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/weka
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.7 2004/12/18 23:20:02 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.8 2005/02/22 16:18:51 luckyduck Exp $
+
+  22 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  weka-3.4.3_p20041113.ebuild:
+  stable on amd64 an x86.
 
 *weka-3.4.3_p20041113 (19 Dec 2004)
 
