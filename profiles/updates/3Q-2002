@@ -85,4 +85,4 @@ move app-misc/wmtimer x11-plugins/wmtimer
 move media-sound/wmix x11-plugins/wmix
 move app-misc/upx app-arch/upx
 move sys-apps/sysklogd app-admin/sysklogd
-
+move app-office/logjam net-misc/logjam
