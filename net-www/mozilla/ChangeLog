@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.122 2003/10/17 09:20:03 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.123 2003/10/17 16:28:18 brad Exp $
+
+  17 Oct 2003; Brad Laue <brad@gentoo.org> mozilla-1.5.ebuild:
+  Fix package URL for the tarball - ftp.mozilla.org directory structure has
+  changed since the move to oregonstate.
 
 *mozilla-1.5 (17 Oct 2003)
 
