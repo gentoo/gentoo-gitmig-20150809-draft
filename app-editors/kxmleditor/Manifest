@@ -1,5 +1,5 @@
-MD5 e4d8c551e28513b74e883b5df33d4e91 kxmleditor-1.0.0.ebuild 493
-MD5 d4b952f06801a178e8391480a3d98263 ChangeLog 1469
+MD5 7b40564ea9719c4f28495d9b47faf1a2 ChangeLog 1559
+MD5 5b7382d55d735dd808e740a6b4d6f8dc kxmleditor-1.0.0.ebuild 491
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 c1878e630895dbd0fec350d0d898e3d2 files/digest-kxmleditor-1.0.0 69
 MD5 848bbac8ddef072cb80cb5707f5fbf15 files/kxmleditor-0.8-gcc3.diff 532
