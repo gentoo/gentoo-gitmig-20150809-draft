@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.12.11-r3.ebuild,v 1.1 2004/05/30 21:13:45 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.12.11-r3.ebuild,v 1.2 2004/05/30 22:48:35 g2boojum Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
 HOMEPAGE="http://www.sendmail.org/"
@@ -21,6 +21,7 @@ DEPEND="net-mail/mailbase
 	"
 RDEPEND="${DEPEND}
 		>=net-mail/mailbase-0.00
+		!mailwrapper? ( !virtual/mta )
 		mailwrapper? ( >=net-mail/mailwrapper-0.2 )"
 PDEPEND="!mbox? ( net-mail/procmail )"
 PROVIDE="virtual/mta"
