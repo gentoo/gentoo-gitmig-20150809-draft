@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.63 2004/07/12 08:47:26 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.64 2004/07/14 02:30:56 tgall Exp $
+
+  13 Jul 2004; Tom Gall <tgall@gentoo.org> rsync-2.6.0-r2.ebuild:
+  stable on ppc64
 
   12 Jul 2004; Travis Tilley <lv@gentoo.org> rsync-2.6.0-r2.ebuild:
   stable on amd64
