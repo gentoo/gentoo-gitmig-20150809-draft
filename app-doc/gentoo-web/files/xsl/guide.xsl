@@ -7,11 +7,11 @@
 	<html>
 	<head>
 	<title><xsl:value-of select="title"/></title>
-	<link rel="stylesheet" href="gentoo-doc.css" type="text/css"/>
+	<link rel="stylesheet" href="/doc/gentoo-doc.css" type="text/css"/>
 	</head>
 	<body bgcolor="#ffffff" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
 	<table class="toptable" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#000000">
-	<tr><td width="160" height="129" align="left" valign="top"><a href="/"><img border="0" src="gentoo-doc.gif"/></a></td>
+	<tr><td width="160" height="129" align="left" valign="top"><a href="/"><img border="0" src="/doc/gentoo-doc.gif"/></a></td>
 	<td>&amp;nbsp;</td></tr>
 	<tr>
 		<td colspan="2" class="doclink">

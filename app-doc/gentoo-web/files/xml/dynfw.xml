@@ -26,19 +26,22 @@ as inspiration for your own creative designs.
 such as blocking an IP, ratelimiting a host, etc.  The reason for the scripts is simple -- when you're in a crisis, you don't
 want to make changes to your master firewall script in a frantic state.  Instead, you want to have an already-existing and
 easy-to-use mechanism to make those changes for you, eliminating the possibility of error and allowing immediate response.
-The following scripts are included in <path link="dynfw-1.0.tar.gz">dynfw-1.0.tar.gz</path>:
-
-<p>You can read the original <uri link="http://www.ibm.com/developerWorks">IBM developerWorks</uri> article <uri>here</uri>,
+<p>You can read <uri link="http://www-106.ibm.com/developerworks/linux/library/l-fw/?n-l-4191">the original IBM developerWorks dynfw article</uri>,
 which explains how to use the scripts.</p>
-<p>You can download the current version of dynfw here: <path link="dynfw-1.0.tar.gz">dynfw-1.0.tar.gz</path>.</p>
-<p>The dynfw Dynamic Firewall Tools are Copyright 2001 Gentoo Technologies, Inc. and distributed under the GNU Public License.You are encouraged to send any bug fixes or improvements to these tools to <mail link="drobbins@gentoo.org">Daniel Robbins</mail>.</p>
+<p>You can download the current version of dynfw here: <uri>dynfw-1.0.tar.gz</uri>.</p>
+<p>The dynfw Dynamic Firewall Tools are Copyright 2001 Gentoo Technologies, Inc. and distributed under the GNU Public License.You are encouraged to send any bug fixes or improvements to these tools to <mail link="drobbins@gentoo.org">Daniel Robbins</mail> so that they can be rolled into the official release.</p>
 
 
+<p>The following scripts are included in <path>dynfw-1.0.tar.gz</path>:
+</p>
 <table>
 <tr><th>Script</th><th>Description</th></tr>
+<tr><ti><path>install.sh</path></ti><ti>the install script -- run this first</ti></tr>
+<tr><ti><path>dynfw.sh</path></ti><ti>the dynfw global support script -- used by all dynfw tools</ti></tr>
 <tr><ti><path>ipdrop</path></ti><ti>discard packets coming from a specific IP</ti></tr>
 <tr><ti><path>ipblock</path></ti><ti>discard as above, but send an TCP reset if applicable</ti></tr>
-<tr><ti><path>tcplimit</path></ti><ti>limits new connections to a local port to a certain rate (per sec,minute,hour or day)</ti></tr>
+<tr><ti><path>tcplimit</path></ti><ti>ratelimit new connections to a local TCP port</ti></tr>
+<tr><ti><path>host-tcplimit</path></ti><ti>ratelimit new connections from a specific host</ti></tr>
 <tr><ti><path>user-outblock</path></ti><ti>prevents a specific UID (user) from establishing outbound connections</ti></tr>
 </table>
 </p>
