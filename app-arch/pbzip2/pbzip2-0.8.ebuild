@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-0.8.ebuild,v 1.1 2004/09/29 03:25:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-0.8.ebuild,v 1.2 2004/11/15 18:46:04 wolf31o2 Exp $
 
 inherit gcc flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s:-O3:${CFLAGS}:g" Makefile || die
+	sed -i -e 's:-O3:${CFLAGS}:g' ${P}/Makefile || die
 }
 
 src_compile() {

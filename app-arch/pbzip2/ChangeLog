@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.1 2004/09/29 03:25:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.2 2004/11/15 18:46:04 wolf31o2 Exp $
+
+  15 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> pbzip2-0.8.ebuild:
+  Fixing sed line and closing bug #69576.
 
 *pbzip2-0.8 (28 Sep 2004)
 
