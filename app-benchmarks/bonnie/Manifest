@@ -1,0 +1,5 @@
+MD5 dea5793b15d57dd0fdcd318270d87e68 ChangeLog 510
+MD5 a5498bce9af6775753fcac7487312087 bonnie-2.0.6.ebuild 797
+MD5 c72a42518e23fdc675ed7b0a4bee0045 files/Makefile.patch 248
+MD5 f23bd5149955b47a9739ac6279998698 files/bonnie_man.patch 350
+MD5 4f5d7854c5b9e58a36722c7b932ba53d files/digest-bonnie-2.0.6 56
