@@ -2,6 +2,7 @@
 =x11-libs/qt-x11-2.3.2
 
 #Temporary committed, i want to test those packages first before releasing them
+=kde-base/kde-2.2.2
 =kde-base/kdelibs-2.2.2
 =kde-base/kdebase-2.2.2
 =kde-base/kdeaddons-2.2.2
