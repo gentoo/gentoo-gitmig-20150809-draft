@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.19.ebuild,v 1.10 2004/02/24 17:44:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.19.ebuild,v 1.11 2004/05/12 09:45:28 phosphan Exp $
 
 DESCRIPTION="GNU VCDimager"
 HOMEPAGE="http://www.vcdimager.org/"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64 alpha ia64"
 IUSE="xml2"
 
-DEPEND=">=dev-libs/libcdio-0.64
+DEPEND="~dev-libs/libcdio-0.64
 	xml2? ( >=dev-libs/libxml2-2.5.11 )"
 
 S=${WORKDIR}/${P}-cdio
