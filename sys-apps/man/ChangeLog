@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.58 2004/09/25 06:10:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.59 2004/10/03 07:52:42 vapier Exp $
+
+*man-1.5m-r2 (03 Oct 2004)
+
+  03 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/man-1.5m-locale-order.patch, +man-1.5m-r2.ebuild:
+  Add patch to fix locale support #37778 by Magnus Lind / Antti Mäkelä.
 
   25 Sep 2004; Joshua Kinard <kumba@gentoo.org> man-1.5m-r1.ebuild:
   Marked stable on mips.
