@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.123 2005/03/08 12:07:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.124 2005/03/09 06:20:23 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -816,10 +816,13 @@ gcc_src_unpack() {
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
-	if [[ $(tc-arch) == "amd64" ]] \
-	   && [[ -z ${SKIP_MULTILIB_HACK} ]] && use_multilib
-	then
+	if !is_crosscompile && use_multilib && \
+	   [[ $(tc-arch) == "amd64" && -z ${SKIP_MULTILIB_HACK} ]] ; then
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
+	fi
+
+	if is_crosscompile && use_multilib; then
+		gcc_crosscompile_multilib_specs || die "Hacking specs for crosscompile-multilib failed"
 	fi
 
 	local version_string="${GCC_CONFIG_VER}"
@@ -1414,6 +1417,42 @@ gcc-compiler_src_install() {
 		fi
 	fi
 
+	# Setup symlinks to multilib ABIs for crosscompiled gccs
+	if is_crosscompile && use_multilib; then
+		CHOST_x86="i686-pc-linux-gnu" 
+		CHOST_amd64="x86_64-pc-linux-gnu" 
+		CHOST_o32="mips-unknown-linux-gnu" 
+		CHOST_n32="mips64-unknown-linux-gnu" 
+		CHOST_n64="mips64-unknown-linux-gnu" 
+		CHOST_ppc="powerpc-unknown-linux-gnu" 
+		CHOST_ppc64="powerpc64-unknown-linux-gnu" 
+		CHOST_sparc32="sparc-unknown-linux-gnu" 
+		CHOST_sparc64="sparc64-unknown-linux-gnu" 
+
+		case $(tc-arch) in
+		amd64)
+			abilist="x86"
+		;;
+		ppc64)
+			abilist="ppc"
+		;;
+		mips)
+			abilist="o32"
+		;;
+		sparc)
+			abilist="sparc32"
+		;;
+		*)
+			eeror "Unknown multilib arch: $(tc-arch)"
+			die "Unknown multilib arch: $(tc-arch)"
+		esac
+
+		dodir ${PREFIX}/${CTARGET}/lib
+		for abi in ${abilist}; do
+			dosym ../../$(get_abi_CHOST ${abi})/lib ${PREFIX}/${CTARGET}/lib/${abi}
+		done
+	fi
+
 	cd ${S}
 	if use build || is_crosscompile; then
 		rm -rf "${D}"/usr/share/{man,info}
@@ -1453,6 +1492,10 @@ gcc_movelibs() {
 		local TODIR=${D}/${LIBPATH}/${MULTIDIR}
 		local FROMDIR=
 
+		# This one comes with binutils
+		rm -f ${D}${PREFIX}/${CTARGET}/lib/${OS_MULTIDIR}/libiberty.a
+		rm -f ${D}${PREFIX}/lib/${OS_MULTIDIR}/libiberty.a
+
 		[[ -d ${TODIR} ]] || mkdir -p ${TODIR}
 
 		FROMDIR=${D}/${LIBPATH}/${OS_MULTIDIR}
@@ -1468,6 +1511,12 @@ gcc_movelibs() {
 		fi
 
 		FROMDIR=${D}/${PREFIX}/lib/${OS_MULTIDIR}
+		if [[ -d ${FROMDIR} ]] ; then
+			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
+			rmdir ${FROMDIR}
+		fi
+
+		FROMDIR=${D}/${PREFIX}/${CTARGET}/lib/${OS_MULTIDIR}
 		if [[ -d ${FROMDIR} ]] ; then
 			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
 			rmdir ${FROMDIR}
@@ -1765,6 +1814,36 @@ disgusting_gcc_multilib_HACK() {
 		|| libdirs="../$(get_libdir) ../$(get_multilibdir)"
 	einfo "updating multilib directories to be: ${libdirs}"
 	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" ${S}/gcc/config/i386/t-linux64
+}
+
+gcc_crosscompile_multilib_specs() {
+	local config=
+	local libdirs=
+	case $(tc-arch) in
+	amd64)
+		config="i386/t-linux64"
+		libdirs=". x86"
+	;;
+	ppc64)
+		# TOCHECK: Not entirely sure about this one.  What to do about soft-float? --eradicator
+		config="rs6000/t-linux64"
+		libdirs=". ppc"
+	;;
+	sparc)
+		config="sparc/t-linux64"
+		libdirs=". sparc32"
+	;;
+	mips)
+		# TOCHECK: Not sure about this logic --eradicator
+		config="mips/t-linux64"
+		libdirs="o32 n32 ."
+	;;
+	*)
+		eerror "Invalid multilib arch ($(tc-arch)) in gcc_crosscompile_multilib_specs"
+		die "Invalid multilib arch ($(tc-arch)) in gcc_crosscompile_multilib_specs"
+	esac
+
+	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" ${S}/gcc/config/${config}
 }
 
 disable_multilib_libjava() {
