@@ -1,12 +1,22 @@
-MD5 027773bac8fcf1c1c56c8d00233f9d96 xfdesktop-4.1.90.ebuild 836
-MD5 02f1f29f47fdf0a97c24aff6082aad52 xfdesktop-4.0.5.ebuild 907
-MD5 cff74f63e28dd0b3d471d2e65a535194 xfdesktop-4.1.91.ebuild 801
-MD5 ea4639304f35e4642f0c91f7163b8b97 xfdesktop-4.0.4.ebuild 886
-MD5 b3b293ce525af461448587f87687ed51 xfdesktop-4.0.6.ebuild 970
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c12da672b485472440471abc62ba011d ChangeLog 4350
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 29605aece5dfdf59178701e57e5e3687 files/digest-xfdesktop-4.1.90 69
-MD5 92b35adfb0bc27148a6c617d5406fbda files/digest-xfdesktop-4.1.91 69
+MD5 4c0b3ad83b2e4256c2f67aa2f67b15f6 xfdesktop-4.0.6.ebuild 970
+MD5 b231378820cc2dc209742dc21dd38684 xfdesktop-4.0.4.ebuild 888
+MD5 e5538df31d9f5d23c5d1bb8366a26f8e xfdesktop-4.0.5.ebuild 908
+MD5 fb5e45823d470fa40ce9631562d54211 xfdesktop-4.1.90.ebuild 854
+MD5 3a46fd1112b3cf305fc3e629fd892ca4 xfdesktop-4.1.91.ebuild 819
+MD5 5a42f394e1b742861d369baced86b7b2 files/digest-xfdesktop-4.0.6 68
 MD5 3dce3090c12c23edddaf526b411637b0 files/digest-xfdesktop-4.0.4 68
 MD5 9b403adf403feac392f40023dac3ffa3 files/digest-xfdesktop-4.0.5 68
-MD5 5a42f394e1b742861d369baced86b7b2 files/digest-xfdesktop-4.0.6 68
+MD5 29605aece5dfdf59178701e57e5e3687 files/digest-xfdesktop-4.1.90 69
+MD5 92b35adfb0bc27148a6c617d5406fbda files/digest-xfdesktop-4.1.91 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBisWbHTu7gpaalycRAhWoAKDcxCcLVaE4CIpN8s3dVInqETTaKQCgtL6B
+0gJ7GyXY04pGexFG3B/+iHg=
+=Qb89
+-----END PGP SIGNATURE-----

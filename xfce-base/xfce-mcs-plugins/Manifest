@@ -1,12 +1,22 @@
-MD5 e37a3c17a52db214fd25bd33bb324c9b xfce-mcs-plugins-4.0.5.ebuild 957
-MD5 c93ba72ce074726d2875cc55e0e268ce xfce-mcs-plugins-4.1.91.ebuild 911
-MD5 82cd6645ad2eeda5ee9c31eb796d3bff xfce-mcs-plugins-4.0.4.ebuild 936
-MD5 d6cc257aee87fe8bdcdf24b296b65c1c xfce-mcs-plugins-4.0.6.ebuild 1020
-MD5 d4ba12d0e1b62a080523d2f5d556229f xfce-mcs-plugins-4.1.90.ebuild 952
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ea1067a43bb02ae55ad340e460d2fd14 ChangeLog 4755
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 2aa7fbb0d05d7acf4c4a0cbcc7785314 files/digest-xfce-mcs-plugins-4.1.90 75
-MD5 01e54ff9f8dcdff490c318169aff685e files/digest-xfce-mcs-plugins-4.1.91 75
+MD5 f3ea6474e7454274d35addc9bba3bd67 xfce-mcs-plugins-4.0.6.ebuild 1020
+MD5 996d688be7f0e0edb631cf42b87c746e xfce-mcs-plugins-4.0.4.ebuild 938
+MD5 7c56f77668ed08798821cb8b3c0fe423 xfce-mcs-plugins-4.0.5.ebuild 958
+MD5 997f90b82da807be76bc236f0a3cc02a xfce-mcs-plugins-4.1.90.ebuild 970
+MD5 344d570baa42ea8a2607ff5e0898b6e3 xfce-mcs-plugins-4.1.91.ebuild 929
+MD5 f85bc8af9024d5781c6fc0fba97cfc56 files/digest-xfce-mcs-plugins-4.0.6 74
 MD5 d64c93fbdf6d85fa702a0db35282b591 files/digest-xfce-mcs-plugins-4.0.4 74
 MD5 7760b591f4d94ccb4188531f9d9d67c3 files/digest-xfce-mcs-plugins-4.0.5 74
-MD5 f85bc8af9024d5781c6fc0fba97cfc56 files/digest-xfce-mcs-plugins-4.0.6 74
+MD5 2aa7fbb0d05d7acf4c4a0cbcc7785314 files/digest-xfce-mcs-plugins-4.1.90 75
+MD5 01e54ff9f8dcdff490c318169aff685e files/digest-xfce-mcs-plugins-4.1.91 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBisRuHTu7gpaalycRAsFMAJ47TiBTXGDMEXMyJ3yOxYfdwLCmqwCgm/Cs
+Gt8DxwRGLVyyXDAW24S2D58=
+=kxmT
+-----END PGP SIGNATURE-----
