@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r2.ebuild,v 1.9 2004/11/30 22:28:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r2.ebuild,v 1.10 2005/02/21 02:42:40 dragonheart Exp $
 
 inherit eutils
 IUSE="pam snmp ipv6 ospfapi"
@@ -19,7 +19,7 @@ SLOT="0"
 DEPEND="virtual/libc
 	sys-devel/binutils
 	pam? ( >=sys-libs/pam-0.75-r11 )
-	snmp? ( virtual/snmp )"
+	snmp? ( net-analyzer/net-snmp )"
 
 RDEPEND="virtual/libc
 	sys-devel/binutils"
