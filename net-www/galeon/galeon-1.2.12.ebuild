@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.12.ebuild,v 1.3 2004/04/06 03:14:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.12.ebuild,v 1.4 2004/05/12 12:55:08 pappy Exp $
 
 IUSE="nls"
 
@@ -72,10 +72,6 @@ src_compile() {
 
 	use nls || myconf="${myconf} --disable-nls"
 	# use bonobo && myconf="${myconf} --enable-gnome-file-selector"
-
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml 
-	# or #gentoo-hardened/irc.freenode
-	has_version "sys-devel/hardened-gcc" && append-flags "-yet_exec"
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
