@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.12 2003/10/10 23:05:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.13 2003/10/18 07:09:39 vapier Exp $
 
 inherit base flag-o-matic
 
 DESCRIPTION="POSIX 1003.1e capabilities"
 HOMEPAGE="http://linux.kernel.org/pub/linux/libs/security/linux-privs/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.4/${P}.tar.bz2"
+
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64 ia64"
@@ -18,8 +19,6 @@ DEPEND="virtual/glibc
 	python? ( >=virtual/python-2.2.1 >=dev-lang/swig-1.3.10 )"
 RDEPEND="python? ( >=virtual/python-2.2.1 )"
 
-S=${WORKDIR}/${P}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -29,11 +28,10 @@ src_unpack() {
 src_compile() {
 	PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
 	filter-flags -fPIC
-	local myflags
-	myflags=""
-	if [ "`use python`" ]; then
+	local myflags=""
+	if [ `use python` ]; then
 		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/lib/python${PYTHONVER}/site-packages"
-		CFLAGS="${CFLAGS} -I/usr/include/python${PYTHONVER}"
+		append-flags -I/usr/include/python${PYTHONVER}
 	fi
 
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
@@ -44,10 +42,10 @@ src_compile() {
 
 src_install() {
 	PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
-	local myflags
-	myflags=""
-	if [ "`use python`" ]; then
+	local myflags=""
+	if [ `use python` ]; then
 		myflags="${myflags} PYTHON=1 PYTHONMODDIR=${D}/usr/lib/python${PYTHONVER}/site-packages"
+		
 	fi
 	make install FAKEROOT="${D}" man_prefix=/usr/share ${myflags} || die
 	dodoc CHANGELOG README License pgp.keys.asc doc/capability.notes
