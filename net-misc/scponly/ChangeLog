@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.9 2004/07/02 20:47:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.10 2004/07/28 00:00:29 matsuu Exp $
+
+*scponly-3.11-r2 (28 Jul 2004)
+
+  28 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> -scponly-3.11-r1.ebuild,
+  +scponly-3.11-r2.ebuild, -scponly-3.11.ebuild:
+  Removed useradd from pkg_config. Bug 58526.
 
 *scponly-3.11-r1 (03 Jul 2004)
 

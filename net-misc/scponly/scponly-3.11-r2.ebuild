@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-3.11-r1.ebuild,v 1.1 2004/07/02 20:47:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-3.11-r2.ebuild,v 1.1 2004/07/28 00:00:29 matsuu Exp $
 
 inherit eutils
 
@@ -37,13 +37,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Execute the following command"
-	einfo "ebuild /var/db/pkg/net-misc/${PF}/${PF}.ebuild config"
-	einfo "to setup the initial database environment."
-}
-
-pkg_config() {
-	# pkg_config is based on ${S}/setup_chroot.sh.
+	# pkg_postinst is based on ${S}/setup_chroot.sh.
 
 	local myuser="scponly"
 	local myhome="/home/${myuser}"
