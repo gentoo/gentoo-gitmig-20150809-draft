@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.2.9-r1.ebuild,v 1.8 2002/12/18 15:00:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.2.9-r1.ebuild,v 1.9 2003/02/13 17:03:36 vapier Exp $
 
 IUSE="gif nls odbc opengl"
 

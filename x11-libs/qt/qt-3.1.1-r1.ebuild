@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1-r1.ebuild,v 1.1 2003/01/28 12:04:40 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1-r1.ebuild,v 1.2 2003/02/13 17:02:15 vapier Exp $
 
 inherit eutils
 
