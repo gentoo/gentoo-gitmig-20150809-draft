@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.63 2004/02/06 19:27:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.64 2004/02/07 22:28:25 brad_mssw Exp $
+
+  07 Feb 2004; Brad House <brad_mssw@gentoo.org>
+  nvidia-kernel-1.0.5332.ebuild:
+  people apparently don't know how to use ~amd64 ebuilds, setting this stable as
+  this is the #1 asked for ebuild
 
   06 Feb 2004; Martin Schlemmer <azarah@gentoo.org>
   nvidia-kernel-1.0.5336-r1.ebuild, files/1.0.5336/Makefile,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5332.ebuild,v 1.2 2004/01/29 09:55:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5332.ebuild,v 1.3 2004/02/07 22:28:25 brad_mssw Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${NV_PACKAGE}-${
 # The slot needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
 SLOT="${KV}"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 RESTRICT="nostrip"
 
 DEPEND="virtual/linux-sources"

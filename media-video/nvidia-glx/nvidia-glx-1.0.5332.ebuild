@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5332.ebuild,v 1.3 2004/02/01 02:47:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5332.ebuild,v 1.4 2004/02/07 22:29:17 brad_mssw Exp $
 
 PKG_V="pkg0"
 NV_V="${PV/1.0./1.0-}"
@@ -12,7 +12,7 @@ SRC_URI="http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${NV_PACKAGE}-$
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 RESTRICT="nostrip"
 
 # We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
