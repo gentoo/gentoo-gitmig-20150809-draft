@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/kasablanca-0.3.1.ebuild,v 1.1 2004/04/30 00:05:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/kasablanca-0.3.1.ebuild,v 1.2 2004/06/24 22:46:20 agriffis Exp $
 
 inherit kde
 need-kde 3.1

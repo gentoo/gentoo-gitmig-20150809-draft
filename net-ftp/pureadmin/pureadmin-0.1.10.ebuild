@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.1.10.ebuild,v 1.3 2004/06/10 16:52:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.1.10.ebuild,v 1.4 2004/06/24 22:47:44 agriffis Exp $
 
 IUSE="debug gnome"
 

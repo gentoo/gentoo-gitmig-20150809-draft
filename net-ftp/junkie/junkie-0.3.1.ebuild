@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/junkie/junkie-0.3.1.ebuild,v 1.3 2003/07/13 11:55:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/junkie/junkie-0.3.1.ebuild,v 1.4 2004/06/24 22:46:09 agriffis Exp $
 
 inherit gnome2
 
