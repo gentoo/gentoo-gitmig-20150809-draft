@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.2 2004/07/24 10:22:00 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.3 2004/07/24 11:32:34 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -162,7 +162,7 @@ src_unpack() {
 	#Remove kernel-2.6 workaround as the problem it works around is
 	#fixed, and the workaround breaks sparc
 	if use sparc; then
-		dosed -i -e 's:#define __KERNEL__::' osdep/kerneltwosix.h || die "failed to apply kernel-2.6 workarround"
+		sed -i -e 's:#define __KERNEL__::' osdep/kerneltwosix.h || die "failed to apply kernel-2.6 workarround"
 	fi
 }
 
@@ -379,9 +379,8 @@ src_install() {
 
 	insinto /etc
 	newins ${S}/etc/example.conf mplayer.conf
-	dosed 	-i /etc/mplayer.conf \
-		-e 's/include =/#include =/' \
-		-e 's/fs=yes/fs=no/' || die "failed to fix the default mplayer.conf"
+	dosed   's/include =/#include =/' /etc/mplayer.conf || die "failed to dosed mplayer.conf"
+	dosed 	's/fs=yes/fs=no/' /etc/mplayer.conf || die "failed to fix the default mplayer.conf"
 
 	dosym ../../../etc/mplayer.conf /usr/share/mplayer/mplayer.conf
 

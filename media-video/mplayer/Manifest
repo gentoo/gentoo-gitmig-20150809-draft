@@ -11,7 +11,7 @@ MD5 d13f33f9022f7abccfe9b14f96531057 mplayer-1.0_pre4-r4.ebuild 13157
 MD5 071a354aa3c0e9290b6dcfc8c3621d87 mplayer-1.0_pre4.ebuild 11319
 MD5 41244b1ba72f548699bd697fe1eebb0e mplayer-1.0_pre5-r2.ebuild 13751
 MD5 a54f5c00de8842e85e61a019634ce681 ChangeLog 32714
-MD5 ad8b6e8b3ed62e65bea9c078d5035fbb mplayer-1.0_pre4-r7.ebuild 12662
+MD5 bd6d17bb6c56fc72fd1794bf65ceaaac mplayer-1.0_pre4-r7.ebuild 12708
 MD5 6c2dab3392aab51766253b416ad2a10c files/default-skin.diff 396
 MD5 deb1dbbf5879ed31e1b83fb7def5b600 files/digest-mplayer-0.92-r1 355
 MD5 b0205104d1242fcccdb5dfd2188f5ab2 files/digest-mplayer-1.0_pre2-r1 358
