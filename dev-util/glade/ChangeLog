@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.33 2005/02/07 08:51:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.34 2005/02/07 21:05:05 kloeri Exp $
+
+  07 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> glade-2.6.8.ebuild:
+  Stable on alpha.
 
   07 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> glade-2.6.8.ebuild:
   ~alpha keyword.
