@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.37 2005/02/25 11:36:05 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.38 2005/02/25 13:25:54 fmccor Exp $
+
+  25 Feb 2005; Ferris McCormick <fmccor@gentoo.org> pine-4.62.ebuild:
+  Stable for sparc (Bug 83249).
 
   25 Feb 2005; Andrej Kacian <ticho@gentoo.org> :
   Recreated digest to correct stored filesize of chappa-all patch. Closes
