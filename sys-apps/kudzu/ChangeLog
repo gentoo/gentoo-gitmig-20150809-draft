@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kudzu
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.7 2004/05/17 11:40:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.8 2004/05/30 14:44:33 wolf31o2 Exp $
+
+  30 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> kudzu-0.99.66.ebuild,
+  kudzu-0.99.99.ebuild:
+  QA cleanup
 
   17 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Changing ownership to livecd herd.

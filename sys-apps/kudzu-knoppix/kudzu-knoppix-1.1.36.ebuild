@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.5 2004/05/21 20:50:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.6 2004/05/30 14:48:25 wolf31o2 Exp $
 
 MY_PV=${PV}-2
 S=${WORKDIR}/kudzu-${PV}
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.knopper.net"
 KEYWORDS="x86 ~amd64 ~ppc ~alpha -sparc -mips"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE=""
 
 RDEPEND="dev-libs/newt"
 DEPEND="$RDEPEND sys-libs/slang sys-apps/pciutils >=dev-libs/dietlibc-0.20"
