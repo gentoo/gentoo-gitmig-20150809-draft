@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.31.ebuild,v 1.5 2004/03/14 00:14:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.31.ebuild,v 1.6 2004/04/20 18:22:26 kugelfang Exp $
 
 DESCRIPTION="Library for MS CHM (compressed html) file format plus extracting and http server utils"
 HOMEPAGE="http://66.93.236.84/~jedwin/projects/chmlib/"
 SRC_URI="http://66.93.236.84/~jedwin/projects/chmlib/${PF}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 src_unpack() {
 	unpack ${A}
@@ -18,6 +18,9 @@ src_unpack() {
 		# In this case it is safe to take this rather
 		# stupid action =)
 		sed -i "s:__i386__:__powerpc__:" chm_lib.c
+	fi
+	if [ "${ARCH}" = "amd64" ]; then
+		sed -i "s:__i386__:__x86_64__:" chm_lib.c
 	fi
 }
 
