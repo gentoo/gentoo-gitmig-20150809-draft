@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/squashfs-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.8 2004/07/18 15:06:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.9 2004/08/26 18:17:47 gustavoz Exp $
+
+  26 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  squashfs-tools-2.0.ebuild:
+  Stable on sparc
 
   18 Jul 2004; Tom Gall <tgall@gentoo.org> squashfs-tools-2.0.ebuild:
   stable on ppc64, bug #57487 
