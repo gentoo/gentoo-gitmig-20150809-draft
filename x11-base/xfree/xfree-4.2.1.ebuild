@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.13 2002/10/13 01:17:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.14 2002/10/13 04:55:02 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -73,6 +73,7 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 	 ${SRC_PATH1}/X${MY_SV}src-3.tgz
 	 mirror://sourceforge/freetype/freetype-${FT2_VER}.tar.bz2
 	 http://fontconfig.org/release/fcpackage.${FC2_VER/\./_}.tar.gz
+	 mirror://gentoo/ttmkfdir2-1.0.tar.bz2
 	 ${X_PATCHES}
 	 ${X_DRIVERS}
 	 truetype? ( ${MS_FONT_URLS} )"
@@ -85,7 +86,8 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/pam-0.75
 	>=sys-libs/zlib-1.1.3-r2
-	sys-devel/flex
+	>=sys-devel/flex-2.5.4a-r5
+	sys-devel/libtool
 	sys-devel/perl
 	>=media-libs/fontconfig-2.0
 	>=media-libs/freetype-${FT2_VER}
@@ -111,6 +113,8 @@ src_unpack() {
 		freetype-${FT2_VER}.tar.bz2 \
 		XFree86-${PV}-patches-${PATCH_VER}.tar.bz2 \
 		fcpackage.${FC2_VER/\./_}.tar.gz
+
+	cd ${S}; unpack ttmkfdir2-1.0.tar.bz2
 
 	# Deploy our custom freetype2.  We want it static for stability,
 	# and because some things in Gentoo depends the freetype2 that
@@ -285,8 +289,11 @@ src_compile() {
 	then
 		cd ${S}/nls
 		make || die
-		cd ${S}
 	fi
+
+	einfo "Building ttmkfdir2..."
+	cd ${S}/ttmkfdir2
+	emake || die
 }
 
 src_install() {
@@ -309,8 +316,11 @@ src_install() {
 	then
 		cd ${S}/nls
 		make DESTDIR=${D} install || die
-		cd ${S}
 	fi
+
+	einfo "Installing ttmkfdir2..."
+	exeinto /usr/X11R6/bin
+	newexe ${S}/ttmkfdir2/ttmkfdir ttmkfdir2
 
 	# Make sure user running xterm can only write to utmp.
 	fowners root.utmp /usr/X11R6/bin/xterm
@@ -453,10 +463,42 @@ pkg_preinst() {
 pkg_postinst() {
 
 	env-update
-	einfo "Making font dirs..."
-	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
-	find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1 \
-		-exec ${ROOT}/usr/X11R6/bin/mkfontdir {} \;
+
+	if [ "${ROOT}" = "/" ]
+	then
+		einfo "Making font dirs..."
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
+		find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1 \
+			-exec ${ROOT}/usr/X11R6/bin/mkfontdir {} \;
+
+		einfo "Creating fonts.scale files..."
+		find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1 \
+			-exec ${ROOT}/usr/X11R6/bin/ttmkfdir2 -o {}/fonts.scale -d {} \;
+
+		einfo "Creating FC font cache..."
+		/usr/bin/fc-cache
+
+		einfo "Generating encodings..."
+		rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/fonts.{cache-1,dir,scale}
+		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
+		do
+			if [ "${x}" != "${ROOT}/usr/X11R6/lib/X11/fonts/encodings" ]
+			then
+				cd ${x}
+				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
+				mkfontdir -n -e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings
+			fi
+		done
+
+		einfo "Fixing permissions..."
+		find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'font.*' \
+			-exec chmod 0644 {} \;
+
+		# Switch to the xfree implementation.
+		# Use new opengl-update that will not reset user selected
+		# OpenGL interface ...
+		/usr/sbin/opengl-update --use-old xfree
+	fi
 
 	# make sure all the Compose files are present
 	for x in $(find ${ROOT}/usr/X11R6/lib/X11/locale/ -mindepth 1 -type d)
@@ -466,17 +508,6 @@ pkg_postinst() {
 			touch ${x}/Compose
 		fi
 	done
-
-	# switch to the xfree implementation
-	if [ "${ROOT}" = "/" ]
-	then
-		einfo "Creating font cache..."
-		/usr/bin/fc-cache
-
-		# use new opengl-update that will not reset user selected
-		# OpenGL interface ...
-		/usr/sbin/opengl-update --use-old xfree
-	fi
 
 	# add back directories that portage nukes on unmerge
 	if [ ! -d ${ROOT}/var/lib/xdm ]
