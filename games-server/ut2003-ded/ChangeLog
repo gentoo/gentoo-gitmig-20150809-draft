@@ -1,6 +1,11 @@
 # ChangeLog for games-server/ut2003-ded
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ChangeLog,v 1.5 2004/07/08 17:52:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ChangeLog,v 1.6 2004/11/17 19:03:27 wolf31o2 Exp $
+
+  17 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-ded-2225-r2.ebuild:
+  Removed calls to specific 3dgamers mirrors and changed to use
+  mirror://3dgamers instead.
 
 *ut2003-ded-2225-r2 (08 Jul 2004)
 
