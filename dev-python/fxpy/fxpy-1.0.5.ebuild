@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/fxpy-1.0.5.ebuild,v 1.2 2004/05/07 22:39:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/fxpy-1.0.5.ebuild,v 1.3 2004/05/28 15:41:00 vapier Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P="FXPy-${PV}"
 S="${WORKDIR}/${MY_P}"
