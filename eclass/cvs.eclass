@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.40 2003/04/27 19:35:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.41 2003/06/10 22:06:18 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -184,13 +184,13 @@ cvs_fetch() {
 	cd "${ECVS_TOP_DIR}"
 	if [ "${ECVS_AUTH}" == "pserver" ]; then
 		einfo "Running $cmdlogin"
-		eval $cmdlogin
+		eval $cmdlogin || die "cvs login command failed"
 		if [ "${mode}" == "update" ]; then
 			einfo "Running $cmdupdate"
-			eval $cmdupdate
+			eval $cmdupdate || die "cvs update command failed"
 		elif [ "${mode}" == "checkout" ]; then
-			einfo "Running $cmdcheckout"
-			eval $cmdcheckout
+			einfo "Running $cmdcheckout" 
+			eval $cmdcheckout|| die "cvs checkout command failed"
 		fi
 #	elif [ "${ECVS_AUTH}" == "ext" ]; then
 #		# for ext there's also a possible ssh prompt, code not yet written
