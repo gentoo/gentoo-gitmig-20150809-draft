@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-1.1.ebuild,v 1.1 2003/07/05 08:52:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-1.1.ebuild,v 1.2 2003/07/05 09:47:49 robbat2 Exp $
 
 DESCRIPTION="diradm is for managing posix users/groups in an LDAP directory"
 HOMEPAGE="http://www.hits.at/diradm/"
@@ -18,7 +18,7 @@ S=${WORKDIR}/${P}
 
 src_install() {
 	# Binary
-	dobin diradm
+	dosbin diradm
 
 	# Config file
 	insinto /etc
