@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.53 2004/12/28 21:53:10 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.54 2005/01/20 17:36:34 fmccor Exp $
+
+  20 Jan 2005; Ferris McCormick <fmccor@gentoo.org>
+  opengl-update-2.0_pre4-r1.ebuild:
+  Stable for sparc (required for xorg-x11-6.8.0-r4 upgrade).
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
