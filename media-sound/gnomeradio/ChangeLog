@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/gnomeradio
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.1 2002/07/16 13:50:00 stroke Exp $
+
+*gnomeradio-1.2 (16 Jul 2002)
+
+  16 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnomeradio-1.2.ebuild :
+  
+  Initial cvs import. A Radio Tuner For GNOME2
