@@ -1,5 +1,5 @@
-MD5 981c442cd7fe575953634d0fc3bae23e ChangeLog 1592
-MD5 66f3d47c266b048f7e0f28a9b4017965 stardict-2.2.0.ebuild 1253
+MD5 a02f74d1933edf5fd3c91cba6674e52d ChangeLog 1592
+MD5 63e69cb55894b522d764c0eb34710f13 stardict-2.2.0.ebuild 1253
 MD5 e6135cced80802a7c5ea9039b395fa43 stardict-2.0.0.ebuild 741
 MD5 a6d0fbcdffe714ec6f5b00713ca68772 files/digest-stardict-2.2.0 67
 MD5 b41107d5daeb5414fa21b3f9905e105c files/stardict-config.sh 565
