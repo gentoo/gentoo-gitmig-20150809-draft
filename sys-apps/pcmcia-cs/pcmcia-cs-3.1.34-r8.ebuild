@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r8.ebuild,v 1.7 2002/12/09 04:37:26 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r8.ebuild,v 1.8 2002/12/15 22:06:27 chadh Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -114,7 +114,7 @@ src_install () {
 
 	# install our own init script
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/pcmcia.rc6 pcmcia
+	newexe ${FILESDIR}/pcmcia.rc pcmcia
 	if [ -z "`use build`" ]
 	then
 		cd ${S}
