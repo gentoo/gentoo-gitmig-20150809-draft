@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke (blocke@shivan.org)
 # Modified by Riccardo Persichetti (ricpersi@libero.it)
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.3.5.ebuild,v 1.3 2002/05/23 06:50:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.3.5-r2.ebuild,v 1.1 2002/05/25 21:44:26 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Balsa: email client for GNOME"
@@ -27,7 +27,7 @@ src_unpack() {
 	 unpack ${P}.tar.bz2
 	# this patch is from Riccardo Persichetti
 	# (ricpersi@libero.it) to make balsa compile
-	patch -p0 < ${FILESDIR}/${P}.diff
+	patch -p0 < ${FILESDIR}/${PF}.diff
 }
 
 src_compile() {
@@ -54,6 +54,7 @@ src_install () {
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
+		gnomeconfdir=${D}/etc \
 		gnomedatadir=${D}/usr/share install || die "make install failed"
 	dodoc AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README TODO
 	docinto docs
