@@ -1,4 +1,14 @@
-MD5 fbb9fe93cde6df1ec4fc2cbf3f070d1e ChangeLog 581
-MD5 a46cd12c347cca6bcebc59c5ddc2a596 genindent-1.0.ebuild 538
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 265d0e53736ad3385694d88c5a19703c genindent-1.0.ebuild 546
+MD5 8ace0d69d997a9c8b4ac024cda470be8 ChangeLog 668
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 272032f9cfcee33224456a8656a9b98b files/digest-genindent-1.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBtfZjCHk4+ZoBpvsRAuTxAKCxtEizbhrskKcs66r4zlWrzk1T/wCgl5Ig
+9ymxsPs1gXf8n8Kf5JwQaOw=
+=0+oe
+-----END PGP SIGNATURE-----
