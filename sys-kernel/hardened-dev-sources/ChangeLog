@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.10 2004/04/16 05:20:11 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.11 2004/04/18 08:30:44 method Exp $
+
+*hardened-dev-sources-2.6.5-r2 (18 Apr 2004)
+
+  18 Apr 2004; Joshua Brindle <method@gentoo.org>
+  hardened-dev-sources-2.6.5-r2.ebuild, hardened-dev-sources-2.6.5.ebuild:
+  change keywords to ~x86, updated grsec to final in -r2, added selinux nfs
+  support
 
 *hardened-dev-sources-2.6.5 (16 Apr 2004)
 

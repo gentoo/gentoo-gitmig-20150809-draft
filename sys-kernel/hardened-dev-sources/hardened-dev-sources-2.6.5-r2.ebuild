@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.5.ebuild,v 1.2 2004/04/18 08:30:44 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.5-r2.ebuild,v 1.1 2004/04/18 08:30:44 method Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -10,7 +10,7 @@ detect_version
 GPV=5.29
 GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2"
 
-HGPV=5.1
+HGPV=5.2
 HGPV_SRC="mirror://gentoo/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2"
 
 UNIPATCH_STRICTORDER="yes"
