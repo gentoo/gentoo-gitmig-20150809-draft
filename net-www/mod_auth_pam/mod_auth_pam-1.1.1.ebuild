@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1.ebuild,v 1.5 2005/01/23 13:06:47 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1.ebuild,v 1.6 2005/02/17 09:30:54 hollow Exp $
 
 inherit eutils
 
@@ -31,6 +31,7 @@ src_compile() {
 src_install () {
 	exeinto /usr/lib/apache2-extramodules
 	doexe .libs/mod_auth_pam.so
+	doexe .libs/mod_auth_sys_group.so
 
 	insinto /etc/apache2/conf/modules.d
 	doins ${FILESDIR}/10_mod_auth_pam.conf
