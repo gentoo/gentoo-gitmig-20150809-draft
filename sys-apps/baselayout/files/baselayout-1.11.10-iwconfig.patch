@@ -1,0 +1,16 @@
+Index: iwconfig
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/net-scripts/net.modules.d/iwconfig,v
+retrieving revision 1.7.2.14
+diff -u -B -r1.7.2.14 iwconfig
+--- 1/lib/rcscripts/net.modules.d/iwconfig	9 Mar 2005 22:20:53 -0000	1.7.2.14
++++ 2/lib/rcscripts/net.modules.d/iwconfig	13 Mar 2005 19:00:09 -0000
+@@ -692,7 +692,7 @@
+ 	iwconfig ${iface} frag off &>/dev/null
+ 	iwconfig ${iface} power off &>/dev/null
+ 	iwconfig ${iface} txpower auto &>/dev/null
+-	iwconfig ${iface} key off [1] &>/dev/nul
++	iwconfig ${iface} key off [1] &>/dev/null
+ 
+ 	# We need to set the essid to any as some drivers won't
+ 	# scan correctly if they are already set to an ESSID
