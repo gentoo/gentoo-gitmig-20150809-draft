@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.4 2004/02/08 20:36:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.5 2004/02/17 08:23:11 mr_bones_ Exp $
 
 IUSE="pam selinux"
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.pld.org.pl/software/shadow/old/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 ~ppc64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~ppc64"
 
 DEPEND=">=sys-libs/cracklib-2.7-r3
 	pam? ( >=sys-libs/pam-0.75-r4 )
