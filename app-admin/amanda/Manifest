@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dbebfc7992834d0a916c2479a75e35b4 amanda-2.4.4_p3.ebuild 11780
+MD5 ce6c71f3755cd8a2dea3f500594192c5 amanda-2.4.4_p3.ebuild 11849
 MD5 fbae3bebc75f02f1d4fd63ecd968f100 amanda-2.4.4_p2-r2.ebuild 11642
 MD5 1f23611bf44cee67526b78a0e2af4e33 amanda-2.4.4_p2.ebuild 11341
 MD5 c6b751a034398ef7dd3e207476c53e82 amanda-2.4.4-r3.ebuild 11290
 MD5 e6f1be35cbce779e07dd3d4449a8dfcc amanda-2.4.4_p2-r1.ebuild 11509
-MD5 0864f2f8f22527a5b6f5b6d42a9c68e5 ChangeLog 4900
+MD5 7ed1f30de434849f8dfd3f48ac9c0e65 ChangeLog 5005
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 89f98efbd6fee9891cd6c39d52e5d7a8 files/amanda-devfs 349
 MD5 fe28f64731a2dbf85f76b6f38942e032 files/example_disklist 55
@@ -27,7 +27,7 @@ MD5 ef2e4c8797076d9733b31a860fda8582 files/amanda-inetd.amanda.sample 194
 Version: GnuPG v1.2.6 (GNU/Linux)
 Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFBoV0dPpIsIjIzwiwRAnCcAKCpRuS+PMZrEGcZ0gLWMe+B0N/g6ACcCbUl
-gjcdUJ3Aun2WoxFByCOzd/4=
-=UbKd
+iD8DBQFBpFTCPpIsIjIzwiwRAn0jAJ9L1I+LOTmHvXR0SKuYThxEAlyBJACfaARb
+rWpKes/C4jOxfDXcUXk51k0=
+=7i2S
 -----END PGP SIGNATURE-----

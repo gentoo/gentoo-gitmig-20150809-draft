@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p3.ebuild,v 1.2 2004/11/22 03:29:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p3.ebuild,v 1.3 2004/11/24 09:30:40 robbat2 Exp $
 
 inherit eutils
 
@@ -171,6 +171,9 @@ src_compile() {
 
 	# Samba support
 	use samba && myconf="${myconf} --with-smbclient=/usr/bin/smbclient" || myconf="${myconf} --without-smbclient"
+
+	# Force the correct TAR
+	myconf="${myconf} --with-gnutar=/bin/tar"
 
 	econf ${myconf} || die "econf failed!"
 	emake || die "emake failed!"
