@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/squashfs-tools
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.16 2004/12/15 19:40:59 wolf31o2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.17 2005/01/06 21:00:49 kloeri Exp $
+
+  06 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
+  squashfs-tools-2.0_p2.ebuild:
+  Stable on alpha.
 
 *squashfs-tools-2.1_p2 (15 Dec 2004)
 
