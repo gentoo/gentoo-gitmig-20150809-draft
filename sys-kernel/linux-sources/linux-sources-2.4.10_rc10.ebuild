@@ -1,15 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10_rc10.ebuild,v 1.1 2000/11/19 23:05:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10_rc10.ebuild,v 1.2 2000/11/20 02:38:56 drobbins Exp $
 
 A="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
 	patch-2.4.0-test9.bz2 patch-2.4.0-test10.bz2
 	i2c-2.5.4.tar.gz lm_sensors-2.5.4.tar.gz jfs-0.0.18-patch.tar.gz
 	alsa-driver-0.5.9d.tar.bz2 NVIDIA_kernel-0.9-5.tar.gz"
 
-S=/usr/src/linux
-DESCRIPTION="Linux kernel sources package.  Everything you need to build a kernel (no kernel included)"
+S=${WORKDIR}/linux
+DESCRIPTION="Linux kernel sources package.  Everything you need to build a kernel (no kernel included, just sources)"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2
 		http://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test9.bz2
 		http://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test10.bz2
@@ -27,12 +27,8 @@ HOMEPAGE="http://www.kernel.org/
 	
 src_compile() {
     cd ${S}
-    unset CFLAGS
-    unset CXXFLAGS
-    try make dep
-    try make bzImage
-    try make modules
-    cd ${S}/fs/reiserfs/utils
+	make dep
+	cd ${S}/fs/reiserfs/utils
     try make
     cd ${S}/lm_sensors-2.5.2
     try make
@@ -41,24 +37,13 @@ src_compile() {
 }
 
 src_unpack() {
-    cd /usr/src 
-	local x
-	for x in linux linux-2.4.0-test10 
-	do
-		if [ -e $x ]
-		then
-			echo "linux kernel source directory ($x) already exists.  Please remove or backup first."
-			exit 1
-		fi
-	done
+    cd ${WORKDIR} 
 	unpack linux-2.4.0-test8.tar.bz2
     cd ${S}
-    echo "Applying test9 patch..."
+	echo "Applying test9 patch..."
     cat ${DISTDIR}/patch-2.4.0-test9.bz2 | bzip2 -d | patch -p1
-
 	echo "Applying ReiserFS patch..."
     gzip -dc ${DISTDIR}/linux-2.4.0-test9-reiserfs-3.6.18-patch.gz | patch -p1
-
 	echo "Applying test10 patch..."
 	cat ${DISTDIR}/patch-2.4.0-test10.bz2 | bzip2 -d | patch -p1
     
@@ -97,7 +82,29 @@ src_unpack() {
 }
 
 src_install() {                               
-	echo
+	cd ${S}/fs/reiserfs/utils
+	dodir /usr/man/man8 /sbin
+	try make install SBIN=${D}/sbin MANDIR=${D}/usr/man/man8
+
+	cd ${S}/fs/jfs/utils
+	cp output/* ${D}/sbin
+	local x 
+	for x in `find -iname *.1`
+	do
+		doman $x
+	done
+	for x in `find -iname *.8`
+	do
+		doman $x
+	done
+	dodir /usr/src/linux-${PV}
+	cd ${S}
+	mv linux ${D}/usr/src/linux-${PV}
+	cd ${D}/usr/src
+	ln -s linux-${PV} linux
+	#remove workdir since our install was dirty and modified ${S}
+	#this will cause an unpack to be done next time
+	rm -rf ${WORKDIR}
 }
 
 
