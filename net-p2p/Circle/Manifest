@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0a92b4db914fbfb7649dd06d4023d5b3 Circle-0.41c.ebuild 1452
-MD5 5ee70710e25fc47c1d06e92ea2dc2600 Circle-0.40e.ebuild 1501
-MD5 700cad7f8658e2250e8bcbf0e08b9fc2 ChangeLog 1212
+MD5 ef751f02e1a27beae9b1c07fc06ca15a Circle-0.41c.ebuild 1460
+MD5 5b0a52578a5082668ce7549d15eae202 Circle-0.40e.ebuild 1509
+MD5 e5986a49f400ad18f7ea7eb064a0f623 ChangeLog 1340
 MD5 8abcb326775f027b2e13f23344036e34 metadata.xml 224
 MD5 4e5e46839be7bbaa380fa35e730d4ca8 files/digest-Circle-0.40e 64
 MD5 323983236384b9a59399b1ce8c22427a files/digest-Circle-0.41c 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBKV/ocAgAdbxYsnERAjtfAJ4me/G3q4c7M7bt+KxFnPIPcrgpuACeNnIA
-BsSzqlaRpGNg19QnuloNBtw=
-=U7YU
+iD8DBQFBrPRNI1lqEGTUzyQRAtPpAJ427Sx5jk0O7lAK4vB2qgwH5Y8tDACgrVBS
+Xp2CVJsEhehvXYXA1fpeqVc=
+=iWz1
 -----END PGP SIGNATURE-----
