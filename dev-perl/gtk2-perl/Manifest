@@ -4,8 +4,10 @@ MD5 2c1e330d81349ca804ac3ee58cf9f7d9 gtk2-perl-0.26.ebuild 606
 MD5 798f112463b69c125af9e47cddd4ef24 gtk2-perl-0.90.ebuild 606
 MD5 a57164262d0c9257b2097fb35144584d gtk2-perl-0.92.ebuild 606
 MD5 356424ee3b97cb7278fd0d4dab25861d gtk2-perl-0.96.ebuild 606
+MD5 a8ecaf951f1feb3be338f920877cc20a gtk2-perl-0.97.ebuild 478
 MD5 1c1f460714e9f7eedd497abe98296fe1 files/digest-gtk2-perl-0.12 66
 MD5 c181322aca133c56f29be11a7fd33591 files/digest-gtk2-perl-0.26 61
 MD5 7fd280b55513565e77d5dec1b4176f0d files/digest-gtk2-perl-0.90 61
 MD5 3531b1fa776157ec680703b7bd8753d5 files/digest-gtk2-perl-0.92 61
 MD5 3b307fd6e88e22b47332081b1a11314b files/digest-gtk2-perl-0.96 61
+MD5 3c6877e479e1981f98744cfc38929d6f files/digest-gtk2-perl-0.97 61
