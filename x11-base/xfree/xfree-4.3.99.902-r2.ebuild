@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902-r2.ebuild,v 1.6 2004/03/19 10:51:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902-r2.ebuild,v 1.7 2004/03/27 21:20:07 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -9,7 +9,7 @@ RESTRICT="nostrip"
 # IUSE="sse mmx 3dnow" were disabled in favor of autodetection
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
 IUSE="3dfx cjk debug doc ipv6 nls pam sdk static truetype xml2"
-# INPUT_DEVICES="synaptics"
+IUSE_INPUT_DEVICES="synaptics wacom"
 
 filter-flags "-funroll-loops"
 
@@ -128,6 +128,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 PDEPEND="x86? (
 			3dfx? ( >=media-libs/glide-v3-3.10 )
 			input_devices_synaptics? ( x11-misc/synaptics )
+			input_devices_wacom? ( x11-misc/linuxwacom )
 		)"
 
 PROVIDE="virtual/x11
