@@ -4,11 +4,13 @@ MD5 1b51bf14fd8e6afcff2ebce354720a51 evms-1.2.1-r1.ebuild 1994
 MD5 5ec83817393efe75dfaae5e7c72df3df evms-2.0.1.ebuild 1926
 MD5 4f11978bb6a4fca4a1cda82aeca98ffe evms-2.1.1.ebuild 2429
 MD5 14cfea9314bad766e71c9a70a5a6be5f ChangeLog 2980
+MD5 84eeafc5397028021c27cf489ccef6e8 evms-2.2.1.ebuild 2125
 MD5 4ab6cd8fbc16df61b759d8a1b4ab8ae6 metadata.xml 435
 MD5 cd670e457535a10c1c329aea559f7696 files/digest-evms-1.2.1-r1 63
 MD5 dfa82f05ac2b2dab963df98f19482b17 files/digest-evms-2.0.1 63
 MD5 46223a12f7e7dcde8bbe47a3e4217bbc files/digest-evms-2.1.0 63
 MD5 91353d131bc33bd047c4ae2e263895ed files/digest-evms-2.1.1 129
 MD5 72425a7f284e5f29ed561710ff0bb77a files/digest-evms-2.2.0 63
+MD5 f5f06dba52196ddf3ebedf916f7c6f97 files/digest-evms-2.2.1 63
 MD5 d4808be7c9cf9f68c724cd9a6c2b0058 files/evms2-init 369
 MD5 8f1eecefba4d91d0f4b06cb099ac9034 files/evms-init 1018
