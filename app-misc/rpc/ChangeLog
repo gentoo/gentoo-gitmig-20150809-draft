@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/rpc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/ChangeLog,v 1.5 2003/10/18 07:25:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/ChangeLog,v 1.6 2003/10/18 07:32:57 mr_bones_ Exp $
+
+*rpc-0.98 (18 Oct 2003)
+
+  18 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> rpc-0.98.ebuild:
+  more error checking and mark ~sparc (slipped thru on the last commit)
 
   18 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> :
   version bump
