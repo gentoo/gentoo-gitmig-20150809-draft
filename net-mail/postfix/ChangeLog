@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.43 2002/12/23 20:43:43 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.44 2002/12/23 20:45:56 blizzy Exp $
+
+*postfix-2.0.0 (23 Dec 2002)
+
+  23 Dec 2002; Maik Schreiber <blizzy@gentoo.org> : New upstream version.
 
   23 Dec 2002; Maik Schreiber <blizzy@gentoo.org> files/postfix.rc6: Added
   "use dns" to depend().

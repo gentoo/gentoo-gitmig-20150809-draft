@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (23 Dec 2002)
+# needs quite some testing (especially with sasl 1+2)
+=net-mail/postfix-2.0.0
+
 # <danarmak@gentoo.org> (22 Dec 2002)
 # until bug #12538 can be resolved
 =x11-libs/qt-3.1.1
