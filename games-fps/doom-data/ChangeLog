@@ -1,0 +1,8 @@
+# ChangeLog for games-fps/doom-data
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/ChangeLog,v 1.1 2004/07/21 01:21:14 vapier Exp $
+
+*doom-data-1 (20 Jul 2004)
+
+  20 Jul 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
