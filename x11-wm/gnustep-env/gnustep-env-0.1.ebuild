@@ -10,6 +10,6 @@ src_install() {
 	# Does anyone use GNUstep ?  Hopefully this will be fixed when
 	# someone package GNUstep, otherwise should work just fine.
 	insinto /etc/env.d
-	doins ${FILESDIR}/25gnustep
+	doins ${FILESDIR}/10gnustep
 }
 

@@ -13,7 +13,7 @@ DEPEND="virtual/glibc virtual/x11
 	>=media-libs/libpng-1.0.12
 	>=media-libs/giflib-4.1.0-r3
 	>=media-libs/jpeg-6b-r2
-	x11-wm/gnustep-env
+	x11-wm/gnustep-env"
 # Replaced by WINGS
 #	>=x11-libs/libPropList-0.10.1"
 
