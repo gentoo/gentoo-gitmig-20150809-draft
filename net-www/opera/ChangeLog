@@ -1,6 +1,13 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.68 2004/06/25 15:45:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.69 2004/07/03 08:52:03 lanius Exp $
+
+*opera-7.51-r1 (03 Jul 2004)
+
+  03 Jul 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.50-r1.ebuild,
+  opera-7.51-r1.ebuild:
+  fix sandbox violation, bug #55130
+  fix artsd support with java, bug #54813
 
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org> opera-6.12.ebuild,
   opera-7.11-r2.ebuild, opera-7.23-r1.ebuild, opera-7.50-r1.ebuild,
