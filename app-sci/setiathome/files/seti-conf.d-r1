@@ -1,7 +1,12 @@
 # Config file for /etc/init.d/setiathome
 
+# specify the number of setiathome processes to start
+SETIATHOME_THREADS="1"
+
 # set up any options you want for setiathome here
 # for more info, `setiathome -h`
 SETIATHOME_OPTIONS="-nice 19"
 
-# this is the directory where setiathome's data files will be stored
+# this is the directory where setiathome's run-time
+# data files will be stored
+SETIATHOME_DIR=/var/lib/setiathome

@@ -1,34 +1,34 @@
 #!/sbin/runscript
 
-cpus=`egrep -c "^bogomips" /proc/cpuinfo`
+if [ -z "${SETIATHOME_THREADS}" ]; then
+  SETIATHOME_THREADS=$( egrep -c "^bogomips" /proc/cpuinfo )
+fi
 
 depend() { 
 	need net
 }
 
 checkconfig() {
-        if [ ! -e ${SETIATHOME_DIR} ]
+        if [ ! -e "${SETIATHOME_DIR}" ]
         then
                 einfo "Creating ${SETIATHOME_DIR}"
-                mkdir ${SETIATHOME_DIR}
+                mkdir "${SETIATHOME_DIR}"
         fi
 
-        if [ ! -e ${SETIATHOME_DIR}/user_info.sah ]
+        if [ ! -e "${SETIATHOME_DIR}/user_info.sah" ]
         then
                 einfo "Setting up SETI@home for the first time"
-                cd ${SETIATHOME_DIR}
-                ./setiathome -login
+                cd "${SETIATHOME_DIR}"
+                /opt/setiathome/setiathome -login
         fi
 
-        if [ $cpus != '1' ]; then
+        if [ "${SETIATHOME_THREADS}" != '1' ]; then
                 cd ${SETIATHOME_DIR}
-                for cpu in `seq 2 $cpus`; do
-                        if [ ! -e ${SETIATHOME_DIR}/cpu${cpu} ]; then
-                                mkdir ${SETIATHOME_DIR}/cpu${cpu}
-                                cp ${SETIATHOME_DIR}/* ${SETIATHOME_DIR}/cpu${cpu} > /dev/null
-                                rm ${SETIATHOME_DIR}/cpu${cpu}/*.sah > /dev/null
-                                cp ${SETIATHOME_DIR}/user_info.sah ${SETIATHOME_DIR}/cpu${cpu}
-                        fi
+		for thread in `seq 2 "${SETIATHOME_THREADS}"`; do
+			if [ ! -e "${SETIATHOME_DIR}/thread${thread}" ]; then
+				mkdir "${SETIATHOME_DIR}/thread${thread}"
+				cp "${SETIATHOME_DIR}/user_info.sah" "${SETIATHOME_DIR}/thread${thread}"                        fi
+			fi
                 done
         fi
 }
@@ -36,20 +36,19 @@ checkconfig() {
 start() {
         checkconfig
 
-
-        if [ $cpus = '1' ]; then
+	if [ "${SETIATHOME_THREADS}" = '1' ]; then
                 ebegin "Starting SETI@home"
         else
-                ebegin "Starting SETI@home ($cpus processors)"
+		ebegin "Starting SETI@home (${SETIATHOME_THREADS} threads)"
         fi
 
-        for cpu in `seq 1 $cpus`; do
-                cd ${SETIATHOME_DIR}
-                if [ $cpu != '1' ]; then
-                        cd cpu${cpu}
-                fi
+	for thread in `seq 1 "${SETIATHOME_THREADS}"`; do
+		cd "${SETIATHOME_DIR}"
+		if [ "${thread}" != '1' ]; then
+			cd "thread${thread}"
+		fi
 
-                ./setiathome ${SETIATHOME_OPTIONS} >&/dev/null&
+		/opt/setiathome/setiathome ${SETIATHOME_OPTIONS} >&/dev/null&
         done
 
         eend $?
