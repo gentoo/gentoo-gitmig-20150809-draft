@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.65 2004/02/03 01:04:30 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.66 2004/02/06 20:03:28 azarah Exp $
+
+  06 Feb 2004; Martin Schlemmer <azarah@gentoo.org> util-linux-2.12-r4.ebuild:
+  Bump to stable for x86.
 
   03 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
   util-linux-2.12-r3.ebuild:
