@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/XML-RSS
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.1 2003/10/03 12:10:06 mcummings Exp $
+
+*XML-RSS-1.02 (03 Oct 2003)
+
+  03 Oct 2003; Michael Cummings <mcummings@gentoo.org> XML-RSS-1.02.ebuild,
+  metadata.xml:
+  Ebuild submitted by Matsuu Takuto <matsuu@gentoo.org> in bug 26687 as a dep
+  for a gnome app
+
