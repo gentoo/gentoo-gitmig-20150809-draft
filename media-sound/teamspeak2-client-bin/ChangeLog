@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/teamspeak2-client-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/ChangeLog,v 1.18 2005/01/07 22:26:06 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/ChangeLog,v 1.19 2005/01/29 15:32:17 greg_g Exp $
+
+  29 Jan 2005; Gregorio Guidi <greg_g@gentoo.org>
+  teamspeak2-client-bin-2.0.32.60-r3.ebuild:
+  Make sure to not install anything in /usr/kde* (related to #41576).
 
   07 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   teamspeak2-client-bin-2.0.32.60-r3.ebuild:
