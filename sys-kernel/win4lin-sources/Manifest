@@ -1,4 +1,4 @@
-MD5 d7d8b5c4768862cdc11382870c684889 ChangeLog 8236
+MD5 0f86bd375724c5b1b3f378f4d08e48c9 ChangeLog 8445
 MD5 608fe99985244b0445f76cee44c9ae14 metadata.xml 290
 MD5 8ce028c81e1760d848e849436170b031 win4lin-sources-2.4.26-r7.ebuild 2336
 MD5 d6ce1722f74216b1f87fad655ba7a13e win4lin-sources-2.6.7-r7.ebuild 1753
@@ -14,7 +14,7 @@ MD5 dc18e982f8149588a291956481885a8c files/win4lin-sources-2.4.26.CAN-2004-0495.
 MD5 60d25ff310fc6abfdce39ec9e47345af files/win4lin-sources-2.4.26.CAN-2004-0685.patch 2809
 MD5 39361f8d16b1fe5891aab62e92f8cd30 files/win4lin-sources-2.6.IPTables-RDoS.patch 390
 MD5 d4a740ae56c2049247083af387a22a85 files/win4lin-sources-2.4.26.CAN-2004-0394.patch 350
-MD5 2f08e494010f1d9fcd2df8ea9402e418 files/digest-win4lin-sources-2.4.26-r7 353
+MD5 65254b087906bead43e7e7bf9eba7610 files/digest-win4lin-sources-2.4.26-r7 353
 MD5 02c062ec3a11a6a1498cdf0b1716c90a files/win4lin-sources-2.6.6.FPULockup-53804.patch 895
 MD5 0f66013f643c79c97fda489618a4e2fd files/win4lin-sources-2.4.26.CAN-2004-0535.patch 476
 MD5 95708646470a95668e8789cd415844ed files/win4lin-sources.CAN-2004-0497.patch 846
