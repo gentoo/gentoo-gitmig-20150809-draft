@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.59 2003/05/18 22:22:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.60 2003/06/02 20:10:04 kumba Exp $
+
+  02 Jun 2003; Joshua Kinard <kumba@gentoo.org> glibc-2.3.2-r1.ebuild:
+  Added ~mips to KEYWORDS
 
   18 May 2003; Martin Schlemmer <azarah@gentoo.org> :
   Fix LICENSE to be LGPL-2, bug #19074.  Fix glibc-2.3* < 2.3.2-r2 to depend
