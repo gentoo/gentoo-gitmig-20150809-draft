@@ -1,6 +1,10 @@
 # ChangeLog for net-www/gentoo-webroot-default
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.1 2005/01/22 05:09:18 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.2 2005/01/23 07:32:04 trapni Exp $
+
+  23 Jan 2005; Christian Parpart <trapni@gentoo.org>
+  gentoo-webroot-default-0.1.ebuild:
+  Adding ~amd64 keyword
 
 *gentoo-webroot-default-0.1 (22 Jan 2005)
 
