@@ -1,17 +1,21 @@
 # ChangeLog for app-text/dgs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.4 2002/08/02 17:42:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.5 2002/10/11 11:40:00 seemant Exp $
+
+*dgs-0.5.10-r1 (1 Feb 2002)
+
+  11 Oct 2002; Seemant Kulleen <seemant@gentoo.org> dgs-0.5.10-r1.ebuild :
+
+  Some manpages were going into /usr/share/man/manm which is wrong.  They
+  are now being newman'd into /usr/share/man/man1 instead.
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
 
   Added KEYWORDS.
 
-
   11 Apr 2002; Spider <spider@gentoo.org>
-  Update all glib dependencies to use glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
-
-
-*dgs-0.5.10-r1 (1 Feb 2002)
+  Update all glib dependencies to use glib-1.2*  in preparation of unmasking 
+  the glib-2.0.1 packages
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> dgs-0.5.10-r1.ebuild :
   Added LICENSE, SLOT.
