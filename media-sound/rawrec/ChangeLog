@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rawrec
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.5 2004/07/01 07:57:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.6 2004/07/20 06:11:15 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> rawrec-0.9.98.ebuild:
+  Added to ~amd64
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> rawrec-0.9.98.ebuild:
   virtual/glibc -> virtual/libc
