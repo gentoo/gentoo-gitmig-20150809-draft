@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/netspeed_applet-0.7.ebuild,v 1.2 2002/12/09 04:33:09 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/netspeed_applet-0.7.ebuild,v 1.3 2003/01/04 00:32:46 foser Exp $
 
 IUSE=""
 DESCRIPTION="Applet showing network traffic for GNOME 2"
@@ -9,7 +9,7 @@ SRC_URI="http://mfcn.ilo.de/netspeed_applet/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 
 DEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/libgtop-2
