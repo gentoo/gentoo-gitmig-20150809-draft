@@ -1,12 +1,11 @@
 # ChangeLog for dev-libs/libtc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.4 2004/05/23 19:54:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.5 2004/06/04 09:28:44 zypher Exp $
 
-  23 May 2004; Bryan Østergaard <kloeri@gentoo.org> libtc-1.0.3.ebuild:
-  Stable on alpha.
+*libtc-1.1.0 (06 Mar 2004)
 
-  25 Mar 2004; Martin Holzer <mholzer@gentoo.org> libtc-1.0.3.ebuild:
-  fixing depend. see 45343
+  10 Mar 2004; Marc Hildebrand <zypher@gentoo.org> libtc-1.1.0.ebuild:
+  Version bump
 
 *libtc-1.0.3 (23 Nov 2003)
 
