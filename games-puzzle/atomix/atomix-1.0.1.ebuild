@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-1.0.1.ebuild,v 1.6 2004/10/03 07:08:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-1.0.1.ebuild,v 1.7 2004/10/06 05:33:21 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -37,6 +37,10 @@ src_unpack() {
 	sed -i \
 		-e 's/default:/default:;/' src/goal-view.c \
 		|| die "sed failed"
+	sed -i \
+		-e '581 s/default:/default:;/' src/level-convert.c \
+		|| die "sed failed"
+
 	sed -i \
 		-e 's/games.games/games:games/' Makefile.in \
 		|| die "sed failed"
