@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/achemso
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/achemso/ChangeLog,v 1.1 2004/03/27 19:14:50 usata Exp $
+
+*achemso-1.0 (28 Mar 2004)
+
+  28 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> achemso-1.0.ebuild:
+  Initial import. Ebuild submitted by Adam Tenderholt
+  <a-tenderholt@stanford.edu>, closing bug #45771
+
