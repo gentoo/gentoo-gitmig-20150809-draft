@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.13 2003/10/21 14:59:28 dholm Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.14 2004/02/17 10:05:24 phosphan Exp $
+
+*R-1.8.1 (17 Feb 2004)
+
+  17 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> R-1.8.1.ebuild:
+  Version bump
 
   21 Oct 2003; David Holm <dholm@gentoo.org> R-1.8.0.ebuild:
   Added to ~ppc.
