@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-faad
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.10 2005/01/05 23:20:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.11 2005/03/11 19:30:37 lanius Exp $
+
+  11 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  gst-plugins-faad-0.8.7.ebuild:
+  stable on amd64
 
 *gst-plugins-faad-0.8.7 (05 Jan 2004)
 
