@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.23 2004/09/28 01:59:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.24 2004/10/03 07:38:34 vapier Exp $
 
 inherit gnuconfig flag-o-matic
 
 DESCRIPTION="Super-useful stream editor"
-HOMEPAGE="http://www.gnu.org/software/sed/sed.html"
+HOMEPAGE="http://sed.sourceforge.net/"
 SRC_URI="mirror://gnu/sed/${P}.tar.gz"
 
 LICENSE="GPL-2"
