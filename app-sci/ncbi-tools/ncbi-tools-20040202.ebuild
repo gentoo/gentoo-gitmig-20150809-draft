@@ -1,22 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20031103.ebuild,v 1.3 2004/02/06 00:44:37 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20040202.ebuild,v 1.1 2004/02/06 00:44:37 sediener Exp $
 
 DESCRIPTION="NCBI toolkit including the BLAST group of programs, entrez, ddv, udv, sequin and others"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/"
 
-SRC_URI="mirror://gentoo/${P}.tar.gz mirror://gentoo/${PN}-data-${PV}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz mirror://gentoo/${PN}-data.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE="X png"
 
 DEPEND="app-shells/tcsh
 		X? ( >=xfree-4.3.0
 			x11-libs/openmotif
-			png? ( media-libs/libpng )
+		 	png? ( media-libs/libpng )
 		)"
 
 S=${WORKDIR}/${P}
@@ -32,12 +32,14 @@ src_compile() {
 		sed -e "s:\#set HAVE_MOTIF=0:set HAVE_MOTIF=0:" -i ncbi/make/makedis.csh
 	fi
 
-	# change to our CFLAGS
-	sed -e "s:-O2:${CFLAGS}:" -i ncbi/platform/linux.ncbi.mk
+	#X11 apps crap out with -O3	
+	sed -e "s:-O3:-O2:g" -i ncbi/platform/linux-x86.ncbi.mk
+	# change to our CFLAGS, use at your own risk
+	# sed -e "s:-pipe:${CFLAGS}:" -i ncbi/platform/linux-x86.ncbi.mk
+	# sed -e "s:-pipe:${CFLAGS}:" -i ncbi/platform/linux.ncbi.mk
 
-	# put in our MAKEOPTS 
-	# VERY BROKEN :: PLEASE FIGURE IT OUT IF YOU CAN...
-	# dosed "s/MFLG=\"\"/MFLG=\"${MAKEOPTS}\"/" ncbi/make/makedis.csh
+	# put in our MAKEOPTS (doesn't work)
+	# sed -e "s:make \$MFLG:make ${MAKEOPTS}:" -i ncbi/make/makedis.csh
 
 	./ncbi/make/makedis.csh 2>&1 | tee out.makedis.txt
 

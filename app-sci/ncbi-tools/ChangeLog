@@ -1,6 +1,20 @@
 # ChangeLog for app-sci/ncbi-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.6 2004/01/11 13:51:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.7 2004/02/06 00:44:36 sediener Exp $
+
+*ncbi-tools-20040202 (05 Feb 2004)
+
+  05 Feb 2004; Stephen Diener <sediener@gentoo.org>
+  ncbi-tools-04222003-r1.ebuild, ncbi-tools-04222003.ebuild,
+  ncbi-tools-20030422.ebuild, ncbi-tools-20031103.ebuild,
+  ncbi-tools-20040202.ebuild:
+  Bumped 20031103 to x86, removed old ebuilds, added new release 20040202
+
+*ncbi-tools-20040202 (04 Feb 2004)
+
+  04 Feb 2004; Stephen Diener <sediener@gentoo.org>
+  ncbi-tools-20031103.ebuild, ncbi-tools-20040202.ebuild:
+  Version bump.  Changes -O3 -> -O2 so X11 apps will work.
 
   11 Jan 2004; Heinrich Wendel <lanius@gentoo.org>
   ncbi-tools-04222003-r1.ebuild, ncbi-tools-04222003-r2.ebuild,
