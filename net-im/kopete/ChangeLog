@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kopete
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.37 2004/03/01 20:37:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.38 2004/03/27 16:25:50 lanius Exp $
+
+  27 Mar 2004; Heinrich Wendel <lanius@gentoo.org> kopete-0.7.4.ebuild,
+  kopete-0.8.0.ebuild:
+  increase the irc timeout, bug #41085
 
   09 Feb 2004; <gustavoz@gentoo.org> kopete-0.7.5.ebuild:
   stable on sparc
