@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r8.ebuild,v 1.1 2005/02/11 13:29:53 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r8.ebuild,v 1.2 2005/02/11 13:47:29 ferdy Exp $
 
 DESCRIPTION="MTA layout package"
 SRC_URI=""
@@ -9,45 +9,48 @@ HOMEPAGE="http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~ppc-macos"
-IUSE=""
+IUSE="pam"
 
 DEPEND=""
 
 S=${WORKDIR}
 
 pkg_setup() {
-	local filestoremove=0;
-	local lineorig=`head -n 1 ${FILESDIR}/common-pamd`
-	local lineold=""
-
-	einfo "Checking for possible file collisions..."
-
-	for i in pop pop3 pop3s pops imap imap4 imap4s imaps;
-	do
-		if [[ -e ${ROOT}/etc/pam.d/${i} ]]
-		then
-			lineold="`head -n 1 ${ROOT}/etc/pam.d/${i}`"
-
-			if [[ "${lineorig}" != "${lineold}" ]]
-			then
-				ewarn "${ROOT}/etc/pam.d/${i} exists and wasn't provided by mailbase"
-				(( filestoremove++ ))
-			fi
-		fi
-	done
-
-	if [[ filestoremove -gt 0 ]]
+	if use pam;
 	then
-		echo
-		einfo "Those files listed above have to be removed in order to"
-		einfo " install this version of mailbase."
-		echo
-		ewarn "If you edited them, remember to backup and when restoring make"
-		ewarn " sure the first line in each file is:"
-		einfo ${lineorig}
-		die "Can't be installed, files will collide"
-	else
-		einfo "... everything looks ok"
+		local filestoremove=0;
+		local lineorig=`head -n 1 ${FILESDIR}/common-pamd`
+		local lineold=""
+
+		einfo "Checking for possible file collisions..."
+
+		for i in pop pop3 pop3s pops imap imap4 imap4s imaps;
+		do
+			if [[ -e ${ROOT}/etc/pam.d/${i} ]]
+			then
+				lineold="`head -n 1 ${ROOT}/etc/pam.d/${i}`"
+
+				if [[ "${lineorig}" != "${lineold}" ]]
+				then
+					ewarn "${ROOT}/etc/pam.d/${i} exists and wasn't provided by mailbase"
+					(( filestoremove++ ))
+				fi
+			fi
+		done
+
+		if [[ filestoremove -gt 0 ]]
+		then
+			echo
+			einfo "Those files listed above have to be removed in order to"
+			einfo " install this version of mailbase."
+			echo
+			ewarn "If you edited them, remember to backup and when restoring make"
+			ewarn " sure the first line in each file is:"
+			einfo ${lineorig}
+			die "Can't be installed, files will collide"
+		else
+			einfo "... everything looks ok"
+		fi
 	fi
 }
 
@@ -63,11 +66,14 @@ src_install() {
 	fperms 0775 /var/spool/mail
 	dosym /var/spool/mail /var/mail
 
-	insinto /etc/pam.d/
-	for i in pop pop3 pop3d pops imap imap4 imap4s imaps;
-	do
-		newins ${FILESDIR}/common-pamd ${i}
-	done
+	if use pam;
+	then
+		insinto /etc/pam.d/
+		for i in pop pop3 pop3d pops imap imap4 imap4s imaps;
+		do
+			newins ${FILESDIR}/common-pamd ${i}
+		done
+	fi
 }
 
 pkg_postinst() {
