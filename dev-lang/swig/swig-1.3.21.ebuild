@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.8 2004/04/11 17:30:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.9 2004/04/28 19:22:26 lanius Exp $
 
 IUSE="java guile python tcltk ruby perl"
 
@@ -55,8 +55,8 @@ src_compile() {
 	`has_version dev-lisp/plt` && PLT=/usr/share/plt/collects
 	`has_version dev-lisp/mzscheme` && PLT=/usr/share/mzscheme/collects
 
-	make || die
-	make runtime PLTCOLLECTS=$PLT || die
+	emake || die
+	emake runtime PLTCOLLECTS=$PLT || die
 }
 
 src_install () {
