@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-0.3.ebuild,v 1.1 2004/06/28 14:52:59 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-0.3.ebuild,v 1.2 2004/07/08 14:19:11 rizzo Exp $
 
 inherit flag-o-matic eutils
 use debug && inherit debug
@@ -12,11 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-
-src_compile() {
-	econf || die "Configuration failed"
-	emake || die "Make failed"
-}
 
 src_install() {
 	make install DESTDIR=${D} || die "Install failed"
