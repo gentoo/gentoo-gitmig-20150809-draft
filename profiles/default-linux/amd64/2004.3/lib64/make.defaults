@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/lib64/make.defaults,v 1.16 2005/02/01 18:48:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/lib64/make.defaults,v 1.17 2005/02/03 03:43:14 eradicator Exp $
 
 # GCC 3.4.2 has multilib enabled by default, but we still need multilib in USE
 # for compatibility
@@ -20,5 +20,3 @@ CONF_MULTILIBDIR="lib32"
 # help us squash bugs for future correct multilib support.
 MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
 MULTILIB_STRICT_DENY="64-bit.*shared object"
-
-SYMLINK_LIB="yes"
