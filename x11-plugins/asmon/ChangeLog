@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asmon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.8 2004/11/06 16:29:40 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.9 2004/11/08 23:21:58 kloeri Exp $
+
+  09 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> asmon-0.64.ebuild:
+  ~alpha keyword.
 
   06 Nov 2004; <pyrania@gentoo.org> asmon-0.64.ebuild:
   Marked stable on x86.
