@@ -259,33 +259,38 @@ default installation destinations are fine, with a few exceptions:</p>
 <p><c>ebuild</c></p>
 <p><c>ebuild</c> is the main engine of the Portage system; it performs all major tasks such as unpacking, compiling, installing, merging, and unmerging packages. It is called using the command: <c>ebuild path/to/package.ebuild command</c>. The commands available are:</p>
 <table>
-<tr><ti><c>depend</c></ti><ti>displays the dependencies required to build the package</ti></tr>
-<tr><ti><c>check</c></ti><ti>checks that the package dependencies are fulfilled</ti></tr>
-<tr><ti><c>rcheck</c></ti><ti>checks that the package runtime dependencies are fulfilled</ti></tr>
-<tr><ti><c>merge</c></ti><ti>unpacks, compiles, installs, and merges the package into your filesystem</ti></tr>
-<tr><ti>*<c>qmerge</c></ti><ti>merges the package into your filesystem, assuming that the the unpack, compile, and install stages have already been executed</ti></tr>
-<tr><ti><c>unpack</c></ti><ti>unpacks the source tarballs into the work directory</ti></tr>
-<tr><ti><c>compile</c></ti><ti>compiles the package</ti></tr>
-<tr><ti><c>rpm</c></ti><ti>creates an RPM from the package</ti></tr>
-<tr><ti><c>package</c></ti><ti>creates a Gentoo <c>tbz2</c> package</ti></tr>
-<tr><ti>*<c>prerm</c></ti><ti>executes the pre-removal stage of the package</ti></tr>
-<tr><ti>*<c>postrm</c></ti><ti>executes the post-removal stage of the package</ti></tr>
-<tr><ti>*<c>preinst</c></ti><ti>executes the pre-installation stage of the package</ti></tr>
-<tr><ti>*<c>postinst</c></ti><ti>executes the post-installation stage of the package</ti></tr>
-<tr><ti>*<c>config</c></ti><ti></ti></tr>
-<tr><ti>*<c>touch</c></ti><ti></ti></tr>
-<tr><ti><c>clean</c></ti><ti>cleans the work directory for the package</ti></tr>
-<tr><ti><c>fetch</c></ti><ti>fetches the package source tarballs</ti></tr>
-<tr><ti>*<c>digest</c></ti><ti>creates a digest file for the package</ti></tr>
-<tr><ti><c>install</c></ti><ti>installs the package into the image directory</ti></tr>
-<tr><ti><c>unmerge</c></ti><ti>unmerges the package from your filesystem</ti></tr>
+<tr><th>Command</th><th>Description</th><th>Related <c>ebuild</c> Function</th></tr>
+<tr><ti><c>depend</c></ti><ti>displays the dependencies required to build the package</ti><ti>n/a</ti></tr>
+<tr><ti><c>check</c></ti><ti>checks that the package dependencies are fulfilled</ti><ti>n/a</ti></tr>
+<tr><ti><c>rcheck</c></ti><ti>checks that the package runtime dependencies are fulfilled</ti><ti>n/a</ti></tr>
+<tr><ti><c>merge</c></ti><ti>unpacks, compiles, installs, and merges the package into your filesystem</ti><ti>n/a</ti></tr>
+<tr><ti>*<c>qmerge</c></ti><ti>merges the package into your filesystem, assuming that the the unpack, compile, and install stages have already been executed</ti><ti>n/a</ti></tr>
+<tr><ti>*<c>unpack</c></ti><ti>unpacks the source tarballs into the work directory</ti><ti><c>src_unpack</c></ti></tr>
+<tr><ti>*<c>compile</c></ti><ti>compiles the package</ti><ti><c>src_compile</c></ti></tr>
+<tr><ti><c>rpm</c></ti><ti>creates an RPM from the package</ti><ti>n/a</ti></tr>
+<tr><ti><c>package</c></ti><ti>creates a Gentoo <c>tbz2</c> package</ti><ti>n/a</ti></tr>
+<tr><ti>*<c>prerm</c></ti><ti>executes the pre-removal stage of the package</ti><ti>pkg_prerm</ti></tr>
+<tr><ti>*<c>postrm</c></ti><ti>executes the post-removal stage of the package</ti><ti>pkg_postrm</ti></tr>
+<tr><ti>*<c>preinst</c></ti><ti>executes the pre-installation stage of the package</ti><ti>pkg_preinst</ti></tr>
+<tr><ti>*<c>postinst</c></ti><ti>executes the post-installation stage of the package</ti><ti>pkg_postinst</ti></tr>
+<tr><ti><c>config</c></ti><ti>sets up a default configuration once the package is merged</ti><ti>src_config</ti></tr>
+<tr><ti>*<c>touch</c></ti><ti>updates the mtimes for each source archive in the package</ti><ti>n/a</ti></tr>
+<tr><ti>*<c>clean</c></ti><ti>cleans the work directory for the package</ti><ti>n/a</ti></tr>
+<tr><ti>*<c>fetch</c></ti><ti>fetches the package source tarballs</ti><ti>n/a</ti></tr>
+<tr><ti>*<c>digest</c></ti><ti>creates a digest file for the package</ti><ti>n/a</ti></tr>
+<tr><ti>*<c>install</c></ti><ti>installs the package into the image directory</ti><ti>src_install</ti></tr>
+<tr><ti><c>unmerge</c></ti><ti>unmerges the package from your filesystem</ti><ti>n/a</ti></tr>
 </table>
+<p>Note: commands with an asterisk (*) are normally only used by the developer.</p>
 
 <p><c>emerge</c></p>
 <p><c>emerge</c> recursively merges a package and all of its dependencies into your filesystem.</p>
 
 <p><c>pkgmerge</c></p>
 <p><c>pkgmerge</c> merges a Gentoo <c>tbz2</c> package.</p>
+
+<p><c>env-update</c></p>
+<p><c>env-update</c> updates the configuration files (including, but not limited to <path>/etc/ld.so.conf</path> and <path>/etc/profile.env</path>) to include changes made by installed packages.</p>
 </body>
 </section>
 
@@ -293,9 +298,9 @@ default installation destinations are fine, with a few exceptions:</p>
 <title>Private Scripts and Commands</title>
 <body><p>These are scripts you can use in your ebuild files to perform common tasks.</p>
 <table>
-<tr><ti>dobin</ti><ti></ti></tr>
-<tr><ti>dodir</ti><ti></ti></tr>
-<tr><ti>dodoc</ti><ti></ti></tr>
+<tr><ti>dobin</ti><ti>installs the specified binaries into <path>DESTTREE/bin</path></ti></tr>
+<tr><ti>dodir</ti><ti>sets the target prefix (<path>DESTTREE</path>) for <c>dobin</c>, <c>dolib</c>, <c>doman</c>, etc.</ti></tr>
+<tr><ti>dodoc</ti><ti>installs the specified files into the packages documentation directory (<path>/usr/share/doc/${PF}</path>)</ti></tr>
 <tr><ti>doexe</ti><ti></ti></tr>
 <tr><ti>dohard</ti><ti></ti></tr>
 <tr><ti>doinfo</ti><ti></ti></tr>
@@ -310,10 +315,6 @@ default installation destinations are fine, with a few exceptions:</p>
 <tr><ti>dosbin</ti><ti></ti></tr>
 <tr><ti>dosed</ti><ti></ti></tr>
 <tr><ti>dosym</ti><ti></ti></tr>
-<tr><ti>ebuild</ti><ti></ti></tr>
-<tr><ti>ebuild.sh</ti><ti></ti></tr>
-<tr><ti>emerge</ti><ti></ti></tr>
-<tr><ti>env-update</ti><ti></ti></tr>
 <tr><ti>find-packages</ti><ti></ti></tr>
 <tr><ti>find-requires</ti><ti></ti></tr>
 <tr><ti>fowners</ti><ti></ti></tr>
@@ -332,10 +333,8 @@ default installation destinations are fine, with a few exceptions:</p>
 <tr><ti>newman</ti><ti></ti></tr>
 <tr><ti>newsbin</ti><ti></ti></tr>
 <tr><ti>pkgmerge</ti><ti></ti></tr>
-<tr><ti>pkgmerge.new</ti><ti></ti></tr>
 <tr><ti>pkgname</ti><ti></ti></tr>
 <tr><ti>pmake</ti><ti></ti></tr>
-<tr><ti>portage-maintain</ti><ti></ti></tr>
 <tr><ti>prepall</ti><ti></ti></tr>
 <tr><ti>prepalldocs</ti><ti></ti></tr>
 <tr><ti>prepallinfo</ti><ti></ti></tr>
