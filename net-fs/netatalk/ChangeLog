@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.7 2003/06/24 19:38:11 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.8 2003/07/01 21:39:46 mholzer Exp $
+
+*netatalk-1.6.2 (01 Jul 2003)
+
+  01 Jul 2003; Martin Holzer <mholzer@gentoo.org> netatalk-1.6.2.ebuild,
+  files/atalknew-rc6:
+  Version bumped. Closes #13561.
 
   24 Jun 2003; Paul de Vrieze <pauldv@gentoo.org> netatalk-1.5.3.1-r1.ebuild:
   Netatalk actually does not depend on sys-libs/db at all, only when some
