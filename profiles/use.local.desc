@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.591 2004/09/02 08:38:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.592 2004/09/03 03:53:27 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -304,6 +304,8 @@ media-gfx/opendx:hdf - Adds support for the Hierarchical Data Format
 media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled optimised version.
 media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled version optimised specifically for use with png.
 media-gfx/sane-frontends:gimp - Build a plugin for the GIMP
+media-libs/SDIF:threads  - Enables posix thread support
+media-libs/SDIF:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/gd:freetype-version-1 - if for some reason you want to use freetype v1 instead of v2
