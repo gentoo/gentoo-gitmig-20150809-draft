@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ocaml-make-5.04.0.ebuild,v 1.1 2003/06/20 01:09:11 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ocaml-make-5.04.0.ebuild,v 1.2 2003/09/08 03:03:01 msterret Exp $
 
 DESCRIPTION="Generic O'Caml Makefile for GNU Make"
 HOMEPAGE="http://www.ai.univie.ac.at/~markus/home/ocaml_sources.html"
