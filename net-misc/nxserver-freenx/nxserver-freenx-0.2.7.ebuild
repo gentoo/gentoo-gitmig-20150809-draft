@@ -1,22 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.2.3.ebuild,v 1.2 2005/01/02 10:00:05 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.2.7.ebuild,v 1.1 2005/01/02 10:00:05 stuart Exp $
 
 inherit eutils
 
 DESCRIPTION="Windows Remote Desktop for X11"
 HOMEPAGE="http://www.kalyxo.org/twiki/bin/view/Main/FreeNX"
-SRC_URI="http://debian.tu-bs.de/knoppix/nx/freenx-0.2-3.tar.gz"
+SRC_URI="http://debian.tu-bs.de/knoppix/nx/freenx-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="net-misc/nx-x11
-		<=net-misc/nxclient-1.3.99
-		>=net-misc/nxssh-1.4.0
-		dev-tcltk/expect"
+		=net-misc/nxclient-1.4*
+		dev-tcltk/expect
+		net-analyzer/gnu-netcat"
 
-S=${WORKDIR}/freenx-0.2-3
+S=${WORKDIR}/freenx-${PV}
 
 pkg_setup () {
 	enewuser nx -1 /bin/false /usr/NX/home/nx
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch gentoo-nomachine.diff
+	epatch ${FILESDIR}/nxserver-path.diff
 }
 
 src_compile() {

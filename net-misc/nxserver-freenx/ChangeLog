@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freenx
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.8 2004/11/24 21:59:15 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.9 2005/01/02 10:00:05 stuart Exp $
+
+  02 Jan 2005; Stuart Herbert <stuart@gentoo.org> +files/nxserver-path.diff,
+  nxserver-freenx-0.2.4.ebuild:
+  Version bump; thanks to Christian Oyarzun for the patch; see bug #71694
 
   24 Nov 2004; Sven Wegener <swegener@gentoo.org>
   nxserver-freenx-0.2.2.ebuild:

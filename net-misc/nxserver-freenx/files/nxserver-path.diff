@@ -1,0 +1,11 @@
+--- nxserver.orig	2004-12-12 15:51:12.283474376 -0500
++++ nxserver	2004-12-12 15:51:46.385290112 -0500
+@@ -487,7 +487,7 @@
+ 	# Use nxnode-login?
+ 	if [ "$PAM_LOGIN_METHOD" = "1" ]
+ 	then
+-	  echo $PAM_PASS | nxnode-login "$USER" 127.0.0.1 "-p$SSHD_AUTH_PORT" "$CMD" "$@" 2>&1 | log_tee
++	  echo $PAM_PASS | $NX_DIR/bin/nxnode-login "$USER" 127.0.0.1 "-p$SSHD_AUTH_PORT" "$CMD" "$@" 2>&1 | log_tee
+ 	else
+ 	  echo "$@" | ssh -l "$USER" 127.0.0.1 -p $SSHD_AUTH_PORT -x -2 -i $NX_ETC_DIR/users.id_dsa -o 'PubkeyAuthentication yes' -o 'RSAAuthentication yes' -o 'RhostsAuthentication no' -o 'PasswordAuthentication no' -o 'RhostsRSAAuthentication no' -o 'StrictHostKeyChecking no' $NX_DIR/bin/nxnode "$CMD" | log_tee
+ 	fi
