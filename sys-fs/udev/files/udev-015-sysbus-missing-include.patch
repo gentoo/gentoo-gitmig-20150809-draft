@@ -1,0 +1,10 @@
+--- udev-015/udev_dbus.c~	2004-01-30 11:05:24.985407312 +0900
++++ udev-015/udev_dbus.c	2004-01-30 11:05:05.443378152 +0900
+@@ -12,6 +12,7 @@
+ #include "udev.h"
+ #include "udev_version.h"
+ #include "udev_dbus.h"
++#include "logging.h"
+ 
+ 
+ /** variable for the connection the to system message bus or #NULL

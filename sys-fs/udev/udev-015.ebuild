@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-015.ebuild,v 1.1 2004/01/29 18:39:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-015.ebuild,v 1.2 2004/01/30 11:09:27 vapier Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -68,6 +68,9 @@ src_unpack() {
 
 	# Make logging a udev.conf option
 	epatch ${FILESDIR}/${P}-logging-config-option.patch
+
+	# Fix compilation #39792
+	epatch ${FILESDIR}/${P}-sysbus-missing-include.patch
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.22 2004/01/30 04:46:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.23 2004/01/30 11:09:27 vapier Exp $
+
+  30 Jan 2004; Mike Frysinger <vapier@gentoo.org>
+  udev-015-sysbus-missing-include.patch :
+  Add patch to include missing header file #39792 by Simon Watson.
 
   30 Jan 2004; Martin Schlemmer <azarah@gentoo.org>
   files/udev-015-logging-config-option.patch:
