@@ -1,0 +1,9 @@
+# ChangeLog for net-im/silc-toolkit
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.1 2004/02/14 17:56:01 zul Exp $
+
+*silc-toolkit-0.9.11 (13 Feb 2004)
+
+  13 Feb 2004; Chuck Short <zul@gentoo.org> silc-toolkit-0.9.11.ebuild:
+  Initial version by Andrej Kacian < andrej @ kacian.sk >, closes #34533.
+
