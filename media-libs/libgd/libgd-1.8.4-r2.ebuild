@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r2.ebuild,v 1.9 2004/03/25 07:11:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r2.ebuild,v 1.10 2004/04/19 06:33:17 vapier Exp $
+
+inherit eutils
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
