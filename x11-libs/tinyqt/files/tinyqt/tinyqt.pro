@@ -1,5 +1,6 @@
 TEMPLATE	= lib
 CONFIG = console release staticlib
+VERSION		= 3.0.1
 DEFINES		= QT_NO_CODECS QT_LITE_UNICODE QT_NO_REMOTE QT_NO_STL
 INCLUDEPATH	= $(QTDIR)/include ../tools ../kernel .
 DEPENDPATH	= $(QTDIR)/include ../tools ../kernel .
@@ -46,4 +47,4 @@ SOURCES		= ../tools/qbitarray.cpp	\
 	../kernel/qurloperator.cpp			\
 	../kernel/qvariant.cpp
 
-TARGET		= libtinyqt
+TARGET		= tinyqt
