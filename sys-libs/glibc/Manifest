@@ -8,7 +8,7 @@ MD5 6e4abb3a2e06a98265f33f81f7e5fb02 glibc-2.3.3.20040420.ebuild 21637
 MD5 d29a012cae7ec6e30964a9f9785468c8 glibc-2.3.1-r5.ebuild 11641
 MD5 8618c7af4c4f3312979e05485640d7f8 glibc-2.3.3_pre20040207.ebuild 20509
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 9d120d026731ac683c2557cdcbdecdf5 glibc-2.3.2-r10.ebuild 20183
+MD5 eff679895eef9e7bb9b3509e71b5ca4f glibc-2.3.2-r10.ebuild 20180
 MD5 08e69c3dc67abb9cd1d094cc33245ba3 glibc-2.3.2-r9.ebuild 19571
 MD5 43d7d1ecb89705d0ee195f0a3c943fbe glibc-2.3.3_pre20040420.ebuild 20802
 MD5 74170969ef26079a55738cd0341e606c glibc-2.3.4.20040605.ebuild 17581
@@ -144,7 +144,7 @@ MD5 81d95470c5766e56e27ad8b6967d2a16 files/2.3.3/semtimedop.diff 602
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBEQamHTu7gpaalycRAr16AJ9Nc5iFCWVsWP+X/vA8s5u+D+Sm6gCePQ0F
-XQiyUXy61xiESdpAZBKntPw=
-=ipio
+iD8DBQFBEQ4AHTu7gpaalycRAnOMAKCTpATcB8mtAvspf4FoEllhT8cSJQCeNsLc
+N7VhtuoaQxFVyBmIvKVPvqk=
+=z1kl
 -----END PGP SIGNATURE-----
