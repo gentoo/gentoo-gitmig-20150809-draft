@@ -1,6 +1,14 @@
 # ChangeLog for x11-term/mlterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.1 2002/08/22 15:57:55 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.2 2002/09/14 06:46:27 seemant Exp $
+
+*mlterm-2.5.0-r1.ebuild (13 Sep 2002)
+
+  13 Sep 2002; Seemant Kulleen <seemant@gentoo.org> mlterm-2.5.0-r1.ebuild
+  files/digest-mlterm-2.5.0-r1.ebuild :
+
+  mkeadle (Matt Keadle) noticed that conf files were going into /usr/etc, so
+  this fixes that situation.
 
 *mlterm-2.5.0.ebuild (22 Aug 2002)
 
