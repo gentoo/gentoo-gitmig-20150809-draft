@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.114 2005/03/30 07:03:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.115 2005/04/05 22:17:54 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -659,8 +659,10 @@ detect_version() {
 
 	KV_MAJOR=$(get_version_component_range 1 ${OKV})
 	KV_MINOR=$(get_version_component_range 2 ${OKV})
-	KV_PATCH=$(get_version_component_range 3- ${OKV})
+	KV_PATCH=$(get_version_component_range 3 ${OKV})
+	KV_EXTRA=$(get_version_component_range 4- ${OKV})
 	KV_PATCH=${KV_PATCH/[-_]*}
+	KV_EXTRA=${KV_EXTRA/[-_]*}
 
 	KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 
@@ -720,6 +722,13 @@ detect_version() {
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
+	fi
+
+	if [[ -n ${KV_EXTRA} ]]; then
+		OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
+		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/patch-${CKV}.bz2
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.tar.bz2"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV}.bz2"
 	fi
 
 	# we will set this for backwards compatibility.
