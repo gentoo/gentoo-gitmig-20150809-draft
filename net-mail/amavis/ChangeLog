@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/amavis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/ChangeLog,v 1.13 2003/06/22 20:49:38 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/ChangeLog,v 1.14 2003/10/27 09:58:43 raker Exp $
+
+  27 Oct 2003; Nick Hadaway <raker@gentoo.org> amavis-0.3.12.ebuild:
+  Fixing the mta detection.
 
 *amavis-0.3.12 (23 Oct 2002)
 
