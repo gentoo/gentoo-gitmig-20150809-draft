@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.95.1.ebuild,v 1.1 2003/03/03 19:17:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.95.1.ebuild,v 1.2 2003/03/09 19:11:32 foser Exp $
 
 inherit gnome2
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 RDEPEND=">=dev-libs/glib-2.1
 	>=gnome-base/libgnomeui-2.1.1
-	>=gnome-base/gnome-vfs-2
+	>=gnome-base/gnome-vfs-2.2
 	>=gnome-base/libglade-2
 	>=media-libs/xine-lib-1_beta6"
 
