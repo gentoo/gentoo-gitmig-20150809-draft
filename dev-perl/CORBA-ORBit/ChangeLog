@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/CORBA-ORBit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/ChangeLog,v 1.2 2002/05/23 21:12:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/ChangeLog,v 1.3 2002/07/31 04:45:40 cselkirk Exp $
 
 *CORBA-ORBit-0.4.3-r3 (23 May 2002)
+
+  30 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> CORBA-ORBit-0.4.3-r3.ebuild :
+
+  Added ppc to KEYWORDS. Added RDEPEND.
 
   22 May 2002; Martin Schlemmer <azarah@gentoo.org> :
 
