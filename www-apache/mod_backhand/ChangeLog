@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_backhand
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_backhand/ChangeLog,v 1.1 2005/01/22 19:20:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_backhand/ChangeLog,v 1.2 2005/02/25 15:03:59 hollow Exp $
+
+  25 Feb 2005; Benedikt Boehm <hollow@gentoo.org> mod_backhand-1.2.2.ebuild:
+  removed redundant code
 
 *mod_backhand-1.2.2 (22 Jan 2005)
 
