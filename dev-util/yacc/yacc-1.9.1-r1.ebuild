@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.22 2004/03/02 16:44:17 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.23 2004/03/05 14:18:14 tgall Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Yacc"
@@ -9,7 +9,7 @@ HOMEPAGE="http://dinosaur.compilertools.net/#yacc"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc hppa alpha mips amd64 ia64 s390"
+KEYWORDS="x86 ppc sparc hppa alpha mips amd64 ia64 s390 ppc64"
 
 DEPEND="virtual/glibc"
 

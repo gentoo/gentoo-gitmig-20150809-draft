@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/yacc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.9 2003/10/03 11:57:03 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.10 2004/03/05 14:18:14 tgall Exp $
+
+  05 Mar 2004; Tom Gall <tgall@gentoo.org> yacc-1.9.1-r1.ebuild:
+  Stable on ppc64
 
   03 Oct 2003; Aron Griffis <agriffis@gentoo.org> yacc-1.9.1-r1.ebuild:
   Stable on alpha
