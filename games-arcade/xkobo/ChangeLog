@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xkobo
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/ChangeLog,v 1.2 2003/09/10 20:33:06 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/ChangeLog,v 1.3 2004/04/22 04:50:51 mr_bones_ Exp $
+
+  21 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> xkobo-1.11.ebuild:
+  keyword for amd64 (bug #48647)
 
   11 Jul 2003; Michael Sterrett <msterret@gentoo.org> xkobo-1.11.ebuild:
   Fix DESCRIPTION; more error checking; mark stable as it should have been

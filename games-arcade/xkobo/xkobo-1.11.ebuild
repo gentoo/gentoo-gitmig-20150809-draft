@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/xkobo-1.11.ebuild,v 1.4 2004/03/16 16:16:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/xkobo-1.11.ebuild,v 1.5 2004/04/22 04:50:51 mr_bones_ Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.redhead.dk/download/pub/Xkobo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc amd64"
 IUSE=""
 
 RDEPEND="virtual/glibc
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
 	dogamesbin xkobo || die "dogamesbin failed"
 	doman xkobo.6
-	keepdir ${GAMES_STATEDIR}/xkobo-scores
+	keepdir "${GAMES_STATEDIR}/xkobo-scores"
 	prepgamesdirs
-	fperms 2775 ${GAMES_STATEDIR}/xkobo-scores
+	fperms 2775 "${GAMES_STATEDIR}/xkobo-scores"
 }
