@@ -130,3 +130,22 @@ slotmove =x11-libs/openmotif-2.1* 2.1 0
 slotmove =x11-libs/openmotif-2.2* 2.2 0
 slotmove =app-editors/emacs-21.3.50* 21.3.50 22.0.50
 move sys-apps/lm-sensors sys-apps/lm_sensors
+move kde-base/konqueror-arkplugin kde-base/konq-plugins
+move kde-base/konqueror-autorefresh kde-base/konq-plugins
+move kde-base/konqueror-babelfish kde-base/konq-plugins
+move kde-base/konqueror-crashes kde-base/konq-plugins
+move kde-base/konqueror-dirfilter kde-base/konq-plugins
+move kde-base/konqueror-domtreeviewer kde-base/konq-plugins
+move kde-base/konqueror-fsview kde-base/konq-plugins
+move kde-base/konqueror-imagerotation kde-base/konq-plugins
+move kde-base/konqueror-khtmlsettingsplugin kde-base/konq-plugins
+move kde-base/konqueror-kimgalleryplugin kde-base/konq-plugins
+move kde-base/konqueror-kuick kde-base/konq-plugins
+move kde-base/konqueror-minitools kde-base/konq-plugins
+move kde-base/konqueror-rellinks kde-base/konq-plugins
+move kde-base/konqueror-searchbar kde-base/konq-plugins
+move kde-base/konqueror-sidebar kde-base/konq-plugins
+move kde-base/konqueror-smbmounter kde-base/konq-plugins
+move kde-base/konqueror-uachanger kde-base/konq-plugins
+move kde-base/konqueror-validators kde-base/konq-plugins
+move kde-base/konqueror-webarchiver kde-base/konq-plugins
