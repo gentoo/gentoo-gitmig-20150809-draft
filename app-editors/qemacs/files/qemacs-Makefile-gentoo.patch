@@ -1,0 +1,12 @@
+diff -ur qemacs-0.3.1.original/Makefile qemacs-0.3.1/Makefile
+--- qemacs-0.3.1.original/Makefile	2003-04-21 17:01:42.000000000 -0500
++++ qemacs-0.3.1/Makefile	2003-05-10 00:13:50.000000000 -0500
+@@ -197,7 +197,6 @@
+ endif
+ 	mkdir -p $(prefix)/share/qe
+ 	install kmaps ligatures $(prefix)/share/qe
+-	install qe.1 $(prefix)/man/man1
+ 	install -m 755 -s html2png $(prefix)/bin
+ 
+ TAGS: force
+Only in qemacs-0.3.1: Makefile~
