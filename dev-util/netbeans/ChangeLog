@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.10 2003/02/15 07:31:23 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.11 2003/05/26 10:49:11 absinthe Exp $
+
+  26 May 2003; Dylan Carlson <absinthe@gentoo.org> netbeans-3.3.2.ebuild,
+  netbeans-3.4.1.ebuild, netbeans-3.4.ebuild, files/netbeans:
+  Fixed license for J2EE, and in 3.4.1 added a /usr/bin run script to close
+  #18928. Doing a symlink was not a good solution as many people symlink /opt to
+  other places, and dosym would fail under that circumstance.
 
 *netbeans-3.4.1 (23 Jan 2003)
 
