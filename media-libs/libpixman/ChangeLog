@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpixman
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpixman/ChangeLog,v 1.13 2005/01/10 14:22:15 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpixman/ChangeLog,v 1.14 2005/01/10 18:20:44 gustavoz Exp $
+
+  10 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> libpixman-0.1.2.ebuild:
+  Stable on sparc
 
   10 Jan 2005; Tom Payne <twp@gentoo.org> libpixman-0.1.2.ebuild:
   Stable on x86.
