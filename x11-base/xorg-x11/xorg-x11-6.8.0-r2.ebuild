@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.21 2004/10/19 06:21:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.22 2004/10/19 07:40:49 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -83,7 +83,6 @@ LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 SLOT="0"
 KEYWORDS="~x86"
 
-# Need portage-2.0.50_pre9 for $(use !foo)
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
@@ -96,7 +95,6 @@ DEPEND=">=sys-libs/ncurses-5.1
 	sys-apps/util-linux
 	dev-lang/perl
 	media-libs/libpng
-	>=sys-apps/portage-2.0.50_pre9
 	!x11-base/xfree
 	!virtual/xft
 	!virtual/x11"
@@ -366,7 +364,7 @@ host_def_setup() {
 		use_build debug BuildDebug
 		use_build debug DebuggableLibraries
 
-		if use !debug
+		if ! use debug
 		then
 			echo "#define ExtraXInputDrivers acecad" >> ${HOSTCONF}
 
@@ -577,12 +575,12 @@ patch_setup() {
 
 		# this patch comments out the Xserver line in xdm's config
 		# We only want it here
-		if use !s390
+		if ! use s390
 		then
 			patch_exclude 7500
 		fi
 
-	#	if use !gatos
+	#	if ! use gatos
 	#	then
 			patch_exclude 9841_all_4.3.0-gatos-mesa
 	#	fi
