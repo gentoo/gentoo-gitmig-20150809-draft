@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/refe
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/refe/ChangeLog,v 1.4 2004/06/25 01:56:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/refe/ChangeLog,v 1.5 2004/11/01 20:11:42 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  refe-0.8.0.ebuild:
+  Marked ~ppc64; bug #66441
 
   16 Apr 2004; David Holm <dholm@gentoo.org> refe-0.8.0.ebuild:
   Added to ~ppc.

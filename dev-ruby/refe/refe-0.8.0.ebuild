@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/refe/refe-0.8.0.ebuild,v 1.4 2004/06/25 01:56:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/refe/refe-0.8.0.ebuild,v 1.5 2004/11/01 20:11:42 corsair Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.loveruby.net/archive/refe/${P}-withdoc.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~ppc64"
 USE_RUBY="any"
 
 src_compile() {
