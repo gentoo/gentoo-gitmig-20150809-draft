@@ -2,7 +2,7 @@
 # System-wide defaults for the Portage system
 
 # Host-type
-CHOST=i686-pc-linux-gnu
+CHOST=i486-pc-linux-gnu
 
 PLATFORM=$CHOST
 
@@ -17,7 +17,7 @@ FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${x} -P \${DISTDIR}"
 # Global configure options
 
 # C Compiler flags
-CFLAGS="-mpentiumpro -march=pentuimpro -O3 -pipe"
+CFLAGS="-m486 -march=i486 -O2"
 # C++ Compiler flags
-CXXFLAGS="-mpentiumpro -march=pentiumpro -O3 -pipe"
+CXXFLAGS="-m486 -march=486 -O2"
 #DEBUG=true
