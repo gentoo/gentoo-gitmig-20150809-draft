@@ -4,7 +4,11 @@
 
 #Function to show gensync overlays located in /etc/gensync
 _overlays(){
-    overlay=$(grep -h id= /etc/gensync/* | sed -e 's/id="\(.*\)"$/\1/')
+    local overlay gensynclist gensync_individual
+    gensynclist=(/etc/gensync/*.syncsource) 
+    foreach gensync_individual ($gensynclist)
+    	overlay=($overlay ${${${(M)${(f)"$(<$gensync_individual)"}##id=*}/id=\"/}%\"})
+    end
     _tags overlay && { compadd "$@" ${(kv)=overlay} }
 }
 
@@ -58,7 +62,7 @@ case $service in
 	'()'{--no-color,-C}'[turn off colours]:overlays:_overlays' \
 	'(- :)'{--help,-h}'[show help]' \
 	'(- :)'{--version,-V}'[display version info]' \
-	'(- :)'':overlays:_overlays' 
+	'(- :):overlays:_overlays' 
 ;;
 
  qpkg)
@@ -68,7 +72,7 @@ case $service in
   find=( --find-file -f --find-pattern -fp )
   dups=( --dups -d --slot -s)
   
-       _arguments \
+       _arguments -s \
     	"($check $excl $find $dups 1)"{--find-file,-f}"[finds package that owns file]:file:_files" \
 	"($check $excl $find $dups 1)"{--find-pattern,-fp}"[finds package that owns file matching pattern]:pattern:" \
 	"($excl $check $arg $find --dups -d )"{--dups,-d}"[print packages that have multiple versions installed]" \

@@ -14,11 +14,13 @@ arguments=(
 	'(- :)'{--get-stdcxx-incdir,-X}'[print g++ include path of given/current profile]:profiles:_gcc_profile'
 	'(- :)'{--help,-h}'[show help]'	
 	'(- :)'{--version,-v}'[show version info]'	
-	'(- :)'':profiles:_gcc_profile'
+	'(- :):profiles:_gcc_profile'
 )
 
 _gcc_profile(){
-    profile=$(_call_program tag gcc-config --list-profiles | sed -r -e 's/(\[([^]]*)\]) //g')
+    local profile
+    profile=$(_call_program tag gcc-config --list-profiles)
+    profile=${profile/\[([^]]*)\]/}
     _tags profile && { compadd "$@" -k profile || compadd "$@" ${(kv)=profile} }
 }
 
