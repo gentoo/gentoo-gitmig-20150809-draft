@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-1.06-r1.ebuild,v 1.4 2003/09/05 23:40:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-1.06-r1.ebuild,v 1.5 2003/11/10 14:44:50 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.habets.pp.se/pub/synscan/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="net-libs/libpcap
 	<net-libs/libnet-1.1

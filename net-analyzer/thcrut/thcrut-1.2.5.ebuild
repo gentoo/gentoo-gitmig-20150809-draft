@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Copyright 2003 The Hackers Choice - http://www.thc.org
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/thcrut-1.2.5.ebuild,v 1.1 2003/10/02 07:25:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/thcrut-1.2.5.ebuild,v 1.2 2003/11/10 14:45:28 vapier Exp $
 
 DESCRIPTION="Network discovery and fingerprinting tool"
 HOMEPAGE="http://www.thc.org/thc-rut/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.thc.org/thc-rut/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 
 DEPEND="net-libs/libpcap
 	<net-libs/libnet-1.1
