@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r12.ebuild,v 1.5 2003/08/22 12:25:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r12.ebuild,v 1.6 2003/08/22 13:01:06 mcummings Exp $
 
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 MM_VERSION="6.05"
@@ -238,6 +238,6 @@ src_install() {
 
 pkg_postinst() {
 	# generates the ph files for perl
-	cd /usr/include; h2ph -r -l
+	cd /usr/include; h2ph -r -l .
 
 }
