@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.1_rc1-r1.ebuild,v 1.1 2004/01/02 23:34:06 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.1_rc1-r1.ebuild,v 1.2 2004/01/05 08:44:55 plasmaroo Exp $
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
 inherit kernel
 
-OKV=${PV/_/-}
+OKV=2.6.0
+PKV=${PV/_/-}
 
 EXTRAVERSION="`echo ${OKV}-${PR/r/mm} | \
 	sed -e 's/[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\)/\1/'`"
 
-KV=${OKV}-${PR/r/mm}
+KV=${PV/_/-}-${PR/r/mm}
 S=${WORKDIR}/linux-${KV}
 
 inherit eutils
@@ -22,8 +23,9 @@ inherit eutils
 # The development branch of the linux kernel with Andrew Morton's patch
 
 DESCRIPTION="Full sources for the development linux kernel with Andrew Morton's patchset"
-SRC_URI="mirror://kernel/linux/kernel/v2.6/testing/linux-${OKV}.tar.bz2
-mirror://kernel/linux/kernel/people/akpm/patches/2.6/${OKV}/${KV}/${KV}.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
+	 mirror://kernel/linux/kernel/v2.6/testing/patch-${PKV}.bz2
+	 mirror://kernel/linux/kernel/people/akpm/patches/2.6/${OKV}/${KV}/${KV}.bz2"
 KEYWORDS="~x86"
 RDEPEND="sys-apps/module-init-tools"
 SLOT=${KV}
@@ -37,6 +39,7 @@ src_unpack() {
 
 	mv linux-${OKV} linux-${KV}
 	cd ${S}
+	bzcat ${DISTDIR}/patch-${PKV}.bz2 | patch -p1 || die "2.6.1-rc1 patch failed!"
 	bzcat ${DISTDIR}/${KV}.bz2 | patch -p1 || die "mm patch failed"
 	find . -iname "*~" | xargs rm 2> /dev/null
 
