@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.04.ebuild,v 1.2 2003/11/28 20:52:28 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.04.ebuild,v 1.3 2004/01/05 13:11:36 weeve Exp $
 
 IUSE="nas esd motif opengl truetype gtk pam"
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.4 2003/12/11 09:15:43 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.5 2004/01/05 13:11:36 weeve Exp $
+
+  05 Jan 2004; Jason Wever <weeve@gentoo.org> xlockmore-5.04.ebuild,
+  xlockmore-5.08.2.ebuild:
+  Marked 5.08.2 stable on sparc and adjusted the copyright dates in all.
 
   11 Dec 2003; Jon Portnoy <avenj@gentoo.org> xlockmore-5.08.2.ebuild :
   AMD64 keyworded.
