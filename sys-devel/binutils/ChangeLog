@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.2 2002/03/12 13:48:37 seemant Exp $
+
+*binutils-2.11.92.0.12.3-r2 (12 Mar 2002)
+
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog :
+
+  Updated copyright year, and added USE dependent nls compilation.
 
 *binutils-2.11.92.0.12.3-r1 (1 Feb 2002)
 
