@@ -12,13 +12,13 @@
 ## Highlight variables ... official portage ones in red, all others in bright red
 # color brightred "\$\{?[a-zA-Z_0-9]+\}?"
 # color red "\<(ARCH|HOMEPAGE|DESCRIPTION|IUSE|SRC_URI|LICENSE|SLOT|KEYWORDS|FILESDIR|WORKDIR|(P|R)?DEPEND|PROVIDE|DISTDIR|RESTRICT)\>"
-# color red "\<(S|D|T|PV|PF|P|PN|A)\>" "\<C(XX)?FLAGS\>" "\<LDFLAGS\>"
+# color red "\<(S|D|T|PV|PF|P|PN|A)\>" "\<C(XX)?FLAGS\>" "\<LDFLAGS\>" "\<C(HOST|TARGET|BUILD)\>"
 ## Highlight portage commands
 # color magenta "\<use(_(with|enable))?\> [!a-z0-9X -]*" "inherit.*"
 # color brightblue "e(begin|end|conf|install|make|warn|infon?|error|patch)"
 # color brightblue "\<die\>" "\<use(_(with|enable))?\>" "\<inherit\>" "\<has\>" "\<(has|best)_version\>" "\<unpack\>"
-# color brightblue "\<(do|new)(ins|s?bin|doc|lib(|\.so|\.a)|man|info|exe)\>"
-# color brightblue "\<do(python|sed|dir|hard|sym|html|jar|mo)\>" "\<keepdir\>" 
+# color brightblue "\<(do|new)(ins|s?bin|doc|lib(|\.so|\.a)|man|info|exe|initd|confd|env)\>"
+# color brightblue "\<do(python|sed|dir|hard|sym|html|jar|mo)\>" "\<keepdir\>"
 # color brightblue "prepall(|docs|info|man|strip)" "prep(info|lib|lib\.so|man|strip)"
 # color brightblue "\<(|doc|ins|exe)into\>" "\<f(owners|perms)\>" "\<(exe|ins|dir)opts\>"
 ## Highlight common commands used in ebuilds
