@@ -1,0 +1,11 @@
+--- Makefile.old        2003-03-08 11:03:17.000000000 -0300
++++ Makefile    2004-01-05 17:15:13.000000000 -0200
+@@ -69,7 +69,7 @@
+ CFLAGS    += -I$(KINCLUDE) -Idrivers/usb
+
+ # Setup link flags
+-LDFLAGS    = --strip-debug --relocateable
++LDFLAGS    = --strip-debug -r
+
+ # Setup the list of files to be included in a distribution
+ DIST_FILES = CHANGELOG \

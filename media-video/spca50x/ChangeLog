@@ -1,0 +1,10 @@
+# ChangeLog for media-video/spca50x
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca50x/ChangeLog,v 1.1 2004/02/23 08:02:12 phosphan Exp $
+
+*spca50x-0.30 (23 Feb 2004)
+
+  23 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> metadata.xml,
+  spca50x-0.30.ebuild, files/spca50x-0.30-gentoo.patch:
+  Initial import, see bug #38021
+
