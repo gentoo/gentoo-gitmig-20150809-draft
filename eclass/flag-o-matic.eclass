@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.57 2004/06/10 00:41:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.58 2004/06/10 15:28:56 agriffis Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -87,6 +87,8 @@ setup-allowed-flags() {
 }
 
 filter-flags() {
+	local x
+
 	for x in "$@" ; do
 		case "${x}" in
 			-fPIC|-fpic|-fPIE|-fpie|-pie) etexec-flags;;
@@ -117,9 +119,10 @@ append-lfs-flags() {
 }
 
 append-flags() {
-	export CFLAGS="${CFLAGS} $@"
-	export CXXFLAGS="${CXXFLAGS} $@"
-	[ "`is-flag -fno-stack-protector`" -o "`is-flag -fno-stack-protector-all`" ] && fstack-flags
+	export CFLAGS="${CFLAGS} $*"
+	export CXXFLAGS="${CXXFLAGS} $*"
+	[ -n "`is-flag -fno-stack-protector`" -o \
+		-n "`is-flag -fno-stack-protector-all`" ] && fstack-flags
 	return 0
 }
 
@@ -136,8 +139,7 @@ replace-flags() {
 }
 
 replace-cpu-flags() {
-	local newcpu="$1" ; shift
-	local oldcpu=""
+	local oldcpu newcpu="$1" ; shift
 	for oldcpu in "$@" ; do
 		replace-flags -march=${oldcpu} -march=${newcpu}
 		replace-flags -mcpu=${oldcpu} -mcpu=${newcpu}
@@ -147,6 +149,8 @@ replace-cpu-flags() {
 }
 
 is-flag() {
+	local x
+
 	for x in ${CFLAGS} ${CXXFLAGS} ; do
 		if [ "${x}" == "$1" ] ; then
 			echo true
@@ -157,12 +161,14 @@ is-flag() {
 }
 
 filter-mfpmath() {
+	local orig_mfpmath new_math prune_math
+
 	# save the original -mfpmath flag
-	local orig_mfpmath="`get-flag -mfpmath`"
+	orig_mfpmath="`get-flag -mfpmath`"
 	# get the value of the current -mfpmath flag
-	local new_math=" `get-flag mfpmath | tr , ' '` "
+	new_math=" `get-flag mfpmath | tr , ' '` "
 	# figure out which math values are to be removed
-	local prune_math=""
+	prune_math=""
 	for prune_math in "$@" ; do
 		new_math="${new_math/ ${prune_math} / }"
 	done
@@ -181,6 +187,8 @@ filter-mfpmath() {
 }
 
 strip-flags() {
+	local x y flag NEW_CFLAGS NEW_CXXFLAGS
+
 	setup-allowed-flags
 
 	local NEW_CFLAGS=""
@@ -192,28 +200,22 @@ strip-flags() {
 		ALLOWED_FLAGS="${ALLOWED_FLAGS} ${UNSTABLE_FLAGS}"
 	fi
 
-	set -f
+	set -f	# disable pathname expansion
 
-	for x in ${CFLAGS}
-	do
-		for y in ${ALLOWED_FLAGS}
-		do
+	for x in ${CFLAGS}; do
+		for y in ${ALLOWED_FLAGS}; do
 			flag=${x%%=*}
-			if [ "${flag%%${y}}" = "" ]
-			then
+			if [ "${flag%%${y}}" = "" ]; then
 				NEW_CFLAGS="${NEW_CFLAGS} ${x}"
 				break
 			fi
 		done
 	done
 
-	for x in ${CXXFLAGS}
-	do
-		for y in ${ALLOWED_FLAGS}
-		do
+	for x in ${CXXFLAGS}; do
+		for y in ${ALLOWED_FLAGS}; do
 			flag=${x%%=*}
-			if [ "${flag%%${y}}" = "" ]
-			then
+			if [ "${flag%%${y}}" = "" ]; then
 				NEW_CXXFLAGS="${NEW_CXXFLAGS} ${x}"
 				break
 			fi
@@ -228,9 +230,9 @@ strip-flags() {
 		NEW_CXXFLAGS="${NEW_CXXFLAGS} -O2"
 	fi
 
-	set +f
+	set +f	# re-enable pathname expansion
 
-	use debug \
+	useq debug \
 		&& einfo "CFLAGS=\"${NEW_CFLAGS}\"" \
 		&& einfo "CXXFLAGS=\"${NEW_CXXFLAGS}\""
 
@@ -240,19 +242,31 @@ strip-flags() {
 }
 
 test_flag() {
-	if [ -z "`gcc -S -xc "$@" -o /dev/null /dev/null 2>&1`" ]; then
-		echo "$@"
+	local cc=${CC:-gcc} ; cc=${cc%% *}
+	if ${cc} -S -xc "$@" -o /dev/null /dev/null &>/dev/null; then
+		printf "%s\n" "$*"
 		return 0
 	fi
 	return 1
 }
 
+test_version_info() {
+	local cc=${CC:-gcc} ; cc=${cc%% *}
+	if [[ $(${cc} --version 2>&1) == *$1* ]]; then
+		return 0
+	else
+		return 1
+	fi
+}
+
 strip-unsupported-flags() {
+	local NEW_CFLAGS NEW_CXXFLAGS
+
 	for x in ${CFLAGS} ; do
-		NEW_CFLAGS=${NEW_CFLAGS}" ""`test_flag ${x}`"
+		NEW_CFLAGS="${NEW_CFLAGS} `test_flag ${x}`"
 	done
 	for x in ${CXXFLAGS} ; do
-		NEW_CXXFLAGS=${NEW_CXXFLAGS}" ""`test_flag ${x}`"
+		NEW_CXXFLAGS="${NEW_CXXFLAGS} `test_flag ${x}`"
 	done
 
 	export CFLAGS="${NEW_CFLAGS}"
@@ -260,15 +274,16 @@ strip-unsupported-flags() {
 }
 
 get-flag() {
+	local f findflag="$1"
+
 	# this code looks a little flaky but seems to work for
 	# everything we want ...
 	# for example, if CFLAGS="-march=i686":
-	# `get-flags -march` == "-march=i686"
-	# `get-flags march` == "i686"
-	local findflag="$1"
+	# `get-flag -march` == "-march=i686"
+	# `get-flag march` == "i686"
 	for f in ${CFLAGS} ${CXXFLAGS} ; do
 		if [ "${f/${findflag}}" != "${f}" ] ; then
-			echo "${f/-${findflag}=}"
+			printf "%s\n" "${f/-${findflag}=}"
 			return 0
 		fi
 	done
@@ -276,87 +291,72 @@ get-flag() {
 }
 
 has_hardened() {
-	local cc=${CC:-gcc}
-	[[ $(${cc%% *} --version 2>&1) == *Hardened* ]]
+	test_version_info Hardened
 	return $?
 }
 
 has_pic() {
 	[ "${CFLAGS/-fPIC}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpic}" != "${CFLAGS}" ] && return 0
-	[ ! -z "`${CC/ .*/} --version| grep pie`" ] && return 0
+	test_version_info pie && return 0
 	return 1
 }
 
 has_pie() { 
 	[ "${CFLAGS/-fPIE}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpie}" != "${CFLAGS}" ] && return 0
-	[ ! -z "`${CC/ .*/} --version| grep pie`" ] && return 0
+	test_version_info pie && return 0
 	return 1
 }
 	
 has_ssp() {
 	[ "${CFLAGS/-fstack-protector}" != "${CFLAGS}" ] && return 0
-	[ ! -z "`${CC/ .*/} --version| grep ssp`" ] && return 0
+	test_version_info ssp && return 0
 	return 1
 }
 
 has_m64() {
-	temp=`mktemp`
-	echo "int main() { return(0); }" > ${temp}.c
-	${CC/ .*/} -m64 -o /dev/null ${temp}.c > /dev/null 2>&1
-	ret=$?
-	rm -f ${temp}.c
-	[ "$ret" != "1" ] && return 0
-	return 1
+	test_flag -m64
+	return $?
 }
 
 has_m32() {
-	temp=`mktemp`
-	echo "int main() { return(0); }" > ${temp}.c
-	${CC/ .*/} -m32 -o /dev/null ${temp}.c > /dev/null 2>&1
-	ret=$?
-	rm -f ${temp}.c
-	[ "$ret" != "1" ] && return 0
-	return 1
+	test_flag -m32
+	return $?
 }
 
 replace-sparc64-flags() {
 	local SPARC64_CPUS="ultrasparc v9"
 
- 	if [ "${CFLAGS/mtune}" != "${CFLAGS}" ]
-	then
-		for x in ${SPARC64_CPUS}
-		do
+ 	if [ "${CFLAGS/mtune}" != "${CFLAGS}" ]; then
+		for x in ${SPARC64_CPUS}; do
 			CFLAGS="${CFLAGS/-mcpu=${x}/-mcpu=v8}"
 		done
  	else
-	 	for x in ${SPARC64_CPUS}
-		do
+	 	for x in ${SPARC64_CPUS}; do
 			CFLAGS="${CFLAGS/-mcpu=${x}/-mcpu=v8 -mtune=${x}}"
 		done
 	fi
 	
- 	if [ "${CXXFLAGS/mtune}" != "${CXXFLAGS}" ]
-	then
-		for x in ${SPARC64_CPUS}
-		do
+ 	if [ "${CXXFLAGS/mtune}" != "${CXXFLAGS}" ]; then
+		for x in ${SPARC64_CPUS}; do
 			CXXFLAGS="${CXXFLAGS/-mcpu=${x}/-mcpu=v8}"
 		done
 	else
-	 	for x in ${SPARC64_CPUS}
-		do
+	 	for x in ${SPARC64_CPUS}; do
 			CXXFLAGS="${CXXFLAGS/-mcpu=${x}/-mcpu=v8 -mtune=${x}}"
 		done
 	fi
 }
 
 append-ldflags() {
-	LDFLAGS="${LDFLAGS} $@"
+	LDFLAGS="${LDFLAGS} $*"
 	return 0
 }
 
 filter-ldflags() {
+	local x
+
 	# we do this fancy spacing stuff so as to not filter
 	# out part of a flag ... we want flag atoms ! :D
 	LDFLAGS=" ${LDFLAGS} "
@@ -368,25 +368,23 @@ filter-ldflags() {
 }
 
 etexec-flags() {
-	# if your not using a hardened compiler you wont need this
+	# if you're not using a hardened compiler you wont need this
 	# PIC/no-pic kludge in the first place.
-	has_hardened || return
+	has_hardened || return 0
 
-	has_pie || has_pic
-	if [ $? == 0 ] ; then
-	[ -z "`is-flag -fno-pic`" ] && 
-		export CFLAGS="${CFLAGS} `test_flag -fno-pic`"
-
-	[ -z "`is-flag -nopie`" ] && 
-		export CFLAGS="${CFLAGS} `test_flag -nopie`"
+	if has_pie || has_pic; then
+		[ -z "`is-flag -fno-pic`" ] && 
+			export CFLAGS="${CFLAGS} `test_flag -fno-pic`"
+		[ -z "`is-flag -nopie`" ] && 
+			export CFLAGS="${CFLAGS} `test_flag -nopie`"
 	fi
+	return 0
 }
 
 fstack-flags() {
-	has_ssp
-	if [ $? == 0 ] ; then
-	[ -z "`is-flag -fno-stack-protector`" ] && 
-		export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
+	if has_ssp; then
+		[ -z "`is-flag -fno-stack-protector`" ] && 
+			export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
 	fi
+	return 0
 }
-
