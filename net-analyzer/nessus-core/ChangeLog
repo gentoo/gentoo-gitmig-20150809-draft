@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.18 2003/07/10 13:36:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.19 2003/07/17 07:27:39 phosphan Exp $
+
+  17 Jul 2003; Patrick Kursawe <phosphan@gentoo.org>
+  nessus-core-2.0.6a.ebuild:
+  Did always --enable-tcpwrappers, fixed that. Closes bug #23667.
 
   09 Jul 2003; Martin Holzer <mholzer@gentoo.org> nessus-core-1.2.7.ebuild,
   nessus-core-2.0.0.ebuild, nessus-core-2.0.4.ebuild,
