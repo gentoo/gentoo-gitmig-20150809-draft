@@ -1,6 +1,13 @@
 # ChangeLog for net-im/licq
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.10 2003/01/29 19:09:43 hannes Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.11 2003/01/31 18:08:10 danarmak Exp $
+
+*licq-1.2.4-r1 (31 Jan 2003)
+
+  31 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bug #12436: create a symlink from the qt-only gui plugin to the kde
+  one when the kde plugin is built.
 
 *licq-1.2.4 (29 Jan 2003)
 
