@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <media-video@gentoo.org> (31 Jan 2004)
+# sinek needs to be ported to newest xine api #28100
+media-video/sinek
+
 # <ciaranm@gentoo.org> (30 Jan 2004)
 # silo 1.4.x still has issues that need fixing. masking this until they're
 # straightened out, anyone that needs the new features can override locally
