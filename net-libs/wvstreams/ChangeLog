@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.51 2005/04/06 18:54:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.52 2005/04/06 21:47:04 mrness Exp $
+
+  06 Apr 2005; Alin Nastac <mrness@gentoo.org>
+  -files/wvstreams-4.0-tcl_8_4.patch, -wvstreams-4.0-r1.ebuild:
+  Remove obsolete version
 
   06 Apr 2005; Simon Stelling <blubb@gentoo.org> wvstreams-4.0.1-r2.ebuild:
   stable on amd64 wrt bug #84817
