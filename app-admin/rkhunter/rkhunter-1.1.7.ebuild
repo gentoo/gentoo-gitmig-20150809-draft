@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/rkhunter-1.1.7.ebuild,v 1.1 2004/08/29 14:52:16 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/rkhunter-1.1.7.ebuild,v 1.2 2004/09/12 02:59:09 ka0ttic Exp $
 
 DESCRIPTION="Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers."
 HOMEPAGE="http://www.rootkit.nl/"
@@ -34,6 +34,9 @@ src_install() {
 
 	exeinto /etc/cron.daily
 	newexe ${FILESDIR}/rkhunter.cron rkhunter
+
+	insinto /usr/share/bash-completion
+	newins ${FILESDIR}/${PN}.bash-completion ${PN}
 }
 
 pkg_postinst() {
@@ -41,6 +44,10 @@ pkg_postinst() {
 	einfo "A cron script has been installed to /etc/cron.daily/rkhunter."
 	einfo "To enable it, edit /etc/cron.daily/rkhunter and follow the"
 	einfo "directions."
+	echo
+	einfo "To enable bash command-line completion for rkhunter, execute"
+	einfo "the following command as root:"
+	einfo "  ln -s /usr/share/bash-completion/rkhunter /etc/bash_completion.d/"
 	echo
 }
 
