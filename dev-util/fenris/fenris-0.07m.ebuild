@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m.ebuild,v 1.2 2003/01/03 00:05:58 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m.ebuild,v 1.3 2003/01/21 19:31:58 mholzer Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Fenris is a tracer, GUI debugger, analyzer, partial decompiler and much more"
@@ -12,7 +12,8 @@ KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/glibc
 	app-misc/screen
-	sys-libs/ncurses"
+	sys-libs/ncurses
+	sys-devel/gdb"
 RDEPEND="sys-apps/gawk"
 
 src_unpack() {
