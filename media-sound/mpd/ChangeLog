@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.8 2003/10/31 14:17:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.9 2003/11/19 17:06:35 mholzer Exp $
+
+  19 Nov 2003; Martin Holzer <mholzer@gentoo.org> mpd-0.9.3.ebuild,
+  files/mpd.conf, files/mpd.rc6:
+  adding init script. submitted by Nikl <gentoo-bugzilla@nikl.net> in #26513.
 
 *mpd-0.9.3 (31 Oct 2003)
 

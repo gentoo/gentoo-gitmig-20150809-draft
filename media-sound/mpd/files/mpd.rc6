@@ -1,0 +1,42 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: 
+
+depend() {
+	need localmount
+} 
+
+checkconfig() {
+	if [ -z "$PORT" ] || \
+	   [ -z "$MUSIC_DIR" ] || \
+	   [ -z "$PLAYLIST_DIR" ] || \
+	   [ -z "$LOG_FILE" ] || \
+	   [ -z "$ERROR_FILE" ]
+	then
+		eerror "You need to set PORT, MUSIC_DIR, PLAYLIST_DIR,"
+		eerror "	LOG_FILE and ERROR_FILE in /etc/conf.d/mpd"
+                return 1
+        fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting Music Player Daemon" 
+
+	/usr/bin/mpd ${PORT} \
+	             ${MUSIC_DIR} \
+	             ${PLAYLIST_DIR} \
+                     ${LOG_FILE} \
+	             ${ERROR_FILE}
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Music Player Daemon"
+
+   killall mpd &>/dev/null 
+
+   eend $? 
+}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.9.3.ebuild,v 1.1 2003/10/31 14:17:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.9.3.ebuild,v 1.2 2003/11/19 17:06:35 mholzer Exp $
 
 IUSE="oggvorbis mad"
 
@@ -38,6 +38,11 @@ src_install() {
 	rm -rf ${D}/usr/share/doc/mpd/
 	dodoc COPYING ChangeLog INSTALL README TODO UPGRADING
 	dodoc doc/COMMANDS doc/mpdconf.example
+
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/mpd.rc6 mpd
+	insinto /etc/conf.d
+	newins ${FILESDIR}/mpd.conf mpd
 }
 
 pkg_postinst() {
