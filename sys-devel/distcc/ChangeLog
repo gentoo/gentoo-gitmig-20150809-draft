@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.69 2003/08/12 16:39:13 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.70 2003/08/13 22:13:59 lisa Exp $
+
+*distcc-2.10-r1 (13 Aug 2003)
+
+  13 Aug 2003; Lisa Seelye <lisa@gentoo.org> distcc-2.10-r1.ebuild:
+  Fix the ebuild. should be doing distcc-config --install, too
 
   12 Aug 2003; Lisa Seelye <lisa@gentoo.org> distcc-2.9.ebuild:
   Mark distcc 2.9 stable on x86.
