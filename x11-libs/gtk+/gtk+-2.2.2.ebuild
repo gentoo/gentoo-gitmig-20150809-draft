@@ -1,23 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.0-r1.ebuild,v 1.3 2003/02/13 16:56:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.2.ebuild,v 1.1 2003/06/10 13:15:35 foser Exp $
 
 inherit eutils libtool flag-o-matic
 
-IUSE="tiff doc jpeg"
+IUSE="tiff doc jpeg debug"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Gimp ToolKit + "
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.2/${P}.tar.bz2"
 HOMEPAGE="http://www.gtk.org/"
 LICENSE="LGPL-2.1"
 
-RDEPEND="virtual/x11
-	>=dev-libs/glib-2.2.0
-	>=dev-libs/atk-1.2.0
-	>=x11-libs/pango-1.0.1
+# virtual/x11
+# Need this specific xfree version to get bugfree xinput support (#20407)
+
+RDEPEND=">=x11-base/xfree-4.3.0-r3
+	>=dev-libs/glib-2.2
+	>=dev-libs/atk-1.2
+	>=x11-libs/pango-1.2
 	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7 )"
@@ -25,7 +27,6 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.9 )"
-#		app-text/sgmltools-lite )"
 
 src_unpack() {
 	unpack ${A}
@@ -35,6 +36,18 @@ src_unpack() {
 	cd ${S}; epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
 	# should speed up metacity
 	cd ${S}; epatch ${FILESDIR}/gtk+-wm.patch
+	# beautifying patch for disabled icons
+	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
+	# xft/slighthint stuff from RH
+	cd ${S}; epatch ${FILESDIR}/${PN}-2-xftprefs.patch
+
+	if [ "${ARCH}" == "ppc" ]
+	then
+		einfo "Fixing endianness issue in gdkpixbuf for 24-bit and 15-bit displays"
+		cd ${S}; epatch ${FILESDIR}/${PN}-2.2.1-gdkpixbuf-bigendian.patch
+	fi
+
+	autoconf || die
 }
 
 src_compile() {
@@ -44,14 +57,24 @@ src_compile() {
 	elibtoolize
 	
 	local myconf=""
-	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
-	use jpeg ||  myconf="${myconf} --without-libjpeg"
-	use tiff ||  myconf="${myconf} --without-libtiff"
-	if [ -n "$DEBUGBUILD" ]; then
-		myconf="${myconf}  --enable-debug"
-	fi
+
+	use doc \
+		&& myconf="${myconf} --enable-gtk-doc" \
+		|| myconf="${myconf} --disable-gtk-doc"
+	use png \
+		&& myconf="${myconf} --with-libpng" \
+		||  myconf="${myconf} --without-libpng"
+	use jpeg \
+		&& myconf="${myconf} --with-libjpeg" \
+		||  myconf="${myconf} --without-libjpeg"
+	use tiff \
+		&& myconf="${myconf} --with-libtiff" \
+		||  myconf="${myconf} --without-libtiff"
+	use debug \
+		&& myconf="${myconf}  --enable-debug" \
+		|| myconf="${myconf}  --disable-debug"
 		
-	econf --with-gdktarget=x11 ${myconf} || die
+	econf --with-gdktarget=x11 --with-xinput=yes ${myconf} || die
 
 	# gtk+ isn't multithread friendly due to some obscure code generation bug
 	make || die
@@ -67,6 +90,10 @@ src_install() {
 		mandir=/usr/share/man \
 		install || die
 
+	# Enable xft in environment as suggested by <utx@gentoo.org>
+	dodir /etc/env.d
+	echo "GDK_USE_XFT=1" >${D}/etc/env.d/50gtk2
+
 	dodoc AUTHORS COPYING ChangeLog* HACKING INSTALL NEWS* README*
 }
 
@@ -77,4 +104,10 @@ pkg_postinst() {
 	einfo "For your gtk themes to work correctly after an update," 
 	einfo "you might have to rebuild your theme engines."
 	einfo "Executing 'qpkg -I -nc gtk-engines | xargs emerge' should do the trick (requires gentoolkit)"
+
+	env-update
+}
+
+pkg_postrm() {
+	env-update
 }
