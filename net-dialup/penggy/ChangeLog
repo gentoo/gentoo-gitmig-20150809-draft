@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/penggy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/ChangeLog,v 1.1 2003/09/24 07:18:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/ChangeLog,v 1.2 2003/10/29 05:20:01 spyderous Exp $
+
+  29 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; penggy-0.2.1.ebuild:
+  Marking x86 -- no bugs filed since initial commit.
 
 *penggy-0.2.1 (24 Sep 2003)
 
