@@ -2,9 +2,11 @@ MD5 976f0b6ee60a92e98ffab35e7e89fd9c ptex-3.1.2.ebuild 5481
 MD5 d2fd604b88f163116f23670ca84b1815 metadata.xml 531
 MD5 7a06e8890ad19a55eac1e5641b4eb634 ChangeLog 1193
 MD5 1ccdfe268026c6ca3d5abd476ca66c22 ptex-3.1.2-r1.ebuild 5078
+MD5 4e448b3931cc80f0fd0f67c401f6dff4 ptex-3.1.3.ebuild 1883
 MD5 8d6f7372f16899ab048c61a738b48065 files/psfonts-ja.map 1184
 MD5 476a1c8128397ff7a381c43fe723a522 files/tetex-2.0.2-dont-run-config.diff 1243
 MD5 50c560b391869be15a001b738e0b7bfe files/tetex-2.0.2.diff 2010
 MD5 1f343119be415e1eb7f49bb83578cc8e files/digest-ptex-3.1.2 420
 MD5 fc26b023009238cd47ab296c4b7d8e45 files/digest-ptex-3.1.2-r1 342
 MD5 d15f2d9ab04bcfa15c3e737f106d1625 files/psfonts-novflib-ja.map 1158
+MD5 cb7b6b0b14b8e8b5b1ae59795883d687 files/digest-ptex-3.1.3 416
