@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/libmnote-0.5.6.ebuild,v 1.5 2004/03/19 07:56:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/libmnote-0.5.6.ebuild,v 1.6 2004/04/26 03:40:46 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="dev-util/pkgconfig
 src_compile() {
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die
 }
 

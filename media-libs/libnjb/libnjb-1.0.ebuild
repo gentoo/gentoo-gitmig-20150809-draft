@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/libnjb-1.0.ebuild,v 1.4 2004/04/14 09:49:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/libnjb-1.0.ebuild,v 1.5 2004/04/26 03:46:54 agriffis Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_compile() {
 	epatch ${FILESDIR}/libnjb-errno.patch
 
 	sed -i "s:all\: lib samples filemodes:all\: lib filemodes:g" Makefile.in
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmustux
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.10 2004/04/17 16:00:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.11 2004/04/26 03:44:59 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libmustux-0.17.5.ebuild:
+  Add die following econf for bug 48950
 
   17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libmustux-0.20.1.ebuild:

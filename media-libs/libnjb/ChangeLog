@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.6 2004/04/14 09:49:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.7 2004/04/26 03:46:54 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libnjb-1.0.ebuild:
+  Add die following econf for bug 48950
 
   14 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libnjb-1.0.2_pre20040222-r1.ebuild, libnjb-1.0.ebuild:
