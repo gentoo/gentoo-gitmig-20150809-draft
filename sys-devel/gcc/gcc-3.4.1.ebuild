@@ -1,13 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.17 2004/08/08 00:45:48 slarti Exp $
-
-IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.18 2004/08/09 03:09:10 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
-
-# Compile problems with these (bug #6641 among others)...
-#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -136,9 +131,9 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie a
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
+IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
-
-KEYWORDS="-* ~mips -hppa amd64 ppc64 ~x86"
+KEYWORDS="-* ~x86 ~mips ~hppa amd64 ppc64"
 #KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
 
 # Ok, this is a hairy one again, but lets assume that we
