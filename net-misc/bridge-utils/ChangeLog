@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.13 2004/04/26 12:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.14 2004/06/17 06:32:33 jhhudso Exp $
+
+  17 Jun 2004; Jared Hudson <jhhudso@gentoo.org> bridge-utils-0.9.6-r1.ebuild,
+  bridge-utils-0.9.6.ebuild, bridge-utils-1.0.4.ebuild:
+  Fixed SRC_URI to point to sourceforge's new bridge util location, set 0.9.6
+  to x86 and bumped bridge-utils to 1.0.4 (~x86)
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   bridge-utils-0.9.6-r1.ebuild, bridge-utils-0.9.6.ebuild:

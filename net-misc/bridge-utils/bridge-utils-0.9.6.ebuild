@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.6.ebuild,v 1.6 2004/04/26 12:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.6.ebuild,v 1.7 2004/06/17 06:32:33 jhhudso Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -8,7 +8,7 @@ DESCRIPTION="Tools for configuring the Linux kernel 802.1d Ethernet Bridge"
 HOMEPAGE="http://bridge.sourceforge.net/"
 
 S=${WORKDIR}/${PN}
-SRC_URI="http://bridge.sourceforge.net/bridge-utils/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/bridge/${P}.tar.gz"
 
 DEPEND="virtual/glibc"
 LICENSE="GPL-2"
