@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.21 2004/08/07 19:05:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.22 2004/08/30 18:14:42 mr_bones_ Exp $
+
+*sdl-gfx-2.0.12 (30 Aug 2004)
+
+  30 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> +sdl-gfx-2.0.12.ebuild:
+  version bump
 
   07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> sdl-gfx-2.0.11.ebuild:
   Stable on alpha.
