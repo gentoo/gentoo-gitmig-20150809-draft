@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.20 2003/01/03 04:17:43 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.21 2003/01/03 19:59:32 satai Exp $
+
+  03 Jan 2003; Matthew Turk <satai@gentoo.org> :
+  Uncommented the scrollmode fix, which should allow fmtutil to work properly.
 
   02 Jan 2003; Matthew Turk <satai@gentoo.org> :
   Added a fix to generate all missing format files upon installation.

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r11.ebuild,v 1.9 2003/01/03 04:17:43 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r11.ebuild,v 1.10 2003/01/03 19:59:32 satai Exp $
 
 inherit flag-o-matic
 
@@ -62,13 +62,13 @@ src_unpack() {
 
 	# Fix problem where the *.fmt files are not generated due to the LaTeX
 	# source being older than a year.
-        #local x
-        #for x in `find ${S}/texmf/ -type f -name '*.ini'`
-        #do
-                #cp ${x} ${x}.orig
-                #sed -e '1i \\scrollmode' ${x}.orig > ${x}
-                #rm -f ${x}.orig
-        #done
+        local x
+        for x in `find ${S}/texmf/ -type f -name '*.ini'`
+        do
+                cp ${x} ${x}.orig
+                sed -e '1i \\scrollmode' ${x}.orig > ${x}
+                rm -f ${x}.orig
+        done
 
 	# IMPORTANT!  If you're having *.fmt problems, do this:
 	# fmtutil --all
