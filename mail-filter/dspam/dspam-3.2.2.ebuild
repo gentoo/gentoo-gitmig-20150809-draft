@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.2.ebuild,v 1.1 2004/11/18 10:59:13 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.2.ebuild,v 1.2 2004/11/28 14:41:32 st_lim Exp $
 
 inherit eutils
 
@@ -10,16 +10,16 @@ SRC_URI="http://www.nuclearelephant.com/projects/dspam/sources/${PN}-${PV}.tar.g
 HOMEPAGE="http://www.nuclearelephant.com/projects/dspam/index.html"
 LICENSE="GPL-2"
 
-IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite"
+IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite large-domain"
 DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
-		sqlite? ( >=dev-db/sqlite-3.0.6 )
+		sqlite? ( >=dev-db/sqlite-2.7.7 )
 		maildrop? ( >=mail-filter/maildrop-1.5.3 )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
 		procmail? ( >=mail-filter/procmail-3.22 )
 		x86? ( cyrus? ( >=net-mail/cyrus-imapd-2.1.15 ) )
 		"
-RDEPEND="virtual/cron
+RDEPEND="sys-apps/cronbase
 		app-admin/logrotate"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64"
 SLOT="0"
@@ -69,13 +69,12 @@ src_compile() {
 	#myconf="${myconf} --enable-chi-square"
 	myconf="${myconf} --enable-robinson-pvalues"
 	#myconf="${myconf} --enable-broken-mta"
-	myconf="${myconf} --enable-large-scale"
-	#myconf="${myconf} --enable-domain-scale"
+	use large-domain && myconf="${myconf} --enable-large-scale" || myconf="${myconf} --enable-domain-scale"
 
 	myconf="${myconf} --with-dspam-mode=4755"
 	myconf="${myconf} --with-dspam-owner=dspam"
 	myconf="${myconf} --with-dspam-group=dspam"
-	myconf="${myconf} --enable-homedir --with-dspam-home=${HOMEDIR} --sysconfdir=${HOMEDIR}"
+	myconf="${myconf} --with-dspam-home=${HOMEDIR} --sysconfdir=${HOMEDIR}"
 	myconf="${myconf} --with-logdir=${LOGDIR}"
 
 	# enables support for debugging (touch /etc/dspam/.debug to turn on)
@@ -161,13 +160,13 @@ src_install () {
 	dodoc CHANGELOG LICENSE README RELEASE.NOTES
 	dodoc ${FILESDIR}/README.postfix ${FILESDIR}/README.qmail
 	if use mysql; then
-		newdoc tools.mysql_drv/README
+		dodoc tools.mysql_drv/README
 	elif use postgres ; then
-		newdoc tools.pgsql_drv/README
+		dodoc tools.pgsql_drv/README
 	elif use oci8 ; then
-		newdoc tools.ora_drv/README
+		dodoc tools.ora_drv/README
 	elif use sqlite ; then
-		newdoc tools.sqlite_drv/README
+		dodoc tools.sqlite_drv/README
 	fi
 
 	# build some initial configuration data
@@ -199,9 +198,9 @@ src_install () {
 	local PASSWORD="${RANDOM}${RANDOM}${RANDOM}${RANDOM}"
 
 	# database related configuration and scripts
+	insinto ${HOMEDIR}
+	insopts -m644 -o dspam -g dspam
 	if use mysql; then
-		insinto ${HOMEDIR}
-		insopts -m644 -o dspam -g dspam
 
 		if [ -f ${HOMEDIR}/mysql.data ]; then
 			# Use an existing password
@@ -228,9 +227,6 @@ src_install () {
 		newins tools.mysql_drv/purge-4.1.sql mysql_purge-4.1.sql
 		newins ${FILESDIR}/upgrade.sql mysql_upgrade.sql
 	elif use postgres ; then
-		insinto ${HOMEDIR}
-		insopts -m644 -o dspam -g dspam
-
 		if [ -f ${HOMEDIR}/pgsql.data ]; then
 			# Use an existing password
 			PASSWORD="$(tail -n 2 ${HOMEDIR}/pgsql.data | head -n 1 )"
@@ -251,9 +247,6 @@ src_install () {
 		newins tools.pgsql_drv/purge.sql pgsql_purge.sql
 
 	elif use oci8 ; then
-		insinto ${HOMEDIR}
-		insopts -m644 -o dspam -g dspam
-
 		if [ -f ${HOMEDIR}/oracle.data ]; then
 			# Use an existing password
 			PASSWORD="$(tail -n 2 ${HOMEDIR}/oracle.data | head -n 1 )"
