@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.21_pre4-r1.ebuild,v 1.1 2003/07/04 05:01:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.21-r1.ebuild,v 1.1 2003/07/05 06:27:26 kumba Exp $
 
 
 ETYPE="sources"
 inherit kernel
 OKV=${PV/_/-}
-CVSDATE=20030703
+CVSDATE=20030705
 S=${WORKDIR}/linux-${OKV}
 
 # What's in this kernel?
 
 # INCLUDED:
-# 1) linux-mips.org CVS snapshot from 03 Jul 2003
+# 1) linux-mips.org CVS snapshot from 05 Jul 2003
 # 2) patch off linux-mips ML to fix r4k cache handling
 # 3) patch to fix arch/mips/Makefile to pass appropriate CFLAGS
 
