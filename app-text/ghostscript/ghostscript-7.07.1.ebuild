@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1.ebuild,v 1.1 2003/11/15 18:22:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1.ebuild,v 1.2 2003/12/08 11:35:46 lanius Exp $
 
 inherit eutils
 
@@ -50,6 +50,10 @@ src_unpack() {
 
 	# pxl dash patch
 	epatch ${FILESDIR}/gs7.05.6-gdevpx.patch
+
+	# search path fix
+	sed -i -e 's:$(gsdatadir)/lib:/usr/share/ghostscript/7.07/lib:' Makefile.in
+	sed -i -e 's:$(gsdir)/fonts:/usr/share/ghostscript/fonts:' Makefile.in
 }
 
 src_compile() {
