@@ -1,6 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.3.ebuild,v 1.5 2002/12/12 22:17:22 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.3.ebuild,v 1.6 2002/12/14 19:56:58 azarah Exp $
+
+IUSE=""
+
+inherit eutils
 
 # OLD14 = 1.4
 # OLD15 = 1.5
@@ -32,15 +36,15 @@
 # nosferatu automake-1.6.1 #
 #
 # You should then set NEW_PV to 1.6, as this is the suffix
-NEW_PV=1.6
+NEW_PV="1.6"
 
-OLD15_PV=1.5
-OLD15_P=${PN}-${OLD15_PV}
-OLD14_PV=1.4-p5
-OLD14_P=${PN}-${OLD14_PV}
-S=${WORKDIR}/${P}
-OLD15_S=${WORKDIR}/${OLD15_P}
-OLD14_S=${WORKDIR}/${OLD14_P}
+OLD15_PV="1.5"
+OLD15_P="${PN}-${OLD15_PV}"
+OLD14_PV="1.4-p5"
+OLD14_P="${PN}-${OLD14_PV}"
+S="${WORKDIR}/${P}"
+OLD15_S="${WORKDIR}/${OLD15_P}"
+OLD14_S="${WORKDIR}/${OLD14_P}"
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
 SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz
 	ftp://ftp.gnu.org/gnu/${PN}/${OLD15_P}.tar.gz
@@ -60,7 +64,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${OLD15_S}
-	patch -p1 <${FILESDIR}/${PN}-${OLD15_PV}-target_hook.patch || die
+	epatch ${FILESDIR}/${PN}-${OLD15_PV}-target_hook.patch
 }
 
 src_compile() {
@@ -76,8 +80,12 @@ src_compile() {
 	
 	cd ${S}
 
-	perl -pi -e "s:setfilename automake.info:setfilename automake-1.6.info:" \
+	perl -pi -e 's:setfilename automake.info:setfilename automake16.info:' \
 		automake.texi
+	perl -pi -e 's|\* automake: \(automake\)|\* Automake v1\.6: \(automake\)|' \
+		automake.texi
+	perl -pi -e 's|\* aclocal:|\* aclocal v1.6:|' automake.texi
+	perl -pi -e 's:\(automake\):\(automake16\):' automake.texi
 	
 	./configure --prefix=/usr \
 		--infodir=/usr/share/info \
@@ -92,8 +100,12 @@ src_compile() {
 
 	cd ${OLD15_S}
 
-	perl -pi -e "s:setfilename automake.info:setfilename automake-1.5.info:" \
+	perl -pi -e 's:setfilename automake.info:setfilename automake15.info:' \
 		automake.texi
+	perl -pi -e 's|\* automake: \(automake\)|\* Automake v1\.5: \(automake\)|' \
+		automake.texi
+	perl -pi -e 's|\* aclocal:|\* aclocal v1.5:|' automake.texi
+	perl -pi -e 's:\(automake\):\(automake15\):' automake.texi
 	
 	./configure --prefix=/usr \
 		--infodir=/usr/share/info \
@@ -107,6 +119,14 @@ src_compile() {
 	# ************ automake-1.4-p5 ************
 	#
 	cd ${OLD14_S}
+
+	perl -pi -e 's|\* automake: \(automake\)|\* Automake v1\.4: \(automake\)|' \
+		automake.texi
+	perl -pi -e 's|\* aclocal:|\* aclocal v1.4:|' automake.texi
+	perl -pi -e 's:GNU admin:GNU programming tools:' automake.texi
+#	perl -pi -e 's|\* automake: \(automake\)|\* Automake: \(automake\)|' \
+#		automake.texi
+	
 	./configure --prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
@@ -168,7 +188,7 @@ src_install() {
 		rm -f ${D}/usr/bin/${x}
 	done
 
-	doinfo automake-1.6.info*
+	doinfo automake16.info*
 
 	docinto ${PV}
 	dodoc COPYING NEWS README THANKS TODO AUTHORS ChangeLog
@@ -191,7 +211,7 @@ src_install() {
 		rm -f ${D}/usr/bin/${x}
 	done
 
-	doinfo automake-1.5.info*
+	doinfo automake15.info*
 
 	docinto ${OLD15_PV}
 	dodoc COPYING NEWS README THANKS TODO AUTHORS ChangeLog

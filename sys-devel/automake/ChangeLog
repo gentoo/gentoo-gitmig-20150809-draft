@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.19 2002/12/13 11:00:39 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.20 2002/12/14 19:56:58 azarah Exp $
+
+  14 Dec 2002; Martin Schlemmer <azarah@gentoo.org> automake-1.6.3.ebuild :
+  Fix info pages to also get 1.5 and 1.6 in info DIR.
 
   12 Dec 2002; Jan Seidel <tuxus@gentoo.org> automake-1.6.3.ebuild :
   Added mips to keywords.
