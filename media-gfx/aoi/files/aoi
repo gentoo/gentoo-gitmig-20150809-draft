@@ -2,7 +2,7 @@
 # Art Of Illusion Launch Script
 # Author: Dylan Carlson
 # May 2003
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/files/aoi,v 1.1 2003/05/15 09:34:25 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/files/aoi,v 1.2 2003/05/15 09:37:00 absinthe Exp $
 
 JAVA_HOME=`/usr/bin/java-config --jdk-home`
 if [ -z "${JAVA_HOME}" ] ; then
@@ -28,5 +28,4 @@ else
 	echo " "
 fi
 
-cd /usr/share/aoi
-${JAVA_HOME}/bin/java -Xmx128M -jar lib/ArtOfIllusion.jar $*
+${JAVA_HOME}/bin/java -Xmx128M -jar /usr/share/aoi/lib/ArtOfIllusion.jar $*
