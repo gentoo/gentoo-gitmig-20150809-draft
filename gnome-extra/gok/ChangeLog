@@ -1,7 +1,10 @@
 # ChangeLog for gnome-extra/gok
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/ChangeLog,v 1.5 2003/11/07 00:48:52 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/ChangeLog,v 1.6 2003/11/10 20:29:12 leonardop Exp $
 
+  10 Nov 2003; L. Boshell <leonardop@gentoo.org> gok-0.8.4.ebuild :
+  Marking as x86-stable.
+  
 *gok-0.9.1 (06 Nov 2003)
 
   06 Nov 2003; L. Boshell <leonardop@gentoo.org> gok-0.9.1.ebuild :
