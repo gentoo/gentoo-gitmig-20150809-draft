@@ -1,6 +1,38 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.46 2004/06/03 06:33:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.47 2004/06/03 07:30:25 spyderous Exp $
+
+  03 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
+  PATCH_VER 1.0. This patchset should get xorg-x11-6.7.0 ready to go stable on
+  all archs that have tested it. Many of them have already stabled it, so I'm
+  holding some non-crucial patches out for 6.7.0-r1.
+  
+  -Add 9210_all_XFree86-4.3.0-arm32-compiler.h.patch (#52707) from
+  netwinder.org. This fixes compiles for the ARM architecture.
+  -Add 9215_all_xorg-x11-6.7.0-char-bit-and-ia64-asm-page.patch to remove a
+  compiler-intrinsic define since it dies on makedepend otherwise (fd.o #601),
+  and fix the IA64 build (broken because it includes kernel header asm/page.h,
+  which doesn't work with -ansi) (fd.o #605).
+  -Add 9220_all_xorg-x11-6.7.0-install-vera-italic.patch to install VeraIt.ttf.
+  It was getting left out. Patch from xorg CVS by Eric Anholt.
+  -Add 9225_all_xorg-x11-6.7.0-install-xfree86-lst.patch (fd.o #531) to install
+  xfree86.lst. This should fix some XKB problems.
+  -Add 9230_all_xorg-x11-6.7.0-try-tcp-without-local-and-fix-ipv6-xdmauth-
+  segfault.patch to make XOpenDisplay try tcp connection if local fails (fd.o
+  #546), and fix Xlib segfaults with IPv6 if compiled with HASXDMAUTH (NetBSD
+  #25098).
+  -Add 9235_all_xorg-x11-6.7.0-libxf86config-monitor-freq-fix.patch from RH.
+  This prevents writing out the HorizSync/VertRefresh lines commented out, which
+  forces all default X config files written out by this library to rely on DDC.
+  Poor assumption that DDC is always available. Patch by Mike Harris.
+  -Add 9240_all_xorgconfig-naming-xkb-font-path-fixes.patch to do a few things:
+    - Clean up server name changes from TM branch
+    - Set default XKB rules file name correctly
+    - Use default font path from Imake configuration for the default font path
+      in generated xorg.conf files.
+    - Use path variables from Imake configuration for paths to files, in case
+      vendor has configured them to install somewhere other than the defaults.
+    Patch from xorg CVS by Alan Coopersmith.
 
   03 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
   Fix typo in xrender.pc generation, includ to include.
