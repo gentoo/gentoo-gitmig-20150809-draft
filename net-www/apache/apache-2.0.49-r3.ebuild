@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r3.ebuild,v 1.12 2004/06/09 17:57:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r3.ebuild,v 1.13 2004/06/10 22:56:54 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -26,7 +26,6 @@ DEPEND="dev-util/yacc
 	>=sys-apps/sed-4
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
-	doc? ( =app-doc/apache-manual-2.0.49-r1 )
 	!mips? ( ldap? ( =net-nds/openldap-2* ) )"
 
 apache_setup_vars() {
@@ -267,8 +266,12 @@ src_install () {
 	use !mips && use ldap && doins ${FILESDIR}/2.0.49/46_mod_ldap.conf
 
 	#drop in a convenient link to the manual
-	if use docs; then
+	if use doc; then
+		MANUAL_VERSION="2.0.49-r3"
+		insinto /etc/apache2/conf/modules.d
+		doins ${FILESDIR}/00_apache_manual.conf
 		dosym /usr/share/doc/${PF}/manual ${DATADIR}/htdocs/manual
+		sed -i -e "s:2.0.49:${MY_VERSION}:" ${D}/etc/apache2/conf/modules.d/00_apache_manual.conf
 	fi
 
 	#SLOT=2!!!
