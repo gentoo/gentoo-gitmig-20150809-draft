@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.5.ebuild,v 1.3 2004/01/16 12:54:47 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.11.ebuild,v 1.1 2004/01/16 12:54:47 coredumb Exp $
+
+IUSE="nls"
 
 S=${WORKDIR}/sqlite
 DESCRIPTION="SQLite: An SQL Database Engine in a C Library."
-SRC_URI="http://www.hwaci.com/sw/sqlite/${P}.tar.gz"
-HOMEPAGE="http://www.hwaci.com/sw/sqlite/"
+SRC_URI="http://www.sqlite.org/${P}.tar.gz"
+HOMEPAGE="http://www.sqlite.org"
 DEPEND="virtual/glibc
 	dev-lang/tcl"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~arm ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~arm ~hppa amd64"
 
 src_compile() {
 	local myconf
