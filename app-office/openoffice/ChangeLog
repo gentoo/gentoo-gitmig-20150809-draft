@@ -1,8 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.9 2002/10/17 14:22:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.10 2002/11/04 01:33:26 nall Exp $
 
 *openoffice-1.0.1-r1 (22 Sep 2002)
+
+  03 Nov 2002; Jon Nall <nall@gentoo.org> openoffice-1.0.1-r1.ebuild :
+  added ~ppc to KEYWORDS
 
   17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> openoffice-1.0.1-r1.ebuild :
   Added IUSE.
