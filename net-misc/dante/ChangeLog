@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.15 2003/08/03 04:05:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.16 2003/12/08 22:00:43 agriffis Exp $
+
+*dante-1.1.14-r1 (08 Dec 2003)
+
+  08 Dec 2003; Aron Griffis <agriffis@gentoo.org> dante-1.1.14-r1.ebuild,
+  files/dante-1.1.14-bindresvport.patch, files/dante-1.1.14-socksify.patch:
+  Patch socksify to prevent setting of LD_LIBRARY_PATH which breaks operation on
+  alpha (and possibly other platforms). Patch socks.h to prevent conflict with
+  netinet/in.h (better solution than was previously in the ebuild)
 
 *dante-1.1.14 (03 Aug 2003)
 
