@@ -1,4 +1,6 @@
-MD5 b8643a2a5eb6b8ce51ff3e4ce0d032f3 ChangeLog 1304
+MD5 e375c420637ff366ca3c3657bd8a5493 xfwm4-themes-4.0.3.ebuild 677
+MD5 102218081412cd8c46a296e75ada835e ChangeLog 1488
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 69529a2d1f962bfcc90921bf97b354b4 xfwm4-themes-4.0.0.ebuild 671
 MD5 cd55beabab231600b56a34eb85c19edd files/digest-xfwm4-themes-4.0.0 70
+MD5 11350afb214583e32073b15af4f0c8a9 files/digest-xfwm4-themes-4.0.3 70

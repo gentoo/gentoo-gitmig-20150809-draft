@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfwm4-themes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.8 2003/12/19 01:18:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.9 2004/01/09 05:50:09 bcowan Exp $
+
+*xfwm4-themes-4.0.3 (09 Jan 2004)
+
+  09 Jan 2004; Brad Cowan <bcowan@gentoo.org> xfwm4-themes-4.0.3.ebuild:
+  Bugfix release of xfce4. Fixes memory leak and adds kde systray support
 
   18 Dec 2003; Jason Wever <weeve@gentoo.org> xfwm4-themes-4.0.0.ebuild:
   Marked stable on sparc.
