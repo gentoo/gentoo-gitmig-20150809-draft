@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.62 2003/08/16 09:27:34 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.63 2003/08/18 05:29:54 kumba Exp $
 
 *xmms-1.2.7-r25 (16 Aug 2003)
+
+  18 Aug 2003; Joshua Kinard <kumba@gentoo.org> xmms-1.2.7-r25.ebuild:
+  Added ~mips to KEYWORDS
 
   16 Aug 2003; jje <jje@gentoo.org> xmms-1.2.7-r25.ebuild,
   files/xmms-nptl.patch:
