@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.1-r1.ebuild,v 1.1 2003/08/21 05:17:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.1-r1.ebuild,v 1.2 2003/08/27 19:57:08 vapier Exp $
 
 inherit eutils
 
@@ -18,8 +18,8 @@ IUSE="ssl postgres mysql prelude"
 
 DEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2-r1
-	>=net-libs/libnet-1.0.2a-r3
 	<net-libs/libnet-1.1
+	>=net-libs/libnet-1.0.2a-r3
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )

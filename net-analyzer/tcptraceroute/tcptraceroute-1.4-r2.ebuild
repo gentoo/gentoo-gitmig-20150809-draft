@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.4-r2.ebuild,v 1.1 2003/08/21 04:56:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.4-r2.ebuild,v 1.2 2003/08/27 19:59:21 vapier Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~arm"
 
 DEPEND="net-libs/libpcap
-	>=net-libs/libnet-1.0.2a-r3
-	<net-libs/libnet-1.1"
+	<net-libs/libnet-1.1
+	>=net-libs/libnet-1.0.2a-r3"
 
 src_unpack() {
 	unpack ${A}
