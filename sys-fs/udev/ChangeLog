@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.63 2004/09/10 21:40:12 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.64 2004/09/13 21:28:50 gregkh Exp $
+
+  13 Sep 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  -files/udev-015-no-wait-for-sleep.patch,
+  -files/udev-016-logging-config-option.patch,
+  -files/udev-017-no-wait-for-sleep.patch,
+  -files/udev-018-sysfs-build-fix.patch,
+  -files/udev-019-unlink-existing.patch:
+  deleted a lot of old patches from the tree
 
 *udev-031 (10 Sep 2004)
 
