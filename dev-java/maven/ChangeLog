@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/maven
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven/ChangeLog,v 1.4 2003/10/02 17:08:21 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven/ChangeLog,v 1.5 2003/11/20 12:00:56 strider Exp $
+
+*maven-1.0_rc1 (20 Nov 2003)
+
+  20 Nov 2003; Adrian Almenar <strider@gentoo.org> maven-1.0_rc1.ebuild:
+  Moved to stable.
 
   02 Oct 2003; Adrian Almenar <strider@gentoo.org> :
   Version bump, new RC
