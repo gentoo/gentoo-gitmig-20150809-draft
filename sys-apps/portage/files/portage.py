@@ -68,23 +68,30 @@ def relparse(myver):
 		#alpha,beta or pre
 		number=string.atof(mynewver[0])
 		if "beta" == mynewver[1][:4]:
-			p1=-2
+			p1=-3
 			try:
 				p2=string.atof(mynewver[1][4:])
 			except:
 				p2=0
 		elif "alpha" == mynewver[1][:5]:
-			p1=-3
+			p1=-4
 			try:
 				p2=string.atof(mynewver[1][5:])
 			except:
 				p2=0
 		elif "pre" ==mynewver[1][:3]:
-			p1=-1
+			p1=-2
 			try:
 				p2=string.atof(mynewver[1][3:])
 			except:
 				p2=0
+		elif "rc" ==mynewver[1][:2]:
+			p1=-1
+			try:
+				p2=string.atof(mynewver[1][2:])
+			except:
+				p2=0
+
 		elif "p" ==mynewver[1][:1]:
 			try:
 				p1=string.atoi(mynewver[1][1:])
@@ -152,7 +159,7 @@ def ververify(myval):
 		#something like .asldfkj_alpha1 which is invalid :)
 		ERRVER=splits[0]+" is not a valid number."
 		return 0
-	valid=["alpha","beta","pre","p"]
+	valid=["alpha","beta","pre","rc","p"]
 	for x in valid:
 		if splits[1][0:len(x)]==x:
 			firpart=x
@@ -270,4 +277,6 @@ def pkg(myname):
 def ver(myname):
         a=string.split(myname,'-')
         return myname[len(a[0])+1:]
+
+
 
