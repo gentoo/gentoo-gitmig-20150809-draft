@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.2.2.ebuild,v 1.5 2002/08/16 04:04:41 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.2.2.ebuild,v 1.6 2002/09/04 07:02:39 seemant Exp $
 
-S=${WORKDIR}/ElectricFence-${PV}
+MY_P="ElectricFence-${PV}"
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="malloc() debugger for Linux and Unix."
-SRC_URI="ftp://ftp.perens.com/pub/ElectricFence/Beta/ElectricFence-${PV}.tar.gz"
+SRC_URI="ftp://ftp.perens.com/pub/ElectricFence/Beta/${MY_P}.tar.gz"
 HOMEPAGE="http://perens.com/FreeSoftware/"
 
 SLOT="0"
