@@ -1,4 +1,6 @@
+MD5 9e628c58ee6e2090fddb5a0068565098 gaim-encryption-2.29.ebuild 1127
 MD5 ab7db4bf9ff48c8de9da14fd12f6c15c metadata.xml 344
-MD5 f5fcabd688079e7907d5484ed6017cfe ChangeLog 5704
+MD5 dcbd9495e6d6c667657db3ec193f9139 ChangeLog 5829
 MD5 1832e11222ef97ebb2bf22fff463f024 gaim-encryption-2.28.ebuild 1122
+MD5 571e96ba73294761bf61482053d3f169 files/digest-gaim-encryption-2.29 72
 MD5 4199a4a07c312219c1667706cd77df4f files/digest-gaim-encryption-2.28 72
