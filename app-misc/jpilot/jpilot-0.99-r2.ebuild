@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99-r1.ebuild,v 1.4 2001/08/31 03:23:38 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99-r2.ebuild,v 1.1 2001/10/06 12:36:36 azarah Exp $
 
 
 A="${P}.tar.gz jpilot-syncmal_0.62.tar.gz malsync_2.0.6.src.tar.gz"
@@ -15,7 +15,7 @@ HOMEPAGE="http://jpilot.org/"
 # for jpilot-syncmal http://people.atl.mediaone.net/jasonday/code/syncmal/
 # And you'll also need an avangto account. 
 
-DEPEND=">=x11-libs/gtk+-1.2.0 >=dev-libs/pilot-link-0.9.5"
+DEPEND=">=x11-libs/gtk+-1.2.10-r4 >=dev-libs/pilot-link-0.9.5"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -32,7 +32,7 @@ src_compile() {
 	NLS_OPTION="--disable-nls"
   fi
 
-  try ./configure --prefix=/usr/X11R6 --host=${CHOST} ${NLS_OPTION}
+  try ./configure --prefix=/usr --host=${CHOST} ${NLS_OPTION}
 
   # cheap fix?
   patch -p0 < ${FILESDIR}/${P}.patch
@@ -44,14 +44,14 @@ src_compile() {
   try make
 
   cd ${S}/jpilot-syncmal_0.62
-  try ./configure --prefix=/usr/X11R6 --host=${CHOST}
+  try ./configure --prefix=/usr --host=${CHOST}
   make
 }
 
 src_install() {
 
-  make prefix=${D}/usr/X11R6 install
-  insinto /usr/X11R6/share/jpilot/plugins
+  make prefix=${D}/usr install
+  insinto /usr/share/jpilot/plugins
   doins jpilot-syncmal_0.62/.libs/libsyncmal.so
   dodoc README TODO UPGRADING ABOUT-NLS BUGS\
 	CHANGELOG COPYING CREDITS INSTALL

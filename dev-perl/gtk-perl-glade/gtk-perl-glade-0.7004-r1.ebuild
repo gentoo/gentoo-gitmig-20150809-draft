@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004.ebuild,v 1.4 2001/06/06 16:55:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r1.ebuild,v 1.1 2001/10/06 12:36:36 azarah Exp $
 
 A=Gtk-Perl-${PV}.tar.gz
 S=${WORKDIR}/Gtk-Perl-${PV}
@@ -11,7 +11,7 @@ HOEMPAGE="http://www.perl.org/"
 
 DEPEND="sys-devel/perl
         =dev-perl/gtk-perl-${PV}
-	gnome-apps/glade"
+	dev-util/glade"
 
 
 src_compile() {            
