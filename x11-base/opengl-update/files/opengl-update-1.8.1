@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-1.8.1,v 1.1 2004/07/18 02:51:17 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-1.8.1,v 1.2 2004/07/19 05:39:21 cyfred Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -118,6 +118,10 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 		if [ ${?} = 0 ]
 		then
 			ln -sf /usr/lib/opengl/${GL_IMPLEM}/tls /usr/lib/opengl/${GL_IMPLEM}/lib/tls
+			if [ -d /usr/lib32/opengl/${GL_IMPLEM} ]
+			then
+				ln -sf /usr/lib32/opengl/${GL_IMPLEM}/tls /usr/lib32/opengl/${GL_IMPLEM}/lib/tls
+			fi
 		fi
 	fi
 	
@@ -129,7 +133,30 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 		source /etc/env.d/09opengl
 		echo "LDPATH=${LDPATH}:/usr/lib32/opengl/${GL_IMPLEM}/lib" > /etc/env.d/09opengl
 		unset LDPATH
+
+		# We also need to make TLS directories now aswell, make 32bit one here
+		lib32="$(readlink /usr/lib32)"
+		if [ -h ${lib32}/tls ]
+		then
+			rm -f ${lib32}/tls
+		fi
+		if [ ! -d ${lib32}/tls ]
+		then
+			mkdir -p ${lib32}/tls
+		fi
+			
 	fi
+
+	# System wide tls stuff
+	if [ -h /usr/lib/tls ]
+	then
+		rm -f /usr/lib/tls
+	fi
+	if [ ! -d /usr/lib/tls ] 
+	then
+		mkdir -p /usr/lib/tls
+	fi
+	
 	/usr/sbin/env-update &>/dev/null
 
 	LIBDIRS="lib lib32"
@@ -180,15 +207,7 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 				/usr/${LIBDIR}/libGLcore.so.1
 		fi
 
-		# Setup nvidia tls symlinks (if necessary)
-		if [ -h /usr/${LIBDIR}/tls ]
-		then
-			rm -f /usr/${LIBDIR}/tls
-		fi
-		# Make the directory 
-		mkdir -p /usr/${LIBDIR}/tls
-
-		# Now setup the library links
+		# Now setup the TLS library links
 		if [ -e /usr/${LIBDIR}/libnvidia-tls.so ]
 		then
 			rm -f /usr/${LIBDIR}/libnvidia-tls.so
