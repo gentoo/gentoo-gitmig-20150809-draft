@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.91 2003/09/25 23:24:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.92 2003/09/26 16:19:17 weeve Exp $
+
+  26 Sep 2003; Jason Wever <weeve@gentoo.org> kdelibs-3.1.4.ebuild:
+  Added sparc keyword.
 
 *kdelibs-3.2.0_alpha2 (25 Sep 2003)
 
