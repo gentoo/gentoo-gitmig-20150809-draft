@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.25.ebuild,v 1.3 2003/02/13 11:56:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.25.ebuild,v 1.4 2003/02/22 00:02:55 agriffis Exp $
 
 inherit gnome.org
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc alpha"
 
 DEPEND=">=dev-libs/popt-1.5
 	>=sys-devel/perl-5.6.0"
