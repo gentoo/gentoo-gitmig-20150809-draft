@@ -1,6 +1,11 @@
 # ChangeLog for games-board/scid
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.6 2004/03/30 18:38:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.7 2004/06/21 20:24:26 mr_bones_ Exp $
+
+*scid-3.6.1 (21 Jun 2004)
+
+  21 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> scid-3.6.1.ebuild:
+  version bump (bug #49346) - ebuild provided by Gene Ruebsamen
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> scid-3.5.ebuild:
   buggy makefiles bug #46110
