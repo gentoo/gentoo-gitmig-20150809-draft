@@ -1,4 +1,4 @@
-MD5 34fa798dc13c71d4851f5d5b52a54dc2 hsc-0.929.ebuild 956
-MD5 537b3b2ac16d8673c7c02d87c6fb29d3 ChangeLog 787
 MD5 13a8398dc37427ed00147e630652fb0e files/Makefile.hsc-0.929.patch.gz 629
 MD5 91d17721a179d561b59ff20245d03077 files/digest-hsc-0.929 62
+MD5 34fa798dc13c71d4851f5d5b52a54dc2 hsc-0.929.ebuild 956
+MD5 8ad7ec1ee684ffec3f229dfa32bddc60 ChangeLog 785
