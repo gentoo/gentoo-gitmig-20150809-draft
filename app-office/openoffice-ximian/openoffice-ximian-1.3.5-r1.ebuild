@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.5-r1.ebuild,v 1.3 2004/10/15 15:36:37 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.5-r1.ebuild,v 1.4 2004/10/18 14:15:44 gustavoz Exp $
 
 # Notes:
 #
@@ -49,7 +49,7 @@ HOMEPAGE="http://ooo.ximian.com"
 
 LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc sparc"
 
 RDEPEND="!app-office/openoffice-ximian-bin
 	virtual/x11
