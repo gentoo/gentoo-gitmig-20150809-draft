@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8923e0ef3cfbb665222b60a8abcb42bc scim-0.99.3.ebuild 2689
-MD5 472210936c4ee29d30b8d1f260576982 scim-0.99.5.ebuild 2699
-MD5 dcf626221ffc7742b7a5c83803cfd430 scim-0.9.7.ebuild 2151
-MD5 be64a2d654dac81296b57cb005216386 scim-0.99.4.ebuild 2691
-MD5 01d73058b186a520ef184bc8939f8b48 ChangeLog 4338
+MD5 401f74ee91549cb2b8b2e9039afc1af9 ChangeLog 4498
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 95e4d06699356649f034690e3c3e870e files/scim-0.6.1-gtk2immodule.patch 545
+MD5 dcf626221ffc7742b7a5c83803cfd430 scim-0.9.7.ebuild 2151
+MD5 ef63b0419970e3b59a79f7d653de6c82 scim-0.99.6.ebuild 2698
+MD5 8923e0ef3cfbb665222b60a8abcb42bc scim-0.99.3.ebuild 2689
+MD5 a01f0eabb8a49dcdb99bbe8be20abc1c scim-0.99.4.ebuild 2689
+MD5 472210936c4ee29d30b8d1f260576982 scim-0.99.5.ebuild 2699
+MD5 4b50ec45c69e938123b22d03e8049859 files/digest-scim-0.9.7 63
+MD5 bd9ce46bfdc925e2a828879c00f545e4 files/digest-scim-0.99.6 64
 MD5 b71588a9e8ece4902533e78661265621 files/digest-scim-0.99.3 64
+MD5 95e4d06699356649f034690e3c3e870e files/scim-0.6.1-gtk2immodule.patch 545
 MD5 cad55398c8797ef251c08810752d1c8e files/digest-scim-0.99.4 64
 MD5 ad856b4133ee70fef385843ce408c9a4 files/digest-scim-0.99.5 64
-MD5 4b50ec45c69e938123b22d03e8049859 files/digest-scim-0.9.7 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBF8u2CHk4+ZoBpvsRArw7AJ9/L4CkA8hUzRz5y5T5mW9vDLWiGQCgqfct
-E/u1n46bAhG1jpnOWK6fZ1I=
-=iRpq
------END PGP SIGNATURE-----
