@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.58 2004/04/23 16:09:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.59 2004/04/26 19:27:17 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  module-init-tools-0.9.15_pre4.ebuild, module-init-tools-3.0.ebuild,
+  module-init-tools-3.0_pre10.ebuild, module-init-tools-3.0_pre5.ebuild,
+  module-init-tools-3.0_pre9.ebuild:
+  Add die following econf for bug 48950
 
   23 Apr 2004; Guy Martin <gmsoft@gentoo.org> module-init-tools-3.0.ebuild:
   Added a guess fix for modutils on hppa.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/mtree-1.5.ebuild,v 1.2 2004/04/16 19:46:49 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/mtree-1.5.ebuild,v 1.3 2004/04/26 19:28:17 agriffis Exp $
 
 DESCRIPTION="mtree is used to check the permissions of a file system against a spec file"
 HOMEPAGE="http://www.netbsd.org/"
@@ -16,11 +16,11 @@ S=${WORKDIR}/bootstrap-pkgsrc
 src_compile() {
 	cd digest
 	chmod +x configure
-	econf
+	econf || die "econf failed"
 	emake || die
 	cd ../mtree
 	chmod +x configure
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

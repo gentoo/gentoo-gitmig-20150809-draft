@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mtree
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/ChangeLog,v 1.2 2004/04/16 19:46:49 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/ChangeLog,v 1.3 2004/04/26 19:28:17 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> mtree-1.5.ebuild:
+  Add die following econf for bug 48950
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> mtree-1.5.ebuild:
   adding s390 keywords

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.15_pre4.ebuild,v 1.10 2004/03/29 20:57:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.15_pre4.ebuild,v 1.11 2004/04/26 19:27:17 agriffis Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -65,7 +65,7 @@ src_compile() {
 		--prefix=/ \
 		--disable-insmod-static \
 		--disable-zlib \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake || die "emake modutils failed"
 	einfo "Building module-init-tools..."
@@ -74,7 +74,7 @@ src_compile() {
 	econf \
 		--prefix=/ \
 		--enable-zlib \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake || die "emake module-init-tools failed"
 }
