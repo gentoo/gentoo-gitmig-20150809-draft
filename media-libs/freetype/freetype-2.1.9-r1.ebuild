@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9-r1.ebuild,v 1.16 2005/03/26 19:40:32 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9-r1.ebuild,v 1.17 2005/04/01 18:07:50 foser Exp $
 
 inherit eutils flag-o-matic gnuconfig libtool
 
@@ -23,6 +23,7 @@ IUSE="zlib bindist doc"
 # 20 Nov 2004 agriffis
 DEPEND="virtual/libc
 	zlib? ( sys-libs/zlib )"
+
 RDEPEND="${DEPEND}
 	!<www-client/mozilla-1.7.3-r3
 	!<www-client/mozilla-firefox-1.0-r3
@@ -42,6 +43,7 @@ src_unpack() {
 	gnuconfig_update ${S}
 	uclibctoolize
 	epunt_cxx
+
 }
 
 src_compile() {
@@ -49,7 +51,7 @@ src_compile() {
 	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=118021
 	append-flags "-fno-strict-aliasing"
 
-	use bindist || append-flags "${CFLAGS} -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
+	use bindist || append-flags -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER
 
 	make setup CFG="--host=${CHOST} --prefix=/usr `use_with zlib` --libdir=/usr/$(get_libdir)" unix || die
 
