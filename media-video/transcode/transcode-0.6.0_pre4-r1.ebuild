@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0_pre4-r1.ebuild,v 1.1 2002/04/21 23:34:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0_pre4-r1.ebuild,v 1.2 2002/04/27 12:39:51 seemant Exp $
 
-P=transcode-0.6.0pre4
-S=${WORKDIR}/${P}
+MY_P=${P/_/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="video stream processing tool"
-SRC_URI="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode/pre/${P}.tgz"
+SRC_URI="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode/pre/${MY_P}.tgz"
 HOMEPAGE="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode"
 
 # Note: transcode can use pretty much any media-related package ever written as
