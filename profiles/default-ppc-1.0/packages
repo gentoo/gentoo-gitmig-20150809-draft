@@ -37,19 +37,9 @@
 # Temporary masking here only please (permanent ones at bottom)
 #
 
-# Not fully tagged for keywords yet
-# unmasking for now, not sure how many problems/compalints this will
-# cause with missing keywords, but it will ensure we keyword missing stuff
-# as we've tested about as much as the devs can so far :(
-#<=sys-apps/portage-2.0.13
-
 # not working, needs attention - Gerk Jul 30 2002
 # upstream problems reported by OlafH of suse ppc
 <media-sound/alsa-driver-0.9.0_rc2
-
-# syslog-ng segfaults on usage
-# maksed for now, Gerk Jul 14/02
-~app-admin/syslog-ng
 
 # gstreamer uses x86 asm :(
 # Gerk - July 4, 2002
