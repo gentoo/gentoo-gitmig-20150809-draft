@@ -1,4 +1,7 @@
-MD5 cf7a52f373f2b506ed0e2decf57545a3 ChangeLog 5065
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ebc95209172a78bed8b1fea03fd8d8a0 ChangeLog 5165
 MD5 febfcafa02fda49df53d2748a7c792ef metadata.xml 223
 MD5 b5b82c4fb181fc7d107544f63c0896f9 mplayerplug-in-0.91.ebuild 1358
 MD5 5312eebb4962ac4b701c10e237740df4 mplayerplug-in-0.95.ebuild 1379
@@ -8,7 +11,7 @@ MD5 6bb283242d817313d4543fe32e39fb88 mplayerplug-in-1.2.ebuild 1417
 MD5 c53ca3e406715ed7d29180182433fa98 mplayerplug-in-2.11.ebuild 1396
 MD5 3e7f1a28891c4acf0819d6b9737b023a mplayerplug-in-2.60.ebuild 1055
 MD5 d464b8627ae553669c5627bb0c1750c4 mplayerplug-in-2.66.ebuild 1408
-MD5 4cfdef0c185039520b920b242ce75218 mplayerplug-in-2.70.ebuild 1225
+MD5 07e4985b4f15ae06cf8d6f2194502cf2 mplayerplug-in-2.70.ebuild 1230
 MD5 b754add73c488595bc984c5af2ef035a files/digest-mplayerplug-in-0.91 125
 MD5 efaa2a17874e95270fe36e6ed5177084 files/digest-mplayerplug-in-0.95 125
 MD5 073ca6e88c57b32f4408ac6b7e5e3ab3 files/digest-mplayerplug-in-1.0 124
@@ -18,3 +21,10 @@ MD5 cef735360e53abdbf7c1da5ce1f8f861 files/digest-mplayerplug-in-2.11 126
 MD5 5aebc7ac8adac5ba297b3717ce1ac92c files/digest-mplayerplug-in-2.60 155
 MD5 ccdd34ab806933589a0d87348456484c files/digest-mplayerplug-in-2.66 155
 MD5 8d804fe575577b83fcae3fea55167f1e files/digest-mplayerplug-in-2.70 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBrzOhFdQwWVoAgN4RAp5eAJ0RyvMHx4lu7usGkKDWR9e2imdgiwCgw9fG
+kk+gGZlZYSRraf3QTK3O7g8=
+=mkuC
+-----END PGP SIGNATURE-----
