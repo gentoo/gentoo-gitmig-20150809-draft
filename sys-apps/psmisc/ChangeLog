@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/psmisc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.24 2004/02/03 14:58:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.25 2004/02/03 19:08:29 gustavoz Exp $
+
+  03 Feb 2004; <gustavoz@gentoo.org> psmisc-21.2-r4.ebuild:
+  marked stable on sparc
 
   02 Feb 2004; Chris PeBenito <pebenito@gentoo.org> psmisc-21.2-r4.ebuild:
   Mark x86 stable.
