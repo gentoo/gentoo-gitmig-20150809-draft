@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/latexdiff-0.2.ebuild,v 1.1 2004/11/07 07:50:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/latexdiff-0.2.ebuild,v 1.2 2004/12/28 21:07:56 absinthe Exp $
 
 DESCRIPTION="latexdiff compares two latex files and marks up significant differences between them"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 IUSE=""
 

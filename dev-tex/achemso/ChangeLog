@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/achemso
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/achemso/ChangeLog,v 1.5 2004/10/05 06:45:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/achemso/ChangeLog,v 1.6 2004/12/28 20:57:00 absinthe Exp $
+
+  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> achemso-1.0.ebuild:
+  Keywords ~amd64.
 
   05 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> achemso-1.0.ebuild:
   Added app-arch/unzip to DEPEND and marked stable on alpha and ppc.

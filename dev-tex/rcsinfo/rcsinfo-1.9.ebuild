@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/rcsinfo/rcsinfo-1.9.ebuild,v 1.1 2004/11/07 09:24:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rcsinfo/rcsinfo-1.9.ebuild,v 1.2 2004/12/28 21:19:57 absinthe Exp $
 
 inherit latex-package
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cvsnt.org/manual/rcsinfo.html"
 # ftp://ftp.ctan.org/pub/tex-archive/macros/latex/contrib/${PN}.tar.gz
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DOCS="README-1.9"

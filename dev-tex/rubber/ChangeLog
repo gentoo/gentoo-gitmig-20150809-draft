@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/rubber
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.1 2004/11/07 14:31:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.2 2004/12/28 21:20:32 absinthe Exp $
+
+  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> rubber-0.99.8.ebuild:
+  Keywords ~amd64.
 
 *rubber-0.99.8 (07 Nov 2004)
 

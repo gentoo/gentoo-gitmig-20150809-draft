@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hlatex
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.3 2004/10/16 16:34:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.4 2004/12/28 21:03:17 absinthe Exp $
+
+  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> hlatex-0.991.ebuild:
+  Keywords ~amd64.
 
   17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> hlatex-0.991.ebuild:
   Marked as stable.
