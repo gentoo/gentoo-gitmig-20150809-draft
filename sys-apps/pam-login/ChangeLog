@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.20 2003/07/06 15:48:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.21 2003/07/13 13:03:32 azarah Exp $
+
+*pam-login-3.11-r1 (13 Jul 2003)
+
+  13 Jul 2003; Martin Schlemmer <azarah@gentoo.org> pam-login-3.11-r1.ebuild,
+  files/pam-login-3.11-gcc33.patch:
+  Fix inlining issues with gcc-3.3, bug #21213, thanks to Andrew Bevitt
+  <andrew@volutin.net>.
 
   28 Jun 2003; Chris PeBenito <pebenito@gentoo.org> pam-login-3.11.ebuild,
   files/pam-login-3.11-selinux.diff:
