@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.9.ebuild,v 1.3 2003/11/10 02:05:08 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.9.1-r1.ebuild,v 1.1 2003/11/28 22:45:48 solar Exp $
 
 inherit eutils
 
@@ -23,12 +23,9 @@ DEPEND="virtual/glibc
 
 src_unpack() {
 	unpack ${A}
-	[ -f ${FILESDIR}/${P}-gentoo.diff ] && epatch ${FILESDIR}/${P}-gentoo.diff
+	# [ -f ${FILESDIR}/${P}-gentoo.diff ] && epatch ${FILESDIR}/${P}-gentoo.diff
 	cd ${S}
-	if [ "$PV" = "1.9" ]; then
-		einfo "Patching Makefile.in to avoid sandbox problems"
-		sed -e s:"INSTALL) -d /var":"INSTALL) -d \$(DESTDIR)/var":g < Makefile.in > Makefile.out && mv Makefile.{out,in}
-	fi
+	epatch ${FILESDIR}/${PN}-1.9.1-makefile.patch
 }
 
 src_compile() {
@@ -48,8 +45,8 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	# mkdir -p ${D}/usr/share/man/man8/
 	make DESTDIR="${D}" install || die "einstall failed"
+	mv ${D}/etc/mman/config.xml{.sample,}
 
 	dodoc CHANGELOG COPYING
 	dohtml README.html
