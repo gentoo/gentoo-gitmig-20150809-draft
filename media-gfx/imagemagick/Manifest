@@ -11,7 +11,7 @@ MD5 687ab2e1b3d90bc84e13226b8075ebbc imagemagick-5.5.7.14.ebuild 2512
 MD5 dcc27cb8b7f7ef37a9d25507e68ce028 imagemagick-5.5.7.15.ebuild 2549
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
 MD5 aaf910b6ddcdebf83ea2e3ebe3bd0923 imagemagick-6.0.5.2.ebuild 2332
-MD5 87671ee88ba4efd31e5f8c1d542c02b8 imagemagick-6.0.7.1.ebuild 2329
+MD5 3db97c1775a1c5dac4aadb1c96e470b8 imagemagick-6.0.7.1.ebuild 2334
 MD5 f83c498eca8fc6a0cbd227182619f38e files/digest-imagemagick-5.4.7.4-r1 72
 MD5 f9ff3fba47b4d61edd32eea1aee94731 files/digest-imagemagick-5.5.3.2 72
 MD5 69be221b82f76ec46d241c5e4bff0f12 files/digest-imagemagick-5.5.4.4 72
@@ -25,7 +25,7 @@ MD5 220c2dac3f8b381c42fdb5e92085bdd8 files/digest-imagemagick-6.0.7.1 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBPk5CHTu7gpaalycRAkKVAJ96dgRlJkL/oim0K5z1iP7I1Ht45wCgraNy
-sS6nIOh+HpWdABGr8b52GZA=
-=FVXF
+iD8DBQFBPk5zHTu7gpaalycRAt28AJ4hgwdmsZQP+0Dyj/s5FljCbcfiUQCfdULv
+kiGQbFCACXbL2KJ+jF5VHKI=
+=1KG3
 -----END PGP SIGNATURE-----
