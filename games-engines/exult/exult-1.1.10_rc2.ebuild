@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.1.10_rc2.ebuild,v 1.1 2004/03/06 04:40:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.1.10_rc2.ebuild,v 1.2 2004/03/10 00:24:59 mr_bones_ Exp $
 
 inherit games
 
@@ -23,9 +23,9 @@ S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	ewarn "*********************************************************"
-	ewarn " I had massive problems with exult when using agressive"
+	ewarn " I had massive problems with exult when using aggressive"
 	ewarn " CFLAGS and CXXFLAGS. If exult segfaults try less"
-	ewarn " agressive optimizations and/or a different -march"
+	ewarn " aggressive optimizations and/or a different -march"
 	ewarn " e.g.: -march=i386 instead of -march=i686 on x86"
 	ewarn "*********************************************************"
 }
@@ -39,19 +39,20 @@ src_compile() {
 		`use_enable mmx` \
 		`use_enable 3dnow` \
 		|| die
-	emake || die
+	# bug #44185 - fails on parallel make
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
-	mv ${D}/${GAMES_DATADIR}/{applications,icons} ${D}/usr/share/
+	make DESTDIR="${D}" install || die "make install failed"
+	cp -R "${D}/${GAMES_DATADIR}"/{applications,icons} "${D}/usr/share/" \
+		|| die "cp failed"
 	dodoc AUTHORS ChangeLog NEWS FAQ README README.1ST
 	prepgamesdirs
 }
 
 pkg_postinst() {
-	einfo "To hear music in exult,"
-	einfo "you have to install a timidity-patch."
+	einfo "To hear music in exult, you have to install a timidity-patch."
 	einfo "Try this:"
 	einfo "		$ emerge timidity-eawpatches"
 	einfo "kernel drivers. Install alsa instead."
