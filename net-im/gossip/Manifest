@@ -1,4 +1,6 @@
 MD5 3c51ebb9b29b0c19db40570875b01a11 gossip-0.5.ebuild 670
 MD5 e609530e470c1d860deb590efb870262 ChangeLog 492
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 5f3f88f72f760053456d38953bfb6aa0 gossip-0.6.ebuild 671
 MD5 f101cf7574bd3ce8a5c30fa17be87bf9 files/digest-gossip-0.5 63
+MD5 74c6a4b33f5bf9b5392c0f604cdbf55b files/digest-gossip-0.6 63
