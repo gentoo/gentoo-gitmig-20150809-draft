@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.9 2001/02/06 08:13:25 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.10 2001/02/07 03:02:57 pete Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -182,6 +182,7 @@ src_install() {
 		dodir /lib/modules/`uname -r`
 		dodir ${D}/lib/modules/${KV}
 		try make INSTALL_MOD_PATH=${D} modules_install
+		depmod -b ${D} -a ${KV}
 
 		#install ALSA modules
 		cd ${S}/extras/alsa-driver-0.5.10a
@@ -219,21 +220,34 @@ src_install() {
 	fi
 }
 
+pkg_preinst() {
+    if [ "${ROOT}" = "/" ]
+    then
+	# mount only if /boot is on a separate partition and is not
+	# commented out in /etc/fstab
+	if grep -qs "[^#].*/boot" /etc/fstab
+	then
+	    echo "Mounting /boot..."
+	    mount /boot
+	fi
+    fi
+}
+
 pkg_postinst() {
+    
     if [  "${ROOT}" = "/" ]
     then
+	# unmount only if /boot is on a separate partition and is not
+	# commented out in /etc/fstab
+	if grep -qs "[^#].*/boot" /etc/fstab
+	then
+	    echo "Unmounting /boot..."
+	    mount /boot
+	fi
 	if [ "${PN}" = "linux" ] ; then
 	    echo "Creating sounddevices..."
 	    /usr/sbin/snddevices
 		#needs to get fixed for devfs
-		fi
+	fi
     fi
 }
-
-
-
-
-
-
-
-
