@@ -1,4 +1,6 @@
-MD5 5196caec093bea046bff535bedd2a234 ChangeLog 3200
+MD5 90e8793fa9b58c50848ddba62a4bfe92 ChangeLog 3328
+MD5 51ce63f436d9a4fe08f9cd9bfd705bfd gaim-xmms-remote-1.8.ebuild 641
 MD5 9a401f93c6c5595dde24fabcf9d0c4e2 gaim-xmms-remote-1.7.ebuild 639
 MD5 dc59d3fab14b084056bc1b0faec90778 metadata.xml 574
+MD5 902a47c1dce6fa00ed5442157cab4d96 files/digest-gaim-xmms-remote-1.8 72
 MD5 0a550e0b47217c963140043369d2c6c5 files/digest-gaim-xmms-remote-1.7 72
