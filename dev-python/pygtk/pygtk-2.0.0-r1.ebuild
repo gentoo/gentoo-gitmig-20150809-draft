@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.0.0-r1.ebuild,v 1.2 2004/02/22 00:51:55 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.0.0-r1.ebuild,v 1.3 2004/03/11 23:46:38 liquidx Exp $
 
 inherit gnome.org python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.daa.com.au/~james/pygtk/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~x86 ppc ~sparc ~alpha amd64"
+KEYWORDS="x86 ppc ~sparc ~alpha amd64"
 IUSE="gnome opengl"
 
 RDEPEND=">=dev-lang/python-2.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.2.0.ebuild,v 1.1 2004/03/11 19:56:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.2.0.ebuild,v 1.2 2004/03/11 23:46:38 liquidx Exp $
 
 inherit gnome.org python
 
@@ -15,7 +15,7 @@ IUSE="gnome opengl"
 
 RDEPEND=">=dev-lang/python-2.2
 	>=x11-libs/pango-1
-	>=x11-libs/gtk+-2
+	>=x11-libs/gtk+-2.2
 	>=dev-libs/atk-1
 	>=dev-libs/glib-2
 	gnome? ( >=gnome-base/libglade-2 )
