@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.78 2004/07/19 19:27:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.79 2004/07/24 03:04:14 pylon Exp $
+
+  24 Jul 2004; Lars Weiler <pylon@gentoo.org> alsa-lib-1.0.5.ebuild:
+  Stable on ppc.
 
 *alsa-lib-1.0.5-r3 (19 Jul 2004)
 
