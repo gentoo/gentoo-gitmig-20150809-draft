@@ -4,7 +4,7 @@
 #
 # NOTE: this is an x86-only ebuild!!!
 #
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7.ebuild,v 1.1 2001/08/08 04:39:53 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7.ebuild,v 1.2 2001/08/12 03:22:18 chadh Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Super Tiny Editor with wordstar, vi, and emacs key bindings"
@@ -19,7 +19,12 @@ src_compile() {
 
 src_install () {
 	dodir /usr/bin
-	dobin e3 e3vi e3em e3ws e3pi e3ne
+	dobin e3
+	dosym e3 /usr/bin/e3vi
+	dosym e3 /usr/bin/e3em
+	dosym e3 /usr/bin/e3ws
+	dosym e3 /usr/bin/e3pi
+	dosym e3 /usr/bin/e3ne
 
 	cp e3.man e3.1
 	doman e3.1
