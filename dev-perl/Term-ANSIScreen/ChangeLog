@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/Term-ANSIScreen
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.1 2003/05/09 00:15:01 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.2 2003/05/13 21:47:31 rac Exp $
 
 *Term-ANSIScreen-1.40 (08 May 2003)
+
+  13 May 2003; <rac@gentoo.org> Term-ANSIScreen-1.40.ebuild:
+  Fix typo in homepage, thanks to Tony Vroon <tony@vroon.org> in bug 20942.
 
   08 May 2003; <rac@gentoo.org> Term-ANSIScreen-1.40.ebuild:
   initial import, ebuild based on that submitted by Thomas Arnhold
