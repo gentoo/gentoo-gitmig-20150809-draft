@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r3.ebuild,v 1.8 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r3.ebuild,v 1.9 2003/10/30 19:00:43 azarah Exp $
 
 inherit eutils
 
@@ -29,6 +29,9 @@ src_unpack() {
 	# Fix not linking to libstdc++
 	# <azarah@gentoo.org> 05 Dec 2002
 	epatch ${FILESDIR}/ddd-3.3.1-link-libstdc++.patch
+
+	# Fix repeated printing in help system, bug #30115.
+	epatch ${FILESDIR}/${P}-help-window-fix.patch
 }
 
 src_compile() {

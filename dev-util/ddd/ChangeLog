@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.10 2003/10/12 17:06:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.11 2003/10/30 19:00:43 azarah Exp $
+
+  30 Oct 2003; Martin Schlemmer <azarah@gentoo.org> ddd-3.3.1-r3.ebuild,
+  files/ddd-3.3.1-help-window-fix.patch:
+  Fix repeated printing in help system, bug #30115, patch by bartron
+  <bartron@gmx.net>.
 
   13 Oct 2003; Martin Holzer <mholzer@gentoo.org> ddd-3.3.7.ebuild:
   added gcc3 depend. Closes #30844.
