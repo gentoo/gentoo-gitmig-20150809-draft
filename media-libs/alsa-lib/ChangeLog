@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.39 2003/10/26 11:59:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.40 2003/11/10 19:46:59 mholzer Exp $
+
+  10 Nov 2003; Martin Holzer <mholzer@gentoo.org> alsa-lib-0.9.8.ebuild:
+  adding jack useflag. Submitted by Rick Harris <rickfharris@yahoo.com.au> In
+  #32608.
 
   26 Oct 2003; Martin Holzer <mholzer@gentoo.org> alsa-lib-0.9.8.ebuild:
   Now uses emake. Closes #32024.
