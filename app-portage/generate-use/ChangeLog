@@ -1,0 +1,12 @@
+# ChangeLog for app-admin/generate-use
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/generate-use/ChangeLog,v 1.1 2003/08/15 12:14:04 lanius Exp $
+
+*generate-use-0.3 (15 Aug 2003)
+
+  15 Aug 2003; Heinrich Wendel <lanius@gentoo.org> generate-use-0.3.ebuild:
+  moved from app-admin to app-portage
+
+*generate-use-0.3 (06 Apr 2003)
+  06 Apr 2003 Thomas Raschbacher <lordvan@gentoo.org> generate_use-0.3.ebuild:
+  initial ebuild
