@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.3 2002/07/07 15:01:13 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.4 2002/10/21 01:08:52 seemant Exp $
+
+*ncftp-3.1.5 (20 Oct 2002)
+
+  20 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ncftp-3.1.5.ebuild
+  files/digest-ncftp-3.1.5 :
+
+  Version bump, thanks to: rigo@home.nl (Rigo Ketelings) in bug #9341.
 
 *ncftp-3.1.4 (07 Jul 2002)
 
