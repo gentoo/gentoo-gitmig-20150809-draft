@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.90-r1.ebuild,v 1.8 2004/07/14 21:12:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r1.ebuild,v 1.1 2005/01/25 15:25:35 cardoe Exp $
 
-inherit virtualx
+inherit virtualx eutils
 
 IUSE="aalib alsa lirc mmx motif nls opengl quicktime zvbi"
 
@@ -10,8 +10,8 @@ MY_PATCH="xaw-deinterlace-3.76-0.1.1.diff.bz2"
 MY_FONT=tv-fonts-1.0
 DESCRIPTION="TV application for the bttv driver"
 HOMEPAGE="http://bytesex.org/xawtv/"
-SRC_URI="http://bytesex.org/xawtv/${PN}_${PV}.tar.gz
-	http://bytesex.org/xawtv/${MY_FONT}.tar.bz2
+SRC_URI="http://dl.bytesex.org/releases/xawtv/${P}.tar.gz
+	http://dl.bytesex.org/releases/tv-fonts/${MY_FONT}.tar.bz2
 	mirror://gentoo/${MY_PATCH}"
 
 SLOT="0"
@@ -28,7 +28,17 @@ DEPEND=">=sys-libs/ncurses-5.1
 		app-text/recode )
 	opengl? ( virtual/opengl )
 	quicktime? ( virtual/quicktime )
-	zvbi? ( media-libs/zvbi )"
+	zvbi? ( media-libs/zvbi )
+	sys-devel/autoconf
+	sys-devel/automake
+	sys-devel/libtool"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-allow-xlibs-in-normal-search-path.patch
+	cd ${S}
+	autoreconf
+}
 
 src_compile() {
 
@@ -68,9 +78,9 @@ src_install() {
 
 	dodoc COPYING Changes README* TODO
 
-	if [ -d /home/httpd ]
+	if [ -d /var/www/localhost ]
 	then
-		exeinto /home/httpd/cgi-bin
+		exeinto /var/www/localhost/cgi-bin
 		doexe scripts/webcam.cgi
 		dodoc ${FILESDIR}/webcamrc
 	fi

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.86-r2.ebuild,v 1.1 2004/08/29 11:21:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.86-r2.ebuild,v 1.2 2005/01/25 15:25:35 cardoe Exp $
 
 inherit virtualx eutils
 

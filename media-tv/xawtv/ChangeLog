@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/xawtv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.17 2004/08/29 11:21:02 mholzer Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.18 2005/01/25 15:25:35 cardoe Exp $
+
+*xawtv-3.94-r1 (25 Jan 2005)
+
+  25 Jan 2005; Doug Goldstein <cardoe@gentoo.org>
+  +files/xawtv-3.94-allow-xlibs-in-normal-search-path.patch,
+  -xawtv-3.86-r1.ebuild, -xawtv-3.88.1.ebuild, -xawtv-3.90-r1.ebuild,
+  -xawtv-3.91-r1.ebuild, -xawtv-3.93.ebuild, +xawtv-3.94-r1.ebuild:
+  compile fixes to support the latest xorg-x11 ebuilds, bug #75251
 
 *xawtv-3.86-r2 (29 Aug 2004)
 
