@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.32 2003/07/09 15:53:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.33 2003/07/15 13:24:53 todd Exp $
+
+  15 Jul 2003; Todd Sunderlin <todd@gentoo.org> gedit-2.2.1.ebuild:
+  Marked stable for sparc
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gedit-2.0.5.ebuild,
   gedit-2.2.0.1.ebuild, gedit-2.2.1.ebuild, gedit-2.2.2.ebuild:
