@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.4.0-r1.ebuild,v 1.2 2002/07/22 14:37:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.4.0-r1.ebuild,v 1.3 2002/08/07 17:53:42 gerk Exp $
 
 
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://gstreamer.sourceforge.net"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 # required packages
 # there are many many optional libraries. features are compiled if the libraries
@@ -24,7 +24,7 @@ DEPEND=">=dev-libs/glib-2.0
 		app-text/xmltex
 		app-text/xpdf
 		app-text/ghostscript )
-	>=dev-lang/nasm-0.90
+	x86? ( >=dev-lang/nasm-0.90 )
 	>=sys-libs/zlib-1.1.4"
 	
 RDEPEND=">=dev-libs/glib-2.0
