@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.3.4.ebuild,v 1.6 2004/07/14 02:51:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.3.4.ebuild,v 1.7 2004/08/08 21:03:57 stuart Exp $
 
 inherit java-pkg
 
@@ -18,7 +18,7 @@ DEPEND=">=virtual/jdk-1.4
 		servlet-2.3? ( =dev-java/servletapi-2.3-r1 )
 		servlet-2.4? ( =dev-java/servletapi-2.4 )
 		dbcp? ( =dev-java/commons-dbcp-1.1 )
-		jboss? ( =net-www/jboss-3.2.3 )
+		jboss? ( =www-servers/jboss-3.2.3 )
 		jta? ( =dev-java/jta-1.0.1 )
 		jmx? ( =dev-java/jmx-1.2.1 )
 		struts? ( =dev-java/struts-1.1 )
