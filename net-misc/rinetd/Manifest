@@ -1,3 +1,14 @@
-MD5 825126861b9ecb1efdfd8fb29fe0d08c ChangeLog 328
-MD5 219d35c7d4509f62420135de91eccbaf rinetd-0.62.ebuild 644
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b237cd13513100ee65486828596621c ChangeLog 461
+MD5 e6d328934a807c2f000f0ff3064c33bd rinetd-0.62.ebuild 726
 MD5 385cb98a70d5f3003f1bf734e2db0f35 files/digest-rinetd-0.62 58
+MD5 ca5d55c104af9dea24e71111b805a411 files/rinetd.rc 473
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBs+J+roRuSHgZdywRAiqwAJ98IY/iQBVCxzcQ8GAwDUG8WZLImACdHkhU
+7iEgo3H0+rCW1YZlzOVD2CM=
+=BQYQ
+-----END PGP SIGNATURE-----
