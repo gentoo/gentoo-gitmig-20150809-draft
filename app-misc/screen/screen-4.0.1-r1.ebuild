@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r1.ebuild,v 1.1 2003/11/29 16:40:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r1.ebuild,v 1.2 2003/12/08 22:39:37 gmsoft Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.uni-erlangen.de/pub/utilities/screen/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc hppa"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-apps/sed-4
