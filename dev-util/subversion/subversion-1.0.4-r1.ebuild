@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.4-r1.ebuild,v 1.6 2004/06/12 03:13:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.4-r1.ebuild,v 1.7 2004/06/24 11:08:27 pauldv Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -267,7 +267,8 @@ pkg_postinst() {
 			einfo "you must edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
 			einfo ""
 		fi
-		einfo "A repository needs to be created using the ebuild ${PN} config command"
+		einfo "A repository needs to be created using the \"ebuild <path to ${PVR}.ebuild> config\" command"
+		einfo "or using svnadmin (see man svnadmin) if this subversion install is used as server"
 		einfo ""
 		einfo "If you upgraded from an older version of berkely db and experience"
 		einfo "problems with your repository then run the following command:"
