@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/tkcvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.6 2003/02/12 06:47:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.7 2003/11/05 23:55:14 brandy Exp $
+
+*tkcvs-7.1.4 (06 Nov 2003)
+
+  06 Nov 2003; Brandy Westcott brandy@gentoo.org tkcvs-7.1.4.ebuild:
+  Version bumped to 7.1.4. Closes bug #32391.
 
 *tkcvs-7.1.2 (30 Dec 2002)
 
