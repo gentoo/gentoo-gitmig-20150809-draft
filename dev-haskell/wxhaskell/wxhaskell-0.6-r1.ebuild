@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.6-r1.ebuild,v 1.2 2004/06/02 21:46:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.6-r1.ebuild,v 1.3 2004/06/16 09:11:50 kloeri Exp $
 
 DESCRIPTION="a portable and native GUI library for Haskell"
 HOMEPAGE="http://wxhaskell.sourceforge.net/"
@@ -16,8 +16,6 @@ DEPEND="${DEPEND}
 	>=virtual/ghc-6.2
 	>=x11-libs/wxGTK-2.4.1
 	doc? ( >=dev-haskell/haddock-0.6-r2 )"
-
-S=${WORKDIR}/${P}
 
 # the variable ghc_version is used to store the ghc version we are building against
 
