@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.10.ebuild,v 1.6 2005/03/12 13:33:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.10.ebuild,v 1.7 2005/03/17 23:55:53 ka0ttic Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -16,24 +16,25 @@ IUSE="adns gtk ipv6 snmp ssl gtk2 kerberos"
 # if --disable-gtk2 is not passed to configure it will try to build with glib-2.0.
 # --disable-ethereal do not have an influence.
 
-RDEPEND=">=sys-libs/zlib-1.1.4
+RDEPEND="virtual/libpcap
+	dev-libs/elfutils
+	>=sys-libs/zlib-1.1.4
+	>=dev-libs/libpcre-4.2
 	snmp? ( >=net-analyzer/net-snmp-5.1.1 )
-	>=dev-util/pkgconfig-0.15.0
 	gtk? (  gtk2? ( >=dev-libs/glib-2.0.4 =x11-libs/gtk+-2* )
 		!gtk2? ( =x11-libs/gtk+-1.2* )
 		x11-libs/pango
 		dev-libs/atk )
 	!gtk? ( =dev-libs/glib-1.2* )
 	ssl? ( >=dev-libs/openssl-0.9.6e )
-	virtual/libpcap
-	>=dev-libs/libpcre-4.2
 	adns? ( net-libs/adns )
 	kerberos? ( virtual/krb5 )"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-devel/bison
-	sys-devel/flex"
+	sys-devel/flex
+	>=dev-util/pkgconfig-0.15.0"
 
 src_compile() {
 
