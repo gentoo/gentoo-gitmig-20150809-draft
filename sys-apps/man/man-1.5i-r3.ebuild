@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.13 2003/09/07 01:19:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.14 2003/10/01 23:23:34 mr_bones_ Exp $
 
 NV=1.5i2
 S=${WORKDIR}/${PN}-${NV}
@@ -60,7 +60,7 @@ src_install() {
 	cd ${S}/msgs
 	./inst.sh ?? ${D}/usr/share/locale/%L/%N
 	chmod 2555 ${D}/usr/bin/man
-	chown root.man ${D}/usr/bin/man
+	chown root:man ${D}/usr/bin/man
 	insinto /etc
 	cd ${S}
 	doins src/man.conf

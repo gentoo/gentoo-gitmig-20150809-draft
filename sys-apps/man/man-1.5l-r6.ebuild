@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5l-r6.ebuild,v 1.7 2003/09/23 15:26:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5l-r6.ebuild,v 1.8 2003/10/01 23:23:34 mr_bones_ Exp $
 
 IUSE="nls"
 
@@ -94,7 +94,7 @@ src_install() {
 		./inst.sh ?? ${D}/usr/share/locale/%L/%N
 	fi
 
-	chown root.man ${D}/usr/bin/man
+	chown root:man ${D}/usr/bin/man
 	chmod 2555 ${D}/usr/bin/man
 
 	# Needed for makewhatis
