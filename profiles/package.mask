@@ -145,6 +145,10 @@ net-www/zope
 # blocke, March 7, 2002
 <=dev-lang/php-4.1.2-r1
 
+# 8 May 2002, Ryan Phillips
+# PHP 4.2.0 is reported to have incompatibilities with some php scripts
+=dev-lang/php-4.2.0
+
 #per jnelson's request (30 Jan 2002, drobbins)
 =net-www/boa-0.94.12_pre3
 
@@ -445,7 +449,7 @@ app-doc/tkinfo
 =net-www/tomcat-3.2.2
 
 #Should be tested
-=net-mail/teapop-0.3.3
+#=net-mail/teapop-0.3.3
 
 # the packages dependent on tcl-tk have been updated to
 # support the seperation of both
