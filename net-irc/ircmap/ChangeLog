@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/ircmap
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ChangeLog,v 1.1 2002/12/12 17:42:33 phoenix Exp $
+
+*ircmap-0.99 (12 Dec 2002)
+
+  12 Dec 2002; phoen][x <phoenix@gentoo.org> ChangeLog, ircmap-0.99.ebuild,
+  files/ircmap-0.99 :
+  Initial import.  Ebuild submitted by Paul Belt <gaarde@yahoo.com>.
+  This closes bug #8713.
