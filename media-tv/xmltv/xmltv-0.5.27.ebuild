@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.25.ebuild,v 1.3 2004/01/16 17:19:38 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.27.ebuild,v 1.1 2004/01/16 17:19:38 max Exp $
 
 inherit perl-module
 
@@ -46,7 +46,7 @@ DEPEND=">=sys-apps/sed-4
 	>=dev-perl/libwww-perl-5.65
 	>=dev-perl/XML-Parser-2.34
 	>=dev-perl/XML-Twig-3.09
-	dev-perl/XML-Writer
+	>=dev-perl/XML-Writer-0.4.1
 	>=dev-perl/DateManip-5.42
 	dev-perl/Memoize
 	>=dev-perl/Term-ProgressBar-2.03
@@ -151,13 +151,4 @@ src_install() {
 		einfo "to where the ScriptAlias directive is configured."
 		einfo
 	fi
-}
-
-pkg_postinst() {
-	ewarn "If you are upgrading from < 0.5.10 and you need to use the"
-	ewarn "DE (Germany/Austria), UK or UK_RT (Britain), or IT (Italy)"
-	ewarn "grabbers, please make sure you have the appropriate value"
-	ewarn "specified in your XMLTV_OPTS setting because these grabbers"
-	ewarn "no longer build by default."
-	echo
 }
