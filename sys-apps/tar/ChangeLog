@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/tar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/ChangeLog,v 1.8 2002/12/09 04:37:26 manson Exp $
+# $Header:
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
@@ -9,6 +9,10 @@
 
   01 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Security update. Added patch developed by Redhat to fix directory traversals.
+
+  09 Dec 2002; Jon Portnoy <avenj@gentoo.org> :
+  Updated ebuild to work with USE="icc", no need to up the revision 
+  number.
 
 *tar-1.13.19-r1.ebuild (14 July 2002)
 
