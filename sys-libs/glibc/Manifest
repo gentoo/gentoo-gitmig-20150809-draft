@@ -35,7 +35,7 @@ MD5 49374df695743477ccba680199a0ff87 files/digest-glibc-2.3.3_pre20040117 312
 MD5 4555143fbcd20978747f7864f2f7fc01 files/digest-glibc-2.3.3_pre20040207 312
 MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3_pre20040420 312
 MD5 268eda0de40469d19bb7ff5c5cb7ec82 files/digest-glibc-2.3.3_pre20040529 312
-MD5 04a66432c1faec180a8f84d866ed2555 files/locales.build 681
+MD5 c4300e2f8808cb38a308745ed8b77367 files/locales.build 602
 MD5 4404ee4b6e3017819d8f36082e0265e5 files/test-sysctl_h.c 54
 MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r10 312
 MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376

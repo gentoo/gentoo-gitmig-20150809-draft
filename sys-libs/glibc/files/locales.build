@@ -5,20 +5,18 @@
 # ignored. Here is an example:
 # en_US/ISO-8859-1
 
-# the following are required, or else 'make check' will fail
-de_DE/ISO-8859-1
-de_DE@euro/ISO-8859-15
+en_US/ISO-8859-1
+en_US.UTF-8/UTF-8
+ja_JP.EUC-JP/EUC-JP
+ja_JP.UTF-8/UTF-8
+ja_JP/EUC-JP
 en_HK/ISO-8859-1
 en_PH/ISO-8859-1
-en_US/ISO-8859-1
+de_DE/ISO-8859-1
+de_DE@euro/ISO-8859-15
 es_MX/ISO-8859-1
 fa_IR/UTF-8
 fr_FR/ISO-8859-1
 fr_FR@euro/ISO-8859-15
 it_IT/ISO-8859-1
-ja_JP/EUC-JP
 
-# possibly useful
-en_US.UTF-8/UTF-8
-ja_JP.EUC-JP/EUC-JP
-ja_JP.UTF-8/UTF-8
