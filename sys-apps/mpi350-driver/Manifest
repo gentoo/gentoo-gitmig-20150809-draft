@@ -1,4 +1,14 @@
-MD5 4ec6e48fed92a4645180d205ce3aa966 mpi350-driver-2.0.ebuild 2281
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6638c4e0d30995858f0d88c07ea6781b ChangeLog 356
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 55848c658889ae1af9596a15af6f2da6 mpi350-driver-2.0.ebuild 2174
 MD5 873c008583c916c4c822dea9098cf21c files/digest-mpi350-driver-2.0 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBitclHTu7gpaalycRAtpmAJ9sWP93NGMHyxETOCGlSFbhgJu23wCfQcRr
+Ymu93avR4Iznc1alMBFVzWQ=
+=uvWE
+-----END PGP SIGNATURE-----

@@ -5,22 +5,22 @@ MD5 0d7c267c0c504f5e5a322ae34f402552 ChangeLog 1943
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 552d4816eef9bc465ba9f8a918f80f26 sysvinit-2.83-r1.ebuild 1074
 MD5 424f29ad5a264970cd802f9ec91bad20 sysvinit-2.83.ebuild 1037
-MD5 86f08311b1f202503002adbe467cd09c sysvinit-2.84.ebuild 1985
-MD5 473a2f047f7561081bed5b453dd6c642 sysvinit-2.85-r1.ebuild 2504
-MD5 506b09bb9b6570f9e9436aed8de3e458 sysvinit-2.85.ebuild 1885
+MD5 3003e070f46d5a0c9a2a4d8753c67801 sysvinit-2.84.ebuild 2003
+MD5 2a2361267cccc255f61a8dd090319a21 sysvinit-2.85-r1.ebuild 2541
+MD5 06f8b8527ed3a08f86f531232d6ea9ba sysvinit-2.85.ebuild 1887
 MD5 f3cc010ab25be0d757030537126157a8 files/digest-sysvinit-2.83 64
 MD5 f3cc010ab25be0d757030537126157a8 files/digest-sysvinit-2.83-r1 64
 MD5 76a07c8f9b30bd607a50b2b3eba0ebd8 files/digest-sysvinit-2.84 64
-MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85 64
-MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85-r1 64
 MD5 6e4627df68938fb6fd18afb1aea2bb8a files/inittab 1561
 MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
 MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
+MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85 64
+MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85-r1 64
 MD5 3c171d9c843284ce606663e4e6da26e9 files/sysvinit-2.85-selinux.patch 6448
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBKrgEI1lqEGTUzyQRAq22AKC3/Zc452tbEIQCBFKwmx1LxbimUwCfVGT2
-GP8g8j4zSk2c0oD2oss6/uc=
-=TGfF
+iD8DBQFBitf2HTu7gpaalycRAn62AJ9KQ2rtAGs8/maqSPEhgW018q35YgCfQNBO
+aVSDNOp9HePlF28k/TPZgYU=
+=2Kpp
 -----END PGP SIGNATURE-----

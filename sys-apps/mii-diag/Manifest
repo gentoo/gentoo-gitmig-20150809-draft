@@ -1,12 +1,22 @@
-MD5 8192f22649ca99267e55139beb198242 mii-diag-2.07.ebuild 1135
-MD5 bfd7be987d3ba918cf232f47407bf1db mii-diag-2.09.ebuild 1142
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 760962916607c5895d34313daf6edcb0 ChangeLog 707
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 7bb7a5f9628fa149b84f03cfd4b311a4 mii-diag-2.07.ebuild 1134
+MD5 8f773c3148b526d4340a0305f1141fcf mii-diag-2.09.ebuild 1137
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mii-diag-2.07 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mii-diag-2.09 0
-MD5 c830d0a359111de4b2a49a73bb909f55 files/mii-diag.c-2.07-gcc33.patch 3257
 MD5 0d54b1cf88229649250ec60887082af2 files/libmii.c-2.04 18026
 MD5 9609f9720d656e217df601ee3cb4771e files/libmii.c-2.10 21508
 MD5 0d616641e571129e984ee0925e898ddd files/mii-diag.c-2.07 17835
+MD5 c830d0a359111de4b2a49a73bb909f55 files/mii-diag.c-2.07-gcc33.patch 3257
 MD5 8ccb64a469e4983fc52f168d15bf5ab9 files/mii-diag.c-2.09 20169
 MD5 ccd8d527a04534bdea2e0948e26e5a9e files/mii-diag.c-2.09-gcc33.patch 5037
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBitaxHTu7gpaalycRAnHRAJ9gi1FluSb8wNdX6zp1nBpwe4Q/JwCfXF3o
+zZz6XU1t05gSMaMh7IGb4DA=
+=ZR6t
+-----END PGP SIGNATURE-----

@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 e8e3b247e2bc6866dabced26a067e5b2 ChangeLog 1395
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 36818396ac590d6e3b5d3ea8b73d02a4 ucspi-unix-0.36-r1.ebuild 961
+MD5 e02067feda07429a4d5041017b9561a9 ucspi-unix-0.36-r1.ebuild 955
 MD5 d394904cc3e745742643933bc090d382 files/ucspi-unix-gentoo-head.patch 1097
 MD5 c396752e0797bbc620084ed823f71f3d files/digest-ucspi-unix-0.36-r1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBithHHTu7gpaalycRAsU+AJ4gf+VfEpeYMqail5551M3zyVV99wCg3Rgz
-ubm6ah9aXoZJ6ioIehXXVgA=
-=PJEw
+iD8DBQFBiti5HTu7gpaalycRAqjSAKC8o9+we8pnv722tabeqRaNV48SxACg1qde
+TEeVlUCKn1d4PfksmYgTpFQ=
+=cNVx
 -----END PGP SIGNATURE-----
