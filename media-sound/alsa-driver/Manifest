@@ -5,10 +5,10 @@ MD5 a64b0229ef1bb9861f766c745f1e1ca8 alsa-driver-0.9.2.ebuild 2686
 MD5 6e227e3a018f6ca7d56fcbf250a4e12c alsa-driver-0.9.3c-r1.ebuild 3258
 MD5 1f40d3f971623b66624ced32165e83b7 alsa-driver-0.9.4.ebuild 2674
 MD5 304036ff2d79f19389121c07b304da6a alsa-driver-0.9.3a.ebuild 2685
-MD5 9975fc36c968c8592ec01180c6a6a402 alsa-driver-0.9.6.ebuild 2159
+MD5 79e07346cb93d7f55f798a2c03a86dda alsa-driver-0.9.6.ebuild 2191
 MD5 5acc0aaa643a2076c8a8911141c975f4 alsa-driver-0.9.4-r1.ebuild 2783
 MD5 a33ac46bda25396dfc01143af757e9f9 alsa-driver-0.9.3c.ebuild 2688
-MD5 b0cf7af031753dff9243aac8e5722e40 ChangeLog 8715
+MD5 ebfc754c71a7b4b6063471083e324830 ChangeLog 9034
 MD5 6824caf41e03202f95d32f4855d45f97 alsa-driver-0.9.0_rc2.ebuild 2654
 MD5 45f2cf526eaa8ff274ac6876f15302d1 files/alsa 518
 MD5 2d39f80fad60314ed189ac266fec3d72 files/digest-alsa-driver-0.9.3a 72
@@ -17,6 +17,7 @@ MD5 8b25e90114cae587c5a8ee47b2d1d976 files/digest-alsa-driver-0.9.3c 72
 MD5 e3912a14a13dae85c5ee17f351733bae files/digest-alsa-driver-0.9.0_rc2 74
 MD5 8b25e90114cae587c5a8ee47b2d1d976 files/digest-alsa-driver-0.9.3c-r1 72
 MD5 87448a6155eb013f2b14e4a531ffc25a files/alsa-driver-0.9.0rc1-ppc.patch 358
+MD5 4687995dd2e15e6a0e59c3e76c153519 files/wolk.patch 624
 MD5 27ccbe36406f145c1d63725a53517233 files/makefile.patch 1122
 MD5 9732f15dfab42b3c1556f546f14f041f files/alsa-modules.conf-rc 1161
 MD5 cb7c82e00b39983a076acd893349ed1d files/digest-alsa-driver-0.9.4-r1 71

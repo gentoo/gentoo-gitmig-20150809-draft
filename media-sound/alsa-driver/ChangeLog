@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.48 2003/08/05 21:10:22 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.49 2003/08/16 16:12:21 tigger Exp $
+
+  16 Aug 2003; rob holland <tigger@gentoo.org> alsa-driver-0.9.6.ebuild,
+  files/wolk.patch:
+  Added wolk patch to let alsa compile against a wolk kernel.
+  Not bumping the revision as it was only broken for wolk peeps.
+  Thanks to Sebastian Held and Kerin for the patch/bringing it to our
+  attention. Closes #25731
 
   05 Aug 2003; John Mylchreest <johnm@gentoo.org>; alsa-driver-0.9.6.ebuild,
   files/makefile.patch:
