@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/smbget
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smbget/ChangeLog,v 1.1 2004/01/22 01:07:23 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smbget/ChangeLog,v 1.2 2004/05/27 04:09:44 weeve Exp $
+
+  26 May 2004; Jason Wever <weeve@gentoo.org> smbget-0.6.ebuild:
+  Added ~sparc keyword.
 
 *smbget-0.6 (21 Jan 2004)
 
