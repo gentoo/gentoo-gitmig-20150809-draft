@@ -1,11 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.10 2002/10/02 08:46:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.11 2002/10/06 20:52:40 jmorgan Exp $
 
 *bind-9.2.2_rc1-r1 (16 Aug 2002)
 
-  02 Oct 2002; Seemant Kulleen <seemant@gentoo.org> bind-9.2.2_rc1-r1.ebuild :
+  06 Oct 2002; Jack Morgan <jmorgan@gentoo.org> bind-9.2.2_rc1-r1.ebuild :
+  Added sparc/sparc64 to keywords
 
+  02 Oct 2002; Seemant Kulleen <seemant@gentoo.org> bind-9.2.2_rc1-r1.ebuild :
   Adjustment of files/{localhost,named.rc6} to be more gentoo friendly and
   usable.  Thanks to j2ee in #gentoo-dev in bug #7872
 
