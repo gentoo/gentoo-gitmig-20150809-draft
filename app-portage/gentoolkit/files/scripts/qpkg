@@ -9,8 +9,8 @@
 # Additional code thanks to:
 #	      Josh Goebel <dreamer@firesedge.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.7 2003/11/30 20:26:55 genone Exp $
-ID='$Id: qpkg,v 1.7 2003/11/30 20:26:55 genone Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.8 2004/07/18 02:38:42 dragonheart Exp $
+ID='$Id: qpkg,v 1.8 2004/07/18 02:38:42 dragonheart Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`

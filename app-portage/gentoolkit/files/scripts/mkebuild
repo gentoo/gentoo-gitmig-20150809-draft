@@ -47,7 +47,7 @@ EBUILD_FILE=${PWD}/${PACKAGE_NAME}.ebuild
 echo "# Copyright" `date +"%Y"` ${COPYRIGHT} >${EBUILD_FILE}
 echo "# Distributed under the terms of" ${LICENSE} >>${EBUILD_FILE}
 #echo "# Author" ${MY_NAME} '<'${MY_EMAIL}'>' >>${EBUILD_FILE}
-echo "# \$Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/mkebuild,v 1.1 2003/08/15 12:23:44 lanius Exp $" >>${EBUILD_FILE}
+echo "# \$Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/mkebuild,v 1.2 2004/07/18 02:38:42 dragonheart Exp $" >>${EBUILD_FILE}
 echo >>${EBUILD_FILE}
 echo 'DESCRIPTION=""' >>${EBUILD_FILE}
 echo 'SRC_URI="'${SOURCE_LOCATION}'/${P}.'${FILE_EXTENSION}'"' >>${EBUILD_FILE}
