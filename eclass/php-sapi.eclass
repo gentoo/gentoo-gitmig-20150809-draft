@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.55 2005/02/21 07:31:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.56 2005/03/08 13:10:13 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="PHP generic SAPI ebuild"
 ECLASS=php-sapi
@@ -297,6 +297,10 @@ set_filter_flags() {
 }
 
 php-sapi_src_compile() {
+	# cache this
+	libdir="$(get_libdir)"
+
+	# sanity checks
 	[ -x "/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
 
 	[ -f "/proc/self/stat" ] || die "You need /proc mounted for configure to complete correctly!"
@@ -433,7 +437,7 @@ php-sapi_src_compile() {
 		|| myconf="${myconf} --disable-dbx"
 
 	use imap && use ssl && \
-	if [ -n "`strings ${ROOT}/usr/lib/c-client.a 2>/dev/null | grep ssl_onceonlyinit`" ]; then
+	if [ -n "`strings ${ROOT}/usr/${libdir}/c-client.a 2>/dev/null | grep ssl_onceonlyinit`" ]; then
 		myconf="${myconf} --with-imap-ssl"
 		einfo "Building IMAP with SSL support."
 	else
@@ -514,6 +518,8 @@ php-sapi_src_compile() {
 
 	php-sapi_is_providerbuild || myconf="${myconf} --without-pear"
 
+	myconf="${myconf}  --libdir=/usr/${libdir}/php"
+
 	if ! supports-lfs
 	then
 		#shall still fix bug #24373
@@ -530,7 +536,7 @@ php-sapi_src_compile() {
 	replace-flags "-march=k6" "-march=i586"
 
 	if [ -z "${PHP_SKIP_CONFIGURE}" ]; then
-	LDFLAGS="${LDFLAGS} -L/usr/lib" LIBS="${LIBS}" econf \
+		LDFLAGS="${LDFLAGS} -L/usr/${libdir}" LIBS="${LIBS}" econf \
 		${myconf} || die "bad ./configure, please include ${MY_P}/config.log in any bug reports."
 	fi
 
@@ -540,9 +546,12 @@ php-sapi_src_compile() {
 }
 
 php-sapi_src_install() {
+	# cache this
+	libdir="$(get_libdir)"
+
 	addpredict /usr/share/snmp/mibs/.index
 	dodir /usr/bin
-	dodir /usr/lib/php
+	dodir /usr/${libdir}/php
 	dodir /usr/include/php
 
 	# parallel make breaks it
@@ -553,8 +562,11 @@ php-sapi_src_install() {
 	# the PHP provider $PHP_PROVIDER_PKG one is the default
 	mv ${D}/usr/bin/php-config ${D}/usr/bin/php-config.${PN}
 	# these files are provided solely by the PHP provider ebuild
-	php-sapi_is_providerbuild && dosym /usr/bin/php-config.${PN} /usr/bin/php-config
-	php-sapi_is_providerbuild || rm -rf ${D}/usr/bin/{phpize,phpextdist} ${D}/usr/lib/php/build ${D}/usr/bin/php
+	if php-sapi_is_providerbuild ; then
+		dosym /usr/bin/php-config.${PN} /usr/bin/php-config
+	else
+		rm -rf ${D}/usr/bin/{phpize,phpextdist,php} ${D}/usr/${libdir}/php/build
+	fi
 
 	# get the extension dir
 	PHPEXTDIR="`${D}/usr/bin/php-config.${PN} --extension-dir`"
@@ -626,9 +638,9 @@ php-sapi_src_install() {
 	fi
 
 	if php-sapi_is_providerbuild; then
-		insinto /usr/lib/php
+		insinto /usr/ /php
 		doins ${S}/run-tests.php
-		fperms 644 /usr/lib/php/run-tests.php
+		fperms 644 /usr/${libdir}/php/run-tests.php
 		einfo "Fixing PEAR cache location"
 		local oldloc="${T}/pear/cache"
 		local old="s:${#oldloc}:\"${oldloc}\""
