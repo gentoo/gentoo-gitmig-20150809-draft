@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/cisco-vpnclient-3des
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.1 2003/07/05 12:42:36 blauwers Exp $
+
+*cisco-vpnclient-3des-4.0.1a (05 JUL 2003)
+
+  05 JUL 2003; Bart Lauwers <blauwers@gentoo.org> :
+  Initial import.
