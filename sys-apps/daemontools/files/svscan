@@ -1,0 +1,27 @@
+#!/sbin/runscript
+
+depend() {
+    need net
+}
+
+start() {
+    ebegin "Starting service scan ..."
+    PATH="/usr/bin:$PATH"
+    cd /service
+    start-stop-daemon --start --quiet --exec /usr/bin/svscan -- &
+    echo $! > /var/run/svscan.pid
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping service scan ..."
+    start-stop-daemon --stop --quiet --pid /var/run/svscan.pid
+    eend $?
+    ebegin "Stopping services ..."
+    svc -dx /service/*
+    eend $?
+    ebegin "Stopping service logging ..."
+    svc -dx /service/*/log
+    eend $?
+}
+
