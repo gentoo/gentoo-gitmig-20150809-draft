@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc++/uclibc++-0.1.8.ebuild,v 1.1 2005/01/09 23:21:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc++/uclibc++-0.1.8.ebuild,v 1.2 2005/01/10 13:55:03 vapier Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 	esac
 
 	sed -i \
-		-e '/^UCLIBCXX_RUNTIME_PREFIX=/d'
+		-e '/^UCLIBCXX_RUNTIME_PREFIX=/d' \
 		-e '/^TARGET_'${target}'/d' \
 		.config
 
