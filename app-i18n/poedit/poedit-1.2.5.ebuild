@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.2.5.ebuild,v 1.4 2004/08/14 19:23:08 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.2.5.ebuild,v 1.5 2004/08/30 16:48:21 swegener Exp $
 
 inherit eutils kde wxwidgets
 
 IUSE="gtk2 unicode"
 DESCRIPTION="Cross-platform gettext catalogs (.po files) editor."
-SRC_URI="mirror://sourceforge/poedit/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/poedit/${P}.tar.gz
+	mirror://gentoo/${P}-db4-compilation.patch"
 HOMEPAGE="http://poedit.sourceforge.net/"
 
 SLOT="0"
@@ -20,7 +21,7 @@ DEPEND=">=x11-libs/wxGTK-2.4.2
 src_unpack() {
 	unpack ${A} || die "Failed to unpack ${A}"
 	cd ${S} || die "Failed to cd ${S}"
-	epatch ${FILESDIR}/${P}-db4-compilation.patch
+	epatch ${DISTDIR}/${P}-db4-compilation.patch
 }
 
 pkg_setup() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/poedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.5 2004/08/14 19:23:08 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.6 2004/08/30 16:48:21 swegener Exp $
+
+  30 Aug 2004; Sven Wegener <swegener@gentoo.org> poedit-1.2.5.ebuild:
+  When moving patches from files/ to mirrors SRC_URI should be updated, as
+  should the epatch in src_unpack.
 
   14 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> poedit-1.2.5.ebuild:
   Changed epatch for compliance with bug# 60345
@@ -17,7 +21,9 @@
   -files/poedit-1.2.5-db4-compilation.patch,
   -poedit-1.2.1.ebuild, -poedit-1.2.2.ebuild, poedit-1.2.3.ebuild,
   +poedit-1.2.4.ebuild, poedit-1.2.5.ebuild:
-  Removed poedit-1.2.5-db4-compilation.patch and put it on gentoo mirror, removed obsolete versions, added 1.2.4, revised all to use new wxwidgets eclass
+  Removed poedit-1.2.5-db4-compilation.patch and put it on gentoo mirror,
+  removed obsolete versions, added 1.2.4, revised all to use new wxwidgets
+  eclass.
 
 *poedit-1.2.5 (26 Jul 2004)
 
