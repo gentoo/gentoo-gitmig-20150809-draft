@@ -1,4 +1,14 @@
-MD5 c55c95ad7bdda2ef8b358f60f94fa1a8 savant-1.5.2.ebuild 502
-MD5 f2ceca30cd89aa0bf3d7a0f6a27c11b0 ChangeLog 465
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e9db1dd41b6301454f18e1db00054c5c ChangeLog 557
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 d9e7cb1c981268e0dc0c423831d9f915 savant-1.5.2.ebuild 492
 MD5 4fe1c119f5abdf7582df7cf24a991055 files/digest-savant-1.5.2 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOqljI1lqEGTUzyQRArYRAKCdu0jLrTgmc3E8foTvrsT759pYlgCgqwMt
++cK80B2/v5r1G0/zI2zl2Kc=
+=BSVR
+-----END PGP SIGNATURE-----

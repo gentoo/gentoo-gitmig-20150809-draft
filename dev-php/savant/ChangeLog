@@ -1,6 +1,9 @@
-# ChangeLog for dev-php/PEAR-MDB
+# ChangeLog for dev-php/savant
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/savant/ChangeLog,v 1.2 2004/07/31 15:19:53 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/savant/ChangeLog,v 1.3 2004/09/05 05:51:23 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> savant-1.5.2.ebuild:
+  Added missing IUSE.
 
 *savant-1.5.2 (31 Jul 2004)
 
