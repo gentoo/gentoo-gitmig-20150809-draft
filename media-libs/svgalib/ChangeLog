@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.27 2004/02/22 22:16:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.28 2004/02/23 00:29:38 azarah Exp $
+
+  23 Feb 2004; Martin Schlemmer <azarah@gentoo.org> svgalib-1.9.18.ebuild,
+  files/svgalib-1.9.18-gentoo.patch, files/svgalib-1.9.18-linux2.6.patch:
+  Add a better fix for previous issue.  Cleanup svgalib-1.9.18-linux2.6.patch.
 
   23 Feb 2004; Martin Schlemmer <azarah@gentoo.org>
   files/svgalib-1.9.18-gentoo.patch:

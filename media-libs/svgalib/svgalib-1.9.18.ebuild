@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18.ebuild,v 1.1 2004/02/22 21:48:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18.ebuild,v 1.2 2004/02/23 00:29:38 azarah Exp $
 
 inherit eutils
 
@@ -81,7 +81,7 @@ src_install() {
 	dodir /etc/svgalib /usr/{include,lib,bin,share/man}
 
 	make TOPDIR=${D} OPTIMIZE="${CFLAGS}" \
-		INCLUDEDIR="/usr/src/linux/include" install \
+		INCLUDEDIR="/usr/src/linux/include" install installmodule \
 		|| die "Failed to install svgalib!"
 
 	insinto /usr/include
