@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.2.ebuild,v 1.5 2002/08/27 04:57:26 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.2.ebuild,v 1.6 2002/08/28 06:43:03 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -19,9 +19,11 @@ DEPEND="virtual/glibc
 		tcltk? ( >=dev-lang/tcl-8 )
 		perl? ( >=sys-devel/perl-5.6.1-r2 )
 		python? ( >=dev-lang/python-2.2 )
-		x86? ( java? ( =virtual/jdk-1.3* >=dev-java/ant-1.3 ) )
+		java? ( =virtual/jdk-1.3* >=dev-java/ant-1.3 ) 
 		ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 		nls? ( sys-devel/gettext )"
+# java dep workaround for portage bug
+# x86? ( java? ( =virtual/jdk-1.3* >=dev-java/ant-1.3 ) )
 
 RDEPEND="virtual/glibc
 		>=sys-libs/zlib-1.1.3
