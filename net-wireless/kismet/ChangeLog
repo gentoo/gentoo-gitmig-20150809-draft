@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.8 2002/12/23 02:35:00 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.9 2002/12/29 01:56:42 vapier Exp $
+
+*kismet-2.8.0 (28 Dec 2002)
+
+  28 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump per #12826.
 
 *kismet-2.6.2-r1 (20 Dec 2002)
 
