@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.15 2003/03/02 22:25:28 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.16 2003/03/14 11:44:53 cretin Exp $
 
 IUSE="icc X svga"
 
@@ -69,7 +69,11 @@ src_compile() {
 	fi
 
     # fix library dependency
-	echo 's/LIBS = \(.*\)/LIBS = \1 -ldl/' >> makefile.sed
+	if [ "`use X`" ]; then
+		echo 's/LIBS = \(.*\)/LIBS = \1 -ldl -lpthread/' >> makefile.sed
+	else
+		echo 's/LIBS = \(.*\)/LIBS = \1 -ldl/' >> makefile.sed
+	fi
 
 	cp Makefile Makefile.orig
 	sed -f makefile.sed Makefile.orig > Makefile
