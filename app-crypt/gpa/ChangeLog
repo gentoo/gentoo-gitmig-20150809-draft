@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.22 2004/08/08 03:18:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.23 2004/09/10 01:44:53 dragonheart Exp $
+
+  10 Sep 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  gpa-0.6.1.ebuild, -gpa-0.7.0-r1.ebuild, -gpa-0.7.0.ebuild:
+  cypto herd taking maintaince. Removed old versions and modified gpgme
+  dependancy in preparation for new gpgme stabilisation
 
 *gpa-0.7.0-r2 (08 Aug 2004)
 
