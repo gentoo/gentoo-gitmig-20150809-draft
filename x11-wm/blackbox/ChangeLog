@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.5 2002/04/26 21:44:59 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.6 2002/04/27 07:10:04 spider Exp $
+
+
+*blackbox-0.65.0_alpha2-r1 (27 Apr 2002)
+  27 Apr 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha2-r1.ebuild:
+  fix $P Mangling to use MY_P and be nice to portage  
 
 *blackbox-0.65.0_alpha2 (26 Apr 2002)
   26 Apr 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha2.ebuild:

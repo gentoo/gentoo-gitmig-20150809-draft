@@ -6,11 +6,11 @@
 #Needed to change ${P} to match actual tarball version name.
 #It is an invalid ebuild name. Much simpler this way.
 
-P=${P/_/}
+MY_P=${P/_/}
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="A small, fast, full-featured window manager for X"
-SRC_URI="http://prdownloads.sf.net/blackboxwm/${P}.tar.gz"
+SRC_URI="http://prdownloads.sf.net/blackboxwm/${MY_P}.tar.gz"
 
 # Old homepage:
 # HOMEPAGE="http://blackbox.alug.org/"
