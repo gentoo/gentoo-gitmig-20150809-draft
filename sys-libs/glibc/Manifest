@@ -15,7 +15,6 @@ MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
 MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
 MD5 135f8145885a2f4f9876fe973f33ddf6 files/glibc-2.2.4-string2.h.diff 5221
 MD5 b712a49b5113fccb4c8b0ada2a30d390 files/glibc-manpages-2.2.5.tar.bz2 14610
-MD5 c02420990c4908a6336d81ea5192a37e files/glibc-manpages-2.3.1.tar.bz2 14755
 MD5 184eddb92615fb991dce41b9edbfa690 files/glibc-manpages-2.3.2.tar.bz2 14700
 MD5 d96bf4dc27501a58060a2f2b3d01176a files/glibc-sec-hotfix-20040804.patch 4278
 MD5 d688e44731d6e4b757382d7646c492c3 files/glibc-xdr_security.patch 6612
@@ -116,7 +115,7 @@ MD5 16f18501efd56811e724231470dc5d00 files/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBMAURHTu7gpaalycRAtADAJ443SimzIw5u4KsJoYTHxOA7hNbZACfbegA
-kHhQsczYloIcRHzfl4fej2w=
-=ThpQ
+iD8DBQFBMBC9HTu7gpaalycRAuqQAJ9uNDgAaczT0NG9Q8b5mK6YEej2CACgh/iF
+e8u24enTd6Q+i433HUBNVLQ=
+=Nz8D
 -----END PGP SIGNATURE-----
