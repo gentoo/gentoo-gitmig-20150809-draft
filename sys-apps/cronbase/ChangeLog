@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cronbase
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.24 2004/04/07 20:49:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.25 2004/04/07 23:33:40 lu_zero Exp $
+
+  08 Apr 2004; Luca Barbato <lu_zero@gentoo.org> :
+  Marked ppc
 
   07 Apr 2004; <kloeri@gentoo.org> cronbase-0.2.1-r3.ebuild:
   Stable on Alpha.
