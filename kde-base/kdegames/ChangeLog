@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.85 2004/08/19 19:28:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.86 2004/08/22 22:45:13 tgall Exp $
+
+  22 Aug 2004; Tom Gall <tgall@gentoo.org> kdegames-3.3.0.ebuild:
+  stable on ppc64, bug #58187
 
 *kdegames-3.3.0 (19 Aug 2004)
 
