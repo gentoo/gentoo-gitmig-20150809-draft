@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.53 2002/12/01 09:35:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.54 2002/12/01 23:39:25 azarah Exp $
+
+  02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.ebuild :
+
+  Mozilla people updated the tarball, so no need for the branch update.
+  Add get_number_of_jobs() stuff, thanks to nall <nall@gentoo.org>.
 
   01 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.ebuild :
 

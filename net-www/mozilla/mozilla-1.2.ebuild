@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.ebuild,v 1.3 2002/12/01 17:50:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.ebuild,v 1.4 2002/12/01 23:39:25 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -104,7 +104,8 @@ pkg_setup() {
 	#This should enable parallel builds, I hope
 	if [ -f /proc/cpuinfo ]
 	then
-		export MAKEOPTS="${MAKEOPTS/-j[0-9]?} -j$((`grep -c ^processor /proc/cpuinfo` * 2))"
+		# Set MAKEOPTS to have proper -j? option ..
+		get_number_of_jobs
 		export MAKE="emake"
 	fi
 
@@ -140,7 +141,8 @@ src_unpack() {
 	# the main branch
 	#
 	#   http://bugzilla.mozilla.org/show_bug.cgi?id=182506
-	epatch ${FILESDIR}/${PV}/${P}-branch-update.patch.bz2
+# Included in updated tarball ...
+#	epatch ${FILESDIR}/${PV}/${P}-branch-update.patch.bz2
 
 	if [ "$(gcc-major-version)" -eq "3" ]
 	then
