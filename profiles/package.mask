@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3439 2005/01/01 19:29:46 ka0ttic Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3440 2005/01/02 05:27:11 langthang Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -230,10 +230,6 @@ www-client/prozilla
 # <swegener@gentoo.org> (22 Nov 2004)
 # Masked because of dependency on >=dev-db/mysql-4.1 which is also p.mask'ed
 >=dev-db/mysql-query-browser-1.1.1
-
-# <langthang@gentoo.org> (18 Nov 2004)
-# Masking for testing
->=net-mail/courier-imap-3.0.8.20041116
 
 # <robbat2@gentoo.org> (17 Nov 2004)
 # Masking for testing
