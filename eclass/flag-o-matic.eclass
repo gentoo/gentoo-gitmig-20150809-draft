@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.35 2004/01/20 10:37:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.36 2004/02/21 07:07:56 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -57,69 +57,59 @@ INHERITED="$INHERITED $ECLASS"
 #
 
 # C[XX]FLAGS that we allow in strip-flags
-ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
-case "${ARCH}" in
-	mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
-	amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
-	alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
-	ia64)   ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
-esac
+setup-allowed-flags() {
+	export ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
+	case "${ARCH}" in
+		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
+		amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
+		alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
+		ia64)   ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
+	esac
 
-# C[XX]FLAGS that we are think is ok, but needs testing
-# NOTE:  currently -Os have issues with gcc3 and K6* arch's
-UNSTABLE_FLAGS="-Os -O3 -freorder-blocks -fprefetch-loop-arrays"
-
-filter-mfpmath() {
-	for a in $CFLAGS; do
-		if [ "${a:0:8}" == "-mfpmath" ]; then
-			orig_mfpmath=$a
-		fi
-	done
-
-	mfpmath="$( echo $orig_mfpmath | awk -F '=' '{print $2}' | tr "," " " )"
-	for b in $@; do
-		mfpmath="${mfpmath/$b}"
-	done
-
-	if [ -z "${mfpmath/ }" ]; then
-		filter-flags "$orig_mfpmath"
-	else
-		new_mfpmath="-mfpmath=$( echo $mfpmath | sed -e "s/ /,/g" -e "s/,,/,/g" )"
-		replace-flags "$orig_mfpmath" "$new_mfpmath"
-	fi
+	# C[XX]FLAGS that we are think is ok, but needs testing
+	# NOTE:  currently -Os have issues with gcc3 and K6* arch's
+	export UNSTABLE_FLAGS="-Os -O3 -freorder-blocks -fprefetch-loop-arrays"
+	return 0
 }
 
 filter-flags() {
-	# we do two loops to avoid the first and last char from being chomped.
-	for x in $@ ; do
+	for x in "$@" ; do
 		case "${x}" in
 			-fPIC|-fpic|-fPIE|-fpie) etexec-flags;;
 			-fstack-protector|-fstack-protector-all) fstack-flags;;
 			*) ;;
 		esac
 	done
+
 	# we do this fancy spacing stuff so as to not filter
 	# out part of a flag ... we want flag atoms ! :D
 	CFLAGS=" ${CFLAGS} "
 	CXXFLAGS=" ${CXXFLAGS} "
-	for x in $@ ; do
+	for x in "$@" ; do
 		CFLAGS="${CFLAGS/ ${x} / }"
 		CXXFLAGS="${CXXFLAGS/ ${x} / }"
 	done
 	CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
 	CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
+	return 0
 }
 
 append-flags() {
-	CFLAGS="${CFLAGS} $@"
-	CXXFLAGS="${CXXFLAGS} $@"
+	export CFLAGS="${CFLAGS} $@"
+	export CXXFLAGS="${CXXFLAGS} $@"
 	[ "`is-flag -fno-stack-protector`" -o "`is-flag -fno-stack-protector-all`" ] && fstack-flags
 	return 0
 }
 
 replace-flags() {
-	CFLAGS="${CFLAGS/${1}/${2} }"
-	CXXFLAGS="${CXXFLAGS/${1}/${2} }"
+	# we do this fancy spacing stuff so as to not filter
+	# out part of a flag ... we want flag atoms ! :D
+	CFLAGS=" ${CFLAGS} "
+	CXXFLAGS=" ${CXXFLAGS} "
+	CFLAGS="${CFLAGS/ ${1} / ${2} }"
+	CXXFLAGS="${CXXFLAGS/ ${1} / ${2} }"
+	CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
+	CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
 	return 0
 }
 
@@ -133,7 +123,33 @@ is-flag() {
 	return 1
 }
 
+filter-mfpmath() {
+	# save the original -mfpmath flag
+	local orig_mfpmath="`get-flag -mfpmath`"
+	# get the value of the current -mfpmath flag
+	local new_math=" `get-flag mfpmath | tr , ' '` "
+	# figure out which math values are to be removed
+	local prune_math=""
+	for prune_math in "$@" ; do
+		new_math="${new_math/ ${prune_math} / }"
+	done
+	new_math="`echo ${new_math:1:${#new_math}-2} | tr ' ' ,`"
+
+	if [ -z "${new_math}" ] ; then
+		# if we're removing all user specified math values are
+		# slated for removal, then we just filter the flag
+		filter-flags ${orig_mfpmath}
+	else
+		# if we only want to filter some of the user specified
+		# math values, then we replace the current flag
+		replace-flags ${orig_mfpmath} -mfpmath=${new_math}
+	fi
+	return 0
+}
+
 strip-flags() {
+	setup-allowed-flags
+
 	local NEW_CFLAGS=""
 	local NEW_CXXFLAGS=""
 
@@ -187,30 +203,35 @@ strip-flags() {
 
 	export CFLAGS="${NEW_CFLAGS}"
 	export CXXFLAGS="${NEW_CXXFLAGS}"
+	return 0
 }
 
-test_flag () {
-	if gcc -S -xc $1 -o /dev/null /dev/null >/dev/null 2>&1; then
-		echo "$1"
+test_flag() {
+	if gcc -S -xc "$@" -o /dev/null /dev/null >/dev/null 2>&1; then
+		echo "$@"
+		return 0
 	fi
+	return 1
 }
 
 strip-unsupported-flags() {
-	for x in ${CFLAGS}
-	do
+	for x in ${CFLAGS} ; do
 		NEW_CFLAGS=${NEW_CFLAGS}" ""`test_flag ${x}`"
 	done
-
-	for x in ${CXXFLAGS}
-	do
+	for x in ${CXXFLAGS} ; do
 		NEW_CXXFLAGS=${NEW_CXXFLAGS}" ""`test_flag ${x}`"
 	done
 
-	CFLAGS="${NEW_CFLAGS}"
-	CXXFLAGS="${NEW_CXXFLAGS}"
+	export CFLAGS="${NEW_CFLAGS}"
+	export CXXFLAGS="${NEW_CXXFLAGS}"
 }
 
 get-flag() {
+	# this code looks a little flaky but seems to work for
+	# everything we want ...
+	# for example, if CFLAGS="-march=i686":
+	# `get-flags -march` == "-march=i686"
+	# `get-flags march` == "i686"
 	local findflag="$1"
 	for f in ${CFLAGS} ${CXXFLAGS} ; do
 		if [ "${f/${findflag}}" != "${f}" ] ; then
@@ -256,11 +277,11 @@ append-ldflags() {
 	return 0
 }
 
-etexec-flags() {        
+etexec-flags() {
 	has_version sys-devel/hardened-gcc
-	if [ $? == 0 ]; then                
+	if [ $? == 0 ] ; then
 		if [ "`is-flag -yet_exec`" != "true" ]; then
-			debug-print ">>> appending flags -yet_exec"                        
+			debug-print ">>> appending flags -yet_exec"
 			append-flags -yet_exec
 			append-ldflags -yet_exec
 		fi
@@ -269,7 +290,7 @@ etexec-flags() {
 
 fstack-flags() {
 	has_version sys-devel/hardened-gcc
-	if [ $? == 0 ]; then
+	if [ $? == 0 ] ; then
 		if [ "`is-flag -yno_propolice`" != "true" ]; then
 			debug-print ">>> appending flags -yno_propolice"
 			append-flags -yno_propolice
