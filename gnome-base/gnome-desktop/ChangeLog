@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.4 2002/06/05 10:38:18 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.5 2002/06/10 14:03:10 spider Exp $
+
+
+*gnome-desktop-2.0.0 (10 Jun 2002)
+  10 Jun 2002; Spider <spider@gentoo.org> gnome-desktop-2.0.0.ebuild :
+  New version, eclass. 
+
 
 * gnome-desktop-1.5.22 (5 June 2002)
   5 June 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-desktop-1.5.22.ebuild :
