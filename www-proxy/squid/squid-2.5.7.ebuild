@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.7.ebuild,v 1.6 2004/12/11 23:50:11 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.7.ebuild,v 1.7 2004/12/29 15:18:49 cyfred Exp $
 
 inherit eutils
 
@@ -126,7 +126,7 @@ src_compile() {
 		#--enable-icmp
 
 	mv include/autoconf.h include/autoconf.h.orig
-	sed -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 4096:" \
+	sed -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 8192:" \
 		include/autoconf.h.orig > include/autoconf.h
 
 #	if [ "${ARCH}" = "hppa" ]

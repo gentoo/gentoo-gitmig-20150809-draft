@@ -1,6 +1,11 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.21 2004/12/29 01:54:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.22 2004/12/29 15:18:49 cyfred Exp $
+
+  30 Dec 2004; Andrew Bevitt <cyfred@gentoo.org>
+  files/squid-2.5.7-gentoo.diff, files/squid.confd, files/squid.rc6,
+  squid-2.5.7.ebuild:
+  Changes to give squid a max of 8192 descriptors (default 1024).
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

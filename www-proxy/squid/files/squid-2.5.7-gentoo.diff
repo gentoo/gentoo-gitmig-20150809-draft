@@ -447,14 +447,3 @@ diff -uNr squid-2.5.STABLE7.orig/src/url.c squid-2.5.STABLE7/src/url.c
   * class is disabled - it's more efficient to just do it than to do all
   * the checks.
   */
---- squid-2.5.STABLE7/configure.in.old	2004-12-04 12:55:24.366583200 +1100
-+++ squid-2.5.STABLE7/configure.in	2004-12-04 12:56:32.863170136 +1100
-@@ -2027,7 +2027,7 @@
- 	exit(0);
- }
- ],
--SQUID_MAXFD=`cat conftestval`,
-+SQUID_MAXFD=8192,
- SQUID_MAXFD=256,
- SQUID_MAXFD=256)
- AC_MSG_RESULT($SQUID_MAXFD)
