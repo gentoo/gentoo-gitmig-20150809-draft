@@ -1,6 +1,25 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.35 2004/08/03 19:07:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.36 2004/08/06 00:59:14 arj Exp $
+
+*sqlite-3.0.3 (05 Aug 2004)
+
+  05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> sqlite-3.0.3.ebuild:
+  New beta release. Added to portage to help people upgrade their
+  programs to support the new branch. It's not backwards compatible with 
+  2.x, so I changed all ebuilds which depends on sqlite to
+  =dev-db/sqlite-2*. Removed all other archs than x86 as I suspect it
+  would be a good idea to let the arch people test it also. Many thanks
+  to Doug Gorley <douggorley@shaw.ca> for the bugreport and ebuild. 
+  Closes #58854.
+
+*sqlite-2.8.15 (05 Aug 2004)
+
+  05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> sqlite-2.8.15.ebuild:
+  new version.
+
+  05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> sqlite-2.8.14.ebuild:
+  mark as stable for x86.
 
   03 Aug 2004; <agriffis@gentoo.org> sqlite-2.8.14.ebuild:
   stable on ia64
