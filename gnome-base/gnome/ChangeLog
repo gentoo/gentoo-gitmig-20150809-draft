@@ -1,7 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.14 2002/06/02 00:34:27 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.15 2002/06/05 17:29:05 stroke Exp $
 
+*gnome-2.0.0-beta5-r13 (5 Jun 2002)
+  5 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-2.0.0-beta5-r13.ebuild:
+  new versions ( too many to list ).
 
 *gnome-2.0.0-beta5-r12 (1 Jun 2002)
   1 Jun 2002; Spider <spider@gentoo.org> gnome-2.0.0-beta5-r12.ebuild :
