@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.4.7-r1.ebuild,v 1.9 2004/07/14 03:51:27 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.4.7-r1.ebuild,v 1.10 2004/08/03 21:46:12 gustavoz Exp $
 
 inherit gnome2 eutils
 
@@ -93,6 +93,9 @@ src_install() {
 	dosed "s:#Greeter=/usr/bin/gdmlogin:Greeter=/usr/bin/gdmgreeter:" /etc/X11/gdm/gdm.conf
 	# use Gentoo theme
 	dosed "s:#GraphicalTheme=circles:GraphicalTheme=gentoo-cow:" /etc/X11/gdm/gdm.conf
+
+	# kn_IN segfaults when using the language selector on sparc
+	use sparc && dosed "s:Kannada:#Kannada:" /etc/X11/gdm/locale.alias
 
 	# Move Gentoo theme in
 	mv ${WORKDIR}/gentoo-cow  ${D}/usr/share/gdm/themes
