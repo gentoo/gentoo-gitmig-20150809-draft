@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.18.ebuild,v 1.6 2005/02/08 12:49:08 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.18.ebuild,v 1.7 2005/02/22 18:20:57 greg_g Exp $
 
 inherit kde eutils
 
@@ -15,7 +15,7 @@ IUSE="arts dvdr kde oggvorbis mad flac encode"
 DEPEND="kde? ( || ( kde-base/kdebase-meta >=kde-base/kdebase-3.1 ) )
 	>=media-sound/cdparanoia-3.9.8
 	>=media-libs/id3lib-3.8.0_pre2
-	flac? ( media-libs/flac )
+	flac? ( <media-libs/flac-1.1.2 )
 	mad? ( media-libs/libmad )
 	oggvorbis? ( media-libs/libvorbis )
 	arts? ( kde-base/arts )
