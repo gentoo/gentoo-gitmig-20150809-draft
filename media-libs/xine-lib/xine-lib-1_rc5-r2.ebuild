@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.1 2004/06/29 14:58:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.2 2004/06/29 19:08:20 vapier Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -78,17 +78,20 @@ src_unpack() {
 }
 
 src_compile() {
-	filter-flags -maltivec -mabi=altivec -fstack-protector
-	filter-flags -fPIC
+	filter-flags -maltivec -mabi=altivec
+	filter-flags -fstack-protector -fPIC
 	filter-flags -fforce-addr
+	filter-flags -momit-leaf-frame-pointer #46339
 	filter-flags -fno-unit-at-a-time
 	[ "`gcc-fullversion`" == "3.4.0" ] && append-flags -fno-web #49509
 
-	# fix build errors with sse2
+	is-flag -O? || append-flags -O1 #31243
+
+	# fix build errors with sse2 #49482
 	if use x86 ; then
-		[ "`gcc-version`" == "3.2" ] && append-flags -mno-sse2
-		[ "`gcc-version`" == "3.3" ] && append-flags -mno-sse2
-		[ "`gcc-version`" == "3.4" ] && append-flags -mno-sse2
+		[ "`gcc-version`" == "3.2" ] && append-flags -mno-sse2 && filter-mfpmath sse
+		[ "`gcc-version`" == "3.3" ] && append-flags -mno-sse2 -mno-sse3 && filter-mfpmath sse
+		[ "`gcc-version`" == "3.4" ] && append-flags -mno-sse2 -mno-sse3 && filter-mfpmath sse
 	fi
 
 	# Use the built-in dvdnav plugin.
@@ -105,11 +108,14 @@ src_compile() {
 		&& myconf="${myconf} --with-xv-path=/usr/X11R6/lib"
 
 	# The default CFLAGS (-O) is the only thing working on hppa.
-	use hppa \
-		&& unset CFLAGS
+	if use hppa && [ "`gcc-version`" != "3.4" ] ; then
+		unset CFLAGS
+	else
+		append-flags -ffunction-sections
+	fi
 
 	econf \
-		`use_enable X x11` \
+		`use_enable X x11` `use_with X x` `use_enable X shm` `use_enable X xft` \
 		`use_enable esd` \
 		`use_enable nls` \
 		`use_enable alsa` \
