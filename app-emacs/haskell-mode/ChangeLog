@@ -1,0 +1,13 @@
+# ChangeLog for app-emacs/haskell-mode
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.1 2003/02/09 11:29:59 mkennedy Exp $
+
+*haskell-mode (09 Feb 2003)
+
+  09 Feb 2003; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  haskell-mode-1.44.ebuild, files/50haskell-mode-gentoo.el, 
+  files/digest-haskell-mode-1.44 :
+
+  Initial import. Ebuild contributed by Peter Simons
+  <simons+gentoo@cryp.to> of bug #13156 (polished up by 
+  <mkennedy@gentoo.org>)
