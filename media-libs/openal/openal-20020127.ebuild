@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.17 2003/11/08 17:32:03 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.18 2004/02/18 12:23:48 mholzer Exp $
 
 IUSE="mpeg arts esd sdl oggvorbis alsa"
 
@@ -28,6 +28,8 @@ DEPEND="x86? ( dev-lang/nasm )
 
 
 src_compile() {
+
+	export WANT_AUTOCONF=2.1
 
 	local myconf
 

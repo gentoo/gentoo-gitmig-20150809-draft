@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.9 2003/11/08 17:32:03 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.10 2004/02/18 12:23:45 mholzer Exp $
+
+  18 Feb 2004; Martin Holzer <mholzer@gentoo.org> openal-20020127.ebuild:
+  adding export WANT_AUTOCONF=2.1 closes 41948
 
   08 Nov 2003; Brad House <brad_mssw@gentoo.org> openal-20020127.ebuild:
   add amd64 flag
