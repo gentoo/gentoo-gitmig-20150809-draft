@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.29.0.ebuild,v 1.1 2005/03/30 14:56:03 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.29.0.ebuild,v 1.2 2005/04/01 14:53:18 vanquirius Exp $
+
+# NOTE: netwib, netwox and netwag go together, bump all or bump none
 
 DESCRIPTION="Tcl/tk interface to netwox (Toolbox of 212 utilities for testing Ethernet/IP networks)"
 HOMEPAGE="http://www.laurentconstantin.com/en/netw/netwag/"
