@@ -1,4 +1,4 @@
-MD5 65ae74c588cc6bc40172f42b4b89e330 files/digest-wmmon+smp-1.0-r1 60
-MD5 daf282ea715d52a1eed1aeeced737b50 ChangeLog 885
+MD5 c2d5078332b0c9ee3d1aebb603b24890 ChangeLog 1116
 MD5 6aaad493b19e4f303033402fcfc4db75 metadata.xml 484
-MD5 bf93f487773da090e7ec0a6d9d56cbae wmmon+smp-1.0-r1.ebuild 692
+MD5 5aea595c7069cdaced2994a20cb55323 wmmon+smp-1.0-r1.ebuild 717
+MD5 65ae74c588cc6bc40172f42b4b89e330 files/digest-wmmon+smp-1.0-r1 60

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmon+smp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/ChangeLog,v 1.3 2003/11/16 22:36:08 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/ChangeLog,v 1.4 2003/12/06 16:14:32 port001 Exp $
+
+  06 Dec 2003; Ian Leitch <port001@gentoo.org> wmmon+smp-1.0-r1.ebuild:
+  Reverted blocking of wmmon and made the binary installed 'wmmon+smp'. Please
+  see #33362. Thanks to Kris Kersey <augustus@linuxhardware.org> for reporting
 
   16 Nov 2003; Markus Nigbur <pyrania@gentoo.org> wmmon+smp-1.0-r1.ebuild:
   Blocking x11-plugins/wmmon.
