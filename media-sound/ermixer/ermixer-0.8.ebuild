@@ -11,7 +11,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 SLOT="0"
 KEYWORDS="~x86"
 
-SRC_URI="http://erevan.cuore.org/files/ermixer/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/ermixer/${P}.tar.gz"
 S="${WORKDIR}/${P}"
 
 src_compile() {
