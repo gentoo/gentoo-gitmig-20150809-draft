@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.0_pre4,v 1.1 2004/12/19 08:06:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.0_pre4,v 1.2 2004/12/27 00:04:04 cyfred Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -32,10 +32,10 @@ need_version() {
 		einfo "Detected X ${X11_MAJOR_VER}.${X11_MINOR_VER} series, revision ${X11_REVISION_VER}"
 		eerror "${ERROR_MSG}"
 		exit 1	
-	# If version =6.8.0 and <r2, die
+	# If version =6.8.0 and <r4, die
 	elif [ "${X11_VER}" = "6.8.0" ]
 	then
-		if [ ! ${X11_REVISION_VER} -ge 2 ]
+		if [ ! ${X11_REVISION_VER} -lt 4 ]
 		then
 			einfo "Detected X ${X11_MAJOR_VER}.${X11_MINOR_VER} series, revision ${X11_REVISION_VER}"
 			eerror "${ERROR_MSG}"
