@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.2.6.ebuild,v 1.3 2005/01/14 17:24:30 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.2.7.ebuild,v 1.1 2005/02/14 14:20:15 brix Exp $
 
 inherit toolchain-funcs
 
