@@ -1,0 +1,98 @@
+--- in_mpc.c	2004-02-18 20:35:15.651793976 +0100
++++ in_mpc.c	2004-02-18 20:38:14.830554664 +0100
+@@ -33,6 +33,8 @@
+ #include "mpc_dec.h"
+ #include "mpplus_blue.xpm"
+ 
++#include <xmms/titlestring.h>
++
+ #ifndef M_LN10
+ # define M_LN10   2.3025850929940456840179914546843642
+ #endif
+@@ -88,6 +90,7 @@
+ void play(char *);
+ void setvolume(const int, const int);
+ void infoDlg(char *);
++static gchar *get_title(gchar *filename);
+ void getfileinfo(char *, char **, int *);
+ void config(void);
+ void about(void);
+@@ -1278,6 +1281,9 @@
+         inputFile=NULL;
+         return;
+       } // cannot open sound device
++
++    char *title = get_title(fn);
++
+     // AB: set info for overall-VBR
+     if (!UpdateBitrate)
+     {
+@@ -1299,10 +1305,10 @@
+             if(DisplayID3Names==1)
+               mod.set_info(displayed_info,(int)(OverallFrames*1152/44.1f),VBR_Bitrate,SAMPLERATE/1000,NCH);
+             else
+-              mod.set_info(NULL,(int)(OverallFrames*1152/44.1f),VBR_Bitrate,SAMPLERATE/1000,NCH);
++              mod.set_info(title,(int)(OverallFrames*1152/44.1f),VBR_Bitrate,SAMPLERATE/1000,NCH);
+           }
+         else
+-          mod.set_info(NULL,(int)(OverallFrames*1152/44.1f),VBR_Bitrate,SAMPLERATE/1000,NCH);
++          mod.set_info(title,(int)(OverallFrames*1152/44.1f),VBR_Bitrate,SAMPLERATE/1000,NCH);
+     }
+     else
+       if(id3_found)
+@@ -1310,10 +1316,10 @@
+           if(DisplayID3Names==1)
+             mod.set_info(displayed_info,(int)(OverallFrames*1152/44.1f),0,SAMPLERATE/1000,NCH);
+           else
+-            mod.set_info(NULL,(int)(OverallFrames*1152/44.1f),0,SAMPLERATE/1000,NCH);
++            mod.set_info(title,(int)(OverallFrames*1152/44.1f),0,SAMPLERATE/1000,NCH);
+         }
+       else
+-        mod.set_info(NULL,(int)(OverallFrames*1152/44.1f),0,SAMPLERATE/1000,NCH);
++        mod.set_info(title,(int)(OverallFrames*1152/44.1f),0,SAMPLERATE/1000,NCH);
+ 
+     // create decoding thread
+     killDecodeThread=0;
+@@ -1488,9 +1494,41 @@
+   return;
+ }
+ 
++static gchar *get_title(gchar *filename)
++{
++        TitleInput *input;
++        gchar *temp, *ext, *title, *path, *temp2;
++
++        XMMS_NEW_TITLEINPUT(input);
++
++        path = g_strdup(filename);
++        temp = g_strdup(filename);
++        ext = strrchr(temp, '.');
++        if (ext)
++                *ext = '\0';
++        temp2 = strrchr(path, '/');
++        if (temp2)
++                *temp2 = '\0';
++
++        input->file_name = g_basename(filename);
++        input->file_ext = ext ? ext+1 : NULL;
++        input->file_path = g_strdup_printf("%s/", path);
++
++        title = xmms_get_titlestring(xmms_get_gentitle_format(), input);
++        if ( title == NULL )
++                title = g_strdup(input->file_name);
++
++        g_free(temp);
++        g_free(path);
++        g_free(input);
++
++        return title;
++}
++
+ void getfileinfo(char *filename, char **_title, int *length_in_ms)
+ {
+-  char *title = *_title;
++/*  char *title = *_title; */
++  *_title = get_title(filename);
+ 
+   if ( filename == NULL || filename[0] == '\0' ) {  // currently playing file
+       if (length_in_ms) *length_in_ms=getlength();
