@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.18 2004/03/09 03:27:08 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.19 2004/03/09 23:49:04 agriffis Exp $
+
+  09 Mar 2004; <agriffis@gentoo.org> xfwm4-4.0.3.1.ebuild:
+  stable on alpha and ia64
 
   08 Mar 2004; Bret Curtis <psi29a@gentoo.org> xfwm4-4.0.3.1.ebuild:
   Added ~mips to KEYWORDS
