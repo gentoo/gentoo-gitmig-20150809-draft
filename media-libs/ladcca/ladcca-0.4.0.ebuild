@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ladcca-0.4.0.ebuild,v 1.1 2004/02/20 03:53:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ladcca-0.4.0.ebuild,v 1.2 2004/02/28 14:14:02 dholm Exp $
 
 DESCRIPTION="Linux Audio Developer's Configuration and Connection API (LADCCA)"
 HOMEPAGE="http://pkl.net/~node/ladcca.html"
 SRC_URI="http://pkl.net/~node/software/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="media-libs/alsa-lib \
