@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.00.ebuild,v 1.1 2003/09/09 17:34:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.00.ebuild,v 1.2 2003/12/26 23:41:55 weeve Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://exult.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc ~sparc"
 
 RDEPEND=">=media-libs/libsdl-1.2*
 	 >=media-sound/timidity++-2*"
