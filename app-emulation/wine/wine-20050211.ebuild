@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050211.ebuild,v 1.4 2005/03/15 23:35:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050211.ebuild,v 1.5 2005/03/16 20:21:28 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,6 +30,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-soundlibs
+		>=sys-kernel/linux-headers-2.6
 	)"
 DEPEND="${RDEPEND}
 	sys-devel/bison
