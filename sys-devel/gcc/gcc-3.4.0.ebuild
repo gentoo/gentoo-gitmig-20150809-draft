@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.7 2004/04/27 03:24:35 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.8 2004/04/27 06:11:28 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
@@ -47,10 +47,15 @@ inherit eutils flag-o-matic libtool
 # problems.
 #
 # <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
+do_filter_flags() {
+	strip-flags
 
-# gcc produce unstable binaries if compiled with a different CHOST.
-[ "${ARCH}" = "hppa" ] && export CHOST="hppa-unknown-linux-gnu"
+	# In general gcc does not like optimization, and add -O2 where
+	# it is safe.  This is especially true for gcc 3.3 + 3.4
+	replace-flags -O? -O2
+
+	export GCJFLAGS="${CFLAGS/-O?/-O2}"
+}
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
@@ -390,13 +395,9 @@ src_compile() {
 	use x86 && myconf="${myconf} --with-cpu=pentium4 --with-arch=i586"
 	#use mips && myconf="${myconf} --with-arch=mips3"
 
-	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.  This is especially true for gcc 3.3 + 3.4
-	export CFLAGS="${CFLAGS/-O?/-O2}"
+	do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
-	export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
-	export GCJFLAGS="${CFLAGS/-O?/-O2}"
 	einfo "GCJFLAGS=\"${GCJFLAGS}\""
 
 	# Build in a separate build tree
