@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.90.ebuild,v 1.1 2004/05/30 01:06:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.90.ebuild,v 1.2 2004/06/19 05:30:21 vapier Exp $
 
-inherit eutils
+inherit eutils gcc
 
-DESCRIPTION="Bitlbee is an irc to IM gateway that support multiple IM protocols"
-HOMEPAGE="http://www.bitlbee.org"
+DESCRIPTION="irc to IM gateway that support multiple IM protocols"
+HOMEPAGE="http://www.bitlbee.org/"
 SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ~ia64 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64"
 IUSE="debug jabber msn oscar yahoo flood"
 
 DEPEND="virtual/glibc
@@ -60,19 +60,15 @@ src_compile() {
 
 	# make bitlbeed forking server
 	cd utils
-	[ -n "${CC}" ] \
-		&& ${CC} ${CFLAGS} bitlbeed.c -o bitlbeed \
-		|| gcc ${CFLAGS} bitlbeed.c -o bitlbeed
-
+	$(gcc-getCC) ${CFLAGS} bitlbeed.c -o bitlbeed || die "bitlbeed failed to compile"
 }
 
 src_install() {
-	mkdir -p ${D}/var/lib/bitlbee
+	dodir /var/lib/bitlbee
 	make install DESTDIR=${D} || die "install failed"
 	make install-etc DESTDIR=${D} || die "install failed"
 	keepdir /var/lib/bitlbee
 
-	dodoc COPYING
 	dodoc doc/{AUTHORS,CHANGES,CREDITS,FAQ,README,RELEASE-SPEECH-0.90,TODO}
 	dohtml -A sgml doc/*.sgml
 	dohtml doc/*.html
@@ -99,8 +95,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	chown nobody:nobody /var/lib/bitlbee
-	chmod 700 /var/lib/bitlbee
+	chown nobody:nobody ${ROOT}/var/lib/bitlbee
+	chmod 700 ${ROOT}/var/lib/bitlbee
 	einfo "The utils included in bitlbee (other than bitlbeed) are now"
 	einfo "located in /usr/share/bitlbee"
 }
