@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.8.1-r4.ebuild,v 1.2 2005/01/14 00:43:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.8.1-r4.ebuild,v 1.3 2005/02/03 19:37:49 plasmaroo Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm hppa ia64 ppc ppc64 s390 sparc sh x86"
@@ -32,4 +32,5 @@ src_unpack() {
 	headers___fix asm-ppc64/*
 	mv iSeries asm-ppc64/
 	headers___fix asm-ppc64/iSeries/*
+	headers___fix linux/ethtool.h
 }
