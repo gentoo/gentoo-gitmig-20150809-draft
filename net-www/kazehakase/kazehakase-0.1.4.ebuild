@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.4.ebuild,v 1.1 2004/04/06 07:09:36 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.4.ebuild,v 1.2 2004/04/06 12:13:08 dholm Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://kazehakase.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/${PN}/8924/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~amd64"
+KEYWORDS="~x86 ~alpha ~amd64 ~ppc"
 LICENSE="GPL-2"
 
 DEPEND="${DEPEND}
