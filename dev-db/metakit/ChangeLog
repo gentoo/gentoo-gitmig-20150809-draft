@@ -1,19 +1,24 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.5 2003/07/02 08:35:21 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.6 2003/07/13 00:28:42 vapier Exp $
 
-  02 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> metakit-2.4.7.37.ebuild:
-  Resolving bug 23855 - einstall instead of make install
+*metakit-2.4.9.2-r1 (12 Jul 2003)
+
+  12 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to fix python support #23704.
+
+*metakit-2.4.9.2 (06 Apr 2003)
 
   11 Jun 2003; Seemant Kulleen <seemant@gentoo.org> metakit-2.4.9.2.ebuild:
   sandbox fix; sed -i being used
-
-*metakit-2.4.9.2 (06 Apr 2003)
 
   06 Apr 2003; Donny Davies <woodchip@gentoo.org> metakit-2.4.9.2.ebuild:
   Bump, #18224.
 
 *metakit-2.4.7.37 (4 Aug 2002)
+
+  02 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> metakit-2.4.7.37.ebuild:
+  Resolving bug 23855 - einstall instead of make install
 
   4 Aug 2002; Donny Davies <woodchip@gentoo.org> :
   #1315 comes from jherfurth@arafox.com (Julien Herfurth).
