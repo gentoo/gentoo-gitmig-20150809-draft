@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/magnesium
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/magnesium/ChangeLog,v 1.2 2003/09/15 01:50:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/magnesium/ChangeLog,v 1.3 2003/09/16 23:10:44 mkennedy Exp $
+
+  16 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  new upstream. SRC_URI tweak
 
 *magnesium-1.0_pre10-r1 (14 Sep 2003)
 
