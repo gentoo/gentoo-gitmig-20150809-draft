@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.2.ebuild,v 1.5 2004/12/24 15:51:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.2.ebuild,v 1.6 2005/01/19 00:20:15 wolf31o2 Exp $
 
 inherit games
 
@@ -31,5 +31,11 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL LEVELDESIGN README TODO
+
+	cp data/images/icon.xpm supertux.xpm
+	doicon supertux.xpm
+
+	make_desktop_entry supertux SuperTux supertux.xpm
+
 	prepgamesdirs
 }
