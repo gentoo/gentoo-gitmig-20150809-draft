@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a.ebuild,v 1.2 2003/07/09 15:47:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a.ebuild,v 1.3 2003/10/27 20:13:04 vapier Exp $
 
 MY_PV=${PV/a/.A-k9}
 DESCRIPTION="Cisco VPN Client (3DES)"
@@ -26,6 +26,12 @@ pkg_nofetch() {
 	eerror "and download"
 	eerror " ${A}"
 	eerror "to ${DISTDIR}"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	[ "${KV:0:3}" == "2.6" ] && epatch ${FILESDIR}/${PV}-linux26.patch
 }
 
 src_compile () {
