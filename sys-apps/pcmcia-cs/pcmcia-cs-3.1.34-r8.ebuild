@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r8.ebuild,v 1.14 2004/06/27 17:36:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r8.ebuild,v 1.15 2004/06/30 23:39:00 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -12,6 +12,7 @@ RDEPEND=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ppc -sparc "
+IUSE="apm build nocardbus pnp trusted wavelan"
 
 # check arch for configure
 if [ ${ARCH} = "x86" ] ; then
