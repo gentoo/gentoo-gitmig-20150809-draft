@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.1a.ebuild,v 1.1 2003/04/08 17:57:27 danarmak Exp $
-inherit kde kde.org eutils
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.1a.ebuild,v 1.2 2003/04/08 18:14:34 danarmak Exp $
+inherit kde kde.org
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 IUSE="alsa cups ipv6 ssl"
@@ -13,7 +13,7 @@ LICENSE="GPL-2 LGPL-2"
 
 # for the 3.1.1a version - use incremental patches from 3.1.1
 S=${WORKDIR}/${PN}-3.1.1
-PATCHES1="$PATCHES1 ${WORKDIR}/${P}.diff"
+PATCHES1="${WORKDIR}/${P}.diff"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
