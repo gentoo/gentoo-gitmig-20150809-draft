@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/methane
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/ChangeLog,v 1.5 2004/08/03 11:51:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/ChangeLog,v 1.6 2004/11/11 00:27:23 josejx Exp $
+
+  11 Nov 2004; Joseph Jezak <josejx@gentoo.org> methane-1.4.6.ebuild:
+  Marked ppc stable.
 
   03 Aug 2004; David Holm <dholm@gentoo.org> methane-1.4.6.ebuild:
   Added to ~ppc.

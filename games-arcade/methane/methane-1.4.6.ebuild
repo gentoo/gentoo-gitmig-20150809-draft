@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.9 2004/08/15 08:53:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.10 2004/11/11 00:27:23 josejx Exp $
 
 inherit games flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.methane.fsnet.co.uk/${PN}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~amd64 ~ppc"
+KEYWORDS="x86 ~alpha ~amd64 ppc"
 IUSE="mikmod"
 
 RDEPEND="=dev-games/clanlib-0.6.5*
