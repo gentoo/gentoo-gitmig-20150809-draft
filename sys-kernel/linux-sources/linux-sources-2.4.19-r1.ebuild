@@ -1,6 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.19-r1.ebuild,v 1.4 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.19-r1.ebuild,v 1.5 2002/07/17 00:48:28 seemant Exp $
+
+SLOT="0"
+LICENSE="GPL"
+DESCRIPTION="Obsolete kernel package.  Please choose another"
+HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
+SRC_URI=""
+KEYWORDS="x86 ppc"
 
 pkg_setup() {
 	clear
