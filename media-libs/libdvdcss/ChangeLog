@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.23 2003/10/17 08:50:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.24 2003/10/27 01:58:52 brad_mssw Exp $
+
+  26 Oct 2003; Brad House <brad_mssw@gentoo.org> libdvdcss-1.2.8.ebuild:
+  add amd64 flag
 
   17 Oct 2003; Nick Hadaway <raker@gentoo.org> libdvdcss-1.2.8.ebuild:
   Marked stable for x86.
