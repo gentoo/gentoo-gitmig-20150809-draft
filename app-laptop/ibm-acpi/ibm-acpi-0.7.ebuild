@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.7.ebuild,v 1.1 2004/10/23 15:11:36 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.7.ebuild,v 1.2 2004/10/24 14:12:47 brix Exp $
 
 inherit kernel-mod eutils
 
@@ -15,7 +15,8 @@ KEYWORDS="~x86"
 
 IUSE="doc"
 
-DEPEND="sys-apps/sed"
+DEPEND="virtual/linux-sources
+		sys-apps/sed"
 
 src_unpack() {
 	kernel-mod_check_modules_supported

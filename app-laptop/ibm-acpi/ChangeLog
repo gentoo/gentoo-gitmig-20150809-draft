@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/ibm-acpi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.6 2004/10/23 15:11:35 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.7 2004/10/24 14:12:47 brix Exp $
+
+  24 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> ibm-acpi-0.7.ebuild:
+  Added dependency on virtual/linux-sources.
 
 *ibm-acpi-0.7 (23 Oct 2004)
 
