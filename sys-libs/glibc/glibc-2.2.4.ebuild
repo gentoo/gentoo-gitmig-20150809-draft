@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4.ebuild,v 1.1 2001/08/20 16:02:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4.ebuild,v 1.2 2001/08/21 01:24:01 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
-	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.gz
+	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2
 	 ftp://ftp.unina.it/pub/Unix/cygnus/glibc/releases/glibc-linuxthreads-${PV}.tar.gz
 	 ftp://ftp.gnu.org/pub/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
@@ -25,19 +25,20 @@ fi
 PROVIDE="virtual/glibc"
 
 src_unpack() {
-	
-    unpack glibc-${PV}.tar.gz
+    unpack glibc-${PV}.tar.bz2
     cd ${S}
-    unpack glibc-linuxthreads-${PV}.tar.gz
+    unpack glibc-linuxthreads-${PV}.tar.bz2
     for i in mtrace-intl-perl
 	do
       echo "Applying $i patch..."
       try patch -p0 < ${FILESDIR}/glibc-2.2.2-${i}.diff
     done
-    try patch -p0 < ${FILESDIR}/glibc-2.2.3-libnss.diff
-    try patch -p0 < ${FILESDIR}/glibc-2.2.3-string2.diff
+    #try patch -p0 < ${FILESDIR}/glibc-2.2.3-libnss.diff
+    #For information about the string2 patch, see: http://cvs.gentoo.org/pipermail/gentoo-dev/2001-June/001559.html
+	try patch -p0 < ${FILESDIR}/glibc-2.2.3-string2.diff
     cd io
-    try patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
+    #To my knowledge, this next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
+	try patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
 	#now we need to fix a problem where glibc-2.2.3 doesn't compile with absolutely no -O optimizations.
 	#we'll need to keep our eyes on this one to see how things are in later versions of linuxthreads:
 	#for more info, see:
