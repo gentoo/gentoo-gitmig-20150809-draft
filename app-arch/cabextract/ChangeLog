@@ -1,8 +1,10 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.2 2002/09/11 17:42:23 owen Exp $
 
 *cabextract-0.5 (1 Feb 2002)
+  11 Sep 2002; Owen Stampflee <owen@gentoo.org> cabextract-0.5.ebuild :
+  Added PPC to KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
