@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.4.ebuild,v 1.5 2004/06/24 22:21:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.4.ebuild,v 1.6 2004/06/28 22:14:52 agriffis Exp $
 
 inherit eutils
 
@@ -40,8 +40,6 @@ src_unpack() {
 	sed -e 's:usr/man:usr/share/man:g' Configure.orig > Configure
 	chmod ug+x Configure
 	#man pages will now install into /usr/share/man
-
-	einfo `use gtk`
 }
 
 src_compile() {
@@ -74,17 +72,10 @@ src_compile() {
 	# then the gtk version will be installed.  If not, but X is in your USE,
 	# then the xaw version will be installed.  Otherwise, no gui will be
 	# installed.
-	sed -e "/^HAS_FORMS/d" config.out > config.out.1
-	sed -e "/^HAS_FORMS/d" config.mk > config.mk.1
-	sed -i -e "/^HAS_GTK/d" config.out.1
-	sed -i -e "/^HAS_GTK/d" config.mk.1
-	sed -i -e "/^HAS_XAW/d" config.out.1
-	sed -i -e "/^HAS_XAW/d" config.mk.1
-	sed -e "s/^FLIBS=\".*\"/FLIBS=\"\"/" config.out.1 > config.out
-	sed -e "s/^FLIBS=\".*\"/FLIBS=\"\"/" config.mk.1 > config.mk
-	rm -f config.out.1
-	rm -f config.mk.1
-
+	sed -i -e "/^HAS_FORMS/d" config.out config.mk
+	sed -i -e "/^HAS_GTK/d" config.out config.mk
+	sed -i -e "/^HAS_XAW/d" config.out config.mk
+	sed -i -e "s/^FLIBS=\".*\"/FLIBS=\"\"/" config.out config.mk
 
 	# patch version.h so that they won't complain that Card Services is wrong.
 	if [ -n "`grep -E '^CONFIG_PCMCIA\=y' config.mk`" ]; then

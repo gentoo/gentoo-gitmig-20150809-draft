@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.3.ebuild,v 1.8 2004/06/24 22:21:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.3.ebuild,v 1.9 2004/06/28 22:14:52 agriffis Exp $
 
 MY_P=${P/-drivers/}
 S=${WORKDIR}/${MY_P}
@@ -40,8 +40,6 @@ src_unpack() {
 	cp Configure Configure.orig
 	sed -e 's:usr/man:usr/share/man:g' Configure.orig > Configure
 	#man pages will now install into /usr/share/man
-
-	echo `use gtk`
 }
 
 src_compile() {
