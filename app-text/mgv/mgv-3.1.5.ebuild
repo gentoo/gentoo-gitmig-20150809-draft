@@ -1,7 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5.ebuild,v 1.14 2003/03/01 04:31:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5.ebuild,v 1.15 2003/03/29 22:52:08 liquidx Exp $
+
+inherit eutils
+
+IUSE=""
 
 DESCRIPTION="Motif PostScript viewer loosely based on Ghostview"
 SRC_URI="http://www.trends.net/~mu/srcs/${P}.tar.gz"
@@ -12,7 +16,12 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND=">=app-text/ghostscript-3.33
-	x11-libs/openmotif"
+	virtual/motif"
+
+src_unpack() {
+	unpack ${A}
+    epatch ${FILESDIR}/${P}-stderr.patch || die
+}
 
 src_compile() {
 	econf || die
