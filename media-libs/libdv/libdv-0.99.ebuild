@@ -1,43 +1,35 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.99.ebuild,v 1.3 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.99.ebuild,v 1.4 2003/08/18 17:36:05 max Exp $
 
-IUSE="sdl gtk xv"
-
-S=${WORKDIR}/${P}
-DESCRIPTION="software codec for dv-format video (camcorders etc)"
+DESCRIPTION="Software codec for dv-format video (camcorders etc)."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://libdv.sourceforge.net/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha amd64"
+IUSE="sdl xv"
 
-DEPEND=" dev-libs/popt
-	gtk? ( =x11-libs/gtk+-1.2* )
-	gtk? ( =dev-libs/glib-1.2* )
-	xv? ( x11-base/xfree )
+DEPEND="dev-libs/popt
 	dev-util/pkgconfig
-	sdl? ( >=media-libs/libsdl-1.2.4.20020601 )"
+	=x11-libs/gtk+-1.2*
+	sdl? ( >=media-libs/libsdl-1.2.4.20020601 )
+	xv? ( virtual/x11 )"
 	
 src_compile() {
-	myconf="--without-debug"
-	
-	use gtk \
-		|| myconf="$myconf --disable-gtk"
-	use sdl \
-		&& myconf="$myconf --enable-sdl" \
-		|| myconf="$myconf --disable-sdl"
-	use xv \
-		|| myconf="$mycong --disable-xv"
+	local myconf
+	myconf="${myconf} `use_with debug`"
+	myconf="${myconf} `use_enable sdl`"
+	myconf="${myconf} `use_enable xv`"
 
 	unset CFLAGS CXXFLAGS
 
-	econf ${myconf} || die
-	make || die
+	econf ${myconf}
+	make || die "compile problem."
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	einstall DESTDIR="${D}"
 	dodoc AUTHORS COPYING COPYRIGHT ChangeLog INSTALL NEWS README* TODO
 }

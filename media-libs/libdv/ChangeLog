@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.15 2003/07/11 18:00:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.16 2003/08/18 17:36:05 max Exp $
+
+  18 Aug 2003; Max Kalika <max@gentoo.org> libdv-0.99.ebuild:
+  Configure couldn't complete if gtk isn't installed, so added
+  =x11-libs/gtk-1.2* to DEPEND. Other cleanups.
 
   11 Jul 2003; Martin Holzer <mholzer@gentoo.org> libdv-0.99.ebuild:
   Marked stable on x86.
