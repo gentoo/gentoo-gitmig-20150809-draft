@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r1.ebuild,v 1.1 2003/04/04 00:21:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r1.ebuild,v 1.2 2003/04/04 00:21:30 seemant Exp $
 
 IUSE="static build"
 
@@ -24,8 +24,7 @@ src_unpack() {
 
 	# Make installkernel and mkboot more Gentoo friendly
 	# <azarah@gentoo.org> (25 Sep 2002)
-	#epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/blah.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	# Patch savelog to use bzip2 compression instead of gzip
 	epatch ${FILESDIR}/${PN}-compress.patch
