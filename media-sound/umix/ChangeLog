@@ -1,7 +1,10 @@
 # ChangeLog for media-sound/umix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/ChangeLog,v 1.6 2003/03/17 11:38:20 phosphan Exp $
-	
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/ChangeLog,v 1.7 2003/03/28 14:28:47 phosphan Exp $
+
+  28 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> umix-1.0.ebuild :
+  marked as stable
+
 *umix-1.0 (17 Mar 2003)
 
   17 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> umix-1.0.ebuild

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/umix-1.0.ebuild,v 1.1 2003/03/17 11:38:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/umix-1.0.ebuild,v 1.2 2003/03/28 14:28:47 phosphan Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program for adjusting soundcard volumes"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://umix.sf.net"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 IUSE="ncurses oss"
 
