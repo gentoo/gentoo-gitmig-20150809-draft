@@ -3,6 +3,9 @@
 # /home/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.2 2002/11/27 19:10:11
 # vapier Exp $
 
+  08 Jan 2003; Matthew Turk <satai@gentoo.org> :
+  Marked as stable.
+
 *xhtml1-20020801 (30 Dec 02)
 
   30 Dec 2002; Matthew Turk <satai@gentoo.org> : 

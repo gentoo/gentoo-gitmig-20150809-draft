@@ -1,6 +1,9 @@
 # ChangeLog for app-text/latex-calendar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex-calendar/ChangeLog,v 1.4 2002/12/13 10:56:19 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex-calendar/ChangeLog,v 1.5 2003/01/08 23:29:46 satai Exp $
+
+  08 Jan 2003; Matthew Turk <satai@gentoo.org> :
+  Marked as stable.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
