@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.17 2004/09/15 18:05:24 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.18 2004/09/21 22:46:11 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
 
-inherit eutils versionator
+inherit eutils versionator libtool
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
@@ -320,6 +320,10 @@ gcc_quick_unpack() {
 	then
 		unpack ${PIE_CORE}
 	fi
+
+	# Fixup libtool to correctly generate .la files with portage
+	cd ${S}
+	elibtoolize --portage --shallow
 
 	popd > /dev/null
 }
