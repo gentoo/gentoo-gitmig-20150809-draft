@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6ce0136c73961f4302585947a95524e1 ChangeLog 386
+MD5 3d75031c3d299cb0599c2b42f81c25ea ChangeLog 469
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 dc1fc00d7a68d4d308512972df6c571b penguzzle-1.0.ebuild 892
+MD5 40a0708b64c9fdea4c45835b7041265b penguzzle-1.0.ebuild 897
 MD5 c96e5c8e9b77b660bc413bca11420674 files/digest-penguzzle-1.0 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiCaiHTu7gpaalycRAu77AKDcyqLc1iLHdxs5Ma8G4hhQNTctUwCfYuBt
-P+scjp5Z2uaYWNtoxyje1xY=
-=eX2r
------END PGP SIGNATURE-----
