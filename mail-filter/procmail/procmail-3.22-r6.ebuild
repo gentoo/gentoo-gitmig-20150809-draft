@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.8 2004/09/20 01:17:41 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.9 2004/09/22 08:27:22 ticho Exp $
+
+inherit eutils
 
 DESCRIPTION="Mail delivery agent/filter"
 SRC_URI="http://www.procmail.org/${P}.tar.gz"
@@ -30,7 +32,7 @@ src_compile() {
 		echo "# Use maildir-style mailbox in user's home directory" > ${S}/procmailrc
 		echo 'DEFAULT=$HOME/.maildir/' >> ${S}/procmailrc
 		cd ${S}
-		patch -p1 <${FILESDIR}/gentoo-maildir2.diff
+		epatch ${FILESDIR}/gentoo-maildir2.diff
 	else
 		echo '# Use mbox-style mailbox in /var/spool/mail' > ${S}/procmailrc
 		echo 'DEFAULT=/var/spool/mail/$LOGNAME' >> ${S}/procmailrc
