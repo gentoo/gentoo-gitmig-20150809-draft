@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0-r1.ebuild,v 1.6 2004/06/24 22:57:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0-r1.ebuild,v 1.7 2004/07/03 11:44:40 humpback Exp $
 
 inherit eutils
 
@@ -12,8 +12,10 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc"
 SLOT="0"
 
-DEPEND=">=net-im/jabberd-1.4.3-r3
+DEPEND="=net-im/jabberd-1.4*
 		>=dev-libs/glib-2.2.1"
+
+IUSE=""
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for net-im/mu-conference
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.10 2004/06/24 22:57:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.11 2004/07/03 11:44:39 humpback Exp $
+
+  03 Jul 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  mu-conference-0.6.0-r1.ebuild, -mu-conference-0.6.0.ebuild:
+  Fixing dependencies and cleanning older versions
 
   20 Jun 2004; Gustavo Felisberto <humpback@gentoo.org>;
   mu-conference-0.6.0-r1.ebuild:
