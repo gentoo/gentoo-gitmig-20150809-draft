@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.9 2002/12/09 04:33:19 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.10 2002/12/10 21:38:46 blizzy Exp $
+
+*rsync-2.5.6_pre20021105 (10 Dec 2002)
+
+  10 Dec 2002; Maik Schreiber <blizzy@gentoo.org> : New upstream snapshot.
+  Seems to be stable for several months now (see rsync mailing list).
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
