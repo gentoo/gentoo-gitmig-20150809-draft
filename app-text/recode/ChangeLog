@@ -1,8 +1,15 @@
 # ChangeLog for app-text/recode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.2 2002/06/25 00:11:22 george Exp $
 
 *recode-3.6 (1 Feb 2002)
+
+  24 June 2002; George Shapovalov <george@gentoo.org> recode-3.8.ebuild :
+
+  modified SRC_URI to use ${P}, added RDEPEND, SLOT and LICENSE lines 
+  and correct header line.
+  added recode-3.5.ebuild (exact copy of 3.6) - pybliographer requires 
+  exact that version of recode installed.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
