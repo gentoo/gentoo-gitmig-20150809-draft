@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.6 2003/09/10 21:47:29 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.7 2004/03/14 13:19:52 mr_bones_ Exp $
 
 DESCRIPTION="Load balancing multithreaded PostgreSQL connection pool.
 Also has a replication mode to keep in sync the load balanced backend

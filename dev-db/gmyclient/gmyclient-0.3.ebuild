@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.6 2003/10/20 16:28:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.7 2004/03/14 13:19:53 mr_bones_ Exp $
 
 DESCRIPTION="Gnome based mysql client"
 SRC_URI="http://${PN}.sourceforge.net/download/${P}.tar.gz"
@@ -24,5 +24,4 @@ src_install() {
 	make DESTDIR=${D} install || die "installed failed"
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 	mv ${D}/usr/share/gmyclient/doc ${D}/usr/share/doc/${PF}/html
-
 }

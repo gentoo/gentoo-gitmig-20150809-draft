@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.7.37.ebuild,v 1.10 2004/01/25 08:08:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.7.37.ebuild,v 1.11 2004/03/14 13:19:53 mr_bones_ Exp $
 
 S=${WORKDIR}/${PN}-${PV%.*}
 DESCRIPTION="Embedded database library"

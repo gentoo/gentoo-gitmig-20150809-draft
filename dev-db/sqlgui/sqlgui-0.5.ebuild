@@ -1,6 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/sqlgui-0.5.ebuild,v 1.1 2003/10/13 20:34:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/sqlgui-0.5.ebuild,v 1.2 2004/03/14 13:19:53 mr_bones_ Exp $
+
 inherit kde-base
 
 need-kde 3

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0.ebuild,v 1.6 2003/12/08 04:51:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0.ebuild,v 1.7 2004/03/14 13:19:53 mr_bones_ Exp $
 
 inherit eutils
 
