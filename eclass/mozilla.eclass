@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.19 2004/10/08 21:06:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.20 2004/11/05 22:51:57 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -28,12 +28,12 @@ RDEPEND="virtual/x11
 		>=x11-libs/gtk+-2.2.0
 		>=dev-libs/glib-2.2.0
 		>=x11-libs/pango-1.2.1
-		>=dev-libs/libIDL-0.8.0 )
+		>=dev-libs/libIDL-0.8.0 
+		gnome? ( >=gnome-base/gnome-vfs-2.3.5 ) )
 	!gtk2? (
 		=x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2*
 		=gnome-base/orbit-0* )
-	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )
 	>=net-www/mozilla-launcher-1.19"
 
 DEPEND="${RDEPEND}
@@ -144,7 +144,6 @@ mozilla_conf() {
 		$(mozilla_use_enable ipv6) \
 		$(mozilla_use_enable xinerama) \
 		$(mozilla_use_enable xprint) \
-		$(mozilla_use_enable gnome gnomevfs) \
 		$(mozilla_use_enable truetype freetype2) \
 		$(mozilla_use_enable truetype freetypetest)"
 
@@ -152,8 +151,10 @@ mozilla_conf() {
 	#       tested ok -- azarah
 	if use gtk2; then
 		mozilla_annotate +gtk2 --enable-default-toolkit=gtk2
+		myconf="${myconf} $(mozilla_use_enable gnome gnomevfs)"
 	else
 		mozilla_annotate -gtk2 --enable-default-toolkit=gtk
+		mozilla_annotate -gtk2 --disable-gnomevfs
 	fi
 
 	if use debug; then
