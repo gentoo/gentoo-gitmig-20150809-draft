@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.4.ebuild,v 1.4 2004/06/29 14:35:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.4.ebuild,v 1.5 2004/10/26 21:54:59 latexer Exp $
 
 inherit mono
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-dotnet/mono-0.95
-	>=x11-libs/gtk-sharp-0.93
+	>=dev-dotnet/gtk-sharp-0.93
 	net-www/mozilla"
 
 src_compile() {

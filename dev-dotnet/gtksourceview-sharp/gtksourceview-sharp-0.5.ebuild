@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.5.ebuild,v 1.2 2004/07/04 17:14:16 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.5.ebuild,v 1.3 2004/10/26 21:53:39 latexer Exp $
 
 inherit mono
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-dotnet/mono-1.0
-		>=x11-libs/gtk-sharp-1.0
+		>=dev-dotnet/gtk-sharp-1.0
 		>=x11-libs/gtksourceview-1.0.0"
 
 

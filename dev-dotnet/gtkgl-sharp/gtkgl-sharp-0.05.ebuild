@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkgl-sharp/gtkgl-sharp-0.05.ebuild,v 1.4 2004/06/29 14:36:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkgl-sharp/gtkgl-sharp-0.05.ebuild,v 1.5 2004/10/26 21:53:00 latexer Exp $
 
 inherit mono
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="virtual/x11
 	>=dev-dotnet/mono-0.91
-	>=x11-libs/gtk-sharp-0.91.1"
+	>=dev-dotnet/gtk-sharp-0.91.1"
 
 src_install() {
 	make DESTDIR=${D} install || die
