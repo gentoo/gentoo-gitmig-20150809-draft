@@ -1,10 +1,3 @@
-ARCH="mips"
-ACCEPT_KEYWORDS="mips"
-
-FEATURES="-sandbox"
-GRP_STAGE23_USE="berkdb ncurses readline zlib uclibc hardened pic pie"
-USE="${GRP_STAGE23_USE}"
 STAGE1_USE="uclibc hardened pic pie"
-
-UCLIBC_CPU_DEFAULT="MIPS_ISA_1"
-UCLIBC_ENDIAN_DEFAULT="BIG"
+GRP_STAGE23_USE="berkdb ncurses readline zlib uclibc hardened pic pie"
+USE="berkdb ncurses readline zlib uclibc hardened pic pie"

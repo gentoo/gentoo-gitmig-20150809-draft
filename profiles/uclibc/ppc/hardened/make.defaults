@@ -1,9 +1,3 @@
-ARCH="ppc"
-ACCEPT_KEYWORDS="ppc"
-
+STAGE1_USE="uclibc hardened pic pie"
 GRP_STAGE23_USE="berkdb ncurses readline zlib uclibc hardened pic pie"
-USE="${GRP_STAGE23_USE}"
-STAGE1_USE="uclibc hardened pic"
-
-UCLIBC_CPU_DEFAULT=""
-UCLIBC_ENDIAN_DEFAULT="BIG"
+USE="berkdb ncurses readline zlib uclibc hardened pic pie"
