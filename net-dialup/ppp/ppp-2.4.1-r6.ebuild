@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r6.ebuild,v 1.2 2001/11/11 19:54:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r6.ebuild,v 1.3 2001/11/25 14:11:08 azarah Exp $
 
 A="${P}.tar.gz"
 S=${WORKDIR}/${P}
@@ -57,19 +57,12 @@ src_install() {
 	insopts -m0644
 	doins etc.ppp/options
 
-	insinto /etc/init.d
-	insopts -m0700
-	doins ${FILESDIR}/${PVR}/net.ppp0
-
 #	insinto /etc/modules.d
 #	doins ${FILESDIR}/${PVR}/modules.ppp
 
-	insinto /usr/lib/ppp
-	doins ${FILESDIR}/${PVR}/chat-default
-	
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
 
-	
+# This will have to be updated to work with the new net.ppp0	
 #	# Added a couple scripts to simplify dialing up
 #	# borrowed from debian, man they got some nice little apps :-)
 #	dosbin ${FILESDIR}/pon
@@ -82,11 +75,4 @@ pkg_postinst() {
 	if [ ! -e /dev/ppp ]; then
 		mknod /dev/ppp c 108 0
 	fi
-
-	echo
-	echo "#################################################################"
-	echo "# Please make sure to replace the old /etc/init.d/net.ppp0 with #"
-	echo "# the new one.                                                  #"
-	echo "#################################################################"
-	echo
 }
