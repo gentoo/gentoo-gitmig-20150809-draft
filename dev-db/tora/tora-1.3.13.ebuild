@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.13.ebuild,v 1.5 2004/04/20 15:38:26 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.13.ebuild,v 1.6 2004/06/10 20:08:32 rizzo Exp $
 
 use debug && inherit debug
 
@@ -18,16 +18,16 @@ DEPEND=">=x11-libs/qt-3.0.0
 	kde? ( >=kde-base/kdelibs-3.1 )"
 
 pkg_setup() {
-	if [ "`use oci8`" -a ! $ORACLE_HOME ] ; then
-		ewarn "ORACLE_HOME variable is not set."
-		ewarn
-		ewarn "You must install Oracle >= 8i client for Linux in"
-		ewarn "order to compile TOra with Oracle support."
-		ewarn
-		ewarn "Otherwise specify -oci8 in your USE variable."
-		ewarn
-		ewarn "You can download the Oracle software from"
-		ewarn "http://otn.oracle.com/software/content.html"
+	if use oci8 && [ -z "$ORACLE_HOME" ] ; then
+		eerror "ORACLE_HOME variable is not set."
+		eerror
+		eerror "You must install Oracle >= 8i client for Linux in"
+		eerror "order to compile TOra with Oracle support."
+		eerror
+		eerror "Otherwise specify -oci8 in your USE variable."
+		eerror
+		eerror "You can download the Oracle software from"
+		eerror "http://otn.oracle.com/software/content.html"
 		die
 	fi
 }
