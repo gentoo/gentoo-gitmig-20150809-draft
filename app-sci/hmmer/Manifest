@@ -1,4 +1,5 @@
-MD5 9fbc129db1a886510ff026fd89e131f1 files/Makefile-hmmer-2.2g.patch 1040
-MD5 bd33e448c26a59469256420a3b920600 files/digest-hmmer-2.2g 62
 MD5 89b013567d8503b76ba599f0e19707ba ChangeLog 387
 MD5 b986f95d0c0cb7e676d3b91bec2ab165 hmmer-2.2g.ebuild 901
+MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
+MD5 9fbc129db1a886510ff026fd89e131f1 files/Makefile-hmmer-2.2g.patch 1040
+MD5 bd33e448c26a59469256420a3b920600 files/digest-hmmer-2.2g 62
