@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.3.1.ebuild,v 1.3 2004/03/15 21:54:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.3.1.ebuild,v 1.4 2004/03/17 14:58:27 cretin Exp $
 
 MY_P=${P/xmingw-/}
 S=${WORKDIR}/${MY_P}
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${RUNTIME}-src.tar.gz
 	unpack ${W32API}-src.tar.gz
 	cd ${S}; gzip -dc ${DISTDIR}/${MINGW_PATCH} | patch -p1
+	einfo "The rejects gc.h and win32_threads.c are expected, see bug #44858"
 	patch -p1 < ${FILESDIR}/gcc-3.3.1-includefix.diff
 
 	mkdir -p ${S}/winsup/cygwin ${S}/winsup/w32api
