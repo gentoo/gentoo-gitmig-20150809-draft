@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.14 2003/03/16 10:00:30 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.15 2003/07/01 16:31:02 todd Exp $
+
+  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> pkgconfig-0.15.0.ebuld :
+  set stable on sparc
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> pkgconfig-0.15.0.ebuild :
   Marked ppc stable
