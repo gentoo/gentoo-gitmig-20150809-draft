@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.32 2003/04/19 17:48:50 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.33 2003/05/27 14:48:21 liquidx Exp $
+
+*gimp-1.2.4 (26 May 2003)
+
+  26 May 2003; Alastair Tse <liquidx@gentoo.org> gimp-1.2.4.ebuild,
+  files/gimp-1.2.4-gentoo.diff:
+  bumping stable series to 1.2.4. removing custom psd_save and various
+  ebuild cleanups by foser. also fixed perl man page installation paths.
 
 *gimp-1.3.14 (16 Apr 2003)
 
