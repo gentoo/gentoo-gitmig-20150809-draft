@@ -1,7 +1,23 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.6 2002/04/24 21:03:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.7 2002/06/13 20:47:11 danarmak Exp $
 
+*kdevelop-2.1.1-r1 (06 Jun 2002)
+
+  06 Jun 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  Add some long-requested items: the c/cpp reference package,
+  a precompiled kdelibs documentation package (from the kde cvs
+  of somewhere in late May) and a premade htdig configuration file
+  which may not work optimally but at least gets rid of the annoying
+  "no configuration file" error.
+
+*kdevelop-2.1.1 (24 May 2002)
+
+  24 May 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+
+  Bugfix release distributed with kde 3.0.1.
+  
   24 Apr; Dan Armak <danarmak@gentoo.org> changelog:
   
   replaced glimpse dependency with htdig again, since glimpse's license
