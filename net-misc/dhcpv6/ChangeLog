@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpv6
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.2 2003/06/11 20:53:17 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.3 2003/06/17 19:14:02 latexer Exp $
+
+  17 Jun 2003; Peter Johanson <latexer@gentoo.org> dhcpv6-0.7.ebuild,
+  dhcpv6-0.8.ebuild:
+  Create /var/lib/dhcpv6, since dhcpv6 needs these to create files in.
 
 *dhcpv6-0.8 (11 Jun 2003)
 
