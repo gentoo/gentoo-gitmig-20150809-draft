@@ -87,7 +87,7 @@
  .PP
  .I Cron
 -searches /var/cron/tabs for crontab files which are named after accounts in
-+searches /var/spool/cron for crontab files which are named after accounts in
++searches /var/spool/cron/crontabs for crontab files which are named after accounts in
  /etc/passwd; crontabs found are loaded into memory.
  .I Cron
  also searches for /etc/crontab which is in a different format (see
@@ -111,7 +111,7 @@
  			 * are all relative to this directory.
  			 */
 -#define CRONDIR		"/var/cron"
-+#define CRONDIR		"/var/spool"
++#define CRONDIR		"/var/spool/cron"
  #endif
  
  			/* SPOOLDIR is where the crontabs live.
@@ -120,7 +120,7 @@
  			 * didn't exist last time around...)
  			 */
 -#define SPOOL_DIR	"tabs"
-+#define SPOOL_DIR	"cron"
++#define SPOOL_DIR	"crontabs"
  
  			/* undefining these turns off their features.  note
  			 * that ALLOW_FILE and DENY_FILE must both be defined
@@ -703,7 +703,7 @@
 --- vixie-cron-3.0.1/cron.8.crond	Wed Apr 14 18:45:03 1999
 +++ vixie-cron-3.0.1/cron.8	Wed Apr 14 18:46:27 1999
 @@ -32,7 +32,8 @@
- searches /var/spool/cron for crontab files which are named after accounts in
+ searches /var/spool/cron/crontabs for crontab files which are named after accounts in
  /etc/passwd; crontabs found are loaded into memory.
  .I Cron
 -also searches for /etc/crontab which is in a different format (see
