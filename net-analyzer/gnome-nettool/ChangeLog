@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/gnome-nettool
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.1 2004/09/18 17:07:46 foser Exp $
+
+*gnome-nettool-0.99.3 (18 Sep 2004)
+
+  18 Sep 2004; foser <foser@gentoo.org> gnome-nettool-0.99.3.ebuild :
+  Gnome 2.8 commit
+  Initial commit of this package, derived from gnome-extra/gnome-network
+  Added to the gnome herd
