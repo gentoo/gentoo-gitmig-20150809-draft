@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Imc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fi/ispell-fi-20000903.ebuild,v 1.3 2003/08/06 06:49:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fi/ispell-fi-20000903.ebuild,v 1.4 2003/09/07 23:48:39 lanius Exp $
 
 DESCRIPTION="Finnish dictionary for ispell"
 HOMEPAGE="http://ispell-fi.sourceforge.net/"
