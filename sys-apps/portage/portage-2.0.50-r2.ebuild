@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r1.ebuild,v 1.6 2004/03/22 02:14:06 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r2.ebuild,v 1.1 2004/03/22 02:14:06 carpaski Exp $
 
 IUSE="build"
 
@@ -190,6 +190,8 @@ pkg_postinst() {
 		rm -f /var/cache/edb/mtimes
 	fi
 
+	mkdir "${ROOT}/etc/portage" &> /dev/null
+
 	if [ ! -f "/etc/portage/package.mask" ]; then
 	  if [ -f "/etc/portage/profiles/package.mask" ]; then
 			ln /etc/portage/profiles/package.mask /etc/portage/package.mask
@@ -287,6 +289,9 @@ pkg_postinst() {
 
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_db_template.py')"
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_db_template.py')"
+
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_dep.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage_dep.py')"
 
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/xpak.py')"
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/xpak.py')"
