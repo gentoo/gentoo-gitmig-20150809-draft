@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.46 2003/04/22 10:00:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.47 2003/05/05 14:47:01 caleb Exp $
+
+  05 May 2003; Caleb Tennis <caleb@gentoo.org> files/rebuilder.sh:
+  Fix bug #17723 by posting a note to the user that they need to have
+  gentoolkit emerged before running this script.  Also fix bug #18605 by
+  having the script scan the qt directory too.
 
 *mysql-4.0.12 (22 Mar 2003)
 

@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ ! -e /usr/bin/qpkg ]; then
+	echo "Please emerge gentoolkit before using this script."
+	exit 1
+fi
+
 LINKED_WITH=libmysqlclient
 rm -f /tmp/${LINKED_WITH}.*
 
@@ -12,7 +17,8 @@ echo "This might take a while ..."
 		-or -regex './usr/bin.*' \
 		-or -regex './usr/sbin.*' \
 		-or -regex './usr/lib.*' \
-		-or -regex './usr/kde.*'`
+		-or -regex './usr/kde.*' \
+		-or -regex './usr/qt.*'`
 	do
 	[ -x $i -a -f $i ] && {
 		ldd $i 2>/dev/null | grep ${LINKED_WITH} >/dev/null 2>&1
