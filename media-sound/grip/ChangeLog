@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.7 2002/06/19 14:29:07 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.8 2002/09/26 15:56:59 agenkin Exp $
+
+*grip-3.0.3 (26 Sep 2002)
+
+  26 Sep 2002; Arcady Genkin <agenkin@gentoo.org> grip-3.0.3.ebuild :
+
+  Update to 3.0.3.
+  Moved Makefile.in mangling into src_unpack(), where it belongs.
+  Commented out src_unpack(), since the aforementioned mangling no
+  longer seems to be required.
 
 *grip-3.0.1 (19 Jun 2002)
 
