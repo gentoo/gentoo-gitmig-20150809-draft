@@ -1,48 +1,48 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.1.ebuild,v 1.1 2004/03/01 14:00:45 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.1.ebuild,v 1.2 2004/03/03 15:27:13 humpback Exp $
 
-SMILEYS="http://jisp.netflint.net/smile/AIM.jisp
-	http://jisp.netflint.net/smile/apple_ichat-1.0.jisp
-	http://jisp.netflint.net/smile/critters-1.0.jisp
-	http://jisp.netflint.net/smile/gadu-gadu.jisp
-	http://jisp.netflint.net/smile/JIM.jisp
-	http://jisp.netflint.net/smile/KMess-Cartoon-1.0.jisp
-	http://jisp.netflint.net/smile/kreativ_squareheads.jisp
-	http://jisp.netflint.net/smile/msn.jisp
-	http://jisp.netflint.net/smile/patricks_faces-1.0.jisp
-	http://jisp.netflint.net/smile/rhymbox-1.0.jisp
-	http://jisp.netflint.net/smile/shinyicons.jisp
-	http://jisp.netflint.net/smile/taryn.jisp
-	http://jisp.netflint.net/smile/tlen.pl-3.73.jisp
-	http://jisp.netflint.net/smile/trill-basic-smileys.jisp
-	http://jisp.netflint.net/smile/trill-extra-smileys.jisp
-	http://jisp.netflint.net/smile/trill-extra-symbols.jisp
-	http://jisp.netflint.net/smile/trill-msn.jisp
-	http://jisp.netflint.net/smile/trill-yahoo.jisp
-	http://jisp.netflint.net/smile/yahoo_messenger.jisp
+SMILEYS="http://dev.gentoo.org/~humpback/jisp/AIM.jisp
+	http://dev.gentoo.org/~humpback/jisp/apple_ichat-1.0.jisp
+	http://dev.gentoo.org/~humpback/jisp/critters-1.0.jisp
+	http://dev.gentoo.org/~humpback/jisp/gadu-gadu.jisp
+	http://dev.gentoo.org/~humpback/jisp/JIM.jisp
+	http://dev.gentoo.org/~humpback/jisp/KMess-Cartoon-1.0.jisp
+	http://dev.gentoo.org/~humpback/jisp/kreativ_squareheads.jisp
+	http://dev.gentoo.org/~humpback/jisp/msn.jisp
+	http://dev.gentoo.org/~humpback/jisp/patricks_faces-1.0.jisp
+	http://dev.gentoo.org/~humpback/jisp/rhymbox-1.0.jisp
+	http://dev.gentoo.org/~humpback/jisp/shinyicons.jisp
+	http://dev.gentoo.org/~humpback/jisp/taryn.jisp
+	http://dev.gentoo.org/~humpback/jisp/tlen.pl-3.73.jisp
+	http://dev.gentoo.org/~humpback/jisp/trill-basic-smileys.jisp
+	http://dev.gentoo.org/~humpback/jisp/trill-extra-smileys.jisp
+	http://dev.gentoo.org/~humpback/jisp/trill-extra-symbols.jisp
+	http://dev.gentoo.org/~humpback/jisp/trill-msn.jisp
+	http://dev.gentoo.org/~humpback/jisp/trill-yahoo.jisp
+	http://dev.gentoo.org/~humpback/jisp/yahoo_messenger.jisp
 	"
 
-ICONSETS="http://jisp.netflint.net/sets/amibulb.jisp
-	http://jisp.netflint.net/sets/amiglobe.jisp
-	http://jisp.netflint.net/sets/berlin.jisp
-	http://jisp.netflint.net/sets/berlin-icq.jisp
-	http://jisp.netflint.net/sets/chrome.jisp
-	http://jisp.netflint.net/sets/dudes.jisp
-	http://jisp.netflint.net/sets/dudes32.jisp
-	http://jisp.netflint.net/sets/email.jisp
-	http://jisp.netflint.net/sets/icqG.jisp
-	http://jisp.netflint.net/sets/individual.jisp
-	http://jisp.netflint.net/sets/kitty.jisp
-	http://jisp.netflint.net/sets/neos.jisp
-	http://jisp.netflint.net/sets/puyo.jisp
-	http://jisp.netflint.net/sets/raro.jisp
-	http://jisp.netflint.net/sets/rss.jisp
-	http://jisp.netflint.net/sets/speechbubbles.jisp
-	http://jisp.netflint.net/sets/squareheads.jisp
-	http://jisp.netflint.net/sets/tlen.jisp
-	http://jisp.netflint.net/sets/weather.jisp
-	http://jisp.netflint.net/sets/wpk.jisp
+ICONSETS="http://dev.gentoo.org/~humpback/jisp/amibulb.jisp
+	http://dev.gentoo.org/~humpback/jisp/amiglobe.jisp
+	http://dev.gentoo.org/~humpback/jisp/berlin.jisp
+	http://dev.gentoo.org/~humpback/jisp/berlin-icq.jisp
+	http://dev.gentoo.org/~humpback/jisp/chrome.jisp
+	http://dev.gentoo.org/~humpback/jisp/dudes.jisp
+	http://dev.gentoo.org/~humpback/jisp/dudes32.jisp
+	http://dev.gentoo.org/~humpback/jisp/email.jisp
+	http://dev.gentoo.org/~humpback/jisp/icqG.jisp
+	http://dev.gentoo.org/~humpback/jisp/individual.jisp
+	http://dev.gentoo.org/~humpback/jisp/kitty.jisp
+	http://dev.gentoo.org/~humpback/jisp/neos.jisp
+	http://dev.gentoo.org/~humpback/jisp/puyo.jisp
+	http://dev.gentoo.org/~humpback/jisp/raro.jisp
+	http://dev.gentoo.org/~humpback/jisp/rss.jisp
+	http://dev.gentoo.org/~humpback/jisp/speechbubbles.jisp
+	http://dev.gentoo.org/~humpback/jisp/squareheads.jisp
+	http://dev.gentoo.org/~humpback/jisp/tlen.jisp
+	http://dev.gentoo.org/~humpback/jisp/weather.jisp
+	http://dev.gentoo.org/~humpback/jisp/wpk.jisp
 	"
 
 SRC_URI="${SMILEYS}${ICONSETS}"
