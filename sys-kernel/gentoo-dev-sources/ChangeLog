@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.17 2004/01/04 22:40:52 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.18 2004/01/05 18:19:56 brad_mssw Exp $
+
+  05 Jan 2004; Brad House <brad_mssw@gentoo.org>
+  gentoo-dev-sources-2.6.1_rc1.ebuild:
+  bump versions for security vulnerabilities
 
   04 Jan 2004; Brad House <brad_mssw@gentoo.org>
   gentoo-dev-sources-2.6.1_rc1.ebuild:
