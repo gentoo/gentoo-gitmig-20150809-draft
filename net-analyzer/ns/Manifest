@@ -1,3 +1,5 @@
+MD5 8274586336fd5e66c5a9b1a4b786c8b8 ns-2.26-r1.ebuild 2070
+MD5 34efa95fa7271e9b0215b9b152a0fd24 ns-2.26.ebuild 1981
+MD5 ca69a1db0e8e17b24bace8ba95e7385c ChangeLog 589
+MD5 e50216b9efeff43a6e4ccadbc249ab44 files/digest-ns-2.26-r1 65
 MD5 e50216b9efeff43a6e4ccadbc249ab44 files/digest-ns-2.26 65
-MD5 36e7a8b53a3b488bdcb92c7a298c9d86 ns-2.26.ebuild 1982
-MD5 7c68591ad6344f945798613d5d5620c6 ChangeLog 439
