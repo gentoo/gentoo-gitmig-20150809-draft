@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/gnu-crypto-2.0.1.ebuild,v 1.1 2004/04/01 00:03:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/gnu-crypto-2.0.1.ebuild,v 1.2 2004/04/01 00:17:17 karltk Exp $
 
 inherit java-pkg
 
@@ -38,5 +38,7 @@ src_install() {
 	if use doc ; then
 		dohtml -r api/*
 	fi
+	
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS
 }
 
