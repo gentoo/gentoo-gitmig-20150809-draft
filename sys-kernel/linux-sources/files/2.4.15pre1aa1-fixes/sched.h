@@ -417,6 +417,7 @@ struct task_struct {
    	u32 self_exec_id;
 /* Protection of (de-)allocation: mm, files, fs, tty */
 	spinlock_t alloc_lock;
+	void *journal_info;
 };
 
 /*
@@ -502,7 +503,8 @@ extern struct exec_domain	default_exec_domain;
     sig:		&init_signals,					\
     pending:		{ NULL, &tsk.pending.head, {{0}}},		\
     blocked:		{{0}},						\
-    alloc_lock:		SPIN_LOCK_UNLOCKED				\
+    alloc_lock:		SPIN_LOCK_UNLOCKED,				\
+    journal_info:	NULL
 }
 
 
