@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnshijacker/dnshijacker-1.3.ebuild,v 1.1 2003/03/07 22:52:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnshijacker/dnshijacker-1.3.ebuild,v 1.2 2003/05/04 19:17:05 mholzer Exp $
 
 # Note: Archive file and internal directory structure lack version numbers
 # so a difference in the digest file _may_ mean its a newer version 
@@ -30,7 +30,7 @@ src_install() {
 
 	dosbin dnshijacker ask_dns answer_dns
 
-	insinto /usr/share/dnshijacker
+	insinto /etc/dnshijacker
 	doins ftable
 
 	dodoc README
