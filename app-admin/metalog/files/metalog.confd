@@ -1,13 +1,9 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.confd,v 1.5 2004/07/14 21:14:39 agriffis Exp $
+# /etc/conf.d/metalog
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.confd,v 1.6 2005/03/15 03:21:34 vapier Exp $
 
-# Config file for /etc/init.d/metalog
+# Some useful options:
+#  -a   Log with buffering
+#  -s   Log without buffering
+# See `metalog --help` for more
 
-# If you are using metalog 0.6, buffering is on by default.
-# Add '-s' if you dont want buffering.  (See things realtime)
-
-# If you are using metalog 0.7+, buffering is now off by default.
-# Add '-a' if you want buffering.
-
-METALOG_OPTS="-B"
+METALOG_OPTS=""

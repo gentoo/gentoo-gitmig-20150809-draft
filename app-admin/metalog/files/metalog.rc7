@@ -1,0 +1,40 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.rc7,v 1.1 2005/03/15 03:21:34 vapier Exp $
+
+opts="buffer unbuffer"
+
+PIDFILE=/var/run/metalog.pid
+
+depend() {
+	need clock hostname
+	provide logger
+}
+
+start() {
+	ebegin "Starting metalog"
+	/usr/sbin/metalog \
+		--daemonize \
+		--pidfile=${PIDFILE} \
+		${METALOG_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping metalog"
+	start-stop-daemon --stop --quiet --pidfile ${PIDFILE}
+	eend $?
+}
+
+buffer() {
+	ebegin "Enabling log buffering"
+	kill -USR1 $(<${PIDFILE})
+	eend $?
+}
+
+unbuffer() {
+	ebegin "Disabling log buffering"
+	kill -USR2 $(<${PIDFILE})
+	eend $?
+}
