@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ttcp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.5 2004/06/24 22:23:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.6 2004/07/01 20:27:00 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> ttcp-1.12.ebuild:
+  change virtual/glibc to virtual/libc, add IUSE
 
   26 May 2004; Travis Tilley <lv@gentoo.org> +files/ttcp-1.12-amd64.patch,
   ttcp-1.12.ebuild:
