@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.40 2004/06/16 19:14:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.41 2004/06/16 21:26:38 agriffis Exp $
+
+  16 Jun 2004; Aron Griffis <agriffis@gentoo.org> -mozilla-firefox-0.9.ebuild:
+  Remove 0.9 version in favor of 0.9-r1 to reduce confusion
 
 *mozilla-firefox-0.9-r1 (16 Jun 2004)
 
