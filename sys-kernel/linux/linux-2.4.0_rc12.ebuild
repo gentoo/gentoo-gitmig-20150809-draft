@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc12.ebuild,v 1.1 2000/12/29 17:03:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc12.ebuild,v 1.2 2001/01/02 16:30:22 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-test12
@@ -50,8 +50,8 @@ src_unpack() {
     gzip -dc ${DISTDIR}/linux-2.4.0-test12-reiserfs-3.6.23-patch.gz | patch -p1
 
     cd ${S}
-#    echo "Applying reiser-nfs patch..."
-#    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-test10-reiserfs-3.6.22-nfs.diff.gz | patch -p1
+    echo "Applying reiser-nfs patch..."
+    gzip -dc ${FILESDIR}/2.4.0_rc10/linux-2.4.0-test10-reiserfs-3.6.22-nfs.diff.gz | patch -p1
     mkdir extras
     if [ "`use jfs`" ]
     then

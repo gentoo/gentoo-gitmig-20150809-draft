@@ -1,10 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r7.ebuild,v 1.3 2001/01/02 16:30:22 achim Exp $
+# Author Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc103.ebuild,v 1.1 2001/01/02 16:30:22 achim Exp $
 
 S=${WORKDIR}/linux
-KV=2.4.0-test10
+KV=2.4.0-prerelease-ac3
 if [ "$PN" = "linux" ]
 then
 	DESCRIPTION="Linux kernel, including modules, binary tools, libraries and includes"
@@ -12,14 +12,14 @@ else
 	DESCRIPTION="Kernel source package, including full sources, binary tools and libraries"
 fi
 SRC_URI="
-http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test10.tar.bz2 
-ftp://ftp.reiserfs.org/pub/2.4/linux-2.4.0-test10-reiserfs-3.6.22-patch.gz
-http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.4.tar.gz 
-http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz 
-http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.0.18-patch.tar.gz 
-ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.9d.tar.bz2 
-ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-5/NVIDIA_kernel-0.9-5.tar.gz 
-ftp://ftp.sistina.com/pub/LVM/0.9/lvm_0.9.tar.gz"
+http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-prerelease.tar.bz2
+http://www.kernel.org/pub/linux/kernel/people/alan/2.4.0test/patch-2.4-prerelease-ac3.bz2
+ftp://ftp.reiserfs.org/pub/2.4/linux-2.4.0-test12-reiserfs-3.6.23-patch.gz
+http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.4.tar.gz
+http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz
+http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.1.1-patch.tar.gz
+ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.10.tar.bz2
+ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-5/NVIDIA_kernel-0.9-5.tar.gz"
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
@@ -27,7 +27,7 @@ HOMEPAGE="http://www.kernel.org/
 	  http://www.sistina.com/lvm/
 	  http://www.alsa-project.org
 	  http://www.nvidia.com"
-	
+
 
 
 src_unpack() {
@@ -43,15 +43,22 @@ src_unpack() {
 			exit 1
 		fi
 	fi
-    cd ${WORKDIR} 
-    unpack linux-2.4.0-test10.tar.bz2
+    cd ${WORKDIR}
+    unpack linux-2.4.0-prerelease.tar.bz2
     cd ${S}
-    echo "Applying ReiserFS patch..."
-    gzip -dc ${DISTDIR}/linux-2.4.0-test10-reiserfs-3.6.22-patch.gz | patch -p1
+    echo "Applying ac3 patch..."
+    bzip2 -dc ${DISTDIR}/patch-2.4-prerelease-ac3.bz2 | patch -p1
 
-    cd ${S}
+
+    echo "Applying ReiserFS Makefile patch..."
+    gzip -dc ${DISTDIR}/linux-2.4.0-test12-reiserfs-3.6.23-patch.gz | patch -p1
+
+    echo "Applying ReiserFS patch..."
+    gzip -dc ${FILESDIR}/${PV}/reiserfs-prerelease-makefile.patch.gz | ( cd fs/reiserfs; patch -p0 )
+
     echo "Applying reiser-nfs patch..."
-    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-test10-reiserfs-3.6.22-nfs.diff.gz | patch -p1
+    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-prerelease-ac2-reiserfs-3.6.23-nfs.diff.gz | patch -p1
+
     mkdir extras
     if [ "`use jfs`" ]
     then
@@ -59,24 +66,25 @@ src_unpack() {
 	cd extras
 	mkdir jfs
 	cd jfs
-	unpack jfs-0.0.18-patch.tar.gz
+	unpack jfs-0.1.1-patch.tar.gz
 	cd ${S}
-	patch -p1 < extras/jfs/jfs-common-v0.0.18-patch 
-	patch -p1 < extras/jfs/jfs-2.4.0-test10-v0.0.18-patch 
+	patch -p1 < extras/jfs/jfs-common-v0.1.1-patch
+	patch -p1 < extras/jfs/jfs-2.4.0-test12-v0.1.1-patch
     fi
-	cd ${S}/extras 
+	cd ${S}/extras
 	echo "Unpacking ALSA drivers..."
-	unpack alsa-driver-0.5.9d.tar.bz2
+	unpack alsa-driver-0.5.10.tar.bz2
 	echo "Unpacking NVidia drivers..."
 	unpack NVIDIA_kernel-0.9-5.tar.gz
 	cd NVIDIA_kernel-0.9-5
-	# this is a little fix to make the NVidia drivers compile right with test10
+	# this is a little fix to make the NVidia drivers compile right with test12
 	mv nv.c nv.c.orig
 	echo '#define mem_map_inc_count(p) atomic_inc(&(p->count))' > nv.c
 	echo '#define mem_map_dec_count(p) atomic_dec(&(p->count))' >> nv.c
 	cat nv.c.orig >> nv.c
 	cd ${S}/extras
-	for x in i2c lm_sensors
+	for x in i2c
+        #lm_sensors buggy mkpatch.pl in 2.5.4!
 	do
 		echo "Unpacking and applying $x patch..."
 		cd ${S}/extras
@@ -87,22 +95,15 @@ src_unpack() {
 		patch -p1 < ${x}-patch
 	done
 	cd ${S}/extras
-	echo "Applying LVM 0.9 patch..."
-#	one patch will fail, this is OK (it was applied earlier probably by the JFS patch)
-#	we pass the -f argument to patch to get around and already-applied patch
-	unpack lvm_0.9.tar.gz
-	cd LVM/0.9/PATCHES
-	cat linux-2.4.0-test10-VFS-lock.patch | ( cd ${S}; patch -p1 -f)
-	cat lvm-0.9-2.4.0-test10.patch | ( cd ${S}; patch -p1 -f)
 	echo "Preparing for compilation..."
 	cd ${S}
 	#this is the configuration for the bootdisk/cd
-	cp ${FILESDIR}/${PV}/${PF}.config .config
-	cp ${FILESDIR}/${PV}/${PF}.autoconf include/linux/autoconf.h
+#	cp ${FILESDIR}/${PV}/${PF}.config .config
+#	cp ${FILESDIR}/${PV}/${PF}.autoconf include/linux/autoconf.h
 	try make include/linux/version.h
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
-	chown -R root.root linux 
+	chown -R root.root linux
 }
 
 src_compile() {
@@ -114,8 +115,8 @@ src_compile() {
 	then
 		readlink /usr/src/linux > ${T}/linuxlink
 	fi
-#	rm /usr/src/linux
-#	( cd /usr/src; ln -s ${S} linux )
+	rm /usr/src/linux
+	( cd /usr/src; ln -s ${S} linux )
 	#symlink tweak in place
 	cd ${S}/fs/reiserfs/utils
     try make
@@ -133,20 +134,17 @@ src_compile() {
 		try make modules
 		cd ${S}/extras/NVIDIA_kernel-0.9-5
 		make NVdriver
-		cd ${S}/extras/alsa-driver-0.5.9d
+		cd ${S}/extras/alsa-driver-0.5.10
 		try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
 		try make
 	fi
-	cd ${S}/extras/LVM/0.9
-	try ./configure --prefix=/
-	try make
 	#untweak the symlink
 	if [ -e ${T}/linuxlink ]
 	then
 		( cd /usr/src; rm linux; ln -s `cat ${T}/linuxlink` linux )
 	fi
 }
-src_install() {                               
+src_install() {
 	cd ${S}/fs/reiserfs/utils
 	dodir /usr/man/man8 /sbin
 	try make install SBIN=${D}/sbin MANDIR=${D}/usr/man/man8
@@ -155,7 +153,7 @@ src_install() {
 	then
   	    cd ${S}/fs/jfs/utils
 	    cp output/* ${D}/sbin
-	    local x 
+	    local x
 	    for x in `find -iname *.1`
  	    do
 		doman $x
@@ -165,8 +163,6 @@ src_install() {
 		doman $x
 	    done
 	fi
-	cd ${S}/extras/LVM/0.9
-	make install prefix=${D} MAN8DIR=${D}/usr/man/man8 LIBDIR=${D}/lib
 	dodir /usr/src
 	if [ "$PN" = "linux" ]
 	then
@@ -189,7 +185,7 @@ src_install() {
 		#grab modules
 		try make INSTALL_MOD_PATH=${D} modules_install
 		#install ALSA modules
-		cd ${S}/extras/alsa-driver-0.5.9d
+		cd ${S}/extras/alsa-driver-0.5.10
 		dodir /lib/modules/${KV}/misc
 		cp modules/*.o ${D}/lib/modules/${KV}/misc
 		into /usr
