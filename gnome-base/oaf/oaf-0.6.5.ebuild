@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.5.ebuild,v 1.1 2001/04/13 16:59:03 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.5.ebuild,v 1.2 2001/05/27 02:58:36 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -29,13 +29,14 @@ src_compile() {
   then
     myconf="--disable-nls"
   fi
-  try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome ${myconf}
+  try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome --datadir=/opt/gnome/share ${myconf}
   try make
 }
 
 src_install() {
   
-  try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome install
+  try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome \
+  	datadir=${D}/opt/gnome/share install
   dodoc AUTHORS COPYING* ChangeLog README
   dodoc NEWS TODO
 }

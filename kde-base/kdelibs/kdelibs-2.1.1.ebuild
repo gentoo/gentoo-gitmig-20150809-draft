@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.1.ebuild,v 1.4 2001/04/24 01:27:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.1.ebuild,v 1.5 2001/05/27 02:58:36 achim Exp $
 
 V=2.1
 A=${P}.tar.bz2
@@ -18,7 +18,7 @@ DEPEND=">=sys-devel/gcc-2.95.2
 	>=media-libs/audiofile-0.1.9
 	>=media-libs/tiff-3.5.5
 	>=x11-libs/qt-x11-2.3.0
-	app-text/sgml-common
+	>=app-text/docbook-sgml-1.0
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	mysql? ( >=dev-db/mysql-3.23.30 )
 	postgres? ( >=dev-db/postgresql-7.0.3 )
@@ -28,7 +28,7 @@ DEPEND=">=sys-devel/gcc-2.95.2
 RDEPEND=">=sys-devel/gcc-2.95.2
 	 >=media-libs/audiofile-0.1.9
 	 >=x11-libs/qt-x11-2.3.0
-     =kde-base/kde-env-2.1"
+         =kde-base/kde-env-2.1"
 
 src_unpack() {
     unpack ${A}

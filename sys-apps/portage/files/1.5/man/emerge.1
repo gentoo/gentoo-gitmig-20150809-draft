@@ -1,0 +1,65 @@
+.TH emerge "1" "May 2001" "portage 1.5" 
+.SH NAME
+ebuild \- manual page for the emerge program, the main new and enhanced interface to the Portage system. 
+.SH SYNOPSIS
+.B emerge
+[\fIoptions\fR] \fIfile\fR ...
+.TP
+.B emerge
+[\fIoptions\fR] system
+.SH DESCRIPTION
+The emrge programe is the new main user interface to the portage system. It will
+replace the \fIebuild\fR in most areas. It can be used to build install packages
+from source or to install or build binary packages. Please take a look at the
+ebuild (1) manual also.
+.PP
+.SH OPTIONS 
+\fIfile\fR
+.TP
+This must be a valid ebuild script or a vaild tbz2 package. For further information read ebuild(5).
+.TP
+\fBsystem\fR
+.TP
+If system is used emerge will install all packages listed in /etc/make.profile/packages and also packages that are required from those.
+.TP
+\fB--pretend\fR 
+Only shows a list of packages emerge whould install. emerge does not install the
+packages.
+.TP
+\fB--autoclean\fR
+Clean the build dir after merging the package.
+.TP
+\fB--usepkg\fR
+emerge will install binary packages if avaliable. Otherwise it will build
+from source. All binaries must be in the \fIPKGDIR\fR (default /usr/portage/packages/All)
+.TP
+\fB--buildpkg\fR
+emerge will build a binary package for each package it builds and merges.
+The package will be created in the \fIPKGDIR\fR/[category] subdir and
+hardlinked to \fIPKGDIR\fR/All.
+.TP
+.SH AUTHOR
+Achim Gottinger <achim@gentoo.org>
+.SH "SEE ALSO"
+ebuild(1) ebuild(5) make.defaults(5) make.conf(5)
+.TP
+The helper apps in \fI/usr/lib/portage/bin\fR.
+.SH FILES
+\fB/etc/make.conf\fR 
+Contains variables for the build-process and 
+overwrites those in make.defaults
+.TP
+\fB/etc/make.profile/make.defaults\fR
+Contains the profile dependend variables for the build-process,
+you should edit \fI/etc/make.conf\fR instead.
+.TP
+\fB/etc/make.profile/virtuals\fR 
+Contains a list of packages used to resolve virtual dependencies
+.TP
+\fB/etc/make.profile/package\fR
+Contains a list of packages used for the base system
+.TP
+\fB/etc/make.globals\fR 
+Contains the default variables for the build-process, 
+you should edit \fI/etc/make.conf\fR instead.
+.TP
