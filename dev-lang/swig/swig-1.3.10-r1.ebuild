@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r1.ebuild,v 1.1 2002/01/15 01:27:50 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r1.ebuild,v 1.2 2002/01/24 19:40:43 karltk Exp $
 
 S=${WORKDIR}/SWIG-${PV}
 DESCRIPTION="Simplied Wrapper and Interface Generator"
@@ -24,7 +24,7 @@ src_compile() {
 	local myc
 
 	use python && myc="$myc --with-py" || myc="$myc --without-py"
-	use java && myc="$myc --with-java=$JAVA_HOME" || myc="$myc --without-java"
+	use java && myc="$myc --with-java=$JAVA_HOME --with-javaincl=${JAVA_HOME}/include" || myc="$myc --without-java"
 	use ruby && myc="$myc --with-ruby" || myc="$myc --without-ruby"
 	use guile && myc="$myc --with-guile" || myc="$myc --without-guile"
 	use tcltk && myc="$myc --with-tcl" || myc="$myc --without-tcl"
@@ -32,12 +32,13 @@ src_compile() {
 	
 	unset CXXFLAGS
 	unset CFLAGS
+	
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-		$myconf || die "./configure failed"
+		$myc || die "./configure failed"
 
 	make || die
 }
