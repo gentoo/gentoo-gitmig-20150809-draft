@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.23 2002/08/14 19:45:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.24 2002/08/14 19:46:29 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -197,7 +197,7 @@ set-kdedir() {
 	#[ "${INHERITED//kde-dist}" != "${INHERITED}" -a -z "$KDEDIR" ] && die "$ECLASS: Error: couldn't set kdelibs location, consult log"
 	[ -z "$KDEDIR" ] && die "$FUNCNAME: Error: couldn't set kdelibs location, consult log"
 
-	einfo "$FUNCNAME: Will use the kdelibs installed in $KDEDIR, and install into $PREFIX."
+	debug-print "$FUNCNAME: Will use the kdelibs installed in $KDEDIR, and install into $PREFIX."
 
 }
 
