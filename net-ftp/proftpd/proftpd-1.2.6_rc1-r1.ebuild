@@ -1,20 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.6_rc1-r1.ebuild,v 1.2 2002/08/16 14:24:49 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.6_rc1-r1.ebuild,v 1.3 2002/09/07 14:15:46 seemant Exp $
 
-PV=1.2.6rc1
-P=${PN}-${PV}
-S=${WORKDIR}/${P}
-
+MY_P=${P/_/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="An advanced and very configurable FTP server"
-SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P}.tar.bz2"
+SRC_URI="ftp://ftp.proftpd.org/distrib/source/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.proftpd.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
-DEPEND="virtual/glibc
+DEPEND="net-libs/libpcap
 	pam? ( >=sys-libs/pam-0.75 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
@@ -45,17 +43,15 @@ src_compile() {
 
 	use ldap && export LDFLAGS="-lresolv"
 
-	./configure \
-		--prefix=/usr \
+	econf \
 		--sbindir=/usr/sbin \
-		--mandir=/usr/share/man \
 		--localstatedir=/var/run \
 		--sysconfdir=/etc/proftpd \
 		--enable-shadow \
 		--disable-sendfile \
 		--enable-autoshadow \
 		--with-modules=${modules} \
-		--host=${CHOST} ${myconf} || die "bad ./configure"
+		${myconf} || die "bad ./configure"
 
 	emake || die "compile problem"
 }
@@ -64,14 +60,12 @@ src_install() {
 	
 	#Note rundir needs to be specified to avoid sanbox violation
 	#on initial install. See Make.rules
-	make \
-		prefix=${D}/usr \
+	einstall \
 		sbindir=${D}/usr/sbin \
-		mandir=${D}/usr/share/man \
 		localstatedir=${D}/var/run \
 		rundir=${D}/var/run/proftpd \
 		sysconfdir=${D}/etc/proftpd \
-		install || die
+		|| die
 
 	#dobin contrib/genuser.pl
 	dodir /home/ftp

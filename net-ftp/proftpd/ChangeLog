@@ -1,8 +1,14 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.9 2002/08/04 02:24:05 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.10 2002/09/07 14:15:46 seemant Exp $
 
 *proftpd-1.2.6_rc1-r1 (03 Aug 2002)
+
+  07 Sep 2002; Seemant Kulleen <seemant@gentoo.org> proftpd-1.2.5-r1.ebuild
+  proftpd-1.2.6_rc1-r1.ebuild :
+
+  Removed redundant glibc dependency and replaced it with the libpcap.
+  Thanks to: saragon@home.se (Daniel) in bug #7614.
 
   03 Aug 2002; Bruce A. Locke <blocke@shivan.org> proftpd-1.2.6_rc1-r1.ebuild,
   files/digest-proftpd-1.2.6_rc1-r1:
