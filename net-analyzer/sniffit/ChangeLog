@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sniffit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.5 2003/02/12 07:49:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.6 2003/07/28 15:43:51 azarah Exp $
+
+*sniffit-0.3.7-r1 (28 Jul 2003)
+
+  28 Jul 2003; Martin Schlemmer <azarah@gentoo.org> sniffit-0.3.7-r1.ebuild,
+  files/sniffit-0.3.7-gcc33.patch:
+  Fix gcc-3.3 related issues (bug #25328), thanks to Chandler Carruth
+  <carrbc1@wfu.edu>.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

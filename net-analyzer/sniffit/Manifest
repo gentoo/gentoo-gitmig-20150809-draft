@@ -1,3 +1,6 @@
-MD5 d43461045fd99d6858fee89a12dbd76d ChangeLog 846
+MD5 a6a60900aa9ec6031b10065c4c7adfc2 ChangeLog 1083
 MD5 2222455251a2139dc055eeec512b7604 sniffit-0.3.7.ebuild 958
+MD5 08f24f4e6206ca8df91380dc296b3510 sniffit-0.3.7-r1.ebuild 1069
 MD5 fd2c46d1c2224db83c42a34b03bdad44 files/digest-sniffit-0.3.7 140
+MD5 ebb45c9f97d37af79ffeea797b411aca files/sniffit-0.3.7-gcc33.patch 496
+MD5 fd2c46d1c2224db83c42a34b03bdad44 files/digest-sniffit-0.3.7-r1 140
