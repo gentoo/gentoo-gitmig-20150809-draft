@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/rox-session
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox-session/ChangeLog,v 1.1 2003/08/21 03:23:43 matsuu Exp $
+
+*rox-session-0.1.20 (21 Aug 2003)
+
+  21 Aug 2003; MATSUU Takuto <matsuu@gentoo.org> rox-session-0.1.20.ebuild:
+  Initial import. #801
+
