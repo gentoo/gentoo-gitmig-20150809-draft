@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3082 2004/08/21 07:14:07 seemant Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3083 2004/08/21 07:18:35 carpaski Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <carpaski@gentoo.org> (11 Apr 2004)
+# Internal testing phase
+>=sys-apps/portage-2.0.51_pre1
+=sys-apps/portage-2.0.50-r10
 
 # <suka@gentoo.org> (20 Aug 2004)
 # Mask as KDE stuff does not work at the moment, Gnome user should happily be able to unmask this
@@ -255,10 +260,6 @@ app-accessibility/speechd-up
 # <lanius@gentoo.org> (12 Apr 2004) (upd. 7 July 2004)
 # this is an alpha version
 =media-gfx/gimp-print-5.0.0_beta1
-
-# <carpaski@gentoo.org> (11 Apr 2004)
-# Internal testing phase
->=sys-apps/portage-2.0.51_pre1
 
 # <klasikahl@gentoo.org> (09 Apr 2004)
 # Still in the testing phase.
