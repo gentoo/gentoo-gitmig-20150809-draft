@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# /home/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.4.3.ebuild,v 1.1 2001/05/02 14:31:06 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources-vanilla/linux-sources-vanilla-2.4.7.ebuild,v 1.5 2001/08/18 19:05:49 danarmak Exp $
 
 S=${WORKDIR}/linux-${PV}
 
