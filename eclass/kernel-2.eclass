@@ -1,15 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.44 2004/09/11 23:26:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.45 2004/10/02 20:01:39 plasmaroo Exp $
 
-# kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
-# with back-compatibility for 2.4
+# Description: kernel.eclass rewrite for a clean base regarding the 2.6
+#              series of kernel with back-compatibility for 2.4
 #
-# Author: John Mylchreest <johnm@gentoo.org>
-# Copyright 2004 Gentoo Linux
+# Maintainer: John Mylchreest <johnm@gentoo.org>
 #
 # Please direct your bugs to the current eclass maintainer :)
-# thatll be: johnm
 
 # added functionality:
 # unipatch		- a flexible, singular method to extract, add and remove patches.
