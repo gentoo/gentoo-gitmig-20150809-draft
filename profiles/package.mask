@@ -30,6 +30,7 @@
 #
 app-admin/systemimager-client-bin
 app-admin/systemimager-common-bin
+app-admin/systemimager-server-bin
 
 # <tberman@gentoo.org> (4 Nov 2003)
 # Unsupported temp. upstream, masking for now.
