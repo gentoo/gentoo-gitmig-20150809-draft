@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.13 2002/04/23 23:25:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.14 2002/04/26 21:32:27 sandymac Exp $
+
+  26 Apr 2002; William McArthur <sandymac@gentoo.org> mplayer-0.90_pre1.ebuild :
+
+  Commented out a matrox specific patch that seems to be aready in the upstream
+  package.
 
 *mplayer-0.90_pre1 (23 Apr 2002)
 

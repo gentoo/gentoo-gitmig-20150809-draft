@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre1.ebuild,v 1.1 2002/04/23 23:25:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre1.ebuild,v 1.2 2002/04/26 21:32:27 sandymac Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -55,10 +55,11 @@ src_unpack() {
 	#
 	# The next two patches can fail, as I havent tested them yet!!
 	#
-	use matrox && ( \
-		cd ${S}/drivers
-		patch < ${FILESDIR}/mga_vid_devfs.patch || die "matrox patch failed"
-	)
+	# This seems to be already applied in the upstream package - sandymac
+	#use matrox && ( \
+	#	cd ${S}/drivers
+	#	patch < ${FILESDIR}/mga_vid_devfs.patch || die "matrox patch failed"
+	#)
 	
 	#patch mplayer with the DXR3 patch
 	local module=""
