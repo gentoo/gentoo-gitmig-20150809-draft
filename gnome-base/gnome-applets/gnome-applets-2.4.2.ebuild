@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.4.2.ebuild,v 1.11 2005/01/08 23:21:09 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.4.2.ebuild,v 1.12 2005/03/15 19:17:16 ciaranm Exp $
 
 inherit gnome2
 
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/libgnomeui-2
 	virtual/x11
 	apm? ( sys-apps/apmd )
-	!ppc? (	acpi? ( sys-apps/acpid ) )"
+	!ppc? (	acpi? ( sys-power/acpid ) )"
 	# Virtual/x11 for XKB.h 
 
 DEPEND="${RDEPEND}
