@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.13 2003/02/13 06:39:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.14 2003/06/12 14:34:57 agriffis Exp $
 
 IUSE="X"
 
@@ -12,12 +12,21 @@ HOMEPAGE="ftp://ftp.cs.pdx.edu/pub/elvis/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	X? ( virtual/x11 )"
 
 PROVIDE="virtual/editor"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix bug 20864 using patch from FreeBSD port.
+	# http://www.freshports.org/editors/elvis/
+	epatch ${FILESDIR}/elvis-2.1.4-keysym.patch || die "epatch failed"
+}
 
 src_compile() {
 	local myconf

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/elvis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.6 2003/02/12 03:46:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.7 2003/06/12 14:34:57 agriffis Exp $
+
+  12 Jun 2003; Aron Griffis <agriffis@gentoo.org> elvis-2.1.4-r1.ebuild,
+  files/elvis-2.1.4-keysym.patch:
+  Add patch from FreeBSD port to fix bug 20864.  Mark stable on alpha
 
 *elvis-2.1.4-r1 (1 Feb 2002)
 
