@@ -145,11 +145,6 @@ app-portage/kemerge
 # Mask the experimental Mozilla's
 >net-www/mozilla-1.5-r1
 
-# <genone@gentoo.org> (18 Nov 2003)
-# 2.4.22-xfs is breaking portage for several people, masking it until
-# bug #33033 is fixed.
-=sys-kernel/xfs-sources-2.4.22
-
 # <tad@gentoo.org> (11 Nov 2003)
 # 1.0 is final release, previous versions were snapshots.
 # Bug #32759
