@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.14 2004/04/11 05:46:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.15 2004/04/24 02:16:28 vapier Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -29,7 +29,7 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # named files.
 gnuconfig_update() {
 	if [ $# -gt 0 ] ; then
-		gnuconfig_do_update $*
+		gnuconfig_do_update "$@"
 	else
 		gnuconfig_do_update config.sub config.guess
 	fi
@@ -38,10 +38,12 @@ gnuconfig_update() {
 # Copy the newest available version of specified files over any old ones in the
 # source dir. This function shouldn't be called directly - use gnuconfig_update
 gnuconfig_do_update() {
+	[ $# -eq 0 ] && die "do not call gnuconfig_do_update(); use gnuconfig_update()"
+
 	local configsubs_dir="$(gnuconfig_findnewest)"
 	local target targetlist file
 	einfo "Using GNU config files from ${configsubs_dir}"
-	for file in $* ; do
+	for file in "$@" ; do
 		if [ ! -r ${configsubs_dir}/${file} ] ; then
 			eerror "Can't read ${configsubs_dir}/${file}, skipping.."
 			continue
@@ -72,4 +74,3 @@ gnuconfig_findnewest() {
 	
 	grep -s '^timestamp' ${locations} | sort -n -t\' -k2 | tail -n 1 | sed 's,/config.sub:.*$,,'
 }
-
