@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040920.ebuild,v 1.1 2004/09/23 21:23:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.40.ebuild,v 1.1 2004/12/26 22:22:37 vapier Exp $
 
-inherit games eutils flag-o-matic
+inherit eutils flag-o-matic games
 
 DESCRIPTION="SNES (Super Nintendo) emulator that uses x86 assembly"
 HOMEPAGE="http://www.zsnes.com/ http://ipherswipsite.com/zsnes/"
-SRC_URI="http://www.ipherswipsite.com/files/zsnes/ZSNESS_${PV/*2004}.tar.bz2"
+SRC_URI="mirror://sourceforge/zsnes/${PN}${PV//.}src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="opengl"
 
 # we need libsdl for headers on amd64, even though we'll technically be using
-# the 32bit sdl from emul-linux-x86-sdl. 
+# the 32bit sdl from emul-linux-x86-sdl.
 RDEPEND="opengl? ( virtual/opengl )
 	>=media-libs/libsdl-1.2.0
 	amd64? ( app-emulation/emul-linux-x86-sdl )
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	sys-devel/automake
 	>=sys-devel/autoconf-2.58"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${PN}_${PV//./_}"
 
 multilib_check() {
 	if has_m32 ; then
@@ -39,21 +39,23 @@ multilib_check() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}/src"
+	cd "${S}"/src
+	epatch "${FILESDIR}"/${PV}-LDFLAGS.patch
 	aclocal && autoconf || die "autotools failed"
 }
 
 src_compile() {
 	use amd64 && multilib_check
-
 	cd src
-	egamesconf $(use_with opengl) || die
+	egamesconf $(use_enable opengl) || die
 	emake || die "emake failed"
 }
 
 src_install() {
 	dogamesbin src/zsnes || die "dogamesbin failed"
 	newman src/linux/zsnes.1 zsnes.6
-	dodoc *.txt linux/*
+	cd docs
+	dodoc *.txt README.LINUX
+	dohtml -r Linux/*
 	prepgamesdirs
 }

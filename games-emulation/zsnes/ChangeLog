@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.11 2004/11/20 12:24:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.12 2004/12/26 22:22:37 vapier Exp $
+
+*zsnes-1.40 (26 Dec 2004)
+
+  26 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/1.40-LDFLAGS.patch,
+  -zsnes-1.37_pre20040920.ebuild, +zsnes-1.40.ebuild:
+  Version bump #75680 by cpu.
 
 *zsnes-1.37_pre20041024 (20 Nov 2004)
 

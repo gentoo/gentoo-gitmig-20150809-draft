@@ -1,0 +1,21 @@
+--- zsnes_1_40/src/configure.in.orig	2004-12-26 17:10:48.876796648 -0500
++++ zsnes_1_40/src/configure.in	2004-12-26 17:11:46.142091000 -0500
+@@ -15,8 +15,6 @@
+ dnl Mingw, because it doesnt have a standard file tree. Maybe if ming do this
+ dnl else do -I/usr/include. Or some shit. You figure it out.
+ 
+-LDFLAGS="$LDFLAGS -L/usr/local/lib -L/usr/lib"
+-
+ dnl -- Same thing here.
+ 
+ AC_CANONICAL_SYSTEM
+@@ -84,7 +82,9 @@
+ CFLAGS="$CFLAGS -I$opengl_prefix/include"
+ LDFLAGS-"$LDFLAGS -L$opengl_prefix/lib"
+ fi
++if test x$x_libraries != x; then
+ LDFLAGS="$LDFLAGS -L$x_libraries"
++fi
+ AC_CHECK_LIB(GL, glGetError,found_opengl="yes",,)
+ if test x$found_opengl = xyes; then
+         echo checking for OpenGL... yes
