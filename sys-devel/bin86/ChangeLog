@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bin86
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.13 2004/11/30 02:35:41 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.14 2005/01/31 03:01:55 vapier Exp $
+
+*bin86-0.16.17 (30 Jan 2005)
+
+  30 Jan 2005; Mike Frysinger <vapier@gentoo.org> +bin86-0.16.17.ebuild:
+  Version bump.
 
 *bin86-0.16.16 (29 Nov 2004)
 
