@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libpqpp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.9 2004/07/13 05:47:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.10 2004/09/01 16:57:50 eradicator Exp $
+
+  01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libpqpp-4.0-r4.ebuild:
+  Stable amd64 sparc.
 
   12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/libpqpp-4.0-PIC.patch:
