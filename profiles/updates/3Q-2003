@@ -35,3 +35,4 @@ move dev-libs/ode dev-games/ode
 move dev-lisp/apel app-emacs/apel
 move dev-lisp/flim app-emacs/flim
 move dev-lisp/semi app-emacs/semi
+move dev-lang/mono dev-dotnet/mono
