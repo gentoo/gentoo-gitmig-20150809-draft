@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.4.ebuild,v 1.5 2002/10/20 21:17:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.4.ebuild,v 1.6 2002/11/22 05:30:25 danarmak Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - graphics-related apps"
@@ -25,6 +25,8 @@ use scanner	|| KDE_REMOVE_DIR="kooka libkscan"
 
 myconf="$myconf --with-imlib --with-imlib-config=/usr/bin "
 
+need-autoconf 2.1
+
 src_unpack() {
 
     base_src_unpack
@@ -34,5 +36,6 @@ src_unpack() {
 	mv Makefile.am Makefile.am.orig
 	sed -e 's:$(KSCANDIR)::' Makefile.am.orig > Makefile.am
     fi
+
 
 }
