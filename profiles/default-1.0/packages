@@ -34,6 +34,7 @@
 #does not build with gcc-2.x
 sys-fs/ntfsprogs
 <app-arch/rar-3.2.0
+<dev-util/ddd-3.3.6
 
 *>=sys-apps/baselayout-1.7.3
 *>=sys-apps/portage-1.8.9_pre25
