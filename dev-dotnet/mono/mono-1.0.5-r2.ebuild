@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.5-r2.ebuild,v 1.1 2004/12/21 01:14:54 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.5-r2.ebuild,v 1.2 2004/12/21 04:43:34 latexer Exp $
 
 inherit eutils mono flag-o-matic debug
 
@@ -44,6 +44,11 @@ src_unpack() {
 	do
 		sed -i "s:\.\.\\\\\\\\:../:g" "${file}"
 	done
+
+	# Fix MONO_CFG_DIR for signing
+	sed -i \
+		"s:^\t\(MONO.*SNK)\):\tMONO_CFG_DIR='${D}/etc/' \1:" \
+		${MCS_S}/build/library.make
 
 	# add our own little in-place mcs script
 	echo "${S}/mono/mini/mono ${S}/runtime/mcs.exe \"\$@\" " > ${S}/runtime/mcs
