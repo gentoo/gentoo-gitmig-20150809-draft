@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r2.ebuild,v 1.3 2003/03/29 04:08:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r2.ebuild,v 1.4 2003/08/05 15:44:05 vapier Exp $
 
-IUSE="nls esd gnome"
+inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A small personal databases manager for Linux"
 HOMEPAGE="http://gaby.theridion.com/"
 SRC_URI="http://gaby.theridion.com/archives/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-LICENSE="GPL-2"
+IUSE="nls esd gnome"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	virtual/python
@@ -32,15 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-
-	local myopts
-
-	if [ "`use gnome`" ]
-	then
-		myopts="--enable-gnome"
-	else
-		myopts="--disable-gnome"
-	fi
+	local myopts="`use_enable gnome`"
 
 	if [ -z "`use nls`" ]
 	then
@@ -74,8 +66,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
-
+src_install() {
 	make DESTDIR=${D} install || die
 
 	dosym gaby ${prefix}/bin/gbc
