@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.59 2004/06/16 15:57:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.60 2004/06/16 16:13:55 lu_zero Exp $
+
+  16 Jun 2004; Luca Barbato <lu_zero@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
+  Marked ppc for security reason, see Bug #53226
 
   16 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Digest fix, looks like tgall forgot FEATURES=cvs
