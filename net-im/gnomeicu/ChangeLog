@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.7 2002/07/30 18:17:44 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.8 2002/07/31 14:45:53 stroke Exp $
+
+*gnomeicu-0.98.3 (31 Jul 2002)
+  31 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnomeicu-0.98.3.ebuild :
+  New version.
 
 *gnomeicu-0.98.2-r5 (30 Jul 2002)
   30 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnomeicu-0.98.2-r5.ebuild : 
