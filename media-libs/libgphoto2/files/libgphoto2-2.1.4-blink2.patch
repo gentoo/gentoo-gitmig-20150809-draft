@@ -1,0 +1,48 @@
+--- libgphoto2-2.1.4-orig/camlibs/sipix/blink2.c	2004-03-26 12:16:13.000000000 +0100
++++ libgphoto2-2.1.4/camlibs/sipix/blink2.c	2004-04-01 13:28:45.000000000 +0200
+@@ -55,8 +55,10 @@
+ ) {
+     char buf[6];
+     int ret;
+-
+-    ret = gp_port_usb_msg_read(port, BLINK2_GET_NUMPICS, 0x03, 0, buf, 6);
++    
++    ret = gp_port_usb_msg_read(port, 0x18, 0x03, 0, buf, 6);
++    ret = gp_port_usb_msg_read(port, BLINK2_GET_NUMPICS, 0x03, 0, buf, 2);
++    ret = gp_port_usb_msg_read(port, BLINK2_GET_NUMPICS, 0x03, 0, buf, 2);
+     if (ret<GP_OK)
+ 	return ret;
+     *numpics = (buf[0]<<8) | buf[1];
+@@ -95,7 +97,7 @@
+ 	if (ret < GP_OK) return ret;
+ 
+ 	xbuf = malloc(8*(1+numpics));
+-	ret = gp_port_usb_msg_read( camera->port,BLINK2_GET_DIR,0x03,0,buf,8 );
++	ret = gp_port_usb_msg_read( camera->port,BLINK2_GET_DIR,0x03,0,buf,1 );
+ 	if (ret < GP_OK)  {
+ 		free(xbuf);
+ 		return ret;
+@@ -142,7 +144,7 @@
+ 		free(xbuf);
+ 		return GP_ERROR_NO_MEMORY;
+ 	}
+-	ret = gp_port_usb_msg_read( camera->port,BLINK2_GET_DIR,0x03,0,buf,8 );
++	ret = gp_port_usb_msg_read( camera->port,BLINK2_GET_DIR,0x03,0,buf,1 );
+ 	if (ret < GP_OK) {
+ 		free(addrs);
+ 		free(xbuf);
+@@ -375,10 +377,12 @@
+ 	settings.usb.interface = 0;
+ 	ret = gp_port_set_settings( camera->port, settings);
+ 	if (ret < GP_OK) return ret;
+-	ret = gp_port_usb_msg_read( camera->port, 0x18, 0x0300, 0x0000, buf, 6);
++
++	ret = gp_port_usb_msg_read( camera->port, 0x18, 0x03, 0, buf, 6);
+ 	if (ret < GP_OK)
+ 		return ret;
+-	ret = gp_port_usb_msg_read( camera->port, 0x04, 0x0300, 0x0000, buf, 8);
++
++	ret = gp_port_usb_msg_read( camera->port, 0x04, 0x03, 0, buf, 1);
+ 	if (ret < GP_OK)
+ 		return ret;
+ 	return GP_OK;

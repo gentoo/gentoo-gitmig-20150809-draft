@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.12 2004/07/16 19:57:22 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.13 2004/07/24 19:06:51 liquidx Exp $
 
 inherit libtool eutils
 
@@ -41,7 +41,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.1.2-norpm.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-2.1.2-norpm.patch
+	# add stylcam snap support (#52932)
+	epatch ${FILESDIR}/${PN}-2.1.4-blink2.patch
 	# Fix compilation under gcc-2.
 	epatch ${FILESDIR}/${P}-gcc2_fixes.patch
 }
