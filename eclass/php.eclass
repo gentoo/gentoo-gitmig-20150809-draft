@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.49 2003/06/16 22:26:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.50 2003/06/16 22:27:18 vapier Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -51,7 +51,10 @@ RDEPEND="
 	firebird? ( >=dev-db/firebird-1.0 )
 	flash? ( media-libs/libswf >=media-libs/ming-0.2a )
 	freetds? ( >=dev-db/freetds-0.53 )
-	gd? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
+	|| (
+		gd-bundled? ()
+		gd? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
+	)
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	java? ( =virtual/jdk-1.4* dev-java/java-config )
 	jpeg? ( >=media-libs/jpeg-6b )
