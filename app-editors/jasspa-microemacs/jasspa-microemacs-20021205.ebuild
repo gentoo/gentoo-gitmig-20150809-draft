@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20021205.ebuild,v 1.2 2004/04/25 16:09:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20021205.ebuild,v 1.3 2004/06/02 01:44:42 agriffis Exp $
 
 IUSE="X"
 
@@ -30,7 +30,7 @@ DEPEND="virtual/glibc
 src_compile() {
 	sed -i "/^COPTIMISE/s/.*/COPTIMISE = ${CFLAGS}/" linux2.gmk
 	local loadpath="~/.jasspa:/usr/share/jasspa/site:/usr/share/jasspa"
-	if [ "`use X`" ]
+	if use X
 	then
 		./build -p "$loadpath"
 	else

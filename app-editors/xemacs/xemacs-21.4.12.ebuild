@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.14 2004/05/31 22:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.15 2004/06/02 01:46:27 agriffis Exp $
 
 inherit eutils
 
@@ -85,17 +85,17 @@ src_compile() {
 		myconf="${myconf} --with-dialogs=lucid"
 		myconf="${myconf} --with-scrollbars=lucid"
 		myconf="${myconf} --with-menubars=lucid"
-		if [ "`use motif`" ] ; then
+		if use motif ; then
 			myconf="--with-widgets=motif"
 			myconf="${myconf} --with-dialogs=motif"
 			myconf="${myconf} --with-scrollbars=motif"
 			myconf="${myconf} --with-menubars=lucid"
 		fi
-		if [ "`use athena`" ] ; then
+		if use athena ; then
 			myconf="--with-widgets=athena"
-			if [ "`use Xaw3d`" ] ; then
+			if use Xaw3d ; then
 				myconf="${myconf} --with-athena=xaw3d"
-			elif [ "`use neXt`" ] ; then
+			elif use neXt ; then
 				myconf="${myconf} --with-athena=next"
 			else
 				myconf="${myconf} --with-athena=3d"
@@ -134,7 +134,7 @@ src_compile() {
 	use ldap && myconf="${myconf} --with-ldap" ||
 		myconf="${myconf} --without-ldap"
 
-	if [ "`use mule`" ] ; then
+	if use mule ; then
 		myconf="${myconf} --with-mule"
 		use motif && myconf="${myconf} --with-xim=motif" ||
 			myconf="${myconf} --with-xim=xlib"

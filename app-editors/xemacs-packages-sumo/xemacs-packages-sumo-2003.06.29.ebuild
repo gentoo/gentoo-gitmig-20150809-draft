@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-packages-sumo/xemacs-packages-sumo-2003.06.29.ebuild,v 1.4 2004/05/04 15:30:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-packages-sumo/xemacs-packages-sumo-2003.06.29.ebuild,v 1.5 2004/06/02 01:43:52 agriffis Exp $
 
 DESCRIPTION="The SUMO bundle of ELISP packages for Xemacs"
 HOMEPAGE="http://www.xemacs.org"
@@ -26,7 +26,7 @@ src_install() {
 	dodir /usr/lib/xemacs
 	local DEST="${D}/usr/lib/xemacs/"
 	mv xemacs-packages "${DEST}" || die
-	if [ "`use mule`" ]
+	if use mule
 	then
 		mv mule-packages "${DEST}" || die
 	fi

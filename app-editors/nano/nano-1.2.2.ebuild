@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.2.ebuild,v 1.18 2004/04/17 05:03:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.2.ebuild,v 1.19 2004/06/02 01:43:09 agriffis Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if [ `use build` ] ; then
+	if use build ; then
 		rm -rf ${D}/usr/share
 	else
 		cat ${FILESDIR}/nanorc-* >> nanorc.sample
