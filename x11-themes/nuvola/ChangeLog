@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/nuvola
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.1 2004/04/30 20:50:35 centic Exp $
+
+*nuvola-1.0_beta (30 Apr 2004)
+
+  30 Apr 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +nuvola-1.0_beta.ebuild:
+  New ebuild, taken from Bug 24590, but modified somewhat to fit.
+
