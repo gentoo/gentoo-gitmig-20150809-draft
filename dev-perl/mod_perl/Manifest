@@ -4,8 +4,12 @@ Hash: SHA1
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 7efadfe82991cfc24a4307826a2dd6ec mod_perl-1.99.17-r1.ebuild 4199
 MD5 ca338a5b21b538037264797da47aee87 mod_perl-1.27-r4.ebuild 1812
-MD5 e1ca4ec4e64a4059ad154012c7b43ae9 ChangeLog 6950
+MD5 c0558b464d3400478955c6fbb98ddc0d mod_perl-1.27-r1.ebuild 1418
+MD5 a9949c15b0558867e3c8220102d73143 mod_perl-1.27-r2.ebuild 1437
+MD5 185d64ef439a87b325f3c7ef1f071009 ChangeLog 7166
 MD5 c8cba37890916ea37fd7a8542a621124 mod_perl-1.99.16.ebuild 3795
+MD5 9796f175307d7f662ec2fb0fedbeb129 mod_perl-1.99.11.ebuild 3782
+MD5 0c6cd64050430b1fa431bce203230e00 mod_perl-1.99.10.ebuild 3819
 MD5 3f2cb99ef028dafbe783268d9bb5f8a8 mod_perl-1.99.17.ebuild 3804
 MD5 ef6d6b3e5f25f1a4171d1d1dbdde7433 mod_perl-1.29.ebuild 2103
 MD5 2415e6be73ba155382b34b5e2fad4951 files/75_mod_perl.conf 247
@@ -13,14 +17,18 @@ MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r4 65
 MD5 8c8ec63f03d3ffb51fa26b6df03a5710 files/mod_perl-1.99.16-sneak-tmpdir.patch 395
 MD5 39a4d91d1d90d32f90dea3c00a1680d7 files/apache2-mod_perl-startup.pl 483
 MD5 2937c8efc4e2d9dd8fff843ab63f5c14 files/digest-mod_perl-1.99.17-r1 69
+MD5 5ff16293368688eefecc4a6066eb8914 files/digest-mod_perl-1.99.10 69
 MD5 2937c8efc4e2d9dd8fff843ab63f5c14 files/digest-mod_perl-1.99.17 69
+MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r1 65
 MD5 300bce7b1dad6fda0b18cfdbf592a828 files/mod_perl-1.99.17-Apache2.pm 1149
+MD5 278c6266498d8bef49b54f30774aa305 files/digest-mod_perl-1.99.11 69
 MD5 13d314750ba5772dc7de4d9023d137ad files/digest-mod_perl-1.99.16 69
 MD5 33270eaaa2c9bc9cef3a4a45afaeca34 files/digest-mod_perl-1.29 65
+MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCOLzNjUHll2nfF60RAsR2AJ9b+2NVHVXPvkwZqIatUqbEKItuRACgkyqw
-eY9d0A02RVlMMjCl7Iht6WM=
-=0P5j
+iD8DBQFCO5HVjUHll2nfF60RAtmeAKCmeg9GMGjspR22OQSpR7bPbYToRQCfey5g
+98LpJOVtyoiogYXeW9AG5jc=
+=OheY
 -----END PGP SIGNATURE-----
