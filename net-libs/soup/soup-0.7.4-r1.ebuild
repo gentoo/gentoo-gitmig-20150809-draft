@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.4-r1.ebuild,v 1.9 2004/07/15 01:28:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.4-r1.ebuild,v 1.10 2004/11/09 21:26:53 mr_bones_ Exp $
 
 IUSE="ssl doc"
 
@@ -16,7 +16,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	ssl? ( dev-libs/openssl )
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 
-LICENSE="GPL-2 | LGPL-2"
+LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
 KEYWORDS="x86 sparc ppc"
 
