@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.211 2005/03/13 23:23:23 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.212 2005/03/14 18:01:43 corsair Exp $
+
+*kdelibs-3.3.2-r6 (14 Mar 2005)
+
+  14 Mar 2005; Markus Rothe <corsair@gentoo.org>
+  +files/kdelibs-3.3.2-ppc64.patch, +kdelibs-3.3.2-r6.ebuild:
+  Added patch which fixes a weird key problem on ppc64. Revision bump which is
+  stable on ppc64 only. Bug #63529
 
   13 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> kdelibs-3.4.0.ebuild:
   Marked ~amd64, keywording KDE split ebuilds, bug 80944.

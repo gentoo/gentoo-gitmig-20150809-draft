@@ -1,0 +1,35 @@
+--- kdecore/kkeyserver_x11.cpp.orig	2005-03-14 16:50:52.696326808 +0000
++++ kdecore/kkeyserver_x11.cpp	2005-03-14 16:52:40.241351192 +0000
+@@ -640,6 +640,7 @@
+ 
+ bool codeXToSym( uchar codeX, uint modX, uint& sym )
+ {
++	KeySym keySym;
+ 	XKeyPressedEvent event;
+ 
+ 	event.type = KeyPress;
+@@ -647,7 +648,8 @@
+ 	event.state = modX;
+ 	event.keycode = codeX;
+ 
+-	XLookupString( &event, 0, 0, (KeySym*) &sym, 0 );
++	XLookupString( &event, 0, 0, &keySym, 0 );
++	sym = (uint) keySym;
+ 	return true;
+ }
+ 
+--- kdecore/kkeynative_x11.cpp.orig	2005-03-14 16:53:11.868337144 +0000
++++ kdecore/kkeynative_x11.cpp	2005-03-14 16:53:57.579311152 +0000
+@@ -71,9 +71,11 @@
+ 
+ bool KKeyNative::init( const XEvent* pEvent )
+ {
++	KeySym keySym;
+ 	m_code = pEvent->xkey.keycode;
+ 	m_mod = pEvent->xkey.state;
+-	XLookupString( (XKeyEvent*) pEvent, 0, 0, (KeySym*) &m_sym, 0 );
++	XLookupString( (XKeyEvent*) pEvent, 0, 0, &keySym, 0 );
++	m_sym = (uint) keySym;
+ 	return true;
+ }
+ 
