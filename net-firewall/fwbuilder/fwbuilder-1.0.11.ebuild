@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.0.11.ebuild,v 1.1 2003/09/19 19:10:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.0.11.ebuild,v 1.2 2003/10/05 13:53:41 weeve Exp $
 
 DESCRIPTION="A firewall GUI"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
@@ -20,6 +20,13 @@ DEPEND="sys-devel/autoconf
 	nls? ( >=sys-devel/gettext-0.11 )
 	~net-libs/libfwbuilder-1.0.1"
 RDEPEND="$DEPEND"
+
+# Added by Jason Wever <weeve@gentoo.org>
+# Fix for bug #30256.
+if [ "${ARCH}" = "sparc" ]; then
+	inherit flag-o-matic
+	replace-flags "-O3" "-O2"
+fi
 
 src_compile() {
 	local myconf

@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.9 2003/09/19 19:10:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.10 2003/10/05 13:53:41 weeve Exp $
+
+  05 Oct 2003; Jason Wever <weeve@gentoo.org> fwbuilder-1.0.11.ebuild:
+  Added replace-flags fix for overoptimization, fixes bug #30256.
 
 *fwbuilder-1.0.11 (19 Sep 2003)
 
