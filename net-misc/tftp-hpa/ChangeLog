@@ -1,0 +1,43 @@
+# ChangeLog for net-misc/tftp-hpa
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/ChangeLog,v 1.1 2003/08/28 22:41:24 mholzer Exp $
+
+*tftp-hpa-0.34 (29 Aug 2003)
+
+  29 Aug 2003; Martin Holzer <mholzer@gentoo.org> tftp-hpa-0.33.ebuild,
+  tftp-hpa-0.34.ebuild, files/in.tftpd.confd, files/in.tftpd.rc6:
+  Move  app-admin/tftp-hpa net-misc/tftp-hpa
+
+*tftp-hpa-0.34 (25 May 2003)
+
+  25 May 2003; Martin Holzer <mholzer@gentoo.org> tftp-hpa-0.16.ebuild,
+  tftp-hpa-0.29.ebuild, tftp-hpa-0.33.ebuild, tftp-hpa-0.34.ebuild:
+  Version bumped & SRC_URI now uses mirror://kernel
+
+*tftp-hpa-0.33 (28 Mar 2003)
+
+  28 Mar 2003; Michael Imhof <tantive@gentoo.org>
+  Version bumped, thanks to Terje Kvernes <terjekv@math.uio.no>
+  for the hint. Should close #18327.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*tftp-hpa-0.29 (19 Apr 2002)
+
+  19 Apr 2002; J.Ritchie <jasonr@myrealbox.com> ChangeLog :
+  
+  Updated to work with newest tftp-hpa version.
+  Added /etc/conf.d and /etc/init.d scripts for use with rc-update.
+
+*tftp-hpa-0.16 (1 Feb 2002)
+
+  18 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
+  Fixed HOMEPAGE variable
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
