@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.0.ebuild,v 1.7 2004/07/01 07:59:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.0.ebuild,v 1.8 2004/07/14 20:10:09 agriffis Exp $
 
 inherit flag-o-matic gcc
 
 IUSE=""
-
-S=${WORKDIR}/${P}
 
 DESCRIPTION="Extensible multimedia container format based on EBML."
 SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
@@ -46,4 +44,3 @@ src_install () {
 	einstall || die "make install failed"
 	dodoc ${S}/LICENSE.*
 }
-
