@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/modlogan
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.9 2003/09/24 22:37:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.10 2003/12/18 00:54:03 stkn Exp $
+
+*modlogan-0.8.10-r1 (18 Dec 2003)
+
+  18 Dec 2003; Stefan Knoblich <stkn@gentoo.org> modlogan-0.8.10-r1.ebuild,
+  files/0.8/modlogan.conf, files/0.8/sample.conf, files/0.8/sample.def.conf:
+  updated sample config, stats are put into /var/www..., themes get installed
+  (added examples to config file)
 
 *modlogan-0.8.10 (24 Sep 2003)
 
