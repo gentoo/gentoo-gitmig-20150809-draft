@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/linuxsms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linuxsms/ChangeLog,v 1.6 2004/05/06 14:23:51 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linuxsms/ChangeLog,v 1.7 2004/06/06 09:30:52 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> -linuxsms-0.58.ebuild,
+  linuxsms-0.61.ebuild, linuxsms-0.77.ebuild:
+  QA fix = IUSE, S=. Removed old versions. RESTRICT=nomirror for 0.61
 
   06 May 2004; Michael McCabe <randy@gentoo.org> linuxsms-0.77.ebuild:
   Added s390 keyword

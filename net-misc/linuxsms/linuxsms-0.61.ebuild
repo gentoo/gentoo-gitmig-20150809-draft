@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linuxsms/linuxsms-0.61.ebuild,v 1.3 2004/05/06 06:25:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linuxsms/linuxsms-0.61.ebuild,v 1.4 2004/06/06 09:30:52 dragonheart Exp $
 
 S=${WORKDIR}/${P}
 
@@ -10,8 +10,9 @@ HOMEPAGE="http://linuxsms.sourceforge.net/"
 KEYWORDS="x86 ppc sparc "
 LICENSE="GPL-2"
 SLOT="0"
-
+IUSE=""
 DEPEND=">=dev-lang/perl-5.6.1"
+RESTRICT="nomirror"
 
 src_install () {
 	into '/usr/local'
