@@ -1,8 +1,11 @@
 # ChangeLog for app-cdr/gcombust
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.13 2003/02/12 03:06:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.14 2003/03/28 11:42:52 pvdabeel Exp $
 
 *gcombust-0.1.54 (02 Feb 2003)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gengoo.org> :
+  Added ~ppc keyword
 
   02 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
