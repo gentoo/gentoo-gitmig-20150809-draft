@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/mpqc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/ChangeLog,v 1.5 2003/12/24 19:48:48 spyderous Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/ChangeLog,v 1.6 2004/03/30 05:14:17 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; mpqc-2.1.2.ebuild,
+  mpqc-2.2.0.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   24 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; :
   Bad digest. Closing bug #36425.
