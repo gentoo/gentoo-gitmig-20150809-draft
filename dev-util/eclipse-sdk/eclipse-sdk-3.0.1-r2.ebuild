@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1-r2.ebuild,v 1.1 2004/11/16 19:03:18 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1-r2.ebuild,v 1.2 2004/11/24 18:30:07 karltk Exp $
 
 inherit eutils java-utils
 
@@ -168,6 +168,9 @@ src_install() {
 	doexe ${FILESDIR}/eclipse-${SLOT}
 
 	install-desktop-entry
+
+	install-link-files
+
 
 	doman ${FILESDIR}/eclipse.1
 }
@@ -451,5 +454,13 @@ function check-ram() {
 		ewarn "Your machine has less RAM. Continuing anyway."
 		echo
 	)
+}
+
+function install-link-files() {
+        dodir /usr/lib/eclipse-${SLOT}/links
+
+        echo "path=/opt/eclipse-extensions-3" > ${D}/${eclipse_dir}/links/eclipse-binary-extensions-3.link
+
+        echo "path=/usr/lib/eclipse-extensions-3" > ${D}/${eclipse_dir}/links/eclipse-extensions-3.link
 }
 
