@@ -1,0 +1,8 @@
+if [ ! -e ~/.largorecipes ];then
+	echo "Running for the first time"
+	echo -n "Setting up things..."
+	mkdir -p ~/.largorecipes/patches
+	(cd ~/.largorecipes;ln -s `java-config --classpath=largorecipes | cut -f2 -d:` patches/0.9.0.3-patch.jar );
+	echo "done"
+fi
+(cd ~/.largorecipes;java -classpath `java-config --classpath=largorecipes` -jar `java-config --classpath=largorecipes | cut -f1 -d:`);
