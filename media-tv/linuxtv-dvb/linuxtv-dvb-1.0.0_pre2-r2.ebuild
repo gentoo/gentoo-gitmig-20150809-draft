@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2-r2.ebuild,v 1.4 2003/09/08 08:47:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2-r2.ebuild,v 1.5 2003/10/11 21:15:31 lanius Exp $
 
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org"
@@ -101,7 +101,7 @@ pkg_postinst() {
 	depmod -a
 	einfo ""
 	einfo "If you don't use devfs, execute makedev.napi o create"
-	einfo "the device nodes. The file is in /usr/share/doc/${PV}/"
+	einfo "the device nodes. The file is in /usr/share/doc/${PF}/"
 	einfo ""
 	einfo "now copy an appropriate from"
 	einfo "/usr/share/doc/${PF}/channels.conf-XXX"
