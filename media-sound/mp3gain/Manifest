@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2903edd9fd92fbffc1370c0bdf7b96c9 ChangeLog 927
+MD5 7d1cbbf4ca39a28502cfa17d725974bc ChangeLog 1032
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 3d77e44123c1ccd311f10822c3b5abda mp3gain-1.4.3.ebuild 743
+MD5 2b36f6159aea4a00f97d41a89cc1c74b mp3gain-1.4.3.ebuild 743
 MD5 2cb475750ac933f3189041233d1d250e files/digest-mp3gain-1.4.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHiUlI1lqEGTUzyQRAuD2AKC0HEccY7OHPJjvW6hAJZv3r+BW+gCg2dZO
-7TjV4zljyFI+UJVKvsYeQiA=
-=8YrG
------END PGP SIGNATURE-----
