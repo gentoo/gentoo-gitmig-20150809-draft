@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.2.ebuild,v 1.3 2003/05/08 19:44:27 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.2.ebuild,v 1.4 2003/05/19 12:32:21 danarmak Exp $
 inherit kde-base flag-o-matic
 
-IUSE="alsa oggvorbis" # mad has no use flag (yet?)
-SRC_URI="mirror://kde/stable/3.1.1/src/${P}.tar.bz2"
+IUSE="alsa oggvorbis artswrappersuid" # mad has no use flag (yet?)
+SRC_URI="mirror://kde/stable/3.1.2/src/${P}.tar.bz2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 HOMEPAGE="http://multimedia.kde.org"
 DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manager"
@@ -58,14 +58,20 @@ LDPATH=${PREFIX}/lib
 CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/49kdepaths-3.1.1 # number goes down with version upgrade
 
 	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/56kdedir-3.1.1 # number goes up with version upgrade
+	
+	# used for realtime priority, but off by default as it is a security hazard
+	use artswrappersuid && chmod +s ${D}/${PREFIX}/bin/artswrapper
 
 }
 
 pkg_postinst() {
 
-einfo "Run chmod +s ${PREFIX}/bin/artswrapper to let artsd use realtime priority"
-einfo "and so avoid possible skips in sound. However, on untrusted systems this"
-einfo "creates the possibility of a DoS attack that'll use 100% cpu at realtime"
-einfo "priority, and so is off by default. See bug #7883."
+if [ -z "`use artswrappersuid`" ]; then
+    einfo "Run chmod +s ${PREFIX}/bin/artswrapper to let artsd use realtime priority"
+    einfo "and so avoid possible skips in sound. However, on untrusted systems this"
+    einfo "creates the possibility of a DoS attack that'll use 100% cpu at realtime"
+    einfo "priority, and so is off by default. See bug #7883."
+    einfo "Or, you can set the local artswrappersuid USE flag to make the ebuild do this."
+fi
 
 }

@@ -4,7 +4,7 @@ MD5 c7668a49b3a72ec613e2cd4c4474e014 arts-1.1.1.ebuild 1874
 MD5 c842795f8f876b607244297f69eb8f0f arts-1.1.0-r1.ebuild 2003
 MD5 44c03c421acfe509548cc3950cd41a02 arts-1.1.0.ebuild 1203
 MD5 e3ca52900ec6a6d7c3646dfac9e028a8 arts-1.0.5b.ebuild 1438
-MD5 c84c0e338e55cfcb52b4c3f8f90698a7 arts-1.1.2.ebuild 2441
+MD5 06a0d91b430f5489c2aaf18b14e8b9e6 arts-1.1.2.ebuild 2750
 MD5 f56ce2f3f4e30d3c90e4fa9c3f68cd29 ChangeLog 5997
 MD5 9ffc978b18c6e1ad49a0c7eec49074f6 files/optional-deps.diff 3154
 MD5 c88ab1b439285e5474a280faa6a12c83 files/digest-arts-1.1.0 69
