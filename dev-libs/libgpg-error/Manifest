@@ -1,5 +1,5 @@
-MD5 2296e983dcbf1a8067b53a3fda992172 ChangeLog 1413
+MD5 78e9041d66c2780dbe2a734d43a7463d ChangeLog 1524
 MD5 886495d64e33b75e7adc71235b66fb51 libgpg-error-0.6.ebuild 682
-MD5 f09cab163de622bab3c6cb4e4b854b0b libgpg-error-0.7.ebuild 697
+MD5 b8b4a9790136c981f02bea56ef2e28c9 libgpg-error-0.7.ebuild 694
 MD5 2a0413caa56a5072d7da6e76fa995239 files/digest-libgpg-error-0.6 68
 MD5 79ccf482189a756d86e48ae6519bae82 files/digest-libgpg-error-0.7 68
