@@ -1,0 +1,9 @@
+# ChangeLog for app-arch/mscompress
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/ChangeLog,v 1.1 2004/04/14 11:12:40 aliz Exp $
+
+*mscompress-0.3 (14 Apr 2004)
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> mscompress-0.3.ebuild:
+  Initial import. Ebuild contributed by Cory Visi <cory@visi.name> in #35287.
+

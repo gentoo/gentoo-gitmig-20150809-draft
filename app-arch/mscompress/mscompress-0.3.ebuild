@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/mscompress-0.3.ebuild,v 1.1 2004/04/14 07:46:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/mscompress-0.3.ebuild,v 1.2 2004/04/14 11:12:40 aliz Exp $
+
+inherit gnuconfig eutils
 
 DESCRIPTION="Microsoft compress.exe/expand.exe compatible (de)compressor"
 SRC_URI="http://www.penguin.cz/~mhi/ftp/mscompress/${P}.tar.bz2"
@@ -18,17 +20,19 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	sed -i.orig -e "s/\$(CC)/\$(CC) \$(CFLAGS)/g" Makefile.in
+	epatch ${FILESDIR}/${P}-makefile.patch
 }
 
 src_compile() {
+	gnuconfig_update
+
 	econf || die
 	emake || die
 }
 
 src_install() {
-	make BUILDROOT=${D} install
-
+	dobin mscompress msexpand
+	doman mscompress.1 msexpand.1
 	dodoc README ChangeLog
 
 	# taken from magic.add, modified for gentoo
