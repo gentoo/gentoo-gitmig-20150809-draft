@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/liteamp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/ChangeLog,v 1.15 2004/07/09 03:05:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/ChangeLog,v 1.16 2004/09/14 16:38:26 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  liteamp-0.2.3.2.ebuild:
+  Stable amd64, sparc.
 
   08 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   liteamp-0.2.3.2.ebuild, liteamp-0.2.4.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmusicdb/kmusicdb-0.11.0.ebuild,v 1.6 2004/07/13 05:51:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmusicdb/kmusicdb-0.11.0.ebuild,v 1.7 2004/09/14 16:37:36 eradicator Exp $
 
 inherit kde
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://kmusicdb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kmusicdb/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~sparc"
+KEYWORDS="x86 amd64 sparc"
 IUSE=""
 
 DEPEND=">=media-libs/libdbmusic-0.7.0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.3j.ebuild,v 1.8 2004/07/20 06:49:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.3j.ebuild,v 1.9 2004/09/14 16:40:08 eradicator Exp $
 
 IUSE="diet"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mcmilk.de/projects/mcdp/"
 SRC_URI="http://www.mcmilk.de/projects/mcdp/dl/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~sparc"
+KEYWORDS="x86 amd64 sparc"
 LICENSE="GPL-2"
 
 DEPEND="diet? ( dev-libs/dietlibc )

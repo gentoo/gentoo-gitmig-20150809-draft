@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/longplayer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/longplayer/ChangeLog,v 1.7 2004/07/09 02:42:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/longplayer/ChangeLog,v 1.8 2004/09/14 16:38:37 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  longplayer-0.99.3.ebuild:
+  Stable amd64, sparc.
 
   08 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   longplayer-0.99.3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.22 2004/06/30 01:11:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.23 2004/09/14 16:31:21 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> gnump3d-2.8.ebuild:
+  Stable amd64, sparc.
 
   29 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> gnump3d-2.8.ebuild:
   Stable x86.  Added to ~amd64 ~sparc.
