@@ -26,6 +26,13 @@ src_install() {
 	  PREFIX=${D} \
 	  install || die
 
+	# Let's see if this file already exists: if so we will not install it
+	if [ -a "/opt/setiathome/cache/1/user_info.sah" ]; then rm ${D}opt/setiathome/cache/1/user_info.sah; fi
+        # Otherwise the ebuild will overwrite this file!
+	# And THAT is bad: if the client runs in daemon mode, 
+	# when switching to that dir it will wait forever for someone to give it
+	# some info (which would be impossible, being detached from all terminals)!
+
 	einfo "NOTICE: If you use SETI Driver for Windows"
 	einfo "to share the cache make sure it is"
 	einfo "version 1.6.4.0 or higher!"
