@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.18 2005/02/17 14:28:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.19 2005/02/22 01:49:23 hardave Exp $
+
+  21 Feb 2005; Hardave Riar <hardave@gentoo.org> libidn-0.5.4.ebuild:
+  Stable on mips.
 
   17 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> libidn-0.5.13.ebuild:
   Remove unneeded pic flag (#81238). Cleanup.
