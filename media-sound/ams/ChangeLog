@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/ams
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.1 2003/07/09 10:46:58 torbenh Exp $
+
+*ams-1.5.9 (09 Jul 2003)
+
+  09 Jul 2003; torbenh <torbenh@gentoo.org> Manifest ams-1.5.9.ebuild files/ams-fixMakefile.patch files/digest-ams-1.5.9 :
+  Initial import into the repository.
+
