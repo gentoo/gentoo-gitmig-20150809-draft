@@ -164,4 +164,4 @@ move sys-apps/runit sys-process/runit
 move sys-apps/schedtool sys-process/schedtool
 move sys-apps/schedutils sys-process/schedutils
 move sys-apps/watchpid sys-process/watchpid
-move sys-process/psmisc sys-process/psmisc
+move sys-apps/psmisc sys-process/psmisc
