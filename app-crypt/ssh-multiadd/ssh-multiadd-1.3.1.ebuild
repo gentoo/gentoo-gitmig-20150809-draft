@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@sistina.com>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ssh-multiadd-1.3.1.ebuild,v 1.3 2001/06/07 05:22:23 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ssh-multiadd-1.3.1.ebuild,v 1.4 2001/06/23 00:12:31 drobbins Exp $
 
 #P=
 A=${P}.tar.gz
@@ -11,7 +11,10 @@ SRC_URI="http://www.azstarnet.com/~donut/programs/ssh-multiadd/${A}"
 HOMEPAGE="http://www.azstarnet.com/~donut/programs/"
 
 DEPEND=">=dev-lang/python-2.0-r3
-	>=net-misc/x11-ssh-askpass-1.2.2"
+	X? ( >=net-misc/x11-ssh-askpass-1.2.2 )"
+
+#lamer: pulling x11-ssh-askpass in pulls in X, which is bad for servers
+#so I added the X? ( ) -- drobbins
 
 src_unpack() {
 
