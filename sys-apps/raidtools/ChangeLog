@@ -1,30 +1,26 @@
 # ChangeLog for sys-apps/raidtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/ChangeLog,v 1.7 2003/02/12 09:06:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/ChangeLog,v 1.8 2003/02/16 08:05:03 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*raidtools-0.90-r2 (22 June 2002)
+*raidtools-1.00.3 (16 Feb 2003)
+
+  16 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump/updates.
+
+*raidtools-0.90-r2 (22 Jun 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> raidtools-0.90-r2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   22 June 2002; Mark Guertin <gerk@gentoo.org> raidtools-0.90-r2.ebuild :
-  
   Adjusted bad sed command which was breaking G4 CFLAGS
   (was stripping all "-g" now strips " -g" to " ")
 
-*raidtools-0.90-r2 (12 Mar 2002)
-
   12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> raidtools-0.90-r2.ebuild :
-
   HTML documentation no longer gets gzipped.  Does not require a revision bump
   though.  Thanks to stefan@mdy.univie.ac.at for pointing it out.
 
-*raidtools-0.90-r2 (1 Feb 2002)
-
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
