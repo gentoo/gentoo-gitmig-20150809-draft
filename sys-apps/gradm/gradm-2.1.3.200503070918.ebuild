@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.3.200503070918.ebuild,v 1.1 2005/03/07 20:26:31 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.3.200503070918.ebuild,v 1.2 2005/03/11 16:46:02 solar Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.grsecurity.net/gradm-${myPV}.tar.gz"
 #RESTRICT=primaryuri
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~arm ~amd64 ~ppc64 ~ia64 ~mips"
+KEYWORDS="x86 ppc sparc arm amd64 ppc64 ia64 mips"
 IUSE=""
 RDEPEND=""
 DEPEND="virtual/libc
