@@ -1,3 +1,5 @@
 MD5 828ffe2e7e53c4eda8ae9437fe7a5801 packit-0.6.0c-r1.ebuild 749
-MD5 5556efb595e0306b7d1397a160aef4ff files/digest-packit-0.6.0c-r1 62
+MD5 f5a561adaedf7fd1368f195f3716bd56 packit-0.7.ebuild 665
 MD5 d4be1dfa6639328ba5ef79adebb11537 ChangeLog 647
+MD5 5556efb595e0306b7d1397a160aef4ff files/digest-packit-0.6.0c-r1 62
+MD5 9691a62ad1380ccfcbc34b3c0e88f46a files/digest-packit-0.7 59
