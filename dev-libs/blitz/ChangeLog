@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.6 2004/03/14 12:14:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.7 2004/03/24 17:33:13 mholzer Exp $
+
+  24 Mar 2004; Martin Holzer <mholzer@gentoo.org> blitz-0.7.ebuild:
+  fixing digest. closes 45486
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> blitz-0.6.ebuild:
   Don't assign default to S; header fix

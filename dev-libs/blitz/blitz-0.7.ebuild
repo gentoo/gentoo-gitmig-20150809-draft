@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.7.ebuild,v 1.2 2004/03/02 22:11:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.7.ebuild,v 1.3 2004/03/24 17:33:13 mholzer Exp $
 
 inherit base
 
 S=${WORKDIR}/Blitz++-${PV}
 DESCRIPTION="High-performance C++ numeric library"
 SRC_URI="mirror://sourceforge/${PN/-/}/Blitz++-${PV}.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.oonumerics.org/blitz"
 DEPEND="app-text/tetex
 	icc? ( dev-lang/icc )"
