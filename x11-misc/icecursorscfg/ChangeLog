@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icecursorscfg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecursorscfg/ChangeLog,v 1.7 2004/06/24 22:22:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecursorscfg/ChangeLog,v 1.8 2004/08/03 11:25:02 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> icecursorscfg-0.6.ebuild:
+  Added to ~ppc.
 
   24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> icecursorscfg-0.6.ebuild:
   Adding IUSE

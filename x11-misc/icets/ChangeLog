@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icets
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.12 2004/07/27 12:25:27 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.13 2004/08/03 11:25:05 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> icets-1.2.ebuild:
+  Added to ~ppc.
 
 *icets-1.2 (27 Jul 2004)
 
