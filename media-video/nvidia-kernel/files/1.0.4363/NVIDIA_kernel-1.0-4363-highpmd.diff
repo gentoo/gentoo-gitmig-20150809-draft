@@ -1,43 +1,45 @@
-diff -urpN NVIDIA_kernel-1.0-4363.orig/nv-linux.h NVIDIA_kernel-1.0-4363/nv-linux.h
---- NVIDIA_kernel-1.0-4363.orig/nv-linux.h	2003-04-20 03:57:19.000000000 +0200
-+++ NVIDIA_kernel-1.0-4363/nv-linux.h	2003-07-08 07:53:49.000000000 +0200
-@@ -186,6 +186,15 @@
+--- NVIDIA_kernel-1.0-4363.orig/nv-linux.h	2003-07-12 15:06:22.000000000 +0200
++++ NVIDIA_kernel-1.0-4363/nv-linux.h	2003-07-12 15:18:04.000000000 +0200
+@@ -225,6 +225,16 @@
      }
  #endif
  
 +#if defined(pmd_offset_map)
-+#define NV_PMD_OFFSET(address, pg_dir) \
-+    pmd_offset_map(pg_dir, address);
++#define NV_PMD_OFFSET(pg_dir, address, pmd) \
++    pmd = pmd_offset_map(pg_dir, address)
 +#define NV_PMD_OFFSET_UNMAP 1
 +#else
-+#define NV_PMD_OFFSET(address, pg_dir) \
-+    pmd_offset(pg_dir, address)
++#define NV_PMD_OFFSET(pg_dir, address, pmd) \
++    pmd = pmd_offset(pg_dir, address)
++#undef NV_PMD_OFFSET_UNMAP
 +#endif
 +
  #define NV_PAGE_ALIGN(addr)             ( ((addr) + PAGE_SIZE - 1) / PAGE_SIZE)
  #define NV_MASK_OFFSET(addr)            ( (addr) & (PAGE_SIZE - 1) )
  
-diff -urpN NVIDIA_kernel-1.0-4363.orig/nv.c NVIDIA_kernel-1.0-4363/nv.c
---- NVIDIA_kernel-1.0-4363.orig/nv.c	2003-04-20 03:57:19.000000000 +0200
-+++ NVIDIA_kernel-1.0-4363/nv.c	2003-07-08 07:55:09.000000000 +0200
-@@ -2191,11 +2191,18 @@ nv_get_phys_address(unsigned long addres
+--- NVIDIA_kernel-1.0-4363.orig/nv.c	2003-07-12 15:06:22.000000000 +0200
++++ NVIDIA_kernel-1.0-4363/nv.c	2003-07-12 15:22:13.000000000 +0200
+@@ -2105,12 +2105,20 @@ nv_get_phys_address(unsigned long addres
      if (pgd_none(*pg_dir))
          goto failed;
  
 -    pg_mid_dir = pmd_offset(pg_dir, address);
 -    if (pmd_none(*pg_mid_dir))
-+    pg_mid_dir = NV_PMD_OFFSET(pg_dir, address);
+-        goto failed;
++    NV_PMD_OFFSET(pg_dir, address, pg_mid_dir);
 +    if (pmd_none(*pg_mid_dir)) {
 +#if defined(NV_PMD_OFFSET_UNMAP)
-+       pmd_unmap(pg_mid_dir);
++		pmd_unmap(pg_mid_dir);
 +#endif
-         goto failed;
-+    }
++		goto failed;
++	}
  
      NV_PTE_OFFSET(address, pg_mid_dir, pte);
-+#if defined(NV_PMD_OFFSET_UNMAP)
-+    pmd_unmap(pg_mid_dir);
-+#endif
  
++#if defined(NV_PMD_OFFSET_UNMAP)
++	pmd_unmap(pg_mid_dir);
++#endif
++		
      if (!pte_present(pte))
          goto failed;
+ 
