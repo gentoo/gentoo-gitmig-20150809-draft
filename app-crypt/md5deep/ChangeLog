@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/md5deep
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.1 2003/03/20 23:26:33 liquidx Exp $
+
+*md5deep-0.16 (20 Mar 2003)
+  20 Mar 2003; Alastair Tse <liquidx@gentoo.org> md5deep-0.16.ebulid:
+  Ebuild and patch thanks to Matt Klosterman <general@kolsterman.net>
+  from bug #16773.
+
