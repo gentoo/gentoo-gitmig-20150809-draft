@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.68 2004/10/28 11:58:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.69 2004/11/07 10:22:17 usata Exp $
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +files/iso-8859-7.def,
+  tetex-2.0.2-r4.ebuild:
+  Added iso-8859-7.def. Thanks to Pantelis Panayiotou <oss@hyperlife.com.cy>;
+  bug #65093.
 
 *tetex-2.99.1.20041026 (28 Oct 2004)
 *tetex-2.0.2-r4 (28 Oct 2004)
