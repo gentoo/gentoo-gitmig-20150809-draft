@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3.ebuild,v 1.2 2001/05/01 10:08:50 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3.ebuild,v 1.3 2001/05/01 10:13:55 achim Exp $
 
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -59,11 +59,15 @@ src_compile() {
     then
         myconf="--enable-shared"
     else
-        myconf="--enable-languages=c,c++"
+        myconf="--enable-languages=c"
     fi
     if [ "`use nls`" ]
     then
-        myconf="${myconf} --enable-nls"
+	if [ "`use build`" ] ; then
+          myconf="${myconf} --with-included-gettext --enable-nls"
+	else
+          myconf="${myconf} --enable-nls"
+	fi
     else
         myconf="${myconf} --disable-nls"
     fi

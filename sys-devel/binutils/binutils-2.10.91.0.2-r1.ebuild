@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.91.0.2-r1.ebuild,v 1.3 2001/05/01 10:08:50 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.91.0.2-r1.ebuild,v 1.4 2001/05/01 10:13:38 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -15,8 +15,12 @@ fi
 src_compile() {
 
     local myconf
-    if [ -z "`use nls`" ]
+    if [ "`use nls`" ]
     then
+	if [ "`use build`" ] ; then
+	    myconf="--with-included-gettext"
+	fi
+    else
       myconf="--disable-nls"
     fi
 	try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} ${myconf}
