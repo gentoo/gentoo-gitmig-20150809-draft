@@ -1,5 +1,5 @@
-MD5 1040aa3a0eca7c8b3ed695c36bafe520 dc-gui-0.80.ebuild 1187
-MD5 4b8bf7368f3cb32f6fffe4f4ca3a0279 ChangeLog 3505
+MD5 0ef0078742412a320b82b5ebbe3d4a65 ChangeLog 3593
+MD5 f497de29634bcb6eb486786ebedecc65 dc-gui-0.80.ebuild 1191
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
 MD5 ee6ae02e2f5b25158a642d633c4431b3 files/digest-dc-gui-0.80 65
 MD5 698c87b0fbd4a6ce9f6947170320a90f files/split_interface_fast.pl 2608
