@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.8.3.ebuild,v 1.5 2004/07/02 04:21:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.8.3.ebuild,v 1.6 2004/07/16 13:27:39 axxo Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ DEPEND="virtual/libc
 		>=gnome-base/libglade-2.0"
 
 SLOT="0.8"
-IUSE=""
+IUSE="gcj"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~ppc ~sparc"
 
@@ -27,6 +27,7 @@ src_compile() {
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
+		$(use_with gcj gcj-compile) \
 		--with-java-prefix=${JAVA_HOME} || die "./configure failed"
 
 	make || die

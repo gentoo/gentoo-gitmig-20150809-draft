@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-gtk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/ChangeLog,v 1.10 2004/07/02 04:21:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/ChangeLog,v 1.11 2004/07/16 13:27:39 axxo Exp $
+
+  16 Jul 2004; Thomas Matthijs <axxo@gentoo.org> java-gtk-0.8.3.ebuild:
+  add gcj useflag, building with gcj is optional
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   java-gtk-0.8.3.ebuild:
