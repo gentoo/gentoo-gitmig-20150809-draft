@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/arping
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.15 2004/07/09 12:12:23 eldad Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.16 2005/01/09 05:52:15 dragonheart Exp $
+
+*arping-2.04 (09 Jan 2005)
+
+  09 Jan 2005; Daniel Black <dragonheart@gentoo.org> +arping-2.04.ebuild:
+  version bump as per bug #74894 thanks to Vanquirius <marcelogoes@gmail.com>
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> arping-2.01.ebuild:
   marked x86 stable.

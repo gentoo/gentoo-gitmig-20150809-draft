@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-1.06-r1.ebuild,v 1.8 2004/07/08 16:31:39 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-1.06-r1.ebuild,v 1.9 2005/01/09 05:52:15 dragonheart Exp $
 
 inherit eutils
 

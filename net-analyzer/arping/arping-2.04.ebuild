@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.01.ebuild,v 1.9 2005/01/09 05:52:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.04.ebuild,v 1.1 2005/01/09 05:52:15 dragonheart Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A utility to see if a specific IP address is taken and what MAC address owns it"
 HOMEPAGE="http://www.habets.pp.se/synscan/programs.php?prog=ARPing"
@@ -8,7 +10,7 @@ SRC_URI="ftp://ftp.habets.pp.se/pub/synscan/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc sparc arm amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~arm ~amd64"
 IUSE=""
 
 DEPEND="net-libs/libpcap
@@ -21,7 +23,12 @@ src_unpack() {
 }
 
 src_compile() {
-	make arping2 || die
+	make CC=$(tc-getCC) arping2 || die
+}
+
+src_test() {
+	einfo "Selftest only works as root"
+	#make SUDO= HOST=`hostname` MAC=`ifconfig -a | fgrep HWaddr | sed 's/.*HWaddr //g'` test
 }
 
 src_install() {
