@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift-fasttrack-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack-cvs/ChangeLog,v 1.4 2003/07/16 23:48:55 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack-cvs/ChangeLog,v 1.5 2003/07/21 11:09:05 seemant Exp $
+
+  21 Jul 2003; Seemant Kulleen <seemant@gentoo.org>
+  gift-fasttrack-cvs-0.8.1.ebuild:
+  make sure it uses automake-1.7
 
 *gift-fasttrack-cvs-0.8.1 (14 Jul 2003)
 
