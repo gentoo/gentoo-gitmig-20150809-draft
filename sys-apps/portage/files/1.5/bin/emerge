@@ -28,7 +28,8 @@ class depgraph:
 		if self.digraph.hasnode(mybigkey):
 			#if we've already hit this node before, we're already recursing on the dependencies.
 			#no need to recurse again.
-			self.digraph.addnode(mybigkey,myparent)
+			if myparent:
+				self.digraph.addnode(mybigkey,myparent)
 			return 1
 		myroot,mykey=string.split(mybigkey)
 		myebuild=self.db[myroot]["porttree"].getname(mykey)
@@ -89,7 +90,20 @@ class depgraph:
 			retlist.append(string.split(mycurkey))	
 			mygraph.delnode(mycurkey)
 		return retlist
-
+	
+	def syscreate(self,mylines):
+		for x in mylines:
+			myline=string.join(string.split(x))
+			if not len(myline):
+				continue
+			if myline[0]=="#":
+				continue
+			mykey=self.db[portage.root]["porttree"].dep_bestmatch(myline)
+			if not mykey:
+				print "\n!!! Warning: couldn't find match for",myline,"\n"
+				continue
+			self.create(portage.root+" "+mykey)
+			
 	def display(self,mylist):
 		for x in mylist:
 			print x[1],"to",x[0]
@@ -118,6 +132,19 @@ if len(sys.argv)>=2:
 	elif sys.argv[1]=="--help":
 		print "Usage: pkgmerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
 		sys.exit(1)
+	if sys.argv[1]=="system":
+		myfile=open(portage.root+"etc/make.profile/packages","r")
+		mylines=myfile.readlines()
+		myfile.close()
+		mydepgraph=depgraph()
+		print "Calculating system dependencies",
+		mydepgraph.syscreate(mylines)
+		if pretend:
+			mydepgraph.display(mydepgraph.altlist())
+		else:
+			mydepgraph.merge(mydepgraph.altlist())
+		sys.exit(0)
+
 for mypkg in sys.argv[1:]:
 	if len(mypkg)<=7:
 		print ">>> Error: short ebuild name, skipping..."
