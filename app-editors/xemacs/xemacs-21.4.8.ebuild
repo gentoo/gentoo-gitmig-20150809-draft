@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
 # Author: Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.8.ebuild,v 1.2 2002/05/20 18:58:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.8.ebuild,v 1.3 2002/05/21 22:54:44 mkennedy Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -23,6 +23,8 @@ HOMEPAGE="http://www.xemacs.org"
 SLOT=""
 
 RDEPEND="virtual/glibc
+	!virtual/xemacs
+
 	>=sys-libs/gdbm-1.8.0
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/openssl-0.9.6
@@ -43,8 +45,7 @@ RDEPEND="virtual/glibc
 	jpeg? ( media-libs/jpeg )"
 
 DEPEND="${RDEPEND}
-	>=sys-libs/ncurses-5.2
-	!virtual/xemacs"
+	>=sys-libs/ncurses-5.2"
 
 PROVIDE="virtual/xemacs"
 
@@ -60,7 +61,7 @@ src_compile() {
 
 	if use X;
 	then
-		myconf="${myconf} 
+		myconf="${myconf}
 			--with-x 
 			--with-xpm 
 			--with-dragndrop 
