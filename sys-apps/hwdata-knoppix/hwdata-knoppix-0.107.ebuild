@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.107.ebuild,v 1.6 2004/06/25 23:47:21 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.107.ebuild,v 1.7 2004/06/30 17:46:08 wolf31o2 Exp $
 
 MY_PV=${PV}-4
 DESCRIPTION="Data for the hwsetup program"
 SRC_URI="http://developer.linuxtag.net/knoppix/sources/${PN}_${MY_PV}.tar.gz"
 HOMEPAGE="http://www.knopper.net"
 
-IUSE=""
+IUSE="opengl livecd"
 KEYWORDS="x86 ~ppc amd64 ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
@@ -17,6 +17,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
+	use livecd && use opengl && epatch ${FILESDIR}/${P}-binary_drivers.patch
 }
 
 src_install() {
