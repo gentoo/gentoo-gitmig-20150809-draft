@@ -1,0 +1,11 @@
+diff -NurB linc-1.0.3-orig/docs/linc-sections.txt linc-1.0.3/docs/linc-sections.txt
+--- linc-1.0.3-orig/docs/linc-sections.txt	2004-04-05 22:51:42.000000000 -0500
++++ linc-1.0.3/docs/linc-sections.txt	2004-04-05 22:56:48.000000000 -0500
+@@ -46,7 +46,6 @@
+ <FILE>linc-types</FILE>
+ LINCConnectionOptions
+ LincWatch
+-LINCProtocolInfo
+ LINC_MUTEX_LOCK
+ LINC_MUTEX_UNLOCK
+ linc_mutex_new

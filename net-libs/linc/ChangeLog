@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/linc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.27 2003/10/23 14:12:44 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.28 2004/04/06 04:15:35 leonardop Exp $
+
+  05 Apr 2004; L. Boshell <leonardop@gentoo.org> linc-1.0.3.ebuild,
+  files/linc-1.0.3-gtkdoc_fix.patch:
+  Added patch to avoid a conflict with docbook IDs. Closes bug #46692.
 
   23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> linc-1.0.3.ebuild:
   set ppc in keywords
