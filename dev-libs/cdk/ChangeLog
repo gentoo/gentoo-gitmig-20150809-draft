@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.14 2004/07/31 02:52:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.15 2004/08/28 20:29:30 stkn Exp $
+
+*cdk-4.9.11.20031210 (24 Aug 2004)
+
+  24 Aug 2004; <stkn@gentoo.org> +cdk-4.9.11.20031210.ebuild:
+  version bump
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org> cdk-4.9.10.20020809.ebuild:
   stable on ppc64, bug #57131
