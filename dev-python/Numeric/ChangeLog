@@ -1,7 +1,13 @@
 # ChangeLog for dev-python/Numeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/ChangeLog,v 1.2 2002/03/14 06:52:41 tod Exp $
 
+*Numeric-21.0 (14 Mar 2002)
+
+  14 Mar 2002; T.Neidt <tod@gentoo.org> ChangeLog, Numeric-21.0.ebuild :
+
+  Updated version.
+  
 *Numeric-20.3 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
