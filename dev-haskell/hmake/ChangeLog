@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.6 2004/03/25 07:21:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.7 2004/06/02 21:36:51 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> hmake-3.07.ebuild,
+  hmake-3.08.ebuild:
+  Fix use invocation
 
   24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> hmake-3.08.ebuild:
   don't use deprecated ? : use syntax

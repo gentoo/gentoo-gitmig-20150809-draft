@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hdoc
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.1 2003/04/22 08:26:25 kosmikus Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.2 2004/06/02 21:36:02 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> hdoc-0.8.2.ebuild:
+  Fix use invocation
 
 *hdoc-0.8.2 (22 Apr 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.ebuild,v 1.3 2004/05/17 15:42:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.ebuild,v 1.4 2004/06/02 21:34:48 agriffis Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -65,11 +65,11 @@ src_install() {
 	cd ${S}/haddock
 	dodoc CHANGES LICENSE README TODO
 
-	if [ "`use doc`" ]; then
+	if use doc; then
 		cd ${S}/alex/doc
 		dohtml -r alex/* || die
 		dosym alex.html /usr/share/doc/${PF}/html/index.html
-		if [ "`use tetex`" ]; then
+		if use tetex; then
 			docinto ps
 			dodoc alex.ps || die
 		fi

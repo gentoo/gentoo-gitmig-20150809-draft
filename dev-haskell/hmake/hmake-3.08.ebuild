@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.7 2004/03/25 07:21:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.8 2004/06/02 21:36:51 agriffis Exp $
 
 inherit base fixheadtails
 
@@ -30,7 +30,7 @@ src_compile() {
 	local buildwith
 	local arch
 
-	if [ "`use nhc98`" ]; then
+	if use nhc98; then
 		buildwith="--buildwith=nhc98"
 	else
 		buildwith="--buildwith=ghc"
@@ -47,7 +47,7 @@ src_compile() {
 		--mandir=/usr/share/man/man1 \
 		${buildwith} || die "./configure failed"
 
-	if [ ! "`use readline`" ]; then
+	if ! use readline; then
 		arch="`script/harch`"
 		# manually override readline configuration
 		einfo "Disabling readline ..."

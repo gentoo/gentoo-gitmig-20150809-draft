@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.07.ebuild,v 1.3 2003/09/07 03:13:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.07.ebuild,v 1.4 2004/06/02 21:36:51 agriffis Exp $
 
 DESCRIPTION="a make tool for Haskell programs"
 HOMEPAGE="http://www.haskell.org/hmake/"
@@ -17,7 +17,7 @@ DEPEND="nhc98?  ( dev-lang/nhc98 )
 	!nhc98? ( virtual/ghc )"
 
 src_compile() {
-	if [ "`use nhc98`" ]; then
+	if use nhc98; then
 		buildwith="--buildwith=nhc98"
 		# Makefile is erroneous; we need to fix it
 		pushd hmake-3.07
