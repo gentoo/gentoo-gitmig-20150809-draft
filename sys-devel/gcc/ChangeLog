@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.19 2002/06/29 17:20:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.20 2002/06/29 17:44:07 azarah Exp $
+
+*gcc-2.95.3-r7 (29 Jun 2002)
+
+  29 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Remove texinfo as we have a build again.  Fix the atexit() bug, bug #3982.
+  Also fix bug #3527, which was caused by a stray symlink on downgrading from
+  gcc-3.x.
 
 *gcc-3.1-r7 (29 June 2002)
 
