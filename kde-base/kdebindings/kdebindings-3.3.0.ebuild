@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.3.0.ebuild,v 1.3 2004/08/27 22:56:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.3.0.ebuild,v 1.4 2004/08/28 21:39:19 mr_bones_ Exp $
 # TODO: add gnustep, objc bindings
 
 inherit kde-dist flag-o-matic eutils
@@ -31,7 +31,7 @@ src_unpack() {
 	sed -e 's:mozilla::' Makefile.am.orig > Makefile.am
 	fi
 
-	
+
 	cd ${S} && make -f admin/Makefile.common
 }
 
