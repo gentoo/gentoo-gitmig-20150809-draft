@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.62.ebuild,v 1.5 2004/05/18 11:45:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.62.ebuild,v 1.6 2004/05/24 18:08:26 wolf31o2 Exp $
 
 inherit games
 
@@ -43,7 +43,7 @@ src_install() {
 		${FILESDIR}/${P}-fixinstall > ${WORKDIR}/nwn/fixinstall
 	mv ${WORKDIR}/nwn ${D}/${GAMES_PREFIX_OPT}
 	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/nwn
+	doins ${FILESDIR}/nwn.png
 	dogamesbin ${FILESDIR}/nwn
 	make_desktop_entry nwn "Never Winter Nights" nwn.png
 	prepgamesdirs
