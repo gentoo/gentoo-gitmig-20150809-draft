@@ -24,12 +24,13 @@ src_install() {
 	cp -rf MIME-types/ ${D}/usr/share/Choices/
 	
 	cd ${WORKDIR}/${P}
-	doman	rox.1
-	mkdir -p /usr/share/rox
-	cp -rf ROX-Filer/ /usr/share/
-	/usr/share/ROX-Filer/AppRun --compile
-	echo "#!/bin/sh" > "/usr/bin/rox"
-        echo "exec /usr/share/ROX-Filer/AppRun \"\$@\"" >> "/usr/bin/rox"
-        chmod a+x /usr/bin/rox
+	doman rox.1
+	mkdir -p ${D}/usr/share/rox
+	mkdir -p ${D}/usr/bin	
+	cp -rf ROX-Filer/ ${D}/usr/share/
+	${D}/usr/share/ROX-Filer/AppRun --compile
+	echo "#!/bin/sh" > "${D}/usr/bin/rox"
+        echo "exec /usr/share/ROX-Filer/AppRun \"\$@\"" >> "${D}/usr/bin/rox"
+        chmod a+x ${D}/usr/bin/rox
 
 }
