@@ -3,10 +3,13 @@ MD5 79ad3c607a60e2726d82a6f0579af78d kdelibs-3.2.3-r3.ebuild 2828
 MD5 8a989f55b68f5521cd6e86f131f78a6e kdelibs-3.1.5-r1.ebuild 2055
 MD5 3c4af305c1f179c1d4e04ec8c5224a36 kdelibs-3.3.0.ebuild 3001
 MD5 b707cac51f1876562c5dc8552788d09f kdelibs-3.2.2-r1.ebuild 2611
+MD5 82160abdfe32c5cb8eeac51ca97043e5 kdelibs-3.3.1-r2.ebuild 2986
 MD5 a6e84bcc0ded1adff3f3555fbfda3ad7 kdelibs-3.3.2.ebuild 2876
+MD5 3244614cd7bf456f1848f3f7158940a1 kdelibs-3.3.2-r1.ebuild 2936
 MD5 3076e42461e8f1a8cd2829c5307f6d39 kdelibs-3.2.3-r2.ebuild 2731
 MD5 bc136d907a72bfa0d9f09352d18b4b9a kdelibs-3.3.1-r1.ebuild 2929
-MD5 94aba605053b0118e1cbe6bda71fbab6 ChangeLog 27608
+MD5 42b14b3985c7f3ff8f06dfcd67c59012 kdelibs-3.2.3-r4.ebuild 2885
+MD5 006bec955aff528c0eb011b4b7f2c7e6 ChangeLog 27949
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 748d9bf5fe752ab9587b9d0c15a3eff6 kdelibs-3.3.1.ebuild 2849
 MD5 a9840789442b11d5f1d4418b706566a7 files/post-3.3.1-kdelibs-kio.diff 1324
@@ -15,10 +18,13 @@ MD5 52e0e955204a77781505d33b9a3c341d files/post-3.2.2-kdelibs-ktelnetservice.pat
 MD5 285676023bab94666dfec728231cfcd1 files/kdelibs-3.2.2-su.cpp.diff 383
 MD5 ca12b078c7288ce9b2653e639a5b3ee0 files/post-3.2.3-kdelibs-kcookiejar.patch 5384
 MD5 119cc73926dceafff9107b5f916277ee files/post-3.2.3-kdelibs-htmlframes.patch 15435
+MD5 7e082af5fd71b9b01d01a86f31646499 files/post-3.3.2-kdelibs-htmlframes2.patch 989
 MD5 5e9c627e4e9e367ce88ed62a0a9ac162 files/post-3.2.3-kdelibs-khtml.diff 2411
 MD5 1b408d4b494b5328cd15768991836fd8 files/post-3.3.2-kdelibs-kio.diff 1442
 MD5 fed1da1d587ee8aa43b3affc1fa9a35b files/post-3.3.1-kdelibs-khtml.diff 2447
+MD5 7e082af5fd71b9b01d01a86f31646499 files/post-3.3.1-kdelibs-htmlframes2.patch 989
 MD5 3f21fc4e8ddbf79459bfa8f2df1a5e15 files/animated-gif-fix.patch 317
+MD5 1f98b72b586d9a988c47dfce380dd8b6 files/post-3.2.3-kdelibs-htmlframes2.patch 975
 MD5 ee0b53e6fbaea17ae3543638dc09ca34 files/digest-kdelibs-3.2.0 68
 MD5 bf08eeb18202c2640f0184420af9a19e files/digest-kdelibs-3.3.0 68
 MD5 a874ee470150aacab38ec42463cac4dd files/digest-kdelibs-3.3.1 68
@@ -34,4 +40,7 @@ MD5 1e53bd5071cc4fe6ba67fda7252a1cf2 files/digest-kdelibs-3.1.5-r1 68
 MD5 6176dc207f5ba91edee9b04ab111afe5 files/digest-kdelibs-3.2.2-r1 68
 MD5 57b3bdaa9934d84f320c1aa40a56afe4 files/digest-kdelibs-3.2.3-r2 68
 MD5 57b3bdaa9934d84f320c1aa40a56afe4 files/digest-kdelibs-3.2.3-r3 68
+MD5 57b3bdaa9934d84f320c1aa40a56afe4 files/digest-kdelibs-3.2.3-r4 68
 MD5 a874ee470150aacab38ec42463cac4dd files/digest-kdelibs-3.3.1-r1 68
+MD5 a874ee470150aacab38ec42463cac4dd files/digest-kdelibs-3.3.1-r2 68
+MD5 dd2a593a052e2ea070d310e38297bec0 files/digest-kdelibs-3.3.2-r1 68

@@ -1,0 +1,21 @@
+--- khtml/khtml_part.cpp	8 Dec 2004 02:12:39 -0000	1.959.2.24
++++ khtml/khtml_part.cpp	12 Dec 2004 16:59:03 -0000
+@@ -4471,7 +4471,7 @@ KHTMLPart *
+ KHTMLPart::findFrameParent( KParts::ReadOnlyPart *callingPart, const QString &f, khtml::ChildFrame **childFrame )
+ {
+ #ifdef DEBUG_FINDFRAME
+-  kdDebug(6050) << "KHTMLPart::findFrameParent: this = " << this << " URL = " << m_url << " findFrameParent( " << f << " )" << endl;
++  kdDebug(6050) << "KHTMLPart::findFrameParent: this = " << this << " URL = " << m_url << " name = " << name() << " findFrameParent( " << f << " )" << endl;
+ #endif
+   // Check access
+   KHTMLPart *callingHtmlPart = dynamic_cast<KHTMLPart *>(callingPart);
+@@ -4479,6 +4479,9 @@ KHTMLPart::findFrameParent( KParts::Read
+   if (!checkFrameAccess(callingHtmlPart))
+      return 0;
+ 
++  if (!childFrame && !parentPart() && (name() == f))
++     return this;
++
+   FrameIt it = d->m_frames.find( f );
+   FrameIt end = d->m_frames.end();
+   if ( it != end )
