@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.3.ebuild,v 1.1 2003/11/04 21:21:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.3.ebuild,v 1.2 2003/12/20 15:08:41 gmsoft Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="=x11-libs/gtk+-2.2*
 
 IUSE="nls oggvorbis"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 hppa"
 
 src_compile() {
 	econf --disable-dependency-tracking `use_enable nls` || die
