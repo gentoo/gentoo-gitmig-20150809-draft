@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.4-r1.ebuild,v 1.1 2004/11/19 03:04:19 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.4-r1.ebuild,v 1.2 2004/12/14 02:05:37 latexer Exp $
 
 inherit eutils mono
 
@@ -32,6 +32,8 @@ src_unpack() {
 
 	epatch ${WORKDIR}/${P}-configurable.diff
 	aclocal || die
+	# See bug #73563, comment #9
+	libtoolize --copy --force || die
 	autoconf || die
 	automake || die
 
