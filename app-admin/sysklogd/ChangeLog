@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sysklogd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.4 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.5 2002/12/16 16:55:47 woodchip Exp $
+
+*sysklogd-1.4.1-r3.ebuild (16 Dec 2002)
+
+  16 Dec 2002; Donny Davies <woodchip@gentoo.org> syslog-cron : #11884.
+  Added debianutils to RDEPEND since syslog-cron needs it.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -24,13 +29,11 @@
   Added LICENSE, KEYWORDS, SLOT.
 
   11 March 2002; M.Schlemmer <azarah@gentoo.org> :
-
   Updated the rc-script to provide "logger".
 
 *sysklogd-1.4.1 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
