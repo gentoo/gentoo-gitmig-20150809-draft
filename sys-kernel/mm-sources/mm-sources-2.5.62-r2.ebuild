@@ -1,10 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.62-r2.ebuild,v 1.1 2003/02/25 21:11:55 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.62-r2.ebuild,v 1.2 2003/02/25 21:21:46 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
-#we use this next variable to avoid duplicating stuff on cvs
-GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=${PV}
 if [ "${PR}" != "r0" ]; then 
 	PATCH_URI="http://www.kernel.org/pub/linux/kernel/people/akpm/patches/2.5/${PV}/${PVR/r/mm}/${PVR/r/mm}.gz"
@@ -16,9 +14,9 @@ ETYPE="sources"
 # What's in this kernel?
 
 # INCLUDED:
-# beta 2.5.59 kernel sources with the -mm1 patch.
+# The development branch of the linux kernel with Andrew Morton's patch
 
-DESCRIPTION="Full sources for the Gentoo Linux kernel"
+DESCRIPTION="Full sources for the development linux kernel with Andrew Morton's patchset"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.5/linux-${OKV}.tar.bz2 ${PATCH_URI}"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
