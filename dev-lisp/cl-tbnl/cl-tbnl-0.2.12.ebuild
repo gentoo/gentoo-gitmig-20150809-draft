@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/cl-tbnl-0.2.12.ebuild,v 1.1 2004/10/18 15:45:24 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/cl-tbnl-0.2.12.ebuild,v 1.2 2005/02/10 09:18:30 mkennedy Exp $
 
 inherit common-lisp
 
@@ -11,10 +11,12 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
 DEPEND="dev-lisp/cl-kmrcl
 	dev-lisp/cl-md5
 	dev-lisp/cl-base64
 	dev-lisp/cl-url-rewrite"
+
 RDEPEND="${DEPEND}
 	www-apache/mod_lisp"
 

@@ -1,4 +1,6 @@
-MD5 fc3aedc5074cf65f99337a74977abc16 cl-resolver-0.6.ebuild 671
+MD5 64cbbf30f714ae752f4958e2b15d464b cl-resolver-0.7.ebuild 670
+MD5 64cbbf30f714ae752f4958e2b15d464b cl-resolver-0.6.ebuild 670
 MD5 1b58f11ae4b9ae85b6782cf5565b227b ChangeLog 420
 MD5 a9860269e2b6064814e0772861502ac5 metadata.xml 396
 MD5 de018ee4a9f5e3594df69b95fca5535e files/digest-cl-resolver-0.6 63
+MD5 a3ea467cdfef927ccd88de323933a5c9 files/digest-cl-resolver-0.7 63

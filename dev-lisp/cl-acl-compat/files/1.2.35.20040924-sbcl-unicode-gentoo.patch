@@ -1,0 +1,11 @@
+diff -ur cl-portable-aserve-1.2.35+cvs.2004.09.24.orig/acl-compat/acl-excl-common.lisp cl-portable-aserve-1.2.35+cvs.2004.09.24/acl-compat/acl-excl-common.lisp
+--- cl-portable-aserve-1.2.35+cvs.2004.09.24.orig/acl-compat/acl-excl-common.lisp	2005-01-28 12:38:01.226607404 -0600
++++ cl-portable-aserve-1.2.35+cvs.2004.09.24/acl-compat/acl-excl-common.lisp	2005-01-28 15:09:18.190604279 -0600
+@@ -188,6 +188,7 @@
+                            (array (signed-byte 8) 1)))
+   (write-sequence sequence stream :start start :end end))
+ 
++#-(and sbcl sb-unicode)
+ (defun string-to-octets (string &key (null-terminate t) (start 0)
+                          end mb-vector make-mb-vector?
+                          (external-format :default))

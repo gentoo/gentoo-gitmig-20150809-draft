@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/cl-defsystem3-3.3i-r4.ebuild,v 1.5 2004/11/28 02:43:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/cl-defsystem3-3.3i-r4.ebuild,v 1.6 2005/02/10 09:18:30 mkennedy Exp $
 
 inherit common-lisp-common
 

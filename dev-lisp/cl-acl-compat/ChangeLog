@@ -1,6 +1,15 @@
 # ChangeLog for dev-lisp/cl-acl-compat
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/ChangeLog,v 1.15 2004/10/15 03:52:10 mkennedy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/ChangeLog,v 1.16 2005/02/10 09:18:29 mkennedy Exp $
+
+*cl-acl-compat-1.2.35.20040924-r1 (28 Jan 2005)
+
+  28 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/1.2.35.20040924-sbcl-unicode-gentoo.patch,
+  +cl-acl-compat-1.2.35.20040924-r1.ebuild:
+  Added patch for SBCL Unicode support (SB-UNICODE implements ACL's
+  STRING-TO-OCTETS function); No longer depend on dev-lisp/cmucl-source
+  (CMUCL-GRAYSTREAM support is installed with CMUCL).
 
   14 Oct 2004; <mkennedy@gentoo.org>
   -files/1.2.27.2003.09.19-lw-buffering.lisp-gentoo.patch,

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-asdf
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.16 2004/11/28 02:35:04 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.17 2005/02/10 09:18:29 mkennedy Exp $
+
+*cl-asdf-1.86-r1 (31 Jan 2005)
+
+  31 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +cl-asdf-1.86-r1.ebuild:
+  Support for Common Lisp Controller v4; Install asdf-install.lisp
 
   28 Nov 2004; Joseph Jezak <josejx@gentoo.org> cl-asdf-1.86.ebuild:
   Marked ppc stable.

@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-araneida
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-araneida/ChangeLog,v 1.1 2005/02/10 09:18:29 mkennedy Exp $
+
+*cl-araneida-0.9 (08 Feb 2005)
+
+  08 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-araneida-0.9.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

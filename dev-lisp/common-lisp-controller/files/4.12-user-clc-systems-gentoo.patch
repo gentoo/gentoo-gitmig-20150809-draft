@@ -1,0 +1,18 @@
+diff -u clc.orig/common-lisp-controller.lisp clc/common-lisp-controller.lisp
+--- clc.orig/common-lisp-controller.lisp	2004-09-30 06:33:07.000000000 -0500
++++ clc/common-lisp-controller.lisp	2005-02-10 00:43:05.763351623 -0600
+@@ -111,11 +111,6 @@
+       ;; register the systems root:
+       (push *systems-root*
+ 	    (symbol-value (intern (symbol-name :*central-registry*)
+-				  (find-package :asdf))))
+-      ;; register the users root:
+-      (push (merge-pathnames ".clc/systems/"
+-			     (user-homedir-pathname))
+-	    (symbol-value (intern (symbol-name :*central-registry*)
+ 				  (find-package :asdf))))))
+   (values))
+ 
+Only in clc: common-lisp-controller.lisp~
+Common subdirectories: clc.orig/debian and clc/debian
+Common subdirectories: clc.orig/man and clc/man

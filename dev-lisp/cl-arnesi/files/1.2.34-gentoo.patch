@@ -1,0 +1,14 @@
+diff -ur arnesi_1.2.34.orig/arnesi.asd arnesi_1.2.34/arnesi.asd
+--- arnesi_1.2.34.orig/arnesi.asd	2005-01-17 11:31:09.000000000 -0600
++++ arnesi_1.2.34/arnesi.asd	2005-01-17 11:40:04.353465394 -0600
+@@ -29,8 +29,8 @@
+                              (:file "log" :depends-on ("packages" "numbers" "hash"))
+                              (:file "matcher" :depends-on ("packages" "hash" "list" "flow-control" "one-liners"))
+                              (:file "mop" :depends-on ("packages" "mopp"))
+-			     (:file "mopp" :depends-on ("packages" "list" "flow-control")
+-                                    :in-order-to ((compile-op (load-source-op "mopp"))))
++			     (:file "mopp" :depends-on ("packages" "list" "flow-control"))
++;;                                     :in-order-to ((compile-op (load-source-op "mopp"))))
+                              (:file "numbers" :depends-on ("packages"))
+                              (:file "one-liners" :depends-on ("packages"))
+                              (:file "packages")

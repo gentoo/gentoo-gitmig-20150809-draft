@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-defsystem3
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.12 2004/11/21 05:19:58 ndimiduk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.13 2005/02/10 09:18:30 mkennedy Exp $
+
+*cl-defsystem3-3.3i-r5 (29 Jan 2005)
+
+  29 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> +files/defsystem.asd,
+  +cl-defsystem3-3.3i-r5.ebuild:
+  No longer load DEFSYSTEM into the Lisp image of each implementation installed.
 
   21 Nov 2004; Nick Dimiduk <ndimiduk@gentoo.org>
   cl-defsystem3-3.3i-r4.ebuild:

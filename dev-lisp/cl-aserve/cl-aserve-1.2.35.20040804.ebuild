@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.35.20040804.ebuild,v 1.1 2004/08/07 05:22:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.35.20040804.ebuild,v 1.2 2005/02/10 09:18:30 mkennedy Exp $
 
 inherit common-lisp eutils
 

@@ -1,6 +1,6 @@
 diff -ur clx_0.6.orig/clx.asd clx_0.6/clx.asd
 --- clx_0.6.orig/clx.asd	2004-11-16 07:08:26.000000000 -0600
-+++ clx_0.6/clx.asd	2004-12-14 14:28:38.710914897 -0600
++++ clx_0.6/clx.asd	2004-12-21 23:24:20.147725033 -0600
 @@ -35,7 +35,7 @@
  (defclass legacy-file (static-file) ())
  
@@ -36,7 +36,7 @@ diff -ur clx_0.6.orig/clx.asd clx_0.6/clx.asd
  	      :components
 diff -ur clx_0.6.orig/depdefs.lisp clx_0.6/depdefs.lisp
 --- clx_0.6.orig/depdefs.lisp	2003-06-05 15:18:22.000000000 -0500
-+++ clx_0.6/depdefs.lisp	2004-12-14 14:28:38.712914713 -0600
++++ clx_0.6/depdefs.lisp	2004-12-21 23:24:20.149724837 -0600
 @@ -400,10 +400,10 @@
  (eval-when (:compile-toplevel :load-toplevel :execute)
    ;; FIXME: maybe we should reevaluate this?
@@ -52,8 +52,58 @@ diff -ur clx_0.6.orig/depdefs.lisp clx_0.6/depdefs.lisp
  If it is a list, it is interpreted by DEF-CLX-CLASS to be a list of
 diff -ur clx_0.6.orig/dependent.lisp clx_0.6/dependent.lisp
 --- clx_0.6.orig/dependent.lisp	2004-06-11 07:18:17.000000000 -0500
-+++ clx_0.6/dependent.lisp	2004-12-14 14:51:54.396309754 -0600
-@@ -3092,7 +3092,7 @@
++++ clx_0.6/dependent.lisp	2004-12-21 23:42:41.387986779 -0600
+@@ -1511,11 +1511,16 @@
+ 						  (cdr (host-address host)))
+ 			  :foreign-port (+ *x-tcp-port* display)))
+ 
+-#+(or sbcl ecl)
++#+(or sbcl ecl CMU)
+ (defconstant +X-unix-socket-path+
+   "/tmp/.X11-unix/X"
+   "The location of the X socket")
+ 
++#+(or sbcl ecl CMU)
++(defconstant +X-tcp-port+
++  6000
++  "The TCP port number for X")
++
+ #+sbcl
+ (defun open-x-stream (host display protocol)  
+   (declare (ignore protocol)
+@@ -1528,11 +1533,21 @@
+        (let ((host (car (host-ent-addresses (get-host-by-name host)))))
+ 	 (when host
+ 	   (let ((s (make-instance 'inet-socket :type :stream :protocol :tcp)))
+-	     (socket-connect s host (+ 6000 display))
++	     (socket-connect s host (+ +X-tcp-port+ display))
+ 	     s))))
+    :element-type '(unsigned-byte 8)
+    :input t :output t :buffering :none))
+ 
++#+CMU
++(defun open-x-stream (host display protocol)
++  (declare (ignore protocol)
++	   (type (integer 0) display))
++  (system:make-fd-stream
++   (if (or (string= host "") (string= host "unix"))
++       (ext:connect-to-unix-socket (format nil "~A~D" +X-unix-socket-path+ display))
++       (ext:connect-to-inet-socket host (+ +X-tcp-port+ display)))
++   :input t :output t :element-type '(unsigned-byte 8)))
++
+ #+ecl
+ (defun open-x-stream (host display protocol)
+   (declare (ignore protocol)
+@@ -1541,7 +1556,7 @@
+     (if (or (string= host "") (string= host "unix")) ; AF_UNIX doamin socket
+ 	(sys::open-unix-socket-stream
+ 	 (format nil "~A~D" +X-unix-socket-path+ display))
+-	(si::open-client-stream host (+ 6000 display)))))
++	(si::open-client-stream host (+ +X-tcp-port+ display)))))
+ 
+ ;;; BUFFER-READ-DEFAULT - read data from the X stream
+ 
+@@ -3092,7 +3107,7 @@
  (defmacro with-underlying-simple-vector 
      ((variable element-type pixarray) &body body)
    (declare (ignore element-type))
@@ -62,7 +112,7 @@ diff -ur clx_0.6.orig/dependent.lisp clx_0.6/dependent.lisp
      ((,variable ,pixarray) (start) (end))
      (declare (ignore start end))
      ,@body))
-@@ -3505,11 +3505,11 @@
+@@ -3505,11 +3520,11 @@
  			     height width)
    (declare (type array-index source-width sx sy dest-width dx dy height width))
    #.(declare-buffun)

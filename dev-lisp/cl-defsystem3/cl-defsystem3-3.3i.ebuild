@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/cl-defsystem3-3.3i.ebuild,v 1.6 2004/06/24 23:42:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/cl-defsystem3-3.3i.ebuild,v 1.7 2005/02/10 09:18:30 mkennedy Exp $
 
 DESCRIPTION="Another System Definition Facility for Common Lisp"
 HOMEPAGE="http://packages.debian.org/unstable/devel/cl-defsystem3.html"

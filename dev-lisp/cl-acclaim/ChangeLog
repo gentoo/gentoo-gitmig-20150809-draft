@@ -1,0 +1,14 @@
+# ChangeLog for dev-lisp/cl-acclaim
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acclaim/ChangeLog,v 1.1 2005/02/10 09:18:29 mkennedy Exp $
+
+*cl-acclaim-0.25 (10 Feb 2005)
+
+  10 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +files/0.25-cmucl-eval-when-gentoo.patch,
+  +files/0.25-load-slides-hint-gentoo.patch,
+  +files/0.25-slides-pathname-gentoo.patch, +files/example.slides,
+  +cl-acclaim-0.25.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+  and ejohnson <human@csufresno.edu>; Resolves Bug #68784
+
