@@ -1,8 +1,11 @@
 # ChangeLog for app-cdr/eroaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.7 2002/10/22 05:36:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.8 2002/11/02 15:12:17 doctomoe Exp $
 
 *eroaster-2.1.0 (11 July 2002) 
+
+  02 Nov 2002; Olivier Reisch <seemant@gentoo.org> eroaster-2.1.0.ebuild :
+  Added ppc keyword.
 
   21 Oct 2002; Seemant Kulleen <seemant@gentoo.org> eroaster-2.1.0.ebuild :
 

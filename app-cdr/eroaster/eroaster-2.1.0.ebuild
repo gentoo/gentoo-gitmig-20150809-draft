@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.12 2002/10/22 20:23:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.13 2002/11/02 15:12:17 doctomoe Exp $
 
 IUSE="xmms"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/eroaster/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 # cdrecord and mkisofs are needed or configure fails
 DEPEND=">=dev-lang/python-2.0
