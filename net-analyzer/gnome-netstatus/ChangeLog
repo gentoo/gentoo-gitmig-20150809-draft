@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnome-netstatus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.14 2004/07/11 15:34:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.15 2004/07/31 03:37:47 spider Exp $
+
+  31 Jul 2004; <spider@gentoo.org> gnome-netstatus-2.6.2.ebuild:
+  stable on x86 for gnome 2.6.2
 
 *gnome-netstatus-2.6.2 (11 Jul 2004)
 
