@@ -1,12 +1,25 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.8 2003/03/20 00:59:01 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.9 2003/04/02 23:23:12 liquidx Exp $
+
+*g-wrap-1.3.4 (17 Mar 2003)
+
+  03 Apr 2003; Alastair Tse <liquidx@gentoo.org> ChangeLog :
+  Fixed edolnx's inability to correctly enter a changelog entry according
+  to the guidelines.
+
+  19 Mar 2003; Jon Nall <nall@gentoo.org> g-wrap-1.3.4.ebuild :
+  added ~ppc
+	
+  17 Mar 2003; Carl Perry <edolnx@gentoo.org> g-wrap-1.3.4.ebuild :
+  Added 1.3.4 for gnucash 1.8 series - doesn't seem to adversely 
+  interact with any other apps
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*g-wrap-1.2.1-r1 (1 Apr 2002)
+*g-wrap-1.3.1-r1 (1 Apr 2002)
 
-  1 Apr 2002; M.Schlemmer <azarah@gentoo.org> :
+  1 Apr 2002; M.Schlemmer <azarah@gentoo.org> g-wrap-1.3.1.ebuild :
 
   Libtoolize to fix "relink" bug in older versions of libtool.
 
@@ -16,8 +29,6 @@
 
   Changed the SRC_URI to an http:// destination instead of ftp://
 
-*g-wrap-1.3.1 (1 Feb 2002)
-
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
@@ -26,12 +37,3 @@
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
 
-*g-wrap-1.3.4 (17MAR2003)
-
-	19 Mar 2003; Jon Nall <nall@gentoo.org> g-wrap-1.3.4.ebuild :
-	added ~ppc
-	
-	17 MAR 2003; Carl Perry <edolnx@gentoo.org> ChangeLog:
-
-	Added 1.3.4 for gnucash 1.8 series - doesn't seem to adversely 
-	interact with any other apps
