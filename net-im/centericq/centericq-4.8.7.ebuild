@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.8.7.ebuild,v 1.1 2002/11/04 06:39:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.8.7.ebuild,v 1.2 2002/11/06 21:49:24 rphillips Exp $
 
 IUSE="nls"
 
@@ -22,6 +22,8 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
 	local myopts=""
+
+	patch -p1 < ${FILESDIR}/${P}-compilefix.patch
 
 	use nls || myopts="--disable-nls"
 	
