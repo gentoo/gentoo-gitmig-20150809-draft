@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gedit
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.58 2004/04/17 09:38:41 lv Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.59 2004/04/19 06:53:14 leonardop Exp $
+
+  19 Apr 2004; L. Boshell <leonardop@gentoo.org> gedit-2.4.1.ebuild:
+  Remove *_DISABLE_DEPRECATED macros, so it compiles with recent
+  Gtk+/Gnome libraries. Closes bug #45514. Fix eel dependency, as it won't
+  work with eel-2.6.0.
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> gedit-2.4.1.ebuild:
   stable on amd64
