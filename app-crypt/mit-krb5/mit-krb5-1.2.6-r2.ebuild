@@ -1,15 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.6-r2.ebuild,v 1.5 2003/06/29 22:18:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.6-r2.ebuild,v 1.6 2003/08/05 15:07:36 vapier Exp $
+
+inherit eutils
 
 S=${WORKDIR}/krb5-${PV}/src
-SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/krb5-${PV}.tar.gz"
 DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
-IUSE="krb4"
-SLOT="0"
+SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/krb5-${PV}.tar.gz"
+
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="x86"
+IUSE="krb4"
+
 PROVIDE="virtual/krb5"
 DEPEND="virtual/glibc"
 
@@ -22,7 +26,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
 	
 	use krb4 && myconf="${myconf} --with-krb4 --enable-krb4" \
@@ -41,7 +44,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	cd ..
 	dodoc README

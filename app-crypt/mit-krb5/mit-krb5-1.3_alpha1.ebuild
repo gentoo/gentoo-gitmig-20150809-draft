@@ -1,20 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3_alpha1.ebuild,v 1.1 2003/06/17 04:24:47 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3_alpha1.ebuild,v 1.2 2003/08/05 15:07:36 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="MIT Kerberos V"
-HOMEPAGE="http://web.mit.edu/kerberos/www/"
-
 MY_P=${PN/mit-}-${PV}
 S=${WORKDIR}/${MY_P/_/-}/src
+DESCRIPTION="MIT Kerberos V"
+HOMEPAGE="http://web.mit.edu/kerberos/www/"
 SRC_URI="http://www.mirrors.wiretapped.net/security/cryptography/apps/kerberos/krb5-mit/unix/beta/${MY_P/_/-}.tar.gz"
 
-IUSE="krb4 static"
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa"
+IUSE="krb4 static"
+
 PROVIDE="virtual/krb5"
 DEPEND="virtual/glibc"
 
@@ -65,7 +65,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	
 	cd ..
