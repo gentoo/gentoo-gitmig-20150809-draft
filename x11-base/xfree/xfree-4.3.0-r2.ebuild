@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.12 2003/04/14 20:45:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.13 2003/04/15 09:12:40 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -799,13 +799,6 @@ pkg_postinst() {
 		
 		umask 022
 	
-		if [ -x ${ROOT}/usr/bin/fc-cache ]
-		then
-			ebegin "Creating FC font cache..."
-			HOME="/root" ${ROOT}/usr/bin/fc-cache -f
-			eend 0
-		fi
-
 		# This one cause ttmkfdir to segfault :/
 		#rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large/gbk-0.enc.gz
 
@@ -895,6 +888,16 @@ pkg_postinst() {
 		find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'font.*' \
 			-exec chmod 0644 {} \;
 		eend 0
+
+		# danarmak found out that fc-cache should be run AFTER all the above
+		# stuff, as otherwise the cache is invalid, and has to be run again
+		# as root anyway
+		if [ -x ${ROOT}/usr/bin/fc-cache ]
+		then
+			ebegin "Creating FC font cache..."
+			HOME="/root" ${ROOT}/usr/bin/fc-cache -f
+			eend 0
+		fi
 
 		# Switch to the xfree implementation.
 		# Use new opengl-update that will not reset user selected

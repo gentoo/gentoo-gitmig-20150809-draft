@@ -1,8 +1,13 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.123 2003/04/14 20:45:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.124 2003/04/15 09:12:40 seemant Exp $
 
 *xfree-4.3.0-r2 (08 Apr 2003)
+
+  15 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  xfree-4.3.0-r2.ebuild:
+  moved fc-cache step to be the last font related stuff in postinst -- thanks to
+  danarmak@gentoo.org <Dan Armak, king of KDE> for the fix
 
   14 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
   xfree-4.3.0-r2.ebuild:
