@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ttfquery
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ChangeLog,v 1.1 2004/07/10 09:22:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ChangeLog,v 1.2 2004/07/17 10:16:29 dholm Exp $
+
+  17 Jul 2004; David Holm <dholm@gentoo.org> ttfquery-1.0.0.ebuild:
+  Added to ~ppc.
 
 *ttfquery-1.0.0 (10 Jul 2004)
 

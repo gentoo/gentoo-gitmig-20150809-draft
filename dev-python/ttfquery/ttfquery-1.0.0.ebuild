@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ttfquery-1.0.0.ebuild,v 1.2 2004/07/10 20:55:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ttfquery-1.0.0.ebuild,v 1.3 2004/07/17 10:16:29 dholm Exp $
 
 inherit distutils
 MY_PN="TTFQuery"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86" # should work on all architectures
+KEYWORDS="~x86 ~ppc" # should work on all architectures
 
 IUSE=""
 DEPEND="virtual/python
