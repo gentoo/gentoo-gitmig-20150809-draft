@@ -1,9 +1,9 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.45 2005/04/03 20:28:54 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.46 2005/04/03 20:57:56 j4rg0n Exp $
 
-  03 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> pine-4.61-r3.ebuild,
-  pine-4.61-r4.ebuild, pine-4.61-r5.ebuild, pine-4.62-r2.ebuild:
+  03 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> pine-4.62-r1.ebuild,
+  pine-4.62-r2.ebuild:
   Bug #83630. Thanks to David Rogers for reporting the fix.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> pine-4.62-r1.ebuild:

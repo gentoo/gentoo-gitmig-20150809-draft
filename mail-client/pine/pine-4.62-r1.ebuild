@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.62-r1.ebuild,v 1.5 2005/04/01 05:59:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.62-r1.ebuild,v 1.6 2005/04/03 20:57:56 j4rg0n Exp $
 
 inherit eutils
 
@@ -133,10 +133,14 @@ src_compile() {
 	if use kerberos ; then
 		myconf="${myconf} EXTRAAUTHENTICATORS=gss"
 	fi
-	if use pam ; then
-		target=lnp
+	if use ppc-macos; then
+		target=osx
 	else
-		target=slx
+		if use pam ; then
+			target=lnp
+		else
+			target=slx
+		fi
 	fi
 
 	./build ${myconf} ${target} || die "compile problem"
