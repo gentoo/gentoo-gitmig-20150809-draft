@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/bmp-mp4
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-mp4/ChangeLog,v 1.1 2005/02/28 18:46:06 chainsaw Exp $
+
+*bmp-mp4-20041215 (28 Feb 2005)
+
+  28 Feb 2005; Tony Vroon <chainsaw@gentoo.org> +bmp-mp4-20041215.ebuild:
+  Initial commit. Ebuild based on the one submitted by B. Keroack
+  <mutualaid@gmail.com> in bug #82176.
+
