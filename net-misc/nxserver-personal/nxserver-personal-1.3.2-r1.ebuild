@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/nxserver-personal-1.3.2-r1.ebuild,v 1.1 2004/07/20 08:42:43 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/nxserver-personal-1.3.2-r1.ebuild,v 1.2 2005/01/02 09:48:38 stuart Exp $
 
 inherit nxserver-1.3.2
 
