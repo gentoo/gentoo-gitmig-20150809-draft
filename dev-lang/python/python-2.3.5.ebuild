@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5.ebuild,v 1.2 2005/03/01 18:07:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5.ebuild,v 1.3 2005/03/15 12:17:58 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -56,7 +56,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.3-mimetypes_apache.patch
 	epatch ${FILESDIR}/${PN}-2.3-db4.2.patch
 	# installs to lib64
-	[ "${CONF_LIBDIR}" == "lib64" ] && epatch ${FILESDIR}/python-2.3.4-lib64.patch
+	[ "$(get_libdir)" == "lib64" ] && epatch ${FILESDIR}/python-2.3.4-lib64.patch
 	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
 	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
 }
@@ -164,50 +164,38 @@ src_install() {
 
 	# seems like the build do not install Makefile.pre.in anymore
 	# it probably shouldn't - use DistUtils, people!
-	if [ "${CONF_LIBDIR}" == "lib64" ] ;then
-		insinto /usr/lib64/python${PYVER}/config
-	else
-		insinto /usr/lib/python${PYVER}/config
-	fi
+	insinto /usr/$(get_libdir)/python${PYVER}/config
 	doins ${S}/Makefile.pre.in
 
 	# While we're working on the config stuff... Let's fix the OPT var
 	# so that it doesn't have any opts listed in it. Prevents the problem
 	# with compiling things with conflicting opts later.
-	if [ "${CONF_LIBDIR}" == "lib64" ] ;then
-		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib64/python${PYVER}/config/Makefile
-	else
-		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib/python${PYVER}/config/Makefile
-	fi
+	dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/$(get_libdir)/python${PYVER}/config/Makefile
 
 	# install python-updater in /usr/sbin
 	dosbin ${FILESDIR}/python-updater
 
 	if use build ; then
-		rm -rf ${D}/usr/lib/python2.3/{test,encodings,email,lib-tk,bsddb/test}
+		rm -rf ${D}/usr/$(get_libdir)/python2.3/{test,encodings,email,lib-tk,bsddb/test}
 	else
-		use uclibc && rm -rf ${D}/usr/lib/python2.3/{test,bsddb/test}
-		use berkdb || rm -rf ${D}/usr/lib/python2.3/bsddb
-		( use !X || use !tcltk ) && rm -rf ${D}/usr/lib/python2.3/lib-tk
+		use uclibc && rm -rf ${D}/usr/$(get_libdir)/python2.3/{test,bsddb/test}
+		use berkdb || rm -rf ${D}/usr/$(get_libdir)/python2.3/bsddb
+		( use !X || use !tcltk ) && rm -rf ${D}/usr/$(get_libdir)/python2.3/lib-tk
 	fi
 }
 
 pkg_postrm() {
 	python_makesym
-	python_mod_cleanup /usr/lib/python2.3
-	[ "${CONF_LIBDIR}" == "lib64" ] && python_mod_cleanup /usr/lib64/python2.3
+	python_mod_cleanup /usr/$(get_libdir)/python2.3
 }
 
 pkg_postinst() {
 	local myroot
 	myroot=$(echo $ROOT | sed 's:/$::')
 
-
 	python_makesym
 	python_mod_optimize
-	python_mod_optimize -x site-packages -x test ${myroot}/usr/lib/python${PYVER}
-	[ "${CONF_LIBDIR}" == "lib64" ] && \
-		python_mod_optimize -x site-packages -x test ${myroot}/usr/lib64/python${PYVER}
+	python_mod_optimize -x site-packages -x test ${myroot}/usr/$(get_libdir)/python${PYVER}
 
 	# workaround possible python-upgrade-breaks-portage situation
 	if [ ! -f ${myroot}/usr/lib/portage/pym/portage.py ]; then

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.132 2005/03/01 18:07:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.133 2005/03/15 12:17:58 liquidx Exp $
+
+  15 Mar 2005; Alastair Tse <liquidx@gentoo.org> python-2.3.5.ebuild:
+  more multilib fixes (#76791)
 
   01 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> python-2.3.5.ebuild,
   python-2.4-r1.ebuild:
