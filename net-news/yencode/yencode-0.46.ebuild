@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/yencode/yencode-0.46.ebuild,v 1.11 2004/03/20 07:32:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/yencode/yencode-0.46.ebuild,v 1.12 2004/05/12 03:31:27 weeve Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -10,7 +10,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~sparc"
 
 src_compile() {
 	local myconf
