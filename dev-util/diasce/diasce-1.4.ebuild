@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.1 2003/10/01 20:20:05 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.2 2003/10/30 01:31:15 brandy Exp $
 
 MY_P=${PN}2-${PV}
 S=${WORKDIR}/${MY_P}
@@ -26,6 +26,12 @@ RDEPEND=">=dev-libs/libxml2-2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	has_version '>=ORBit2-2.8.0' && epatch ${FILESDIR}/${P}-linc.patch.tar.bz2
+}
 
 src_compile() {
 	local myconf=""
