@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f4972638d01019af6e5fe48ef2e84921 fwlogwatch-0.9.2.ebuild 1056
-MD5 a32a7fcd572a748ca6beee71cca045a8 ChangeLog 1376
-MD5 cb1db85b90db207a6539fcaf8c63b23c fwlogwatch-0.9.3.ebuild 1103
-MD5 e6ea1b1de25cb31111556eff39baa687 fwlogwatch-1.0.ebuild 1082
+MD5 9c36ddddd05b23779325f309ed316aea ChangeLog 1484
+MD5 ba656ddb7a2a209d7641980798b435f6 fwlogwatch-0.9.3.ebuild 1105
+MD5 5559c103c3489ff79c15665c1d9e85ba fwlogwatch-1.0.ebuild 1087
 MD5 2576985377d59cb57f807964ac756ecf metadata.xml 236
-MD5 eb2d303a0740438e209fee7e65724267 files/digest-fwlogwatch-0.9.2 67
 MD5 d6bcf04d65c71ea5420636851372769a files/digest-fwlogwatch-0.9.3 67
 MD5 4504bcd063b5859ce62a570512bfa357 files/digest-fwlogwatch-1.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBIIrlT+MN7JbqCpMRAu32AJ4zhRyHgmhXx6Rdme/xEpYql161xQCePuiI
-oE/DIL0E4BQAn34DvlQ/nTw=
-=HCMe
------END PGP SIGNATURE-----
