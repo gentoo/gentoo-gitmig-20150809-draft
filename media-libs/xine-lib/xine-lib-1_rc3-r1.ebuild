@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r1.ebuild,v 1.9 2004/02/08 20:27:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r1.ebuild,v 1.10 2004/02/08 20:29:01 vapier Exp $
 
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic gcc libtool
 
 # This should normally be empty string, unless a release has a suffix.
 MY_PKG_SUFFIX="a"
@@ -15,7 +15,6 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~x86 ppc hppa sparc ~amd64 ~ia64"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex"
-RESTRICT="nomirror"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
@@ -44,8 +43,8 @@ pkg_setup() {
 	# Make sure that the older libraries are not installed (bug #15081).
 	if [ `has_version =media-libs/xine-lib-0.9.13*` ]
 	then
-		einfo "Please uninstall older xine libraries.";
-		einfo "The compilation cannot proceed.";
+		eerror "Please uninstall older xine libraries.";
+		eerror "The compilation cannot proceed.";
 		die
 	fi
 }
@@ -61,6 +60,8 @@ src_unpack() {
 	# plasmaroo: Kernel 2.6 headers patch
 	epatch ${FILESDIR}/${PN}-2.6.patch
 	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/${P}-configure-sparc.patch
+
+	elibtoolize #40317
 }
 
 src_compile() {
