@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.57 2004/01/08 14:23:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.58 2004/01/08 14:31:05 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,msterret}@gentoo.org
 #
@@ -192,13 +192,14 @@ games_ut_unpack() {
 
 # make a wrapper script ...
 games_make_wrapper() {
+	local wrapper=$1 ; shift
 	local bin=$1 ; shift
 	local chdir=$1 ; shift
-	local wrapper="`mymktemp ${T}`"
-	cat << EOF > ${wrapper}
+	local tmpwrapper="`mymktemp ${T}`"
+	cat << EOF > ${tmpwrapper}
 #!/bin/sh
 cd "${chdir}"
-exec "${bin}" "\$@"
+exec ${bin} "\$@"
 EOF
-	echo ${wrapper}
+	newgamesbin ${tmpwrapper} ${wrapper}
 }
