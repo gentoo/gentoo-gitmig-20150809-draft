@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/lintool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lintool/ChangeLog,v 1.7 2003/02/11 17:23:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lintool/ChangeLog,v 1.8 2003/02/11 19:45:05 latexer Exp $
 
   11 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *lintool-0.2.3 (30 Oct 2002)
+
+  11 Feb 2003; Peter Johanson <latexer@gentoo.org> lintool-0.2.3.ebuild :
+  Added ~alpha to KEYWORDS
 
   30 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> lintool-0.2.4.ebuild files/digest-lintoo-0.2.4 :
   New upstream version.
