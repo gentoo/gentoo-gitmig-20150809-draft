@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.12.0.ebuild,v 1.1 2003/06/02 00:40:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.12.0.ebuild,v 1.2 2003/06/10 00:08:24 msterret Exp $
 
 DESCRIPTION="A OpenFT, Gnutella and FastTrack p2p network client"
 HOMEPAGE="http://gift.sourceforge.net"
@@ -9,7 +9,8 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPENDS="virtual/glibc
-        >=sys-libs/zlib-1.1.4"
+		>=sys-apps/sed-4
+		>=sys-libs/zlib-1.1.4"
 
 inherit cvs debug flag-o-matic
 
