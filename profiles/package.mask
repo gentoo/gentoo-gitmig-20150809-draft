@@ -440,10 +440,6 @@ net-misc/nt
 # interim though.
 #>=sys-devel/perl-5.8.0
 
-# <agenkin@gentoo.org> (27 Aug 2002)
-# Ebuild for 1.1.0 is a work in progress, since it seems to be a mess.
->=media-sound/audacity-1.1.0
-
 # <aliz@gentoo.org> (26 Aug 2002)
 # Masked to force lynx-2.8.4.1c
 =net-www/lynx-2.8.4a-r4
