@@ -1,19 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.6 2004/02/27 16:49:42 wolf31o2 Exp $.
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.1 2004/04/02 03:47:28 wolf31o2 Exp $.
 
 inherit games
 
 DESCRIPTION="Unreal Tournament 2003 Demo"
 HOMEPAGE="http://www.ut2003.com/"
-SRC_URI="http://unreal.epicgames.com/linux/ut2003/ut2003demo-lnx-${PV}.sh.bin"
+SRC_URI="http://unreal.epicgames.com/linux/ut2003/ut2003demo-lnx-${PV}.sh.bin
+	http://download.factoryunreal.com/mirror/UT2003CrashFix.zip"
 
 LICENSE="ut2003-demo"
 SLOT="0"
 KEYWORDS="-* x86"
 RESTRICT="nostrip"
 
-DEPEND="virtual/opengl"
+DEPEND="virtual/opengl
+	app-arch/unzip"
+IUSE=""
 
 S=${WORKDIR}
 
@@ -23,7 +26,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself
+	unpack_makeself ${DISTDIR}/ut2003demo-lnx-${PV}.sh.bin \
+		|| die "unpacking demo"
+	unzip unzip ${DISTDIR}/UT2003CrashFix.zip \
+		|| die "unpacking crash-fix"
 	tar -zxf setupstuff.tar.gz || die
 }
 
@@ -57,10 +63,18 @@ src_install() {
 	exeinto ${dir}/Benchmark
 	doexe ${FILESDIR}/{benchmark,results.sh}
 
-	# Security patch
-	#cd ${D}/opt/ut2003-demo/System
-	#cp ${DISTDIR}/IpDrv.so.bz2 .
-	#bunzip2 --force IpDrv.so.bz2
+	# Here we apply DrSiN's crash patch
+	cp ${S}/CrashFix/System/crashfix.u ${Ddir}/System
+
+ed ${Ddir}/System/Default.ini >/dev/null 2>&1 <<EOT
+$
+?Engine.GameInfo?
+a
+AccessControlClass=crashfix.iaccesscontrolini
+.
+w
+q
+EOT
 
 	# create menu entry (closes bug #27594)
 	insinto /usr/share/applications
@@ -71,15 +85,20 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo "To play the game run:"
+	einfo " ut2003"
 	echo
-	einfo "Type 'ut2003-demo' to start the game."
 	einfo "You can run benchmarks by typing 'ut2003-demo --bench' (MinDetail seems"
 	einfo "to not be working for some unknown reason :/)"
 	echo
 	einfo "Read ${dir}/README.linux for instructions on how to run a"
 	einfo "dedicated server."
 	echo
-	einfo "Have fun :)"
+	ewarn "If you are not installing for the first time and you plan on running"
+	ewarn "a server, you will probably need to edit your"
+	ewarn "~/.ut2003/System/UT2003.ini file and add a line that says"
+	ewarn "AccessControlClass=crashfix.iaccesscontrolini to your"
+	ewarn "[Engine.GameInfo] section to close a security issue."
 
 	games_pkg_postinst
 }
