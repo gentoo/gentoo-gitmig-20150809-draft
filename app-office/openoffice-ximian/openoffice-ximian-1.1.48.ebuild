@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.48.ebuild,v 1.1 2004/01/11 13:40:46 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.48.ebuild,v 1.2 2004/01/12 22:10:22 seemant Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -95,8 +95,7 @@ RDEPEND=">=sys-libs/glibc-2.1
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
 	>=sys-devel/gcc-3.2.1 )
 	dev-libs/libxslt
-	>=media-libs/freetype-2.1.4
-	<app-arch/tar-1.13.92"
+	>=media-libs/freetype-2.1.4"
 
 DEPEND="${RDEPEND}
 	app-shells/tcsh
