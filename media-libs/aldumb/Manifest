@@ -1,4 +1,4 @@
-MD5 74d6f31a83c47d916813fff87eb8e9cf files/digest-aldumb-0.9.2 68
+MD5 45f8f9c56efea462ba0ed7fa384decf3 ChangeLog 597
+MD5 875a4c00a844b2995f7f53d12b4ea18d aldumb-0.9.2.ebuild 944
 MD5 c86b4d38a194df18a6826e03b0863d50 files/aldumb-0.9.2.Makefile.patch 664
-MD5 97ee5551e09745a4681a55eafee54e7e aldumb-0.9.2.ebuild 887
-MD5 f4f354f28896510c7e02554c2d220cbf ChangeLog 453
+MD5 74d6f31a83c47d916813fff87eb8e9cf files/digest-aldumb-0.9.2 68
