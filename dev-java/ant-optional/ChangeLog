@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-optional
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ChangeLog,v 1.20 2004/07/17 14:53:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ChangeLog,v 1.21 2004/07/18 13:13:47 axxo Exp $
+
+  18 Jul 2004; Thomas Matthijs <axxo@gentoo.org> ant-optional-1.6.2.ebuild:
+  ~amd64
 
   17 Jul 2004; Thomas Matthijs <axxo@gentoo.org> ant-optional-1.6.2.ebuild:
   Change it so it doesn't look for javamail when javamail useflag is not
