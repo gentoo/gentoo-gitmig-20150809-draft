@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.1 2003/03/09 13:36:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.2 2003/03/09 14:16:30 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -182,7 +182,13 @@ src_unpack() {
 	# Fix HOME and END keys to work in xterm, bug #15254
 	epatch ${FILESDIR}/xfree-4.2.x-home_end-keys.patch
 	cd ${S}/programs/Xserver/hw/xfree86/
-	patch -p0 < ${DISTDIR}/xfree86-dri-resume-v8.patch
+	epatch ${DISTDIR}/xfree86-dri-resume-v8.patch
+	
+	# Fix keyboard issue on sparc
+	if use sparc; then
+		cd ${S}
+		epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-sparc-kb.patch
+	fi
 	
 	# Update the Savage Driver
 	# savage driver 1.1.27t is a .zip and contains a savage directory
