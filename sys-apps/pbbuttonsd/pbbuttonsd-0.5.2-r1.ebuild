@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.5.2-r1.ebuild,v 1.7 2003/06/23 00:25:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.5.2-r1.ebuild,v 1.8 2004/02/10 05:20:27 vapier Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PBButtons is a program to map special Powerbook/iBook keys in Linux"
@@ -17,7 +19,7 @@ src_unpack() {
 	cd ${S}
 
 	einfo "Patching in fix to enable replace_pmud support"
-	patch -p0 < ${FILESDIR}/pbbuttons-0.5.2-replace_pmud.patch || die "Can't apply patch"
+	epatch ${FILESDIR}/pbbuttons-0.5.2-replace_pmud.patch
 
 }
 

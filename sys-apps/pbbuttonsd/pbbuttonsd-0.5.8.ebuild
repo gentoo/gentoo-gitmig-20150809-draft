@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.5.8.ebuild,v 1.1 2004/02/07 01:15:54 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.5.8.ebuild,v 1.2 2004/02/10 05:20:27 vapier Exp $
 
 DESCRIPTION="program to map special Powerbook/iBook keys in Linux"
 HOMEPAGE="http://www.cymes.de/members/joker/projects/pbbuttons/pbbuttons.html"
@@ -8,17 +8,11 @@ SRC_URI="http://www.cymes.de/members/joker/projects/pbbuttons/tar/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="-* ~ppc"
 
 DEPEND="virtual/glibc
-		>=sys-apps/baselayout-1.8.6.12-r1"
-
+	>=sys-apps/baselayout-1.8.6.12-r1"
 RDEPEND=""
-
-#src_unpack() {
-#	unpack ${A}
-#	cd ${S}
-#}
 
 src_compile() {
 	econf || die
@@ -27,13 +21,15 @@ src_compile() {
 
 src_install() {
 	local mydir=/var/lib
-	export	CONFIG_PROTECT="${CONFIG_PROTECT}:${mydir}/pbbuttonsd"
 	dodir /etc/power
-	make sysconfdir=${D}/etc				\
-		localstatedir=${D}/${mydir}			\
-		DESTDIR=${D} install || die "failed to install"
+	make \
+		sysconfdir=${D}/etc \
+		localstatedir=${D}/${mydir} \
+		DESTDIR=${D} \
+		install \
+		|| die "failed to install"
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/pbbuttonsd.rc5 pbbuttonsd
+	newexe ${FILESDIR}/pbbuttonsd.rc6 pbbuttonsd
 	dodoc README COPYING
 	#fix the symlink
 	rm ${D}/etc/pbbuttonsd.conf
@@ -41,8 +37,7 @@ src_install() {
 #	dosym /etc/pbbuttonsd.conf /var/lib/pbbuttons/pbbuttonsd.conf
 	dosym ${mydir}/pbbuttons/pbbuttonsd.conf /etc/pbbuttonsd.conf
 	dodir /etc/env.d
-	echo "CONFIG_PROTECT=${mydir}/pbbuttonsd" \
-		>${D}/etc/env.d/10pbbuttonsd
+	echo "CONFIG_PROTECT=${mydir}/pbbuttonsd" > ${D}/etc/env.d/10pbbuttonsd
 }
 
 pkg_postinst(){

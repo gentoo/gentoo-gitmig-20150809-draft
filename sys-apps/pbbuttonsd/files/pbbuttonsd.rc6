@@ -1,0 +1,16 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/files/pbbuttonsd.rc6,v 1.1 2004/02/10 05:20:27 vapier Exp $
+
+start() {
+	ebegin "Starting pbbuttonsd"
+	/usr/bin/pbbuttonsd -d > /dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping pbbuttonsd"
+	start-stop-daemon --stop --quiet --exec /usr/bin/pbbuttonsd
+	eend $?
+}
