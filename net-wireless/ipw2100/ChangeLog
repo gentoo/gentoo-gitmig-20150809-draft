@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.37 2004/10/21 08:13:25 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.38 2004/10/24 14:08:22 brix Exp $
+
+  24 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> ipw2100-0.56-r1.ebuild:
+  Test all needed kernel options before bailing out. Thanks to Rudi Lippert
+  <gentoo at lyrikpage dot de> in bug #68591.
 
   21 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> ipw2100-0.56-r1.ebuild,
   ipw2100-0.56.ebuild:

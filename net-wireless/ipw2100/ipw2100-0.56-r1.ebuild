@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.56-r1.ebuild,v 1.2 2004/10/21 08:13:25 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.56-r1.ebuild,v 1.3 2004/10/24 14:08:22 brix Exp $
 
 inherit kernel-mod eutils
 
@@ -18,19 +18,21 @@ SLOT="0"
 KEYWORDS="~x86"
 
 IUSE=""
-DEPEND="!net-wireless/ipw2200
+DEPEND="virtual/linux-sources
+		!net-wireless/ipw2200
 		sys-apps/sed"
 RDEPEND=">=sys-apps/hotplug-20030805-r2
 		>=net-wireless/wireless-tools-27_pre23"
 
 src_unpack() {
+	local DIE=0
+
 	if ! kernel-mod_configoption_present NET_RADIO
 	then
 		eerror ""
 		eerror "${P} requires support for Wireless LAN drivers (non-hamradio) &"
 		eerror "Wireless Extensions (CONFIG_NET_RADIO) in the kernel."
-		eerror ""
-		die "CONFIG_NET_RADIO support not detected."
+		DIE=1
 	fi
 
 	if ! kernel-mod_configoption_present CRYPTO_ARC4
@@ -38,8 +40,7 @@ src_unpack() {
 		eerror ""
 		eerror "${P} requires support for ARC4 cipher algorithm (CONFIG_CRYPTO_ARC4)"
 		eerror "in the kernel."
-		eerror ""
-		die "CONFIG_CRYPTO_ARC4 support not detected."
+		DIE=1
 	fi
 
 	if ! kernel-mod_configoption_present CRYPTO_MICHAEL_MIC
@@ -47,8 +48,7 @@ src_unpack() {
 		eerror ""
 		eerror "${P} requires support for Michael MIC keyed digest algorithm"
 		eerror "(CONFIG_CRYPTO_MICHAEL_MIC) in the kernel."
-		eerror ""
-		die "CONFIG_CRYPTO_MICHAEL_MIC support not detected."
+		DIE=1
 	fi
 
 	if ! kernel-mod_configoption_present CRYPTO_AES_586 && ! kernel-mod_configoption_present CRYPTO_AES
@@ -58,8 +58,7 @@ src_unpack() {
 		eerror "(CONFIG_CRYPTO_AES_586) in the kernel."
 		eerror ""
 		eerror "This is called CONFIG_CRYPTO_AES in kernels prior to 2.6.8."
-		eerror ""
-		die "CONFIG_CRYPTO_AES_586 support not detected."
+		DIE=1
 	fi
 
 	if ! kernel-mod_configoption_present FW_LOADER
@@ -67,8 +66,7 @@ src_unpack() {
 		eerror ""
 		eerror "${P} requires Hotplug firmware loading support (CONFIG_FW_LOADER)"
 		eerror "in the kernel."
-		eerror ""
-		die "CONFIG_FW_LOADER support not detected."
+		DIE=1
 	fi
 
 	if ! kernel-mod_configoption_present CRC32
@@ -76,11 +74,16 @@ src_unpack() {
 		eerror ""
 		eerror "${P} requires support for CRC32 functions (CONFIG_CRC32) in the"
 		eerror "kernel."
-		eerror ""
-		die "CONFIG_CRC32 support not detected."
+		DIE=1
 	fi
 
 	kernel-mod_check_modules_supported
+
+	if [ $DIE -eq 1 ]
+	then
+		eerror ""
+		die "You kernel is missing the required option(s) listed above."
+	fi
 
 	unpack ${A}
 
