@@ -1,12 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_passwdqc/pam_passwdqc-0.7.4.ebuild,v 1.1 2003/09/17 04:39:46 hhg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_passwdqc/pam_passwdqc-0.7.4.ebuild,v 1.2 2003/11/11 13:13:06 vapier Exp $
 
-IUSE="pam"
 
-DESCRIPTION="Password strength checking for PAM aware password changing programs. This is an alternative to the default cracklib."
+DESCRIPTION="Password strength checking for PAM aware password changing programs"
 HOMEPAGE="http://www.openwall.com/passwdqc/"
-
 SRC_URI="http://www.openwall.com/pam/modules/pam_passwdqc/${P}.tar.gz"
 
 LICENSE="as-is"
