@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r2.ebuild,v 1.2 2005/03/22 07:14:55 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r2.ebuild,v 1.3 2005/04/01 07:19:41 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowext aalib alsa altivec arts avi bidi debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts avi bidi debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -150,16 +150,6 @@ src_unpack() {
 	# the end anymore ) and add 3gp (nokia) video codec support
 	# per bug #85642
 	epatch ${FILESDIR}/${P}-codecs.patch
-
-	# fixes -fPIC handling
-	sed -i -e 's/#if\(\(.*def *\)\|\(.*defined *\)\)PIC/#if\1__PIC__/' \
-		libavcodec/i386/dsputil_mmx{.c,_rnd.h} \
-		libavcodec/msmpeg4.c \
-		libavcodec/libpostproc/mangle.h \
-		libavcodec/common.h \
-		|| die "sed failed (__PIC__)"
-
-	epatch ${FILESDIR}/${P}-pic.patch
 }
 
 linguas_warn() {
@@ -229,7 +219,7 @@ src_compile() {
 	# check cpu flags
 	if use x86
 	then
-		CPU_FLAGS=(3dnow 3dnowext mmx sse sse2 mmxext)
+		CPU_FLAGS=(3dnow 3dnowex mmx sse sse2 mmxext)
 		ecpu_check CPU_FLAGS
 	fi
 
@@ -243,7 +233,7 @@ src_compile() {
 	if use x86 ; then
 		replace-flags -O0 -O2
 		replace-flags -O3 -O2
-		#filter-flags -fPIC -fPIE
+		filter-flags -fPIC -fPIE
 	fi
 
 	local myconf=
@@ -324,20 +314,14 @@ src_compile() {
 	use x86 && myconf="${myconf} $(use_enable real)"
 	use x86 && myconf="${myconf} $(use_enable avi win32)"
 
-	# x86+pic doesn't like mp3lib despite patches
-	# disable it and use internal ffmpeg's mp3 decoder instead
-	if use x86 && has_pic ; then
-		myconf="${myconf} --disable-mp3lib"
-	fi
-
 	#############
 	# Video Output #
 	#############
-	# 3dfx requires dga to build.  See bug #85861
+	myconf="${myconf} $(use_enable 3dfx)"
 	if use 3dfx; then
-		myconf="${myconf} --enable-tdfxvid --enable-3dfx --enable-dga"
+		myconf="${myconf} --enable-tdfxvid"
 	else
-		myconf="${myconf} --disable-tdfxvid --disable-3dfx"
+		myconf="${myconf} --disable-tdfxvid"
 	fi
 	if use fbcon && use 3dfx; then
 		myconf="${myconf} --enable-tdfxfb"
@@ -414,33 +398,12 @@ src_compile() {
 	#################
 	# Advanced Options #
 	#################
-
-	if has_pic && use x86 || use !mmx; then
-		myconf="${myconf} --disable-mmx"
-	else
-		myconf="${myconf} --enable-mmx"
-	fi
-
-	if has_pic && use x86 || use !mmxext; then
-		myconf="${myconf} --disable-mmx2"
-	else
-		myconf="${myconf} --enable-mmx2"
-	fi
-
-	if has_pic && use x86 || use !3dnow; then
-		myconf="${myconf} --disable-3dnow"
-	else
-		myconf="${myconf} --enable-3dnow"
-	fi
-
-	if has_pic && use x86 || use !3dnowext; then
-		myconf="${myconf} --disable-3dnowex"
-	else
-		myconf="${myconf} --enable-3dnowex"
-	fi
-
+	myconf="${myconf} $(use_enable 3dnow)"
+	myconf="${myconf} $(use_enable 3dnowex)";
 	myconf="${myconf} $(use_enable sse)"
 	myconf="${myconf} $(use_enable sse2)"
+	myconf="${myconf} $(use_enable mmx)"
+	myconf="${myconf} $(use_enable mmxext mmx2)"
 	myconf="${myconf} $(use_enable debug)"
 	myconf="${myconf} $(use_enable nls i18n)"
 
@@ -488,6 +451,14 @@ src_compile() {
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
 		${myconf} || die
+
+	echo "!!! ERROR: media-video/mplayer-1.0_pre6-r2 failed."
+	echo "!!! Function src_makarena, Line 1000, Exitcode 555-5555"
+	echo "!!! All your base are belong to us!"
+
+	epause 6
+
+	eerror "APRIL FOOLS!"
 
 	einfo "Make"
 	make depend && emake || die "Failed to build MPlayer!"

@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.27 2005/03/19 22:28:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.28 2005/04/01 07:19:41 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts avi bidi debug dga divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas network nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts win32codecs bidi debug dga divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas network nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -30,10 +30,10 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	x86? (
 		divx4linux? (  >=media-libs/divx4linux-20030428 )
-		avi? ( >=media-libs/win32codecs-20040916 )
 		real? ( >=media-libs/win32codecs-20040916 )
 		)
 	aalib? ( media-libs/aalib )
+	win32codecs? ( >=media-libs/win32codecs-20040916 )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	bidi? ( dev-libs/fribidi )
@@ -330,7 +330,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable xvid)"
 
 	if use x86; then
-		myconf="${myconf} $(use_enable avi win32)"
+		myconf="${myconf} $(use_enable win32codecs win32)"
 		myconf="${myconf} $(use_enable real)"
 	fi
 
