@@ -6,7 +6,7 @@ MD5 b3cb388c0c523217fcf2e4b6dfe8bbd9 files/digest-nano-1.3.2 62
 MD5 6784224c85ea1c8b11df069561386e17 files/digest-nano-1.2.2 62
 MD5 0726e5da362828bb5b1a73e5bd944849 files/1.3.2-nomac.patch 553
 MD5 148b57588079ffd0ed1a9a9f53bca7ba files/nanohupterm.patch 689
-MD5 43c4a43a65f8edf70f4d85b8de31ae70 files/nanorc-gentoo 1799
+MD5 61b0923b1b68817cc2a23e62ee2be18e files/nanorc-gentoo 1803
 MD5 061dd7ec0e2fef8722c1c46d2a09b327 files/nanorc-patch 258
 MD5 9ecacdb9e41a6ddb3200113238ca4b2b files/nanorc-sh 646
 MD5 404022ef3ea1c5600e41f2ea8e10e6be files/1.3.1-wsconvert.patch 6900
