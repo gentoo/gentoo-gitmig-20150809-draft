@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-hu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.3 2004/07/15 19:20:13 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.4 2004/08/21 02:39:07 gustavoz Exp $
+
+  20 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> ispell-hu-0.99.4.ebuild:
+  Stable on sparc
 
 *ispell-hu-0.99.4 (15 Jul 2004)
 
