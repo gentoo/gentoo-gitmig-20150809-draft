@@ -1,11 +1,11 @@
 # Copyright 2001 theLeaf sprl/bvba
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r1.ebuild,v 1.1 2002/04/07 15:28:17 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r1.ebuild,v 1.2 2002/04/28 04:15:49 seemant Exp $
 
-A=sawfish-${PV}.tar.gz
-S=${WORKDIR}/sawfish-${PV}
+MY_P=${P/-merlin/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Extensions for sawfish which provide pages, iconbox and other nice things."
-SRC_URI="http://prdownloads.sourceforge.net/sawmill/"${A}
+SRC_URI="http://prdownloads.sourceforge.net/sawmill/${MY_P}.tar.gz"
 HOMEPAGE="http://www.merlin.org/sawfish"
 
 DEPEND=">=dev-libs/rep-gtk-0.15-r1
@@ -83,6 +83,3 @@ src_install() {
 	find ${D}/etc/skel/.sawfish -name "CVS" -exec rm -rf '{}' ';'
 	cp -a ${FILESDIR}/sawfishrc ${D}/etc/skel/.sawfishrc
 }
-
-
-
