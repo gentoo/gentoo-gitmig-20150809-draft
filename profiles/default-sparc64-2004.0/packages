@@ -71,7 +71,7 @@
 *dev-lang/python
 *app-portage/gentoolkit
 
->=x11-base/xfree-4.2.1
+>=x11-base/xorg-x11-4.2.1
 *app-shells/sash
 *dev-lang/perl
 *virtual/editor

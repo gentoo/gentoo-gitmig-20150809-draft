@@ -44,7 +44,7 @@ virtual/os-headers
 *dev-lang/python
 
 
->=x11-base/xfree-4.1.0-r12
+>=x11-base/xorg-x11-4.1.0-r12
 # sash - static shell for system recovery
 *app-shells/sash
 *dev-lang/perl

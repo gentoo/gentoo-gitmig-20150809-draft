@@ -45,7 +45,7 @@ virtual/os-headers
 *dev-lang/python
 
 
->=x11-base/xfree-4.1.0-r12
+>=x11-base/xorg-x11-4.1.0-r12
 # sash - static shell for system recovery
 *app-shells/sash
 *dev-lang/perl
@@ -109,6 +109,6 @@ virtual/os-headers
 
 # version specific stuff for xbox support
 >=app-misc/lirc-0.7.0_pre6
->=x11-base/xfree-4.3.0-r6
+>=x11-base/xorg-x11-4.3.0-r6
 >=media-sound/alsa-driver-1.0.5a
 >=x11-base/xorg-x11-6.8.0-r2

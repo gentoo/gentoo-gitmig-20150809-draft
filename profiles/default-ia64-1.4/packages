@@ -40,7 +40,7 @@
 virtual/os-headers
 >=app-admin/sysklogd-1.4.1
 *dev-lang/python
->=x11-base/xfree-4.2.1
+>=x11-base/xorg-x11-4.2.1
 # sash - static shell for system recovery
 *app-shells/sash
 *dev-lang/perl

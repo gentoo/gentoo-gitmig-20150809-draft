@@ -56,6 +56,6 @@ tcltk		dev-lang/tcl dev-lang/tk
 tcpd		sys-apps/tcp-wrappers
 tetex		app-text/tetex
 tiff		media-libs/tiff
-X		x11-base/xfree
+X		x11-base/xorg-x11
 
 

@@ -53,7 +53,7 @@ sys-boot/grub
 
 sys-apps/sysklogd
 *>=dev-lang/python-2.2-r4
->=x11-base/xfree-4.1.0-r2
+>=x11-base/xorg-x11-4.1.0-r2
 *virtual/editor
 #*app-editors/vim # Vim emerges xfree ... this sucks
 *sys-fs/hfsutils

@@ -97,4 +97,4 @@
 *virtual/modutils
 virtual/os-headers
 *virtual/ssh
->=x11-base/xfree-4.2.1
+>=x11-base/xorg-x11-4.2.1
