@@ -1,7 +1,13 @@
 # ChangeLog for dev-lisp/bigloo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/ChangeLog,v 1.5 2003/06/30 23:14:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/ChangeLog,v 1.6 2003/11/29 19:39:19 karltk Exp $
 
+*bigloo-2.6a (28 Nov 2003)
+
+  28 Nov 2003; Karl Trygve Kalleberg <karltk@gentoo.org> bigloo-2.6a.ebuild :
+  New upstream version. Ebuild submitted by Lin Zhemin <ljm@ljm.idv.tw>.
+  Fixes #31596.
+  
 *bigloo-2.5c (30 Jun 2003)
 
   30 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> bigloo-2.5c.ebuild :
