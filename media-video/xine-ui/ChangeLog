@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.41 2003/12/29 12:41:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.42 2003/12/30 04:18:01 weeve Exp $
+
+  29 Dec 2003; Jason Wever <weeve@gentoo.org> xine-ui-0.9.23.ebuild:
+  So I was sitting there one day, when a ~sparc keyword fell out of the sky and
+  into my ebuild.
 
 *xine-ui-0.9.23 (29 Dec 2003)
 
