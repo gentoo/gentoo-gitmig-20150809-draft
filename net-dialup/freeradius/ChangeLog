@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.26 2005/03/13 23:05:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.27 2005/03/15 15:56:43 mrness Exp $
+
+*freeradius-1.0.2-r2 (15 Mar 2005)
+
+  15 Mar 2005; Alin Nastac <mrness@gentoo.org> +freeradius-1.0.2-r2.ebuild:
+  Install SQL schemas into doc dir(#85345).
 
 *freeradius-1.0.2-r1 (14 Mar 2005)
 
