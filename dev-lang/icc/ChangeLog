@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.12 2003/02/12 05:56:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.13 2003/02/26 20:27:58 avenj Exp $
 
 *icc-7.0.065-r2 (20 Dec 2002)
 
@@ -24,12 +24,7 @@
   version number. Also fixed the primary executable and added a warning
   about compiling important applications with icc.
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
-
-*icc-7.0 (8 Dec 2002)
-
-  8 Dec 20002 Jon Portnoy <avenj@gentoo.org> icc-7.0.ebuild :
+  8 Dec 2002 Jon Portnoy <avenj@gentoo.org> icc-7.0.ebuild :
 
   Added a warning about the behavior of the main executable.
   'icc' will return errors; 'iccbin' works fine.
@@ -43,6 +38,7 @@
 
   Included some improvments from Jon Portnoy from http://bugs.gentoo.org/show_bug.cgi?id=11211
 
+*icc-7.0
   25 Nov 2002  William McArthur <sandymac@gentoo.org> icc-7.0.ebuild :
 
   Basicly just updated the icc-6.0-r1 with new urls and changed the message at the end.
