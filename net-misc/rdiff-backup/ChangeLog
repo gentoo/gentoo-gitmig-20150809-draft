@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/rdiff-backup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.8 2003/02/12 08:31:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.9 2003/04/15 14:55:44 mholzer Exp $
+
+*rdiff-backup-0.10.2 (15 Apr 2003)
+
+  15 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  rdiff-backup-0.10.1.ebuild, rdiff-backup-0.10.1.ebuild,
+  rdiff-backup-0.10.2.ebuild:
+  Version bumped. Ebuild submitted by Maik Schreiber <blizzy@blizzy.de> in
+  #19240. Cleanup.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
