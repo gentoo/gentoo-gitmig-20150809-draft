@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.23 2004/10/21 01:01:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.24 2004/11/17 16:47:56 spyderous Exp $
+
+  17 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  kdrive-4.3.0-r5.ebuild:
+  Add debug to IUSE, and uncomment the video card listing, IUSE_VIDEO_CARDS.
 
   20 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r5.ebuild:
   Update inherit to toolchain-funcs instead of gcc and x11 instead of xfree.

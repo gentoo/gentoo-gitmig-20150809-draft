@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.10 2004/10/21 01:01:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.11 2004/11/17 16:47:56 spyderous Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -9,9 +9,9 @@
 # fonts (but support for built-in ``fixed'' and ``cursor'' fonts, and
 # normal support for bitmap fonts and font-server provided fonts).
 
-IUSE="ipv6 xinerama fbdev speedo type1 cjk truetype freetype fs xv"
+IUSE="ipv6 xinerama fbdev speedo type1 cjk truetype freetype fs xv debug"
 
-# VIDEO_CARDS="savage trident sis530 trio ts300 mach64 i810 igs"
+IUSE_VIDEO_CARDS="savage trident sis530 trio ts300 mach64 i810 igs"
 
 inherit eutils flag-o-matic toolchain-funcs x11 kmod
 
