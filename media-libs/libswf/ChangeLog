@@ -1,17 +1,23 @@
 # ChangeLog for media-libs/libswf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/ChangeLog,v 1.8 2003/05/15 15:26:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/ChangeLog,v 1.9 2003/06/20 03:11:39 kumba Exp $
+
+ 
+*libswf-0.99 (1 Feb 2002)
+
+  19 Jun 2003; Joshua Kinard <kumba@gentoo.org> libswf-0.99.ebuild:
+  Changed sparc to -sparc and added -mips to KEYWORDS, as this lib "seems" to be
+  x86-only.  ppc and hppa people should double check this lib and mask as
+  appropriate.
 
   15 May 2003; Patrick Kursawe <phosphan@gentoo.org> libswf-0.99.ebuild:
   Hopefully fixed bug 20346 (problem while unpacking, seems default unpack
   changed behaviour)
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*libswf-0.99 (1 Feb 2002)
-
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> libswf-0.99.ebuild :
   Added hppa to keywords.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   02 Nov 2002; Calum Selkirk <cselkirk@gentoo.org> libswf-0.99.ebuild :
 
