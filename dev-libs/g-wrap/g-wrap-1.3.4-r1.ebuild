@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.4.ebuild,v 1.11 2004/07/02 21:32:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.4-r1.ebuild,v 1.1 2004/07/02 21:32:27 seemant Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 IUSE=""
 
@@ -16,6 +16,11 @@ KEYWORDS="x86 ~ppc alpha sparc amd64"
 
 DEPEND=">=dev-util/guile-1.4
 	>=dev-libs/slib-2.4.2"
+
+src_unpack() {
+	unpack ${A}; cd ${S}
+	epatch ${FILESDIR}/${P}-direntry.patch
+}
 
 src_compile() {
 	filter-flags "-O?"

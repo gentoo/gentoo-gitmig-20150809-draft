@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.18 2004/06/24 23:12:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.19 2004/07/02 21:32:27 seemant Exp $
+
+*g-wrap-1.3.4-r1 (02 Jul 2004)
+
+  02 Jul 2004; Seemant Kulleen <seemant@gentoo.org>
+  +files/g-wrap-1.3.4-direntry.patch, g-wrap-1.2.1-r2.ebuild,
+  g-wrap-1.3.1-r1.ebuild, +g-wrap-1.3.4-r1.ebuild, g-wrap-1.3.4.ebuild:
+  add a patch to fix the info file direntry. Thanks to: Doug Weimer
+  <dweimer@socal.rr.com> for creating the patch to close bug #42895 by Sebastian
+  Flothow <sebastian@flothow.de>
 
   22 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> g-wrap-1.3.4.ebuild:
   inherit to top; filter-flags into src_compile; error messages; IUSE; tidy
