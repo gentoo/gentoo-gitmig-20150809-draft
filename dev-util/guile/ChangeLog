@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.28 2004/02/11 09:14:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.29 2004/03/25 08:26:09 kumba Exp $
+
+  25 Mar 2004; Joshua Kinard <kumba@gentoo.org> guile-1.6.4-r1.ebuild:
+  Marked stable on mips.
 
   11 Feb 2004; Joshua Kinard <kumba@gentoo.org> guile-1.6.4-r1.ebuild:
   Added ~mips to satisfy repoman deps
