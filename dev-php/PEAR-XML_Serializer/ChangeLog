@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-XML_Serializer
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Serializer/ChangeLog,v 1.1 2005/02/16 07:18:44 sebastian Exp $
+
+*PEAR-XML_Serializer-0.15.0 (16 Feb 2005)
+
+  16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-XML_Serializer-0.15.0.ebuild:
+  Initial ebuild for the XML_Serializer PEAR package.
+
