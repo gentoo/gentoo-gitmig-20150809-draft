@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/xine-vcdx-1_rc1-r1.ebuild,v 1.1 2004/05/12 11:20:42 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/xine-vcdx-1_rc1-r1.ebuild,v 1.2 2004/05/13 14:27:03 dholm Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/xine-lib-1_rc1
 	~media-video/vcdimager-0.7.19"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 S=${WORKDIR}/${MY_P}
 
