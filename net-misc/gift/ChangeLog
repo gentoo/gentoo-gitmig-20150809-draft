@@ -1,7 +1,14 @@
 # ChangeLog for net-misc/gift
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gift/ChangeLog,v 1.1 2002/02/01 21:53:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gift/ChangeLog,v 1.2 2002/03/16 02:36:04 g2boojum Exp $
 
+*gift-0.9.7 (1 Feb 2002)
+
+  15 Mar 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  Removed at the request of the authors.  This version is horribly
+  broken and out of date.
+  
 *gift-0.9.7 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
