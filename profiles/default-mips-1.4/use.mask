@@ -1,5 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.10 2004/06/26 23:29:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.11 2004/07/31 01:11:36 geoman Exp $
 
+# Stephen P. Becker <geoman@gentoo.org>
+# mask evolution use flag until it can be properly tested
+evo
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
