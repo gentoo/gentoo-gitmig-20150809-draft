@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.6 2002/12/13 10:56:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.7 2003/02/11 11:51:22 kain Exp $
+
+  11 Feb 2003; Bryon Roche <kain@kain.org> egenix-mx-base-2.0.4.ebuild :
+
+  ~ppcing this as it is required for blender
 
 *egenix-mx-base-2.0.4 (12 Dec 2002)
 
