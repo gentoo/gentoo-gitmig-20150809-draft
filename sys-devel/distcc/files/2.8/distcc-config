@@ -8,8 +8,11 @@
 # This script developed by Zachary T Welch at Superlucidity Services, LLC
 #  based on ideas from irc discussion and the clear need for this support
 # 
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.8/distcc-config,v 1.1 2003/07/10 16:04:45 lisa Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.8/distcc-config,v 1.2 2003/07/21 19:06:34 lisa Exp $
+# Changelog
+# 
+# 21 Jul 2003 - Changed install environment to EXCLUDE DISTCC_HOSTS from /etc/env.d/02distcc.
+#               The hosts are stored by default to /etc/distcc/hosts.  <lisa@gentoo.org>
 
 [ -z "${ROOT}" ] && ROOT=/
 
@@ -121,7 +124,6 @@ dccc_install_env() {
 	cat <<_EOF_ > ${DCCC_ENV_FILE} || \
 		dccc_exit "Unable to create ${DCCC_ENV_FILE}..."
 # This file is managed by distcc-config; use it to change these settings.
-DISTCC_HOSTS="localhost"
 # DISTCC_VERBOSE is not set
 # DISTCC_LOG is not set
 # DCCC_PATH is not set

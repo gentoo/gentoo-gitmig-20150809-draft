@@ -18,7 +18,7 @@ MD5 56fd1ac60c1b8402e1632da62f32a890 files/digest-distcc-2.8-r2 63
 MD5 ee7751409b90e538899a2d8030f779e6 files/2.8/conf 388
 MD5 3783a1abcbd33bc1d24e14012edeb696 files/2.8/init 484
 MD5 ee4f0fde9d5e6fe88bf7f513cf12920c files/2.8/001_fix_tempfile.patch.gz 251
-MD5 26e10491f8255c781cc0e33aa1ebe628 files/2.8/distcc-config 7387
+MD5 9e01d7b626696716500bbf56c68a5680 files/2.8/distcc-config 7559
 MD5 ee7751409b90e538899a2d8030f779e6 files/2.9/conf 388
 MD5 3783a1abcbd33bc1d24e14012edeb696 files/2.9/init 484
 MD5 63dd07135a46fcef934e3fa4c926d5f7 files/2.9/distcc-config 7559
