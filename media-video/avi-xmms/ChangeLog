@@ -1,6 +1,14 @@
 # ChangeLog for media-video/avi-xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avi-xmms/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avi-xmms/ChangeLog,v 1.2 2002/03/28 11:58:16 seemant Exp $
+
+*avi-xmms-1.2.2-r3 (28 Mar 2002)
+
+  28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> avi-xmms-1.2.2-r3.ebuild :
+
+  This ebuild is now just a virtual package for avi4xmms.  Eventually, avi-xmms
+  will be removed completely (unless 4Front Technologies releases a version
+  that is compatible with avifile-0.6).
 
 *avi-xmms-1.2.2-r2 (1 Feb 2002)
 
