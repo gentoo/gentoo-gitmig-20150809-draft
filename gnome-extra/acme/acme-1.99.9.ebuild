@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/acme-1.99.8.ebuild,v 1.2 2002/10/28 14:54:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/acme-1.99.9.ebuild,v 1.1 2002/10/28 14:54:24 foser Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.hadess.net/misc-code.php3"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND=">=dev-util/intltool-0.20
 	>=gnome-base/libgnomeui-2
