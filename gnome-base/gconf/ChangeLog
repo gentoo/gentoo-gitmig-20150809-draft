@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.7 2002/05/24 16:23:18 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.8 2002/05/30 05:38:27 blocke Exp $
+
+  30 May 2002; Bruce A. Locke <blocke@shivan.org> gconf-1.1.10-r1.ebuild,gconf-1.0.8-r3.ebuild:
+
+  Added SLOTS to gconf 1.0.x and 1.1.x... Merging gconf 1.1.x and doing
+  an "emerge clean" would result in gconf 1.0.x being unmerged and breaking
+  many Gnome 1.4 applications (such as Galeon)
 
 *gconf-1.1.10-r1 (24 May 2002)
   24 May 2002; Spider <spider@gentoo.org> gconf-1.1.10-r1.ebuild :

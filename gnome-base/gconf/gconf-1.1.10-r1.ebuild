@@ -16,6 +16,7 @@ S=${WORKDIR}/${MY_PN}-${PV}
 DESCRIPTION="Gnome Configuration System and Daemon"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
+SLOT="2"
 
 RDEPEND=">=dev-libs/glib-2.0.1
 		>=gnome-base/ORBit2-2.3.106
