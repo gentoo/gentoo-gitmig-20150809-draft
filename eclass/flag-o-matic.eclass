@@ -1,13 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.63 2004/07/18 04:59:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.64 2004/07/22 15:29:10 agriffis Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
 ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
 
-IUSE="debug"
+# Please leave ${IUSE} in this until portage .51 is stable, otherwise
+# IUSE gets clobbered.
+IUSE="${IUSE} debug"
 
 #
 #### filter-flags <flags> ####
@@ -99,6 +101,10 @@ filter-flags() {
 	done
 
 	for fset in CFLAGS CXXFLAGS; do
+		# Looping over the flags instead of using a global
+		# substitution ensures that we're working with flag atoms.
+		# Otherwise globs like -O* have the potential to wipe out the
+		# list of flags.
 		for f in ${!fset}; do
 			for x in "$@"; do
 				# Note this should work with globs like -O*
@@ -129,24 +135,33 @@ append-flags() {
 }
 
 replace-flags() {
-	# we do this fancy spacing stuff so as to not filter
-	# out part of a flag ... we want flag atoms ! :D
-	CFLAGS=" ${CFLAGS} "
-	CXXFLAGS=" ${CXXFLAGS} "
-	CFLAGS="${CFLAGS// ${1} / ${2} }"
-	CXXFLAGS="${CXXFLAGS// ${1} / ${2} }"
-	CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
-	CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
-	export CFLAGS CXXFLAGS
+	local f fset 
+	declare -a new_CFLAGS new_CXXFLAGS
+
+	for fset in CFLAGS CXXFLAGS; do
+		# Looping over the flags instead of using a global
+		# substitution ensures that we're working with flag atoms.
+		# Otherwise globs like -O* have the potential to wipe out the
+		# list of flags.
+		for f in ${!fset}; do
+			# Note this should work with globs like -O*
+			[[ ${f} == ${1} ]] && f=${2}
+			eval new_${fset}\[\${\#new_${fset}\[@]}]=\${f}
+		done
+		eval export ${fset}=\${new_${fset}\[*]}
+	done
+
 	return 0
 }
 
 replace-cpu-flags() {
 	local oldcpu newcpu="$1" ; shift
 	for oldcpu in "$@" ; do
-		replace-flags -march=${oldcpu} -march=${newcpu}
-		replace-flags -mcpu=${oldcpu} -mcpu=${newcpu}
-		replace-flags -mtune=${oldcpu} -mtune=${newcpu}
+		# quote to make sure that no globbing is done (particularly on
+		# ${oldcpu} prior to calling replace-flags
+		replace-flags "-march=${oldcpu}" "-march=${newcpu}"
+		replace-flags "-mcpu=${oldcpu}" "-mcpu=${newcpu}"
+		replace-flags "-mtune=${oldcpu}" "-mtune=${newcpu}"
 	done
 	return 0
 }
