@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r3.ebuild,v 1.1 2002/03/31 12:26:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r3.ebuild,v 1.2 2002/03/31 13:04:02 seemant Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://prdownloads.sourceforge.net/sgmltools-lite/${P}.tar.gz
@@ -29,7 +29,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make	\
 		prefix=${D}/usr	\
 		exec-prefix=${D}/usr	\
@@ -40,6 +40,9 @@ src_install () {
 		etcdir=${D}/etc/sgml	\
 		install || die
 
+	dodoc COPYING ChangeLog POSTINSTALL README*
+	dohtml -r .
+	
 	cd ${WORKDIR}/nw-eps-icons-0.0.1/images
 	insinto /usr/share/sgml/docbook/dsssl-stylesheets/images
 	doins *.eps
@@ -47,9 +50,6 @@ src_install () {
 	cd callouts
 	insinto /usr/share/sgml/docbook/dsssl-stylesheets/images/callouts
 	doins *.eps
-	
-	dodoc COPYING ChangeLog POSTINSTALL README*
-	dohtml -r .
 	
 	rm ${D}/etc/sgml/catalog.{suse,rh62}
 }
