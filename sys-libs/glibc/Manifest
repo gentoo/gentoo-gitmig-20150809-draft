@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 b2013d991c28310b8cc1ee0fffb3b147 ChangeLog 50483
 MD5 f3cfb768f888ac432bddfa481c2febce glibc-2.2.5-r9.ebuild 10877
 MD5 9a7d1e93fab43ab1d8907a745e417455 glibc-2.3.2-r10.ebuild 20220
-MD5 d6cf0916c40520ced30feb118e6ef6fe glibc-2.3.2-r11.ebuild 20310
+MD5 4b47e58e600eebddddb96287bdcc42da glibc-2.3.2-r11.ebuild 20306
 MD5 b7f41b64d13ebb13463afe77a0fab815 glibc-2.3.2-r2.ebuild 18863
 MD5 a286fb7deff9b927e5bb9e6e69f98663 glibc-2.3.2-r9.ebuild 19572
 MD5 81bf9a9ef6acade533daed4761400cee glibc-2.3.4.20040619-r1.ebuild 20686
@@ -122,7 +122,7 @@ MD5 16f18501efd56811e724231470dc5d00 files/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBMAOVHTu7gpaalycRAivEAKClDzrxhpHaF0oPqy786cCf3KS52QCeNrVT
-fvn4QnJEdHKNss6lxc2ImEs=
-=CWXY
+iD8DBQFBMAPHHTu7gpaalycRAqQ8AJ4s2GA8kvpYk0OmwTT7zCBI7jmp1ACdGkQ4
+xTIjYpghPnQypIMau97yaSM=
+=kUUH
 -----END PGP SIGNATURE-----
