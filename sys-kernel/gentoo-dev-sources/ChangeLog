@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.87 2004/08/19 21:23:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.88 2004/08/20 20:36:17 spock Exp $
 
   20 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gentoo-dev-sources-2.6.8(-r1).ebuild:
@@ -15,7 +15,8 @@
 
   18 Aug 2004; Michal Januszewski <spock@gentoo.org>
   +gentoo-dev-sources-2.6.8-r1.ebuild:
-  Added fbsplash and vesafb-tng patches.
+  Added fbsplash and vesafb-tng patches. Please refer to
+  http://dev.gentoo.org/~spock/ for information on bootsplash replacement.
 
   17 Aug 2004; Aron Griffis <agriffis@gentoo.org>
   gentoo-dev-sources-2.6.8.ebuild:
