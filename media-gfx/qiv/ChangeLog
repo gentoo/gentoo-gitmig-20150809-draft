@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qiv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.9 2004/06/24 22:48:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.10 2004/07/22 22:38:57 tgall Exp $
+
+  22 Jul 2004; Tom Gall <tgall@gentoo.org> qiv-1.9.ebuild:
+  stable on ppc64, bug #57623
 
   17 Mar 2004; Seemant Kulleen <seemant@gentoo.org> qiv-1.9_pre10.ebuild:
   fix for bug #44712 by Michael Sterret <mr_bones_@gentoo.org>
