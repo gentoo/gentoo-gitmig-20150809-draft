@@ -42,10 +42,6 @@
 # Masked while the system people put this through the test
 =sys-apps/bash-2.05b
 
-# <phoen][x@gentoo.org> 23 Jul 2002
-# Masked fping-2.4_beta2-r1 for testing
-=net-analyzer/fping-2.4_beta2-r1
-
 # <seemant@gentoo.org> 23 Jul 2002
 # Masked while g2boojum approves
 =sys-kernel/usermode-sources-2.4.18-r2
