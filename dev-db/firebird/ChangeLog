@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.4 2003/02/12 05:47:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.5 2003/04/16 11:21:19 mholzer Exp $
 
 *firebird-1.0-r1 (22 Mar 2002)
+
+  16 Apr 2003; Martin Holzer <mholzer@gentoo.org> firebird-1.0-r1.ebuild:
+  Changed description. Closes #19376.
 
   22 Mar 2002; G.Bevin <gbevin@gentoo.org> firebird-1.0-r1.ebuild
   files/firebird-1.0-r1 files/firebird-1.0-gentoo.patch:
