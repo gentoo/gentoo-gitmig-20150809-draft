@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.9.ebuild,v 1.5 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.9.ebuild,v 1.6 2003/01/01 02:01:59 agriffis Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -16,7 +16,7 @@ LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 RDEPEND="virtual/x11
-	>=dev-libs/glib-2.0.7
+	>=dev-libs/glib-2.0.6
 	>=dev-libs/atk-1.0.3-r1
 	>=x11-libs/pango-1.0.4-r1
 	>=media-libs/libpng-1.2.1

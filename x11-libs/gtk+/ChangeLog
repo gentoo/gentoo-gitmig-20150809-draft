@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.43 2002/12/24 20:21:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.44 2003/01/01 02:01:59 agriffis Exp $
+
+  31 Dec 2002; Aron Griffis <agriffis@gentoo.org> gtk+-2.0.9.ebuild :
+  glib-2.0.7 is broken on alpha, so change the dependency here to version
+  2.0.6 which works fine with gtk+-2.0.9
 
   24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gtk+-2.2.0.ebuild :
   Fix to depend on glib-2.2.0, else it fails with unresolved symbols ..
