@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 5b82460b0bc341721db791733ca49b61 ChangeLog 17190
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
-MD5 943065c583a2784de8b412c78448df05 openssh-3.7.1_p2-r1.ebuild 4094
-MD5 483c0aaacb9e93630487cc3e95c95984 openssh-3.7.1_p2-r2.ebuild 4625
-MD5 21a99db81b8b64032ab0400ec6d1e58a openssh-3.8.1_p1.ebuild 4045
-MD5 8aa5f9269062d89fb56275b53747ea18 openssh-3.8_p1.ebuild 4222
-MD5 7c6a0875ecaea2f6f06a7e5168bd0f27 openssh-3.8.1_p1-r1.ebuild 4225
-MD5 f3b51950101783d3e4735631aea8802d openssh-3.8.1_p1-r2.ebuild 4247
-MD5 5980749b551997b4337676c916441243 openssh-3.9_p1.ebuild 4307
+MD5 aec43e5b3a4401a4acb51363c755a729 openssh-3.7.1_p2-r1.ebuild 4113
+MD5 a028e2299c7750ee138516c268f1eeec openssh-3.7.1_p2-r2.ebuild 4644
+MD5 f80730dd66dcef312979858e358615e7 openssh-3.8.1_p1.ebuild 4064
+MD5 2358cb06c79fcfc3c2cde9444309a324 openssh-3.8_p1.ebuild 4241
+MD5 12097112d6d6bf07220294da6c6d5d29 openssh-3.8.1_p1-r1.ebuild 4242
+MD5 b4353850fbc9705f26093f98055cfc69 openssh-3.8.1_p1-r2.ebuild 4266
+MD5 be7434eabb07a1ae37fcaf793711321c openssh-3.9_p1.ebuild 4326
 MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r2 142
 MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r1 142
 MD5 7880e18b2a91e5927810dddc7bda270f files/openssh-3.7.1_p1-selinux.diff.bz2 1353
@@ -46,7 +46,7 @@ MD5 93d19c0ef91091a730510c46ab8e811e files/openssh-3.9_p1-selinux.diff.bz2 1307
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBXCHhHTu7gpaalycRArK2AJ42Xmqgv4VfCtHdTgyC4xaE3jBdzQCfRZeU
-yEQ2f9OFkrFweHYoFsP0/k0=
-=9bx5
+iD8DBQFBiZj6HTu7gpaalycRAqKvAJ9d1swqG3c7if8GY5vPAHsbQSyL/QCeO5qS
+P9Hd+SksqhIOeED2QOGcZU8=
+=hrOQ
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r1.ebuild,v 1.17 2004/09/14 08:02:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r1.ebuild,v 1.18 2004/11/04 02:49:52 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -14,7 +14,7 @@ SELINUX_PATCH="openssh-3.7.1_p1-selinux.diff"
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
-SRC_URI="mirror://openssh/${PARCH}.tar.gz
+SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 	X509? ( http://gentoo.tamperd.net/${X509_PATCH} )"
 #	X509? ( http://roumenpetrov.info/openssh/x509g2/${X509_PATCH} )"
 
