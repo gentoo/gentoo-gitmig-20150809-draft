@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.184 2004/10/23 20:01:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.185 2004/10/26 02:23:17 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.4 (25 Oct 2004)
+
+  25 Oct 2004; Aron Griffis <agriffis@gentoo.org> -baselayout-1.11.3.ebuild,
+  +baselayout-1.11.4.ebuild:
+  Fix net-scripts problems related to module loading and alias management. Fix
+  some bugs related to /dev and fsck. See rc-scripts ChangeLog for details
 
   23 Oct 2004; Aron Griffis <agriffis@gentoo.org> baselayout-1.11.3.ebuild:
   Use rc-scripts-1.4.16-livecd.patch for baselayout-1.11.x until patch is
