@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.ebuild,v 1.2 2001/04/17 19:40:09 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.ebuild,v 1.3 2001/04/17 19:45:50 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -20,10 +20,18 @@ DEPEND="virtual/glibc
         nls? ( sys-devel/gettext )"
 
 src_unpack() {
+
   unpack ${P}.tar.gz
+
   cd ${S}
+
+  # This is a patch from Peter Eisentraut
   patch -p0 < ${DISTDIR}/rl42-pg.patch
+  # This patch is based on Lamar Owens, Thomas Lockhards and 
+  # Thron Eivind Glomsrod work. Thanks you all.
   patch -p1 < ${FILESDIR}/${P}-perl5-GNUmakefile-gentoo.diff
+  
+
 }
 
 src_compile() {
