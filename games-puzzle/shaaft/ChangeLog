@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/shaaft
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.1 2004/02/01 09:57:46 mr_bones_ Exp $
+
+*shaaft-0.5.0 (01 Feb 2004)
+
+  01 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  shaaft-0.5.0.ebuild:
+  initial commit; ebuild submitted by Chris Aniszczyk via bug 40031
+
