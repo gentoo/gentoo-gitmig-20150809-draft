@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.35 2004/02/26 22:28:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.36 2004/03/18 23:40:37 wolf31o2 Exp $
+
+*vmware-workstation-4.5.1.7568 (18 Mar 2004)
+
+  18 Mar 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-4.5.1.7568.ebuild:
+  Adding 4.5.1 version to ~x86 and closing bug #44626.
 
   26 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-4.0.5.6030.ebuild:
