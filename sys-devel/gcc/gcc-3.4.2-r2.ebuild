@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.11 2004/10/25 17:35:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.12 2004/10/25 20:42:02 lv Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64 boundschecking"
 
@@ -124,7 +124,7 @@ chk_gcc_version() {
 
 	if [ -n "${OLD_GCC_CHOST}" ]
 	then
-		if [ "${CHOST}" = "${CCHOST}" -a "${OLD_GCC_CHOST}" != "${CHOST}" ]
+		if [ "${CHOST}" = "${CTARGET}" -a "${OLD_GCC_CHOST}" != "${CHOST}" ]
 		then
 			echo "${OLD_GCC_CHOST}" > "${WORKDIR}/.oldgccchost"
 		fi
@@ -290,7 +290,7 @@ src_install() {
 
 		# Rename jar because it could clash with Kaffe's jar if this gcc is
 		# primary compiler (aka don't have the -<version> extension)
-		cd ${D}${PREFIX}/${CCHOST}/gcc-bin/${MY_PV}
+		cd ${D}${PREFIX}/${CTARGET}/gcc-bin/${MY_PV}
 		[ -f jar ] && mv -f jar gcj-jar
 
 		# Move <cxxabi.h> to compiler-specific directories
@@ -301,13 +301,13 @@ src_install() {
 		cd ${D}${BINPATH}
 		for x in gcc g++ c++ g77 gcj
 		do
-			rm -f ${CCHOST}-${x}
-			[ -f "${x}" ] && ln -sf ${x} ${CCHOST}-${x}
+			rm -f ${CTARGET}-${x}
+			[ -f "${x}" ] && ln -sf ${x} ${CTARGET}-${x}
 
-			if [ -f "${CCHOST}-${x}-${PV}" ]
+			if [ -f "${CTARGET}-${x}-${PV}" ]
 			then
-				rm -f ${CCHOST}-${x}-${PV}
-				ln -sf ${x} ${CCHOST}-${x}-${PV}
+				rm -f ${CTARGET}-${x}-${PV}
+				ln -sf ${x} ${CTARGET}-${x}-${PV}
 			fi
 		done
 	fi
@@ -328,40 +328,40 @@ src_install() {
 	if ! use build
 	then
 		cd ${S}
-		docinto /${CCHOST}
+		docinto /${CTARGET}
 		dodoc COPYING COPYING.LIB ChangeLog* FAQ MAINTAINERS README
-		docinto ${CCHOST}/html
+		docinto ${CTARGET}/html
 		dohtml *.html
 		cd ${S}/boehm-gc
-		docinto ${CCHOST}/boehm-gc
+		docinto ${CTARGET}/boehm-gc
 		dodoc ChangeLog doc/{README*,barrett_diagram}
-		docinto ${CCHOST}/boehm-gc/html
+		docinto ${CTARGET}/boehm-gc/html
 		dohtml doc/*.html
 		cd ${S}/gcc
-		docinto ${CCHOST}/gcc
+		docinto ${CTARGET}/gcc
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
 		if use f77
 		then
 			cd ${S}/libf2c
-			docinto ${CCHOST}/libf2c
+			docinto ${CTARGET}/libf2c
 			dodoc ChangeLog* README TODO *.netlib
 		fi
 		cd ${S}/libffi
-		docinto ${CCHOST}/libffi
+		docinto ${CTARGET}/libffi
 		dodoc ChangeLog* LICENSE README
 		cd ${S}/libiberty
-		docinto ${CCHOST}/libiberty
+		docinto ${CTARGET}/libiberty
 		dodoc ChangeLog* COPYING.LIB README
 		if use objc
 		then
 			cd ${S}/libobjc
-			docinto ${CCHOST}/libobjc
+			docinto ${CTARGET}/libobjc
 			dodoc ChangeLog* README* THREADS*
 		fi
 		cd ${S}/libstdc++-v3
-		docinto ${CCHOST}/libstdc++-v3
+		docinto ${CTARGET}/libstdc++-v3
 		dodoc ChangeLog* README
-		docinto ${CCHOST}/libstdc++-v3/html
+		docinto ${CTARGET}/libstdc++-v3/html
 		dohtml -r -a css,diff,html,txt,xml docs/html/*
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
@@ -369,10 +369,10 @@ src_install() {
 		if use gcj
 		then
 			cd ${S}/fastjar
-			docinto ${CCHOST}/fastjar
+			docinto ${CTARGET}/fastjar
 			dodoc AUTHORS CHANGES COPYING ChangeLog* NEWS README
 			cd ${S}/libjava
-			docinto ${CCHOST}/libjava
+			docinto ${CTARGET}/libjava
 			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
 		fi
 
