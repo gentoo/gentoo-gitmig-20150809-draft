@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r2.ebuild,v 1.1 2003/09/02 23:03:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r2.ebuild,v 1.2 2003/09/07 00:37:55 msterret Exp $
 
 inherit gnuconfig
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc"
 
 src_unpack() {
- 	unpack ${A}
+	unpack ${A}
 	cd ${P}
 	mv usb.ids usb.ids.orig
 	wget http://www.linux-usb.org/usb.ids
@@ -40,8 +40,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	
-	# we don't need libusb.* from usbutils because it conflicts 
+
+	# we don't need libusb.* from usbutils because it conflicts
 	# with dev-libs/libusb
 	rm -rf ${D}/usr/lib
 	rm -rf ${D}/usr/include

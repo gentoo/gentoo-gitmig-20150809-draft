@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r6.ebuild,v 1.2 2003/09/03 14:51:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r6.ebuild,v 1.3 2003/09/07 00:38:44 msterret Exp $
 
 inherit eutils
 
 DESCRIPTION="Collection of tools for managing UNIX services"
 SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
 	ipv6? ( http://www.fefe.de/ucspi/ucspi-tcp-0.88-ipv6.diff13.bz2 )
- 	ssl? ( http://www.nrg4u.com/qmail/ucspi-tcp-ssl-20020705.patch.gz )
+	ssl? ( http://www.nrg4u.com/qmail/ucspi-tcp-ssl-20020705.patch.gz )
 	mirror://qmail/ucspi-rss.diff"
 HOMEPAGE="http://cr.yp.to/ucspi-tcp.html"
 
@@ -22,7 +22,7 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	if use ipv6; then 
+	if use ipv6; then
 		epatch ${WORKDIR}/ucspi-tcp-0.88-ipv6.diff13
 	elif use ssl; then
 		epatch ${WORKDIR}/ucspi-tcp-ssl-20020705.patch

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r1.ebuild,v 1.7 2003/08/07 09:26:46 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r1.ebuild,v 1.8 2003/09/07 00:37:55 msterret Exp $
 
 inherit gnuconfig
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc"
 
 src_unpack() {
- 	unpack ${A}
+	unpack ${A}
 	cd ${P}
 	mv usb.ids usb.ids.orig
 	wget http://www.linux-usb.org/usb.ids

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.11.ebuild,v 1.6 2003/07/16 17:58:34 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.11.ebuild,v 1.7 2003/09/07 00:40:39 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
@@ -30,7 +30,7 @@ src_unpack() {
 		-e 's:$.DESKTOP.::' \
 		Makefile.orig > Makefile
 
-	# WARNING! In case of a version bump, check the line below that 
+	# WARNING! In case of a version bump, check the line below that
 	# removes a line from the Makefile file.
 	cd ${S}/ps
 	mv Makefile Makefile.orig
@@ -48,7 +48,7 @@ src_unpack() {
 		Makefile.orig > Makefile
 }
 
-src_compile() { 
+src_compile() {
 	dodir /lib
 
 	make SHLIBDIR="${D}lib" || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r7.ebuild,v 1.1 2003/09/03 14:51:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r7.ebuild,v 1.2 2003/09/07 00:38:44 msterret Exp $
 
 inherit eutils gcc
 
@@ -22,7 +22,7 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	if use ipv6; then 
+	if use ipv6; then
 		epatch ${WORKDIR}/ucspi-tcp-0.88-ipv6.diff13
 	elif use ssl; then
 		epatch ${WORKDIR}/ucspi-tcp-ssl-20020705.patch
