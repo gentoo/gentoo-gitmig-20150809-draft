@@ -98,10 +98,6 @@ dev-libs/commoncpp2
 =kde-base/kdetoys-3.1_beta2
 =kde-base/kdeutils-3.1_beta2
 
-# <woodchip@gentoo.org> (02 Oct 2002)
-# chase latest release; update/report please.
-=sys-apps/evms-1.2.0
-
 # fix #6519, #5953; masked until they are well tested
 =kde-base/kdebase-3.0.3-r1
 =x11-themes/ksplash-ml-themes-20020705-r1
