@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.16 2004/03/29 00:54:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.17 2004/04/01 06:18:43 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
 
+DESCRIPTION="PHP generic SAPI ebuild"
 ECLASS=php-sapi
 INHERITED="$INHERITED $ECLASS"
 
