@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ntodo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ChangeLog,v 1.5 2004/06/28 20:08:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ChangeLog,v 1.6 2004/08/27 21:49:58 tgall Exp $
+
+  27 Aug 2004; Tom Gall <tgall@gentoo.org> ntodo-1.0.ebuild:
+  stable on ppc64, bug#59379
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> ntodo-1.0.ebuild:
   add sed-4 dep
