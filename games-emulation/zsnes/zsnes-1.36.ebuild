@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.36.ebuild,v 1.3 2004/01/05 03:17:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.36.ebuild,v 1.4 2004/01/31 23:19:23 vapier Exp $
 
 inherit games
 
@@ -14,7 +14,6 @@ KEYWORDS="-* x86"
 IUSE="opengl"
 
 RDEPEND="opengl? ( virtual/opengl )
-	virtual/x11
 	>=media-libs/libsdl-1.2.0
 	sys-libs/zlib
 	media-libs/libpng"
