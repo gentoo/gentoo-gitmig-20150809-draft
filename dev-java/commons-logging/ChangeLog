@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.13 2004/03/18 20:21:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.14 2004/03/23 05:43:44 zx Exp $
+
+  23 Mar 2004; Chris Aniszczyk <zx@gentoo.org>
+  commons-logging-1.0.3-r1.ebuild:
+  Fixed so it will ant will die gracefully.
 
   20 Mar 2004; Chris Aniszczyk <zx@gentoo.org> commons-logging-1.0.3.ebuild:
   Clean up and fixes. Not using jakarta-commons.elcass anymore
