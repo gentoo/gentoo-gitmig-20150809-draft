@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.25 2004/04/14 00:38:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.26 2004/05/10 14:41:52 aliz Exp $
+
+  10 May 2004; Daniel Ahlberg <aliz@gentoo.org> nedit-5.4.ebuild:
+  Added amd64 keyword, closing #50613.
 
   13 Apr 2004; Jason Wever <weeve@gentoo.org> nedit-5.4.ebuild:
   Stable on sparc.
