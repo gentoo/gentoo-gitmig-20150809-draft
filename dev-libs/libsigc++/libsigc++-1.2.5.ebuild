@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.18 2005/01/09 14:56:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.19 2005/03/13 19:59:54 corsair Exp $
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/libsigc/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1.2"
-KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64"
+KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64 ~ppc64"
 IUSE="debug"
 
 RDEPEND="virtual/libc"
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if use amd64; then
+	if useq amd64 || useq ppc64; then
 		libtoolize -c -f --automake
 		WANT_AUTOMAKE=1.7 aclocal -I scripts ${ACLOCAL_FLAGS} || die "aclocal failed.  Are your \$ACLOCAL_FLAGS sane?"
 		WANT_AUTOMAKE=1.7 automake --add-missing --copy
