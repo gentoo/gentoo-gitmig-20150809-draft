@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.3-r1.ebuild,v 1.8 2003/03/11 06:29:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.3-r1.ebuild,v 1.9 2003/03/27 02:32:23 seemant Exp $
 
 inherit eutils
 
@@ -14,23 +14,25 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/texinfo/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64 alpha hppa arm mips"
+KEYWORDS="x86 ppc sparc alpha hppa arm mips"
 
-DEPEND="!build? ( >=sys-libs/ncurses-5.2-r2
-		nls? ( sys-devel/gettext ) )"
+DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=sys-apps/sed-4.0.5
+	!build? ( >=sys-libs/ncurses-5.2-r2
+	nls? ( sys-devel/gettext ) )"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}/doc
 	# Get the texinfo info page to have a proper name of texinfo.info
-	cp texinfo.txi texinfo.txi.orig
-	sed -e 's:setfilename texinfo:setfilename texinfo.info:' \
-		texinfo.txi.orig > texinfo.txi
-	cp Makefile.in Makefile.in.orig
-	sed -e 's:INFO_DEPS = texinfo:INFO_DEPS = texinfo.info:' \
+	sed -i 's:setfilename texinfo:setfilename texinfo.info:' texinfo.txi
+
+	sed -i \
+		-e 's:INFO_DEPS = texinfo:INFO_DEPS = texinfo.info:' \
 		-e 's:texinfo\::texinfo.info\::' \
-		Makefile.in.orig > Makefile.in
+		Makefile.in
+
 	cd ${S}/util
 	epatch ${FILESDIR}/install-info.patch
 }
