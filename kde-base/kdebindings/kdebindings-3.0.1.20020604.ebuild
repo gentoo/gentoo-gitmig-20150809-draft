@@ -1,7 +1,9 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.1.20020604.ebuild,v 1.2 2002/06/05 20:08:46 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.1.20020604.ebuild,v 1.3 2002/06/06 20:23:05 danarmak Exp $
+
+# TODO: add gnustep bindings
 
 inherit kde-patch kde-dist
 
@@ -19,7 +21,7 @@ newdepend ">=kde-base/kdebase-${PV}
 
 use python									|| myconf="$myconf --without-python"
 use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
-myconf="$myconf --enable-objc"
+#myconf="$myconf --enable-objc"
 
 export LIBPYTHON="`python-config`"
 
