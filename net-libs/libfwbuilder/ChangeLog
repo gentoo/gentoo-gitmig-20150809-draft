@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.10 2002/12/13 11:00:04 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.11 2003/01/05 12:23:57 aliz Exp $
+
+*libfwbuilder-0.10.12 (05 Jan 2003)
+
+  05 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Versionbump.
+
+  05 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> libfwbuilder-0.10.11.ebuild :
+  Marked stable for x86.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

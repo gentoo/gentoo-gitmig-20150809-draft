@@ -6,10 +6,10 @@ IUSE="ssl static"
 
 DESCRIPTION="A firewall GUI (library functions)"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
-HOMEPAGE="http://fwbuilder.sourceforge.net/"
+HOMEPAGE="http://www.fwbuilder.org/"
 S=${WORKDIR}/${P}
 
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~x86 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
