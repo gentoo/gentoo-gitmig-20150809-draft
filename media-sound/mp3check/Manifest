@@ -3,12 +3,13 @@ Hash: SHA1
 
 MD5 ebadcb1f45a8d1f9dfe7f4e45bf88d11 ChangeLog 960
 MD5 3f742bae003770b3d0557f17cdae55c8 mp3check-0.8.0.ebuild 689
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 0e4355f7afa9cfc73b2c06420a9923b5 files/digest-mp3check-0.8.0 66
 MD5 738499728009660d6d5d4f50515c6ff7 files/mp3check-0.8.0-gcc34.diff 2675
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBowb1ArHZZzCEUG0RAst2AJ93fNJ29847qxVJZkQPKbdpC2pNZQCeM4M1
-OURaB4hnGVasJ37ta26XUUQ=
-=937u
+iD8DBQFBowdaArHZZzCEUG0RAizXAJ9x+kKXKGPYKxwYfGoIdHTitKd5SACdElu2
+95vl88m+xmedWmklrkwddrk=
+=kzD3
 -----END PGP SIGNATURE-----
