@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Mozilla Firefox (bin)
+Comment=Mozilla Application Suite
+Exec=/usr/bin/firefox-bin %U
+Icon=mozillafirefox-bin-icon.png
+Terminal=false
+Type=Application
+Categories=Application;Network;
