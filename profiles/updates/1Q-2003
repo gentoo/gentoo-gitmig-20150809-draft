@@ -11,3 +11,4 @@ move sys-kernel/crypto-sources sys-kernel/gentoo-sources
 move net-misc/knetfilter net-firewall/firestarter
 move net-misc/kmyfirewall net-firewall/kmyfirewall
 move net-misc/dynfw net-firewall/dynfw
+move dev-libs/gtk-sharp x11-libs/gtk-sharp
