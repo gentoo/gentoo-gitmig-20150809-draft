@@ -1,5 +1,6 @@
 MD5 cfd43c96c264a98335b410fefd7a0823 ffmpeg-0.4.8.20040222.ebuild 3170
-MD5 801b31f12ad30a7c5dafc5b0c6267c96 ChangeLog 4597
+MD5 d128643c56f2038da7f8714350b1e07d ChangeLog 4746
+MD5 8a8a1e48071be945472ef247503fe640 ffmpeg-0.4.8.20040322.ebuild 3170
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 9a7b4ff25d53251aa3e7079bef633c7f ffmpeg-0.4.7.ebuild 2181
 MD5 c08c6f5c49ed22ca25c8b4dda5c17553 ffmpeg-0.4.8.ebuild 2386
@@ -8,3 +9,4 @@ MD5 77014ea836fa26b88ebae7c85c912059 files/ffmpeg-0.4.7-2.6.patch 491
 MD5 0a76b7a4442aea90d56ac85508b2eff5 files/digest-ffmpeg-0.4.8 65
 MD5 7eca667f050b6c515830ff9be05bacc6 files/digest-ffmpeg-0.4.7 65
 MD5 6f1d9c82b5e8c3b7c46b80bc3c1bb443 files/alpha-idct.patch 777
+MD5 d96905e9b38176623d31ad3cffbc63fd files/digest-ffmpeg-0.4.8.20040322 69
