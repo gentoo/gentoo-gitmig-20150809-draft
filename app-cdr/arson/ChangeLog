@@ -1,10 +1,15 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.18 2003/09/30 08:15:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.19 2003/10/02 07:56:23 kumba Exp $
+
 
 *arson-0.9.7-r3 (12 Apr 2003)
+
+  02 Oct 2003; Joshua Kinard <kumba@gentoo.org> arson-0.9.7-r3.ebuild:
+  Added a patch that fixes a multi-line string issue with gcc-3.3.x
+  Closes Bug #28236
+
   12 Apr 2003; Michele Balistreri <brain@gentoo.org> : arson-0.9.7-r3.ebuild :
-  
   Fix crash on startup, solve bug #17975
   
 *arson-0.9.7-r2 (12 Apr 2003)
@@ -13,17 +18,15 @@
   Added flac support, #18074.
 
   28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> : arson-0.9.7-r1.ebuild:
-
   Updated to stable ppc keyword
 
   19 Mar 2003; Dan Armak <danarmak@gentoo.org> : arson-0.9.7-r1.ebuild:
-  
   Added x86 keyword.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  changed sparc ~sparc keywords
  
   29 Nov 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
-
   Inherit kde before setting local settings, so that overrides are done in
   the correct direction.
 
