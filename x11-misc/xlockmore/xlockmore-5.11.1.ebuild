@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.11.1.ebuild,v 1.1 2004/03/06 03:25:19 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.11.1.ebuild,v 1.2 2004/03/06 10:08:18 dholm Exp $
 
 inherit gnuconfig
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.tux.org/~bagleyd/xlockmore.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 
 DEPEND="virtual/x11
 	media-libs/freetype
