@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.1.4.ebuild,v 1.6 2003/11/29 23:24:14 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.1.4.ebuild,v 1.7 2003/11/30 00:25:21 vapier Exp $
 inherit kde-dist
 
 IUSE="pam foreign-package foreign-sysvinit"
 DESCRIPTION="KDE administration tools (user manager, etc.)"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="x86 ppc sparc hppa amd64"
 
 newdepend "pam? ( >=sys-libs/pam-0.72 )
 	foreign-package? ( >=app-arch/rpm-4.0.4-r1 dev-libs/popt )"
