@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-0.9.12.ebuild,v 1.3 2004/01/12 19:23:47 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-0.9.12.ebuild,v 1.4 2004/04/26 04:09:41 agriffis Exp $
 
 DESCRIPTION="High quality television application for use with video capture cards."
 HOMEPAGE="http://tvtime.net/"
@@ -25,7 +25,7 @@ src_compile() {
 	myconf="${myconf} `use_with directfb`"
 	myconf="${myconf} `use_with sdl` `use_enable sdl sdltest`"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "compile problem"
 }
 

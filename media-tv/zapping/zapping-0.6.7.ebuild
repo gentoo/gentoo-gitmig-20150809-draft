@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.6.7.ebuild,v 1.3 2003/12/15 23:53:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.6.7.ebuild,v 1.4 2004/04/26 04:11:45 agriffis Exp $
 
 DESCRIPTION="TV- and VBI- viewer for the Gnome environment"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -31,7 +31,7 @@ src_compile() {
 		&& myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 
 	mv src/Makefile src/Makefile.orig
 	sed -e "s:\(INCLUDES = \$(COMMON_INCLUDES)\):\1 -I/usr/include/libglade-1.0 -I/usr/include/gdk-pixbuf-1.0:" \
