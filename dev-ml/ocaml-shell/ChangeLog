@@ -1,8 +1,8 @@
 # ChangeLog for dev-ml/ocaml-shell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-shell/ChangeLog,v 1.1 2003/02/23 21:57:14 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-shell/ChangeLog,v 1.2 2004/03/01 12:20:27 aliz Exp $
 
-*ocaml-shell-0.2.3-r1.ebuild (23 Feb 2003)
+*ocaml-shell-0.2.3-r1 (23 Feb 2003)
 
   23 Feb 2003; George Shapovalov <george@gentoo.org> ChangeLog, ocaml-shell-0.2.3-r1.ebuild, files/digest-ocaml-shell-0.2.3-r1 :
   initial release (#15902)

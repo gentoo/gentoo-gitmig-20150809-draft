@@ -1,8 +1,8 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.1 2003/02/23 22:02:52 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.2 2004/03/01 12:20:27 aliz Exp $
 
-*ocamlnet-0.95.ebuild (23 Feb 2003)
+*ocamlnet-0.95 (23 Feb 2003)
 
   23 Feb 2003; George Shapovalov <george@gentoo.org> ChangeLog, ocamlnet-0.95.ebuild, files/digest-ocamlnet-0.95 :
   initial release (#15901)
