@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.114 2005/02/16 19:59:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.115 2005/02/17 14:58:30 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -64,9 +64,9 @@ kde_src_unpack() {
 	fi
 
 	# temp fix for bug #78720, until the real bug in gcc gets fixed
-	# briefly, -fvisibility-inlines-hidden is broken on amd64
+	# briefly, -fvisibility-inlines-hidden is broken on amd64 and ppc
 	# this only applies to kde 3.4. the grep prevents us from removing configure unnecessarily.
-	if useq amd64; then
+	if useq amd64 || useq ppc; then
 		if grep -- '-fvisibility=hidden -fvisibility-inlines-hidden' admin/acinclude.m4.in >/dev/null; then
 			sed -i -e 's:-fvisibility=hidden -fvisibility-inlines-hidden:-fvisibility=hidden:' admin/acinclude.m4.in
 			rm -f configure
