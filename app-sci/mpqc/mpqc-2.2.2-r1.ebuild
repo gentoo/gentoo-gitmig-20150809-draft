@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/mpqc-2.2.2-r1.ebuild,v 1.2 2004/09/23 08:24:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/mpqc-2.2.2-r1.ebuild,v 1.3 2004/10/02 17:04:38 spyderous Exp $
 
 DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 HOMEPAGE="http://www.mpqc.org/"
@@ -24,13 +24,13 @@ src_compile() {
 	myconf="${myconf} --prefix=/usr"
 	use X && myconf="${myconf} --x-includes=/usr/X11R6/include \
 	  --x-libraries=/usr/X11R6/lib"
-	./configure ${myconf}
+	./configure ${myconf} || die "configure failed"
 	sed -e "s:^CFLAGS =.*$:CFLAGS=${CFLAGS_SAVE}:" \
 	  -e "s:^FFLAGS =.*$:FFLAGS=${CFLAGS_SAVE}:" \
 	  -e "s:^CXXFLAGS =.*$:CXXFLAGS=${CXXFLAGS_SAVE}:" \
 	  lib/LocalMakefile > lib/LocalMakefile.foo
 	mv lib/LocalMakefile.foo lib/LocalMakefile
-	emake
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -38,5 +38,5 @@ src_install() {
 	  > lib/LocalMakefile.foo
 	mv lib/LocalMakefile.foo lib/LocalMakefile
 	use doc && doman ${WORKDIR}/${PN}-man-${PV}/man3/*
-	make install install_devel install_inc
+	make install install_devel install_inc || die "install failed"
 }

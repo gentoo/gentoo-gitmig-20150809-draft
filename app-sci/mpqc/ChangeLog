@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/mpqc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/ChangeLog,v 1.14 2004/09/23 08:24:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/ChangeLog,v 1.15 2004/10/02 17:04:38 spyderous Exp $
+
+  02 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; mpqc-2.2.2-r1.ebuild,
+  mpqc-2.2.2.ebuild:
+  Add some die()'s (#54595).
 
   23 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>; mpqc-2.2.2-r1.ebuild:
   Add previous KEYWORDS as ~arch.
