@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.51-r3.ebuild,v 1.5 2002/10/20 18:41:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.53.ebuild,v 1.1 2002/10/27 07:52:21 woodchip Exp $
 
-IUSE="static readline innodb berkdb tcpd"
+IUSE="static readline innodb berkdb tcpd ssl"
 
 SVER=${PV%.*}
 #normal releases:
@@ -18,14 +18,14 @@ S=${WORKDIR}/${P}
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc
-	readline? ( >=sys-libs/readline-4.1 )
+DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+	ssl? ( >=dev-libs/openssl-0.9.6d )
 	>=sys-libs/zlib-1.1.3
 	sys-devel/perl
 	sys-apps/procps"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~sparc64"
 
 # HEY!
 # the benchmark stuff in /usr/share/mysql/sql-bench and
@@ -39,20 +39,25 @@ src_unpack() {
 	# required for qmail-mysql
 	patch -p0 < ${FILESDIR}/mysql-3.23-nisam.h.diff || die
 	# zap startup script messages
-	patch -p1 < ${FILESDIR}/mysql-3.23-install-db-sh.diff || die
+	patch -p1 < ${FILESDIR}/mysql-3.23.52-install-db-sh.diff || die
 	# zap binary distribution stuff
 	patch -p1 < ${FILESDIR}/mysql-3.23-safe-mysqld-sh.diff || die
 	# for correct hardcoded sysconf directory
 	patch -p1 < ${FILESDIR}/mysql-3.23-my-print-defaults.diff || die
-	# 3.23.51: hrmph.. not sure whats going on with this..
-	# rphillips - appears to have been fixed upstream
-	# patch -p1 < ${FILESDIR}/mysql-3.23.51-tcpd.patch || die
+	#patch -p1 < ${FILESDIR}/mysql-3.23.51-tcpd.patch || die
 }
 
 src_compile() {
 	local myconf
-	use berkdb && myconf="${myconf} --with-berkeley-db=./bdb"
-	use berkdb || myconf="${myconf} --without-berkeley-db"
+# The following fix is due to a bug with bdb on sparc's. See: 
+# http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
+	if use sparc || use sparc64
+	then
+		myconf="${myconf} --without-berkeley-db"
+	else
+		use berkdb && myconf="${myconf} --with-berkeley-db=./bdb" \
+			|| myconf="${myconf} --without-berkeley-db"
+	fi
 	use readline && myconf="${myconf} --with-readline"
 	use readline || myconf="${myconf} --without-readline"
 	use static && myconf="${myconf} --with-mysqld-ldflags=-all-static --disable-shared"
@@ -61,6 +66,8 @@ src_compile() {
 	use tcpd || myconf="${myconf} --without-libwrap"
 	use innodb && myconf="${myconf} --with-innodb"
 	use innodb || myconf="${myconf} --without-innodb"
+	use ssl && myconf="${myconf} --with-vio --with-openssl"
+	use ssl || myconf="${myconf} --without-openssl"
 	[ -n "${DEBUGBUILD}" ] && myconf="${myconf} --with-debug"
 	[ -n "${DEBUGBUILD}" ] || myconf="${myconf} --without-debug"
 
@@ -69,6 +76,7 @@ src_compile() {
 	CFLAGS="${CFLAGS/-O?/} -O3" \
 	CXXFLAGS="${CXXFLAGS/-O?/} -O3 -felide-constructors -fno-exceptions -fno-rtti" \
 	econf \
+		--libexecdir=/usr/sbin \
 		--sysconfdir=/etc/mysql \
 		--localstatedir=/var/lib/mysql \
 		--with-raid \
@@ -164,7 +172,7 @@ pkg_postinst() {
 	# your friendly public service announcement...
 	einfo
 	einfo "You might want to run:"
-	einfo "\"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+	einfo "\"ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config\""
 	einfo "if this is a new install."
 	einfo
 }

@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.18 2002/10/20 20:11:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.19 2002/10/27 07:52:21 woodchip Exp $
+
+*mysql-3.23.53 (27 Oct 2002)
+
+  27 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Chase latest release.  Close #9481, #9335.
 
 *mysql-3.23.52-r1 (29 Sep 2002)
   
