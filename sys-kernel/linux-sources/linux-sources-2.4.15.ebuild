@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15.ebuild,v 1.1 2001/11/24 00:35:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15.ebuild,v 1.2 2001/11/24 00:42:19 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -47,11 +47,12 @@ EXT3P="ext3-2.4-${EXT3V}-`echo ${KV} |sed -e 's:\.::g' -e 's:-::'`"
 
 # We use build in /usr/src/linux in case of linux-extras
 # so we need no sources
-[ ! "${PN}" = "linux-extras" ] && SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+[ ! "${PN}" = "linux-extras" ] && SRC_URI="http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${LVMV}.tar.gz
-http://www.kernel.org/pub/linux/kernel/people/rml/preempt-kernel/2.4/preempt-kernel-rml-2.4.15-pre4-1.patch
-http://www.zip.com.au/~akpm/linux/${LOWLV}-low-latency.patch.gz
 http://developer.intel.com/technology/iapc/acpi/downloads/acpi-${ACPIV}.diff.gz"
+
+#http://www.kernel.org/pub/linux/kernel/people/rml/preempt-kernel/2.4/preempt-kernel-rml-2.4.15-pre4-1.patch
+#http://www.zip.com.au/~akpm/linux/${LOWLV}-low-latency.patch.gz
 	
 [ "$PN" != "linux-extras" ] && PROVIDE="virtual/kernel"
 
