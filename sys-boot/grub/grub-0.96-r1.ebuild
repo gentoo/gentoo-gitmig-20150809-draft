@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.2 2005/03/11 14:04:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.3 2005/03/12 01:31:19 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -43,6 +43,9 @@ src_unpack() {
 	# PIC patch by psm & kevin f. quinn #80693
 	epatch "${FILESDIR}"/${P}-PIC.patch
 
+	# disable testing of FFS and UFS2 images that always fail (bug #71811)
+	epatch "${FILESDIR}"/${P}-bounced-checks.patch
+
 	# i2o RAID support #76143
 	epatch "${FILESDIR}"/${P}-i2o-raid.patch
 
@@ -65,7 +68,6 @@ src_compile() {
 	### i686-specific code in the boot loader is a bad idea; disabling to ensure
 	### at least some compatibility if the hard drive is moved to an older or
 	### incompatible system.
-	unset CFLAGS
 
 	# grub-0.95 added -fno-stack-protector detection, to disable ssp for stage2,
 	# but the objcopy's (faulty) test fails if -fstack-protector is default.
@@ -76,7 +78,6 @@ src_compile() {
 	# STAGE2_CFLAGS is not allowed to be used on emake command-line, it overwrites
 	# -fno-stack-protector detected by configure, removed from netboot's emake.
 
-	append-flags -DNDEBUG
 	export grub_cv_prog_objcopy_absolute=yes #79734
 	use static && append-ldflags -static
 
@@ -104,7 +105,7 @@ src_compile() {
 
 	# Now build the regular grub
 	# Note that FFS and UFS2 support are broken for now - stage1_5 files too big
-	CFLAGS="${CFLAGS}" \
+	CFLAGS="" \
 	econf \
 		--libdir=/lib \
 		--datadir=/usr/lib/grub \
@@ -152,6 +153,10 @@ pkg_postinst() {
 	for x in /lib/grub/*/* /usr/lib/grub/*/* ; do
 		[[ -f ${x} ]] && cp -p ${x} /boot/grub
 	done
+
+	# hardened voodoo
+	[[ -x /sbin/chpax ]] && /sbin/chpax -spme /sbin/grub
+	[[ -x /sbin/paxctl ]] && /sbin/paxctl -spme /sbin/grub
 
 	[[ -e /boot/grub/grub.conf ]] \
 		&& /sbin/grub \
