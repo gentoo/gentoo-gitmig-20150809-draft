@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/embassy.eclass,v 1.1 2004/07/20 00:37:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/embassy.eclass,v 1.2 2004/07/20 20:39:15 ribosome Exp $
 
 # Author Olivier Fisette <ribosome@gentoo.org>
 
@@ -28,17 +28,14 @@ SRC_URI="ftp://ftp.uk.embnet.org/pub/EMBOSS/EMBOSS-${EBOV}.tar.gz
 	ftp://ftp.uk.embnet.org/pub/EMBOSS/${EF}.tar.gz"
 
 SLOT="0"
-IUSE="X png icc"
+IUSE="X png"
 
-RDEPEND="=app-sci/emboss-${EBOV}*
+DEPEND="=app-sci/emboss-${EBOV}*
 	X? ( virtual/x11 )
 	png? ( sys-libs/zlib
 		media-libs/libpng
 		>=media-libs/gd-1.8
 	)"
-
-DEPEND="icc? ( dev-lang/icc )
-	${RDEPEND}"
 
 S=${WORKDIR}/EMBOSS-${EBOV}/embassy/${EF}
 
@@ -53,10 +50,6 @@ embassy_src_unpack() {
 }
 
 embassy_src_compile() {
-	if use icc; then
-		CC=/opt/intel/compiler80/bin/icc
-		CXX=/opt/intel/compiler80/bin/icc
-	fi
 	local EXTRA_CONF
 	! use X && EXTRA_CONF="${EXTRA_CONF} --without-x"
 	! use png && EXTRA_CONF="${EXTRA_CONF} --without-pngdriver"
