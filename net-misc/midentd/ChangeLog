@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/midentd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/midentd/ChangeLog,v 1.1 2004/03/05 15:47:07 vapier Exp $
+
+*midentd-2.3.1 (05 Mar 2004)
+
+  05 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Georgi Georgiev #9367.

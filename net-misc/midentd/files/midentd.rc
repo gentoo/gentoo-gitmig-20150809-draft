@@ -1,0 +1,18 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/midentd/files/midentd.rc,v 1.1 2004/03/05 15:47:07 vapier Exp $
+
+start() {
+	ebegin "Starting midentd"
+	start-stop-daemon --start --quiet \
+		--pidfile /var/run/midentd.pid --exec /usr/sbin/midentd \
+		-- -u nobody -f
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping midentd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/midentd.pid
+	eend $?
+}
