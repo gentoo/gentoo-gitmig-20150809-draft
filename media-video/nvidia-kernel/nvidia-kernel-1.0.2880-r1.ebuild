@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880-r1.ebuild,v 1.17 2003/12/08 15:32:12 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880-r1.ebuild,v 1.18 2004/01/29 09:55:36 vapier Exp $
+
+inherit eutils
 
 NV_V=${PV/1.0./1.0-}
 NV_PACKAGE=NVIDIA_kernel-${NV_V}
