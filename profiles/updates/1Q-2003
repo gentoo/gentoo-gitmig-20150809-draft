@@ -26,3 +26,4 @@ move gnome-extra/gtkhtml-3.0.1 gnome-extra/libgtkhtml-3.0.1
 move media-video/libdvb media-libs/libdvb
 move net-wireless/gkrellmwireless x11-plugins/gkrellmwireless
 move net-misc/gshield net-firewall/gshield
+move dev-util/uml dev-util/umbrello
