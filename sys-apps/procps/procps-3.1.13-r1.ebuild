@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.13-r1.ebuild,v 1.5 2004/06/24 22:22:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.13-r1.ebuild,v 1.6 2004/07/15 02:26:37 agriffis Exp $
 
 inherit flag-o-matic
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools -ps top tload snice vmstat free w watch uptime pmap skill pkill kill pgrep sysctl"
 SRC_URI="http://${PN}.sf.net/${P}.tar.gz"
 HOMEPAGE="http://procps.sourceforge.net/"

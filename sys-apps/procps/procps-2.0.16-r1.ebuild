@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.16-r1.ebuild,v 1.4 2004/06/24 22:22:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.16-r1.ebuild,v 1.5 2004/07/15 02:26:37 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
 SRC_URI="http://tech9.net/rml/${PN}/packages/${PV}/${P}.tar.gz"
 HOMEPAGE="http://tech9.net/rml/procps/"
@@ -10,6 +9,7 @@ HOMEPAGE="http://tech9.net/rml/procps/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha hppa mips ia64"
+IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 DEPEND="${RDEPEND}

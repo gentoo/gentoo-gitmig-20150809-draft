@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchpid/watchpid-0.1-r1.ebuild,v 1.12 2004/07/01 21:44:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchpid/watchpid-0.1-r1.ebuild,v 1.13 2004/07/15 02:47:06 agriffis Exp $
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Watches a process for termination"
 SRC_URI="http://www.codepark.org/projects/utils/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://www.codepark.org/"
 KEYWORDS="x86 amd64 -ppc"
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/libc"

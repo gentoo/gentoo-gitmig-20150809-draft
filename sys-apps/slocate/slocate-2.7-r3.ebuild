@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r3.ebuild,v 1.6 2004/06/24 22:26:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r3.ebuild,v 1.7 2004/07/15 02:34:57 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://ftp.geekreview.org/slocate/src/slocate-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ppc64"
+IUSE=""
 
 DEPEND="sys-apps/shadow
 	>=sys-apps/sed-4"
