@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.133 2003/10/14 00:20:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.134 2003/10/14 19:50:37 azarah Exp $
+
+  14 Oct 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.1-r5.ebuild,
+  files/3.3.1/gcc331-pp-fixup.patch:
+  Actually add gcc331-pp-fixup.patch for public use.
 
 *gcc-3.3.1-r5 (14 Oct 2003)
 
