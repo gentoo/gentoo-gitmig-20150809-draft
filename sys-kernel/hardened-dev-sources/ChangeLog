@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.26 2004/07/04 23:59:49 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.27 2004/07/05 00:01:33 tseng Exp $
+
+  04 Jul 2004; Brandon Hale <tseng@gentoo.org>
+  -files/hardened-dev-sources-2.6.5.CAN-2004-0109.patch:
+  Remove no longer needed security fix.
 
   04 Jul 2004; Brandon Hale <tseng@gentoo.org> metadata.xml:
   Remove stray digest, add kernel herd to metadata
