@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/files/dcron.rc6,v 1.5 2002/04/20 22:03:25 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/files/dcron.rc6,v 1.6 2003/02/14 18:49:48 mholzer Exp $
 
 depend() {
 	need clock hostname logger
@@ -12,11 +12,13 @@ start() {
 	ebegin "Starting dcron"
 	start-stop-daemon --start --quiet --exec /usr/sbin/crond \
 		-- >>/var/log/cron.log 2>&1
+	/usr/bin/pgrep -x -u 0 -P 1 crond > /var/run/cron.pid
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping dcron"
-	start-stop-daemon --stop --quiet --exec /usr/sbin/crond
+	start-stop-daemon --stop --quiet --pidfile /var/run/cron.pid \
+		--exec /usr/sbin/crond
 	eend $?
 }

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.10 2003/02/12 12:32:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.11 2003/02/14 18:49:48 mholzer Exp $
+
+*dcron-2.7-r10 (14 Feb 2003)
+
+  14 Feb 2003; Martin Holzer <mholzer@gentoo.org> dcron-2.7-r10.ebuild :
+  Added pid in init-script. Closes #15664.
+
+*dcron-2.7-r9 (20 Apr 2002)
 
   12 Feb 2003; Guy Martin <gmsoft@gentoo.org> dcron-2.7-r9.ebuild :
   Added hppa to keywords.
@@ -14,9 +21,6 @@
 
   made lintool happy - added LICENSE
   
-
-*dcron-2.7-r9 (20 Apr 2002)
-
   14 Jul 2002; phoen][x <phoenix@gentoo.org> dcron-2.7-r9.ebuild :
   Added KEYWORDS, SLOT.
 
