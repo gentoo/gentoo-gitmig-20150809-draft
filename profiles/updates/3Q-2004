@@ -170,3 +170,7 @@ move dev-php/egroupware www-apps/egroupware
 move dev-php/phpgroupware www-apps/phpgroupware
 move app-office/phprojekt www-apps/phprojekt
 move media-sound/libdsp media-libs/libdsp
+slotmove gnome-base/ORBit 0 1
+slotmove gnome-base/ORBit2 0 2
+move gnome-base/ORBit gnome-base/orbit
+move gnome-base/ORBit2 gnome-base/orbit
