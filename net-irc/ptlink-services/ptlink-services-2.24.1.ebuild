@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-services/ptlink-services-2.24.1.ebuild,v 1.1 2004/07/10 23:09:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-services/ptlink-services-2.24.1.ebuild,v 1.2 2004/07/15 00:46:06 agriffis Exp $
 
 inherit fixheadtails eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.sunsite.dk/projects/ptlink/services/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="mysql"
 
 DEPEND="mysql? ( dev-db/mysql )"
 
