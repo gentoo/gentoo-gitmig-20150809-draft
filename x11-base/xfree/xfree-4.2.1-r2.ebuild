@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.8 2002/12/23 04:52:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.9 2002/12/23 18:12:59 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -160,6 +160,10 @@ src_unpack() {
 		${S}/lib/Xrender/Imakefile.orig > ${S}/lib/Xrender/Imakefile
 	eend 0
 
+	# Need to fix patches for trident driver, bug #10624
+	rm -f ${WORKDIR}/patch/036*
+	cp ${FILESDIR}/${PVR}/036*bug* ${WORKDIR}/patch/
+
 	if [ "`gcc-version`" = "2.95" ]
 	then
 		# Do not apply this patch for gcc-2.95.3, as it cause compile to fail,
@@ -240,7 +244,7 @@ src_unpack() {
 	fi
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
-	if [ "${DEBUGBUILD}" != "true" ]
+	if [ "${DEBUGBUILD}" != "yes" ]
 	then
 		# use less ram .. got this from Spider's makeedit.eclass :)
 		echo "#define GccWarningOptions -Wno-return-type -w" >> config/cf/host.def
@@ -303,11 +307,8 @@ src_unpack() {
 
 src_compile() {
 
-	if [ -f /proc/cpuinfo ]
-	then
-		# Set MAKEOPTS to have proper -j? option ..
-		get_number_of_jobs
-	fi
+	# Set MAKEOPTS to have proper -j? option ..
+	get_number_of_jobs
 
 	einfo "Building XFree86..."
 	emake World || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3-r1.ebuild,v 1.2 2002/12/23 05:44:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3-r1.ebuild,v 1.3 2002/12/23 18:12:59 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -102,6 +102,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=dev-libs/expat-1.95.3
 	sys-devel/perl
 	>=media-libs/freetype-${FT2_VER}-r2
+	>=media-libs/fontconfig-2.1-r1
 	>=x11-base/opengl-update-1.4
 	>=x11-misc/ttmkfdir-2.0-r1
 	pam? ( >=sys-libs/pam-0.75 )
@@ -112,12 +113,12 @@ RDEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/zlib-1.1.3-r2
 	>=dev-libs/expat-1.95.3
 	>=media-libs/freetype-${FT2_VER}-r2
-	>=media-libs/fontconfig-2.1
+	>=media-libs/fontconfig-2.1-r1
 	>=x11-base/opengl-update-1.4
 	>=x11-misc/ttmkfdir-2.0-r1
 	pam? ( >=sys-libs/pam-0.75 )"
 
-PDEPEND=">=x11-libs/xft-2.0.1
+PDEPEND=">=x11-libs/xft-2.0.1-r1
 	3dfx? ( >=media-libs/glide-v3-3.10 )"
 
 PROVIDE="virtual/x11
@@ -221,7 +222,7 @@ src_unpack() {
 	fi
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
-	if [ "${DEBUGBUILD}" != "true" ]
+	if [ "${DEBUGBUILD}" != "yes" ]
 	then
 		# use less ram .. got this from Spider's makeedit.eclass :)
 		echo "#define GccWarningOptions -Wno-return-type -w" >> config/cf/host.def
@@ -289,11 +290,8 @@ src_unpack() {
 
 src_compile() {
 
-	if [ -f /proc/cpuinfo ]
-	then
-		# Set MAKEOPTS to have proper -j? option ..
-		get_number_of_jobs
-	fi
+	# Set MAKEOPTS to have proper -j? option ..
+	get_number_of_jobs
 
 	einfo "Building XFree86..."
 	emake World || die
@@ -400,7 +398,7 @@ src_install() {
 		eend 0
 	fi
 
-	# Change the silly red pointer to a while one ...
+	# Change the silly red pointer to a white one ...
 	dosed 's:redglass:whiteglass:' /usr/X11R6/lib/X11/icons/default/index.theme
 
 	# Standard symlinks

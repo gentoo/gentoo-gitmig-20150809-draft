@@ -1,10 +1,16 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.75 2002/12/23 05:08:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.76 2002/12/23 18:12:59 azarah Exp $
 
-  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
+  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild,
+                                                    xfree-4.2.99.3-r1.ebuild :
 
   Fix bug #12599 (type o in Xsession).
+
+  Update trident patches to fix bug #10624 again.
+
+  Fix check for $DEBUGBUILD to test for "yes" and not "true",
+  fixing bug #12572.
 
 *xfree-4.2.99.3-r1 (23 Dec 2002)
 
