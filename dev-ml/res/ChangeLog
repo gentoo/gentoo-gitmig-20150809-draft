@@ -1,0 +1,11 @@
+# ChangeLog for dev-ml/res
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.1 2004/08/21 19:27:30 mattam Exp $
+
+*res-2.1.1 (21 Aug 2004)
+
+  21 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> +metadata.xml,
+  +res-2.1.1.ebuild:
+  Res is a library of resizable structures (arrays, buffers...) in ocaml. Thanks
+  to Bardur Arantsson <gentoo@scientician.net> for the submission (bug #60921).
+
