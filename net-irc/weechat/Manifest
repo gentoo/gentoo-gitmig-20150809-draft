@@ -1,4 +1,6 @@
 MD5 53ef38df666322aec01f177be9ecd878 weechat-0.0.2.ebuild 605
+MD5 8d841cbd8e38f0086150c8d63123dae2 weechat-0.0.3.ebuild 684
 MD5 5886003ff0cee30d312807629fdf6242 ChangeLog 394
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 26ab708340fd29aff65a984428e2cbf3 files/digest-weechat-0.0.2 65
+MD5 ca3fc1c304be62673a329a91d4617805 files/digest-weechat-0.0.3 66
