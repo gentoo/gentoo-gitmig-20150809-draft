@@ -1,0 +1,12 @@
+# ChangeLog for net-mail/ixbiff
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ixbiff/ChangeLog,v 1.1 2004/12/15 12:38:59 ticho Exp $
+
+*ixbiff-0.03b (15 Dec 2004)
+
+  15 Dec 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +files/ixbiff_0.03b-config-gentoo.patch,
+  +files/ixbiff_0.03b-main.c-gentoo.patch, +ixbiff-0.03b.ebuild:
+  Initial import. Closes #70584, reported by Joe Sapp <nixphoeni@yahoo.com>,
+  who also submitted the ebuild and both patches.
+
