@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.61 2004/04/23 18:00:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.62 2004/04/23 22:20:47 agriffis Exp $
+
+  23 Apr 2004; Aron Griffis <agriffis@gentoo.org> ruby-1.8.1-r2.ebuild,
+  ruby-1.8.1-r3.ebuild, ruby-1.8.1-r4.ebuild:
+  Mark -ia64 until bug 48824 is resolved
 
 *ruby-1.6.8-r9 (24 Apr 2004)
 
