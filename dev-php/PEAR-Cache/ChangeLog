@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Cache
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.12 2004/12/30 19:17:10 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.13 2005/02/19 07:02:46 sebastian Exp $
+
+  19 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Cache-1.5.1.ebuild, PEAR-Cache-1.5.3.ebuild, PEAR-Cache-1.5.4.ebuild:
+  Mask ~amd64.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

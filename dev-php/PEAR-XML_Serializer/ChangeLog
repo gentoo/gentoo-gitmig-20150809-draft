@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_Serializer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Serializer/ChangeLog,v 1.1 2005/02/16 07:18:44 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Serializer/ChangeLog,v 1.2 2005/02/19 07:25:28 sebastian Exp $
+
+  19 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-XML_Serializer-0.15.0.ebuild:
+  Mask ~amd64.
 
 *PEAR-XML_Serializer-0.15.0 (16 Feb 2005)
 

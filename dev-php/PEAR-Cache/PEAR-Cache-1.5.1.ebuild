@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/PEAR-Cache-1.5.1.ebuild,v 1.8 2004/06/25 01:17:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/PEAR-Cache-1.5.1.ebuild,v 1.9 2005/02/19 07:02:46 sebastian Exp $
 
 MY_P=${PN/PEAR-//}-${PV}
 DESCRIPTION="Framework for caching of arbitrary data."
@@ -10,7 +10,7 @@ LICENSE="PHP"
 SLOT="0"
 IUSE=""
 # Afaik, anything that runs php will run this...
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~amd64"
 DEPEND="virtual/php"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_Util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/ChangeLog,v 1.1 2005/02/16 07:17:28 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/ChangeLog,v 1.2 2005/02/19 07:26:16 sebastian Exp $
+
+  19 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-XML_Util-1.1.1.ebuild:
+  Mask ~amd64.
 
 *PEAR-XML_Util-1.1.1 (16 Feb 2005)
 
