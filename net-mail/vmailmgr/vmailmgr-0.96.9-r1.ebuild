@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.14 2003/09/05 09:08:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.15 2003/12/27 00:07:21 weeve Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.vmailmgr.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 ~sparc "
 
 DEPEND="virtual/glibc"
 RDEPEND=">=sys-apps/ucspi-unix-0.34

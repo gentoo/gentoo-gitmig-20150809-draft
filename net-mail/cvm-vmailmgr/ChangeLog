@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cvm-vmailmgr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/ChangeLog,v 1.6 2003/05/09 18:08:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/ChangeLog,v 1.7 2003/12/27 00:06:06 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> cvm-vmailmgr-0.3.ebuild:
+  Changed sparc keyword to ~sparc since there were previously NO ebuilds of
+  ucspi-unix with sparc or ~sparc keywords to satisfy the dependency.
 
 *cvm-vmailmgr-0.4 (09 May 2003)
 
