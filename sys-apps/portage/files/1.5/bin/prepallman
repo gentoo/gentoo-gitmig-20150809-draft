@@ -1,26 +1,28 @@
 #!/bin/bash
 
-z=`find ${D} -name "man?" -type d`
-echo "man:"
-for x in ${z} 
+for x in ${D}/opt/*/man ${D}/usr/share/man ${D}/usr/local/man ${D}/usr/X11R6/share/man
 do
+	if [ ! -d ${x} ]
+	then
+		continue
+	fi
 	w=`echo ${x}/*.?`
 	if [ "${w}" != "${x}"'/*.?' ]
 	then
-	for y in ${w}
-	do
-		if [ -h ${y} ]
-	    	then
-			#symlink
-			linkto=`ls -l ${y} | sed -e "s:${D}::" | awk '{ printf ("%s.gz",$11) } '`
-	        	echo "$linkto $y.gz"
-			ln -sf ${linkto} ${y}.gz
-			rm ${y}
-	    	else
-			gzip -f -9 ${y}
-			echo ${y}
-            	fi	
-	done
+		for y in ${w}
+		do
+			if [ -h ${y} ]
+			then
+				#symlink
+				linkto=`ls -l ${y} | sed -e "s:${D}::" | awk '{ printf ("%s.gz",$11) } '`
+				echo "$linkto $y.gz"
+				ln -sf ${linkto} ${y}.gz
+				rm ${y}
+			else
+				gzip -f -9 ${y}
+				echo ${y}
+			fi	
+		done
 	fi
 done
 
