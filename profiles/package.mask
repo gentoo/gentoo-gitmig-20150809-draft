@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3558 2005/02/04 18:18:53 humpback Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3559 2005/02/04 18:21:44 humpback Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,7 @@
 
 #Gustavo Felisberto <humpback@gentoo.org> (4 Feb 2005)
 #Masked for user testing
-=net-im/mercury-bin
+net-im/mercury-bin
 
 # Christian Parpart <trapni@gentoo.org> (22 Jan 2005)
 # Masked for user testing. Meta bug #76457
