@@ -1,37 +1,47 @@
-MD5 45b230cb3f1fd14ba338701d4080b4ba bind-9.2.3.ebuild 5875
-MD5 dddb6eb8d23d2bcc3e69dec4baabe6aa bind-9.3.1.ebuild 6394
-MD5 23c809afe06852c286f137645287abb4 bind-9.2.2-r3.ebuild 5708
-MD5 26614580029f5f5e558063600ec15c5f bind-9.2.5.ebuild 7266
-MD5 61a6fb5346e4f405c35bf0c823e75476 bind-9.2.2-r5.ebuild 6434
-MD5 9676ca38b8a2af68a01785194ecd12d8 bind-9.2.2.ebuild 4678
-MD5 242fac0b5f26fab0bc0a3bded1fccdfa bind-9.2.2-r2.ebuild 4895
-MD5 0fce7dffc077cc801ceeaf46cce6ead0 bind-9.2.2-r4.ebuild 5828
-MD5 d1e92479746518fd03d86236a6f67f9c ChangeLog 9918
-MD5 bf7284c3e31bd3292a01fa046b3220bb metadata.xml 352
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 555d81d05992704d58fbc7298063ac23 ChangeLog 10024
 MD5 5a5afd0ab570b531cd0094bf16f6735d bind-9.2.2-r1.ebuild 4880
+MD5 242fac0b5f26fab0bc0a3bded1fccdfa bind-9.2.2-r2.ebuild 4895
+MD5 23c809afe06852c286f137645287abb4 bind-9.2.2-r3.ebuild 5708
+MD5 0fce7dffc077cc801ceeaf46cce6ead0 bind-9.2.2-r4.ebuild 5828
+MD5 9676ca38b8a2af68a01785194ecd12d8 bind-9.2.2.ebuild 4678
+MD5 45b230cb3f1fd14ba338701d4080b4ba bind-9.2.3.ebuild 5875
+MD5 bf7284c3e31bd3292a01fa046b3220bb metadata.xml 352
+MD5 61a6fb5346e4f405c35bf0c823e75476 bind-9.2.2-r5.ebuild 6434
+MD5 992192e9aa0ed1ed5663f104e57496f0 bind-9.2.5.ebuild 7268
+MD5 dddb6eb8d23d2bcc3e69dec4baabe6aa bind-9.3.1.ebuild 6394
+MD5 42b5ed5adcee33cf40531d7955412b21 files/10bind.env 27
 MD5 51197afe8da37b1b453456de90ca4f25 files/127 227
-MD5 75d14cac80e71b4ac0662775064c06e2 files/bind-9.2.5-dlz-mysql.patch 11296
+MD5 51197afe8da37b1b453456de90ca4f25 files/127.zone 227
+MD5 dca1f666d891ce36c77564bbf7eaeeb4 files/bind-9.2.2-mysql.patch 10993
+MD5 e020f0d41f68e0c47d196c4aa1a06c09 files/digest-bind-9.2.2 63
 MD5 e020f0d41f68e0c47d196c4aa1a06c09 files/digest-bind-9.2.2-r1 63
 MD5 e020f0d41f68e0c47d196c4aa1a06c09 files/digest-bind-9.2.2-r2 63
 MD5 309110e09d923344a34a803f8906fae3 files/digest-bind-9.2.2-r3 121
 MD5 309110e09d923344a34a803f8906fae3 files/digest-bind-9.2.2-r4 121
-MD5 ce78c05705c759f2494388ad313bdcbb files/digest-bind-9.2.2-r5 182
-MD5 a8ffc671392ffacafb5c49ffc1c6a4c6 files/named.rc6-pid_fix 488
-MD5 4346332cc9681502a3aedfd0a7a1ac41 files/bind-9.2.5-berkdb_fix.patch 537
-MD5 9a06b553558342585f8ba88bd5e4c569 files/bind-9.2.5-mysql.patch 11315
-MD5 e020f0d41f68e0c47d196c4aa1a06c09 files/digest-bind-9.2.2 63
 MD5 feb1027d97d15dcf8fdc57b2de185af2 files/digest-bind-9.2.3 63
-MD5 d47c8a742a2645377ba4d783907700dd files/digest-bind-9.2.5 127
 MD5 c46a805da6650356db77b023d4d042d8 files/digest-bind-9.3.1 63
-MD5 21e3efd21e18f4c660155978105f8ebe files/named.confd 351
-MD5 51197afe8da37b1b453456de90ca4f25 files/127.zone 227
+MD5 2bb12cfcd70284e72fbf9e70e5e2974d files/dyndns-samples.tbz2 22866
 MD5 ccfca63035b534556c3910270d40a4b9 files/localhost 412
+MD5 ccfca63035b534556c3910270d40a4b9 files/localhost.zone 412
+MD5 e83e7a76e253debfdd120311fda73fb6 files/named.ca 2518
 MD5 b3af799ce2505e78a14bb16868cf0593 files/named.conf-r1 758
 MD5 e9bb1e01cf0b7597e739e889499ddd7a files/named.conf-r2 768
 MD5 be5fd752bdbd59385f2a559d603098d5 files/named.conf-r3 1314
-MD5 ccfca63035b534556c3910270d40a4b9 files/localhost.zone 412
-MD5 dca1f666d891ce36c77564bbf7eaeeb4 files/bind-9.2.2-mysql.patch 10993
-MD5 2bb12cfcd70284e72fbf9e70e5e2974d files/dyndns-samples.tbz2 22866
+MD5 21e3efd21e18f4c660155978105f8ebe files/named.confd 351
 MD5 412d666c947769b6015a65a42bb8ea00 files/named.rc6 1434
-MD5 42b5ed5adcee33cf40531d7955412b21 files/10bind.env 27
-MD5 e83e7a76e253debfdd120311fda73fb6 files/named.ca 2518
+MD5 ce78c05705c759f2494388ad313bdcbb files/digest-bind-9.2.2-r5 182
+MD5 a8ffc671392ffacafb5c49ffc1c6a4c6 files/named.rc6-pid_fix 488
+MD5 4346332cc9681502a3aedfd0a7a1ac41 files/bind-9.2.5-berkdb_fix.patch 537
+MD5 75d14cac80e71b4ac0662775064c06e2 files/bind-9.2.5-dlz-mysql.patch 11296
+MD5 9a06b553558342585f8ba88bd5e4c569 files/bind-9.2.5-mysql.patch 11315
+MD5 d47c8a742a2645377ba4d783907700dd files/digest-bind-9.2.5 127
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCUYcCKRy60XGEcJIRAs55AJ4+bmwRyVu1c5/X+rYHha7K4ynsygCdHAUO
+eCB0zQnpP8lYmWLMrpYcczw=
+=mrRd
+-----END PGP SIGNATURE-----
