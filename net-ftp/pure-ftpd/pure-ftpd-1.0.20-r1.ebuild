@@ -1,16 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.17a.ebuild,v 1.7 2005/02/02 19:01:54 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.20-r1.ebuild,v 1.1 2005/02/02 19:01:54 humpback Exp $
 
-IUSE="pam mysql postgres ldap ssl"
+inherit eutils
 
-DESCRIPTION="Pure-FTPd is a fast, production-quality, standard-conformant FTP server"
-SRC_URI="ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/${P}.tar.bz2"
+DESCRIPTION="fast, production-quality, standard-conformant FTP server"
 HOMEPAGE="http://www.pureftpd.org/"
+SRC_URI="ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/${P}.tar.bz2"
 
+LICENSE="BSD"
 SLOT="0"
-LICENSE="BSD" # Changed from GPL-2 to BSD 06/09/2003
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+IUSE="pam mysql postgres ldap ssl caps vchroot"
 
 DEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
@@ -20,13 +21,21 @@ DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 src_compile() {
-	local myconf=""
+	local myconf="--with-privsep"
 
 	use pam && myconf="${myconf} --with-pam"
 	use ldap && myconf="${myconf} --with-ldap"
 	use mysql && myconf="${myconf} --with-mysql"
 	use postgres && myconf="${myconf} --with-pgsql"
 	use ssl && myconf="${myconf} --with-tls"
+	use caps && myconf="${myconf} --with-capabilities"
+	!(use caps) && myconf="${myconf} --without-capabilities"
+	use vchroot && myconf="${myconf} --with-virtualchroot"
+	#!(use vchroot) && myconf="${myconf} --without-virtualchroot"
+
+	# adjust max user length to something more appropriate
+	# for virtual hosts.  See bug #62472 for details.
+	sed -e "s:# define MAX_USER_LENGTH 32U:# define MAX_USER_LENGTH 127U:" -i ${S}/src/ftpd.h
 
 	econf \
 		--with-altlog --with-extauth \
@@ -34,31 +43,34 @@ src_compile() {
 		--with-throttling --with-ratios \
 		--with-quotas --with-ftpwho \
 		--with-uploadscript --with-virtualhosts \
-		--with-virtualchroot --with-diraliases \
-		--with-peruserlimits ${myconf} || die "econf failed"
+		--with-diraliases --with-peruserlimits \
+		--with-largefile \
+		${myconf} || die "econf failed"
 
 	emake || die "compile problem"
 }
 
 src_install() {
-	einstall
+	einstall || die
 
-	dodoc AUTHORS CONTACT COPYING ChangeLog FAQ HISTORY INSTALL README* NEWS
+	dodoc AUTHORS CONTACT ChangeLog FAQ HISTORY INSTALL README* NEWS
 
-	dodir /etc/{conf.d,init.d}
-	cp ${FILESDIR}/ftpusers ${D}/etc/ftpusers
-	cp ${FILESDIR}/pure-ftpd.conf_d ${D}/etc/conf.d/pure-ftpd
-
+	use pam && cp ${FILESDIR}/ftpusers ${D}/etc/ftpusers
 	use pam && insinto /etc/pam.d && doins pam/pure-ftpd
 
+	dodir /etc/{conf.d,init.d}
+
+	cp ${FILESDIR}/pure-ftpd.conf_d ${D}/etc/conf.d/pure-ftpd
+
+	exeopts -m 0744
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/pure-ftpd.rc6-r1 pure-ftpd
 
-	insopts -m 644
+	insopts -m 0644
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/pure-ftpd.xinetd pure-ftpd
 
-	if use ldap; then
+	if use ldap ; then
 		dodir /etc/openldap/schema
 		insinto /etc/openldap/schema
 		doins pureftpd.schema

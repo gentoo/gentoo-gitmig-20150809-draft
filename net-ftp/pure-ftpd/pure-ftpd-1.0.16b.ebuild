@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.16b.ebuild,v 1.7 2004/07/01 22:16:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.16b.ebuild,v 1.8 2005/02/02 19:01:54 humpback Exp $
 
 IUSE="pam mysql postgres ldap ssl"
 

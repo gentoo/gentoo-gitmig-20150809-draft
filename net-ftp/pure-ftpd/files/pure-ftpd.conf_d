@@ -8,6 +8,10 @@
 ## If you prefer host names over IP addresses, it's your choice :
 ## SERVER="-S ftp.rtchat.com,21"
 ## IPv6 addresses are supported.
+## !!! WARNING !!!
+## Using an invalid IP will result in server not starting and reporting
+## a good start. Work is being done to solve that in:
+## http://bugs.gentoo.org/show_bug.cgi?id=75861
 SERVER="-S 192.168.0.1,21"
 
 ## Number of simultaneous connections in total, and per ip ##
@@ -35,7 +39,7 @@ AUTH="-l unix"
 #LOG="-f facility"
 
 ## Misc. Others ##
-MISC_OTHER="-A -x -j -R"
+MISC_OTHER="-A -x -j -R -B"
 
 #
 # Use these inside $MISC_OTHER
