@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.3.ebuild,v 1.4 2003/08/07 03:01:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.3.ebuild,v 1.5 2003/08/11 21:10:33 caleb Exp $
 inherit kde-dist flag-o-matic 
 
 IUSE="nas esd motif slang tcltk oggvorbis cdr"
@@ -60,6 +60,12 @@ KDE_REMOVE_DIR="xine_artsplugin"
 [ -z "`use cdr`" ] && KDE_REMOVE_DIR="$KDE_REMOVE_DIR kaudiocreator"
 
 myconf="$myconf $myaudio $myinterface"
+
+src_compile() {
+	kde_src_compile myconf
+	kde_fix_head_instances acinclude.m4 aclocal.m4 admin/cvs.sh admin/libtool.m4.in configure
+	kde_src_compile configure make
+}
 
 pkg_postinst() {
 	if [ -n "`use alsa`" ]; then
