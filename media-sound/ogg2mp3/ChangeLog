@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ogg2mp3
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogg2mp3/ChangeLog,v 1.1 2004/11/30 14:29:31 chainsaw Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogg2mp3/ChangeLog,v 1.2 2005/04/03 18:13:51 blubb Exp $
+
+  03 Apr 2005; Simon Stelling <blubb@gentoo.org> ogg2mp3-0.3.ebuild:
+  added ~amd64
 
 *ogg2mp3-0.3 (30 Nov 2004)
 
