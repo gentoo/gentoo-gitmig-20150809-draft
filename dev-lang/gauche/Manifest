@@ -1,5 +1,5 @@
-MD5 0943ff393505115954131cd4a02e60f2 ChangeLog 4548
-MD5 4e973bd9a56c60b9dbe921ac028dfc62 gauche-0.8.1.ebuild 1242
+MD5 4e8dca1fbd378318f3adfabe7703a858 ChangeLog 4639
+MD5 5488663eaedea107edc4fcf3a15d75db gauche-0.8.1.ebuild 1241
 MD5 a08e54bf1ab1228df32c4cab6d362c9b gauche-0.8.ebuild 1261
 MD5 e9fa98743d1cf3b213a4b04f52baf5f8 metadata.xml 619
 MD5 0f8ed13a6cb96a582a2cb357dd817608 files/digest-gauche-0.8 60
