@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public Licensev2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/erc-4.0_rc2.ebuild,v 1.3 2003/08/05 18:18:04 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/erc-4.0_rc2.ebuild,v 1.4 2003/08/06 07:01:30 vapier Exp $
 
 inherit elisp
 
