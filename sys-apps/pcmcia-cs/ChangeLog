@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.2 2002/02/11 04:21:08 drobbins Exp $
+
+*pcmcia-cs-3.1.31-r2 (10 Feb 2002)
+
+  10 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: Configure --srctree option
+  added to tell pcmcia-cs to configure for kernel described in /usr/src/linux
+  rather than the currently-running kernel (which is otherwise the default).
+  We're now doing this the "right" way. 
 
 *pcmcia-cs-3.1.31-r1 (1 Feb 2002)
 

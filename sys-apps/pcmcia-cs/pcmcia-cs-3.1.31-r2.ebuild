@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>, Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.31-r1.ebuild,v 1.1 2002/01/29 07:22:52 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.31-r2.ebuild,v 1.1 2002/02/11 04:21:09 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -25,6 +25,7 @@ src_unpack() {
 src_compile() {
 	#use $CFLAGS for user tools, but standard kernel optimizations for the kernel modules (for compatibility)
 	./Configure -n \
+		--srctree \
 		--kernel=/usr/src/linux \
 		--force \
 		--arch="i386" \
@@ -37,6 +38,10 @@ src_compile() {
 	# tools will require a kernel with ISA PnP and/or APM support, 
 	# which cannot be guaranteed.  We need to make sure the tools 
 	# work *all* the time, not just some of the time.
+	
+	# The --srctree option tells pcmcia-cs to configure for the kernel in /usr/src/linux
+	# rather than the currently-running kernel.  It's Gentoo Linux policy to configure for
+	# the kernel in /usr/src/linux
 	emake all || die "failed compiling"
 }
 
