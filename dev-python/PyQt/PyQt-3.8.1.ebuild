@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.8.1.ebuild,v 1.5 2004/03/02 18:09:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.8.1.ebuild,v 1.6 2004/03/03 21:37:46 kloeri Exp $
 
 inherit distutils
 
@@ -50,10 +50,10 @@ src_compile() {
 		-e /usr/include/python${PYVER} \
 		-b ${D}/usr/bin \
 		-l qt-mt -c
-	make || die
 }
 
 src_install() {
+	make || die
 	distutils_python_version
 	dodir /usr/lib/python${PYVER}/site-packages
 	make DESTDIR=${D} install || die
