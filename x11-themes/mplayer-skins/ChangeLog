@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/mplayer-skins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.5 2003/04/09 01:16:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.6 2003/10/06 08:05:37 phosphan Exp $
+
+*mplayer-skins-0.2-r1 (06 Oct 2003)
+
+  06 Oct 2003; Patrick Kursawe <phosphan@gentoo.org>
+  mplayer-skins-0.2-r1.ebuild:
+  Removed Blue theme because it is already installed by mplayer itself.
+  Recalculated digests because of bug 30317.
 
 *mplayer-skins-0.2 (07 Apr 2003)
 
