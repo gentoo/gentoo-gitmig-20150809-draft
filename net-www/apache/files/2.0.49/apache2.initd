@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.49/apache2.initd,v 1.3 2004/03/29 20:03:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.49/apache2.initd,v 1.4 2004/04/08 19:50:05 stuart Exp $
 
 opts="${opts} reload"
 
-[ "x${STARTUPERRORLOG}" != "x" ] && APACHE2_OPTS="${APACHE2_OPTS} -d ${STARTUPERRORLOG}"
+[ "x${SERVERROOT}" != "x" ] && APACHE2_OPTS="${APACHE2_OPTS} -d ${SERVERROOT}"
 [ "x${CONFIGFILE}" != "x" ] && APACHE2_OPTS="${APACHE2_OPTS} -f ${CONFIGFILE}"
 [ "x${STARTUPERRORLOG}" != "x" ] && APACHE2_OPTS="${APACHE2_OPTS} -E ${STARTUPERRORLOG}"
 # set a default for PIDFILE/RESTARTSTYLE for those that FAILED to follow

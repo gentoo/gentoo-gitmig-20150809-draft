@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.118 2004/04/06 01:02:27 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.119 2004/04/08 19:50:04 stuart Exp $
+
+  08 Apr 2004; Stuart Herbert <stuart@gentoo.org> files/2.0.49/apache2.initd:
+  Fix for bug #44559 - problems with apache2 init script
 
   05 Apr 2004; Chuck Short <zul@gentoo.org> apache-2.0.48-r1.ebuild,
   apache-2.0.48-r2.ebuild, apache-2.0.48-r3.ebuild, apache-2.0.48-r4.ebuild,
