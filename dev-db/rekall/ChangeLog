@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/rekall
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/ChangeLog,v 1.12 2005/01/01 17:43:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/ChangeLog,v 1.13 2005/01/21 17:21:23 carlo Exp $
+
+  21 Jan 2005; Carsten Lohrke <carlo@gentoo.org> rekall-2.2.3-r1.ebuild:
+  stable on x86
 
   24 Dec 2004; Simon Stelling <blubb@gentoo.org> rekall-2.2.3-r1.ebuild:
   added ~amd64
