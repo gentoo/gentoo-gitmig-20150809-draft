@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/mysqltool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.7 2002/11/26 23:54:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.8 2002/12/07 05:56:12 jmorgan Exp $
 
 *mysqltool-0.95-r1 (3 May 2002)
+
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> mysqltool-0.95-r1.ebuild :
+  Changed sparc64 to sparc keyword
 
   26 Nov 2002; Ryan Phillips <rphillips@gentoo.org> :
   Added Apache:DBI dep and einfo.  Fixes #11150
