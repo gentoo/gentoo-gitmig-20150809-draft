@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.5 2003/09/28 17:39:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.6 2003/09/30 21:21:31 caleb Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
@@ -55,7 +55,7 @@ src_unpack() {
 	rm $S/configure
 	kde_fix_autodetect
 	cd ${S}
-	epatch ${FILESDIR}/${P}-amd64.patch
+	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 }
 
 src_install() {
