@@ -77,9 +77,9 @@
 /bin/hostid -> /bin/busybox
 /bin/hostname -> /bin/busybox
 /bin/id -> /bin/busybox
-/bin/ifconfig -> /bin/busybox
+/sbin/ifconfig -> /bin/busybox
 /bin/init -> /bin/busybox
-/bin/insmod -> /bin/busybox
+/sbin/insmod -> /bin/busybox
 /bin/kill -> /bin/busybox
 /bin/killall -> /bin/busybox
 /bin/klogd -> /bin/busybox
@@ -164,8 +164,8 @@
 /bin/login
 
 #  Use ash or some suitably minimal shell
-/bin/ash <= Replacements/bin/ash
-/bin/sh -> /bin/ash
+/bin/sash 
+#/bin/sh -> /bin/sash
 /sbin/agetty
 /sbin/init
 /sbin/shutdown
@@ -175,11 +175,11 @@
 /dev/mem	/dev/kmem
 /dev/null
 /dev/zero
-/dev/rd/0
+/dev/ram0
 /dev/console
 /dev/tty[0-9]
 /dev/fd0*
-/dev/cu*
+#/dev/cu*
 /dev/sda*
 /dev/sdb*
 /dev/sdc*
@@ -246,16 +246,43 @@ vgscan
 
 # PCMCIA stuff
 /sbin/cardmgr
-/etc/rc.d/init.d/pcmcia
+/sbin/pcmcia <=Replacements/etc/pcmcia
+/etc/pcmcia/cis/*
+/etc/pcmcia/*
 # Modules stuff
 /lib/modules
-/lib/modules/2.4.4-ac5
-/lib/modules/2.4.4-ac5/modules.dep
-/lib/modules/2.4.4-ac5/kernel/drivers/net/tulip/tulip.o
-/lib/modules/2.4.4-ac5/pcmcia/i82365.o
-/lib/modules/2.4.4-ac5/pcmcia/pcmcia_core.o
-/lib/modules/2.4.4-ac5/pcmcia/ds.o
-/lib/modules/2.4.4-ac5/pcmcia/3c*
+/lib/modules/2.4.4-ac4
+/lib/modules/2.4.4-ac4/modules.dep
+/lib/modules/2.4.4-ac4/kernel/drivers/net/tulip/tulip.o
+/lib/modules/2.4.4-ac4/pcmcia/i82365.o
+/lib/modules/2.4.4-ac4/pcmcia/pcmcia_core.o
+/lib/modules/2.4.4-ac4/pcmcia/ds.o
+/lib/modules/2.4.4-ac4/pcmcia/3c*
+
+# Keytables
+/usr/lib/kbd/keytables/be.map <=Replacements/kbd/be.map
+/usr/lib/kbd/keytables/cf.map <=Replacements/kbd/cf.map
+/usr/lib/kbd/keytables/de.map <=Replacements/kbd/de.map
+/usr/lib/kbd/keytables/dk.map <=Replacements/kbd/dk.map
+/usr/lib/kbd/keytables/es.map <=Replacements/kbd/es.map
+/usr/lib/kbd/keytables/fi.map <=Replacements/kbd/fi.map
+/usr/lib/kbd/keytables/fr.map <=Replacements/kbd/fr.map
+/usr/lib/kbd/keytables/gr.map <=Replacements/kbd/gr.map
+/usr/lib/kbd/keytables/hu.map <=Replacements/kbd/hu.map
+/usr/lib/kbd/keytables/is.map <=Replacements/kbd/is.map
+/usr/lib/kbd/keytables/it.map <=Replacements/kbd/it.map
+/usr/lib/kbd/keytables/jp.map <=Replacements/kbd/jp.map
+/usr/lib/kbd/keytables/la.map <=Replacements/kbd/la.map
+/usr/lib/kbd/keytables/no.map <=Replacements/kbd/no.map
+/usr/lib/kbd/keytables/pl.map <=Replacements/kbd/pl.map
+/usr/lib/kbd/keytables/pt.map <=Replacements/kbd/pt.map
+/usr/lib/kbd/keytables/ru.map <=Replacements/kbd/ru.map
+/usr/lib/kbd/keytables/se.map <=Replacements/kbd/se.map
+/usr/lib/kbd/keytables/sf.map <=Replacements/kbd/sf.map
+/usr/lib/kbd/keytables/sg.map <=Replacements/kbd/sg.map
+/usr/lib/kbd/keytables/uk.map <=Replacements/kbd/uk.map
+
+
 #####  End of Bootdisk_Contents
 
 /dev/hda <= Replacements/dev/hda
