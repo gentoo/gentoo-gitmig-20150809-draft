@@ -1,26 +1,27 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Taras Glek <taras.glek@home.com>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.5-r1.ebuild,v 1.6 2002/12/09 04:17:40 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.5-r1.ebuild,v 1.7 2003/02/11 12:50:51 seemant Exp $
+
+IUSE="gnome"
 
 S=${WORKDIR}/$PN/gtk
 MY_PV=145
 DESCRIPTION="A very powerful editor for programmers"
-SRC_URI="http://www.scintilla.org/${PN}${MY_PV}.tgz" 
 HOMEPAGE="http://www.scintilla.org"
+SRC_URI="http://www.scintilla.org/${PN}${MY_PV}.tgz
+	mirror://gentoo/SciTEGTK.cxx.bz2
+	http://cvs.gentoo.org/~seemant/SciTEGTK.cxx.bz2"
 
-DEPEND="virtual/glibc
-	=x11-libs/gtk+-1.2*"
-RDEPEND=""
+DEPEND="=x11-libs/gtk+-1.2*"
 
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 src_unpack() {
 	unpack ${A}
 	# yes could have created a diff... but it's dos-style crlf
-	cp ${FILESDIR}/SciTEGTK.cxx ${S}
+	cp ${WORKDIR}/SciTEGTK.cxx ${S}
 }
 
 src_compile() {
@@ -55,4 +56,3 @@ src_install () {
 		rm -rf ${D}/usr/share/gnome
 	fi
 }
-

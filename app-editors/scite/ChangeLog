@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.7 2003/01/09 04:52:06 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.8 2003/02/11 12:50:51 seemant Exp $
 
 *scite-1.4.9 (08 Jan 2002)
 
@@ -12,6 +12,12 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *scite-1.4.5-r1 (29 May 2002)
+ 
+  11 Feb 2003; Seemant Kulleen <seemant@gentoo.org> scite-1.4.5-r1.ebuild
+  files/SciTEGTK.cxx :
+
+  Moved files/SciTEGTK.cxx to a bzip2 on the mirrors.  Reflected change
+  in the ebuild.
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
