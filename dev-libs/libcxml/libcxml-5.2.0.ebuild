@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.5 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.6 2003/09/11 01:10:01 msterret Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
@@ -52,7 +52,7 @@ src_compile () {
 	local EV; use ev6 && EV=ev6 || EV=ev5
 	cd ${WORKDIR}/usr/lib/compaq/cxml-${RELEASE%*-2}
 
-    # http://h18000.www1.hp.com/math/faq/cxml.html#EmptySharedLib
+	# http://h18000.www1.hp.com/math/faq/cxml.html#EmptySharedLib
 	ld -shared -o libcxml_${EV}.so -soname libcxml.so \
 		-whole-archive libcxml_${EV}.a -no-whole-archive -lots -lcpml
 }
@@ -63,4 +63,3 @@ src_install () {
 	einfo "Please wait while portage strips the libraries..."
 	einfo "This may take a minute..."
 }
-

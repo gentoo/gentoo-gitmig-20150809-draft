@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.009.ebuild,v 1.1 2003/04/23 21:00:21 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.009.ebuild,v 1.2 2003/09/11 01:10:01 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Bruce Guenters Libraries Collection"
@@ -14,14 +14,13 @@ KEYWORDS="x86 sparc"
 DEPEND="virtual/glibc"
 
 src_compile() {
-        echo "${D}/usr/lib/bglibs" > conf-home
-        echo "gcc ${CFLAGS}" > conf-cc
-        MAKEOPTS="" emake || die
+	echo "${D}/usr/lib/bglibs" > conf-home
+	echo "gcc ${CFLAGS}" > conf-cc
+	MAKEOPTS="" emake || die
 }
 
 src_install () {
-        dodir /usr/lib/bglibs
-        ./installer || die "install failed"
-        dodoc ANNOUNCEMENT COPYING NEWS README
+	dodir /usr/lib/bglibs
+	./installer || die "install failed"
+	dodoc ANNOUNCEMENT COPYING NEWS README
 }
-

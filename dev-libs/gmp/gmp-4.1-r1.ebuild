@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1-r1.ebuild,v 1.16 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1-r1.ebuild,v 1.17 2003/09/11 01:10:01 msterret Exp $
 
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
 HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
@@ -21,7 +21,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	[ "${ARCH}" != "sparc" ] && myconf="--enable-mpfr"
-        econf \
+	econf \
 		--localstatedir=/var/state/gmp \
 		--enable-cxx \
 		--enable-mpbsd \

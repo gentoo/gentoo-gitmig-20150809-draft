@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.3-r1.ebuild,v 1.4 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.3-r1.ebuild,v 1.5 2003/09/11 01:10:01 msterret Exp $
 
 IUSE="mpi"
 
@@ -19,12 +19,12 @@ src_unpack() {
 	#will do in two separate source trees
 	#since some sed'ing is done during the build (?if --enable-type-prefix is set?)
 
-    unpack "${P}.tar.gz"
-    cd "${WORKDIR}"
+	unpack "${P}.tar.gz"
+	cd "${WORKDIR}"
 	mv ${P} ${P}-single
 
-    unpack "${P}.tar.gz"
-    cd "${WORKDIR}"
+	unpack "${P}.tar.gz"
+	cd "${WORKDIR}"
 	mv ${P} ${P}-double
 }
 

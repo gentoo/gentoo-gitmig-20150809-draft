@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.2.ebuild,v 1.8 2003/06/14 02:18:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.2.ebuild,v 1.9 2003/09/11 01:10:01 msterret Exp $
 
 IUSE=""
 
@@ -22,8 +22,8 @@ src_unpack() {
 
 src_compile() {
 	#Avoid locking (can break parallel builds)
- 	local myconf
- 	myconf="--disable-libtool-lock"
+	local myconf
+	myconf="--disable-libtool-lock"
 
 	econf ${myconf} || die
 	emake || die

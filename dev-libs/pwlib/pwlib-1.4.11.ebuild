@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.4.11.ebuild,v 1.5 2003/09/06 22:29:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.4.11.ebuild,v 1.6 2003/09/11 01:10:02 msterret Exp $
 
 DESCRIPTION="Libs needed for GnomeMeeting"
 HOMEPAGE="http://www.openh323.org/"
@@ -41,8 +41,8 @@ src_compile() {
 
 	if [ "`use ssl`" ]; then
 		export OPENSSLFLAG=1
-        	export OPENSSLDIR=/usr
-        	export OPENSSLLIBS="-lssl -lcrypt"
+		export OPENSSLDIR=/usr
+		export OPENSSLLIBS="-lssl -lcrypt"
 	fi
 
 	make optshared || die
@@ -66,7 +66,7 @@ src_install() {
 
 	cp -a * ${D}/usr/share/pwlib/
 	rm -rf ${D}/usr/share/pwlib/make/CVS
-        rm -rf ${D}/usr/share/pwlib/tools/CVS
+	rm -rf ${D}/usr/share/pwlib/tools/CVS
 	rm -rf ${D}/usr/share/pwlib/tools/asnparser/CVS
 	rm -rf ${D}/usr/share/pwlib/src
 	rm -rf ${D}/usr/share/pwlib/include/CVS

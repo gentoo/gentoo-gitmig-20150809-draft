@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.9.ebuild,v 1.3 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.9.ebuild,v 1.4 2003/09/11 01:10:01 msterret Exp $
 
 inherit eutils libtool gnome.org
 
@@ -20,12 +20,12 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 src_compile() {
 	elibtoolize
 
-        if [ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ]; then
-                # i think the author assumes __DECC is defined only on Tru64.
-                # quick fix in this patch. -taviso.
-                append-flags -ieee
-                epatch ${FILESDIR}/libxml2-2.5.7-dec-alpha-compiler.diff
-        fi
+	if [ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ]; then
+		# i think the author assumes __DECC is defined only on Tru64.
+		# quick fix in this patch. -taviso.
+		append-flags -ieee
+		epatch ${FILESDIR}/libxml2-2.5.7-dec-alpha-compiler.diff
+	fi
 
 	# USE zlib support breaks gnome2 (libgnomeprint for instance fails to compile with
 	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).
