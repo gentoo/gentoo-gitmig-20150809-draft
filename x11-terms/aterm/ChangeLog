@@ -1,9 +1,16 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.25 2004/03/28 21:37:10 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.26 2004/03/29 18:17:01 spock Exp $
 
   28 Mar 2004; Jon Portnoy <avenj@gentoo.org> aterm-0.4.2-r8.ebuild :
   Stable on AMD64.
+
+*aterm-0.4.2-r9 (29 Mar 2004)
+
+  29 Mar 2004; Michal Januszewski <spock@gentoo.org> aterm-0.4.2-r9.ebuild,
+  files/aterm-0.4.2-copynpaste-r3.patch:
+  Updated the copy'n'paste patch to make jedit happy and close #42683. Seems my
+  ears were long enough after all ;)
 
   27 Mar 2004; Michal Januszewski <spock@gentoo.org> aterm-0.4.2-r4.ebuild,
   aterm-0.4.2-r5.ebuild, aterm-0.4.2-r6.ebuild, aterm-0.4.2-r7.ebuild,
