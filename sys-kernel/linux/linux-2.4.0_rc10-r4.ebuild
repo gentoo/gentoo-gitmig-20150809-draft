@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r3.ebuild,v 1.2 2000/11/27 14:49:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r4.ebuild,v 1.1 2000/12/02 00:23:45 drobbins Exp $
 
 S=${WORKDIR}/linux
 if [ "$PN" = "linux" ]
@@ -12,9 +12,9 @@ else
 fi
 SRC_URI="
 http://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test10.bz2 
-hhttp://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test9.bz2 
-hhttp://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2 
-http://devlinux.com/pub/namesys/2.4-beta/linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
+http://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test9.bz2 
+http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2 
+ftp://ftp.reiserfs.org/pub/2.4/linux-2.4.0-test10-reiserfs-3.6.19-patch.gz
 http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.4.tar.gz 
 http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz 
 http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.0.18-patch.tar.gz 
@@ -29,6 +29,11 @@ HOMEPAGE="http://www.kernel.org/
 	  http://www.nvidia.com"
 	
 src_compile() {
+   	#time to do the special symlink tweak
+	readlink /usr/src/linux > ${T}/linuxlink
+	rm /usr/src/linux
+	( cd /usr/src; ln -s ${S} linux )
+	#symlink tweak in place
 	cd ${S}/fs/reiserfs/utils
     try make
     cd ${S}/lm_sensors-2.5.2
@@ -49,19 +54,30 @@ src_compile() {
 	cd ${S}/extras/LVM/0.9
 	try ./configure --prefix=/
 	try make
+	#untweak the symlink
+	( cd /usr/src; rm linux; ln -s `cat ${T}/linuxlink` linux )
 }
 
 src_unpack() {
-    cd ${WORKDIR} 
+	if [ ! -L /usr/src/linux ]
+	then
+		echo '!!!' /usr/src/linux is not a symbolic link.
+		echo '!!!' For ${PF} to compile correctly, /usr/src/linux
+		echo '!!!' needs to be temporarily modified to point to
+		echo '!!!' a temporary build directory.  Please rename your
+		echo '!!!' current directory and restart this build process.
+		exit 1
+	fi
+	cd ${WORKDIR} 
 	unpack linux-2.4.0-test8.tar.bz2
-    cd ${S}
+   	cd ${S}
 	echo "Applying test9 patch..."
     cat ${DISTDIR}/patch-2.4.0-test9.bz2 | bzip2 -d | patch -p1
-	echo "Applying ReiserFS patch..."
-    gzip -dc ${DISTDIR}/linux-2.4.0-test9-reiserfs-3.6.18-patch.gz | patch -p1
 	echo "Applying test10 patch..."
 	cat ${DISTDIR}/patch-2.4.0-test10.bz2 | bzip2 -d | patch -p1
-    cd ${S}
+    echo "Applying ReiserFS patch..."
+    gzip -dc ${DISTDIR}/linux-2.4.0-test10-reiserfs-3.6.19-patch.gz | patch -p1
+	cd ${S}
 	mkdir extras
 	echo "Applying IBM JFS patch..."
 	cd extras

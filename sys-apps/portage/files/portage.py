@@ -1437,6 +1437,22 @@ class portagetree(packagetree):
 					self.tree[mykey].append([fullpkg,catpkgsplit(fullpkg)])
 		os.chdir(origdir)
 		self.populated=1
+	def getdeps(self,pf):
+		"returns list of dependencies, if any"
+		if not self.populated:
+			self.populate()
+		if self.exists_specific(pf):
+			mysplit=catpkgsplit(pf)
+			mydepfile=self.root+"/"+mysplit[0]+"/"+mysplit[1]+"/files/depend-"+string.split(pf,"/")[1]
+			if os.path.exists(mydepfile):
+				myd=open(mydepfile,"r")
+				mydeps=myd.readlines()
+				myd.close()
+				returnme=""
+				for x in mydeps:
+					returnme=returnme+" "+x[:-1]
+				return returnme
+		return ""
 
 class currenttree(packagetree):
 	"this tree will scan a current package file located at root (passed to init)"
