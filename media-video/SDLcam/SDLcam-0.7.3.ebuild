@@ -1,33 +1,32 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3.ebuild,v 1.5 2003/02/28 16:55:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3.ebuild,v 1.6 2003/09/10 04:37:59 vapier Exp $
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Webcam application that uses the SDL library"
 HOMEPAGE="http://raph.darktech.org/SDLcam/"
 SRC_URI="http://raph.darktech.org/SDLcam/downloads/${P}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="dev-libs/libxml2
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-ttf"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc3.patch
+	# Don't you love hardcoded vars?
+	sed -i \
+		-e "s:/usr/local/share/SDLcam/:/usr/share/SDLcam/:" \
+		-e "s:/usr/local/lib/SDLcam:/usr/lib/SDLcam:" \
+		configuration.h interface.cpp SDL_v4l_filters.c
+}
 
 src_compile() {
-
-	# Don't you love hardcoded vars?
-	mv configuration.h configuration.h.orig
-	sed "s:/usr/local/share/SDLcam/:/usr/share/SDLcam/:" \
-		configuration.h.orig > configuration.h
-	mv interface.cpp interface.cpp.orig
-	sed "s:/usr/local/share/SDLcam:/usr/share/SDLcam:" \
-		interface.cpp.orig > interface.cpp
-	mv SDL_v4l_filters.c SDL_v4l_filters.c.orig
-	sed "s:/usr/local/lib/SDLcam:/usr/lib/SDLcam:" \
-		SDL_v4l_filters.c.orig > SDL_v4l_filters.c
 	emake || die
 }
 

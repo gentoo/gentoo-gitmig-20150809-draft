@@ -1,10 +1,12 @@
 # ChangeLog for media-video/SDLcam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/ChangeLog,v 1.2 2003/02/12 07:35:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/ChangeLog,v 1.3 2003/09/10 04:37:59 vapier Exp $
 
 *SDLcam-0.7.3 (30 Sep 2002)
 
-  30 Sep 2002; Matt Keadle <mkeadle@gentoo.org> SDLcam-0.7.3.ebuild :
+  10 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  gcc3 patch #27535.
 
+  30 Sep 2002; Matt Keadle <mkeadle@gentoo.org> SDLcam-0.7.3.ebuild :
   SDLcam was in portage, then it went missing, now it's back. This
   version cures past issues with gcc3.x.
