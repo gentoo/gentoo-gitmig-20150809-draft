@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.0.1.ebuild,v 1.8 2004/07/03 16:51:11 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.0.1.ebuild,v 1.9 2004/07/03 16:53:17 kugelfang Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	pwd
-	epatch ${FILESDIR}/${P}-shared-object.patch
+	use amd64 && epatch ${FILESDIR}/${P}-shared-object.patch
 }
 
 src_compile() {
