@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.25 2004/06/27 00:30:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.26 2004/06/28 16:00:29 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -221,7 +221,7 @@ function webapp_serverowned ()
 #	config file's name
 # ------------------------------------------------------------------------
 
-function webapp_server_config ()
+function webapp_server_configfile ()
 {
 	webapp_checkfileexists "$2"
 
@@ -431,6 +431,7 @@ function webapp_src_preinst ()
 	dodir "${MY_ERRORSDIR}"
 	dodir "${MY_SQLSCRIPTSDIR}"
 	dodir "${MY_HOOKSCRIPTSDIR}"
+	dodir "${MY_SERVERCONFIGDIR}"
 }
 
 function webapp_pkg_postinst ()
