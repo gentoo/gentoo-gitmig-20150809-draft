@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.560 2004/08/16 03:55:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.561 2004/08/16 04:26:34 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -455,7 +455,6 @@ net-www/mozilla:mozsvg - Enable SVG support in mozilla
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/mozilla:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
-net-www/tinyproxy:transparent-proxy - enable support for transparent proxies
 net-www/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 net-www/w3m-m17n:migemo - Enables migemo support
 net-www/w3m-m17n:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
@@ -508,6 +507,7 @@ sys-libs/glibc:makecheck - makes glibc perform a 'make check' before merging and
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 www-apps/nut:cgi - Add CGI script support
+www-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
 www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
 www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
