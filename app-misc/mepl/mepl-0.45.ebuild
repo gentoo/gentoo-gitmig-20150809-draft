@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/mepl-0.45.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/mepl-0.45.ebuild,v 1.4 2003/11/20 09:43:52 phosphan Exp $
 
 SRC_URI="http://www.hof-berlin.de/mepl/mepl${PV}.tar.gz"
 HOMEPAGE="http://www.hof-berlin.de/mepl/"
@@ -16,13 +16,12 @@ S=${WORKDIR}/${PN}${PV}
 
 src_compile () {
 	emake en
-	cp mepl.en mepl.7
-	emake updconf
 }
 
 src_install () {
 	dobin mepl meplmail
 	insinto /etc
 	doins mepl.conf
+	cp mepl.en mepl.7
 	doman mepl.7
 }
