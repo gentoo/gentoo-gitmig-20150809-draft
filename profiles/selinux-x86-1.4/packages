@@ -22,13 +22,14 @@
 *>=dev-python/python-selinux-2.0
 
 # SELinux-patched packages
+*app-arch/tar
 *>=net-misc/openssh-3.7.1_p2
 *>=sys-apps/coreutils-5.0.91
 *>=sys-apps/findutils-4.1.20-r1
 *=sys-apps/procps-3.1.12-r1
 *>=sys-apps/psmisc-21.2-r4
 *>=sys-apps/pam-login-3.14
-*app-arch/tar
+*>=sys-apps/shadow-4.0.3-r7
 *>=sys-apps/util-linux-2.12
 *>=sys-libs/pam-0.75-r9
 *>=sys-libs/pwdb-0.61-r4
@@ -46,6 +47,7 @@
 >=sys-kernel/selinux-sources-2.4.21-r2
 >=sys-kernel/hardened-sources-2.4.22
 >=sys-kernel/development-sources-2.6.0_beta3
+>=sys-kernel/gentoo-dev-sources-2.6.0_beta3
 >=sys-kernel/mm-sources-2.6.0_beta3
 ##############################################################################
 
@@ -76,7 +78,6 @@
 *sys-apps/net-tools
 *sys-apps/sed
 *sys-apps/setserial
-*<sys-apps/shadow-5
 *app-arch/sharutils
 *>=sys-apps/texinfo-4.2-r1
 *sys-apps/which
