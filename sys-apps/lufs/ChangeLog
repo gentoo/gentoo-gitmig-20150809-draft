@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lufs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.8 2003/03/18 11:38:38 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.9 2003/04/05 01:00:39 wmertens Exp $
+
+*lufs-0.9.5 (05 Apr 2003)
+  05 Apr 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.5.ebuild :
+  New upstream version, and it builds and works fine on all my test systems,
+  and nothing depends on it. Only, if you do ldd /usr/bin/lufsd, you
+  get many dependencies, and I want to have them in DEPEND before I
+  declare these ebuilds stable.
 
 *lufs-0.9.4 (18 Mar 2003)
   18 Mar 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.4.ebuild :
