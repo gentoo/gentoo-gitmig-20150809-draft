@@ -1,0 +1,14 @@
+ [32;01m*[0m Generated metadata.xml:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>desktop-dock</herd>
+<longdescription>
+wmnetmon is a dockapp that monitors up to 40 
+hosts or services and can execute something  there
+is a problem with any of them. The hosts  and
+services are represented by LEDs, which  blink red
+if they go down.
+</longdescription>
+</pkgmetadata>

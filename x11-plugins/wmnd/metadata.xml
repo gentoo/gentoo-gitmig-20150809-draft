@@ -1,0 +1,15 @@
+ [32;01m*[0m Generated metadata.xml:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>desktop-dock</herd>
+<longdescription>
+WMND (Window Maker Network Devices) is a  dockapp
+for monitoring multiple network  interfaces
+simultaneously. Based on WMiFS  1.3b, WMND has
+been almost totally re-written  and is more
+optimized, flexible, and consumes  less CPU time
+than wmmon.
+</longdescription>
+</pkgmetadata>
