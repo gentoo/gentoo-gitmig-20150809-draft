@@ -37,7 +37,6 @@
 >=x11-themes/gtk-engines-begtk-1.0.1-r1
 >=x11-themes/gtk-engines-cleanice-1.2.5
 >=x11-themes/gtk-engines-crux-1.9.5-r1
->=x11-themes/gtk-engines-dwerg-0.6
 >=x11-themes/gtk-engines-eazel-0.3-r1
 >=x11-themes/gtk-engines-flat-2.0-r1
 >=x11-themes/gtk-engines-geramik-0.24-r3
@@ -45,9 +44,7 @@
 >=x11-themes/gtk-engines-icegradient-0.0.5-r1
 >=x11-themes/gtk-engines-lighthouseblue-0.7.0
 >=x11-themes/gtk-engines-mac2-1.0.3-r1
->=x11-themes/gtk-engines-magicchicken-1.1.1
 >=x11-themes/gtk-engines-mist-0.10
->=x11-themes/gtk-engines-notif2-1.0
 >=x11-themes/gtk-engines-smooth-0.5.2
 >=x11-themes/gtk-engines-thinice-2.0.2-r1
 >=x11-themes/gtk-engines-xenophilia-0.8-r1
