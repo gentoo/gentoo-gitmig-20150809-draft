@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.786 2004/12/10 03:49:42 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.787 2004/12/10 15:45:13 brix Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -597,6 +597,8 @@ net-wireless/libbtctl:mono - Add Mono Bluetooth bindings
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa-supplicant:gsm - Add support for EAP-SIM authentication algorithm
 net-wireless/wpa-supplicant:pcap - Use external libpcap and libdnet for layer2 packet processing
+net-wireless/wpa_supplicant:gsm - Add support for EAP-SIM authentication algorithm
+net-wireless/wpa_supplicant:pcap - Use external libpcap and libdnet for layer2 packet processing
 net-www/apache:distcache - Enable SSL distcache support
 net-www/apache:threads - Enable thread support
 net-www/elinks:lua - enable lua support
