@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r1.ebuild,v 1.2 2003/08/15 13:31:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r1.ebuild,v 1.3 2003/08/22 01:53:20 vapier Exp $
 
 inherit games eutils
 
@@ -25,9 +25,8 @@ src_unpack() {
 
 	cd src/linuxcfg
 	tar -zxf spucfg.tar.gz
+	( emake distclean && automake --add-missing ) || die "could not clean up"
 	edos2unix `find -name '*.in' -o -name '*.am' -o -name '*.[ch]' -o -name 'config*'`
-
-	( automake --add-missing && emake distclean ) || die "could not clean up"
 }
 
 src_compile() {
