@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.18 2002/12/13 11:00:17 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.19 2002/12/19 03:32:01 raker Exp $
+
+*openldap-2.1.9 (18 Dec 2002)
+
+  18 Dec 2002; Nick Hadaway <raker@gentoo.org> openldap-2.1.9.ebuild,
+  files/digest-openldap-2.1.9 :
+  Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
