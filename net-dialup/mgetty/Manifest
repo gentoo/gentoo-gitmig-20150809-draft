@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e18ef33902b09807079369cf58103aa6 ChangeLog 5366
+MD5 bb3b302f711e8603d285ab38b371d954 ChangeLog 5536
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 527ac0e55d3ecd1344f95522ab7a4448 mgetty-1.1.30.ebuild 3350
 MD5 b1a86bb00a4173f7df12c188993c3239 mgetty-1.1.30-r1.ebuild 3408
 MD5 111042583a0f3f1f9b41e3713e064220 mgetty-1.1.30-r2.ebuild 3551
-MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30-r2 70
+MD5 527ac0e55d3ecd1344f95522ab7a4448 mgetty-1.1.30.ebuild 3350
+MD5 30792dd1f8db4dd7f5b65f64babb5151 mgetty-1.1.30-r3.ebuild 3816
 MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30 70
-MD5 bc47f96a12b21b779d57c0c2ad4b6837 files/mgetty-1.1.30-gentoo.diff 2771
 MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30-r1 70
+MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30-r2 70
+MD5 bc47f96a12b21b779d57c0c2ad4b6837 files/mgetty-1.1.30-gentoo.diff 2771
+MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30-r3 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBk71gugEuf3OQ0akRAgRoAJ0TxFT6Ha3rSWiY5RGcaMO4DnK4LwCfXb3Z
-eNLJpqXOlDfhLYqpG/aF3XQ=
-=7JSo
+iD8DBQFBlocNjtv59x0+BrURAvahAKDbimk9KrAn++LNNTKcdWCBu9tszACgvNeV
+Rr/ECIMTitCvxL5y/pRWKEo=
+=TyEj
 -----END PGP SIGNATURE-----
