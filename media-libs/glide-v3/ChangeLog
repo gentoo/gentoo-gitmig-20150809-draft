@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/glide-v3
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.10 2003/10/03 14:15:14 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.11 2004/03/07 01:11:39 mr_bones_ Exp $
+
+  06 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  glide-v3-3.10-r3.ebuild:
+  depend on sed >= 4; error messages
 
   03 Oct 2003; Aron Griffis <agriffis@gentoo.org> glide-v3-3.10-r3.ebuild:
   Fixup for alpha (after marking stable... bad bad Aron)
