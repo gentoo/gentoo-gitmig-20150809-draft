@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.40.ebuild,v 1.2 2004/03/03 16:13:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.40.ebuild,v 1.3 2004/03/03 16:26:28 mholzer Exp $
 
 inherit nsplugins
 
@@ -9,11 +9,10 @@ GECKO_SDK="gecko-sdk-i686-pc-linux-gnu-1.6.tar.gz"
 
 DESCRIPTION="mplayer plug-in for Mozilla"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.6/${GECKO_SDK}"
+	x86? ( ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.6/${GECKO_SDK} ) "
 HOMEPAGE="http://mplayerplug-in.sourceforge.net/"
-RESTRICT="nomirror"
 
-KEYWORDS="~x86" #~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips"
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
@@ -21,7 +20,9 @@ IUSE=""
 DEPEND=">=media-video/mplayer-0.92"
 
 src_compile() {
-	econf --with-gecko-sdk=${WORKDIR}/gecko-sdk || die
+	local myconf
+	use x86 && myconf="${myconf} --with-gecko-sdk=${WORKDIR}/gecko-sdk"
+	econf ${myconf} || die
 	emake || die
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.18 2004/03/03 16:13:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.19 2004/03/03 16:26:28 mholzer Exp $
+
+  03 Mar 2004; Martin Holzer <mholzer@gentoo.org> mplayerplug-in-2.40.ebuild,
+  mplayerplug-in-2.45.ebuild:
+  gecko-sdk only used on x86 now
 
   03 Mar 2004; Luca Barbato <lu_zero@gentoo.org> mplayerplug-in-2.40.ebuild,
   mplayerplug-in-2.45.ebuild:
