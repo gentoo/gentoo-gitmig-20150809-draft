@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ee02ce44906da3a15b94e7c932da7c8f ChangeLog 768
 MD5 efdee889ccdccb473556f5711b98e200 pktstat-1.7.2q.ebuild 722
+MD5 0017b0861961b12222aeaf371d014112 pktstat-1.7.5.ebuild 686
+MD5 7cd0ac8587edcef1642dced99ace0a17 ChangeLog 864
 MD5 08099c4eee1a2c2b635e71bf692896d2 metadata.xml 245
-MD5 a45ecd1c33c6313f623ee7723600b553 pktstat-1.7.5.ebuild 687
-MD5 16e793e1046d368c20529662fcb19020 files/digest-pktstat-1.7.2q 65
 MD5 34b11a79f6f80f332a738732e86be6af files/digest-pktstat-1.7.5 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+xtbmdTrptrqvGERAqDIAJwLadN0CeLHybTZp8ZKW8q/s6686ACeKg1i
-MIe7KRWG+G4rf4zkQWQN2xY=
-=iO71
------END PGP SIGNATURE-----
+MD5 16e793e1046d368c20529662fcb19020 files/digest-pktstat-1.7.2q 65
