@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.26-r3.ebuild,v 1.1 2004/07/09 14:33:13 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.26-r3.ebuild,v 1.2 2004/07/09 23:38:29 mr_bones_ Exp $
 
 IUSE="ultra1"
 
