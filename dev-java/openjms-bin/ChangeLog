@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/openjms-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/ChangeLog,v 1.7 2004/03/27 06:35:49 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/ChangeLog,v 1.8 2004/03/27 06:37:31 zx Exp $
+
+  30 Mar 2004; Chris Aniszczyk <zx@gentoo.org> files/conf, files/rc:
+  Small fix to repair issue with 0.7.5
 
   30 Mar 2004; Chris Aniszczyk <zx@gentoo.org> openjms-bin-0.7.5-r3.ebuild,
   files/10openjms-0.7.6, files/conf, files/0.7.6/10openjms-0.7.6,
