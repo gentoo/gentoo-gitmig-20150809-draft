@@ -1,4 +1,14 @@
-MD5 cf2ba1588643fa2b458d92a4eb00622e ChangeLog 787
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0c050f6082cab5af88c0b51af2a43d48 ChangeLog 883
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d3d8e7e553f200defed411bd9cbde5d9 syscriptor-1.5.12.ebuild 654
 MD5 f9cf219e9fe17e8c41097d61c684a6f9 files/digest-syscriptor-1.5.12 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBXsq6I1lqEGTUzyQRAhtNAJ0eAkwkrTEa7uQJn59Y8djhHr+pegCfegZV
+8q5xqJQDV6NiyRfE9i0l3NQ=
+=DHxv
+-----END PGP SIGNATURE-----
