@@ -1,6 +1,9 @@
 #glibc-2.2.4-r8 is working, it seems.  No longer a need to unmask it.
 #(12/22/01 - drobbins)
 
+#untested/not approved stuff, please do not use
+>=sys-apps/portage-9
+
 #incomplete and very dangerous < Danarmak >
 >=app-office/openoffice-641b
 
