@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/transfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.10 2003/07/21 22:55:51 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.11 2003/11/06 16:23:40 malverian Exp $
+
+*transfig-3.2.4-r1 (18 Apr 2003)
+
+  06 Nov 2003; Philip Walls <malverian@gentoo.org> files/transfig-3.2.4.patch :
+  Fixes emerge -K problems, Xpm support, and png support. Thanks to 
+  splite (splite-gentoo@sigint.cs.purdue.edu) for patch. closes #25076
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> transfig-3.2.4-r1.ebuild
+  Added hppa to KEYWORDS.
 
   21 Jul 2003; Will Woods <wwoods@gentoo.org> transfig-3.2.4-r1.ebuild:
   Marked stable for alpha
@@ -10,11 +19,6 @@
 
   10 May 2003; Jason Wever <weeve@gentoo.org> transfig-3.2.4-r1.ebuild:
   Added ~sparc to keywords.
-
-*transfig-3.2.4-r1 (18 Apr 2003)
-
-  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> transfig-3.2.4-r1.ebuild
-  Added hppa to KEYWORDS.
 
   18 Apr 2003; Philip Walls <malverian@gentoo.org> transfig-3.2.4.ebuild
   files/transfig-3.2.4.patch :
