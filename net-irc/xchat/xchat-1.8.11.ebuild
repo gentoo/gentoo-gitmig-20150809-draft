@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11.ebuild,v 1.9 2003/09/11 01:23:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11.ebuild,v 1.10 2003/11/23 05:09:14 zul Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )
 	python? ( >=dev-lang/python-2.2-r7 )
 	perl?   ( >=dev-lang/perl-5.6.1 )
 	gnome?  ( <gnome-base/gnome-panel-1.5.0
-		>=media-libs/gdk-pixbuf-0.11.0-r1 )
+		>=media-libs/gdk-pixbuf-0.22.0 )
 	ssl?    ( >=dev-libs/openssl-0.9.6a )"
 
 DEPEND="${RDEPEND}
