@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r1.ebuild,v 1.2 2002/04/07 22:11:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r1.ebuild,v 1.3 2002/04/07 23:50:23 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Jade is an implemetation of DSSSL - an ISO standard for formatting SGML (and XML) documents"
@@ -104,7 +104,9 @@ pkg_postrm() {
 		   [ -e /etc/sgml/${P}.cat ] ; then
 			install-catalog --remove /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/unicode/catalog
 		fi
-#		install-catalog --add /etc/sgml/sgml-docbook.cat /etc/sgml/${P}.cat
+		if [ ! -e /etc/sgml/${P}.cat ] ; then
+			install-catalog --remove /etc/sgml/sgml-docbook.cat /etc/sgml/${P}.cat
+		fi
 	fi
 }
 
