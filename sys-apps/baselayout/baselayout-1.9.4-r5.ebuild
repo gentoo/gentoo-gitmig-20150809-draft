@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r5.ebuild,v 1.2 2004/10/19 20:16:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r5.ebuild,v 1.3 2004/10/28 15:44:24 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 SV=1.4.16		# rc-scripts version
 SVREV=			# rc-scripts rev
@@ -86,7 +86,7 @@ src_compile() {
 	echo "${ROOT}" > ${T}/ROOT
 
 	einfo "Building utilities..."
-	make -C ${S}/src CC="${CC:-gcc}" LD="${CC:-gcc} ${LDFLAGS}" \
+	make -C ${S}/src CC="$(tc-getCC)" LD="$(tc-getCC) ${LDFLAGS}" \
 		CFLAGS="${CFLAGS}" || die "problem compiling utilities"
 
 	if ! use build; then
@@ -99,7 +99,7 @@ src_compile() {
 		# the shared obj by default anyway!  The other option is to
 		# refrain from building sulogin, but that isn't a good option.
 		# (09 Jul 2004 agriffis)
-		emake -C ${S2}/src CC="${CC:-gcc}" LD="${CC:-gcc}" \
+		emake -C ${S2}/src CC="$(tc-getCC)" LD="$(tc-getCC)" \
 			LDFLAGS="${LDFLAGS}" CFLAGS="${CFLAGS} -D_GNU_SOURCE" \
 			LCRYPT="-lcrypt" || die "problem compiling sysvinit"
 	else

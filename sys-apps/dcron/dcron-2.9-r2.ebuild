@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.17 2004/10/05 12:59:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.18 2004/10/28 15:47:44 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_PV=29
 DESCRIPTION="A cute little cron from Matt Dillon"
@@ -33,7 +33,7 @@ src_unpack() {
 	sed -i 's:VISUAL:EDITOR:g' crontab.{c,1}
 
 	# remove gcc hardcode
-	sed -i "s:\(CC  = \)gcc:\1${CC:-gcc}:" Makefile
+	sed -i "s:\(CC  = \)gcc:\1$(tc-getCC):" Makefile
 }
 
 src_compile() {

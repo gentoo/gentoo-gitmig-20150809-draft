@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.4.ebuild,v 1.1 2004/10/26 02:23:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.4.ebuild,v 1.2 2004/10/28 15:44:24 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 SV=1.6.4		# rc-scripts version
 SVREV=			# rc-scripts rev
@@ -40,7 +40,7 @@ src_unpack() {
 src_compile() {
 	use static && append-ldflags -static
 
-	make -C ${S}/src CC="${CC:-gcc}" LD="${CC:-gcc} ${LDFLAGS}" \
+	make -C ${S}/src CC="$(tc-getCC)" LD="$(tc-getCC) ${LDFLAGS}" \
 		CFLAGS="${CFLAGS}" || die
 }
 

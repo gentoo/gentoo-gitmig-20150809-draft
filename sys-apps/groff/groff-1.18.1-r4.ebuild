@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r4.ebuild,v 1.7 2004/06/30 16:29:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r4.ebuild,v 1.8 2004/10/28 15:50:50 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 MB_PATCH="${P/-/_}-7"
 DESCRIPTION="Text formatter used for man pages"
@@ -54,8 +54,8 @@ src_compile() {
 	local myconf=""
 
 	# Fix problems with not finding g++
-	[ -z "${CC}" ] && export CC="gcc"
-	[ -z "${CXX}" ] && export CXX="g++"
+	export CC="$(tc-getCC)"
+	export CXX="$(tc-getCXX)"
 
 	case ${ARCH} in
 		alpha)

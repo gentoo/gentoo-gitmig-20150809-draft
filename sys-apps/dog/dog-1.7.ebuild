@@ -1,23 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/dog-1.7.ebuild,v 1.12 2004/10/23 05:48:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/dog-1.7.ebuild,v 1.13 2004/10/28 15:49:18 vapier Exp $
 
 DESCRIPTION="Dog is better than cat"
-SRC_URI="http://jl.photodex.com/dog/${P}.tar.gz"
 HOMEPAGE="http://jl.photodex.com/dog/"
+SRC_URI="http://jl.photodex.com/dog/${P}.tar.gz"
 
-inherit ccc
-
-IUSE=""
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 alpha ppc64 sparc ppc ppc-macos"
+SLOT="0"
+KEYWORDS="alpha amd64 ppc ppc64 ppc-macos sparc x86"
+IUSE=""
+
 DEPEND=">=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}; sed -i 's/^CFLAGS/#CFLAGS/' Makefile
-	is-ccc && sed -i "s/gcc/${CC:-gcc}/" Makefile
+	cd ${S}
+	sed -i \
+		-e 's/^CFLAGS/#CFLAGS/' \
+		-e "s/gcc/$(tc-getCC)/" \
+		Makefile
 }
 
 src_compile() {
@@ -25,8 +27,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin dog
+	dobin dog || die
 	doman dog.1
-	dodoc README AUTHORS COPYING
+	dodoc README AUTHORS
 }
-
