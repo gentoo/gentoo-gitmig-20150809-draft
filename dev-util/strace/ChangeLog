@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.34 2004/04/18 15:01:10 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.35 2004/04/29 01:02:01 avenj Exp $
+
+  28 Apr 2004; Jon Portnoy <avenj@gentoo.org> strace-4.5.1.ebuild :
+  Stable on x86 and AMD64.
 
 *strace-4.4.98-r1 (18 Apr 2004)
 
