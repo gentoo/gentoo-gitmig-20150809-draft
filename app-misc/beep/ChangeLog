@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/beep
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.3 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.4 2003/01/18 18:20:51 mholzer Exp $
 
 *beep-1.2.2 (10 Jul 2002)
+
+  18 Jan 2003; Martin Holzer <mholzer@gentoo.org> beep-1.2.2.ebuild ChangeLog :
+  Fixed permissions. Closes #14109.
 
   15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> beep-1.2.2.ebuild :
   Add alpha to KEYWORDS

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2.ebuild,v 1.7 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2.ebuild,v 1.8 2003/01/18 18:20:51 mholzer Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Beep, the advanced PC speaker beeper"
@@ -23,6 +23,7 @@ src_install () {
 
 	exeinto /usr/bin
 	doexe beep
+	chmod 4755 ${D}/usr/bin/beep
 
 	insinto /usr/share/man/man1
 	doins beep.1.gz
