@@ -1,0 +1,18 @@
+# ChangeLog for app-games/fortune-mod-gentoo-dev
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.1 2003/09/10 18:14:04 vapier Exp $
+
+*fortune-mod-gentoo-dev-20030903.ebuild (03 Sep 2003)
+
+  03 Sept 2003; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20030903.ebuild :
+  Version bump, added a few new quotes. Marked stable for all currently
+  keyworded archs - because frankly, who cares about unstable keywording 
+  on a small fortunes file? Really, now, be reasonable.
+
+*fortune-mod-gentoo-dev-20030809.ebuild (09 Aug 2003)
+
+  26 Aug 2003; Joshua Kinard <kumba@gentoo.org> fortune-mod-gentoo-dev-20030809.ebuild:
+  Added ~mips to KEYWORDS
+
+  09 Aug 2003; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20030809.ebuild :
+  Initial import.

@@ -1,0 +1,52 @@
+# ChangeLog for app-games/fortune-mod
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.1 2003/09/10 18:14:04 vapier Exp $
+
+
+*fortune-mod-9708-r1 (20 Jul 2002)
+
+  26 Aug 2003; Joshua Kinard <kumba@gentoo.org> fortune-mod-9708-r1.ebuild:
+  Added ~mips to KEYWORDS
+
+  28 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added patches to fix #19842 and clean up.
+
+  05 Jun 2003; Martin Holzer <mholzer@gentoo.org> fortune-mod-9708-r1.ebuild:
+  Added Manpage fix. Closes #20145.
+
+  03 Jun 2003; Tavis Ormandy <taviso@gentoo.org> fortune-mod-9708-r1.ebuild:
+  marking alpha.
+
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> fortune-mod-9708-r1.ebuild :
+  Changed sparc64 to sparc keyword
+
+  19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
+  Found the proper 'home' for fortune-mod
+
+  23 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> fortune-mod-9708-r1.ebuild:
+  Added advisory about how enable offensive fortune.
+
+  20 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> fortune-mod-9708-r1.ebuild:
+  Fixed problem with fortune-offensive. If you want it, need edit the
+  ebuild and change $offensive= to $offensive=1
+
+*fortune-mod-9708 (1 Feb 2002)
+
+  19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
+  Found the proper 'home' for fortune-mod
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> fortune-mod-9708.ebuild :
+  Added LICENSE.
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
+
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

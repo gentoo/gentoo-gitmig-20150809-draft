@@ -1,0 +1,12 @@
+# ChangeLog for app-games/fortune-mod-tao
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-tao/ChangeLog,v 1.1 2003/09/10 18:14:05 vapier Exp $
+
+
+*fortune-mod-tao-1 (26 Jun 2003)
+
+  26 Aug 2003; Joshua Kinard <kumba@gentoo.org> fortune-mod-tao-1.ebuild:
+  Added ~mips & ~sparc to KEYWORDS
+
+  26 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Susie Edgeworth <arienadean@yahoo.com> #19013.

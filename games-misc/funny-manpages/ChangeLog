@@ -1,0 +1,8 @@
+# ChangeLog for app-games/funny-manpages
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/funny-manpages/ChangeLog,v 1.1 2003/09/10 18:14:05 vapier Exp $
+
+*funny-manpages-1.3_rc4 (14 Dec 2002)
+
+  14 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Paul Belt <gaarde@yahoo.com>.

@@ -1,0 +1,15 @@
+# ChangeLog for app-games/cowsay
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.1 2003/09/10 18:14:04 vapier Exp $
+
+  06 Jun 2003; <msterret@gentoo.org> cowsay-3.03.ebuild:
+  DEPEND on sed >=4
+
+*cowsay-3.03 (15 Jul 2002)
+
+  13 May 2003; Martin Holzer <mholzer@gentoo.org> cowsay-3.03.ebuild:
+  Fixing man page. Closes #20929.
+
+  15 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
+  Initial import, closes bug #4778.
+  ebuild submitted by Marcin Jessa <yazzy@yazzy.org>

@@ -1,0 +1,15 @@
+# ChangeLog for app-games/fortune-mod-simpsons-chalkboard
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-simpsons-chalkboard/ChangeLog,v 1.1 2003/09/10 18:14:04 vapier Exp $
+
+
+*fortune-mod-simpsons-chalkboard-0.1.ebuild (12 Aug 2002)
+
+  26 Aug 2003; Joshua Kinard <kumba@gentoo.org> fortune-mod-simpsons-chalkboard-0.1.ebuild:
+  Added ~mips & ~sparc to KEYWORDS
+
+  03 Nov 2002; Jon Nall <nall@gentoo.org> fortune-mod-homer-0.1.ebuild :
+  changed PPC to ppc in KEYWORDS
+
+  12 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> fortune-mod-homer-0.1.ebuild :
+  First relase.

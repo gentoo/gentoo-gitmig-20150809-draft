@@ -1,0 +1,41 @@
+--- Makefile.orig	2003-06-28 01:37:38.000000000 -0400
++++ Makefile	2003-06-28 01:39:44.000000000 -0400
+@@ -3,24 +3,24 @@
+ #
+ 
+ # Where does the fortune program go?
+-FORTDIR=/usr/local/games
++FORTDIR=$(DESTDIR)/usr/bin
+ # Where do the data files (fortunes, or cookies) go?
+-COOKIEDIR=/usr/local/share/games/fortunes
++COOKIEDIR=$(DESTDIR)/usr/share/fortune
+ # Offensive ones?
+ OCOOKIEDIR=$(COOKIEDIR)/off
+ # The ones with html tags?
+ WCOOKIEDIR=$(COOKIEDIR)/html
+ # Where do strfile and unstr go?
+-BINDIR=/usr/local/bin
++BINDIR=$(DESTDIR)/usr/bin
+ # What is the proper mode for strfile and unstr? 755= everyone, 700= root only
+ BINMODE=0755
+ #BINMODE=0700
+ # Where do the man pages for strfile and unstr go?
+-BINMANDIR=/usr/local/man/man1
++BINMANDIR=$(DESTDIR)/usr/share/man/man1
+ # What is their proper extension?
+ BINMANEXT=1
+ # And the same for the fortune man page
+-FORTMANDIR=/usr/local/man/man6
++FORTMANDIR=$(DESTDIR)/usr/share/man/man6
+ FORTMANEXT=6
+ # Do we want to install the offensive files? (0 no, 1 yes)
+ OFFENSIVE=1
+@@ -55,7 +55,7 @@
+ REGEXLIBS=
+ 
+ DEFINES=-DFORTDIR="\"$(COOKIEDIR)\"" -DOFFDIR="\"$(OCOOKIEDIR)\""
+-CFLAGS=-O2 $(DEFINES) -Wall -fomit-frame-pointer -pipe
++CFLAGS= $(DEFINES) $(OPTCFLAGS)
+ LDFLAGS=-s
+ 
+ # The above flags are used by default; the debug flags are used when make

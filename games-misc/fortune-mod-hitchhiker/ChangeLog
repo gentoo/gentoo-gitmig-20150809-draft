@@ -1,0 +1,15 @@
+# ChangeLog for app-games/fortune-mod-hitchhiker
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-hitchhiker/ChangeLog,v 1.1 2003/09/10 18:14:04 vapier Exp $
+
+
+*fortune-mod-hitchhiker-0.1.ebuild (12 Aug 2002)
+
+  26 Aug 2003; Joshua Kinard <kumba@gentoo.org> fortune-mod-hitchhiker-0.1.ebuild:
+  Added ~mips & ~sparc to KEYWORDS
+
+  03 Nov 2002; Jon Nall <nall@gentoo.org> fortune-mod-hitchhiker-0.1.ebuild :
+  changed PPC to ppc in KEYWORDS
+
+  12 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> gmudix-0.6.ebuild :
+  First relase.

@@ -1,0 +1,10 @@
+# ChangeLog for app-games/xcruise
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xcruise/ChangeLog,v 1.1 2003/09/10 18:14:05 vapier Exp $
+
+*xcruise-0.24 (28 May 2002) 
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> xcruise-0.24.ebuild :
+  Added KEYWORDS.
+  28 May 2002; Spider <spider@gentoo.org> ChangeLog xcruise-0.24.ebuild 
+  new package,  initial release. made by Paul Foote (geesus) <paul_foote@yahoo.com.au>

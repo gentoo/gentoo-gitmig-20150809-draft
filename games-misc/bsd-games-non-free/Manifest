@@ -1,0 +1,6 @@
+MD5 900e9b9176a8bb1f6195112f1f8d075a ChangeLog 506
+MD5 dec8f62f7ded233172ccd873495ddab2 bsd-games-non-free-2.13.ebuild 1910
+MD5 49c481f8746cf44f3fe40302e6ffd77e files/bsdgames-2.13-gentoo.diff 253
+MD5 bcd6594dcb5ac7cce25a40f46cc88930 files/bsdgames_2.13-11.diff 40228
+MD5 582347263c44f4dce3b7d0b7cd8f5cc8 files/config.params-gentoo 1232
+MD5 f791791f24963261fb91e227bc16e615 files/digest-bsd-games-non-free-2.13 75

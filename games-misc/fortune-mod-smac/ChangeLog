@@ -1,0 +1,12 @@
+# ChangeLog for app-games/fortune-mod-smac
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-smac/ChangeLog,v 1.1 2003/09/10 18:14:05 vapier Exp $
+
+
+*fortune-mod-smac-0.1 (14 Dec 2002)
+
+  26 Aug 2003; Joshua Kinard <kumba@gentoo.org> fortune-mod-smac-0.1.ebuild:
+  Added ~mips & ~sparc to KEYWORDS
+
+  14 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Bryn Davies <curious@ihug.com.au>.

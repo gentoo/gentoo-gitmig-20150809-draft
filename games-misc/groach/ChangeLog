@@ -1,0 +1,9 @@
+# ChangeLog for app-games/groach
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/groach/ChangeLog,v 1.1 2003/09/10 18:14:05 vapier Exp $
+
+*groach-0.4.0 (22 May 2003)
+
+  22 May 2003; Jon Portnoy <avenj@gentoo.org> groach-0.4.0.ebuild :
+  Initial import. Ebuild submitted by MATSUU Takuto in bug
+  #20918.
