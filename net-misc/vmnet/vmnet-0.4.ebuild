@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/vmnet-0.4.ebuild,v 1.7 2004/07/14 06:40:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/vmnet-0.4.ebuild,v 1.8 2005/03/01 22:34:02 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.xos.nl/pub/linux/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="sys-apps/net-tools"
@@ -30,19 +30,13 @@ src_compile() {
 }
 
 src_install() {
-	# Binary
-	into /usr
-	dobin ${PN}
-	# This line doesn't seem to work?
-	# fperms 4755 ${PN}
-	chmod 4755 ${D}/usr/bin/${PN}
+	dobin ${PN} || die "dobin"
+	fperms 4711 /usr/bin/${PN} || die "fperms"
 
-	# Docs
 	doman ${PN}.1
-	dodoc COPYING README debian/${PN}.sgml
+	dodoc README debian/${PN}.sgml
 
-	# Config file
-	into /etc
+	insinto /etc
 	doins debian/${PN}.conf
 }
 
