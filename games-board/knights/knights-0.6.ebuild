@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-0.6.ebuild,v 1.7 2004/08/07 15:22:32 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-0.6.ebuild,v 1.8 2004/08/15 06:52:56 vapier Exp $
 
 inherit kde
 need-kde 3
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/knights/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
 src_compile() {
