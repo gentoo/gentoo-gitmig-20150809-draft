@@ -1,4 +1,6 @@
 MD5 06ac0f3eba7bbb4f3ce129891c4c0e9c dvd-slideshow-0.6.0.ebuild 855
-MD5 97953ef4b3190f7b3884df521b74346c ChangeLog 585
+MD5 0bb5a34152b42a3214a925ab6b1d1e26 dvd-slideshow-0.7.0.ebuild 855
+MD5 2b038e1d0bfaf3c66e2d1c937d65fe43 ChangeLog 734
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 383321b29438c6662a0dc2bed878a9bf files/digest-dvd-slideshow-0.6.0 70
+MD5 9eeaa96206c49f0ce3f0c96b946cc478 files/digest-dvd-slideshow-0.7.0 70
