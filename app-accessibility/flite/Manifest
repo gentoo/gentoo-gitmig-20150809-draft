@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 887c7ccae751124c27b1192a475f9b17 ChangeLog 1933
+MD5 f04866ff6e37cda064d18042851b4f19 ChangeLog 2023
+MD5 1ad6581b7b46aab2e51b648e42877df6 flite-1.2-r1.ebuild 1735
 MD5 ac0b1887031d7098cc42c2c70e6c73e4 flite-1.2.ebuild 1621
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
-MD5 655c0543332573a951ecb78aa4e68e8b flite-1.2-r1.ebuild 1724
-MD5 c5214c4d79e701e6750fdff2be9d56a8 files/digest-flite-1.2 136
 MD5 ef87fb0bdde5622c0ee9200d14bc683c files/const.patch 466
+MD5 c5214c4d79e701e6750fdff2be9d56a8 files/digest-flite-1.2 136
 MD5 c5214c4d79e701e6750fdff2be9d56a8 files/digest-flite-1.2-r1 136
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3EtdHTu7gpaalycRAvcoAKDaz09PQv1rQqtsHhxaLe+Vey+vZQCeJqwB
-ORFMh8YMQPQcfryrOQ3Z2b4=
-=Vbqs
------END PGP SIGNATURE-----
