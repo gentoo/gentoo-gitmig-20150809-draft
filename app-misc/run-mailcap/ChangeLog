@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.25 2004/12/23 22:08:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.26 2004/12/24 14:32:54 ticho Exp $
+
+*run-mailcap-3.28_p1-r1 (24 Dec 2004)
+
+  24 Dec 2004; Andrej Kacian <ticho@gentoo.org>
+  +run-mailcap-3.28_p1-r1.ebuild:
+  Install mailcap manpage as mailcap.4 instead of default mailcap.5, to
+  prevent file collision with net-mail/metamail. Closes #70412, reported by
+  Alexander Skwar <askwar@digitalprojects.com>. Keeping stable keywords.
 
   23 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   run-mailcap-3.28_p1.ebuild:
