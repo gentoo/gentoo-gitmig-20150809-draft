@@ -1,5 +1,6 @@
 MD5 5c855d8826bdccceaf32fb10f7d24833 idmapd-1.5.ebuild 1025
 MD5 8862dbc9a8606832f1b44d161dbbf487 ChangeLog 323
+MD5 a3dd8511b8874ce1b494dce2472c709c metadata.xml 159
 MD5 8b91dd662c9509cf90c2998397d2a69b files/digest-idmapd-1.5 62
 MD5 c0c2fa8dc80b342974cf24b421011371 files/1.5-no-string.patch 336
 MD5 e5353d0bcfafedfef9f2ad24197963ab files/idmapd.confd 288
