@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-chinese
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/ChangeLog,v 1.20 2004/09/27 02:12:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/ChangeLog,v 1.21 2004/11/01 18:39:08 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  scim-chinese-0.4.2.ebuild:
+  Marked ~ppc64; bug #63375
 
   27 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -scim-chinese-0.4.0.ebuild,
   -scim-chinese-0.4.1.ebuild, scim-chinese-0.4.2.ebuild:
