@@ -1,10 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.3 2004/10/19 23:59:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.4 2004/10/20 01:39:51 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 #
 # Usage:
+# The main purpose of this eclass is to simplify installing xmms plugins
+# which for the various players that support the xmms API (mainly xmms and
+# bmp, but this can be expanded to noxmms as well).
+#
+# The package is assumed to work by default with xmms.  If it will not work
+# with BMP, then set NOBMP=1 in the ebuild.
+#
 # Source Code:
 # You have multiple methods with which to specify how we get the source code
 # for the patckages.
@@ -86,30 +93,30 @@ if [ -n "${BMP_SRC_URI}" -a -n "${XMMS_SRC_URI}" ]; then
 fi
 
 xmms-plugin_src_unpack() {
-	use xmms && mkdir ${XMMS_WORKDIR}
-	use bmp && mkdir ${BMP_WORKDIR}
+	do_xmms && mkdir ${XMMS_WORKDIR}
+	do_bmp && mkdir ${BMP_WORKDIR}
 
 	if [ -n "${BMP_SRC_URI}" -a -n "${XMMS_SRC_URI}" ]; then
-		if use xmms; then
+		if do_xmms; then
 			cd ${XMMS_WORKDIR}
 			for f in ${XMMS_SRC_URI} ${BASE_SRC_URI}; do
 				unpack ${f}
 			done
 		fi
 
-		if use bmp; then
+		if do_bmp; then
 			cd ${BMP_WORKDIR}
 			for f in ${BMP_SRC_URI} ${BASE_SRC_URI}; do
 				unpack ${f}
 			done
 		fi
 	else
-		if use xmms; then
+		if do_xmms; then
 			cd ${XMMS_WORKDIR}
 			unpack ${A}
 		fi
 
-		if use bmp; then
+		if do_bmp; then
 			cd ${BMP_WORKDIR}
 			unpack ${A}
 
@@ -124,25 +131,25 @@ xmms-plugin_src_unpack() {
 	fi
 
 	if [ -n "${PATCHES}" ]; then
-		if use xmms; then
+		if do_xmms; then
 			cd ${XMMS_S}
 			epatch ${PATCHES}
 		fi
 
-		if use bmp; then
+		if do_bmp; then
 			cd ${BMP_S}
 			epatch ${PATCHES}
 		fi
 	fi
 
-	if use xmms; then
+	if do_xmms; then
 		cd ${XMMS_S}
 		S="${XMMS_S}"
 		elibtoolize
 		gnuconfig_update
 	fi
 
-	if use bmp; then
+	if do_bmp; then
 		cd ${BMP_S}
 		S="${BMP_S}"
 		elibtoolize
@@ -153,13 +160,13 @@ xmms-plugin_src_unpack() {
 xmms-plugin_src_compile() {
 	myconf="${myconf} --disable-static"
 
-	if use xmms; then
+	if do_xmms; then
 		cd ${XMMS_S}
 		econf ${myconf} ${xmms_myconf} || die
 		emake || die
 	fi
 
-	if use bmp; then
+	if do_bmp; then
 		cd ${BMP_S}
 		export FAKE_XMMS_VERSION=1.2.10
 		econf ${myconf} ${bmp_myconf}|| die
@@ -174,36 +181,36 @@ xmms-plugin_src_install() {
 
 	case ${XMMS_PLUGIN_INSTALL} in
 	einstall)
-		if use xmms; then
+		if do_xmms; then
 			cd ${XMMS_S}
 			einstall ${myins_xmms}
 		fi
 
-		if use bmp; then
+		if do_bmp; then
 			cd ${BMP_S}
 			einstall ${myins_bmp}
 		fi
 	;;
 	destdir)
-		if use xmms; then
+		if do_xmms; then
 			cd ${XMMS_S}
 			make DESTDIR="${D}" ${myins_xmms} install || die
 		fi
 
-		if use bmp; then
+		if do_bmp; then
 			cd ${BMP_S}
 			make DESTDIR="${D}" ${myins_bmp} install || die
 		fi
 	;;
 	doexe)
-		if use xmms; then
+		if do_xmms; then
 			xmms-config --${xmms_plugin_type}-plugin-dir >& /dev/null || die "Invalid xmms_plugin_type specified"
 			cd ${XMMS_S}
 			exeinto `xmms-config --${xmms_plugin_type}-plugin-dir`
 			doexe ${myins_xmms} || die
 		fi
 
-		if use bmp; then
+		if do_bmp; then
 			beep-config --${xmms_plugin_type}-plugin-dir >& /dev/null || die "Invalid xmms_plugin_type specified"
 			cd ${BMP_S}
 			exeinto `beep-config --${xmms_plugin_type}-plugin-dir`
@@ -224,6 +231,14 @@ xmms2bmp_automate() {
 	find . -name Makefile -o -name Makefile.in -o -name configure |
 		xargs sed -i -e 's:xmms-config:beep-config:g' \
 		             -e 's:libdir)/xmms:libdir)/bmp:g'
+}
+
+do_xmms() {
+	use xmms
+}
+
+do_bmp() {
+	use bmp && [ "${NOBMP}" != "1" ]
 }
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install
