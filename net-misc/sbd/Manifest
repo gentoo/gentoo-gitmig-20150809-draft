@@ -2,17 +2,13 @@
 Hash: SHA1
 
 MD5 33b2710f9c33614f214b4eb5cfd5fdf6 metadata.xml 600
-MD5 1f3c16ce58fe2c726193fa24b1a5b532 sbd-1.31.ebuild 667
-MD5 a7d0cf0be54c0ede3a2948156205b403 sbd-1.33.ebuild 661
-MD5 b583c399de4099840b31939702a7fb5a sbd-1.36.ebuild 661
-MD5 0c6799ed81592384d3ed32f03686fdd0 ChangeLog 758
-MD5 05ad1cd9c3c8310ba1e14c571cd09f6b files/digest-sbd-1.31 60
-MD5 f63e38f2e92505a6a88111d098fe6d91 files/digest-sbd-1.33 60
+MD5 b5b153eec82724a6bc02f5b02edd7e06 sbd-1.36.ebuild 660
+MD5 4906937e23bd7485d0efbb0ee78e6fac ChangeLog 909
 MD5 61a25c14e6cee2d76427ae525f40d806 files/digest-sbd-1.36 59
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBTHIqI1lqEGTUzyQRAnpfAJwIcSVaUVcutv969zounZIkTN/1DACffQth
-lTxuV39Z82pLQJuqpjToQIQ=
-=Ngp0
+iD8DBQFBjNPcI1lqEGTUzyQRAjZLAJ9qONSWV0kmmo0QLxqSHzl8whD4lACgtUlz
+nQvcpBNIBVYnE5C2Mkq12wQ=
+=NwHu
 -----END PGP SIGNATURE-----

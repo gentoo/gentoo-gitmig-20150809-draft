@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 396d0eac6cb0fa4137139a78cb85c61b ChangeLog 1286
+MD5 c282405911dbb51889dedc7216b3ba1f ChangeLog 1433
 MD5 358cd2a98add074613ea658de495913a metadata.xml 814
-MD5 fdec7d988d60ef110a1dd35f81094f36 shmux-1.0_beta4.ebuild 795
-MD5 8a5573946f7a18230c3db53c2186d7d6 shmux-1.0_beta5.ebuild 796
-MD5 f9e1c0d6aef23a3ce7d47dc082311b46 files/digest-shmux-1.0_beta4 59
+MD5 442c741674355713b87927cb709f39ed shmux-1.0_beta5.ebuild 795
 MD5 235bcc0d662efb2390f3182ea5a18055 files/digest-shmux-1.0_beta5 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBT31HI1lqEGTUzyQRAmojAJ42f76kke0QeZr0HIexL9WkQ33XFwCgiM4t
-vBCWXnXvc2cRdB5sMs3YBU4=
-=cqqF
+iD8DBQFBjNOSI1lqEGTUzyQRAvlTAJ9GUqBX7jg85I+xKPjLTsrP2qen/gCgsctn
+TDiRnWXPd/CW1iXuKHbCEsg=
+=R6Tm
 -----END PGP SIGNATURE-----
