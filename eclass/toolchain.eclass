@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.2 2004/09/05 16:30:03 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.3 2004/09/05 20:47:19 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -752,14 +752,24 @@ chmod +x ${D}/${BINPATH}/gcc64
 }
 
 
-# This function will add ${PV} to the names of all installed shared libraries
-# to avoid filename collisions between multiple slotted non-versioned gcc
-# targets.
+# This function will add ${PV} to the names of all shared libraries in the
+# directory specified to avoid filename collisions between multiple slotted 
+# non-versioned gcc targets. If no directory is specified, it is assumed that
+# you want -all- shared objects to have ${PV} added. Example
+#
+#	add_version_to_shared ${D}/usr/$(get_libdir)
 #
 # Travis Tilley <lv@gentoo.org> (05 Sep 2004)
 #
 add_version_to_shared() {
-	for sharedlib in `find ${D} -name *.so*` ; do
+	local sharedlib
+	if [ "$1" == "" ] ; then
+		local sharedlibdir="${D}"
+	else
+		local sharedlibdir="$1"
+	fi
+
+	for sharedlib in `find ${sharedlibdir} -name *.so*` ; do
 		if [ ! -L "${sharedlib}" ] ; then
 			einfo "Renaming `basename "${sharedlib}"` to `basename "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}"`"
 			mv "${sharedlib}" "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}" \
