@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.11 2004/10/28 10:50:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.12 2004/11/28 16:00:56 eldad Exp $
+
+  28 Nov 2004; Eldad Zack <eldad@gentoo.org> Geo-IP-1.15.ebuild,
+  Geo-IP-1.21.ebuild:
+  QA: 3rd party mirrors update.
 
 *Geo-IP-1.23 (28 Oct 2004)
 
