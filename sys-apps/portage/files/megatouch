@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 source /etc/make.conf 
+echo -n "Source archive pruning started "
+date
 touch ${DISTDIR}/.cleaned 
 sleep 3
 for x in `find /usr/portage/ -iname *.ebuild` 
@@ -17,3 +19,5 @@ do
 done
 du -k ${DISTDIR}
 du -k ${DISTDIR}-old
+echo -n "Source archive pruning completed "
+date

@@ -88,6 +88,7 @@ try() {
 }
 
 dyn_touch() {
+	local x
 	for x in ${A} 
 	do
   		if [ -e ${DISTDIR}/${x} ]
@@ -181,6 +182,38 @@ digest_check() {
 	echo ">>> md5 ;-) ${1}"
     fi
     return 0
+}
+
+dyn_batchdigest() {
+    local x
+    if [ ! -e ${FILESDIR}/digest-${PF} ]
+    then
+	if [ "${A}" != "" ]
+	then
+		echo "${CATEGORY}/${PF} has no digest file."
+	fi
+	exit 1
+    fi
+    	for x in ${A}
+    	do
+		if [ ! -e ${DISTDIR}/${x} ]
+    		then
+			echo "${CATEGORY}/${PF}:${x} does not exist in ${DISTDIR}."
+			continue
+		else
+			local mycdigest=`grep " ${x}" ${FILESDIR}/digest-${PF} | cut -f2 -d" "`
+			if [ -z "$mycdigest" ]
+			then
+				echo "${CATEGORY}/${PF}:${x} digest not yet recorded."
+				continue
+			fi
+    			local mydigest=`md5sum ${DISTDIR}/${x} | cut -f1 -d" "`
+    			if [ "$mycdigest" != "$mydigest" ]
+   			then
+				echo "${CATEGORY}/${PF}:${x} is corrupt or has an invalid digest."
+			fi
+		fi
+	done
 }
 
 
@@ -661,7 +694,7 @@ src_menu() {
 	prerm|postrm|preinst|postinst|config)
 	    pkg_${MYfoo}
 	    ;;
-	help|touch|clean|fetch|digest|pkginfo|pkgloc|unmerge|install)
+	help|batchdigest|touch|clean|fetch|digest|pkginfo|pkgloc|unmerge|install)
 	    dyn_${MYfoo}
 	    ;;
 	package)
