@@ -1,12 +1,13 @@
 # ChangeLog for media-plugins/xmms-arts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.2 2002/10/15 13:18:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.3 2002/10/15 14:42:34 lostlogic Exp $
 
 *xmms-arts-0.4-r4 (15 Oct 2002)
 
   15 Oct 2002; Brandon Low <lostlogic@gentoo.org> xmms-arts-0.4-r4.ebuild:
 
-  Added patch from BUG# 4314 thanks to Mauricio Lima Pilla, closing bug.
+  Added patch from BUG# 4314 thanks to Ulrik Mikaelsson
+  <ulmi01@student.bth.se>, closing bug.
 
   30 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
 
