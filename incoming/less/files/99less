@@ -1,1 +1,0 @@
-LESSOPEN="|lesspipe.sh %s"
