@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.10 2003/08/24 18:10:03 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.11 2003/08/25 12:30:20 spider Exp $
+
+  25 Aug 2003; <spider@gentoo.org> gnunet-0.5.4-r1.ebuild:
+  Bugfix worked. Marking as stable
 
 *gnunet-0.5.4-r1 (24 Aug 2003)
 
