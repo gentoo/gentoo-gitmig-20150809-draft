@@ -1,0 +1,11 @@
+--- sysdeputil.c.orig	2004-09-28 22:08:30.727084224 -0500
++++ sysdeputil.c	2004-09-28 22:08:53.719050328 -0500
+@@ -157,7 +157,7 @@
+ #include <linux/capability.h>
+ #include <errno.h>
+ #include <syscall.h>
+-_syscall2(int, capset, cap_user_header_t, header, const cap_user_data_t, data)
++/* _syscall2(int, capset, cap_user_header_t, header, const cap_user_data_t, data) */
+ /* Gross HACK to avoid warnings - linux headers overlap glibc headers */
+ #undef __NFDBITS
+ #undef __FDMASK

@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.43 2004/09/24 23:32:59 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.44 2004/09/29 03:11:23 tgall Exp $
+
+  28 Sep 2004; Tom Gall <tgall@gentoo.org> vsftpd-1.2.2.ebuild, 
+  +vsftpd-1.2.2-ppc64.diff:
+  fix bug #64175 for ppc64
 
   25 Sep 2004; Tom Martin <slarti@gentoo.org> vsftpd-2.0.1.ebuild:
   Fixed the epatch line in the ebuild to not include `.bz2' (see jforman's
