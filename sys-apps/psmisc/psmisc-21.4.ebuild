@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.5 2004/04/27 14:18:40 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.6 2004/04/27 17:40:47 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha hppa ~mips ~ia64 ~ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa ~amd64 ~ia64 ~ppc64 s390"
 IUSE="nls selinux"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
@@ -32,7 +32,7 @@ src_compile() {
 	# Detect mips systems properly
 	use mips && gnuconfig_update
 
-	local myconf="--with-gnu-ld"
+	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
 	use selinux && myconf="${myconf} --enable-flask"
 
@@ -56,5 +56,5 @@ src_install() {
 	rm -f ${D}/bin/pidof
 	dosym ../sbin/pidof /bin/pidof
 
-	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
