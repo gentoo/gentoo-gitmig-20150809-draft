@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.18 2003/12/16 10:54:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.19 2003/12/16 10:55:43 robbat2 Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
