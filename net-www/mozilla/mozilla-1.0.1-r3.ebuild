@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r3.ebuild,v 1.5 2002/12/15 10:44:21 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r3.ebuild,v 1.6 2002/12/15 15:38:07 mholzer Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
@@ -45,7 +45,7 @@ DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
 	crypt? ( http://enigmail.mozdev.org/dload/src/enigmail-${EMVER}.tar.gz
 	         http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )
-	mirror://gentoo/distfiles/${P}-patches-${PATCH_VER}.tar.bz2"
+	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
 KEYWORDS="x86 ppc sparc alpha"
