@@ -8,7 +8,15 @@ depend() {
 
 start() {
 	ebegin "Starting JBoss"
-	cd $JBOSS_HOME/bin
+	if [ -z "$JBOSS_HOME" ]; then
+		eerror "The JBOSS_HOME environment variable is not set."
+		return 1
+	fi
+	if [ ! -d "$JBOSS_HOME/server/$JBOSS_CONF/tmp" ]; then
+		mkdir "$JBOSS_HOME/server/$JBOSS_CONF/tmp"
+		chown jboss.jboss "$JBOSS_HOME/server/$JBOSS_CONF/tmp"
+	fi
+	cd $JBOSS_HOME/server/$JBOSS_CONF/tmp
 	if [ -z "$SUBIT" ]; then
 		eval $CMD_START >${JBOSS_CONSOLE} 2>&1 &
 	else
@@ -26,3 +34,4 @@ stop () {
 	fi 
 	eend $?
 }
+
