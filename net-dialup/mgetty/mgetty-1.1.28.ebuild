@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.15 2004/04/27 21:39:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.16 2004/05/17 16:12:09 usata Exp $
 
 inherit flag-o-matic eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Fax and Voice modem programs."
 SRC_URI="ftp://alpha.greenie.net/pub/mgetty/source/1.1/${PN}${PV}-Jan10.tar.gz"
 HOMEPAGE="http://alpha.greenie.net/mgetty/"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
-	doc? app-text/tetex
+	doc? ( virtual/tetex )
 	sys-apps/gawk
 	dev-lang/perl"
 

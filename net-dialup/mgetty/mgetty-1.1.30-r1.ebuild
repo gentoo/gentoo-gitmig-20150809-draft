@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30-r1.ebuild,v 1.1 2004/05/07 06:37:55 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30-r1.ebuild,v 1.2 2004/05/17 16:12:09 usata Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://alpha.greenie.net/mgetty/"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
-	doc? app-text/tetex
+	doc? ( virtual/tetex )
 	sys-apps/gawk
 	dev-lang/perl"
 
