@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/yacas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/yacas/ChangeLog,v 1.10 2004/10/02 15:11:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/yacas/ChangeLog,v 1.11 2004/11/29 11:48:42 phosphan Exp $
+
+  29 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -files/obsolete_cpp.patch:
+  Updated the patch for obsolete C++ stuff to work for gcc 3.4.3.
+  Patch moved to mirror system because of its size.
 
   06 Sep 2004; Patrick Kursawe <phosphan@gentoo.org> -yacas-1.0.54.ebuild,
   -yacas-1.0.55.ebuild, yacas-1.0.56.ebuild:
