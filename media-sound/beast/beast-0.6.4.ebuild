@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.5.4.ebuild,v 1.7 2005/02/18 21:31:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.6.4.ebuild,v 1.1 2005/02/18 21:31:42 chainsaw Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://beast.gtk.org"
 SRC_URI="ftp://beast.gtk.org/pub/beast/v${PV%.[0-9]}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
 RDEPEND=">=dev-libs/glib-2.0
@@ -33,7 +33,6 @@ DEPEND="dev-util/pkgconfig
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/docs-reorg-0.5.4.patch
 }
 
 src_compile() {
