@@ -1,8 +1,16 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.5 2002/10/31 17:14:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.6 2002/11/07 08:10:19 seemant Exp $
 
-*webmin-1.020 (31 Oct 2002)
+*webmin-1.030 (07 Nov 2002)
+
+  07 Nov 2002; Seemant Kulleen <seemant@gentoo.org> webmin-1.030.ebuild
+  files/digest-webmin-1.030 :
+
+  Version bump.  Thanks to: rigo@home.nl (Rigo Ketelings) in bug #10276 for
+  the notification.  Moved 1.020-r1 to stable, this to testing.
+
+*webmin-1.020-r1 (31 Oct 2002)
 
   31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> webmin-1.020-r1.ebuild
   files/digest-webmin-1.020-r1 :
