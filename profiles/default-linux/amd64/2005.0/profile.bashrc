@@ -3,6 +3,8 @@
 # won't be in portage until atleast .52_pre
 if [ -n "${ABI}" ]; then
 	export ABI
+elif [ -n "${DEFAULT_ABI}" ]; then
+	export ABI="${DEFAULT_ABI}"
 else
 	export ABI="amd64"
 fi
