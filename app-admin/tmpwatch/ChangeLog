@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.8 2004/03/12 10:33:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.9 2004/04/06 19:09:00 agriffis Exp $
+
+  06 Apr 2004; Aron Griffis <agriffis@gentoo.org> tmpwatch-2.9.0.ebuild:
+  Stable on alpha and ia64
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> :
   Don't assign default to S; header fix
