@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/stellarium-0.5.1.ebuild,v 1.1 2003/07/13 19:30:43 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/stellarium-0.5.1.ebuild,v 1.2 2003/11/04 10:50:40 phosphan Exp $
 
 DESCRIPTION="Stellarium renders 3D photo-realistic skies in real time."
 HOMEPAGE="http://stellarium.free.fr/"
 SRC_URI="http://stellarium.free.fr/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
