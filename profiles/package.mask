@@ -692,6 +692,10 @@ dev-libs/libmrproject
 >=dev-python/pygtk-1.99.0
 >=app-arch/file-roller-1.106
 >=net-irc/xchat-20020519
+>=dev-util/glade-1.1.0
+>=gnome-base/gdm-2.3.90.3
+
+
 
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
