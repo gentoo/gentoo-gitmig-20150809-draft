@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.6.1.ebuild,v 1.5 2003/10/22 12:22:24 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.6.1.ebuild,v 1.6 2003/10/30 13:55:24 foser Exp $
 
 inherit gnome2
 
@@ -18,7 +18,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 IUSE=""
 
 # sharp gtk dep is for a certain speed patch
-RDEPEND="virtual/x11
+RDEPEND="
 	>=x11-libs/pango-1.2
 	>=x11-libs/gtk+-2.2.0-r1
 	>=gnome-base/gconf-2
