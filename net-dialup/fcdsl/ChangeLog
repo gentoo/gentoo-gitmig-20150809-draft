@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.4 2004/11/21 21:24:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.5 2004/11/22 18:20:17 mrness Exp $
+
+  22 Nov 2004; Alin Nastac <mrness@gentoo.org> fcdsl-2.6.20.7-r1.ebuild:
+  Add support for env variable FCDSL_CARDS. If is non-empty, only these modules
+  will be installed. See #71781 for more details.
 
   21 Nov 2004; Alin Nastac <mrness@gentoo.org> fcdsl-2.6.20.7-r1.ebuild:
   Install all modules and remove card detection from compile function. See bug

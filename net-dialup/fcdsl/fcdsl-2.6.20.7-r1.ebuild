@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.5 2004/11/21 21:47:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.6 2004/11/22 18:20:17 mrness Exp $
 
 inherit kernel-mod rpm eutils
 
@@ -70,6 +70,19 @@ detect_fcdsl_card() {
 	fi
 }
 
+is_module_selected() {
+	if [ -z "${FCDSL_CARDS}" ] ; then
+		return 0
+	fi
+	for USERCARD in ${FCDSL_CARDS} ; do
+		if [ "$1" = ${USERCARD} ]; then
+			return 0
+		fi
+	done
+
+	return 1
+}
+
 pkg_setup() {
 	if ! kernel-mod_is_2_6_kernel; then
 		die "This package works only with 2.6 kernel!"
@@ -77,16 +90,29 @@ pkg_setup() {
 	if ! kernel-mod_configoption_present ISDN_CAPI_CAPI20; then
 		die "For using the driver you need a kernel with enabled CAPI support."
 	fi
+
 	kernel-mod_check_modules_supported
+
+	#Check existence of user selected cards
+	for USERCARD in ${FCDSL_CARDS} ; do
+		for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
+			if [ "$USERCARD" = "${FCDSL_MODULES[CARD]}" ]; then
+				continue 2
+			fi
+		done
+		die "Card ${USERCARD} not present in ${P}"
+	done
 }
 
 src_compile() {
 	(
 		unset ARCH
 		for ((CARD=0; CARD < ${#FCDSL_IDS[*]}; CARD++)); do
-			einfo "Compiling driver for ${FCDSL_NAMES[CARD]}"
-			cd ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src || die "Could not change to ${FCDSL_NAMES[CARD]} source directory."
-			kernel-mod_src_compile || die "Could not compile driver for ${FCDSL_NAMES[CARD]}."
+			if is_module_selected "${FCDSL_MODULES[CARD]}"; then
+				einfo "Compiling driver for ${FCDSL_NAMES[CARD]}"
+				cd ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src || die "Could not change to ${FCDSL_NAMES[CARD]} source directory."
+				kernel-mod_src_compile || die "Could not compile driver for ${FCDSL_NAMES[CARD]}."
+			fi
 		done
 	)
 }
@@ -101,16 +127,18 @@ src_install() {
 	echo "# Correct these settings with the output from drdsl -n" >>${D}/etc/modules.d/fcdsl
 
 	for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
-		echo -e "#${FCDSL_MODULES[CARD]}\t${FCDSL_FIRMWARES[CARD]}\t-\t-\t-\t-\t-" >>${D}/etc/capi.conf
+		if is_module_selected "${FCDSL_MODULES[CARD]}"; then
+			echo -e "#${FCDSL_MODULES[CARD]}\t${FCDSL_FIRMWARES[CARD]}\t-\t-\t-\t-\t-" >>${D}/etc/capi.conf
 
-		echo "#options ${FCDSL_MODULES[CARD]} VPI=1 VCI=32 VCC=1" >>${D}/etc/modules.d/fcdsl
+			echo "#options ${FCDSL_MODULES[CARD]} VPI=1 VCI=32 VCC=1" >>${D}/etc/modules.d/fcdsl
 
-		insinto /lib/modules/${KV_VERSION_FULL}/misc
-		doins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src/${FCDSL_MODULES[CARD]}.ko
+			insinto /lib/modules/${KV_VERSION_FULL}/misc
+			doins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src/${FCDSL_MODULES[CARD]}.ko
 
-		insinto /lib/firmware
-		newins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/${FCDSL_FIRMWARES[CARD]} ${PN}_${FCDSL_FIRMWARES[CARD]}
-		dosym /lib/firmware/${PN}_${FCDSL_FIRMWARES[CARD]} /usr/lib/isdn/${FCDSL_FIRMWARES[CARD]}
+			insinto /lib/firmware
+			newins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/${FCDSL_FIRMWARES[CARD]} ${PN}_${FCDSL_FIRMWARES[CARD]}
+			dosym /lib/firmware/${PN}_${FCDSL_FIRMWARES[CARD]} /usr/lib/isdn/${FCDSL_FIRMWARES[CARD]}
+		fi
 	done
 
 	insinto /etc/drdsl
