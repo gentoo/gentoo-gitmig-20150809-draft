@@ -1,6 +1,13 @@
 # ChangeLog for app-text/pdftohtml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.11 2004/10/19 03:21:32 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.12 2004/11/22 10:49:24 robbat2 Exp $
+
+*pdftohtml-0.36-r1 (22 Nov 2004)
+
+  22 Nov 2004; Robin H. Johnson <robbat2@gentoo.org>
+  +files/xpdf-CESA-2004-007-xpdf2-newer.diff, +files/xpdf-goo-sizet.patch,
+  +files/xpdf2-underflow.patch, +pdftohtml-0.36-r1.ebuild:
+  Bug #69019, security advisory for xpdf.
 
   18 Oct 2004; Tom Gall <tgall@gentoo.org> pdftohtml-0.36.ebuild:
   stable on ppc64, bug #64536

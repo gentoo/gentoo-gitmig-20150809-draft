@@ -1,3 +1,19 @@
-MD5 092fe4bf1c5eebbd8bea14937e8e2fb8 ChangeLog 1239
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 65aa16186aead14209525c10aff741f5 pdftohtml-0.36-r1.ebuild 928
 MD5 3b3ad24b3f517099ffb7d0b83731a527 pdftohtml-0.36.ebuild 655
+MD5 d4cd08030015fe92a7f665459e3cce75 ChangeLog 1505
 MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36 66
+MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
+MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
+MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36-r1 66
+MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBocQ4PpIsIjIzwiwRAsHVAKCHreEvLpCFMjqcLH6ko7Qf+pQMkACbBzpf
+mpANUkPGM+qYzC41dp2XBoY=
+=cnWu
+-----END PGP SIGNATURE-----
