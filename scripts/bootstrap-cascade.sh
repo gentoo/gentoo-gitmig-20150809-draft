@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2004 Gento Foundation.
+# Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.15 2004/09/27 21:45:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.16 2004/09/30 21:32:58 mr_bones_ Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
