@@ -1,0 +1,8 @@
+# ChangeLog for app-editors/le
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+*le-1.9.2 (8 Jun 2003)
+
+  8 Jun 2003; Michael Nazaroff <naz@gentoo.org>; le-1.9.2.ebuild:
+  initial import thx to Daniel Steinberger <Daniel.Steinberger@gmx.de>.
+
