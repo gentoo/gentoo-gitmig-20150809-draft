@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.11.ebuild,v 1.2 2005/02/07 05:08:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.11.ebuild,v 1.3 2005/02/11 22:57:58 vapier Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -312,8 +312,7 @@ src_install() {
 	newins ${FILESDIR}/smb.conf.example-samba3.gz smb.conf.example.gz
 	doins ${FILESDIR}/lmhosts
 	#doins ${FILESDIR}/recycle.conf #obsolete: see bug #68315
-	insinto /etc/pam.d
-	newins ${FILESDIR}/samba.pam samba
+	newpamd ${FILESDIR}/samba.pam samba
 	use winbind && doins ${FILESDIR}/system-auth-winbind
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/swat.xinetd swat
