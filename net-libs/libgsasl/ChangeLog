@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/libgsasl
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.1 2004/07/06 00:38:42 langthang Exp $
+
+*libgsasl-0.1.1 (05 Jul 2004)
+
+  05 Jul 2004; <tvan@gentoo.org> +metadata.xml, +libgsasl-0.1.1.ebuild:
+  New ebuild, bug #56015.
+
