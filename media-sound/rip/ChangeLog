@@ -1,0 +1,25 @@
+# ChangeLog for dev-perl/CDDB_get
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/ChangeLog,v 1.1 2002/04/08 03:36:20 george Exp $
+
+*rip-1.01 (7 Apr 2002)
+
+  7 Apr 2002; G. Shapovalov <george@gentoo.org> Changelog:
+
+  Initial release of this ebuild. Contains rip-1.01 and rip-1.01-r1
+  rip-1.01.ebuild:
+  	installs two perl modules in addition to the script itself
+	(because of the way script is packaged: modules were included and 
+	author claims they are hard to find)
+	DEPRECATED!  use rip-1.01-r1 instead!
+  rip-1.01-r1.ebuild:
+  	installs script only, necessary modules are installed separately and listed as RDEPEND
+
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
