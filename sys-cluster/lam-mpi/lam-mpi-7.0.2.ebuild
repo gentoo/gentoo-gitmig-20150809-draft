@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.2.ebuild,v 1.1 2003/11/03 04:07:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.2.ebuild,v 1.2 2003/11/14 15:43:04 brad_mssw Exp $
 
 IUSE="crypt"
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}
 	!crypt? ( net-misc/netkit-rsh )"
 
 SLOT="6"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 LICENSE="as-is"
 
 src_unpack() {

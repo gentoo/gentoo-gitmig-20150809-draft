@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.3 2003/11/03 04:07:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.4 2003/11/14 15:43:04 brad_mssw Exp $
+
+  14 Nov 2003; Brad House <brad_mssw@gentoo.org> lam-mpi-7.0.2.ebuild:
+  add ~amd64 flag
 
 *lam-mpi-7.0.2 (02 Nov 2003)
 
