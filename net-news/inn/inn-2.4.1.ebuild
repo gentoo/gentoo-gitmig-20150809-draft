@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.4.1.ebuild,v 1.2 2004/09/07 04:43:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.4.1.ebuild,v 1.3 2004/09/07 05:54:12 swegener Exp $
 
 inherit fixheadtails ssl-cert
 
@@ -10,12 +10,11 @@ SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz"
 SLOT="0"
 LICENSE="as-is BSD"
 KEYWORDS="~x86"
-IUSE="ipv6 berkdb kerberos sasl ssl perl python tcltk"
+IUSE="ipv6 kerberos sasl ssl perl python tcltk"
 
 RDEPEND="virtual/mta
 	kerberos? ( virtual/krb5 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
-	berkdb? ( =sys-libs/db-3*)
 	ssl? ( dev-libs/openssl )
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
@@ -68,7 +67,6 @@ src_compile() {
 		$(use_with kerberos kerberos /usr) \
 		$(use_with sasl) \
 		$(use_with ssl openssl) \
-		$(use_with berkdb berkeleydb) \
 		$(use_enable ipv6) \
 		|| die "econf failed"
 	emake -j1 P="" || die "emake failed"
