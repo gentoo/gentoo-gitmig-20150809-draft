@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/genflags-0.94-r1.ebuild,v 1.1 2003/11/14 23:16:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/genflags-0.94-r1.ebuild,v 1.2 2003/11/24 03:44:36 mr_bones_ Exp $
 
 DESCRIPTION="Gentoo CFLAGS generator"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}-bin.tar.bz2
 		 http://dev.gentoo.org/~robbat2/genflags/${P}-bin.tar.bz2
 		 http://dev.gentoo.org/~robbat2/genflags/${P}-devel.tar.bz2"
 
-LICENSE="OSL"
+LICENSE="OSL-1.1"
 
 SLOT="0"
 
