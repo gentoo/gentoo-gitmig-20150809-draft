@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ChangeLog,v 1.4 2002/07/08 02:18:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ChangeLog,v 1.5 2003/01/07 23:42:55 agriffis Exp $
+
+*ruby-gnome-0.30 (07 Jan 2003)
+
+	07 Jan 2003; Aron Griffis <agriffis@gentoo.org> ruby-gnome-0.30.ebuild:
+	Update from 0.29 to 0.30.  Add ~alpha to KEYWORDS.
 
 *ruby-gnome-0.29 (06 Jul 2002)
 

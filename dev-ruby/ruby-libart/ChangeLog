@@ -1,0 +1,8 @@
+# ChangeLog for dev-ruby/ruby-libart
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.1 2003/01/07 23:42:55 agriffis Exp $
+
+*ruby-libart-0.30 (07 Jan 2003)
+
+	07 Jan 2003; Aron Griffis <agriffis@gentoo.org> ruby-libart-0.30.ebuild:
+	New ebuild, part of the ruby-gnome-all suite.
