@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (11 Dec 2002)
+# Testing PDEPEND
+>=sys-apps/portage-2.0.45-r4
+
 # <blizzy@gentoo.org> (10 Dec 2002)
 # masked for intensive testing
 =net-misc/rsync-2.5.6_pre20021105
