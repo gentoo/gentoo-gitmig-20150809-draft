@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.191 2004/07/31 17:02:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.192 2004/08/03 08:29:19 chriswhite Exp $
+
+  03 Aug 2004; Chris White <chriswhite@gentoo.org> :
+  Fixed digest issues.
 
   01 Aug 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild,
   mplayer-1.0_pre5-r2.ebuild:
