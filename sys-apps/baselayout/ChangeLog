@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.53 2003/01/06 22:35:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.54 2003/01/06 23:10:21 azarah Exp $
+
+*baselayout-1.8.6.0 (07 Jan 2003)
+
+  07 Jan 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.0.ebuild :
+
+  New alpha release that do not need tmpfs for caching dependencies.  Also
+  RAID changes, etc.  Please make sure to update all ._cfg????_* files, else
+  things might break ....  See ChangeLog in /usr/share/doc/$PF for more info.
 
 *baselayout-1.8.5.8 (07 Jan 2003)
 
