@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.33 2004/03/08 18:39:08 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.34 2004/03/09 01:31:46 pylon Exp $
+
+  09 Mar 2004; Lars Weiler <pylon@gentoo.org> mol-0.9.69_pre7.ebuild,
+  mol-0.9.70_rc2-r1.ebuild, mol-0.9.70_rc2.ebuild:
+  Wrong dependencies for ppc64.  So removed this arch.
 
   08 Mar 2004; Lars Weiler <pylon@gentoo.org> mol-0.9.70_rc2-r1.ebuild:
   Local USE-flag for the sheep-net-driver
