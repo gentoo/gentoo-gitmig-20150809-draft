@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.4 2004/02/20 06:08:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.5 2004/03/30 07:55:50 mr_bones_ Exp $
 
 inherit eutils
 
@@ -12,11 +12,13 @@ SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/FrodoV4_1b.Src.tar.gz"
 LICENSE="Frodo"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc"
+IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2
-	sys-devel/autoconf
+RDEPEND=">=media-libs/libsdl-1.2
 	dev-lang/tcl
 	dev-lang/tk"
+DEPEND="${RDEPEND}
+	sys-devel/autoconf"
 
 src_compile() {
 	cd ${S}
@@ -27,7 +29,7 @@ src_compile() {
 	rm configure
 	autoconf
 	econf || die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install () {
@@ -95,10 +97,8 @@ einfo " Remember that the keyboard is mapped to the C64 layout.  So to type "
 einfo " the first command above you would use the following sequence:       "
 einfo "     LOAD [SHIFT-2][RIGHT-BRACKET][SHIFT-2],8,1                      "
 einfo "                                                                     "
-sleep 10
 einfo "                                                                     "
 einfo " For a complete source of C64 programs, try visiting:                "
 einfo "   http://www.c64unlimited.net/                                      "
 einfo "                                                                     "
-sleep 5
 }
