@@ -1,0 +1,6 @@
+MD5 52c7cf1f2a914b2f04118c55ec05b9c8 ChangeLog 768
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 3bb6975d703df9e65d1406ee4abc1578 stoned-bin-1.0.4.ebuild 663
+MD5 f4a2204f4966f6326c35639e055d4490 stoned-bin-1.1.5.ebuild 731
+MD5 c675ce3f928d14fe559a5fd3fcaf2f4c files/digest-stoned-bin-1.0.4 63
+MD5 85e1d70fa1ed3e79d14ea34e390e438a files/digest-stoned-bin-1.1.5 75
