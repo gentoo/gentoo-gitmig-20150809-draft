@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/mplayer-skins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.11 2003/12/27 00:08:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.12 2004/01/01 15:46:59 mholzer Exp $
+
+*mplayer-skins-0.2-r4 (01 Jan 2004)
+
+  01 Jan 2004; Martin Holzer <mholzer@gentoo.org> mplayer-skins-0.2-r4.ebuild:
+  adding new skins. Closes 36933
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> mplayer-skins-0.2-r3.ebuild:
   Changed sparc keyword to ~sparc as there are no stable versions of mplayer for
