@@ -1,6 +1,16 @@
-MD5 4f8679df89caff56a10c46e1c4473e52 ChangeLog 570
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 17d1fe7eb25da029760e2a246274c00e ChangeLog 681
 MD5 cea0355d4379142757f91118685c9041 Sub-Uplevel-0.08.ebuild 480
+MD5 0f2f1a9e98d4456951ebe99c12094358 Sub-Uplevel-0.09.ebuild 488
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 72b93476ab5be264adb9d5ae634ce92e Sub-Uplevel-0.09.ebuild 483
 MD5 e55c1622102b41bcac213ff1ff79791d files/digest-Sub-Uplevel-0.08 67
 MD5 70a7f5631935721fa470df47eebcafc6 files/digest-Sub-Uplevel-0.09 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBcqNjtG5z4I8BtQoRAkQqAJ9TGXbX7X8J5sJ2MV4vaN3XrbwXzACfYQK9
+aRxBpnBke88+DSfBLCY/QYA=
+=IqgV
+-----END PGP SIGNATURE-----

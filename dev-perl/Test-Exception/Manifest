@@ -1,4 +1,14 @@
-MD5 0b233908ff9df0994b434dace45c6d8c ChangeLog 485
-MD5 3dac5f4cecb0210248b266c7b13b20c2 Test-Exception-0.15.ebuild 569
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ea548ff2d0f013f7702635931a216e48 ChangeLog 599
+MD5 66030c85a52f6bf0dc0063f13d0d895d Test-Exception-0.15.ebuild 574
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 91b081cf4a9ad27c6b582667c1190d1b files/digest-Test-Exception-0.15 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBcqQGtG5z4I8BtQoRAh7CAJ9MDNWDskC1I5tIp8jwKN1qsMJeSgCgivfj
+siRhQSNyqsKrL42lVLGtE4Q=
+=ML5W
+-----END PGP SIGNATURE-----
