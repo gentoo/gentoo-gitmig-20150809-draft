@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.25 2004/07/22 05:10:07 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.26 2004/07/22 14:43:42 carlo Exp $
+
+  22 Jul 2004; Carsten Lohrke <carlo@gentoo.org> -kdbg-1.2.5.3.ebuild,
+  -kdbg-1.2.9.ebuild, -kdbg-1.9.4.ebuild:
+  ebuild clean up
 
   22 Jul 2004; Daniel Ostrow <dostrow@gentoo.org> kdbg-1.2.10.ebuild:
   Stable on ppc.
