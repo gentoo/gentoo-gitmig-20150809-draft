@@ -1,6 +1,14 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.2 2002/02/20 03:08:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.3 2002/03/13 09:33:50 seemant Exp $
+
+*ggv-1.1.94 (12 Mar 2002)
+	
+	12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> ggv-1.1.94.ebuild :
+
+	Version upgrade.  Pretty much a copy of the 1.1.93 ebuild, with a few
+	additional dodoc parameters and a version upgrade of the dependency
+	info -- submitted by Matthew Kennedy.
 
 *ggv-1.1.93 (19 Feb 2002)
 
