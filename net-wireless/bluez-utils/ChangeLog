@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.18 2004/04/26 14:22:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.19 2004/04/27 22:09:10 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> bluez-utils-2.3-r1.ebuild,
+  bluez-utils-2.3-r2.ebuild, bluez-utils-2.5.ebuild:
+  Add inherit eutils
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> bluez-utils-2.3-r1.ebuild,
   bluez-utils-2.3-r2.ebuild, bluez-utils-2.5.ebuild:

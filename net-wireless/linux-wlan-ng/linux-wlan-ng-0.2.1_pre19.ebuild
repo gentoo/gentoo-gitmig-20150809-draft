@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre19.ebuild,v 1.1 2004/02/29 22:47:54 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre19.ebuild,v 1.2 2004/04/27 22:12:06 agriffis Exp $
 
-inherit pcmcia
+inherit pcmcia eutils
 
 IUSE="${IUSE} usb build"
 

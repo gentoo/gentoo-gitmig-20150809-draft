@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3-r2.ebuild,v 1.6 2004/04/26 14:22:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3-r2.ebuild,v 1.7 2004/04/27 22:09:11 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="bluetooth utilities"
 HOMEPAGE="http://bluez.sourceforge.net/"
