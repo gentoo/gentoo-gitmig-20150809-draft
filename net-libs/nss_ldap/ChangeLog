@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nss_ldap
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.36 2004/12/29 03:21:53 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.37 2005/02/03 06:45:40 robbat2 Exp $
+
+  02 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  nss_ldap-226.ebuild, nss_ldap-233.ebuild:
+  Take over metadata. 226 stable on x86. 233 in tree, but hardmasked for the
+  moment as broken.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -24,7 +29,7 @@
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
 
-  20 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> nss_ldap-220.ebuild:
+  20 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> nss_ldap-220.ebuild:
   Add ~alpha.
 
   03 Sep 2004; Caleb Tennis <caleb@gentoo.org> -nss_ldap-209.1.ebuild:
