@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4.ebuild,v 1.1 2003/06/02 13:45:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4.ebuild,v 1.2 2003/07/04 08:51:55 robh Exp $
 
 S=${WORKDIR}/xfonts-artwiz-2.3/upstream
 DESCRIPTION="Artwiz Fonts"
@@ -36,7 +36,7 @@ src_install() {
 
 	if [ -z "$(grep artwiz /etc/X11/fs/config)" ]
 	then
-		sed 's#^catalog.*$#&\n\t/usr/X11R6/lib/X11/fonts/artwiz:unscaled,#g' \
+		sed 's#^catalog.*$#&\n\t/usr/share/fonts/artwiz:unscaled,#g' \
 			/etc/X11/fs/config > ${S}/config
 		insinto /etc/X11/fs
 		doins config
