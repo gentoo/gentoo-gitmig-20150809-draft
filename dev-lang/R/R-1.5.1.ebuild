@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.4.1.ebuild,v 1.3 2002/07/18 00:51:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.5.1.ebuild,v 1.1 2002/07/18 00:51:10 george Exp $
 
 S=${WORKDIR}/${P}
 
@@ -18,15 +18,21 @@ DEPEND="virtual/glibc
 		>=sys-libs/readline-4.1-r3
 		>=sys-libs/zlib-1.1.3-r2
 		>=media-libs/jpeg-6b-r2
-		>=media-libs/libpng-1.0.12
+		>=media-libs/libpng-1.2.1
 		atlas? ( dev-libs/atlas )
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.4 )"
 RDEPEND="${DEPEND}"
-LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
+LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86"
+
+
+src_unpack() {
+	unpack ${A}
+	patch -d ${S} -p1 < ${FILESDIR}/R-1.5.1-tcltk.diff
+}
 
 src_compile() {
 
@@ -55,7 +61,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		${myconf} || die "./configure failed"
 
-	emake || die "Parallel Make Failed"
+	make || die
 
 }
 

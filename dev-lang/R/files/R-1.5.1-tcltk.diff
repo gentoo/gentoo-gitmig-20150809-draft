@@ -1,0 +1,12 @@
+diff -urN R-1.5.1.orig/src/library/tcltk/src/tcltk.c R-1.5.1/src/library/tcltk/src/tcltk.c
+--- R-1.5.1.orig/src/library/tcltk/src/tcltk.c	Fri Jun  7 17:37:35 2002
++++ R-1.5.1/src/library/tcltk/src/tcltk.c	Mon Jun 17 16:09:04 2002
+@@ -239,7 +239,7 @@
+ 
+     PROTECT(ans = allocVector(STRSXP, count));
+     for (i = 0 ; i < count ; i++)
+-	SET_STRING_ELT(ans, i, mkChar(Tcl_GetString(elem[i])));
++	SET_STRING_ELT(ans, i, mkChar(Tcl_GetStringFromObj(elem[i], NULL)));
+     UNPROTECT(1);
+     return ans;
+ }
