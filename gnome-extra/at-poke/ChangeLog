@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/at-poke
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-poke/ChangeLog,v 1.9 2004/03/13 16:47:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-poke/ChangeLog,v 1.10 2004/03/17 14:39:23 leonardop Exp $
+
+*at-poke-0.2.2 (17 Mar 2004)
+
+  17 Mar 2004; L. Boshell <leonardop@gentoo.org> at-poke-0.2.2.ebuild:
+  New release.
+
+  17 Mar 2004; L. Boshell <leonardop@gentoo.org> at-poke-0.2.1.ebuild:
+  Marked stable on x86.
 
   13 Mar 2004; foser <foser@gentoo.org> metadata.xml :
   Move maintainership to gnome-accessibility herd
