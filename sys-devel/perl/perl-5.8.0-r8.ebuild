@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r8.ebuild,v 1.1 2003/01/06 14:53:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r8.ebuild,v 1.2 2003/01/08 06:40:09 lostlogic Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -107,14 +107,22 @@ pkg_setup() {
 	if [ -n "`use threads`" ]
 	then
 		ewarn ""
-		ewarn "PLEASE NOTE: If you wish to compile perl-5.8 with "
-		ewarn "threading enabled, you must restart this emerge "
+		ewarn "PLEASE NOTE: You are compiling perl-5.8 with"
+		ewarn "threading enabled."
+		ewarn "Threading is not supported by all applications "
+		ewarn "that compile against perl. You use threading at "
+		ewarn "your own discretion. "
+		ewarn ""
+		sleep 10
+	else
+		ewarn ""
+		ewarn "PLEASE NOTE: If you want to compile perl-5.8 with"
+		ewarn "threading enabled , you must restart this emerge"
 		ewarn "with USE=threads emerge...."
 		ewarn "Threading is not supported by all applications "
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
 		ewarn ""
-		sleep 15
 	fi
 
 	if [ "${PN}" = "perl" -a ! -f /usr/lib/${LIBPERL} ]
