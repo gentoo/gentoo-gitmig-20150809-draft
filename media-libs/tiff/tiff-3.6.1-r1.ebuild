@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.10 2004/09/20 07:05:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.11 2004/10/08 09:25:56 eradicator Exp $
 
 inherit eutils
 
@@ -30,8 +30,12 @@ src_unpack() {
 		cp README-LZW-COMPRESSION ${S}/.
 	fi
 	cd ${S}
-	cp ${FILESDIR}/config.site config.site
-	echo "DIR_HTML="${D}/usr/share/doc/${PF}/html"" >> config.site
+	cp ${FILESDIR}/config.site-3.6.1-r1 config.site
+	echo "DIR_HTML=\"/usr/share/doc/${PF}/html\"" >> config.site
+	echo "DIR_LIB=\"/usr/$(get_libdir)\"" >> config.site
+	echo "DIR_JPEGLIB=\"/usr/$(get_libdir)\"" >> config.site
+	echo "DIR_GZLIB=\"/usr/$(get_libdir)\"" >> config.site
+
 	epatch ${FILESDIR}/${PF}-man.so.patch || die "man.so patch failed"
 }
 
@@ -41,9 +45,9 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{bin,lib,share/man,share/doc/}
+	dodir /usr/{bin,$(get_libdir),share/man,share/doc/}
 	dodir /usr/share/doc/${PF}/html
-	ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" make install || die
+	make DESTDIR="${D}" ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" install || die
 	preplib /usr
 	dodoc README TODO VERSION README-LZW-COMPRESSION
 }
