@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.6.0.ebuild,v 1.1 2004/06/04 20:42:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.6.0.ebuild,v 1.2 2004/06/05 00:34:04 mr_bones_ Exp $
 
 inherit ruby eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 
 USE_RUBY="any"
 DEPEND="virtual/ruby
-        >=x11-libs/fox-1.0.27
+	>=x11-libs/fox-1.0.27
 	>=dev-ruby/fxruby-1.0.18
 	>=x11-libs/fxscintilla-1.49"
 #RDEPEND=""
@@ -22,7 +22,7 @@ DEPEND="virtual/ruby
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	# This patch fixes a bug which causes FR to use installdir/config
 	# instead of ~/.freeride for the config-files.
 	epatch ${FILESDIR}/${P}-gentoo-properties.diff
