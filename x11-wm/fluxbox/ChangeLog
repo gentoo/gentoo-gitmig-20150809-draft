@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.81 2003/12/14 02:28:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.82 2003/12/20 01:52:38 tseng Exp $
+
+  19 Dec 2003; Brandon Hale <tseng@gentoo.org> fluxbox-0.1.14-r2.ebuild,
+  fluxbox-0.9.6.ebuild, fluxbox-0.9.6_pre9.ebuild:
+  Fixed license (as-is).
 
   14 Dec 2003; Lars Weiler <pylon@gentoo.org> fluxbox-0.9.6.ebuild:
   Masked stable on ppc

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.6.ebuild,v 1.5 2003/12/14 02:28:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.6.ebuild,v 1.6 2003/12/20 01:52:38 tseng Exp $
 
 IUSE="gnome kde nls xinerama truetype"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/fluxbox/${P}.tar.gz
 HOMEPAGE="http://www.fluxbox.org/"
 
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="as-is"
 KEYWORDS="~x86 ppc ~mips ~sparc ~alpha ~amd64"
 
 DEPEND="virtual/x11
