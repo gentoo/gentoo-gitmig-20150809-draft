@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/azureus-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.8 2004/03/17 15:55:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.9 2004/03/24 04:21:30 mr_bones_ Exp $
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  azureus-bin-2.0.7.1_pre20040224.ebuild, azureus-bin-2.0.8.0a.ebuild,
+  azureus-bin-2.0.8.4.ebuild:
+  add missing 'R' for bug #45564
 
 *azureus-bin-2.0.8.4 (17 Mar 2004)
 

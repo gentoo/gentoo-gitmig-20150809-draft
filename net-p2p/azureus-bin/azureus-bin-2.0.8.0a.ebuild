@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.8.0a.ebuild,v 1.2 2004/03/16 19:14:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.8.0a.ebuild,v 1.3 2004/03/24 04:21:30 mr_bones_ Exp $
 
 inherit eutils
 
-DESCRIPTION="Azureus - Java BitTorent Client"
+DESCRIPTION="Azureus - Java BitTorrent Client"
 HOMEPAGE="http://azureus.sourceforge.net/"
 
 MY_PN=${PN/-bin/}
