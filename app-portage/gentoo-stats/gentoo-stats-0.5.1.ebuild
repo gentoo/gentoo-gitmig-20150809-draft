@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoo-stats/gentoo-stats-0.5.1.ebuild,v 1.4 2004/07/13 20:09:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoo-stats/gentoo-stats-0.5.1.ebuild,v 1.5 2004/09/16 01:32:21 pvdabeel Exp $
 
 DESCRIPTION="Gentoo Linux usage statistics client daemon"
 HOMEPAGE="http://mksoft.co.il/gentoo-stats/"
@@ -9,7 +9,7 @@ SRC_URI="http://mksoft.co.il/gentoo-stats/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # devs: please do not change this, it wouldn't make much sense right now
-KEYWORDS="x86 ppc sparc -alpha hppa amd64" # works fine under macos, can support be added server-side?
+KEYWORDS="x86 ppc sparc -alpha hppa amd64 ppc-macos" # works fine under macos, can support be added server-side?
 IUSE=""
 
 RDEPEND="dev-lang/python"
