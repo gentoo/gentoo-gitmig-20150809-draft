@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/python
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.120 2004/12/29 22:04:49 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.121 2005/01/05 00:38:48 pythonhead Exp $
+
+*python-2.4 (04 Jan 2005)
+
+  04 Jan 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/python-2.4-add_portage_search_path.patch,
+  +files/python-2.4-db4.2.patch,
+  +files/python-2.4-disable_modules_and_ssl.patch,
+  +files/python-2.4-gentoo_py_dontcompile.patch,
+  +files/python-2.4-mimetypes_apache.patch, files/python-updater,
+  +python-2.4.ebuild:
+  Version bump. bug# 68775
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

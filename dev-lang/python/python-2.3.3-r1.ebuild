@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.23 2004/10/18 20:22:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.24 2005/01/05 00:38:48 pythonhead Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 

@@ -21,7 +21,6 @@
 # PKGS_MASKED     = list of packages that are installed, but masked.
 #
 
-OLD_PY_VER=2.2
 NEW_PY_VER=$(python -V 2>&1 | sed 's:Python ::' | cut -d. -f1-2)
 
 PKGS_EXCEPTIONS="dev-lang/python sys-apps/portage"
@@ -42,6 +41,24 @@ PORTAGE_PYTHON="/usr/bin/python"
 # it thinking this is an rc script
 EBUILD="1" 
 source /sbin/functions.sh
+
+
+
+for old in 2.4 2.3 2.2 2.1; do
+	if [ "${old}" != "${NEW_PY_VER}" ]; then
+		if [ -e /usr/bin/python${old} ] ; then
+			OLD_PY_VER=${old}
+			break;
+		fi
+	fi
+done
+
+
+if [ -z "${OLD_PY_VER}" ] ; then
+    eerror "Can't determine any previous Python version(s)."
+    exit 1
+fi
+
 
 # misc helper functions
 eloginfo() {
@@ -300,3 +317,4 @@ if [ -n "${PKGS_FAILED}" -o -n "${PKGS_MISSING}" -o -n "${PKGS_MASKED}" ]; then
 else
    eloginfo "Python update completed successfully."
 fi
+

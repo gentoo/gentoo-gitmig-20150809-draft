@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.24 2004/07/14 13:46:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.25 2005/01/05 00:38:48 pythonhead Exp $
 
 inherit flag-o-matic eutils python
 
