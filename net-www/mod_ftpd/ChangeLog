@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_ftpd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/ChangeLog,v 1.4 2004/06/25 01:01:19 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/ChangeLog,v 1.5 2005/01/30 20:16:47 hollow Exp $
+
+*mod_ftpd-0.13.0 (30 Jan 2005)
+
+  30 Jan 2005; Benedikt Boehm <hollow@gentoo.org> metadata.xml,
+  +files/45_mod_ftpd.conf, +mod_ftpd-0.13.0.ebuild:
+  bump to 0.13.0 uses new apache-module eclass
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_ftpd-0.12.3.ebuild:
   Stable for x86.

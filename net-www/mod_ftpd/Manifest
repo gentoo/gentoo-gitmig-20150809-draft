@@ -1,6 +1,19 @@
-MD5 a83db93af4318818ae9af414376a78fd mod_ftpd-0.12.3.ebuild 1135
-MD5 cee40c63afa7aa39c615a6059d2b3965 ChangeLog 655
-MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
-MD5 853c5251554ad3b0b04dd46bd6f3ce90 files/digest-mod_ftpd-0.12.3 68
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 89fb33468a3b1c503603f62bc1cb1ab0 ChangeLog 849
+MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
+MD5 643d55122c8f88480fe034ba357ff0d6 mod_ftpd-0.12.3.ebuild 1133
+MD5 3d4d1ff0fd210eaeb2c4c9c83de1cd99 mod_ftpd-0.13.0.ebuild 979
 MD5 e4b00c859e767293dba0066453b34da2 files/0.12.3-mod_ftpd-ipv6.patch 513
+MD5 853c5251554ad3b0b04dd46bd6f3ce90 files/digest-mod_ftpd-0.12.3 68
 MD5 7ff83240a58205cd17a0324bd1122702 files/mod_ftpd.conf 1673
+MD5 9e2557ac727b6290531393710ae6cf72 files/digest-mod_ftpd-0.13.0 68
+MD5 a19bb3dea57c7efbb399e53762e5e5fd files/45_mod_ftpd.conf 1644
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB/UDJmPFBzbX68WERAkBzAKCXXgNp7jPTD6xLvbtaXi2z+JXWzwCfYtm4
+m9/wus+Lm9oafn+tHGzc7p0=
+=j6X0
+-----END PGP SIGNATURE-----

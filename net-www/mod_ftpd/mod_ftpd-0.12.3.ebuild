@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/mod_ftpd-0.12.3.ebuild,v 1.4 2004/06/25 01:01:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/mod_ftpd-0.12.3.ebuild,v 1.5 2005/01/30 20:16:47 hollow Exp $
 
 inherit eutils
 
