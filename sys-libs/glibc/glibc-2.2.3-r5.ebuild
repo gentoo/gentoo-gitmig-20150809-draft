@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r1.ebuild,v 1.3 2001/06/07 23:20:03 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r5.ebuild,v 1.1 2001/08/13 00:35:29 drobbins Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -16,46 +16,55 @@ HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 DEPEND="nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
 
-if [ -z "`use bootstrap`" ] ; then
-RDEPEND="gd? ( sys-libs/zlib media-libs/libpng )"
+if [ -z "`use bootstrap`" ] && [ -z "`use bootcd`" ] && [ -z "`use build`" ]
+then
+	RDEPEND="gd? ( sys-libs/zlib media-libs/libpng ) sys-apps/baselayout"
+else
+	RDEPEND="sys-apps/baselayout"
 fi
 
 PROVIDE="virtual/glibc"
 
 src_unpack() {
-
+	
     unpack glibc-${PV}.tar.gz
     cd ${S}
     unpack glibc-linuxthreads-${PV}.tar.gz
-    for i in mtrace-intl-perl 
-    do
+    for i in mtrace-intl-perl
+	do
       echo "Applying $i patch..."
-      patch -p0 < ${FILESDIR}/glibc-2.2.2-${i}.diff
+      try patch -p0 < ${FILESDIR}/glibc-2.2.2-${i}.diff
     done
-    patch -p0 < ${FILESDIR}/glibc-2.2.3-libnss.diff
+    try patch -p0 < ${FILESDIR}/glibc-2.2.3-libnss.diff
+    try patch -p0 < ${FILESDIR}/glibc-2.2.3-string2.diff
     cd io
-    patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
-
-
+    try patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
+	#now we need to fix a problem where glibc-2.2.3 doesn't compile with absolutely no -O optimizations.
+	#we'll need to keep our eyes on this one to see how things are in later versions of linuxthreads:
+	#for more info, see:
+	# http://gcc.gnu.org/ml/gcc-prs/2001-06/msg00044.html
+	# http://www.mail-archive.com/bug-glibc@gnu.org/msg01820.html
+	cd ${S}/linuxthreads
+	cp spinlock.c spinlock.c.orig
+	sed -e 's/ : "0" (lock->__status)//g' spinlock.c.orig > spinlock.c
 }
 
 src_compile() {
-
 	local myconf
 	if [ "`use build`" ]
 	then
-	  # If we build for the build system we use the kernel headers from the target
-	  myconf="--with-header=${ROOT}usr/include"
+		# If we build for the build system we use the kernel headers from the target
+		myconf="--with-header=${ROOT}usr/include"
 	fi
-	if [ "`use gd`" ] && [ -z "`use bootstrap`" ]
+	if [ "`use gd`" ] && [ -z "`use bootstrap`" ] && [ -z "`use bootcd`" ] && [ -z "`use build`" ]
 	then
-	  myconf="${myconf} --with-gd=yes"
+		myconf="${myconf} --with-gd=yes"
 	else
-	  myconf="${myconf} --with-gd=no"
+		myconf="${myconf} --with-gd=no"
 	fi
     if [ -z "`use nls`" ]
-    then
-      myconf="${myconf} --disable-nls"
+	then
+		myconf="${myconf} --disable-nls"
     fi
     rm -rf buildhere
 	mkdir buildhere
@@ -63,25 +72,28 @@ src_compile() {
 	try ../configure --host=${CHOST} --without-cvs \
 		--enable-add-ons=linuxthreads \
 		--disable-profile --prefix=/usr \
-                --mandir=/usr/share/man --infodir=/usr/share/info \
-                --libexecdir=/usr/lib/misc \
-		--enable-kernel=2.4.0 ${myconf}
+		--mandir=/usr/share/man --infodir=/usr/share/info \
+		--libexecdir=/usr/lib/misc ${myconf}
+	
+	#This next option breaks the Sun JDK and the IBM JDK
+	#We should really keep compatibility with older kernels, anyway
+	#--enable-kernel=2.4.0
 	try make 
 	make check
 }
 
 
 src_install() {
-
+	
     rm -rf ${D}
     mkdir ${D}
-    dodir /etc/rc.d/init.d
     export LC_ALL=C
     try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} install -C buildhere
-    try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} info -C buildhere
-    if [ -z "`use build`" ]
-    then
-      try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} localedata/install-locales -C buildhere
+    if [ -z "`use build`" ] && [ -z "`use bootcd`" ]
+	then
+		dodir /etc/rc.d/init.d
+		try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} info -C buildhere
+		try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} localedata/install-locales -C buildhere
 
 	# I commented out linuxthreads man pages because I don't want
 	# glibc to build depend on perl
@@ -92,16 +104,23 @@ src_install() {
 	#    do
 	#      mv ${i} ${i%.3thr}.3
 	#    done
-
-      install -m 644 nscd/nscd.conf ${D}/etc
-      install -m 755 ${FILESDIR}/nscd ${D}/etc/rc.d/init.d/nscd
-      dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE NEWS NOTES \
-	  PROJECTS README*
+		
+		install -m 644 nscd/nscd.conf ${D}/etc
+		install -m 755 ${FILESDIR}/nscd ${D}/etc/rc.d/init.d/nscd
+		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE NEWS NOTES \
+			PROJECTS README*
     else
-      rm -rf ${D}/usr/share/{man,info,zoneinfo}
+		rm -rf ${D}/usr/share ${D}/usr/lib/gconv
+		if [ "`use bootcd`" ]
+		then
+			rm -rf ${D}/usr/include
+			rm -f ${D}/usr/bin/{lddlibc4,iconv,sprof,glibcbug,tzselect,getconf,gencat,getent,locale,mtrace,pcprofiledump,rpcgen,localedef,catchsegv,xtrace}
+			rm -rf ${D}/usr/sbin
+			rm -f ${D}/usr/lib/lib*.a ${D}/usr/lib/*.o
+		fi
     fi
 
-    if [ "`use pic`" ]
+    if [ "`use pic`" ] && [ -z "`use bootcd`" ]
     then
         find ${S}/buildhere -name "*_pic.a" -exec cp {} ${D}/lib \;
         find ${S}/buildhere -name "*.map" -exec cp {} ${D}/lib \;
@@ -114,19 +133,16 @@ src_install() {
     rm ${D}/lib/libc.so.6
     rm ${D}/lib/libpthread.so.0
     chmod 755 ${D}/usr/lib/misc/pt_chown
- 
+	rm -f ${D}/etc/ld.so.cache
 }
 
 pkg_preinst()
 {
     # Check if we run under X
-    if [ -e /usr/X11R6/bin/X ]
-    then
-	if [ "`/sbin/pidof /usr/X11R6/bin/X`" ]
+    if [ -e /usr/X11R6/bin/X ] && [ "`/sbin/pidof /usr/X11R6/bin/X`" ] && [ "${ROOT}" = "/" ]
 	then
 	    echo "glibc can not be installed while X is running!!"
 	    exit 1
-        fi
     fi
     
     echo "Saving ld-linux,libc6 and libpthread"
