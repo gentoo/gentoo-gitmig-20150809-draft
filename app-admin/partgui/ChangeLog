@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/partgui
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/ChangeLog,v 1.9 2004/10/05 02:58:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/ChangeLog,v 1.10 2004/11/17 07:30:11 phosphan Exp $
+
+  17 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -partgui-0.2.2.ebuild,
+  partgui-0.2.3-r2.ebuild:
+  Fixing bug #38253 (sandbox problems)
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   partgui-0.2.3-r2.ebuild:
