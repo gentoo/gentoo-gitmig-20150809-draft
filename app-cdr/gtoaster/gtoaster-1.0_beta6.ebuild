@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.19 2004/02/23 18:02:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.20 2004/02/25 06:44:15 raker Exp $
 
 # Fix so that updating can only be done by 'cp old.ebuild new.ebuild'
 MY_P="${P/-}"
@@ -23,7 +23,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	>=app-cdr/cdrtools-1.11
 	app-cdr/cdrdao
 	>=media-sound/sox-12
-	>=media-sound/mpg123-0.59
+	virtual/mpg123
 	>=media-sound/mp3info-0.8.4
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2 )
 	esd? ( >=media-sound/esound-0.2.22 )

@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/gtoaster
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/ChangeLog,v 1.12 2004/01/29 18:12:53 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/ChangeLog,v 1.13 2004/02/25 06:44:15 raker Exp $
+
+  25 Feb 2004; Nick Hadaway <raker@gentoo.org> gtoaster-1.0_beta6.ebuild:
+  Sorry for breaking your gtoaster.  Thanks for fixing it. :)  Changed
+  mpg123 depend to virtual/mpg123.  See bug #42679.
 
   29 Jan 2004; Brad House <brad_mssw@gentoo.org> gtoaster-1.0_beta6.ebuild:
   someone broke my gtoaster ... fixing it up
