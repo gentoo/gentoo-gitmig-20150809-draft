@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20-r1.ebuild,v 1.1 2004/12/23 15:11:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20-r1.ebuild,v 1.2 2004/12/23 20:23:36 ticho Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -178,6 +178,24 @@ src_install () {
 	make DESTDIR=${D} install || die "failed to install."
 	keepdir /var/lib/sasl2 /etc/sasl2
 
+	# Install everything necessary so user can build sample client/server
+	# (bug #64733)
+	if use sample; then
+	        insinto /usr/share/${PN}-2/examples
+	        doins aclocal.m4 config.h config.status configure.in
+		dosym /usr/include/sasl /usr/share/${PN}-2/examples/include
+	        exeinto /usr/share/${PN}-2/examples
+	        doexe libtool
+	        insinto /usr/share/${PN}-2/examples/sample
+	        doins sample/*.{c,h} sample/*Makefile*
+	        insinto /usr/share/${PN}-2/examples/sample/.deps
+	        doins sample/.deps/*
+		dodir /usr/share/${PN}-2/examples/lib
+	        dosym /usr/lib/libsasl2.la /usr/share/${PN}-2/examples/lib/libsasl2.la
+		dodir /usr/share/${PN}-2/examples/lib/.libs
+	        dosym /usr/lib/libsasl2.so /usr/share/${PN}-2/examples/lib/.libs/libsasl2.so
+	fi
+
 	# Bug #60769. Default location for java classes breaks OpenOffice.
 	if use java; then
 		java-pkg_dojar ${PN}.jar
@@ -205,9 +223,6 @@ src_install () {
 	newdoc pwcheck/README README.pwcheck
 	dohtml doc/*.html
 
-	docinto examples
-	dodoc sample/{*.[ch],Makefile}
-
 	docinto saslauthd
 	dodoc saslauthd/{AUTHORS,COPYING,ChangeLog,LDAP_SASLAUTHD,NEWS,README}
 
@@ -227,4 +242,12 @@ src_install () {
 	exeinto ${ROOT}/usr/sbin
 	newexe "${S}/saslauthd/testsaslauthd" testsaslauthd || \
 		die "failed to install testsaslauthd."
+}
+
+pkg_postinst () {
+	if use sample; then
+		einfo "You have chosen to install sources for example client and server."
+		einfo "To build these, please type:"
+		einfo "\tcd /usr/share/${PN}-2/examples/sample && make"
+	fi
 }
