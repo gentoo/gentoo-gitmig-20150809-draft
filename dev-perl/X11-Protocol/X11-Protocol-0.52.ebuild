@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/X11-Protocol-0.52.ebuild,v 1.7 2004/11/04 05:11:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/X11-Protocol-0.52.ebuild,v 1.8 2005/01/26 22:04:39 corsair Exp $
 
 inherit perl-module eutils
 

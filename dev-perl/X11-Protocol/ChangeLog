@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X11-Protocol
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.10 2004/07/30 16:05:25 mcummings Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.11 2005/01/26 22:04:39 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> X11-Protocol-0.53.ebuild:
+  Stable on ppc64
 
 *X11-Protocol-0.53 (30 Jul 2004)
 
