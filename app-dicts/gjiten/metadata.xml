@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>cjk</herd>
+<maintainer>
+  <email>jmglov@gentoo.org</email>
+  <name>Josh Glover</name>
+</maintainer>
+<longdescription>Gjiten is a Japanese dictionary program for GNOME. Gjiten also has a kanji dictionary. Any combination of stroke count, radicals and search key can be used for kanji lookups.</longdescription> 
 </pkgmetadata>
