@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.1_beta20031003-r2.ebuild,v 1.1 2004/01/26 14:02:46 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.1_beta20031003-r2.ebuild,v 1.2 2004/02/06 16:07:19 aliz Exp $
 
 DESCRIPTION="A powerful light-weight programming language designed for extending applications"
 HOMEPAGE="http://www.lua.org/"
@@ -14,11 +14,11 @@ DEPEND=">=sys-apps/sed-4
 S=${WORKDIR}/lua-5.0.1
 
 src_unpack() {
-
 	unpack ${A}
 
 	#FIXME: hppa arch needs to update the patch -- I can't test (twp)
-	#epatch ${FILESDIR}/lua-5.0.1-pic.patch
+	#patch works on amd64 - aliz 2004-02-06
+	epatch ${FILESDIR}/lua-5.0.1-pic.patch
 
 	cd ${S}
 
