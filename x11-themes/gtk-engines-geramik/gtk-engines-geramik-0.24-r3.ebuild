@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/gtk-engines-geramik-0.24-r3.ebuild,v 1.1 2003/06/19 09:45:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/gtk-engines-geramik-0.24-r3.ebuild,v 1.2 2003/06/26 10:06:53 foser Exp $
 
-inherit gtk-engines2
+inherit gtk-engines2 eutils
 
 MY_PN="Geramik"
 
@@ -15,3 +15,9 @@ LICENSE="GPL-2"
 SLOT="2"
 
 S=${WORKDIR}/${MY_PN}-${PV}
+
+src_unpack() {
+	unpack ${A}
+
+	epatch ${FILESDIR}/${P}-gentoo.diff
+}
