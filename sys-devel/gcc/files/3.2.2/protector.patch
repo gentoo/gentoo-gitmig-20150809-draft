@@ -234,10 +234,10 @@ Index: gcc/expr.c
 ===================================================================
 RCS file: /home/cvsroot/gcc/gcc/expr.c,v
 retrieving revision 1.1.1.11
-retrieving revision 1.1.1.11.2.1
-diff -c -3 -p -r1.1.1.11 -r1.1.1.11.2.1
+retrieving revision 1.1.1.11.2.2
+diff -c -3 -p -r1.1.1.11 -r1.1.1.11.2.2
 *** gcc/expr.c	2003/02/19 07:11:13	1.1.1.11
---- gcc/expr.c	2003/02/26 08:01:01	1.1.1.11.2.1
+--- gcc/expr.c	2003/04/07 02:36:16	1.1.1.11.2.2
 *************** Software Foundation, 59 Temple Place - S
 *** 45,50 ****
 --- 45,51 ----
@@ -346,6 +346,25 @@ diff -c -3 -p -r1.1.1.11 -r1.1.1.11.2.1
   
         cst = (*data->constfun) (data->constfundata, data->offset, mode);
         emit_insn ((*genfun) (to1, cst));
+*************** force_operand (value, target)
+*** 5474,5480 ****
+  	  && GET_CODE (XEXP (value, 0)) == PLUS
+  	  && GET_CODE (XEXP (XEXP (value, 0), 0)) == REG
+  	  && REGNO (XEXP (XEXP (value, 0), 0)) >= FIRST_VIRTUAL_REGISTER
+! 	  && REGNO (XEXP (XEXP (value, 0), 0)) <= LAST_VIRTUAL_REGISTER)
+  	{
+  	  rtx temp = expand_simple_binop (GET_MODE (value), code,
+  					  XEXP (XEXP (value, 0), 0), op2,
+--- 5478,5486 ----
+  	  && GET_CODE (XEXP (value, 0)) == PLUS
+  	  && GET_CODE (XEXP (XEXP (value, 0), 0)) == REG
+  	  && REGNO (XEXP (XEXP (value, 0), 0)) >= FIRST_VIRTUAL_REGISTER
+! 	  && REGNO (XEXP (XEXP (value, 0), 0)) <= LAST_VIRTUAL_REGISTER
+! 	  && (!flag_propolice_protection
+! 	      || XEXP (XEXP (value, 0), 0) != virtual_stack_vars_rtx))
+  	{
+  	  rtx temp = expand_simple_binop (GET_MODE (value), code,
+  					  XEXP (XEXP (value, 0), 0), op2,
 *************** expand_expr (exp, target, tmode, modifie
 *** 7614,7620 ****
         /* If adding to a sum including a constant,
@@ -355,7 +374,7 @@ diff -c -3 -p -r1.1.1.11 -r1.1.1.11.2.1
   	{
   	  rtx constant_term = const0_rtx;
   
---- 7618,7625 ----
+--- 7620,7627 ----
         /* If adding to a sum including a constant,
   	 associate it to put the constant outside.  */
         if (GET_CODE (op1) == PLUS
@@ -640,10 +659,10 @@ Index: gcc/libgcc2.c
 ===================================================================
 RCS file: /home/cvsroot/gcc/gcc/libgcc2.c,v
 retrieving revision 1.1.1.7
-retrieving revision 1.1.1.7.4.2
-diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.2
+retrieving revision 1.1.1.7.4.3
+diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.3
 *** gcc/libgcc2.c	2002/12/18 00:55:44	1.1.1.7
---- gcc/libgcc2.c	2003/03/17 13:22:49	1.1.1.7.4.2
+--- gcc/libgcc2.c	2003/04/07 02:03:19	1.1.1.7.4.3
 *************** atexit (func_ptr func)
 *** 2050,2052 ****
 --- 2050,2151 ----
@@ -715,7 +734,7 @@ diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.2
 +   strncat(buf, __progname, bufsz-len-1); len = strlen(buf);
 + #endif
 +   if (bufsz>len) {strncat(buf, message, bufsz-len-1); len = strlen(buf);}
-+   if (bufsz>len) strncat(buf, func, bufsz-len-1);
++   if (bufsz>len) {strncat(buf, func, bufsz-len-1); len = strlen(buf);}
 + 
 +   /* print error message */
 +   write (STDERR_FILENO, buf+3, len-3);
@@ -729,7 +748,7 @@ diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.2
 +     (void)strncpy(SyslogAddr.sun_path, _PATH_LOG,
 + 		  sizeof(SyslogAddr.sun_path) - 1);
 +     SyslogAddr.sun_path[sizeof(SyslogAddr.sun_path) - 1] = '\0';
-+     sendto(LogFile, buf, strlen(buf), 0, (struct sockaddr *)&SyslogAddr,
++     sendto(LogFile, buf, len, 0, (struct sockaddr *)&SyslogAddr,
 + 	   sizeof(SyslogAddr));
 +   }
 + #endif

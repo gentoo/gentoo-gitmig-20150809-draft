@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.89 2003/04/11 05:35:39 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.90 2003/04/21 03:25:05 frogger Exp $
 
   24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> :
   - Fix latest ebuild to only build static if we are just building the C
@@ -35,6 +35,12 @@
   from borking when run.  This will hopefully fix bugs #15288, #16632, #16797.
 
 *gcc-3.2.2-r3 (03 Mar 2003)
+
+  20 Apr 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.2.2-r3.ebuild,
+  files/3.2.2/protector.patch:
+  Updated to the latest ProPolice patch, Protector-6.  This should resolve the
+  problems experienced with the Protector-5 patch.  This was due to a bug in the
+  patch enabling the protection by default.
 
   11 Apr 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.2.2-r3.ebuild,
   manifest, files/3.2.2/protector.patch:

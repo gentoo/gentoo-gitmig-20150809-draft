@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.14 2003/04/12 19:47:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.15 2003/04/21 03:25:05 frogger Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -183,7 +183,7 @@ src_unpack() {
 	epatch ${FILESDIR}/3.2.1/gcc32-strip-dotdot.patch
 	epatch ${FILESDIR}/3.2.1/gcc32-athlon-alignment.patch
 
-	# ProPolice Stack Smashing protection - protector-3.2.2-4
+	# ProPolice Stack Smashing protection - protector-3.2.2-6
 	epatch ${FILESDIR}/3.2.2/protector.patch 
 	cp ${FILESDIR}/3.2.2/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 	cp ${FILESDIR}/3.2.2/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
