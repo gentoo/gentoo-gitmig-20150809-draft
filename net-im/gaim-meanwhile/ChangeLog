@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gaim-meanwhile
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-meanwhile/ChangeLog,v 1.8 2004/10/16 23:02:49 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-meanwhile/ChangeLog,v 1.9 2004/10/21 15:39:33 rizzo Exp $
+
+  21 Oct 2004; Don Seiler <rizzo@gentoo.org> -gaim-meanwhile-0.81.ebuild,
+  -gaim-meanwhile-0.82.ebuild, -gaim-meanwhile-1.0.0.ebuild,
+  gaim-meanwhile-1.0.1.ebuild:
+  Stable on x86, pruning old versions
 
 *gaim-meanwhile-1.0.1 (16 Oct 2004)
 
