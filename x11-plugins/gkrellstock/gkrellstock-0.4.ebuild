@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/gkrellstock-0.4.ebuild,v 1.1 2002/10/30 23:42:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/gkrellstock-0.4.ebuild,v 1.2 2002/12/09 04:41:57 manson Exp $
 
 S=${WORKDIR}/${P/s/S}
 DESCRIPTION="Get Stock quotes plugin for GKrellM"
@@ -13,7 +13,7 @@ DEPEND="=app-admin/gkrellm-1*
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_compile() {
 	emake || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellscore/gkrellscore-0.0.2.ebuild,v 1.5 2002/11/14 09:43:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellscore/gkrellscore-0.0.2.ebuild,v 1.6 2002/12/09 04:41:57 manson Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://ssl.usu.edu/paul/gkrellscore"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="=app-admin/gkrellm-1.2*
 	sys-apps/supersed

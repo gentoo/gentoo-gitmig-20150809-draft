@@ -1,7 +1,10 @@
 # ChangeLog for x11-themes/commonbox-styles-extra
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/ChangeLog,v 1.3 2002/11/27 07:03:16 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/ChangeLog,v 1.4 2002/12/09 04:42:00 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *commonbox-styles-extra-0.2-r1 (27 Nov 2002)
 
   27 Nov 2002; Matt Keadle <mkeadle@gentoo.org> commonbox-styles-extra-0.2-r1.ebuild

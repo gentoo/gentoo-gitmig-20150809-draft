@@ -11,7 +11,7 @@ HOMEPAGE="http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="=app-admin/gkrellm-2*
 	sys-apps/supersed

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwho/gkrellmwho-0.4.ebuild,v 1.4 2002/10/04 06:45:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwho/gkrellmwho-0.4.ebuild,v 1.5 2002/12/09 04:41:57 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GKrellM plugin which displays users logged in"
@@ -9,7 +9,7 @@ HOMEPAGE="http://web.wt.net/~billw/gkrellm/Plugins"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="=app-admin/gkrellm-1.2*"
 

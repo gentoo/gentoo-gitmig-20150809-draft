@@ -1,6 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer-alsa/wmmixer-alsa-0.6.ebuild,v 1.2 2002/11/04 01:33:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer-alsa/wmmixer-alsa-0.6.ebuild,v 1.3 2002/12/09 04:41:58 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="hacked version of wmmixer to make it use ALSA instead of the OSS"
@@ -12,7 +12,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_compile() {
 	emake || die "emake failed"

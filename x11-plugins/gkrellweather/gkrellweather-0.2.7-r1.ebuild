@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cse.unsw.edu.au/~flam/programs/gkrellweather.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=app-admin/gkrellm-1.2*
 	>=net-misc/wget-1.5.3"

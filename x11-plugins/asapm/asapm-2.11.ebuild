@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-2.11.ebuild,v 1.1 2002/11/03 16:09:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-2.11.ebuild,v 1.2 2002/12/09 04:41:55 manson Exp $
 
 IUSE="jpeg"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tigr.net/afterstep/download/asapm/${P}.tar.gz"
 HOMEPAGE="http://www.tigr.net/afterstep/list.pl"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/x11
 	jpeg? ( media-libs/jpeg )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-alltraxclock/gkrellm-alltraxclock-0.3.ebuild,v 1.1 2002/10/16 21:12:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-alltraxclock/gkrellm-alltraxclock-0.3.ebuild,v 1.2 2002/12/09 04:41:55 manson Exp $
 
 MY_P=${P/gkrellm-}
 S=${WORKDIR}/${MY_P}
@@ -9,7 +9,7 @@ SRC_URI="http://perso.wanadoo.fr/alltrax/${MY_P}.tar.gz"
 HOMEPAGE="http://perso.wanadoo.fr/alltrax/alltraxclock.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="=app-admin/gkrellm-1.2*
 	=x11-libs/gtk+-1.2*

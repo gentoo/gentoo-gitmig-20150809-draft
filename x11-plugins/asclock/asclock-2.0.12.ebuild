@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12.ebuild,v 1.1 2002/11/03 16:17:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12.ebuild,v 1.2 2002/12/09 04:41:55 manson Exp $
 
 S=${WORKDIR}/${P}
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.tigr.net/afterstep/download/asclock/${P}.tar.gz"
 HOMEPAGE="http://www.tigr.net/afterstep/list.pl"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc virtual/x11"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.3.2.ebuild,v 1.1 2002/10/16 21:59:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.3.2.ebuild,v 1.2 2002/12/09 04:41:57 manson Exp $
 
 S=${WORKDIR}/${P/s/S}
 DESCRIPTION="A GKrellM plugin to snap screenshots."
@@ -9,7 +9,7 @@ HOMEPAGE="http://gkrellshoot.sf.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="=app-admin/gkrellm-1.2*
 	>=media-libs/imlib-1.9.10-r1"

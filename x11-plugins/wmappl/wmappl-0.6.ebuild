@@ -1,6 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/wmappl-0.6.ebuild,v 1.1 2002/08/30 07:44:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/wmappl-0.6.ebuild,v 1.2 2002/12/09 04:41:57 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Simple application launcher for the Window Maker dock."
@@ -11,7 +11,7 @@ DEPEND="virtual/x11"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_compile() {
 	emake || die
