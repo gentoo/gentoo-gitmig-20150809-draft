@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.24 2004/12/22 19:24:02 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.25 2005/01/26 21:28:21 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> rhino-1.5.5.ebuild:
+  Stable on ppc64
 
 *rhino-1.6.1 (22 Dec 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.5.ebuild,v 1.6 2004/12/19 18:44:22 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.5.ebuild,v 1.7 2005/01/26 21:30:26 corsair Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.jcraft.com/${PN}/${PN}-${PV}.tar.gz"
 
 LICENSE="jcraft"
 SLOT="0"
-KEYWORDS="x86 sparc amd64 ppc ~ppc64"
+KEYWORDS="x86 sparc amd64 ppc ppc64"
 IUSE="doc jikes"
 RESTRICT="nomirror"
 
