@@ -1,0 +1,50 @@
+diff -ru modplugxmms/archive/arch_gzip.cpp /home/oscar/modplugxmms-2.041/modplugxmms/archive/arch_gzip.cpp
+--- modplugxmms/archive/arch_gzip.cpp	2003-04-27 14:30:48.000000000 +0300
++++ /home/oscar/modplugxmms-2.041/modplugxmms/archive/arch_gzip.cpp	2003-06-02 07:01:24.000000000 +0300
+@@ -88,7 +88,10 @@
+ 	FILE *f = popen(lCommand.c_str(),"r");
+ 	
+ 	if (f <= 0)
++	{
++	 	pclose(f);
+ 		return false;
++	}
+ 	
+ 	char line[300];
+ 	fgets(line, 80, f);   // ignore a line.
+diff -ru modplugxmms/archive/arch_rar.cpp /home/oscar/modplugxmms-2.041/modplugxmms/archive/arch_rar.cpp
+--- modplugxmms/archive/arch_rar.cpp	2003-04-27 14:30:48.000000000 +0300
++++ /home/oscar/modplugxmms-2.041/modplugxmms/archive/arch_rar.cpp	2003-06-02 06:48:34.000000000 +0300
+@@ -175,8 +175,11 @@
+ 		lName = lBuffer;
+ 		
+ 		if(IsOurFile(lName))
++		{
++		 	pclose(f);
+ 			return true;
++		}
+ 	}
+-	
++	pclose(f);
+ 	return false;
+ }
+diff -ru modplugxmms/archive/arch_zip.cpp /home/oscar/modplugxmms-2.041/modplugxmms/archive/arch_zip.cpp
+--- modplugxmms/archive/arch_zip.cpp	2003-04-27 14:30:48.000000000 +0300
++++ /home/oscar/modplugxmms-2.041/modplugxmms/archive/arch_zip.cpp	2003-06-02 07:04:05.000000000 +0300
+@@ -134,11 +134,16 @@
+ 		uint32 tempSize;
+ 		if (!processLine(line, &tempSize, lName)) 
+ 		{
++		 	pclose(f);
+ 			return false;
+ 		}
++		/* Did you forget an else here or something? */
++		/* Cause there is no real reason to use while if not */
++		pclose(f);
+ 		return true;
+ 		
+ 	}
+ 	
++	pclose(f);
+ 	return false;
+ }
