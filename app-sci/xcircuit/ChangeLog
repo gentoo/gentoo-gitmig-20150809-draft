@@ -1,10 +1,16 @@
 # ChangeLog for app-sci/xcircuit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.11 2003/12/09 18:11:38 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.12 2004/01/05 13:12:30 plasmaroo Exp $
+
+*xcircuit-3.1.31 (05 Jan 2004)
+
+  05 Jan 2004; <plasmaroo@gentoo.org> xcircuit-2.5.4.ebuild,
+  xcircuit-2.5.5.ebuild, xcircuit-3.1.29.ebuild, xcircuit-3.1.31.ebuild:
+  Bumped version, and added Tcl/Tk support.
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> xcircuit-2.5.4.ebuild,
   xcircuit-2.5.5.ebuild, xcircuit-3.1.29.ebuild:
-  changed app-text/ghostscript to virtual/ghostscript
+  Changed app-text/ghostscript to virtual/ghostscript.
 
 *xcircuit-3.1.29 (27 Nov 2003)
 
@@ -14,38 +20,32 @@
 *xcircuit-2.5.5 (5 Jan 2003)
 
   5 Jan 2003; George Shapovalov <george@gentoo.org> xcircuit-2.5.5.ebuild :
-
-  version update.
+  Version update.
 
 *xcircuit-2.5.4 (5 Apr 2002)
 
   15 Oct 2002; George Shapovalov <george@gentoo.org> xcircuit-2.5.4.ebuild
+  Changed '~x86' to 'x86' and added '~ppc' upon some test reports.
+  Updated HOMEPAGE and SRC_URI to point to the present location (package 
+  hosting seem to have moved a lot over last few month)
   
-  changed ~x86 to x86 and added ~ppc upon some test reports
-  updated HOMEPAGE and SRC_URI to point to the present location (package hosting 
-  seem to have moved a lot over last few month)
-  
-  14 Oct 2002; George Shapovalov <george@gentoo.org> xcircuit-2.5.4.ebuild, files/xcircuit-2.5.4-*.patch :
-
-  Thanks to Jonathan Nall <nall@themountaingoats.net> for tracing few gcc related problems. 
-  One patch is conditional on gcc-3.2 presence. See #8957 and #8960 for details.
+  14 Oct 2002; George Shapovalov <george@gentoo.org> xcircuit-2.5.4.ebuild, 
+  files/xcircuit-2.5.4-*.patch : Thanks to Jonathan Nall 
+  <nall@themountaingoats.net> for tracing few gcc related problems. One patch
+  is conditional on gcc-3.2 presence. See #8957 and #8960 for details.
 
   16 Aug 2002; George Shapovalov <george@gentoo.org> xcircuit-2.5.4.ebuild :
-
-  due to report by Marius Bernklev <mariube@sex.ifi.uio.no> added code 
-  to replace -O3 -> -O2 in C[XX]FLAGS
+  Due to report by Marius Bernklev <mariube@sex.ifi.uio.no> added code 
+  to replace -O3 -> -O2 in C[XX]FLAGS.
 
   25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xcircuit-2.5.4.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   06 May 2002; George Shapovalov <george@gentoo.org> all :
-
-  moved from app-misc to app-sci
+  Moved from app-misc to app-sci.
 
   5 Apr 2002; Tod Neidt <tod@gentoo.org> xcircuit-2.5.4.ebuild, Changelog :
-
   Fixed typo on ghoscript dependency.
   
   5 Apr 2002; Tod Neidt <tod@gentoo.org> xcircuit-2.5.4.ebuild, Changelog :
- 
   Initial commit. User request. 
