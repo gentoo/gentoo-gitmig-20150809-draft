@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c.ebuild,v 1.4 2003/06/20 17:53:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c.ebuild,v 1.5 2003/06/21 18:50:19 robbat2 Exp $
 
 S=${WORKDIR}/imap-2002c1
 
@@ -16,6 +16,7 @@ IUSE="ssl mbox"
 PROVIDE="virtual/imapd"
 PROVIDE="${PROVIDE} virtual/imap-c-client"
 DEPEND="!net-mail/uw-imap
+	!virtual/imap-c-client
 	virtual/glibc
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )"

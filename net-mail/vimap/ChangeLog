@@ -1,9 +1,13 @@
 # ChangeLog for net-mail/vimap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.5 2003/06/20 17:53:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.6 2003/06/21 18:50:17 robbat2 Exp $
 
 *vimap-2002c (28 May 2003)
-  20 Jun 2003; Robin Johnson <robbat2@gentoo.org> uw-imap-2002d.ebuild:
+
+  21 Jun 2003; Robin Johnson <robbat2@gentoo.org> vimap-2003c.ebuild:
+  Missed adding !virtual/imap-c-client to DEPEND.
+
+  20 Jun 2003; Robin Johnson <robbat2@gentoo.org> vimap-2003c.ebuild:
   Add PROVIDE virtual/imap-c-client.
 
   11 Jun 2003; Brad Laue <brad@gentoo.org> vimap-2002c.ebuild:
