@@ -1,0 +1,71 @@
+# ChangeLog for app-sci/pymol
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.1 2004/12/24 17:00:58 ribosome Exp $
+
+*pymol-0.97 (24 Dec 2004)
+
+  24 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/header_order.patch, +files/nosplash-gentoo.patch,
+  +files/pymol-gentoo.diff, +files/setup.py-gentoo.patch,
+  +files/setup2.py-gentoo.patch, +pymol-0.88.ebuild, +pymol-0.90.ebuild,
+  +pymol-0.95.ebuild, +pymol-0.97.ebuild:
+  Moved from app-sci/pymol to sci-chemistry/pymol.
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> pymol-0.97.ebuild:
+  Added to x86.
+
+*pymol-0.97 (26 Jul 2004)
+
+  26 Jul 2004; Olivier Fisette <ribosome@gentoo.org> pymol-0.97.ebuild:
+  Version bump suggested by Stéphane Gagné <sgagne@rsvs.ulaval.ca> (bug #58097).
+  Removed header order patch since it is no longer needed.
+
+*pymol-0.95 (20 Apr 2004)
+
+  20 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> pymol-0.95.ebuild,
+  files/header_order.patch:
+  Version bump. Needed a little patch and a change to the setup2.py call (if it
+  does not find the modules, it will create no python.com)
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> pymol-0.82.ebuild,
+  pymol-0.86.ebuild, pymol-0.88.ebuild, pymol-0.90.ebuild:
+  Adding IUSE, cleanup
+
+  03 Mar 2004; Peter Bienstman <pbienst@gentoo.org> pymol-0.90:
+  marked stable on x86
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> pymol-0.82.ebuild,
+  pymol-0.86.ebuild, pymol-0.88.ebuild, pymol-0.90.ebuild:
+  moved dev-python/Numeric to dev-python/numeric
+
+*pymol-0.90 (23 Jul 2003)
+
+  23 Jul 2003; George Shapovalov <george@gentoo.org> pymol-0.90, files/setup.py-gentoo.patch :
+  new version + fix for setup.py, (#24967)
+  thanks to Ben Cornett <acornet@emory.edu> for the update
+
+*pymol-0.88 (29 Jun 2003)
+
+  19 Jun 2003; George Shapovalov <george@gentoo.org> pymol-0.88.ebuild, files/{digest-pymol-0.88,nosplash-gentoo.patch,setup2.py-gentoo.patch} :
+  new version (#22235)
+  now uses distutils for python
+  thanks to Todd Geders <geders@purdue.edu> for update notification 
+  and Ben Cornett <acornet@emory.edu>  for "distutilized" ebuild submission
+
+*pymol-0.86 (05 Feb 2003)
+
+  05 Feb 2003; George Shapovalov <george@gentoo.org> pymol-0.86.ebuild, files/digest-pymol-0.86 :
+  new version, (#13531)
+  removed -funroll-loops from CFLAGS
+
+*pymol-0.82 (17 July 2002)
+
+  19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> pymol-0.82.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  17 July 2002; George Shapovalov <george@gentoo.org> pymol-0.82.ebuild, files/digest-pymol-0.82, ChangeLog :
+
+  Inital release,
+  molecular visualization package
+  
+  ebuild submitted by Ben Cornett <acornet@emory.edu>
