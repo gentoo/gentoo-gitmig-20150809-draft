@@ -59,3 +59,4 @@ virtual/mpg123		media-sound/mpg123
 virtual/cdrtools        app-cdr/cdrtools
 virtual/dhcpc			net-misc/dhcpcd
 virtual/ssh		net-misc/openssh
+virtual/ruby		dev-lang/ruby

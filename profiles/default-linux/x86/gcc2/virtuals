@@ -1,7 +1,8 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/virtuals,v 1.1 2004/03/19 21:58:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/virtuals,v 1.2 2004/04/10 05:55:45 usata Exp $
 
 
 # Use this virtuals file to override or add virtuals that are specific ONLY
 # TO THIS PROFILE!
+virtual/ruby		dev-lang/ruby

@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.9 2004/04/07 19:40:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.10 2004/04/10 05:55:45 usata Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -52,3 +52,4 @@ virtual/x11						x11-base/xfree
 virtual/xemacs					app-editors/xemacs
 virtual/xft						x11-base/xfree
 x11-libs/xaw					x11-libs/Xaw3d
+virtual/ruby		dev-lang/ruby

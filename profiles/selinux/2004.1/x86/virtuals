@@ -1,6 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/virtuals,v 1.2 2004/03/18 19:21:59 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/virtuals,v 1.3 2004/04/10 05:55:46 usata Exp $
 
 virtual/bootloader	sys-boot/grub
 virtual/linux-sources	sys-kernel/selinux-sources
+virtual/ruby		dev-lang/ruby

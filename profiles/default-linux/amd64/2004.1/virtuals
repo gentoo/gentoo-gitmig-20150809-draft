@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.1/virtuals,v 1.1 2004/04/09 19:27:13 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.1/virtuals,v 1.2 2004/04/10 05:55:45 usata Exp $
 
 # Virtuals specific to the Gentoo/amd64 2004.0 release
 
@@ -22,3 +22,4 @@ sys-apps/fileutils		sys-apps/coreutils
 sys-apps/reiserfs-utils		sys-fs/reiserfsprogs
 sys-apps/sh-utils		sys-apps/coreutils
 sys-apps/textutils		sys-apps/coreutils
+virtual/ruby		dev-lang/ruby

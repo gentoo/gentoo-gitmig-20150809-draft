@@ -51,3 +51,4 @@ virtual/w3m			net-www/w3m
 virtual/cdrtools		app-cdr/cdrtools
 virtual/mpg123		media-sound/mpg123
 virtual/dhcpc		net-misc/dhcpcd
+virtual/ruby		dev-lang/ruby

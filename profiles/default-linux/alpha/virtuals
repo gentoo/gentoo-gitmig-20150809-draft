@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/virtuals,v 1.1 2004/03/23 23:04:04 jmaynard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/virtuals,v 1.2 2004/04/10 05:55:45 usata Exp $
 
 # This file is used to either override or extend the parent profile's
 # virtuals mappings.   In this case, this is for ARCHITECTURE SPECIFIC
@@ -8,3 +8,4 @@
 
 virtual/bootloader		sys-boot/aboot
 virtual/linux-sources		sys-kernel/alpha-sources
+virtual/ruby		dev-lang/ruby
