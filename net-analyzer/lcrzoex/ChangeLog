@@ -1,9 +1,9 @@
 # ChangeLog for net-analyzer/lcrzoex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lcrzoex/ChangeLog,v 1.13 2003/02/12 07:46:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lcrzoex/ChangeLog,v 1.14 2003/03/27 18:45:18 woodchip Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*lcrzoex-4.17.0 (27 Mar 2003)
+
 *lcrzoex-4.16.0 (24 Oct 2002)
 
 *lcrzoex-4.10 (6 Jun 2002)
