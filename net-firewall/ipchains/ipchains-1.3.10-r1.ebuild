@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipchains/ipchains-1.3.10-r1.ebuild,v 1.3 2004/06/24 22:40:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipchains/ipchains-1.3.10-r1.ebuild,v 1.4 2004/07/01 22:14:32 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="legacy Linux firewall/packet mangling tools"
@@ -10,7 +10,7 @@ KEYWORDS="x86 ppc sparc "
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
