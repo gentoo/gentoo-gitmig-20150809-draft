@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.11 2003/02/18 02:50:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.12 2003/03/27 01:16:46 liquidx Exp $
 
 *audacity-1.1.1-r1 (30 Jan 2003)
 
@@ -35,6 +35,12 @@
   "Gentoo User" on bug #13978 for the mono patch.
 
 *audacity-1.1.0 (10 Nov 2002)
+
+  27 Mar 2003; Alastair Tse <liquidx@gentoo.org> audacity-1.0.0-r1.ebuild,
+  audacity-1.0.0-r1.ebuild, audacity-1.0.0-r2.ebuild,
+  audacity-1.0.0-r2.ebuild, audacity-1.0.0.ebuild, audacity-1.0.0.ebuild,
+  audacity-1.1.0.ebuild, audacity-1.1.0.ebuild:
+  clean up old ebuilds
 
   10 Nov 2002; Nick Hadaway <raker@gentoo.org> audacity-1.1.0.ebuild :
   Updated ebuild.
