@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.16 2004/04/09 20:02:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.17 2004/04/09 22:42:15 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -66,7 +66,7 @@ IUSE="3dfx cjk debug doc hardened ipv6 nls pam sdk static pie"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.2"
-PATCH_VER="0.2"
+PATCH_VER="0.3"
 #RENDER_VER="0.8"
 #XRENDER_VER="0.8.4"
 #XFT_VER="2.1.5"
