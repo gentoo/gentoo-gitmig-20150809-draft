@@ -1,13 +1,18 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.9 2003/02/12 09:18:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.10 2003/03/02 21:16:00 tantive Exp $
+
+*usermode-sources-2.4.20-rX (05 Mar 2002)
+
+  02 Mar 2002; Michael Imhof <tantive@gentoo.org>
+  Version bumped, -rX contains uml-patch-2.4.20-rX
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*usermode-sources-2.4.19-rX (05 Oct2002)
+*usermode-sources-2.4.19-rX (05 Oct 2002)
 
   05 Oct 2002; Michael Imhof <tantive@gentoo.org>
   Version bumped, -rX contains uml-patch-2.4.19-rX
