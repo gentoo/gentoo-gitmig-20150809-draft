@@ -19,7 +19,7 @@ checkconfig() {
         then
                 einfo "Setting up SETI@home for the first time"
                 cd "${SETIATHOME_DIR}"
-                /opt/setiathome/setiathome -login
+                /opt/setiathome/setiathome -login ${SETIATHOME_OPTIONS}
         fi
 
         if [ "${SETIATHOME_THREADS}" != '1' ]; then
