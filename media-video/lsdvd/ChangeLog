@@ -1,6 +1,10 @@
 # ChangeLog for media-video/lsdvd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.5 2004/03/02 15:26:58 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.6 2004/03/19 09:59:21 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> lsdvd-0.6.ebuild,
+  lsdvd-0.9.ebuild:
+  tidy number of ebuilds
 
   02 Mar 2004; <augustus@gentoo.org> lsdvd-0.10.ebuild:
   Added ~amd64 keyword.
