@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.4.7.ebuild,v 1.5 2004/07/14 20:30:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.4.7.ebuild,v 1.6 2004/07/24 06:23:12 vapier Exp $
 
 DESCRIPTION="GnuPG Made Easy is a library for making GnuPG easier to use"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpgme/index.html"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gpgme/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0.4"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
-IUSE="nls"
+IUSE="nls smime"
 
 DEPEND=">=sys-libs/zlib-1.1.3
 	>=app-crypt/gnupg-1.2*
@@ -17,7 +17,6 @@ DEPEND=">=sys-libs/zlib-1.1.3
 	sys-devel/libtool
 	sys-devel/gcc
 	dev-libs/libgpg-error"
-
 RDEPEND="nls? ( sys-devel/gettext )
 	dev-libs/libgcrypt"
 
@@ -42,6 +41,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--includedir=/usr/include/gpgme4 \
+		$(use_with smime gpgsm $(which gpgsm)) \
 		`use_enable nls` \
 		|| die "econf failed"
 	emake || die

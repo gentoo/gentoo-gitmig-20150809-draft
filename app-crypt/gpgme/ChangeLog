@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.33 2004/07/14 20:30:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.34 2004/07/24 06:23:12 vapier Exp $
+
+  24 Jul 2004; Mike Frysinger <vapier@gentoo.org> gpgme-0.4.7.ebuild:
+  Add smime USE #50681 by Malte S. Stretz.
 
   15 Jul 2004; Daniel Black <dragonheart@gentoo.org> gpgme-0.3.14.ebuild,
   gpgme-0.3.16.ebuild, gpgme-0.4.0.ebuild, gpgme-0.4.7.ebuild:
