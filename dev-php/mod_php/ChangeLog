@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.69 2003/05/22 18:53:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.70 2003/05/23 03:03:28 robbat2 Exp $
 
 *mod_php-4.3.1-r3 (23 Apr 2003)
 
@@ -65,6 +65,9 @@
   Added permission change to /usr/bin/pear to 755
 
 *mod_php-4.3.1 (18 Feb 2003)
+
+  22 May 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.1.ebuild:
+  Slight fix to the java stuff to forestall problems for the moment.
 
   12 May 2003; Todd Heim <heim@gentoo.org> mod_php-4.3.1.ebuild :
   fixed world writable files bug (#20706)

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.11 2003/05/12 16:13:58 heim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.12 2003/05/23 03:03:28 robbat2 Exp $
 
 inherit flag-o-matic 
 
@@ -54,8 +54,9 @@ DEPEND="|| (
 	firebird? ( >=dev-db/firebird-1.0 )
 	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )
 	postgres? ( >=dev-db/postgresql-7.1 )
-	gd? ( media-libs/libgd )"
-	#java? ( virtual/jdk )
+	gd? ( media-libs/libgd )
+	java? ( =virtual/jdk-1.4* )
+	"
 # Only needed by CGI-Version
 #	readline? ( >=sys-libs/ncurses-5.1
 #		>=sys-libs/readline-4.1 )"
