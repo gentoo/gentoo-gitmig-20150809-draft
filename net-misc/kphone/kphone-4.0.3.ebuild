@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.0.3.ebuild,v 1.4 2004/10/18 15:40:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.0.3.ebuild,v 1.5 2005/01/18 19:05:51 gustavoz Exp $
 
 inherit eutils kde
 
