@@ -10,7 +10,7 @@ MD5 e6c4829fcdb280108dcff69be0553960 files/digest-kdesdk-2.2.2-r1 131
 MD5 b38a426f5d7fc0a9679f467892059329 files/kdesdk-2.2.2-gentoo.diff 1062
 MD5 8aeaed4631590b1c686d4ddff85ee95d files/digest-kdesdk-3.0.4 66
 MD5 e7476a61e7c8d9c228c84d56cc50ddf5 files/digest-kdesdk-3.1.1 66
-MD5 0c5a6dd9ede77688e9e6b131ab9cc2a3 files/digest-kdesdk-3.1.2 66
+MD5 7d585e052aa2ad1a19af03da1021b7bd files/digest-kdesdk-3.1.2 66
 MD5 fc2f7066ef31027bd98e449622f48083 files/digest-kdesdk-3.1 64
 MD5 b82585f85bb5a3d6da06b296965c4602 files/digest-kdesdk-3.0.5a 67
 MD5 d18ba202d291a6ba4a4ef422cdee53bd files/digest-kdesdk-3.0.5b 204
