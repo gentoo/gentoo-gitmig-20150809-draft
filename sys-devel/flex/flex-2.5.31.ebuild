@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.23.ebuild,v 1.7 2003/04/17 22:53:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.31.ebuild,v 1.1 2003/04/17 22:53:29 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU lexical analyser generator"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/lex/${P}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/flex/flex.html"
 
 SLOT="0"
