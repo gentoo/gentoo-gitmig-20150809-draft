@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1.ebuild,v 1.5 2002/08/02 04:44:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1.ebuild,v 1.6 2002/08/14 03:57:07 murphy Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -11,7 +11,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/Python-${PV}.tgz"
 
 HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
@@ -25,7 +25,7 @@ RDEPEND="$DEPEND dev-python/python-fchksum"
 PROVIDE="virtual/python"
 
 SLOT="2.2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	# python's config seems to ignore CFLAGS
