@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.62 2003/08/01 03:02:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.63 2003/08/04 00:46:14 gmsoft Exp $
 
   31 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.14.ebuild:
   Remove extraneous warning about a bug that was fixed between .13 and .14
@@ -10,6 +10,9 @@
   Finish Fixing 4.0.14 and release
 
 *mysql-4.0.14 (23 Jul 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> mysql-4.0.14.ebuild :
+  Added ~hppa to KEYWORDS.
 
   23 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.14.ebuild:
   Version bump
@@ -29,6 +32,9 @@
   Version bump.
 
 *mysql-4.0.13-r3 (12 Jun 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> mysql-4.0.13-r3.ebuild :
+  Added hppa to KEYWORDS.
 
   3 Jun 2003; Robin Johnson <robbat2@gentoo.org> mysql-4.0.13-r3.ebuild:
   Add SSL warning as per bug #22964.
