@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0.ebuild,v 1.2 2004/10/08 23:09:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0-r1.ebuild,v 1.1 2004/10/12 22:24:36 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -26,14 +26,14 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=x11-libs/libxklavier-1.03
 	>=media-libs/audiofile-0.2.6
-	>=media-sound/esound-0.2.35
+	>=media-sound/esound-0.2.34
 	>=gnome-base/gnome-mime-data-2.4.1
 	>=media-libs/libart_lgpl-2.3.16
 
 	>=dev-libs/libIDL-0.8.4
 	>=gnome-base/orbit-2.12
 
-	>=gnome-base/gconf-2.8
+	>=gnome-base/gconf-2.8.0.1
 	>=gnome-base/gnome-keyring-0.4
 	>=gnome-base/gnome-vfs-2.8.1
 
@@ -68,7 +68,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/gnome-session-2.8
 	>=gnome-base/gnome-desktop-2.8
 	>=gnome-base/gnome-applets-2.8
-	>=gnome-base/gnome-panel-2.8
+	>=gnome-base/gnome-panel-2.8.0.1
 
 	>=x11-themes/gnome-icon-theme-2.8
 	>=x11-themes/gnome-themes-2.8
@@ -88,7 +88,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-system-monitor-2.7
 
 	>=gnome-base/librsvg-2.8.1
-	>=x11-libs/libwnck-2.8
+	>=x11-libs/libwnck-2.8.0.1
 	>=x11-wm/metacity-2.8.5
 
 	>=x11-libs/startup-notification-0.7
@@ -109,7 +109,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gal-2.2.1
 	>=gnome-extra/libgtkhtml-3.2.1
 
-	>=net-misc/vino-2.8
+	>=net-misc/vino-2.8.0.1
 
 	>=app-admin/gnome-system-tools-1
 
