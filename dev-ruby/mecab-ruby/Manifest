@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2e497d4c08e25b7cc537999c48f73e02 ChangeLog 733
 MD5 270b85cf1a0b6e5d6cec99b48f22cbab mecab-ruby-0.78.ebuild 590
-MD5 f9be6677b2c44eaeaebac7bb2322bf4e mecab-ruby-0.80.ebuild 522
-MD5 6ceb1bc9f8e786e3bb8c38da602c028c ChangeLog 647
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 8bae3e2a7331efd157ad106c9e3b3cea mecab-ruby-0.80.ebuild 529
 MD5 3eecc4cdf7dc30d8fe23f0cf1e0debd3 files/digest-mecab-ruby-0.78 66
-MD5 e9d143c3d7083e17cc930a215eb1ad29 files/digest-mecab-ruby-0.80 66
 MD5 082979d47570e649fd576f796de7602d files/mecab-ruby-0.78-gentoo.diff 741
+MD5 e9d143c3d7083e17cc930a215eb1ad29 files/digest-mecab-ruby-0.80 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB33ug60LfUIagIAkRAjYWAKD+kRq5Nvy5Tyw+q3K5TmFUlwVg8QCffwm/
+Jzxc1jpHi+iV2oeZgHUPve8=
+=FODv
+-----END PGP SIGNATURE-----
