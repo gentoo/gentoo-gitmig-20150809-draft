@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.1 2004/07/08 13:51:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.2 2004/09/01 20:27:08 wolf31o2 Exp $
 
 inherit games
 
@@ -116,8 +116,7 @@ src_install() {
 	insinto ${dir}
 	doins ${S}/README.linux ${S}/Unreal.xpm || die "copying readme/icon"
 
-	dogamesbin ${FILESDIR}/ut2003
-	sed -i "s:GENTOO_DIR:${dir}:" ${D}/${GAMES_BINDIR}/ut2003
+	games_make_wrapper ut2003 ./ut2003 ${dir}
 
 	# this brings our install up to the newest version
 	cd ${S}
