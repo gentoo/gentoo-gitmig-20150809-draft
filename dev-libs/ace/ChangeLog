@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.14 2004/03/12 00:32:29 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.15 2004/03/29 14:55:40 aliz Exp $
+
+  29 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> ace-5.4.ebuild:
+  Adding amd64 keyword. Closing #44427.
 
 *ace-5.4 (12 Mar 2004)
 
