@@ -2,5 +2,5 @@
 # System-wide defaults for the Portage system
 
 USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl nls mitshm perl 
-python esd gif imlib sdl vorbis ogg gnome gtk X qt kde motif opengl 
+python esd gif imlib sdl oggvorbis gnome gtk X qt kde motif opengl 
 arts cups lame xv"
