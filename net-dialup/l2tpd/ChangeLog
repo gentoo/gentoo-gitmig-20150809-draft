@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/l2tpd
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.10 2004/07/21 18:36:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.11 2004/08/14 13:40:17 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> files/l2tpd-init:
+  Fixed CVS Header.
 
   21 Jul 2004; David Holm <dholm@gentoo.org> l2tpd-0.69-r2.ebuild:
   Added to ~ppc.

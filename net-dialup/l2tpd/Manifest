@@ -1,6 +1,16 @@
-MD5 9f67bc4f901aaf84e008c49b7659e4b2 ChangeLog 1517
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 726f42f704e2f3d3918f994692bccfd8 ChangeLog 1609
 MD5 e3ca7600b4982d2ef945c3fe6c18beed l2tpd-0.69-r2.ebuild 1865
-MD5 3105ccaa9c02a3339e446b267ebc3d7f files/l2tpd-init 375
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 8fac6f64a3fa92ee4046a60f1c09dc66 files/digest-l2tpd-0.69-r2 67
 MD5 a89d2270d8abbae0aa7faf07488736f0 files/l2tpd-0.69-can-2004-0649.patch 700
+MD5 acfec4f77489a740550c83d5d275477d files/l2tpd-init 473
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHhaQI1lqEGTUzyQRAgiYAJ0XDMNSzJQ5CSZNvZ0BM5z3e/Sw3gCePZEW
+tT6WwikSlX6DUk613LkBPfc=
+=UsJz
+-----END PGP SIGNATURE-----
