@@ -65,3 +65,8 @@ pfpro
 solid
 sybase
 sybase-ct
+
+# 2004/10/06 - Jeremy Huddleston <eradicator@gentoo.org>
+# sys-cluster/pvm won't build
+pvm
+

@@ -1,10 +1,14 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.8 2004/09/01 20:25:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.9 2004/10/07 02:29:34 eradicator Exp $
 
 #unknowns
 afs
 drac
 
 # WON'T BUILD - SECTION
+
+# 2004/10/06 - Jeremy Huddleston <eradicator@gentoo.org>
+# sys-cluster/pvm won't build
+pvm
 
 # 2004/06/22 - Taken from 2004.0 profile
 # Anything that relies on vm86.h will not built on amd64
