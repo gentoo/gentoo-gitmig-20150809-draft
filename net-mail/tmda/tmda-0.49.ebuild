@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.48.ebuild,v 1.1 2002/03/02 03:33:30 agenkin Exp $
-
-S="${WORKDIR}/${P}"
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.49.ebuild,v 1.1 2002/03/16 07:23:27 agenkin Exp $
 
 DESCRIPTION="Python-based SPAM reduction system"
-SRC_URI="http://software.libertine.org/tmda/releases/${P}.tgz"
 HOMEPAGE="http://software.libertine.org/tmda/index.html"
+
+SRC_URI="http://software.libertine.org/tmda/releases/${P}.tgz"
+S="${WORKDIR}/${P}"
 
 DEPEND=">=dev-lang/python-2.0
         virtual/mta"
