@@ -10,7 +10,7 @@ HOMEPAGE="http://java.sun.com/j2ee/download.html#sdk"
 DEPEND="virtual/glibc"
 RDEPEND=">=virtual/jre-1.3.1"
 PROVIDE="virtual/j2ee-1.3.1"
-LICENSE="sun-bcla"
+LICENSE="sun-bcla-j2ee"
 SLOT="0"
 KEYWORDS="x86 -ppc"
 
