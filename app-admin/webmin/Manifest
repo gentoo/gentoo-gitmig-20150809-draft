@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b9108b04393aef031922b6766c57145f ChangeLog 9737
+MD5 3839d0a2d8f0766ec8768b3b8b020168 ChangeLog 9837
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
 MD5 14973a6b696c3410874c04a2210b20ba webmin-1.170.ebuild 2697
-MD5 f83ebdabd0cd02929050ed0a7388e3eb webmin-1.170-r1.ebuild 3377
+MD5 cdc1550d2c88752af9f7047fa573d306 webmin-1.170-r1.ebuild 3455
 MD5 a21a0a8a415d1e5a1764199b0b4eeed2 webmin-1.160.ebuild 2685
 MD5 7d80c86adbd36eeb8f220b9efdd30819 files/webmin-pam 101
 MD5 54dc8937e05bd76ad86a6c5f5ae6a333 files/init.d.webmin 859
@@ -23,7 +23,7 @@ MD5 cc16dcb159f84c912365504002444a08 files/virtual-server-2.31-namevirtual.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB0ZNvArHZZzCEUG0RAglkAJ0TjyA8DWGyaqeV1+xgGUhb5XvjGQCfc7b5
-OxhgveTkPqZEaq/fzxbn0I0=
-=/ZW+
+iD8DBQFB0ZQKArHZZzCEUG0RAlzqAJ42khi3dalgTuHvC0rbAC9f7TNUJwCdGD3U
+zvWH580XmUb9pA0girEEuxM=
+=a0Sz
 -----END PGP SIGNATURE-----
