@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cfcbf107f9356ccf015eac885176db1d enotes-0.1.20041226.ebuild 521
+MD5 d299dfa10bdb8d8dbe51bf1d86718524 ChangeLog 331
 MD5 0d6c15228e442abb1953a5780281dc13 metadata.xml 527
-MD5 b4fd876915e29cfd770c8c7ed59f371c ChangeLog 329
+MD5 80aedad3cda603011ba68e1af0a9b1c8 enotes-0.1.20041226.ebuild 525
 MD5 48ebb2b49c1860df927391152059dbf3 files/digest-enotes-0.1.20041226 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzzgTroRuSHgZdywRAnceAJ0cYAn2fFEGwKYKn7HcZPdQkgI1xACfT2Wd
-YnXoMYYOViV/uwuMP2Uvz+0=
-=3zPm
------END PGP SIGNATURE-----

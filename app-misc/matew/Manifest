@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e616feb34be2b2589010d38d62643c82 ChangeLog 375
-MD5 9a94c639552ffb6ec3078736066099ef matew-1.9.ebuild 967
+MD5 58182f065e6e5fe3ec64483f649f0fda ChangeLog 377
+MD5 a1efd72d6d29393c82ea2277ebda353b matew-1.9.ebuild 971
 MD5 65a765e57ce28ec00b8c021b2c207cce metadata.xml 376
 MD5 76137568e6f321d8ee9fa5738dab577a files/digest-matew-1.9 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35dxHTu7gpaalycRAqJMAJ9b3Kcn9bcHjivhUDa5v+9UnluuCgCdEL3N
-mgBqQ/3NykAkGPuPM/MFg9c=
-=6KV+
------END PGP SIGNATURE-----

@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a684181552f8e70a932301f8a6ef0662 ChangeLog 1574
-MD5 4f40d0906f023acc4d1ac8964722836e sonypid-1.9.ebuild 561
+MD5 bdcfd551c9f9867b3a11cb5943571162 ChangeLog 1576
+MD5 9c2e45ed71ce383b562dbeb3145fa6df sonypid-1.9.ebuild 565
 MD5 64ee3bd1ab0b9d10df556c86ed84c6f9 files/digest-sonypid-1.9 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35siHTu7gpaalycRAs3iAJ43PjFaustLZvYE4Q4KiCWqSEaOQgCg4Y8H
-Jppn3AE3VOTKaMyhVRVmJuY=
-=zZb6
------END PGP SIGNATURE-----

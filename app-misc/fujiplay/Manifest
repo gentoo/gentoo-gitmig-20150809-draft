@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4171e06dda8c1ced251e89474761586 ChangeLog 519
-MD5 12b095886a6d18d35b2f687349a9e0d9 fujiplay-1.33.ebuild 1011
+MD5 33e4de506bd70668ebcd0947d3cedf17 ChangeLog 521
+MD5 4ab1cc5d7161efed0102778cf9509773 fujiplay-1.33.ebuild 1016
 MD5 ffd323c4305177a6b06eeb23eb59b8cc files/digest-fujiplay-1.33 56
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35IRHTu7gpaalycRAru8AKCe4udnIGbYzwMBeInLgDbLjuq0BgCfXMoD
-UvwWphjg51HpuLhxJSQ+lBU=
-=207R
------END PGP SIGNATURE-----

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 453427062f54c4ac5a43a4c14088aa1e ChangeLog 618
-MD5 eb928c9d221f662f04ff3626f3905da2 tkpasman-2.2.ebuild 899
-MD5 91346adc0306b700b58d003e607865c8 tkpasman-2.2a.ebuild 912
+MD5 bbc4bae6cdb422f6b08add7c0a0921b2 ChangeLog 620
+MD5 69deb71461dd099d79333e15f8ae2263 tkpasman-2.2.ebuild 903
+MD5 23abf879a8a84fc2e4502a7595886f66 tkpasman-2.2a.ebuild 916
 MD5 d76723adc51c452e8b35c96fb5c5eb3e files/digest-tkpasman-2.2 63
 MD5 ae240d49b3add0897d8625c6c9d4335c files/digest-tkpasman-2.2a 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35uCHTu7gpaalycRAjLYAJ9vW2pJW+jaO6vL+qzSJ5ATBsaWTgCeNZGr
-pNLwGEY/tESJYq1qzIZnwCY=
-=c0Fx
------END PGP SIGNATURE-----

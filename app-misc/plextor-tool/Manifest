@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 be6139eff49cd6f679c120c3897483ab ChangeLog 368
-MD5 2a9e0e5024cbceec9751f25b60c14fa2 plextor-tool-0.5.0.ebuild 1183
+MD5 701120c1f4a2a10df84d0fd714be9390 ChangeLog 372
+MD5 d2494ef1e85daa1a864005587e134938 plextor-tool-0.5.0.ebuild 1187
 MD5 314eb67b0d18075f122152b83e947bec files/digest-plextor-tool-0.5.0 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBMfu/HTu7gpaalycRAkw9AKCiJWGWKkAfi4/PV3G1GxKfX/A9HgCg9lai
-eJDBxAx5blmE5FTVdPdk6ko=
-=sft8
------END PGP SIGNATURE-----

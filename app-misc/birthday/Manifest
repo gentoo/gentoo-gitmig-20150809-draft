@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 faa106db61baefcb1212473222c00d7e birthday-1.5.ebuild 584
-MD5 8b075651d70be412894d5f39d7a028b0 ChangeLog 987
+MD5 218cb6033f68827f5fc045b42b8829c7 ChangeLog 990
+MD5 522bbb4e1996ef4b3be2bf371bc596eb birthday-1.5.ebuild 589
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 78f5c1b68b06ee8cbe85495137be4170 files/digest-birthday-1.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaZzgEZCkKN40op4RAmgeAKCkiaxHMZaGmIb7AQPUmxd8r60txwCgjkNV
-36Nt5oQ3jhbR+FYtcgHvdc0=
-=pN7K
------END PGP SIGNATURE-----

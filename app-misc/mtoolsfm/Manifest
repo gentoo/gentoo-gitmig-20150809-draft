@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37f299845e2a64fe3cb71efc924f4258 ChangeLog 993
+MD5 5e268a3029ad2e8af4d0d90e44626d19 ChangeLog 995
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 e02cd44dfeb375923068d34e61f2fb85 mtoolsfm-1.9.3.ebuild 782
+MD5 ea39386758e170e7dfa6b0419ca13882 mtoolsfm-1.9.3.ebuild 786
+MD5 6e44f5473aac5c8e8537f3684b33558d files/ascii.patch 1972
 MD5 d1d9def37127f9c318c473026de352be files/digest-mtoolsfm-1.9.3 66
 MD5 87ef961e5ed3682a37f8b66f2e0f9aaf files/mtoolsfm.c.diff 1767
-MD5 6e44f5473aac5c8e8537f3684b33558d files/ascii.patch 1972
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35h3HTu7gpaalycRAj77AJ99dlilCbXWJwMsHYYgE3oeoFtzCQCbBj6x
-hKSwvkWiWN++wLQ72wdOn4U=
-=A2kO
------END PGP SIGNATURE-----

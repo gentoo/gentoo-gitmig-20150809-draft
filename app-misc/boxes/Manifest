@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3937fdb31240a23c319f07d34f252ecd boxes-1.0.1.ebuild 784
-MD5 fd1c0bf857f8eb607cff4c5cece2c884 ChangeLog 1586
+MD5 61c9da0f9117164528b21960bb07d8e4 ChangeLog 1589
+MD5 6ad414864e49c6bddfbf3db6d52bbc15 boxes-1.0.1.ebuild 787
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 4239b8e99990692b95ae0b09df637519 files/digest-boxes-1.0.1 67
 MD5 bf4032f1789c065bc41cb8e676754f98 files/boxes-1.0.1-gentoo.diff 877
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBhU3LLLFUmVNQ7rkRAkZTAJ9a/y1IEK0e8nTTQYKIMqA706PkMQCeOaF0
-yhFinqcmfBIDOItKxv30cCY=
-=ww6l
------END PGP SIGNATURE-----
+MD5 4239b8e99990692b95ae0b09df637519 files/digest-boxes-1.0.1 67

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a8b914fb2b614bcb4c4a734a779b456 ChangeLog 1270
+MD5 19c4c0d58527bf6c0eba62d7750c564f ChangeLog 1272
+MD5 ff878ba8d8b9fefd71e62c6602082055 i810switch-0.6.2.ebuild 695
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 337fcdb8acbff3159bc66624a2beb329 i810switch-0.6.2.ebuild 691
 MD5 00aede9c2a4709d84c916080856e0e9b files/digest-i810switch-0.6.2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35NUHTu7gpaalycRAjvSAJ41o8DD6Hvos9Hqv6vJyJN84rZ7qwCgtFOW
-DAiJs4Exra8FRwaAse9Juvc=
-=NU4Z
------END PGP SIGNATURE-----

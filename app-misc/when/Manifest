@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6f368e3e206a11ac0757e814a4c86fff when-1.0.13.ebuild 577
-MD5 46bd7ee9b97d99175add228bb0747241 when-1.0.12.ebuild 577
-MD5 8c0d624ef18a8dcb02f055998a5677ff ChangeLog 587
+MD5 93f553b92f2707fd723d5c68bcafb481 ChangeLog 590
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 e95fd9afb691538508a2d04552da2994 files/digest-when-1.0.12 62
+MD5 7cc3458787d9214ce5e3f3cb77a55d99 when-1.0.13.ebuild 580
+MD5 722bedf2a2696b571e80124f0b8ede11 when-1.0.12.ebuild 580
 MD5 01859fa2ef1d8c18ce5c821f5dcd4ef6 files/digest-when-1.0.13 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB1TlIEZCkKN40op4RAksxAKCg0suBpDsJEOXJDT2GJfbqq09DLACfeyDM
-DT7x4WaUXa2lIIrff2JMfag=
-=RXe8
------END PGP SIGNATURE-----
+MD5 e95fd9afb691538508a2d04552da2994 files/digest-when-1.0.12 62

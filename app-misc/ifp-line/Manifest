@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d72f8f994cb5d4dc1af181e703595a11 ChangeLog 1600
+MD5 5fded7e19c4e81be1dc458bc05af2d9b ChangeLog 1600
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 aedca1872dcf54714640d30b7dec1e6d ifp-line-0.2.4.2.ebuild 703
-MD5 b4f83328b0da5344bf882ee968728e71 ifp-line-0.2.4.4.ebuild 707
-MD5 559b3db612b7810a122ecca9d94e4ba8 ifp-line-0.2.4.5.ebuild 661
+MD5 56055ad1802f33e6f6b6cb080794ea59 ifp-line-0.2.4.2.ebuild 705
+MD5 fdef5f83dae3721e64595e310025382d ifp-line-0.2.4.4.ebuild 707
+MD5 2dcb305fc238e0e85d0794252b46e205 ifp-line-0.2.4.5.ebuild 661
 MD5 c109be4d5870daa34311921844f32cf6 files/digest-ifp-line-0.2.4.2 67
 MD5 2b8322fae2afedf7ec93e2afaa909cd6 files/digest-ifp-line-0.2.4.4 67
 MD5 42a6b2a03cdb11179943dae03f364475 files/digest-ifp-line-0.2.4.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB0Y2aArHZZzCEUG0RAmCMAJwM2x1zFUWIa9UmMP68RYlioCLPDgCggrAM
-JOl8mqTYF5zoGUFEXJmRdgY=
-=aBly
------END PGP SIGNATURE-----

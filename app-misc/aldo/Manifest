@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eb50342eaece9983aeaf9b06e6cac291 ChangeLog 645
-MD5 262601d3cbfbb62a4fb0581e880e6d12 aldo-0.0.11.ebuild 544
+MD5 6488cbc16dedb4615646f4829cc7b7b1 ChangeLog 647
+MD5 095e017755968164c9d984f274420fe7 aldo-0.0.11.ebuild 548
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 835f1b4d268021c0496bf5cbf111b363 files/digest-aldo-0.0.11 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA349hHTu7gpaalycRAoNgAKDQFG+QThQEenykwtMXbIR1t1NVbACeJGcC
-6vSjLsK/RqGXCIhBwuJV3Xg=
-=1anM
------END PGP SIGNATURE-----

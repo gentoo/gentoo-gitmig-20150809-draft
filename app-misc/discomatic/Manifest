@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 49a9274d5d676c607e35d6e5d174c659 ChangeLog 483
-MD5 83547089b7988e05f9a56773996666c7 discomatic-0.3.ebuild 613
+MD5 09276d78b20b37d25ee640a5939f12da ChangeLog 486
+MD5 0987be5cf789b694f9a89b3014cbab85 discomatic-0.3.ebuild 616
 MD5 fe971ab14199cfb606f7c557cdd10e14 metadata.xml 363
 MD5 0cec4b6a4f5fa4b20e56299aa4c25180 files/digest-discomatic-0.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXU+PI7fK2cqeyXkRAqieAKCQi809/010isdX/5Ojy2LRagyUDQCgoLQt
-8223dOAM59E+yEn9NMuLmqE=
-=adb6
------END PGP SIGNATURE-----

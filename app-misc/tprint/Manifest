@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b4b27731fa0eeda0a6e23d20967b71bb tprint-1.1.0.ebuild 808
-MD5 85acca36114bbcc3c589e6f431a10c75 ChangeLog 462
+MD5 9b01da2280e303d8e993151640bbbc97 ChangeLog 467
 MD5 c901f9ccf330b76177342db2531f53ae metadata.xml 427
+MD5 27aac16fe9a5b28abd6ef526e70997f3 tprint-1.1.0.ebuild 813
 MD5 f304e4dec094d8a1675e95c4981cadc4 files/digest-tprint-1.1.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBw0fhI1lqEGTUzyQRAhUzAJ0R2nmT67S/8Ovs7IjOZQ6QFeHcSgCggDXM
-IazX/o+dZNT6+RrJuoYblp0=
-=ylXz
------END PGP SIGNATURE-----

@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6175d8bba00a17603d1a73efcbef6dae ChangeLog 2402
-MD5 d24fc80dc508185696d026dde271363a lcd4linux-0.9.10.ebuild 1555
-MD5 33a51c2778e32f6e25d81f8025dde288 lcd4linux-0.9.9.ebuild 1414
-MD5 349d2447b53680bebabf3b91583c5755 lcd4linux-0.9.11.ebuild 1410
+MD5 bd1b1e642077ebfc0e3348fe006a6c96 ChangeLog 2404
+MD5 99743d371e97b6ffff145f0b6c498c51 lcd4linux-0.9.10.ebuild 1559
+MD5 90a851b25d140266b138e2aa1b64f16d lcd4linux-0.9.11.ebuild 1414
+MD5 7dd5e7093536b258c37f605a3b5a9ff7 lcd4linux-0.9.9.ebuild 1419
 MD5 f197056607042f185af2a6d50a35d996 files/digest-lcd4linux-0.9.10 137
-MD5 5ed6638feaed61ef4b7f35f2c7c7f5c8 files/digest-lcd4linux-0.9.9 67
 MD5 4c2c84ffe062afa20fb8f4ac16c4b4db files/digest-lcd4linux-0.9.11 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4vSdHTu7gpaalycRAmmBAJ95eBCROcganpggGaKegn4b3tTToACgv8OT
-yRpmH8vZT5H2WJ+rAA9WH70=
-=/y5X
------END PGP SIGNATURE-----
+MD5 5ed6638feaed61ef4b7f35f2c7c7f5c8 files/digest-lcd4linux-0.9.9 67

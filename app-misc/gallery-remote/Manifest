@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f5539832afe37bbe55b856221ef65ccc gallery-remote-1.4.1.ebuild 2049
-MD5 54de56a638caf107d46cbb976748760b gallery-remote-1.3.2.ebuild 1835
-MD5 2bd036a2ae0c3582d33fb9dbf22ff87a ChangeLog 793
+MD5 7f264c27ec6d708ad3fb709d13c10469 ChangeLog 799
+MD5 cb4e711d99105abc1bdde888ceac364b gallery-remote-1.3.2.ebuild 1841
 MD5 794d84e96c85c480965fda1c9319b24f metadata.xml 256
+MD5 1b73e68b0239413d4b01628624484589 gallery-remote-1.4.1.ebuild 2055
 MD5 0683fc9111309eaa629527346f044b73 files/1.3.2.patch 858
 MD5 2b6dd7a0ea88fe68b8f27f4348fc134d files/build.xml.patch 1008
 MD5 73fa77691176c50c67fd313e23d089dd files/digest-gallery-remote-1.3.2 84
-MD5 df0456549df4f97a4b46faf9b0c155c3 files/digest-gallery-remote-1.4.1 85
 MD5 0ecf06ec29fc94fb87eff8f73989989b files/1.4.1.patch 1125
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBUC4l/rLF9B432nYRAobjAJwOHPyZ1y0qeEpOfjvpM8EY5SiEbwCfUxie
-redoFoK81QGbWUMg28pjHDc=
-=9nPv
------END PGP SIGNATURE-----
+MD5 df0456549df4f97a4b46faf9b0c155c3 files/digest-gallery-remote-1.4.1 85

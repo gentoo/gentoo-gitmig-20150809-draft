@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3b0b45c93a1e8f2d47f4ee379029eda0 ChangeLog 1570
+MD5 a7c7a23f872fa76417cf0970b09be216 ChangeLog 1573
+MD5 28eca9d9ed7cc354cc2c68cf7e556df9 delay-1.6.ebuild 836
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 36c5f92dd4f74e72e8916ee25eaa3d35 delay-1.6.ebuild 833
 MD5 5b7b3c5b3181cc8f012eaee9b5dbf04c files/digest-delay-1.6 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBhU7rLLFUmVNQ7rkRAsASAKDNqTP4/H/8/o5M6ez+TMEVqPLokwCgmXaF
-f9bnxApGTdhkyC9v1QtuUH0=
-=pi3x
------END PGP SIGNATURE-----

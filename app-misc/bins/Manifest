@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d94fad7f4ad2f639b8de3ece0b78f89b ChangeLog 4409
+MD5 637d2801720e1c8016e21748cc6112ee ChangeLog 4410
+MD5 822f5458acbfb00dd60a50404273d80f bins-1.1.23-r2.ebuild 1296
+MD5 4818427b325174dca27e0a19bcdb1e6e bins-1.1.23-r1.ebuild 1132
+MD5 5b7a69f7682e3f7ecd7293a48f295476 bins-1.1.27.ebuild 1760
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e5e25f4f45b6ac85f959f0d052e039f1 bins-1.1.23-r1.ebuild 1130
-MD5 a7628d4f36ad947689a0bc38b8323a87 bins-1.1.23-r2.ebuild 1294
-MD5 e3d2da608898f71a440c80f3d8d8f99e bins-1.1.26-r1.ebuild 1418
-MD5 a1cfdc5deef54d2ba55e4a60cf246594 bins-1.1.26-r2.ebuild 1417
-MD5 1d2825fe755e623c605b9b35567064bd bins-1.1.27.ebuild 1759
+MD5 5f22e6388fd9daf1e68a9a9845df4a87 bins-1.1.26-r1.ebuild 1421
+MD5 f6f25d9e9a80ebea076822b7998b15f3 bins-1.1.26-r2.ebuild 1418
 MD5 904b594ebfa89adf9b522cf9cfb56bd5 files/bins-1.1.23-install.patch 2321
+MD5 e691d4766973f8fa705055f6d6664ce8 files/digest-bins-1.1.23-r2 63
 MD5 32e520c705416104518b2cf5324b75f1 files/bins-1.1.26-install.patch 1878
 MD5 e691d4766973f8fa705055f6d6664ce8 files/digest-bins-1.1.23-r1 63
-MD5 e691d4766973f8fa705055f6d6664ce8 files/digest-bins-1.1.23-r2 63
-MD5 9bf07881d8a8267c11b383bb0ed22d31 files/digest-bins-1.1.26-r1 63
-MD5 9bf07881d8a8267c11b383bb0ed22d31 files/digest-bins-1.1.26-r2 63
-MD5 32e520c705416104518b2cf5324b75f1 files/bins-1.1.27-install.patch 1878
 MD5 d81e2220c9111d78f8698232f7a622c8 files/digest-bins-1.1.27 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByD/CtG5z4I8BtQoRAryaAJwKVxxFFhuTwSgkOChqO0OgCayz0QCgjjTw
-VpDZ+jrtdK7k5U4/S9ZB8/Y=
-=5/r0
------END PGP SIGNATURE-----
+MD5 9bf07881d8a8267c11b383bb0ed22d31 files/digest-bins-1.1.26-r1 63
+MD5 32e520c705416104518b2cf5324b75f1 files/bins-1.1.27-install.patch 1878
+MD5 9bf07881d8a8267c11b383bb0ed22d31 files/digest-bins-1.1.26-r2 63
