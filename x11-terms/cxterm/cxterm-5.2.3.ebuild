@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.2.ebuild,v 1.5 2004/01/26 17:35:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.3.ebuild,v 1.1 2004/01/26 17:35:52 pyrania Exp $
 
 S="${WORKDIR}/${P}"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
@@ -11,7 +11,7 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 # hyper-optimizations untested...
 #
