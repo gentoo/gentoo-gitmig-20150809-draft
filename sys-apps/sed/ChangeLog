@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.25 2003/03/25 05:56:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.26 2003/03/28 16:47:53 joker Exp $
 
 *sed-4.0.6 (24 Mar 2003)
+
+  28 Mar 2003; Christian Birchinger <joker@gentoo.org> sed-4.0.6.ebuild:
+  Added sparc stable keyword
 
   24 Mar 2003; Brandon Low <lostlogic@gentoo.org> sed-4.0.6.ebuild:
   This version should be stable, and fix some problems on non-x86 arches, please
