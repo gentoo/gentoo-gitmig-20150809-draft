@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.8 2004/10/11 09:29:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.9 2004/11/06 00:05:31 spyderous Exp $
+
+*xcompmgr-1.1.1 (05 Nov 2004)
+
+  05 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +xcompmgr-1.1.1.ebuild:
+  Bump, requested by iggy.
 
   11 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; xcompmgr-1.1.ebuild:
   Fix ebuild header.
