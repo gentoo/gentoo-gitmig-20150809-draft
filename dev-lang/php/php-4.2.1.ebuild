@@ -3,7 +3,7 @@
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.2.1.ebuild,v 1.1 2002/05/19 23:04:16 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.2.1.ebuild,v 1.2 2002/05/19 23:53:32 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -151,7 +151,7 @@ src_compile() {
 		--enable-safe-mode \
 		--enable-versioning \
 		--enable-track-vars \
-		--with-png-dir=/usr/lib \
+		--with-png-dir=/usr \
 		--with-jpeg-dir=/usr/lib \
 		--enable-inline-optimization \
 		--with-apxs="/usr/sbin/apxs -ltiff" \

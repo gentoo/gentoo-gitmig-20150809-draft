@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.25 2002/05/19 23:04:16 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.26 2002/05/19 23:53:32 rphillips Exp $
 
   27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
 
@@ -20,6 +20,11 @@
   and mcrypt flags are encapsulated by the crypt flag now.
 
 *php-4.2.1 (17 May 2002)
+
+  19 May 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.1.ebuild:
+
+  Changed --with-png-dir=/usr/lib \   to
+  --with-png-dir=/usr \
 
   17 May 2002; Roman Weber <gentoo@gonzo.ch> php-4.2.1.ebuild :
 
