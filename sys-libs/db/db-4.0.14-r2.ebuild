@@ -1,11 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.8 2003/09/08 17:04:46 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.9 2003/09/13 20:58:34 robbat2 Exp $
 
 IUSE="tcltk java doc"
 
-inherit eutils
-inherit db
+inherit eutils gnuconfig db
 
 S="${WORKDIR}/${P}/build_unix"
 DESCRIPTION="Berkeley DB"
@@ -29,6 +28,16 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# gnuconfig doesn't work if ${S} points to build_unix, so we
+	# change it temporarily
+	if use mips; then
+		einfo "Updating config.{guess,sub} for mips"
+		local OLDS="${S}"
+		S="${WORKDIR}/${P}/dist"
+		gnuconfig_update
+		S="${OLDS}"
+	fi
 
 	local myconf=
 
