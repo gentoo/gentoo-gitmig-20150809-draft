@@ -1,6 +1,11 @@
 # ChangeLog for media-video/xmovie
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/ChangeLog,v 1.9 2004/03/17 15:36:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/ChangeLog,v 1.10 2004/03/17 16:04:39 phosphan Exp $
+
+*xmovie-1.9.12 (17 Mar 2004)
+
+  17 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> xmovie-1.9.12.ebuild:
+  New version
 
   17 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> xmovie-1.8-r3.ebuild,
   xmovie-1.8-r4.ebuild, files/xmovie-1.8-gcc3.3.patch:
