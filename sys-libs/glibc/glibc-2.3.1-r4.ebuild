@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.9 2003/05/18 22:22:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.10 2003/06/04 23:20:38 joker Exp $
 
 IUSE="nls pic build"
 
@@ -9,8 +9,7 @@ inherit eutils flag-o-matic gcc
 filter-flags "-fomit-frame-pointer -malign-double"
 
 # Sparc support ...
-replace-flags "-mcpu=ultrasparc" "-mcpu=v8 -mtune=ultrasparc"
-replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
+replace-sparc64-flags
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
