@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnetload
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.8 2003/04/01 22:14:50 spider Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.9 2004/03/13 20:37:39 dholm Exp $
+
+  13 Mar 2004; David Holm <dholm@gentoo.org> wmnetload-1.2.ebuild:
+  Added to ~ppc.
 
 *wmnetload-1.2 (17 Dec 2002)
 
