@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.55 2003/12/03 15:53:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.56 2003/12/09 17:50:52 lanius Exp $
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
+  imagemagick-5.4.7.4-r1.ebuild, imagemagick-5.5.3.2.ebuild,
+  imagemagick-5.5.4.4.ebuild, imagemagick-5.5.6-r1.ebuild,
+  imagemagick-5.5.7-r2.ebuild, imagemagick-5.5.7.11.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
 
   03 Dec 2003; Aron Griffis <agriffis@gentoo.org> imagemagick-5.5.7.11.ebuild:
   Stable on alpha to support lilypond-1.8.2

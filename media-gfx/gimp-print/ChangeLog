@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.28 2003/12/08 10:47:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.29 2003/12/09 17:50:12 lanius Exp $
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> gimp-print-4.2.5-r2.ebuild,
+  gimp-print-4.3.21.ebuild, gimp-print-4.3.25.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
 
   08 Dec 2003; Heinrich Wendel <lanius@gentoo.org> gimp-print-4.3.25.ebuild:
   better fix for the cflags problem, thx to brandy

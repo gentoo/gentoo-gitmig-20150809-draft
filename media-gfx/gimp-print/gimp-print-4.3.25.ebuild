@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.25.ebuild,v 1.3 2003/12/08 10:47:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.25.ebuild,v 1.4 2003/12/09 17:50:12 lanius Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gimp-print/${P}.tar.bz2"
 
 DEPEND="cups? ( >=net-print/cups-1.1.14 )
 	media-gfx/imagemagick
-	>=app-text/ghostscript-7.05.6-r3
+	virtual/ghostscript
 	sys-libs/readline
 	gtk? ( =x11-libs/gtk+-1.2* )
 	dev-lang/perl
@@ -25,8 +25,6 @@ SLOT="0"
 append-flags -fno-inline-functions
 
 src_compile() {
-	local myconf
-
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
