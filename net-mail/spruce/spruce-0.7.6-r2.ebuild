@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@bigfoot.com>
 # Maintainer: Desktop Team <desktop@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spruce/spruce-0.7.6-r2.ebuild,v 1.1 2001/11/10 00:03:58 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spruce/spruce-0.7.6-r2.ebuild,v 1.2 2002/03/06 18:55:22 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk email client"
@@ -13,7 +13,7 @@ RDEPEND=">=x11-libs/gtk+-1.2.10-r4
          gnome-base/libglade
 	 ssl? ( >=dev-libs/openssl-0.9.6 )
          gpg? ( app-crypt/gnupg )
-         gnome? ( gnome-base/gnome-print-0.29-r1 )"
+         gnome? ( >=gnome-base/gnome-print-0.29-r1 )"
 
 DEPEND="$RDEPEND
         nls? ( sys-devel/gettext )"

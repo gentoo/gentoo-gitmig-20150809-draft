@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.2.ebuild,v 1.1 2001/12/07 17:08:56 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.2.ebuild,v 1.2 2002/03/06 18:55:22 gbevin Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,12 +11,12 @@ SRC_URI="http://download.sourceforge.net/mjpeg/${A}"
 DEPEND="virtual/glibc
 	>=media-libs/jpeg-6b
 	>=dev-libs/glib-1.2.10
-	sdl? ( media-libs/libsdl-1.2.2 )"
+	sdl? ( >=media-libs/libsdl-1.2.2 )"
 
 RDEPEND="virtual/glibc
 	>=media-libs/jpeg-6b
 	>=dev-libs/glib-1.2.10
-	sdl? ( media-libs/libsdl-1.2.2 )"
+	sdl? ( >=media-libs/libsdl-1.2.2 )"
 
 src_unpack() {
 

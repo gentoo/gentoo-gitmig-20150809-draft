@@ -12,7 +12,7 @@ DEPEND=">=dev-lang/python-2.0
 	sys-libs/ncurses
         qt? ( =dev-python/PyQt-2.4* ) 
         gtk? ( dev-python/pygtk )
-        tcltk? ( dev-lang/tk-8.3.3 )
+        tcltk? ( dev-lang/tk )
 	wxwin? ( dev-python/wxPython )"
 
 #       Propsed wxwin use variable for wxGTK for wxWindows? ( dev-python/wxPython ) *NOT* official

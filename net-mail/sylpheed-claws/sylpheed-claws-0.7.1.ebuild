@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.1.ebuild,v 1.2 2002/02/22 15:24:26 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.1.ebuild,v 1.3 2002/03/06 18:55:22 gbevin Exp $
 
 S=${WORKDIR}/sylpheed-${PV}claws
 DESCRIPTION="Bleeding edge version of Sylpheed"
@@ -17,7 +17,7 @@ DEPEND=">=x11-libs/gtk+-1.2.6
 	xface? ( >=media-libs/compface-1.4 )
 	jpilot? ( >=app-misc/jpilot-0.99 )
 	imlib? ( >=media-libs/imlib-1.9.10 )
-	gpgme? ( >=app-crypt/gpgme/0.2.3 )
+	gpgme? ( >=app-crypt/gpgme-0.2.3 )
 	"
 	
 RDEPEND="$DEPEND"

@@ -1,14 +1,14 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a.ebuild,v 1.1 2001/07/21 17:23:59 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a.ebuild,v 1.2 2002/03/06 18:55:22 gbevin Exp $
 S=${WORKDIR}/${P}
 DESCRIPTION="This is a sample skeleton ebuild file"
 SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz"
 HOMEPAGE="http://www.trilon.com/xv/index.html"
 DEPEND="virtual/x11
 		  virtual/glibc
-		>=media-libs/tiff-3.5.6_beta
+		>=media-libs/tiff-3.5.6_beta1
 		>=media-libs/jpeg-6b
 		>=sys-libs/zlib-1.1.3"
 

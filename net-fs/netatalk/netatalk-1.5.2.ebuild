@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.2.ebuild,v 1.1 2002/02/27 05:16:53 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.2.ebuild,v 1.2 2002/03/06 18:55:22 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="kernel level implementation of the AppleTalk Protocol Suite"
@@ -8,7 +8,7 @@ SRC_URI="http://download.sourceforge.net/netatalk/${P}.tar.gz"
 HOMEPAGE="http://netatalk.sourceforge.net"
 
 DEPEND="virtual/glibc
-	pam? ( sys-libs/pam-0.7 )
+	pam? ( sys-libs/pam )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
 	sys-apps/shadow

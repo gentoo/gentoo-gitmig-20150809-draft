@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.8-r3.ebuild,v 1.1 2002/02/15 11:16:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.8-r3.ebuild,v 1.2 2002/03/06 18:55:22 gbevin Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -97,8 +97,7 @@ src_compile() {
 	CFLAGS="${CFLAGS/-fomit-frame-pointer}"
 	CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer}"
 
-	./configure  --host=${CHOST}					\
-		     --prefix=/usr/lib/mozilla 				\
+	./configure  --prefix=/usr/lib/mozilla 				\
 		     --disable-tests		 			\
 		     --disable-pedantic					\
 		     --enable-mathml					\

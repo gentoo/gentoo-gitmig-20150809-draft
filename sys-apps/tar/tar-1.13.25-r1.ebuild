@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r1.ebuild,v 1.1 2001/12/27 20:53:56 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r1.ebuild,v 1.2 2002/03/06 18:55:22 gbevin Exp $
 
 S=${WORKDIR}/${P}
 
@@ -9,7 +9,7 @@ DESCRIPTION="Use this to try make tarballs :)"
 SRC_URI="ftp://alpha.gnu.org/gnu/tar/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/tar/"
 
-DEPEND="virtual/glibc nls? ( sys-devel/gettext-0.10.35 )"
+DEPEND="virtual/glibc nls? ( >=sys-devel/gettext-0.10.35 )"
 
 RDEPEND="virtual/glibc"
 

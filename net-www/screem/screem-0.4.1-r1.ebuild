@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.4.1-r1.ebuild,v 1.2 2001/10/07 18:10:20 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.4.1-r1.ebuild,v 1.3 2002/03/06 18:55:22 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SCREEM (Site CReating and Editing EnvironmenMent) is an
@@ -16,7 +16,7 @@ DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=media-libs/gdk-pixbuf-0.11.0-r1
 	>=gnome-base/gnome-vfs-1.0.2-r1
 	ssl? ( dev-libs/openssl )
-	gtkhtml? ( gnome-extra/gtkhtml-0.14.0-r1 )
+	gtkhtml? ( >=gnome-extra/gtkhtml-0.14.0-r1 )
 	nls? ( sys-devel/gettext )"
 
 src_compile() {

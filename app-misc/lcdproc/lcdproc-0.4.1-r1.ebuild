@@ -9,7 +9,7 @@ DESCRIPTION="lcdproc - displays system status on Matrix-Orbital 20x4 LCD on a se
 SRC_URI="http://lcdproc.omnipotent.net/${P}.tar.gz"
 HOMEPAGE="http://lcdproc.omnipotent.net/"
 
-DEPEND=">=baselayout-1.6.4"
+DEPEND=">=sys-apps/baselayout-1.6.4"
 
 src_compile() {
 	./configure \
