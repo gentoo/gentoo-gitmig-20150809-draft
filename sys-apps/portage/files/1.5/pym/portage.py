@@ -285,7 +285,7 @@ def merge(cat,pkg,mystart,myinfostart):
 def unmerge(cat,pkg):
 	mylink=dblink(cat,pkg)
 	if mylink.exists():
-		mylink.unmerge(mystart,myinfostart)
+		mylink.unmerge()
 	dblink.delete()
 
 def getenv(mykey):
