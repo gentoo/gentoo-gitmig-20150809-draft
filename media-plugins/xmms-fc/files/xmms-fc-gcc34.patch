@@ -1,0 +1,36 @@
+diff -Naur xmms-fc-0.5.3.vanilla/src/SmartPtr.h xmms-fc-0.5.3/src/SmartPtr.h
+--- xmms-fc-0.5.3.vanilla/src/SmartPtr.h	1998-11-30 13:10:00.000000000 -0600
++++ xmms-fc-0.5.3/src/SmartPtr.h	2004-07-03 01:49:33.991970368 -0500
+@@ -24,7 +24,7 @@
+         }
+         else
+         {
+-            pBufCurrent = ( bufBegin = ( bufEnd = 0 ));
++            T* pBufCurrent = ( bufBegin = ( bufEnd = 0 ));
+             bufLen = 0;
+             status = false;
+         }
+@@ -207,16 +207,16 @@
+     {
+         if ( bufferLen >= 1 )
+         {
+-            pBufCurrent = ( bufBegin = buffer );
+-            bufEnd = bufBegin + bufferLen;
+-            bufLen = bufferLen;
+-            status = true;
++            this->pBufCurrent = ( this->bufBegin = buffer );
++            this->bufEnd = this->bufBegin + bufferLen;
++            this->bufLen = bufferLen;
++            this->status = true;
+         }
+         else
+         {
+-            pBufCurrent = bufBegin = bufEnd = 0;
+-            bufLen = 0;
+-            status = false;
++            this->pBufCurrent = this->bufBegin = this->bufEnd = 0;
++            this->bufLen = 0;
++            this->status = false;
+         }
+     }
+ };

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-fc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/ChangeLog,v 1.4 2004/06/24 23:39:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/ChangeLog,v 1.5 2004/07/03 06:56:15 squinky86 Exp $
+
+  03 Jul 2004; Jon Hood <squinky86@gentoo.org> +files/xmms-fc-gcc34.patch,
+  xmms-fc-0.5.3.ebuild:
+  adding gcc-3.4 patch, closes #54254
 
   17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-fc-0.5.3.ebuild:
   using mirror://

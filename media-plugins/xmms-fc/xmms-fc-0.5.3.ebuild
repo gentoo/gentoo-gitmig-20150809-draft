@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/xmms-fc-0.5.3.ebuild,v 1.6 2004/06/24 23:39:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/xmms-fc-0.5.3.ebuild,v 1.7 2004/07/03 06:56:15 squinky86 Exp $
+
+inherit eutils
 
 DESCRIPTION="Amiga Future Composer plug-in for XMMS"
 HOMEPAGE="http://xmms-fc.sourceforge.net/"
@@ -13,6 +15,12 @@ KEYWORDS="x86 ~ppc"
 
 IUSE=""
 DEPEND="media-sound/xmms"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/xmms-fc-gcc34.patch
+}
 
 src_install () {
 	make DESTDIR=${D} install || die
