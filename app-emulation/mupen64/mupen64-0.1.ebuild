@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mupen64/mupen64-0.1.ebuild,v 1.2 2003/06/26 00:09:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mupen64/mupen64-0.1.ebuild,v 1.3 2003/06/26 00:30:54 vapier Exp $
 
 inherit games
 
@@ -23,10 +23,7 @@ S=${WORKDIR}/emu64
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} && \
-	sed -i \
-		-e "/^CC.*/s:$: ${CFLAGS}:" \
-		Makefile || die "sed Makefile failed"
+	sed -i -e "/^CC.*/s:$: ${CFLAGS}:" ${S}/Makefile || die "sed failed"
 }
 
 src_compile() {
