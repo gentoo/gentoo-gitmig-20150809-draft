@@ -1,7 +1,8 @@
 MD5 e6a3d41964c3f27d3fc79b241df1b13d postfix-2.0.10-r1.ebuild 5394
 MD5 ead334460917ae4879673b31d59f46e8 postfix-2.0.9.ebuild 5471
 MD5 76726846989c0b6a5fc643d06b804e45 postfix-1.1.11.20020917-r1.ebuild 4945
-MD5 8f01779d5b13feb6835b0a647ca46405 ChangeLog 14647
+MD5 39a6b30150cea7daa0e8862af5eadcd9 postfix-2.0.12.ebuild 5773
+MD5 c78d84e8f12a70f4e663662315c2fa7d ChangeLog 14842
 MD5 ff4665011d7801bf700c126684a7cf76 postfix-2.0.11.ebuild 5737
 MD5 c79b19f95cb38b8802966d7efb54bc60 postfix-1.1.11.20020917.ebuild 4924
 MD5 a3eadfcfa0bf6f88ccff41e2d065745b files/postfix-2.0.8_patch.patch 552
@@ -11,6 +12,7 @@ MD5 569f1c46350b2718419b72bb9c443c3f files/saslpass 135
 MD5 460833c3a1ffc3a240c72f0537802b5c files/tls+ipv6-1.4-pf-1.1.11-20020917.patch.bz2 72150
 MD5 40a96d0b5dfb56714e11d1f379ddc5a7 files/main.cf 18376
 MD5 1d4abcdc55f9e76735ae1ae0fcc13c53 files/digest-postfix-2.0.11 295
+MD5 318934ebf1e8f275d8763ec810a1d3cf files/digest-postfix-2.0.12 295
 MD5 e651e2015b6c6f1495ac84a37e4a8871 files/smtpd.conf 130
 MD5 ff6584c14212d383b742fe5fc0aceed5 files/postfix-2.0.9-get-FQDN.patch 993
 MD5 e17b09d7df6537631ef2263b83fe0d38 files/master.cf 4421
