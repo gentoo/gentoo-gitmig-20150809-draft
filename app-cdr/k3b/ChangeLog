@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.14 2003/04/05 21:24:25 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.15 2003/04/20 11:10:22 danarmak Exp $
+
+*k3b-0.8.1-r1 (20 Apr 2003)
+
+  20 Apr 2003; Dan Armak <danarmak@gentoo.org> k3b-0.8.1-r1.ebuild:
+  Make the transcode dep dependant on use dvd, and move it to RDEPEND. Closes
+  bug #14810.
 
   06 Apr 2003; Dan Armak <danarmak@gentoo.org> k3b-0.8.1.ebuild:
   
