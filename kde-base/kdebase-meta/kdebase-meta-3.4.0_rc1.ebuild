@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-3.4.0_rc1.ebuild,v 1.3 2005/03/13 19:49:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-3.4.0_rc1.ebuild,v 1.4 2005/03/13 20:12:17 danarmak Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="
-$(deprange $PV $MAXKDEVER kde-base/kdebase-applnk)
+$(deprange $PV $MAXKDEVER kde-base/kdebase-startkde)
 $(deprange $PV $MAXKDEVER kde-base/drkonqi)
 $(deprange $PV $MAXKDEVER kde-base/kappfinder)
 $(deprange $PV $MAXKDEVER kde-base/kate)
