@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 50e614c135d425938cff562593c46b6a ChangeLog 1837
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 608ae9359810212cf155cb88b042700f orsa-0.3.1.ebuild 750
 MD5 f0c3e5f22dcfd392f8391f93ed085a46 orsa-0.5.0_rc2.ebuild 1573
 MD5 f1bc57d1e6880b4f76fc1195fc425783 orsa-0.6.1.ebuild 1575
-MD5 608ae9359810212cf155cb88b042700f orsa-0.3.1.ebuild 750
-MD5 f91dbf1dfca6026fdf288d0689fd9a68 ChangeLog 1834
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 38ab5f417512fb8637bffdfb874be99c files/digest-orsa-0.3.1 62
-MD5 e07b8e8024922c45167669a6089cb7a6 files/digest-orsa-0.6.1 62
 MD5 d07e1ada42ab073d4c6af277c950d8d5 files/digest-orsa-0.5.0_rc2 66
+MD5 e07b8e8024922c45167669a6089cb7a6 files/digest-orsa-0.6.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBXsRoI1lqEGTUzyQRAoyLAJ9VzaA1Y/rWHsRHvYPls8/CTFCWxQCguC9n
+QSk9H4lF6nKMZ5ry+bVJs0s=
+=ieFL
+-----END PGP SIGNATURE-----
