@@ -1,0 +1,10 @@
+# ChangeLog for net-im/gimli
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gimli/ChangeLog,v 1.1 2003/04/30 23:54:11 bass Exp $
+
+*gimli-0.0.6 (01 May 2003)
+
+  01 May 2003; Jose Alberto Suarez Lopez <bass@gentoo.org> gimli-0.0.6.ebuild:
+  First relase
+
+
