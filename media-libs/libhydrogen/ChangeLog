@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libhydrogen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.10 2004/08/07 23:21:41 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.11 2004/08/25 02:26:29 swegener Exp $
+
+  25 Aug 2004; Sven Wegener <swegener@gentoo.org> libhydrogen-0.8.0.ebuild:
+  Changed SRC_URI to use mirror:// syntax.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> libhydrogen-0.8.0.ebuild,
   libhydrogen-0.8.1_beta5.ebuild:

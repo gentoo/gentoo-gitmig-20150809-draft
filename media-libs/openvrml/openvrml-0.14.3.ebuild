@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.6 2004/08/02 08:49:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.7 2004/08/25 02:29:01 swegener Exp $
 
 IUSE="java javascript jpeg opengl png truetype truetype zlib"
 
 DESCRIPTION="VRML97 library"
-SRC_URI="http://telia.dl.sourceforge.net/sourceforge/openvrml/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/openvrml/${P}.tar.gz"
 HOMEPAGE="http://openvrml.org"
 
 SLOT="0"
