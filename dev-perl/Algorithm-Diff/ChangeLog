@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Algorithm-Diff
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.1 2003/09/29 15:51:00 sediener Exp $
+
+*Algorithm-Diff-1.15 (29 Sep 2003)
+
+  29 Sep 2003; <sediener@gentoo.org> Algorithm-Diff-1.15.ebuild:
+  Initial import. required for app-sci/bioperl-run.
+
