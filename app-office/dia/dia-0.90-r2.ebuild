@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90-r2.ebuild,v 1.5 2003/01/13 01:33:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90-r2.ebuild,v 1.6 2003/02/13 07:18:17 gerk Exp $
 
 DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gnome.org/gnome-office/dia.shtml"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 IUSE="nls gnome bonobo truetype png"
 
 RDEPEND=">=dev-libs/libxml-1.8.14
