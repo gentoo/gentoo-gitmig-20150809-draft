@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.14 2005/01/01 14:40:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.15 2005/02/05 06:51:50 usata Exp $
+
+  05 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> skim-1.0.2.ebuild:
+  Added arts USE flag, suggested by Kun Xi <kunxi@msn.com> and Francisco
+  <ranma_nibunnoichi@hotmail.com>. This closes bug #77103.
 
   05 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> skim-1.0.1.ebuild,
   skim-1.0.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.0.2.ebuild,v 1.3 2005/01/01 14:40:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.0.2.ebuild,v 1.4 2005/02/05 06:51:50 usata Exp $
 
 DESCRIPTION="Smart Common Input Method (SCIM) optimized for KDE"
 HOMEPAGE="http://scim.freedesktop.org/Software/ScimKDE"
@@ -10,16 +10,17 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE=""
+IUSE="arts"
 
 DEPEND="virtual/x11
 	|| ( >=app-i18n/scim-0.99.4 >=app-i18n/scim-cvs-0.99.4 )
 	>=x11-libs/qt-3.2.0
-	>=kde-base/kdelibs-3.2.0"
+	>=kde-base/kdelibs-3.2.0
+	arts? ( kde-base/arts )"
 
 src_compile() {
 	addpredict /usr/qt/3/etc/settings
-	econf || die
+	econf $(use_with arts) || die
 	emake || die
 }
 
