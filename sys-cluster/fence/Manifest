@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 458a3f7bbb15b94860e31c6fa7bffb86 fence-1.1.ebuild 669
+MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
+MD5 b207a65155bd371b8a746a100bf8e48f ChangeLog 342
+MD5 0525a754475de417bde039d1d5ea1b02 files/digest-fence-1.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+XL2gMUyd/cdjWsRAiuGAJ4lX1KfFD3sB0oaf0bt5awGqDz/hQCfS5PD
+kdRV1xHueqeD1gL+5EWRhSE=
+=HzXZ
+-----END PGP SIGNATURE-----
