@@ -8,6 +8,7 @@ mmx
 sse
 x86
 3dnow
+altivec
 
 # These are debatable, since technically an alpha could support this hardware
 pcmcia
