@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.32 2003/02/04 06:02:09 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.33 2003/02/09 16:53:25 gmsoft Exp $
 
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> glib-1.2.10-r5.ebuild :
+  Added hppa to keywords.
 
 *glib-2.2.1 (04 Feb 2003)
 
