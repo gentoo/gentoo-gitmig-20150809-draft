@@ -1,0 +1,123 @@
+--- noweb-2.9a.orig/src/awkname
++++ noweb-2.9a/src/awkname
+@@ -5,7 +5,7 @@
+ esac
+ 
+ rc=0
+-new=/tmp/$$.new; old=/tmp/$$.old
++new=$(tempfile -p new); old=$(tempfile -p old)
+ 
+ for file in lib/emptydefn lib/unmarkup lib/toascii \
+                         awk/noidx awk/totex awk/tohtml awk/noindex \
+--- noweb-2.9a.orig/src/awk/totex.nw
++++ noweb-2.9a/src/awk/totex.nw
+@@ -24,7 +24,7 @@
+ @
+ On an ugly system, we have to put it in a file.
+ <<invoke awk program using file>>=
+-awkfile=/tmp/totex$$.awk
++awkfile=$(tempfile -p totex)
+ trap 'rm -f $awkfile; exit 1' 0 1 2 15	# clean up files
+ cat > $awkfile << 'EOF'
+ <<awk program for conversion to {\TeX}>>
+--- noweb-2.9a.orig/src/lib/toascii
++++ noweb-2.9a/src/lib/toascii
+@@ -7,9 +7,9 @@
+                 *)      echo "This can't happen -- $i passed to toascii" 1>&2 ; exit 1 ;;
+         esac
+ done
+-awkfile="tmp/awk$$.tmp"
+-textfile="/tmp/text$$.tmp"
+-tagsfile="/tmp/tags$$.tmp"
++awkfile=$(tempfile -p awk -s .tmp)
++textfile=$(tempfile -p text -s .tmp)
++tagsfile=$(tempfile -p tags -s .tmp)
+ export awkfile textfile tagsfile
+ trap 'rm -f $awkfile $textfile $tagsfile' 0 1 2 10 14 15
+ nawk 'BEGIN { textfile=ENVIRON["textfile"]
+--- noweb-2.9a.orig/src/shell/cpif
++++ noweb-2.9a/src/shell/cpif
+@@ -17,7 +17,7 @@
+ 0)		echo 'Usage: '`basename $0`' [ -eq -ne ] file...' 1>&2; exit 2
+ esac
+ 
+-new=/tmp/$$
++new=$(tempfile)
+ trap 'rm -f $new; exit 1' 1 2 15	# clean up files
+ 
+ cat >$new
+--- noweb-2.9a.orig/src/shell/nonu
++++ noweb-2.9a/src/shell/nonu
+@@ -2,7 +2,7 @@
+ LIB=/usr/public/pkg/noweb/lib
+ # attempt to convert nuweb to noweb using sam
+ 
+-tmp=/tmp/nonu$$
++tmp=$(tempfile -p nonu)
+ trap '/bin/rm -f $tmp; exit 1' 1 2 15	# clean up files
+ cp $1 $tmp || exit 1
+ 
+--- noweb-2.9a.orig/src/shell/roff.nw
++++ noweb-2.9a/src/shell/roff.nw
+@@ -80,7 +80,7 @@
+ other, and quoting each quote is ugly.  The pragmatic solution is to
+ copy the awk program into a temporary file, using a shell here-document.
+ <<invoke awk program>>=
+-awkfile="/tmp/noweb$$.awk"
++awkfile=$(tempfile -p noweb -s .awk)
+ trap 'rm -f $awkfile' 0 1 2 10 14 15
+ cat > $awkfile << 'EOF'
+ <<awk program>>
+@@ -662,12 +662,13 @@
+ 
+ base="`basename $1 | sed '/\./s/\.[^.]*$//'`"
+ tagsfile="$base.nwt"
++tmpfile=$(tempfile -p tags)
+ (echo ".so $macrodir/tmac.w"
+ if [ -r "$tagsfile" ]; then 
+-   cp $tagsfile /tmp/tags.$$
++   cp $tagsfile $tmpfile
+    $AWK '<<action for [[tags]] line>>
+-         <<functions>>' /tmp/tags.$$
+-   rm -f /tmp/tags.$$
++         <<functions>>' $tmpfile
++   rm -f $tmpfile
+  fi
+  cat "$@") |
+ ($ROFF $opts 2>$tagsfile)
+--- noweb-2.9a.orig/src/shell/noroff
++++ noweb-2.9a/src/shell/noroff
+@@ -35,9 +35,10 @@
+ 
+ base="`basename $1 | sed '/\./s/\.[^.]*$//'`"
+ tagsfile="$base.nwt"
++tmpfile=$(tempfile -p tags)
+ (echo ".so $macrodir/tmac.w"
+ if [ -r "$tagsfile" ]; then 
+-   cp $tagsfile /tmp/tags.$$
++   cp $tagsfile $tmpfile
+    $AWK '{
+ 	     if      (sub(/^###TAG### /       , "")) tags[$1] = $2
+ 	     else if (sub(/^###BEGINCHUNKS###/, "")) printf ".de CLIST\n.CLISTBEGIN\n"
+@@ -88,8 +89,8 @@
+ 	 #	print str3
+ 	 #	print convquote(str3)
+ 	 # }
+-	 function tag(s) { if (s in tags) return tags[s]; else return "???" }' /tmp/tags.$$
+-   rm -f /tmp/tags.$$
++	 function tag(s) { if (s in tags) return tags[s]; else return "???" }' $tmpfile
++   rm -f $tmpfile
+  fi
+  cat "$@") |
+ ($ROFF $opts 2>$tagsfile)
+--- noweb-2.9a.orig/src/shell/toroff
++++ noweb-2.9a/src/shell/toroff
+@@ -9,7 +9,7 @@
+            exit 1;;
+     esac
+ done
+-awkfile="/tmp/noweb$$.awk"
++awkfile=$(tempfile -p noweb -s .awk)
+ trap 'rm -f $awkfile' 0 1 2 10 14 15
+ cat > $awkfile << 'EOF'
+ /^@begin docs 0$/ { if (delay) next }
