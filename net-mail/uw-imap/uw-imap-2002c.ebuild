@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002c.ebuild,v 1.2 2003/05/26 01:04:27 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002c.ebuild,v 1.3 2003/05/28 05:21:04 robbat2 Exp $
 
 S=${WORKDIR}/imap-2002c1
 
@@ -21,12 +21,15 @@ DEPEND="!net-mail/vimap
 
 src_unpack() {
 	unpack ${A}
+	# Tarball packed with bad file perms
+	chmod -R ug+w ${S} 
+
 	cd ${S}/src/osdep/unix/
 	cp Makefile Makefile.orig
 	sed \
-		-e "s:-g -fno-omit-frame-pointer -O6:\${CFLAGS}:" \
-		-e "s:SSLDIR=/usr/local/ssl:SSLDIR=/usr:" \
-		-e "s:SSLCERTS=\$(SSLDIR)/certs:SSLCERTS=/etc/ssl/certs:" \
+		-e 's,-g -fno-omit-frame-pointer -O6,${CFLAGS},g' \
+		-e 's,SSLDIR=/usr/local/ssl,SSLDIR=/usr,g' \
+		-e 's,SSLCERTS=$(SSLDIR)/certs,SSLCERTS=/etc/ssl/certs,g' \
 		< Makefile.orig > Makefile
 	cd ${S}
 }
@@ -59,7 +62,7 @@ EOF
 			umask 022
 		done
 	else
-		make lnp || die
+		yes | make lnp SSLTYPE=none || die
 	fi
 }
 
@@ -86,7 +89,7 @@ src_install() {
 	docinto rfc
 	dodoc docs/rfc/*.txt
 
-        # gentoo config stuff
+	# gentoo config stuff
 	insinto /etc/pam.d
 	newins ${FILESDIR}/uw-imap.pam-system-auth imap
 	newins ${FILESDIR}/uw-imap.pam-system-auth pop
