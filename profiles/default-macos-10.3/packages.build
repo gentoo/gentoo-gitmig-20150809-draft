@@ -266,4 +266,4 @@ sys-libs/pam-1.9
 sys-libs/pam-modules-13
 sys-libs/yacc-1.1.4
 sys-libs/zlib-1.1.4
-x11-base/X11-0.30
+sys-darwin/X11-4.3.99
