@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.36 2003/01/14 18:40:54 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.37 2003/01/19 19:36:40 nall Exp $
 
 *vim-6.1-r18.ebuild (14 Jan 2003)
 
@@ -8,6 +8,9 @@
   patches 1-289
 
 *vim-6.1-r17.ebuild (06 Dec 2002)
+
+  19 Jan 2003; Jon Nall <nall@gentoo.org> vim-6.1-r17.ebuild :
+  added ~ppc
 
   06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
 
