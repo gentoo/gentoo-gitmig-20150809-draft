@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/bonnie-2.0.6.ebuild,v 1.5 2003/09/07 22:23:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/bonnie-2.0.6.ebuild,v 1.6 2003/09/26 21:14:43 aliz Exp $
 
 DESCRIPTION="Performance Test of Filesystem I/O using standard C library calls."
 HOMEPAGE="http://www.textuality.com/bonnie/"
@@ -17,8 +17,8 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A} || die
-	patch -p0 < ${FILESDIR}/bonnie_man.patch || die
-	patch -p0 < ${FILESDIR}/Makefile.patch || die
+	epatch ${FILESDIR}/bonnie_man.patch
+	epatch ${FILESDIR}/Makefile.patch
 }
 
 src_compile() {
