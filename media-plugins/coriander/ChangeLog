@@ -1,6 +1,9 @@
-# ChangeLog for media-plugins/libdc1394
+# ChangeLog for media-plugins/coriander
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/coriander/ChangeLog,v 1.1 2004/08/09 18:01:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/coriander/ChangeLog,v 1.2 2004/09/05 07:59:28 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *coriander-1.0.0_pre3 (09 Aug 2004)
 
