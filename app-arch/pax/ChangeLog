@@ -1,0 +1,11 @@
+# ChangeLog for app-arch/pax
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.1 2003/12/04 06:07:14 seemant Exp $
+
+*pax-3.3.4 (03 Dec 2003)
+
+  03 Dec 2003; Seemant Kulleen <seemant@gentoo.org> pax-3.3.4.ebuild:
+  pax is a POSIX standard archive tool. The ebuild was requested by: Matt
+  Thompson <thompsma@colorado.edu>, and created by: Minati jean michel
+  <magnet@suidzer0.org> in bug #26341
+
