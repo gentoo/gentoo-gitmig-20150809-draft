@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.3 2003/10/30 08:28:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.4 2003/10/30 08:52:59 usata Exp $
 
 inherit eutils
 
@@ -19,18 +19,7 @@ DEPEND="virtual/x11
 	media-libs/t1lib
 	>=media-libs/tiff-3.5
 	pdflib? ( >=media-libs/pdflib-3.0.2 )
-	>=sys-apps/sed-4
-	|| ( net-www/dillo
-		net-www/opera
-		net-www/mozilla-firebird-bin
-		net-www/mozilla-firebird
-		net-www/mozilla-firebird-cvs
-		net-www/mozilla
-		kde-base/kdebase
-		net-www/galeon
-		net-www/epiphany
-		net-www/netscape-communicator
-		net-www/netscape-navigator )"
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
