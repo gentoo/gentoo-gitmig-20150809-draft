@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Maintainer: Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.3 2002/05/14 18:00:49 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.4 2002/06/28 11:10:20 bangert Exp $
 
 S=${WORKDIR}/${P}
 
@@ -20,7 +20,7 @@ LICENSE="as-is"
 src_compile() {
 	cd ${S}
 	mkdir tmp
-	echo "/usr" > conf-bin
+	echo "/usr/bin" > conf-bin
 	echo "/usr/share/man" > conf-man
 	echo "gcc ${CFLAGS}" > conf-cc
 	echo "gcc" > conf-ld
