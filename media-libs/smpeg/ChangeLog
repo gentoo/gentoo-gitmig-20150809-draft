@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.6 2002/08/03 10:28:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.7 2002/08/22 06:39:01 mkennedy Exp $
+
+*smpeg-0.4.4-r4 (22 Aug 2002)
+ 
+  22 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  smpeg-0.4.4-r4.ebuild, files/digest-smpeg-0.4.4-r4, ChangeLog :
+
+  Fixed linker error bug. Resolves bug 4666.
 
 *smpeg-0.4.4-r3 (03 Aug 2002)
  
