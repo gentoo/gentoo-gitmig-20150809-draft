@@ -84,7 +84,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1168 2002/08/04 00:49:39 blizzy Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1169 2002/08/04 02:41:33 carpaski Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
@@ -388,7 +388,7 @@ net-mail/exmh
 # gcc-3.1 is too buggy.
 # NOTE: you must also unmask glibc-2.2.5-r5, as gcc-3.1.1 have
 #       stricker checking, and will fail otherwise
-#>=sys-devel/gcc-3.1.1
+>=sys-devel/gcc-3.1.1
 
 # <danarmak@gentoo.org> (06 July 2002)
 # short-term mask for testing - see core post for details
