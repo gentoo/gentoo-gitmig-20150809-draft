@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/set-scalar
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.1 2003/07/20 16:50:08 mcummings Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.2 2004/02/27 15:51:13 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org> set-scalar-1.17.ebuild:
+  silly double slot
 
 *set-scalar-1.17 (20 Jul 2003)
 

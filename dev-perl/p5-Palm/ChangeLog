@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/p5-Palm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/ChangeLog,v 1.8 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/ChangeLog,v 1.9 2004/02/27 15:52:00 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org>
+  p5-Palm-1.2.4-r1.ebuild, p5-Palm-1.2.4.ebuild:
+  silly double slots again
 
 *p5-Palm-1.2.4-r1 (21 Jun 2003)
  
