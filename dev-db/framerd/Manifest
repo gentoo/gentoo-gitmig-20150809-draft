@@ -1,0 +1,6 @@
+MD5 77ae3d8192b54ff88b4223f73c56bdfd ChangeLog 458
+MD5 1d5db2f6cf8a3df297c5f38f86c4f1ec framerd-2.4.3-r1.ebuild 1191
+MD5 66c7d734516aea8e539c3a8ccd746584 framerd-2.4.3.ebuild 1204
+MD5 8832d735ce7ad2d16791a623ed0ef91f files/digest-framerd-2.4.3 66
+MD5 8832d735ce7ad2d16791a623ed0ef91f files/digest-framerd-2.4.3-r1 66
+MD5 7cad1d06a6bf5d4c6b5c5747087869af files/setup.fdx.patch 284

@@ -1,0 +1,4 @@
+MD5 7c19e59509821a614b2b7d3c369e711c ChangeLog 516
+MD5 e731801d261532eddee68fe2437b44c2 postgis-0.7.3.ebuild 1762
+MD5 b197c66527f70430c3d51cff64218033 files/digest-postgis-0.7.3 134
+MD5 e335064b49642de95ce144176ac8cff5 files/postgis-0.7.3-gentoo.diff 352

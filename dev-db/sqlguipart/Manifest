@@ -1,0 +1,5 @@
+MD5 5fd0fa138894e0ec4966aa8f8743d157 ChangeLog 539
+MD5 9c60a0db73597c3782395f3c6bc7bc27 sqlguipart-0.4.ebuild 874
+MD5 55906755a0aab2409f314d16649473ff files/digest-sqlguipart-0.4 65
+MD5 531c60b925cb98beebcdb87b5f97bafb files/sqlguipart-0.4-gcc3.diff 2317
+MD5 55281e2054d7ab384989bd4c1efb0f4c files/sqlguipart-0.4-gentoo.diff 6083
