@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.14 2004/10/31 18:52:29 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.15 2004/12/03 17:21:21 slarti Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -22,7 +22,12 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {
-	[ $ARCH = alpha ] && append-flags -fPIC
+	use alpha && append-flags -fPIC
+
+	# Resolves bug 73224.
+	# <slarti@gentoo.org> Dec 2004
+	use amd64 && append-flags -fPIC
+
 	unpack ${A}
 
 	# get rid of the -mcpu

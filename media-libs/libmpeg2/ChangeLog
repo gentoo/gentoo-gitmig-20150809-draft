@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.31 2004/10/31 18:52:29 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.32 2004/12/03 17:21:21 slarti Exp $
+
+  03 Dec 2004; Tom Martin <slarti@gentoo.org> libmpeg2-0.4.0b.ebuild:
+  Added append-flags -fPIC for amd64, resolves bug 73224.
 
   31 Oct 2004; Travis Tilley <lv@gentoo.org> libmpeg2-0.4.0b.ebuild:
   added a fix for bug 69227

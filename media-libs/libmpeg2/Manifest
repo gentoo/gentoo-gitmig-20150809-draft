@@ -1,13 +1,23 @@
-MD5 315323e6f38a9431070088a97282d552 ChangeLog 3739
-MD5 0e77dde2120847ccb980d905cff77bd1 libmpeg2-0.2.1.ebuild 1282
-MD5 d934d630d1aa33687310af33307797ee libmpeg2-0.3.1.ebuild 1379
-MD5 6d5b592df599a4a9763938769c8fc863 libmpeg2-0.3.2_pre20030625.ebuild 1365
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 19d6eac2dab1da0e1585f8379645609c libmpeg2-0.4.0.ebuild 1139
-MD5 d5e573b296123bf2ef9404c50a0ed3e8 libmpeg2-0.4.0b.ebuild 1568
-MD5 6ed53be491fa83ebc59d0d7b285c5e4f files/altivec-fix-0.4.0b.diff 890
+MD5 1a46043bdedd93880a6ce3dd0e841854 libmpeg2-0.4.0b.ebuild 1654
+MD5 0e77dde2120847ccb980d905cff77bd1 libmpeg2-0.2.1.ebuild 1282
+MD5 6d5b592df599a4a9763938769c8fc863 libmpeg2-0.3.2_pre20030625.ebuild 1365
+MD5 d934d630d1aa33687310af33307797ee libmpeg2-0.3.1.ebuild 1379
+MD5 381c230af53e56b55d97dc6b0863dd47 ChangeLog 3872
 MD5 2a17e6b990abf2db666678d21accc928 files/digest-libmpeg2-0.2.1 66
 MD5 ee59810a9eb538c8b6e66e5db9d21399 files/digest-libmpeg2-0.3.1 66
-MD5 a127dad465c6dbf851ee95df74166bc0 files/digest-libmpeg2-0.3.2_pre20030625 73
 MD5 c55e953292f2922558ea3f50f6437581 files/digest-libmpeg2-0.4.0 66
-MD5 c7958c7996a268d8cf161e4b32e70ac0 files/digest-libmpeg2-0.4.0b 67
 MD5 c868934aab8fc4ea039b4fb9d3c46d71 files/gcc34-inline-fix-0.4.0b.diff 292
+MD5 c7958c7996a268d8cf161e4b32e70ac0 files/digest-libmpeg2-0.4.0b 67
+MD5 6ed53be491fa83ebc59d0d7b285c5e4f files/altivec-fix-0.4.0b.diff 890
+MD5 a127dad465c6dbf851ee95df74166bc0 files/digest-libmpeg2-0.3.2_pre20030625 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsKDRCHk4+ZoBpvsRAhovAJ0YyI6kH2/Pq8tk8X0tllXvcACpzACgpmwD
+Of95Xy2mWaV3Apedt2SOkw4=
+=fbfo
+-----END PGP SIGNATURE-----
