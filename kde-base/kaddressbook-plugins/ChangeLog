@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/kaddressbook-plugins
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook-plugins/ChangeLog,v 1.1 2005/02/11 01:10:11 caleb Exp $
+
+*kaddressbook-plugins-3.4.0_beta2 (10 Feb 2005)
+
+  10 Feb 2005; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +kaddressbook-plugins-3.4.0_beta2.ebuild:
+  Initial import - replaces kde-base/kaddressbook-xxports-kworldclock
+
