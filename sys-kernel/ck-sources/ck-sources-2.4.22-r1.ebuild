@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r1.ebuild,v 1.3 2003/12/01 22:32:55 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r1.ebuild,v 1.4 2004/01/05 12:16:12 robbat2 Exp $
 
 IUSE="build"
 
@@ -32,12 +32,12 @@ BASE="`echo ${KV}|sed -e s:${EXTRAVERSION}::`"
 # ourkernel is the stable kernel we'll be working with (previous or current)
 if [ ${PRERC} ]; then
 	OURKERNEL="2.4.${OKVLASTPR}"
-	SRC_URI="mirror:/kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
+	SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
 		http://members.optusnet.com.au/ckolivas/kernel/patch-${KV}.bz2
 		mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
 else
 	OURKERNEL="2.4.${OKVLAST}"
-	SRC_URI="mirror:/kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
+	SRC_URI="mirror://kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
 		http://members.optusnet.com.au/ckolivas/kernel/patch-${KV}.bz2"
 fi
 

@@ -1,55 +1,60 @@
 # ChangeLog for sys-kernel/ck-sources
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.15 2003/12/04 22:37:41 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.16 2004/01/05 12:16:12 robbat2 Exp $
 
-*ck-sources-2.4.23-r1 (04 Dec 2003)
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  ck-sources-2.4.22-r1.ebuild, ck-sources-2.4.22-r2.ebuild,
+  ck-sources-2.4.22-r3.ebuild, ck-sources-2.4.23-r1.ebuild:
+  fix bug #37286
 
-  04 Dec 2003; Brian Jackson <iggy@gentoo.org> ck-sources-2.4.23-r1.ebuild:
+*ck-sources-2.4.23-r1 (04 Dec 2004)
+
+  04 Dec 2004; Brian Jackson <iggy@gentoo.org> ck-sources-2.4.23-r1.ebuild:
   Add 2.4.23-ck1 as per bug #35081, thanks to dominik.stadler <at> gmx.at.
 
-*ck-sources-2.4.22-r3 (02 Dec 2003)
+*ck-sources-2.4.22-r3 (02 Dec 2004)
 
-  02 Dec 2003; Brian Jackson <iggy@gentoo.org> ck-sources-2.4.22-r3.ebuild:
+  02 Dec 2004; Brian Jackson <iggy@gentoo.org> ck-sources-2.4.22-r3.ebuild:
   Version bumped for 'do_brk' vulnerability.
 
-*ck-sources-2.4.20-r2 (01 Dec 2003)
+*ck-sources-2.4.20-r2 (01 Dec 2004)
 
-  01 Dec 2003; Brian Jackson <iggy@gentoo.org> ck-sources-2.4.20-r1.ebuild,
+  01 Dec 2004; Brian Jackson <iggy@gentoo.org> ck-sources-2.4.20-r1.ebuild,
   ck-sources-2.4.20-r2.ebuild, ck-sources-2.4.20-r3.ebuild,
   ck-sources-2.4.20-r4.ebuild, ck-sources-2.4.20-r6.ebuild,
   ck-sources-2.4.22-r1.ebuild, ck-sources-2.4.22-r2.ebuild,
   files/do_brk_fix.patch:
   Fix the 'do_brk' vulnerability
 
-  21 Oct 2003; <iggy@gentoo.org> ck-sources-2.4.22-r2.ebuild:
+  21 Oct 2004; <iggy@gentoo.org> ck-sources-2.4.22-r2.ebuild:
   The -ck2 ebuild wasn't applying the fixes correctly.
 
-*ck-sources-2.4.22-r2 (20 Sep 2003)
+*ck-sources-2.4.22-r2 (20 Sep 2004)
 
-  20 Sep 2003; <iggy@gentoo.org> ck-sources-2.4.22-r2.ebuild:
+  20 Sep 2004; <iggy@gentoo.org> ck-sources-2.4.22-r2.ebuild:
   Version bump, plus fixes.
 
-*ck-sources-2.4.22-r1 (02 Sep 2003)
+*ck-sources-2.4.22-r1 (02 Sep 2004)
 
-  02 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> ck-sources-2.4.22-r1.ebuild :
+  02 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> ck-sources-2.4.22-r1.ebuild :
   Version bump and borrow the magic from ac-sources.
 
-*ck-sources-2.4.20-r6 (15 Apr 2003)
+*ck-sources-2.4.20-r6 (15 Apr 2004)
 
-  15 Apr 2003; Brandon Low <lostlogic@gentoo.org> Manifest,
+  15 Apr 2004; Brandon Low <lostlogic@gentoo.org> Manifest,
   ck-sources-2.4.20-r6.ebuild:
   Bump.
 
-*ck-sources-2.4.20-r5 (09 Apr 2003)
-  12 Apr 2003; Bob Johnson <livewire@gentoo.org>
+*ck-sources-2.4.20-r5 (09 Apr 2004)
+  12 Apr 2004; Bob Johnson <livewire@gentoo.org>
   Remove ck5 as it was totally broken. Con has pulled patch.
 
-  09 Apr 2003; Brandon Low <lostlogic@gentoo.org> ck-sources-2.4.20-r5.ebuild,
+  09 Apr 2004; Brandon Low <lostlogic@gentoo.org> ck-sources-2.4.20-r5.ebuild,
   Manifest: Bump from the legendary Con.
 
-*ck-sources-2.4.20-r4 (27 Feb 2003)
+*ck-sources-2.4.20-r4 (27 Feb 2004)
 
-  27 Feb 2003; Brandon Low <lostlogic@gentoo.org> ck-sources-2.4.20-r4.ebuild:
+  27 Feb 2004; Brandon Low <lostlogic@gentoo.org> ck-sources-2.4.20-r4.ebuild:
   Bump.
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
