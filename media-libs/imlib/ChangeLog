@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.33 2004/12/05 16:04:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.34 2004/12/06 03:09:54 geoman Exp $
+
+  05 Dec 2004; Stephen P. Becker <geoman@gentoo.org> imlib-1.9.14-r3.ebuild:
+  stable on mips wrt bug 72681
 
   05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> imlib-1.9.14-r3.ebuild:
   Stable on alpha, bug 72681.
