@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.8 2003/02/12 09:16:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.9 2003/02/25 21:08:59 lostlogic Exp $
+
+  25 Feb 2003; Brandon Low <lostlogic@gentoo.org> *-r[0-9].ebuild,
+  digest-*-r[0-9]:
+  Move all of the mm patchsets to mm-sources.
 
 *development-sources-2.5.59-r2 (18 Jan 2003)
 

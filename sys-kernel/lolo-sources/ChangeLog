@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.40 2003/02/17 07:33:55 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.41 2003/02/25 21:08:59 lostlogic Exp $
+
+  TODO:
+  * Update NTFS
+  * Check EVMS version
+  * Resolve a bunch of random problems people are having
+    this may involve ripping the guts out of the patchset
+    and redoing it from a different core (not ck?)
+  * Keep grabbing hardware stuff from xfs-sources
 
 *lolo-sources-2.4.20.2_pre2 (17 Feb 2003)
 
