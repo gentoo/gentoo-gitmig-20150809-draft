@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a035c511bfa28a847058bf983d78fbf4 ChangeLog 920
+MD5 c3229e3e38a2b1371b57cb1bb8411972 ChangeLog 1018
 MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
 MD5 62a518df0d81bed1c83a187a5f6c8f69 wmapmload-0.3.0.ebuild 641
-MD5 912d57ac2fb57ce4f3b11e543e130b7a wmapmload-0.3.3.ebuild 647
+MD5 71b06a7ddbc786756ae3e58654afb1de wmapmload-0.3.3.ebuild 646
 MD5 f6a62952616e4d493632024405d9515e files/digest-wmapmload-0.3.0 66
 MD5 2f657b8eb2b54ee6ee737d46d74677c1 files/digest-wmapmload-0.3.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYHbzI1lqEGTUzyQRAislAJ43wTTr0ubY77YtZKVP8m1/JuY8qACguAkT
-t2LN4qOZeboOIhE9yNIfaQY=
-=Lb6i
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 346e51860d6d14525cb3627e71cee500 ChangeLog 927
-MD5 be4e8c466defa94ac96d81fbf51d8a11 wmappl-0.71.ebuild 620
+MD5 4bc55220dfeb4995dd05857b1561be82 ChangeLog 1020
 MD5 0cdefdcc4ebef736b8b772a784fc98bb wmappl-0.6.ebuild 628
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 163988dcd976c5d903e52cb87aaa5891 files/digest-wmappl-0.71 63
+MD5 38325bb5668b9d943abcf98680255c79 wmappl-0.71.ebuild 620
 MD5 b1bfea200d93b4e65c9b72a331cb6479 files/digest-wmappl-0.6 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBWn7mI7fK2cqeyXkRAsP0AKCNSwkFq4XKZ+Km2iwTZgPbkYy7kwCg+8+q
-fUXQ31fdDWz2V4TS7gF8sw0=
-=AOIm
------END PGP SIGNATURE-----
+MD5 163988dcd976c5d903e52cb87aaa5891 files/digest-wmappl-0.71 63
