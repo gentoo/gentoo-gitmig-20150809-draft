@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.14 2003/03/23 10:16:04 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.15 2003/04/01 10:28:59 sethbc Exp $
+
+*mm-sources-2.5.66-r2 (01 Apr 2003)
+
+  01 Apr 2003; Seth Chandler <sethbc@gentoo.org> mm-sources-2.5.66-r2.ebuild:
+  bumpage
 
 *mm-sources-2.5.65-r4 (23 Mar 2003)
 
