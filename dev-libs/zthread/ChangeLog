@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/zthread
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.13 2004/07/02 04:58:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.14 2004/11/01 23:13:50 gustavoz Exp $
+
+  01 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> zthread-1.5.3.ebuild,
+  zthread-2.2.10-r1.ebuild, zthread-2.3.1.ebuild:
+  2.3.1 sparc stable, 2.2.10-r1 -sparc, fixed LICENSE to LGPL-2.1 which is the
+  right one
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> zthread-1.5.3.ebuild,
   zthread-2.2.10-r1.ebuild, zthread-2.3.1.ebuild:
