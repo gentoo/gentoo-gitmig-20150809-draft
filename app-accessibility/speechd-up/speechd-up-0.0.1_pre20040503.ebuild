@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/speechd-up-0.0.1_pre20040503.ebuild,v 1.2 2004/05/03 22:26:35 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/speechd-up-0.0.1_pre20040503.ebuild,v 1.3 2004/05/12 17:52:28 squinky86 Exp $
 
 inherit cvs eutils libtool
 
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.freebsoft.org/speechd-up"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
+IUSE=""
 
 RDEPEND="virtual/glibc"
 
