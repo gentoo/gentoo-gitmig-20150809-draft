@@ -1,6 +1,6 @@
 MD5 bcf9aeb5c0973686d6c49e2f9c46e776 ChangeLog 1227
 MD5 9e107b8a9ae0b9e0407bf8d650f68fc4 mdbtools-0.4.ebuild 1482
-MD5 e10e8e8588f9ebcdd26f64a16b3f196d mdbtools-0.5.ebuild 1082
+MD5 98c8248d238c18873ac58ec60316b0c5 mdbtools-0.5.ebuild 1086
 MD5 48d861b456922a79e1c3ddf47137ced9 files/digest-mdbtools-0.4 64
 MD5 402da6348fabe50879d699674f8239ea files/digest-mdbtools-0.5 64
 MD5 d056516aee83f6794540f87e15521059 files/mdbtools-0.4-termcap.diff 412
