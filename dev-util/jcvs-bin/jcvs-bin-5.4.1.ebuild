@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs-bin/jcvs-bin-5.4.1.ebuild,v 1.1 2004/04/11 21:28:34 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs-bin/jcvs-bin-5.4.1.ebuild,v 1.2 2004/04/12 10:24:47 dholm Exp $
 
 DESCRIPTION="Java CVS client"
 HOMEPAGE="http://www.jcvs.org/"
 SRC_URI="http://www.jcvs.org/download/jcvs/jcvsii-${PV}.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=virtual/jdk-1.3"
 RDEPEND=">=virtual/jre-1.3"
