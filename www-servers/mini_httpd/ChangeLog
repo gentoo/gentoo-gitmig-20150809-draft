@@ -1,0 +1,41 @@
+# ChangeLog for net-www/mini_httpd
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/ChangeLog,v 1.1 2004/08/08 17:37:46 stuart Exp $
+
+*mini_httpd-1.19 (08 Aug 2004)
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/mini_httpd.conf.sample, +files/mini_httpd.conf.sample-1.19,
+  +files/mini_httpd.confd, +files/mini_httpd.confd-1.19,
+  +files/mini_httpd.init, +mini_httpd-1.17_beta1.ebuild,
+  +mini_httpd-1.19.ebuild:
+  Moved from net-www/mini_httpd to www-servers/mini_httpd.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mini_httpd-1.17_beta1.ebuild, mini_httpd-1.19.ebuild:
+  virtual/glibc -> virtual/libc
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  mini_httpd-1.17_beta1.ebuild, mini_httpd-1.19.ebuild:
+  QA - fix use invocation
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org>
+  files/mini_httpd.conf.sample-1.19:
+  Replaced overwritten config sample file with correct version.  Fixes bug #40228
+
+*mini_httpd-1.19 (29 Dec 2003)
+
+  29 Dec 2003; Martin Holzer <mholzer@gentoo.org> mini_httpd-1.19.ebuild,
+  files/mini_httpd.confd-1.19:
+  Version bumped. Closes 36174
+
+*mini_httpd-1.18 (02 Nov 2003)
+
+  02 Nov 2003; Martin Holzer <mholzer@gentoo.org> mini_httpd-1.18.ebuild,
+  files/mini_httpd.conf.sample-1.18, files/mini_httpd.confd-1.18:
+  Version bumped. Submitted in #32455.
+
+*mini_httpd-1.17_beta1 (03 Mar 2003)
+
+  03 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Thomas Eckert <eckert.thomas@gmx.net> #9749.
