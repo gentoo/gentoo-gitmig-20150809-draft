@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_beta2.ebuild,v 1.7 2004/01/03 13:50:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_beta2.ebuild,v 1.8 2004/01/03 13:58:27 caleb Exp $
 inherit kde flag-o-matic
 
 IUSE="alsa oggvorbis esd artswrappersuid mad"
@@ -16,7 +16,7 @@ DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manag
 
 KEYWORDS="~x86"
 
-DEPEND="alsa? ( <=media-libs/alsa-lib-0.9.8 virtual/alsa )
+DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	esd? ( media-sound/esound )
 	mad? ( media-libs/libmad media-libs/libid3tag )
@@ -48,6 +48,7 @@ myconf="$myconf `use_enable mad libmad`"
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/${P}-alsafix.diff
 	kde_sandbox_patch ${S}/soundserver
 	# for the configure.in.in patch, for some reason it's not automatically picked up
 	# rm -f $S/configure
