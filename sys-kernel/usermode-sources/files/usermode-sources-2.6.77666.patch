@@ -1,6 +1,7 @@
---- linux-2.6.8.1/mm/mmap.c	2005-03-07 22:00:32.000000000 +0000
-+++ linux-2.6.8.1-plasmaroo/mm/mmap.c	2005-03-07 22:30:33.985127376 +0000
-@@ -1182,13 +1182,57 @@
+diff -urNpX /usr/src/dontdiff linux-2.6.8.1-r9/mm/mmap.c linux-dsd/mm/mmap.c
+--- linux-2.6.8.1-r9/mm/mmap.c	2005-03-16 14:56:52.000000000 +0000
++++ linux-dsd/mm/mmap.c	2005-03-16 15:14:58.000000000 +0000
+@@ -1182,13 +1182,57 @@ out:
  	return prev ? prev->vm_next : vma;
  }
  
@@ -59,7 +60,7 @@
  
  	if (!(vma->vm_flags & VM_GROWSUP))
  		return -EFAULT;
-@@ -1208,27 +1252,25 @@
+@@ -1208,20 +1252,18 @@ int expand_stack(struct vm_area_struct *
  	 */
  	address += 4 + PAGE_SIZE - 1;
  	address &= PAGE_MASK;
@@ -89,6 +90,12 @@
 +		if (!error)
 +			vma->vm_end = address;
  	}
+ 	if ((vma->vm_flags & VM_LOCKED) && !capable(CAP_IPC_LOCK) &&
+ 			((vma->vm_mm->locked_vm + grow) << PAGE_SHIFT) >
+@@ -1230,12 +1272,12 @@ int expand_stack(struct vm_area_struct *
+ 		vm_unacct_memory(grow);
+ 		return -ENOMEM;
+ 	}
 -	vma->vm_end = address;
 -	vma->vm_mm->total_vm += grow;
 -	if (vma->vm_flags & VM_LOCKED)
@@ -103,7 +110,7 @@
  }
  
  struct vm_area_struct *
-@@ -1253,7 +1295,7 @@
+@@ -1260,7 +1302,7 @@ find_extend_vma(struct mm_struct *mm, un
   */
  int expand_stack(struct vm_area_struct *vma, unsigned long address)
  {
@@ -112,7 +119,7 @@
  
  	/*
  	 * We must make sure the anon_vma is allocated
-@@ -1269,28 +1311,23 @@
+@@ -1276,20 +1318,20 @@ int expand_stack(struct vm_area_struct *
  	 * anon_vma lock to serialize against concurrent expand_stacks.
  	 */
  	address &= PAGE_MASK;
@@ -143,6 +150,12 @@
 +			vma->vm_start = address;
 +			vma->vm_pgoff -= grow;
 +		}
+ 	}
+ 	if ((vma->vm_flags & VM_LOCKED) && !capable(CAP_IPC_LOCK) &&
+ 			((vma->vm_mm->locked_vm + grow) << PAGE_SHIFT) >
+@@ -1298,13 +1340,8 @@ int expand_stack(struct vm_area_struct *
+ 		vm_unacct_memory(grow);
+ 		return -ENOMEM;
  	}
 -	vma->vm_start = address;
 -	vma->vm_pgoff -= grow;
