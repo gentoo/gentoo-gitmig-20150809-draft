@@ -1,0 +1,11 @@
+--- include/nisam.h~	Sat Jun 22 18:03:36 2002
++++ include/nisam.h	Sat Jun 22 18:03:53 2002
+@@ -30,7 +30,7 @@
+ 
+ #define N_MAXKEY	16		/* Max allowed keys */
+ #define N_MAXKEY_SEG	16		/* Max segments for key */
+-#define N_MAX_KEY_LENGTH 256		/* May be increased up to 500 */
++#define N_MAX_KEY_LENGTH 500		/* May be increased up to 500 */
+ #define N_MAX_KEY_BUFF	 (N_MAX_KEY_LENGTH+N_MAXKEY_SEG+sizeof(double)-1)
+ #define N_MAX_POSSIBLE_KEY_BUFF 500+9
+ 

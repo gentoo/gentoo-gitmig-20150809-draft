@@ -1,7 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.7 2002/06/24 20:26:08 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.8 2002/06/28 02:55:15 rphillips Exp $
 
+*mysql-4.0.1 (27 June 2002)
+
+  27 June 2002; Ryan Phillips <rphillips@gentoo.org> :
+
+  Added the unreleased mysql for development purposes and testing.
+  Currently masked in portage.mask
+  
 *mysql-3.23.51 (22 June 2002)
 
   22 June 2002; Donny Davies <woodchip@gentoo.org> :

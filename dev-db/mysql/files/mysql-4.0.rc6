@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -d /var/lib/mysql/mysql ] ; then
+		eerror "You dont appear to have the mysql database installed yet."
+		eerror "Please run /usr/bin/mysql_install_db to have this done..."
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting mysqld"
+	start-stop-daemon --start --quiet --exec /usr/bin/mysqld_safe \
+		--background -- >/dev/null 2>&1
+	eend $?
+}
+
+stop () {
+	ebegin "Stopping mysqld"
+	start-stop-daemon --stop --quiet --pidfile=/var/run/mysqld/mysqld.pid
+	eend $?
+}
