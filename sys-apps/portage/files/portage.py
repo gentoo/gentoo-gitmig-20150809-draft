@@ -57,6 +57,7 @@ from stat import *
 import fchksum,types
 import sys
 import shlex
+import shutil
 
 # parsever:
 # This function accepts an 'inter-period chunk' such as
@@ -186,7 +187,7 @@ def var_expand(mystring,dictlist=[]):
 			newstring=newstring+mystring[pos]
 			pos=pos+1
 	return newstring	
-
+	
 def gen_archnames():
 	"generate archive names from URL list"
 	myurls=getenv("SRC_URI")
@@ -197,9 +198,7 @@ def gen_archnames():
 	print "A='"+returnme[1:]+"'"
 
 def doebuild(myebuild,mydo):
-	a=getstatusoutput("/usr/bin/ebuild "+myebuild+" "+mydo)
-	print a[1]
-	return a[0]
+	return os.system("/usr/bin/ebuild "+myebuild+" "+mydo)
 
 def isdev(x):
 	mymode=os.stat(x)[ST_MODE]
@@ -215,12 +214,13 @@ def movefile(src,dest):
 		getstatusoutput("/bin/mv /bin/cp /bin/cp.old")
 		a=getstatusoutput("/bin/cp.old -a "+"'"+src+"' /bin/cp")
 		os.unlink("/bin/cp.old")
+	elif dest=="/bin/bash":
+		a=getstatusoutput("rm /bin/bash; /bin/cp -a "+"'"+src+"' '"+dest+"'")
 	else:
-		if os.path.exists(dest):
-			os.unlink(dest)
-		a=getstatusoutput("/bin/cp -a "+"'"+src+"' '"+dest+"'")	
-	mymode=os.lstat(src)[ST_MODE]
-	os.chmod(dest,mymode)
+		a=getstatusoutput("/bin/cp -af "+"'"+src+"' '"+dest+"'")	
+#	cp -a takes care of this
+#	mymode=os.lstat(src)[ST_MODE]
+#	os.chmod(dest,mymode)
 	os.unlink(src)
 	if a[0]==0:
 		return 1
@@ -371,7 +371,7 @@ def merge(mycategory,mypackage,mystart):
 			mytouch=open(providesdir+"/CONTENTS","w")
 			mytouch.close()
 			#create virtual file containing name of this package
-			myvirtual=open(providesdir+"/VIRTUAL","w")
+			myvirtual=open(providesdir+"/VIRTUAL","a")
 			myvirtual.write(mycategory+"/"+mypackage+"\n")
 			myvirtual.close()
 	#end provides/virtual package code
@@ -413,15 +413,32 @@ def unmerge(category,pkgname):
 				if os.path.exists(root+"var/db/pkg/"+x+"/VIRTUAL"):
 					#this is a virtual package, we can zap it if it contains our package name
 					myvirtual=open(root+"var/db/pkg/"+x+"/VIRTUAL","r")
-					myvpkgname=myvirtual.readlines()[0][:-1]
-					if myvpkgname != (category+"/"+pkgname):
-						print ">>> Virtual package",x,"has been claimed by another package, skipping."
+					myvpkgnames=myvirtual.readlines()[:]
+					newnames=[]
+					found=0
+					pos=0
+					while pos<len(myvpkgnames):
+						if myvpkgnames[pos][:-1] == category+"/"+pkgname:
+							found=1
+						else:
+							newnames.append(myvpkgnames[pos])
+						pos=pos+1
+					if found==0:
+						print ">>> Virtual package",x,"does not appear to be registered to us, skipping."
 						continue
-					zapme=os.listdir(root+"var/db/pkg/"+x)
-					for y in zapme:
-						os.unlink(root+"var/db/pkg/"+x+"/"+y)
-					os.rmdir(root+"var/db/pkg/"+x)
-					#virtual package removed
+					if len(newnames)==0:
+						os.unlink(root+"var/db/pkg/"+x+"/VIRTUAL")
+						zapme=os.listdir(root+"var/db/pkg/"+x)
+						for y in zapme:
+							os.unlink(root+"var/db/pkg/"+x+"/"+y)
+						os.rmdir(root+"var/db/pkg/"+x)
+						#virtual package removed
+					else:
+						myvirt=open(root+"var/db/pkg/"+x+"/VIRTUAL","w")
+						for y in newnames:
+							myvirt.write(y)
+						myvirt.close()
+						#claim on virtual package removed, virtual package kept.
 				else:
 					print ">>>",x,"(provided by",category+"/"+pkgname+") is not a virtual package, keeping."
 					continue
@@ -555,6 +572,84 @@ def getenv(mykey):
 		return os.environ[mykey]
 	return ""
 
+def getconfigsetting(mykey,recdepth=0):
+	"""perform bash-like basic variable expansion, recognizing ${foo} and $bar"""
+	if recdepth>10:
+		return ""
+		#avoid infinite recursion
+	global configdefaults, cdcached
+	global configsettings, cscached
+	if configsettings.has_key(mykey):
+		mystring=configsettings[mykey]
+	elif configdefaults.has_key(mykey):
+		mystring=configdefaults[mykey]
+	else:
+		return ""
+	if (len(mystring)==0):
+		return ""
+	if mystring[0]=="'":
+		#single-quoted, no expansion
+		return mystring[1:-1]
+	newstring=""
+	pos=0
+	while (pos<len(mystring)):
+		if mystring[pos]=='\\':
+			if (pos+1)>=len(mystring):
+				#we're at the end of the string
+				return "" #error
+			a=mystring[pos+1]
+			pos=pos+2
+			if a=='a':
+				newstring=newstring+chr(007)
+			elif a=='b':
+				newstring=newstring+chr(010)
+			elif a=='e':
+				newstring=newstring+chr(033)
+			elif a=='f':
+				newstring=newstring+chr(012)
+			elif a=='r':
+				newstring=newstring+chr(015)
+			elif a=='t':
+				newstring=newstring+chr(011)
+			elif a=='v':
+				newstring=newstring+chr(013)
+			elif a=="'":
+				newstring=newstring+"'"
+			else:
+				newstring=newstring+mystring[pos-1:pos]
+		elif mystring[pos]=="$":
+			#variable expansion
+			if (pos+1)>=len(mystring):
+				#we're at the end of the string, error
+				return ""
+			if mystring[pos+1]=="{":
+				newpos=pos+1
+				while newpos<len(mystring) and mystring[newpos]!="}":
+					newpos=newpos+1
+				if newpos>=len(mystring):
+					return "" # ending } not found
+				varname=mystring[pos+2:newpos]
+				if len(varname)==0:
+					return "" #zero-length variable, error
+				newstring=newstring+getsetting(varname,recdepth+1)
+				pos=newpos+1
+			else:
+				newpos=pos+1
+				while newpos<len(mystring) and (mystring[newpos] not in string.whitespace):
+					newpos=newpos+1
+				if newpos>=len(mystring):
+					varname=mystring[pos+1:]
+				else:
+					varname=mystring[pos+1:newpos]
+				pos=newpos
+				if len(varname)==0:
+					return "" #zero-length variable, error
+				newstring=newstring+getsetting(varname,recdepth+1)
+				#recurse
+		else:
+			newstring=newstring+mystring[pos]
+			pos=pos+1
+	return newstring
 def getsetting(mykey,recdepth=0):
 	"""perform bash-like basic variable expansion, recognizing ${foo} and $bar"""
 	if recdepth>10:
@@ -1168,6 +1263,47 @@ def dep_print(deplist,mylevel=0):
 			else:
 				print "  "*(mylevel)+"&& "+dep_catpkgstring(x)
 
+
+
+"""
+This is an early (semi-working) attempt at recursive ebuilding.  Commented out as
+we're getting ready for production use.
+
+def dep_print_resolve(deplist):
+	"Prints out list of things to do"
+	if (deplist==None) or (len(deplist)==0):
+		return
+	if deplist[0]=="||":
+		for x in deplist[1:]:
+			if type(x)==types.ListType:
+				dep_print(x)
+			else:
+				print "|| "+dep_catpkgstring(x)+' ('+porttree.dep_bestmatch(x)+')'
+		return
+	else:
+		for x in deplist:
+			if type(x)==types.ListType:
+				dep_print_resolve(x)
+			else:
+				mymatch=porttree.dep_bestmatch(x)
+				if mymatch=="":
+					print "!! "+dep_catpkgstring(x)
+					return
+				else:
+					print "Best match is",mymatch
+					mysplit=catpkgsplit(mymatch)
+					myebuild=getsetting("PORTDIR")+"/"+mysplit[0]+"/"+mysplit[1]+"/"+string.split(mymatch,"/")[1]+".ebuild"
+					print "ebuild file is",myebuild
+					result=doebuild(myebuild,"merge")
+					if result:
+						#error
+						print "STOPPING deep merge!"
+						sys.exit(1)
+		myebuild=getsetting("PORTDIR")+"/"+getsetting("CATEGORY")+"/"+getsetting("PN")+"/"+getsetting("PF")+".ebuild"
+		result=doebuild(myebuild,"merge")
+		return result
+"""
+
 def dep_zapdeps(unreduced,reduced):
 	"""Takes an unreduced and reduced deplist and removes satisfied dependencies.
 	Returned deplist contains steps that must be taken to satisfy dependencies."""
@@ -1271,7 +1407,9 @@ def dep_frontend(mytype,depstring):
 		print
 		dep_print(myparse[1])
 		print
-		return 1
+#		This is the semi-working auto-ebuild stuff, disabled for now
+#		dep_print_resolve(myparse[1])		
+	return 1
 
 def port_currtree():
 	"""
@@ -1407,7 +1545,11 @@ class packagetree:
 			return self.tree[nodename]
 		return []
 	def depcheck(self,depstring):
-		"evaluates a dependency string and returns a 2-node result list"
+		"""evaluates a dependency string and returns a 2-node result list
+		[1, None] = ok, no dependencies
+		[1, ["x11-base/foobar","sys-apps/oni"] = dependencies must be satisfied
+		[0, * ] = parse error
+		"""
 		if not self.populated:
 			self.populate()
 		myusesplit=string.split(getsetting("USE"))
@@ -1490,7 +1632,95 @@ class packagetree:
 				return 0
 		else:
 			return None
-	
+	def dep_bestmatch(self,mypkgdep):
+		"""
+		returns best match for mypkgdep in the tree.  Accepts
+		a single depstring, such as ">foo/bar-1.0" and finds
+		the most recent version of foo/bar that satisfies the
+		dependency and returns it, i.e: "foo/bar-1.3".  Works
+		for >,<,>=,<=,=,and general deps.  Don't call with a !
+		dep, since there is no good match for a ! dep.
+		"""
+		if (mypkgdep[0]=="="):
+			if self.exists_specific(mypkgdep[1:]):
+				return mypkgdep[1:]
+			else:
+				return ""
+		elif (mypkgdep[0]==">") or (mypkgdep[0]=="<"):
+			if mypkgdep[1]=="=":
+				cmpstr=mypkgdep[0:2]
+				cpv=mypkgdep[2:]
+			else:
+				cmpstr=mypkgdep[0]
+				cpv=mypkgdep[1:]
+			if not isspecific(cpv):
+				return ""
+			mycatpkg=catpkgsplit(cpv)
+			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+			if not self.exists_node(mykey):
+				return ""
+			mynodes=[]
+			for x in self.getnodes(mykey):
+				if eval("pkgcmp(x[1][1:],mycatpkg[1:])"+cmpstr+"0"):
+					mynodes.append(x)
+			#now we have a list of all nodes that qualify
+			if len(mynodes)==0:
+				return ""
+			bestmatch=mynodes[0]
+			for x in mynodes[1:]:
+				if pkgcmp(x[1][1:],bestmatch[1][1:])>0:
+					bestmatch=x
+			return bestmatch[0]		
+		elif not isspecific(mypkgdep):
+			if not self.exists_node(mypkgdep):
+				return ""
+			mynodes=self.getnodes(mypkgdep)[:]
+			if len(mynodes)==0:
+				return ""
+			bestmatch=mynodes[0]
+			for x in mynodes[1:]:
+				if pkgcmp(x[1][1:],bestmatch[1][1:])>0:
+					bestmatch=x
+			return bestmatch[0]
+	def dep_match(self,mypkgdep):
+		"""
+		returns a list of all matches for mypkgdep in the tree.  Accepts
+		a single depstring, such as ">foo/bar-1.0" and finds
+		all the versions of foo/bar that satisfy the
+		dependency and returns them, i.e: ["foo/bar-1.3"].  Works
+		for >,<,>=,<=,=,and general deps.  Don't call with a !
+		dep, since there is no good match for a ! dep.
+		"""
+		if (mypkgdep[0]=="="):
+			if self.exists_specific(mypkgdep[1:]):
+				return [mypkgdep[1:]]
+			else:
+				return []
+		elif (mypkgdep[0]==">") or (mypkgdep[0]=="<"):
+			if mypkgdep[1]=="=":
+				cmpstr=mypkgdep[0:2]
+				cpv=mypkgdep[2:]
+			else:
+				cmpstr=mypkgdep[0]
+				cpv=mypkgdep[1:]
+			if not isspecific(cpv):
+				return []
+			mycatpkg=catpkgsplit(cpv)
+			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+			if not self.exists_node(mykey):
+				return []
+			mynodes=[]
+			for x in self.getnodes(mykey):
+				if eval("pkgcmp(x[1][1:],mycatpkg[1:])"+cmpstr+"0"):
+					mynodes.append(x)
+			#now we have a list of all nodes that qualify
+			#since we want all nodes that match, return this list
+			return mynodes
+		elif not isspecific(mypkgdep):
+			if not self.exists_node(mypkgdep):
+				return [] 
+			return self.getnodes(mypkgdep)[:]
+			
 class vartree(packagetree):
 	"this tree will scan a var/db/pkg database located at root (passed to init)"
 	def __init__(self,root):
@@ -1596,6 +1826,116 @@ class currenttree(packagetree):
 		mycurrent.close()
 		self.populated=1
 
+class binarytree(packagetree):
+	"this tree scans for a list of all packages available in PKGDIR"
+	def populate(self):
+		"popules the binarytree"
+		root=getsetting("PKGDIR")
+		if (not os.path.isdir(root)):
+			return 0
+		for mycat in categories:
+			try:
+				mypkgs=os.listdir(root+"/"+mycat)
+			except:
+				continue
+			for mypkg in mypkgs:
+				if mypkg[-5:]!=".tbz2":
+					continue
+				fullpkg=mycat+"/"+mypkg[:-5]
+				mysplit=catpkgsplit(fullpkg)
+				mykey=mycat+"/"+mysplit[1]
+				if not self.tree.has_key(mykey):
+					self.tree[mykey]=[]
+				self.tree[mykey].append([fullpkg,mysplit])
+		self.populated=1
+
+def depgrab(myfilename,depmark):
+	"""
+	Will grab the dependency string from an ebuild file, using
+	depmark as a marker (normally DEPEND or RDEPEND)
+	"""
+	depstring=""
+	myfile=open(myfilename,"r")
+	mylines=myfile.readlines()
+	myfile.close()
+	pos=0
+	while (pos<len(mylines)):
+		if mylines[pos][0:len(depmark)+1]==depmark+"=":
+			depstart=string.split(mylines[pos][len(depmark):],'"')
+			if len(depstart)==3:
+				depstring=depstart[1]
+				return string.join(string.split(depstring)," ")
+			elif len(depstart)==2:
+				depstring=depstart[1]+" "
+				pos=pos+1
+				while 1:
+					mysplit=string.split(mylines[pos],'"')
+					depstring=depstring+mysplit[0]+" "
+					if len(mysplit)>1:
+						return string.join(string.split(depstring)," ")
+					pos=pos+1
+			elif len(depstart)==1:
+				depstring=depstring+mylines[pos][len(depmark)+1:]
+				break
+			else:
+				break
+		else:
+			pos=pos+1
+	return string.join(string.split(depstring)," ")
+
+def cleanup_pkgmerge(mypkg):
+	print ">>> Cleaning up temporary storage..."
+	shutil.rmtree(getsetting("PKG_TMPDIR")+"/"+mypkg,1)
+
+def pkgmerge(mytbz2):
+	"""will merge a .tbz2 file, returning a list of runtime dependencies that must be
+		satisfied, or None if there was a merge error.  This code assumes the package
+		exists."""
+	if mytbz2[-5:]!=".tbz2":
+		print "!!! Not a .tbz2 file"
+		return None
+	tmploc=getsetting("PKG_TMPDIR")
+	if not os.path.exists(tmploc):
+		os.mkdir(tmploc)
+	mypkg=os.path.basename(mytbz2)[:-5]
+	pkgloc=tmploc+"/"+mypkg
+	if os.path.exists(pkgloc):
+		shutil.rmtree(pkgloc,1)
+	os.mkdir(pkgloc)
+	os.chdir(pkgloc)
+	print ">>> extracting",mypkg
+	notok=os.system("cat "+mytbz2+"| bzip2 -d | tar xf -")
+	if notok:
+		print "!!! Error extracting",mytbz2
+		cleanup_pkgmerge(mypkg)
+		return None
+	try:
+		mycat=os.listdir("var/db/pkg")[0]
+	except:
+		print "!!! Package database info not found, aborting..."
+		cleanup_pkgmerge(mypkg)
+		return None
+	mycatpkg=mycat+"/"+mypkg
+	if roottree.exists_specific(mycatpkg):
+		print "!!! Error:",mycatpkg,"is already installed.  Unmerge first."
+		cleanup_pkgmerge(mypkg)
+		return None
+
+	rundepfile="var/db/pkg/"+mycatpkg+"/RDEPEND"
+	if os.path.exists(rundepfile):
+		a=open(rundepfile,"r")
+		myrunlines=a.readlines()
+		rdep=""
+		for x in myrunlines:
+			rdep=rdep+" "+x[:-1]
+		del myrunlines
+		doebuild("var/db/pkg/"+mycatpkg+"/"+mypkg+".ebuild","preinst")
+		merge(mycat,mypkg,os.getcwd())
+		doebuild(root+"var/db/pkg/"+mycatpkg+"/"+mypkg+".ebuild","postinst")
+		cleanup_pkgmerge(mypkg)
+	print ">>> Done."
+	return rdep[1:]
+
 def init():
 	global root, ERRPKG, ERRVER, configdefaults, configsettings, currtree, roottree, localtree, porttree 
 	configdefaults=getconfig("/etc/make.defaults")
@@ -1624,7 +1964,7 @@ def init():
 	else:
 		#root is non-local, initialize non-local database as roottree
 		roottree=vartree(root)
-	portree=portagetree(getsetting("PORTDIR"))
+	porttree=portagetree(getsetting("PORTDIR"))
 	currtree=currenttree(getsetting("CURRENTFILE"))
 	#package database is now initialized and ready, cap'n!
 	ERRPKG=""
