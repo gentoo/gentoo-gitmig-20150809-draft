@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r3.ebuild,v 1.1 2004/01/27 08:49:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r3.ebuild,v 1.2 2004/01/31 00:25:02 george Exp $
 
 S=${WORKDIR}/Emulator_Src_3.5
 HOMEPAGE="http://www.palmos.com/dev/tools/emulator/"
@@ -29,7 +29,9 @@ src_unpack() {
 	aclocal
 	automake --foreign
 	autoconf
-	sed -i -e "s:-DPLATFORM_UNIX:-DFLTK_1_0_COMPAT -DPLATFORM_UNIX:" configure
+	#package build scripts dp not honor C[XX]FLAGS, will have to do corrections via sed here..
+	sed -i -e "s:-DPLATFORM_UNIX:-DFLTK_1_0_COMPAT -DPLATFORM_UNIX:" \
+		-e "s:-O2:-O2 -fno-strict-aliasing:" configure
 
 	cd ${S}
 	mkdir install-fltk
