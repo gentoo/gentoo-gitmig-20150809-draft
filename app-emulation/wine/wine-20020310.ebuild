@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020310.ebuild,v 1.2 2002/03/22 17:19:46 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020310.ebuild,v 1.3 2002/03/28 01:41:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
@@ -28,8 +28,12 @@ src_compile() {
     [ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" 	|| myconf="$myconf --enable-trace --enable-debug"
     # there's no configure flag for cups, it's supposed to be autodetected
 
-    ./configure --prefix=/usr --sysconfdir=/etc/wine \
-		--host=${CHOST} --enable-curses ${myconf} || die
+    ./configure --prefix=/usr \
+	--sysconfdir=/etc/wine \
+	--mandir=/usr/share/man \
+	--host=${CHOST} \
+	--enable-curses \
+	${myconf} || die
 
     cd ${S}/programs/winetest
     cp Makefile 1
@@ -44,9 +48,9 @@ src_compile() {
 src_install () {
     
     cd ${S}
-    make prefix=${D}/usr install || die
+    make prefix=${D}/usr mandir=${D}/usr/share/man install || die
     cd ${S}/programs
-    make prefix=${D}/usr install || die
+    make prefix=${D}/usr mandir=${D}/usr/share/man install || die
     
     # these .so's are strange. they are from the make in programs/ above,
     # and are for apps built with winelib (windows sources built directly
