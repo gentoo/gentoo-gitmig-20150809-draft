@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.8 2002/11/14 17:03:34 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.9 2002/11/14 17:17:36 verwilst Exp $
 
 IUSE="ssl"
 
@@ -90,6 +90,7 @@ src_install() {
 	mkdir -p ${D}/etc/jabber
 	mkdir -p ${D}/usr/lib/jabber
 	mkdir -p ${D}/var/log/jabber
+	mkdir -p ${D}/var/spool/jabber
 	mkdir -p ${D}/var/run
 	if [ "${COMPILER}" = "gcc3" ]; then
                 cd ${S}/icqv7-t-${ICQv7}
@@ -102,6 +103,12 @@ src_install() {
 	cp ${S}/msn-transport/src/msntrans.so ${D}/usr/lib/jabber/
 	cp ${S}/mu-conference/src/mu-conference.so ${D}/usr/lib/jabber/
 	cp ${S}/yahoo-transport-2/yahoo-transport.so ${D}/usr/lib/jabber/
+	cp ${S}/jsm/jsm.so ${D}/usr/lib/jabber/
+	cp ${S}/xdb_file/xdb_file.so ${D}/usr/lib/jabber/
+	cp ${S}/pthsock/pthsock_client.so ${D}/usr/lib/jabber/
+	cp ${S}/dnsrv/dnsrv.so ${D}/usr/lib/jabber/
+	cp ${S}/dialback/dialback.so ${D}/usr/lib/jabber/
+
 	cd ${D}/etc/jabber
 	tar -xjf ${FILESDIR}/config-1.4.2-r1.tbz2
 
