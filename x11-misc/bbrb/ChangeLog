@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbrb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrb/ChangeLog,v 1.1 2002/04/30 05:22:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrb/ChangeLog,v 1.2 2002/06/06 23:18:27 seemant Exp $
+
+  6 Jun 2002; Stacey has made sure this works with fluxbox and openbox as
+  well, so I have updated the pkg_postinst() function with instructions.
 
 *bbrb-0.4.1 (29 Apr 2002)
 
