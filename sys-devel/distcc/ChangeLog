@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.77 2003/10/08 06:54:48 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.78 2003/10/18 20:18:15 lisa Exp $
+
+*distcc-2.11.1-r1 (18 Oct 2003)
+
+  18 Oct 2003; Lisa Seelye <lisa@gentoo.org> distcc-2.11.1-r1.ebuild,
+  files/2.11.1p/conf, files/2.11.1p/distcc-config, files/2.11.1p/init:
+  Distcc-2.11.1-r1 is to test distcc-config rewritten in python as per bug
+  27432. Thanks to Pyrania for the rewrite.
 
 *distcc-2.11.1 (08 Oct 2003)
 
