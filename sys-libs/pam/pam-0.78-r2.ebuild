@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.2 2005/03/09 23:57:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.3 2005/03/13 21:43:18 azarah Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -290,8 +290,9 @@ src_install() {
 				echo
 				die "${mod_name} module did not build."
 			fi
-			if [[ -n $(ldd "${sec_dir}/${mod_name}"*.so 2>&1 | grep '/usr/' | \
-			           grep -v 'usr/$(get_libdir)/gcc') ]] ; then
+			if [[ -n $(ldd "${sec_dir}/${mod_name}"*.so 2>&1 | \
+			           grep "/usr/$(get_libdir)/" | \
+			           grep -v "/usr/$(get_libdir)/gcc") ]] ; then
 				echo
 				eerror "ERROR: ${mod_name} have dependencies in /usr."
 				echo

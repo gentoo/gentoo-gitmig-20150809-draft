@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.67 2005/03/09 23:57:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.68 2005/03/13 21:43:18 azarah Exp $
+
+  13 Mar 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.78-r2.ebuild:
+  Tweak dependency test to hopefully fix bug #84836
 
   09 Mar 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.78-r2.ebuild:
   Do not check for gcc dir when we check if modules are link to libs in /usr.
