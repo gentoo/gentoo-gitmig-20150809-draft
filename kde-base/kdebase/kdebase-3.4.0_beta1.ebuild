@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta1.ebuild,v 1.7 2005/02/02 11:16:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta1.ebuild,v 1.8 2005/02/15 20:59:19 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -110,11 +110,6 @@ ${KDEDIR}/bin/startkde" > ${T}/kde-${SLOT}
 	    -e "s:_RANDOM_:${RANDOM}${RANDOM}:g" \
 		${FILESDIR}/${PVR}/kdmrc > ${T}/kdmrc
 	doins ${T}/kdmrc
-
-	# Add 'pgo:' konqueror shortcut
-	dodir ${KDEDIR}/share/services/searchprovider
-	insinto ${KDEDIR}/share/services/searchprovider
-	doins ${FILESDIR}/pgo.desktop
 
 	rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
 }
