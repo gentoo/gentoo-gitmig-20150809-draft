@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.12 2004/01/25 02:32:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.13 2004/04/04 23:00:24 zx Exp $
 
 MY_P=${P/-/}
 S=${WORKDIR}/${MY_P}/unix
 DESCRIPTION="A widget library for Tcl/Tk. Has been ported to Python and Perl, too."
 HOMEPAGE="http://sourceforge.net/projects/tixlibrary/"
 SRC_URI="mirror://sourceforge/tixlibrary/${MY_P}b1.tar.gz"
-
+IUSE=""
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
-	>=sys-apps/sed-4
-	dev-lang/tk"
+		>=sys-apps/sed-4
+		dev-lang/tk"
 
 src_unpack() {
 	unpack ${A}

@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0.ebuild,v 1.6 2004/01/15 03:58:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0.ebuild,v 1.7 2004/04/04 23:01:48 zx Exp $
 
 inherit eutils
 
 DESCRIPTION="Tcl/Tk Theming library."
 HOMEPAGE="http://www.xmission.com/~georgeps/Tk_Theme/other/"
 SRC_URI="http://www.xmission.com/~georgeps/Tk_Theme/other/${PN}.tgz"
-
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~alpha"
-
+IUSE=""
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3"
 
