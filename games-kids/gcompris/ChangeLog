@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/gcompris
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.6 2003/12/31 18:41:01 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.7 2004/06/03 20:55:42 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> gcompris-3.2.ebuild,
+  gcompris-4.2-r1.ebuild:
+  Fix use invocation
 
 *gcompris-4.2-r1 (31 Dec 2003)
 

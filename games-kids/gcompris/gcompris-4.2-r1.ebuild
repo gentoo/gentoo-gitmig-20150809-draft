@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-4.2-r1.ebuild,v 1.4 2004/05/27 03:20:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-4.2-r1.ebuild,v 1.5 2004/06/03 20:55:42 agriffis Exp $
 
 inherit games eutils
 
@@ -59,7 +59,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 #	mv ${D}/${GAMES_DATADIR}/{locale,gnome,pixmaps} ${D}/usr/share/
 #	rm -rf ${D}/${GAMES_LIBDIR}/menu
-#	if [ ! `use nls` ] ; then
+#	if ! use nls ; then
 #		rm -rf ${D}/usr/share/locale
 #		cd ${D}/${GAMES_DATADIR}/gcompris/boards/sounds
 #		rm -rf `find -type d -maxdepth 1 -mindepth 1 ! -name en`
