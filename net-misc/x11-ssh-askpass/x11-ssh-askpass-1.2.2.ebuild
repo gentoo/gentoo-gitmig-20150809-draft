@@ -1,7 +1,7 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Adam Manthei <manthei@sistina.com>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.2.ebuild,v 1.6 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.2.ebuild,v 1.7 2001/09/01 22:59:34 lamer Exp $
 
 
 P=x11-ssh-askpass-1.2.2
@@ -14,10 +14,15 @@ SRC_URI="http://www.ntrnet.net/~jmknoble/software/x11-ssh-askpass/${A}"
 DEPEND="virtual/glibc virtual/x11"
 RDEPEND=">=net-misc/openssh-2.3.0 virtual/x11"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${FILESDIR}/stupid-imake.diff
+}
 src_compile() {
     try ./configure --prefix=/usr --libexecdir=/usr/lib/misc 
     try xmkmf
-    try make $MAKEOPTS includes
+    try make includes
     try make 
 }
 
