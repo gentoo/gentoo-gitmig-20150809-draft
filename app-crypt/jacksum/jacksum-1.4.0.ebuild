@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/jacksum-1.4.0.ebuild,v 1.1 2004/04/04 20:00:58 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/jacksum-1.4.0.ebuild,v 1.2 2004/04/04 20:02:35 zx Exp $
 
 inherit java-pkg
 
@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="jikes"
 DEPEND=">=virtual/jdk-1.3.1
+		dev-java/ant
 		app-arch/unzip
 		jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3.1"
