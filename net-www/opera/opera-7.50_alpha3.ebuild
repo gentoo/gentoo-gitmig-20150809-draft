@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha3.ebuild,v 1.3 2004/04/10 21:33:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha3.ebuild,v 1.4 2004/04/13 18:30:48 kugelfang Exp $
 
 IUSE="static"
 
@@ -15,19 +15,22 @@ HOMEPAGE="http://www.opera.com/linux/"
 SRC_URI="
 	x86? ( !static? ( http://snapshot.opera.com/unix/7.50-Preview-3/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
 	x86? ( static? ( http://snapshot.opera.com/unix/7.50-Preview-3/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	amd64? ( !static? ( http://snapshot.opera.com/unix/7.50-Preview-3/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	amd64? ( static? ( http://snapshot.opera.com/unix/7.50-Preview-3/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
 	ppc? ( !static? ( http://snapshot.opera.com/unix/7.50-Preview-3/ppc-linux/en/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
 	ppc? ( static? ( http://snapshot.opera.com/unix/7.50-Preview-3/ppc-linux/en/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
 	sparc? ( !static? ( http://snapshot.opera.com/unix/7.50-Preview-3/sparc-linux/en/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 )  )
 	sparc? ( static? ( http://snapshot.opera.com/unix/7.50-Preview-3/sparc-linux/en/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )"
 
 # Dependencies may be augmented later (see below).
-DEPEND=">=sys-apps/sed-4"
+DEPEND=">=sys-apps/sed-4
+	amd64? ( sys-apps/linux32 )"
 
 RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
 	media-libs/libexif
 	x11-libs/openmotif
-	!static? ( =x11-libs/qt-3* )"
+	!static? ( amd64? ( =app-emulation/emul-linux-x86-qtlibs-1* ) : ( =x11-libs/qt-3* ) )"
 
 SLOT="0"
 LICENSE="OPERA"
@@ -57,7 +60,11 @@ src_install() {
 	dodir /etc
 
 	# Opera's native installer.
-	./install.sh --prefix="${D}"/opt/opera || die
+	if [ ${ARCH} = "amd64" ]; then
+		linux32 ./install.sh --prefix="${D}"/opt/opera || die
+	else
+		./install.sh --prefix="${D}"/opt/opera || die
+	fi
 
 	rm ${D}/opt/opera/share/doc/opera/help
 	dosym /opt/share/doc/opera/help /opt/opera/share/opera/help
