@@ -1,0 +1,10 @@
+# ChangeLog for games-action/noiz2sa
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/ChangeLog,v 1.1 2004/12/13 13:04:17 mr_bones_ Exp $
+
+*noiz2sa-0.51a (13 Dec 2004)
+
+  13 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +noiz2sa-0.51a.ebuild:
+  initial commit - ebuild submitted by Atzm Watanabe via bug #53227
+
