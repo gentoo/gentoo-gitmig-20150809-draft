@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/asclock/asclock-2.0.12.ebuild,v 1.4 2002/05/23 06:50:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/asclock/asclock-2.0.12.ebuild,v 1.1 2002/06/19 14:36:12 karltk Exp $
 
 S=${WORKDIR}/${P}
 

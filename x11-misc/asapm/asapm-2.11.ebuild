@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/asapm/asapm-2.11.ebuild,v 1.1 2002/04/12 19:53:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/asapm/asapm-2.11.ebuild,v 1.1 2002/06/19 14:36:12 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="APM monitor for AfterStep"
