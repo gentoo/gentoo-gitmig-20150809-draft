@@ -1,3 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1b511f34f0b2b9629d999449a8f3880 ChangeLog 590
 MD5 367f80f58fb09ead2c0761380229e305 gnotepad+-1.3.3.ebuild 544
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 e3c578ce72afc2266ecc03accd403c0f files/digest-gnotepad+-1.3.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+eKtmdTrptrqvGERAnKlAJ9DsHBz9EbK44Bqx7P2f/GmuCmQMgCeKuLc
+OS4K65LLX/OvqKYGSQHTaQQ=
+=vFnp
+-----END PGP SIGNATURE-----
