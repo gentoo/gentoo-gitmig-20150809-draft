@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r3.ebuild,v 1.2 2004/09/05 11:06:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r3.ebuild,v 1.3 2004/09/05 12:04:46 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -36,13 +36,13 @@ src_compile() {
 	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 
 	econf \
-		--datadir=/$(get_libdir)/share/${PN} \
-		--mandir=/$(get_libdir)/share/man \
-		--includedir=/$(get_libdir)/include/${PN} \
+		--datadir=/usr/share/${PN} \
+		--mandir=/usr/share/man \
+		--includedir=/usr/include/${PN} \
 		--with-etcdir=/etc/${PN} \
-		--with-helpdir=/$(get_libdir)/share/${PN}/help \
-		--with-simdir=/$(get_libdir)/lib/${PN} \
-		--with-docdir=/$(get_libdir)/share/doc/${PF} \
+		--with-helpdir=/usr/share/${PN}/help \
+		--with-simdir=/usr/$(get_libdir)/${PN} \
+		--with-docdir=/usr/share/doc/${PF} \
 		--with-logsdir=/var/log/${PN} \
 		--enable-shared \
 		--enable-static \
@@ -59,16 +59,16 @@ src_install() {
 	make install DESTDIR=${D} || die "make install failed"
 
 	rm -rf \
-		${D}/$(get_libdir)/share/man \
+		${D}/usr/share/man \
 		${D}/etc/${PN}/silcd.conf \
-		${D}/$(get_libdir)/share/doc/${PF}/{tutorial,examples}
+		${D}/usr/share/doc/${PF}/{tutorial,examples}
 
-	dodir $(get_libdir)/pkgconfig
-	cat >${D}/$(get_libdir)/pkgconfig/silc.pc <<EOF
+	dodir /usr/$(get_libdir)/pkgconfig
+	cat >${D}/usr/$(get_libdir)/pkgconfig/silc.pc <<EOF
 prefix=/usr
 exec_prefix=\${prefix}
 libdir=\${prefix}/$(get_libdir)
-includedir=\${prefix}/include/${PN}
+includedir=\${prefix}/include
 
 Name: silc
 Version: ${PV}
