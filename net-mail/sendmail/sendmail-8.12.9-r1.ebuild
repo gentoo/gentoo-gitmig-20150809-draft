@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9-r1.ebuild,v 1.3 2003/05/13 03:11:16 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9-r1.ebuild,v 1.4 2003/05/23 04:42:26 tberman Exp $
 
 IUSE="ssl ldap sasl berkdb tcpd gdbm mbox"
 
@@ -167,3 +167,11 @@ EOF
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/sendmail
 }
+
+pkg_postinst() {
+                                                                                
+        einfo "This ebuild uses mbox support by default. If you are"
+        einfo "looking for maildir support put -mbox into your USE variables."
+                                                                                
+}
+
