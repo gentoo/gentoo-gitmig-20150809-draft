@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook-dsssl-stylesheets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.7 2003/02/08 03:04:48 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.8 2003/02/08 03:08:03 satai Exp $
+
+  07 Feb 2002; Matthew Turk <satai@gentoo.org> :
+  Changed dummy line to return 0.
 
 *docbook-dsssl-stylesheets-1.77-r2 (07 Feb 2002)
 

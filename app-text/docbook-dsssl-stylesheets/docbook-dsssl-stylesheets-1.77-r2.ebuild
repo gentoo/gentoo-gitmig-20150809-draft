@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77-r2.ebuild,v 1.1 2003/02/08 03:05:41 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77-r2.ebuild,v 1.2 2003/02/08 03:08:03 satai Exp $
 
 inherit sgml-catalog
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-    dummy="dummy"
+    return 0
 }
 
 src_install () {
