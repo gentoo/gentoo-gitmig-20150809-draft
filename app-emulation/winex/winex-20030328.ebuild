@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20030328.ebuild,v 1.4 2003/06/08 14:42:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20030328.ebuild,v 1.5 2003/06/23 18:36:47 mholzer Exp $
 
 inherit base
 
@@ -28,7 +28,7 @@ DEPEND="sys-devel/gcc
 	cups? ( net-print/cups )
 	!app-emulation/winex-transgaming"
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/wine
 
 src_unpack() {
 	base_src_unpack

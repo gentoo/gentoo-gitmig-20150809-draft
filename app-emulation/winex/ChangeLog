@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/winex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.26 2003/06/08 14:51:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.27 2003/06/23 18:36:47 mholzer Exp $
+
+  23 Jun 2003; Martin Holzer <mholzer@gentoo.org> winex-20030328.ebuild:
+  Doing silly things before holiday is always very bad.
+  Fixing this now. Closes #23097. 
 
   08 Jun 2003; Martin Holzer <mholzer@gentoo.org> winex-20021123.ebuild,
   files/winex-20021123-fake_windows.tar.bz2,
