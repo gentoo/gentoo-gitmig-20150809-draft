@@ -1,0 +1,24 @@
+# ChangeLog for app-sci/elph
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/ChangeLog,v 1.1 2004/12/23 18:22:19 ribosome Exp $
+
+*elph-0.1.4 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/elph-0.1.4-usage.patch, +elph-0.1.4.ebuild:
+  Moved from app-sci/elph to sci-biology/elph.
+
+  07 Nov 2004; Olivier Fisette <ribosome@gentoo.org> metadata.xml,
+  -elph-0.1.2.ebuild, elph-0.1.4.ebuild:
+  Removed buggy version (0.1.2). Added 0.1.4 to x86. Set myself as
+  maintainer. Added long description.
+
+  30 Oct 2004; Olivier Fisette <ribosome@gentoo.org> +elph-0.1.4.ebuild
+  +files/elph-0.1.4-usage.patch :
+  New version.
+
+*elph-0.1.2 (22 May 2003)
+
+  22 May 2003; Jon Portnoy <avenj@gentoo.org> elph-0.1.2.ebuild :
+  Initial import. Ebuild submitted by Stephen Diener in bug
+  #21308.
