@@ -4,7 +4,7 @@
 #
 # NOTE: this is an x86-only ebuild!!!
 #
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7-r2.ebuild,v 1.8 2001/08/22 21:18:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7-r2.ebuild,v 1.9 2001/09/11 16:32:34 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Super Tiny Editor with wordstar, vi, and emacs key bindings"
@@ -34,7 +34,8 @@ src_install () {
 	if [ "`use build`" ]; then
 		# easier-to-remember shell scripts
 		dobin ${FILESDIR}/vi
-		dobin ${FILESDIR}/emacs
+		# this one is more trouble than its worth --woodchip
+		# dobin ${FILESDIR}/emacs
 		dobin ${FILESDIR}/pico
 		newbin ${FILESDIR}/pico nano
 	fi
