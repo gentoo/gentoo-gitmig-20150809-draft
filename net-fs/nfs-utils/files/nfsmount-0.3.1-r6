@@ -1,0 +1,45 @@
+#!/sbin/runscript
+
+opts="start stop restart"
+
+depend() {
+    need net portmap
+}
+
+start_statd() {
+    # Don't start rpc.statd if already started by init.d/nfs
+    killall -0 rpc.statd &>/dev/null && return 0
+    ebegin "Starting NFS statd"
+    start-stop-daemon --start --quiet --exec /sbin/rpc.statd 1>&2
+    eend $? "Error starting NFS statd"
+}
+
+stop_statd() {
+    # Don't stop rpc.statd if it's in use by init.d/nfs
+    killall -0 nfsd &>/dev/null && return 0
+    # Make sure it's actually running
+    killall -0 rpc.statd &>/dev/null || return 0
+    # Okay, all tests passed, stop rpc.statd
+    ebegin "Stopping NFS statd"
+    start-stop-daemon --stop --quiet --exec /sbin/rpc.statd 1>&2
+    eend $? "Error stopping NFS statd"
+}
+
+start() {
+    start_statd
+    ebegin "Mounting NFS filesystems"
+    mount -a -t nfs
+    eend $? "Error mounting NFS filesystems"
+}
+
+stop() {
+    ebegin "Unmounting NFS filesystems"
+    umount -a -t nfs
+    eend $? "Error unmounting NFS filesystems"
+    stop_statd
+}
+
+restart() {
+    stop
+    start
+}
