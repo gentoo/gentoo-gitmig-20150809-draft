@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Tree/PEAR-XML_Tree-1.1.ebuild,v 1.1 2002/07/16 04:15:24 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Tree/PEAR-XML_Tree-1.1.ebuild,v 1.2 2002/07/16 04:16:20 rphillips Exp $
 
 P=${PN/PEAR-//}-${PV}
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc"
 
 DEPEND=""
 # May be some php compile-time dependancies, but for now...
-RDEPEND="dev-lang/php"
+RDEPEND="dev-php/mod_php"
 
 S=${WORKDIR}/${P}
 
