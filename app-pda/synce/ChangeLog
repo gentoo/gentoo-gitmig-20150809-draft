@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/synce
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce/ChangeLog,v 1.1 2003/09/02 19:40:09 liquidx Exp $
+
+*synce-0.8.4 (02 Sep 2003)
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml,
+  synce-0.8.4.ebuild:
+  initial meta-package to enable synce
+

@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce-dccm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-dccm/ChangeLog,v 1.3 2003/02/25 05:01:10 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-dccm/ChangeLog,v 1.4 2003/09/02 19:40:09 liquidx Exp $
+
+*synce-dccm-0.8 (02 Sep 2003)
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> synce-dccm-0.8.ebuild:
+  version bump and cleanup
 
 *synce-dccm-0.7 (24 Feb 2003)
 

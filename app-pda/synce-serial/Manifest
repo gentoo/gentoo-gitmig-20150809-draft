@@ -2,5 +2,7 @@ MD5 edd49870a463716527fa846266825653 ChangeLog 535
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 f709c2741140b5a8dbc68a4d384e05c7 synce-serial-0.4.ebuild 609
 MD5 fbb10d15e60651968466214f820acc6f synce-serial-0.7.ebuild 609
+MD5 fbb10d15e60651968466214f820acc6f synce-serial-0.8.ebuild 609
 MD5 5aeb344f79c54f1718317cb6044214ff files/digest-synce-serial-0.4 68
 MD5 7867511576c1ea287aa343d3bf4b5459 files/digest-synce-serial-0.7 68
+MD5 32067d75ed04171b7279bdefa5c3d50c files/digest-synce-serial-0.8 68

@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce-gnomevfs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.1 2003/02/25 05:01:10 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.2 2003/09/02 19:40:09 liquidx Exp $
+
+*synce-gnomevfs-0.8 (02 Sep 2003)
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> synce-gnomevfs-0.8.ebuild:
+  version bump and cleanup
 
 *synce-gnomevfs-0.2 (24 Feb 2003)
 
