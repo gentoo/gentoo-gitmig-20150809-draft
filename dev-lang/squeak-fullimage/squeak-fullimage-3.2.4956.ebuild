@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/squeak-vm-3.2.4956.ebuild,v 1.4 2004/03/14 02:40:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-fullimage/squeak-fullimage-3.2.4956.ebuild,v 1.1 2004/04/28 16:19:19 jhhudso Exp $
 
 DESCRIPTION="Highly-portable Smalltalk-80 implementation VM image"
 HOMEPAGE="http://www.squeak.org/"
@@ -12,6 +12,7 @@ LICENSE="Apple"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+PROVIDE="virtual/squeak-image"
 
 DEPEND=""
 RDEPEND="=dev-lang/squeak-3.2*"

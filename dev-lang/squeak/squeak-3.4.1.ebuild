@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1.ebuild,v 1.4 2004/03/30 20:51:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1.ebuild,v 1.5 2004/04/28 16:19:19 jhhudso Exp $
 
 #Simply change these numbers for different versions
 MV=3.4
@@ -18,7 +18,7 @@ IUSE="X oss mmx mozilla"
 
 DEPEND="virtual/glibc
 	X? ( virtual/x11 )"
-RDEPEND="dev-lang/squeak-vm
+RDEPEND="virtual/squeak-image
 		virtual/glibc
 		X? ( virtual/x11 )"
 

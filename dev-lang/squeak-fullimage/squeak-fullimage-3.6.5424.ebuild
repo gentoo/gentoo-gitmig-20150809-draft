@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/squeak-vm-3.5.5180.ebuild,v 1.4 2004/03/14 02:40:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-fullimage/squeak-fullimage-3.6.5424.ebuild,v 1.1 2004/04/28 16:19:19 jhhudso Exp $
 
 MAJOR=3
-MINOR=5
-RELEASE=5180
+MINOR=6
+RELEASE=5424
 
 MM=${MAJOR}.${MINOR}
 MMDOTR=${MM}.${RELEASE}
@@ -14,16 +14,18 @@ DESCRIPTION="Squeak image file"
 
 HOMEPAGE="http://www.squeak.org/"
 
-SRC_URI="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MM}/Squeak${MMDASHR}.zip
+SRC_URI="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MM}/Squeak${MMDASHR}-full.zip
 	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MM}/SqueakV3.sources.gz"
 
 LICENSE="Apple"
 
 SLOT="${MM}"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="mozilla"
+
+PROVIDE="virtual/squeak-image"
 
 DEPEND=""
 
@@ -33,21 +35,21 @@ S=${WORKDIR}
 
 src_compile() {
 	einfo "Compressing Image/Changes files..."
-	gzip Squeak${MMDASHR}.image
-	gzip Squeak${MMDASHR}.changes
+	gzip Squeak${MMDASHR}-full.image
+	gzip Squeak${MMDASHR}-full.changes
 	einfo "done!"
 }
 
 src_install() {
 	dodoc ReadMe.txt
 	insinto /usr/lib/squeak
-	doins Squeak${MMDASHR}.changes.gz
-	doins Squeak${MMDASHR}.image.gz
+	doins Squeak${MMDASHR}-full.changes.gz
+	doins Squeak${MMDASHR}-full.image.gz
 	doins SqueakV3.sources
-	dosym /usr/lib/squeak/Squeak${MMDASHR}.changes.gz \
+	dosym /usr/lib/squeak/Squeak${MMDASHR}-full.changes.gz \
 	      /usr/lib/squeak/squeak.changes.gz
-	dosym /usr/lib/squeak/Squeak${MMDASHR}.image.gz   \
+	dosym /usr/lib/squeak/Squeak${MMDASHR}-full.image.gz   \
 	      /usr/lib/squeak/squeak.image.gz
 
-	einfo "Squeak 3.5-5180 image/changes now installed"
+	einfo "Squeak 3.6-5424 image/changes now installed"
 }
