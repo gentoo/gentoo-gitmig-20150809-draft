@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.62.3.ebuild,v 1.6 2004/06/02 20:17:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.62.3.ebuild,v 1.7 2004/06/25 03:04:47 agriffis Exp $
 
 DESCRIPTION="Tabular Datastream Library"
 HOMEPAGE="http://www.freetds.org/"
