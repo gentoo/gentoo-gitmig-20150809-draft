@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.83.7.ebuild,v 1.1 2002/11/04 01:38:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.83.7.ebuild,v 1.2 2002/11/04 04:05:03 vapier Exp $
+
+inherit gcc
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Direct Connect Text Client, almost famous file share program"
@@ -11,10 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="=dev-libs/glib-1.2*
-	=sys-libs/db-3.2*"
-
-inherit gcc
+newdepend =dev-libs/glib-1.2* =sys-libs/db-3.2*
 
 src_compile() {
 	econf
