@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.1 2004/01/17 22:28:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.2 2004/01/21 02:55:38 pylon Exp $
 
 inherit eutils
 
@@ -61,8 +61,7 @@ src_install() {
 
 	#install cdrecord.prodvd
 	if use dvdr; then
-		into /usr/lib/xcdroast-0.98
-		dosym /usr/bin/cdrecord.prodvd cdrecord.prodvd
+		dosym /usr/bin/cdrecord.prodvd /usr/lib/xcdroast-0.98/cdrecord.prodvd
 	fi
 
 	if use gnome; then
