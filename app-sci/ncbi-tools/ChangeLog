@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/ncbi-tools
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.5 2003/12/13 21:10:46 sediener Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.6 2004/01/11 13:51:29 lanius Exp $
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org>
+  ncbi-tools-04222003-r1.ebuild, ncbi-tools-04222003-r2.ebuild,
+  ncbi-tools-20030422.ebuild, ncbi-tools-20031103.ebuild:
+  fixed motif dep
 
 *ncbi-tools-20031103 (13 Dec 2003)
 
