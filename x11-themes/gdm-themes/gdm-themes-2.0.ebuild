@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-2.0.ebuild,v 1.6 2005/02/08 12:35:16 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-2.0.ebuild,v 1.7 2005/02/13 12:05:42 kloeri Exp $
 
 RESTRIC="nomirror"
 DESCRIPTION="Some nice themes for the GDM Greeter"
@@ -126,7 +126,7 @@ RDEPEND="gnome-base/gdm"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc amd64 ~alpha ~ia64 ~ppc"
+KEYWORDS="x86 sparc amd64 alpha ~ia64 ~ppc"
 IUSE=""
 
 src_unpack() {
