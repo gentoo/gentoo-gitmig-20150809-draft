@@ -1,38 +1,38 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5ae8bf528e57964da0ec1e33d85f079b djbdns-1.05-r14.ebuild 4745
-MD5 4c15ec493cc99c15649320a997816857 djbdns-1.05-r8.ebuild 2030
-MD5 71ff82f129537d04cfb0d59986ca48ab ChangeLog 8399
-MD5 948dcd32140f7bd301b6ecc28634fb1b djbdns-1.05-r7.ebuild 1926
-MD5 6cc3ce8124b77cbddac8de092b2f006c djbdns-1.05-r3.ebuild 1670
-MD5 d21ff37c46e1d07e72044980ccabf257 djbdns-1.05-r11.ebuild 3176
-MD5 2c3158204cfb4b9c36b8bc78e8421b16 metadata.xml 223
-MD5 b7abbb525fda4ee9cb0be743c6708b8f djbdns-1.05-r10.ebuild 2795
 MD5 57b489656dd0d3d4d8368b5fc3f6da0c djbdns-1.05-r12.ebuild 4797
 MD5 50c592c75ecd77c94452bcc000c83e92 djbdns-1.05-r9.ebuild 2745
+MD5 5ae8bf528e57964da0ec1e33d85f079b djbdns-1.05-r14.ebuild 4745
+MD5 d21ff37c46e1d07e72044980ccabf257 djbdns-1.05-r11.ebuild 3176
+MD5 4c15ec493cc99c15649320a997816857 djbdns-1.05-r8.ebuild 2030
+MD5 6cc3ce8124b77cbddac8de092b2f006c djbdns-1.05-r3.ebuild 1670
 MD5 c3d59dc557be72c2e08f32c578444c75 djbdns-1.05-r13.ebuild 4737
-MD5 e614c2df75cde50f99167def0cd249d9 files/digest-djbdns-1.05-r3 62
-MD5 46e046747b9dd8a0a1300a52c142f423 files/fwdzone-fix.patch 438
-MD5 c98a86d2e86da7217c84d4db4daa9369 files/dnsroots.patch 331
-MD5 9127cff20924bbf9dfd84d3896a2510e files/digest-djbdns-1.05-r13 624
-MD5 e614c2df75cde50f99167def0cd249d9 files/digest-djbdns-1.05-r9 62
-MD5 9127cff20924bbf9dfd84d3896a2510e files/digest-djbdns-1.05-r14 624
+MD5 b7abbb525fda4ee9cb0be743c6708b8f djbdns-1.05-r10.ebuild 2795
+MD5 4a1ac01b5eba2d742a4d11cecd3c779a ChangeLog 8495
+MD5 948dcd32140f7bd301b6ecc28634fb1b djbdns-1.05-r7.ebuild 1926
+MD5 2c3158204cfb4b9c36b8bc78e8421b16 metadata.xml 223
+MD5 188096855028696985f1b9d839d1643f files/1.05-errno.patch 238
 MD5 444830203a792b4a295ca8fee554b8d3 files/djbdns-1.05-ipv6arpa+BSDok-gentoo.diff 4127
-MD5 e1f4ba3f29c6a7310e0c1152348356ef files/digest-djbdns-1.05-r7 190
-MD5 e1f4ba3f29c6a7310e0c1152348356ef files/digest-djbdns-1.05-r8 190
-MD5 e614c2df75cde50f99167def0cd249d9 files/digest-djbdns-1.05-r11 62
-MD5 625d040d68fa3f87d67688c0e15eb2f4 files/headtail.patch 1781
-MD5 e614c2df75cde50f99167def0cd249d9 files/digest-djbdns-1.05-r10 62
-MD5 e978c483e32ec53b3eb8a2b703c89d6d files/djbdns-setup 11152
+MD5 c98a86d2e86da7217c84d4db4daa9369 files/dnsroots.patch 331
+MD5 3340189be9a5a23877b1c8bbb9edf4a3 files/digest-djbdns-1.05-r10 261
+MD5 81745534132c6cfa3596abd4a6660260 files/digest-djbdns-1.05-r11 397
 MD5 8a46595bab1183081b019c4406eaf9f1 files/digest-djbdns-1.05-r12 624
+MD5 9127cff20924bbf9dfd84d3896a2510e files/digest-djbdns-1.05-r13 624
+MD5 9127cff20924bbf9dfd84d3896a2510e files/digest-djbdns-1.05-r14 624
+MD5 3d85d57281612a4f73829a8efb9d6455 files/digest-djbdns-1.05-r3 133
+MD5 456c7b3cc5de829f4f03e627300e654f files/digest-djbdns-1.05-r7 266
+MD5 ba558b4a61ed71c23083aa1ec32c7cc9 files/digest-djbdns-1.05-r8 270
+MD5 3340189be9a5a23877b1c8bbb9edf4a3 files/digest-djbdns-1.05-r9 261
+MD5 e978c483e32ec53b3eb8a2b703c89d6d files/djbdns-setup 11152
+MD5 46e046747b9dd8a0a1300a52c142f423 files/fwdzone-fix.patch 438
 MD5 2804eedf8bf07dacf67d094c5122c723 files/dnscache-setup 6007
 MD5 d1844f9853a9bb56738a6a0eb6e04de4 files/tinydns-setup 3206
-MD5 188096855028696985f1b9d839d1643f files/1.05-errno.patch 238
+MD5 625d040d68fa3f87d67688c0e15eb2f4 files/headtail.patch 1781
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhZC+ugEuf3OQ0akRAoYpAJ9lHcHFWNIoHc/KuaD+GnbFYkV3JQCdGueQ
-VU/nYIfTCFgGhA4f3pKhQMQ=
-=vivi
+iD8DBQFBpQIEI1lqEGTUzyQRAnULAKDCE/366rbEiXJGTPWis+UcZmMLLwCfd7MD
+JfS3dp4nEAFrV2jmnk45RjM=
+=0HeC
 -----END PGP SIGNATURE-----
