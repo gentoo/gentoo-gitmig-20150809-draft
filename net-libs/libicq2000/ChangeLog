@@ -1,17 +1,28 @@
 # ChangeLog for net-libs/libicq2000
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/ChangeLog,v 1.4 2002/06/05 19:18:57 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/ChangeLog,v 1.5 2002/08/04 15:00:49 phoenix Exp $
 
-libicq2000-0.3.1 (05 Jun 2002)
+*libicq2000-0.3.2 (04 Aug 2002)
+  
+  04 Aug 2002; phoen][x <phoenix@gentoo.org> libicq2000-0.3.2.ebuild
+  files/digest-libicq2000-0.3.2 :
+
+  Bumped to new version (bug #5974)
+  Thanks to Marcel Karras <toka@freebits.de> for the contribution.
+
+*libicq2000-0.3.1 (05 Jun 2002)
+
   05 Jun 2002; Spider <spider@gentoo.org> :
   fixed libsigc++ dependency
   
 *libicq2000-0.3.1 (27 Apr 2002)
+
   27 Apr 2002; Spider <spider@gentoo.org> libicq2000-0.3.1.ebuild
   new version, get it while its fresh....   
 
 *libicq2000-0.3.0 (17 Apr 2002)
+
   17 Apr 2002; Spider <spider@gentoo.org> libicq2000-0.3.0.ebuild
   initial release due to ickle 0.3.0 
   updating the current release with a dodoc line, seems i missed it,
-doesn't warrant a -r though
+  doesn't warrant a -r though
