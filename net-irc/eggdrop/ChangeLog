@@ -1,8 +1,12 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.1 2003/07/29 01:12:51 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.2 2003/09/30 19:45:36 kumba Exp $
+
 
 *eggdrop-1.6.15 (28 Jul 2003)
+
+  30 Sep 2003; Joshua Kinard <kumba@gentoo.org> eggdrop-1.6.15.ebuild:
+  Added ~sparc & ~mips to KEYWORDS
 
   28 Jul 2003; Greg Fitzgerald <gregf@gentoo.org> eggdrop-1.6.15.ebuild,
   files/eggdrop-installer:
