@@ -1,6 +1,12 @@
 # ChangeLog for net-im/kadu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.18 2005/03/18 17:07:52 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.19 2005/03/20 11:24:30 sekretarz Exp $
+
+*kadu-0.4.0_rc2-r1 (20 Mar 2005)
+
+  20 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +kadu-0.4.0_rc2-r1.ebuild:
+  Solved dependency problem, bug #85872 and enabled x11_docking module, bug #85884
 
   18 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org> kadu-0.4.0_rc2.ebuild:
   Solved problem with LIB_PATH env in arts and amarok modules
