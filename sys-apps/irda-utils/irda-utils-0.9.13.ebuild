@@ -1,10 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/irda-utils-0.9.13.ebuild,v 1.15 2003/09/07 02:47:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/irda-utils-0.9.13.ebuild,v 1.16 2004/02/24 20:00:57 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IrDA Utilities, tools for IrDA communication"
 SRC_URI="mirror://sourceforge/irda/${P}.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://irda.sourceforge.net/"
 KEYWORDS="x86 amd64 -ppc"
 SLOT="0"
