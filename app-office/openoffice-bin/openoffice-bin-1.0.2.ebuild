@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.3 2003/01/27 22:54:35 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.4 2003/01/28 05:23:52 vapier Exp $
 
 IUSE="kde gnome"
 
@@ -25,7 +25,7 @@ fi;
 
 DESCRIPTION="OpenOffice productivity suite"
 SRC_URI="x86? ( http://ny1.mirror.openoffice.org/stable/${PV}/OOo_${MY_PV}_LinuxIntel_install.tar.gz
-		http://sf1.mirror.openoffice.org/stable/${PV}/OOo_${MY_PV}_LinuxIntel_install.tar.gz
+		http://sf1.mirror.openoffice.org/stable/${PV}/OOo_${MY_PV}_LinuxIntel_install.tar.gz )
  	 ppc? ( ftp://ftp.yellowdoglinux.com/pub/yellowdog/software/openoffice/OOo_${MY_PV}_LinuxPowerPC_installer.tar.gz )"
 HOMEPAGE="http://www.openoffice.org"
 
