@@ -658,3 +658,9 @@ app-cdr/cddump
 # http://online.securityfocus.com/bid/4336
 <media-libs/imlib-1.9.13
 
+
+# spider@gentoo.org 9 May 2002
+# Security update see:
+# http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=49294
+# ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01%3A48.tcpdump.asc
+<net-analyzer/tcpdump-3.6.2-r1
