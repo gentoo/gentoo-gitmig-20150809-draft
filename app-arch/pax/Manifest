@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b3e4abdcb4dbbbf1d93c72e2d5ccb71b ChangeLog 796
-MD5 b2e198f230feedff40fe35c8ebd65f64 metadata.xml 336
 MD5 e5cbd44fe0e7cb3bde499f876175e770 pax-3.3.4.ebuild 947
+MD5 cbc1b76f0731f144e478dd5601377197 ChangeLog 901
+MD5 b2e198f230feedff40fe35c8ebd65f64 metadata.xml 336
 MD5 08e1b586a48fbbf71b01ebbfba9d8de8 files/digest-pax-3.3.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3Lr6HTu7gpaalycRAhuJAJ4jBrTMV7NVloafO+JBy1+o7lv5ngCg75MB
-N5MAml5pcNRrC3UvwvF2wM0=
-=TC/+
------END PGP SIGNATURE-----

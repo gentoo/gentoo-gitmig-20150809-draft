@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 313913c2146a6bc2fb283030a98ce88e ChangeLog 5223
+MD5 410f7bee2621a7ae9c3d8c3cd7492802 ChangeLog 5330
 MD5 eced8157b3e60e7d4cc308f899fdcbfb dump-0.4.37.ebuild 1476
 MD5 15319d17b124480af1cb76202c5cb78d files/digest-dump-0.4.37 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBfb6XHTu7gpaalycRArasAJ0RyL/RIpBA0OdenRxKbPpUP70MjgCgqfS8
-RRuRMs8xz5jnfvf5OUutvIc=
-=1VBU
------END PGP SIGNATURE-----
