@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.3 2003/10/03 22:44:51 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.4 2003/10/12 19:52:03 zul Exp $
+
+  12 Oct 2003; Chuck Short <zul@gentoo.org> eggdrop-1.6.15.ebuild,
+  files/eggdrop-installer:
+  Eggdrop-installer enhancements, closes bug #30703.
+  Marked stable.
 
   03 Oct 2003; Chuck Short <zul@gentoo.org> eggdrop-1.6.15.ebuild:
   Added ~ia64 to keywords.

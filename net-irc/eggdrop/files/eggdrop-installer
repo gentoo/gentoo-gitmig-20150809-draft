@@ -47,11 +47,16 @@ install_eggdrop()
       mkdir -p $HOME/.eggdrop/$bot_name/filesys/incoming 
       mkdir -p $HOME/.eggdrop/$bot_name/text 
       mkdir -p $HOME/.eggdrop/$bot_name/scripts
+      # Added because of bug #3073
+      mkdir -p $HOME/.eggdrop/$bot_name/var
+      
 
       einfo "Creating symlinks to required files for your bot to run ...."
       ln -s /opt/eggdrop/help $HOME/.eggdrop/$bot_name/help
       ln -s /opt/eggdrop/language $HOME/.eggdrop/$bot_name/language
       ln -s /opt/eggdrop/modules $HOME/.eggdrop/$bot_name/modules
+      # Added because of bug #3073
+      ln -s /opt/eggdrop/eggdrop $HOME/.eggdrop/$bot_name/eggdrop
 
       einfo "Copying motd and banner ... "
       cp /opt/eggdrop/text/* $HOME/.eggdrop/$bot_name/text

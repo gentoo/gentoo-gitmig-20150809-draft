@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15.ebuild,v 1.6 2003/10/03 22:44:51 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15.ebuild,v 1.7 2003/10/12 19:52:03 zul Exp $
 
 DESCRIPTION="An IRC bot extensible with C or Tcl."
 HOMEPAGE="http://www.eggheads.org/"
 SRC_URI="ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/eggdrop${PV}.tar.gz"
-KEYWORDS="~x86 ~sparc ~mips ~ia64"
+KEYWORDS="x86 sparc mips ia64"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -13,6 +13,11 @@ SLOT="0"
 IUSE="debug static ipv6"
 DEPEND="dev-lang/tcl"
 
+pre_pkg() {
+	use ipv6 && \
+		ewarn "Note: If eggdrop is built with ipv6 support, the dns.so module is"
+		ewarn "not built."
+}
 
 src_unpack()  {
 
