@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.0.ebuild,v 1.6 2003/11/24 15:40:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.0.ebuild,v 1.7 2003/12/08 07:45:56 vapier Exp $
 
 inherit eutils
 
@@ -74,7 +74,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 
 	dodir /var/log/snort
-	touch ${D}/var/log/snort/.keep
+	keepdir /var/log/snort
 
 	insinto /usr/lib/snort/bin
 	doins contrib/{create_mysql,snortlog,*.pl}
