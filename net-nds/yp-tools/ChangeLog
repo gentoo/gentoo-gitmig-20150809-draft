@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.11 2003/05/25 15:04:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.12 2003/07/11 02:57:12 woodchip Exp $
+
+*yp-tools-2.8 (10 Jul 2003)
+
+  10 Jul 2003; Donny Davies <woodchip@gentoo.org> yp-tools-2.8.ebuild:
+  Updates from N. Owen Gunden" <ogunden@phauna.org>.
 
   25 May 2003; Martin Holzer <mholzer@gentoo.org> yp-tools-2.7-r1.ebuild,
   yp-tools-2.7.ebuild:
