@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r3.ebuild,v 1.3 2005/02/23 20:26:13 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r4.ebuild,v 1.1 2005/02/24 00:50:31 vapier Exp $
 
-PATCHVER="1.3"
+PATCHVER="1.5"
 UCLIBC_PATCHVER="1.1"
 inherit toolchain-binutils
 
