@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r3.ebuild,v 1.1 2003/11/14 10:04:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r3.ebuild,v 1.2 2003/11/19 16:36:31 usata Exp $
 
-IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk canna"
+IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk"
+#IUSE="canna"
 
 W3M_CVS_PV="1.890"
 W3M_CVS_P="${PN}-cvs-${W3M_CVS_PV}"
@@ -59,6 +60,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 	epatch ${DISTDIR}/${W3M_CVS_P}-async-3.diff.gz
+	epatch ${FILESDIR}/${PN}-async-gpm-gentoo.diff
 	#use canna && epatch ${DISTDIR}/${W3M_CVS_P}-canna.patch
 }
 
