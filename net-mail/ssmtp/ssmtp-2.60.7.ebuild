@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.7.ebuild,v 1.3 2004/04/23 12:55:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.7.ebuild,v 1.4 2004/04/24 03:08:44 lu_zero Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~mips amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~x86 ppc ~sparc alpha ~hppa ~mips amd64 ~ia64 ~ppc64 ~s390"
 IUSE="ssl ipv6 md5sum"
 
 DEPEND="virtual/glibc
