@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.28.2.0.2-r1.ebuild,v 1.1 2004/12/13 17:36:09 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.28.2.0.2-r1.ebuild,v 1.2 2005/01/08 05:21:39 solar Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="yes"

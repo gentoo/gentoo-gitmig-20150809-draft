@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/grsec-sources
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.40 2004/12/25 13:15:40 plasmaroo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.41 2005/01/08 05:21:39 solar Exp $
+
+*grsec-sources-2.4.28.2.1.0 (08 Jan 2005)
+
+  08 Jan 2005; <solar@gentoo.org> +files/linux-2.4.28-random-poolsize.patch,
+  +grsec-sources-2.4.28.2.1.0.ebuild:
+  - Added patch that fixes CAN-2004-0814 - Linux terminal layer races.
+  - Added random poolsize from Brad Spengler. (CAN pending?)
 
 *grsec-sources-2.4.28.2.0.2-r3 (25 Dec 2004)
 
