@@ -1,6 +1,6 @@
 MD5 7bbbaeef212f17eeb8de0d47ee8576c6 shfs-0.31.ebuild 1658
 MD5 93ea2de6d6764dda3aaeef17ba6e6201 shfs-0.31-r1.ebuild 2447
-MD5 aff5e0c9a07b8b5a929ac26f4dc28cdc ChangeLog 1055
+MD5 6ea07284fdc998cb2c075aee453bce42 ChangeLog 1055
 MD5 6c1fade43f037362288f5f508ba5fe47 files/digest-shfs-0.31-r1 62
 MD5 a47ecfb8f1ab11f208660d0b45c1a3d7 files/shfs-gentoo-0.31-makefile-root.diff 612
 MD5 d9c3f912bc5642882b84fa7f3edd8db8 files/amd.conf 842
