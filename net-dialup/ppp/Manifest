@@ -2,7 +2,7 @@ MD5 00227f2226bd87def56dadb73495539e ppp-2.4.1-r14.ebuild 4676
 MD5 210b3f9616a92005171f3f25c33c1638 ppp-2.4.2-r2.ebuild 4462
 MD5 24f264eef320520caee8597fb071405b ppp-2.4.2.ebuild 3957
 MD5 20502c85d128ae0dd4545dc3ae3eec6b ppp-2.4.2-r1.ebuild 4276
-MD5 e83d63fbe6a62c532c067fbd6b3a7886 ChangeLog 11733
+MD5 9425a35b59755867753c68dc46ca6939 ChangeLog 11852
 MD5 8b7ce0b3f7d57a152ffc9b210e57fc84 ppp-2.4.2-r3.ebuild 4546
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 4e62cdeb360ca0a22becbd2deb6f2dac files/pon 957
@@ -34,7 +34,7 @@ MD5 8eaba18dd4e6f49c9fd2d35ab8572458 files/2.4.2/killaddr-smarter.patch.gz 2257
 MD5 ef28c96687409a340c6cd66e21dc58db files/2.4.2/confd.ppp0 2786
 MD5 fa2a5b8df496922fa2fb592115953b6b files/2.4.2/options-pppoe 53
 MD5 9d798912edc0a47727afcd7aac100957 files/2.4.2/stdopt-mppe-mppc-0.82.patch.gz 10108
-MD5 c439849808581196549ef0fb2bc6e289 files/2.4.2/net.ppp0 4334
+MD5 ada8101e1aa0e9ff0a9cd0fdeaf7e1d2 files/2.4.2/net.ppp0 4420
 MD5 971013ca1ccc5a25acffdb3ff9edff4e files/2.4.2/pppoatm.diff.gz 3567
 MD5 1fd88dda7f4996799c69a9501d42cc23 files/2.4.2/README.mpls 530
 MD5 b67931e2cb7c2b250e181bc5b25c4ac5 files/2.4.2/modules.ppp 304
