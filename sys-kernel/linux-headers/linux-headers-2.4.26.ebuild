@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.26.ebuild,v 1.7 2004/07/15 03:52:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.26.ebuild,v 1.8 2004/10/04 05:17:09 iggy Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -29,8 +29,7 @@ DEPEND="!virtual/os-headers"
 
 pkg_setup() {
 	# Figure out what architecture we are, and set ARCH appropriately
-	ARCH="$(uname -m)"
-	ARCH="$(echo ${ARCH} | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/)"
+	set_arch_to_kernel
 	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH=sparc64
 
 
@@ -70,6 +69,7 @@ src_compile() {
 	if use sparc; then
 		make ARCH=${ARCH} dep || die "Failed to run 'make dep'"
 	fi
+	set_arch_to_portage
 }
 
 src_install() {

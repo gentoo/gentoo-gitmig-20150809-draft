@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.87 2004/08/17 22:40:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.88 2004/10/04 05:17:09 iggy Exp $
+
+  04 Oct 2004; <iggy@gentoo.org> linux-headers-2.4.26.ebuild:
+  switched custom ARCH setting code to use set_arch_to_* from eutils
 
   17 Aug 2004; Aron Griffis <agriffis@gentoo.org> linux-headers-2.4.23.ebuild:
   stable on alpha
