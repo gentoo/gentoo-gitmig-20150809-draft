@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.ebuild,v 1.1 2003/10/12 11:28:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.ebuild,v 1.2 2003/10/12 11:29:39 liquidx Exp $
 
 inherit distutils
 
@@ -29,7 +29,7 @@ pkg_setup() {
 		eerror "You need to Tk support in Python to continue. Try running:"
 		eerror "USE=\"tcltk\" emerge python"
 		die "Missing Tkinter support"
-	fi		
+	fi
 }
 
 src_compile() {
