@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.0.34-r4.ebuild,v 1.3 2004/01/03 11:42:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.0.34-r4.ebuild,v 1.4 2004/02/03 01:14:10 mr_bones_ Exp $
 
 inherit eutils
 
@@ -9,9 +9,10 @@ HOMEPAGE="http://rumsey.org/xgal.html"
 SRC_URI="http://http.us.debian.org/debian/pool/main/x/${PN}/${PN}_${PV}.orig.tar.gz
 	http://http.us.debian.org/debian/pool/main/x/${PN}/${PN}_${PV}-27.diff.gz"
 
+KEYWORDS="x86 ppc alpha ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha ~sparc"
+IUSE=""
 
 DEPEND="virtual/x11"
 
@@ -27,7 +28,7 @@ src_compile() {
 
 src_install () {
 	dobin xgalaga
-	dodoc README README.SOUND CHANGES COPYING INSTALL
+	dodoc README README.SOUND CHANGES INSTALL
 
 	insinto /usr/share/xgalaga/sounds
 	doins sounds/*.raw
