@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.47.ebuild,v 1.9 2004/04/16 05:46:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.47.ebuild,v 1.10 2004/04/27 21:01:12 pvdabeel Exp $
 
 RH_EXTRAVERSION="3"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.sunet.se/pub/Linux/distributions/redhat/redhat/linux/rawhide/
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha"
+KEYWORDS="x86 ppc alpha"
 IUSE="kde gtk"
 
 # Needed to build...
