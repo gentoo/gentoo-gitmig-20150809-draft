@@ -154,7 +154,7 @@ set_maildir() {
 	local f
 	for f in ${files}
 	do
-		echo "changing ${origmaildir} in ${f} to ${newmaildir}"
+		einfo "changing ${origmaildir} in ${f} to ${newmaildir}"
 		sed -e"/^[^\#]/ s/${origmaildir}/${newmaildir}/g" ${f} > ${f}.tmp && chmod --reference ${f} ${f}.tmp && mv -f ${f}.tmp ${f}
 		rm -f ${f}.tmp 1> /dev/null 2>&1
 	done
@@ -260,7 +260,7 @@ src_install() {
 	chg_cfg authdaemonrc authmodulelist authpam
 	chg_cfg authdaemonrc version authdaemond.plain
 	set_mime esmtpd esmtpd-ssl esmtpd-msa
-	set_maildir courierd imapd pop3d sqwebmaild
+	set_maildir courierd imapd imapd-ssl pop3d pop3d-ssl sqwebmaild *.dist
 }
 
 pkg_postinst() {
