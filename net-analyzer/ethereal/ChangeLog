@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.48 2004/02/17 19:48:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.49 2004/02/19 13:08:38 mholzer Exp $
+
+  19 Feb 2004; Martin Holzer <mholzer@gentoo.org> ethereal-0.10.0a.ebuild:
+  this release doesnt like O3 and O2. See 40660
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> ethereal-0.10.0a.ebuild:
   Fix up some stupid mistakes in this ebuild, clean up the USE handling, and fix
