@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.15 2003/11/28 20:38:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.16 2003/12/11 03:27:27 agriffis Exp $
+
+  10 Dec 2003; <agriffis@gentoo.org> libgcrypt-1.1.12.ebuild:
+  stable on ia64
 
   28 Nov 2003; Jason Wever <weeve@gentoo.org> libgcrypt-1.1.12.ebuild:
   Marked stable on sparc.
