@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/gpart
+# ChangeLog for sys-block/gpart
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/ChangeLog,v 1.1 2005/03/06 17:45:15 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/ChangeLog,v 1.2 2005/03/06 23:38:47 swegener Exp $
 
 *gpart-0.1h-r1 (06 Mar 2005)
 
