@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.10.ebuild,v 1.1 2002/11/12 08:38:18 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.10.ebuild,v 1.2 2003/01/08 05:26:53 jrray Exp $
 
 IUSE="truetype"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cs.uu.nl/~hanwen/mftrace/${P}.tar.gz"
 LICENSE="GPL"
 # have only tested this ebuild version on x86, but old pktrace
 # ebuild had these keywords:
-KEYWORDS="~x86"
+KEYWORDS="x86"
 # SLOT 1 was used in pktrace ebuild
 SLOT="1"
 

@@ -1,6 +1,8 @@
 # ChangeLog for app-text/mftrace
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.1 2002/11/12 08:38:18 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.2 2003/01/08 05:26:53 jrray Exp $
+
+	07 Jan 2003; J Robert Ray <jrray@gentoo.org> : Unmasked for x86.
 
 *mftrace-1.0.10 (12 Nov 2002)
 
