@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/logilab-common
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.11 2004/12/30 22:28:19 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.12 2005/01/24 00:14:49 kloeri Exp $
+
+*logilab-common-0.9.0 (24 Jan 2005)
+
+  24 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
+  +logilab-common-0.9.0.ebuild:
+  Version bump.
+
+  24 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> :
+  Version bump.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
