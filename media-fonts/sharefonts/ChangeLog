@@ -1,13 +1,16 @@
 # ChangeLog for media-fonts/sharefonts
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/ChangeLog,v 1.8 2004/05/31 15:38:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/ChangeLog,v 1.9 2004/06/01 22:21:03 leonardop Exp $
+
+  01 Jun 2004; L. Boshell <leonardop@gentoo.org> sharefonts-0.10-r3.ebuild:
+  Added IUSE var.
 
 *sharefonts-0.10-r3 (31 May 2004)
 
   31 May 2004; foser <foser@gentoo.org> sharefonts-0.10-r3.ebuild :
   Use font eclass, add some more docs. Unsure about licensing
 
-  30 May 2003; L. Boshell <leonardop@gentoo.org> sharefonts-0.10-r1.ebuild:
+  30 May 2004; L. Boshell <leonardop@gentoo.org> sharefonts-0.10-r1.ebuild:
   Added IUSE var.
 
 *sharefonts-0.10-r2 (15 May 2004)
