@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.0.3.ebuild,v 1.1 2005/03/10 08:49:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.0.3.ebuild,v 1.2 2005/03/11 01:29:30 azarah Exp $
 
 inherit eutils linux-mod
 
@@ -21,7 +21,9 @@ KEYWORDS="~x86"
 IUSE=""
 RESTRICT="nostrip"
 
-DEPEND="virtual/linux-sources"
+DEPEND="dev-lang/perl
+	virtual/linux-sources"
+RDEPEND="dev-lang/perl"
 
 if [[ ${CTARGET} != ${CHOST} ]] ; then
 	SLOT="${CTARGET}"
@@ -50,6 +52,11 @@ guess_arch() {
 	return 1
 }
 
+pkg_setup() {
+	# Make sure kernel sources are OK
+	# (Override for linux-mod eclass)
+	check_kernel_built
+}
 
 src_unpack() {
 	unpack ${A}
@@ -65,9 +72,6 @@ src_unpack() {
 		eerror "Could not guess klibc's ARCH from your CTARGET!"
 		die "Could not guess klibc's ARCH from your CTARGET!"
 	fi
-
-	# Make sure kernel sources are ok
-	check_kernel_built
 
 	kernel_arch=$(readlink "${KV_DIR}/include/asm" | sed -e 's:asm-::')
 	if [[ ${kernel_arch} != $(guess_arch) ]] ; then
@@ -95,15 +99,27 @@ src_compile() {
 }
 
 src_install() {
+	local klibc_prefix
+
 	if is_cross ; then
 		make INSTALLROOT=${D} \
 			ARCH=$(guess_arch) \
 			CROSS="${CTARGET}-" \
 			install || die "Install failed!"
+
+		klibc_prefix=$("${S}/${CTARGET}-klcc" -print-klibc-bindir)
 	else
 		env -u ARCH \
 		make INSTALLROOT=${D} install || die "Install failed!"
 
+		klibc_prefix=$("${S}/klcc" -print-klibc-bindir)
+	fi
+
+	# Hardlinks becoming copies
+	dosym gzip "${klibc_prefix}/gunzip"
+	dosym gzip "${klibc_prefix}/zcat"
+
+	if ! is_cross ; then
 		insinto /usr/share/aclocal
 		doins ${FILESDIR}/klibc.m4
 
@@ -115,4 +131,9 @@ src_install() {
 		docinto ipconfig; dodoc ${S}/ipconfig/README
 		docinto kinit; dodoc ${S}/kinit/README
 	fi
+}
+
+pkg_postinst() {
+	# Override for linux-mod eclass
+	return 0
 }
