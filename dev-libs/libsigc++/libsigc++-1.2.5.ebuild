@@ -1,8 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.1 2003/05/16 09:14:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.2 2003/05/16 12:57:16 foser Exp $
 
-S=${WORKDIR}/${P}
 IUSE="debug"
 DESCRIPTION="The GLib library of C routines"
 SRC_URI="mirror://sourceforge/libsigc/${P}.tar.gz"
@@ -16,12 +15,9 @@ DEPEND="virtual/glibc"
 src_compile() {
 	local myconf
     
-	if [ "${DEBUG}" -o -n "`use debug`" ]
-	then
-		myconf="--enable-debug=yes"
-	else
-		myconf="--enable-debug=no"
-	fi
+	use debug \
+		&& myconf="--enable-debug=yes" \
+		|| myconf="--enable-debug=no"
     
 	econf ${myconf} --enable-threads || die
 	emake || die "emake failure"
