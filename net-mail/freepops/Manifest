@@ -1,6 +1,18 @@
-MD5 25e65dda77ec962b8078903b6f284c15 ChangeLog 585
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cc7dbf3d7eb6dc54770da809a93b5d15 freepops-0.0.16.ebuild 978
+MD5 d753507ab849a31d8de3b10b1629c921 ChangeLog 734
 MD5 21c9bd65b924f959e9ec675d33b6df27 metadata.xml 222
 MD5 e00c6653202c92778837df3f57cc06cf freepops-0.0.17.ebuild 1145
+MD5 d3f9510677b705893f9892dd9fb128c9 freepops-0.0.19.ebuild 982
 MD5 b71405786c9e3c12e18c1b5435dc4b1f files/digest-freepops-0.0.16 68
 MD5 e382ba0b01d9d63ba7d68458d5cbd12d files/digest-freepops-0.0.17 128
+MD5 a984ec54d4e33b0cdd36ceb6d7d4452d files/digest-freepops-0.0.19 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBbB4yHTu7gpaalycRAjHCAKD0ZhsbVXY+Ukppthfj9NgzD6Ac+ACg9WDh
+iufxUE8HUqHOzqD0/FhvaRU=
+=1yH5
+-----END PGP SIGNATURE-----
