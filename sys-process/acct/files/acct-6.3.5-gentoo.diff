@@ -1,0 +1,11 @@
+*** accounting.info.old	2002-08-13 01:38:37.000000000 +0100
+--- accounting.info	2002-08-13 01:41:03.000000000 +0100
+***************
+*** 1,3 ****
+--- 1,6 ----
++ START-INFO-DIR-ENTRY
++ * accounting: (accounting).                Accounting
++ END-INFO-DIR-ENTRY
+  This is Info file accounting.info, produced by Makeinfo version 1.67
+  from the input file accounting.texi.
+  
