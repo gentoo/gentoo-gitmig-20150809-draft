@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.17 2004/10/25 17:01:46 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.18 2004/11/06 14:28:58 pylon Exp $
+
+  06 Nov 2004; Lars Weiler <pylon@gentoo.org> strongswan-2.2.2.ebuild:
+  Stable on ppc.
 
 *strongswan-2.2.2 (25 Oct 2004)
 
