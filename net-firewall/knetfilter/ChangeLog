@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/knetfilter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/ChangeLog,v 1.13 2004/11/23 21:34:19 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/ChangeLog,v 1.14 2004/11/27 03:00:38 weeve Exp $
+
+  26 Nov 2004; Jason Wever <weeve@gentoo.org> knetfilter-3.3.0.ebuild:
+  Stable on sparc.
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> knetfilter-3.3.0.ebuild:
   stable on x86
