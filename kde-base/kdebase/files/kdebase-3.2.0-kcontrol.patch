@@ -1,0 +1,15 @@
+Index: kcontrol/kcontrol/Makefile.am
+===================================================================
+RCS file: /home/kde/kdebase/kcontrol/kcontrol/Makefile.am,v
+retrieving revision 1.71
+diff -u -p -r1.71 Makefile.am
+--- kcontrol/kcontrol/Makefile.am	15 Sep 2003 15:03:51 -0000	1.71
++++ kcontrol/kcontrol/Makefile.am	3 Feb 2004 14:20:36 -0000
+@@ -64,6 +64,7 @@ install-data-local: KControl_NoDisplay.d
+ 	@-rm -f $(DESTDIR)$(kde_bindir)/kinfocenter
+ 	$(mkinstalldirs) $(DESTDIR)$(kde_bindir)
+ 	@$(LN_S) kcontrol $(DESTDIR)$(kde_bindir)/kinfocenter
++	$(mkinstalldirs) $(DESTDIR)$(kde_appsdir)/System
+ 	$(INSTALL_DATA) $(srcdir)/kinfocenter.desktop $(DESTDIR)$(kde_appsdir)/System/
+ 
+ KDE_ICON=AUTO
