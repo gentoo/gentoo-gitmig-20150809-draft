@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.9_rc1-r1.ebuild,v 1.2 2004/08/27 19:57:47 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.9_rc1-r1.ebuild,v 1.3 2004/08/31 02:30:56 scox Exp $
 
 UNIPATCH_LIST="${DISTDIR}/${KV}.bz2"
 K_PREPATCHED="yes"
@@ -9,6 +9,9 @@ UNIPATCH_STRICTORDER="yes"
 ETYPE="sources"
 inherit kernel-2
 detect_version
+
+UNIPATCH_LIST="${DISTDIR}/${KV}.bz2 ${FILESDIR}/2.6.9_rc1-dataloss-fix.patch"
+
 K_NOSETEXTRAVERSION="don't_set_it"
 RESTRICT="nomirror"
 DESCRIPTION="Andrew Morton's kernel, mostly fixes for 2.6 vanilla, some vm stuff too"

@@ -1,0 +1,37 @@
+--- 2.6.9-rc1-mm1/mm/filemap.c	2004-08-26 12:09:50.000000000 +0100
++++ linux/mm/filemap.c	2004-08-27 14:35:32.113359872 +0100
+@@ -722,10 +722,7 @@ void do_generic_mapping_read(struct addr
+ 	offset = *ppos & ~PAGE_CACHE_MASK;
+ 
+ 	isize = i_size_read(inode);
+-	if (!isize)
+-		goto out;
+-
+-	end_index = (isize - 1) >> PAGE_CACHE_SHIFT;
++	end_index = isize >> PAGE_CACHE_SHIFT;
+ 
+ 	for (;;) {
+ 		struct page *page;
+@@ -733,6 +730,11 @@ void do_generic_mapping_read(struct addr
+ 
+ 		if (index > end_index)
+ 			goto out;
++		if (index == end_index) {
++			nr = isize & ~PAGE_CACHE_MASK;
++			if (nr <= offset)
++				goto out;
++		}
+ 
+ 		cond_resched();
+ 		page_cache_readahead(mapping, &ra, filp, index);
+@@ -831,8 +833,8 @@ readpage:
+ 		 * another truncate extends the file - this is desired though).
+ 		 */
+ 		isize = i_size_read(inode);
+-		end_index = (isize - 1) >> PAGE_CACHE_SHIFT;
+-		if (unlikely(!isize || index > end_index)) {
++		end_index = isize >> PAGE_CACHE_SHIFT;
++		if (unlikely(index > end_index)) {
+ 			page_cache_release(page);
+ 			goto out;
+ 		}
