@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gpg-agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.3 2005/01/07 11:03:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.4 2005/01/07 14:17:56 dragonheart Exp $
+
+*gpg-agent-1.9.10 (07 Jan 2005)
+
+  07 Jan 2005; Daniel Black <dragonheart@gentoo.org> +gpg-agent-1.9.10.ebuild:
+  Backport as per bug #76992 by Dirk Heinrichs <ext-dirk.heinrichs@nokia.com>
 
   07 Jan 2005; Daniel Black <dragonheart@gentoo.org> gpg-agent-1.9.14.ebuild:
   removed version dependancies for gnupg as per bug #76994. Thanks to Dirk
