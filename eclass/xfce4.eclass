@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.7 2005/01/07 07:59:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.8 2005/01/07 08:08:10 bcowan Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -14,20 +14,22 @@ INHERITED="$INHERITED $ECLASS"
     && COMPRESS=".tar.bz2" \
     || COMPRESS=".tar.gz"
 
-if [[ ${XFCE_META} = "1" ]]; then
-    SRC_URI=""
-elif [[ ${GOODIES_PLUGIN} = "1" ]]; then
+if [[ ${GOODIES_PLUGIN} = "1" ]]; then
     [[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"    
     SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}${COMPRESS}"    
-    XFCE_RDEPEND=">=xfce-base/xfce4-panel-${PV}"
-elif [[ -n ${SRC_URI} ]]; then 
-    SRC_URI="${SRC_URI}"
-elif [[ ${GOODIES} = "1" ]]; then
-    SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P:-${P}}${COMPRESS}"
-else
-    SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}${COMPRESS}"
+    XFCE_RDEPEND=">=xfce4-panel-${PV}"
 fi
 
+[[ ${GOODIES} = "1" ]] \
+    && SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P:-${P}}${COMPRESS}"
+
+[[ -n ${SRC_URI} ]] \
+    && SRC_URI="${SRC_URI}" \
+    || SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}${COMPRESS}"
+
+[[ ${XFCE_META} = "1" ]] \
+    && SRC_URI=""
+    
 [[ -z ${LICENSE} ]] \
     && LICENSE="GPL-2"
 
