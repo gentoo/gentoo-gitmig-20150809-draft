@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20050102.ebuild,v 1.1 2005/01/11 21:43:31 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20050102.ebuild,v 1.2 2005/01/11 21:53:38 zypher Exp $
 
 inherit gcc eutils flag-o-matic
 
@@ -27,6 +27,7 @@ DEPEND="virtual/x11
 	>=sys-libs/libraw1394-0.9.0
 	>=media-sound/esound-0.2.34
 	>=media-libs/openexr-1.2.1
+	!media-video/cinelerra
 	x86? ( dev-lang/nasm )"
 
 src_compile() {
