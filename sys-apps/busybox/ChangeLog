@@ -1,15 +1,21 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.8 2002/12/21 00:35:38 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.9 2003/01/13 07:54:53 raker Exp $
 
+*busybox-0.60.5-r1 (13 Jan 2003)
 
-*busybox-0.60.5.ebuild (20 Dec 2002)
+  13 Jan 2003; Nick Hadaway <raker@gentoo.org> busybox-0.60.5-r1.ebuild :
+  Added some logic for detection of uclibc which needs to be tested.
+  Please comment on bug #13517.
+
+*busybox-0.60.5 (20 Dec 2002)
+
    20 Dec 2002; Jon Portnoy <avenj@gentoo.org> busybox-0.60.5.ebuild :
    Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*busybox-0.50.ebuild (14 July 2002)
+*busybox-0.50 (14 July 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> busybox-0.50.ebuild :
   Added KEYWORDS, SLOT.
