@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.6 2003/11/28 20:41:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.7 2003/12/11 17:31:38 agriffis Exp $
 
 inherit flag-o-matic virtualx gnome2
 use kde && inherit kde
@@ -78,10 +78,9 @@ src_unpack() {
 	# errors related to sandbox
 	gnome2_omf_fix ${S}/help/C/Makefile.in
 
-	# Patches for 64-bit
-	if use alpha; then
-		epatch ${FILESDIR}/evolution-1.4.4-alpha.patch || die "epatch failed"
-	fi
+	# Patch for 64-bit ... should be retired for 1.5 which contains
+	# the patch upstream
+	epatch ${FILESDIR}/evolution-1.4.4-alpha.patch || die "epatch failed"
 }
 
 ##### Compile evolution specific db3 for static linking #####

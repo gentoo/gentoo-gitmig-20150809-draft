@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.84 2003/11/28 20:41:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.85 2003/12/11 17:31:38 agriffis Exp $
+
+  11 Dec 2003; <agriffis@gentoo.org> evolution-1.4.5.ebuild,
+  files/evolution-1.4.4-alpha.patch:
+  Modify 64-bit patch according to response on evolution-patches mailing list.
+  Apply it regardless of ARCH because it is necessary for all 64-bit (and
+  doesn't hurt other arches). Mark stable on ia64
 
   28 Nov 2003; Jason Wever <weeve@gentoo.org> evolution-1.4.5.ebuild:
   Marked stable on sparc, fixes bug #32744.
