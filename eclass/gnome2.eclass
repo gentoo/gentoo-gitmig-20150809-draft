@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.32 2003/05/04 18:37:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.33 2003/05/04 18:58:55 liquidx Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -106,8 +106,8 @@ gnome2_omf_fix() {
 	for omf in ${omf_makefiles}; do
 		omfbase=$(basename ${omf})
 		einfo "Fixing OMF Makefile: ${omfbase}"
-		sed -i -e 's:\(-scrollkeeper-update -p $(localstatedir)/scrollkeeper\)\([\s\\]*\)$:\1 -o $(DESTDIR)$(omf_dest_dir)\2:' ${omf}
-		sed -i -e 's:\(-scrollkeeper-update -p $(scrollkeeper_localstate_dir)\)\([\s\\]*\)$:\1 -o $(DESTDIR)$(omf_dest_dir)\2:' ${omf}
+		sed -i -e 's:\(-scrollkeeper-update -p $(localstatedir)/scrollkeeper\)\([ \t\\]*\)$:\1 -o $(DESTDIR)$(omf_dest_dir)\2:' ${omf}
+		sed -i -e 's:\(-scrollkeeper-update -p $(scrollkeeper_localstate_dir)\)\([ \t\\]*\)$:\1 -o $(DESTDIR)$(omf_dest_dir)\2:' ${omf}
 	done
 }
 
