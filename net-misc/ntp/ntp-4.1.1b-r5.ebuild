@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r5.ebuild,v 1.4 2003/03/20 21:07:44 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r5.ebuild,v 1.5 2003/03/21 16:16:33 vapier Exp $
 
 inherit eutils
 
@@ -54,8 +54,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "You can find /etc/ntp.conf in /usr/share/ntp/"
-	ewarn "Please run etc-update and then read all the comments"
-	ewarn "all the comments in /etc/ntp.conf and"
-	ewarn "/etc/conf.d/ntpd"
+	ewarn "You can find an example /etc/ntp.conf in /usr/share/ntp/"
+	ewarn "Review /etc/ntp.conf to setup server info."
+	ewarn "Review /etc/conf.d/ntpd to setup init.d info."
 }
