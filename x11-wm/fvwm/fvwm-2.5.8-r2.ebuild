@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r2.ebuild,v 1.3 2003/11/28 18:52:59 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r2.ebuild,v 1.4 2003/11/28 19:14:59 taviso Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama perl nls png bidi imlib tcltk debug gtk2 icc"
+IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama perl nls png bidi imlib tcltk debug gtk2"
 
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
@@ -41,7 +41,6 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 # XXX:	netpbm is used by FvwmScript-ScreenDump...im assuming anyone with 
 # 	`use noxpm` will not want them.
 DEPEND="${RDEPEND}
-	icc? ( dev-lang/icc )
 	>=sys-apps/sed-4
 	dev-util/pkgconfig"
 
@@ -194,21 +193,6 @@ src_compile() {
 	# disable xpm support? (maybe you only use png in your themes, or just solid colour?)
 	if use noxpm; then
 		myconf="${myconf} --without-xpm-library"
-	fi
-
-	# use intel's C compiler to compile fvwm?
-	if use icc; then
-		export CC="icc"
-
-		# test if any icc specific flags have been requested
-		if test "${ICCFLAGS}"; then
-			einfo "Setting CFLAGS for the Intel Compiler..."
-
-			# ipo refuses to link libfvwm.a
-			export CFLAGS="${ICCFLAGS/-ipo/-ip}"
-		else
-			einfo "ICCFLAGS Not set, continuing with CFLAGS..."
-		fi
 	fi
 
 	# set the local maintainer for fvwm-bug.
