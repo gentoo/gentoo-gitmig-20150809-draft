@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.15 2003/04/21 10:17:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.16 2003/04/22 03:48:29 leahcim Exp $
+
+*xfree-drm-4.3.0-r2 (22 Apr 2003)
+
+  22 Apr 2003; Michael Fitzpatrick <leahcim@gentoo.org>
+  xfree-drm-4.3.0-r2.ebuild, files/digest-xfree-drm-4.3.0-r2,
+  files/xfree-drm-4.3.0-r2-gentoo-Makefile-fixup.patch,
+  files/xfree-drm-4.3.0-r2-radeon-resume-v8.patch : 
+  Combine x86 and ppc builds. Added "radeon resume/suspend" patch. 
 
   24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> xfree-drm-4.3.0.ebuild :
   Update to rather use the "more official" DRM sources from

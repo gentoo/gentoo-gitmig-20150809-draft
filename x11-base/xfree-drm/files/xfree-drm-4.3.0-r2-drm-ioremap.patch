@@ -1,0 +1,324 @@
+diff -u drm/drmold/drmP.h drm/drmP.h
+--- drm/drmold/drmP.h	2003-04-20 21:16:27.000000000 +0100
++++ drm/drmP.h	2003-04-20 21:17:27.000000000 +0100
+@@ -249,6 +249,15 @@
+ 			DRM(ioremapfree)( (map)->handle, (map)->size );	\
+ 	} while (0)
+ 
++#define DRM_IOREMAPAGP(map, dev)						\
++	(map)->handle = DRM(ioremap_agp)( (map)->offset, (map)->size, (dev) )
++
++#define DRM_IOREMAPAGPFREE(map)						\
++	do {								\
++		if ( (map)->handle && (map)->size )			\
++			DRM(ioremap_agp_free)( (map)->handle, (map)->size );	\
++	} while (0)
++
+ #define DRM_FIND_MAP(_map, _o)						\
+ do {									\
+ 	struct list_head *_list;					\
+@@ -705,6 +714,9 @@
+ extern void	     *DRM(ioremap_nocache)(unsigned long offset, unsigned long size);
+ extern void	     DRM(ioremapfree)(void *pt, unsigned long size);
+ 
++extern void	     *DRM(ioremap_agp)(unsigned long offset, unsigned long size, drm_device_t *dev);
++extern void	     DRM(ioremap_agp_free)(void *pt, unsigned long size);
++
+ #if __REALLY_HAVE_AGP
+ extern agp_memory    *DRM(alloc_agp)(int pages, u32 type);
+ extern int           DRM(free_agp)(agp_memory *handle, int pages);
+Only in drm/: drmP.h~
+diff -u drm/drmold/drm_memory.h drm/drm_memory.h
+--- drm/drmold/drm_memory.h	2003-04-20 21:16:27.000000000 +0100
++++ drm/drm_memory.h	2003-04-20 21:17:27.000000000 +0100
+@@ -314,6 +314,109 @@
+ 	return pt;
+ }
+ 
++#ifdef CONFIG_ALL_PPC
++/* PPC specific routine used by ioremap_agp, to be replaced by some
++ * more generic implementation
++ */
++extern int map_page(unsigned long va, unsigned long pa, int flags);
++
++void *DRM(ioremap_agp)(unsigned long offset, unsigned long size, drm_device_t *dev)
++{
++	void *pt;
++	struct vm_struct *area;
++	struct drm_agp_mem *agpmem;
++	unsigned int flags = _PAGE_NO_CACHE|_PAGE_KERNEL|_PAGE_PRESENT|_PAGE_RW|_PAGE_DIRTY;
++	int err, i;
++		
++	printk("drm: ioremap_agp, offset: 0x%08lx, size: 0x%08lx\n", offset, size);
++	
++#if __REALLY_HAVE_AGP
++	if (!size) {
++		DRM_MEM_ERROR(DRM_MEM_MAPPINGS,
++			      "Mapping 0 bytes at 0x%08lx\n", offset);
++		return NULL;
++	}
++
++	if (!dev->agp || !dev->agp->cant_use_aperture)
++		return DRM(ioremap)(offset, size);
++
++	/* XXX This has to be changed into something more generic
++	 * this implementation is really only valid on PPC
++	 */
++	area = get_vm_area(size, VM_IOREMAP);
++	if (area == 0) {
++		spin_lock(&DRM(mem_lock));
++		++DRM(mem_stats)[DRM_MEM_MAPPINGS].fail_count;
++		spin_unlock(&DRM(mem_lock));
++		printk("->NULL\n");
++		return NULL;
++	}
++	pt = (void *)VMALLOC_VMADDR(area->addr);
++	err = 0;
++	for (i = 0; i < size && err == 0; i += PAGE_SIZE) {
++		unsigned long baddr = offset + i;
++		unsigned long index;
++		
++                /*
++                 * It's AGP memory - find the real physical page to map
++                 */
++                for(agpmem = dev->agp->memory; agpmem; agpmem = agpmem->next) {
++                        if (agpmem->bound <= baddr &&
++                            agpmem->bound + agpmem->pages * PAGE_SIZE > baddr) 
++                                break;
++		}
++		if (!agpmem) {
++			printk("drm: not matching AGP page in ioremap_agp\n");
++			err = 1;
++			break;
++		}
++		index = (baddr - agpmem->bound) >> PAGE_SHIFT;
++		err = map_page(((unsigned long)pt)+i, agpmem->memory->memory[index], flags);
++	}
++	if (err) {
++		vfree((void *)pt);
++		spin_lock(&DRM(mem_lock));
++		++DRM(mem_stats)[DRM_MEM_MAPPINGS].fail_count;
++		spin_unlock(&DRM(mem_lock));
++		printk("->NULL\n");
++		return NULL;
++	}
++		
++	spin_lock(&DRM(mem_lock));
++	++DRM(mem_stats)[DRM_MEM_MAPPINGS].succeed_count;
++	DRM(mem_stats)[DRM_MEM_MAPPINGS].bytes_allocated += size;
++	spin_unlock(&DRM(mem_lock));
++	printk("->pt=0x%p\n", pt);
++	return pt;
++#else
++	return NULL;
++#endif
++}
++
++void DRM(ioremap_agp_free)(void *pt, unsigned long size)
++{
++	int alloc_count;
++	int free_count;
++
++	if (!pt)
++		DRM_MEM_ERROR(DRM_MEM_MAPPINGS,
++			      "Attempt to free NULL pointer\n");
++	else
++		vfree(pt);
++
++	spin_lock(&DRM(mem_lock));
++	DRM(mem_stats)[DRM_MEM_MAPPINGS].bytes_freed += size;
++	free_count  = ++DRM(mem_stats)[DRM_MEM_MAPPINGS].free_count;
++	alloc_count =	DRM(mem_stats)[DRM_MEM_MAPPINGS].succeed_count;
++	spin_unlock(&DRM(mem_lock));
++	if (free_count > alloc_count) {
++		DRM_MEM_ERROR(DRM_MEM_MAPPINGS,
++			      "Excess frees: %d frees, %d allocs\n",
++			      free_count, alloc_count);
++	}
++}
++#endif	/* CONFIG_ALL_PPC */
++
+ void *DRM(ioremap_nocache)(unsigned long offset, unsigned long size)
+ {
+ 	void *pt;
+diff -u drm/drmold/drm_vm.h drm/drm_vm.h
+--- drm/drmold/drm_vm.h	2003-04-20 21:16:27.000000000 +0100
++++ drm/drm_vm.h	2003-04-20 21:17:27.000000000 +0100
+@@ -381,7 +381,16 @@
+ 
+ 	if ( !priv->authenticated ) return -EACCES;
+ 
+-	if (!VM_OFFSET(vma)) return DRM(mmap_dma)(filp, vma);
++	/* We check for "dma". On Apple's UniNorth, it's valid to have
++	 * the AGP mapped at physical address 0
++	 * --BenH.
++	 */
++	if (!VM_OFFSET(vma)
++#if __REALLY_HAVE_AGP
++	    && (!dev->agp || dev->agp->agp_info.device->vendor != PCI_VENDOR_ID_APPLE)
++#endif
++	    )
++		return DRM(mmap_dma)(filp, vma);
+ 
+ 				/* A sequential search of a linked list is
+ 				   fine here because: 1) there will only be
+@@ -420,18 +429,25 @@
+ 	}
+ 
+ 	switch (map->type) {
++#if __REALLY_HAVE_AGP
+         case _DRM_AGP:
+-#if defined(__alpha__)
+-                /*
+-                 * On Alpha we can't talk to bus dma address from the
+-                 * CPU, so for memory of type DRM_AGP, we'll deal with
+-                 * sorting out the real physical pages and mappings
+-                 * in nopage()
+-                 */
+-                vma->vm_ops = &DRM(vm_ops);
+-                break;
+-#endif
++		if (!dev->agp)
++			return -ENODEV;
++		if (dev->agp->cant_use_aperture) {
++	                /*
++	                 * On Alpha we can't talk to bus dma address from the
++	                 * CPU, so for memory of type DRM_AGP, we'll deal with
++	                 * sorting out the real physical pages and mappings
++	                 * in nopage()
++	                 */
++#if defined(__powerpc__)
++			pgprot_val(vma->vm_page_prot) |= _PAGE_NO_CACHE;
++#endif
++	                vma->vm_ops = &DRM(vm_ops);
++	                break;
++	        }
+                 /* fall through to _DRM_FRAME_BUFFER... */        
++#endif /*__REALLY_HAVE_AGP */
+ 	case _DRM_FRAME_BUFFER:
+ 	case _DRM_REGISTERS:
+ 		if (VM_OFFSET(vma) >= __pa(high_memory)) {
+Only in drm/: drmold
+diff -u drm/drmold/r128_cce.c drm/r128_cce.c
+--- drm/drmold/r128_cce.c	2003-04-20 21:16:27.000000000 +0100
++++ drm/r128_cce.c	2003-04-20 21:17:27.000000000 +0100
+@@ -109,6 +109,10 @@
+ }
+ #endif
+ 
++#if __REALLY_HAVE_AGP && defined(CONFIG_ALL_PPC)
++extern unsigned long agp_special_page;
++#endif	
++
+ 
+ /* ================================================================
+  * Engine, FIFO control
+@@ -339,6 +343,14 @@
+ 	SET_RING_HEAD( &dev_priv->ring, 0 );
+ 
+ 	if ( !dev_priv->is_pci ) {
++#if __REALLY_HAVE_AGP && defined(CONFIG_ALL_PPC)
++		if (_machine == _MACH_Pmac) {
++			dev_priv->ring.head = (__volatile__ u32 *) agp_special_page;
++			SET_RING_HEAD( &dev_priv->ring, 0 );
++			R128_WRITE( R128_PM4_BUFFER_DL_RPTR_ADDR,
++				    __pa( dev_priv->ring.head ) );
++		} else
++#endif		
+ 		R128_WRITE( R128_PM4_BUFFER_DL_RPTR_ADDR,
+ 			    dev_priv->ring_rptr->offset );
+ 	} else {
+@@ -540,9 +552,15 @@
+ 				     init->sarea_priv_offset);
+ 
+ 	if ( !dev_priv->is_pci ) {
++#ifdef CONFIG_ALL_PPC
++		DRM_IOREMAPAGP( dev_priv->cce_ring, dev );
++		DRM_IOREMAPAGP( dev_priv->ring_rptr, dev );
++		DRM_IOREMAPAGP( dev_priv->buffers, dev );
++#else
+ 		DRM_IOREMAP( dev_priv->cce_ring );
+ 		DRM_IOREMAP( dev_priv->ring_rptr );
+ 		DRM_IOREMAP( dev_priv->buffers );
++#endif
+ 		if(!dev_priv->cce_ring->handle ||
+ 		   !dev_priv->ring_rptr->handle ||
+ 		   !dev_priv->buffers->handle) {
+@@ -618,9 +636,15 @@
+ #if __REALLY_HAVE_SG
+ 		if ( !dev_priv->is_pci ) {
+ #endif
++#ifdef CONFIG_ALL_PPC
++			DRM_IOREMAPAGPFREE( dev_priv->cce_ring );
++			DRM_IOREMAPAGPFREE( dev_priv->ring_rptr );
++			DRM_IOREMAPAGPFREE( dev_priv->buffers );
++#else
+ 			DRM_IOREMAPFREE( dev_priv->cce_ring );
+ 			DRM_IOREMAPFREE( dev_priv->ring_rptr );
+ 			DRM_IOREMAPFREE( dev_priv->buffers );
++#endif
+ #if __REALLY_HAVE_SG
+ 		} else {
+ 			if (!DRM(ati_pcigart_cleanup)( dev,
+diff -u drm/drmold/radeon_cp.c drm/radeon_cp.c
+--- drm/drmold/radeon_cp.c	2003-04-20 21:16:27.000000000 +0100
++++ drm/radeon_cp.c	2003-04-20 21:18:12.000000000 +0100
+@@ -36,7 +36,10 @@
+ 
+ #define RADEON_FIFO_DEBUG	0
+ 
+-
++#if __REALLY_HAVE_AGP && defined(CONFIG_ALL_PPC)
++extern unsigned long agp_special_page;
++#endif	
++ 
+ 
+ /* CP microcode (from ATI) */
+ static u32 R200_cp_microcode[][2] = {
+@@ -889,6 +892,14 @@
+ 	dev_priv->ring.tail = cur_read_ptr;
+ 
+ 	if ( !dev_priv->is_pci ) {
++#if __REALLY_HAVE_AGP && defined(CONFIG_ALL_PPC)
++		if (_machine == _MACH_Pmac) {
++			dev_priv->ring.head = (__volatile__ u32 *) agp_special_page;
++			SET_RING_HEAD( &dev_priv->ring, cur_read_ptr );
++			RADEON_WRITE( RADEON_CP_RB_RPTR_ADDR,
++				    __pa( dev_priv->ring.head ) );
++		} else
++#endif		
+ 		RADEON_WRITE( RADEON_CP_RB_RPTR_ADDR,
+ 			      dev_priv->ring_rptr->offset );
+ 	} else {
+@@ -1142,9 +1153,15 @@
+ 				       init->sarea_priv_offset);
+ 
+ 	if ( !dev_priv->is_pci ) {
++#ifdef CONFIG_ALL_PPC
++		DRM_IOREMAPAGP( dev_priv->cp_ring, dev );
++		DRM_IOREMAPAGP( dev_priv->ring_rptr, dev );
++		DRM_IOREMAPAGP( dev_priv->buffers, dev );
++#else
+ 		DRM_IOREMAP( dev_priv->cp_ring );
+ 		DRM_IOREMAP( dev_priv->ring_rptr );
+ 		DRM_IOREMAP( dev_priv->buffers );
++#endif
+ 		if(!dev_priv->cp_ring->handle ||
+ 		   !dev_priv->ring_rptr->handle ||
+ 		   !dev_priv->buffers->handle) {
+@@ -1263,9 +1280,15 @@
+ 		drm_radeon_private_t *dev_priv = dev->dev_private;
+ 
+ 		if ( !dev_priv->is_pci ) {
++#ifdef CONFIG_ALL_PPC
++			DRM_IOREMAPAGPFREE( dev_priv->cp_ring );
++			DRM_IOREMAPAGPFREE( dev_priv->ring_rptr );
++			DRM_IOREMAPAGPFREE( dev_priv->buffers );
++#else
+ 			DRM_IOREMAPFREE( dev_priv->cp_ring );
+ 			DRM_IOREMAPFREE( dev_priv->ring_rptr );
+ 			DRM_IOREMAPFREE( dev_priv->buffers );
++#endif
+ 		} else {
+ #if __REALLY_HAVE_SG
+ 			if (!DRM(ati_pcigart_cleanup)( dev,
