@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.1 2003/07/12 09:28:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.2 2003/07/18 07:45:05 lu_zero Exp $
 
+
+  18 Jul 2003; Luca Barbato <lu_zero@gentoo.org> gnuconfig-20030708.ebuild:
+  Added the missing ppc.
 
 *gnuconfig-20030708 (12 Jul 2003)
 
