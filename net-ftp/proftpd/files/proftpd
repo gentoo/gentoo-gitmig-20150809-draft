@@ -1,0 +1,29 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:78:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=proftpd
+opts="start stop restart"
+
+PIDFILE=/var/run/proftpd.pid
+EXE=/usr/sbin/proftpd
+
+start() {
+    ebegin "Starting $SERVICE..."
+    start-stop-daemon --start --quiet --exec $EXE -- -d -p $PIDFILE
+    eend $? "Started $SERVICE." "Error Starting $SERVICE."
+}
+
+stop() {
+    ebegin "Stopping $SERVICE..."
+    start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
+    eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+}
+
+restart() {
+    stop
+    start
+}
+
+doservice ${@}

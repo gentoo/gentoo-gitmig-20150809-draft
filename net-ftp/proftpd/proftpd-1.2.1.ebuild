@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.1.ebuild,v 1.3 2001/07/20 18:00:06 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.1.ebuild,v 1.4 2001/07/21 07:57:32 jerry Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="proftpd."
@@ -73,4 +73,8 @@ src_install() {
     dodoc rfc/*.txt
 
     cp ${FILESDIR}/proftpd.conf ${D}/etc/proftpd
+
+    insinto /etc/rc.d/init.d
+    insopts -m 0755
+    doins ${FILESDIR}/proftpd
 }
