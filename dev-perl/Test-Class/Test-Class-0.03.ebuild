@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/Test-Class-0.03.ebuild,v 1.3 2004/07/14 20:37:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/Test-Class-0.03.ebuild,v 1.4 2004/12/19 15:19:59 mcummings Exp $
 
 inherit perl-module
 
@@ -18,6 +18,7 @@ DEPEND="dev-perl/Attribute-Handlers
 		>=dev-perl/Storable-2*
 		dev-perl/Test-Simple
 		dev-perl/Test-Builder-Tester
+		dev-perl/Test-Differences
 		dev-perl/Test-Exception
 		dev-perl/Test-SimpleUnit
 		dev-perl/Pod-Coverage"
