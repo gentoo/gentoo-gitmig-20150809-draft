@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/qtunit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/ChangeLog,v 1.4 2002/03/15 17:24:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/ChangeLog,v 1.5 2002/06/12 16:26:14 m0rpheus Exp $
+
+*qtunit-0.9.7 (12 Jun 2002)
+
+  12 Jun 2002; F.Meyndert <m0rpheus@gentoo.org> qtunit-0.9.7.ebuild,
+  files/digest-qtunit-0.9.7 :
+  
+  Upgraded to latest version.
+
 
 *qtunit-0.9.6 (15 Mar 2002)
 
