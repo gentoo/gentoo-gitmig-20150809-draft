@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.102 2004/08/30 15:45:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.103 2004/08/30 19:52:01 carlo Exp $
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   kdenetwork-3.1.5.ebuild, kdenetwork-3.2.1.ebuild, kdenetwork-3.2.3.ebuild,
@@ -18,6 +18,9 @@
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   kdenetwork-3.1.5.ebuild:
   Masked kdenetwork-3.1.5.ebuild stable for ppc
+
+  30 Aug 2004; Carsten Lohrke <carlo@gentoo.org> kdenetwork-3.3.0.ebuild:
+  block net-misc/ksambaplugin
 
   25 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.2.3-r1.ebuild:
   x86 stable
