@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.18 2004/08/07 21:27:01 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.19 2004/10/05 03:16:35 tgall Exp $
+
+  04 Oct 2004; Tom Gall <tgall@gentoo.org> enscript-1.6.3-r1.ebuild:
+  stable on ppc64, bug #64274
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> enscript-1.6.3-r1.ebuild,
   enscript-1.6.3.ebuild:
