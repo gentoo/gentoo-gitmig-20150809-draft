@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50-r2.ebuild,v 1.1 2002/12/03 20:26:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50-r2.ebuild,v 1.2 2002/12/03 20:40:10 raker Exp $
 
 IUSE="ssl ldap"
 
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="PICO"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 
 src_unpack() {
