@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.6.ebuild,v 1.15 2005/02/20 19:22:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.6.ebuild,v 1.16 2005/02/21 18:21:19 lanius Exp $
 
 inherit libtool
 
@@ -65,9 +65,7 @@ src_compile() {
 	# IJS Patch
 	sed -i -e "s/<ijs/<ijs\/ijs/g" src/ghost/ijsgimpprint.c
 
-	MAKEOPTS="${MAKEOPTS} -j1"
-
-	emake || die "compile problem"
+	emake -j1 || die "compile problem"
 }
 
 src_install () {
