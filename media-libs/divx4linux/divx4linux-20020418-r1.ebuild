@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/divx4linux-20020418-r1.ebuild,v 1.1 2002/12/01 21:41:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/divx4linux-20020418-r1.ebuild,v 1.2 2002/12/02 14:12:55 azarah Exp $
 
-DXVER=501
+DXVER="501"
 DESCRIPTION="Binary release of DivX Codec 5.0.1"
 SRC_URI="http://download.divx.com/divx/${PN}${DXVER}-${PV}.tgz"
 HOMEPAGE="http://www.divx.com/"
@@ -11,7 +11,8 @@ SLOT="0"
 LICENSE="DIVX"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	!media-libs/xvid"
 
 DEBUG="yes"
 RESTRICT="nostrip"
@@ -29,3 +30,4 @@ src_install() {
 	dodir /usr/share/doc/${PF}/html
 	cp -a 'DivX MPEG-4 Codec and Its Interface.htm' ${D}/usr/share/doc/${PF}/html
 }
+
