@@ -1,13 +1,14 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.2 2003/09/10 18:36:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.3 2003/09/11 19:24:42 wolf31o2 Exp $
 
 inherit games
 
 IUSE="dedicated"
 DESCRIPTION="Unreal Tournament 2003 - Sequel to the 1999 Game of the Year multi-player first-person shooter"
 HOMEPAGE="http://www.unrealtournament2003.com/"
-SRC_URI="ftp://david.hedbor.org/ut2k3/updates/${PN}lnx_2107to${PV}.sh.bin"
+SRC_URI="http://unreal.epicgames.com/linux/ut2003/${PN}lnx_2107to${PV}.sh.bin
+	ftp://david.hedbor.org/ut2k3/updates/${PN}lnx_2107to${PV}.sh.bin"
 
 LICENSE="ut2003"
 SLOT="0"
@@ -15,7 +16,7 @@ KEYWORDS="x86"
 RESTRICT="nostrip"
 
 DEPEND="virtual/glibc"
-RDEPEND="dedicated? ( games-server/ut2003-ded )
+RDEPEND="dedicated? ( app-games/ut2003-ded )
 	!dedicated? ( virtual/opengl )"
 
 S=${WORKDIR}
@@ -80,8 +81,7 @@ src_install() {
 	rm ${Ddir}/System/{Def{ault,User},UT2003,User}.ini || die "deleting ini files"
 
 	# unpack_makeself won't take absolute path
-	cd ${S}
-	tail +266 ${GAMES_CD}/linux_installer.sh | tar xf -
+	unpack_makeself ${GAMES_CD}/linux_installer.sh || die "unpacking linux installer"
 
 	# install extra help files
 	insinto ${dir}/Help
@@ -96,11 +96,11 @@ src_install() {
 	doins ${S}/eula/License.int
 
 	# uncompress original binaries/libraries
-	tar xf ut2003lnxbins.tar || die "unpacking original binaries/libraries"
+	tar -xf ut2003lnxbins.tar || die "unpacking original binaries/libraries"
 
 	# copying extra/updater
 	cp -r ${S}/{extras,updater} ${Ddir} || die "copying extras/updater"
-
+	
 	# install benchmarks
 	exeinto ${dir}/Benchmark
 	doexe ${S}/Benchmark/botmatch-* ${S}/Benchmark/flyby-* || die "copying benchmark files"
