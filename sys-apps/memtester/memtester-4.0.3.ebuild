@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/memtester-4.0.3.ebuild,v 1.1 2004/08/12 03:38:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/memtester-4.0.3.ebuild,v 1.2 2004/08/12 08:57:56 mr_bones_ Exp $
 
 inherit fixheadtails gcc
 
@@ -22,8 +22,12 @@ src_unpack() {
 	ht_fix_file Makefile
 }
 
+src_compile() {
+	emake || die "emake failed"
+}
+
 src_install() {
-	dosbin memtester || die
+	dosbin memtester || die "dosbin failed"
 	doman memtester.8
 	dodoc BUGS CHANGELOG README README.tests
 }
