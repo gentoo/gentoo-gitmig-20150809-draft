@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ocaml-mode-3.07.ebuild,v 1.3 2004/06/24 22:19:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ocaml-mode-3.07.ebuild,v 1.4 2004/09/03 22:03:02 slarti Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ SRC_URI="http://caml.inria.fr/distrib/${MY_P}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="virtual/emacs"
