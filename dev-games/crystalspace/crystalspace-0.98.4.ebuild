@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.7 2005/01/07 02:04:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.8 2005/02/23 17:01:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="ppc x86"
-IUSE="oggvorbis mikmod openal truetype 3ds mng"
+IUSE="3ds mikmod mng oggvorbis openal truetype"
 
 RDEPEND="sys-libs/zlib
 	>=media-libs/libpng-1.2.1
@@ -38,8 +38,9 @@ CRYSTAL_PREFIX="/opt/crystal"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gl.patch #75702
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gl.patch" #75702
+	echo "CRYSTAL=\"${CRYSTAL_PREFIX}\"" > 90crystalspace
 }
 
 src_compile() {
@@ -62,7 +63,5 @@ src_install() {
 	find "${D}"/${CRYSTAL_PREFIX} -type d -exec chmod a+rx '{}' \;
 	chmod a+rx "${D}"/${CRYSTAL_PREFIX}/bin/*
 
-	dodir /etc/env.d
-	echo "CRYSTAL=\"${CRYSTAL_PREFIX}\"" > 90crystalspace
 	doenvd 90crystalspace
 }
