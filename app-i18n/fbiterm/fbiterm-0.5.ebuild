@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5.ebuild,v 1.1 2003/11/24 14:11:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5.ebuild,v 1.2 2004/04/06 03:50:53 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Framebuffer internationalized terminal emulator"
 HOMEPAGE="http://www-124.ibm.com/linux/projects/iterm/"

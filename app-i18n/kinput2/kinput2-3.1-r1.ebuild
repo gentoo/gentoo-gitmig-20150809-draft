@@ -1,14 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.5 2004/03/25 07:28:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.6 2004/04/06 03:56:48 vapier Exp $
+
+inherit eutils
 
 MY_P="${PN}-v${PV}"
 DESCRIPTION="A Japanese input server which supports the XIM protocol"
-SRC_URI="ftp://ftp.sra.co.jp/pub/x11/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.nec.co.jp/canna/"
+SRC_URI="ftp://ftp.sra.co.jp/pub/x11/${PN}/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~amd64"
 IUSE="canna freewnn"
 

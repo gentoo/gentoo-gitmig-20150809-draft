@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r1.ebuild,v 1.2 2004/03/27 16:27:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r1.ebuild,v 1.3 2004/04/06 03:59:58 vapier Exp $
 
-IUSE=""
-
-inherit ruby
+inherit ruby eutils
 
 DESCRIPTION="rskkserv is an alternative version of skkserv implemented by Ruby"
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=rskkserv"
@@ -19,12 +17,12 @@ DEPEND="dev-lang/ruby
 RDEPEND="${DEPEND}
 	app-i18n/skk-jisyo"
 PROVIDE="virtual/skkserv"
+
 USE_RUBY="ruby16 ruby18 ruby19"
 
 S=${WORKDIR}/${PN}-cvs
 
 src_unpack() {
-
 	unpack ${P}.tar.gz
 
 	cd ${S}
@@ -37,18 +35,16 @@ src_unpack() {
 }
 
 src_compile() {
-
-	EXTRA_ECONF="--with-dicfile=/usr/share/skk/SKK-JISYO.L
-		--with-cachedir=/var/lib/rskkserv
-		--with-piddir=/var/run
-		--with-logdir=/var/log"
-
-	econf || die
+	econf \
+		--with-dicfile=/usr/share/skk/SKK-JISYO.L \
+		--with-cachedir=/var/lib/rskkserv \
+		--with-piddir=/var/run \
+		--with-logdir=/var/log \
+		|| die
 	emake || die
 }
 
 src_install() {
-
 	keepdir /var/lib/rskkserv
 	einstall || die
 
@@ -65,7 +61,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "If you want to add auxiliary dictionaries (e.g. SKK-JISYO.JIS2,"
 	einfo "SKK-JISYO.jinmei, SKK-JISYO.2ch and so on) you need to emerge"

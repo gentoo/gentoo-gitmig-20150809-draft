@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.11 2004/03/30 06:14:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.12 2004/04/06 03:50:44 vapier Exp $
 
-inherit cannadic
+inherit cannadic eutils
 
 IUSE="doc"
 

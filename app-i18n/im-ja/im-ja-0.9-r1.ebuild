@@ -1,22 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.9-r1.ebuild,v 1.4 2004/03/21 21:26:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.9-r1.ebuild,v 1.5 2004/04/06 03:53:32 vapier Exp $
 
-inherit gnome2
-
-IUSE="gnome canna freewnn debug"
+inherit gnome2 eutils
 
 DESCRIPTION="A Japanese input module for GTK2 and XIM"
 HOMEPAGE="http://im-ja.sourceforge.net/"
 SRC_URI="http://im-ja.sourceforge.net/${P}.tar.gz
 	http://im-ja.sourceforge.net/old/${P}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc"
 SLOT="0"
-
-S=${WORKDIR}/${P}
-
-DOCS="AUTHORS README ChangeLog TODO"
+KEYWORDS="x86 ~sparc"
+IUSE="gnome canna freewnn debug"
 
 DEPEND="dev-lang/perl
 	dev-perl/URI
@@ -32,10 +28,9 @@ RDEPEND="virtual/glibc
 	freewnn? ( app-i18n/freewnn )
 	canna? ( app-i18n/canna )"
 
-use debug && RESTRICT="nostrip"
+DOCS="AUTHORS README ChangeLog TODO"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-canna-3.7-gentoo.diff

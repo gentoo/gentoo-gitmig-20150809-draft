@@ -1,25 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/kcc-1.0.ebuild,v 1.6 2004/01/07 09:46:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/kcc-1.0.ebuild,v 1.7 2004/04/06 03:56:22 vapier Exp $
 
-inherit gcc
+inherit gcc eutils
 
-IUSE=""
-
-KEYWORDS="x86"
-S="${WORKDIR}/${PN}"
 DESCRIPTION="A Kanji code converter"
-SRC_URI="ftp://ftp.jp.freebsd.org/pub/FreeBSD/ports/distfiles/${PN}.tar.gz"
 HOMEPAGE="" 	#There doesn't seem to be a home page for this package!
+SRC_URI="ftp://ftp.jp.freebsd.org/pub/FreeBSD/ports/distfiles/${PN}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 
-SLOT="0"
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
-
-	# unpack the archive
 	unpack ${A}
 
 	cd ${S}
@@ -30,12 +27,10 @@ src_unpack() {
 }
 
 src_compile() {
-
 	emake || die
 }
 
-src_install () {
-
+src_install() {
 	dobin kcc || die
 
 	dodoc README

@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/kon2-0.3.9b-r1.ebuild,v 1.4 2003/12/28 19:48:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/kon2-0.3.9b-r1.ebuild,v 1.5 2004/04/06 03:57:06 vapier Exp $
 
-IUSE=""
+inherit eutils
 
 DESCRIPTION="KON Kanji ON Linux console"
-SRC_URI="ftp://ftp.linet.gr.jp/pub/KON/${P}.tar.gz"
 HOMEPAGE=""
+SRC_URI="ftp://ftp.linet.gr.jp/pub/KON/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
@@ -15,8 +15,6 @@ KEYWORDS="x86"
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}
 	>=media-fonts/konfont-0.1"
-
-S=${WORKDIR}/${P}
 
 src_unpack(){
 	unpack ${A}

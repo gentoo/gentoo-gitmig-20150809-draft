@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.2.4.ebuild,v 1.6 2004/03/20 17:55:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.2.4.ebuild,v 1.7 2004/04/06 04:03:21 vapier Exp $
+
+inherit eutils
 
 IUSE="gtk nls debug"
 
@@ -11,8 +13,6 @@ SRC_URI="http://freedesktop.org/Software/UimDownload/${P}.tar.gz"
 LICENSE="GPL-2 | BSD"
 SLOT="0"
 KEYWORDS="x86 alpha"
-
-S="${WORKDIR}/${P}"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl

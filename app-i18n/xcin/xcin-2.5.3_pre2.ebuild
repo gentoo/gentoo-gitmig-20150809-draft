@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.7 2003/11/04 00:32:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.8 2004/04/06 04:05:44 vapier Exp $
+
+inherit eutils
 
 XCIN="${P/_/.}.tar.gz"
 CHEWING="chewing-2002Jan07-snapshot.tar.gz"
@@ -19,7 +21,6 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=app-i18n/libtabe-0.2.5"
 
 S=${WORKDIR}/${PN}
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${XCIN}
