@@ -1,4 +1,6 @@
 MD5 b76457fde03f0ffd4c34131944915850 sumika-0.02.01.ebuild 825
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 5f4c446a8371cb708ef5f346b4319fe6 ChangeLog 335
+MD5 5136ebd5252baa0ba8bdbe5e1366597e sumika-0.03.ebuild 796
 MD5 1cfc2d11f51ec9667208c5f542d1a778 files/digest-sumika-0.02.01 63
+MD5 b9bd92b77151bc2c0a6911b957bfbc7d files/digest-sumika-0.03 63

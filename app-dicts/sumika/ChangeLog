@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/sumika
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/ChangeLog,v 1.1 2003/09/10 19:43:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/ChangeLog,v 1.2 2003/10/07 00:20:24 usata Exp $
+
+*sumika-0.03 (07 Oct 2003)
+
+  07 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> sumika-0.02.01.ebuild,
+  sumika-0.03.ebuild:
+  Version bumped. Added canna IUSE flag (sumika-0.02 doesn't work with
+  >=app-i18n/canna-3.6_p4). Marked 0.02 stable for x86.
 
 *sumika-0.02.01 (11 Sep 2003)
 
