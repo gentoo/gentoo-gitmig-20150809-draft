@@ -1,6 +1,15 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.43 2004/04/15 15:45:41 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.44 2004/04/15 15:50:54 spider Exp $
+
+  15 Apr 2004; <spider@gentoo.org> nvidia-glx-1.0.4363.ebuild,
+  nvidia-glx-1.0.4496-r1.ebuild, nvidia-glx-1.0.4496.ebuild,
+  nvidia-glx-1.0.4499.ebuild, nvidia-glx-1.0.5328-r1.ebuild,
+  nvidia-glx-1.0.5332-r1.ebuild, nvidia-glx-1.0.5332-r2.ebuild,
+  nvidia-glx-1.0.5336-r2.ebuild:
+  added export _POSIX2_VERSION="199209" to all ebuilds to work around broken
+  chown syntax in upstream release. This is a workaround until nvidia fixes
+  things.
 
 *nvidia-glx-1.0.4496-r1 (15 Apr 2004)
 

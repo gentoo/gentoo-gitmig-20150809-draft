@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5332-r2.ebuild,v 1.3 2004/04/13 16:50:09 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5332-r2.ebuild,v 1.4 2004/04/15 15:50:54 spider Exp $
 
 PKG_V="pkg0"
 NV_V="${PV/1.0./1.0-}"
@@ -20,6 +20,7 @@ DEPEND="virtual/glibc
 	>=x11-base/opengl-update-1.3
 	~media-video/nvidia-kernel-${PV}"
 PROVIDE="virtual/opengl"
+export _POSIX2_VERSION="199209"
 
 pkg_setup() {
 	# We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
