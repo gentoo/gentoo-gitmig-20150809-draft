@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/canny
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/ChangeLog,v 1.1 2005/01/04 11:54:52 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/ChangeLog,v 1.2 2005/03/12 15:36:41 citizen428 Exp $
+
+*canny-0.1.0 (12 Mar 2005)
+
+  12 Mar 2005; Michael Kohl <citizen428@gentoo.org> canny-0.1.0.ebuild:
+  Marked stable on x86.
 
   04 Jan 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml:
   Initial import. Ebuild submitted by pyon <gentoo@pyon.net>, closing bug #67053
