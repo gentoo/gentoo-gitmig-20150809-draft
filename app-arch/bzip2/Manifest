@@ -1,5 +1,3 @@
-MD5 ac6de8020cb4b473871724a7df8ed1a5 bzip2-1.0.2-r3.ebuild 1877
-MD5 d0e4aca01c7ee783a8380d5919585d6b ChangeLog 3213
-MD5 71df626dba7802da5baa41fd751c2481 bzip2-1.0.2-r2.ebuild 1713
 MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r3 63
-MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r2 63
+MD5 6c146871658f9a998f6030caca70a2ce bzip2-1.0.2-r3.ebuild 1918
+MD5 65112d80524f0dd7aefe379e47a36044 ChangeLog 3342
