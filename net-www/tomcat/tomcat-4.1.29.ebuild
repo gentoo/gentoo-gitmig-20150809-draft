@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.18.ebuild,v 1.2 2004/02/16 01:04:02 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.29.ebuild,v 1.1 2004/02/16 01:04:02 zx Exp $
 
-DESCRIPTION="Apache Servlet-2.4/JSP-2.0 Container"
-SRC_URI="http://apache.mirrors.pair.com/jakarta/tomcat-`echo ${PV} | cut -b 1`/v${PV}/bin/jakarta-${P}.tar.gz"
+DESCRIPTION="Apache Servlet-2.3/JSP-1.2 Container"
+SRC_URI="http://apache.sunsite.ualberta.ca/jakarta/tomcat-4/v4.1.29/bin/${At}"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 LICENSE="Apache-1.1"
 SLOT="0"
 DEPEND="sys-apps/sed"
@@ -76,7 +76,7 @@ src_install() {
 		rm ${i}
 	done
 
-	dodoc RELEASE-NOTES RUNNING.txt LICENSE
+	dodoc RELEASE-NOTES-* README.txt RUNNING.txt LICENSE RELEASE-PLAN-4.1.txt
 
 	chown -R tomcat.tomcat ${S}
 	DIROPTIONS="--mode=0755 --owner=tomcat --group=tomcat"

@@ -1,6 +1,35 @@
 # ChangeLog for net-www/tomcat
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.23 2003/12/14 23:29:24 spider Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.24 2004/02/16 01:04:02 zx Exp $
+
+*tomcat-5.0.18 (15 Feb 2004)
+
+  15 Feb 2004; <zx@gentoo.org> tomcat-4.1.29.ebuild, tomcat-5.0.18.ebuild:
+  Massive bugfixes + version bumps. Huge thanks to Chetan Sarva
+  <gentoo-bugs@fw2.net> for the ebuilds + various fixes. This update adds 5.0.18
+  and 4.1.29 tomcat versions. It also fixes the following bugs:
+  
+  Bug #38949
+  
+  Bug #38952
+  
+  Bug #21772
+  
+  Bug #38358
+  
+  Bug #21744
+  
+  Bug #22040
+  
+  Bug #19723
+  
+  Bug #39819
+  
+  Bug #26994
+  
+  Bug #32408
+  
+  Bug #35094
 
   15 Dec 2003; <spider@gentoo.org> tomcat-4.1.24-r1.ebuild:
   QA: fixing chown user.group to user:group, bug #35127
