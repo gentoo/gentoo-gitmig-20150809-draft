@@ -1,5 +1,6 @@
---- libdv-0.99/Makefile.in	2003-05-13 10:47:47.000000000 +0200
-+++ libdv-0.99/Makefile.in	2003-05-13 10:47:54.000000000 +0200
+diff -ruN libdv-0.99/Makefile.in libdv-0.99/Makefile.in
+--- libdv-0.99/Makefile.in	2003-01-02 09:40:44.000000000 -0800
++++ libdv-0.99/Makefile.in	2003-08-25 11:16:40.000000000 -0700
 @@ -101,7 +101,7 @@
  am__include = @am__include@
  am__quote = @am__quote@
@@ -9,8 +10,9 @@
  
  AUX_DIST = $(ac_aux_dir)/config.guess \
                                     $(ac_aux_dir)/config.sub \
---- libdv-0.99/configure	2003-05-20 11:01:08.000000000 +0200
-+++ libdv-0.99/configure	2003-05-20 11:03:23.000000000 +0200
+diff -ruN libdv-0.99/configure libdv-0.99/configure
+--- libdv-0.99/configure	2003-01-02 09:40:46.000000000 -0800
++++ libdv-0.99/configure	2003-08-25 11:17:30.000000000 -0700
 @@ -7651,6 +7651,7 @@
  
  
@@ -35,6 +37,15 @@
  
  
  
+@@ -8362,7 +8367,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lXv $GTK_LIBS $LIBS"
++LIBS="-lXv -L/usr/X11R6/lib $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ #include "confdefs.h"
 @@ -9978,8 +9983,11 @@
  
  
