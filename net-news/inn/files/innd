@@ -16,5 +16,6 @@ start() {
 stop() {
 	ebegin "Stopping innd"
 	su - news -c '/usr/lib/news/bin/rc.news stop'
+	sleep 2
 	eend $?
 }

@@ -63,6 +63,10 @@ src_install() {
 		PATHDB=${D}/var/spool/news/db \
 		PATHSPOOL=${D}/var/spool/news \
 		PATHTMP=${D}/var/spool/news/tmp \
+		MAN1=${D}/usr/share/man/man1 \
+		MAN3=${D}/usr/share/man/man3 \
+		MAN5=${D}/usr/share/man/man5 \
+		MAN8=${D}/usr/share/man/man8 \
 		install || die "make died"
 	P=${OLD_P}
 
@@ -107,4 +111,8 @@ pkg_postinst() {
 	einfo 'a minimal active file has been installed.  You will need to'
 	einfo 'touch history and run "makedbz -i" to initialize the history'
 	einfo 'database.  See INSTALL for more information.'
+	einfo ''
+	einfo 'You need to assign a real shell to the news user, or else'
+	einfo 'starting inn will fail. You can use "usermod -s /bin/bash news"'
+	einfo 'for this.'
 }
