@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.5 2004/03/24 23:12:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.6 2004/05/24 22:58:43 aliz Exp $
+
+*WWW-Mechanize-1.02 (24 May 2004)
+
+  24 May 2004; Daniel Ahlberg <aliz@gentoo.org> WWW-Mechanize-1.02.ebuild:
+  Updated dependency for xmltv-0.5.34.
 
   25 Mar 2004; Martin Holzer <mholzer@gentoo.org> WWW-Mechanize-0.72.ebuild:
   fixing depend. see 45343
