@@ -1,27 +1,11 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.8 2005/02/07 04:17:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.9 2005/02/09 14:19:53 vapier Exp $
 
-  06 Feb 2005; Joshua Kinard <kumba@gentoo.org> automake-wrapper-1.ebuild:
-  Marked stable on mips.
+*automake-wrapper-1-r1 (08 Feb 2004)
 
-  31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
-  automake-wrapper-1.ebuild:
-  Stable on sparc
-
-  31 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
-  automake-wrapper-1.ebuild:
-  Stable on alpha.
-
-  30 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
-  automake-wrapper-1.ebuild:
-  Stable on ppc.
-
-  29 Jan 2005; Markus Rothe <corsair@gentoo.org> automake-wrapper-1.ebuild:
-  Stable on ppc64
-
-  29 Jan 2005; Luca Barbato <lu_zero@gentoo.org> automake-wrapper-1.ebuild:
-  Fix bug #79926
+  08 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Force people to re-emerge.
 
   14 Nov 2004; Mike Frysinger <vapier@gentoo.org> -files/am-wrapper-1.pl,
   +files/am-wrapper-1.sh, automake-wrapper-1.ebuild:
