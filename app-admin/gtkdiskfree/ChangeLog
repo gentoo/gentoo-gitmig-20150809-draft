@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/gtkdiskfree
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.1 2002/11/06 06:31:21 blocke Exp $
+
+*gtkdiskfree-1.8.4 (06 Nov 2002)
+
+  06 Nov 2002; Bruce A. Locke <blocke@shivan.org> gtkdiskfree-1.8.4.ebuild:
+  Initial version.  Fixes long standing bug #654 filed by
+  mr.big@pc-trouble.de (Jens Blaesche)
+
