@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/ulex
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.1 2003/10/23 04:45:29 george Exp $
+
+*ulex-0.2.ebuild (22 Oct 2003)
+
+  22 Oct 2003; George Shapovalov <george@gentoo.org> Manifest, ulex-0.2.ebuild, files/{digest-ulex-0.2,ulex-0.2-Makefile.patch} :
+  initial release (#30391)
+  ulex: a lexer generator for unicode
+  ebuild submitted by Matthieu Sozeau <mattam@altern.org>
