@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.11 2004/04/14 11:32:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.12 2004/04/26 01:42:31 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> tclx-8.3-r1.ebuild,
+  tclx-8.3.ebuild:
+  Add die following econf for bug 48950
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> tclx-8.3-r1.ebuild,
   tclx-8.3.ebuild:
