@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.7.ebuild,v 1.11 2004/07/20 06:28:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.7.ebuild,v 1.12 2004/09/01 17:31:36 eradicator Exp $
 
 IUSE="alsa oss arts"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tse3/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 
 DEPEND="alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )"
