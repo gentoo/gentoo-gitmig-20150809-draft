@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.14 2003/02/12 06:54:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.15 2003/03/10 00:02:22 liquidx Exp $
+
+*libgda-0.10.0 (09 Mar 2003)
+
+  09 Mar 2003; Alastair Tse <liquidx@gentoo.org> libgda-0.10.0.ebuild:
+  big version bump. resolves #9683 and #16970.
 
   13 Jan 2003; foser <foser@gentoo.org> libgda-0.2.96-r2.ebuild :
   Removed --without-ldap line, it did just the opposite (#12513)
