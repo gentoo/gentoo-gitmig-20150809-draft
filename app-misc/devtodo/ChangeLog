@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.5 2003/02/12 04:58:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.6 2003/12/09 19:02:23 seemant Exp $
+
+  09 Dec 2003; Seemant Kulleen <seemant@gentoo.org> devtodo-0.1.11-r1.ebuild,
+  devtodo-0.1.14.ebuild, devtodo-0.1.17.ebuild, files/devtodo.patch:
+  Added patch to have devtodo compile with gcc-3.3, patch is actually from:
+  http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=195195 and was submitted in
+  our bug #35449 by jim_jim33@hotmail.com
 
 *devtodo-0.1.17 (04 Jan 2003)
 

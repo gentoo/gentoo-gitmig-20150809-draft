@@ -1,22 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.17.ebuild,v 1.5 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.17.ebuild,v 1.6 2003/12/09 19:02:23 seemant Exp $
 
 IUSE=""
 DESCRIPTION="A nice command line todo list for developers"
-SRC_URI="http://devtodo.sourceforge.net/${PV}/${P}.tar.gz"
 HOMEPAGE="http://devtodo.sourceforge.net/"
+SRC_URI="http://devtodo.sourceforge.net/${PV}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Patch to allow compilation with gcc-3.3
+	epatch ${FILESDIR}/${PN}.patch
+}
+
 src_compile() {
-	econf --sysconfdir=/etc/devtodo
-	emake
+	econf  \
+		--sysconfdir=/etc/devtodo || die
+	emake || die
 }
 
 src_install() {
