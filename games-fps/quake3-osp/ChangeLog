@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3-osp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-osp/ChangeLog,v 1.5 2004/06/24 22:45:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-osp/ChangeLog,v 1.6 2004/12/29 00:05:26 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *quake3-osp-1.03a (02 Jun 2003)
 
@@ -17,7 +20,7 @@
 
 *quake3-osp-1.01 (13 Feb 2003)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> quake3-osp-1.01.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> quake3-osp-1.01.ebuild :
   Added KEYWORDS.
   25 Jun 2002; J.Alberto S.L. <bass@gentoo.org> quake3-osp-1.01.ebuild:
   First relase.

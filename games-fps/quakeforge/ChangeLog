@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quakeforge
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.7 2004/06/24 22:46:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.8 2004/12/29 00:06:09 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> quakeforge-0.5.4.ebuild,
   quakeforge-0.5.5.ebuild:
@@ -45,11 +48,11 @@
 
 *quakeforge-0.5.0 (21 julio 2002)
 
-  22 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> quakeforge-0.5.0.ebuild :  
+  22 Aug 2002; J. Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> quakeforge-0.5.0.ebuild :  
   Now SRC_URI i direct to the tarball of quakeforge in Gentoo mirrors,
   and not to the hourly created in the official homepage.
   Aclaration: before the tarball used was the _same_ of now.
 
-  21 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> quakeforge-0.5.0.ebuild :
+  21 Jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> quakeforge-0.5.0.ebuild :
   First Relase.
 
