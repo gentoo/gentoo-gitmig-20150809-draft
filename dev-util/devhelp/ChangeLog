@@ -1,9 +1,13 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.5 2002/09/01 18:19:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.6 2002/10/20 13:05:24 cselkirk Exp $
 
 *devhelp-0.4-r1 (04 Jul 2002)
  
+  20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> devhelp-0.4-r1.ebuild :
+
+  Added ppc to KEYWORDS.
+
   01 Sep 2002; Seemant Kulleen <seemant@gentoo.org> devhelp-0.4-r1.ebuild :
 
   typo fix submitted by ska-fan in #gentoo-dev
