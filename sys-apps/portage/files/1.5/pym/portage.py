@@ -1816,9 +1816,8 @@ class dblink:
 		mylines=myelement.readlines()
 		myreturn=[]
 		for x in mylines:
-			myline=x[:-1]
-			if myline:
-				myreturn.append(myline)
+			for y in string.split(x[:-1]):
+				myreturn.append(y)
 		myelement.close()
 		return myreturn
 	
