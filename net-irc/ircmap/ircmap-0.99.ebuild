@@ -1,6 +1,6 @@
 # Copyright 2002 Paul Belt
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.1 2002/12/12 17:42:33 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.2 2003/07/13 12:54:50 aliz Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://pasky.ji.cz/~pasky/irc/"
 SRC_URI="http://pasky.ji.cz/~pasky/irc/${PN}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 RDEPEND="virtual/glibc
          media-gfx/graphviz"
 DEPEND="${RDEPEND}"

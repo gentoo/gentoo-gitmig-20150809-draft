@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.9 2003/05/22 07:52:32 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.10 2003/07/13 12:54:50 aliz Exp $
 
 *kvirc-3.0.0_beta2-r1 (22 May 2003)
 
@@ -24,6 +24,11 @@
   26 Dec 2002; Dan Armak <danarmak@gentoo.org> kvirc-3.0.0_pre20021217.ebuild  :
 
   Some fixes.
+
+*kvirc-3.0.0_beta1-r1 (22 May 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *kvirc-3.0.0_pre20021217 (19 Dec 2002)
 
@@ -61,3 +66,9 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
+*kvirc-2.1.1-r1 (13 Feb 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+

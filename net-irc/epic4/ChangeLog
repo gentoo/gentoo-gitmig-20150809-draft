@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.13 2003/05/04 16:05:05 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.14 2003/07/13 12:54:50 aliz Exp $
 
 *epic4-1.1.11 (13 Apr 2003)
 
@@ -77,3 +77,9 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
+*epic4-1.0.1-r1 (24 Mar 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
