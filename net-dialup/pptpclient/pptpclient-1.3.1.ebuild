@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.3.1.ebuild,v 1.2 2004/03/23 18:30:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.3.1.ebuild,v 1.3 2004/06/09 20:56:37 agriffis Exp $
 
 MY_P=pptp-linux-${PV}
 S=${WORKDIR}/${MY_P}

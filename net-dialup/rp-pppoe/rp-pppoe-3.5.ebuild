@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5.ebuild,v 1.17 2004/01/01 18:25:55 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5.ebuild,v 1.18 2004/06/09 20:57:29 agriffis Exp $
 
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
 SRC_URI="http://www.roaringpenguin.com/pppoe/${P}.tar.gz"
@@ -23,7 +23,7 @@ src_compile() {
 	econf || die
 	emake || die "Failed to compile"
 
-	if [ `use X` ]; then
+	if use X; then
 		cd ../gui ; make || die "Failed to compile the GUI"
 	fi
 }
@@ -32,7 +32,7 @@ src_install () {
 	make RPM_INSTALL_ROOT=${D} docdir=/usr/share/doc/${PF} install || die "Failed to install"
 	prepalldocs
 
-	if [ `use X` ]; then
+	if use X; then
 		cd ../gui ; make RPM_INSTALL_ROOT=${D} \
 		datadir=/usr/share/doc/${PF}/ install || die "Failed to install the GUI"
 		dosym /usr/share/doc/${PF}/tkpppoe /usr/share/tkpppoe

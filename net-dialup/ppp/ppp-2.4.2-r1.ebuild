@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.6 2004/04/30 12:12:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.7 2004/06/09 20:57:51 agriffis Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/pcap.patch
 	epatch ${FILESDIR}/${PV}/stdopt-mppe-mppc-0.82.patch.gz
 
-	if [ "`use atm`" -a "`use x86`" ]; then
+	if use atm && use x86; then
 		einfo "Enabling PPPoATM support"
 		epatch ${FILESDIR}/${PV}/pppoatm.diff.gz
 	fi
@@ -100,7 +100,7 @@ src_install() {
 	dodir /usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	mv ${D}/usr/lib/*.so ${D}/usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 
-	if [ "`use atm`" -a "`use x86`" ]; then
+	if use atm && use x86; then
 		dolib.so pppd/plugins/pppoatm.so
 	fi
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.2_beta2.ebuild,v 1.3 2003/10/01 19:57:16 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.2_beta2.ebuild,v 1.4 2004/06/09 20:59:14 agriffis Exp $
 
 inherit flag-o-matic
 filter-flags -mpowerpc-gfxopt -mpowerpc-gpopt
@@ -33,8 +33,8 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	[ `use debug` ] && myconf="--enable-debug"
-	[ `use static` ] && myconf="${myconf} --enable-static"
+	use debug && myconf="--enable-debug"
+	use static && myconf="${myconf} --enable-static"
 
 	econf 	--enable-syslog  \
 		${myconf} || die "./configure failed"

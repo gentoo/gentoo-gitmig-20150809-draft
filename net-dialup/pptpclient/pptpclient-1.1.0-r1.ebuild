@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0-r1.ebuild,v 1.6 2003/09/07 00:09:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0-r1.ebuild,v 1.7 2004/06/09 20:56:37 agriffis Exp $
 
 
 S=${WORKDIR}/pptp-linux-${PV}-1
@@ -31,7 +31,7 @@ src_install() {
 	doins options.pptp
 	dosbin pptp-command pptp_fe.pl
 
-	if [ -n "`use tcltk`" ] ; then
+	if use tcltk ; then
 		sed s/pptp_fe/pptp_fe.pl/g < xpptp_fe.pl > xpptp_fe.pl.new
 		mv xpptp_fe.pl.new xpptp_fe.pl
 		dosbin xpptp_fe.pl

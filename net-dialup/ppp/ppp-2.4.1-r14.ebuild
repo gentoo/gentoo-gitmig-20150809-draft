@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.17 2004/04/27 21:42:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.18 2004/06/09 20:57:51 agriffis Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 	#fix Makefiles to compile optimized
 	cd ${S}/pppd
 	mv Makefile Makefile.orig
-	if([ `use ipv6` ]) then
+	if use ipv6; then
 		sed -e "s:COPTS = -O2 -pipe -Wall -g:COPTS = ${CFLAGS}:" \
 			-e "s/LIBS =/LIBS = -lcrypt/" \
 			-e "s/#HAVE_INET6/HAVE_INET6/" \
