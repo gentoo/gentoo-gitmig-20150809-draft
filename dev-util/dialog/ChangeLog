@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.34 2004/06/25 02:28:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.35 2004/08/19 15:00:07 lanius Exp $
+
+*dialog-0.9_beta20031207-r1 (19 Aug 2004)
+
+  19 Aug 2004; Heinrich Wendel <lanius@gentoo.org>
+  dialog-0.9_beta20031207-r1.ebuild:
+  add unicode support
 
   03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   dialog-0.9_beta20031207.ebuild:
