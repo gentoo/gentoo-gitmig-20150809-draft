@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020804.ebuild,v 1.1 2002/08/04 13:33:27 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020804.ebuild,v 1.2 2002/08/04 18:32:54 phoenix Exp $
 
 S=${WORKDIR}/wine
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
@@ -33,8 +33,8 @@ src_compile() {
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 
 	# the folks at #winehq were really angry about custom optimization
-	export CFLAGS=""
-	export CXXFLAGS=""
+	unset CFLAGS=""
+	unset CXXFLAGS=""
 	
 	./configure --prefix=/usr/lib/winex \
 	--sysconfdir=/etc/winex \
@@ -81,7 +81,7 @@ src_install () {
 	cd ${S}
 	dodoc ANNOUNCE AUTHORS BUGS ChangeLog DEVELOPERS-HINTS LICENSE README
 
-	insinto /usr/lib/winex/.data
+	insinto /usr/lib/winex/.data/fake_windows/Windows
 	doins documentation/samples/system.ini
 	doins documentation/samples/generic.ppd
 	
