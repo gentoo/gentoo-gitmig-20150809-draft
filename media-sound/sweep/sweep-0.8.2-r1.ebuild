@@ -1,16 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2-r1.ebuild,v 1.2 2003/07/19 19:09:15 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2-r1.ebuild,v 1.3 2003/11/11 13:10:34 vapier Exp $
 
-IUSE="oggvorbis alsa nls"
-
-DESCRIPTION="Sweep is an audio editor and live playback tool"
+DESCRIPTION="audio editor and live playback tool"
 HOMEPAGE="http://www.metadecks.org/software/sweep/"
 SRC_URI="http://www.metadecks.org/software/sweep/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~hppa ~mips ~alpha"
+IUSE="oggvorbis alsa nls"
 
 DEPEND=">=media-libs/libsndfile-1.0*
 		>=x11-libs/gtk+-1.2*
@@ -21,9 +20,6 @@ DEPEND=">=media-libs/libsndfile-1.0*
 		oggvorbis? ( media-libs/libogg media-libs/libvorbis )
 		alsa? ( media-libs/alsa-lib )
 		nls? ( sys-devel/gettext )"
-RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	local myconf
