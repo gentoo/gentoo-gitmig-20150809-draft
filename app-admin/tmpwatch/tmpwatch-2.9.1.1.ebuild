@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.1.1.ebuild,v 1.1 2004/09/18 19:47:15 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.1.1.ebuild,v 1.2 2004/09/22 23:46:05 ka0ttic Exp $
 
 inherit versionator
 
@@ -34,6 +34,10 @@ src_unpack() {
 	sed -i 's|/sbin/fuser|/bin/fuser|' tmpwatch.c \
 		|| die "sed tmpwatch.c failed"
 	sed -i 's|/sbin|/bin|' tmpwatch.8 || die "sed tmpwatch.8 failed"
+}
+
+src_compile() {
+	emake || die "emake failed"
 }
 
 src_install() {
