@@ -6,4 +6,4 @@ move app-crypt/gpgsm app-crypt/newpg
 move net-misc/ipchains-firewall net-firewall/ipchains-firewall
 move net-misc/firestarter net-firewall/firestarter
 move net-misc/lavaps x11-misc/lavaps
-
+move sys-apps/microcode_ctl sys-apps/microcode-ctl
