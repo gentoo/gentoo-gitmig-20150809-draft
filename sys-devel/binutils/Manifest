@@ -1,38 +1,38 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 5c37c7ad75a4087ba04975e8584ba0e2 binutils-2.14.90.0.8-r2.ebuild 449
 MD5 eb449845529171d21fc04633427a1ffc ChangeLog 39125
 MD5 45494d255ce82fd574cfa85cba4c67a7 binutils-2.14.90.0.6-r7.ebuild 6736
-MD5 dd1c86b950f9eff25ebd11dda143df83 binutils-2.15.90.0.3-r4.ebuild 402
-MD5 a7ceb9e535f7677481bd8e044733be67 binutils-2.14.90.0.8-r1.ebuild 5051
-MD5 a6844f75f8c9e7a60124e3de784c0079 binutils-2.15.90.0.1.1-r4.ebuild 522
-MD5 6904f1690676a2c9b3ffd28b6d8a8e47 binutils-2.15.90.0.1.1-r3.ebuild 4797
-MD5 53f0fc4e26d728f52378403883a2aa2e binutils-2.15.90.0.3-r3.ebuild 4973
 MD5 25ade8a6c71ab237778cf1534ca50b77 binutils-2.14.90.0.6-r8.ebuild 436
+MD5 566806dcf81b67546b0c751541145b7d binutils-2.15.91.0.2-r1.ebuild 462
+MD5 a7ceb9e535f7677481bd8e044733be67 binutils-2.14.90.0.8-r1.ebuild 5051
+MD5 6904f1690676a2c9b3ffd28b6d8a8e47 binutils-2.15.90.0.1.1-r3.ebuild 4797
+MD5 a6844f75f8c9e7a60124e3de784c0079 binutils-2.15.90.0.1.1-r4.ebuild 522
+MD5 53f0fc4e26d728f52378403883a2aa2e binutils-2.15.90.0.3-r3.ebuild 4973
 MD5 398d09db4e9bd0ebd561921e8834011d binutils-2.15.91.0.1.ebuild 4705
 MD5 0808c1aab4a9e79f43f9485b9fb7c07e binutils-2.15.91.0.2.ebuild 5159
-MD5 76aefc448d40a6a3ad3f01fd71f270b5 binutils-2.15.92.0.2-r1.ebuild 4877
+MD5 f0821ada63618af420ad0dcf0f633ca2 binutils-2.15.92.0.2-r1.ebuild 4874
 MD5 43b5fd0b6a08ac36863f3d2c38d6d6b0 binutils-2.15.92.0.2-r2.ebuild 574
-MD5 c130d155df1401a4f3a4d5f2abb9c0c5 binutils-2.15.ebuild 369
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 5c37c7ad75a4087ba04975e8584ba0e2 binutils-2.14.90.0.8-r2.ebuild 449
+MD5 c130d155df1401a4f3a4d5f2abb9c0c5 binutils-2.15.ebuild 369
 MD5 e8bd8ce400cde2701fba18ef5ef9e228 binutils-2.15.94.0.2.ebuild 434
+MD5 dd1c86b950f9eff25ebd11dda143df83 binutils-2.15.90.0.3-r4.ebuild 402
 MD5 67aaf3806274ea7797aac4df8b06e43f binutils-2.15.91.0.1-r1.ebuild 371
-MD5 566806dcf81b67546b0c751541145b7d binutils-2.15.91.0.2-r1.ebuild 462
 MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.patch 456
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r7 75
+MD5 bce6e94a306210a3a46ff8a78ad85df1 files/digest-binutils-2.14.90.0.6-r8 249
 MD5 3cd074b9670edeb82964360e6525c9ee files/digest-binutils-2.15.90.0.3-r4 248
 MD5 d57be7837bb42388ad4f1f9eec6fe699 files/digest-binutils-2.14.90.0.8-r1 160
-MD5 7b0c1e491cb6bc7058193b4443071071 files/digest-binutils-2.15.90.0.1.1-r4 255
+MD5 6c06201fe991e098f44f6f75dd5d53f4 files/digest-binutils-2.15 68
 MD5 f5cb20158fe6b87f03a2366b68866343 files/digest-binutils-2.15.90.0.1.1-r3 161
+MD5 7b0c1e491cb6bc7058193b4443071071 files/digest-binutils-2.15.90.0.1.1-r4 255
 MD5 83bd52b9c2e975443e2a8b11b59c7441 files/digest-binutils-2.15.90.0.3-r3 159
 MD5 9ee0463e60aaa51448aba92f5fc86f04 files/digest-binutils-2.15.91.0.1 159
-MD5 bce6e94a306210a3a46ff8a78ad85df1 files/digest-binutils-2.14.90.0.6-r8 249
 MD5 754cfdc4c162c0cac9c073198f732fdb files/digest-binutils-2.15.91.0.2 159
-MD5 6c06201fe991e098f44f6f75dd5d53f4 files/digest-binutils-2.15 68
 MD5 1b43962f0560663b6b0f58ffa918a8ff files/digest-binutils-2.15.92.0.2-r1 242
-MD5 8903d93c82472f0a22bfdcac81fda9fb files/digest-binutils-2.15.92.0.2-r2 249
 MD5 66df5567226338b7504bbd3c25cea92c files/libiberty-pic.patch 370
+MD5 8903d93c82472f0a22bfdcac81fda9fb files/digest-binutils-2.15.92.0.2-r2 249
 MD5 aed408762a54261cd9d1e3168c657bda files/digest-binutils-2.14.90.0.8-r2 249
 MD5 2a84b8cd9b3623b580267c93b90fa87b files/digest-binutils-2.15.94.0.2 249
 MD5 86432f490b6c967b1b600ee8b85966ec files/digest-binutils-2.15.91.0.1-r1 249
@@ -89,9 +89,9 @@ MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-t
 MD5 907ce8c972e2a984590d4bfc04181c1d files/2.15/40_all_binutils-uclibc-linker.patch 530
 MD5 bad6ba9f63eb3a86d7006191848a47b8 files/2.15/52_all_binutils-20040527-uclibc-100-conf.patch 21576
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB49HAKRy60XGEcJIRAu62AJ9+ttojDLcX/L9/kA+PCbXLp1UxxwCgr3Wz
-T+xdjJWRYMZ6KcpxVGM8w4I=
-=xdEd
+iD8DBQFB4+k2roRuSHgZdywRAuKqAJ4p7qZH7Sf9/Np4i1iDe/s2dtPkWgCfXpIF
+Ra7Aix5F8PPBkW3zG3dghJA=
+=TNYI
 -----END PGP SIGNATURE-----
