@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.34.ebuild,v 1.9 2003/07/22 18:35:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.37.ebuild,v 1.1 2003/08/30 13:47:34 hanno Exp $
 
 IUSE="doc build"
 
@@ -15,7 +15,7 @@ DEPEND="!build? ( dev-lang/perl )
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 -ppc -sparc -alpha amd64"
+KEYWORDS="~x86 -ppc -sparc -alpha"
 
 src_unpack() {
 
@@ -24,21 +24,21 @@ src_unpack() {
 
 	if [ -z "`use doc`" ]; then
 		cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-remove-doc-target.diff
+	patch -p0 < ${FILESDIR}/nasm-0.98.36-remove-doc-target.diff
 	fi
 
 }
 
-src_compile() {			   
+src_compile() {
 
 	./configure --prefix=/usr || die
 
 	if [ "`use build`" ]; then
-		make nasm 
+		make nasm
 	else
 		make everything || die
 	fi
-	
+
 }
 
 src_install() {
