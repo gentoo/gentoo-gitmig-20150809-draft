@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.24 2003/12/09 18:09:59 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.25 2004/01/12 21:08:16 nerdboy Exp $
+
+  12 Jan 2004; <nerdboy@gentoo.org> doxygen-1.2.15-r1.ebuild,
+  doxygen-1.2.16.ebuild, doxygen-1.2.18.ebuild, doxygen-1.3.2.ebuild,
+  doxygen-1.3.3.ebuild, doxygen-1.3.4.ebuild, doxygen-1.3.5.ebuild,
+  doxygen-1.3.ebuild, files/doxygen-1.2.15-r1.diff,
+  files/doxygen-1.2.16-gentoo.diff:
+  bumped 1.3.5 to x86, fixed headers, and removed old ebuilds
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> doxygen-1.3.2.ebuild,
   doxygen-1.3.3.ebuild, doxygen-1.3.4.ebuild, doxygen-1.3.5.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.4.ebuild,v 1.5 2003/12/09 18:10:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.4.ebuild,v 1.6 2004/01/12 21:08:16 nerdboy Exp $
 
 IUSE="doc qt"
 
