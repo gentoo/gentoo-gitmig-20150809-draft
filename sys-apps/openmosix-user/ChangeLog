@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/openmosix-user
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/ChangeLog,v 1.4 2002/08/28 19:09:22 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/ChangeLog,v 1.5 2002/08/30 11:42:30 tantive Exp $
+
+
+* openmosix-user-0.2.4-r1 (30 Aug 2002)
+
+  30 Aug 2002; Michael Imhof <tantive@gentoo.org>
+  Created symlinks in /bin for /usr/bin/[mmon/migrate/mosctl/mosrun] to make
+  scripts like nomig run.
 
 * openmosix-user-0.2.4 (19 Aug 2002)
 
