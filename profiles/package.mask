@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3460 2005/01/07 22:48:47 vericgar Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3461 2005/01/08 01:08:57 taviso Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# <taviso@gentoo.org> (08 Jan 2005)
+# Package is now available via cpan, users should
+# use the g-cpan.pl utility to install (see man page).
+# masking in preparation for removal, send comments.
+app-dicts/gramadoir
 
 # <vericgar@gentoo.org> (07 Jan 2005)
 # Apache herd package refresh
