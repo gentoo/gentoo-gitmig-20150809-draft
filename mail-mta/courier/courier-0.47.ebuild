@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.ebuild,v 1.1 2004/09/19 09:00:13 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.ebuild,v 1.2 2004/09/20 19:48:28 iggy Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
-IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite"
+IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite uclibc"
 
 PROVIDE="virtual/mta
 	 virtual/mda
@@ -21,7 +21,6 @@ PROVIDE="virtual/mta
 DEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
-	>=dev-tcltk/expect-5.33.0
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
 	fax? (	>=media-libs/netpbm-9.12
 		virtual/ghostscript
@@ -44,6 +43,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use norewrite && epatch ${FILESDIR}/norewrite.patch
+	use uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
 }
 
 src_compile() {
@@ -295,6 +295,10 @@ pkg_postinst() {
 	ewarn "hint: look for a line at the bottom of the file that looks like so"
 	ewarn "ESMTPDSTART=NO"
 	ewarn "and change it to YES for the services that you use"
+	echo
+	einfo "expect was removed as a dependency due to it's limited usefulness."
+	einfo "If you need the ability to change passwords via webmail _while_ using AUTHPAM, you'll"
+	einfo "have to emerge expect manually. Other auth modules are unaffected."
 	ebeep 5
 }
 
