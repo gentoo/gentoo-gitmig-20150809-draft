@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsq/cvsq-0.4.4.ebuild,v 1.1 2004/05/29 18:07:57 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsq/cvsq-0.4.4.ebuild,v 1.2 2004/06/03 15:43:46 dholm Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://metawire.org/~vslavik/sw/cvsq/"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=""		# This is just a shell script.
 RDEPEND="dev-util/cvs

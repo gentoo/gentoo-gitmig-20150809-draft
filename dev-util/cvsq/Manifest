@@ -1,5 +1,5 @@
-MD5 5ca836a29ef273a94548d7b794217271 cvsq-0.4.4.ebuild 776
-MD5 5d2362d921200ba27a6262581cfc42fe ChangeLog 545
+MD5 f45c34892fe767d7cc7e104f04102f5e ChangeLog 629
 MD5 023c5cbdf179d967733c648bf83dd4e5 cvsq-0.4.3.ebuild 712
+MD5 45a641d745156ab877fb213e029a4a14 cvsq-0.4.4.ebuild 783
 MD5 88e1c5fba623f6be561ce0a9e2350a33 files/digest-cvsq-0.4.3 60
 MD5 cecce46f80db5b2a4c49068f7f9a5055 files/digest-cvsq-0.4.4 60
