@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.1.ebuild,v 1.1 2004/11/24 22:47:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.1.ebuild,v 1.2 2004/11/25 23:37:55 swegener Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Graphical IRC client"
-SRC_URI="http://www.xchat.org/files/source/2.4/${P}.tar.bz2
+SRC_URI="mirror://sourceforge/xchat/${P}.tar.bz2
 	xchatdccserver? ( http://dfx.at/xchat/xchat-dccserver-0.4.patch )"
 HOMEPAGE="http://www.xchat.org/"
 
