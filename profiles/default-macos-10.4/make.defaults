@@ -27,7 +27,7 @@ CXXFLAGS=${CFLAGS}
 
 USE=""
 
-ACCEPT_KEYWORDS="~ppc" # change to macos later
+ACCEPT_KEYWORDS="macos" 
 
 COMPILER="gcc3"
 
