@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.10 2004/01/07 20:19:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.11 2004/01/08 15:25:23 gustavoz Exp $
 
 inherit eutils
 
@@ -33,6 +33,12 @@ src_compile() {
 	if use alpha && [[ $JAVAC == *compaq* ]]; then
 		PATH=$(echo ":${PATH}" | sed 's|:/opt/compaq-j[^:]*||g; s/^://')
 		unset JAVA_HOME CLASSPATH JDK_HOME JAVAC
+	fi
+
+	# When updating in sparc with java the jvm segfaults
+	if use sparc; then
+		epatch ${FILESDIR}/${P}-without_java.patch
+		myconf="--without-java"
 	fi
 
 	CXX=${CC} econf \
