@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gnokii
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.27 2004/12/16 11:14:46 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.28 2005/01/03 23:13:08 gmsoft Exp $
+
+  04 Jan 2005; Guy Martin <gmsoft@gentoo.org> gnokii-0.6.3.ebuild:
+  Stable on hppa.
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> gnokii-0.6.3.ebuild:
   Stable on ppc64
