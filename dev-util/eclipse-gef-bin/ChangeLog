@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-gef-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/ChangeLog,v 1.5 2004/11/03 11:45:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/ChangeLog,v 1.6 2004/11/12 17:12:43 blubb Exp $
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org>
+  eclipse-gef-bin-20040619.ebuild:
+  added ~amd64
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
   eclipse-gef-bin-20040330.ebuild, eclipse-gef-bin-20040619.ebuild:

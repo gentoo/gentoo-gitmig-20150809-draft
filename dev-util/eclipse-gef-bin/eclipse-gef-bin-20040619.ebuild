@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/eclipse-gef-bin-20040619.ebuild,v 1.2 2004/11/03 11:45:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/eclipse-gef-bin-20040619.ebuild,v 1.3 2004/11/12 17:12:43 blubb Exp $
 
 inherit eclipse-ext
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.eclipse.org/gef/"
 SRC_URI="http://download.eclipse.org/tools/gef/downloads/drops/S-3.0RC3-200406191500/GEF-runtime-I20040619.zip"
 SLOT="0"
 LICENSE="CPL-1.0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND=">=dev-util/eclipse-sdk-3.0.0_pre8
 		app-arch/unzip"
