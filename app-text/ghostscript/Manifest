@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 40cb9de588f9d7b84c71b45be2ff8d69 ghostscript-7.07.1-r5.ebuild 4028
 MD5 07fa06b16fde004dfe9307662b844ebe ghostscript-7.07.1-r7.ebuild 4151
 MD5 2db7df35be7d9e0921a6ab5c72c02f67 ghostscript-7.07.1-r2.ebuild 3295
@@ -25,7 +28,7 @@ MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r3 291
 MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r4 291
 MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r5 212
 MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r6 212
-MD5 71637345f6ce2c83c60b9220cfdf92c3 files/digest-ghostscript-7.07.1-r7 73
+MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r7 212
 MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r8 212
 MD5 370d4bcd16d8acd03190ba84e2f61a41 files/gs7.07.1-ijsdestdir.patch 1418
 MD5 c63f6d71a403dbc72265831386b84eb0 files/digest-ghostscript-7.05.6 359
@@ -38,3 +41,10 @@ MD5 3d1cdf07dabc4a05bde9a2dc6f7da2de files/gs7.07.1-fontconfig-rh.patch.bz2 6121
 MD5 68fa21d11a860c222c8ba89c39ce578e files/gs7.05.6-gdevpx.patch 402
 MD5 ac6af6bf67095500ea043aea27062d62 files/gs7.07.1-ijs.patch 401
 MD5 06fe485954243190f4f0f4d8e1542f92 files/gs7.07.1-cjk.diff.bz2 3055
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBtH3KI1lqEGTUzyQRAkhYAJ4kpGZZ9eI453MXp3Qf6e8euPvVoACgtraC
+6jp69eTa6C9McdoRsnT1KbI=
+=Wh/U
+-----END PGP SIGNATURE-----
