@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 78a5565c1583154b297afdd787a99966 ChangeLog 4492
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 8dcbe77b975ecba82c25e1e401ed215d opencdk-0.4.5.ebuild 707
 MD5 b5b9d7c6cba450c0547df0213b3606e0 opencdk-0.5.1.ebuild 720
 MD5 862abb0baa0e5429feba9c31e22ae06e opencdk-0.5.3.ebuild 725
-MD5 5f22006d35560fa36d9f53296ac14a7d opencdk-0.5.5.ebuild 902
+MD5 adfac9ec8ea5b5e8a3a78d85437b1352 opencdk-0.5.5.ebuild 907
 MD5 579e1b718598f2889b39e6b6c6d63ad6 files/digest-opencdk-0.4.5 65
 MD5 d57d598d6c0ae03a38dfe10ba396d59c files/digest-opencdk-0.5.1 66
 MD5 ded56c67bd81f0e67d00ee23792fc686 files/digest-opencdk-0.5.3 65
 MD5 e168dc293f2db4e96005227188d4d6e9 files/digest-opencdk-0.5.5 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBisvgHTu7gpaalycRAkZSAJ0YJQg/46wrA2S9PbZf3nxrKWmPkwCg8Zmj
+jwqDo3LYbbNpfyQLEqKNQoc=
+=Tbpd
+-----END PGP SIGNATURE-----
