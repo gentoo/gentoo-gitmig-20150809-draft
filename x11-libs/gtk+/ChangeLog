@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.71 2003/07/01 18:11:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.72 2003/07/02 18:16:49 weeve Exp $
+
+  02 Jul 2003; Jason Wever <weeve@gentoo.org> gtk+-2.2.2-r1.ebuild:
+  Changed sparc keyword back to ~sparc to fix broken dependencies.
 
 *gtk+-2.2.2-r1 (12 Jun 2003)
 
