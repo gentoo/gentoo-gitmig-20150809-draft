@@ -1,14 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.5 2001/11/16 12:50:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.6 2001/12/22 14:52:29 danarmak Exp $
 # This provides functions for verbose output for debugging
 
 # Note: we check whether these settings are set by "if [ "$FOO" ]; then".
 # Therefore set them to true/false only - not yes/no or whatever.
 
 # redirect output, unset to disable
-# use e.g. /dev/tty.
+# use e.g. /dev/stdout.
 # todo: add support for logging into a file.
 DEBUG_OUTPUT=""
 

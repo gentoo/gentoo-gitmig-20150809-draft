@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.7 2001/11/16 12:50:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.8 2001/12/22 14:52:29 danarmak Exp $
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
 inherit virtual || die
@@ -12,7 +12,7 @@ DESCRIPTION="Based on the $ECLASS eclass"
 
 base_src_unpack() {
 
-	debug-print-function base_src_unpack $*
+	debug-print-function $FUNCNAME $*
 	[ -z "$1" ] && base_src_unpack all
 
 	while [ "$1" ]; do
@@ -40,7 +40,7 @@ base_src_unpack() {
 
 base_src_compile() {
 
-	debug-print-function base_src_compile $*
+	debug-print-function $FUNCNAME $*
     [ -z "$1" ] && base_src_compile all
 
     while [ "$1" ]; do
@@ -67,7 +67,7 @@ base_src_compile() {
 
 base_src_install() {
 
-	debug-print-function base_src_install $*
+	debug-print-function $FUNCNAME $*
 	[ -z "$1" ] && base_src_install all
 
 	while [ "$1" ]; do
