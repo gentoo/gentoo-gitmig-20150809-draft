@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.180 2004/08/10 16:22:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.181 2004/08/12 08:22:36 robbat2 Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -194,7 +194,7 @@ oracle7 - Adds support for Oracle 7
 oscar - Enable Oscar (AIM/ICQ) IM protocol support
 oss - Adds support for OSS (Open Sound System)
 ovrimos - Adds support for the Ovrimos Database engine
-pam - Adds support PAM (Pluggable Authentication Modules)
+pam - Adds support PAM (Pluggable Authentication Modules) - DANGEROUS to arbitrarily flip
 pcmcia - Adds support for PCMCIA slots/devices found on laptop computers
 pcntl - Adds support for process creation functions
 pcre - Adds support for Perl Compatible Regular Expressions
