@@ -1,28 +1,29 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/files/oftpd.rc6,v 1.2 2001/12/06 20:17:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/files/oftpd.rc6,v 1.3 2002/05/04 03:42:50 woodchip Exp $
 
 depend() {
-    need net
+	need net
 }
 
 checkconfig() {
-    if [ -z "$FTPUSER" ] || [ -z "$FTPROOT" ] ; then
-	eerror "You need to setup FTPUSER and FTPROOT in /etc/rc.conf"
-	return 1
-    fi
+	if [ -z "$FTPUSER" ] || [ -z "$FTPROOT" ] ; then
+		eerror "You need to setup FTPUSER and FTPROOT in /etc/rc.conf"
+		return 1
+	fi
 }
 
 start() {
-    checkconfig || return 1
-    ebegin "Starting oftpd"
-    start-stop-daemon --start --quiet --exec /usr/sbin/oftpd -- $FTPUSER $FTPROOT
-    eend $?
+	checkconfig || return 1
+	ebegin "Starting oftpd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/oftpd \
+		-- ${FTPUSER} ${FTPROOT}
+	eend $?
 }
 
 stop() {
-    ebegin "Stopping oftpd"
-    start-stop-daemon --stop --quiet --exec /usr/sbin/oftpd
-    eend $?
+	ebegin "Stopping oftpd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/oftpd
+	eend $?
 }

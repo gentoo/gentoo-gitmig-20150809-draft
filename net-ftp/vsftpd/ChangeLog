@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.2 2002/05/04 03:42:50 woodchip Exp $
+
+*vsftpd-1.0.1-r1 (3 May 2002)
+  
+  3 May 2002; Donny Davies <woodchip@gentoo.org> :
+  
+  Added LICENSE, SLOT.
 
 *vsftpd-1.0.1 (1 Feb 2002)
 
