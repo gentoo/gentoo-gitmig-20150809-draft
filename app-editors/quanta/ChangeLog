@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/quanta
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.4 2002/09/14 17:24:34 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.5 2002/09/16 16:23:48 verwilst Exp $
+
+*quanta-3.0_pre2 (16 Sept 2002) Bart Verwilst <verwilst@gentoo.org>
+
+  This is actually the pre2a version, but portage refused to cooperate
+  with the 'a' :o) Test, and enjoy ;o)
 
 *quanta-3.0_pre1 (28 Jul 2002)
 
