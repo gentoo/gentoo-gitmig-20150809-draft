@@ -1,0 +1,13 @@
+# ChangeLog for net-libs/iax
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/ChangeLog,v 1.1 2002/11/02 20:55:09 raker Exp $
+
+*iax-0.2.2 (27 Jul 2002)
+
+  02 Nov 2002; Nick Hadaway <raker@gentoo.org> iax-0.2.2.ebuild :
+  Added KEYWORDS, IUSE, and made changes to allow user CFLAGS during
+  compile.
+
+  27 Jul 2002; Sean Summers <ebuild@generalprotectionfault.com> iax-0.2.2.ebuild :
+  Initial package
+
