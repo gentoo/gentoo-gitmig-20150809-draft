@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/devilspie
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/ChangeLog,v 1.7 2004/07/03 13:31:29 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/ChangeLog,v 1.8 2004/09/28 18:07:38 pyrania Exp $
+
+*devilspie-0.7 (28 Sep 2004)
+
+  28 Sep 2004; <pyrania@gentoo.org> +devilspie-0.7.ebuild:
+  Version bump.
 
 *devilspie-0.4 (03 Jul 2004)
 

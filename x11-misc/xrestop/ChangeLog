@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xrestop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.6 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.7 2004/09/28 18:04:29 pyrania Exp $
+
+*xrestop-0.3 (28 Sep 2004)
+
+  28 Sep 2004; <pyrania@gentoo.org> +xrestop-0.3.ebuild:
+  Version bump.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xrestop-0.2.ebuild:
   Masked xrestop-0.2.ebuild stable for ppc
