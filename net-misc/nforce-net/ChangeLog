@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nforce-net
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.17 2004/09/29 09:15:35 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.18 2004/10/28 15:58:47 dsd Exp $
+
+  28 Oct 2004; Daniel Drake <dsd@gentoo.org>:
+  Removing package from portage. see:
+  http://bugs.gentoo.org/65330
+  http://dev.gentoo.org/~dsd/nforce-net-to-forcedeth.htm
 
   29 Sep 2004; Daniel Drake <dsd@gentoo.org> nforce-net-1.0.0283.ebuild:
   Add warning message, see http://dev.gentoo.org/~dsd/nforce-net-to-forcedeth.htm
