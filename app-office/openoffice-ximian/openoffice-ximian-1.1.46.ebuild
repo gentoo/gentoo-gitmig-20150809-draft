@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.46.ebuild,v 1.4 2003/12/14 17:16:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.46.ebuild,v 1.5 2004/01/15 17:27:30 seemant Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
