@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-console
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/ChangeLog,v 1.10 2005/01/01 14:19:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/ChangeLog,v 1.11 2005/01/05 15:36:51 wolf31o2 Exp $
+
+  05 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Changed herd to new vmware herd.
 
 *vmware-console-2.1.0.7728 (09 Aug 2004)
 
