@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta1-r1.ebuild,v 1.3 2003/11/13 21:32:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta1-r1.ebuild,v 1.4 2003/11/20 13:45:16 caleb Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -54,9 +54,10 @@ src_install() {
 	kde_src_install
 	cd ${S}/kdm && make DESTDIR=${D} GENKDMCONF_FLAGS="--no-old --no-backup" install
 
-	# cf bug #5953
 	insinto /etc/pam.d
 	newins ${FILESDIR}/kde.pam kde
+	# kde-np is new requirement for 3.2 autologins - #33690
+	newins ${FILESDIR}/kde-np.pam kde-np
 
 	# startkde script
 	cd ${D}/${KDEDIR}/bin
