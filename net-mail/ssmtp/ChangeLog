@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.33 2004/04/25 23:13:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.34 2004/04/26 01:04:55 randy Exp $
+
+  25 Apr 2004; Michael McCabe <randy@gentoo.org> ssmtp-2.60.7.ebuild:
+  Marked stable on s390
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> ssmtp-2.60.7.ebuild:
   Stable on alpha and ia64
