@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.7 2005/03/13 16:26:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.8 2005/03/28 15:24:24 ticho Exp $
+
+*mpd-svn-20050328 (28 Mar 2005)
+
+  28 Mar 2005; Andrej Kacian <ticho@gentoo.org> +mpd-svn-20050328.ebuild:
+  New snapshot.
 
   13 Mar 2005; Andrej Kacian <ticho@gentoo.org> files/mpd.pidfile.rc6:
   Fixed pidfile location in initscript.
