@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libctl
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libctl/ChangeLog,v 1.1 2004/01/06 20:03:59 george Exp $
+
+*libctl-2.2.ebuild (06 Jan 2004)
+
+  06 Jan 2004; George Shapovalov <george@gentoo.org> libctl-2.2.ebuild, Manifest, files/{digest-libctl-2.2} :
+  initial release
+  Guile-based library implementing flexible control files for scientific simulations
+  ebuild submitted by Peter Bienstman <Peter.Bienstman@rug.ac.be>
