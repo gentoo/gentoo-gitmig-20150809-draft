@@ -1,12 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220.ebuild,v 1.5 2003/03/26 10:17:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.7.20030629.ebuild,v 1.1 2003/06/29 17:27:29 vapier Exp $
 
-inherit flag-o-matic
+inherit enlightenment flag-o-matic
 
-IUSE="mmx gif png jpeg tiff static X"
-
-S=${WORKDIR}/${PN}
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
 HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
@@ -14,28 +11,37 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~mips ~arm ~hppa ~sparc"
+IUSE="${IUSE} mmx gif png jpeg tiff static X"
 
-DEPEND="=media-libs/freetype-1*
+DEPEND="${DEPEND}
+	=media-libs/freetype-1*
 	gif? ( media-libs/libungif
 		>=media-libs/giflib-4.1.0 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( >=media-libs/tiff-3.5.5 )"
 
+S=${WORKDIR}/${PN}
+
 replace-flags k6-3 i586
 replace-flags k6-2 i586
 replace-flags k6 i586
-[ $ARCH = alpha ] && append-flags -fPIC
+[ ${ARCH} = alpha ] && append-flags -fPIC
 
 src_compile() {
 	cp autogen.sh{,.old}
 	sed -e 's:.*configure.*::' autogen.sh.old > autogen.sh
 	env USER=blah WANT_AUTOCONF_2_5=1 ./autogen.sh || die "could not autogen"
+	cd libltdl
+	env WANT_AUTOCONF_2_5=1 autoconf || die
+	cd ${S}
 
-	local myconf="--sysconfdir=/etc/X11/imlib --with-gnu-ld"
-	myconf="${myconf} `use_enable mmx` `use_with X x`"
-	econf ${myconf} || die "could not configure"
+	econf \
+		`use_enable mmx` \
+		`use_with X x` \
+		--sysconfdir=/etc/X11/imlib \
+		|| die "could not configure"
 	emake || die "could not make"
 }
 
