@@ -865,7 +865,3 @@ x11-base/xdirectfb
 # rphillips@gentoo.org 27 Jun 2002
 # masked since package is not released
 >=dev-db/mysql-4.0.1_alpha
-
-# seemant@gentoo.org 02 Jul 2002
-# masked coz it is a highly developmental package
->=net-p2p/lopster-1.0.1.20020701
