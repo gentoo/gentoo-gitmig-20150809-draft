@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.220 2004/10/24 02:19:32 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.221 2004/10/24 05:56:46 chriswhite Exp $
+
+  24 Oct 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r4.ebuild:
+  Added some minor font functionality as per bug #48440.
 
   24 Oct 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r4.ebuild:
   Finished off Bug #61451 and closed bug #68552.

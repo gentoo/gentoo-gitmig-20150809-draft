@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.12 2004/10/24 02:19:32 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.13 2004/10/24 05:56:46 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -15,6 +15,7 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 SRC_URI="mirror://mplayer/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+	mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2
 	mirror://gentoo/${P}-alsa-gui.patch.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )"
@@ -90,7 +91,8 @@ KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~hppa ~sparc"
 src_unpack() {
 
 	unpack MPlayer-${MY_PV}.tar.bz2 \
-		font-arial-iso-8859-1.tar.bz2 font-arial-iso-8859-2.tar.bz2
+		font-arial-iso-8859-1.tar.bz2 font-arial-iso-8859-2.tar.bz2 \
+		font-arial-cp1250.tar.bz2
 
 	use svga && unpack svgalib_helper-${SVGV}-mplayer.tar.bz2
 
@@ -447,7 +449,7 @@ src_install() {
 	local x=
 	# Do this generic, as the mplayer people like to change the structure
 	# of their zips ...
-	for x in $(find ${WORKDIR}/ -type d -name 'font-arial-??-iso-*')
+	for x in $(find ${WORKDIR}/ -type d -name 'font-arial-*')
 	do
 		cp -Rd ${x} ${D}/usr/share/mplayer/fonts
 	done
