@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.41 2005/02/02 10:32:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.42 2005/02/03 05:35:02 eradicator Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -710,7 +710,7 @@ src_compile() {
 	local MLTEST=$(type dyn_unpack)
 	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
 		OABI="${ABI}"
-		for ABI in $(get_abi_order); do
+		for ABI in $(get_install_abis); do
 			export ABI
 			einfo "Compiling ${ABI} glibc"
 			src_compile
@@ -752,7 +752,7 @@ src_install() {
 	local MLTEST=$(type dyn_unpack)
 	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
 		OABI="${ABI}"
-		for ABI in $(get_abi_order); do
+		for ABI in $(get_install_abis); do
 			export ABI
 
 			# Handle stupid lib32 BS
