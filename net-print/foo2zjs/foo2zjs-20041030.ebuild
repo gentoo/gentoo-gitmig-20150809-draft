@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20041030.ebuild,v 1.1 2004/11/20 18:28:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20041030.ebuild,v 1.2 2005/01/09 15:01:47 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ IUSE="cups foomaticdb usb"
 DEPEND="cups? ( net-print/cups )
 	foomaticdb? ( net-print/foomatic )
 	usb? ( sys-apps/hotplug )"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 S=${WORKDIR}/${PN}
 
 src_unpack() {

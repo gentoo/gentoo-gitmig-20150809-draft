@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foo2zjs
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.1 2004/11/20 18:28:15 genstef Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.2 2005/01/09 15:01:47 genstef Exp $
+
+  09 Jan 2005; Stefan Schweizer <genstef@gentoo.org> :
+  Marking version 20041030 stable on x86
 
 *foo2zjs-20041030 (20 Nov 2004)
 
