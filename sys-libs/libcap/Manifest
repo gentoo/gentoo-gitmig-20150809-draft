@@ -1,24 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ed2ac9009788bee0e11013cc9cb31795 ChangeLog 4118
+MD5 3dc066cb35e107c4785bcf91dfafee79 ChangeLog 3869
 MD5 14924fc4971ef24010766490ba8f5880 libcap-1.10-r3.ebuild 1897
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 6c47ce2ff9c2039a282e30bc0d569646 libcap-1.10-r4.ebuild 2065
-MD5 980a3b11edf8dd42faff2477d336549f libcap-1.10-r5.ebuild 2097
-MD5 9000d6c99fa8e618980893207442fb78 files/1.10-python.patch 2751
+MD5 c91cacf89f9e42e3f7ae3fc8c4fb8501 files/1.10-python.patch 2796
 MD5 1a4b48f5a76c206e51c3b2321abd87e1 files/digest-libcap-1.10-r3 129
-MD5 8f279ebf325d1b8efb6ad3c3a0d8cb5d files/libcap-1.10-python.patch 3353
 MD5 3aa7335821ba75c0994083995b0331f2 files/libcap-1.10-syscall.patch 1051
 MD5 2f1adcade85a501a8b4d47ddeb66ec9b files/digest-libcap-1.10-r4 129
 MD5 1f60409beeba2a799bfbc44a8b826f11 files/libcap-1.10-r4-staticfix.diff 2113
-MD5 2f1adcade85a501a8b4d47ddeb66ec9b files/digest-libcap-1.10-r5 129
 MD5 225f8c45bc6ff1df2eb5bee87f4a940f files/libcap-1.10-python-2.patch 3349
-MD5 e87b83134dc43c45f3eab0b182496974 files/libcap-1.10-r5-staticfix.patch 1980
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBbyYdHTu7gpaalycRAn2ZAKCFRUMuisdWNmWgFSBpulg3QKAzOgCg78ya
-RF2DDMLWNVuZP1qhnP7eSTI=
-=0fXw
+iD8DBQFBcU3vHTu7gpaalycRAnWjAKDicUwg9k8rdyRPpEPJ17mHKr2qCACfb5sW
+hnp8ifsT+3ywDnGuD3Jyf2s=
+=p9bu
 -----END PGP SIGNATURE-----

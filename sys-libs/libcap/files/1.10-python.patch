@@ -37,13 +37,14 @@ diff -ur libcap-1.10.orig/libcap/Makefile libcap-1.10/libcap/Makefile
  %.o: %.c $(INCLS)
  	$(CC) $(CFLAGS) -c $< -o $@
  
-@@ -82,10 +93,14 @@
+@@ -82,10 +93,15 @@
  	ln -sf $(MINLIBNAME) $(LIBDIR)/$(MAJLIBNAME)
  	ln -sf $(MAJLIBNAME) $(LIBDIR)/$(LIBNAME).so
  	-/sbin/ldconfig
 +ifdef PYTHON
 +	mkdir -p $(PYTHONMODDIR)
 +	install -m 0644 $(PYTHONMODNAME) $(PYTHONMODDIR)/$(PYTHONMODNAME)
++	install -m 0644 libcap.py $(PYTHONMODDIR)/
 +endif
  
  clean:

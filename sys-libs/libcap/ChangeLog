@@ -1,13 +1,6 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.30 2004/10/15 01:21:26 vapier Exp $
-
-*libcap-1.10-r5 (14 Oct 2004)
-
-  14 Oct 2004; Mike Frysinger <vapier@gentoo.org>
-  +files/libcap-1.10-python-2.patch, +files/libcap-1.10-r5-staticfix.patch,
-  +libcap-1.10-r5.ebuild:
-  Version bump with newer python support #64199 by Sascha Silbe.
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.31 2004/10/16 16:35:44 vapier Exp $
 
   01 Oct 2004; Simon Stelling <blubb@gentoo.org> libcap-1.10-r3.ebuild,
   libcap-1.10-r4.ebuild:
