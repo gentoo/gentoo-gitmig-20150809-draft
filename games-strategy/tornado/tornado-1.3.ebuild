@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.3.ebuild,v 1.1 2004/11/19 17:01:52 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.3.ebuild,v 1.2 2004/12/03 07:20:33 mr_bones_ Exp $
 
 inherit games
 
@@ -10,12 +10,10 @@ SRC_URI="http://home.kcore.de/~kiza/linux/tornado/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
-RDEPEND=">=sys-libs/ncurses-5.3"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND=">=sys-libs/ncurses-5.3"
 
 src_unpack() {
 	unpack ${A}
@@ -36,8 +34,8 @@ src_install() {
 	dogamesbin tornado || die
 	doman doc/man/tornado.6
 	dodoc AUTHOR CREDITS Changelog README TODO
-	insinto ${GAMES_STATEDIR}
+	insinto "${GAMES_STATEDIR}"
 	doins tornado.scores
 	prepgamesdirs
-	fperms 664 ${GAMES_STATEDIR}/tornado.scores
+	fperms 664 "${GAMES_STATEDIR}/tornado.scores"
 }
