@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.22_alpha5.ebuild,v 1.2 2002/10/23 15:01:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.22_alpha5.ebuild,v 1.3 2002/10/29 06:26:24 vapier Exp $
 
 MY_P="${P/_alpha/a}"
 DESCRIPTION="Winmodems with Lucent Apollo (ISA) and Mars (PCI) chipsets"
@@ -11,9 +11,6 @@ SRC_URI="http://www.physcip.uni-stuttgart.de/heby/ltmodem/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-
-DEPEND=""
-RDEPEND="net-dialup/wvdial"
 
 S="${WORKDIR}/${MY_P}"
 
