@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.40 2004/10/20 14:29:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.41 2004/11/22 14:55:57 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -279,6 +279,10 @@ elibtoolize() {
 uclibctoolize() {
 	[ -n "${NO_UCLIBCTOOLIZE}" ] && return 0
 
+	local errmsg=""
+	[ "${PORTAGE_LIBC}" = "uClibc" ] \
+		&& errmsg="PLEASE CHECK" \
+		|| errmsg="Already patched"
 	local targets=""
 	local x
 
@@ -294,7 +298,7 @@ uclibctoolize() {
 			if grep 'Transform linux' "${x}" >/dev/null ; then
 				ebegin " Fixing \${S}${x/${S}}"
 				patch -p0 "${x}" "${ELT_PATCH_DIR}/uclibc/configure.patch" > /dev/null
-				eend $? "PLEASE CHECK ${x}"
+				eend $? "${errmsg} ${x}"
 			fi
 			;;
 
@@ -304,7 +308,7 @@ uclibctoolize() {
 			[ "${ver:0:3}" == "1.4" ] && ver="1.3"   # 1.4 and 1.3 are compat
 			ebegin " Fixing \${S}${x/${S}}"
 			patch -p0 "${x}" "${ELT_PATCH_DIR}/uclibc/ltconfig-${ver:0:3}.patch" > /dev/null
-			eend $? "PLEASE CHECK ${x}"
+			eend $? "${errmsg} ${x}"
 			;;
 		esac
 	done
