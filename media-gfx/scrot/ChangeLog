@@ -1,8 +1,13 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.2 2002/09/11 14:36:04 seemant Exp $
 
 *scrot-0.6 (1 Feb 2002)
+
+  11 Sep 2002; Seemant Kulleen <seemant@gentoo.org> scrot-0.6.ebuild :
+
+  Installs man page now.  Thanks to: xelnix@yahoo.com (Austin Johnson) in
+  bug #3831.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
