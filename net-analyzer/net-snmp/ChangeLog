@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.42 2004/04/26 04:28:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.43 2004/05/12 02:28:48 randy Exp $
+
+  11 May 2004; Michael McCabe <randy@gentoo.org> net-snmp-5.1.1.ebuild:
+  Added s390 keywords
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> net-snmp-5.0.9-r1.ebuild,
   net-snmp-5.0.9-r3.ebuild, net-snmp-5.1.1.ebuild, net-snmp-5.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.2 2004/04/26 04:28:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.3 2004/05/12 02:28:48 randy Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~hppa ~alpha ~ia64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~hppa ~alpha ~ia64 s390"
 IUSE="perl ipv6 ssl tcpd X"
 
 PROVIDE="virtual/snmp"
