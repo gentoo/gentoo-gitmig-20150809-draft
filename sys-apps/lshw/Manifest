@@ -3,16 +3,16 @@ Hash: SHA1
 
 MD5 b7a72c0ae671b5df8b34233e9906878d ChangeLog 2089
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 5d1af2dc380a1ddeb1bad345975c9b39 lshw-02.00b.ebuild 1317
+MD5 d829f50ed10be03567368012e47eb965 lshw-02.00b.ebuild 1313
 MD5 ce540accd76c671a5a31cabfe4b8832a lshw-01.08a.ebuild 845
 MD5 e1b0c289650e6fc413a9001627b004a0 files/02.00b-dev.patch 966
 MD5 078518c848aac3fcee935427f1849647 files/digest-lshw-02.00b 64
 MD5 7c020ad03172a84e510775b8a6b7d3ce files/digest-lshw-01.08a 64
 MD5 555b9015ffbcc8fd484c63ab096069d7 files/02.00b-cpuid-PIC.patch 1098
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB2bcWroRuSHgZdywRAisfAJ4jEnS/ORGU0nnjWAfF2nIFhEnuLQCeJgg2
-pjhyGo0NYYq5HHn+1Xzffp4=
-=a32T
+iD8DBQFB3vJaroRuSHgZdywRAnN8AJ9Rt3hAz8tPqJPMIEsh3pMQuZWj0gCeOZXX
+PFKCd5q2iI5okGVrS/KRqfI=
+=i6hq
 -----END PGP SIGNATURE-----
