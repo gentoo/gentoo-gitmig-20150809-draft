@@ -1,6 +1,17 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.4 2004/05/10 04:17:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.5 2004/05/30 04:58:38 g2boojum Exp $
+
+*dovecot-0.99.10.5 (30 May 2004)
+
+  30 May 2004; Grant Goodyear <g2boojum@gentoo.org> +dovecot-0.99.10.5.ebuild:
+  Version bump (thanks to David Pufer, bug # 52371).  I also did some
+  fairly massive cleaning, so this ebuild could be massively broken
+  (although it does seem to be working just fine for me -- dovecot is the imap
+  server that my family uses).  Also replaced the "maildir" USE flag with 
+  "mbox", since maildir is the Gentoo default and thus should never have
+  been a USE flag, and cleaned up the logic to make gnutls preferred over
+  ssl if both gnutls and ssl are secified in USE.
 
   09 May 2004; Jason Wever <weeve@gentoo.org> dovecot-0.99.10.4.ebuild:
   Added ~sparc keyword.
