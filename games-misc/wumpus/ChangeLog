@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/wumpus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/ChangeLog,v 1.4 2004/07/01 11:20:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/ChangeLog,v 1.5 2004/11/05 04:55:46 josejx Exp $
+
+  05 Nov 2004; Joseph Jezak <josejx@gentoo.org> wumpus-1.4.ebuild:
+  Added ~ppc.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> wumpus-1.4.ebuild:
   virtual/glibc -> virtual/libc

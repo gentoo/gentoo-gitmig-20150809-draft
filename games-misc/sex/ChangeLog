@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/sex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/sex/ChangeLog,v 1.8 2004/07/26 04:12:02 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/sex/ChangeLog,v 1.9 2004/11/05 04:55:42 josejx Exp $
+
+  05 Nov 2004; Joseph Jezak <josejx@gentoo.org> sex-1.0.ebuild:
+  Added ~ppc.
 
   25 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org>
   Fixed Manifest.
