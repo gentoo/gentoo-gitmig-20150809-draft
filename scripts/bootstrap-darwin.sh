@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 2005 The Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-darwin.sh,v 1.1 2005/02/12 01:50:04 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-darwin.sh,v 1.2 2005/02/15 01:04:30 kito Exp $
 
 # Make sure sudo passwd is asked for
 sudo true
@@ -9,9 +9,7 @@ sudo true
 trap 'exit 1' TERM KILL INT QUIT ABRT
 
 # we only run on Darwin
-if [ `uname` == "Darwin" ]; then
-	:
-else
+if [ "`uname`" != Darwin ]; then
 	echo `uname`
 	echo "You need to be running a mach kernel to proceed."
 	exit 1
@@ -112,9 +110,9 @@ bootstrap_portage()  {
 		cd ${S}/bin
 		cp * ${S}/src/tbz2tool ${TARGET}/usr/lib/portage/bin/
 		
-		[ -d ${TARGET}/usr/bin ] || sudo mkdir ${TARGET}/usr/bin
-		[ -d ${TARGET}/usr/sbin ] || sudo mkdir ${TARGET}/usr/sbin
-		[ -d ${TARGET}/var/lib/portage ] || sudo mkdir ${TARGET}/var/lib/portage
+		[ -d ${TARGET}/usr/bin ] || sudo mkdir -p ${TARGET}/usr/bin
+		[ -d ${TARGET}/usr/sbin ] || sudo mkdir -p ${TARGET}/usr/sbin
+		[ -d ${TARGET}/var/lib/portage ] || sudo mkdir -p ${TARGET}/var/lib/portage
 		cd ${TARGET}/usr/bin
 		ln -sf ../lib/portage/bin/emerge ${TARGET}/usr/bin/emerge
 		ln -sf ../lib/portage/bin/pkgmerge $TARGET/usr/sbin/pkgmerge
@@ -166,7 +164,7 @@ bootstrap_progressive() {
 		echo
 		echo -e "Grabbing current Portage tree...."
 		echo
-		sudo emerge sync && echo "emerge sync complete." || echo "!!! emerge sync failed"
+		sudo emerge sync || exit 1
 	else
 		echo
 		echo "Gentoo bootstrap finished. Please run emerge sync then emerge system."
@@ -176,7 +174,7 @@ bootstrap_progressive() {
 	read answer
 	if [ $answer == "y" ]; then
 		echo
-		sudo emerge -v system || echo "!!! emerge system failed"
+		sudo emerge -v system || exit 1
 	else
 		echo
 		echo "Before installing any packages, you must run emerge system."
@@ -195,7 +193,6 @@ bootstrap_python() {
 
 		PV=${PYTHONVERSION}
 		A=Python-${PV}.tar.bz2
-		[ ! -d ${DISTDIR} ] && sudo mkdir -p {DISTDIR}
 		if [ ! -e ${DISTDIR}/${A} ] ; then
 			echo "Fetching Python..."
 			cd ${DISTDIR} && sudo curl -O http://www.python.org/ftp/python/${PV%_*}/${A}
@@ -269,12 +266,30 @@ bootstrap_standard() {
 	sudo mkdir -p ${PORTDIR}/profiles
 	sudo ln -sf ${PORTDIR}/profiles/${profile} /etc/make.profile || echo -n "Failed to properly link to ${PORTDIR}/profiles/${profile}"
 	if [ ! -f /usr/portage/metadata/timestamp ]; then
-		echo -e "Grabbing current Portage tree...."
-		echo
-		sudo emerge sync && echo "emerge sync complete." || echo "emerge sync failed. Please run this command manually" && exit 1
+		echo -n "It doesn't look like you've ran emerge sync yet, sync now (y/n) ? "
+		read answer
+		if [ $answer == "y" ]; then
+			echo
+			echo -e "Grabbing current Portage tree...."
+			echo
+			sudo emerge sync && echo "emerge sync complete." || echo "emerge sync failed. Please run this command manually" && exit 1
+			echo -n "Would you like to emerge the base system now (y/n) ? "
+			read answer
+			if [ $answer == "y" ]; then
+				sudo emerge -ev system && echo "emerge system complete." \
+				|| echo "There were errors running emerge system. Please run this command manually" && exit 1
+			else
+				echo -n "Bye."
+				exit 1
+			fi
+		else
+			echo "Please emerge sync && emerge system."
+			echo -n "Bye."
+			exit 1
+		fi
 	fi
-	sudo emerge -ev system && echo "emerge system complete." || echo "There were errors running emerge system. Please run this command manually" && exit 1
-	echo -n  "OK! Your Gentoo for Mac OS X system is complete."
+	
+	echo -e  "OK! Your Gentoo for Mac OS X system is complete.\n"
 	echo
 	exit 1
 	# TODO add links to docs
@@ -310,39 +325,41 @@ check_release_version() {
 create_dmg() {
 	export CM_BUILD=CM_BUILD
 	TARGET=${ROOT}/mnt/gentoo
-	BUILDDIR=${PORTAGE_TMPDIR}/portage/build
+	BUILDDIR=${PORTAGE_TMPDIR}/portage/dmgbuild
+	[ -d ${TARGET} ] || sudo mkdir -p ${TARGET}
 	if [ -d ${BUILDIR} ]; then
-		sudo rm -rf ${BUILDDIR}
+		sudo rm -rf ${BUILDDIR}/*
+	else
+		sudo mkdir ${BUILDDIR}
 	fi
-	sudo mkdir -p ${BUILDDIR}/dmg ${TARGET}
-	sudo hdiutil create -type UDIF -size 4.2g -fs HFS+J -volname gentoo -uid 0 -gid 0 ${BUILDDIR}/dmg/gentoo-osx.dmg
-	sudo hdiutil attach ${BUILDDIR}/dmg/gentoo-osx.dmg -mountpoint ${TARGET} -nobrowse -owners on
-	sudo installer -verbose -pkg ~/Desktop/BaseSystem.pkg -target ${TARGET}
-	sudo installer -verbose -pkg ~/Desktop/Essentials.pkg -target ${TARGET}
-	sudo installer -verbose -pkg ~/Desktop/BSD.pkg -target ${TARGET}
-	sudo installer -verbose -pkg ~/Desktop/DeveloperTools.pkg -target ${TARGET}
-	sudo installer -verbose -pkg ~/Desktop/DevSDK.pkg -target ${TARGET}
-	sudo installer -verbose -pkg ~/Desktop/BSDSDK.pkg -target ${TARGET}
-	sudo installer -verbose -pkg ~/Desktop/gcc3.3.pkg -target ${TARGET}
+	hdiutil create -type UDIF -size 4.2g -fs HFS+J -volname ${VOLNAME} -uid 0 -gid 0 ${OUTPUTDMG} || exit 1
+	sudo hdiutil attach ${OUTPUTDMG} -mountpoint ${TARGET} -nobrowse -owners on || exit 1
+	sudo installer -verbose -pkg /Library/Receipts/BaseSystem.pkg -target ${TARGET}
+	sudo installer -verbose -pkg ${PACKAGEDIR}/Essentials.pkg -target ${TARGET}
+	sudo installer -verbose -pkg ${PACKAGEDIR}/BSD.pkg -target ${TARGET}
+	sudo installer -verbose -pkg ${PACKAGEDIR}/DeveloperTools.pkg -target ${TARGET}
+	sudo installer -verbose -pkg ${PACKAGEDIR}/DevSDK.pkg -target ${TARGET}
+	sudo installer -verbose -pkg ${PACKAGEDIR}/BSDSDK.pkg -target ${TARGET}
+	sudo installer -verbose -pkg ${PACKAGEDIR}/gcc3.3.pkg -target ${TARGET}
 	# TODO check for incremental updates
-	if [ -d ~/Desktop/MacOSXUpdateCombo10.3.8.pkg ];then
-		sudo installer -verbose -pkg ~/Desktop/MacOSXUpdateCombo10.3.8.pkg -target ${TARGET}
+	if [ -d ${PACKAGEDIR}/MacOSXUpdateCombo10.3.8.pkg ];then
+		sudo installer -verbose -pkg ${PACKAGEDIR}/MacOSXUpdateCombo10.3.8.pkg -target ${TARGET}
 	else
 		echo
 		echo -e "Mac OS X 10.3.8 Update not found...oh well, vanilla 10.3 it is."
 		echo
 	fi
 	echo
-	echo -e "Completed Installing Base System."
+	echo -e "Completed Installing OS X System Packages."
 	echo
-	[ ! -f ${TARGET}/var/log/CDIS.custom ] && sudo mkdir -p /var/log
+	[ ! -f ${TARGET}/var/log/CDIS.custom ] && sudo mkdir -p ${TARGET}/var/log
 	sudo echo 'LANGUAGE=English' > ${TARGET}/var/log/CDIS.custom
 	echo
 	echo "Updating mkext cache"
 	sudo kextcache -K ${TARGET}/mach_kernel -a ${ARCH} -m ${TARGET}/System/Library/Extensions.mkext ${TARGET}/System/Library/Extensions 2>/dev/null
 	sudo cp ${BOOTSTRAPSCRIPT} ${TARGET}/sbin && sudo chmod a+x ${TARGET}/sbin/"${0##*/}"
 	## HACK we cant mount images in the chroot properly, so we copy the standard install pkg to the target before we chroot
-	echo -n "Would you like this to be a standard install(no apple files will be modified) (y/n)? "
+	echo -n "Would you like this to be a standard install(apple files will not be modified) (y/n)? "
 	read answer
 	if [ $answer == "y" ]; then
 		A=gentoo-macos-${DMGVERSION}.dmg
@@ -356,7 +373,7 @@ create_dmg() {
 		sudo hdiutil unmount /Volumes/gentoo-macos/
 		echo -e "Portage installed on ${TARGET}"
 	else
-		echo -e "Ok, this will be a progressive chroot"
+		echo -e "Ok, this will be a progressive chroot."
 	fi
 	echo -n "Would you like to chroot and complete the bootstrap process now (y/n)? "
 	read answer
@@ -383,15 +400,26 @@ create_dmg() {
 		# we do once for devfs and once for fdesc
 		sudo umount ${TARGET}/dev && sudo umount ${TARGET}/dev
 		sudo umount ${TARGET}/.vol
+		sudo hdiutil unmount ${TARGET}
+	else	
+		echo
+		echo -e "Completed creating ${OUTPUTDMG}"
+		echo -e "To use your new disk image mount it,mount devfs, fdesc, and volfs like this:"
+		echo
+		echo -e "  hdiutil attach ${OUTPUTDMG} -owners on"
+		echo -e "  mount -t devfs stdin /Volumes/${VOLNAME}/dev"
+		echo -e "  mount -t fdesc -o union stdin /Volumes/${VOLNAME}/dev"
+		echo -e "  mount_volfs /Volumes/${VOLNAME}/.vol"
+		echo
+		echo -e "Then chroot like this:"
+		echo
+		echo -e "  chroot /Volumes/${VOLNAME} /bin/bash"
+		echo
+		echo -e "Once you have chrooted, bootstrap portage by running this script like so:"
+		echo
+		echo -e "  cd /sbin && ${0##*/} {standard,progressive} \n"
+		echo
 	fi
-	sudo hdiutil unmount ${TARGET}
-	sudo mv ${BUILDDIR}/dmg/gentoo-osx.dmg ~/Desktop
-	echo
-	echo -e "Completed creating ~/Desktop/gentoo-osx.dmg"
-	echo -e "To finish bootstrap, mount your new disk image, mount devfs, fdesc, volfs "
-	echo -e "and enter the chroot. Once you are chrooted, run the bootstrap script like this: \n"
-	echo -e "  /sbin/${0##*/} {standard,progressive} \n"
-	echo
 	exit 1
 }
 
@@ -400,7 +428,7 @@ greeting() {
 	echo -e "Gentoo for Mac OS X"
 	echo -e "http://www.gentoo.org/"
 	echo -e "Copyright 2005 The Gentoo Foundation"
-	echo -e "Distributed under the GPLv2 and APSL-2 Licenses"
+	echo -e "Distributed under the GPLv2 and APSLv2 Licenses"
 	echo
 }
 
@@ -437,11 +465,11 @@ setup_users() {
 		sudo nicl -raw ${TARGET}/var/db/netinfo/local.nidb -create /users/portage gid 250
 		sudo nicl -raw ${TARGET}/var/db/netinfo/local.nidb -create /groups/portage gid 250
 	else
-		sudo niutil -create ${TARGET} /users/portage
-		sudo niutil -create ${TARGET} /groups/portage
-		sudo niutil -createprop ${TARGET} /users/portage uid 250
-		sudo niutil -createprop ${TARGET} /users/portage gid 250
-		sudo niutil -createprop ${TARGET} /groups/portage gid 250
+		sudo niutil -create / /users/portage
+		sudo niutil -create / /groups/portage
+		sudo niutil -createprop / /users/portage uid 250
+		sudo niutil -createprop / /users/portage gid 250
+		sudo niutil -createprop / /groups/portage gid 250
 	fi
 
 }
@@ -454,9 +482,17 @@ show_status() {
 
 usage() {
 	echo -e "Usage: ${HILITE}${0##*/}${NORMAL} ${GOOD}[options]${NORMAL}"
-	echo -e "  ${GOOD}standard${NORMAL}     	Mac OS X Standard - no system files will be modified (requires Xcode)"
-	echo -e "  ${GOOD}progressive${NORMAL}   Mac OS X Progressive - EXPERIMENTAL!! Tames your Panther."
-	echo -e "  ${GOOD}dmg${NORMAL}  Creates a Mac OS X Disk Image suitable for a development chroot"
+	echo
+	echo -e " ${GOOD}standard${NORMAL}     	Mac OS X Standard - no system files will be modified (requires Xcode)"
+	echo -e " ${GOOD}progressive${NORMAL}    Mac OS X Progressive - EXPERIMENTAL!! Tames your Panther."
+	echo -e " ${GOOD}dmg${NORMAL} ${GOOD}/Path/to/Packages${NORMAL} ${GOOD}/Output.dmg${NORMAL} ${GOOD}dmgsize${NORMAL} ${GOOD}volname${NORMAL}Creates a Mac OS X Disk Image suitable for a development chroot"
+	echo
+	echo -e " Examples:"
+	echo
+	echo -e "  ${BOOTSTRAPSCRIPT} standard"
+	echo -e "  ${BOOTSTRAPSCRIPT} progressive"
+	echo -e "  ${BOOTSTRAPSCRIPT} dmg ~/Packages ~/Desktop/10.3.dmg 4.2 10.3-chroot"
+	echo
 	exit 1
 }
 
@@ -471,6 +507,10 @@ if [ "$ARG" == "progressive" ]; then
 elif [ "$ARG" == "standard" ]; then
 	bootstrap_standard
 elif [ "$ARG" == "dmg" ]; then
+	PACKAGEDIR=$2
+	OUTPUTDMG=$3
+	DMGSIZE=$4
+	VOLNAME=$5
 	create_dmg
 elif [ "$ARG" == "pythononly" ]; then
 	bootstrap_python $2
