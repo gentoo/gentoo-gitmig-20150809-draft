@@ -13,10 +13,16 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/GConf/${A}
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext )
+        >=sys-libs/db-3.2.3h
 	>=gnome-base/gnome-env-1.0
         >=gnome-base/oaf-0.6.5
-	>=x11-libs/gtk+-1.2.9
+	>=gnome-base/gnome-libs-1.2.10
         >=dev-util/guile-1.4"
+
+DEPEND=">=sys-libs/db-3.2.3h
+	>=gnome-base/gnome-env-1.0
+        >=gnome-base/oaf-0.6.5
+	>=gnome-base/gnome-libs-1.2.10"
 
 src_unpack() {
   unpack ${A}

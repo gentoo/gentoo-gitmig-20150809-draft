@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.1.ebuild,v 1.1 2001/05/17 00:10:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.1.ebuild,v 1.2 2001/06/04 10:34:15 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,11 +10,10 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}
          ftp://gnome.eazel.com/pub/gnome/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND="nls? ( sys-devel/gettext )
-	>=gnome-base/gnome-env-1.0
-        >=gnome-base/gconf-1.0.0
-        >=gnome-base/gnome-libs-1.2.13"
+DEPEND="nls? ( sys-devel/gettext ) >=dev-util/xml-i18n-toools-0.8.4
+        >=gnome-base/gconf-1.0.0"
 
+DEPEND=">=gnome-base/gconf-1.0.0"
 
 src_unpack() {
   unpack ${A}

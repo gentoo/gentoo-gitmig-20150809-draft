@@ -11,9 +11,10 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext )
+        >=dev-util/xml-i18n-tools-0.8.4 sys-devel/perl
         >=gnome-base/gnome-vfs-1.0.1
-	>=gnome-base/libglade-0.16
 	>=gnome-base/libunicode-0.4
+        alsa? ( >=media-libs/alsa-lib-0.5.10 )
 	>=gnome-base/gnome-print-0.29"
 
 RDEPEND="virtual/glibc"
@@ -22,7 +23,7 @@ RDEPEND="virtual/glibc"
 src_compile() {
   local myconf
   if [ -z "`use nls`" ]
-  then
+  then                                                                                       
     myconf="--disable-nls"
   fi
   try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome ${myconf}

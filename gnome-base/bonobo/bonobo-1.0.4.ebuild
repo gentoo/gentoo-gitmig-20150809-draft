@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.4.ebuild,v 1.1 2001/05/17 00:10:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.4.ebuild,v 1.2 2001/06/04 10:34:15 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,9 +10,12 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}
          ftp://gnome.eazel.com/pub/gnome/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND="nls? ( sys-devel/gettext )
+DEPEND="nls? ( sys-devel/gettext ) sys-devel/perl
         >=gnome-base/oaf-0.6.5
-        >=gnome-base/ORBit-0.5.8
+        >=dev-util/xml-i18n-tools-0.8.4
+	>=gnome-base/gnome-print-0.25"
+
+RDEPEND=">=gnome-base/oaf-0.6.5
 	>=gnome-base/gnome-print-0.25"
 
 src_compile() {
@@ -25,7 +28,7 @@ src_compile() {
   # on of the samples in the package need to be regenerated from the idl files
   rm -f ${S}/samples/bonobo-class/Bonobo_Sample_Echo.h
   rm -f ${S}/samples/bonobo-class/Bonobo_Sample_Echo-*.c
-  
+
   try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome ${myconf}
   try make
 }
