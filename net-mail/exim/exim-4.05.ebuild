@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.05.ebuild,v 1.3 2002/09/01 22:24:45 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.05.ebuild,v 1.4 2002/09/03 20:13:26 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -40,7 +40,7 @@ src_unpack() {
 		-e "s:BIN_DIRECTORY=/usr/exim/bin:BIN_DIRECTORY=/usr/sbin:" \
 		-e "s:COMPRESS_COMMAND=/opt/gnu/bin/gzip:COMPRESS_COMMAND=/usr/bin/gzip:" \
 		-e "s:ZCAT_COMMAND=/opt/gnu/bin/zcat:ZCAT_COMMAND=/usr/bin/zcat:" \
-		-e "s:CONFIGURE_FILE=/usr/exim/configure:CONFIGURE_FILE=/etc/exim/configure:" \
+		-e "s:CONFIGURE_FILE=/usr/exim/configure:CONFIGURE_FILE=/etc/exim/exim.conf:" \
 		-e "s:EXIM_MONITOR=eximon.bin:# EXIM_MONITOR=eximon.bin:" \
 		-e "s:# EXIM_PERL=perl.o:EXIM_PERL=perl.o:" \
 		-e "s:# INFO_DIRECTORY=/usr/local/info:INFO_DIRECTORY=/usr/share/info:" \
@@ -158,9 +158,7 @@ src_install () {
 	dodir /etc/exim
 	
 	cd ${S}/src
-	insopts -o root -g root -m 0644
-	insinto /etc/exim
-	doins configure.default
+	cp configure.default ${D}/etc/exim/exim.conf.dist
 
 	dodoc ${S}/doc/*
 	doman ${S}/doc/exim.8
@@ -190,6 +188,6 @@ pkg_postinst() {
 
 	einfo "Read the bottom of /etc/exim/system_filter.exim for usage."
 	einfo "/usr/share/doc/${P}/auth_conf.sub.gz contains the configuration sub for using smtp auth."
-	einfo "Please create /etc/exim/configure from /etc/exim/configure.default."
+	einfo "Please create /etc/exim/exim.conf from /etc/exim/exim.conf.dist."
 
 }
