@@ -1,6 +1,16 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.6 2002/06/17 20:13:36 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.7 2002/07/16 10:31:13 stubear Exp $
+
+*rxvt-2.7.8-r5 (16 Jul 2002)
+
+  16 Jul 2002; Stuart Bouyer <stubear@gentoo.org> rxvt-2.7.8-r5.ebuild :
+  
+  Added the otions --enable-language, --enable-xim to give support for 
+  multiple-byte characters.
+
+  (Changes submitted by Cong <vo.chi.cong-linux@is.titech.ac.jp>, Moto
+  Kawasaki <kawasaki@kawasaki3.org>, and Yi-Shin Li <ysli@ee.columbia.edu>)
 
 *rxvt-2.7.8-r4 (3 May 2002)
 
