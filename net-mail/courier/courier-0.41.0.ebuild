@@ -31,7 +31,7 @@ RDEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1.3 )
 	tcltk? ( >=dev-tcltk/expect-5.33.0 )
-	spell? ( >=app-text/aspell-0.50.3 )"
+	spell? ( virtual/aspell-dict )"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-apps/procps"

@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.14 2003/02/12 08:08:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.15 2003/04/22 23:41:44 vladimir Exp $
 
 *courier-0.41.0 (30 Jan 2003)
+
+  22 Apr 2003; Graham Forest <vladimir@gentoo.org> courier-0.40.2.ebuild,
+  courier-0.41.0.ebuild:
+  app-text/aspell -> virtual/aspell-dict
 
   30 Jan 2003; Alexandru Hartmann <alex@as-computer.de>, Andreas Erhart <andi@as-computer.de>
   courier-0.41.0.ebuild, files/courier:
