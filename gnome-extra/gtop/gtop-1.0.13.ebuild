@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/gtop-1.0.13.ebuild,v 1.4 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/gtop-1.0.13.ebuild,v 1.5 2001/10/06 23:11:22 hallski Exp $
 
 
 A=${P}.tar.gz
@@ -10,25 +10,26 @@ DESCRIPTION="gtop"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPGAE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/libgtop-1.0.9
+DEPEND=">=gnome-base/libgtop-1.0.12-r1
         nls? ( sys-devel/gettext )"
 
 src_compile() {
-  local myconf
-  if [ -z "`use nls`" ] ; then
-     myconf="--disable-nls"
-  fi
-  try ./configure --host=${CHOST} --prefix=/opt/gnome $myconf
-  try pmake
+	local myconf
+
+	if [ -z "`use nls`" ] ; then
+		myconf="--disable-nls"
+	fi
+
+	./configure --host=${CHOST}					\
+		    --prefix=/usr					\
+		    $myconf || die
+
+	emake || die
 }
 
 src_install() {
-  
-  try make prefix=${D}/opt/gnome install
-  dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	make DESTDIR=${D} prefix=${D}/usr install || die
 
+	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
-
-
-
 
