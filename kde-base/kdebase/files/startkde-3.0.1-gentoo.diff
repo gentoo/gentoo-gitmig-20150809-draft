@@ -9,10 +9,10 @@
  #
  
 +# Gentoo part:
-+export PATH="/usr/kde/3/bin:${PATH}"
-+export KDEDIR="/usr/kde/3"
-+export KDEDIRS="/usr/kde/3:${KDEDIRS}"
-+export KDEMAINDIR="/usr/kde/3"
++export PATH="_KDEDIR_/bin:${PATH}"
++export KDEDIR="_KDEDIR_"
++export KDEDIRS="_KDEDIR_:${KDEDIRS}"
++export KDEMAINDIR="_KDEDIR_"
 +rm -rf ~/.kde
 +ln -fs ~/.kde3 ~/.kde
 +[ -e "~/.kde3" ] || mkdir ~/.kde3
