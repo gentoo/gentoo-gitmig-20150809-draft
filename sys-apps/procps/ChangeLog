@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.15 2002/12/13 11:00:33 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.16 2002/12/15 08:49:45 lostlogic Exp $
+
+*procps-3.1.4 (15 Dec 2002)
+
+  15 Dec 2002; Brandon Low <lostlogic@gentoo.org> procps-3.1.4.ebuild :
+
+  Amazing what happens if I report bugs to the right places for us :)
+  This release should fix the %CPU reporting, AND the 3 eating bug,
+  please test, and if it does, comment on the bug in bugzilla so I 
+  can start pushing to move this to stable :)
 
 *procps-3.1.3 (12 Dec 2002)
 
