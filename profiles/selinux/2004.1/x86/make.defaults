@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/make.defaults,v 1.8 2004/11/24 00:57:28 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/make.defaults,v 1.9 2005/03/30 01:25:19 pebenito Exp $
 
 USE="x86"
 GRP_STAGE23_USE="x86"
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
-FEATURES="sandbox"
+#FEATURES="sandbox"
