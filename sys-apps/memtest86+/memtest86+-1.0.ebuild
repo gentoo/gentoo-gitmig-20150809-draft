@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.0.ebuild,v 1.2 2004/02/01 20:35:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.0.ebuild,v 1.3 2004/02/01 20:42:15 spock Exp $
+
+inherit mount-boot
 
 DESCRIPTION="Memory tester based on memtest86"
 HOMEPAGE="http://www.memtest.org/"
@@ -30,27 +32,8 @@ src_compile() {
 }
 
 src_install() {
-
-	umountboot=0
-
-	# no /boot? try to mount..
-	if [ ! -d /boot ] ; then
-		mount /boot 2>/dev/null >/dev/null
-
-		if [ $? -eq 0 ] ; then
-			umountboot=1
-		else
-			die "Can't find /boot"
-		fi
-	fi
-
 	dodir /boot/memtest86plus
 	cp memtest.bin ${D}/boot/memtest86plus/memtest.bin
-
-	if [ "${umountboot}" -eq 1 ] ; then
-		umount /boot 2>/dev/null >/dev/null
-	fi
-
 	dodoc README README.build-process
 }
 
