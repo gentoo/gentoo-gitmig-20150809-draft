@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.0-r2.ebuild,v 1.10 2004/07/14 02:30:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.0-r2.ebuild,v 1.11 2004/07/27 14:31:34 vapier Exp $
 
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic gcc gnuconfig
 
 DESCRIPTION="File transfer program to keep remote files into sync"
 HOMEPAGE="http://rsync.samba.org/"
@@ -37,6 +37,8 @@ src_unpack() {
 	sed -i \
 		-e 's|/etc/rsyncd|/etc/rsync/rsyncd|g' rsyncd.conf.5 \
 			|| die "sed rsyncd.conf.5 failed"
+
+	gnuconfig_update
 }
 
 src_compile() {
