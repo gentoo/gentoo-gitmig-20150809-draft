@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.5.0.ebuild,v 1.8 2004/10/13 16:28:33 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.5.0.ebuild,v 1.9 2004/10/13 18:03:58 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils
 
-DESCRIPTION="OpenCT is a library for accessing smart card terminals."
+DESCRIPTION="library for accessing smart card terminals"
 HOMEPAGE="http://opensc.org/"
 SRC_URI="http://opensc.org/files/${P}.tar.gz"
 
@@ -25,7 +25,6 @@ pkg_setup() {
 }
 
 src_compile() {
-	filter-flags "-fstack-protector"
 	econf --localstatedir=/var || die
 	emake || die
 }

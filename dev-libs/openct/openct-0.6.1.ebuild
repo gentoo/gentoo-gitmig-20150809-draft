@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.1.ebuild,v 1.3 2004/10/12 01:40:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.1.ebuild,v 1.4 2004/10/13 18:03:58 vapier Exp $
 
 inherit eutils
 
 MY_P=${P/_/-}
-DESCRIPTION="OpenCT is a library for accessing smart card terminals."
+DESCRIPTION="library for accessing smart card terminals"
 HOMEPAGE="http://opensc.org/"
 SRC_URI="http://opensc.org/files/${MY_P}.tar.gz"
 

@@ -1,9 +1,6 @@
 # ChangeLog for dev-libs/openct
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.7 2004/10/13 16:28:33 pappy Exp $
-
-  13 Oct 2004; <pappy@gentoo.org> +metadata.xml, openct-0.5.0.ebuild:
-  added fix for bug 66966
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.8 2004/10/13 18:03:58 vapier Exp $
 
 *openct-0.6.1 (31 Aug 2004)
 
