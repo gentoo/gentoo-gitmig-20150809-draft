@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.10 2004/01/07 20:23:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.11 2004/03/13 11:48:17 usata Exp $
+
+inherit alternatives
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Load Image: view images or load them to root window"
@@ -52,16 +54,29 @@ src_install() {
 	newman xli.man xli.1
 	newman xliguide.man xliguide.1
 	newman xlito.man xlito.1
-	dosym /usr/bin/xli /usr/bin/xview
-	dosym /usr/bin/xli /usr/bin/xsetbg
+	#dosym /usr/bin/xli /usr/bin/xview
+	#dosym /usr/bin/xli /usr/bin/xsetbg
 
-	# is this even worth it? xrdb doesnt like this file; this is what
-	# their install does, though.
-	dodir /usr/X11R6/lib/X11/app-defaults
-	cp /dev/null ${D}/usr/X11R6/lib/X11/app-defaults/Xli
-	echo "path=/usr/X11R6/include/X11/bitmaps /usr/X11R6/include/X11/images" \
-		>> ${D}/usr/X11R6/lib/X11/app-defaults/Xli
-	echo "extension=.gif .jpg .rle .csun .msun .sun .face .xbm .bm" \
-		>> ${D}/usr/X11R6/lib/X11/app-defaults/Xli
-	chmod a+r ${D}/usr/X11R6/lib/X11/app-defaults/Xli
+	insinto /etc/X11/app-defaults
+	newins ${FILESDIR}/Xli.ad Xli || die
+	fperms a+r /etc/X11/app-defaults/Xli
+}
+
+update_alternatives() {
+	alternatives_makesym /usr/bin/xview \
+		/usr/bin/{xloadimage,xli}
+	alternatives_makesym /usr/bin/xsetbg \
+		/usr/bin/{xloadimage,xli}
+	alternatives_makesym /usr/share/man/man1/xview.1.gz \
+		/usr/share/man/man1/{xloadimage,xli}.1.gz
+	alternatives_makesym /usr/share/man/man1/xsetbg.1.gz \
+		/usr/share/man/man1/{xloadimage,xli}.1.gz
+}
+
+pkg_postinst() {
+	update_alternatives
+}
+
+pkg_postrm() {
+	update_alternatives
 }
