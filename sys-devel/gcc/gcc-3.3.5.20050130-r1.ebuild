@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130-r1.ebuild,v 1.4 2005/04/06 00:43:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130-r1.ebuild,v 1.5 2005/04/06 10:34:39 eradicator Exp $
 
 MAN_VER="3.3.5"
 PATCH_VER="1.4"
@@ -93,5 +93,7 @@ src_unpack() {
 
 	if [[ $(tc-arch) == "amd64" ]] ; then
 		replace-cpu-flags k8 i686
+		replace-cpu-flags opteron i686
+		replace-cpu-flags athlon64 i686
 	fi
 }
