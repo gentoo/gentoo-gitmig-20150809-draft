@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.109 2005/03/08 21:43:32 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.110 2005/03/09 22:03:28 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -50,7 +50,6 @@
 #						  the doc dir
 # UNIPATCH_STRICTORDER	- if this is set places patches into directories of
 #						  order, so they are applied in the order passed
-
 
 inherit toolchain-funcs versionator multilib
 ECLASS="kernel-2"
@@ -466,6 +465,7 @@ unipatch() {
 			esac
 
 			if [ -n "${UNIPATCH_STRICTORDER}" ]; then
+				unset z
 				STRICT_COUNT=$((${STRICT_COUNT} + 1))
 				for((y=0; y<$((6 - ${#STRICT_COUNT})); y++));
 					do z="${z}0";
@@ -514,6 +514,7 @@ unipatch() {
 				fi
 
 				if [ -n "${UNIPATCH_STRICTORDER}" ]; then
+					unset z
 					STRICT_COUNT=$((${STRICT_COUNT} + 1))
 					for((y=0; y<$((6 - ${#STRICT_COUNT})); y++));
 						do z="${z}0";
