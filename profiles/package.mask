@@ -684,7 +684,8 @@ dev-libs/libmrproject
 >=x11-libs/gtkmm-1.3.0
 >=dev-libs/libsigc++-1.1.0
 >=dev-python/pygtk-1.99.0
-
+>=app-arch/file-roller-1.106
+>=net-irc/xchat-20020519
 
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
