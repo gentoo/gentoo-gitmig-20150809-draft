@@ -141,7 +141,7 @@ media-video/SDLcam
 # Test please, as this is going to be the next stable
 # moz (also for galeon-1.2.6)
 # worksforme // Spider
->=net-www/mozilla-1.0.1
+>=net-www/mozilla-1.0.2
 
 # <raker@gentoo.org> (28 Sep 2002)
 # masking new lbreakout2 build to respect the freeze
@@ -199,7 +199,7 @@ dev-perl/perl-ldap
 
 # <blocke@shivan.org> (16 Sep 2002)
 # Masked due to freeze
-=net-www/galeon-1.2.6
+#=net-www/galeon-1.2.6
 
 # <g2boojum@gentoo.org> (15 Sep 2002)
 # Masked for testing, 'cause it's not quite done, and 'cause there's a freeze
@@ -1156,10 +1156,6 @@ app-cdr/eroaster
 # stroke@gentoo.org 19 Aug 2002
 # Anjuta 1.0-beta1 (preview). masked for testing
 >=dev-util/anjuta-0.9.99
-
-# jnelson@gentoo.org 2 Sep 2002
-# python 2.2.1-r3, filters -malign-double via flag-o-matic
-=dev-lang/python-2.2.1-r3
 
 # jnelson@gentoo.org 6 Sep 2002
 # masking gramps-0.8.0 due to freeze
