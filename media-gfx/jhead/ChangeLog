@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jhead
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.9 2003/12/08 04:49:15 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.10 2003/12/12 00:26:20 rajiv Exp $
+
+  11 Dec 2003; Rajiv Aaron Manglani <rajiv@gentoo.org> jhead-2.0.ebuild:
+  stable on ppc.
 
   07 Dec 2003; Rajiv Aaron Manglani <rajiv@gentoo.org> jhead-2.0.ebuild:
   marked ~ppc.
