@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r4.ebuild,v 1.1 2004/09/23 21:19:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r4.ebuild,v 1.2 2004/11/23 11:13:05 eradicator Exp $
 
 IUSE=""
+
+S=${WORKDIR}/eawpats
 
 DESCRIPTION="Eric Welsh's GUS patches for TiMidity"
 HOMEPAGE="http://www.stardate.bc.ca/eawpatches/html/default.htm"
@@ -10,11 +12,9 @@ SRC_URI="http://5hdumat.samizdat.net/music/eawpats${PV}_full.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 DEPEND=">=media-sound/timidity++-2.13.0-r2"
-
-S=${WORKDIR}/eawpats
 
 src_unpack() {
 	unpack ${A}
@@ -50,4 +50,3 @@ pkg_postinst() {
 	einfo "You must run 'timidity-update -g -s eawpatches' to set this"
 	einfo "patchset as the default system patchset."
 }
-

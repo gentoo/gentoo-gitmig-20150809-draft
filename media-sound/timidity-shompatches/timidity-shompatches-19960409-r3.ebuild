@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/timidity-shompatches-19960409-r3.ebuild,v 1.1 2004/09/26 22:10:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/timidity-shompatches-19960409-r3.ebuild,v 1.2 2004/11/23 11:13:32 eradicator Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.i.h.kyoto-u.ac.jp/~shom/timidity/shominst/shominst-0409.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 RDEPEND=">=media-sound/timidity++-2.13.0-r2"
 
