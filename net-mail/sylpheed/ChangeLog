@@ -1,7 +1,11 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.5 2002/04/23 02:24:08 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.6 2002/05/12 14:54:16 spider Exp $
 
+*sylpheed-0.7.6 (12 May 2002)
+  12 May 2002; Spider <spider@gentoo.org> sylpheed-0.7.6.ebuild: 
+  New upstream
+  
 *sylpheed-0.7.5 (22 Apr 2002)
 
   22 Apr 2002; Jon Nelson <jnelson@gentoo.org> sylpheed-0.7.5.ebuild:
