@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-relnev/quake2-relnev-0.15.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-relnev/quake2-relnev-0.15.ebuild,v 1.2 2003/09/09 23:44:19 msterret Exp $
 
 inherit games eutils gcc
 
@@ -25,7 +25,7 @@ DEPEND="svga? ( media-libs/svgalib )
 	aalib? ( media-libs/aalib )
 	opengl? ( virtual/opengl )
 	|| ( svga? ( "" ) X? ( "" ) sdl? ( "" ) aalib? ( "" ) virtual/x11 )"
-PDEPEND="app-games/quake2-data"
+PDEPEND="games-fps/quake2-data"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz

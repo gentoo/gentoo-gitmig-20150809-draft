@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-strikeforce/unreal-tournament-strikeforce-1.75.ebuild,v 1.1 2003/09/09 18:10:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-strikeforce/unreal-tournament-strikeforce-1.75.ebuild,v 1.2 2003/09/09 23:44:19 msterret Exp $
 
 inherit games
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="|| ( app-games/unreal-tournament app-games/unreal-tournament-goty )"
+DEPEND="|| ( games-fps/unreal-tournament games-fps/unreal-tournament-goty )"
 
 S="${WORKDIR}"
 

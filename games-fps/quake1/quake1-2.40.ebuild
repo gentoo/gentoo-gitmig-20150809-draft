@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40.ebuild,v 1.2 2003/09/09 23:44:19 msterret Exp $
 
 inherit games eutils gcc
 
@@ -23,7 +23,7 @@ S=${WORKDIR}
 pkg_setup() {
 	games_pkg_setup
 	echo
-	ewarn "You probably want app-games/quakeforge if you're"
+	ewarn "You probably want games-fps/quakeforge if you're"
 	ewarn "looking for a quake1 client ..."
 }
 

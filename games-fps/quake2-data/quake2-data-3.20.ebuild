@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.2 2003/09/09 23:44:19 msterret Exp $
 
 inherit games
 
@@ -56,7 +56,7 @@ src_install() {
 	doins ctf/*.{cfg,ico,pak} || die "couldnt grab ctf"
 
 	# install symlinks for all the packages that may utilize this ebuild
-	if has_version app-games/quake2-relnev ; then
+	if has_version games-fps/quake2-relnev ; then
 		einfo "Creating symlinks for quake2-relnev"
 		for qdir in "" -qmax ; do
 			basedir=${GAMES_LIBDIR}/quake2-relnev${qdir}/baseq2

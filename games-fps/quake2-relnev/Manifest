@@ -1,5 +1,5 @@
-MD5 c4c9ad87c21b6305be5a78f9e61d6b06 ChangeLog 797
-MD5 24e3ee9fcc2a675ce15de736691e0faa quake2-relnev-0.15.ebuild 3689
+MD5 96623451dabb4d43f7a60358ac16bfe9 ChangeLog 799
+MD5 4513f276cba490b3b5f7fc33b87686bf quake2-relnev-0.15.ebuild 3689
 MD5 2219e82edb75f4e2a9fa232afc365c5d files/0.15-Makefile-gcc3.patch 787
 MD5 ad5de2e8c5c06b69b3b5a2dd926a758f files/0.15-Makefile-optflags.patch 260
 MD5 705532a27c8fcec984b7f5273c726901 files/README-postinstall 2661
