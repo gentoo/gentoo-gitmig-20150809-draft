@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.9 2003/09/23 12:25:04 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.10 2003/11/05 18:27:21 caleb Exp $
+
+  05 Nov 2003; Caleb Tennis <caleb@gentoo.org> wv2-0.0.7.ebuild, wv2-0.0.8.ebuild,
+  wv2-0.1.8.ebuild, wv2-0.1.ebuild:
+  New version, remove stale versions
 
   23 Sep 2003; David Holm <dholm@gentoo.org> wv2-0.1.9.ebuild:
   Added to ~ppc.
