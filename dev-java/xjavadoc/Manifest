@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cdea9fe153181ce691b771501667e0b8 xjavadoc-1.1.ebuild 1075
+MD5 efbdcc93c8835880d70948eb46666738 ChangeLog 471
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 ab072e0465aa3f0ab9c007d189415e06 files/xjavadoc-1.1-buildfile.patch 1094
+MD5 7abfbf5b533b28576460b9214237b58e files/digest-xjavadoc-1.1 140
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCT1ln06ebR+OMO78RAqZpAJ9drcB2ohmYTY8/p/8WLtqqEh/XPQCghSwz
+ySFdISRZGW9KOjKvvMFH+f0=
+=02mt
+-----END PGP SIGNATURE-----

@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/xjavadoc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/ChangeLog,v 1.1 2005/04/03 02:47:53 luckyduck Exp $
+
+*xjavadoc-1.1 (03 Apr 2005)
+
+  03 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/xjavadoc-1.1-buildfile.patch, +xjavadoc-1.1.ebuild:
+  Initial import, ebuild based on the contribution by Dan
+  <dan@intuitivelyobvious.net>. Fixes #66727
+
