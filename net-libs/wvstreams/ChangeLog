@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.22 2004/11/02 01:21:31 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.23 2004/11/02 09:07:22 dragonheart Exp $
+
+  02 Nov 2004; Daniel Black <dragonheart@gentoo.org> wvstreams-3.75.ebuild:
+  Dependancy change of speex to speex? (media-libs/speex
+  !=media-libs/speex-1.1.4) as per bug #69743 . Thanks to Tony Murray
+  <tonymurray@fastmail.fm> for the report and solution
 
   02 Nov 2004; Karol Wojtaszek,,, <sekretarz@gentoo.org>
   wvstreams-3.75.ebuild:

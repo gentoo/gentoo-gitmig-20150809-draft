@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.10 2004/11/02 01:21:31 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.11 2004/11/02 09:07:22 dragonheart Exp $
 
 inherit eutils
 
@@ -16,9 +16,8 @@ IUSE="gtk qt oggvorbis speex fam gdbm pam fftw tcltk"
 RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	qt? ( >=x11-libs/qt-3.0.5 )
 	oggvorbis? ( >=media-libs/libogg-1.0
-		>=media-libs/libvorbis-1.0
-		speex? ( <=media-libs/speex-1.0 ) )
-	!oggvorbis? ( speex? ( >=media-libs/speex-1.0 ) )
+		>=media-libs/libvorbis-1.0 )
+	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
 	fam? ( >=app-admin/fam-2.7.0 )
 	>=sys-libs/db-3
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
