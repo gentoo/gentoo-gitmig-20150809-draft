@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-0.0.15.ebuild,v 1.10 2004/05/13 03:21:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-1.0.0.ebuild,v 1.1 2004/05/13 03:21:19 dragonheart Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A secure, lightweight ident daemon."
@@ -11,17 +11,17 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="dev-libs/dietlibc
-	dev-libs/libowfat"
+	dev-libs/libowfat
+	>=sys-apps/sed-4"
 
-RDEPEND="sys-apps/daemontools
+RDEPEND="virtual/inetd
 	sys-apps/ucspi-tcp"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	mv Makefile Makefile.orig
-	sed -e "s:^\tCFLAGS=\$(diet_cflag.*:\tCFLAGS=${CFLAGS} \${diet_cflags}:" \
+	sed -i -e "s:^\tCFLAGS=\$(diet_cflag.*:\tCFLAGS=${CFLAGS} \${diet_cflags}:" \
 		-e "s:^\tCC\:=diet -Os \$(CC):\tCC\:=diet -Os gcc:" \
-		Makefile.orig > Makefile
+		Makefile
 }
 
 src_compile() {
@@ -36,7 +36,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	echo -e "\e[32;01m You need to start your supervise service:\033[0m"
-	echo ' # ln -s /var/lib/supervise/slidentd/ /service'
-	echo
+	einfo "You need to start your supervise service:"
+	einfo '# ln -s /var/lib/supervise/slidentd/ /service'
+	einfo
 }
