@@ -4,15 +4,10 @@
 
 app-shells/zsh
 sys-apps/texinfo
-sys-devel/autoconf-2.13
-sys-devel/autoconf-wrapper-2-r1 
-sys-devel/autoconf-2.59-r6
-sys-devel/automake-1.5
-sys-devel/automake-1.8.5-r3
-sys-devel/automake-1.7.9-r1
-sys-devel/automake-1.4_p6
-sys-devel/automake-wrapper-1-r1
-sys-devel/automake-1.9.4
+sys-devel/autoconf
+sys-devel/autoconf-wrapper
+sys-devel/automake
+sys-devel/automake-wrapper
 sys-devel/flex
 
 ##
