@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.7 2003/02/12 08:05:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.8 2003/03/09 20:25:37 aliz Exp $
+
+*libesmtp-1.0 (09 Mar 2003)
+
+  09 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
