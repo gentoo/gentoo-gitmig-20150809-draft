@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.14 2004/07/30 22:24:42 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.15 2004/07/31 19:53:40 agriffis Exp $
 
 IUSE="nls"
 
@@ -30,6 +30,8 @@ inherit eutils flag-o-matic libtool
 #
 # <azarah@gentoo.org> (13 Oct 2002)
 do_filter_flags() {
+	declare setting
+
 	strip-flags
 
 	# In general gcc does not like optimization, and add -O2 where
@@ -38,14 +40,17 @@ do_filter_flags() {
 
 	if use amd64
 	then
-		# gcc 3.3 doesnt support -march=k8/etc on amd64, so xgcc will fail
+		# gcc 3.3 doesn't support -march=k8/etc on amd64, so xgcc will fail
 		setting="`get-flag march`"
 		[ ! -z "${setting}" ] && filter-flags -march="${setting}"
 	fi
 
-	# gcc 3.3 doesnt support -mtune on numerous archs, so xgcc will fail
-	mtsetting="`get-flag mtune`"
-	[ ! -z "${mtsetting}" ] && filter-flags -mtune="${mtsetting}"
+	# gcc 3.3 doesn't support -march=pentium-m
+	replace-flags -march=pentium-m -march=pentium3
+
+	# gcc 3.3 doesn't support -mtune on numerous archs, so xgcc will fail
+	setting="`get-flag mtune`"
+	[ ! -z "${setting}" ] && filter-flags -mtune="${setting}"
 
 	# xgcc wont understand gcc 3.4 flags...
 	filter-flags -fno-unit-at-a-time
