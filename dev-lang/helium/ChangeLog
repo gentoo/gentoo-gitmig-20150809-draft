@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/helium
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.11 2004/11/18 13:36:59 kosmikus Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.12 2005/02/19 18:55:16 weeve Exp $
+
+  19 Feb 2005; Jason Wever <weeve@gentoo.org> helium-1.1.ebuild,
+  helium-1.2-r1.ebuild:
+  Masked on SPARC as dependencies cannot be met.
 
 *helium-1.2-r1 (18 Nov 2004)
 

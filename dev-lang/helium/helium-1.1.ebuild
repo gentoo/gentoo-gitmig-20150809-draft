@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.13 2004/10/16 23:10:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.14 2005/02/19 18:55:16 weeve Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cs.uu.nl/helium/distr/${P}-src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 -sparc"
 IUSE="readline"
 
 DEPEND="virtual/libc
