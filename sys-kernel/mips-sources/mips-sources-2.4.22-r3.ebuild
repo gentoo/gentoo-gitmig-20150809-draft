@@ -1,16 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r3.ebuild,v 1.1 2003/10/16 03:22:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r3.ebuild,v 1.2 2003/11/16 18:15:05 kumba Exp $
 
 
-ETYPE="sources"
-inherit kernel eutils
 OKV=${PV/_/-}
 CVSDATE=20031015
-KV=${OKV}-${CVSDATE}
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
 EXTRAVERSION=-mipscvs-${CVSDATE}
-PROVIDE="virtual/linux-sources"
+KV="${OKV}${EXTRAVERSION}"
+ETYPE="sources"
+inherit kernel eutils
 
 
 # What's in this kernel?
@@ -26,8 +25,9 @@ DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 		mirror://gentoo/mipscvs-${OKV}-${CVSDATE}.diff.bz2"
 HOMEPAGE="http://www.linux-mips.org/"
-KEYWORDS="-* ~mips"
 SLOT="${OKV}"
+PROVIDE="virtual/linux-sources"
+KEYWORDS="-* ~mips"
 
 src_unpack() {
 	unpack ${A}
