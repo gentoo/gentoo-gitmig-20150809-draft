@@ -1,0 +1,8 @@
+# ChangeLog for net-www/epiphany
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.1 2003/04/14 11:36:10 foser Exp $
+
+*epiphany-0.5.0 (14 Apr 2003)
+
+  14 Apr 2003; foser <foser@gentoo.org> epiphany-0.5.0.ebuild, ChangeLog :
+  Initial commit of this GNOME2 browser
