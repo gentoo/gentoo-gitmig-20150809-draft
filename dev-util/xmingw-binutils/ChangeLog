@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xmingw-binutils
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-binutils/ChangeLog,v 1.5 2004/06/25 02:51:16 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-binutils/ChangeLog,v 1.6 2005/02/07 19:24:01 blubb Exp $
+
+  07 Feb 2005; Simon Stelling <blubb@gentoo.org>
+  xmingw-binutils-2.15.90.0.2.ebuild:
+  added ~amd64
 
 *xmingw-binutils-2.15.90.0.2 (15 Apr 2004)
 
