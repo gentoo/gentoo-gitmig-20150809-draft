@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/neXtaw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/neXtaw/ChangeLog,v 1.7 2004/03/23 18:50:10 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/neXtaw/ChangeLog,v 1.8 2004/04/10 16:36:33 mholzer Exp $
+
+  10 Apr 2004; Martin Holzer <mholzer@gentoo.org> neXtaw-0.12.ebuild:
+  changing depend to virtual/x11. closes 47370
 
   23 Mar 2004; Martin Holzer <mholzer@gentoo.org> neXtaw-0.12.ebuild:
   fixing depend qa issue. see 45343.
