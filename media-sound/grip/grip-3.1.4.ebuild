@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.4.ebuild,v 1.3 2004/01/27 14:37:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.4.ebuild,v 1.4 2004/02/07 18:04:52 agriffis Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ DEPEND=">=x11-libs/gtk+-2.2
 
 IUSE="nls oggvorbis"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~hppa ~sparc"
+KEYWORDS="~x86 ~ppc alpha ~amd64 ~hppa ~sparc"
 
 src_unpack() {
 	unpack ${A}
