@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/filelight
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/filelight/ChangeLog,v 1.1 2004/03/07 22:37:04 centic Exp $
+
+*filelight-0.4.6.1 (04 Mar 2004)
+
+  04 Mar 2004: Dominik Stadler <centic@gentoo.org> :
+  Initial ebuild, submitted by Alexandre Parente Lima <alexandre_parente@yahoo.com.br>,
+  Christoph von Kruechten <cvk@gmx.net> and others in Bug 27926, 30273 and 39661.
