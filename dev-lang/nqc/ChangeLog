@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/nqc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.1 2003/06/21 07:03:06 george Exp $
+
+*nqc-2.5.1.ebuild (20 Jun 2003)
+
+  20 Jun 2003; George Shapovalov <george@gentoo.org> Manifest, nqc-2.5.1.ebuild, files/{digest-nqc-2.5.1} :
+  initial release (#12343)
+  Not Quite C - C-like compiler for Lego Mindstorms
+  ebuild submitted by Alexander Holler <aholler@gentoo.de>
