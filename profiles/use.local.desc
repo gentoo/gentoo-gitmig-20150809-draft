@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.558 2004/08/15 23:52:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.559 2004/08/16 02:05:27 iluxa Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -106,6 +106,7 @@ app-text/estraier:kakasi - Enable kakasi support for Estraier
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/sword:icu - Enable icu support for sword
+dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
 dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
