@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/xmlada
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/ChangeLog,v 1.2 2003/07/23 01:22:45 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/ChangeLog,v 1.3 2003/07/24 00:43:08 george Exp $
+
+  23 Jul 2003; George Shapovalov <george@gentoo.org> xmlada-0.7.1-r1.ebuild :
+  few adjustments suggested in #12081 to make it GNAE compliant, now for real
 
 *xmlada-0.7.1-r1 (22 Nov 2002)
 

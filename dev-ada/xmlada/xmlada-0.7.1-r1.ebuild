@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-0.7.1-r1.ebuild,v 1.1 2003/07/23 01:22:45 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-0.7.1-r1.ebuild,v 1.2 2003/07/24 00:43:09 george Exp $
 
 inherit gnat
 
@@ -28,6 +28,11 @@ src_unpack()
 	#increase stack size
 	cd sax
 	sed -i -e "s/Stack_Size : constant Natural := 64;/Stack_Size : constant Natural := 128;/" sax-readers.adb
+
+	#adjust xmlada-config to use new paths instead of hardcoded ones.
+	cd ${S}
+	sed -i -e "s#${prefix}/lib#${prefix}/lib/ada/adalib/xmlada#" xmlada-config.in
+	sed -i -e "s#${prefix}/include/xmlada#${prefix}/lib/ada/adainclude/xmlada#" xmlada-config.in
 }
 
 src_compile()
@@ -51,13 +56,14 @@ src_install ()
 	make PREFIX=${D}/usr install || die "install failed"
 
 	#move components to GNAE compliant directories
-	dodir /usr/lib/ada/adalib/${PN} /usr/lib/ada/adainclude
+	dodir /usr/lib/ada/adalib/${PN} /usr/lib/ada/adainclude/${PN}
 	cd ${D}/usr/lib/
 	mv * ${D}/usr/lib/ada/adalib/${PN}/
-	cd ${D}/usr/include
-	mv ${PN} ${D}/usr/lib/ada/adainclude/
-	cd ..
-	rmdir include
+	cd ${D}/usr/include/${PN}/
+	mv *.ali ${D}/usr/lib/ada/adalib/${PN}
+	mv * ${D}/usr/lib/ada/adainclude/${PN}
+	cd .. && rmdir ${PN}
+	cd .. && rmdir include
 	cd ${S}
 
 	dodoc AUTHORS COPYING README TODO docs/xml.ps
