@@ -1,10 +1,19 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.31 2004/06/28 19:00:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.32 2004/06/28 20:36:52 aliz Exp $
 
-*iptables-1.2.9-r2 (28 Jun 2004)
+  28 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.11.ebuild,
+  iptables-1.2.9-r3.ebuild:
+  Revision bump these so they propagate correctly.
 
-  28 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.9-r2.ebuild:
+*iptables-1.2.11-r1 (28 Jun 2004)
+
+  28 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.11.ebuild:
+  Version bump and updated IMQ and l7 patches. Closing #54067 and #55308.
+
+*iptables-1.2.9-r3 (28 Jun 2004)
+
+  28 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.9-r3.ebuild:
   New revision with a new local use flag that toggles the applying of
   3rd party patches and building against linux sources. Without the new
   use flag no 3rd party extensions patches will be applied and iptables

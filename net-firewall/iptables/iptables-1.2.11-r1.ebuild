@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11.ebuild,v 1.3 2004/06/28 19:07:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r1.ebuild,v 1.1 2004/06/28 20:36:52 aliz Exp $
 
 inherit eutils flag-o-matic
+
+#extensions versions
 
 DESCRIPTION="Linux kernel (2.4+) firewall, NAT and packet mangling tools"
 HOMEPAGE="http://www.iptables.org/"
@@ -30,26 +32,22 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	epatch ${FILESDIR}/${PV}-files/04_all_install_ipv6_apps.patch.bz2
-	epatch ${FILESDIR}/${PV}-files/05_all_install_all_dev_files.patch.bz2
+	epatch ${FILESDIR}/${PV}-files/grsecurity-1.2.8-iptables.patch.bz2
+	epatch ${FILESDIR}/${PV}-files/install_ipv6_apps.patch.bz2
+	epatch ${FILESDIR}/${PV}-files/install_all_dev_files.patch.bz2
+	use hppa && epatch ${FILESDIR}/${PV}-files/hppa.patch.bz2
 
-	# The folowing hack is needed because ${ARCH} is "sparc" and not "sparc64"
-	# and epatch uses ??_${ARCH}_foo.${EPATCH_SUFFIX} when reading from directories
-	[ "${PROFILE_ARCH}" = "sparc64" ] && epatch ${FILESDIR}/${PV}-files/sparc64_limit_fix.patch.bz2
-	use hppa && epatch ${FILESDIR}/${PV}-files/03_hppa_gentoo.patch.bz2
+	sed -i "s:PF_EXT_SLIB=:PF_EXT_SLIB=stealth :g" extensions/Makefile
 
 	if use extensions; then
-		epatch ${FILESDIR}/${PV}-files/01_all_grsecurity.patch.bz2
-		epatch ${FILESDIR}/${PV}-files/02_all_imq.patch.bz2
-		epatch ${FILESDIR}/${PV}-files/06_all_l7.patch.bz2
+		epatch ${FILESDIR}/${PV}-files/iptables-1.2.9-imq1.diff.bz2
+		epatch ${FILESDIR}/${PV}-files/iptables-layer7-0.9.0.patch.bz2
 
 		chmod +x extensions/.IMQ-test*
 		chmod +x extensions/.childlevel-test*
 		chmod +x extensions/.layer7-test*
+
 	fi
-
-
-	sed -i -e "s:-O2:${CFLAGS} -Iinclude:g" -e "s:/usr/local::g" -e "s:-Iinclude/::" Makefile
 }
 
 src_compile() {
@@ -79,7 +77,8 @@ src_compile() {
 			ewarn "Iptables will be built against linux-headers."
 		fi
 
-		make ${myconf} \
+		make COPT_FLAGS="${CFLAGS}" ${myconf} \
+			PREFIX= \
 			LIBDIR=/lib \
 			BINDIR=/sbin \
 			MANDIR=/usr/share/man \
@@ -87,7 +86,8 @@ src_compile() {
 			KERNEL_DIR=/usr/src/linux \
 			|| die "Please check http://cvs.iptables.org/patch-o-matic-ng/updates/ if your kernel needs to be patched for iptables"
 	else
-		make ${myconf} \
+		make COPT_FLAGS="${CFLAGS}" ${myconf} \
+			PREFIX= \
 			LIBDIR=/lib \
 			BINDIR=/sbin \
 			MANDIR=/usr/share/man \
@@ -98,8 +98,14 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} MANDIR=/usr/share/man ${myconf} install
-	make DESTDIR=${D} ${myconf} \
+	make COPT_FLAGS="${CFLAGS}" ${myconf} \
+		PREFIX= \
+		DESTDIR=${D} \
+		MANDIR=/usr/share/man \
+		install
+	make COPT_FLAGS="${CFLAGS}" ${myconf} \
+		DESTDIR=${D} \
+		PREFIX= \
 		LIBDIR=/usr/lib \
 		MANDIR=/usr/share/man \
 		INCDIR=/usr/include \

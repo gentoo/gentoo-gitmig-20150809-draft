@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r2.ebuild,v 1.5 2004/06/28 19:07:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r3.ebuild,v 1.1 2004/06/28 20:36:52 aliz Exp $
 
 inherit eutils flag-o-matic
 
@@ -48,13 +48,6 @@ src_unpack() {
 		chmod +x extensions/.layer7-test*
 	fi
 
-
-	sed -i -e "s:-O2:${CFLAGS} -Iinclude:g" -e "s:/usr/local::g" -e "s:-Iinclude/::" Makefile
-}
-
-src_compile() {
-	replace-flags -O0 -O2
-
 	if [ -z `get-flag O` ]; then
 		append-flags -O2
 	fi
@@ -63,6 +56,10 @@ src_compile() {
 	# http://bugs.gentoo.org/show_bug.cgi?id=23645
 	filter-flags "-fstack-protector"
 
+	sed -i -e "s:-O2:${CFLAGS} -Iinclude:g" -e "s:/usr/local::g" -e "s:-Iinclude/::" Makefile
+}
+
+src_compile() {
 	# iptables and libraries are now installed to /sbin and /lib, so that
 	# systems with remote network-mounted /usr filesystems can get their
 	# network interfaces up and running correctly without /usr.
