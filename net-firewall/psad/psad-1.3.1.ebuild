@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.1.ebuild,v 1.5 2004/06/05 16:38:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.1.ebuild,v 1.6 2004/06/17 01:52:53 mr_bones_ Exp $
 
-inherit eutils
-inherit perl-module
+inherit eutils perl-module
 
 IUSE=""
 
