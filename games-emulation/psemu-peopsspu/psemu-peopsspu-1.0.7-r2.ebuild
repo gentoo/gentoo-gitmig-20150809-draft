@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r2.ebuild,v 1.4 2004/06/24 22:35:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r2.ebuild,v 1.5 2004/06/28 22:21:35 agriffis Exp $
 
 inherit eutils games
 
@@ -37,7 +37,7 @@ src_compile() {
 		-e "s/-mpentium//" \
 		-e "/^CCFLAGS3/s:=:= ${CFLAGS} :" Makefile \
 			|| die "sed Makefile failed"
-	if use oss || [ -z "`use oss``use alsa`" ] ; then
+	if use oss || ! use alsa; then
 		emake clean || die
 		emake USEALSA=FALSE || die
 		mv libspu* ..
