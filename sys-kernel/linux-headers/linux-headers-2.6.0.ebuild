@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.0.ebuild,v 1.1 2003/12/24 12:09:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.0.ebuild,v 1.2 2003/12/26 23:28:56 plasmaroo Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -42,6 +42,11 @@ src_unpack() {
 
 	# Do Stuff
 	kernel_universal_unpack
+
+	# User-space patches for various things
+	epatch ${FILESDIR}/${P}-appCompat.patch
+	epatch ${FILESDIR}/${P}-strict-ansi-fix.patch
+
 }
 
 src_compile() {
@@ -53,9 +58,6 @@ src_compile() {
 	if [ -n "`use sparc`" ]; then
 		make ARCH=${ARCH} dep || die "Failed to run 'make dep'"
 	fi
-
-	# User-space patches for various things
-	epatch ${FILESDIR}/${P}-appCompat.patch
 
 }
 

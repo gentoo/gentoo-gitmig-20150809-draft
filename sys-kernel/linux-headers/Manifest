@@ -9,7 +9,7 @@ MD5 5c17aece95a57713fa9ea390d5f48647 linux-headers-2.4.21-r1.ebuild 3888
 MD5 22bc91e645c0b6309611f1a4d12e0412 linux-headers-2.4.16-r1.ebuild 5049
 MD5 732a9212e5a370154579a03d5838dfcb linux-headers-2.4.22.ebuild 3863
 MD5 0da559c76fd274ce325b786e101ab03a linux-headers-2.4.19-r1.ebuild 4800
-MD5 f8f274321fbb00ab80f7fc85994f553e linux-headers-2.6.0.ebuild 3788
+MD5 ba473896a4b28412e332d81823dc195b linux-headers-2.6.0.ebuild 3836
 MD5 e92a42061f868f9d2be14edaad669e63 linux-headers-2.4.18.ebuild 3173
 MD5 40b1a0224290f63ee44609d113442479 linux-headers-2.4.21.ebuild 3594
 MD5 5b8b9d5469f190029664ede84a51c68b linux-headers-2.4.16-r3.ebuild 6100
@@ -24,12 +24,13 @@ MD5 6ef3887ee4018c06c18e8726767189c7 files/digest-linux-headers-2.4.22 67
 MD5 b1f0fb91c6c3d60ac2f1f1d6893e145a files/digest-linux-headers-2.4.18-r2 67
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21-r1 67
 MD5 0d7bb77bc61a34b15bef6328c9279cb2 files/digest-linux-headers-2.4.19-r1 67
-MD5 4a847d42d42c9f278e6b70151fca335a files/linux-headers-2.6.0-appCompat.patch 7572
+MD5 0bdea2b16767966b8cb3e8fd10e3fbb0 files/linux-headers-2.6.0-appCompat.patch 11080
 MD5 b1f0fb91c6c3d60ac2f1f1d6893e145a files/digest-linux-headers-2.4.18 67
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21 67
 MD5 eb4cae8b5b8fddbb2c950fdb70fbedb3 files/digest-linux-headers-2.4.17-r5 145
 MD5 6db03bb67f89f2fb55870bcdba4c24e5 files/digest-linux-headers-2.4.17-r3 145
 MD5 700dfcb704ed5987434f84006e39787e files/digest-linux-headers-2.4.17-r4 144
+MD5 537c756a05fe1a6819277938d570b70a files/linux-headers-2.6.0-strict-ansi-fix.patch 1484
 MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
 MD5 79ee1ad9f4629595cd8d0cd20ca56dc1 files/digest-linux-headers-2.4.23 67
 MD5 4bb39400b782c620a61abff4b8abd627 files/digest-linux-headers-2.4.16-r1 348
