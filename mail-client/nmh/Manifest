@@ -1,4 +1,4 @@
-MD5 0b8dff9359dd5903f72dc3a995b98fe9 ChangeLog 1136
-MD5 4dbb1e0e98ad8ae971b5a074e8834995 nmh-1.0.4-r2.ebuild 1859
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 339b171982f2e23bb6ea3bdd5eeca163 files/digest-nmh-1.0.4-r2 61
+MD5 83446c84a54b69cdbce137600e4a919e ChangeLog 1307
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 3932c034e380b9d5862fe385c0c28750 nmh-1.0.4-r2.ebuild 1861
