@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.4 2004/07/02 04:21:06 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.5 2004/07/19 23:16:53 lv Exp $
+
+  19 Jul 2004; Travis Tilley <lv@gentoo.org> emul-linux-x86-qtlibs-1.1.ebuild:
+  changed dep to fix bug 57608
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org>
   emul-linux-x86-qtlibs-1.1.ebuild:
