@@ -1,7 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irman-python/irman-python-0.1.ebuild,v 1.7 2003/02/13 11:34:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irman-python/irman-python-0.1.ebuild,v 1.8 2003/04/04 22:10:36 liquidx Exp $
 
+inherit distutils
+
+IUSE=""
 DESCRIPTION="A minimal set of Python bindings for libirman."
 SRC_URI="http://bluweb.com/chouser/proj/${PN}/${P}.tar.gz"
 HOMEPAGE="http://bluweb.com/chouser/proj/irman-python/"
@@ -11,13 +14,9 @@ SLOT="0"
 KEYWORDS="x86 sparc alpha"
 
 DEPEND="media-libs/libirman"
-#RDEPEND=""
 
-src_compile() {
-	python setup.py build || die
-}
-
-src_install () {
-	python setup.py install --root=${D} || die
-	dodoc README test_name.py
+src_install() {
+	distutils_src_install
+	insinto /usr/share/doc/${PF}
+	doins test_name.py
 }
