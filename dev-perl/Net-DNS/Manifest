@@ -1,5 +1,7 @@
 MD5 92497bcfcd68fedb0b5d964729fc3caa ChangeLog 1567
 MD5 aa32c64cced43db12be48f6907f0a63f Net-DNS-0.22-r1.ebuild 575
 MD5 9bf907d8e6ad6fa7c22be3023d9934ac Net-DNS-0.22.ebuild 573
+MD5 33e9b8851658f7cf74dc68e7f18b8ac4 Net-DNS-0.37.ebuild 493
 MD5 643eb58f6da7f4557fda68d273e681b6 files/digest-Net-DNS-0.22 63
 MD5 643eb58f6da7f4557fda68d273e681b6 files/digest-Net-DNS-0.22-r1 63
+MD5 9c6aecd6a8a52abe98a8f08cf7fa7d5f files/digest-Net-DNS-0.37 63

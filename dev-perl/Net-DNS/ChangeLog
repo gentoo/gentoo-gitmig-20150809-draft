@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.10 2003/02/12 06:21:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.11 2003/06/16 13:54:34 mcummings Exp $
+
+*Net-DNS-0.37 (16 Jun 2003)
+
+  16 Jun 2003; Michael Cummings <mcummings@gentoo.org> Net-DNS-0.37.ebuild:
+  CPAN version bump; needs testing
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
