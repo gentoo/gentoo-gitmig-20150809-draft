@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7fc76f65a51a106a320021e9f34795f4 ChangeLog 265
+MD5 09a54543aaa8a6efbec6185d8f34bca8 ChangeLog 366
 MD5 1efa1e0f3f83ec42fdb6b670bc5fed1e le-1.9.2.ebuild 634
 MD5 da1b769e71e7ce9683c7c3519a03d6cd files/digest-le-1.9.2 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFA30cwHTu7gpaalycRAoscAJ9cOXlAuI77D8/ekf+gG2eFVfTlHACg8kg8
-+mTB/EVplrGNMIpSckKcz3E=
-=ULBY
+iD8DBQFBW0PWI1lqEGTUzyQRAlaQAJ9SSQNwcxIuCH60NTxmVtOF1B/FlgCgjr7w
+5FDKCqXYoUxj89JS0wA6te0=
+=+tNc
 -----END PGP SIGNATURE-----
