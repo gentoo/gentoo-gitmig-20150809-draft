@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.3 2003/10/31 23:51:40 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.4 2003/11/01 00:37:36 taviso Exp $
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -101,28 +101,22 @@ src_install() {
 	dohtml doc/faq.html
 
 	# please see glsa 200307-06
-	chmod u+s "${D}/usr/bin/gpg"
+	if ! use caps; then
+		chmod u+s "${D}/usr/bin/gpg"
+	fi
 }
 
 pkg_postinst() {
-	einfo "gpg is installed suid root to make use of protected memory space"
-	einfo "This is needed in order to have a secure place to store your"
-	einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
 
-	if use caps; then
-		echo
-
+	if ! use caps; then
+		einfo "gpg is installed suid root to make use of protected memory space"
+		einfo "This is needed in order to have a secure place to store your"
+		einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
+	else
 		# a quick blurb to explain the linux capabilities.
-		# $ /sbin/getpcaps `pidof gpg`
-		# Capabilities for `31677': = cap_ipc_lock+p
-		#
-		# useful reference in the comments from 
-		# /usr/include/linux/capability.h
-
-		einfo "gpg will use the linux capabilities system to minimise the"
-		einfo "security risks associated with running setuid root."
-		einfo "you can confirm the capabilities have been set with the"
-		einfo "getpcaps application."
-		einfo "	# getpcaps \`pidof gpg\`"
+		einfo "gpg has not been installed setuid, as you have the \"caps\" USE flag"
+		einfo "set, you should now configure gpg to use cap_ipc_lock+p capability"
+		einfo "to give non-root users access to locked memory pages."
+		einfo "please refer to the capabilities(7) manpage for more information."
 	fi
 }
