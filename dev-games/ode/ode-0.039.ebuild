@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.039.ebuild,v 1.3 2003/10/01 23:37:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.039.ebuild,v 1.4 2003/10/30 00:57:46 lu_zero Exp $
 
 DESCRIPTION="Open Dynamics Engine SDK"
 HOMEPAGE="http://opende.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/opende/${P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/opengl"
 
