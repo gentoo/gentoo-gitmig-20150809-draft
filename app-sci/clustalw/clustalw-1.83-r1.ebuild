@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83-r1.ebuild,v 1.5 2004/10/14 14:30:59 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83-r1.ebuild,v 1.6 2004/10/14 18:58:02 gongloo Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/unix/clustalw/${PN}${PV}.UNIX.tar.gz"
 
 LICENSE="clustalw"
 SLOT="0"
-KEYWORDS="alpha ppc sparc x86"
+KEYWORDS="alpha ppc sparc x86 ~ppc-macos"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -20,7 +20,6 @@ S=${WORKDIR}/${PN}${PV}
 src_unpack(){
 	unpack ${A}
 	cd ${S}
-	# No longer needed. see emake line below.
 	sed -i -e "s/CC	= cc/CC	= $(gcc-getCC)/" makefile
 	sed -i -e "s/CFLAGS  = -c -O/CFLAGS  = -c ${CFLAGS}/" makefile
 	sed -i -e "s/LFLAGS	= -O -lm/LFLAGS	= -lm ${CFLAGS}/" makefile
@@ -28,7 +27,7 @@ src_unpack(){
 }
 
 src_compile() {
-	CC=$(gcc-getCC) emake || die
+	emake || die
 }
 
 src_install() {
