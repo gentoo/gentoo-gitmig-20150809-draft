@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/eurosym
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.4 2003/07/12 13:17:44 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.5 2003/09/20 03:43:52 obz Exp $
+
+  20 Sep 2003; Mike Gardiner <obz@gentoo.org> eurosym-1.2.ebuild, metadata.xml:
+  Addressed .map and .mf errors as in bug #16899. Also marked stable on x86,
+  and added metadata.xml
 
   12 Jun 2003; <msterret@gentoo.org> eurosym-1.2.ebuild:
   add Header
