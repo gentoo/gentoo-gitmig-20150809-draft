@@ -1,6 +1,5 @@
 x86
 ppc
-ppc64
 sparc
 mips
 alpha
@@ -8,4 +7,5 @@ arm
 hppa
 amd64
 ia64
+ppc64
 s390
