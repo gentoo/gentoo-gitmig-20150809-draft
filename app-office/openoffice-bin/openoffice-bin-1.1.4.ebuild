@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.5 2005/01/14 15:10:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.6 2005/01/16 20:05:54 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -175,6 +175,17 @@ src_install() {
 	# Remove unneeded stuff
 	rm -rf ${D}${INSTDIR}/share/cde
 
+	# Fix instdb.ins, to *not* install local copies of these
+	for entry in Kdeapplnk Kdemimetext Kdeicons Gnome_Apps Gnome_Icons Gnome2_Apps; do
+		perl -pi -e "/^File gid_File_Extra_$entry/ .. /^End/ and (\
+			s|^\tSize\s+\= .*|\tSize\t\t = 0;\r| or \
+			s|^\tArchiveFiles\s+\= .*|\tArchiveFiles\t = 0;\r| or \
+			s|^\tArchiveSize\s+\= .*|\tArchiveSize\t = 0;\r| or \
+			s|^\tContains\s+\= .*|\tContains\t = ();\r| or \
+			s|\t\t\t\t\t\".*|\r|g)" \
+			${D}${INSTDIR}/program/instdb.ins
+	done
+
 	# Make sure these do not get nuked.
 	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
 	keepdir ${INSTDIR}/user/psprint/{driver,fontmetric}
@@ -182,15 +193,6 @@ src_install() {
 
 	#touch files to make portage uninstalling happy (#22593)
 	find ${D} -type f -exec touch {} \;
-}
-
-pkg_preinst() {
-
-	# The one with OO-1.0.0 was not valid
-	if [ -f ${ROOT}/etc/openoffice/autoresponse.conf ]
-	then
-		rm -f ${ROOT}/etc/openoffice/autoresponse.conf
-	fi
 }
 
 pkg_postinst() {

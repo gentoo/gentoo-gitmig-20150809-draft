@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.99 2005/01/14 15:49:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.100 2005/01/16 20:07:53 suka Exp $
+
+  16 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-1.1.4.ebuild:
+  Prevent OOo from double installing menu entries, closes bug #53752
 
   14 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   +files/1.1.4/javafix.patch, openoffice-1.1.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.6 2005/01/14 15:49:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.7 2005/01/16 20:07:53 suka Exp $
 
 # Notes:
 #
@@ -512,15 +512,16 @@ src_install() {
 		done
 	fi
 
-	# Do not actually install the desktop bindings for users, we have
-	# installed them globally
-	for module in gid_Module_Optional_Gnome gid_Module_Optional_Kde gid_Module_Optional_Cde
-	do
-		perl -pi -e "/^Module $module/ .. /^End/ and s|(Installed.*)=.*|\1= NO;|" \
-		${D}${INSTDIR}/program/instdb.ins
+	# Fix instdb.ins, to *not* install local copies of these
+	for entry in Kdeapplnk Kdemimetext Kdeicons Gnome_Apps Gnome_Icons Gnome2_Apps; do
+		perl -pi -e "/^File gid_File_Extra_$entry/ .. /^End/ and (\
+			s|^\tSize\s+\= .*|\tSize\t\t = 0;\r| or \
+			s|^\tArchiveFiles\s+\= .*|\tArchiveFiles\t = 0;\r| or \
+			s|^\tArchiveSize\s+\= .*|\tArchiveSize\t = 0;\r| or \
+			s|^\tContains\s+\= .*|\tContains\t = ();\r| or \
+			s|\t\t\t\t\t\".*|\r|g)" \
+			${D}${INSTDIR}/program/instdb.ins
 	done
-
-
 
 	# Remove unneeded stuff
 	rm -rf ${D}${INSTDIR}/share/cde
