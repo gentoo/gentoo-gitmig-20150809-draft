@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/prosper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.9 2004/09/08 17:57:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.10 2004/09/21 13:08:30 usata Exp $
+
+*prosper-1.5-r1 (21 Sep 2004)
+
+  21 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +prosper-1.5-r1.ebuild:
+  Install eps files required by some slide styles; bug #64808.
 
 *prosper-1.5 (09 Sep 2004)
 
