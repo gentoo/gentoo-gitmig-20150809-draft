@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-2.63-r1.ebuild,v 1.1 2004/07/05 01:37:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-2.63-r1.ebuild,v 1.2 2004/07/05 17:39:43 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -60,7 +60,7 @@ mydoc="License
 	USAGE
 	procmailrc.example
 	sample-nonspam.txt
-	sample-spam.txt 
+	sample-spam.txt
 	qmail/README.qmail-spamc"
 
 src_compile() {
@@ -80,7 +80,7 @@ src_install () {
 	fperms 755 /etc/init.d/spamd
 	insinto /etc/conf.d
 	newins ${FILESDIR}/spamd.conf spamd
-	
+
 	into /usr
 	dobin qmail/qmail-spamc
 }
