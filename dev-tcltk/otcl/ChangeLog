@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/otcl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.12 2004/08/26 14:06:21 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.13 2004/08/28 17:20:12 cardoe Exp $
+
+*otcl-1.8-r3 (28 Aug 2004)
+
+  28 Aug 2004; Doug Goldstein <cardoe@gentoo.org> +otcl-1.8-r3.ebuild:
+  ebuild incorrectly attempted to recompile the shared library after the 
+  fact causing a failure. bug #61639
 
   26 Aug 2004; Ferris McCormick <fmccor@gentoo.org> otcl-1.8-r2.ebuild:
   Stable for sparc.

@@ -1,7 +1,19 @@
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 08286e1ef9899977742b19cfc3758b83 otcl-1.8-r1.ebuild 1067
+MD5 510145dd61bee41103c6b0442b4a2fdf otcl-1.8-r3.ebuild 1156
 MD5 b541d6fb00bbdab66e5a36ca2a4385ef otcl-1.8-r2.ebuild 1207
-MD5 e2fcf91778f0cac84b534d6032ad067b ChangeLog 1461
-MD5 64a71b4bb60017c2d8802e771d31cedc files/digest-otcl-1.8-r1 60
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 e703b7b083054fbab0cad22c39843fc2 ChangeLog 1672
+MD5 64a71b4bb60017c2d8802e771d31cedc files/digest-otcl-1.8-r3 60
 MD5 090aa64d1486dc3d916b9b5176179d30 files/otcl-1.8-badfreefix.patch 7469
 MD5 64a71b4bb60017c2d8802e771d31cedc files/digest-otcl-1.8-r2 60
+MD5 64a71b4bb60017c2d8802e771d31cedc files/digest-otcl-1.8-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBML7XFhz/XBeRBtARAmR0AJ9y+1e7OHmN4gtJlLCaG+Z+V8GbKwCeNI2Y
+GM6DNCVXA2G79fs8pNGLKd4=
+=p840
+-----END PGP SIGNATURE-----
