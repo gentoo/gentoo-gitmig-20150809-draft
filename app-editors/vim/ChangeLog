@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.18 2002/09/13 09:19:01 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.19 2002/09/14 12:43:00 hannes Exp $
+
+*vim-6.1-r12.ebuild (14 Sep 2002)
+
+  14 Sep 2002; Hannes Mehnert <hannes@gentoo.org> vim-6.1-r12.ebuild:
+  fixed vimdiff, closes bug #7885
 
 *vim-6.1-r11.ebuild (12 Sep 2002)
 
