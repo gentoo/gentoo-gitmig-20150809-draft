@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3676 2005/03/02 05:40:13 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3677 2005/03/02 11:38:36 ka0ttic Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -134,10 +134,6 @@ media-libs/libextractor
 # Masked waiting for apache module refresh
 =gnustep-libs/gsweb-1.1.1_pre20050106
 =gnustep-libs/gsweb-1.1.1_pre20041203
-
-# Aaron Walker <ka0ttic@gentoo.org> (11 Feb 2005)
-# Masked pending new upstream release to fix security bug 74649
-www-apps/wordpress
 
 # Torsten Veller <tove@gentoo.org> (10 Feb 2005)
 # many changes - want feedback
