@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.22 2004/04/19 00:39:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.23 2004/04/19 04:58:51 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -32,6 +32,7 @@ IUSE_INPUT_DEVICES="synaptics wacom"
 PATCH_VER="2.1.26.16"
 FILES_VER="0.1.5"
 RENDER_VER="0.8"
+# Needed for xrender.pc in addition to external libs
 XRENDER_VER="0.8.4"
 XFT_VER="2.1.6"
 XCUR_VER="0.3.1"
@@ -661,34 +662,35 @@ src_install() {
 		ln -snf libXrender.so.1.2.2 libXrender.so.1
 		cd ${S}
 
-		# Generate xrender.pc using 'EOF' style here document with no expansion
-		# (adapted from Red Hat)
-		cat <<-'EOF' > ${D}/usr/X11R6/lib/pkgconfig/xrender.pc
-		prefix=/usr/X11R6
-		exec_prefix=${prefix}
-		libdir=${exec_prefix}/lib
-		includedir=${prefix}/include
-
-		Name: Xrender
-		Description: X Render Library
-		Version: 0.8.3
-		Cflags: -I${includedir} -I/usr/X11R6/include
-		Libs: -L${libdir} -lXrender  -L/usr/X11R6/lib -lX11
-EOF
-
-		fperms 0644 /usr/X11R6/lib/pkgconfig/xrender.pc
-
 		# Fix problem in xft.pc with version not being defined
 		sed -i "s:@VERSION@:${XFT_VER}:g" ${D}/usr/X11R6/lib/pkgconfig/xft.pc
 	fi
 
+	# Generate xrender.pc using 'EOF' style here document with no expansion
+	# (adapted from Red Hat)
+	cat <<-'EOF' > ${D}/usr/X11R6/lib/pkgconfig/xrender.pc
+prefix=/usr/X11R6
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Xrender
+Description: X Render Library
+Version: ${XRENDER_VER}
+Cflags: -I${includedir} -I/usr/X11R6/include
+Libs: -L${libdir} -lXrender  -L/usr/X11R6/lib -lX11
+EOF
+
+	fperms 0644 /usr/X11R6/lib/pkgconfig/xrender.pc
+
 	# These need to be in /usr/lib
 	insinto /usr/lib/pkgconfig
 	doins ${D}/usr/X11R6/lib/pkgconfig/{xcursor,xft}.pc
-	if [ "${EXT_XFT_XRENDER}" = "yes" ]
-	then
+# pending upstream fix
+#	if [ "${EXT_XFT_XRENDER}" = "yes" ]
+#	then
 		doins ${D}/usr/X11R6/lib/pkgconfig/xrender.pc
-	fi
+#	fi
 	# Now remove the invalid xft.pc, and co ...
 	rm -rf ${D}/usr/X11R6/lib/pkgconfig
 
@@ -703,18 +705,16 @@ EOF
 		make DESTDIR=${D} install || die
 	fi
 
-	# Backwards compatibility so X server will still start
-	# after installing fonts to /usr/share/fonts
-	# if XF86Config is not edited
-	# This provides the 'fixed' font
+	# Backwards compatibility for /usr/share move
+	G_FONTDIRS="100dpi 75dpi Speedo TTF Type1 encodings local misc util"
 	dodir /usr/X11R6/lib/X11/fonts/
-	dosym ${ROOT}/usr/share/fonts/misc /usr/X11R6/lib/X11/fonts/misc
+	for G_FONTDIR in ${G_FONTDIRS}
+	do
+		dosym ${ROOT}/usr/share/fonts/${G_FONTDIR} /usr/X11R6/lib/X11/fonts/${G_FONTDIR}
+	done
 
-	# Fix default config files after installing fonts to /usr/share/fonts
-	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
-		${D}/etc/X11/XF86Config.example
-	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
-		${D}/etc/X11/fs/config
+	dosym ${ROOT}/usr/share/man /usr/X11R6/man
+	dosym ${ROOT}/usr/share/doc/${PF} /usr/X11R6/lib/X11/doc
 
 	# Fix permissions on locale/common/*.so
 	for x in ${D}/usr/X11R6/lib/X11/locale/lib/common/*.so*
@@ -969,9 +969,55 @@ EOF
 	insinto /usr/share/cursors/xfree/gentoo-silver/cursors
 	doins ${WORKDIR}/cursors/gentoo-silver/cursors/*
 
+	# Remove xterm app-defaults, since we don't install xterm
+	rm ${D}/etc/X11/app-defaults/{UXTerm,XTerm,XTerm-color}
+
+	# Fix default config files after installing fonts to /usr/share/fonts
+	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
+		${D}/etc/X11/xorg.conf.example
+	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
+		${D}/etc/X11/fs/config
+
+	# Fix any installed config files for installing fonts to /usr/share/fonts
+	# This *needs* to be after all other installation so files aren't
+	# overwritten.
+	einfo "Preparing any installed configuration files for font move..."
+	FILES="/etc/X11/xorg.conf
+		/etc/X11/XF86Config
+		/etc/fonts/fonts.conf
+		/etc/fonts/local.conf
+		/etc/X11/fs/config"
+
+	for FILE in ${FILES}
+	do
+		if [ -e ${ROOT}${FILE} ]
+		then
+			DIR="$(dirname ${ROOT}${FILE})"
+			if [ ! -d ${T}${DIR} ]
+			then
+				mkdir -p ${T}${DIR}
+			fi
+			cp ${ROOT}${FILE} ${T}${DIR}
+			sed -i "s,/usr/X11R6/lib/X11/fonts,/usr/share/fonts,g" ${T}${FILE}
+			dodir ${DIR}
+			insinto ${DIR}
+			doins ${T}${FILE}
+		fi
+	done
 }
 
 pkg_preinst() {
+
+	# Get rid of deprecated directories so our symlinks in the same location
+	# work -- users shouldn't be placing fonts here so that should be fine,
+	# they should be using ~/.fonts or /usr/share/fonts. <spyderous>
+	for G_FONTDIR in ${G_FONTDIRS}
+	do
+		if [ -d ${ROOT}/usr/X11R6/lib/X11/fonts/${G_FONTDIR} ]
+		then
+			rm -rf ${ROOT}/usr/X11R6/lib/X11/fonts/${G_FONTDIR}
+		fi
+	done
 
 	# These changed from a directory/file to a symlink and reverse
 	if [ ! -L ${ROOT}/usr/X11R6/lib/X11/XftConfig ] && \
@@ -1215,12 +1261,9 @@ pkg_postinst() {
 	ewarn "Font installation location has MOVED to:"
 	ewarn "/usr/share/fonts"
 	echo
-	ewarn "Edit /etc/X11/XF86Config, /etc/fonts/fonts.conf,"
-	ewarn "/etc/fonts/local.conf and /etc/X11/fs/config"
-	ewarn "to reflect this change."
-	ewarn "One compatibility symlink to the misc fonts,"
-	ewarn "including the 'fixed' font, has been provided"
-	ewarn "so an emergency X server will start."
+	ewarn "Run etc-update to update your config files."
+	ewarn "Old locations for fonts, docs and man pages"
+	ewarn "are deprecated."
 	echo
 
 	# Try to get people to read /usr/share/fonts move
