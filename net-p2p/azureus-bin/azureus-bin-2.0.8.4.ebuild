@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.8.4.ebuild,v 1.3 2004/05/06 18:45:24 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.8.4.ebuild,v 1.4 2004/05/14 17:09:37 squinky86 Exp $
 
 inherit eutils
 
@@ -33,7 +33,8 @@ RDEPEND="${DEPEND}
 	dev-java/junit
 	gtk? ( =x11-libs/gtk+-2* )
 	!gtk? ( =x11-libs/openmotif-2.1* )
-	>=virtual/jre-1.4"
+	>=virtual/jre-1.4
+	>=net-libs/linc-1.0.3"
 
 # Where to install the package
 PROGRAM_DIR="/usr/lib/${MY_PN}"
