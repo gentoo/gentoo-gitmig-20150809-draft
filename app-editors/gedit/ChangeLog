@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.46 2003/10/22 11:50:09 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.47 2003/11/08 15:28:04 todd Exp $
+
+  08 Nov 2003; Todd Sunderlin <todd@gentoo.org> gedit-2.4.0.ebuild:
+  set sparc keyword
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> gedit-2.4.0.ebuild:
   set ppc in keywords
