@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.5.55-r7.ebuild,v 1.5 2003/09/15 17:51:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.5.55-r7.ebuild,v 1.6 2003/12/26 13:57:28 lanius Exp $
+
+inherit flag-o-matic
 
 IUSE="gpm nls samba ncurses X pam slang"
 
@@ -23,6 +25,8 @@ DEPEND=">=sys-fs/e2fsprogs-1.19
 	nls? ( sys-devel/gettext )
 	samba? ( >=net-fs/samba-2.2.3a-r1 )
 	X? ( virtual/x11 )"
+
+filter-flags -malign-double
 
 src_compile() {
 

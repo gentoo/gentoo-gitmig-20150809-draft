@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r4.ebuild,v 1.4 2003/12/23 20:28:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r4.ebuild,v 1.5 2003/12/26 13:57:28 lanius Exp $
+
+inherit flag-o-matic
 
 IUSE="gpm nls samba ncurses X slang"
 
@@ -22,6 +24,8 @@ DEPEND=">=sys-fs/e2fsprogs-1.19
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="ia64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64"
+
+filter-flags -malign-double
 
 src_unpack() {
 	unpack ${P}.tar.gz
