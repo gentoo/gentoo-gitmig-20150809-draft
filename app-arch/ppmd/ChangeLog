@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ppmd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.10 2004/07/18 19:10:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.11 2004/07/21 14:22:49 ferringb Exp $
+
+  21 Jul 2004; Brian Harring <ferringb@gentoo.org> :
+  bumping to 9.1 patch8, re-enabling support for -O3- bug #57587.
 
   18 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> ppmd-9.1.ebuild:
   Stable on sparc at ferringb's request
