@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.36 2004/04/20 14:49:38 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.37 2004/05/15 23:09:38 geoman Exp $
+
+  15 May 2004; Stephen P. Becker <geoman@gentoo.org> vte-0.11.10.ebuild:
+  Stable on mips.
 
 *vte-0.11.10-r1 (20 Apr 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.10.ebuild,v 1.9 2004/03/17 00:54:40 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.10.ebuild,v 1.10 2004/05/15 23:09:38 geoman Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -10,7 +10,7 @@ DESCRIPTION="Xft powered terminal widget"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
 LICENSE="LGPL-2"
 
 RDEPEND=">=dev-libs/glib-2
