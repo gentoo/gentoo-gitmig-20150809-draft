@@ -1,0 +1,7 @@
+--- man-1.5o1/man2html/Makefile.in.orig	2004-12-13 15:02:05.204559672 -0500
++++ man-1.5o1/man2html/Makefile.in	2004-12-13 15:02:12.591436696 -0500
+@@ -1,3 +1,3 @@
+ CC = @CC@
+-CFLAGS = -Wall -Wstrict-prototypes -Wmissing-prototypes -O
++CFLAGS += -Wall -Wstrict-prototypes -Wmissing-prototypes
+ OBJECTS = man2html.o cgibase.o abbrev.o strdefs.o

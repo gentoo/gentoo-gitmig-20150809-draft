@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.61 2004/12/13 19:53:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.62 2004/12/13 20:26:58 vapier Exp $
+
+*man-1.5o_p1 (13 Dec 2004)
+
+  13 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  files/man-1.5m-security.patch, +files/man-1.5o_p1-man2html-CFLAGS.patch,
+  +man-1.5o_p1.ebuild:
+  Version bump.
 
   13 Dec 2004; Mike Frysinger <vapier@gentoo.org>
   +files/man-1.5m-cross-compile.patch, man-1.5m-r2.ebuild:

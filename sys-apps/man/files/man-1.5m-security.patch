@@ -1,12 +1,14 @@
 diff -urP man-1.5l/src/gripes.c man-1.5l/src/gripes.c
 --- man-1.5l/src/gripes.c Wed Jul 17 20:17:23 2002
 +++ man-1.5l/src/gripes.c Fri Jun  6 14:51:21 2003
-@@ -28,0 +28,1 @@
+@@ -28,1 +28,2 @@
 +#include <string.h>
-@@ -68,0 +68,2 @@
+ #include <nl_types.h>
+@@ -68,1 +68,3 @@
+     char *s;
 +    unsigned int i = 0;
 +    unsigned short fmt_n = 0;
-@@ -78,0 +78,13 @@
+@@ -78,1 +78,14 @@
 +    /* routine to filter format string abuse.  will */
 +    /* only allow %d, %s, and %o through.  no more  */
 +    /* than two formats needed for any response.    */
@@ -20,3 +22,4 @@ diff -urP man-1.5l/src/gripes.c man-1.5l/src/gripes.c
 +        if (fmt_n > 2) /* failed, default reply. */
 +            s = msg[n];
 +    }
+     return s;
