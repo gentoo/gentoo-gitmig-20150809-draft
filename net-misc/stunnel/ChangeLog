@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/stunnel
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.6 2003/01/04 02:38:19 aliz Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.7 2003/02/12 08:33:21 vapier Exp $
 
   04 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> stunnel-4.02.ebuild, files/stunnel.rc6 :
   Misc fixes, closes #12608.

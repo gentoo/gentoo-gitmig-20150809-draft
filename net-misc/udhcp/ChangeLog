@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/udhcp
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.4 2002/12/31 01:09:26 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.5 2003/02/12 08:34:12 vapier Exp $
 
 *udhcp-0.9.8 (30 Dec 2002)
 

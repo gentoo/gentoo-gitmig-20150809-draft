@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/freeswan
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.9 2003/02/07 19:12:57 jhhudso Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.10 2003/02/12 08:22:25 vapier Exp $
 
 *freeswan-1.99 (07 Feb 2003)
 

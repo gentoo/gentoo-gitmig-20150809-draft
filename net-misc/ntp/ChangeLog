@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/ntp
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.20 2003/01/12 22:06:19 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.21 2003/02/12 08:29:25 vapier Exp $
 
 *ntp-4.1.1b-r4 (12 Jan 2003)
 

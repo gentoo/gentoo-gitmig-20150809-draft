@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/knetload
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.6 2002/12/20 14:40:36 hannes Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.7 2003/02/12 08:25:57 vapier Exp $
 
 *knetload-1.99 (20 Dec 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/httptunnel
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.4 2002/12/13 11:00:11 blizzy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.5 2003/02/12 08:23:57 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

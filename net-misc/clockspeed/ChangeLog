@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/clockspeed
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.9 2003/02/10 10:31:59 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.10 2003/02/12 08:20:34 vapier Exp $
 
 *clockspeed-0.62-r2 (09 Jan 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/directvnc
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.9 2003/01/18 04:47:15 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.10 2003/02/12 08:21:23 vapier Exp $
 
 *directvnc-0.7 (17 Jan 2003)
 
