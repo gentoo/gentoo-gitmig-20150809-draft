@@ -1,0 +1,12 @@
+# ChangeLog for dev-perl/Mail-POP3Client
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.1 2004/02/16 14:13:25 mcummings Exp $
+
+*Mail-POP3Client-2.15 (16 Feb 2004)
+
+  16 Feb 2004; Michael Cummings,,, <mcummings@gentoo.org>
+  Mail-POP3Client-2.15.ebuild:
+  This is the new name for dev-perl/POP3Client - now in its own namespace under
+  Mail::. Tests will fail without setting pop information in the environment.
+  However, the pod doc examples work flawlessly on x86 and sparc.
+
