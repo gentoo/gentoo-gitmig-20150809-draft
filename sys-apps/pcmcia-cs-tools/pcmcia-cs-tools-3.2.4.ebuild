@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.4.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.4.ebuild,v 1.4 2004/03/15 02:27:10 latexer Exp $
 
-P=${P/-tools/}
-S=${WORKDIR}/${P}
+MY_P=${P/-tools/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="PCMCIA tools for Linux"
-SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/pcmcia-cs/${MY_P}.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers
@@ -29,7 +29,7 @@ fi
 # the kernel directory that pcmcia-cs should use for configuration.
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${MY_P}.tar.gz
 
 	cd ${S}
 	mv Configure Configure.orig
