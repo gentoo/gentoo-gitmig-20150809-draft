@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 3bcd665ad5d92eaffb137942e0951a80 imlib2-1.1.1.20040710.ebuild 1370
+MD5 05e2f491ebbebd55996582bf5252815c imlib2-1.1.1_pre1.ebuild 1365
+MD5 0c0aaf16c7e9bba5c2abd9958515375e imlib2-1.1.0.ebuild 1243
 MD5 bb9b743b55aa9636d2e626c915ed3673 ChangeLog 3152
-MD5 e129c39021937acae287ab14cdc090d4 imlib2-1.1.1.20040710.ebuild 1383
-MD5 4ab1c5718448c9a0eb823ec895df1a47 imlib2-1.1.1_pre1.ebuild 1380
-MD5 a0d3af132c54fc25e2b016dc10237a24 imlib2-1.1.0.ebuild 1277
 MD5 0c36280f1141c2ab86d0bd09ceec038a metadata.xml 2284
-MD5 f3d4c14b13a24c9b4c581b8058454a6d files/digest-imlib2-1.1.0 64
 MD5 e45d8f2513654064ae707ccc5df7d6c0 files/digest-imlib2-1.1.1.20040710 74
-MD5 76f2c76e3150d90e337d23ef29d3741e files/digest-imlib2-1.1.1_pre1 69
 MD5 a12bbb168c09ebd1a532997d2c5d84d7 files/1.1.0-gcc-3.4.patch 435
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA8oePHTu7gpaalycRAkpzAJ4wTOwiQA+sPZf9bIy0jR2uAM9e0gCfbG9t
-pUz9pRrIADfYa7ozEOl20jw=
-=mE04
------END PGP SIGNATURE-----
+MD5 f3d4c14b13a24c9b4c581b8058454a6d files/digest-imlib2-1.1.0 64
+MD5 76f2c76e3150d90e337d23ef29d3741e files/digest-imlib2-1.1.1_pre1 69

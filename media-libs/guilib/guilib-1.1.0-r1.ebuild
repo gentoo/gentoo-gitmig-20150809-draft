@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/guilib-1.1.0-r1.ebuild,v 1.5 2004/06/24 23:02:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/guilib-1.1.0-r1.ebuild,v 1.6 2004/07/14 19:45:03 agriffis Exp $
 
 MY_P="GUIlib-${PV}"
 DESCRIPTION="a simple widget set for SDL"
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.libsdl.org/projects/GUIlib/"
 SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="x86 ppc sparc alpha ~hppa"
+IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.0.1"
 
