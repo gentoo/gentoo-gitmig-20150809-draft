@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 35c7681c9ae2f0fbf070b74b6a8c9270 ChangeLog 4412
 MD5 3e71292cbc41d18eb48605e620e76d09 hydrogen-0.8.2-r4.ebuild 3002
-MD5 674a050bfd6b955ba4941c8d6b69f6b9 hydrogen-0.9.0.ebuild 1043
-MD5 3419decca83c81164379436f56505c85 ChangeLog 4311
+MD5 5042cec54dffe0ecd8657c1cce08965e hydrogen-0.9.0.ebuild 1060
 MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
-MD5 edc486e93c7644938917e65e83e56e71 files/hydrogen-0.8.2-gcc34.patch 495
-MD5 d577302a6cccb9cd150804bf1b3a96e2 files/hydrogen-0.9.0_beta1-math.patch 474
-MD5 1755f7143c139eddaed591c6ea39e695 files/digest-hydrogen-0.9.0 67
 MD5 0aeb17f8b89b3d73dde268e756c16a2c files/digest-hydrogen-0.8.2-r4 575
+MD5 1755f7143c139eddaed591c6ea39e695 files/digest-hydrogen-0.9.0 67
 MD5 a3d08a6bb459e313c2c59a5ad086eaea files/hydrogen-0.8.2-64bit.patch 1319
+MD5 edc486e93c7644938917e65e83e56e71 files/hydrogen-0.8.2-gcc34.patch 495
 MD5 7d42c8a8bb26e478ec8e9e835ea733b5 files/hydrogen-0.8.2-ui-spacer.patch 1902
+MD5 d577302a6cccb9cd150804bf1b3a96e2 files/hydrogen-0.9.0_beta1-math.patch 474
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMgOh06ebR+OMO78RAjmhAJ9xM4i4bDo6kqlUCokNQCqKqX0tPgCeKWtD
-eCgAsSr2FaAdNSCLOuSi9lE=
-=bQAo
+iD8DBQFCUyCs+uC/ViVka/0RAhvJAJ9HlNEGgK/LLrXom81mip98dCeAKwCffum1
+LwN6BzVc+sMBeoluUC1QJg4=
+=t4Go
 -----END PGP SIGNATURE-----
