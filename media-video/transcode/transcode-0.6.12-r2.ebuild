@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r2.ebuild,v 1.1 2004/09/30 01:07:00 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r2.ebuild,v 1.2 2004/10/07 02:26:12 eradicator Exp $
 
-inherit libtool flag-o-matic gcc
+inherit libtool flag-o-matic eutils gcc
 
 # dont strip binarys causes missing symbol problems
 # with pvm compiles
@@ -16,7 +16,7 @@ SRC_URI="http://www.zebra.fh-weingarten.de/~transcode/pre/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -sparc -amd64"
+KEYWORDS="~x86 ~ppc -sparc ~amd64"
 IUSE="sdl static mpeg mmx sse 3dnow encode X quicktime avi altivec oggvorbis theora pvm"
 
 DEPEND=">=media-libs/a52dec-0.7.4
@@ -111,9 +111,9 @@ src_compile() {
 			--with-pvm3-include=/usr/local/pvm3/include"
 
 	# Use the MPlayer libpostproc if present
-	[ -f ${ROOT}/usr/lib/libpostproc.a ] && \
+	[ -f ${ROOT}/usr/$(get_libdir)/libpostproc.a ] && \
 	[ -f ${ROOT}/usr/include/postproc/postprocess.h ] && \
-		myconf="${myconf} --with-libpostproc-builddir=${ROOT}/usr/lib"
+		myconf="${myconf} --with-libpostproc-builddir=${ROOT}/usr/$(get_libdir)"
 
 	append-flags -DDCT_YUV_PRECISION=1
 
@@ -150,7 +150,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog README TODO
 

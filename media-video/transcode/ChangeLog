@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.72 2004/09/30 01:37:41 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.73 2004/10/07 02:26:12 eradicator Exp $
+
+  06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  transcode-0.6.12-r1.ebuild, transcode-0.6.12-r2.ebuild:
+  get_libdir fixes
 
 *transcode-0.6.12-r2 (29 Sep 2004)
 
