@@ -1,9 +1,14 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.15 2004/07/18 03:00:13 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.16 2004/07/22 15:35:41 matsuu Exp $
 
   17 Jul 2004; Tom Gall <tgall@gentoo.org> freewnn-1.1.1_alpha20-r1.ebuild:
   stable on ppc64 bug #55872
+
+*freewnn-1.1.1_alpha20-r2 (23 Jul 2004)
+
+  23 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> +freewnn-1.1.1_alpha20-r2.ebuild:
+  Added gnuconfig_update and get_number_of_jobs. Bug 55872, 55910.
 
 *freewnn-1.1.1_alpha20-r1 (02 Jul 2004)
 
