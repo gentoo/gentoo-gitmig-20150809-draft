@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.221 2005/01/30 07:09:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.222 2005/02/03 14:03:54 cardoe Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -289,7 +289,7 @@ spl - Adds support for the Standard PHP Library
 sqlite - Adds support for sqlite - embedded sql database
 sse - fast floating point optimization for PentiumIII+ class chips
 ssl - Adds support for Secure Socket Layer connections
-static - !!do not set this during bootstrap!! Causes things to be statically linked instead of dynamically
+static - !!do not set this during bootstrap!! Causes binaries to be statically linked instead of dynamically
 svg - Adds support for SVG (Scalable Vector Graphics http://www.w3.org/TR/SVG ).  This option is mainly intended for users that tend to browse multimedia sites frequently.
 svga - Adds support for SVGAlib (graphics library)
 sybase - Adds support for the Sybase SQL Database Server
