@@ -9,7 +9,7 @@ MY_P=${MY_PN}-${MY_PV}
 MY_V=X4299
 S=${WORKDIR}/xc
 X=${WORKDIR}/${MY_P}
-DESCRIPTION="XDDirectFB is a rootless XServer on top of DirectFB"
+DESCRIPTION="XDirectFB is a rootless XServer on top of DirectFB"
 
 SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/${MY_V}-1.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/${MY_V}-2.tar.bz2
@@ -20,6 +20,7 @@ SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/${MY_V}-1.tar.bz2
 
 HOMEPAGE="http://www.directfb.org"
 LICENSE="X11"
+SLOT="0"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
@@ -62,6 +63,8 @@ src_install() {
 	mv ${S}/programs/Xserver/hw/directfb/XDirectFB.man ./XDirectFB.1x
 	insinto /usr/X11R6/man/man1
 	doins ${S}/XDirectFB.1x
+	cp ${FILESDIR}/.dfbserverrc /etc/skel
+	cp ${FILESDIR}/dfbserverrc /etc/X11/xinit
 	
 	dohtml ${S}/programs/Xserver/hw/directfb/XDirectFB.1x.html
 	
@@ -79,6 +82,9 @@ pkg_postinst() {
 	echo '#######################################################'
 	echo '#                                                     #'
 	echo '#     To start XDirectFB use startxdfb utility.       #'
+	echo '#     For example startxdfb -- -enableRoot			#'
+	echo '#     Use -enableRoot if you have issues with menus   #'
+	echo '#     not working in fluxbox or blackbox, etc.        #'
 	echo '#                                                     #'
 	echo '#     To set a background in XDirectFB create a       #'
 	echo '#     file called directfbrc in /etc                  #'
@@ -86,9 +92,14 @@ pkg_postinst() {
 	echo '#     in $HOME. XDirectFB will also just use your     #'
 	echo '#     Window Managers background.                     #'
 	echo '#                                                     #'
-	echo '#     XDirectFB reads ~/.xinitrc or                   #'
-	echo '#     /etc/X11/xinit/xinitrc by default so please     #'
-	echo '#     edit this to you likeing.                       #'
+	echo '#     XDirectFB needs ~/.dfbserverrc or               #'
+	echo '#     /etc/X11/xinit/dfbserverrc by default so please #'
+	echo '#     edit these to you likeing.                      #'
+	echo '#     cp /etc/skel/.dfbserverrc $HOME                 #'
+	echo '#     Please take a look at this file and edit it,    #' 
+	echo '#     you can add a options like -enableRoot, etc to  #'
+	echo '#     it.  Though XDirectFB should just start with    #'
+	echo '#     startxdfb                                       #'
 	echo '#                                                     #'
 	echo '#######################################################'
 	echo

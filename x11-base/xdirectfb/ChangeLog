@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xdirectfb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.1 2002/06/17 08:28:54 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.2 2002/07/07 08:44:42 naz Exp $
+
+
+*xdirectfb-1.0_rc2-r1.ebuild (06 Jul 2002)
+
+  06 Jul 2002; M.Nazaroff <naz@gentoo.org> xdirectfb-1.0_rc2-r1.ebuild:
+  Updated startxdfb so it actually works and add a few more files to bring the
+  package all together, and added a slot to each ebuild. This should be finally
+  the package will be released.
 
 *xdirectfb-1.0_rc2.ebuild (16 Jun 2002)
 

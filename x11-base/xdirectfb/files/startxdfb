@@ -1,127 +1,71 @@
 #!/bin/sh
 
-userclientrc=$HOME/.xinitrc
-sysclientrc=/usr/X11R6/lib/X11/xinit/xinitrc
-defaultclient=/usr/X11R6/bin/xterm
-defaultserver=/usr/X11R6/bin/XDirectFB
-defaultclientargs=""
-defaultserverargs=""
-clientargs=""
+userclientrc=$HOME/.xdfbrc
+userserverrc=$HOME/.dfbserverrc
+sysclientrc=/usr/X11R6/lib/X11/xinit/xdfbrc
+sysserverrc=/usr/X11R6/lib/X11/xinit/dfbserverrc
 serverargs=""
-
+clientargs=""
 
 if [ -f $userclientrc ]; then
-    defaultclientargs=$userclientrc
-elif [ -f $sysclientrc ]; then
-    defaultclientargs=$sysclientrc
+    clientargs=$userclientrc
+else if [ -f $sysclientrc ]; then
+    clientargs=$sysclientrc
+fi
 fi
 
+if [ -f $userserverrc ]; then
+    serverargs=$userserverrc
+else if [ -f $sysserverrc ]; then
+    serverargs=$sysserverrc
+fi
+fi
 
+display=:0
 whoseargs="client"
-while [ x"$1" != x ]; do
+while [ "x$1" != "x" ]; do
     case "$1" in
-    # '' required to prevent cpp from treating "/*" as a C comment.
-    /''*|\./''*)
-	if [ "$whoseargs" = "client" ]; then
-	    if [ x"$clientargs" = x ]; then
-		client="$1"
-	    else
-		clientargs="$clientargs $1"
-	    fi
-	else
-	    if [ x"$serverargs" = x ]; then
-		server="$1"
-	    else
-		serverargs="$serverargs $1"
-	    fi
-	fi
-	;;
     --)
-	whoseargs="server"
-	;;
+        whoseargs="server"
+        ;;
     *)
-	if [ "$whoseargs" = "client" ]; then
-	    clientargs="$clientargs $1"
-	else
-	    # display must be the FIRST server argument
-	    if [ x"$serverargs" = x ] && 		 expr "$1" : ':[0-9][0-9]*$' > /dev/null 2>&1; then
-
-		display="$1"
-	    else
-		serverargs="$serverargs $1"
-	    fi
-	fi
-	;;
+        if [ "$whoseargs" = "client" ]; then
+            clientargs="$clientargs $1"
+        else
+            serverargs="$serverargs $1"
+	    case "$1" in
+            :[0-9]*)
+                display="$1"
+                ;;
+            esac
+        fi
+        ;;
     esac
     shift
 done
-
-# process client arguments
-if [ x"$client" = x ]; then
-    # if no client arguments either, use rc file instead
-    if [ x"$clientargs" = x ]; then
-	client="$defaultclientargs"
-    else
-	client=$defaultclient
-    fi
-fi
-
-# process server arguments
-if [ x"$server" = x ]; then
-    # if no server arguments or display either, use rc file instead
-    if [ x"$serverargs" = x -a x"$display" = x ]; then
-	server="$defaultserverargs"
-    else
-	server=$defaultserver
-    fi
-fi
-
-if [ x"$XAUTHORITY" = x ]; then
+    
+if [ X"$XAUTHORITY" = X ]; then
     export XAUTHORITY=$HOME/.Xauthority
 fi
 
 removelist=
 
-
 # set up default Xauth info for this machine
-
-
-
-
-
-
-
-
-authdisplay=${display:-:0}
 mcookie=`mcookie`
-for displayname in $authdisplay `hostname -f`$authdisplay; do
+for displayname in $display `hostname -f`$display; do
     if ! xauth list "$displayname" | grep "$displayname " >/dev/null 2>&1; then
-	xauth add $displayname . $mcookie
-	removelist="$displayname $removelist"
+        xauth add $displayname . $mcookie
+        removelist="$displayname $removelist"
     fi
 done
 
-
-xinit $client $clientargs -- $server $display $serverargs
+echo $serverargs
+xinit $clientargs -- $serverargs
 
 if [ x"$removelist" != x ]; then
     xauth remove $removelist
 fi
 
-
-
-
-
 if command -v deallocvt > /dev/null 2>&1; then
     deallocvt
 fi
-
-
-
-
-
-
-
-
-
-
