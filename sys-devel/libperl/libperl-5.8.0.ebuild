@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.13 2003/06/22 06:13:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.14 2003/07/12 02:52:41 rac Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -190,6 +190,13 @@ src_compile() {
 		myconf="${myconf} -Di_db -Di_ndbm"
 	else
 		myconf="${myconf} -Ui_db -Ui_ndbm"
+	fi
+	if [ "`use mips`" ]
+	then
+		# this is needed because gcc 3.3-compiled kernels will hang
+		# the machine trying to run this test - check with `Kumba
+		# <rac@gentoo.org> 2003.06.26
+		myconf="${myconf} -Dd_u32align"
 	fi
 	if [ "`use sparc`" ]
 	then
