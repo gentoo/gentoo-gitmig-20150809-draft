@@ -436,11 +436,6 @@ app-emulation/winex-cvs
 # but with new portage "update" feature ....
 net-misc/nt
 
-# <prez@gentoo.org> (29 Aug 2002)
-# Does not build successfully in an ebuild (but builds just fine outside of one)
-# Needs more investigation as to why.
-<=dev-java/sun-j2sdk-1.4.0-r1
-
 # <aliz@gentoo.org> (26 Aug 2002)
 # Masked to force lynx-2.8.4.1c
 =net-www/lynx-2.8.4a-r4
