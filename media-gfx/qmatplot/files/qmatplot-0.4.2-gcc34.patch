@@ -1,0 +1,35 @@
+--- src/ksmatrix.h.orig	2003-03-11 16:16:24.000000000 +0100
++++ src/ksmatrix.h	2004-07-22 18:01:12.064261800 +0200
+@@ -332,8 +332,8 @@
+ class KSMatrixFormula : public QSMatrix
+  {
+ 	Q_OBJECT
+-	Q_PROPERTY( QString formula READ formula WRITE setFormula );
+-	Q_PROPERTY( bool transposition READ transposition WRITE setTransposition );
++	Q_PROPERTY( QString formula READ formula WRITE setFormula )
++	Q_PROPERTY( bool transposition READ transposition WRITE setTransposition )
+ 
+   public:
+ 	/**
+--- src/qscobjects.h.orig	2003-03-11 13:07:48.000000000 +0100
++++ src/qscobjects.h	2004-07-22 18:31:06.833415416 +0200
+@@ -246,7 +246,7 @@
+ 	QSGArrow m_end2style;
+ 	QSGPoint m_end1point;
+ 	QSGPoint m_end2point;
+-	QSGLine m_line;;
++	QSGLine m_line;
+    };
+ 
+ //-----------------------------------------------------------------------//
+--- src/kspanelmanager.cpp.orig	2004-07-22 18:47:47.262327104 +0200
++++ src/kspanelmanager.cpp	2004-07-22 18:48:03.957789008 +0200
+@@ -47,7 +47,7 @@
+ 	 Qt::Orientation	o;
+ 
+          qmatplotShell  	*shell;
+-	 KSWorkbook 		*workbook;;
++	 KSWorkbook 		*workbook;
+ 	 KSPanel 		*curr_panel;
+ 
+ 	 QSplitter		*splitter;
