@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.209.ebuild,v 1.3 2004/06/07 05:40:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211.ebuild,v 1.1 2004/06/07 05:40:42 dragonheart Exp $
 
 MY_P=cku209
 S=${WORKDIR}
@@ -11,23 +11,23 @@ HOMEPAGE="http://www.kermit-project.org/"
 SLOT="0"
 LICENSE="Kermit"
 IUSE=""
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
-DEPEND=">=sys-libs/ncurses-5.2
+DEPEND=">=sys-libs/ncurses-5.2"
+
+RDEPEND="${DEPEND}
 	net-dialup/xc"
 
 src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PF}-gentoo.diff
-	cp makefile makefile.orig
-	sed -e "s:-O:$CFLAGS:" makefile.orig > makefile
+	sed -i -e "s:-O:${CFLAGS}:" makefile
 }
 
 src_compile() {
 
-	make KFLAGS="-DCK_SHADOW" linux || die
+	emake KFLAGS="-DCK_SHADOW" linux || die
 }
 
 src_install() {
@@ -35,7 +35,7 @@ src_install() {
 	dodir /usr/share/man/man1
 	dodir /usr/share/doc/${P}
 
-	make \
+	emake \
 		DESTDIR=${D} \
 		BINDIR=/usr/bin \
 		MANDIR=${D}/usr/share/man/man1 \

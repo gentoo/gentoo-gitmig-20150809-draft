@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.ebuild,v 1.9 2004/04/06 04:10:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.ebuild,v 1.10 2004/06/07 05:40:42 dragonheart Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://kermit.columbia.edu/kermit/archives/${MY_P}.tar.gz"
 
 LICENSE="Kermit"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.2
