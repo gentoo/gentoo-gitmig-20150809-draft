@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9.ebuild,v 1.8 2002/10/20 16:45:09 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9.ebuild,v 1.9 2002/10/29 15:40:33 gerk Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://oss.sgi.com/projects/fam/download/${MY_P}.tar.gz
 	ftp://oss.sgi.com/projects/fam/download/contrib/dnotify.patch"
 HOMEPAGE="http://oss.sgi.com/projects/fam/"
 
-KEYWORDS="x86 ~ppc alpha"
+KEYWORDS="x86 ppc alpha"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
