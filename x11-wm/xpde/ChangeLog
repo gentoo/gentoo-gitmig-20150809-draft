@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xpde
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.9 2004/08/30 16:33:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.10 2004/10/09 19:44:42 usata Exp $
+
+  10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> xpde-0.3.5.ebuild,
+  xpde-0.4.0.ebuild, xpde-0.5.1.ebuild:
+  Stable on x86. Masked for other arches since it is distributed as a
+  binary tarball.
 
 *xpde-0.5.1 (31 Aug 2004)
 
