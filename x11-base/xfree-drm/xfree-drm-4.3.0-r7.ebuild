@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.7 2004/02/10 02:25:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.8 2004/02/10 16:15:28 spyderous Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -225,6 +225,11 @@ patch_prepare() {
 		# Also exclude all non-mach64 patches
 		# mv -f ${PATCHDIR}/3* ${EXCLUDED}
 		mv -f ${PATCHDIR}/004* ${EXCLUDED}
+		# bug 40314
+		if [ "${ARCH}" = "ppc" ]
+		then
+			mv -f ${PATCHDIR}/001* ${EXCLUDED}
+		fi
 	elif use gatos
 	then
 		einfo "Updating for gatos build..."
