@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r6.ebuild,v 1.6 2004/09/06 19:13:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r6.ebuild,v 1.7 2004/09/07 22:57:07 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~stuart/${PN}/${PN}-${PVR}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ~ia64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
 IUSE=""
 
 DEPEND=""
