@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.4 2002/11/11 11:25:21 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.5 2002/12/04 22:15:51 george Exp $
+
+*graphviz-1.8.10-r1 (10 Nov 2002)
+
+  10 Nov 2002; George Shapovalov <george@gentoo.org> graphviz-1.8.10-r1.ebuild, files/ :
+
+  removed libpng dependency and made package compile without libpng. 
+  Reason: at the moment this is the only app left in portage that depends on libpng-1.0 
+  series (often won't compile against 1.2) and libpng-1.0 is creating a lot of trouble 
+  for example with kdelibs. See #10726 for details.
 
 *graphviz-1.8.10 (10 Nov 2002)
 
@@ -20,10 +29,4 @@
 
 *graphviz-1.7.15-r1 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+
