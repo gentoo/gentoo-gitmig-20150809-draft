@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.1.ebuild,v 1.1 2005/01/24 11:03:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.1-r1.ebuild,v 1.1 2005/01/31 10:19:45 ka0ttic Exp $
+
+inherit bash-completion
 
 DESCRIPTION="Small and simple weblog engine written in Bash for the command-line"
 HOMEPAGE="http://nanoblogger.sourceforge.net/"
@@ -30,6 +32,7 @@ src_install() {
 	doins nb.conf
 	dodoc ChangeLog
 	dohtml docs/nanoblogger.html
+	dobashcompletion ${FILESDIR}/nb.bashcomp
 }
 
 pkg_postinst() {
@@ -45,5 +48,5 @@ pkg_postinst() {
 	einfo "nanoblogger (with the -b switch), you can set a default value in your"
 	einfo "~/.nb.conf.  For example:"
 	einfo '   BLOG_DIR="$HOME/public_html/blog"'
-	echo
+	bash-completion_pkg_postinst
 }

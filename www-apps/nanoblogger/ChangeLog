@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/nanoblogger
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.1 2005/01/24 11:03:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.2 2005/01/31 10:19:45 ka0ttic Exp $
+
+*nanoblogger-3.1-r1 (31 Jan 2005)
+
+  31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> +files/nb.bashcomp,
+  +nanoblogger-3.1-r1.ebuild, -nanoblogger-3.1.ebuild:
+  Revision bump; added bash-completion.
 
 *nanoblogger-3.1 (24 Jan 2005)
 
