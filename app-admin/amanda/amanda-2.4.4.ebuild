@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.6 2003/09/15 17:47:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.7 2003/09/30 08:10:04 aliz Exp $
 
 inherit eutils
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.amanda.org/"
 SRC_URI="mirror://sourceforge/amanda/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 DEPEND="sys-libs/readline
 		virtual/inetd
 		virtual/mta
