@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0-r1.ebuild,v 1.5 2004/10/16 17:06:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0-r1.ebuild,v 1.6 2004/12/24 22:54:40 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -22,7 +22,8 @@ RDEPEND=">=virtual/jdk-1.3"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/gentoo.diff || die "patching failed"
+	epatch ${FILESDIR}/gentoo.diff
+	epatch ${FILESDIR}/jikes.diff
 	echo "commons-logging.jar=/usr/share/commons-logging/lib/commons-logging.jar" >> build.properties
 }
 
