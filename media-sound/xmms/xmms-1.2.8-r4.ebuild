@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.1 2004/01/30 20:46:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.2 2004/02/03 09:48:55 eradicator Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -23,7 +23,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	xml? ( >=dev-libs/libxml-1.8.15 )
-	gnome? ( <gnome-base/gnome-panel-1.5.0 )
+	!gtk2? ( gnome? ( <gnome-base/gnome-panel-1.5.0 ) )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
 

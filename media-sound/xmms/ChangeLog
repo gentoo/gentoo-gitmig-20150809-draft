@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.94 2004/02/02 19:24:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.95 2004/02/03 09:48:55 eradicator Exp $
+
+  03 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.7-r23.ebuild, xmms-1.2.7-r25.ebuild, xmms-1.2.8-r3.ebuild,
+  xmms-1.2.8-r4.ebuild:
+  adding !gtk2? check on gnome-panel dep as discussed to close bug #35060.
 
   02 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.9-r1.ebuild:
   Cleanup to remove some gnome cruft and now using make DESTDIR=${D} install
