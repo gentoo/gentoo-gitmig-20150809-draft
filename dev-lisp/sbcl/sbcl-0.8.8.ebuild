@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.8.ebuild,v 1.3 2004/03/24 04:21:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.8.ebuild,v 1.4 2004/03/24 21:52:12 mkennedy Exp $
 
 inherit common-lisp-common
 
@@ -77,7 +77,7 @@ src_install() {
 	unset SBCL_HOME
 
 	insinto /etc/
-	doins ${FILESDIR}/${PV}/sbcl.rc	# Gentoo specific (from Debian)
+	doins ${FILESDIR}/${PV}/sbclrc	# Gentoo specific (from Debian)
 
 	exeinto /usr/lib/common-lisp/bin
 	doexe ${FILESDIR}/${PV}/sbcl.sh	# Gentoo specific (from Debian)
