@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/comedi
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/comedi/ChangeLog,v 1.1 2003/11/20 19:37:53 caleb Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/comedi/ChangeLog,v 1.2 2004/03/01 15:48:00 caleb Exp $
+
+*comedi-0.7.68 (01 Mar 2004)
+
+  01 Mar 2004; Caleb Tennis <caleb@gentoo.org> comedi-0.7.68.ebuild:
+  New version, cleanups to make it compile properly.
 
 *comedi-0.7.67 (20 Nov 2003)
 
