@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.5.ebuild,v 1.1 2004/09/12 10:27:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.5.ebuild,v 1.2 2004/09/12 10:49:11 dragonheart Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ DEPEND="dev-perl/perl-tk
 	app-arch/sharutils
 	>=sys-apps/sed-4"
 RDEPEND="app-arch/mt-st
-	dev-lang/perl"
+	dev-lang/perl
+	sys-apps/coreutils"
 
 src_unpack() {
 	unpack ${A}
@@ -34,8 +35,11 @@ src_compile() {
 }
 
 src_install() {
-	dodir "/usr/bin"
+	dodir /usr/bin
 	./install-${P}
+
+	# remove binary installed with coreutils
+	rm -f ${D}/usr/bin/split
 	dodoc README
 
 	cd ${D}/usr/bin
