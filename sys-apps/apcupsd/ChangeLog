@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.40 2004/08/26 09:28:02 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.41 2004/08/30 23:51:05 tantive Exp $
+
+*apcupsd-3.10.15-r1 (31 Aug 2004)
+
+  31 Aug 2004; Michael Imhof <tantive@gentoo.org> +apcupsd-3.10.15-r1.ebuild,
+  -apcupsd-3.10.15.ebuild:
+  Now depends on virtual/snmp and applies the ucd patch only if has_version
+  ucd-snmp. Closes #53210.
 
   26 Aug 2004; Michael Imhof <tantive@gentoo.org> +files/3.10.15/apache.conf,
   +files/3.10.15/apcupsd.in.patch, +files/3.10.15/smtp.patch,
