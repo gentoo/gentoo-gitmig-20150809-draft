@@ -1,8 +1,14 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.16 2002/07/02 01:55:07 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.17 2002/08/19 19:59:49 stroke Exp $
 
-balsa-2.0.1-r1 (02 Jul 2002)
+*balsa-1.4.0 (19 Aug 2002) 
+  19 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> balsa-1.4.0.ebuild: 
+  New version for gtk1/GNOME1, removed balsa-x.x.x-gentoo.patch which is 
+  no longer actual, --with-mailpath=/var/mail is now passed to the balsa
+  configure and not the libmutt/configure 
+
+*balsa-2.0.1-r1 (02 Jul 2002)
   02 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> balsa-2.0.1-r1.ebuild :
   Added workaround for bug #4095, it replaces the varmail patch which has
   been removed. (Closes bug #4095)
