@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/lyskom-elisp-client
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lyskom-elisp-client/ChangeLog,v 1.1 2004/03/19 19:41:12 usata Exp $
+
+*lyskom-elisp-client-0.47.1 (20 Mar 2004)
+
+  20 Mar 2004; Mamoru KOMACHI <usata@gentoo.org>
+  lyskom-elisp-client-0.47.1.ebuild, files/50lyskom-elisp-client-gentoo.el:
+  Initial import. Ebuild submitted by Karl-Johan Karlsson
+  <creideiki+gentoo-bugzilla@lysator.liu.se>, closing bug #37469
+
