@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-0.9.10.ebuild,v 1.1 2003/07/03 12:43:45 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-0.9.10.ebuild,v 1.2 2003/07/04 12:59:14 phosphan Exp $
 
 DESCRIPTION="David's Advanced Revision Control System is yet another replacement for CVS"
 HOMEPAGE="http://abridgegame.org/darcs"
@@ -19,13 +19,12 @@ RDEPEND=">=net-ftp/curl-7.10.2"
 
 S=${WORKDIR}/${P}
 
-# targets to make
-TARGETS="darcs darcs.1"
-if [ `use doc` ]; then
-	TARGETS="${TARGETS} darcs.ps manual/index.html"
-fi
-
 src_compile() {
+	# targets to make
+	TARGETS="darcs darcs.1"
+	if [ `use doc` ]; then
+		TARGETS="${TARGETS} darcs.ps manual/index.html"
+	fi
 	sh ./configure --prefix=/usr
 	make ${TARGETS} || die
 }
