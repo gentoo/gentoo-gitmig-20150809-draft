@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 30874d35fe4426fbd06b9e90cb010763 ChangeLog 540
+MD5 14b712c6ee133aefb7aea429c8709494 ChangeLog 639
 MD5 33ce69af63f7ed3517790f2af7695d3d metadata.xml 510
 MD5 e9354f830027d163d49574318ef53a65 selinux-arpwatch-20041114.ebuild 400
-MD5 95971aaeba3db1789ccfdeb0ecb8496b selinux-arpwatch-20041120.ebuild 400
+MD5 8a76331d2d7436327347ba5641d4f9e5 selinux-arpwatch-20041120.ebuild 396
 MD5 a172c3a352436cdc40f8582c1d7b6ea3 files/digest-selinux-arpwatch-20041114 75
 MD5 7c95cb31752f85a350f27d4286692fbb files/digest-selinux-arpwatch-20041120 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoj1iGSBEIeh4AEYRAsZjAJ9f+DY0ppyjKaewk0Yd1XRYlLV1sgCdHyQ5
-zzatQc4zONxweNKBMYLwKJw=
-=nu+z
+iD8DBQFBo205GSBEIeh4AEYRAqQNAKCNGQRK+Ezgtleay+NMMMQP079kWQCfSqhp
+0YP0islAZwwW8zWi8/UBvzA=
+=bDnb
 -----END PGP SIGNATURE-----

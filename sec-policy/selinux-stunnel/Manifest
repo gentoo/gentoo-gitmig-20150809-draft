@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ae3c2dd5cbeaefa0821b4226b1fce04c ChangeLog 528
+MD5 d54fb37e3c7b7b6518bd51a5add63095 ChangeLog 626
 MD5 4589f0004a12b9e69d69d6fbea17c95f metadata.xml 509
 MD5 33dee60010e5ac3d55be33452b74b896 selinux-stunnel-20041112.ebuild 395
-MD5 c04993ebe059f28dd70ecc102d4937a2 selinux-stunnel-20041119.ebuild 395
+MD5 fc1359bab70979c7ef389dc65ac0c2b2 selinux-stunnel-20041119.ebuild 391
 MD5 555ad264358e78df4109887e6988f1ba files/digest-selinux-stunnel-20041112 74
 MD5 6b21ae4d2108d6ba7fe95e5c435bf4e1 files/digest-selinux-stunnel-20041119 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBokEZGSBEIeh4AEYRAqq4AJ9R4+7U9bEvFTLR+rOF3GUKpPKfwgCeJJ/s
-wxyxPeGKQzEEwiSlc4bAkPQ=
-=s/Sc
+iD8DBQFBo25VGSBEIeh4AEYRAoHNAJ9yV2ur9cIvbOHsOObHiifDMlYGwACdGgZJ
+/nEo7/0Y2UzxncmfW460rY8=
+=b7Jz
 -----END PGP SIGNATURE-----

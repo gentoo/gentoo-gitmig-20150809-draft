@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 413f412fef8184c3ab0f25fce7e97e37 ChangeLog 376
+MD5 45fae631f20f2d1e59dcc6e353179d4a ChangeLog 472
 MD5 e1b947f12fa0217caa27c676ae302b41 metadata.xml 550
-MD5 854e4d50c3cfccffb2f7cc714a0b7978 selinux-dante-20041113.ebuild 428
+MD5 3aa0952b154f127700f5694e5dfbf6d2 selinux-dante-20041113.ebuild 424
 MD5 f4c2bd8f7b11f525598fa4dfce0a2f85 files/digest-selinux-dante-20041113 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBl7ayGSBEIeh4AEYRAonCAJ9BIcxw9Iu2hPQT4z+lu37mBec+yQCfY3k9
-AFWgsVAdbaf4OhJQK6W+2OA=
-=7pof
+iD8DBQFBo21uGSBEIeh4AEYRAlf2AJ9q5/GboT8D2+wTH8fcIJBRLYhoZgCcCWMt
+PDdCWWDGBvZI2jLXtiWeZfw=
+=Qg0e
 -----END PGP SIGNATURE-----

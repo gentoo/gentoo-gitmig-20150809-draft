@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2483b3fe85d5c2abb580c9322fbac82b ChangeLog 839
+MD5 bf9e6c9f2e91d9f1f1e1b4dc06cd3fea ChangeLog 937
 MD5 0b8ee728a701b048ddb9e62d6c08ee02 metadata.xml 381
 MD5 d38de9658f6a93eca7af9b393736e81c selinux-postfix-20040427.ebuild 392
 MD5 1ffb12508a6ffb6802e6e0b5707f818e selinux-postfix-20041021.ebuild 395
 MD5 489a1887c3888035a47e27205d6cecd9 selinux-postfix-20041109.ebuild 395
-MD5 ac870152733bdbfc7fe00d84938121da selinux-postfix-20041120.ebuild 395
+MD5 fd1db9539b367697d5a41598729aff26 selinux-postfix-20041120.ebuild 391
 MD5 d68c2a4162175e6950c0c77d9e529f88 files/digest-selinux-postfix-20040427 75
 MD5 8814206bdaf996778f94cb3fadce696a files/digest-selinux-postfix-20041021 75
 MD5 3e527377db06e4cb148b9e63834ae5fe files/digest-selinux-postfix-20041109 75
@@ -14,7 +14,7 @@ MD5 db7cb110720f8ed0107c082896a36106 files/digest-selinux-postfix-20041120 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoj9FGSBEIeh4AEYRAmSzAJ9coQ3Ukt94qrHCd3qNWm6bAPlA+QCfdLQd
-RTSyBUKeYpbsCI92seBCda0=
-=uJxn
+iD8DBQFBo23XGSBEIeh4AEYRAsWiAKCEzB9NXbmdXJquJFJVqbaRtPZhkQCfZgMp
+/PsNxThVJETnO22zhM7e57I=
+=E7YL
 -----END PGP SIGNATURE-----
