@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2639f2ecd5b6cc196c63906c09facd06 guile-gtk-0.19-r1.ebuild 791
 MD5 f4a4093f87ec444e4df0757c9150a4ee guile-gtk-0.19.ebuild 800
 MD5 07ccd3c87b38dc10c052dacceea6c09f guile-gtk-1.2.0.31.ebuild 910
-MD5 2639f2ecd5b6cc196c63906c09facd06 guile-gtk-0.19-r1.ebuild 791
-MD5 845091697ea92b64945ea697cda53782 ChangeLog 1495
+MD5 97efa9aea3bba9f412b63dd274451300 ChangeLog 1573
 MD5 a9180c05c39b2c45beaf67462ce81fad files/digest-guile-gtk-0.19 66
-MD5 56c2eb09ecb192e29a3dcf4ae7f397cb files/guile-gtk-0.19-Makefile.in.patch 556
-MD5 3256588d322dbad5ec7811568d44d460 files/digest-guile-gtk-1.2.0.31 70
 MD5 a9180c05c39b2c45beaf67462ce81fad files/digest-guile-gtk-0.19-r1 66
+MD5 3256588d322dbad5ec7811568d44d460 files/digest-guile-gtk-1.2.0.31 70
+MD5 56c2eb09ecb192e29a3dcf4ae7f397cb files/guile-gtk-0.19-Makefile.in.patch 556
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOuKcI1lqEGTUzyQRAinpAKCyEonEg/DyfuxAIcpGsNwFpUoJmQCbBUg7
+EI+Mxv1hRhKWcoj20KctryM=
+=Utal
+-----END PGP SIGNATURE-----
