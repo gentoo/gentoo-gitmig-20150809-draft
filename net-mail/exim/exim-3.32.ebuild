@@ -160,6 +160,8 @@ src_install () {
 	insinto /etc/exim
 	doins ${FILESDIR}/system_filter.exim
 	einfo "Read the bottom of /etc/exim/system_filter.exim for usage"
+	dodoc ${FILESDIR}/auth_conf.sub
+	einfo "Cat this to the end of your configure for AUTH=PAM support"
 }
 
 pkg_config() {
