@@ -80,6 +80,7 @@ sys-apps/grep-2.4.2
 sys-apps/groff-1.18.1
 sys-apps/less-378
 sys-apps/lsof-4.68
+sys-apps/sed-4.0.2
 sys-apps/tcp_wrappers-7.6
 sys-apps/texinfo-4.6
 sys-apps/vixie-cron-3.0.1
