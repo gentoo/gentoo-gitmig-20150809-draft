@@ -1,8 +1,15 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.20 2003/05/31 09:05:19 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.21 2003/06/18 19:21:17 pauldv Exp $
 
-  31 May 2003; root <root@gentoo.org> subversion-0.22.2.ebuild,
+*subversion-0.24.1 (18 Jun 2003)
+
+  18 Jun 2003; Paul de Vrieze <pauldv@gentoo.org> subversion-0.21.0-r1.ebuild,
+  subversion-0.22.2.ebuild, subversion-0.23.0.ebuild,
+  subversion-0.24.1.ebuild:
+  Fix bug #21876, and add new version.
+
+  31 May 2003; root <pvdabeel@gentoo.org> subversion-0.22.2.ebuild,
   subversion-0.23.0.ebuild:
   ppc keyworded
 
