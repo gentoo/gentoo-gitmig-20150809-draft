@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3684 2005/03/05 16:41:30 sebastian Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3685 2005/03/06 20:15:12 solar Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# solar <solar@gentoo> (06 Mar 2005)
+# temp p.masked till kernels are updated to this version.
+=sys-apps/gradm-2.1.2.200503041846
 
 # Sebastian Bergmann <sebastian@gentoo.org> (05 Mar 2005)
 # Segfaults on module shutdown.
