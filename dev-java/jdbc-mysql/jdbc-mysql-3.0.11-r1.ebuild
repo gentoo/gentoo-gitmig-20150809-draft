@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.0.11-r1.ebuild,v 1.1 2004/09/26 14:01:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.0.11-r1.ebuild,v 1.2 2004/09/28 04:32:16 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 RDEPEND=">=virtual/jdk-1.2
+	dev-java/ant
 	dev-java/jta
 	dev-java/jdbc2-stdext"
 
