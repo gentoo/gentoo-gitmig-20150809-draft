@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.17 2004/03/22 16:32:15 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.18 2004/03/29 03:54:18 zx Exp $
+
+  01 Apr 2004; Chris Aniszczyk <zx@gentoo.org> kaffe-1.1.4.ebuild:
+  Kaffe now provides virtual's jre and jdk. The unwashed masses are warned about
+  the potential hazard this can be for them. The ebuild doesn't set the default
+  jdk to kaffe either. User's are warned. This is a first step in getting java
+  working on the hppa.
 
   22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> kaffe-1.1.4.ebuild:
   Adding ~hppa... First JVM on HPPA :)
