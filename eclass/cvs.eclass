@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.1 2002/07/17 20:25:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.2 2002/07/17 21:14:56 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -59,6 +59,7 @@ cvs_fetch() {
 	debug-print-function $FUNCNAME $*
 
 	# disable the sandbox for this dir
+	[ ! -d "$ECVS_TOP_DIR" ] && mkdir -p $ECVS_TOP_DIR
 	addread ${ECVS_TOP_DIR}
 	addwrite ${ECVS_TOP_DIR}
 
