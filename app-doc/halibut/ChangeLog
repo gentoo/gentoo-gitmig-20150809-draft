@@ -1,0 +1,11 @@
+# ChangeLog for app-doc/halibut
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.1 2004/09/03 21:52:41 usata Exp $
+
+*halibut-0.9 (04 Sep 2004)
+
+  04 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +halibut-0.9.ebuild:
+  Initial import. Ebuild submitted by Sven Wegener <swegener@gentoo.org>,
+  closing bug #50884.
+
