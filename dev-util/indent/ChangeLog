@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/indent
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.18 2004/09/11 09:34:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.19 2004/09/12 01:17:52 mr_bones_ Exp $
+
+  11 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> indent-2.2.9-r1.ebuild:
+  enable the nls knob; tidy the doc install
 
 *indent-2.2.9-r1 (11 Sep 2004)
 
