@@ -1,6 +1,13 @@
 # ChangeLog for net-news/slrn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.24 2004/07/24 01:50:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.25 2004/08/13 13:12:17 swegener Exp $
+
+*slrn-0.9.8.0-r2 (13 Aug 2004)
+
+  13 Aug 2004; Sven Wegener <swegener@gentoo.org>
+  +files/0.9.8.0/slrn-0.9.8.0-utf8.patch, +slrn-0.9.8.0-r2.ebuild:
+  Added patch from SuSE that avoids sending 8859-1 characters to UTF-8 slang.
+  Closes bug #60083.
 
   24 Jul 2004; Lars Weiler <pylon@gentoo.org> slrn-0.9.8.0-r1.ebuild:
   Added ppc as stable.
