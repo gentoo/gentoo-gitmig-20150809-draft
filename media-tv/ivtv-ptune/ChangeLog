@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv-ptune
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-ptune/ChangeLog,v 1.2 2004/10/15 22:55:41 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-ptune/ChangeLog,v 1.3 2004/10/26 20:30:39 iggy Exp $
+
+  26 Oct 2004; <iggy@gentoo.org> ivtv-ptune-0.2.0_rc1.ebuild:
+  a couple of fixes, bugs 68228 68229
 
   15 Oct 2004; <iggy@gentoo.org> ivtv-ptune-0.2.0_rc1.ebuild:
   add one file that the ivtv ebuild doesn't install
