@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.13 2003/01/06 15:32:35 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.14 2003/01/13 18:41:19 agriffis Exp $
+
+  13 Jan 2003; Aron Griffis <agriffis@gentoo.org> xpdf-2.01-r1.ebuild :
+  Add alpha to KEYWORDS
 
   05 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> xpdf-2.01-r1.ebuild :
   Updated depend to virtual/motif.
