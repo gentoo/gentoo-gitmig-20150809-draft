@@ -1,7 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.18 2002/06/06 22:07:57 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.19 2002/06/28 02:09:54 spider Exp $
 
+
+xmms-1.2.7-r9 (28 Jun 2002)
+  28 Jun 2002; Spider <spider@gentoo.org> xmms-1.2.7-r9.ebuild :
+  removed gnome-core dep in favour of gnome-panel-1.4.1 
+ 
 *xmms-1.2.7-r9 (06 June 2002)
 
   06 June 2002; Brandon Low <lostlogic@gentoo.org> xmms-1.2.7-r9.ebuild files/xmms-1.2.7-gentoo.patch:
