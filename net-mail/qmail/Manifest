@@ -5,18 +5,6 @@ MD5 173fcf74cb0fb3fd6df5a3c842cd6d41 qmail-1.03-r8.ebuild 8142
 MD5 adc831135c76d281c484ada4a2de4e24 qmail-1.03-r12.ebuild 12657
 MD5 8900494a0d691ef3e3feb3c0328c6794 ChangeLog 9179
 MD5 ff596e74b015e067a180fc78855aa87a metadata.xml 360
-MD5 29d91d57aeac05c48034a0e9984ffb79 tmp/tmp 3120
-MD5 4128b18b027f83b5e4880137cd1f1963 tmp/badrcptto-morebadrcptto-accdias.diff.part1 1231
-MD5 9b79f4030bf99d53c842b472ae264133 tmp/badrcptto-morebadrcptto-accdias.diff.part2 1237
-MD5 111c52f4468c7d5d0e97ffbbd50ea3b8 tmp/badrcptto-morebadrcptto-accdias.diff.part3 2273
-MD5 d0cfd6b2cd24c3136043a1d76c0cce38 tmp/badrcptto-morebadrcptto-accdias.diff.part4 1163
-MD5 77ffc3109ccd8929e33b6bb1d80fe943 tmp/badrcptto-morebadrcptto-accdias.diff.part5 2026
-MD5 679e65462cd88a33be5ebd92309ff92e tmp/badrcptto-morebadrcptto-accdias.diff.part6 2434
-MD5 5e5ad4e08dd8bf246035369b41d493e0 tmp/badrcptto-morebadrcptto-accdias.diff.part7 910
-MD5 00abef19f5d299cc55c829181b92b67d tmp/badrcptto-morebadrcptto-accdias.diff.part8 5249
-MD5 5202f2994ead63bc76d0aa9f0294d31e tmp/badrcptto-morebadrcptto-accdias.diff.part9 391
-MD5 addfbd0553d012d3a593099ac3abee0c tmp/todo.list 836
-MD5 ada6695a0138163b46bef433b643ac86 tmp/badrcptto-morebadrcptto-accdias.diff 16965
 MD5 e0686e52df7f0c840a7ac2bfe1fd291a files/tcp.qmqp.sample 337
 MD5 946a715ffdd5e6d2d29c6fdfb29376dd files/tcp.smtp.sample 3726
 MD5 734ea9dfff4513984d2d69123ce54fb8 files/gencert.sh 224
@@ -25,7 +13,7 @@ MD5 48a1e168db29ab4e6c57f1ac135ee2bf files/digest-qmail-1.03-r9 323
 MD5 55b519379b1330f57110fa6d60982cff files/tcp.pop3.sample 285
 MD5 1fa33b460954492678129c60520e9cba files/digest-qmail-1.03-r10 442
 MD5 d6b150617bc5d76374fe010fc2902923 files/digest-qmail-1.03-r11 764
-MD5 3b7fe7fb44e5c6bf9e5c979dd1b1ca5c files/digest-qmail-1.03-r12 1110
+MD5 2b5c17fd7e63b4f9ef72d4215d84a4e5 files/digest-qmail-1.03-r12 1036
 MD5 76d218a258e2ec859ab80c377351afce files/tcp.qmtp.sample 370
 MD5 f42a779e5c708c2d7bf38de66dfb93f5 files/1.03-r8/rc 108
 MD5 71aa0894c118dda3405f1f847944158c files/1.03-r8/qmail-queue.patch 1512
