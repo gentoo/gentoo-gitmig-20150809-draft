@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.5.ebuild,v 1.4 2004/10/23 13:18:19 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.5.ebuild,v 1.5 2004/11/11 23:34:06 suka Exp $
 
 # Notes:
 #
@@ -103,13 +103,11 @@ pkg_setup() {
 		fi
 	fi
 
-	ewarn "****************************************************************"
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
 	ewarn " package and use agressive CFLAGS, lower the CFLAGS and try to  "
 	ewarn " merge again.					               "
-	ewarn "****************************************************************"
 
 	set_languages
 }
@@ -541,7 +539,6 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "******************************************************************"
 	einfo " To start Ximian-OpenOffice.org, run:"
 	einfo
 	einfo "   $ xooffice"
@@ -549,6 +546,4 @@ pkg_postinst() {
 	einfo " Also, for individual components, you can use any of:"
 	einfo
 	einfo "   xoocalc, xoodraw, xooimpress, xoomath, xooweb or xoowriter"
-	einfo
-	einfo "******************************************************************"
 }
