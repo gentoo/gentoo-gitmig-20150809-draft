@@ -1,0 +1,47 @@
+# Copyright 2004 Pieter Van den Abeele, Gentoo Foundation
+# System-wide defaults for the Portage system
+
+# emerge portage-prefpane to make managing your make.conf file easy
+# The make.defaults file should never be changed
+
+# This setting determines the number of processes to start in parallel
+# The optimal setting is -j<number_of_cpus+1>
+# Increase to -j3 on dual-cpu machines
+
+MAKEOPTS="-j2"
+
+# Compiler settings
+
+# The chost setting is used by the compiler to 'identify' the compiler.
+# If this machine announces a compilation service using Zeroconf, it will
+# announce a 'powerpc-apple-darwin' compilation service.
+#
+# Gentoo PowerPC linux chost for instance is powerpc-unknown-linux-gnu
+
+CHOST=powerpc-apple-darwin
+
+# The CFLAG sets the flags that are passed to your compiler to compile apps
+# We default to a very safe setting
+
+CFLAGS="-O2 -pipe"
+CXXFLAGS=${CFLAGS}
+
+# The arch setting determines what ARCH we're on. 
+
+ARCH="macos"
+
+# The platform setting determines what PLATFORM we're on.
+
+PLATFORM=$CHOST
+
+# By default we mark only ebuilds that are tested for stability as emerge-able
+
+ACCEPT_KEYWORDS="ppc-macos" 
+
+# We don't have any USE flags enabled by default
+
+USE=""
+
+# By default we use the macos provided curl instead of wget.
+
+FETCHCOMMAND="/usr/bin/curl --connect-timeout 15 -# -o \${DISTDIR}/\${FILE} \${URI}"
