@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.15 2003/04/18 20:28:56 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.16 2003/05/20 19:41:48 taviso Exp $
+
+  20 May 2003; Tavis Ormandy <taviso@gentoo.org> dcron-2.9.ebuild:
+  Removing gcc hardcode, marking alpha
 
 *dcron-2.9 (19 Mar 2003)
 
