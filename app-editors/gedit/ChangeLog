@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.44 2003/10/17 04:02:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.45 2003/10/20 15:48:03 obz Exp $
+
+*gedit-2.4.1 (20 Oct 2003)
+
+  20 Oct 2003; Mike Gardiner <obz@gentoo.org> gedit-2.4.1.ebuild:
+  New version
 
   16 Oct 2003; Aron Griffis <agriffis@gentoo.org> gedit-2.4.0.ebuild:
   Stable on alpha
