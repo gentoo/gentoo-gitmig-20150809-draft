@@ -4,21 +4,21 @@ EXTRA_DIST = TODO reconf app examples spec help debian README README.REDHAT READ
 
 install-exec-local:
 	@if test "x$(ROOT)" != "x"; then \
-	 echo "Installing with ROOT=$(ROOT)"; \
-         echo; \
-        fi
+		echo "Installing with ROOT=$(ROOT)"; \
+		echo; \
+	fi
 
 	@if test "x$(DESTDIR)" != "x"; then \
-	 echo "Installing with DESTDIR=$(DESTDIR)"; \
-         echo; \
-	 ROOT=$DESTDIR; \
-        fi
+		echo "Installing with DESTDIR=$(DESTDIR)"; \
+		echo; \
+		ROOT=$DESTDIR; \
+	fi
 
 	@echo
 	@echo "Creating the library info files..."
 	@rm -rf $(DESTDIR)$(pkgdatadir)/info
 	@$(INSTALL) -d $(DESTDIR)$(pkgdatadir)/info
-	@$(DESTDIR)$(bindir)/gbi -a -r $(prefix)
+	@$(DESTDIR)$(bindir)/gbi -a -r $(DESTDIR)$(prefix)
 	@rm -f $(DESTDIR)$(pkglibdir)/lib.gb.la
 	@rm -f $(DESTDIR)$(pkglibdir)/lib.gb.so*
 
