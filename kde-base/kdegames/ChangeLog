@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.87 2004/08/30 15:45:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.88 2004/09/09 17:37:45 caleb Exp $
+
+  09 Sep 2004; Caleb Tennis <caleb@gentoo.org> -kdegames-3.2.1.ebuild,
+  -kdegames-3.3.0_rc2.ebuild:
+  3.3.0 is x86 stable
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   kdegames-3.1.5.ebuild, kdegames-3.2.1.ebuild, kdegames-3.3.0.ebuild:
