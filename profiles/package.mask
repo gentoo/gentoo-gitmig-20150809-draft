@@ -22,7 +22,7 @@
 ##
 
 # <lu_zero@gentoo.org> (16 Mar 2003)
-# to be tested, seems instable
+# to be tested, seems unstable
 net-dialup/hcfusbmodem
 
 # <azarah@gentoo.org> (09 Mar 2003)
