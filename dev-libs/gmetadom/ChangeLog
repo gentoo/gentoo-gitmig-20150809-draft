@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmetadom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.8 2004/08/03 11:36:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.9 2004/08/30 10:21:17 gmsoft Exp $
+
+*gmetadom-0.2.1-r2 (30 Aug 2004)
+
+  30 Aug 2004; Guy Martin <gmsoft@gentoo.org> +gmetadom-0.2.1-r2.ebuild:
+  Unconditonal use of -fPIC (#55238).
 
   03 Aug 2004; David Holm <dholm@gentoo.org> gmetadom-0.2.1-r1.ebuild:
   Added to ~ppc.
