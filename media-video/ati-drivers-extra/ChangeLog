@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers-extra
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.3 2004/03/11 14:28:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.4 2004/04/10 16:26:20 spyderous Exp $
+
+  10 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ati-drivers-extra-3.7.6.ebuild:
+  Change dep on ati-drivers to dep only on version, not Gentoo revision (#47401).
 
   11 Mar 2004; Luca Barbato <lu_zero@gentoo.org>
   files/fglrx-3.7.0-fix-fglrx_panel-includes.patch:
