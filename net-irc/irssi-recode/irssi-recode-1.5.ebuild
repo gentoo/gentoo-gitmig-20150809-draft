@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-recode/irssi-recode-1.5.ebuild,v 1.1 2003/11/22 01:27:02 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-recode/irssi-recode-1.5.ebuild,v 1.2 2004/06/17 23:04:30 swegener Exp $
 
 IRSSI="0.8.6"
 
@@ -16,6 +16,7 @@ RDEPEND=""
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+IUSE=""
 
 src_compile() {
 	touch ${WORKDIR}/irssi-${IRSSI}/config.h &&
