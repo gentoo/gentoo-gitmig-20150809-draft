@@ -32,6 +32,10 @@
 # wacky version.
 
 # PPC PROFILE
+# Looks like a whole bunch of x86 stuff in the ebuild that I'm not sure
+# will work so great on the PPC so it's masked for PPC testing. 
+# Owen - July 0/02
+~net-fs/openafs
 
 # KDE was umasked to the world with no testing, we _will_ test it in ppc
 # as to prevent a huge stream of bugs
