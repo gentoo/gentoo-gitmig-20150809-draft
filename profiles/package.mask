@@ -689,3 +689,7 @@ app-cdr/cddump
 # http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=49294
 # ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01%3A48.tcpdump.asc
 <net-analyzer/tcpdump-3.6.2-r1
+
+# prez@gentoo.org 10 May 2002
+# Has to be tested
+=app-office/openoffice-bin-1.0.0
