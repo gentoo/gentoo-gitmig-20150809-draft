@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2-r1.ebuild,v 1.3 2003/09/29 22:05:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2-r1.ebuild,v 1.4 2003/10/18 18:54:59 mholzer Exp $
 
 DESCRIPTION="Chora ${PV} is the Horde CVS viewer."
 HOMEPAGE="http://www.horde.org"
@@ -8,7 +8,7 @@ MY_P=${P/horde-/}
 SRC_URI="ftp://ftp.horde.org/pub/chora/tarballs/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 DEPEND=""
 RDEPEND=">=net-www/horde-2.2.1
 	>=app-text/rcs-5.7-r1
@@ -28,10 +28,6 @@ find_http_root() {
 	[ -f ${REGISTRY} ] || REGISTRY=${HTTPD_ROOT}/horde/config/registry.php.dist
 }
 
-src_compile() {
-	echo "Nothing to compile"
-}
-
 src_install () {
 	find_http_root
 
@@ -42,6 +38,8 @@ src_install () {
 		GID=81
 	fi
 
+	dodoc COPYING README docs/*
+	rm -rf COPYING README docs
 	dodir ${HTTPD_ROOT}/horde/chora
 	cp -r . ${D}/${HTTPD_ROOT}/horde/chora
 
