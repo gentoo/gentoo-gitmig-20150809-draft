@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.17 2002/12/02 23:42:55 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.18 2002/12/03 18:38:32 azarah Exp $
+
+  03 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Removed invalid sourcing of the eclasses (this is depricated).
 
 *ibm-jdk-1.4.0-r1 (02 Dec 2002)
 

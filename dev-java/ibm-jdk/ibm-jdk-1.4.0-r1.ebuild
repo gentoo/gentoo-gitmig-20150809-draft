@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.0-r1.ebuild,v 1.1 2002/12/02 23:42:55 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.0-r1.ebuild,v 1.2 2002/12/03 18:38:32 azarah Exp $
 
 IUSE="doc"
-. /usr/portage/eclass/java.eclass
+
 inherit java nsplugins
 
-At=IBMJava2-SDK-14.tgz
-S=${WORKDIR}/IBMJava2-14
+At="IBMJava2-SDK-14.tgz"
+S="${WORKDIR}/IBMJava2-14"
 DESCRIPTION="IBM JDK 1.4.0"
 SRC_URI=""
 HOMEPAGE="https://www6.software.ibm.com/dl/lxdk/lxdk-p"
@@ -44,6 +44,7 @@ src_install () {
 
 	dohtml -a html,htm,HTML -r docs
 	dodoc docs/COPYRIGHT
+
 	set_java_env ${FILESDIR}/${VMHANDLE}-r1
 
 	# Plugin is disabled as it crashes all the time
