@@ -1,6 +1,11 @@
 # ChangeLog for games-board/cgoban2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/ChangeLog,v 1.18 2004/10/27 10:10:50 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/ChangeLog,v 1.19 2004/11/03 12:08:52 mr_bones_ Exp $
+
+*cgoban2-2.6.6 (03 Nov 2004)
+
+  03 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> +cgoban2-2.6.6.ebuild:
+  version bump
 
   27 Oct 2004; Tom Martin <slarti@gentoo.org> cgoban2-2.6.5.ebuild:
   Marked ~amd64 for bug 61056.
