@@ -2,7 +2,7 @@
 #
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/files/openmosix.init,v 1.2 2003/03/26 11:11:20 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/files/openmosix.init,v 1.3 2003/03/28 21:30:17 tantive Exp $
 
 depend() {
 	need net
@@ -56,7 +56,7 @@ fi
 
 # Make sure we have omdiscd installed
 if [ $AUTODISC -eq 1  ]; then
-    if [ ! -x /sbin/omdiscd ]; then
+    if [ ! -x /usr/sbin/omdiscd ]; then
         eerror "openMosix: omdiscd not installed, exiting"
         exit
     fi
