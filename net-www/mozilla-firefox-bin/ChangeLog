@@ -1,12 +1,12 @@
 # ChangeLog for net-www/mozilla-firefox-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.20 2004/09/14 21:38:10 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.21 2004/09/14 21:50:01 brad Exp $
 
 *mozilla-firefox-bin-1.0_pre (14 Sep 2004)
 
   14 Sep 2004; Brad Laue <brad@gentoo.org>
   +mozilla-firefox-bin-1.0_pre.ebuild:
-  Update to Mozilla Firefox 1.0PR
+  Update to Mozilla Firefox 1.0PR 
 
   05 Aug 2004; Tom Martin <slarti@gentoo.org>
   mozilla-firefox-bin-0.9.3.ebuild:
