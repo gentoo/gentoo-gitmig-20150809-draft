@@ -1,13 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: quik-2.0.1.0-r1.ebuild,v 1.3 2002/07/14 19:20:19 aliz Exp $
+# $Id: quik-2.0.1.0-r1.ebuild,v 1.4 2002/09/21 03:41:22 vapier Exp $
 
 S="${WORKDIR}/quik-2.0"
 A="quik_2.0e.orig.tar.gz"
 
-echo "workdir is:"
-echo ${WORKDIR}
-HOMEPAGE=""
+HOMEPAGE="http://penguinppc.org/projects/quik/"
 SLOT="0"
 LICENSE="GPL-2"
 DEB_P="quik_2.0e-1.diff"
