@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.6.5c.ebuild,v 1.6 2004/07/03 21:08:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.6.5c.ebuild,v 1.7 2004/07/14 01:33:57 agriffis Exp $
 
 inherit kde
 
@@ -38,7 +38,6 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 need-kde 3
 
-S=${WORKDIR}/${P}
 
 src_compile() {
 	kde_src_compile myconf configure
