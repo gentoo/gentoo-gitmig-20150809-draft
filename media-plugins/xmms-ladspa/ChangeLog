@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-ladspa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.11 2004/11/21 17:42:21 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.12 2004/12/28 16:49:12 eradicator Exp $
+
+  28 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-ladspa-1.0.ebuild:
+  Stable amd64, x86.
 
 *xmms-ladspa-1.0 (21 Nov 2004)
 
