@@ -1,5 +1,6 @@
 MD5 b19e43333593090a7d87bf84a3a979d8 xfce-utils-4.0.5.ebuild 1029
 MD5 291e4a6b1a55eb3f3395029eae1e81c3 xfce-utils-4.1.90.ebuild 995
+MD5 636aaa558cd2dec8e8feba323d4adee5 xfce-utils-4.1.99.2.ebuild 962
 MD5 e653a4455608f56c4a897d9dd3639754 xfce-utils-4.0.4.ebuild 1009
 MD5 636aaa558cd2dec8e8feba323d4adee5 xfce-utils-4.1.99.1.ebuild 962
 MD5 0019025df780d775eb231e393aa564b8 xfce-utils-4.0.6.ebuild 1091
@@ -12,3 +13,4 @@ MD5 8c5fafba9ad6530d4fe86ec623702306 files/digest-xfce-utils-4.0.4 68
 MD5 21cdb98a6674dcf94ea60223609f449d files/digest-xfce-utils-4.0.5 68
 MD5 36cfb57721de1080726f288c17acd532 files/digest-xfce-utils-4.0.6 68
 MD5 02fb494766425963646a62f2184b8175 files/digest-xfce-utils-4.1.99.1 72
+MD5 55090aaf08269948289fd882f1d736c5 files/digest-xfce-utils-4.1.99.2 72

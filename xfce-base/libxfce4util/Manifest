@@ -1,4 +1,5 @@
 MD5 cba90f3c30c20e830f711002a0e4b6e1 libxfce4util-4.0.5.ebuild 675
+MD5 bea03ac31df66874372ec86ab2b86683 libxfce4util-4.1.99.2.ebuild 688
 MD5 05d53c5f97292449efe59c19581c2420 libxfce4util-4.1.91.ebuild 686
 MD5 48c7ab4e67e873631681e3ed1744b249 libxfce4util-4.0.4.ebuild 655
 MD5 bea03ac31df66874372ec86ab2b86683 libxfce4util-4.1.99.1.ebuild 688
@@ -7,6 +8,7 @@ MD5 1f757632e7a86f851394a0f0a72998ad libxfce4util-4.1.90.ebuild 719
 MD5 5e9b3e34baf0ea595cf38d9fcd43576d ChangeLog 4672
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 a9a0095668ea7ac3a80b89f9e882e3bc files/digest-libxfce4util-4.1.99.1 73
+MD5 37598415a86d2f46debb0ab8a9038942 files/digest-libxfce4util-4.1.99.2 73
 MD5 2683788c07ac407cba40e7c1e3a1cf79 files/digest-libxfce4util-4.0.4 70
 MD5 36ea43949511b48226931fd2c0538b5f files/digest-libxfce4util-4.0.5 70
 MD5 71f8db52c0e0da0e1ee4a70c35c0edd6 files/digest-libxfce4util-4.0.6 70

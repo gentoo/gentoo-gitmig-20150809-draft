@@ -1,5 +1,6 @@
 MD5 a6e1ecd9e37ae6d2af2e4cad73803206 libxfce4mcs-4.0.5.ebuild 849
 MD5 f4997ee9113c4a7d480812f25ba9842b libxfce4mcs-4.1.90.ebuild 761
+MD5 9ba44860b6acbcef58e32e902a2935bd libxfce4mcs-4.1.99.2.ebuild 729
 MD5 83f6968f0617ce27818025b42ea9f894 libxfce4mcs-4.0.4.ebuild 829
 MD5 bd58bf7a995b1dbaa58f39a9a9253225 libxfce4mcs-4.0.6.ebuild 911
 MD5 9ba44860b6acbcef58e32e902a2935bd libxfce4mcs-4.1.99.1.ebuild 729
@@ -12,3 +13,4 @@ MD5 011f46410944ac6aa6c44d92b888069e files/digest-libxfce4mcs-4.0.6 69
 MD5 99404e78c9428e4e20df4c4649d2ac0d files/digest-libxfce4mcs-4.1.90 70
 MD5 0def8bb9f8c0e711d0b1cb7078dbf161 files/digest-libxfce4mcs-4.1.91 70
 MD5 37b663d07b72eab0b72d5428f01515a4 files/digest-libxfce4mcs-4.1.99.1 72
+MD5 3712433db56d37346c4b8adb9dc7e009 files/digest-libxfce4mcs-4.1.99.2 72
