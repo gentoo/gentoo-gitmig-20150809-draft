@@ -1,0 +1,56 @@
+Index: dcop/dcopserver.cpp
+===================================================================
+RCS file: /home/kde/kdelibs/dcop/dcopserver.cpp,v
+retrieving revision 1.160.2.4
+diff -u -p -r1.160.2.4 dcopserver.cpp
+--- dcop/dcopserver.cpp	6 Aug 2004 11:16:30 -0000	1.160.2.4
++++ dcop/dcopserver.cpp	2 Mar 2005 13:17:09 -0000
+@@ -984,7 +984,7 @@ DCOPServer::DCOPServer(bool _suicide)
+ 	}
+ 
+     char errormsg[256];
+-    int orig_umask = umask(0); /*old libICE's don't reset the umask() they set */
++    int orig_umask = umask(077); /*old libICE's don't reset the umask() they set */
+     if (!IceListenForConnections (&numTransports, &listenObjs,
+ 				  256, errormsg))
+ 	{
+Index: dcop/KDE-ICE/Xtranssock.c
+===================================================================
+RCS file: /home/kde/kdelibs/dcop/KDE-ICE/Xtranssock.c,v
+retrieving revision 1.9
+diff -u -p -r1.9 Xtranssock.c
+--- dcop/KDE-ICE/Xtranssock.c	19 Mar 2003 18:35:52 -0000	1.9
++++ dcop/KDE-ICE/Xtranssock.c	2 Mar 2005 13:17:10 -0000
+@@ -937,6 +937,7 @@ TRANS(SocketUNIXCreateListener) (XtransC
+ #endif
+ 
+     unlink (sockname.sun_path);
++    (void) umask (oldUmask);
+ 
+     if ((status = TRANS(SocketCreateListener) (ciptr,
+ 	(struct sockaddr *) &sockname, namelen)) < 0)
+@@ -944,7 +945,6 @@ TRANS(SocketUNIXCreateListener) (XtransC
+ 	PRMSG (1,
+     "SocketUNIXCreateListener: ...SocketCreateListener() failed\n",
+ 	    0, 0, 0);
+-	(void) umask (oldUmask);
+ 	return status;
+     }
+ 
+@@ -962,7 +962,6 @@ TRANS(SocketUNIXCreateListener) (XtransC
+         PRMSG (1,
+         "SocketUNIXCreateListener: Can't allocate space for the addr\n",
+ 	    0, 0, 0);
+-	(void) umask (oldUmask);
+         return TRANS_CREATE_LISTENER_FAILED;
+     }
+ 
+@@ -970,8 +969,6 @@ TRANS(SocketUNIXCreateListener) (XtransC
+     ciptr->addrlen = namelen;
+     memcpy (ciptr->addr, &sockname, ciptr->addrlen);
+ 
+-    (void) umask (oldUmask);
+-
+     return 0;
+ }
+ 
