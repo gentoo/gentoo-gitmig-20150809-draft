@@ -1,8 +1,11 @@
-# ChangeLog for media-video/nvclock
+# ChangeLog for media-video/mtxdrivers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/ChangeLog,v 1.1 2003/04/20 01:00:10 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/ChangeLog,v 1.2 2003/04/20 02:29:13 darkspecter Exp $
 
-*mtxdrives (19 Apr 2003)
+*mtxdrives-0.2.1 (19 Apr 2003)
+
+  20 Apr 2003; Bartosch Pixa <darkspecter@gentoo.org> mtxdrivers-0.2.1.ebuild :
+  added hack to make the kernelmodule work with rmap enabled kernels
 
   19 Apr 2003; Preston A. Elder <prez@gentoo.org> mtxdrivers-0.2.1.ebuild
   files/digest-mtxdrivers-0.2.1 :

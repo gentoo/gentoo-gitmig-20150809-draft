@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.                                                                                         
 # Distributed under the terms of the GNU General Public License v2                                                                      
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.2.1.ebuild,v 1.4 2003/04/20 01:44:25 prez Exp $                     
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.2.1.ebuild,v 1.5 2003/04/20 02:29:13 darkspecter Exp $                     
 
 RELEASE=2002
 SRC_URI="ftp://ftp.matrox.com/pub/mga/archive/linux/${RELEASE}/${P/-/_}.tgz"
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.matrox.com/mga/products/parhelia/home.cfm"
 DEPEND=">=x11-base/xfree-4.1.0
 	virtual/kernel"
 
+IUSE="rmaphack"
 SLOT="0"
 LICENSE="Matrox"
 KEYWORDS="x86"
@@ -23,6 +24,12 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
+
+	# hack to make mtx.o compile with rmap enabled kernels
+	if use rmaphack; then
+		cp kernel/src/mtx_vm.c kernel/src/mtx_vm.c.orig
+		sed -e "s:pte_offset:pte_offset_kernel:g" mtx_vm.c.orig > mtx_vm.c
+	fi
 
 	# Patch because X 4.3.0 is 'not supported' but works.
 	cp -a xfree86/4.2.1 xfree86/4.3.0
@@ -61,4 +68,9 @@ src_install() {
 pkg_postinst() {
 	einfo "Please look at /usr/share/doc/${P}/XF86Config.*"
 	einfo "for X configurations for your Parhelia card."
+	echo
+	einfo "In case you have a kernel with rmap VM the mtx.o"
+	einfo "module needs a little hack to work. Remerge this"
+	einfo "ebuild liek this:"
+	einfo "USE=\"rmaphack\" emerge mtxdrivers"
 }
