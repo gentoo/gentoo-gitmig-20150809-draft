@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion-devel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.22 2003/12/22 18:53:13 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.23 2003/12/29 01:54:59 twp Exp $
+
+  28 Dec 2003; Tom Payne <twp@gentoo.org> :
+  Removed old versions.
 
 *ion-devel-20031211 (21 Dec 2003)
 
