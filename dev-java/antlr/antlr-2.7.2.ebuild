@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.2.ebuild,v 1.1 2003/04/05 23:53:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.2.ebuild,v 1.2 2003/04/06 00:08:43 robbat2 Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="A parser generator for Java and C++ written in Java"
+DESCRIPTION="A parser generator for Java and C++, written in Java"
 SRC_URI="http://www.antlr.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.antlr.org"
 DEPEND=">=virtual/jdk-1.2
@@ -11,6 +11,12 @@ DEPEND=">=virtual/jdk-1.2
 SLOT="2"
 LICENSE="ANTLR"
 KEYWORDS="x86"
+IUSE=""
+
+src_unpack() {
+	unpack ${A}
+	cd ${S} && patch -p1 <${FILESDIR}/${P}-gcc3-gentoo.patch || die
+}
 
 src_compile() {
 
@@ -23,10 +29,6 @@ src_compile() {
 	echo $CLASSPATH
 	econf || die	
 	make all || die
-
-#	cd lib/cpp
-#	econf || die
-#	emake || die
 }
 
 src_install () {
