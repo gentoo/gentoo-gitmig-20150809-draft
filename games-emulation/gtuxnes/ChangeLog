@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/gtuxnes
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gtuxnes/ChangeLog,v 1.3 2004/06/24 22:29:03 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gtuxnes/ChangeLog,v 1.4 2005/02/27 04:32:17 mr_bones_ Exp $
+
+  26 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> +files/0.75-rc.patch,
+  gtuxnes-0.75.ebuild:
+  use games eclass; add patch from Myk Taylor (bug #82768) to support spaces in
+  the rc file; tidy
 
 *gtuxnes-0.75 (27 Aug 2003)
 
