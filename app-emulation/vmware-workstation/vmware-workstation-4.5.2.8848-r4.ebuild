@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r3.ebuild,v 1.1 2005/02/09 15:20:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r4.ebuild,v 1.1 2005/02/10 19:15:20 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -26,7 +26,9 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
-	mirror://gentoo/vmware.png"
+	mirror://gentoo/vmware.png
+	http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}-rpath-fix.tar.bz2
+	mirror://gentoo/${P}-rpath-fix.tar.bz2"
 
 LICENSE="vmware"
 IUSE=""
@@ -38,7 +40,6 @@ RDEPEND=">=dev-lang/perl-5
 	sys-libs/glibc
 	virtual/x11
 	virtual/os-headers
-	media-libs/gdk-pixbuf
 	sys-apps/pciutils"
 
 dir=/opt/vmware
@@ -46,6 +47,7 @@ Ddir=${D}/${dir}
 
 src_unpack() {
 	unpack ${NP}.tar.gz
+	unpack ${P}-rpath-fix.tar.bz2
 	cd ${S}
 	unpack ${ANY_ANY}.tar.gz
 	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
@@ -68,7 +70,8 @@ src_install() {
 	# the precompiled modules arround. Saves about 4 megs of disk space too.
 	rm -rf ${Ddir}/lib/modules/binary
 	# We also remove libgdk_pixbuf stuff, to resolve bug #81344.
-	rm -rf ${Ddir}/lib/lib/libgdk_pixbuf.so.2
+	rm -rf ${Ddir}/lib/lib/libgdk_pixbuf.so.2/libpixbufloader-{png,xpm}.so.1.0.0
+	cp ${S}/rpath-fix/* ${Ddir}/lib/lib/libgdk_pixbuf.so.2
 	# We set vmware-vmx and vmware-ping suid
 	chmod u+s ${Ddir}/bin/vmware-ping
 	chmod u+s ${Ddir}/lib/bin/vmware-vmx
@@ -114,6 +117,9 @@ src_install() {
 
 	dodir /usr/bin
 	dosym ${dir}/bin/vmware /usr/bin/vmware
+
+	# this removes the group warnings
+	chgrp -R root ${Ddir}
 
 	# Questions:
 	einfo "Adding answers to /etc/vmware/locations"
