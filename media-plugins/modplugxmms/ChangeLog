@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/modplugxmms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/ChangeLog,v 1.9 2004/06/24 23:32:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/ChangeLog,v 1.10 2004/07/06 21:09:47 eradicator Exp $
+
+  06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  modplugxmms-2.04.ebuild:
+  -sparc
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   modplugxmms-2.03.ebuild:
