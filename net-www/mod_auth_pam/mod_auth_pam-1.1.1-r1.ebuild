@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.5 2005/02/25 11:58:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.6 2005/02/25 17:51:41 hollow Exp $
 
 inherit eutils apache-module
 
@@ -15,9 +15,12 @@ DEPEND="sys-libs/pam"
 SLOT="0"
 IUSE=""
 
+APXS1_ARGS="-c ${PN}.c -lpam -ldl"
+APXS2_ARGS="-c ${PN}.c -lpam"
+
 APACHE2_EXECFILES=".libs/mod_auth_sys_group.so"
 
-APACHE1_MOD_CONF="${PVR}/10_${PN}"
+APACHE1_MOD_CONF="${PVR}-1/10_${PN}"
 APACHE1_MOD_DEFINE="AUTH_PAM"
 
 APACHE2_MOD_CONF="${PVR}/10_${PN}"

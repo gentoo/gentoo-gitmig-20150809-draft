@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_pam
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/ChangeLog,v 1.9 2005/02/25 11:58:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/ChangeLog,v 1.10 2005/02/25 17:51:41 hollow Exp $
+
+  25 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/1.1.1-r1-1/10_mod_auth_pam.conf, mod_auth_pam-1.1.1-r1.ebuild:
+  fixed 1.3 support
 
   25 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
   mod_auth_pam-1.1.1-r1.ebuild:
