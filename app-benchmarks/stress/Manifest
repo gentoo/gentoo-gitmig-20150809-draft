@@ -1,7 +1,3 @@
 MD5 a6a19d0b052c34dd5f82bb5381a5f3e1 ChangeLog 1333
-MD5 d4e565fafd26fd8384dcea3a873a7c91 stress-0.17.2.ebuild 625
-MD5 8c2eabf50ccd24d7b70fcb60db601762 stress-0.17.ebuild 624
 MD5 720d74bc75101e13369f7554945caffc stress-0.18.1.ebuild 625
-MD5 7e33aee217616c5fa684eb3c97659c5d files/digest-stress-0.17.2 65
-MD5 cf7a94a7f87dc15eae7cd6e5d0588204 files/digest-stress-0.17 63
 MD5 ec9695d4d01d924951995ed39fe7b7f9 files/digest-stress-0.18.1 65
