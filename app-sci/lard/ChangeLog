@@ -1,0 +1,13 @@
+# ChangeLog for app-sci/lard
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/ChangeLog,v 1.1 2002/10/30 08:00:38 george Exp $
+
+*lard-2.0.14 (29 Oct 2002)
+  
+  29 Oct 2002; George Shapovalov <george@gentoo.org> lard-2.0.14.ebuild, files/lard-2.0.14-configure.patch :
+
+  initial release. 
+
+  lard - Language for Asynchronous Research and Development. Used to describe and 
+  simulate asynchronous circuits
+  ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk>
