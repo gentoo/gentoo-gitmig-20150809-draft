@@ -1,8 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# /home/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.28.ebuild,v 1.2 2001/04/19 16:37:12 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.29.ebuild,v 1.7 2001/08/31 22:54:33 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.29.ebuild,v 1.8 2001/09/08 08:31:25 chouser Exp $
 
 
 A=${P}.tar.gz
@@ -23,14 +22,16 @@ DEPEND="${RDEPEND}
         >=app-text/ghostscript-6.50-r2"
 
 src_compile() {
+	# add missing DESTDIR to font installation
+	sed -e 's:install $(datadir):install $(DESTDIR)$(datadir):' \
+		installer/Makefile.in > installer/Makefile.in.new || die
+	mv installer/Makefile.in.new installer/Makefile.in || die
+	
+	# apply use settings
 	local myconf
+	[ -z "`use nls`" ] && myconf="--disable-nls"
 
-	if [ -z "`use nls`" ]
-	then
-		myconf="--disable-nls"
-	fi
-
-	./configure --host=${CHOST} --prefix=/opt/gnome 		\
+	./configure $myconf --host=${CHOST} --prefix=/opt/gnome \
 		    --sysconfdir=/etc/opt/gnome --mandir=/opt/gnome/man
 
 	emake || die
