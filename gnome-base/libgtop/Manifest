@@ -1,19 +1,29 @@
-MD5 f98320acc853bb15b3390c10c3a7ddd9 libgtop-2.6.0.ebuild 612
-MD5 4b658c12b2fb4508cf511eefc5d357f0 libgtop-2.8.1.ebuild 592
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 be4b9a5724eff4aa88ac7b94420b47a8 libgtop-2.0.8.ebuild 589
+MD5 2e53484feb600efa88562e37ba4a7992 ChangeLog 6964
+MD5 f98320acc853bb15b3390c10c3a7ddd9 libgtop-2.6.0.ebuild 612
 MD5 08d6d4d7d3b984878a7ef015665b4fd1 libgtop-1.0.13-r2.ebuild 1497
-MD5 7ec6d6523b93d79d070a7b7fd2d61e17 libgtop-2.8.0.ebuild 618
-MD5 8de17ffc3e373c7a7f5a0897a24debde libgtop-2.8.2.ebuild 592
-MD5 2fb97f033bf3a7ea2f11884462b95242 ChangeLog 6866
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 059693f20d0addbeb2d9d98cbc58dfac files/libgtop-2.0.6-lt_version_fix.patch 424
-MD5 b1a2be73a4e3ecb6d70da68624080ba9 files/1.0.13-remote_buffer_overflow.diff 543
-MD5 01e1743af5e23d9fa6430e0a92c57861 files/libgtop.info.diff 449
-MD5 375c19e1d504ca8d48b8e11d73275740 files/libgtop-2.0.2-lt_version_fix.patch 423
-MD5 7035edc882c42b99f88765dc490f5f7d files/digest-libgtop-2.0.8 66
-MD5 bdd0d337348961863ce812b498ad1a94 files/digest-libgtop-2.6.0 66
+MD5 4b658c12b2fb4508cf511eefc5d357f0 libgtop-2.8.1.ebuild 592
+MD5 8de17ffc3e373c7a7f5a0897a24debde libgtop-2.8.2.ebuild 592
+MD5 58e669f903a5bbb201a78c70da18d96f libgtop-2.8.0.ebuild 615
 MD5 7fe54ebbb7a75c5849cfdd05426d7e4a files/digest-libgtop-2.8.0 67
 MD5 ca9168af65cc2434bf1b3470cc9f1b8e files/digest-libgtop-2.8.1 67
+MD5 b1a2be73a4e3ecb6d70da68624080ba9 files/1.0.13-remote_buffer_overflow.diff 543
+MD5 059693f20d0addbeb2d9d98cbc58dfac files/libgtop-2.0.6-lt_version_fix.patch 424
 MD5 ecf9f249dee646263f5264ba2dc49b2a files/digest-libgtop-2.8.2 67
 MD5 51a8192dea5d51a0ba39cb2753af8b84 files/libgtop-1.0.13-guile-compile.patch 1146
+MD5 bdd0d337348961863ce812b498ad1a94 files/digest-libgtop-2.6.0 66
+MD5 375c19e1d504ca8d48b8e11d73275740 files/libgtop-2.0.2-lt_version_fix.patch 423
+MD5 7035edc882c42b99f88765dc490f5f7d files/digest-libgtop-2.0.8 66
+MD5 01e1743af5e23d9fa6430e0a92c57861 files/libgtop.info.diff 449
 MD5 15330eddda755f3d7e434c1a2f45199a files/digest-libgtop-1.0.13-r2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFButNAugEuf3OQ0akRApQ8AJ0QX7mvlYjts6vscoYCvJpioRNaEgCgjtnj
+/mPgx2vmFLjoWhhCmb1Wr34=
+=chsc
+-----END PGP SIGNATURE-----

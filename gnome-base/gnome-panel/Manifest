@@ -1,14 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 262d50af81272716fd0013854ca74ad9 ChangeLog 14130
+MD5 3188e33d952799a70db760b741766471 gnome-panel-2.8.0.1.ebuild 1634
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 a2b934b7a3c458aa575b60aaa490f06a gnome-panel-2.8.2.ebuild 1616
-MD5 5c51c49268ccd43e69240b5c3cc10863 gnome-panel-2.8.0.1.ebuild 1637
 MD5 fe6aa18439955a359b5f10cd88f066f0 gnome-panel-1.4.2-r2.ebuild 2012
 MD5 c1cc3a4aeb5177c42bafb6f920fa4b15 gnome-panel-1.4.1.ebuild 1756
-MD5 0a6204df2fa790601633b28947c0b75e gnome-panel-2.8.1.ebuild 1616
-MD5 502d7183cc5820e41141d6e493f72433 ChangeLog 14024
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 9d64141532a1a16a3672379e89af9d41 gnome-panel-2.6.2.ebuild 1553
+MD5 0a6204df2fa790601633b28947c0b75e gnome-panel-2.8.1.ebuild 1616
 MD5 f85d576de1f4c7a262f6d3ba6100dfdd files/digest-gnome-panel-2.8.0.1 73
 MD5 30ed8bbd528d5b284c0b489cd8c52210 files/digest-gnome-panel-1.4.2-r2 70
-MD5 fae3355b5d711fc7eb4d3e3428a6b2ae files/digest-gnome-panel-1.4.1 70
-MD5 afd54e022092a94648da54cd0c646241 files/digest-gnome-panel-2.6.2 71
-MD5 d73ee881aa34103605b0989a4b035b7d files/digest-gnome-panel-2.8.1 71
 MD5 e633d15b41f289f8a0808e3b3bc974ae files/digest-gnome-panel-2.8.2 71
+MD5 fae3355b5d711fc7eb4d3e3428a6b2ae files/digest-gnome-panel-1.4.1 70
+MD5 d73ee881aa34103605b0989a4b035b7d files/digest-gnome-panel-2.8.1 71
+MD5 afd54e022092a94648da54cd0c646241 files/digest-gnome-panel-2.6.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFButLBugEuf3OQ0akRAse7AJ9gJbJyX3lPrv+L8EhvRwAuyZe6GQCfSePF
+DAzAVz8FLKkyDVSa7EzCZVU=
+=CTbJ
+-----END PGP SIGNATURE-----

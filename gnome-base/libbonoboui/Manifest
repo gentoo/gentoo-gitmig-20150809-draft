@@ -1,10 +1,20 @@
-MD5 600c999576604bd82a6f774655c58508 ChangeLog 7764
-MD5 19f2908344daaaa2a9abf1d6553f9d20 libbonoboui-2.4.3.ebuild 777
-MD5 d49f216947cce0b7132a5ad09d476293 libbonoboui-2.6.0.ebuild 828
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 907cc61d3195bc1a90b10eaf7b925c33 ChangeLog 7863
 MD5 c5b78effcac7113f6776ff93c0e32984 libbonoboui-2.6.1.ebuild 834
+MD5 d49f216947cce0b7132a5ad09d476293 libbonoboui-2.6.0.ebuild 828
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 9d4e2deeff6d2b88f349bba49b33d5f3 libbonoboui-2.8.0.ebuild 842
+MD5 19f2908344daaaa2a9abf1d6553f9d20 libbonoboui-2.4.3.ebuild 777
+MD5 f815fdbcc9f714c984906ff74da88303 libbonoboui-2.8.0.ebuild 839
+MD5 2d21813a1a2b2359f0c74529e10a11ab files/digest-libbonoboui-2.8.0 70
+MD5 6a23b91126e6e941afb320101d552ad6 files/digest-libbonoboui-2.6.1 70
 MD5 68e2159c2e73651ca8eed254ce98883c files/digest-libbonoboui-2.4.3 70
 MD5 6af49d422956bd7a97386a2188466803 files/digest-libbonoboui-2.6.0 70
-MD5 6a23b91126e6e941afb320101d552ad6 files/digest-libbonoboui-2.6.1 70
-MD5 2d21813a1a2b2359f0c74529e10a11ab files/digest-libbonoboui-2.8.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFButBWugEuf3OQ0akRAh3AAJ4r4UG/lwBtrpsvSzypmOkZPKKISgCePUDO
+3/5wfE50o6zJKZYGUjCEZks=
+=KZnW
+-----END PGP SIGNATURE-----
