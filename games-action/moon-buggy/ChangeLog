@@ -1,6 +1,12 @@
 # ChangeLog for games-action/moon-buggy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.12 2004/08/16 07:12:57 mr_bones_ Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.13 2005/01/19 00:28:56 wolf31o2 Exp $
+
+*moon-buggy-1.0 (18 Jan 2005)
+
+  18 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +moon-buggy-1.0.ebuild:
+  Version bump and closing bug #76768.
 
   16 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   moon-buggy-0.5.53-r1.ebuild:
