@@ -1,0 +1,8 @@
+# ChangeLog for net-news/sn
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/sn/ChangeLog,v 1.1 2003/01/01 02:08:41 vapier Exp $
+
+*sn-0.3.5 (31 Dec 2002)
+
+  31 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Christian Dietl <christian@expires.de>.
