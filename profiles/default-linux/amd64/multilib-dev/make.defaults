@@ -1,10 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/multilib-dev/make.defaults,v 1.1 2005/01/01 00:42:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/multilib-dev/make.defaults,v 1.2 2005/01/05 08:04:56 eradicator Exp $
 
 STAGE1_USE="multilib"
 GRP_STAGE23_USE="${STAGE1_USE} multislot ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses readline zlib -java -nptl"
 USE="${GRP_STAGE23_USE} bitmap-fonts truetype-fonts type1-fonts oss alsa crypt fortran f77 jpeg nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xrandr xv"
 
 # we can enable sandbox now that we use multilib by default
-FEATURES="sandbox autoconfig"
+# also enable multilib-strict to force people using the dev profile to find
+# packages that don't honor libdir
+FEATURES="sandbox autoconfig multilib-strict"
