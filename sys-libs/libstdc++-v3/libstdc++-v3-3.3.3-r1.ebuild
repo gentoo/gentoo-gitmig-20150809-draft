@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.24 2004/08/28 15:51:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.25 2004/09/01 10:03:04 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -226,6 +226,12 @@ src_install() {
 	# we dont even want the un-versioned .so symlink, as it confuses some
 	# apps and also causes others to link against the old libstdc++...
 	rm ${D}/${LOC}/lib/libstdc++-v3/libstdc++.so
+
+	# and it's much easier to just move around the result than it is to
+	# configure libstdc++-v3 to use CONF_LIDIR
+	if [ "$(get_libdir)" != "lib" ] ; then
+		mv ${D}/${LOC}/lib ${D}/${LOC}/$(get_libdir)
+	fi
 
 	mkdir -p ${D}/etc/env.d/
 	echo "LDPATH=\"${LOC}/lib/libstdc++-v3/\"" >> ${D}/etc/env.d/99libstdc++
