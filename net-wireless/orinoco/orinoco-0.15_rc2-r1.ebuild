@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-0.15_rc2-r1.ebuild,v 1.2 2005/01/04 10:05:58 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-0.15_rc2-r1.ebuild,v 1.3 2005/01/07 14:14:21 brix Exp $
 
-inherit pcmcia linux-mod
+inherit pcmcia linux-mod eutils
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -45,6 +45,9 @@ src_unpack() {
 	unpack ${A}
 
 	pcmcia_src_unpack
+
+	cd ${S}
+	epatch ${FILESDIR}/${MY_P}-2.6.10.patch
 
 	if [ -n "${PCMCIA_VERSION}" ]; then
 		sed -i "s:^\(PCMCIA_CS\) =.*:\1 = ${PCMCIA_SOURCE_DIR}:" \

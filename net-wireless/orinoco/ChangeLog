@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/orinoco
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.3 2005/01/04 10:05:58 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.4 2005/01/07 14:14:21 brix Exp $
+
+  07 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/orinoco-0.15rc2-2.6.10.patch, orinoco-0.15_rc2-r1.ebuild:
+  Allow compiling against kernel 2.6.10, fixes bug #76979.
 
   04 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
   orinoco-0.15_rc2-r1.ebuild:
