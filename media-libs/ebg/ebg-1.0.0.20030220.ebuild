@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ebg/ebg-1.0.0.20030220.ebuild,v 1.1 2003/02/20 12:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ebg/ebg-1.0.0.20030220.ebuild,v 1.2 2003/02/22 08:25:58 vapier Exp $
 
 DESCRIPTION="Enlightenment Background Library API: create backgrounds with multiple images, boxes, or gradients"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="pic"
 
 DEPEND="virtual/glibc
