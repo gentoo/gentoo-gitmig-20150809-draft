@@ -1,29 +1,9 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for media-libs/xpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/ChangeLog,v 1.1 2002/03/16 18:02:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/ChangeLog,v 1.2 2002/07/31 16:19:10 seemant Exp $
 
 *xpm-3.4k
 
   16 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xpm-2.4k.ebuild :
 
-  New package.
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> skel.ChangeLog :
-  
-  This changelog is targetted to users. This means that the comments should be
-  well explained and written in clean English. 
-  
-  Every new version or revision of the package has to be marked by a '*'
-  seperator line as above. Changements since the last revision have to be
-  added to the top of the file, underneath the initial copyright and cvs header
-  comments, in exactly the same format as this comment.
-  
-  This means that you start with header line that has the following format :
-  
-      date; your_name <your_email> changed_file1, changed_file2 :
-	  
-  Below that line your explanation should follow. It has to be indented,
-  paragraphed and wrapped at a linewidth of 80 characters.
-  
-  Any details about what exactly changed in the code should be added as a
-  message when the changes are committed to cvs, not in this file.
+  New package.   XPM is an image format for X.
