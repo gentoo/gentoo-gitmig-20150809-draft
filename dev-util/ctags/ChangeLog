@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.34 2005/01/16 15:14:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.35 2005/01/22 15:00:52 gongloo Exp $
+
+  22 Jan 2005; <gongloo@gentoo.org> ctags-5.5.4-r1.ebuild:
+  Stable on ppc-macos.
 
   16 Jan 2005; Guy Martin <gmsoft@gentoo.org> ctags-5.5.4-r1.ebuild:
   Stable on hppa.
