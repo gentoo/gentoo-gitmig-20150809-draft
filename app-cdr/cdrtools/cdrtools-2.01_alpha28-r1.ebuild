@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha28-r1.ebuild,v 1.11 2004/07/11 03:08:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha28-r1.ebuild,v 1.12 2004/07/13 22:38:37 agriffis Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -42,7 +42,7 @@ src_unpack() {
 }
 
 src_compile() {
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 
 	emake CC="$(gcc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
 }
