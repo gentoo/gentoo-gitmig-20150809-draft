@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.6.0_pre1-r3.ebuild,v 1.1 2002/11/10 08:33:09 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.6.0_pre1-r3.ebuild,v 1.2 2002/11/10 11:02:30 bcowan Exp $
 
 IUSE="gpm nls samba ncurses X slang"
 
@@ -43,7 +43,7 @@ src_unpack() {
 	mv Makefile.in Makefile.og
 	sed -e '183d' Makefile.og > Makefile.in
 	mv Makefile.am Makefile.orig
-	sed -e '1d;14d' Makefile.orig > Makefile.am
+	sed -e '1d;15d' Makefile.orig > Makefile.am
 	
 	cd ${S}
 	mv Makefile.in Makefile.orig
