@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.24 2004/08/19 23:40:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.25 2004/09/23 22:59:28 dragonheart Exp $
+
+*slmodem-2.9.10 (24 Sep 2004)
+
+  24 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/slmodem-2.9.10-makefile-fixup.patch, +slmodem-2.9.10.ebuild:
+  version bump as per bug #65117. Thanks to Alin Nastac <mrness@gentoo.ro>
 
   20 Aug 2004; Daniel Black <dragonheart@gentoo.org> -slmodem-2.9.9-r1.ebuild,
   slmodem-2.9.9-r2.ebuild:
