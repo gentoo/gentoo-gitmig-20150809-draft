@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.41 2004/08/30 23:51:05 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.42 2004/09/01 13:19:41 tantive Exp $
+
+  01 Sep 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.15-r1.ebuild:
+  Missed the snmp USE-flag. Fixed now.
 
 *apcupsd-3.10.15-r1 (31 Aug 2004)
 
