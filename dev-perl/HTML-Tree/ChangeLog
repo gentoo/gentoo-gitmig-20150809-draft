@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTML-Tree
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.10 2003/04/03 23:17:17 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.11 2004/06/06 12:14:52 mcummings Exp $
+
+*HTML-Tree-3.18 (06 Jun 2004)
+
+  06 Jun 2004; Michael Cummings <mcummings@gentoo.org> HTML-Tree-3.18.ebuild:
+  new version on cpan
 
 *HTML-Tree-3.17 (24 Mar 2003)
 

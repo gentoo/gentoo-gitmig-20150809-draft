@@ -1,4 +1,6 @@
 MD5 a8717c4462f4a3a4619057f2c8e3d887 ChangeLog 1023
 MD5 bd56d3c764b73c796679058bc68fd590 HTML-Tree-3.17.ebuild 702
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 bd56d3c764b73c796679058bc68fd590 HTML-Tree-3.18.ebuild 702
 MD5 8c51fbf556537b33e1b0dd26b00f6ea4 files/digest-HTML-Tree-3.17 66
+MD5 dc00d71c5b3a87e075f25fdc4f2ae5cf files/digest-HTML-Tree-3.18 66
