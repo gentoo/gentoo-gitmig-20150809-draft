@@ -5,6 +5,12 @@
 
 *mbrola-3.0.1 (29 May 2002)
 
+  3 Jun 2002; Michael Nazaroff <naz@gentupdate fix's a incorrect intall path for
+  the previous ebuild version of mbrola.  Which made festial unable to detect
+  the voices.
+
+*mbrola-3.0.1 (29 May 2002)
+
   29 May 2002; Michael Nazaroff <naz@gentoo.org> mbrola-3.0.1h.ebuild: 
   This is initial release of this package which provides speech synthesizers for
   many diffirent languages. It depends on festival.
