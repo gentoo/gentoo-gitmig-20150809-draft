@@ -1,16 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.20 2005/03/30 14:55:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r3.ebuild,v 1.1 2005/03/30 14:55:56 seemant Exp $
 
 inherit eutils
 
 DESCRIPTION="Revision Control System"
 HOMEPAGE="http://www.gnu.org/software/rcs/"
-SRC_URI="ftp://ftp.gnu.org/gnu/rcs/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnu.org/gnu/rcs/${P}.tar.gz
+	mirror://gentoo/${P}-debian.diff.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -18,7 +19,7 @@ RDEPEND="sys-apps/diffutils"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
-	epatch ${FILESDIR}/conf.diff
+	epatch ${WORKDIR}/${P}-debian.diff
 }
 
 src_compile() {

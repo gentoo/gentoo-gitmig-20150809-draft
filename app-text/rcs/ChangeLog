@@ -1,6 +1,17 @@
 # ChangeLog for app-text/rcs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.17 2005/01/01 16:32:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.18 2005/03/30 14:55:56 seemant Exp $
+
+*rcs-5.7-r3 (30 Mar 2005)
+
+  30 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +files/conf.diff,
+  -files/conf.sh, metadata.xml, rcs-5.7-r2.ebuild, +rcs-5.7-r3.ebuild:
+  first of all, the crappy conf.sh file in FILESDIR was really huge, and only
+  slightly different from the conf.sh file in the sources. So, replaced that
+  with a nice small patch, that will go away when -r2 becomes obsolete.
+  Speaking of making it obsolete, -r3 is now here, with a brand spanking new
+  patch from debian's unstable which fixes many things, including mktemp ->
+  mkstemp, and bug #76550 by t0masek@galerka.com
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> rcs-5.7-r1.ebuild,
   rcs-5.7-r2.ebuild:
