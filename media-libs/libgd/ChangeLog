@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.22 2003/03/20 13:59:36 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.23 2003/04/14 01:17:05 vapier Exp $
+
+*libgd-2.0.12 (14 Apr 2003)
+
+  14 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumped + comment out gif patch till Nich can update.
 
 *libgd-2.0.11-r1 (20 Mar 2003)
 
