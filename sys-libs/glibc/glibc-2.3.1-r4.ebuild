@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.15 2003/09/07 00:22:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.16 2003/09/07 15:37:04 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -153,27 +153,26 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/${P}-ulps-mips.patch
 	fi
 
-    # Some patches for hppa.
-    # <gmsoft@gentoo.org> (27 Jan 2003)
-    if [ "${ARCH}" = "hppa" ]
-    then
-        cd ${S}
-        epatch ${FILESDIR}/${PV}/glibc23-00-hppa-pthreads.dpatch
-        epatch ${FILESDIR}/${PV}/glibc23-01-hppa-dl-machine.dpatch
-        epatch ${FILESDIR}/${PV}/glibc23-02-hppa-min-kern-unwind-fde.dpatch
-        epatch ${FILESDIR}/${PV}/glibc23-03-hppa-mcontext.dpatch
-        epatch ${FILESDIR}/${PV}/glibc23-04-hppa-fcntl64.dpatch
-        epatch ${FILESDIR}/${PV}/glibc23-05-hppa-buildhack.dpatch
-        epatch ${FILESDIR}/${PV}/glibc23-06-hppa-tests.dpatch
-        epatch ${FILESDIR}/${PV}/glibc23-07-hppa-atomicity.dpatch
-        epatch ${FILESDIR}/${PV}/glibc23-08-hppa-configure.dpatch
-        epatch ${FILESDIR}/${PV}/glibc23-hppa-shmlba.dpatch
-    fi
-
+	# Some patches for hppa.
+	# <gmsoft@gentoo.org> (27 Jan 2003)
+	if [ "${ARCH}" = "hppa" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/${PV}/glibc23-00-hppa-pthreads.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-01-hppa-dl-machine.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-02-hppa-min-kern-unwind-fde.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-03-hppa-mcontext.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-04-hppa-fcntl64.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-05-hppa-buildhack.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-06-hppa-tests.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-07-hppa-atomicity.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-08-hppa-configure.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-hppa-shmlba.dpatch
+	fi
 }
 
 src_compile() {
-	local myconf=""
+	local myconf=
 
 	# These should not be set, else the
 	# zoneinfo do not always get installed ...

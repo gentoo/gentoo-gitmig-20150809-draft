@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.6 2003/09/07 00:22:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.7 2003/09/07 15:37:05 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -488,8 +488,8 @@ src_install() {
 		rm -f ${D}/usr/lib/librt.so
 		cat > ${D}/usr/lib/librt.so <<EOF
 /* GNU ld script
-   librt.so.1 needs libpthread.so.0 to come before libc.so.6*
-   in search scope.  */
+	librt.so.1 needs libpthread.so.0 to come before libc.so.6*
+	in search scope.  */
 EOF
 		grep "OUTPUT_FORMAT" ${D}/usr/lib/libc.so >> ${D}/usr/lib/librt.so
 		echo "GROUP ( /lib/${LIBPTHREADSO} /lib/${LIBRTSO} )" \
