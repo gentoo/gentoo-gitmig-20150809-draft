@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.6.ebuild,v 1.2 2004/04/18 01:43:06 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.6.ebuild,v 1.3 2004/04/19 08:23:07 foser Exp $
 
 inherit eutils
 
@@ -41,23 +41,24 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	econf \
-	`use_enable gnome` \
-	`use_with xml2 libxml2` \
-	`use_enable spell enchant` \
-	`use_enable debug` \
-	--enable-bidi \
-	--enable-threads \
-	--without-ImageMagick \
-	--disable-scripting \
-	--disable-gucharmap \
-	--with-sys-wv || die
 
 	# this is a hack since I don't want to go hack in the gnome-vfs headerfiles.
 	# The issue is about gnome-vfs containing "long long" which makes gcc 3.3.1 balk
 	cp configure configure.old
 	cat configure.old |sed s:-pedantic::g >configure
 	rm -f configure.old
+
+	econf \
+		`use_enable gnome` \
+		`use_with xml2 libxml2` \
+		`use_enable spell enchant` \
+		`use_enable debug` \
+		--enable-bidi \
+		--enable-threads \
+		--without-ImageMagick \
+		--disable-scripting \
+		--disable-gucharmap \
+		--with-sys-wv || die
 
 	emake all-recursive || die
 
