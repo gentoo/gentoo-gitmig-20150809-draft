@@ -1,4 +1,14 @@
-MD5 7a399ffd71cb4d10219cc713a198c0e8 ChangeLog 1017
-MD5 2223a959e48bbba2dc17657f4db81dff gaim-extprefs-0.4.ebuild 835
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1f07e2cd46e00b153d100b856e347799 ChangeLog 1121
+MD5 ada0fe081e6b55460c3ab3af792f3f86 gaim-extprefs-0.4.ebuild 837
 MD5 4e1932633984524faebd0664288510b9 metadata.xml 458
 MD5 8208e6ff994eddc392fee60515f96f43 files/digest-gaim-extprefs-0.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCSx1/KRy60XGEcJIRAuPzAJoC5VaVk4Dewgg5/cuCOgUUSByY2wCfYbbm
+pxhxDt3bpdtd98qQWEmqtHQ=
+=/jXG
+-----END PGP SIGNATURE-----
