@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/nprquake-sdl-1-r1.ebuild,v 1.1 2003/09/29 00:26:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/nprquake-sdl-1-r1.ebuild,v 1.2 2003/10/06 05:30:37 vapier Exp $
 
 inherit games eutils
 
@@ -18,7 +18,6 @@ S=${WORKDIR}/NPRQuake-SDL
 
 src_unpack() {
 	unpack ${A}
-	cp -rf ${S}{,.orig}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gentoo.patch
 }
