@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.9-r3.ebuild,v 1.1 2004/05/25 16:16:00 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.9-r3.ebuild,v 1.2 2004/05/26 19:36:53 stuart Exp $
 
 DESCRIPTION="Gentoo's installer for web-based applications"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${PN}-${PVR}.tar.bz2"
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~mips ~alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~mips ~alpha ~hppa"
 IUSE=""
 DEPEND=
 RDEPEND="sys-apps/grep
