@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.17 2005/02/28 21:54:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.18 2005/03/02 23:26:57 beu Exp $
+
+*apr-0.9.6 (02 Mar 2005)
+
+  02 Mar 2005; Elfyn McBratney <beu@gentoo.org> +apr-0.9.6.ebuild:
+  Version bump.
 
   28 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> apr-0.9.5.ebuild:
   Killed einstall usage.  Back to using econf to fix multilib problems.
