@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.1.ebuild,v 1.5 2005/01/02 14:44:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.1.ebuild,v 1.6 2005/01/02 15:59:17 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dl.maptools.org/dl/libtiff/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~s390 ~ppc-macos ppc64"
+KEYWORDS="x86 ~ppc sparc ~mips alpha ~arm ~hppa amd64 ~ia64 ~s390 ~ppc-macos ppc64"
 IUSE=""
 
 DEPEND=">=media-libs/jpeg-6b

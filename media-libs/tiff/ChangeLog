@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.41 2005/01/02 14:44:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.42 2005/01/02 15:59:17 kloeri Exp $
+
+  02 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> tiff-3.7.1.ebuild:
+  Stable on alpha, bug 75213.
 
   02 Jan 2005; Markus Rothe <corsair@gentoo.org> tiff-3.7.1.ebuild:
   Stable on ppc64
