@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.12.ebuild,v 1.6 2005/01/03 00:11:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.12.ebuild,v 1.7 2005/03/19 10:48:06 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/linuxquota/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ~mips ~ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ~ppc sparc x86"
 IUSE="nls tcpd"
 
 RDEPEND="virtual/libc
