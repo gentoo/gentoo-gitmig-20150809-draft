@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.122 2004/08/29 04:56:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.123 2004/09/01 21:24:43 eradicator Exp $
+
+  01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> :
+  get_libdir lovin'.
 
   28 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-3.23.58-r1.ebuild,
   mysql-4.0.20-r1.ebuild:

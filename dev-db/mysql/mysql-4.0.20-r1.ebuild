@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20-r1.ebuild,v 1.7 2004/08/29 04:56:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20-r1.ebuild,v 1.8 2004/09/01 21:24:43 eradicator Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -165,9 +165,9 @@ src_install() {
 	make install DESTDIR=${D} benchdir_root=/usr/share/mysql || die
 
 	#move client libs, install a couple of missing headers
-	mv ${D}/usr/lib/mysql/libmysqlclient*.so* ${D}/usr/lib
-	dosym ../libmysqlclient.so /usr/lib/mysql/libmysqlclient.so
-	dosym ../libmysqlclient_r.so /usr/lib/mysql/libmysqlclient_r.so
+	mv ${D}/usr/$(get_libdir)/mysql/libmysqlclient*.so* ${D}/usr/$(get_libdir)
+	dosym ../libmysqlclient.so /usr/$(get_libdir)/mysql/libmysqlclient.so
+	dosym ../libmysqlclient_r.so /usr/$(get_libdir)/mysql/libmysqlclient_r.so
 	insinto /usr/include/mysql ; doins include/{my_config.h,my_dir.h}
 
 	#convenience links
