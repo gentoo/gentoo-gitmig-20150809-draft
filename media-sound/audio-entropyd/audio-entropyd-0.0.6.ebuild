@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-0.0.6.ebuild,v 1.2 2004/03/31 10:14:35 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-0.0.6.ebuild,v 1.3 2004/03/31 23:01:46 dholm Exp $
 
 DESCRIPTION="Audio-entropyd generates entropy-data for the /dev/random device."
 HOMEPAGE="http://www.vanheusden.com/aed/"
 SRC_URI="http://www.vanheusden.com/aed/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}
