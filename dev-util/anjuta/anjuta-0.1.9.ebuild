@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-0.1.9.ebuild,v 1.5 2002/07/24 07:17:41 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-0.1.9.ebuild,v 1.6 2002/07/30 03:03:04 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++."
@@ -43,10 +43,8 @@ src_compile() {
 
 src_install () {
 	
-	make \
-		anjutadocdir=${D}/usr/share/doc/${PF} \
-		anjuta_docdir=${D}/usr/share/doc/${PF} \
-		install || die
+	einstall \
+		anjutadocdir=${D}/usr/share/doc/${PF} || die
 
 	dodoc AUTHORS COPYING ChangeLog FUTURE NEWS README THANKS TODO
 }
