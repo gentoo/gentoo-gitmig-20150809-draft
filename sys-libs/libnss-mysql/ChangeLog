@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/LSIT_libnss-mysql
+# ChangeLog for sys-libs/libnss-mysql
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-mysql/ChangeLog,v 1.1 2003/09/17 20:45:17 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-mysql/ChangeLog,v 1.2 2003/09/19 06:48:21 vapier Exp $
 
 *libnss-mysql-1.0 (14 Jul 2003)
 
