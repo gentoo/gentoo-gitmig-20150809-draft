@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.2-r1.ebuild,v 1.2 2003/10/29 16:16:21 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.2-r2.ebuild,v 1.1 2003/11/24 05:06:15 pebenito Exp $
 
 IUSE="build"
 
@@ -15,8 +15,7 @@ DEPEND="sys-libs/libselinux
 	sys-devel/gettext
 	!build? ( sys-libs/pam )"
 
-RDEPEND="${DEPEND}
-	!build? ( sys-apps/mkinitrd )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}
 
@@ -58,5 +57,8 @@ src_install() {
 
 		dosbin ${FILESDIR}/rlpkg
 		dobin ${FILESDIR}/{avc_enforcing,avc_toggle}
+
+		exeinto /sbin
+		newexe ${FILESDIR}/selinux-init seinit
 	fi
 }
