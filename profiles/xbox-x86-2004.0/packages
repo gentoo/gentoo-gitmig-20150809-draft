@@ -105,3 +105,6 @@ virtual/os-headers
 *sys-libs/zlib
 *virtual/ssh
 *virtual/dev-manager
+
+# version specific stuff for xbox support
+>=app-misc/lirc-0.7.0_pre6
