@@ -323,7 +323,7 @@ echo ">>> Generating boot.img"
 dd if=/dev/zero of=boot.img bs=1024 count=20480
 mke2fs -N8000 boot.img
 mount -o loop ${BROOT}/boot.img ${BROOT}/mnt
-#cp -af ${BOOTIMG}/* ${BROOT}/mnt
+cp -af ${BOOTIMG}/* ${BROOT}/mnt
 umount ${BROOT}/mnt
 echo
 
@@ -331,7 +331,7 @@ echo ">>> Generating initdisk"
 dd if=/dev/zero of=initdisk bs=1024 count=4096
 mke2fs initdisk
 mount -o loop ${BROOT}/initdisk ${BROOT}/mnt
-#cp -af ${INITDISK}/* ${BROOT}/mnt
+cp -af ${INITDISK}/* ${BROOT}/mnt
 umount ${BROOT}/mnt
 gzip -9 initdisk
 echo
