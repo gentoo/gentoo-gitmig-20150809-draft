@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9_rc2.ebuild,v 1.1 2004/11/08 04:58:58 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9_rc2.ebuild,v 1.2 2004/12/01 04:08:52 warpzero Exp $
 
 inherit eutils games
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/stepmania/StepMania-${MY_PV}-src.tar.gz
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="-x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="gtk? ( >=x11-libs/gtk+-2.0 )
 	mad? ( media-libs/libmad )
