@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gucharmap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.31 2004/08/07 23:09:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.32 2004/11/25 06:06:03 obz Exp $
+
+*gucharmap-1.4.2 (25 Nov 2004)
+
+  25 Nov 2004; Mike Gardiner <obz@gentoo.org> -gucharmap-1.0.0.ebuild,
+  -gucharmap-1.2.0.ebuild, +gucharmap-1.4.2.ebuild:
+  New version, removed older versions
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> gucharmap-1.0.0.ebuild,
   gucharmap-1.2.0.ebuild, gucharmap-1.4.1.ebuild:
