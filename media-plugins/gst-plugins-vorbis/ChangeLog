@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.4 2003/09/16 20:34:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.5 2003/09/17 11:22:43 weeve Exp $
+
+  17 Sep 2003; Jason Wever <weeve@gentoo.org> gst-plugins-vorbis-0.6.3.ebuild:
+  Added ~sparc keyword.
 
   16 Sep 2003; Aron Griffis <agriffis@gentoo.org>
   gst-plugins-vorbis-0.6.3.ebuild:
