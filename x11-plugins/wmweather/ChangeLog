@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmweather
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/ChangeLog,v 1.6 2003/06/06 13:59:51 joker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/ChangeLog,v 1.7 2004/03/14 00:07:39 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> wmweather-2.4.0.ebuild:
+  Added ~mips keyword.
 
   06 Jun 2003; Christian Birchinger <joker@gentoo.org> wmweather-2.4.0.ebuild:
   Changed to stable keywords
