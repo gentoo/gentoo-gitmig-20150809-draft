@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.29 2004/08/17 14:36:48 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.30 2004/08/23 10:02:16 eldad Exp $
+
+*cacti-0.8.5a-r2 (23 Aug 2004)
+
+  23 Aug 2004; Eldad Zack <eldad@gentoo.org> +cacti-0.8.5a-r2.ebuild:
+  Migrated ebuild from webapp-apache.eclass to use the webapp.eclass.
+  Closes bug #52596.
 
   17 Aug 2004; Eldad Zack <eldad@gentoo.org> cacti-0.8.5a-r1.ebuild:
   Moved include/config.php to include/config-sample.php, so we won't overwrite
