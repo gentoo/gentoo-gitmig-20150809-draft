@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.2.0_pre6.ebuild,v 1.6 2004/03/27 16:58:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.2.0_pre6.ebuild,v 1.7 2004/03/30 00:27:55 mr_bones_ Exp $
+
+inherit eutils
 
 IUSE="xmms encode oggvorbis"
 
