@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.35 2004/09/29 03:49:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.36 2004/10/10 17:11:37 usata Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -161,6 +161,11 @@ elibtoolize() {
 		esac
 	done
 
+	if use ppc-macos ; then
+		glibtoolize --copy --force
+		darwintoolize
+	fi
+
 	for x in ${my_dirlist}
 	do
 		local tmp="$(echo "${x}" | sed -e "s|${S}||")"
@@ -294,6 +299,34 @@ uclibctoolize() {
 			[ "${ver:0:3}" == "1.4" ] && ver="1.3"   # 1.4 and 1.3 are compat
 			ebegin " Fixing \${S}${x/${S}}"
 			patch -p0 "${x}" "${ELT_PATCH_DIR}/uclibc/ltconfig-${ver:0:3}.patch" > /dev/null
+			eend $? "PLEASE CHECK ${x}"
+			;;
+		esac
+	done
+}
+
+darwintoolize() {
+	local targets=""
+	local x
+
+	if [ -z "$@" ] ; then
+		targets="$(find ${S} -name ltmain.sh -o -name ltconfig)"
+	fi
+
+	einfo "Applying Darwin/libtool patches ..."
+	for x in ${targets} ; do
+		[ ! -s "${x}" ] && continue
+		case $(basename "${x}") in
+		ltmain.sh|ltconfig)
+			local ver="$(grep '^VERSION=' ${x})"
+			ver="${ver/VERSION=}"
+			if [ "${ver:0:3}" == "1.4" -o "${ver:0:3}" == "1.5" ];
+			then
+				ver="1.3"   # 1.4, 1.5 and 1.3 are compat
+			fi
+
+			ebegin " Fixing \${S}${x/${S}}"
+			patch -p0 "${x}" "${ELT_PATCH_DIR}/darwin/$(basename "${x}")-${ver:0:3}.patch" > /dev/null
 			eend $? "PLEASE CHECK ${x}"
 			;;
 		esac
