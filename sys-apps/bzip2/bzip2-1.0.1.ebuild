@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.1.ebuild,v 1.7 2000/11/30 23:14:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.1.ebuild,v 1.8 2000/12/24 09:55:16 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -39,6 +39,7 @@ src_install() {
 	try make PREFIX=${D}/usr install
         into /usr
 	dolib.so libbz2.so.1.0.1
+	mv ${D}/usr/bin ${D}
 	preplib /usr
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.2.ebuild,v 1.4 2000/11/30 23:14:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.2.ebuild,v 1.5 2000/12/24 09:55:16 achim Exp $
 
 P=slang-1.4.2
 A=${P}.tar.gz
@@ -25,6 +25,7 @@ src_unpack() {
 
 src_install() {    
     try make ${MAKEOPTS} prefix=${D}/usr install-elf   
+    mv ${D}/usr/lib ${D}
     preplib /usr
     rm -rf ${D}/usr/doc/slang                      
     dodoc COPYING* NEWS README *.txt

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r1.ebuild,v 1.6 2000/11/30 23:14:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r1.ebuild,v 1.7 2000/12/24 09:55:16 achim Exp $
 
 P=setserial-2.17
 A=${P}.tar.gz
@@ -18,8 +18,9 @@ src_compile() {
 }
 
 src_install() {                               
+    into /
+    dobin setserial
     into /usr
-    dosbin setserial
     doman setserial.8
     dodoc README 
     docinto txt

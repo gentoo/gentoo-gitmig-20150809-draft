@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.4.ebuild,v 1.3 2000/12/23 00:32:16 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.4.ebuild,v 1.4 2000/12/24 09:55:16 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -11,9 +11,9 @@ HOMEPAGE="http://www.gentoo.org"
 
 src_install()
 {
-	if [ "$MAINTAINER" != "Y" ]
+	if [ "$MAINTAINER" != "yes" ]
 	then
-	echo '!!! baselayout should only be merged if you know what you\'re doing.'
+	echo '!!! baselayout should only be merged if you know what youre doing.'
 	echo '!!! It will overwrite important system files (passwd/group and others) with their'
 	echo '!!! original versions.  For now, please update your files by hand by'
 	echo '!!! comparing the contents of the files in '${FILESDIR}' to your'
