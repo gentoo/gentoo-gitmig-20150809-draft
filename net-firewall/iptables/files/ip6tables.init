@@ -2,9 +2,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or
 # later
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/ip6tables.init,v 1.2 2003/09/19 13:54:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/ip6tables.init,v 1.3 2004/01/26 10:40:42 aliz Exp $
 
-opts="start stop save"
+opts="start stop save reload"
 
 depend() {
 	need logger net
@@ -45,23 +45,35 @@ stop() {
 			ip6tables -X -t $a
 
 			if [ $a == nat ]; then
-				ip6tables -t nat -P PREROUTING ACCEPT
-				ip6tables -t nat -P POSTROUTING ACCEPT
-				ip6tables -t nat -P OUTPUT ACCEPT
+				/sbin/ip6tables -t nat -P PREROUTING ACCEPT
+				/sbin/ip6tables -t nat -P POSTROUTING ACCEPT
+				/sbin/ip6tables -t nat -P OUTPUT ACCEPT
 			elif [ $a == mangle ]; then
-				ip6tables -t mangle -P PREROUTING ACCEPT
-				ip6tables -t mangle -P INPUT ACCEPT
-				ip6tables -t mangle -P FORWARD ACCEPT
-				ip6tables -t mangle -P OUTPUT ACCEPT
-				ip6tables -t mangle -P POSTROUTING ACCEPT
+				/sbin/ip6tables -t mangle -P PREROUTING ACCEPT
+				/sbin/ip6tables -t mangle -P INPUT ACCEPT
+				/sbin/ip6tables -t mangle -P FORWARD ACCEPT
+				/sbin/ip6tables -t mangle -P OUTPUT ACCEPT
+				/sbin/ip6tables -t mangle -P POSTROUTING ACCEPT
 			elif [ $a == filter ]; then
-				ip6tables -t filter -P INPUT ACCEPT
-				ip6tables -t filter -P FORWARD ACCEPT
-				ip6tables -t filter -P OUTPUT ACCEPT
+				/sbin/ip6tables -t filter -P INPUT ACCEPT
+				/sbin/ip6tables -t filter -P FORWARD ACCEPT
+				/sbin/ip6tables -t filter -P OUTPUT ACCEPT
 			fi
 		done
 	eend $?
 }
+
+reload() {
+	ebegin "Flushing firewall"
+		for a in `cat /proc/net/ip_tables_names`; do
+			/sbin/ip6tables -F -t $a
+			/sbin/ip6tables -X -t $a
+		done;
+	eend $?
+
+	start
+}
+
 
 save() {
         ebegin "Saving ip6tables state"
