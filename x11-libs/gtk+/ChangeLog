@@ -1,13 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.65 2003/06/10 13:15:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.66 2003/06/10 13:16:58 foser Exp $
 
 *gtk+-2.2.2 (10 Jun 2003)
 
   10 Jun 2003; foser <foser@gentoo.org> gtk+-2.2.2.ebuild :
   New version, enabled xinput support (#20407) which needs a recent xfree
   Added GDK_USE_XFT as environment var as suggested by utx
-  Make png USE dependant
   
   30 May 2003; Luca Barbato <lu_zero@gentoo.org> gtk+-2.2.1.ebuild:
   Added ppc to keywords.
