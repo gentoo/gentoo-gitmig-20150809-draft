@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.                                                                                         
 # Distributed under the terms of the GNU General Public License v2                                                                      
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/mtxdrivers-pro-1.0_beta4.ebuild,v 1.4 2003/06/06 17:42:34 prez Exp $                     
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/mtxdrivers-pro-1.0_beta4.ebuild,v 1.5 2003/06/06 20:24:33 prez Exp $                     
 
 At="mtxdrivers-pro-rh9.0-beta4.tar.gz"
 S="${WORKDIR}/mtxdrivers-pro-RH9.0-beta4"
@@ -16,6 +16,7 @@ DEPEND=">=x11-base/xfree-4.2.0
 SLOT="0"
 LICENSE="Matrox"
 KEYWORDS="x86"
+PROVIDE="virtual/glibc"
 
 Xversion=`X -version 2>&1 | grep -s "XFree86 Version" | cut -d" " -f3 | sed -e "s/\([^\.]*\.[^\.]*\.[^\.]*\)\.[^\.]*/\1/"`
 GLversion="1.3.0"
