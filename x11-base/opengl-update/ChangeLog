@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.49 2004/11/30 02:10:00 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.50 2004/12/19 08:06:38 spyderous Exp $
+
+*opengl-update-2.0_pre4 (19 Dec 2004)
+
+  19 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/opengl-update-2.0_pre4, +opengl-update-2.0_pre4.ebuild:
+  Old version died horribly on X versions lacking a revision number. Update
+  with regex match from portage code.
 
 *opengl-update-2.0_pre3 (30 Nov 2004)
 
