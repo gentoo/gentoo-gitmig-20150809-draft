@@ -11,3 +11,18 @@ diff -ur libgii-0.8.1~old/input/linux_evdev/eventparse.c libgii-0.8.1/input/linu
 
  static gii_event_mask
  dispatch_pmove(struct gii_input *inp, struct input_event *event,
+--- libgii-0.8.1/input/linux_evdev/key.c	2001-08-26 16:57:18.000000000 +0100
++++ libgii-0.8.1/input/linux_evdev/key.c.plasmaroo	2004-03-07 23:09:16.651515960 +0000
+@@ -286,12 +286,6 @@
+ 	case KEY_KPDOT:
+ 		label = GIIK_PDecimal;
+ 		break;
+-	case KEY_103RD:
+-		printf("KEY_103RD\n");
+-#if 0
+-		label = GIIK_103RD;
+-#endif
+-		break;
+ 	case KEY_F13:
+ 		label = GIIK_F13;
+ 		break;
