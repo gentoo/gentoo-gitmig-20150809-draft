@@ -1,6 +1,14 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.2 2002/03/15 11:53:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.3 2002/07/22 15:42:41 karltk Exp $
+
+*pinfo-0.6.5_p2-r1 (22 Jul 2002)
+
+  22 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> pinfo-0.6.5_p2-r1.ebuild files/digest-pinfo-0.6.5_p2-r1:
+
+  Configuration files are now installed in /etc/pinfo instead of /usr/etc.
+
+  Removed pinfo-0.6.5_p2.ebuild files/digest-pinfo-0.6.5_p2
 
 *pinfo-0.6.5_p2 (15 Mar 2002)
 
