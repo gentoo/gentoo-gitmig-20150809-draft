@@ -1,13 +1,13 @@
 #
 # This is the config snippet for gentoo-distfiles-mirror
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-distfiles-mirror/files/0.1/apache.addon-module,v 1.1 2003/11/18 01:27:39 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-distfiles-mirror/files/0.1/apache.addon-module,v 1.2 2003/11/18 01:59:11 tantive Exp $
 
   RewriteEngine on
 
   # If the file exists locally, serve it and stop rewriting.
   RewriteCond /var/www/distfiles/%{REQUEST_FILENAME} -f
-  RewriteRule ^/distfiles/(.+) /distfiles/$1 [L]
+  RewriteRule ^/distfiles/(.+) /var/www/distfiles/$1 [L]
 
   # If the file doesn't exist locally, pass through to a
   # ScriptAliasMatch that sends the request to a script that
