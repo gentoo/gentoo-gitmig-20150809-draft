@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/amavisd-new
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.3 2003/10/30 17:42:44 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.4 2003/11/03 23:58:50 max Exp $
+
+  03 Nov 2003; Max Kalika <max@gentoo.org> amavisd-new-20030616_p4.ebuild,
+  amavisd-new-20030616_p5.ebuild:
+  Fileutils is obsolete. Depend on coreutils.
 
   30 Oct 2003; Max Kalika <max@gentoo.org> amavisd-new-20030616_p4.ebuild,
   amavisd-new-20030616_p5.ebuild, files/amavisd.rc6:

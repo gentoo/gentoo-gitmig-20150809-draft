@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p5.ebuild,v 1.3 2003/10/30 17:42:44 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p5.ebuild,v 1.4 2003/11/03 23:58:50 max Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="ldap mysql postgres milter"
 DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="${DEPEND}
-	>=sys-apps/fileutils-3.41
+	>=sys-apps/coreutils-5.0-r3
 	sys-apps/gzip
 	sys-apps/bzip2
 	app-arch/arc
