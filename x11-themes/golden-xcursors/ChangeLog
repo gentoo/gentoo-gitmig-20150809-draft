@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/golden-xcursors
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/ChangeLog,v 1.10 2004/06/25 03:03:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/ChangeLog,v 1.11 2004/10/04 01:33:03 spyderous Exp $
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  golden-xcursors-0.7-r1.ebuild, golden-xcursors-0.7.ebuild:
+  mr_bones_ changed xfree dep to virtual/x11. Update the rest of the ebuild to
+  suit.
 
   09 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
   golden-xcursors-0.8.ebuild:

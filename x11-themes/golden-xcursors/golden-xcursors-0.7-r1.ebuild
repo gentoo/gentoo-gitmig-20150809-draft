@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.7-r1.ebuild,v 1.5 2004/10/04 01:07:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.7-r1.ebuild,v 1.6 2004/10/04 01:33:03 spyderous Exp $
 
 MY_P="5507-Golden-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -14,9 +14,15 @@ DEPEND=""
 RDEPEND="virtual/x11"
 
 src_install() {
-	mkdir -p ${D}/usr/share/cursors/xfree/gold/cursors/
-	cp -d ${WORKDIR}/${MY_P:5}/gold/cursors/* ${D}/usr/share/cursors/xfree/gold/cursors/ || die
-	dodoc ${WORKDIR}/${MY_P:5}/{COPYING,README}
+	# Set up X11 implementation
+	X11_IMPLEM_P="$(best_version virtual/x11)"
+	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	X11_IMPLEM="${X11_IMPLEM##*\/}"
+	einfo "X11 implementation is ${X11_IMPLEM}."
+
+	dodir /usr/share/cursors/${X11_IMPLEM}/Gold/cursors/
+	cp -d ${WORKDIR}/${MY_P:5}/Gold/cursors/* ${D}/usr/share/cursors/${X11_IMPLEM}/Gold/cursors/ || die
+	dodoc ${WORKDIR}/${MY_P:5}/README
 }
 
 pkg_postinst() {
@@ -29,7 +35,7 @@ pkg_postinst() {
 	einfo ""
 	einfo ""
 	einfo "To globally use this set of mouse cursors edit the file:"
-	einfo "   /usr/share/cursors/xfree/default/index.theme"
+	einfo "   /usr/share/cursors/${X11_IMPLEM}/default/index.theme"
 	einfo "and change the line:"
 	einfo "   Inherits=[current setting]"
 	einfo "to"
