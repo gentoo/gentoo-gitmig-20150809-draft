@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.13 2004/09/24 17:32:37 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.14 2004/09/27 00:09:55 fafhrd Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,9 +10,9 @@ INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="EClass designed to facilitate building GNUstep Apps, Frameworks, and Bundles on Gentoo."
 
 IUSE="debug"
-DOC_DEPEND="doc? ( =app-text/tetex-2.0.2*
+DOC_DEPEND="doc? ( =app-text/tetex-2.0*
 		=dev-tex/latex2html-2002*
-		=app-text/texi2html-1.64* )"
+		=app-text/texi2html-1.6* )"
 GNUSTEP_CORE_DEPEND="virtual/glibc
 	>=sys-devel/gcc-3.0.4
 	${DOC_DEPEND}"
@@ -154,10 +154,12 @@ gnustep_pkg_setup() {
 		filter-flags -march=k8
     	filter-flags -march=athlon64
 	    filter-flags -march=opteron
+		
 		strip-unsupported-flags
 	elif test_version_info 3.4
 	then
-		einfo "Using gcc 3.4*"
+		# strict-aliasing is known to break obj-c stuff in gcc-3.4*
+		filter-flags -fstrict-aliasing
 	fi
 }
 
