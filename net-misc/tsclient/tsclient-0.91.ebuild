@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-0.91.ebuild,v 1.3 2003/02/22 08:27:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-0.91.ebuild,v 1.4 2003/02/23 00:15:53 liquidx Exp $
 
 DESCRIPTION="Gtk2 frontend for rdesktop"
 HOMEPAGE="http://www.gnomepro.com/tsclient"
@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install
-    insinto /usr/share/gnome/apps/Internet
+    insinto /usr/share/applications
     doins ${FILESDIR}/tsclient.desktop
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README VERSION   
 }
