@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.0.12.ebuild,v 1.1 2003/12/07 23:30:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.0.12.ebuild,v 1.2 2004/03/14 02:23:19 mr_bones_ Exp $
 
 IUSE="doc xml2"
 
