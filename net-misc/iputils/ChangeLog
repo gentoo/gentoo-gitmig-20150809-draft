@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.35 2005/01/04 04:28:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.36 2005/01/04 04:47:37 vapier Exp $
+
+  03 Jan 2005; Mike Frysinger <vapier@gentoo.org> iputils-021109-r3.ebuild:
+  Restore USE=doc with an extra check in case we're in the middle of a
+  bootstrap #23156.
 
   03 Jan 2005; Mike Frysinger <vapier@gentoo.org> iputils-021109-r3.ebuild:
   Make sure linux/ipsec.h is usuable before building ipsec stuff #67569.

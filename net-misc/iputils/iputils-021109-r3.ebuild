@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.16 2005/01/04 04:28:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.17 2005/01/04 04:47:37 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils toolchain-funcs
 
@@ -12,19 +12,20 @@ SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/${PN}-ss${PV}-try.tar.bz2
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="static ipv6 uclibc" #doc
+IUSE="static ipv6 uclibc doc"
 
 DEPEND="virtual/libc
 	virtual/os-headers
 	sys-devel/bison
 	sys-devel/flex
 	dev-libs/openssl
-	sys-devel/autoconf"
-# docs are broken #23156
-#	doc? ( app-text/openjade
-#		dev-perl/SGMLSpm
-#		app-text/docbook-sgml-dtd
-#		app-text/docbook-sgml-utils )
+	sys-devel/autoconf
+	doc? (
+		app-text/openjade
+		dev-perl/SGMLSpm
+		app-text/docbook-sgml-dtd
+		app-text/docbook-sgml-utils
+	)"
 RDEPEND="virtual/libc"
 
 S=${WORKDIR}/${PN}
@@ -78,9 +79,12 @@ src_compile() {
 	cd ${S}
 	emake || die "make main failed"
 
-	#if use doc ; then
-	#	make html || die
-	#fi
+	# We include the extra check for docbook2html 
+	# because when we emerge from a stage1/stage2, 
+	# it may not exist #23156
+	if use doc && type -p docbook2html ; then
+		make html || die
+	fi
 	make man || die "make man failed"
 }
 
@@ -103,5 +107,5 @@ src_install() {
 	use ipv6 || rm doc/*6.8
 	doman doc/*.8
 
-	#use doc && dohtml doc/*.html
+	use doc && dohtml doc/*.html
 }
