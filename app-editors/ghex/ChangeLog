@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.22 2004/12/01 19:44:44 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.23 2004/12/02 23:28:28 joem Exp $
+
+*ghex-2.8.1 (02 Dec 2004)
+
+  02 Dec 2004; Joe McCann <joem@gentoo.org> ghex-2.8.1.ebuild:
+  remove subdeps and making sure to never again add dupe deps. Also adding
+  gnome2 destdir stuff
 
   01 Dec 2004; Joe McCann <joem@gentoo.org> :
   Overdue bump to latest version. Updated old deps and added new ones
