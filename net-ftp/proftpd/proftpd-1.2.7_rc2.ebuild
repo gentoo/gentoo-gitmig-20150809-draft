@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.7_rc2.ebuild,v 1.1 2002/11/02 17:07:20 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.7_rc2.ebuild,v 1.2 2002/11/10 05:31:23 rphillips Exp $
 
 IUSE="ldap pam postgres mysql"
 
@@ -55,7 +55,7 @@ src_compile() {
 		--with-modules=${modules} \
 		${myconf} || die "bad ./configure"
 
-	emake || die "compile problem"
+	make || die "compile problem"
 }
 
 src_install() {
