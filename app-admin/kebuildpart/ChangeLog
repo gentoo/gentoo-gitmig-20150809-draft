@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/kebuildpart
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kebuildpart/ChangeLog,v 1.1 2002/04/17 18:43:08 verwilst Exp $
+
+* kebuildpart-02 (1 Feb 2002)
+
+  17 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+  
+  Updated to new version, removed old one...
+  Now enables kemerge to merge a package.
