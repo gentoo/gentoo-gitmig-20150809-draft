@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim-svn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.8 2004/07/17 10:16:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.9 2004/08/10 08:13:13 hattya Exp $
+
+  10 Aug 2004; Akinori Hattori <hattya@gentoo.org> -uim-svn-20040124.ebuild:
+  cleaned out old ebuild.
 
   17 Jul 2004; David Holm <dholm@gentoo.org> uim-svn-20040709.ebuild:
   Added to ~ppc.
