@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.1.ebuild,v 1.4 2005/01/01 11:01:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.5.ebuild,v 1.1 2005/03/28 10:22:48 mholzer Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${P/a/}
 DESCRIPTION="Single process stack of various system monitors"
 HOMEPAGE="http://www.gkrellm.net/"
-SRC_URI="http://web.wt.net/~billw/gkrellm/${P}.tar.bz2"
+SRC_URI="http://members.dslextreme.com/users/billw/gkrellm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~ppc64 ~mips"
 IUSE="X nls ssl"
 
 DEPEND=">=sys-apps/sed-4
