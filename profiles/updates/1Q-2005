@@ -20,3 +20,4 @@ move app-text/itext dev-java/itext
 move net-news/bnr2 net-nntp/bnr2
 move net-news/nntpswitch net-nntp/nntpswitch
 move net-news/inn net-nntp/inn
+move net-news/brag net-nntp/brag
