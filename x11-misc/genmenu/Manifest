@@ -1,0 +1,7 @@
+MD5 1f3ab2840d6221135d2c364420150c1d genmenu-0.9.0.ebuild 684
+MD5 3ab97334089170cca4ada7d7101b20c5 genmenu-1.0.2.ebuild 712
+MD5 0b3a716bdbab0e8b1969f64985a1b7a8 ChangeLog 1436
+MD5 3abc1c6e254ffaf6c9b6c8a07c586dea files/genmenu-1.0.2.patch 486
+MD5 feea055a6fbf438cfd95e4fb6fa54ce3 files/genmenu-0.9.0.patch 801
+MD5 7bf458c7a29134ad18e2dcb95ede6418 files/digest-genmenu-0.9.0 64
+MD5 f16cd17912f1b398ec0af148e8980c8b files/digest-genmenu-1.0.2 64
