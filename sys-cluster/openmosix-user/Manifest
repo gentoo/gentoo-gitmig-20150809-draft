@@ -1,6 +1,6 @@
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
-MD5 f5c3efbbd6dd6ad8fd424b8faf6b4488 ChangeLog 4373
 MD5 20c9e3afe3d9d3450221b2fc31c70c80 openmosix-user-0.3.6-r2.ebuild 2456
+MD5 24d8ce242f4d5d7f66a1751d28211ccd ChangeLog 4552
 MD5 7f4416fd3fa777945fd838f447b7b977 files/openmosix.init 2851
 MD5 8bba8ee22957c18e2fce4c810644323e files/openmosix.map 382
 MD5 2cd0de3f32bf02aa324ddc84dd3a33e6 files/digest-openmosix-user-0.3.6-r2 75
