@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-lame
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.13 2004/11/12 04:19:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.14 2004/12/04 20:33:11 corsair Exp $
+
+  04 Dec 2004; Markus Rothe <corsair@gentoo.org>
+  gst-plugins-lame-0.8.5.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72459
 
   12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gst-plugins-lame-0.8.5.ebuild:
