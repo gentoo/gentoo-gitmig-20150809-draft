@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.2 2004/01/04 02:17:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.3 2004/04/12 22:33:35 centic Exp $
 
 IUSE="kde"
 inherit kde
 
-S=${WORKDIR}/${P}
+#S=${WORKDIR}/${P}
 DESCRIPTION="English <-> Bulgarian Dictionary"
 SRC_URI="mirror://sourceforge/kbedic/$P.tar.gz"
 HOMEPAGE="http://kbedic.sourceforge.net"
@@ -26,3 +26,4 @@ src_install() {
 	kde_src_install
 	use kde && install -m 644 -D ${FILESDIR}/kbedic.desktop ${D}/usr/share/applnk/Utilities/kbedic.desktop
 }
+
