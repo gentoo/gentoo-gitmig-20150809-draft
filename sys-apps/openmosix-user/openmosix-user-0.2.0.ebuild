@@ -14,7 +14,7 @@ RDEPEND="${DEPEND}
 	sys-devel/perl"
 SLOT="0"
 LICENSE="GPL-2"
-
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}

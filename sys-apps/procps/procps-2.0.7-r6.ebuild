@@ -1,15 +1,15 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.7-r6.ebuild,v 1.1 2001/12/30 01:20:57 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.7-r6.ebuild,v 1.2 2002/07/06 15:37:57 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
 SRC_URI="ftp://people.redhat.com/johnsonm/${PN}/${P}.tar.gz"
-
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
-DEPEND="${RDEPEND}
-        >=sys-devel/gettext-0.10.35"
+DEPEND="${RDEPEND} >=sys-devel/gettext-0.10.35"
+LICENSE="GPL-2"
+KEYWORDS="*"
+SLOT="0"
 
 src_unpack() {
 	unpack ${A}
