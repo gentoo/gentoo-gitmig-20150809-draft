@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kentoo/kentoo-0.4.ebuild,v 1.2 2004/09/02 02:43:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kentoo/kentoo-0.4.ebuild,v 1.3 2004/10/05 22:58:15 absinthe Exp $
 
 inherit kde
 need-kde 3.2
@@ -11,6 +11,6 @@ SRC_URI="http://www.ece.cmu.edu/~rholzer/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ppc64"
+KEYWORDS="~x86 ppc ppc64 ~amd64"
 IUSE=""
 
