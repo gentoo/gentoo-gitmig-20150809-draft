@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.161 2004/05/30 20:38:58 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.162 2004/06/01 19:07:23 ciaranm Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -194,10 +194,10 @@ voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo
 wavelan - Tells pcmcia-cs that you want to use the built-in wvlan drivers instead of the Orinoco drivers
 wmf - Adds support for the wmf vector image format
 wxwindows - Adds support for wxWindows/wxGTK
-X - Adds support for XFree86
+X - Adds support for X11
 Xaw3d - Adds support of the 3d athena widget set
 xface - Adds xface support -- only in use for sylpheed and sylpheed-claws
-xinerama - Add support for XFree86's xinerama extension, which allows you to stretch your display across multiple monitors
+xinerama - Add support for the xinerama X11 extension, which allows you to stretch your display across multiple monitors
 xosd - Sends display using the X On Screen Display library
 xml - Check/Support flag for XML library (version 1)
 xml2 - Check/Support flag for XML library (version 2)
