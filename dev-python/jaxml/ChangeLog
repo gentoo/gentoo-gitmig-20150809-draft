@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jaxml
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/ChangeLog,v 1.3 2004/10/05 23:05:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/ChangeLog,v 1.4 2004/10/21 04:34:41 pythonhead Exp $
+
+  20 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> jaxml-3.01.ebuild:
+  Marked stable x86
 
   05 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jaxml-3.01.ebuild:
   KEYWORDS ~amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/jaxml-3.01.ebuild,v 1.3 2004/10/05 23:05:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/jaxml-3.01.ebuild,v 1.4 2004/10/21 04:34:41 pythonhead Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.librelogiciel.com/software/jaxml/tarballs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 
 IUSE=""
 DEPEND="virtual/python"
