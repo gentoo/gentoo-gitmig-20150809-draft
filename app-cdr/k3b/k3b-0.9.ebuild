@@ -1,20 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.9.ebuild,v 1.1 2003/07/19 19:59:43 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.9.ebuild,v 1.2 2003/08/01 20:11:43 vapier Exp $
 
 inherit kde-base
 need-kde 3.1
 
-IUSE=""
-
 MY_P=${P/_/""}
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="K3b, KDE CD Writing Software"
+HOMEPAGE="http://k3b.sourceforge.net/"
 SRC_URI="mirror://sourceforge/k3b/${MY_P}.tar.gz"
-HOMEPAGE="http://k3b.sourceforge.net"
+
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
+IUSE="debug"
 
 newdepend ">=media-sound/mpg123-0.59
 	>=media-sound/cdparanoia-3.9.8
@@ -30,7 +30,8 @@ RDEPEND="$RDEPEND sys-apps/eject
 	dvd? ( media-video/transcode media-libs/xvid )"
 
 myconf="$myconf --enable-sso"
-[ -n "$DEBUG" ] && myconf="$myconf --enable-debugging --enable-profiling" || myconf="$myconf --disable-debugging --disable-profiling"
+[ `use debug` ] \
+	&& myconf="$myconf --enable-debugging --enable-profiling" \
+	|| myconf="$myconf --disable-debugging --disable-profiling"
 
 MAKEOPTS="${MAKEOPTS} -j1"
-	
