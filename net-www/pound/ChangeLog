@@ -1,0 +1,9 @@
+# ChangeLog for sys-cluster/pound
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/pound/ChangeLog,v 1.1 2003/08/01 22:59:20 tantive Exp $
+
+*pound-1.4 (02 Aug 2003)
+
+  02 Aug 2003; Michael Imhof <tantive@gentoo.org> pound-1.4.ebuild :
+  Initial import.  Ebuild submitted by Tom <Eckert.Thomas@gmx.net>.
+  Should close #19207.
