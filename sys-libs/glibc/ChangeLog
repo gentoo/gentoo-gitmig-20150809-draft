@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.309 2005/02/06 06:39:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.310 2005/02/06 07:45:23 vapier Exp $
+
+*glibc-2.2.5-r10 (06 Feb 2005)
+
+  06 Feb 2005; Mike Frysinger <vapier@gentoo.org> +glibc-2.2.5-r10.ebuild:
+  Clean up ebuild and move manpages/patches to our mirrors.
 
   05 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20050125.ebuild:
