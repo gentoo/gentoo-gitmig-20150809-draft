@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.57 2004/07/11 19:13:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.58 2004/07/23 13:23:04 spider Exp $
+
+*gnome-utils-2.6.2-r1 (23 Jul 2004)
+
+  23 Jul 2004; <spider@gentoo.org>
+  +files/gnome-utils-2.6.2-gfloppymajor.patch, +gnome-utils-2.6.2-r1.ebuild:
+  adding a patch for kernel-headers 2.6
+  http://bugs.gentoo.org/show_bug.cgi?id=49794
 
 *gnome-utils-2.6.2 (11 Jul 2004)
 
