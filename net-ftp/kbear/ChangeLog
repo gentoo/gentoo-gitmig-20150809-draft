@@ -1,11 +1,19 @@
 # ChangeLog for net-ftp/kbear
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/ChangeLog,v 1.20 2004/11/02 21:56:19 motaboy Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/ChangeLog,v 1.21 2005/03/28 18:20:24 centic Exp $
+
+*kbear-2.1.1-r1 (28 Mar 2005)
+
+  28 Mar 2005; Dominik Stadler <centic@gentoo.org> +kbear-2.1.1-r1.ebuild:
+  bump ebuild to support gnome, proposed in Bug 38502
 
   02 Nov 2004; Simone Gotti <motaboy@gentoo.org>
   +files/kbear-2.1.1-configure.patch, kbear-2.1.1.ebuild:
   Added a patch to the configure script to honor the arts USE flag. Fixes bug
   #69790.
+
+  04 Oct 2004; Dominik Stadler <centic@gentoo.org> kbear-2.1.1.ebuild:
+  Add gnome-menus, fixes Bug 38502
 
   14 Jul 2004; Travis Tilley <lv@gentoo.org> +files/kbear-2.1.1-gcc-3.4.patch,
   kbear-2.1.1.ebuild:
