@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r3.ebuild,v 1.1 2000/11/25 03:36:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r3.ebuild,v 1.2 2000/11/27 14:49:48 achim Exp $
 
 S=${WORKDIR}/linux
 if [ "$PN" = "linux" ]
@@ -44,7 +44,7 @@ src_compile() {
 		make NVdriver
 		cd ${S}/extras/alsa-driver-0.5.9d
 		try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
-		try make
+		#try make
 	fi
 	cd ${S}/extras/LVM/0.9
 	try ./configure --prefix=/
