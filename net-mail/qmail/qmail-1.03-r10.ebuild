@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.7 2003/02/05 08:17:36 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.8 2003/02/11 09:13:54 raker Exp $
 
 inherit eutils
 
@@ -109,9 +109,8 @@ src_install() {
 	insinto /var/qmail/boot
 	doins home home+df proc proc+df binm1 binm1+df binm2 binm2+df binm3 binm3+df
  
-	into /usr
 	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY 
-	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION
+	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION EXTTODO
 	dodoc ${FILESDIR}/${PV}-${PR}/tls-patch.txt 
 
 	insopts -o qmailq -g qmail -m 4711
