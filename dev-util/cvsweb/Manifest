@@ -3,7 +3,7 @@ MD5 1f0eec037240e30424285b813075be80 cvsweb-1.93-r1.ebuild 756
 MD5 6d2fc394b485647fcfec06710f50c3ec cvsweb-1.112.ebuild 870
 MD5 088342d333e608abf98bf4b672803a30 ChangeLog 1449
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 cecffe8d5d6d6aab78c892a2beae9f0b files/postinstall-en.txt 33
+MD5 7d1cab46b5ebaf4e21ef0b5232cde864 files/postinstall-en.txt 35
 MD5 1f9930e7dc9c78f027d027ea8e8ca952 files/digest-cvsweb-1.112 63
 MD5 dbe3501ba30cd9e302a359c3c8fb2afe files/digest-cvsweb-3.0.1 63
 MD5 947f34c2c4de11e6d9ebbd7a5129afa9 files/digest-cvsweb-1.93-r1 62

@@ -1,1 +1,1 @@
-Now edit /etc/cvsweb/cvsweb.conf
+Now edit ${VHOST_ROOT}/cvsweb.conf
