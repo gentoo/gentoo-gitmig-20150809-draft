@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4eac725941598be542285d29c070db1e ChangeLog 5134
+MD5 8d1c7230f8f36fc9f36e8d614c53185a ChangeLog 5226
 MD5 74cee8ff4bbcb32c4a3612064c2948fa gtk-perl-0.7008-r10.ebuild 1128
-MD5 6d816388683b2bc9c77c609071011efe gtk-perl-0.7008-r11.ebuild 1222
+MD5 07483c55c61611ee18114cc68c7d73c9 gtk-perl-0.7008-r11.ebuild 1217
 MD5 1c2e1204f41734924de8f3a77ee5ffb9 gtk-perl-0.7008-r9.ebuild 1099
 MD5 1ee5e0e15029ec9ca2f823d595085510 gtk-perl-0.7009.ebuild 1099
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
@@ -12,10 +9,3 @@ MD5 f598a6d1d7e60c583fe4a3a7e8b40a84 files/digest-gtk-perl-0.7008-r11 67
 MD5 f598a6d1d7e60c583fe4a3a7e8b40a84 files/digest-gtk-perl-0.7008-r9 67
 MD5 2209262d20c326af265b7e1f59f69579 files/digest-gtk-perl-0.7009 67
 MD5 b5f56ac7a91d56a578d02fab47146a79 files/gtk-perl-0.7008-gdkpixbuf-detect-fix.patch 747
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCKyMAtG5z4I8BtQoRAr3BAJ41wap2Vgg1IjxVx+/fzbqzkjt6zQCgkhrO
-in9JmjfHlTfE0xVbcfX5Ico=
-=TyIX
------END PGP SIGNATURE-----

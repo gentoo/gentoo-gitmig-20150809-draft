@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 83f5041a32415ea57a0f431b2420c104 ChangeLog 1820
+MD5 917138cd48f6ff8c3e1728e0f3dd98de ChangeLog 1914
 MD5 0642369c873b04ce28c837561cd60711 extutils-parsexs-2.02.ebuild 622
-MD5 0a23ec69fcf1e3877b0f471cc94a8e1a extutils-parsexs-2.08.ebuild 658
+MD5 0c9477932f5e077a96ae9a67e86f64ad extutils-parsexs-2.08.ebuild 653
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 6c9767ee18391dc0389ebe2ea51e468f files/digest-extutils-parsexs-2.02 72
 MD5 4f4928dc4faae48f54f55afe8eec4726 files/digest-extutils-parsexs-2.08 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOFaWtG5z4I8BtQoRAntBAJ4pR+O8eFhQJITnLt+NgnQyogRmpQCglFyr
-WeusfQjPVhqVHnJsVca+lyQ=
-=45sV
------END PGP SIGNATURE-----
