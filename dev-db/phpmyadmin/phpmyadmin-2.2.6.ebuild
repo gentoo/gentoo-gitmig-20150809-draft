@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.2.6.ebuild,v 1.4 2002/07/16 08:41:59 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.2.6.ebuild,v 1.5 2002/07/17 03:18:05 rphillips Exp $
 
 MY_PN=phpMyAdmin
 
@@ -9,8 +9,11 @@ DESCRIPTION="Web-based administration for MySQL database in php"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}-php.tar.bz2"
 HOMEPAGE="http://phpmyadmin.sourceforge.net/"
 LICENSE="GPL-2"
-
+SLOT="0"
 DEPEND=">=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38 >=dev-php/mod_php-4.1.2-r5"
+
+# only known to work on x86... can people test on other platforms?
+KEYWORDS="x86"
 
 src_compile() { :; }
 
