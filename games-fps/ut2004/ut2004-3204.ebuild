@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.3 2004/05/21 13:55:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.4 2004/05/24 16:54:48 wolf31o2 Exp $
 
 inherit games
 
@@ -139,6 +139,7 @@ src_install() {
 	# uncompressing files
 	einfo "Uncompressing files... this *will* take a while..."
 	for j in {Animations,Maps,Sounds,StaticMeshes,Textures} ; do
+		chmod -R u+w ${j} || die "chmod in uncompress"
 		games_ut_unpack ${Ddir}/${j} || die "uncompressing files"
 	done
 
