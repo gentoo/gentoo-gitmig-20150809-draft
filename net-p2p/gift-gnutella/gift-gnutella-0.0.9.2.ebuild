@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.9.2.ebuild,v 1.10 2004/07/06 21:28:29 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.9.2.ebuild,v 1.11 2004/07/18 17:26:30 squinky86 Exp $
 
 IUSE=""
 
@@ -36,7 +36,7 @@ pkg_postinst() {
 	einfo "giFT -p /usr/lib/giFT/libGnutella.so"
 	echo
 	einfo "Alternatively you can add the following line to"
-	einfo "your ~/.giFT/gift.conf configuration file:"
+	einfo "your ~/.giFT/giftd.conf configuration file:"
 	einfo "plugins = Gnutella"
 }
 
