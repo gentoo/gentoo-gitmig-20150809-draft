@@ -1,8 +1,12 @@
 # ChangeLog for x11-wm/WindowMaker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.16 2002/09/28 23:28:32 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.17 2002/10/22 15:50:39 raker Exp $
 
 *WindowMaker-0.80.1-r2 (17 Jul 2002)
+
+  21 Oct 2002; Nick Hadaway <raker@gentoo.org>
+  WindowMaker-0.80.1-r2.ebuild :
+  Changed the description at lostlogic's request. :)
 
   28 Sep 2002; Nick Hadaway <raker@gentoo.org>
   WindowMaker-0.80.1-r2.ebuild :

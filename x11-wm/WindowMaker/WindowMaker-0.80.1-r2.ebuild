@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.15 2002/10/17 14:50:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.16 2002/10/22 15:50:39 raker Exp $
 
 IUSE="gif nls png kde oss jpeg gnome"
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Window Maker"
+DESCRIPTION="The fast and light GNUstep window manager"
 SRC_URI="ftp://ftp.windowmaker.org/pub/source/release/${P}.tar.gz
 	 ftp://ftp.windowmaker.org/pub/source/release/WindowMaker-extra-0.1.tar.gz"
 HOMEPAGE="http://www.windowmaker.org/"
