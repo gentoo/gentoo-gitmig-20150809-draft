@@ -1,37 +1,35 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.5 2002/08/19 17:38:47 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.6 2002/10/21 17:16:09 vapier Exp $
 
-**netscape-flash-5.0.50 (19 August 2002)
+*netscape-flash-5.0.51 (21 Oct 2002)
 
-  19 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, netscape-flash-5.0.50.ebuild :
+  21 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump per #9422
 
+*netscape-flash-5.0.50 (19 Aug 2002)
+
+  19 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, netscape-flash-5.0.50.ebuild :
   Added -ppc to the keywords.
-
-*netscape-flash-5.0.50 (12 Aug 2002)
 
   12 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
   netscape-flash-5.0.50.ebuild files/digest-netscape-flash-5.0.50 :
-
   Version bump. This is a security fix.
 
-*netscape-flash-5.0.48 (29 April 2002)
+*netscape-flash-5.0.48 (29 Apr 2002)
 
-  29 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
-  
+  29 Apr 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
   New version, removed older 5.0.x version.
 
 *netscape-flash-5.0.47-r4 (17 Feb 2002)
 
   17 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
-  
   The ebuild now correctly fetches the source archive, instead of asking the
   user to manually download it.
 
 *netscape-flash-5.0.47-r3 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
