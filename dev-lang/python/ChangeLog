@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.111 2004/09/06 19:39:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.112 2004/09/24 10:47:43 liquidx Exp $
+
+  24 Sep 2004; Alastair Tse <liquidx@gentoo.org> -python-2.2.2.ebuild,
+  python-2.3.3-r1.ebuild, python-2.3.3.ebuild, python-2.3.4.ebuild,
+  -python-2.3.4_rc1.ebuild:
+  adding workaround for -fstack-protector-all (#50309)
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> python-2.3.3-r1.ebuild,
   python-2.3.3.ebuild, python-2.3.4.ebuild, python-2.3.4_rc1.ebuild:

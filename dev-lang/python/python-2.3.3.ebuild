@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.29 2004/09/06 19:39:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.30 2004/09/24 10:47:44 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -87,6 +87,12 @@ src_compile() {
 	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
 	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
 	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
+
+	# http://bugs.gentoo.org/show_bug.cgi?id=50309
+	if is-flag -O3; then
+	   is-flag -fstack-protector-all && replace-flags -O3 -O2
+	   use hardened && replace-flags -O3 -O2
+	fi
 
 	export OPT="${CFLAGS}"
 
