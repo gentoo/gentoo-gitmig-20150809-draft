@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.93.20030118.ebuild,v 1.9 2005/01/20 18:37:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.93.20030118.ebuild,v 1.10 2005/03/11 04:17:58 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -16,7 +16,7 @@ KEYWORDS="-* x86"
 IUSE="static"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r5"
-DEPEND="$RDEPEND
+DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 PROVIDE="virtual/bootloader"
 

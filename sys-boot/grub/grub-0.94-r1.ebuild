@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.15 2005/02/04 00:13:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.16 2005/03/11 04:17:58 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="-* x86 amd64"
 IUSE="static"
 
-DEPEND=">=sys-libs/ncurses-5.2-r5
+RDEPEND=">=sys-libs/ncurses-5.2-r5"
+DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.5"
 PROVIDE="virtual/bootloader"
