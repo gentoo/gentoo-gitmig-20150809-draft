@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.557 2004/08/15 21:10:30 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.558 2004/08/15 23:52:57 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -46,8 +46,8 @@ app-emulation/wine:nptl - Support for the Native POSIX Threading Library built i
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
-app-i18n/uim:m17n-lib - Enable m17n-lib support
 app-i18n/uim-svn:m17n-lib - Enable m17n-lib support
+app-i18n/uim:m17n-lib - Enable m17n-lib support
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/grass:nviz - support GLw functionality
 app-misc/screen:nethack - Express error messages in nethack style
@@ -55,10 +55,10 @@ app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home bank
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-misc/workrave:noexercises - Disable exercises support
 app-misc/workrave:noexperimental - Compile without experimental features
-app-office/grisbi:print - Enable TeX and printing support
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
+app-office/grisbi:print - Enable TeX and printing support
 app-office/openoffice-ximian:ooo-kde - Build with KDE instead of GNOME integration
 app-office/pointless:freetype - Enables Freetype font support
 app-pda/gtkpod:mpeg4 - Enable mpeg4ip support, to read Mpeg4 AAC files
@@ -131,8 +131,8 @@ dev-java/ant-optional:rhino - Enable Rhino JavaScript support
 dev-java/ant-optional:xalan - Enable Xalan support
 dev-java/ant-optional:xerces - Enable Xerces support
 dev-java/ant:optional-tasks - Enable Optional Tasks Support
-dev-java/bsf:rhino - Enable Rhino support
 dev-java/bsf:jython - Enable Jython support
+dev-java/bsf:rhino - Enable Rhino support
 dev-java/gnu-classpath:native - Compile native .so libraries
 dev-java/gnu-javamail:javadoc - Generate API documentation
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
@@ -148,18 +148,18 @@ dev-java/quartz:struts - Enable struts support
 dev-java/sun-j2sdk:nptl - Enable support for NPTL
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/velocity:j2ee - Add j2ee support
+dev-lang/R:blas - Use the blas library. (virtual/blas)
+dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
+dev-lang/R:f77 - Use f77 to compile FORTRAN sources.
 dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
-dev-lang/R:blas - Use the blas library. (virtual/blas)
-dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
-dev-lang/R:f77 - Use f77 to compile FORTRAN sources.
 dev-lang/tcl:threads - Enable threads as some packages require it.
 dev-lang/tk:threads - Enable threads as some packages require it.
+dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/boehm-gc:c++ - Adds support for C++
 dev-libs/cyrus-sasl:pam-mysql - Switch to deprecated pam_mysql authentication method
-dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/gmetadom:ocaml - adds support/bindings for the Ocaml
 dev-libs/libcdio:cddb - use libcddb for CD database lookups
 dev-libs/libmix:no-net2 - disable libpcap and libnet support
@@ -197,6 +197,7 @@ dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/monodevelop:nptl - Enable or disable nptl support (mainly for mono-debugger)
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
+drivers
 games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
@@ -225,8 +226,8 @@ kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages Sys
 kde-base/kdemultimedia:cdparanoia - Enables build support for the cdparanoia package
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-mail-client/mozilla-thunderbird:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
 mail-client/mozilla-thunderbird:mozplaintext - Disallow HTML editing for email
+mail-client/mozilla-thunderbird:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
 mail-client/mutt:nntp - Adds support for nntp via patch
 mail-client/mutt:vanilla - Refrain from patching additional functionality into mutt
 mail-client/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
@@ -234,14 +235,14 @@ mail-client/squirrelmail:virus-scan - Install plugin to support virus scanning o
 mail-client/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
 mail-client/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
 mail-filter/ask:procmail - Adds support for procmail
-mail-filter/bsfilter:mecab - Adds support for mecab
 mail-filter/bsfilter:chasen - Adds support for chasen
+mail-filter/bsfilter:mecab - Adds support for mecab
 mail-filter/clamassassin:subject-rewrite - Adds support for subject rewriting.
-mail-filter/dspam:neural - Build neural support for dspam
-mail-filter/dspam:procmail - Build procmail filter support
 mail-filter/dspam:cyrus - Build delivery options for cyrus-imapd
 mail-filter/dspam:exim - Build with delivery options for exim
 mail-filter/dspam:maildrop - Build with delivery options for maildrop
+mail-filter/dspam:neural - Build neural support for dspam
+mail-filter/dspam:procmail - Build procmail filter support
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
 mail-mta/courier:fax - Enables fax support in the courier mail server
 mail-mta/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
@@ -316,8 +317,8 @@ media-video/motiontrack:libgd - Enables gd library support for debug purposes
 media-video/mpeg4ip:v4l2 - Enable video4linux2 support
 media-video/mplayer:cdparanoia - Enables cdparanoia support
 media-video/mplayer:dvdread - Enables usage of Ogle's libdvdread rather than mpdvdkit for DVD playback
-media-video/mplayer:fbdev - Enable FBDev render support
 media-video/mplayer:edl - Enables usage of Edit Decision Lists
+media-video/mplayer:fbdev - Enable FBDev render support
 media-video/mplayer:libcaca - Enables libcaca support, colored ASCII-art graphics
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:lzo - Enables support for lzo compression
@@ -330,32 +331,32 @@ media-video/mplayer:v4l - Enables video4linux support
 media-video/mplayer:v4l2 - Enables video4linux2 support
 media-video/tcvp:faad - Enables faad2 support
 media-video/tcvp:ffmpeg - Enable ffmpeg support
+media-video/vlc:dts - Enables DTS audio support
 media-video/vlc:dvdread - Enables usage of Ogle's libdvdread for DVD playback
 media-video/vlc:faad - Enables faad2 support
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
-media-video/vlc:dts - Enables DTS audio support
 net-analyzer/fprobe:messages - enable console messages
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
 net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
 net-analyzer/nagios-plugins:nagios-ping - installs deps for fancy ping monitoring
 net-analyzer/nagios-plugins:nagios-ssh - installs deps for monitoring ssh
-net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs after connect
 net-analyzer/net-snmp:lm_sensors - Adds linux lm_sensors mib support
+net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs after connect
 net-analyzer/nstats:pcap - enable pcap support
 net-analyzer/pmacct:mmap - Enable memory-mapped I/O
 net-analyzer/slurm:altcolors - Use alternative color set
 net-analyzer/snort:flexresp - Enable connection tearing (not recommended)
 net-analyzer/snort:snortsam - patches snort for use with snortsam
-net-dialup/gammu:bluetooth - Enable Bluetooth Support
-net-dialup/gammu:irda - Enable Infrared Support
-net-dialup/gnokii:bluetooth - Enable Bluetooth Support
-net-dialup/gnokii:irda - Enable Infrared Support
 net-dialup/freeradius:frascend - Enable ascend binary mode
 net-dialup/freeradius:frlargefiles - Enable large file support
 net-dialup/freeradius:frnothreds - Disable thread support
 net-dialup/freeradius:frxp - enable experimental modules
+net-dialup/gammu:bluetooth - Enable Bluetooth Support
+net-dialup/gammu:irda - Enable Infrared Support
+net-dialup/gnokii:bluetooth - Enable Bluetooth Support
+net-dialup/gnokii:irda - Enable Infrared Support
 net-dialup/ppp:activefilter - enable activefilter support
 net-dialup/ppp:atm - enable support for pppoatm
 net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
@@ -369,8 +370,8 @@ net-dns/pdnsd:isdn - enable isdn features
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
-net-ftp/proftpd:softquota - Enable support for the mod_quotatab
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
+net-ftp/proftpd:softquota - Enable support for the mod_quotatab
 net-im/bitlbee:flood - Enable flood protection support
 net-im/gaim:gnutls - Use GnuTLS for SSL support
 net-im/gaim:silc - Enable SILC protocol support
@@ -405,12 +406,11 @@ net-misc/knemo:wifi - wireless support
 net-misc/neon:expat - Use the expat xml library instead of libxml2
 net-misc/ntp:nodroproot - Disable support for running ntpd as a non-root user
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
-net-misc/nut:cgi - Add CGI script support
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support.
+net-misc/openssh:sftplogging - Enables sftplogging patch
 net-misc/openssh:skey - Enable S/Key (Single use password) authentication support
 net-misc/openssh:smartcard - Enables smartcard support
-net-misc/openssh:sftplogging - Enables sftplogging patch
 net-misc/openvpn:pthreads - Enable threading support for better performance of tls
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
@@ -432,9 +432,9 @@ net-www/apache:distcache - Enable SSL distcache support
 net-www/apache:threads - Enable thread support
 net-www/drupal:minimal - Disables installing the additional plugins
 net-www/elinks:lua - enable lua support
-net-www/kazehakase:migemo - enable migemo support for Japanese incremental search.
-net-www/kazehakase:estraier - enable estraier support for full-text search in history.
 net-www/horde-imp:clearpasswd - Enables cleartext password storage in the vpopmail files
+net-www/kazehakase:estraier - enable estraier support for full-text search in history.
+net-www/kazehakase:migemo - enable migemo support for Japanese incremental search.
 net-www/links:javascript - enable javascript support
 net-www/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 net-www/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
@@ -453,8 +453,6 @@ net-www/mozilla:mozsvg - Enable SVG support in mozilla
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/mozilla:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
-www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
-www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
 net-www/tinyproxy:transparent-proxy - enable support for transparent proxies
 net-www/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 net-www/w3m-m17n:migemo - Enables migemo support
@@ -507,6 +505,9 @@ sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:makecheck - makes glibc perform a 'make check' before merging and prevents it from installing unless all the tests pass
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
+www-apps/nut:cgi - Add CGI script support
+www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
+www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:freetype - Enables Freetype font support
 x11-base/kdrive:fs - Enables font server support
@@ -520,17 +521,16 @@ x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:sis - If you have an SiS video card
 x11-base/xfree:gatos - Performs GATOS-specific actions including SDK install
 x11-base/xfree:sdk - Builds the software development kit
-x11-base/xorg-x11:dlloader - USE WITH CARE: Enable dynamic module loader (results in many unresolved symbols)
-x11-base/xorg-x11:sdk - Builds the software development kit
 x11-base/xorg-x11:bitmap-fonts - Builds the crappy speedo, 100 and 75 fonts
+x11-base/xorg-x11:dlloader - USE WITH CARE: Enable dynamic module loader (results in many unresolved symbols)
 x11-base/xorg-x11:dmx - Build the DMX extension for Xorg
 x11-base/xorg-x11:insecure-drivers - Builds the insecure DRI development
-drivers
+x11-base/xorg-x11:sdk - Builds the software development kit
 x11-libs/fltk:nptl - Enable support for NPTL
 x11-libs/gtk-sharp:gnomedb - Enable gnomedb support
 x11-libs/gtkmathview:t1lib - Enable t1lib support
-x11-libs/wxGTK:unicode - Adds Unicode support. Must be used in combination with gtk2
 x11-libs/wxGTK:no_wxgtk1 - Disable gtk support. Must be used in combination with gtk2
+x11-libs/wxGTK:unicode - Adds Unicode support. Must be used in combination with gtk2
 x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
 x11-misc/xscreensaver:offensive - Adds screensavers that are not-safe-for-work.
 x11-plugins/wmsysmon:high-ints - Enable support for monitoring 24 interrupts, useful on SMP machines
