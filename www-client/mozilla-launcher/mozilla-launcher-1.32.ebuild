@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.31.ebuild,v 1.1 2005/03/26 23:10:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.32.ebuild,v 1.1 2005/03/26 23:51:39 agriffis Exp $
 
 DESCRIPTION="Script that launches mozilla or firefox"
 HOMEPAGE=""
