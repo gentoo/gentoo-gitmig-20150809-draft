@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.42b.ebuild,v 1.12 2004/06/25 16:06:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.42b.ebuild,v 1.13 2004/06/29 19:22:55 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha ~ia64 amd64"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
