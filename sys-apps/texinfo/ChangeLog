@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.21 2003/02/15 20:19:52 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.22 2003/02/19 23:41:00 azarah Exp $
+
+*texinfo-4.5 (19 Feb 2003)
+
+  19 Feb 2003; Martin Schlemmer <azarah@gentoo.org texinfo-4.5.ebuild :
+  Update version, closing bug #15075.
 
   15 Feb 2003; Jan Seidel <tuxus@gentoo.org> texinfo-4.3.ebuild :
   Added mips to keywords
