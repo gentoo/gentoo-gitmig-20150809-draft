@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/winex-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.18 2003/07/29 06:55:55 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.19 2003/08/02 13:28:31 sergey Exp $
+
+  02 Aug 2003; Sergey Kuleshov <svyatogor@gentoo.org> winex-cvs-3000.ebuild:
+  Fixed a small typo in einfo message.
 
 *winex-cvs-3000 (29 Jul 2003)
 
