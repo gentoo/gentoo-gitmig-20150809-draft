@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-copy-1.92-r1.ebuild,v 1.2 2000/08/16 04:38:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-copy-1.92-r1.ebuild,v 1.3 2000/09/15 20:09:00 drobbins Exp $
 
 P=qt-copy-1.92
 A=${P}.tar.bz2
@@ -14,7 +14,7 @@ export QTDIR=${S}
 
 src_compile() {
    cd ${S}
-    ./configure -sm -thread -system-zlib -system-jpeg -qt-libpng -gif
+    try ./configure -sm -thread -system-zlib -system-jpeg -qt-libpng -gif
     cd ${S}/src
     cp Makefile Makefile.orig
     sed -e "s/-pipe -O2/${CFLAGS}/" Makefile.orig > Makefile
@@ -22,7 +22,7 @@ src_compile() {
     cp Makefile Makefile.orig
     sed -e "s/-pipe -O2/${CFLAGS}/" Makefile.orig > Makefile
     cd ${S}
-    make moc src
+    try make moc src
 }
 
 src_install() {                 
@@ -39,7 +39,7 @@ src_install() {
 	cp -a include ${D}/usr/lib/${P}/
 	cp -a extensions ${D}/usr/lib/${P}/
 	cd src
-	make clean
+	try make clean
 	cd ..
 	cp -a src ${D}/usr/lib/${P}/
 	into /usr

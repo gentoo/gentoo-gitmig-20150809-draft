@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.1.25.ebuild,v 1.5 2000/08/28 12:04:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.1.25.ebuild,v 1.6 2000/09/15 20:09:00 drobbins Exp $
 
 P=gimp-1.1.25
 A=${P}.tar.bz2
@@ -21,13 +21,13 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  ./configure --host=${CHOST} --prefix=/usr/X11R6
-  make 
+  try ./configure --host=${CHOST} --prefix=/usr/X11R6
+  try make 
 }
 
 src_install() {                               
   cd ${S}
-  make prefix=${D}/usr/X11R6 install
+  try make prefix=${D}/usr/X11R6 install
   prepman /usr/X11R6
   dodoc AUTHORS COPYING ChangeLog* *MAINTAINERS README* TODO
   dodoc docs/*.txt docs/*.ps docs/Wilber* docs/quick_reference.tar.gz
