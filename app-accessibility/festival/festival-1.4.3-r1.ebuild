@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.9 2004/04/20 07:06:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.10 2004/05/19 00:22:40 vapier Exp $
 
 inherit eutils
 
@@ -65,9 +65,10 @@ src_unpack() {
 
 src_compile() {
 	econf || die
-
-	# emake does not work if you have anything larger then -j2
-	make || die
+	emake -j1 \
+		OPTIMISE_CXXFLAGS="${CXXFLAGS}" \
+		OPTIMISE_CCFLAGS="${CFLAGS}" \
+		|| die
 }
 
 src_install() {
