@@ -1,16 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r4.ebuild,v 1.18 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r4.ebuild,v 1.19 2003/08/03 04:34:12 vapier Exp $
 
-IUSE="nls"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Console and font utilities"
-SRC_URI="mirror://sourceforge/lct/${P}.tar.gz"
 HOMEPAGE="http://lct.sourceforge.net/"
-KEYWORDS="x86 amd64 ppc sparc ~alpha mips"
-SLOT="0"
+SRC_URI="mirror://sourceforge/lct/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 amd64 ppc sparc ~alpha mips"
+IUSE="nls debug"
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf sys-devel/automake sys-devel/libtool
@@ -20,8 +19,8 @@ RDEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}.patch || die
-	patch -p0 < ${FILESDIR}/${P}-po-Makefile.in.in-gentoo.diff || die
+	epatch ${FILESDIR}/${P}.patch
+	epatch ${FILESDIR}/${P}-po-Makefile.in.in-gentoo.diff
 	aclocal || die
 	libtoolize --force -c || die
 	autoheader || die
@@ -30,15 +29,11 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
-	[ "$DEBUG" ] && myconf="--enable-debugging"
-	[ -z "`use nls`" ] && myconf="${myconf} --disable-nls"
-
-	./configure --prefix=/usr \
-		--mandir=/usr/share/man \
-		--host=${CHOST} \
-		${myconf} || die
-	make $MAKEOPTS all || die
+	econf \
+		`use_enable nls` \
+		`use_enable debug debugging` \
+		|| die
+	emake all || die
 }
 
 src_install() {
