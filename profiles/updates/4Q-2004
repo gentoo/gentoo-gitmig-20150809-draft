@@ -5,3 +5,4 @@ move dev-java/qat-bin dev-java/qat
 move sys-apps/epbb app-laptop/epbb
 move sys-libs/commonc++2 sys-cpp/commoncpp2
 move x11-libs/gtk-sharp dev-dotnet/gtk-sharp
+move x11-themes/ksmoothdock kde-misc/ksmoothdock
