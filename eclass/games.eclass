@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.90 2005/03/22 18:24:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.91 2005/03/22 18:44:54 wolf31o2 Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -94,6 +94,8 @@ dogameslib.a() { gameswrapper ${FUNCNAME/games} "$@"; }
 dogameslib.so() { gameswrapper ${FUNCNAME/games} "$@"; }
 newgamesbin() { gameswrapper ${FUNCNAME/games} "$@"; }
 newgamessbin() { gameswrapper ${FUNCNAME/games} "$@"; }
+
+games_make_wrapper() { gameswrapper ${FUNCNAME/games_} "$@"; }
 
 gamesowners() { chown ${GAMES_USER}:${GAMES_GROUP} "$@"; }
 gamesperms() { chmod u+rw,g+r-w,o-rwx "$@"; }
@@ -194,17 +196,4 @@ games_umod_unpack() {
 		|| die "uncompressing file ${umod}"
 	rm -f "${Ddir}"/System/{ucc-bin,{Manifest,Def{ault,User},User,UT2003}.ini,{Engine,Core,zlib,ogg,vorbis}.so,{Engine,Core}.int,ucc.log} &>/dev/null \
 		|| die "Removing temporary files"
-}
-
-# make a wrapper script ...
-# $1 == wrapper name
-# $2 == binary to run
-# $3 == directory to chdir before running binary
-# $4 == extra LD_LIBRARY_PATH's (make it : delimited)
-games_make_wrapper() {
-	into /usr/games
-	make_wrapper ${@}
-	# WARNING: This will stomp on the current value of "into" so be sure to
-	# check for this!
-	into /usr
 }
