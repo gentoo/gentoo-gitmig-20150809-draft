@@ -1,4 +1,5 @@
 auth	   required	pam_pwdb.so	nullok 
+auth       required     pam_shells.so
 auth	   required	pam_nologin.so
 auth	   required	pam_env.so
 account	   required	pam_pwdb.so
