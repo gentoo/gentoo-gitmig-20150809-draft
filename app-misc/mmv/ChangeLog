@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/gentoolkit
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.1 2003/01/05 11:12:57 mholzer Exp $
+
+*mmv-1.01b.ebuild (04 Jan 2002)
+
+  04 Jan 2002; Martin Holzer <mholzer@gentoo.org mmv-1.01b.ebuild files/digest-mmv-1.01b.ebuild ChangeLog :
+  Initial Version submitted by tehirsch@web.de in #13254.
+
