@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.51 2003/09/07 22:25:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.52 2003/09/12 17:00:34 mholzer Exp $
+
+*gkrellm-2.1.17 (12 Sep 2003)
+
+  12 Sep 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.17.ebuild:
+  Version bumped.
 
   09 Sep 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.16.ebuild:
   Adding Prefix to fix local dir. Closes #28098.
