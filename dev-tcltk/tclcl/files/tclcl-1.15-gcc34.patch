@@ -1,0 +1,240 @@
+diff -Naur tclcl-1.15/tclcl.h tclcl-1.15-fix/tclcl.h
+--- tclcl-1.15/tclcl.h	2004-01-06 02:50:24.000000000 +0100
++++ tclcl-1.15-fix/tclcl.h	2004-10-18 14:46:15.123314528 +0200
+@@ -49,115 +49,6 @@
+ #include "tracedvar.h"
+ 
+ struct Tk_Window_;
+-
+-class Tcl {
+-    public:
+-	/* constructor should be private but SGIs C++ compiler complains*/
+-	Tcl();
+-
+-	static void init(const char* application);
+-	static void init(Tcl_Interp*, const char* application);
+-	static inline Tcl& instance() { return (instance_); }
+-	inline int dark() const { return (tcl_ == 0); }
+-	inline Tcl_Interp* interp() const { return (tcl_); }
+-	
+-#if TCL_MAJOR_VERSION >= 8
+-	int evalObj(Tcl_Obj *pObj) { return Tcl_GlobalEvalObj(tcl_, pObj); }
+-	int evalObjs(int objc, Tcl_Obj **objv) {
+-		Tcl_Obj* pListObj = Tcl_NewListObj(objc, objv);
+-		int retcode = evalObj(pListObj);
+-		Tcl_DecrRefCount(pListObj);
+-		return retcode; 
+-	}
+-	Tcl_Obj* objResult() const { return Tcl_GetObjResult(tcl_); }
+-	int resultAs(int* pInt) {
+-		return Tcl_GetIntFromObj(tcl_, objResult(), pInt);
+-	}
+-	int resultAs(long* pLong) {
+-		return Tcl_GetLongFromObj(tcl_, objResult(), pLong);
+-	}
+-	int resultAs(double* pDbl) {
+-		return Tcl_GetDoubleFromObj(tcl_, objResult(), pDbl);
+-	}
+-	void result(Tcl_Obj *pObj) { Tcl_SetObjResult(tcl_, pObj); }
+-	inline const char* result() const { return Tcl_GetStringResult(tcl_); }
+-#else /* TCL_MAJOR_VERSION >= 8 */	
+-	/* may not work at all! */
+-	inline char* result() const { return (tcl_->result); }
+-#endif  /* TCL_MAJOR_VERSION >= 8 */
+-	inline void result(const char* p) { tcl_->result = (char*)p; }
+-	void resultf(const char* fmt, ...);
+-	inline void CreateCommand(const char* cmd, Tcl_CmdProc* cproc,
+-				  ClientData cd = 0,
+-				  Tcl_CmdDeleteProc* dproc = 0) {
+-		Tcl_CreateCommand(tcl_, (char*)cmd, cproc, cd, dproc);
+-	}
+-	inline void CreateCommand(Tcl_CmdProc* cproc,
+-				  ClientData cd = 0,
+-				  Tcl_CmdDeleteProc* dproc = 0) {
+-		Tcl_CreateCommand(tcl_, buffer_, cproc, cd, dproc);
+-	}
+-	inline void DeleteCommand(const char* cmd) {
+-		Tcl_DeleteCommand(tcl_, (char*)cmd);
+-	}
+-	inline void EvalFile(const char* file) {
+-		if (Tcl_EvalFile(tcl_, (char*)file) != TCL_OK)
+-			error(file);
+-	}
+-	inline const char* var(const char* varname, int flags = TCL_GLOBAL_ONLY) {
+-		return (Tcl_GetVar(tcl_, (char*)varname, flags));
+-	}
+-	/*
+-	 * Hooks for invoking the tcl interpreter:
+-	 *  eval(char*) - when string is in writable store
+-	 *  evalc() - when string is in read-only store (e.g., string consts)
+-	 *  [ eval(const char*) is a synonym ]
+-	 *  evalf() - printf style formatting of command
+-	 * Or, write into the buffer returned by buffer() and
+-	 * then call eval(void).
+-	 */
+-	void eval(char* s);
+-	void eval(const char* s) { evalc(s); };
+-	void evalc(const char* s);
+-	void eval();
+-	char* buffer() { return (bp_); }
+-	/*
+-	 * This routine used to be inlined, but SGI's C++ compiler
+-	 * can't hack stdarg inlining.  No big deal here.
+-	 */
+-	void evalf(const char* fmt, ...);
+-
+-	inline void add_error(const char *string) {
+-		Tcl_AddErrorInfo(interp(), (char *) string);
+-	}
+-	void add_errorf(const char *fmt, ...);
+-
+-	inline struct Tk_Window_* tkmain() const { return (tkmain_); }
+-	inline void tkmain(struct Tk_Window_* w) { tkmain_ = w; }
+-	void add_option(const char* name, const char* value);
+-	void add_default(const char* name, const char* value);
+-	const char* attr(const char* attr) const;
+-	const char* application() const { return (application_); }
+-	inline const char* rds(const char* a, const char* fld) const {
+-		return (Tcl_GetVar2(tcl_, (char*)a, (char*)fld,
+-				    TCL_GLOBAL_ONLY));
+-	}
+-
+-	TclObject* lookup(const char* name);
+-	void enter(TclObject*);
+-	void remove(TclObject*);
+-    private:
+-	void error(const char*);
+-
+-	static Tcl instance_;
+-	Tcl_Interp* tcl_;
+-	Tk_Window_* tkmain_;
+-	char* bp_;
+-	const char* application_;
+-	char buffer_[4096];
+-	Tcl_HashTable objs_;
+-};
+-
+ class InstVar;
+ 
+ class TclObject {
+diff -Naur tclcl-1.15/tclcl-mappings.h tclcl-1.15-fix/tclcl-mappings.h
+--- tclcl-1.15/tclcl-mappings.h	2004-01-06 02:50:24.000000000 +0100
++++ tclcl-1.15-fix/tclcl-mappings.h	2004-10-18 14:47:14.457294392 +0200
+@@ -38,7 +38,116 @@
+ 
+ 
+ class TclObject;
+-class Tcl;
++class Tcl {
++    public:
++	/* constructor should be private but SGIs C++ compiler complains*/
++	Tcl();
++
++	static void init(const char* application);
++	static void init(Tcl_Interp*, const char* application);
++	static inline Tcl& instance() { return (instance_); }
++	inline int dark() const { return (tcl_ == 0); }
++	inline Tcl_Interp* interp() const { return (tcl_); }
++	
++#if TCL_MAJOR_VERSION >= 8
++	int evalObj(Tcl_Obj *pObj) { return Tcl_GlobalEvalObj(tcl_, pObj); }
++	int evalObjs(int objc, Tcl_Obj **objv) {
++		Tcl_Obj* pListObj = Tcl_NewListObj(objc, objv);
++		int retcode = evalObj(pListObj);
++		Tcl_DecrRefCount(pListObj);
++		return retcode; 
++	}
++	Tcl_Obj* objResult() const { return Tcl_GetObjResult(tcl_); }
++	int resultAs(int* pInt) {
++		return Tcl_GetIntFromObj(tcl_, objResult(), pInt);
++	}
++	int resultAs(long* pLong) {
++		return Tcl_GetLongFromObj(tcl_, objResult(), pLong);
++	}
++	int resultAs(double* pDbl) {
++		return Tcl_GetDoubleFromObj(tcl_, objResult(), pDbl);
++	}
++	void result(Tcl_Obj *pObj) { Tcl_SetObjResult(tcl_, pObj); }
++	inline const char* result() const { return Tcl_GetStringResult(tcl_); }
++#else /* TCL_MAJOR_VERSION >= 8 */	
++	/* may not work at all! */
++	inline char* result() const { return (tcl_->result); }
++#endif  /* TCL_MAJOR_VERSION >= 8 */
++	inline void result(const char* p) { tcl_->result = (char*)p; }
++	void resultf(const char* fmt, ...);
++	inline void CreateCommand(const char* cmd, Tcl_CmdProc* cproc,
++				  ClientData cd = 0,
++				  Tcl_CmdDeleteProc* dproc = 0) {
++		Tcl_CreateCommand(tcl_, (char*)cmd, cproc, cd, dproc);
++	}
++	inline void CreateCommand(Tcl_CmdProc* cproc,
++				  ClientData cd = 0,
++				  Tcl_CmdDeleteProc* dproc = 0) {
++		Tcl_CreateCommand(tcl_, buffer_, cproc, cd, dproc);
++	}
++	inline void DeleteCommand(const char* cmd) {
++		Tcl_DeleteCommand(tcl_, (char*)cmd);
++	}
++	inline void EvalFile(const char* file) {
++		if (Tcl_EvalFile(tcl_, (char*)file) != TCL_OK)
++			error(file);
++	}
++	inline const char* var(const char* varname, int flags = TCL_GLOBAL_ONLY) {
++		return (Tcl_GetVar(tcl_, (char*)varname, flags));
++	}
++	/*
++	 * Hooks for invoking the tcl interpreter:
++	 *  eval(char*) - when string is in writable store
++	 *  evalc() - when string is in read-only store (e.g., string consts)
++	 *  [ eval(const char*) is a synonym ]
++	 *  evalf() - printf style formatting of command
++	 * Or, write into the buffer returned by buffer() and
++	 * then call eval(void).
++	 */
++	void eval(char* s);
++	void eval(const char* s) { evalc(s); };
++	void evalc(const char* s);
++	void eval();
++	char* buffer() { return (bp_); }
++	/*
++	 * This routine used to be inlined, but SGI's C++ compiler
++	 * can't hack stdarg inlining.  No big deal here.
++	 */
++	void evalf(const char* fmt, ...);
++
++	inline void add_error(const char *string) {
++		Tcl_AddErrorInfo(interp(), (char *) string);
++	}
++	void add_errorf(const char *fmt, ...);
++
++	inline struct Tk_Window_* tkmain() const { return (tkmain_); }
++	inline void tkmain(struct Tk_Window_* w) { tkmain_ = w; }
++	void add_option(const char* name, const char* value);
++	void add_default(const char* name, const char* value);
++	const char* attr(const char* attr) const;
++	const char* application() const { return (application_); }
++	inline const char* rds(const char* a, const char* fld) const {
++		return (Tcl_GetVar2(tcl_, (char*)a, (char*)fld,
++				    TCL_GLOBAL_ONLY));
++	}
++
++	TclObject* lookup(const char* name);
++	void enter(TclObject*);
++	void remove(TclObject*);
++    private:
++	void error(const char*);
++
++	static Tcl instance_;
++	Tcl_Interp* tcl_;
++	Tk_Window_* tkmain_;
++	char* bp_;
++	const char* application_;
++	char buffer_[4096];
++	Tcl_HashTable objs_;
++};
++
++
++
+ 
+ template <class T>
+ class TclObjectHelper {
