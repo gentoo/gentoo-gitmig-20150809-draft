@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a26b4662b69d50ca9ef2acf0a189ee80 ChangeLog 6675
-MD5 3c7ad7bfdb4b3df2554c11cae6d16f69 libgnomeui-2.6.0.ebuild 989
 MD5 9b1bb090a5aabd1d0e37c74cbd7f3338 libgnomeui-2.6.1.1.ebuild 999
+MD5 618e1c04685cc501dfcde63187f0b35e libgnomeui-2.8.0.ebuild 1007
 MD5 ee0518f7c5388c0c3b40998a037e1464 libgnomeui-2.4.0.1.ebuild 882
+MD5 3c7ad7bfdb4b3df2554c11cae6d16f69 libgnomeui-2.6.0.ebuild 989
+MD5 a26b4662b69d50ca9ef2acf0a189ee80 ChangeLog 6675
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aa8a8358c612ef8399525582a64c7cf7 files/digest-libgnomeui-2.6.0 70
-MD5 21a5070695ab142c951bd58c17b8fe91 files/digest-libgnomeui-2.6.1.1 72
+MD5 0db411f046038dd128c7486865b18212 files/digest-libgnomeui-2.8.0 70
 MD5 856ca51af259bcbfe426d1c09c7bafcd files/digest-libgnomeui-2.4.0.1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBP0SJHTu7gpaalycRAss3AKDWgxClWxDFNzcSfFe/QUuFNl6lygCghBk0
-Y/3nd7/RIwF2290NoK3vgLQ=
-=pIjO
------END PGP SIGNATURE-----
+MD5 21a5070695ab142c951bd58c17b8fe91 files/digest-libgnomeui-2.6.1.1 72
