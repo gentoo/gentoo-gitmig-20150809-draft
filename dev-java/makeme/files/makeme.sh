@@ -2,7 +2,7 @@
 # makeme Launch Script
 # Author: Dylan Carlson
 # May 2003
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/files/makeme.sh,v 1.3 2003/05/24 04:21:00 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/files/makeme.sh,v 1.4 2004/07/18 02:53:39 dragonheart Exp $
 
 JAVA_HOME=`/usr/bin/java-config --jdk-home`
 if [ -z "${JAVA_HOME}" ] ; then
