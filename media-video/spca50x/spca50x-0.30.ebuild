@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca50x/spca50x-0.30.ebuild,v 1.5 2004/07/01 08:42:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca50x/spca50x-0.30.ebuild,v 1.6 2005/03/09 07:58:41 phosphan Exp $
 
-inherit check-kernel eutils
+inherit linux-info eutils
 
 DESCRIPTION="Linux device driver for SPCA50X based USB cameras"
 HOMEPAGE="http://sourceforge.net/projects/spca50x/"
@@ -16,9 +16,7 @@ DEPEND="virtual/libc
 	virtual/linux-sources"
 
 pkg_setup() {
-	get_KV_info
-	einfo "Linux kernel ${KV_major}.${KV_minor}.${KV_micro}"
-	if is_2_5_kernel || is_2_6_kernel
+	if ! kernel_is 2 4
 	then
 		eerror "This package only works with 2.4 kernels"
 		eerror "Check /usr/src/linux if you _are_ using a 2.4 kernel"
