@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0.ebuild,v 1.5 2003/03/23 21:26:26 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0.ebuild,v 1.6 2003/04/18 01:52:06 foser Exp $
  
 S=${WORKDIR}/${P}
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~sparc ~ppc"
 
 DEPEND="virtual/x11 
 	media-libs/imlib2
-	x11-libs/xft"
+	virtual/xft"
 	
 PROVIDE="virtual/blackbox"
 
