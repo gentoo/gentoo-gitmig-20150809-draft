@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.735 2004/11/13 15:58:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.736 2004/11/14 18:58:11 pebenito Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -586,6 +586,7 @@ sys-apps/busybox:devfs - Remove devfs options that crash busybox systems without
 sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
+sys-apps/checkpolicy:mls - Add experimental multi level security policy support
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/iproute2:minimal - Builds and installs only the traffic control util.
@@ -642,6 +643,7 @@ sys-libs/glibc:n64 - Enable n64 ABI support on mips
 sys-libs/glibc:nomalloccheck - default to not performing some sanity checks that prevent and detect data corruption. this removes the small overhead introduced by the check.
 sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
+sys-libs/libsepol:mls - Add experimental multi level security policy support
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/nut:cgi - Add CGI script support
