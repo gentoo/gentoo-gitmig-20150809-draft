@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.7.ebuild,v 1.2 2004/10/17 03:19:29 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.7.ebuild,v 1.3 2004/11/04 05:23:51 vapier Exp $
 
 inherit eutils
-
-IUSE="pam ldap ssl sasl snmp debug uclibc selinux"
 
 #lame archive versioning scheme..
 S_PV=${PV%.*}
@@ -19,6 +17,11 @@ S=${WORKDIR}/${S_PP}
 SRC_URI="ftp://ftp.squid-cache.org/pub/squid-2/STABLE/${S_PP}.tar.bz2
 	http://dev.gentoo.org/~cyfred/distfiles/squid-2.5.STABLE7-patches-${PATCH_VERSION}.tar.gz"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+IUSE="pam ldap ssl sasl snmp debug uclibc selinux"
+
 RDEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
 	ldap? ( >=net-nds/openldap-2.1.26 )
@@ -26,9 +29,6 @@ RDEPEND="virtual/libc
 	sasl? ( >=dev-libs/cyrus-sasl-1.5.27 )
 	selinux? ( sec-policy/selinux-squid )"
 DEPEND="${RDEPEND} dev-lang/perl"
-LICENSE="GPL-2"
-KEYWORDS="x86 amd64 alpha ppc sparc hppa ppc64"
-SLOT="0"
 
 src_unpack() {
 	unpack ${A} || die
