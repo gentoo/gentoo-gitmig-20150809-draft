@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.3 2002/07/09 19:15:37 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.4 2002/07/15 23:50:30 owen Exp $
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org>
+
+  Added KEYWORDS="x86 ppc" for all versions of the mod_php ebuild
+
 
   27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
 
