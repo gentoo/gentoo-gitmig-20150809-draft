@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.35.1.ebuild,v 1.1 2003/12/22 21:30:43 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.35.1.ebuild,v 1.2 2003/12/30 18:52:38 pauldv Exp $
 
 inherit elisp-common libtool
 
@@ -33,7 +33,7 @@ DEPEND="python? ( >=dev-lang/python-2.0 )
 	!apache2? ( !>=net-www/apache-2* )
 	!dev-libs/apr
 	<sys-devel/autoconf-2.58
-	python? ( >=dev-lang/swig-1.3.16 )
+	python? ( =dev-lang/swig-1.3.19 )
 	>=net-misc/neon-0.24.2
 	berkdb? ( =sys-libs/db-4* )"
 
@@ -41,7 +41,7 @@ pkg_setup() {
 	if has_version '<dev-util/subversion-0.34.0' && [ "${SVN_DUMPED}" == "" ]; then
 		einfo ""
 		ewarn ":  Now you have $(best_version subversion)"
-		ewarn " Subversion had chaged the repository filesystem schema from 0.28.0."
+		ewarn " Subversion has changed the repository filesystem schema from 0.34.0."
 		ewarn " So you MUST dump your repositories before upgrading."
 		ewarn ""
 		ewarn "After doing so call emerge with SVN_DUMPED=1 emerge !!"
