@@ -1,12 +1,19 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.11 2002/07/03 03:24:19 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.12 2002/07/21 00:59:19 cardoe Exp $
 
 *python-2.1.3-r1 (2 Jul 2002)
+ 
+  20 Jul 2002; Doug Goldstein <cardoe@gentoo.org> python-2.1.3-r1.ebuild
+  Added missing KEYWORDS
+
   2 Jul 2002; Jon Nelson <jnelson@gentoo.org> python-2.1.3-r1.ebuild:
   Fix Makefile.pre.in install (the one we want is located in Misc)
 
 *python-2.1.3 (1 Jul 2002)
+
+  20 Jul 2002; Doug Goldstein <cardoe@gentoo.org> python-2.1.3.ebuild
+  Added missing KEYWORDS
 
   1 Jul 2002; Jon Nelson <jnelson@gentoo.org>: python-2.1.3.ebuild
   This is a python 2.1.3 ebuild that does *not* conflict with
@@ -16,12 +23,18 @@
 
 *python-2.2.1-r2 (1 Jul 2002)
 
+  20 Jul 2002; Doug Goldstein <cardoe@gentoo.org>: python-2.2.1-r2.ebuild
+  Added missing KEYWORDS
+
   30 Jun 2002; Jon Nelson <jnelson@gentoo.org>: python-2.2.1-r2.ebuild
   Add "-lm" to the python-config script. Closes bug #4217.
   2.2.1-r2 has a 100% identical ebuild file to 2.2.1-r1, just the
   python-config file has changed.
 
 *python-2.2.1-r1 (29 May 2002)
+ 
+  20 Jul 2002; Doug Goldstein <cardoe@gentoo.org>: python-2.2.1-r1.ebuild 
+  Added missing KEYWORDS
 
   29 May 2002; Jon Nelson <jnelson@gentoo.org>: python-2.2.1-r1.ebuild
   Add expat to build depends (except during bootstrap), use econf
@@ -29,6 +42,9 @@
   are build as shared on Linux as default.
 
 *python-2.2.1 (2 May 2002)
+
+  20 Jul 2002; Doug Goldstein <cardoe@gentoo.org>: python-2.2.1.ebuild
+  Added missing KEYWORDS
 
   2 May 2002; Jon Nelson <jnelson@gentoo.org>: python-2.2.1.ebuild
   Update to 2.2.1, and completely re-vamp build procedure

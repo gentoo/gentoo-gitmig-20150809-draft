@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1.ebuild,v 1.2 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1.ebuild,v 1.3 2002/07/21 00:59:19 cardoe Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -11,6 +11,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/Python-${PV}.tgz"
 
 HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.2"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
