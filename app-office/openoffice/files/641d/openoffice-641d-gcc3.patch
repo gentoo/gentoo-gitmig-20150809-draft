@@ -1,0 +1,120 @@
+diff -urNd oo_641d_src/solenv/inc/unxlngi4.mk oo_641d_src/solenv/inc/unxlngi4.mk.new
+--- oo_641d_src/solenv/inc/unxlngi4.mk	Fri Dec 21 07:24:32 2001
++++ oo_641d_src/solenv/inc/unxlngi4.mk.new	Sat Mar 30 22:57:26 2002
+@@ -100,7 +100,7 @@
+ # Flags for enabling exception handling
+ CFLAGSEXCEPTIONS=-fexceptions -fno-enforce-eh-specs
+ # Flags for disabling exception handling
+-CFLAGS_NO_EXCEPTIONS=-fno-exceptions
++# CFLAGS_NO_EXCEPTIONS=-fno-exceptions
+ 
+ # -fpermissive should be removed as soon as possible
+ CFLAGSCXX= -pipe -mcpu=pentiumpro -fno-for-scope -fpermissive -fno-rtti 
+diff -urNd oo_641d_src/tools/source/fsys/unx.hxx oo_641d_src/tools/source/fsys/unx.hxx.new
+--- oo_641d_src/tools/source/fsys/unx.hxx	Sun Mar 31 01:04:00 2002
++++ oo_641d_src/tools/source/fsys/unx.hxx.new	Sun Mar 31 01:05:30 2002
+@@ -97,11 +97,11 @@
+ #include <time.h>
+ #include <datetime.hxx>
+ 
+-#ifndef localtime_r
++/* #ifndef localtime_r
+ extern "C" {
+ struct tm *localtime_r(const time_t *timep, struct tm *buffer);
+ }
+-#endif
++#endif */
+ 
+ inline Time Unx2Time( time_t nTime )
+ {
+diff -urNd oo_641d_src/tools/source/datetime/ttime.cxx oo_641d_src/tools/source/datetime/ttime.cxx.new
+--- oo_641d_src/tools/source/datetime/ttime.cxx	Mon Jun 11 13:17:46 2001
++++ oo_641d_src/tools/source/datetime/ttime.cxx.new	Sun Mar 31 01:19:26 2002
+@@ -93,7 +93,7 @@
+ #include <math.h>
+ #endif
+ 
+-#ifndef WNT
++/* #ifndef WNT
+ #ifndef localtime_r
+ extern "C" {
+ struct tm *localtime_r(const time_t *timep, struct tm *buffer);
+@@ -105,7 +105,7 @@
+ struct tm *gmtime_r(const time_t *timep, struct tm *buffer);
+ }
+ #endif
+-#endif
++#endif */
+ 
+ // =======================================================================
+ 
+diff -urNd oo_641d_src/tools/source/memmgr/memmgr.cxx oo_641d_src/tools/source/memmgr/memmgr.cxx.new
+--- oo_641d_src/tools/source/memmgr/memmgr.cxx	Mon Oct 15 14:40:32 2001
++++ oo_641d_src/tools/source/memmgr/memmgr.cxx.new	Sun Mar 31 01:31:48 2002
+@@ -121,7 +121,7 @@
+ static std::new_handler volatile g_pfnHandler = 0;
+ 
+ std::new_handler
+-SAL_CALL std::set_new_handler (std::new_handler pfnHandler) throw ()
++SAL_CALL std::set_new_handler (std::new_handler pfnHandler)
+ {
+ 	std::new_handler f = g_pfnHandler;
+ 	g_pfnHandler = pfnHandler;
+diff -urNd oo_641d_src/product/util/makefile.mk oo_641d_src/product/util/makefile.mk.new
+--- oo_641d_src/product/util/makefile.mk	Mon Mar 11 11:09:13 2002
++++ oo_641d_src/product/util/makefile.mk.new	Sun Mar 31 14:18:28 2002
+@@ -111,8 +111,8 @@
+ ADDITIONAL_DLLS= \
+ 	$(DESTDIRDLL)$/libgcc_s.so.1 		\
+ 	$(DESTDIRDLL)$/libgcc_s.so 		\
+-	$(DESTDIRDLL)$/libstdc++.so.3 		\
+-	$(DESTDIRDLL)$/libstdc++.so.3.0.1
++	$(DESTDIRDLL)$/libstdc++.so.3		\
++	$(DESTDIRDLL)$/libstdc++.so.3.0.4
+ .ENDIF
+ .ELIF "$(OS)"=="FREEBSD"
+ ###########
+@@ -128,7 +128,7 @@
+ 	$(DESTDIRDLL)$/libgcc_s.so.1 		\
+ 	$(DESTDIRDLL)$/libgcc_s.so 		\
+ 	$(DESTDIRDLL)$/libstdc++.so.3 		\
+-	$(DESTDIRDLL)$/libstdc++.so.3.0.1
++	$(DESTDIRDLL)$/libstdc++.so.3.0.4
+ .ENDIF
+ .ELIF "$(OS)"=="IRIX"
+ ###############
+@@ -422,17 +422,17 @@
+ 
+ #---------------------------------------------------------
+ # special targets for linux gcc3 
+-$(DESTDIRDLL)$/libstdc++.so.3.0.1 : $(DLLOUT)$/libstdc++.so.3.0.1 $(DIRLIST)
++$(DESTDIRDLL)$/libstdc++.so.3.0.4 : $(DLLOUT)$/libstdc++.so.3.0.4 $(DIRLIST)
+ 	-rm -f $@
+-	$(GNUCOPY) -p $(DLLOUT)$/libstdc++.so.3.0.1 $@
++	$(GNUCOPY) -p $(DLLOUT)$/libstdc++.so.3.0.4 $@
+ 
+-$(DESTDIRDLL)$/libstdc++.so.3 : $(DESTDIRDLL)$/libstdc++.so.3.0.1 $(DIRLIST)
++$(DESTDIRDLL)$/libstdc++.so.3 : $(DESTDIRDLL)$/libstdc++.so.3.0.4 $(DIRLIST)
+ 	-rm -f $@
+-	+ln -s libstdc++.so.3.0.1 $@
++	+ln -s libstdc++.so.3.0.4 $@
+ 
+ $(DESTDIRDLL)$/libgcc_s.so.1 : $(DLLOUT)$/libgcc_s.so.1 $(DIRLIST)
+ 	-rm -f $@
+-	$(GNUCOPY) -p $(DLLOUT)$/libgcc_s.so.1 $@
++	$(GNUCOPY) -p $(DLLOUT)$/libgcc_s.so.1 $@
+ 
+ $(DESTDIRDLL)$/libgcc_s.so : $(DESTDIRDLL)$/libgcc_s.so.1 $(DIRLIST)
+ 	-rm -f $@
+diff -urNd oo_641d_src/sw/source/filter/html/htmlform.cxx oo_641d_src/sw/source/filter/html/htmlform.cxx.new
+--- oo_641d_src/sw/source/filter/html/htmlform.cxx	Fri Sep 28 02:27:53 2001
++++ oo_641d_src/sw/source/filter/html/htmlform.cxx.new	Mon Apr  1 05:14:19 2002
+@@ -741,7 +741,7 @@
+ 	}
+ }
+ 
+-void SwHTMLImageWatcher::disposing(const lang::EventObject& evt)
++void SwHTMLImageWatcher::disposing(const lang::EventObject& evt) throw ( ::com::sun::star::uno::RuntimeException)
+ {
+ 	Reference< awt::XImageConsumer > xTmp;
+ 

@@ -1,0 +1,109 @@
+diff -urNd oo_641d_src/XmlSearch/src/com/sun/xmlsearch/util/ExtensibleURLStreamHandlerFactory.java oo_641d_src/XmlSearch/src/com/sun/xmlsearch/util/ExtensibleURLStreamHandlerFactory.java.new
+--- oo_641d_src/XmlSearch/src/com/sun/xmlsearch/util/ExtensibleURLStreamHandlerFactory.java	Sun Mar 31 00:24:20 2002
++++ oo_641d_src/XmlSearch/src/com/sun/xmlsearch/util/ExtensibleURLStreamHandlerFactory.java.new	Thu Nov 30 13:03:34 2000
+@@ -79,7 +79,7 @@
+ 		Class.forName(className != null
+ 			      ? className
+ 			      : "sun.net.www.protocol." + protocol + ".Handler");
+-	    return (URLStreamHandler)handlerClass.newInstance();;
++	    return (URLStreamHandler)handlerClass.newInstance();
+ 	}
+ 	catch (Exception e) {
+ 	    System.err.println(e);
+diff -urNd oo_641d_src/tools/source/datetime/ttime.cxx oo_641d_src/tools/source/datetime/ttime.cxx.new
+--- oo_641d_src/tools/source/datetime/ttime.cxx	Sun Mar 31 01:24:44 2002
++++ oo_641d_src/tools/source/datetime/ttime.cxx.new	Sun Mar 31 01:26:36 2002
+@@ -493,7 +493,7 @@
+ 
+ 	if ( !nImplTicksPerSecond )
+ 	{
+-		nImplTicksPerSecond = CLK_TCK;
++		nImplTicksPerSecond = CLOCKS_PER_SEC;
+ 		dImplTicksPerSecond = nImplTicksPerSecond;
+ 		dImplTicksULONGMAX	= (double)(ULONG)ULONG_MAX;
+ 	}
+diff -urNd oo_641d_src/sj2/stardiv/applet/DocumentProxy.java oo_641d_src/sj2/stardiv/applet/DocumentProxy.java.new
+--- oo_641d_src/sj2/stardiv/applet/DocumentProxy.java	Mon Sep 18 12:54:03 2000
++++ oo_641d_src/sj2/stardiv/applet/DocumentProxy.java.new	Sun Mar 31 05:52:59 2002
+@@ -68,7 +68,10 @@
+ import java.applet.AudioClip;
+ 
+ import java.io.IOException;
++import java.io.InputStream;
+ 
++import java.util.HashMap;
++import java.util.Iterator;
+ import java.util.Enumeration;
+ import java.util.Hashtable;
+ import java.util.Observer;
+@@ -123,6 +126,27 @@
+ 		instances --;
+     }
+ 
++
++    /* Stream stuff to satisfy JDK 1.4 */
++    private HashMap stream_map = new HashMap();
++
++    public void setStream(String key,
++                      InputStream stream)
++               throws IOException
++    {
++	stream_map.put(key, stream);
++    }
++
++    public InputStream getStream(String key)
++    {
++	return (InputStream) stream_map.get(key);
++    }
++
++    public Iterator getStreamKeys()
++    {
++	return stream_map.keySet().iterator();
++    }
++
+     /*
+     ** DocumentProxy methods
+     */
+diff -urNd oo_641d_src/sj2/stardiv/app/AppletViewer.java oo_641d_src/sj2/stardiv/app/AppletViewer.java.new
+--- oo_641d_src/sj2/stardiv/app/AppletViewer.java	Sun Mar 31 06:14:33 2002
++++ oo_641d_src/sj2/stardiv/app/AppletViewer.java.new	Sun Mar 31 06:16:11 2002
+@@ -196,7 +196,7 @@
+     public AppletViewer(int x, int y, URL doc, Hashtable atts, PrintStream statusMsgStream) {
+ //  		resourceViewer = new stardiv.util.ResourceViewer();
+ //  		resourceViewer.show();
+-		System.err.println("#*#*#*:" + sun.awt.ScreenUpdater.updater);
++//		System.err.println("#*#*#*:" + sun.awt.ScreenUpdater.updater);
+ 		this.statusMsgStream = statusMsgStream;
+ 		this.atts = atts;
+ 
+diff -urNd oo_641d_src/svtools/inc/svarray.hxx oo_641d_src/svtools/inc/svarray.hxx.new
+--- oo_641d_src/svtools/inc/svarray.hxx	Mon Apr  1 12:15:09 2002
++++ oo_641d_src/svtools/inc/svarray.hxx.new	Mon Apr  1 12:15:18 2002
+@@ -742,11 +742,11 @@
+ 
+ // SORTARR - Begin
+ 
+-#ifdef __MWERKS__
++// #ifdef __MWERKS__
+ #define __MWERKS__PRIVATE public
+-#else
+-#define __MWERKS__PRIVATE private
+-#endif
++// #else
++// #define __MWERKS__PRIVATE private
++// #endif
+ 
+ #define _SORT_CLASS_DEF(nm, AE, IS, GS)\
+ typedef BOOL (*FnForEach_##nm)( const AE&, void* );\
+diff -urNd oo_641d_src/sw/inc/ndhints.hxx oo_641d_src/sw/inc/ndhints.hxx.new
+--- oo_641d_src/sw/inc/ndhints.hxx	Mon Apr  1 12:16:27 2002
++++ oo_641d_src/sw/inc/ndhints.hxx.new	Mon Apr  1 12:09:50 2002
+@@ -98,7 +98,7 @@
+  *************************************************************************/
+ 
+ // Das neue Hintsarray:
+-class SwpHintsArr : private SwpHtStart
++class SwpHintsArr : protected SwpHtStart
+ {
+ 
+ protected:
