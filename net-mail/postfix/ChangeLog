@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.15 2002/05/04 03:55:29 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.16 2002/05/14 03:49:25 woodchip Exp $
+
+*postfix-1.1.8 (13 May 2002)
+
+  13 May 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Updated to latest postfix + tls patch.
 
 *postfix-1.1.7-r4 (3 May 2002)
   
