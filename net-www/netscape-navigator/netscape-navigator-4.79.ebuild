@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.08.ebuild,v 1.3 2002/04/10 01:36:31 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.79.ebuild,v 1.1 2002/04/10 01:36:31 jnelson Exp $
 
-S=${WORKDIR}/navigator-v408.x86-unknown-linux2.0
-DESCRIPTION="Netscape Navigator 4.08"
-SRC_URI="ftp://ftp.netscape.com/pub/communicator/4.08/english/unix/unsupported/linux20_glibc2/navigator_standalone/navigator-v408-export.x86-unknown-linux2.0_glibc.tar.gz"
+S=${WORKDIR}/navigator-v479.x86-unknown-linux2.2
+DESCRIPTION="Netscape Navigator 4.79"
+SRC_URI="ftp://ftp.netscape.com/pub/communicator/english/4.79/unix/supported/linux22/navigator_standalone/navigator-v479-us.x86-unknown-linux2.2.tar.gz"
 HOMEPAGE="http://developer.netscape.com/support/index.html"
 RDEPEND=">=sys-libs/lib-compat-1.0"
 PROVIDE="virtual/x11-web-browser"
@@ -16,9 +16,9 @@ src_install() {
 	dodir /usr/X11R6/bin
 	dodoc README.install
 	cd ${D}/opt/netscape
-	gzip -dc ${S}/netscape-v408.nif | tar xf -
-	gzip -dc ${S}/nethelp-v408.nif | tar xf -
-#	gzip -dc ${S}/spellchk-v408.nif | tar xf -
+	gzip -dc ${S}/netscape-v479.nif | tar xf -
+	gzip -dc ${S}/nethelp-v479.nif | tar xf -
+#	gzip -dc ${S}/spellchk-v479.nif | tar xf -
 	cp ${S}/*.jar ${D}/opt/netscape/java/classes
 	cp ${FILESDIR}/netscape ${D}/usr/X11R6/bin/netscape
 	rm ${D}/opt/netscape/netscape-dynMotif
