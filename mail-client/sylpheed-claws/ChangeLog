@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.42 2005/03/29 07:25:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.43 2005/03/29 18:27:03 corsair Exp $
+
+  29 Mar 2005; Markus Rothe <corsair@gentoo.org> sylpheed-claws-1.0.4.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *sylpheed-claws-1.0.4 (29 Mar 2005)
 
