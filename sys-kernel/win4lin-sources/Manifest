@@ -18,7 +18,7 @@ MD5 65254b087906bead43e7e7bf9eba7610 files/digest-win4lin-sources-2.4.26-r9 353
 MD5 dc18e982f8149588a291956481885a8c files/win4lin-sources-2.4.26.CAN-2004-0495.patch 17549
 MD5 60d25ff310fc6abfdce39ec9e47345af files/win4lin-sources-2.4.26.CAN-2004-0685.patch 2809
 MD5 39361f8d16b1fe5891aab62e92f8cd30 files/win4lin-sources-2.6.IPTables-RDoS.patch 390
-MD5 9cae5cdb5da7ef0bbe13fbbf6daee5dd files/digest-win4lin-sources-2.6.7-r9 359
+MD5 3b4902c9426d8f507238b58fea6e0ac3 files/digest-win4lin-sources-2.6.7-r9 359
 MD5 1e1fe7bb98c80db4644f4b7fd7dd5d32 files/win4lin-sources-2.4.26.smbfs.patch 3434
 MD5 d4a740ae56c2049247083af387a22a85 files/win4lin-sources-2.4.26.CAN-2004-0394.patch 350
 MD5 915e8d7a0618736caa44d96968015467 files/win4lin-sources-2.4.26.binfmt_elf.patch 2346

@@ -9,7 +9,7 @@ MD5 60d25ff310fc6abfdce39ec9e47345af files/uclinux-sources-2.4.26_p0.CAN-2004-06
 MD5 d4a740ae56c2049247083af387a22a85 files/uclinux-sources-2.4.26_p0.CAN-2004-0394.patch 350
 MD5 1e1fe7bb98c80db4644f4b7fd7dd5d32 files/uclinux-sources-2.4.26_p0.smbfs.patch 3434
 MD5 a9991d6324d7404ed99e79be6e44e9de files/uclinux-sources-2.6.binfmt_elf.patch 2348
-MD5 040a6d66b9567c30bf1a0cb1ce27c9db files/digest-uclinux-sources-2.6.7_p0-r9 287
+MD5 e9ac5dab071a88dca4c7765abdc4c6dd files/digest-uclinux-sources-2.6.7_p0-r9 287
 MD5 915e8d7a0618736caa44d96968015467 files/uclinux-sources-2.4.26_p0.binfmt_elf.patch 2346
 MD5 0f66013f643c79c97fda489618a4e2fd files/uclinux-sources-2.4.26_p0.CAN-2004-0535.patch 476
 MD5 95708646470a95668e8789cd415844ed files/uclinux-sources.CAN-2004-0497.patch 846
