@@ -1,8 +1,11 @@
 # ChangeLog for app-cdr/tear
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tear/ChangeLog,v 1.4 2003/03/25 22:14:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tear/ChangeLog,v 1.5 2003/03/28 12:12:31 pvdabeel Exp $
 
 *tear-1.0_rc1 (26 Oct 2002)
+
+  28 Mar 2003; Pieter Van den Abeeel <pvdabeel@gentoo.org> tear-1.0_rc1.ebuild:
+  ppc keyworded
 
   25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> tear-1.0_rc1.ebuild:
   moved lame to encode USE
