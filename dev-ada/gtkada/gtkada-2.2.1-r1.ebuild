@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.1-r1.ebuild,v 1.1 2004/08/02 11:17:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.1-r1.ebuild,v 1.2 2004/08/02 12:50:18 dholm Exp $
 
 inherit gnat eutils
 
@@ -14,7 +14,7 @@ SLOT="1"
 KEYWORDS="x86 ~ppc"
 IUSE="nls opengl"
 
-DEPEND=">=dev-lang/gnat-3.4
+DEPEND=">=dev-lang/gnat-3.14p
 	>=x11-libs/gtk+-2.2.0
 	>=sys-apps/sed-4"
 RDEPEND=""
