@@ -1,0 +1,12 @@
+--- kernel/svgalib_helper/main.c.orig	2004-11-08 00:32:55.451258208 -0500
++++ kernel/svgalib_helper/main.c	2004-11-08 00:35:31.591521280 -0500
+@@ -589,6 +589,9 @@
+     SLH_SYSFS_REGISTER;
+     SLH_SYSFS_ADD_CONTROL;
+ 
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,9)
++#   define pci_find_class pci_get_class
++#endif
+     if(pci_present()) {
+         while((dev= all_devices ? 
+                                   pci_find_device(PCI_ANY_ID, PCI_ANY_ID, dev) :

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r1.ebuild,v 1.4 2004/10/06 22:31:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r1.ebuild,v 1.5 2004/11/08 05:42:16 vapier Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -40,6 +40,9 @@ src_unpack() {
 
 	# Don't let the ebuild screw around with ld.so.conf #64829
 	epatch ${FILESDIR}/${P}-dont-touch-ld.conf.patch
+
+	# PCI functions have been renamed with newer kernels #69580
+	epatch ${FILESDIR}/${P}-pci-get-class.patch
 }
 
 src_compile() {
