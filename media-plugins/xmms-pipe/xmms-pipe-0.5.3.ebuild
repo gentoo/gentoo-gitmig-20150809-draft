@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-pipe/xmms-pipe-0.5.3.ebuild,v 1.5 2004/06/24 23:44:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-pipe/xmms-pipe-0.5.3.ebuild,v 1.6 2004/07/07 09:21:02 eradicator Exp $
 
 MY_P=${P/-}
 MY_PN=${PN/-}
@@ -14,7 +14,7 @@ DEPEND="media-sound/xmms"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64 ~sparc"
 
 IUSE=""
 
