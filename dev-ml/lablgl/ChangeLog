@@ -1,0 +1,14 @@
+# ChangeLog for dev-ml/lablgl
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.1 2002/06/29 04:39:55 george Exp $
+
+*lablgl-0.97.ebuild (28 Jun 2002)
+
+  28 Jun 2002; G Shapovalov <george@gentoo.org> all :
+
+  initial release
+  form the README:
+  LablGL is an OpenGL interface for Objective Caml. Since it includes
+  support for the Togl widget, you can comfortably use it with LablTk.
+
+  ebuild submitted by Bardur Arantsson <bardur-gta@odense.kollegienet.dk> 
