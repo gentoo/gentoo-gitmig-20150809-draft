@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c0721b3702a6cc481893add2d7b076a4 ChangeLog 6839
 MD5 aa73d5edf312beeab44fa9d58a603ad4 metadata.xml 636
 MD5 1a21a1a6d53937eec7e2a1417bb8ef72 ntp-4.1.2.ebuild 3167
@@ -15,7 +18,14 @@ MD5 0ac690ae52fe02f336ae73f9857461ec files/4.2.0-droproot.patch 13908
 MD5 24574e6ad1b468152839c10361b51a0f files/4.2.0-linux-config-phone.patch 711
 MD5 d07dbc58315f577cc6d1dd8614f95cb1 files/4.2.0-ntpdate-quiet.patch 1117
 MD5 87951141777f50b2e4a2347a96f987b8 files/ntpd-4.1.2.rc 806
-MD5 83dee5f8ef2a863c2ba2bb91c432f732 files/ntpd.rc 862
+MD5 0ce27073d67a016693a77314b6bfd4f5 files/ntpd.rc 741
 MD5 8f2b873f4294daf289f6e8787fd30439 files/ntpd-4.1.2.confd 394
 MD5 b8fc232f85be1313aee4c5a6f0048ca7 files/ntp-client-4.1.2.rc 840
 MD5 5fc28af5c2a508eeb67a4d5d0ffab341 files/digest-ntp-4.2.0-r2 135
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBgWqUHTu7gpaalycRAosUAJwKOJAryB0EaWS1V6+q8wVj3l5p3QCeLTLH
+I7PkIDeRYVM6U2gY1THczG4=
+=ijFE
+-----END PGP SIGNATURE-----
