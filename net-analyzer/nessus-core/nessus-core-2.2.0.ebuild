@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.0.ebuild,v 1.1 2004/10/28 15:36:23 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.0.ebuild,v 1.2 2004/10/29 10:56:40 eldad Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ src_compile() {
 	fi
 	use X || myconf="${myconf} --disable-gtk"
 	econf ${myconf} || die "configure failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 
 }
 
