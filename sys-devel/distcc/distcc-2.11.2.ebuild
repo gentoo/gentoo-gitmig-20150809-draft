@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.11.1.ebuild,v 1.2 2003/10/23 20:17:21 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.11.2.ebuild,v 1.1 2003/10/23 20:17:21 lisa Exp $
 
 inherit eutils gcc flag-o-matic
 [ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
-PATCHLEVEL="2.11"
+PATCHLEVEL="2.11.1p"
 
 HOMEPAGE="http://distcc.samba.org/"
 SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
@@ -13,7 +13,7 @@ DESCRIPTION="a program to distribute compilation of C code across several machin
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha hppa ~mips ~arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 IUSE="gnome gtk"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
@@ -28,7 +28,6 @@ RDEPEND="gnome? ( >=x11-libs/gtk+-2.0.0
 		 )
 	gtk?	(
 		>=x11-libs/gtk+-2.0.0
-		>=gnome-base/libglade-2.0.0
 		x11-libs/pango
 		)
 	selinux? ( sec-policy/selinux-distcc )"
@@ -93,8 +92,9 @@ pkg_postinst() {
 	if [ -f "${ENVFILE}" ]
 	then
 		# save hosts to new file
-		ROOT="${ROOT}" ${ROOT}usr/bin/distcc-config --set-hosts \
-			$(egrep '^DISTCC_HOSTS' "${ENVFILE}" | sed 's,[^=]*=,,')
+		ROOT="${ROOT}"
+		HOSTS=$(egrep '^DISTCC_HOSTS' "${ENVFILE}" | sed 's,[^=]*=,,')
+		[ ${HOSTS} ] && ${ROOT}usr/bin/distcc-config --set-hosts ${HOSTS}
 		# now remove from the file
 		grep -v 'DISTCC_HOSTS' "${ENVFILE}" > "${ENVFILE}.new"
 		mv "${ENVFILE}.new" "${ENVFILE}"
@@ -102,10 +102,7 @@ pkg_postinst() {
 
 	if [ "${ROOT}" = "/" ]; then
 		einfo "Installing links to native compilers..."
-		/usr/bin/distcc-config --install-user
-		/usr/bin/distcc-config --install-links
-		/usr/bin/distcc-config --install-links "${CHOST}"
-		/usr/bin/distcc-config --set-env DISTCC_DIR ""
+		/usr/bin/distcc-config --install
 	else
 		# distcc-config can *almost* handle ROOT installs itself
 		#  but for now, but user must finsh things off
@@ -119,7 +116,11 @@ pkg_postinst() {
 	ewarn "As of distcc-2.11, the only thing you have to do to configure distcc"
 	ewarn "is to set your hosts (see the Guide, above) and to add distcc to"
 	ewarn "the FEATURES line in /etc/make.conf"
+	ewarn "This version is using a new distcc-config. If you encounter problems with it"
+	ewarn "Please report errors to bug 27432 on the bugs.gentoo.org site"
 	echo ""
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
-	einfo "   DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"
+	einfo "      DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"
+	use gnome || use gtk && einfo "Or:   DISTCC_DIR=/var/tmp/portage/.distcc distccmon-gnome"
+	sleep 10
 }
