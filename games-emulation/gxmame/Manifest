@@ -1,4 +1,16 @@
-MD5 3e5889258c5f597dd3943abc9e34df69 ChangeLog 1614
-MD5 9db467bbb63d9150aca82a71e1b75640 gxmame-0.34b.ebuild 973
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bafd31ad83c36cf508f66716ae24937e ChangeLog 1767
+MD5 37c6269ee142f6217bcb0aaa18cbfc65 gxmame-0.35_pre.ebuild 1033
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 3c391220e1273d53b76461723213693f gxmame-0.34b.ebuild 970
+MD5 8f1e9c1932768175b5afb604a6baf541 files/digest-gxmame-0.35_pre 66
 MD5 fc586b42205f2bfd474e189d0a04c930 files/digest-gxmame-0.34b 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB16W5roRuSHgZdywRAkBOAKCDyJgUP8RHuXrUNCdnHKpFaX4RoACeOMit
+o7pnEyU27lnAG3vof2XSGrA=
+=pNhN
+-----END PGP SIGNATURE-----
