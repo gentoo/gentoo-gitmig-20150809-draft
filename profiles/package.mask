@@ -307,9 +307,9 @@ sys-devel/prelink
 # <bcowan@gentoo.org> (09 Nov 2002)
 # masking mc due to filling entire var/tmp
 # partition during compile
-=gnome-extra/mc-4.6.0_pre1-r1
-=gnome-extra/mc-4.6.0_pre1-r2
-=gnome-extra/mc-4.6.0_pre1-r3
+=app-misc/mc-4.6.0_pre1-r1
+=app-misc/mc-4.6.0_pre1-r2
+=app-misc/mc-4.6.0_pre1-r3
 
 # <azarah@gentoo.org> (09 Nov 2002)
 # new evo and gtkhtml.  gtkhtml breaks compat a bit with
