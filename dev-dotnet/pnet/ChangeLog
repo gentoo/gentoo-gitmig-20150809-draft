@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.7 2003/10/15 13:36:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.8 2003/10/19 10:20:43 scandium Exp $
+
+  19 Oct 2003; Rainer Groesslinger <scandium@gentoo.org> pnet-0.6.0.ebuild:
+  stable on all archs
 
   15 Oct 2003; Jason Wever <weeve@gentoo.org> pnet-0.6.0.ebuild:
   Added ~sparc keyword.
