@@ -1,0 +1,7 @@
+MD5 a4de292547a7d4fbe157a4ecb4ce2193 metadata.xml 821
+MD5 1b673760e15f57105a81836d3194ec6d ChangeLog 126
+MD5 5819f83c84fe299c7b794f9cb65c6f0d slmodem-2.8.4.ebuild 2769
+MD5 9b5b6a4da13cb087dd76dfbf6e987733 slmodem-2.7.14.ebuild 2836
+MD5 603aca328eb748d3a3f0ede13b276ff6 files/slmodem 28
+MD5 50e4686146e7823f6862c59c8b6392fe files/digest-slmodem-2.8.4 65
+MD5 04150d1eddd9774a7d1a70df93600e3c files/digest-slmodem-2.7.14 64
