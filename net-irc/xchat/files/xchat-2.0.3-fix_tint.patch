@@ -1,0 +1,22 @@
+--- xchat-2.0.3/src/fe-gtk/xtext.c	18 Jun 2003 08:01:23 -0000
++++ xchat-2.0.3p1/src/fe-gtk/xtext.c	29 Jun 2003 11:38:04 -0000
+@@ -910,6 +910,9 @@
+ 	xtext_set_bg (xtext, xtext->fgc, 19);
+ 	xtext_set_fg (xtext, xtext->bgc, 19);
+ 
++	/* draw directly to window */
++	xtext->draw_buf = widget->window;
++
+ #if defined(USE_XLIB) || defined(WIN32)
+ 	if (xtext->transparent)
+ 	{
+@@ -930,9 +933,6 @@
+ #endif
+ 
+ 	gdk_window_set_back_pixmap (widget->window, NULL, FALSE);
+-
+-	/* draw directly to window */
+-	xtext->draw_buf = widget->window;
+ 
+ 	backend_init (xtext);
+ }
