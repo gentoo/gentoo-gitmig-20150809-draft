@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e27f3f1dd87d9488d7b59ed2d3dd9f1b ChangeLog 3421
-MD5 37113feed5be041727844938aa1b955a gputils-0.12.4.ebuild 744
-MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
+MD5 a995f788bddb7d92ed122d4ed98c0b8a ChangeLog 3514
 MD5 24d7c167879033e836eb6b921f87c6aa gputils-0.12.0.ebuild 720
 MD5 1562ac57d5bd1be92b974227327ef26d gputils-0.12.3.ebuild 769
+MD5 a3340031ac5e82bf4e3150d88b930f22 gputils-0.12.4.ebuild 740
+MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
+MD5 2890ceb3d6cb92db4b4bc4f944ad97f3 files/digest-gputils-0.12.0 66
 MD5 63155d52299b46085d5faac1605d958f files/digest-gputils-0.12.3 67
 MD5 1511ba91e00581e4559de7f5f07d30f1 files/digest-gputils-0.12.4 67
-MD5 2890ceb3d6cb92db4b4bc4f944ad97f3 files/digest-gputils-0.12.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBnqYQmdTrptrqvGERAsyBAJ9+yzDzLUkflbanRelsFxRvMWd3kQCfbEei
-3DKvjXuKosY7E6xkRZSL6JA=
-=DgFm
------END PGP SIGNATURE-----
