@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.5-r1.ebuild,v 1.1 2004/07/23 17:53:14 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.5-r1.ebuild,v 1.2 2004/07/24 09:33:08 satya Exp $
 
 inherit eutils flag-o-matic
 
@@ -63,20 +63,13 @@ src_unpack() {
 	#Next one is from eger@cc.gatech.edu
 	epatch ${FILESDIR}/samba-3.0.x-python-setup.patch || die
 	#bug #44743 ------------------------------------------------------------
-	for tmp_arch in "ppc" "ppc64" "~ppc" "~ppc64"; do
-		if [ "${ARCH}" = "${tmp_arch}" ]; then
-			cd ${S} && epatch ${FILESDIR}/samba-3.0.x-smbumount-uid32.patch
-			break
-		fi
-	done
+	if [ ${ARCH} = "ppc" -o ${ARCH} = "ppc64" ]; then
+		cd ${S} && epatch ${FILESDIR}/samba-3.0.x-smbumount-uid32.patch
+	fi
 	#Fix for bug #27858 ----------------------------------------------------
-	for tmp_arch in "sparc" "~sparc" "ppc" "ppc64" "~ppc" "~ppc64"; do
-		if [ "${ARCH}" = "${tmp_arch}" ]; then
-			cd ${S}/source/include
-			epatch ${FILESDIR}/samba-2.2.8-statfs.patch
-			break
-		fi
-	done
+	if [ ${ARCH} = "sparc" -o ${ARCH} = "ppc" -o ${ARCH} = "ppc64" ]; then
+		cd ${S}/source/include && epatch ${FILESDIR}/samba-2.2.8-statfs.patch
+	fi
 	#Bug #36200; sys-kernel/linux-headers dependent ------------------------
 	sed -i -e 's:#define LINUX_QUOTAS_2:#define LINUX_QUOTAS_1:' \
 		-e 's:<linux/quota.h>:<sys/quota.h>:' \
@@ -124,14 +117,14 @@ src_compile() {
 		&& myconf="${myconf} --with-readline" \
 		|| myconf="${myconf} --without-readline"
 	#Fix #57063 ------------------------------------------------------------
+	# too cautious for some archs: maybe -O2 is sufficient on some of them
 	strip-flags
-	replace-flags -O? -O1
-	for tmp_arch in "ppc" "ppc64" "~ppc" "~ppc64"; do
-		if [ "${ARCH}" = "${tmp_arch}" ]; then
-			replace-flags -O? -O1
-			break
-		fi
-	done
+	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]; then
+		replace-flags -O? -O1
+	else
+		replace-flags -O? -O1
+	fi
+	#-----------------------------------------------------------------------
 	if [ "${ARCH}" != "amd64" ]; then
 		use kerberos && use ldap \
 			&& myconf="${myconf} --with-ads" \
@@ -204,7 +197,7 @@ src_compile() {
 		emake #${VSCAN_MODS}
 	fi
 	# Build mkntpasswd from the smbldap-tools ------------------------------
-	# Attention: use of dev-perl/Crypt-SmbHash for smbldap-tool > 0.8.5
+	# Attention: usage of dev-perl/Crypt-SmbHash for smbldap-tool > 0.8.5
 	if use ldap; then
 		cd ${WORKDIR}/smbldap-tools-${SMBLDAP_TOOLS_VER}
 		if [ -f mkntpwd.tar.gz]; then
@@ -338,26 +331,12 @@ src_install() {
 	chown -R root:root ${D}/usr/share/doc/${PF}
 	# moving manpages ------------------------------------------------------
 	mv ${D}/usr/man ${D}/usr/share/man
-	# moving libs ----------------------------------------------------------
-	#dodir ${D}/usr/lib/samba
-	#mv ${D}/usr/lib/vfs ${D}/usr/lib/samba
 }
 
 pkg_postinst() {
 	# touch /etc/samba/smb.conf so that people installing samba just
 	# to mount smb shares don't get annoying warnings all the time..
 	#[ ! -e ${ROOT}/etc/samba/smb.conf ] && touch ${ROOT}/etc/samba/smb.conf
-
-	### empty dirs..
-	##install -m0700 -o root -g root -d ${ROOT}/etc/samba/private
-	##install -m1777 -o root -g root -d ${ROOT}/var/spool/samba
-	##install -m0755 -o root -g root -d ${ROOT}/var/log/samba
-	##install -m0755 -o root -g root -d ${ROOT}/var/log/samba3
-	##install -m0755 -o root -g root -d ${ROOT}/var/run/samba
-	##install -m0755 -o root -g root -d ${ROOT}/var/cache/samba
-	##install -m0755 -o root -g root -d ${ROOT}/var/lib/samba/{netlogon,profiles}
-	##install -m0755 -o root -g root -d \
-	##		${ROOT}/var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC}
 
 	ewarn ""
 	ewarn "If you are upgrading from a Samba version prior to 3.0.2, and you"
@@ -379,3 +358,4 @@ pkg_postinst() {
 		einfo ""
 	fi
 }
+
