@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-2.0.1.ebuild,v 1.19 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-2.0.1.ebuild,v 1.20 2003/11/14 11:40:43 seemant Exp $
 
 inherit kde-base
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://quanta.sourceforge.net/"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
 
-DEPEND="sys-apps/tar
+DEPEND="app-arch/tar
 	sys-apps/bzip2"
 RDEPEND=""
 
