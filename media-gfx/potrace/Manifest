@@ -1,4 +1,6 @@
 MD5 f18d3cc26cd6b1073d82158fa6817a4b potrace-1.5.ebuild 713
-MD5 788d99f4857c21f804b7f8655865ba67 ChangeLog 604
 MD5 edc0a4ca02de4f7c3958060db8486845 metadata.xml 294
+MD5 3ebbabcedcc0a07188f8f3e456eeff09 ChangeLog 742
+MD5 377cc2e90b7f7d8b9fe4849520bd9041 potrace-1.6.ebuild 714
 MD5 8a5b21b00cc946b2ea6919a9a7be6787 files/digest-potrace-1.5 63
+MD5 c632fe18fd9d018a7013014840430508 files/digest-potrace-1.6 63
