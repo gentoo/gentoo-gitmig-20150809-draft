@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/curve/curve-1.7.ebuild,v 1.2 2004/04/16 00:50:57 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/curve/curve-1.7.ebuild,v 1.3 2004/05/06 15:45:57 ciaranm Exp $
 
 inherit latex-package
 
@@ -13,7 +13,7 @@ LICENSE="LPPL-1.2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 src_install() {
 
