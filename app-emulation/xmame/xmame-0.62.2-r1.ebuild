@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.62.2-r1.ebuild,v 1.1 2003/01/13 22:14:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.62.2-r1.ebuild,v 1.2 2003/01/13 22:18:15 rphillips Exp $
 
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts"
 
 P="xmame-0.62.2"
 S=${WORKDIR}/${P}
-DESCRIPTION="Multi Emulator Super System for X11"
+DESCRIPTION="Multiple Arcade Machine Emulator for X11"
 SRC_URI="http://x.mame.net/download/${P}.tar.bz2"
 HOMEPAGE="http://x.mame.net"
 SLOT="0"
@@ -41,8 +41,7 @@ src_unpack() {
 	cd ${S}
 	sed -e "s:CFLAGS    = -O -Wall:\#CFLAGS=:g" -e \
 	"s:PREFIX = /usr/local:PREFIX = /usr:g" -e \
-	"s:MANDIR = \$\(PREFIX\)/man/man6:MANDIR = \$\(PREFIX\)/share/man/man6:g" -e \
-	"s:TARGET = mame:TARGET = mess:g" \
+	"s:MANDIR = \$\(PREFIX\)/man/man6:MANDIR = \$\(PREFIX\)/share/man/man6:g" \
 	makefile.unix > makefile.unix.tmp
 	mv makefile.unix.tmp makefile.unix
 
@@ -72,7 +71,7 @@ src_unpack() {
 		sed -e "s/\# SOUND_ALSA/SOUND_ALSA/g" makefile.unix > makefile.unix.tmp
 		mv makefile.unix.tmp makefile.unix
 	fi
-	
+
 	if [ "`use arts`" ]; then
 		sed -e "s/\# SOUND_ARTS/SOUND_ARTS/g" makefile.unix > makefile.unix.tmp
 		mv makefile.unix.tmp makefile.unix
@@ -112,13 +111,12 @@ src_unpack() {
 		src/unix/video-drivers/gltool.h > src/unix/video-drivers/gltool.h.tmp
 		mv src/unix/video-drivers/gltool.h.tmp src/unix/video-drivers/gltool.h
 	fi
-
-
+	
 	if [ "`use dga`" ]; then
 		sed -e "s/\# X11_DGA = 1/X11_DGA = 1/g" \
 		makefile.x11 > makefile.x11.tmp
 		mv makefile.x11.tmp makefile.x11
-		if [ "`use 3dfx`"]; then
+		if [ "`use 3dfx`" ]; then
 			sed -e "s/\# TDFX_DGA_WORKAROUND/TDFX_DGA_WORKAROUND/g" \
 			makefile.x11 > makefile.x11.tmp
 			mv makefile.x11.tmp makefile.x11
@@ -127,7 +125,7 @@ src_unpack() {
 			sed -e "s/\# X11_DGA = 1/X11_DGA = 1/g" \
 			makefile.SDL > makefile.SDL.tmp
 			mv makefile.SDL.tmp makefile.SDL
-			if [ "`use 3dfx`"]; then
+			if [ "`use 3dfx`" ]; then
 				sed -e "s/\# TDFX_DGA_WORKAROUND/TDFX_DGA_WORKAROUND/g" \
 				makefile.SDL > makefile.SDL.tmp
 				mv makefile.SDL.tmp makefile.SDL
@@ -148,7 +146,7 @@ src_compile() {
 	# 08 Oct 2002 Caleb Shay
 	# Parallel makes breaks the build
 	MAKEOPTS=""
-	
+
 	GCCMAJ=`gcc -v 2>&1 | grep version | awk '{print $3}' | cut -f1 -d\.`
 
 	if [ ${ARCH} = "ppc" ] ; then
@@ -187,12 +185,11 @@ src_compile() {
 		cp makefile.ggi Makefile
 		emake CFLAGS="${MYFLAGS}" || die
 	fi
-
+	
 	if [ "`use opengl`" ]; then
 		cp makefile.xgl Makefile
 		emake CFLAGS="${MYFLAGS}" || die
 	fi
-
 }
 
 src_install () {
@@ -225,6 +222,7 @@ src_install () {
 			MANDIR=${D}/usr/share/man/man6 \
 			install
 	fi
+
 	if [ "`use opengl`" ]; then
 		cp makefile.xgl Makefile
 		make \
@@ -233,38 +231,37 @@ src_install () {
 			install
 	fi
 
-
 	dodoc doc/{changes.*,dga2.txt,gamelist.mame,readme.mame,xmamerc.dist}
 	dodoc doc/{xmame-doc.ps,xmame-doc.txt}
 
 	dohtml -r doc
 
 	if [ "`use X`" ] || [ "`use dga`" ] || [ "`use xv`" ]; then
-		dosym xmess.x11 /usr/bin/xmess
+		dosym xmame.x11 /usr/bin/xmame
 	fi
 
 }
 
 pkg_postinst() {
 
-	einfo "Your available MESS binaries are:"
+	einfo "Your available MAME binaries are:"
 	if [ "`use X`" ] || [ "`use dga`" ] || [ "`use xv`" ]; then
-		einfo "	xmess.x11";
+		einfo "	xmame.x11";
 	fi
 	if [ "`use sdl`" ]; then
-		einfo "	xmess.SDL"
+		einfo "	xmame.SDL"
 	fi
 	if [ "`use svga`" ]; then
-		einfo "	xmess.svgalib"
+		einfo "	xmame.svgalib"
 	fi
 	if [ "`use ggi`" ]; then
-		einfo "	xmess.ggi"
+		einfo "	xmame.ggi"
 	fi
 	if [ "`use opengl`" ]; then
-		einfo "	xmess.xgl"
+		einfo "	xmame.xgl"
 	fi
 	if [ "`use X`" ] || [ "`use dga`" ] || [ "`use xv`" ]; then
-		einfo "xmess is a symbolic link to xmess.x11"
+		einfo "xmame is a symbolic link to xmame.x11"
 	fi
 
 }
