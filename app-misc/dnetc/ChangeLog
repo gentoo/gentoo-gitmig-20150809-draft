@@ -1,10 +1,13 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.4 2002/12/13 10:56:13 blizzy Exp $
-
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.5 2002/12/26 22:56:19 mholzer Exp $
  
 *dnetc-2.9001.478 (03 Dec 2002)
+
+  26 Dec 2002; Martin Holzer <mholzer@gentoo.org> :
+  Added RDEP. Fixes #12725.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   03 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version update for the new RC5-72 contest.
