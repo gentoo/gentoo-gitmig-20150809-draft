@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.48 2003/05/26 06:42:22 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.49 2003/06/17 14:55:03 vapier Exp $
 
   26 May 2003; jje <jje@gentoo.org> xmms-1.2.7-r21.ebuild:
   Removing previous revision, patch needs more work - it breaks things.
@@ -19,6 +19,10 @@
   Submitted by: Jacob <waif@kefka.org>
 
 *xmms-1.2.7-r20 (18 Apr 2003)
+
+  17 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Rework ebuild to use `use_enable` and `use_with` instead of older styles.
+  Add filter-flags for large src files since xmms includes fts.h.
 
   18 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
   xmms-1.2.7-r20.ebuild:
