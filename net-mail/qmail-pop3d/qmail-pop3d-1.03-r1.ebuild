@@ -1,12 +1,15 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-pop3d/qmail-pop3d-1.03-r1.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-pop3d/qmail-pop3d-1.03-r1.ebuild,v 1.3 2002/07/17 05:07:51 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Pop3 configuration for qmail which used the maildirs of the users"
 HOMEPAGE="http://www.qmail.org"
-
 SRC_URI=""
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=net-mail/qmail-1.03-r6"
 

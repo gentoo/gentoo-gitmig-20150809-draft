@@ -1,5 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.1.11.ebuild,v 1.5 2002/07/17 05:07:50 seemant Exp $
 
 MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig
@@ -7,9 +8,11 @@ DESCRIPTION="The /bin/mail program, which is used to send mail via shell scripts
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/m/mailx/mailx_${MX_VER}.orig.tar.gz"
 HOMEPAGE="http://www.debian.org"
 
-DEPEND="virtual/glibc
-	>=net-libs/liblockfile-1.03"
+DEPEND=">=net-libs/liblockfile-1.03"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 
@@ -17,7 +20,7 @@ src_unpack() {
 	
 	cd ${S}
 	
-        patch -p1 < ${FILESDIR}/${PF}.diff || die
+	patch -p1 < ${FILESDIR}/${PF}.diff || die
 	patch -p1 < ${FILESDIR}/${PF}-version.diff || die
 	# It needs to install to /bin/mail (else conflicts with Postfix)
 	# Also man pages go to /usr/share/man for FHS compliancy
@@ -46,4 +49,3 @@ src_install() {
 	dosym mail /bin/Mail
 	dosym mail.1 /usr/share/man/man1/Mail.1
 }
-

@@ -1,22 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfilter/mailfilter-0.4.0.ebuild,v 1.1 2002/06/06 05:50:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfilter/mailfilter-0.4.0.ebuild,v 1.2 2002/07/17 05:07:50 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mailfilter is a utility to get rid of unwanted spam mails"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/mailfilter/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/mailfilter/${P}.tar.gz"
 HOMEPAGE="http://mailfilter.sourceforge.net/index.html"
 
-DEPEND="virtual/glibc 
-	nls? ( sys-devel/gettext )"
+DEPEND="virtual/glibc"
+RDEPEND="nls? ( sys-devel/gettext )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 
 	local myconf
-	if [ -z "`use nls`" ]
-	then
-		myconf="${myconf} --disable-nls"
-	fi
+	use nls || myconf="${myconf} --disable-nls"
 
 	./configure \
 		--host=${CHOST} \
@@ -30,6 +31,6 @@ src_install () {
 
 	make DESTDIR=${D} install || die
 	dodoc INSTALL doc/FAQ doc/rcfile.example1 doc/rcfile.example2
-
+	dodoc README THANKS ChangeLog AUTHORS NEWS TODO
 
 }

@@ -1,16 +1,23 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nail/nail-9.30.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nail/nail-9.30.ebuild,v 1.3 2002/07/17 05:07:50 seemant Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="Nail is a mail user agent derived from Berkeley Mail 8.1 and contains builtin support for MIME messages."
 SRC_URI="http://omnibus.ruf.uni-freiburg.de/~gritter/archive/nail/${P}.tar.gz"
 HOMEPAGE="http://omnibus.ruf.uni-freiburg.de/~gritter/"
+
 DEPEND="virtual/glibc"
 
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86"
+
 src_compile() {
-	./configure --infodir=/usr/share/info --mandir=/usr/share/man --prefix=/usr --host=${CHOST} --with-mailspool=~/.maildir || die "configure failed"
+	econf \
+		--with-mailspool=~/.maildir || die "configure failed"
+
 	emake || die "emake failed"
 }
 

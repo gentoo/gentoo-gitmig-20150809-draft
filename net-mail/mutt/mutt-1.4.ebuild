@@ -1,17 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4.ebuild,v 1.3 2002/07/17 05:07:50 seemant Exp $
 
-S=$WORKDIR/$P
+S=$WORKDIR/${P}
 DESCRIPTION="a small but very powerful text-based mail client"
 SRC_URI="ftp://ftp.mutt.org/pub/mutt/mutt-${PV}i.tar.gz"
 HOMEPAGE="http://www.mutt.org"
 
-DEPEND="virtual/glibc 
-	nls? ( sys-devel/gettext ) 
-	>=sys-libs/ncurses-5.2 
-	slang? ( >=sys-libs/slang-1.4.2 ) 
-	ssl? ( >=dev-libs/openssl-0.9.6 )"
+DEPEND=">=sys-libs/ncurses-5.2
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	slang? ( >=sys-libs/slang-1.4.2 )"
+
+RDEPEND="nls? ( sys-devel/gettext )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 	local myconf
@@ -41,4 +45,6 @@ src_install () {
 	find $D/usr/share/doc -type f |grep -v html | xargs gzip
 	insinto /etc/mutt
 	doins $FILESDIR/Muttrc
+
+	dodoc BEWARE COPYRIGHT ChangeLog NEWS OPS* PATCHES README* TODO VERSION
 }

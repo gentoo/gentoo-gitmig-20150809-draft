@@ -1,8 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.76.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.76.ebuild,v 1.3 2002/07/17 05:07:50 seemant Exp $
 
 S=${WORKDIR}/${P}
+DESCRIPTION="Mail server network protocol front-ends."
+SRC_URI="http://untroubled.org/mailfront/${P}.tar.gz"
+HOMEPAGE="http://untroubled.org/mailfront/"
 
 DEPEND="virtual/glibc
 	dev-libs/bglibs"
@@ -12,10 +15,8 @@ RDEPEND="net-mail/cvm-vmailmgr
 	net-mail/qmail-pop3d"
 
 SLOT="0"
-
-DESCRIPTION="Mail server network protocol front-ends."
-SRC_URI="http://untroubled.org/mailfront/${P}.tar.gz"
-HOMEPAGE="http://untroubled.org/mailfront/"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 	cd ${S}
@@ -36,6 +37,7 @@ src_install () {
 	exeinto /var/qmail/supervise/qmail-pop3d
 	newexe ${FILESDIR}/run-pop3front run
 
+	dodoc ANNOUNCEMENT FILES NEWS README TARGETS TODO VERSION
 }
 
 pkg_postinst() {

@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Modified by $HOME/.maildir by Craig Joly <craig@taipan.mudshark.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r2.ebuild,v 1.3 2002/07/16 14:12:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r2.ebuild,v 1.4 2002/07/17 05:07:51 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -10,6 +9,10 @@ HOMEPAGE="http://www.procmail.org/"
 
 DEPEND="virtual/glibc
         virtual/mta"
+
+SLOT="0"
+LICENSE="Artistic | GPL"
+KEYWORDS="x86"
 
 src_compile() {
 

@@ -21,8 +21,10 @@ DEPEND=">=sys-libs/db-3.2
 RDEPEND="${DEPEND} 
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
-LICENSE="IPL-1"
+
 SLOT="0"
+LICENSE="IPL-1"
+KEYWORDS="x86"
 
 pkg_setup() {
 	if ! grep -q ^postdrop: /etc/group ; then

@@ -1,6 +1,6 @@
 # Copyright 2001-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nmh/nmh-1.0.4-r2.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nmh/nmh-1.0.4-r2.ebuild,v 1.3 2002/07/17 05:07:50 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="New MH mail reader"
@@ -8,6 +8,8 @@ SRC_URI="ftp://ftp.mhost.com/pub/nmh/${P}.tar.gz"
 HOMEPAGE="http://www.mhost.com/nmh/"
 
 SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	=sys-libs/db-1.85*
@@ -53,6 +55,6 @@ src_install() {
 		libdir=${D}/usr/bin \
 		etcdir=${D}/etc/nmh install || die
 	dodoc COMPLETION-TCSH COMPLETION-ZSH TODO FAQ DIFFERENCES \
-		MAIL.FILTERING Changelog*
+		MAIL.FILTERING Changelog* COPYRIGHT
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r3.ebuild,v 1.1 2002/07/13 20:17:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r3.ebuild,v 1.2 2002/07/17 05:07:51 seemant Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -21,8 +21,10 @@ DEPEND=">=sys-libs/db-3.2
 RDEPEND="${DEPEND} 
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
-LICENSE="IPL-1"
+
 SLOT="0"
+LICENSE="IPL-1"
+KEYWORDS="x86"
 
 pkg_setup() {
 	if ! grep -q ^postdrop: /etc/group ; then

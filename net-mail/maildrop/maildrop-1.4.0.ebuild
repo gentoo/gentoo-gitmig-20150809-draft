@@ -1,15 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.4.0.ebuild,v 1.1 2002/06/24 20:33:45 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.4.0.ebuild,v 1.2 2002/07/17 05:07:49 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.gz"
 HOMEPAGE="http://www.flounder.net/~mrsam/maildrop/index.html"
 
-DEPEND="virtual/glibc >=sys-libs/gdbm-1.8.0 sys-devel/perl"
+DEPEND=">=sys-libs/gdbm-1.8.0
+	sys-devel/perl"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 	# These next two lines are a MUST! If tries to unroll the loops in
