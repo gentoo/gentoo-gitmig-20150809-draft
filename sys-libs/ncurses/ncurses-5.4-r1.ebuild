@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.2 2004/03/08 22:33:23 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.3 2004/03/12 05:25:09 solar Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 filter-flags -fno-exceptions
@@ -33,6 +33,7 @@ src_compile() {
 	# Shared objects are compiled properly with -fPIC, but
 	# standard libs also require this.
 	64-bit && append-flags -fPIC
+	filter-flags -pie
 
 	# Detect mips systems
 	use mips && gnuconfig_update
