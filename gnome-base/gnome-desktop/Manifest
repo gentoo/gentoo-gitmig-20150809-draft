@@ -1,13 +1,23 @@
-MD5 46ea6eaed58209fc1ee8ddeb89eb5ffa gnome-desktop-2.6.2.ebuild 1242
-MD5 7338f2fb8ee0610e04775028662c1608 gnome-desktop-2.8.0.ebuild 1247
-MD5 b16e0a19c399a6cac2cf297a3378fb5b gnome-desktop-2.6.1.ebuild 1243
-MD5 4fc92e4119d588ca54b2d7e6c0105226 gnome-desktop-2.6.0.1.ebuild 1238
-MD5 e2c9ec598421ae53ca1f1fae2d4a64e8 gnome-desktop-2.4.1.1.ebuild 1525
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ec99b9c593f9947d7ab54361e47db022 ChangeLog 9206
+MD5 e36d9b827d6f3d76cc2430cf4fdb0d3e gnome-desktop-2.6.1.ebuild 1230
+MD5 e86f0bca93a899f0ac16b3a01ceac997 gnome-desktop-2.6.0.1.ebuild 1228
+MD5 8e73d54499abd74332161676dd965bef gnome-desktop-2.6.2.ebuild 1232
+MD5 bf87a18e3b672a4e299f2a1ac7b37668 gnome-desktop-2.4.1.1.ebuild 1514
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 66cf0386beeacad0617909c364c6ab37 files/digest-gnome-desktop-2.4.1.1 75
-MD5 8e943c5d49e88e9088c320d48090b4ff files/digest-gnome-desktop-2.6.0.1 75
+MD5 2b75a25ca55ae9638e8474c5f791210b gnome-desktop-2.8.0.ebuild 1237
 MD5 66df6fdf1d0e91cc642b296b823ad2d4 files/digest-gnome-desktop-2.6.1 73
-MD5 7da730c589038e00931bb8894d5a9054 files/digest-gnome-desktop-2.6.2 73
-MD5 d2aa408f8ca1d7a5a752c31886b97213 files/digest-gnome-desktop-2.8.0 73
+MD5 8e943c5d49e88e9088c320d48090b4ff files/digest-gnome-desktop-2.6.0.1 75
 MD5 821d72fd07e396d980c3940523a387be files/gnome-desktop-2.4-no_deprecated_about.patch 1641
+MD5 7da730c589038e00931bb8894d5a9054 files/digest-gnome-desktop-2.6.2 73
+MD5 66cf0386beeacad0617909c364c6ab37 files/digest-gnome-desktop-2.4.1.1 75
+MD5 d2aa408f8ca1d7a5a752c31886b97213 files/digest-gnome-desktop-2.8.0 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhUl1HTu7gpaalycRAiguAJ9Z3aGi4KmTjGw6XqY9K2S/UVY8OgCeNbDn
+GI7ThEFLsp+3SjhmcNxvnLc=
+=aXM5
+-----END PGP SIGNATURE-----

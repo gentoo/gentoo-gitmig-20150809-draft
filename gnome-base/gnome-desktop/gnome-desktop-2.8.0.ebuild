@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.8.0.ebuild,v 1.1 2004/09/15 22:42:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.8.0.ebuild,v 1.2 2004/10/31 20:21:42 vapier Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Libraries for the gnome desktop that is not part of the UI"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="GPL-2 FDL-1.1 LGPL-2"
 
-IUSE=""
+LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips ~ppc64"
+IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.1.2
 	>=gnome-base/libgnomeui-2.1
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	sys-devel/autoconf"
 
-DOCS="AUTHORS ChangeLog COPYING* README INSTALL NEWS HACKING"
+DOCS="AUTHORS ChangeLog README INSTALL NEWS HACKING"
 
 src_unpack() {
 
@@ -36,7 +36,7 @@ src_unpack() {
 	# Set vendor info
 	sed -i 's:GNOME.Org:Gentoo Linux:' configure.in || die "sed failed (1)"
 
-	WANT_AUTOCONF_2_5=1 autoconf || die
+	WANT_AUTOCONF=2.5 autoconf || die
 
 	# Fix bug 16853 by building gnome-about with IEEE to prevent
 	# floating point exceptions on alpha
