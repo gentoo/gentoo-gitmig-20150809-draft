@@ -11,4 +11,4 @@ SRC_URI="http://cpan.valueclick.com/authors/id/I/IL/ILYAZ/modules/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc ~alpha"

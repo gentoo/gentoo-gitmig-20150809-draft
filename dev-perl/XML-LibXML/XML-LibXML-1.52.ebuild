@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.52.ebuild,v 1.5 2002/12/09 04:21:11 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.52.ebuild,v 1.6 2003/02/13 07:36:55 gerk Exp $
 
 
 inherit perl-module
@@ -12,7 +12,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Pro
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 alpha ~ppc sparc "
+KEYWORDS="x86 alpha ppc sparc "
 
 DEPEND="${DEPEND}
 	>=dev-perl/XML-SAX-0.10
