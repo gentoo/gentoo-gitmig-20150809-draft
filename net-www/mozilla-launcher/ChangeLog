@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.20 2004/07/26 23:38:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.21 2004/08/05 22:10:09 agriffis Exp $
+
+*mozilla-launcher-1.16 (05 Aug 2004)
+
+  05 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-launcher-1.16.ebuild:
+  Use MOZILLA_FIVE_HOME instead of hardcoded path for thunderbird/Thunderbird
+  test #56894
 
   26 Jul 2004; Aron Griffis <agriffis@gentoo.org>
   -mozilla-launcher-1.10.ebuild, mozilla-launcher-1.15.ebuild:
