@@ -133,10 +133,12 @@ x11-themes/gtk-xfce-engine
 >=gnome-extra/libgtkhtml-2.0.1
 >=gnome-extra/yelp-1.0.2
 
-
 # Gabriele Giorgetti <stroke@gentoo.org> (05 Aug 2002)
 # other gnome2 packages masked for testing
 >=gnome-base/gdm-2.4.0.5
+>=gnome-base/eel-2.0.3
+>=gnome-base/nautilus-2.0.3
+
 
 # Donny Davies <woodchip@gentoo.org> (03 Aug 2002)
 # Needs to wait for the next baselayout release.
