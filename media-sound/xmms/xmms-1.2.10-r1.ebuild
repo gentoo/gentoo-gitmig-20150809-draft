@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r1.ebuild,v 1.10 2004/06/25 00:29:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r1.ebuild,v 1.11 2004/07/14 21:08:41 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -118,7 +118,7 @@ src_compile() {
 	local myconf=""
 
 	# Allow configure to detect mipslinux systems
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	if use amd64; then
 		myconf="${myconf} --disable-simd"

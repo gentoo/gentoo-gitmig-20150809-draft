@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.17 2004/06/25 00:29:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.18 2004/07/14 21:08:41 agriffis Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk gtk2 alsa"
 
@@ -102,7 +102,7 @@ src_compile() {
 	local myconf=""
 
 	# Allow configure to detect mipslinux systems
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	if use amd64; then
 		myconf="${myconf} --disable-simd"
