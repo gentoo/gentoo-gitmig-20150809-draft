@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.10 2004/06/26 09:17:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.11 2004/08/05 09:56:39 solar Exp $
+
+  05 Aug 2004; <solar@gentoo.org> bzip2-1.0.2-r3.ebuild:
+  added local USE flag cross because bzip2 will to run itself after it has
+  compiled itself which we can't do when we are cross compiling
 
   26 Jun 2004; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r3.ebuild:
   my mistake
