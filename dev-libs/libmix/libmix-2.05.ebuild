@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05.ebuild,v 1.8 2005/04/06 03:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05.ebuild,v 1.9 2005/04/06 05:13:30 vapier Exp $
+
+inherit multilib
 
 DESCRIPTION="Programs Crypto/Network/Multipurpose Library"
 HOMEPAGE="http://mixter.void.ru/"
