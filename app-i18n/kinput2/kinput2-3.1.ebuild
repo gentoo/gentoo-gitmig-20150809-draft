@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1.ebuild,v 1.5 2003/09/08 00:55:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1.ebuild,v 1.6 2004/03/25 07:28:27 mr_bones_ Exp $
 
 MY_P="${PN}-v${PV}"
 DESCRIPTION="A Japanese input server which supports the XIM protocol"
@@ -14,7 +14,8 @@ IUSE="canna freewnn"
 
 DEPEND="virtual/glibc
 	canna? >=app-i18n/canna-3.5_beta2-r1
-	freewnn? >=app-i18n/freewnn-1.1.1_alpha19 : >=app-i18n/canna-3.5_beta2-r1"
+	freewnn? ( >=app-i18n/freewnn-1.1.1_alpha19 )
+	!freewnn? ( >=app-i18n/canna-3.5_beta2-r1 )"
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {

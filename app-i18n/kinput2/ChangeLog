@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/kinput2
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.13 2003/11/18 15:05:10 matsuu Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.14 2004/03/25 07:28:27 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kinput2-3.1-r1.ebuild,
+  kinput2-3.1.ebuild:
+  don't use deprecated ? : use syntax
 
   19 Nov 2003; MATSUU Takuto <matsuu@gentoo.org> kinput2-3.1-r1.ebuild:
   Marked ~amd64.
