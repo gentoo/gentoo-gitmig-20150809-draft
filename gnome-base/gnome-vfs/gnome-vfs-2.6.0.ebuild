@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.5.91.ebuild,v 1.1 2004/03/19 01:13:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.0.ebuild,v 1.1 2004/03/22 13:33:57 foser Exp $
 
 # FIXME : can use gnutls
 inherit gnome2 eutils
@@ -28,7 +28,6 @@ RDEPEND=">=dev-libs/glib-2
 	ssl? ( >=dev-libs/openssl-0.9.5
 		!gnome-extra/gnome-vfs-sftp )
 	samba? ( >=net-fs/samba-3 )"
-#	gnome-base/gnome-keyring
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29

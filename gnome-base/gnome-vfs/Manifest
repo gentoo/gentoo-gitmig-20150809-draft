@@ -1,3 +1,4 @@
+MD5 103a469f3242ecc96608afa13c513e4e gnome-vfs-2.6.0.ebuild 1315
 MD5 0a64f21abd8484952e644a2d3702bc37 gnome-vfs-2.4.1.ebuild 1044
 MD5 bb0dbb43366b1fb9eb6ce94459001c33 gnome-vfs-2.4.2-r1.ebuild 1063
 MD5 0df2324101e6ea8594ec5b5682d903be gnome-vfs-1.0.5-r3.ebuild 1581
@@ -10,6 +11,7 @@ MD5 4f62caf658dd12be28bed9e464f0913b files/digest-gnome-vfs-2.5.91 70
 MD5 a88e201c8f2ec5444db0bea2e8c302b4 files/digest-gnome-vfs-1.0.5-r3 68
 MD5 7803b9dff2675a9dcf670ad1128a1d36 files/digest-gnome-vfs-2.4.0 69
 MD5 f0d9fa08ccb4ec34316561d25051dab4 files/digest-gnome-vfs-2.4.1 69
+MD5 48146c7a23e8af499720b290a58b7417 files/digest-gnome-vfs-2.6.0 69
 MD5 25d42b1a4cf935fbedd3465bc4a8dd7c files/1.0/gnome-vfs-1.0.5-proxy.patch 2863
 MD5 4072a11c3c98c493cbc0bb851176fb44 files/1.0/gnome-vfs-1.0.5-codeset.patch 1762
 MD5 071edd844b13f596a2f7d986b4512521 files/1.0/gnome-vfs-1.0.5-fix-segfault.patch 430
