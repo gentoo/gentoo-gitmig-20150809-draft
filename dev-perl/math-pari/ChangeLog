@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.7 2004/04/20 05:56:25 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.8 2004/06/08 20:39:21 mr_bones_ Exp $
+
+  08 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  math-pari-2.010500.ebuild:
+  clean older ugly ebuild
 
   20 Apr 2004; Patrick Kursawe <phosphan@gentoo.org>
   math-pari-2.010500-r1.ebuild:
