@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/bin/lisp -quiet -noinit -batch -load ${1+"$@"}

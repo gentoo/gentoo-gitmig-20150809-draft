@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/cmucl-bin-18e.ebuild,v 1.3 2003/06/10 04:17:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/cmucl-bin-18e.ebuild,v 1.4 2003/09/08 09:59:50 mkennedy Exp $
 
 DESCRIPTION="CMUCL Lisp. This conforms to the ANSI Common Lisp Standard"
 HOMEPAGE="http://www.cons.org/cmucl/"
@@ -45,8 +45,8 @@ src_install() {
 
 	[ -f /etc/lisp-config.lisp ] || touch ${D}/etc/lisp-config.lisp
 
- 	dodir /etc/env.d
- 	cat >${D}/etc/env.d/50cmucl <<EOF
+	dodir /etc/env.d
+	cat >${D}/etc/env.d/50cmucl <<EOF
 CMUCLLIB=/usr/lib/cmucl
 EOF
 	mv ${D}/usr/lib/cmucl/lib/lisp.core ${D}/usr/lib/cmucl/lib/lisp-dist.core
@@ -58,6 +58,8 @@ EOF
 	exeinto /usr/lib/common-lisp/bin
 	cp ${FILESDIR}/cmucl-script.sh cmucl.sh
 	doexe cmucl.sh
+
+	dobin ${FILESDIR}/lisp-start
 }
 
 pkg_postinst() {
