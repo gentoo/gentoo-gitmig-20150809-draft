@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/shorten
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/ChangeLog,v 1.12 2004/09/15 17:26:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/ChangeLog,v 1.13 2004/10/19 06:23:05 eradicator Exp $
+
+  18 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  shorten-3.6.0.ebuild:
+  Stable amd64, sparc, x86.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> shorten-3.5.1.ebuild:
   Stable amd64, sparc.

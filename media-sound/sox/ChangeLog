@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.33 2004/10/17 23:43:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.34 2004/10/19 06:20:49 eradicator Exp $
+
+  18 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  sox-12.17.5-r1.ebuild:
+  Stable amd64, sparc, x86.
 
   18 Oct 2004; Joseph Jezak <josejx@gentoo.org>
   +files/sox-wav-segfault.patch, sox-12.17.4-r2.ebuild,
