@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r11.ebuild,v 1.7 2004/08/30 17:35:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r11.ebuild,v 1.8 2004/10/03 15:11:28 usata Exp $
 
 IUSE="cjk"
 
-ONIGURUMA="onigd2_3_1"
+ONIGURUMA="onigd2_3_2"
 SNAP_DATE="2004.07.28"
 MY_P="${P}-${SNAP_DATE}"
 S="${WORKDIR}/${MY_P}"

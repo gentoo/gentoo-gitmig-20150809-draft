@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r7.ebuild,v 1.4 2004/09/23 13:07:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r7.ebuild,v 1.5 2004/10/03 15:11:28 usata Exp $
 
-ONIGURUMA="onigd2_3_1"
+ONIGURUMA="onigd2_3_2"
 MY_P=${P/_pre/-preview}
 
 inherit flag-o-matic alternatives eutils gnuconfig
