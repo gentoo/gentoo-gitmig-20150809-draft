@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4777450563039f77b6e47bc58e2b4139 ChangeLog 978
+MD5 e12538f557468eac27c3ad5b57e179ff ChangeLog 1064
 MD5 ce60edd9f385217e92b6d41b04ef4f34 libassuan-0.6.2.ebuild 527
 MD5 16c0db00cc7d076f8db38f528fb9f70f libassuan-0.6.4.ebuild 544
 MD5 0b0acfa2d902d681dbfac2beeee4113d libassuan-0.6.5.ebuild 552
-MD5 2155641d837e3bdd85648074eab91ea2 libassuan-0.6.6.ebuild 615
+MD5 048a7d62900e68ce76e86ce340d68da2 libassuan-0.6.6.ebuild 619
 MD5 9a906ee3977f8f5e815569ae8fd8d056 files/digest-libassuan-0.6.2 67
 MD5 90eb33ade8aa7d88927db4aa64468bc6 files/digest-libassuan-0.6.4 67
 MD5 3be340d734ec0f4d8c8eb662a3921cac files/digest-libassuan-0.6.5 67
 MD5 a671c7c7d83bec2b32067b3ab449e125 files/digest-libassuan-0.6.6 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBHscgHTu7gpaalycRAgIoAKDhwZlxWGMP8WtF0hiTtAAE/JuVLwCfaklM
-8X2p/L+O2gyrQTZsbanVSdA=
-=pCSW
------END PGP SIGNATURE-----
