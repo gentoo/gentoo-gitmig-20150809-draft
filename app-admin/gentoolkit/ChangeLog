@@ -1,7 +1,16 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.3 2002/02/03 11:40:24 vitaly Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.4 2002/02/11 15:28:47 vitaly Exp $
 
+
+*gentoolkit-0.1.2 (11 Feb 2002)
+
+  11 Feb 2002; Vitaly Kushneriuk <vitaly@gentoo.org> files/scripts/qpkg:
+
+  Bugfixes in qpkg:
+    Fixed "-f" mode for directories.
+    Fixed package name parsing to comply with the latest portage SLOT changes
+  
 *gentoolkit-0.1.1 (3 Feb 2002)
 
   3 Feb 2002; Vitaly Kushneriuk <vitaly@gentoo.org>:

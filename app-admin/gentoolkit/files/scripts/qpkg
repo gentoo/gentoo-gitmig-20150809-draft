@@ -5,7 +5,7 @@
 # Copiright (c) Vitaly Kushneriuk <vitaly_kushneriuk@yahoo.com>
 # This program is distributed under the terms of GPL version 2.
 #
-ID='$Id: qpkg,v 1.2 2002/02/03 11:32:39 vitaly Exp $'
+ID='$Id: qpkg,v 1.3 2002/02/11 15:28:47 vitaly Exp $'
 VERSION=0.`echo $ID | cut -d\  -f3`
 
 PROG=`basename $0`
@@ -202,7 +202,7 @@ if [ "$ffind" ]; then
 		| xargs --no-run-if-empty -n 1 dirname`
 	else
 		dirs=`ls /var/db/pkg/$group/*/CONTENTS \
-		| xargs grep -l " $arg " \
+		| xargs grep -l " $arg\( .*\)*$" \
 		| xargs --no-run-if-empty -n 1 dirname`
 	fi
 	ipak=`(
@@ -228,7 +228,7 @@ for p in $ipak $upak -;do
 
 	# cut common prefix from ebuild name and mark installed/uninstalled packages
 	# Note: iii/uuu will be replaced by the pipe at the end
-	n=`echo $p | sed -e "s:^/var/db/pkg/$X/$X.*:iii \1/\2:" \
+	n=`echo $p | sed -e "s:^/var/db/pkg/$X/$X/$X.ebuild:iii \1/\3:" \
 		-e "s:^/usr/portage/$X/$X/$X\.ebuild:uuu \1/\3:"`
 	d=`dirname $p`
 	echo $n
@@ -254,7 +254,7 @@ for p in $ipak $upak -;do
 				if [ "$fpat" ]; then
 					grep "$arg" $d/CONTENTS
 				else
-					grep " $arg " $d/CONTENTS
+					grep " $arg\( .*\)*$" $d/CONTENTS
 				fi
 			else
 				cat $d/CONTENTS
