@@ -1,24 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popfile/popfile-0.21.1.ebuild,v 1.4 2004/04/17 20:26:05 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popfile/popfile-0.20.1.ebuild,v 1.1 2004/04/17 20:26:05 stuart Exp $
 
 IUSE=""
 
 S=${WORKDIR}
-DESCRIPTION="Anti-spam bayesian filter"
-HOMEPAGE="http://popfile.sourceforge.net/"
+DESCRIPTION="Anti-spam filter"
+HOMEPAGE="http://foo.bar.com/"
 SRC_URI="mirror://sourceforge/popfile/${P}.zip"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-lang/perl-5.8
-	dev-perl/Digest-MD5
+	>=dev-perl/BerkeleyDB-0.25
 	dev-perl/Text-Kakasi
 	dev-perl/MIME-Base64
-	dev-perl/HTML-Tagset
-	dev-perl/DBD-SQLite"
+	dev-perl/HTML-Tagset"
+
 
 src_compile() {
 	# do nothing
