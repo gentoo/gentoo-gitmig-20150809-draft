@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-0.9.4.ebuild,v 1.1 2004/02/28 07:59:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-0.9.4.ebuild,v 1.2 2004/03/30 14:27:35 aliz Exp $
 
 DESCRIPTION="KSBA makes X.509 certificates and CMS easily accessible to applications"
 HOMEPAGE="http://www.gnupg.org/"
@@ -10,8 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND=""
-RDEPEND=""
+DEPEND="dev-libs/libgpg-error"
 
 src_install(){
 	make DESTDIR=${D} install || die
