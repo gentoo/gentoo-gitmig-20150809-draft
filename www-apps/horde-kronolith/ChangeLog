@@ -1,0 +1,58 @@
+# ChangeLog for net-www/horde-kronolith
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.1 2004/08/15 12:26:37 stuart Exp $
+
+*horde-kronolith-1.1.2 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +horde-kronolith-1.1.2.ebuild:
+  Moved from net-www/horde-kronolith to www-apps/horde-kronolith.
+
+  01 Apr 2004; Chris Aniszczyk <zx@gentoo.org> horde-kronolith-1.1.2.ebuild,
+  horde-kronolith-1.1.ebuild:
+  Marking ~hppa
+
+*horde-kronolith-1.1.2 (21 Mar 2004)
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org>
+  horde-kronolith-1.1.2.ebuild:
+  Version bumped.
+
+*horde-kronolith-1.1.1 (26 Feb 2004)
+
+  26 Feb 2004; Martin Holzer <mholzer@gentoo.org>
+  horde-kronolith-1.1.1.ebuild:
+  Version bumped.
+
+  07 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  horde-kronolith-1.1.ebuild:
+  fix bug #37492 and update copyright headers
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> horde-kronolith-1.1.ebuild:
+  Fix for bug #32636
+
+  04 Dec 2003; Martin Holzer <mholzer@gentoo.org> horde-kronolith-1.1.ebuild:
+  fixing coreutils chown.
+
+  12 Nov 2003; Martin Holzer <mholzer@gentoo.org> horde-kronolith-1.1.ebuild:
+  webapps-apache.
+
+  19 Oct 2003; Martin Holzer <mholzer@gentoo.org> horde-kronolith-1.1.ebuild:
+  Marked x86 stable.
+
+*horde-kronolith-1.1 (11 May 2003)
+  11 May 2003; Dean Bailey <alron@gentoo.org> horde-kronolith-1.1 :
+  Version bump to 1.1 final.
+
+*horde-kronolith-1.1_rc3 (10 Apr 2003)
+  10 Apr 2003; Dean Bailey <alron@gentoo.org> horde-kronolith-1.1_rc3 :
+  Version bump to rc3 to fix issue with brokeness due to updates in primary
+  horde framework.
+
+*horde-kronolith-1.0-r1 (08 Apr 2003)
+  08 Apr 2003; Dean Bailey <alron@gentoo.org> horde-kronolith-1.0-r1 :
+  Fixed problem that cropped up when updating kronolith.
+
+*horde-kronolith-1.0 (03 Feb 2003)
+  03 Feb 2003; Dean Bailey <alron@gentoo.org> horde-kronolith-1.0 :
+  Initial import. 
