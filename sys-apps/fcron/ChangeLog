@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.38 2004/11/17 00:49:52 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.39 2004/11/17 13:46:24 ka0ttic Exp $
+
+  17 Nov 2004; Aaron Walker <ka0ttic@gentoo.org>
+  -files/fcron-2.0.0-gcc34.diff, -files/fcron-2.9.4-selinuxupdate.diff,
+  -files/fcron.conf-2.9.4, -files/fcron.conf-2.9.5, -fcron-2.0.0-r4.ebuild,
+  -fcron-2.0.1.ebuild, fcron-2.0.2.ebuild, -fcron-2.9.4.ebuild,
+  -fcron-2.9.5.ebuild:
+  Marked 2.0.2 stable on hppa for bug 71311; removed vulnerable versions and
+  respective patches.
 
   16 Nov 2004; Hardave Riar <hardave@gentoo.org> fcron-2.0.2.ebuild:
   Stable on mips, bug #71311
