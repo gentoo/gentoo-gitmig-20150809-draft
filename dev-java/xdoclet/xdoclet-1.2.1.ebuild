@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.1.ebuild,v 1.2 2004/07/23 16:56:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.1.ebuild,v 1.3 2004/08/01 20:51:34 dholm Exp $
 
 XJAVADOC_PV=1.0.3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.tgz
 	mirror://gentoo/xjavadoc-${XJAVADOC_PV}-src.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="jikes"
 
 RDEPEND=">=virtual/jdk-1.3"
