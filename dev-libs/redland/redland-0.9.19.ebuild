@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-0.9.19.ebuild,v 1.1 2004/11/11 02:38:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-0.9.19.ebuild,v 1.2 2004/11/11 13:36:53 vapier Exp $
 
 DESCRIPTION="High-level interface for the Resource Description Framework"
-HOMEPAGE="http://www.redland.opensource.ac.uk/"
-SRC_URI="http://www.redland.opensource.ac.uk/dist/source/${P}.tar.gz"
+HOMEPAGE="http://librdf.org/"
+SRC_URI="http://librdf.org/dist/source/${P}.tar.gz"
 
-LICENSE="LGPL-2 MPL-1.1"
+LICENSE="LGPL-2 Apache-2.0"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE="mysql ssl"
