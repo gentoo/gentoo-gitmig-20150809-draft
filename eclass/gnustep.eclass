@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.21 2004/11/12 03:46:33 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.22 2005/03/21 09:12:42 fafhrd Exp $
 
 inherit gnustep-funcs eutils flag-o-matic
 
@@ -85,6 +85,9 @@ gnustep_pkg_setup() {
 		# strict-aliasing is known to break obj-c stuff in gcc-3.4*
 		filter-flags -fstrict-aliasing
 	fi
+
+	# known to break ObjC (bug 86089)
+	filter-flags -fomit-frame-pointer
 }
 
 gnustep_src_compile() {
