@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aes-crypt/aes-crypt-1.0.7.ebuild,v 1.3 2003/08/15 06:58:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aes-crypt/aes-crypt-1.0.7.ebuild,v 1.4 2004/03/13 21:50:28 mr_bones_ Exp $
 
 At="${PN/-crypt/}-${PV}"
 DESCRIPTION="Command line program ('aes') to encrypt and decrypt data using the Rijndael algorythm"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.4_p2.ebuild,v 1.2 2003/12/12 22:31:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.4_p2.ebuild,v 1.3 2004/03/13 21:50:28 mr_bones_ Exp $
 
 MY_PN="bcrypt"
 DESCRIPTION="commercially licensed transparent filesystem encryption"
