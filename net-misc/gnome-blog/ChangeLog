@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gnome-blog
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.2 2003/12/10 19:57:51 leonardop Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.3 2004/03/10 09:12:43 leonardop Exp $
+
+  10 Mar 2004; L. Boshell <leonardop@gentoo.org> gnome-blog-0.7.ebuild:
+  Add gnome-python dependency. Closes bug #44191.
 
   10 Dec 2003; L. Boshell <leonardop@gentoo.org> gnome-blog-0.7.ebuild:
   Marked as stable on x86.
