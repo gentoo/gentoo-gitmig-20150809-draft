@@ -1,6 +1,8 @@
 # ChangeLog for app-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.5 2002/03/20 06:05:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.6 2002/04/07 20:42:39 danarmak Exp $
+
+  07 Apr 2002; Dan Armak <danarmak@gentoo.org> removed obsolete kde-env dep, fixes bug #1581.
 
 *xscreensaver-4.02 (19 Mar 2002)
 

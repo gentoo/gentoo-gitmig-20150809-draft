@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.02.ebuild,v 1.1 2002/03/20 06:05:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.02.ebuild,v 1.2 2002/04/07 20:42:39 danarmak Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="a modular screensaver for X11"
@@ -13,16 +13,14 @@ DEPEND="virtual/x11 sys-devel/bc
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	opengl? ( virtual/opengl >=media-libs/gle-3.0.1 )
 	gnome? ( >=gnome-base/control-center-1.4.0.1-r1 )
-	pam? ( >=sys-libs/pam-0.75 )
-	kde? ( kde-base/kde-env )"
+	pam? ( >=sys-libs/pam-0.75 )"
 
 RDEPEND="virtual/x11
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	opengl? ( virtual/opengl >=media-libs/gle-3.0.1 )
 	gnome? ( >=gnome-base/control-center-1.4.0.1-r1 )
-	pam? ( >=sys-libs/pam-0.75 )
-	kde? ( kde-base/kde-env )"
+	pam? ( >=sys-libs/pam-0.75 )"
 
 src_compile() {
 	local myconf=""
@@ -77,10 +75,9 @@ src_compile() {
 }
 
 src_install() {
-	if [ "$KDEDIR" ]
-	then
-		dodir "$KDEDIR/bin"
-	fi
+
+	[ -n "$KDEDIR" ] && dodir "$KDEDIR/bin"
+	
 	make install_prefix="${D}" install || die
 
 	# Fix double Control Center entry
@@ -91,5 +88,8 @@ src_install() {
 		insinto /etc/pam.d
 		doins "${FILESDIR}/pam.d/xscreensaver"
 	fi
+	
+	[ -n "`use kde`" ] || rm -rf ${D}/${KDEDIR}
+	
 }
 
