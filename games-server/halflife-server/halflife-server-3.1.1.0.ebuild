@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.0.ebuild,v 1.4 2003/11/30 11:41:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.0.ebuild,v 1.5 2003/12/17 23:42:35 vapier Exp $
 
 inherit games eutils
 
@@ -8,7 +8,7 @@ MY_PV=${PV//.}
 MY_PN=hlds_l_${MY_PV}_full
 DESCRIPTION="Halflife Linux Server"
 HOMEPAGE="http://www.valve.com/"
-SRC_URI="${MY_PN}.bin"
+SRC_URI="${MY_PN}.bin boffix_v3.tar.gz"
 
 LICENSE="ValveServer"
 SLOT="0"
@@ -23,6 +23,8 @@ S=${WORKDIR}/hlds_l
 pkg_nofetch() {
 	einfo "Please goto fileplanet and d/l ${MY_BIN}"
 	einfo "http://www.fileplanet.com/files/50000/58368.shtml"
+	einfo "Then download boffix_v3.tar.gz from here:"
+	einfo "http://miklos.clanhost.dk/boffix_v3.tar.gz"
 }
 
 src_unpack() {
@@ -30,6 +32,9 @@ src_unpack() {
 	echo ">>> Unpacking ${MY_PN}.tar.gz to ${S}"
 	tar -zxf ${MY_PN}.tar.gz
 	rm ${MY_PN}.tar.gz
+	cd ${S}
+	unpack boffix_v3.tar.gz
+	epatch ${FILESDIR}/${PV}-hlds_run-boffix.patch
 }
 
 src_install() {

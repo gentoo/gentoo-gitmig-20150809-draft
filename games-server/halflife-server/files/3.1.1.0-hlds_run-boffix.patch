@@ -1,0 +1,10 @@
+--- hlds_run.orig	2003-12-17 18:38:03.000000000 -0500
++++ hlds_run	2003-12-17 18:38:15.000000000 -0500
+@@ -17,6 +17,7 @@
+ #trap "" SIGINT
+ 
+ # setup the libraries, local dir first!
++export LD_PRELOAD=./boffix_i386.so
+ export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+ if test -n "`echo $* | grep "\-norestart"`" ; then
+ 	RESTART=""; # norestart defined, do do restarts
