@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c48e5c5a8999f24f43c1ca240a112477 sdl-flic-1.2.ebuild 816
+MD5 7318ba297906fdec5222f33469fbc70f ChangeLog 456
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 1caffc5a2ca5d260bef4f0841d2cde54 ChangeLog 359
-MD5 864ee275a9e49a60c042cdc8786f65f4 files/digest-sdl-flic-1.2 59
+MD5 b7b91f810caf0415dea150dce9f30dcb sdl-flic-1.2.ebuild 829
 MD5 b64883222af86bff84caa6e6565c126f files/1.2-win32.patch 310
 MD5 7eace4d5464000f5279f8047187b9f96 files/Makefile 1172
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBz351roRuSHgZdywRAn+iAJ41U2WRwxE7T+5LMw+HRb7Ba4YSDwCfaujQ
-j+4keODfAVNZhxr7w8N1C7M=
-=S4vZ
------END PGP SIGNATURE-----
+MD5 864ee275a9e49a60c042cdc8786f65f4 files/digest-sdl-flic-1.2 59
