@@ -3,6 +3,7 @@
 import os
 import portage
 import string
+import sys
 
 installed=[]
 os.chdir("/var/db/pkg")
@@ -12,12 +13,13 @@ for x in os.listdir(os.getcwd()):
 
 current=[]
 currentdict={}
-mycurrent=open("/portage/current-packages","r")
+mycurrent=open("/usr/portage/current-packages","r")
 mylines=mycurrent.readlines()
 for x in mylines:
 	if x[:2]!="./":
 		continue
-	myline=string.split(x[2:-8],"/")
+	myline=string.split(string.strip(x)[2:-7],"/")
+	print myline
 	mysplit=portage.pkgsplit(myline[2])
 	current.append([myline[0],myline[2],mysplit])
 	currentdict[ myline[0]+"/"+myline[1]]=[myline[0]+"/"+myline[2],mysplit]
@@ -25,7 +27,7 @@ mycurrent.close()
 del mylines
 		
 for x in installed:
-	myebuild="/portage/"+x[0]+"/"+x[2][0]+"/"+x[1]+".ebuild"
+	myebuild="/usr/portage/"+x[0]+"/"+x[2][0]+"/"+x[1]+".ebuild"
 	if x not in current:
 		if not currentdict.has_key(x[0]+"/"+x[2][0]):
 			print "!!!",x[0]+"/"+x[2][0]
