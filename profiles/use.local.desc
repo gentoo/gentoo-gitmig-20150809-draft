@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.967 2005/02/24 00:22:47 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.968 2005/02/24 14:19:32 uberlord Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -725,6 +725,7 @@ sys-libs/uclibc:xattr - enables extended attributes
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/nut:cgi - Add CGI script support
+www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
 www-client/netscape:aim - AOL Instant Messenger support
 www-client/netscape:moznomail - Do not install Netscape Mail
 www-client/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
