@@ -1,17 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-5.04.3.ebuild,v 1.2 2003/07/02 10:28:01 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-5.04.3.ebuild,v 1.3 2003/07/21 11:15:07 kosmikus Exp $
 
 IUSE="opengl"
 
 S="${WORKDIR}/ghc-${PV}"
 DESCRIPTION="Glasgow Haskell Compiler"
-SRC_URI="x86? ( http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-i386-unknown-linux.tar.bz2 )
-	sparc? ( http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-sparc-sun-solaris2.tar.bz2 )"
+SRC_URI="http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-i386-unknown-linux.tar.bz2"
 HOMEPAGE="http://www.haskell.org"
 
 LICENSE="as-is"
-KEYWORDS="x86 -ppc ~sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 SLOT="0"
 
 LOC="/opt/ghc"
