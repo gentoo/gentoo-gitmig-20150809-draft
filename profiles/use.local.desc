@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.389 2004/05/26 20:47:34 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.390 2004/05/27 19:17:55 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -26,8 +26,8 @@ app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:sheep - Support for the sheep net driver
-app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
+app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/wine:nptl - Support for the Native POSIX Threading Library built into glibc
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/im-ja:anthy - Support for Anthy input method
@@ -92,15 +92,15 @@ dev-java/ant-optional:xalan - Enable Xalan support
 dev-java/ant-optional:xerces - Enable Xerces support
 dev-java/ant:optional-tasks - Enable Optional Tasks Support
 dev-java/gnu-classpath:native - Compile native .so libraries
-dev-java/sun-j2sdk:nptl - Enable support for NPTL 
+dev-java/quartz:dbcp - Enable dbcp support
+dev-java/quartz:jboss - Enable jboss support
+dev-java/quartz:jmx - Enable jmx support
+dev-java/quartz:jta - Enable jta support
 dev-java/quartz:oracle - Enable oracle support
 dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
-dev-java/quartz:dbcp - Enable dbcp support
-dev-java/quartz:jboss - Enable jboss support
-dev-java/quartz:jta - Enable jta support
-dev-java/quartz:jmx - Enable jmx support
 dev-java/quartz:struts - Enable struts support
+dev-java/sun-j2sdk:nptl - Enable support for NPTL 
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
@@ -162,8 +162,8 @@ kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages Sys
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 media-gfx/blender:fmod - Adds mod support to blender
 media-gfx/gimageview:mng - Enable mng format support
-media-gfx/gimageview:xine - Enable xine support
 media-gfx/gimageview:mplayer - Enable mplayer support
+media-gfx/gimageview:xine - Enable xine support
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
@@ -191,6 +191,7 @@ media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/lilypond:nopfa - disable building pfa fonts
 media-sound/mpd:aac - enable support for aac using the faad2 library
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
+media-sound/rhythmbox:faad - Enables faad2 support
 media-sound/rhythmbox:xine - Use Xine backend
 media-sound/terminatorx:sox - Enable sox support
 media-sound/timidity++:portaudio - Enable support for the portaudio API
@@ -228,13 +229,13 @@ net-dialup/gnokii:bluetooth - Enable Bluetooth Support
 net-dialup/gnokii:irda - Enable Infrared Support
 net-dialup/ppp:activefilter - enable activefilter support
 net-dialup/ppp:atm - enable support for pppoatm
+net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
+net-dns/djbdns:cnamefix - changes the CNAME behavior of dnscache
 net-dns/djbdns:fwdzone - enables forward zone patch
 net-dns/djbdns:ipv6arpa - enables ipv6 arpa patch
 net-dns/djbdns:multipleip - enables multi-IP patch
 net-dns/djbdns:roundrobin - enables round robin patch
-net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
 net-dns/djbdns:semanticfix - makes tinydns-data handle more semantic errors
-net-dns/djbdns:cnamefix - changes the CNAME behavior of dnscache
 net-dns/pdnsd:isdn - enable isdn features
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
