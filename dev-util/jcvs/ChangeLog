@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/jcvs
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs/ChangeLog,v 1.1 2004/11/14 15:22:29 axxo Exp $
+
+*jcvs-5.4.2 (14 Nov 2004)
+
+  14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> +files/MANIFEST.MF,
+  +files/build.xml, +jcvs-5.4.2.ebuild:
+  moved from dev-util/jcvs-bin, now builds from source, submitted by Jan
+  Brinkmann <lucky@the-luckyduck.de>
+
