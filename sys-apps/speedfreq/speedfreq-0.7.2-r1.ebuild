@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/speedfreq-0.7.2-r1.ebuild,v 1.4 2004/06/28 22:21:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/speedfreq-0.7.2-r1.ebuild,v 1.5 2004/07/24 08:58:18 mr_bones_ Exp $
 
 inherit eutils
 
@@ -35,6 +35,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-python-ver.patch
+	sed -i \
+		-e 's/root\.root/root:root/' Makefile \
+		|| die "sed Makefile failed"
 }
 
 src_compile() {
