@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.44 2004/11/01 20:47:03 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.45 2004/11/04 17:37:53 klieber Exp $
+
+  04 Nov 2004; Kurt Lieber <klieber@gentoo.org> cfengine-2.1.11-r1.ebuild:
+  unmasking on x86
 
 *cfengine-2.1.11-r1 (01 Nov 2004)
 
