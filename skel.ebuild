@@ -1,30 +1,27 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: First Last <your email>
-# $Header: /home/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /home/cvsroot/gentoo-x86/skel.ebuild,v 1.5 2002/04/29 22:56:53 sandymac Exp $
 
-# NOTE: The comments in this file are for instruction and
-# documentation.  They're not meant to appear with your final,
-# production ebuild.  Please remember to remove them before submitting
-# or committing your ebuild.  That doesn't mean you can't add your own
-# comments though.
+# NOTE: The comments in this file are for instruction and documentation.
+# They're not meant to appear with your final, production ebuild.  Please
+# remember to remove them before submitting or committing your ebuild.  That
+# doesn't mean you can't add your own comments though.
 
-# Remember to add the proper Author line, above.
+# The 'Header' on the third line should just be left alone.  When your ebuild
+# will be commited to cvs, the details on that line will be automatically
+# generated to contain the correct data.
 
-# The 'Header' on the fourth line should just be left alone.
-# When your ebuild will be commited to cvs, the details on that line will
-# be automatically generated to contain the correct data.
+# Source directory; the dir where the sources can be found (automatically
+# unpacked) inside ${WORKDIR}.  S will get a default setting of ${WORKDIR}/${P}
+# if you omit this line.
 
-# Source directory; the dir where the sources can be found
-# (automatically unpacked) inside ${WORKDIR}.  Usually you can just
-# leave this as-is.
 S=${WORKDIR}/${P}
 
 # Short one-line description of this package.
 DESCRIPTION="This is a sample skeleton ebuild file"
 
-# Point to any required sources; these will be automatically
-# downloaded by Portage.
+# Point to any required sources; these will be automatically downloaded by
+# Portage.
 SRC_URI="ftp://foo.bar.com/${P}.tar.gz"
 
 # Homepage, not used by Portage directly but handy for developer reference
