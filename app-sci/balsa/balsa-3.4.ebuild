@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/balsa/balsa-3.4.ebuild,v 1.1 2004/07/27 00:34:52 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/balsa/balsa-3.4.ebuild,v 1.2 2004/07/28 00:26:32 chrb Exp $
 
 inherit eutils
 
@@ -52,13 +52,16 @@ src_unpack() {
 	sed -i -e "s:\(DEFAULT_INCLUDES = \)\(.*\):\1-I${S}/src/libs/ \2/:" ${WORKDIR}/balsa-sim-verilog-${PV}/libs/Makefile.in
 	epatch ${FILESDIR}/balsa-tech-3.4-configure.patch
 	epatch ${FILESDIR}/balsa-sim-3.4-configure.patch
+	sed -i -e 's/ $(bindir)/ $(DESTDIR)$(bindir)/' ${S}/bin/Makefile.in
+	sed -i -e 's/ $(balsatypesdir)/ $(DESTDIR)$(balsatypesdir)/' ${S}/share/balsa/types/Makefile.in
+	sed -i -e 's/ $(balsasimdir)/ $(DESTDIR)$(balsasimdir)/' ${S}/share/balsa/sim/Makefile.in
 }
 
 src_compile() {
 	# compile balsa
 	einfo "Compiling balsa"
-	./configure --prefix=${D}/usr/ || die "econf failed"
-	emake  || die
+	./configure --prefix=/usr/ || die "econf failed"
+	emake || die
 
 	# configure AMS035 tech
 	if [ $TECH_AMS ]; then
@@ -93,7 +96,7 @@ src_install() {
 	# install balsa
 	cd ${S}
 	einfo "Installing balsa"
-	make install || die
+	make DESTDIR=${D} install || die
 
 	# install manual and examples
 	dodir /usr/share/doc/${P}/
