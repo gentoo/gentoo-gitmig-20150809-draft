@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.0.ebuild,v 1.1 2002/12/22 23:08:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.0.ebuild,v 1.2 2002/12/25 18:00:28 mholzer Exp $
 
 inherit libtool
 
@@ -14,7 +14,7 @@ SLOT="2"
 LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-DEPEND=">=dev-util/pkgconfig-0.12.0
+DEPEND=">=dev-util/pkgconfig-0.14.0
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 
 RDEPEND="virtual/glibc"
