@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/jpilot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.1 2002/02/01 21:53:08 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.2 2002/02/12 21:20:16 blocke Exp $
+
+*jpilot-0.99.2 (12 Feb 2002)
+
+  12 Feb 2002; Bruce A. Locke <blocke@shivan.org> ChangeLog :
+
+  Added 0.99.2 with updated malsync plugin and cleaned up ebuild
+
+  PLEASE NOTE: reliable USB support with jpilot and other packages
+  is dependent on having a CVS snapshot of pilot-link that is not
+  source compatible with packages such as GNOME's Pilot support.
 
 *jpilot-0.99-r2 (1 Feb 2002)
 
