@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r1.ebuild,v 1.2 2005/01/20 04:31:50 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r1.ebuild,v 1.3 2005/02/12 00:58:40 mr_bones_ Exp $
 
 inherit games gcc eutils libtool
 
@@ -86,20 +86,20 @@ src_install() {
 	cp -r mupen64* lang plugins save roms path.cfg ${D}/${dir}/
 	rm ${D}/${dir}/mupen64_test.ini
 
-	dogamesbin ${FILESDIR}/mupen64
+	dogamesbin ${FILESDIR}/mupen64 || die "dogamesbin failed"
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/mupen64
-	newgamesbin ${FILESDIR}/mupen64 mupen64_nogui
+	newgamesbin ${FILESDIR}/mupen64 mupen64_nogui || die "newgamesbin failed"
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/mupen64_nogui
 
 	# plugins docs are in subdirs of the doc main directory
-	cd ${S}/emu64
-	dodoc *.txt
-	dodoc doc/readme.pdf
+	cd "${S}/emu64"
+	dodoc *.txt doc/readme.pdf
 
 	prepgamesdirs
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	ewarn "If you are upgreading from previous version of mupen64"
 	ewarn "you have to do rm -rf on your .mupen64 directory."
 	ewarn "Copy your saved games and after launching new mupen"
