@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.6 2004/09/11 13:52:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.7 2004/11/11 10:29:46 usata Exp $
+
+*python-mode-4.63 (11 Nov 2004)
+
+  11 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +python-mode-4.63.ebuild:
+  Version bumped. Dropped ppc and ~amd64 keywords; bug #51435.
 
   11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> python-mode-4.6.ebuild:
   Added amd64 keyword, closing #60694.
