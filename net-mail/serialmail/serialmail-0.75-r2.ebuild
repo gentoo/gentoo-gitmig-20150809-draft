@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r2.ebuild,v 1.6 2004/10/23 23:01:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r2.ebuild,v 1.7 2004/11/21 21:32:07 sekretarz Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/libc
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~amd64"
 IUSE="static"
 
 src_unpack() {
