@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fixdos
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/ChangeLog,v 1.4 2004/07/10 11:20:23 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/ChangeLog,v 1.5 2004/09/20 03:04:01 tgall Exp $
+
+  19 Sep 2004; Tom Gall <tgall@gentoo.org> fixdos-1.3.1.ebuild:
+  stable on ppc64, bug #63668
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> fixdos-1.3.1.ebuild:
   Marked ~amd64.
