@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/calcchecksum-1.6_pre1.ebuild,v 1.1 2004/04/06 22:13:50 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/calcchecksum-1.6_pre1.ebuild,v 1.2 2004/05/16 21:22:09 centic Exp $
 
 inherit kde-base
 need-kde 3.1
@@ -12,7 +12,7 @@ HOMEPAGE="http://calcchecksum.sourceforge.net/"
 SRC_URI="mirror://sourceforge/calcchecksum/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 SLOT="0"
