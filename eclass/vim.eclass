@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.42 2003/11/13 13:25:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.43 2003/11/15 16:01:17 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -12,19 +12,21 @@ ECLASS=vim
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack
 
-IUSE="$IUSE ncurses nls"
+IUSE="$IUSE ncurses nls acl"
 if [ ${PN} != vim-core ]; then
 	IUSE="$IUSE cscope gpm perl python ruby"
 	DEPEND="$DEPEND
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
-		python?  ( dev-lang/python )"
+		python?  ( dev-lang/python )
+		acl?     ( sys-apps/acl )"
 	RDEPEND="$RDEPEND
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
-		python?  ( dev-lang/python )"
+		python?  ( dev-lang/python )
+		acl?     ( sys-apps/acl )"
 	# Vim versions after 6.2d should work with Ruby 1.8 because of a local
 	# Gentoo patch; working on putting it upstream (22 May 2003 agriffis)
 	if [[ "$PV" < 6.2 || ( "$PV" == 6.2_pre* && "${PV#*pre}" -lt 4 ) ]]; then
@@ -214,9 +216,9 @@ src_compile() {
 	fi
 
 	if [ ${PN} = vim ] && use minimal; then
-		myconf="${myconf} --disable-nls --disable-multibyte"
+		myconf="${myconf} --disable-nls --disable-multibyte --disable-acl"
 	else
-		myconf="${myconf} `use_enable nls`"
+		myconf="${myconf} `use_enable nls` `use_enable acl`"
 	fi
 
 	# Note: If USE=gpm, then ncurses will still be required
