@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.157 2004/03/29 02:45:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.158 2004/03/29 04:09:01 agriffis Exp $
+
+  28 Mar 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.7_beta-r1.ebuild:
+  Workaround dosym inadequacy for /usr/bin/mozilla link, fixes bug 46049
 
   28 Mar 2004; Aron Griffis <agriffis@gentoo.org> -mozilla-1.5-r1.ebuild,
   -mozilla-1.6.ebuild:

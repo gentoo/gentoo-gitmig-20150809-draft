@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta-r1.ebuild,v 1.2 2004/03/28 17:44:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta-r1.ebuild,v 1.3 2004/03/29 04:09:01 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -452,7 +452,7 @@ src_install() {
 	done
 
 	cd ${S}
-	dosym mozilla-launcher /usr/bin/mozilla
+	ln -sfn mozilla-launcher ${D}/usr/bin/mozilla
 	insinto /etc/env.d
 	doins ${FILESDIR}/10mozilla
 	dodoc LEGAL LICENSE README/mozilla/README*
