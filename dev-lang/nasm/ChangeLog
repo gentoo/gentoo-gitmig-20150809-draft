@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.20 2003/10/06 21:42:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.21 2003/10/12 00:57:19 mr_bones_ Exp $
+
+  11 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> nasm-0.98.38.ebuild:
+  mark stable
 
   06 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
   add metadata.xml
