@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksplash-ml-themes/ksplash-ml-themes-20020705-r1.ebuild,v 1.2 2002/10/04 06:47:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksplash-ml-themes/ksplash-ml-themes-20020705-r1.ebuild,v 1.3 2002/10/17 15:21:20 aliz Exp $
 inherit kde-functions
 
 set-kdedir 3
@@ -16,16 +16,14 @@ newdepend "x11-misc/ksplash-ml"
 
 THEMES="ExtraThemes DeLorean Viper Crystal xpAnime Landskape costello"
 for x in $THEMES; do
-    SRC_URI="$SRC_URI http://www.shadowcom.net/Software/ksplash-ml/${x}.tgz"
+	SRC_URI="$SRC_URI http://www.shadowcom.net/Software/ksplash-ml/${x}.tgz"
 done
 
 theme-ksplash_src_compile() { true; }
 
 src_install() {
-
-    dodir ${PREFIX}/share/apps/ksplashml/Themes/
-    cp -r ${WORKDIR}/* ${D}/${PREFIX}/share/apps/ksplashml/Themes/
-
+	dodir ${PREFIX}/share/apps/ksplashml/Themes/
+ 	cp -r ${WORKDIR}/* ${D}/${PREFIX}/share/apps/ksplashml/Themes/
 }
 
 

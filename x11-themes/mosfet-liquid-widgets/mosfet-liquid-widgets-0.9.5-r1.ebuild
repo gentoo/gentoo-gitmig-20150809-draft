@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/mosfet-liquid-widgets-0.9.5-r1.ebuild,v 1.1 2002/08/24 18:36:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/mosfet-liquid-widgets-0.9.5-r1.ebuild,v 1.2 2002/10/17 15:21:20 aliz Exp $
 inherit kde-base
 
 need-kde 3
@@ -18,11 +18,11 @@ newdepend ">=kde-base/kdebase-3.0"
 
 src_install() {
 
-    kde_src_install all
+	kde_src_install all
     
-    # replace ksplash image
-    dodir $KDEDIR/share/apps
-    mv $D/$PREFIX/share/apps/ksplash $D/$KDEDIR/share/apps
+	# replace ksplash image
+	dodir $KDEDIR/share/apps
+	mv $D/$PREFIX/share/apps/ksplash $D/$KDEDIR/share/apps
 
 }
 
