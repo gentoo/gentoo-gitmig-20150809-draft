@@ -4,10 +4,10 @@
 rmlsl       ".167 SlantFont"  Ryumin-Light-H 
 gbmsl       ".167 SlantFont"  GothicBBB-Medium-H
 %%
-rml         Ryumin-Light-H	<`min
-rmlv        Ryumin-Light-V	<`min
-gbm         GothicBBB-Medium-H	<`goth
-gbmv        GothicBBB-Medium-V	<`goth
+rml         Ryumin-Light-H
+rmlv        Ryumin-Light-V
+gbm         GothicBBB-Medium-H
+gbmv        GothicBBB-Medium-V
 %%
 %rml         Ryumin-Light-Ext-H
 %rmlv        Ryumin-Light-Ext-V
