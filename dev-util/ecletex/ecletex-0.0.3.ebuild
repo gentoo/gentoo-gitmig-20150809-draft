@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ecletex-0.0.3.ebuild,v 1.5 2005/02/10 23:53:52 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ecletex-0.0.3.ebuild,v 1.6 2005/02/11 23:18:43 mr_bones_ Exp $
 
 inherit eclipse-ext
 
@@ -35,7 +35,7 @@ get-classpath() {
 
 	if [ "$1" == "build.properties" ] ; then
 		if [ ! -z "$2" ] ; then
-			envvar="$2"	
+			envvar="$2"
 		fi
 	fi
 
@@ -58,10 +58,10 @@ resolve-jars() {
 		local plugindir=$(basename $(dirname $x))
 		local name="$(get-plugin-name $plugindir)"
 		local x=$(echo ${eclipse_dir}/plugins/${name}_*/${jarfile})
-		if [ -f ${x} ] ; then 
+		if [ -f ${x} ] ; then
 			resolved="${resolved}:$x"
 		else
-			: 
+			:
 			#echo "Warning: did not find ${name}"
 		fi
 	done
