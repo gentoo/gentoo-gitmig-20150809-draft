@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.2 2004/10/28 05:48:26 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.3 2004/10/28 23:30:24 dsd Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -228,7 +228,7 @@ do_makecheck() {
 	ATIME=`mount | awk '{ print $3,$6 }' | grep ^\/\  | grep noatime`
 	if [ "$ATIME" = "" ]; then
 		cd ${WORKDIR}/${MYMAINBUILDDIR}
-		make check || die
+		make check || die 
 	else
 		ewarn "remounting / without noatime option so that make check"
 		ewarn "does not fail!"
@@ -277,6 +277,17 @@ setup_locales() {
 
 
 pkg_setup() {
+	# We have a nasty nptl --> nptlonly migration bug
+	# http://bugs.gentoo.org/69258
+	# Lets make sure nobody else runs into it
+	if [ -e "/lib/tls/libc.so.6" ] && use nptlonly ; then
+		eerror "Migrating from \"+nptl -nptlonly\" to \"+nptl +nptlonly\""
+		eerror "causes a serious bug at this time."
+		eerror "Please use \"-nptlonly\" for now."
+		einfo "See http://bugs.gentoo.org/69258 for more info."
+		die "Can't migrate from nptl to nptlonly at this time"
+	fi
+
 	# give some sort of warning about the nptl logic changes...
 	if want_nptl && use !nptlonly ; then
 		ewarn "Warning! Gentoo's GLIBC with NPTL enabled now behaves like the"

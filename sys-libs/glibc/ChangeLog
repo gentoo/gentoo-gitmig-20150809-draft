@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.282 2004/10/28 05:48:26 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.283 2004/10/28 23:30:24 dsd Exp $
+
+  29 Oct 2004; Daniel Drake <dsd@gentoo.org> glibc-2.3.4.20041021.ebuild:
+  Add exit condition to prevent more people running into bug 69258
 
   27 Oct 2004; Travis Tilley <lv@gentoo.org> -glibc-2.3.4.20041006.ebuild,
   glibc-2.3.4.20041021.ebuild:
