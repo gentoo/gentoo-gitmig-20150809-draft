@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/sdlsasteroids
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/ChangeLog,v 1.1 2003/09/18 22:33:20 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/ChangeLog,v 1.2 2004/04/25 08:04:49 mr_bones_ Exp $
+
+  25 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  sdlsasteroids-3.0.ebuild:
+  IUSE; more deps; fixup makefile; use emake; tidy
 
 *sdlsasteroids-3.0 (18 Sep 2003)
 
