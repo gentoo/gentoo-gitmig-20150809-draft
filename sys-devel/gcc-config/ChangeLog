@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.17 2003/01/15 22:28:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.18 2003/01/19 19:14:52 azarah Exp $
+
+*gcc-config-1.3.1 (19 Jan 2003)
+
+  19 Jan 2003; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.3.1.ebuild :
+
+  Use the 'which' command to find commands if present to give a bit of a
+  speedup.  Display a warning about sourcing /etc/profile if you change the
+  default profile to stop confusion.
+
+  Fix a segfault in wrapper.c if $PATH is not set.  Many thanks to
+  Eric Andresen <ndiin1@cox.net> for reporting this.
 
 *gcc-config-1.3.0 (16 Jan 2003)
 

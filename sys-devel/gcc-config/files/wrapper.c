@@ -2,7 +2,7 @@
  * Copyright 1999-2003 Gentoo Technologies, Inc.
  * Distributed under the terms of the GNU General Public License v2
  * Author: Martin Schlemmer <azarah@gentoo.org>
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper.c,v 1.3 2003/01/15 22:28:10 azarah Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper.c,v 1.4 2003/01/19 19:14:52 azarah Exp $
  */
 
 #define _REENTRANT
@@ -40,8 +40,15 @@ int main(int argc, char **argv) {
 	snprintf(wrapfullname, strlen("/usr/bin/") + strlen(wrappername) + 1,
 		"%s%s", "/usr/bin/", wrappername);
 
-	buffer = strdup((char *)getenv("PATH"));
-	token = strtok_r(buffer, ":", &state);
+	/* If PATH is not set, just set token to NULL, else we get
+	 * a segfault.  Thanks to Eric Andresen <ndiin1@cox.net> for
+	 * reporting this. */
+	if (NULL != getenv("PATH")) {
+		
+		buffer = strdup((char *)getenv("PATH"));
+		token = strtok_r(buffer, ":", &state);
+	} else
+		token = NULL;
 	
 	/* Find the first file with suitable name in PATH */
 	while ((NULL != token) && (strlen(token) > 0)) {
