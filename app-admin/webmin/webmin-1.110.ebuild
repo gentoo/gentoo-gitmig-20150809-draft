@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.110.ebuild,v 1.5 2003/10/28 01:05:44 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.110.ebuild,v 1.6 2003/11/05 15:38:13 mholzer Exp $
 
 IUSE="ssl"
 
 DESCRIPTION="Webmin, a web-based system administration interface"
 SRC_URI="mirror://sourceforge/webadmin/${P}.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.webmin.com/"
 
 SLOT="0"
