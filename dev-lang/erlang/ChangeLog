@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.5 2003/02/12 05:55:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.6 2003/05/10 18:59:14 george Exp $
+
+*erlang-9c (09 May 2003)
+
+  09 May 2003; George Shapovalov <george@gentoo.org> erlang-9c.ebuild :
+  new version (#20625), original versio n is R9B-1, 9c seems to be the olny approximation
+  that works and is considered newer by portage
+  (anyway, 'B' seems to be invariant in upstream naming scheme)
+  Thanks to Claes Wikstrom <klacke@hyber.org> for an update.
 
 *erlang-9b (07 Jan 2003)
 
