@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/sbd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sbd/ChangeLog,v 1.1 2004/06/23 00:48:10 swegener Exp $
+
+*sbd-1.31 (23 Jun 2004)
+
+  23 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +sbd-1.31.ebuild:
+  Initial import, ebuild written by me.
+
