@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.20 2003/01/18 04:13:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.21 2003/02/02 10:23:47 seemant Exp $
+
+*DirectFB-0.9.16 (02 Feb 2003)
+
+  02 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  DirectFB-0.9.16-r1.ebuild files/digest-DirectFB-0.9.16-r1 :
+
+  Many fixes -- avifile, flash, quicktime, and imlib2 providers are now in
+  DirectFB-extra, and sdl is autodetected, to prevent the circular dependency
+  (it is still an experimental thing upstream, so hopefully the circular dep
+  thing gets sorted when it's less experimental). 
+  DirectFB-extra made a PDEPEND.
 
 *DirectFB-0.9.16 (17 Jan 2003)
 
