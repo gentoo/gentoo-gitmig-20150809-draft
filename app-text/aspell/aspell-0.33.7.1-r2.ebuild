@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r2.ebuild,v 1.1 2002/07/24 10:35:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r2.ebuild,v 1.2 2002/08/06 14:50:21 gerk Exp $
 
 inherit libtool
 
@@ -15,7 +15,7 @@ DEPEND=">=app-text/pspell-0.12
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 #
 # These flags a reset here because too much optimisation can cause aspell's
