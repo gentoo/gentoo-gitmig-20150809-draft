@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b.ebuild,v 1.5 2003/06/22 08:04:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b.ebuild,v 1.6 2003/09/24 18:28:05 azarah Exp $
 
 inherit eutils
 
@@ -83,5 +83,17 @@ src_install() {
 	# to be the more FHS compliant setup... -raker
 	dodir /etc/ssl/certs
 
+}
+
+pkg_postinst() {
+	local BN_H="${ROOT}$(gcc-config -L)/include/openssl/bn.h"
+	# Breaks things one some boxen, bug #13795.  The problem is that
+	# if we have a 'gcc fixed' version in $(gcc-config -L) from 0.9.6,
+	# then breaks as it was defined as 'int BN_mod(...)' and in 0.9.7 it
+	# is a define with BN_div(...) - <azarah@gentoo.org> (24 Sep 2003)
+	if [ -f "${BN_H}" ] && [ -n "$(grep '^int[[:space:]]*BN_mod(' "${BN_H}")" ]
+	then
+		rm -f "${BN_H}"
+	fi
 }
 
