@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.7 2002/09/17 22:47:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.8 2002/10/18 10:19:59 seemant Exp $
+
+*alsaplayer-0.99.72 (18 Oct 2002)
+
+  18 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
+  alsaplayer-0.99.72.ebuild files/digest-alsaplayer-0.99.72 :
+
+  Andy Lo-A-Foe informed me of this version bump a day or two after it came
+  out, but we were in freeze.  Due to new masking, I have finally added it.
+  Also, requested by: luke@dslextreme.com (Luke Ravitch) in bug #9232.
 
 *alsaplayer-0.99.71.20020607 (7 Jun 2002)
 
