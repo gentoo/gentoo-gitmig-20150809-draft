@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901-r1.ebuild,v 1.4 2002/09/16 18:45:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901-r1.ebuild,v 1.5 2002/09/19 17:34:51 azarah Exp $
 
 TETEXSRC="teTeX-src-beta-${PV}.tar.gz"
 TEXMFSRC="teTeX-texmfsrc-beta-20020829.tar.gz"
@@ -35,15 +35,16 @@ src_unpack() {
 	
 	mkdir -p ${S}/texmf
 	cd ${S}/texmf
+	umask 022
 	echo ">>> Unpacking ${TEXMFSRC}"
-	tar xzf ${DISTDIR}/${TEXMFSRC} || die "Failed to unpack ${TEXMFSRC}!"
+	tar --no-same-owner -xzf ${DISTDIR}/${TEXMFSRC} || die "Failed to unpack ${TEXMFSRC}!"
 	echo ">>> Unpacking ${TEXMF}"
-	tar xzf ${DISTDIR}/${TEXMF} || die "Failed to unpack ${TEXMF}!"
+	tar --no-same-owner -xzf ${DISTDIR}/${TEXMF} || die "Failed to unpack ${TEXMF}!"
 	echo ">>> Unpacking ec-ready-mf-tfm.tar.gz"
-	tar xzf ${DISTDIR}/ec-ready-mf-tfm.tar.gz -C .. || \
+	tar --no-same-owner -xzf ${DISTDIR}/ec-ready-mf-tfm.tar.gz -C .. || \
 		die "Failed to unpack ec-ready-mf-tfm.tar.gz!"
 	echo ">>> Unpacking teTeX-french.tar.gz"
-	tar xzf ${DISTDIR}/teTeX-french.tar.gz || \
+	tar --no-same-owner -xzf ${DISTDIR}/teTeX-french.tar.gz || \
 		die "Failed to unpack teTeX-french.tar.gz!"
 
 	cd ${S}
@@ -111,7 +112,7 @@ src_install() {
 
 	dodir /usr/share/
 	einfo "Installing texmf data..."
-	cp -af texmf ${D}/usr/share
+	mv -f texmf ${D}/usr/share
 	
 	make prefix=${D}/usr \
 		bindir=${D}/usr/bin \
@@ -155,9 +156,7 @@ src_install() {
 	# Fix for lousy upstream permissions on /usr/share/texmf files
 	# NOTE: fowners is not recursive...
 	einfo "Fixing permissions and ownership..."
-	chown -R root.root ${D}/usr/share/texmf/*
-	-find ${D}/usr/share/texmf/ -type d -exec chmod a+rx {} \;
-	-find ${D}/usr/share/texmf/ -type f -exec chmod a+r {} \;
+	chown -R root.root ${D}/usr/share/texmf
 }
 
 pkg_postinst() {
