@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/ncbi-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.17 2004/10/14 14:42:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.18 2004/11/22 22:14:12 sekretarz Exp $
+
+  22 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  ncbi-tools-20040616.ebuild:
+  Added to ~amd64
 
   14 Oct 2004; Olivier Fisette <ribosome@gentoo.org>
   ncbi-tools-20040616.ebuild:

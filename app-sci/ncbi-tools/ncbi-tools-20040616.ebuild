@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20040616.ebuild,v 1.3 2004/10/14 14:42:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20040616.ebuild,v 1.4 2004/11/22 22:14:12 sekretarz Exp $
 
 inherit flag-o-matic gcc
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	doc? ( mirror://gentoo/${PN}-sdk-doc.tar.bz2 )"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 IUSE="doc X"
 
 DEPEND="app-shells/tcsh

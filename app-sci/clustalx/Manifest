@@ -1,4 +1,14 @@
-MD5 b2bfa7aa02f242301c414b022b208b23 ChangeLog 720
-MD5 74931ece8d2f937358bde1e59c3441e2 clustalx-1.83.ebuild 1344
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 85d7c090d64f675746361e68fce19490 ChangeLog 827
 MD5 272b5b012593acd07a7a60b8b64e6761 metadata.xml 509
+MD5 49561beafb3ebeaf128ecad375bc5b41 clustalx-1.83.ebuild 1351
 MD5 800c4da737d4fb9af3d8ffb7f6f44892 files/digest-clustalx-1.83 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBomWjZ/iYVBmujdURAlpqAJ0euoLabEb90LomqxF0B2xjVqcrrwCfezHZ
+NM5Zgoeam6sZe91k2MTpg+0=
+=btQy
+-----END PGP SIGNATURE-----
