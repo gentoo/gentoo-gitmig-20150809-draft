@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pcre-ocaml
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.4 2003/06/20 00:59:25 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.5 2004/03/13 19:47:01 mr_bones_ Exp $
+
+  13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  pcre-ocaml-4.26.3.ebuild, pcre-ocaml-4.33.0.ebuild,
+  pcre-ocaml-5.03.3.ebuild:
+  Don't assign default to S; header fix
 
 *pcre-ocaml-5.03.3 (19 Jun 2003)
 
