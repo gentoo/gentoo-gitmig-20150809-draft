@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r1.ebuild,v 1.8 2004/03/23 18:54:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r1.ebuild,v 1.9 2004/05/12 11:23:04 lanius Exp $
 
 
 IUSE="gnome kde"
@@ -30,7 +30,7 @@ SRC_URI="mirror://sourceforge/ltsp/ltsp_core-3.0.9-i386.tgz
 
 DEPEND="gnome? ( >=gnome-base/gdm-2.4.0.0 )
 	kde? ( >=kde-base/kdebase-3.0.2 )
-	x11-base/xfree
+	virtual/x11
 	virtual/tftp
 	sys-apps/xinetd
 	net-misc/dhcp

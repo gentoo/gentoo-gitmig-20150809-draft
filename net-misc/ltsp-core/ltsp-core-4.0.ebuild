@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0.ebuild,v 1.3 2004/02/27 15:19:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0.ebuild,v 1.4 2004/05/12 11:23:04 lanius Exp $
 
 IUSE="X debug"
 
@@ -77,7 +77,7 @@ do
 	SRC_URI="${SRC_URI} X? ( mirror://sourceforge/ltsp/${FILE} )"
 done
 
-RDEPEND="X? ( x11-base/xfree )
+RDEPEND="X? ( virtual/x11 )
 	virtual/tftp
 	sys-apps/xinetd
 	net-misc/dhcp
