@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.13 2005/01/24 04:59:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.14 2005/01/24 21:29:03 mr_bones_ Exp $
+
+  24 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/1.40-LDFLAGS.patch, -files/command-line.patch,
+  -zsnes-1.37_pre20041024.ebuild, -zsnes-1.40.ebuild:
+  clean out old versions and patches
 
 *zsnes-1.42 (23 Jan 2005)
 
