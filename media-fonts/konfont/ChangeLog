@@ -1,0 +1,14 @@
+# ChangeLog for media-fonts/konfont
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/konfont/ChangeLog,v 1.1 2003/12/28 19:36:22 usata Exp $
+
+  29 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> konfont-0.1.ebuild:
+  Moved from app-i18n
+
+*konfont-0.1 (12 Aug 2002)
+
+  12 Aug 2002; Stuart Bouyer <stubear@gentoo.org> konfont-0.1.ebuild, 
+  ChangeLog, digest-konfont-0.1:
+
+  Initial ebuild added to portage tree. Ebuild and patch submitted by
+  Atzm Watanabe <sitosito@p.chan.ne.jp>.
