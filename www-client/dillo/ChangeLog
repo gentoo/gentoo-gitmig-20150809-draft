@@ -1,6 +1,10 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.7 2004/12/23 15:00:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.8 2004/12/26 04:36:08 usata Exp $
+
+  26 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> -dillo-0.8.3-r1.ebuild,
+  -dillo-0.8.3-r2.ebuild, dillo-0.8.3-r3.ebuild:
+  Removed old ebuilds and marked 0.8.3-r3 stable on x86, ppc and alpha.
 
   23 Dec 2004; Markus Rothe <corsair@gentoo.org> dillo-0.8.3-r3.ebuild:
   Added ~ppc64 to KEYWORDS; bug #74861
