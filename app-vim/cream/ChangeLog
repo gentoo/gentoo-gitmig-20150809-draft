@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cream
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.7 2004/04/29 06:06:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.8 2004/05/12 15:50:23 ciaranm Exp $
+
+  12 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> cream-0.29-r1.ebuild:
+  Stable on sparc, mips
 
 *cream-0.29-r1 (29 Apr 2004)
 
