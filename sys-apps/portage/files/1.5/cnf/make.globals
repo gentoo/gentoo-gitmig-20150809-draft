@@ -29,16 +29,18 @@ MAKEOPTS="-j2"
 
 # Fetching command (5 tries, passive ftp for firewall compatibility)
 FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${x} -P \${DISTDIR}"
+#For Prozilla (really rocks):
+#FETCHCOMMAND="/usr/bin/proz -s \${x} -P \${DISTDIR}"
+
 # Compile programs with GNOME/SLANG extensions 
-#USE="gnome bonobo X qt kde"
-#USE="3dnow mmx esd"
-#USE="berkdb gdbm readline libg++ gpm tcpd slang"
-#USE="ssl postgres mysql ldap odbc"
-#USE="tex"
-USE="slang"
+USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl
+     lm_sensors lvm pcmcia-cs alsa
+     nls mmx mitshm
+     esd lcms gif sdl vorbis ogg
+     gnome gtk X qt kde motif opengl mozilla"
 
 # C Compiler flags
-CFLAGS="-O2 -mpentium"
+CFLAGS="-O2 -mpentiumpro"
 
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
