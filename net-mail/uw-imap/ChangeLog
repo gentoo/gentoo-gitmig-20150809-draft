@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.21 2003/08/11 09:05:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.22 2003/09/11 21:16:10 mholzer Exp $
+
+*uw-imap-2002e (11 Sep 2003)
+
+  11 Sep 2003; Martin Holzer <mholzer@gentoo.org> uw-imap-2002e.ebuild:
+  Version bumped.
 
 *uw-imap-2002d-r1 (11 Aug 2003)
 
