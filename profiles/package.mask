@@ -26,6 +26,10 @@
 # ebuild has quite some changes, so I don't want it to be testing immediately
 =dev-util/subversion-0.22.2
 
+# <azarah@gentoo.org> (18 May 2003)
+# CVS snapshot, will need a bit of testing.
+=sys-libs/glibc-2.3.2-r2
+
 # <azarah@gentoo.org> (17 May 2003)
 # There is a bit of work needed to the tree to get it gcc-3.3 ready.
 # Also, I want to verify that the Hammer update do not break older
