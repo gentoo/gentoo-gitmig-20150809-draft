@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.22.ebuild,v 1.4 2003/01/09 08:50:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.22.ebuild,v 1.5 2003/02/09 02:00:03 gmsoft Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ DESCRIPTION="Standard kernel module utilities"
 SRC_URI="http://www.kernel.org/pub/linux/utils/kernel/${PN}/v2.4/${P}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/modutils/"
 
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -31,12 +31,20 @@ src_compile() {
 		--disable-strip \
 		--enable-insmod-static \
 		${myconf} || die "./configure failed"
-		
-	emake || die "emake failed"
+	if [ ${ARCH} = "hppa" ]
+	then
+		mymake="ARCH=hppa"
+	fi
+	
+	emake ${mymake} || die "emake failed"
 }
 
 src_install() {
-	einstall prefix="${D}" || die "make install failed"
+	if [ ${ARCH} = "hppa" ]
+	then
+		mymake="ARCH=hppa"
+	fi
+	einstall prefix="${D}" ${mymake} || die "make install failed"
 
 	dodoc COPYING CREDITS ChangeLog NEWS README TODO
 }
