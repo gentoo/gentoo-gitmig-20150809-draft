@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.43 2003/11/15 16:01:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.44 2003/12/08 21:27:55 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -165,7 +165,8 @@ src_compile() {
 	# vim-6.2 changed the name of this rule from auto/configure to autoconf
 	confrule=auto/configure
 	grep -q ^autoconf: src/Makefile && confrule=autoconf
-	make -C src $confrule || die "make $confrule failed"
+	# autoconf-2.5 needed for AC_PROG_EGREP -- bug 35319
+	WANT_AUTOCONF=2.5 make -C src $confrule || die "make $confrule failed"
 
 	# This should fix a sandbox violation (see bug 24447)
 	for file in /dev/pty/s* /dev/console; do
