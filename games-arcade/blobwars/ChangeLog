@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/blobwars
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.8 2004/09/07 22:23:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.9 2004/09/09 18:16:26 mr_bones_ Exp $
+
+*blobwars-0.91-r1 (09 Sep 2004)
+
+  09 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +blobwars-0.91-r1.ebuild, -blobwars-0.91.ebuild:
+  bug fix version bump
 
 *blobwars-0.91 (07 Sep 2004)
 
