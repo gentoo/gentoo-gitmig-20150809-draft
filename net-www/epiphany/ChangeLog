@@ -1,7 +1,11 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.22 2003/10/04 17:10:36 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.23 2003/10/05 08:19:39 leonardop Exp $
 
+  05 Oct 2003; L. Boshell <leonardop@gentoo.org> epiphany-1.0.ebuild:
+  Taking a different approach with the patch. Just disable -Werror by
+  default, since it brings up troubles that are gcc-2's fault anyway.
+  
   04 Oct 2003; L. Boshell <leonardop@gentoo.org> epiphany-1.0.ebuild:
   Added patch to make it compile under gcc-2. Thanks to Tristan Henderson
   for the patch and contribution on bug #28686.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.ebuild,v 1.3 2003/10/04 17:10:36 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.ebuild,v 1.4 2003/10/05 08:19:39 leonardop Exp $
 
 inherit gnome2
 
@@ -47,6 +47,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc2_Werror_fix.patch
+	epatch ${FILESDIR}/${P}-disable_Werror.patch
 }
 
