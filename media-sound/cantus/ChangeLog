@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/cantus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.4 2003/07/12 20:30:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.5 2003/10/28 11:05:25 hanno Exp $
+
+*cantus-1.99.9 (28 Oct 2003)
+
+  28 Oct 2003; Hanno Boeck <hanno@gentoo.org> cantus-1.0.3.ebuild,
+  cantus-1.07.ebuild, cantus-1.99.9.ebuild, files/cantus2.desktop,
+  files/cantus_icon.png:
+  Add slottet ebuild for cantus 2. Resolves bug 28081.
 
 *cantus-1.07 (19 Jun 2003)
 
