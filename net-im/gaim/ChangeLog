@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.276 2004/12/15 13:02:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.277 2004/12/16 06:08:13 absinthe Exp $
+
+  16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> gaim-1.1.0.ebuild:
+  Stable on amd64.
 
   15 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> gaim-1.1.0.ebuild:
   Stable on sparc
@@ -63,7 +66,7 @@
   -gaim-1.0.1.ebuild:
   Pruning old versions
 
-  21 Oct 2004; Bryan Østergaard,,, <kloeri@gentoo.org> gaim-1.0.2.ebuild:
+  21 Oct 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> gaim-1.0.2.ebuild:
   Stable on alpha, bug 68271.
 
   21 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> gaim-1.0.2.ebuild:
@@ -101,7 +104,7 @@
   05 Oct 2004; Guy Martin <gmsoft@gentoo.org> gaim-1.0.0.ebuild:
   Stable on hppa.
 
-  03 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gaim-1.0.0.ebuild:
+  03 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gaim-1.0.0.ebuild:
   Stable on alpha.
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> gaim-1.0.0.ebuild:
@@ -189,7 +192,7 @@
   25 Aug 2004; Don Seiler <rizzo@gentoo.org> +gaim-0.82.ebuild:
   Version bump
 
-  25 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gaim-0.81-r5.ebuild:
+  25 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gaim-0.81-r5.ebuild:
   Stable on alpha, bug 61457.
 
   25 Aug 2004; Travis Tilley <lv@gentoo.org> gaim-0.81-r5.ebuild:
@@ -231,7 +234,7 @@
   14 Aug 2004; Stephen P. Becker <geoman@gentoo.org> gaim-0.81-r1.ebuild:
   Stable on mips - bug 60034
 
-  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gaim-0.81-r1.ebuild:
+  13 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gaim-0.81-r1.ebuild:
   Stable on alpha, bug 60034.
 
   12 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> gaim-0.81-r1.ebuild:
@@ -289,7 +292,7 @@
   19 Jul 2004; Don Seiler <rizzo@gentoo.org> gaim-0.80.ebuild:
   Raising minimum gaim-encryption, closes bug #57548
 
-  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gaim-0.79-r1.ebuild:
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gaim-0.79-r1.ebuild:
   Stable on alpha.
 
   18 Jul 2004; Don Seiler <rizzo@gentoo.org>
@@ -446,7 +449,7 @@
   -gaim-0.75-r8.ebuild:
   Pruning obsoleteness
 
-  01 May 2004; Bryan Østergaard <kloeri@gentoo.org> gaim-0.77.ebuild:
+  01 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gaim-0.77.ebuild:
   Stable on alpha.
 
   30 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> gaim-0.77.ebuild:
