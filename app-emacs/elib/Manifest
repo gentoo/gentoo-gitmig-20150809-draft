@@ -1,5 +1,5 @@
-MD5 dd7a377d366959a2c65cef66a1523f25 elib-1.0.ebuild 890
-MD5 b43c844dc4464c38bceb6dcf0bd16a67 ChangeLog 514
+MD5 dd6d1e7e60fb049c207ba20477ea33ad ChangeLog 594
+MD5 511696e2ba214ca6a7a89f196676908d elib-1.0.ebuild 895
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 ad519b0354a6822cb4fb81a16303cd2e files/50elib-gentoo.el 82
 MD5 f49da25ac8faa5d9063da6704b64836e files/digest-elib-1.0 59
