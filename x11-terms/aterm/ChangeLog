@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.9 2003/02/12 09:44:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.10 2003/03/11 08:23:20 aliz Exp $
+
+  11 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> aterm-0.4.2-r3.ebuild aterm-0.4.2-r4.ebuild :
+  Chmod and chown aterm bin. Closes #15548.
 
 *aterm-0.4.2-r4 (19 Jan 2003)
   19 Jan 2003; Masatomo Nakano <nakano@gentoo.org> aterm-0.4.2-r4.ebuild

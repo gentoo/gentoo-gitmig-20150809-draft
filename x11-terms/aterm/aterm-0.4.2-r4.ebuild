@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r4.ebuild,v 1.2 2003/02/13 17:33:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r4.ebuild,v 1.3 2003/03/11 08:23:20 aliz Exp $
 
 IUSE="cjk"
 S=${WORKDIR}/${P}
 DESCRIPTION="A terminal emulator with transparency support as well as rxvt backwards compatibility"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
+SRC_URI="mirror://sourceforge/aterm/${P}.tar.bz2
 	cjk? (http://wakaba.com/~tsann/aterm/aterm-0.4.2-ja.patch)"
 HOMEPAGE="http://aterm.sourceforge.net"
 LICENSE="GPL-2"
@@ -54,6 +54,9 @@ echo $myconf
 
 src_install () {
 	make DESTDIR=${D} install || die
+
+	fperms g+s /usr/bin/aterm
+	fowners root.utmp /usr/bin/aterm
 
 	dodoc TODO ChangeLog INSTALL doc/BUGS doc/FAQ doc/README.menu
 	docinto menu
