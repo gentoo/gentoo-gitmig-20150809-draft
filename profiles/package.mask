@@ -451,10 +451,6 @@ gnome-extra/gcalctool
 # new version has some issues with gcc-3.2
 =dev-lisp/gcl-2.4.3
 
-# <hanno@gentoo.org> (15 Oct 2002)
-# Masked, because new versions have real version numbers
-=app-misc/sonypid-20010123
-
 # <seemant@gentoo.org> (15 Oct 2002)
 # b0rked beyond belief.
 # ExtUtils-MakeMaker is now a part of the default system profile
@@ -833,11 +829,6 @@ sys-apps/mkisofs
 # Masked because readline-4.2 is masked in default-1.0.
 # typo fix by drobbins:
 =net-p2p/mutella-0.4
-
-# sunflare@gentoo.org (08 Jul 2002)
-# Masking out the old zsnes, since its version numbering scheme is emulation
-# scene based and not UNIX-based; portage wants 1.337 > 1.35.
-=app-emulation/zsnes-1.337-r2
 
 # drobbins@gentoo.org (07 Jul 2002)
 # stuff with deps that are missing; ebuilds have problems so I'm masking them
