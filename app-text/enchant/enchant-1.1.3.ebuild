@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.3.ebuild,v 1.11 2004/07/14 02:58:49 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.3.ebuild,v 1.12 2004/07/14 03:11:58 geoman Exp $
 
 inherit gnome2 gnuconfig
 
@@ -30,8 +30,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	#allow to build on mipslinux systems
-	use mips && gnuconfig_update
+	#for proper configuration on mips-linux and possibly other systems
+	gnuconfig_update
 }
 
-DOCS="AUTHORS BUGS COPYING.LIB ChangeLog HACKING MAINTAINERS NEWS README TODO"
+DOCS="AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO"
