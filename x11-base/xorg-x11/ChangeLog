@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.278 2005/01/20 07:28:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.279 2005/01/20 17:40:21 fmccor Exp $
+
+  20 Jan 2005; Ferris McCormick <fmccor@gentoo.org> xorg-x11-6.8.0-r4.ebuild:
+  Stable for sparc, closes tracking bug 63994.
 
   19 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.902.ebuild:
