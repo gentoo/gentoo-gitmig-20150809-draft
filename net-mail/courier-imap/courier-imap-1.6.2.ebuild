@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.6.2.ebuild,v 1.2 2002/12/31 08:08:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.6.2.ebuild,v 1.3 2002/12/31 08:14:55 raker Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="http://twtelecom.dl.sourceforge.net/sourceforge/courier/${P}.tar.bz2"
@@ -29,6 +29,7 @@ src_compile() {
 	use pam || myconf="${myconf} --without-authpam"
 	use ldap || myconf="${myconf} --without-authldap"
 	use mysql || myconf="${myconf} --without-authmysql"
+	use postgres || myconf="${myconf} --without-authpostgresql"
 	use berkdb \
 		&& myconf="${myconf} --with-db=db" \
 		|| myconf="${myconf} --with-db=gdbm"
