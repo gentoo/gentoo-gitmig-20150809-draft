@@ -1,8 +1,12 @@
 # ChangeLog for media-sound/gamix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.1 2002/05/24 02:57:19 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.2 2002/08/08 16:07:09 seemant Exp $
 
 *gamix-1.99_p13 (19 May 2002)
+
+  08 Aug 2002; Seemant Kulleen <seemant@gentoo.org> gamix-1.99_p13.ebuild :
+
+  nls bloat reduction.
 
   19 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   
