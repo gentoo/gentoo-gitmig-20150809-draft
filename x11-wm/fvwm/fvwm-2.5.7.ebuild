@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.6 2003/07/30 22:06:01 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.7 2003/07/30 22:28:10 taviso Exp $
 
 inherit gnuconfig
 
-IUSE="readline gtk gnome oss xinerama cjk perl nls png"
+IUSE="readline gtk gnome rplay xinerama cjk perl nls png"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an extremely powerful ICCCM-compliant multiple virtual desktop window manager"
@@ -18,9 +18,9 @@ LICENSE="GPL-2 FVWM"
 RDEPEND="readline? ( >=sys-libs/readline-4.1 )
 		gtk? ( =x11-libs/gtk+-1.2* )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
-		oss? ( media-sound/rplay )
+		rplay? ( media-sound/rplay )
 		perl? ( dev-lang/perl )	
-		cjk? ( >=dev-libs/fribidi-0.10.4 )
+		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		png? ( media-libs/libpng )
 		>=dev-libs/libstroke-0.4
 		media-libs/fontconfig
@@ -49,13 +49,13 @@ src_compile() {
 		|| myconf="${myconf} --without-readline-library"
 
 	use gtk \
-		|| myconf="${myconf} --with-gtk-prefix=/no/dir --with-imlib-prefix=/no/dir"
+		|| myconf="${myconf} --with-gtk-prefix=/var/empty --with-imlib-prefix=/var/empty"
 		
 	use gnome \
 		&& myconf="${myconf} --with-gnome" \
 		|| myconf="${myconf} --without-gnome" 
 	
-	use oss \
+	use rplay \
 		|| myconf="${myconf} --without-rplay-library"
 
 	use perl \
@@ -67,8 +67,12 @@ src_compile() {
 		|| myconf="${myconf} --disable-xinerama"
 
 	use cjk \
-		&& myconf="${myconf} --enable-multibyte --enable-bidi" \
-		|| myconf="${myconf} --disable-multibyte --disable-bidi"
+		&& myconf="${myconf} --enable-multibyte" \
+		|| myconf="${myconf} --disable-multibyte"
+
+	use bidi \
+		&& myconf="${myconf} --enable-bidi" \
+		|| myconf="${myconf} --disable-bidi"
 
 	use png \
 		|| myconf="${myconf} --without-png-library"
@@ -88,7 +92,7 @@ src_compile() {
 		autoreconf ) 2>/dev/null
 	einfo "Fixed."
 	
-	econf ${myconf} PKG_CONFIG=${ROOT}/usr/bin/pkg-config || die
+	econf ${myconf} PKG_CONFIG=/usr/bin/pkg-config || die
 	emake || die
 }
 
