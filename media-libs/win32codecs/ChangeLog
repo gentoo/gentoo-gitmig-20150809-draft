@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.12 2004/06/24 23:25:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.13 2004/08/14 03:22:00 chriswhite Exp $
+
+*win32codecs-20040703 (14 Aug 2004)
+
+  14 Aug 2004; Chris White <chriswhite@gentoo.org>
+  +win32codecs-20040703.ebuild:
+  Bumped to 20040703.  Closes bug #60120.
 
 *win32codecs-20040427 (24 Jun 2004)
 
