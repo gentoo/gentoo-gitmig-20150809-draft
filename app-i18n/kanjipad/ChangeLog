@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/kanjipad
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.5 2003/07/28 15:20:43 yakina Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.6 2004/04/25 15:06:34 usata Exp $
+
+  26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> kanjipad-1.2.3.ebuild,
+  kanjipad-2.0.0.ebuild:
+  Marked stable on x86. Added missing IUSE and removed default S
 
 *kanjipad-2.0.0 (29 Jul 2003)
 

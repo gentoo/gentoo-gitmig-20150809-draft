@@ -1,19 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/kanjipad-2.0.0.ebuild,v 1.2 2004/02/22 16:47:03 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/kanjipad-2.0.0.ebuild,v 1.3 2004/04/25 15:06:34 usata Exp $
 
-KEYWORDS="~x86 amd64"
+IUSE=""
+
 DESCRIPTION="Japanese handwriting recognition tool"
 HOMEPAGE="http://fishsoup.net/software/kanjipad/"
 SRC_URI="http://fishsoup.net/software/kanjipad/${P}.tar.gz"
-LICENSE="GPL-2"
-SLOT="0"
-IUSE=""
 
+LICENSE="GPL-2"
+
+SLOT="0"
 DEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2"
-
-S=${WORKDIR}/${P}
+KEYWORDS="x86 amd64"
 
 src_compile() {
 	mv Makefile Makefile.orig
