@@ -1,11 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/asmon-0.62.ebuild,v 1.2 2003/05/12 22:51:51 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/asmon-0.62.ebuild,v 1.3 2003/05/12 22:54:27 wwoods Exp $
 # Short one-line description of this package.
 DESCRIPTION="WindowMaker/AfterStep system monitor dockapp"
 HOMEPAGE="http://rio.vg/asmon/"
-SRC_URI="mirror://gentoo/${P}.tar.gz
-	http://www.tigr.net/afterstep/download/asmon/${P}.tar.gz"
+SRC_URI="http://www.tigr.net/afterstep/download/asmon/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 alpha"
