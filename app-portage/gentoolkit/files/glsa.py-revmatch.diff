@@ -6,12 +6,6 @@ retrieving revision 1.8
 diff -u -r1.7 -r1.8
 --- src/glsa-check/glsa.py	8 Dec 2004 10:52:43 -0000	1.7
 +++ src/glsa-check/glsa.py	9 Dec 2004 17:37:16 -0000	1.8
-@@ -1,4 +1,4 @@
--# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/glsa.py-revmatch.diff,v 1.1 2004/12/09 17:45:39 genone Exp $
-+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/glsa.py-revmatch.diff,v 1.1 2004/12/09 17:45:39 genone Exp $
- 
- # This program is licensed under the GPL, version 2
- 
 @@ -315,12 +315,12 @@
  	@rtype:		list of strings
  	@return:	a list with the matching versions

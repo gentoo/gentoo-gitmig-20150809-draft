@@ -18,11 +18,11 @@ MD5 096ea293c35570bd708ebd8cde10ca6b files/digest-gentoolkit-0.2.0_pre10-r1 73
 MD5 2a64dd5b5e7e57ffc34102eca6b936b3 files/qpkg-security-fix-68846.diff 645
 MD5 20b8b5a62b58a621014f1e0922675564 files/digest-gentoolkit-0.2.0_rc1 71
 MD5 20b8b5a62b58a621014f1e0922675564 files/digest-gentoolkit-0.2.0_rc1-r1 71
-MD5 f6ad48544d3791babda5281e0e51673f files/glsa.py-revmatch.diff 1121
+MD5 c5f0ee94504ceba66944b93e3db772d3 files/glsa.py-revmatch.diff 796
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBuJ2C6J2i8a8J4okRAif/AKCCxxATX6p/6h4RugWej7FhxUKkeACfYl1H
-kdZzvxrqEhTPdHAVEujCC+A=
-=kWje
+iD8DBQFBuMTq6J2i8a8J4okRAm28AJ9qebPK5JpPl+1bV+cWN9t/8heibgCguLqi
+at1zL8lHH9cEvIF5BWZ1N50=
+=FHvl
 -----END PGP SIGNATURE-----
