@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/kgamma
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgamma/ChangeLog,v 1.1 2004/12/02 15:33:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgamma/ChangeLog,v 1.2 2004/12/02 15:39:23 carlo Exp $
+
+  02 Dec 2004; Carsten Lohrke <carlo@gentoo.org> kgamma-1.0.1.ebuild:
+  block >=kde-3.3
 
 *kgamma-1.0.1 (02 Dec 2004)
 
