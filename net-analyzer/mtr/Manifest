@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 014ed4a970c360baad33c5cdf710240b mtr-0.54-r2.ebuild 1113
-MD5 e620c82b60871ce9935d65e232946c4e mtr-0.54.ebuild 822
-MD5 e4ddfa2236607bed0cc0a81e66dcd88b ChangeLog 2465
-MD5 720bffd73acf542e859034ca9d443c19 metadata.xml 244
+MD5 ab6bc9fff4093c4fb9090986eb83bbf9 ChangeLog 2561
 MD5 1e7a07df23aefefa1d554024bd15b6eb mtr-0.49-r1.ebuild 954
-MD5 7a626d479aec5d6bfba540b6f3935a9e files/digest-mtr-0.54 59
+MD5 e620c82b60871ce9935d65e232946c4e mtr-0.54.ebuild 822
+MD5 720bffd73acf542e859034ca9d443c19 metadata.xml 244
+MD5 0458dd555f91d752c7436bff40720499 mtr-0.54-r2.ebuild 1115
 MD5 9ad35f50576c4ede55776cf455d747a9 files/digest-mtr-0.49-r1 59
+MD5 7a626d479aec5d6bfba540b6f3935a9e files/digest-mtr-0.54 59
 MD5 cf3436006255ff4c602431f3a3eca98e files/digest-mtr-0.54-r2 131
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBIcRqT+MN7JbqCpMRAj1xAJ4g3V9Hem6qh1Uqh8/QuXVc2S5x/wCfW8Yp
-IgSUI20HoOrJ0cwMYl+UQjA=
-=GzAD
------END PGP SIGNATURE-----
