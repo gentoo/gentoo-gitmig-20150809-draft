@@ -1,21 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82.ebuild,v 1.7 2004/06/24 22:20:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82.ebuild,v 1.8 2004/08/13 11:43:25 mr_bones_ Exp $
 
 DESCRIPTION="An exciting collection of more than 200 solitaire card games"
-SRC_URI="http://www.oberhumer.com/opensource/pysol/download/${P}.tar.bz2"
 HOMEPAGE="http://www.oberhumer.com/opensource/pysol/"
+SRC_URI="http://www.oberhumer.com/opensource/pysol/download/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc amd64"
+IUSE=""
 
 DEPEND="virtual/python
 	>=sys-apps/sed-4"
 RDEPEND="virtual/python
 	>=games-board/pysol-sound-server-3.0
 	>=dev-lang/tk-8.0"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="x86 ppc amd64"
-IUSE=""
 
 pkg_setup() {
 	if ! python -c "import Tkinter" >/dev/null 2>&1 ; then
@@ -27,21 +27,17 @@ pkg_setup() {
 }
 
 src_install () {
-	local prefix
-	local datadir
-	local pkgdatadir
-
-	prefix="/usr"
-	datadir="${prefix}/share"
-	pkgdatadir=${datadir}/${PN}/${PV}
+	local prefix="/usr"
+	local datadir="${prefix}/share"
+	local pkgdatadir=${datadir}/${PN}/${PV}
 
 	sed -i \
 		-e "s|@prefix@|${prefix}|" \
 		-e "s|@pkgdatadir@|${pkgdatadir}|" pysol || \
 			die "sed pysol failed"
 
-	dobin pysol
-	make prefix=${D}/usr install-data
+	dobin pysol || die "dobin failed"
+	make prefix="${D}/usr" install-data
 	insinto /usr/X11R6/include/X11/pixmaps
 	doins data/pysol.xpm
 	doman pysol.6
