@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vanessa-adt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.4 2004/06/24 23:37:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.5 2004/08/03 11:48:28 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> vanessa-adt-0.0.4_beta4.ebuild:
+  Added to ~ppc.
 
   19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   vanessa-adt-0.0.4_beta4.ebuild:
