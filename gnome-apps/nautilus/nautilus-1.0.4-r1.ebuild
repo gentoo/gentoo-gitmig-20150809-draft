@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/nautilus/nautilus-1.0.4-r1.ebuild,v 1.1 2001/07/07 00:36:59 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/nautilus/nautilus-1.0.4-r1.ebuild,v 1.2 2001/08/21 13:57:38 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -13,7 +13,6 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext )
-	mozilla? ( >=net-www/mozilla-0.8-r1 )
         >=media-sound/cdparanoia-3.9.8
         >=gnome-base/bonobo-1.0.2
         >=gnome-base/libghttp-1.0.9
@@ -24,13 +23,12 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=gnome-libs/librsvg-1.0.1
         >=dev-util/xml-i18n-tools-0.8.4"
 
-RDEPEND="mozilla? ( >=net-www/mozilla-0.8-r1 )
-        >=media-sound/cdparanoia-3.9.8
-        >=gnome-base/bonobo-1.0.2
-        >=gnome-base/gnome-core-1.4.0.4
-	>=gnome-libs/medusa-0.5.1
-	>=gnome-libs/eel-1.0.1
-	>=gnome-libs/librsvg-1.0.1"
+RDEPEND=">=media-sound/cdparanoia-3.9.8
+         >=gnome-base/bonobo-1.0.2
+         >=gnome-base/gnome-core-1.4.0.4
+	 >=gnome-libs/medusa-0.5.1
+	 >=gnome-libs/eel-1.0.1
+	 >=gnome-libs/librsvg-1.0.1"
 
 src_compile() {                           
   local myconf
@@ -38,20 +36,21 @@ src_compile() {
   then
     myconf="--disable-nls"
   fi
-  if [ "`use mozilla`" ]
-  then
-    MOZILLA=/opt/mozilla
-    myconf="${myconf} --with-mozilla-lib-place=$MOZILLA \
-		--with-mozilla-include-place=$MOZILLA/include"
-    export MOZILLA_FIVE_HOME=$MOZILLA
-    export LD_LIBRARY_PATH=$MOZILLA_FIVE_HOME
+#  if [ "`use mozilla`" ]
+#  then
+#    MOZILLA=/opt/mozilla
+#    myconf="${myconf} --with-mozilla-lib-place=$MOZILLA \
+#		--with-mozilla-include-place=$MOZILLA/include"
+#    export MOZILLA_FIVE_HOME=$MOZILLA
+#    export LD_LIBRARY_PATH=$MOZILLA_FIVE_HOME
 #    export CXXFLAGS="$CXXFLAGS -fno-exceptions -fno-rtti"
-  else
-    myconf="${myconf} --disable-mozilla-component"
-  fi
-  try ./configure --host=${CHOST} --prefix=/opt/gnome \
-        --sysconfdir=/etc/opt/gnome --infodir=/opt/gnome/info \
-	--mandir=/opt/gnome/man --enable-eazel-services=1 ${myconf}
+#  else
+#    myconf="${myconf} --disable-mozilla-component"
+#  fi
+  try ./configure --host=${CHOST} --prefix=/opt/gnome 		\
+        --sysconfdir=/etc/opt/gnome --infodir=/opt/gnome/info 	\
+	--mandir=/opt/gnome/man --enable-eazel-services=1       \
+	--disable-mozilla-component ${myconf}
   try pmake
 }
 
