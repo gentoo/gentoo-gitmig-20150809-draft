@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/bbdb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.5 2004/04/25 16:56:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.6 2004/04/26 09:32:12 dholm Exp $
+
+  26 Apr 2004; David Holm <dholm@gentoo.org> bbdb-2.35_pre20040323.ebuild:
+  Added to ~ppc.
 
 *bbdb-2.35_pre20040323 (26 Apr 2004)
 
