@@ -1,4 +1,3 @@
-MD5 2c4feb15f4c2468dbb136a103e914eda files/digest-safestr-1.0.1 66
-MD5 6228ccba264aeda77210d632c1d61dfa files/1.0.1-makefile.patch 358
-MD5 8a501681353d62dc2ecd046d1739d76d safestr-1.0.1.ebuild 668
-MD5 c03c5c6c01457277b813163855260410 ChangeLog 339
+MD5 1dfd61420c52955a07312d271dff06de files/digest-safestr-1.0.2 66
+MD5 1116e894af3a1efe375a388ff06f9a16 safestr-1.0.2.ebuild 643
+MD5 ad775c982a24e674b8cacec242e97a51 ChangeLog 445
