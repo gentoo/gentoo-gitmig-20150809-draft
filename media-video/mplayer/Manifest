@@ -1,4 +1,8 @@
-MD5 130b280df998b3be840d8250a0b259c8 mplayer-1.0_pre2.ebuild 11712
+MD5 6e4cd04df5cea0c54044d82fea4e1c59 mplayer-1.0_pre2.ebuild 11693
+MD5 9adeb555572aece3c0e951a526116e3c mplayer-1.0_pre1-r1.ebuild 11501
+MD5 9cbdd77f8750550be5c7d9cf42e11737 ChangeLog 17078
+MD5 93694398515284a729c544200e65ba8b mplayer-0.92.ebuild 11816
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 9e064190a914d26b0392a266753161ed files/mplayer-0.90-ppc-benh.patch 2029
 MD5 059e03d1d2c965b04a5e53ed850de64a files/mplayer-0.90_rc4-gtk2.patch 6183
 MD5 260489267a0ccf01fe300bce0ec1430d files/mencoder-segfault.patch 520
@@ -11,7 +15,3 @@ MD5 b0205104d1242fcccdb5dfd2188f5ab2 files/digest-mplayer-1.0_pre2 358
 MD5 26a52f084f4d177580ed9ea0187f54e7 files/mplayer-0.90-ppc-benh-2.patch 2049
 MD5 89440216f99b2e09265d46fead5363fb files/digest-mplayer-1.0_pre1-r1 358
 MD5 8f18911adcd661e70ad0cd84a94d49ac files/mplayer-0.90-divx.patch 25064
-MD5 329cebb97d1db25670de35bb33a90ec7 mplayer-1.0_pre1-r1.ebuild 11524
-MD5 487595d6fbfc2f619192b65f8b4acb36 ChangeLog 16864
-MD5 c835d9e3b9c541623c6324822cdc066c mplayer-0.92.ebuild 11816
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92.ebuild,v 1.8 2003/10/13 19:15:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92.ebuild,v 1.9 2003/12/04 17:27:44 seemant Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc"
 
@@ -27,15 +27,16 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	x86? ( >=media-libs/xvid-0.9.0
 			>=media-libs/divx4linux-20020418
 			>=media-libs/win32codecs-0.60 )
-	gtk? ( !gtk2? ( =x11-libs/gtk+-1.2*
-					=dev-libs/glib-1.2* )
-			media-libs/libpng
-			>=x11-base/xfree-4.2.1-r2 )
-	gtk2? ( >=x11-libs/gtk+-2.0.6
-			>=dev-libs/glib-2.0.6 )
+	gtk? ( media-libs/libpng
+			>=x11-base/xfree-4.2.1-r2
+		!gtk2? ( =x11-libs/gtk+-1.2*
+				=dev-libs/glib-1.2* )
+		gtk2? ( >=x11-libs/gtk+-2.0.6
+				>=dev-libs/glib-2.0.6 )
+		)
 	jpeg? ( media-libs/jpeg )
 	gif? ( media-libs/giflib
-			media-libs/libungif )
+		media-libs/libungif )
 	truetype? ( >=media-libs/freetype-2.1 )
 	esd? ( media-sound/esound )
 	ggi? ( media-libs/libggi )
@@ -47,7 +48,7 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	aalib? ( media-libs/aalib )
 	svga? ( media-libs/svgalib )
 	encode? ( media-sound/lame
-			>=media-libs/libdv-0.9.5 )
+		>=media-libs/libdv-0.9.5 )
 	xmms? ( media-sound/xmms )
 	opengl? ( virtual/opengl )
 	directfb? ( dev-libs/DirectFB )
