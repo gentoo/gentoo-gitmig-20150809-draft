@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 59b3fc8ba34ba26132e40b9bc93f2948 vifm-0.2.ebuild 1266
-MD5 be94bcac85d17aaf89dee63f89152938 ChangeLog 612
-MD5 22f50566ad73cdd7dab71e355b70dfad vifm-0.2a.ebuild 1181
+MD5 4175dfb44b0a681fbe51621057260205 ChangeLog 707
+MD5 7f5d2ac7647a80e75e205b0b33c56534 vifm-0.2a.ebuild 1186
 MD5 ac6aed932b8c8d21163f179660793895 metadata.xml 253
 MD5 1e458fd71566f5247cbcbf36f0d01118 files/digest-vifm-0.2a 60
 MD5 2e1cb4fe666e2594a05352c0605da798 files/digest-vifm-0.2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBgsKzCHk4+ZoBpvsRAikKAJ9zhi+j+iuIq/rd9yoRJg9nZ4HyEQCeLD9S
+OxGABNkk2ON7bOZYdB94/ZU=
+=Gsji
+-----END PGP SIGNATURE-----
