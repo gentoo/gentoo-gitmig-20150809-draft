@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>hardened</herd>
+	<maintainer>
+		<email>hardened@gentoo.org</email>
+		<description>Bastille Currently Has No Primary Gentoo Maintainer</description>
+	</maintainer>
+	<longdescription>The Bastille Hardening System attempts to "harden" or "tighten" Unix operating systems.</longdescription>
+</pkgmetadata>
