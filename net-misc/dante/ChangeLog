@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.46 2005/02/22 18:45:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.47 2005/03/20 23:15:08 mrness Exp $
+
+  21 Mar 2005; Alin Nastac <mrness@gentoo.org> dante-1.1.15-r1.ebuild:
+  Fix broken build on systems with other version of libtool than 1.5.10 (#86053).
 
 *dante-1.1.15-r1 (22 Feb 2005)
 

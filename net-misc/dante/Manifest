@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c520e0f5c47ee855dd75e12f5b175fe7 dante-1.1.15-r1.ebuild 2239
-MD5 31de8bd1cf2b3d0725c96b5acaeed085 ChangeLog 7049
+MD5 40bdc4b7af8439c508190a5515e439b9 dante-1.1.15-r1.ebuild 2266
+MD5 529cad46280ba4ad9d4f4c0481e5b691 ChangeLog 7203
 MD5 100796800094d474431e0cac11585619 metadata.xml 246
 MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.15_pre1-socksify.patch 811
 MD5 5e74662c76571e30e6a190a2d4d1193a files/dante-1.1.15-optionalpam.patch 10896
@@ -12,9 +12,9 @@ MD5 30064015b5702cf8059a1639167e8a3f files/dante-1.1.15-getipnodebyname.patch 78
 MD5 b2dd85bbe5ff89e36cfd592cfa41612f files/dante-sockd-conf 462
 MD5 47653d863c6523851ffd754671965b1a files/dante-sockd-init 1318
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCG324jiC39V7gKu0RAvuUAKDd/INVh8D9I99L9km8abaUwc0RqQCg2BCt
-8BtAwgHu6tTUtHH30ZSgW0M=
-=vhU4
+iD8DBQFCPgQFjiC39V7gKu0RAiKvAKCkwmnkEfT8rjmeiTPbm7XehItysQCfYVix
+lS43debEaupuig2vH1cmoBs=
+=MszD
 -----END PGP SIGNATURE-----
