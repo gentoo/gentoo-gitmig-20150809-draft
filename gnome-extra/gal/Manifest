@@ -1,16 +1,26 @@
-MD5 8af27b810b493362a9d4d3b86266e564 gal-1.99.11.ebuild 969
-MD5 76a93c27861a47849d9cb3f74b7d68a6 gal-2.2.4.ebuild 1290
-MD5 1d162abbe393a1ea3438771628c0002c gal-2.2.3.ebuild 1288
-MD5 be086a4130449a3c53e1df31e6cb75d2 gal-0.24.ebuild 2087
-MD5 0b6f832cd34eafa28e6885ec7062860f gal-2.2.2.ebuild 1287
-MD5 d715789a7ed75efc315208bd705ab935 ChangeLog 9104
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1c832a6fed2c66c1102bcc39ae068e6f ChangeLog 9187
+MD5 b88f28f47890cb26f1837be5fa4217a1 gal-0.24.ebuild 2087
+MD5 14c65be9a8c4970db15e38832c2df045 gal-2.2.3.ebuild 1287
+MD5 d0b7e55305f12df9cfb6224d7c85bbce gal-2.2.2.ebuild 1287
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 98f74467610f28a47bf4d345de723b41 gal-2.2.4.ebuild 1293
+MD5 9d0017c08b56fd1a6194cf0d507e15ca gal-1.99.11.ebuild 969
 MD5 d3f2cb3e99716f24029dd7afa3fa97a3 files/digest-gal-0.24 62
-MD5 b2f242d8b7015030276291e22e03aa48 files/gal-0.24-sgml-1.patch 1363
+MD5 c6255084120bc27d90ae92dd62826c16 files/digest-gal-2.2.4 63
 MD5 95ab7cf92689f0cd2db97884cc53c423 files/digest-gal-1.99.11 64
-MD5 4690f5246b395401f10fd9082b676912 files/gal-1.99.3-docfix.patch 436
+MD5 091ca91bcf117dc0fdb319d85e98ffeb files/digest-gal-2.2.3 63
+MD5 b2f242d8b7015030276291e22e03aa48 files/gal-0.24-sgml-1.patch 1363
 MD5 97951a1b0e70fcbb12ca490084442b33 files/gal-2.2.0-docfix.patch 2569
 MD5 737e4a75668a5590e54e746295c5efd7 files/gal-2.1.12-gcc34.patch 483
+MD5 4690f5246b395401f10fd9082b676912 files/gal-1.99.3-docfix.patch 436
 MD5 f912b63413502c12279194f0150e7987 files/digest-gal-2.2.2 63
-MD5 091ca91bcf117dc0fdb319d85e98ffeb files/digest-gal-2.2.3 63
-MD5 c6255084120bc27d90ae92dd62826c16 files/digest-gal-2.2.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4RI9CHk4+ZoBpvsRAgIYAJ4qtuxTVQ1eXxiDJwYo1XTX7mbu3QCgjIZN
+4ZMLbdQwCBMte4XbEb1PWFY=
+=0Uof
+-----END PGP SIGNATURE-----
