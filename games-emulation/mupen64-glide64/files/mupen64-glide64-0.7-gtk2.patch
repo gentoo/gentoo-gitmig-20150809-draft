@@ -1,0 +1,27 @@
+--- glide64_0_7_ME/Config.cpp.old	2005-01-02 13:21:06.399041458 -0800
++++ glide64_0_7_ME/Config.cpp	2005-01-02 13:21:09.975475355 -0800
+@@ -594,7 +594,7 @@
+ static void okButtonCallback(GtkWidget *widget, void *data)
+ {
+    ConfigDialog *configDialog = (ConfigDialog*)data;
+-   char *s;
++   const gchar *s;
+    int i,n=0;
+    
+    s = gtk_entry_get_text(GTK_ENTRY(GTK_COMBO(configDialog->windowResCombo)->entry));
+--- glide64_0_7_ME/Makefile.old	2005-01-02 13:17:39.755824013 -0800
++++ glide64_0_7_ME/Makefile	2005-01-02 13:19:39.914670229 -0800
+@@ -1,11 +1,11 @@
+ CC = gcc
+ #CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -Iwrapper/ -g -mmmx -msse
+ #CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -Iwrapper/ -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer -msse -mmmx
+-CFLAGS = -DUSE_GTK -DGL_GLEXT_PROTOTYPES `sdl-config --cflags` `gtk-config --cflags` -Iwrapper/
++CFLAGS = -DUSE_GTK -DGL_GLEXT_PROTOTYPES `sdl-config --cflags` `pkg-config --cflags gtk+-2.0` -D_GTK2 -Iwrapper/
+ CXX = g++
+ CPPFLAGS = $(CFLAGS)
+ LD = g++
+-LDFLAGS = -lGL -lGLU -L/usr/X11R6/lib -lSDL
++LDFLAGS = -lGL -lGLU -L/usr/X11R6/lib -lSDL `pkg-config --libs gtk+-2.0`
+ 
+ OBJECTS = Main.o \
+ 	rdp.o \

@@ -1,0 +1,107 @@
+diff -ru glide64_0_7_ME/Makefile glide64_0_7_ME.working/Makefile
+--- glide64_0_7_ME/Makefile	2004-07-03 14:07:06.000000000 -0700
++++ glide64_0_7_ME.working/Makefile	2005-01-01 20:50:24.886864494 -0800
+@@ -1,7 +1,7 @@
+ CC = gcc
+ #CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -Iwrapper/ -g -mmmx -msse
+ #CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -Iwrapper/ -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer -msse -mmmx
+-CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -Iwrapper/ -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer -msse -mmmx
++CFLAGS = -DUSE_GTK -DGL_GLEXT_PROTOTYPES `sdl-config --cflags` `gtk-config --cflags` -Iwrapper/
+ CXX = g++
+ CPPFLAGS = $(CFLAGS)
+ LD = g++
+diff -ru glide64_0_7_ME/wrapper/combiner.cpp glide64_0_7_ME.working/wrapper/combiner.cpp
+--- glide64_0_7_ME/wrapper/combiner.cpp	2004-06-19 16:11:54.000000000 -0700
++++ glide64_0_7_ME.working/wrapper/combiner.cpp	2005-01-01 20:47:08.752963059 -0800
+@@ -4,7 +4,7 @@
+ #include "../winlnxdefs.h"
+ #endif // _WIN32
+ #include <GL/gl.h>
+-#include "glext.h"
++#include <GL/glext.h>
+ #include "glide.h"
+ #include "main.h"
+ 
+diff -ru glide64_0_7_ME/wrapper/geometry.cpp glide64_0_7_ME.working/wrapper/geometry.cpp
+--- glide64_0_7_ME/wrapper/geometry.cpp	2004-06-20 03:00:18.000000000 -0700
++++ glide64_0_7_ME.working/wrapper/geometry.cpp	2005-01-01 20:42:31.730992830 -0800
+@@ -4,8 +4,8 @@
+ #include "../winlnxdefs.h"
+ #endif // _WIN32
+ #include <GL/gl.h>
++#include <GL/glext.h>
+ #include "glide.h"
+-#include "glext.h"
+ #include "main.h"
+ 
+ static int xy_off;
+diff -ru glide64_0_7_ME/wrapper/main.cpp glide64_0_7_ME.working/wrapper/main.cpp
+--- glide64_0_7_ME/wrapper/main.cpp	2004-07-02 12:57:48.000000000 -0700
++++ glide64_0_7_ME.working/wrapper/main.cpp	2005-01-01 20:51:32.459133270 -0800
+@@ -20,10 +20,6 @@
+ #endif // _WIN32
+ 
+ 
+-PFNGLACTIVETEXTUREARBPROC glActiveTextureARB;
+-PFNGLBLENDFUNCSEPARATEEXTPROC glBlendFuncSeparateEXT;
+-PFNGLMULTITEXCOORD2FARBPROC glMultiTexCoord2fARB;
+-PFNGLFOGCOORDFPROC glFogCoordfEXT;
+ #ifdef _WIN32
+ PFNWGLGETEXTENSIONSSTRINGARBPROC wglGetExtensionsStringARB;
+ 
+@@ -505,8 +501,8 @@
+ 	glActiveTextureARB = (PFNGLACTIVETEXTUREARBPROC)wglGetProcAddress("glActiveTextureARB");
+ 	glMultiTexCoord2fARB = (PFNGLMULTITEXCOORD2FARBPROC)wglGetProcAddress("glMultiTexCoord2fARB");
+ #else // _WIN32
+-   glActiveTextureARB = (PFNGLACTIVETEXTUREARBPROC)SDL_GL_GetProcAddress("glActiveTextureARB");
+-   glMultiTexCoord2fARB = (PFNGLMULTITEXCOORD2FARBPROC)SDL_GL_GetProcAddress("glMultiTexCoord2fARB");
++//   glActiveTextureARB = (PFNGLACTIVETEXTUREARBPROC)SDL_GL_GetProcAddress("glActiveTextureARB");
++//   glMultiTexCoord2fARB = (PFNGLMULTITEXCOORD2FARBPROC)SDL_GL_GetProcAddress("glMultiTexCoord2fARB");
+ #endif // _WIN32
+ 	glGetIntegerv(GL_MAX_TEXTURE_UNITS_ARB, &nbTextureUnits);
+ 	if (nbTextureUnits == 1) display_warning((unsigned char*)"You need a video card that has at least 2 texture units");
+@@ -523,7 +519,7 @@
+ #ifdef _WIN32
+ 	glBlendFuncSeparateEXT = (PFNGLBLENDFUNCSEPARATEEXTPROC)wglGetProcAddress("glBlendFuncSeparateEXT");
+ #else // _WIN32
+-   glBlendFuncSeparateEXT = (PFNGLBLENDFUNCSEPARATEEXTPROC)SDL_GL_GetProcAddress("glBlendFuncSeparateEXT");
++   //glBlendFuncSeparateEXT = (PFNGLBLENDFUNCSEPARATEEXTPROC)SDL_GL_GetProcAddress("glBlendFuncSeparateEXT");
+ #endif // _WIN32
+ 
+ 	if (isExtensionSupported("GL_EXT_fog_coord") == FALSE)
+@@ -561,7 +557,7 @@
+ 		viewport_offset = 0;
+ 	}
+ #else // _WIN32
+-   glFogCoordfEXT = (PFNGLFOGCOORDFPROC)SDL_GL_GetProcAddress("glFogCoordfEXT");
++   //glFogCoordfEXT = (PFNGLFOGCOORDFPROC)SDL_GL_GetProcAddress("glFogCoordfEXT");
+ #endif // _WIN32
+ 	widtho = width/2;
+ 	if (!fullscreen)
+diff -ru glide64_0_7_ME/wrapper/main.h glide64_0_7_ME.working/wrapper/main.h
+--- glide64_0_7_ME/wrapper/main.h	2004-06-20 12:08:48.000000000 -0700
++++ glide64_0_7_ME.working/wrapper/main.h	2005-01-01 20:42:07.669225539 -0800
+@@ -5,7 +5,7 @@
+ #include <windows.h>
+ #endif // _WIN32
+ #include <GL/gl.h>
+-#include "glext.h"
++#include <GL/glext.h>
+ #include "glide.h"
+ 
+ void display_warning(unsigned char *text, ...);
+@@ -15,12 +15,12 @@
+ void updateCombiner(int i);
+ void updateCombinera(int i);
+ 
+-//#ifdef _WIN32
++#ifdef _WIN32
+ extern PFNGLACTIVETEXTUREARBPROC glActiveTextureARB;
+ extern PFNGLMULTITEXCOORD2FARBPROC glMultiTexCoord2fARB;
+ extern PFNGLBLENDFUNCSEPARATEEXTPROC glBlendFuncSeparateEXT;
+ extern PFNGLFOGCOORDFPROC glFogCoordfEXT;
+-//#endif // _WIN32
++#endif // _WIN32
+ extern int w_buffer_mode;
+ extern int nbTextureUnits;
+ extern int width, height, widtho, heighto;

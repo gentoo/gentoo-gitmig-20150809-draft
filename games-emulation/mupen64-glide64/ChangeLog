@@ -1,0 +1,11 @@
+# ChangeLog for games-emulation/mupen64-glide64
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/ChangeLog,v 1.1 2005/01/03 15:36:18 morfic Exp $
+
+*mupen64-glide64-0.7 (02 Jan 2005)
+
+  02 Jan 2005; Daniel Goller <morfic@gentoo.org>
+  +files/mupen64-glide64-0.7-compile.patch,
+  +files/mupen64-glide64-0.7-gtk2.patch, +mupen64-glide64-0.7.ebuild:
+  Initial commit of mupen64 plugin, needs work, we'll go from here
+
