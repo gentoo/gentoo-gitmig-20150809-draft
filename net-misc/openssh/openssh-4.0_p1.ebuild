@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1.ebuild,v 1.2 2005/03/15 06:54:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1.ebuild,v 1.3 2005/03/17 01:09:02 vapier Exp $
 
 inherit eutils flag-o-matic ccc
 
@@ -97,7 +97,7 @@ src_compile() {
 }
 
 src_install() {
-	make install-files DESTDIR="${D}" || die
+	make install-nokeys DESTDIR="${D}" || die
 	fperms 600 /etc/ssh/sshd_config
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
 	newpamd "${FILESDIR}"/sshd.pam sshd
