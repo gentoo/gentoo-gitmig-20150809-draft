@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/shmux
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.5 2004/08/08 11:28:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.6 2004/08/13 12:54:48 swegener Exp $
+
+  13 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  Added longdescription to metadata.xml.
 
 *shmux-1.0_beta4 (08 Aug 2004)
 
