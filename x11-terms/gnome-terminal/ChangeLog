@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.28 2003/05/17 16:25:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.29 2003/05/29 23:36:05 lu_zero Exp $
+
+  30 May 2003; Luca Barbato <lu_zero@gentoo.org> gnome-terminal-2.2.1.ebuild :
+  Add ppc to KEYWORDS
 
 *gnome-terminal-2.2.1-r1 (17 May 2003)
 
