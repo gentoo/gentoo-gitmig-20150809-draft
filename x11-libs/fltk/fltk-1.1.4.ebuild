@@ -1,22 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.2-r1.ebuild,v 1.6 2003/09/08 03:13:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4.ebuild,v 1.1 2003/10/12 18:42:32 lanius Exp $
+
+IUSE="opengl debug nptl"
 
 inherit eutils
 
 DESCRIPTION="C++ user interface toolkit for X and OpenGL."
 HOMEPAGE="http://www.fltk.org"
-SRC_URI="ftp://ftp.easysw.com/pub/fltk/${PV}/${P}-source.tar.bz2"
+SRC_URI="ftp://ftp.easysw.com/pub/fltk/${PV/_/}/${P/_/}-source.tar.bz2"
 
 SLOT="1.1"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 LICENSE="FLTK | GPL-2"
-IUSE="opengl"
 
 DEPEND="virtual/x11
+	virtual/xft
 	media-libs/libpng
 	media-libs/jpeg
 	opengl? ( virtual/opengl )"
+
+S=${WORKDIR}/${P/_/}
 
 src_unpack() {
 	unpack ${A}
@@ -26,26 +30,26 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="--enable-shared --enable-static --enable-threads \
-		--enable-xdbe"
+	myconf="--enable-shared --enable-xdbe --enable-xft --enable-static"
 
-	# If you still have problems and you just uninstalled
-	# xft and didn't re-install xfree to get the right headers
-	# back the xft enabled build still wont work. :) I hope to fix
-	# this eventually but for the 1.4 release...
-	if [ -d ${ROOT}var/db/pkg/x11-libs/xft* ]; then
-		myconf="${myconf} --disable-xft"
-	else
-		myconf="${myconf} --enable-xft"
-	fi
+	use debug && myconf="${myconf} --enable-debug"
 
 	use opengl || myconf="${myconf} --disable-gl"
+
+	# The fltk threading code doesn't work with nptl
+	# See bug #26569
+	use nptl && myconf="${myconf} --disable-threads" \
+		|| myconf="${myconf} --enable-threads"
 
 	# needed for glibc-2.3.1 (as far as i can test)
 	# otherwise libstdc++ won't be linked. #17894 and #15572
 	# doesn't happen for glibc-2.3.2 - <liquidx@gentoo.org>
 	export CXX="g++"
 	export CC="g++"
+
+	# bug #19894
+	export C_INCLUDE_PATH="${C_INCLUDE_PATH}:/usr/include/freetype2"
+	export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:/usr/include/freetype2"
 
 	econf \
 		--includedir=/usr/include/fltk-1.1 \
@@ -68,4 +72,7 @@ src_install() {
 
 	insinto /etc/env.d
 	doins 99fltk-1.1
+
+	dodir /usr/share/doc/${P}/html
+	mv ${D}/usr/share/doc/fltk/* ${D}/usr/share/doc/${P}/html
 }
