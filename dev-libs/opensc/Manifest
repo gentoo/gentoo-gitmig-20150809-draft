@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b1be160eda5be0bcd26793d6f25d24db opensc-0.8.1.ebuild 1214
-MD5 92beb9ea7c2a6ddee15bba4b87dc159c ChangeLog 967
-MD5 85456e1721e8fab93ac390cd5e0e9c7e opensc-0.9.0_alpha.ebuild 1254
+MD5 5b9ed3b3e4c9b89c0f1d896cda0c1431 ChangeLog 1079
+MD5 b63b3d84ba3aa09e42985587b74d308b opensc-0.8.1.ebuild 1218
+MD5 34def67791121eb7af978acd1c5cdc15 opensc-0.9.0_alpha.ebuild 1258
 MD5 f86c0f261be1b0dfc62c930134c05a42 files/digest-opensc-0.8.1 64
 MD5 80813908e712ac70a3ea61d2d136dc1c files/digest-opensc-0.9.0_alpha 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA9LhRHTu7gpaalycRAgvRAKDcFcV+qk/chc1wENy0Lmz3bDrHrgCg0wuG
-HKG8HFYCCtq5twH0hpmyTbg=
-=0WCk
------END PGP SIGNATURE-----
