@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1051 2005/03/28 18:28:42 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1052 2005/03/29 15:27:27 stkn Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -614,6 +614,7 @@ net-misc/asterisk:resperl - Enables support for embedded perl in extensions.conf
 net-misc/asterisk:vmdbmysql - Enable mysql db support in voicemail application
 net-misc/asterisk:vmdbpostgres - Enable postgres db support in voicemail application
 net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
+net-misc/asterisk-chan_capi:fax - Build chan_capi with fax support
 net-misc/drivel:rhythmbox - Enables support for currently playing song in rhythmbox
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
 net-misc/gnugk:accounting - Enables call logging (accounting)
