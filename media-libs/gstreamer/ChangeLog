@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.65 2004/07/19 15:24:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.66 2004/07/29 01:53:42 tgall Exp $
+
+  28 Jul 2004; Tom Gall <tgall@gentoo.org> gstream-0.8.3-r1.ebuild,
+  gstream-0.8.1.ebuild:
+  stable on ppc64, bug #58191
 
 *gstreamer-0.8.3-r1 (11 Jul 2004)
 
