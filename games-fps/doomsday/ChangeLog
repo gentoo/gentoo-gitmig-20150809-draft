@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.6 2004/09/28 00:45:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.7 2004/12/07 10:06:00 mr_bones_ Exp $
+
+*doomsday-1.8.3 (07 Dec 2004)
+
+  07 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +doomsday-1.8.3.ebuild:
+  version bump (bug #72437)
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Gentoo Technologies, Inc. -> Gentoo Foundation
