@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r2.ebuild,v 1.2 2000/10/03 16:02:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r2.ebuild,v 1.3 2000/10/23 11:27:17 achim Exp $
 
 P=glibc-2.1.3
 A="glibc-2.1.3.tar.gz glibc-crypt-2.1.tar.gz 
@@ -33,7 +33,7 @@ src_compile() {
 		--enable-add-ons=linuxthreads,glibc-compat,crypt \
 		 --disable-profile --prefix=/usr
 	try make 
-	try make check
+#	try make check
 }
 
 src_unpack() {
@@ -73,11 +73,7 @@ src_install() {
     install -m 755 ${O}/files/nscd ${D}/etc/rc.d/init.d/nscd
     dodir /var/db
     install -m 644 nss/db-Makefile ${D}/var/db/Makefile
-    strip ${D}/sbin/*
-    strip ${D}/usr/bin/*
-    strip ${D}/usr/sbin/*
-    prepinfo
-    prepman
+    preplib /usr/lib
     rm -rf documentation
     mkdir documentation
     mkdir documentation/html

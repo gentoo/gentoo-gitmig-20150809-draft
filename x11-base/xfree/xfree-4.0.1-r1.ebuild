@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.1-r1.ebuild,v 1.4 2000/10/18 06:16:18 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.1-r1.ebuild,v 1.5 2000/10/23 11:27:17 achim Exp $
 
 P=xfree-4.0.1
 A="X401src-1.tgz X401src-2.tgz X401src-3.tgz"
@@ -24,7 +24,6 @@ src_compile() {
 src_install() {                               
     try make install DESTDIR=${D}
     try make install.man DESTDIR=${D}
-    prepman /usr/X11R6
 }
 
 
