@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex-texpower/ChangeLog,v 1.1 2003/02/03 00:50:43 satai Exp $
+
+*latex-texpower-0.0.8h (02 Feb 03)
+
+  02 FEB 2003; Matthew Turk <satai@gentoo.org> :
+  Initial import.  Ebuild submitted by Lars Weiler <lars.weiler@chaosdorf.de>
