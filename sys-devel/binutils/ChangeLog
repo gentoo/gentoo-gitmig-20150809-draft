@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.156 2004/09/28 15:49:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.157 2004/10/01 23:21:36 kumba Exp $
+
+  01 Oct 2004; Joshua Kinard <kumba@gentoo.org> binutils-2.15.91.0.2.ebuild:
+  Marked ~mips. Works great for o32, n32 has problems, and is thus masked in
+  cascade profiles.
 
   28 Sep 2004; Mike Frysinger <vapier@gentoo.org>
   +files/2.15/40_all_binutils-uclibc-linker.patch,
