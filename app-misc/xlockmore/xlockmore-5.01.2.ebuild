@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.01.2.ebuild,v 1.2 2001/06/04 18:15:25 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.01.2.ebuild,v 1.3 2001/06/04 18:22:38 blutgens Exp $
 
 #P=
 A=${P}.tar.gz
@@ -36,7 +36,7 @@ src_compile() {
 
 src_install () {
 
-    try make prefix=${D}/usr mandir=${D}/usr/share/man install
+    try make prefix=${D}/usr mandir=${D}/usr/X11R6/man/man1 install
     dodoc docs/* README
 
 }
