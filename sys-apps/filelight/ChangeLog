@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/filelight
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/filelight/ChangeLog,v 1.2 2004/03/09 00:39:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/filelight/ChangeLog,v 1.3 2004/04/12 22:21:19 centic Exp $
+
+  13 Apr 2004; Dominik Stadler <centic@gentoo.org> filelight-0.6.4.1.ebuild:
+  Add missing IUSE in ebuild
 
 *filelight-0.6.4.1 (09 Mar 2004)
 
