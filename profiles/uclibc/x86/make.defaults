@@ -39,3 +39,5 @@ ACCEPT_KEYWORDS="x86"
 
 FEATURES="sandbox sfperms strict nodoc noinfo noman"
 #FEATURES="${FEATURES} userpriv usersandbox"
+PORTDIR=/usr/portage/
+PKGDIR=${PORTDIR}/packages/${CHOST}/
