@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/grace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.15 2003/10/30 08:52:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.16 2003/11/02 03:00:03 spyderous Exp $
+
+  01 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Adding metadata.xml for sci herd.
 
   30 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> grace-5.1.10-r1.ebuild,
   grace-5.1.12-r1.ebuild, grace-5.1.13.ebuild:
