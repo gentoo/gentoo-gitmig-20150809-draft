@@ -1,10 +1,20 @@
-MD5 df695a70ce00704eb93574f3576694ca gtkspell-2.0.2.ebuild 656
-MD5 5965abc1582ece9821b28327cde708c1 gtkspell-2.0.4-r1.ebuild 1169
-MD5 f8b6a93ac61b88ab84781441a7c95102 gtkspell-2.0.4.ebuild 1021
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 45f1a17913a9cea320fa53dc7badec15 ChangeLog 3435
+MD5 df695a70ce00704eb93574f3576694ca gtkspell-2.0.2.ebuild 656
+MD5 cf1a3d1334d6c55afb23c4d68957b059 gtkspell-2.0.4-r1.ebuild 1095
+MD5 f8b6a93ac61b88ab84781441a7c95102 gtkspell-2.0.4.ebuild 1021
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 7b72f96acd5c9a16b6a6284de819f4aa files/gtkspell-2.0.4-docbookx.patch 582
-MD5 ae68a374d757954ed1b57e829bb90ea3 files/digest-gtkspell-2.0.4-r1 66
 MD5 776dac4f06c10cd4d6030bb0227604ca files/digest-gtkspell-2.0.2 66
 MD5 ae68a374d757954ed1b57e829bb90ea3 files/digest-gtkspell-2.0.4 66
+MD5 ae68a374d757954ed1b57e829bb90ea3 files/digest-gtkspell-2.0.4-r1 66
+MD5 7b72f96acd5c9a16b6a6284de819f4aa files/gtkspell-2.0.4-docbookx.patch 582
 MD5 2c687dc22e69904275ba8afee73f55a9 files/gtkspell-2.0.4-enchant.patch 11806
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBirNiHTu7gpaalycRAuQ8AKCo62aTD7FlSkCTidsG5bBBW5uN2QCg67PS
+AdPbsGEd4St4BSFMrsRpDHs=
+=Pbh8
+-----END PGP SIGNATURE-----

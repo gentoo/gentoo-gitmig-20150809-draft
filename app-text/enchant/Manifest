@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 af8c9999cb96abc691903f21483c230a ChangeLog 3835
 MD5 4fb1142660ca77c8b523844a7903a6ad enchant-1.0.0.ebuild 858
 MD5 b68f4b22cf015e132dca2d503872290f enchant-1.1.1.ebuild 775
 MD5 4d7fa036403593d3e661d5be3a094b67 enchant-1.1.2.ebuild 852
-MD5 0fd254e3d60e054469514355de2bf5eb enchant-1.1.3.ebuild 987
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 91255fe55b0b6aeb2e9451235fa33048 enchant-1.1.3.ebuild 987
 MD5 9eea1c1607ac139d4fe5716900da9570 files/digest-enchant-1.0.0 65
 MD5 d6368d91049f7483ff7868c99d86b3be files/digest-enchant-1.1.1 65
 MD5 4be2ccdd4f8e5dee12b736e898596247 files/digest-enchant-1.1.2 65
-MD5 8bccf06a05a9b80bd498b594b05cd31d files/digest-enchant-1.1.3 65
 MD5 cdba960f66d079da7010a9f923d08c3b files/enchant-1.0.0-alpha.patch 1233
+MD5 8bccf06a05a9b80bd498b594b05cd31d files/digest-enchant-1.1.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBirNQHTu7gpaalycRAqChAKDid+pXwtsedf1AICzGiHvJamk+nACfRx/3
+hsnwnR15IuIRekIAuDnLppM=
+=k99s
+-----END PGP SIGNATURE-----
