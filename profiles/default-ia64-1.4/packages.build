@@ -18,6 +18,7 @@ sys-devel/binutils
 sys-devel/bison
 sys-devel/flex
 sys-devel/gcc
+sys-devel/gettext
 sys-devel/make
 sys-devel/patch
 dev-lang/python
