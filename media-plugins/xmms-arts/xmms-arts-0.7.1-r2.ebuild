@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.7.1-r2.ebuild,v 1.1 2004/10/20 01:48:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.7.1-r2.ebuild,v 1.2 2004/10/21 04:49:44 eradicator Exp $
 
 IUSE=""
+
+NOBMP="1"
 
 inherit xmms-plugin
 
@@ -21,8 +23,6 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 DEPEND="kde-base/arts"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
-NOBMP=1
 
 src_install() {
 	myins_xmms="libdir=`xmms-config --output-plugin-dir`"
