@@ -1,19 +1,28 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.0l.ebuild,v 1.1 2005/02/27 00:45:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.1.ebuild,v 1.1 2005/02/28 18:32:41 plasmaroo Exp $
+
+VERSION_DMRAID='1.0.0-rc5f'
+VERSION_LVM2='2.00.25'
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
-SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/3.1.0/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/3.1.1/${P}.tar.bz2
+	 livecd? (http://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-${VERSION_DMRAID}.tar.bz2
+		  ftp://sources.redhat.com/pub/lvm2/old/LVM2.${VERSION_LVM2}.tgz)"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
-IUSE="bootsplash"
+IUSE="bootsplash livecd"
 
 DEPEND="sys-fs/e2fsprogs
 	x86? ( bootsplash? ( media-gfx/bootsplash ) )
 	amd64? ( bootsplash? ( media-gfx/bootsplash ) )"
+
+src_unpack() {
+	unpack ${P}.tar.bz2
+}
 
 src_install() {
 	dodir /etc
@@ -30,6 +39,8 @@ src_install() {
 
 	doman genkernel.8
 	rm genkernel.8
+
+	use livecd && cp ${DISTDIR}/dmraid-${VERSION_DMRAID}.tar.bz2 ${DISTDIR}/LVM2.${VERSION_LVM2}.tgz ${D}/usr/share/genkernel/pkg
 }
 
 pkg_postinst() {

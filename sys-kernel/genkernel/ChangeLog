@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.71 2005/02/27 00:45:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.72 2005/02/28 18:32:41 plasmaroo Exp $
+
+*genkernel-3.1.1 (28 Feb 2005)
+
+  28 Feb 2005; <plasmaroo@gentoo.org> -genkernel-3.1.0l.ebuild,
+  +genkernel-3.1.1.ebuild:
+  Fix 2.4 module compilation, add livecd USE support for fetching LVM2 and
+  DMRAID source into /usr/share/genkernel/pkg.
 
 *genkernel-3.1.0l (27 Feb 2005)
 
