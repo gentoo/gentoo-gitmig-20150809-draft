@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mit-scheme/mit-scheme-7.7.1.ebuild,v 1.3 2004/06/25 00:00:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mit-scheme/mit-scheme-7.7.1.ebuild,v 1.4 2005/02/21 20:55:00 blubb Exp $
 
 MY_P="scheme-${PV}"
 MY_SUF="-ix86-gnu-linux"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.swiss.ai.mit.edu/projects/scheme/"
 SRC_URI="http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/${PV}/${P}${MY_SUF}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="virtual/x11"
