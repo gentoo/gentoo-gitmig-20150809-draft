@@ -1,0 +1,38 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/files/init.d/mman,v 1.1 2003/07/25 21:24:55 solar Exp $
+
+
+opts="depend checkconfig stop start"
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -e /etc/mman/mman.conf ]; then
+		eerror "You need to create /etc/mman/mman.conf first."
+		eerror "An example can be found in /etc/mman/sample/mman.conf.sample"
+		return 1
+	fi
+}
+
+stop() {
+	ebegin "Stopping mman"
+	start-stop-daemon --stop --quiet --pidfile /var/run/mman.pid
+	result=$?
+	eend $result
+}
+
+start() {
+	local myopts=""
+	[ -z "${CONFIG}" ] && myopts="${myopts} -c ${CONFIG}"
+	[ -z "${LOGFILE}" ] && myopts="${myopts} -l ${LOGFILE}"
+	[ -z "${LOGLEVEL}" ] && myopts="${myopts} -d ${LOGLEVEL}"
+
+	ebegin "Starting mman"
+	start-stop-daemon --start --quiet --exec /usr/bin/mman -- ${myopts}
+	result=$?
+	eend $result
+}

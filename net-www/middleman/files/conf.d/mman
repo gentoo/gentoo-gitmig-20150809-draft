@@ -1,0 +1,6 @@
+#
+# MiddleMan filtering proxy server
+#
+LOGFILE=/var/log/mman.log
+CONFIG=/etc/mman/config.xml
+LOGLEVEL=32767
