@@ -7,7 +7,7 @@ MD5 ebcb4d035e3e96c283f8ee1083e0d2f6 ncurses-5.4-r2.ebuild 5155
 MD5 ea52ebcfb59abec2eb3b5825715c2fb6 ncurses-8.1.ebuild 879
 MD5 14c8e34a87335151e42d095c3af7f6e2 ncurses-5.4-r3.ebuild 5138
 MD5 9e10302eed56e25bbf34d4f4fed15a1e ncurses-5.3-r5.ebuild 3824
-MD5 a6313d762f8b09a2a672ffa07c25dd8a ncurses-5.4-r1.ebuild 4507
+MD5 2dc876aa2d2c85218aa94816d002cb84 ncurses-5.4-r1.ebuild 4507
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r2 64
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ncurses-8.1 0
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r3 64
@@ -22,7 +22,7 @@ MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBCdCZHTu7gpaalycRAotuAJ9T+oPJa+UOSf0VeKaJN+vAjyXXjACbBh+K
-EWJVcLU/iBZjdMJyw0QjKIA=
-=D5wD
+iD8DBQFBGYfIHTu7gpaalycRAr9zAJ9xv60kXW4fHB0JsfCggIt07hjv7wCfcDbd
+UsiGpjxbRPB9ZQMx4PVayXk=
+=Rsn/
 -----END PGP SIGNATURE-----
