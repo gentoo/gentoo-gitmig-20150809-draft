@@ -1,3 +1,5 @@
-MD5 701273e3aeed30447edf0e4a3072c153 ChangeLog 1913
+MD5 39a38e09300134cd099ce696faa20dc7 ChangeLog 2097
 MD5 39c668f9cd06726fa96057ca25036083 selinux-sources-2.4.20-r4.ebuild 1542
+MD5 2311ea74e05f4b60a1966caca753da14 selinux-sources-2.4.20-r5.ebuild 1543
 MD5 dbbca52c940284988903505115a7e91e files/digest-selinux-sources-2.4.20-r4 145
+MD5 d39cf9ecfcb242095ac601b7fb6c73a5 files/digest-selinux-sources-2.4.20-r5 145
