@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.2-r1.ebuild,v 1.1 2004/11/10 18:40:34 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.2-r1.ebuild,v 1.2 2004/11/13 02:29:22 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -63,6 +63,10 @@ print_gaim_warning() {
 	einfo
 	einfo "Note that we are now filtering all unstable flags in C[XX]FLAGS."
 	einfo
+	ewarn
+	ewarn "If you receive errors due to NSS, please re-emerge"
+	ewarn "dev-libs/nss and then emerge gaim again."
+	ewarn
 	ebeep 5
 	epause 3
 }
