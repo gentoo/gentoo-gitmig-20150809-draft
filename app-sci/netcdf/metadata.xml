@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
+<maintainer>
+  <email>sci@gentoo.org</email>
+</maintainer>
+<longdescription>The netCDF library defines a machine-independent format and interface for representing scientific data.</longdescription>
 </pkgmetadata>
