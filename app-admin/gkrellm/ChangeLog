@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.65 2004/01/15 22:33:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.66 2004/01/20 20:04:18 spock Exp $
+
+  20 Jan 2004; Michal 'Spock' Januszewski <spock@gentoo.org>
+  gkrellm-1.2.13.ebuild, gkrellm-2.1.10.ebuild, gkrellm-2.1.21.ebuild,
+  gkrellm-2.1.22.ebuild, gkrellm-2.1.23.ebuild, gkrellm-2.1.24.ebuild,
+  files/gkrellm-2.1.24-dotkeep.patch, files/gkrellm-2.1.24-mail.patch:
+  Fixed dates in the headers, removed ~mips from ebuilds for 2.1.10, 2.1.21,
+  2.1.22 (unsatisfied dependency on >=x11-libs/gtk+-2.0.5), added two patches:
+  dotkeep (makes gkrellm skip the .keep file and not try to load it as a plugin
+  - this closes bug #38405) and mail (fixes counting the number of messages in
+  mbox mailboxes in case the msgs are buggy and don't have the closing
+  separator).
 
   15 Jan 2004; Aron Griffis <agriffis@gentoo.org> gkrellm-2.1.24.ebuild:
   stable on alpha

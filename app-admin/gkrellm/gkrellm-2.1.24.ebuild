@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.24.ebuild,v 1.3 2004/01/15 22:33:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.24.ebuild,v 1.4 2004/01/20 20:04:18 spock Exp $
 
 IUSE="X nls ssl"
 
@@ -18,6 +18,12 @@ DEPEND=">=sys-apps/sed-4
 	X? (  >=x11-libs/gtk+-2.0.5 )"
 
 RDEPEND="${DEPEND} nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${P}.tar.bz2
+	epatch ${FILESDIR}/${P}-dotkeep.patch
+	epatch ${FILESDIR}/${P}-mail.patch
+}
 
 src_compile() {
 	local myconf
