@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 0b10e5ea7566749390c5e62b0afbf84d ChangeLog 2723
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 dcd8636a53e454abf80fafbcdd7705f6 ChangeLog 2626
-MD5 d0dd5d8c0f3ff410680ae95c4f211e59 xmms-jack-0.11.ebuild 1025
-MD5 f706034859ccc5d8f430f25964d51692 xmms-jack-0.9.ebuild 644
 MD5 f860e0d1f05e18eca40b0beb45a1166e xmms-jack-0.10.ebuild 637
+MD5 f706034859ccc5d8f430f25964d51692 xmms-jack-0.9.ebuild 644
+MD5 92830da7d73fd61a0270b2104b00fe8c xmms-jack-0.11.ebuild 1029
+MD5 dea9949d72527c2f6934d30116d23912 files/digest-xmms-jack-0.10 66
+MD5 16ba3899dbe8858a6ac882b2a288c8c3 files/digest-xmms-jack-0.9 65
 MD5 bb7870d9fa77ca8176c1844ef4aa22b0 files/xmms-jack-0.10-cflags.patch 594
 MD5 a58c9953d0957178b8f9b8dd743d220c files/digest-xmms-jack-0.11 66
-MD5 16ba3899dbe8858a6ac882b2a288c8c3 files/digest-xmms-jack-0.9 65
-MD5 dea9949d72527c2f6934d30116d23912 files/digest-xmms-jack-0.10 66
 MD5 00a895abc470307ef4bb5bd4b6b38bb9 files/xmms-jack-0.11-sysbio2jack.patch 708
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBuPvHArHZZzCEUG0RAgGbAJ0Ybh3NfgqimYptMiZ3nXGsTO7ecgCdGPOj
-9QmxWXxK57TL+CbpLjuWdb4=
-=2gD1
------END PGP SIGNATURE-----
