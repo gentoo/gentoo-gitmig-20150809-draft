@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.128 2005/03/16 16:26:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.129 2005/03/18 02:28:51 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -299,6 +299,7 @@ SRC_URI=$(get_gcc_src_uri)
 # 3) SSP by default
 hardened_gcc_works() {
 	if [[ $1 == "pie" ]] ; then
+		[[ -z ${PIE_VER} ]] && return 1
 		hardened_gcc_is_stable pie && return 0
 		if has ~$(tc-arch) ${ACCEPT_KEYWORDS} ; then
 			hardened_gcc_check_unsupported pie && return 1
@@ -307,6 +308,7 @@ hardened_gcc_works() {
 		fi
 		return 1
 	elif [[ $1 == "ssp" ]] ; then
+		[[ -z ${PP_VER} ]] && return 1
 		hardened_gcc_is_stable ssp && return 0
 		if has ~$(tc-arch) ${ACCEPT_KEYWORDS} ; then
 			hardened_gcc_check_unsupported ssp && return 1
