@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.9 2004/06/26 08:29:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.10 2004/07/03 23:31:20 weeve Exp $
+
+  03 Jul 2004; Jason Wever <weeve@gentoo.org> scrot-0.8.ebuild:
+  Added ~sparc keyword.
 
   26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> scrot-0.8.ebuild:
   Marked ~amd64.
