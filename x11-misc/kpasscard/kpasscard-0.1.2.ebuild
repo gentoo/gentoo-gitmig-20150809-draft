@@ -1,6 +1,6 @@
-F# Copyright 1999-2002 Gentoo Technologies, Inc.
+F# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kpasscard/kpasscard-0.1.2.ebuild,v 1.1 2003/05/29 03:23:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kpasscard/kpasscard-0.1.2.ebuild,v 1.2 2003/09/05 23:29:05 msterret Exp $
 
 inherit kde-base
 need-kde 3

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbar/iconbar-0.3.1.ebuild,v 1.1 2003/02/21 08:07:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbar/iconbar-0.3.1.ebuild,v 1.2 2003/09/05 23:29:05 msterret Exp $
 
 DESCRIPTION="e17 iconbar as a standalone package"
 HOMEPAGE="http://www.rephorm.com/rephorm/code/iconbar/"
