@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.1.0_pre5.ebuild,v 1.1 2003/04/19 14:17:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.1.2.1.7.ebuild,v 1.1 2003/04/30 23:27:55 liquidx Exp $
 
 IUSE="oggvorbis"
 
@@ -8,15 +8,8 @@ inherit eutils distutils
 
 MY_PN="${PN/soulseek/slsk}"
 
-# Hyriand Patch Version (skip first 3 version numbers)
-# - disabled beacuse of _pre prefix
-#MY_HV=${PV#*.*.*.}
-MY_HV="1.4"
-
-# Main pysoulseek Package-Version (remove trailing MY_HV)
-# - disabled because of _pre, stripping _ from versioning
-#MY_P=${MY_PN}-${PV%.${MY_HV}}
-MY_P=${MY_PN}-${PV/_/}
+MY_HV=${PV#*.*.*.}
+MY_P=${MY_PN}-${PV%.${MY_HV}}
 
 DESCRIPTION="client for SoulSeek filesharing"
 HOMEPAGE="http://www.sensi.org/~ak/pyslsk/ 
