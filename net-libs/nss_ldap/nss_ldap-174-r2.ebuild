@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Achim Gottinger <achim@gentoo.org>, Joshua Pollak <pardsbane@offthehill.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-174.ebuild,v 1.1 2001/12/02 12:54:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-174-r2.ebuild,v 1.1 2002/06/17 06:11:34 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NSS LDAP Module"
@@ -20,6 +20,8 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
+		--enable-schema-mapping \
+		--enable-rfc2307bi \
 		--enable-extra-optimization || die
 
 	emake UNIX_CAN_BUILD_STATIC=0 \
@@ -31,11 +33,8 @@ src_install() {
 	mkdir ${D}/usr
 	mkdir ${D}/usr/lib
 
-	make prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		sysconfdir=${D}/etc \
-		localstatedir=${D}/var/lib \
+	make \
+		DESTDIR=${D} \
 		install || die
 
 	rm ${D}/etc/ldap.conf
