@@ -1,8 +1,18 @@
-MD5 5ca3d1ea9ae3d54b8aa72e481b045d40 ChangeLog 1796
-MD5 6d3b0abd9eaa989bb2dbccf72b3ea555 glimpse-4.15-r1.ebuild 761
-MD5 e36c48e485d3d7cd1dd17409e1cbc34d glimpse-4.17.4.ebuild 1176
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 24db6ff1612fd0510be2ba0e6fabb150 ChangeLog 2164
+MD5 1219aeed9adb3dee5fcde9e84132dbc1 glimpse-4.17.4.ebuild 1199
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 70ba17a37033e7a97c52c9a359f613e0 files/4.15-errno.patch 4623
-MD5 344aa4793307f2aa3574436006c0e14a files/4.17.4-gcc3.patch 2131
-MD5 42e75d4b9b3765782ef71b6519d8adc9 files/digest-glimpse-4.15-r1 64
+MD5 9f826af149f05d9576b11f1fcf583dc9 glimpse-4.18.0.ebuild 1239
 MD5 a1275d58e7fbf52d926178e7c4b2c16a files/digest-glimpse-4.17.4 66
+MD5 344aa4793307f2aa3574436006c0e14a files/4.17.4-gcc3.patch 2131
+MD5 fc0addd1a3501736c39e5a70ae882717 files/digest-glimpse-4.18.0 66
+MD5 bcfe7c55d54ccab22d6d272cef2b235d files/4.18.0-gcc3.patch 2106
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoIapmdTrptrqvGERAna8AJ4mqUsysv0rJLMlZRDYJWkWdom2bQCghAc4
+UF3w+7h9NBRMk33ys595/tA=
+=wTSz
+-----END PGP SIGNATURE-----

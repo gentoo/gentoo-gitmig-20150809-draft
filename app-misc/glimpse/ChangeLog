@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/glimpse
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/ChangeLog,v 1.14 2004/10/05 13:34:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/ChangeLog,v 1.15 2004/11/21 12:14:27 dragonheart Exp $
+
+*glimpse-4.18.0 (21 Nov 2004)
+
+  21 Nov 2004; Daniel Black <dragonheart@gentoo.org> +files/4.18.0-gcc3.patch,
+  -glimpse-4.15-r1.ebuild, -files/4.15-errno.patch, glimpse-4.17.4.ebuild, 
+  +glimpse-4.18.0.ebuild:
+  version bump and cleanout. app-text/agrep conflict noted as this package 
+  installs /usr/bin/agrep as well. Noted in bug #71795 by lukenshiro@ngi.it
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   glimpse-4.15-r1.ebuild:

@@ -1,0 +1,59 @@
+--- libtemplate/include/util.h.orig	2003-11-13 14:47:13.000000000 +0930
++++ libtemplate/include/util.h	2004-11-21 20:47:11.720417816 +0930
+@@ -93,8 +93,15 @@
+ void init_log3 _PARAMS((char *,FILE *,FILE *));	/* Initialize log routines */
+ void log_errno _PARAMS((char *));		/* Same as perror(3) */
+ void fatal_errno _PARAMS((char *));		/* Same as perror(3) & exit */
+-#ifdef __STRICT_ANSI__
++#if defined(__STRICT_ANSI__) || (defined(__GNUC__) && __GNUC__ >= 3)
+ #include <stdarg.h>
++# if defined(__GNUC__)
++#define log xlog
++void xlog _PARAMS((char *, ...));             /* Log a message */
++# else
++void log _PARAMS((char *, ...));              /* Log a message */
++# endif
++
+ void glimpselog _PARAMS((char *, ...));		/* Log a message */
+ void errorlog _PARAMS((char *, ...));		/* Log an error message */
+ void fatal _PARAMS((char *, ...));		/* Log error msg and exit */
+--- libtemplate/util/log.c.orig	2004-11-21 20:54:48.899650080 +0930
++++ libtemplate/util/log.c	2004-11-21 20:55:04.454285416 +0930
+@@ -55,7 +55,7 @@
+ #include <errno.h>
+ #include <time.h>
+ #include <sys/file.h>
+-#if defined(__STRICT_ANSI__)
++#if defined(__STRICT_ANSI__) || (defined(__GNUC__) && __GNUC__ >= 3)
+ #include <stdarg.h>
+ #else
+ #include <varargs.h>
+--- libtemplate/util/log.c.orig	2004-11-21 20:55:39.692928328 +0930
++++ libtemplate/util/log.c	2004-11-21 20:58:29.934047744 +0930
+@@ -120,7 +120,7 @@
+  *  glimpselog() - used like printf(3).  Prints message to stdout.
+  */
+ 
+-#if defined(__STRICT_ANSI__)
++#if defined(__STRICT_ANSI__) || (defined(__GNUC__) && __GNUC__ >= 3)
+ void glimpselog(char *fmt,...)
+ {
+ 	va_list ap;
+@@ -156,7 +156,7 @@
+ /*
+  *  errorlog() - used like printf(3).  Prints error message to stderr.
+  */
+-#if defined(__STRICT_ANSI__)
++#if defined(__STRICT_ANSI__) || (defined(__GNUC__) && __GNUC__ >= 3)
+ void errorlog(char *fmt,...)
+ {
+ 	va_list ap;
+@@ -194,7 +194,7 @@
+ /*
+  *  fatal() - used like printf(3).  Prints error message to stderr and exits
+  */
+-#if defined(__STRICT_ANSI__)
++#if defined(__STRICT_ANSI__) || (defined(__GNUC__) && __GNUC__ >= 3)
+ void fatal(char *fmt,...)
+ {
+ 	va_list ap;

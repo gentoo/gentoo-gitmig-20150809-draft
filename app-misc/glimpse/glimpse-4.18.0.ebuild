@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.17.4.ebuild,v 1.8 2004/11/21 12:14:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.18.0.ebuild,v 1.1 2004/11/21 12:14:27 dragonheart Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://webglimpse.net/trial/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha amd64 ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~amd64 ~ia64"
 IUSE="static"
 
 RDEPEND="!dev-libs/tre
@@ -24,6 +24,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc3.patch
 	sed -i \
+		-e "s:CC=.*:CC=$(tc-getCC):" \
 		-e 's:-O3 -fomit-frame-pointer:$(OPTIMIZEFLAGS):' \
 		dynfilters/Makefile.in \
 		|| die "removing -O3 failed"
