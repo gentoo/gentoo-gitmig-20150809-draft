@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.26 2003/11/18 23:43:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.27 2003/12/07 05:56:48 pylon Exp $
+
+  07 Dec 2003; Lars Weiler <pylon@gentoo.org> mol-0.9.69_pre6.ebuild:
+  Alsa sound works with MOL and Panther. Deleted the info about not checked
+  status.
 
   19 Nov 2003; Luca Barbato <lu_zero@gentoo.org> mol-0.9.69_pre6.ebuild:
   linux 2.6 fix (as patch)
