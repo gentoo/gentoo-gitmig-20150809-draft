@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15.ebuild,v 1.1 2003/12/20 17:42:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15.ebuild,v 1.2 2004/02/01 11:52:58 ferringb Exp $
 
 DESCRIPTION="A virtual MIDI keyboard for X"
 HOMEPAGE="http://www.alsa-project.org/~iwai/alsa.html"
@@ -18,7 +18,7 @@ DEPEND="alsa? ( >=media-libs/alsa-lib-0.5.0 )
 	ladcca? ( >=media-libs/ladcca-0.3.1 )"
 
 S=${WORKDIR}/${PN}
-TCL_VERSION=`awk -F\' '/TCL_VERSION/ {print $2}' /usr/lib/tclConfig.sh`
+TCL_VERSION=`echo 'puts [info tclversion]' | tclsh`
 
 src_compile() {
 	local myconf="PREFIX=/usr"
@@ -36,8 +36,9 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} PREFIX=/usr install || die "Installation Failed"
-	make DESTDIR=${D} PREFIX=/usr install-man || die \
-					    "Man-Page Installation Failed"
+	make DESTDIR=${D} TCL_VERSION=$TCL_VERSION PREFIX=/usr install || \
+		die "Installation Failed"
+	make DESTDIR=${D} TCL_VERSION=$TCL_VERSION PREFIX=/usr install-man || \
+		die "Man-Page Installation Failed"
 	dodoc README
 }
