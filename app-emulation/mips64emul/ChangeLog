@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/mips64emul
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mips64emul/ChangeLog,v 1.2 2004/07/31 19:14:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mips64emul/ChangeLog,v 1.3 2004/09/11 05:14:53 kumba Exp $
+
+*mips64emul-0.2 (11 Sep 2004)
+
+  11 Sep 2004; Joshua Kinard <kumba@gentoo.org> mips64emul-0.1.1.ebuild,
+  +mips64emul-0.2.ebuild, -mips64emul-0.2_pre.ebuild,
+  +mips64emul-0.3_pre.ebuild:
+  Rev updates. Removed 0.2_pre, replace with real 0.2, and added 0.3_pre
+  (20040905 snap).
 
   31 Jul 2004; Joshua Kinard <kumba@gentoo.org> mips64emul-0.1.1.ebuild:
   Forgot to set keywords properly.
