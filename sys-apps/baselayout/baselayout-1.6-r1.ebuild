@@ -1,23 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.5 2001/08/21 05:30:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.6 2001/08/22 05:04:03 drobbins Exp $
 
 SV=1.1.2
 S=${WORKDIR}/rc-scripts-${SV}
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
-#if [ -z "`use bootcd`" ]
-#then
-#	INIT_D_SCRIPTS="bootmisc checkfs checkroot clock halt hostname
-#                    inet initscripts-install isapnp keymaps local
-#                    modules mountall mountall.test pretty rc reboot
-#                    rmnologin sendsigs serial single umountfs urandom
-#                    vcron"
-#else
-#	INIT_D_SCRIPTS="cdboot cdscan"
-#fi
 
 src_compile() {
 	cp ${S}/init.d/runscript.c ${T}
@@ -51,13 +41,8 @@ src_install()
 	
 	if [ -z "`use bootcd`" ]
 	then
-		#new boot partition layout: boot partition should now be mounted at /mnt/boot
-		dodir /mnt/boot
-		#this next line adds easy detection for when /mnt/boot isn't mounted
-		touch ${D}/mnt/boot/boot
-		dosym mnt/boot/boot /boot
-		#with the symlink, kernel can be found at /boot/bzImage, grub at /boot/grub.
-
+		dodir /boot
+		dosym . /boot/boot
 		dodir /home
 		dodir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
 		dosym ../X11R6/include/X11 /usr/include/X11
