@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.11 2004/01/08 07:23:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.12 2004/01/08 10:04:25 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -35,7 +35,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.2-fopen-url-secure.patch"
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2"
 
 # berkdb stuff is complicated
 # we need db-1.* for ndbm
@@ -84,8 +84,7 @@ RDEPEND="
    >=app-text/sablotron-0.97
    dev-libs/expat
    sys-libs/zlib 
-   virtual/mta
-   yaz? ( dev-libs/yaz )"
+   virtual/mta"
 
 # libswf is ONLY available on x86
 RDEPEND="${RDEPEND} flash? ( 
@@ -310,7 +309,6 @@ php_src_compile() {
 	myconf="${myconf} `use_with kerberos kerberos /usr` `use_with pam`"
 	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable ipv6`"
-	myconf="${myconf} `use_with yaz`"
 	if use curl; then
 		myconf="${myconf} --with-curlwrappers --with-curl=/usr"
 	else
