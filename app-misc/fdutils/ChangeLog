@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/fdutils
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.4 2002/05/30 01:54:49 sandymac Exp
+
+*fdutils-5.4.20020222 (18 Jul 2002)
+
+  18 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> fdutils-5.4.20020222.ebuild: 
+  Initial release. 
