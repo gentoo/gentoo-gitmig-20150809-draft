@@ -1,8 +1,14 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.8 2002/11/24 00:13:34 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.9 2002/12/01 10:24:59 phoenix Exp $
 
+*lame-3.93.0 (23 Nov 2002)
 
+  01 Dec 2002; phoen][x <phoenix@gentoo.org> lame-3.93.0-r1.ebuild, 
+  files/lame-3.93.0-npsytunefix.diff, files/lame-3.93.0-q0fix.diff :
+  Incorporated the fixes from bug #11194. Thanks to Sebastian Droege 
+  <sebastian.droege@gmx.de> for the contribution.
+  
 *lame-3.93.0 (23 Nov 2002)
   
   23 Nov 2002; Spider <spider@gentoo.org> lame-3.93.0.ebuild :
