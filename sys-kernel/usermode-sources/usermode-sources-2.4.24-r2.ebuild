@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.24-r1.ebuild,v 1.1 2004/02/18 18:48:56 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.24-r2.ebuild,v 1.1 2004/04/15 18:04:22 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -13,9 +13,9 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${PV}.tar.bz2
 	mirror://sourceforge/user-mode-linux/${UML_PATCH}.bz2"
 HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
-SLOT="${PV}"
+SLOT="${PV}-${PR}"
 KEYWORDS="x86"
-EXTRAVERSION=${PR}
+EXTRAVERSION="-uml1-${PR}"
 RESTRICT="nomirror"
 
 # console-tools is needed to solve the loadkeys fiasco.
@@ -23,26 +23,18 @@ RESTRICT="nomirror"
 DEPEND=">=sys-devel/binutils-2.11.90.0.31 dev-lang/perl"
 RDEPEND=">=sys-libs/ncurses-5.2"
 
-S=${WORKDIR}/linux-${PV}
+S=${WORKDIR}/linux-${PV}${EXTRAVERSION}
 
 src_unpack() {
-	# unpack vanilla sources
 	cd ${WORKDIR}
 	unpack linux-${PV}.tar.bz2
 
-	# apply usermode patch
-	cd ${S}
+	mv linux-${PV} ${S} && cd ${S}
 	epatch ${DISTDIR}/${UML_PATCH}.bz2
-	epatch ${FILESDIR}/${P}.munmap.patch || die "failed to apply munmap patch"
-
-	#epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
-	#epatch ${FILESDIR}/${PN}-2.4.22.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 
 	kernel_universal_unpack
-}
-
-src_compile() {
-	true
 }
 
 src_install() {
@@ -53,7 +45,7 @@ src_install() {
 	chown -R root:root *
 	chmod -R a+r-w+X,u+w *
 
-	mv linux-${PV} ${D}/usr/src/uml/
+	mv linux-${PV}${EXTRAVERSION} ${D}/usr/src/uml/
 }
 
 pkg_postinst() {
@@ -61,6 +53,6 @@ pkg_postinst() {
 	if [ ! -e ${ROOT}usr/src/uml/linux ]
 	then
 		rm -f ${ROOT}usr/src/uml/linux
-		ln -sf ${ROOT}usr/src/uml/linux-${PV} ${ROOT}usr/src/uml/linux
+		ln -sf ${ROOT}usr/src/uml/linux-${PV}${EXTRAVERSION} ${ROOT}usr/src/uml/linux
 	fi
 }
