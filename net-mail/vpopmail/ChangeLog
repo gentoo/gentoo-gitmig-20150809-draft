@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/vpopmail
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.10 2003/02/10 21:00:58 raker Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.11 2003/02/12 08:18:17 vapier Exp $
 
 *vpopmail-5.2.1-r4 (10 Feb 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/qmail
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.17 2003/02/11 09:13:54 raker Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.18 2003/02/12 08:14:45 vapier Exp $
 
 *qmail-1.03-r10 (01 Feb 2003)
 

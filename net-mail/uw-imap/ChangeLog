@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/uw-imap
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.11 2003/02/10 02:36:12 alron Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.12 2003/02/12 08:17:45 vapier Exp $
 
   09 Feb 2003; Dean Bailey <alron@gentoo.org> uw-imap-2002b.ebuild, 
   uw-imap-2001a-r3.ebuild :

@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/courier
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.13 2003/02/04 07:35:43 raker Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.14 2003/02/12 08:08:43 vapier Exp $
 
 *courier-0.41.0 (30 Jan 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/imapfilter
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapfilter/ChangeLog,v 1.1 2002/11/18 03:52:46 raker Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapfilter/ChangeLog,v 1.2 2003/02/12 08:12:13 vapier Exp $
 
 *imapfilter-0.8.4 (17 Nov 2002)
 
