@@ -66,6 +66,11 @@ ENV_PATH                /usr/local/bin:/usr/bin:/bin
 ENV_ROOTPATH            /sbin:/bin:/usr/sbin:/usr/bin
 
 #
+# The default PATH settings when su'ing to root:
+#
+ENV_SUPATH              /sbin:/bin:/usr/sbin:/usr/bin
+
+#
 # Terminal permissions
 #
 #	TTYGROUP	Login tty will be assigned this group ownership.
