@@ -1,15 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.14 2003/03/27 13:55:11 danarmak Exp $
-inherit kde kde.org 
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.15 2003/04/27 13:43:49 danarmak Exp $
+inherit kde
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 IUSE="alsa cups ipv6 ssl"
-DESCRIPTION="KDE libraries needed by all kde programs" 
+DESCRIPTION="KDE libraries needed by all kde programs"
 KEYWORDS="x86 ppc sparc ~alpha"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"
+SRC_URI="mirror://kde/stable/$PV/src/${P}.tar.bz2"
 
 PATCHES="${FILESDIR}/${P}-bookmark.diff
 	${FILESDIR}/${P}-zip.diff
@@ -35,7 +36,6 @@ newdepend "dev-lang/perl
 	media-libs/libart_lgpl
 	sys-devel/gettext"
 
-newdepend "/c"
 newdepend "/autotools"
 
 RDEPEND="$RDEPEND

@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.1a.ebuild,v 1.2 2003/04/08 18:14:34 danarmak Exp $
-inherit kde kde.org
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.1a.ebuild,v 1.3 2003/04/27 13:43:49 danarmak Exp $
+inherit kde
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 IUSE="alsa cups ipv6 ssl"
@@ -10,6 +10,8 @@ KEYWORDS="x86 ~ppc sparc ~alpha"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"
+SRC_URI="mirror://kde/stable/$PV/src/${PN}-3.1.1.tar.bz2
+				mirror://gentoo/${PN}-${PVR}.diff.bz2"
 
 # for the 3.1.1a version - use incremental patches from 3.1.1
 S=${WORKDIR}/${PN}-3.1.1
@@ -35,7 +37,6 @@ newdepend "dev-lang/perl
 	sys-devel/gettext
 	~kde-base/arts-1.1.1" # this arts rev is part of the same fix
 
-newdepend "/c"
 newdepend "/autotools"
 
 RDEPEND="$RDEPEND

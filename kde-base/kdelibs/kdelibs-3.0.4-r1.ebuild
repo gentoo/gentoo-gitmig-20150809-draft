@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.4-r1.ebuild,v 1.11 2003/03/27 13:55:11 danarmak Exp $
-inherit kde kde.org eutils
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.4-r1.ebuild,v 1.12 2003/04/27 13:43:49 danarmak Exp $
+inherit kde eutils
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 IUSE="ipv6 ssl alsa cups"
-SRC_URI="$SRC_URI
+SRC_URI="mirror://kde/stable/$PV/src/${P}.tar.bz2
 	mirror://kde/security_patches/post-${PV}-${PN}-kio-misc.diff"
 
 DESCRIPTION="KDE $PV - base libraries needed by all kde programs"
@@ -34,7 +34,6 @@ newdepend "dev-lang/perl
 	app-text/ghostscript
 	sys-devel/gettext"
 
-newdepend "/c"
 newdepend "/autotools"
 
 RDEPEND="$RDEPEND
