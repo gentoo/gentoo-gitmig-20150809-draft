@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FreezeThaw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.11 2004/02/17 19:52:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.12 2004/04/18 02:20:48 randy Exp $
+
+  17 Apr 2004; Michael McCabe <randy@gentoo.org> FreezeThaw-0.43-r1.ebuild:
+  added s390 to keywords
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> FreezeThaw-0.43-r1.ebuild:
   stable on alpha and ia64

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-Random
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.9 2004/02/26 06:00:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.10 2004/04/18 02:28:46 randy Exp $
+
+  17 Apr 2004; Michael McCabe <randy@gentoo.org>
+  Crypt-OpenSSL-Random-0.03-r2.ebuild:
+  added s390 keywords
 
   25 Feb 2004; Joshua Kinard <kumba@gentoo.org>
   Crypt-OpenSSL-Random-0.03-r2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/OpenCA-OpenSSL
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/ChangeLog,v 1.11 2004/04/18 02:24:34 randy Exp $
+
+  17 Apr 2004; Michael McCabe <randy@gentoo.org>
+  OpenCA-OpenSSL-0.8.43-r1.ebuild:
+  added s390 keywords
 
 *OpenCA-OpenSSL-0.8.43-r1 (21 Jun 2003)
  
