@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p1.ebuild,v 1.3 2004/02/18 11:15:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p1.ebuild,v 1.4 2004/02/26 18:54:28 agriffis Exp $
 
 IUSE="tcltk java doc"
 
@@ -30,7 +30,7 @@ done
 HOMEPAGE="http://www.sleepycat.com"
 SLOT="4.2"
 LICENSE="DB"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha ~ia64"
 
 DEPEND="tcltk? ( >=dev-lang/tcl-8.4 )
 	java? ( virtual/jdk )"
