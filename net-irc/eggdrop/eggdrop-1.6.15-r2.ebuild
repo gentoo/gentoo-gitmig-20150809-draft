@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15-r2.ebuild,v 1.1 2004/02/03 03:02:49 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15-r2.ebuild,v 1.2 2004/02/04 03:16:26 zul Exp $
 
 inherit fixheadtails
 
@@ -14,9 +14,10 @@ KEYWORDS="~x86 ~sparc ~mips ~ia64"
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="debug static ipv6 ssl"
+IUSE="debug static ipv6 ssl mysql"
 DEPEND="dev-lang/tcl
-	ssl? ( dev-libs/openssl )"
+	ssl? ( dev-libs/openssl )
+	mysql? ( dev-db/mysql )"
 
 pre_pkg() {
 	use ipv6 && \
@@ -39,6 +40,7 @@ src_unpack()  {
 	epatch ${FILESDIR}/${P}-configure-in.patch
 	epatch ${FILESDIR}/${P}-potential-undef-tm-struct.patch
 	epatch ${P}-STEALER.net.patch
+	epatch ${FILESDIR}/${P}-mysql-use_ssl-fix.patch
 
 	cd ${WORKDIR}/${P}
 	ht_fix_file configure aclocal.m4

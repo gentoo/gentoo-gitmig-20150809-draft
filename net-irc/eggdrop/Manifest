@@ -1,7 +1,7 @@
-MD5 8b78909be4c740090d30b9f10303659b eggdrop-1.6.15-r2.ebuild 2651
+MD5 840bbfcbcb35ade4a430a36017ef6ef2 eggdrop-1.6.15-r2.ebuild 2731
 MD5 c50752b844073f6b187c248d54ab3d39 eggdrop-1.6.15.ebuild 1789
 MD5 a414d7387081ff5be6220539fa917a4a eggdrop-1.6.15-r1.ebuild 2283
-MD5 bc49a59995c5cbf5a891ca395f78eb3c ChangeLog 1940
+MD5 705ab4212eb740f131c8e0b5159961c5 ChangeLog 2166
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 e410ac6d9adce910c8f37daf99a4b0e1 files/eggdrop-1.6.15-config.patch 6182
 MD5 4b36c8026b7081614b9e185e63cb8115 files/eggdrop1.6.15-ssl.fixed.diff 115601
@@ -12,3 +12,4 @@ MD5 86513844ef13a664bc5bf7d1a68d2d59 files/eggdrop-1.6.15-potential-undef-tm-str
 MD5 e9830c3f4fb21aa6a8651d6e47bae613 files/digest-eggdrop-1.6.15 65
 MD5 1892518b7bb9c06cf7cfd46868012971 files/eggdrop-1.6.15-botchk.patch 2931
 MD5 98ef1d7664b8f6d5306eb2d7c03c4ff4 files/eggdrop-installer 2675
+MD5 2f73d0025c666719612e4d05c47a46dd files/eggdrop-1.6.15-mysql-use_ssl-fix.patch 300

@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.11 2004/02/03 03:02:49 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.12 2004/02/04 03:16:26 zul Exp $
+
+  03 Feb 2004; Chuck Short <zul@gentoo.org> eggdrop-1.6.15-r2.ebuild,
+  files/eggdrop-1.6.15-mysql-use_ssl-fix.patch:
+  Re-enabled mysql support. Patch thanks to Sven Wegener
+  <sven.wegener -at- stealer.net>. Closes #40330.
 
 *eggdrop-1.6.15-r2 (02 Feb 2004)
 
