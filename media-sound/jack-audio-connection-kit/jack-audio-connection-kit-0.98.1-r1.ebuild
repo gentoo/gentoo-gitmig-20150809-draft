@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1-r1.ebuild,v 1.7 2004/09/02 13:41:12 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1-r1.ebuild,v 1.8 2004/09/22 21:09:36 eradicator Exp $
 
 IUSE="doc debug jack-tmpfs caps"
 
@@ -9,7 +9,6 @@ inherit flag-o-matic eutils
 DESCRIPTION="A low-latency audio server"
 HOMEPAGE="http://jackit.sourceforge.net/"
 SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"

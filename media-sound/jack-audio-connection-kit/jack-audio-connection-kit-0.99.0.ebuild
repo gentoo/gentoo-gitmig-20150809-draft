@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0.ebuild,v 1.1 2004/09/22 18:19:34 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0.ebuild,v 1.2 2004/09/22 21:09:36 eradicator Exp $
 
 IUSE="doc debug jack-tmpfs caps"
 
@@ -9,29 +9,32 @@ inherit flag-o-matic eutils
 DESCRIPTION="A low-latency audio server"
 HOMEPAGE="http://jackit.sourceforge.net/"
 SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* ~ppc-macos"
+
+#-sparc: 0.98.1-r1: config/sysdeps/cycles.h:27:2: warning: #warning You are compiling JACK on a platform for which jack/cycles.h needs work
+KEYWORDS="~x86 ~ppc ~amd64 ~alpha ~ia64 ~ppc64 -sparc ~ppc-macos"
 
 RDEPEND=">=media-libs/libsndfile-1.0.0
 	dev-libs/glib
 	dev-util/pkgconfig
 	sys-libs/ncurses
-	!ppc-macos? ( alsa? (media-libs/alsa-lib-0.9.1) )
+	!ppc-macos? ( !sparc? ( alsa? ( >=media-libs/alsa-lib-0.9.1 ) ) )
 	!ppc-macos? ( caps? ( sys-libs/libcap ) )
 	!media-sound/jack-cvs"
 
 DEPEND="${RDEPEND}
+	sys-devel/autoconf
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
 	# Add doc option and fix --march=pentium2 in caps test
-	epatch ${FILESDIR}/${PN}-configure.patch \
-		|| die "Couldn't patch configure file, failing"
+	epatch ${FILESDIR}/${PN}-0.98.1-configure.patch
+	WANT_AUTOCONF=2.5 autoconf || die
 }
 
 src_compile() {

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.40 2004/09/22 18:19:34 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.41 2004/09/22 21:09:36 eradicator Exp $
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/jack-audio-connection-kit-configure.patch,
+  jack-audio-connection-kit-0.99.0.ebuild:
+  ebuild cleanup.  Readded missing archs to KEYWORDS.
 
 *jack-audio-connection-kit-0.99.0 (22 Sep 2004)
 
