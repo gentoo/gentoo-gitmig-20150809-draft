@@ -1,5 +1,6 @@
-MD5 f36f128bbe1be31ddd56f4690f6b8df9 ChangeLog 789
 MD5 3a8c6f9db9c13f5307ced16adba16560 stat-2.5.ebuild 717
 MD5 42c1388af004bf54ae498f858c1a08a1 stat-3.3.ebuild 718
+MD5 f36f128bbe1be31ddd56f4690f6b8df9 ChangeLog 789
+MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
 MD5 b1a58147efb1230fc1d85cb20f14d5d8 files/digest-stat-2.5 59
 MD5 f06efb316d7c0f809c3d779bd8746ebe files/digest-stat-3.3 59

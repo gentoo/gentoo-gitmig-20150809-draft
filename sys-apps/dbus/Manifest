@@ -1,5 +1,6 @@
 MD5 f96c3b188d0794b743f0f64ca9fe3402 dbus-0.12.ebuild 903
 MD5 c3a1382f3250f601cfbc6a1c00566bda dbus-0.13.ebuild 1016
 MD5 f277db03b25f32d24e1c9a2e1a6d2285 ChangeLog 748
+MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
 MD5 32708d290231f727221124c8a17ee475 files/digest-dbus-0.12 61
 MD5 5f0f13fe666e2c46dc24c88d2f6a81bb files/digest-dbus-0.13 61

@@ -2,6 +2,7 @@ MD5 e9ed60d2436c4fbcffe0ded317781af9 shadow-4.0.3-r8.ebuild 5270
 MD5 e0603805089500860a529dc37add3fe9 shadow-4.0.3-r7.ebuild 5047
 MD5 0bceef40d45e4abe28e9296819fc40e3 ChangeLog 8034
 MD5 003bd580ea2d0ead2894f10331e7eef0 shadow-4.0.3-r6.ebuild 4858
+MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
 MD5 13c8bec4c2cffb2d73c2f5aa01229d03 files/shadow-4.0.3-su-pam_open_session.patch-v2 4882
 MD5 e70a5f61d37c3c67a4b860d8a6191dbc files/securetty 230
 MD5 94728414b91e556a211379f6acc9b52d files/shadow-4.0.3-selinux.diff 3940

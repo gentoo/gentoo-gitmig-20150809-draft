@@ -1,5 +1,6 @@
 MD5 4007fda86ba1b20f0ceff67fdb13df4e at-3.1.8-r8.ebuild 1358
 MD5 9930a035a64a70dabaab9cc2b6112c26 ChangeLog 2043
+MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
 MD5 a97e713e1f168429fade5980fece7aeb files/at-3.1.8-configure.in-sendmail-gentoo.diff 638
 MD5 db9f8a8f151baa03d8b9910acff6747d files/at-3.1.8-configure-sendmail-gentoo.diff 56325
 MD5 b1f01b7f45cd50b24b40694c623ecc53 files/digest-at-3.1.8-r8 63

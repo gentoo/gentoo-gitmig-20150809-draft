@@ -1,5 +1,6 @@
 MD5 6f4e92326c8809756b6e3821e6dfa902 portage-2.0.49-r18.ebuild 10365
 MD5 2264df67fab8f5ab427e536d7e32f497 ChangeLog 695
+MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
 MD5 1ccc29af0e9489c8aec1090e62705bab portage-2.0.49-r15.ebuild 10281
 MD5 b6989b04bc0ab44de75cf82ab47698fa files/portage-rescue-2.0.48-r1-sparc.tbz2 227629
 MD5 35519288ced0c9c3a2893d16e666a5cf files/portage-rescue-2.0.49-r3-alpha.tbz2 284986
