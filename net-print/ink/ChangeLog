@@ -1,0 +1,9 @@
+# ChangeLog for net-print/ink
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ChangeLog,v 1.1 2003/09/21 15:25:41 lanius Exp $
+
+*ink-0.2 (21 Sep 2003)
+
+  21 Sep 2003; Heinrich Wendel <h_wendel@gentoo.org> ink-0.2.ebuild:
+  initial release, thx to Marcin Wisnicki <wisnia21@freeshell.org>
+
