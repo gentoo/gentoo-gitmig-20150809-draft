@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.13 2004/06/28 20:03:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.14 2004/10/04 06:02:05 spyderous Exp $
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
+  Update dep from temporary hack to virtual/x11.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> linuxwacom-0.6.2.ebuild,
   linuxwacom-0.6.3.ebuild:
