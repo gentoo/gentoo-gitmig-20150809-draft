@@ -1,8 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/Manifest,v 1.23 2003/12/25 02:44:59 robbat2 Exp $
-MD5 42ee070efeecc99acc78c0cb909f60ba amanda-2.4.4-r2.ebuild 11248
-MD5 b2fd848797d7bad624451d1e3266aa5e amanda-2.4.4.ebuild 8434
-MD5 07adfe3736ddce8b2aac7482107c13f2 amanda-2.4.4-r1.ebuild 11270
-MD5 e08f5636c78e3ad5f131d3e736a3eb3b ChangeLog 2611
+MD5 28fb726c3065de7a12f04c7bb2ef1532 amanda-2.4.4-r2.ebuild 11248
+MD5 3a543dbee741db52ca625994441a91e6 amanda-2.4.4.ebuild 8434
+MD5 81b9429f13380db53fc03e57092c03b0 amanda-2.4.4-r1.ebuild 11270
+MD5 3d9986ad500bfb68120fd73846f6f45b amanda-2.4.4-r3.ebuild 11254
+MD5 5f33e4455d83f0b478899d0ab8b7bc9f ChangeLog 2831
 MD5 b21569120561b1c58ad59e93ce6df732 files/amanda-devfs 216
 MD5 fe28f64731a2dbf85f76b6f38942e032 files/example_disklist 55
 MD5 a98390eb2ab16398b7332c42560c190f files/amanda-cron 419
@@ -13,5 +13,6 @@ MD5 451df413de672ae539379c00fb9e62fc files/amanda-amandahosts 339
 MD5 7e5571de2054c56f477b5522246a834e files/digest-amanda-2.4.4 65
 MD5 7e5571de2054c56f477b5522246a834e files/digest-amanda-2.4.4-r1 65
 MD5 7e5571de2054c56f477b5522246a834e files/digest-amanda-2.4.4-r2 65
+MD5 7e5571de2054c56f477b5522246a834e files/digest-amanda-2.4.4-r3 65
 MD5 95a109a0edbf12da91dbabf7977a97f7 files/example_global.conf 1377
 MD5 ef2e4c8797076d9733b31a860fda8582 files/amanda-inetd.amanda.sample 194

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r2.ebuild,v 1.8 2004/01/07 08:59:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r3.ebuild,v 1.1 2004/01/07 08:59:07 robbat2 Exp $
 
 inherit eutils
 
@@ -56,10 +56,10 @@ amanda_variable_setup() {
 	[ -z "${AMANDA_USER_UID}" ] && AMANDA_USER_UID=87
 	[ -z "${AMANDA_USER_SH}" ] && AMANDA_USER_SH=/bin/false
 	[ -z "${AMANDA_USER_HOMEDIR}" ] && AMANDA_USER_HOMEDIR=/var/spool/amanda
-	[ -z "${AMANDA_USER_GROUPS}" ] && AMANDA_USER_GROUPS=${AMANDA_GROUP_NAME}
+	[ -z "${AMANDA_USER_GROUPS}" ] && AMANDA_USER_GROUPS="${AMANDA_GROUP_NAME}"
 	# This installs Amanda, with the server. However, it could be a client,
 	# just specify an alternate server name in AMANDA_SERVER.
-	[ -z "${AMANDA_SERVER}" ] && AMANDA_SERVER=localhost
+	[ -z "${AMANDA_SERVER}" ] && AMANDA_SERVER="${HOSTNAME}"
 	[ -z "${AMANDA_SERVER_TAPE}" ] && AMANDA_SERVER_TAPE="${AMANDA_SERVER}"
 	[ -z "${AMANDA_SERVER_INDEX}" ] && AMANDA_SERVER_INDEX="${AMANDA_SERVER}"
 	[ -z "${AMANDA_TAR_LISTDIR}" ] && AMANDA_TAR_LISTDIR=${AMANDA_USER_HOMEDIR}/tar-lists
