@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-0.9.ebuild,v 1.7 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-0.9.ebuild,v 1.8 2004/10/03 07:01:54 spyderous Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
-DEPEND=">=x11-base/xfree-4.3.0-r2
+DEPEND="virtual/x11
 	>=dev-lang/python-2.2.3-r1
 	>=dev-python/python-xlib-0.12"
 S="${WORKDIR}/PyPanel-${PV}"
