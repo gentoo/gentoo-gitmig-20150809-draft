@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.28 2004/08/11 20:40:35 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.29 2004/09/09 21:24:05 eradicator Exp $
+
+*sox-12.17.5 (09 Sep 2004)
+
+  09 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/sox-install.patch, +files/sox-soundcard.patch, +sox-12.17.5.ebuild:
+  Version bump closes bug #62854.
 
   11 Aug 2004; Brian Harring <ferringb@gentoo.org> sox-12.17.4-r2.ebuild: 
   Use flag operators -must- be wrapped in parenthesis, blah? node isn't valid.
