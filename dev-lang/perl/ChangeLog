@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.84 2004/09/21 12:33:08 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.85 2004/09/22 17:52:01 rac Exp $
+
+  22 Sep 2004; Robert Coie <rac@gentoo.org> perl-5.8.2-r1.ebuild,
+  perl-5.8.3.ebuild, perl-5.8.4-r1.ebuild, perl-5.8.4.ebuild,
+  perl-5.8.5.ebuild:
+  USE threads -> ithreads
 
   21 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> perl-5.8.4-r1.ebuild:
   Marked stable on amd64.
