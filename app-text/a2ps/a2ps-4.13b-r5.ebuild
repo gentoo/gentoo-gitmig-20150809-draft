@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.8 2003/10/29 18:40:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.9 2003/10/31 20:13:29 usata Exp $
 
 inherit gnuconfig eutils
 
@@ -22,11 +22,10 @@ LICENSE="GPL-2"
 KEYWORDS="ia64 x86 ppc sparc alpha"
 IUSE="nls tetex cjk"
 
-DEPEND=">=dev-util/gperf-2.7.2
-	>=app-text/ghostscript-6.23
-	>=app-text/psutils-1.17
-	cjk? ( >=sys-apps/sed-4 )
-	tetex? ( virtual/tetex )"
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.57
+	>=dev-util/gperf-2.7.2
+	cjk? ( >=sys-apps/sed-4 )"
 RDEPEND=">=app-text/ghostscript-6.23
 	>=app-text/psutils-1.17
 	tetex? ( virtual/tetex )
@@ -40,14 +39,17 @@ src_unpack() {
 	cd ${S}
 	xpatch ${PATCHES} || die
 	#stop running autoconf (bug #24264)
-	find . | xargs touch
+	#find . | xargs touch
 }
 
 src_compile() {
+
+	export WANT_AUTOCONF_2_5=1 ; autoreconf
+
 	econf --sysconfdir=/etc/a2ps \
 		--includedir=/usr/include \
 		`use_enable nls` || die "econf failed"
-	emake || die "emake failed"
+	make || die "make failed"
 }
 
 src_install() {
@@ -59,7 +61,7 @@ src_install() {
 		lispdir=${D}/usr/share/emacs/site-lisp \
 		|| die "einstall failed"
 
-	sed -i -e "s,${D},,g" ${D}/etc/a2ps/a2ps.cfg
+	dosed /etc/a2ps/a2ps.cfg
 
 	dodoc ANNOUNCE AUTHORS ChangeLog FAQ NEWS README* THANKS TODO
 }
