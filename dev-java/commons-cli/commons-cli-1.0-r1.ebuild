@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0.ebuild,v 1.3 2003/03/17 00:10:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r1.ebuild,v 1.1 2003/03/17 02:04:58 absinthe Exp $
 
 S=${WORKDIR}/${PN}-${PV}
 DESCRIPTION="Jakarta-Commons library for working with command line arguments and options"
@@ -17,7 +17,9 @@ IUSE="jikes junit"
 
 src_compile() {
 	local myc
-
+	
+	patch -d ${S} -p0 < ${FILESDIR}/${PN}-${PV}-gentoo.diff || die "Could not correct version in build.xml"
+	
 	if [ -n "`use jikes`" ] ; then
 		myc="${myc} -Dbuild.compiler=jikes"
 	fi

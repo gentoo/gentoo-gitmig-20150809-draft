@@ -1,0 +1,11 @@
+--- build.xml.orig	2003-03-10 16:54:25.000000000 -0600
++++ build.xml	2003-03-10 16:54:13.000000000 -0600
+@@ -8,7 +8,7 @@
+   <property name="testreportdir" value="target/test-reports"></property>
+   <property name="distdir" value="dist"></property>
+   <property name="javadocdir" value="target/docs/apidocs"></property>
+-  <property name="final.name" value="commons-cli-1.0-beta-2-dev"></property>
++  <property name="final.name" value="commons-cli-1.0"></property>
+   
+   <target name="init" description="o Initializes some properties">
+ 
