@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.7 2004/04/01 07:46:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.8 2004/04/16 14:27:17 aliz Exp $
 
-inherit virtualx
+inherit virtualx eutils
 
 MY_P=muse-${PV}
 DESCRIPTION="The Linux (midi) MUSic Editor (a sequencer)"
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 IUSE="jack fluidsynth ladcca"
 
@@ -30,6 +30,7 @@ src_unpack() {
 	cd ${S}
 	sed -i "s/HAVE_JACK_JACK_H/HAVE_JACK/" widgets/audioconf.cpp
 	sed -i "/#include <alsa\\/asoundlib.h>/i\\#define ALSA_PCM_OLD_HW_PARAMS_API 1\\" driver/alsaaudio.cpp
+	epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_compile() {

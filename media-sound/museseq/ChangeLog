@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/museseq
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.8 2004/04/01 07:46:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.9 2004/04/16 14:27:17 aliz Exp $
+
+  16 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> museseq-0.6.2.ebuild,
+  files/museseq-0.6.2-fPIC.patch:
+  Added amd64 keyword and fixed -fPIC compilation. Closing #47975.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> museseq-0.6.2.ebuild:
   Stable x86.
