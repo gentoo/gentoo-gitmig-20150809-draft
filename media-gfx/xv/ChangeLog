@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.4 2002/04/30 05:47:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.5 2002/06/05 09:44:46 doctomoe Exp $
+
+*xv-3.10a-r2 (05 Jun 2002)
+
+  05 Jun 2002; Olivier Reisch <doctomoe@gentoo.org> xv-3.10a-r2.ebuild
+  files/digest-xv-3.10a-r2 :
+
+  Added a patch to the current ebuild that makes the sources build and link
+  fine on PPC. The patch is only applied on PPC, so there should be no
+  changes in code on other platforms. Fixes BUG #3370.
 
 *xv-3.10a-r2 (29 Apr 2002)
 
