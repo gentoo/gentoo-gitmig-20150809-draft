@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.19 2005/01/01 16:00:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.20 2005/03/13 06:01:13 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,11 +10,10 @@ SRC_URI="http://www.canb.auug.org.au/~dbell/programs/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="readline"
 
-DEPEND="virtual/libc
-	>=sys-libs/zlib-1.1.4
+DEPEND=">=sys-libs/zlib-1.1.4
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
 RDEPEND=""
 
