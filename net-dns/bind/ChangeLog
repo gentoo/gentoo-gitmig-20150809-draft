@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.24 2003/04/15 14:44:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.25 2003/04/19 19:57:36 lostlogic Exp $
+
+*bind-9.2.2-r1 (19 Apr 2003)
+
+  19 Apr 2003; Brandon Low <lostlogic@gentoo.org> bind-9.2.2-r1.ebuild,
+  files/127.zone, files/localhost.zone, files/named.conf-r2:
+  Fix bug 14467 WRT to .zone extension for zone files. Also keepdir dirs that
+  need to be kept.
 
 *bind-9.2.2 (04 Mar 2003)
 
