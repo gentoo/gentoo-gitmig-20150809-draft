@@ -1,0 +1,12 @@
+# ChangeLog for app-text/ptex
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.1 2003/07/26 16:14:06 usata Exp $
+
+*ptex-3.1.2 (27 Jul 2003)
+
+  27 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> ptex-3.1.2.ebuild,
+  files/psfonts-ja.map, files/tetex-2.0.2-dont-run-config.diff,
+  files/tetex-2.0.2.diff:
+  New ebuild, based on the ebuild submitted by Shinya Ando
+  <shinya@systemlinks.com> at GentooJP BugTrack, closing #23128
+

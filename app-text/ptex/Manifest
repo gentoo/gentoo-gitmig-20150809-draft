@@ -1,0 +1,5 @@
+MD5 22ddc790b7333c6d0f79d5a238181cfa ptex-3.1.2.ebuild 5454
+MD5 8d6f7372f16899ab048c61a738b48065 files/psfonts-ja.map 1184
+MD5 476a1c8128397ff7a381c43fe723a522 files/tetex-2.0.2-dont-run-config.diff 1243
+MD5 50c560b391869be15a001b738e0b7bfe files/tetex-2.0.2.diff 2010
+MD5 1f343119be415e1eb7f49bb83578cc8e files/digest-ptex-3.1.2 420
