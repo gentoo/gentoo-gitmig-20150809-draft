@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.77 2005/02/15 14:04:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.78 2005/02/19 22:46:16 hardave Exp $
+
+  19 Feb 2005; Hardave Riar <hardave@gentoo.org> mc-4.6.0-r13.ebuild:
+  Stable on mips, bug #77992
 
   15 Feb 2005; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r13.ebuild:
   mark amd64; x86
