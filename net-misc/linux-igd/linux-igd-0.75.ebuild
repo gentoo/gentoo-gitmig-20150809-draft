@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.75.ebuild,v 1.6 2003/03/11 22:20:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.75.ebuild,v 1.7 2003/10/27 10:04:24 aliz Exp $
 
 MY_PN="gateway"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -8,7 +8,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 DESCRIPTION="Daemon that emulates Microsoft's Internet Connection Service (ICS)
 	for UPnP-aware clients"
 HOMEPAGE="http://linux-igd.sourceforge.net"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/linux-igd/${MY_PN}-${PV}.tgz"
+SRC_URI="mirror://sourceforge/linux-igd/${MY_PN}-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
