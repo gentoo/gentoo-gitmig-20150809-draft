@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.13 2004/08/14 15:21:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.14 2004/08/15 15:31:11 s4t4n Exp $
+
+  15 August 2004; Michele Noberasco <s4t4n@gentoo.org> qingy-0.4.1.ebuild:
+  Add big fat warning against using qingy with kernels > 2.6.5...
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Corrected metadata.xml to match DTD.

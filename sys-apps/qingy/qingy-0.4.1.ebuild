@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.4.1.ebuild,v 1.3 2004/08/14 17:11:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.4.1.ebuild,v 1.4 2004/08/15 15:31:11 s4t4n Exp $
 
 DESCRIPTION="a DirectFB getty replacement"
 HOMEPAGE="http://qingy.sourceforge.net/"
@@ -52,6 +52,9 @@ pkg_postinst() {
 	einfo "You can safely remove /etc/directfbrc.qingy"
 	einfo "as it is no longer needed to get framebuffer resolution"
 	echo
-	ewarn "Also note that qingy doesn't seem to work with linux-2.6.7."
+	ewarn "Also note that qingy doesn't seem to work realiably with kernel"
+	ewarn "versions higher than 2.6.5 due to problems with the DirectFB library."
+	ewarn "Your mileage may wary, but it could even lock up your machine!"
 	ewarn "See http://bugs.gentoo.org/show_bug.cgi?id=59340"
+	ewarn "and http://bugs.gentoo.org/show_bug.cgi?id=60402"
 }
