@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 7b7013f5e080a9ff6d42c1f9e4747bea ChangeLog 907
 MD5 d9deb8db85ec3b52b53a3c21bd236125 metadata.xml 487
-MD5 d83f5c4944d824d7f87147d8f97ab424 ntlmaps-0.9.8.ebuild 982
+MD5 39db4dcd94910786912176f62080866a ntlmaps-0.9.8.ebuild 994
 MD5 547d2124c00f02458c472025ac835071 files/digest-ntlmaps-0.9.8 57
 MD5 584fc4f03ea3e2cb11cf5d155a86fab0 files/ntlmaps-0.9.8.patch 358
 MD5 822cfcf69e84a4f1705d551644effe52 files/ntlmaps.init 788
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhHkPHTu7gpaalycRAgxEAJ4yVky+bUbzxLNVDmk9zjdBgFbcywCgxUBU
-uGkYM/eFa4NXgdYJLnzP/3A=
-=CSga
+iD8DBQFBhHkzHTu7gpaalycRAhbXAKDw+rInWMVOGHtOIBSjacEL0Qg8tQCgtfL2
+TyPWO76xwN/HAPP0uHIuIxM=
+=m+Sy
 -----END PGP SIGNATURE-----
