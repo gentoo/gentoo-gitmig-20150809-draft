@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.8 2004/06/30 13:27:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.9 2004/08/13 09:05:06 robbat2 Exp $
 
 PATCH_LEVEL="1.2"
 BDB_VER="4.1.25"
@@ -13,7 +13,7 @@ RDEPEND=">=sys-libs/cracklib-2.7-r8
 DEPEND="$RDEPEND
 	dev-lang/perl
 	=dev-libs/glib-1.2*
-	>=sys-devel/autoconf-2.58
+	>=sys-devel/autoconf-2.59
 	>=sys-devel/automake-1.6
 	>=sys-devel/flex-2.5.4a-r5
 	pwdb? ( >=sys-libs/pwdb-0.62 )"
