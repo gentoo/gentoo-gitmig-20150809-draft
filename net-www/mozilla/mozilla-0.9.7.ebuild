@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.7.ebuild,v 1.2 2002/01/23 20:06:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.7.ebuild,v 1.3 2002/01/30 18:08:27 karltk Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -17,7 +17,8 @@ RDEPEND=">=gnome-base/ORBit-0.5.10-r1
 	app-arch/zip
 	app-arch/unzip
 	x11-libs/gtk+
-	java?  ( virtual/jdk )"
+	java?  ( virtual/jdk )
+	"
 #	gtk?   ( x11-libs/gtk+ )
 #	mozqt? ( x11-libs/qt )"
 
@@ -34,7 +35,7 @@ export BUILD_OFFICIAL=1
 [ "`use ssl`" ] && export MOZ_PSM=1
 
 # do we build java support for the NSS stuff ?
-[ "`use java`" ] && export NS_USE_JDK=1
+#[ "`use java`" ] && export NS_USE_JDK=1
 
 src_compile() {
 
