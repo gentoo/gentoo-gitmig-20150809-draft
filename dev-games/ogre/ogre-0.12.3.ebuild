@@ -1,23 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.12.0.ebuild,v 1.2 2003/10/02 21:50:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.12.3.ebuild,v 1.1 2004/01/20 04:23:55 vapier Exp $
 
 S=${WORKDIR}/ogrenew
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
-HOMEPAGE="http://ogre.sourceforge.net/"
+HOMEPAGE="http://www.ogre3d.org/"
 SRC_URI="mirror://sourceforge/ogre/${PN}-v${PV//./-}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
 SLOT="0"
-
-IUSE="doc gtk2"
+KEYWORDS="x86"
+IUSE="doc gtk"
 
 RDEPEND="virtual/opengl
 	media-libs/libsdl
 	=media-libs/freetype-2*
 	media-libs/devil
-	gtk2? (
+	gtk? (
 		=dev-cpp/libglademm-2*
 		=dev-cpp/gtkmm-2*
 	)
@@ -26,19 +25,10 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	|| ( dev-libs/STLport >=sys-devel/gcc-3.0 )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	sed -i \
-		-e 's:noinst_HEADERS:pkginclude_HEADERS:' \
-			`find PlugIns/ -name 'Makefile.am'` || \
-				die "sed Makefile.am failed"
-}
-
 src_compile() {
 	local myconf="cli"
 
-	[ `use gtk2` ] && myconf="gtk"
+	[ `use gtk` ] && myconf="gtk"
 
 	econf --with-cfgtk=${myconf} || die
 	emake || die "emake failed"
