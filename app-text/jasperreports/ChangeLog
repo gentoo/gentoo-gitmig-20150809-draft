@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jasperreports
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/ChangeLog,v 1.3 2004/08/31 03:30:47 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/ChangeLog,v 1.4 2004/09/01 08:08:23 axxo Exp $
+
+  01 Sep 2004; Thomas Matthijs <axxo@gentoo.org> jasperreports-0.6.1.ebuild:
+  fix S path,  closes 62370
 
 *jasperreports-0.6.1 (30 Aug 2004)
 
