@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.3 2004/08/27 21:15:14 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.4 2004/09/02 17:05:16 rl03 Exp $
+
+  02 Sep 2004; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
+  rt-3.2.1.ebuild:
+  Warn about MySQL with Innodb (closes bug #62591). Suggest adding PERL5LIB to
+  Apache configs (closes bug #62592).
 
   27 Aug 2004; Renat Lumpau <rl03@gentoo.org> rt-3.2.1.ebuild:
   HTML-Mason always pulls in libapreq, so IUSE="apache2" doesn't work. See bug

@@ -22,7 +22,9 @@ In your postgresql.conf, set tcpip_socket = true, port = 5432
 
 ***********************************************************
 2. Read the README to configure your webserver for RT. For the impatient:
-put this in ${MY_INSTALLDIR}/.htaccess
+put this in ${MY_INSTALLDIR}/.htaccess (although you really should put it in
+your Apache configs)
+
 AddDefaultCharset UTF-8
 
 PerlModule Apache::DBI
@@ -30,6 +32,7 @@ PerlRequire /usr/bin/webmux.pl
 
 SetHandler perl-script
 PerlHandler RT::Mason
+PerlSetEnv PERL5LIB /usr/lib
 
 ***********************************************************
 3. Restart your webserver (e.g., for Apache: /etc/init.d/apache restart )

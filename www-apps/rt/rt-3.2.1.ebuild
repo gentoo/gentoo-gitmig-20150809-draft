@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.2 2004/08/27 21:15:14 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.3 2004/09/02 17:05:16 rl03 Exp $
 
 inherit webapp eutils
 
@@ -79,6 +79,7 @@ pkg_setup() {
 #		ewarn "but if your RT breaks, you get to keep the pieces."
 #		ewarn
 #	fi
+	ewarn "RT needs MySQL with innodb support"
 	ewarn
 	ewarn "If you are upgrading from an existing _RT2_ installation,"
 	ewarn "stop this ebuild (Ctrl-C now), download the upgrade tool,"
