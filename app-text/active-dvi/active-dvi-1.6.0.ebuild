@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.9 2005/02/08 12:48:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0.ebuild,v 1.1 2005/02/08 12:48:53 usata Exp $
 
 inherit eutils
 
@@ -9,16 +9,16 @@ MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A DVI previewer and a presenter for slides written in LaTeX"
-SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/cristal/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/cristal/${MY_PN}/${MY_P}.tgz"
 HOMEPAGE="http://pauillac.inria.fr/advi/"
 LICENSE="LGPL-2.1"
 
 IUSE="cjk tcltk"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND=">=dev-lang/ocaml-3.04
-	>=dev-ml/camlimages-2.11
+	>=dev-ml/camlimages-2.20
 	virtual/tetex
 	virtual/ghostscript"
 RDEPEND="${DEPEND}
@@ -71,6 +71,7 @@ src_compile() {
 
 	econf --with-camlimages=/usr/lib/ocaml/site-packages/camlimages || die
 	emake || die
+	#emake -j1 || emake -j1 || emake -j1 || die
 
 }
 
@@ -78,7 +79,9 @@ src_install() {
 
 	TEXMFADVI=/usr/share/texmf/advi
 	dodir /usr/bin $TEXMFADVI
-	make ADVI_LOC=${D}/${TEXMFADVI} prefix=${D}/usr install || die
+	make MANDIR=${D}/usr/share/man/man1 \
+		ADVI_LOC=${D}/${TEXMFADVI} \
+		prefix=${D}/usr install || die
 
 	# only include the jpfonts.config if use cjk
 	use cjk || rm ${D}${TEXMFADVI}/jpfonts.conf

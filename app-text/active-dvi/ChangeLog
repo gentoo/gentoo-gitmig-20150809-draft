@@ -1,6 +1,13 @@
 # ChangeLog for app-text/active-dvi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.8 2005/01/01 16:02:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.9 2005/02/08 12:48:53 usata Exp $
+
+*active-dvi-1.6.0 (08 Feb 2005)
+
+  08 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> active-dvi-1.4.0.ebuild,
+  +active-dvi-1.6.0.ebuild:
+  Version bumped. Ebuild submitted by Johannes Bruegmann
+  <johannes@jottbee.org>; bug #76325.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> active-dvi-1.4.0.ebuild:
   Switch to use epause and ebeep, bug #62950
