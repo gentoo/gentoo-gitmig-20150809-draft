@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.5 2003/05/15 18:52:51 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.6 2003/10/19 11:50:36 lanius Exp $
 
 inherit base java-pkg
 ECLASS=jakarta-commons
@@ -115,8 +115,8 @@ jakarta-commons_src_install() {
 				;;
 	    	dohtml)
 				debug-print-section dohtml
-				[ -f LICENSE.txt ] && dodoc LICENSE.txt
-				[ -f RELEASE-NOTES.txt ] && dodoc RELEASE-NOTES.txt
+				[ -s LICENSE.txt ] && dodoc LICENSE.txt
+				[ -s RELEASE-NOTES.txt ] && dodoc RELEASE-NOTES.txt
 				[ -n $(ls -1 *.html 2> /dev/null | wc -l ) ] && dohtml *.html
 				[ -n $(ls -1 dist/*.html 2> /dev/null | wc -l ) ] && dohtml dist/*.html
 				[ -n $(ls -1 dist/docs/* 2> /dev/null | wc -l ) ] && dohtml -r dist/docs/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.19 2003/09/16 04:05:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.20 2003/10/19 11:50:36 lanius Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -37,5 +37,7 @@ aspell-dict_src_install() {
 
 	make DESTDIR=${D} install || die
 
-	dodoc Copyright README info
+	for doc in Copyright README info; do
+		[ -s "$doc" ] && dodoc $doc
+	done
 }
