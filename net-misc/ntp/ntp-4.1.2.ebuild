@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.34 2004/04/28 22:32:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.35 2004/05/12 12:52:24 pappy Exp $
 
 inherit eutils flag-o-matic
 
@@ -58,8 +58,6 @@ src_unpack() {
 src_compile() {
 	hax_bitkeeper
 
-	has_version "sys-devel/hardened-gcc" && append-flags "-yet_exec"
-
 	local mysslconf
 	use ssl \
 		&& mysslconf="--with-openssl-libdir=yes" \
@@ -69,8 +67,6 @@ src_compile() {
 		`use_enable parse-clocks` \
 		${mysslconf} \
 		|| die
-
-	has_version "sys-devel/hardened-gcc" && find ${WORKDIR} -name "Makefile" -type f -exec sed -i "s,-yet_exec,," {} \;
 
 	emake || die
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.46 2004/04/15 23:18:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.47 2004/05/12 12:52:24 pappy Exp $
+
+  12 May 2004; Alexander Gabert <pappy@gentoo.org> ntp-4.1.2.ebuild,
+  ntp-4.2.0-r2.ebuild:
+  removed hardened-gcc logic
 
   15 Apr 2004; Jason Wever <weeve@gentoo.org> ntp-4.2.0-r2.ebuild:
   Stable on sparc.
