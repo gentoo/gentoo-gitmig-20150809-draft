@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.2 2004/03/23 07:14:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.3 2004/04/01 08:16:58 eradicator Exp $
 
 IUSE="nls esd gnome oss alsa jack"
 
-inherit eutils
+inherit eutils flag-o-matic
 
 S=${WORKDIR}/${P/_/-}
 

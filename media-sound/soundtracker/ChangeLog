@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/soundtracker
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.7 2004/03/23 07:14:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.8 2004/04/01 08:16:58 eradicator Exp $
+
+  01 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  soundtracker-0.6.7.ebuild:
+  inherit flag-o-matic.
 
   22 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   soundtracker-0.6.7.ebuild, soundtracker-0.6.7_pre5.ebuild:
