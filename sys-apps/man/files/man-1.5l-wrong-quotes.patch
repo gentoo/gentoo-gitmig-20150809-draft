@@ -5,7 +5,7 @@
  pager = @pager@
  
 -GS = -DGREPSILENT=\'@grepsilent@\'
-+GS = -DGREPSILENT="'@grepsilent@'"
++GS = -DGREPSILENT=$(shell echo "@grepsilent@" | hexdump -d -n 1 | gawk '{ printf("0x%x", $$2); exit 0 }')
  DEFS = @DEFS@ $(GS)
  CWARN = -Wall -Wstrict-prototypes -Wmissing-prototypes
  CWARNNP = -Wall
