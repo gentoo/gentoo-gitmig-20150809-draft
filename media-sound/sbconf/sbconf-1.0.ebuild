@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sbconf/sbconf-1.0.ebuild,v 1.4 2004/06/25 00:21:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sbconf/sbconf-1.0.ebuild,v 1.5 2004/07/09 09:21:19 eradicator Exp $
+
+IUSE="debug"
 
 inherit gnome2 eutils
 
@@ -8,11 +10,10 @@ DESCRIPTION="Sbconf is a GUI of emu-tools which is a tools to configure your sou
 HOMEPAGE="http://w3.enternet.hu/televeny/sbconf/sbconf.html"
 SRC_URI="http://w3.enternet.hu/televeny/sbconf/${PN}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="-* x86"
 SLOT="0"
 
 S=${WORKDIR}/${PN}
-IUSE=""
 DEPEND="
 	>=x11-libs/gtk+-2.0.0
 	media-sound/emu10k1
