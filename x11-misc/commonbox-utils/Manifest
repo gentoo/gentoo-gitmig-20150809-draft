@@ -1,8 +1,18 @@
-MD5 cc3837aa721cfb96024df58e5366162e ChangeLog 2757
-MD5 d3c3dabaff2f1d8f6f8f37c7e52fff08 commonbox-utils-0.3.ebuild 844
-MD5 2d6017103ea4dd33ebec752d4f1b1fd1 commonbox-utils-0.4.ebuild 914
-MD5 061445aebf21588eb97fed5b84e7e811 commonbox-utils-0.5.ebuild 777
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 04fa90df465fc41b7f6e00a9fe2851fa commonbox-utils-0.4.ebuild 914
+MD5 58e2ef7c8cc398e331e8376829edb2a4 commonbox-utils-0.3.ebuild 843
+MD5 276d8ec89bad982ceb57c3d9e6b55aff commonbox-utils-0.5.ebuild 776
+MD5 4f8d05fbe3e791f691ffb848d0ce769a ChangeLog 2911
 MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
 MD5 bb574f724e4107fa13a594b802c86bb6 files/digest-commonbox-utils-0.3 72
 MD5 03f2762a64fe90b5ab9be75bfd099169 files/digest-commonbox-utils-0.4 72
 MD5 8d6dd5509f38f650eeec33bc6ebb5069 files/digest-commonbox-utils-0.5 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4BMuEZCkKN40op4RAqrBAJ9nbNOzE4KweTQqooKTdG242AkJIACgq2V3
+Xq5lFeVqQzQvRcf3KMNOW3Q=
+=qCSX
+-----END PGP SIGNATURE-----
