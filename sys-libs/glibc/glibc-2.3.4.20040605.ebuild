@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.23 2004/07/12 02:19:43 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.24 2004/07/12 22:19:44 tgall Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
@@ -541,8 +541,6 @@ EOF
 	insinto /etc
 	doins ${FILESDIR}/locales.build
 
-	use ppc64 && dosym /lib/ld64.so.1 /lib/ld.so.1
-
 	use makecheck && do_makecheck
 }
 
@@ -567,6 +565,14 @@ pkg_postinst() {
 	then
 		# Generate fastloading iconv module configuration file.
 		${ROOT}/usr/sbin/iconvconfig --prefix=${ROOT}
+	fi
+
+	if [ ! -e "${ROOT}/ld.so.1" -a "`use ppc64`" ]
+	then
+		pushd ${ROOT}
+		cd ${ROOT}/lib
+		ln -s ld64.so.1 ld.so.1
+		popd
 	fi
 
 	# Reload init ...
