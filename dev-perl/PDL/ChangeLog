@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.27 2004/09/09 17:24:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.28 2004/09/21 07:28:31 mcummings Exp $
+
+*PDL-2.4.1 (21 Sep 2004)
+
+  21 Sep 2004; Michael Cummings <mcummings@gentoo.org> +PDL-2.4.1.ebuild:
+  New version of PDL; opengl support is back; docs are back; GLS patch is built
+  in now; closes bug 38291
 
   09 Sep 2004; Guy Martin <gmsoft@gentoo.org> PDL-2.4.0-r2.ebuild:
   Reapplying unconditional -fPIC stuff (#55238). Stable on hppa.
