@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.8 2004/02/24 20:24:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.9 2004/03/14 01:23:50 weeve Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ltrace shows runtime library call information for dynamically linked executables"
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/l/ltrace/${PN}_${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc -sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 
 DEPEND=">=sys-apps/sed-4
 	virtual/glibc"
