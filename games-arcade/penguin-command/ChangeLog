@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/penguin-command
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.6 2004/06/03 19:21:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.7 2004/06/19 16:32:41 jhuebel Exp $
+
+  19 Jun 2004; Jason Eric Huebel <jhuebel@gentoo.org>
+  penguin-command-1.6.6.ebuild:
+  gnuconfig_update, ~amd64
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   penguin-command-1.6.6.ebuild:

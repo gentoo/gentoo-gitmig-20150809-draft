@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.6.ebuild,v 1.8 2004/06/03 19:21:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.6.ebuild,v 1.9 2004/06/19 16:32:41 jhuebel Exp $
 
-inherit games
+inherit gnuconfig games
 
 DESCRIPTION="A clone of the classic Missile Command Game"
 HOMEPAGE="http://www.linux-games.com/penguin-command/"
@@ -22,6 +22,7 @@ DEPEND="media-libs/libpng
 src_unpack() {
 	unpack ${A}
 	sed -i 's:-DUSE_SOUND::' ${S}/configure
+	gnuconfig_update
 }
 
 src_install() {
