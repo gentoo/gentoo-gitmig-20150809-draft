@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.321 2005/03/04 12:43:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.322 2005/03/05 22:13:31 eradicator Exp $
+
+  05 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.4.20050125-r1.ebuild:
+  Readded libidn addon missing in 2.3.4.20050125. Use configure option
+  --enable-omitfp if the user has -fomit-frame-pointer in their CFLAGS (before
+  we strip it out).
 
   04 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20050125-r1.ebuild:

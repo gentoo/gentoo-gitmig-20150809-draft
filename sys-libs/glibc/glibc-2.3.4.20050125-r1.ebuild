@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.9 2005/03/04 17:34:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.10 2005/03/05 22:13:31 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -28,11 +28,6 @@ GLIBC_INFOPAGE_VERSION="2.3.4-r1"
 
 # Gentoo patchset
 PATCH_VER="1.4"
-
-# Libidn addon - http://www.gnu.org/software/libidn/
-#IDN_VER="0.5.13"
-#IDN_TARBALL="libidn-${IDN_VER}.tar.gz"
-#IDN_URI="http://josefsson.org/libidn/releases/${IDN_TARBALL}"
 
 # C Stubbs addon (contained in fedora, so ignoring)
 #CSTUBS_VER="2.1.2"
@@ -130,9 +125,11 @@ get_glibc_src_uri() {
 	GENTOO_TOOLCHAIN_BASE_URI=${GENTOO_TOOLCHAIN_BASE_URI:-${devspace_uri}}
 
 #	GLIBC_SRC_URI="http://ftp.gnu.org/gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
-#	               http://ftp.gnu.org/gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2"
+#	               http://ftp.gnu.org/gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
+#	               http://ftp.gnu.org/gnu/glibc/${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2
 	GLIBC_SRC_URI="mirror://gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
-	               mirror://gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2"
+	               mirror://gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
+	               mirror://gnu/glibc/${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2"
 
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
@@ -152,10 +149,6 @@ get_glibc_src_uri() {
 	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
 			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
-	fi
-
-	if [[ -n ${IDN_URI} ]] ; then
-		GLIBC_SRC_URI="${GLIBC_SRC_URI} ${IDN_URI}"
 	fi
 
 	if [[ -n ${CSTUBS_URI} ]] ; then
@@ -181,12 +174,7 @@ toolchain-glibc_src_unpack() {
 
 	cd ${S}
 	unpack ${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
-
-	if [[ -n ${IDN_TARBALL} ]] ; then
-		unpack ${IDN_TARBALL}
-		mv libidn-${IDN_VER} libidn
-		echo "#stub" > ${S}/libidn/configure
-	fi
+	unpack ${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2
 
 	if [[ -n ${CSTUBS_TARBALL} ]] ; then
 		unpack ${CSTUBS_TARBALL}
@@ -652,6 +640,10 @@ setup_flags() {
 	if $(tc-getCC ${CTARGET}) -v 2>&1 | grep -q 'gcc version 3.[0123]'; then
 		append-flags -finline-limit=2000
 	fi
+
+	# If the user wants to use -fomit-frame-pointer, let the build system
+	# determine when it's safe
+	has_flag -fomit-frame-pointer && EXTRA_ECONF="--enable-omitfp ${EXTRA_ECONF}"
 
 	# We don't want these flags for glibc
 	filter-flags -fomit-frame-pointer -malign-double
