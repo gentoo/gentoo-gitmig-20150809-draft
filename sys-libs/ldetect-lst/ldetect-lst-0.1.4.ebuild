@@ -1,6 +1,6 @@
 # Copyright 2002 damien krotkine <dams@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect-lst/ldetect-lst-0.1.4.ebuild,v 1.1 2002/12/07 18:30:54 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect-lst/ldetect-lst-0.1.4.ebuild,v 1.2 2002/12/07 22:57:52 dams Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
@@ -32,4 +32,9 @@ src_install() {
 	cd ../../ldetect-lst;
 	echo " ----------- install in ${PWD}"
 	make prefix=${D}/usr install
+	cd ${D}/usr/share/ldetect-lst/
+	ln -s pcitable.d/90default.lst ./pcitable
+	ln -s usbtable.d/90default.lst ./usbtable
+	ln -s pcmciatable.d/90default.lst ./pcmciatable
+	ln -s isatable.d/90default.lst ./isatable
 }
