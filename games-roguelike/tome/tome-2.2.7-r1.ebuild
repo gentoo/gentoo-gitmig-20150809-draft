@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.2.7-r1.ebuild,v 1.2 2004/07/01 05:21:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.2.7-r1.ebuild,v 1.3 2004/09/25 13:04:49 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -30,6 +30,12 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}-gentoo-paths.patch"
 	sed -i \
 		-e "s:GENTOO_DIR:${GAMES_STATEDIR}:" files.c init2.c \
+		|| die "sed failed"
+	#bug #53640
+	sed -i \
+		-e "s:-DUSE_X11:-DUSE_GCU -DUSE_X11:" \
+		-e "s:-lX11:-lncurses -lX11:" \
+		makefile \
 		|| die "sed failed"
 	find "${S}" -name .cvsignore -exec rm -f \{\} \;
 }
