@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.19 2004/07/14 22:26:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.20 2004/11/01 01:13:31 vapier Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -10,12 +10,12 @@
 inherit gcc eutils
 
 DESCRIPTION="VideoLAN Client - DVD/video player and more"
+HOMEPAGE="http://www.videolan.org/vlc/"
 SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
-HOMEPAGE="http://www.videolan.org/vlc"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha"
+SLOT="0"
+KEYWORDS="~alpha x86"
 IUSE="3dfx X aalib alsa altivec arts debug dvb dvd dvdread esd faad fbcon ggi
 	gnome gtk imlib joystick kde lirc mad matroska mozilla ncurses nls oggvorbis oss
 	qt sdl slp svga truetype v4l wxwindows xosd xv xvid"

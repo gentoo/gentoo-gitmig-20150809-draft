@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1.ebuild,v 1.7 2004/07/14 22:26:13 agriffis Exp $
-
-inherit libtool gcc eutils
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1.ebuild,v 1.8 2004/11/01 01:13:31 vapier Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
 #	theora - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
+
+inherit libtool gcc eutils
 
 # Change these to correspond with the
 # unpacked dirnames of the CVS snapshots.
@@ -18,12 +18,11 @@ SLIVE=${WORKDIR}/${PLIVE}
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc"
 SRC_URI="http://download.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2
-		 http://download.videolan.org/pub/${PN}/${PV}/contrib/live.2004.02.26.tar.gz"
-
+	http://download.videolan.org/pub/${PN}/${PV}/contrib/live.2004.02.26.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="-ppc ~x86"
 IUSE="3dfx X aalib alsa altivec arts bidi debug dvb dvd dvdread esd faad fbcon
 	ggi gnome gtk imlib joystick kde lirc mad matroska mozilla ncurses nls oggvorbis
 	oss png qt sdl slp speex svga truetype v4l wxwindows xosd xv xvid"
@@ -163,8 +162,8 @@ src_compile() {
 	# and forcing custom ones generally fails building
 	export CXXFLAGS=""
 	export CFLAGS=""
-	export WANT_AUTOCONF_2_5=1
-	export WANT_AUTOMAKE_1_6=1
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.6
 
 	myconf="${myconf} --enable-ffmpeg \
 		--with-ffmpeg-mp3lame \

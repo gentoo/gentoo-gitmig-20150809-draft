@@ -1,15 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.14 2004/07/14 22:26:13 agriffis Exp $
-
-inherit libtool
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.15 2004/11/01 01:13:31 vapier Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
 #	theora - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
 
-inherit gcc eutils
+inherit gcc eutils libtool
 
 PFFM=ffmpeg-20030813
 PMPG=mpeg2dec-20030612
@@ -17,14 +15,14 @@ PMPG=mpeg2dec-20030612
 SFFM=${WORKDIR}/${PFFM}
 SMPG=${WORKDIR}/${PMPG}
 DESCRIPTION="VideoLAN Client - DVD/video player and more"
-HOMEPAGE="http://www.videolan.org/vlc"
+HOMEPAGE="http://www.videolan.org/vlc/"
 SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2
 	http://www.videolan.org/pub/${PN}/${PV}/contrib/${PMPG}.tar.bz2
 	http://www.videolan.org/pub/${PN}/${PV}/contrib/${PFFM}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~alpha ~x86"
 IUSE="3dfx X aalib alsa altivec arts debug dvb dvd dvdread esd faad fbcon flac
 	ggi gnome gtk imlib joystick kde lirc mad matroska mmx mozilla ncurses nls
 	oggvorbis oss qt sdl slp svga truetype v4l wxwindows xosd xv xvid"
@@ -64,7 +62,6 @@ RDEPEND="X? ( virtual/x11 )
 	flac? ( >=media-libs/flac-1.1.0 )
 	>=media-libs/libdv-0.98
 	>=media-libs/libdvbpsi-0.1.3"
-
 DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 # mplayer is a required dependancy until the libpostproc code becomes

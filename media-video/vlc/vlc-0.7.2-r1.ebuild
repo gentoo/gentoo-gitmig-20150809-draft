@@ -1,26 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2-r1.ebuild,v 1.5 2004/10/23 23:34:18 weeve Exp $
-
-inherit libtool gcc eutils
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2-r1.ebuild,v 1.6 2004/11/01 01:13:31 vapier Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
 
+inherit libtool gcc eutils
+
+DESCRIPTION="VLC media player - Video player and streamer"
+HOMEPAGE="http://www.videolan.org/vlc/"
+SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="arts ncurses dvd gtk nls 3dfx svga fbcon esd X alsa ggi speex
 	oggvorbis gnome xv oss sdl aalib slp bidi truetype v4l lirc
 	wxwindows imlib matroska dvb mozilla debug faad theora
 	xosd altivec png dts"
-
-DESCRIPTION="VLC media player - Video player and streamer"
-SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
-
-HOMEPAGE="http://www.videolan.org/vlc"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 
 RDEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2
@@ -135,8 +133,8 @@ src_compile() {
 
 	# vlc uses its own ultraoptimizaed CXXFLAGS
 	# and forcing custom ones generally fails building
-	export WANT_AUTOCONF_2_5=1
-	export WANT_AUTOMAKE_1_6=1
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.6
 
 	# Avoid timestamp skews with autotools
 	touch configure.ac
