@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r4.ebuild,v 1.4 2004/01/25 23:07:50 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r4.ebuild,v 1.5 2004/01/26 17:51:12 pebenito Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -28,7 +28,8 @@ RESTRICT="nomirror"
 #KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~arm ~hppa ~ia64 ~ppc64"
 
 DEPEND="virtual/os-headers
-	>=sys-apps/portage-2.0.23"
+	>=sys-apps/portage-2.0.23
+	selinux? ( sys-libs/libselinux )"
 # We need at least portage-2.0.23 to handle these DEPEND's properly.
 
 # This version of baselayout needs gawk in /bin, but as we do not have
