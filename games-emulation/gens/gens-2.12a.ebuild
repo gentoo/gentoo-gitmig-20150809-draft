@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.12a.ebuild,v 1.1 2003/09/19 18:41:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.12a.ebuild,v 1.2 2003/09/29 06:09:22 mr_bones_ Exp $
 
 inherit games
 
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/libsdl-1.2
 S=${WORKDIR}/gens-linux-${PV}
 
 src_install() {
-	emake install DESTDIR=${D} || die
+	make DESTDIR=${D} install || die "make install failed"
 	dodoc AUTHORS BUGS README
 	prepgamesdirs
 }
