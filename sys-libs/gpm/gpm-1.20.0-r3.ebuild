@@ -1,18 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.0-r3.ebuild,v 1.5 2002/08/14 04:19:39 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.0-r3.ebuild,v 1.6 2002/09/11 14:16:09 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console-based mouse driver"
 SRC_URI="ftp://arcana.linux.it/pub/gpm/gpm-1.20.0.tar.bz2
 	http://www.ibiblio.org/gentoo/distfiles/gpm-1.20.1-patch.tar.bz2"
 
-DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2
+DEPEND=">=sys-libs/ncurses-5.2
 	sys-devel/autoconf"
 	
-RDEPEND="virtual/glibc"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
@@ -22,10 +19,8 @@ src_compile() {
 	#this thing auto-detecting emacs
 	patch -p1 < ${WORKDIR}/gpm.patch || die
 	env ac_cv_path_emacs=no \
-	./configure --prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--sysconfdir=/etc/gpm || die
+
+	econf --sysconfdir=/etc/gpm || die
 
 	# Do not create gpmdoc.ps, as it cause build to fail with our version
 	# of tetex (it is already there, so this will only create missing
@@ -34,7 +29,7 @@ src_compile() {
 	sed -e 's:all\: $(srcdir)/gpmdoc.ps:all\::' \
 		doc/Makefile.orig > doc/Makefile
 
-	emake || die
+	emake || make || die
 }
 
 src_install() {
