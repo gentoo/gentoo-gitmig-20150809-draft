@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.11.0.ebuild,v 1.1 2005/03/22 20:05:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.11.0.ebuild,v 1.2 2005/03/25 04:04:53 pythonhead Exp $
 
 inherit ruby gems
 
@@ -25,11 +25,20 @@ DEPEND="=dev-lang/ruby-1.8*
 	mysql? ( >=dev-ruby/mysql-ruby-2.5 )
 	postgres? ( >=dev-ruby/ruby-postgres-0.7.1 )"
 
+src_install() {
+	gems_src_install
+	cd ${D}/usr/lib/ruby/gems/1.8/gems/${P}
+	#Fixes fastcgi bug where RAILS_ROOT isn't defined
+	epatch ${FILESDIR}/${P}-dispatch.fcgi.diff
+}
 
 pkg_postinst() {
 	einfo "If you have an existing Rails 0.9.5 application you'd like to"
 	einfo "upgrade to 0.11.0 please follow these instructions:"
 	einfo "http://manuals.rubyonrails.com/read/book/15"
-	einfo
+	einfo "*"
+	einfo "If you need to upgrade an existing 0.10.* app to 0.11.0 cd to the app's"
+	einfo "directory and run 'rails . --skip'"
+
 }
 

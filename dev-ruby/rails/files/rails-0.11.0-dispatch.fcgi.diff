@@ -1,0 +1,25 @@
+--- dispatches/ORIG.dispatch.fcgi	2005-03-24 19:44:51.681931600 -0800
++++ dispatches/dispatch.fcgi	2005-03-24 19:45:25.256827440 -0800
+@@ -1,6 +1,5 @@
+ #!/usr/local/bin/ruby
+ 
+-FASTCGI_CRASH_LOG_PATH = "#{RAILS_ROOT}/log/fastcgi.crash.log"
+ 
+ def dispatcher_error(e, msg = "")
+   error_message = "[#{Time.now}] Dispatcher failed to catch: #{e} (#{e.class})\n  #{e.backtrace.join("\n  ")}\n#{msg}"
+@@ -14,6 +13,8 @@
+   require 'dispatcher'
+   require 'fcgi'
+ 
++  FASTCGI_CRASH_LOG_PATH = "#{RAILS_ROOT}/log/fastcgi.crash.log"
++
+   FCGI.each_cgi do |cgi| 
+     begin
+       Dispatcher.dispatch(cgi)
+@@ -23,4 +24,4 @@
+   end
+ rescue Object => fcgi_error
+   dispatcher_error(fcgi_error, "FCGI process #{$$} killed by this error\n")
+-end
+\ No newline at end of file
++end
