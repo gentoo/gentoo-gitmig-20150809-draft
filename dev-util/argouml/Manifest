@@ -1,4 +1,6 @@
-MD5 2fbd3117236070190960d4cf9b6167a0 ChangeLog 1202
+MD5 fdfe7c34c84f0f0b1bab2f246d54dba6 ChangeLog 1333
 MD5 d9a8b18f5bc8e491fb6acc88dfb8f958 argouml-0.16.ebuild 1405
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 54e1255c73ea10e9b8cb54e3903cc0c7 argouml-0.16.1.ebuild 1404
 MD5 478b841134711ba627ac5c73229f72c3 files/digest-argouml-0.16 326
+MD5 ae7cf536f0d9d57d4fe913a7084fd4c1 files/digest-argouml-0.16.1 336
