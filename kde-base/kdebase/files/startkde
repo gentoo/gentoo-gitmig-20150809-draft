@@ -105,7 +105,9 @@ ksplash
 #Set LD_BIND_NOW to increase the efficiency of kdeinit.   #
 #kdeinit unsets this variable before loading applications.#
 ###########################################################
-LD_BIND_NOW=true kdeinit +kcminit +knotify
+# turn it off, it creates aa trouble
+#LD_BIND_NOW=true kdeinit +kcminit +knotify
+kdeinit +kcminit +knotify
 
 ###########################################################
 # finally, give the session control to the session manager#
