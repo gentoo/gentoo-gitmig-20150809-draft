@@ -1,0 +1,19 @@
+--- lib/appointment.c	2004-08-17 17:10:21.000000000 +0100
++++ lib/appointment.c.new	2005-01-26 13:54:20.359615081 +0000
+@@ -665,7 +665,7 @@
+             event_parser_data.exdates))
+         synce_warning("Failed to parse recurrence rule");
+ 
+-      if (event_parser_data.uid)
++      if (event_parser_data.uid) {
+         if (0 == strncmp(event_parser_data.uid->values[0], BLOB0067_STR, strlen(BLOB0067_STR)))
+         {
+           /* A binary UID from SynCE */
+@@ -685,6 +685,7 @@
+           parser_add_blob(parser, ID_UNIQUE, buffer, size);
+           free(buffer);
+         }
++	}
+         else
+         {
+           /* A text UID */

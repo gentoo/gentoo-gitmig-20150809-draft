@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-rra
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/ChangeLog,v 1.13 2005/01/01 15:49:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/ChangeLog,v 1.14 2005/01/26 14:03:19 liquidx Exp $
+
+  26 Jan 2005; Alastair Tse <liquidx@gentoo.org> +files/0.9.0-gcc34.patch,
+  synce-rra-0.9.0.ebuild:
+  added gcc3.4 compat patch. bug #67920.
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> synce-rra-0.8.4.ebuild:
   Fixed invalid atoms in *DEPEND.
