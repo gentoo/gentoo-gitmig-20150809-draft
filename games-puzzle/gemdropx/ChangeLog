@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gemdropx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemdropx/ChangeLog,v 1.4 2004/06/24 23:04:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemdropx/ChangeLog,v 1.5 2004/12/28 23:11:24 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *gemdropx-0.9-r1 (14 Sep 2003)
 
@@ -12,7 +15,7 @@
   12 Jul 2003; Michael Sterrett <msterret@gentoo.org> gemdropx-0.9.ebuild:
   fix DESCRIPTION
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> gemdropx-0.9.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> gemdropx-0.9.ebuild :
   Added KEYWORDS.
  
   10 Jul 2002; J.Alberto S.L. <bass@gentoo.org> gemdropx0.9.ebuild:
