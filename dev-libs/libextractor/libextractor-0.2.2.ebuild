@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/libextractor-0.2.2.ebuild,v 1.5 2003/07/09 08:26:28 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/libextractor-0.2.2.ebuild,v 1.6 2003/09/10 22:18:44 msterret Exp $
 
 inherit libtool
 
@@ -18,8 +18,8 @@ DEPEND=">=sys-devel/libtool-1.4.1
 
 src_unpack() {
 	unpack ${A}
-    # patch their half baked attempt at supporting ogg vorbis
-    epatch ${FILESDIR}/${P}-vorbisfile.patch || die "patch failed"
+	# patch their half baked attempt at supporting ogg vorbis
+	epatch ${FILESDIR}/${P}-vorbisfile.patch || die "patch failed"
 }
 
 src_compile() {

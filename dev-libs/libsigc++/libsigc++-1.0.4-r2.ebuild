@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.12 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.13 2003/09/10 22:17:59 msterret Exp $
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -32,7 +32,7 @@ src_compile() {
 
 	cp sigc++/config/Makefile sigc++/config/Makefile.orig
 	sed -e 's:\(@if\):#\1:' \
-        sigc++/config/Makefile.orig > sigc++/config/Makefile
+		sigc++/config/Makefile.orig > sigc++/config/Makefile
 
 	emake || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r2.ebuild,v 1.5 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r2.ebuild,v 1.6 2003/09/10 22:20:38 msterret Exp $
 
 S=${WORKDIR}/CommonC++-1.9.7
 DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\
@@ -26,13 +26,13 @@ src_unpack() {
 src_compile() {
 
 	econf || die "./configure failed"
-    make DESTDIR=${D} || die
+	make DESTDIR=${D} || die
 
 }
 
 src_install () {
 
-    make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 	dodoc AUTHORS INSTALL NEWS OVERVIEW.TXT ChangeLog\
 		  README THANKS TODO COPYING COPYING.addendum
 	dohtml doc/*

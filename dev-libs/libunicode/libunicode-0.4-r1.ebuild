@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/libunicode-0.4-r1.ebuild,v 1.20 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/libunicode-0.4-r1.ebuild,v 1.21 2003/09/10 22:19:56 msterret Exp $
 
 inherit gnuconfig
 
@@ -16,9 +16,9 @@ KEYWORDS="x86 ppc sparc alpha hppa"
 DEPEND="virtual/glibc"
 
 src_unpack() {
-        unpack ${A} || die
-        cd ${S}
-        use alpha && gnuconfig_update
+	unpack ${A} || die
+	cd ${S}
+	use alpha && gnuconfig_update
 }
 
 src_compile() {
