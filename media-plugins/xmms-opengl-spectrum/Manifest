@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 d68f05b601d4ade59361a44a7f21cdf6 xmms-opengl-spectrum-1.2.10.ebuild 499
+MD5 de22e234735f1a546fdeb2071cd652af xmms-opengl-spectrum-1.2.10.ebuild 499
 MD5 89d89259e8bd021ad39b6e1401cad1ee ChangeLog 578
-MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-opengl-spectrum-1.2.10 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIvcYArHZZzCEUG0RAjlyAJsFi0xA36pD4vAssjTfgrE5LmXYfgCcD37m
-25lQMc1HUUx5h4ZbVu6MFxU=
-=jbIO
------END PGP SIGNATURE-----
+MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-opengl-spectrum-1.2.10 142

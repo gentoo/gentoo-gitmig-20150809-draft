@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 df50a4a2230898774df2ac8edcf8d153 xmms-alsa-1.2.10.ebuild 465
-MD5 88b122a3f7040ae3dac53e0b9ed99b97 xmms-alsa-1.2.10-r1.ebuild 490
+MD5 6ade83d19b81d343a8df28e3462c12fc xmms-alsa-1.2.10.ebuild 465
+MD5 61c6aa3b8c6d98763fad864f277dc500 xmms-alsa-1.2.10-r1.ebuild 490
 MD5 7e0b5803f1c40159c04503c50615185f ChangeLog 555
-MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-alsa-1.2.10 142
-MD5 ee4c50bc643c29df08e03dffa42613b8 files/digest-xmms-alsa-1.2.10-r1 227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIvXdArHZZzCEUG0RAk3gAJ9cjk3BWFLgqAcECjIMxM62FLT0MACfTLuU
-x+MJBHvPqKT2fxhxkisB3qo=
-=kZMo
------END PGP SIGNATURE-----
+MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-alsa-1.2.10 142
+MD5 29189a07ebf2ac1578898c2234dc1bce files/digest-xmms-alsa-1.2.10-r1 227

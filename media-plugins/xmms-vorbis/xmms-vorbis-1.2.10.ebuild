@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-vorbis/xmms-vorbis-1.2.10.ebuild,v 1.5 2005/02/28 10:52:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-vorbis/xmms-vorbis-1.2.10.ebuild,v 1.6 2005/03/16 05:56:26 eradicator Exp $
 
 IUSE="ipv6"
 SLOT="0"
@@ -11,7 +11,7 @@ DEPEND=">=media-sound/xmms-1.2.10
 
 PLUGIN_PATH="Input/vorbis"
 
-M4_VER="1.0"
+M4_VER="1.1"
 
 inherit xmms-plugin
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alsa/xmms-alsa-1.2.10.ebuild,v 1.2 2005/02/28 10:43:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alsa/xmms-alsa-1.2.10.ebuild,v 1.3 2005/03/16 06:00:23 eradicator Exp $
 
 IUSE=""
 SLOT="0"
@@ -11,7 +11,7 @@ DEPEND=">=media-sound/xmms-1.2.10
 
 PLUGIN_PATH="Output/alsa"
 
-M4_VER="1.0"
+M4_VER="1.1"
 
 myconf="--enable-alsa"
 inherit xmms-plugin
