@@ -3,13 +3,16 @@ Hash: SHA1
 
 MD5 f6cd2d33dcdbc01eb11a9ca67baed0be pftpfxp-0.11.4.6.ebuild 1260
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 73eb1e2640550076ac62a3abf604d197 ChangeLog 593
+MD5 5286d340c6d6622cb059d48a9c1c8dd2 ChangeLog 822
+MD5 834e29e05e8b1a45a89f118987311725 pftpfxp-0.11.4.6-r1.ebuild 1359
 MD5 5c7f9305285e6c7efdbc232f737d533e files/digest-pftpfxp-0.11.4.6 68
 MD5 e5a814afb2d03338d5f2e0c69fb75f69 files/0.11.4.6-gcc3.4.fix 505
+MD5 fd3271b459d87ed5fce0e0fd47f72cff files/pftpfxp-v0.11.4mew6-pret.patch 3559
+MD5 5c7f9305285e6c7efdbc232f737d533e files/digest-pftpfxp-0.11.4.6-r1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBpz1ImdTrptrqvGERAh5kAJ0ZhMJV8iK6mu3yGkhDxCj/kTXrmACeJ/ml
-KYNg1GWLbd1CRJQTXpKzArA=
-=AbPI
+iD8DBQFB/zSLmdTrptrqvGERAiDcAJ4yshpzWkEAnvd9ERp8GJuKL3J/sgCeNExb
+jIKY2KrinPhG/3Ak1KIsLBM=
+=fsQm
 -----END PGP SIGNATURE-----
