@@ -1,28 +1,26 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.04.ebuild,v 1.1 2002/07/01 10:57:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.04.ebuild,v 1.2 2002/07/01 11:11:00 seemant Exp $
 
+S=${WORKDIR}/${P}
 DESCRIPTION="Blinks keyboard LEDs (Light Emitting Diode) indicating outgoing
 and incoming network packets on selected network interface."
 
-# Homepage, not used by Portage directly but handy for developer reference
-HOMEPAGE="http://"
+HOMEPAGE="ttp://www.hut.fi/~jlohikos/tleds/"
+SRC_URI="http://www.hut.fi/~jlohikos/tleds/public/${P}.tgz
+http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}-FuRy.patch"
 
+SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	X? ( virtual/x11 )"
 
-SRC_URI="http://www.hut.fi/~jlohikos/tleds/public/${P}.tgz"
-
-S=${WORKDIR}/${P}
-
-SLOT="0"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tgz
 	cd ${S}
-	patch < ${FILESDIR}/${P}-FuRy.patch
+	bzcat ${FILESDIR}/${P}-FuRy.patch | patch
 }
 
 src_compile() {
