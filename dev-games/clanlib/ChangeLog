@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.17 2004/06/29 18:17:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.18 2004/08/15 08:03:00 vapier Exp $
+
+  15 Aug 2004; Mike Frysinger <vapier@gentoo.org> files/0.6.5-gcc3.patch:
+  Update gcc-3.x patch from ROCKLinux #51997 by Felix Riemann.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> clanlib-0.7.7.ebuild:
   add sed-4 dep

@@ -1,5 +1,5 @@
---- ClanLib-0.6.5/Sources/GL/GLX/displaycard_glx.cpp	2002-02-16 17:10:41.000000000 +0100
-+++ ClanLib-0.6.5/Sources/GL/GLX/displaycard_glx.cpp.new	2003-04-17 11:13:46.000000000 +0200
+--- Sources/GL/GLX/displaycard_glx.cpp	2002-02-16 17:10:41.000000000 +0100
++++ Sources/GL/GLX/displaycard_glx.cpp.new	2003-04-17 11:13:46.000000000 +0200
 @@ -14,6 +14,8 @@
  
  #ifdef USE_OPENGL
@@ -9,8 +9,8 @@
  #include <X11/Xlib.h>
  #include <X11/Xutil.h>
  #include <X11/cursorfont.h>
---- ClanLib-0.6.5/Sources/Display/Display/DirectFB/target_directfb.cpp.orig	2003-07-16 11:08:22.000000000 -0400
-+++ ClanLib-0.6.5/Sources/Display/Display/DirectFB/target_directfb.cpp	2003-07-16 11:08:47.000000000 -0400
+--- Sources/Display/Display/DirectFB/target_directfb.cpp.orig	2003-07-16 11:08:22.000000000 -0400
++++ Sources/Display/Display/DirectFB/target_directfb.cpp	2003-07-16 11:08:47.000000000 -0400
 @@ -104,7 +104,7 @@
  
  unsigned int CL_Target_DirectFB::get_width() const
@@ -38,8 +38,8 @@
  
    surface->GetSize (surface, &width, &height);
  
---- ClanLib-0.7.2/Sources/Core/IOData/Unix/directory_scanner_unix.cpp	2003-08-26 13:25:59.113908305 +0200
-+++ ClanLib-0.7.2/Sources/Core/IOData/Unix/directory_scanner_unix.cpp	2003-08-26 13:26:10.402254445 +0200
+--- Sources/Core/IOData/Unix/directory_scanner_unix.cpp	2003-08-26 13:25:59.113908305 +0200
++++ Sources/Core/IOData/Unix/directory_scanner_unix.cpp	2003-08-26 13:26:10.402254445 +0200
 @@ -21,6 +21,7 @@
  #include <fnmatch.h>
  #include <unistd.h>
@@ -48,3 +48,59 @@
  
  CL_DirectoryScanner_Unix::CL_DirectoryScanner_Unix ()
  	: dir_temp (NULL), entry (NULL)
+--- Sources/Core/System/Unix/appconf.h.orig	2004-05-14 12:00:47.877665592 +0200
++++ Sources/Core/System/Unix/appconf.h	2004-05-14 12:01:09.510376920 +0200
+@@ -527,7 +527,9 @@
+ 
+ //protected: --- if FileConfig::ConfigEntry is not public, functions in
+ //               ConfigGroup such as Find/AddEntry can't return ConfigEntry*!
++  protected:
+   class ConfigGroup;
++  public:
+   class ConfigEntry
+   {
+   private:
+--- Sources/Display/Display/Generic/blit_alphamask_rle.h.orig	2004-05-14 12:30:42.314047056 +0200
++++ Sources/Display/Display/Generic/blit_alphamask_rle.h	2004-05-14 12:35:45.472959896 +0200
+@@ -107,14 +107,14 @@
+ 		{
+ 			T a = alpha_data[x];
+ 			T destval = dst_data[x];
+-			T r = lookup_r[(((destval&rmask)>>rstart)<<8)+a];	//(((destval&rmask)>>rstart)*a)>>8;
+-			T g = lookup_g[(((destval&gmask)>>gstart)<<8)+a];	//(((destval&gmask)>>gstart)*a)>>8;
+-			T b = lookup_b[(((destval&bmask)>>bstart)<<8)+a];	//(((destval&bmask)>>bstart)*a)>>8;
++			T r = this->lookup_r[(((destval&this->rmask)>>this->rstart)<<8)+a];	//(((destval&rmask)>>rstart)*a)>>8;
++			T g = this->lookup_g[(((destval&this->gmask)>>this->gstart)<<8)+a];	//(((destval&gmask)>>gstart)*a)>>8;
++			T b = this->lookup_b[(((destval&this->bmask)>>this->bstart)<<8)+a];	//(((destval&bmask)>>bstart)*a)>>8;
+ 
+ 			T amix = 
+-				(r<<rstart) +
+-				(g<<gstart) + 
+-				(b<<bstart);
++				(r<<this->rstart) +
++				(g<<this->gstart) + 
++				(b<<this->bstart);
+ 
+ 			dst_data[x] = amix + *(src_data++);
+ 		}
+@@ -151,13 +151,13 @@
+ 		{
+ 			T a = alpha_data[x];
+ 			T destval = dst_buf[x];
+-			T r = lookup_r[(((destval&rmask)>>rstart)<<8)+a];
+-			T g = lookup_g[(((destval&gmask)>>gstart)<<8)+a];
+-			T b = lookup_b[(((destval&bmask)>>bstart)<<8)+a];
++			T r = this->lookup_r[(((destval&this->rmask)>>this->rstart)<<8)+a];
++			T g = this->lookup_g[(((destval&this->gmask)>>this->gstart)<<8)+a];
++			T b = this->lookup_b[(((destval&this->bmask)>>this->bstart)<<8)+a];
+ 			T amix = 
+-				(r<<rstart) +
+-				(g<<gstart) + 
+-				(b<<bstart);
++				(r<<this->rstart) +
++				(g<<this->gstart) + 
++				(b<<this->bstart);
+ 			dst_buf[x] = amix + *(src_data++);
+ 		}
+ 		memcpy(dst_data, dst_buf, sizeof(T)*rep);
+ 
