@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/vntex
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/vntex/ChangeLog,v 1.1 2004/03/16 20:00:52 usata Exp $
+
+*vntex-20030303 (17 Mar 2004)
+
+  17 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  vntex-20030303.ebuild:
+  Initial import. Ebuild submitted by Nguyen Thai Ngoc Duy
+  <pclouds@vnlinux.org> Closing bug #43757.
+
