@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.17 2004/10/27 16:24:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.18 2004/11/06 15:03:10 lanius Exp $
 
 inherit eutils flag-o-matic
 
 MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
 DESCRIPTION="Open Motif (Metrolink Bug Fix Release)"
-HOMEPAGE="http://www.metrolink.com/openmotif/"
+HOMEPAGE="http://www.openmotif.org/"
 SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
 
 LICENSE="MOTIF"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.55 2004/10/24 12:05:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.56 2004/11/06 15:03:10 lanius Exp $
+
+  06 Nov 2004; <heino@gentoo.org> openmotif-2.1.30-r4.ebuild,
+  openmotif-2.1.30-r5.ebuild:
+  fix homepage
 
   24 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/openmotif-2.1.30-darwin-netbsd.diff, openmotif-2.1.30-r5.ebuild:
