@@ -1,4 +1,6 @@
 MD5 aee419f2de24393a6616e508698aebed openipmi-1.4.12.ebuild 1206
-MD5 b0072f78883c31cf03c946fd9a09651d ChangeLog 470
+MD5 cfbba7d3875a26ccc4d43b2a4ed9e116 openipmi-1.4.14.ebuild 1206
+MD5 ea3070bbb7e08ee05ed2986a3b76932f ChangeLog 599
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 d8b92faf5be2c84664830f92ed974b2f files/digest-openipmi-1.4.12 68
+MD5 2a65267d9408b84ddebcdf52cc1d0161 files/digest-openipmi-1.4.14 68
