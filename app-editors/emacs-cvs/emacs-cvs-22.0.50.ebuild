@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50.ebuild,v 1.6 2005/03/05 08:55:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50.ebuild,v 1.7 2005/03/05 14:21:32 usata Exp $
 
 ECVS_AUTH="ext"
 export CVS_RSH="ssh"
@@ -48,7 +48,11 @@ DFILE=emacs-${SLOT}.desktop
 
 src_compile() {
 
+	# no flag is allowed
+	ALLOWED_FLAGS=" "
 	strip-flags
+	unset LDFLAGS
+
 	epatch ${FILESDIR}/emacs-subdirs-el-gentoo.diff
 	use ppc-macos && epatch ${FILESDIR}/emacs-cvs-21.3.50-nofink.diff
 
