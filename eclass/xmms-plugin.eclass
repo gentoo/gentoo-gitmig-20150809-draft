@@ -1,9 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.10 2004/11/10 01:44:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.11 2004/11/10 01:51:09 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
+
 #
+# THIS ECLASS IS DEPRECATED AND WILL BE REMOVED FROM PORTAGE
+# The xmms and bmp APIs have forked too far to make this eclass a viable
+# option.
+
+
 # Usage:
 # The main purpose of this eclass is to simplify installing xmms plugins
 # which for the various players that support the xmms API (mainly xmms and
