@@ -1,0 +1,154 @@
+diff -Nru rp-pppoe-3.5.orig/man/pppoe-relay.8 rp-pppoe-3.5/man/pppoe-relay.8
+--- rp-pppoe-3.5.orig/man/pppoe-relay.8	2002-07-08 17:38:24.000000000 +0300
++++ rp-pppoe-3.5/man/pppoe-relay.8	2004-10-05 19:06:26.000000000 +0300
+@@ -120,6 +120,5 @@
+ The \fBpppoe\fR home page is \fIhttp://www.roaringpenguin.com/pppoe/\fR.
+ 
+ .SH SEE ALSO
+-adsl-start(8), adsl-stop(8), adsl-connect(8), pppd(8), pppoe.conf(5),
+-pppoe(8), adsl-setup(8), adsl-status(8), pppoe-sniff(8), pppoe-server(8)
++pppd(8), pppoe(8), pppoe-sniff(8), pppoe-relay(8), /usr/share/doc/pppoe/README.Debian
+ 
+diff -Nru rp-pppoe-3.5.orig/man/pppoe-server.8 rp-pppoe-3.5/man/pppoe-server.8
+--- rp-pppoe-3.5.orig/man/pppoe-server.8	2002-07-08 17:38:24.000000000 +0300
++++ rp-pppoe-3.5/man/pppoe-server.8	2004-10-05 19:06:26.000000000 +0300
+@@ -168,6 +168,5 @@
+ The \fBpppoe\fR home page is \fIhttp://www.roaringpenguin.com/pppoe/\fR.
+ 
+ .SH SEE ALSO
+-adsl-start(8), adsl-stop(8), adsl-connect(8), pppd(8), pppoe.conf(5),
+-pppoe(8), adsl-setup(8), adsl-status(8), pppoe-sniff(8), pppoe-relay(8)
++pppd(8), pppoe(8), pppoe-sniff(8), pppoe-relay(8), /usr/share/doc/pppoe/README.Debian
+ 
+diff -Nru rp-pppoe-3.5.orig/man/pppoe-sniff.8 rp-pppoe-3.5/man/pppoe-sniff.8
+--- rp-pppoe-3.5.orig/man/pppoe-sniff.8	2002-07-08 17:38:24.000000000 +0300
++++ rp-pppoe-3.5/man/pppoe-sniff.8	2004-10-05 19:06:26.000000000 +0300
+@@ -73,6 +73,5 @@
+ The \fBpppoe\fR home page is \fIhttp://www.roaringpenguin.com/pppoe/\fR.
+ 
+ .SH SEE ALSO
+-adsl-start(8), adsl-stop(8), adsl-connect(8), pppd(8), pppoe.conf(5),
+-pppoe(8), adsl-setup(8), adsl-status(8), pppoe-server(8), pppoe-relay(8)
++pppd(8), pppoe(8), pppoe-sniff(8), pppoe-relay(8), /usr/share/doc/pppoe/README.Debian
+ 
+diff -Nru rp-pppoe-3.5.orig/man/pppoe.8 rp-pppoe-3.5/man/pppoe.8
+--- rp-pppoe-3.5.orig/man/pppoe.8	2002-07-08 17:38:24.000000000 +0300
++++ rp-pppoe-3.5/man/pppoe.8	2004-10-05 19:06:26.000000000 +0300
+@@ -233,5 +233,4 @@
+ The \fBpppoe\fR home page is \fIhttp://www.roaringpenguin.com/pppoe/\fR.
+ 
+ .SH SEE ALSO
+-adsl-start(8), adsl-stop(8), adsl-connect(8), pppd(8), pppoe.conf(5), adsl-setup(8), adsl-status(8), pppoe-sniff(8), pppoe-server(8), pppoe-relay(8)
+-
++pppd(8), pppoe-sniff(8), pppoe-server(8), pppoe-relay(8), /usr/share/doc/pppoe/README.Debian
+diff -Nru rp-pppoe-3.5.orig/src/Makefile.in rp-pppoe-3.5/src/Makefile.in
+--- rp-pppoe-3.5.orig/src/Makefile.in	2002-07-08 17:38:24.000000000 +0300
++++ rp-pppoe-3.5/src/Makefile.in	2004-10-05 19:06:26.000000000 +0300
+@@ -79,7 +79,7 @@
+ 	@CC@ -o pppoe-relay relay.o if.o debug.o common.o
+ 
+ pppoe.o: pppoe.c pppoe.h
+-	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o pppoe.o pppoe.c
++	@CC@ $(CFLAGS) -DAUTO_IFUP '-DVERSION="$(VERSION)"' -c -o pppoe.o pppoe.c
+ 
+ discovery.o: discovery.c pppoe.h
+ 	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o discovery.o discovery.c
+diff -Nru rp-pppoe-3.5.orig/src/pppoe.c rp-pppoe-3.5/src/pppoe.c
+--- rp-pppoe-3.5.orig/src/pppoe.c	2002-07-08 17:38:24.000000000 +0300
++++ rp-pppoe-3.5/src/pppoe.c	2004-10-05 19:08:49.000000000 +0300
+@@ -67,6 +67,48 @@
+ 				   USED FOR STRESS-TESTING ONLY.  DO NOT
+ 				   USE THE -F OPTION AGAINST A REAL ISP */
+ 
++#ifdef AUTO_IFUP
++/* for interface activation, based on stripped down source source of ifconfig*/
++#include <linux/if.h>
++/*#include <sys/socket.h> */
++#include <sys/types.h>
++#include <sys/socket.h>
++#include "config.h"
++int skfd = -1;			/* generic raw socket desc.     */
++int sockets_open(int family)
++{
++  int sfd = -1;
++  sfd = socket(AF_INET, SOCK_DGRAM, 0);
++  return sfd;
++}
++/* Like strncpy but make sure the resulting string is always 0 terminated.
++ * Ripped from util.c (net-tools package) */  
++char *safe_strncpy(char *dst, const char *src, size_t size)
++{   
++    dst[size-1] = '\0';
++    return strncpy(dst,src,size-1);   
++}
++/* Set a certain interface flag. Ripped from ifconfig.c */
++static int set_flag(char *ifname, short flag)
++{
++    struct ifreq ifr;
++
++    safe_strncpy(ifr.ifr_name, ifname, IFNAMSIZ);
++    if (ioctl(skfd, SIOCGIFFLAGS, &ifr) < 0) {
++	fprintf(stderr, "%s: unknown interface: %s\n", 
++		ifname,	strerror(errno));
++	return (-1);
++    }
++    safe_strncpy(ifr.ifr_name, ifname, IFNAMSIZ);
++    ifr.ifr_flags |= flag;
++    if (ioctl(skfd, SIOCSIFFLAGS, &ifr) < 0) {
++	perror("SIOCSIFFLAGS");
++	return -1;
++    }
++    return (0);
++}
++#endif
++
+ PPPoEConnection *Connection = NULL; /* Must be global -- used
+ 				       in signal handler */
+ /***********************************************************************
+@@ -474,11 +516,13 @@
+ 	    break;
+ 
+ 	case 'p':
++	  if (getuid() == 0) {
+ 	    pidfile = fopen(optarg, "w");
+ 	    if (pidfile) {
+ 		fprintf(pidfile, "%lu\n", (unsigned long) getpid());
+ 		fclose(pidfile);
+ 	    }
++	  }
+ 	    break;
+ 	case 'S':
+ 	    SET_STRING(conn.serviceName, optarg);
+@@ -493,6 +537,7 @@
+ 	    conn.useHostUniq = 1;
+ 	    break;
+ 	case 'D':
++	  if (getuid() == 0) {
+ 	    conn.debugFile = fopen(optarg, "w");
+ 	    if (!conn.debugFile) {
+ 		fprintf(stderr, "Could not open %s: %s\n",
+@@ -501,6 +546,7 @@
+ 	    }
+ 	    fprintf(conn.debugFile, "rp-pppoe-%s\n", VERSION);
+ 	    fflush(conn.debugFile);
++	  }
+ 	    break;
+ 	case 'T':
+ 	    optInactivityTimeout = (int) strtol(optarg, NULL, 10);
+@@ -546,6 +592,16 @@
+ #endif
+     }
+ 
++#ifdef AUTO_IFUP    
++    /* Create a channel to the NET kernel. */
++    if ((skfd = sockets_open(0)) < 0) {
++	perror("socket");
++	exit(1);
++    }
++
++    set_flag(conn.ifName, (IFF_UP | IFF_RUNNING));
++#endif
++
+     /* Set signal handlers: send PADT on HUP; ignore TERM and INT */
+     if (!conn.printACNames) {
+ 	signal(SIGTERM, SIG_IGN);
