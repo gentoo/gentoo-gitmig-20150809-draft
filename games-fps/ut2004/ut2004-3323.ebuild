@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3323.ebuild,v 1.1 2004/09/14 21:41:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3323.ebuild,v 1.2 2004/09/15 13:39:51 wolf31o2 Exp $
 
 inherit games
 
@@ -143,7 +143,8 @@ src_install() {
 
 	# Installing patch files (first time) for decompress
 	cp ${S}/UT2004-Patch/System/* ${Ddir}/System
-	use amd64 && rm ${Ddir}/System/ucc-bin && mv ${Ddir}/System/ucc-bin-linux-amd64 ${Ddir}/System/ucc-bin
+	use amd64 && rm ${Ddir}/System/ucc-bin && \
+		mv ${Ddir}/System/ucc-bin-linux-amd64 ${Ddir}/System/ucc-bin
 
 	# uncompressing files
 	einfo "Uncompressing files... this *will* take a while..."
@@ -153,7 +154,7 @@ src_install() {
 	done
 
 	# Installing patch files
-	for p in {Help,System,Textures,Web}; do
+	for p in {Animations,Help,System,Textures,Web}; do
 		cp -r ${S}/UT2004-Patch/${p}/* ${Ddir}/${p} \
 			|| die "copying ${p} from patch."
 	done
