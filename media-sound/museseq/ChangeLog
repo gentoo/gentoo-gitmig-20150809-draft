@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/museseq
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.7 2004/03/18 07:29:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.8 2004/04/01 07:46:26 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> museseq-0.6.2.ebuild:
+  Stable x86.
 
   17 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> museseq-0.6.0.ebuild,
   museseq-0.6.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.6.ebuild,v 1.2 2004/03/01 05:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.6.ebuild,v 1.3 2004/04/01 07:45:42 eradicator Exp $
 
 inherit eutils gcc
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.arkkra.com/pub/unix/mup${PV//.}src.tar.gz
 
 LICENSE="Arkkra"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="X svga"
 
 RDEPEND="X? ( virtual/x11 )
