@@ -10,7 +10,7 @@ KEYWORDS="x86"
 IUSE="doc cups"
 
 DEPEND="x11-libs/openmotif
-	x11-base/xfree
+	virtual/x11
 	cups? ( net-print/cups )"
 
 src_compile() {
