@@ -31,7 +31,7 @@ virtual/mda				net-mail/procmail
 virtual/xft				x11-base/xfree
 virtual/krb5			app-crypt/heimdal
 virtual/motif			x11-libs/openmotif
-virtual/bootloader		sys-apps/grub
+virtual/bootloader		sys-apps/grub-static
 virtual/editor			app-editors/nano
 virtual/jack			media-sound/jack-audio-connection-kit
 virtual/quicktime		media-libs/libquicktime
