@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.25-r1.ebuild,v 1.1 2004/09/19 18:10:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.25-r1.ebuild,v 1.2 2004/09/19 18:31:11 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -15,10 +15,10 @@ IUSE="doc jikes" #junit"
 
 DEPEND=">=dev-java/ant-1.6
 		dev-java/sablecc-anttask
-		dev-java/sablecc
-		dev-java/jclasslib"
+		dev-java/sablecc"
 	#junit? ( dev-java/junit )"
-RDEPEND=">=virtual/jdk-1.4"
+RDEPEND=">=virtual/jdk-1.4
+		dev-java/jclasslib"
 
 src_unpack() {
 	unpack ${A}

@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 0f9b1b71dfa3eb0892f165f2235710fc jswat-2.25.ebuild 1281
 MD5 d0fba4e6f7da68b8dc22667a598cbc7a jswat-1.7.1-r1.ebuild 850
-MD5 96982a489fcc897a4958ee16553fee44 jswat-2.25-r1.ebuild 1513
+MD5 5434418dafed7f967c665a8166a89863 jswat-2.25-r1.ebuild 1513
 MD5 e7107f74c1fa095803ba0cab6ac759d3 jswat-2.21-r1.ebuild 1281
 MD5 f085d2a84db77e9127d9dba541bd7b67 ChangeLog 3059
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
@@ -19,7 +19,7 @@ MD5 070f409edc50e7b85e80227e51af7a5f files/2.21/build.xml.diff 730
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBTc10/rLF9B432nYRAgY8AJ9Y8qLB9iYxYJAbN2KFLfZ4lU+P2QCgjesP
-aVc/BqF9nf9s7bRVsS6MVvw=
-=MID4
+iD8DBQFBTdCA/rLF9B432nYRAloqAJ9Jyjca+OTOOrMY+QPZhYUc0WbthACfQZ/I
+InIA4L42vPPG8sGRv5V4uvE=
+=QhnF
 -----END PGP SIGNATURE-----
