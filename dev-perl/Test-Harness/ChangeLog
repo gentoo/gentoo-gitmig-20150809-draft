@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Harness
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.25 2004/03/27 02:09:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.26 2004/05/26 20:45:15 kloeri Exp $
+
+  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Test-Harness-2.30.ebuild:
+  Stable on alpha.
 
   26 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   Test-Harness-2.30.ebuild:
