@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/cdplay-0.9.ebuild,v 1.9 2004/10/19 03:26:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/cdplay-0.9.ebuild,v 1.10 2005/03/30 16:32:35 hansmi Exp $
 
 DESCRIPTION="Console CD Player"
 HOMEPAGE="http://www.x-paste.de/projects/index.php"
@@ -11,7 +11,7 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 
-KEYWORDS="x86 ~ppc ~alpha sparc amd64 ppc64"
+KEYWORDS="x86 ppc ~alpha sparc amd64 ppc64"
 
 src_compile() {
 	make || die
