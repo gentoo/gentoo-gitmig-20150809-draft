@@ -18,7 +18,7 @@ $lib_dest       =  "lib/yard";
 $config_dest = "etc/yard";
 
 #  Destination for documentation files (in Doc subdirectory)
-$doc_dest	=  "share/doc/yard-${yard_version}";
+$doc_dest	=  "usr/doc/yard-${yard_version}";
 
 
 ##############################################################################
@@ -41,9 +41,9 @@ my($arch_iX86) = $archname =~ /^i\d86-/;
 
 #  These are to test for old bugs.  Probably unnecessary, but  may as
 #  well keep them.
-test_cp();
-test_lstat();
-test_ldconfig();
+#test_cp();
+#test_lstat();
+#test_ldconfig();
 
 ##############################################################################
 #  Convert all paths to use PREFIX
@@ -57,7 +57,7 @@ print "PREFIX = \"$PREFIX\"\n";
 
 #  Prepend PREFIX onto all of these
 $scripts_dest  = "$PREFIX/$scripts_dest";
-$config_dest   = "/$config_dest";
+$config_dest   = "$PREFIX/$config_dest";
 $lib_dest      = "$PREFIX/$lib_dest";
 $doc_dest      = "$PREFIX/$doc_dest";
 
@@ -274,11 +274,11 @@ sub test_ldconfig {
       print "ERROR, cannot execute ldconfig.  Please put it in your path.\n";
       exit;
 
-   } elsif (($CHILD_ERROR ) != 0) {
+   } elsif (($CHILD_ERROR >> 8) != 128) {
       print "ERROR, trouble with ldconfig.  Maybe it's very old?\n";
       exit;
 
-   } elsif ($ldconfig_help =~ /\-r\sROOT/m) {
+   } elsif ($ldconfig_help =~ /\-r\sroot/m) {
       print "Your ldconfig accepts a -r option -- good.\n";
 
    } else {

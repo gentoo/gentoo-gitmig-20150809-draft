@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.0-r1.ebuild,v 1.4 2001/05/09 02:56:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.0-r1.ebuild,v 1.5 2001/05/09 03:19:44 achim Exp $
 
 A="${P}.tar.gz diet-utils.tar.bz2"
 S=${WORKDIR}/${P}
@@ -11,7 +11,7 @@ SRC_URI="http://www.croftj.net/~fawcett/yard/${P}.tar.gz"
 HOMEPAGE="http://www.croftj.net/~fawcett/yard/"
 
 src_unpack() {
-    unpack ${A}
+    unpack ${P}.tar.gz
     cd ${S}
     cp ${FILESDIR}/configure .
     cp Makefile.in Makefile.in.orig
@@ -20,9 +20,6 @@ src_unpack() {
     patch -p0 < ${FILESDIR}/${P}-extras-Makefile.in-gentoo.diff
 }
 
-src_unpack() {
-    unpack ${P}.tar.gz
-}
 src_compile() {
 
     cd ${S}
