@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.24 2003/03/26 23:40:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.25 2003/03/29 14:13:22 nakano Exp $
 
   26 Mar 2003; Peter Johanson <latexer@gentoo.org> :
   Changed 'use_enable ssl' to 'use_with ssl'. bug #18253
@@ -14,6 +14,9 @@
   Added hppa to keywords.
 
 *mutt-1.4.1 (22 Mar 2003)
+
+  29 Mar 2003; Masatomo Nakano <nakano@gentoo.org> mutt-1.4.1.ebuild:
+  fixed bug. #18317
 
   22 Mar 2003; Lars Weiler <pylon@gentoo.org> mutt-1.4.1.ebuild:
   version bump

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4.1.ebuild,v 1.2 2003/03/22 18:17:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4.1.ebuild,v 1.3 2003/03/29 14:13:22 nakano Exp $
 
 IUSE="ssl nls slang cjk"
 
@@ -26,14 +26,13 @@ inherit flag-o-matic
 
 src_unpack() {
 	unpack ${P}i.tar.gz
+	zcat ${DISTDIR}/patch-${PV}.rr.compressed.1.gz | patch -d ${S} -p1 || die
+	patch -d ${S} -p1 < ${DISTDIR}/patch-1.4.0.cd.edit_threads.9.5 || die
 	if [ "`use cjk`" ]; then
 		unpack ${P}i-ja.1.tar.gz
 		cd ${S}
-		patch -p1 < ../mutt-1.4i-ja.1/patch-1.4.tt.ja.1 || die
+		patch -p1 < ../${P}i-ja.1/patch-${PV}.tt.ja.1 || die
 	fi
-
-	zcat ${DISTDIR}/patch-${PV}.rr.compressed.1.gz | patch -d ${S} -p1 || die
-	patch -d ${S} -p1 < ${DISTDIR}/patch-1.4.0.cd.edit_threads.9.5 || die
 }
 
 src_compile() {
