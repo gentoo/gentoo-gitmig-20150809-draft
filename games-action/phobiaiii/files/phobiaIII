@@ -1,4 +1,5 @@
 #!/bin/sh
 cd /opt/phobiaiii
 export LD_PRELOAD=libsmpeg-0.4.so.0.dummy
+umask 0017
 exec ./phobia3 "$@"
