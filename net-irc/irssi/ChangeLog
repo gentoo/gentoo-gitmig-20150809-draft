@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.38 2003/12/12 02:23:45 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.39 2003/12/12 16:55:26 gregf Exp $
+
+  12 Dec 2003; Greg Fitzgerald <gregf@gentoo.org> irssi-0.8.9.ebuild:
+  Fixed patch problem, closes bug #35657
 
 *irssi-0.8.9 (11 Dec 2003)
 
