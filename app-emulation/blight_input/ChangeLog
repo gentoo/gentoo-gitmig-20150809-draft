@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/blight_input
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight_input/ChangeLog,v 1.4 2003/06/12 19:53:47 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight_input/ChangeLog,v 1.5 2003/08/03 07:12:18 msterret Exp $
+
+  03 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  blight_input-0.0.4.ebuild:
+  tidy
 
   12 Jun 2003; <msterret@gentoo.org> blight_input-0.0.4.ebuild:
   add Header
