@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.30 2004/08/24 04:21:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.31 2004/08/26 14:56:35 solar Exp $
+
+*zlib-1.2.1-r3 (26 Aug 2004)
+
+  26 Aug 2004; <solar@gentoo.org> +files/zlib-1.2.1-CAN-2004-0797.patch,
+  +zlib-1.2.1-r3.ebuild:
+  security fix. bug #61749
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> zlib-1.1.4-r2.ebuild,
   zlib-1.1.4-r3.ebuild, zlib-1.1.4-r4.ebuild, zlib-1.2.1-r1.ebuild,
