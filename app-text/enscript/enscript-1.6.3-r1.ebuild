@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.3-r1.ebuild,v 1.9 2003/02/13 09:36:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.3-r1.ebuild,v 1.10 2003/02/15 07:17:05 gerk Exp $
 
 IUSE="nls"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 SRC_URI="http://www.iki.fi/mtr/genscript/${P}.tar.gz"
 
 HOMEPAGE="http://www.gnu.org/software/enscript/enscript.html"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc  ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 DESCRIPTION="GNU's enscript is a powerful text-to-postsript converter"
