@@ -87,7 +87,7 @@ dev-libs/libtomcrypt
 
 # <danarmak@gentoo.org> (22 Dec 2002)
 # until bug #12538 can be resolved
-=x11-libs/qt-3.1.1
+=x11-libs/qt-3.1.1*
 
 # <danarmak@gentoo.org> (19 Dec 2002)
 # cvs snapshot in testing for bug #7131
