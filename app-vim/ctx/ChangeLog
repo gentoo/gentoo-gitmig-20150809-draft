@@ -1,0 +1,9 @@
+# ChangeLog for app-vim/ctx
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ctx/ChangeLog,v 1.1 2003/08/05 16:23:18 agriffis Exp $
+
+*ctx-1.17 (05 Aug 2003)
+
+  05 Aug 2003; Aron Griffis <agriffis@gentoo.org> ctx-1.17.ebuild:
+  Sixth plugin added to app-vim!
+
