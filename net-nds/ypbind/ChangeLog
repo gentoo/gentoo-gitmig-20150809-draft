@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.18 2004/07/20 10:51:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.19 2004/07/24 06:37:23 eradicator Exp $
+
+*ypbind-1.17.2-r1 (23 Jul 2004)
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/ypbind.confd-r1, +files/ypbind.initd, +ypbind-1.17.2-r1.ebuild:
+  Revision bump to fix init scripts. Now depending on domainname to set
+  ypdomainname. Stable x86, sparc, amd64.
 
   16 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> ypbind-1.17.2.ebuild:
   use emake; use use_enable; don't install COPYING; tidy

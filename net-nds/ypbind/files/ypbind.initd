@@ -1,0 +1,37 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/files/ypbind.initd,v 1.1 2004/07/24 06:37:23 eradicator Exp $
+
+depend() {
+	need net portmap domainname
+	use ypserv
+}
+
+start() {
+	ebegin "Starting ypbind"
+	if [ -n "${YPBIND_OPTS}" ]; then YOPTS="-- ${YPBIND_OPTS}"; fi	
+	start-stop-daemon --start --quiet --exec /usr/sbin/ypbind ${YOPTS}
+	if [ -n "$?" ] ; then
+		notfound=1
+		for i in 0 1 2 3 4 5 6 7 8 9
+		do
+			ypwhich &>/dev/null && { notfound=0; break; }
+			sleep 1
+		done
+		if [ $notfound -eq 1 ] ; then
+			eend 1 "No NIS server found"
+		else
+			eend 0
+		fi
+	else
+		eend $?
+	fi
+}
+
+stop() {
+	ebegin "Stopping ypbind"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/ypbind
+	# Remove binding files, if ypbind "forgets" it
+	rm -f /var/yp/binding/*
+}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2.ebuild,v 1.6 2004/07/24 06:37:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2-r1.ebuild,v 1.1 2004/07/24 06:37:23 eradicator Exp $
 
 MY_P=${PN}-mt-${PV}
 DESCRIPTION="Multithreaded NIS bind service (ypbind-mt)"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc alpha ~ppc amd64"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ~ia64 ~ppc64"
 IUSE="nls"
 
 DEPEND="net-nds/yp-tools
@@ -27,8 +27,8 @@ src_install() {
 	einstall || die
 	dodoc AUTHORS ChangeLog README THANKS TODO
 	insinto /etc ; doins etc/yp.conf
-	insinto /etc/conf.d ; newins ${FILESDIR}/ypbind.confd ypbind
-	exeinto /etc/init.d ; newexe ${FILESDIR}/ypbind.rc6 ypbind
+	insinto /etc/conf.d ; newins ${FILESDIR}/ypbind.confd-r1 ypbind
+	exeinto /etc/init.d ; newexe ${FILESDIR}/ypbind.initd ypbind
 }
 
 pkg_postinst() {
