@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jack-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/ChangeLog,v 1.9 2003/05/09 12:30:42 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/ChangeLog,v 1.10 2003/05/11 02:01:10 jje Exp $
+
+*jack-cvs-0.7 (11 May 2003)
+
+  11 May 2003; jje <jje@gentoo.org> jack-cvs-0.7.ebuild:
+  Add WANT_AUTOCONF_2_5 export and version bump. Tracking new releases.
 
   09 May 2003; jje <jje@gentoo.org> jack-cvs-0.44.ebuild,
   jack-cvs-0.44.ebuild, jack-cvs-0.6.ebuild:
