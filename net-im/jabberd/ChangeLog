@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.16 2004/03/27 21:38:52 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.17 2004/03/28 23:52:02 humpback Exp $
+
+  29 Mar 2004; Gustavo Felisberto <humpback@gentoo.org>; files/self-cert.sh:
+  Small fix in self-cert.sh thanks to Tom Forsythe <gentoobugs@animelover.com>
+  in bug 46039
 
   27 Mar 2004; Gustavo Felisberto <humpback@gentoo.org>;
   jabberd-1.4.3-r2.ebuild:

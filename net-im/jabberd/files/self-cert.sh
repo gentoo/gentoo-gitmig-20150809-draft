@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ######
 #
 # Generate a certificate and key with no passphrase.
