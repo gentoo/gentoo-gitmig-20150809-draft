@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/unsermake
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.4 2004/07/28 03:24:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.5 2004/07/30 15:17:48 caleb Exp $
+
+*unsermake-0.3.0.4137.0 (30 Jul 2004)
+
+  30 Jul 2004; Caleb Tennis <caleb@gentoo.org> unsermake-0.3.0.4137.0.ebuild:
+  Try out a new version
 
   27 Jul 2004; Travis Tilley <lv@gentoo.org> unsermake-0.0_pre20040505.ebuild:
   added ~amd64 keyword
