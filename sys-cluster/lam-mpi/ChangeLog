@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.10 2004/03/04 09:43:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.11 2004/03/25 07:51:01 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  lam-mpi-6.5.9-r1.ebuild:
+  don't use deprecated ? : use syntax
 
   04 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> lam-mpi-7.0.4.ebuild:
   Added ~ppc and ~sparc since older versions were ok, bumped others to stable

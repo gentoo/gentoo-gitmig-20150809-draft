@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.9-r1.ebuild,v 1.1 2003/07/08 05:31:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.9-r1.ebuild,v 1.2 2004/03/25 07:51:01 mr_bones_ Exp $
 
 IUSE="crypt "
 
@@ -15,7 +15,8 @@ DEPEND="virtual/glibc
 	!sys-cluster/mpich"
 # we need ssh if we want to use it instead of rsh
 RDEPEND="${DEPEND}
-	crypt? ( net-misc/openssh ) : ( net-misc/netkit-rsh )"
+	crypt? ( net-misc/openssh )
+	!crypt? ( net-misc/netkit-rsh )"
 
 SLOT="6"
 KEYWORDS="~x86 ~sparc ~ppc"
@@ -65,4 +66,3 @@ src_install () {
 
 	dodoc README HISTORY LICENSE RELEASE_NOTES VERSION
 }
-
