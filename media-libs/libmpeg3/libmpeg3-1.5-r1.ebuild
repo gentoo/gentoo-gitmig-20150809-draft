@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.1 2002/04/15 21:46:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.2 2002/06/08 05:56:38 seemant Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="An mpeg library for linux"
@@ -47,15 +47,6 @@ src_install () {
 	
 	dolib.a ${CHOST%%-*}/libmpeg3.a
 	
-#	insinto /usr/include/libmpeg3/${CHOST%%-*}
-#	doins *.{h,inc}
-
-#	insinto /usr/include/libmpeg3/audio
-#	doins audio/*.h
-
-#	insinto /usr/include/libmpeg3/video
-#	doins video/*.h
-
 	dohtml docs/*.html
 
 }
