@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.3.0.ebuild,v 1.9 2004/10/04 15:12:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.3.0.ebuild,v 1.10 2004/10/13 13:39:33 caleb Exp $
 
 DESCRIPTION="KDE 3.3 - merge this to pull in all non-developer kde-base/* packages"
 HOMEPAGE="http://www.kde.org/"
@@ -22,7 +22,6 @@ RDEPEND="~kde-base/kdelibs-${PV}
 	~kde-base/kdemultimedia-${PV}
 	~kde-base/kdenetwork-${PV}
 	~kde-base/kdepim-${PV}
-	~kde-base/kdenetwork-${PV}
 	~kde-base/kdetoys-${PV}
 	~kde-base/kdeutils-${PV}
 	~kde-base/kdeaccessibility-${PV}
