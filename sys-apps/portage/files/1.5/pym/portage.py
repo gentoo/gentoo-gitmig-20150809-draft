@@ -1836,6 +1836,7 @@ class dblink:
 				self.merge(mergeroot,inforoot,myroot,mergestart+"/"+x,outfile)
 				#return to original path
 				os.chdir(mergestart)
+			#regular file
 			elif os.path.isfile(x):
 				mymd5=md5(x)
 				myppath=""
@@ -1851,70 +1852,76 @@ class dblink:
 								break
 						if not myppath:
 							break	
+				moveme=1
 				if os.path.exists(rootfile):
-					#config file management
-						#otherwise, we need to do some cfg file management here
-					#let's find the right filename for rootfile
-					if myppath!="":
-						#if the md5's *do* match, just copy it over (fall through to movefile(), below)
-						if mymd5!=md5(rootfile):
-							pnum=-1
-							pmatch=os.path.basename(rootfile)
-							#format:
-							# ._cfg0000_foo
-							# 0123456789012
-							mypfile=""
-							for pfile in os.listdir(rootdir):
-								if pfile[0:5]!="._cfg":
-									continue
-								if pfile[10:]!=pmatch:
-									continue
-								try:
-									newpnum=string.atoi(pfile[5:9])
-									if newpnum>pnum:
-										pnum=newpnum
-									mypfile=pfile
-								except:
-									continue
-							pnum=pnum+1
-							#this next line specifies the normal default rootfile (the next available ._cfgxxxx_ slot
-							rootfile=os.path.normpath(rootdir+"/._cfg"+string.zfill(pnum,4)+"_"+pmatch)
-							#but, we can override rootfile in a special case:
-							#if the last ._cfgxxxx_foo file's md5 matches:
-							if mypfile:
-								pmd5=md5(rootdir+"/"+mypfile)
-								if mymd5==pmd5:
-									rootfile=(rootdir+"/"+mypfile)
-									#then overwrite the last ._cfgxxxx_foo file rather than creating a new one
-									#(for cleanliness)
-				else:
+					if os.path.islink(rootfile):
+						#this is how to cleverly avoid accidentally processing symlinks as dirs or regular files
+						pass
+					elif os.path.isdir(rootfile):
+						#directories do *not* get replaced by files
+						moveme=0
+						print "!!!",rootfile
+					elif os.path.isfile(rootfile):
+						#replacing a regular file: we need to do some cfg file management here
+						#let's find the right filename for rootfile
+						if myppath!="":
+							#if the md5's *do* match, just copy it over (fall through to movefile(), below)
+							if mymd5!=md5(rootfile):
+								pnum=-1
+								pmatch=os.path.basename(rootfile)
+								#format:
+								# ._cfg0000_foo
+								# 0123456789012
+								mypfile=""
+								for pfile in os.listdir(rootdir):
+									if pfile[0:5]!="._cfg":
+										continue
+									if pfile[10:]!=pmatch:
+										continue
+									try:
+										newpnum=string.atoi(pfile[5:9])
+										if newpnum>pnum:
+											pnum=newpnum
+										mypfile=pfile
+									except:
+										continue
+								pnum=pnum+1
+								#this next line specifies the normal default rootfile (the next available ._cfgxxxx_ slot
+								rootfile=os.path.normpath(rootdir+"/._cfg"+string.zfill(pnum,4)+"_"+pmatch)
+								#but, we can override rootfile in a special case:
+								#if the last ._cfgxxxx_foo file's md5 matches:
+								if mypfile:
+									pmd5=md5(rootdir+"/"+mypfile)
+									if mymd5==pmd5:
+										rootfile=(rootdir+"/"+mypfile)
+										#then overwrite the last ._cfgxxxx_foo file rather than creating a new one
+										#(for cleanliness)
+				elif myppath:
 					#the file we're about to create *doesn't* exist.  If it's in the protection path, we need to
 					#remove any stray ._cfg_ files
-					if myppath:
-						unlinkme=[]
-						pmatch=os.path.basename(rootfile)
-						mypfile=""
-						for pfile in os.listdir(rootdir):
-							if pfile[0:5]!="._cfg":
-								continue
-							if pfile[10:]!=pmatch:
-								continue
-							unlinkme.append(rootdir+"/"+pfile)
-						for ufile in unlinkme:
-							if os.path.isfile(ufile) and not os.path.islink(ufile):
-								os.unlink(ufile)
-								print "<<<",ufile
-						
-				if movefile(x,rootfile):
-					zing=">>>"
-				else:
-					zing="!!!"
-		
-				print zing+" "+rootfile
-				#print "md5",mymd5
-									
-				outfile.write("obj "+relfile+" "+mymd5+" "+getmtime(rootfile)+"\n")
+					unlinkme=[]
+					pmatch=os.path.basename(rootfile)
+					mypfile=""
+					for pfile in os.listdir(rootdir):
+						if pfile[0:5]!="._cfg":
+							continue
+						if pfile[10:]!=pmatch:
+							continue
+						unlinkme.append(rootdir+"/"+pfile)
+					for ufile in unlinkme:
+						if os.path.isfile(ufile) and not os.path.islink(ufile):
+							os.unlink(ufile)
+							print "<<<",ufile
+				if moveme:
+					#moveme=0 is used to avoid copying on top of directories
+					if movefile(x,rootfile):
+						zing=">>>"
+					else:
+						zing="!!!"
+					print zing,rootfile
+					outfile.write("obj "+relfile+" "+mymd5+" "+getmtime(rootfile)+"\n")
 			elif isfifo(x):
+				#fifo
 				zing="!!!"
 				if not os.path.exists(rootfile):	
 					if movefile(x,rootfile):
@@ -1926,6 +1933,7 @@ class dblink:
 				print zing+" "+rootfile
 				outfile.write("fif "+relfile+"\n")
 			else:
+				#device nodes, the only other possibility
 				if movefile(x,rootfile):
 					zing=">>>"
 				else:
