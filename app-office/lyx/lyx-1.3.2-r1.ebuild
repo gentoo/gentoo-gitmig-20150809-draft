@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.1 2003/06/11 09:17:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.2 2003/08/01 20:29:43 vapier Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
+HOMEPAGE="http://www.lyx.org/"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 	http://www.math.tau.ac.il/~dekelts/lyx/files/hebrew.bind
 	http://www.math.tau.ac.il/~dekelts/lyx/files/preferences"
-HOMEPAGE="http://www.lyx.org/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha"
-IUSE="nls cups qt"
+IUSE="nls cups qt debug"
 
 DEPEND="virtual/x11
 	app-text/tetex 
@@ -40,23 +40,26 @@ src_unpack() {
 }
 
 src_compile() {
-	use nls || myconf="${myconf} --disable-nls"
-	if [ -n "`use qt`" ]; then
+	local myconf=""
+	if [ `use qt` ]; then
 		inherit kde-functions
 		set-qtdir 3
 		myconf="$myconf --with-frontend=qt --with-qt-dir=${QTDIR}"
 	else
 		myconf="$myconf --with-frontend=xforms"
 	fi
-	[ -n "$DEBUG" ] && myconf="$myconf --enable-debug" || myconf="$myconf --disable-debug"
 
 	export WANT_AUTOCONF_2_5=1
 
-	flags="${CFLAGS}"
+	local flags="${CFLAGS}"
 	unset CFLAGS
 	unset CXXFLAGS
-	econf ${myconf} --enable-optimization="$flags"
-
+	econf \
+		`use_enable nls` \
+		`use_enable debug` \
+		${myconf} \
+		--enable-optimization="$flags" \
+		|| die
 	emake || die "emake failed"
 
 }
@@ -69,8 +72,7 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	if [ -n "`use qt`" ]; then
+	if [ `use qt` ] ; then
 		einfo	"WARNING: the QT gui, together with xft2+fontconfig (which you"
 		einfo	"almost certainly have), suffer from one infamous bug that causes"
 		einfo	"the matheditor not to display any special characters (the ones from"
@@ -95,6 +97,4 @@ pkg_postinst() {
 	einfo "or, read http://www.math.tau.ac.il/~dekelts/lyx/instructions2.html"
 	einfo "for instructions on using lyx's own preferences dialog to equal effect."
 	einfo "3. use lyx's qt interface (compile with USE=qt) for maximum effect."
-
 }
-
