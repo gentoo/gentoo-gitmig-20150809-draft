@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/eps
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/eps/ChangeLog,v 1.3 2004/11/24 09:44:17 ticho Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/eps/ChangeLog,v 1.4 2005/01/05 19:15:21 ticho Exp $
+
+*eps-1.5 (05 Jan 2005)
+
+  05 Jan 2005; Andrej Kacian <ticho@gentoo.org> metadata.xml,
+  eps-1.2.ebuild, +eps-1.5.ebuild:
+  Version bump. Closes #76773, reported by Matt Brookings <matt@inter7.com>.
+  Fix Makefile not to use cp -p during install. Install docs. Add
+  longdescription to metadata.xml.
 
   24 Nov 2004; Andrej Kacian <ticho@gentoo.org> eps-1.2.ebuild:
   Stable on x86.
