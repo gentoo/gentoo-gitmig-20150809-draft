@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.2_pre20041022.ebuild,v 1.2 2004/10/23 06:19:36 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.2_pre20041022.ebuild,v 1.3 2004/10/23 06:38:20 fafhrd Exp $
 
 inherit kernel-mod eutils
 
@@ -24,6 +24,8 @@ src_unpack() {
 	then
 		eerror ""
 		eerror "${PN} requires support for modules in your kernel."
+		eerror "In your .config: CONFIG_MODULES=y"
+		eerror "Through 'make menuconfig': Loadable module support-> [*] Enable loadable module support"
 		eerror ""
 		die "Module support not detected."
 	fi
@@ -32,6 +34,8 @@ src_unpack() {
 	then
 		eerror ""
 		eerror "${PN} requires you to compile in the 'different security models option."
+		eerror "In your .config: CONFIG_SECURITY=y"
+		eerror "Through 'make menuconfig': Security options-> [*] Enable different security models"
 		eerror ""
 		die "Security support not detected."
 	fi
@@ -40,6 +44,8 @@ src_unpack() {
 	then
 		eerror ""
 		eerror "${PN} requires that 'Default Linux Capabilities' be compiled as a module."
+		eerror "In your .config: CONFIG_SECURITY_CAPABILITIES=m"
+		eerror "Through 'make menuconfig': Security options-> <M> Default Linux Capabilties"
 		eerror ""
 		die "Default Linux capabilities (security) not detected."
 	fi
@@ -48,6 +54,8 @@ src_unpack() {
 	then
 		eerror ""
 		eerror "${PN} requires that 'NSA SELinux Support' be compiled into your kernel."
+		eerror "In your .config: CONFIG_SECURITY_SELINUX=y"
+		eerror "Through 'make menuconfig': Security options-> [*] NSA SELinux Support"
 		eerror ""
 		die "NSA SELinux support not detected."
 	fi

@@ -30,13 +30,6 @@ Grants realtime scheduling privileges without the ability to lock
 memory using mlock() or mlockall() system calls.  This option can be
 used in conjunction with any of the other options.
 
-# modprobe realtime allcaps=1
-
-Enables all capabilities, including CAP_SETPCAP.  This is equivalent
-to the 2.4 kernel capabilities patch.  It is needed for root
-programs to assign realtime capabilities to other processes.  This
-option can be used in conjunction with any of the other options.
-
 The JACK Audio Connection Kit (jackit.sourceforge.net) includes a
 jackstart program which uses CAP_SETPCAP to run the JACK daemon
 and its clients with realtime capabilities.
