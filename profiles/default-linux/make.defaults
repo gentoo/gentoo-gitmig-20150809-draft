@@ -8,3 +8,6 @@
 
 # bitmap-fonts: build X the (upstream) default way
 USE="bitmap-fonts"
+
+# Have everyone update config.{sub,guess} by default
+FEATURES="autoconfig"
