@@ -9,3 +9,5 @@ virtual/x11		x11-base/apple-xfree
 virtual/xft		x11-base/apple-xfree
 virtual/opengl		x11-base/apple-xfree
 virtual/blackbox	x11-wm/fluxbox
+virtual/ruby		dev-lang/ruby
+virtual/emacs		app-editors/emacs

@@ -29,3 +29,4 @@ virtual/ssh			net-misc/openssh
 virtual/tetex		app-text/tetex
 virtual/textbrowser	net-www/links
 virtual/w3m			www-client/w3m
+virtual/emacs		app-editors/emacs
