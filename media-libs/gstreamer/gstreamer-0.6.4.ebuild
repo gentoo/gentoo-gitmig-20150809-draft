@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.4.ebuild,v 1.1 2003/10/23 21:56:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.4.ebuild,v 1.2 2003/10/24 13:11:55 lu_zero Exp $
 
 inherit eutils flag-o-matic libtool gnome.org
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 
 	unpack ${A}
-
+	use ppc && epatch ${FILESDIR}/gnu_asm_fix.patch
 	# docs hack, disable dirs without html output
 	cd ${S}/docs
 	mv Makefile.in Makefile.in.old
