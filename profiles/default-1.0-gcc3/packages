@@ -31,16 +31,16 @@
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 
-*>=sys-apps/baselayout-1.7.3
-*>=sys-apps/portage-1.8.9_pre25
-*~sys-devel/binutils-2.11.92.0.12.3
-*>=sys-devel/gcc-3.0.4
+*>=sys-apps/baselayout-1.7.9
+*>=sys-apps/portage-1.9.13
+*~sys-devel/binutils-2.12.90.0.7
+*>=sys-devel/gcc-3.1-r5
 *~sys-libs/glibc-2.2.5
 =sys-kernel/linux-headers-2.4.18
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 
->=x11-base/xfree-4.1.0-r2
+>=x11-base/xfree-4.1.0-r9
 
 # sash - static shell for system recovery
 *app-shells/sash
