@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ksetispy/ksetispy-0.5.2.ebuild,v 1.1 2004/12/24 03:47:11 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ksetispy/ksetispy-0.5.2.ebuild,v 1.2 2004/12/24 04:11:40 ribosome Exp $
 
 inherit kde
 
@@ -13,5 +13,5 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="app-sci/setiathome"
+DEPEND="sci-astronomy/setiathome"
 need-kde 3
