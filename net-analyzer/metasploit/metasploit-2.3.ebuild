@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-2.3.ebuild,v 1.1 2005/02/13 13:59:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-2.3.ebuild,v 1.2 2005/02/15 14:49:51 ka0ttic Exp $
 
 DESCRIPTION="The Metasploit Framework is an advanced open-source platform for developing, testing, and using vulnerability exploit code."
 HOMEPAGE="http://www.metasploit.org/"
@@ -20,7 +20,8 @@ IUSE=""
 
 RDEPEND="dev-lang/perl
 	 dev-perl/Net-SSLeay
-	 dev-perl/Term-ReadLine-Perl"
+	 dev-perl/Term-ReadLine-Perl
+	 dev-perl/TermReadKey"
 
 src_compile() {
 	einfo "Nothing to build, jumping to install..."
