@@ -1,6 +1,15 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.96 2005/02/18 23:26:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.97 2005/02/26 07:45:04 brad Exp $
+
+*mozilla-firefox-1.0.1 (26 Feb 2005)
+
+  26 Feb 2005; Brad Laue <brad@gentoo.org> +files/svg-cairo-0.3.0-fix.patch,
+  +mozilla-firefox-1.0.1.ebuild:
+  Bump to 1.0.1, which features stability and security enhancements (and whiter,
+  brighter web pages!)
+  
+  Also, fix compilation of SVG support with cairo 0.3.0.
 
   19 Feb 2005; Heinrich Wendel <lanius@gentoo.org>
   mozilla-firefox-1.0-r3.ebuild:
