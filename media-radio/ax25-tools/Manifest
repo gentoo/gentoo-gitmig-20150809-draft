@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fafc42516e6daddc1d5e75c34ad7bc4e ChangeLog 529
 MD5 d36da6218292b09a735143c0d48fdfda ax25-tools-0.0.8-r1.ebuild 1204
-MD5 e55eafffeb0bb4059e06fb18fbc8c275 files/ax25d.rc 491
+MD5 fafc42516e6daddc1d5e75c34ad7bc4e ChangeLog 529
 MD5 93a20248f3e57dc0a669237393b4cf52 files/digest-ax25-tools-0.0.8-r1 68
-MD5 44af6e72b896be2113c5f2e0517db432 files/mheardd.rc 501
-MD5 0350a3182c9e09334e2dc1cbeef350d3 files/netromd.rc 501
-MD5 4caad051befcea42e39ec2e3a01ce938 files/rip98d.rc 496
-MD5 75922f82a87bfebc7b9812ad44190eb6 files/rxecho.rc 496
-MD5 351ca0ecb9e17a42c70434fedc4b19da files/ttylinkd.rc 506
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4iGIHTu7gpaalycRAtgFAJ48KwHCyMwjIGZcD+1EwMykjVWKrQCcDCR2
-g/yvG2k5I64i0NaGijarqjU=
-=9NMm
------END PGP SIGNATURE-----
+MD5 29b5a63698bc9f0956e135cd0a609346 files/ttylinkd.rc 499
+MD5 35dd0a6e5ce25f11b70cb75b0ae58a4f files/ax25d.rc 484
+MD5 3cc5e8065332887a47b4321de7245851 files/rip98d.rc 489
+MD5 b4771cc8e3f784d1174c968842a08683 files/mheardd.rc 494
+MD5 9a732977e22b0bdf81a2adb343387b6d files/rxecho.rc 489
+MD5 9972c3b2eaade4758aa10cf66a81bf1e files/netromd.rc 494
