@@ -1,23 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.6-r1.ebuild,v 1.3 2005/01/09 00:12:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.8.ebuild,v 1.1 2005/01/09 00:12:47 stkn Exp $
 
 inherit eutils
 
 DESCRIPTION="Howl is a cross-platform implementation of the Zeroconf networking standard. Zeroconf brings a new ease of use to IP networking."
 HOMEPAGE="http://www.porchdogsoft.com/products/howl/"
 SRC_URI="http://www.porchdogsoft.com/download/${P}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
+KEYWORDS="~amd64 ~hppa ~mips ~ia64 ~ppc ~s390 ~sparc ~x86 ~ppc64"
 IUSE=""
 
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
-DEPEND="sys-libs/glibc" # sys-devel/automake - needed if we remove the html docs from /usr/share
-
-src_unpack() {
-	unpack ${A}
-	sed -i "s:howl-@VERSION@$:howl:" ${S}/howl.pc.in
-}
+DEPEND="virtual/libc"
+# sys-devel/automake - needed if we remove the html docs from /usr/share
 
 src_compile() {
 	# If we wanted to remove the html docs in /usr/share/howl....

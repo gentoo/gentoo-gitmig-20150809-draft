@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.2.ebuild,v 1.7 2004/08/04 04:01:08 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.2.ebuild,v 1.8 2005/01/09 00:12:47 stkn Exp $
 
 inherit eutils
 
