@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/secpanel
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.4 2003/11/06 20:37:29 taviso Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.5 2004/03/13 15:29:30 taviso Exp $
+
+*secpanel-0.43 (13 Mar 2004)
+
+  13 Mar 2004; Tavis Ormandy <taviso@gentoo.org> secpanel-0.43.ebuild:
+  new release, author changed directory name.
 
   06 Nov 2003; Tavis Ormandy <taviso@gentoo.org> secpanel-0.41.ebuild:
   stable
