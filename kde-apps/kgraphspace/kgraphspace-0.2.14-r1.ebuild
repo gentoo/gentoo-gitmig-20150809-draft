@@ -8,7 +8,7 @@ DESCRIPTION="A Disk space utility "
 SRC_URI="http://download.sourceforge.net/kgraphspace/${A}"
 HOMEPAGE="http://kgraphspace.sourceforge.net"
 
-DEPEND=">=kde-base/kdelibs-2.1.1"
+DEPEND=">=kde-base/kdebase-2.1.1"
 
 RDEPEND=$DEPEND
 

@@ -8,7 +8,7 @@ DESCRIPTION="A sed/awk/grep apps "
 SRC_URI="http://download.sourceforge.net/kfilereplace/${A}"
 HOMEPAGE="http://kfilereplace.sourceforge.net"
 
-DEPEND=">=kde-base/kdelibs-2.1.1"
+DEPEND=">=kde-base/kdebase-2.1.1"
 
 RDEPEND=$DEPEND
 

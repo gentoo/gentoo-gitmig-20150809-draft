@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-0.44.1.ebuild,v 1.4 2000/12/19 00:10:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-0.44.1.ebuild,v 1.5 2001/05/18 17:13:55 achim Exp $
 
 P=nut-0.44.1
 A=${P}.tar.gz
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.exploits.org/nut/"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=media-libs/libgd-1.8.3
-	>=media-libs/freetype-1.3.1
+	=media-libs/freetype-1.3.1-r2
 	>=media-libs/libpng-1.0.7"
 
 src_unpack() {

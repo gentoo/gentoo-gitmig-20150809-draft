@@ -8,7 +8,7 @@ DESCRIPTION="Archiver with passwd management "
 SRC_URI="http://download.sourceforge.net/kfilecoder/${A}"
 HOMEPAGE="http://kfilecoder.sourceforge.net"
 
-DEPEND=">=kde-base/kdelibs-2.1.1"
+DEPEND=">=kde-base/kdebase-2.1.1"
 
 RDEPEND=$DEPEND
 

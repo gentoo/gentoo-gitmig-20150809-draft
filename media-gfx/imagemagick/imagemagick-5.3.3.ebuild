@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.3.3.ebuild,v 1.1 2001/05/06 15:48:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.3.3.ebuild,v 1.2 2001/05/18 17:13:55 achim Exp $
 
 P=ImageMagick-${PV}
 A=${P}.tar.gz
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.imagemagick.org"
 
 DEPEND=">=app-text/dgs-0.5.9.1
 	>=sys-devel/perl-5
-	>=media-libs/freetype-1.3.1
+	=media-libs/freetype-1.3.1-r2
 	>=media-libs/jpeg-6b
 	>=media-libs/tiff-3.5.5
 	>=media-libs/libpng-1.0.7

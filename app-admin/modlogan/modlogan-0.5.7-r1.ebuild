@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.5.7-r1.ebuild,v 1.1 2001/04/05 15:39:59 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.5.7-r1.ebuild,v 1.2 2001/05/18 17:13:55 achim Exp $
 
 A="${P}.tar.gz gd-1.8.1.tar.gz"
 S=${WORKDIR}/${P}
@@ -10,15 +10,15 @@ SRC_URI="http://www.kneschke.de/projekte/modlogan/download/${P}.tar.gz
 	 http://www.kneschke.de/projekte/modlogan/download/gd-1.8.1.tar.gz"
 
 DEPEND="virtual/glibc virtual/x11
-	>=media-libs/freetype-1.3.1
+	=media-libs/freetype-1.3.1-r2
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.0.7
 	>=dev-libs/libpcre-3.2
 	mysql? ( >=dev-db/mysql-3.23.26 )
     nls? ( sys-dxevel/gettext )
 	"
-DEPEND="virtual/glibc virtual/x11
-	>=media-libs/freetype-1.3.1
+RDEPEND="virtual/glibc virtual/x11
+	=media-libs/freetype-1.3.1-r2
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.0.7
 	>=dev-libs/libpcre-3.2
