@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/mupen64-glide64-0.7.ebuild,v 1.3 2005/01/10 01:06:40 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/mupen64-glide64-0.7.ebuild,v 1.4 2005/01/20 04:22:22 morfic Exp $
 
 inherit games flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/glide64_0_7_ME.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="gtk2"
 
 DEPEND=""
