@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@sistina.com> 
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha9-r1.ebuild,v 1.1 2002/04/16 09:06:33 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha9-r1.ebuild,v 1.2 2002/04/16 10:21:35 blocke Exp $
 
 S=${WORKDIR}/xcdroast-0.98alpha9
 DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
@@ -15,9 +15,9 @@ DEPEND=">=x11-libs/gtk+-1.2.10-r4
 	=dev-libs/glib-1.2*
 	>=media-libs/imlib-1.9.10-r1
 	>=media-libs/giflib-3.0
-	~app-cdr/cdrtools-1.11.12"
+	~app-cdr/cdrtools-1.11.20"
 
-RDEPEND="~app-cdr/cdrtools-1.11.12"
+RDEPEND="~app-cdr/cdrtools-1.11.20"
 
 src_compile () {
 	
@@ -25,10 +25,10 @@ src_compile () {
 	# xcdroast (hardcoded versions).  The listed dependencies are part 
 	# of the cdrtools package.
 	mv xcdroast.h xcdroast.h.orig
-	sed -e 's|CDRECORD_VERSION "1.10"|CDRECORD_VERSION "1.11a12"|' \
-		-e 's|CDDA2WAV_VERSION "1.10"|CDDA2WAV_VERSION "1.11a12"|' \
-		-e 's|READCD_VERSION "1.10"|READCD_VERSION "1.11a12"|' \
-		-e 's|MKISOFS_VERSION "1.14"|MKISOFS_VERSION "1.15a12"|' \
+	sed -e 's|CDRECORD_VERSION "1.10"|CDRECORD_VERSION "1.11a19"|' \
+		-e 's|CDDA2WAV_VERSION "1.10"|CDDA2WAV_VERSION "1.11a19"|' \
+		-e 's|READCD_VERSION "1.10"|READCD_VERSION "1.11a19"|' \
+		-e 's|MKISOFS_VERSION "1.14"|MKISOFS_VERSION "1.15a20"|' \
 		xcdroast.h.orig > xcdroast.h || die
 
 	make PREFIX=/usr CC="gcc ${CFLAGS}" || die
