@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.190 2003/12/25 04:09:19 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.191 2003/12/25 11:11:18 coredumb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -68,6 +68,7 @@ dev-lips/bigloo-lib:expat - enable expat support
 dev-lips/bigloo-lib:ipcs - enable ipcs support
 dev-libs/uclibc:etdyn - enables etdyn support for PaX Address Space Layout Randomization
 dev-php/mod_php:gd-external - Use the external version of libgd rather than the bundled one
+dev-php/PEAR-HTML_Template_Flexy:javascript - Use the PEAR-HTML_Javascript package.
 dev-php/php:gd-external - Use the external version of libgd rather than the bundled one
 dev-python/anygui:wxwin - enable wxwin support
 dev-python/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
