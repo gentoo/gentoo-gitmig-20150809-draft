@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.1 2004/09/28 08:04:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.2 2004/11/07 14:30:47 dragonheart Exp $
+
+  07 Nov 2004; Daniel Black <dragonheart@gentoo.org> fcdsl-2.6.20.7.ebuild:
+  removed sys-kernel/config-kernel from dependancies
 
 *fcdsl-2.6.20.7 (28 Sep 2004)
 

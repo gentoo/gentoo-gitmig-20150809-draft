@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7.ebuild,v 1.1 2004/09/28 08:04:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7.ebuild,v 1.2 2004/11/07 14:30:47 dragonheart Exp $
 
 inherit kmod rpm eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.suse.com/pub/suse/i386/update/9.1/rpm/src/avm_${P/2.6./2.6-}.
 
 LICENSE="LGPL-2"
 SLOT="${KV}"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=net-dialup/capi4k-utils-20040810
@@ -21,7 +21,6 @@ DEPEND="${RDEPEND}
 	app-arch/rpm2targz
 	sys-apps/gawk
 	sys-apps/sed
-	sys-kernel/config-kernel
 	virtual/linux-sources"
 
 detect_fcdsl_card() {
