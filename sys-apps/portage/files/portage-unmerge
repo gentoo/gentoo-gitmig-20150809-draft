@@ -83,9 +83,10 @@ for pkgname in sys.argv[1:]:
 		if not os.path.exists(obj):
 			print "--- !found", pkgfiles[obj][0], obj
 			continue
-		if (pkgfiles[obj][0]!="dir") and (getmtime(obj) != pkgfiles[obj][1]):
-			print "--- !mtime", pkgfiles[obj][0], obj
-			continue
+		if not os.path.islink(obj):
+			if (pkgfiles[obj][0]!="dir") and (getmtime(obj) != pkgfiles[obj][1]):
+				print "--- !mtime", pkgfiles[obj][0], obj
+				continue
 		if pkgfiles[obj][0]=="dir":
 			if not os.path.isdir(obj):
 				print "--- !dir  ","dir", obj
