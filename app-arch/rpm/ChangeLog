@@ -1,9 +1,14 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.25 2003/09/20 05:05:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.26 2003/10/21 17:33:18 cretin Exp $
 
   20 Sep 2003; Marius Mauch <genone@gentoo.org> rpm-4.2_pre069.ebuild:
   added /usr/src/redhat directories for rpmbuild
+
+*rpm-4.2.1 (20 Oct 2003)
+
+  20 Oct 2003; Stefan Jones <cretin@gentoo.org> :
+  New version from rawhide, rpm-4.2.1-0.30
 
 *rpm-4.2_pre069 (14 Apr 2003)
 
