@@ -1,9 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-0.5.5.ebuild,v 1.5 2002/12/15 12:35:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-0.5.5.ebuild,v 1.6 2003/01/09 14:26:06 mholzer Exp $
 
 IUSE="doc ssl"
-
 
 inherit libtool gnome.org
 
@@ -29,8 +28,6 @@ src_compile() {
 		&& myconf="${myconf} --enable-gtk-doc" \
 		|| myconf="${myconf} --disable-gtk-doc"
 
-	# if this is disabled (use) ORBit2 will fail to build. Just force it on	
-	
 	use ssl \
 		&& myconf="${myconf} --with-openssl" \
 		|| myconf="${myconf} --without-openssl"

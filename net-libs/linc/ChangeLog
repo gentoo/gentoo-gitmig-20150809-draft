@@ -1,11 +1,11 @@
 # ChangeLog for net-libs/linc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.14 2002/12/13 11:00:04 blizzy Exp $
-
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.15 2003/01/09 14:26:06 mholzer Exp $
 
 *linc-0.5.5 (13 Nov 2002) 
+
+  09 Jan 2003; Martin Holzer <mholzer@gentoo.org> linc-0.5.5.ebuild :
+  Removed Commentar.
   
   13 Nov 2002; Spider <spider@gentoo.org> linc-0.5.5.ebuild :
   new version in the stable tree. now, is this confusing or what?
