@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: %
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.8.0.ebuild,v 1.5 2003/10/29 00:36:26 seemant Exp $
 
 IUSE="alsa jpeg encode ffmpeg xvid lirc xosd"
 
