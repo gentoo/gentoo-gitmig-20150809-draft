@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.11 2002/08/19 09:36:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.12 2002/09/08 08:44:52 danarmak Exp $
+
+  08 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  If -march=pentium4 is used, add -mno-sse2 to avoid the bug #7625 compile
+  error.
 
 *kdeaddons-3.0.3 (19 Aug 2002)
 
