@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r8.ebuild,v 1.4 2004/04/12 02:17:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r8.ebuild,v 1.5 2004/06/24 00:12:20 agriffis Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -61,7 +61,7 @@ pkg_setup() {
 	# gatos doesn't build on anything but radeon
 	if use gatos
 	then
-		if [ ! "`use video_cards_radeon`" -a ! "`use video_cards_rage128`" ]
+		if ! use video_cards_radeon -a ! use video_cards_rage128
 		then
 			die "Remove gatos from your USE flags. It does not build for cards other than radeon and rage128."
 		fi
@@ -122,7 +122,7 @@ src_compile() {
 
 	# Build dristat utility (bug #18799)
 	# But, don't do it if the GATOS drivers are being built, since it won't work
-	if [ ! "`use gatos`" ]
+	if ! use gatos
 	then
 		make dristat || die
 	fi
@@ -154,7 +154,7 @@ src_install() {
 			install || die "Install failed."
 	fi
 	dodoc README*
-	if [ ! "`use gatos`" ]
+	if ! use gatos
 	then
 		exeinto /usr/X11R6/bin
 		doexe dristat

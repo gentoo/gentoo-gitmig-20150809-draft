@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.18 2004/04/12 02:17:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.19 2004/06/24 00:12:20 agriffis Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -49,40 +49,41 @@ DEPEND="virtual/x11
 
 PROVIDE="virtual/drm"
 
+pkg_setup() {
+	VIDCARDS=""
 
-VIDCARDS=""
+	if useq matrox || useq video_cards_matrox
+	then
+		VIDCARDS="${VIDCARDS} mga.o"
+	fi
+	if useq 3dfx || useq video_cards_3dfx
+	then
+		VIDCARDS="${VIDCARDS} tdfx.o"
+	fi
+	if useq rage128 || useq video_cards_rage128
+	then
+		VIDCARDS="${VIDCARDS} r128.o"
+	fi
+	if useq radeon || useq video_cards_radeon
+	then
+		VIDCARDS="${VIDCARDS} radeon.o"
+	fi
+	if useq sis || useq video_cards_sis
+	then
+		VIDCARDS="${VIDCARDS} sis.o"
+	fi
+	if useq i8x0
+	then
+		VIDCARDS="${VIDCARDS} i810.o i830.o"
+	fi
+	if useq gamma || useq video_cards_gamma
+	then
+		VIDCARDS="${VIDCARDS} gamma.o"
+	fi
 
-if [ `use matrox || use video_cards_matrox` ]
-then
-	VIDCARDS="${VIDCARDS} mga.o"
-fi
-if [ `use 3dfx || use video_cards_3dfx` ]
-then
-	VIDCARDS="${VIDCARDS} tdfx.o"
-fi
-if [ `use rage128 || use video_cards_rage128` ]
-then
-	VIDCARDS="${VIDCARDS} r128.o"
-fi
-if [ `use radeon || use video_cards_radeon` ]
-then
-	VIDCARDS="${VIDCARDS} radeon.o"
-fi
-if [ `use sis || use video_cards_sis` ]
-then
-	VIDCARDS="${VIDCARDS} sis.o"
-fi
-if use i8x0
-then
-	VIDCARDS="${VIDCARDS} i810.o i830.o"
-fi
-if [ `use gamma || use video_cards_gamma` ]
-then
-	VIDCARDS="${VIDCARDS} gamma.o"
-fi
-
-use video_cards_i810 && VIDCARDS="${VIDCARDS} i810.o"
-use video_cards_i830 && VIDCARDS="${VIDCARDS} i830.o"
+	useq video_cards_i810 && VIDCARDS="${VIDCARDS} i810.o"
+	useq video_cards_i830 && VIDCARDS="${VIDCARDS} i830.o"
+}
 
 src_unpack() {
 	# 2.6 kernels are broken for now
