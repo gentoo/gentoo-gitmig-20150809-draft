@@ -1,8 +1,13 @@
 # ChangeLog for media-video/xawtv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.16 2003/02/02 11:48:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.17 2003/02/09 22:40:07 seemant Exp $
 
 *xawtv-3.83 (02 Feb 2003)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Added media-libs/xpm to DEPEND, closing bug #15300 by Susie Edgeworth
+  <arienadean@yahoo.com>
 
   02 Feb 2003; Seemant Kulleen <seemant@gentoo.org> xawtv-3.83.ebuild
   files/digest-xawtv-3.83 :

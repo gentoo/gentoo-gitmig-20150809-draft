@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.81.ebuild,v 1.5 2003/01/07 02:37:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.81.ebuild,v 1.6 2003/02/09 22:40:07 seemant Exp $
 
 IUSE="aalib motif alsa opengl nls"
 
@@ -18,7 +18,8 @@ KEYWORDS="x86 ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
-	>=media-libs/libpng-1.0.8
+	media-libs/libpng
+	media-libs/xpm
 	media-libs/zvbi
 	virtual/x11
 	sys-apps/supersed
