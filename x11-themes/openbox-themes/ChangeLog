@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/openbox-themes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/ChangeLog,v 1.4 2003/10/14 20:48:06 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/ChangeLog,v 1.5 2003/11/17 01:29:25 tseng Exp $
+
+*openbox-themes-0.5 (16 Nov 2003)
+
+  16 Nov 2003; Brandon Hale <tseng@gentoo.org> openbox-themes-0.2.ebuild,
+  openbox-themes-0.5.ebuild:
+  New version, adds some new themes, notably a port of Rephorm's Winter. Also
+  removes some themes which are unfinished, and a few which are now includedin
+  the default Openbox ebuild. Fixed headers.
 
   14 Oct 2003; Brandon Hale <tseng@gentoo.org> :
   Cleaning up in here, thanks for the qa msterret.

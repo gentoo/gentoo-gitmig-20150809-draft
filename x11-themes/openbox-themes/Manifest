@@ -1,4 +1,6 @@
 MD5 54f07183d07d7381374be9c1954cbf04 ChangeLog 603
-MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
+MD5 61ad40d51c45fcd58da9253bb8ec97b2 metadata.xml 289
 MD5 d791c02b7f094ffcb5eb9128a89bdf71 openbox-themes-0.2.ebuild 439
+MD5 bb4760130e2075881f7d311ea6015349 openbox-themes-0.5.ebuild 440
 MD5 e7788df4236c24df318b6b8f264789bb files/digest-openbox-themes-0.2 69
+MD5 6f91739eaaf26743ec860bb9d4787757 files/digest-openbox-themes-0.5 70
