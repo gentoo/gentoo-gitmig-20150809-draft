@@ -1,0 +1,58 @@
+--- glibc-2.3.2-net/linuxthreads/Makefile   13 May 2003 19:51:57 -0000  1.1.1.46
++++ glibc-2.3.2-redhat/linuxthreads/Makefile    13 May 2003 20:07:01 -0000  1.25
+@@ -217,15 +217,18 @@ $(addprefix $(objpfx), \
+   $(filter-out $(tests-static) $(tests-reverse) unload, \
+     $(tests) $(test-srcs))): $(objpfx)libpthread.so \
+			     $(objpfx)libpthread_nonshared.a
+-# $(objpfx)../libc.so is used instead of $(common-objpfx)libc.so,
++# $(objpfx)linklibc.so is used instead of $(common-objpfx)libc.so,
+ # since otherwise libpthread.so comes before libc.so when linking.
+ $(addprefix $(objpfx), $(tests-reverse)): \
+-  $(objpfx)../libc.so $(objpfx)libpthread.so \
++  $(objpfx)linklibc.so $(objpfx)libpthread.so \
+   $(objpfx)libpthread_nonshared.a
+ $(objpfx)../libc.so: $(common-objpfx)libc.so ;
+ $(addprefix $(objpfx),$(librt-tests)): $(common-objpfx)rt/librt.so
+ $(objpfx)unload: $(common-objpfx)dlfcn/libdl.so
+ $(objpfx)unload.out: $(objpfx)libpthread.so $(objpfx)libpthread_nonshared.a
++$(objpfx)linklibc.so: $(common-objpfx)libc.so
++	ln -s ../libc.so $@
++generated += libclink.so
+ else
+ $(addprefix $(objpfx),$(tests) $(test-srcs)): $(objpfx)libpthread.a
+ $(addprefix $(objpfx),$(librt-tests)): $(common-objpfx)rt/librt.a
+--- glibc-2.3.2-net/linuxthreads/cancel.c   22 Feb 2003 16:58:54 -0000  1.1.1.15
++++ glibc-2.3.2-redhat/linuxthreads/cancel.c    23 Feb 2003 21:15:06 -0000  1.10
+@@ -230,5 +230,6 @@ void __pthread_perform_cleanup(char *cur
+     }
+
+   /* And the TSD which needs special help.  */
++  THREAD_SETMEM (self, p_cancelstate, PTHREAD_CANCEL_DISABLE);
+   __libc_thread_freeres ();
+ }
+--- glibc-2.3.2-net/linuxthreads/lockfile.c 18 Dec 2002 12:43:50 -0000  1.1.1.7
++++ glibc-2.3.2-redhat/linuxthreads/lockfile.c  18 Dec 2002 12:48:17 -0000  1.8
+@@ -74,7 +74,11 @@ __fresetlockfiles (void)
+   __pthread_mutexattr_settype (&attr, PTHREAD_MUTEX_RECURSIVE_NP);
+
+   for (i = _IO_iter_begin(); i != _IO_iter_end(); i = _IO_iter_next(i))
+-    __pthread_mutex_init (_IO_iter_file(i)->_lock, &attr);
++    {
++      _IO_lock_t *_lock = _IO_iter_file(i)->_lock;
++      if (_lock)
++   __pthread_mutex_init (_lock, &attr);
++    }
+
+   __pthread_mutexattr_destroy (&attr);
+
+--- glibc-2.3.2-net/linuxthreads/semaphore.h    25 Jun 2001 11:31:17 -0000  1.1.1.6
++++ glibc-2.3.2-redhat/linuxthreads/semaphore.h 5 Apr 2002 10:02:50 -0000   1.2
+@@ -21,6 +21,7 @@
+ # define __need_timespec
+ # include <time.h>
+ #endif
++#include <bits/pthreadtypes.h>
+
+ #ifndef _PTHREAD_DESCR_DEFINED
+ /* Thread descriptors.  Needed for `sem_t' definition.  */
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r8.ebuild,v 1.7 2003/04/06 03:11:16 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r8.ebuild,v 1.8 2003/05/18 22:22:50 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -42,7 +42,7 @@ HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 KEYWORDS="x86 ppc sparc alpha arm"
 SLOT="2.2"
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 
 # Portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 # drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers

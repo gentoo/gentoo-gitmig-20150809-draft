@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.8 2003/04/20 20:59:25 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.9 2003/05/18 22:22:50 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -47,11 +47,11 @@ HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 
 # Portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 # Drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
-DEPEND=">=sys-devel/gcc-3.2-r1
+DEPEND="=sys-devel/gcc-3.2*
 	>=sys-devel/binutils-2.13.90.0.16
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
