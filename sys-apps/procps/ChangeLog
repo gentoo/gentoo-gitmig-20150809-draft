@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.35 2003/07/06 14:24:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.36 2003/07/14 04:49:14 lostlogic Exp $
+
+*procps-3.1.10 (13 Jul 2003)
+
+  13 Jul 2003; Brandon Low <lostlogic@gentoo.org> procps-3.1.10.ebuild:
+  Bumpage, minor stuff only, moving to stable ... fairly soon
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> procps-3.1.9.ebuild:
   Mark stable on alpha
