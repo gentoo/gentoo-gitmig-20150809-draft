@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/elementtree-1.2_beta3.ebuild,v 1.1 2004/06/05 17:18:26 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/elementtree-1.2_beta3.ebuild,v 1.2 2004/06/08 12:29:38 dholm Exp $
 
 inherit distutils
 
@@ -8,7 +8,7 @@ MY_P="${PN}-${PV/_beta/b}-20040602"
 DESCRIPTION="A light-weight XML object model for Python"
 HOMEPAGE="http://effbot.org/zone/element-index.htm"
 SRC_URI="http://effbot.org/downloads/${MY_P}.zip"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DEPEND="virtual/python"
 RDEPEND="${DEPEND}
 	app-arch/unzip"
