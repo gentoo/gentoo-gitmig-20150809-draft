@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.2_rc3.ebuild,v 1.2 2004/10/21 03:25:57 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.2_rc3.ebuild,v 1.3 2004/10/21 03:34:51 st_lim Exp $
 
 inherit webapp eutils
 
@@ -97,6 +97,8 @@ src_compile() {
 
 	econf ${myconf} \
 		--with-delivery-agent="${agent}" || die
+	cd ${S}/cgi
+	make
 }
 
 src_install () {
