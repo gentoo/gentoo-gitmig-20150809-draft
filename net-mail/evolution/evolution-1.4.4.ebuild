@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.4.ebuild,v 1.9 2003/09/09 07:05:20 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.4.ebuild,v 1.10 2003/09/24 15:32:58 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.ximian.com"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~hppa ~alpha"
 
 # Top stanza are ximian deps
 RDEPEND=">=gnome-extra/libgtkhtml-3.0.8
@@ -168,6 +168,14 @@ src_compile() {
 
 	# Needs to be able to connect to X display to build.
 	Xemake || Xmake || die "make failed"
+}
+
+pkg_postinst() {
+	einfo "To change the default browser if you are not using GNOME, do:"
+	einfo "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'mozilla %s'"
+	einfo "gconftool-2 --set /desktop/gnome/url-handlers/https/command -t string 'mozilla %s'"
+	einfo ""
+	einfo "Replace 'mozilla %s' with which ever browser you use."
 }
 
 USE_DESTDIR="1"
