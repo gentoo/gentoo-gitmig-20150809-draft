@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lsof
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.28 2004/11/06 04:18:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.29 2004/11/07 09:11:11 kumba Exp $
+
+  07 Nov 2004; Joshua Kinard <kumba@gentoo.org> lsof-4.71.ebuild:
+  Marked stable on mips.
 
   05 Nov 2004; Jason Wever <weeve@gentoo.org> lsof-4.71.ebuild:
   Stable on sparc wrt bug #70199.

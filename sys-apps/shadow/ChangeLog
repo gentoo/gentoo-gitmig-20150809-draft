@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.84 2004/11/03 23:48:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.85 2004/11/07 09:13:01 kumba Exp $
+
+  07 Nov 2004; Joshua Kinard <kumba@gentoo.org> shadow-4.0.5-r2.ebuild:
+  Marked stable on mips.
 
 *shadow-4.0.5-r2 (03 Nov 2004)
 
