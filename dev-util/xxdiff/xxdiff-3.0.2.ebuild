@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.6 2004/06/04 16:18:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.7 2004/06/05 10:58:13 dholm Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ia64 alpha"
+KEYWORDS="~x86 ~ia64 alpha ~ppc"
 IUSE="kde"
 
 src_unpack()

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xxdiff
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.17 2004/06/04 16:18:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.18 2004/06/05 10:58:13 dholm Exp $
+
+  05 Jun 2004; David Holm <dholm@gentoo.org> xxdiff-3.0.2.ebuild:
+  Added to ~ppc.
 
   04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xxdiff-3.0.2.ebuild:
   Stable on alpha.
