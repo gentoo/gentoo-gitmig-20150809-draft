@@ -63,7 +63,7 @@
 *>=sys-apps/baselayout-1.8.6
 *>=sys-apps/portage-2.0.45-r2
 *>=sys-devel/binutils-2.14.90.0.5
-*>=sys-devel/gcc-3.3.1
+*<sys-devel/gcc-3.4.1
 *>=sys-libs/glibc-2.3.2-r1
 >=sys-kernel/linux-headers-2.4.23
 >=sys-apps/sysklogd-1.4.1
