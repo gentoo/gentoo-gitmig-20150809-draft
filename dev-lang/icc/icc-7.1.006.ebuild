@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.1.006.ebuild,v 1.5 2003/09/18 20:10:41 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.1.006.ebuild,v 1.6 2003/09/19 00:25:55 avenj Exp $
 
 inherit rpm
 
@@ -29,14 +29,14 @@ src_unpack() {
 	cd ${S}
 
 	# Keep disk space to a minimum
-        if [ "$ARCH" = "x86" ]
-        then
-               rm -f intel-*.ia64.rpm
-        else
-               rm -f intel-*.i386.rpm
-        fi
+	if [ "$ARCH" = "x86" ]
+	then
+		rm -f intel-*.ia64.rpm
+	else
+		rm -f intel-*.i386.rpm
+	fi
 
-        rpm_unpack *.rpm
+	rpm_unpack *.rpm
 
 }
 src_compile() {
@@ -62,9 +62,9 @@ src_compile() {
 		chmod 644 $SUPPORTFILE
 	done
 
-       # these should not be executable
-       find "${SD}/compiler70/"{docs,man,training,ia32/include} -type f -exec chmod -x "{}" ";"
-       find "${SD}/compiler70/ia32/lib" -name \*.a -exec chmod -x "{}" ";"
+	# these should not be executable
+	find "${SD}/compiler70/"{docs,man,training,ia32/include} -type f -exec chmod -x "{}" ";"
+	find "${SD}/compiler70/ia32/lib" -name \*.a -exec chmod -x "{}" ";"
 
 }
 
@@ -74,19 +74,19 @@ src_install () {
 	cp -a opt ${D}
 
 	insinto /etc/env.d
-       if [ "$ARCH" = "x86" ]
-       then
-               newins ${FILESDIR}/${PVR}/05icc-ifc-ia32 05icc-ifc || die
-               # fix the processor name issue with the primary icc executable
-               exeinto /opt/intel/compiler70/ia32/bin
-               newexe ${FILESDIR}/${PVR}/icc-ia32 icc
-               newexe ${FILESDIR}/${PVR}/icpc-ia32 icc
-       else
-               newins ${FILESDIR}/${PVR}/05icc-ifc-ia64 05icc-ifc || die
-               dodir /usr/bin
-               dosym ../../opt/intel/compiler70/ia64/bin/eccbin /usr/bin/ecc
-               dosym ../../opt/intel/compiler70/ia64/bin/ecpcbin /usr/bin/ecpc
-       fi
+	if [ "$ARCH" = "x86" ]
+	then
+		newins ${FILESDIR}/${PVR}/05icc-ifc-ia32 05icc-ifc || die
+		# fix the processor name issue with the primary icc executable
+		exeinto /opt/intel/compiler70/ia32/bin
+		newexe ${FILESDIR}/${PVR}/icc-ia32 icc
+		newexe ${FILESDIR}/${PVR}/icpc-ia32 icc
+	else
+		newins ${FILESDIR}/${PVR}/05icc-ifc-ia64 05icc-ifc || die
+		dodir /usr/bin
+		dosym ../../opt/intel/compiler70/ia64/bin/eccbin /usr/bin/ecc
+		dosym ../../opt/intel/compiler70/ia64/bin/ecpcbin /usr/bin/ecpc
+	fi
 
 
 }
