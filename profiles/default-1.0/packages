@@ -32,6 +32,7 @@
 # wacky version.
 
 #does not build with gcc-2.x
+sys-apps/ntfsprogs
 <media-gfx/graphviz-1.9
 <app-arch/rar-3.2.0
 =dev-libs/elfutils
