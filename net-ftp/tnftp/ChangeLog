@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/tnftp
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.7 2004/07/01 22:16:59 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.8 2005/01/08 20:16:39 g2boojum Exp $
+
+*tnftp-20050103 (08 Jan 2005)
+
+  08 Jan 2005; Grant Goodyear <g2boojum@gentoo.org> -tnftp-20030825.ebuild,
+  +tnftp-20050103.ebuild:
+  Version bump to fix 74704.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   tnftp-20030825.ebuild:
