@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <liquidx@gentoo.org> (10 Mar 2003)
+# not really stable enough for my tastes. needs testing.
+dev-db/mergeant
+
 # <liquidx@gentoo.org> (09 Mar 2003)
 # depends on moz gtk2 which isn't well tested yet
 >=net-www/galeon-1.3.2
