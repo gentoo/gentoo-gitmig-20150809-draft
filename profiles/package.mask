@@ -21,7 +21,7 @@ app-admin/webconfig
 #(12/22/01 - drobbins)
 
 #untested/not approved stuff, please do not use
->=sys-apps/portage-1.8.5
+#>=sys-apps/portage-1.8.5
 >=sys-apps/portage-1.9
 
 #still need some testing, especially the XFS.
@@ -145,7 +145,6 @@ net-mail/sendmail
 >=app-text/aspell-0.33
 >=sys-libs/readline-4.2
 >=sys-devel/automake-1.5
->=media-libs/mesa-glu-3.5
 >=app-text/ghostscript-7
 >=sys-devel/autoconf-2.50
 
