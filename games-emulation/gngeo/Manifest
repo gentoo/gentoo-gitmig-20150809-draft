@@ -1,3 +1,6 @@
-MD5 edab98a35630bb340da798cf9ca30201 ChangeLog 387
+MD5 18c442c7d09962094d86aa7ab5761615 ChangeLog 509
 MD5 182dcad1a877b702ef79f242f3fd01fd gngeo-0.5.9a.ebuild 727
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 8ff1673c8739f02f9c1532f6d2271cbb gngeo-0.6.1.ebuild 1083
 MD5 891c5cfcc44ce184f67c53904f2ddf88 files/digest-gngeo-0.5.9a 64
+MD5 668179e7c39e1fd2e3c7bfbe624c70b1 files/digest-gngeo-0.6.1 63
