@@ -1,4 +1,5 @@
-MD5 1b5450183910669864b7d0e604a40027 ChangeLog 1078
-MD5 d41777e0fff36fab30f2a8492b33d2b9 dog-1.7.ebuild 697
+MD5 bc86344e5a69cddf5f2b2e42cbf5e3d3 ChangeLog 1215
+MD5 8a5838fdfc978d8897bc8fd905a6d243 dog-1.7.ebuild 694
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d3467d0ce8367b6b549f383382437b24 files/digest-dog-1.7 58
+MD5 39566b62f641a9ca7555f7bbea2878d9 files/1.7-manpage-touchup.patch 498

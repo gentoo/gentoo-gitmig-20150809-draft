@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dog
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.9 2004/09/03 21:03:23 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.10 2005/02/11 05:36:39 vapier Exp $
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/1.7-manpage-touchup.patch, dog-1.7.ebuild:
+  Touchup -w example usage #69660.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> dog-1.7.ebuild:
   Masked dog-1.7.ebuild stable for ppc

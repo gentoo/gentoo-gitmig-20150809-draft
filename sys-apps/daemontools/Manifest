@@ -1,6 +1,6 @@
 MD5 c4506ce017167279e1994665138ca3af ChangeLog 3737
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b45507e887da6b78eb01f6c9e0e391af daemontools-0.76-r4.ebuild 1314
+MD5 9f167cfb5a757bac3805dddbf3f1f15e daemontools-0.76-r4.ebuild 1574
 MD5 c75438b1c3b9d9f67691bd10cf3c8e52 files/0.76-errno.patch 246
 MD5 6ce7442b288dd69b4e456d00690a8344 files/0.76-head-1.patch 791
 MD5 7a9635c4207b2bfd8afc7468b0fa0d28 files/svscan 859

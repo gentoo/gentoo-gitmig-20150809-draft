@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/dog-1.7.ebuild,v 1.14 2004/10/28 15:55:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/dog-1.7.ebuild,v 1.15 2005/02/11 05:36:39 vapier Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Dog is better than cat"
 HOMEPAGE="http://jl.photodex.com/dog/"
@@ -13,19 +13,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 ppc-macos sparc x86"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4"
-
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+	epatch ${FILESDIR}/${PV}-manpage-touchup.patch
 	sed -i \
 		-e 's/^CFLAGS/#CFLAGS/' \
 		-e "s/gcc/$(tc-getCC)/" \
 		Makefile
-}
-
-src_compile() {
-	emake || die
 }
 
 src_install() {
