@@ -1,4 +1,4 @@
-MD5 df063805cef5aa86f329045ea477d77e ChangeLog 1581
-MD5 8144d698d78d6c6a7324db29bcac3a79 wv-1.0.0.ebuild 855
-MD5 97079efa2a5256ad07ada6260b7ec298 files/digest-wv-1.0.0 60
+MD5 78aea7d250bad5739ed148f5699963c4 wv-1.0.0.ebuild 863
+MD5 939bf599be95f5f87c7aba752f74888b ChangeLog 1663
 MD5 fe85d1375bb12fb4245f9be59895f923 files/wv-0.7.1-rvt.patch 4470
+MD5 97079efa2a5256ad07ada6260b7ec298 files/digest-wv-1.0.0 60
