@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/align
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.7 2003/12/05 02:30:54 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.8 2004/02/06 08:50:12 ciaranm Exp $
+
+  06 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> align-23.ebuild:
+  Added ~mips to KEYWORDS
 
   05 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> align-23.ebuild:
   Added ~ppc to keywords
