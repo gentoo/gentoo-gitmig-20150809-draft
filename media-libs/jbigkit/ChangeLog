@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.10 2003/10/22 13:57:43 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.11 2003/11/29 19:43:50 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> jbigkit-1.4.ebuild:
+  needs -fPIC for koffice on amd64
 
   22 Oct 2003; Christian Birchinger <joker@gentoo.org> jbigkit-1.4.ebuild:
   Added sparc stable keyword

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.4.ebuild,v 1.14 2003/10/22 13:57:43 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.4.ebuild,v 1.15 2003/11/29 19:43:50 brad_mssw Exp $
 
 DESCRIPTION="JBIG-KIT implements a highly effective data compression algorithm for bi-level high-resolution images such as fax pages or scanned documents"
 HOMEPAGE="http://www.cl.cam.ac.uk/~mgk25/jbigkit/"
@@ -20,7 +20,7 @@ src_unpack() {
 	cd ${S}
 
 	[ "${ARCH}" = "hppa" ] && CFLAGS="${CFLAGS} -fPIC"
-
+	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 	sed -i \
 		-e "s:-O2 -W:${CFLAGS}:" Makefile || \
 			die "sed Makefile failed"
