@@ -58,7 +58,7 @@
 
 # sparc64 specfic pkgs
 *sys-apps/sparc-utils
-*sys-apps/silo
+*virtual/bootloader
 *dev-util/dialog
 *sys-devel/egcs64-sparc
 

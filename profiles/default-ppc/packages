@@ -57,7 +57,7 @@ sys-apps/sysklogd
 *app-editors/nano
 #*app-editors/vim # Vim emerges xfree ... this sucks
 *sys-apps/hfsutils
-*sys-apps/yaboot
+*virtual/bootloader
 *sys-apps/mac-fdisk
 
 

@@ -36,13 +36,12 @@
 *sys-apps/gluelog
 *sys-apps/grep
 *sys-apps/groff
-*sys-apps/grub
 *sys-apps/gzip
 *sys-apps/hdparm
 *sys-apps/ipchains
 *sys-apps/iptables
 *sys-apps/less
-*sys-apps/lilo
+*virtual/bootloader
 
 *sys-apps/man
 *sys-apps/man-pages

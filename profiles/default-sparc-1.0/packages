@@ -107,5 +107,5 @@
 *net-misc/openssh
 *sys-apps/devfsd
 *sys-apps/sparc-utils
-*sys-apps/silo
+*virtual/bootloader
 

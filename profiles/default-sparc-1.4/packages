@@ -38,7 +38,7 @@
 
 # sparc specfic pkgs
 *sys-apps/sparc-utils
-*sys-apps/silo
+*virtual/bootloader
 *dev-util/dialog
 
 # default-sparc-1.4 pkgs 
