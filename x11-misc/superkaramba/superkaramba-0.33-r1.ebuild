@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.33-r1.ebuild,v 1.2 2004/04/08 23:06:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.33-r1.ebuild,v 1.3 2004/04/15 16:26:00 kugelfang Exp $
 
 IUSE="doc"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://netdragon.sourceforge.net/"
 SRC_URI="mirror://sourceforge/netdragon/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 RESTRICT="nomirror"
 
 newdepend ">=kde-base/kdelibs-3.1
