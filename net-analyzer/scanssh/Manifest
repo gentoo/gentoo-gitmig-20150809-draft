@@ -1,4 +1,6 @@
-MD5 5db87012867d7d2c5014a17b779c7d0e ChangeLog 598
+MD5 3f413c71b6ed3d2a086d5122bc643feb scanssh-2.0.ebuild 675
+MD5 0ab33fd3042e7bd31d4322202c83e405 ChangeLog 765
 MD5 5ef1334dd837ff015a4d3765d65d2f15 metadata.xml 319
 MD5 334600d53feeecae152bc04b282e5835 scanssh-1.6b.ebuild 613
+MD5 2541416a54e7fe091fb12c0e95754166 files/digest-scanssh-2.0 62
 MD5 41c4a3014bd820529d63f6b16a7b83d6 files/digest-scanssh-1.6b 63
