@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.3 2004/02/27 09:55:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.4 2004/03/23 09:15:10 kumba Exp $
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -8,15 +8,17 @@ SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~hppa ~alpha ~amd64 ~sparc ~mips"
+KEYWORDS="~x86 ~ppc ~hppa ~alpha ~amd64 ~sparc mips"
 IUSE="qt gnome"
 inherit eutils gnuconfig
 
 DEPEND="virtual/glibc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
-	gnome? ( gnome-base/gnome-libs )
-	qt? ( >=x11-libs/qt-3.0* )"
+	!mips? (
+		gnome? ( gnome-base/gnome-libs )
+		qt? ( >=x11-libs/qt-3.0* )
+	)"
 
 # the configure.in patch is required for 'use qt'
 src_unpack() {
@@ -32,7 +34,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if [ "`use qt`" ]
+	if [ "`use qt`" ] && [ -z "`use mips`" ]
 	then
 		myconf="--enable-gui=yes"
 	else
