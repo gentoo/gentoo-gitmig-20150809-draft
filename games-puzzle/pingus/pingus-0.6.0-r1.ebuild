@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.1 2003/09/10 06:36:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.2 2003/10/28 14:15:10 vapier Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://pingus.seul.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=media-libs/hermes-1.3.2-r2
 	=dev-games/clanlib-0.6.5*
