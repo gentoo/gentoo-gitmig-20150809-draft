@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.24 2004/10/01 22:50:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.25 2004/10/05 04:51:01 weeve Exp $
+
+  04 Oct 2004; Jason Wever <weeve@gentoo.org> expect-5.40.0-r2.ebuild:
+  Added ~sparc keyword.
 
   02 Oct 2004; Markus Nigbur <pyrania@gentoo.org> expect-5.40.0-r2.ebuild:
   Removed doc useflag.
