@@ -1,8 +1,12 @@
 # ChangeLog for media-video/xmps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/ChangeLog,v 1.5 2003/03/05 01:34:21 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/ChangeLog,v 1.6 2003/04/19 16:32:37 lostlogic Exp $
 
 *xmps-0.2.0-r3 (04 Mar 2003)
+
+  19 Apr 2003; Brandon Low <lostlogic@gentoo.org> Manifest,
+  xmps-0.2.0-r2.ebuild, xmps-0.2.0-r3.ebuild:
+  Switch to sed -i -e, and mark -r2 and -r3 stable
 
   04 Mar 2003; Jay Pfeifer <pfeifer@gentoo.org> xmps-0.2.0-r3.ebuild :
 
