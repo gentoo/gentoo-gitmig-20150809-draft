@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/pyosd-0.2.12.ebuild,v 1.1 2005/01/27 15:35:32 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/pyosd-0.2.12.ebuild,v 1.2 2005/02/27 10:04:32 lucass Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://repose.cx/pyosd/${P}.tar.gz"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/python
 	>=x11-libs/xosd-2.2.4"

@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fb18d8f2375a1d5d57b2512b11cce238 ChangeLog 1130
+MD5 b1b3995fc5f1bed4737ad9ae61b81a97 ChangeLog 1253
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 7feb8d97e6f706146a64d550785ecea4 pyosd-0.2.11.ebuild 681
-MD5 1e50f5e389c2f416a80c9758f5c61b73 pyosd-0.2.12.ebuild 681
+MD5 dd7f2ff6ed499eca4b965cd9e1b0e0fe pyosd-0.2.11.ebuild 680
+MD5 a744e93fa9483e617e8e7545c29d3f68 pyosd-0.2.12.ebuild 680
 MD5 9dc42337a0ec0ae211193e44b87ea5f5 pyosd-0.2.7.ebuild 445
 MD5 086aa4fdd6ae100acbd6a7534da6b5ed pyosd-0.2.9.ebuild 563
 MD5 5faed8cbf3d2487a3c25d518b238f034 files/digest-pyosd-0.2.11 63
@@ -14,7 +14,7 @@ MD5 3b3dbbf7fa4c12a0db45ec1e68bd98af files/digest-pyosd-0.2.9 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB+Qqm2jLqHNfbg2URAiR/AKCCbMTwH/b5UFEMlt40bCVh8xG9AQCffiK2
-lS6qHcW2FYhpiczlca/07Lo=
-=kFR+
+iD8DBQFCIZwF2jLqHNfbg2URAjYvAKC7wp1R+NkOsh4Sxlo0gGfm/YUZygCfdKJm
+grmuJrK+G2xfhdcWGwr7MR8=
+=PltE
 -----END PGP SIGNATURE-----
