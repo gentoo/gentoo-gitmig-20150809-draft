@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7.15.ebuild,v 1.4 2004/02/12 05:10:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7.15.ebuild,v 1.5 2004/02/16 15:28:11 mholzer Exp $
 
 inherit libtool flag-o-matic
 
@@ -16,6 +16,7 @@ S=${WORKDIR}/${MY_P2}
 DESCRIPTION="A collection of tools and libraries for many image formats"
 HOMEPAGE="http://www.imagemagick.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="as-is"
 SLOT="0"
