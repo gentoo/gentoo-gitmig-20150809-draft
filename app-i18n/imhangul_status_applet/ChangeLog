@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul_status_applet/ChangeLog,v 1.1 2003/01/24 11:35:45 jayskwak Exp $
+
+*imhangul_status_applet-0.2 (24 Jan 2003)
+
+  24 Jan 2003; Jay Kwak <jayskwak@gentoo.org> imhangul_status_applet-0.2.ebuild
+  First ebuild for imhangul_status_applet
