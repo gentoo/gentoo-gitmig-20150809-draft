@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/datapipe
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/datapipe/ChangeLog,v 1.1 2003/11/17 21:23:44 vapier Exp $
+
+*datapipe-1.0 (17 Nov 2003)
+
+  17 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Jonathan Hitchcock <vhata-gentoo@rucus.ru.ac.za> #23523.
