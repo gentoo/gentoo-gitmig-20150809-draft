@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.9.3.ebuild,v 1.1 2001/09/15 11:43:33 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.9.3.ebuild,v 1.2 2001/09/30 10:50:06 azarah Exp $
 
 S=${WORKDIR}/${P}/abi
 DESCRIPTION="Text processor"
@@ -51,6 +51,15 @@ src_install() {
   rm -f AbiWord
   ln -s  ../AbiSuite/bin/AbiWord AbiWord
   ln -s  ../AbiSuite/bin/AbiWord abiword
+
+  # Install icon and .desktop for menu entry
+  if [ "`use gnome`" ] ; then
+  	insinto ${GNOME_PATH}/share/pixmaps
+  	newins ${WORKDIR}/${P}/abidistfiles/icons/abiword_48.png AbiWord.png
+	insinto ${GNOME_PATH}/share/gnome/apps/Applications
+	doins ${FILESDIR}/AbiWord.desktop
+  fi
+	
 }
 
 
