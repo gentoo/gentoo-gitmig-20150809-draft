@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r3.ebuild,v 1.2 2003/10/27 10:00:38 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r3.ebuild,v 1.3 2004/04/01 10:52:36 phosphan Exp $
+
+inherit eutils
 
 MY_P="SNNSv${PV}"
 DESCRIPTION="Stuttgart Neural Network Simulator"
@@ -24,7 +26,7 @@ src_unpack() {
 	unpack ${MY_P}.tar.gz
 
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-gentoo.patch || die "patch failed"
+	epatch ${FILESDIR}/${P}-gentoo.patch
 	sed -i -e 's/Xaw/Xaw3d/g' xgui/sources/Makefile
 	sed -i -e 's/\(^#define MAX_NAME_LENGTH\).*/\1 4096/' xgui/sources/ui.h
 	sed -i -e 's/\(^#define MAX_DIR_ENTRIES\).*/\1 4096/' xgui/sources/ui_file.ph
