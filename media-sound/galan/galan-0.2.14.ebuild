@@ -1,20 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.2.14.ebuild,v 1.10 2004/06/25 00:00:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.2.14.ebuild,v 1.11 2004/11/12 08:28:54 eradicator Exp $
+
+IUSE="oggvorbis alsa opengl esd"
 
 inherit eutils
 
 DESCRIPTION="gAlan - Graphical Audio Language"
 HOMEPAGE="http://galan.sourceforge.net/"
 SRC_URI="mirror://sourceforge/galan/${P}.tar.gz"
-RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-
-KEYWORDS="x86 ~sparc"
-
-IUSE="oggvorbis alsa opengl esd"
+KEYWORDS="sparc x86"
 
 DEPEND=">=x11-libs/gtk+-1.2*
 	media-libs/gdk-pixbuf
