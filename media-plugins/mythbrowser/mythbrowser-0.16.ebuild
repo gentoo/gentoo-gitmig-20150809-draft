@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.16.ebuild,v 1.1 2004/09/10 17:39:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.16.ebuild,v 1.2 2004/09/10 18:04:31 aliz Exp $
 
 inherit myth
 
 DESCRIPTION="Web browser module for MythTV."
 HOMEPAGE="http://www.mythtv.org/"
 SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
-IUSE="debug"
+IUSE="debug nls"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
