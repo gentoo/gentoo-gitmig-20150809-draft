@@ -1,24 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.1.ebuild,v 1.2 2004/03/24 23:54:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7_alpha1.ebuild,v 1.1 2004/05/17 23:01:33 caleb Exp $
+
+MY_P=${P/_alpha1/-test1}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="GUI-independent C++ libraries for database applications, including API documentation and tutorials."
 HOMEPAGE="http://hk-classes.sourceforge.net/"
-SRC_URI="mirror://sourceforge/hk-classes/${P}.tar.bz2
+
+SRC_URI="mirror://sourceforge/hk-classes/${MY_P}.tar.bz2
 		 mirror://sourceforge/knoda/knodapython.tar.bz2
 		 mirror://sourceforge/knoda/hk_docs-0.6.tar.gz"
 RESTRICT="nomirror"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="mysql postgres odbc"
+KEYWORDS="~x86 ~ppc"
+IUSE="mysql postgres odbc doc"
 
 # At least one of the following is required
 DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
 	postgres? ( >=dev-db/postgresql-7.3 )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	./configure || die "./configure failed"
@@ -34,16 +36,20 @@ src_install() {
 pkg_postinst() {
 	echo
 	einfo "hk_classes has been installed in /usr/lib/hk_classes"
-	if [ `use mysql` ]; then
+	if use mysql
+	then
 		einfo "MySQL driver is installed in /usr/lib/hk_classes/drivers"
 	fi
-	if [ `use postgres` ]; then
+	if use postgres
+	then
 		einfo "PostgreSQL driver is installed in /usr/lib/hk_classes/drivers"
 	fi
-	if [ `use odbc` ]; then
+	if use odbc
+	then
 		einfo "ODBC driver is installed in /usr/lib/hk_classes/drivers"
 	fi
-	if [ `use doc` ]; then
+	if use doc
+	then
 		echo
 		einfo "API documentation and tutorial are installed in"
 		einfo " /usr/share/doc/${P}/html/hk_docs-0.6"
