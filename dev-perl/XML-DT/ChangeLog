@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.9 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.10 2003/06/16 16:00:20 mcummings Exp $
+
+*XML-DT-0.24 (16 Jun 2003)
+
+  16 Jun 2003; Michael Cummings <mcummings@gentoo.org> XML-DT-0.24.ebuild:
+  This is a CPAN update of XML::DT to keep the users happy. However, there is a
+  bug in the Makefile.PL it ships with, am contacting the author. Until it is
+  fixed, it is -arch'd.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
