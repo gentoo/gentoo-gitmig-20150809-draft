@@ -1,2 +1,4 @@
-MD5 401d7935f7b5ca5e33d1fa3f8e3655bc evkeyd-0.1_pre2.ebuild 549
+MD5 a6e7d36adf11c4449958acfd0677f6f1 evkeyd-0.1_pre2.ebuild 683
+MD5 78aa7ac67a022e6fcb65b34bf8c3fa11 ChangeLog 358
 MD5 64ad3c5dd053ec5ce8e96dab1748e145 files/digest-evkeyd-0.1_pre2 65
+MD5 be73e36cfd8958ad8fd931f9e9dedd80 files/evkeyd.rc 507
