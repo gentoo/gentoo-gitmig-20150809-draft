@@ -1,4 +1,6 @@
-MD5 d8d30dbfd6c3a75508c100e2ebe5d2c6 ChangeLog 405
+MD5 7d6e517df5f2c10f048b466c7dccb51b fprobe-1.0.5.ebuild 830
+MD5 f379b714e1040f33edf4ffc20ccb464e ChangeLog 520
 MD5 b11a70e1b7569dd6b3fa230a0e889d04 metadata.xml 227
 MD5 b557da401446521bb304c55419397863 fprobe-1.0.4.ebuild 830
 MD5 b0ff0b030ad07fae5ed5c1e563e941e5 files/digest-fprobe-1.0.4 64
+MD5 af8c093adaaf55fc7c4611d8fd356225 files/digest-fprobe-1.0.5 64
