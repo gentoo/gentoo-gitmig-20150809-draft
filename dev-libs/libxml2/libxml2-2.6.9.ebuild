@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.2.ebuild,v 1.4 2004/02/17 10:45:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.9.ebuild,v 1.1 2004/04/25 15:13:52 foser Exp $
 
-inherit eutils libtool gnome.org flag-o-matic
+inherit libtool gnome.org flag-o-matic
 
 DESCRIPTION="Version 2 of the library to manipulate XML files"
 HOMEPAGE="http://www.xmlsoft.org/"
-LICENSE="MIT"
 
-IUSE="python readline ipv6"
+LICENSE="MIT"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~amd64 ~ia64 ~ppc64 ~mips"
+IUSE="python readline ipv6"
 
 DEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
@@ -40,15 +40,18 @@ src_compile() {
 
 src_install() {
 
-	make \
-		DESTDIR=${D} \
-		DOCS_DIR=/usr/share/doc/${PF}/python \
-		EXAMPLE_DIR=/usr/share/doc/${PF}/python/example \
-		BASE_DIR=/usr/share/doc \
-		DOC_MODULE=${PF} \
-		EXAMPLES_DIR=/usr/share/doc/${PF}/example \
-		TARGET_DIR=/usr/share/doc/${PF}/html \
-		install || die
+#	make \
+#		DESTDIR=${D} \
+#		DOCS_DIR=/usr/share/doc/${PF}/python \
+#		EXAMPLE_DIR=/usr/share/doc/${PF}/python/example \
+#		BASE_DIR=/usr/share/doc \
+#		DOC_MODULE=${PF} \
+#		EXAMPLES_DIR=/usr/share/doc/${PF}/example \
+#		TARGET_DIR=/usr/share/doc/${PF}/html \
+#
+#		install || die
+
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS Copyright ChangeLog INSTALL NEWS README TODO
 
@@ -68,4 +71,3 @@ pkg_postinst() {
 	fi
 
 }
-
