@@ -1,6 +1,6 @@
-# Copyright 2002, Gentoo Technologies Inc.
-# Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-xmms/alsa-xmms-0.9-r1.ebuild,v 1.4 2002/07/19 12:27:49 seemant Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-xmms/alsa-xmms-0.9-r1.ebuild,v 1.5 2002/10/04 21:08:32 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Allows XMMS to output on any ALSA 0.9* device. It also supports surround 4.0 output with conversion"

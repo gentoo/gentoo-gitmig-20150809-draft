@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.10.ebuild,v 1.2 2002/07/25 05:45:28 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.10.ebuild,v 1.3 2002/10/04 21:08:33 vapier Exp $
 
 S="${WORKDIR}/${PN}-$(echo ${PV} | sed 's/\.\([0-9]*\)$/-pl\1/')"
 DESCRIPTION="Lossy speech compression library and tool."
