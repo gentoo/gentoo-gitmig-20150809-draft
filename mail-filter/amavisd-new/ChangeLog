@@ -1,13 +1,16 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.14 2004/12/22 20:04:34 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.15 2004/12/29 00:22:14 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   22 Dec 2004; Tuan Van <langthang@gentoo.org> amavisd-new-20040701.ebuild:
   add app-arch/cabextract to RDEPEND. Bug #65248.
   apply courier patch. Bug #52291.
   stable on x86 in preparing to abandon date versioning scheme.
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   amavisd-new-20040701.ebuild:
   Keyword ~alpha, bug 66068.
 
