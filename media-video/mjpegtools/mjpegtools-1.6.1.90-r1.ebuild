@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r1.ebuild,v 1.4 2003/11/29 22:31:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r1.ebuild,v 1.5 2003/12/29 02:44:31 weeve Exp $
 
 inherit flag-o-matic
 
@@ -10,16 +10,16 @@ SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 -ppc ~sparc"
 IUSE="gtk avi dv quicktime sdl X 3dnow mmx sse"
 
 DEPEND="media-libs/jpeg
 	>=sys-apps/sed-4
 	=dev-libs/glib-1.2*
-	x86? ( media-libs/libmovtar )
-	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 dev-lang/nasm )
-	3dnow? ( dev-lang/nasm )
-	sse? ( dev-lang/nasm )
+	x86? ( media-libs/libmovtar
+	       sse? ( dev-lang/nasm )
+	       mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 dev-lang/nasm )
+	       3dnow? ( dev-lang/nasm ) )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	avi? ( >=media-video/avifile-0.7.38 )
 	dv? ( >=media-libs/libdv-0.99 )
@@ -35,7 +35,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	append-flags -mno-sse2
+	[ `use x86` ] && append-flags -mno-sse2
 
 	myconf="${myconf} `use_with X x`"
 	myconf="${myconf} `use_with quicktime`"
