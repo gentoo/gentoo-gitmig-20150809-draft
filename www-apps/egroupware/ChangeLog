@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/egroupware
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.5 2004/08/25 21:26:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.6 2004/08/30 19:15:01 rl03 Exp $
+
+  30 Aug 2004; Renat Lumpau <rl03@gentoo.org> egroupware-1.0.00.003.ebuild,
+  egroupware-1.0.00.004.ebuild:
+  Fixed DEPEND/RDEPEND. Removed empty src_compile
 
   25 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
   egroupware-1.0.00.004.ebuild:

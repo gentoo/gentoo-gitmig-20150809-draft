@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.00.003.ebuild,v 1.2 2004/08/25 07:43:26 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.00.003.ebuild,v 1.3 2004/08/30 19:15:01 rl03 Exp $
 
 inherit webapp
 
@@ -15,7 +15,6 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~hppa"
 IUSE="ldap"
 
-DEPEND="$DEPEND"
 RDEPEND="virtual/php
 	|| ( >=dev-db/mysql-3.23 >=dev-db/postgresql-7.2 )
 	ldap? ( net-nds/openldap )
@@ -26,10 +25,6 @@ pkg_setup () {
 	einfo "Please make sure that your PHP is compiled with LDAP (if using openldap), IMAP, and MySQL|PostgreSQL support"
 	einfo
 	einfo "Consider installing an MTA if you want to take advantage of eGW's mail capabilities."
-}
-
-src_compile() {
-	:;
 }
 
 src_install() {
