@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ebuilder/ebuilder-0.4-r1.ebuild,v 1.7 2004/08/26 04:10:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ebuilder/ebuilder-0.4-r1.ebuild,v 1.8 2004/09/28 03:30:46 vapier Exp $
 
 DESCRIPTION="Package Builder for Gentoo Linux"
-HOMEPAGE="http://web.inter.nl.net/users/eavdmeer/"
-SRC_URI="http://dev.gentoo.org/~genone/distfiles/${P}.tar.gz"
+HOMEPAGE="http://www.disinformation.ca/gentoo/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
