@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.9.ebuild,v 1.4 2004/12/03 23:11:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.9.ebuild,v 1.5 2004/12/03 23:13:57 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -27,6 +27,7 @@ src_unpack() {
 		-e "s|aclocal: (automake)|aclocal v${SLOT}: (automake${SLOT})|" \
 		automake.texi || die "sed failed"
 	gnuconfig_update
+	export WANT_AUTOCONF=2.5
 }
 
 src_install() {

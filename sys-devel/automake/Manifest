@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 3c5aa3d50912107c076c7ee9aa7fb20c ChangeLog 10131
-MD5 23250a5906245723f553c8f7485fa4c3 automake-1.4_p6.ebuild 1597
-MD5 cd3517cb78ddfdf83856f1c6cc063432 automake-1.5.ebuild 1580
-MD5 0969a6e9c6e5ecc4f0731edefac24dfd automake-1.6.3.ebuild 1433
-MD5 4d94d464d2663c0c9f4c6f6ed2ebdb91 automake-1.7.9.ebuild 1467
+MD5 bc40bf3118d7430d738ab036f8e8da69 automake-1.4_p6.ebuild 1623
+MD5 cb5ebd885171d585c8da97105d56d030 automake-1.5.ebuild 1606
+MD5 6343436168700b4723566534827e4ec0 automake-1.6.3.ebuild 1459
+MD5 b8e4486f5c7c325d065511f15f75da18 automake-1.7.9.ebuild 1493
 MD5 36bcaf1535d45725055d402f3364aa52 automake-1.8.5-r2.ebuild 1534
 MD5 ea221c83bef695c9b1ea225a9d0f0f9b automake-1.9.3.ebuild 1407
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
@@ -27,7 +27,7 @@ MD5 d576cbc9cda51d6288db8b8569eb9e2a files/automake-1.8.5-config-guess-uclibc.pa
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBsPLLroRuSHgZdywRAs/8AJ9ZS5Tv+u8fAvtKXJL9kZlfD5wuvQCfZv4B
-gr6vFl3wZ3VQoVYD9dNSM58=
-=4H/t
+iD8DBQFBsPNHroRuSHgZdywRAlucAKCCZjrohGXLpxNHFzOnHs3MXjb69ACfbCaC
+RvpbA40tSRmsy1LZFCcNKzA=
+=u/El
 -----END PGP SIGNATURE-----
