@@ -3,5 +3,5 @@ MD5 58e70f9d6f501cd0f80571aea8ea78e1 mailwrapper-0.1.ebuild 823
 MD5 f8313bd0ff74eab7cba450e8ead02768 ChangeLog 2257
 MD5 400acb577753ba81c395228d89ff8d10 metadata.xml 221
 MD5 e12f843189ba4a3b6f9a1d94877da1f3 files/digest-mailwrapper-0.1 63
-MD5 d76e8c5f2021c29c172a082cd83135e7 files/digest-mailwrapper-0.2 63
+MD5 ee270a41759c71d70839204d40185997 files/digest-mailwrapper-0.2 63
 MD5 e28391672f684ed24c20fc3146aab68f files/mailer.conf 1309
