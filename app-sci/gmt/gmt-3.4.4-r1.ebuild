@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.4-r1.ebuild,v 1.1 2004/03/25 08:44:58 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.4-r1.ebuild,v 1.2 2004/05/17 11:28:31 phosphan Exp $
 
 MAINV="${PV:0:1}"
 
@@ -20,7 +20,7 @@ SRC_URI="ftp://gmt.soest.hawaii.edu/pub/gmt/${MAINV}/GMT${PV}_progs.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="gmtsuppl gmtfull gmthigh gmttria doc"
 
 RDEPEND=">=app-sci/netcdf-3.5.0"
