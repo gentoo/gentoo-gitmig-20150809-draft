@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/gst-plugins-speex
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.1 2005/03/17 15:51:02 zaheerm Exp $
+
+*gst-plugins-speex-0.8.8 (17 Mar 2005)
+
+  17 Mar 2005; <zaheerm@gentoo.org> +gst-plugins-speex-0.8.8.ebuild:
+  Initial commit
+  GStreamer plugin to encode and decode speex (#68779)
+
