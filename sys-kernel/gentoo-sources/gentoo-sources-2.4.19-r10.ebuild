@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.3 2002/10/24 05:48:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.4 2002/11/16 07:38:17 lostlogic Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -34,6 +34,10 @@ KEYWORDS="~x86 -ppc -sparc -sparc64"
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
+
+	cd linux-${KV}
+	patch -p1 < ${FILESDIR}/lcall-DoS.patch || die "lcall-DoS patch failed"
+	cd ..
 
 	cd ${KV}
 	# Kill patches we aren't suppposed to use, don't worry about 

@@ -40,6 +40,10 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
 
+	cd linux-${KV}
+	patch -p1 < ${FILESDIR}/lcall-DoS.patch || die "lcall-DoS patch failed"
+	cd ..
+
 	# Now we need to deal with the tarball of patches.
 	cd ${KV} || die "No patch dir to change to"
 	[ `use crypt` ] || rm 8*
