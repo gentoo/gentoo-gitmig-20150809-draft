@@ -1,6 +1,8 @@
 # ChangeLog for net-dns/ndu
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.1 2003/08/20 08:23:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.2 2004/03/01 12:32:02 aliz Exp $
+
+*ndu-0.4 (20 Aug 2003)
 
   20 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> :
   initial commit
