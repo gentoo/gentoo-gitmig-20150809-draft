@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.2.0.ebuild,v 1.2 2003/02/09 15:10:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.2.0.ebuild,v 1.3 2003/02/10 22:42:45 agriffis Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~alpha"
 
 RDEPEND=">=gnome-base/gconf-1.2.1
 	>=gnome-base/gnome-vfs-2.0.4

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.24 2003/01/31 02:37:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.25 2003/02/10 22:42:45 agriffis Exp $
+
+  10 Feb 2003; Aron Griffis <agriffis@gentoo.org> eog-2.2.0.ebuild :
+  Add ~alpha to KEYWORDS
 
 *eog-2.2.0 (30 Jan 2003)
 
