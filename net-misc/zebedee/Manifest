@@ -1,5 +1,5 @@
-MD5 684acaa13b503a6e26b1340c3330f04a ChangeLog 383
-MD5 47e0e9e675f2c8171bf5092e2cb95e11 zebedee-2.4.1.ebuild 1668
+MD5 68d31a980930d6e57476145781d64cc9 ChangeLog 465
+MD5 da2b83ca1bd8e5ca8e75c790895309ee zebedee-2.4.1.ebuild 1672
 MD5 9d974b4c676caa1018cfc9d290e58a89 files/digest-zebedee-2.4.1 65
 MD5 5f7f122f5852fc0e0d3adb2fdebc053c files/zebedee 699
 MD5 c7b42f375b3b3c32ace1eeaa1958c930 files/zebedee-2.4.1-Makefile.patch 1572

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zebedee
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.1 2003/03/18 05:27:43 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.2 2003/06/17 23:30:54 alron Exp $
+
+  17 Jun 2003; Dean Bailey <alron@gentoo.org> zebedee-2.4.1 :
+  unmasked for x86
 
 *zebedee-2.4.1 (17 Mar 2003)
 
