@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0.ebuild,v 1.12 2005/03/19 13:15:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.1.1.ebuild,v 1.1 2005/03/19 13:15:36 luckyduck Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ DESCRIPTION="A frontend for several cd-rippers and mp3 encoders"
 HOMEPAGE="http://www.home.unix-ag.org/arne/jack/"
 SRC_URI="http://www.home.unix-ag.org/arne/jack/${P}.tar.gz"
 
-KEYWORDS="x86 ppc amd64 sparc ppc64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -27,12 +27,12 @@ RDEPEND="${DEPEND}
 	media-sound/cdparanoia"
 
 src_compile() {
-	python setup-cursesmodule.py build || die "compilation failed"
+	python setup.py build || die "compilation failed"
 }
 
 src_install() {
-	python setup-cursesmodule.py install --root=${D} \
-		|| die "curses module install failed"
+	python setup.py install --root=${D} \
+		|| die "installation failed"
 
 	dobin jack
 
