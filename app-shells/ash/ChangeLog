@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ash
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.4 2004/02/26 05:49:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.5 2004/05/07 19:11:43 iluxa Exp $
+
+  07 May 2004; Ilya A. Volynets-Evenbaks <iluxa@gentoo.org> ash-1.6.ebuild:
+  add ~mips
 
   25 Feb 2004; Jason Wever <weeve@gentoo.org> ash-1.6.ebuild:
   Added ~sparc keyword.
