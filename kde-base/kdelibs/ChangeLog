@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.12 2002/05/26 16:23:53 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.13 2002/06/11 18:43:47 danarmak Exp $
+
+*kdelibs-3.0.1.20020604 (4 Jun 2002)
+
+  4 Jun 2002; Dan Armak <danarmak@gentoo.org> Changelog :
+
+  This is a snapshot of the KDE CVS's KDE_3_0_x branch from June 6th.
+  This branch contains only bugfixes to the 3.0 release (the 3.0.1 release
+  was also of this kind).
 
   26 May 2002; Dan Armak <danarmak@gentoo.org> Changelog :
 
