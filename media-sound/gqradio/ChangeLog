@@ -1,8 +1,11 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.1 2003/03/02 20:14:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.2 2003/03/10 14:14:50 weeve Exp $
 
 *gqradio-0.99.0 (02 Mar 2003)
+
+  10 Mar 2003; Jason Wever <weeve@gentoo.org> gqradio-0.99.0.ebuild:
+  Changed ~x86 keyword to x86.
 
   02 Mar 2003; Jason Wever <weeve@gentoo.org> gqradio-0.99.0.ebuild :
   Initial import.
