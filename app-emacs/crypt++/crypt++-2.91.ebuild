@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/crypt++/crypt++-2.91.ebuild,v 1.3 2004/03/04 05:25:01 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/crypt++/crypt++-2.91.ebuild,v 1.4 2004/05/11 04:00:31 weeve Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://freshmeat.net/projects/crypt++/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~sparc"
 
 DEPEND="virtual/emacs"
 
