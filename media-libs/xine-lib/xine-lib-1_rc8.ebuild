@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8.ebuild,v 1.3 2004/12/21 15:24:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8.ebuild,v 1.4 2004/12/21 19:08:04 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -148,6 +148,7 @@ src_compile() {
 		$(use_enable sdl sdltest) \
 		$(use_enable ipv6) \
 		$(use_enable directfb) \
+		--enable-shared-xv \
 		${myconf} || die "Configure failed"
 
 	emake -j1 || die "Parallel make failed"
