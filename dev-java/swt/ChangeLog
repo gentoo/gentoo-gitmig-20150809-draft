@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/ant
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.1 2004/07/31 23:21:23 karltk Exp $
+
+*swt-3.0 (01 Aug 2004)
+
+  01 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org> swt-3.0.ebuild:
+  Initial import. Ebuild submitted by Ming Zhao <zhaoming@tsinghua.org.cn>.
