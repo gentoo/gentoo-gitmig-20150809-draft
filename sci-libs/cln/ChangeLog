@@ -1,0 +1,41 @@
+# ChangeLog for dev-libs/cln
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.1 2004/12/28 20:05:29 ribosome Exp $
+
+*cln-1.1.6 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +cln-1.1.5.ebuild, +cln-1.1.6.ebuild:
+  Moved from dev-libs/cln to sci-libs/cln.
+
+  02 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> cln-1.1.6.ebuild:
+  Fixing the last fix.
+
+  23 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> cln-1.1.6.ebuild:
+  Fixing bug #70779 (compile failure with a certain gcc version and
+  -finline-functions in CFLAGS)
+
+  04 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> +metadata.xml,
+  cln-1.1.6.ebuild:
+  Adding metadata, declaring latest version stable for x86.
+
+*cln-1.1.6 (17 Mar 2004)
+
+  17 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> cln-1.1.5.ebuild,
+  cln-1.1.6.ebuild:
+  Version bump to version that builds on amd64.
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> cln-1.1.5.ebuild:
+  Don't assign default to S; header fix
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*cln-1.1.5 (31 Aug 2002)
+
+  28 Oct 2002; George Shapovalov <george@gentoo.org> cln-1.1.15.ebuild, ChangeLog :
+
+  cleaned app (KEYWORDS, SLOT..., C[XX]FLAGS filters) and added to portage
+
+  31 Aug 2002; Pierre-Henri Jondot <Pierre-Henri.Jondot@wanadoo.fr> Changelog :
+  ebuild submitted by Pierre-Henri Jondot <Pierre-Henri.Jondot@wanadoo.fr> 
+
