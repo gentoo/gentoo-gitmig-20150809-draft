@@ -1,6 +1,15 @@
 # ChangeLog for net-www/links
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.14 2002/09/11 15:57:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.15 2002/10/01 03:45:00 seemant Exp $
+
+*links-2.1_pre3 (30 Sep 2002)
+
+  30 Sep 2002; Seemant Kulleen <seemant@gentoo.org> links-2.1_pre3.ebuild
+  files/digest-links-2.1_pre3 :
+
+  Version bump + security fix.  If the user wishes to run links2 in svga
+  mode, they must now enable the suid bit themselves.  Closes bug #8556 by
+  vapier@gentoo.org
 
 *links-2.1_pre2 (11 Sep 2002)
 

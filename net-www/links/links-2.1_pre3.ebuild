@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2-r1.ebuild,v 1.6 2002/08/30 00:09:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre3.ebuild,v 1.1 2002/10/01 03:45:00 seemant Exp $
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -15,6 +15,10 @@ SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
+# Note: if X or fbcon usegflag are enabled, links will be built in graphic mode. 
+# libpng is required to compile links in graphic mode (not required in text mode),
+# so let's add libpng for X? and fbcon?
+
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	gpm? ( sys-libs/gpm )
 	java? ( >=sys-devel/flex-2.5.4a )
@@ -22,23 +26,23 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	svga? ( >=media-libs/svgalib-1.4.3 )
-	X? ( virtual/x11 )"
+	X? ( virtual/x11 >=media-libs/libpng-1.2.1 )
+	fbcon? ( >=media-libs/libpng-1.2.1 )"
 
 PROVIDE="virtual/textbrowser"
 
-src_compile ()
-{
-	local myconf
+src_compile (){
 
+	local myconf
 	myconf="--program-suffix=2"
 
 	use X \
-		&& myconf="${myconf} --with-x" \
+		&& myconf="${myconf} --enable-graphics --with-x" \
 		|| myconf="${myconf} --without-x"
 
 	use png \
-		&& myconf="${myconf} --enable-graphics --with-libpng" \
-		|| myconf="${myconf} --without-graphics --without-libpng"
+		&& myconf="${myconf} --with-libpng" \
+		|| myconf="${myconf} --without-libpng"
 
 	use jpeg \
 		&& myconf="${myconf} --with-libjpeg" \
@@ -53,7 +57,7 @@ src_compile ()
 		|| myconf="${myconf} --without-svgalib"
 
 	use fbcon \
-		&& myconf="${myconf} --with-fb" \
+		&& myconf="${myconf} --enable-graphics --with-fb" \
 		|| myconf="${myconf} --without-fb"
 
 	use ssl \
@@ -64,19 +68,21 @@ src_compile ()
 		&& myconf="${myconf} --enable-javascript" \
 		|| myconf="${myconf} --disable-javascript"
 
-	# ./configure only support 'gpm' features auto-detection, so if
+	# Note: --enable-static breaks.
+
+	# Note: ./configure only support 'gpm' features auto-detection, so if
 	# 'sys-libs/gpm' is compiled on your system, you'll compile links
 	# with gpm support ...
-	# This patch adds support for various little fixes
-	patch -p1 < ${WORKDIR}/links.patch || die
 
-	econf ${myconf} || die
+	# This patch adds support for various little fixes
+	patch -p1 < ${WORKDIR}/links.patch || die "Failed to apply the patch"
+
+	econf ${myconf}
 	emake || die "make failed"
 }
 
-src_install ()
-{
-	einstall || die "make install failed"
+src_install (){
+	einstall
 
 	if [ ! -f /usr/bin/links ]
 	then
@@ -84,17 +90,20 @@ src_install ()
 	fi
 
 	# Only install links icon if X driver was compiled in ...
-	use X && ( \
-		insinto /usr/share/pixmaps
-		doins graphics/links.xpm
-	)
-	
-	
-	# links needs to be setuid for it to work with svga
-	use svga && ( \
-		fperms 4755 /usr/bin/links2
-	)
+	use X && { insinto /usr/share/pixmaps ;	doins graphics/links.xpm ; }
 	
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES TODO
 	dohtml doc/links_cal/*
+}
+
+
+pkg_postinst() {
+
+	if use svga
+	then
+		einfo "You had the svga USE flag enabled, but for security reasons"
+		einfo "the links2 binary is NOT setuid by default. In order to"
+		einfo "enable links2 to work in SVGA, please change the permissions"
+		einfo "of /usr/bin/links2 to enable suid."
+	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2-r2.ebuild,v 1.1 2002/09/11 15:57:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2-r2.ebuild,v 1.2 2002/10/01 03:45:00 seemant Exp $
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -92,9 +92,19 @@ src_install (){
 	# Only install links icon if X driver was compiled in ...
 	use X && { insinto /usr/share/pixmaps ;	doins graphics/links.xpm ; }
 	
-	# links needs to be setuid for it to work with svga
-	use svga && { fperms 4755 /usr/bin/links2 ; }
-	
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES TODO
 	dohtml doc/links_cal/*
 }
+
+
+pkg_postinst() {
+
+	if use svga
+	then
+		einfo "You had the svga USE flag enabled, but for security reasons"
+		einfo "the links2 binary is NOT setuid by default. In order to"
+		einfo "enable links2 to work in SVGA, please change the permissions"
+		einfo "of /usr/bin/links2 to enable suid."
+	fi
+}
+
