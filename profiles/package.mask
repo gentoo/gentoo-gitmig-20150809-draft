@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (23 Aug 2002)
+# masked for testing
+=dev-java/sun-jdk-1.4.1_rc1
+
 # <danarmak@gentoo.org> (22 Aug 2002)
 # kde 3.1 beta1: masked permanently; some people like prereleases
 =kde-base/arts-1.0.7
