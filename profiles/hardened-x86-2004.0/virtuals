@@ -47,7 +47,7 @@ virtual/bittorrent		net-p2p/bittorrent
 virtual/logger			app-admin/sysklogd
 virtual/ssh				net-misc/openssh
 virtual/commonlisp		dev-lisp/cmucl dev-lisp/sbcl
-virtual/tftp			net-misc/tftp-hpa
+virtual/tftp			net-ftp/tftp-hpa
 virtual/gzip			app-arch/gzip
 virtual/ghostscript		app-text/ghostscript
 virtual/cdrtools        app-cdr/cdrtools

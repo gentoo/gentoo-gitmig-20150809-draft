@@ -44,7 +44,7 @@ virtual/tetex			app-text/tetex
 virtual/bittorrent		net-p2p/bittorrent
 virtual/logger			app-admin/sysklogd
 virtual/ssh				net-misc/openssh
-virtual/tftp			net-misc/tftp-hpa
+virtual/tftp			net-ftp/tftp-hpa
 sys-apps/reiserfs-utils	sys-fs/reiserfsprogs
 x11-libs/xaw			x11-libs/Xaw3d
 virtual/gzip			app-arch/gzip

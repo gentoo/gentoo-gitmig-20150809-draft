@@ -55,7 +55,7 @@ virtual/ssh		net-misc/openssh
 virtual/sylpheed	mail-client/sylpheed
 virtual/tetex		app-text/tetex
 virtual/textbrowser	net-www/links
-virtual/tftp		net-misc/tftp-hpa
+virtual/tftp		net-ftp/tftp-hpa
 virtual/w3m		www-client/w3m
 virtual/w3m		www-client/w3m
 virtual/x11		x11-base/xorg-x11
