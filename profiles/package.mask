@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <robh@gentoo.org> (18 Jun 2003)
+# due to ardour approaching a release and sourceforge breaking
+# this ebuild is not going to work for quite a while
+# a snapshot ebuild will be available as soon as Paul releases a tarball
+>=media-sound/ardour-cvs-0.6.4
+
 # <george@gentoo.org> (17 Jun 2003)
 #testing a no-revision-bump fix (nvidia headers issue - only compile-time broken in certain situations)
 =media-libs/esdl-0.93.0314-r1
