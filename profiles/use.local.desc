@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.158 2003/10/31 22:01:25 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.159 2003/11/02 04:27:10 matsuu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -136,7 +136,6 @@ net-libs/libnvcserver:no24bpp - disable 24bpp support
 net-libs/libnvcserver:nobackchannel - disable backchannel support
 net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support.
 net-mail/amavisd-new:milter - Enable Sendmail milter support
-net-mail/courier-imap:fam - Enable FAM support
 net-mail/courier:fax - Enables fax support in the courier mail server
 net-mail/exim:exiscan - Patch providing support for content scanning backward-compatability
 net-mail/exim:exiscan-acl - Patch providing support for content scanning
