@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/linux-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/ChangeLog,v 1.5 2002/02/28 18:10:52 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/ChangeLog,v 1.6 2002/03/12 18:22:16 drobbins Exp $
+
+*linux-sources-2.4.17-r5 (12 Mar 2002)
+*linux-sources-2.4.18 (12 Mar 2002)
+
+  12 Mar 2002; Daniel Robbins <drobbins@gentoo.org>: Reworked internals of
+  2.4.17-r5 and 2.4.18 ebuilds but did not bump version since the actual kernel
+  sources are the same.  A lot of streamlining.  In addition, we now use the
+  existing .config of the currently-active (pointed to by /usr/src/linux)
+  kernel if available.  Many things were moved to pkg_postinst() as they fit
+  better there.  We now do a "make dep" after the kernel sources are installed.
+  This closes bug #1045, which will cause any kernel module-related ebuild
+  merges to fail if linux-sources has been updated without the user doing a
+  manual "make dep".
 
 *linux-sources-2.2.x (28 Feb 2002)
 
