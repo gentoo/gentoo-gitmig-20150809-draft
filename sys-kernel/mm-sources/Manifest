@@ -2,7 +2,8 @@ MD5 a339643c4ffce6d70a39224f9717d63b mm-sources-2.6.1-r3.ebuild 2858
 MD5 8dcc76e6d9d3071613ac0c28e1da4ca1 mm-sources-2.6.2_rc1-r2.ebuild 3018
 MD5 acb47b99aff661aa14cd95a47229c2ba mm-sources-2.6.1-r5.ebuild 1199
 MD5 02dbf66829bbfa6eae1628c5921ba671 mm-sources-2.6.1-r4.ebuild 1280
-MD5 c11111f7253403f991ee1ded0561f4e1 ChangeLog 19908
+MD5 6a0df6b8dba91bd1d3767e1279601b05 mm-sources-2.6.2_rc1-r3.ebuild 1129
+MD5 c4036d36a2ac0c2118504d7fe12027ce ChangeLog 20038
 MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
 MD5 5b48e7ddf2616741bf48132962be42c5 files/digest-mm-sources-2.6.1-r3 125
 MD5 fcced8f5bfbfb4e3414812da6365823f files/digest-mm-sources-2.6.1-r4 125
@@ -12,4 +13,5 @@ MD5 c234ba27a872115d41c20ca31610bfc5 files/mm4-export-dnotify_parent.diff 295
 MD5 c57fb303f389d1b448d8c5ffa004b58f files/apic.patch 533
 MD5 c2a85ee37f0ce1076159ec64b7c5a78d files/wpadded.patch 1751
 MD5 419f8583d495bc09e84a9ed2162baf9b files/digest-mm-sources-2.6.2_rc1-r2 194
+MD5 0fb2558f1610cafc6061e5bcaf2b62d9 files/digest-mm-sources-2.6.2_rc1-r3 194
 MD5 a430a342bc052e9c8db70be3ce7e35a6 files/mm4-fix-bw-qcam-typo.diff 437
