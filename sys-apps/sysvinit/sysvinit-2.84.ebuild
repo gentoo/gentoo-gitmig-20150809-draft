@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.84.ebuild,v 1.1 2004/06/29 19:32:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.84.ebuild,v 1.2 2004/06/30 05:27:16 pebenito Exp $
+
+inherit eutils
 
 DESCRIPTION="/sbin/init - parent of all processes"
 HOMEPAGE="http://freshmeat.net/projects/sysvinit/"
@@ -26,9 +28,9 @@ src_unpack() {
 	# Selinux patch
 	if use selinux; then
 		if has_version '>=sys-libs/libselinux-1.6'; then
-			epatch ${FILESDIR}/sysvinit-${SVIV}-selinux1.patch
+			epatch ${FILESDIR}/sysvinit-${PV}-selinux1.patch
 		else
-			epatch ${FILESDIR}/sysvinit-${SVIV}-selinux.patch
+			epatch ${FILESDIR}/sysvinit-${PV}-selinux.patch
 		fi
 	fi
 }
