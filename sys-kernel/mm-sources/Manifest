@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a442f8702c51ebf5b30650435fb354f4 mm-sources-2.6.11_rc2-r1.ebuild 1015
 MD5 cbba59ebed3109d9089f76bd054a2858 mm-sources-2.6.10_rc2-r3.ebuild 1012
 MD5 b1bcc0b402cf6a299e33b05b42b33977 mm-sources-2.6.10_rc1-r1.ebuild 1012
@@ -8,13 +5,14 @@ MD5 9d7ab05d58db3cd7c479828f0fe5718c mm-sources-2.6.11_rc1-r1.ebuild 1015
 MD5 bda47f042fb125f9808b7ac9e15ab3c8 mm-sources-2.6.10_rc1-r3.ebuild 1012
 MD5 1a49d670b46e130c338b16719d080b74 mm-sources-2.6.10-r1.ebuild 1007
 MD5 eb95783f14e5c797532dd2935cbb6a8d mm-sources-2.6.10_rc2-r2.ebuild 1012
+MD5 90648fde3b3462b485549772240e3e4d mm-sources-2.6.11_rc4-r1.ebuild 1017
 MD5 763ca3f994017e57ff93f330665ec476 mm-sources-2.6.10_rc1-r5.ebuild 1013
 MD5 3b7dbf7667d03ecfe263884b3617eb50 mm-sources-2.6.10_rc3-r1.ebuild 1012
 MD5 7acc46f504e0a76b298f90019433733a mm-sources-2.6.11_rc2-r2.ebuild 1015
 MD5 b328eb891bcb4ba3c07916a87ae6820d mm-sources-2.6.10_rc2-r4.ebuild 1012
 MD5 2d03a94d824b6b613a62616622dd52bb mm-sources-2.6.10_rc1-r2.ebuild 1012
 MD5 610666767f298e4ec92b347ea2b4651d mm-sources-2.6.10_rc2-r1.ebuild 1012
-MD5 9c839d0a2532a00c391e97545a13fcd7 ChangeLog 37755
+MD5 e938dc9b86a039c3480865d7b02b86b5 ChangeLog 37892
 MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
 MD5 c73ff71e1a1e92603f4726e852172bdd mm-sources-2.6.10_rc1-r4.ebuild 1012
 MD5 88b99505a42aa711afea2ce073b9dc71 mm-sources-2.6.10-r2.ebuild 1007
@@ -33,12 +31,5 @@ MD5 a28496ae5bc0af3db54a58640de43c24 files/digest-mm-sources-2.6.10-r2 127
 MD5 d28b486988bb37903549ffa6433afda3 files/digest-mm-sources-2.6.11_rc1-r1 197
 MD5 fec3b5e5d268f7dc9480a34d6e9d26ac files/digest-mm-sources-2.6.11_rc2-r1 197
 MD5 1e3a4b8edcb446efabe29789994fd387 files/digest-mm-sources-2.6.11_rc2-r2 197
+MD5 6fa2f7c46f9625a94c3428d5ddcdc4b1 files/digest-mm-sources-2.6.11_rc4-r1 197
 MD5 587a3239ffa2d03c89abf3c3cb443d20 files/2.6.9_rc1-dataloss-fix.patch 1053
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFB/FiTPpIsIjIzwiwRAk+AAJ4jW/r+EJV98Goeqp9MnIzTi2KoCACfbuLj
-L2ZwLZhCyzpVAbBiIMKGIFo=
-=9JAK
------END PGP SIGNATURE-----
