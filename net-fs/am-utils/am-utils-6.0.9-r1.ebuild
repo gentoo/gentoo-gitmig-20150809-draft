@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.0.9.ebuild,v 1.6 2003/10/16 15:54:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.0.9-r1.ebuild,v 1.1 2003/10/16 15:54:15 drobbins Exp $
 
 IUSE="ldap"
 
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 amd64"
 
 src_unpack() {
 	unpack ${A}
