@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.7 2003/12/11 03:37:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.8 2003/12/13 16:49:59 brad_mssw Exp $
+
+  13 Dec 2003; Brad House <brad_mssw@gentoo.org> gnutls-0.8.12.ebuild:
+  mark stable on amd64
 
   10 Dec 2003; <agriffis@gentoo.org> gnutls-0.8.12.ebuild:
   stable on ia64
