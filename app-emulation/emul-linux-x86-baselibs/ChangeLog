@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.8 2004/06/24 22:31:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.9 2004/06/28 22:33:50 kugelfang Exp $
+
+*emul-linux-x86-baselibs-1.1-r3 (29 Jun 2004)
+
+  29 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +emul-linux-x86-baselibs-1.1-r3.ebuild:
+  Version bump to fix BUG #55247. ALL ld scripts need to be changed to point
+  towards lib32 instead lib.
 
 *emul-linux-x86-baselibs-1.1-r1 (03 May 2004)
 
