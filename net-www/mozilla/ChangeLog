@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.101 2003/07/08 21:42:49 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.102 2003/07/09 23:06:53 brad Exp $
+
+  09 Jul 2003; Brad Laue <brad@gentoo.org> mozilla-1.4.ebuild,
+  files/enigmail-0.76.1-Makefile:
+  Remove makemake from the ebuild and return to the practice of a prebuilt
+  makefile for enigmail - too many dependency problems were caused by one simple
+  script.
 
   08 Jul 2003; Tavis Ormandy <taviso@gentoo.org> mozilla-1.4.ebuild:
   explicitly link with libX11 on alpha.

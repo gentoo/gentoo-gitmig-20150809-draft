@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.4 2003/07/08 21:42:49 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.5 2003/07/09 23:06:53 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -81,8 +81,7 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	        =dev-libs/glib-1.2* )
 	gtk2?  ( >=x11-libs/pango-1.2.1 )
 	java?  ( virtual/jre )
-	crypt? ( >=app-crypt/gnupg-1.2.1 
-		app-shells/tcsh )"
+	crypt? ( >=app-crypt/gnupg-1.2.1 )"
 
 DEPEND="${RDEPEND}
 	virtual/x11
@@ -150,6 +149,7 @@ src_unpack() {
 	then
 		mv -f ${WORKDIR}/ipc ${S}/extensions/
 		mv -f ${WORKDIR}/enigmail ${S}/extensions/
+		cp ${FILESDIR}/enigmail-0.76.1-Makefile ${S}/extensions/enigmail/Makefile
 	fi
 }
 
@@ -392,7 +392,6 @@ src_compile() {
 		make || die
 
 		cd ${S}/extensions/enigmail
-		./makemake
 		make || die
 	fi
 }
