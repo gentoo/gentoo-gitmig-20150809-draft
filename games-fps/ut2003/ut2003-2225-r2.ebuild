@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.1 2004/04/02 03:11:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.2 2004/04/02 03:26:52 wolf31o2 Exp $
 
 inherit games
 
@@ -162,6 +162,12 @@ pkg_postinst() {
 	echo
 	einfo "To play the game run:"
 	einfo " ut2003"
+	echo
+	ewarn "If you are not installing for the first time and you plan on running"
+	ewarn "a server, you will probably need to edit your"
+	ewarn "~/.ut2003/System/UT2003.ini file and add a line that says"
+	ewarn "AccessControlClass=crashfix.iaccesscontrolini to your"
+	ewarn "[Engine.GameInfo] section to close a security issue."
 }
 
 pkg_postrm() {

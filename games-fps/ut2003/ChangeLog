@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.18 2004/04/02 03:11:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.19 2004/04/02 03:26:52 wolf31o2 Exp $
+
+  01 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r2.ebuild:
+  Adding some ewarn info at the bottom to inform users of potential security
+  problems and fixes for hosting a server.
 
 *ut2003-2225-r2 (01 Apr 2004)
 
