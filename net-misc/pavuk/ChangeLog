@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.6 2004/06/30 00:11:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.7 2004/07/26 13:53:46 solar Exp $
+
+*pavuk-0.9.28-r3 (26 Jul 2004)
+
+  26 Jul 2004; <solar@gentoo.org> pavuk-0.9.28-r3.ebuild,
+  files/pavuk-0.9.28-digest_auth.c.patch:
+  another security fix, this time in the digest auth code. Note: This package
+  appears to be at high risk for security problems and may/should be removed
+  from the tree in the future
 
   29 Jun 2004; <solar@gentoo.org> pavuk-0.9.28-r2.ebuild:
   marked x86 ppc sparc stable
