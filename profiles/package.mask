@@ -1,6 +1,10 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# According to judge on irc, this needs to be removed from portage
+# for various legal reasons 
+>=net-misc/gift-0.9.7
+
 # Waiting for kde3 ebuilds. These ebuilds are ok themselves and if you're using
 # my kde3pre ebuilds, yuo can unmask and emerge these as well.
 >=net-misc/qtella-0.4.1
