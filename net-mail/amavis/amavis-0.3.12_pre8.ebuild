@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12_pre8.ebuild,v 1.5 2002/11/29 19:52:25 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12_pre8.ebuild,v 1.6 2003/01/14 05:37:54 raker Exp $
 
 DESCRIPTION="A perl module which integrates virus scanning software with your MTA"
 HOMEPAGE="http://www.amavis.org"
@@ -76,6 +76,12 @@ src_unpack() {
 }
 
 src_compile() {
+
+	cp configure configure.tmp
+	sed \
+		-e "s:/usr/local/f-prot:/opt/f-prot:" \
+		-e "s:ac_dummy=\"\$PATH\:/usr/bin\:/usr/local/bin\":ac_dummy=\"\$PATH\:/usr/bin\:/usr/local/bin\:/opt/vlnx\":" \
+		< configure.tmp > configure 
 
 	local myconf
 

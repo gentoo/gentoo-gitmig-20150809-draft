@@ -1,10 +1,14 @@
 # ChangeLog for net-mail/amavis
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/ChangeLog,v 1.8 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/ChangeLog,v 1.9 2003/01/14 05:37:54 raker Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *amavis-0.3.12_pre8 (23 Oct 2002)
+
+  13 Jan 2003; Nick Hadaway <raker@gentoo.org> amavis-0.3.12_pre8.ebuild :
+  Now will find net-mail/f-prot and net-mail/vlnx if installed.  Closes
+  bug #13117
 
   29 Nov 2002; Nick Hadaway <raker@gentoo.org> amavis-0.3.12_pre8.ebuild :
   Marked stable.
