@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.8 2004/06/04 23:19:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.9 2004/06/05 22:20:41 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc n32 n64"
 
@@ -467,6 +467,7 @@ src_unpack() {
 	epatch ${FILESDIR}/3.4.0/gcc34-ppc64-m32-m64-multilib-only.patch
 	epatch ${FILESDIR}/3.4.0/gcc34-ia64-lib64.patch
 	epatch ${FILESDIR}/3.4.0/gcc34-multi32-hack.patch
+	epatch ${FILESDIR}/3.4.0/reiser4-why-do-you-hate-me.patch
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h

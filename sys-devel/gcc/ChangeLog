@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.265 2004/06/04 23:19:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.266 2004/06/05 22:20:41 lv Exp $
+
+  05 Jun 2004; Travis Tilley <lv@gentoo.org>
+  +files/3.4.0/reiser4-why-do-you-hate-me.patch, gcc-3.4.0-r6.ebuild:
+  added fix for compiling on reiser4 filesystems
 
   04 Jun 2004; Travis Tilley <lv@gentoo.org>
   +files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch,

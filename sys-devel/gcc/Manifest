@@ -16,14 +16,14 @@ MD5 6f4b970b6e64b99a49d7c2ac35817d38 gcc-3.3.3.ebuild 22398
 MD5 bd281971d3658dd49f02f647b97c4eeb gcc-3.3.1-r5.ebuild 18002
 MD5 b6a375116a668edbe10b2ac2e1f9fc6d gcc-3.0.4-r6.ebuild 8577
 MD5 b33c1f60ade8ee3d1ad43023d788952a gcc-3.3.3-r6.ebuild 25264
-MD5 8dfdf6a0478cb253654610c3d87aab6d gcc-3.4.0-r6.ebuild 29743
+MD5 fafb9acfeb8b7e2206d43e41ea031f90 gcc-3.4.0-r6.ebuild 29802
 MD5 68da62e17a31058a92822721b553eca9 gcc-3.1.1-r1.ebuild 9424
 MD5 14cf69f1206d85356781dd2ad63eb7ca gcc-3.3.2-r4.ebuild 20741
 MD5 c7e55fc7f4bfd637f45786c0c5fbb365 gcc-2.95.3-r8.ebuild 9095
 MD5 b5f1d4d71ad38c5c5e489466ac0ad399 gcc-3.3.3-r3.ebuild 24690
 MD5 9fb6a5505f97c736a3f40f84ea9c71da gcc-3.3.2-r6.ebuild 21217
 MD5 e6ead3ed008a1fe7adc73ddae996ade3 gcc-3.3.2-r1.ebuild 17965
-MD5 8c7105801d2d2a3b670ce5b000dbd662 ChangeLog 55124
+MD5 86661ba0ca338a2783dd95296df291f3 ChangeLog 55289
 MD5 f00b83c775e21267dcfc5c57412dc961 gcc-3.3.2.ebuild 17908
 MD5 3b2fd4637666e71aae9954782cd23016 gcc-3.3.3_pre20040426.ebuild 22633
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
@@ -153,4 +153,5 @@ MD5 c919e0a2cd429d0121b6133c1b4e41a6 files/3.4.0/gcc34-ice-hack.patch 8605
 MD5 31470a0e018eb2cdfe68c71039ede80f files/3.4.0/gcc34-multi32-hack.patch 2445
 MD5 c7ed491e4bcee6cae89067d4e1c899a8 files/3.4.0/gcc34-ia64-lib64.patch 1395
 MD5 06580106a905e8fa2ff23aa190f9d82c files/3.4.0/gcc-3.4.0-r6-gentoo-branding.patch 781
+MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/reiser4-why-do-you-hate-me.patch 587
 MD5 66edf32babf498517ca56fa44c901f26 files/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch 894
