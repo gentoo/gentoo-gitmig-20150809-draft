@@ -5,6 +5,7 @@
 afs
 alsa
 ifc
+jack
 mmx
 pic
 sse
