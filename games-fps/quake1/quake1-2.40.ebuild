@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40.ebuild,v 1.5 2004/06/24 22:43:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40.ebuild,v 1.6 2004/11/03 00:24:33 vapier Exp $
 
 inherit games eutils gcc
 
@@ -13,10 +13,12 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="X opengl svga 3dfx"
 
-DEPEND="X? ( virtual/x11 )
+RDEPEND="X? ( virtual/x11 )
 	opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
 	3dfx? ( media-libs/glide-v3 )"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.4 2004/06/24 22:39:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.5 2004/11/03 00:18:59 vapier Exp $
 
 inherit games eutils
 
@@ -16,7 +16,9 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="media-libs/aalib"
+RDEPEND="media-libs/aalib"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/quake2-3.21/linux"
 

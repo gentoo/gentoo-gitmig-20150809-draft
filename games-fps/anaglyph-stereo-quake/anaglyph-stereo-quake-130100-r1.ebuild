@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/anaglyph-stereo-quake-130100-r1.ebuild,v 1.7 2004/08/28 09:43:03 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/anaglyph-stereo-quake-130100-r1.ebuild,v 1.8 2004/11/03 00:19:16 vapier Exp $
 
 inherit games gcc eutils
 
@@ -11,12 +11,14 @@ SRC_URI="http://home.iprimus.com.au/crbean/zip/3dGLQuake_SRC_${PV}.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	virtual/opengl
 	media-libs/libsdl"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/WinQuake"
 

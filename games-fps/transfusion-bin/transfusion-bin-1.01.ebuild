@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/transfusion-bin-1.01.ebuild,v 1.6 2004/07/01 11:18:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/transfusion-bin-1.01.ebuild,v 1.7 2004/11/03 00:28:33 vapier Exp $
 
 inherit games
 
@@ -17,7 +17,9 @@ IUSE=""
 RESTRICT="nostrip"
 
 RDEPEND="virtual/libc"
-DEPEND=">=sys-apps/sed-4"
+DEPEND="${RDEPEND}
+	app-arch/unzip
+	>=sys-apps/sed-4"
 
 S="${WORKDIR}/${MY_PN}"
 
