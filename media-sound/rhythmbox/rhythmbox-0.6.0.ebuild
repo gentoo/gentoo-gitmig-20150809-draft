@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.5.3.ebuild,v 1.5 2003/10/13 16:32:58 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.0.ebuild,v 1.1 2003/11/15 17:22:48 foser Exp $
 
 inherit gnome2
 
-DESCRIPTION="A music and playlist organizer and player"
+DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://web.rhythmbox.org/"
 LICENSE="GPL-2"
 
@@ -12,13 +12,14 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="oggvorbis mad xine flac"
 
-RDEPEND=">=x11-libs/gtk+-2.2
-	>=gnome-base/libgnomeui-2.0
-	>=gnome-base/libbonoboui-2.0
-	>=gnome-base/gconf-2.0
-	>=media-libs/musicbrainz-2.0
-	flac? ( >=media-libs/flac-1.0 )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 )
+RDEPEND=">=x11-libs/gtk+-2.2.2
+	>=gnome-base/libgnomeui-2
+	>=gnome-base/libglade-2
+	>=gnome-base/gnome-vfs-2
+	>=gnome-base/libbonobo-2
+	>=media-libs/musicbrainz-2
+	flac? ( >=media-libs/flac-1 )
+	oggvorbis? ( >=media-libs/libvorbis-1 )
 	mad? ( >=media-libs/libid3tag-0.15 )
 	!xine? ( >=media-libs/gstreamer-0.6.3
 		>=media-libs/gst-plugins-0.6.3
@@ -38,6 +39,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	app-text/scrollkeeper"
 
+MAKEOPTS="${MAKEOPTS} -j1"
+
 use xine && G2CONF="${G2CONF} --enable-xine"
 use flac && G2CONF="${G2CONF} --enable-flac"
 
@@ -53,9 +56,6 @@ src_unpack( ) {
 	cd ${S}
 	# sandbox errors work around
 	gnome2_omf_fix ${S}/help/C/Makefile.in
-
-	# Force orbit regeneration (#28739)
-	rm -f ${S}/corba/*.{c,h}
 
 }
 
