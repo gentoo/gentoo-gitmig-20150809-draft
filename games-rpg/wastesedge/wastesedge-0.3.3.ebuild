@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.3.ebuild,v 1.1 2003/09/10 06:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.3.ebuild,v 1.2 2003/09/10 18:48:37 vapier Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ DEPEND="virtual/x11
 	oggvorbis? ( >=media-libs/libvorbis-1.0
 		>=media-libs/libogg-1.0 )
 	doc? ( >=app-doc/doxygen-1.2 )
-	>=app-games/adonthell-${PV}"
+	>=games-rpg/adonthell-${PV}"
 
 src_compile(){
 	egamesconf \
