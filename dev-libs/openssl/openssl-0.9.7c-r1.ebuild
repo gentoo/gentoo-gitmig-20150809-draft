@@ -1,12 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.8 2003/12/17 04:56:46 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.9 2003/12/23 23:29:39 vapier Exp $
 
 inherit eutils flag-o-matic gcc
-
-if [ "$( gcc-version )" == "3.3" ]; then
-	filter-flags "-fprefetch-loop-arrays"
-fi
 
 OLD_096_P="${PN}-0.9.6l"
 
@@ -49,6 +45,9 @@ src_unpack() {
 			's!CC=ccc!CC=gcc!' config
 	fi
 
+	if [ "$(gcc-version)" == "3.3" ] || [ "$(gcc-version)" == "3.2" ] ; then
+		filter-flags -fprefetch-loop-arrays
+	fi
 	sed -i -e "s/-O3/$CFLAGS/" -e "s/-m486//" Configure
 
 	# openssl-0.9.6
