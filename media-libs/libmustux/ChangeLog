@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmustux
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.7 2004/03/26 16:37:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.8 2004/04/08 12:12:32 zypher Exp $
+
+*libmustux-0.20.1 (16 Mar 2004)
+
+  08 Apr 2004; Marc Hildebrand <zypher@gentoo.org> protux-0.20.1.ebuild:
+  Version bumped.
 
   26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libmustux-0.16.0.ebuild, libmustux-0.17.5.ebuild, libmustux-0.20.0.ebuild:
