@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.7-r3.ebuild,v 1.6 2003/04/20 15:24:13 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.7-r3.ebuild,v 1.7 2003/06/10 13:18:24 liquidx Exp $
 
 IUSE="xmms ssl nls crypt"
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ~alpha ~ppc"
 DEPEND=">=gnome-base/gnome-libs-1.4.1.7
 	>=gnome-base/libglade-0.17-r1
 	<gnome-base/libglade-2.0.0 
-	>=gnome-extra/gal-0.19
+	<gnome-extra/gal-1.99
 	>=gnome-extra/gnomemm-1.2.2
 	>=x11-libs/gtkmm-1.2.5
 	<x11-libs/gtkmm-1.3.0
