@@ -1,10 +1,6 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.17 2003/02/12 07:39:12 vapier Exp $
-
-  10 Feb 2003; Mark Guertin <gerk@gentoo.org> mjpegtools-1.6.0-r7.ebuild 
-  files/1.6.0-r7-ppc.patch:
-  Added patch to close bug #15441, thanks go to Lapo Calamandrei.
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.18 2003/02/18 21:08:59 mholzer Exp $
 
 *mjpegtools-1.6.1 (09 Feb 2003)
 
@@ -13,6 +9,13 @@
   Version bumped. Submitted by mathewalexander@surewest.net in #10970.
 
 *mjpegtools-1.6.0-r7 (27 Dec 2002)
+
+  18 Feb 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.0-r7 :
+  Added svgalib to DEPEND. Closes #15876.
+
+  10 Feb 2003; Mark Guertin <gerk@gentoo.org> mjpegtools-1.6.0-r7.ebuild
+  files/1.6.0-r7-ppc.patch:
+  Added patch to close bug #15441, thanks go to Lapo Calamandrei.
 
   09 Feb 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.0-r7.ebuild :
   Marked as stable for x86. 
@@ -24,6 +27,9 @@
 
 *mjpegtools-1.6.0-r6 (03 Dec 2002)
 
+  18 Feb 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.0-r6 :
+  Added svgalib to DEPEND. Closes #15876.
+
   03 Dec 2002; Jon Nall <nall@gentoo.org> mjpegtools-1.6.0-r6.ebuild :
   I didn't create this version. there was no ChangeLog entry for -r6
   (though i think phoen][x's comment from 25 Nov 2002 refers to -r6.)
@@ -31,6 +37,9 @@
   I added ~ppc and made libmovtar mmx-dependent
 
 *mjpegtools-1.6.0-r5 (d1814 Nov 2002)
+
+  18 Feb 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.0-r5 :
+  Added svgalib to DEPEND. Closes #15876.
 
   25 Nov 2002; phoen][x <phoenix@gentoo.org>  mjpegtools-1.6.0-r5 :
   Fixed a really evil bug which caused mjpegtools to fail in lavtools/

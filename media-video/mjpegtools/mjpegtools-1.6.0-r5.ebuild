@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r5.ebuild,v 1.3 2003/02/18 20:47:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r5.ebuild,v 1.4 2003/02/18 21:08:59 mholzer Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi"
 
@@ -8,7 +8,7 @@ inherit libtool flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools for MJPEG video"
-SRC_URI="http://download.sourceforge.net/mjpeg/${P}.tar.gz
+SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz
 	 quicktime? ( http://download.sourceforge.net/mjpeg/quicktime4linux-1.4-patched.tar.gz )"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
 
@@ -28,8 +28,8 @@ DEPEND="${RDEPEND}
 	media-libs/libmovtar
 	avi? ( media-video/avifile )
 	quicktime? ( >=media-libs/quicktime4linux-1.5.5-r1 )
-	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 )
-	mmx? ( dev-lang/nasm )
+	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1
+		dev-lang/nasm )
 	3dnow? ( dev-lang/nasm )
 	sse? ( dev-lang/nasm )
 	media-libs/libdv
