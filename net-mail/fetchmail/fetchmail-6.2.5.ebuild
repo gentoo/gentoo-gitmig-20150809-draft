@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.16 2004/07/15 01:47:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.17 2004/08/07 11:15:46 tomk Exp $
 
 IUSE="ssl nls ipv6 kerberos krb4"
 
@@ -27,6 +27,8 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-6.2.0-gentoo.diff || die
 	epatch ${FILESDIR}/${P}-kerberos.patch
+	# patch fixes bug #40126 (tomk@gentoo.org 2004-08-07)
+	epatch ${FILESDIR}/${P}-fetchsizelimit.patch || die
 }
 
 src_compile() {
