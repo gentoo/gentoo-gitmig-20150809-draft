@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.18.ebuild,v 1.3 2003/11/03 16:47:05 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.23.ebuild,v 1.1 2003/12/03 07:53:58 max Exp $
 
 inherit perl-module
 
@@ -52,6 +52,7 @@ DEPEND=">=sys-apps/sed-4
 	dev-perl/Compress-Zlib
 	dev-perl/Lingua-EN-Numbers-Ordinate
 	dev-perl/Lingua-Preferred
+	>=dev-perl/Storable-2.04
 	dev-perl/Unicode-String"
 
 # for tv_check
@@ -99,8 +100,8 @@ make_config() {
 		echo "no"
 	fi
 
-	# Enable Germany and Austria
-	[ "`has tv_grab_de ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
+	# Enable Germany and Austria (disabled currently)
+	#[ "`has tv_grab_de ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
 	# Enable Brittain
 	[ "`has tv_grab_uk ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
 	# Enable Alternate Brittain
