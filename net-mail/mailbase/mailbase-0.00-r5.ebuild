@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r5.ebuild,v 1.1 2002/12/19 04:30:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r5.ebuild,v 1.2 2002/12/25 20:04:12 azarah Exp $
 
-S=${WORKDIR}
+S="${WORKDIR}"
 DESCRIPTION="MTA layout package"
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org/"
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND=""
-RDEPEND=""
 
 src_install() {
 	dodir /etc/mail
@@ -21,10 +20,9 @@ src_install() {
 	insinto /etc/
 	doins ${FILESDIR}/mailcap
 
-	dodir /var/spool/mail
-	chown root.mail ${D}/var/spool/mail
-	chmod 1777 ${D}/var/spool/mail
-	touch ${D}/var/spool/mail/.keep
+	keepdir /var/spool/mail
+	fowners root.mail /var/spool/mail
+	fperms 1777 /var/spool/mail
 	dosym /var/spool/mail /var/mail
 }
 
@@ -32,7 +30,9 @@ pkg_postinst() {
 	if [ ! -d ${ROOT}/var/spool/mail ]
 	then
 		mkdir -p ${ROOT}/var/spool/mail
-		chown root.mail ${ROOT}/var/spool/mail
-		chmod 1777 ${ROOT}/var/spool/mail
 	fi
+
+	# Always set these to close bug #8029.
+	chown root.mail ${ROOT}/var/spool/mail
+	chmod 1777 ${ROOT}/var/spool/mail
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.6 2002/12/19 04:30:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.7 2002/12/25 20:04:12 azarah Exp $
+
+  25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mailbase-0.00-r5.ebuild :
+  Always set the ownership and permissions in pkg_postinst(), closing bug #8029.
+  Cleanup the build a bit by using keepdir, fowners and fperms.
 
 *mailbase-0.00-r5 (18 Dec 2002)
 
