@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/snipsnap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap/ChangeLog,v 1.1 2003/04/27 19:08:18 tberman Exp $
+
+*snipsnap-0.4.2a (27 Apr 2003)
+
+  27 Apr 2003; Todd Berman <tberman@gentoo.org> snipsnap-0.4.2a.ebuild:
+  Initial import.
+
