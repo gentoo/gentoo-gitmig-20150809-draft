@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.22 2003/05/23 05:39:17 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.23 2003/05/23 05:54:49 killian Exp $
+
+*ppp-2.4.1-r14 (22 May 2003)
+
+  22 May 2003; Chuck Brewer <killian@gentoo.org> ppp-2.4.1-r14.ebuild:
+  new testing ebuild, adds pppoatm.so that should work with this build  
 
 *ppp-2.4.1-r12 (22 May 2003)
  
