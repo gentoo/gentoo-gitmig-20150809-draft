@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/dial
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dial/ChangeLog,v 1.1 2003/11/28 00:40:07 brandy Exp $
+
+*dial-1.2 (28 Nov 2003)
+
+  28 Nov 2003; Brandy Westcott brandy@gentoo.org dial-1.2.ebuild:
+  Initial import. Thanks to Jonathan Rogers <jonner@teegra.net> for the ebuild.
+  Closes bug #31955.
+

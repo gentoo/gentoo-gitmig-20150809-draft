@@ -1,0 +1,5 @@
+MD5 939deb7fe5a40efd46845f03c4f640b2 dial-1.2.ebuild 739
+MD5 4a26e5da6801590e42291356056e6a0e ChangeLog 405
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 eb7b7d6d9ed60af816b708ce7147a129 files/dial-1.2-gcc3.3.patch 512
+MD5 d75fbdf38c778e45cf42d89b9c92c9b1 files/digest-dial-1.2 59
