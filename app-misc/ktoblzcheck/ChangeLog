@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/ktoblzcheck
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.1 2003/06/21 23:28:32 avenj Exp $
+
+*ktoblzcheck-0.3 (21 Jun 2003)
+
+  21 Jun 2003; Jon Portnoy <avenj@gentoo.org> ktoblzcheck-0.3.ebuild :
+
+  Initial import. Submitted in bug 22801 by Christian Hollander
+  <gentoo@fire-live.de> and reviewed by Don Seiler.
