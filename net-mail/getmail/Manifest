@@ -3,14 +3,10 @@ Hash: SHA1
 
 MD5 a1e64c18163ac3e21965310dfe21a5af getmail-4.0.1.ebuild 1620
 MD5 821f8506642ad867a99f337be131eaa0 getmail-3.2.4.ebuild 941
-MD5 beab59d24d98394525c6f4fc7e07ee44 getmail-3.1.3.ebuild 933
 MD5 40fa089fe8eaa04a4acb613dbe571b56 getmail-3.2.1.ebuild 940
 MD5 4363d5e047ce62da1fb128f0d944b25a ChangeLog 1651
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 b44cc0c1df219670e60baa9b74a50a75 getmail-2.3.8.ebuild 783
 MD5 87d126cb233d900a20274ee09c8cf904 getmail-3.1.7.ebuild 930
-MD5 6a23fc3cd3127d6d9e7734c6365ded18 files/digest-getmail-2.3.8 64
-MD5 db2acd3a4b93154ffb08d5c145dd21e0 files/digest-getmail-3.1.3 64
 MD5 caec3387c9daa726c3e2a68ae906e5ba files/digest-getmail-3.1.7 64
 MD5 02e47482585d06da914552e487232ceb files/digest-getmail-3.2.1 64
 MD5 998916c10355bce7b9a852cd17a7fc9e files/digest-getmail-3.2.4 64
@@ -18,7 +14,7 @@ MD5 6d81a58c9173338fc9824c593464b875 files/digest-getmail-4.0.1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBCnBe5FrxP71izLARAvEIAKCAMPLG9hNhDveZpldPxZk5LMRxuACgzyzG
-/TC4x6kWcJshWq6fxI1WHe4=
-=XybF
+iD8DBQFBCnck5FrxP71izLARAnURAKCXaN7Cl0Xet29/e36eAbfQSPOCNgCfZR6G
+I6pOZkHtUU1G4gAtJR9Imes=
+=OH17
 -----END PGP SIGNATURE-----
