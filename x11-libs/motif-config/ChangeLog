@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/motif-config
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/ChangeLog,v 1.10 2005/03/22 16:18:25 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/ChangeLog,v 1.11 2005/03/24 18:26:52 lanius Exp $
+
+*motif-config-0.7 (24 Mar 2005)
+
+  24 Mar 2005; Heinrich Wendel <lanius@gentoo.org> -files/motif-config-0.1,
+  -files/motif-config-0.2, -files/motif-config-0.3, -files/motif-config-0.4,
+  -files/motif-config-0.5, +files/motif-config-0.7, -motif-config-0.4.ebuild,
+  -motif-config-0.5.ebuild, +motif-config-0.7.ebuild:
+  cleanups; some fixes
 
 *motif-config-0.6 (22 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.4.ebuild,v 1.2 2005/03/07 19:46:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.7.ebuild,v 1.1 2005/03/24 18:26:53 lanius Exp $
 
 inherit multilib
 

@@ -40,7 +40,7 @@ Options:
 
       --start-install        Start installation of new Motif version
 
-	  --finish-install       Finish installation of new Motif version
+      --finish-install       Finish installation of new Motif version
 
 USAGE_END
     exit $1
@@ -52,6 +52,7 @@ USAGE_END
 # to make ppc-macos people happy
 eerror() {
 	echo -e " \e[31;01m*\e[0m $*";
+	exit 1
 }
 einfo() {
 	echo -e " \e[32;01m*\e[0m $*";
@@ -86,7 +87,6 @@ _activate_profile() {
 	done
 
 	# set new profile as default
-	rm -f ${CONFIG_FILE}
 	cat ${PROFILE_PATH}/${new} > ${CONFIG_FILE}
 
 	return $?
@@ -118,6 +118,8 @@ _deactivate_profile() {
 		rm -f ${file/-${current}/}
 	done
 
+	rm -f ${CONFIG_FILE}
+
 	return $?
 }
 
@@ -127,21 +129,19 @@ switch_profile() {
 	if [ -n "$1" ]; then
 		if [ ! -e ${PROFILE_PATH}/${1} ]; then
 			eerror "$0: no such profile ${1}"
-			exit 1
 		else
 			_deactivate_profile
 			_activate_profile $1
 		fi
 	else
-		for x in `ls ${PROFILE_PATH} | sort -r`; do
-			if [ "${x}" != "current" -a "${x}" != "removed" ]; then
-				_deactivate_profile
-				_activate_profile ${x}
-				break
-			fi
+		for y in `ls ${PROFILE_PATH} | grep -v removed | grep -v current | sort -r`; do
+			_deactivate_profile
+			_activate_profile ${y}
+			break
 		done
-		if [ -z ${x} ]; then
-			error "$0: no profile to activate"
+		if [ -z "${y}" ]; then
+			_deactivate_profile
+			eerror "$0: no profile to activate"
 		fi
 	fi
 
@@ -156,17 +156,15 @@ get_current_profile() {
 
 list_profiles() {
 	i=1
-	for x in `ls ${PROFILE_PATH}`; do
-		current=`cat ${CONFIG_FILE} 2>/dev/null`
-		if [ "${x}" != "current" -a "${x}" != "removed" ]; then
-			output=`cat ${PROFILE_PATH}/${x}`;
-			output="[${i}] $output";
-			if [ "${x}" = "${current}" ]; then
-				output="${output} *"
-			fi
-			echo "$output"
-			i=$((i + 1))
+	current=`cat ${CONFIG_FILE} 2>/dev/null`
+	for x in `ls ${PROFILE_PATH} | grep -v current | grep -v removed`; do
+		output=`cat ${PROFILE_PATH}/${y}`;
+		output="[${i}] $output";
+		if [ "${y}" = "${current}" ]; then
+			output="${output} *"
 		fi
+		echo "$output"
+		i=$((i + 1))
 	done
 	exit $?
 }
@@ -180,7 +178,6 @@ get_lib_path() {
 	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
 	if [ $? -eq 1 ]; then
 		eerror "$0: No such profile: $profile"
-		exit 1
 	else
 		echo "/usr/@@LIBDIR@@/${name}/"
 		exit 0
@@ -196,7 +193,6 @@ get_inc_path() {
 	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
 	if [ $? -eq 1 ]; then
 		eerror "$0: No such profile: $profile"
-		exit 1
 	else
 		echo "/usr/include/${name}/"
 		exit 0
@@ -212,7 +208,6 @@ get_cflags() {
 	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
 	if [ $? -eq 1 ]; then
 		eerror "$0: No such profile: $profile"
-		exit 1
 	else
 		echo "-I/usr/include/${name}/"
 		exit 0
@@ -228,7 +223,6 @@ get_libs() {
 	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
 	if [ $? -eq 1 ]; then
 		eerror "$0: No such profile: $profile"
-		exit 1
 	else
 		echo "-L/usr/@@LIBDIR@@/${name}/"
 		exit 0
@@ -248,9 +242,7 @@ install_profile() {
 	echo "LDPATH=/usr/lib/${1}" > /etc/env.d/15${1}
 
 	# make it default if no profile is activated
-	# or if it was just removed
-	if [ ! -e $CONFIG_FILE -o "${1}" == "`cat ${PROFILE_PATH}/removed 2>/dev/null`" ]; then
-		rm -f ${PROFILE_PATH}/removed
+	if [ ! -e $CONFIG_FILE  ]; then
 		switch_profile ${1}
 	fi
 
@@ -269,13 +261,8 @@ uninstall_profile() {
 	# remove env.d entry
 	rm -f /etc/env.d/15${1}
 
-	# cache which profile was removed for upgrades
-	# little hack, because portage has no way
-	# to detect if a package was upgraded
-
 	# activate next profile if non is activated
 	if [ "`cat $CONFIG_FILE`" == "${1}" ]; then
-		echo "${1}" > "${PROFILE_PATH}/removed"
 		switch_profile
 	fi
 
@@ -286,16 +273,21 @@ start_installation() {
 	einfo "Starting installation of a new motif version."
 	einfo "Note: You can't use any motif app during this process."
 
-	cat ${CONFIG_FILE} > ${PROFILE_PATH}/removed
+	if [ -f ${CONFIG_FILE} ]; then
+		cat ${CONFIG_FILE} > ${PROFILE_PATH}/removed
 
-	_deactivate_profile
+		_deactivate_profile
+	fi
 }
 
 finish_installation() {
 	einfo "Finishing installation."
 	einfo "Note: You can now use your motif apps again."
 
-	_activate_profile `cat ${PROFILE_PATH}/removed`
+	if [ -f ${PROFILE_PATH}/removed ]; then
+		_activate_profile `cat ${PROFILE_PATH}/removed`
+		rm -f ${PROFILE_PATH}/removed
+	fi
 }
 
 for x in "$@"; do
@@ -361,7 +353,7 @@ for x in "$@"; do
 		;;
 
 		-v|--version)
-			echo "motif-config-0.1"
+			echo "motif-config-0.7"
 			exit 0
 		;;
 
