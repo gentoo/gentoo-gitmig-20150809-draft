@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.7.ebuild,v 1.2 2003/07/12 09:22:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.7.ebuild,v 1.3 2003/07/23 21:20:01 gmsoft Exp $
 
 inherit libtool
 
@@ -14,7 +14,7 @@ DEPEND=">=sys-devel/automake-1.6.1
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ~sparc ~ppc ~hppa ~alpha"
+KEYWORDS="x86 ~sparc ~ppc hppa ~alpha"
 
 src_compile() {
 
