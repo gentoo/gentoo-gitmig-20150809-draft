@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.13 2003/08/08 09:12:44 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.14 2003/09/18 18:12:26 avenj Exp $
+
+  18 Sep 2003; Jon Portnoy <avenj@gentoo.org> ftp-0.17-r3.ebuild :
+  ia64 keywords.
 
   15 Jul 2003; Christian Birchinger <joker@gentoo.org> ftp-0.17-r3.ebuild:
   Added sparc stable keyword
