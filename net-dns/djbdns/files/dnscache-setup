@@ -217,8 +217,12 @@ setup() {
 
 	# check in /mnt/.init.d to find svscan link in running...
 	# if not running execute /etc/init.d/svscan start
-
-	ln -sf ${mypath}/${mycachedir} /service/${mycachedir}
+	# Don't make symbolic links to / !
+	# use ../ instead as it gives trouble in chrooted environments
+	# By Kalin KOZHUHAROV <kalin@ThinRope.net>
+	local fixedroot_path=`echo ${mypath} | sed -e 's#^/#../#'`
+	cd /service
+	ln -sf ${fixedroot_path}/${mycachedir} .
 
 	echo
 	echo

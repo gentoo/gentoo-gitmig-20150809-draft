@@ -124,8 +124,13 @@ setup() {
 	echo '(press control-C to abort)'
 	read
 
-	ln -sf ${mypath}/tinydns /service/
-	ln -sf ${mypath}/axfrdns /service/
+	# Don't make symbolic links to / !
+	# use ../ instead as it gives trouble in chrooted environments
+	# By Kalin KOZHUHAROV <kalin@ThinRope.net>
+	local fixedroot_path=`echo ${mypath} | sed -e 's#^/#../#'`
+	cd /service
+	ln -sf ${fixedroot_path}/tinydns .
+	ln -sf ${fixedroot_path}/axfrdns .
 
 	echo
 	echo
