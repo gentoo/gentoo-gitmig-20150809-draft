@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for net-fs/sfs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.1 2003/03/26 12:11:16 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.2 2003/04/22 10:24:42 vapier Exp $
 
 *sfs-0.7.2 (19 Mar 2003)
 
