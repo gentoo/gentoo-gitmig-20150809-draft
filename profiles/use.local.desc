@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.447 2004/06/25 02:44:14 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.448 2004/06/25 03:16:51 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -56,7 +56,11 @@ app-pda/multisync:bluetooth - Enable Bluetooth support with IRMC
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
 app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
+app-sci/aaindex:no-emboss - Do not index the database files for use with EMBOSS
+app-sci/aaindex:no-rawdb - Do not install the original database files (keep only indexed files)
 app-sci/coq:norealanalysis - Do not build real analysis modules (faster compilation).
+app-sci/cutg:no-rawdb - Do not install the original database files (keep only indexed files)
+app-sci/cutg:no-emboss - Do not index the database files for use with EMBOSS
 app-sci/emboss:no-biodata - Do not install the biological databases used by some programs.
 app-sci/gmt:gmtfull - Full resolution bathimetry database;
 app-sci/gmt:gmthigh - Adds high resolution bathimetry database
@@ -73,7 +77,14 @@ app-sci/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to app-sc
 app-sci/orsa:cln - Use the Class Library for Numbers for calculations
 app-sci/orsa:gsl - Use the GNU scientific library for calculations
 app-sci/predict:xforms - Adds a "map" client which uses the xforms library for its GUI
-app-sci/seaview:clustalw - Use clustalw for sequence realignment
+app-sci/prints:no-rawdb - Do not install the original database files (keep only indexed files)
+app-sci/prints:no-emboss - Do not index the database files for use with EMBOSS
+app-sci/prosite:no-rawdb - Do not install the original database files (keep only indexed files)
+app-sci/prosite:no-emboss - Do not index the database files for use with EMBOSS
+app-sci/rebase:no-rawdb - Do not install the original database files (keep only indexed files)
+app-sci/rebase:no-emboss - Do not index the database files for use with EMBOSS
+app-sci/transfac:no-rawdb - Do not install the original database files (keep only indexed files)
+app-sci/transfac:no-emboss - Do not index the database files for use with EMBOSS
 app-sci/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities.
 app-sci/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
