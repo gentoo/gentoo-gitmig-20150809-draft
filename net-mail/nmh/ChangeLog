@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/nmh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nmh/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nmh/ChangeLog,v 1.2 2002/05/04 03:15:25 mkennedy Exp $
+
+*nmh-1.0.4-r1 (3 May 2002)
+
+  3 May 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  nmh-1.0.4-r1.ebuild, files/digest-nmh-1.0.4-r1 :
+
+  Ebuild clean up. Dependency fix.
 
 *nmh-1.0.4 (1 Feb 2002)
 
