@@ -1,32 +1,43 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_beta1.ebuild,v 1.1 2004/01/10 19:24:05 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_beta1-r1.ebuild,v 1.1 2004/02/15 06:57:19 strider Exp $
 
 IUSE="doc gnome kde mozilla"
 
-inherit java nsplugins
+inherit java
 
-At="j2sdk-1_5_0-beta-bin-b31-linux-i586-11_dec_2003.bin"
+amd64file="j2sdk-1_5_0-beta-linux-amd64.bin"
+x86file="j2sdk-1_5_0-beta-linux-i586.bin"
+
+if [ `use x86` ]; then
+	At=${x86file}
+elif [ `use amd64` ]; then
+	At=${amd64file}
+fi
+
 S="${WORKDIR}/j2sdk1.5.0"
 DESCRIPTION="Sun's J2SE Development Kit, version ${PV}"
-HOMEPAGE="http://jsecom16.sun.com/ECom/EComActionServlet?StoreId=22&PartDetailId=j2sdk-1.5.0-beta-b31-oth-JPR"
-SRC_URI=${At}
+HOMEPAGE="http://java.sun.com/j2se/1.5.0/download.jsp"
+SRC_URI="x86? ( $x86file ) amd64? ( $amd64file )"
 SLOT="1.5"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~amd64"
 RESTRICT="fetch"
 
-DEPEND=">=dev-java/java-config-1.1.5
+#
+DEPEND=">=dev-java/java-config-1.2
 	sys-apps/sed
-	doc? ( =dev-java/java-sdk-docs-1.4.2* )"
+	doc? ( =dev-java/java-sdk-docs-1.5.0* )
+	virtual/lpr"
 
-RDEPEND="sys-libs/lib-compat"
+RDEPEND="x86? ( sys-libs/lib-compat )
+	doc? ( =dev-java/java-sdk-docs-1.5.0* )
+	virtual/lpr"
 
-PROVIDE="virtual/jre-1.4.2
-	virtual/jdk-1.4.2
-	virtual/java-scheme-2"
+PROVIDE="virtual/jre-1.5
+	virtual/jdk-1.5"
 
-PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/javaws/javaws.jar"
+PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/lib/javaws.jar jre/lib/deploy.jar"
 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
@@ -34,7 +45,7 @@ CHPAX_CONSERVATIVE_FLAGS="pemsv"
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
 	einfo ${HOMEPAGE}
-	einfo "(select the \"Linux self-extracting file\" package format of the SDK)"
+	einfo "(SDK 32-bit/64-bit for Windows/Linux/Solaris SPARC 32-bit for Solaris x86, then select download Linux Self-extracting or Linux AMD64 self-extracting, depending on your arch.)"
 	einfo "and move it to ${DISTDIR}"
 }
 
@@ -44,7 +55,7 @@ src_unpack() {
 		die
 	fi
 	#Search for the ELF Header
-	testExp=`echo -e "\177\105\114\106\001\001\001"`
+	testExp=`echo -e "\105\114\106"`
 	startAt=`grep -aonm 1 ${testExp}  ${DISTDIR}/${At} | cut -d: -f1`
 	tail -n +${startAt} ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
@@ -62,7 +73,11 @@ src_unpack() {
 				rm -f ${PACK_FILE}
 			fi
 		done
+		rm -f ${UNPACK_CMD}
+	else
+		die "unpack not found"
 	fi
+	${S}/bin/java -client -Xshare:dump
 }
 
 src_install () {
@@ -72,20 +87,26 @@ src_install () {
 	for i in $dirs ; do
 		cp -a $i ${D}/opt/${P}/
 	done
-
-	dodoc COPYRIGHT LICENSE
+	dodoc COPYRIGHT LICENSE README.html
 	dohtml README.html
 	dodir /opt/${P}/share/
 	cp -a demo src.zip ${D}/opt/${P}/share/
+	if [ "`use x86`" ]; then
+		cp -a sample ${D}/opt/${P}/share/
+	fi
 
 	local plugin_dir="ns7-gcc29"
-	if has_version '>=gcc-3.2*' ; then
+	if has_version '>=gcc-3*' ; then
 		plugin_dir="ns7"
 	fi
+
 	if [ "`use mozilla`" ] ; then
-		install_mozilla_plugin /opt/${P}/jre/plugin/i386/$plugin_dir/libjavaplugin_oji.so
+		if [ "`use x86`" ] ; then
+			install_mozilla_plugin /opt/${P}/jre/plugin/i386/$plugin_dir/libjavaplugin_oji.so
+		else
+			eerror "No plugin available for amd64 arch"
+		fi
 	fi
-	inst_plugin /opt/${P}/jre/plugin/i386/$plugin_dir/libjavaplugin_oji.so
 
 	# create dir for system preferences
 	dodir /opt/${P}/.systemPrefs
@@ -96,16 +117,21 @@ src_install () {
 		${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
 		${T}/sun_java.desktop
 
-	if use gnome ; then
-		#TODO check this on Gnome
-		dodir /usr/share/gnome/apps/Internet
-		insinto /usr/share/gnome/apps/Internet
-		doins ${T}/sun_java.desktop
-	fi
-	if use kde ; then
-		dodir $KDEDIR/share/applnk/Internet
-		insinto $KDEDIR/share/applnk/Internet
-		doins ${T}/sun_java.desktop
+	if [ "`use x86`" ]; then
+		if [ "`use gnome`" ] ; then
+			#TODO check this on Gnome
+			dodir /usr/share/gnome/apps/Internet
+			insinto /usr/share/gnome/apps/Internet
+			doins ${T}/sun_java.desktop
+		fi
+
+		if [ "`use kde`" ] ; then
+			dodir /usr/share/applnk/Internet
+			insinto /usr/share/applnk/Internet
+			doins ${T}/sun_java.desktop
+		fi
+	else
+		eerror "Sorry no kde, gnome support for your arch now."
 	fi
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
@@ -117,10 +143,16 @@ src_install () {
 
 pkg_postinst () {
 	# Create files used as storage for system preferences.
-	touch /opt/${P}/.systemPrefs/.system.lock
-	chmod 644 /opt/${P}/.systemPrefs/.system.lock
-	touch /opt/${P}/.systemPrefs/.systemRootModFile
-	chmod 644 /opt/${P}/.systemPrefs/.systemRootModFile
+	PREFS_LOCATION=/opt/${P}/jre
+	mkdir -p ${PREFS_LOCATION}/.systemPrefs
+	if [ ! -f ${PREFS_LOCATION}/.systemPrefs/.system.lock ] ; then
+		touch $PREFS_LOCATION/.systemPrefs/.system.lock
+		chmod 644 $PREFS_LOCATION/.systemPrefs/.system.lock
+	fi
+	if [ ! -f $PREFS_LOCATION/.systemPrefs/.systemRootModFile ] ; then
+		touch $PREFS_LOCATION/.systemPrefs/.systemRootModFile
+		chmod 644 $PREFS_LOCATION/.systemPrefs/.systemRootModFile
+	fi
 
 	# Set as default VM if none exists
 	java_pkg_postinst
@@ -148,7 +180,7 @@ pkg_postinst () {
 			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
 		done
 
-		# /opt/sun-jdk-1.4.2.03/jre/bin/java_vm
+		# /opt/$VM/jre/bin/java_vm
 		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/jre/bin/java_vm
 
 		einfo "you should have seen lots of chpax output above now"

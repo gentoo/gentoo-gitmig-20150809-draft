@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.03.ebuild,v 1.3 2004/01/10 18:26:14 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.03.ebuild,v 1.4 2004/02/15 06:57:19 strider Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -35,7 +35,7 @@ CHPAX_CONSERVATIVE_FLAGS="pemsv"
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
 	einfo ${HOMEPAGE}
-	einfo "(select the \"Linux self-extracting file\" package format of the SDK)"
+	einfo "(SDK 32-bit/64-bit for Windows/Linux/Solaris SPARC 32-bit for Solaris x86, then select download Linux Self-extracting."
 	einfo "and move it to ${DISTDIR}"
 }
 

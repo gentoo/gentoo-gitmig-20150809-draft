@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.09.ebuild,v 1.7 2004/02/15 06:57:19 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.10.ebuild,v 1.1 2004/02/15 06:57:19 strider Exp $
 
 IUSE="doc"
 
 inherit java nsplugins
 
-At="j2sdk-1_3_1_09-linux-i586.bin"
-S="${WORKDIR}/jdk1.3.1_09"
+At="j2sdk-1_3_1_10-linux-i586.bin"
+S="${WORKDIR}/jdk1.3.1_10"
 SRC_URI="${At}"
-DESCRIPTION="Sun Java Development Kit 1.3.1_09"
-HOMEPAGE="http://java.sun.com/products/archive/j2se/1.3.1_09/index.html"
+DESCRIPTION="Sun Java Development Kit 1.3.1_10"
+HOMEPAGE="http://java.sun.com/j2se/1.3/download.html"
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.7
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
@@ -20,7 +20,7 @@ PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
-KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
+KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
 RESTRICT="fetch"
 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
@@ -29,7 +29,7 @@ CHPAX_CONSERVATIVE_FLAGS="pemsv"
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
 	einfo ${HOMEPAGE}
-	einfo "(select the \"Linux self-extracting file\" package format of the SDK)"
+	einfo "(SDK 32-bit/64-bit for Windows/Linux/Solaris SPARC 32-bit for Solaris x86, then select download Linux Self-extracting."
 	einfo "and move it to ${DISTDIR}"
 }
 
