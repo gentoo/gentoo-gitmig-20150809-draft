@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.14 2003/09/07 00:08:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.15 2003/09/11 01:22:29 msterret Exp $
 
 inherit flag-o-matic
 
@@ -36,13 +36,13 @@ case $ARCH in
 			_XA_EXT=$_XA_SPARC_EXT
 			_XA_UNCOMPRESS=uncompress
 			;;
-   alpha)
-            _XA_CYUV=$_XA_CYUV_ALPHA
-            _XA_CVID=$_XA_CVID_ALPHA
-            _XA_IV32=$_XA_IV32_ALPHA
-            _XA_EXT=$_XA_ALPHA_EXT
-            _XA_UNCOMPRESS=gunzip
-            ;;
+	alpha)
+			_XA_CYUV=$_XA_CYUV_ALPHA
+			_XA_CVID=$_XA_CVID_ALPHA
+			_XA_IV32=$_XA_IV32_ALPHA
+			_XA_EXT=$_XA_ALPHA_EXT
+			_XA_UNCOMPRESS=gunzip
+			;;
 	ppc)
 			_XA_CYUV=$_XA_CYUV_PPC
 			_XA_CVID=$_XA_CVID_PPC
@@ -68,9 +68,9 @@ SRC_URI="${XANIM_SRC}/${MY_P}.tar.gz
 	sparc? ${XANIM_SRC}/${_XA_CYUV_SPARC}${_XA_SPARC_EXT}
 	sparc? ${XANIM_SRC}/${_XA_CVID_SPARC}${_XA_SPARC_EXT}
 	sparc? ${XANIM_SRC}/${_XA_IV32_SPARC}${_XA_SPARC_EXT}
-    alpha? ${XANIM_SRC}/${_XA_CYUV_ALPHA}${_XA_ALPHA_EXT}
-    alpha? ${XANIM_SRC}/${_XA_CVID_ALPHA}${_XA_ALPHA_EXT}
-    alpha? ${XANIM_SRC}/${_XA_IV32_ALPHA}${_XA_ALPHA_EXT}
+	alpha? ${XANIM_SRC}/${_XA_CYUV_ALPHA}${_XA_ALPHA_EXT}
+	alpha? ${XANIM_SRC}/${_XA_CVID_ALPHA}${_XA_ALPHA_EXT}
+	alpha? ${XANIM_SRC}/${_XA_IV32_ALPHA}${_XA_ALPHA_EXT}
 	ppc? ${XANIM_SRC}/${_XA_CYUV_PPC}${_XA_PPC_EXT}
 	ppc? ${XANIM_SRC}/${_XA_CVID_PPC}${_XA_PPC_EXT}
 	ppc? ${XANIM_SRC}/${_XA_IV32_PPC}${_XA_PPC_EXT}

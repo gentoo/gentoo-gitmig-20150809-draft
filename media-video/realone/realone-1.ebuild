@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.10 2003/09/07 00:08:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.11 2003/09/11 01:22:29 msterret Exp $
 
 IUSE="gnome kde"
 
@@ -115,13 +115,13 @@ src_install() {
 		doins ${FILESDIR}/realone.desktop
 	fi
 
-    # Gnome desktop entry
-    if [ -n "`use gnome`" ]; then
-    	insinto /usr/share/applications
-        doins ${FILESDIR}/realone.desktop
-    fi
+	# Gnome desktop entry
+	if [ -n "`use gnome`" ]; then
+		insinto /usr/share/applications
+		doins ${FILESDIR}/realone.desktop
+	fi
 
-    # Install pixmaps
+	# Install pixmaps
 	insinto /usr/share/pixmaps
 	doins *.xpm
 
