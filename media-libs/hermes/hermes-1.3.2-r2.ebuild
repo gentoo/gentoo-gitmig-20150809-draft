@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.23 2004/07/17 18:12:48 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.24 2004/07/23 19:58:48 tgall Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="http://dark.x.dtu.dk/~mbn/clanlib/download/download-sphair/${MY_P}.tar.
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~mips amd64 ~hppa ~ppc64"
+KEYWORDS="x86 ppc sparc alpha ~mips amd64 ~hppa ppc64"
 IUSE=""
 
 DEPEND="sys-devel/libtool
