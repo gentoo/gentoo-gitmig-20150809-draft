@@ -80,3 +80,4 @@ move app-sci/biopython sci-biology/biopython
 move app-sci/ecell sci-biology/ecell
 move app-sci/generic-genome-browser sci-biology/generic-genome-browser
 move app-sci/emboss sci-biology/emboss
+move app-sci/embassy-domainatrix sci-biology/embassy-domainatrix
