@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.13 2004/06/25 09:06:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.14 2004/06/29 04:11:18 vapier Exp $
 
 inherit perl-module games
 
@@ -14,7 +14,7 @@ SRC_URI="http://guillaume.cottenceau.free.fr/fb/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc hppa amd64 ~alpha sparc"
+KEYWORDS="x86 ppc sparc ~alpha hppa amd64"
 IUSE=""
 
 RDEPEND="virtual/glibc
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
+	cd ${S}
 	sed -i \
 		-e 's:INSTALLDIRS=.*:PREFIX=${D}/usr:' \
 		c_stuff/Makefile \
@@ -36,7 +36,11 @@ src_unpack() {
 	sed -i \
 		-e '/^dnl AM_CONFIG_HEADER/s:dnl ::' configure.in \
 		|| die "sed configure.in failed"
-	env WANT_AUTOCONF=2.5 ./bootstrap.sh || die "bootstrap failed"
+	libtoolize -c -f || die "libtoolize failed"
+	env \
+		WANT_AUTOMAKE=1.8 \
+		WANT_AUTOCONF=2.5 \
+		./bootstrap.sh || die "bootstrap failed"
 	echo '#include "config.h"' >> fb_serv.h
 }
 
