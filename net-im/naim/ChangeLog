@@ -1,6 +1,11 @@
 # ChangeLog for net-im/naim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.10 2002/12/10 21:36:33 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.11 2002/12/21 23:19:14 lostlogic Exp $
+
+*naim-0.11.5.1 (21 Dec 2002)
+
+  21 Dec 2002; Brandon Low <lostlogic@gentoo.org> naim-0.11.5.1.ebuild :
+  Minor update to 0.11.5.
 
 *naim-0.11.5 (10 Dec 2002)
 
