@@ -1,0 +1,49 @@
+set +o posix
+relpath ()
+{
+    set +x
+    OLDIFS="\$IFS"; IFS='/'
+    local orgwords="\$(echo \${1})"
+    local locwords="\$(echo \${2})"
+    IFS="\$OLDIFS"
+
+    local newpath="" p l
+    declare -i relp=0
+    declare -i deep=0
+    set -- \$(echo \$locwords)
+    for p in \$orgwords ; do
+	deep=\$((deep + 1))
+	eval l=\\\${\$deep}
+	if test "\$l" = "\$p" -a \$relp -eq 0 ; then
+	    : nothing
+	else
+	    relp=\$((relp + 1))
+	    newpath="\${newpath}/\$p"
+	    if test -n "\$l" ; then
+		if test \$relp -eq 1 ; then
+		    newpath="..\${newpath}"
+		else
+		    newpath="../\${newpath}"
+		fi
+	    fi
+        fi
+    done
+    if test \$deep -lt \$# ; then
+	shift \$deep
+	while test \$# -gt 0  ; do
+	    newpath="../\${newpath}"
+	    shift
+	done
+    fi
+    echo \$newpath
+    set -x
+}
+rellink ()
+{
+    relpath=\$(relpath \${1%/*} \${2%/*})
+    if test -d \$1 ; then
+	ln -sf \$relpath/\${1##*/}/ \$2
+    else
+	ln -sf \$relpath/\${1##*/}  \$2
+    fi
+}

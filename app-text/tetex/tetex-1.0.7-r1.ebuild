@@ -1,39 +1,68 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r1.ebuild,v 1.6 2000/10/05 00:12:58 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r1.ebuild,v 1.7 2000/10/19 15:59:08 achim Exp $
 
 P=tetex-1.0.7
-A="teTeX-src-1.0.7.tar.gz teTeX-texmf-1.0.2.tar.gz"
+A="teTeX-src-1.0.7.tar.gz teTeX-texmf-1.0.2.tar.gz teTeX-texmfsrc-1.0.1.tar.gz"
 S=${WORKDIR}/teTeX-1.0
 DESCRIPTION="teTeX is a complete TeX distribution"
 SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-1.0.7.tar.gz
-	 ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-texmf-1.0.2.tar.gz"
+	 ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-texmf-1.0.2.tar.gz
+	 ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-texmfsrc-1.0.1.tar.gz"
+
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
 
 src_unpack() {
+
   unpack teTeX-src-1.0.7.tar.gz
+#  tar xvzf ${FILESDIR}/teTeX-listings.tar.gz
+  cd ${S}
+
+  patch -p0 < ${FILESDIR}/teTeX-1.0.dif
   mkdir texmf
   cd texmf
-  unpack teTeX-texmf-1.0.2.tar.gz
+  tar xzf ${DISTDIR}/teTeX-texmf-1.0.2.tar.gz
+  tar xzf ${FILESDIR}/ec-ready-mf-tfm.tar.gz -C ..
+  tar xzf ${FILESDIR}/teTeX-french.tar.gz
+  patch -p0 < ${FILESDIR}/texmf.dif
+
+
 }
 
 src_compile() {                           
+
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/usr --bindir=/usr/bin
-  try make
-  try make
-  try make
+
+  try ./configure --host=${CHOST} --prefix=/usr --bindir=/usr/bin \
+	    --datadir=${S} \
+	    --without-texinfo \
+	    --without-dialog \
+	    --with-system-ncurses \
+	    --with-system-zlib \
+	    --with-system-pnglib \
+	    --enable-multiplatform \
+	    --with-x \
+	    --with-epsfwin \
+	    --with-mftalkwin \
+	    --with-regiswin \
+	    --with-tektronixwin \
+	    --with-unitermwin \
+	    --with-ps=gs \
+	    --enable-ipc \
+	    --with-etex
+
+  try make texmf=/usr/share/texmf
+
 }
 
 src_install() {                               
   cd ${S}
-  dodir /usr/share
-  cp -a ../texmf ${D}/usr/share/
-  make prefix=${D}/usr bindir=${D}/usr/bin texmf=${D}/usr/share/texmf install
+  dodir /usr/share/
+  cp -af texmf ${D}/usr/share
+  sed -e "s:\$(scriptdir)/texconfig init:echo:" Makefile > Makefile.install
+  try make prefix=${D}/usr bindir=${D}/usr/bin texmf=${D}/usr/share/texmf -f Makefile.install install
 
-  prepman
-  prepinfo
 
   dodoc PROBLEMS README
   docinto texk
@@ -63,7 +92,12 @@ src_install() {
 }
 
 
-
+pkg_postinst() {
+  if [ $ROOT = "/" ]
+  then
+    texconfig init
+  fi
+}
 
 
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3-r1.ebuild,v 1.4 2000/09/15 20:08:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3-r1.ebuild,v 1.5 2000/10/19 15:59:08 achim Exp $
 
 P=openjade-1.3
 A=${P}.tar.gz
@@ -17,9 +17,11 @@ src_unpack() {
 src_compile() {                           
   cd ${S}
   SGML_PREFIX=/usr/share/sgml
-  try ./configure --host=${CHOST} --prefix=/usr --datadir=/usr/share/sgml/jade --enable-http 
-#	--enable-default-catalog=$SGML_PREFIX/dtd/docbook/docbook.cat:$SGML_PREFIX/stylesheets/docbook/catalog:$SGML_PREFIX/jade/dsssl/catalog:
-#	--enable-default-search-path=/usr/share/sgml/stylesheets/docbook/:/usr/share/sgml/dtd/docbook/:/usr/share/sgml/jade/dsssl/:
+  try ./configure --host=${CHOST} --prefix=/usr \
+	--enable-http \
+	--enable-default-catalog=/usr/share/sgml/${P}/catalog \
+	--enable-default-search-path=/usr/share/sgml \
+	--datadir=/usr/share/sgml/${P}
   try make
 }
 
@@ -27,14 +29,35 @@ src_install() {
   cd ${S}
   dodir /usr
   dodir /usr/lib
-  try make prefix=${D}/usr datadir=${D}/usr/share/sgml/jade install
-  dosym openjade /usr/bin/jade
-  dodir /usr/share/sgml/jade
-#  rm ${D}usr/share/builtins.dsl
-  for i in unicode dsssl pubtext
+  try make prefix=${D}/usr datadir=${D}/usr/share/sgml/${P} install
+  dosym openjade  /usr/bin/jade
+  dosym onsgmls   /usr/bin/nsgmls
+  dosym osgmlnorm /usr/bin/sgmlnorm
+  dosym ospam     /usr/bin/spam
+  dosym ospent    /usr/bin/spent
+  dosym osx 	  /usr/bin/sgml2xml
+
+  insinto /usr/include/sp/generic
+  doins generic/*.h
+
+  insinto /usr/include/sp/include
+  doins include/*.h
+
+  insinto /usr/include/sp/lib
+  doins lib/*.h
+
+
+  insinto /usr/share/sgml/${P}/
+  for i in catalog dsssl.dtd style-sheet.dtd fot.dtd
   do
-    cp -af $i ${D}/usr/share/sgml/jade
+    doins dsssl/$i
   done
+
+#  for i in unicode dsssl pubtext
+#  do
+#    cp -af $i ${D}/usr/share/sgml/${P}
+#  done
+
   dodoc COPYING NEWS README VERSION
   docinto html/doc
   dodoc doc/*.htm
@@ -42,6 +65,7 @@ src_install() {
   dodoc jadedoc/*.htm
   docinto html/jadedoc/images
   dodoc jadedoc/images/*
+
 }
 
 
