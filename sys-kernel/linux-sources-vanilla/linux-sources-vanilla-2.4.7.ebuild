@@ -42,9 +42,8 @@ src_compile() {
     # does this have any effect?
     try make mrproper
     
-    # use the default config from the boot disk
-    try cp ${FILESDIR}/config.default .config
-    try yes \"\" \| make oldconfig
+    # create default config
+    try yes \"\" \| make config
     echo "Ignore any errors from the yes command above."
     
     cd ${S}
