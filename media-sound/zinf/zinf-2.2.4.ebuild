@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.4.ebuild,v 1.5 2004/02/08 03:06:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.4.ebuild,v 1.6 2004/02/09 03:27:14 eradicator Exp $
 
 IUSE="debug esd X gtk oggvorbis gnome arts nls"
 
@@ -75,3 +75,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
+pkg_postinst() {
+	einfo "Also support has been disabled in 2.2.4 due to compilation problems."
+	einfo "If you require alsa support, please use another version."
+}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5_beta1.ebuild,v 1.1 2004/02/08 03:06:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5_beta1.ebuild,v 1.2 2004/02/09 03:27:14 eradicator Exp $
 
 IUSE="debug esd X gtk oggvorbis gnome arts alsa nls"
 
@@ -29,10 +29,12 @@ RDEPEND="=dev-libs/glib-1.2*
 	alsa? ( >=media-libs/alsa-lib-0.9.8 )
 	arts? ( kde-base/arts )"
 
+# When updating next, check boost to see if the newer versions fix compilation
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	nls? ( sys-devel/gettext )
 	>=media-libs/id3lib-3.8.0
+	<dev-libs/boost-1.31.0_alpha1
 	dev-db/metakit
 	dev-lang/perl"
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/zinf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.16 2004/02/08 03:06:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.17 2004/02/09 03:27:14 eradicator Exp $
+
+  08 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> zinf-2.2.4.ebuild,
+  zinf-2.2.5_beta1.ebuild:
+  Putting einfo's in 2.2.4 to mention --disable-alsa. Added boost dep to 2.2.5
+  to close bug #40792.
 
 *zinf-2.2.5_beta1 (07 Feb 2004)
 
