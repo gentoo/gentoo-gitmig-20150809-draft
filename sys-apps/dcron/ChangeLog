@@ -1,11 +1,15 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.16 2003/05/20 19:41:48 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.17 2003/06/22 21:00:20 kumba Exp $
+
+
+*dcron-2.9 (19 Mar 2003)
+
+  22 Jun 2003; Joshua Kinard <kumba@gentoo.org> dcron-2.9.ebuild:
+  Changed ~sparc to sparc, added ~mips
 
   20 May 2003; Tavis Ormandy <taviso@gentoo.org> dcron-2.9.ebuild:
   Removing gcc hardcode, marking alpha
-
-*dcron-2.9 (19 Mar 2003)
 
   16 Apr 2003; Tavis Ormandy <taviso@gentoo.org> dcron-2.9.ebuild:
   Marking ~alpha.
