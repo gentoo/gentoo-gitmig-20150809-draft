@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.1.ebuild,v 1.2 2004/11/05 15:48:13 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.1.ebuild,v 1.3 2004/11/09 23:18:37 agriffis Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		#mysql41? ( >=dev-db/mysql-4.1 ) # There is no mysql-4.1 in gentoo!!!  Ouch
 RDEPEND="virtual/cron
 		app-admin/logrotate"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha ~ia64"
 SLOT="0"
 
 # some FHS-like structure
