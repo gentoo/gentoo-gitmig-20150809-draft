@@ -1,18 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.4 2002/08/28 15:46:57 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.5 2002/08/30 14:41:00 raker Exp $
+
+POSTFIX_TLS_VER="0.8.11a-${PV}-0.9.6d"
+S=${WORKDIR}/${P}
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
+SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
+	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/pfixtls-${POSTFIX_TLS_VER}.tar.gz )"
+
 LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="x86 sparc sparc64 ppc"
-
-POSTFIX_TLS_VER="0.8.11a-${PV}-0.9.6d"
-
-S=${WORKDIR}/${P}
-SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
-	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/pfixtls-${POSTFIX_TLS_VER}.tar.gz )"
 
 PROVIDE="virtual/mta"
 DEPEND=">=sys-libs/db-3.2
@@ -48,13 +48,14 @@ src_unpack() {
 
 	if [ "`use sasl`" ]
 	then
-		if [ ! -e /usr/include/sasl/sasl.h ]
+		if [ -e /usr/include/sasl/sasl.h ]
 		then
 			# saslv2
 			cd ${S}
 			patch -p1 < ${FILESDIR}/postfix-1.1.11-saslv2.diff || die
 		fi
 	fi			
+
 	cd ${S}/conf
 	cp main.cf main.cf.orig
 	sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" main.cf.orig > main.cf
