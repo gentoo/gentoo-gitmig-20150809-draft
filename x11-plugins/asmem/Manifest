@@ -1,4 +1,4 @@
-MD5 03aad3fabdbbf86150c689229d4518a3 ChangeLog 694
-MD5 07677c7b4c4475ee085303ed6649ceac asmem-1.10.ebuild 692
-MD5 33fafb23eadaab9d28fe8c19aabc92a1 files/digest-asmem-1.10 61
+MD5 202c69f511f289ac70650d22d908aa65 ChangeLog 801
+MD5 24ce499b33a03a304985021728107c71 asmem-1.10.ebuild 698
 MD5 329806857b8a65ad34c7528cf9cd6e9d files/asmem-1.10-gentoo.patch 762
+MD5 33fafb23eadaab9d28fe8c19aabc92a1 files/digest-asmem-1.10 61
