@@ -8,5 +8,4 @@ MD5 1ec4778f0dbac85bc27bc2c2541e5c64 files/kdepim-3.4.0-fix-imap-resource-type.p
 MD5 318e6b50444a5837fed2a5ea9ecc57e9 files/digest-kdepim-3.2.3 66
 MD5 38f90eca12bd5623fc7f28e814efd1a2 files/digest-kdepim-3.3.2 66
 MD5 678530a6c8baabd5d9cbe817b5c571f2 files/kdepim-3.2.3-cjk.diff 6957
-MD5 21ee60d2fa71ac7e3b1ba13411911045 files/kdepim-3.4.0_rc1-dimap-cache-loss.patch 3168
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kdepim-3.4.0-r1 67

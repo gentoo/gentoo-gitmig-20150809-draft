@@ -6,7 +6,6 @@ MD5 8d7f9cfe3e44c7329dfe008a3e2033a0 ChangeLog 34361
 MD5 c68a9303a3f1e800b9c87c004fc3eee1 kdebase-3.3.2-r2.ebuild 3629
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
 MD5 473c39b9f37a35e244d5718bf0006716 files/digest-kdebase-3.3.2-r2 68
-MD5 388cb758e31883e64f4686f2c5d5ac40 files/kdebase-3.4.0_rc1-startkde-gentoo.patch 1415
 MD5 473c39b9f37a35e244d5718bf0006716 files/digest-kdebase-3.3.2-r1 68
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kdebase-3.4.0 68
 MD5 daa284d6a1f62c5c73deb8aeda9df57d files/digest-kdebase-3.2.3-r3 68

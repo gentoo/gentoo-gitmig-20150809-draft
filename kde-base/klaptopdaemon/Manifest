@@ -2,4 +2,3 @@ MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 49c4b2ea88742cdb2d6b49bad6a8b7e3 ChangeLog 1410
 MD5 cb4208bcb37d7146ebbf0724bd154646 klaptopdaemon-3.4.0.ebuild 439
 MD5 dbade662a75a6b44c890deef5400485f files/digest-klaptopdaemon-3.4.0 68
-MD5 275c506592fae0e1f9e8c88d3d7c8629 files/acpi_helper.diff 1786
