@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 86661ba0ca338a2783dd95296df291f3 ChangeLog 55289
-MD5 142c4f0f1b36b7e57a99103c618ea5d9 gcc-2.95.3-r8.ebuild 9107
-MD5 8ba3ef9809d3cee777b3f2c995bdb742 gcc-3.0.4-r6.ebuild 8469
+MD5 ff1e34206f0acd8bf35fdfe97d7416d4 gcc-2.95.3-r8.ebuild 9108
+MD5 f6c84e13f0ffb79fa7856b2f7a3a1e63 gcc-3.0.4-r6.ebuild 8460
 MD5 3a2e4f5d5f2d94e5ee2a399ab3b0f32e gcc-3.3-r1.ebuild 16506
 MD5 ca02ab22b16026345e426c4698eb3058 gcc-3.1.1-r1.ebuild 9451
 MD5 b5f1d4d71ad38c5c5e489466ac0ad399 gcc-3.3.3-r3.ebuild 24690
@@ -37,6 +37,7 @@ MD5 5a9db19cd5ad6ad16b0f838d525d842a files/digest-gcc-3.3.3-r3 522
 MD5 0d683280daf95e6bb9712549352a200c files/digest-gcc-3.1.1-r1 140
 MD5 651abb651e5fdcec7c83354b5742d26d files/digest-gcc-3.4.0-r6 443
 MD5 3fd5a29d44b89f4fb220fccaa968fc05 files/digest-gcc-3.3.3-r6 442
+MD5 9c13e6b0d5770979430b76c578afa22c files/gcc3-program-transform.patch 9771
 MD5 8f56750ce25ca30ffebcbdb65de95a1f files/digest-gcc-3.3.3_pre20040426 138
 MD5 f57a9900e4d0edcae7b1e327e263d2f7 files/digest-gcc-3.3 294
 MD5 12d4b0c4fc49fad52850ab007c3c7371 files/digest-gcc-3.3-r1 353
@@ -47,13 +48,12 @@ MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r2 361
 MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r3 361
 MD5 29b68fb9b347114baf405bf67ebca0cd files/digest-gcc-3.3.2-r4 361
 MD5 b56b1fa94f82e5c569de7677b8a485e0 files/fix_libtool_files.sh 1738
+MD5 33df162e1767e168f4f39442785071af files/texinfo-4.0-no-ncurses-gentoo.diff 51748
 MD5 385267d11aa8b32522d1585b2d520476 files/gcc-3-deopt-doc.patch 819
 MD5 a84561f46d573c1c835b1c4d2510cc07 files/gcc-3-deopt.patch 588
-MD5 9c13e6b0d5770979430b76c578afa22c files/gcc3-program-transform.patch 9771
 MD5 8baffb486c75efe253bd2daa88daa7d6 files/gcc331_use_multilib.amd64.patch 352
 MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
 MD5 c589fe6a54dc88cf40463cf85a32e81e files/specs-3.3-amd64-unilib 3953
-MD5 33df162e1767e168f4f39442785071af files/texinfo-4.0-no-ncurses-gentoo.diff 51748
 MD5 782ac9b8dbc629fe4fdfaa7744cfc004 files/scan_libgcc_linked_ssp.sh 869
 MD5 01c41c9e6857eb40d402f2acb2bd96f9 files/digest-gcc-3.3.2-r5 361
 MD5 21848cde4833618f2898e7d17b75633e files/scan_libgcc_linked_ssp.txt 173
@@ -67,6 +67,10 @@ MD5 d476dba058ac32b251723e136c6dfa8e files/digest-gcc-3.3.3-r4 526
 MD5 9996ea8d65888808363832ea1571fe0a files/digest-gcc-3.3.3_pre20040322 138
 MD5 e962c23dd4396850f0e36424ec5596d7 files/digest-gcc-3.3.3_pre20040408-r1 138
 MD5 3a68d40d170427ffbfcf181b5099d693 files/digest-gcc-3.3.3-r5 528
+MD5 33df162e1767e168f4f39442785071af files/3.0/texinfo-4.0-no-ncurses-gentoo.diff 51748
+MD5 9c13e6b0d5770979430b76c578afa22c files/3.0/gcc3-program-transform.patch 9771
+MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
+MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
 MD5 aa7a1e8bbe618c0d88368e69caeb7653 files/3.1/gcc31-attr-visibility.patch.bz2 3671
 MD5 8b4c6af1c730dcdd843a77e8095d312b files/3.1/gcc31-attr-visibility2.patch.bz2 2341
 MD5 98f539e65ab7e21994e5d378537a5506 files/3.1/gcc31-boehm-gc-libs.patch.bz2 1921
@@ -87,8 +91,6 @@ MD5 2f1d2c02b99aa182f1fd9b6328c8b77a files/3.1/gcc31-libstdc++-setrlim.patch.bz2
 MD5 df404bbcc95193a2591895758915e74e files/3.1/gcc31-pr6643.patch.bz2 421
 MD5 386ffd7fc3ca4a8af55155fe57871dc4 files/3.1/gcc31-test-rotate.patch.bz2 1060
 MD5 7f4bc242692c8e5a2ea0e3e865433d94 files/3.1/gcc31-trunc_int_for_mode.patch.bz2 826
-MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
-MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
 MD5 2b3b3b8637dc17eedce3b1ca1b68f1f1 files/3.2/gcc-3.2-glibc-2.3-compat.diff 5511
 MD5 a97a78f90c372855823b9facf1ba57b6 files/3.2/gcc-3.2.ctype.patch 3500
 MD5 7f884a426afe182c10d2a5fad94c73cc files/3.2/gcc-3.2.fix-copy.patch 2185
@@ -155,7 +157,7 @@ MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/reiser4-why-do-you-hate-me.patc
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFAxPwuHTu7gpaalycRAkFdAKCy+gndVUp9+b9eg6HZRCdpRPr6jwCg8es3
-IggGoNn2BFZgLAEYtF70zeE=
-=GSDh
+iD8DBQFAxQFoHTu7gpaalycRAqWtAKC7YnGiVjaqUJiaTc4H6DljmmWlrACcDUmJ
+yziUbR8+/7jSfk6Go9CFqZs=
+=2MeR
 -----END PGP SIGNATURE-----

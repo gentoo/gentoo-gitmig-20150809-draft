@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.20 2004/06/07 23:29:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.21 2004/06/07 23:59:16 vapier Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
 
-inherit libtool flag-o-matic
+inherit libtool flag-o-matic eutils
 
 TV=4.0
 GCC_SUFFIX=-3.0
@@ -56,7 +56,7 @@ src_unpack() {
 	mv ${S}/texinfo-${TV} ${S}/texinfo
 	cd ${S}/texinfo
 	if use build ; then
-		patch -p0 < ${FILESDIR}/texinfo-${TV}-no-ncurses-gentoo.diff || die
+		epatch ${FILESDIR}/3.0/texinfo-${TV}-no-ncurses-gentoo.diff
 		touch *
 	fi
 
@@ -65,7 +65,7 @@ src_unpack() {
 	#of the binaries (thanks to Mandrake)
 	if build_multiple
 	then
-		patch -p1 <${FILESDIR}/gcc3-program-transform.patch || die
+		epatch ${FILESDIR}/3.0/gcc3-program-transform.patch
 	fi
 
 	#fixup libtool to correctly generate .la files with portage
