@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.3 2005/01/28 09:21:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.4 2005/02/02 08:30:17 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -17,6 +17,7 @@ app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl
 app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
+app-text/acroread
 games-fps/americas-army
 games-fps/doom3-demo
 games-fps/doom3
