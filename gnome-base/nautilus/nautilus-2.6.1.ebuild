@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.1.ebuild,v 1.7 2004/08/21 15:21:49 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.1.ebuild,v 1.8 2004/11/01 01:04:20 vapier Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="A filemanager for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"
-SLOT="0"
+
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa amd64 ~ia64 ~mips"
 IUSE="oggvorbis cups gstreamer"
 
@@ -48,7 +49,7 @@ DEPEND="${RDEPEND}
 PDEPEND=">=x11-themes/gnome-icon-theme-1.1.91
 	x11-themes/gnome-themes"
 
-DOCS="AUTHORS COPYIN* ChangeLo* HACKING INSTALL MAINTAINERS NEWS README THANKS TODO"
+DOCS="AUTHORS ChangeLo* HACKING INSTALL MAINTAINERS NEWS README THANKS TODO"
 
 G2CONF="${G2CONF} $(use_enable gstreamer)"
 
@@ -64,8 +65,8 @@ src_unpack() {
 
 	# regenerating only needed with patching
 	if use cups || use gstreamer; then
-		WANT_AUTOCONF_2_5=1 autoheader || die
-		WANT_AUTOCONF_2_5=1 autoconf || die
+		WANT_AUTOCONF=2.5 autoheader || die
+		WANT_AUTOCONF=2.5 autoconf || die
 		WANT_AUTOMAKE=1.4 automake || die
 	fi
 

@@ -1,18 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.22 2004/07/14 15:19:45 agriffis Exp $
-
-IUSE="nls mozilla"
-
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.23 2004/11/01 01:04:20 vapier Exp $
 
 DESCRIPTION="nautilus"
+HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc"
-
-
-HOMEPAGE="http://www.gnome.org/projects/nautilus/"
+IUSE="nls mozilla"
 
 # =gnome-base/gnome-core-1.4*
 RDEPEND="mozilla? ( >=net-www/mozilla-1.0_rc3 )
