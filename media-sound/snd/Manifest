@@ -1,4 +1,6 @@
-MD5 a94650f99c088a10b4e7063572e3e8a4 ChangeLog 1070
 MD5 05efb7ff12c5da58ebcc922686819df5 snd-6.7.ebuild 1688
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+MD5 d6a2e210976115b7d67ca6b2c1dcaa9d ChangeLog 1195
+MD5 811e50656cfcba3c62b1792c3c2558f2 snd-7.0.ebuild 1688
 MD5 cfd80dce79511197bafc596a9125c832 files/digest-snd-6.7 60
+MD5 360e94992da1ee91fea9ac723fc421c0 files/digest-snd-7.0 60

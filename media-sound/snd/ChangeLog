@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/snd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.7 2003/07/12 20:30:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.8 2004/01/08 00:13:41 mholzer Exp $
+
+*snd-7.0 (08 Jan 2004)
+
+  08 Jan 2004; Martin Holzer <mholzer@gentoo.org> snd-7.0.ebuild:
+  Version bumped. Closes 37046
 
   21 Jun 2003; jje <jje@gentoo.org> snd-6.7.ebuild, snd-6.ebuild:
   Remove snd-6 and move snd-6.7 to stable.
