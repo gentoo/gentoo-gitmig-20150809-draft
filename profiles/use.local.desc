@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.188 2003/12/17 11:48:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.189 2003/12/23 08:26:24 phosphan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -38,6 +38,8 @@ app-sci/maxima:gcl   - adds gcl (lisp) support to maxima
 app-sci/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 app-sci/octave-forge:ginac - Adds app-sci/ginac (symbolic math) support
 app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extentions) support
+app-sci/opendx:cdf - Adds cdf data exchange format to app-sci/opendx
+app-sci/opendx:hdf - Adds support for the Hierarchical Data Format to app-sci/opendx
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
 dev-db/postgresql:pg-hier - Enable recursive queries like Oracle's 'CONNECT BY' feature.
@@ -86,9 +88,7 @@ gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
-media-gfx/autotrace:imagemagick - Enables Imagemagick
 media-gfx/grace:fftw - Enables FFTW support for grace
-media-gfx/grace:netcdf - Enable NetCDF data format support for grace
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
 media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled patched version.

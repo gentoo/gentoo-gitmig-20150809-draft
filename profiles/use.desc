@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.127 2003/12/17 15:41:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.128 2003/12/23 08:26:24 phosphan Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -70,6 +70,7 @@ guile - Adds support for dev-util/guile (interpreter for Scheme)
 icc - Use the Intel C++ Compiler if the package supports it
 icc-pgo - Enable PGO data generation or use when use icc.
 imap - Adds support for IMAP
+imagemagick - Enables support for Imagemagick (image converter)
 imlib - Adds support for media-libs/imlib (Image loading and rendering library)
 innodb - Adds innodb support for mySQL (transaction support)
 informix - Adds support for Informix database
@@ -108,6 +109,7 @@ mysql - Adds mySQL support
 nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
 nhc98 - Use the nhc98 Haskell compiler instead of GHC if the package supports it
+netcdf - Enable NetCDF data format support
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nocardbus - Disables cardbus support in pcmcia-cs
 nocd - Tells emerge to install all files required to run the application without a CD mounted
