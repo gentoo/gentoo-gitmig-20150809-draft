@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.2.ebuild,v 1.4 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.2.ebuild,v 1.5 2003/03/14 07:41:29 george Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -107,15 +107,15 @@ src_compile() {
 	local myconf
 	use opengl && myconf="--enable-hopengl" || myconf="--disable-hopengl"
 
-	if test x$need_stage2 = xyes; then
+	if test x$need_stage1 = xyes; then
 		echo ">>> Bootstrapping intermediate GHC ${PV} using GHC ${BASE_GHC_VERSION}"
 
 		pushd "${STAGE1_B}" || die
 			./configure \
 				-host="${CHOST}" \
-				--prefix="${STAGE2_D}/usr" \
+				--prefix="${STAGE1_D}/usr" \
 				--with-ghc="${GHC}" \
-				--without-happy || die "intermediat stage configure failed"
+				--without-happy || die "intermediate stage configure failed"
 			#parallel make causes trouble
 			make || die "intermediate stage make failed"
 			make install || die
@@ -132,10 +132,12 @@ src_compile() {
 }
 
 src_install () {
-	make install \
-	    prefix="${D}/usr" \
-		infodir="${D}/usr/share/info" \
-		mandir="${D}/usr/share/man" || die
+	pushd "${STAGE2_B}" || die
+		make install \
+			prefix="${D}/usr" \
+			infodir="${D}/usr/share/info" \
+			mandir="${D}/usr/share/man" || die
+	popd
 
 	#need to remove ${D} from ghcprof script
 	cd ${D}/usr/bin
