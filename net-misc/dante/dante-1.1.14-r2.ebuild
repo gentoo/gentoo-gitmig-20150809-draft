@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.14-r1.ebuild,v 1.2 2003/12/23 10:48:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.14-r2.ebuild,v 1.1 2003/12/23 10:48:10 robbat2 Exp $
 
 inherit gcc fixheadtails
 
@@ -10,13 +10,14 @@ SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ia64"
 IUSE="tcpd debug"
 
-DEPEND="virtual/glibc
-	sys-libs/pam
-	tcpd? ( sys-apps/tcp-wrappers )
-	>=sys-apps/sed-4"
+RDEPEND="virtual/glibc
+		 sys-libs/pam
+		 tcpd? ( sys-apps/tcp-wrappers )"
+DEPEND="${RDEPEND}
+		>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
@@ -48,7 +49,9 @@ src_install() {
 
 	# our init script
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/dante-sockd-init dante-sockd
+	newexe ${FILESDIR}/dante-sockd-init-1.1.14-r2 dante-sockd
+	insinto /etc/conf.d
+	newins ${FILESDIR}/dante-sockd-conf-1.1.14-r2 dante-sockd
 
 	# install documentation
 	dodoc BUGS CREDITS LICENSE NEWS README SUPPORT TODO VERSION

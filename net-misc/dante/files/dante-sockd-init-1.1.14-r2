@@ -1,0 +1,45 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/files/dante-sockd-init-1.1.14-r2,v 1.1 2003/12/23 10:48:10 robbat2 Exp $
+
+SOCKD_OPT="-D"
+[ "${SOCKD_FORKDEPTH}" -gt 1 ] && SOCKD_OPT="${SOCKD_OPT} -N ${SOCKD_FORKDEPTH}"
+[ "${SOCKD_DEBUG}" -eq 1 ] && SOCKD_OPT="${SOCKD_OPT} -d"
+[ "${SOCKD_DISABLE_KEEPALIVE}" -eq 1 ] && SOCKD_OPT="${SOCKD_OPT} -n"
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	# firstly check that it exists
+    if [ ! -f /etc/socks/sockd.conf ] ; then
+		eerror "You need to setup /etc/socks/sockd.conf first"
+		eerror "Examples are in /usr/share/doc/dante[version]/example"
+		eerror "for info: info sockd.conf"
+		return 1
+	fi
+    /usr/sbin/sockd -V
+    ret=$?
+    if [ $ret -ne 0 ]; then
+        eerror "Something is wrong with your configuration file"
+        return 1
+    fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting dante sockd"
+	start-stop-daemon --start --quiet --pidfile /var/run/sockd.pid \
+		--make-pidfile --exec /usr/sbin/sockd -- ${SOCKD_OPT}
+	eend $? "Failed to start sockd"
+}
+
+stop() {
+	ebegin "Stopping dante sockd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/sockd.pid
+	eend $? "Failed to stop sockd"
+	# clean stale pidfile
+	[ -f /var/run/sockd.pid ] && rm -f /var/run/sockd.pid
+}
