@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.27.ebuild,v 1.2 2003/03/05 14:05:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.27.ebuild,v 1.3 2003/03/12 02:01:14 seemant Exp $
 
 IUSE="nls oggvorbis"
 
@@ -25,8 +25,8 @@ src_unpack() {
 	cd ${S}
 
 	#glibc fix
-	sed -i "s:extern int errno:#include <errno.h>:" src/easytag.h
-	sed -i "s:extern int errno:#include <errno.h>:" intl/dcigettext.c
+	sed -i "s:extern int errno;:#include <errno.h>:" src/easytag.h
+	sed -i "s:extern int errno;:#include <errno.h>:" intl/dcigettext.c
 }
 
 src_compile() {

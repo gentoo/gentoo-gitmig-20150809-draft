@@ -1,8 +1,12 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.8 2003/03/05 14:05:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.9 2003/03/12 02:01:14 seemant Exp $
 
 *easytag-0.27 (19 Feb 2003)
+
+  11 Mar 2003; Seemant Kulleen <seemant@gentoo.org> easytag-0.27.ebuild:
+  sed fix for my fix. thanks to: Tristan Henderson <T.Henderson@cs.ucl.ac.uk> in
+  bug #17326
 
   05 Mar 2003; Seemant Kulleen <seemant@gentoo.org> easytag-0.27.ebuild:
   errno fixes
