@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94.ebuild,v 1.1 2004/02/02 22:30:42 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94.ebuild,v 1.2 2004/02/02 22:49:58 mr_bones_ Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -41,8 +41,8 @@ src_unpack() {
 }
 
 src_compile() {
-	### i686-specific code in the boot loader is a bad idea; disabling to ensure 
-	### at least some compatibility if the hard drive is moved to an older or 
+	### i686-specific code in the boot loader is a bad idea; disabling to ensure
+	### at least some compatibility if the hard drive is moved to an older or
 	### incompatible system.
 	unset CFLAGS
 
@@ -116,11 +116,11 @@ pkg_postinst() {
 	ln -s grub.conf /boot/grub/menu.lst
 
 	[ -e /boot/grub/stage2 ] && mv /boot/grub/stage2{,.old}
-	
+
 	einfo "Copying files from /usr/lib/grub to /boot"
 	cp -p /usr/lib/grub/* /boot/grub
 	cp -p /usr/lib/grub/grub/*/* /boot/grub
-	
+
 	[ -e /boot/grub/grub.conf ] \
 		&& /usr/sbin/grub \
 			--batch \
