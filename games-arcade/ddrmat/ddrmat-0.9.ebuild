@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ddrmat/ddrmat-0.9.ebuild,v 1.2 2003/09/26 22:19:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ddrmat/ddrmat-0.9.ebuild,v 1.3 2003/12/31 03:57:03 vapier Exp $
 
 DESCRIPTION="Kernel module for parallel port Playstation joystick (i.e. DDR mats) adapters"
 HOMEPAGE="http://www.icculus.org/pyddr/"
 SRC_URI="http://www.icculus.org/pyddr/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="${KV}"
+SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/linux-sources"
