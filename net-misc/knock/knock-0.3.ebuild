@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.3.ebuild,v 1.7 2004/08/27 11:33:04 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.3.ebuild,v 1.8 2004/09/26 16:00:43 pyrania Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-nonblock.patch
+	epatch ${FILESDIR}/nonblock.patch
 	epatch ${FILESDIR}/knockd.conf.patch
 }
 
