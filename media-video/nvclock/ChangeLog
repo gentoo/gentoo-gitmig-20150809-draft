@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvclock
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.6 2003/04/16 02:44:03 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.7 2003/10/30 15:38:00 malverian Exp $
+
+*nvclock-0.7 (30 Oct 2003)
+
+  30 Oct 2003; Philip Walls <malverian@gentoo.org> nvclock-0.7.ebuild :
+  Version bump, closes bug #25779; Ebuild cleanups, no more GTK1 frontend
 
 *nvclock-0.6.2-r1 (15 Apr 2003)
 
