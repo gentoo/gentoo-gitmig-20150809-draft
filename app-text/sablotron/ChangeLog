@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.25 2004/02/23 16:41:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.26 2004/04/01 20:54:17 randy Exp $
+
+  01 Apr 2004; <randy@gentoo.org> sablotron-1.0.1.ebuild:
+  adding s390 keywords
 
 *sablotron-1.0.1 (22 Feb 2004)
 
