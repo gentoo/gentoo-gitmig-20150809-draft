@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.4 2002/11/21 19:23:20 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.5 2002/11/23 08:50:00 azarah Exp $
 # Just some re-usable functions for the netscape/moz plugins sharing
 
 ECLASS=nsplugins
@@ -41,5 +41,8 @@ pkg_mv_plugins() {
 # First argument should be the plugin file.
 inst_plugin() {
 	dodir /usr/lib/${PLUGINS_DIR}
-	dosym ${1} ${ROOT}/usr/lib/${PLUGINS_DIR}
+# $ROOT should only be used in pkg_*() functions ...
+#	dosym ${1} ${ROOT}/usr/lib/${PLUGINS_DIR}
+	dosym ${1} /usr/lib/${PLUGINS_DIR}
 }
+
