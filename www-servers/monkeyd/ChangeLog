@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.4 2004/09/28 02:02:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.5 2004/12/09 02:05:56 vapier Exp $
+
+*monkeyd-0.9.0 (08 Dec 2004)
+
+  08 Dec 2004; Mike Frysinger <vapier@gentoo.org> +monkeyd-0.9.0.ebuild:
+  Version bump.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/monkeyd.conf.d,
   files/monkeyd.init.d:
