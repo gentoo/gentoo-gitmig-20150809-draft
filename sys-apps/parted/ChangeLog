@@ -1,12 +1,12 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.15 2003/05/29 16:37:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.16 2003/05/29 16:39:18 pvdabeel Exp $
 
 *parted-1.6.5-r1 (29 May 2003)
 
   29 May 2003; root <root@gentoo.org> parted-1.6.5-r1.ebuild,
   files/parted-1.6.5-hfs-8.patch:
-  HFS resizing support. Emerged fine on my box.[B
+  HFS resizing support. Emerged fine on my box.
 
 *parted-1.6.3 (25 Mar 2003)
 
