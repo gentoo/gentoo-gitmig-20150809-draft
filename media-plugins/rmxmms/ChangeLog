@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/rmxmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/ChangeLog,v 1.6 2003/03/30 20:51:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/ChangeLog,v 1.7 2003/07/04 07:49:34 jje Exp $
+
+  04 Jul 2003; jje <jje@gentoo.org> rmxmms-0.5.1.ebuild:
+  Fixed test for gcc-3.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

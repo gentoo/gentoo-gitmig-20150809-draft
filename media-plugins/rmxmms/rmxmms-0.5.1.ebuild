@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.5 2003/03/30 20:51:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.6 2003/07/04 07:49:34 jje Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ DEPEND="media-sound/xmms
 	media-video/realplayer"
 
 pkg_setup() {
-	if [ `gcc-major-ver` = 3 ]; then
+	if [ "`gcc-major-version`" -eq "3" ]; then
     	eerror "This plugin will not work when compiled with gcc-3.x"
 		eerror "Either install and select a gcc-2.95.x compiler with"
 		eerror  "gcc-config, or give up."
