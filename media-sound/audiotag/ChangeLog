@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audiotag
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.6 2004/11/22 17:01:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.7 2004/11/23 03:22:03 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  audiotag-0.13.ebuild:
+  Added to ~sparc.
 
   22 Nov 2004; Markus Rothe <corsair@gentoo.org> audiotag-0.13.ebuild:
   Added ~ppc64 to KEYWORDS, bug #72087
