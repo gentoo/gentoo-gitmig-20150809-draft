@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javamail/javamail-1.3.1.ebuild,v 1.1 2003/08/09 00:29:21 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javamail/javamail-1.3.1.ebuild,v 1.2 2003/08/24 03:00:40 strider Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://java.sun.com/products/javamail/index.html"
 KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 LICENSE="sun-bcla-javamail"
 SLOT="0"
-DEPEND=""
+DEPEND=">=app-arch/unzip-5.50-r1"
 RDEPEND=">=virtual/jdk-1.2
 	>=dev-java/jaf-1.0.2"
 IUSE="doc"

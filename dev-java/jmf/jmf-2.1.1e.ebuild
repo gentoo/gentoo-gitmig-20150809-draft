@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf/jmf-2.1.1e.ebuild,v 1.2 2003/05/24 07:01:06 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf/jmf-2.1.1e.ebuild,v 1.3 2003/08/24 03:00:44 strider Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://java.sun.com/products/java-media/jmf/"
 KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 LICENSE="sun-bcla-jmf"
 SLOT="0"
-DEPEND=""
+DEPEND=">=app-arch/unzip-5.50-r1"
 RDEPEND=">=virtual/jdk-1.4"
 
 src_unpack() {

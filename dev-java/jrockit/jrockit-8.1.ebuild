@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/jrockit-8.1.ebuild,v 1.2 2003/07/11 21:41:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/jrockit-8.1.ebuild,v 1.3 2003/08/24 03:00:44 strider Exp $
 
 IUSE=""
 
@@ -18,7 +18,8 @@ LICENSE="jrockit"
 SLOT="1.4"
 KEYWORDS="x86"
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.5"
+	>=dev-java/java-config-0.2.5
+	>=app-arch/unzip-5.50-r1"
 
 PROVIDE="virtual/jre-1.4
 	virtual/jdk-1.4
