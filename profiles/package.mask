@@ -23,6 +23,10 @@
 ##
 
 # lamer@gentoo.org (15 Jul 2002)
+# Needs more testing, removed patch application in src_unpack
+=net-misc/dante-1.1.13
+
+# lamer@gentoo.org (15 Jul 2002)
 # Needs more testing, got word from someone on the devel team for this
 # upstream who's a gentoo user that it's b0rken. I can only test on x86
 =app-games/boson-0.6.1
