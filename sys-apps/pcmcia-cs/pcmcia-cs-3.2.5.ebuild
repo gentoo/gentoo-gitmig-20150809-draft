@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5.ebuild,v 1.2 2003/12/03 00:40:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5.ebuild,v 1.3 2003/12/09 20:26:46 latexer Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 alpha"
+KEYWORDS="~x86 alpha ~amd64"
 
 # check arch for configure
 if [ ${ARCH} = "x86" ] ; then
