@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4.ebuild,v 1.7 2004/06/24 22:42:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4-r1.ebuild,v 1.1 2004/07/21 02:44:37 vapier Exp $
 
 inherit games eutils gcc
 
 DESCRIPTION="Port of ID's doom to SDL and OpenGL"
 HOMEPAGE="http://prboom.sourceforge.net/"
-SRC_URI="mirror://sourceforge/prboom/${P}.tar.gz
-	http://www.lbjhs.net/~jessh/lsdldoom/doom1.wad.gz"
+SRC_URI="mirror://sourceforge/prboom/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,16 +40,17 @@ src_compile() {
 		`use_enable x86 i386-asm` \
 		--disable-cpu-opt \
 		|| die
-	# configure script doesnt do opengl properly
+	# configure script screws up a few things
+	sed -i "/DOOMWADDIR/s:\".*\":\"${GAMES_DATADIR}/doom-data\":" config.h
 	use opengl || sed -i '/GL_DOOM/s:.*::' config.h
 	emake || die
 }
 
 src_install() {
-	dogamesbin src/prboom{,-game-server}
+	dogamesbin src/prboom{,-game-server} || die
 
-	insinto ${GAMES_DATADIR}/doom/
-	doins ../doom1.wad data/*.wad
+	insinto ${GAMES_DATADIR}/doom-data
+	doins data/*.wad || die
 
 	doman doc/*.{5,6}
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/README.* doc/*.txt

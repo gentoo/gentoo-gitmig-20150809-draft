@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/prboom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.6 2004/06/24 22:42:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.7 2004/07/21 02:44:37 vapier Exp $
+
+*prboom-2.2.4-r1 (20 Jul 2004)
+
+  20 Jul 2004; Mike Frysinger <vapier@gentoo.org> +prboom-2.2.4-r1.ebuild,
+  -prboom-2.2.4.ebuild:
+  Version bump to support new doom-data dir.
 
   01 Jun 2004; Mike Frysinger <vapier@gentoo.org> +files/2.2.4-gcc34.patch,
   prboom-2.2.4.ebuild:

@@ -1,7 +1,17 @@
-MD5 b349cdb5bd69cc2461f36db0af863834 ChangeLog 1013
-MD5 fe8e16ee64300cf68e3f6bc5e66f869c prboom-2.2.4.ebuild 1528
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a07b925514ea1d6d4516ffc0b1be1e07 ChangeLog 1188
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 d8fff22fba51330be33cc8905f81d425 files/2.2.4-nvidia.patch 1761
-MD5 a63cc1470d89d188e3a667a1ddb12370 files/digest-prboom-2.2.4 123
-MD5 e3d9b24d0bbddd7177cdc13ec010c225 files/2.2.4-gcc34.patch 629
+MD5 a19bdd9832c7bc9f643ade48d0618399 prboom-2.2.4-r1.ebuild 1552
 MD5 6baf3ffdd34dfe4b85618dd603616a80 files/2.2.4-nvidia-test.c 90
+MD5 d8fff22fba51330be33cc8905f81d425 files/2.2.4-nvidia.patch 1761
+MD5 e3d9b24d0bbddd7177cdc13ec010c225 files/2.2.4-gcc34.patch 629
+MD5 1f849cf0b94a12ff9f846fc538f27b83 files/digest-prboom-2.2.4-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA/dijHTu7gpaalycRAqzuAJ9PI4aGA9pMI+T/mjDLdbASqq1KlQCg6jAL
+HyPXZLaoP2uCx027AdStVi0=
+=dlzJ
+-----END PGP SIGNATURE-----
