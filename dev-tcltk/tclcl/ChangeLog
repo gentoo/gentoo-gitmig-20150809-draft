@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tclcl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/ChangeLog,v 1.7 2004/10/26 22:05:33 sekretarz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/ChangeLog,v 1.8 2005/04/03 13:56:05 matsuu Exp $
+
+*tclcl-1.16 (03 Apr 2005)
+
+  03 Apr 2005; MATSUU Takuto <matsuu@gentoo.org> +tclcl-1.16.ebuild:
+  Version bumped. Cleanup ebuild.
 
   27 Oct 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   +files/tclcl-1.15-gcc34.patch, tclcl-1.15.ebuild:
