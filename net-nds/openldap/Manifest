@@ -4,8 +4,9 @@ MD5 bd436317c0d7e218e3bb3a418b3ba1af openldap-2.1.22.ebuild 5260
 MD5 803a7dd0676c1bb70fead91bec230189 openldap-2.0.27.ebuild 2260
 MD5 04f32e3d256415e0edcef72258fe1346 openldap-2.0.25-r1.ebuild 2517
 MD5 228e3ed7b74f4090d52d5d766ac35d3e openldap-2.1.21.ebuild 5292
-MD5 5c82397c9de56fa241c38d93f8d6ce23 ChangeLog 11204
+MD5 8f715e62769e27b030a8c4c903d30cdc ChangeLog 11291
 MD5 4d29062be2f73fa15f9bd0f184eba498 openldap-2.0.25-r3.ebuild 6258
+MD5 a22acc3272a4f93288731dc9b1dabcab metadata.xml 388
 MD5 e19f6635f7d8e8e7b5469e9dc94c7c84 openldap-2.0.27-r4.ebuild 6421
 MD5 9619944cbe6b03abf4f60569337681fe openldap-2.1.23.ebuild 6041
 MD5 ab26c55b61650f4081e4a9c28f972671 files/openldap-2.1.22-perlsedfoo.patch 1029
