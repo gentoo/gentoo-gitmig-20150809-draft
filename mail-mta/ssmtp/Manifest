@@ -15,4 +15,4 @@ MD5 93225fbc5fd7b8e5500c7b1c85b63fdf files/starttls.diff 4277
 MD5 f466deeaec0316507961656f37af7000 files/ssmtp-2.60.4-md5.patch 1509
 MD5 a57abd57dc7b801340b6db41c80fab11 files/digest-ssmtp-2.60.4-r2 64
 MD5 c833680953ba9941d33fc14dda62532b files/digest-ssmtp-2.60.7-r1 63
-MD5 0ed5447f4d8fd89fa31f23b361c37f59 files/mailer.conf 1026
+MD5 5902bd5e7ae424d20b056bb687831ba5 files/mailer.conf 1486
