@@ -1,1 +1,9 @@
-Initial create 053002
+# ChangeLog for media-sound/gogo
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/ChangeLog,v 1.2 2002/06/21 00:40:01 sunflare Exp $
+
+*gogo-3.10 (20 Jun 2002)
+
+  20 Jun 2002; Phil Bordelon <sunflare@gentoo.org> gogo-3.10.ebuild :
+
+  Unmasked ebuild, submitted by mjc <mjc@gentoo.org>.
