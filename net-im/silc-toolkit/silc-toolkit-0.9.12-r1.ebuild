@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r1.ebuild,v 1.3 2004/06/17 11:00:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r1.ebuild,v 1.4 2004/06/17 23:36:10 swegener Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="SDK for the SILC protocol"
 HOMEPAGE="http://silcnet.org/"

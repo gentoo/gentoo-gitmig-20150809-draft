@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11-r1.ebuild,v 1.4 2004/06/10 19:32:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11-r1.ebuild,v 1.5 2004/06/17 23:36:10 swegener Exp $
 
 IUSE="client server debug ipv6 perl socks5"
 
@@ -18,11 +18,6 @@ DEPEND="virtual/glibc
 	client? ( =dev-libs/glib-1.2* )
 	socks5? ( net-misc/dante )
 	perl? ( dev-lang/perl )"
-RDEPEND="${DEPEND}"
-
-src_unpack() {
-	unpack ${A}
-}
 
 src_compile() {
 	local myconf
