@@ -8,7 +8,7 @@ SLOT="0"
 SRC_URI="http://freshmeat.net/redir/burncdda/20268/url_tgz/${P}.tar.gz"
 LICENSE="GPL-2"
 HOMEPAGE="http://freshmeat.net/projects/burncdda/"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="dev-util/dialog
 	app-cdr/cdrdao

@@ -3,6 +3,10 @@
 
 *bchunk-1.1.1 (12 May 2002)
 
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+
+  Added ppc keyword
+
   12 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is

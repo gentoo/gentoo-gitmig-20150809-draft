@@ -11,7 +11,7 @@ DESCRIPTION="A KDE frontend to CD burning and CD ripping tools."
 SRC_URI="mirror://sourceforge/arson/${P}-kde3.tar.bz2"
 HOMEPAGE="http://arson.sourceforge.net/"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 newdepend ">=media-sound/cdparanoia-3.9.8
 	   >=media-sound/bladeenc-0.94.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bin2iso/bin2iso-19b.ebuild,v 1.2 2002/07/22 01:39:12 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bin2iso/bin2iso-19b.ebuild,v 1.3 2002/08/14 09:16:33 pvdabeel Exp $
 
 DESCRIPTION="Bin2iso converts RAW format (.bin/.cue) files to ISO/WAV format.It can also create cue files for .bin's"
 HOMEPAGE="http://users.andara.com/~doiron/bin2iso/"
@@ -10,7 +10,7 @@ SLOT="0"
 DEPEND="virtual/glibc"
 RDEPEND=""
 LICENSE="UNKNOWN"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 SRC_URI="http://users.eastlink.ca/~doiron/bin2iso/linux/bin2iso19b_linux.c
 	http://users.andara.com/~doiron/bin2iso/readme.txt"

@@ -1,11 +1,11 @@
 # Copyright 2002 Felix Kurth <felix@fkurth.de>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.3.1.ebuild,v 1.6 2002/07/22 01:39:12 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.3.1.ebuild,v 1.7 2002/08/14 09:31:53 pvdabeel Exp $
 
 DESCRIPTION="Creates CD-Covers via Latex by fetching cd-info from freedb.org or local file"
 HOMEPAGE="http://www.liacs.nl/~jvhemert/disc-cover/"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 DEPEND=">=dev-perl/Audio-CD-disc-cover-0.04
