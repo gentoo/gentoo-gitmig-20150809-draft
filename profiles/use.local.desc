@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.268 2004/03/09 01:59:28 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.269 2004/03/10 06:53:09 phosphan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -45,6 +45,8 @@ app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extentions) suppor
 app-sci/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to app-sci/octave (may be merged with hdf when opendx is completed)
 app-sci/opendx:cdf - Adds cdf data exchange format to app-sci/opendx
 app-sci/opendx:hdf - Adds support for the Hierarchical Data Format to app-sci/opendx
+app-sci/orsa:cln - Use the Class Library for Numbers for calculations
+app-sci/orsa:gsl - Use the GNU scientific library for calculations
 app-shells/zsh:pcre - Adds PCRE (Perl-compatible regular expressions) support
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
@@ -121,7 +123,6 @@ kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
-media-gfx/grace:fftw - Enables FFTW support for grace
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
 media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled optimised version.
