@@ -1,0 +1,12 @@
+--- src/config.orig	Fri Aug  2 10:34:25 2002
++++ src/config.h	Fri Aug  2 10:34:46 2002
+@@ -234,6 +234,9 @@
+ 
+ static uid_t euid;
+ 
++using std::max;
++using std::min;
++
+ /*
+  * These handle the parsing of the usual X Windows command-line args.
+  */

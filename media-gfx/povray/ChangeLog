@@ -1,7 +1,13 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.7 2002/06/26 08:47:52 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.8 2002/08/02 19:03:10 rphillips Exp $
 
+*povray-3.5a (2 Aug 2002)
+
+  2 Aug 2002; Ryan Phillips <rphillips@gentoo.org> povray-3.5a.ebuild :
+
+  Preliminary ebuild for povray 3.5.  The application errors out with an
+  I/O error looking for povray.ini... I or someone will look into this.
 
 *povray-3.1g-r5 (27 Jun 2002)
   27 Jun 2002; Spider <spider@gentoo.org> povray-3.1g-r5.ebuild :
