@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kentoo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kentoo/ChangeLog,v 1.4 2004/08/20 16:44:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kentoo/ChangeLog,v 1.5 2004/09/02 02:43:37 tgall Exp $
+
+  01 Sep 2004; Tom Gall <tgall@gentoo.org> kentoo-0.4.ebuild:
+  stable on ppc64, bug #61803
 
   20 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kentoo-0.4.ebuild:
   Bumped version. Many thanks to plasmaroo for the "friendly" reminder.
