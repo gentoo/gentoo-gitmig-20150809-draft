@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.714 2004/11/05 13:31:24 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.715 2004/11/05 19:29:02 slarti Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -299,6 +299,7 @@ kde-base/kdemultimedia:cdparanoia - Enables build support for the cdparanoia pac
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
 mail-client/evolution:nntp : Enable evolution nntp (news) functionality
+mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:mozplaintext - Disallow HTML editing for email
 mail-client/mozilla-thunderbird:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
