@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/hppa-dev-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.13 2004/05/19 00:15:02 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.14 2004/06/22 13:22:32 gmsoft Exp $
+
+*hppa-dev-sources-2.6.6_p4-r1 (22 Jun 2004)
+
+  22 Jun 2004; Guy Martin <gmsoft@gentoo.org>
+  hppa-dev-sources-2.6.5_p2.ebuild, hppa-dev-sources-2.6.5_p6.ebuild,
+  hppa-dev-sources-2.6.5_p8.ebuild, hppa-dev-sources-2.6.6_p4-r1.ebuild,
+  hppa-dev-sources-2.6.6_p4.ebuild, files/ncr53c8xx.diff:
+  Removed old versions. Added the ncr53c8xx patch.
+
+*hppa-dev-sources-2.6.6_p4-r1 (22 Jun 2004)
+
+  22 Jun 2004; Guy Martin <gmsoft@gentoo.org>
+  hppa-dev-sources-2.6.5_p2.ebuild, hppa-dev-sources-2.6.5_p6.ebuild,
+  hppa-dev-sources-2.6.5_p8.ebuild, hppa-dev-sources-2.6.6_p4-r1.ebuild,
+  hppa-dev-sources-2.6.6_p4.ebuild, files/ncr53c8xx.diff:
+  Removed old versions. Added the ncr53c8xx patch.
 
 *hppa-dev-sources-2.6.6_p4 (18 May 2004)
 
