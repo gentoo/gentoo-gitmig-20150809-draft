@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ksplash-ml/ksplash-ml-0.95.3.ebuild,v 1.7 2004/05/23 17:04:49 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ksplash-ml/ksplash-ml-0.95.3.ebuild,v 1.8 2004/06/19 14:08:26 pyrania Exp $
 
 inherit kde-base
 
@@ -16,6 +16,7 @@ newdepend ">=kde-base/kdebase-3.0"
 LICENSE="BSD"
 
 KEYWORDS="x86 ppc alpha ia64"
+IUSE=""
 
 src_install() {
 

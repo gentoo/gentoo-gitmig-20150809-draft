@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kgamma/kgamma-1.0.1.ebuild,v 1.6 2004/05/06 00:27:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kgamma/kgamma-1.0.1.ebuild,v 1.7 2004/06/19 14:13:05 pyrania Exp $
 
 inherit kde
 
@@ -12,4 +12,5 @@ HOMEPAGE="http://kgamma.berlios.de/index2.php"
 LICENSE="GPL-2"
 
 KEYWORDS="x86 sparc"
+IUSE=""
 

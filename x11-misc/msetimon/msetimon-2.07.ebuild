@@ -1,17 +1,16 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/msetimon/msetimon-2.07.ebuild,v 1.8 2003/09/05 23:18:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/msetimon/msetimon-2.07.ebuild,v 1.9 2004/06/19 14:05:43 pyrania Exp $
 
 DESCRIPTION="A GUI utility for monitoring the SETI@Home client"
-
 NAME="msetimon"
-
 SRC_URI="mirror://sourceforge/msetimon/${NAME}-perl-source-2-07.tar.gz"
 HOMEPAGE="http://msetimon.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 INSTALLDIR=/usr/bin
 
