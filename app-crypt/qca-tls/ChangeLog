@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/qca-tls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.24 2005/01/24 18:05:48 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.25 2005/02/23 13:49:16 hardave Exp $
+
+*qca-tls-1.0-r2 (23 Feb 2005)
+
+  23 Feb 2005; Hardave Riar <hardave@gentoo.org> qca-tls-1.0-r2.ebuild:
+  Marked ~mips
 
   24 Jan 2005; Gustavo Felisberto <humpback@gentoo.org>;
   -qca-tls-1.0-r1.ebuild:
