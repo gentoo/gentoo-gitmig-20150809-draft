@@ -849,11 +849,6 @@ x11-base/xdirectfb
 # mask lvm-user 1.0.4 until it's had more testing
 # >=sys-apps/lvm-user-1.0.4
 
-
-#seemant@gentoo.org 27 Jun 2002
-# masked for testing
-=net-misc/bind-tools-9.2.1
-
 #g2boojum@gentoo.org 27 June 2002
 # masked until we get the cups ghostscript in portage
 >=net-print-cups-1.1.15
