@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-ltk
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ltk/ChangeLog,v 1.1 2004/07/06 18:50:23 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ltk/ChangeLog,v 1.2 2004/07/14 16:53:09 mkennedy Exp $
+
+  14 Jul 2004; <mkennedy@gentoo.org> cl-ltk-0.8.5.ebuild:
+  Added dev-lang/tk as RDEPEND; Resolves #56955.
 
 *cl-ltk-0.8.3 (06 Jul 2004)
 
