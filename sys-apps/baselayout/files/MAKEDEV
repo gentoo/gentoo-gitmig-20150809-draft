@@ -1,6 +1,6 @@
 #! /bin/sh -
 
-RCSID='$Id: MAKEDEV,v 1.1 2000/08/25 02:56:10 drobbins Exp $'
+RCSID='$Id: MAKEDEV,v 1.2 2001/02/27 16:11:41 achim Exp $'
 
 #---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#
 # Customisation:
@@ -163,6 +163,7 @@ else
 	exec 3<$procfs/devices
 	while read major device <&3
 	do
+        device=${device%/*}
 		case "$major" in
 			Character|Block|'')
 				;;
