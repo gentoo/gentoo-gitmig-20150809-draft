@@ -1,0 +1,8 @@
+# ChangeLog for dev-php/xdebug
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-sqlite/ChangeLog,v 1.1 2003/07/26 11:56:25 coredumb Exp $
+ 
+*PECL-sqlite-1.0 (26 Jul 2003)
+
+  26 Jul 2003; Tal Peer <coredumb@gentoo.org> PECL-sqlite-1.0.ebuild:
+  Initial import.
