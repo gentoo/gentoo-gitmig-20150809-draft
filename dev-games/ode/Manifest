@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ca153da159bc2aeb3ebf5e9f78247f77 ChangeLog 2111
+MD5 0a1efa9cb7ea7a8804c6c19a6e4aa33e ChangeLog 2325
 MD5 897a7d200c1e7b0159d465d3220c9eff metadata.xml 509
-MD5 a8071813e7d4d4e5a572e3a8050ca3c4 ode-0.5-r1.ebuild 1665
-MD5 24a10f16623003a6f4c8df5d8a0c11f5 files/digest-ode-0.5-r1 57
+MD5 b4709bc0bef23c162eb71bb15ee30bd4 ode-0.5-r2.ebuild 1675
+MD5 24a10f16623003a6f4c8df5d8a0c11f5 files/digest-ode-0.5-r2 57
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB3uJHroRuSHgZdywRArfFAJ4+ejV8bNER2i6Wbsxc1xVFNXVUlACfXxq1
-cCTNhYhFDpLjnZYHOtkIadY=
-=tJ1C
+iD8DBQFB3uNJroRuSHgZdywRAmv6AJ9sPcT9/1EK8vRhWxFI6liv2NrR7gCfchR6
+kPIjqwpWMPF3ugt9Z4iPT90=
+=WgFu
 -----END PGP SIGNATURE-----

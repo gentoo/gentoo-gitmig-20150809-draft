@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r1.ebuild,v 1.5 2005/01/01 18:02:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r2.ebuild,v 1.1 2005/01/07 19:30:03 vapier Exp $
 
 DESCRIPTION="Open Dynamics Engine SDK"
 HOMEPAGE="http://ode.org/"
@@ -18,15 +18,16 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	echo 'C_FLAGS+=$(E_CFLAGS)' >> "${S}/config/makefile.unix-gcc"
-	if use debug; then
-		sed -e "s/#BUILD=d/BUILD=d/" \
+	echo 'C_FLAGS+=$(E_CFLAGS) -fPIC' >> "${S}"/config/makefile.unix-gcc
+	if use debug ; then
+		sed -i \
+			-e "s/#BUILD=d/BUILD=d/" \
 			-e "s/BUILD=r/#BUILD=r/" \
-			-i ${S}/config/user-settings
+			"${S}"/config/user-settings
 	fi
-	sed -e "s/#OPCODE_DIRECTORY/OPCODE_DIRECTORY/" -i ${S}/config/user-settings
-	sed -e 's/..\/..\/drawstuff\/textures/.\//' -i ${S}/ode/test/*.c*
-	sed -e 's/fn.path_to_textures = 0/fn.path_to_textures = ".\/"/' -i ${S}/drawstuff/dstest/dstest.cpp
+	sed -i -e "s/#OPCODE_DIRECTORY/OPCODE_DIRECTORY/" ${S}/config/user-settings
+	sed -i -e 's/..\/..\/drawstuff\/textures/.\//' ${S}/ode/test/*.c*
+	sed -i -e 's/fn.path_to_textures = 0/fn.path_to_textures = ".\/"/' ${S}/drawstuff/dstest/dstest.cpp
 }
 
 src_compile() {

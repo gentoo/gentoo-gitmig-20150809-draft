@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/ode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.10 2005/01/01 18:02:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.11 2005/01/07 19:30:03 vapier Exp $
+
+*ode-0.5-r2 (07 Jan 2005)
+
+  07 Jan 2005; Mike Frysinger <vapier@gentoo.org> -ode-0.5-r1.ebuild,
+  +ode-0.5-r2.ebuild:
+  Since ode only produces a static library atm, force it to be built with
+  -fPIC #77004 by Rick.
 
   12 Nov 2004; Simon Stelling <blubb@gentoo.org> :
   added ~amd64
