@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r3.ebuild,v 1.6 2003/12/31 13:37:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r3.ebuild,v 1.7 2004/01/02 16:59:17 gmsoft Exp $
 
 IUSE="nls bootstrap build"
 
@@ -107,10 +107,6 @@ src_compile() {
 		CFLAGS="$(echo "${CFLAGS}" | sed -e 's,-O[2-9] ,-O1 ,')"
 	fi
 
-	if [ "${ARCH}" = "hppa" ]
-	then
-		myconf="${myconf} --enable-targets=hppa64-linux"
-	fi
 
 	# Fix /usr/lib/libbfd.la
 	elibtoolize --portage
@@ -177,18 +173,6 @@ src_install() {
 		fi
 		ln -s ../${CHOST}/bin/${x} ${x}
 	done
-
-	# hppa need hppa64-linux and nothing else for kernel compilation
-	if [ "${ARCH}" = "hppa" ]
-	then
-		dosym ${CHOST} /usr/hppa64-linux
-		for x in `ls ${D}/usr/${CHOST}/bin/`
-		do
-			[ ! -e "${D}/usr/bin/${CHOST}-${x}" ] && \
-				dosym ../${CHOST}/bin/${x} /usr/bin/hppa64-linux-${x}
-			dosym ../${CHOST}/bin/${x} /usr/bin/hppa64-${x}
-		done
-	fi
 
 	if [ -n "${PROFILE_ARCH}" ] && \
 	   [ "${PROFILE_ARCH/64}" != "${PROFILE_ARCH}" ]
