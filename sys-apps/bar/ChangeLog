@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/bar
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.1 2003/11/21 19:57:18 rphillips Exp $
+
+*bar-1.06 (21 Nov 2003)
+
+  21 Nov 2003; <rphillips@gentoo.org> bar-1.06.ebuild:
+  new package
+
