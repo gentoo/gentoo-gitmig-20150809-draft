@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10-r1.ebuild,v 1.4 2002/11/10 16:46:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10-r1.ebuild,v 1.5 2002/11/12 23:50:40 mkeadle Exp $
 
 IUSE="ssl"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://www.openh323.org"
 DESCRIPTION="Open Source implementation of the ITU H.323 teleconferencing protocol"
 
-DEPEND="media-libs/Speex
+DEPEND="media-libs/speex
 	>=dev-libs/pwlib-1.3.11-r1
 	ssl? ( dev-libs/openssl )"
 
