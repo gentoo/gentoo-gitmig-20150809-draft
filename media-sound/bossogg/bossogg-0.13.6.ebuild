@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6.ebuild,v 1.5 2004/06/24 23:52:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6.ebuild,v 1.6 2004/07/04 16:34:50 eradicator Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://bossogg.wishy.org"
 SRC_URI="mirror://sourceforge/bossogg/${P}.tar.gz"
 RESTRICT="nomirror"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -23,6 +23,23 @@ DEPEND=">=media-libs/libao-0.8.3
 
 RDEPEND="${DEPEND}
 	 dev-python/pysqlite"
+
+DEPEND="${DEPEND}
+	>=sys-devel/automake-1.7"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-Makefile.patch
+	touch NEWS AUTHORS
+	
+	export WANT_AUTOMAKE=1.7
+	export WANT_AUTOCONF=2.5
+	aclocal || die
+	automake || die
+	autoconf || die
+}
 
 src_compile() {
 	econf --enable-shout \
