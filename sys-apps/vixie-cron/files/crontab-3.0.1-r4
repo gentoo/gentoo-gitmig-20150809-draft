@@ -1,7 +1,6 @@
 # for vixie cron
-# remember to give cron a sighup when updating this file
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/files/crontab-3.0.1-r4,v 1.3 2003/12/14 17:19:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/files/crontab-3.0.1-r4,v 1.4 2004/03/29 21:28:19 avenj Exp $
 #
 #
 
