@@ -1,0 +1,22 @@
+--- Makefile.old	2003-05-13 21:46:42.000000000 +0000
++++ Makefile	2003-05-13 21:53:40.000000000 +0000
+@@ -1,10 +1,5 @@
+ VERSION = 0.94
+ 
+-ifdef ARCH
+-else
+-ARCH=-march=athlon -mcpu=athlon
+-endif
+-
+ SOURCE = in_mpc.c bitstream.c huff_new.c huff_old.c requant.c synth_filter.c mpc_dec.c
+ 
+ all:    xmms-musepack-$(VERSION).so
+@@ -19,7 +14,7 @@
+ 	`xmms-config --input-plugin-dir`/xmms-musepack-`echo $(VERSION)`.so
+ 
+ xmms-musepack-$(VERSION).so: $(SOURCE) Makefile
+-	gcc -s -DVERSION=\"$(VERSION)\" $(ARCH) -Wall -pedantic -shared -O3 $(ARCH) --fast-math -DPOSIX -D_REENTRANT -DREENTRANT `xmms-config --cflags --libs` `gtk-config --cflags --libs` -o xmms-musepack-`echo $(VERSION)`.so $(SOURCE)
++	gcc -s -DVERSION=\"$(VERSION)\" $(ARCH) -Wall -pedantic -shared -DPOSIX -D_REENTRANT -DREENTRANT `xmms-config --cflags --libs` `gtk-config --cflags --libs` -o xmms-musepack-`echo $(VERSION)`.so $(SOURCE)
+ 
+ clean:
+ 	rm -f *.o xmms-musepack-`echo $(VERSION)`.so
