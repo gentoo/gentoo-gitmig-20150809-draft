@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perltidy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/ChangeLog,v 1.15 2004/12/30 19:11:36 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/ChangeLog,v 1.16 2005/03/17 09:09:14 hansmi Exp $
+
+  17 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  perltidy-20031021.ebuild:
+  Added to ~ppc.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
