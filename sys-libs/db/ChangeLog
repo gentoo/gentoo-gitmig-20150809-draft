@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.48 2003/09/13 20:58:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.49 2003/09/20 20:15:53 pappy Exp $
+
+  20 Sep 2003; Alexander Gabert <pappy@gentoo.org> db-4.0.14-r2.ebuild:
+  added configure logic for hardened-gcc
 
   13 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> db-4.0.14-r2.ebuild:
   added Kumba's changes for mips
