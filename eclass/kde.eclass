@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.63 2002/10/27 09:52:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.64 2002/11/01 11:16:45 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 
 inherit base kde-functions
@@ -43,6 +43,16 @@ kde_src_compile() {
 	cd ${S}
 	export kde_widgetdir="$KDEDIR/lib/kde3/plugins/designer"
 
+	# fix the sandbox errors "can't writ to .kde or .qt" problems.
+	# this is a fake homedir that is writeable under the sandbox, so that the build process
+	# can do anything it wants with it.
+	REALHOME="$HOME"
+	mkdir -p $T/fakehome/.kde
+	mkdir -p $T/fakehome/.qt
+	export HOME="$T/fakehome"
+	# things that should access the real homedir
+	[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"	
+	
 	while [ "$1" ]; do
 
 		case $1 in
