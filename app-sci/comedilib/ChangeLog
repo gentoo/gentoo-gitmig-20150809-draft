@@ -1,0 +1,9 @@
+# ChangeLog for app-sci/comedilib
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/comedilib/ChangeLog,v 1.1 2003/11/20 19:38:11 caleb Exp $
+
+*comedilib-0.7.21 (20 Nov 2003)
+
+  20 Nov 2003; Caleb Tennis <caleb@gentoo.org> comedilib-0.7.21.ebuild, metadata.xml:
+  Initial import.  Will require some more work yet.
+
