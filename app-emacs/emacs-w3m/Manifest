@@ -3,7 +3,10 @@ MD5 af6e6f0b683147819758d23b35d568b2 emacs-w3m-1.3.6.ebuild 1168
 MD5 bb6b7444df86be4920c856a395f1181d ChangeLog 1535
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 875b45f1e74a3040a4f4eeee0909e935 emacs-w3m-1.3.80-r1.ebuild 1221
+MD5 890ddce730af195f4cfb338760a18cc0 emacs-w3m-1.3.80-r2.ebuild 1298
 MD5 652abce1ecea5cf20323bd9f27ec8a6b files/70emacs-w3m-gentoo.el 605
 MD5 e511ad802b2b7dd9d27a599c7d48797d files/digest-emacs-w3m-1.3.2 67
 MD5 51951f89d5a4c0bed84788a881adc286 files/digest-emacs-w3m-1.3.6 67
+MD5 1cbcf1e359d46ada44b5d439f7533071 files/emacs-w3m-1.3.80-gentoo.diff 877
 MD5 13af620d276d60d15bf2bfdf63b426d5 files/digest-emacs-w3m-1.3.80-r1 68
+MD5 13af620d276d60d15bf2bfdf63b426d5 files/digest-emacs-w3m-1.3.80-r2 68
