@@ -935,7 +935,43 @@ diff -ur linux-2.6.7/include/linux/wait.h linux-2.6.7-gentoo/include/linux/wait.
  #include <linux/stddef.h>
  #include <linux/spinlock.h>
  #include <asm/system.h>
-@@ -258,6 +257,4 @@
+@@ -84,6 +83,8 @@
+ extern void FASTCALL(add_wait_queue_exclusive(wait_queue_head_t *q, wait_queue_t * wait));
+ extern void FASTCALL(remove_wait_queue(wait_queue_head_t *q, wait_queue_t * wait));
+ 
++#ifdef __KERNEL__
++
+ static inline void __add_wait_queue(wait_queue_head_t *head, wait_queue_t *new)
+ {
+ 	list_add(&new->task_list, &head->task_list);
+@@ -104,6 +105,8 @@
+ 	list_del(&old->task_list);
+ }
+ 
++#endif /* __KERNEL__ */
++
+ void FASTCALL(__wake_up(wait_queue_head_t *q, unsigned int mode, int nr, void *key));
+ extern void FASTCALL(__wake_up_locked(wait_queue_head_t *q, unsigned int mode));
+ extern void FASTCALL(__wake_up_sync(wait_queue_head_t *q, unsigned int mode, int nr));
+@@ -201,6 +204,8 @@
+ 	__ret;								\
+ })
+ 	
++#ifdef __KERNEL__
++
+ /*
+  * Must be called with the spinlock in the wait_queue_head_t held.
+  */
+@@ -220,6 +225,8 @@
+ 	__remove_wait_queue(q,  wait);
+ }
+ 
++#endif /* __KERNEL__ */
++
+ /*
+  * These are the old interfaces to sleep waiting for an event.
+  * They are racy.  DO NOT use them, use the wait_event* interfaces above.  
+@@ -258,6 +265,4 @@
  		INIT_LIST_HEAD(&wait->task_list);			\
  	} while (0)
  	
