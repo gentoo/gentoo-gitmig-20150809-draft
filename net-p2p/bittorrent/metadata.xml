@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>python</herd>
 <maintainer>
-  <email>phosphan@gentoo.org</email>
-  <description>Version bumping and patching, not using. Package is free for adoption.</description>
+  <email>luke-jr@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
