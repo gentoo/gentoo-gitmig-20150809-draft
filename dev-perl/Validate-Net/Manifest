@@ -1,4 +1,6 @@
+MD5 ba1d5443ac2576fc670970ad16d969ec ChangeLog 595
 MD5 13ea269787ac0f3fa9bb3803577d7c05 Validate-Net-0.4.ebuild 664
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b9fe01f7acb0e7aea92a2c8f2d699cb5 ChangeLog 455
+MD5 a601034bd5d74439562bd902bf0e5366 Validate-Net-0.5.ebuild 684
 MD5 7f444cb92a7ff838d60784abf0a231d3 files/digest-Validate-Net-0.4 67
+MD5 03e58abbb0385cf050d4248f7a22847c files/digest-Validate-Net-0.5 67
