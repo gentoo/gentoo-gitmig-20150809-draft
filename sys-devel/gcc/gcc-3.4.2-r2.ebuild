@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.5 2004/10/03 19:48:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.6 2004/10/04 03:56:15 lv Exp $
 
 IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -58,7 +58,7 @@ ETYPE="gcc-compiler"
 
 #PIEPATCH_EXCLUDE="upstream/04_all_gcc-3.4.0-v8.7.6.1-pie-arm-uclibc.patch.bz2"
 HARDENED_GCC_WORKS="x86 sparc amd64"
-SPLIT_SPECS="true"
+SPLIT_SPECS="${SPLIT_SPECS:="true"}"
 
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
@@ -217,10 +217,14 @@ src_install() {
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry || die
-	if use hardened ; then
-		create_gcc_env_entry vanilla || die
-	else
-		create_gcc_env_entry hardened || die
+	
+	if [ "${SPLIT_SPECS}" == "true" ] ; then
+		if use hardened ; then
+			create_gcc_env_entry vanilla || die
+		else
+			create_gcc_env_entry hardened || die
+		fi
+		create_gcc_env_entry hardenednossp || die
 	fi
 
 	# Make sure we dont have stuff lying around that
@@ -415,10 +419,7 @@ pkg_postinst() {
 		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 	fi
 
-	if [ "${ROOT}" == "/" ]
-	then
-		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
-	fi
+	do_gcc_config
 
 	# Update libtool linker scripts to reference new gcc version ...
 	if [ "${ROOT}" = "/" ] && \
