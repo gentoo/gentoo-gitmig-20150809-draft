@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.28 2004/10/21 01:09:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.29 2004/10/21 01:12:17 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -34,9 +34,9 @@ inherit eutils flag-o-matic toolchain-funcs x11
 RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
-IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc dri glx hardened
-	insecure-drivers ipv6 mmx nls pam sdk sse static truetype-fonts type1-fonts
-	uclibc xfs xprint xv"
+IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc dri font-server glx
+	hardened insecure-drivers ipv6 mmx nls pam sdk sse static truetype-fonts
+	type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.4"
@@ -65,7 +65,7 @@ GENTOO_FILES="mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2
 	http://dev.gentoo.org/~cyfred/distfiles/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
-	xfs? ( http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 )
+	font-server? ( http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 )
 	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
 	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	${GENTOO_FILES}
@@ -515,7 +515,7 @@ host_def_setup() {
 		use_build truetype-fonts BuildTrueTypeFonts
 
 		# X Font Server
-		use_build xfs BuildFontServer
+		use_build font-server BuildFontServer
 
 		# Distributed Multiheaded X
 		use_build dmx BuildDmx
@@ -609,7 +609,7 @@ src_unpack() {
 			unpack gemini-koi8-u.tar.bz2 > /dev/null
 		fi
 		unpack eurofonts-X11.tar.bz2 > /dev/null
-		if use xfs; then
+		if use font-server; then
 			unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
 		fi
 	eend 0
@@ -739,7 +739,7 @@ etc_files_install() {
 	doins ${FILES_DIR}/xinitrc
 	exeinto /etc/X11/xdm
 	doexe ${FILES_DIR}/Xsession ${FILES_DIR}/Xsetup_0
-	if use xfs; then
+	if use font-server; then
 		insinto /etc/X11/fs
 		newins ${FILES_DIR}/xfs.config config
 	fi
@@ -751,7 +751,7 @@ etc_files_install() {
 	fi
 	exeinto /etc/init.d
 	newexe ${FILES_DIR}/xdm.start xdm
-	if use xfs; then
+	if use font-server; then
 		newexe ${FILES_DIR}/xfs.start xfs
 		insinto /etc/conf.d
 		newins ${FILES_DIR}/xfs.conf.d xfs
@@ -998,7 +998,7 @@ src_install() {
 	compose_files_setup
 
 	# Yet more Mandrake
-	if use xfs; then
+	if use font-server; then
 		ebegin "Encoding files for xfsft font server..."
 			dodir /usr/share/fonts/encodings
 			cp -a ${WORKDIR}/usr/share/fonts/encodings/* \
