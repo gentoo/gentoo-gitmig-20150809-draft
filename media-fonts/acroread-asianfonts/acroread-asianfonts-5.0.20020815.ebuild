@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-5.0.20020815.ebuild,v 1.3 2005/03/29 00:34:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-5.0.20020815.ebuild,v 1.4 2005/04/01 04:08:33 usata Exp $
 
 BASE_URI="ftp://ftp.adobe.com/pub/adobe/acrobatreader/unix/5.x/"
 
@@ -35,7 +35,7 @@ src_install() {
 	INSTALLDIR="/opt/Acrobat5/Resource"
 	INST_LANG=""
 	useq linguas_zh_CN && INST_LANG="${INST_LANG} CHS"
-	useq linguas_zh_CN && INST_LANG="${INST_LANG} CHT"
+	useq linguas_zh_TW && INST_LANG="${INST_LANG} CHT"
 	useq linguas_ja    && INST_LANG="${INST_LANG} JPN"
 	useq linguas_ko    && INST_LANG="${INST_LANG} KOR"
 
