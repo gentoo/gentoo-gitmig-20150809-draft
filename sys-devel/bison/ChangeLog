@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.15 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.16 2003/09/02 19:09:36 mholzer Exp $
+
+  02 Sep 2003; Martin Holzer <mholzer@gentoo.org> bison-1.34-r1.ebuild,
+  bison-1.35.ebuild, bison-1.75.ebuild:
+  Now uses mirror://gnu.
 
   18 Feb 2003; Zach Welch <zwelch@gentoo.org> bison-1.35.ebuild :
   Added arm to keywords.
