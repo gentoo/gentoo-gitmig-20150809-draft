@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.3 2002/04/15 03:15:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.4 2002/04/15 23:07:43 azarah Exp $
+
+*gcc-3.0.4-r3 (16 Apr 2002)
+
+  16 Apr 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Moved the manpages to version spesific ones.  More cleanups.
+  Moved libgcj.jar to /usr/lib/gcc-$PV.
 
 *gcc-3.0.4-r2 (15 Apr 2002)
 
