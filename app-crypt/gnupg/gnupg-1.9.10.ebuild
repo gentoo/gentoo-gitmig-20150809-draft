@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.10.ebuild,v 1.11 2005/01/06 10:55:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.10.ebuild,v 1.12 2005/01/15 01:08:46 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${P}.tar.gz"
 
-LICENSE="GPL-2 idea? ( IDEA )"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="X caps ldap nls smartcard static"
@@ -42,7 +42,7 @@ DEPEND="caps? ( sys-libs/libcap )
 
 src_compile() {
 	local myconf=""
-
+	sed -i -e 's/PIC/__PIC__/g' intl/relocatable.c
 	if use X; then
 		local viewer
 		if has_version 'media-gfx/xloadimage'; then
@@ -103,4 +103,7 @@ pkg_postinst() {
 	ewarn "** WARNING ** WARNING ** WARNING ** WARNING ** WARNING ** WARNING **"
 
 	einfo "gpg-agent is now provided in app-crypt/gpg-agent"
+	einfo
+	einfo "See http://www.gentoo.org/doc/en/gnupg-user.xml for documentation on gnupg"
+	einfo
 }

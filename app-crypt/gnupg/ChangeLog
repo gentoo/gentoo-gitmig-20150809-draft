@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.96 2005/01/06 10:55:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.97 2005/01/15 01:08:45 dragonheart Exp $
+
+  15 Jan 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.2.4.ebuild,
+  gnupg-1.2.6.ebuild, gnupg-1.4.0-r1.ebuild, gnupg-1.9.10.ebuild,
+  gnupg-1.9.14.ebuild:
+  Reference to GnuPG Gentoo user guide added to all ebuilds as per bug #77314 by
+  Chris Rebert <krebert@mindspring.com>. Added idea capabilities to
+  gnupg-1.9.14. Added suid gnupg to gnupg-1.4.0. Fixed __PIC__ definations in
+  1.9.10 and 1.9.14.
 
 *gnupg-1.9.14 (06 Jan 2005)
 

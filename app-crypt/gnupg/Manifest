@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5d8031beefc34bb4e9f4f3139418cb8d ChangeLog 14730
-MD5 df5722ac1ebeb8d7b2f741b56fbed9d6 gnupg-1.9.10.ebuild 2854
-MD5 edc18da65abb2c4ea780b6f4820c9b1b gnupg-1.2.4.ebuild 4251
-MD5 1372720780db9734bcd08aecd93ae14d gnupg-1.4.0-r1.ebuild 3300
+MD5 80c1cf33c058c58ac5ad63030f7b0c30 ChangeLog 15142
+MD5 da7b7db2bc7da1da7b2fd7f513f314ec gnupg-1.9.14.ebuild 4010
+MD5 60abe012deb7ef3299727bdf308700e3 gnupg-1.2.4.ebuild 4349
+MD5 31e47fabf70190e99e427f9861707069 gnupg-1.2.6.ebuild 3780
 MD5 f060c73f6f74e7174b1f7d7c570421fe metadata.xml 572
-MD5 d4f5b9c4a281906444ecf57321fa16f8 gnupg-1.2.6.ebuild 3677
-MD5 c711b8662c10596ef5ecc3cb1f4d2fb0 gnupg-1.9.14.ebuild 2853
-MD5 a614d4d6eb27b31d9b4651c349b31c3e files/digest-gnupg-1.9.14 65
-MD5 dd317d852aed29e96c5a542f00d0766e files/gnupg-1.2.6-ppc64.patch 454
-MD5 7f0e728ae9c6810cb9c61500fdc39fc9 files/digest-gnupg-1.2.4 117
+MD5 565496fbc556b3007d61f9e42d069cb6 gnupg-1.4.0-r1.ebuild 4467
+MD5 e698420245e3ee4535db946dfd41cfcd gnupg-1.9.10.ebuild 2985
+MD5 e23491eb03cb2bea5a2011f12c84b4ef files/digest-gnupg-1.9.14 117
+MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
 MD5 a8d4b32b219641e9b9df83b581a935ba files/digest-gnupg-1.4.0-r1 117
+MD5 7f0e728ae9c6810cb9c61500fdc39fc9 files/digest-gnupg-1.2.4 117
+MD5 dd317d852aed29e96c5a542f00d0766e files/gnupg-1.2.6-ppc64.patch 454
+MD5 8c88d9fdef69bdda173170c5a8abd59e files/digest-gnupg-1.9.10 65
 MD5 c6114a5a40f10aeca63d07b59fed650f files/gnupg-1.2.4-hppa_unaligned_constant.patch 1213
 MD5 cdb57d67164c7a63a167c33426c0a7a3 files/gnupg-1.2.4.ppc64.patch 471
-MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
-MD5 8c88d9fdef69bdda173170c5a8abd59e files/digest-gnupg-1.9.10 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB3RkyArHZZzCEUG0RAp9OAJ9JEBVu9wruDiDRaABjN1lPTl5XnQCeP6FL
-Nd0yba3vUkLOV2kDom0xk2U=
-=EghH
+iD8DBQFB6G0lmdTrptrqvGERAlosAJ9N9kd332KftbpoTgmWwNnHJzSFpgCglzIJ
+Z+y7cuIPo8FL+EtmOdOGqxA=
+=BUZ/
 -----END PGP SIGNATURE-----

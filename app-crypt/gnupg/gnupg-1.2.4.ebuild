@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.26 2004/12/31 14:50:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.27 2005/01/15 01:08:45 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -145,4 +145,7 @@ pkg_postinst() {
 		einfo
 		einfo "Further information and other licenses are availble from http://www.mediacrypt.com/"
 	fi
+	einfo
+	einfo "See http://www.gentoo.org/doc/en/gnupg-user.xml for documentation on gnupg"
+	einfo
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r1.ebuild,v 1.2 2005/01/06 10:44:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r1.ebuild,v 1.3 2005/01/15 01:08:46 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -107,6 +107,10 @@ src_compile() {
 		--enable-sha512 \
 		${myconf} || die
 	emake || die
+
+	if ! use caps ; then
+		fperms u+s /usr/bin/gpg
+	fi
 }
 
 src_install() {
@@ -124,3 +128,30 @@ src_install() {
 	dohtml doc/faq.html
 }
 
+pkg_postinst() {
+	if ! use caps; then
+		einfo "gpg is installed suid root to make use of protected memory space"
+		einfo "This is needed in order to have a secure place to store your"
+		einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
+	fi
+	echo
+	if use idea; then
+		einfo "you have compiled ${PN} with support for the IDEA algorithm, this code"
+		einfo "is distributed under the GPL in countries where it is permitted to do so"
+		einfo "by law."
+		einfo
+		einfo "Please read http://www.gnupg.org/why-not-idea.html for more information."
+		einfo
+		einfo "If you are in a country where the IDEA algorithm is patented, you are permitted"
+		einfo "to use it at no cost for 'non revenue generating data transfer between private"
+		einfo "individuals'."
+		einfo
+		einfo "Countries where the patent applies are listed here"
+		einfo "http://www.mediacrypt.com/engl/Content/patent_info.htm"
+		einfo
+		einfo "Further information and other licenses are availble from http://www.mediacrypt.com/"
+	fi
+	einfo
+	einfo "See http://www.gentoo.org/doc/en/gnupg-user.xml for documentation on gnupg"
+	einfo
+}
