@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.79 2004/10/07 08:50:57 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.80 2004/10/22 15:24:09 phosphan Exp $
+
+  22 Oct 2004; Patrick Kursawe <phosphan@gentoo.org>
+  avifile-0.7.41.20041001.ebuild:
+  Older versions seem to cause more trouble than .41 - declaring stable for x86.
 
   07 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> files/throw.patch:
   throw.patch finally works with latest glibc versions - closing bug #64893.
