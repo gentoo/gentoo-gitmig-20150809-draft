@@ -1,11 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r1.ebuild,v 1.2 2004/08/31 19:07:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r1.ebuild,v 1.3 2004/10/05 19:38:38 eradicator Exp $
 
-inherit flag-o-matic
+IUSE="nls gnome opengl oggvorbis mikmod alsa oss esd mmx"
+
+inherit flag-o-matic eutils
 
 MY_PN="bmp"
 MY_P=bmp-${PV/_/}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Beep Media Player"
 HOMEPAGE="http://beepmp.sourceforge.net/"
@@ -15,22 +18,29 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
-IUSE="nls gnome opengl oggvorbis mikmod alsa oss esd mmx"
 
 RDEPEND="app-arch/unzip
-	>=x11-libs/gtk+-2.2
+	>=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2
 	>=dev-libs/libxml-1.8.15
-	>=gnome-base/libglade-2.0.1
+	>=gnome-base/libglade-2.3.1
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
-	esd? ( >=media-sound/esound-0.2.29 )
+	esd? ( >=media-sound/esound-0.2.30 )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
-	alsa? ( >=media-libs/alsa-lib-0.9.0 )"
+	alsa? ( >=media-libs/alsa-lib-1.0 )
+	gnome? ( >=gnome-base/gnome-vfs-2.6.0
+	         >=gnome-base/gconf-2.6.0 )"
+
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )"
 
-S=${WORKDIR}/${MY_P}
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-mime.patch
+}
 
 src_compile() {
 	local myconf=""
@@ -68,19 +78,15 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "install failed"
+	make DESTDIR="${D}" install || die
 
 	insinto /usr/share/pixmaps
 	doins beep.svg
 	doins beep/beep_mini.xpm
 
-	# Get the app registered in gnome
-
-	if use gnome; then
-		dodir /usr/share/gnome/apps
-		insinto /usr/share/gnome/apps/Multimedia
-		doins ${FILESDIR}/beep-media-player.desktop
-	fi
+	# Get the app registered for KDE
+	insinto /usr/share/applnk/Multimedia
+	doins ${D}/usr/share/applications/bmp.desktop
 
 	# We'll use xmms skins / plugins for the time being
 

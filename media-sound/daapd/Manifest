@@ -5,7 +5,7 @@ MD5 930ab8747282832850cf476d00aad168 ChangeLog 1633
 MD5 a536a4ad7975642df2a610dc11163dde daapd-0.2.1d.ebuild 1277
 MD5 67fa7232a65762eb47d8773c5fb33811 metadata.xml 592
 MD5 eb70a6530ad16b705eea4b7f95a56163 daapd-0.2.3b.ebuild 1381
-MD5 fb83dc0a500317b84678bd5f347ee948 daapd-0.2.3d.ebuild 1399
+MD5 c9adb332586642b59ff2ef59db397ff5 daapd-0.2.3d.ebuild 1306
 MD5 6a94f39460d57008cfec35d65b784951 files/0.2.1d-makefile-gentoo.patch 343
 MD5 71d5acf0144c38a510d37e388e6f4b4d files/0.2.1d-zeroconf-gentoo.patch 5182
 MD5 3beda326653c14c1fbd33c762af01e2e files/daapd.conf.d 673
@@ -19,7 +19,7 @@ MD5 c25c564a55bdc585c844929ca710971a files/digest-daapd-0.2.3d 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYmBCArHZZzCEUG0RAqdnAJ0VGQYejzB1t0LgA5G1XKMfwdPOswCfVJW/
-Y6S5Q+1pSBqusV2/BtMZL20=
-=68B/
+iD4DBQFBYvlFArHZZzCEUG0RAutGAJdIGUDntAnww9GhSzMLd0J0mYWLAJ9DIdnL
+K5w/GF33qWMYpZz1wp7v9w==
+=m36c
 -----END PGP SIGNATURE-----
