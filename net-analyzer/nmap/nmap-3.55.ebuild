@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.55.ebuild,v 1.12 2005/01/12 00:00:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.55.ebuild,v 1.13 2005/01/18 17:50:35 j4rg0n Exp $
 
 inherit gcc eutils gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.insecure.org/nmap/dist/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~arm hppa amd64 ppc64 ~ppc-macos"
+KEYWORDS="x86 ppc sparc alpha ~arm hppa amd64 ppc64 ppc-macos"
 IUSE="gtk gnome"
 
 DEPEND="virtual/libc
