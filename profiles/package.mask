@@ -125,6 +125,7 @@ dev-lisp/cmucl-bin
 =kde-base/kdebase-3.2.0_alpha1
 =kde-base/kdesdk-3.2.0_alpha1
 =kde-base/kdenetwork-3.2.0_alpha1
+=kde-base/kdemultimedia-3.2.0_alpha1
 =kde-base/kdepim-3.2.0_alpha1
 =kde-base/kdegames-3.2.0_alpha1
 =kde-base/kdeadmin-3.2.0_alpha1
@@ -134,6 +135,7 @@ dev-lisp/cmucl-bin
 =kde-base/kdebase-3.2.0_alpha2
 =kde-base/kdesdk-3.2.0_alpha2
 =kde-base/kdenetwork-3.2.0_alpha2
+=kde-base/kdemultimedia-3.2.0_alpha2
 =kde-base/kdepim-3.2.0_alpha2
 =kde-base/kdegames-3.2.0_alpha2
 =kde-base/kdeadmin-3.2.0_alpha2
