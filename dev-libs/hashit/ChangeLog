@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/hashit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/ChangeLog,v 1.1 2004/07/03 12:07:05 pyrania Exp $
+
+*hashit-0.9.1 (03 Jul 2004)
+
+  03 Jul 2004; <pyrania@gentoo.org> +hashit-0.9.1.ebuild:
+  Initial import. Closing bug #54087.
+
