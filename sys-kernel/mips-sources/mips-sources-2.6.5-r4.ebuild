@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.6-r2.ebuild,v 1.2 2004/07/15 03:53:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.5-r4.ebuild,v 1.1 2004/07/23 01:54:38 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20040604"
+CVSDATE="20040412"
 COBALTPATCHVER="1.4"
 IP32DIFFDATE="20040402"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
@@ -21,11 +21,12 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 04 Jun 2004
+# 2) linux-mips.org CVS snapshot diff from 12 Apr 2004
 # 3) Patch to fix the Swap issue in 2.6.5+ (Credit: Peter Horton <cobalt@colonel-panic.org>
-# 4) Iluxa's minimal O2 Patchset
-# 5) Security Fixes
-# 6) Patches for Cobalt support
+# 4) Iluxa's minimal O2 patchset
+# 5) Patch to fix linking issue for initrd's
+# 6) Security Fixes
+# 7) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -64,19 +65,31 @@ src_unpack() {
 	# Update the vanilla sources with linux-mips CVS changes
 	epatch ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff
 
-	# Bug in 2.6.6 that triggers a kernel oops when swap is activated
-	epatch ${FILESDIR}/mipscvs-2.6.5-swapbug-fix.patch
-
 	# iluxa's minpatchset for SGI O2
 	echo -e ""
 	einfo ">>> Patching kernel with iluxa's minimal IP32 patchset ..."
 	epatch ${WORKDIR}/ip32-iluxa-minpatchset-${IP32DIFFDATE}.diff
 
+	# Bug in 2.6.5 that triggers a kernel oops when swap is activated
+	epatch ${FILESDIR}/mipscvs-${OKV}-swapbug-fix.patch
+
+	# Bug in 2.6.5 in which an include was left out of unistd.h (breaks initrd)
+	epatch ${FILESDIR}/mipscvs-${OKV}-unistd-linkage.patch
+
 	# Security Fixes
 	echo -e ""
 	ebegin "Applying Security Fixes"
+		epatch ${FILESDIR}/CAN-2004-0075-2.6-vicam_usb.patch
+		epatch ${FILESDIR}/CAN-2004-0109-2.6-iso9660.patch
+		epatch ${FILESDIR}/CAN-2004-0228-cpufreq.patch
+		epatch ${FILESDIR}/CAN-2004-0229-fb_copy_cmap.patch
+		epatch ${FILESDIR}/CAN-2004-0427-2.6-do_fork.patch
+		epatch ${FILESDIR}/CAN-2004-0495_0496-2.6-sparse.patch
+		epatch ${FILESDIR}/CAN-2004-0497-2.6-attr_gid.patch
+		epatch ${FILESDIR}/CAN-2004-0596-2.6-eql.patch
 		epatch ${FILESDIR}/CAN-2004-0626-death_packet.patch
 	eend
+
 
 	# Cobalt Patches
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
