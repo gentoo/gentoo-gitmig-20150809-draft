@@ -1,0 +1,5 @@
+MD5 01d918fdb06a6f4b47728bff7f28672d ChangeLog 742
+MD5 777383aa07583151b88fb6ff38445545 emelfm-0.9.2.ebuild 1122
+MD5 f3ddc8c3b9ab834eb4c1beee46dd914d files/digest-emelfm-0.9.2 64
+MD5 9dc8229471bab651883447025e84353f files/makefile-nls-gentoo.patch 591
+MD5 dd1166f9fcf854307170d50e52538a89 files/po-cs-po-gentoo.patch 636

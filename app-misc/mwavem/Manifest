@@ -1,0 +1,5 @@
+MD5 33e8db38037b85e957842394ae69de9d ChangeLog 483
+MD5 335c0ab02301753bd1ceee5e42b33bd4 mwavem-1.0.2.ebuild 1306
+MD5 ef5c0d9f57ca24c1eb1ab7b33df9d291 files/digest-mwavem-1.0.2 65
+MD5 779ead17ce93702aa87513e41030ba40 files/mwave-dev-handler 210
+MD5 201284b6e4d0b1db01e347aa7586bae7 files/mwavem-1.0.2-gentoo.diff 2178

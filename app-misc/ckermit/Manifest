@@ -1,0 +1,7 @@
+MD5 2c2590d52f5ce22b8562f047acb7bbc8 ChangeLog 1196
+MD5 6ed76ca94e11afc2fb419c60e3b6b1e9 ckermit-7.0-r1.ebuild 1221
+MD5 9ecf1e23b979eb7c351c3ac125d33e95 ckermit-8.0.ebuild 1506
+MD5 f9df972bc5c2ebc4d0e0f1b368134254 files/ckermit-7.0-r1-gentoo.diff 237
+MD5 f9df972bc5c2ebc4d0e0f1b368134254 files/ckermit-8.0-gentoo.diff 237
+MD5 739b21a8a41cf4e8ebacede4af525c00 files/digest-ckermit-7.0-r1 59
+MD5 518e5394597fc1e4e1fdc1b6aab91d81 files/digest-ckermit-8.0 59

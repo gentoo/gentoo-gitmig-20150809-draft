@@ -1,0 +1,6 @@
+MD5 d7bb8b9b05d0015480836bc58b146c72 ChangeLog 414
+MD5 7b4b413a709c8fcba94aedecaecc828d mouseremote-0.90.ebuild 1953
+MD5 c709aaca16c43e7662c05de02cdb8770 files/digest-mouseremote-0.90 62
+MD5 b67ffda5eb975f4fcd47331b3e90f211 files/mouseremote-gentoo.diff 1553
+MD5 dbf197c880650bb1080ea734ac7a2573 files/mouseremote.conf 643
+MD5 43a1b24d99eb445da772190bc8530c97 files/mouseremote.start 779

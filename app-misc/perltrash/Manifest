@@ -1,0 +1,7 @@
+MD5 83b514bf7c9b44bd02c9430c5d822b8e ChangeLog 623
+MD5 a49ef85ac8efc7cfd7fb522771829978 perltrash-0.1.ebuild 535
+MD5 f2b010b3f713080c42d83cb432c0ba2e perltrash-0.2.ebuild 535
+MD5 939a8ad71c19a2f4d3d9d59878983aa2 perltrash-0.3.ebuild 535
+MD5 7e40787f01b135e60b19b6f24ff93966 files/digest-perltrash-0.1 64
+MD5 30af243192085040d38c4ac87540bab0 files/digest-perltrash-0.2 65
+MD5 ba2dfd33daa3095ecf415d98638e5e9d files/digest-perltrash-0.3 65

@@ -1,0 +1,7 @@
+MD5 9375b643be0037788cd4469e3409e1b3 ChangeLog 644
+MD5 d3beb619dc24b3933295ec8669179a15 gpsdrive-1.31-r1.ebuild 949
+MD5 d63763886f6f9d6ec229e03c58b79b81 gpsdrive-1.31.ebuild 892
+MD5 d714d4e29f31b31beee56d35705678cc gpsdrive-1.32.ebuild 849
+MD5 75ff8280831c94c1f0b6c661ea3b90f4 files/digest-gpsdrive-1.31 65
+MD5 75ff8280831c94c1f0b6c661ea3b90f4 files/digest-gpsdrive-1.31-r1 65
+MD5 e69f418d4011a8afc1a26378ec32a8df files/digest-gpsdrive-1.32 65

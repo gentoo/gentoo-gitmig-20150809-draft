@@ -1,0 +1,7 @@
+MD5 919da08a118935355227f146a0e4853b ChangeLog 1124
+MD5 0bf0ee8a79f361db1a4d997b4d6fed16 colortail-0.3.0-r2.ebuild 1197
+MD5 53159d36134080cfa92b1abe87d622b0 colortail-0.3.0-r3.ebuild 1680
+MD5 56cbf154f65f5efe302b4cc51d9cde43 files/colortail-0.3.0-gcc3.patch 846
+MD5 78130b7c29874efed5e1f2ceb0f31000 files/digest-colortail-0.3.0-r2 66
+MD5 78130b7c29874efed5e1f2ceb0f31000 files/digest-colortail-0.3.0-r3 66
+MD5 ca0caabe4048418f03f507717af476df files/0.3.0/ansi-c++-gcc-3.2.diff 8671
