@@ -6,6 +6,7 @@ afs
 3dfx
 3dnow
 avi
+emacs
 icc
 icc-pgo
 ruby
@@ -14,6 +15,7 @@ svga
 sse
 scanner 
 tcltk
+tcl
 X
 vim-with-x
 
