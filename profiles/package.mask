@@ -40,6 +40,8 @@ app-admin/logsentry
 # <azarah@gentoo.org> (27 Sep 2002)
 #latest gnome-spell
 =app-text/gnome-spell-0.5
+#not compadible with 1.0, or at least not out of the box
+=gnome-extra/gtkhtml-1.1.2
 
 # <bcowan@gentoo.org> (26 Sep 2002)
 #version bump. needs testing to see if patches need to be re-applied
