@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.3.ebuild,v 1.6 2002/11/15 01:06:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.3.ebuild,v 1.7 2002/11/15 01:08:01 vapier Exp $
 
 inherit kde-base
 need-kde 3
@@ -74,4 +74,3 @@ pkg_postinst() {
 	einfo "Oh, and if you think of a nice way to automate this from the ebuild, pray tell"
 	einfo "(but test first!) :-)"
 }
-
