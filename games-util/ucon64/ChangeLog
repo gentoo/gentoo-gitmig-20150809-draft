@@ -1,6 +1,12 @@
 # ChangeLog for games-util/ucon64
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.1 2004/02/25 19:23:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.2 2004/03/19 14:44:59 dholm Exp $
+
+*ucon64-1.9.8.4 (19 Mar 2004)
+
+  19 Mar 2004; David Holm <dholm@gentoo.org> ucon64-1.9.8.4.ebuild:
+  Version bumped and added to ~ppc. Also added a compile fix if parallel port
+  support is missing in the kernel.
 
 *ucon64-1.9.8.3 (25 Feb 2004)
 
