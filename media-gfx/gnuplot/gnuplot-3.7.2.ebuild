@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.2.ebuild,v 1.1 2002/11/06 09:09:57 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.2.ebuild,v 1.2 2002/11/06 15:33:25 cretin Exp $
 
 IUSE="X readline svga plotutils"
 
@@ -50,11 +50,14 @@ src_compile() {
 	mv Makefile Makefile.orig
 	sed -e 's/datadir = \/usr/datadir = ${prefix}/' \
 	    -e 's/mandir = \/usr/mandir = ${prefix}/' \
+		-e 's/infodir = \/usr/infodir = ${prefix}/' \
 	    Makefile.orig > Makefile
 
 	cd docs
 	mv Makefile Makefile.orig
 	sed -e 's/datadir = \/usr/datadir = ${prefix}/' \
+		-e 's/infodir = \/usr/infodir = ${prefix}/' \
+		-e 's/mandir = \/usr/mandir = ${prefix}/' \
 		Makefile.orig > Makefile
 
 	cd ${S}
