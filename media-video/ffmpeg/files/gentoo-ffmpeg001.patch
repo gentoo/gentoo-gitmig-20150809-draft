@@ -1,0 +1,31 @@
+--- libavcodec/Makefile.old	2005-02-28 10:26:08.306815960 +0900
++++ libavcodec/Makefile	2005-02-28 10:26:42.517615128 +0900
+@@ -75,6 +75,8 @@
+ ifneq ($(CONFIG_A52BIN),yes)
+ OBJS+= liba52/bit_allocate.o liba52/bitstream.o liba52/downmix.o \
+ 	liba52/imdct.o  liba52/parse.o liba52/crc.o liba52/resample.o
++else
++EXTRALIBS += -la52
+ endif
+ endif
+ 
+--- libavcodec/a52dec.c.old	2005-02-28 10:23:54.002233360 +0900
++++ libavcodec/a52dec.c	2005-02-28 10:35:36.910375080 +0900
+@@ -73,7 +73,7 @@
+ {
+     void* f = dlsym(handle, symbol);
+     if (!f)
+-	fprintf(stderr, "A52 Decoder - function '%s' can't be resolved\n", symbol);
++	av_log(stderr, "A52 Decoder - function '%s' can't be resolved\n", symbol);
+     return f;
+ }
+ #endif
+@@ -86,7 +86,7 @@
+     s->handle = dlopen(liba52name, RTLD_LAZY);
+     if (!s->handle)
+     {
+-	fprintf(stderr, "A52 library %s could not be opened! \n%s\n", liba52name, dlerror());
++	av_log(stderr, "A52 library %s could not be opened! \n%s\n", liba52name, dlerror());
+         return -1;
+     }
+     s->a52_init = (a52_state_t* (*)(uint32_t)) dlsymm(s->handle, "a52_init");
