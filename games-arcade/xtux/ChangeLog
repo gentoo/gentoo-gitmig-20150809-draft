@@ -1,0 +1,18 @@
+# ChangeLog for app-games/xtux
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/ChangeLog,v 1.1 2003/09/10 19:29:22 vapier Exp $
+
+  28 Jun 2003; <msterret@gentoo.org> xtux-20030306.ebuild:
+  use sed -i and emake
+
+*xtux-20030306 (25 May 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add custom CFLAGS and games.eclass support.
+
+  12 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xtux-20030306.ebuild:
+  xfree provides xpm
+
+  25 May 2003; Jon Portnoy <avenj@gentoo.org> xtux-20030306.ebuild :
+  Initial import. Ebuild by me, myself, and I, working in full
+  cooperation with each other.

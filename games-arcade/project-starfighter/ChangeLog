@@ -1,0 +1,16 @@
+# ChangeLog for app-games/project-starfighter
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*project-starfighter-1.1 (01 Sep 2003)
+
+  01 Sep 2003; Michael Sterrett <msterret@gentoo.org>
+  project-starfighter-1.1.ebuild:
+  version bump
+
+*project-starfighter-1.00 (05 Jul 2003)
+
+  05 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  project-starfighter-1.00.ebuild:
+  Initial commit (bug 21332)
+

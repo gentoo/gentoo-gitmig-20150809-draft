@@ -1,0 +1,27 @@
+--- njam-0.96-src/njamgame.cpp	2003-06-27 10:29:08.000000000 -0700
++++ src/njamgame.cpp	2003-07-18 14:11:47.000000000 -0700
+@@ -59,13 +59,13 @@
+ 		case gtOnePlayer:
+ 			m_Player[0].Playing = true;
+ 			m_Ghosts = 5;
+-			levels = m_Maps.Load("data/maps.dat");
++			levels = m_Maps.Load("/usr/share/games/njam/data/maps.dat");
+ 			break;
+ 		case gtDuel:
+ 			m_Player[0].Playing = true;
+ 			m_Player[1].Playing = true;
+ 		case gtHostDuel:
+-			levels = m_Maps.Load("data/duelmaps.dat");
++			levels = m_Maps.Load("/usr/share/games/njam/data/duelmaps.dat");
+ 			break;
+ 		case gtJoinDuel:								// don't load, the server will send map data
+ 			levels = 1;
+@@ -188,7 +188,7 @@
+     }
+     else					// duel over... we have a winner(0-3) in Winner variable
+     {
+-    	char filename[] = "data/win?.jpg";
++    	char filename[] = "/usr/share/games/njam/data/win?.jpg";
+     	filename[8] = (char)('1'+Winner);
+ 	 	SDL_Surface *temp = IMG_Load(filename);
+ 	 	if (!temp)

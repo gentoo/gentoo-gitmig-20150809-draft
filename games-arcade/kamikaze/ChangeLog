@@ -1,0 +1,16 @@
+# ChangeLog for app-games/kamikaze
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*kamikaze-0.1.0 (01 Sep 2003)
+
+  01 Sep 2003; Michael Sterrett <msterret@gentoo.org> kamikaze-0.1.0.ebuild:
+  version bump
+
+  31 Aug 2003; Michael Sterrett <msterret@gentoo.org> kamikaze-0.0.4.ebuild:
+  inherit kde-base -> inherit kde
+
+*kamikaze-0.0.4 (13 Jun 2003)
+
+  13 Jun 2003; Caleb Tennis <caleb@gentoo.org> kamikaze-0.0.4:
+  Initial commit - closes bug #22580.  Thanks to Cyrille Berger for ebuild.

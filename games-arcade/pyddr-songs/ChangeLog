@@ -1,0 +1,15 @@
+# ChangeLog for app-games/pyddr-songs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pyddr-songs/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*pyddr-songs-20030513 (13 May 2003)
+
+  13 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added a couple of more songs from pyddr homepage.
+
+*pyddr-songs-20030106 (05 Mar 2003)
+
+  05 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  pyddr-songs-20030106.ebuild ChangeLog files/digest-pyddr-songs-20030106 :
+
+  Song and step file for pyddr.

@@ -1,0 +1,266 @@
+diff -ur crack-attack-1.1.8.orig/src/Communicator.cxx crack-attack-1.1.8/src/Communicator.cxx
+--- crack-attack-1.1.8.orig/src/Communicator.cxx	2003-08-21 10:21:34.533831616 -0400
++++ crack-attack-1.1.8/src/Communicator.cxx	2003-08-21 10:25:49.849017808 -0400
+@@ -27,7 +27,7 @@
+  */
+ 
+ #include <assert.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <sys/types.h>
+ #include <string.h>
+ 
+diff -ur crack-attack-1.1.8.orig/src/Displayer.cxx crack-attack-1.1.8/src/Displayer.cxx
+--- crack-attack-1.1.8.orig/src/Displayer.cxx	2003-08-21 10:21:34.533831616 -0400
++++ crack-attack-1.1.8/src/Displayer.cxx	2003-08-21 10:36:02.188927992 -0400
+@@ -37,7 +37,7 @@
+ #ifdef DEVELOPMENT
+ #include <iomanip.h>
+ #ifndef _WIN32
+-#  include <strstream.h>
++#  include <sstream>
+ #else
+ #  include <strstrea.h>
+ #endif
+@@ -408,11 +408,10 @@
+   glReadPixels(0, 0, screen_length, screen_length, GL_RGBA, GL_UNSIGNED_BYTE,
+    image);
+ 
+-  char file_name[256];
+-  ostrstream s(file_name, 256);
++  ostringstream s;
+   s << DC_SCREEN_SHOT_FILE_NAME_BASE "_" << setw(GC_GARBAGE_TEX_NUMBER_DIGITS)
+-   << setfill('0') << count << ".tga" << ends;
+-  TextureLoader::createTGA(file_name, image, screen_length, screen_length,
++   << setfill('0') << count << ".tga";
++  TextureLoader::createTGA(file_name.str().c_str(), image, screen_length, screen_length,
+    TL_SCREEN_SHOT_TGA_ID);
+ 
+   MESSAGE("creating " << file_name);
+diff -ur crack-attack-1.1.8.orig/src/Game.h crack-attack-1.1.8/src/Game.h
+--- crack-attack-1.1.8.orig/src/Game.h	2003-08-21 10:21:34.538830856 -0400
++++ crack-attack-1.1.8/src/Game.h	2003-08-21 10:28:19.254304752 -0400
+@@ -4,7 +4,7 @@
+ #include <limits.h>
+ #include <stdlib.h>
+ #include <math.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <GL/glut.h>
+ 
+ #ifndef _WIN32
+@@ -13,6 +13,8 @@
+ #  include <glext.h>
+ #endif
+ 
++using namespace std;
++
+ // null
+ #define null                             (0)
+ 
+@@ -230,7 +232,7 @@
+ 
+ // debug
+ #ifndef NDEBUG
+-#  include <fstream.h>
++#  include <fstream>
+ #  ifndef _WIN32
+ #    define COLOR(n)                     "\33[1;" << (n) << "m"
+ #    define NOCOLOR                      "\33[m"
+diff -ur crack-attack-1.1.8.orig/src/GarbageFlavorImage.cxx crack-attack-1.1.8/src/GarbageFlavorImage.cxx
+--- crack-attack-1.1.8.orig/src/GarbageFlavorImage.cxx	2003-08-21 10:21:34.534831464 -0400
++++ crack-attack-1.1.8/src/GarbageFlavorImage.cxx	2003-08-21 10:37:09.552687144 -0400
+@@ -25,10 +25,10 @@
+  * Handles the the garbage flavor image.
+  */
+ 
+-#include <iomanip.h>
++#include <iomanip>
+ 
+ #ifndef _WIN32
+-#  include <strstream.h>
++#  include <sstream>
+ #else
+ #  include <strstrea.h>
+ #endif
+@@ -186,9 +186,11 @@
+ void GarbageFlavorImage::buildGarbageTextureFileName ( char file_name[256],
+  const char *dir_name, int n )
+ {
+-  ostrstream s(file_name, 256);
++  ostringstream s;
+   s << dir_name << GC_GARBAGE_TEX_FILE_NAME_BASE "_"
+-   << setw(GC_GARBAGE_TEX_NUMBER_DIGITS) << setfill('0') << n << ".tga" << ends;
++   << setw(GC_GARBAGE_TEX_NUMBER_DIGITS) << setfill('0') << n << ".tga";
++  strncpy(file_name, s.str().c_str(), 256);
++  file_name[255] = '\0'; // Just in case
+ }
+ 
+ void GarbageFlavorImage::buildGarbageTextureFileName ( char file_name[256],
+diff -ur crack-attack-1.1.8.orig/src/GarbageGenerator.cxx crack-attack-1.1.8/src/GarbageGenerator.cxx
+--- crack-attack-1.1.8.orig/src/GarbageGenerator.cxx	2003-08-21 10:21:34.534831464 -0400
++++ crack-attack-1.1.8/src/GarbageGenerator.cxx	2003-08-21 10:25:49.899010208 -0400
+@@ -25,7 +25,7 @@
+  * Displays and sends garbage to the opponent.
+  */
+ 
+-#include <iostream.h>
++#include <iostream>
+ 
+ #include "Game.h"
+ #include "GarbageGenerator.h"
+diff -ur crack-attack-1.1.8.orig/src/Score.cxx crack-attack-1.1.8/src/Score.cxx
+--- crack-attack-1.1.8.orig/src/Score.cxx	2003-08-21 10:21:34.534831464 -0400
++++ crack-attack-1.1.8/src/Score.cxx	2003-08-21 10:25:49.917007472 -0400
+@@ -26,7 +26,7 @@
+  */
+ 
+ #include <string.h>
+-#include <fstream.h>
++#include <fstream>
+ 
+ #include "Game.h"
+ #include "MetaState.h"
+diff -ur crack-attack-1.1.8.orig/src/TextureLoader.cxx crack-attack-1.1.8/src/TextureLoader.cxx
+--- crack-attack-1.1.8.orig/src/TextureLoader.cxx	2003-08-21 10:21:34.535831312 -0400
++++ crack-attack-1.1.8/src/TextureLoader.cxx	2003-08-21 10:25:49.936004584 -0400
+@@ -26,8 +26,8 @@
+  */
+ 
+ #include <GL/glut.h>
+-#include <fstream.h>
+-#include <iostream.h>
++#include <fstream>
++#include <iostream>
+ #include <string.h>
+ #include <sys/stat.h>
+ 
+diff -ur crack-attack-1.1.8.orig/src/TextureLoader.h crack-attack-1.1.8/src/TextureLoader.h
+--- crack-attack-1.1.8.orig/src/TextureLoader.h	2003-08-21 10:21:34.539830704 -0400
++++ crack-attack-1.1.8/src/TextureLoader.h	2003-08-21 10:36:02.190927688 -0400
+@@ -4,12 +4,14 @@
+ #include <GL/glut.h>
+ 
+ #ifndef _WIN32
+-#  include <strstream.h>
++#  include <sstream>
+ #else
+ #  include <glext.h>
+ #  include <strstrea.h>
+ #endif
+ 
++using namespace std;
++
+ #define TL_GARBAGE_TEXTURE_TGA_ID     "Crack Attack! garbage texture"
+ #define TL_SCREEN_SHOT_TGA_ID         "Crack Attack! screen shot"
+ 
+@@ -31,25 +33,27 @@
+ 
+   static inline void buildLocalDataDirectoryName ( char dir_name[256] )
+   {
+-    ostrstream s(dir_name, 256);
++    ostringstream s;
+ #ifndef _WIN32
+-    s << getenv("HOME") << GC_LOCAL_DATA_DIRECTORY << ends;
++    s << getenv("HOME") << GC_LOCAL_DATA_DIRECTORY;
+ #else
+-    s << GC_LOCAL_DATA_DIRECTORY << ends;
++    s << GC_LOCAL_DATA_DIRECTORY;
+ #endif
+-    s.str();
++    strncpy(dir_name, s.str().c_str(), 256);
++    dir_name[255] = '\0'; // Just in case
+   }
+ 
+   static inline void buildLocalDataFileName ( const char base_name[256],
+    char file_name[256] )
+   {
+-    ostrstream s(file_name, 256);
++    ostringstream s;
+ #ifndef _WIN32
+-    s << getenv("HOME") << GC_LOCAL_DATA_DIRECTORY << base_name << ends;
++    s << getenv("HOME") << GC_LOCAL_DATA_DIRECTORY << base_name;
+ #else
+-    s << GC_LOCAL_DATA_DIRECTORY << base_name << ends;
++    s << GC_LOCAL_DATA_DIRECTORY << base_name;
+ #endif
+-    s.str();
++    strncpy(file_name, s.str().c_str(), 256);
++    file_name[255] = '\0'; // Just in case
+   }
+ };
+ 
+Only in crack-attack-1.1.8/src: TextureLoader.h.orig
+diff -ur crack-attack-1.1.8.orig/src/obj_messages.cxx crack-attack-1.1.8/src/obj_messages.cxx
+--- crack-attack-1.1.8.orig/src/obj_messages.cxx	2003-08-21 10:21:34.537831008 -0400
++++ crack-attack-1.1.8/src/obj_messages.cxx	2003-08-21 10:27:45.063502544 -0400
+@@ -30,7 +30,7 @@
+ #include <math.h>
+ 
+ #ifndef _WIN32
+-#  include <strstream.h>
++#  include <sstream>
+ #else
+ #  include <glext.h>
+ #  include <strstrea.h>
+diff -ur crack-attack-1.1.8.orig/src/obj_score_record.cxx crack-attack-1.1.8/src/obj_score_record.cxx
+--- crack-attack-1.1.8.orig/src/obj_score_record.cxx	2003-08-21 10:21:34.537831008 -0400
++++ crack-attack-1.1.8/src/obj_score_record.cxx	2003-08-21 10:36:02.190927688 -0400
+@@ -27,7 +27,7 @@
+ #include <math.h>
+ 
+ #ifndef _WIN32
+-#  include <strstream.h>
++#  include <sstream>
+ #else
+ #  include <glext.h>
+ #  include <strstrea.h>
+@@ -68,10 +68,11 @@
+    = new GLubyte[DC_LETTER_TEX_LENGTH * DC_SCORE_REC_RANK_STRING_TEX_WIDTH * 4];
+ 
+   char rank_string[8];
+-  ostrstream s(rank_string, 8);
+   for (int n = Score::player_rank; n--; ) {
+-    ostrstream s(rank_string, 8);
+-    s << (GC_SCORE_REC_LENGTH - n) << ends;
++    ostringstream s;
++    s << (GC_SCORE_REC_LENGTH - n);
++    strncpy(rank_string, s.str().c_str(),8);
++    rank_string[7] = '\0'; // Just in case
+ 
+     for (int i = DC_LETTER_TEX_LENGTH * DC_SCORE_REC_RANK_STRING_TEX_WIDTH * 4;
+      i--; )
+@@ -94,12 +95,16 @@
+  const char *name, GLubyte *texture )
+ {
+   char score_string[32];
+-  ostrstream s(score_string, 32);
+-  s << score << ends;
++  ostringstream s;
++  s << score;
++  strncpy(score_string, s.str().c_str(), 32);
++  score_string[31] = '\0'; // Just in case
+ 
+   char rank_string[8];
+-  ostrstream t(rank_string, 8);
+-  t << (GC_SCORE_REC_LENGTH - rank) << ends;
++  ostringstream t;
++  t << (GC_SCORE_REC_LENGTH - rank);
++  strncpy(score_string, s.str().c_str(), 8);
++  rank_string[7] = '\0'; // Just in case
+ 
+   int score_width
+    = String::stringWidth(score_string, DC_SCORE_REC_TEX_LENGTH_S -
+@@ -195,8 +200,10 @@
+   }
+ 
+   char score[32];
+-  ostrstream s(score, 32);
+-  s << Score::record[GC_SCORE_REC_LENGTH - 1].score << ends;
++  ostringstream s;
++  s << Score::record[GC_SCORE_REC_LENGTH - 1].score;
++  strncpy(score, s.str().c_str(), 32);
++  score[31] = '\0'; // Just in case
+ 
+   width = String::stringWidth(score, DC_SCORE_TO_BEAT_TEX_LENGTH_S);
+   subtexture = new GLubyte[DC_LETTER_TEX_LENGTH * width * 4];

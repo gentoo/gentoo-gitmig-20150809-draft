@@ -1,0 +1,28 @@
+# ChangeLog for app-games/penguin-command
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+  12 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  penguin-command-1.6.5-r1.ebuild:
+  fix DESCRIPTION; tidy; error messages
+
+*penguin-command-1.6.5-r1 (28 Jul 2002)
+
+  01 Nov 2002; Jon Nall <nall@gentoo.org> penguin-command-1.6.5-r1.ebuild :
+  added ppc to KEYWORDS
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> penguin-command-1.6.5-r1.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  28 jul 2002; Gabriele Giorgetti <stroke@gentoo.org> penguin-command-1.6.5-r1.ebuild :
+  Added version number to deps. (Also fixes bug #5668)
+
+*penguin-command-1.6.5,  (23 May 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> penguin-command-1.6.5.ebuild :
+  Added KEYWORDS, SLOT.
+
+  23 May 2002; George Shapovalov <george@gentoo.org> Changelog :
+
+  Initial release
+

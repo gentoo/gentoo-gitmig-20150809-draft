@@ -1,0 +1,26 @@
+# ChangeLog for app-games/crack-attack
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*crack-attack-1.1.8 (29 Jul 2002)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add gcc3 patch #27015.
+
+  21 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  crack-attack-1.1.8.ebuild:
+  more error messages; dohtml for html docs
+
+  05 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Fix GL with new XFree (#15551) and add games eclass support.
+
+  29 Jul 2002; Spider <spider@gentoo.org> crack-attack-1.1.8.ebuild :
+  Updated to the latest version
+  
+*crack-attack-1.1.7 (14 Apr 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> crack-attack-1.1.7.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  14 Apr 2002; Bart Verwilst <verwilst@gentoo.org> Changelog :
+  Initial Version

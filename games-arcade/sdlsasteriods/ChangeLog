@@ -1,0 +1,13 @@
+# ChangeLog for app-games/sdlsasteriods
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteriods/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*sdlsasteriods-1.99-r1 (22 Dec 2002)
+
+  22 Dec 2002; Michael Cohen <mjc@gentoo.org> :
+  Wouldn't compile without media-libs/sdl-ttf. fixed
+
+*sdlsasteroids-1.99 (17 Dec 2002)
+
+  17 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by andrew <andrew@textux.com>.

@@ -1,0 +1,182 @@
+--- njam-0.96-src/njam.cpp	2003-06-26 07:06:24.000000000 -0700
++++ src/njam.cpp	2003-07-18 14:11:44.000000000 -0700
+@@ -202,7 +202,7 @@
+ 	}
+ 
+ 	if (script_file == NULL)
+-	    script_file = fopen("data/script.txt", "rb");
++	    script_file = fopen("/usr/share/games/njam/data/script.txt", "rb");
+ 	if (script_file == NULL)
+ 		return;
+ 
+@@ -287,7 +287,7 @@
+  	// load .bmp for main menu
+  	SDL_Surface *m_Icon;
+  	LogFile("Loading icon...");
+- 	m_Icon = SDL_LoadBMP("data/njamicon.bmp");
++ 	m_Icon = SDL_LoadBMP("/usr/share/games/njam/data/njamicon.bmp");
+  	if (!m_Icon)
+  	{
+  		LogFile("FAILED.\n");
+@@ -338,7 +338,7 @@
+  	// load .bmp for main menu
+  	SDL_Surface *temp;
+  	LogFile("Loading Main Menu image...");
+- 	temp = IMG_Load("data/mainmenu.jpg");
++ 	temp = IMG_Load("/usr/share/games/njam/data/mainmenu.jpg");
+  	if (!temp)
+  	{
+  		LogFile("FAILED.\n");
+@@ -358,7 +358,7 @@
+ 
+  	// load .bmp for options menu
+  	LogFile("Loading Options Menu image...");
+- 	temp = IMG_Load("data/options.jpg");
++ 	temp = IMG_Load("/usr/share/games/njam/data/options.jpg");
+  	if (!temp)
+  	{
+  		LogFile("FAILED.\n");
+@@ -378,7 +378,7 @@
+ 
+  	// load .bmp for network-send screen
+  	LogFile("Loading Net-send image...");
+- 	m_NetSendImage = IMG_Load("data/netsend.jpg");
++ 	m_NetSendImage = IMG_Load("/usr/share/games/njam/data/netsend.jpg");
+  	if (!m_NetSendImage)
+  	{
+  		LogFile("FAILED.\n");
+@@ -389,7 +389,7 @@
+ 
+  	// load .bmp for network-send screen
+  	LogFile("Loading Gameover image...");
+- 	m_GameOverImage = IMG_Load("data/gameover.jpg");
++ 	m_GameOverImage = IMG_Load("/usr/share/games/njam/data/gameover.jpg");
+  	if (!m_GameOverImage)
+  	{
+  		LogFile("FAILED.\n");
+@@ -400,7 +400,7 @@
+ 
+  	// load .bmp for network-send screen
+  	LogFile("Loading Net-lobby image...");
+- 	m_NetLobbyImage = SDL_LoadBMP("data/network.bmp");
++ 	m_NetLobbyImage = SDL_LoadBMP("/usr/share/games/njam/data/network.bmp");
+  	if (!m_NetLobbyImage)
+  	{
+  		LogFile("FAILED.\n");
+@@ -411,7 +411,7 @@
+ 
+  	// load .bmp for enter server IP screen
+  	LogFile("Loading enter server IP image...");
+- 	m_NetEnterImage = IMG_Load("data/enter-ip.jpg");
++ 	m_NetEnterImage = IMG_Load("/usr/share/games/njam/data/enter-ip.jpg");
+  	if (!m_NetEnterImage)
+  	{
+  		LogFile("FAILED.\n");
+@@ -422,7 +422,7 @@
+ 
+  	// load .bmp for stats screen
+  	LogFile("Loading Stats screen image...");
+- 	temp = IMG_Load("data/stats.jpg");
++ 	temp = IMG_Load("/usr/share/games/njam/data/stats.jpg");
+  	if (!temp)
+  	{
+  		LogFile("FAILED.\n");
+@@ -442,7 +442,7 @@
+ 
+  	// load .bmp for sprites and menu selector
+  	LogFile("Loading Sprites image...");
+- 	temp = SDL_LoadBMP("data/sprites.bmp");
++ 	temp = SDL_LoadBMP("/usr/share/games/njam/data/sprites.bmp");
+  	if (!temp)
+  	{
+  		LogFile("FAILED.\n");
+@@ -469,7 +469,7 @@
+ 	m_NumberOfSkins = 0;
+ 	while (true)
+ 	{
+-		sprintf(Filename, "skins/Back%03d.bmp", m_NumberOfSkins);
++		sprintf(Filename, "/usr/share/games/njam/skins/Back%03d.bmp", m_NumberOfSkins);
+ 		FILE *fp = fopen(Filename, "r");
+ 		if (!fp)
+ 			break;
+@@ -484,7 +484,7 @@
+ 
+ 	for (int i=0; i<m_NumberOfSkins; i++)
+ 	{
+-		sprintf(Filename, "skins/Back%03d.bmp", i);
++		sprintf(Filename, "/usr/share/games/njam/skins/Back%03d.bmp", i);
+ 		LogFile((const char*)Filename);
+ 		temp = SDL_LoadBMP(Filename);
+ 	 	if (!temp)
+@@ -506,8 +506,8 @@
+ 	}
+ 
+ 	LogFile("Loading Fonts:\n");
+-	m_FontBlue = new NjamFont("data/font-blue.bmp", 6, 9);
+-	m_FontYellow = new NjamFont("data/font-yellow.bmp", 10, 15);
++	m_FontBlue = new NjamFont("/usr/share/games/njam/data/font-blue.bmp", 6, 9);
++	m_FontYellow = new NjamFont("/usr/share/games/njam/data/font-yellow.bmp", 10, 15);
+ 
+ 	// Load user settings from .conf file
+ 	char filename[] = "njam.conf";
+@@ -561,38 +561,38 @@
+ 		    printf("2 channels were not reserved!\n");
+ 		}
+ 
+-	   	printf("Loading song: data/satisfy.s3m...\n");
+-	    m_MainMenuMusic = Mix_LoadMUS("data/satisfy.s3m");;
++	   	printf("Loading song: /usr/share/games/njam/data/satisfy.s3m...\n");
++	    m_MainMenuMusic = Mix_LoadMUS("/usr/share/games/njam/data/satisfy.s3m");;
+ 	    if(!m_MainMenuMusic)
+ 	    	printf("ERROR: Mix_LoadMUS(): %s\n", Mix_GetError());
+ 
+-	   	printf("Loading song: data/ritam.s3m...\n");
+-	    m_GameMusic1 = Mix_LoadMUS("data/ritam.s3m");;
++	   	printf("Loading song: /usr/share/games/njam/data/ritam.s3m...\n");
++	    m_GameMusic1 = Mix_LoadMUS("/usr/share/games/njam/data/ritam.s3m");;
+ 	    if(!m_GameMusic1)
+ 	    	printf("ERROR: Mix_LoadMUS(): %s\n", Mix_GetError());
+ 
+-	   	printf("Loading song: data/dali.mod...\n");
+-	    m_GameMusic2 = Mix_LoadMUS("data/dali.mod");;
++	   	printf("Loading song: /usr/share/games/njam/data/dali.mod...\n");
++	    m_GameMusic2 = Mix_LoadMUS("/usr/share/games/njam/data/dali.mod");;
+ 	    if(!m_GameMusic2)
+ 	    	printf("ERROR: Mix_LoadMUS(): %s\n", Mix_GetError());
+ 
+ 	    printf("Loading samples...");
+-		m_Sounds[0] = Mix_LoadWAV("data/dead.wav");
+-        m_Sounds[1] = Mix_LoadWAV("data/dead2.wav");
+-        m_Sounds[2] = Mix_LoadWAV("data/dead3.wav");
+-        m_Sounds[3] = Mix_LoadWAV("data/kill.wav");
+-        m_Sounds[4] = Mix_LoadWAV("data/kill2.wav");
+-        m_Sounds[5] = Mix_LoadWAV("data/kill3.wav");
+-        m_Sounds[6] = Mix_LoadWAV("data/killply.wav");
+-        m_Sounds[7] = Mix_LoadWAV("data/mapend.wav");
+-        m_Sounds[8] = Mix_LoadWAV("data/mapend2.wav");
+-        m_Sounds[9] = Mix_LoadWAV("data/juice.wav");
+-        m_Sounds[10] = Mix_LoadWAV("data/teleport.wav");
+-        m_Sounds[11] = Mix_LoadWAV("data/invisible.wav");
+-        m_Sounds[12] = Mix_LoadWAV("data/trapdoor.wav");
+-        m_Sounds[13] = Mix_LoadWAV("data/freeze.wav");
+-        m_Sounds[14] = Mix_LoadWAV("data/tripleding.wav");
+-        m_Sounds[15] = Mix_LoadWAV("data/bonus.wav");
++		m_Sounds[0] = Mix_LoadWAV("/usr/share/games/njam/data/dead.wav");
++        m_Sounds[1] = Mix_LoadWAV("/usr/share/games/njam/data/dead2.wav");
++        m_Sounds[2] = Mix_LoadWAV("/usr/share/games/njam/data/dead3.wav");
++        m_Sounds[3] = Mix_LoadWAV("/usr/share/games/njam/data/kill.wav");
++        m_Sounds[4] = Mix_LoadWAV("/usr/share/games/njam/data/kill2.wav");
++        m_Sounds[5] = Mix_LoadWAV("/usr/share/games/njam/data/kill3.wav");
++        m_Sounds[6] = Mix_LoadWAV("/usr/share/games/njam/data/killply.wav");
++        m_Sounds[7] = Mix_LoadWAV("/usr/share/games/njam/data/mapend.wav");
++        m_Sounds[8] = Mix_LoadWAV("/usr/share/games/njam/data/mapend2.wav");
++        m_Sounds[9] = Mix_LoadWAV("/usr/share/games/njam/data/juice.wav");
++        m_Sounds[10] = Mix_LoadWAV("/usr/share/games/njam/data/teleport.wav");
++        m_Sounds[11] = Mix_LoadWAV("/usr/share/games/njam/data/invisible.wav");
++        m_Sounds[12] = Mix_LoadWAV("/usr/share/games/njam/data/trapdoor.wav");
++        m_Sounds[13] = Mix_LoadWAV("/usr/share/games/njam/data/freeze.wav");
++        m_Sounds[14] = Mix_LoadWAV("/usr/share/games/njam/data/tripleding.wav");
++        m_Sounds[15] = Mix_LoadWAV("/usr/share/games/njam/data/bonus.wav");
+         for (int i=0; i<16; i++)
+         	if (!m_Sounds[i])
+         		printf("ERROR loading sample nr. %d\n", i);

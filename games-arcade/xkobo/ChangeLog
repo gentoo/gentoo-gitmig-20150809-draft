@@ -1,0 +1,19 @@
+# ChangeLog for app-games/xkobo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/ChangeLog,v 1.1 2003/09/10 19:29:22 vapier Exp $
+
+  11 Jul 2003; Michael Sterrett <msterret@gentoo.org> xkobo-1.11.ebuild:
+  Fix DESCRIPTION; more error checking; mark stable as it should have been
+  in the first place.
+
+  27 Jun 2003; <msterret@gentoo.org> xkobo-1.11.ebuild:
+  use keepdir for scores directory so multiple merges don't remove the directory
+
+  27 Jun 2003; <msterret@gentoo.org> xkobo-1.11.ebuild:
+  more error checking on install
+
+*xkobo-1.11 (26 Jun 2003)
+
+  26 Jun 2003; <msterret@gentoo.org> xkobo-1.11.ebuild:
+  Initial commit to portage
+

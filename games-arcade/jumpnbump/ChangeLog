@@ -1,0 +1,36 @@
+# ChangeLog for app-games/jumpnbump
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+  04 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  jumpnbump-1.41-r1.ebuild:
+  use the selected level from the right location (bug 25901)
+
+*jumpnbump-1.41-r1 (01 Aug 2003)
+
+  01 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  jumpnbump-1.41-r1.ebuild:
+  use games.eclass location for datafiles and inherit games; tidy
+
+*jumpnbump-1.41 (06 Jun 2003)
+
+  06 Jun 2003; <msterret@gentoo.org> jumpnbump-1.41.ebuild:
+  version bump; had to fix the ebuild to accommodate changes in upstream install.
+
+  06 Jun 2003; <msterret@gentoo.org> jumpnbump-1.39.ebuild:
+  DEPEND on sed >= 4
+
+  05 Jun 2003; Martin Holzer <mholzer@gentoo.org> jumpnbump-1.39.ebuild:
+  Now installs into /usr/games/bin. Closes #18121.
+
+*jumpnbump-1.39.ebuild (18 dec 2002) Bart Verwilst <verwilst@gentoo.org>
+
+*jumpnbump-1.2.ebuild (17 jul 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> jumpnbump-1.2.ebuild :
+  Added KEYWORDS.
+
+*Jump 'n Bump 1.2
+  19 Apr 2002; Bart Verwilst <verwilst@gentoo.org> Changelog:
+  
+  New game, looks quite good and funny :o)

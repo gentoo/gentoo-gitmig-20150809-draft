@@ -1,0 +1,25 @@
+# ChangeLog for app-games/emilia-pinball
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*emilia-pinball-0.3.0 (16 Jul 2003)
+
+  16 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + cleanup #20166.  Thanks to TGL for finishing it off.
+
+*emilia-pinball-0.1.2-r1 (20 Mar 2003)
+
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org>
+  emilia-pinball-0.1.2-r1.ebuild:
+  Removed usage of pic USE flag
+
+  07 Jan 2003; foser <foser@gentoo.org> emilia-pinball-1.2.0.ebuild :
+  Added sdl-mixer and sdl-image dep
+
+  06 Dec 2003; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
+
+*emilia-pinball-0.1.2 (31 Dec 2002)
+
+  31 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #6843.

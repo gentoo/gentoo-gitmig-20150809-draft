@@ -1,0 +1,25 @@
+# ChangeLog for app-games/xrick
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/ChangeLog,v 1.1 2003/09/10 19:29:22 vapier Exp $
+
+*xrick-021212-r1 (16 Aug 2003)
+
+  16 Aug 2003; Michael Sterrett <msterret@gentoo.org> xrick-021212-r1.ebuild:
+  inherit games eclass; tidy; install data file
+
+*xrick-021212 (19 May 2003)
+
+  19 May 2003; Martin Holzer <mholzer@gentoo.org> xrick-021212.ebuild:
+  Version bumped. Closes #20070.
+
+*xrick-010808 (16 Apr 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> xrick-010808.ebuild :
+  Added KEYWORDS.
+
+  16 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> xrick-010808.ebuild files/digest-xrick-010808 :
+  
+  Way before Lara Croft, back in the 1980's and early 1990's, Rick Dangerous 
+  was the Indiana Jones of computer games, running away from rolling rocks, 
+  avoiding traps, from South America to a futuristic missile base via Egypt 
+  and the Schwarzendumpf castle.

@@ -1,0 +1,42 @@
+# ChangeLog for app-games/pyddr
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pyddr/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*pyddr-0.7.0 (04 Jun 2003)
+
+  04 Jun 2003; Seemant Kulleen <seemant@gentoo.org> pyddr-0.7.0.ebuild:
+  version bump
+
+*pyddr-0.6.5 (30 May 2003)
+
+  30 May 2003; Seemant Kulleen <seemant@gentoo.org> pyddr-0.6.0.ebuild,
+  pyddr-0.6.2.ebuild, pyddr-0.6.5.ebuild:
+  version bump
+
+  25 May 2003; Seemant Kulleen <seemant@gentoo.org> :
+  version bump to latest
+
+*pyddr-0.6.2 (13 May 2003)
+
+  13 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump, fixes and cleanups.
+
+*pyddr-0.6.0 (28 Mar 2003)
+
+  28 Mar 2003; Joachim Blaabjerg <styx@gentoo.org> pyddr-0.6.0.ebuild
+  ChangeLog files/digest-pyddr-0.6.0 :
+
+  Updated ebuild to version 0.6.0, and changed the /usr/bin/pyddr script
+  to not suppress console output. Slap me if that was wrong. Marked ~x86
+
+*pyddr-0.5.9 (05 Mar 2003)
+
+  04 Mar 2003; Seemant Kulleen <seemant@gentoo.org> pyddr-0.5.9.ebuild:
+  added pkg_config to compile and install the ddrmat kernel module
+
+  05 Mar 2003; Seemant Kulleen <seemant@gentoo.org> pyddr-0.5.9.ebuild
+  ChangeLog files/digest-pyddr-0.5.9 :
+
+  New PyDDR game.  This is version 0.5.9 which contains some slight
+  enhancements that P2E passed to us (over 0.5.8).  Since this is not an
+  official release, we are mirroring on gentoo mirrors.

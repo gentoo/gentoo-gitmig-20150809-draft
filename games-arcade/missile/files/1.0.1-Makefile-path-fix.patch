@@ -1,0 +1,80 @@
+--- Makefile.orig	2003-07-07 21:58:28.000000000 -0400
++++ Makefile	2003-07-07 21:59:22.000000000 -0400
+@@ -19,14 +19,19 @@
+ # INSTALLATION DIRS:
+ # binary will be installed to $game_prefix/$game_bin
+ # data to $game_prefix/$game_data
+-game_prefix      = /usr/local
+-game_bin         = bin
+-game_data        = share/missile
+-game_icons       = share/pixmaps
++game_prefix      =GENTOO
++game_bin         =GENTOO
++game_data        =GENTOO
++game_icons       =GENTOO
++DESTDIR          =
++game_prefix:=$(DESTDIR)/$(game_prefix)
++game_bin:=$(DESTDIR)/$(game_bin)
++game_data:=$(DESTDIR)/$(game_data)
++game_icons:=$(DESTDIR)/$(game_icons)
+ 
+ # who the owner of the installed game will be
+-install_as_owner = root
+-install_as_group = games
++install_as_owner =GENTOO
++install_as_group =GENTOO
+ 
+ 
+ 
+@@ -70,8 +75,9 @@
+ #
+ #CC       = ccmalloc gcc
+ CC       =  gcc
+-OPTS     = $(RPM_OPT_FLAGS) -DDATA=\"$(game_prefix)/$(game_data)\" -DVERSION=\"$(DIST_VER)\" -D$(sound)
+-CFLAGS   = -Wall -O2 $(OPTS) `sdl-config --cflags`
++MYOPTS   =
++OPTS     = $(RPM_OPT_FLAGS) -DDATA=\"$(game_data)\" -DVERSION=\"$(DIST_VER)\" -D$(sound)
++CFLAGS   = -Wall -O2 $(OPTS) `sdl-config --cflags` $(MYOPTS)
+ #CFLAGS   = -Wall -g `sdl-config --cflags` 
+ LIBS     = `sdl-config --libs` -lSDL_image $(SND_LIBS)
+ INCLUDE  =
+@@ -143,14 +149,14 @@
+ install :
+ 	@$(STRIP) $(PROGRAM) || \
+     (echo; echo "Please run \"make\" first to build the program"; echo; exit -1)
+-	$(INSTALL) $(IFLAGS) $(EXEC_PERM) $(PROGRAM) $(game_prefix)/$(game_bin)/$(PROGRAM)
++	$(INSTALL) $(IFLAGS) $(EXEC_PERM) $(PROGRAM) $(game_bin)/$(PROGRAM)
+ 	cd $(DATA);\
+ 	for f in `find . -type f`; do \
+-	  $(INSTALL) $(IFLAGS) $(FILE_PERM) $$f $(game_prefix)/$(game_data)/$$f;\
++	  $(INSTALL) $(IFLAGS) $(FILE_PERM) $$f $(game_data)/$$f;\
+ 	done
+ 	cd $(ICONS);\
+ 	for f in `ls`; do \
+-	  $(INSTALL) $(IFLAGS) $(FILE_PERM) $$f $(game_prefix)/$(game_icons)/$$f;\
++	  $(INSTALL) $(IFLAGS) $(FILE_PERM) $$f $(game_icons)/$$f;\
+ 	done
+ #	$(MAKE) create_etc_conf
+ 	@echo ""
+@@ -160,7 +166,7 @@
+ 
+ #create_etc_conf:
+ #	if [ -w /etc ]; then \
+-#	  echo "Data=$(game_prefix)/$(game_data)" > /etc/missilecommand.conf; \
++#	  echo "Data=$(game_data)" > /etc/missilecommand.conf; \
+ #	fi
+ 
+ # I need the right way to do this...
+@@ -179,9 +185,9 @@
+ 
+ 
+ uninstall :
+-	- rm $(game_prefix)/$(game_bin)/$(PROGRAM)
+-	- rm -rf $(game_prefix)/$(game_data)
+-	- rm $(game_prefix)/$(game_icons)/missile_icon_{black,blue,white,green,red,yellow}.png
++	- rm $(game_bin)/$(PROGRAM)
++	- rm -rf $(game_data)
++	- rm $(game_icons)/missile_icon_{black,blue,white,green,red,yellow}.png
+ 	@echo ""
+ 	@echo "---------------------------------------------------------------------"
+ 	@echo "$(PROGRAM) and associated files uninstalled."

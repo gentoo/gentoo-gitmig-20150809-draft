@@ -1,0 +1,94 @@
+# ChangeLog for app-games/frozen-bubble
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+  22 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  frozen-bubble-1.0.0-r2.ebuild:
+  Changed to use /usr/games.  Closes bug #25055.
+
+*frozen-bubble-1.0.0-r2 (28 Jun 2003)
+
+  28 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to add network support #17430.
+
+*frozen-bubble-1.0.0-r1 (01 Jun 2003)
+
+  03 Jun 2003; <msterret@gentoo.org> frozen-bubble-1.0.0-r1.ebuild:
+  Switched from using Makefile.fixed in files/ to just modifying the Makefile
+  from the source distribution.  Uses sed -i so added sed to DEPEND.
+
+  02 Jun 2003; <msterret@gentoo.org> frozen-bubble-1.0.0-r1.ebuild:
+  Removed the seding of frozen-bubble since it seems to no longer be needed.
+  There is no fb.pl in the source distribution or the installed package and
+  fb.pl isn't mentioned in frozen-bubble so the sed has been silently doing
+  nothing for a while.
+
+  01 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  frozen-bubble-1.0.0-r1.ebuild:
+  Version bump because eclasses changed
+
+*frozen-bubble-1.0.0 (05 Mar 2003)
+
+  30 May 2003; Seemant Kulleen <seemant@gentoo.org>
+  frozen-bubble-1.0.0.ebuild:
+  inherit perl-module instead of perl-post
+
+  12 Jun 2003; msterret frozen-bubble-1.0.0-r1.ebuild,
+  frozen-bubble-1.0.0.ebuild:
+  add Header
+
+  05 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #15852 TGL <degrenier@easyconnect.fr>.
+
+*frozen-bubble-0.9.3-r1 (07 Jun 2002)
+
+  31 Jan 2003; Mark Guertin <gerk@gentoo.org> frozen-bubble-0.9.3-r1.ebuild :
+  set to ppc stable
+
+  15 Jan 2003; Jon Nall <nall@gentoo.org> frozen-bubble-0.9.3-r1.ebuild :
+  added ~ppc
+
+  21 Sep 2002; <mcummings@gentoo.org> : Added corrected Makefile for perl to
+  compile correctly with new MakeMaker
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> frozen-bubble-0.9.3-r1.ebuild :
+  Added KEYWORDS.
+
+  07 Jun 2002; Bruce A. Locke <blocke@shivan.org> frozen-bubble-0.9.3-r1.ebuild :
+
+  Updated dependencies
+
+*frozen-bubble-0.9.3 (2 June 2002)
+ 
+  2 June 2002; Gabriele Giorgetti <stroke@gentoo.org> frozen-bubble-0.9.3 :
+  Updated version.
+
+  (I won't modify stuffs below... but it looks a little messy :) )
+
+
+  25 Feb 2002; Leo Lipelis <aeoo@gentoo.org> files/digest-frozen-bubble-0.9.2,
+  frozen-bubble-0.9.2.ebuild:
+
+  Initial ebuild for a fun puzzle game.
+
+*frozen-bubble-0.9.2 (25 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> skel.ChangeLog :
+  
+  This changelog is targetted to users. This means that the comments should be
+  well explained and written in clean English. 
+  
+  Every new version or revision of the package has to be marked by a '*'
+  separator line as above. Changements since the last revision have to be
+  added to the top of the file, underneath the initial copyright and cvs header
+  comments, in exactly the same format as this comment.
+  
+  This means that you start with header line that has the following format :
+  
+      date; your_name <your_email> changed_file1, changed_file2 :
+	  
+  Below that line your explanation should follow. It has to be indented,
+  paragraphed and wrapped at a linewidth of 80 characters.
+  
+  Any details about what exactly changed in the code should be added as a
+  message when the changes are committed to cvs, not in this file.

@@ -1,0 +1,49 @@
+# ChangeLog for app-games/kobodeluxe
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+  04 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  kobodeluxe-0.4_pre8.ebuild:
+  use games eclass store highscores in /var/games/kobodeluxe (This is important
+  if kobodeluxe was installed before.) addd a pkg_postinst() so people with
+  existing highscore files know what to do.
+
+*kobodeluxe-0.4_pre8 (01 Jul 2003)
+
+  01 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  kobodeluxe-0.4_pre8.ebuild:
+  version bump
+
+  01 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  kobodeluxe-0.4_pre6.ebuild:
+  use sed -i
+  use use_enable for opengl
+  more error checking
+
+*kobodeluxe-0.4_pre6 (03 Jun 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> kobodeluxe-0.4_pre6.ebuild :
+  Added KEYWORDS.
+
+  03 Jun 2002; Wout Mertens <wmertens@gentoo.org> :
+
+  Phil Bordelon <phil@lsu.edu> discovered some extra tarballs not mentioned on the site
+  I upped the ebuild to the last available version, but not the release snapshot, because
+  that gave streaking on my screen. (although it has nice features :) )
+  I removed oss and alsa use detection, since those wouldn't build on my system, although
+  sound works; I presume this is because of SDL.
+
+*kobodeluxe-0.3-r1 (02 Jun 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> kobodeluxe-0.3-r1.ebuild :
+  Added KEYWORDS.
+
+  02 Jun 2002; Wout Mertens <wmertens@gentoo.org> :
+
+  Made it compile with the newer autoconf and fixed score dir location
+
+*kobodeluxe-0.3 (12 May 2002)
+
+  12 May 2002; Wout Mertens <wmertens@gentoo.org> :
+
+  Initial release

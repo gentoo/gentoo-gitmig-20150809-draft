@@ -1,0 +1,9 @@
+# ChangeLog for app-games/excido
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*excido-0.1.2 (24 Aug 2003)
+
+  24 Aug 2003; Michael Sterrett <msterret@gentoo.org> excido-0.1.2.ebuild:
+  initial commit (bug 27205)
+

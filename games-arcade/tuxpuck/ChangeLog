@@ -1,0 +1,55 @@
+# ChangeLog for app-games/tuxpuck
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+  29 Jun 2003; <msterret@gentoo.org> tuxpuck-0.8.2.ebuild:
+  fix the man page install (it seems to be compressed upstream now)
+  use more things from the games eclass
+  use emake, but also use -j1 since the Makefiles are buggy
+
+*tuxpuck-0.8.2 (23 Dec 2002)
+
+  23 Dec 2002; Seemant Kulleen <seemant@gentoo.org> tuxpuck-0.8.2.ebuild
+  files/digest-tuxpuck-0.8.2 :
+
+  Upstream bugfix version.
+
+*tuxpuck-0.8.1 (14 Dec 2002)
+  14 Dec 2002; J.Alberto Suarez L. <bass@gentoo.org>: tuxpuck-0.8.1.ebuild
+  New version.
+
+*tuxpuck-0.8.0 (15 Oct 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  15 Oct 2002; Seemant Kulleen <seemant@gentoo.org> tuxpuck-0.8.0.ebuild
+  files/digest-tuxpuck-0.8.0 :
+
+  Version bump thanks to: camio@yahoo.com (David Joseph Sankel) in bug
+  #9054.
+
+*tuxpuck-0.7.118 (28 Sep 2002)
+
+  28 Sep 2002; Nick Hadaway <raker@gentoo.org> tuxpuck-0.7.118.ebuild,
+  files/digest-tuxpuck-0.7.118 :
+  Version bump.  Ogg and PPC related fixes as well.
+
+*tuxpuck-0.7.91 (26 Apr 2002)
+
+  28 Sep 2002; Nick Hadaway <raker@gentoo.org> tuxpuck-0.7.91.ebuild :
+  Updated ebuild to use system freetype, not xfree's.  Some other gcc3
+  problems may be solved by re-emerging smpeg and sdl-mixer.
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
+
+  29 Jul 2002; Nicholas Jones <carpaski@gentoo.org> tuxpuck-0.7.91.ebuild :
+  Removed the -Werror that breaks the build.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> tuxpuck-0.7.91.ebuild :
+  Added KEYWORDS.
+
+  26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> tuxpuck-0.7.91.ebuild
+  files/digest-tuxpuck-0.7.91 :
+
+  New game of air-hockey

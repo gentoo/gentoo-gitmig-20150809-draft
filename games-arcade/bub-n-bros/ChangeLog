@@ -1,0 +1,8 @@
+# ChangeLog for app-games/bub-n-bros
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*bub-n-bros-1.1 (12 Jul 2003)
+
+  12 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Frank Straetz <Frank@KTHXBYE.de> #22493.

@@ -1,0 +1,57 @@
+# ChangeLog for app-games/lbreakout2
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*lbreakout2-2.5_beta3 (19 Jul 2003)
+
+  19 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*lbreakout2-2.4 (03 Mar 2003)
+
+  26 May 2003; Chuck Brewer <killian@gentoo.org> lbreakout2-2.4.ebuild:
+  Added html manual back in (closes #17289)
+
+  28 Apr 2003; Graham Forest <vladimir@gentoo.org> lbreakout2-2.4.ebuild:
+  set ~ppc in keywords
+
+  03 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  version bump + games eclass support #12118.
+
+*lbreakout2-2.3.5 (28 Sep 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> lbreakout2-2.2.2.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  28 Sep 2002; Nick Hadaway <raker@gentoo.org> lbreakout2-2.3.5.ebuild,
+  files/digest-lbreakout2-2.3.5 :
+  Version bump.  Incorporated same fixes applied to 2.2.2.
+
+*lbreakout2-2.2.2 (03 Jul 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> lbreakout2-2.2.2.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  28 Sep 2002; Nick Hadaway <raker@gentoo.org> lbreakout2-2.2.2.ebuild,
+  files/digest-lbreakout2-2.2.2 :
+  Removed optimization flags due to gcc3 compile problems.  Synced up
+  themes with all available on the homepage.  Updated install flags
+  to avoid sandbox violations.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> lbreakout2-2.2.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> lbreakout2-2.2.2.ebuild :
+  Added KEYWORDS.
+
+  03 Jul 2002; J.Alberto S.L. <bass@gentoo.org>
+  Just a version bump and new themes added.
+
+*lbreakout2-2.1.2 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

@@ -1,0 +1,13 @@
+# ChangeLog for app-games/solarwolf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*solarwolf-1.2 (03 Aug 2003)
+
+  03 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*solarwolf-1.1 (13 Jul 2003)
+
+  13 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

@@ -1,0 +1,57 @@
+# ChangeLog for app-games/tuxracer
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/ChangeLog,v 1.1 2003/09/10 19:29:22 vapier Exp $
+
+*tuxracer-0.61-r3 (19 Aug 2003)
+
+  19 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add games.eclass support, add gcc3 patch #26851, and clean up configure patch.
+
+*tuxracer-0.61-r2 (04 Oct 2002)
+
+  10 Jul 2003; Michael Sterrett <msterret@gentoo.org> tuxracer-0.61-r1.ebuild,
+  tuxracer-0.61-r2.ebuild:
+  fix DESCRIPTION
+
+  02 Mar 2003; Hanno Boeck <hanno@gentoo.org> tuxracer-0.61-r2.ebuild :
+  Let tuxracer-ppc-glxfix also apply on other archs, since it's not
+  a ppc-specific problem.
+
+  23 Feb 2003; Aron Griffis <agriffis@gentoo.org> tuxracer-0.61-r2.ebuild :
+  Fix minor error in the ebuild where "die" could be called from within
+  a subshell.
+
+  13 Feb 2003; Mark Guertin <gerk@gentoo.org> tuxracer-0.61-r2.ebuild :
+  Added patch for braindead configure option that doesnt like new xfree
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> tuxracer-0.61-r2.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  05 Oct 2002; Mike Frysinger <vapier@gentoo.org> tuxracer-0.61-r2.ebuild :
+  The changing of -m<optimization> to -f<optimization> is invalid for gcc2.x #8770
+
+  04 Oct 2002; Mike Frysinger <vapier@gentoo.org> tuxracer-0.61-r2.ebuild :
+  Fixed directory permissions ... directories have to be +rx to be accessible
+
+*tuxracer-0.61-r1 (1 Feb 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> tuxracer-0.61-r1.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  28 Sep 2002; Nick Hadaway <raker@gentoo.org> tuxracer-0.61-r1.ebuild :
+  Changed -m* flags to -f* flags to squash gcc3 warnings and updated
+  install to fix html location.
+
+  02 Aug 2002; mark Guertin <gerk@gentoo.org> tuxracer-0.61-r1.ebuild :
+  Added ppc to keywords
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> tuxracer-0.61-r1.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

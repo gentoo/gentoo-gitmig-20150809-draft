@@ -1,0 +1,27 @@
+# ChangeLog for app-games/rocksndiamonds
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+
+*rocksndiamonds-3.0.2 (27 Aug 2003)
+
+  27 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  rocksndiamonds-3.0.2.ebuild:
+  version bump
+
+  07 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  rocksndiamonds-3.0.0.ebuild:
+  don't install the man page in the bin directory
+
+*rocksndiamonds-3.0.0 (05 Aug 2003)
+
+  05 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  rocksndiamonds-3.0.0.ebuild:
+  version bump (bug 25963)
+
+*rocksndiamonds-2.1.1 (09 Mar 2003)
+
+  07 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added a replace-flags for arch k6 #17787.
+
+  09 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Ron <doobedoobedo@quake3world.com> #15958.

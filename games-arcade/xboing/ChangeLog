@@ -1,0 +1,20 @@
+# ChangeLog for app-games/xboing
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/ChangeLog,v 1.1 2003/09/10 19:29:22 vapier Exp $
+
+*xboing-2.4-r1 (20 Jun 2003)
+
+  20 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Removed script and added a debian patch to fix all known issues.
+
+*xboing-2.4 (03 Mar 2003)
+
+  19 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added a playxboing script because of e-mail from
+  Ryan Beasley <ryanb@goddamnbastard.org>.  thanks ;)
+
+  12 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xboing-2.4.ebuild:
+  xpm is provided by xfree
+
+  03 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #13515.

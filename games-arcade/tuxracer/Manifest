@@ -1,0 +1,5 @@
+MD5 3ea30203986dcef8a5f7cfa08d8399cb ChangeLog 2425
+MD5 38939c1d511e6684055bdf0e80b738f5 tuxracer-0.61-r3.ebuild 1436
+MD5 21d4db03916968fd60f797267fbd58c3 files/digest-tuxracer-0.61-r3 136
+MD5 8d89a0df0da6219cac8499c181b9e987 files/0.61-configure.in.patch 1690
+MD5 23587bbd063a7f5f6dcb6979e0347e01 files/0.61-gcc3.patch 2027
