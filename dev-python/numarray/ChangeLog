@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numarray
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.2 2003/12/13 06:16:00 kloeri Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.3 2004/03/28 16:35:29 kloeri Exp $
+
+*numarray-0.9 (28 Mar 2004)
+
+  28 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> numarray-0.9.ebuild:
+  Version bump.
 
 *numarray-0.8 (13 Dec 2003)
 
