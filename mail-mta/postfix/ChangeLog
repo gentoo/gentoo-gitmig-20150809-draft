@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.8 2004/06/24 22:24:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.9 2004/06/30 20:52:10 merlin Exp $
+
+*postfix-2.0.19-r4 (30 Jun 2004)
+
+  30 Jun 2004; Cory Visi <merlin@gentoo.org> postfix-2.0.19-r4.ebuild:
+  Add queue_minfree setting to default main.cf to fix Bug 51743 - thanks to
+  drobbins for finding this
 
   16 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> postfix-2.0.11.ebuild:
   take out unused is_postfix_installed() function
