@@ -66,7 +66,7 @@ src_install() {
 
   cd ${D}/etc/X11/gdm
   cp gdm.conf gdm.conf.orig
-  sed -e "s:0=/usr/X11R6/bin/X:0=/usr/X11R6/bin/X -dpi 100 dpms vt12:g" \
+  sed -e "s:0=/usr/X11R6/bin/X:0=/usr/X11R6/bin/X -dpi 100 dpms vt7:g" \
       -e "s:GtkRC=/opt/gnome/share/themes/Default/gtk/gtkrc:GtkRC=/usr/X11R6/share/themes/gtk/gtkrc:g" \
       -e "s:BackgroundColor=#007777:BackgroundColor=#2a3f5b:g" \
       gdm.conf.orig > gdm.conf
