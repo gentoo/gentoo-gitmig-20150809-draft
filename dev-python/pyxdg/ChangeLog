@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.8 2004/03/15 01:35:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.9 2004/03/18 22:02:16 aliz Exp $
 
 *pyxdg-0.4 (15 Mar 2004)
 
@@ -15,6 +15,7 @@
   06 Sep 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml:
   claim this for python herd, unless a better herd comes up
 
+*pyxdg-0.2 (04 Sep 2003)
 *pyxdg-0.1 (04 Sep 2003)
 
   04 Sep 2003; Heinrich Wendel <lanius@gentoo.org> pyxdg-0.1.ebuild,

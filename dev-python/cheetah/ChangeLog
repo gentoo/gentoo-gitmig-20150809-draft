@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.2 2004/02/26 19:02:06 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.3 2004/03/18 22:02:16 aliz Exp $
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> cheetah-0.9.15.ebuild:
   Stable on sparc.
@@ -12,7 +12,7 @@
   12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
 
-*Cheetah-0.9.15 (04 Apr 2003)
+*cheetah-0.9.15 (04 Apr 2003)
 
   22 May 2003; Arcady Genkin <agenkin@gentoo.org> :
   Marking stable on ~x86.
@@ -20,13 +20,13 @@
   04 Apr 2003; Alastair Tse <liquidx@gentoo.org> Cheetah-0.9.15.ebuild:
   version bump
 
-*Cheetah-0.9.15 (28 Jan 2003)
+*cheetah-0.9.15 (28 Jan 2003)
 
   28 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
   Updated to version 0.9.15a3.
   Sanified the ChangeLog.
  
-*Cheetah-0.9.14 (13 Aug 2002)
+*cheetah-0.9.14 (13 Aug 2002)
 
   13 Aug 2002; Joachim Blaabjerg <styx@gentoo.org> Cheetah-0.9.14.ebuild :
   Version bump.

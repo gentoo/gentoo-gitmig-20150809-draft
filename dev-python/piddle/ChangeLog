@@ -1,8 +1,8 @@
 # ChangeLog for dev-python/piddle
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/ChangeLog,v 1.1 2003/10/01 16:34:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/ChangeLog,v 1.2 2004/03/18 22:02:16 aliz Exp $
 
-*piddle-1.0.5 (30 Sep 2003)
+*piddle-1.0.15 (30 Sep 2003)
 
   30 Sep 2003; Karl Trygve Kalleberg <karltk@gentoo.org> piddle-1.0.5.ebuild:
   Initial import. 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/4suite
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.2 2004/02/26 18:59:37 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.3 2004/03/18 22:02:16 aliz Exp $
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> 4suite-1.0_alpha3.ebuild:
   Stable on sparc.
@@ -10,17 +10,17 @@
   moved from dev-python/4Suite to dev-python/4suite, also revamped stable 0.11.1
   to use distutils
 
-*4Suite-1.0_alpha3 (03 Sep 2003)
+*4suite-1.0_alpha3 (03 Sep 2003)
 
   03 Sep 2003; Alastair Tse <liquidx@gentoo.org> 4Suite-1.0_alpha3.ebuild:
   version bump. changed . (#27199)
 
-*4Suite-1.0_alpha1 (20 Apr 2003)
+*4suite-1.0_alpha1 (20 Apr 2003)
 
   20 Apr 2003; Bart Lauwers <blauwers@gentoo.org> :
   Version bump per bug #12760 and ebuild clean-up
  
-*4Suite-0.11.1 (18 Mar 2002)
+*4suite-0.11.1 (18 Mar 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
