@@ -1,29 +1,33 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.6 2002/05/11 22:43:59 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.7 2002/05/14 08:05:52 woodchip Exp $
 
 balsa-1.3.5-r1 (11 May 2002) 
-  11 May 2002; Spider <spider@gentoo.org> balsa-1.3.5-r1.ebuild :
-  fix bug with forgotten "install" in src_install stage 
+
+  11 May 2002; Spider <spider@gentoo.org> :
+
+  Fix bug with forgotten "install" in src_install stage.
   
 *balsa-1.3.5 (30 Apr 2002)
 
-  30 Apr 2002; Seemant Kulleen <seemant@gentoo.org> balsa-1.3.5.ebuild
-  files/digest-balsa-1.3.5 :
+  30 Apr 2002; Seemant Kulleen <seemant@gentoo.org> :
 
   Version bump, with dependency fixes (no gnome-core dep any more!), and
   man page/LFH compliance.
 
 *balsa-1.2.4-r1 (24 Apr 2002)
-  24 Apr 2002; Spider <spider@gentoo.org> balsa-1.2.4-r1.ebuild balsa-1.3.4.ebuild
-  update with a patch to make it compile with spellchecking
-  add development series per request
 
+  24 Apr 2002; Spider <spider@gentoo.org> :
+
+  Update with a patch to make it compile with spellchecking.
+  Add development series per request.
 
 *balsa-1.2.4 (11 Apr 2002)
+
   11 Apr 2002; Spider <spider@gentoo.org>
+
   Update all glib dependencies to use glib-1.2*  in preparation of
-unmasking the glib-2.0.1 packages
+  unmasking the glib-2.0.1 packages
 
 *balsa-1.2.4 (17 Feb 2002)
 
