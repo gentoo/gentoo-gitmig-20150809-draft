@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.1.ebuild,v 1.2 2004/04/01 22:26:18 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.1.ebuild,v 1.3 2004/05/12 13:42:18 pappy Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -88,11 +88,8 @@ src_compile() {
 	# (this is still necessary, even though we have the patch, because
 	# we might be bootstrapping from a version that didn't have the
 	# patch included)
-	if has_version "sys-devel/hardened-gcc"
-	then
-		echo "SRC_CC_OPTS+=-yet_exec -yno_propolice" >> mk/build.mk
-		echo "SRC_HC_OPTS+=-optc-yet_exec -optc-yno_propolice" >> mk/build.mk
-	fi
+	echo "SRC_CC_OPTS+=-fno-pic -fno-stack-protector" >> mk/build.mk
+	echo "SRC_HC_OPTS+=-optc-fno-pic -optc-fno-stack-protector" >> mk/build.mk
 
 	# force the config variable ArSupportsInput to be unset;
 	# ar in binutils >= 2.14.90.0.8-r1 seems to be classified
