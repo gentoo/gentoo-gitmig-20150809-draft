@@ -1,0 +1,52 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author: Seemant Kulleen <seemant@gentoo.org>
+# /space/gentoo/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.ebuild,v 1.2 2001/05/28 14:32:32 achim Exp
+
+
+MY_P=${PN}-.33.7.1
+S=${WORKDIR}/${MY_P}
+DESCRIPTION="A spell checker replacement for ispell"
+SRC_URI="http://download.sourceforge.net/aspell/${MY_P}.tar.gz http://prdownloads.sourceforge.net/aspell/aspell-.33-fix2.diff"
+HOMEPAGE="http://aspell.sourceforge.net"
+
+DEPEND=">=app-text/pspell-0.12
+	>=sys-libs/ncurses-5.2"
+
+CXXFLAGS="-O3"
+CFLAGS=${CXXFLAGS}
+
+src_unpack() {
+	unpack ${MY_P}.tar.gz
+	cd ${S}
+	patch -p0 < ${DISTDIR}/aspell-.33-fix2.diff
+}
+
+src_compile() {
+	
+	libtoolize --copy --force
+	aclocal
+
+    ./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc/aspell \
+		--host=${CHOST} \
+		--enable-doc-dir=/usr/share/doc/${P} || die
+    
+	emake || die
+
+}
+
+src_install () {
+
+    make DESTDIR=${D} install || die
+    cd ${D}/usr/share/doc/${P}
+    mv man-html html
+    mv man-text txt
+    prepalldocs
+    cd ${S}
+    
+    dodoc README* TODO
+
+}
+

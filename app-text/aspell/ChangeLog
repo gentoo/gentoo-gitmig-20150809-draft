@@ -1,6 +1,16 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.1 2002/02/01 21:53:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.2 2002/03/15 03:51:51 seemant Exp $
+
+*aspell-0.33.7.1-r1 (12 Mar 2002)
+
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> aspell-0.33.7.1-r1 :
+
+  OK, finally this thing merges!  It has some _strange_ issues with optimisation
+  levels. Specifically, they need to be specified _before_ ./configure.  Go
+  figure.  Anyway, now this is compatible with the newest pspell library, not
+  the older ones.  Also, this uses a patch from the author's page as well, in 
+  order to actually compile.
 
 *aspell-0.32.6 (1 Feb 2002)
 
