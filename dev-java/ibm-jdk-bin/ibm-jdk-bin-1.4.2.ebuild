@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.9 2004/08/04 13:22:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.10 2004/09/06 18:12:45 ciaranm Exp $
 
 IUSE="X doc javacomm"
 
-inherit java nsplugins
+inherit java nsplugins eutils
 
 if use ppc; then
 	S="${WORKDIR}/IBMJava2-ppc-142"
@@ -76,7 +76,6 @@ pkg_postinst() {
 		echo
 	fi
 
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
 	einfo " After installing ${P} this"
 	einfo " was set as the default JVM to run."
 	einfo " When finished please run the following so your"
@@ -85,9 +84,6 @@ pkg_postinst() {
 	einfo " Or use java-config program to set your preferred VM"
 	einfo "******************************************************"
 
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	sleep 8
+	ebeep 5
+	epause 8
 }
