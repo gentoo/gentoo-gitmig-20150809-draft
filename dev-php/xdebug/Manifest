@@ -1,4 +1,6 @@
 MD5 ba1828b8ff939b31e325d92d05180c46 xdebug-1.2.0.ebuild 582
 MD5 6b17fa92fd65dd08694247310f6c2974 ChangeLog 531
 MD5 90addd9e0cd39bebc1ca9eef0185f6fd metadata.xml 268
+MD5 01e5552904029cc5ca7f4b92addfa6d6 xdebug-1.3.0_rc1.ebuild 593
 MD5 ab7ada85167c586022c89209baa42a08 files/digest-xdebug-1.2.0 60
+MD5 004acc372d19ac607d96b22ffe6607ac files/digest-xdebug-1.3.0_rc1 64
