@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.2 2003/12/05 23:40:44 vapier Exp $
 
 inherit games
 
@@ -18,7 +18,8 @@ DEPEND="virtual/x11
 	virtual/opengl
 	virtual/glut
 	virtual/glu
-	media-libs/openal"
+	media-libs/openal
+	sys-libs/lib-compat"
 
 S=${WORKDIR}/${PN}
 
