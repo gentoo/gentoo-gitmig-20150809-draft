@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.23-r1.ebuild,v 1.2 2004/04/27 22:09:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.23-r1.ebuild,v 1.3 2004/05/30 23:53:42 pvdabeel Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -14,7 +14,7 @@ mirror://sourceforge/user-mode-linux/${UML_PATCH}.bz2"
 HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="${PV}"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 EXTRAVERSION=${PR}
 
 # console-tools is needed to solve the loadkeys fiasco.

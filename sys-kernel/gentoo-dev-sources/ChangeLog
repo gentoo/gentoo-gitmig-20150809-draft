@@ -1,6 +1,30 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.60 2004/05/23 07:21:27 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.61 2004/05/30 23:53:42 pvdabeel Exp $
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gentoo-dev-sources-2.6.1-r2.ebuild, gentoo-dev-sources-2.6.3-r1.ebuild,
+  gentoo-dev-sources-2.6.3-r2.ebuild, gentoo-dev-sources-2.6.4-r1.ebuild,
+  gentoo-dev-sources-2.6.4.ebuild:
+  Masked gentoo-dev-sources-2.6.4.ebuild testing for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gentoo-dev-sources-2.6.1-r2.ebuild, gentoo-dev-sources-2.6.3-r1.ebuild,
+  gentoo-dev-sources-2.6.3-r2.ebuild, gentoo-dev-sources-2.6.4-r1.ebuild:
+  Masked gentoo-dev-sources-2.6.4-r1.ebuild testing for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gentoo-dev-sources-2.6.1-r2.ebuild, gentoo-dev-sources-2.6.3-r1.ebuild,
+  gentoo-dev-sources-2.6.3-r2.ebuild:
+  Masked gentoo-dev-sources-2.6.3-r2.ebuild broken for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gentoo-dev-sources-2.6.1-r2.ebuild, gentoo-dev-sources-2.6.3-r1.ebuild:
+  Masked gentoo-dev-sources-2.6.3-r1.ebuild broken for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gentoo-dev-sources-2.6.1-r2.ebuild:
+  Masked gentoo-dev-sources-2.6.1-r2.ebuild broken for ppc
 
 *gentoo-dev-sources-2.6.6 (22 May 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.67 2004/04/27 21:58:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.68 2004/05/30 23:53:42 pvdabeel Exp $
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gentoo-sources-2.4.25-r2.ebuild:
+  Masked gentoo-sources-2.4.25-r2.ebuild broken for ppc
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   gentoo-sources-2.4.19-r13.ebuild, gentoo-sources-2.4.20-r16.ebuild,

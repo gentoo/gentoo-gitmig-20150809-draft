@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.24_p0-r2.ebuild,v 1.1 2004/04/17 13:43:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.24_p0-r2.ebuild,v 1.2 2004/05/30 23:53:42 pvdabeel Exp $
 
 IUSE=""
 
@@ -30,7 +30,7 @@ SRC_URI="mirror://kernel/v${MMV}/linux-${OKV}.tar.bz2
 	http://www.uclinux.org/pub/uClinux/uClinux-${MMV}.x/${MY_P/linux/${base}}.${patch}.gz"
 
 HOMEPAGE="http://www.uclinux.org/"
-KEYWORDS="~x86"
+KEYWORDS="~x86 -ppc"
 SLOT="${KV}"
 
 src_unpack() {

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.25-r2.ebuild,v 1.1 2004/04/17 10:59:15 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.25-r2.ebuild,v 1.2 2004/05/30 23:53:42 pvdabeel Exp $
 
 ETYPE="sources"
 inherit kernel-2
 detect_version
 
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 UNIPATCH_LIST="
 	${FILESDIR}/${PN}-2.4.CAN-2004-0109.patch
 	${FILESDIR}/${PN}-2.4.CAN-2004-0177.patch

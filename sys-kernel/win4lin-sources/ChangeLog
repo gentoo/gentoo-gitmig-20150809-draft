@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/win4lin-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.21 2004/04/27 22:12:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.22 2004/05/30 23:53:42 pvdabeel Exp $
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  win4lin-sources-2.4.25-r2.ebuild, win4lin-sources-2.6.5-r1.ebuild:
+  Masked win4lin-sources-2.6.5-r1.ebuild broken for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  win4lin-sources-2.4.25-r2.ebuild:
+  Masked win4lin-sources-2.4.25-r2.ebuild broken for ppc
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   win4lin-sources-2.4.25-r2.ebuild:

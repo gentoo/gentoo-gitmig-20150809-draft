@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.1.ebuild,v 1.3 2004/03/09 08:54:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.1.ebuild,v 1.4 2004/05/30 23:53:42 pvdabeel Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86 ~sparc ~hppa ~alpha ~ppc"
+KEYWORDS="amd64 x86 ~sparc ~hppa ~alpha ppc"
 
 DEPEND="amd64? ( media-gfx/bootsplash )
 	x86? ( media-gfx/bootsplash )"

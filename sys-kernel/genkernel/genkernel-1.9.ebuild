@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-1.9.ebuild,v 1.3 2004/02/06 18:18:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-1.9.ebuild,v 1.4 2004/05/30 23:53:42 pvdabeel Exp $
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
@@ -8,7 +8,7 @@ SRC_URI="http://dev.gentoo.org/~drobbins/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 -ppc"
 IUSE=""
 
 DEPEND=""

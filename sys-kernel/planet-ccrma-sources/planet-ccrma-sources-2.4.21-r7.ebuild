@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21-r7.ebuild,v 1.1 2004/04/17 12:11:58 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21-r7.ebuild,v 1.2 2004/05/30 23:53:42 pvdabeel Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -37,7 +37,7 @@ DEPEND="virtual/glibc"
 DESCRIPTION="Kernel source used in Planet CCRMA custom audio upgrade (based on RedHat)"
 SRC_URI="http://ccrma-www.stanford.edu/planetccrma/mirror/redhat/linux/planetcore/9/en/os/i386/kernel-source-${KV}.i386.rpm mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://ccrma-www.stanford.edu/ http://www.kernel.org/ http://www.redhat.com/"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 SLOT="${KV}"
 
 src_unpack() {

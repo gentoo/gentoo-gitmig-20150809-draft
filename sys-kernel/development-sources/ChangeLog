@@ -1,6 +1,52 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.112 2004/05/30 10:27:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.113 2004/05/30 23:53:41 pvdabeel Exp $
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  development-sources-2.6.1.ebuild, development-sources-2.6.2.ebuild,
+  development-sources-2.6.3.ebuild, development-sources-2.6.6.ebuild,
+  development-sources-2.6.6_rc1.ebuild, development-sources-2.6.6_rc3.ebuild,
+  development-sources-2.6.7_rc1.ebuild, development-sources-2.6.7_rc2.ebuild:
+  Masked development-sources-2.6.7_rc2.ebuild testing for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  development-sources-2.6.1.ebuild, development-sources-2.6.2.ebuild,
+  development-sources-2.6.3.ebuild, development-sources-2.6.6.ebuild,
+  development-sources-2.6.6_rc1.ebuild, development-sources-2.6.6_rc3.ebuild,
+  development-sources-2.6.7_rc1.ebuild:
+  Masked development-sources-2.6.7_rc1.ebuild testing for ppc
+
+*development-sources-2.6.6_rc3 (31 May 2004)
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  development-sources-2.6.1.ebuild, development-sources-2.6.2.ebuild,
+  development-sources-2.6.3.ebuild, development-sources-2.6.6.ebuild,
+  development-sources-2.6.6_rc1.ebuild, development-sources-2.6.6_rc3.ebuild:
+  Masked development-sources-2.6.6_rc3.ebuild testing for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  development-sources-2.6.1.ebuild, development-sources-2.6.2.ebuild,
+  development-sources-2.6.3.ebuild, development-sources-2.6.6.ebuild,
+  development-sources-2.6.6_rc1.ebuild:
+  Masked development-sources-2.6.6_rc1.ebuild testing for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  development-sources-2.6.1.ebuild, development-sources-2.6.2.ebuild,
+  development-sources-2.6.3.ebuild, development-sources-2.6.6.ebuild:
+  Masked development-sources-2.6.6.ebuild stable for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  development-sources-2.6.1.ebuild, development-sources-2.6.2.ebuild,
+  development-sources-2.6.3.ebuild:
+  Masked development-sources-2.6.3.ebuild testing for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  development-sources-2.6.1.ebuild, development-sources-2.6.2.ebuild:
+  Masked development-sources-2.6.2.ebuild broken for ppc
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  development-sources-2.6.1.ebuild:
+  Masked development-sources-2.6.1.ebuild broken for ppc
 
 *development-sources-2.6.7_rc2 (30 May 2004)
 

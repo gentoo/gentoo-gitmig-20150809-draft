@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.24-r3.ebuild,v 1.1 2004/04/17 13:57:19 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.24-r3.ebuild,v 1.2 2004/05/30 23:53:42 pvdabeel Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -13,7 +13,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${PV}.tar.bz2
 HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="${PV}-${PR}"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 EXTRAVERSION="-uml1-${PR}"
 RESTRICT="nomirror"
 
