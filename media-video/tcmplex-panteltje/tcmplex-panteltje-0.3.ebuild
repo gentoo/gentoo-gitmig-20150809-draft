@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/tcmplex-panteltje-0.3.ebuild,v 1.1 2004/06/09 12:57:58 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/tcmplex-panteltje-0.3.ebuild,v 1.2 2004/06/09 21:13:58 lordvan Exp $
+
+inherit eutils
 
 DESCRIPTION="audio video multiplexer for 8 audio channels"
 HOMEPAGE="http://home.zonnet.nl/panteltje/dvd/"
@@ -23,6 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin tcmplex-panteltje 
-	dodoc CHANGES COPYRIGHT LICENSE README 
+	dobin tcmplex-panteltje
+	dodoc CHANGES COPYRIGHT LICENSE README
 }
