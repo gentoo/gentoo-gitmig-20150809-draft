@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.8 2002/07/13 16:31:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.9 2002/09/13 17:48:48 spider Exp $
 
   14 Jul 2002; Martin Schlemmer <azarah@gentoo.org> gimp-1.2.3-r2:
   Some automake warning cleanups.  Dont really fix anything except
@@ -19,7 +19,11 @@
   in the big gnome2 move I'm adding this beta..
 
 *gimp-1.2.3-r2 (22 Feb 2002)
+  13 Sep 2002; Spider <spider@gentoo.org> :
+  Added fix by Michael Cummings <mcummings@gentoo.org> that makes the perl
+  part not break sandbox. this closes #7718
 
+  
   22 Feb 2002; Daniel Robbins <drobbins@gentoo.org> added gimptool symlink, 
   closing bug #810.
   
