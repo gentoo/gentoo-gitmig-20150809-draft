@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.14.ebuild,v 1.5 2003/09/19 02:16:36 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.15.ebuild,v 1.1 2003/09/19 02:16:36 max Exp $
 
 inherit eutils
-IPV6_P="${P}-ipv6-20030703"
+IPV6_P="${P}-ipv6-20030819"
 
 IUSE="afs snmp ssl kerberos ipv6"
 
@@ -40,7 +40,7 @@ src_unpack() {
 	cd ${S}
 
 	# patch for db4 detection and their respective versioned symbols
-	epatch ${FILESDIR}/2.1.14-db4.patch
+	epatch ${FILESDIR}/2.1.15-db4.patch
 
 	# add libwrap defines as we don't have a dynamicly linked library.
 	epatch ${FILESDIR}/cyrus-imapd-2.1.12-libwrap.patch

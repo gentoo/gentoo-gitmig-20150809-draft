@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.30 2003/09/18 22:04:33 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.31 2003/09/19 02:16:36 max Exp $
+
+*cyrus-imapd-2.1.15 (18 Sep 2003)
+
+  18 Sep 2003; Max Kalika <max@gentoo.org> cyrus-imapd-2.1.14.ebuild,
+  cyrus-imapd-2.1.15.ebuild, files/2.1.14-db4.patch, files/2.1.15-db4.patch:
+  Remove --with-auth=krb. It is only used for kerberos 4 according to the docs.
+  Only allow gssapi when USE=kerberos. Fix the db4 patch to redefine 3 extra
+  symbols. Bump to version 2.1.15. Fix bugs 24429, 26760, and maybe 27645
 
   18 Sep 2003; Max Kalika <max@gentoo.org> cyrus-imapd-2.1.11-r1.ebuild,
   cyrus-imapd-2.1.12.ebuild, cyrus-imapd-2.1.13.ebuild,
