@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.17 2004/03/02 16:55:14 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.18 2004/03/08 22:10:02 agriffis Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -46,6 +46,11 @@ src_compile() {
 
 src_install() {
 	einstall bindir=${D}/bin || die "einstall failed"
+
+	# Override the default shell scripts... grep knows how to act
+	# based on how it's called
+	ln -sfn grep ${D}/bin/egrep || die "ln egrep failed"
+	ln -sfn grep ${D}/bin/fgrep || die "ln fgrep failed"
 
 	if use build; then
 		rm -rf ${D}/usr/share
