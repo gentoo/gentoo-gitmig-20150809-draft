@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/bonobo-activation
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.2 2002/05/23 19:15:17 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.3 2002/05/23 19:30:12 spider Exp $
+
+bonobo-activation-0.9.9 (23 May 2002)
+   23  May 2002; Spider <spider@gentoo.org> bonobo-activation-0.9.9.ebuild:
+   A bugreport on the old one got me to change some in this, nothing
+   important, a version update on libxml2 and glib, ORBit2, and an added
+  --enable-bonobo-activation-debug to configure
+ 
 
 *bonobo-activation-0.9.9 (23 May 2002)
   23  May 2002; Spider <spider@gentoo.org> bonobo-activation-0.9.9.ebuild:
