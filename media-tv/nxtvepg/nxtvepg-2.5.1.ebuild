@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/nxtvepg-2.5.1.ebuild,v 1.1 2003/06/18 12:18:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/nxtvepg-2.5.1.ebuild,v 1.2 2003/09/08 08:49:17 lanius Exp $
 
 DESCRIPTION="receive and browse free TV programme listings via bttv for tv networks in Europe"
 HOMEPAGE="http://nxtvepg.sourceforge.net/"
@@ -11,10 +11,10 @@ SLOT="0"
 KEYWORDS="x86"
 
 RDEPEND=">=dev-lang/tcl-8.0
-		>=dev-lang/tk-8.0"
+	>=dev-lang/tk-8.0"
 
 DEPEND="${RDEPEND}
-		sys-apps/sed"
+	sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}
@@ -23,12 +23,12 @@ src_unpack() {
 }
 
 src_compile() {
-    make ROOT="${D}" prefix="/usr" || die "make failed"
+	make ROOT="${D}" prefix="/usr" || die "make failed"
 }
 
 src_install() {
-    einstall ROOT="${D}" || die "install failed"
-    dodoc README COPYRIGHT CHANGES TODO
+	einstall ROOT="${D}" || die "install failed"
+	dodoc README COPYRIGHT CHANGES TODO
 	dohtml manual.html
 }
 
