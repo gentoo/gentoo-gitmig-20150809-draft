@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/speedfreq-0.5.ebuild,v 1.1 2003/08/21 02:31:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/speedfreq-0.5.ebuild,v 1.2 2004/02/23 21:54:48 vapier Exp $
 
 DESCRIPTION="daemon to control the CPU speed in 2.6 kernels"
 HOMEPAGE="http://www.goop.org/~jeremy/speedfreq/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.goop.org/~jeremy/speedfreq/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ppc"
 IUSE="acpi"
 
 DEPEND="acpi? ( sys-apps/acpid )"
