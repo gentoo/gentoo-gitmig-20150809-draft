@@ -20,7 +20,7 @@ src_compile() {
 
 src_install () {
   try make prefix=${D}/usr mandir=${D}/usr/share/man \
-  	sysconfdir=${D}/etc/mtools install
+  	infodir=${D}/usr/share/info sysconfdir=${D}/etc/mtools install
   insinto /etc/mtools
   newins mtools.conf mtools.conf.example
   dodoc COPYING ChangeLog NEWPARAMS README* Release.notes 
