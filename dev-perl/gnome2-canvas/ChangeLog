@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/gnome2-canvas
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.1 2003/07/20 16:33:01 mcummings Exp $
+
+*gnome2-canvas-0.26 (20 Jul 2003)
+
+  20 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  gnome2-canvas-0.26.ebuild:
+  submitted by Rigo Ketelings <rigo@home.nl> in bug 24036
+
