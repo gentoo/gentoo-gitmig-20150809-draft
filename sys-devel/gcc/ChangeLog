@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.187 2004/03/01 18:06:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.188 2004/03/06 13:35:00 pappy Exp $
+
+  06 Mar 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.3.3-r1.ebuild:
+  added v5 version for hardened pie ssp patch, this will be the release version
+  when testing shows no problems
 
   01 Mar 2004; Martin Schlemmer <azarah@gentoo.org> files/awk/scanforssp.awk:
   Add support to detect corrupted filesystem/bad hardware, patch by

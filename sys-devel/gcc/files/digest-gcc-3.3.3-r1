@@ -3,4 +3,4 @@ MD5 4b757459fb3d0e69031a86de80320ad9 gcc-3.3.3-patches-1.0.tar.bz2 23675
 MD5 c6f0f4baae3ef904ba8886d7ef99938d gcc-3.3.3-branch-update-20040217.patch.bz2 150987
 MD5 b62b5856753294821c4cea8bd28ffe1d protector-3.3-7.tar.gz 25068
 MD5 7bfc29747dfc5fa614b5ac366bf38224 gcc-3.3.3-manpages.tar.bz2 137822
-MD5 a392f8b60e9604e58497724be400b149 gcc-3.3.2-nodefault-pie-ssp.patch 11367
+MD5 64116021ddf205bfeefe54cc4323c439 gcc-3.3.2-v5-nodefault-pie-ssp.patch 12508
