@@ -1,6 +1,12 @@
 # ChangeLog for net-www/netscape-communicator
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.11 2004/07/01 22:48:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.12 2004/07/04 13:04:48 usata Exp $
+
+*netscape-communicator-4.80 (04 Jul 2004)
+
+  04 Jul 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +netscape-communicator-4.80.ebuild:
+  Version bumped. Closing bug #16605
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   netscape-communicator-4.79-r1.ebuild:
