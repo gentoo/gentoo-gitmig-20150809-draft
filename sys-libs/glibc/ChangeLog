@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.238 2004/08/16 00:19:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.239 2004/08/16 04:57:57 lv Exp $
+
+  15 Aug 2004; Travis Tilley <lv@gentoo.org> -glibc-2.3.3_pre20040207.ebuild:
+  removed ebuild now that alpha and ia64 dont use it
 
   15 Aug 2004; Aron Griffis <agriffis@gentoo.org>
   glibc-2.3.3_pre20040207.ebuild:
