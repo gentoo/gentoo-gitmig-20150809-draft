@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.5.ebuild,v 1.1 2003/06/18 18:35:13 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.5.ebuild,v 1.2 2003/09/01 19:38:06 blauwers Exp $
 
 IUSE="X gtk gtk2"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nv-tv-out/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="sys-apps/pciutils
 	gtk? ( =x11-libs/gtk+-1.2* )
