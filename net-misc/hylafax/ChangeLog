@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/hylafax
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.25 2003/12/09 17:57:59 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.26 2004/03/13 17:52:26 nerdboy Exp $
+
+*hylafax-4.1.8-r2 (13 Mar 2004)
+
+  13 Mar 2004; <nerdboy@gentoo.org> hylafax-4.1.8-r2.ebuild,
+  files/hylafax-4.1.8-gcc-version.patch:
+  gcc version patch suggested by Torsten Kurbad <torsten@tk-webart.de>
+  since autoreconf doesn't seem to work on all systems (bug 29464)
+  also fixed date errors and removed mips and ppc due to too many
+  bad depends
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> hylafax-4.1.8-r1.ebuild,
   hylafax-4.1.8.ebuild:

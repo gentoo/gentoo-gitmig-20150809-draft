@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8.ebuild,v 1.5 2004/03/13 17:52:26 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8-r2.ebuild,v 1.1 2004/03/13 17:52:26 nerdboy Exp $
 
 # This is basically unchanged from the one supplied by Stephane Loeuillet
 # to Gentoo bug: http://bugs.gentoo.org/show_bug.cgi?id=28574
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="x86 sparc alpha hppa "
+KEYWORDS="~x86 ~sparc ~alpha ~hppa"
 
 DEPEND="net-dialup/mgetty
 	>=sys-libs/zlib-1.1.4
@@ -28,6 +28,7 @@ DEPEND="net-dialup/mgetty
 RDEPEND="${DEPEND}"
 
 src_compile() {
+	epatch ${FILESDIR}/${P}-gcc-version.patch
 	# no 'econf' here because does not support standard --prefix option (prehistoric autoconf v1.92 used !!!)
 	autoreconf -f
 	./configure \
@@ -70,6 +71,9 @@ src_install() {
 		SPOOL=${D}/var/spool/fax \
 		install || die
 
+	keepdir /var/spool/fax/{archive,client,pollq,recvq,tmp}
+	keepdir /var/spool/fax/{status,sendq,recvq,log,info,doneq,docq,dev}
+
 	insinto /etc/init.d
 	insopts -m 755
 	doins ${FILESDIR}/hylafax
@@ -77,4 +81,5 @@ src_install() {
 	dodoc COPYRIGHT README TODO VERSION
 
 	dohtml -r html/
+	keepdir /usr/share/doc/${P}
 }
