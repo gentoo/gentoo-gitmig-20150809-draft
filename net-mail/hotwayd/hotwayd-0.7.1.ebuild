@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.5.3.ebuild,v 1.6 2003/11/20 16:40:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.7.1.ebuild,v 1.1 2003/11/20 16:40:00 mholzer Exp $
 
 DESCRIPTION="Hotmail to pop3 deamon"
 HOMEPAGE="http://hotwayd.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/hotwayd/${P}.tar.bz2"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE=""
 
