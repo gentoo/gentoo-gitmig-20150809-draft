@@ -2212,3 +2212,40 @@ diff -urp linux-2.6.10/include/linux/if_fddi.h linux-2.6.10-gentoo/include/linux
  /*
   *  Define max and min legal sizes.  The frame sizes do not include
   *  4 byte FCS/CRC (frame check sequence).
+--- linux-2.6.10/include/asm-sparc/processor.h	2004-12-11 15:49:24.522603912 -0800
++++ linux-2.6.10-gentoo/include/asm-sparc/processor.h	2004-12-11 15:49:18.865463928 -0800
+@@ -44,11 +44,13 @@
+ struct task_struct;
+ 
+ #ifdef __KERNEL__
+-struct fpq {
++#define __fpq fpq
++#endif
++
++struct __fpq {
+ 	unsigned long *insn_addr;
+ 	unsigned long insn;
+ };
+-#endif
+ 
+ typedef struct {
+ 	int seg;
+@@ -67,13 +69,17 @@ struct thread_struct {
+ 	unsigned long   float_regs[32] __attribute__ ((aligned (8)));
+ 	unsigned long   fsr;
+ 	unsigned long   fpqdepth;
+-	struct fpq	fpqueue[16];
++	struct __fpq	fpqueue[16];
+ 	unsigned long flags;
+ 	mm_segment_t current_ds;
+ 	struct exec core_exec;     /* just what it says. */
+ 	int new_signal;
+ };
+ 
++#ifdef __KERNEL__
++#undef __fpq
++#endif
++
+ #define SPARC_FLAG_KTHREAD      0x1    /* task is a kernel thread */
+ #define SPARC_FLAG_UNALIGNED    0x2    /* is allowed to do unaligned accesses */
+ 
