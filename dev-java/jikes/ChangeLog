@@ -1,8 +1,11 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.4 2002/09/14 17:18:40 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.5 2002/09/20 20:55:40 vapier Exp $
 
 *jikes-1.16 (26 Jul 2002)
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Fixed HOMPAGE misspelling
 
   13 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.
@@ -17,6 +20,9 @@
   GCC 3 related fixes.
 
 *jikes-1.15 (05 Dec 2001)
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Fixed HOMPAGE misspelling
 
   05 Dec 2001; G.Bevin <gbevin@gentoo.org> :
 
