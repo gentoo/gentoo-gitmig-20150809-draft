@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.1 2003/10/16 20:40:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.2 2003/10/18 00:50:21 kumba Exp $
 
 inherit flag-o-matic
 
@@ -18,14 +18,7 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
-
-	# (12 Oct 2003) <kumba@gentoo.org>
-	# This sed command fixes file's src/patchlevel.h to report the proper version
-	# information.  Current, file-4.05 reports itself as file-4.04.  An email is
-	# Going to be sent to the author about this, so this little kludge will not
-	# be needed with the next version of file.
-	mv -f ${S}/src/patchlevel.h ${S}/src/patchlevel.h.orig
-	sed -re 's/(#define\W+)(patchlevel\W+)4/\1\25/g' ${S}/src/patchlevel.h.orig > ${S}/src/patchlevel.h
+	cd ${S}
 
 	# (12 Oct 2003) <kumba@gentoo.org>
 	# This patch is for MIPS only.  It slightly changes the 'file' output

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.05.ebuild,v 1.2 2003/10/12 05:52:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.05.ebuild,v 1.3 2003/10/18 00:50:21 kumba Exp $
 
 inherit flag-o-matic
 
@@ -18,6 +18,7 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 
 	# (12 Oct 2003) <kumba@gentoo.org>
 	# This sed command fixes file's src/patchlevel.h to report the proper version
