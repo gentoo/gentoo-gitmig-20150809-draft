@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a383dd2fc62e7674472543e5f0e0e8d8 ChangeLog 641
+MD5 2dd4b3b741ffbc2e5979ab4ed7a96152 ut2004-ded-3323.ebuild 2555
+MD5 7ce90b1613c97713d27dcd8d2d41994b ChangeLog 834
 MD5 f05d84780234f0c985ed7d5dc5f3ddb1 metadata.xml 646
-MD5 70bca001fc22896d9af8950fdb6cd742 ut2004-ded-3236.ebuild 2557
-MD5 8847b356e3b20a1d7bf18c02e8c4c1b2 files/digest-ut2004-ded-3236 155
 MD5 d01741a71f471ffeb77693d4aba27877 files/ut2004-ded.rc 2515
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBHwhDHTu7gpaalycRAohvAKDmTnsoairwttIyU1VW6XIAakl9bgCfcDIH
-9n1R2Zo7IOv1Cf+lsZAw0n8=
-=OEmL
------END PGP SIGNATURE-----
+MD5 a51b1721d7e219a2dfb4252561766dee files/digest-ut2004-ded-3323 153

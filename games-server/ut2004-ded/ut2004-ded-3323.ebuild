@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3236.ebuild,v 1.3 2004/08/15 06:51:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3323.ebuild,v 1.1 2004/09/14 21:49:41 wolf31o2 Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="Unreal Tournament 2004 Linux Dedicated Server"
 HOMEPAGE="http://www.unrealtournament.com/"
 
 ORIG_P="ut2004-3186-dedicatedserver.zip"
-PATCH_P="ut2004-lnxpatch${PV}-1.tar.bz2"
+PATCH_P="ut2004-lnxpatch${PV}.tar.bz2"
 SRC_URI="mirror://3dgamers/pub/3dgamers5/games/unrealtourn2k4/${ORIG_P}
 	mirror://3dgamers/pub/3dgamers/games/unrealtourn2k4/${ORIG_P}
 	mirror://3dgamers/pub/3dgamers5/games/unrealtourn2k4/${PATCH_P}
@@ -16,7 +16,7 @@ SRC_URI="mirror://3dgamers/pub/3dgamers5/games/unrealtourn2k4/${ORIG_P}
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 RESTRICT="nostrip nomirror"
 
