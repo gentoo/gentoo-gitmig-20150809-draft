@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.22 2003/11/08 23:44:54 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.23 2003/11/29 03:32:32 weeve Exp $
+
+  28 Nov 2003; Jason Wever <weeve@gentoo.org> neon-0.24.2.ebuild:
+  Added ~sparc keyword.
 
   09 Nov 2003; David Holm <dholm@gentoo.org> neon-0.24.2.ebuild:
   Added to ~ppc.
