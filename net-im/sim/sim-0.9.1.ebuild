@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.1.ebuild,v 1.10 2004/01/30 08:11:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.1.ebuild,v 1.11 2004/04/13 12:40:26 aliz Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils
@@ -13,7 +13,7 @@ fi
 LICENSE="GPL-2"
 DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist, ..."
 SRC_URI="mirror://sourceforge/sim-icq/${P}.tar.bz2
-	mirror://gentoo/sim-cvs-admin.tar.bz2 http://gentoo.tamperd.net/sim-cvs-admin.tar.bz2"
+	mirror://gentoo/sim-cvs-admin.tar.bz2 http://gentoo.tamperd.net/distfiles/sim-cvs-admin.tar.bz2"
 RESTRICT="nomirror"
 HOMEPAGE="http://sim-icq.sourceforge.net"
 KEYWORDS="x86 ~ppc -amd64"
