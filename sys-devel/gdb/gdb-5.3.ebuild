@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.6 2003/02/13 16:32:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.7 2003/02/28 10:40:45 cretin Exp $
 
-IUSE="nls"
+IUSE="nls objc"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
-SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2"
+SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2
+	objc? ( ftp://ftp.gnustep.org/pub/gnustep/patches/gdb-5_3-objc-patch.tgz )"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
@@ -18,6 +19,24 @@ DEPEND=">=sys-libs/ncurses-5.2-r2
 
 inherit flag-o-matic
 replace-flags -O? -O2
+
+src_unpack() {
+	unpack gdb-${PV}.tar.bz2
+
+	if [ -n "`use objc`" ] ; then
+		unpack gdb-5_3-objc-patch.tgz 
+		cd ${S}
+
+		patch -p1 < ${WORKDIR}/gdb-5_3-objc-patch/gdb-5.3-objc-patch.diff || die
+
+		cp ${WORKDIR}/gdb-5_3-objc-patch/objc-exp.y gdb/
+		cp ${WORKDIR}/gdb-5_3-objc-patch/objc-lang.c gdb/
+		cp ${WORKDIR}/gdb-5_3-objc-patch/objc-lang.h gdb/
+		cp -r ${WORKDIR}/gdb-5_3-objc-patch/gdb.objc gdb/testsuite/
+		cd gdb/testsuite
+		autoconf || die
+	fi
+}
 
 src_compile() {
 
