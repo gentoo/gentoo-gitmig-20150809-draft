@@ -1,6 +1,11 @@
 # ChangeLog for net-www/monkeyd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/ChangeLog,v 1.1 2003/03/04 08:43:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/ChangeLog,v 1.2 2003/04/16 16:57:42 vapier Exp $
+
+*monkeyd-0.6.3 (16 Apr 2003)
+
+  16 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.
 
 *monkeyd-0.6.1 (03 Mar 2003)
 
