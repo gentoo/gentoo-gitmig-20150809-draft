@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.93.1.ebuild,v 1.1 2002/08/10 15:38:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.93.1.ebuild,v 1.2 2002/08/10 15:41:02 raker Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Gnome NetMeeting client"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 RDEPEND="net-libs/openh323
 	>=dev-libs/glib-2.0.3
