@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.7 2002/08/14 23:44:15 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.8 2002/08/16 07:57:02 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GTK/X11 application launcher with nice features such as a history"
@@ -46,10 +46,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		localedir=${D}/usr/share/locale \
-		mandir=${D}/usr/share/man \
-		install || die 
+	einstall || die 
 
 	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL \
 		LANGUAGES NEWS README TODO
