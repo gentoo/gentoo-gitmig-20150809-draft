@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/serialmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.4 2003/02/12 08:16:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.5 2003/09/10 15:58:40 phosphan Exp $
+
+*serialmail-0.75-r1 (10 Sep 2003)
+
+  10 Sep 2003; Patrick Kursawe <phosphan@gentoo.org>
+  serialmail-0.75-r1.ebuild, files/errno.patch:
+  The old errno beast again, reported and fixed in bug 28290.
+  Declaring stable immediately since this should not break anything.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
