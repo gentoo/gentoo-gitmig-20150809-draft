@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/jmax-4.1.0.ebuild,v 1.1 2004/07/09 02:38:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/jmax-4.1.0.ebuild,v 1.2 2004/07/14 20:49:16 agriffis Exp $
 
 IUSE="alsa jack doc"
 
@@ -45,10 +45,9 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
-
+	econf || die "econf failed"
 	# -j2 fails.  See bug #47978
-	emake -j1
+	emake -j1 || die "emake failed"
 }
 
 src_install () {
