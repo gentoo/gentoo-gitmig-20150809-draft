@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.7 2001/07/29 00:39:11 thread Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.8 2001/07/29 00:44:25 thread Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -70,7 +70,6 @@ src_install() {
 	dodir /usr/local/httpd/htdocs/wiki/bios
 	insinto /usr/local/httpd/htdocs/wiki
 	cd ${FILESDIR}/wiki
-	cd ${FILESDIR}/wiki/bios
 	doins *.php
 	cd images
 	insinto /usr/local/httpd/htdocs/wiki/images
