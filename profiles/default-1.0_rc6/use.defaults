@@ -51,4 +51,5 @@ kde		kde-base/kde
 motif		x11-libs/openmotif
 opengl		virtual/opengl
 mozilla		net-www/mozilla
+gphoto2		media-gfx/gphoto2
 

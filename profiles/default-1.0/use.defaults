@@ -22,6 +22,7 @@ ggi		media-libs/libggi
 gif		media-libs/giflib
 gnome		gnome-base/gnome
 gpm		sys-libs/gpm
+gphoto2		media-gfx/gphoto2
 gtk		x11-libs/gtk+
 gtkhtml		gnome-extra/gtkhtml
 guile		dev-util/guile
