@@ -1,0 +1,23 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting SAMBA"
+	start-stop-daemon --start --quiet --exec /usr/sbin/nmbd
+	result=$?
+	start-stop-daemon --start --quiet --exec /usr/sbin/smbd
+	result=$(( $result + $? ))
+	eend $result
+}
+
+stop() {
+	ebegin "Stopping $SAMBA"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/nmbd
+	result=$?
+	start-stop-daemon --stop --quiet --exec /usr/sbin/smbd
+	result=$(( $result + $? ))
+	eend $result
+}
