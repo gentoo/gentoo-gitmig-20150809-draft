@@ -1,7 +1,10 @@
 #
-# $Id: make.defaults.sparc,v 1.3 2002/05/08 22:12:56 murphy Exp $
+# $Id: make.defaults.sparc,v 1.4 2002/07/04 13:39:46 murphy Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.3  2002/05/08 22:12:56  murphy
+# Adding misc flags for make.defaults in make.defaults.sparc.
+#
 # Revision 1.2  2002/04/18 21:06:28  murphy
 # More changes
 #
@@ -22,3 +25,5 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
+# USE arch:xxx keyword
+ACCEPT_KEYWORDS="sparc64"
