@@ -1,19 +1,22 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.6 2002/12/13 11:00:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.7 2002/12/15 07:41:19 blizzy Exp $
+
+*sitecopy-0.11.4 (15 Dec 2002)
+
+  15 Dec 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*sitecopy-0.10.12-r1 (1 Feb 2002)
 
-  29 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
-  Cleanup / HOMEPAGE fix (#9933)
+  29 Oct 2002; Mike Frysinger <vapier@gentoo.org> : Cleanup / HOMEPAGE fix (#9933)
 
   30 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> sitecopy-0.10.12-r1.ebuild :
   Added ppc to keywords.
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> sitecopy-0.10.12-r1.ebuild :
   Added KEYWORDS, LICENSE, SLOT.
+
+*sitecopy-0.10.12-r1 (01 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
