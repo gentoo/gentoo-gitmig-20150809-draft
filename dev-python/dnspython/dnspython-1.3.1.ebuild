@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.3.1.ebuild,v 1.2 2004/07/21 07:33:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.3.1.ebuild,v 1.3 2005/01/26 00:07:38 lucass Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.dnspython.org/"
 SRC_URI="http://www.dnspython.org/kits/stable/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND=">=virtual/python-2.2
 	sys-devel/make"

@@ -1,8 +1,18 @@
-MD5 5b52c62718d6f7254ba0bcaf677fb823 ChangeLog 1138
-MD5 6d5f151a1f4ac5ccc589185b48dbd47d dnspython-1.3.1.ebuild 929
-MD5 8a1c3c6c4cdbb78c85a49033a86fbf1b dnspython-1.3.2.ebuild 926
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e4978e4bc56fa1e3d2bda0e0bfd516e7 ChangeLog 1266
+MD5 d66a9a8a2ddd489d4a0740f5f65d2010 dnspython-1.3.0.ebuild 925
+MD5 0ea455c5ffd2c25143110cc496a1b31e dnspython-1.3.1.ebuild 929
+MD5 5c6716def3b559f745ada456bf396a1d dnspython-1.3.2.ebuild 925
 MD5 9212256e2d9ce5aff7f56d269e30ef3b metadata.xml 654
-MD5 83f3a2ba7724ad4767581d3b7808c059 dnspython-1.3.0.ebuild 929
 MD5 7646ca2488a54ff9a69d77a0a900ab75 files/digest-dnspython-1.3.0 66
 MD5 055895a3213509035928d2180073ba67 files/digest-dnspython-1.3.1 66
 MD5 ec5b0f4a9cb24f7812f360d7aeae2f81 files/digest-dnspython-1.3.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB9t9b2jLqHNfbg2URAqyrAJ4hKdb2DA3z0qWZ/hDlq1iIYiYFBQCgvCHv
+QCLI+/vSk+FphpqGAufbE/8=
+=CTfi
+-----END PGP SIGNATURE-----
