@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.48 2003/10/28 11:38:51 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.49 2003/11/09 16:18:26 pauldv Exp $
+
+*openoffice-1.1.0-r2 (09 Nov 2003)
+
+  09 Nov 2003; <paul@gentoo.org> openoffice-1.1.0-r2.ebuild:
+  Add -fno-strict-aliasing to make excel import work
 
   28 Oct 2003; Paul de Vrieze <pauldv@gentoo.org> openoffice-1.1.0-r1.ebuild:
   Add predict for stupid gconf sandbox error
