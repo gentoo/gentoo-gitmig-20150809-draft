@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.9.ebuild,v 1.4 2004/03/15 23:40:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.9.ebuild,v 1.5 2004/03/28 01:07:53 dragonheart Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ LICENSE="BSD | GPL-2"
 # REF http://packages.debian.org/cgi-bin/search_packages.pl?searchon=names&version=all&exact=1&keywords=pdnsd
 # According to release notes 1.1.8b1par7 is effectively 1.1.9 with minor documentation changes
 
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 S=${WORKDIR}/${PN}-${PV}
 
