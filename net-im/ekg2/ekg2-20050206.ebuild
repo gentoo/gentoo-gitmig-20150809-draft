@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20041104.ebuild,v 1.3 2005/02/07 08:08:50 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20050206.ebuild,v 1.1 2005/02/07 08:08:50 sekretarz Exp $
 
 DESCRIPTION="Text based Instant Messenger client that supports many protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://www.ekg2.org/"
@@ -10,7 +10,7 @@ SLOT="0"
 
 KEYWORDS="~x86 ~ppc ~amd64"
 
-IUSE="gpm ssl spell jpeg nogg gsm"
+IUSE="gpm ssl spell jpeg nogg gsm python"
 
 DEPEND=">=dev-libs/expat-1.95.6
 	>=net-libs/gnutls-1.0.17
@@ -19,7 +19,8 @@ DEPEND=">=dev-libs/expat-1.95.6
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	spell? ( >=app-text/aspell-0.50.5 )
 	!nogg? ( >=net-libs/libgadu-20040820 )
-	gsm? ( >=media-sound/gsm-1.0.10 )"
+	gsm? ( >=media-sound/gsm-1.0.10 )
+	python? ( >=dev-lang/python-2.3.3 )"
 
 #RDEPEND=""
 
@@ -35,6 +36,7 @@ src_compile() {
 	    `use_with jpeg libjpeg` \
 	    `use_with spell aspell` \
 	    `use_with gsm libgsm` \
+	    `use_with python` \
 	     || die "econf failed"
 
 	emake || die "emake failed"
@@ -43,7 +45,7 @@ src_compile() {
 src_install() {
 	# Install plugins into proper directory
 	if use amd64; then
-		CONF_LIBDIR=/usr/lib/ekg2/plugins
+		CONF_LIBDIR=$(getlib)/lib/ekg2/plugins
 	fi
 
 	einstall || die
