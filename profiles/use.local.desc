@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.968 2005/02/24 14:19:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.969 2005/02/25 20:26:57 azarah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -720,6 +720,9 @@ sys-libs/glibc:nomalloccheck - default to not performing some sanity checks that
 sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
 sys-libs/libsepol:mls - Add experimental multi level security policy support
+sys-libs/pam:pam_chroot - Builds the pam_chroot module (enables per-user chroots at login)
+sys-libs/pam:pam_console - Builds the pam_console module (enables per-user device permissions for console user)
+sys-libs/pam:pam_timestamp - Builds the pam_timestamp module (enables recent successful attempt authentication)
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 sys-libs/uclibc:xattr - enables extended attributes
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
