@@ -17,8 +17,8 @@ MD5 6c3a8b625c13d63a97fc7209953bee53 files/stunnel-3.24-blinding.fix 405
 MD5 b42ca1fbeb5d6454de36aac4cb893294 files/stunnel-3.24-gentoo.diff 941
 MD5 074d167af655249fd2466a9bab01d2de files/digest-stunnel-3.24-r1 64
 MD5 f50f68bb9d3326181f8b318e76aa1de0 stunnel-3.22-r1.ebuild 866
-MD5 61b49be13e3cee5ca0de0dd5c6db2ec2 stunnel-4.02.ebuild 1426
-MD5 5e48ebf452c902dd469fdbb3b3632da1 ChangeLog 2064
+MD5 648a114c7dcef792db884dfbd07bfb5b stunnel-4.02.ebuild 1425
+MD5 b6a1e1a8baffcca4ea85338de404fba8 ChangeLog 2067
 MD5 dcebdde5e1aeb2e8615b0d7c23e4ee82 stunnel-3.22-r2.ebuild 916
 MD5 59fa013273a91787278e88baa4a09ae3 stunnel-4.04.ebuild 1638
 MD5 3a14d8c969beb2e090d6b73c97f36767 stunnel-4.04-r1.ebuild 1734

@@ -1,5 +1,5 @@
-MD5 7d6aa400edc230ab6ba67b2692c34acd ptrtd-0.5.2.ebuild 1115
-MD5 5d656dc5e38e39b986031b8841bc0968 ChangeLog 408
 MD5 2bf2484cf9bc9fb2d9d22e3a2079b4ba files/digest-ptrtd-0.5.2 62
 MD5 b940bf96f1fae76043b5e72033279a9a files/ptrtd.confd 391
 MD5 9a40aa544aa8da5502cf5412e53e957c files/ptrtd.initd 763
+MD5 5d656dc5e38e39b986031b8841bc0968 ChangeLog 408
+MD5 98664c15df66d714549d06b4405a386b ptrtd-0.5.2.ebuild 1111

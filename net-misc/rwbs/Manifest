@@ -1,5 +1,5 @@
-MD5 9dd7989f49cfa7ea051890525bf87d26 ChangeLog 593
-MD5 feeed53b60f941b273537e02b10beed4 rwbs-0.27.ebuild 859
 MD5 38a3f3f271aa00d6a9010243be3592bc files/digest-rwbs-0.27 67
 MD5 00330e80e3efedc62799118b3bece6b7 files/rwbs.conf 1221
 MD5 bb633dfa030471d020c9641f1adf9359 files/rwbs.rc 564
+MD5 10dd77b79f136387ec91fa3b65edea54 rwbs-0.27.ebuild 856
+MD5 9dd7989f49cfa7ea051890525bf87d26 ChangeLog 593
