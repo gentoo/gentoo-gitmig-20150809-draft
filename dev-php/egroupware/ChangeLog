@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/egroupware
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/ChangeLog,v 1.8 2003/12/15 20:08:00 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/ChangeLog,v 1.9 2004/01/08 08:41:07 robbat2 Exp $
+
+  08 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  egroupware-0.9.99.008.ebuild:
+  remove mips and arm KEYWORDS due to lack of support, ready for new repoman.
 
   15 Dec 2003; Stuart Herbert <stuart@gentoo.org>
   egroupware-0.9.99.008.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.8 2004/01/05 21:28:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.9 2004/01/08 08:39:49 robbat2 Exp $
+
+  08 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> smarty-2.5.0.ebuild,
+  smarty-2.6.0-r1.ebuild, smarty-2.6.0-r2.ebuild, smarty-2.6.0.ebuild:
+  remove mips and arm KEYWORDS due to lack of support, ready for new repoman.
 
 *smarty-2.6.0-r2 (04 Jan 2004)
 *smarty-2.6.0-r1 (04 Jan 2004)

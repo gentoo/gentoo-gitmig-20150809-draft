@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.008.ebuild,v 1.3 2004/01/05 21:28:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.008.ebuild,v 1.4 2004/01/08 08:41:07 robbat2 Exp $
 
 inherit webapp-apache
 
@@ -14,7 +14,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~hppa ~arm"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~hppa "
 
 RDEPEND="virtual/php
 	dev-db/mysql"
