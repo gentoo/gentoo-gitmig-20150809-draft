@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/toshiba-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.4 2004/09/26 23:28:50 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.5 2004/10/09 07:45:36 cardoe Exp $
+
+  09 Oct 2004; Doug Goldstein <cardoe@gentoo.org> +metadata.xml:
+  Added missing metadata.xml
 
   27 Sep 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   toshiba-utils-2.0.1-r1.ebuild:
