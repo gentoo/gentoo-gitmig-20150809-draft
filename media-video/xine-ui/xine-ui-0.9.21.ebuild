@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.21.ebuild,v 1.3 2003/07/12 21:12:58 aliz Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.21.ebuild,v 1.4 2003/08/12 01:09:45 weeve Exp $ 
 
 DESCRIPTION="Skinned front end for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -20,7 +20,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 IUSE="X aalib gnome nls directfb lirc"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
