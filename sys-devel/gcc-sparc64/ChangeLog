@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc-sparc64
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.4 2004/02/18 10:03:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.5 2004/03/01 12:15:51 aliz Exp $
 
 *gcc-sparc64-3.3.3 (18 Feb 2004)
 
@@ -18,6 +18,8 @@
   Tweaked DEPEND to depend on binutils-2.14.90.0.7 or greater
 
 *gcc-sparc64-3.3.2 (16 Nov 2003)
+*gcc-sparc64-3.2.3 (16 Nov 2003)
+*gcc-sparc64-3.3.1 (16 Nov 2003)
 
   16 Nov 2003; Joshua Kinard <kumba@gentoo.org> gcc-sparc64-3.2.3.ebuild,
   gcc-sparc64-3.3.1.ebuild, gcc-sparc64-3.3.2.ebuild,
