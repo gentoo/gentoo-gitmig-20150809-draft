@@ -1,6 +1,12 @@
 # ChangeLog for net-www/middleman
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/ChangeLog,v 1.9 2004/03/30 04:13:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/ChangeLog,v 1.10 2004/04/23 17:40:54 stuart Exp $
+
+*middleman-2.0.1-r1 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> middleman-2.0.1-r1.ebuild:
+  Config files now go into /etc/mman, and not /etc/mman/mman ;-) Fix for bug
+  #47376; thanks to Malte S. Stretz <gentoo-contrib@msquadrat.de>
 
 *middleman-2.0.1 (29 Mar 2004)
 
