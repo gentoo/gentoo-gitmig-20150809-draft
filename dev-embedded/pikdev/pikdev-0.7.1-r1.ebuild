@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r1.ebuild,v 1.2 2005/01/01 17:55:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r1.ebuild,v 1.3 2005/01/02 23:00:24 dragonheart Exp $
 
 inherit kde
 need-kde 3
@@ -11,13 +11,14 @@ SRC_URI="http://pikdev.free.fr/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 # restrict at Authors request
 RESTRICT="nomirror"
 
 RDEPEND="${RDEPEND}
-	dev-embedded/gputils"
+	dev-embedded/gputils
+	kde-base/arts"
 DEPEND="${DEPEND} ${RDEPEND}"
 
 src_unpack() {

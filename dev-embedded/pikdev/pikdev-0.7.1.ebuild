@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1.ebuild,v 1.2 2005/01/01 17:55:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1.ebuild,v 1.3 2005/01/02 23:00:24 dragonheart Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ SRC_URI="http://pikdev.free.fr/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 # restrict at Authors request
 RESTRICT="nomirror"
@@ -29,7 +29,8 @@ RDEPEND="sys-libs/zlib
 	media-libs/libpng
 	sys-devel/gcc
 	dev-embedded/gputils
-	>=kde-base/kdelibs-3"
+	>=kde-base/kdelibs-3
+	kde-base/arts"
 
 # Ebuild will evily link to these if present
 #	media-libs/nas
