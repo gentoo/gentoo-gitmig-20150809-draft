@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.16 2002/12/04 01:22:06 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.17 2002/12/08 00:35:01 raker Exp $
+
+*cyrus-imapd-2.1.11 (07 Dec 2002)
+
+  07 Dec 2002; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.11.ebuild,
+  files/digest-cyrus-imapd-2.1.11, files/configure.diff :
+  New version with previously added secutity fixes.  Also added
+  a ucd-snmp fix which needs testing.  Removed -I/usr/include warnings
+  during compile-time.  Currently marked unstable.
 
 *cyrus-imapd-2.1.10 (03 Dec 2002)
 
