@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.6.ebuild,v 1.1 2004/01/02 02:39:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.6.ebuild,v 1.2 2004/01/03 18:39:46 plasmaroo Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ X11VNC_VER=20040101
 DESCRIPTION="library for creating vnc servers"
 HOMEPAGE="http://libvncserver.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libvncserver/LibVNCServer-${PV}.tar.gz
-	mirror://gentoo/${P}-${X11VNC_VER}-x11vnc.c.bz2"
+	 http://dev.gentoo.org/~plasmaroo/patches/vnc/${P}-${X11VNC_VER}-x11vnc.c.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
