@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.4.ebuild,v 1.1 2004/11/17 23:07:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.4.ebuild,v 1.2 2005/01/25 00:25:25 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnokii.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~alpha ~ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls X bluetooth irda sms postgres mysql"
 
 RDEPEND="X? ( =x11-libs/gtk+-1.2* )
@@ -23,20 +23,20 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S} && \
-		sed -i -e 's:/usr/local/:/usr/:g' Docs/sample/gnokiirc && \
+	cd ${S}
+	sed -i -e 's:/usr/local/:/usr/:g' Docs/sample/gnokiirc && \
 		epatch ${FILESDIR}/${P}-nounix98pty.patch || \
-			die "something has changed in this package"
+		die "something has changed in this package"
 }
 
 src_compile() {
 	append-ldflags "-Wl,-z,now" #avoid QA notices
 
 	econf \
-		`use_enable nls` \
-		`use_with X x` \
-	    --enable-security || die "configure failed"
+		$(use_enable nls) \
+		$(use_with X x) \
+	    --enable-security \
+		|| die "configure failed"
 
 	emake -j1 || die "make failed"
 
