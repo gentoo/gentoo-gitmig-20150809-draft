@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta1.ebuild,v 1.1 2003/11/01 13:07:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta1.ebuild,v 1.2 2003/11/03 20:27:10 caleb Exp $
 inherit kde
 
 MY_PV=3.1.93
@@ -49,7 +49,7 @@ set-kdedir ${PV}
 
 src_unpack() {
 	kde_src_unpack
-	cd ${S} && aclocal
+	cd ${S} && make -f admin/Makefile.common && aclocal
 	cd ${S}/kio/misc/kpac
 	cp Makefile.am Makefile.am.orig
 	sed -e 's: $(bindir): $(DESTDIR)/$(bindir):g' Makefile.am.orig > Makefile.am
