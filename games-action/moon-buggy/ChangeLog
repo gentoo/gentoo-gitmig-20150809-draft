@@ -1,6 +1,10 @@
 # ChangeLog for games-action/moon-buggy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.11 2004/08/02 23:55:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.12 2004/08/16 07:12:57 mr_bones_ Exp $
+
+  16 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  moon-buggy-0.5.53-r1.ebuild:
+  eutils; stable
 
   02 Aug 2004; Mike Frysinger <vapier@gentoo.org> moon-buggy-0.5.53-r1.ebuild:
   Fix autotool stuff #59194 by Stefan and clean up other logic as well.
