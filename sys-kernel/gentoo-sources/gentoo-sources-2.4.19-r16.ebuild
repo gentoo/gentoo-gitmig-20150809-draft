@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r15.ebuild,v 1.1 2004/06/14 20:37:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r16.ebuild,v 1.1 2004/06/19 13:00:48 plasmaroo Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -35,7 +35,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://gentoo.lostlogicx.com/patches-${KV/15/10}.tar.bz2"
+	 http://gentoo.lostlogicx.com/patches-${KV/16/10}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc -amd64 -ia64"
 SLOT="${KV}"
 
@@ -43,7 +43,7 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
 
-	cd ${KV/15/10}
+	cd ${KV/16/10}
 	# Kill patches we aren't suppposed to use, don't worry about 
 	# failures, if they aren't there that is a good thing!
 
