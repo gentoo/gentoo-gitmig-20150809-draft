@@ -41,4 +41,4 @@ MD5 35601b7efe487b346f78d43c23e2f8f3 files/1.1.4/openoffice-java.patch 2092
 MD5 a9cbc34e9462f6b64ca9e564c3b3a084 files/1.1.4/gcc34-nojava-fix.patch 329
 MD5 bf7df7ebe1373f6e2e5bd1e0425657bd files/1.1.4/gcc34-nptl-fix.patch 618
 MD5 cd0429c945d4f2e1fbbb9fd5322a6c2b files/1.1.4/freetype-217.patch 766
-MD5 a9233bc0091b925de38145108267b949 files/1.1.4/newstlportfix-patch 3638
+MD5 a9233bc0091b925de38145108267b949 files/1.1.4/newstlportfix.patch 3638
