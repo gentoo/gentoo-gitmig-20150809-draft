@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080-r1.ebuild,v 1.6 2004/07/26 08:34:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080-r1.ebuild,v 1.7 2004/08/29 06:09:33 tgall Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 sparc alpha ppc amd64"
+KEYWORDS="x86 sparc alpha ppc amd64 ppc64"
 IUSE="ssl"
 
 RDEPEND="dev-lang/perl

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.34 2004/07/26 08:34:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.35 2004/08/29 06:09:33 tgall Exp $
+
+  29 Aug 2004; Tom Gall <tgall@gentoo.org> usermin-1.080-r1.ebuild:
+  stable on ppc64, bug #60198
 
   26 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/usermin-1.080-safestop.patch, usermin-1.080-r1.ebuild:
