@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.15 2005/02/23 16:03:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.16 2005/03/06 04:35:53 kingtaco Exp $
 
 *mkxf86config-0.9 (23 Feb 2005)
 
@@ -8,6 +8,9 @@
   +mkxf86config-0.9.ebuild:
   Created a new version of the mkxf86config package. We are no longer using
   the Knoppix package for this.
+
+  05 Mar 2005; Mike Doty <kingtaco@gentoo.org> mkxf86config-0.8-r3.ebuild:
+  amd64 keyword removed due to ddcxinfo dep losing its keyword
 
   12 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   files/mkxf86config-0.8-gentoo.patch, -files/mkxf86config-gentoo.patch,
