@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c3c6e8f5fddcae563de26e61af4b05f7 treewm-0.4.5.ebuild 845
 MD5 2540e070ac455d0fcb035c31182eb616 treewm-0.4.4.ebuild 683
 MD5 a6f41018c750f65a61ebefd06c02a521 ChangeLog 1773
-MD5 a53ed9b76c9a4a50872d58aeee4d66d0 metadata.xml 426
+MD5 d8597b1d818d8453c86336611b0bff71 metadata.xml 355
 MD5 18cde1faa2834be4486edcdfe64a447a files/digest-treewm-0.4.4 64
 MD5 0ff668f3a047f8841efdfc9cbfc96639 files/digest-treewm-0.4.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw0rII1lqEGTUzyQRAu5QAJ0fLZY54wBTwDcIJ/wvp57eSECXTwCggRcv
+dOKJkeiE4UMnS0Qjd2ujdIM=
+=bWFD
+-----END PGP SIGNATURE-----
