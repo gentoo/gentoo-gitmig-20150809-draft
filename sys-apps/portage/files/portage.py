@@ -74,6 +74,11 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm")
 
+def doebuild(myebuild,mydo):
+	a=getstatusoutput("/usr/bin/ebuild "+myebuild+" "+mydo)
+	print a[1]
+	return a[0]
+
 def isdev(x):
 	mymode=os.stat(x)[ST_MODE]
 	return ( S_ISCHR(mymode) or S_ISBLK(mymode))
