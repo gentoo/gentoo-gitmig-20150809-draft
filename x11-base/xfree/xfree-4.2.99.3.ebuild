@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.10 2002/12/20 19:30:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.11 2002/12/20 19:35:28 seemant Exp $
 
 IUSE="nls 3dfx pam truetype 3dnow sse mmx"
 
@@ -217,6 +217,7 @@ src_unpack () {
 		then
 			echo "#define Has3DNowSupport YES" >> config/cf/host.def
 			echo "#define MesaUse3DNow YES" >> config/cf/host.def
+		fi
 		if use sse
 		then
 			echo "#define HasKatmaiSupport YES" >> config/cf/host.def
@@ -308,7 +309,7 @@ src_install() {
 	einfo "Compressing man pages..."
 	prepman /usr/X11R6
 
-	if [ "`use nls`" ]
+	if use nls
 	then
 		cd ${S}/nls
 		make DESTDIR=${D} install || die
