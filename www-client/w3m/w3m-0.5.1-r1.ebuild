@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r1.ebuild,v 1.2 2004/09/11 16:53:41 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r1.ebuild,v 1.3 2004/09/12 23:40:08 weeve Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz
 
 LICENSE="w3m"
 SLOT="0"
-KEYWORDS="x86 alpha ppc ~sparc amd64 ppc64"
+KEYWORDS="x86 alpha ppc sparc amd64 ppc64"
 IUSE="X gtk imlib imlib2 xface ssl migemo gpm cjk nls lynxkeymap async"
 #IUSE="canna unicode"
 
