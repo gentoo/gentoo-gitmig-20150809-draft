@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.0.1.ebuild,v 1.3 2004/02/09 00:06:01 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.0.1.ebuild,v 1.4 2004/02/15 18:24:47 zul Exp $
 
 DESCRIPTION="IRSSI-based text client for Secure Internet Live Conferencing"
 SRC_URI="http://www.silcnet.org/download/client/sources/${P}.tar.bz2"
@@ -45,10 +45,10 @@ src_install() {
 		R1="s/installsitearch='//"
 		R2="s/';//"
 		perl_sitearch="`perl -V:installsitearch | sed -e ${R1} -e ${R2}`"
-		myflags="${myflags} INSTALLPRIVLIB=${D}/usr/lib"
-		myflags="${myflags} INSTALLARCHLIB=${D}/${perl_sitearch}"
-		myflags="${myflags} INSTALLSITELIB=${D}/${perl_sitearch}"
-		myflags="${myflags} INSTALLSITEARCH=${D}/${perl_sitearch}"
+		myflags="${myflags} INSTALLPRIVLIB=/usr/lib"
+		myflags="${myflags} INSTALLARCHLIB=${perl_sitearch}"
+		myflags="${myflags} INSTALLSITELIB=${perl_sitearch}"
+		myflags="${myflags} INSTALLSITEARCH=${perl_sitearch}"
 	fi
 
 	make DESTDIR=${D} ${myflags} install || die "make install failed"
