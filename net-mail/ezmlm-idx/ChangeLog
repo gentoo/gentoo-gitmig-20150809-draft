@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ezmlm-idx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.9 2003/07/31 13:45:29 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.10 2003/09/20 22:33:54 robbat2 Exp $
+
+  20 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> ezmlm-idx-0.40-r2.ebuild:
+  fix head -1 bug
 
   31 Jul 2003; Tavis Ormandy <taviso@gentoo.org> ezmlm-idx-0.40-r2.ebuild:
   stable on alpha

@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.9 2003/09/05 08:33:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.10 2003/09/20 22:33:54 robbat2 Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
 
-inherit eutils
+inherit eutils fixheadtails
 
 PB=ezmlm-idx
 EZMLM_P=ezmlm-0.53
@@ -17,7 +17,7 @@ SRC_URI="http://gd.tuwien.ac.at/infosys/mail/qmail/ezmlm-patches/${PB}-${PV}.tar
 HOMEPAGE="http://www.ezmlm.org"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 alpha ~arm ~hppa ~amd64 ~ppc ~mips ~sparc"
 DEPEND="sys-apps/grep sys-apps/groff"
 RDEPEND="net-mail/qmail"
 PROVIDE="net-mail/ezmlm"
@@ -59,6 +59,7 @@ src_unpack() {
 	patch < ${FILESDIR}/from-header.patch || die
 	echo ">>> Successfully applied Ed Korthof's From: header patch."
 	epatch ${FILESDIR}/${EZMLM_P}-errno.patch
+	ht_fix_file default.do ezmlm-test.sh setup.do auto_qmail.c.do auto_bin.c.do Makefile
 }
 
 src_compile() {
