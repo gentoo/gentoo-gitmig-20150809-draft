@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2981 2004/07/03 09:42:43 spock Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2982 2004/07/03 20:46:47 nakano Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -365,10 +365,6 @@ net-misc/zebra
 # Masking since its a beta release.
 >=dev-java/sun-jdk-1.4.99
 >=dev-java/java-sdk-docs-1.4.99
-
-# <nakano@gentoo.org> (09 Jan 2004)
-# masking bincimap-1.2.4 because the author has announced it's unstable.
-=net-mail/bincimap-1.2.4
 
 # <karltk@gentoo.org> (09 Jan 2004)
 # Placeholder to remind people it's deprecated.
