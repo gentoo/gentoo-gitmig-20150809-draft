@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.2-r1.ebuild,v 1.3 2004/06/27 17:24:24 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.2-r1.ebuild,v 1.4 2004/06/27 17:27:41 zx Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc"
-IUSE="doc jikes junit"
+IUSE="doc junit"
 
 S="${WORKDIR}/${P}-src/discovery"
 
