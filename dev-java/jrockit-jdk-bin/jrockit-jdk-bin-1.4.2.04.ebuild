@@ -1,8 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.04.ebuild,v 1.1 2004/05/28 13:49:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.04.ebuild,v 1.2 2004/06/03 18:38:19 karltk Exp $
 
 IUSE=""
+
+# WARNING: This is the default VM on ia64, so treat this ebuild
+# with proper care.
 
 # The stripping of symbols seems to mess up the BEA code. Not sure why.
 RESTRICT="nostrip fetch"
