@@ -1,6 +1,30 @@
 # ChangeLog for dev-util/ebuilder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.2 2002/05/04 01:20:48 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.3 2002/05/16 21:42:16 karltk Exp $
+
+*ebuilder-0.4-r1 (06 May 2002)
+
+  06 May 2002; Zach Forrest <zach@disinformation.ca> ebuilder, experted.ebuild, beginner.ebuild :
+
+  Thanks to Karl T for the great feedback and suggestions. (I'll get to
+  the rest of them in the next version.)
+
+  Fixed -h|--help options (i.e. they now display the help).
+
+  Added a man page.
+
+  Added support for the LICENSE variable in ebuilds; a menu is displayed.
+
+  Can now add pkg_setup and pkg_config skeleton methods.
+
+  Fixed the Python src_install method so that the --prefix is now /usr.
+  This was mentioned on the developers mailing list by Jon Nelson
+  <jnelson@jamponi.net>.
+
+  A revision number can now be added to the package name.
+
+  Changed the fourth line in the ebuilds to "$Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.3 2002/05/16 21:42:16 karltk Exp $".
+
 
 *ebuilder-0.3 (04 May 2002)
 
