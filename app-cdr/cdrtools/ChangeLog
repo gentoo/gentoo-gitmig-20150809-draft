@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.34 2003/02/18 04:02:45 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.35 2003/03/01 09:56:38 seemant Exp $
+
+  01 Mar 2003; Seemant Kulleen <seemant@gentoo.org> :
+
+  Added cdrtools-1.1.33 back in, as it is a REQUIRED dependency for xcdroast.
 
   05 Feb 2003; Martin Schlemmer <azarah@gentoo.org> :
   Add support for 2.5 kernel.
