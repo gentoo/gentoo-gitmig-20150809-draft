@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.5.2.ebuild,v 1.1 2002/04/28 04:22:37 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.5.2.ebuild,v 1.2 2002/04/28 04:43:25 g2boojum Exp $
 
 S=${WORKDIR}/${PN}-1.52
 DESCRIPTION="The Apache AxKit Perl Module"
@@ -18,6 +18,7 @@ DEPEND=">=sys-devel/perl-5
 	>=dev-perl/XML-XPath-1.04
 	>=dev-perl/XML-LibXML-1.31
 	>=dev-perl/XML-LibXSLT-1.31
+	>=dev-perl/libapreq-1.0
 	>=dev-perl/XML-Sablot-0.50"
 
 src_unpack() {
