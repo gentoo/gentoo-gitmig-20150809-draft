@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.0-r1.ebuild,v 1.3 2003/10/03 17:54:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.0-r1.ebuild,v 1.4 2003/10/05 15:57:04 obz Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="The Panel for Gnome2"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 
 IUSE="doc menu"
 MAKEOPTS="${MAKEOPTS} -j1"
