@@ -4,6 +4,8 @@
 <herd>net-mail</herd>
 <maintainer>
   <email>siggy@gentoo.org</email>
+</maintainer>
+<maintainer>
   <email>klieber@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
