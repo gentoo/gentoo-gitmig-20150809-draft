@@ -1,7 +1,13 @@
 # ChangeLog for sys-apps/evms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.16 2003/04/05 20:36:42 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.17 2003/04/07 08:05:54 tantive Exp $
 
+*evms-2.0.0-r1 (08 Apr 2003)
+
+  08 Apr 2003; Michael Imhof <tantive@gentoo.org>:
+  Version bumped to -r1 as -r0 was borked. Removed -r0.
+  Added new init-script for 2.0.0
+  Should close #18835.
 
 *evms-2.0.0 (06 Apr 2003)
 

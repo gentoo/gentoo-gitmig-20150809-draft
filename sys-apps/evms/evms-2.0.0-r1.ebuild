@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-2.0.0.ebuild,v 1.1 2003/04/05 20:36:42 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-2.0.0-r1.ebuild,v 1.1 2003/04/07 08:05:54 tantive Exp $
 
 IUSE="ncurses gtk"
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Utilities for the IBM Enterprise Volume Management System"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.sourceforge.net/projects/evms"
@@ -21,33 +20,29 @@ DEPEND="virtual/glibc
 	gtk? ( =x11-libs/gtk+-1* )
 	ncurses? ( sys-libs/ncurses )"
 
-
 src_compile() {
-	local interfaces="CommandLine,utilities,LvmUtils"
-	use ncurses && interfaces="ncurses,${interfaces}"
-	use gtk && interfaces="evmsgui,${interfaces}"
+	local excluded_interfaces=""
+	use ncurses || excluded_interfaces="--disable-text-mode"
+	use gtk || excluded_interfaces="${excluded_interfaces} --disable-gui"
 
-	cd engine
 	./configure \
 		--prefix=/usr \
 		--libdir=/lib \
 		--sbindir=/sbin \
-		--with-plugins=all \
 		--mandir=/usr/share/man \
 		--includedir=/usr/include \
-		--with-interfaces=${interfaces} \
-		--host=${CHOST} || die "bad ./configure"
-	#1.2.0 doesn't support parallel make
-	make || die "compile problem"
+		${excluded_interfaces} || die "Failed configure"
+	emake || die "Failed emake"
 }
 
 src_install() {
-	make -C engine DESTDIR=${D} install || die
-	dodoc CHANGES COPYING EVMS*.txt PLUGIN.IDS
+	make DESTDIR=${D} install || die "Make install died"
+	dodoc ChangeLog COPYING TERMINOLOGY PLUGIN.IDS
 
 	# move static libraries to /usr/lib
 	dodir /usr/lib
 	mv -f ${D}/lib/*.a ${D}/usr/lib
+
 	# Create linker scripts for dynamic libs in /lib, else gcc
 	# links to the static ones in /usr/lib first.  Bug #4411.
 	for x in ${D}/usr/lib/*.a
@@ -75,6 +70,5 @@ src_install() {
 	fi
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/evms-init evms
+	newexe ${FILESDIR}/evms2-init evms
 }
-
