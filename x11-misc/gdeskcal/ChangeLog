@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/gdeskcal
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.1 2004/07/18 07:07:17 pclouds Exp $
+
+*gdeskcal-0.57.1 (18 Jul 2004)
+
+  18 Jul 2004; <pclouds@gentoo.org> gdeskcal-0.57.1.ebuild, metadata.xml:
+  new package, closing bug #24037
+
