@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6f79120536d157713dbb07d6fea8f04c ChangeLog 659
-MD5 5effc62a41f9b4dab4ef23ac831a509d eclipse-ve-bin-1.0_rc1.ebuild 939
+MD5 2925fe4f902c08d386effbe98495ff24 eclipse-ve-bin-1.0_rc2.ebuild 949
+MD5 791f8320a3e835539dc26702ea073745 eclipse-ve-bin-1.0_rc1.ebuild 951
+MD5 8ddc61b6b70fd5b917277f9125481d99 ChangeLog 796
 MD5 5d570fc39697cf3e8a12d5e55fda9036 metadata.xml 524
-MD5 de7cdbb82b5d061c823536a64db9f1b2 eclipse-ve-bin-1.0_rc2.ebuild 935
 MD5 6b94fee9902ad1f933156392a4a686c7 files/digest-eclipse-ve-bin-1.0_rc1 66
 MD5 a6782d3e24be4f3feca1ed07fc6cabed files/digest-eclipse-ve-bin-1.0_rc2 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBW1TfI1lqEGTUzyQRAo5aAKDA2hC2U22VhsFjVw8PDBjctVBt9wCguAJH
-o8LDUi4NAsnJnN4zXFVTofY=
-=sCV5
+iD8DBQFBiMTk/rLF9B432nYRAsb4AJ44sJFylblzrJfGtigzKVBu49NbKgCgo7Hp
+UkTfQ3P4T7RLaL/g6anf59U=
+=zRJu
 -----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 40d753a13561d2b8efda26c0a2ab9a9e ChangeLog 539
-MD5 c149d509b636241617fd465614a8370b jcvs-bin-5.4.1.ebuild 860
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 42d57ccbc6ab9193461124ee80530333 jcvs-bin-5.4.1.ebuild 872
+MD5 cf10ad2faf65673c5e038f9324952d5e ChangeLog 634
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 92512124a2f63d58c0e007a66304d5a2 files/digest-jcvs-bin-5.4.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMWq/rLF9B432nYRAjViAKCt2m+HjLn2WqJJd7AJouRrNdhQUgCfXqSL
+5YaqyU82Bi90g8mIMjbur4o=
+=MaMr
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 846b4207106bbf6e2d5e4df309b5aa94 sun-one-studio-me-4.1.ebuild 837
-MD5 f787299127149babf37e31d5da6881e9 ChangeLog 664
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 29c778480a3c79f39785d949261fa6c8 sun-one-studio-me-4.1.ebuild 850
+MD5 e6c1791ef5e86be10ba50b160629cd94 ChangeLog 769
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 da98d9a3cfc1ea2545951a07edb73a87 files/digest-sun-one-studio-me-4.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMQk/rLF9B432nYRAiVbAKCvE0wdXE60/Rs7woSlqPWCH29rDgCfVyfa
+kwI/g9HtIsOdFIRn4GYI3io=
+=hRr2
+-----END PGP SIGNATURE-----
