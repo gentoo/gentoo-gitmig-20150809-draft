@@ -1,24 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.1.3.ebuild,v 1.11 2003/02/04 06:01:02 spider Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.1.ebuild,v 1.1 2003/02/04 06:01:02 spider Exp $
 
 inherit eutils libtool
 
+IUSE="doc"
 SLOT="1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Text rendering and Layout library"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.1/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.2/${P}.tar.bz2"
 HOMEPAGE="http://www.pango.org/"
 LICENSE="LGPL-2.1"
 
 RDEPEND="virtual/x11
 	virtual/xft
-	>=dev-libs/glib-2
-	>=media-libs/fontconfig-2.0
+	>=dev-libs/glib-2.1.3
+	>=media-libs/fontconfig-2
 	>=media-libs/freetype-2.1.2-r2"
 	
 DEPEND="${RDEPEND}
@@ -32,7 +31,8 @@ src_unpack() {
 	cd ${S}
 	# Some enhancements from Redhat
 	epatch ${FILESDIR}/pango-1.0.99.020606-xfonts.patch
-	#epatch ${FILESDIR}/pango-1.1.0-slighthint.patch
+	# patch adapted from RH initial patch by <foser@gentoo.org>
+	epatch ${FILESDIR}/${P}-slighthint-gentoo.patch
 }
 
 src_compile() {
@@ -51,11 +51,9 @@ src_install() {
 	einstall
 	rm ${D}/etc/pango/pango.modules
 
-
  	dodoc AUTHORS ChangeLog COPYING README INSTALL NEWS TODO*
 }
 
 pkg_postinst() {
 	pango-querymodules >/etc/pango/pango.modules
 }
-

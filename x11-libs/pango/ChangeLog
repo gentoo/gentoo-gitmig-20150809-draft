@@ -1,11 +1,20 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.28 2003/01/01 18:58:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.29 2003/02/04 06:01:02 spider Exp $
+
+*pango-1.2.1.ebuild (04 Feb 2003)
+  
+  04 Feb 2003; Spider <spider@gentoo.org> pango-1.2.1.ebuild :
+  versionbumped 
+
+
+*pango-1.2.0.ebuild (22 Dec 2002)
+  
+  04 Feb 2003; Spider <spider@gentoo.org> 
+  Change DEBUG to DEBUGBUILD
 
   01 Jan 2003; Aron Griffis <agriffis@gentoo.org> pango-1.2.0.ebuild :
   Added ~alpha to KEYWORDS
-
-*pango-1.2.0.ebuild (22 Dec 2002)
 
   22 Dec 2002; foser <foser@gentoo.org> pango-1.2.0.ebuild :
   New stable version
@@ -30,6 +39,9 @@
 
 *pango-1.1.3 (12 Nov 2002)
 
+  04 Feb 2003; Spider <spider@gentoo.org> 
+  Change DEBUG to DEBUGBUILD
+  
   26 Nov 2002; Jon Nall <nall@gentoo.org> pango-1.1.3.ebuild :
   added ~ppc to KEYWORDS
 
@@ -38,11 +50,17 @@
 
 *pango-1.1.2 (27 Oct 2002)
 
+  04 Feb 2003; Spider <spider@gentoo.org> 
+  Change DEBUG to DEBUGBUILD
+
   27 Oct 2002; foser <foser@gentoo.org> pango-1.1.2.ebuild :
   gnome 2.1
 
 *pango-1.0.5 (14 Oct 2002)
 
+  04 Feb 2003; Spider <spider@gentoo.org> 
+  Change DEBUG to DEBUGBUILD
+  
   02 Nov 2002; foser <foser@gentoo.org> pango-1.0.5.ebuild :
   Added sgmltools-lite as doc dep (bug #9564)
 
@@ -50,6 +68,10 @@
   New version
 
 *pango-1.0.4-r1 (4 Aug 2002)
+  
+  04 Feb 2003; Spider <spider@gentoo.org> 
+  Change DEBUG to DEBUGBUILD
+  
   12 aug 2002; Spider <spider@gentoo.org> pango-1.0.4-r1.ebuild :
   change freetype version to force update
   
@@ -57,6 +79,7 @@
   Remove debugging, libtoolize
   
 *pango-1.0.4 (4 Aug 2002)
+  
   4 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> pango-1.0.4:
   New version.
 
