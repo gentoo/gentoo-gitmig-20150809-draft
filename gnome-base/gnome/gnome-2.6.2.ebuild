@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2.ebuild,v 1.1 2004/07/11 19:45:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2.ebuild,v 1.2 2004/07/11 21:51:36 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -29,7 +29,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=dev-libs/glib-2.4.2
 	>=dev-libs/atk-1.6.1
-	>=x11-libs/gtk+-2.4.3
+	>=x11-libs/gtk+-2.4.4
 	>=x11-libs/pango-1.4
 
 	>=dev-libs/libxml2-2.6.9
@@ -55,7 +55,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgnome-2.6.1.1
 	>=gnome-base/libgnomeui-2.6.1.1
 	>=gnome-base/libgnomecanvas-2.6.1.1
-	>=gnome-base/libglade-2.3.6
+	>=gnome-base/libglade-2.4
 
 	>=gnome-extra/bug-buddy-2.6.1
 	>=gnome-base/control-center-2.6.1
@@ -63,10 +63,9 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/eel-2.6.2
 	>=gnome-base/nautilus-2.6.3
 
-	>=media-libs/gstreamer-0.8.3
-	>=media-libs/gst-plugins-0.8.1
+	>=media-libs/gstreamer-0.8.3-r1
+	>=media-libs/gst-plugins-0.8.2
 	>=gnome-extra/gnome-media-2.6.2
-	>=gnome-extra/nautilus-media-0.8
 
 	>=media-gfx/eog-2.6.1
 	!mips? ( >=net-www/epiphany-1.2.6 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.1_p1.ebuild,v 1.11 2004/07/01 21:14:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.1_p1.ebuild,v 1.12 2004/07/11 21:51:36 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -61,7 +61,6 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-libs/gstreamer-0.8.1
 	>=media-libs/gst-plugins-0.8.1
 	>=gnome-extra/gnome-media-2.6.1
-	>=gnome-extra/nautilus-media-0.8
 
 	>=media-gfx/eog-2.6.1
 	!hppa? ( >=net-www/epiphany-1.2.5 )
