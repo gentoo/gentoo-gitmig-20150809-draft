@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.56 2005/01/07 00:47:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.57 2005/01/21 18:12:08 swegener Exp $
+
+*irssi-0.8.10_rc5-r1 (21 Jan 2005)
+
+  21 Jan 2005; Sven Wegener <swegener@gentoo.org>
+  +irssi-0.8.10_rc5-r1.ebuild:
+  Pull in all CVS changes from 0.8.10_rc5 to now. Includes several bugfixes
+  (logging, memleak and more), updated help (recode) and some new features.
+  Read upstream's ChangeLog for more information. Closes bug #78917.
 
   07 Jan 2005; Sven Wegener <swegener@gentoo.org> irssi-0.8.10_rc5.ebuild:
   Removed blockers on irssi-charconv and irssi-recode.
