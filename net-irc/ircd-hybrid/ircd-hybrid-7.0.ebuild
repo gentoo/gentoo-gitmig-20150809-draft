@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.ebuild,v 1.1 2003/12/17 02:37:44 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.ebuild,v 1.2 2003/12/31 20:30:59 agriffis Exp $
 
 MAX_NICK_LENGTH=16
 MAX_CLIENTS=256
@@ -14,12 +14,12 @@ HOMEPAGE="http://ircd-hybrid.com/"
 SRC_URI="mirror://sourceforge/ircd-hybrid/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~alpha"
 
 DEPEND="virtual/glibc
 	zlib? ( >=sys-libs/zlib-1.1.4-r1 )
 	ssl? ( >=dev-libs/openssl-0.9.6j )
-	>=dev-libs/libelf-0.8.2
+	|| ( >=dev-libs/libelf-0.8.2 >=dev-libs/elfutils-0.89 )
 	>=sys-devel/flex-2.5.4a-r5
 	>=sys-devel/bison-1.35
 	>=sys-devel/gettext-0.11.5-r1
