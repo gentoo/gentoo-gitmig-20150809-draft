@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.48 2003/06/07 04:31:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.49 2003/08/10 00:47:53 drobbins Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -155,6 +155,9 @@ export CFLAGS="`${PYTHON} -c 'import portage; print portage.settings["CFLAGS"];'
 export CHOST="`${PYTHON} -c 'import portage; print portage.settings["CHOST"];'`"
 export CXXFLAGS="`${PYTHON} -c 'import portage; print portage.settings["CXXFLAGS"];'`"
 export MAKEOPTS="`${PYTHON} -c 'import portage; print portage.settings["MAKEOPTS"];'`"
+#to make it easier to get experimental bootstraps:
+export ACCEPT_KEYWORDS="`${PYTHON} -c 'import portage; print portage.settings["ACCEPT_KEYWORDS"];'`"
+
 PROXY="`${PYTHON} -c 'import portage; print portage.settings["PROXY"];'`"
 if [ -n "${PROXY}" ] 
 then
