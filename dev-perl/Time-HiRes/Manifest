@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cb803452575f1f19467e3d3afbf62bdf ChangeLog 3731
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 777da2cc2aaf0c8e94063545c7ff1405 Time-HiRes-1.66.ebuild 628
-MD5 ccb137aa2c007d436d800af4557d3d75 Time-HiRes-1.59.ebuild 618
-MD5 b7443f0c81a09219ca2948b28007039e Time-HiRes-1.47.ebuild 581
+MD5 b330ff24f334706fa5f8af656dae93c7 ChangeLog 3837
 MD5 f44a3daa03576f43f3fce001635c5e2f Time-HiRes-1.42.ebuild 572
-MD5 4be3ba459863b617351acac27909aa57 Time-HiRes-1.54.ebuild 559
+MD5 b7443f0c81a09219ca2948b28007039e Time-HiRes-1.47.ebuild 581
 MD5 6435cdd0752a5c238bc84c213444f1f0 Time-HiRes-1.50.ebuild 584
-MD5 b262894962dc80c2da7c94a0e267483c files/digest-Time-HiRes-1.66 66
+MD5 4be3ba459863b617351acac27909aa57 Time-HiRes-1.54.ebuild 559
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 0f52af9a49fcc6e46df24f62fbde314d Time-HiRes-1.59.ebuild 620
+MD5 777da2cc2aaf0c8e94063545c7ff1405 Time-HiRes-1.66.ebuild 628
 MD5 f33ad522a8c32c6292406a7e04636273 files/digest-Time-HiRes-1.42 66
-MD5 29bc4f6f9d84e8c9e9f448510b5c0c6e files/digest-Time-HiRes-1.59 66
 MD5 0b0c0d302e6afc7a1c06225ec6c9d607 files/digest-Time-HiRes-1.47 66
-MD5 42acd0773f1fc6d54b542b850ed70fac files/digest-Time-HiRes-1.54 66
 MD5 48f5411006791142fe05e6140def5e5e files/digest-Time-HiRes-1.50 66
+MD5 42acd0773f1fc6d54b542b850ed70fac files/digest-Time-HiRes-1.54 66
+MD5 29bc4f6f9d84e8c9e9f448510b5c0c6e files/digest-Time-HiRes-1.59 66
+MD5 b262894962dc80c2da7c94a0e267483c files/digest-Time-HiRes-1.66 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCQ+OcugEuf3OQ0akRAiluAJ99Yr3ehePwUAQoRUvSEye3axinwwCcDQ06
-g6cG7ujQLWuKSdvaUCLiIIg=
-=IZbu
+iD8DBQFCRDkn5mJXAu5GbtIRArTCAJ0ckl0ZD5tGhuJq1e23OtSgwe20fgCfWOH0
+Uf6GU/uJwUKfAU0ZOaYHqn0=
+=DMgN
 -----END PGP SIGNATURE-----
