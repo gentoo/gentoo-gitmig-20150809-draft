@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.10 2005/01/01 18:05:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.11 2005/01/21 10:34:58 kosmikus Exp $
+
+  21 Jan 2005; Andres Loeh <kosmikus@gentoo.org> -hmake-3.07.ebuild,
+  hmake-3.08.ebuild:
+  Restored gcc compatibility (bug #71713). Removed optional nhc98 dependency
+  for now.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> hmake-3.08.ebuild:
   virtual/glibc -> virtual/libc
