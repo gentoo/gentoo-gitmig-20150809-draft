@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35.ebuild,v 1.13 2004/06/30 17:28:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35.ebuild,v 1.14 2004/07/27 14:24:07 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gnuconfig
 
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
@@ -27,6 +27,8 @@ src_unpack() {
 	# Patch to make the configure and sed scripts more friendly to, 
 	# for example, the Estonian locale
 	epatch ${FILESDIR}/${PN}-sed-locale.patch
+
+	gnuconfig_update
 }
 
 src_compile() {
