@@ -1,5 +1,5 @@
 MD5 6fa4efc90dd07f5104ed183df03f5725 tcl-8.3.4.ebuild 2550
-MD5 94a6d4671964fa420d750f5acbe76431 ChangeLog 4137
-MD5 b9125f45bc46922e38c16530b2fccd2c tcl-8.4.6.ebuild 2999
+MD5 f666f62d36d6b59abd6e480f8d7088e2 ChangeLog 4228
+MD5 a1b36ca3fa129a216149d4e56e1bef6f tcl-8.4.6.ebuild 2998
 MD5 d8691f60be4023222834ccdf6ee6d498 files/digest-tcl-8.3.4 61
 MD5 cb07b4bc1984a971b376e1da5e478fdc files/digest-tcl-8.4.6 65
