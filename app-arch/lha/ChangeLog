@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lha
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.20 2004/09/28 05:40:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.21 2004/10/06 13:56:20 usata Exp $
+
+  06 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> lha-114i-r4.ebuild:
+  Added to ~ppc-macos.
 
   28 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -lha-114i-r2.ebuild,
   -lha-114i-r3.ebuild:
