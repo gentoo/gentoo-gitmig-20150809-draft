@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ladebug-4.0.67.ebuild,v 1.7 2004/07/02 05:09:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ladebug-4.0.67.ebuild,v 1.8 2004/07/14 23:47:09 agriffis Exp $
 #
 # Submitted By Tavis Ormandy <taviso@gentoo.org>
 #
@@ -24,7 +24,6 @@ RDEPEND="dev-libs/libots
 
 IUSE="emacs"
 
-S=${WORKDIR}/${P}
 RELEASE="4.0.67-21"
 #SITEFILE="50ladebug.el"
 
