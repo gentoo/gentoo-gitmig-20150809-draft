@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/jexcelapi
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.1 2005/01/23 14:50:15 luckyduck Exp $
+
+*jexcelapi-2.5.1 (23 Jan 2005)
+
+  23 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/2.5.1-jikes.patch, +jexcelapi-2.5.1.ebuild:
+  Initial import, ebuild based on the contribution of Eddy Mulyono
+  <eddymulyono@mail.com>. fixes #76209.
+
