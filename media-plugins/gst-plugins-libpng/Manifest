@@ -1,16 +1,26 @@
-MD5 46ddd21197645a5f791ff24480575f15 ChangeLog 3812
-MD5 7ed17e942bb94ac25d681b704900d652 gst-plugins-libpng-0.6.4.ebuild 409
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6948d3f85486b3f81936163af135ae76 gst-plugins-libpng-0.8.8.ebuild 413
+MD5 1ce2ec155e6c79c829c26d46bb094f9b gst-plugins-libpng-0.8.7.ebuild 409
+MD5 eedf6fb851b6e390ba4f5b713691a5ec ChangeLog 3923
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 47ede18c71656004d8fe46e9f370f147 gst-plugins-libpng-0.8.1.ebuild 413
 MD5 04353c06b2620732f1dc7e0e15ddd6ee gst-plugins-libpng-0.8.2.ebuild 410
+MD5 7ed17e942bb94ac25d681b704900d652 gst-plugins-libpng-0.6.4.ebuild 409
 MD5 bcaf7b9b184b97da46cb944d0530c922 gst-plugins-libpng-0.8.3.ebuild 416
 MD5 4cf73ec2fb9a79fa0b86420755580ef4 gst-plugins-libpng-0.8.5.ebuild 411
-MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 418f63bac63ca6f99b75f7cccacc92a2 gst-plugins-libpng-0.8.7.ebuild 407
-MD5 6948d3f85486b3f81936163af135ae76 gst-plugins-libpng-0.8.8.ebuild 413
-MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-libpng-0.6.4 71
-MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-libpng-0.8.1 71
-MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-libpng-0.8.2 71
-MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-libpng-0.8.3 71
-MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-libpng-0.8.5 71
-MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-libpng-0.8.7 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-libpng-0.8.8 71
+MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-libpng-0.8.3 71
+MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-libpng-0.8.7 71
+MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-libpng-0.8.2 71
+MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-libpng-0.8.5 71
+MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-libpng-0.8.1 71
+MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-libpng-0.6.4 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPiTLugEuf3OQ0akRAtoGAJ4mKPxcHg91rO8rUQIlNBq8kgRynwCfckiJ
+A29UA1aXblCHXyAMKhwOCf8=
+=a3SC
+-----END PGP SIGNATURE-----
