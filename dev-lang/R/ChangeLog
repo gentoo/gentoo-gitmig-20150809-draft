@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.17 2004/04/01 09:43:28 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.18 2004/04/13 12:06:12 phosphan Exp $
+
+*R-1.9.0 (13 Apr 2004)
+
+  13 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> R-1.8.1.ebuild,
+  R-1.9.0.ebuild:
+  Version bump, added write permission for /var/cache/fonts
 
   01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> R-1.8.0.ebuild,
   R-1.8.1.ebuild:
