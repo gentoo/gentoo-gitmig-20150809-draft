@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.86 2005/02/12 15:24:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.87 2005/02/21 13:17:37 agriffis Exp $
+
+  20 Feb 2005; Aron Griffis <agriffis@gentoo.org> tetex-2.0.2-r5.ebuild:
+  stable on ia64 #75801
 
   13 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> tetex-3.0-r1.ebuild:
   (Hopefully) fixes sandbox violation; bug #81703.
