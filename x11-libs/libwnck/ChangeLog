@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.40 2004/04/05 19:54:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.41 2004/04/07 09:10:30 lv Exp $
+
+  07 Apr 2004; Travis Tilley <lv@gentoo.org> libwnck-2.6.0.1.ebuild:
+  added xorg-x11 to the conditional depend for amd64, as it also fixes the -fPIC
+  problems in XRes
 
   05 Apr 2004; Travis Tilley <lv@gentoo.org> libwnck-2.6.0.1.ebuild:
   made libwnck depend on >=x11-base/xfree-4.3.0-r6 on amd64 due to -fPIC issues.
