@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyogg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/ChangeLog,v 1.4 2003/11/01 12:38:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/ChangeLog,v 1.5 2003/12/26 14:27:07 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> pyogg-1.3.ebuild:
+  Marked stable on sparc to fix the broken dependencies of net-p2p/pysoulseek.
 
   01 Nov 2003; Jason Wever <weeve@gentoo.org> pyogg-1.1.ebuild,
   pyogg-1.3.ebuild:
