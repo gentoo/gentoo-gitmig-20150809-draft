@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/gkrellm-plugins
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellm-plugins/ChangeLog,v 1.1 2002/06/11 01:54:11 lamer Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellm-plugins/ChangeLog,v 1.2 2002/06/16 20:02:12 lamer Exp $
+
+*gkrellm-plugins-1.2.11-r1 (16 Jun 2002)
+
+  16 Jun 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
+
+  Added gkrellshoot and gkrellmweather
 
 *gkrellm-plugins-1.2.11 (10 Jun 2002)
 
