@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/blackbox
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.37 2004/12/31 10:24:11 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.38 2005/02/06 18:50:49 corsair Exp $
+
+  06 Feb 2005; Markus Rothe <corsair@gentoo.org> blackbox-0.65.0-r4.ebuild:
+  Stable on ppc64
 
 *blackbox-0.65.0-r4 (31 Dec 2004)
 

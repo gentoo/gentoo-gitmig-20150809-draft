@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r4.ebuild,v 1.1 2004/12/31 10:24:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r4.ebuild,v 1.2 2005/02/06 18:50:49 corsair Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://blackboxwm.sf.net/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 MYCONF="--disable-nls"
 
 mydoc="AUTHORS LICENSE README ChangeLog* TODO* data/README*"
