@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.39.ebuild,v 1.1 2002/08/31 22:40:32 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.39.ebuild,v 1.2 2002/09/01 04:55:21 blocke Exp $
 
 DESCRIPTION="RedHat's Bluecurve theme for GTK1, GTK2, KDE3, GDM, Metacity and Nautilus"
 HOMEPAGE="http://www.redhat.com"
@@ -15,7 +15,7 @@ DEPEND="sys-devel/autoconf
 		app-arch/rpm2targz
 		>=media-libs/gdk-pixbuf-0.2.5
         =x11-libs/gtk+-1.2*
-        >=x11-libs/gtk+-2.0"
+        >=x11-libs/gtk+-2.0
 		kde? (	>=x11-libs/qt-3.0.5	
 				>=kde-base/kdebase-3.0.2 )"
 
