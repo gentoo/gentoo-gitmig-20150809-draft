@@ -1,6 +1,7 @@
-MD5 759b2387a1a44b9fd934d6fecf94134c ChangeLog 3820
+MD5 abe47c8b9a4c317220a77bfa76fbef83 ChangeLog 3960
 MD5 0f825ebddce3b3a48fa367128d56be25 ltsp-core-3.0.7-r1.ebuild 10477
 MD5 5ba4e9e1d4f742f2ac4b0c4a4090eded ltsp-core-3.0.9-r1.ebuild 10477
+MD5 5755818722c3f9de63465f687378dd04 ltsp-core-3.0.9-r2.ebuild 10782
 MD5 6833926b60ae4f3a1aa8e557866363be files/INSTALL.Gentoo 3514
 MD5 1d8daed9b6e2768685b56bb3740d6af1 files/Xaccess 2057
 MD5 a4b38d8b3e2c77d7bc1029c9aaf5c459 files/Xsetup_workstation 421
@@ -16,3 +17,4 @@ MD5 28a7c3eb45b470b14d8008d19b867ea3 files/kdmrc.pl 2007
 MD5 03109ccf3695c8575faea0892e432db2 files/ltsp.conf 62
 MD5 bad8939159d8bdddfdb5625ca5ae9f8e files/ltsp.gif 8946
 MD5 e93ac4a097b01ca94ac388cc874ad8ac files/tftp 259
+MD5 abcbaa936e4e82d78f94f48283dfd8ed files/digest-ltsp-core-3.0.9-r2 1405
