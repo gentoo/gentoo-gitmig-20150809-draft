@@ -435,3 +435,8 @@ dev-lang/tcl-tk
 # if you want it, you'll have to remerge all that link to the old version.
 # imlib, gdk-pixbuf and imlib2 are known.
 =media-libs/libpng-1.2.1
+
+#karltk@gentoo.org 23 Mar 2002
+# has a defect build system that doesn't honor --prefix=${D}
+# see #1279
+>=dev-python/pychecker-0.8.0
