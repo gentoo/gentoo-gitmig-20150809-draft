@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Holger Brueckner <darks@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0.ebuild,v 1.1 2001/08/05 21:23:11 darks Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0.ebuild,v 1.2 2001/08/06 11:53:48 darks Exp $
 
-A="Zope-${PV}-src.tgz"
+A="Zope-${PV}-src.tgz ZEO-1.0b3.tgz"
 S=${WORKDIR}/Zope-${PV}-src
 DESCRIPTION="Zope is web application platform used for building high-performance, dynamic web sites."
-SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz"
+SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz
+         http://www.zope.org/Products/ZEO/ZEO-1.0b3.tgz"
 HOMEPAGE="http://www.zope.org"
 
 DEPEND="virtual/glibc 
@@ -16,10 +17,16 @@ RDEPEND=">=dev-lang/python-2.1"
 src_unpack() {
 
     unpack Zope-${PV}-src.tgz
+ 
+    if [ "`use zeo`" ]; then
+       cd ${S}/lib/python
+       unpack ZEO-1.0b3.tgz
+       mv ZEO-1.0b3/ZEO ${S}/lib/python
+       rm -rf ZEO-1.0b3
+    fi
 }
 
 src_compile() {
-
     try python w_pcgi.py
 }
 
@@ -52,16 +59,22 @@ src_install () {
     fperms a+x	${ZDIR}/lib/python/ZPublisher/Client.py
 
     dodir ${ZVAR}
-    insinto ${ZVAR}/var
+    insinto ${ZVAR}
     doins z2.py
+    insinto ${ZVAR}/var
     insopts -m644
     doins var/Data.fs.in
     dodir ${ZVAR}/Extensions
     dodir ${ZVAR}/import
     dodir ${ZVAR}/Products
 
+    if [ "`use zeo`" ]; then
+       insinto ${ZVAR}
+       doins ${FILESDIR}/zctl.py  ${FILESDIR}/zope  ${FILESDIR}/zope.conf ${FILESDIR}/custom_zodb.py
+    fi
+
     exeinto ${ZDIR}
-    doexe zpasswd.py start stop Zope.cgi
+    doexe zpasswd.py Zope.cgi
     
     cd ${D}${ZDIR}
     sed -e "s:${WORKDIR}:${ZDIR}:g" Zope.cgi > Zope.cgi.tmp
@@ -91,6 +104,10 @@ pkg_postinst() {
       echo "You must run"
       echo
       echo /usr/share/zope/zpasswd.py /var/lib/zope/inituser
+      if [ "`use zeo`" ]; then
+         echo and edit /var/lib/zope/zope.conf
+      fi
+
       echo
       echo before you can start zope
     fi

@@ -8,11 +8,18 @@
 
 .  /etc/rc.d/config/functions
 
+USEZEO="`/usr/lib/portage/bin/use zeo`"
+
 SERVICE=zope
 opts="start stop restart status"
 
 export INSTANCE_HOME=/var/lib/zope
 export INSTANCE_NAME=`basename ${INSTANCE_HOME}`
+export ZOPE_HOME=/usr/share/zope
+export ZOPE_PORT=8080
+export ZOPE_LOG="/var/log/zope"
+export ZEO_SERVER_PORT=5800
+export ZEO_SERVER_NAME="localhost"
 
 ZOPE_PCGI="no"
 
@@ -29,35 +36,51 @@ ZOPE_PCGI="no"
 #export ZSYSLOG_SERVER="localhost:514"
 
 start_zope() {
-	(
+	
  	cd ${INSTANCE_HOME}
 	if [ $ZOPE_PCGI = "yes" ] ; then
 	    /usr/bin/env python z2.py           \
         	-p      $INSTANCE_HOME/Zope.cgi \
-        	-u      root                    \
-        	-z      /usr/share/zope         \
+        	-u      nobody                  \
+        	-z      $ZOPE_HOME              \
         	-Z      /var/run/zwatchdog.pid  \
         	-w      ''			\
         	-f      8021                    \
         	-m      ''                      \
-        	-l      /var/log/zope           \
+        	-l      $ZOPE_LOG               \
         	2>&1 >> /var/log/zope           \
             &
-	else
-	     /usr/bin/env python z2.py          \
-        	-u      root                    \
-        	-z      /usr/share/zope         \
-        	-Z      /var/run/zwatchdog.pid  \
-        	-w      8080                    \
-        	-f      8021                    \
-		-W	8023			\
-        	-m      ''                      \
-        	-l      /var/log/zope           \
-		-D				\
-        	2>&1 >> /var/log/zope           \
-            &
-	fi
-	)
+	else 
+	    if [ $USEZEO ]; then
+	        /usr/bin/env python zctl.py start_zeo
+		/usr/bin/env python z2.py          \
+        	    -u      nobody                  \
+            	    -z      $ZOPE_HOME              \
+        	    -Z      /var/run/zwatchdog.pid  \
+        	    -w      $ZOPE_PORT              \
+        	    -f      8021                    \
+		    -W	    8023		    \
+        	    -m      ''                      \
+        	    -l      $ZOPE_LOG               \
+		    -D				    \
+        	    2>&1 >> /var/log/zope           \
+                &   
+	    else
+	         /usr/bin/env python z2.py          \
+        	    -u      nobody                  \
+            	    -z      $ZOPE_HOME              \
+        	    -Z      /var/run/zwatchdog.pid  \
+        	    -w      $ZOPE_PORT              \
+        	    -f      8021                    \
+		    -W	    8023		    \
+        	    -m      ''                      \
+        	    -l      $ZOPE_LOG               \
+		    -D				    \
+        	    2>&1 >> /var/log/zope           \
+                &
+	    fi
+	 fi
+	
 }
 
 # A function to find the pid of a program. We cannot use checkproc, 
@@ -144,12 +167,15 @@ start() {
 	eend $ret "Error starting $SERVICE"
   	}
 stop(){
-	ebegin "Shutting down zope"
+	ebegin "Shutting down zope"	
 	pid=`pidofproc zwatchdog`
 	[ -n "$pid" ] && (kill $pid 2>&1 >/dev/null)
 	pid=`pidofproc zserver`
    	[ -n "$pid" ] && (kill $pid 2>&1 >/dev/null)
 	rm -f ${INSTANCE_HOME}/var/Z2.pid /var/run/zwatchdog.pid
+	if [ $USEZEO ]; then
+	    /usr/bin/env python ${INSTANCE_HOME}/zctl.py stop_zeo
+	fi
 	eend $? "Error stopping $SERVICE"
        }
        
@@ -162,6 +188,9 @@ status(){
 	echo "Checking for zope: "
 	chkstatus zwatchdog
 	chkstatus zserver
+	if [ $USEZEO ]; then
+	    /usr/bin/env python ${INSTANCE_HOME}/zctl.py status
+	fi
         }
 
 doservice ${@}
