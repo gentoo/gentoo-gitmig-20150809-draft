@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/torch/torch-3.ebuild,v 1.4 2004/10/26 13:47:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/torch/torch-3.ebuild,v 1.5 2004/12/13 14:52:48 phosphan Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.torch.ch/archives/Torch${PV}src.tgz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc debug"
 
 DEPEND="virtual/libc"
