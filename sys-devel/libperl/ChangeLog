@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.8 2003/03/01 22:10:36 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.9 2003/03/28 08:04:00 seemant Exp $
 
   11 Feb 2003; Guy Martin <gmsoft@gentoo.org> libperl-5.8.0.ebuild :
   Added hppa to keywords.
@@ -9,6 +9,9 @@
   up with perl-5.8.0-r9.ebuild.
 
 *libperl-5.8.0 (06 Jan 2003)
+
+  28 Mar 2003; Seemant Kulleen <seemant@gentoo.org> libperl-5.8.0.ebuild:
+  unmasked for ppc and hppa
 
   01 Mar 2003; Brandon Low <lostlogic@gentoo.org> libperl-5.8.0.ebuild:
   Make->emake still not parallel where needed
