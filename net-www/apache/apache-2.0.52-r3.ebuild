@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.16 2005/02/27 18:15:08 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.17 2005/02/28 23:18:48 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -16,20 +16,20 @@ SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
 
 LICENSE="Apache-2.0"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="apache2 debug doc ldap mpm-leader mpm-metux mpm-peruser mpm-prefork mpm-threadpool mpm-worker no-suexec ssl static-modules threads"
 
-DEPEND="dev-lang/perl
-		=dev-libs/apr-0.9.5
-		=dev-libs/apr-util-0.9.5
-		dev-libs/expat
-		net-www/gentoo-webroot-default
-		app-misc/mime-types
-		sys-libs/zlib
-		>=sys-apps/sed-4
-		>=sys-devel/autoconf-2.59-r4
-		ssl? ( dev-libs/openssl )
-		selinux? ( sec-policy/selinux-apache )"
+RDEPEND="dev-lang/perl
+	=dev-libs/apr-0.9.5
+	=dev-libs/apr-util-0.9.5
+	dev-libs/expat
+	net-www/gentoo-webroot-default
+	app-misc/mime-types
+	sys-libs/zlib
+	ssl? ( dev-libs/openssl )
+	selinux? ( sec-policy/selinux-apache )"
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.59-r4"
 
 S="${WORKDIR}/httpd-${PV}"
 
