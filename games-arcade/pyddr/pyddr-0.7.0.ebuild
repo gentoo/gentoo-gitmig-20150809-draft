@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pyddr/pyddr-0.7.0.ebuild,v 1.1 2003/09/10 19:29:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pyddr/pyddr-0.7.0.ebuild,v 1.2 2003/09/10 19:37:29 vapier Exp $
 
 DESCRIPTION="Dance Dance Revolution!  You need this game more than Frozen Bubble"
 HOMEPAGE="http://www.icculus.org/pyddr/"
@@ -11,7 +11,7 @@ LICENSE="X11"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="app-games/pyddr-songs
+RDEPEND="games-arcade/pyddr-songs
 	dev-python/pygame
 	media-libs/libvorbis
 	media-libs/sdl-mixer"
