@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.3-r1.ebuild,v 1.4 2004/11/27 04:18:23 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.3-r2.ebuild,v 1.1 2004/11/29 15:53:56 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -29,7 +29,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )"
 	#eds? ( gnome-extra/evolution-data-server )"
 
-PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-2.32 )"
+PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-2.32-r1 )"
 
 # List of plugins
 #	net-im/gaim-blogger
