@@ -168,9 +168,7 @@ function ebuild_rebuild() {
 # This is to avoid problems if one doesn't emerge correctly
 
      for EBUILD in $(cat ${TMPDIR}/ebuilds.reinstall); do
-       if [ ! -z $ASK ]; then
         emerge --oneshot ${ASK} "$EBUILD"
-       fi
      done
     else
 	   echo
