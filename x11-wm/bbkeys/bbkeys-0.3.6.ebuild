@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@gentoo.org>
 
+A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="bbkeys"
-SRC_URI="http://movingparts.thelinuxcommunity.org/bbkeys/bbkeys-0.3.6.tar.gz"
+SRC_URI="http://movingparts.thelinuxcommunity.org/bbkeys/${A}"
 HOMEPAGE="http://movingparts.thelinuxcommunity.org"
 
 DEPEND=">=x11-wm/blackbox-0.61 qt? ( >=x11-libs/qt-x11-2.3.0 )"
@@ -17,7 +18,7 @@ src_compile() {
       cd ${S}
     fi
     try ./configure --prefix=/usr/X11R6 --host=${CHOST}
-    try pmake
+    try emake
 
 }
 
@@ -29,6 +30,8 @@ src_install () {
       cd ${S}
     fi
     try make DESTDIR=${D} install
+    cd /usr/X11R6/bin/wm
+    cp blackbox blackbox.bak
     sed -e s:.*blackbox:"exec /usr/X11R6/bin/bbkeys \&\n&": blackbox.bak > blackbox
 }
 
