@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.9 2004/09/23 09:04:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.10 2005/03/19 18:19:36 vapier Exp $
 
 inherit gcc eutils games
 
@@ -54,7 +54,7 @@ src_install() {
 
 	dodir ${GAMES_DATADIR}/${PN}
 	tar -jxC ${D}/${GAMES_DATADIR}/${PN} -f ${DISTDIR}/xswdata-1.33d.tar.bz2
-	tar -jxC ${D}/${GAMES_DATADIR}/${PN} -f ${DISTDIR}/stimages1.7.tar.bz
+	tar -jxC ${D}/${GAMES_DATADIR}/${PN} -f ${DISTDIR}/stimages1.7.tar.bz2
 	tar -jxC ${D}/${GAMES_DATADIR}/${PN} -f ${DISTDIR}/babylon5images1.1.tar.bz2
 	tar -zxC ${D}/${GAMES_DATADIR}/${PN} -f ${DISTDIR}/stsounds1.4.tgz
 

@@ -1,5 +1,5 @@
-MD5 9e2cfd0831f447879d167dd97f39f6aa xshipwars-1.34.0.ebuild 2637
 MD5 6e8801a4a0a9cc9b1f4f3140ba2aef8b ChangeLog 1436
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 810c3eb40cc4e406109ac3f0e33b3fa9 files/xshipwars-1.34.0-gcc3.patch 1338
+MD5 515f56afac74cec6ef9f677323902c83 xshipwars-1.34.0.ebuild 2636
 MD5 825e4e161401b86551eb3985d7fdc357 files/digest-xshipwars-1.34.0 327
+MD5 810c3eb40cc4e406109ac3f0e33b3fa9 files/xshipwars-1.34.0-gcc3.patch 1338
