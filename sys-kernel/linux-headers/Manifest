@@ -11,7 +11,7 @@ MD5 681c761c0afe60e1022ac44d37d3370a linux-headers-2.0.40.ebuild 1820
 MD5 921f9a68d38778297cb92cb3aa61e428 linux-headers-2.6.8.1-r2.ebuild 1260
 MD5 06eb1588f23861450f2d8b2e8379352b linux-headers-2.4.23_p3.ebuild 1267
 MD5 e34ea6646a79a131e226f316f77e4043 linux-headers-2.6.8.1-r4.ebuild 1266
-MD5 49ea166c4f283ac105fad600c5070af9 linux-headers-2.6.10.ebuild 1237
+MD5 177a596bc4833d211a07f2722a77913e linux-headers-2.6.10.ebuild 1248
 MD5 7d0d17d2cead1a311fc4e3350395b4cf linux-headers-2.4.22-r1.ebuild 4077
 MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
 MD5 556c7008fbfdf81750bbd4ab2beb111e files/digest-linux-headers-2.2.26 67
