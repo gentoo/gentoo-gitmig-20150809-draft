@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.5 2002/12/13 11:00:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.6 2002/12/20 18:48:30 tuxus Exp $
+
+*gdbm-1.8.0-r5 (20 Dec 2002)
+
+  20 Dec 2002; Jan Seidel <tuxus@gentoo.org> : gdbm-1.8.0-r5
+  Added mips to keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
