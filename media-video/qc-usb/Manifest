@@ -1,4 +1,6 @@
+MD5 cfefbc19b3f019f49acbcd96043db3fc qc-usb-0.6.0.ebuild 1036
 MD5 3709ad2ec922f86c386fb3777f0673e8 qc-usb-0.5.1.ebuild 870
-MD5 996446e63d897dc1ea49386f5d01e385 ChangeLog 445
+MD5 f2351173fcf3c74abb519d12c75b70b6 ChangeLog 604
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 5e9ae5fc1d46670c449484a27578bbf9 files/digest-qc-usb-0.5.1 64
+MD5 66d41ed8b43340151cdad8ec9a47b7c9 files/digest-qc-usb-0.6.0 64
