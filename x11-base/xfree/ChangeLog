@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.284 2004/02/14 13:06:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.285 2004/02/16 20:44:03 cyfred Exp $
+
+*xfree-4.3.99.902-r2 (17 Feb 2004)
+
+  17 Feb 2004; Andrew Bevitt <cyfred@gentoo.org>; xfree-4.3.99.902-r2.ebuild:
+  Buffer over flow fix for 4.3.99.902 see the below log entry.
 
 *xfree-4.2.1-r4 (14 Feb 2004)
 
