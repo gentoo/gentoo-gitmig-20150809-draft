@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10-r1.ebuild,v 1.3 2003/09/18 16:43:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10-r1.ebuild,v 1.4 2004/02/27 20:14:03 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Paketto Keiretsu - experimental TCP/IP tools - scanrand, minewt, lc, phentropy, paratrace"
 HOMEPAGE="http://www.doxpara.com/"
@@ -20,11 +22,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc3.patch
+	epatch ${FILESDIR}/${PV}-libnet-1.0.patch
 }
 
 src_compile() {
 	# --with-libnet-bin=/usr --with-pcap-lib=/usr --with-pcap-inc=/usr --with-tm-inc=/usr"
-	export PATH="${S}/Libnet-1.0.2a:${PATH}"
 	econf || die
 	emake || die
 }

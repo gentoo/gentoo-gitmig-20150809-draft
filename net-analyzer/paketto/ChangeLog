@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/paketto
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/ChangeLog,v 1.5 2003/09/18 16:43:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/ChangeLog,v 1.6 2004/02/27 20:14:03 vapier Exp $
 
 *paketto-1.10-r1 (20 Mar 2003)
+
+  27 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add patch to use system libnet instead of built in one #43012.
 
   18 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
   Add gcc3 patch #28894 and protect local libnet from system version #28982.
