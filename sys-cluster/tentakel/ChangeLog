@@ -1,0 +1,9 @@
+# ChangeLog for sys-cluster/tentakel
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/tentakel/ChangeLog,v 1.1 2004/11/03 12:57:24 chrb Exp $
+
+*tentakel-2.1.3 (03 Nov 2004)
+
+  03 Nov 2004; Chris Bainbridge <chrb@gentoo.org> +tentakel-2.1.3.ebuild:
+  new package
+
