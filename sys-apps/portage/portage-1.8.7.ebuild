@@ -1,9 +1,9 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.5-r4.ebuild,v 1.1 2002/01/18 10:57:57 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.7.ebuild,v 1.1 2002/01/30 13:09:56 gbevin Exp $
  
-S=${WORKDIR}/${P}-${PR}
+S=${WORKDIR}/${P}
 DESCRIPTION="Portage ports system"
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org"
@@ -16,7 +16,7 @@ fi
 src_unpack() {
 	#We are including the Portage bzipped tarball on CVS now, so that if a person's
 	#emerge gets hosed, they are not completely stuck.
-	cd ${WORKDIR}; tar xjf ${FILESDIR}/${P}-${PR}.tar.bz2
+	cd ${WORKDIR}; tar xjf ${FILESDIR}/${P}.tar.bz2
 }
 
 src_compile() {                           
@@ -50,9 +50,8 @@ src_install() {
 	dosym ../../portage/pym/portage.py /usr/lib/python2.0/site-packages/portage.py
 
 	# we gotta compile these modules
-	# next lines commented out due to "try" issues.  This allows people to upgrade who need to upgrade
-#	try spython -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')"
-#	try spython -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')"
+	spython -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')" || die
+	spython -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')" || die
 	
 	#binaries, libraries and scripts
 	dodir /usr/lib/portage/bin
@@ -83,16 +82,23 @@ src_install() {
 	dosym ../lib/portage/bin/xpak /usr/bin/xpak
 	dosym ../lib/portage/bin/tbz2tool /usr/bin/tbz2tool
 	dosym newins /usr/lib/portage/bin/donewins
-
+	
+	# man pages
 	doman ${S}/man/*.[15]
+	
+	# temp dir creation
 	dodir /var/tmp
 	chmod 1777 ${D}/var/tmp
 	touch ${D}/var/tmp/.keep
+	
+	# create the initial profile symlink
 	if [ "`use build`" ] 
 	then
 		#convenience; overwrite existing symlink
 		ln -sf ../usr/portage/profiles/default-1.0_rc6 ${D}/etc/make.profile
 	fi
+	
+	#documentation
 	dodoc ${S}/ChangeLog
 }
 
