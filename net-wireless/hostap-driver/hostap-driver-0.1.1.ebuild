@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.1.ebuild,v 1.1 2003/10/20 22:28:51 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.1.ebuild,v 1.2 2003/10/23 10:02:07 wschlich Exp $
 
 inherit eutils
 
@@ -25,6 +25,9 @@ src_unpack() {
 	## set compiler options
 	sed -i -e "s:gcc:${CC}:" "${S}/Makefile"
 	# sed -i -e "s:-O2:${CFLAGS}:" "${S}/Makefile" # improper CFLAGS could cause unresolved symbols in the modules
+
+	## fix for new coreutils (#31801)
+	sed -i -e "s:tail -1:tail -n 1:" "${S}/Makefile"
 
 	## use pcmcia-cs sources if kernel tree pcmcia support is disabled and USE=pcmcia is set
 	if use pcmcia >&/dev/null; then
