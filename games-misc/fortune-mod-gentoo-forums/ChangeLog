@@ -1,0 +1,8 @@
+# ChangeLog for games-misc/fortune-mod-gentoo-forums
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.1 2004/09/22 22:51:35 squinky86 Exp $
+
+  22 Sep 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml:
+  Initial import, idea by Andreas Eriksson <andreas.eriksson@gmail.com>, thanks
+  to Simon Vermeersch <Titeuf@ph34rus.org> for his work, #62858.
+
