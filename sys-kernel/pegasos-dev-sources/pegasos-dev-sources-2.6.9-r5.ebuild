@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/pegasos-dev-sources-2.6.9-r5.ebuild,v 1.1 2004/12/25 13:24:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/pegasos-dev-sources-2.6.9-r5.ebuild,v 1.2 2005/01/09 12:44:03 dholm Exp $
 
 ETYPE="sources"
 inherit kernel-2

@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/pegasos-dev-sources
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/ChangeLog,v 1.24 2004/12/26 16:21:29 dholm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/ChangeLog,v 1.25 2005/01/09 12:44:03 dholm Exp $
+
+*pegasos-dev-sources-2.6.10-r1 (09 Jan 2005)
+
+  09 Jan 2005; <avatar@gentoo.org> +pegasos-dev-sources-2.6.10-r1.ebuild:
+  Fixed ASFS driver. Added new pegasos patch. Security fixes.
 
 *pegasos-dev-sources-2.6.10 (26 Dec 2004)
 
