@@ -1,0 +1,7 @@
+# ChangeLog for app-admin/chrpath
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.1 2005/02/05 21:40:16 taviso Exp $
+
+  05 Feb 2005; Tavis Ormandy <taviso@gentoo.org> +metadata.xml:
+  initial import
+
