@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.2 2002/03/18 20:18:32 drobbins Exp $
+
+*hdparm-4.6-r1 (12 Mar 2002)
+
+  12 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : New hdparm rev.  Order of
+  sed commands reversed, fixing bug #1044.
 
 *hdparm-4.6 (1 Feb 2002)
 

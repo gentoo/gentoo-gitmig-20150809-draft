@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.4-r2.ebuild,v 1.1 2002/03/11 12:08:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.4-r2.ebuild,v 1.2 2002/03/18 20:18:32 drobbins Exp $
 
 SV="1.3.0"
 SVREV=""
@@ -14,9 +14,11 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.ta
 #	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 
+DEPEND="sys-kernel/linux-headers"
+RDEPEND=""
 if [ -z "`use build`" ]
 then
-	DEPEND="sys-apps/kbd"
+	RDEPEND="sys-apps/kbd"
 fi
 
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.

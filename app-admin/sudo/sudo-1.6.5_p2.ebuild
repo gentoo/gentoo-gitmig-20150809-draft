@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.5_p2.ebuild,v 1.2 2002/03/10 11:49:24 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.5_p2.ebuild,v 1.3 2002/03/18 20:18:32 drobbins Exp $
 
 NP=sudo-1.6.5p2
 S=${WORKDIR}/${NP}
@@ -28,4 +28,3 @@ src_install () {
 	insinto /etc/pam.d
 	doins ${FILESDIR}/sudo
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r2.ebuild,v 1.5 2002/03/18 18:50:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r2.ebuild,v 1.6 2002/03/18 20:18:32 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -8,11 +8,10 @@ SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-#Specific Linux headers are now required so that we build from a stable "base"
 #portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
-LHV=2.4.17
-DEPEND="~sys-kernel/linux-headers-${LHV} nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
-RDEPEND="~sys-kernel/linux-headers-${LHV}"
+#drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
+DEPEND="sys-kernel/linux-headers nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
+RDEPEND="sys-kernel/linux-headers"
 
 if [ -z "`use build`" ]
 then
