@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20040616.ebuild,v 1.1 2004/10/04 01:56:33 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20040616.ebuild,v 1.2 2004/10/04 23:43:24 ribosome Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="Development toolkit and applications (BLAST, entrez, ddv, udv, sequin...) for computational biology"
 LICENSE="public-domain"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/"
-SRC_URI="ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/old/${PV}/ncbi.tar.gz
-	doc? mirror://gentoo/${PN}-sdk-doc.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	doc? ( mirror://gentoo/${PN}-sdk-doc.tar.bz2 )"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
