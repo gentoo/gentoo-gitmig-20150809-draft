@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/singular-2.0.5-r3.ebuild,v 1.1 2004/03/24 07:29:31 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/singular-2.0.5-r3.ebuild,v 1.2 2004/03/24 14:02:53 phosphan Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ S=${WORKDIR}
 
 src_unpack () {
 	unpack ${A}
-	epatch  $FILESDIR/${P}-r2-gentoo.diff
+	epatch  $FILESDIR/${P}-r3-gentoo.diff
 	sed -e "s/PFSUBST/${PF}/" -i ${S}/Singular/feResource.cc || die "sed failed on feResource.cc"
 }
 
