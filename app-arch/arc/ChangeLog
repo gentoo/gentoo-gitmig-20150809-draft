@@ -1,11 +1,14 @@
 # ChangeLog for app-arch/arc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.14 2004/10/05 10:59:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.15 2004/12/28 20:35:35 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> arc-5.21j.ebuild:
   Masked arc-5.21j.ebuild stable for ppc
 
-  24 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> arc-5.21j.ebuild:
+  24 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> arc-5.21j.ebuild:
   Stable on alpha.
 
   11 Jul 2004; Tom Gall <tgall@gentoo.org> arc-5.21j.ebuild:

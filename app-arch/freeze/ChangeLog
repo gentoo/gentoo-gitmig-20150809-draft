@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/freeze
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.10 2004/12/18 18:47:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.11 2004/12/28 20:37:44 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> freeze-2.5.0.ebuild:
   was testing for a long time, marking stable on amd64
@@ -9,7 +12,7 @@
   freeze-2.5.0.ebuild:
   Masked freeze-2.5.0.ebuild stable for ppc
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> freeze-2.5.0.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> freeze-2.5.0.ebuild:
   Keyword ~alpha.
 
   28 Aug 2004; Tom Gall <tgall@gentoo.org> freeze-2.5.0.ebuild:

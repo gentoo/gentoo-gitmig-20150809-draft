@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.23 2004/10/10 02:26:00 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.24 2004/12/28 20:40:00 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   09 Oct 2004; Tom Gall <tgall@gentoo.org> sharutils-4.2.1-r10.ebuild:
   stable on ppc64, bug #65773
@@ -8,7 +11,7 @@
   02 Oct 2004; Joshua Kinard <kumba@gentoo.org> sharutils-4.2.1-r10.ebuild:
   Marked stable on mips.
 
-  29 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
+  29 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   sharutils-4.2.1-r10.ebuild:
   Stable on alpha, bug 65773.
 
@@ -31,7 +34,7 @@
   16 May 2004; Luca Barbato <lu_zero@gentoo.org> sharutils-4.2.1-r9.ebuild:
   Marked ppc
 
-  15 May 2004; Bryan Østergaard <kloeri@gentoo.org> sharutils-4.2.1-r9.ebuild:
+  15 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> sharutils-4.2.1-r9.ebuild:
   Stable on alpha.
 
   15 May 2004; Jon Portnoy <avenj@gentoo.org> sharutils-4.2.1-r9.ebuild :

@@ -1,8 +1,11 @@
 # ChangeLog for app-arch/pax
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.5 2004/06/24 21:34:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.6 2004/12/28 20:38:47 ciaranm Exp $
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pax-3.3.4.ebuild:
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pax-3.3.4.ebuild:
   Stable on alpha.
 
   05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> pax-3.3.4.ebuild:

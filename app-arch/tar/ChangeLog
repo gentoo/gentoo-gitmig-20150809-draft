@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.37 2004/11/03 15:48:16 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.38 2004/12/28 20:41:09 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   03 Nov 2004; Travis Tilley <lv@gentoo.org> +files/1.14.90-optimize.patch,
   tar-1.14.90-r1.ebuild:
@@ -85,10 +88,10 @@
   26 May 2004; Michael Sterrett <mr_bones_@gentoo.org> tar-1.14.ebuild:
   version bump
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> tar-1.13.92-r3.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> tar-1.13.92-r3.ebuild:
   Stable on alpha.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> tar-1.13.92-r3.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> tar-1.13.92-r3.ebuild:
   Stable on alpha.
 
   04 May 2004; Guy Martin <gmsoft@gentoo.org> tar-1.13.92-r3.ebuild:

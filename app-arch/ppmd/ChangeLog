@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ppmd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.16 2004/10/05 10:59:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.17 2004/12/28 20:39:20 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> ppmd-9.1.ebuild,
   ppmd-9.1_p8.ebuild:
@@ -9,7 +12,7 @@
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> ppmd-9.1.ebuild:
   Masked ppmd-9.1.ebuild stable for ppc
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> ppmd-9.1_p8.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ppmd-9.1_p8.ebuild:
   Stable on alpha.
 
   13 Aug 2004; Jason Wever <weeve@gentoo.org> ppmd-9.1_p8.ebuild:
@@ -29,7 +32,7 @@
   17 Jul 2004; Brian Harring <ferringb@gentoo.org> ppmd-9.1.ebuild:
   removing the gzip rdepend; no clue how that got in there.  Stabling x86 also.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> ppmd-9.1.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ppmd-9.1.ebuild:
   Stable on alpha.
 
   20 Apr 2004; Daniel Black <dragonheart@gentoo.org> ppmd-9.1.ebuild:

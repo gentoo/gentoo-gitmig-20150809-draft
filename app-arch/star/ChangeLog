@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.16 2004/10/05 10:59:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.17 2004/12/28 20:40:33 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   star-1.5_alpha14.ebuild:
@@ -15,7 +18,7 @@
   01 Sep 2004; <SeJo@gentoo.org> star-1.5_alpha46.ebuild:
   marked stabe on ppc
 
-  01 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
+  01 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   star-1.5_alpha46.ebuild:
   Stable on alpha, bug 61797.
 
