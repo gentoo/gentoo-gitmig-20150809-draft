@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.21 2003/12/24 05:44:52 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.22 2004/01/08 04:22:58 brad_mssw Exp $
+
+*genkernel-3.0.1_beta3 (07 Jan 2004)
+
+  07 Jan 2004; Brad House <brad_mssw@gentoo.org> genkernel-3.0.1_beta3.ebuild:
+  bump version, bugfixes
 
 *genkernel-3.0.1_beta2 (24 Dec 2003)
 
