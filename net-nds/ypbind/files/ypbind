@@ -46,7 +46,7 @@ stop() {
 		eend $? "Error stopping ${SERVICE}."
 	        # Remove binding files, if ypbind "forget" it
 		rm -f /var/yp/binding/*
-		#rm -f /var/lock/subsys/ypbind
+		rm -f $PID
 	fi
 }
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r1.ebuild,v 1.2 2001/04/19 03:44:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r1.ebuild,v 1.3 2001/04/21 12:48:42 achim Exp $
 
-A="X402src-1.tgz X402src-2.tgz X402src-3.tgz 4.0.2-4.0.3.diff.gz truetype.tar.gz gatos.tar.gz"
+A="X402src-1.tgz X402src-2.tgz X402src-3.tgz 4.0.2-4.0.3.diff.gz truetype.tar.gz"
 S=${WORKDIR}/xc
 DESCRIPTION="Xfree - 4.0.3 with Antialias support and ATI TV and Overlay support from the LiVID project"
 SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/4.0.2/source"
@@ -13,8 +13,8 @@ SRC_URI="$SRC_PATH0/X402src-1.tgz $SRC_PATH0/X402src-2.tgz $SRC_PATH0/X402src-3.
 	 $SRC_PATH1/X402src-1.tgz $SRC_PATH1/X402src-2.tgz $SRC_PATH1/X402src-3.tgz
 	 ftp://ftp.xfree.org/pub/XFree86/4.0.3/patches/4.0.2-4.0.3.diff.gz
 	 ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/4.0.3/patches/4.0.2-4.0.3.diff.gz
-       	 http://keithp.com/~keithp/fonts/truetype.tar.gz
-         http://www.linuxvideo.org/devel/data/gatos.tar.gz"
+       	 http://keithp.com/~keithp/fonts/truetype.tar.gz"
+#         http://www.linuxvideo.org/devel/data/gatos.tar.gz"
 
 HOMEPAGE="http://www.xfree.org
           http://www.linuxvideo.org/gatos/"
