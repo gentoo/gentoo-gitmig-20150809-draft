@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.6.0.ebuild,v 1.4 2004/02/25 23:03:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.6.3.ebuild,v 1.1 2004/04/25 15:00:55 usata Exp $
 
-DESCRIPTION="Japanese dictionary for ChaSen"
-HOMEPAGE="http://chasen.aist-nara.ac.jp/"
-SRC_URI="http://chasen.aist-nara.ac.jp/stable/ipadic/${P}.tar.gz"
-LICENSE="as-is"
-KEYWORDS="x86"
-SLOT="0"
 IUSE=""
 
-DEPEND="app-text/chasen"
+DESCRIPTION="Japanese dictionary for ChaSen"
+HOMEPAGE="http://chasen.aist-nara.ac.jp/chasen/distribution.html.en"
+SRC_URI="http://chasen.aist-nara.ac.jp/stable/ipadic/${P}.tar.gz"
 
-S="${WORKDIR}/${P}"
+LICENSE="as-is"
+KEYWORDS="~x86 ~amd64"
+SLOT="0"
+
+DEPEND=">=app-text/chasen-2.3.2"
 
 src_compile() {
 	sed -i -e "/^install-data-am:/s/install-data-local//" Makefile.in
@@ -21,7 +21,8 @@ src_compile() {
 }
 
 src_install () {
-	einstall DESTDIR=${D} || die
+	make DESTDIR=${D} install || die
+
 	insinto /etc
 	doins chasenrc
 	dodoc INSTALL* README NEWS || die
