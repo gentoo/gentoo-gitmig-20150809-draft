@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/greputils
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.1 2004/09/09 19:22:18 ciaranm Exp $
+
+*greputils-2.3 (09 Sep 2004)
+
+  09 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +greputils-2.3.ebuild:
+  New package
+
