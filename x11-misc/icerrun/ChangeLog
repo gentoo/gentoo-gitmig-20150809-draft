@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icerrun
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icerrun/ChangeLog,v 1.1 2003/06/23 13:41:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icerrun/ChangeLog,v 1.2 2003/07/31 17:12:53 lanius Exp $
+
+  31 Jul 2003; <heino@gentoo.org> icerrun-0.5.ebuild:
+  stable bump, cause of icewm-tools dep
 
 *icerrun-0.5 (23 Jun 2003)
 
