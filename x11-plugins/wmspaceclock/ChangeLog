@@ -1,6 +1,15 @@
 # ChangeLog for x11-plugins/wmspaceclock
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmspaceclock/ChangeLog,v 1.6 2004/06/28 21:37:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmspaceclock/ChangeLog,v 1.7 2004/07/22 09:22:54 s4t4n Exp $
+
+*wmspaceclock-1.2d (22 Jul 2003)
+
+  22 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmspaceclock-1.2d.ebuild:
+  Version bump.
+  wmspaceclock-1.2b.ebuild:
+  Stable for x86.
+  wmspaceclock-1.1.ebuild:
+  Remove old ebuilds.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmspaceclock-1.1.ebuild,
   wmspaceclock-1.2b.ebuild:
