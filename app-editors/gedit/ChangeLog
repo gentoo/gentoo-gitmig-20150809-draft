@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/gedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.20 2003/01/31 20:47:40 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.21 2003/02/01 00:04:52 foser Exp $
 
 *gedit-2.2.0 (30 Jan 2003)
+
+  31 Jan 2003; foser <foser@gentoo.org> gedit-2.2.0.ebuild :
+  added scrollkeeper dep
 
   31 Jan 2003; Spider <spider@gentoo.org> gedit-2.2.0.ebuild :
   Added a gnome-vfs dep, this stopped linking errors.
