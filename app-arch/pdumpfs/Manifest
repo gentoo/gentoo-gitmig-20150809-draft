@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bb54adce4a65e544df838c94f7f230d2 ChangeLog 1055
+MD5 8e0de7046893e49ab02665fa9c4232f0 pdumpfs-0.9.ebuild 802
+MD5 16d1b32c22c5756eb09796f29ce5acba pdumpfs-1.1.ebuild 807
+MD5 2a062b61e8e7909fbd779c084828ef88 ChangeLog 1235
 MD5 e23f86946cb3798206fa0a83a87f6240 metadata.xml 529
-MD5 1c5b21f38fd2456aa451b1552766bd9c pdumpfs-0.6.ebuild 786
-MD5 7f2dcb9c28b4c783d72ec31b75047a62 pdumpfs-0.8.ebuild 688
-MD5 09b665c5bc22cc8d2100acb40ad14121 pdumpfs-0.9.ebuild 807
-MD5 20adf3a8515c1749b5f81aab5eaf1b37 files/digest-pdumpfs-0.6 61
-MD5 df7e28da0675d06bbb76344912539134 files/digest-pdumpfs-0.8 62
 MD5 263e67959222d7d2265e2e5ea6bafa69 files/digest-pdumpfs-0.9 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3LsMHTu7gpaalycRAhbHAJ0QYVdvPUM0fF9yca7+8VUIKBmbAQCgpqgM
-Krr4gWUeskdGvX8/4nZaDfY=
-=J6zp
------END PGP SIGNATURE-----
+MD5 68d140ae3be1200ac000c394c04e8449 files/digest-pdumpfs-1.1 62
