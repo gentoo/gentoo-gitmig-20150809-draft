@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.8.ebuild,v 1.5 2004/10/19 09:38:16 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.8.ebuild,v 1.6 2004/10/19 09:41:59 absinthe Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/tpctl/${MYP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* x86"
 IUSE="ncurses tpctlir perl"
 
 DEPEND=">=app-laptop/thinkpad-4.8
