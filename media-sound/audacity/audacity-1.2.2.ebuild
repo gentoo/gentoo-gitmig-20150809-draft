@@ -1,21 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.0-r1.ebuild,v 1.6 2004/07/01 07:25:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.2.ebuild,v 1.1 2004/10/31 10:37:32 eradicator Exp $
 
-inherit eutils
+IUSE="encode flac mad oggvorbis"
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-src-${MY_PV}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A free, crossplatform audio editor."
 HOMEPAGE="http://audacity.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
-IUSE="encode flac mad oggvorbis"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc -amd64"
+
+# Do not unmask on amd64 without talking to eradicator
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND=">=x11-libs/wxGTK-2.2.9
 	>=app-arch/zip-2.3
@@ -29,8 +30,6 @@ DEPEND=">=x11-libs/wxGTK-2.2.9
 	mad? ( >=media-sound/madplay-0.14 )
 	encode? ( >=media-sound/lame-3.92 )"
 
-S="${WORKDIR}/${MY_P}"
-
 DOC="LICENSE.txt README.txt audacity-1.2-help.htb"
 
 pkg_setup() {
@@ -41,12 +40,6 @@ pkg_setup() {
 		einfo "you must set USE=-unicode."
 		die "wxGTK must be re-emerged without unicode suport"
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-STTypes.patch
 }
 
 src_compile() {
@@ -82,7 +75,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# Install our docs
 	dodoc ${DOC}
@@ -90,10 +83,9 @@ src_install() {
 	# Remove bad doc install
 	rm -rf ${D}/share/doc
 
-	insinto /usr/share/gnome/apps/Multimedia
-	doins ${FILESDIR}/audacity.desktop
-	insinto /usr/share/applnk/Multimedia
-	doins ${FILESDIR}/audacity.desktop
+	insinto /usr/share/pixmaps
+	newins AudacityLogo48x48.xpm audacity.xpm
+
 	insinto /usr/share/applications
 	doins ${FILESDIR}/audacity.desktop
 }

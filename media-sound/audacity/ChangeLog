@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.26 2004/07/01 07:25:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.27 2004/10/31 10:37:32 eradicator Exp $
+
+*audacity-1.2.2 (31 Oct 2004)
+
+  31 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/audacity-1.2.0-STTypes.patch, -audacity-1.1.3.ebuild,
+  -audacity-1.2.0-r1.ebuild, +audacity-1.2.2.ebuild:
+  Version bump. Only installing .desktop in applications. Installing audacity
+  icon to close bug #59611.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   audacity-1.2.0-r1.ebuild, audacity-1.2.1.ebuild:
