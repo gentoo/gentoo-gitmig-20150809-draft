@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.0.13.ebuild,v 1.1 2004/12/17 11:44:16 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.0.13.ebuild,v 1.2 2005/01/22 15:18:01 kloeri Exp $
 
 IUSE="doc"
 
