@@ -22,6 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
+	PATH=/usr/X11R6/bin:${PATH} # root doesn't get this by default
 	xmkmf -a || die
 	cp Makefile Makefile.old
 	sed -e "s,all:: ghostview.\$(MANSUFFIX).html,all:: ,g" Makefile.old > Makefile
