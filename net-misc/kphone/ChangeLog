@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/kphone
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.14 2004/03/25 21:56:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.15 2004/04/24 09:52:14 centic Exp $
+
+*kphone-4.0.2 (24 Apr 2004)
+
+  24 Apr 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +kphone-4.0.2.ebuild:
+  Add Version 4.0.2, see Bug 47480, thanks to Samuel Greenfeld <n2uro@aol.com>
 
   25 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> kphone-4.0.1.ebuild:
   ~sparc baby
