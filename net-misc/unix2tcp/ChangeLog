@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/unix2tcp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unix2tcp/ChangeLog,v 1.1 2003/09/22 20:45:04 vapier Exp $
+
+*unix2tcp-0.7.2 (22 Sep 2003)
+
+  22 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Mihai RUSU <dizzy@roedu.net> #29125.
