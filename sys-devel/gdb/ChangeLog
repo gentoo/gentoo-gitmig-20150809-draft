@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.39 2004/05/28 16:29:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.40 2004/05/30 01:35:27 gmsoft Exp $
+
+  30 May 2004; Guy Martin <gmsoft@gentoo.org> gdb-6.1.ebuild,
+  files/gdb-6.1-hppa.patch:
+  Added hppa support to gdb-6.1. Marked ~hppa.
 
   28 May 2004; Tom Gall <tgall@gentoo.org> gdb-6.1.ebuild:
   stable on ppc64 (with small patch)
