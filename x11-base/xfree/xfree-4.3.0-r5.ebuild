@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.17 2004/06/23 23:55:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.18 2004/06/24 21:57:33 agriffis Exp $
 
 inherit eutils flag-o-matic gcc xfree
 

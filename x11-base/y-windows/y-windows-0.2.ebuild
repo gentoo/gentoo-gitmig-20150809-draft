@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc., Doug Goldstein
+# Copyright 1999-2004 Gentoo Foundation, Doug Goldstein
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/y-windows/y-windows-0.2.ebuild,v 1.3 2004/03/21 09:55:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/y-windows/y-windows-0.2.ebuild,v 1.4 2004/06/24 21:58:09 agriffis Exp $
 
 DESCRIPTION="Y Windows"
 HOMEPAGE="http://www.y-windows.org/"
