@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xfprint
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfprint/ChangeLog,v 1.2 2003/06/14 16:04:46 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfprint/ChangeLog,v 1.3 2003/06/25 06:08:08 bcowan Exp $
+
+*xfprint-3.91.0 (25 Jun 2003)
+
+  25 Jun 2003; Brad Cowan <bcowan@gentoo.org> xfprint-3.91.0.ebuild:
+  Version bump.
 
   14 Jun 2003; Brad Cowan <bcowan@gentoo.org> xfprint-3.90.0.ebuild:
   Added some deps brought to my attention by Mathy Vanvoorden.
