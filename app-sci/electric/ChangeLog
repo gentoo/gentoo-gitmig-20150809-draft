@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/electric
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.5 2004/04/05 14:04:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.6 2004/04/19 15:23:16 phosphan Exp $
+
+*electric-6.08 (19 Apr 2004)
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> electric-6.08.ebuild,
+  files/6.08-fix-sandbox.patch, files/6.08-qt.patch:
+  Version bump and some changes that allow to chose between qt and motif GUI,
+  see bug #22160 for details.
 
 *electric-6.07-r1 (05 Apr 2004)
 
