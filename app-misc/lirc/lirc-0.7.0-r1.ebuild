@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.2 2004/12/09 13:03:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.3 2004/12/09 21:37:10 mr_bones_ Exp $
 
 inherit eutils linux-mod
 
@@ -46,7 +46,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64 ~ppc64"
 
 RDEPEND="virtual/libc
 	X11? ( virtual/x11 )"
-	
+
 DEPEND="virtual/linux-sources
 	sys-devel/autoconf
 	${RDEPEND}"
