@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.5_pre20041110.ebuild,v 1.3 2004/11/23 05:47:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.5_pre20041110.ebuild,v 1.4 2004/11/23 18:36:35 mrness Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ DEPEND="virtual/linux-sources
 RDEPEND="${DEPEND}
 	virtual/modutils"
 
-src_setup() {
+pkg_setup() {
 	# Get country code from I4L_CC variable
 	# default country: DE (Germany)
 	I4L_CC=$(echo -n "${I4L_CC}" | tr "[:lower:]" "[:upper:]")
