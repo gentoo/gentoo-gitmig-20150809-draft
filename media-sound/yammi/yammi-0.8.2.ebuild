@@ -1,20 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.4 2003/07/31 03:30:51 caleb Exp $
-
-IUSE="cdr xmms oggvorbis kde"
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.5 2003/08/07 04:11:38 vapier Exp $
 
 inherit flag-o-matic
 
-S="${WORKDIR}/${P}"
-
 DESCRIPTION="MP3/Ogg/Wav-Manager and Jukebox 4 XMMS/Noatun"
+HOMEPAGE="http://yammi.sourceforge.net/"
 SRC_URI="mirror://sourceforge/yammi/${P}fixed.tar.gz"
-HOMEPAGE="http://yammi.sf.net"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE="cdr xmms oggvorbis kde"
 
 DEPEND=">=x11-libs/qt-3.1.0-r1
 	>=media-libs/id3lib-3.8.2
@@ -64,8 +61,6 @@ src_install() {
 pkg_postinst() {
 	if [ -z "`use kde`" ] && [ -z "`use xmms`" ]
 	then
-		ewarn "**************************************************************************"
-		ewarn
 		ewarn "Yammi is compiled without support for xmms and noatun."
 		ewarn "Now the functionality of Yammi is very limited."
 		ewarn "It is highly recommended to recompile Yammi."
@@ -78,9 +73,5 @@ pkg_postinst() {
 		ewarn
 		ewarn "Or to get support for both:"
 		ewarn "$ export USE=\"xmms kde\""
-		ewarn
-		ewarn "**************************************************************************"
 	fi
 }
-
-

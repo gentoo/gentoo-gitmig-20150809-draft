@@ -1,18 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-2.99.9.ebuild,v 1.1 2003/07/27 21:25:29 raker Exp $
-
-IUSE=""
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-2.99.9.ebuild,v 1.2 2003/08/07 04:11:05 vapier Exp $
 
 inherit distutils
 
 DESCRIPTION="A frontend for several cd-rippers and mp3 encoders"
-SRC_URI="http://www.home.unix-ag.org/arne/jack/${P}.tar.gz"
 HOMEPAGE="http://www.home.unix-ag.org/arne/jack/"
+SRC_URI="http://www.home.unix-ag.org/arne/jack/${P}.tar.gz"
 
 KEYWORDS="~x86"
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND=">=virtual/python-1.5.2
 	dev-python/cddb-py

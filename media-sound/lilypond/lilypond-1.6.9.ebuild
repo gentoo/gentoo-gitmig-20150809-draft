@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.2 2003/05/27 09:06:31 jje Exp $
-
-IUSE="doc"
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.3 2003/08/07 04:06:07 vapier Exp $
 
 inherit gcc
 
 MY_PV="v$(echo ${PV} | cut -d. -f1,2)"
 DESCRIPTION="GNU Music Typesetter"
-SRC_URI="http://www.lilypond.org/ftp/${MY_PV}/${P}.tar.gz"
 HOMEPAGE="http://lilypond.org/"
-SLOT="0"
+SRC_URI="http://www.lilypond.org/ftp/${MY_PV}/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86"
+IUSE="doc"
 
 DEPEND=">=dev-lang/python-2.2.1-r2
 	>=dev-lang/perl-5.6.1-r6
@@ -24,7 +24,6 @@ DEPEND=">=dev-lang/python-2.2.1-r2
 	doc? ( >=app-text/mftrace-1.0.8
 		>=app-text/ghostscript-7.05.5
 		>=media-libs/netpbm-9.12-r2 )"
-
 RDEPEND=">=dev-util/guile-1.4-r3
 	>=app-text/ghostscript-7.05.5
 	>=app-text/tetex-1.0.7-r10
