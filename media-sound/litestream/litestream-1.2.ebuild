@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/litestream-1.2.ebuild,v 1.4 2004/04/20 17:26:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/litestream-1.2.ebuild,v 1.5 2004/04/23 16:30:30 eradicator Exp $
 
 IUSE=""
 
@@ -12,10 +12,9 @@ SRC_URI="http://litestream.org/litestream/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=""
-RDEPEND=""
 
 S=${WORKDIR}/${PN}
 
