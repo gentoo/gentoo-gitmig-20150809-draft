@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.48 2005/01/20 20:20:27 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.49 2005/01/21 19:40:12 sekretarz Exp $
+
+  21 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  -perlmagick-6.0.7.1.ebuild, -perlmagick-6.0.8.1.ebuild,
+  -perlmagick-6.1.0.1.ebuild:
+  Ebuild clean up
 
   20 Jan 2005; Hardave Riar <hardave@gentoo.org> perlmagick-6.1.8.8.ebuild:
   Stable on mips, bug #77932.
