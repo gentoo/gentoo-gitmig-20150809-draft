@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.2-r1.ebuild,v 1.4 2004/06/25 00:45:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.2-r1.ebuild,v 1.5 2004/08/09 22:32:51 latexer Exp $
 
 inherit eutils
 
@@ -13,7 +13,6 @@ KEYWORDS="x86"
 IUSE="pcmcia hostap-nopci hostap-noplx"
 DEPEND=">=net-wireless/wireless-tools-25
 		pcmcia? ( >=sys-apps/pcmcia-cs-3.2.1 )"
-RDEPEND="!net-wireless/hostap"
 S="${WORKDIR}/${P}"
 LIB_PATH="/lib/modules/${KV}"
 
