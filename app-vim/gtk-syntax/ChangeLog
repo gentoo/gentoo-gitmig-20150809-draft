@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.1 2003/08/03 21:06:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.2 2003/08/19 02:04:16 agriffis Exp $
+
+  18 Aug 2003; Aron Griffis <agriffis@gentoo.org> gtk-syntax-20030219.ebuild:
+  Mark stable on alpha and x86
 
 *gtk-syntax-20030219 (03 Aug 2003)
 
