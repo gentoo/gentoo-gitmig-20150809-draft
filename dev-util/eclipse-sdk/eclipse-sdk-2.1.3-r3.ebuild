@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r3.ebuild,v 1.7 2004/06/03 21:08:39 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r3.ebuild,v 1.8 2004/06/06 15:22:41 karltk Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ RDEPEND=">=virtual/jdk-1.3
 		)
 	gnome? ( =gnome-base/gnome-vfs-2* )
 	mozilla? ( net-www/mozilla )
+	jikes? ( >=dev-java/jikes-1.19 )
 	"
 
 DEPEND="${RDEPEND}
@@ -180,9 +181,10 @@ src_compile() {
 		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/rt.jar"
 	fi
 
-	if use jikes ; then
-		ant_extra_opts="${ant_extra_opts} -Dbuild.compiler=jikes"
-	fi
+	# karltk: jikes doesn't work as a compiler for Eclipse currently
+#	if use jikes ; then
+#		ant_extra_opts="${ant_extra_opts} -Dbuild.compiler=jikes"
+#	fi
 
 	export ANT_OPTS=-Xmx768m
 

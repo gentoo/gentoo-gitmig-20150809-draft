@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.34 2004/06/03 21:08:39 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.35 2004/06/06 15:22:41 karltk Exp $
+
+*eclipse-sdk-3.0.0_rc1 (06 Jun 2004)
+
+  04 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-3.0.0_rc1.ebuild, eclipse-2.1.3-r2.ebuild: New upstream 
+  version. Fixes #52760. Temporarily removed Jikes as a compiler for
+  both these versions, as it simply doesn't compile it.
+
+  04 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-2.1.3-r3.ebuild: Added jikes as compile-time dep, since 
+  it appears to consistently compile with jikes now.
 
   03 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-2.1.3-r3.ebuild: Marked as stable on x86, as it improves
