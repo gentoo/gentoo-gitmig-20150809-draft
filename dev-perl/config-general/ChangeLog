@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/config-general
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.1 2003/09/08 10:57:35 mcummings Exp $
+
+*config-general-2.21 (08 Sep 2003)
+
+  08 Sep 2003; Michael Cummings <mcummings@gentoo.org>
+  config-general-2.21.ebuild:
+  Original ebuild submitted in bug 27233 by Janne Pikkarainen
+  <jaba@mikrobitti.fi>
+
