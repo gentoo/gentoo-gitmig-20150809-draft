@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-jre
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.27 2003/12/24 02:52:29 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.28 2004/02/21 04:01:14 zx Exp $
+
+  20 Feb 2004; <zx@gentoo.org> blackdown-jre-1.4.2_rc1.ebuild:
+  Bug fix, #40433
 
 *blackdown-jre-1.4.2_rc1 (23 Dec 2003)
 

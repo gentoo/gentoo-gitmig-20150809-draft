@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.1 2003/12/24 02:52:29 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.2 2004/02/21 04:01:14 zx Exp $
 
 IUSE="doc"
 
@@ -40,8 +40,7 @@ LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* amd64"
 
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.6
-	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
+	>=dev-java/java-config-0.2.6"
 
 PROVIDE="virtual/jre-1.4.2
 	virtual/java-scheme-2"
