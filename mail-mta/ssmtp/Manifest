@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec9a57513a1a00da3be59ac31b6e1b95 ssmtp-2.61.ebuild 3136
-MD5 9de583fa64169fdefb15dcfc3f6ad294 ssmtp-2.60.7-r1.ebuild 2851
-MD5 1e681c74148b1cfed6eeaad966a9575f ChangeLog 7601
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 326cdbc010d38890ab93dac82fd4767a ChangeLog 7707
+MD5 9d89500a70f0d9321271dd7fbeea976a ssmtp-2.61.ebuild 3138
+MD5 9de583fa64169fdefb15dcfc3f6ad294 ssmtp-2.60.7-r1.ebuild 2851
 MD5 095a09f1d05ecea6c3b97959f6b7a316 ssmtp-2.60.9.ebuild 3124
-MD5 5208fda9912caf3afd94108e6276167e files/ssmtp-2.60.7-logfile.patch 1256
 MD5 15fdd106696fc8ccfb1b170da88df2ce files/digest-ssmtp-2.61 66
+MD5 f466deeaec0316507961656f37af7000 files/ssmtp-2.60.4-md5.patch 1509
 MD5 026bfafb0efdf0d7eb5e0b4164a35f7d files/digest-ssmtp-2.60.9 63
 MD5 93225fbc5fd7b8e5500c7b1c85b63fdf files/starttls.diff 4277
-MD5 f466deeaec0316507961656f37af7000 files/ssmtp-2.60.4-md5.patch 1509
-MD5 c833680953ba9941d33fc14dda62532b files/digest-ssmtp-2.60.7-r1 63
+MD5 5208fda9912caf3afd94108e6276167e files/ssmtp-2.60.7-logfile.patch 1256
 MD5 dcdea1d356b76c170296921577f29378 files/mailer.conf 1488
+MD5 c833680953ba9941d33fc14dda62532b files/digest-ssmtp-2.60.7-r1 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD4DBQFCC5h6ViELBEf1JB0RAkG+AJinjo9A0rA+qW9fxue7PmitgR8JAJ9oVxNx
-oFQAAKPLqugO6ZpHTlA38g==
-=/GwV
+iD8DBQFCFORFKRy60XGEcJIRAk3tAJ4yCx3GoWuVbwZod0TQ/fZrtEGoWQCfbhUx
+dZ8BS0XJdXYmuSkXOkQluq4=
+=FTYT
 -----END PGP SIGNATURE-----
