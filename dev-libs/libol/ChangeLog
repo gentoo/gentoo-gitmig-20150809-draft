@@ -1,18 +1,27 @@
 # ChangeLog for dev-libs/libol
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.6 2002/10/24 01:40:38 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.7 2002/10/24 18:58:46 gerk Exp $
 
 *libol-0.3.5 (23 Oct 2002)
+
+  24 Oct 2002; Mark Guertin <gerk@gentoo.org> libol-0.3.5.ebuild:
+  added ~ppc to keywords and missing env variables (RDEPEND, IUSE)
 
   23 Oct 2002; Donny Davies <woodchip@gentoo.org.org> libol-0.3.5.ebuild:
   Bug fix release.  Thanks rkilgore@hotpop.com, wylie@geekasylum.org; #9278.
 
 *libol-0.3.4 (12 Oct 2002)
 
+  24 Oct 2002; Mark Guertin <gerk@gentoo.org> libol-0.3.5.ebuild:
+  added ~ppc to keywords and missing env variables (RDEPEND, IUSE)
+
   12 Oct 2002; Bruce A. Locke <blocke@shivan.org> libol-0.3.4.ebuild:
   Version bump (bumped with syslog-ng)
 
 *libol-0.3.3 (17 Aug 2002)
+
+  24 Oct 2002; Mark Guertin <gerk@gentoo.org> libol-0.3.5.ebuild:
+  added ppc to keywords and missing env variables (RDEPEND, IUSE)
 
   17 Aug 2002; Bruce A. Locke <blocke@shivan.org> libol-0.3.3.ebuild:
 
