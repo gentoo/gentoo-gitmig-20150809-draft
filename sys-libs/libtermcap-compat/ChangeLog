@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libtermcap-compat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.11 2003/09/06 14:16:45 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.12 2003/09/08 13:15:19 taviso Exp $
+
+  08 Sep 2003; Tavis Ormandy <taviso@gentoo.org>
+  libtermcap-compat-1.2.3-r1.ebuild:
+  inherit eutils
 
 *libtermcap-compat-1.2.3-r1 (06 Sep 2003)
 
