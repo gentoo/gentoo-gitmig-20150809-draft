@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/vacation-1.2.6.1.ebuild,v 1.5 2004/06/24 23:31:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/vacation-1.2.6.1.ebuild,v 1.6 2004/08/15 23:16:51 slarti Exp $
 
 DESCRIPTION="automatic mail answering program"
 HOMEPAGE="http://vacation.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sourceforge/vacation/${PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 alpha ~amd64"
 SLOT="0"
 IUSE=""
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vacation
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/ChangeLog,v 1.4 2004/06/24 23:31:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/ChangeLog,v 1.5 2004/08/15 23:16:51 slarti Exp $
+
+  16 Aug 2004; Tom Martin <slarti@gentoo.org> vacation-1.2.6.1.ebuild:
+  Marked ~amd64; resolves bug 58828. Thanks to Justin Wind
+  <jwind-gentoo@squeep.com> for reporting.
 
   03 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> vacation-1.2.6.1.ebuild:
   Cleaning up sed stuff
