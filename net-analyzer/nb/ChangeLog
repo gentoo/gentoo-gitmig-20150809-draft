@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/nb
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/ChangeLog,v 1.1 2005/03/14 13:38:19 eldad Exp $
+
+*nb-0.6.1 (14 Mar 2005)
+
+  14 Mar 2005; Eldad Zack <eldad@gentoo.org> +metadata.xml, +nb-0.6.1.ebuild:
+  Initial ebuild. based on ebuild submitted by Luc Stepniewski
+  <lstep@adelux.fr>. Closes #83145.
+
