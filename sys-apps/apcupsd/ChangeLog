@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.20 2003/11/01 12:42:04 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.21 2003/11/01 19:57:41 tantive Exp $
+
+  01 Nov 2003; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.6.ebuild:
+  Changed various things. Corrected paths for apache2, added a patch for 
+  the scripts in /etc/apcupsd. Linked onbattery to powerout.
+  Closes #25379 and #32471.
 
 *apcupsd-3.10.6 (01 Nov 2003)
 

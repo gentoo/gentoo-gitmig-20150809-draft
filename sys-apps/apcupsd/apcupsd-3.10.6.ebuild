@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.5 2003/11/01 15:52:12 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.6 2003/11/01 19:57:41 tantive Exp $
 
 IUSE="doc snmp usb apache2"
 
@@ -74,6 +74,10 @@ src_install () {
 	insinto /etc/apcupsd
 	newins examples/safe.apccontrol safe.apccontrol
 
+	cd ${D}/etc/apcupsd
+	epatch ${FILESDIR}/${PV}/smtp.patch
+	
+	ln -s onbattery powerout
 
 	if [ "`use doc`x" != "x" ]
 	then
