@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xindice
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.4 2004/06/24 22:02:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.5 2004/08/23 07:37:23 phosphan Exp $
+
+  23 Aug 2004; Patrick Kursawe <phosphan@gentoo.org> xindice-1.0-r1.ebuild:
+  Warning about JVM in setup now
 
 *xindice-1.0-r1 (24 Feb 2004)
 

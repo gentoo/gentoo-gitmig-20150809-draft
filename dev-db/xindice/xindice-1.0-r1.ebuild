@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r1.ebuild,v 1.2 2004/06/24 22:02:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r1.ebuild,v 1.3 2004/08/23 07:37:23 phosphan Exp $
 
 inherit eutils
 
@@ -20,6 +20,9 @@ S=${WORKDIR}/xml-${P}
 pkg_preinst() {
 	enewgroup xindice || die "Adding group xindice failed"
 	enewuser xindice -1 /bin/sh /var/run/xindice xindice || die "Adding user xindice failed"
+}
+
+pkg_setup() {
 	ewarn "This has only been tested with Sun's JDK!"
 	ewarn "Good luck if you use another VM"
 }
