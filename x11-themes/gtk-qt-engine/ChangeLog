@@ -1,6 +1,15 @@
 # ChangeLog for x11-themes/gtk-qt-engine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-qt-engine/ChangeLog,v 1.5 2005/01/05 06:25:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-qt-engine/ChangeLog,v 1.6 2005/01/15 13:34:23 motaboy Exp $
+
+*gtk-qt-engine-0.6-r1 (15 Jan 2005)
+
+  15 Jan 2005; Simone Gotti <motaboy@gentoo.org> metadata.xml,
+  +files/gtk-qt-engine-0.6-kcm-fixinstallationdir.patch,
+  +gtk-qt-engine-0.6-r1.ebuild:
+  Fix the installation path from /usr/kde/x.x to /usr, patch submitted to the
+  author. Also add myself to the mantainers as I have more changes for this
+  ebuild in the future.
 
   05 Jan 2005; Marcus Hanwell <cryos@gentoo.org> gtk-qt-engine-0.6.ebuild:
   Marked ~amd64, closing bug 70250.
