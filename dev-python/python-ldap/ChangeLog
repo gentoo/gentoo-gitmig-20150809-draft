@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.2 2002/08/02 02:12:11 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.3 2002/09/24 20:36:49 jnelson Exp $
+
+*python-ldap-2.0.0pre05-r1 (24 Sep 2002)
+  24 Sep 2002; Jon Nelson <jnelson@gentoo.org> python-ldap-2.0.0_pre05-r1.ebuild:
+  Fix for bug 8278 
+  Thanks to oliver at rutherfurd.net (Ollie Rutherfurd)
 
 *python-ldap-2.0.0pre05 (1 Aug 2002)
 
