@@ -1,0 +1,10 @@
+# ChangeLog for app-text/unrtf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.1 2003/10/11 07:36:20 robbat2 Exp $
+
+*unrtf-0.18.1 (11 Oct 2003)
+
+  11 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> unrtf-0.18.1.ebuild:
+  initial commit. ebuild and gcc3.3 patch written by robbat2@gentoo.org. patch
+  passed upstream.
+
