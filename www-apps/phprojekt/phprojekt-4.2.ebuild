@@ -1,0 +1,42 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-4.2.ebuild,v 1.1 2004/08/19 19:17:55 rl03 Exp $
+
+inherit webapp
+
+DESCRIPTION="Project management and coordination system"
+HOMEPAGE="http://www.phprojekt.com/"
+IUSE="postgres mysql"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
+LICENSE="GPL-2"
+KEYWORDS="~x86 ~ppc"
+
+DEPEND="$DEPEND"
+RDEPEND="net-www/apache
+		postgres? ( dev-db/postgresql )
+		mysql? ( dev-db/mysql )
+		virtual/php"
+
+pkg_setup () {
+	webapp_pkg_setup
+	einfo "Please make sure that your PHP is compiled with support for IMAP and your database of choice"
+	sleep 5
+}
+
+pkg_compile() {
+	:;
+}
+
+src_install() {
+	webapp_src_preinst
+
+	dodoc ChangeLog install readme
+	rm -f ChangeLog install readme
+	cp -R . ${D}/${MY_HTDOCSDIR}
+	for file in chat attach upload; do
+		webapp_serverowned ${MY_HTDOCSDIR}/${file}
+	done
+	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+
+	webapp_src_install
+}
