@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.2-r1.ebuild,v 1.3 2002/09/03 10:48:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.2-r1.ebuild,v 1.4 2002/09/10 09:48:39 seemant Exp $
 
 S=${WORKDIR}/${P}/abi
 DESCRIPTION="Text processor"
@@ -18,8 +18,8 @@ DEPEND="virtual/x11
 	xml2?  ( >=dev-libs/libxml2-2.4.10 )
 	spell? ( >=app-text/aspell-0.50 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
-	         >=gnome-extra/gal-0.13-r1 
-	         >=gnome-base/bonobo-1.0.9-r1 )"
+		>=gnome-extra/gal-0.13-r1 
+		>=gnome-base/bonobo-1.0.9-r1 )"
 
 
 fix_perl_env() {
