@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/grubconf-0.5.1.ebuild,v 1.4 2004/06/24 21:27:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/grubconf-0.5.1.ebuild,v 1.5 2004/08/22 16:46:25 robmoss Exp $
 
 inherit gnome2 eutils
 
@@ -25,4 +25,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/po
 	epatch ${FILESDIR}/Makefile.in.in.patch
+}
+
+src_compile() {
+	econf --enable-splashimage
+	emake
 }
