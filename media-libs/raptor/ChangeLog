@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/raptor
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.13 2004/04/16 11:27:20 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.14 2004/06/17 07:16:09 eradicator Exp $
+
+  17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> raptor-0.9.12.ebuild,
+  raptor-1.2.0.ebuild:
+  Readded ~sparc to 1.2.0.  0.9.12 stable sparc.  1.2.0 stable amd64.
 
   16 Apr 2004; Travis Tilley <lv@gentoo.org> raptor-1.2.0.ebuild:
   added ~amd64 keyword
