@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.14.ebuild,v 1.4 2004/08/06 04:07:39 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.15_pre4.ebuild,v 1.1 2004/08/06 04:07:39 morfic Exp $
 
 inherit eutils
 
-SILVERXP_P="SilverXP-${PV}-single-1"
+#this needs to use the theme for 1.2.14 probably all through pre phase
+SILVERXP_P="SilverXP-1.2.14-single-1"
 
 DESCRIPTION="Ice Window Manager"
 SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz
@@ -13,20 +14,20 @@ HOMEPAGE="http://www.icewm.org/
 	http://sourceforge.net/projects/icewmsilverxp/"
 IUSE="esd gnome imlib nls spell truetype xinerama silverxp"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	esd? ( media-sound/esound )
 	gnome? ( gnome-base/gnome-libs gnome-base/gnome-desktop )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
 	nls? ( sys-devel/gettext )
 	truetype? ( >=media-libs/freetype-2.0.9 )
-	>=sys-apps/sed-4"
-
-RDEPEND="${DEPEND}
 	media-fonts/artwiz-fonts"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 S=${WORKDIR}/${P/_}
 
 src_unpack() {
@@ -35,6 +36,10 @@ src_unpack() {
 	if use silverxp ; then
 		epatch ${WORKDIR}/${PN}/themes/${SILVERXP_P}/Linux/ybutton.cc.patch
 	fi
+
+	echo "#!/bin/bash" > $T/icewm
+	echo "/usr/bin/icewm-session" >> $T/icewm
+
 }
 
 src_compile(){
@@ -74,21 +79,19 @@ src_compile(){
 		--with-cfgdir=/etc/icewm \
 		--with-docdir=/usr/share/doc/${PF}/html \
 		${myconf} || die "configure failed"
-	cd src
-	sed -i "s:/icewm-\$(VERSION)::" Makefile || die "patch failed"
-	cd ${S}
+
+	sed -i "s:/icewm-\$(VERSION)::" src/Makefile || die "patch failed"
+
 
 	emake || die "emake failed"
 }
 
 src_install(){
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die  "make instal failed"
 
 	dodoc AUTHORS BUGS CHANGES FAQ PLATFORMS README* TODO VERSION
 	dohtml -a html,sgml doc/*
 
-	echo "#!/bin/bash" > icewm
-	echo "/usr/bin/icewm-session" >> icewm
 	exeinto /etc/X11/Sessions
-	doexe icewm
+	doexe $T/icewm
 }
