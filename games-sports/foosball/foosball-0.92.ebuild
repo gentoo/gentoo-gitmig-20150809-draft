@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foosball/foosball-0.92.ebuild,v 1.4 2004/05/04 02:23:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foosball/foosball-0.92.ebuild,v 1.5 2004/06/24 23:24:30 agriffis Exp $
 
 inherit games
 
