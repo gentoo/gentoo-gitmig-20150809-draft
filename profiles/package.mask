@@ -570,7 +570,7 @@ dev-utils/vdkbuilder
 
 # masking nhc98, until strange module lookup behaviour is resolved
 # george - Jun 8, 2002
-dev-lang/nhc98
+=dev-lang/nhc98-1.12
 
 # masking k3studio, somehow it escaped being masked before
 # ebuild incomplete
