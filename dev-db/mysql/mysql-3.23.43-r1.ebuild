@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.41.ebuild,v 1.3 2001/10/29 08:14:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.43-r1.ebuild,v 1.1 2001/10/29 08:14:55 achim Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="The MySQL Database"
-SRC_URI="ftp://mysql.valueclick.com/mysql/Downloads/MySQL-3.23/${A}
-	 http://www.mysql.com/Downloads/MySQL-3.23/${A}"
+SRC_URI="ftp://mysql.valueclick.com/mysql/Downloads/MySQL-3.23/${P}.tar.gz
+	 http://www.mysql.com/Downloads/MySQL-3.23/${P}.tar.gz"
 
 HOMEPAGE="http://www.mysql.com/"
 
@@ -57,7 +56,12 @@ src_compile() {
       # Means use system readline
       myconf="$myconf --without-readline"
     fi
-
+    if [ "`use berkdb`" ]
+    then
+      myconf="$myconf --with-berkeley-db --with-berkeley-db-includes=/usr/include/db3 --with-berkeley-db-libs=/usr/lib"
+    else
+      myconf="$myconf --without-berkdb"
+    fi
     if [ "$DEBUG" == "true" ]
     then
       myconf="$myconf --with-debug"
@@ -65,40 +69,39 @@ src_compile() {
       myconf="$myconf --without-debug"
     fi
     
-	try CXX=gcc ./configure --prefix=/usr	\
-	--enable-shared 					\
-	--enable-static 					\	
-	--enable-assembler 					\
-	--enable-thread-safe-client 				\
-	--with-low-memory 					\
-	--libdir=/usr/lib 					\
-	--libexecdir=/usr/sbin 					\
-	--sysconfdir=/etc/mysql 				\
-	--localstatedir=/var/mysql 				\
-	--infodir=/usr/share/info 				\
-	--mandir=/usr/share/man 				\
-	--with-mysql-user=mysql 				\
-	--with-berkeley-db=${S}/bdb				\
-	--with-innodb						\
-        $myconf
+    CXX=gcc ./configure --host=${CHOST} 			\
+			--prefix=/usr 				\
+			--enable-shared 			\
+			--enable-static				\
+			--enable-assembler			\
+			--enable-thread-safe-client 		\
+			--with-low-memory 			\
+			--libdir=/usr/lib 			\
+			--libexecdir=/usr/sbin 			\
+			--sysconfdir=/etc/mysql 		\
+			--localstatedir=/var/mysql 		\
+			--infodir=/usr/share/info 		\
+			--mandir=/usr/share/man 		\
+			--with-mysql-user=mysql 		\
+		        $myconf || die
 
-	try make testdir=/usr/share/mysql/test benchdir=/usr/share/mysql/bench
+#			--with-innodb				\
+	make testdir=/usr/share/mysql/test 			\
+	     benchdir=/usr/share/mysql/bench || die
 }
 
 src_install() {
-
-	
 	# Install MySQL
 
-	try make install prefix=${D}/usr \
-		libdir=${D}/usr/lib \
-		libexecdir=${D}/usr/sbin \
-		sysconfdir=${D}/etc/mysql \
-		localstatedir=${D}/var/mysql \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-	 	testdir=${D}/usr/share/mysql/test \
-		benchdir=${D}/usr/share/mysql/bench
+	make install prefix=${D}/usr 				\
+	     libdir=${D}/usr/lib 				\
+	     libexecdir=${D}/usr/sbin 				\
+	     sysconfdir=${D}/etc/mysql 				\
+	     localstatedir=${D}/var/mysql 			\
+	     infodir=${D}/usr/share/info 			\
+	     mandir=${D}/usr/share/man 				\
+	     testdir=${D}/usr/share/mysql/test 			\
+	     benchdir=${D}/usr/share/mysql/bench || die
 
 
 	# Move Client Libs
