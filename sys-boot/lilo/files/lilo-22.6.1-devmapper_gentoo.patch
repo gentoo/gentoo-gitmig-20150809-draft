@@ -1,6 +1,6 @@
-diff -Nur lilo-22.6.orig/geometry.c lilo-22.6/geometry.c
---- lilo-22.6.orig/geometry.c	2004-08-25 20:21:08.000000000 +0200
-+++ lilo-22.6/geometry.c	2004-09-21 22:42:05.023500680 +0200
+diff -Nur lilo-22.6.1.orig/geometry.c lilo-22.6.1/geometry.c
+--- lilo-22.6.1.orig/geometry.c	2004-11-16 08:11:03.000000000 +0100
++++ lilo-22.6.1/geometry.c	2005-03-15 00:13:42.761215192 +0100
 @@ -15,6 +15,9 @@
  #include <stdio.h>
  #include <fcntl.h>
@@ -151,7 +151,7 @@ diff -Nur lilo-22.6.orig/geometry.c lilo-22.6/geometry.c
  }
  
  
-@@ -776,6 +848,161 @@
+@@ -777,6 +849,161 @@
  {
      DT_ENTRY *walk;
      int inherited,keep_cyls,is_raid=0;
@@ -313,7 +313,7 @@ diff -Nur lilo-22.6.orig/geometry.c lilo-22.6/geometry.c
  
      if (verbose>=5) printf("geo_get: device %04X, all=%d\n", device, all);
  #ifdef LCF_LVM
-@@ -1147,14 +1374,50 @@
+@@ -1154,14 +1381,50 @@
              die("EVMS boot volume cannot be on multiple disks.\n");
          sector = ebm.rsector + ((offset/SECTOR_SIZE) % geo->spb) + geo->start;
      }
@@ -371,10 +371,10 @@ diff -Nur lilo-22.6.orig/geometry.c lilo-22.6/geometry.c
   /*   DON'T always use CHS addressing on floppies:     JRC   */
  /*    if ((geo->device & 0x80) && (linear || lba32)) {	*/
      if ((linear || lba32)) {
-diff -Nur lilo-22.6.orig/Makefile lilo-22.6/Makefile
---- lilo-22.6.orig/Makefile	2004-09-02 20:06:27.000000000 +0200
-+++ lilo-22.6/Makefile	2004-09-21 22:42:05.018501440 +0200
-@@ -53,7 +53,7 @@
+diff -Nur lilo-22.6.1.orig/Makefile lilo-22.6.1/Makefile
+--- lilo-22.6.1.orig/Makefile	2004-11-17 19:41:56.000000000 +0100
++++ lilo-22.6.1/Makefile	2005-03-15 00:14:28.277295696 +0100
+@@ -59,7 +59,7 @@
  #   XL_SECS=n	  Support for extra large (non-standard) floppies.
  
  CONFIG=-DBDATA -DDSECS=3 -DEVMS -DIGNORECASE -DLVM -DONE_SHOT -DPASS160 \
@@ -383,7 +383,7 @@ diff -Nur lilo-22.6.orig/Makefile lilo-22.6/Makefile
  
  # set the compiler optimization level
  
-@@ -95,6 +95,8 @@
+@@ -101,6 +101,8 @@
  LDFLAGS=#-Xlinker -qmagic
  LIBS=
  
@@ -392,7 +392,7 @@ diff -Nur lilo-22.6.orig/Makefile lilo-22.6/Makefile
  OBJS=lilo.o raid.o map.o geometry.o boot.o device.o common.o bsect.o cfg.o \
    partition.o identify.o probe.o shs2.o edit.o temp.o
  
-@@ -270,7 +272,11 @@
+@@ -291,10 +293,18 @@
  		cp -p dparam.S dparam.s
  
  lilo:		$(OBJS)
@@ -403,4 +403,11 @@ diff -Nur lilo-22.6.orig/Makefile lilo-22.6/Makefile
 +endif
  
  lilo-static:	$(OBJS)
++ifneq (,$(findstring DEVMAPPER,$(CONFIG)))
++		$(CC) -o lilo-static -static $(LDFLAGS) $(OBJS) $(LIBS) $(DEVMAPPER)
++else
  		$(CC) -o lilo-static -static $(LDFLAGS) $(OBJS) $(LIBS)
++endif
+ 
+ boot-text.b:	first.b second.b
+ 		(dd if=first.b bs=512 conv=sync; dd if=second.b) >boot-text.b
