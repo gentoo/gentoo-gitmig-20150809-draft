@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.42 2003/03/09 19:49:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.43 2003/03/13 19:17:38 doctomoe Exp $
+
+  13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> xmms-1.2.7-r19.ebuild:
+  Mark stable on ppc
 
   19 Jan 2003; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r18.ebuild :
   Add patch to save playlist, etc on SIGTERM and SIGINT, bug #13604.
