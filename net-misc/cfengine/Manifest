@@ -3,7 +3,6 @@ MD5 a2be03b6731823dbd298d4f35758f9b6 cfengine-1.6.3.ebuild 723
 MD5 36e77baa893f49bfd0c662fecc417af4 cfengine-2.0.3.ebuild 909
 MD5 e97f5f512d0ece4b0dd0100dc9f70d6c cfengine-2.0.6-r1.ebuild 991
 MD5 62a95c94d7136aa0edd4c4e32fe14434 metadata.xml 846
-MD5 0e7a0991afcf232cc7e2cc2fdb8f70f9 cfengine-2.0.8_p1.ebuild 1238
 MD5 e35c3445cb81576250f15893c893b290 cfengine-2.0.8_p1-r2.ebuild 1570
 MD5 062385a131f06d892f12367e9e7df136 cfengine-2.1.0_beta5.ebuild 1576
 MD5 a1c3e8d4352d939660ecc6de54436e45 files/cfengine-2.0.6-db4.diff 567
