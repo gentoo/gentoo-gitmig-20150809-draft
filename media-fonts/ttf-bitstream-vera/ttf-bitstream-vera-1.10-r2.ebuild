@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ttf-bitstream-vera-1.10-r2.ebuild,v 1.5 2003/09/17 19:20:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ttf-bitstream-vera-1.10-r2.ebuild,v 1.6 2003/11/19 00:13:40 gmsoft Exp $
 
 inherit gnome.org
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/fonts/"
 LICENSE="BitstreamVera"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~mips ~arm amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~mips ~arm amd64 hppa"
 IUSE=""
 
 DEPEND="X? ( virtual/x11 )"

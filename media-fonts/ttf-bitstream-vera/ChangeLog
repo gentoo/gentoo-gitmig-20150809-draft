@@ -1,12 +1,15 @@
 # ChangeLog for media-fonts/ttf-bitstream-vera
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ChangeLog,v 1.2 2003/09/17 19:20:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ChangeLog,v 1.3 2003/11/19 00:13:40 gmsoft Exp $
 
   17 Sep 2003; Jason Wever <weeve@gentoo.org>
   ttf-bitstream-vera-1.10-r2.ebuild:
   Marked stable for sparc, fixes bug #28986.
 
 *ttf-bitstream-vera-1.10-r2 (02 Jun 2003)
+
+  19 Nov 2003; Guy martin <gmsoft@gentoo.org> ttf-bitstream-vera-1.10-r2.ebuild :
+  Added hppa to KEYWORDS.
 
   02 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
   ttf-bitstream-vera-1.10-r2.ebuild:
