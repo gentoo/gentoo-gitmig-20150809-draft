@@ -1,11 +1,24 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.7 2002/12/17 19:51:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.8 2003/02/10 02:08:15 seemant Exp $
+
+*evilwm-0.99.14 (09 Feb 2003)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> evilwm-0.99.14.ebuild
+  files/digest-evilwm-0.99.14 :
+
+  Version bump.
+
+*evilwm-0.99.11 (23 Nov 2002)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> evilwm-0.99.11.ebuild :
+
+  Made virtual/motif a USE flag based DEPEND, and did sed-fu to make it
+  optional in the makefile.  Closes bug #15356 by: Pierre-Olivier Bouchard
+  <petecoolrulez@hotmail.com>. Moved to x86 profile
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*evilwm-0.99.11 (23 Nov 2002)
-
   23 Nov 2002; Sascha Schwabbauer <cybersystem@gentoo.org> evilwm-0.99.11.ebuild :
 
   Added ~ppc to keywords.

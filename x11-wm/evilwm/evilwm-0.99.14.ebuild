@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.11.ebuild,v 1.3 2003/02/10 02:08:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.14.ebuild,v 1.1 2003/02/10 02:08:15 seemant Exp $
 
 MY_P="${PN}_${PV}.orig"
 S=${WORKDIR}/${MY_P/_/-}
@@ -11,15 +11,15 @@ HOMEPAGE="http://evilwm.sourceforge.net"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/x11
 	motif? ( virtual/motif )"
 
 src_unpack() {
+
 	unpack ${A}
 	cd ${S}
-	
 	if [ -z "`use motif`" ]
 	then
 		cp Makefile ${T}
