@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b3c4d1d3fafdac94c77d2b679ec8b0f3 gnome-themes-2.8.0.ebuild 1031
+MD5 80abadd90355b3604ce84519111ab911 ChangeLog 7860
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d67ac91d2a59be3985873f053a93c43e gnome-themes-2.6.3.ebuild 921
 MD5 267cf43751534656cba288a8567f5db4 gnome-themes-2.8.1.ebuild 992
 MD5 9a20bc338d043eb9f2873c9d38eb5195 gnome-themes-2.6.2.ebuild 920
-MD5 f3844ebd3a24c087a691852ef69a4f96 ChangeLog 7755
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 00981a0b7f653ab554fe4daed11e3d3e gnome-themes-2.8.0.ebuild 1029
-MD5 3897ab483f12d01196f5b5cf10d80ff8 files/digest-gnome-themes-2.6.2 72
 MD5 1518de7ec09f462e8ddfc392d24f0468 files/digest-gnome-themes-2.6.3 72
-MD5 dcd414e77b8ec5089e47243adfb6c266 files/digest-gnome-themes-2.8.0 72
 MD5 b1f167e0d1867df47e9508c2fe3a8af5 files/digest-gnome-themes-2.8.1 72
+MD5 3897ab483f12d01196f5b5cf10d80ff8 files/digest-gnome-themes-2.6.2 72
 MD5 1c5f99943a8108a29d4a8eebbfb04db2 files/gnome-themes-2.4.0-nothinice.patch 1225
+MD5 dcd414e77b8ec5089e47243adfb6c266 files/digest-gnome-themes-2.8.0 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBus5gugEuf3OQ0akRAnQoAJ4pzPZ3LYq4vaz0LRmPEigc+7Z8mgCfc9ZX
+qaL/QkVN+OLThVcunU/zZvc=
+=4kH5
+-----END PGP SIGNATURE-----
