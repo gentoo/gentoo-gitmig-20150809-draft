@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.9.2.ebuild,v 1.3 2004/10/16 19:49:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.9.2.ebuild,v 1.4 2004/11/04 22:35:44 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64 ~mips ~hppa ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
