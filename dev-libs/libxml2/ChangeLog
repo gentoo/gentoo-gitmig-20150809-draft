@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.47 2003/08/18 13:03:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.48 2003/09/06 19:13:21 obz Exp $
+
+  07 Sep 2003; Mike Gardiner <obz@gentoo.org> libxml2-2.5.10.ebuild,
+  libxml2-2.5.8.ebuild, libxml2-2.5.9.ebuild:
+  Added catalog initialisation, for if the catalog doesnt exist
 
 *libxml-2.5.10 (18 Aug 2003)
 
