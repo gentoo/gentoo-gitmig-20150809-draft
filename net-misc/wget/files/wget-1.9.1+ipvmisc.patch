@@ -714,7 +714,7 @@ diff -ruN --exclude configure wget-1.9.orig/src/host.c wget-1.9/src/host.c
  	 this returns, so we can just copy it to STORE_IP.  */
        map_ipv4_to_ip ((ip4_address *)&addr_ipv4, &addr);
 -      return address_list_from_single (&addr);
-+      return address_list_from_single (&addr, AF_INET6);
++      return address_list_from_single (&addr, AF_INET);
      }
  
    if (host_name_addresses_map)

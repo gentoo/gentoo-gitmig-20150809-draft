@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.35 2003/12/06 06:53:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.36 2003/12/10 09:24:58 seemant Exp $
+
+  10 Dec 2003; Seemant Kulleen <seemant@gentoo.org> wget-1.9.1-r2.ebuild,
+  files/wget-1.9.1+ipvmisc.patch:
+  port patch fix from 1.9 to this patch, closing the same bug again
 
   05 Dec 2003; Daniel Robbins <drobbins@gentoo.org> wget-1.8.2.ebuild:
   making autoconf a non-conditional DEPEND, closing bug #34114.

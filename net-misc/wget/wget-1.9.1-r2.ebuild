@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r2.ebuild,v 1.2 2003/12/01 17:54:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r2.ebuild,v 1.3 2003/12/10 09:24:58 seemant Exp $
 
 inherit gnuconfig
 
@@ -31,7 +31,8 @@ src_compile() {
 	#fix bug 34515, REMOVE THIS AFTER 1.9.1
 	if use nls; then
 		cd po
-		cat de.po | iconv -f UTF-8 -t ISO-8859-1 > de.po.new; mv de.po.new de.po
+		cat de.po | iconv -f UTF-8 -t ISO-8859-1 > de.po.new
+		mv de.po.new de.po
 		cd ..
 	fi
 
