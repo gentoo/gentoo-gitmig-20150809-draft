@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/terminatorX
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorX/ChangeLog,v 1.1 2003/06/25 10:41:17 torbenh Exp $
+
+*terminatorX-3.80 (25 Jun 2003)
+
+  25 Jun 2003; torbenh <torbenh@gentoo.org> Manifest terminatorX-3.80.ebuild files/terminatorX-3.80.GNOMEpresent.patch files/terminatorX-3.80.fixGnomeMakefile.patch :
+  Initial Version
+
