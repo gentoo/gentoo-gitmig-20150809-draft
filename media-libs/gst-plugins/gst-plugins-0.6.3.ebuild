@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.8 2003/10/10 19:00:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.9 2003/10/10 21:34:49 foser Exp $
 
 # IMPORTANT
 #
@@ -11,7 +11,8 @@
 # This may change in the future, but for now 3rd-party apps do probably not need to depend
 # on mpeg/avi plugins etcetera unless they are directly referenced
 
-inherit gnome2 gst-plugins eutils flag-o-matic
+# order is important, gnome2 after gst-plugins
+inherit gst-plugins gnome2 eutils flag-o-matic
 
 DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.net/"
