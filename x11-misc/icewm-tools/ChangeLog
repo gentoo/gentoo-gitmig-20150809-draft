@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/icewm-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewm-tools/ChangeLog,v 1.15 2004/06/24 22:24:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewm-tools/ChangeLog,v 1.16 2004/07/27 12:38:34 phosphan Exp $
+
+*icewm-tools-2.7 (27 Jul 2004)
+
+  27 Jul 2004; Patrick Kursawe <phosphan@gentoo.org> +icewm-tools-2.7.ebuild:
+  Version bump
 
   24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
   icewm-tools-2.6.3-r1.ebuild:
