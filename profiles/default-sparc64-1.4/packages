@@ -121,5 +121,5 @@
 # Get a decent editor - BROKEN
 #*app-editors/levee
 
-# Sed replacement
-*sys-apps/supersed
+# Sed replacement - POSTPONED
+#*sys-apps/supersed

@@ -12,7 +12,7 @@ sys-apps/gawk
 sys-apps/grep
 sys-apps/gzip
 sys-apps/portage
-sys-apps/supersed
+sys-apps/sed
 sys-apps/sh-utils
 sys-apps/tar
 sys-apps/textutils
