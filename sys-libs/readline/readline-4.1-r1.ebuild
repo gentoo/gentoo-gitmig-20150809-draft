@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.1-r1.ebuild,v 1.6 2000/11/30 23:14:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.1-r1.ebuild,v 1.7 2000/12/01 02:04:21 achim Exp $
 
 P=readline-4.1
 A=${P}.tar.gz
@@ -35,6 +35,9 @@ src_install() {
 	dodoc doc/*.html
 	dosym libhistory.so.4.1 /usr/lib/libhistory.so
 	dosym libreadline.so.4.1 /usr/lib/libreadline.so
+	# Needed because make install uses ${D} for the link
+	dosym libhistory.so.4.1 /usr/lib/libhistory.so.4
+	dosym libreadline.so.4.1 /usr/lib/libreadline.so.4
 	chmod 755 ${D}/usr/lib/*.4.1
 }
 
