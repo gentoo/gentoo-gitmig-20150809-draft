@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3364 2004/12/01 19:16:51 swegener Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3365 2004/12/01 20:06:32 swegener Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -362,10 +362,6 @@ media-video/jahshaka
 # Version including CVS snapshots for gtk2 and pgp-inline support, masked until
 # it proofs itself usable.
 =mail-client/sylpheed-claws-0.9.12a-r1
-
-# <swegener@gentoo.org> (25 Aug 2004)
-# alpha software and segfaults when deleting rows
-dev-db/mysql-query-browser
 
 # <carlo@gentoo.org> (23 Aug 2004)
 # upstream development suspended
