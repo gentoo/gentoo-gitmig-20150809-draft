@@ -1,0 +1,10 @@
+--- interface.c.org	2004-11-14 12:02:20.299531311 +0000
++++ interface.c	2004-11-14 12:02:30.669978183 +0000
+@@ -1033,6 +1033,7 @@
+ 					return_menu ();
+ 					break;
+ 				default:
++					break;
+ 			}
+ 		}
+ #endif

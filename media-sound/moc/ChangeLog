@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.7 2004/09/24 18:37:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.8 2004/11/17 00:27:30 eradicator Exp $
+
+  16 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/moc-1.1.0-gcc34.patch, moc-1.1.0.ebuild:
+  Ebuild cleanup. Added gcc-3.4 fix thanks to James
+  <James@superbug.demon.co.uk> in bug #71139. Added to ~amd64.
 
   24 Sep 2004; Sven Wegener <swegener@gentoo.org> moc-1.1.0.ebuild:
   Fixed CVS keyword replacement.
