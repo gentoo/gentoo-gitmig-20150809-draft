@@ -28,7 +28,7 @@
 # wacky version.
 *>=sys-apps/baselayout-1.8.5.8
 *>=sys-apps/portage-2.0.36
-*>=sys-devel/binutils-2.13.90.0.18
+*>=sys-devel/binutils-2.13.90.0.16-r1
 *>=sys-devel/gcc-3.2.2
 *>=sys-libs/glibc-2.3.1-r2
 ~sys-kernel/hppa-headers-2.4.20_p32
