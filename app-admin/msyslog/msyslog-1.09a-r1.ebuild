@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.09a-r1.ebuild,v 1.7 2004/06/24 21:32:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.09a-r1.ebuild,v 1.8 2004/06/25 19:20:46 vapier Exp $
 
 inherit eutils
 
 #lame upstream conventions...
 #archive:    msyslog-1.09a-src.tar.gz
 #unpacks to: msyslog-v1.09a/
-
 S=${WORKDIR}/${PN}-v${PV}
 DESCRIPTION="Flexible and easy to integrate syslog with modularized input/output"
 HOMEPAGE="http://sourceforge.net/projects/msyslog/"
@@ -18,7 +17,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~mips hppa ~amd64"
 IUSE="postgres mysql"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	mysql? ( >=dev-db/mysql-3.23 )
 	postgres? ( >=dev-db/postgresql-7 )"
@@ -38,22 +37,19 @@ src_compile() {
 		`use_with mysql` \
 		`use_with postgres pgsql` \
 		${myconf} || die
-
 	emake || die
 }
 
 src_install() {
-	into /usr
-	dosbin src/msyslogd src/peo/peochk
+	dosbin src/msyslogd src/peo/peochk || die
 
 	# be mindful here when upgrading...
-	exeinto /usr/lib
-	doexe src/modules/lib${PN}.so.${PV}
-	( cd ${D}/usr/lib ; ln -s lib${PN}.so.${PV} lib${PN}.so )
+	dolib.so src/modules/lib${PN}.so.${PV}
+	dosym lib${PN}.so.${PV} /usr/lib/lib${PN}.so
 
 	# rename these puppies...
-	mv src/man/syslogd.8 src/man/msyslogd.8
-	mv src/man/syslog.conf.5 src/man/msyslog.conf.5
+	mv src/man/{,m}syslogd.8
+	mv src/man/{,m}syslog.conf.5
 	doman src/man/*.[85]
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS \
