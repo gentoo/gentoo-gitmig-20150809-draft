@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rnaview/rnaview-1.ebuild,v 1.1 2004/12/23 21:39:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rnaview/rnaview-1.ebuild,v 1.2 2005/01/19 00:26:09 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 src_unpack() {
