@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-hlguard/halflife-hlguard-1.41.ebuild,v 1.5 2004/06/24 23:19:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-hlguard/halflife-hlguard-1.41.ebuild,v 1.6 2004/11/03 13:47:25 vapier Exp $
 
 inherit games eutils
 
@@ -14,6 +14,8 @@ KEYWORDS="-* x86"
 IUSE=""
 
 RDEPEND="games-server/halflife-metamod"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}/addons/hlguard
 

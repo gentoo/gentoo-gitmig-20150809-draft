@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 5bc7718894acea7de7cab3533d644a3e ChangeLog 504
-MD5 7875e1d79e53d348de82b5acffb577f6 halflife-hlguard-1.41.ebuild 817
-MD5 9a4819854413986bbb8dfcb3a153119a halflife-hlguard-1.50.02.ebuild 970
+MD5 679f2be9b864aee9f31cdaf29cde4255 halflife-hlguard-1.41.ebuild 851
+MD5 ffa8ebf674e52b96b203e106b1f6aa6f halflife-hlguard-1.50.02.ebuild 1004
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 808a8631750538467a9bcf2bba8b5d70 files/digest-halflife-hlguard-1.41 60
 MD5 9f40c4af0ea9c0b44083202aee530e75 files/digest-halflife-hlguard-1.50.02 63
 MD5 5b0e3503dd0851aecbfeec5d757d9590 files/modsetup 1357
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFA+e4jmdTrptrqvGERAl0LAKCSLZDXTjTHvGYoQTSxZorZ0Tkx1ACfVAU5
-aaXP6HUEbxiBxda/Miaa3AI=
-=NoY/
+iD8DBQFBiOGUHTu7gpaalycRAtf5AJ4pDRvCyshdUlI6CGNKxzGT5K/zyQCg3FsO
+l+eH/3gj2JC0odMiupIB8Ow=
+=XPb5
 -----END PGP SIGNATURE-----
