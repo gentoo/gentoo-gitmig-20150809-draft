@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.7 2002/08/01 22:14:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.8 2002/08/02 09:44:35 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -16,7 +16,7 @@ INHERITED="$INHERITED $ECLASS"
 # cvs command to run. you can set fex. "cvs -t" for extensive debug information
 # on the cvs onnection. the default of "cvs -q -f -z4" means to be quiet, to disregard
 # the ~/.cvsrc config file and to use maximum compression.
-[ -z "$ECVS_CVS_COMMAND" ] && ECVS_CVS_COMMAND="cvs -f -z4"
+[ -z "$ECVS_CVS_COMMAND" ] && ECVS_CVS_COMMAND="cvs -q -f -z4"
 
 # cvs options given after the command (i.e. cvs update foo)
 # don't remove -dP or things won't work
