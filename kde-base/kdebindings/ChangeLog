@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebindings
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.16 2002/12/13 21:07:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.17 2002/12/22 13:01:52 hannes Exp $
+
+*kdebindings-3.0.5a (22 Dec 2002)
+
+  22 Dec 2002; Hannes Mehnert <hannes@gentoo.org> ChangeLog:
+  version bump
 
   13 Dec 2002; Dan Armak <danarmak@gentoo.org> kdebindings-3.1_rc5.ebuild  :
 
