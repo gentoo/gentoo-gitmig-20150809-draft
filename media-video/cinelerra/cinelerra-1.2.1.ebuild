@@ -1,13 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.2.1.ebuild,v 1.2 2004/10/21 07:48:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.2.1.ebuild,v 1.3 2005/03/21 07:29:04 mr_bones_ Exp $
 
 inherit gcc eutils flag-o-matic
 export WANT_GCC_3="yes"
 
 #export CFLAGS=${CFLAGS/-O?/-O2}
-
-filter-flags -fPIC -fforce-addr
 
 RESTRICT="nostrip"
 
@@ -35,6 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -fPIC -fforce-addr
 	export CFLAGS=${CFLAGS}
 	cd ${S}/freetype-2.1.4/builds/unix
 	econf ||die

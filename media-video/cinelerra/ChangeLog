@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cinelerra
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.25 2004/10/21 07:48:45 lu_zero Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.26 2005/03/21 07:29:04 mr_bones_ Exp $
+
+  21 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> cinelerra-1.2.1.ebuild:
+  filter-flags not in global scope
 
   21 Oct 2004; Luca Barbato <lu_zero@gentoo.org> cinelerra-1.2.1.ebuild:
   Fix bug #62367, a misuse of filter-flags
