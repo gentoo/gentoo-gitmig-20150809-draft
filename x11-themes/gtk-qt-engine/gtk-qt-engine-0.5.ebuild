@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-qt-engine/gtk-qt-engine-0.5.ebuild,v 1.5 2004/10/03 20:55:23 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-qt-engine/gtk-qt-engine-0.5.ebuild,v 1.6 2004/10/04 20:13:25 pvdabeel Exp $
 
 inherit gtk-engines2 eutils kde-functions
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 IUSE="arts debug"
 SLOT="2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="${DEPEND}
 	>=x11-libs/gtk+-2.2.0

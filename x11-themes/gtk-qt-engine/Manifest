@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 15822d0e3748aaaa4dbdb273d7b993d7 ChangeLog 771
+MD5 1464efe254dbb8f9bd8010420462a261 gtk-qt-engine-0.5.ebuild 773
 MD5 0e79bc82b6162e7b6e378a4eb9845eed metadata.xml 203
-MD5 b758ef8a34fcfd7197981e669f6aa9dd gtk-qt-engine-0.5.ebuild 768
-MD5 e196ce1ba2450ad5143189c23599dea7 files/scrollbars.patch 590
 MD5 c14fd0a50b68b19f5a9ad65022681cb1 files/digest-gtk-qt-engine-0.5 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBYGdKE67gNkjlZFIRAuESAJ4heHE2LkAO/i6DUChvcNJgF1PF/gCgmLEQ
-SMo74lL6Z1gIdY/8ZFlkmC4=
-=Porl
------END PGP SIGNATURE-----
+MD5 e196ce1ba2450ad5143189c23599dea7 files/scrollbars.patch 590
