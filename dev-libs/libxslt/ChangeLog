@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.56 2004/02/10 06:24:00 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.57 2004/02/17 14:58:54 foser Exp $
+
+*libxslt-1.1.3 (17 Feb 2004)
+
+  17 Feb 2004; foser <foser@gentoo.org> libxslt-1.1.3.ebuild :
+  New release, update libxml2 dep
 
   10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> libxslt-1.1.2.ebuild:
   set ppc in keywords
