@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcpflow
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.5 2004/07/10 11:25:19 eldad Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.6 2005/01/26 00:44:09 dragonheart Exp $
+
+*tcpflow-0.21 (26 Jan 2005)
+
+  26 Jan 2005; Daniel Black <dragonheart@gentoo.org> +tcpflow-0.21.ebuild:
+  version bump
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   tcpflow-0.20.ebuild:
