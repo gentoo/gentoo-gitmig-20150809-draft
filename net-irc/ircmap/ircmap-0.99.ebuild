@@ -1,6 +1,6 @@
-# Copyright 2002 Paul Belt
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.3 2003/09/11 01:23:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.4 2003/09/29 21:29:00 mholzer Exp $
 
 IUSE=""
 
