@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/ewl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ChangeLog,v 1.1 2003/02/20 12:33:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ChangeLog,v 1.2 2003/03/01 18:39:46 lostlogic Exp $
 
 *ewl-0.0.2.20030220 (20 Feb 2003)
+
+  01 Mar 2003; Brandon Low <lostlogic@gentoo.org> ewl-0.0.2.20030220.ebuild:
+  Fix dep (ewl should depend on etox).
 
   20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me.
