@@ -1,8 +1,12 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.6 2002/08/08 13:31:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.7 2002/09/01 18:48:36 george Exp $
 
 *expat-1.95.4 (23 Jul 2002)
+
+  01 Sep 2002; George Shapovalov <george@gentoo.org> expat-1.95.4.ebuild :
+
+  fixed man page install location
 
   08 Aug 2002; Seemant Kulleen <seemant@gentoo.org> expat-1.95.4.ebuild :
 
