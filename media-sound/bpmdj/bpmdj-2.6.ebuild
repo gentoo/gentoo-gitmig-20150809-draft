@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.6.ebuild,v 1.1 2004/10/20 04:00:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.6.ebuild,v 1.2 2004/10/21 18:34:22 mr_bones_ Exp $
 
 IUSE="mp3 oggvorbis"
 
@@ -44,7 +44,7 @@ src_install () {
 	exeinto /usr/bin
 	doexe alsamixerguis bpmdj-raw bpmdj-record bpmdj-replay copydirstruct fetchdirstruct fetchfiles kbpm-batch kbpm-dj kbpm-merge kbpm-mix kbpm-play rbpm-play record_mixer xmms-play || die "doexe failed"
 	use mp3 && doexe bpmdj-import-mp3.pl
-	use oggvorbis && doexe bpmdj-import-ogg.pl 
+	use oggvorbis && doexe bpmdj-import-ogg.pl
 	dodoc authors changelog copyright readme todo || die "dodoc failed"
 	mkdir -p ${D}/usr/share/bpmdj
 	cp -a sequences ${D}/usr/share/bpmdj/ || die "cp failed"
