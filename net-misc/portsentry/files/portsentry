@@ -1,0 +1,34 @@
+#!/sbin/runscript
+SERVICE=portsentry
+opts="start stop restart"
+PIDFILE=/var/run/portsentry.pid
+EXE=/usr/sbin/portsentry
+
+# For more detailed and anal behavior read /usr/share/doc/portsentry-1.1/README.install
+# for what you can set this to
+OPT1="-tcp"
+OPT2="-udp"
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting $SERVICE (tcp)"
+	$EXE $OPT1 
+	eend $?
+	ebegin "Starting $SERVICE (udp)"
+	$EXE $OPT2
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping $SERVICE"
+	killall -KILL $SERVICE  2>&1
+	eend $?
+}
+
+restart() {
+	stop
+	start
+}
