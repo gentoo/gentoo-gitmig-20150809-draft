@@ -1,7 +1,9 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.21 2003/06/22 22:15:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.22 2003/06/23 22:22:27 agriffis Exp $
 
+  23 Jun 2003; Aron Griffis <agriffis@gentoo.org> net-tools-1.60-r7.ebuild:
+  Mark stable on alpha
 
 *net-tools-1.60-r7 (18 May 2003)
 
