@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/cl-acl-compat-1.2.35.20040609.ebuild,v 1.2 2004/06/24 23:39:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/cl-acl-compat-1.2.35.20040609.ebuild,v 1.3 2004/07/14 15:18:01 agriffis Exp $
 
 inherit common-lisp
 
@@ -13,6 +13,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-portable-aserve/cl-portable
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/cmucl-source
 	virtual/commonlisp

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-htmlgen/cl-htmlgen-1.2.35.20040426.ebuild,v 1.3 2004/06/24 23:43:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-htmlgen/cl-htmlgen-1.2.35.20040426.ebuild,v 1.4 2004/07/14 15:30:42 agriffis Exp $
 
 inherit common-lisp
 
@@ -13,6 +13,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-portable-aserve/cl-portable
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
 	=dev-lisp/cl-acl-compat-${PV}"

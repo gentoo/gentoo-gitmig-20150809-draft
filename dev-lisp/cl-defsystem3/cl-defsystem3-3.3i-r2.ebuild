@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/cl-defsystem3-3.3i-r2.ebuild,v 1.2 2004/06/24 23:42:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/cl-defsystem3-3.3i-r2.ebuild,v 1.3 2004/07/14 15:24:28 agriffis Exp $
 
 inherit common-lisp-common
 
@@ -10,6 +10,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-defsystem3/${PN}_${PV}+cvs.
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc ~mips"
+IUSE=""
 
 S=${WORKDIR}/${P}+cvs.2003.12.05
 
