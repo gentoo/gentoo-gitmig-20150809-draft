@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3521 2005/01/22 07:35:10 genone Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3522 2005/01/22 08:39:39 hollow Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# <hollow@gentoo.org> (22 Jan 2005)
+# Apache herd package refresh
+# Masked for user testing. Meta-bug #76457
+=net-www/mod_scgi-1.2
 
 # Marius Mauch <genone@gentoo.org> (22 Jan 2005)
 # Segfaulting all over the place, pending tests with gtk2 version
