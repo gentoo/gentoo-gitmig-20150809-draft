@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/daaplib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/ChangeLog,v 1.7 2004/10/05 08:55:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/ChangeLog,v 1.8 2004/11/05 08:37:20 eradicator Exp $
+
+  05 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  daaplib-0.1.1a.ebuild:
+  Stable amd64.
 
   05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   daaplib-0.1.1a.ebuild:
