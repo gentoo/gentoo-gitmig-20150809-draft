@@ -1,11 +1,8 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/aww-0.33.ebuild,v 1.1 2004/07/28 12:01:33 mcummings Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/aww-0.33.ebuild,v 1.2 2004/07/29 20:00:24 mr_bones_ Exp $
 
 inherit perl-module
-
-IUSE=""
 
 MY_P=${P/a/A}
 S=${WORKDIR}/${MY_P}
@@ -18,7 +15,7 @@ SRC_URI="mirror://sourceforge/aww/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-
+IUSE=""
 
 DEPEND="dev-lang/perl
 dev-perl/HTML-Parser
