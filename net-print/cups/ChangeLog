@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.107 2004/12/29 20:36:51 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.108 2004/12/31 20:30:20 hardave Exp $
+
+  31 Dec 2004; Hardave Riar <hardave@gentoo.org> cups-1.1.23_rc1.ebuild:
+  Stable on mips, bug #74479
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
