@@ -226,19 +226,31 @@ def unmerge(category,pkgname):
 		mydat[1]=os.path.normpath(root+mydat[1][1:])
 		if mydat[0]=="obj":
 			#format: type, mtime, md5sum
-			pkgfiles[mydat[1]]=[mydat[0], mydat[3], mydat[2]]
+			pkgfiles[string.join(mydat[1:-2]," ")]=[mydat[0], mydat[-1], mydat[-2]]
 		elif mydat[0]=="dir":
 			#format: type
-			pkgfiles[mydat[1]]=[mydat[0] ]
+			pkgfiles[string.join(mydat[1:])]=[mydat[0] ]
 		elif mydat[0]=="sym":
 			#format: type, mtime, dest
-			pkgfiles[mydat[1]]=[mydat[0], mydat[4], mydat[3]]
+			x=len(mydat)-1
+			splitter=-1
+			while(x>=0):
+				if mydat[x]=="->":
+					splitter=x
+					break
+				x=x+1
+			if splitter==-1:
+				#invalid symlink format
+				print "CONTENTS symlink error!"
+				return
+			
+			pkgfiles[string.join(mydat[1:splitter]," ")]=[mydat[0], mydat[-1], string.join(mydat[(splitter+1):-1]," ")]
 		elif mydat[0]=="dev":
 			#format: type
-			pkgfiles[mydat[1]]=[mydat[0] ]
+			pkgfiles[string.join(mydat[1:]," ")]=[mydat[0] ]
 		elif mydat[0]=="fif":
 			#format: type
-			pkgfiles[mydat[1]]=[mydat[0]]
+			pkgfiles[string.join(mydat[1:]," ")]=[mydat[0]]
 		else:
 			print "Error -- CONTENTS file for", pkgname, "is corrupt."
 			print ">>> "+line
