@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.33 2003/07/29 20:50:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.34 2003/07/30 03:03:27 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -116,6 +116,9 @@ vim_src_unpack() {
 	# Fixup a script to use awk instead of nawk
 	sed -i '1s|.*|#!/usr/bin/awk -f|' ${S}/runtime/tools/mve.awk \
 		|| die "mve.awk sed failed"
+
+	# Patch to build with ruby-1.8.0_pre5 and following
+	sed -i 's/defout/stdout/g' ${S}/src/if_ruby.c
 
 	# Read vimrc and gvimrc from /etc/vim
 	echo '#define SYS_VIMRC_FILE "/etc/vim/vimrc"' >> src/feature.h
