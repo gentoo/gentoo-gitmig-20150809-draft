@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.9 2002/12/26 23:37:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.10 2003/01/12 22:47:04 raker Exp $
+
+*uw-imap-2002b (12 Jan 2003)
+
+  12 Jan 2003; Nick Hadaway <raker@gentoo.org> uw-imap-2002b.ebuild,
+  files/digest-uw-imap-2002b :
+  Version bump.
 
 *uw-imap-2002a (26 Dec 2002)
 
