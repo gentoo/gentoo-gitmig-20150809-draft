@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.0.0.ebuild,v 1.1 2003/09/13 16:02:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.0.0.ebuild,v 1.2 2003/09/14 08:26:33 msterret Exp $
 
 DESCRIPTION="Tool for conversion of MSWord doc and rtf files to something readable"
 SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 DEPEND="sys-libs/zlib
 	media-libs/libpng
-	>=media-libs/libwmf-0.2.2	
+	>=media-libs/libwmf-0.2.2
 	xml2? ( dev-libs/libxml2 )"
 
 src_compile() {
