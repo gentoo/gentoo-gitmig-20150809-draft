@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.55 2003/09/17 01:35:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.56 2003/09/17 02:18:24 caleb Exp $
+
+*kdemultimedia-3.1.4 (16 Sep 2003)
+
+  16 Sep 2003; Caleb <caleb@gentoo.org> kdemultimedia-3.1.4.ebuild,
+  files/kdemultimedia-3.1.4-gentoo-timidity.diff,
+  files/kdemultimedia-3.1.4-ln-sf.diff:
+  new version
 
   16 Sep 2003; Jason Wever <weeve@gentoo.org> kdemultimedia-3.1.3.ebuild:
   Marked stable for sparc.
