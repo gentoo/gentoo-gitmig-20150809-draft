@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.10 2002/09/11 20:38:54 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.11 2002/09/11 20:45:19 gerk Exp $
 
 *libsdl-1.2.3-r1 (16 Aug 2002)
 
@@ -11,7 +11,7 @@
 
 *libsdl-1.2.4-20020601 (7 Jun 2002)
 
-  11 Sep 2002; Mark Guertin <gerk@gentoo.org> flac-1.0.3.ebuild :
+  11 Sep 2002; Mark Guertin <gerk@gentoo.org> :
   set nasm back in as x86 only rdependancy
 
   23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
