@@ -1,7 +1,7 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License, v2
 # Author Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.0_rc1.ebuild,v 1.2 2002/04/27 08:21:54 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.0_rc1.ebuild,v 1.3 2002/05/23 16:16:19 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
@@ -23,7 +23,8 @@ src_compile() {
     for f in ${ALSA_TOOLS}
     do
         cd "${S}/${f}"
-        ./configure --host="${CHOST}" --prefix=/usr || die "./configure failed"
+        ./configure --host="${CHOST}" --prefix=/usr --mandir=/usr/share/man \
+            || die "./configure failed"
         emake || die "Parallel Make Failed"
     done
 }
