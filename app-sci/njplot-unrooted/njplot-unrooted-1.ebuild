@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/njplot-unrooted/njplot-unrooted-1.ebuild,v 1.1 2004/10/06 12:44:33 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/njplot-unrooted/njplot-unrooted-1.ebuild,v 1.2 2004/12/23 18:51:33 ribosome Exp $
 
 DESCRIPTION="A phylogenetic tree drawing program which supports tree rooting"
 HOMEPAGE="http://pbil.univ-lyon1.fr/software/njplot.html"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="app-sci/ncbi-tools
+DEPEND="sci-biology/ncbi-tools
 	virtual/x11"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalx/clustalx-1.83.ebuild,v 1.6 2004/12/23 18:50:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalx/clustalx-1.83.ebuild,v 1.7 2004/12/23 18:56:30 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="sci-biology/ncbi-tools
-	app-sci/clustalw
+	sci-biology/clustalw
 	virtual/x11"
 
 S="${WORKDIR}/${PN}${PV}.sun"
