@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/eflite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.11 2004/06/24 21:17:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.12 2004/06/28 22:57:44 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> eflite-0.3.8-r2.ebuild:
+  add sed-4 dep
 
   14 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   eflite-0.3.8-r2.ebuild:

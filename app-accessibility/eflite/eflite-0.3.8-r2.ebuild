@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r2.ebuild,v 1.6 2004/06/24 21:17:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r2.ebuild,v 1.7 2004/06/28 22:57:44 agriffis Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ KEYWORDS="x86 ~ppc amd64"
 RDEPEND=">=app-accessibility/flite-1.2"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.58"
+	>=sys-devel/autoconf-2.58
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
