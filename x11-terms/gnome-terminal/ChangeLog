@@ -1,59 +1,62 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.12 2002/09/05 21:16:05 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.13 2002/09/16 01:20:05 murphy Exp $
 
+*gnome-terminal-2.0.2 (05 Sep 2002)
 
-  05 Sep 2002; Spider <spider@gentoo.org>
-  fix all mirror://gnome/sources to be mirror://gnome/2.0.0/sources due to mirror changes.
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> gnome-terminal-2.0.2.ebuild,
+  ChangeLog : Added sparc/sparc64 keywords. Revamped ChangeLog layout.
+
+  05 Sep 2002; Spider <spider@gentoo.org> : fix all mirror://gnome/sources
+  to be mirror://gnome/2.0.0/sources due to mirror changes.
     
 *gnome-terminal-2.0.1 (05 Aug 2002)
-  05 Aug 2002; Spider <spider@gentoo.org> gnome-terminal-2.0.1.ebuild :
-  new version
+
+  05 Aug 2002; Spider <spider@gentoo.org> gnome-terminal-2.0.1.ebuild : New version
 
 *gnome-terminal-2.0.0-r1 (27 Jun 2002)
-  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
-  Added ppc to keywords
 
-  27 Jun 2002; Spider <spider@gentoo.org> gnome-terminal-2.0.0-r1.ebuild :
-  updated deps, using mirror://
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org>: Added ppc to keywords
 
+  27 Jun 2002; Spider <spider@gentoo.org> gnome-terminal-2.0.0-r1.ebuild : Updated
+  deps, using mirror://
 
-  
 *gnome-terminal-2.0.0 (12 Jun 2002) 
-  12 Jun 2002; Spider <spider@gentoo.org> gnome-terminal-2.0.0.ebuild :
-  Wehey! 2.0.0 release
+
+  12 Jun 2002; Spider <spider@gentoo.org> gnome-terminal-2.0.0.ebuild : Wehey!
+  2.0.0 release
   
   11 Jun 2002; Martin Schlemmer <azarah@gentoo.org> gnome-terminal-1.9.7-r1.ebuild :
-
   Add "!gnome-base/gnome-core" to DEPEND, as gnome-core overwrite
   /usr/bin/gnome-terminal.
 
 *gnome-terminal-1.9.7-r1 (11 Jun 2002)
+
   11 Jun 2002; Spider <spider@gentoo.org> gnome-terminal-1.9.7-r1.ebuild :
-  eclassed it
-  depend on scrollkeeper
+  eclassed it depend on scrollkeeper
   
 
 *gnome-terminal-1.9.7 (3 June 2002)
 
-  3 June 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-terminal-1.9.7;
-
-  New version
+  3 June 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-terminal-1.9.7:  New
+  version
 
 *gnome-terminal-1.9.6-r3 (30 May 2002)
 
-  30 May 2002; Bruce A. Locke <blocke@shivan.org> gnome-terminal-1.9.6-r3:
-
-  Bump libzvt version required to fix color issues
+  30 May 2002; Bruce A. Locke <blocke@shivan.org> gnome-terminal-1.9.6-r3: Bump
+  libzvt version required to fix color issues
 
 *gnome-terminal-1.9.6-r1 (28 May 2002)
+  
   28 May 2002; Spider <spider@gentoo.org> gnome-terminal-1.9.6-r2.ebuild :
   dependency update to make the libglade-convert thing work
   
 *gnome-terminal-1.9.6-r1 (22 May 2002)
+  
   22 May 2002; Spider <spider@gentoo.org> gnome-terminal-1.9.6-r1.ebuild :
-  fix broken profterm.schemas to correct gnome-terminal.schemas
+  Fix broken profterm.schemas to correct gnome-terminal.schemas
 
 *gnome-terminal-1.9.6 (22 May 2002)
+  
   22 May 2002; Spider <spider@gentoo.org> ChangeLog gnome-terminal-1.9.6.ebuild :
   Added gnome-terminal. a terminal for gnome-2
