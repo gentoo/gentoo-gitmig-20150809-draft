@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.11 2003/03/15 00:44:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.12 2003/03/15 01:06:46 rphillips Exp $
 #
 # Author Ryan Phillips <rphillips@gentoo.org>
 # Modified by: Seemant Kulleen <seemant@gentoo.org>
@@ -138,9 +138,12 @@ src_compile() {
 		# the configure script should autodetect X being installed, so
 		# we'll specifically turn it off if X is not in the USE vars.
 		# -rphillips
-		use X \
-			&& myconf="${myconf} --with-x" \
-			 || myconf="${myconf} --without-x"
+		if [ "${PN}" = "vim" ]
+		then
+			use X \
+				&& myconf="${myconf} --with-x" \
+				 || myconf="${myconf} --without-x"
+		fi
 	fi
 
 	# This should fix a sandbox violation.
@@ -153,7 +156,9 @@ src_compile() {
 	if [ "${PN}" = "gvim" ]
 	then
 		myconf="${myconf} --with-vim-name=gvim --with-x"
-		if use gnome; then
+		if use gtk2; then
+			myconf="${myconf} --enable-gui=gtk2 --enable-gtk2-check"
+		elif use gnome; then
 			myconf="${myconf} --enable-gui=gnome"
 		elif use gtk; then
 			myconf="${myconf} --enable-gui=gtk"
@@ -163,7 +168,6 @@ src_compile() {
 	else
 		myconf="${myconf} --enable-gui=no"
 	fi
-
 
 	econf ${myconf} || die "vim configure failed"
 
