@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r2.ebuild,v 1.1 2003/06/29 14:28:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r2.ebuild,v 1.2 2003/07/11 20:41:49 gmsoft Exp $
 
 inherit flag-o-matic
 
@@ -23,7 +23,7 @@ RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
 DEPEND=">=dev-util/pccts-1.33.24-r1
         ${RDEPEND}"
 
-KEYWORDS="~x86 ~ppc ~sparc alpha"
+KEYWORDS="~x86 ~ppc ~sparc alpha hppa"
 
 src_unpack() {
         unpack ${A}
@@ -35,6 +35,15 @@ src_unpack() {
                 cd ${S}/contrib/mp32dao
                 sed -i '22s/^/#/' MediaHandler.pm
         fi
+		if [ "${ARCH}" = "hppa" ]
+		then
+			cd ${S}/scsilib/RULES
+			for i in parisc parisc64
+			do
+				cp i386-linux-cc.rul $i-linux-cc.rul
+				cp i386-linux-gcc.rul $i-linux-gcc.rul
+			done
+		fi
 }
 
 src_compile() {
