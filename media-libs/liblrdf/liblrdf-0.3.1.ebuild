@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.3.1.ebuild,v 1.5 2004/04/02 10:31:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.3.1.ebuild,v 1.6 2004/04/05 16:11:25 eradicator Exp $
 
 DESCRIPTION="A library for the manipulation of RDF file in LADSPA plugins"
 HOMEPAGE="http://plugin.org.uk"
@@ -12,3 +12,7 @@ IUSE=""
 DEPEND="dev-util/pkgconfig
 	>=media-libs/raptor-0.9.8
 	>=media-libs/ladspa-sdk-1.12"
+
+src_install() {
+	einstall || die
+}

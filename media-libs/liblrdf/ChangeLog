@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/liblrdf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.10 2004/04/02 10:31:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.11 2004/04/05 16:11:25 eradicator Exp $
+
+*liblrdf-0.3.5-r1 (05 Apr 2004)
+
+  05 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> liblrdf-0.3.1.ebuild,
+  liblrdf-0.3.4.ebuild, liblrdf-0.3.5-r1.ebuild, liblrdf-0.3.5.ebuild:
+  fixed bug #45980.
 
   02 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> liblrdf-0.3.1.ebuild,
   liblrdf-0.3.4.ebuild, liblrdf-0.3.5.ebuild:
