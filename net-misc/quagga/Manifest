@@ -1,5 +1,5 @@
-MD5 21a3e004c62be23e43cd4401e432b396 quagga-0.96.4-r6.ebuild 3377
-MD5 7c4d8eb40487b97ac4001df4c00b56a2 ChangeLog 3790
+MD5 b76be71197fd9e3fe948e2ab41399f84 quagga-0.96.4-r6.ebuild 3377
+MD5 fe7b68c61ddeb6c41bfa02fabd640aff ChangeLog 3906
 MD5 f0192175ecea09c49d5bae967c76bbd1 metadata.xml 1500
 MD5 72494598a213a5d6f441496f48aefd7b files/digest-quagga-0.96.4-r6 66
 MD5 3f95e96aeb427fa3de7f387ff3dc6ad6 files/init/bgpd 866
