@@ -1,23 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 58298ebe0d5d751e1b779bebe9157508 ChangeLog 1401
 MD5 d9dc13509a20a79585e3586c5d749c26 metadata.xml 454
-MD5 fc99132d8146ad46a284fa863535e4a0 cstetex-2.0.2-r1.ebuild 1735
-MD5 25cad12756caaead62cad10a307a9f3d ChangeLog 1269
-MD5 64b7930a686280c76523622d47a7dd52 cstetex-2.0.2.ebuild 1220
-MD5 5d40ba9d885af84bcc917ad17e2bf8e0 files/xpdf-3.00pl2-CAN-2004-1125.patch 1136
-MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
-MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
-MD5 4237ab1861c88c20b2301cabd838ca07 files/digest-cstetex-2.0.2 639
-MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
-MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-CAN-2005-0064.patch 346
+MD5 7967ca31767dd5cc61a82fa19b04f289 cstetex-2.0.2-r1.ebuild 1720
+MD5 fae07756d7cfe6b479ae7346c83514b0 files/cstetex-2.0.2.diff 658
 MD5 4237ab1861c88c20b2301cabd838ca07 files/digest-cstetex-2.0.2-r1 639
 MD5 77107ec8ba31c93b0e1bc35a9e4c9c4b files/xdvizilla.patch 912
-MD5 fae07756d7cfe6b479ae7346c83514b0 files/cstetex-2.0.2.diff 658
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB8BBbmOfEJZHYOKcRAjWYAKCghtyeHYbU4mKgf7K+fRAbf7K60QCeJ8+j
-OZILOSbHFnDEXhSfAoQmZh4=
-=q3Mg
------END PGP SIGNATURE-----
+MD5 5d40ba9d885af84bcc917ad17e2bf8e0 files/xpdf-3.00pl2-CAN-2004-1125.patch 1136
+MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-CAN-2005-0064.patch 346
+MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
+MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
+MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0-r1.ebuild,v 1.5 2005/04/02 05:02:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0-r1.ebuild,v 1.6 2005/04/05 17:09:57 usata Exp $
 
-inherit tetex eutils flag-o-matic
+inherit tetex-3 flag-o-matic
 
 #TETEX_TEXMF_PV=2.96.5.20040711
 TETEX_TEXMF_PV=${PV}
@@ -73,8 +73,4 @@ src_compile() {
 	TETEX_ECONF="--with-xdvi-x-toolkit=${toolkit}"
 
 	tetex_src_compile
-}
-
-src_install() {
-	tetex_src_install base doc fixup link
 }

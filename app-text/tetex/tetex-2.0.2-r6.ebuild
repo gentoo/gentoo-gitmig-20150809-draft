@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r6.ebuild,v 1.1 2005/02/21 13:48:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r6.ebuild,v 1.2 2005/04/05 17:09:57 usata Exp $
 
-inherit tetex eutils flag-o-matic
+inherit tetex-2 flag-o-matic
 
 DESCRIPTION="a complete TeX distribution"
 HOMEPAGE="http://tug.org/teTeX/"
@@ -11,7 +11,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~spa
 IUSE=""
 
 src_unpack() {
-	tetex_src_unpack
+	tetex-2_src_unpack
 
 	# bug 75801
 	EPATCH_OPTS="-d ${S}/libs/xpdf/xpdf -p0" epatch ${FILESDIR}/xpdf-CESA-2004-007-xpdf2-newer.diff
@@ -30,5 +30,5 @@ src_compile() {
 src_install() {
 	insinto /usr/share/texmf/tex/latex/greek
 	doins ${FILESDIR}/iso-8859-7.def
-	tetex_src_install
+	tetex-2_src_install
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.90 2005/04/02 05:02:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.91 2005/04/05 17:09:57 usata Exp $
+
+  05 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> -tetex-2.0.2-r4.ebuild,
+  tetex-2.0.2-r5.ebuild, tetex-2.0.2-r6.ebuild, tetex-3.0-r1.ebuild:
+  Changed to use tetex-2 and tetex-3, respectively.
 
   02 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> tetex-3.0-r1.ebuild:
   Fixed xdvi toolkit dependency; bug #87375. Removed ~mips for now;
