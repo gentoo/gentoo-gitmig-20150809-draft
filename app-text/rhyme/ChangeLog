@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rhyme
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.2 2003/09/19 10:03:48 taviso Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.3 2004/03/24 23:25:04 mholzer Exp $
+
+  25 Mar 2004; Martin Holzer <mholzer@gentoo.org> rhyme-0.9.ebuild:
+  fixing depend. see 45343
 
   19 Sep 2003; Tavis Ormandy <taviso@gentoo.org> rhyme-0.9.ebuild:
   stable
