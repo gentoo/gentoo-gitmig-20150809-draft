@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/quotchap
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/quotchap/ChangeLog,v 1.1 2004/07/07 22:01:16 pclouds Exp $
+
+*quotchap-0.9f (08 Jul 2004)
+
+  08 Jul 2004; <pclouds@gentoo.org> metadata.xml, quotchap-0.9f.ebuild:
+  new package, committed by Markus Luisser <mluisser@mail.zserv.tuwien.ac.at>
+  #56111
+
