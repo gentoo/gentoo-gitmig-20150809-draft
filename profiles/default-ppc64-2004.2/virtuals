@@ -1,9 +1,9 @@
 virtual/lpr            net-print/cups
 virtual/python         dev-lang/python
 virtual/mta            mail-mta/ssmtp
-virtual/alsa           sys-kernel/ppc64-sources
+virtual/alsa           sys-kernel/gentoo-dev-sources
 virtual/kernel         sys-kernel/linux-headers
-virtual/linux-sources  sys-kernel/ppc64-sources
+virtual/linux-sources  sys-kernel/gentoo-dev-sources
 virtual/glibc          sys-libs/glibc
 virtual/libc          sys-libs/glibc
 virtual/x11            x11-base/xorg-x11
