@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.2c.ebuild,v 1.1 2004/02/08 09:56:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.2c.ebuild,v 1.2 2004/02/15 08:22:08 eradicator Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -37,8 +37,6 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	ewarn "This does not work with kernel 2.6 !!!"
-	ewarn "Please use the kernel modules instead of this the package"
 	# The makefile still installs an alsasound initscript,
 	# which we REALLY dont want.
 	# This patch stops that
@@ -88,5 +86,8 @@ pkg_postinst() {
 	einfo
 	einfo "Also, remember that all mixer channels will be MUTED by default."
 	einfo "Use the 'alsamixer' program to unmute them."
+	einfo
+	einfo "Version 1.0.2c and above should work with version 2.6 kernels."
+	einfo "If you experience problems, please report bugs to http://bugs.gentoo.org."
 	einfo
 }
