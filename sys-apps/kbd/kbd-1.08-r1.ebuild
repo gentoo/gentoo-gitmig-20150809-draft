@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08-r1.ebuild,v 1.1 2003/07/29 17:51:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08-r1.ebuild,v 1.2 2003/07/31 04:29:58 azarah Exp $
 
 IUSE="nls"
+
+inherit eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Keyboard and console utilities"
@@ -23,6 +25,9 @@ src_unpack() {
 	cd ${S}
 	# Fixes makefile so that it uses the CFLAGS from portage (bug #21320).
 	sed -i -e "s:-O2:${CFLAGS}:g" src/Makefile.in
+
+	# Sparc have not yet fixed struct kbd_rate to use 'period' and not 'rate'.
+	epatch ${FILESDIR}/${P}-sparc-fixes.patch
 }
 
 src_compile() {
