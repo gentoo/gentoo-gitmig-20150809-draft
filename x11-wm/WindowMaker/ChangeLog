@@ -1,11 +1,19 @@
 # ChangeLog for x11-wm/WindowMaker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.9 2002/07/02 16:50:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.10 2002/07/03 15:44:39 seemant Exp $
+
+*WindowMaker-0.80.1-r1 (03 Jul 2002)
+
+  03 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  WindowMaker-0.80.1-r1.ebuild files/digest-WindowMaker-0.80.1-r1 :
+
+  lwj <lwj@manufacture.com.tw> the upstream developer for Taiwanese
+  translations gave us a patch to make it compile and install correctly.
 
 *WindowMaker-0.80.1 (02 Jul 2002)
 
- 02 Jul 2002; Seemant Kulleen <seemant@gentoo.org> WindowMaker-0.80.1.ebuild
- files/digest-WindowMaker-0.80.1 :
+  02 Jul 2002; Seemant Kulleen <seemant@gentoo.org> WindowMaker-0.80.1.ebuild
+  files/digest-WindowMaker-0.80.1 :
 
  Version bump.  Removed Taiwanese translations installation.
 
