@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r3.ebuild,v 1.2 2004/01/12 10:50:32 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r3.ebuild,v 1.3 2004/01/13 12:19:03 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -90,9 +90,11 @@ src_unpack() {
 	# this patch adds an 'ShowOnlyIcons Never' option to FvwmIconMan.
 	cd ${S}; epatch ${FILESDIR}/fvwm-iconman.diff
 
-	# if you disable the start button in FvwmTaskBar, your margins
-	# may get ignored.
+	# if you disable the start button in FvwmTaskBar, margins may get ignored.
 	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-taskbar-margins.diff
+
+	# FvwmScript-Quit wont reboot the computer
+	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-FvwmScript-Quit-reboot.diff
 
 	# build fails on alpha with certain options without this.
 	use alpha && append-flags -fPIC

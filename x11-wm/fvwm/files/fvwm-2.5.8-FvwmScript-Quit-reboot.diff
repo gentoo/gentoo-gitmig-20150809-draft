@@ -1,0 +1,11 @@
+--- modules/FvwmScript/Scripts/FvwmScript-Quit	2001-10-13 17:18:45.000000000 +0100
++++ modules/FvwmScript/Scripts/FvwmScript-Quit	2004-01-13 11:56:52.000000000 +0000
+@@ -221,7 +221,7 @@
+    ChangeValue 7 0
+    ChangeValue 8 0
+    ChangeValue 9 0
+-   Set $ToDo = Restart
++   Set $ToDo = Reboot
+   End
+ End
+ 
