@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kmplayer
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.18 2003/11/12 17:27:46 caleb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.19 2004/02/05 14:02:48 caleb Exp $
+
+*kmplayer-0.8.2 (05 Feb 2004)
+
+  05 Feb 2004; Caleb Tennis <caleb@gentoo.org> kmplayer-0.8.2.ebuild:
+  New version - closes bug #40286
 
   12 Nov 2003; Caleb Tennis <caleb@gentoo.org> kmplayer-0.7.2.ebuild,
   kmplayer-0.7.3.ebuild, kmplayer-0.7.4a.ebuild, kmplayer-0.8b.ebuild:
