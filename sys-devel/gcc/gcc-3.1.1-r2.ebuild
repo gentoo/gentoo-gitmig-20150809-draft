@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r1.ebuild,v 1.16 2004/06/07 23:37:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r2.ebuild,v 1.1 2004/06/08 01:45:07 vapier Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -9,7 +9,7 @@
 #             in src_install() ... Ill implement auto-version detection
 #             later on.
 
-inherit flag-o-matic libtool
+inherit flag-o-matic libtool eutils
 
 do_filter_flags() {
 	# Compile problems with these ...
@@ -25,7 +25,6 @@ GCC_SUFFIX=-${MY_PV}
 LOC="/usr"
 # dont install in /usr/include/g++-v3/, as it will nuke gcc-3.0.x installs
 STDCXX_INCDIR="${LOC}/include/g++-v${MY_PV/\./}"
-PATCHES="${WORKDIR}/patches"
 
 DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -70,23 +69,15 @@ FAKE_ROOT=""
 src_unpack() {
 	unpack ${P}.tar.bz2
 
-	mkdir -p ${WORKDIR}/patches
-	tar -jxf ${DISTDIR}/${P}_final-patches-1.0.tbz2 -C ${WORKDIR}/patches || \
-		die "Could not unpack patches"
-
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
 
-	for x in ${PATCHES}/*.patch
-	do
-		# sad to say booboo I relised *after* uploading the patch to ibiblio :(
-		if [ "${x##*/}" = "28_gcc31-c++-diagnostic-no-line-wrapping.patch" ]
-		then
-			patch -p1 < ${x} || die "Failed with patch ${x##*/}"
-		else
-			patch -p0 < ${x} || die "Failed with patch ${x##*/}"
-		fi
+	mkdir -p ${WORKDIR}/patch
+	tar -jxf ${DISTDIR}/${P}_final-patches-1.0.tbz2 -C ${WORKDIR}/patch \
+		|| die "Could not unpack patches"
+	for f in ${WORKDIR}/patch/*.patch ; do
+		epatch ${f}
 	done
 
 	# Currently if any path is changed via the configure script, it breaks
