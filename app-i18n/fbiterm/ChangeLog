@@ -1,0 +1,11 @@
+# ChangeLog for app-i18n/fbiterm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/ChangeLog,v 1.1 2003/11/24 14:11:10 usata Exp $
+
+*fbiterm-0.5 (24 Nov 2003)
+
+  24 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> fbiterm-0.5.ebuild,
+  files/fbiterm-0.5-gentoo.diff:
+  Initial import. Ebuild submitted by Zhen Lin <lowzl@hotmail.com>.
+  See bug #27700.
+
