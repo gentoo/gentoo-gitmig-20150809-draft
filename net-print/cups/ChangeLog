@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.31 2003/01/13 07:57:06 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.32 2003/01/21 16:17:11 lordvan Exp $
+
+#cups-1.1.18-r2 (21 Jan 2003)
+  21 Jan 2003; Thomas Raschbacher; <lordvan@gentoo.org> cups-1.1.18-r2.ebuild:
+  added dep for sys-apps/hotplug (needed for usb-printers)
+  fixes bug #12976
 
 *cups-1.1.18-r1 (13 Jan 2003)
   13 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org> cups-1.1.18-r1.ebuild:
