@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.13.13.ebuild,v 1.4 2004/10/11 10:03:52 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.13.13.ebuild,v 1.5 2004/10/11 13:03:04 dams Exp $
 
 S=${WORKDIR}/dvutil-${PV}
 DESCRIPTION="dvutil provides some general C++ utility classes for files, directories, dates, property lists, reference counted pointers, number conversion etc. "
@@ -18,6 +18,6 @@ PATCHS="${FILESDIR}/0.13.13-gentoo-doc_distdir.patch"
 inherit eutils
 
 src_install() {
-	cd ${WORKDIR}/${P}/doc && epatch ${PATCHS}
+	epatch ${PATCHS}
 	make DESTDIR=${D} install
 }

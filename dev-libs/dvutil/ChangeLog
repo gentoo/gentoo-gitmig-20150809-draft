@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dvutil
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.11 2004/10/11 10:03:52 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.12 2004/10/11 13:03:04 dams Exp $
+
+  11 Oct 2004; <dams@gentoo.org> files/0.13.13-gentoo-doc_distdir.patch,
+  dvutil-0.13.13.ebuild:
+  typo, corrected patch and patch application
 
   11 Oct 2004; <dams@gentoo.org> +metadata.xml,
   +files/0.13.13-gentoo-doc_distdir.patch, dvutil-0.12.10.ebuild,
