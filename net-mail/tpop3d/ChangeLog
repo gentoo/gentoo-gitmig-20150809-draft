@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/tpop3d
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.4 2003/06/12 21:33:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.5 2003/08/03 04:44:34 iggy Exp $
+
+  02 Aug 2003; <iggy@gentoo.org> tpop3d-1.4.2.ebuild, files/tpop3d-init:
+  added Gentoo init script, fixes bug # 23401, thanks to Michael C. Ferguson
+  <mcf@augustmail.com>
 
   12 Jun 2003; <msterret@gentoo.org> tpop3d-1.4.2.ebuild:
   fix Header

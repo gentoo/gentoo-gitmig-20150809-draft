@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.6 2003/08/03 03:44:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.7 2003/08/03 04:44:34 iggy Exp $
 
 DESCRIPTION="An extensible POP3 server with vmail-sql/MySQL support."
 HOMEPAGE="http://www.ex-parrot.com/~chris/tpop3d/"
@@ -70,6 +70,10 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodir /etc/tpop3d
+
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/tpop3d-init
+
 }
 
 pkg_postinst() {
