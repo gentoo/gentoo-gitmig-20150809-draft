@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r6.ebuild,v 1.1 2004/09/05 22:41:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r6.ebuild,v 1.2 2004/09/07 17:18:12 mr_bones_ Exp $
 
 IUSE=""
 
@@ -34,7 +34,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Patch for GCC 3.3 
+	# Patch for GCC 3.3
 	epatch ${FILESDIR}/${P}-gcc3.3.patch.gz || die
 }
 
@@ -63,7 +63,7 @@ src_install() {
 		# first install the main parts
 		make DESTDIR=${D} install || die "could not install"
 	fi
-	
+
 	rm -f docs/*patch
 	dodoc docs/* ${FILESDIR}/README.gentoo
 
