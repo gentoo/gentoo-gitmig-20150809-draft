@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.16 2004/10/16 17:22:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.17 2004/10/17 07:29:20 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  jdom-1.0_beta10-r1.ebuild, jdom-1.0_beta10.ebuild, jdom-1.0_beta9.ebuild:
+  keywords ~amd64; closes #67329.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jdom-1.0_beta10-r1.ebuild,
   jdom-1.0_beta10.ebuild, jdom-1.0_beta9.ebuild:
