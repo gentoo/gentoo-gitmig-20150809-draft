@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.5 2004/05/07 01:23:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.6 2004/05/07 02:40:37 vapier Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ RDEPEND="virtual/opengl
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	x86? ( >=media-gfx/nvidia-cg-toolkit-1.2 )
-	amd64? ( >=media-gfx/nvidia-cg-toolkit-1.2 )
 	>=sys-apps/sed-4
 	|| (
 		dev-libs/STLport
