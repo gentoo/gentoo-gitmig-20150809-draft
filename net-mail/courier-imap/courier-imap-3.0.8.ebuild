@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.10 2004/11/16 17:29:55 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.11 2004/11/27 06:22:43 malverian Exp $
 
 inherit eutils gnuconfig
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/libc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	>=dev-tcltk/expect-5.33.0
-	fam? ( app-admin/fam )
+	fam? ( virtual/fam )
 	selinux? ( sec-policy/selinux-courier-imap )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
