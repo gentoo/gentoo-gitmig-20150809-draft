@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.15.13.ebuild,v 1.2 2003/12/29 20:19:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.15.13.1.ebuild,v 1.1 2004/01/07 19:30:43 seemant Exp $
 
 IUSE=""
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
