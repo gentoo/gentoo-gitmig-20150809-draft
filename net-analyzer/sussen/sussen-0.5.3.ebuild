@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.5.3.ebuild,v 1.3 2003/09/07 14:34:29 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.5.3.ebuild,v 1.4 2004/01/06 20:14:22 weeve Exp $
 
 inherit gnome2 debug
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE="nls"
 
 RDEPEND=">=gnome-extra/libgnomedb-0.90.0
