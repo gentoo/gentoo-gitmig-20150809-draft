@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.36 2003/04/30 06:38:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.37 2003/05/03 02:43:01 weeve Exp $
+
+  02 May 2003; Jason Wever <weeve@gentoo.org> balsa-1.4.3.ebuild:
+  Changed ~sparc keyword to sparc in relation to the mutt related buffer
+  overflow.
 
   30 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> balsa-2.0.10.ebuild :
   Unmasked becuse of security update.
