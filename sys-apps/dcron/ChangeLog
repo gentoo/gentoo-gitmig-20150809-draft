@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.14 2003/04/16 14:33:46 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.15 2003/04/18 20:28:56 tuxus Exp $
 
 *dcron-2.9 (19 Mar 2003)
 
@@ -11,6 +11,9 @@
   Version bumped. Closes #14702.
 
 *dcron-2.7-r10 (14 Feb 2003)
+
+  18 Apr 2003; Jan Seidel <tuxus@gentoo.org>  dcron-2.7-r10.ebuild :
+  Added mips to keywords.
 
   19 Feb 2003; Martin Holzer <mholzer@gentoo.org> dcron-2.7-r10.ebuild :
   added keepdir /var/spool/cron/crontabs/
