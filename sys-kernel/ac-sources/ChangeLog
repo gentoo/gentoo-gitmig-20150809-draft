@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/ac-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.49 2005/01/08 12:23:33 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.50 2005/01/08 12:57:23 plasmaroo Exp $
+
+*ac-sources-2.6.10-r7 (08 Jan 2005)
+
+  08 Jan 2005; <plasmaroo@gentoo.org> -ac-sources-2.6.10-r6.ebuild,
+  +ac-sources-2.6.10-r7.ebuild, +files/ac-sources-2.6.10.75963.patch,
+  +files/ac-sources-2.6.10.77094.patch,
+  +files/ac-sources-2.6.10.brk-locked.patch,
+  -files/ac-sources-2.6.9.CAN-2004-1016.patch,
+  -files/ac-sources-2.6.9.CAN-2004-1056.patch,
+  -files/ac-sources-2.6.9.CAN-2004-1137.patch,
+  -files/ac-sources-2.6.9.CAN-2004-1151.patch,
+  -files/ac-sources-2.6.9.binfmt_elf.patch,
+  -files/ac-sources-2.6.9.shmLocking.patch, -files/ac-sources-2.6.9.vma.patch:
+  Security bump; bugs #75963, #77025, #77094.
 
 *ac-sources-2.6.10-r6 (08 Jan 2005)
 
