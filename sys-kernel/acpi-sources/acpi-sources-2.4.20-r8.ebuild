@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/acpi-sources/acpi-sources-2.4.20-r8.ebuild,v 1.1 2002/12/07 22:59:35 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/acpi-sources/acpi-sources-2.4.20-r8.ebuild,v 1.2 2002/12/18 00:12:48 lostlogic Exp $
 
 IUSE="build"
 
@@ -23,6 +23,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 #http://www.kernel.org/pub/linux/kernel/v2.4/testing/${KERN_PATCH}
 
 KEYWORDS="x86"
+SLOT="${KV}"
 
 src_unpack() {
 	unpack linux-${OKV}.tar.bz2

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.18.ebuild,v 1.4 2002/09/14 15:51:26 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.18.ebuild,v 1.5 2002/12/18 00:12:48 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -9,7 +9,7 @@ OKV=2.4.18
 KV=2.4.18
 S=${WORKDIR}/linux-${KV}
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="${KV}"
 KEYWORDS="x86 alpha"
 
 #These are *stock* 2.4.18 headers, for niceness.

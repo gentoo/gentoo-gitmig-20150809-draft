@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mjc-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/ChangeLog,v 1.10 2002/12/14 19:16:29 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/ChangeLog,v 1.11 2002/12/18 00:12:48 lostlogic Exp $
+
+  17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
+  Make all kernel-sources SLOT="${KV}"
 
   14 Dec 2002; Michael J. Cohen <mjc@gentoo.org>
   removed mjc-sources-2.4.20-r1.ebuild, too many problems...

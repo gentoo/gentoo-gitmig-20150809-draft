@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/acpi-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/acpi-sources/ChangeLog,v 1.3 2002/11/02 21:58:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/acpi-sources/ChangeLog,v 1.4 2002/12/18 00:12:48 lostlogic Exp $
+
+  17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
+  Make all kernel-sources SLOT="${KV}"
 
 *acpi-sources-2.4.20-r6 (02 Nov 2002)
 

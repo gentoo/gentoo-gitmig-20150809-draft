@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_pre3.ebuild,v 1.2 2002/12/09 04:37:28 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_pre3.ebuild,v 1.3 2002/12/18 00:12:48 lostlogic Exp $
 
 IUSE="crypt build"
 
@@ -26,6 +26,7 @@ DESCRIPTION="Full sources for lostlogic's Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://lostlogicx.com/gentoo/patches-${KV}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc "
+SLOT="${KV}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ppc-sources-dev-2.4.20.ebuild,v 1.3 2002/12/09 04:37:29 manson Exp $ 
+# $Id: ppc-sources-dev-2.4.20.ebuild,v 1.4 2002/12/18 00:12:48 lostlogic Exp $ 
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -25,7 +25,7 @@ SRC_URI="http://www.penguinppc.org/~kevyn/kernels/gentoo/linux-${KV}.tar.bz2"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="${KV}"
 KEYWORDS="ppc -x86 -sparc "
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]                                           

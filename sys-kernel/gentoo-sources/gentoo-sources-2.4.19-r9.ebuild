@@ -20,7 +20,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="${KV}"
 KEYWORDS="x86 -ppc -sparc "
 
 if [ $ETYPE = "sources" ]

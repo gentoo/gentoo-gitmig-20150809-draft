@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/crypto-sources/crypto-sources-2.4.19-r7.ebuild,v 1.5 2002/12/09 04:37:28 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/crypto-sources/crypto-sources-2.4.19-r7.ebuild,v 1.6 2002/12/18 00:12:48 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -10,7 +10,7 @@ KV=2.4.19-crypto-r7
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="${KV}"
 KEYWORDS="x86 -ppc -sparc "
 
 #What's in this kernel?

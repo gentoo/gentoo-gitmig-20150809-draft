@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r1.ebuild,v 1.7 2002/12/09 04:37:29 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r1.ebuild,v 1.8 2002/12/18 00:12:48 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE="build"
@@ -25,7 +25,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://oss.sgi.com/projects/xfs http://evms.sourceforge.net"
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="${KV}"
 KEYWORDS="x86 -ppc -sparc "
 
 if [ $ETYPE = "sources" ]

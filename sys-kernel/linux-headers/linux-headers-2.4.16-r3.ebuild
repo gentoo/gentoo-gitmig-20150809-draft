@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r3.ebuild,v 1.6 2002/11/28 18:24:07 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r3.ebuild,v 1.7 2002/12/18 00:12:48 lostlogic Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -11,7 +11,7 @@ KV=${OKV}
 S=${WORKDIR}/linux-${KV}
 S2=${WORKDIR}/linux-${KV}-extras
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="${KV}"
 KEYWORDS="x86 -ppc"
 
 # Patch versions. We now have a new system.  To enable a patch, set the patch version.  To disable

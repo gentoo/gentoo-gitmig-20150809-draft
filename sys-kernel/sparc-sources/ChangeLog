@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.7 2002/12/14 19:18:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.8 2002/12/18 00:12:48 lostlogic Exp $
+
+  17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
+  Make all kernel-sources SLOT="${KV}"
 
 *sparc-sources-2.4.21_pre1 (14 Dec 2002)
 

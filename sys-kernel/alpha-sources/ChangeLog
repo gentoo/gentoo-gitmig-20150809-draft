@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/alpha-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.3 2002/12/01 18:32:00 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.4 2002/12/18 00:12:48 lostlogic Exp $
+
+  17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
+  Make all kernel-sources SLOT="${KV}"
 
 *alpha-sources-2.4.20-r1 (01 Dec 2002)
   01 Dec 2002; Bjoern Brauel <bjb@gentoo.org>
