@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.12 2005/02/06 16:54:51 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.13 2005/03/03 22:56:58 ticho Exp $
+
+  03 Mar 2005; Andrej Kacian <ticho@gentoo.org> gmime-2.1.11.ebuild:
+  Moved uu{en,de}code ->gmime-uu{en,de}code binary file renaming to
+  src_install() to circumvent portage bug where it checks for file collisions
+  too early. Closes bug #83994, reported by Lars Strojny <lars@strojny.net>.
 
 *gmime-2.1.11 (06 Feb 2005)
 
