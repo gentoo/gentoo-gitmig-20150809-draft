@@ -1,0 +1,8 @@
+# ChangeLog for x11-themes/gtk-xfce-engine
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+ 
+*gtk-xenophilia-engine-0.8 (21 Jul 2002)
+
+  09 Jul 2002; Michael Nazaroff <naz@gentoo.org> gtk-xenophilia-engine-0.8.ebuild:
+  
+  Initial release of gtk-xenophilia-engine-0.8.ebuild.
