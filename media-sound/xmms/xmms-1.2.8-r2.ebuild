@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r2.ebuild,v 1.1 2003/09/14 23:05:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r2.ebuild,v 1.2 2003/09/15 11:26:14 seemant Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -10,7 +10,7 @@ filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 DESCRIPTION="X MultiMedia System"
 HOMEPAGE="http://www.xmms.org/"
 SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
-	mirror://gentoo/gentoo_ice.zip"
+	mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}
 	nls? ( dev-util/intltool )"
 
 src_unpack() {
-	unpack ${P}.tar.bz2
+	unpack ${A}
 	cd ${S}
 
 	# Patch to allow external programmes to have the "jump to" dialog box
@@ -66,6 +66,11 @@ src_unpack() {
 
 	# Patch to enable superior randomised playlists:
 	epatch ${FILESDIR}/${P}-random.patch
+
+	# This patch changes the search-bar's behaviour when playing
+	# sid tunes using xmms-sid plugin. It enables you to select the
+	# different tunes that are sometimes included in a single .sid file
+	epatch ${FILESDIR}/${P}-sid-songpos.patch
 
 	export WANT_AUTOCONF_2_5=1
 	for x in . libxmms ; do
@@ -139,6 +144,17 @@ src_install() {
 	fi
 
 	# Add the sexy Gentoo Ice skin
-	insinto /usr/share/xmms/Skins
-	doins ${DISTDIR}/gentoo_ice.zip
+	insinto /usr/share/xmms/Skins/gentoo_ice
+	doins ${WORKDIR}/gentoo_ice/*
+	docinto gentoo_ice
+	dodoc ${WORKDIR}/README
+}
+
+pkg_postinst() {
+	echo
+	einfo "If you have been using the xmms-sid plugin before,"
+	einfo "it would be a good idea to re-emerge it now, to have"
+	einfo "the additional features introduced by the xmms-songpos patch"
+	einfo "which let's you select one of several tunes sometimes included"
+	einfo "in a single .sid file using the song-position slider."
 }
