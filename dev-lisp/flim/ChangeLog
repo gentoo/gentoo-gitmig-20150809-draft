@@ -1,0 +1,14 @@
+# ChangeLog for dev-lisp/flim
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/flim/ChangeLog,v 1.1 2002/06/26 01:49:48 george Exp $
+
+*flim-1.14.4.ebuild (25 Jun 2002)
+
+  25 Jun 2002; G Shapovalov <george@gentoo.org> all :
+
+  initial release
+  form the web site:
+  A library to provide basic features about message representation 
+  or encoding -- FLIM
+
+  ebuild submitted by Moto Kawasaki <kawasaki@kawasaki3.org>
