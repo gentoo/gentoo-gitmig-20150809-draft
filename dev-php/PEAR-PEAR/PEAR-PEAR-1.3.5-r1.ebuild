@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.5 2005/03/14 15:36:11 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.6 2005/03/18 08:17:38 sebastian Exp $
 
 ARCHIVE_TAR="1.2"
 CONSOLE_GETOPT="1.2"
@@ -16,12 +16,27 @@ SRC_URI="http://pear.php.net/get/Archive_Tar-${ARCHIVE_TAR}.tgz
 
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc64 ~ppc ~ia64 ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~amd64 ~ppc64 ~ppc ~ia64 ~sparc ~alpha ~hppa"
 IUSE=""
 DEPEND="virtual/php dev-php/php"
 PDEPEND=">=dev-php/PEAR-Archive_Tar-1.1
 		>=dev-php/PEAR-Console_Getopt-1.2
 		>=dev-php/PEAR-XML_RPC-1.0.4"
+
+pkg_preinst() {
+	if [[ -d "${ROOT}"/usr/lib/php ]] && [[ ! -e "${ROOT}"/usr/share/php ]] ; then
+		for f in /usr/lib/php/*
+		do
+			if [ "$f" != "/usr/lib/php/build" ] &&
+			   [ "$f" != "/usr/lib/php/extensions" ]
+				then mv $f /usr/share/php;
+			fi
+		done
+
+		sed -i 's:/usr/lib/php:/usr/share/php:g' ${ROOT}/usr/bin/pear || die
+		rm ${ROOT}/etc/pear.conf
+	fi
+}
 
 src_install() {
 	if has_version "dev-php/PEAR-PEAR"; then
@@ -30,6 +45,13 @@ src_install() {
 		bootstrap_pear
 		install_pear_after_bootstrap
 	fi
+}
+
+pkg_postinst() {
+	ewarn "The location of the local PEAR repository has been changed"
+	ewarn "from /usr/lib/php to /usr/share/php."
+	ewarn "If you had a standard setup previously installed PEAR packages"
+	ewarn "have been moved to the new location."
 }
 
 bootstrap_pear() {
