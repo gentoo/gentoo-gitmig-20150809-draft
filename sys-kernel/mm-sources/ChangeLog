@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.143 2004/04/06 21:06:16 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.144 2004/04/06 23:14:21 latexer Exp $
+
+  06 Apr 2004; Peter Johanson <latexer@gentoo.org> :
+  Fixing the digest for 2.6.5-mm1.bz2. Grr.
 
 *mm-sources-2.6.5-r1 (06 Apr 2004)
 
