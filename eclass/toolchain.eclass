@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.118 2005/03/04 12:37:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.119 2005/03/04 14:03:56 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -73,13 +73,13 @@ GCCMICRO=$(get_version_component_range 3)
 GCC_CONFIG_VER=${GCC_CONFIG_VER:-"$(replace_version_separator 3 '-')"}
 
 # Pre-release support
-if [ ${PV} != ${PV/_pre/-} ] ; then
+if [[ ${PV} != ${PV/_pre/-} ]] ; then
 	PRERELEASE=${PV/_pre/-}
 fi
 # make _alpha and _beta ebuilds automatically use a snapshot
-if [ ${PV} != ${PV/_alpha/} ] ; then
+if [[ ${PV} != ${PV/_alpha/} ]] ; then
 	SNAPSHOT=${GCC_BRANCH_VER}-${PV##*_alpha}
-elif [ ${PV} != ${PV/_beta/} ] ; then
+elif [[ ${PV} != ${PV/_beta/} ]] ; then
 	SNAPSHOT=${GCC_BRANCH_VER}-${PV##*_beta}
 fi
 
@@ -585,7 +585,7 @@ create_gcc_env_entry() {
 	dodir /etc/env.d/gcc
 	local gcc_envd_base="/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}"
 
-	if [ "$1" == "" ] ; then
+	if [[ -z $1 ]] ; then
 		gcc_envd_file="${D}${gcc_envd_base}"
 		# I'm leaving the following commented out to remind me that it
 		# was an insanely -bad- idea. Stuff broke. GCC_SPECS isnt unset
@@ -602,15 +602,15 @@ create_gcc_env_entry() {
 
 	LDPATH="${LIBPATH}"
 
-	if has_multilib_profile; then
+	if has_multilib_profile ; then
 		local abi=
-		for abi in $(get_all_abis); do
+		for abi in $(get_all_abis) ; do
 			local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
-			[ "${MULTIDIR}" != "." -a -d "${LIBPATH}/${MULTIDIR}" ] && LDPATH="${LDPATH}:${LIBPATH}/${MULTIDIR}"
+			[[ ${MULTIDIR} != "." && -d ${LIBPATH}/${MULTIDIR} ]] && LDPATH="${LDPATH}:${LIBPATH}/${MULTIDIR}"
 		done
 	else
-		for path in 32 64 o32; do
-			[ -d "${LIBPATH}/${path}" ] && LDPATH="${LDPATH}:${LIBPATH}/${path}"
+		for path in 32 64 o32 ; do
+			[[ -d ${LIBPATH}/${path} ]] && LDPATH="${LDPATH}:${LIBPATH}/${path}"
 		done
 	fi
 
@@ -624,7 +624,7 @@ create_gcc_env_entry() {
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${gcc_envd_file}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
 
-	if has_version '>=sys-devel/gcc-config-1.4.0'; then
+	if has_version '>=sys-devel/gcc-config-1.4.0' ; then
 		echo "CFLAGS_default=\"$(get_abi_CFLAGS ${DEFAULT_ABI})\"" >> ${gcc_envd_file}
 
 		echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
@@ -632,9 +632,9 @@ create_gcc_env_entry() {
 		local ctarget_alias
 		local abi
 		local CTARGET_ALIASES=""
-		for abi in $(get_all_abis); do
-			for ctarget_alias in $(get_abi_CHOST ${abi}) $(get_abi_CTARGET_ALIASES ${abi}); do
-				if [[ ${ctarget_alias} != ${CHOST} ]]; then
+		for abi in $(get_all_abis) ; do
+			for ctarget_alias in $(get_abi_CHOST ${abi}) $(get_abi_CTARGET_ALIASES ${abi}) ; do
+				if [[ ${ctarget_alias} != ${CHOST} ]] ; then
 					CTARGET_ALIASES="${CTARGET_ALIASES+${CTARGET_ALIASES} }${ctarget_alias}"
 					local var="CFLAGS_${ctarget_alias//-/_}"
 					echo "${var}=\"$(get_abi_CFLAGS ${abi}) ${!var}\"" >> ${gcc_envd_file}
@@ -642,15 +642,15 @@ create_gcc_env_entry() {
 			done
 		done
 
-		if [[ -n "${CTARGET_ALIASES}" ]]; then
+		if [[ -n ${CTARGET_ALIASES} ]] ; then
 			echo "CTARGET_ALIASES=\"${CTARGET_ALIASES}\"" >> ${gcc_envd_file}
 		fi
-	elif is_crosscompile; then
+	elif is_crosscompile ; then
 		echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
 	fi
 
 	# Set which specs file to use
-	[ -n "${gcc_specs_file}" ] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
+	[[ -n ${gcc_specs_file} ]] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
 }
 
 #----<< specs + env.d logic >>----
@@ -734,7 +734,7 @@ gcc-compiler_pkg_postinst() {
 
 	# If our gcc-config version doesn't like '-' in it's version string,
 	# tell our users that gcc-config will yell at them, but it's all good.
-	if ! has_version '>=sys-devel/gcc-config-1.3.10-r1' && [[ ${GCC_CONFIG_VER/-/} != ${GCC_CONFIG_VER} ]]; then
+	if ! has_version '>=sys-devel/gcc-config-1.3.10-r1' && [[ ${GCC_CONFIG_VER/-/} != ${GCC_CONFIG_VER} ]] ; then
 		ewarn "Your version of gcc-config will issue about having an invalid profile"
 		ewarn "when switching to this profile.  It is safe to ignore this warning,"
 		ewarn "and this problem has been corrected in >=sys-devel/gcc-config-1.3.10-r1."
@@ -784,7 +784,7 @@ gcc-compiler_pkg_postrm() {
 gcc-compiler_src_unpack() {
 	# fail if using pie patches, building hardened, and glibc doesnt have
 	# the necessary support
-	[ -n "${PIE_VER}" ] && use hardened && glibc_have_pie
+	[[ -n ${PIE_VER} ]] && use hardened && glibc_have_pie
 
 	if ! want_boundschecking ; then
 		if use hardened ; then
@@ -826,7 +826,7 @@ gcc_src_unpack() {
 
 	# Backwards support... add the BRANCH_UPDATE for 3.3.5-r1 and 3.4.3-r1
 	# which set it directly rather than using ${PV}
-	if [ "${PVR}" = "3.3.5-r1" -o "${PVR}" = "3.4.3-r1" ]; then
+	if [[ ${PVR} == "3.3.5-r1" || ${PVR} = "3.4.3-r1" ]] ; then
 		 version_string="${version_string} ${BRANCH_UPDATE}"
 	fi
 
@@ -1014,22 +1014,12 @@ gcc_do_configure() {
 
 	# When building a stage1 cross-compiler (just C compiler), we 
 	# have to disable shared gcc libs and threads or gcc goes boom
-	if [[ ${EXTRA_ECONF/-shared} == ${EXTRA_ECONF} ]]; then
-		if is_crosscompile && [[ ${GCC_LANG} == "c" ]]; then
-			confgcc="${confgcc} --disable-shared --without-headers"
-		elif use static; then
-			confgcc="${confgcc} --disable-shared"
-		else
-			confgcc="${confgcc} --enable-shared"
-		fi
-	fi
-
-	if [[ ${EXTRA_ECONF/-threads} == ${EXTRA_ECONF} ]]; then
-		if is_crosscompile && [[ ${GCC_LANG} == "c" ]]; then
-			confgcc="${confgcc} --disable-threads"
-		else
-			confgcc="${confgcc} --enable-threads=posix"
-		fi
+	if is_crosscompile && [[ ${GCC_LANG} == "c" ]] ; then
+		confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
+	elif use static ; then
+		confgcc="${confgcc} --disable-shared --enable-threads=posix"
+	else
+		confgcc="${confgcc} --enable-shared --enable-threads=posix"
 	fi
 
 	# Nothing wrong with a good dose of verbosity
@@ -1262,7 +1252,7 @@ gcc-library_src_install() {
 		popd
 	fi
 
-	if [ -n "${GCC_LIB_USE_SUBDIR}" ] ; then
+	if [[ -n ${GCC_LIB_USE_SUBDIR} ]] ; then
 		mkdir -p ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
 		mv ${D}/${LIBPATH}/* ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
 		mv ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/ ${D}/${LIBPATH}
@@ -1284,12 +1274,12 @@ gcc-compiler_src_install() {
 
 	# Do allow symlinks in ${PREFIX}/lib/gcc-lib/${CHOST}/${GCC_CONFIG_VER}/include as
 	# this can break the build.
-	for x in ${WORKDIR}/build/gcc/include/* ; do
+	for x in "${WORKDIR}"/build/gcc/include/* ; do
 		[[ -L ${x} ]] && rm -f "${x}"
 	done
 	# Remove generated headers, as they can cause things to break
 	# (ncurses, openssl, etc).
-	for x in $(find ${WORKDIR}/build/gcc/include/ -name '*.h') ; do
+	for x in $(find "${WORKDIR}"/build/gcc/include/ -name '*.h') ; do
 		grep -q 'It has been auto-edited by fixincludes from' "${x}" \
 			&& rm -f "${x}"
 	done
@@ -1333,11 +1323,10 @@ gcc-compiler_src_install() {
 		cd ${D}${LIBPATH}
 
 		# Move Java headers to compiler-specific dir
-		for x in ${D}${PREFIX}/include/gc*.h ${D}${PREFIX}/include/j*.h
-		do
+		for x in ${D}${PREFIX}/include/gc*.h ${D}${PREFIX}/include/j*.h ; do
 			[[ -f ${x} ]] && mv -f "${x}" ${D}${LIBPATH}/include/
 		done
-		for x in gcj gnu java javax org; do
+		for x in gcj gnu java javax org ; do
 			if [[ -d ${D}${PREFIX}/include/${x} ]] ; then
 				dodir /${LIBPATH}/include/${x}
 				mv -f ${D}${PREFIX}/include/${x}/* ${D}${LIBPATH}/include/${x}/
@@ -1361,12 +1350,12 @@ gcc-compiler_src_install() {
 		[[ -f jar ]] && mv -f jar gcj-jar
 
 		# Move <cxxabi.h> to compiler-specific directories
-		[ -f "${D}${STDCXX_INCDIR}/cxxabi.h" ] && \
+		[[ -f ${D}${STDCXX_INCDIR}/cxxabi.h ]] && \
 			mv -f ${D}${STDCXX_INCDIR}/cxxabi.h ${D}${LIBPATH}/include/
 
 		# These should be symlinks
 		cd "${D}"${BINPATH}
-		for x in gcc g++ c++ g77 gcj gcjh gfortran; do
+		for x in gcc g++ c++ g77 gcj gcjh gfortran ; do
 			# For some reason, g77 gets made instead of ${CTARGET}-g77... this makes it safe
 			[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
 
@@ -1423,7 +1412,7 @@ gcc_movelibs() {
 	rm -f ${D}${LIBPATH}/*/libiberty.a
 
 	local multiarg
-	for multiarg in $(${XGCC} -print-multi-lib); do
+	for multiarg in $(${XGCC} -print-multi-lib) ; do
 		multiarg=${multiarg#*;}
 		multiarg=${multiarg/@/-}
 
@@ -1432,28 +1421,28 @@ gcc_movelibs() {
 		local TODIR=${D}/${LIBPATH}/${MULTIDIR}
 		local FROMDIR=
 
-		[[ -d "${TODIR}" ]] || mkdir -p ${TODIR}
+		[[ -d ${TODIR} ]] || mkdir -p ${TODIR}
 
 		FROMDIR=${D}/${LIBPATH}/${OS_MULTIDIR}
-		if [[ "${FROMDIR}" != "${TODIR}" && -d "${FROMDIR}" ]]; then
+		if [[ ${FROMDIR} != "${TODIR}" && -d ${FROMDIR} ]] ; then
 			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
 			rmdir ${FROMDIR}
 		fi
 
 		FROMDIR=${D}/${LIBPATH}/../${MULTIDIR}
-		if [[ -d "${FROMDIR}" ]]; then
+		if [[ -d ${FROMDIR} ]] ; then
 			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
 			rmdir ${FROMDIR}
 		fi
 
 		FROMDIR=${D}/${PREFIX}/lib/${OS_MULTIDIR}
-		if [[ -d "${FROMDIR}" ]]; then
+		if [[ -d ${FROMDIR} ]] ; then
 			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
 			rmdir ${FROMDIR}
 		fi
 
 		FROMDIR=${D}/${PREFIX}/lib/${MULTIDIR}
-		if [[ -d "${FROMDIR}" ]]; then
+		if [[ -d ${FROMDIR} ]] ; then
 			# The only thing that ends up here is libiberty.a (which is deleted)
 			# Lucky for us nothing mistakenly gets placed here that we need...
 			# otherwise we'd have a potential conflict when OS_MULTIDIR=../lib and
@@ -1533,13 +1522,13 @@ gcc_quick_unpack() {
 exclude_gcc_patches() {
 	local i
 	for i in ${GENTOO_PATCH_EXCLUDE} ; do
-		if [ -f ${WORKDIR}/patch/${i} ] ; then
+		if [[ -f ${WORKDIR}/patch/${i} ]] ; then
 			einfo "Excluding patch ${i}"
 			rm -f ${WORKDIR}/patch/${i} || die "failed to delete ${i}"
 		fi
 	done
 	for i in ${PIEPATCH_EXCLUDE} ; do
-		if [ -f ${WORKDIR}/piepatch/${i} ] ; then
+		if [[ -f ${WORKDIR}/piepatch/${i} ]] ; then
 			einfo "Excluding piepatch ${i}"
 			rm -f ${WORKDIR}/piepatch/${i} || die "failed to delete ${i}"
 		fi
@@ -1580,7 +1569,7 @@ do_gcc_SSP_patches() {
 
 	epatch ${ssppatch}
 
-	if [ "${PN}" == "gcc" -a "${sspdocs}" == "no" ] ; then
+	if [[ ${PN} == "gcc" && ${sspdocs} == "no" ]] ; then
 		epatch ${FILESDIR}/pro-police-docs.patch
 	fi
 
@@ -1591,7 +1580,7 @@ do_gcc_SSP_patches() {
 	# if gcc in a stage3 defaults to ssp, is version 3.4.0 and a stage1 is built
 	# the build fails building timevar.o w/:
 	# cc1: stack smashing attack in function ix86_split_to_parts()
-	if gcc -dumpspecs | grep -q "fno-stack-protector:" && version_is_at_least 3.4.0 && ! version_is_at_least 4.0.0 && [ -f ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch ] ; then
+	if gcc -dumpspecs | grep -q "fno-stack-protector:" && version_is_at_least 3.4.0 && ! version_is_at_least 4.0.0 && [[ -f ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch ]] ; then
 		use build && epatch ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
 	fi
 
@@ -1760,7 +1749,7 @@ disable_multilib_libjava() {
 
 fix_libtool_libdir_paths() {
 	local dirpath
-	for archive in ${*} ; do
+	for archive in $* ; do
 		dirpath=$(dirname ${archive} | sed -e "s:^${D}::")
 		sed -i ${archive} -e "s:^libdir.*:libdir=\'${dirpath}\':"
 	done
