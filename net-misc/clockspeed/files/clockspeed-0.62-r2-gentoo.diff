@@ -32,3 +32,26 @@ diff -ur clockspeed-0.62.orig/conf-ld clockspeed-0.62/conf-ld
  #include "substdio.h"
  #include "readwrite.h"
  #include "strerr.h"
+diff -ur clockspeed-0.62.orig/error.h clockspeed-0.62/error.h
+--- clockspeed-0.62.orig/error.h	2003-03-10 14:41:55.000000000 +0000
++++ clockspeed-0.62/error.h	2003-03-10 14:45:09.000000000 +0000
+@@ -1,7 +1,7 @@
+ #ifndef ERROR_H
+ #define ERROR_H
+ 
+-extern int errno;
++#include <errno.h>
+ 
+ extern int error_intr;
+ extern int error_nomem;
+diff -ur clockspeed-0.62.orig/leapsecs_read.c clockspeed-0.62/leapsecs_read.c
+--- clockspeed-0.62.orig/leapsecs_read.c	2003-03-10 14:41:55.000000000 +0000
++++ clockspeed-0.62/leapsecs_read.c	2003-03-10 14:44:40.000000000 +0000
+@@ -2,7 +2,6 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <errno.h>
+-extern int errno;
+ #include "tai.h"
+ #include "leapsecs.h"
+ 
