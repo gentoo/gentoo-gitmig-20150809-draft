@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2769 2004/03/24 01:32:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2770 2004/03/24 02:26:23 leonardop Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -105,13 +105,16 @@ net-analyzer/gnome-netstatus
 >=media-plugins/gst-plugins-xvideo-0.8
 >=media-plugins/gst-plugins-a52dec-0.8
 >=media-plugins/gst-plugins-cdparanoia-0.8
-# A11Y
+# gnome-accessibility
 >=gnome-base/gail-1.5
-#>app-accessibility/gnopernicus-0.8
+>=app-accessibility/gnopernicus-0.8.1
 >=app-accessibility/gok-0.9.5
 >=gnome-extra/at-spi-1.4
 >=app-accessibility/gnome-mag-0.10.10
-#>app-accessibility/gnome-speech-0.3.2
+# these two were already in the tree before announcing them as gnome 2.6
+# packages, so we'll let them be.
+#>=app-accessibility/gnome-speech-0.3.2
+#>=gnome-extra/libgail-gnome-1.0.3
 #
 # End of gnome 2.6 mask
 #
