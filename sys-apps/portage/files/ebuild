@@ -544,9 +544,7 @@ dyn_install() {
     echo
     echo ">>> Install ${PF} into ${D} category ${CATEGORY}"
     src_install
-    prepallman
-    prepallinfo
-    prepallstrip
+    prepall
     install -d -m0700 ${D}var/db/pkg/${CATEGORY}/${PF}
     cp ${STARTDIR}/${EBUILD} ${D}var/db/pkg/${CATEGORY}/${PF}
     echo ">>> Completed installing into ${D}"
