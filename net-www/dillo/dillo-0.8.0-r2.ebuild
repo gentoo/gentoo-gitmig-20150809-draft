@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.8.0-r2.ebuild,v 1.2 2004/04/27 07:34:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.8.0-r2.ebuild,v 1.3 2004/04/27 23:34:38 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,8 +27,8 @@ DEPEND="=x11-libs/gtk+-1.2*
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc34.patch
 	epatch ../${DILLO_I18N_P}.diff
+	epatch ${FILESDIR}/${PV}-gcc34.patch
 
 	if [ "${DILLO_ICONSET}" = "kde" ]
 	then
