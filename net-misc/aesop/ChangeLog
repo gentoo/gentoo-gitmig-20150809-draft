@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/aesop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aesop/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header:
+
+
+*aesop-0.4 (1 Feb 2002)
+
+  6 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog :
+  Added LICENSE, KEYWORDS, SLOT.
+
 
 *aesop-0.4 (1 Feb 2002)
 
