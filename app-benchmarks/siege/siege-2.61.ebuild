@@ -1,15 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.61_beta1.ebuild,v 1.2 2004/11/18 10:54:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.61.ebuild,v 1.1 2004/11/20 16:40:04 ka0ttic Exp $
 
 inherit eutils
 
-MY_P=${P/_beta/b}
-S=${WORKDIR}/${MY_P}
-
 DESCRIPTION="A HTTP regression testing and benchmarking utility"
 HOMEPAGE="http://www.joedog.org/siege/"
-SRC_URI="ftp://sid.joedog.org/pub/${PN}/beta/${MY_P}.tar.gz"
+SRC_URI="ftp://sid.joedog.org/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
@@ -38,4 +35,11 @@ src_install() {
 	dodoc AUTHORS ChangeLog INSTALL MACHINES README KNOWNBUGS \
 		siegerc-example urls.txt || die "dodoc failed"
 	use ssl && dodoc README.https
+}
+
+pkg_postinst() {
+	echo
+	einfo "An example ~/.siegerc file has been installed as"
+	einfo "/usr/share/doc/${PF}/siegerc-example.gz"
+	echo
 }

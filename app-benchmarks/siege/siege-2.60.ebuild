@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.60.ebuild,v 1.6 2004/11/18 10:54:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.60.ebuild,v 1.7 2004/11/20 16:40:04 ka0ttic Exp $
 
 inherit eutils
 
@@ -35,4 +35,11 @@ src_install() {
 	dodoc AUTHORS ChangeLog INSTALL MACHINES README KNOWNBUGS \
 		siegerc-example urls.txt || die "dodoc failed"
 	use ssl && dodoc README.https
+}
+
+pkg_postinst() {
+	echo
+	einfo "An example ~/.siegerc file has been installed as"
+	einfo "/usr/share/doc/${PF}/siegerc-example.gz"
+	echo
 }
