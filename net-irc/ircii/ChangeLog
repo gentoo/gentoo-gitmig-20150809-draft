@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ircii
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.3 2003/09/12 23:17:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.4 2003/10/01 23:27:13 zul Exp $
+
+  01 Oct 2003; Chuck Short <zul@gentoo.org> ircii-20030709-r1.ebuild,
+  ircii-20030709-r2.ebuild, ircii-20030709.ebuild:
+  Added ~amd64 to keywords.
 
 *ircii-20030709-r2 (13 Sep 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20030709.ebuild,v 1.2 2003/09/08 07:01:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20030709.ebuild,v 1.3 2003/10/01 23:27:13 zul Exp $
 
 IUSE="ipv6"
 
@@ -15,7 +15,7 @@ RDEPEND="( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 src_unpack() {
 	unpack ${A}
