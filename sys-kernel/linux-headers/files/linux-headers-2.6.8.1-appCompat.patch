@@ -1164,29 +1164,6 @@ diff -ur linux-2.6.7/include/asm-ia64/unistd.h linux-2.6.7-gentoo/include/asm-ia
  #define __NR_init_module		1133
  #define __NR_delete_module		1134
  /* 1135 was __NR_get_kernel_syms */
-diff -ur linux-2.6.7/include/asm-ia64/types.h linux-2.6.7-gentoo/include/asm-ia64/types.h
---- linux-2.6.7/include/asm-ia64/types.h	2004-07-10 01:47:34.000000000 +0100
-+++ linux-2.6.7-gentoo/include/asm-ia64/types.h	2004-07-27 20:13:02.000000000 +0100
-@@ -44,11 +44,6 @@
- typedef __signed__ long __s64;
- typedef unsigned long __u64;
- 
--/*
-- * These aren't exported outside the kernel to avoid name space clashes
-- */
--# ifdef __KERNEL__
--
- typedef __s8 s8;
- typedef __u8 u8;
- 
-@@ -69,7 +64,5 @@
- 
- typedef unsigned short kmem_bufctl_t;
- 
--# endif /* __KERNEL__ */
- #endif /* !__ASSEMBLY__ */
--
- #endif /* _ASM_IA64_TYPES_H */
 diff -urp linux-2.6.7/include/asm-parisc/bitops.h linux-2.6.7-gentoo/include/asm-parisc/bitops.h
 --- linux-2.6.7/include/asm-parisc/bitops.h	2004-08-24 12:09:23.000000000 -0400
 +++ linux-2.6.7-gentoo/include/asm-parisc/bitops.h	2004-08-24 11:59:41.952667176 -0400

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.94 2005/01/14 00:43:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.95 2005/01/22 00:18:05 plasmaroo Exp $
+
+  22 Jan 2005; <plasmaroo@gentoo.org>
+  files/linux-headers-2.6.8.1-appCompat.patch:
+  Fixing howl compilation on IA64.
 
   13 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   linux-headers-2.6.8.1-r2.ebuild, linux-headers-2.6.8.1-r4.ebuild:
