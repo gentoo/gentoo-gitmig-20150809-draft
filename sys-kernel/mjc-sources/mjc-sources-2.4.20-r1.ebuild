@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/mjc-sources-2.4.20-r1.ebuild,v 1.1 2002/11/30 18:15:57 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/mjc-sources-2.4.20-r1.ebuild,v 1.2 2002/11/30 18:18:03 sethbc Exp $
 
 IUSE="build"
 
@@ -30,6 +30,4 @@ src_unpack() {
 	kernel_src_unpack
 
 	cd ${WORKDIR}/linux-${KV}
-	patch -p1 < ${FILESDIR}/linux-${KV}-gentoo.diff || die "Quickfixes failed"
-
 }
