@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellmitime
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/ChangeLog,v 1.12 2004/06/24 22:55:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/ChangeLog,v 1.13 2004/07/18 23:58:44 kloeri Exp $
+
+  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gkrellmitime-1.0.1.ebuild:
+  Stable on alpha.
 
   21 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> gkrellmitime-1.0.1.ebuild:
   marked ~amd64
