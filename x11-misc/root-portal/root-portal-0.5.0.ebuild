@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.0.ebuild,v 1.2 2003/12/08 03:35:29 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.0.ebuild,v 1.3 2004/01/15 16:36:02 tseng Exp $
 
 inherit debug
 
@@ -13,17 +13,14 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="gnome"
 
-# Build-time dependencies, such as
-#    ssl? ( >=openssl-0.9.6b )
-#    >=perl-5.6.1-r1
-DEPEND="virtual/x11
-	=x11-libs/gtk+-1.2*
+RDEPEND="virtual/x11
+	>=x11-libs/gtk+-2.0
 	>=x11-libs/libzvt-2.0
-		>=gnome-base/ORBit-0.5.7
-		>=gnome-base/gnome-libs-1.4.0
-		<gnome-base/gnome-panel-2
-		>=dev-libs/libxml-1.8.16 "
-# the tabulated section is only needed if Gnome is in USE, but their disable-gnome doesn't work for now.
+	>=gnome-base/ORBit2-2.0
+	>=libgnomeui-2.0
+	>=gnome-panel-2.0
+	>=dev-libs/libxml2-2.0"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
