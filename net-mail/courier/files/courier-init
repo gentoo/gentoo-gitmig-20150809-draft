@@ -85,6 +85,15 @@ start() {
 		;;
 	esac
 
+	# start esmtpd-ssl if so written
+	[ -f ${sysconfdir}/esmtpd-ssl ] && source ${sysconfdir}/esmtpd-ssl
+	case x$ESMTPDSTART in
+	x[yY]*)
+		ebegin " Starting esmtpd-ssl"
+		${sbindir}/esmtpd-ssl start
+		;;
+	esac
+
 	# start pop3d if so written
 	[ -f ${sysconfdir}/pop3d ] && source ${sysconfdir}/pop3d
 	case x$POP3DSTART in
@@ -98,7 +107,7 @@ start() {
 	[ -f ${sysconfdir}/pop3d-ssl ] && source ${sysconfdir}/pop3d-ssl
 	case x$POP3DSTART in
 	x[yY]*)
-		ebegin " courier-pop3d"
+		ebegin " courier-pop3d-ssl"
 		${sbindir}/courier-pop3d-ssl start
 		;;
 	esac
@@ -130,6 +139,9 @@ stop() {
 
 	ebegin " Stopping courier-esmtpd-msa"
 	${sbindir}/esmtpd-msa stop
+
+	ebegin " Stopping courier-esmtpd-ssl"
+	${sbindir}/esmtpd-ssl stop
 
 	[ -x ${sbindir}/courier-pop3d ] && \
 		ebegin " Stopping courier-pop3d" && ${sbindir}/courier-pop3d stop
