@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.44 2003/06/24 23:21:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.45 2003/06/30 21:30:05 mholzer Exp $
+
+*gkrellm-2.1.14 (30 Jun 2003)
+
+  30 Jun 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.14.ebuild:
+  Version bumped.
 
 *gkrellm-2.1.13 (25 Jun 2003)
 
