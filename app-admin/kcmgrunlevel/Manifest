@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 19be014e5d67ba33fd7cf88e9bbc50cd kcmgrunlevel-0.2.ebuild 1067
-MD5 5182c4d7b4aba82b4ed634e76274e17e ChangeLog 687
+MD5 82c6971b905691e6e2bfd487569c8165 ChangeLog 681
 MD5 e18ef5eecdad6acda237acbdc7bc0461 metadata.xml 163
 MD5 4b67016e980384a9e34658b4cff059af files/digest-kcmgrunlevel-0.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCAPR1I1lqEGTUzyQRAmZ/AKCVPH9C0UbfzrW+tUijL0MmQx+gigCeJ6Zp
+oWEYWYdaxhHmBNYT9H+SpRc=
+=KIuv
+-----END PGP SIGNATURE-----
