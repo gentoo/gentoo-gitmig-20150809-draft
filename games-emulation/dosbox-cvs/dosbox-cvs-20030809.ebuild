@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.4 2004/02/20 06:26:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.5 2004/02/28 18:27:09 mr_bones_ Exp $
 
 DESCRIPTION="DOS Emulator"
 HOMEPAGE="http://dosbox.sourceforge.net/"
@@ -22,14 +22,14 @@ DEPEND="sys-libs/ncurses
 
 inherit cvs debug flag-o-matic
 
-strip-flags
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/dosbox"
 ECVS_MODULE="dosbox"
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
-S=${WORKDIR}/${ECVS_MODULE}
+S="${WORKDIR}/${ECVS_MODULE}"
 
 src_compile() {
+	strip-flags
 	ln -s /usr/include/SDL/*.h ./include/ || \
 		die "Linking SDL-includes failed"
 	./autogen.sh --prefix=/usr --host=${CHOST} || \
