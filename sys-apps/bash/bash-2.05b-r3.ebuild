@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r3.ebuild,v 1.11 2003/01/01 06:51:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r3.ebuild,v 1.12 2003/01/01 06:56:00 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
-IUSE="static"
+IUSE="nls build"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2 sys-devel/autoconf"
 
@@ -44,7 +44,7 @@ src_compile() {
 	#
 	# Martin Schlemmer <azarah@gentoo.org> (1 Sep 2002)
 	#use readline && myconf="--with-installed-readline"
-	use static && export LDFLAGS="${LDFLAGS} -static"
+	#use static && export LDFLAGS="${LDFLAGS} -static"
 	use nls || myconf="${myconf} --disable-nls"
 
 	econf \
