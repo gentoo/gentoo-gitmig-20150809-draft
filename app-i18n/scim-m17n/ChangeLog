@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-m17n
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.9 2004/06/28 08:06:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.10 2004/08/03 18:45:41 usata Exp $
+
+  04 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> scim-m17n-0.1.1.ebuild:
+  Marked as stable.
 
   28 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> -scim-m17n-0.1.0.ebuild,
   scim-m17n-0.1.1.ebuild:
