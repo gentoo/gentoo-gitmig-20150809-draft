@@ -23,10 +23,6 @@ MD5 7b19cedba543f3d94c0884ff3d921081 files/3.3.0-sasl-fix.diff 2419
 MD5 2eb15d4b93c483b634ea34475d91e79b files/kdebase-3.2.2-genkdmconf.c.diff 1082
 MD5 a60fd1628607d4abdeb930662d126171 files/post-3.2.3-kdebase-htmlframes.patch 6728
 MD5 e9930c666b8cf91e75350fdf4a5d6c58 files/3.3.0-kwinrules-Makefile.am.diff 839
-MD5 9adecda5cdf6951ea0bcb6515c21a38b files/3.3.0_rc2/kdmrc 18202
-MD5 2f1f31f38b93136baeb537500c8cfabc files/3.3.0_rc2/backgroundrc 342
-MD5 3403677f5c4e44815c5a97c507d4f117 files/3.3.0_rc2/Xsetup 758
-MD5 e0c938e08649001554fc8354fcd0e4e6 files/3.3.0_rc2/startkde-3.3.0_rc2-gentoo.diff 1504
 MD5 7db6d7353b1bfbb47d44e9df63be1410 files/3.1.5/kdmrc 17661
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.1.5/backgroundrc 342
 MD5 5074351f4d8a0b3870a60751f58aaa06 files/3.1.5/startkde-3.1.5-gentoo.diff 1878
