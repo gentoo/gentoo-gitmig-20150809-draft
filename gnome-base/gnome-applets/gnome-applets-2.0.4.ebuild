@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.4.ebuild,v 1.2 2002/11/23 00:36:38 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.4.ebuild,v 1.3 2002/12/01 18:06:01 foser Exp $
 
 inherit libtool gnome2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Applets for the Gnome2 Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2 FDL-1.1" 
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=x11-libs/libwnck-0.13

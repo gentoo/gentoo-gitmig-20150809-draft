@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.0.8.ebuild,v 1.1 2002/11/28 01:42:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.0.8.ebuild,v 1.2 2002/12/01 18:06:01 foser Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="EEL is the Eazel Extentions Library"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2 LGPL-2.1" 
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gconf-1.2.1
