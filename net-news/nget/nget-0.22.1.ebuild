@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.22.1.ebuild,v 1.3 2003/07/13 16:53:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.22.1.ebuild,v 1.4 2003/07/25 21:21:18 taviso Exp $
 
 IUSE="static build"
 
@@ -39,5 +39,5 @@ src_install() {
 	fi                      
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man infodir=${D}/usr/share/info install || die
-	dodoc COPYING ChangeLog FAQ README TODO 
+	dodoc COPYING ChangeLog FAQ README TODO .ngetrc
 }
