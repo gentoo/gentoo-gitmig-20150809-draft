@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r3.ebuild,v 1.1 2004/01/12 10:42:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r3.ebuild,v 1.2 2004/01/12 10:50:32 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -85,7 +85,7 @@ src_unpack() {
 	cd ${S}/bin; epatch ${FILESDIR}/fvwm-2.5.8-fvwm-menu-directory-security.diff
 
 	# add a nice new placement policy, UnderMousePlacement.
-	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-undermouse.diff
+	# cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-undermouse.diff
 
 	# this patch adds an 'ShowOnlyIcons Never' option to FvwmIconMan.
 	cd ${S}; epatch ${FILESDIR}/fvwm-iconman.diff
