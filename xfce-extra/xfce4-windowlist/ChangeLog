@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-windowlist
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-windowlist/ChangeLog,v 1.1 2004/09/20 17:10:38 bcowan Exp $
+
+*xfce4-windowlist-0.1.0 (20 Sep 2004)
+
+  20 Sep 2004; Brad Cowan <bcowan@gentoo.org> +metadata.xml,
+  +xfce4-windowlist-0.1.0.ebuild:
+  Initial import.
+

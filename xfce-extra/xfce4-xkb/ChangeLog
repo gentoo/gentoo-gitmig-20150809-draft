@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-xkb
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb/ChangeLog,v 1.1 2004/09/20 17:14:52 bcowan Exp $
+
+*xfce4-xkb-0.3.2 (20 Sep 2004)
+
+  20 Sep 2004; Brad Cowan <bcowan@gentoo.org> +metadata.xml,
+  +xfce4-xkb-0.3.2.ebuild:
+  Initial import.
+
