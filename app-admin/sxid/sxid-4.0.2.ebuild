@@ -1,16 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.2.ebuild,v 1.9 2004/04/26 15:22:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.2.ebuild,v 1.10 2004/05/12 22:53:25 dragonheart Exp $
 
 DESCRIPTION="suid, sgid file and directory checking"
 SRC_URI="http://www.phunnypharm.org/pub/sxid/${P/-/_}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/sxid"
-
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/glibc"
+
+RDEPEND="virtual/glibc
+	virtual/mta"
 
 src_compile() {
 	# this is an admin application and really requires root to run correctly
