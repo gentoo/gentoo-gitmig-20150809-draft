@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7afb07234e772e2854eea92932d42c11 kalbum-0.8.0.ebuild 602
-MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 24b4ff80bb32aba57f362c07d98729af ChangeLog 1043
+MD5 7afb07234e772e2854eea92932d42c11 kalbum-0.8.0.ebuild 602
 MD5 f501ad837ca304264a23f6ef285aae0c files/digest-kalbum-0.8.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBhD06I1lqEGTUzyQRAuNMAKDfnHv8+Gq/Zj5MkaNNQUnxrVcm3QCeM/3o
-pujfhwvQ7AivFxtiCaOAv1U=
-=6wDZ
------END PGP SIGNATURE-----

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 MD5 1a1b7750e69270a689e29dec9c77daee kio-locate-0.3.4.ebuild 540
 MD5 445c22bab8c1197e8bfcd8e001ff9906 kio-locate-0.3.0.ebuild 545
 MD5 3dbc93f6db1176052f1982fcfbffd8af ChangeLog 1544
-MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
 MD5 d82f192ea99ebeff919b54808fe71568 kio-locate-0.3.2.ebuild 518
-MD5 3598fca50edc709a2779c2071cd16499 files/digest-kio-locate-0.3.0 68
 MD5 71bcf1693aaaf719d22d2f8edec1cd47 files/digest-kio-locate-0.3.2 68
+MD5 3598fca50edc709a2779c2071cd16499 files/digest-kio-locate-0.3.0 68
 MD5 149ef0ef857ecaa5596a4efc341027a9 files/digest-kio-locate-0.3.4 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJkwVntT9W3vfTuoRAqLQAKCMhpoc6rHzVLk0h3dokKXQXvBsTgCfdlqD
-JPHMgDKuGi6gmlk/Fcm+pX0=
-=/nzz
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7f35e82dfb94d88fa6b193ad9f1b1054 kexchange-1.0.ebuild 463
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1e51c2c49a54e911577f78fc39e81c23 ChangeLog 1121
-MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 55216ba80fc050bfec9c94d5f5ade191 files/digest-kexchange-1.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCMGTantT9W3vfTuoRAq7lAJ9k+Tnft2Cl5HomINKPVsqkEkEx5ACfSVd5
-1W3wP7h5h/CVdbDNC4a5vWs=
-=4T61
------END PGP SIGNATURE-----
