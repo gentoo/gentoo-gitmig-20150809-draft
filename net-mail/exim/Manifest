@@ -1,4 +1,4 @@
-MD5 151281399578251625515213340e4ac8 ChangeLog 8316
+MD5 5f6757e36b5e25246ff1ac8ab0969c3d ChangeLog 8458
 MD5 03f9959005005fa089e318ade372f28b exim-4.14.ebuild 5482
 MD5 e8d015031c1ba9f3fe8d6aff0da7c1eb exim-4.10.ebuild 6208
 MD5 b7e54563b0e25ee0468e2eaa82d197c0 exim-4.12.ebuild 5435
@@ -11,6 +11,7 @@ MD5 d72918fcce5f904f2a7d0b5124a61e97 metadata.xml 886
 MD5 039808a19a4306268224e6a33b3c182d exim-4.31.ebuild 7105
 MD5 52b312b23ecff350c0382a6c7795a11d exim-4.24-r1.ebuild 6369
 MD5 27a0a2d29e9b142c1a684e8c1c507d15 exim-4.24.ebuild 6356
+MD5 70e4838a4b5364943d3f36b6ffd46ccd exim-4.30-r1.ebuild 7107
 MD5 020b598eb5e644a8a9dd41ad7bf2bd58 exim-4.24-r2.ebuild 6276
 MD5 1aeed57de2968663d6501e440ed6495d exim-4.24-r3.ebuild 6322
 MD5 3d689d0f72e55820479ddb74857ddbb1 exim-4.30.ebuild 6294
@@ -40,3 +41,4 @@ MD5 117455c076e246e7c02d5fa464dd4be7 files/digest-exim-4.24-r3 132
 MD5 fd6118c0a56fcc3a96052bf1ff19fd1f files/mailer.conf 995
 MD5 f03fc637e154f9ca79d991e71eb063bf files/exim-4.30-conf.patch 887
 MD5 11bc429bd869bdc9709fabe221ac29a7 files/digest-exim-4.30 132
+MD5 56085a2d36e00a6a48cacc7baeb5f451 files/digest-exim-4.30-r1 62
