@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.8.1.ebuild,v 1.4 2004/11/12 03:17:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.8.1.ebuild,v 1.5 2004/11/12 04:09:51 obz Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ppc sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
 IUSE="guile artworkextra"
 
 RDEPEND=">=x11-libs/gtk+-2.3
