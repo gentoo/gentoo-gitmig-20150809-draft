@@ -1,0 +1,11 @@
+# ChangeLog for net-www/gplflash
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.1 2002/06/30 02:41:03 mkennedy Exp $
+
+*gplflash-0.4.10-r1 (29 Jun 2002)
+
+  29 Jun 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  gplflash-0.4.10-r1.ebuild :
+
+  Added missing ChangeLog, lintool fixups, patch for GCC3.1 support
+  (thanks to José Fonseca <j_r_fonseca@yahoo.co.uk> of bug #4134).
