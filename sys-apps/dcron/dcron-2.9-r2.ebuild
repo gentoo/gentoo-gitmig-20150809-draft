@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.19 2004/11/08 06:48:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.20 2004/11/11 00:42:14 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -61,6 +61,9 @@ src_install() {
 	doman crontab.1 crond.8
 
 	doinitd ${FILESDIR}/dcron
+
+	insinto /etc/logrotate.d
+	newins ${FILESDIR}/dcron.logrotate dcron
 
 	insopts -o root -g root -m 0644
 	insinto /etc

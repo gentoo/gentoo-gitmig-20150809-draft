@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.37 2004/09/05 01:11:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.38 2004/11/11 00:42:14 vapier Exp $
+
+  10 Nov 2004; Mike Frysinger <vapier@gentoo.org> +files/dcron.logrotate,
+  dcron-2.9-r2.ebuild:
+  Install a logrotate file #52672 by BlueRaven.
 
   04 Sep 2004; <solar@gentoo.org> +files/dcron-2.9-ldflags.patch,
   dcron-2.9-r2.ebuild:
