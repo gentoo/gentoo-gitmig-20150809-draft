@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3_p2-r1.ebuild,v 1.2 2004/04/19 07:46:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3_p2-r1.ebuild,v 1.3 2004/04/21 19:19:54 mholzer Exp $
 
 inherit webapp-apache
 
+IUSE="apache2"
 MY_PV="${PV/_p/-}"
 S="${WORKDIR}/${PN}-${MY_PV}-full"
 DESCRIPTION="phpWebSite provides a complete web site content management system. Web-based administration allows for easy maintenance of interactive, community-driven web sites."
