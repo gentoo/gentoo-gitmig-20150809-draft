@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.ebuild,v 1.3 2005/01/08 10:46:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.ebuild,v 1.4 2005/01/28 11:19:25 ka0ttic Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64 ~mips"
-IUSE="perl ipv6 ssl tcpd X lm_sensors minimal"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64 ~mips"
+IUSE="perl ipv6 ssl tcpd X lm_sensors minimal selinux"
 
 PROVIDE="virtual/snmp"
 DEPEND="virtual/libc
@@ -29,6 +29,7 @@ DEPEND="virtual/libc
 	)"
 RDEPEND="${DEPEND}
 	perl? ( X? ( dev-perl/perl-tk ) )
+	selinux? ( sec-policy/selinux-snmpd )
 	!virtual/snmp"
 
 DEPEND="${DEPEND} >=sys-apps/sed-4"

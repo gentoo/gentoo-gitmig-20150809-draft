@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.2.ebuild,v 1.2 2005/01/08 10:46:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r2.ebuild,v 1.1 2005/01/28 11:19:25 ka0ttic Exp $
 
-inherit eutils
+inherit eutils fixheadtails
 
 DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64 ~mips"
-IUSE="perl ipv6 ssl tcpd X lm_sensors minimal"
+IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux"
 
 PROVIDE="virtual/snmp"
 DEPEND="virtual/libc
@@ -29,6 +29,7 @@ DEPEND="virtual/libc
 	)"
 RDEPEND="${DEPEND}
 	perl? ( X? ( dev-perl/perl-tk ) )
+	selinux? ( sec-policy/selinux-snmpd )
 	!virtual/snmp"
 
 DEPEND="${DEPEND} >=sys-apps/sed-4"
@@ -49,30 +50,39 @@ src_unpack() {
 	fi
 
 	#wrt to bugs 68467, 68254
-	sed -i -e 's/^NSC_AGENTLIBS="@AGENTLIBS@"/NSC_AGENTLIBS="@AGENTLIBS@ @WRAPLIBS@"/' net-snmp-config.in
+	sed -i -e \
+		's/^NSC_AGENTLIBS="@AGENTLIBS@"/NSC_AGENTLIBS="@AGENTLIBS@ @WRAPLIBS@"/' \
+		net-snmp-config.in || die "sed net-snmp-config.in"
+	sed -i -e 's;embed_perl="yes",;embed_perl=$enableval,;' configure.in \
+		|| die "sed configure.in failed"
 
-	sed -i -e '551s;embed_perl="yes",;embed_perl=$enableval,;' configure.in
-	autoconf || die "autoconf failed"
+	ht_fix_all
 }
 
 src_compile() {
-	local myconf
+	local myconf mibs
+
+	autoconf || die "autoconf failed"
+
 	myconf="${myconf} `use_enable perl embedded-perl`"
 	myconf="${myconf} `use_with ssl openssl` `use_enable !ssl internal-md5`"
 	myconf="${myconf} `use_with tcpd libwrap`"
 	myconf="${myconf} `use_enable ipv6`"
 
+	mibs="host ucd-snmp/dlmod"
+	use smux && mibs="${mibs} smux"
+
 	econf \
 		--with-sys-location="Unknown" \
 		--with-sys-contact="root@Unknown" \
 		--with-default-snmp-version="3" \
-		--with-mib-modules="host smux ucd-snmp/dlmod" \
-		--with-logfile=${ROOT}/var/log/net-snmpd.log \
-		--with-persistent-directory=${ROOT}/var/lib/net-snmp \
+		--with-mib-modules="${mibs}" \
+		--with-logfile="${ROOT}/var/log/net-snmpd.log" \
+		--with-persistent-directory="${ROOT}/var/lib/net-snmp" \
 		--enable-ucd-snmp-compatibility \
 		--enable-shared \
 		--with-zlib \
-		--with-install-prefix=${D} \
+		--with-install-prefix="${D}" \
 		${myconf} || die "econf failed"
 
 	emake -j1 || die "compile problem"
@@ -97,12 +107,17 @@ src_install () {
 	dodoc AGENT.txt ChangeLog FAQ INSTALL NEWS PORTING README* TODO
 	newdoc EXAMPLE.conf.def EXAMPLE.conf
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/snmpd-5.1.rc6" snmpd
-	insinto /etc/conf.d
-	newins "${FILESDIR}/snmpd-5.1.conf" snmpd
-
 	keepdir /etc/snmp /var/lib/net-snmp
+
+	newinitd ${FILESDIR}/snmpd-5.1.rc6 snmpd
+	newconfd ${FILESDIR}/snmpd-5.1.conf snmpd
+
+	# snmptrapd can use the same rc script just slightly modified
+	sed -e 's/net-snmpd/snmptrapd/g' \
+		-e 's/snmpd/snmptrapd/g' \
+		-e 's/SNMPD/SNMPTRAPD/g' \
+		${D}/etc/init.d/snmpd > ${D}/etc/init.d/snmptrapd || die
+	newconfd ${FILESDIR}/snmptrapd.conf snmptrapd
 
 	# Remove everything, keeping only the snmpd, snmptrapd, MIBs, libs, and includes.
 	if use minimal; then

@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.75 2005/01/26 10:44:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.76 2005/01/28 11:19:25 ka0ttic Exp $
+
+*net-snmp-5.2-r2 (28 Jan 2005)
+
+  28 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> +files/snmptrapd.conf,
+  net-snmp-5.1.1-r1.ebuild, net-snmp-5.1.1.ebuild, -net-snmp-5.1.2.ebuild,
+  -net-snmp-5.2-r1.ebuild, +net-snmp-5.2-r2.ebuild, net-snmp-5.2.ebuild:
+  Revision bump; added conf script (w/ a few sed's we can reuse snmpd's init)
+  for snmptrapd (bug 61705). Also added selinux support (via
+  sec-policy/selinux-snmpd) for bug 79749. Marked 5.2 stable on x86 and tidy'd
+  old ebuilds.
 
 *net-snmp-5.2-r1 (26 Jan 2005)
 
