@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.83.ebuild,v 1.9 2004/06/24 22:28:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.83.ebuild,v 1.10 2004/07/15 02:38:23 agriffis Exp $
 
 S=${WORKDIR}/${P}/src
 DESCRIPTION="System initialization stuff"
@@ -10,6 +10,7 @@ HOMEPAGE="http://freshmeat.net/projects/sysvinit/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
+IUSE=""
 
 RDEPEND="sys-apps/file"
 
