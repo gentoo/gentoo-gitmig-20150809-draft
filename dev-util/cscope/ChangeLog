@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.13 2003/11/15 17:57:07 sindian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.14 2003/11/15 18:29:15 jbms Exp $
+
+  15 Nov 2003; Jeremy Maitin-Shepard <jbms@gentoo.org> cscope-15.4-r1.ebuild:
+  Fixed emacs lisp and site file installation.
+  Problem and fix identified by Anupam Kapoor <anupamk@speakeasy.net>
 
   15 Nov 2003; Arun Thomas <sindian@gentoo.org> cscope-15.4.ebuild:
   added IUSE
