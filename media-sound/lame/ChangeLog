@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.28 2004/03/16 01:58:29 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.29 2004/03/31 18:27:12 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> lame-3.95.1.ebuild:
+  Stable x86.  cp -> dobin.  nomirror.
 
   15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> lame-3.95.1.ebuild:
   Added ~mips keyword.
