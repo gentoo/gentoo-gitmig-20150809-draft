@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.14.ebuild,v 1.4 2004/07/02 02:50:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.14.ebuild,v 1.5 2004/07/24 04:43:44 liquidx Exp $
+
+inherit eutils
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -35,6 +37,11 @@ DEPEND="${RDEPEND}
 # gnutls has its own version of these. should maybe avoid using.
 #	libtasn1
 #	opencdk
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/includes/gnutls; epatch ${FILESDIR}/${PN}-1.0.14-extra.h.patch
+}
 
 src_compile() {
 	#   I think this vvv gets ignored if not present

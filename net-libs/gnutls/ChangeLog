@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.23 2004/07/02 02:50:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.24 2004/07/24 04:43:43 liquidx Exp $
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/gnutls-1.0.14-extra.h.patch, gnutls-1.0.14.ebuild:
+  add extern C headers to extra.h (#51206)
 
   01 Jul 2004; Tom Gall <gentoo.org> gnutls-1.0.14.ebuild:
   stable on ppc64, bug #54804
