@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.27 2004/07/19 09:35:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.28 2004/08/01 06:09:07 chriswhite Exp $
+
+  01 Aug 2004; Chris White <chriswhite@gentoo.org> libsndfile-1.0.10.ebuild:
+  Fixed some doc weirdness and corrected some strange use_* logic.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libsndfile-1.0.10.ebuild:
