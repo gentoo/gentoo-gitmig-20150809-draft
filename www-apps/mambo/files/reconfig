@@ -1,0 +1,55 @@
+#!/bin/bash
+
+function die {
+	echo $1
+	exit 1
+}
+
+if [ $1 = "start" -o $1 = "install" ]; then
+
+	cd ${VHOST_ROOT} || die
+
+	# default values for db stuff
+	D_DB="mambo"
+	D_HOST="localhost"
+	D_USER="mambo"
+
+	# do we want to start mysqld?
+	/etc/init.d/mysql restart || die "mysql needs to be running"
+
+	echo -n "mysql db name [${D_DB}]: "; read MY_DB
+	if (test -z ${MY_DB}) ; then MY_DB=${D_DB} ; fi
+	
+	echo -n "mysql db host [${D_HOST}]: "; read MY_HOST
+	if (test -z ${MY_HOST}) ; then MY_HOST=${D_HOST}; fi
+	
+	echo -n "mysql dbuser name [${D_USER}]: "; read MY_USER
+	if (test -z ${MY_USER}) ; then MY_USER=${D_USER} ; fi
+
+	echo -n "mysql dbuser password: "; read mypwd
+	if (test -z ${mypwd}) ; then die "Error: no dbuser password" ; fi
+
+	# privileges
+	echo -n "Please enter login info for user who has grant privileges on ${MY_HOST} [$USER]: "; read adminuser
+	if (test -z ${adminuser}) ; then adminuser="$USER" ; fi
+	if [ "${MY_HOST}" != "localhost" ]; then
+		echo -n "Client address (at db side) [$(hostname -f)]: "; read clientaddr
+		if (test -z ${clientaddr}) ; then clientaddr="$(hostname -f)" ; fi
+	fi
+	# this will be default for localhost
+	if (test -z ${clientaddr}) ; then clientaddr="${MY_HOST}" ; fi
+
+	# if $MY_HOST == localhost, don't specify -h argument, so local socket can be used.
+	host=${MY_HOST/localhost}
+	mysqladmin -u ${MY_USER} ${host:+-h ${host}} -p create ${MY_DB} || die "Error creating database"
+	mysql -u ${adminuser} ${host:+-h ${host}} -p mysql --exec="GRANT SELECT,INSERT,UPDATE,DELETE,INDEX, ALTER,CREATE,DROP,REFERENCES ON ${MY_DB}.* TO ${MY_USER}@${clientaddr} IDENTIFIED BY '${mypwd}'; FLUSH PRIVILEGES;"  || {
+	echo "Error running query!"
+	echo
+	echo "Please run it manually on ${host}."
+	echo
+	echo "   \$ mysql -u ${adminuser} -p mysql --exec=\"GRANT SELECT,INSERT,UPDATE,DELETE,INDEX, ALTER,CREATE,DROP,REFERENCES ON ${MY_DB}.* TO ${MY_USER}@${clientaddr} IDENTIFIED BY '${mypwd}'; FLUSH PRIVILEGES;\""
+	echo
+}
+else
+	echo $1
+fi

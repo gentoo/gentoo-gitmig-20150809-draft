@@ -1,0 +1,10 @@
+# ChangeLog for www-apps/mambo
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.1 2004/08/18 18:15:42 rl03 Exp $
+
+*mambo-4.5 (18 Aug 2004)
+
+  18 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +files/postinstall-en.txt, +files/reconfig, +mambo-4.5.ebuild:
+  Initial ebuild (requested in bug #55316)
+
