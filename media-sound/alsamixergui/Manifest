@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9beb8576afa139e63713907e2b84b4d6 ChangeLog 2959
+MD5 53e1a32a014f8d82ea019a103e94d44e ChangeLog 3071
+MD5 5d284ec7da46e2f545e2d29f0b57cf90 alsamixergui-0.9.0.1.2-r4.ebuild 1072
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 2ee4ab91369e9440329e8f50b988975b alsamixergui-0.9.0.1.2-r4.ebuild 1068
-MD5 1d989be2658c31e20c7b40421c52d488 files/fltk-1.1+gcc3.diff 2950
-MD5 b41f6aecc3e59693e3daa2ff30ab4142 files/gentoo.diff 2907
 MD5 bbbd9c8764a3e702e0acc8a35bf90f6e files/alsamixergui-0.9.0.1.2-gcc34.patch 557
 MD5 6ca0194d89c9788252d9e58bb6d2ee8a files/digest-alsamixergui-0.9.0.1.2-r4 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBb6GRArHZZzCEUG0RAhC0AJ45dzHsqyR+w5E+V8bW24mgkUDJxwCeMpc1
-6oLvJutMKJvX0tVjWj2EuT8=
-=K4Vh
------END PGP SIGNATURE-----
+MD5 1d989be2658c31e20c7b40421c52d488 files/fltk-1.1+gcc3.diff 2950
+MD5 b41f6aecc3e59693e3daa2ff30ab4142 files/gentoo.diff 2907
