@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7.ebuild,v 1.15 2004/07/14 14:19:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7.ebuild,v 1.16 2004/08/07 10:37:15 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -15,16 +15,15 @@ IUSE=""
 
 DEPEND="virtual/libc"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	# Detect mips systems properly
 	gnuconfig_update
-
-	econf || die "econf failed"
-	emake || die
 }
 
 src_install() {
-	einstall mandir=${D}/usr/share/man/man1 || die
+	einstall mandir="${D}/usr/share/man/man1" || die
 	dodoc Changes README
 	dohtml doc/
 }
