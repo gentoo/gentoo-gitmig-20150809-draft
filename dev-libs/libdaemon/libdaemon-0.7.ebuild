@@ -1,33 +1,40 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.5.ebuild,v 1.5 2004/12/20 11:35:37 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.7.ebuild,v 1.1 2004/12/20 11:35:37 ka0ttic Exp $
 
 DESCRIPTION="Simple library for creating daemon processes in C"
 HOMEPAGE="http://0pointer.de/lennart/projects/libdaemon/"
 SRC_URI="http://0pointer.de/lennart/projects/libdaemon/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
+
 DEPEND="doc? ( app-doc/doxygen net-www/lynx )"
 
 src_compile() {
-	local myconf
+	local myconf="--disble-doxygen --disable-lynx"
+	use doc	&& myconf="--enable-doxygen --enable-lynx"
 
-	use doc \
-		&& myconf="${myconf} --enable-doxygen --enable-lynx" \
-		|| myconf="${myconf} --disable-doxygen --disable-lynx"
+	econf ${myconf} || die "econf failed"
 
-	econf ${myconf} || die
-	emake || die
+	emake || die "emake failed"
+	if use doc ; then
+		einfo "Building documentation"
+		make doxygen || die "make doxygen failed"
+	fi
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	if use doc; then
 		ln -sf doc/reference/html reference
 		dohtml -r doc/README.html reference
 		doman doc/reference/man/man*/*
 	fi
+
+	dodoc README
+	docinto examples ; dodoc examples/testd.c
 }
