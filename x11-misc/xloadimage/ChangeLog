@@ -1,8 +1,11 @@
 # ChangeLog for x11-misc/xloadimage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/ChangeLog,v 1.2 2002/07/21 19:29:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/ChangeLog,v 1.3 2002/11/03 18:32:38 nall Exp $
 
 *xloadimage-4.1 (19 Jul 2002)
+
+  03 Nov 2002; Jon Nall <nall@gentoo.org> xloadimage-4.1.ebuild :
+  added ~ppc to KEYWORDS
 
   19 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> : 
   Initial release. This packaged is pretty much the same as Debian is distributing becuse it uses
