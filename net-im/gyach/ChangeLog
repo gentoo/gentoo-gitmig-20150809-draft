@@ -1,6 +1,16 @@
 # ChangeLog for net-im/gyach
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gyach/ChangeLog,v 1.3 2003/10/23 14:12:28 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gyach/ChangeLog,v 1.4 2004/02/03 06:29:05 mkennedy Exp $
+
+*gyach-0.9.7 (03 Feb 2004)
+
+  03 Feb 2004; <mkennedy@gentoo.org> gyach-0.7.5-r1.ebuild,
+  gyach-0.7.5.ebuild, gyach-0.7.6.ebuild, gyach-0.8.2.ebuild,
+  gyach-0.8.4.ebuild, gyach-0.8.5.ebuild, gyach-0.9.0.ebuild,
+  gyach-0.9.1-r1.ebuild, gyach-0.9.1.ebuild, gyach-0.9.2.ebuild,
+  gyach-0.9.4-r1.ebuild, gyach-0.9.4.ebuild, gyach-0.9.5.ebuild,
+  gyach-0.9.7.ebuild, files/gyach-0.9.1-gtk2.2-gentoo.patch:
+  Removed old ebuilds; New upstream
 
 *gyach-0.8.4 (08 Oct 2003)
 
