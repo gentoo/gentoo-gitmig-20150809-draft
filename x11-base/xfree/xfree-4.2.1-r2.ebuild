@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.2 2002/12/09 04:41:17 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.3 2002/12/09 21:24:28 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -407,7 +407,7 @@ src_install() {
 	insinto /usr/X11R6/lib
 	doins ${FILESDIR}/${PVR}/lib/*.la
 
-	# Do not overwrite /usr/X11R6/lib/libXft.so if we have Xft2.0 installed ...
+	# Some Xft2.0 checks to ease things a bit
 	if [ -L ${ROOT}/usr/X11R6/lib/libXft.so ]
 	then
 		local libxft_link="`readlink ${ROOT}/usr/X11R6/lib/libXft.so`"
@@ -415,7 +415,12 @@ src_install() {
 		if [ "${libxft_link##*/}" = "libXft.so.2.0" ] && \
 		   [ -f ${ROOT}/usr/lib/libXft.so.2.0 ]
 		then
+			# Do not overwrite /usr/X11R6/lib/libXft.so if we have
+			# Xft2.0 installed ...
 			rm -f ${D}/usr/X11R6/lib/libXft.so
+
+			# Move Xft1.1 headers to not overwrite Xft2.0 headers ...
+			mv -f ${D}/usr/X11R6/include/X11/Xft ${D}/usr/X11R6/include/X11/Xft1
 		fi
 	fi
 
