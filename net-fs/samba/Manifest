@@ -1,44 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7bb830f107c1336e0b136ad7aacd5e5f ChangeLog 17476
-MD5 63bc25b07c7404f26d602e69ddad747e metadata.xml 458
 MD5 7d7c900829bc2bdf39895d5890a0d20d samba-3.0.4-r1.ebuild 11146
 MD5 633511d04d7a7d7702c17089c85ba697 samba-3.0.1-r1.ebuild 11333
 MD5 df4f73693b725799675e37ba3f90643f samba-3.0.2a-r2.ebuild 12249
-MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
-MD5 a86336201c2eced7a6e5a5138514e2f7 files/digest-samba-3.0.4-r1 203
-MD5 de43ff30dd5f1431590fd62a997e71b4 files/samba-3.0.4-python-setup.patch 833
-MD5 f3a4b3b0a8162ae87779846d7e6adbbf files/digest-samba-3.0.1-r1 202
-MD5 519576a9448b86f1a7baab18204533a5 files/lmhosts 126
-MD5 f402c2c4103f4c13ac3cc5fa165940db files/nonroot-bind.diff 757
-MD5 5d3129a0f6bcbec6ec91d217881a34e1 files/nsswitch.conf-winbind 298
-MD5 7ee5edc70bf80888c776f5808f865996 files/nsswitch.conf-wins 392
-MD5 20997c75e29fec20efbb2cd6695cd3a9 files/recycle.conf 776
-MD5 cbaa5a39d9bd67b13f8131b426a4256b files/samba-2.2.5-gp-reloc-fix.patch 431
-MD5 8289eda694b35875eec6df5cc3f50c86 files/samba-2.2.6-libresolv.patch 540
-MD5 60e527174c1b2c53126dbbedb3cae0f7 files/samba-2.2.8-statfs.patch 209
-MD5 516ca38dfc67b7cd7356f93ad2cf75b9 files/samba-3.0.0-python-setup.patch 767
-MD5 83b384d6b47ecbf20525cc9a7baaa77a files/samba-init 1093
-MD5 9560b7e29d3a65db029fc1800e84abcc files/samba-pdb_ldap-exop.patch 3921
-MD5 6b6683448cdc01d013bd2c61b4ed8e1e files/samba-slapd-include.conf 499
-MD5 6acf6a5e92ff2cfc5f09b88f5d01b63e files/samba-svc 975
-MD5 b6cdc1468e45f92f19873e0c6c5b6e94 files/samba.pam 332
-MD5 1eec486ab39a239e25a76b16a6fcd460 files/smb.conf.example 16183
-MD5 8c1f1e3655e12b85102ce257f3efad62 files/smb.conf.example-samba3 20762
-MD5 a7cc90ba23d86b1d90f65645826dde19 files/smbldap_conf.pm 7095
-MD5 3685eadb817d185b06476eca6c0c15c4 files/smbusers 204
-MD5 e89b19f1e62e257cbaa23a44a0362a58 files/swat.xinetd 527
-MD5 09195dd8ab25ce77ac51c0c05b4ab93c files/system-auth-winbind 869
+MD5 2f1e0fb8c339d77eb6d02d2dd736d486 ChangeLog 17621
+MD5 63bc25b07c7404f26d602e69ddad747e metadata.xml 458
+MD5 df85655b2e290c92aae00898f8a41642 samba-3.0.5.ebuild 11143
 MD5 ccc96fcdc7493be42da52364061c6c17 files/winbind-init 484
 MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.4.patch 8086
+MD5 e89b19f1e62e257cbaa23a44a0362a58 files/swat.xinetd 527
+MD5 20997c75e29fec20efbb2cd6695cd3a9 files/recycle.conf 776
+MD5 a7cc90ba23d86b1d90f65645826dde19 files/smbldap_conf.pm 7095
+MD5 cbaa5a39d9bd67b13f8131b426a4256b files/samba-2.2.5-gp-reloc-fix.patch 431
+MD5 7ee5edc70bf80888c776f5808f865996 files/nsswitch.conf-wins 392
 MD5 341521b710d02d57a70acd49b1d4c06b files/samba-conf 1291
+MD5 83b384d6b47ecbf20525cc9a7baaa77a files/samba-init 1093
+MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
+MD5 f402c2c4103f4c13ac3cc5fa165940db files/nonroot-bind.diff 757
+MD5 5d3129a0f6bcbec6ec91d217881a34e1 files/nsswitch.conf-winbind 298
+MD5 519576a9448b86f1a7baab18204533a5 files/lmhosts 126
+MD5 516ca38dfc67b7cd7356f93ad2cf75b9 files/samba-3.0.0-python-setup.patch 767
+MD5 1eec486ab39a239e25a76b16a6fcd460 files/smb.conf.example 16183
+MD5 6b6683448cdc01d013bd2c61b4ed8e1e files/samba-slapd-include.conf 499
+MD5 60e527174c1b2c53126dbbedb3cae0f7 files/samba-2.2.8-statfs.patch 209
+MD5 43a38a5331805a2fa61e899f18413ccd files/digest-samba-3.0.5 203
+MD5 f3a4b3b0a8162ae87779846d7e6adbbf files/digest-samba-3.0.1-r1 202
+MD5 a86336201c2eced7a6e5a5138514e2f7 files/digest-samba-3.0.4-r1 203
+MD5 8c1f1e3655e12b85102ce257f3efad62 files/smb.conf.example-samba3 20762
+MD5 9560b7e29d3a65db029fc1800e84abcc files/samba-pdb_ldap-exop.patch 3921
+MD5 3685eadb817d185b06476eca6c0c15c4 files/smbusers 204
+MD5 09195dd8ab25ce77ac51c0c05b4ab93c files/system-auth-winbind 869
 MD5 990fe15ff8a0e79f39069fff6475536d files/samba-3.0.2a-smbprint.patch 1224
+MD5 6acf6a5e92ff2cfc5f09b88f5d01b63e files/samba-svc 975
+MD5 b6cdc1468e45f92f19873e0c6c5b6e94 files/samba.pam 332
 MD5 81931e1d9764390841dec0d0f327a114 files/digest-samba-3.0.2a-r2 204
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+fZdmdTrptrqvGERAgW1AJsFAMrzPCUKU+JHyDyjupjrYsHdOwCeJzRW
-zaefOcDIXaUZ09TxPnxHxOY=
-=dFtk
------END PGP SIGNATURE-----
+MD5 de43ff30dd5f1431590fd62a997e71b4 files/samba-3.0.4-python-setup.patch 833
+MD5 8289eda694b35875eec6df5cc3f50c86 files/samba-2.2.6-libresolv.patch 540

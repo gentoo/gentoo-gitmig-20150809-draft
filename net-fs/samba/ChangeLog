@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.89 2004/07/13 23:39:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.90 2004/07/22 14:46:42 mglauche Exp $
+
+*samba-3.0.5 (22 Jul 2004)
+
+  22 Jul 2004; Michael Glauche <mglauche@gentoo.org> samba-3.0.5.ebuild:
+  Version bump, fixes 2 buffer overruns.
 
   14 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> samba-3.0.4-r1.ebuild:
   Stable on alpha.
