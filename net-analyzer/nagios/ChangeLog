@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.11 2003/07/14 14:00:55 phosphan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.12 2004/02/02 17:43:46 mholzer Exp $
+
+  02 Feb 2004; Martin Holzer <mholzer@gentoo.org> nagios-1.1.ebuild:
+  correcting einfo package.
 
   14 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> :
   You forgot to close bug 23564 :-)

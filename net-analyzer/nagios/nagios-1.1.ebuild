@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.1.ebuild,v 1.6 2004/01/03 13:55:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.1.ebuild,v 1.7 2004/02/02 17:43:46 mholzer Exp $
 
 DESCRIPTION="Nagios ${PV} - merge this to pull install all of the nagios packages"
 HOMEPAGE="http://www.nagios.org/"
@@ -26,7 +26,7 @@ pkg_postinst() {
 		einfo "Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
 	else
 		einfo "1. Execute the command:"
-		einfo " \"ebuild /var/db/pkg/net-analyzer/nagios-core-${PV}/nagios-core-${PV}.ebuild config\""
+		einfo " \"ebuild /var/db/pkg/net-analyzer/${PF}/${PF}.ebuild config\""
 		einfo " 2. Edit /etc/conf.d/apache and add \"-D NAGIOS\""
 	fi
 	einfo
