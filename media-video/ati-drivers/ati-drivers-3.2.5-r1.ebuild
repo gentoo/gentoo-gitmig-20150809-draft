@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.9 2004/06/25 00:36:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.10 2004/07/14 21:22:00 agriffis Exp $
 
-IUSE="qt kde gnome"
+IUSE="qt"
 
 DESCRIPTION="Ati precompiled drivers for r350, r300, r250 and r200 chipsets"
 HOMEPAGE="http://www.ati.com"
