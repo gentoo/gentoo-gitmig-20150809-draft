@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/kannadic
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/ChangeLog,v 1.10 2004/10/09 18:59:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/ChangeLog,v 1.11 2004/11/22 13:32:42 usata Exp $
+
+  22 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> kannadic-1.7.0.ebuild,
+  kannadic-2.0.3.ebuild:
+  Changed einstall to make DESTDIR=${D} install; bug #72016.
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -kannadic-2.0.2.ebuild,
   kannadic-2.0.3.ebuild:

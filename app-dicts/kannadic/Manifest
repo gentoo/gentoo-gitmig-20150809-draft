@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 35fbd5a8918864f530005f4ea6bb699c ChangeLog 1370
+MD5 71cc0810d95bfdd9365a26109488a950 ChangeLog 1529
 MD5 212b6ec56b7acb3a4cc0bb8ddd2f95ef metadata.xml 247
-MD5 df1a4a3a959a204a89630bf818d0c027 kannadic-1.7.0.ebuild 1146
-MD5 f797bd7752e42b6809f87bda14bdd00e kannadic-2.0.3.ebuild 1190
+MD5 37985a08dfd335ed0afc3234ece6c797 kannadic-1.7.0.ebuild 1163
+MD5 a406b174f8321178c76470a098efd2d9 kannadic-2.0.3.ebuild 1209
 MD5 51bcf61afa7f929781b4096c2ff6b2fd files/digest-kannadic-1.7.0 66
 MD5 c9a196321cbbc119b46d91a02ba68251 files/digest-kannadic-2.0.3 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBaDOVVWNWqTUmv+0RAij6AJ9onW9pV/YubfG5i1zpThlf9e+WLACgnDUG
-4ggaxGeX+b2BDFoSYiha3tE=
-=QmJv
+iD8DBQFBoejnVWNWqTUmv+0RAqU3AJ9VkZF3P3IJLun6nnK0DuMORFvVxACghynX
+5OtnpFYhihSgeqFF6YMfuO4=
+=y6TM
 -----END PGP SIGNATURE-----
