@@ -107,14 +107,14 @@ dev-lang/perl
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch
-*sys-libs/cracklib  
+*sys-libs/cracklib
 *sys-libs/db
 *sys-libs/ncurses
-# Removed since it's really no need for this to be default, and it together 
+# Removed since it's really no need for this to be default, and it together
 # with defaulting to db in /etc/nsswitch.conf breaks evolution >= 0.11.
-# sys-libs/nss-db 
-*sys-libs/pam     
-*sys-libs/pwdb      
+# sys-libs/nss-db
+*sys-libs/pam
+*sys-libs/pwdb
 *sys-libs/readline
 *sys-libs/zlib
 #these ones have the new rc6 style init scripts
@@ -157,7 +157,7 @@ dev-lang/perl
 >=net-www/wwwoffle-2.6d-r6
 >=net-www/squid-2.4.2s-r6
 >=net-dialup/ppp-2.4.1-r6
-=app-sci/octave-2.0*
+=sci-mathematics/octave-2.0*
 ~media-video/cinelerra
 
 #GNUStep stuff works in gcc-3 only

@@ -62,7 +62,7 @@ sys-fs/ntfsprogs
 >=net-www/wwwoffle-2.6d-r6
 >=net-www/squid-2.4.2s-r6
 >=net-dialup/ppp-2.4.1-r6
-=app-sci/octave-2.0*
+=sci-mathematics/octave-2.0*
 ~media-video/cinelerra
 
 #GNUStep stuff works in gcc-3 only

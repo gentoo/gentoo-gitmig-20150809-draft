@@ -21,7 +21,7 @@
 
 !dev-lang/gpc
 
-*sys-libs/gdbm  
+*sys-libs/gdbm
 
 ~sys-devel/binutils-2.12.90.0.7
 <sys-devel/gcc-3.2_pre
@@ -75,4 +75,4 @@
 
 # ickle 0.2.2 breaks with gcc3. lost history, permissions and dates.
 >=net-im/ickle-0.3.0
->=app-sci/octave-2.1
+>=sci-mathematics/octave-2.1

@@ -108,16 +108,16 @@ dev-lang/perl
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch
-*sys-libs/cracklib  
+*sys-libs/cracklib
 *<sys-libs/db-3.2.10
-*sys-libs/gdbm  
+*sys-libs/gdbm
 *>=sys-libs/ncurses-5.2.20020112a
-# Removed since it's really no need for this to be default, and it together 
+# Removed since it's really no need for this to be default, and it together
 # with defaulting to db in /etc/nsswitch.conf breaks evolution >= 0.11.
-# sys-libs/nss-db 
+# sys-libs/nss-db
 *>=sys-libs/pam-0.75-r9
-*sys-libs/pwdb      
-*sys-libs/readline  
+*sys-libs/pwdb
+*sys-libs/readline
 *sys-libs/slang
 *sys-libs/zlib
 #these ones have the new rc6 style init scripts
@@ -167,4 +167,4 @@ dev-lang/perl
 
 # ickle 0.2.2 breaks with gcc3. lost history, permissions and dates.
 >=net-im/ickle-0.3.0
->=app-sci/octave-2.1
+>=sci-mathematics/octave-2.1
