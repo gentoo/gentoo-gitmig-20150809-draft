@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.22.ebuild,v 1.3 2003/04/18 01:50:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.22.ebuild,v 1.4 2003/06/04 13:44:43 joker Exp $
 IUSE="truetype pam png jpeg gif tiff"
 
 DESCRIPTION="WINGs Display Manager"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86"
 LICENSE="GPL-2"
 
-RDEPEND=">=x11-wm/WindowMaker-0.65.1"
+RDEPEND=">=x11-wm/windowmaker-0.65.1"
 
 DEPEND="${RDEPEND}
 	virtual/x11
