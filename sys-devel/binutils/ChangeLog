@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.191 2005/03/11 06:02:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.192 2005/03/22 04:50:22 vapier Exp $
+
+*binutils-2.15.92.0.2-r7 (22 Mar 2005)
+
+  22 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +binutils-2.15.92.0.2-r7.ebuild:
+  Add a TEXTREL fix for arm and warn about TEXTRELs in ld.
 
 *binutils-2.15.92.0.2-r6 (11 Mar 2005)
 
