@@ -1,5 +1,8 @@
-MD5 4f15335c0586022183e5dfb2722fcacb ChangeLog 8138
-MD5 ea3d2702d01e4d8f7be7382005abc65e tar-1.14.90.ebuild 1424
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4347aac5d791aae9d9a656e8949748cb ChangeLog 8259
+MD5 4f043f12a70bc9008a9484031070a715 tar-1.14.90.ebuild 1501
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d0b3e45115a461b08fc996e4036fa171 tar-1.14.ebuild 1337
 MD5 091a6972853071b4b764eddcdc658398 tar-1.13.92-r3.ebuild 1624
@@ -12,3 +15,10 @@ MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
 MD5 404c6b2a90334fe682029e5d5771620d files/1.14.90-gnulib.patch 3403
 MD5 8adb291e1142c213ed26260319bef9f4 files/tar-1.13.92-dont-strip-dot_slash.patch 893
 MD5 e05d36a6f2aeb7f6374d04d61872bd53 files/tar-1.13.92-fix-one_file_system.patch 547
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBbKY+HTu7gpaalycRAusoAKD8+wkU8NbeBHq+bTN2/ARCMW0hsACeIB2r
+nxDyd3g92dT00uQ9s8ifaB8=
+=irni
+-----END PGP SIGNATURE-----
