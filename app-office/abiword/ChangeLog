@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.37 2003/06/08 00:40:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.38 2003/06/10 13:26:03 liquidx Exp $
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> abiword-1.0.2-r1.ebuild,
+  abiword-1.0.3.ebuild:
+  fix gal deps
 
 *abiword-1.0.6-r1 (07 Jun 2003)
 

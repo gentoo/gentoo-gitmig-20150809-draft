@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13.ebuild,v 1.3 2003/06/08 19:31:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13.ebuild,v 1.4 2003/06/10 13:29:53 liquidx Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -21,7 +21,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-base/ORBit-0.5.12-r1
 	=gnome-base/libglade-0*
 	>=gnome-base/gnome-print-0.31
-	>=gnome-extra/gal-0.18
+	<gnome-extra/gal-1.99
 	>=dev-libs/libole2-0.2.4
 	>=media-gfx/eog-0.6
 	>=dev-libs/libxml-1.8.14

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2.ebuild,v 1.1 2003/03/21 17:26:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2.ebuild,v 1.2 2003/06/10 13:22:35 liquidx Exp $
 
 # FIXME - ebuild needs a good look at
 
@@ -18,7 +18,7 @@ IUSE="nls postgres"
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	 >=dev-libs/libxml-1.8.3
 	 >=gnome-extra/gtkhtml-0.14.0-r1
-	 >=gnome-extra/gal-0.13-r1
+	 <gnome-extra/gal-1.99
 	 >=gnome-extra/guppi-0.35.5-r2
 	 >=gnome-base/gnome-print-0.21
 	 postgres? ( dev-db/postgresql )"

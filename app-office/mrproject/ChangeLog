@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mrproject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/ChangeLog,v 1.13 2003/02/24 21:01:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/ChangeLog,v 1.14 2003/06/10 13:33:10 liquidx Exp $
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> mrproject-0.5.1-r1.ebuild:
+  fixed gal deps
 
 *mrproject-0.9.1 (24 feb 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.5.1-r1.ebuild,v 1.4 2003/02/13 09:18:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.5.1-r1.ebuild,v 1.5 2003/06/10 13:33:10 liquidx Exp $
 
 IUSE="nls"
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 
 RDEPEND=">=media-libs/gdk-pixbuf-0.18
 	>=gnome-base/ORBit-0.5.16
-	>=gnome-extra/gal-0.19.2
+	<gnome-extra/gal-1.99
 	>=gnome-base/bonobo-1.0.19
 	( >=gnome-base/libglade-0.17-r1
 	 <gnome-base/libglade-2.0.0 )
