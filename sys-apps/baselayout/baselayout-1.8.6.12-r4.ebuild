@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r4.ebuild,v 1.6 2004/02/01 22:01:11 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r4.ebuild,v 1.7 2004/02/01 22:47:23 brad_mssw Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -8,7 +8,7 @@
 IUSE="bootstrap build selinux static"
 
 SV="1.4.3.12"
-SVREV="p7"
+SVREV="p9"
 # SysvInit version
 SVIV="2.84"
 
