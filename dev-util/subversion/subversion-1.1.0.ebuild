@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.0.ebuild,v 1.5 2004/10/19 13:43:03 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.0.ebuild,v 1.6 2004/10/19 14:08:13 pauldv Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -105,10 +105,13 @@ src_compile() {
 
 	use python && myconf="${myconf} --with-python=/usr/bin/python"
 	use python || myconf="${myconf} --without-python"
-
+	
 	if use java; then
+		myconf="${myconf} --enable-javahl"
 		use jikes && myconf="${myconf} --with-jikes=yes"
 		use jikes || myconf="${myconf} --without-jikes"
+	else
+		myconf="${myconf} --disable-javahl"
 	fi
 
 	if use python || use perl; then
