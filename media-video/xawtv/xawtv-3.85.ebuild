@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.85.ebuild,v 1.3 2003/03/13 23:26:04 seemant Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.85.ebuild,v 1.4 2003/04/01 23:38:49 seemant Exp $
 
 IUSE="aalib motif alsa opengl nls quicktime"
 
@@ -20,10 +18,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND=">=sys-libs/ncurses-5.1
+DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=sys-apps/sed-4.0.5
+	>=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
 	media-libs/libpng
-	media-libs/xpm
 	media-libs/zvbi
 	virtual/x11
 	alsa? ( media-libs/alsa-lib )
@@ -39,7 +38,7 @@ src_unpack() {
 	epatch ${DISTDIR}/${MY_PATCH}
 
 	use mmx || \
-		ssed -i "s:#define MMX::" libng/plugins/linear_blend.c
+		sed -i "s:#define MMX::" libng/plugins/linear_blend.c
 
 	unpack ${MY_FONT}.tar.bz2
 	cd ${S}/${MY_FONT}

@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.86.ebuild,v 1.2 2003/03/28 07:12:21 seemant Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.86.ebuild,v 1.3 2003/04/01 23:38:49 seemant Exp $
 
 IUSE="aalib motif alsa opengl nls quicktime"
 
@@ -23,7 +21,6 @@ DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
 	media-libs/libpng
-	media-libs/xpm
 	media-libs/zvbi
 	virtual/x11
 	alsa? ( media-libs/alsa-lib )
@@ -32,17 +29,6 @@ DEPEND=">=sys-apps/sed-4.0.5
 		app-text/recode )
 	opengl? ( virtual/opengl )
 	quicktime? ( media-libs/libquicktime )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# Patch breaks compilation -- needs investigation
-#	epatch ${WORKDIR}/${MY_PATCH}
-
-	use mmx || \
-		sed -i "s:#define MMX::" libng/plugins/linear_blend.c
-}
 
 src_compile() {
 	local myconf
@@ -66,6 +52,9 @@ src_compile() {
 	use opengl \
 		&& myconf="${myconf} --enable-gl" \
 		|| myconf="${myconf} --disable-gl"
+
+	use mmx || \
+		sed -i "s:#define MMX::" libng/plugins/linear_blend.c
 
 	econf \
 		--with-x \
