@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/device-mapper
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.25 2004/11/25 11:54:40 gmsoft Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.26 2005/02/23 04:06:58 azarah Exp $
+
+*device-mapper-1.00.19-r2 (23 Feb 2005)
+
+  23 Feb 2005; Martin Schlemmer <azarah@gentoo.org> +files/dm-start.sh,
+  +files/dmtab, +device-mapper-1.00.19-r2.ebuild:
+  Install static library again. Add /etc/dmtab and new rc-scripts addon for
+  setting up DM volumes at boot. Note that this need upcomming baselayout
+  release.
 
   25 Nov 2004; Guy Martin <gmsoft@gentoo.org> device-mapper-1.00.19-r1.ebuild:
   Stable on hppa.
