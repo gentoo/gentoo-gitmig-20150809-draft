@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/nvidia-cg-toolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.4 2003/03/20 19:47:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.5 2003/05/03 02:13:00 blauwers Exp $
+
+*nvidia-cg-toolkit-2.1-r7 (03 MAY 2003)
+
+  03 MAY 2003; Bart Lauwers <blauwers@gentoo.org> :
+  Version bump per Bug#18282 and dep fix per Bug#19660
 
 *nvidia-cg-toolkit-2.1-r6 (10 DEC 2002)
 
