@@ -1,15 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.0.ebuild,v 1.3 2003/09/08 11:43:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.0.ebuild,v 1.4 2003/09/15 20:38:57 rphillips Exp $
 
-IUSE="snmp mysql postgres ldap kerberos ssl pam frascend frlargefiles frnothreads frxp"
-
+IUSE="snmp mysql postgres ldap kerberos ssl pam"
 MY_PN=${PN}-0.9.0
 S=${WORKDIR}/${MY_PN}
 DESCRIPTION="highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${MY_PN}.tar.gz"
 HOMEPAGE="http://www.freeradius.org/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -43,18 +42,21 @@ src_compile() {
 	if [ -z "`use snmp`" ]; then
 		myconf="--without-snmp"
 	fi
-	if [ "`use frascend`" ]; then
-		myconf="${myconf} --with-ascend-binary"
-	fi
-	if [ "`use frlargefiles`" ]; then
-		myconf="${myconf} --with-large-files"
-	fi
-	if [ "`use frnothreds`" ]; then
-		myconf="${myconf} --without-threads"
-	fi
-	if [ "`use frxp`" ]; then
-		myconf="${myconf} --with-experimental-modules"
-	fi
+	# rphillips: these are invalid use variables... we'll keep them commented
+	# just in case other people want to use them
+	#
+	#if [ "`use frascend`" ]; then
+	#	myconf="${myconf} --with-ascend-binary"
+	#fi
+	#if [ "`use frlargefiles`" ]; then
+	#	myconf="${myconf} --with-large-files"
+	#fi
+	#if [ "`use frnothreds`" ]; then
+	#	myconf="${myconf} --without-threads"
+	#fi
+	#if [ "`use frxp`" ]; then
+	#	myconf="${myconf} --with-experimental-modules"
+	#fi
 
 	# kill modules we don't use
 	if [ -z "`use ssl`" ]; then
