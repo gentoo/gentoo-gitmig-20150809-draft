@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/dvssl-0.5.4.ebuild,v 1.2 2004/03/14 12:08:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/dvssl-0.5.4.ebuild,v 1.3 2004/06/14 17:27:39 kloeri Exp $
 
 S=${WORKDIR}/dvssl-${PV}
 DESCRIPTION="dvssl provides a simple interface to openssl"
@@ -15,7 +15,6 @@ DEPEND="virtual/glibc
 	dev-libs/openssl
 	dev-libs/dvutil
 	dev-libs/dvnet"
-RDEPEND=${DEPEND}
 
 src_unpack() {
 	unpack ${A}
