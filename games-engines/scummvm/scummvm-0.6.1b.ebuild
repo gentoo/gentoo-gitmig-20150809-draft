@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.6.1b.ebuild,v 1.1 2004/08/09 08:20:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.6.1b.ebuild,v 1.2 2004/09/19 00:57:18 mr_bones_ Exp $
 
-inherit eutils games
+inherit fixheadtails eutils games
 
 DESCRIPTION="Reimplementation of the SCUMM game engine used in Lucasarts adventures"
 HOMEPAGE="http://scummvm.sourceforge.net/"
@@ -24,6 +24,16 @@ DEPEND="virtual/libc
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	mad? ( media-libs/libmad )
 	zlib? ( sys-libs/zlib )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# configure luvin from bug #64550
+	ht_fix_file configure
+	sed -i \
+		-e "s:/tmp/:./:" configure \
+		|| die "sed configure failed"
+}
 
 src_compile() {
 	local myconf=
@@ -50,7 +60,7 @@ src_install() {
 	doman scummvm.6
 	dodoc NEWS README TODO
 	insinto /usr/share/pixmaps
-	doins scummvm.xpm      || die "doins failed"
+	doins scummvm.xpm || die "doins failed"
 	make_desktop_entry scummvm ScummVM
 	prepgamesdirs
 }

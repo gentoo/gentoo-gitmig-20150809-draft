@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.13 2004/09/19 00:33:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.14 2004/09/19 00:57:18 mr_bones_ Exp $
+
+  18 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> scummvm-0.6.1b.ebuild:
+  fix up configure for bug #64550
 
   18 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
   -files/0.5.1-alsa.patch, -files/0.6.0-gcc34.patch, -scummvm-0.5.1.ebuild,
