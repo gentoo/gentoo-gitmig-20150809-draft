@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.42 2004/02/10 21:33:37 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.43 2004/03/17 00:29:57 geoman Exp $
+
+  16 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  gnome-media-2.4.1.1.ebuild:
+  Added ~mips keyword.
 
   10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
   gnome-media-2.4.1.1.ebuild:
