@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.17 2003/10/28 17:21:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.18 2003/11/17 22:13:19 weeve Exp $
+
+  17 Nov 2003; Jason Wever <weeve@gentoo.org> libgphoto2-2.1.2-r1.ebuild:
+  Marked stable on sparc.
 
 *libgphoto2-2.1.3 (28 Oct 2003)
 
