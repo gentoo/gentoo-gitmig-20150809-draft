@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.18 2004/02/17 20:11:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.19 2004/03/23 18:57:51 mholzer Exp $
+
+  23 Mar 2004; Martin Holzer <mholzer@gentoo.org> omniORB-4.0.0.ebuild,
+  omniORB-4.0.2.ebuild, omniORB-4.0.3.ebuild:
+  fixing depend qa issue. see 45343.
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> omniORB-4.0.3.ebuild:
   add ~alpha and ~ia64 for the sake of dev-util/eric

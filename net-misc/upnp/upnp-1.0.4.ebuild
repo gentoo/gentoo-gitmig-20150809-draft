@@ -1,18 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.0.4.ebuild,v 1.7 2003/11/28 10:40:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.0.4.ebuild,v 1.8 2004/03/23 18:59:09 mholzer Exp $
 
 S="${WORKDIR}/${PN}sdk-${PV}"
 
 DESCRIPTION="Intel's UPnP SDK"
 HOMEPAGE="http://upnp.sourceforge.net"
 SRC_URI="mirror://sourceforge/upnp/${PN}sdk-${PV}.tar.gz"
+RESTRICT="nomirror"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
 
-RDEPEND="sys-fs/e2fsprogs"
-DEPEND="${RDEPEND}"
+DEPEND="sys-fs/e2fsprogs"
 
 src_compile() {
 	emake || die "compile problem"

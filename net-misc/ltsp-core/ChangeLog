@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ltsp-core
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.15 2004/02/27 15:19:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.16 2004/03/23 18:54:25 mholzer Exp $
+
+  23 Mar 2004; Martin Holzer <mholzer@gentoo.org> ltsp-core-3.0.9-r1.ebuild,
+  ltsp-core-3.0.9-r3.ebuild:
+  fixing depend qa issue. see 45343.
 
   27 Feb 2004; Heinrich Wendel <lanius@gentoo.org> ltsp-core-4.0.ebuild:
   update kernel image to 2.4.24, mark stable
