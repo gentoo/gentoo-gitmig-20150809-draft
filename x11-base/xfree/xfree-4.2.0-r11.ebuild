@@ -100,7 +100,7 @@ src_unpack () {
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
 		>> config/cf/host.def
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
-	echo "#define GccWarningOptions -pedantic" >> config/cf/host.def
+	echo "#define GccWarningOptions -pipe" >> config/cf/host.def
 
 	if [ "${ARCH}" = "x86" ]
 	then
