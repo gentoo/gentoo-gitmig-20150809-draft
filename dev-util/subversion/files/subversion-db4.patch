@@ -6,7 +6,7 @@ diff -rNu subversion-0.27.0.orig/configure.in subversion-0.27.0/configure.in
  # Look for libdb4.so first:
  SVN_LIB_BERKELEY_DB($SVN_FS_WANT_DB_MAJOR, $SVN_FS_WANT_DB_MINOR,
 -                    $SVN_FS_WANT_DB_PATCH, [db4 db])
-+                    $SVN_FS_WANT_DB_PATCH, [db-4 db-4.0 db])
++                    $SVN_FS_WANT_DB_PATCH, [db-4 db-4.0 db4 db])
  
  
  # Only add *_APACHE_RULE if we also have db, since mod_dav_svn depends on it.
