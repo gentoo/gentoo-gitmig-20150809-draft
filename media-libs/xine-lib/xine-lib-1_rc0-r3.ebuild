@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r3.ebuild,v 1.1 2003/08/18 18:02:01 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r3.ebuild,v 1.2 2003/08/24 20:46:05 foser Exp $ 
+
+inherit eutils
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
 # Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
@@ -27,7 +29,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~hppa ~sparc"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl"
 
-DEPEND="oggvorbis? ( media-libs/libvorbis )
+RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
 	avi? ( x86? ( >=media-libs/win32codecs-0.50 
 	       media-libs/divx4linux ) )
@@ -45,10 +47,20 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	>=media-libs/libfame-0.9.0
 	>=media-libs/xvid-0.9.0
 	media-libs/speex"
-RDEPEND="${DEPEND}
+
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}-${PV/_/-}${MY_PKG_SUFFIX}
+
+src_unpack() {
+
+	unpack ${A}
+
+	# gcc2 fixes provided by <T.Henderson@cs.ucl.ac.uk> in #26534
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
+
+}
 
 src_compile() {
 	# Make sure that the older libraries are not installed (bug #15081).
