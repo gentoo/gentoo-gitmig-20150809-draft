@@ -1,4 +1,4 @@
-MD5 df8ed100e7f8344d912e051ba45fd9cd libwhisker-1.8.ebuild 1174
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 0358c90d36bf782afe2f05087dedcb4c libwhisker-1.8.ebuild 1165
 MD5 e2add560c68ba5cc177213a5d1a2126e ChangeLog 475
-MD5 9ab8ae4fd7fe3481cb4f391ddcf24045 files/digest-libwhisker-1.8 69
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 80a1e396a06d99a83b12df31e0939a37 files/digest-libwhisker-1.8 70
