@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r3.ebuild,v 1.12 2003/01/01 06:56:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r3.ebuild,v 1.13 2003/01/03 00:20:51 azarah Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,6 +30,10 @@ src_unpack() {
 	do
 		epatch ${DISTDIR}/${PN}${PV/\.}-${x}
 	done
+
+	# Remove autoconf dependency
+	cp Makefile.in Makefile.in.orig
+	sed -e "/&& autoconf/d" Makefile.in.orig > Makefile.in
 }
 
 src_compile() {
