@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.8 2004/07/21 16:15:23 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.9 2004/07/22 08:38:09 stuart Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -63,7 +63,7 @@ DEPEND="$DEPEND
 	sybase? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
 	tiff? ( media-libs/tiff )
-	truetype? ( media-libs/freetype )
+	truetype? ( media-libs/freetype >=media-libs/t1lib-5.0.0 )
 	wddx? ( dev-libs/expat )
 	xml2? ( dev-libs/libxml2 )
 	xpm? ( virtual/x11 )
@@ -312,7 +312,7 @@ php5-sapi_src_compile () {
 	enable_extension_enable		"exif"			"exif"			1
 	enable_extension_with		"fam"			"fam"			1
 	enable_extension_with		"fbsql"			"frontbase"		1
-	enable_extension_with		"fdftk"			"fdftk"			1
+	enable_extension_with		"fdftk"			"fdftk"			1 "/opt/fdftk-6.0"
 	enable_extension_enable		"filepro"		"filepro"		1
 	enable_extension_enable		"ftp"			"ftp"			1
 	enable_extension_with		"gettext"		"nls"			1
