@@ -1,0 +1,71 @@
+diff -Naur aterm-0.4.2/src/main.c aterm-0.4.2-orig/src/main.c
+--- aterm-0.4.2/src/main.c	2004-08-23 14:08:25.000000000 +0200
++++ aterm-0.4.2-orig/src/main.c	2004-08-23 14:11:12.071851096 +0200
+@@ -1634,6 +1634,7 @@
+     rs_minBufferWidth = NULL;
+     rs_saveLines = NULL;	/* scrollback buffer [lines] */
+     rs_borderWidth = NULL;
++    rs_internal_border = NULL;
+     rs_modifier = NULL;	/* modifier */
+ #if defined (HOTKEY_CTRL) || defined (HOTKEY_META)
+ /* recognized when combined with HOTKEY */
+@@ -1771,6 +1772,12 @@
+     else
+         TermWin.borderWidth = t;
+ 
++    if (!rs_internal_border|| (t = atoi(rs_internal_border)) < 0)
++        TermWin_internalBorder = 2;
++    else
++        TermWin_internalBorder = t;
++    TermWin_internalBorders = 2 * TermWin_internalBorder;
++    
+ /* no point having a scrollbar without having any scrollback! */
+     if (!TermWin.saveLines)
+ 	Options &= ~Opt_scrollBar;
+diff -Naur aterm-0.4.2/src/rxvt.h aterm-0.4.2-orig/src/rxvt.h
+--- aterm-0.4.2/src/rxvt.h	2004-08-23 14:08:25.000000000 +0200
++++ aterm-0.4.2-orig/src/rxvt.h	2004-08-23 14:09:58.099096664 +0200
+@@ -603,10 +603,6 @@
+ #define scrollBar_esc		30
+ #define menuBar_margin		2	/* margin below text */
+ 
+-/* gap between text and window edges (could be configurable) */
+-#define TermWin_internalBorder	2
+-#define TermWin_internalBorders	4 /* must be two times of value above */
+-
+ /* width of scrollBar, menuBar shadow, must be 1 or 2 */
+ #ifdef HALFSHADOW
+ # define SHADOW 1
+@@ -944,6 +940,12 @@
+ extern Window		ParentWin[PARENTS_NUM];
+ extern int		ParentWinNum;
+ 
++/* gap between text and window edges (could be configurable) */
++EXTERN int TermWin_internalBorder;
++/* must be two times of value above */
++EXTERN int TermWin_internalBorders;
++
++
+ EXTERN scrollBar_t	scrollBar;
+ EXTERN menuBar_t	menuBar;
+ EXTERN Display	       *Xdisplay;
+@@ -968,6 +970,7 @@
+ EXTERN const char      *rs_minBufferWidth; /* minimum buffer width - so we can scroll horizontally */
+ EXTERN const char      *rs_saveLines;	/* scrollback buffer [lines] */
+ EXTERN const char      *rs_borderWidth; /* border width [pixels] */
++EXTERN const char      *rs_internal_border; /* internal border width [pixels] */
+ EXTERN const char      *rs_cutchars;	/* chars for selection boundaries */
+ #ifdef META8_OPTION
+ EXTERN const char      *rs_modifier;
+diff -Naur aterm-0.4.2/src/xdefaults.c aterm-0.4.2-orig/src/xdefaults.c
+--- aterm-0.4.2/src/xdefaults.c	2004-08-23 14:08:24.000000000 +0200
++++ aterm-0.4.2-orig/src/xdefaults.c	2004-08-23 14:09:23.273390976 +0200
+@@ -302,6 +302,8 @@
+          "pointer color"),
+     STRG(rs_borderWidth, "borderWidth", "bw", "number",
+          "width of border"),
++    STRG(rs_internal_border, "internalBorder", "ib", "number",
++         "width of the internal border"),
+     STRG(rs_color[Color_border], "borderColor", "bd", "color",
+          "border color"),
+     BOOL(rs_borderLess, "borderLess", "bl", Opt_borderLess, "no decoration"),
