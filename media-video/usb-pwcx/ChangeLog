@@ -1,6 +1,9 @@
 # ChangeLog for media-video/usb-pwcx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.11 2004/06/25 00:51:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.12 2004/08/07 23:49:54 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> usb-pwcx-8.2.2.ebuild:
+  Typo in DESCRIPTION: resoltions -> resolutions. Bug 59717.
 
   07 Jun 2004; Patrick Kursawe <phosphan@gentoo.org> usb-pwcx-8.2.2.ebuild:
   Bails out for 2.6 kernels now.

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.2.2.ebuild,v 1.10 2004/07/14 22:16:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.2.2.ebuild,v 1.11 2004/08/07 23:49:54 slarti Exp $
 
 inherit check-kernel
 
-DESCRIPTION="Optional closed source drivers for phillips webcams to allow for higher resoltions and framerates "
+DESCRIPTION="Optional closed source drivers for phillips webcams to allow for higher resolutions and framerates "
 HOMEPAGE="http://www.smcc.demon.nl/webcam/"
 SRC_URI="http://www.smcc.demon.nl/webcam/usb-pwcx-8.2.2.tar.gz"
 
