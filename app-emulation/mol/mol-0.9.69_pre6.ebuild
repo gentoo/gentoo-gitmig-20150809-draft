@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.69_pre6.ebuild,v 1.2 2003/11/18 23:43:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.69_pre6.ebuild,v 1.3 2003/11/19 07:08:24 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -34,7 +34,7 @@ src_compile() {
 	use esd      && myconf="${myconf} --enable-esd"
 	use oldworld || myconf="${myconf} --disable-oldworld"
 	use X        && myconf="${myconf} --with-x"
-	
+
 	#workaround
 	[ "`echo ${KV}|grep 2.6`" ] \
 	&& myconf="${myconf} --disable-sheep" \
@@ -63,12 +63,12 @@ src_install() {
 	# MOL needs write access to some .depend-files in the kernel-dir
 	# (at least arch/ppc/) to build the kernel-modules.  With
 	# sandboxing enabled this would result in an access violation.
-	
+
 	addwrite "/usr/src/${FK}"
 	emake DESTDIR=${D} install || die "Failed to install MOL"
 
 	#workaround
-	
+
 	dodoc 0README BUILDING COPYRIGHT CREDITS Doc/*
 
 }
