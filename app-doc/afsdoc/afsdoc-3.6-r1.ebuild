@@ -19,8 +19,12 @@ src_unpack() {
 }
 
 src_install () {
-  dodir /usr/share/doc/${PF} 
-  tar -zxf ${DISTDIR}/${A} -C ${D}/usr/share/doc/${PF}   
+  dodir /usr/share/doc 
+  tar -zxf ${DISTDIR}/${A} -C ${D}/usr/share/doc 
+  cd ${D}/usr/share/doc
+  mv afs-3.6-doc ${PF}
+  cd ${PF}
+  mv PDF print
   prepalldocs
 }
 

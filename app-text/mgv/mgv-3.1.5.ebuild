@@ -15,7 +15,7 @@ DEPEND=">=app-text/ghostscript-3.33
 
 src_compile() {
 
-    try ./configure --prefix=/usr --host=${CHOST}
+    try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST}
     try make
 
 }
@@ -23,6 +23,9 @@ src_compile() {
 src_install () {
 
     try make DESTDIR=${D} install
+    dodoc AUTHORS COPYING ChangeLog NEWS README
+    docinto sgml
+    dodoc doc/*.sgml
 
 }
 
