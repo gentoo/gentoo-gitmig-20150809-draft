@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48-r4.ebuild,v 1.1 2004/01/28 09:36:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48-r4.ebuild,v 1.2 2004/01/29 08:04:17 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 DESCRIPTION="Apache Web Server, Version 2.0.x"
