@@ -68,6 +68,7 @@
 # Contains the hacked sandbox.  Needs testing.
 =sys-apps/portage-2.0.30_alpha
 =sys-apps/portage-2.0.30_alpha2
+=sys-apps/portage-2.0.30_alpha3
 
 # <azarah@gentoo.org> (25 Aug 2002)
 # This one *STILL* activate the atexit() bug in some
