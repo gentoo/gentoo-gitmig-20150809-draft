@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.33 2004/06/16 01:26:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.34 2004/06/23 05:33:42 stuart Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -48,9 +48,16 @@ S=${WORKDIR}/${MY_P}
 IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp mssql"
 
 # Hardened-PHP support
+#
+# I've done it like this, so that we can support different versions of
+# the patch for different versions of PHP
 
-HARDENEDPHP_PATCH="hardened-php-4.3.6-0.1.2.patch.gz"
-SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/$HARDENEDPHP_PATCH )"
+case "$PV" in
+	4.3.6) HARDENEDPHP_PATCH="hardened-php-4.3.6-0.1.2.patch.gz" ;;
+	4.3.7) HARDENEDPHP_PATCH="hardened-php-4.3.7-0.1.2.patch.gz" ;;
+esac
+
+[ -n "$HARDENEDPHP_PATCH" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/$HARDENEDPHP_PATCH )"
 
 # berkdb stuff is complicated
 # we need db-1.* for ndbm
@@ -259,7 +266,7 @@ php-sapi_src_unpack() {
 	# bug 47498
 	[ "${PV//4.3.6}" != "${PV}" ] && EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/php-4.3.6-pcrealloc.patch
 
-	[ `use hardenedphp` ] && epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
+	[ `use hardenedphp` ] && [ -n "$HARDENEDPHP_PATCH" ] && epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
 }
 
 
