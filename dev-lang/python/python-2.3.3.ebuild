@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.1 2004/01/04 20:42:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.2 2004/01/18 01:43:57 liquidx Exp $
 
 inherit flag-o-matic python
 
@@ -146,9 +146,12 @@ pkg_postrm() {
 }
 
 pkg_postinst() {
+	local myroot
+	myroot=$(echo $ROOT | sed 's:/$::')
+
 	python_makesym
 	python_mod_optimize
-	python_mod_optimize -x site-packages -x test ${ROOT}usr/lib/python${PYVER}
+	python_mod_optimize -x site-packages -x test ${myroot}/usr/lib/python${PYVER}
 
 	echo
 	ewarn
@@ -168,5 +171,4 @@ pkg_postinst() {
 	echo -ne "\a"; sleep 1
 	echo -ne "\a"; sleep 1
 	echo -ne "\a"; sleep 1
-
 }
