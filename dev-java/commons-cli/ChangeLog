@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/commons-cli
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.2 2003/03/17 02:04:58 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.3 2003/03/17 21:06:09 absinthe Exp $
+
+*commons-cli-1.0-r2 (17 Mar 2003)
+
+  17 Mar 2003; Dylan Carlson <absinthe@gentoo.org> commons-cli-1.0-r2.ebuild:
+  Changes to utilize new 'java-commons' eclass initiated by Lim Swee Tat
+  <st_lim@stlim.net> in bug # 17350.  Fixed up the eclass and added 'makedoc'
+  target to java-commons_src_compile() for the 'doc' use flag, and updated the
+  ebuild accordingly.
+  
+  If you want the API documentation installed, add 'doc' to your USE flags, or
+  run:   'USE="doc" emerge foo.ebuild'
 
 *commons-cli-1.0-r1 (16 Mar 2003)
 
