@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.2.ebuild,v 1.5 2004/04/06 04:03:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.2.ebuild,v 1.6 2004/04/07 10:19:09 usata Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE="gtk nls debug"
 
@@ -49,7 +49,7 @@ src_compile() {
 		sed -i -e "/^SUBDIRS/s/gtk//" Makefile.in
 	fi
 
-	use debug && export CFLAGS="${CFLAGS} -g"
+	use debug && append-flags -g
 	econf `use_enable nls` || die
 	emake || die
 }
@@ -66,20 +66,17 @@ pkg_postinst() {
 	einfo
 	einfo "To use uim-anthy you should emerge app-i18n/anthy or app-i18n/anthy-ss."
 	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo (uim doesn't support skkserv)."
-	einfo "To use uim-prime you should emerge app-i18n/prime and make sure you have"
-	einfo ">=dev-libs/suikyo-1.3.0."
+	einfo "To use uim-prime you should emerge app-i18n/prime."
 	einfo
-	ewarn "If you are upgrading from uim-0.3.1 and using uim-skk, please check your"
-	ewarn "~/.skk-uim-jisyo and remove katakana index entry if any."
 
 	if [ "`use gtk`" ] ; then
-		gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules
+		gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
 	fi
 }
 
 pkg_postrm() {
 
 	if [ "`use gtk`" ] ; then
-		gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules
+		gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
 	fi
 }
