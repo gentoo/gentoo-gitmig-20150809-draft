@@ -1,7 +1,14 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.5 2003/11/17 17:08:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.6 2003/12/04 08:43:24 karltk Exp $
 
+
+*eclipse-sdk-2.1.2-r1 (28 Nov 2003)
+
+  28 Nov 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-2.1.2-r1.ebuild, files/00-refactor_rename.patch:
+  Stole patch from Debian. Fixes #33124.
+  
 *eclipse-sdk-2.1.2 (17 Nov 2003)
 
   17 Nov 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
