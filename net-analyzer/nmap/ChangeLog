@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.68 2004/09/17 17:24:21 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.69 2004/10/17 12:43:38 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> nmap-3.50.ebuild,
+  nmap-3.55.ebuild:
+  stable on amd64.
 
   17 Sep 2004; Jon Hood <squinky86@gentoo.org> nmap-3.70.ebuild:
   Add ipv6 thanks to Francisco Javier <ffelix@sshinf.com>, #64374.
