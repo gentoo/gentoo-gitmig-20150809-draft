@@ -1,0 +1,13 @@
+# Format is: HOST PROTOCOL
+# HOST = IP or DNS
+# PROTOCOL = smtp | qmtp
+#
+# Examples:
+# A standard SMTP server:
+# somesendmailserver.domain.com smtp
+#
+# A qmail server with QMQP setup:
+# someqmailserver.domain.com qmqp
+#
+# A nonstandard SMTP server setup:
+# someotherserver.domain.com smtp --port=2525
