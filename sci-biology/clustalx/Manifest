@@ -1,4 +1,4 @@
-MD5 4ed08e0fbd454bc42f6afa59e7aa9e13 ChangeLog 1199
+MD5 1fbda4feb24f643068a4306e4369c6e6 clustalx-1.83-r1.ebuild 1363
+MD5 8f34501b55218d2f1604c572198c865b ChangeLog 1402
 MD5 272b5b012593acd07a7a60b8b64e6761 metadata.xml 509
-MD5 7e1da10ff7433f10e37a8f17fbbcf80f clustalx-1.83.ebuild 1334
-MD5 800c4da737d4fb9af3d8ffb7f6f44892 files/digest-clustalx-1.83 68
+MD5 800c4da737d4fb9af3d8ffb7f6f44892 files/digest-clustalx-1.83-r1 68

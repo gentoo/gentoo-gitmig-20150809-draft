@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83.ebuild,v 1.4 2005/02/02 21:10:49 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r1.ebuild,v 1.1 2005/02/17 01:14:51 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND="sci-biology/clustalw
 	sci-biology/ncbi-tools
-	virtual/x11"
+	virtual/x11
+	=x11-libs/openmotif-2.1*"
 
 S="${WORKDIR}/${PN}${PV}.sun"
 
