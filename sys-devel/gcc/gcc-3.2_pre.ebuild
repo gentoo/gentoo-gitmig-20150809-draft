@@ -9,7 +9,10 @@
 #             in src_install() ... Ill implement auto-version detection
 #             later on.
 
-inherit libtool
+inherit flag-o-matic libtool
+
+# Compile problems with these ...
+filter-flags "-fno-exceptions"
 
 MY_PV="`echo ${PV/_pre} | cut -d. -f1,2`"
 GCC_SUFFIX=-${MY_PV}
