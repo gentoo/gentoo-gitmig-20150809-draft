@@ -1,4 +1,14 @@
-MD5 b085e9b2cc821edc4ce5b7ede3fdd439 ChangeLog 742
-MD5 ab9ffb656d47743d855b26e5ed373178 gcolor-0.4.ebuild 715
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2756c3d5d39536b36e6d86c42b80a9ee gcolor-0.4.ebuild 723
+MD5 c56088710b2c9c722f21e7149780d0f7 ChangeLog 826
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 5cce3c0a8f7904724266f776aac2365e files/digest-gcolor-0.4 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBM4MiCHk4+ZoBpvsRAvaDAKCRyZQxpazAezansH/XS145IoiN4QCfQQyJ
+xfsSl4n7jd4QcdBMRQd+NnM=
+=1URv
+-----END PGP SIGNATURE-----
