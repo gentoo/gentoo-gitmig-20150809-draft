@@ -1,5 +1,113 @@
---- configure~	Tue Sep 28 21:39:56 1999
-+++ configure	Wed Aug 29 23:10:33 2001
+--- configure.in.orig	Wed Aug 29 23:32:26 2001
++++ configure.in	Wed Aug 29 23:33:22 2001
+@@ -25,21 +25,20 @@
+ # rather ncurses.  So we check for it.
+ TERMLIBS=
+ # Check for termlib before termcap because Solaris termcap needs libucb.
+-for termlib in ncurses curses termlib termcap terminfo; do
+-   AC_CHECK_LIB(${termlib}, tgetent,
+-     [TERMLIBS="${TERMLIBS} -l${termlib}"; break])
+-done
++#for termlib in ncurses curses termlib termcap terminfo; do
++#   AC_CHECK_LIB(${termlib}, tgetent,
++#     [TERMLIBS="${TERMLIBS} -l${termlib}"; break])
++#done
+ 
+ dnl Checks for header files.
+ dnl Do not use <ncurses/termcap.h> unless we're linking with ncurses.
+-if test "x$termlib" = xncurses; then
+-  dnl Use AC_CHECK_HEADERS so the HAVE_*_H symbol gets defined.
+-  AC_CHECK_HEADERS(ncurses/termcap.h)
+-fi
++#if test "x$termlib" = xncurses; then
++#  dnl Use AC_CHECK_HEADERS so the HAVE_*_H symbol gets defined.
++#  AC_CHECK_HEADERS(ncurses/termcap.h)
++#fi
+ AC_HEADER_STAT
+ AC_HEADER_STDC
+-AC_CHECK_HEADERS(fcntl.h pwd.h string.h strings.h termcap.h termio.h \
+-  termios.h unistd.h \
++AC_CHECK_HEADERS(fcntl.h pwd.h string.h strings.h \
+   sys/fcntl.h sys/file.h sys/ptem.h sys/time.h sys/ttold.h sys/wait.h)
+ AM_SYS_POSIX_TERMIOS
+ AM_HEADER_TIOCGWINSZ_NEEDS_SYS_IOCTL
+@@ -64,16 +63,16 @@
+ 
+ dnl Checks for variables.
+ # HP-UX 9 (at least) needs -lncurses which defines termcap variables PC etc.
+-AC_MSG_CHECKING(for library with termcap variables)
+-AC_CACHE_VAL(ac_cv_var_ospeed,
+-oldLIBS=$LIBS 
+-for trylib in $termlib ncurses curses termlib termcap terminfo; do
+-   if test "x$trylib" != "x$termlib"; then
+-     LIBS="$oldLIBS -l$termlib -l$trylib"
+-   else
+-     LIBS="$oldLIBS -l$termlib"
+-   fi
+-   AC_TRY_LINK(, 
++#AC_MSG_CHECKING(for library with termcap variables)
++#AC_CACHE_VAL(ac_cv_var_ospeed,
++#oldLIBS=$LIBS 
++#for trylib in $termlib ncurses curses termlib termcap terminfo; do
++#   if test "x$trylib" != "x$termlib"; then
++#     LIBS="$oldLIBS -l$termlib -l$trylib"
++#   else
++#     LIBS="$oldLIBS -l$termlib"
++#   fi
++#   AC_TRY_LINK(, 
+ #ifdef HAVE_NCURSES_TERMCAP_H
+ #include <ncurses/termcap.h>
+ #else
+@@ -81,22 +80,22 @@
+ #include <termcap.h>
+ #else
+ #undef PC
+-char *BC;
+-char* *UP;
+-char PC;      
+-short ospeed; 
++#char *BC;
++#char* *UP;
++#char PC;      
++#short ospeed; 
+ #endif
+ #endif
+-return ospeed != 0;
+-, ac_cv_var_ospeed=$trylib; break)
+-done
+-LIBS=$oldLIBS
+-)
+-AC_MSG_RESULT($ac_cv_var_ospeed)
+-if test -n "$ac_cv_var_ospeed" \
+-   && test "x$termlib" != "x$ac_cv_var_ospeed"; then
+-  TERMLIBS="${TERMLIBS} -l${ac_cv_var_ospeed}"
+-fi
++#return ospeed != 0;
++#, ac_cv_var_ospeed=$trylib; break)
++#done
++#LIBS=$oldLIBS
++#)
++#AC_MSG_RESULT($ac_cv_var_ospeed)
++#if test -n "$ac_cv_var_ospeed" \
++#   && test "x$termlib" != "x$ac_cv_var_ospeed"; then
++#  TERMLIBS="${TERMLIBS} -l${ac_cv_var_ospeed}"
++#fi
+ AC_SUBST(TERMLIBS)
+ 
+ dnl Set of available languages and i18n macros.
+--- Makefile.in.orig	Wed Aug 29 23:32:40 2001
++++ Makefile.in	Wed Aug 29 23:32:47 2001
+@@ -99,7 +99,7 @@
+ # Do intl/ and lib/ first since the C programs depend on them.
+ # Do doc/ last so makeinfo will be built when we get there.
+ # Others are alphabetical.
+-SUBDIRS = intl lib info makeinfo po util doc
++SUBDIRS = intl lib makeinfo po util
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = config.h
+--- configure.orig	Wed Aug 29 23:37:48 2001
++++ configure	Wed Aug 29 23:38:08 2001
 @@ -1409,98 +1409,22 @@
  # rather ncurses.  So we check for it.
  TERMLIBS=
@@ -1357,21 +1465,3 @@
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -4411,8 +4315,6 @@
- ac_given_INSTALL="$INSTALL"
- 
- trap 'rm -fr `echo "Makefile             \
--           doc/Makefile         \
--           info/Makefile        \
-            intl/Makefile        \
-            lib/Makefile         \
-            makeinfo/Makefile    \
-@@ -4533,8 +4435,6 @@
- cat >> $CONFIG_STATUS <<EOF
- 
- CONFIG_FILES=\${CONFIG_FILES-"Makefile             \
--           doc/Makefile         \
--           info/Makefile        \
-            intl/Makefile        \
-            lib/Makefile         \
-            makeinfo/Makefile    \
