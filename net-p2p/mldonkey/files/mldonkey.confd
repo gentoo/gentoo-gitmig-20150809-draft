@@ -1,4 +1,4 @@
-# config file for mldonkey control script
+# Config file for /etc/init.d/mldonkey
 
 # owner of mlnet process (don't change, must be existing)
 MLUSER="p2p"
@@ -9,11 +9,17 @@ MLHOME="/home/p2p"
 # subdir if any (will be created, if not existing)
 MLDIR=".mldonkey"
 
+# logfile (/dev/null for nowhere)
+MLLOG="/var/log/mldonkey.log"
+
 # bandwidth control, values in kb/s
 MLLOWDOWN="6"
 MLLOWUP="2"
 MLHIGHDOWN="30"
 MLHIGHUP="10"
+
+# nice level, 0<x<19, more nice -> less cpuspeed consumed
+MLNICE="19"
 
 # port for webinterface, usually 4080
 MLPORT="4080"
