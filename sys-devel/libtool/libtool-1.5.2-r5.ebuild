@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r5.ebuild,v 1.15 2004/07/15 21:22:38 tgall Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r5.ebuild,v 1.16 2004/07/16 04:03:19 agriffis Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils gnuconfig
 
@@ -68,8 +68,6 @@ src_unpack() {
 	epatch ${FILESDIR}/1.4.3/${PN}-1.3.5-mktemp.patch
 	epatch ${FILESDIR}/ltconfig-uclibc.patch
 
-	S="${OLD_S}" gnuconfig_update
-
 	cd ${S}
 	echo
 	# Install updated missing script
@@ -131,6 +129,10 @@ src_unpack() {
 
 	einfo "Generate ltmain.sh ..."
 	gen_ltmain_sh || die "Failed to generate ltmain.sh!"
+
+	# Run gnuconfig_update for both old and new versions *after* patches so we
+	# don't screw them up
+	gnuconfig_update ${WORKDIR}
 }
 
 src_compile() {
@@ -141,9 +143,6 @@ src_compile() {
 	#
 
 	cd ${OLD_S}
-
-	# regen to allow for build,host,target mips/mips64/ppc64/uclibc
-	gnuconfig_update
 
 	einfo "Configuring ${OLD_S##*/} ..."
 	./configure --host=${CHOST} \
@@ -158,9 +157,6 @@ src_compile() {
 	#
 
 	cd ${S}
-
-	# regen to allow for build,host,target mips/mips64/ppc64/uclibc
-	gnuconfig_update
 
 	einfo "Configuring ${S##*/} ..."
 	./configure --host=${CHOST} \
