@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/cstetex-2.0.2.ebuild,v 1.3 2004/04/07 21:40:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/cstetex-2.0.2.ebuild,v 1.4 2004/04/16 02:14:41 vapier Exp $
 
-inherit tetex
+inherit tetex eutils
 
 DESCRIPTION="a complete TeX distribution with Czech and Slovak support"
 HOMEPAGE="http://math.feld.cvut.cz/olsak/cstex/"
