@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.13 2003/02/12 05:49:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.14 2003/02/15 07:25:17 gerk Exp $
 
 *phpmyadmin-2.3.3 (11 Dec 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> phpmyadmin-2.3.2-r1.ebuild phpmyadmin-2.3.3.ebuild :
+  set ppc in keywords
 
   31 Jan 2003; Martin Holzer <mholzer@gentoo.org> phpmyadmin-2.3.3.ebuild :
   Change SRC_URI to use mirror://sourceforge.
