@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.25 2004/12/21 17:16:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.26 2004/12/28 21:43:15 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *mp-3.3.9 (21 Dec 2004)
 
@@ -28,13 +31,13 @@
   27 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> mp-3.3.1.ebuild:
   syntax fix for use flags
 
-  08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> -mp-3.2.7.ebuild,
+  08 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> -mp-3.2.7.ebuild,
   -mp-3.2.8.ebuild, mp-3.3.1.ebuild:
   Remove old ebuilds.
 
 *mp-3.3.1 (08 Aug 2004)
 
-  08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> +mp-3.3.1.ebuild:
+  08 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +mp-3.3.1.ebuild:
   Version bump, bug 59628. Ebuild by Saleem A. <compnerd@compnerd.org>
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> mp-3.2.11.ebuild:

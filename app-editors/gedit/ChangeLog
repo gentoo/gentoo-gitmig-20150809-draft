@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.87 2004/12/23 17:09:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.88 2004/12/28 21:40:39 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> gedit-2.8.2.ebuild:
   Stable on hppa.
@@ -53,7 +56,7 @@
   16 Sep 2004; foser <foser@gentoo.org> gedit-2.8.0.ebuild :
   Gnome 2.8 commit
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gedit-2.6.2.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gedit-2.6.2.ebuild:
   Stable on alpha.
 
   07 Aug 2004; Travis Tilley <lv@gentoo.org> gedit-2.6.2.ebuild:
@@ -80,7 +83,7 @@
   Added patch from Gnome's CVS to fix broken behaviour on the highlight
   syntax preferences dialog. Resolves bug #50654.
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gedit-2.6.0.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gedit-2.6.0.ebuild:
   Stable on alpha.
 
   03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> gedit-2.6.0.ebuild:

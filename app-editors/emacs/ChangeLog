@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.47 2004/12/19 11:09:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.48 2004/12/28 21:39:44 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   emacs-21.3-r5.ebuild, emacs-21.3.50_pre20041027.ebuild:
@@ -27,7 +30,7 @@
   Added Carbon Emacs (aqua USE flag). See bug #64362.
   Also added multi-tty patch.
 
-  19 Oct 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> emacs-21.3-r4.ebuild:
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> emacs-21.3-r4.ebuild:
   ~alpha keyword.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> emacs-21.3-r3.ebuild:

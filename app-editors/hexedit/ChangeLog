@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hexedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.19 2004/12/17 21:36:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.20 2004/12/28 21:42:14 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Dec 2004; Markus Rothe <corsair@gentoo.org> hexedit-1.2.10.ebuild:
   Stable on ppc64
@@ -21,7 +24,7 @@
   hexedit-1.2.2.ebuild, hexedit-1.2.9.ebuild:
   Version bump. Tidied the ebuilds.
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> hexedit-1.2.9.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> hexedit-1.2.9.ebuild:
   Stable on alpha.
 
   24 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> hexedit-1.2.9.ebuild:

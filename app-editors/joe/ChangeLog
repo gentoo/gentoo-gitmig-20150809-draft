@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.31 2004/12/18 19:27:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.32 2004/12/28 21:42:44 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> joe-3.1-r1.ebuild:
   inherit eutils was forgotten
@@ -38,7 +41,7 @@
   19 May 2004; Christian Birchinger <joker@gentoo.org> joe-3.0-r1.ebuild:
   Added a small cosmetic-only fix for joerc
 
-  18 May 2004; Bryan Østergaard <kloeri@gentoo.org> joe-3.0-r1.ebuild:
+  18 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> joe-3.0-r1.ebuild:
   stable on alpha, bug 51265.
 
   17 May 2004; Christian Birchinger <joker@gentoo.org> joe-3.0-r1.ebuild:
