@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.56.ebuild,v 1.1 2003/06/09 15:58:50 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.56.ebuild,v 1.2 2003/06/20 05:49:56 msterret Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ KEYWORDS="~x86 ~ppc sparc ~alpha"
 IUSE="ssl ldap"
 
 DEPEND="virtual/glibc
+	>=sys-apps/sed-4
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )
@@ -35,13 +36,13 @@ src_unpack() {
 	epatch ${FILESDIR}/imap-4.7c2-flock.patch
 	cp ${FILESDIR}/flock.c ${S}/imap/src/osdep/unix
 
-        if [ "`use ldap`" ] ; then
-                # link to shared ldap libs instead of static
-                epatch ${FILESDIR}/pine-4.30-ldap.patch
-                mkdir ${S}/ldap
-                ln -s /usr/lib ${S}/ldap/libraries
-                ln -s /usr/include ${S}/ldap/include
-        fi
+	if [ "`use ldap`" ] ; then
+		# link to shared ldap libs instead of static
+		epatch ${FILESDIR}/pine-4.30-ldap.patch
+		mkdir ${S}/ldap
+		ln -s /usr/lib ${S}/ldap/libraries
+		ln -s /usr/include ${S}/ldap/include
+	fi
 
 	# Don't appear to need this anymore; as of pine-4.56
 	#epatch ${FILESDIR}/pine-4.40-boguswarning.patch
@@ -56,40 +57,41 @@ src_unpack() {
 
 	if [ -n "$DEBUGBUILD" ]; then
  		cd ${S}/pine
-		cp makefile.lnx makefile.orig
-		sed -e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \
-			< makefile.orig > makefile.lnx
+		sed -i \
+			-e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \
+			makefile.lnx || die "sed pine/makefile.lnx failed"
 		cd ${S}/pico
-		cp makefile.lnx makefile.orig
-		sed -e "s:-g -DDEBUG:${CFLAGS} -g -DDEBUG:" \
-			< makefile.orig > makefile.lnx
+		sed -i \
+			-e "s:-g -DDEBUG:${CFLAGS} -g -DDEBUG:" \
+			makefile.lnx || die "sed pico/makefile.lnx failed"
 	else
 		cd ${S}/pine
 		cp makefile.lnx makefile.orig
-		sed -e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS}:" \
-			< makefile.orig > makefile.lnx
+		sed -i \
+			-e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS}:" \
+			makefile.lnx || die "sed pine/makefile.lnx failed"
 		cd ${S}/pico
-		cp makefile.lnx makefile.orig
-		sed -e "s:-g -DDEBUG:${CFLAGS}:" makefile.orig > makefile.lnx
+		sed -i \
+			-e "s:-g -DDEBUG:${CFLAGS}:" \
+			makefile.lnx || die "sed pico/makefile.lnx failed"
 	fi
 	cd ${S}/pine/osdep
-	cp os-lnx.h os-lnx.h.orig
-	sed -e "s:/usr/local/lib/pine.conf:/etc/pine.conf:" \
-		< os-lnx.h.orig > os-lnx.h
+	sed -i \
+		-e "s:/usr/local/lib/pine.conf:/etc/pine.conf:" \
+		os-lnx.h || die "sed os-lnx.h failed"
 }
 
-src_compile() {                           
+src_compile() {
 	BUILDOPTS=""
-	if [ "`use ssl`" ] 
+	if [ "`use ssl`" ]
 	then
 		BUILDOPTS="${BUILDOPTS} SSLDIR=/usr SSLTYPE=unix SSLCERTS=/etc/ssl/certs"
 		cd ${S}/imap/src/osdep/unix
-		cp Makefile Makefile.orig
-		sed \
+		sed -i \
 			-e "s:\$(SSLDIR)/certs:/etc/ssl/certs:" \
 			-e "s:\$(SSLCERTS):/etc/ssl/certs:" \
 			-e "s:-I\$(SSLINCLUDE) ::" \
-			< Makefile.orig > Makefile
+			Makefile || die "sed Makefile failed"
 		cd ${S}
 	else
 		BUILDOPTS="${BUILDOPTS} NOSSL"
@@ -101,11 +103,11 @@ src_compile() {
 	else
 		BUILDOPTS="${BUILDOPTS} NOLDAP"
 	fi
-		
+
 	./build ${BUILDOPTS} lnp || die
 }
 
-src_install() {                               
+src_install() {
 	into /usr
 	dobin bin/pine bin/pico bin/pilot bin/mtest bin/rpdump bin/rpload
 
@@ -124,5 +126,5 @@ src_install() {
 	dodoc imap/docs/rfc/*.txt
 
 	docinto html/tech-notes
-	dodoc doc/tech-notes/*.html
+	dohtml -r doc/tech-notes/
 }

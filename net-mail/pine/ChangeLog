@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.31 2003/06/09 15:58:50 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.32 2003/06/20 05:49:56 msterret Exp $
+
+  19 Jun 2003; <msterret@gentoo.org> pine-4.56.ebuild:
+  use dohtml instead of dodoc for html (bug 23048)
+  use sed -i
 
 *pine-4.56 (09 Jun 2003)
 
