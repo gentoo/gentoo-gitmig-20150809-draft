@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.9 2003/07/23 21:39:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.10 2003/08/03 19:04:25 gmsoft Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -69,7 +69,7 @@ src_unpack() {
 
 	# Add serial console ...
 	case ${ARCH} in
-		sparc|mips)
+		sparc|mips|hppa)
 			cp inittab inittab.orig
 			sed -e 's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n# TERMINALS"' \
 				inittab.orig > inittab || die
