@@ -5,5 +5,6 @@ MD5 df62145c8b16195fb0a8f7d9b767f631 ChangeLog 1793
 MD5 f7562f593f52893ad8a8974973bbe101 texmacs-1.0.1.23.ebuild 1357
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 4e64086a3b4c9a500cf4d4bbd8ca3e5f files/digest-texmacs-1.0.0.19 146
+MD5 178b97edbe1c37c4beaff0858088c7b7 files/digest-texmacs-1.0.1.23 146
 MD5 e66f431d3e08f7c71c8b3838c9601369 files/digest-texmacs-1.0.1-r1 143
 MD5 e66f431d3e08f7c71c8b3838c9601369 files/digest-texmacs-1.0.1 143
