@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.8.ebuild,v 1.6 2005/02/01 18:19:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.8.ebuild,v 1.7 2005/02/04 10:33:19 suka Exp $
 
 # Notes:
 #
@@ -26,7 +26,7 @@
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
-IUSE="curl gnome hardened java kde nptl zlib"
+IUSE="curl gnome hardened java kde nas nptl python zlib"
 
 OO_VER="1.1.4"
 PATCHLEVEL="OOO_1_1_4"
@@ -56,11 +56,11 @@ KEYWORDS="~x86 ~ppc"
 RDEPEND="!app-office/openoffice-ximian-bin
 	virtual/x11
 	virtual/libc
-	virtual/lpr
 	>=dev-lang/perl-5.0
 	gnome? ( >=x11-libs/gtk+-2.0
 		>=gnome-base/gnome-vfs-2.0
-		>=dev-libs/libxml2-2.0 )
+		>=dev-libs/libxml2-2.0
+		>=gnome-extra/evolution-data-server-1.0 )
 	kde? ( kde-base/kdelibs )
 	>=media-libs/libart_lgpl-2.3.13
 	>=x11-libs/startup-notification-0.5
@@ -74,17 +74,20 @@ RDEPEND="!app-office/openoffice-ximian-bin
 	app-arch/unzip
 	dev-libs/expat
 	java? ( >=virtual/jre-1.4.1 )
+	python? ( virtual/python )
 	ppc? ( >=sys-devel/gcc-3.2.1 )
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
 DEPEND="${RDEPEND}
+	virtual/lpr
 	>=sys-apps/findutils-4.1.20-r1
 	app-shells/tcsh
 	dev-util/pkgconfig
 	dev-util/intltool
 	curl? ( net-misc/curl )
+	nas? ( media-libs/nas )
 	zlib? ( sys-libs/zlib )
 	sys-libs/pam
 	!dev-util/dmake
@@ -305,6 +308,9 @@ src_unpack() {
 		epatch ${FILESDIR}/${OO_VER}/pyunolink-fix.patch
 	fi
 
+	#Fix for printer problems
+	use gnome && epatch ${FILESDIR}/${OO_VER}/gtk-printer-update-on-focus-change.diff
+
 	einfo "Installing / Scaling Icons"
 	${PATCHDIR}/bin/scale-icons ${S} || die
 	cp -af ${ICONDIR}/* ${S} || die
@@ -360,6 +366,18 @@ src_compile() {
 	if use zlib
 	then
 		MYCONF="${MYCONF} --with-system-zlib"
+	fi
+
+	#See if we use system-python
+	if use python
+	then
+		MYCONF="${MYCONF} --with-python=/usr/bin/python"
+	fi
+
+	#See if we use system-nas
+	if use nas
+	then
+		MYCONF="${MYCONF} --with-system-nas"
 	fi
 
 	use kde && set-kdedir 3
