@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r5.ebuild,v 1.1 2002/07/04 03:58:05 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r5.ebuild,v 1.2 2002/07/08 21:55:56 aliz Exp $
 
 MY_PN=${PN/et/Et}
 MY_P=${MY_PN}-${PV}
@@ -11,8 +11,9 @@ SRC_URI="http://www.eterm.org/download/${MY_P}.tar.gz
 		 http://www.eterm.org/themes/0.9.1/glass-${MY_PN}-theme.tar.gz"
 HOMEPAGE="http://eterm.org/"
 
-SLOT=""
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	>=x11-libs/libast-0.4-r1
