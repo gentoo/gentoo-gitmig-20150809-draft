@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.3b-r2.ebuild,v 1.1 2004/01/13 19:02:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.3b-r2.ebuild,v 1.2 2004/03/16 19:28:10 wolf31o2 Exp $
+
+inherit eutils
 
 MY_PV=${PV/b/.B-k9}
 DESCRIPTION="Cisco VPN Client (3DES)"

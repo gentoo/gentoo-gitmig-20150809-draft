@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.10 2004/02/25 14:37:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.11 2004/03/16 19:28:10 wolf31o2 Exp $
+
+  16 Mar 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-vpnclient-3des-4.0.3b-r2.ebuild:
+  Added inherit eutils since we use epatch.
 
 *cisco-vpnclient-3des-4.0.3b-r3 (25 Feb 2004)
 
