@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ck-8.0.ebuild,v 1.4 2003/09/08 07:16:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ck-8.0.ebuild,v 1.5 2004/02/28 21:18:59 aliz Exp $
 
 P_NEW=${PN}${PV}
 S=${WORKDIR}/${P_NEW}
 
 DESCRIPTION="A curses based toolkit for tcl"
 HOMEPAGE="http://www.ch-werner.de/ck/"
-SRC_URI="${HOMEPAGE}/${P_NEW}.tar.gz"
+SRC_URI="http://www.ch-werner.de/ck/${P_NEW}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

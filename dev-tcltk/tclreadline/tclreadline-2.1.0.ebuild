@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/tclreadline-2.1.0.ebuild,v 1.6 2003/07/12 13:10:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/tclreadline-2.1.0.ebuild,v 1.7 2004/02/28 21:19:00 aliz Exp $
 
 IUSE=""
 
 DESCRIPTION="readline extension to TCL"
 
 HOMEPAGE="http://tclreadline.sf.net/"
-SRC_URI="http://umn.dl.sourceforge.net/sourceforge/tclreadline/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/tclreadline/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

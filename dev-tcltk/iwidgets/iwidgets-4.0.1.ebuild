@@ -15,7 +15,7 @@ HOMEPAGE="http://www.tcltk.com/${PN}/"
 
 SLOT="0"
 LICENSE="as-is BSD"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 DEPEND=">=dev-tcltk/itcl-3.2.1"
 PDEPEND="dev-tcltk/iwidgets"
 

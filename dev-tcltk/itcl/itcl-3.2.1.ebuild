@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2.1.ebuild,v 1.1 2003/10/29 04:44:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2.1.ebuild,v 1.2 2004/02/28 21:18:59 aliz Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.tcltk.com/${PN}/"
 
 SLOT="0"
 LICENSE="as-is BSD"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 DEPEND="dev-lang/tk"
 PDEPEND="dev-tcltk/iwidgets"
 
