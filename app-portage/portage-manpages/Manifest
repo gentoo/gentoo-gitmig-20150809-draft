@@ -1,4 +1,14 @@
-MD5 399aa8204d83cd4fbf19de06c44b4b47 ChangeLog 464
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6d80202f62f54d13a445bb19bc3ea933 ChangeLog 527
 MD5 0d2dc6f79e41ebb95caf2acfbc8d59cf metadata.xml 160
-MD5 5f93dac278c7be99c57aecda26a61464 portage-manpages-1.0.ebuild 500
-MD5 aceda5c0e53a726a5a11e00033e7831f files/digest-portage-manpages-1.0 72
+MD5 e4ef023fea8a5e899144026acb257641 portage-manpages-1.1.ebuild 547
+MD5 ac874bd305e39302b3366db2f45c998e files/digest-portage-manpages-1.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB1zM+roRuSHgZdywRAnQ1AJ9V8QrHJIfu/068SFgUewjcgMhJBgCeM9yZ
+9NIGdlH6I0El86LyhQBEPj0=
+=1FcQ
+-----END PGP SIGNATURE-----
