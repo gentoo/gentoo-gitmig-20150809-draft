@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdbc2-postgresql
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/ChangeLog,v 1.9 2004/10/23 07:00:03 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/ChangeLog,v 1.10 2005/03/13 19:29:47 corsair Exp $
+
+  13 Mar 2005; Markus Rothe <corsair@gentoo.org> jdbc2-postgresql-7.4.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   23 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   jdbc2-postgresql-6.5.2.ebuild, jdbc2-postgresql-7.0.ebuild,

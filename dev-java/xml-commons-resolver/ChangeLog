@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-commons-resolver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.8 2005/02/17 17:44:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.9 2005/03/13 19:22:38 corsair Exp $
+
+  13 Mar 2005; Markus Rothe <corsair@gentoo.org>
+  xml-commons-resolver-1.1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   17 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   xml-commons-resolver-1.1.ebuild:
