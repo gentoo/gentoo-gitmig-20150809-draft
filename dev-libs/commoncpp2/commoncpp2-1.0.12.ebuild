@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commoncpp2/commoncpp2-1.0.3.ebuild,v 1.3 2003/02/13 10:35:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commoncpp2/commoncpp2-1.0.12.ebuild,v 1.1 2003/07/21 18:49:06 naz Exp $
 
 IUSE="doc xml2"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\ 
 threading, sockets, file access, daemons, persistence, serial I/O, XML parsing,\
 and system services"
@@ -25,7 +24,7 @@ src_compile() {
 		&& myconf="${myconf} --with-xml" \
 		|| myconf="${myconf} --without-xml"
 
-	econf ${myconf} || die "./configure failed"
+	econf ${myconf} --with-ftp || die "./configure failed"
 
 	emake || die
 
@@ -40,9 +39,7 @@ src_install () {
 	dodoc AUTHORS INSTALL NEWS ChangeLog README\
 		THANKS TODO COPYING COPYING.addendum
 	
-	# the docs come out already compressed
-	use doc && ( \
-		dodoc commoncpp2-html-manual-1.0.1.tar.gz \
-			commoncpp2-latex-manual-1.0.1.tar.gz
-	) 
+	# Only install html docs
+	# man and latex available, but seems a little wasteful
+	use doc && dohtml docs/html/*
 }
