@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/tkmoo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/ChangeLog,v 1.9 2004/12/28 23:10:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/ChangeLog,v 1.10 2004/12/29 07:40:36 mr_bones_ Exp $
+
+  28 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.3.32-keys-workaround.patch, tkmoo-0.3.32.ebuild:
+  add workaround patch for keys - patch from Luke-Jr via bug #74140
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
