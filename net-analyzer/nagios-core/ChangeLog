@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.16 2004/01/29 23:43:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.17 2004/02/11 13:38:13 tigger Exp $
+
+  11 Feb 2004; rob holland <tigger@gentoo.org> :
+  new nagios ebuild by mbowman@gentoo.org with slight adjustment by me. Closes
+  #39926
 
   30 Jan 2004; Martin Holzer <mholzer@gentoo.org> nagios-core-1.1-r4.ebuild:
   Changing touch keep to keepdir. closes 39812
