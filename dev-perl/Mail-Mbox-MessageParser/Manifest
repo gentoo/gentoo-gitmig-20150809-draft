@@ -1,4 +1,14 @@
-MD5 4b9df967e1229feacb0fd83581cecc37 ChangeLog 846
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 35038c12cbc430d7b7a5f086d681a03b ChangeLog 940
 MD5 125d98fb0ddecb8bfea49105fed4213a Mail-Mbox-MessageParser-1.20.ebuild 622
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 e22d2b3faabc49cc46e3b0c88a660d29 files/digest-Mail-Mbox-MessageParser-1.20 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBWLHJI1lqEGTUzyQRAj53AKCDWOR4gKe8eYQaQy2rLoe0EvfnZQCgn3+8
+42YpDIhHRHSJnou6KNp6qvk=
+=SX81
+-----END PGP SIGNATURE-----
