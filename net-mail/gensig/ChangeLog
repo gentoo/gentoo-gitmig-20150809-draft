@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/gensig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gensig/ChangeLog,v 1.2 2003/02/12 08:11:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gensig/ChangeLog,v 1.3 2003/10/19 18:02:18 lanius Exp $
+
+*gensig-2.3 (19 Oct 2003)
+
+  19 Oct 2003; Heinrich Wendel <lanius@gentoo.org> gensig-2.3.ebuild:
+  bump
 
 *gensig-2.2 (29 Oct 2002)
 
