@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.4 2003/06/21 14:22:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.5 2003/06/22 16:29:32 liquidx Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org> (21 Jun 2003)
 #
@@ -8,32 +8,51 @@
 # 
 # Basically, rpm_src_unpack does:
 #
-# 1. convert all *.rpm in ${A} to tar.gz, non rpm files are passed through 
-#    unpack()
-# 2. unpacks the tar.gz into ${WORKDIR}
-# 3. if it is a source rpm, it finds all .tar .tar.gz, .tgz, .tbz2, .tar.bz2,
+# 1. uses rpm_unpack to unpack a rpm file using rpmoffset and cpio
+# 2. if it is a source rpm, it finds all .tar .tar.gz, .tgz, .tbz2, .tar.bz2,
 #    .zip, .ZIP and unpacks them using unpack() (with a little hackery)
-# 4. deletes all the unpacked tarballs and zip files from ${WORKDIR}
+# 3. deletes all the unpacked tarballs and zip files from ${WORKDIR}
 #
-# Warning !!
+# This ebuild now re-defines a utility function called rpm_unpack which
+# basically does what rpm2targz does, except faster. It does not gzip the
+# output tar again but directly extracts to ${WORKDIR}
 #
-# Sometimes, pure rpm2targz will fail on certain RPMs (eg: scim-chinese)
-# because their code for detecting RPM header offset is not good enough.
-# In that case, you need to add app-arch/rpm to your DEPEND. rpm2targz
-# will automatically find rpm2cpio and use it instead of its own rpmoffset.
+# It will autodetect for rpm2cpio (included in app-arch/rpm) and if it exists
+# it will use that instead of the less reliable rpmoffset. This means if a
+# particular rpm cannot be read using rpmoffset, you just need to put :
 #
-# In addition, rpm2targz-8.0 behaves differently from rpm2targz-9.0. The newer
-# versions will autodetect rpm2cpio whereas 8.0 doesn't. 
+# DEPEND="app-arch/rpm" 
 #
-# Also, 9.0 will place files in ${prefix%.src} if extracting a source rpm
-# whereas 8.0 will just place them in the current directory. 
-# As of writing, the current rpm2targz-9.0 in portage has been patched to
-# remove this behaviour for backwards compatibility.
+# in your ebuild and it will install and use rpm2cpio instead. If you wish
+# to force your ebuild to use rpmoffset in the presence of rpm2cpio, define:
+# 
+# USE_RPMOFFSET_ONLY="1"
 
 ECLASS="rpm"
 INHERITED="$INHERITED $ECLASS"
 
+USE_RPMOFFSET_ONLY=${USE_RPMOFFSET_ONLY-""}
+
 newdepend "app-arch/rpm2targz"
+
+rpm_unpack() {
+	local rpmfile
+	rpmfile=$1
+	if [ -z "${rpmfile}" ]; then
+		return 1
+	fi
+
+	cd ${WORKDIR}
+	if [ -x /usr/bin/rpm2cpio -a -z "${USE_RPMOFFSET_ONLY}" ]; then
+		rpm2cpio ${rpmfile} | cpio -idmu --no-preserve-owner --quiet || return 1
+	else
+		dd ibs=`rpmoffset < ${rpmfile}` skip=1 if=${rpmfile} 2> /dev/null \
+			| gzip -dc \
+			| cpio -idmu --no-preserve-owner --quiet || return 1
+	fi	
+	
+	return 0
+}
 
 rpm_src_unpack() {
 	local x prefix ext myfail OLD_DISTDIR
@@ -47,12 +66,7 @@ rpm_src_unpack() {
 			prefix=${x%.rpm}
 			cd ${WORKDIR}
 			# convert rpm to tar.gz and then extract
-			rpm2targz ${DISTDIR}/${x} || die "${myfail}"
-			if [ "$(tar tzvf ${WORKDIR}/${prefix}.tar.gz | wc -l)" -lt 2 ]; then
-				die "rpm2targz failed, produced an empty tar.gz"
-			fi
-			tar xz --no-same-owner -f ${WORKDIR}/${prefix}.tar.gz || die "${myfail}"
-			rm -f ${WORKDIR}/${prefix}.tar.gz
+			rpm_unpack ${DISTDIR}/${x} || die "${myfail}"
 			
 			# find all tar.gz files and extract for srpms
 			if [ "${prefix##*.}" = "src" ]; then
