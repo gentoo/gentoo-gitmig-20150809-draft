@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.2.4.ebuild,v 1.4 2004/07/14 16:17:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.2.4.ebuild,v 1.5 2004/08/22 04:34:18 obz Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde crypt"
 
@@ -25,7 +25,7 @@ RDEPEND="app-text/scrollkeeper
 	=gnome-base/gconf-1.0*
 	>=gnome-extra/gtkhtml-1.1.10
 	>=gnome-base/oaf-0.6.10
-	>=gnome-base/ORBit-0.5.12
+	=gnome-base/orbit-0*
 	<gnome-base/libglade-2.0
 	>=media-libs/gdk-pixbuf-0.18.0
 	>=dev-libs/libxml-1.8.17
