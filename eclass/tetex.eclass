@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.2 2003/11/12 21:30:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.3 2003/11/24 10:00:25 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
+# Author: Mamoru KOMACHI <usata@gentoo.org>
 #
 # A generic eclass to install tetex distributions.
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic alternatives
 filter-flags "-fstack-protector"
 ECLASS=tetex
 INHERITED="${INHERITED} ${ECLASS}"
@@ -163,6 +164,11 @@ tetex_src_install() {
 	#add /var/cache/fonts directory
 	dodir /var/cache/fonts
 
+	#fix for cnflicting texi2html perl script:
+	local texi2html_PV
+	texi2html_PV=`grep '^\$THISVERSION' ${D}/usr/bin/texi2html | cut -d'"' -f2`
+	mv ${D}/usr/bin/texi2html ${D}/usr/bin/texi2html-${texi2html_PV}
+
 	#fix for lousy upstream permisssions on /usr/share/texmf files
 	#NOTE: do not use fowners, as its not recursive ...
 	einfo "Fixing permissions..."
@@ -198,7 +204,10 @@ tetex_pkg_preinst() {
 
 tetex_pkg_postinst() {
 
-	[ -z "$1" ] && tetex_pkg_postinst all
+	if [ -z "$1" ]; then
+		tetex_pkg_postinst all
+		alternatives_auto_makesym "/usr/bin/texi2html" "/usr/bin/texi2html-*"	
+	fi
 
 	while [ "$1" ]; do
     	case $1 in
@@ -228,7 +237,7 @@ tetex_pkg_postinst() {
     		all)
     			tetex_pkg_postinst configure generate
 			;;
-    	esac
-    	shift
-    done
+	esac
+	shift
+	done
 }
