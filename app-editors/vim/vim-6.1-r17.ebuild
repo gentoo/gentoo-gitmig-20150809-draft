@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.4 2002/12/09 22:05:03 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.5 2002/12/12 00:34:52 rphillips Exp $
 
 VIMPATCH="vimpatch-1-263.tar.bz2"
 inherit vim
@@ -44,6 +44,13 @@ src_compile() {
 		--with-features=huge --with-cscope $myconf \
 		--enable-gui=no \
 		|| die "vim configure failed"
+
+	# move config files to /etc/vim/
+	echo "#define SYS_VIMRC_FILE \"/etc/vim/vimrc\"" \
+		>>${WORKDIR}/vim61/src/feature.h
+	echo "#define SYS_GVIMRC_FILE \"/etc/vim/gvimrc\"" \
+		>>${WORKDIR}/vim61/src/feature.h
+
 	# Parallel make does not work
 	make || die "vim make failed"
 }
@@ -52,7 +59,7 @@ src_install() {
 	dobin src/vim
 	ln -s vim ${D}/usr/bin/vimdiff
 	# Default vimrc
-	insinto /usr/share/vim
+	insinto /etc/vim/
 	doins ${FILESDIR}/vimrc
 }
 

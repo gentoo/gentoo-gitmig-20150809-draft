@@ -1,11 +1,14 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.27 2002/12/09 04:17:41 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.28 2002/12/12 00:34:52 rphillips Exp $
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *vim-6.1-r17.ebuild (06 Dec 2002)
+
+  11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r17.ebuild :
+  Moved vimrc file to /etc/vim/vimrc
 
   06 Dec 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r17.ebuild :
   zhen added utf-8 support.... I added a new patch set support (1-263)
