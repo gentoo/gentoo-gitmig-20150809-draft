@@ -2,6 +2,13 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
 
+*xmbdfed-4.7_p1 (05 Jul 2004)
+
+  05 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  +xmbdfed-4.7_p1.ebuild:
+  Version bumped. Thanks to MATSUU Takuto <matsuu@gentoo.org> and Sridhar
+  Dhanapalan <lists.sridhar@dhanapalan.com>. This closes bug #51596
+
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> xmbdfed-4.5.ebuild:
   QA - fix use invocation
 
