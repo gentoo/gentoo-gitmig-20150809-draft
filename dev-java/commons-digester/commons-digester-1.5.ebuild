@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.5.ebuild,v 1.2 2004/03/23 02:49:24 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.5.ebuild,v 1.3 2004/05/14 03:15:21 zx Exp $
 
-inherit jakarta-commons
+inherit java-pkg
 
 S=${WORKDIR}/${PN}-${PV}-src
 DESCRIPTION="The Jakarta Digester component reads XML configuration files to provide initialization of various Java objects within the system."
