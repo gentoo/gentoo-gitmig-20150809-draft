@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/criticalmass
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.3 2004/03/19 00:59:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.4 2004/06/12 06:43:16 mr_bones_ Exp $
+
+  11 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  criticalmass-0.99.ebuild:
+  stablize
 
 *criticalmass-0.99 (18 Mar 2004)
 
