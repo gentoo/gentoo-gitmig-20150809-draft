@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.6 2003/05/28 02:16:42 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.7 2003/06/12 20:18:08 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> muttprint-0.71.ebuild:
+  add Header
 
 *muttprint-0.71 (27 May 2003)
 

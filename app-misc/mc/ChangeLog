@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+  12 Jun 2003; <msterret@gentoo.org> mc-4.6.0-r1.ebuild:
+  add Header
+
 *mc-4.6.0-r1 (06 May 2003)
 
   06 May 2003; Michael Nazaroff <naz@gentoo.org> mc-4.6.0-r1.ebuild,
