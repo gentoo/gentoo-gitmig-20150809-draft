@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.4 2004/01/06 20:31:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.5 2004/01/07 09:35:59 aliz Exp $
 
 inherit libtool
 
@@ -119,8 +119,7 @@ src_unpack() {
 
 	# Patch libmpeg2
 	cd ${SMPG}
-	sed -i 's:OPT_CFLAGS=.*:OPT_CFLAGS=\"$CFLAGS\":g' configure
-	epatch ${FILESDIR}/${PMPG}-configure-fpic.patch
+	epatch ${FILESDIR}/${PMPG}-configure.in-fpic.patch
 
 	cd ${S}
 	touch configure.ac
@@ -134,13 +133,13 @@ src_compile() {
 	# first build the deps
 	# LibMPEG2:
 	cd ${SMPG}
-
+	autoconf
 	econf \
 		--disable-sdl \
 		--without-x \
 		`use_enable mmx` || die "libmpeg2 failed to configure"
 
-	emake || make || die
+	emake OPT_CFLAGS="${CFLAGS}" || make OPT_CFLAGS="${CFLAGS}" || die
 
 	# ffMPEG
 	cd ${SFFM}

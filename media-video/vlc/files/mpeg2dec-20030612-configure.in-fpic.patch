@@ -1,0 +1,28 @@
+--- aclocal.m4	2003-07-26 15:37:34.000000000 +0000
++++ aclocal.m4	2004-01-07 09:04:13.505605717 +0000
+@@ -121,10 +121,12 @@
+ 		-rpath / f.lo g.lo >/dev/null 2>&1 &&
+ 	ac_cv_libtool_non_pic=yes
+     cd ..; rm -fr ac_test_libtool; AC_MSG_RESULT([$ac_cv_libtool_non_pic])
+-    if test x"$ac_cv_libtool_non_pic" = x"yes"; then
++    if test "$host_cpu" = "x86_64"; then
++	ifelse([$2],[],[:],[$2])
++    elif test x"$ac_cv_libtool_non_pic" = x"yes"; then
+ 	ifelse([$1],[],[:],[$1])
+     else
+-	ifelse([$2],[],[:],[$2])
++	ifelse([$3],[],[:],[$3])
+     fi])
+ 
+ dnl AC_CHECK_GENERATE_INTTYPES_H (INCLUDE-DIRECTORY)
+--- libmpeg2/configure.incl	2003-01-19 01:24:03.000000000 +0000
++++ libmpeg2/configure.incl	2004-01-07 09:02:13.733060531 +0000
+@@ -2,7 +2,7 @@
+ AC_SUBST([LIBMPEG2_LIBS])
+ 
+ dnl avoid -fPIC when possible
+-AC_LIBTOOL_NON_PIC([LIBMPEG2_CFLAGS="$LIBMPEG2_CFLAGS -prefer-non-pic"])
++AC_LIBTOOL_NON_PIC([LIBMPEG2_CFLAGS="$LIBMPEG2_CFLAGS -prefer-non-pic"], [LIBMPEG2_CFLAGS="$LIBMPEG2_CFLAGS -prefer-pic"])
+ 
+ dnl check for cpudetect
+ AC_ARG_ENABLE([accel-detect],

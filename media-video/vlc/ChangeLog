@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.39 2003/12/13 20:11:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.40 2004/01/07 09:35:59 aliz Exp $
+
+  07 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> vlc-0.6.2-r1.ebuild,
+  files/mpeg2dec-20030612-configure.in-fpic.patch:
+  Patch configure.in instead of configure
 
 *vlc-0.6.2-r1 (13 Dec 2003)
 
