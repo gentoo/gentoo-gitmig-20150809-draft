@@ -1,5 +1,16 @@
-MD5 f42314eb0f4cb15621db2eda0cbbec31 ChangeLog 13453
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10909dd2e2aa9b684e9c4c14401f6d92 ChangeLog 13665
 MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
-MD5 1e0a84e4c503965dd4650d977c7dec07 sparc-sources-2.4.29.ebuild 1105
+MD5 e8d5390bc6f5a4fdd68231c98b50bec2 sparc-sources-2.4.29.ebuild 1239
+MD5 0cae39dcfb06422e094da7e364e67c33 files/2.4-sparc64-ramdisk64.patch 2558
 MD5 18898e8c936c287f66f4f234a997f93e files/digest-sparc-sources-2.4.29 140
 MD5 387e70ce7c98618810dea0f521df76eb files/generate-asm-sparc 1661
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCHopDKRy60XGEcJIRAqXrAKCTRhpzI/JegPGL9JTuM+C6rrFvfwCeN7iS
+coCZ6EycKrBM1xSg2ovUYfs=
+=ucPO
+-----END PGP SIGNATURE-----

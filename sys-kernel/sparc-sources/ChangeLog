@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.79 2005/02/22 22:29:05 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.80 2005/02/25 02:15:23 gustavoz Exp $
+
+  24 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/2.4-sparc64-ramdisk64.patch, sparc-sources-2.4.29.ebuild:
+  Fixed openprom typo, added in conditional livecd ramdisk rollback patch AKA
+  wookie
 
   22 Feb 2005; Christian Birchinger <joker@gentoo.org>
   -files/U1-hme-lockup.patch, -sparc-sources-2.4.28-r6.ebuild:

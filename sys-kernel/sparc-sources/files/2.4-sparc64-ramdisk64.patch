@@ -1,0 +1,67 @@
+diff -Nura linux-2.4.29/arch/sparc64/kernel/head.S linux-2.4.29-sparc64-ramdisk64-rollback/arch/sparc64/kernel/head.S
+--- linux-2.4.29/arch/sparc64/kernel/head.S	2004-11-17 08:54:21.000000000 -0300
++++ linux-2.4.29-sparc64-ramdisk64-rollback/arch/sparc64/kernel/head.S	2005-02-24 18:30:47.000000000 -0300
+@@ -50,7 +50,7 @@
+  */
+         .global root_flags, ram_flags, root_dev
+         .global sparc_ramdisk_image, sparc_ramdisk_size
+-	.global sparc_ramdisk_image64
++	.globl	silo_args
+ 
+         .ascii  "HdrS"
+         .word   LINUX_VERSION_CODE
+@@ -61,7 +61,7 @@
+ 	 * 0x0202 : Supports kernel params string
+ 	 * 0x0201 : Supports reboot_command
+ 	 */
+-	.half   0x0301          /* HdrS version */
++	.half   0x0300          /* HdrS version */
+ 
+ root_flags:
+         .half   1
+@@ -75,8 +75,6 @@
+         .word   0
+         .xword  reboot_command
+ 	.xword	bootstr_info
+-sparc_ramdisk_image64:
+-	.xword	0
+ 	.word	_end
+ 
+ 	/* We must be careful, 32-bit OpenBOOT will get confused if it
+diff -Nura linux-2.4.29/arch/sparc64/mm/init.c linux-2.4.29-sparc64-ramdisk64-rollback/arch/sparc64/mm/init.c
+--- linux-2.4.29/arch/sparc64/mm/init.c	2004-11-17 08:54:21.000000000 -0300
++++ linux-2.4.29-sparc64-ramdisk64-rollback/arch/sparc64/mm/init.c	2005-02-24 18:35:09.000000000 -0300
+@@ -63,7 +63,6 @@
+ unsigned long mmu_context_bmap[CTX_BMAP_SLOTS];
+ 
+ /* Initial ramdisk setup */
+-extern unsigned long sparc_ramdisk_image64;
+ extern unsigned int sparc_ramdisk_image;
+ extern unsigned int sparc_ramdisk_size;
+ 
+@@ -1252,12 +1251,10 @@
+ 
+ #ifdef CONFIG_BLK_DEV_INITRD
+ 	/* Now have to check initial ramdisk, so that bootmap does not overwrite it */
+-	if (sparc_ramdisk_image || sparc_ramdisk_image64) {
+-		unsigned long ramdisk_image = sparc_ramdisk_image ?
+-			sparc_ramdisk_image : sparc_ramdisk_image64;
+-		if (ramdisk_image >= (unsigned long)&_end - 2 * PAGE_SIZE)
+-			ramdisk_image -= KERNBASE;
+-		initrd_start = ramdisk_image + phys_base;
++	if (sparc_ramdisk_image) {
++		if (sparc_ramdisk_image >= (unsigned long)&_end - 2 * PAGE_SIZE)
++			sparc_ramdisk_image -= KERNBASE;
++		initrd_start = sparc_ramdisk_image + phys_base;
+ 		initrd_end = initrd_start + sparc_ramdisk_size;
+ 		if (initrd_end > end_of_phys_memory) {
+ 			printk(KERN_CRIT "initrd extends beyond end of memory "
+@@ -1360,7 +1357,7 @@
+ 	if ((real_end > ((unsigned long)KERNBASE + 0x400000)))
+ 		bigkernel = 1;
+ #ifdef CONFIG_BLK_DEV_INITRD
+-	if (sparc_ramdisk_image || sparc_ramdisk_image64)
++	if (sparc_ramdisk_image)
+ 		real_end = (PAGE_ALIGN(real_end) + PAGE_ALIGN(sparc_ramdisk_size));
+ #endif
+ 
