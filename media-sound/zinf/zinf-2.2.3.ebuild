@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.9 2004/01/19 20:55:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.10 2004/02/08 03:06:27 eradicator Exp $
 
-IUSE="esd X gtk oggvorbis gnome arts"
+IUSE="debug esd X gtk oggvorbis gnome arts alsa nls"
 
 inherit kde-functions
 
@@ -18,40 +18,51 @@ RDEPEND="=dev-libs/glib-1.2*
 	>=sys-libs/ncurses-5.2
 	=media-libs/freetype-1*
 	>=media-libs/musicbrainz-1.0.1
-	>=media-libs/id3lib-3.8.0
 	X? ( virtual/x11 )
 	esd? ( media-sound/esound )
 	gtk? ( >=media-libs/gdk-pixbuf-0.8 )
 	gnome? ( gnome-base/ORBit )
 	oggvorbis? ( media-libs/libvorbis )
+	alsa? ( >=media-libs/alsa-lib-0.9.8 )
 	arts? ( kde-base/arts )"
-	#alsa? ( media-libs/alsa-lib ) # it only supports alsa 0.5.x, so support disabled
 
-DEPEND="$RDEPEND x86? ( dev-lang/nasm )
-	media-libs/id3lib
+DEPEND="${RDEPEND}
+	x86? ( dev-lang/nasm )
+	nls? ( sys-devel/gettext )
+	>=media-libs/id3lib-3.8.0
+	sys-apps/sed
 	dev-lang/perl"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 ~alpha"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/zinf-2.2.3-id3.patch.bz2
+
+	# Remove -Werror so it compiles with gcc3.3
+	for file in Makefile.header.in configure.in configure
+	do
+		mv ${file} ${file}.orig
+		sed 's/-Werror//g' < ${file}.orig > ${file}
+	done
+	chmod 755 configure
 }
 
 src_compile() {
-	set-kdedir 3
+	local myconf="--enable-cmdline"
 
-	local myconf="--disable-alsa --enable-debug --enable-cmdline"
-	use esd  || myconf="${myconf} --disable-esd"
-	use gnome && myconf="${myconf} --enable-corba"
+	myconf="${myconf} `use_enable debug`"
+	myconf="${myconf} `use_enable esd`"
+	myconf="${myconf} `use_enable arts`"
+	myconf="${myconf} `use_enable alsa`"
+	myconf="${myconf} `use_enable gnome cobra`"
 
-	if [ -n "`use arts`" ]; then
-	    export ARTSCCONFIG="$KDEDIR/bin/artsc-config"
-	else
-	    myconf="$myconf --disable-arts"
+	if use arts; then
+		set-kdedir 3
+		export ARTSCCONFIG="$KDEDIR/bin/artsc-config"
 	fi
 
 	econf ${myconf} || die
@@ -59,9 +70,14 @@ src_compile() {
 }
 
 src_install() {
-	into /usr ; dobin zinf
-	exeinto /usr/lib/zinf/plugins  ; doexe plugins/*
-	insinto /usr/share/zinf/themes ; doins themes/*
+	into /usr
+	dobin zinf
 
-	dodoc AUTHORS COPYING NEWS README
+	exeinto /usr/lib/zinf/plugins
+	doexe plugins/*
+
+	insinto /usr/share/zinf/themes
+	doins themes/*
+
+	dodoc AUTHORS CHANGES COPYING NEWS README README.linux WISHLIST
 }
