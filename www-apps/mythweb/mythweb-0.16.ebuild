@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.16.ebuild,v 1.2 2004/09/10 23:27:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.16.ebuild,v 1.3 2004/09/16 06:30:01 aliz Exp $
 
 inherit webapp
 
@@ -32,6 +32,11 @@ src_install() {
 	dodoc README TODO
 
 	cp -R [[:lower:]]* ${D}/${MY_HTDOCSDIR}
+	dodir ${MY_HTDOCSDIR}/video_dir
+	dodir ${MY_HTDOCSDIR}/image_cache
+
+	webapp_serverowned ${MY_HTDOCSDIR}/video_dir
+	webapp_serverowned ${MY_HTDOCSDIR}/image_cache
 
 	webapp_configfile ${MY_HTDOCSDIR}/config/conf.php
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt

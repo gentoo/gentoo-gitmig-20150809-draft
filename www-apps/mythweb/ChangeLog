@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.4 2004/09/10 23:27:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.5 2004/09/16 06:30:01 aliz Exp $
+
+  16 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.16.ebuild:
+  Fix creation of some dirs.
 
   10 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.16.ebuild:
   + Webapp-config support, closing #58382.
