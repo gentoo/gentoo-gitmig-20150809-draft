@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.ebuild,v 1.10 2005/02/22 21:18:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.ebuild,v 1.11 2005/03/13 16:15:36 luckyduck Exp $
 
 
 inherit java-pkg
@@ -10,6 +10,7 @@ HOMEPAGE="http://avalon.apache.org/"
 SRC_URI="mirror://apache/avalon/logkit/v${PV}/LogKit-${PV}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	dev-java/ant-core
+	dev-java/junit
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3
 	javamail? (

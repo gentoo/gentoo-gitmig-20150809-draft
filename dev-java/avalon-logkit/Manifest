@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4f612dc7839c67636d9d271ca6617f90 ChangeLog 639
-MD5 132fd01ea441eefa8fcdea38c723a00b avalon-logkit-1.2.ebuild 1675
+MD5 6eabad5f838363ce47c314b7f71620f0 ChangeLog 795
+MD5 28e772c4117d6b2d56a9fd8e03792d06 avalon-logkit-1.2.ebuild 1692
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 872dcd9ccd94602b5dccd9916242bf53 avalon-logkit-2.0.ebuild 2166
+MD5 336ded7644c0d8c7559ac1d1595b4187 avalon-logkit-2.0.ebuild 2183
 MD5 1d4fb92234d539c16377690ccc278dbb files/2.0-build.xml 1931
 MD5 59f31286545f93f7dfa4a5e40cfb19a4 files/digest-avalon-logkit-1.2 66
 MD5 f5ee024795ce428b5418141110096d4d files/digest-avalon-logkit-2.0 78
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCG6HJI1lqEGTUzyQRAgl6AKCqtpIduhQA/audLHLcNLsk5J2nhACgvWkQ
-WxRcgA6bH+enYpRKd7OzV18=
-=MoH1
+iD8DBQFCNGct06ebR+OMO78RArsVAJ9eF10FVMADAaY6VSDEFw4KeqcFLgCgiP2K
+GOE9Ev5ajqTFaqhnmBSG144=
+=PUMA
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.1 2005/02/22 16:15:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.2 2005/03/13 16:15:36 luckyduck Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,8 @@ SLOT="2.0"
 IUSE="doc jikes jms javamail"
 DEPEND=">=virtual/jdk-1.4
 		jikes? ( >=dev-java/jikes-1.21 )
-		>=dev-java/ant-1.5"
+		>=dev-java/ant-1.5
+		dev-java/junit"
 RDEPEND=">=virtual/jre-1.4
 		dev-java/log4j
 		jms? ( || (
