@@ -1,0 +1,207 @@
+--- configure	2003-10-30 00:24:54.000000000 +0000
++++ configure	2004-03-14 20:47:39.382752947 +0000
+@@ -2914,13 +2914,13 @@
+ 
+ 	if test "$db" = ""
+ 	then
+-		echo "$as_me:$LINENO: checking for dbopen in -ldb" >&5
+-echo $ECHO_N "checking for dbopen in -ldb... $ECHO_C" >&6
++		echo "$as_me:$LINENO: checking for dbopen in -ldb-3" >&5
++echo $ECHO_N "checking for dbopen in -ldb-3... $ECHO_C" >&6
+ if test "${ac_cv_lib_db_dbopen+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -2971,13 +2971,13 @@
+ if test $ac_cv_lib_db_dbopen = yes; then
+    :
+ else
+-  echo "$as_me:$LINENO: checking for db_open in -ldb" >&5
+-echo $ECHO_N "checking for db_open in -ldb... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for db_open in -ldb-3" >&5
++echo $ECHO_N "checking for db_open in -ldb-3... $ECHO_C" >&6
+ if test "${ac_cv_lib_db_db_open+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -3028,13 +3028,13 @@
+ if test $ac_cv_lib_db_db_open = yes; then
+    :
+ else
+-  echo "$as_me:$LINENO: checking for db_env_create in -ldb" >&5
+-echo $ECHO_N "checking for db_env_create in -ldb... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for db_env_create in -ldb-3" >&5
++echo $ECHO_N "checking for db_env_create in -ldb-3... $ECHO_C" >&6
+ if test "${ac_cv_lib_db_db_env_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -3483,13 +3483,13 @@
+ 	MAILBOT=mailbot
+ 	;;
+ db)
+-	echo "$as_me:$LINENO: checking for dbopen in -ldb" >&5
+-echo $ECHO_N "checking for dbopen in -ldb... $ECHO_C" >&6
++	echo "$as_me:$LINENO: checking for dbopen in -ldb-3" >&5
++echo $ECHO_N "checking for dbopen in -ldb-3... $ECHO_C" >&6
+ if test "${ac_cv_lib_db_dbopen+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -3538,15 +3538,15 @@
+ echo "$as_me:$LINENO: result: $ac_cv_lib_db_dbopen" >&5
+ echo "${ECHO_T}$ac_cv_lib_db_dbopen" >&6
+ if test $ac_cv_lib_db_dbopen = yes; then
+-   LIBDB=-ldb ; LIBS="-ldb $LIBS"
++   LIBDB=-ldb-3 ; LIBS="-ldb-3 $LIBS"
+ else
+-  echo "$as_me:$LINENO: checking for db_open in -ldb" >&5
+-echo $ECHO_N "checking for db_open in -ldb... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for db_open in -ldb-3" >&5
++echo $ECHO_N "checking for db_open in -ldb-3... $ECHO_C" >&6
+ if test "${ac_cv_lib_db_db_open+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -3595,15 +3595,15 @@
+ echo "$as_me:$LINENO: result: $ac_cv_lib_db_db_open" >&5
+ echo "${ECHO_T}$ac_cv_lib_db_db_open" >&6
+ if test $ac_cv_lib_db_db_open = yes; then
+-   LIBDB=-ldb ; LIBS="-ldb $LIBS"
++   LIBDB=-ldb-3 ; LIBS="-ldb-3 $LIBS"
+ else
+-  echo "$as_me:$LINENO: checking for db_env_create in -ldb" >&5
+-echo $ECHO_N "checking for db_env_create in -ldb... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for db_env_create in -ldb-3" >&5
++echo $ECHO_N "checking for db_env_create in -ldb-3... $ECHO_C" >&6
+ if test "${ac_cv_lib_db_db_env_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -3652,7 +3652,7 @@
+ echo "$as_me:$LINENO: result: $ac_cv_lib_db_db_env_create" >&5
+ echo "${ECHO_T}$ac_cv_lib_db_db_env_create" >&6
+ if test $ac_cv_lib_db_db_env_create = yes; then
+-   LIBDB=-ldb; LIBS="-ldb $LIBS"
++   LIBDB=-ldb-3; LIBS="-ldb-3 $LIBS"
+ fi
+ 
+ 
+@@ -3891,8 +3891,8 @@
+ 
+ 	if test "$HAVE_BDB" != "1"
+ 	then
+-		{ { echo "$as_me:$LINENO: error: GDBM library not found" >&5
+-echo "$as_me: error: GDBM library not found" >&2;}
++		{ { echo "$as_me:$LINENO: error: DB library not found" >&5
++echo "$as_me: error: DB library not found" >&2;}
+    { (exit 1); exit 1; }; }
+ 	fi
+ 	MAILBOT=mailbot
+--- bdbobj/configure	2003-04-24 06:30:09.000000000 +0100
++++ bdbobj/configure	2004-03-14 20:42:13.012527928 +0000
+@@ -3892,13 +3892,13 @@
+ 
+ 
+ saveLIBS="$LIBS"
+-echo "$as_me:$LINENO: checking for dbopen in -ldb" >&5
+-echo $ECHO_N "checking for dbopen in -ldb... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for dbopen in -ldb-3" >&5
++echo $ECHO_N "checking for dbopen in -ldb-3... $ECHO_C" >&6
+ if test "${ac_cv_lib_db_dbopen+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -3947,15 +3947,15 @@
+ echo "$as_me:$LINENO: result: $ac_cv_lib_db_dbopen" >&5
+ echo "${ECHO_T}$ac_cv_lib_db_dbopen" >&6
+ if test $ac_cv_lib_db_dbopen = yes; then
+-   LIBDB=-ldb ; LIBS="-ldb $LIBS"
++   LIBDB=-ldb-3 ; LIBS="-ldb-3 $LIBS"
+ else
+-  echo "$as_me:$LINENO: checking for db_open in -ldb" >&5
+-echo $ECHO_N "checking for db_open in -ldb... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for db_open in -ldb-3" >&5
++echo $ECHO_N "checking for db_open in -ldb-3... $ECHO_C" >&6
+ if test "${ac_cv_lib_db_db_open+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -4004,7 +4004,7 @@
+ echo "$as_me:$LINENO: result: $ac_cv_lib_db_db_open" >&5
+ echo "${ECHO_T}$ac_cv_lib_db_db_open" >&6
+ if test $ac_cv_lib_db_db_open = yes; then
+-   LIBDB=-ldb ; LIBS="-ldb $LIBS"
++   LIBDB=-ldb-3 ; LIBS="-ldb-3 $LIBS"
+ else
+   echo "$as_me:$LINENO: checking for db_env_create in -ldb" >&5
+ echo $ECHO_N "checking for db_env_create in -ldb... $ECHO_C" >&6
+@@ -4012,7 +4012,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -4061,7 +4061,7 @@
+ echo "$as_me:$LINENO: result: $ac_cv_lib_db_db_env_create" >&5
+ echo "${ECHO_T}$ac_cv_lib_db_db_env_create" >&6
+ if test $ac_cv_lib_db_db_env_create = yes; then
+-   LIBDB=-ldb; LIBS="-ldb $LIBS"
++   LIBDB=-ldb-3; LIBS="-ldb-3 $LIBS"
+ fi
+ 
+ 
+--- bdbobj/bdbobj.h	1999-12-06 13:13:46.000000000 +0000
++++ bdbobj/bdbobj.h	2004-03-14 20:32:29.672154565 +0000
+@@ -18,7 +18,7 @@
+ #include	<limits.h>
+ #endif
+ 
+-#include	<db.h>
++#include	<db3/db.h>
+ #include	<stdlib.h>
+ 
+ #ifdef	__cplusplus
