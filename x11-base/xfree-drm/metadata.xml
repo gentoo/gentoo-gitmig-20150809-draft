@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>xfree</herd>
+<maintainer>
+<email>spyderous@gentoo.org</email>
+<name>Donnie Berkholz</name>
+</maintainer>
+<longdescription>XFree-DRM is a Direct Rendering Manager for XFree 4.3 and higher. The DRM in 2.4.x kernels does not support XFree 4.3, so this is necessary for direct rendering with the open-source drivers.</longdescription>
+</pkgmetadata>
