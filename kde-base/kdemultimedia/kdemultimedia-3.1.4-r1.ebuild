@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.4-r1.ebuild,v 1.10 2004/01/11 13:48:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.4-r1.ebuild,v 1.11 2004/01/12 18:30:45 agriffis Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="nas esd motif slang tcltk oggvorbis cdr"
@@ -39,7 +39,8 @@ myconf="$myconf --with-xine-prefix=/usr"
 export MAKEOPTS="$MAKEOPTS -j1"
 
 PATCHES="$FILESDIR/$P-gentoo-timidity.diff
-	$FILESDIR/$P-ln-sf.diff"
+	$FILESDIR/$P-ln-sf.diff
+	$FILESDIR/$P-alpha.diff"
 	#$FILESDIR/${P}-gcc33.diff"
 
 # alsa 0.9 not supported

@@ -1,0 +1,20 @@
+Remove a typedef which conflicts with the typedef on alpha systems.
+It should be completely unnecessary anyway since __u64 is typedef'd in
+asm/types.h which is included by this unit.  Please apply this to all
+arches, not just alpha, per the thread starting at
+http://marc.theaimsgroup.com/?l=gentoo-dev&m=107110743024687&w=2
+
+(11 Jan 2004 agriffis)
+
+--- kdemultimedia-3.1.4/mpeglib/lib/input/cdromAccess_Linux.cpp.agriffis	2004-01-11 23:03:27.000000000 -0500
++++ kdemultimedia-3.1.4/mpeglib/lib/input/cdromAccess_Linux.cpp	2004-01-11 23:03:37.000000000 -0500
+@@ -10,7 +10,9 @@
+ 
+  */
+ 
++#if 0
+ typedef unsigned long long __u64;
++#endif
+ 
+ #include "cdromToc.h"
+ #include "cdromRawAccess.h"
