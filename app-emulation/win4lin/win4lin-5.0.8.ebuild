@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.8.ebuild,v 1.9 2004/12/24 10:34:21 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.8.ebuild,v 1.10 2004/12/24 19:44:00 swegener Exp $
 
 IUSE=""
 
@@ -52,7 +52,7 @@ pkg_postinst() {
 	einfo "ebuild  /var/db/pkg/app-emulation/${PF}/${PF}.ebuild config"
 	einfo "to install the windows setup files. You will need your Windows cdrom in the "
 	einfo "drive in order to complete this step."
-	einfo 
+	einfo
 	einfo "If this is an upgrade 4.x to 5.x the trial license code isn't valid,"
 	einfo "you need register it in NeTraverse, or unemerge ALL Win4Lin files."
 }
