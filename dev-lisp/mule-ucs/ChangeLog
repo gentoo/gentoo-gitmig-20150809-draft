@@ -1,0 +1,15 @@
+# ChangeLog for dev-lisp/mule-ucs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/ChangeLog,v 1.1 2002/06/26 03:57:47 george Exp $
+
+*apel-2002.06.21.0106.ebuild (25 Jun 2002)
+
+  25 Jun 2002; G Shapovalov <george@gentoo.org> all :
+
+  initial release
+  form the web site:
+  MULE-UCS is a character code translator.
+  This has an universal ability to translate from any character sets to any,
+  and constract new coding systems easily.
+
+  ebuild submitted by Moto Kawasaki <kawasaki@kawasaki3.org>
