@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.1 2003/07/11 12:57:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.2 2003/07/11 14:23:05 liquidx Exp $
 
 S=${WORKDIR}/${P}
 
@@ -15,6 +15,8 @@ KEYWORDS="~x86"
 
 DEPEND="virtual/glibc
 	>=dev-libs/nspr-4.3"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}

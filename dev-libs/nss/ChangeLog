@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.1 2003/07/11 12:57:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.2 2003/07/11 14:23:05 liquidx Exp $
+
+  11 Jul 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
+  no parallel building
 
 *nss-3.8 (11 Jul 2003)
 
