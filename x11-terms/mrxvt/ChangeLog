@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/mrxvt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.16 2005/02/18 13:37:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.17 2005/02/18 16:16:28 usata Exp $
+
+  19 Feb 2005; Mamoru KOMACHI <usata@gentoo.org>
+  files/mrxvt-0.3.13-xdefaults.patch, mrxvt-0.3.13-r1.ebuild:
+  Changed -ppc-macos to ~ppc-macos. Fixed xdefaults patch's header.
 
 *mrxvt-0.3.13-r1 (18 Feb 2005)
 

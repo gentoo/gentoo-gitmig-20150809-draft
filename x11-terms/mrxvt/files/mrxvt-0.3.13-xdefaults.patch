@@ -1,14 +1,5 @@
 --- xdefaults.c.orig	2005-02-04 04:57:51.000000000 +0900
 +++ xdefaults.c	2005-02-18 17:36:49.168153000 +0900
-@@ -24,7 +24,7 @@
-  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-  *----------------------------------------------------------------------*/
- /*
--** $Id: mrxvt-0.3.13-xdefaults.patch,v 1.1 2005/02/18 13:37:22 usata Exp $
-+** $Id: mrxvt-0.3.13-xdefaults.patch,v 1.1 2005/02/18 13:37:22 usata Exp $
- */
- 
- #include "../config.h"
 @@ -58,7 +58,7 @@
  # ifndef USE_XGETDEFAULT
  void  rxvt_get_xdefaults (rxvt_t*, FILE*, const char*);
