@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.13 2004/04/03 07:27:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.14 2004/05/14 19:38:36 geoman Exp $
 
 inherit eutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/aspell/${P}.tar.gz"
 IUSE="gpm"
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha ~mips hppa amd64"
+KEYWORDS="x86 ppc sparc alpha mips hppa amd64"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	gpm? ( sys-libs/gpm )"
