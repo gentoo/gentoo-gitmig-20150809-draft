@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.4 2003/09/06 22:08:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.5 2003/10/27 10:26:12 aliz Exp $
 
 DESCRIPTION="hp Server Management Drivers and Agents"
 HOMEPAGE="http://h18000.www1.hp.com/products/servers/linux/documentation.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.compaq.com/pub/products/servers/supportsoftware/linux/RedHat/
 
 LICENSE="hp-value"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND="snmp? ( net-analyzer/net-snmp )"
 DEPEND="${RDEPEND}
