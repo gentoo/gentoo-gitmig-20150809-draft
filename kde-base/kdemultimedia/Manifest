@@ -6,7 +6,6 @@ MD5 3df8dab9a9c2a9e3f1e254e4be4dde66 ChangeLog 22512
 MD5 324fdb53e30000a4c8101ed91b38522e kdemultimedia-3.4.0.ebuild 1539
 MD5 64d0da2dee26922a83d21f991b5a49fc kdemultimedia-3.4.0_rc1.ebuild 1543
 MD5 b7a984a57c27e1e62a606d90d0c39437 files/kdemultimedia-3.4.0-amd64.patch 523
-MD5 02f0ce7ea2ec6f7f7042f7f40f7f7fe7 files/artsc-typo.diff 439
 MD5 ddadc716d5d607434a4fa830a241ac65 files/digest-kdemultimedia-3.2.3 73
 MD5 30810bdee5baa766c389b0a4d8533a4e files/digest-kdemultimedia-3.3.2 73
 MD5 0af60268ec8424c72256db89062b6f31 files/kdemultimedia-64bit.patch 634
