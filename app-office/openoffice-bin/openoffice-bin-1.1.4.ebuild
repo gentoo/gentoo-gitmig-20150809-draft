@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.8 2005/01/17 21:32:05 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.9 2005/01/21 15:41:11 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -27,7 +27,6 @@ KEYWORDS="x86 ~amd64"
 RDEPEND="!app-office/openoffice
 	virtual/x11
 	virtual/libc
-	virtual/lpr
 	>=dev-lang/perl-5.0
 	sys-apps/findutils
 	app-arch/zip
