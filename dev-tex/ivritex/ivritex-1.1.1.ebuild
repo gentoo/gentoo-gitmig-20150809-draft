@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ivritex-1.1.1.ebuild,v 1.3 2003/09/11 01:48:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ivritex-1.1.1.ebuild,v 1.4 2003/10/06 14:35:58 obz Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/ivritex/${P}.tar.gz"
@@ -9,7 +9,7 @@ SLOT="0"
 LICENSE="LPPL-1.2"
 DESCRIPTION="Hebrew support for TeX"
 DEPEND=">=app-text/tetex-2.0.0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_install () {
 
