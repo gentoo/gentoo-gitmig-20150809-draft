@@ -1,6 +1,4 @@
-MD5 6498ad96efbdfd688bf18763a9b306ba ChangeLog 629
-MD5 0a0c517c87aa26a68e33cf88569ddc26 jade-lib-6.0.0.ebuild 867
+MD5 85f388eecdfdef6f9101be7137fec9c1 ChangeLog 712
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 f4dbf15c1d4abca9611bed5104e1a2ec jade-lib-7.0.6.ebuild 858
-MD5 568764949d35501a63318e24cdad788e files/digest-jade-lib-6.0.0 63
 MD5 22d07af5bf5a1d1a747820cf86906367 files/digest-jade-lib-7.0.6 63

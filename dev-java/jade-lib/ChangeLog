@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jade-lib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade-lib/ChangeLog,v 1.4 2004/08/23 21:41:45 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade-lib/ChangeLog,v 1.5 2004/08/23 21:42:40 zx Exp $
+
+  23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> -jade-lib-6.0.0.ebuild:
+  Clean up
 
 *jade-lib-7.0.6 (23 Aug 2004)
 
