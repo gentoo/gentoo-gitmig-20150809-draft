@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e66eccf0904e4b4dd97e88735da287d8 ChangeLog 985
 MD5 a592d356464560ab52b5d763ceefe3e1 manpages-de-0.4.ebuild 719
-MD5 19180b7d3b21f0e9cef7bce9480c8261 ChangeLog 982
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 2965489131027c78ba33b95213f6ea30 files/digest-manpages-de-0.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0SLI1lqEGTUzyQRAtVtAJ9H01YE8Vo+/FSEVpyiVEYT2Me+RwCfW74t
+YulWiwoFvMGE7WRi/Ngq+Q0=
+=cCKI
+-----END PGP SIGNATURE-----

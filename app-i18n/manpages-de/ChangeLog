@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/manpages-de
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# /space/gentoo/cvsroot/gentoo-x86/app-i18n/manpages-de/ChangeLog,v 1.0 2002/07/25 11:48:00 cybersystem
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-de/ChangeLog,v 1.9 2004/09/29 23:25:55 swegener Exp $
 
   10 Aug 2004; <solar@gentoo.org> manpages-de-0.4.ebuild:
   fixed security problem with ebuild
