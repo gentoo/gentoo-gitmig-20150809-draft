@@ -1,12 +1,20 @@
 # ChangeLog for sys-fs/evms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.18 2004/06/28 01:53:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.19 2004/07/23 08:41:49 eradicator Exp $
 
-*evms-2.3.2-r1 (27 Jun 2004)
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> evms-2.2.2.ebuild,
+  evms-2.3.2-r1.ebuild, evms-2.3.4-r1.ebuild:
+  Added to stable x86 and amd64.  Do ldconfig in postinst() to fix bug #51252.
 
   27 Jun 2004; Aron Griffis <agriffis@gentoo.org> evms-1.2.1-r1.ebuild,
   evms-2.2.2.ebuild, evms-2.3.2-r1.ebuild, evms-2.3.4-r1.ebuild:
   QA - fix use invocation
+
+*evms-2.3.4-r1 (23 Jun 2004)
+
+  23 Jun 2004: Jeremy Huddleston <eradicator@gentoo.org> -evms-2.3.4.ebuild,
+  +evms-2.3.4-r1.ebuild:
+  Revbump to filter out -fstack-protector in 2.3.x.
 
   13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> evms-2.3.2.ebuild:
   Marking stable on x86.

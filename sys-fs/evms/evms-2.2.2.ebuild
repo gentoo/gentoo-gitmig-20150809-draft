@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.2.2.ebuild,v 1.8 2004/06/30 17:09:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.2.2.ebuild,v 1.9 2004/07/23 08:41:49 eradicator Exp $
 
 inherit eutils
 
@@ -63,7 +63,9 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	ewarn "Presently gentoo-sources-2.4.22 has basic support for evms2,"
 	ewarn "but does NOT support some of the more advanced features."
+
+	# Needed for bug #51252
+	ldconfig
 }
