@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.7.ebuild,v 1.5 2003/09/07 00:08:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.7.ebuild,v 1.6 2003/09/26 11:46:07 lu_zero Exp $
 
 inherit gcc eutils flag-o-matic
 export WANT_GCC_3="yes"
@@ -19,14 +19,13 @@ KEYWORDS="x86 -ppc"
 
 DEPEND="virtual/x11
 	virtual/glibc
-	=sys-devel/gcc-3*
-	<dev-lang/nasm-0.98.37"
+	=sys-devel/gcc-3*"
 #	>=media-libs/a52dec-0.7.3"
 
-#src_unpack() {
-#	unpack ${A}
-	#epatch ${FILESDIR}/compile-${PV}.diff
-#}
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/gcc-3.3.1-collate.patch
+}
 
 src_compile() {
 	export CFLAGS=${CFLAGS}
@@ -42,7 +41,7 @@ src_compile() {
 src_install() {
 	local myarch
 	if [ -n "`use x86`" ]; then
-	myarch="i686"
+	myarch="${CHOST/-*/}" #should solve the i586/i686 problem
 	fi
 	if [ -n "`use ppc`" ]; then
 	myarch="ppc"
