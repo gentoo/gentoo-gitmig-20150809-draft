@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.24 2005/02/22 18:54:54 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.25 2005/03/15 00:57:56 hardave Exp $
+
+# Hardave Riar <hardave@gentoo.org>
+# This should work, someone with a usb card and digital camera should test it
+gphoto2
 
 # Hardave Riar <hardave@gentoo.org>
 # This will probablly work, but no hardware to test with
