@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.1.ebuild,v 1.3 2003/02/13 16:50:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.1.ebuild,v 1.4 2003/05/19 02:17:44 seemant Exp $
 
 inherit libtool
 
@@ -13,17 +13,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -ppc"
 
-DEPEND="app-text/docbook-sgml-utils
+DEPEND="doc? ( app-text/docbook-sgml-utils
 	>=app-text/docbook-sgml-dtd-4.1
 	app-text/docbook-dsssl-stylesheets
-	dev-perl/XML-RegExp"
+	dev-perl/XML-RegExp )"
 
 
 src_compile() {
 	elibtoolize
-
 	econf || die "./configure failed"
-
 	make || die
 }
 
