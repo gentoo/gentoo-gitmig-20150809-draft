@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.2 2003/06/01 03:55:14 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.3 2003/06/01 14:00:11 g2boojum Exp $
+
+  01 Jun 2003; Grant Goodyear <g2boojum@gentoo.org>
+  docutils-0.3_pre20030530-r1.ebuild, files/glep_htmlwrite.py:
+  More GLEP fixes.
 
 *docutils-0.3_pre20030530-r1 (31 May 2003)
 
