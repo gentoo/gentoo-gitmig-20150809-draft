@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.36 2004/02/29 22:47:54 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.37 2004/03/01 05:42:22 latexer Exp $
+
+*linux-wlan-ng-0.2.1_pre20 (01 Mar 2004)
+
+  01 Mar 2004; Peter Johanson <latexer@gentoo.org>
+  linux-wlan-ng-0.2.1_pre20.ebuild:
+  Bump again. This version has the fix for prism2dl merged.
 
 *linux-wlan-ng-0.2.1_pre19 (29 Feb 2004)
 
