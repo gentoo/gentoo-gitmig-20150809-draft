@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.29.ebuild,v 1.6 2003/09/11 01:10:52 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.29.ebuild,v 1.7 2004/03/30 20:58:13 spyderous Exp $
 
 IUSE="X"
 
@@ -8,7 +8,7 @@ DESCRIPTION="A portable, bytecode-compiled implementation of Common Lisp"
 HOMEPAGE="http://clisp.sourceforge.net/"
 SRC_URI="http://cvs2.cons.org/ftp-area/clisp/source/latest/${P}.tar.gz"
 S=${WORKDIR}/${PN}
-DEPEND="X? ( x11-base/xfree )"
+DEPEND="X? ( virtual/x11 )"
 RDEPEND="$DEPEND"
 LICENSE="GPL-2"
 SLOT="2"

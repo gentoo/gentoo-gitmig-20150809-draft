@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.16 2004/03/24 04:42:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.17 2004/03/30 20:58:13 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; clisp-2.28.ebuild,
+  clisp-2.29.ebuild, clisp-2.30-r1.ebuild, clisp-2.30.ebuild,
+  clisp-2.31-r1.ebuild, clisp-2.31.ebuild, clisp-2.32-r1.ebuild,
+  clisp-2.32.ebuild, clisp-2.33.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   23 Mar 2004; <mkennedy@gentoo.org> clisp-2.33.ebuild:
   Marking stable for x86

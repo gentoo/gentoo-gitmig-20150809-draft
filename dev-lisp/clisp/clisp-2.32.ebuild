@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.32.ebuild,v 1.1 2004/01/11 09:50:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.32.ebuild,v 1.2 2004/03/30 20:58:13 spyderous Exp $
 
 inherit flag-o-matic
 
@@ -40,7 +40,7 @@ DEPEND="dev-libs/libsigsegv
 	dev-lisp/common-lisp-controller
 	fastcgi? ( dev-libs/fcgi )
 	postgres? ( dev-db/postgresql )
-	X? ( x11-base/xfree )
+	X? ( virtual/x11 )
 	ldap? ( net-nds/openldap )
 	readline? ( sys-libs/readline )
 	nls? ( sys-devel/gettext )
