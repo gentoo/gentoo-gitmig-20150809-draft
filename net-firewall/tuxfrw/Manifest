@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b93c79e762416b05dc38963e3b5a4e2 tuxfrw-2.58.ebuild 2005
-MD5 ae0eca40d72acca5a54db4d81034e2d3 ChangeLog 640
+MD5 e173f8266166779299c64e976a375464 tuxfrw-2.58-r1.ebuild 2060
+MD5 7c0a635933651d88914a01d1d2e8ddd1 ChangeLog 874
 MD5 ac3074aa551da20b321f380c591f0847 metadata.xml 256
-MD5 ed2c6cea0dbd3b533794fb7f3e43f3d0 files/digest-tuxfrw-2.58 62
+MD5 ed2c6cea0dbd3b533794fb7f3e43f3d0 files/digest-tuxfrw-2.58-r1 62
 MD5 232c3594bfcdf37631020d2a52bcba00 files/tuxfrw 774
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB9iZLI1lqEGTUzyQRAiOcAJ0fSHzzhCSsBOsCCEc6YHVJiLqelwCggQ3p
-pX34x0yPZ+sB1iH5qJEVOL0=
-=Gem8
------END PGP SIGNATURE-----

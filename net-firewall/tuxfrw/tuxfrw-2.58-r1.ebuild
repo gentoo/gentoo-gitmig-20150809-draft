@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/tuxfrw-2.58.ebuild,v 1.1 2005/01/24 22:23:00 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/tuxfrw-2.58-r1.ebuild,v 1.1 2005/01/27 20:29:26 angusyoung Exp $
 
 inherit eutils kernel-mod
 
@@ -54,6 +54,9 @@ src_install() {
 	exeopts -m700
 	exeinto /etc/init.d/
 	doexe ${FILESDIR}/tuxfrw
+
+	#doing binary install instead
+	dosbin ${S}/tuxfrw
 
 	# Is this really needed ?
 	dodoc ${S}/AUTHORS ${S}/COPYING ${S}/CREDITS ${S}/ChangeLog ${S}/INSTALL

@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/tuxfrw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/ChangeLog,v 1.2 2005/01/25 10:58:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/ChangeLog,v 1.3 2005/01/27 20:29:26 angusyoung Exp $
+
+*tuxfrw-2.58-r1 (27 Jan 2005)
+
+  27 Jan 2005; Otavio R. Piske <angusyoung@gentoo.org> +tuxfrw-2.58-r1.ebuild,
+  -tuxfrw-2.58.ebuild:
+  Removed old ebuild that was not installing main script and added -r1 that does
+  this correctly
 
 *tuxfrw-2.58 (24 Jan 2005)
 
