@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r1.ebuild,v 1.1 2003/08/27 19:11:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r1.ebuild,v 1.2 2003/09/06 22:23:39 msterret Exp $
 
 inherit eutils
 
@@ -61,7 +61,7 @@ src_compile() {
 		--enable-function-subdirs \
 		--enable-ldflags="${LDFLAGS}" \
 		${myconf} || die "configure failed"
-	
+
 	if [ -n "`use static`" ] ; then
 		sed -i -e "s/link=no/link=static/g" \
 			-e "s/load=no/load=yes/g" config.modules

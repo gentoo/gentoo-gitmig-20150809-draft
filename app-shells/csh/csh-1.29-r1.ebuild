@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r1.ebuild,v 1.6 2003/06/24 20:22:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r1.ebuild,v 1.7 2003/09/06 22:23:39 msterret Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -33,8 +33,8 @@ src_compile() {
 				${WORKDIR}/vis.c \
 				${FILESDIR}/dot.login \
 				${FILESDIR}/dot.cshrc \
-				${S} 
-				
+				${S}
+
 	# this parses the output of the bash builtin `kill`
 	# and creates an array of signal names for csh.
 
@@ -45,20 +45,20 @@ src_compile() {
 	printf "/* automatically generated during %s build */\n\n" ${PF} > ${S}/signames.h
 	printf "const char *const sys_signame[NSIG + 3] = {\n" >> ${S}/signames.h
 	printf "\t\"EXIT\",\t\n" >> ${S}/signames.h
-	
+
 	let cnt++
-	
+
 	for i in `kill -l`
 	do
 		let $((cnt++))%2 && continue
 		einfo "	Adding ${i}..."
 		printf "\t\"%s\",\n" ${i} >> ${S}/signames.h
 	done
-	
+
 	printf "\t\"DEBUG\",\n\t\"ERR\",\n\t(char *)0x0\n};\n\n" >> ${S}/signames.h
 
 	einfo "Adding flags required for succesful compilation..."
-	# this should be easier than maintaining a patch. 
+	# this should be easier than maintaining a patch.
 	for i in {-Dlint,-w,-D__dead="",-D__LIBC12_SOURCE__,-DNODEV="-1",-DTTYHOG=1024,-DMAXPATHLEN=4096,-D_GNU_SOURCE,-D_DIAGASSERT="assert"}
 	do
 		append-flags ${i}
@@ -73,20 +73,20 @@ src_compile() {
 
 	# maybe they dont warn on BSD, but _damn_.
 	export NOGCCERROR=1
-	
+
 	# if csh is a users preferred shell, they may want
 	# a static binary to help on the event of fs emergency.
 	use static && append-ldflags -static
-	
+
 	# pmake is a portage binary as well, so specify full path.
 	# if yours isnt in /usr/bin, you can set PMAKE_PATH.
 	einfo "Starting build..."
 	${PMAKE_PATH:-/usr/bin/}pmake || die "compile failed."
-	
+
 	echo
-	size csh 
+	size csh
 	echo
-	
+
 	# make the c shell guide
 	use doc && {
 		einfo "Making documentation..."
@@ -96,7 +96,7 @@ src_compile() {
 	cd ${S}
 
 	einfo "Making empty configuration files.."
-	printf "#\n# System-wide .cshrc file for csh(1).\n\n" >	csh.cshrc 
+	printf "#\n# System-wide .cshrc file for csh(1).\n\n" >	csh.cshrc
 	printf "#\n# System-wide .login file for csh(1).\n\n" > csh.login
 	printf "if ( -f /etc/csh.env ) source /etc/csh.env\n" >> csh.login
 	printf "#\n# System-wide .logout file for csh(1).\n\n" > csh.logout
@@ -105,12 +105,12 @@ src_compile() {
 src_install() {
 	exeinto /bin
 	doexe csh
-	
+
 	doman csh.1
-	
+
 	use doc && dodoc USD.doc/paper.ps
 	dodoc dot.cshrc dot.login
-	
+
 	insinto /etc
 	doins csh.cshrc csh.login csh.logout
 }

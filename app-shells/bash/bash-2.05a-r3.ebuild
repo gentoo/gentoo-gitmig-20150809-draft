@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05a-r3.ebuild,v 1.2 2003/09/02 19:05:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05a-r3.ebuild,v 1.3 2003/09/06 22:23:39 msterret Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -18,9 +18,9 @@ RDEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
-	#enable non-interactive login shells; this patch allows your prompt 
+	#enable non-interactive login shells; this patch allows your prompt
 	#to be preserved when you start X and closes bug #1579.
 	cat ${FILESDIR}/config-top.h.diff | patch -p0 -l || die
 	# bash's config.sub doesn't recognize alphaev67. update it.
@@ -41,7 +41,7 @@ src_compile() {
 	#[ "`use readline`" ] && myconf="--with-installed-readline"
 	#use static && export LDFLAGS="${LDFLAGS} -static"
 	[ -z "`use nls`" ] && myconf="${myconf} --disable-nls"
-	
+
 	./configure --prefix=/ \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
@@ -51,7 +51,7 @@ src_compile() {
 		--without-gnu-malloc \
 		${myconf} || die
 	# bash 2.0.5 doesn't like -j>1
-	
+
 	emake -j1 || die
 }
 
@@ -60,7 +60,7 @@ src_install() {
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
-		
+
 	dodir /bin
 	mv ${D}/usr/bin/bash ${D}/bin
 	dosym bash /bin/sh

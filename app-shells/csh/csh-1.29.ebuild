@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29.ebuild,v 1.5 2003/07/02 12:47:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29.ebuild,v 1.6 2003/09/06 22:23:39 msterret Exp $
 
 inherit cvs flag-o-matic eutils ccc
 
@@ -18,13 +18,13 @@ SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/src/usr.bin/printf/p
 
 RESTRICT="nomirror"
 
-# theres basically a choice of fetching the individual files via 
-# ftp, and using nomirror to stop spamming the mirrors, or fetch 
+# theres basically a choice of fetching the individual files via
+# ftp, and using nomirror to stop spamming the mirrors, or fetch
 # a tarball of the whole lot and waste bandwidth.
-# 
-# the other option is to check it out of cvs, using tags to make 
-# sure we get a consistent version. 
-# 
+#
+# the other option is to check it out of cvs, using tags to make
+# sure we get a consistent version.
+#
 # i decided to go with cvs.
 
 LICENSE="BSD GPL-2"
@@ -50,14 +50,14 @@ src_compile() {
 
 	# The file `mksignames.c` and the product of its execution
 	# is the only reason this ebuild is dual license, without
-	# this code (eg make your own array) this shell will be 
+	# this code (eg make your own array) this shell will be
 	# 100% BSD. i borrowed it from bash-2.05b, btw.
 
 	cd ${S}; cp ${DISTDIR}/printf.c \
 				${DISTDIR}/vis.h \
 				${FILESDIR}/mksignames.c \
 				${DISTDIR}/vis.c \
-				${S} 
+				${S}
 	# this utility spits out an array of signal names.
 
 	einfo "Making a list of signal names..."
@@ -65,7 +65,7 @@ src_compile() {
 	${T}/mksignames > ${S}/signames.h || die "couldnt get a list of signals."
 
 	einfo "Adding flags required for succesful compilation..."
-	# this should be easier than maintaining a patch. 
+	# this should be easier than maintaining a patch.
 	for i in {-Dlint,-w,-D__dead="",-D__LIBC12_SOURCE__,-DNODEV="-1",-DTTYHOG=1024,-DMAXPATHLEN=4096,-D_GNU_SOURCE,-D_DIAGASSERT="assert"}
 	do
 		append-flags ${i}
@@ -79,11 +79,11 @@ src_compile() {
 
 	# maybe they dont warn on BSD, but _damn_.
 	export NOGCCERROR=1
-	
+
 	# if csh is a users preferred shell, they may want
 	# a static binary to help on the event of fs emergency.
 	use static && append-ldflags -static
-	
+
 	# pmake is a portage binary as well, so specify full path.
 	# if yours isnt in /usr/bin, you can set PMAKE_PATH.
 	einfo "Starting build..."

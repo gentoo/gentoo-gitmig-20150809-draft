@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.0_pre7.ebuild,v 1.4 2003/08/20 10:18:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.0_pre7.ebuild,v 1.5 2003/09/06 22:23:39 msterret Exp $
 
 IUSE="ncurses"
 MY_PV=${PV%_*}-dev-${PV#*_pre}
@@ -23,9 +23,9 @@ src_compile() {
 	# New zshall.1 generated with the following, run in Doc:
 	# perl -nle'$_ = `cat $1` if /^\.so man1\/(.+\.1)/;print' zshall.1
 	mv ${WORKDIR}/zshall-${MY_PV} ${S}/Doc/zshall.1
-	
+
 	use ncurses && MYCONF="--with-curses-terminfo"
-	
+
 	econf \
 		--bindir=/bin \
 		--libdir=/usr/lib \
@@ -52,7 +52,7 @@ src_install() {
 		sitefndir=${D}/usr/share/zsh/site-functions \
 		install.bin install.man install.modules \
 		install.info install.fns || die "make install failed"
-		
+
 	dodoc ChangeLog META-FAQ README INSTALL LICENCE config.modules
 	docinto StartupFiles
  	dodoc StartupFiles/z*

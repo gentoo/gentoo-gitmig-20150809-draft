@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.13 2003/05/29 09:54:44 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.14 2003/09/06 22:23:39 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Public Domain Korn Shell"
@@ -18,7 +18,7 @@ src_unpack() {
 	cd ${S}
 	patch -p2 < ${DISTDIR}/${P}-patches.1
 }
- 
+
 src_compile() {
 
 	echo 'ksh_cv_dev_fd=${ksh_cv_dev_fd=yes}' > config.cache

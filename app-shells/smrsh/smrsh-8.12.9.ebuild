@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/smrsh-8.12.9.ebuild,v 1.2 2003/07/21 22:19:26 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/smrsh-8.12.9.ebuild,v 1.3 2003/09/06 22:23:39 msterret Exp $
 
 IUSE=""
 DESCRIPTION="Sendmail restricted shell, for use with MTAs other than Sendmail."
@@ -29,8 +29,8 @@ src_compile() {
 
 	sed -e "s:@@confCCOPTS@@:${CFLAGS}:" "${FILESDIR}/site.config.m4" \
 		> "${S}/devtools/Site/site.config.m4" || die "sed failed"
-	
-	/bin/sh Build 
+
+	/bin/sh Build
 
 }
 
@@ -41,9 +41,9 @@ src_install () {
 
 	dodoc README
 	doman smrsh.8
-	
+
 	keepdir /var/lib/smrsh
-		
+
 }
 
 pkg_postinst() {
