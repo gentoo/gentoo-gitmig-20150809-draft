@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.7.ebuild,v 1.2 2003/10/13 19:22:00 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.7.ebuild,v 1.3 2003/10/29 06:12:35 method Exp $
 
 DESCRIPTION="Python bindings for SELinux functions"
 HOMEPAGE="http://selinux.dev.gentoo.org/python"
@@ -8,7 +8,7 @@ SRC_URI="http://selinux.dev.gentoo.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc sparc"
 IUSE=""
 
 DEPEND="sys-libs/libselinux"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-selinux
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.8 2003/10/13 19:22:00 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.9 2003/10/29 06:12:35 method Exp $
+
+  29 Oct 2003; Joshua Brindle <method@gentoo.org> python-selinux-1.2.ebuild,
+  python-selinux-1.2.ebuild, python-selinux-2.7.ebuild:
+  made 2.7 x86, ppc, sparc stable
 
   13 Oct 2003; Chris PeBenito <pebenito@gentoo.org> python-selinux-2.7.ebuild:
   Make the ebuild fail if the compile fails.
