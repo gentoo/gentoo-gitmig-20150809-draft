@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.29 2004/07/01 22:51:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.30 2004/07/13 23:51:28 batlogg Exp $
+
+*zope-2.7.1 (14 Jul 2004)
+
+  14 Jul 2004; Jodok Batlogg <batlogg@gentoo.org>; zope-2.7.1.ebuild,
+  files/2.7.1/zdctl.patch, files/2.7.1/zope.confd, files/2.7.1/zope.initd:
+  finally zope-2.7.1 made it's way to portage, adding user commited eduilds and
+  patches from #41508
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> zope-2.4.0-r6.ebuild,
   zope-2.5.1.ebuild, zope-2.6.4-r1.ebuild, zope-2.6.4.ebuild:
