@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/jack-rack
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.1 2003/03/06 13:13:45 jje Exp $
+
+*jack-rack-1.4.1 (06 Mar 2003)
+
+  06 Mar 2003; jje <jje@gentoo.org> jack-rack-1.4.1.ebuild:
+  Initial revision.
+
