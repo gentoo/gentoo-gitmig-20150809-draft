@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mahogany/mahogany-0.65.ebuild,v 1.1 2005/01/10 02:40:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mahogany/mahogany-0.65.ebuild,v 1.2 2005/03/04 15:37:51 ticho Exp $
 
 inherit wxwidgets
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="mahogany"
 IUSE="python ssl static nls debug doc"
 
-RDEPEND=">=x11-libs/wxGTK-2.4.2
+RDEPEND="=x11-libs/wxGTK-2.4*
 	python? ( >=dev-lang/python-1.5*
 			<dev-lang/python-2.2* )
 	ssl? ( dev-libs/openssl )"
