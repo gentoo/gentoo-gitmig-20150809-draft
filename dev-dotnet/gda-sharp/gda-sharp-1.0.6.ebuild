@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/gda-sharp-1.0.6.ebuild,v 1.2 2005/03/21 18:14:46 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/gda-sharp-1.0.6.ebuild,v 1.3 2005/03/23 01:29:03 latexer Exp $
 
 inherit gtk-sharp-component
 
@@ -9,5 +9,5 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="${DEPEND}
-		>=dev-dotnet/gtk-sharp-${PV}
+		=dev-dotnet/gtk-sharp-${PV}*
 		>=gnome-extra/libgda-1.0.0"

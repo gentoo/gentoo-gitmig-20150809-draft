@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/art-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.16 2005/03/21 19:53:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.17 2005/03/23 01:28:24 latexer Exp $
+
+  22 Mar 2005; Peter Johanson <latexer@gentoo.org> art-sharp-1.0.4.ebuild,
+  art-sharp-1.0.6.ebuild, art-sharp-1.0.8.ebuild:
+  Fix deps to ensure we get correct slot of gtk-sharp
 
   21 Mar 2005; David Holm <dholm@gentoo.org> art-sharp-1.0.6.ebuild:
   Stable on ppc.

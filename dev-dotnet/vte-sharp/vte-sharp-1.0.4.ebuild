@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/vte-sharp-1.0.4.ebuild,v 1.5 2005/03/15 00:02:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/vte-sharp-1.0.4.ebuild,v 1.6 2005/03/23 01:31:16 latexer Exp $
 
 inherit gtk-sharp-component
 
@@ -10,4 +10,5 @@ IUSE=""
 
 DEPEND="${DEPEND}
 		>=dev-dotnet/gtk-sharp-1.0.4-r1
+		=dev-dotnet/gtk-sharp-${PV}*
 		>=x11-libs/vte-0.11.10"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gnomedb-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomedb-sharp/ChangeLog,v 1.9 2005/03/21 18:15:04 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomedb-sharp/ChangeLog,v 1.10 2005/03/23 01:29:47 latexer Exp $
+
+  22 Mar 2005; Peter Johanson <latexer@gentoo.org> gnomedb-sharp-1.0.4.ebuild,
+  gnomedb-sharp-1.0.6.ebuild, gnomedb-sharp-1.0.8.ebuild:
+  Fix deps to ensure we get correct slot of gtk-sharp
 
   21 Mar 2005; Peter Johanson <latexer@gentoo.org> gnomedb-sharp-1.0.6.ebuild:
   Mark stable on x86.
