@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.8 2005/01/01 04:34:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.9 2005/01/01 05:54:49 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -16,8 +16,7 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="arts esd avi nls dvd X directfb oggvorbis alsa gnome sdl speex
-	theora ipv6 altivec opengl aac fb xv xvmc nvidia i8x0 libcaca
-	samba dxr3 vidix png mng pic"
+	theora ipv6 altivec opengl aac fb xv xvmc nvidia i8x0 samba dxr3 vidix png mng pic"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	!amd64? ( X? ( virtual/x11 ) )
@@ -154,11 +153,6 @@ src_compile() {
 	use !samba && export ac_cv_lib_smbclient_smbc_init=no
 	use !png && export ac_cv_lib_png_png_create_read_struct=no
 	use !mng && export ac_cv_header_libmng_h=no
-
-	# quite a dirt hack but it should work as expected
-	if ! use libcaca; then
-		myconf="${myconf} --with-caca-prefix=/tmp/non-existant"
-	fi
 
 	if use xvmc; then
 		if use nvidia && use i8x0; then

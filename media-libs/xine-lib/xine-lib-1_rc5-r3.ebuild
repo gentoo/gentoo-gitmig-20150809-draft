@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r3.ebuild,v 1.17 2004/12/09 07:28:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r3.ebuild,v 1.18 2005/01/01 05:54:49 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
