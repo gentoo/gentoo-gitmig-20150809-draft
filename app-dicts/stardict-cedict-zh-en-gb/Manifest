@@ -1,4 +1,6 @@
+MD5 0ad05f067473bcc87fd1794ed38cc671 ChangeLog 460
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 ffb555b671ebde1d0e7c84720b9f560b stardict-cedict-zh-en-gb-2.1.0.ebuild 428
-MD5 0ad05f067473bcc87fd1794ed38cc671 ChangeLog 460
+MD5 ffdaadac28328ea53965d9f08a8fc93b stardict-cedict-zh-en-gb-2.4.2.ebuild 480
 MD5 86785a4657f35114d754ae9a1c8301d5 files/digest-stardict-cedict-zh-en-gb-2.1.0 77
+MD5 beccff9231278cc820af9a8650a7ae10 files/digest-stardict-cedict-zh-en-gb-2.4.2 77

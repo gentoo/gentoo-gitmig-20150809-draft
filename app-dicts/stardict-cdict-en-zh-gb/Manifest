@@ -1,4 +1,6 @@
+MD5 ac1c20dff200db2bb9f9ccf536f1502f ChangeLog 456
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 1493cdd1483809adeed17db5e2b603a7 stardict-cdict-en-zh-gb-2.1.0.ebuild 373
-MD5 ac1c20dff200db2bb9f9ccf536f1502f ChangeLog 456
+MD5 6ae5f497863b41ce8279cb3b877c09fc stardict-cdict-en-zh-gb-2.4.2.ebuild 476
 MD5 e63bca383c2b5f975501877088031960 files/digest-stardict-cdict-en-zh-gb-2.1.0 77
+MD5 dc45ddba83b4a2d380d2c4a379368815 files/digest-stardict-cdict-en-zh-gb-2.4.2 77
