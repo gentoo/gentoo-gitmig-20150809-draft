@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r4.ebuild,v 1.2 2004/10/06 13:56:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r4.ebuild,v 1.3 2004/11/01 09:58:05 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www2m.biglobe.ne.jp/~dolphin/lha/prog/${P}.tar.gz"
 
 LICENSE="lha"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64 ppc64 ~ppc-macos"
+KEYWORDS="x86 ppc sparc alpha amd64 ppc64 ppc-macos"
 IUSE=""
 
 DEPEND="virtual/libc"
