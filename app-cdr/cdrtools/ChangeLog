@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.51 2003/06/30 14:50:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.52 2003/07/08 20:16:37 wwoods Exp $
+
+  08 Jul 2003; Will Woods <wwoods@gentoo.org> cdrtools-2.01_alpha16.ebuild:
+  Added ~alpha to KEYWORDS for the same reason as below.
 
   30 Jun 2003; Jason Wever <weeve@gentoo.org> cdrtools-2.01_alpha16.ebuild:
   Added ~sparc to keywords to fix cdrdao dependency borkage.
