@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.20 2003/04/26 13:14:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.21 2003/06/22 15:01:58 azarah Exp $
+
+  22 Jun 2003; Martin Schlemmer <azarah@gentoo.org>
+  nvidia-glx-1.0.4363.ebuild:
+  Mark stable for x86.
 
 *nvidia-glx-1.0.4363 (26 Apr 2003)
 
