@@ -1,18 +1,19 @@
 # ChangeLog for net-mail/vlnx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.7 2002/12/13 11:00:08 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.8 2003/01/05 15:02:39 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *vlnx-416 (13 Oct 2002)
 
-  07 Nov 2002; Mark Guertin <gerk@gentoo.org> vlnx-414e-r2.ebuild :
-  removed depreciated ld.so
+  04 Jan 2002; Martin Holzer <mholzer@gentoo.org> :
+  Fixed SRC_URI.
 
   13 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Version bump to fix #1132 ... also cleaned up ebuild and stuff
 
 *vlnx-414e-r2 (1 Feb 2002)
+
+  07 Nov 2002; Mark Guertin <gerk@gentoo.org> vlnx-414e-r2.ebuild :
+  removed depreciated ld.so
 
   28 Aug 2002; Ryan Phillips <rphillips@gentoo.org> :
 

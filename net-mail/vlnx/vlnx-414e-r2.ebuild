@@ -1,18 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Script Revised by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-414e-r2.ebuild,v 1.11 2002/12/09 04:33:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-414e-r2.ebuild,v 1.12 2003/01/05 15:02:39 mholzer Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="McAfee VirusScanner for Unix/Linux(Shareware)"
-SRC_URI="http://download.mcafee.com/products/evaluation/virusscan/english/unix/linux/${MY_P}.tar.Z
-	 http://download.nai.com/products/datfiles/4.x/nai/dat-4153.tar"
-HOMEPAGE="http://www.mcafee.com/"
+SRC_URI="http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/version_4.14/${MY_P}.tar.Z
+	 http://download.nai.com/products/datfiles/4.x/nai/dat-4240.tar"
+HOMEPAGE="http://www.mcafeeb2b.com"
 
 SLOT="0"
 LICENSE="VirusScan"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND=""
 RDEPEND=""
@@ -24,7 +24,7 @@ src_unpack() {
 	mkdir ${MY_P}
 	cd ${MY_P}
 	unpack vlnx414e.tar.Z
-	tar -xf ${DISTDIR}/dat-4153.tar
+	tar -xf ${DISTDIR}/dat-4240.tar
 }
 
 src_install() {															 

@@ -1,20 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Script Revised by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-416e.ebuild,v 1.3 2002/12/09 04:33:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-416e.ebuild,v 1.4 2003/01/05 15:02:39 mholzer Exp $
 
 DAT_VER=4228
 
 MY_P="${P/-/}"
 S="${WORKDIR}"
 DESCRIPTION="McAfee VirusScanner for Unix/Linux(Shareware)"
-SRC_URI="http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/version_4.16/${MY_P}.tar.Z
-	 http://download.nai.com/products/datfiles/4.x/nai/dat-${DAT_VER}.tar"
-HOMEPAGE="http://www.mcafee.com/"
+SRC_URI="http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/versi
+on_4.16/${MY_P}.tar.Z
+         http://download.nai.com/products/datfiles/4.x/nai/dat-4240.tar"
+HOMEPAGE="http://www.mcafeeb2b.com"
 
 SLOT="0"
 LICENSE="VirusScan"
-KEYWORDS="x86 ~sparc "
+KEYWORDS="x86 ~sparc"
 RESTRICT="nostrip"
 DEPEND=""
 RDEPEND=""
