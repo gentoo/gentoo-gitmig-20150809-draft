@@ -1,6 +1,12 @@
 # ChangeLog for net-print/gnome-cups-manager
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.19 2004/05/14 04:21:45 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.20 2004/06/09 04:15:00 absinthe Exp $
+
+*gnome-cups-manager-0.18 (09 Jun 2004)
+
+  09 Jun 2004; Dylan Carlson <absinthe@gentoo.org>
+  +files/gnome-cups-manager-0.18-paren.patch, +gnome-cups-manager-0.18.ebuild:
+  Version bump.  Stable on amd64.  Fixes bug #49242 (cheers Robert Moss).
 
   14 May 2004; Stephen P. Becker <geoman@gentoo.org>
   gnome-cups-manager-0.17.ebuild:
