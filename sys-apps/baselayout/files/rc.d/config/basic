@@ -23,6 +23,9 @@ YP_DOMAIN=""				# Enter your NIS domainname here
 
 MOUSE="ms"				# Set to the mouse type as used by gpm (auto, ps2, ms, etc.)
 
+#LVM="y"			# Set this to Y if you would like to start LVM. Will work
+					# for simple setups (i.e not as /)	
+
 DISPLAYMANAGER=""			# Enter your display manager here (xdm,kdm,gdm)
 FTPUSER="ftp"				# User to run oftpd as
 FTPROOT="/home/ftp"			# Set this to your ftproot for oftpd

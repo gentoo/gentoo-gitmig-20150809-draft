@@ -1,7 +1,13 @@
 #!/bin/sh
 #RCUPDATE:boot:15:This line is required for script management
 . /etc/rc.d/config/functions
-
+. /etc/rc.d/config/basic
+if [ ${LVM} ]; then
+	ebegin "Initializing LVM"
+	vgscan
+	vgchange -ay
+	eend $? "Problem Initializing LVM"
+fi
 # Mount local filesystems in /etc/fstab.
 ebegin "Mounting local filesystems"
 mount -avt nonfs,noproc 1>&2
