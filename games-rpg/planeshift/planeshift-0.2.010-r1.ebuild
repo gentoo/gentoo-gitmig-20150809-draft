@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.7 2004/05/06 19:52:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.8 2004/06/21 23:50:19 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,9 +13,12 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND="net-misc/curl
-	dev-games/crystalspace
+# Doesn't like the new cs-config (bug #54659)
+RDEPEND="net-misc/curl
+	<dev-games/crystalspace-20040604
 	dev-games/cel"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 S="${WORKDIR}/${PN}"
 
@@ -47,9 +50,12 @@ src_install() {
 	mv * ${D}/${PLANESHIFT_PREFIX}
 
 	dogamesbin ${FILESDIR}/planeshift
-	dosed "s:GENTOO_CRYSTAL_DIR:${CRYSTAL_PREFIX}:" ${GAMES_BINDIR}/planeshift
-	dosed "s:GENTOO_CEL_DIR:${CRYSTAL_PREFIX}:" ${GAMES_BINDIR}/planeshift
-	dosed "s:GENTOO_PLANESHIFT_DIR:${PLANESHIFT_PREFIX}:" ${GAMES_BINDIR}/planeshift
+	sed -i \
+		-e "s:GENTOO_CRYSTAL_DIR:${CRYSTAL_PREFIX}:" \
+		-e "s:GENTOO_CEL_DIR:${CRYSTAL_PREFIX}:" \
+		-e "s:GENTOO_PLANESHIFT_DIR:${PLANESHIFT_PREFIX}:" \
+		"${D}${GAMES_BINDIR}/planeshift" \
+		|| die "sed ${D}${GAMES_BINDIR}/planeshift failed"
 
 	prepgamesdirs
 }
