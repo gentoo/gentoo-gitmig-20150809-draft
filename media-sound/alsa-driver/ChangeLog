@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.26 2003/03/03 16:03:43 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.27 2003/03/05 00:26:42 agenkin Exp $
 
 *alsa-driver-0.9.0_rc8 (03 Mar 2003)
+
+  04 Mar 2003; Arcady Genkin <agenkin@gentoo.org> files/alsasound :
+  Applied a patch from Thomas Weidner <yasea@gmx.net> (bug 15762) to the
+  init script.  The patch adds code that inhibits alsactl error messages
+  at boot time.
 
   03 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
   Quick update to rc8.

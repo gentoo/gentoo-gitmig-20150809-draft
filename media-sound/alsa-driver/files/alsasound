@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.10 2003/03/03 18:33:30 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.11 2003/03/05 00:22:55 agenkin Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -84,7 +84,15 @@ start() {
       ewarn "No mixer config in $asoundcfg, you have to unmute your card!"
     else
       if [ -x $alsactl ]; then
-        $alsactl -f $asoundcfg restore
+      	num_cards=`modprobe -c|awk -F= '/options snd cards_limit/ {print $2;}'`
+	if [ "$num_cards" == "" ]; then
+          $alsactl -f $asoundcfg restore
+        else
+          let num_cards--
+          for i in `seq 0 $num_cards`; do
+            $alsactl -f $asoundcfg restore $i
+          done
+        fi
       else
         eerror -e "ERROR: alsactl not found!"
       fi
