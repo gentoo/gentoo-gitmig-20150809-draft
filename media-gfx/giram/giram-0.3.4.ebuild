@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.4.ebuild,v 1.5 2004/06/24 22:39:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.4.ebuild,v 1.6 2004/07/14 17:35:21 agriffis Exp $
 
 DESCRIPTION="Giram (Giram is really a modeller). A 3d modeller for POV-ray"
 HOMEPAGE="http://www.giram.org"
@@ -9,6 +9,7 @@ SRC_URI="http://www.giram.org/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0.0
 	>=dev-libs/glib-2.0.0
@@ -17,8 +18,6 @@ RDEPEND=">=x11-libs/gtk+-2.0.0
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 
