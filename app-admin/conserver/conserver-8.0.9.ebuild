@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.0.9.ebuild,v 1.2 2004/01/10 14:06:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.0.9.ebuild,v 1.3 2004/01/13 05:02:54 weeve Exp $
 
 DESCRIPTION="Conserver - Serial Console Manager"
 HOMEPAGE="http://www.conserver.com/"
@@ -35,7 +35,7 @@ src_install () {
 
 	## create data directory
 	dodir /var/consoles
-	fowners daemon.daemon /var/consoles
+	fowners daemon:daemon /var/consoles
 	fperms 700 /var/consoles
 
 	## add startup and sample config
