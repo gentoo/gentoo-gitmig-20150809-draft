@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.11 2003/11/22 21:37:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.12 2004/01/07 01:31:46 liquidx Exp $
+
+  07 Jan 2004; Alastair Tse <liquidx@gentoo.org> files/bluetooth.rc:
+  added 'after hotplug' in rc script (#36762)
 
   22 Nov 2003; Alastair Tse <liquidx@gentoo.org> bluez-utils-2.3-r1.ebuild,
   files/bluez-utils-2.3-rfcomm_fflush.patch:
