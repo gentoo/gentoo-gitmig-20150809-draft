@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.1-r2.ebuild,v 1.1 2001/10/06 11:24:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.1-r3.ebuild,v 1.1 2001/10/09 14:37:23 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-python"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/latest/sources/"${A}
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/latest/sources/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org"
 
 DEPEND="virtual/python
@@ -46,10 +45,10 @@ src_install() {
 		cd ${S}/pygnome
 		docinto pygnome
 		dodoc COPYING
-	else
-		cd ${S}/pygtk
-		make prefix=${D}/usr install || die
 	fi
+
+	cd ${S}/pygtk
+	make prefix=${D}/usr install || die
 
 	cd ${S}/pygtk
 	docinto pygtk
