@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/Apache-Gallery
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.3 2004/09/05 08:29:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.4 2004/09/20 14:22:16 mcummings Exp $
+
+  20 Sep 2004; Michael Cummings <mcummings@gentoo.org>
+  Apache-Gallery-0.8.ebuild:
+  Missing deps added
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
