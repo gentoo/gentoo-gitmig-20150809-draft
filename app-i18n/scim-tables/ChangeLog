@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.10 2004/04/26 08:28:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.11 2004/06/20 17:25:32 usata Exp $
+
+*scim-tables-0.4.0 (21 Jun 2004)
+
+  21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +scim-tables-0.4.0.ebuild:
+  Version bumped.
 
 *scim-tables-0.3.5 (26 Apr 2004)
 
