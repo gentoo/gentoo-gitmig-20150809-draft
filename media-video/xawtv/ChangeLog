@@ -1,9 +1,17 @@
 # ChangeLog for media-video/xawtv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.4 2002/04/23 16:56:03 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.5 2002/07/15 04:59:12 lostlogic Exp $
 
+*xawtv-3.73-r1 (14 July 2002)
+
+        14 July 2002; Brandon Low <lostlogic@gentoo.org> xawtv-3.73-r1.ebuild:
+
+	Add lirc support thanks goes to George Sauthoff, he did great work 
+	preparing the lirc ebuild.
+        
 *xawtv-3.73 (23 April 2002)
-        23 April 2002; Bart Verwilst <spider@gentoo.org> Changelog:
+
+        23 April 2002; Bart Verwilst <verwilst@gentoo.org> xawtv-3.73.ebuild:
         
 	New version, removed old versions from the Portage tree
 
