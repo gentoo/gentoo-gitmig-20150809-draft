@@ -286,7 +286,7 @@ media-libs/id3lib-docs
 =sys-libs/ncurses-5.2-r4
 
 #db-3.2.9 is untested by the system team
-#>=sys-libs/db-3.2.9
+>=sys-libs/db-3.2.9
 >=sys-libs/db-3.3
 
 #this gcc's new atexit() fix that is supposed to be wonderful, doesn't work....
