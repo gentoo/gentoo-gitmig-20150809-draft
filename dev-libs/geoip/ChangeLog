@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.1 2003/06/29 20:01:35 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.2 2003/06/30 00:40:45 solar Exp $
+
+  29 Jun 2003; <solar@gentoo.org> geoip-1.2.0.ebuild:
+  Added ~sparc to keywords after testing on sparc64
 
 *geoip-1.2.0 (29 Jun 2003)
 
