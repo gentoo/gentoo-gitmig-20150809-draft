@@ -260,10 +260,6 @@ x11-libs/gtkmm-addons
 # worksforme // Spider
 >=net-www/mozilla-1.0.2
 
-# <raker@gentoo.org> (28 Sep 2002)
-# masking new lbreakout2 build to respect the freeze
-=app-games/lbreakout2-2.3.5
-
 # <g2boojum@gentoo.org> (27 Sep 2002)
 # useful security tool; masked while in freeze
 app-admin/logsentry
