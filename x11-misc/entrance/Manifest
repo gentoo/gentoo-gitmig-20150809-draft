@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 e045d9b2ebfa08c1f2697cb1ac5bffab ChangeLog 930
-MD5 0bce8fc1f95ae455fd1dd31764322b87 entrance-0.9.0.20041031.ebuild 2499
+MD5 fc3a96ca5e7aa0853eba18fbc5e08c9a entrance-0.9.0.20041031.ebuild 2517
 MD5 088d07394fa8372e79b7757075ea4a7d metadata.xml 515
 MD5 8e84124e92bc6b227f63790f5ff64dff entrance-9999.ebuild 2489
 MD5 617b7b85601ee0087c73d8c65167d97e files/digest-entrance-0.9.0.20041031 141
@@ -10,7 +10,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-entrance-9999 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhxGVHTu7gpaalycRAjPmAJ96D9YJVqCtfhDfPJQl7htGa3/RwgCfau9A
-CAcy9otrVARkyLmsopLciYQ=
-=yqkQ
+iD8DBQFBhxKOHTu7gpaalycRAsvuAJ95Kthvuu5LPzRxf978lgHoAtMeoQCg1wBD
+Ig0X2xsbTPlHgScbwZ9ojIo=
+=Ul4f
 -----END PGP SIGNATURE-----
