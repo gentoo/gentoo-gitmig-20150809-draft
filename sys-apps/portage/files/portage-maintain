@@ -88,3 +88,13 @@ for mypkg in installeddict.keys():
 	else:
 		print " ","(none)"
 	print
+
+print "System (important) packages not installed:"
+print
+for x in currentdict.keys():
+	mysplit=string.split(currentdict[x][0][0],"/")[0]
+	if mysplit[0:4]=="sys-":
+		#required package
+		if not installeddict.has_key(x):
+			print x
+print
