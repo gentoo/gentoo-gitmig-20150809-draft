@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50.ebuild,v 1.4 2002/11/28 17:06:25 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50.ebuild,v 1.5 2002/12/28 14:30:35 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Unzipper for pkzip-compressed files"
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.info-zip.org/pub/infozip/UnZip.html"
 
 SLOT="0"
 LICENSE="Info-ZIP"
-KEYWORDS="x86 ~ppc alpha"
+KEYWORDS="x86 ppc alpha"
 
 DEPEND="virtual/glibc"
 
