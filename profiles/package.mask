@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lanius@gentoo.org> (3. Oct 2003)
+# Beta release, not completly working
+=net-dialup/ppp-2.4.2_beta3
+
 # <pebenito@gentoo.org> (02 Oct 2003)
 # for new selinux api
 >=dev-python/python-selinux-2.0
