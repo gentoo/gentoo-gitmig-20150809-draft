@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /opt/quake3
+exec ./q3ded +set com_hunkmegs 24 +set dedicated 1 +set net_port 27960 +map q3tourney2
