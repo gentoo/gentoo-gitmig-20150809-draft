@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.722 2004/11/07 17:38:40 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.723 2004/11/07 21:55:53 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -374,6 +374,7 @@ media-sound/bpmdj:mp3 - Add support for reading mp3 files
 media-sound/daapd:howl - Enable howl support, enables DNS Service Discovery (DNS-SD)
 media-sound/daapd:mpeg4 - Add support for reading AAC metadata
 media-sound/gnusound:libsamplerate - Build gnusound with support for converting sample rates using libsamplerate
+media-sound/hydrogen:ladspa - Enables the ability to support ladspa plugins
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/lilypond:nopfa - disable building pfa fonts
 media-sound/mcdp:diet - Compile and link with dietlibc
