@@ -85,8 +85,8 @@ virtual/os-headers
 *sys-apps/setserial
 *<sys-apps/shadow-5
 
-# we use login from shadow when not using pam
-#*sys-apps/pam-login
+# <zhen@gentoo.org> Again, added until bug 10135 is addressed
+*sys-apps/pam-login
 
 *sys-apps/sharutils
 *sys-apps/tar
@@ -107,9 +107,10 @@ virtual/os-headers
 *<sys-libs/db-4.1.0
 *>=sys-libs/ncurses-5.2.20020112a
 
-# more pam stuff we dont want.
+# <zhen@gentoo.org> the following 2 lines are 
+# necessary until bug 10135 is addressed
 >=sys-libs/pam-0.75-r9
-#*sys-libs/pwdb      
+*sys-libs/pwdb
 
 *sys-libs/readline  
 *sys-libs/zlib

@@ -36,8 +36,8 @@ sdl		media-libs/libsdl
 gpm		sys-libs/gpm
 tcpd		sys-apps/tcp-wrappers
 
-# we dont want pam by default
-#pam		sys-libs/pam
+# <zhen@gentoo.org> unmasked until bug 10135 gets addressed
+pam		sys-libs/pam
 
 libwww		net-libs/libwww
 ssl		dev-libs/openssl

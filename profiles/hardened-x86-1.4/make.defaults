@@ -2,7 +2,8 @@
 # System-wide defaults for the gcc 3.2.3 Portage system
 
 # <zhen@gentoo.org> defaults for a hardened system
-USE="x86 berkdb crypt readline nls ssl tcpd zlib"
+# <zhen@gentoo.org> pam added until bug 10135 is fixed
+USE="x86 berkdb crypt readline nls ssl tcpd zlib pam"
 
 ARCH="x86"
 COMPILER="gcc3"
