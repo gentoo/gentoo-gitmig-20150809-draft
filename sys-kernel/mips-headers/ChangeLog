@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.25 2005/02/06 04:48:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.26 2005/02/24 19:42:09 kumba Exp $
+
+*mips-headers-2.4.28-r1 (24 Feb 2005)
+
+  24 Feb 2005; Joshua Kinard <kumba@gentoo.org>
+  +mips-headers-2.4.28-r1.ebuild, -mips-headers-2.4.28.ebuild:
+  Forgot to add eutils when using epatch.
 
 *mips-headers-2.4.28 (05 Feb 2005)
 
