@@ -22,6 +22,10 @@
 ##
 
 # <azarah@gentoo.org> (25 Aug 2002)
+# Contains the hacked sandbox.  Needs testing.
+=sys-apps/portage-2.0.30_alpha
+
+# <azarah@gentoo.org> (25 Aug 2002)
 # This one *STILL* activate the atexit() bug in some
 # binary packages (Win4Lin and Realplayer to name a few)
 =sys-libs/glibc-2.2.5-r7
