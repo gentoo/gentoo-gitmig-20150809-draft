@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020511-r1.ebuild,v 1.9 2003/02/13 07:18:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020511-r1.ebuild,v 1.10 2003/02/18 16:07:24 phoenix Exp $
 
 IUSE="cups opengl"
 
@@ -17,7 +17,8 @@ DEPEND="virtual/x11
 	>=sys-libs/ncurses-5.2
 	cups? ( net-print/cups )
 	>=media-libs/freetype-2.0.0
-	dev-lang/tcl dev-lang/tk"
+	dev-lang/tcl dev-lang/tk
+	!app-emulation/winex-transgaming"
 
 SLOT="0"
 LICENSE="Aladdin"
