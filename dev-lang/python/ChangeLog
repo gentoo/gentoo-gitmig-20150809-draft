@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.2 2002/03/18 06:04:52 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.3 2002/03/30 17:00:38 drobbins Exp $
+
+  30 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : changed PROVIDE from
+  virtual/python-2.2 to virtual/python.  No rev bump.
 
 *python-2.2-r5 (17 Mar 2002)
 
