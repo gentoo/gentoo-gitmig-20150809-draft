@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SSLeay
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.17 2004/01/18 22:28:16 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.18 2004/01/20 18:00:05 gustavoz Exp $
+
+  20 Jan 2004; <gustavoz@gentoo.org> Net-SSLeay-1.22.ebuild:
+  stable on sparc
 
   18 Jan 2004; <tuxus@gentoo.org> Net-SSLeay-1.23.ebuild:
   Added ~mips to KEYWORDS.
