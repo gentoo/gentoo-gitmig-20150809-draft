@@ -1,3 +1,6 @@
-MD5 6cc0dee7ad0bed810749c240a7f904d5 ChangeLog 506
+MD5 40985112269604b688634f7106954f1f ChangeLog 659
 MD5 ddf1dd7a19f0c05b45e5b297e59a3a0d gkrelltop-2.2.ebuild 1069
+MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
+MD5 dec0df6e0a472ace6a9da07c07349036 gkrelltop-2.2.2.ebuild 1079
 MD5 bc19088e1d88db5e98e5f821f27f94f3 files/digest-gkrelltop-2.2 61
+MD5 2d223204a4a90a4db9ea4d162e7206f6 files/digest-gkrelltop-2.2.2 63
