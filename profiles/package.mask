@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <mholzer@gentoo.org> (09 Feb 2003)
+>=media-video/mjpegtools-1.6.1
+
 # <hannes@gentoo.org> (09 Feb 2003)
 # doesn't work with kde, bug #15245
 # added libxslt-1.0.25 cause it depends on libxml2-2.5.2
