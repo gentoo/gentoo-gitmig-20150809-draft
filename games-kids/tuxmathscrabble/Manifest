@@ -1,5 +1,5 @@
 MD5 6dfec3d3795fdac1f2426cfd8560321b files/2.2-gentoo-paths.patch 2705
 MD5 26574948a91d425e65db57c5fba56362 files/digest-tuxmathscrabble-2.2 64
 MD5 409886a536ec545e6fa36ae2301a8bde files/tuxmathscrabble 78
-MD5 21b511f92bd4422686d8a366225ba3a5 ChangeLog 481
-MD5 adb93e8eae8c160f2426f0b7111682fd tuxmathscrabble-2.2.ebuild 1133
+MD5 6382a773f8ac5229c06770c72e22f1eb tuxmathscrabble-2.2.ebuild 1134
+MD5 0e3d1b097f1f58bb4bffe309df0c7cec ChangeLog 483
