@@ -6,5 +6,5 @@ MD5 0cc8188d6f8abfc2eb25e9b9352283ac files/digest-camserv-0.5.1-r2 65
 MD5 606707e25a9201299588a16e694f78dc camserv-0.5.0.ebuild 704
 MD5 fa2f7b02e5598df5c1ed4dc8a58ebb69 camserv-0.5.1-r1.ebuild 1150
 MD5 2d9d1884da11ba9d62d86412e8422a98 camserv-0.5.1.ebuild 695
-MD5 295f9b3887e2cefafd7363a7bf844889 ChangeLog 1200
+MD5 d29d96e3a811bcd271ff3ec9027d4c81 ChangeLog 1315
 MD5 95440ffd87e793034dfda6cd75624db2 camserv-0.5.1-r2.ebuild 1263
