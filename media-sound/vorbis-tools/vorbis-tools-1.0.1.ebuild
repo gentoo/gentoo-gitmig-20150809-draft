@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.7 2004/04/01 08:42:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.8 2004/04/01 19:05:16 gustavoz Exp $
 
 inherit gcc flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.vorbis.com/files/${PV}/unix/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~amd64 ~mips"
 IUSE="nls flac"
 
 RDEPEND=">=media-libs/libvorbis-1.0
