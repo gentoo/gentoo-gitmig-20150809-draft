@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.2.1.ebuild,v 1.1 2003/03/16 15:33:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.2.1.ebuild,v 1.2 2003/03/16 15:39:15 foser Exp $
 
 inherit gnome2 eutils
 
@@ -31,3 +31,12 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0" 
 
 DOCS="AUTHORS ChangeLog COPYING README TODO INSTALL NEWS"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	
+	# See http://gcc.gnu.org/cgi-bin/gnatsweb.pl problem #9700 for
+	# what this is about.
+	use alpha && epatch ${FILESDIR}/control-center-2.2.0.1-alpha_hack.patch
+}
