@@ -1,6 +1,8 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.42 2004/07/23 02:07:35 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.43 2004/07/27 17:35:20 aliz Exp $
+
+*texinfo-4.7-r1 (22 Jul 2004)
 
   22 Jul 2004; Jon Portnoy <avenj@gentoo.org> texinfo-4.7.ebuild,
   texinfo-4.7-r1.ebuild, files/makeinfo.patch :
