@@ -1,15 +1,15 @@
-# ChangeLog for app-editor/mp
+# ChangeLog for app-editors/mp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.4 2002/12/13 10:56:06 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.5 2002/12/17 18:46:26 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *mp-3.1.9 (21 Apr 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  changed sparc ~sparc keywords
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
 
   21 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   mp-3.1.9.ebuild, files/digest-mp-3.1.9 :
-  
   New ebuild. Rsolves bug #1885.
