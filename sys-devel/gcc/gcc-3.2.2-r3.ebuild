@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.11 2003/04/09 15:47:54 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.12 2003/04/10 18:54:53 frogger Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -34,7 +34,7 @@ inherit eutils flag-o-matic libtool
 # We allow known good gcc optimizations now (only for x86)
 # Joshua Brindle <method@gentoo.org> (04 Mar 2003)
 if [ "${ARCH}" = "x86" ]; then
-	ALLOWED_FLAGS="-O -O1 -O2 -Os -O3 -mcpu -march -pipe -g -freorder-blocks -fprefetch-loop-arrays -fstack-protector"
+	ALLOWED_FLAGS="-O -O1 -O2 -Os -O3 -mcpu -march -pipe -g -freorder-blocks -fprefetch-loop-arrays"
 	#Bug #16867, -march=pentium4 does not work, we'll replace it with -march=pentium3
 	replace-flags "-march=pentium4" "-march=pentium3"
 fi
