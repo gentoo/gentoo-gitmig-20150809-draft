@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.7 2005/01/10 23:34:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.8 2005/01/14 00:50:19 vapier Exp $
 
 inherit eutils
 
@@ -19,10 +19,9 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86"
-IUSE="debug uclibc static savedconfig netboot make-busybox-symlinks"
+IUSE="debug uclibc static savedconfig netboot floppyboot make-busybox-symlinks"
 
 DEPEND="virtual/libc
-	!amd64? ( uclibc? ( dev-libs/uclibc ) )
 	>=sys-apps/sed-4"
 RDEPEND="!static? ( virtual/libc )"
 
@@ -80,6 +79,8 @@ src_unpack() {
 			-e '/DEFAULT_SCRIPT/s:/share/udhcpc/default.script:/lib/udhcpc.script:' \
 			networking/udhcp/libbb_udhcp.h \
 			|| die "fixing netboot/udhcpc"
+	elif use floppyboot ; then
+		cp ${FILESDIR}/config-floppyboot .config
 	fi
 
 	# busybox has changed quite a bit from 0.[5-6]* to 1.x so this
