@@ -1,8 +1,18 @@
-MD5 7005832a22b9c9882bee69e214faa9ef quick-lounge-applet-2.0.3.ebuild 749
-MD5 d3669545f51e8561fed7fc48f1b87ab9 quick-lounge-applet-2.1.1.ebuild 756
-MD5 b6c305d09f7c785214c79964846a7255 quick-lounge-applet-2.2.0.ebuild 755
-MD5 5b59765e6895c659176a0e89e5a9dc29 ChangeLog 2086
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b714e13fa21c53f81ce106e3b6f402b3 ChangeLog 2207
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 ab8d2be66d8c7b05d0a8ae9c5ec2b068 quick-lounge-applet-2.0.3.ebuild 747
+MD5 fd23a9403a88f9570d249e011e8d30ef quick-lounge-applet-2.1.1.ebuild 755
+MD5 c953f96636df8ea49a3f37eb269f884f quick-lounge-applet-2.2.0.ebuild 763
 MD5 69b43b9da3d500333967bd90d6a3d818 files/digest-quick-lounge-applet-2.0.3 78
-MD5 4c41c4372d9df0674f8f23288160d814 files/digest-quick-lounge-applet-2.1.1 78
 MD5 d9c7c910ff5bb92a4e87aaaf3d85c37f files/digest-quick-lounge-applet-2.2.0 78
+MD5 4c41c4372d9df0674f8f23288160d814 files/digest-quick-lounge-applet-2.1.1 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4/LBCHk4+ZoBpvsRAl2sAKC8FEMne2n1QSuj8u87ap7e3roBVgCgsimI
+uPgaX8XbljjW5w7gFNeWcQ8=
+=d23W
+-----END PGP SIGNATURE-----
