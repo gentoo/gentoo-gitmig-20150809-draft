@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/stat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/stat/ChangeLog,v 1.6 2003/03/24 02:48:44 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/stat/ChangeLog,v 1.7 2003/09/07 06:43:20 agenkin Exp $
+
+*stat-3.3 (07 Sep 2003)
+
+  07 Sep 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.  Closees #27803.
 
 *stat-2.5 (2002-02-08)
 
