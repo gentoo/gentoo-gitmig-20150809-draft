@@ -1,20 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c3631fd0a349a41062dde501ae84ea21 ChangeLog 1582
-MD5 a276ad27e531666b0fb0931efc3ca9ce awesfx-0.4.4.ebuild 1520
-MD5 b32d7a292377152f131db8676889ea07 awesfx-0.5.0b.ebuild 1166
+MD5 0310fe90254ad828d1335b7d1857eb06 awesfx-0.5.0d.ebuild 1257
+MD5 cd1899ca9ea9b3e1c9375078017ab71c ChangeLog 1822
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 02d5503276a2387a75fa187b22861d48 awesfx-0.5.0c.ebuild 1161
+MD5 dfd5307d4b79d0f895c8b2ee0b1d59e9 awesfx-0.5.0c.ebuild 1255
 MD5 f2718083317de4e006954291d3da6f4e files/awesfx-0.5.0b-configure-noalsa.patch 7814
 MD5 a2f1d07a053240ebc621d1834c928e6f files/awesfx-0.5.0b-makefile-noalsa.patch 3507
-MD5 0510ed427cbce41e3cccf010d8a2b053 files/digest-awesfx-0.4.4 64
-MD5 65393e10260fc71e0093e7337c7703c9 files/digest-awesfx-0.5.0b 65
+MD5 a1f68aeea912a0dfbc5ed004d02b2bda files/digest-awesfx-0.5.0d 65
 MD5 413587b49e630a9b899620cc979a5a5d files/digest-awesfx-0.5.0c 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBbvAvArHZZzCEUG0RAlnhAJ973pQBRMh45MPggrr3wN9OzbNM4QCfRf4i
-yWKSDcTpueLHNDWnS0mgyNg=
-=FTSh
+iD8DBQFBtu4vArHZZzCEUG0RAlNbAJ9OlmvT8LXtbUTik47Iooftz9OD6QCdF1hO
+tlWnCNMDuhJ8Go5q/TKVCTA=
+=68Fq
 -----END PGP SIGNATURE-----

@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/awesfx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.14 2004/10/14 21:29:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.15 2004/12/08 12:05:53 eradicator Exp $
+
+*awesfx-0.5.0d (08 Dec 2004)
+
+  08 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -awesfx-0.4.4.ebuild, -awesfx-0.5.0b.ebuild, awesfx-0.5.0c.ebuild,
+  +awesfx-0.5.0d.ebuild:
+  Version bump.  Added to ~sparc.  Removing old versions.
 
   14 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   awesfx-0.4.4.ebuild:
