@@ -1,10 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.2 2003/03/03 13:09:49 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.3 2003/03/15 10:56:11 jje Exp $
 
 DESCRIPTION="Gramofile"
 HOMEPAGE="http://panic.et.tudelft.nl/~costar/gramofile/"
-SRC_URI="http://panic.et.tudelft.nl/~costar/gramofile/${P}.tar.gz"
+SRC_URI="http://panic.et.tudelft.nl/~costar/gramofile/${P}.tar.gz
+        http://panic.et.tudelft.nl/~costar/gramofile/tappin3a.patch
+        http://panic.et.tudelft.nl/~costar/gramofile/tappin3b.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,6 +17,13 @@ IUSE=""
 DEPEND="sys-libs/ncurses"
 
 S=${WORKDIR}/${P}
+
+src_unpack() {
+        unpack ${P}.tar.gz
+        cd ${S}
+        patch < ${DISTDIR}/tappin3a.patch
+        patch < ${DISTDIR}/tappin3b.patch
+}
 
 src_compile() {
 	sed -e "s/CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER/CFLAGS \= -Wall `echo ${CFLAGS}` -DTURBO_MEDIAN -DTURBO_BUFFER/" Makefile > Makefile.new

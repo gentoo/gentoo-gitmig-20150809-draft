@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/gramofile
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.2 2003/03/03 13:09:49 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.3 2003/03/15 10:56:11 jje Exp $
 
 *gramofile-1.6 (02 Mar 2003)
+
+  15 Mar 2003; jje gramofile-1.6.ebuild:
+  Added two patches for plugin filters.
+  
+  Submitted by: Roland "Robelix" Obermayer
 
   03 Mar 2003; <vladimir@gentoo.org> gramofile-1.6.ebuild:
   Fixed small LICENSE problem
