@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/paragui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.15 2004/07/23 22:45:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.16 2004/08/31 22:38:50 mr_bones_ Exp $
+
+  31 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> paragui-1.1.7.ebuild:
+  explict deps; docs tidy
 
   23 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> paragui-1.1.7.ebuild:
   needs >=dev-libs/libsigc++-1.2.5 (bug #58077)
