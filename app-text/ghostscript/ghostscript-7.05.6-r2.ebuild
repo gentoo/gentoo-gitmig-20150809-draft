@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r2.ebuild,v 1.12 2005/03/04 11:43:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r2.ebuild,v 1.13 2005/03/04 20:33:07 lanius Exp $
 
 inherit eutils
 
@@ -92,6 +92,6 @@ src_install() {
 	fi
 
 	# bug #83876, collision with gcc
-	rm -f ${D}/usr/share/man/de/man1/ansi2knr.1.gz
-	rm -f ${D}/usr/share/man/man1/ansi2knr.1.gz
+	rm -f ${D}/usr/share/man/de/man1/ansi2knr.1
+	rm -f ${D}/usr/share/man/man1/ansi2knr.1
 }
