@@ -1,13 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.9.6.1-r1.ebuild,v 1.1 2002/01/03 15:52:06 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.9.6.1-r1.ebuild,v 1.2 2002/02/10 18:23:36 verwilst Exp $
 
 S=${WORKDIR}/${P}/abi
 DESCRIPTION="Text processor"
 SRC_URI="http://download.sourceforge.net/abiword/abiword-${PV}.tar.gz"
 HOMEPAGE="http://www.abisource.com"
-
+SLOT="0"
 DEPEND="virtual/glibc
 	>=sys-devel/gcc-2.95.2
 	=media-libs/freetype-1.3.1-r3
