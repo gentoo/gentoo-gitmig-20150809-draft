@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.2 2002/04/02 05:09:13 seemant Exp $
+
+*util-linux-2.11l-r1 (1 Apr 2002)
+
+  1 Apr 2002; Seemant Kulleen <seemant@gentoo.org> util-linux-2.11l-r1.ebuild :
+
+  USE dependent nls compilation.
 
 *util-linux-2.11l (1 Feb 2002)
 
