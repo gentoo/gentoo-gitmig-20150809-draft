@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/scsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.7 2003/02/12 05:21:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.8 2003/03/16 05:37:15 mkennedy Exp $
+
+*scsh-0.6.3 (15 Mar 2003)
+
+  15 Mar 2003; Matthew Kennedy <mkennedy@gentoo.org> scsh-0.6.3.ebuild:
+  Minor version bump. Moved from /bin to /usr/bin. Documentation fix.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
