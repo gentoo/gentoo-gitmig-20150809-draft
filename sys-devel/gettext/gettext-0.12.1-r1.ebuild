@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.17 2004/07/15 03:28:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.18 2004/07/19 17:27:15 usata Exp $
 
 inherit eutils
 
@@ -66,6 +66,9 @@ src_install() {
 
 	# Again, installed by glibc
 	rm -rf ${D}/usr/share/locale/locale.alias
+
+	# /usr/lib/charset.alias is provided by Mac OS X
+	use macos && rm -f ${D}/usr/lib/charset.alias
 
 	if [ -d ${D}/usr/doc/gettext ]
 	then
