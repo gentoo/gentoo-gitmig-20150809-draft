@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r10.ebuild,v 1.1 2004/08/08 18:47:27 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r11.ebuild,v 1.1 2004/08/09 23:38:45 plasmaroo Exp $
 
 IUSE="crypt"
 
@@ -30,7 +30,7 @@ S=${WORKDIR}/linux-${KV}
 DESCRIPTION="This kernel stays up to date with current kernel -pre's, with recent ACPI,
 	EVMS, Win4Lin, aic79xx, Super FreeS/WAN, preempt, and various hardware fixes."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 mirror://gentoo/patches-${KV/r10/r1}.tar.bz2
+	 mirror://gentoo/patches-${KV/r11/r1}.tar.bz2
 	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-2.4.26-CAN-2004-0415.patch"
 KEYWORDS="x86 -ppc -sparc"
 SLOT="${KV}"
@@ -38,7 +38,7 @@ SLOT="${KV}"
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
-	cd ${KV/r10/r1} || die
+	cd ${KV/r11/r1} || die
 	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
@@ -68,4 +68,5 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0685.patch || die "Failed to add the CAN-2004-0685 patch!"
 	epatch ${FILESDIR}/${PN}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	epatch ${FILESDIR}/${PN}.MKI.CompileFix.patch || die "Failed to apply MKI compilefix patch!"
+	epatch ${FILESDIR}/${PN}.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
 }

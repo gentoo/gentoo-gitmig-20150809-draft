@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.49 2004/08/08 18:47:27 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.50 2004/08/09 23:38:45 plasmaroo Exp $
+
+*gs-sources-2.4.25_pre7-r11 (10 Aug 2004)
+
+  10 Aug 2004; <plasmaroo@gentoo.org> -gs-sources-2.4.25_pre7-r10.ebuild,
+  +gs-sources-2.4.25_pre7-r11.ebuild, +files/gs-sources.cmdlineLeak.patch:
+  Version bump for the /proc/cmdline leak vulnerability; bug #59905.
 
 *gs-sources-2.4.25_pre7-r10 (08 Aug 2004)
 
