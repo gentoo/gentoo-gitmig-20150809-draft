@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.6 2004/07/03 16:41:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.7 2004/07/03 18:25:06 kugelfang Exp $
+
+  03 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> blas-config-1.0.0.ebuild:
+  Marked ~alpha, kloeri tested.
 
   03 Jul 2004; Ferris McCormick <fmccor@gentoo.org> blas-config-1.0.0.ebuild:
   add ~sparc keyword (needed for blas-atlas).

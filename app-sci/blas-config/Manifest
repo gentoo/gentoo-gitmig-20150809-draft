@@ -1,5 +1,5 @@
-MD5 c60465240d0eb722d827b1cd50c30b64 ChangeLog 857
-MD5 8bacf34a61f1793823b57c7aadbb61e0 blas-config-1.0.0.ebuild 599
+MD5 2e070f2713677e3c8da08482bd2321ac ChangeLog 971
+MD5 fc4cdd744ad02f7c1b5cc329b34dbf45 blas-config-1.0.0.ebuild 609
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 e084269dce220d05fa189c9d7baace1f files/blas-config.bz2 1900
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-blas-config-1.0.0 0
