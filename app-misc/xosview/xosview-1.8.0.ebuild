@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xosview/xosview-1.8.0.ebuild,v 1.7 2003/08/28 09:15:43 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xosview/xosview-1.8.0.ebuild,v 1.8 2003/10/11 11:55:33 brandy Exp $
 
 DESCRIPTION="X11 operating system viewer"
 SRC_URI="http://www.ibiblio.org/pub/Linux/system/status/xstatus/${P}.tar.gz"
@@ -36,4 +36,5 @@ src_install() {
 	doins XOsview
 	into /usr
 	doman *.1
+	dodoc CHANGES COPYING README README.linux TODO
 }
