@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.12 2004/07/01 22:00:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.13 2004/07/08 01:49:20 mr_bones_ Exp $
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
@@ -76,7 +76,7 @@ src_install() {
 	insinto /usr/share/emacs/site-lisp
 	doins doc/gsdoc.el || die
 
-	if [ `use cjk` ] ; then
+	if use cjk ; then
 		dodir /usr/share/ghostscript/Resource
 		dodir /usr/share/ghostscript/Resource/Font
 		dodir /usr/share/ghostscript/Resource/CIDFont
