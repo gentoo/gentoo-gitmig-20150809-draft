@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.2.ebuild,v 1.1 2002/11/10 09:32:33 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.2.ebuild,v 1.2 2002/11/13 10:40:45 raker Exp $
 
 IUSE="gif nls png kde oss jpeg gnome"
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://ftp.windowmaker.org/pub/source/release/${P}.tar.gz
 HOMEPAGE="http://www.windowmaker.org/"
 
 DEPEND="virtual/x11
+	media-libs/hermes
 	>=media-libs/tiff-3.5.5
 	gif? ( >=media-libs/giflib-4.1.0-r3 
 		>=media-libs/libungif-4.1.0 )
@@ -21,7 +22,7 @@ RDEPEND="nls? ( >=sys-devel/gettext-0.10.39 )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 src_unpack() {
 	unpack ${A}
@@ -68,7 +69,6 @@ src_compile() {
 
 	econf \
 		--sysconfdir=/etc/X11 \
-		--localstatedir=/var/state/WindowMaker \
 		--with-x \
 		--enable-newstyle \
 		--enable-superfluous \

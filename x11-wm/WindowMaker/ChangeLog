@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/WindowMaker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.18 2002/11/10 09:32:33 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.19 2002/11/13 10:40:45 raker Exp $
 
 *WindowMaker-0.80.2 (10 Nov 2002)
+
+  13 Nov 2002; Nick Hadaway <raker@gentoo.org> WindowMaker-0.80.2.ebuild :
+  Marked all arches stable.
 
   10 Nov 2002; Nick Hadaway <raker@gentoo.org> WindowMaker-0.80.2.ebuild :
   Version bump.  Fixes a potential buffer overflow.
