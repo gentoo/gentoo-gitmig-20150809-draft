@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.90-r1.ebuild,v 1.1 2004/03/08 19:42:19 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.90-r1.ebuild,v 1.2 2004/03/08 21:18:33 genone Exp $
 
 inherit eutils
 
@@ -28,8 +28,9 @@ src_unpack() {
 	rm Makefile*
 	cp "${FILESDIR}/Makefile.am-${PV}" ./Makefile.am
 	automake
-	# patch against hardcoded paths
+	# patches against hardcoded paths
 	epatch ${FILESDIR}/non-symlink-${PV}.patch
+	epatch ${FILESDIR}/info-location-${PV}.patch
 }
 
 src_compile() {
