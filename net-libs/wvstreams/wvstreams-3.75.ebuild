@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.7 2004/07/13 21:47:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.8 2004/08/12 22:39:30 aliz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://people.nit.ca/~jim/${P}.0.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc -alpha ~amd64 -hppa ~ppc"
-IUSE="gtk qt oggvorbis speex fam gdbm pam"
+IUSE="gtk qt oggvorbis speex fam gdbm pam fftw tcltk"
 
 RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	qt? ( >=x11-libs/qt-3.0.5 )
@@ -24,10 +24,21 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	pam? ( >=sys-libs/pam-0.75 )
 	>=sys-libs/zlib-1.1.4
-	dev-libs/openssl"
+	dev-libs/openssl
+	fftw? ( dev-libs/fftw )
+	tcltk? ( dev-lang/tcl
+		dev-lang/swig )"
 
 DEPEND="${RDEPEND}
 	virtual/libc"
+
+if has_version =dev-lang/tcl-8.3*; then
+	newdepend dev-lang/swig
+fi
+
+if has_version =dev-lang/tcl-8.4*; then
+	newdepend sys-devel/autoconf
+fi
 
 S=${WORKDIR}/${P}.0
 
@@ -36,6 +47,11 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-makefile.patch
 	epatch ${FILESDIR}/${P}-fPIC.patch
+
+	if has_version =dev-lang/tcl-8.4*; then
+		epatch ${FILESDIR}/${P}-tcl_8_4.patch
+		autoconf || die
+	fi
 }
 
 src_compile() {
@@ -48,6 +64,8 @@ src_compile() {
 		`use_with pam` \
 		`use_with qt` \
 		`use_with speex` \
+		`use_with fftw` \
+		`use_with tcltk tcl` \
 		--enable-verbose \
 		--with-bdb \
 		--with-openssl \

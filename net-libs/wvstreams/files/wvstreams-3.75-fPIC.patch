@@ -29,3 +29,12 @@
 +qt/wvqtstreamclone.fpic.o: include/wvqtstreamclone.moc
 +qt/wvqthook.fpic.o: include/wvqthook.moc
  
+--- vars.mk	2004-08-12 22:07:41.902797093 +0000
++++ vars.mk	2004-08-12 22:16:37.327729755 +0000
+@@ -181,3 +181,6 @@
+ libuniconf_tcl.so: bindings/uniconf_tcl.o -ltcl8.4 -luniconf
+ 
+ uniconf/daemon/uniconfdaemon: libuniconf.so libwvutils.so -ldb
++
++bindings/uniconf_tcl.o: bindings/uniconf_tcl.c
++	$(call wvcc ,$@,$<,$*,-fPIC)
