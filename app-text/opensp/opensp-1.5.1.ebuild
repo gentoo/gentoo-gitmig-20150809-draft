@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.1.ebuild,v 1.3 2005/03/14 00:36:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.1.ebuild,v 1.4 2005/03/15 03:18:31 vapier Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 MY_P=${P/opensp/OpenSP}
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/openjade/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips alpha ~arm ~hppa ~amd64 ia64 ~s390 ~ppc64"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 ~sparc x86"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
@@ -30,10 +30,6 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-
-	# Detect mips systems properly
-	gnuconfig_update
-
 	myconf="${myconf} --enable-http"
 	myconf="${myconf} --enable-default-catalog=/etc/sgml/catalog"
 	myconf="${myconf} --enable-default-search-path=/usr/share/sgml"
@@ -43,5 +39,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} pkgdocdir=/usr/share/doc/${PF} install || die
+	make DESTDIR="${D}" pkgdocdir=/usr/share/doc/${PF} install || die
 }
