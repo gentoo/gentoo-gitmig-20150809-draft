@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ekg2
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.9 2004/11/06 20:41:55 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.10 2004/11/18 19:30:29 sekretarz Exp $
+
+  18 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> ekg2-20041104.ebuild:
+  Keyworded ~amd64
 
 *ekg2-20041104 (06 Nov 2004)
 
