@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nforce-net
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.9 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.10 2003/10/22 20:55:42 lanius Exp $
+
+*nforce-net-1.0.0261-r2 (22 Oct 2003)
+
+  22 Oct 2003; Heinrich Wendel <lanius@gentoo.org>
+  nforce-net-1.0.0261-r2.ebuild,
+  files/nforce-net-1.0.0261-kernel-2.6.patch.gz:
+  added kernel 2.5/2.6 compile fix - fixed typos
 
 *nforce-net-1.0.0261-r1 (12 Jun 2003)
 
