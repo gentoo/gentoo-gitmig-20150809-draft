@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.4 2004/06/24 22:33:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.5 2004/07/17 17:22:45 tgall Exp $
+
+  17 Jul 2004; Tom Gall <tgall@gentoo.org> sl-3.03.ebuild:
+  stable on ppc64, bug #55683
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> sl-3.03.ebuild:
   Fix use invocation
