@@ -1,19 +1,19 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.1.10.ebuild,v 1.1 2004/11/16 20:29:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.6.0.ebuild,v 1.1 2005/02/25 02:45:37 squinky86 Exp $
 
 IUSE="gtk"
 DESCRIPTION="Limewire Java Gnutella client"
 HOMEPAGE="http://www.limewire.com"
-SRC_URI="http://dev.gentoo.org/~squinky86/files/LimeWireLinux-${PV}.tgz"
+SRC_URI="http://dev.gentoo.org/~squinky86/files/LimeWireOther-${PV}.zip"
 LICENSE="GPL-2 Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-DEPEND="virtual/jre
-	virtual/x11"
-REDPEND="${DEPEND}
+DEPEND="app-arch/unzip"
+RDEPEND="virtual/jre
+	virtual/x11
 	gtk? ( >=x11-libs/gtk+-2.4 )"
-S=${WORKDIR}
+S=${WORKDIR}/LimeWire
 PREFIX="/opt/limewire"
 
 src_compile() {
@@ -42,6 +42,4 @@ src_install() {
 pkg_postinst() {
 	use gtk || ewarn "You will probably not be able to use the gtk frontend."
 	einfo " Finished installing LimeWire into ${PREFIX}"
-	einfo " To start LimeWire, run:"
-	einfo "   $ limewire"
 }
