@@ -1,0 +1,271 @@
+diff -Nru DarwinStreamingSrc5.0.orig/WebAdmin/src/streamingadminserver.pl DarwinStreamingSrc5.0/WebAdmin/src/streamingadminserver.pl
+--- DarwinStreamingSrc5.0.orig/WebAdmin/src/streamingadminserver.pl	2003-10-27 19:43:24.000000000 -0500
++++ DarwinStreamingSrc5.0/WebAdmin/src/streamingadminserver.pl	2004-01-29 20:12:30.000000000 -0500
+@@ -78,7 +78,7 @@
+         $defaultConfigPath = "/Library/QuickTimeStreaming/Config/streamingadminserver.conf";
+ }
+ else {
+-	$defaultConfigPath = "/etc/streaming/streamingadminserver.conf";
++	$defaultConfigPath = "/etc/dss/streamingadminserver.conf";
+ }
+ 
+ $debug = 0;
+@@ -229,8 +229,8 @@
+ else {
+ 	%vital = ("port", 1220,
+ 	  "sslport", 1240,
+-	  "root", "/var/streaming/AdminHtml",
+-      "plroot", "/var/streaming/playlists/",
++	  "root", "/var/lib/dss/admin",
++      "plroot", "/var/lib/dss/media/playlists/",
+ 	  "server", "DSS 5.0 Admin Server/1.0",
+ 	  "index_docs", "index.html parse_xml.cgi index.htm index.cgi",
+ 	  "addtype_html", "text/html",
+@@ -245,28 +245,28 @@
+ 	  "realm", "DSS Admin Server",
+ 	  "qtssIPAddress", "localhost",
+ 	  "qtssPort", "554",
+-	  "qtssName", "/usr/local/sbin/DarwinStreamingServer",
++	  "qtssName", "/usr/sbin/DarwinStreamingServer",
+       "qtssAutoStart", "1",
+-	  "logfile", "/var/streaming/logs/streamingadminserver.log",
++	  "logfile", "/var/log/dss/streamingadminserver.log",
+ 	  "log", "1",
+ 	  "logclear", "0",
+ 	  "logtime", "168",
+ 	  "messagesfile", "messages",
+ 	  "gbrowse", "0",
+ 	  "ssl", "0",
+-	  "crtfile", "/etc/streaming/streamingadminserver.pem",
+-	  "keyfile", "/etc/streaming/streamingadminserver.pem",
++	  "crtfile", "/etc/dss/streamingadminserver.pem",
++	  "keyfile", "/etc/dss/streamingadminserver.pem",
+ 	  #"keypasswordfile", "",
+-	  "qtssQTPasswd", "/usr/local/bin/qtpasswd",
+-	  "qtssPlaylistBroadcaster", "/usr/local/bin/PlaylistBroadcaster",
+-	  "qtssMP3Broadcaster", "/usr/local/bin/MP3Broadcaster",
++	  "qtssQTPasswd", "/usr/bin/qtpasswd",
++	  "qtssPlaylistBroadcaster", "/usr/bin/PlaylistBroadcaster",
++	  "qtssMP3Broadcaster", "/usr/bin/MP3Broadcaster",
+ 	  "helpurl", "http://helpqt.apple.com/dssWebAdminHelpR3/dssWebAdmin.help/DSSHelp.htm",
+ 	  "tempfileloc", "/tmp",
+ 	  "qtssAdmin", "streamingadmin",
+ 	  "cacheMessageFiles", "0",
+ 	  "pidfile", "/var/run/streamingadminserver.pid",
+-	  "runUser", "qtss",
+-	  "runGroup", "qtss",
++	  "runUser", "nobody",
++	  "runGroup", "nogroup",
+ 	  "cookieExpireSeconds", "600"
+ 	  );
+ }
+diff -Nru DarwinStreamingSrc5.0.orig/WebAdmin/streamingadminserver.conf DarwinStreamingSrc5.0/WebAdmin/streamingadminserver.conf
+--- DarwinStreamingSrc5.0.orig/WebAdmin/streamingadminserver.conf	2001-08-10 16:29:43.000000000 -0400
++++ DarwinStreamingSrc5.0/WebAdmin/streamingadminserver.conf	2004-01-29 22:30:16.000000000 -0500
+@@ -6,11 +6,11 @@
+ 
+ # The root directory for all the html and cgi files
+ # The path should be absolute
+-root=/Library/QuickTimeStreaming/AdminHtml
++root=/var/lib/dss/admin
+ 
+ # The root directory for play lists managed by the adminserver
+ # The path should be absolute
+-plroot=/Library/QuickTimeStreaming/Playlists
++plroot=/var/lib/dss/media/playlists
+ 
+ # The host name of the streaming admin server
+ host=foo.bar.com
+@@ -22,7 +22,7 @@
+ qtssPort=554
+ 
+ # The name of the streaming server binary
+-qtssName=/usr/sbin/QuickTimeStreamingServer
++qtssName=/usr/sbin/DarwinStreamingServer
+ 
+ # If set to 1, admin server will start qtss when it is launched
+ # If set to 0, qtss will not be launched when the admin starts up
+@@ -41,7 +41,7 @@
+ log=1
+ 
+ # The full path of the streaming admin server log file
+-logfile=/Library/QuickTimeStreaming/Logs/streamingadminserver.log
++logfile=/var/log/dss/streamingadminserver.log
+ 
+ # Number of hours before which logs are rolled
+ logtime=168
+diff -Nru DarwinStreamingSrc5.0.orig/defaultPaths.h DarwinStreamingSrc5.0/defaultPaths.h
+--- DarwinStreamingSrc5.0.orig/defaultPaths.h	2003-11-12 20:02:58.000000000 -0500
++++ DarwinStreamingSrc5.0/defaultPaths.h	2004-01-29 18:41:44.000000000 -0500
+@@ -58,11 +58,11 @@
+ 
+ # define DEFAULTPATHS_DIRECTORY_SEPARATOR	"/"
+ 
+-# define DEFAULTPATHS_ETC_DIR			"/etc/streaming/"
+-# define DEFAULTPATHS_ETC_DIR_OLD		"/etc/"
+-# define DEFAULTPATHS_SSM_DIR			"/usr/local/sbin/StreamingServerModules/"
+-# define DEFAULTPATHS_LOG_DIR			"/var/streaming/logs/"
+-# define DEFAULTPATHS_MOVIES_DIR        "/usr/local/movies/"
++# define DEFAULTPATHS_ETC_DIR			"/etc/dss/"
++# define DEFAULTPATHS_ETC_DIR_OLD		"/etc/dss/"
++# define DEFAULTPATHS_SSM_DIR			"/usr/lib/dss/"
++# define DEFAULTPATHS_LOG_DIR			"/var/log/dss/"
++# define DEFAULTPATHS_MOVIES_DIR        "/var/lib/dss/media/"
+ # define DEFAULTPATHS_PID_DIR           "/var/run/"
+ 
+ #endif
+diff -Nru DarwinStreamingSrc5.0.orig/qtaccess DarwinStreamingSrc5.0/qtaccess
+--- DarwinStreamingSrc5.0.orig/qtaccess	2003-11-12 20:02:58.000000000 -0500
++++ DarwinStreamingSrc5.0/qtaccess	2004-01-29 17:15:13.000000000 -0500
+@@ -26,7 +26,7 @@
+ # If not given, the default filename is /etc/streaming/qtusers for POSIX
+ # usage: AuthUserFile <user filename>
+ #AuthUserFile /etc/streaming/qtusers
+-AuthUserFile /Library/QuickTimeStreaming/Config/qtusers
++AuthUserFile /etc/dss/qtusers
+ 
+ # AuthGroupFile: The filename that contains the groups and the 
+ # users that belong to each group
+@@ -34,7 +34,7 @@
+ # If not given, the default filename is /etc/streaming/qtgroups for POSIX
+ # usage: AuthGroupFile  <group filename>
+ #AuthGroupFile  /etc/streaming/qtgroups
+-AuthGroupFile /Library/QuickTimeStreaming/Config/qtgroups
++AuthGroupFile /etc/dss/qtgroups
+ 
+ # require user: The names next to this specify which user 
+ # is allowed to access the media in this folder
+@@ -60,8 +60,8 @@
+ # usage: <Limit [READ|WRITE] ..> ... </Limit>
+ <Limit WRITE>
+  AuthName "streaming server broadcaster realm"
+- AuthUserFile /Library/QuickTimeStreaming/Config/qtbroadcastusers
+- AuthGroupFile /Library/QuickTimeStreaming/Config/qtbroadcastgroups
++ AuthUserFile /etc/dss/qtbroadcastusers
++ AuthGroupFile /etc/dss/qtbroadcastgroups
+  require group broadcaster
+ </Limit>
+ 
+diff -Nru DarwinStreamingSrc5.0.orig/qtgroups DarwinStreamingSrc5.0/qtgroups
+--- DarwinStreamingSrc5.0.orig/qtgroups	2003-11-12 20:02:58.000000000 -0500
++++ DarwinStreamingSrc5.0/qtgroups	2004-01-29 17:15:32.000000000 -0500
+@@ -1 +1 @@
+-admin: aGFja21l
++admin:
+diff -Nru DarwinStreamingSrc5.0.orig/qtusers DarwinStreamingSrc5.0/qtusers
+--- DarwinStreamingSrc5.0.orig/qtusers	2003-11-12 20:02:58.000000000 -0500
++++ DarwinStreamingSrc5.0/qtusers	2004-01-29 17:16:34.000000000 -0500
+@@ -1,2 +1 @@
+ realm Streaming Server
+-aGFja21l:0muym.z3yrHSw:fa000739887bb2871bcf0c9201b5ebd5
+diff -Nru DarwinStreamingSrc5.0.orig/streamingserver.xml-POSIX DarwinStreamingSrc5.0/streamingserver.xml-POSIX
+--- DarwinStreamingSrc5.0.orig/streamingserver.xml-POSIX	2003-11-12 20:03:01.000000000 -0500
++++ DarwinStreamingSrc5.0/streamingserver.xml-POSIX	2004-01-29 17:22:15.000000000 -0500
+@@ -1,5 +1,5 @@
+ <?xml version ="1.0"?>
+-<!-- This is a sample /etc/streaming/streamingserver.xml file -->
++<!-- This is a sample /etc/dss/streamingserver.xml file -->
+ <!-- The Document Type Definition (DTD) for the file -->
+ <!DOCTYPE CONFIGURATION [
+ <!ELEMENT CONFIGURATION (SERVER, MODULE*)>
+@@ -79,7 +79,7 @@
+ 	<PREF NAME="error_logfile_interval" TYPE="UInt32">7</PREF>
+ 
+ 	<!-- error log. A value of 0 means unlimited. -->
+-	<PREF NAME="error_logfile_dir">/var/streaming/logs</PREF>
++	<PREF NAME="error_logfile_dir">/var/log/dss</PREF>
+ 
+ 	<!-- Name of the error log file. -->
+ 	<PREF NAME="error_logfile_name">Error</PREF>
+@@ -88,7 +88,7 @@
+     <PREF NAME="pid_file">/var/run/DarwinStreamingServer.pid</PREF>
+ 
+ 	<!-- Path to the folder containing dynamic loadable server modules -->
+-	<PREF NAME="module_folder">/usr/local/sbin/StreamingServerModules</PREF>
++	<PREF NAME="module_folder">/usr/lib/dss</PREF>
+ 
+ 	<!-- If the server discovers it is serving more than its -->
+ 	<!-- allowed maximum bandwidth (using the average bandwidth computation) it -->
+@@ -117,7 +117,7 @@
+ 	<PREF NAME="bind_ip_addr">0</PREF>
+ 
+ 	<!-- Path to the root folder for movies. -->
+-	<PREF NAME="movie_folder">/usr/local/movies/</PREF>
++	<PREF NAME="movie_folder">/var/lib/dss/media</PREF>
+ 
+ 	<!-- Maximum amount of bandwidth the server is allowed to serve. -->
+ 	<!-- value is in kilobits/sec. While this limit is exceeded, new client requests. -->
+@@ -141,10 +141,10 @@
+ 	<PREF NAME="rtsp_timeout" TYPE="UInt32">0</PREF>
+ 
+ 	<!-- Run as this user -->
+-	<PREF NAME="run_user_name"></PREF>
++	<PREF NAME="run_user_name">nobody</PREF>
+ 
+ 	<!-- Member of this group -->
+-	<PREF NAME="run_group_name"></PREF>
++	<PREF NAME="run_group_name">nogroup</PREF>
+ 
+ 	<!-- The following 8 prefs implement the server's thinning algorithm. -->
+ 	<!-- They are all in milliseconds -->
+@@ -293,10 +293,10 @@
+ 	<PREF NAME="request_logfile_size" TYPE="UInt32">10240000</PREF>
+ 
+ 	<!-- Path to directory where access logs are stored. -->
+-	<PREF NAME="request_logfile_dir">/var/streaming/logs</PREF>
++	<PREF NAME="request_logfile_dir">/var/log/dss</PREF>
+ 
+ 	<!-- Name of the access log file. -->
+-	<PREF NAME="request_logfile_name">StreamingServer</PREF>
++	<PREF NAME="request_logfile_name">dss.log</PREF>
+ 
+ 	<!-- Either "true" or "false". Logs date time field -->
+     <!-- in GMT if true and in localtime if false-->
+@@ -364,7 +364,7 @@
+     <PREF NAME="mp3_request_logfile_name" >mp3_access</PREF>
+     
+ 	<!-- Path to directory where access logs are stored. -->
+-	<PREF NAME="mp3_request_logfile_dir">/var/streaming/logs</PREF>
++	<PREF NAME="mp3_request_logfile_dir">/var/log/dss</PREF>
+ 
+ 	<!-- Either "true" or "false". This toggles -->
+ 	<!-- mp3 access logging on and off. -->
+@@ -396,14 +396,14 @@
+ 	<PREF NAME="http_xfer_enabled" TYPE="Bool16" >false</PREF>
+ 	<!-- Path to the http download folder. All files -->
+ 	<!-- that are requested from this folder are sent via HTTP -->
+-	<PREF NAME="http_folder">/usr/local/movies/http</PREF>
++	<PREF NAME="http_folder">/var/lib/dss/media/http</PREF>
+ 	<!-- Either "true" or "false". This toggles http module -->
+ 	<!-- logging on and off. -->
+ 	<PREF NAME="http_logging" TYPE="Bool16">true</PREF>
+ 	<!-- Name of the http module log file. -->
+ 	<PREF NAME="http_logfile_name">Http</PREF>
+ 	<!-- Path to directory where http module logs are stored. -->
+-	<PREF NAME="http_logfile_dir">/var/streaming/logs</PREF>
++	<PREF NAME="http_logfile_dir">/var/log/dss</PREF>
+ 	<!-- Maximum allowed size in bytes for the http module log. A -->
+ 	<!-- value of 0 means unlimited. -->
+ 	<PREF NAME="http_logfile_size" TYPE="UInt32">256000</PREF>
+@@ -518,7 +518,7 @@
+ <MODULE NAME="QTSSRelayModule">
+ 	<!-- Relay preferences file. This file should be in the documented .rcf (Relay config file) -->
+ 	<!-- format. The Relay will use this to load up all relay streams -->
+-	<PREF NAME="relay_prefs_file">/etc/streaming/relayconfig.xml</PREF>
++	<PREF NAME="relay_prefs_file">/etc/dss/relayconfig.xml</PREF>
+ 
+ 	<!-- enter this URL into a web browser and get a web page with current stats on -->
+ 	<!-- your active relays -->
+@@ -530,10 +530,10 @@
+ 	<PREF NAME="modAccess_qtaccessfilename">qtaccess</PREF>
+ 
+ 	<!-- The default path and file name for the AccessModule's groups list -->
+-	<PREF NAME="modAccess_groupsfilepath">/etc/streaming/qtgroups</PREF>
++	<PREF NAME="modAccess_groupsfilepath">/etc/dss/qtgroups</PREF>
+ 
+ 	<!-- The default path and file name for the AccessModule's user list -->
+-	<PREF NAME="modAccess_usersfilepath">/etc/streaming/qtusers</PREF>
++	<PREF NAME="modAccess_usersfilepath">/etc/dss/qtusers</PREF>
+ </MODULE>
+ 
+ <MODULE NAME="QTSSAdminModule">

@@ -1,0 +1,6 @@
+MD5 f94d5571fed4c749bd8a2bca8dea131c darwin-streaming-server-5.0.1.1.ebuild 2342
+MD5 1d72e3bb6b520951368beaf2535148e8 ChangeLog 536
+MD5 8b641a93bbaf1ec1c756970f08d182fa metadata.xml 280
+MD5 b3dcdca775c369bc4960c04e52a07a6a files/dss.rc 453
+MD5 2d3d6663528484c8db4e42817f1e7e13 files/digest-darwin-streaming-server-5.0.1.1 76
+MD5 776dce903846a8b38866c304b5bebbc0 files/darwin-streaming-server-5.0.1.1-gentoo.patch 11567
