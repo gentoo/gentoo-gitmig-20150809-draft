@@ -1,0 +1,5 @@
+QTDIR=/usr/lib/qt2
+PATH=$QTDIR/bin
+ROOTPATH=$QTDIR/bin
+LDPATH=$QTDIR/lib
+MANPATH=$QTDIR/share/man
