@@ -259,8 +259,6 @@ dev-python/japanesecodecs
 
 # <foser@gentoo.org> (24 Jun 2003)
 # New GNOME cups stuff needs proper testing
-net-print/libgnomecups
-net-print/gnome-cups-manager
 =gnome-base/nautilus-2.2.4-r5
 
 # <liquidx@gentoo.org> (21 Jun 2003)
