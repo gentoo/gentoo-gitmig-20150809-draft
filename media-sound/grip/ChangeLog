@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.31 2004/04/01 14:23:30 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.32 2004/04/02 09:36:39 eradicator Exp $
+
+  02 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> grip-3.1.8.ebuild:
+  Added net-misc/curl dep.  Only 3.1.8 seems to need it.  Closes bug #46398.
 
   01 Apr 2004; Jason Eric Huebel <jhuebel@gentoo.org> grip-3.1.8.ebuild,
   files/grip-3.1.8-statuscheck-lp64.patch:
