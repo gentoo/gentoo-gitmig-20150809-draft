@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r4.ebuild,v 1.13 2003/09/26 20:40:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r4.ebuild,v 1.14 2003/12/09 17:35:21 lanius Exp $
 
 inherit gnuconfig
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc alpha"
 IUSE="nls tetex"
 
 DEPEND=">=dev-util/gperf-2.7.2
-	>=app-text/ghostscript-6.23
+	virtual/ghostscript
 	>=app-text/psutils-1.17
 	tetex? ( virtual/tetex )"
 RDEPEND="${DEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.6 2003/11/16 01:07:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.7 2003/12/09 17:35:21 lanius Exp $
 
 inherit gnuconfig eutils
 
@@ -19,10 +19,10 @@ DEPEND=">=sys-devel/automake-1.6
 	>=sys-devel/autoconf-2.57
 	>=dev-util/gperf-2.7.2
 	>=dev-util/yacc-1.9.1
-	>=app-text/ghostscript-6.23
+	virtual/ghostscript
 	>=app-text/psutils-1.17
 	tetex? ( virtual/tetex )"
-RDEPEND=">=app-text/ghostscript-6.23
+RDEPEND="virtual/ghostscript
 	>=app-text/psutils-1.17
 	tetex? ( virtual/tetex )
 	nls? ( sys-devel/gettext )"

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.21 2003/11/16 01:07:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.22 2003/12/09 17:35:21 lanius Exp $
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> a2ps-4.13b-r4.ebuild,
+  a2ps-4.13b-r5.ebuild, a2ps-4.13c.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
 
 *a2ps-4.13c (27 Sep 2003)
 

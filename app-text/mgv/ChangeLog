@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mgv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/ChangeLog,v 1.6 2003/03/29 22:52:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/ChangeLog,v 1.7 2003/12/09 17:34:39 lanius Exp $
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> mgv-3.1.5.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

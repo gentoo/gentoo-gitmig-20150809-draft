@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5.ebuild,v 1.16 2003/09/05 22:37:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5.ebuild,v 1.17 2003/12/09 17:34:39 lanius Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND=">=app-text/ghostscript-3.33
+DEPEND="virtual/ghostscript
 	virtual/motif"
 
 src_unpack() {

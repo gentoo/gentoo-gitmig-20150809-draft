@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.4.0.2.ebuild,v 1.4 2003/11/20 16:17:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.4.0.2.ebuild,v 1.5 2003/12/09 17:34:10 lanius Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc alpha ~sparc ~hppa ~amd64 ia64"
 RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/ORBit2-2.4.1
 	>=gnome-base/gnome-vfs-2.2
-	app-text/ghostscript
+	virtual/ghostscript
 	dev-libs/popt"
 
 DEPEND="${RDEPEND}
