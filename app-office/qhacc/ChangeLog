@@ -1,6 +1,9 @@
 # ChangeLog for app-office/qhacc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.20 2004/10/29 19:00:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.21 2004/12/11 18:28:06 kloeri Exp $
+
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> qhacc-3.2.1.ebuild:
+  Stable on alpha.
 
 *qhacc-3.2.2 (29 Oct 2004)
 

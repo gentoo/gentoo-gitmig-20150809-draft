@@ -1,18 +1,28 @@
-MD5 5a8152c0216efb49bb24a3188d04a7fa qhacc-3.2.1.ebuild 1902
-MD5 83c62fe0b0205752729a02acccfc3ec3 qhacc-2.9.ebuild 1224
-MD5 61a87e1d85536676f392b4b02f0dbce9 qhacc-2.9.9.ebuild 1183
-MD5 54bb00bdb2ef11c32664a49224c6ae82 qhacc-3.2.2.ebuild 1936
-MD5 27bf4edbb3e2334b0ed8dab2194a9b9d qhacc-2.9.8.ebuild 1099
-MD5 ff4877d5270ea711c3be1b4a4ff12c1b ChangeLog 2845
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10a98c19c3156f3ef4e7cfccd3195a5b ChangeLog 2939
+MD5 cc231cd13bdb8a57627c09c88d1f717e qhacc-3.2.1.ebuild 1903
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
-MD5 8411a52d54ebbb2038e2e08a9f43b238 files/qhacc-2.9-mysqlplugin-gcc-3.3.patch 982
-MD5 27867aca5f38687a4e9bd740005e9996 files/qhacc-3.2.2-sandbox.patch 21441
-MD5 83196bf0c0685733494d5f401c3d926f files/qhacc-2.9-gentoo.patch 7175
-MD5 5d4fad5c5dece54cf6376b1cbf836667 files/qhacc-3.2.1-mysql_plugin_libs.patch 834
-MD5 2f6b026212a58b32e415bede86478bba files/qhacc-3.2.1-psql_plugin_libs.patch 822
-MD5 703c28cb8b7fdc28c19e990234c7eea6 files/digest-qhacc-2.9.8 63
+MD5 83c62fe0b0205752729a02acccfc3ec3 qhacc-2.9.ebuild 1224
+MD5 27bf4edbb3e2334b0ed8dab2194a9b9d qhacc-2.9.8.ebuild 1099
+MD5 54bb00bdb2ef11c32664a49224c6ae82 qhacc-3.2.2.ebuild 1936
+MD5 61a87e1d85536676f392b4b02f0dbce9 qhacc-2.9.9.ebuild 1183
 MD5 6c5e6b109aa837699f48c94d253786ce files/digest-qhacc-2.9.9 63
+MD5 8411a52d54ebbb2038e2e08a9f43b238 files/qhacc-2.9-mysqlplugin-gcc-3.3.patch 982
 MD5 8ad038ef57072d0bd84121a74aa30c59 files/digest-qhacc-3.2.1 63
 MD5 4fe6fcff9b37a9455d289ec9e47705e6 files/digest-qhacc-3.2.2 63
-MD5 f9848845170083de3cf3420f27f240c1 files/digest-qhacc-2.9 61
 MD5 a17438e255e4c609d23b7db1e10761c9 files/qhacc-3.2.1-sandbox.patch 14903
+MD5 2f6b026212a58b32e415bede86478bba files/qhacc-3.2.1-psql_plugin_libs.patch 822
+MD5 5d4fad5c5dece54cf6376b1cbf836667 files/qhacc-3.2.1-mysql_plugin_libs.patch 834
+MD5 f9848845170083de3cf3420f27f240c1 files/digest-qhacc-2.9 61
+MD5 27867aca5f38687a4e9bd740005e9996 files/qhacc-3.2.2-sandbox.patch 21441
+MD5 703c28cb8b7fdc28c19e990234c7eea6 files/digest-qhacc-2.9.8 63
+MD5 83196bf0c0685733494d5f401c3d926f files/qhacc-2.9-gentoo.patch 7175
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBuzxAugEuf3OQ0akRAtB7AJ4zNGsy+c7u0hMwMh3BMbuvl+9QKACfdRDC
+0rYubunjGtJheCDqu2rQ1Fc=
+=5cbQ
+-----END PGP SIGNATURE-----
