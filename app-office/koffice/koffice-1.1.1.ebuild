@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.2 2001/12/18 19:52:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.3 2001/12/19 15:21:18 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -30,7 +30,8 @@ src_unpack() {
 
 src_compile() {
     
-    myconf="$myconf --enable-all"
+    CFLAGS="${CFLAGS/-fomit-frame-pointer}"
+    CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer}"
     kde_src_compile myconf configure
     cd ${S} 
     make LIBPYTHON="`python-config --libs`"
