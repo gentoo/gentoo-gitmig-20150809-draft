@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.54 2005/02/09 11:02:40 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.55 2005/02/09 11:31:09 hansmi Exp $
+
+  09 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> emacs-21.4.ebuild:
+  Stable on ppc.
 
   09 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> emacs-21.4.ebuild:
   Marked stable on amd64, bug 79686.
