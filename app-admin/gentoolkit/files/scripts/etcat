@@ -540,6 +540,7 @@ def uses(query):
 		iuse = portage.db["/"]["porttree"].dbapi.aux_get(curver,["IUSE"])
 	    except KeyError:
 		print "[ Error Occured. Ebuild not found for :", white(p), "]"
+		continue
 	else:
 	    print "[ No USE flags found for :", white(p), "]"
 	    continue

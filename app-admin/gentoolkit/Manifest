@@ -16,7 +16,7 @@ MD5 e4a164d551dbf4f0fc809dec2a57e858 files/portage-statistics/histogram.awk 308
 MD5 4465ed729e3e37c812bed62d9aa940e1 files/portage-statistics/pst-author-coverage 351
 MD5 50dccf92bb434c370a284d02ca63362b files/portage-statistics/pst-package-count 356
 MD5 8bd1ba99607f3b9c421aa0ba44e84fcc files/portage-statistics/pst-total-coverage 156
-MD5 311772537843d3d3d7d116c357f48b41 files/scripts/etcat 27386
+MD5 b14c642f0957806c0c0183b01f11f535 files/scripts/etcat 27397
 MD5 bbbb09c069b21bf1a373fd39139a5ed7 files/scripts/ChangeLog 1900
 MD5 4b6bed0e41c186eda2d830d89a84b344 files/scripts/dep-clean 6956
 MD5 ae1ecff118b5583eac443b6afbccb0fd files/scripts/dep-clean.1 5645
