@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jamin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/ChangeLog,v 1.3 2004/04/18 16:39:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/ChangeLog,v 1.4 2004/04/20 17:23:41 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> jamin-0.8.0.ebuild:
+  Added IUSE.
 
   18 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> jamin-0.8.0.ebuild:
   Adding amd64 keyword, closing #48176.

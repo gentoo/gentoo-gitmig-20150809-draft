@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.8 2004/03/07 05:03:26 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.9 2004/04/20 17:18:17 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  cdparanoia-3.9.8.ebuild:
+  Added IUSE.
 
   07 Mar 2004; Stephen P. Becker <geoman@gentoo.org> cdparanoia-3.9.8.ebuild:
   Added ~mips keyword.

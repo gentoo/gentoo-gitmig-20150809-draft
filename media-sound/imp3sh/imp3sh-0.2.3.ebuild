@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.3.ebuild,v 1.7 2004/04/20 08:01:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.3.ebuild,v 1.8 2004/04/20 17:22:59 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="flexible playlist manipulation shell and song player/streamer"
 HOMEPAGE="http://www.geocities.com/kman_can/"

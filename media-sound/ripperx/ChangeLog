@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ripperx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ChangeLog,v 1.7 2004/04/01 07:56:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ChangeLog,v 1.8 2004/04/20 17:32:47 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> ripperx-2.3.ebuild,
+  ripperx-2.4.ebuild, ripperx-2.5.ebuild, ripperx-2.6.0.ebuild,
+  ripperx-2.6.1.ebuild:
+  Added IUSE.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> ripperx-2.6.1.ebuild:
   nomirror.  Stable on x86.

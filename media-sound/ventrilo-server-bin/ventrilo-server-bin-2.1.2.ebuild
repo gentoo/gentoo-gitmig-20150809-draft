@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
+
+IUSE=""
 DESCRIPTION="The Ventrilo Voice Communication Server"
 HOMEPAGE="http://www.ventrilo.com/"
 SRC_URI="ventrilo_srv-2.1.2-Linux-i386.tar.gz"

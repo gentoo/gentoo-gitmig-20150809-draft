@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bladeenc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.7 2004/03/14 21:53:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.8 2004/04/20 17:16:01 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  bladeenc-0.94.2-r1.ebuild, bladeenc-0.94.2.ebuild:
+  Added IUSE.
 
   14 Mar 2004; Jason Wever <weeve@gentoo.org> bladeenc-0.94.2-r1.ebuild:
   Stable on sparc.

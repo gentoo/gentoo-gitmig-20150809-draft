@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ermixer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.14 2004/03/30 12:24:49 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.15 2004/04/20 17:19:51 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> ermixer-0.7.1.ebuild,
+  ermixer-0.7.ebuild:
+  Added IUSE.
 
   30 Mar 2004; Sven Blumenstein <bazik@gentoo.org> ermixer-0.8.ebuild:
   Fixed handling of qt USE variable, marked stable on sparc.

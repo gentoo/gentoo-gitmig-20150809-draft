@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmmsd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsd/ChangeLog,v 1.3 2004/04/08 07:55:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsd/ChangeLog,v 1.4 2004/04/20 17:40:49 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> xmmsd-0.3.ebuild:
+  Added IUSE.
 
   08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> xmmsd-0.3.ebuild:
   Removed explicit S=

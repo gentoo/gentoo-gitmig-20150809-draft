@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gradio/gradio-1.0.1.ebuild,v 1.7 2004/03/01 05:37:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gradio/gradio-1.0.1.ebuild,v 1.8 2004/04/20 17:21:05 eradicator Exp $
+
+IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK based app for radio tuner cards"

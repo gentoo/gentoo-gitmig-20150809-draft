@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rcenter 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/ChangeLog,v 1.4 2004/03/19 23:34:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/ChangeLog,v 1.5 2004/04/20 17:31:49 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> rcenter-0.6.2.ebuild:
+  Added IUSE.
 
   19 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> rcenter-0.6.1.ebuild,
   rcenter-0.6.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jmax
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.3 2004/03/31 18:21:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.4 2004/04/20 17:23:58 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> jmax-4.0.2.ebuild:
+  Added IUSE.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> jmax-4.0.2.ebuild:
   Stable x86.  Ebuild cleanup.

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/amp-0.7.6.ebuild,v 1.6 2004/03/31 18:02:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/amp-0.7.6.ebuild,v 1.7 2004/04/20 17:15:14 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="AMP - the Audio Mpeg Player"
 LICENSE="as-is"

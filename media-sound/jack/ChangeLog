@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jack
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.4 2004/03/21 04:40:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.5 2004/04/20 17:23:18 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> jack-3.0.0.ebuild:
+  Added IUSE.
 
   20 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> jack-2.99.9.ebuild,
   jack-3.0.0.ebuild:

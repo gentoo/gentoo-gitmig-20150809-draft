@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/cd-discid-0.6.ebuild,v 1.12 2004/03/01 05:37:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/cd-discid-0.6.ebuild,v 1.13 2004/04/20 17:16:53 eradicator Exp $
+
+IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="returns the disc id for the cd in the cd-rom drive"

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/id3ed-1.10.4.ebuild,v 1.7 2004/03/01 05:37:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/id3ed-1.10.4.ebuild,v 1.8 2004/04/20 17:22:42 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="ID3 tag editor for mp3 files"
 HOMEPAGE="http://www.azstarnet.com/~donut/programs/id3ed.html"

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/oggtst
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/oggtst/ChangeLog,v 1.5 2003/12/05 13:56:31 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/oggtst/ChangeLog,v 1.6 2004/04/20 17:29:57 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> oggtst-0.0.ebuild:
+  Added IUSE.
 
   05 Dec 2003; Jason Wever <weeve@gentoo.org> oggtst-0.0.ebuild:
   Marked stable on sparc to fix broken dependencies.

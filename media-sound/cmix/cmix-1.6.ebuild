@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmix/cmix-1.6.ebuild,v 1.7 2004/04/05 06:30:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmix/cmix-1.6.ebuild,v 1.8 2004/04/20 17:19:09 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="command line audio mixer"
 HOMEPAGE="http://cmix.sourceforge.net/"

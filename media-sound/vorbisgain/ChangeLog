@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/vorbisgain
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.6 2004/03/29 19:23:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.7 2004/04/20 17:39:22 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  vorbisgain-0.32-r1.ebuild, vorbisgain-0.32.ebuild,
+  vorbisgain-0.34-r1.ebuild:
+  Added IUSE.
 
   29 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   vorbisgain-0.34-r1.ebuild:

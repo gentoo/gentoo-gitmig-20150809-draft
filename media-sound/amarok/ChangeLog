@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.11 2004/04/14 13:03:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.12 2004/04/20 17:14:53 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> amarok-0.7.0.ebuild,
+  amarok-0.8.3.ebuild:
+  Added IUSE.
 
 *amarok-1.0_beta1 (12 Apr 2004)
 

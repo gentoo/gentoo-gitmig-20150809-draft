@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8.ebuild,v 1.22 2004/03/07 05:03:26 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8.ebuild,v 1.23 2004/04/20 17:18:17 eradicator Exp $
+
+IUSE=""
 
 MY_P=${PN}-III-alpha9.8
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.0_rc1-r1.ebuild,v 1.10 2004/02/19 18:49:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.0_rc1-r1.ebuild,v 1.11 2004/04/20 17:12:58 eradicator Exp $
+
+IUSE=""
 
 S="${WORKDIR}/${P/_rc/rc}"
 DESCRIPTION="Advanced Linux Sound Architecture tools"

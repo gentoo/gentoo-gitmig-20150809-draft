@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/shorten-3.5.0.ebuild,v 1.5 2004/03/01 05:37:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/shorten-3.5.0.ebuild,v 1.6 2004/04/20 17:34:34 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="fast, low complexity waveform coder (i.e. audio compressor)"
 HOMEPAGE="http://etree.org/shnutils/shorten/"

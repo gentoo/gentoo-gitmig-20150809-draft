@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.16 2004/03/31 18:49:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.17 2004/04/20 17:28:03 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> mixxx-0.9.2.ebuild,
+  mixxx-1.1-r1.ebuild, mixxx-1.1.ebuild:
+  Added IUSE.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> mixxx-1.2.1.ebuild:
   Stable on x86.

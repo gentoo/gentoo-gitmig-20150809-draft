@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/mp3kult-0.7-r1.ebuild,v 1.5 2004/04/01 07:44:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/mp3kult-0.7-r1.ebuild,v 1.6 2004/04/20 17:29:16 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="Mp3Kult organizes your mp3/ogg collection in a Mysql database."
 HOMEPAGE="http://mp3kult.sourceforge.net"

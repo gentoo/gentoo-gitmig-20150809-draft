@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/splay 
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.3 2003/07/12 20:30:59 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.4 2004/04/20 17:36:24 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> splay-0.9.5.2.ebuild:
+  Added IUSE.
 
 *splay-0.9.5.2 (03 Dec 2002)
 

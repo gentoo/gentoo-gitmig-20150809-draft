@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/gtick-0.2.13.ebuild,v 1.2 2004/03/07 09:56:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/gtick-0.2.13.ebuild,v 1.3 2004/04/20 17:21:57 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="a metronome application supporting different meters and speeds ranging"
 HOMEPAGE="http://www.antcom.de/gtick/"

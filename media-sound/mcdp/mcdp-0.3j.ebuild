@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.3j.ebuild,v 1.4 2004/03/31 18:40:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.3j.ebuild,v 1.5 2004/04/20 17:27:03 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="A very small console cd player"
 HOMEPAGE="http://www.mcmilk.de/projects/mcdp/"
