@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.38 2003/12/21 16:51:20 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.39 2003/12/23 04:01:56 kumba Exp $
+
+  22 Dec 2003; Joshua Kinard <kumba@gentoo.org> pam-0.77.ebuild:
+  Added a small gnuconfig block to the berkdb build bit, because pam-0.77 pulls in
+  db-4.1.x in most cases, and 4.1.x can't detect a mips64 system properly.
 
   21 Dec 2003; Brad House <brad_mssw@gentoo.org> pam-0.77.ebuild:
   mark stable on amd64
