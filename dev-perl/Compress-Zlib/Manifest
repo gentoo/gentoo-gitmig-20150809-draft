@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b60d833b7333a8fc5d8e2bac5fdfc976 ChangeLog 2932
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 d05fa64271efaf20aa8152b7f23a6f97 Compress-Zlib-1.16-r1.ebuild 539
 MD5 3c2b12f5f1f8a3d2e8e033d1dbef97b7 Compress-Zlib-1.16-r2.ebuild 539
 MD5 aa0a0865670747d44d3d5283ccc8fb60 Compress-Zlib-1.21.ebuild 576
 MD5 263daf08dde016557531036836100c93 Compress-Zlib-1.22.ebuild 574
-MD5 0f824c5ff455049e5099ba78250c0729 Compress-Zlib-1.33.ebuild 592
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 0deb2617c1ffbe867297c6b01d919ef8 ChangeLog 3037
+MD5 64b15f95790febbda6faa7c9263a54a3 Compress-Zlib-1.33.ebuild 584
 MD5 6375d631ad48eadd2125b4426cea4e41 files/digest-Compress-Zlib-1.16-r1 69
 MD5 6375d631ad48eadd2125b4426cea4e41 files/digest-Compress-Zlib-1.16-r2 69
 MD5 b2e9a3e9b4219c69577851c881120351 files/digest-Compress-Zlib-1.21 69
@@ -16,7 +16,7 @@ MD5 adfedebe00c231192055ecb16652ffae files/digest-Compress-Zlib-1.33 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB2oYOtG5z4I8BtQoRAnfzAJ93RNRfMXqrtRjew/aYQ3970CdWUQCfby4Z
-kPy+UFCWu6WcgOkGoUaNEQk=
-=2F+D
+iD8DBQFB8XoAtG5z4I8BtQoRAjUFAJ9mV75Lc3MRr+dPA8sDCLRyeEpb6ACeKJzL
+idkaTrlpYTPAX/9L+iMAx/I=
+=NMM7
 -----END PGP SIGNATURE-----
