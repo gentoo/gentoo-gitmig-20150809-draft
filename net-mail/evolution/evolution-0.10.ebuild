@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.10.ebuild,v 1.2 2001/05/27 02:58:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.10.ebuild,v 1.3 2001/05/29 00:21:12 blutgens Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,8 +11,9 @@ HOMEPAGE="http://www.helixcode.com"
 
 DEPEND=">=gnome-base/gnome-core-1.2.4
 	>=gnome-base/libunicode-0.4-r1
-	>=gnome-base/gal-0.5
+	>=gnome-base/gal-0.7
 	>=gnome-base/gtkhtml-0.8.3
+	>=gnome-libs/libxml2-2.3.5
 	ldap? ( >=net-nds/openldap-1.2 )"
 
 src_compile() {
