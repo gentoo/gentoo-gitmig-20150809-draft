@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r6.ebuild,v 1.1 2004/10/25 21:34:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r6.ebuild,v 1.2 2004/10/25 21:59:02 eradicator Exp $
 
 IUSE="mmx 3dnow esd nas oss"
 
@@ -16,7 +16,8 @@ SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+#KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="-*"
 
 RDEPEND="virtual/libc
 	 esd? ( media-sound/esound )
