@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.94 2005/01/18 13:18:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.95 2005/02/04 03:07:19 gregkh Exp $
+
+*udev-051 (03 Feb 2005)
+
+  03 Feb 2005; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +files/udev.conf.post_050, +udev-051.ebuild:
+  update to 051 release. This fixes (or should) the firmware oops. Also,
+  please note that the .permissions files are now gone! If you had custom ones
+  in the past, you need to move that logic into the .rules files (if not,
+  you'll just get root only access to the devices, so it's not a security
+  issue...)
 
   18 Jan 2005; Joshua Kinard <kumba@gentoo.org> udev-045.ebuild:
   Marked stable on mips.
