@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.68 2005/02/19 16:49:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.69 2005/02/21 02:37:33 dragonheart Exp $
+
+  21 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  cyrus-imapd-2.2.10-r1.ebuild, cyrus-imapd-2.2.10.ebuild,
+  cyrus-imapd-2.2.12.ebuild:
+  removing ucd-snmp as per bug #69451.
 
   19 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
   cyrus-imapd-2.2.12.ebuild:

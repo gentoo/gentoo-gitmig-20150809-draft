@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.10.ebuild,v 1.6 2005/02/13 16:23:39 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.10.ebuild,v 1.7 2005/02/21 02:37:33 dragonheart Exp $
 
 inherit eutils ssl-cert gnuconfig fixheadtails
 
@@ -19,7 +19,7 @@ RDEPEND=">=sys-libs/db-3.2
 	afs? ( >=net-fs/openafs-1.2.2 )
 	pam? ( >=sys-libs/pam-0.75 )
 	kerberos? ( virtual/krb5 )
-	snmp? ( virtual/snmp )
+	snmp? ( net-analyzer/net-snmp )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	drac? ( >=mail-client/drac-1.12-r1 )"
@@ -71,9 +71,6 @@ tcpd_flag_check() {
 }
 
 net-snmp_check() {
-	if has_version ucd-snmp; then
-		tcpd_flag_check net-analyzer/ucd-snmp
-	fi
 
 	if has_version net-snmp; then
 		tcpd_flag_check net-analyzer/net-snmp
