@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.20 2002/06/05 19:42:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.21 2002/06/05 21:14:28 azarah Exp $
+
+*mozilla-1.0-r1 (5 Jun 2002)
+  5 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  The 1.0_rc3-r5* adds gtk+-2.0 support, but breaks galeon, nautilus
+  and co.
 
 *mozilla-1.0 (5 Jun 2002)
   5 Jun 2002; Brandon Low <lostlogic@gentoo.org> :

@@ -22,9 +22,9 @@
 -//pref("font.directory.truetype.1", "/u/sam/tt_font");
 -//pref("font.directory.truetype.2", "/u/sam/tt_font2");
 -//pref("font.directory.truetype.3", "/u/sam/tt_font3");
-+pref("font.directory.truetype.1", "/usr/share/fonts/TrueType");
++pref("font.directory.truetype.1", "/usr/share/fonts/truetype");
 +pref("font.directory.truetype.2", "/usr/X11R6/lib/X11/fonts/TTF");
-+pref("font.directory.truetype.3", "/usr/X11R6/lib/X11/fonts/TrueType");
++pref("font.directory.truetype.3", "/usr/X11R6/lib/X11/fonts/truetype");
  
  // below a certian pixel size anti-aliased bitmat scaled fonts 
  // produce poor results
