@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.5-r1.ebuild,v 1.7 2003/09/07 02:46:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.5-r1.ebuild,v 1.8 2003/09/15 17:56:58 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 amd64 ~mips"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-DEPEND="sys-apps/xfsprogs"
+DEPEND="sys-fs/xfsprogs"
 
 src_unpack() {
 	unpack ${A}
