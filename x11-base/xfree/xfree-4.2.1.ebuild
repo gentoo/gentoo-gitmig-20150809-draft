@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.7 2002/09/19 21:15:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.8 2002/09/30 19:47:25 azarah Exp $
 
 inherit flag-o-matic gcc
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 
+PATCH_VER="1.0"
 FT2_VER="2.1.2"
 SISDRV_VER="050902-2"
 
@@ -18,7 +19,7 @@ SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
 HOMEPAGE="http://www.xfree.org"
 
 X_PATCHES="http://ftp.xfree86.org/pub/XFree86/${PV}/patches/${BASE_PV}-${PV}.diff.gz
-	mirror://gentoo/XFree86-${PV}-patches.tar.bz2"
+	mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/xf41sav.tgz
@@ -74,7 +75,7 @@ src_unpack() {
 
 	unpack X${MY_SV}src-{1,2,3}.tgz \
 		freetype-${FT2_VER}.tar.bz2 \
-		XFree86-${PV}-patches.tar.bz2
+		XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
 	# Deploy our custom freetype2.  We want it static for stability,
 	# and because some things in Gentoo depends the freetype2 that
@@ -139,29 +140,21 @@ src_unpack() {
 
 	# Various patches from all over
 	einfo "Applying various patches (bugfixes/updates)..."
-	for x in ${WORKDIR}/*.patch.bz2
-	do
-		if [ -f ${x} ]
-		then
-			einfo "  ${x##*/}..."
-			bzip2 -dc ${x} | patch -p2 > /dev/null || die "Failed Patch: ${x##*/}!"
-		fi
-	done
-	for x in ${FILESDIR}/${PV}-patches/*.patch.bz2
+	for x in ${WORKDIR}/*.patch.bz2 ${FILESDIR}/${PV}-patches/*.patch.bz2
 	do
 		# New ARCH dependant patch naming scheme...
 		# 
 		# Ranges:
 		#
-		#   1-19  - generic stuff
-		#   20-29 - x86 stuff
-		#   30-39 - ppc stuff
-		#   40-49 - sparc stuff
-		#   50-59 - sparc64 stuff
-		#   60-69 - alpha stuff
+		#   1-29  - generic stuff
+		#   30-39 - x86 stuff
+		#   40-49 - ppc stuff
+		#   50-59 - sparc stuff
+		#   60-69 - sparc64 stuff
+		#   70-79 - alpha stuff
 		#   90-?? - own stuff
 		#
-		# NOTE: can mabye thing about merging sparc and sparc64
+		# NOTE: can maybe thing about merging sparc and sparc64
 		#
 		if [ -f ${x} ] && \
 		   [ "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ]
