@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.0-r1.ebuild,v 1.13 2004/09/24 13:07:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.0-r1.ebuild,v 1.14 2004/10/17 11:52:35 usata Exp $
 
 inherit sgml-catalog
 
@@ -17,11 +17,10 @@ IUSE=""
 DEPEND=">=app-arch/unzip-5.41"
 RDEPEND="app-text/sgml-common"
 
+S="${WORKDIR}"
+
 src_unpack() {
-	mkdir ${S}
-	cd ${S}
 	unpack ${A}
-	cp ${FILESDIR}/${P}.Makefile Makefile
 	patch -b docbook.cat ${FILESDIR}/${P}-catalog.diff || die
 }
 
@@ -32,6 +31,10 @@ sgml-catalog_cat_include "/etc/sgml/sgml-docbook-${PV}.cat" \
 
 src_install () {
 
-	make DESTDIR=${D}/usr/share/sgml/docbook/sgml-dtd-${PV} install || die
+	insinto /usr/share/sgml/docbook/sgml-dtd-${PV}
+	doins *.dcl *.dtd *.mod
+	insinto /usr/share/sgml/docbook/sgml-dtd-${PV}/catalog
+	doins docbook.cat
+
 	dodoc *.txt
 }
