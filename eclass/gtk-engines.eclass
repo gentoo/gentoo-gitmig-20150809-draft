@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.9 2002/10/29 06:27:55 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.10 2002/11/11 04:53:49 leonardop Exp $
 
 # The gtk-engines eclass is inheritd by all gtk-engines-* ebuilds.
 
@@ -82,6 +82,9 @@ case "${ENGINE}" in
 		fi
 		;;
 		
+	"mist" )
+		MY_PN="GTK-mist-engine" ;;
+	
 	"thinice" )
 		[ "$SLOT" -eq "2" ] && MY_PN="gtk-thinice-engine" ;;
 		
@@ -100,6 +103,10 @@ MY_P="${MY_PN}-${PV}"
 if [ "X${ENGINE}" = "Xthinice" ] && [ "$SLOT" -eq "2" ]
 then
 	SRC_URI="http://thinice.sourceforge.net/${MY_P}.tar.gz"
+	
+elif [ "X${ENGINE}" = "Xmist" ]
+then
+	SRC_URI="http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/${MY_P}.tar.gz"
 	
 elif [ "X${ENGINE}" = "Xflat" ] && [ "$SLOT" -eq "2" ]
 then
@@ -169,6 +176,18 @@ gtk-engines_src_install() {
 		THEME_DIR=${D}/usr/share/themes \
 		ENGINE_DIR=${D}/usr/lib/gtk/themes/engines || \
 		die "Installation failed"
+
+	if [ "X${MY_PN}" = "XGTK-mist-engine" ]
+	then
+		if [ "$SLOT" -eq "2" ]
+		then
+			rm -rf ${D}/usr/lib/gtk ${D}/usr/share/themes/Mist/gtk
+		else
+			rm -rf ${D}/usr/lib/gtk-2.0 ${D}/usr/share/themes/Mist/gtk-2.0
+		fi
+
+		rm -rf ${D}/usr/share/themes/Mist/metacity-1
+	fi
 	
 	for doc in AUTHORS BUGS ChangeLog CONFIGURATION COPYING CUSTOMIZATION \
 		NEWS README THANKS TODO
