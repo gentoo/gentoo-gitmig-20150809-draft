@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.6.ebuild,v 1.5 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.6-r2.ebuild,v 1.1 2003/09/08 21:59:38 mholzer Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ fi
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/linux-sources"
 
@@ -62,24 +62,20 @@ S=${WORKDIR}/${P}
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff.bz2 || die
-	cp configure configure.orig
-	sed \
-		-e "s:-O2 -g:${CFLAGS}:" \
-		< configure.orig > configure
-	cp configure.in configure.in.orig
-	sed \
-		-e "s:-O2 -g:${CFLAGS}:" \
-		< configure.in.orig > configure.in
+	epatch ${FILESDIR}/${PF}-gentoo.diff.bz2 || die
+	sed	-i "s:-O2 -g:${CFLAGS}:" configure
+	sed -i "s:-O2 -g:${CFLAGS}:" configure.in
 }
 
-
 src_compile() {
-
 	#Let portage tell us where to put our modules
 	check_KV
 
-	econf \
+	./configure \
+		--host=${CHOST} \
+		--prefix=/usr \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
 		--with-kerneldir="/usr/src/linux" \
 		--with-moduledir="/lib/modules/${KV}/misc" \
 		--disable-manage-devices \
@@ -129,6 +125,8 @@ src_install() {
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/lircd
+
+	dohtml doc/html/*.html
 }
 
 pkg_postinst () {
@@ -144,4 +142,3 @@ pkg_postinst () {
 	einfo "variable to your needs."
 	einfo
 }
-

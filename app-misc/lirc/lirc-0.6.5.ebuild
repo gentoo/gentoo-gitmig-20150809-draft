@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.5.ebuild,v 1.5 2003/02/13 09:05:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.5.ebuild,v 1.6 2003/09/08 21:59:38 mholzer Exp $
 
+inherit eutils
 
 DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
 	signals of many (but not all) commonly used remote controls."
@@ -52,7 +53,7 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gentoo.diff.bz2 || die
 
 	# You need my little patch, because with it:
 	# - lirc compiles with gentoo 2.4.19pre-ac and vanilla kernels
