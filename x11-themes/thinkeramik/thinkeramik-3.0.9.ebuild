@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.0.9.ebuild,v 1.3 2004/04/08 22:27:13 centic Exp $
-inherit kde-base
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.0.9.ebuild,v 1.4 2004/04/16 01:29:15 caleb Exp $
+inherit kde
 
 need-kde 3.2
 

@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/thinkeramik
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.13 2004/04/08 22:27:13 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.14 2004/04/16 01:29:15 caleb Exp $
+
+  15 Apr 2004; Caleb Tennis <caleb@gentoo.org> -thinkeramik-2.7.2.ebuild,
+  -thinkeramik-2.7.3.ebuild, -thinkeramik-2.8.ebuild,
+  -thinkeramik-3.0.2.ebuild, -thinkeramik-3.0.6.ebuild,
+  -thinkeramik-3.0.8.ebuild:
+  Major cleanup
 
 *thinkeramik-3.1.2 (09 Apr 2004)
 
