@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-Which
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.2 2004/10/14 12:22:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.3 2004/11/01 17:21:10 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  File-Which-0.05.ebuild:
+  Marked ~ppc64; bug #66216
 
   14 Oct 2004; Aron Griffis <agriffis@gentoo.org> File-Which-0.05.ebuild:
   Mark stable for muttprint #66216
