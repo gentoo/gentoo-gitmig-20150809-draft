@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.59 2003/07/07 09:52:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.60 2003/07/09 18:07:25 george Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -18,6 +18,10 @@ app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet b
 app-sci/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 app-sci/octave-forge:ginac - Adds app-sci/ginac (symbolic math) support
 app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extentions) support
+app-sci/gmt:gmthigh - Adds high resolution bathimetry database
+app-sci/gmt:gmtfull - Full resolution bathimetry database;
+app-sci/gmt:gmttria - Non GNU triangulation method, more efficient;
+app-sci/gmt:gmtsuppl - Supplement functions for GMT;
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
