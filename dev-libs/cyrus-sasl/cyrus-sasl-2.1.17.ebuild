@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.13 2004/03/16 23:12:10 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.14 2004/03/21 11:34:55 kumba Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 alpha ia64 hppa ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 alpha ia64 hppa mips"
 IUSE="gdbm ldap mysql postgres kerberos static ssl java pam"
 
 DEPEND="virtual/glibc
