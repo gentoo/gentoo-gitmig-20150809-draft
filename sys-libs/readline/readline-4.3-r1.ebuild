@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r1.ebuild,v 1.2 2002/10/04 06:37:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r1.ebuild,v 1.3 2002/10/16 09:35:29 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Another cute console display library"
@@ -10,7 +10,7 @@ HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc sparc sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 # We must be sertain that we have a bash that is linked
 # to its internal readline, else we may get problems.
