@@ -1,5 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.11.ebuild,v 1.4 2003/04/19 01:15:00 blauwers Exp $
 
 DESCRIPTION="Libraries and utilities to communicate with a Psion palmtop via serial."
 HOMEPAGE="http://plptools.sourceforge.net"
@@ -12,7 +13,7 @@ DEPEND="virtual/glibc"
 S="${WORKDIR}/${P}"
 
 src_compile() {
-	patch -p0 < ${FILESDIR}/${P}-gentoo.patch | die "Patch failed!"
+	patch -p1 < ${FILESDIR}/${P}-gentoo.patch | die "Patch failed!"
 
 	local myconf
 
