@@ -1,0 +1,163 @@
+diff -ur linux-2.4.5-ac5/fs/reiserfs/bitmap.c linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs/bitmap.c
+--- linux-2.4.5-ac5/fs/reiserfs/bitmap.c	Fri Jun  8 17:18:19 2001
++++ linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs/bitmap.c	Fri Jun  8 17:59:25 2001
+@@ -155,7 +155,7 @@
+   journal_mark_dirty (th, s, sbh);
+ 
+   if (inode)
+-      DQUOT_FREE_BLOCK (s, inode, 1);
++      DQUOT_FREE_BLOCK (inode, 1);
+ 
+   s->s_dirt = 1;
+ }
+@@ -430,7 +430,7 @@
+ 	}
+        
+ 	if (inode && !for_prealloc) {
+-	    if (DQUOT_ALLOC_BLOCK(s, inode, 1)) {
++	    if (DQUOT_ALLOC_BLOCK(inode, 1)) {
+ 		for ( ; block_list_start != free_blocknrs; block_list_start++) {
+ 		    reiserfs_free_block (inode, th, *block_list_start);
+ 		    *block_list_start = 0;
+@@ -441,7 +441,7 @@
+ #ifdef REISERFS_PREALLOCATE
+ 	/* check quota doing preallocation */
+ 	if (inode && for_prealloc)
+-	    if (DQUOT_PREALLOC_BLOCK(s, inode, 1))
++	    if (DQUOT_PREALLOC_BLOCK(inode, 1))
+ 		/* note, we do not have to return QUOTA_EXCEEDED, we just stop
+                    preallocation */
+ 		break;
+@@ -461,7 +461,7 @@
+ 	    reiserfs_warning("vs-4150: reiserfs_new_blocknrs, block not free");
+ 	    reiserfs_restore_prepared_buffer(s, SB_AP_BITMAP(s)[i]) ;
+ 	    if (inode)
+-		DQUOT_FREE_BLOCK(s, inode, 1);
++		DQUOT_FREE_BLOCK(inode, 1);
+ 	    amount_needed++ ;
+ 	    continue ;
+ 	}    
+Only in linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs: bitmap.c.flc
+diff -ur linux-2.4.5-ac5/fs/reiserfs/inode.c linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs/inode.c
+--- linux-2.4.5-ac5/fs/reiserfs/inode.c	Fri Jun  8 17:18:19 2001
++++ linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs/inode.c	Fri Jun  8 18:01:55 2001
+@@ -1502,7 +1502,7 @@
+     // in-core one
+     reiserfs_check_path(&path_to_key) ;
+ 
+-    if (DQUOT_ALLOC_INODE(sb, inode)) {
++    if (DQUOT_ALLOC_INODE(inode)) {
+ 	sb->dq_op->drop(inode);
+ 	inode->i_nlink = 0;
+ 	iput(inode);
+Only in linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs: inode.c.flc
+diff -ur linux-2.4.5-ac5/fs/reiserfs/namei.c linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs/namei.c
+--- linux-2.4.5-ac5/fs/reiserfs/namei.c	Fri Jun  8 17:18:19 2001
++++ linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs/namei.c	Fri Jun  8 18:01:41 2001
+@@ -570,7 +570,7 @@
+ 
+     if (dir->i_size + paste_size > _ROUND_UP(dir->i_size, dir->i_sb->s_blocksize)) {
+ 	/* virtually, directory needs new block allocated */
+-	if (DQUOT_ALLOC_BLOCK(dir->i_sb, dir, 1))
++	if (DQUOT_ALLOC_BLOCK(dir, 1))
+ 	    return -EDQUOT;
+     }
+ 
+@@ -812,7 +812,7 @@
+ 
+ 
+     /* charge empty directory for empty dir item */
+-    if (DQUOT_ALLOC_BLOCK(dir->i_sb, inode, 1)) {
++    if (DQUOT_ALLOC_BLOCK(inode, 1)) {
+ 	inode->u.reiserfs_i.i_not_charged = 1;
+ 	inode->i_nlink = 0;
+ 	DEC_DIR_INODE_NLINK(dir);
+@@ -921,7 +921,7 @@
+     /* check quota */
+     if (DEH_SIZE + de.de_entrylen + dir->i_size > _ROUND_UP(dir->i_size, dir->i_sb->s_blocksize))
+ 	/* old size was over new block boundary, so, we think that directory decreased its quota */
+-	DQUOT_FREE_BLOCK(dir->i_sb, dir, 1);
++	DQUOT_FREE_BLOCK(dir, 1);
+ 
+     dir->i_blocks = i_size2i_blocks (dir);
+     reiserfs_update_sd (&th, dir);
+@@ -996,7 +996,7 @@
+     /* check quota */
+     if (DEH_SIZE + de.de_entrylen + dir->i_size > _ROUND_UP(dir->i_size, dir->i_sb->s_blocksize))
+ 	/* old size was over new block boundary, so, we think that directory decreased its quota */
+-	DQUOT_FREE_BLOCK(dir->i_sb, dir, 1);
++	DQUOT_FREE_BLOCK(dir, 1);
+ 
+     dir->i_blocks = i_size2i_blocks (dir);
+     dir->i_ctime = dir->i_mtime = CURRENT_TIME;
+@@ -1066,7 +1066,7 @@
+     }
+ 
+     /* charge symlink for body item */
+-    if (DQUOT_ALLOC_BLOCK(dir->i_sb, inode, 1)) {
++    if (DQUOT_ALLOC_BLOCK(inode, 1)) {
+ 	inode->u.reiserfs_i.i_not_charged = 1;
+ 	inode->i_nlink = 0;
+ 	pop_journal_writer(windex) ;
+@@ -1405,7 +1405,7 @@
+     if (DEH_SIZE + old_de.de_entrylen + old_dir->i_size > 
+ 	_ROUND_UP(old_dir->i_size, old_dir->i_sb->s_blocksize))
+ 	/* old size was over new block boundary, so, we think that directory decreased its quota */
+-	DQUOT_FREE_BLOCK(old_dir->i_sb, old_dir, 1);
++	DQUOT_FREE_BLOCK(old_dir, 1);
+ 
+     old_dir->i_blocks = i_size2i_blocks (old_dir);
+ 
+Only in linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs: namei.c.flc
+diff -ur linux-2.4.5-ac5/fs/reiserfs/stree.c linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs/stree.c
+--- linux-2.4.5-ac5/fs/reiserfs/stree.c	Fri Jun  8 17:18:19 2001
++++ linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs/stree.c	Fri Jun  8 18:00:57 2001
+@@ -1551,7 +1551,7 @@
+ /* USE_INODE_GENERATION_COUNTER */
+ #endif
+ 
+-    DQUOT_FREE_INODE(th->t_super, inode);
++    DQUOT_FREE_INODE(inode);
+     DQUOT_DROP(inode);
+ 
+     reiserfs_delete_solid_item (th, INODE_PKEY (inode));
+@@ -1580,7 +1580,7 @@
+     if (atomic_read(&p_s_inode->i_count) > 1 || 
+         !tail_has_to_be_packed (p_s_inode) || 
+ 	!page || p_s_inode->u.reiserfs_i.nopack ||
+-	DQUOT_ALLOC_BLOCK (p_s_sb, p_s_inode, 1)) { /* if block quota exceeded - skip conversion */
++	DQUOT_ALLOC_BLOCK (p_s_inode, 1)) { /* if block quota exceeded - skip conversion */
+ 	// leave tail in an unformatted node	
+ 	*p_c_mode = M_SKIP_BALANCING;
+ 	cut_bytes = n_block_size - (n_new_file_size & (n_block_size - 1));
+@@ -1792,7 +1792,7 @@
+     if (free_quota) {
+ 	if (!p_s_inode->u.reiserfs_i.i_not_charged)
+ 	    /* last direct item of file is deleted - free quota */
+-	    DQUOT_FREE_BLOCK (p_s_sb, p_s_inode, 1);
++	    DQUOT_FREE_BLOCK (p_s_inode, 1);
+ 	else {
+ 	    /* symlink did not eat its quota yet - do not free it */
+ 	    if (!S_ISLNK (p_s_inode->i_mode))
+@@ -1827,7 +1827,7 @@
+     set_le_key_k_type (ITEM_VERSION_1, INODE_PKEY (inode), TYPE_STAT_DATA);    
+ 
+     if (!inode->u.reiserfs_i.i_not_charged)
+-	DQUOT_FREE_BLOCK (inode->i_sb, inode, 1);
++	DQUOT_FREE_BLOCK (inode, 1);
+ }
+ 
+ 
+Only in linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs: stree.c.flc
+diff -ur linux-2.4.5-ac5/fs/reiserfs/tail_conversion.c linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs/tail_conversion.c
+--- linux-2.4.5-ac5/fs/reiserfs/tail_conversion.c	Fri Jun  8 17:18:19 2001
++++ linux-2.4.5-ac5-reiserfs-quota/fs/reiserfs/tail_conversion.c	Fri Jun  8 17:59:42 2001
+@@ -139,7 +139,7 @@
+     }
+ 
+     /* last direct item was deleted - free quota */
+-    DQUOT_FREE_BLOCK (sb, inode, 1);
++    DQUOT_FREE_BLOCK (inode, 1);
+     inode->u.reiserfs_i.i_first_direct_byte = U32_MAX;
+     return 0;
+ }
