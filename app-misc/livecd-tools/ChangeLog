@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.17 2004/06/25 10:58:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.18 2004/07/12 11:00:25 wolf31o2 Exp $
+
+*livecd-tools-1.0.4 (12 Jul 2004)
+
+  12 Jul 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +livecd-tools-1.0.4.ebuild:
+  Added new 1.0.4 version which improves handling of some autoconfig functions
+  and also net-setup. Closing bug #40205 and #51726.
 
   25 Jun 2004; Guy Martin <gmsoft@gentoo.org> livecd-tools-1.0.2.ebuild:
   Marked stable on hppa.
