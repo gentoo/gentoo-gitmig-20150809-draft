@@ -1,4 +1,16 @@
-MD5 c48943c5e550d25020fb9af5c6480b91 psemu-peopsspu-1.0.7-r2.ebuild 1523
-MD5 484d06bc7f2a9661153412f997b68694 ChangeLog 2249
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2d7685b2e296d712be36beb9e5ce9aa7 ChangeLog 2383
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 c48943c5e550d25020fb9af5c6480b91 psemu-peopsspu-1.0.7-r2.ebuild 1523
+MD5 2b55a6ef5a93928f9d04029deb680a5d psemu-peopsspu-1.0.9.ebuild 1696
 MD5 da060945818c80dc394826d2bdd00042 files/digest-psemu-peopsspu-1.0.7-r2 63
+MD5 c789565e17d2e759f5c0a625f8074e38 files/digest-psemu-peopsspu-1.0.9 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBtUdvroRuSHgZdywRAklDAJ9ALC6RMcb8qP/8LBLz1PmsEQPXxwCfdNxJ
+SvXlrUR1nk/OgT5+lLF9Edk=
+=k7W1
+-----END PGP SIGNATURE-----
