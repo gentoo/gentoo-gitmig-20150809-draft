@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.3.ebuild,v 1.3 2002/10/05 05:39:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.3.ebuild,v 1.4 2002/10/20 18:42:45 vapier Exp $
 
 IUSE="gnome opengl"
 
@@ -13,7 +13,6 @@ DEPEND=">=x11-libs/gtk+-1.2.10-r7
 	gnome? ( >=gnome-base/libglade-0.17-r6
 	         >=gnome-base/gnome-libs-1.4.1.7 )
 	opengl? ( >=dev-ml/lablgl-0.97 >=x11-libs/gtkglarea-1.2.3 )"
-RDEPEND="${DEPEND}"
 
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/lablgtk-${PV}.tar.gz"
 S=${WORKDIR}/${P}
