@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/gauche
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/ChangeLog,v 1.4 2002/12/07 06:23:13 jmorgan Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/ChangeLog,v 1.5 2003/02/12 06:11:30 vapier Exp $
 
 *gauche-0.6 (19 Jul 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/drscheme
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/ChangeLog,v 1.2 2002/10/31 22:15:47 karltk Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/ChangeLog,v 1.3 2003/02/12 06:11:05 vapier Exp $
 
 *drscheme-201 (31 Oct 2002)
 

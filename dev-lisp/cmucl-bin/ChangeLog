@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/cmucl-bin
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/ChangeLog,v 1.4 2002/08/18 00:11:54 karltk Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/ChangeLog,v 1.5 2003/02/12 06:10:59 vapier Exp $
 
 *cmucl-bin-18d-r1 (18 Aug 2002)
 
