@@ -1,4 +1,4 @@
 PATH=/usr/qt/3-embedded/bin
 ROOTPATH=/usr/qt/3-embedded/bin
 LDPATH=/usr/qt/3-embedded/lib
-QMAKESPEC=linux-g++
+QMAKESPEC=qws/linux-x86-g++
