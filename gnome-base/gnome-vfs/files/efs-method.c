@@ -182,7 +182,7 @@ gnome_vfs_file_system_shutdown (void)
 	g_static_mutex_unlock (&vfs_open_file_systems_lock);
 }
 
-
+
 
 typedef struct {
 	GnomeVFSFileSystem fs;
@@ -231,7 +231,7 @@ file_handle_destroy (FileHandle *handle)
 	return result;
 }
 
-
+
 
 static GnomeVFSResult
 close_efs_file (GnomeVFSFileSystem *fs)
@@ -275,7 +275,7 @@ open_efs_file (GnomeVFSFileSystem **fs, GnomeVFSURI *uri, gint mode)
 
 		fprintf (stderr, "New EFS file system: '%s'\n", fname);
 
-		efs_open (&dir,fname, mode, default_permissions,NULL);
+		dir = efs_open (fname, mode, default_permissions);
 
 		if (!dir) {
 			result = gnome_vfs_result_from_errno ();
@@ -329,7 +329,7 @@ do_open (GnomeVFSMethod *method,
 	efs_mode |= EFS_CREATE;
 
 	gnome_vfs_file_system_lock (fs);
-		efs_file_open (&file, ROOT_DIR (fs), uri->text, efs_mode);
+		file=efs_file_open (ROOT_DIR (fs), uri->text, efs_mode);
 	gnome_vfs_file_system_unlock (fs);
 
 	if (!file) {
@@ -381,7 +381,7 @@ do_create (GnomeVFSMethod *method,
 		return result;
 
 	gnome_vfs_file_system_lock (fs);
-		efs_file_open (&file, ROOT_DIR (fs), uri->text, efs_mode);
+		file=efs_file_open (ROOT_DIR (fs), uri->text, efs_mode);
 	gnome_vfs_file_system_unlock (fs);
 	if (!file) {
 		gnome_vfs_file_system_unref (fs);
@@ -436,7 +436,7 @@ do_read (GnomeVFSMethod *method,
 	file_handle = (FileHandle *) method_handle;
 
 	gnome_vfs_file_system_lock (file_handle->fs);
-		efs_file_read (file_handle->file, buffer, num_bytes, &read_val);
+		read_val=efs_file_read (file_handle->file, buffer, num_bytes);
 	gnome_vfs_file_system_unlock (file_handle->fs);	
 
 	if (read_val == -1) {
@@ -476,7 +476,7 @@ do_write (GnomeVFSMethod *method,
 	}
 }
 
-
+
 static gint
 seek_position_to_unix (GnomeVFSSeekPosition position)
 {
@@ -507,7 +507,7 @@ do_seek (GnomeVFSMethod *method,
 	lseek_whence = seek_position_to_unix (whence);
 
 	gnome_vfs_file_system_lock (file_handle->fs);
-	efs_file_seek (file_handle->file, offset, lseek_whence, &retval);
+	retval=efs_file_seek (file_handle->file, offset, lseek_whence);
 	gnome_vfs_file_system_unlock (file_handle->fs);
 	
 	if (retval == -1)
@@ -527,7 +527,7 @@ do_tell (GnomeVFSMethod       *method,
 	file_handle = (FileHandle *) method_handle;
 
 	gnome_vfs_file_system_lock (file_handle->fs);
-	efs_file_seek (file_handle->file, 0, SEEK_CUR, &retval);
+	retval=efs_file_seek (file_handle->file, 0, SEEK_CUR);
 	gnome_vfs_file_system_unlock (file_handle->fs);
 
 	*offset_return = retval;
@@ -590,7 +590,7 @@ do_truncate (GnomeVFSMethod *method,
 	return result;
 }
 
-
+
 struct _DirectoryHandle {
 	GnomeVFSURI        *uri;
 	GnomeVFSFileSystem *fs;
@@ -612,7 +612,7 @@ directory_handle_destroy (DirectoryHandle *directory_handle)
 	return result;
 }
 
-
+
 static GnomeVFSResult
 do_open_directory (GnomeVFSMethod *method,
 		   GnomeVFSMethodHandle **method_handle,
@@ -633,7 +633,7 @@ do_open_directory (GnomeVFSMethod *method,
 	if (result != GNOME_VFS_OK)
 		return result;
 
-	efs_dir_open (&dir, ROOT_DIR (fs), uri->text, EFS_READ);
+	dir=efs_dir_open (ROOT_DIR (fs), uri->text, EFS_READ);
 	if (!dir)
 		result = gnome_vfs_result_from_errno ();
 	else {
@@ -708,7 +708,7 @@ do_read_directory (GnomeVFSMethod *method,
 		return GNOME_VFS_ERROR_INTERNAL;
 
 	gnome_vfs_file_system_lock (directory_handle->fs);
-	efs_dir_read (directory_handle->dir,entry);
+	entry=efs_dir_read (directory_handle->dir);
 	gnome_vfs_file_system_unlock (directory_handle->fs);
 	if (!entry)
 		return GNOME_VFS_ERROR_EOF;
@@ -718,7 +718,7 @@ do_read_directory (GnomeVFSMethod *method,
 	return GNOME_VFS_OK;
 }
 
-
+
 static GnomeVFSResult
 do_get_file_info (GnomeVFSMethod *method,
 		  GnomeVFSURI *uri,
@@ -791,7 +791,7 @@ do_get_file_info (GnomeVFSMethod *method,
 
 	gnome_vfs_file_system_lock (fs);
 	{
-		efs_dir_open (&dir, ROOT_DIR (fs), dir_name, EFS_READ);
+		dir=efs_dir_open (ROOT_DIR (fs), dir_name, EFS_READ);
 		if (!dir) {
 			result = gnome_vfs_result_from_errno ();
 			gnome_vfs_file_system_unref (fs);
@@ -809,9 +809,9 @@ do_get_file_info (GnomeVFSMethod *method,
 	result = GNOME_VFS_ERROR_NOT_FOUND;
 	while (1) {
 		EFSDirEntry     *entry;
-		
+
 		gnome_vfs_file_system_lock (fs);
-		efs_dir_read (dir, entry);
+		entry=efs_dir_read (dir);
 		gnome_vfs_file_system_unlock (fs);
 
 		if (!entry)
@@ -835,7 +835,7 @@ do_get_file_info (GnomeVFSMethod *method,
 	return result;
 }
 
-
+
 static gboolean
 do_is_local (GnomeVFSMethod *method,
 	     const GnomeVFSURI *uri)
@@ -846,7 +846,7 @@ do_is_local (GnomeVFSMethod *method,
 	return TRUE;
 }
 
-
+
 static GnomeVFSResult
 do_make_directory (GnomeVFSMethod *method,
 		   GnomeVFSURI *uri,
@@ -866,7 +866,7 @@ do_make_directory (GnomeVFSMethod *method,
 
 	gnome_vfs_file_system_lock (fs);
 	{
-		efs_dir_open (&dir,ROOT_DIR (fs), uri->text, EFS_CREATE|EFS_EXCL);
+		dir=efs_dir_open (ROOT_DIR (fs), uri->text, EFS_CREATE|EFS_EXCL);
 		if (!dir)
 			result = GNOME_VFS_ERROR_FILE_EXISTS;
 		else

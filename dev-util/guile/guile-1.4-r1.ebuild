@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r1.ebuild,v 1.4 2000/10/04 16:04:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r1.ebuild,v 1.5 2000/10/23 11:27:13 achim Exp $
 
 P=guile-1.4
 A=${P}.tar.gz
@@ -24,8 +24,7 @@ src_compile() {
 src_install() {                               
   cd ${S}
   try make prefix=${D}/usr install
-  prepinfo
-  dodoc AUTHORS COPYING ChangeLog GUILE-VERSION HACKING NEWS README SNAPSHOT THANKS
+  dodoc AUTHORS COPYING ChangeLog GUILE-VERSION HACKING NEWS README SNAPSHOTS THANKS
 }
 
 
