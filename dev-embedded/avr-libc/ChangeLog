@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avr-libc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.1 2004/03/07 19:29:04 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.2 2004/03/15 02:18:57 seemant Exp $
+
+  14 Mar 2004; Seemant Kulleen <seemant@gentoo.org> avr-libc-1.0.2-r1.ebuild:
+  some SERIOUS f'ing cleanup on this ebuild
 
 *avr-libc-1.0.2-r1 (07 Mar 2004)
 
