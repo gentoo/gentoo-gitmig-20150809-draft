@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.3.ebuild,v 1.6 2002/10/17 14:26:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.3.ebuild,v 1.7 2002/10/20 18:40:37 vapier Exp $
 
 DESCRIPTION="The ultimate Molecular Dynamics simulation package"
 
@@ -15,7 +15,6 @@ KEYWORDS="x86"
 DEPEND=">=dev-libs/fftw-2.1.3
 		>=sys-devel/binutils-2.10.91.0.2"
 
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	./configure \

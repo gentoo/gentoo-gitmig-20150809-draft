@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.0.17.ebuild,v 1.4 2002/10/04 05:00:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.0.17.ebuild,v 1.5 2002/10/20 18:40:37 vapier Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,6 @@ HOMEPAGE="http://www.octave.org/"
 DEPEND="virtual/glibc
 		>=sys-libs/ncurses-5.2-r3
 		>=media-gfx/gnuplot-3.7.1-r3"
-RDEPEND="${DEPEND}"
 PROVIDE="dev-lang/octave"
 
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/vis5d+/vis5d+-1.2.1.ebuild,v 1.2 2002/10/19 15:54:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/vis5d+/vis5d+-1.2.1.ebuild,v 1.3 2002/10/20 18:40:37 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="3dimensional weather modeling software"
@@ -15,7 +15,6 @@ KEYWORDS="x86"
  
 DEPEND=">=app-sci/netcdf-3.5.0"
 
-RDEPEND="${DEPEND}"
 PROVIDE="app-sci/vis5d+"
 
 src_compile() {
