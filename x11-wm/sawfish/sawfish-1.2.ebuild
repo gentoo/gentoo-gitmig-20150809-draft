@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.6 2002/12/04 14:16:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.7 2002/12/13 03:59:08 azarah Exp $
 
-inherit base
+inherit base eutils
 
 IUSE="readline esd nls"
 
@@ -28,15 +28,8 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 src_unpack() {
 	base_src_unpack
-	cd ${S}
-	einfo "Applying fullscreen patch"
-	patch -p0 < ${FILESDIR}/sawfish-1.2-fullscreen.patch
 
-	# Fix Xft2.0 support not working with XFree86 compiled against system
-	# freetype2 ...
-	# <azarah@gentoo.org> (21 Nov 2002)
-	[ -d /usr/include/freetype2/freetype ] \
-		&& ln -s /usr/include/freetype2/freetype ${S}/src/freetype
+	cd ${S}; epatch ${FILESDIR}/sawfish-1.2-fullscreen.patch
 }
 
 src_compile() {
@@ -49,7 +42,13 @@ src_compile() {
 	use readline || myconf="${myconf} --without-readline"
 	
 	use nls || myconf="${myconf} --disable-linguas"
-	
+
+	# Make sure we include freetype2 headers before freetype1 headers, else Xft2
+	# borks,
+	# <azarah@gentoo.org> (13 Dec 2002)
+	export C_INCLUDE_PATH="${C_INCLUDE_PATH}:/usr/include/freetype2"
+	export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:/usr/include/freetype2"
+
 	# The themer is currently broken (must have rep-gtk-0.15
 	# installed to get it compiled) - Azarah, 24 Jun 2002
 	./configure --host=${CHOST} \
