@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/myster
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/ChangeLog,v 1.1 2004/06/29 09:06:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/ChangeLog,v 1.2 2004/07/01 00:22:10 mr_bones_ Exp $
+
+  30 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> myster-8.0.ebuild:
+  Unpack in src_unpack; make src_install consistent; error check install;
+  removed nomirror
 
 *myster-8.0 (29 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/myster-8.0.ebuild,v 1.2 2004/06/29 09:18:03 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/myster-8.0.ebuild,v 1.3 2004/07/01 00:22:10 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ MY_PV=${PV/.0/}
 DESCRIPTION="Myster is a decentralized file sharing network"
 HOMEPAGE="http://www.mysternetworks.com/"
 SRC_URI="mirror://sourceforge/myster/Myster_PR${MY_PV}_Generic.zip"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
@@ -21,22 +21,21 @@ src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
 	mv "Myster PR ${MY_PV} Generic" ${P}
-	cd ${S}
+	chmod -R go-w ${S}
+	echo "java -jar /opt/myster/Myster.jar" >> ${T}/myster
+	echo "MYSTERHOME=/opt/myster" >> ${T}/50myster
+	echo "PATH=/opt/myster/bin" >> ${T}/50myster
 }
 
 src_compile () {
-	echo "java -jar /opt/myster/Myster.jar" >> myster
-	chmod -R go-w ${S}
-	chmod +x myster
 	einfo "Nothing to Compile, this is a binary package"
 }
 
 src_install () {
 	dodir /opt/myster
-	mv ${S}/* ${D}/opt/myster
-	dodir /opt/myster/bin
-	mv ${D}/opt/myster/myster ${D}/opt/myster/bin/
-	dodir /etc/env.d
-	echo "MYSTERHOME=/opt/myster" >> ${D}/etc/env.d/50myster
-	echo "PATH=/opt/myster/bin" >> ${D}/etc/env.d/50myster
+	cp -R * ${D}/opt/myster || die "cp failed"
+	exeinto /opt/myster/bin
+	doexe ${T}/myster || die "doexe failed"
+	insinto /etc/env.d
+	doins ${T}/50myster || die "doins failed"
 }
