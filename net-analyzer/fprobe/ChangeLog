@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/fprobe
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.1 2004/08/04 21:24:16 squinky86 Exp $
+
+*fprobe-1.0.4 (04 Aug 2004)
+
+  04 Aug 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +fprobe-1.0.4.ebuild:
+  Initial commit. Thanks to BlueRaven <blue@ravenconsulting.it> in #55533.
+
