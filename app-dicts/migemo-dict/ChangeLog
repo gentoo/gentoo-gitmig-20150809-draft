@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/migemo-dict
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/ChangeLog,v 1.1 2003/09/30 17:47:43 usata Exp $
+
+*migemo-dict-200309 (01 Oct 2003)
+
+  01 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> migemo-dict-200309.ebuild:
+  Initial import.  Ebuild and dictionary file submitted by Hattya
+  <hattya@inter7.jp> in Bug #30003.
+
