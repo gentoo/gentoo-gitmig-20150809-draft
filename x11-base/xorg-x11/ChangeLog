@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.357 2005/03/13 08:58:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.358 2005/03/21 08:38:37 gmsoft Exp $
+
+  21 Mar 2005; Guy Martin <gmsoft@gentoo.org> xorg-x11-6.8.2-r1.ebuild:
+  Stable on hppa.
 
   13 Mar 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r1.ebuild:
