@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 63741081e8f6e6e8ed7712daa3ed1d34 ChangeLog 2858
 MD5 cb784fc68f8ebab5c112b7067200fa7f metadata.xml 475
-MD5 88dd9185dce40d48b8b65e0abb444700 horde-2.2.7.ebuild 845
-MD5 09da2bf80f161e4902538528e4992485 horde-3.0_rc3.ebuild 760
+MD5 4af9278a646fed6b118a423881a6c797 horde-2.2.7.ebuild 987
+MD5 f6c9d601dbb59158677c2a51817c0830 horde-3.0_rc3.ebuild 868
 MD5 2c9d8789f198805ad8020c3725264661 files/digest-horde-2.2.7 63
 MD5 0bf1426a1062877ac4d15a02e13bc7a6 files/digest-horde-3.0_rc3 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBy8DCroRuSHgZdywRApEeAJ9OKc0mNmSnq6kdL1J2VoYd52mgvgCeOp0x
-JvNemIYr1NkQreYrxitwTTg=
-=45is
+iD8DBQFBy8KBroRuSHgZdywRAtpWAJ4hlRYeZlU5ir24cOp09wbAISnOwgCfekGR
+IDUH5cw3In++qYgBdmTJaC4=
+=gO9n
 -----END PGP SIGNATURE-----
