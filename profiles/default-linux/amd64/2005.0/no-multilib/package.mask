@@ -1,13 +1,15 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.11 2005/04/04 19:04:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.12 2005/04/04 20:22:30 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
+app-benchmarks/cpuburn
 app-emulation/cedaga
 app-emulation/crossover-office-bin
 app-emulation/winex-transgaming
 app-office/mozilla-sunbird-bin
 app-office/openoffice-bin
 app-office/openoffice-ximian-bin
+app-emulation/cedega
 app-emulation/emul-linux-x86-baselibs
 app-emulation/emul-linux-x86-compat
 app-emulation/emul-linux-x86-glibc
@@ -17,6 +19,14 @@ app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl
 app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
+app-emulation/transgaming-fontinstaller
+app-emulation/transgaming-mozctlinstaller
+app-emulation/winex-transgaming
+app-emulation/wine
+app-emulation/winesetuptk
+app-emulation/winex
+app-emulation/winex-cvs
+app-emulation/winex-transgaming
 app-text/acroread
 games-emulation/nestra
 games-emulation/zsnes
@@ -38,6 +48,6 @@ sys-boot/grub
 www-client/opera
 www-client/mozilla-bin
 www-client/mozilla-firefox-bin
-app-benchmarks/cpuburn
+media-video/realplayer
 
 -<media-video/nvidia-glx-1.0.6629-r3
