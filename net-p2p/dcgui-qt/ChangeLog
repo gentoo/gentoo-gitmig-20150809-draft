@@ -1,8 +1,8 @@
 # ChangeLog for net-p2p/dcgui-qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/ChangeLog,v 1.9 2004/02/28 09:38:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/ChangeLog,v 1.10 2004/03/01 12:38:03 aliz Exp $
 
-*dclib-0.2.21 (28 Feb 2004)
+*dcgui-qt-0.2.21 (28 Feb 2004)
 
   28 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
   Version bump #43155 by Paulo Fidalgo.
