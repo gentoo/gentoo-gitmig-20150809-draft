@@ -13,11 +13,14 @@ start() {
 
 stop() {
 	ebegin "Stoping MUC Jabber Transport"
-	kill `cat /var/log/jabber/muctrans.pid`
+	if [ -f /var/log/jabber/muctrans.pid ]; then
+		kill `cat /var/log/jabber/muctrans.pid`
+	fi
 	sleep 2
-	if ( -f /var/log/jabber/muctrans.pid ); then
+	if [ -f /var/log/jabber/muctrans.pid ]; then
 		kill -9 `cat /var/log/jabber/muctrans.pid`
 		rm -f /var/log/jabber/muctrans.pid
 	fi
+	rm -f /var/log/jabber/muctrans.pid
 	eend $?
 }
