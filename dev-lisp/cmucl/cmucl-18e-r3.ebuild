@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r3.ebuild,v 1.4 2004/06/24 23:57:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r3.ebuild,v 1.5 2004/07/14 16:20:37 agriffis Exp $
 
 inherit common-lisp-common eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cmucl/cmucl_${PV}-${DEB_PV}.ta
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc"
+IUSE="X doc lesstif"
 
 DEPEND="dev-lisp/common-lisp-controller
 	doc? ( virtual/tetex )
