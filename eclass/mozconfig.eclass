@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.6 2005/02/17 16:57:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.7 2005/03/08 16:29:26 agriffis Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -236,7 +236,7 @@ makemake() {
 # mozconfig_annotate "building on ultrasparc" --enable-js-ultrasparc
 # => ac_add_options --enable-js-ultrasparc # building on ultrasparc
 mozconfig_annotate() {
-	declare reason=${1} x ; shift
+	declare reason=$1 x ; shift
 	[[ $# -gt 0 ]] || die "mozconfig_annotate missing flags for ${reason}\!"
 	for x in ${*}; do
 		echo "ac_add_options ${x} # ${reason}" >>.mozconfig
@@ -250,7 +250,17 @@ mozconfig_annotate() {
 # => ac_add_options --enable-freetype2 # +truetype
 mozconfig_use_enable() {
 	declare flag=$(use_enable "$@")
-	mozconfig_annotate "$(useq ${1} && echo +${1} || echo -${1})" "${flag}"
+	mozconfig_annotate "$(useq $1 && echo +$1 || echo -$1)" "${flag}"
+}
+
+# mozconfig_use_with: add a line to .mozconfig based on a USE-flag
+#
+# Example:
+# mozconfig_use_with kerberos gss-api /usr/$(get_libdir)
+# => ac_add_options --with-gss-api=/usr/lib # +kerberos
+mozconfig_use_with() {
+	declare flag=$(use_with "$@")
+	mozconfig_annotate "$(useq $1 && echo +$1 || echo -$1)" "${flag}"
 }
 
 # mozconfig_use_extension: enable or disable an extension based on a USE-flag
@@ -259,8 +269,8 @@ mozconfig_use_enable() {
 # mozconfig_use_extension gnome gnomevfs
 # => ac_add_options --enable-extensions=gnomevfs
 mozconfig_use_extension() {
-	declare minus=$(useq ${1} || echo -)
-	mozconfig_annotate "${minus:-+}${1}" --enable-extensions=${minus}${2}
+	declare minus=$(useq $1 || echo -)
+	mozconfig_annotate "${minus:-+}$1" --enable-extensions=${minus}${2}
 }
 
 # mozconfig_final: display a table describing all configuration options paired
