@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.5.ebuild,v 1.2 2004/06/24 22:40:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.5.ebuild,v 1.3 2004/07/01 21:48:45 eradicator Exp $
 
 S=${WORKDIR}/openmosix-tools-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
 SRC_URI="mirror://sourceforge/openmosix/openmosix-tools-${PV}.tar.bz2"
 HOMEPAGE="http://www.openmosix.com/"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2
 	>=sys-kernel/openmosix-sources-2.4.22"
 RDEPEND="${DEPEND}

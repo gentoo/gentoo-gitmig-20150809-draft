@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.4 2004/06/24 22:41:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.5 2004/07/01 21:49:31 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  torque-1.0.1-r6.ebuild:
+  virtual/glibc -> virtual/libc
 
   13 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; torque-1.0.1-r6.ebuild:
   Change x11-base/xfree dependency to virtual/x11 (#52153). This package still

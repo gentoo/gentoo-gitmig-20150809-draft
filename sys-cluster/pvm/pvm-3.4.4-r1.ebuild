@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r1.ebuild,v 1.8 2004/06/24 22:40:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r1.ebuild,v 1.9 2004/07/01 21:49:18 eradicator Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.epm.ornl.gov/pvm/pvm_home.html"
 SRC_URI="ftp://ftp.netlib.org/pvm3/${MY_P}.tgz "
 IUSE=""
 DEPEND=""
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~alpha"

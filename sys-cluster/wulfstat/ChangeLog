@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/wulfstat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfstat/ChangeLog,v 1.2 2004/06/24 22:41:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfstat/ChangeLog,v 1.3 2004/07/01 21:49:49 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  wulfstat-0.4.8.ebuild:
+  virtual/glibc -> virtual/libc
 
 *wulfstat-0.4.8 (28 Aug 2003)
 
