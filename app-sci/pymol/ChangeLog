@@ -1,10 +1,16 @@
 # ChangeLog for app-sci/pymol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.5 2003/06/20 04:53:29 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.6 2003/07/24 01:12:59 george Exp $
+
+*pymol-0.90 (23 Jul 2003)
+
+  23 Jul 2003; George Shapovalov <george@gentoo.org> pymol-0.90, files/setup.py-gentoo.patch :
+  new version + fix for setup.py, (#24967)
+  thanks to Ben Cornett <acornet@emory.edu> for the update
 
 *pymol-0.88 (29 Jun 2003)
 
-  19 Jun 2003; George Shapovalov <george@gentoo.org> pymol-0.88.ebuild, files/{files/digest-pymol-0.88,nosplash-gentoo.patch,setup2.py-gentoo.patch} :
+  19 Jun 2003; George Shapovalov <george@gentoo.org> pymol-0.88.ebuild, files/{digest-pymol-0.88,nosplash-gentoo.patch,setup2.py-gentoo.patch} :
   new version (#22235)
   now uses distutils for python
   thanks to Todd Geders <geders@purdue.edu> for update notification 
