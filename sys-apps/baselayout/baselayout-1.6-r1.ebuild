@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.10 2001/08/25 21:12:19 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.11 2001/08/27 02:08:18 drobbins Exp $
 
 SV=1.1.3
 S=${WORKDIR}/rc-scripts-${SV}
@@ -135,7 +135,8 @@ src_install()
 		#install files, not dirs
 		[ -f $foo ] && doins $foo
 	done
-	
+	touch ${D}/etc/mtab	
+	#mtab is needed for the first boot to go flawlessly
 	chmod go-rwx ${D}/etc/shadow
 	keepdir /lib /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
