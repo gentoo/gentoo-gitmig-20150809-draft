@@ -1,6 +1,6 @@
-# ChangeLog for net-www/charm
+# ChangeLog for net-news/charm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/charm/ChangeLog,v 1.1 2005/03/23 16:37:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/charm/ChangeLog,v 1.2 2005/03/23 16:42:29 seemant Exp $
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
   +charm-1.3.0.ebuild, +charm-1.4.0.ebuild, +charm-1.5.0.ebuild:
