@@ -6,7 +6,7 @@ MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 3b027afd5b99aa0fdd382fa1f36717bd mozilla-1.4-r1.ebuild 16452
 MD5 988bdfa0ba4ed1d6863108f1e9f95024 mozilla-1.4-r2.ebuild 16512
 MD5 96aca7cd3035548b79626b340e52e664 ChangeLog 19901
-MD5 19e6c9e3d504ce22fa8793a0cebd7da7 mozilla-1.4-r3.ebuild 16565
+MD5 b74cbf0f5cc811b484ec9d227e85642c mozilla-1.4-r3.ebuild 16564
 MD5 2245cc4f37902e2c6dd188f72874fbb3 files/10mozilla 60
 MD5 cf872ecce56e05c488ae7f41b50dec31 files/digest-mozilla-1.0.1-r3 281
 MD5 eccaf421f7e91faad5f835cadca4263e files/digest-mozilla-1.1-r1 202
