@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-mcclim
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.1 2004/03/04 21:56:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.2 2004/03/08 22:40:12 mkennedy Exp $
+
+  08 Mar 2004; <mkennedy@gentoo.org> cl-mcclim-0.9.ebuild,
+  files/50mcclim-gentoo.el:
+  Emacs support for CLIM symbol lookup and CLIM-specific indentation.
 
 *cl-mcclim-0.9 (04 Mar 2004)
 

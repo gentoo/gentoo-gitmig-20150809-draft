@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.ebuild,v 1.1 2004/03/04 21:56:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.ebuild,v 1.2 2004/03/08 22:40:12 mkennedy Exp $
 
-inherit common-lisp
+inherit common-lisp elisp
 
 DESCRIPTION="McCLIM is a free software implementation of CLIM."
 HOMEPAGE="http://clim.mikemac.com/
@@ -16,11 +16,15 @@ DEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/cl-clx-sbcl
 	doc? ( media-gfx/transfig
 		media-libs/netpbm
-		virtual/tetex )"
-
+		virtual/tetex )
+	emacs? ( virtual/emacs )"
+IUSE="emacs"
 CLPACKAGE="clim clim-clx clim-examples"
+SITEFILE=${FILESDIR}/50mcclim-gentoo.el
 
 S=${WORKDIR}/McCLIM
+
+ELISP_SOURCES="Tools/Emacs/indent-clim.el Spec/climbols.el"
 
 src_unpack() {
 	unpack ${A}
@@ -50,6 +54,11 @@ src_compile() {
 			ewarn "Documentation cannot be built with CLISP at this time"
 		fi
 	fi
+
+	if use emacs; then
+		cp ${ELISP_SOURCES} .
+		elisp-compile *.el
+	fi
 }
 
 src_install() {
@@ -76,4 +85,20 @@ src_install() {
 	fi
 
 	find ${D} -type d -name CVS -print |xargs rm -rf
+
+	if use emacs; then
+		insinto /usr/share/emacs/site-lisp/${PN}
+		doins *.el *.elc
+		elisp-site-file-install ${SITEFILE}
+	fi
+}
+
+pkg_postinst() {
+	elisp_pkg_postinst
+	common-lisp_pkg_postinst
+}
+
+pkg_postrm() {
+	elisp_pkg_postinst
+	common-lisp_pkg_postrm
 }
