@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901-r1.ebuild,v 1.3 2005/01/15 04:41:07 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901-r1.ebuild,v 1.4 2005/01/16 05:20:18 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1341,7 +1341,8 @@ migrate_usr_x11r6_lib() {
 
 		# for amd64 at least, lib64 symlinked to lib in <=6.8.0-r4 (except -r2),
 		# so the migration doesn't work properly with just the above.
-		if [ -d ${ROOT}usr/X11R6/lib ]; then
+		# (#78074) DO NOT use '-d' because it's true on symlinks to dirs too.
+		if [ ! -L ${ROOT}usr/X11R6/lib ]; then
 			einfo "    /usr/X11R6/lib is a directory, migrating..."
 			# Move everything
 			mv -f ${ROOT}usr/X11R6/lib/* ${ROOT}usr/lib

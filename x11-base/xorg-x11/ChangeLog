@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.271 2005/01/15 18:37:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.272 2005/01/16 05:20:17 spyderous Exp $
+
+  15 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.901-r1.ebuild, xorg-x11-6.8.1.902.ebuild:
+  (#78074) DO NOT use '-d' in test because it's true on symlinks to dirs too.
 
   15 Jan 2005; Markus Rothe <corsair@gentoo.org> xorg-x11-6.8.1.902.ebuild:
   Added ~ppc64 to KEYWORDS
