@@ -1,7 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.30 2002/12/30 12:31:57 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.31 2003/01/13 07:57:06 lordvan Exp $
 
+*cups-1.1.18-r1 (13 Jan 2003)
+  13 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org> cups-1.1.18-r1.ebuild:
+  filter -fomit-frame-pointers; ~arch masked for all archs(at least for now)
+  fixes bug #13471
+	
 *cups-1.1.18 (27 Dec 2002)
   27 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> cups-1.1.18.ebuild:
   changed pkg_postinst
