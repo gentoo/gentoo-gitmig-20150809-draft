@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/mupen64-glide64
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/ChangeLog,v 1.3 2005/01/08 00:49:56 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/ChangeLog,v 1.4 2005/01/10 01:06:40 morfic Exp $
+
+  09 Jan 2005; Daniel Goller <morfic@gentoo.org> mupen64-glide64-0.7.ebuild:
+  More fixes with paths
 
   07 Jan 2005; Daniel Goller <morfic@gentoo.org>
   files/mupen64-glide64-0.7-gtk2.patch,
