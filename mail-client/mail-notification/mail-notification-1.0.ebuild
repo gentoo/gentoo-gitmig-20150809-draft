@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-1.0.ebuild,v 1.3 2005/01/03 22:41:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-1.0.ebuild,v 1.4 2005/01/12 16:47:15 slarti Exp $
 
 inherit gnome2
 
@@ -24,6 +24,7 @@ DEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/libglade-2.0
 	>=gnome-base/eel-2.0
 	>=gnome-base/orbit-2.0
+	dev-perl/XML-Parser
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	mime? ( >=dev-libs/gmime-2 )

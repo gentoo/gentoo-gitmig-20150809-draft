@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.15 2005/01/03 22:41:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.16 2005/01/12 16:47:15 slarti Exp $
+
+  12 Jan 2005; Tom Martin <slarti@gentoo.org>
+  mail-notification-0.8.1.ebuild, mail-notification-1.0.ebuild:
+  Add dev-perl/XML-Parser to all ebuilds' DEPEND. Thanks to
+  <marcelogoes@gmail.com> for reporting in bug 77677.
 
   03 Jan 2005; Andrej Kacian <ticho@gentoo.org>
   mail-notification-1.0.ebuild:
