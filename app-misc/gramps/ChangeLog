@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.19 2004/06/26 21:11:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.20 2004/07/19 22:13:09 kloeri Exp $
+
+  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gramps-0.99.ebuild,
+  gramps-1.0.0.ebuild, gramps-1.0.1.ebuild:
+  dev-python/Imaging renamed to dev-python/imaging.
 
   26 Jun 2004; Alastair Tse <liquidx@gentoo.org> gramps-1.0.1.ebuild:
   fixed empty DISPLAY problems (#46563)

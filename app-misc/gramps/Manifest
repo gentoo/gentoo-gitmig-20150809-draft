@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a1e435ceb91d5191de0a10846f504f12 ChangeLog 2772
-MD5 ca83e2a492e43376794bb4be676c3049 gramps-1.0.0.ebuild 1248
-MD5 7507efa030edebc1e362fc45f2ca53ae gramps-1.0.1.ebuild 1287
+MD5 0078bc2e7993e9b9d8e8262c3e9026b2 gramps-1.0.0.ebuild 1248
+MD5 b84cee303ed0188a9d13251b274c93f3 gramps-0.99.ebuild 1240
+MD5 9ec73e0e7d80bfff3b5907a14152b812 gramps-1.0.1.ebuild 1287
+MD5 a80f73b90993f0a735ee4cc5429c73d7 ChangeLog 2940
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 444a4217040effeac49dc181d976a86d gramps-0.99.ebuild 1240
+MD5 99894091b508fb1a9c634de93b4cfbba files/digest-gramps-0.99 64
 MD5 f0c53191c89c972fd5d35a4b20b16db0 files/digest-gramps-1.0.0 65
 MD5 bc4c99bf6ecc5a77aa2a8a1921b3b100 files/digest-gramps-1.0.1 65
-MD5 99894091b508fb1a9c634de93b4cfbba files/digest-gramps-0.99 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35LpHTu7gpaalycRAqmqAJ4/wG4xBa0r+aCENcLTIdDRyoYKlACfcD/z
-Vt2srA1wYEBsUPUoehp182E=
-=WN6O
------END PGP SIGNATURE-----
