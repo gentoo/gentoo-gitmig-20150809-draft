@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/ChangeLog,v 1.5 2004/03/15 02:27:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/ChangeLog,v 1.6 2004/06/14 01:00:33 spyderous Exp $
+
+  13 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  pcmcia-cs-tools-3.2.3.ebuild, pcmcia-cs-tools-3.2.4.ebuild:
+  Change x11-base/xfree dependency to virtual/x11 (#52153).
 
   14 Mar 2004; Peter Johanson <latexer@gentoo.org>
   pcmcia-cs-tools-3.2.3.ebuild, pcmcia-cs-tools-3.2.4.ebuild:

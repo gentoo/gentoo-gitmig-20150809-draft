@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.4.ebuild,v 1.4 2004/03/15 02:27:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.4.ebuild,v 1.5 2004/06/14 01:00:33 spyderous Exp $
 
 MY_P=${P/-tools/}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers
 	>=sys-apps/sed-4
 	gtk? ( =x11-libs/gtk+-1.2* )
-	X? ( x11-base/xfree )"
+	X? ( virtual/x11 )"
 RDEPEND=""
 SLOT="0"
 IUSE="trusted apm pnp nocardbus build gtk X"
