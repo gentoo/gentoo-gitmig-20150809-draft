@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.3.ebuild,v 1.3 2002/02/28 15:54:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.4.ebuild,v 1.1 2002/02/28 23:04:38 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="QtUnit is a unit testing framework for c++"
@@ -39,6 +39,7 @@ src_install () {
 	docinto /usr
 	dodoc ChangeLog
 	dodoc INSTALL
+	dodoc COPYING
 
 	dodir /usr/share/doc/${P}
 	cp -a html ${D}/usr/share/doc/${P}
