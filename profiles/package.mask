@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3694 2005/03/09 08:08:30 leonardop Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3695 2005/03/09 09:04:11 joem Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,6 +23,7 @@
 
 # Joe McCann <joem@gentoo.org> (08 Mar 2005)
 #Gnome-2.10 mask
+>=gnome-base/gnome-2.10
 >=x11-libs/libxklavier-2.0
 >=gnome-base/gconf-2.9.91
 >=gnome-base/gnome-vfs-2.9.92
