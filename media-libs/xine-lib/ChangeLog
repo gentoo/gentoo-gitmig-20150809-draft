@@ -1,10 +1,16 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.49 2003/03/29 14:44:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.50 2003/03/29 14:53:18 mholzer Exp $
 
 *xine-lib-1_beta9 (23 Mar 2003)
 
-  29 Mar 2003; root <root@gentoo.org> xine-lib-0.9.12-r2.ebuild,
+  29 Mar 2003; Martin Holzer <mholzer@gentoo.org> xine-lib-1_alpha2.ebuild,
+  xine-lib-1_alpha2.ebuild, xine-lib-1_beta0.ebuild, xine-lib-1_beta0.ebuild,
+  xine-lib-1_beta1.ebuild, xine-lib-1_beta1.ebuild, xine-lib-1_beta2.ebuild,
+  xine-lib-1_beta2.ebuild, xine-lib-1_beta4.ebuild, xine-lib-1_beta4.ebuild:
+  removed old crusty ebuilds
+
+  29 Mar 2003; Martin Holzer <mholzer@gentoo.org> xine-lib-0.9.12-r2.ebuild,
   xine-lib-0.9.13.ebuild, xine-lib-1_beta2.ebuild, xine-lib-1_beta4.ebuild,
   xine-lib-1_beta6.ebuild, xine-lib-1_beta8.ebuild, xine-lib-1_beta9.ebuild:
   fixed type, removed dulpicate slot keywords.
