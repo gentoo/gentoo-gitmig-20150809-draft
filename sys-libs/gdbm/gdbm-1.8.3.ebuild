@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3.ebuild,v 1.12 2004/07/24 06:58:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3.ebuild,v 1.13 2004/07/24 16:27:07 vapier Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -43,10 +43,11 @@ src_install() {
 	# temp backwards support #32510
 	if [ -e ${ROOT}/usr/lib/libgdbm.so.2 ] ; then
 		cp -a ${ROOT}/usr/lib/libgdbm.so.2 ${D}/usr/lib/
+		touch ${D}/usr/lib/libgdbm.so.2
 	fi
 }
 
 pkg_postinst() {
-	ewarn "Please run revdep-rebuild --soname libgdbm.so"
+	ewarn "Please run revdep-rebuild --soname libgdbm.so.2"
 	ewarn "Packages compiled against the previous version will not work"
 }
