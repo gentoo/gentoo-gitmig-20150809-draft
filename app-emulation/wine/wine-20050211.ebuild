@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050211.ebuild,v 1.3 2005/03/08 16:49:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050211.ebuild,v 1.4 2005/03/15 23:35:33 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -35,6 +35,16 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	doc? ( app-text/docbook-sgml-utils app-text/jadetex )
 	sys-devel/flex"
+
+pkg_setup() {
+	if use amd64 && ! has_m32; then
+		eerror "Your compiler seems to be unable to compile 32bit code."
+		eerror "Make sure you compile gcc with:"
+		echo
+		eerror "    USE=multilib FEATURES=-sandbox"
+		die "Cannot produce 32bit code"
+	fi
+}
 
 src_unpack() {
 	unpack Wine-${PV}.tar.gz
