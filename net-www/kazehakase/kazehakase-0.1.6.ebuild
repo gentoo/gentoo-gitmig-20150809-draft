@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.6.ebuild,v 1.2 2004/06/25 00:56:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.6.ebuild,v 1.3 2004/07/04 16:16:53 brad Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://kazehakase.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/${PN}/9697/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~amd64 ~ppc"
+KEYWORDS="x86 ~alpha ~amd64 ~ppc"
 LICENSE="GPL-2"
 
 DEPEND="${DEPEND}
