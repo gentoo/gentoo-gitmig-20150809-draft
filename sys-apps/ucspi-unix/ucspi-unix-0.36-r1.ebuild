@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.36.ebuild,v 1.5 2004/01/07 22:14:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.36-r1.ebuild,v 1.1 2004/01/07 22:14:55 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ucspi implementation for unix sockets."
@@ -21,8 +21,8 @@ src_unpack() {
 }
 
 src_compile() {
-	echo "gcc ${CFLAGS} -I/usr/lib/bglibs/include" > conf-cc
-	echo "gcc -s -L/usr/lib/bglibs/lib" > conf-ld
+	echo "${CC} ${CFLAGS} -I/usr/lib/bglibs/include" > conf-cc
+	echo "${CC} -s -L/usr/lib/bglibs/lib" > conf-ld
 	make || die  #don't use emake b/c of jobserver
 }
 
