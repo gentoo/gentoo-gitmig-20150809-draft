@@ -1,6 +1,17 @@
 # ChangeLog for net-dialup/gammu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.3 2004/04/11 01:11:35 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.4 2004/04/12 11:18:49 st_lim Exp $
+
+*gammu-0.94.4 (12 Apr 2004)
+
+  12 Apr 2004; Lim Swee Tat <st_lim@gentoo.org> gammu-0.94.0.ebuild,
+  gammu-0.94.2.ebuild, gammu-0.94.4.ebuild,
+  files/gammu-0.94.0-LastCalendar.patch,
+  files/gammu-0.94.2-LastCalendar.patch,
+  files/gammu-0.94.4-LastCalendar.patch:
+  Bug #47493 - There is no 94.2 in the ftp anymore.
+  Thanks to David Holm <dholm@gentoo.org>
+  Removing 0.94.2 and 0.94.0
 
 *gammu-0.94.2 (11 Apr 2004)
 
