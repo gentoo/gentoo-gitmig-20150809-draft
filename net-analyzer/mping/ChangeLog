@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mping
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/ChangeLog,v 1.3 2004/06/24 22:07:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/ChangeLog,v 1.4 2004/09/29 02:55:22 tgall Exp $
+
+  28 Sep 2004; Tom Gall <tgall@gentoo.org> mping-2.0_rc1.ebuild:
+  added ~ppc64, bug #64106
 
   21 Mar 2004; Jason Wever <weeve@gentoo.org> mping-2.0_rc1.ebuild:
   Added ~sparc keyword.
