@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.3 2002/06/22 00:24:43 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.4 2002/07/12 13:19:05 gerk Exp $
+
+*mol-0.9.64 (12 July 2002)
+
+  12 July 2002; Gerk (gerk@gentoo.org)
+
+  Added 0.9.64, simple bump and moved to 
+  emake instead of make
 
 *mol-0.9.63 (5 May 2002)
 
