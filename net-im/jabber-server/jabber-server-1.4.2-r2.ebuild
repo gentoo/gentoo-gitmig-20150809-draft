@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.17 2002/11/29 11:59:49 verwilst Exp $
-
-IUSE="ssl"
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.18 2002/11/30 02:12:12 vapier Exp $
 
 JIT_V="1.0.6"
 
@@ -17,18 +15,18 @@ SRC_URI="http://jabberd.jabberstudio.org/downloads/jabber-${PV}.tar.gz
 	 http://files.jabberstudio.org/mu-conference/muconference-0.3.tar.gz
 	 mirror://sourceforge/jit/jit-${JIT_V}.tar.gz"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+IUSE="ssl"
+
 DEPEND="=dev-libs/pth-1.4.0
 	>=dev-libs/glib-2
 	~dev-libs/libsigc++-1.0.4
 	>=net-libs/libicq2000-0.3.1
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86"
-
 src_unpack() {
-
 	unpack jabber-${PV}.tar.gz
 	cd ${S}
 	patch -p0 < ${FILESDIR}/mio_ssl.c.patch
@@ -45,7 +43,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
 	cd ${S}
 	use ssl && myconf="--enable-ssl"
@@ -75,24 +72,16 @@ src_compile() {
 	cd ${S}/jit
 	./configure --icq || die
 	make || die
-
 }
 
-
 src_install() {
-
-        cd ${S}
         exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6-r1 jabber
-        mkdir -p ${D}/usr/sbin
-	
-	mkdir -p ${D}/etc/jabber
-	mkdir -p ${D}/usr/lib/jabber
-	mkdir -p ${D}/var/log/jabber
+        dodir /usr/sbin /etc/jabber /usr/lib/jabber /var/log/jabber
 	touch ${D}/var/log/jabber/error.log
 	touch ${D}/var/log/jabber/record.log
-	mkdir -p ${D}/var/spool/jabber
+	dodir /var/spool/jabber
 	touch ${D}/var/spool/jabber/.keep
-	mkdir -p ${D}/var/run
+	dodir /var/run
 
         cp ${S}/jit/jabberd/jabberd-icq ${D}/usr/sbin/
 	cp ${S}/jabberd/jabberd ${D}/usr/sbin/
@@ -109,11 +98,9 @@ src_install() {
 
 	cd ${D}/etc/jabber
 	tar -xjf ${FILESDIR}/config-1.4.2-r1.tbz2
-
 }
 
 pkg_postinst() {
-
 	local test_group=`grep ^jabber: /etc/group | cut -d: -f1`
         if [ -z $test_group ]
         then
@@ -149,23 +136,4 @@ pkg_postinst() {
 	einfo "To enable SSL connections, execute /etc/jabber/self-cert.sh"
 	einfo "(Only if compiled with SSL support (ssl in USE)"
 	einfo "Server admins should be added to the "jabber" group"
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
