@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.14 2003/05/22 06:52:30 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.15 2003/06/01 09:17:50 kosmikus Exp $
+
+*ghc-6.0 (01 Jun 2003)
+
+  01 Jun 2003; Andres Loeh <kosmikus@gentoo.org> ghc-6.0.ebuild:
+  Version bump. Will probably remain in testing until new version is released,
+  as this version is considered to be beta by the developers. The ebuild has
+  been somewhat simplified: GHC's build system now supports bootstrapping to get
+  GHCi running automatically if necessary.
 
   21 May 2003; Andres Loeh <kosmikus@gentoo.org> ghc-5.04.3-r1.ebuild,
   files/ghc-5.04.3-r1.patch:
