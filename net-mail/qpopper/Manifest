@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aab01f9f283cc9dfa33a6f0be094d75e qpopper-4.0.5.ebuild 3207
-MD5 f44a9d02873a03d7205bb307875f7732 qpopper-4.0.5-r1.ebuild 3352
-MD5 fc8c7a8df861c088ecf455bdf9735ce7 ChangeLog 1752
+MD5 1eb87350741b8e71640938b6e437e81c ChangeLog 1892
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 22d81629bee78bf2b0fcb3430d1c58c6 qpopper-4.0.5.ebuild 3199
+MD5 0d91d810452bb2d21606eb492c7642f6 qpopper-4.0.5-r1.ebuild 3342
 MD5 843447464085eea5bb368ef6d5e357ba files/digest-qpopper-4.0.5 131
 MD5 843447464085eea5bb368ef6d5e357ba files/digest-qpopper-4.0.5-r1 131
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBWvxP5FrxP71izLARArexAJ9W1eeZhk6WdfQV/F8l2D+AmWREDACdGrHn
-1Pema09EWKlp6ilv1KwXsao=
-=qU46
------END PGP SIGNATURE-----
