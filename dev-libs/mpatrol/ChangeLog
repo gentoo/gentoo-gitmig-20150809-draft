@@ -6,6 +6,9 @@
  
 *mpatrol-1.4.8 (5 May, 2002)
 
+  29 Mar 2003; Alastair Tse <liquidx@gentoo.org> mpatrol-1.4.8.ebuild:
+  updated deps to virtual/motif
+
   24 Oct 2002; Seemant Kulleen <seemant@gentoo.org> mpatrol-1.4.8.ebuild :
 
   Changed the x? in DEPEND to X?. Thanks to: gentoo@kolbu.no (Olav Kolbu) in
