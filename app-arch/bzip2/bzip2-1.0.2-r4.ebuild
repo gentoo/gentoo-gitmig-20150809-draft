@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r4.ebuild,v 1.8 2005/02/11 23:04:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r4.ebuild,v 1.9 2005/02/19 18:30:12 vapier Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -17,10 +17,10 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-NULL-ptr-check.patch
-	epatch ${FILESDIR}/${PV}-makefile-CFLAGS.patch
-	epatch ${FILESDIR}/${P}-saneso.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-NULL-ptr-check.patch
+	epatch "${FILESDIR}"/${P}-makefile-CFLAGS.patch
+	epatch "${FILESDIR}"/${P}-saneso.patch
 	sed -i -e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' Makefile || die
 
 	use static && append-flags -static
