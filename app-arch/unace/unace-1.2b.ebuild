@@ -1,3 +1,7 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b.ebuild,v 1.2 2002/10/29 04:17:02 vapier Exp $
+
 S="${WORKDIR}/${PN}"
 DESCRIPTION="ACE unarchiver"
 SRC_URI="http://wilma.vub.ac.be/~pdewacht/${P}.tar.gz"
@@ -5,7 +9,7 @@ HOMEPAGE="http://www.winace.com/"
 
 SLOT="1"
 KEYWORDS="x86"
-
+LICENSE="freedist"
 DEPEND="virtual/glibc"
 
 src_unpack() {
