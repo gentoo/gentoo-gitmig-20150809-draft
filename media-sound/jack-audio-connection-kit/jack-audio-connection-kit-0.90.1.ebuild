@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.90.1.ebuild,v 1.5 2004/03/27 02:32:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.90.1.ebuild,v 1.6 2004/04/18 16:30:50 lv Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~ppc amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND=">=media-libs/alsa-lib-0.9.1
 	>=media-libs/libsndfile-1.0.0
