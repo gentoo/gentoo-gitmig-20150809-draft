@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r1.ebuild,v 1.2 2004/03/16 06:26:56 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r1.ebuild,v 1.3 2004/03/19 04:58:55 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -13,11 +13,9 @@ SRC_URI="http://ftp.mozilla.org/pub/firefox/releases/${PV}/firefox-source-${PV}.
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
-IUSE="java gtk2 ipv6 gnome moznoxft xinerama"
+IUSE="java gtk2 ipv6 gnome moznoxft truetype xinerama"
 
 RDEPEND="virtual/x11
-	>=dev-libs/libIDL-0.8.0
-	>=gnome-base/ORBit-0.5.10-r1
 	virtual/xft
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/jpeg-6b
@@ -27,8 +25,8 @@ RDEPEND="virtual/x11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	( gtk2? >=x11-libs/gtk+-2.1.1 :
-		=x11-libs/gtk+-1.2* )
+	gtk2?  ( >=x11-libs/gtk+-2.1.1 >=dev-libs/libIDL-0.8.0 )
+	!gtk2? ( =x11-libs/gtk+-1.2* >=gnome-base/ORBit-0.5.10-r1 )
 	java?  ( virtual/jre )
 	!net-www/mozilla-firefox-bin"
 
@@ -54,7 +52,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local enable_optimize=''
+	local enable_optimize
 	local myconf="--disable-composer \
 		--with-x \
 		--with-system-jpeg \
@@ -69,6 +67,7 @@ src_compile() {
 		--without-system-nspr \
 		--enable-nspr-autoconf \
 		--enable-xsl \
+		$(use_enable ipv6) \
 		--enable-crypto \
 		--with-java-supplement \
 		--with-pthreads \
@@ -90,58 +89,49 @@ src_compile() {
 		--disable-toolkit-xlib \
 		--enable-extensions=default,-irc,-venkman,-content-packs,-help"
 
-	if [ -n "`use gtk2`" ] ; then
-		myconf="${myconf} --enable-toolkit-gtk2 \
-							--enable-default-toolkit=gtk2 \
-							--disable-toolkit-gtk"
+	if use gtk2; then
+		myconf="${myconf} \
+			--enable-toolkit-gtk2 \
+			--enable-default-toolkit=gtk2 \
+			--disable-toolkit-gtk"
 	else
-		myconf="${myconf} --enable-toolkit-gtk \
-							--enable-default-toolkit=gtk \
-							--disable-toolkit-gtk2"
+		myconf="${myconf} \
+			--enable-toolkit-gtk \
+			--enable-default-toolkit=gtk \
+			--disable-toolkit-gtk2"
 	fi
 
-	if [ -z "`use moznoxft`" ]
-	then
-		if [ -n "`use gtk2`" ]
-		then
-			local pango_version=""
+	if use moznoxft; then
+		myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
+	elif use gtk2; then
+		local pango_version
 
-			# We need Xft2.0 localy installed
-			if (test -x /usr/bin/pkg-config) && (pkg-config xft)
-			then
-				pango_version="`pkg-config --modversion pango | cut -d. -f1,2`"
-				pango_version="`echo ${pango_version} | sed -e 's:\.::g'`"
+		# We need Xft2.0 localy installed
+		if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
+			pango_version="$(pkg-config --modversion pango | cut -d. -f1,2)"
 
-				# We also need pango-1.1, else Mozilla links to both
-				# Xft1.1 *and* Xft2.0, and segfault...
-				if [ "${pango_version}" -gt "10" ]
-				then
-					einfo "Building with Xft2.0 (Gtk+-2.0) support!"
-					myconf="${myconf} --enable-xft --disable-freetype2"
-					touch ${WORKDIR}/.xft
-				else
-					ewarn "Building without Xft2.0 support!"
-					myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
-				fi
+			# We also need pango-1.1, else Mozilla links to both
+			# Xft1.1 *and* Xft2.0, and segfault...
+			if [[ ${pango_version//.} -gt 10 ]]; then
+				einfo "Building with Xft2.0 (Gtk+-2.0) support!"
+				myconf="${myconf} --enable-xft --disable-freetype2"
+				touch ${WORKDIR}/.xft
 			else
 				ewarn "Building without Xft2.0 support!"
-				myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
+				myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
 			fi
 		else
-			einfo "Building with Xft2.0 (Gtk+-1.0) support!"
-			myconf="${myconf} --enable-xft --disable-freetype2"
-			touch ${WORKDIR}/.xft
+			ewarn "Building without Xft2.0 support!"
+			myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
 		fi
 	else
-		myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
-	fi
-
-	if [ -n "`use ipv6`" ] ; then
-		myconf="${myconf} --enable-ipv6"
+		einfo "Building with Xft2.0 (Gtk+-1.0) support!"
+		myconf="${myconf} --enable-xft --disable-freetype2"
+		touch ${WORKDIR}/.xft
 	fi
 
 	# Check for xinerama - closes #19369
-	if [ -n "`use xinerama`" ] ; then
+	if use xinerama; then
 		myconf="${myconf} --enable-xinerama=yes"
 	else
 		myconf="${myconf} --enable-xinerama=no"
@@ -159,7 +149,7 @@ src_compile() {
 			;;
 		ppc)
 			# Fix to avoid gcc-3.3.x miscompilation issues.
-			if [ "$(gcc-major-version).$(gcc-minor-version)" = "3.3" ]; then
+			if [[ "$(gcc-major-version).$(gcc-minor-version)" == 3.3 ]]; then
 				append-flags -fno-strict-aliasing
 			fi
 			;;
@@ -187,16 +177,16 @@ src_compile() {
 	filter-flags -ffast-math
 	append-flags -s -fforce-addr
 
-	if [ "$(gcc-major-version)" -eq "3" ]; then
+	if [[ $(gcc-major-version) -eq 3 ]]; then
 		# Currently gcc-3.2 or older do not work well if we specify "-march"
 		# and other optimizations for pentium4.
-		if [ "$(gcc-minor-version)" -lt "3" ]; then
+		if [[ $(gcc-minor-version) -lt 3 ]]; then
 			replace-flags -march=pentium4 -march=pentium3
 			filter-flags -msse2
 		fi
 
 		# Enable us to use flash, etc plugins compiled with gcc-2.95.3
-		if [ "${ARCH}" = "x86" ]; then
+		if [[ ${ARCH} == x86 ]]; then
 			myconf="${myconf} --enable-old-abi-compat-wrappers"
 		fi
 	fi
@@ -232,8 +222,7 @@ src_install() {
 	doins ${S}/build/package/rpm/SOURCES/mozicon50.xpm
 
 	# Install icon and .desktop for menu entry
-	if [ "`use gnome`" ]
-	then
+	if use gnome; then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/icon/firefox-icon.png
 		# Fix comment of menu entry
@@ -255,7 +244,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
 	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaFirefox"
 
 	# Needed to update the run time bindings for REGXPCOM
@@ -271,5 +259,4 @@ pkg_postinst() {
 	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 0755 {} \; || :
 	# Fix permissions on chrome files
 	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
-
 }

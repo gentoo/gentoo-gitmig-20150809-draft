@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.17 2004/03/19 02:28:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.18 2004/03/19 04:58:55 agriffis Exp $
+
+  18 Mar 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-0.8-r1.ebuild:
+  Add truetype to IUSE for bug 37069. Honor USE=gtk2 for conditional dependence
+  on libIDL/ORBit for bug 25567. Also clean up the ebuild: use shorter syntax
+  for conditionals instead of deprecated [ -n "`use blah`" ]; avoid an
+  unnecessary sed; use [[ ]] instead of [ ] to avoid quoting issues
 
   18 Mar 2004; Aron Griffis <agriffis@gentoo.org> files/firefox:
   Fix bug 44140 by fixing relative paths to be absolute. Fix bug 44002 by fixing
