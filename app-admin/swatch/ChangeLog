@@ -1,7 +1,10 @@
 # ChangeLog for app-admin/swatch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.2 2003/02/12 02:27:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.3 2003/03/28 10:26:05 pvdabeel Exp $
 
 * swatch-3.0.4 (13 Nov 2002)
 
+  28 Mard 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> swatch-3.0.4.ebuild :
+  Moved to ppc unstable
+  
   13 Nov 2002; Grant Goodyear <g2boojum@gentoo.org>: Initial ebuild.
