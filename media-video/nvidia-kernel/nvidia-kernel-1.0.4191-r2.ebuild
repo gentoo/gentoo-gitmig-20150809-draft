@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r2.ebuild,v 1.2 2003/03/13 17:32:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r2.ebuild,v 1.3 2003/03/16 13:07:13 azarah Exp $
 
 inherit eutils
 
@@ -56,25 +56,29 @@ src_unpack() {
 	local KV_major="`uname -r | cut -d. -f1`"
 	local KV_minor="`uname -r | cut -d. -f2`"
 	local KV_micro="`uname -r | cut -d. -f3 | sed -e 's:[^0-9].*::'`"
-	local RMAPSRC="/usr/src/linux/mm/rmap.c"
 
 	cd ${S}
-	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 4 ] && [ -r "${RMAPSRC}" ]
+	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 4 ] && \
+	   [ -r /usr/src/linux/mm/rmap.c ]
 	then
 		einfo "Detected rmap enabled kernel."
 		EPATCH_SINGLE_MSG="Applying rmap patch for kernel 2.4..." \
 		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl.diff
-	fi
 
-	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
+	elif [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
 	then
 		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.5..." \
 		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl.diff
 
-		if [ "${KV_micro}" -gt 53 ]
+		if [ "${KV_micro}" -ge 54 ]
 		then
-			EPATCH_SINGLE_MSG="Applying module loader no common sections..." \
+			EPATCH_SINGLE_MSG="Applying module_loader_no_common_sections patch..." \
 			epatch ${FILESDIR}/${NV_PACKAGE}-2.5.54.diff
+		fi
+		if [ "${KV_micro}" -ge 63 ]
+		then
+			EPATCH_SINGLE_MSG="Applying missing_modversion.h patch..." \
+			epatch ${FILESDIR}/${NV_PACKAGE}-2.5.63.diff
 		fi
 	fi
 }
@@ -86,17 +90,8 @@ src_compile() {
 	# updated but the running kernel is still compiled with an older gcc.  This is
 	# needed for chrooted building, where the sanity check detects the gcc of the
 	# kernel outside the chroot rather than within.
-	if [ -d /usr/src/linux/include/asm-i386/mach-default -a \
-	     ! -d /usr/src/linux/include/asm-i386/mach-generic ]
-	then
-		make SYSINCLUDE="/usr/src/linux/include \
-			             -I/usr/src/linux/include/asm-i386/mach-default" \
-			IGNORE_CC_MISMATCH="yes" KERNDIR="/usr/src/linux" \
-			clean nvidia.o || die
-	else
-		make IGNORE_CC_MISMATCH="yes" KERNDIR="/usr/src/linux" \
-			clean nvidia.o || die
-	fi
+	make IGNORE_CC_MISMATCH="yes" KERNDIR="/usr/src/linux" \
+		clean nvidia.o || die
 }
 
 src_install() {

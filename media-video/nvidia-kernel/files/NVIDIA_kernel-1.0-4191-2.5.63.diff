@@ -1,0 +1,25 @@
+diff -Nudr -U3 NVIDIA_kernel-1.0-4191/nv-linux.h NVIDIA_kernel-1.0-4191-fixed/nv-linux.h
+--- NVIDIA_kernel-1.0-4191/nv-linux.h	2003-03-11 08:01:11.000000000 +0000
++++ NVIDIA_kernel-1.0-4191-fixed/nv-linux.h	2003-03-11 07:59:58.000000000 +0000
+@@ -20,10 +20,6 @@
+ #  define MODVERSIONS
+ #endif
+ 
+-#if defined (MODVERSIONS)
+-#include <linux/modversions.h>
+-#endif
+-
+ #include <linux/kernel.h>
+ #include <linux/module.h>
+ #include <linux/version.h>
+@@ -50,6 +46,10 @@
+ #define __SMP__
+ #endif
+ 
++#if defined (MODVERSIONS) && !defined (KERNEL_2_5)
++#include <linux/modversions.h>
++#endif
++
+ #include <linux/types.h>            /* pic_t, size_t, __u32, etc        */
+ #include <linux/errno.h>            /* error codes                      */
+ #include <linux/list.h>             /* circular linked list             */
