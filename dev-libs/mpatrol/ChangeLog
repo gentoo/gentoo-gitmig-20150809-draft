@@ -4,7 +4,7 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*mpatrol-1.4.8 (5 May, 2002)
+*mpatrol-1.4.8 (5 May 2002)
 
   29 Mar 2003; Alastair Tse <liquidx@gentoo.org> mpatrol-1.4.8.ebuild:
   updated deps to virtual/motif
