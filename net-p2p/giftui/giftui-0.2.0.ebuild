@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/giftui-0.2.0.ebuild,v 1.1 2003/09/19 11:55:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/giftui-0.2.0.ebuild,v 1.2 2003/09/20 11:50:48 aliz Exp $
 
 DESCRIPTION="A GTK+2 giFT frontend"
 HOMEPAGE="http://giftui.tuxfamily.org/"
@@ -18,6 +18,7 @@ RDEPEND=${DEPEND}
 S="${WORKDIR}/${P}"
 
 src_install() {
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO ABOUT-NLS
-	einstall prefix=${D}/usr exec_prefix=${D}/usr|| die "Install failed"
+	make DESTDIR=${D} giftuidocdir=/usr/share/doc/${PF} install
+#	prepall
+	prepalldocs
 }

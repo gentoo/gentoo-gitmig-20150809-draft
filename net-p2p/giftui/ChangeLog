@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/giftui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.4 2003/09/19 11:55:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.5 2003/09/20 11:50:48 aliz Exp $
+
+  19 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> giftui-0.2.0.ebuild:
+  Fixed installation.
 
 *giftui-0.2.0 (19 Sep 2003)
 
