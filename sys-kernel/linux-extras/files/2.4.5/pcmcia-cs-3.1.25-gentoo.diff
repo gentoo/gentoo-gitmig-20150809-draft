@@ -1,0 +1,11 @@
+--- pcmcia-cs-3.1.25/cardmgr/cardinfo.c~	Wed Feb 14 04:25:48 2001
++++ pcmcia-cs-3.1.25/cardmgr/cardinfo.c	Fri May  4 11:43:32 2001
+@@ -40,7 +40,7 @@
+ #include <fcntl.h>
+ #include <errno.h>
+ #include <signal.h>
+-#include <sys/time.h>
++#include <time.h>
+ #include <sys/ioctl.h>
+ #include <sys/stat.h>
+ #include <sys/file.h>

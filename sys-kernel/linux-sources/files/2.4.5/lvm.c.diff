@@ -1,0 +1,20 @@
+--- lvm.c.orig	Sat Apr 28 10:48:37 2001
++++ lvm.c	Sat Apr 28 11:07:07 2001
+@@ -1791,7 +1791,7 @@
+ 	int max_hardblocksize = 0, hardblocksize;
+ 
+ 	for (le = 0; le < lv->lv_allocated_le; le++) {
+-		hardblocksize = get_hardblocksize(lv->lv_current_pe[le].dev);
++		hardblocksize = get_hardsect_size(lv->lv_current_pe[le].dev);
+ 		if (hardblocksize == 0)
+ 			hardblocksize = 512;
+ 		if (hardblocksize > max_hardblocksize)
+@@ -1801,7 +1801,7 @@
+ 	if (lv->lv_access & LV_SNAPSHOT) {
+ 		for (e = 0; e < lv->lv_remap_end; e++) {
+ 			hardblocksize =
+-				get_hardblocksize(
++				get_hardsect_size(
+ 					lv->lv_block_exception[e].rdev_new);
+ 			if (hardblocksize == 0)
+ 				hardblocksize = 512;

@@ -1,0 +1,12 @@
+diff -u linux-2.4.5-xfs-20010530-gentoo/Makefile linux-2.4.5-xfs-20010530-gentoo-cleanup/Makefile
+--- linux-2.4.5-xfs-20010530-gentoo/Makefile	Wed May 30 22:19:20 2001
++++ linux-2.4.5-xfs-20010530-gentoo-cleanup/Makefile	Wed May 30 22:20:11 2001
+@@ -105,7 +105,7 @@
+ CPPFLAGS := -D__KERNEL__ -I$(HPATH)
+ CPPFLAGS += $(patsubst %,-I%,$(CROSS_COMPILE_INC))
+ 
+-CFLAGS := $(CPPFLAGS) -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -fno-strict-aliasing
++CFLAGS := $(CPPFLAGS) -Wall -Wstrict-prototypes -O2 -fno-strict-aliasing
+ ifndef CONFIG_FRAME_POINTER
+ CFLAGS += -fomit-frame-pointer
+ endif
