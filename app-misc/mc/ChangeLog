@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 
+  25 Sep 2004; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r11.ebuild:
+  make pam optional, bug #65036
+
   24 Sep 2004; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r11.ebuild:
   add slang to unicode deps
 
