@@ -1,9 +1,0 @@
-# Please edit the file packages.sparc, it will be included in
-# packages the next time you run ../default-sparc-1.0/scripts/build.rel
-#
-# SPARC specific packages
-*sys-apps/sparc-utils
-*sys-boot/silo
-
-# Sed replacement
-*sys-apps/supersed
