@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qce-ga/qce-ga-0.40d.ebuild,v 1.6 2004/06/25 00:48:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qce-ga/qce-ga-0.40d.ebuild,v 1.7 2004/07/14 22:10:32 agriffis Exp $
 
 DESCRIPTION="Logitech USB Quickcam Express Linux Driver Modules"
 HOMEPAGE="http://qce-ga.sourceforge.net/"
@@ -9,6 +9,7 @@ SRC_URI="mirror://sourceforge/qce-ga/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/linux-sources"
 

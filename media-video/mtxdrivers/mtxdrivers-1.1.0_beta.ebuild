@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-1.1.0_beta.ebuild,v 1.4 2004/06/25 00:46:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-1.1.0_beta.ebuild,v 1.5 2004/07/14 22:07:30 agriffis Exp $
 
 inherit matrox
 
@@ -10,6 +10,7 @@ DESCRIPTION="Drivers for the Matrox Parhelia and Millenium P650/P750 cards."
 SRC_URI="${MY_P}.run"
 
 KEYWORDS="x86"
+IUSE=""
 
 RDEPEND="!media-video/mtxdrivers-pro"
 S="${WORKDIR}"
