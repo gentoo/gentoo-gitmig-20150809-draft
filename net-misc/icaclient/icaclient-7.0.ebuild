@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-7.0.ebuild,v 1.5 2004/08/01 22:03:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-7.0.ebuild,v 1.6 2004/09/18 19:38:37 weeve Exp $
 
 DESCRIPTION="ICA Client"
 HOMEPAGE="http://www.citrix.com/download/unix-downloads.asp"
@@ -25,7 +25,7 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	# You must download ICAClient-6.30-1.i386.rpm
+	# You must download ICAClient-7.00-1.i386.rpm
 	# from www.citrix.com and put it in ${DISTDIR}
 	rpm2cpio ${DISTDIR}/${A} | cpio -i --make-directories
 }

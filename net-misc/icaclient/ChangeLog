@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.13 2004/08/28 19:13:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.14 2004/09/18 19:38:37 weeve Exp $
+
+  18 Sep 2004; Jason Wever <weeve@gentoo.org> icaclient-7.0.ebuild,
+  icaclient-8.0.ebuild:
+  Cleaned up comments.
 
 *icaclient-8.0 (28 Aug 2004)
 
