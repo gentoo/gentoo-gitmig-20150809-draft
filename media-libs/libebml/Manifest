@@ -1,3 +1,5 @@
-MD5 1922f7707845d184a3a9633e97b203e1 libebml-0.4.4.ebuild 644
 MD5 e8dfe96edf9602372e1435c9a3d9746d ChangeLog 455
+MD5 1922f7707845d184a3a9633e97b203e1 libebml-0.4.4.ebuild 644
+MD5 4263936c4ff6d68baa89d4acfa2900af libebml-0.5.0.ebuild 643
 MD5 66d6a8001f72ec6d3eca8e7c2c4439dd files/digest-libebml-0.4.4 65
+MD5 f86ca67393bf146106871dd1eecf7d84 files/digest-libebml-0.5.0 64
