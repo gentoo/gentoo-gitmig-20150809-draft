@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.1 2003/12/23 16:54:07 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.2 2003/12/23 16:55:30 brad_mssw Exp $
 
 IUSE="doc"
 
@@ -28,8 +28,8 @@ DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.6
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
 
-PROVIDE="virtual/jdk-1.4.1
-	virtual/jre-1.4.1
+PROVIDE="virtual/jdk-1.4.2
+	virtual/jre-1.4.2
 	virtual/java-scheme-2"
 
 # Extract the 'skip' value (offset of tarball) we should pass to tail
