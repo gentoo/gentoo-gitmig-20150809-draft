@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc2.ebuild,v 1.12 2004/07/08 06:28:55 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc2.ebuild,v 1.13 2004/10/04 23:04:20 pvdabeel Exp $
 
 S=${WORKDIR}/hping2-rc2
 DESCRIPTION="A ping-like TCP/IP packet assembler/analyzer."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.hping.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc hppa ia64 ~amd64 ~alpha"
+KEYWORDS="x86 ~sparc hppa ia64 ~amd64 ~alpha ppc"
 
 DEPEND="net-libs/libpcap"
 IUSE="debug"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.13 2004/07/23 11:32:43 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.14 2004/10/04 23:02:04 pvdabeel Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.cebu.mozcom.com/pub/linux/net/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha arm hppa ~amd64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa ~amd64"
 IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.2-r1"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.54.ebuild,v 1.8 2004/07/08 16:49:58 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.54.ebuild,v 1.9 2004/10/04 22:59:47 pvdabeel Exp $
 
 IUSE="gtk"
 
@@ -13,7 +13,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc hppa alpha"
+KEYWORDS="x86 ppc sparc hppa alpha"
 
 src_compile() {
 	local myconf
