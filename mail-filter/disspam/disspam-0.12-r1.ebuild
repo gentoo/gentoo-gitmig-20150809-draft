@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/disspam-0.12-r1.ebuild,v 1.1 2004/12/31 17:29:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/disspam-0.12-r1.ebuild,v 1.2 2005/01/05 20:53:49 ticho Exp $
 
 inherit eutils versionator
 
@@ -33,7 +33,7 @@ src_unpack() {
 		-e 's/\/usr\/local\/bin\/perl/\/usr\/bin\/perl/' disspam.pl || \
 			die "sed disspam.pl failed"
 }
-	
+
 src_install() {
 	dobin disspam.pl
 	dodoc changes.txt configuration.txt readme.txt sample.conf

@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/disspam
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/ChangeLog,v 1.4 2004/12/31 17:29:06 ticho Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/ChangeLog,v 1.5 2005/01/05 20:53:49 ticho Exp $
+
+  05 Jan 2005; Andrej Kacian <ticho@gentoo.org> +disspam-0.14.ebuild,
+  disspam-0.12-r1.ebuild:
+  Version bump. Some QA fixes, including year 2005 in ebuild headers.
 
 *disspam-0.12-r1 (31 Dec 2004)
 
