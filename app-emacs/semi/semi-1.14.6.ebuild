@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.6.ebuild,v 1.6 2004/07/19 12:23:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.6.ebuild,v 1.7 2004/08/20 19:03:14 usata Exp $
 
-inherit elisp
+inherit elisp eutils
 
 IUSE=""
 
@@ -21,10 +21,19 @@ DEPEND="virtual/emacs
 
 PROVIDE="virtual/semi"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-info.patch
+}
+
 src_compile() {
 	make PREFIX=${D}/usr \
 		LISPDIR=${D}/${SITELISP} \
 		VERSION_SPECIFIC_LISPDIR=${D}/${SITELISP} || die
+
+	emacs -batch -q --no-site-file -l ${FILESDIR}/comp.el \
+		|| die "compile info failed"
 }
 
 src_install() {
@@ -35,17 +44,5 @@ src_install() {
 	elisp-site-file-install ${FILESDIR}/65semi-gentoo.el
 
 	dodoc README* ChangeLog VERSION NEWS
-}
-
-pkg_postinst() {
-	elisp-site-regen
-
-	einfo
-	einfo "Please unmerge another versions or variants, if installed."
-	einfo "You need to rebuild packages depending on ${PN}."
-	einfo
-}
-
-pkg_postrm() {
-	elisp-site-regen
+	doinfo *.info
 }

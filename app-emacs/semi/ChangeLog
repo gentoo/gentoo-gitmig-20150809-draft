@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/semi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.13 2004/07/19 12:23:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.14 2004/08/20 19:03:14 usata Exp $
+
+  21 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +files/comp.el,
+  -files/semi-1.14.5-gentoo.diff, +files/semi-info.patch,
+  -semi-1.14.5-r1.ebuild, semi-1.14.6.ebuild:
+  Install info files. This closes bug #61044.
 
   19 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> semi-1.14.6.ebuild:
   Added to macos
