@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.4.ebuild,v 1.2 2003/03/05 11:18:30 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.13.ebuild,v 1.1 2003/05/25 21:49:58 mholzer Exp $
 
 IUSE="cdr gnome"
 
@@ -33,7 +33,8 @@ DEPEND=" gnome? ( gnome-extra/gtkhtml )
 
 RDEPEND=">=net-analyzer/fping-2.3
 		>=media-sound/ogmtools-0.972
-		>=media-video/mjpegtools-1.6.0"
+		>=media-video/mjpegtools-1.6.0
+		sys-apps/eject"
 
 src_install () {
 	perl-module_src_install
@@ -42,4 +43,9 @@ src_install () {
 pkg_postinst () {
 	einfo "If you want to use the cluster-mode, you need to SUID fping"
 	einfo "chmod u+s /usr/sbin/fping"
+	einfo
+	einfo "for Perl 5.8.x you have to set PERLIO to read TOC properly"
+	einfo "for bash: export PERLIO=stdio"
+	einfo "for csh:  setenv PERLIO stdio"
+	einfo "into your /.${shell}rc"
 }
