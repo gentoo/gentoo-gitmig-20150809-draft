@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.0-r2.ebuild,v 1.5 2004/03/11 20:37:24 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.0-r2.ebuild,v 1.6 2004/04/16 02:25:02 vapier Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
-S="${WORKDIR}/apache-ant-${PV}"
 DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
+HOMEPAGE="http://ant.apache.org/"
 SRC_URI="mirror://apache/ant/source/apache-${PN}-${PV}-src.tar.bz2"
-HOMEPAGE="http://ant.apache.org"
+
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="-* ~x86"
+IUSE="doc optional-tasks"
+
 DEPEND="virtual/glibc
 	>=virtual/jdk-1.4
 	>=dev-java/java-config-1.2"
@@ -18,7 +20,8 @@ RDEPEND=">=virtual/jdk-1.4
 	app-shells/bash
 	>=dev-java/java-config-1.2"
 PDEPEND="optional-tasks? ( =dev-java/ant-optional-1.6.0-r2 )"
-IUSE="doc optional-tasks"
+
+S="${WORKDIR}/apache-ant-${PV}"
 
 src_unpack() {
 	unpack ${A}
@@ -30,7 +33,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	addwrite "/proc/self/maps"
 	export JAVA_HOME=${JDK_HOME}
 	if [ `arch` == "ppc" ] ; then

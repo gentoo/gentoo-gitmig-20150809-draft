@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.12.ebuild,v 1.3 2004/03/18 22:31:22 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.12.ebuild,v 1.4 2004/04/16 02:26:36 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="JSch is a pure Java implementation of SSH2."
 HOMEPAGE="http://www.jcraft.com/jsch/"
@@ -20,10 +22,7 @@ src_compile() {
 	epatch ${FILESDIR}/build.xml-dstamp.patch.gz
 
 	local myc
-
-	if [ -n "`use jikes`" ] ; then
-		myc="${myc} -Dbuild.compiler=jikes"
-	fi
+	use jikes && myc="${myc} -Dbuild.compiler=jikes"
 
 	ANT_OPTS=${myc} ant || die "Failed Compiling"
 }

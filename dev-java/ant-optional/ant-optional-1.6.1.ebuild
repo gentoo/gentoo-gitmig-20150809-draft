@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.1.ebuild,v 1.5 2004/03/17 04:05:37 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.1.ebuild,v 1.6 2004/04/16 02:23:23 vapier Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
-IUSE="doc javamail"
-
-S="${WORKDIR}/apache-ant-${PV}"
 DESCRIPTION="Apache ANT Optional Tasks Jar Files"
+HOMEPAGE="http://ant.apache.org/"
 SRC_URI="mirror://apache/ant/source/apache-ant-${PV}-src.tar.bz2"
-HOMEPAGE="http://ant.apache.org"
+
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="doc javamail"
+
 DEPEND="=dev-java/ant-${PV}
 	>=dev-java/java-config-1.2
 	>=dev-java/log4j-1.2.8
@@ -31,19 +31,10 @@ DEPEND="=dev-java/ant-${PV}
 	>=dev-java/regexp-1.3
 	>=dev-java/jython-2.1
 	javamail? ( >=dev-java/javamail-1.3 )"
-RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# Patch build.sh to die with non-zero exit code in case of errors.
-	# This patch may be useful for all ant versions.
-#	epatch ${FILESDIR}/build.sh-exit-fix.patch.gz
-}
+S="${WORKDIR}/apache-ant-${PV}"
 
 src_compile() {
-
 	addwrite "/proc/self/maps"
 	export JAVA_HOME=${JDK_HOME}
 	if [ `arch` == "ppc" ] ; then

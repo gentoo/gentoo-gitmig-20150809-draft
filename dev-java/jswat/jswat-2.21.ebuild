@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.21.ebuild,v 1.2 2004/02/29 01:14:26 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.21.ebuild,v 1.3 2004/04/16 02:27:08 vapier Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
-S="${WORKDIR}/${PN}-${PV}"
 DESCRIPTION="Extensible graphical Java debugger"
 HOMEPAGE="http://www.bluemarsh.com/java/jswat"
 SRC_URI="mirror://sourceforge/jswat/${PN}-src-${PV}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="x86 sparc -ppc amd64"
+IUSE="doc jikes junit"
+
 DEPEND=">=dev-java/ant-1.5"
 RDEPEND=">=virtual/jdk-1.4"
-IUSE="doc jikes junit"
 
 src_compile() {
 	epatch ${FILESDIR}/${P}.diff
@@ -25,16 +26,14 @@ src_compile() {
 	if [ -f "/usr/share/junit/lib/junit.jar" ] ; then
 		export CLASSPATH="/usr/share/junit/lib/junit.jar"
 		export DEP_APPEND="junit"
-		if [ `use junit` ]
-			then
-				einfo "Running JUnit tests, this may take awhile ..."
-				ant ${antopts} test || die "Junit test failed"
+		if use junit ; then
+			einfo "Running JUnit tests, this may take awhile ..."
+			ant ${antopts} test || die "Junit test failed"
 		fi
 	fi
-
 }
 
-src_install () {
+src_install() {
 	# install jswat classes
 	java-pkg_dojar \
 		build/dist/*/*.jar \

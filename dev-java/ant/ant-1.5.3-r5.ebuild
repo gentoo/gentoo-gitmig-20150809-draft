@@ -1,21 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r5.ebuild,v 1.6 2004/02/10 06:15:09 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r5.ebuild,v 1.7 2004/04/16 02:23:45 vapier Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
-S="${WORKDIR}/apache-ant-${PV}-1"
 DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
+HOMEPAGE="http://ant.apache.org/"
 SRC_URI="http://archive.apache.org/dist/ant/source/apache-${PN}-${PV}-1-src.tar.bz2"
-HOMEPAGE="http://ant.apache.org"
+
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ppc sparc"
+IUSE="doc"
+
 DEPEND="virtual/glibc
 	>=virtual/jdk-1.3"
 RDEPEND=">=virtual/jdk-1.3
 	app-shells/bash"
-IUSE="doc"
+
+S="${WORKDIR}/apache-ant-${PV}-1"
 
 src_unpack() {
 	unpack ${A}
