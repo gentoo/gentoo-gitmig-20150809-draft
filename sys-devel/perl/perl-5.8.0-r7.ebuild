@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r6.ebuild,v 1.5 2002/12/22 06:02:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r7.ebuild,v 1.1 2002/12/22 06:02:47 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -46,10 +46,10 @@ src_compile() {
 		einfo "using threads"
 		mythreading="-multi"
 		myconf="-Dusethreads ${myconf}"
+		myarch="${CHOST%%-*}-linux-thread"
 	else
-		myconf="-Uusethreads ${myconf}"
+		myarch="${CHOST%%-*}-linux"
 	fi
-	myarch="${CHOST%%-*}-linux-thread"
 
 	if [ "`use gdbm`" ]
 	then
@@ -235,6 +235,10 @@ pkg_postinst() {
 	eerror "you trouble, and re-emerging it fails to correct"
 	eerror "the problem, please check http://bugs.gentoo.org/"
 	eerror "for more information or to report a bug."
-	eerror""
+	eerror ""
+	eerror "If this is a re-emerge of perl-5.8, please read"
+	eerror "the ChangeLog for more information and remember"
+	eerror "to emerge Safe again."
+	eerror ""
 
 }

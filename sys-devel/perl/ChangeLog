@@ -1,7 +1,23 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.32 2002/12/20 16:57:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.33 2002/12/22 06:02:47 mcummings Exp $
 
+* perl-5.8.0-r7 (22 Dec 2002)
+
+  22 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  perl-5.8.0-r7.ebuild:
+
+  PLEASE READ. There was a problem introduced for non threaded perl
+  5.8's - a correction introduced earlier for threaded perls was adding
+  -thread to the name of your arch. THIS CAUSES PROBLEMS FOR SOME
+  MODULES. For instance, the DBI module checks to see what the name of
+  your Config.pm has listed for $Config{archname} - if it had thread in
+  it *anywhere*, it assumed you had threading enabled, but since your
+  perl was failing to use threads, would fail. This will version of the
+  ebuild will correct that. You will need to re-emerge modules installed
+  with perl 5.8. A tool for this is forthcoming.
+    
+  
   20 Dec 2002; Michael Cummings <mcummings@gentoo.org>
   perl-5.8.0-r6.ebuild:
   
