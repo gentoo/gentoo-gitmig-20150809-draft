@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.10 2004/11/03 05:42:15 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.11 2004/11/04 20:21:55 mkennedy Exp $
+
+  04 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> ecls-0.9d.ebuild:
+  --with-cmu-format should have been --with-cmuformat
 
 *ecls-0.9d (02 Nov 2004)
 
