@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.888 2005/01/22 22:58:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.889 2005/01/22 23:26:08 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -493,7 +493,6 @@ media-video/vlc:httpd - Enables a web based interface for vlc
 media-video/vlc:libcaca - Enables libcaca colored ascii output
 media-video/vlc:live - Enables LIVE.com support
 media-video/vlc:matroska - Enables support for the matroska video format
-media-video/vlc:mpeg2 - Enables libmpeg2 mpeg-2 video playback support
 media-video/vlc:ogg - Enables libogg ogg container support
 media-video/vlc:stream - Enables vlc to stream video
 media-video/vlc:utf8 - Enables utf8 support
