@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>ppc</herd>
+	<longdescription>
+		mac-on-linux -- Running Mac OS (X) from within Linux
+	</longdescription>
+	<maintainer><email>pylon@gentoo.org</email><name>Lars Weiler</name></maintainer>
+</pkgmetadata>
