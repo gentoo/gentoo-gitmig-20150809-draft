@@ -1,3 +1,13 @@
-MD5 d2815d8cdf7bdcf3a10c99d5195b0278 ide-smart-1.4.ebuild 725
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c512ec816e4fdcb9f852e1eaf49ec212 ChangeLog 504
+MD5 57185a1b1ef8272059e6ebac89526ddc ide-smart-1.4.ebuild 635
 MD5 73bdc3805a715bf0dd02d8fdef252c49 files/digest-ide-smart-1.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3GOfHTu7gpaalycRAmX8AKDOmcB++gLhEx3Au6eFp2AzBj78hwCg2zXQ
+ma1/VrlBhE5FiwNKPivNIVk=
+=MPbL
+-----END PGP SIGNATURE-----

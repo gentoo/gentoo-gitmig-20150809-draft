@@ -1,4 +1,14 @@
-MD5 8eadf458f1d1b306f2f19d315637f3ce killproc-1.12-r2.ebuild 782
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 597ea281b686cf38de35bbdbf4fcbd47 ChangeLog 1367
+MD5 5602a36657a52b6f44ba15e5e3e447bd killproc-1.12-r2.ebuild 735
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
 MD5 f95f4fbda1f6a2b5816a218c02da6316 files/digest-killproc-1.12-r2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3GVEHTu7gpaalycRAsgGAJ9h5Hid634t+5pQRIhefF5A3wBoxwCfRX/M
+2NB15trsc3WBYYqRA+0jQgo=
+=KVyS
+-----END PGP SIGNATURE-----
