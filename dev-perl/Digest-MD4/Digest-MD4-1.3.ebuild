@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/Digest-MD4-1.3.ebuild,v 1.6 2004/07/29 04:04:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/Digest-MD4-1.3.ebuild,v 1.7 2004/09/05 09:54:21 kloeri Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="${BASE_URI}/Authen/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc mips arm hppa"
+KEYWORDS="~x86 ~ppc ~sparc mips arm hppa ~alpha"
 IUSE=""
 
 SRC_TEST="do"

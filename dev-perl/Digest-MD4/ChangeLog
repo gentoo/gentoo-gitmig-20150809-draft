@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-MD4
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.9 2004/07/28 04:53:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.10 2004/09/05 09:54:21 kloeri Exp $
+
+  05 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> Digest-MD4-1.3.ebuild:
+  Add ~alpha keyword.
 
   28 Jul 2004; Joshua Kinard <kumba@gentoo.org> Digest-MD4-1.3.ebuild:
   Marked stable on mips.
