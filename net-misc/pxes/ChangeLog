@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pxes
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.7 2003/11/20 16:16:28 wolf31o2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.8 2004/02/06 17:08:09 wolf31o2 Exp $
+
+  06 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.7.ebuild:
+  Marking stable on x86.
 
 *pxes-0.7 (20 Nov 2003)
 
