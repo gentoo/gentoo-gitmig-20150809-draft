@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.23 2002/06/13 18:58:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.24 2002/08/06 21:54:15 azarah Exp $
+
+  06 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre6 :
+
+  New version.  Patch vidix's Makefile not to fail if it cannot install
+  any drivers.  This should resolve bug #5246.
 
 *mplayer-0.90_pre5-r1 (13 Jun 2002)
 
