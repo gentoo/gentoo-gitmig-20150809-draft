@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.13-r1.ebuild,v 1.2 2001/10/19 22:09:09 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.13-r1.ebuild,v 1.3 2001/10/22 10:06:10 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Application Libraries"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext )
-        >=dev-util/xml-i18n-tools-0.8.4 
+        >=dev-util/intltool-0.11
 	sys-devel/perl
         >=gnome-base/gnome-vfs-1.0.2-r1
 	>=dev-libs/libunicode-0.4-r1

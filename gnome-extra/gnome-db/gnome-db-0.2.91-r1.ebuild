@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-office/gnome-db/gnome-db-0.2.3.ebuild,v 1.1 2001/04/29 16:17:43 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.91-r1.ebuild,v 1.2 2001/10/19 22:05:36 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.91-r1.ebuild,v 1.3 2001/10/22 10:07:30 hallski Exp $
 
 
 S=${WORKDIR}/${P}
@@ -16,7 +16,7 @@ RDEPEND=">=gnome-base/bonobo-1.0.9-r1
 	 >=gnome-extra/gal-0.13-r1"
 
 DEPEND="${RDEPEND}
-        >=dev-util/xml-i18n-tools-0.8.4"
+        >=dev-util/intltool-0.11"
 
 src_compile() {
 	./configure --host=${CHOST}					\

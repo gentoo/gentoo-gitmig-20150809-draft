@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.64-r1.ebuild,v 1.1 2001/05/17 13:29:30 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.35.5-r2.ebuild,v 1.4 2001/10/21 06:35:16 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.35.5-r2.ebuild,v 1.5 2001/10/22 10:06:31 hallski Exp $
 
 P=Guppi-${PV}
 S=${WORKDIR}/${P}
@@ -17,7 +17,7 @@ RDEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-        >=dev-util/xml-i18n-tools-0.8.4
+        >=dev-util/intltool-0.11
 	python? ( >=dev-lang/python-2.0 )"
 
 src_compile() {                           

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.14.0-r1.ebuild,v 1.3 2001/10/19 22:04:17 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.14.0-r1.ebuild,v 1.4 2001/10/22 10:07:12 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtkhtml"
@@ -17,7 +17,7 @@ RDEPEND=">=gnome-extra/gal-0.13-r1
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-        >=dev-util/xml-i18n-tools-0.8.4"
+        >=dev-util/intltool-0.11"
 
 src_compile() {
 
