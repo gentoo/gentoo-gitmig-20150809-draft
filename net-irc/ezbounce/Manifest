@@ -1,5 +1,5 @@
-MD5 b0ad2b16280102005e3045153b2e2d4a ChangeLog 784
-MD5 43d4a205608c6bc27d6aacb5e23dfc92 ezbounce-1.04a.ebuild 781
+MD5 f2a445b3dd95146fde5f893411d1a0df ezbounce-1.04a.ebuild 772
+MD5 98f7222c899b2899c04d4f6e668712a1 ChangeLog 775
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 77781fdeabcd004ae4478c14971a9644 files/digest-ezbounce-1.04a 66
 MD5 2c41dd7703df2b1d7c993f8665105122 files/ezbounce-1.04a-crash-fix.patch 945
