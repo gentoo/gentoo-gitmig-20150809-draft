@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/monkeyd-0.8.2.ebuild,v 1.1 2004/02/10 23:23:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/monkeyd-0.8.2.ebuild,v 1.2 2004/02/22 22:14:30 vapier Exp $
 
 WEBROOT=/var/www/localhost
 
@@ -12,9 +12,11 @@ SRC_URI="http://monkeyd.sourceforge.net/versions/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE="php"
 
 DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/glibc
+	php? ( dev-php/php-cgi )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -41,6 +43,10 @@ src_install() {
 		LOGDIR=${D}/var/log/${PN} \
 		install \
 		|| die
+	if use php ; then
+		dosed '/^#AddScript application\/x-httpd-php/s:^#::' /etc/monkeyd/monkey.conf
+		dosed 's:/home/my_home/php/bin/php:/usr/bin/php-cgi:' /etc/monkeyd/monkey.conf
+	fi
 	[ -e ${ROOT}/${WEBROOT}/htdocs/index.html ] && mv ${D}${WEBROOT}/htdocs/{index,index-monkey}.html
 	dosed "s:/var/log/monkeyd/monkey.pid:/var/run/monkey.pid:" /etc/monkeyd/monkey.conf
 	exeinto /etc/init.d ; newexe ${FILESDIR}/monkeyd.init.d monkeyd
