@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/qmamecat/qmamecat-0.44.45.ebuild,v 1.2 2004/02/20 06:26:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/qmamecat/qmamecat-0.44.45.ebuild,v 1.3 2004/05/27 02:02:35 mr_bones_ Exp $
 
 MY_PV="${PV/45/b45}"
 DESCRIPTION="QT mame catalog and frontend"
@@ -10,6 +10,7 @@ SRC_URI="http://www.mameworld.net/mamecat/snapshots/qmamecat-${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 DEPEND="virtual/glibc
 	virtual/x11
