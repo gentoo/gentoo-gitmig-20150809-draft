@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.20 2002/07/25 09:21:15 jayskwak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.21 2002/07/27 19:42:23 danarmak Exp $
 
 *qt-3.0.5-r1 (25 Jul 2002)
 
@@ -10,6 +10,14 @@
   23 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   Fix #5346: correct -system-nas-sound configure option.
+
+*qt-3.0.5 (18 Jul 2002)
+
+  183 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Add new upstream version.
+  NOTE: When upgrading from any older qt, you have to recompile any and all qt plugins.
+  That includes the kdelibs and mosfet-liquid-widget ebuilds.
 
 *qt-3.0.4.20020606-r1 (8 Jun 2002)
 
