@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kreatecd/kreatecd-1.1.0.ebuild,v 1.12 2002/08/01 11:40:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kreatecd/kreatecd-1.1.0.ebuild,v 1.13 2002/08/16 02:31:09 murphy Exp $
 
 inherit kde-base || die
 
@@ -13,5 +13,5 @@ LICENSE="GPL-2"
 DEPEND="$DEPEND
 	>=media-sound/mpg123-0.59
 	>=media-sound/cdparanoia-3.9.8"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 newdepend ">=app-cdr/cdrtools-1.11"

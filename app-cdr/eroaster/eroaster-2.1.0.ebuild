@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.6 2002/08/06 20:41:07 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.7 2002/08/16 02:31:09 murphy Exp $
 
 DESCRIPTION="A graphical frontend for cdrecord and mkisofs written in gnome-python"
 HOMEPAGE="http://eroaster.sourceforge.net"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/eroaster/${P}.tar.gz"  
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 
 # cdrecord and mkisofs are needed or configure fails
