@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/efac
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.1 2003/05/26 01:29:03 avenj Exp $
+
+*efax-0.9a (25 May 2003)
+
+  25 May 2003; Jon Portnoy <avenj@gentoo.org> efax-0.9a.ebuild :
+  Initial import, submitted by Brad Laue, who will also be maintaining
+  this package futurely.
