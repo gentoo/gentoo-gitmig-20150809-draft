@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.23 2004/06/24 22:37:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.24 2004/08/15 10:31:55 hansmi Exp $
+
+  15 Aug 2004; Michael Hanselmann <hansmi@gentoo.org> xmame-0.83.1.ebuild:
+  Fixed a link-error on PowerPC. Bug #49261. Thanks to Dustin Byford
+  <dustin@firein.net> for submitting the patch.
 
   18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.83.1.ebuild:
   amd64 compile fix for bug #54270 - thanks to Andrew Williams

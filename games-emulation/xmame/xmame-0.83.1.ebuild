@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.83.1.ebuild,v 1.3 2004/06/24 22:37:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.83.1.ebuild,v 1.4 2004/08/15 10:31:55 hansmi Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -73,10 +73,18 @@ src_unpack() {
 				|| die "sed Makefile (joystick) failed"
 		fi
 		;;
-	ppc|sparc|hppa)
+	ppc)
 		sed -i \
 			-e '/^MY_CPU/s:i386:risc:' Makefile \
-			|| die "sed Makefile (ppc|sparc|hppa) failed"
+			|| die "sed Makefile (ppc) failed"
+		sed -i \
+			-e '/^LD\t= $(CC) -Wl,-s/s:$: -Wl,--relax:' Makefile \
+			|| die "sed Makefile (ppc) failed"
+		;;
+	sparc|hppa)
+		sed -i \
+			-e '/^MY_CPU/s:i386:risc:' Makefile \
+			|| die "sed Makefile (sparc|hppa) failed"
 		;;
 	alpha)
 		sed -i \
