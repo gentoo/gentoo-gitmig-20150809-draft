@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-3.9-r1.ebuild,v 1.4 2000/09/15 20:09:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-3.9-r2.ebuild,v 1.1 2000/10/27 22:05:06 drobbins Exp $
 
 P=hdparm-3.9
 A=${P}.tar.gz
@@ -19,6 +19,8 @@ src_unpack() {
     mv Makefile Makefile.orig
     sed -e "s/-O2/${CFLAGS}/" \
 	Makefile.orig > Makefile
+	mv hdparm.c hdparm.c.orig
+	sed -e "/^#include <string.h>/d" hdparm.c.orig > hdparm.c
 }
 
 src_install() {                               
