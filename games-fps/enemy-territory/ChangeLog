@@ -1,6 +1,6 @@
-# ChangeLog for app-games/enemy-territory
+# ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.2 2003/09/10 16:08:42 vapier Exp $
 
   05 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
   enemy-territory-2.55.ebuild:
