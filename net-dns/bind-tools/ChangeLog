@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.15 2003/11/24 18:31:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.16 2003/11/27 03:45:23 blkdeath Exp $
+
+  26 Nov 2003; Stewart Honsberger <blkdeath@gentoo.org>
+  bind-tools-9.2.2.ebuild, bind-tools-9.2.3.ebuild:
+  Marked 9.2.2 stable on PPC
+  Marked 9.2.3 unstable on all arches; critical library conflicts.
 
   24 Nov 2003; Aron Griffis <agriffis@gentoo.org> bind-tools-9.2.3.ebuild:
   Disable on alpha until bug 34265 is resolved
