@@ -1,6 +1,18 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.14 2002/11/04 20:27:11 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.15 2002/11/20 22:00:13 mkeadle Exp $
+
+*openbox-2.2.1 (20 Nov 2002)
+
+  20 Nov 2002; Matt Keadle <mkeadle@gentoo.org> openbox-2.2.1.ebuild
+  files/digest-openbox-2.2.1
+
+  Version bump to latest development release. It starting to get interesting
+  with Xft1/2. Fluxbox is now making use of Xft for antialiased text.
+  However, fluxbox and openbox and using opposing versions of Xft.
+  Currently our xft (2.x) ebuild is masked, which openbox needs/want. I can
+  do some sedding to remove the compilation to utils/xftlsfonts but that
+  can't become even a semi-permanent fix.
 
 *openbox-2.1.3 (4 Nov 2002)
 
