@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r2.ebuild,v 1.1 2003/01/15 07:01:35 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r2.ebuild,v 1.2 2003/01/15 08:35:49 raker Exp $
 
 S=${WORKDIR}/admin/${P}
 
@@ -49,5 +49,5 @@ src_install() {
 	einfo "Installing the svscan startup file ..."
 	insinto /etc/init.d
 	insopts -m755
-	newins ${FILESDIR}/svscan-r2 /etc/init.d/svscan
+	newins ${FILESDIR}/svscan-r2 svscan
 }
