@@ -1,3 +1,5 @@
-MD5 d76723adc51c452e8b35c96fb5c5eb3e files/digest-tkpasman-2.2 63
 MD5 f351e2b6d90385c7d1685e0ac4391d14 ChangeLog 382
 MD5 46efedae56302a830863b394cd4f17af tkpasman-2.2.ebuild 852
+MD5 b62010be296ed0c33bc53d250546bd88 tkpasman-2.2a.ebuild 841
+MD5 d76723adc51c452e8b35c96fb5c5eb3e files/digest-tkpasman-2.2 63
+MD5 ae240d49b3add0897d8625c6c9d4335c files/digest-tkpasman-2.2a 64
