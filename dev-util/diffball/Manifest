@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 be4e6d73ca66392b8a8db4cbedd6a4ff diffball-0.6_pre2.ebuild 807
-MD5 a2a22cbe1ca16ab56a75645848a29fa8 ChangeLog 986
+MD5 4b151bd0ac1b850cd89d1d8509c2c661 diffball-0.6.ebuild 780
 MD5 56e46532cb9aa08b89639cf3e16f1145 metadata.xml 251
-MD5 624c9a1231d02e85bda933a348f2a1af diffball-0.6.ebuild 782
-MD5 c1c6945c633ef2d66531f5836763c9b2 files/digest-diffball-0.6_pre2 70
+MD5 df6082eeadc1ec567edc38ba6669a48c ChangeLog 1167
 MD5 5472eae8f8fdead6343807f32aad8dcd files/digest-diffball-0.6 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCLxNHI1lqEGTUzyQRArYlAJ44H5nHBzFSXu6cZOE2vVIKnz+yyQCgwCGA
-hkTZ+bdK0AZAfpQWNzUFZak=
-=r67g
------END PGP SIGNATURE-----
