@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.5.ebuild,v 1.1 2004/03/17 22:09:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.5.ebuild,v 1.2 2004/04/11 23:50:05 lv Exp $
 
 IUSE=""
 
@@ -18,6 +18,14 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	cd ${S}/make/linux
+
+	# This fix is necessary due to libebml being used to generate
+	# shared libraries, such as the vlc plugin for mozilla. on archs
+	# that require shared objects to be compiled with -fPIC, this
+	# really shouldn't happen, but libebml doesn't produce an so.
+	# Travis Tilley <lv@gentoo.org>
+	append-flags -fPIC
+
 	sed -i -e 's/CXXFLAGS=/CXXFLAGS+=/g' Makefile
 	make PREFIX=/usr || die "make failed"
 }

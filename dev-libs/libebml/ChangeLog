@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.9 2004/03/17 22:09:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.10 2004/04/11 23:50:05 lv Exp $
+
+  11 Apr 2004; Travis Tilley <lv@gentoo.org> libebml-0.6.4.ebuild,
+  libebml-0.6.5.ebuild:
+  added an -fPIC fix for compiling vlc on amd64. see bug #47500 for more
+  information.
 
 *libebml-0.6.5 (18 Mar 2004)
 
