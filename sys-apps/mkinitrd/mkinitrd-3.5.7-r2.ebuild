@@ -1,29 +1,26 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/mkinitrd-3.5.7-r2.ebuild,v 1.1 2003/11/01 04:46:06 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/mkinitrd-3.5.7-r2.ebuild,v 1.2 2004/01/26 01:25:23 vapier Exp $
 
-IUSE="selinux"
+inherit eutils
 
 DESCRIPTION="Tools for creating initrd images"
 HOMEPAGE="http://www.redhat.com"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
+IUSE="selinux"
 
 DEPEND="dev-libs/popt
-	>=sys-kernel/linux-headers-2.4.19-r1
-	x86? ( dev-libs/dietlibc )"
-
+	virtual/os-headers"
+#	x86? ( dev-libs/dietlibc )"
 RDEPEND="app-shells/bash"
-
 PDEPEND="selinux? ( sys-apps/policycoreutils )"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
 
 	# Fix for coreutils tail behavior
@@ -34,6 +31,9 @@ src_unpack() {
 
 	# SELinux policy load
 	use selinux && epatch ${FILESDIR}/mkinitrd-selinux.diff
+
+	# dielibc doesnt seem to work no more #35138
+	sed -i 's:diet ::' nash/Makefile
 }
 
 src_compile() {

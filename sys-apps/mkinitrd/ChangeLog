@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/mkinitrd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.8 2003/11/01 04:46:06 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.9 2004/01/26 01:25:23 vapier Exp $
 
 *mkinitrd-3.5.7-r2 (31 Oct 2003)
+
+  25 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  dietlibc support seems to be broken so remove it for now #35138.
 
   31 Oct 2003; Chris PeBenito <pebenito@gentoo.org> mkinitrd-3.5.7-r2.ebuild,
   files/mkinitrd-lvm_statics.diff:
