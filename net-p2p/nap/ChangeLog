@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/nap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.9 2004/04/20 18:09:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.10 2004/05/21 23:13:33 squinky86 Exp $
+
+*nap-1.5.3 (21 May 2004)
+
+  21 May 2004; Jon Hood <squinky86@gentoo.org> nap-1.5.2.ebuild,
+  +nap-1.5.3.ebuild:
+  version bump
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> nap-1.5.1.ebuild,
   nap-1.5.2.ebuild:
