@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.11.ebuild,v 1.8 2004/10/06 03:23:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.12.ebuild,v 1.1 2004/10/06 15:50:11 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ IUSE="bidi debug gnome gtk gtk2 imlib ncurses nls nosm noxpm perl png readline r
 
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
-		mirror://gentoo/${P}-translucent-menus.diff.gz
+		mirror://gentoo/fvwm-2.5.11-translucent-menus.diff.gz
 		perl? ( http://users.tpg.com.au/users/scottie7/FvwmTabs-v3.3.tar.gz	)"
 HOMEPAGE="http://www.fvwm.org/"
 
@@ -48,7 +48,7 @@ src_unpack() {
 	# this patch enables fast translucent menus in fvwm..yummy! this is a
 	# minor tweak of a patch posted to fvwm-user mailing list by Olivier
 	# Chapuis in <20030827135125.GA6370@snoopy.folie>.
-	cd ${S}; epatch ${WORKDIR}/${P}-translucent-menus.diff
+	cd ${S}; epatch ${WORKDIR}/fvwm-2.5.11-translucent-menus.diff
 
 	# according to a post to fvwm-workers mailing list, Mikhael Goikhman
 	# planned on disabling these debug statements before the release, but
