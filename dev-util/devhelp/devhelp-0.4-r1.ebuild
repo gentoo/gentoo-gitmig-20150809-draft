@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.4-r1.ebuild,v 1.11 2003/02/13 11:50:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.4-r1.ebuild,v 1.12 2003/03/13 23:53:11 liquidx Exp $
 
 IUSE="nls"
 
@@ -18,7 +18,7 @@ DEPEND=">=gnome-base/gnome-libs-1.4.1.7
 	 >=gnome-base/bonobo-1.0.19
 	 =gnome-base/libglade-0*
 	 >=dev-libs/libxml-1.8.17
-	 >=gnome-extra/gtkhtml-1.0.2
+	 <gnome-extra/gtkhtml-3.0
 	 =gnome-base/gconf-1.0*
 	 =gnome-base/gnome-vfs-1*
 	 >=gnome-base/oaf-0.6.8-r1

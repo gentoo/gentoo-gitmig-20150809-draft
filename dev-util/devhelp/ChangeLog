@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.10 2003/03/03 17:29:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.11 2003/03/13 23:53:11 liquidx Exp $
 
 *devhelp-0.5.0 (03 Mar 2003)
 
@@ -10,7 +10,10 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *devhelp-0.4-r1 (04 Jul 2002)
- 
+
+  13 Mar 2003; Alastair Tse <liquidx@gentoo.org> devhelp-0.4-r1.ebuild:
+  restrict dep gtk+1 gtkhtml
+
   20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> devhelp-0.4-r1.ebuild :
 
   Added ppc to KEYWORDS.
