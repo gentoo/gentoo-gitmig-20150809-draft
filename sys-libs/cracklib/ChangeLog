@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.20 2003/05/23 03:38:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.21 2003/05/24 18:48:15 taviso Exp $
+
+  24 May 2003; Tavis Ormandy <taviso@gentoo.org> cracklib-2.7-r6.ebuild,
+  cracklib-2.7-r7.ebuild, files/cracklib-2.7-dec-alpha-compiler.diff:
+  dont use -g with ccc, use -g3
 
 *cracklib-2.7-r7 (12 May 2003)
  

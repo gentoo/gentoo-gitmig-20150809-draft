@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r6.ebuild,v 1.12 2003/04/05 18:13:17 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r6.ebuild,v 1.13 2003/05/24 18:48:15 taviso Exp $
 
 IUSE=""
 
@@ -26,6 +26,8 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-redhat.patch
 	epatch ${FILESDIR}/${P}-gentoo-new.diff
+	[ "$ARCH" == "alpha" -a "${CC}" == "ccc" ] && \
+		epatch ${FILESDIR}/cracklib-${PV}-dec-alpha-compiler.diff
 }
 
 src_compile() {

@@ -1,0 +1,11 @@
+--- cracklib/Makefile	2003-05-24 19:38:26.000000000 +0100
++++ cracklib/Makefile	2003-05-24 19:35:14.000000000 +0100
+@@ -8,7 +8,7 @@
+ 
+ LIB	= libcrack.so
+ OBJ	= fascist.o packlib.o rules.o stringlib.o
++CFLAGS += -g3 -I../cracklib -DIN_CRACKLIB -fPIC
+-CFLAGS += -g -I../cracklib -DIN_CRACKLIB -fPIC
+ LD	= ld
+ 
+ $(LIB):	$(OBJ) Makefile
