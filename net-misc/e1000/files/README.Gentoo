@@ -1,0 +1,28 @@
+Workaround for some cards and low end switches
+==============================================
+
+There is a known problem with some cards and low-end switches where the 
+ethernet controller is not able to establish a link (see README). In case 
+you are experiencing this problem, try the following:
+
+# Stop networking for e1000
+$ /etc/init.d/net.eth0 stop
+$ rmmod e1000
+
+# compile e1000 with workaround
+$ USE_INCOMPATIBLE_SWITCH="yes" emerge e1000
+
+# load e1000 with parameters limiting its speed
+$ echo "alias eth0 e1000" > /etc/modules.d/e1000
+$ echo "options e1000 Speed=10 Duplex=2,1" >> /etc/modules.d/e1000
+$ update-modules
+
+# Start networking again
+$ modprobe e1000
+$ /etc/init.d/net.eth0 start
+
+This assumes /etc/conf.d/net is set up correctly and your kernel is 
+configured without support for e1000 (neither as module nor compiled in) 
+as it is needed for net-misc/e1000 to work. 
+eth0 has to be replaced with the adapter you are using. You might need 
+different settings for Speed and Duplex.

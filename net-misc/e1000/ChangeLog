@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/e1000
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/e1000/ChangeLog,v 1.13 2004/02/03 12:15:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/e1000/ChangeLog,v 1.14 2004/03/01 07:42:08 mholzer Exp $
+
+  01 Mar 2004; Martin Holzer <mholzer@gentoo.org> e1000-5.2.30.1.ebuild,
+  files/README.Gentoo:
+  improved low-end switches compatiblity. Submitted by 
+  Dennis Nienhüser <fragfred@gmx.de> in 43306.
 
 *e1000-5.2.30.1 (03 Feb 2004)
 
