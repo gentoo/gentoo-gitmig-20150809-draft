@@ -1,6 +1,23 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.110 2005/03/08 23:53:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.111 2005/03/11 15:10:30 mcummings Exp $
+
+*perl-5.8.6-r4 (11 Mar 2005)
+
+  11 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  +files/CAN-2005-0448-rmtree.patch, perl-5.8.2-r2.ebuild,
+  perl-5.8.2-r3.ebuild, +perl-5.8.2-r4.ebuild, perl-5.8.4-r2.ebuild,
+  perl-5.8.4-r3.ebuild, +perl-5.8.4-r4.ebuild, perl-5.8.5-r3.ebuild,
+  perl-5.8.5-r4.ebuild, +perl-5.8.5-r5.ebuild, perl-5.8.6-r2.ebuild,
+  perl-5.8.6-r3.ebuild, +perl-5.8.6-r4.ebuild:
+  Version bump to finalize patch
+
+  11 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  +files/CAN-2005-0448-rmtree.patch, perl-5.8.2-r2.ebuild,
+  perl-5.8.2-r3.ebuild, perl-5.8.4-r2.ebuild, perl-5.8.4-r3.ebuild,
+  perl-5.8.5-r3.ebuild, perl-5.8.5-r4.ebuild, perl-5.8.6-r2.ebuild,
+  perl-5.8.6-r3.ebuild:
+  Changed file_path_rmtree to CAN-2005-0448-rmtree.patch per bug 79685
 
   08 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   perl-5.8.6-r3.ebuild:
