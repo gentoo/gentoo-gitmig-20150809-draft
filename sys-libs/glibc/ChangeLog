@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.61 2003/06/04 23:20:38 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.62 2003/06/14 19:31:47 taviso Exp $
+
+  14 Jun 2003; Tavis Ormandy <taviso@gentoo.org> glibc-2.3.2-r1.ebuild,
+  glibc-2.3.2-r2.ebuild, files/2.3.2/glibc-2.3.2-decc-compaq.patch:
+  fixing ccc compatability, minor patch only applied on alpha.
 
   05 Jun 2003; Christian Birchinger <joker@gentoo.org> glibc-2.3.1-r4.ebuild:
   Replaced sparc64 CFLAGS hack with replace-sparc64-flags from flag-o-matic

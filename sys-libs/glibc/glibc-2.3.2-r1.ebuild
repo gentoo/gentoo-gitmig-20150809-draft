@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.7 2003/06/02 20:10:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.8 2003/06/14 19:31:47 taviso Exp $
 
 IUSE="nls pic build nptl"
 
@@ -315,6 +315,12 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libgcc-compat-mips.patch
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
 	fi
+
+	# Fix compatability with compaq compilers by ifdef'ing out some 
+	# 2.3.2 additions. 
+	# <taviso@gentoo.org> (14 Jun 2003).
+	use alpha && epatch ${FILESDIR}/2.3.2/${P}-decc-compaq.patch
+
 }
 
 setup_flags() {

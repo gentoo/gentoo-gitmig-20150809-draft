@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.1 2003/05/18 22:22:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.2 2003/06/14 19:31:47 taviso Exp $
 
 IUSE="nls pic build nptl"
 
@@ -334,7 +334,7 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libgcc-compat-mips.patch
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
 	fi
-
+	
 	# Fix missing include of unistd.h in nptl/unwind.c
 	# <azarah@gentoo.org> (17 May 2003)
 	if use_nptl
