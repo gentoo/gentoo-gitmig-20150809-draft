@@ -10,5 +10,5 @@ MD5 cbf98ddcd59fcc55cbc21fe6fb9bb56e files/digest-xsp-0.14 60
 MD5 26af51781fab59682eb75d854280b4a9 files/digest-xsp-0.15 60
 MD5 f18d63d88f5bee4df47c3f7e9f0285c5 files/digest-xsp-0.16 60
 MD5 038cecc23880f6d9a66656f5e5fd3848 files/xsp.confd 297
-MD5 e752a9e4a55f283f12adbf6d62d9301d files/xsp.initd 676
+MD5 4c6ea487a7fa33ca219f4d49803f1e25 files/xsp.initd 669
 MD5 f546d127c2bbcd153f5668d0f114de3d files/digest-xsp-1.0 59
