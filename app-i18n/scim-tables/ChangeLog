@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.21 2004/09/11 09:49:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.22 2004/09/27 02:14:13 usata Exp $
+
+  27 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -scim-tables-0.4.0.ebuild,
+  scim-tables-0.4.3.ebuild:
+  Marked 0.4.3 stable on x86, alpha and ppc. Removed old ebuild.
 
   11 Sep 2004; <blubb@gentoo.org> scim-tables-0.4.3.ebuild:
   added ~amd64
