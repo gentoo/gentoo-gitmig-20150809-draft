@@ -4,11 +4,13 @@ MD5 3b71719d3ecafa0a96887ef5694a0ac2 cl-uffi-1.4.24.ebuild 1119
 MD5 d580e01bed86cd645058f8f0bc4dc922 cl-uffi-1.4.6.ebuild 1254
 MD5 3248554324af48de0b839ba606d415ce cl-uffi-1.2.15.ebuild 1438
 MD5 6f95da0b938d5aaf6182cdbaa9250bd6 cl-uffi-1.4.13.ebuild 1119
+MD5 3b71719d3ecafa0a96887ef5694a0ac2 cl-uffi-1.4.26.ebuild 1119
 MD5 995ecc3c805339e188b52b721e4f7637 ChangeLog 1596
 MD5 b17a87ef8f7b717f8efd447e3abf3f6f cl-uffi-1.3.6.ebuild 1816
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 fa78f1a26bf8549795722b07c155761a cl-uffi-1.4.5.ebuild 1254
 MD5 9575cfbbdf412ea882073c3e93084244 cl-uffi-1.4.3.ebuild 1740
+MD5 fb59b22236038a64acd610c87f23957b files/digest-cl-uffi-1.4.26 63
 MD5 dc8b389800029795c6c5fb5573049e89 files/digest-cl-uffi-1.2.15 63
 MD5 cac372364ba019b10f5f84f2916c5dba files/digest-cl-uffi-1.4.6-r1 62
 MD5 ee3ee3dac3a19564fa9fa532042e43b4 files/digest-cl-uffi-1.4.24 63
