@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/thinkpad
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.5 2004/07/19 02:36:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.6 2004/10/01 08:33:58 swtaylor Exp $
+
+*thinkpad-5.7 (01 Oct 2004)
+
+  01 Oct 2004; Scott W Taylor <swtaylor@gentoo.org> +thinkpad-5.7.ebuild:
+  new source, plays nicely with 2.6 kernel
 
   18 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> thinkpad-4.8.ebuild:
   stable on x86.
