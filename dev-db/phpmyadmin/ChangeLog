@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.88 2005/03/02 14:48:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.89 2005/03/02 17:58:13 ka0ttic Exp $
+
+  02 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/2.6.1_p2-no-wildcard-privs-for-you.patch,
+  phpmyadmin-2.6.1_p2-r1.ebuild:
+  Fix patch; added sed in src_unpack to automatically update the
+  postinst-en.txt that gets installed.
 
 *phpmyadmin-2.6.1_p2-r1 (02 Mar 2005)
 

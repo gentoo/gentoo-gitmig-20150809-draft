@@ -1,17 +1,6 @@
-===================================================================
-RCS file: /cvsroot/phpmyadmin/phpMyAdmin/server_privileges.php,v
-retrieving revision 2.40
-retrieving revision 2.42
-diff -u -r2.40 -r2.42
---- phpmyadmin/phpMyAdmin/server_privileges.php	2004/11/21 13:11:26	2.40
-+++ phpmyadmin/phpMyAdmin/server_privileges.php	2005/02/18 02:57:30	2.42
-@@ -1,5 +1,5 @@
- <?php
--/* $Id: 2.6.1_p2-no-wildcard-privs-for-you.patch,v 1.1 2005/03/02 14:48:45 ka0ttic Exp $ */
-+/* $Id: 2.6.1_p2-no-wildcard-privs-for-you.patch,v 1.1 2005/03/02 14:48:45 ka0ttic Exp $ */
- // vim: expandtab sw=4 ts=4 sts=4:
- 
- /**
+diff --exclude='*~' -urN phpMyAdmin-2.6.1-pl2.orig/server_privileges.php phpMyAdmin-2.6.1-pl2/server_privileges.php
+--- phpMyAdmin-2.6.1-pl2.orig/server_privileges.php	2005-03-02 12:54:10.528575299 -0500
++++ phpMyAdmin-2.6.1-pl2/server_privileges.php	2005-03-02 12:55:47.977465714 -0500
 @@ -490,6 +490,22 @@
         . (empty($thishost) ? '' : 'else if (this.value == \'thishost\') { hostname.value = \'' . addslashes(htmlspecialchars($thishost)) . '\'; } ')
         . 'else if (this.value == \'hosttable\') { hostname.value = \'\'; } else if (this.value == \'userdefined\') { hostname.focus(); hostname.select(); }">' . "\n";

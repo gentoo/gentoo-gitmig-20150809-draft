@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.1_p2-r1.ebuild,v 1.1 2005/03/02 14:48:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.1_p2-r1.ebuild,v 1.2 2005/03/02 17:58:13 ka0ttic Exp $
 
 inherit eutils webapp
 
@@ -30,6 +30,10 @@ src_unpack() {
 
 	# Remove .cvs* files and CVS directories
 	find ${S} -name .cvs\* -or \( -type d -name CVS -prune \) | xargs rm -rf
+
+	sed -e "s:\${MY_SQLSCRIPTSDIR}:${MY_SQLSCRIPTSDIR}:" \
+		-e "s:\${PVR}:${PVR}:" \
+		${FILESDIR}/postinstall-en.txt > ${WORKDIR}/postinstall-en.txt
 }
 
 src_compile() {
@@ -88,7 +92,7 @@ src_install() {
 
 	# add the post-installation instructions
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en ${WORKDIR}/postinstall-en.txt
 
 	# all done
 	#
