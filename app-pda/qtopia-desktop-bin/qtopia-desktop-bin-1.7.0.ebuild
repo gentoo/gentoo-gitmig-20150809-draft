@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-1.7.0.ebuild,v 1.3 2004/07/01 11:47:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-1.7.0.ebuild,v 1.4 2004/07/13 18:34:25 agriffis Exp $
 
-IUSE="X"
+IUSE=""
 
 inherit rpm
 
