@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.45 2005/01/03 07:40:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.46 2005/01/03 16:05:48 ticho Exp $
+
+*uw-imap-2002e-r3 (03 Jan 2005)
+
+  03 Jan 2005; Andrej Kacian <ticho@gentoo.org> -uw-imap-2002d-r1.ebuild,
+  -uw-imap-2002d.ebuild, -uw-imap-2002e-r1.ebuild, -uw-imap-2002e-r2.ebuild,
+  -uw-imap-2002e-r3.ebuild, -uw-imap-2002e.ebuild:
+  Old ebuild cleanup.
 
   03 Jan 2005; Joseph Jezak <josejx@gentoo.org> uw-imap-2004a.ebuild:
   Marked ppc stable for bug #72323.
