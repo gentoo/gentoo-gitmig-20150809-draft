@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.3.2.ebuild,v 1.2 2004/06/25 02:39:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.3.2.ebuild,v 1.3 2004/07/11 12:43:32 carlo Exp $
 
 inherit kde-functions
 
@@ -11,7 +11,7 @@ SRC_URI="http://ppprs1.phy.tu-dresden.de/~trogisch/${PN}/download/20_LinCVS/hl_$
 HOMEPAGE="http://www.lincvs.org"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 LICENSE="GPL-2"
 
 DEPEND="kde? ( >=kde-base/kdelibs-3 )
