@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.2 2003/07/09 19:25:47 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.3 2003/09/04 05:13:00 msterret Exp $
 
 
 S="${WORKDIR}/${PN}${PV}"
@@ -31,20 +31,20 @@ src_compile() {
 				--infodir=/usr/share/info \
 				--with-x \
 				--with-tcl=/usr/lib || die "./configure failed"
-					
+
 	emake CFLAGS="${CFLAGS}" || die
-	
+
 }
 
 src_install() {
-	
+
 	dodir /usr/bin
 	dodir /usr/lib/blt2.4/demos/bitmaps
 	dodir /usr/share/man/mann
 	dodir /usr/include
 	emake \
 			INSTALL_ROOT=${D} \
-			install || die	
-	
+			install || die
+
 	dodoc NEWS PROBLEMS README
 }

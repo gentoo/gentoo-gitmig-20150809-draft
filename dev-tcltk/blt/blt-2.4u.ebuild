@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4u.ebuild,v 1.4 2003/02/13 11:45:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4u.ebuild,v 1.5 2003/09/04 05:13:00 msterret Exp $
 
 
 S="${WORKDIR}/${PN}${PV}"
@@ -25,13 +25,13 @@ src_compile() {
 				--infodir=/usr/share/info \
 				--with-x \
 				--with-tcl=/usr/lib || die "./configure failed"
-					
+
 	emake CFLAGS="${CFLAGS}" || die
-	
+
 }
 
 src_install() {
-	
+
 	dodir /usr/bin
 	dodir /usr/lib/blt2.4/demos/bitmaps
 	dodir /usr/share/man/mann
@@ -41,7 +41,7 @@ src_install() {
 			exec_prefix=${D}/usr \
 			mandir=${D}/usr/share/man \
 			infodir=${D}/usr/share/info \
-			install || die	
-	
+			install || die
+
 	dodoc NEWS PROBLEMS README
 }
