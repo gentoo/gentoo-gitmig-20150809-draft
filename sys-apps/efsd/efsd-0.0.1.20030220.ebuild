@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030220.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030220.ebuild,v 1.6 2003/03/14 21:24:53 agriffis Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="daemon that provides commonly needed file system functionality to clients"
 HOMEPAGE="http://www.enlightenment.org/pages/efsd.html"
@@ -9,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 IUSE="pic"
 
 DEPEND="virtual/glibc
@@ -31,6 +33,7 @@ pkg_setup() {
 
 src_compile() {
 	env PATH="${T}:${PATH}" WANT_AUTOCONF_2_5=1 NOCONFIGURE=yes ./autogen.sh || die
+	use alpha && append-flags -fPIC
 	econf `use_with pic` --with-gnu-ld || die
 	emake || die
 }
