@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.48 2004/09/20 01:49:26 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.49 2004/10/01 22:03:57 suka Exp $
+
+*openoffice-bin-1.1.3 (02 Oct 2004)
+
+  02 Oct 2004; suka@gentoo.org +files/1.1.3/ooffice-wrapper-1.3,
+  +openoffice-bin-1.1.3.ebuild:
+  Version bump. Masked for now, will unmask after the official release
+  announcement
 
   19 Sep 2004; Travis Tilley <lv@gentoo.org> openoffice-bin-1.1.2.ebuild:
   stable on amd64
