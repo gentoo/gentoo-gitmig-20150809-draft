@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.28 2003/02/12 08:08:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.29 2003/02/12 23:05:40 seo Exp $
 
 *balsa-2.0.5 (07 Jan 2003)
+
+  13 Feb 2003; Jungmin Seo <seo@gentoo.org> balsa-2.0.5.ebuild :
+  added IUSE variable and ~ppc
 
   07 Jan 2003; foser <foser@gentoo.org> balsa-2.0.5.ebuild :
   New version, spell should be aspell ready now
@@ -11,6 +14,9 @@
   Removed sparc64 keyword
 
 *balsa-2.0.3 (11 Dec 2002)
+
+  13 Feb 2003; Jungmin Seo <seo@gentoo.org> balsa-2.0.5.ebuild :
+  added IUSE variable
 
   11 Dec 2002; foser <foser@gentoo.org> balsa-2.0.3.ebuild :
   New version with input from Edy <edybsd@yahoo.com.ar> (LDAP) and Evan Read <eread@freeshell.org> (aspell/general) (bug #9931)
