@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91.ebuild,v 1.1 2003/09/28 18:51:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91.ebuild,v 1.2 2003/09/29 00:20:19 pebenito Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,6 +8,7 @@ IUSE="nls build acl selinux static"
 
 PATCH_VER="1.0"
 PATCHDIR="${WORKDIR}/patch"
+SELINUX_PATCH="coreutils-5.0.91-selinux.patch.bz2"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
@@ -16,7 +17,7 @@ SRC_URI="http://ftp.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
 	ftp://alpha.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
 	mirror://coreutils/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
-	selinux? mirror://gentoo/${PN}-5.0-r2-selinux.patch.bz2"
+	selinux? mirror://gentoo/${SELINUX_PATCH}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -29,17 +30,6 @@ DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
 	acl? ( sys-apps/acl )
 	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
-
-pkg_setup() {
-	if use selinux
-	then
-		echo
-		eerror "SELINUX is currently broken for this release, please"
-		eerror "do NOT upgrade!"
-		echo
-		die "SELINUX support broken!"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -87,7 +77,7 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 
-	use selinux && epatch ${WORKDIR}/${PN}-5.0-r2-selinux.patch
+	use selinux && epatch ${DISTDIR}/${SELINUX_PATCH}
 
 }
 
