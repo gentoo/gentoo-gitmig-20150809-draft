@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.36 2004/03/30 01:11:28 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.37 2004/04/01 18:13:58 gregkh Exp $
+
+*hotplug-20040401 (01 Apr 2004)
+
+  01 Apr 2004; Greg Kroah-Hartman <gregkh@gentoo.org> hotplug-20040401.ebuild:
+  2004_04_01 version bump, which includes all Gentoo specific patches are
+  now pushed into the upstream package, making my life a whole lot easier :)
+  
+  This fixes a number of usb and network hotplug bugs with the previous
+  hotplug package.
 
   29 Mar 2004; Greg Kroah-Hartman <gregkh@gentoo.org> files/hotplug.rc:
   Change the hotplug init.d script to show what subsystem it is starting
