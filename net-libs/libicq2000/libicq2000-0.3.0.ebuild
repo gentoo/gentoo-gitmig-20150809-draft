@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/libicq2000-0.3.0.ebuild,v 1.1 2002/04/17 20:50:20 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/libicq2000-0.3.0.ebuild,v 1.2 2002/04/17 21:26:08 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ICQ 200x compatible ICQ libraries."
@@ -25,4 +25,5 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS TODO
 }
