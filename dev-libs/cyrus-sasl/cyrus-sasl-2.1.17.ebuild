@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.1 2004/01/14 19:42:47 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.2 2004/01/15 21:50:16 max Exp $
 
 inherit eutils flag-o-matic
 
@@ -40,8 +40,11 @@ src_unpack() {
 	# Add configdir support.
 	epatch "${FILESDIR}/cyrus-sasl-2.1.17-configdir.patch"
 
+	# Fix include path for newer PostgreSQL versions.
+	epatch "${FILESDIR}/cyrus-sasl-2.1.17-pgsql-include.patch"
+
 	# Recreate configure.
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF="2.5"
 	rm -f configure config.h.in saslauthd/configure
 	ebegin "Recreating configure"
 	aclocal -I cmulocal -I config && autoheader && autoconf || \
@@ -77,7 +80,7 @@ src_compile() {
 		myconf="${myconf} --with-dblib=berkeley"
 	fi
 
-	# compaq-sdk checks for -D_REENTRANT and -pthread takes care the cpp stuff.
+	# Compaq-sdk checks for -D_REENTRANT and -pthread takes care the cpp stuff.
 	# taviso #24998 (17 Aug 03)
 	use alpha && append-flags -D_REENTRANT -pthread
 
@@ -89,7 +92,8 @@ src_compile() {
 		--with-dbpath=/etc/sasl2/sasldb2 \
 		${myconf}
 
-	emake || die "compile problem"
+	# Parallel build doesn't work.
+	emake -j1 || die "compile problem"
 }
 
 src_install () {
