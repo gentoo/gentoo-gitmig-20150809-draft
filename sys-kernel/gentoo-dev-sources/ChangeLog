@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.24 2004/01/06 17:45:50 brad_mssw Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.25 2004/01/08 16:24:04 brad_mssw Exp $
+
+*gentoo-dev-sources-2.6.1_rc3 (08 Jan 2004)
+
+  08 Jan 2004; Brad House <brad_mssw@gentoo.org>
+  gentoo-dev-sources-2.6.1_rc3.ebuild:
+  bump version. Apparently that kernel vuln wasn't solved by _rc2 :/
 
   06 Jan 2004; Brad House <brad_mssw@gentoo.org>
   gentoo-dev-sources-2.6.1_rc2.ebuild:
