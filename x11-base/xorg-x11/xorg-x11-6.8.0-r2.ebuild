@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.46 2004/11/03 18:24:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.47 2004/11/03 19:01:45 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -950,7 +950,7 @@ src_install() {
 	dosym ../X11R6/include/GL /usr/include/GL
 	dosym ../../usr/$(get_libdir)/xkb /etc/X11/xkb
 	# Added one to reflect xkb move from /usr/X11R6/lib/X11/xkb to /usr/lib/xkb
-	dosym ../../../lib/xkb /usr/X11R6/lib/X11/xkb
+	dosym ../../lib/xkb /usr/X11R6/lib/X11/xkb
 
 	if use opengl; then
 		fix_opengl_symlinks
