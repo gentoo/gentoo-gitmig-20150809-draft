@@ -1,6 +1,12 @@
 # ChangeLog for app-text/openjade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.2 2002/03/21 13:50:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.3 2002/04/06 13:06:18 gbevin Exp $
+
+*openjade-1.3.1 (06 Apr 2002)
+
+  06 Apr 2002; Geert Bevin <gbevin@gentoo.org> openjade-1.3.1.ebuild
+
+  Version upgrade, this version is compatible with gcc 3. 
 
 *openjade-1.3-r2 (21 Mar 2002)
 
