@@ -14,5 +14,7 @@ src_install() {
 	doins ${FILESDIR}/90gnome
 	exeinto /usr/X11R6/bin/wm
 	doins ${FILESDIR}/gnome
+	dodir /etc/opt/gnome /opt/gnome
+	dosym /etc/opt/gnome /opt/gnome/etc
 }
 
