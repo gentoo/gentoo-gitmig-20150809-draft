@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_rc1.ebuild,v 1.1 2002/08/11 13:11:56 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_rc1.ebuild,v 1.2 2002/08/14 11:19:12 pvdabeel Exp $
 inherit kde-base
 
 need-kde 3
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 SRC_URI="ftp://ftp.kde.org/pub/kde/unstable/koffice-1.2-rc1/src/koffice-1.2-rc1.tar.bz2"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="$DEPEND
 	>=dev-lang/python-2.2.1
