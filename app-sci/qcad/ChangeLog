@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/qcad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.14 2004/01/04 02:04:43 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.15 2004/02/10 07:36:29 phosphan Exp $
+
+  10 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> qcad-2.0.1.0.ebuild:
+  Reverting changes - uses need-qt again, this should fix bugs #39804 and
+  hopefully #38902
 
   03 Jan 2004; Caleb Tennis <caleb@gentoo.org> qcad-2.0.1.0.ebuild:
   Remove need-qt, set dependency directly in ebuild.
