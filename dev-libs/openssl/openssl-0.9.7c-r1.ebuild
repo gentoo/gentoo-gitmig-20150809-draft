@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.3 2003/11/12 09:20:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.4 2003/11/17 09:56:04 kumba Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -77,7 +77,15 @@ src_unpack() {
 src_compile() {
 	# openssl-0.9.7
 	cd ${WORKDIR}/${P}
-	./config --prefix=/usr --openssldir=/etc/ssl shared threads || die
+
+	# Build correctly for mips & mips64
+	if [ "`use mips`" ]; then
+		./Configure linux-mips --prefix=/usr --openssldir=/etc/ssl \
+			shared threads || die
+	else
+		./config --prefix=/usr --openssldir=/etc/ssl shared threads || die
+	fi
+
 	einfo "Compiling ${P}"
 	make all || die
 	make test || die
@@ -90,6 +98,8 @@ src_compile() {
 			SSH_TARGET="linux-sparcv8"
 		elif [ "`uname -m`" = "parisc64" ]; then
 			SSH_TARGET="linux-parisc"
+		elif [ "`use mips`" ]; then
+			SSH_TARGET="linux-mips"
 		fi
 
 		case ${CHOST} in
