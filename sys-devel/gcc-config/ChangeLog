@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.77 2005/01/24 02:35:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.78 2005/01/31 05:39:29 eradicator Exp $
+
+*gcc-config-1.3.10 (30 Jan 2005)
+
+  30 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/gcc-config-1.3.10, +files/wrapper-1.4.5.c,
+  +gcc-config-1.3.10.ebuild:
+  Multilib fixes. Copies libgcc_s.so* to the correct location for all abis.
+  Allows command line args to override ${ABI}. This should resolve bugs #78306
+  and #78652.
 
   23 Jan 2005; Mike Frysinger <vapier@gentoo.org>
   gcc-config-1.3.8-r4.ebuild, gcc-config-1.3.9.ebuild:
