@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-6.1.6.0.ebuild,v 1.1 2004/12/08 09:56:44 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-6.1.6.0.ebuild,v 1.2 2005/01/07 14:10:17 josejx Exp $
 
 inherit perl-module eutils
 
