@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.92.8.ebuild,v 1.4 2004/10/30 14:58:26 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.92.8.ebuild,v 1.5 2004/10/31 01:37:52 vapier Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sparc ~x86"
 IUSE="doc"
 
 RDEPEND="virtual/libc
