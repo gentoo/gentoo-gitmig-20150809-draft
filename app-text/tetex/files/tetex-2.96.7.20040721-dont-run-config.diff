@@ -1,0 +1,33 @@
+--- Makefile.in.bak	2004-09-03 00:50:00.917463912 +0900
++++ Makefile.in	2004-09-03 00:50:00.920463456 +0900
+@@ -57,18 +57,18 @@
+ 	  cd texk/web2c/omegafonts; $(MAKE) install-links
+ 
+ 	$(srcdir)/selfautofix "$(bindir)" "$(texmf)/web2c"
+-	if test -f $(scriptdir)/mktexlsr; then \
+-	  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
+-	    $(scriptdir)/mktexlsr; \
+-	else :; fi
+-	if test -f $(scriptdir)/fmtutil; then \
+-	  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
+-	    $(scriptdir)/fmtutil --all; \
+-	else :; fi
+-	if test -f $(scriptdir)/texlinks; then \
+-	  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
+-	    $(scriptdir)/texlinks; \
+-	else :; fi
++	#if test -f $(scriptdir)/mktexlsr; then \
++	#  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	#    $(scriptdir)/mktexlsr; \
++	#else :; fi
++	#if test -f $(scriptdir)/fmtutil; then \
++	#  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	#    $(scriptdir)/fmtutil --all; \
++	#else :; fi
++	#if test -f $(scriptdir)/texlinks; then \
++	#  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	#    $(scriptdir)/texlinks; \
++	#else :; fi
+ 
+ install-exec:
+ 	for dir in $(INSTDIRS); do \
