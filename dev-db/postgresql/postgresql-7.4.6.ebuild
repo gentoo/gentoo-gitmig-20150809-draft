@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.6.ebuild,v 1.8 2005/01/01 17:42:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.6.ebuild,v 1.9 2005/01/04 15:45:36 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~mips alpha ~arm hppa amd64 ~ia64 ~s390 ~ppc64"
-IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime threads"
+IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime threads xml2"
 
 DEPEND="virtual/libc
 	sys-devel/autoconf
@@ -29,7 +29,8 @@ DEPEND="virtual/libc
 	java? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3
 		dev-java/java-config )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	xml2? ( dev-libs/libxml2 dev-libs/libxslt )"
 # java dep workaround for portage bug
 # x86? ( java? ( =dev-java/sun-jdk-1.3* >=dev-java/ant-1.3 ) )
 RDEPEND="virtual/libc
@@ -113,6 +114,8 @@ src_compile() {
 	# down, anything more aggressive fails (i.e. -mcpu or -Ox)
 	# Gerk - Nov 26, 2002
 	use ppc && CFLAGS="-pipe -fsigned-char"
+	use xml2 && CFLAGS="${CFLAGS} $(pkg-config --cflags libxml-2.0)"
+	use xml2 && LIBS="${LIBS} $(pkg-config --libs libxml-2.0)"
 
 	# Detect mips systems properly
 	gnuconfig_update
@@ -131,6 +134,9 @@ src_compile() {
 	make || die
 	cd contrib
 	make || die
+	if use xml2; then
+		make -C xml || die
+	fi
 }
 
 src_install() {
@@ -147,6 +153,9 @@ src_install() {
 	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server includedir_internal=/usr/include/postgresql/internal install-all-headers || die
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
+	if use xml2; then
+		make -C xml DESTDIR=${D} IBDIR=${D}/usr/lib install || die
+	fi
 	cd ${S}
 	if use pg-hier; then
 		dodoc ${WORKDIR}/README-${P_HIERPG}.html || die
