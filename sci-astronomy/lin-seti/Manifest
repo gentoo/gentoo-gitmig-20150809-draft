@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1822e63d3ab293faced8a8bfd362633f lin-seti-0.7.6.ebuild 1248
-MD5 b6de868cbb4a56acabe3a9e93210fd98 ChangeLog 3374
+MD5 3194c18a58f5e6f9a46991c5eecb163c lin-seti-0.7.6.ebuild 1245
+MD5 0602d349334ad9af77e6178e2576ef8c lin-seti-0.8.3.ebuild 1817
+MD5 72dfc7559c99e09660822b1371ef5d58 ChangeLog 3571
 MD5 b148b83adf0cb283f89d4c5956c648c4 metadata.xml 250
-MD5 53b6ceaabcbe9eb03c823f2a954ba37a lin-seti-0.8.2.ebuild 1817
+MD5 27900605e85aa740ecf5810b4d9015bf lin-seti-0.8.2.ebuild 1814
 MD5 d222e596efc7a0b9c67a886090056ef5 files/digest-lin-seti-0.7.6 66
 MD5 61e618745084d949d2be2724a10d0ad5 files/digest-lin-seti-0.8.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHRzI1lqEGTUzyQRAne5AJ9TnsaNhjEvBRi50MwmXoX9cFYKZgCgqNtg
-G3qVDi4uoMS9/Ft8plB5O/E=
-=BjEr
------END PGP SIGNATURE-----
+MD5 f38cd73d74e781d93d0b7d251a3eb344 files/digest-lin-seti-0.8.3 66
