@@ -1,8 +1,14 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.35 2003/10/31 15:55:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.36 2003/11/04 19:56:44 usata Exp $
 
 *w3m-0.4.2-r2 (01 Nov 2003)
+
+  05 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.2-r1.ebuild,
+  w3m-0.4.2-r2.ebuild, files/w3m-0.4.2-imglib-gentoo.diff,
+  files/w3m-0.4.2-w3mman-gentoo.diff:
+  Changed imglib to imagelib and fixed w3mimagefb breakage with gdk-pixbuf.
+  Support for imlib2 without X (using w3m under framebuffer).
 
   01 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.2-r2.ebuild:
   Updated to the latest snapshot
