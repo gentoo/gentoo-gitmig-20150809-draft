@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-1.0.ebuild,v 1.4 2001/04/10 15:32:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-1.0.ebuild,v 1.5 2001/04/19 16:31:15 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -19,6 +19,7 @@ src_unpack() {
 
 src_install() {
 	dodir /usr/local/httpd/htdocs/doc
+	dodir /usr/local/httpd/htdocs/projects
 	insinto /usr/local/httpd/htdocs/doc
 	cd ${FILESDIR}
 	doins html/nvidia_tsg.html
@@ -28,6 +29,10 @@ src_install() {
 		xsltproc xsl/guide.xsl xml/${x}.xml > ${D}/usr/local/httpd/htdocs/doc/${x}.html
 	done
 	doins css/gentoo-doc.css images/gentoo-doc.gif images/install*.gif
+	
+	#dynamic firewalls tools page
+	xsltproc xsl/guide.xsl xml/dynfw.xml > ${D}/usr/local/httpd/htdocs/projects/dynfw.html	
+	tar czvf ${D}/usr/local/httpd/htdocs/projects/dynfw-1.0.tar.gz dynfw-1.0 	
 	
 	insinto /usr/local/httpd/htdocs
 	doins pyhtml/*

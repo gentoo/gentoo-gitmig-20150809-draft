@@ -1,0 +1,33 @@
+#!/bin/bash
+
+source ##PREFIX##/share/dynfw.sh
+
+args 2 $# "${0} IPADDR {on/off}" "Polite IP blocker.  Drops everything to/from IPADDR (polite to TCP)"
+
+if [ "$2" == "on" ] 
+then
+	#rules will be appended or inserted as normal
+	APPEND="-A"
+	INSERT="-I"
+	rec_check ipblock $1 "$1 already blocked" on
+	record ipblock $1
+elif [ "$2" == "off" ]
+then
+	#rules will be deleted instead
+	APPEND="-D"
+	INSERT="-D"
+	rec_check ipblock $1 "$1 not currently blocked" off 
+	unrecord ipblock $1
+else
+	echo "Error: \"off\" or \"on\" expected as second argument"
+	exit 1
+fi	
+
+#block outside IP address that's causing problems
+iptables $INSERT INPUT   -s $1 -j DROP
+iptables $INSERT INPUT   -p tcp -s $1 -j REJECT --reject-with tcp-reset
+iptables $INSERT OUTPUT  -d $1 -j DROP
+iptables $INSERT OUTPUT  -p tcp -d $1 -j REJECT --reject-with tcp-reset
+iptables $INSERT FORWARD -d $1 -j DROP 
+iptables $INSERT FORWARD -p tcp -d $1 -j REJECT --reject-with tcp-reset 
+echo "IP ${1} block ${2}."
