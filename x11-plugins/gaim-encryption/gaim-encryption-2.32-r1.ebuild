@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.32-r1.ebuild,v 1.3 2004/11/29 20:01:50 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.32-r1.ebuild,v 1.4 2004/12/02 15:05:25 rizzo Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -14,15 +14,21 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~ppc64"
 IUSE=""
 
 DEPEND=">=net-im/gaim-1.0.1
-	|| ( >=dev-libs/nss-3.9.2-r2 net-www/mozilla-firefox net-www/mozilla )"
+		>=dev-libs/nss-3.9.2-r2"
 
 src_compile() {
+	strip-flags
+	replace-flags -O? -O2
 
-	econf || die "Configuration failed"
-	einfo "Replacing -Os CFLAG with -O2"
-	replace-flags -Os -O2
+	local myconf
+	myconf="${myconf} --with-nspr-includes=/usr/include/nspr"
+	myconf="${myconf} --with-nss-includes=/usr/include/nss"
+	myconf="${myconf} --with-nspr-libs=/usr/lib/nspr"
+	myconf="${myconf} --with-nss-libs=/usr/lib/nss"
 
-	emake || emake -j1 || die "Make failed"
+	econf ${myconf} || die "Configuration failed"
+
+	emake || MAKEOPTS="${MAKEOPTS} -j1" emake || die "Make failed"
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gaim-encryption
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.43 2004/11/29 20:01:50 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.44 2004/12/02 15:05:25 rizzo Exp $
+
+  02 Dec 2004; Don Seiler <rizzo@gentoo.org> gaim-encryption-2.32-r1.ebuild:
+  Going back to standalone NSPR/NSS dependency. MozillaFirefox does not
+  provide pkgconfig and Mozilla is not available on all arches.
 
   29 Nov 2004; Don Seiler <rizzo@gentoo.org> gaim-encryption-2.32-r1.ebuild:
   Allowing dep on mozilla-firefox and/or mozilla if users doesn't like
