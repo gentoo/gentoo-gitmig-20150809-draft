@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/perforce
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/ChangeLog,v 1.3 2003/10/02 17:57:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/ChangeLog,v 1.4 2003/12/14 09:39:28 stuart Exp $
+
+*perforce-2003.1 (14 Dec 2003)
+
+  14 Dec 2003; Stuart Herbert <stuart@gentoo.org> perforce-2003.1.ebuild,
+  files/perforce-2003.1/50perforce, files/perforce-2003.1/conf.d/perforce,
+  files/perforce-2003.1/init.d/perforce:
+  Version bump; from bug #19586.  Thanks to Ben Calvert (ben@stonehenge-net.com)
 
 *perforce-2002.2-r1 (02 Oct 2003)
 
