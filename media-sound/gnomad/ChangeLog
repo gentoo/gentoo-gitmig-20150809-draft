@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/gnomad
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.1 2004/03/04 01:33:36 eradicator Exp $
+
+*gnomad-2.3.0 (03 Mar 2004)
+
+  03 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> gnomad-2.3.0.ebuild,
+  metadata.xml:
+  Gnomad is a GTK+ client program for the NOMAD Jukebox. Ebuild submitted by
+  FRLinux <frlinux@frlinux.net> in bug #22491.
+
