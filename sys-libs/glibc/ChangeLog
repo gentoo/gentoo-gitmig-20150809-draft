@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.134 2004/02/29 18:49:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.135 2004/03/02 00:19:15 tgall Exp $
+
+  01 Mar 2004; Tom Gall <tgall@gentoo.org> glibc-2.3.3_pre20031210.ebuild:
+  added in dependancy for ppc64 headers
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> glibc-2.3.2-r9.ebuild:
   Stable on sparc (was about time).
