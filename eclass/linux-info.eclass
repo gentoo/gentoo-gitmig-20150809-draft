@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.18 2005/01/15 21:46:00 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.19 2005/01/18 21:38:59 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -254,7 +254,7 @@ get_version() {
 	
 	# no need to execute this twice assuming KV_FULL is populated.
 	# we can force by unsetting KV_FULL
-	[ -n "${KV_FULL}" ] && return
+	[ -n "${KV_FULL}" ] && return 0
 
 	# if we dont know KV_FULL, then we need too.
 	# make sure KV_DIR isnt set since we need to work it out via KERNEL_DIR
@@ -276,7 +276,7 @@ get_version() {
 		else
 			qeinfo "Please ensure that the KERNEL_DIR environment variable points at full Linux sources of the kernel you wish to compile against."
 		fi
-		die "Cannot locate Linux sources at ${KERNEL_DIR}"
+		return 1
 	fi
 
 	qeinfo "Found kernel source directory:"
@@ -286,7 +286,7 @@ get_version() {
 	then
 		qeerror "Could not find a Makefile in the kernel source directory."
 		qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
-		die "Makefile not found in ${KV_DIR}"
+		return 1
 	fi
 	
 	# OK so now we know our sources directory, but they might be using
@@ -310,8 +310,8 @@ get_version() {
 	if [ -z "${KV_MAJOR}" -o -z "${KV_MINOR}" -o -z "${KV_PATCH}" ]
 	then
 		qeerror "Could not detect kernel version."
-		qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
-		die "Could not parse version info from ${KV_DIR}/Makefile"
+		qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources."
+		return 1
 	fi
 	
 	# and in newer versions we can also pull LOCALVERSION if it is set.
@@ -349,8 +349,10 @@ get_version() {
 		qeerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources."
 		qeerror "If you are using KBUILD_OUTPUT, please set the environment var so that"
 		qeerror "it points to the necessary object directory so that it might find .config."
-		die ".config not found in ${KV_OUT_DIR}"
+		return 1
 	fi
+	
+	return 0
 }
 
 
@@ -529,6 +531,6 @@ local	DEFLATE
 # Also used when inheriting linux-mod to force a get_version call
 
 linux-info_pkg_setup() {
-	get_version;
+	get_version || die "Unable to calculate Linux Kernel version"
 	[ -n "${CONFIG_CHECK}" ] && check_extra_config;
 }
