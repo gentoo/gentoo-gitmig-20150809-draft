@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/mtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mtools/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mtools/ChangeLog,v 1.2 2002/07/30 03:09:32 cselkirk Exp $
 
 *mtools-3.9.8-r1 (1 Feb 2002)
+  29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> mtools-3.9.8-r1.ebuild :
+
+  Added ppc to KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

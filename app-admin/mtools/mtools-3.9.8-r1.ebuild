@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mtools/mtools-3.9.8-r1.ebuild,v 1.10 2002/07/25 12:57:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mtools/mtools-3.9.8-r1.ebuild,v 1.11 2002/07/30 03:09:32 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mtools is a collection of utilities to access MS-DOS disks 
@@ -10,9 +10,10 @@ HOMEPAGE="http://mtools.linux.lu"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="sys-apps/texinfo"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf --sysconfdir=/etc/mtools || die
