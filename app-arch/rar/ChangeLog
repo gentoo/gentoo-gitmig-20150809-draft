@@ -2,6 +2,14 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.5 2002/05/31 01:48:14 seemant Exp
 
+*rar-3.1.0 (23 Dec 2002)
+
+  23 Dec 2002; Seemant Kulleen <seemant@gentoo.org> rar-3.1.0.ebuild
+  files/digest-rar-3.1.0 :
+
+  Version bump thanks to: gentoo-bugzilla@hummelink.xs4all.nl (Ronald
+  Hummelink) in bug #12557.
+
 *rar-3.0 (29 May 2002)
 
   23 Dec 2002; Seemant Kulleen <seemant@gentoo.org> rar-3.0.ebuild :
