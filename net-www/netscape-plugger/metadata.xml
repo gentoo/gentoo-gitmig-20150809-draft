@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>mozilla</herd>
+<maintainer>
+  <email>chriswhite@gentoo.org</email>
+</maintainer>
+<longdescription>
+This plugin always netscape based browsers (mozilla, firefox) to have a centralized means for routing mime types to various applications.  It can either stream them inside an allocated window, or simply run the program that normally opens the file.
+</longdescription>
+</pkgmetadata>
