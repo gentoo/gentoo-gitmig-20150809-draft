@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.5 2005/02/18 05:16:41 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.6 2005/04/01 17:15:21 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> netcdf-3.5.1.ebuild:
+  stable on ia64
 
 *netcdf-3.6.0-r1 (17 Feb 2005)
 
