@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Parallel-ForkManager
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/ChangeLog,v 1.1 2004/03/28 09:38:21 tantive Exp $
+
+*Parallel-ForkManager-0.7.5 (28 Mar 2004)
+
+  28 Mar 2004; Michael Imhof <tantive@gentoo.org> Parallel-ForkManager-0.7.5.ebuild:
+  Initial ebuild. Submitted by Antonio <netbix@netbix.net>. Closes #45930.
+
