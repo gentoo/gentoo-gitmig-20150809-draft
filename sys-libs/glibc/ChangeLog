@@ -1,6 +1,24 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.58 2003/05/14 20:30:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.59 2003/05/18 22:22:50 azarah Exp $
+
+  18 May 2003; Martin Schlemmer <azarah@gentoo.org> :
+  Fix LICENSE to be LGPL-2, bug #19074.  Fix glibc-2.3* < 2.3.2-r2 to depend
+  on <gcc-3.3.
+
+  18 May 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r1.ebuild,
+  glibc-2.3.2-gcc33-sscanf.patch :
+  Downgrade nptl to version 0.28 and add glibc-2.3.2-gcc33-sscanf.patch to
+  fix compile errors with gcc-3.3:
+
+    http://sources.redhat.com/ml/libc-alpha/2003-03/msg00052.html
+
+*glibc-2.3.2-r2 (18 May 2003)
+
+  18 May 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r2.ebuild :
+  New version.  Update to cvs 20030517 to fix problems with gcc-3.3.  Also
+  closes bug #18744 as it adds the en_US.utf8 locale.  Also enable NPTL
+  support for i[45]86, ppc and mips, as it should in theory work now.
 
   14 May 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r{0,1}.ebuild :
 
