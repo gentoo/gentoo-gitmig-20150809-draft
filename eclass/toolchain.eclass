@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.126 2005/03/14 02:57:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.127 2005/03/16 06:35:22 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -53,12 +53,8 @@ if [[ ${CTARGET} = ${CHOST} ]] ; then
 		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
-
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
-}
-is_uclibc() {
-	use uclibc || [[ ${CTARGET} == *-uclibc ]]
 }
 
 GCC_RELEASE_VER=$(get_version_component_range 1-3)
@@ -452,7 +448,6 @@ libc_has_ssp() {
 #
 gcc-lang-supported() {
 	grep ^language=\"${1}\" ${S}/gcc/*/config-lang.in > /dev/null && return 0
-	ewarn "The ${1} language is not supported by this release of gcc"
 	return 1
 }
 
@@ -704,7 +699,7 @@ create_gcc_env_entry() {
 
 #---->> pkg_* <<----
 gcc_pkg_setup() {
-	if [[ $(tc-arch) == "amd64" ]] && [[ ${LD_PRELOAD} == "/lib/libsandbox.so" ]] && use_multilib ; then
+	if [[ $(tc-arch) == "amd64" ]] && [[ ${LD_PRELOAD} == "/lib/libsandbox.so" ]] && is_multilib ; then
 		eerror "Sandbox in your installed portage does not support compilation."
 		eerror "of a multilib gcc.  Please set FEATURES=-sandbox and try again."
 		eerror "After you have a multilib gcc, re-emerge portage to have a working sandbox."
@@ -712,22 +707,26 @@ gcc_pkg_setup() {
 	fi
 
 	if [[ ${ETYPE} == "gcc-compiler" ]] ; then
-		# Must compile for mips64-linux target if we want n32/n64 support
-		case "${CTARGET}" in
-			mips64-*) ;;
-			*)
-				if use n32 || use n64; then
-					eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
-					die "Invalid USE flags for CTARGET ($CTARGET)";
-				fi
-			;;
-		esac
+		case $(tc-arch) in
+		mips)
+			# Must compile for mips64-linux target if we want n32/n64 support
+			case "${CTARGET}" in
+				mips64-*) ;;
+				*)
+					if use n32 || use n64; then
+						eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
+						die "Invalid USE flags for CTARGET ($CTARGET)";
+					fi
+				;;
+			esac
 
-		#cannot have both n32 & n64 without multilib
-		if use n32 && use n64 && ! use_multilib; then
-			eerror "Please enable multilib if you want to use both n32 & n64";
-			die "Invalid USE flag combination";
-		fi
+			#cannot have both n32 & n64 without multilib
+			if use n32 && use n64 && ! is_multilib; then
+				eerror "Please enable multilib if you want to use both n32 & n64";
+				die "Invalid USE flag combination";
+			fi
+		;;
+		esac
 
 		# we dont want to use the installed compiler's specs to build gcc!
 		unset GCC_SPECS || :
@@ -863,12 +862,12 @@ gcc_src_unpack() {
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
-	if ! is_crosscompile && use_multilib && \
+	if ! is_crosscompile && is_multilib && \
 	   [[ $(tc-arch) == "amd64" && -z ${SKIP_MULTILIB_HACK} ]] ; then
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
 	fi
 
-	if is_crosscompile && use_multilib; then
+	if is_crosscompile && is_multilib; then
 		gcc_crosscompile_multilib_specs || die "Hacking specs for crosscompile-multilib failed"
 	fi
 
@@ -885,7 +884,9 @@ gcc_src_unpack() {
 	gcc_version_patch "${version_string}"
 
 	# Misdesign in libstdc++ (Redhat)
-	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
+	if [[ ${GCCMAJOR} -ge 3 ]] ; then
+		cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
+	fi
 
 	# disable --as-needed from being compiled into gcc specs
 	# natively when using >=sys-devel/binutils-2.15.90.0.1 this is
@@ -914,7 +915,7 @@ gcc-library-configure() {
 
 gcc-compiler-configure() {
 	# multilib support
-	if use_multilib; then
+	if is_multilib; then
 		confgcc="${confgcc} --enable-multilib"
 	else
 		confgcc="${confgcc} --disable-multilib"
@@ -923,50 +924,39 @@ gcc-compiler-configure() {
 	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
 	# right now). Much thanks to <csm@gnu.org> for the heads up.
 	# Travis Tilley <lv@gentoo.org>  (11 Jul 2004)
-	if ! use build && use gcj && use gtk ; then
+	if ! is_gcj ; then
+		confgcc="${confgcc} --disable-libgcj"
+	elif use gtk ; then
 		confgcc="${confgcc} --enable-java-awt=gtk"
 	fi
-	use build || ! use gcj && confgcc="${confgcc} --disable-libgcj"
 
 	# Add --with-abi flags to enable respective MIPS ABIs
 	case $(tc-arch) in
 		mips)
-		if is_crosscompile && use_multilib; then
+		if is_crosscompile && is_multilib; then
 			confgcc="${confgcc} --with-abi=32 --with-abi=n32 --with-abi=64"
 		else
-			use_multilib && confgcc="${confgcc} --with-abi=32"
+			is_multilib && confgcc="${confgcc} --with-abi=32"
 			use n64 && confgcc="${confgcc} --with-abi=64"
 			use n32 && confgcc="${confgcc} --with-abi=n32"
 		fi
 		;;
 	esac
 
-	if ! use build ; then
-		GCC_LANG="c"
-		use !nocxx && GCC_LANG="${GCC_LANG},c++"
+	GCC_LANG="c"
+	is_cxx && GCC_LANG="${GCC_LANG},c++"
+	is_objc && GCC_LANG="${GCC_LANG},objc"
+	is_gcj && GCC_LANG="${GCC_LANG},java"
 
-		# fortran support just got sillier! the lang value can be f77 for
-		# fortran77, f95 for fortran95, or just plain old fortran for the
-		# currently supported standard depending on gcc version.
-		if use fortran ; then
-			if gcc-lang-supported f95 ; then
-				GCC_LANG="${GCC_LANG},f95"
-			elif gcc-lang-supported f77 ; then
-				GCC_LANG="${GCC_LANG},f77"
-			elif gcc-lang-supported fortran ; then
-				GCC_LANG="${GCC_LANG},fortran"
-			else
-				die "GCC doesnt support fortran"
-			fi
-		fi
+	# fortran support just got sillier! the lang value can be f77 for
+	# fortran77, f95 for fortran95, or just plain old fortran for the
+	# currently supported standard depending on gcc version.
+	is_fortran && GCC_LANG="${GCC_LANG},fortran"
+	is_f77 && GCC_LANG="${GCC_LANG},f77"
+	is_f95 && GCC_LANG="${GCC_LANG},f95"
 
-		use objc && gcc-lang-supported objc && GCC_LANG="${GCC_LANG},objc"
-		use gcj && gcc-lang-supported java && GCC_LANG="${GCC_LANG},java"
-		# We do NOT want 'ADA support' in here!
-		# use ada  && gcc_lang="${gcc_lang},ada"
-	else
-		GCC_LANG="c"
-	fi
+	# We do NOT want 'ADA support' in here!
+	# is_ada && GCC_LANG="${GCC_LANG},ada"
 
 	einfo "configuring for GCC_LANG: ${GCC_LANG}"
 }
@@ -1457,7 +1447,7 @@ gcc-compiler_src_install() {
 		#   "#include <ffitarget.h>" which (correctly, as it's an "extra" file)
 		#   is installed in .../GCCVER/include/libffi; the following fixes
 		#   ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
-		if ! use build && use objc && ! use gcj ; then
+		if is_objc && ! is_gcj ; then
 			#dosed "s:<ffitarget.h>:<libffi/ffitarget.h>:g" /${LIBPATH}/include/ffi.h
 			mv ${D}/${LIBPATH}/include/libffi/* ${D}/${LIBPATH}/include
 			rm -Rf ${D}/${LIBPATH}/include/libffi
@@ -1465,7 +1455,7 @@ gcc-compiler_src_install() {
 	fi
 
 	# Setup symlinks to multilib ABIs for crosscompiled gccs
-	if is_crosscompile && use_multilib; then
+	if is_crosscompile && is_multilib; then
 		CHOST_x86="i686-pc-linux-gnu" 
 		CHOST_amd64="x86_64-pc-linux-gnu" 
 		CHOST_o32="mips-unknown-linux-gnu" 
@@ -1894,15 +1884,17 @@ gcc_crosscompile_multilib_specs() {
 }
 
 disable_multilib_libjava() {
-	# We dont want a multilib libjava, so lets use this hack taken from fedora
-	pushd ${S} > /dev/null
-	sed -i -e 's/^all: all-redirect/ifeq (\$(MULTISUBDIR),)\nall: all-redirect\nelse\nall:\n\techo Multilib libjava build disabled\nendif/' libjava/Makefile.in
-	sed -i -e 's/^install: install-redirect/ifeq (\$(MULTISUBDIR),)\ninstall: install-redirect\nelse\ninstall:\n\techo Multilib libjava install disabled\nendif/' libjava/Makefile.in
-	sed -i -e 's/^check: check-redirect/ifeq (\$(MULTISUBDIR),)\ncheck: check-redirect\nelse\ncheck:\n\techo Multilib libjava check disabled\nendif/' libjava/Makefile.in
-	sed -i -e 's/^all: all-recursive/ifeq (\$(MULTISUBDIR),)\nall: all-recursive\nelse\nall:\n\techo Multilib libjava build disabled\nendif/' libjava/Makefile.in
-	sed -i -e 's/^install: install-recursive/ifeq (\$(MULTISUBDIR),)\ninstall: install-recursive\nelse\ninstall:\n\techo Multilib libjava install disabled\nendif/' libjava/Makefile.in
-	sed -i -e 's/^check: check-recursive/ifeq (\$(MULTISUBDIR),)\ncheck: check-recursive\nelse\ncheck:\n\techo Multilib libjava check disabled\nendif/' libjava/Makefile.in
-	popd > /dev/null
+	if is_gcj ; then
+		# We dont want a multilib libjava, so lets use this hack taken from fedora
+		pushd ${S} > /dev/null
+		sed -i -e 's/^all: all-redirect/ifeq (\$(MULTISUBDIR),)\nall: all-redirect\nelse\nall:\n\techo Multilib libjava build disabled\nendif/' libjava/Makefile.in
+		sed -i -e 's/^install: install-redirect/ifeq (\$(MULTISUBDIR),)\ninstall: install-redirect\nelse\ninstall:\n\techo Multilib libjava install disabled\nendif/' libjava/Makefile.in
+		sed -i -e 's/^check: check-redirect/ifeq (\$(MULTISUBDIR),)\ncheck: check-redirect\nelse\ncheck:\n\techo Multilib libjava check disabled\nendif/' libjava/Makefile.in
+		sed -i -e 's/^all: all-recursive/ifeq (\$(MULTISUBDIR),)\nall: all-recursive\nelse\nall:\n\techo Multilib libjava build disabled\nendif/' libjava/Makefile.in
+		sed -i -e 's/^install: install-recursive/ifeq (\$(MULTISUBDIR),)\ninstall: install-recursive\nelse\ninstall:\n\techo Multilib libjava install disabled\nendif/' libjava/Makefile.in
+		sed -i -e 's/^check: check-recursive/ifeq (\$(MULTISUBDIR),)\ncheck: check-recursive\nelse\ncheck:\n\techo Multilib libjava check disabled\nendif/' libjava/Makefile.in
+		popd > /dev/null
+	fi
 }
 
 fix_libtool_libdir_paths() {
@@ -1913,7 +1905,7 @@ fix_libtool_libdir_paths() {
 	done
 }
 
-use_multilib() {
+is_multilib() {
 	case $(tc-arch) in
 		sparc)
 			case ${CTARGET} in
@@ -1942,4 +1934,51 @@ use_multilib() {
 			false
 		;;
 	esac
+}
+
+is_uclibc() {
+	[[ ${GCCMAJOR} -lt 3 ]] && return 1
+	use uclibc || [[ ${CTARGET} == *-uclibc ]]
+}
+
+is_cxx() {
+	gcc-lang-supported cxx || return 1
+	use build && return 1
+	use ! nocxx
+}
+
+is_f77() {
+	gcc-lang-supported f77 || return 1
+	use build && return 1
+	use fortran
+}
+
+is_f95() {
+	gcc-lang-supported f95 || return 1
+	use build && return 1
+	use fortran
+}
+
+is_fortran() {
+	gcc-lang-supported fortran || return 1
+	use build && return 1
+	use fortran
+}
+
+is_gcj() {
+	gcc-lang-supported java || return 1
+	use build && return 1
+	use gcj
+}
+
+is_objc() {
+	gcc-lang-supported objc || return 1
+	use build && return 1
+	use objc
+}
+
+is_ada() {
+	gcc-lang-supported ada || return 1
+	use build && return 1
+	use ada
 }
