@@ -1,23 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.0.2.ebuild,v 1.11 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.0.2.ebuild,v 1.12 2003/09/08 08:19:24 vapier Exp $
 
-A=cocoon-${PV}-src.tar.gz
-S=${WORKDIR}/${P}
 DESCRIPTION="A Web Publishing Framework for Apache"
-SRC_URI="http://xml.apache.org/cocoon/dist/${A}"
 HOMEPAGE="http://xml.apache.org/cocoon/"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
-SLOT="0"
+SRC_URI="http://xml.apache.org/cocoon/dist/cocoon-${PV}-src.tar.gz"
+
 LICENSE="Apache-1.1"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
+IUSE="jikes"
 
 # FIXME: tomcat 4.0.x, x != 3 is okay
 DEPEND=">=virtual/jdk-1.3
 	>=net-www/tomcat-4.0.4
 	jikes? ( >=dev-java/jikes-1.15 )
 	"
-IUSE="jikes"
-
 
 src_unpack() {
 	unpack ${A}
