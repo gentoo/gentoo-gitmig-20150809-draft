@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.270 2004/03/12 20:18:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.271 2004/03/12 23:49:34 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -82,6 +82,7 @@ dev-libs/gmetadom:ocaml - adds support/bindings for the Ocaml
 dev-libs/libcdio:cddb - use libcddb for CD database lookups
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
+dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 deb-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-libs/uclibc:pie - adds support for Position Independent Executables
 dev-lisp/bigloo-lib:expat - enable expat support
