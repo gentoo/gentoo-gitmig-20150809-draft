@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.89.ebuild,v 1.3 2005/01/24 06:00:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.90.ebuild,v 1.1 2005/01/24 06:00:40 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 LICENSE="xmame"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="3dfx alsa arts dga esd ggi joystick net opengl sdl svga X xv"
+IUSE="3dfx alsa arts dga esd expat ggi joystick mmx net opengl sdl svga X xv"
 
 RDEPEND="sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.0 )
@@ -73,7 +73,7 @@ src_unpack() {
 		-e "/^MANDIR/s:=.*:=/usr/share/man/man6:" \
 		-e "/^XMAMEROOT/s:=.*:=${GAMES_DATADIR}/${TARGET}:" \
 		-e "/^TARGET/s:mame:${TARGET:1}:" \
-		-e "s:^CFLAGS =:CFLAGS=${CFLAGS}:" \
+		-e "/^CFLAGS =/d" \
 		Makefile \
 		|| die "sed Makefile failed"
 
