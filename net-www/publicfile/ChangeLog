@@ -1,6 +1,6 @@
 # ChangeLog for net-www/publicfile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/ChangeLog,v 1.7 2003/02/12 08:52:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/ChangeLog,v 1.8 2003/03/25 15:06:56 liquidx Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -13,6 +13,9 @@
 
 
 *publicfile-0.52 (09 May 2002)
+
+  25 Mar 2003; Alastair Tse <liquidx@gentoo.org> publicfile-0.52.ebuild:
+  glibc-2.3.2 errno fix. thanks to Andy Dustman. bug #17805.
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> publicfile-0.52.ebuild :
   Added KEYWORDS, SLOT.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52.ebuild,v 1.9 2003/02/13 15:43:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52.ebuild,v 1.10 2003/03/25 15:06:56 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="publish files through FTP and HTTP"
@@ -18,6 +18,8 @@ src_compile() {
 	echo "gcc ${CFLAGS}" > conf-cc
 	echo "gcc" > conf-ld
 	echo "/usr" > conf-home
+	mv error.h error.h.orig
+	sed -e 's|extern int errno;|#include <errno.h>|' <error.h.orig >error.h
 	emake || die "emake failed"
 }
 
