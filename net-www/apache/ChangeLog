@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 
+*apache-1.3.26-r3 (2 Jul 2002)
+
+  2 Jul 2002; Jon Nelson <jnelson@gentoo.org> apache-1.3.26-r3.ebuild:
+  Basically, move stuff from pkg_setup() to postinst.
+
 *apache-1.3.26-r2 (22 Jun 2002)
 
   22 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
