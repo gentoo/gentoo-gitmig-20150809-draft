@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.26 2004/11/22 18:43:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.27 2004/12/29 20:21:30 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -files/ypbind.confd, -files/ypbind.rc5, -files/ypbind.rc6,
@@ -17,7 +20,7 @@
   ypbind-1.17.2-r1.ebuild:
   Fixed DEPENDs
 
-  04 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> ypbind-1.17.2-r1.ebuild:
+  04 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ypbind-1.17.2-r1.ebuild:
   Stable on alpha.
 
   24 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org>
@@ -40,7 +43,7 @@
   16 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> ypbind-1.17.2.ebuild:
   use emake; use use_enable; don't install COPYING; tidy
 
-  08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ypbind-1.17.2.ebuild:
+  08 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ypbind-1.17.2.ebuild:
   Stable on alpha.
 
   09 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> files/ypbind.rc5,
