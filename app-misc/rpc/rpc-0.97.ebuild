@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/rpc-0.97.ebuild,v 1.2 2003/03/11 20:52:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/rpc-0.97.ebuild,v 1.3 2003/03/30 21:22:59 joker Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.eecs.umich.edu/~pelzlpj/rpc/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc sparc"
 
 DEPEND=">=dev-libs/ccmath-2.2
 	sys-libs/ncurses"
