@@ -3,4 +3,4 @@ MD5 46b7f76d71d0244ec190ea32be3c04f8 files/digest-ferrisloki-2.0.3 69
 MD5 30f5804d9efbc74e08457e79f98500dc files/digest-ferrisloki-2.0.4 69
 MD5 e278aab9096d59677b60b477be54fec4 metadata.xml 287
 MD5 4cd0f921b59b95492390c78492acdc34 ChangeLog 450
-MD5 559c039b4ba4876e53f758effe6295c2 ferrisloki-2.0.4.ebuild 579
+MD5 d0f9d6eefd21482b238156614c99e4b1 ferrisloki-2.0.4.ebuild 590

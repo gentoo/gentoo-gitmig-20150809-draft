@@ -5,4 +5,4 @@ MD5 e40f5b90c038f8c8703b83953b10012b files/digest-libmcal-0.7-r2 128
 MD5 9cce40cfaf8a76766ef1a3a0bc7531d8 ChangeLog 1515
 MD5 dfb8aa8ffbbd3a1b85cb6834dad09198 libmcal-0.7-r1.ebuild 795
 MD5 2503170a110b75e97ede4e3ac6d373e8 libmcal-0.7.ebuild 690
-MD5 188696af1122b5372193b5c1ed357bc9 libmcal-0.7-r2.ebuild 1763
+MD5 7393a7c1cd86fb70c256f6cbaf5d0160 libmcal-0.7-r2.ebuild 1781
