@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.366 2004/05/10 10:34:43 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.367 2004/05/10 17:45:24 st_lim Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -207,6 +207,8 @@ net-analyzer/slurm:altcolors - Use alternative color set
 net-analyzer/snort:flexresp - Enable connection tearing (not recommended)
 net-dialup/gnokii:bluetooth - Enable Bluetooth Support
 net-dialup/gnokii:irda - Enable Infrared Support
+net-dialup/gammu:bluetooth - Enable Bluetooth Support
+net-dialup/gammu:irda - Enable Infrared Support
 net-dialup/ppp:activefilter - enable activefilter support
 net-dialup/ppp:atm - enable support for pppoatm
 net-dns/djbdns:fwdzone - enables forward zone patch
