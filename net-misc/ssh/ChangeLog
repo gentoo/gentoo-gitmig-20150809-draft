@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ssh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ChangeLog,v 1.10 2005/01/13 23:09:14 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ChangeLog,v 1.11 2005/02/14 16:33:37 humpback Exp $
+
+  14 Feb 2005; Gustavo Felisberto <humpback@gentoo.org>; -ssh-3.2.5.ebuild,
+  -ssh-3.2.9.1.ebuild:
+  Removing older versions.
 
 *ssh-3.2.9.1-r1 (13 Jan 2005)
 
