@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/pyclimate-1.2.1-r1.ebuild,v 1.2 2004/06/25 01:38:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/pyclimate-1.2.1-r1.ebuild,v 1.3 2004/07/20 19:26:39 kloeri Exp $
 
 inherit eutils distutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~sparc ~alpha ~ppc"
 
 DEPEND="virtual/python
 	>=dev-python/numeric-19.0
-	dev-python/ScientificPython
+	dev-python/scientificpython
 	>=app-sci/netcdf-3.0"
 
 src_install() {
