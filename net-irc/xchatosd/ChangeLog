@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/xchatosd
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.1 2004/08/13 12:11:07 swegener Exp $
+
+*xchatosd-5.12 (13 Aug 2004)
+
+  13 Aug 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +xchatosd-5.12.ebuild:
+  Initial import, ebuild written by me.
+
