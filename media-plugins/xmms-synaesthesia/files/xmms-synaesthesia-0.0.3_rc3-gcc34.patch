@@ -1,0 +1,86 @@
+diff -Naur synaesthesia-xmms-0.0.3-rc3.orig/confdefs.h synaesthesia-xmms-0.0.3-rc3/confdefs.h
+--- synaesthesia-xmms-0.0.3-rc3.orig/confdefs.h	1969-12-31 16:00:00.000000000 -0800
++++ synaesthesia-xmms-0.0.3-rc3/confdefs.h	2004-07-07 14:32:18.156189458 -0700
+@@ -0,0 +1,3 @@
++
++#define PACKAGE "synaesthesia-xmms"
++#define VERSION "0.0.3-rc3"
+diff -Naur synaesthesia-xmms-0.0.3-rc3.orig/config.cache synaesthesia-xmms-0.0.3-rc3/config.cache
+--- synaesthesia-xmms-0.0.3-rc3.orig/config.cache	1969-12-31 16:00:00.000000000 -0800
++++ synaesthesia-xmms-0.0.3-rc3/config.cache	2004-07-07 14:32:19.064038909 -0700
+@@ -0,0 +1,26 @@
++# This file is a shell script that caches the results of configure
++# tests run on this system so they can be shared between configure
++# scripts and configure runs.  It is not useful on other systems.
++# If it contains results you don't want to keep, you may remove or edit it.
++#
++# By default, configure uses ./config.cache as the cache file,
++# creating it if it does not exist already.  You can give configure
++# the --cache-file=FILE option to use a different cache file; that is
++# what configure does when it calls configure scripts in
++# subdirectories, so they share the cache.
++# Giving --cache-file=/dev/null disables caching, for debugging configure.
++# config.status only pays attention to the cache file if you give it the
++# --recheck option to rerun configure.
++#
++ac_cv_path_LD=${ac_cv_path_LD=/usr/x86_64-pc-linux-gnu/bin/ld}
++ac_cv_path_NM=${ac_cv_path_NM='/usr/bin/nm -B'}
++ac_cv_path_install=${ac_cv_path_install='/bin/install -c'}
++ac_cv_prog_CC=${ac_cv_prog_CC=gcc}
++ac_cv_prog_LN_S=${ac_cv_prog_LN_S='ln -s'}
++ac_cv_prog_RANLIB=${ac_cv_prog_RANLIB=ranlib}
++ac_cv_prog_cc_cross=${ac_cv_prog_cc_cross=no}
++ac_cv_prog_cc_g=${ac_cv_prog_cc_g=yes}
++ac_cv_prog_cc_works=${ac_cv_prog_cc_works=yes}
++ac_cv_prog_gcc=${ac_cv_prog_gcc=yes}
++ac_cv_prog_gnu_ld=${ac_cv_prog_gnu_ld=yes}
++ac_cv_prog_make_make_set=${ac_cv_prog_make_make_set=yes}
+diff -Naur synaesthesia-xmms-0.0.3-rc3.orig/config.log synaesthesia-xmms-0.0.3-rc3/config.log
+--- synaesthesia-xmms-0.0.3-rc3.orig/config.log	1969-12-31 16:00:00.000000000 -0800
++++ synaesthesia-xmms-0.0.3-rc3/config.log	2004-07-07 14:32:19.023045707 -0700
+@@ -0,0 +1,26 @@
++This file contains any messages produced by compilers while
++running configure, to aid debugging if configure makes a mistake.
++
++configure:582: checking for a BSD compatible install
++configure:635: checking whether build environment is sane
++configure:692: checking whether make sets ${MAKE}
++configure:738: checking for working aclocal
++configure:751: checking for working autoconf
++configure:764: checking for working automake
++configure:777: checking for working autoheader
++configure:790: checking for working makeinfo
++configure:882: checking host system type
++configure:903: checking build system type
++configure:923: checking for ranlib
++configure:953: checking for gcc
++configure:1066: checking whether the C compiler (gcc -O2 -pipe -fomit-frame-pointer ) works
++configure:1082: gcc -o conftest -O2 -pipe -fomit-frame-pointer   conftest.c  1>&5
++configure:1108: checking whether the C compiler (gcc -O2 -pipe -fomit-frame-pointer ) is a cross-compiler
++configure:1113: checking whether we are using GNU C
++configure:1122: gcc -E conftest.c
++configure:1141: checking whether gcc accepts -g
++configure:1184: checking for ld used by GCC
++configure:1246: checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld
++GNU ld version 2.15.90.0.1.1 20040303
++configure:1262: checking for BSD-compatible nm
++configure:1298: checking whether ln -s works
+diff -Naur synaesthesia-xmms-0.0.3-rc3.orig/syna_xmms.c synaesthesia-xmms-0.0.3-rc3/syna_xmms.c
+--- synaesthesia-xmms-0.0.3-rc3.orig/syna_xmms.c	2001-04-26 13:55:51.000000000 -0700
++++ synaesthesia-xmms-0.0.3-rc3/syna_xmms.c	2004-07-07 14:31:50.743735231 -0700
+@@ -19,6 +19,7 @@
+ #include <gtk/gtk.h>
+ #include <gdk/gdkkeysyms.h>
+ #include <pthread.h>
++#include <string.h>
+ #include "math.h"
+ #include <xmms/plugin.h>
+ #include <xmms/util.h>
+@@ -285,6 +286,7 @@
+ 			synx_fullscreen_toggle();
+                         break;
+                 default:
++			break;
+                         /* ugh */
+ 	}
+ }
