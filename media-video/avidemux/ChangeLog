@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.52 2004/08/29 13:39:08 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.53 2004/09/23 20:38:19 zypher Exp $
+
+  23 Sep 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.26.ebuild,
+  avidemux-2.0.28.ebuild:
+  Added faad2 dependency, closes bug #59556
 
   29 Aug 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.28.ebuild:
   Added xvid-(0.9)-patch.
@@ -10,7 +14,7 @@
   Added "-fforce-addr" to the list of filtered flags.
   Closes bug #61632 and #61612
 
-*avidemux-2.0.24 (12 Aug 2004)
+*avidemux-2.0.28 (12 Aug 2004)
 
   24 Aug 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.28.ebuild:
   Version bump, closes bug #60254.Introducing xvid-1.0 as a dependency.
