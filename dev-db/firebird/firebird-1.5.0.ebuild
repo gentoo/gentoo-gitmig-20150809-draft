@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.0.ebuild,v 1.2 2004/03/31 00:35:47 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.0.ebuild,v 1.3 2004/04/03 22:54:57 mksoft Exp $
 
 DESCRIPTION="A relational database offering many ANSI SQL-92 features"
 extra_ver="4290"
@@ -10,9 +10,9 @@ HOMEPAGE="http://firebird.sourceforge.net/"
 SLOT="0"
 LICENSE="MPL-1.1"
 KEYWORDS="~x86"
-IUSE="classic"
+IUSE="inetd"
 DEPEND="virtual/glibc
-	classic? ( virtual/inetd )"
+	inetd? ( virtual/inetd )"
 RESTRICT="nouserpriv"
 inherit flag-o-matic
 
@@ -24,7 +24,7 @@ src_compile() {
 
 	myconf="${myconf} --prefix=/opt/firebird"
 	myconf="${myconf} --with-editline"
-	[ -z "`use classic`" ] && myconf="${myconf} --enable-superserver"
+	[ -z "`use inetd`" ] && myconf="${myconf} --enable-superserver"
 	./autogen.sh ${myconf} || die "couldn't run autogen.sh"
 	make || die "error during make"
 }
@@ -49,7 +49,7 @@ src_install() {
 	rm -r ${D}/opt/firebird/{README,WhatsNew,doc,misc}
 	rm -r ${D}/opt/firebird/examples
 
-	if [ -n "`use classic`" ]; then
+	if [ -n "`use inetd`" ]; then
 		insinto /etc/xinetd.d ; newins ${FILESDIR}/${P}.xinetd firebird
 	else
 		exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}.init.d firebird
@@ -75,7 +75,7 @@ src_install() {
 	chmod a=rx isql
 	chmod a=rx qli
 
-	[ -n "`use classic`" ] && chmod ug=rxs,o= ${D}/opt/firebird/bin/{fb_lock_mgr,gds_drop,fb_inet_server}
+	[ -n "`use inetd`" ] && chmod ug=rxs,o= ${D}/opt/firebird/bin/{fb_lock_mgr,gds_drop,fb_inet_server}
 	chmod u=rw,go=r ${D}/opt/firebird/{aliases.conf,firebird.conf}
 	chmod ug=rw,o= ${D}/opt/firebird/{security.fdb,help/help.fdb}
 
@@ -106,6 +106,16 @@ pkg_postinst() {
 	einfo "   set permissions to firebird:firebird on databases you "
 	einfo "   already have (if any)."
 	einfo
+
+	if [ -z "`use inetd`" ]
+	then
+		einfo "3. You've built the stand alone deamon version,"
+		einfo "   SuperServer. If you were using pre 1.5.0 ebuilds"
+		einfo "   you're probably have one installed via xinetd. please"
+		einfo "   remember to disable it (usually in /etc/xinetd.d/firebird),"
+		einfo "   since the current one has it's own init script under"
+		einfo "   /etc/init.d"
+	fi
 }
 
 pkg_config() {
