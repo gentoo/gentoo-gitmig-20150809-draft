@@ -1,0 +1,9 @@
+# ChangeLog for net-www/memcached
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/memcached/ChangeLog,v 1.1 2003/07/26 22:52:16 lisa Exp $
+
+
+* net-www/memcached-1.1.6
+
+26 Jul 2003; Lisa M. Seelye <lisa@gentoo.org>
+  Inital checkin into Portage at version 1.1.6
