@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.4.4.ebuild,v 1.1 2005/02/04 17:28:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.4.4.ebuild,v 1.2 2005/03/18 22:19:30 swegener Exp $
 
 inherit base
 
-IUSE="kde gnome debug"
+IUSE="debug"
 DESCRIPTION="A simple but functional graphical IRC client"
 HOMEPAGE="http://lostirc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc ~amd64 ~sparc"
 
 RDEPEND="=dev-cpp/gtkmm-2.4*
 	>=dev-cpp/glibmm-2.4.4
@@ -19,9 +19,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
+	# Note: --enable-gnome installs the .desktop file in
+	# /usr/share/applications, it does not add gnome dependencies
+	# so, as this is the standard place, we should enable it always
 	econf \
-		$(use_with gnome) \
-		$(use_with kde) \
+		--enable-gnome \
+		--disable-kde \
 		$(use_enable debug logdebug) \
 		|| die "econf failed"
 	base_src_compile make
