@@ -1,5 +1,15 @@
-MD5 8bfe1d13c7e4054f7ba89bfd40a9f3fc libmodplug-0.7.ebuild 767
-MD5 89129249f063882efb4a824a917ab4a2 ChangeLog 403
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 61e4e80c1f63a2242f6871c402383e64 ChangeLog 498
+MD5 10740ab0a558493a80fea14c5765249a libmodplug-0.7.ebuild 729
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
 MD5 5009236d8b451fecef858961aed24428 files/digest-libmodplug-0.7 66
 MD5 b10f6248932b7fd4ce0df1a025df6e8a files/libmodplug-0.7-amd64.patch 1550
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBk+bHArHZZzCEUG0RAlRzAJ935cobWfiVa6E8wquj22xEYiJzSgCfb1yw
+FeaUWJnHc278PdtZGyIZpnk=
+=SLdm
+-----END PGP SIGNATURE-----
