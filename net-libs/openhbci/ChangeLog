@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/openhbci
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/ChangeLog,v 1.23 2005/02/07 14:36:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/ChangeLog,v 1.24 2005/03/08 00:33:57 jnc Exp $
+
+*openhbci-0.9.17-r1 (07 Mar 2005)
+
+  07 Mar 2005; Eric Shattow <jnc@gentoo.org> +openhbci-0.9.17-r1.ebuild:
+  Closes #79736
 
   07 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> openhbci-0.9.17.ebuild:
   Stable on sparc
