@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.0.0.ebuild,v 1.1 2003/11/13 14:40:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.0.0.ebuild,v 1.2 2003/11/14 12:42:38 caleb Exp $
 
 inherit flag-o-matic
 filter-flags -fPIC
@@ -20,14 +20,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -sparc -ppc -alpha"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	if [ `uname -r | awk -F . '{print $2}'` == 6 ]; then
-		epatch ${FILESDIR}/${PN}-configure.in-2.6.diff
-		autoconf || die "error while running autoconf"
-	fi
-}
+#src_unpack() {
+#	unpack ${A}
+#	cd ${S}
+#	if [ `uname -r | awk -F . '{print $2}'` == 6 ]; then
+#		epatch ${FILESDIR}/${PN}-configure.in-2.6.diff
+#		autoconf || die "error while running autoconf"
+#	fi
+#}
 
 src_compile() {
 	local myconf
