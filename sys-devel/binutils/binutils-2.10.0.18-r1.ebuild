@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.0.18-r1.ebuild,v 1.2 2000/08/16 04:38:33 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.0.18-r1.ebuild,v 1.3 2000/08/25 05:51:49 drobbins Exp $
 
 P=binutils-2.10.0.18
 A=${P}.tar.gz
@@ -15,8 +15,8 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
-                             
+	#I'm sure this can be simplified with a "make PREFIX=${D}/usr install"
+	#one of these days...                             
 	into /usr
 	doman binutils/*.1 gas/doc/as.1 gprof/gprof.1
 	insinto /usr/lib
