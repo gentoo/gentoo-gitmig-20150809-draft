@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/viewcvs-0.9.2-r3.ebuild,v 1.1 2004/01/17 23:22:36 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/viewcvs-0.9.2-r3.ebuild,v 1.2 2004/05/30 20:29:13 robbat2 Exp $
 
 PDATE=${PV/0.9.2_p/}
 DESCRIPTION="Viewcvs, a web interface to cvs and subversion"
@@ -72,11 +72,11 @@ ScriptAlias /viewcvs /var/www/localhost/viewcvs/cgi/viewcvs.cgi
 ScriptAlias /cvsquery /var/www/localhost/viewcvs/cgi/cvsquery.cgi
 
 <Directory /var/www/localhost/viewcvs/cgi>
-    Options ExecCGI
-    <IfModule mod_access.c>
-        Order allow,deny
-        Allow from all
-    </IfModule>
+	Options ExecCGI
+	<IfModule mod_access.c>
+		Order allow,deny
+		Allow from all
+	</IfModule>
 </Directory>
 EOF
 
