@@ -14,6 +14,7 @@ DEPEND="virtual/x11
 	>=dev-libs/libxml-1.8.11
 	gtkhtml? ( >=gnome-extra/gtkhtml-0.14.0-r1 )"
 
+
 src_compile() {
 	local myconf
 
