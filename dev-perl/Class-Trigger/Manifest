@@ -1,4 +1,14 @@
-MD5 9f8935675f73b5718bd7c7c59ade5f9e ChangeLog 597
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 63490f2faa02226bc3fd98d044ce2c12 ChangeLog 699
+MD5 e02f582d7ddaa22969f07bca167d043c Class-Trigger-0.08.ebuild 606
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 48538483360ca114107a43d0bf38d698 Class-Trigger-0.08.ebuild 602
 MD5 22e89d2dcd3cd0759a5ece96b61d3b14 files/digest-Class-Trigger-0.08 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5eDqKRy60XGEcJIRAqFVAJsGkVb+PrDiYP/r+wnh4G7rdANziQCePUxi
+tgAGSdSu0RXh+5SQFHNVNFs=
+=ZmWl
+-----END PGP SIGNATURE-----
