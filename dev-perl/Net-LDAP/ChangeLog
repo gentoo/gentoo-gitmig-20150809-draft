@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Net-LDAP
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-LDAP/ChangeLog,v 1.1 2003/08/14 02:25:30 robbat2 Exp $
+
+*Net-LDAP-0.29 (13 Aug 2003)
+
+  13 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> Net-LDAP-0.29.ebuild:
+  New ebuild
+
