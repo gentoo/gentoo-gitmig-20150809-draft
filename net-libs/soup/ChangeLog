@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/soup
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.1 2002/04/12 19:27:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.2 2002/09/28 07:55:14 azarah Exp $
+
+*soup-0.7.4 (28 Sep 2002)
+  28 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+  New version.  Update to use gnome.org eclass.  Libtoolize.
 
 *soup-0.5.1-r2 ( 11 Apr 2002 )
   11 Apr 2002; Spider <spider@gentoo.org>
