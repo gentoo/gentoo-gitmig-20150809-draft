@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.26 2002/06/08 16:24:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.27 2002/06/24 22:12:26 azarah Exp $
+
+  25 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Add XFree86-4.2.0-i810_i845_20020524.patch and XFree86-4.2.0-Suse-Updates.patch,
+  adding Intel 845, and Neomagic XV support among things.  Also a lot of fixes
+  from Suse.  The Suse patch is a bit big, but I rather do not want to
+  change the ebuild since if the patches are missing, things should still
+  work fine.  This should among things resolve bug #3823.
 
 *xfree-4.2.0-r12 (8 Jun 2002)
 
