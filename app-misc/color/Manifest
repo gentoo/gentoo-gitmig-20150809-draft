@@ -1,4 +1,14 @@
-MD5 01c682336e8661da008293881f8d43bd color-1.1.ebuild 1156
-MD5 a2ef5949d43a94c9e35bfea04eeb600c ChangeLog 750
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 98f29b84c9c97938f5cfd8d5a1d5ed2c ChangeLog 844
+MD5 306684e0860c182fe4d269c82021422e color-1.1.ebuild 1154
 MD5 35665b427f5299b5a2d7eef0f0986f00 metadata.xml 558
 MD5 bf97f2627c156dd28559d652061edd1b files/digest-color-1.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhU1oLLFUmVNQ7rkRAiuPAJ0QXjzow8A7cvaVraJDNdbMCOcX5QCeJhLs
+2hGnkhT/Dj1GftJqjuRLCNY=
+=/lET
+-----END PGP SIGNATURE-----
