@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nylon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nylon/ChangeLog,v 1.6 2004/08/12 16:04:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nylon/ChangeLog,v 1.7 2004/09/28 01:25:10 swegener Exp $
+
+  28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/nylon.init:
+  Gentoo Technologies, Inc. -> Gentoo Foundation
 
 *nylon-1.2-r1 (16 Jul 2004)
 
