@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.49 2005/02/14 01:51:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.50 2005/02/14 13:44:54 gustavoz Exp $
+
+  14 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> clamav-0.82-r1.ebuild:
+  Stable on sparc wrt #81939
 
 *clamav-0.83 (14 Feb 2005)
 
