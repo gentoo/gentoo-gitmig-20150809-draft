@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.22.ebuild,v 1.5 2005/02/19 20:12:59 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.22.ebuild,v 1.6 2005/02/19 20:21:38 lanius Exp $
 
 inherit flag-o-matic mono #48511
 
@@ -65,4 +65,8 @@ src_compile() {
 src_install() {
 	make install DESTDIR=${D} || die
 	dodoc ANNOUNCE CHANGES FUTURE NEW README TODO
+}
+
+src_test() {
+	einfo "FEATURES=\"maketest\" has been disabled for dev-util/cvs"
 }
