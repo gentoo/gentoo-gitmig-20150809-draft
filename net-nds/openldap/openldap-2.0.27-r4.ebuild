@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.4 2003/07/09 01:26:12 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.5 2003/07/09 07:35:30 raker Exp $
 
 inherit eutils
 
@@ -144,6 +144,8 @@ src_install() {
 	fperms 0755 /var/run/openldap
 	sed -i -e "s:/var/lib/slapd.pid:/var/run/openldap/slapd.pid:" ${D}/etc/openldap/slapd.conf
 	sed -i -e "s:/var/lib/slapd.pid:/var/run/openldap/slapd.pid:" ${D}/etc/openldap/slapd.conf.default
+	sed -i -e "s:/var/lib/slapd.args:/var/run/openldap/slapd.args:" ${D}/etc/openldap/slapd.conf
+	sed -i -e "s:/var/lib/slapd.args:/var/run/openldap/slapd.args:" ${D}/etc/openldap/slapd.conf.default
 	fowners root:ldap /etc/openldap/slapd.conf
 	fperms 0640 /etc/openldap/slapd.conf
 	fowners root:ldap /etc/openldap/slapd.conf.default
