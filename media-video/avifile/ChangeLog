@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.57 2003/10/21 15:51:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.58 2003/12/12 20:41:31 aliz Exp $
+
+  12 Dec 2003; Daniel Ahlberg <aliz@gentoo.org> avifile-0.7.38.20030710.ebuild:
+  Add amd64 keyword. Patch contributed by MATSUU Takuto <matsuu@gentoo.org> in #33655.
 
   22 Oct 2003; Martin Holzer <mholzer@gentoo.org>
   avifile-0.7.37.20030522-r2.ebuild, avifile-0.7.38.20030710.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.5 2003/10/21 15:51:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.6 2003/12/12 20:41:31 aliz Exp $
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:0:6}
@@ -14,7 +14,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0.7"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE="static truetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd debug"
 
 DEPEND=">=media-libs/jpeg-6b
@@ -40,10 +40,12 @@ DEPEND=">=media-libs/jpeg-6b
 src_unpack() {
 	unpack ${A}
 	use qt || sed -i 's/qt[a-z]*//g' ${S}/samples/Makefile.am
+
+	epatch ${FILESDIR}/flvenc-patch
+	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 }
 
 src_compile() {
-	epatch ${FILESDIR}/flvenc-patch
 	local myconf="--enable-oss"
 	local kdepre=""
 
