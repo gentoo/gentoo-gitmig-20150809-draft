@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.39 2005/01/12 19:03:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.40 2005/01/28 02:02:48 dragonheart Exp $
+
+*libnasl-2.2.2a (28 Jan 2005)
+
+  28 Jan 2005; Daniel Black <dragonheart@gentoo.org> libnasl-2.2.0.ebuild,
+  +libnasl-2.2.2a.ebuild, libnasl-2.3.0.ebuild:
+  Add latest stable version (bug #78789). 2.3.0 uses correct CC now. Added
+  missing ppc64 keywords
 
   13 Jan 2005; Daniel Black <dragonheart@gentoo.org> libnasl-2.3.0.ebuild:
   Parallel make disabled as per bug #77685

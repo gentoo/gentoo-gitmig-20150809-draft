@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.39 2005/01/12 08:39:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.40 2005/01/28 02:04:39 dragonheart Exp $
+
+*nessus-plugins-2.2.2a (28 Jan 2005)
+
+  28 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  nessus-plugins-2.2.0.ebuild, +nessus-plugins-2.2.2a.ebuild,
+  nessus-plugins-2.3.0.ebuild:
+  Add latest stable version. 2.3.0 uses correct CC now. Added missing ppc64
+  keywords
 
 *nessus-plugins-2.3.0 (12 Jan 2005)
 

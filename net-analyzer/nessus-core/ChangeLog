@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.54 2005/01/26 11:06:56 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.55 2005/01/28 02:03:55 dragonheart Exp $
+
+*nessus-core-2.2.2a (28 Jan 2005)
+
+  28 Jan 2005; Daniel Black <dragonheart@gentoo.org> nessus-core-2.2.0.ebuild,
+  +nessus-core-2.2.2a.ebuild, nessus-core-2.3.0.ebuild:
+  Add latest stable version (bug #78789). 2.3.0 uses correct CC now. Added
+  dropped ~ppc64 keywords
 
   26 Jan 2005; Otavio R. Piske <angusyoung@gentoo.org> +files/nessusd-r7,
   nessus-core-2.3.0.ebuild:
