@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.4 2002/07/06 04:10:34 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.5 2002/07/06 09:11:51 danarmak Exp $
 
 
 inherit  kde-dist
@@ -16,7 +16,6 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )
 	cups? ( net-print/cups )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
-	media-sound/cdparanoia
 	opengl? ( virtual/opengl )
 	samba? ( net-fs/samba )" 
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
