@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxcomp
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/ChangeLog,v 1.1 2003/08/27 03:02:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/ChangeLog,v 1.2 2003/09/09 13:37:21 stuart Exp $
+
+  09 Sep 2003; stuart nxcomp-1.2.2.ebuild:
+  Marked as stable
 
 *nxcomp-1.2.2 (27 Aug 2003)
 
