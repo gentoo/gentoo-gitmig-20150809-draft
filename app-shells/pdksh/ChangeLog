@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/pdksh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/ChangeLog,v 1.1 2002/02/01 21:53:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/ChangeLog,v 1.2 2002/04/14 04:22:17 jnelson Exp $
+
+*pdksh-5.2.14-r4 (13 Apr 2002)
+
+  13 Apr 2002; Jon Nelson <jnelson@gentoo.org> pdksh-5.2.14-r4
+  
+  Added work-around for (what I think is) broken sandbox behavior.
 
 *pdksh-5.2.14-r3 (1 Feb 2002)
 
