@@ -1,12 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.11.1.ebuild,v 1.5 2004/10/20 05:51:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.11.1.ebuild,v 1.6 2005/02/11 13:20:19 axxo Exp $
 
-IUSE=""
+inherit bash-completion
 
 DESCRIPTION="A commandline client for Music Player Daemon (media-sound/mpd)"
 SRC_URI="mirror://sourceforge/musicpd/${P}.tar.gz"
 HOMEPAGE="http://www.musicpd.org"
+IUSE=""
 
 KEYWORDS="x86 ~ppc sparc amd64"
 SLOT="0"
@@ -25,6 +26,7 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
-	rm -rf ${D}/usr/share/doc/mpc/
-	dodoc AUTHORS ChangeLog README doc/mpc-bashrc
+	mv ${D}/usr/share/doc/mpc/ ${D}/usr/share/doc/${PF}
+
+	dobashcompletion doc/mpc-bashrc
 }
