@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.4.ebuild,v 1.7 2002/10/04 06:05:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.4.ebuild,v 1.8 2002/12/09 04:33:13 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNet network library."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnetlibrary.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND=">=dev-libs/glib-1.2.0"
 RDEPEND=$DEPEND

@@ -1,7 +1,10 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.8 2002/10/02 08:42:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.9 2002/12/09 04:33:13 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *libnet-1.0.2a-r2 (02 Oct 2002)
 
   02 Oct 2002; Seemant Kulleen <seemant@gentoo.org> libnet-1.0.2a-r2.ebuild

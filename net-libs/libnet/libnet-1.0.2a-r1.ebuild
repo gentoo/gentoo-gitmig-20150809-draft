@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r1.ebuild,v 1.6 2002/10/04 06:06:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r1.ebuild,v 1.7 2002/12/09 04:33:13 manson Exp $
 
 S=${WORKDIR}/Libnet-1.0.2a
 DESCRIPTION="library to provide an API for commonly used low-level network
@@ -12,7 +12,7 @@ DEPEND=""
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 src_compile() {
 	./configure	\

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.5.1-r2.ebuild,v 1.9 2002/10/20 10:20:52 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.5.1-r2.ebuild,v 1.10 2002/12/09 04:33:13 manson Exp $
 
 IUSE="ssl doc perl"
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="x86 sparc sparc64 ppc"
+KEYWORDS="x86 sparc  ppc"
 
 src_compile() {
 	local myconf

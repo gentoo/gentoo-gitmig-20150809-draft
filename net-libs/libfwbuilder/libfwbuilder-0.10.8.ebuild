@@ -7,7 +7,7 @@ DESCRIPTION="A firewall GUI"
 SRC_URI="mirror://sourceforge/${MY_PN}/${P}.tar.gz"
 HOMEPAGE="http://fwbuilder.sourceforge.net"
 
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="ssl static"
