@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fluxbg
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxbg/ChangeLog,v 1.3 2004/04/14 09:09:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxbg/ChangeLog,v 1.4 2004/04/21 14:23:05 mcummings Exp $
+
+  21 Apr 2004; Michael Cummings <mcummings@gentoo.org> fluxbg-0.7.ebuild:
+  Silly (potential) qa thing - fixed $ Header: $ to $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxbg/ChangeLog,v 1.4 2004/04/21 14:23:05 mcummings Exp $. Talked to tseng
+  before breaching the herd membrane barrier.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> fluxbg-0.7.ebuild:
   Removed S=.
