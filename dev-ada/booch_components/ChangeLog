@@ -1,0 +1,11 @@
+# ChangeLog for dev-ada/booch_components
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.1 2003/10/14 11:41:30 dholm Exp $
+
+*booch_components-20030815 (14 Oct 2003)
+
+  14 Oct 2003; David Holm <dholm@gentoo.org> booch_components-20030815.ebuild,
+  metadata.xml:
+  This ebuild was provided by George Shapovalov <george@gentoo.org>. It provides
+  a set of reusable components for use in Ada applications.
+
