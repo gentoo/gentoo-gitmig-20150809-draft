@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gradio/gradio-1.0.1.ebuild,v 1.10 2004/06/25 00:03:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gradio/gradio-1.0.1.ebuild,v 1.11 2004/07/13 07:26:32 eradicator Exp $
 
 IUSE=""
 
@@ -10,7 +10,12 @@ HOMEPAGE="http://foobazco.org/projects/gradio/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+# ~sparc, ~amd64: 1.0.1: Compiles cleanly and appears to work, but I don't have
+# a radio device to test.  Therefore, it will remain in ~arch until I get
+# positive user feedback on these archs.  Please email me if you have
+# success.  -- eradicator
+
+KEYWORDS="x86 ~sparc ~amd64"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 
