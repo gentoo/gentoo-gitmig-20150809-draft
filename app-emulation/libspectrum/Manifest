@@ -1,3 +1,5 @@
-MD5 8761f955e813757510ed8365ca173587 ChangeLog 770
-MD5 1edcb00fbdcc8faa616e52b07db06523 libspectrum-0.2.0.1-r1.ebuild 725
 MD5 e25263c299930c27cc50ce3cf3923b8a files/digest-libspectrum-0.2.0.1-r1 71
+MD5 b239f51df2be147a2e204ba5b14c93eb files/digest-libspectrum-0.2.1 69
+MD5 59162e5d28a0f0a499d5481c65928458 ChangeLog 911
+MD5 1edcb00fbdcc8faa616e52b07db06523 libspectrum-0.2.0.1-r1.ebuild 725
+MD5 9376fee407ca9e4eb91a31028cf752f1 libspectrum-0.2.1.ebuild 722
