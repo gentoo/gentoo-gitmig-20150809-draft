@@ -1,0 +1,6 @@
+MD5 e98948d3266c66087ef2c8cba4fd794b minml2-0.3.ebuild 1091
+MD5 203bf128e0cd49b2222ad296275962e1 ChangeLog 383
+MD5 e5362c18b7bae59fc15bd157b4f80755 metadata.xml 469
+MD5 7f45a9a8d3e13b1876047c5a3a2d70a5 files/digest-minml2-0.3 58
+MD5 fcaa92dd091fb72282267483339fa361 files/build.xml 1331
+MD5 9d3438ab5f49f214d6d697d69e620fa6 files/minml-jikes.patch 556

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+<herd>java</herd>
+
+<longdescription>
+
+MinML is a minimal XML parser suited to run on small embedded systems (~512Kb of 
+RAM). It will read DTDs, but they are ignored. It supports mixed content, 
+attributes, empty elements, entity references (&amp;, etc), character references 
+(&#xA9;, etc), CDATA sections .
+
+</longdescription>
+</pkgmetadata>

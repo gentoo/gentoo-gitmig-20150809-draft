@@ -1,0 +1,12 @@
+diff -uprN MinML2.release.orig/uk/co/wilson/xml/MinML2.java MinML2.release/uk/co/wilson/xml/MinML2.java
+--- MinML2.release.orig/uk/co/wilson/xml/MinML2.java	2004-11-23 17:31:12.978874272 +0100
++++ MinML2.release/uk/co/wilson/xml/MinML2.java	2004-11-23 17:34:15.487128800 +0100
+@@ -279,7 +279,7 @@ public class MinML2 implements XMLReader
+             }
+ 
+             final String elementLocalName;
+-            final String uri;
++            String uri;
+             final int colonIndex = elementName.indexOf(':');
+ 
+             if (colonIndex != -1) {
