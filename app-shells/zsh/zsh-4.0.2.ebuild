@@ -2,13 +2,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # This ebuild by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.2.ebuild,v 1.5 2001/08/31 03:23:38 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.2.ebuild,v 1.6 2001/11/10 03:07:01 hallski Exp $
 
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="UNIX Shell similar to the Korn shell"
-SRC_URI="ftp://ftp.zsh.org/pub/${A}"
+SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz"
 HOMEPAGE="www.zsh.org/"
 
 DEPEND="virtual/glibc

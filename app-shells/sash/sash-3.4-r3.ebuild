@@ -1,10 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r3.ebuild,v 1.3 2001/08/11 04:42:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r3.ebuild,v 1.4 2001/11/10 03:07:01 hallski Exp $
 
-P=sash-3.4    
-A="${P}.tar.gz sash-3.x-readline.diff.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="A small UNIX Shell with readline suppport"
 SRC_URI="http://www.canb.auug.org.au/~dbell/programs/${P}.tar.gz

@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8-r2.ebuild,v 1.3 2001/05/15 09:45:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8-r2.ebuild,v 1.4 2001/11/10 03:07:01 hallski Exp $
 
 P=esh-0.8      
-A=${P}.tar.gz
 S=${WORKDIR}/esh
 DESCRIPTION="A UNIX Shell with a simplified Scheme syntax"
-SRC_URI="http://esh.netpedia.net/"${A}
+SRC_URI="http://esh.netpedia.net/${P}.tar.gz"
 HOMEPAGE="http://esh.netpedia.net/"
 
 DEPEND="virtual/glibc

@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-3.1.9-r1.ebuild,v 1.1 2001/04/13 14:01:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-3.1.9-r1.ebuild,v 1.2 2001/11/10 03:07:01 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="UNIX Shell similar to the Korn shell"
-SRC_URI="ftp://ftp.zsh.org/pub/${A}"
+SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz"
 HOMEPAGE="www.zsh.org/"
 
 DEPEND="virtual/glibc
