@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-es/ChangeLog,v 1.1 2002/04/26 20:49:06 tod Exp $
+
+*ispell-es-1.7 ( 26 Apr 2002 )
+
+  26 Apr 2002; Tod Neidt <tod@gentoo.org> ispell-es-1.7.ebuild :
+ 
+  Initial commit. Ebuild submitted by Leonardo Boshell.
