@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.97 2005/03/04 21:10:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.98 2005/03/05 17:24:58 gustavoz Exp $
+
+  05 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  ghostscript-7.07.1-r8.ebuild:
+  sparc-tastic
 
   04 Mar 2005; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.
