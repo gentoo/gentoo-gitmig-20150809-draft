@@ -141,6 +141,8 @@ src_install() {
 
 	dodir /sbin
 	mv ${D}/usr/bin/smbmount ${D}/sbin/mount.smbfs
+
+	rm -rf ${D}/usr/private
 }
 
 pkg_preinst() {

@@ -154,6 +154,8 @@ src_install() {
 		exeinto /var/lib/supervise/services/${x}/log
 		newexe ${FILESDIR}/${x}-log run
 	done
+
+	rm -rf ${D}/usr/private
 }
 
 pkg_preinst() {

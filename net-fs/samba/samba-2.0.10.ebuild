@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.10.ebuild,v 1.1 2001/06/25 16:01:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.10.ebuild,v 1.2 2001/08/18 22:26:13 karltk Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -83,6 +83,8 @@ src_install() {
 		exeinto /var/lib/supervise/services/${x}/log
 		newexe ${FILESDIR}/${x}-log run
 	done
+
+	rm -rf ${D}/usr/private
 }
 
 pkg_preinst() {
