@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.67 2004/09/25 07:02:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.68 2004/09/27 10:25:46 lanius Exp $
+
+  27 Sep 2004; Heinrich Wendel <lanius@gentoo.org> files/2.4.2/ip-down,
+  files/2.4.2/ip-up:
+  fix resolv.conf permissions
 
   25 Sep 2004; Mike Frysinger <vapier@gentoo.org> ppp-2.4.1-r14.ebuild,
   ppp-2.4.2-r1.ebuild, ppp-2.4.2-r2.ebuild, ppp-2.4.2-r3.ebuild,
