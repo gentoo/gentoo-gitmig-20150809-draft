@@ -1,0 +1,20 @@
+# ChangeLog for games-action/mutantstormdemo
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/ChangeLog,v 1.1 2004/05/12 21:44:18 wolf31o2 Exp $
+
+  12 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
+  Moved from mutantstormdemo to mutantstorm-demo to match naming conventions.
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  mutantstormdemo-1.33.ebuild:
+  Added IUSE.
+
+*mutantstormdemo-1.33 (07 Oct 2003)
+
+  07 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.
+
+*mutantstormdemo-1 (07 Jul 2003)
+
+  07 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
