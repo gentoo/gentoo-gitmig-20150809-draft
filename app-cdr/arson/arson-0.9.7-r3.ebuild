@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.3 2003/09/05 22:57:43 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.4 2003/10/02 07:56:23 kumba Exp $
 inherit kde-base
 inherit eutils
 
@@ -31,4 +31,5 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-write-img-fix.diff
 	epatch ${FILESDIR}/${P}-crashfix.diff
+	epatch ${FILESDIR}/${P}-gcc33-multiline-string-fix.patch
 }
