@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.32 2004/12/05 15:37:15 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.33 2004/12/05 16:04:39 kloeri Exp $
+
+  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> imlib-1.9.14-r3.ebuild:
+  Stable on alpha, bug 72681.
 
   05 Dec 2004; Ferris McCormick <fmccor@gentoo.org> imlib-1.9.14-r3.ebuild:
   Stable for sparc wrt Bug 72681 --- builds and tests OK with ruby-gdkimlib.
