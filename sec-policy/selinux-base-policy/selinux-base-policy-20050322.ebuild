@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20050224.ebuild,v 1.1 2005/02/25 02:38:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20050322.ebuild,v 1.1 2005/03/23 00:31:01 pebenito Exp $
 
 IUSE="build"
 
@@ -11,8 +11,8 @@ HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-#KEYWORDS="x86 ppc sparc amd64"
+#KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 DEPEND="build? ( sys-devel/make
 		 sys-devel/m4 )"
 RDEPEND="sys-devel/m4
@@ -58,6 +58,13 @@ src_install() {
 
 pkg_postinst() {
 	local isdeprecated
+
+	if ! ( use build || use bootstrap )
+	then
+		ewarn "Removing invalid backup copies of critical config files..."
+		rm -f ${ROOT}/${POLICYDIR}/._cfg????_users
+	fi
+
 	echo
 	einfo "This is the base policy for SELinux on Gentoo.  This policy"
 	einfo "package only covers the applications in the system profile."
