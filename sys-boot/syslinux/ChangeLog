@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.2 2003/12/09 08:55:58 seemant Exp $
+# $Id: ChangeLog,v 1.3 2003/12/30 23:31:52 pauldv Exp $
+
+  31 Dec 2003; <paul@gentoo.org> metadata.xml, syslinux-2.06.ebuild:
+  nasm is not available on amd64, and even if it worked (unresearched) it could
+  create all kinds of funny sideeffects
 
 *syslinux-2.06 (08 Dec 2003)
 
