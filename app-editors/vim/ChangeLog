@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.114 2004/06/21 00:07:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.115 2004/06/21 00:18:24 ciaranm Exp $
+
+  21 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> vim-6.2-r9.ebuild:
+  Moving s390 stable up to 6.2-r9 so that I can tidy up older versions and
+  update the eclass (the s390 development team is on extended leave).
 
   20 Jun 2004; Aron Griffis <agriffis@gentoo.org> vim-6.3.ebuild:
   Stable on alpha and ia64
