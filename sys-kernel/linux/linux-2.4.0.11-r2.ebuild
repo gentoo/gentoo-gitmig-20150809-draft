@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r2.ebuild,v 1.1 2001/01/26 08:28:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r2.ebuild,v 1.2 2001/01/26 08:30:40 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -17,7 +17,8 @@ http://www.kernel.org/pub/linux/kernel/people/alan/2.4/patch-${KV}.bz2
 http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.5.tar.gz 
 http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.1.2-patch.tar.gz
 ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.10a.tar.bz2
-ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_0.9.1_beta2.tar.gz"
+ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_0.9.1_beta2.tar.gz
+http://www.braque.dhs.org/pub/linux/kernel/patch/patch-_against_2.4.1-pre10_-knfsdops-reiserfs.gz"
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
@@ -31,68 +32,72 @@ src_unpack() {
     cd ${S}
     echo "Applying ${KV} patch..."
     bzip2 -dc ${DISTDIR}/patch-${KV}.bz2 | patch -p1
-    mkdir extras
-	cd ${S}/extras
+    echo "Applying reiserfs-nfsd patch..."
+    gzip -dc ${DISTDIR}/patch-_against_2.4.1-pre10_-knfsdops-reiserfs.gz | patch -p1
+    echo "Applying reiserfs-superfs.c fix..."
+    cd fs/reiserfs
+    patch -p0 < ${FILESDIR}/${PV}-r${PR}/super.diff
+    mkdir ${S}/extras
+
+    cd ${S}/extras
 	
-	cd ${S}/extras
-	echo "Unpacking LVM..."
- 	unpack lvm_0.9.1_beta2.tar.gz   
-	#patch does not appear necessary for this kernel
+    cd ${S}/extras
+    echo "Unpacking LVM..."
+    unpack lvm_0.9.1_beta2.tar.gz   
+    #patch does not appear necessary for this kernel
 
-	echo "Unpacking ALSA drivers..."
-	cd ${S}/extras
-	unpack alsa-driver-0.5.10a.tar.bz2
+    echo "Unpacking ALSA drivers..."
+    cd ${S}/extras
+    unpack alsa-driver-0.5.10a.tar.bz2
 
-	echo "Unpacking and applying lm_sensors patch..."
-	cd ${S}/extras
-	unpack lm_sensors-2.5.5.tar.gz
-	cd lm_sensors-2.5.5
-	mkpatch/mkpatch.pl . ${S} > ${S}/lm_sensors-patch
-	cd ${S}
-	patch -p1 < lm_sensors-patch   
+    echo "Unpacking and applying lm_sensors patch..."
+    cd ${S}/extras
+    unpack lm_sensors-2.5.5.tar.gz
+    cd lm_sensors-2.5.5
+    mkpatch/mkpatch.pl . ${S} > ${S}/lm_sensors-patch
+    cd ${S}
+    patch -p1 < lm_sensors-patch   
 
-	echo "Preparing for compilation..."
-	cd ${S}
-	#sometimes we have icky kernel symbols; this seems to get rid of them
-	make mrproper
-	#this is the configuration for the default kernel
-	#annoying but true -- we need to do this for linux-sources as well
-	#so that autoconf.h exists and other packages compile
-	cp ${FILESDIR}/${PV}/config .config
-	cp ${FILESDIR}/${PV}/autoconf.h include/linux/autoconf.h
-	try make include/linux/version.h
+    echo "Preparing for compilation..."
+    cd ${S}
+    #sometimes we have icky kernel symbols; this seems to get rid of them
+    make mrproper
+    #this is the configuration for the default kernel
+    cp ${FILESDIR}/${PV}-r${PR}/config .config
+    cp ${FILESDIR}/${PV}-r${PR}/autoconf.h include/linux/autoconf.h
+    try make include/linux/version.h
 
-	#fix silly permissions in tarball
-	cd ${WORKDIR}
-	chown -R root.root linux
+    #fix silly permissions in tarball
+    cd ${WORKDIR}
+    chown -R root.root linux
 }
 
 src_compile() {
-	#LVM tools are included even in the linux-sources package
-	cd ${S}/extras/LVM/0.9.1_beta2
-	try ./configure --prefix=/ --mandir=/usr/man
-	try make
 
-	cd ${S}
-	try make symlinks
-	try make dep
-	
-	#if we're just linux-sources, then we're done with all compilation stuff
-	if [ "$PN" != "linux" ]
-	then
-		return
-	fi
+    #LVM tools are included even in the linux-sources package
+    cd ${S}/extras/LVM/0.9.1_beta2
+    try ./configure --prefix=/ --mandir=/usr/man
+    try make
 
-	cd ${S}/lm_sensors-2.5.5
-	try make
+    cd ${S}
+    try make symlinks
+    try make dep
 
-	cd ${S}
-	try make bzImage
-	try make modules
+    if [ "$PN" != "linux" ]
+    then
+	return
+    fi
 
-	cd ${S}/extras/alsa-driver-0.5.10a
-	try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
-	try make
+    cd ${S}/lm_sensors-2.5.5
+    try make
+
+    cd ${S}
+    try make bzImage
+    try make modules
+
+    cd ${S}/extras/alsa-driver-0.5.10a
+    try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
+    try make
 }
 
 src_install() {
@@ -101,6 +106,8 @@ src_install() {
 	#clean up object files and original executables to reduce size of linux-sources
 	try make clean
 	dodir /usr/lib
+	cd ${S}/extras/LVM/0.9.1_beta2
+	make install prefix=${D} MAN8DIR=${D}/usr/man/man8 LIBDIR=${D}/lib
 	#no need for a static library in /lib
 	mv ${D}/lib/liblvm*.a ${D}/usr/lib
 
