@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/vyqchat
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/ChangeLog,v 1.3 2004/03/19 12:54:25 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/ChangeLog,v 1.4 2004/03/20 03:34:33 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> vyqchat-0.1.1.ebuild,
+  vyqchat-0.2.3.ebuild:
+  fix bad depend again; tidy
 
   19 Mar 2004; Chuck Short <zul@gentoo.org> vyqchat-0.1.1.ebuild,
   vyqchat-0.2.3.ebuild:

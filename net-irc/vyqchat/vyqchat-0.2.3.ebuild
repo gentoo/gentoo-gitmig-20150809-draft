@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/vyqchat-0.2.3.ebuild,v 1.2 2004/03/19 12:54:25 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/vyqchat-0.2.3.ebuild,v 1.3 2004/03/20 03:34:33 mr_bones_ Exp $
 
 DESCRIPTION="QT based Vypress Chat clone for X."
 HOMEPAGE="http://linux.bydg.org/~yogin/"
@@ -11,10 +11,8 @@ KEYWORDS="~x86"
 
 IUSE="arts"
 
-DEPEND=">=xll-libs/qt-3.0
+DEPEND=">=x11-libs/qt-3.0
 		arts? ( kde-base/arts )"
-RDEPEND="${DEPEND}"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf
