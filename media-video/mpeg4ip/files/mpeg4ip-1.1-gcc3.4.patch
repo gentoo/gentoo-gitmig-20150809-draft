@@ -1,0 +1,197 @@
+diff -ur mpeg4ip-1.1/common/video/mpeg4-2000/idct/idct.hpp mpeg4ip.new/common/video/mpeg4-2000/idct/idct.hpp
+--- mpeg4ip-1.1/common/video/mpeg4-2000/idct/idct.hpp	2003-10-23 01:26:59.000000000 +0200
++++ mpeg4ip.new/common/video/mpeg4-2000/idct/idct.hpp	2004-10-02 12:57:22.000000000 +0200
+@@ -54,7 +54,7 @@
+ 	void readin(const src *psrc, int stride){
+ 		short *p=block;
+ 		for(int row=0; row<IDCT_BLOCK_SIZE; row++, psrc+=stride, p+=IDCT_BLOCK_SIZE)
+-			for(int col=0; col<BLOCK_SIZE; col++)
++			for(int col=0; col<IDCT_BLOCK_SIZE; col++)
+ 				p[col]=psrc[col];
+ 	}
+ 
+@@ -62,7 +62,7 @@
+ 	void writeout(dest *pdst, int stride){
+ 		short *p=block;
+ 		for(int row=0; row<IDCT_BLOCK_SIZE; row++, pdst+=stride, p+=IDCT_BLOCK_SIZE)
+-			for(int col=0; col<BLOCK_SIZE; col++)
++			for(int col=0; col<IDCT_BLOCK_SIZE; col++)
+ 				pdst[col]=p[col];
+ 	}
+ 
+@@ -70,7 +70,7 @@
+ 	void clipWriteout(dest *pdst, int stride){
+ 		short *p=block;
+ 		for(int row=0; row<IDCT_BLOCK_SIZE; row++, pdst+=stride, p+=IDCT_BLOCK_SIZE)
+-			for(int col=0; col<BLOCK_SIZE; col++)
++			for(int col=0; col<IDCT_BLOCK_SIZE; col++)
+ 				pdst[col]=clipping[p[col]];
+ 	};
+ 
+diff -ur mpeg4ip-1.1/server/mp4live/audio_encoder.h mpeg4ip.new/server/mp4live/audio_encoder.h
+--- mpeg4ip-1.1/server/mp4live/audio_encoder.h	2003-03-21 02:09:01.000000000 +0100
++++ mpeg4ip.new/server/mp4live/audio_encoder.h	2004-10-02 13:10:33.000000000 +0200
+@@ -31,17 +31,17 @@
+ public:
+ 	CAudioEncoder() { };
+ 
+-	virtual u_int32_t GetSamplesPerFrame() = NULL;
++	virtual u_int32_t GetSamplesPerFrame() = 0;
+ 
+ 	virtual bool EncodeSamples(
+ 		int16_t* pSamples, 
+ 		u_int32_t numSamplesPerChannel,
+-		u_int8_t numChannels) = NULL;
++		u_int8_t numChannels) = 0;
+ 
+ 	virtual bool GetEncodedFrame(
+ 		u_int8_t** ppBuffer, 
+ 		u_int32_t* pBufferLength,
+-		u_int32_t* pNumSamplesPerChannel) = NULL;
++		u_int32_t* pNumSamplesPerChannel) = 0;
+ 
+ 
+ 	// utility routines
+diff -ur mpeg4ip-1.1/server/mp4live/media_codec.h mpeg4ip.new/server/mp4live/media_codec.h
+--- mpeg4ip-1.1/server/mp4live/media_codec.h	2002-10-30 20:12:37.000000000 +0100
++++ mpeg4ip.new/server/mp4live/media_codec.h	2004-10-02 13:10:14.000000000 +0200
+@@ -33,11 +33,11 @@
+ 		m_pConfig = NULL;
+ 	}
+ 
+-	virtual MediaType GetFrameType(void) = NULL;
++	virtual MediaType GetFrameType(void) = 0;
+ 
+-	virtual bool Init(CLiveConfig* pConfig, bool realTime = true) = NULL;
++	virtual bool Init(CLiveConfig* pConfig, bool realTime = true) = 0;
+ 
+-	virtual void Stop() = NULL;
++	virtual void Stop() = 0;
+ 
+ protected:
+ 	CLiveConfig*	m_pConfig;
+diff -ur mpeg4ip-1.1/server/mp4live/media_flow.h mpeg4ip.new/server/mp4live/media_flow.h
+--- mpeg4ip-1.1/server/mp4live/media_flow.h	2004-01-01 00:00:36.000000000 +0100
++++ mpeg4ip.new/server/mp4live/media_flow.h	2004-10-02 13:09:30.000000000 +0200
+@@ -38,9 +38,9 @@
+ 		m_started = false;
+ 	}
+ 
+-	virtual void Start() = NULL;
++	virtual void Start() = 0;
+ 
+-	virtual void Stop() = NULL; 
++	virtual void Stop() = 0; 
+ 
+ 	void SetConfig(CLiveConfig* pConfig) {
+ 		m_pConfig = pConfig;
+diff -ur mpeg4ip-1.1/server/mp4live/media_node.h mpeg4ip.new/server/mp4live/media_node.h
+--- mpeg4ip-1.1/server/mp4live/media_node.h	2004-02-20 01:34:43.000000000 +0100
++++ mpeg4ip.new/server/mp4live/media_node.h	2004-10-02 13:08:49.000000000 +0200
+@@ -83,7 +83,7 @@
+ 	static const uint32_t MSG_NODE_STOP		= MSG_NODE + 2;
+ 	static const uint32_t MSG_NODE_STOP_THREAD	= MSG_NODE + 3;
+ 
+-	virtual int ThreadMain(void) = NULL;
++	virtual int ThreadMain(void) = 0;
+ 
+ protected:
+ 	SDL_Thread*			m_myThread;
+diff -ur mpeg4ip-1.1/server/mp4live/media_source.h mpeg4ip.new/server/mp4live/media_source.h
+--- mpeg4ip-1.1/server/mp4live/media_source.h	2004-03-15 23:47:01.000000000 +0100
++++ mpeg4ip.new/server/mp4live/media_source.h	2004-10-02 13:09:14.000000000 +0200
+@@ -63,11 +63,11 @@
+ 			NULL, 0, m_myMsgQueueSemaphore);
+ 	}
+ 
+-	virtual bool IsDone() = NULL;
++	virtual bool IsDone() = 0;
+ 
+ 	virtual Duration GetElapsedDuration();
+ 
+-	virtual float GetProgress() = NULL;
++	virtual float GetProgress() = 0;
+ 
+ 	virtual u_int32_t GetNumEncodedVideoFrames() {
+ 		return m_videoEncodedFrames;
+diff -ur mpeg4ip-1.1/server/mp4live/video_encoder.h mpeg4ip.new/server/mp4live/video_encoder.h
+--- mpeg4ip-1.1/server/mp4live/video_encoder.h	2004-04-08 20:07:39.000000000 +0200
++++ mpeg4ip.new/server/mp4live/video_encoder.h	2004-10-02 13:11:47.000000000 +0200
+@@ -31,21 +31,21 @@
+ public:
+ 	CVideoEncoder() { };
+ 
+-	virtual bool Init(CLiveConfig *pConfig, bool realTime = true) = NULL;
++	virtual bool Init(CLiveConfig *pConfig, bool realTime = true) = 0;
+ 
+ 	virtual bool EncodeImage(
+ 		u_int8_t* pY, u_int8_t* pU, u_int8_t* pV,
+ 		u_int32_t yStride, u_int32_t uvStride,
+ 		bool wantKeyFrame,
+ 		Duration elapsedDuration,
+-		Timestamp srcFrameTimestamp) = NULL;
++		Timestamp srcFrameTimestamp) = 0;
+ 
+ 	virtual bool GetEncodedImage(
+ 		u_int8_t** ppBuffer, u_int32_t* pBufferLength,
+-		Timestamp *dts, Timestamp *pts) = NULL;
++		Timestamp *dts, Timestamp *pts) = 0;
+ 
+ 	virtual bool GetReconstructedImage(
+-		u_int8_t* pY, u_int8_t* pU, u_int8_t* pV) = NULL;
++		u_int8_t* pY, u_int8_t* pU, u_int8_t* pV) = 0;
+ 	virtual media_free_f GetMediaFreeFunction(void) { return NULL; };
+ 
+ 	virtual bool CanGetEsConfig (void) { return false; };
+diff -ur mpeg4ip-1.1/server/mp4live/video_util_filter.cpp mpeg4ip.new/server/mp4live/video_util_filter.cpp
+--- mpeg4ip-1.1/server/mp4live/video_util_filter.cpp	2004-01-23 23:21:58.000000000 +0100
++++ mpeg4ip.new/server/mp4live/video_util_filter.cpp	2004-10-02 18:50:10.336818840 +0200
+@@ -83,7 +83,7 @@
+ // error_message("mmx");
+   asm volatile(
+        "leal (%0, %1), %%eax                           \n\t"
+-       "leal (%%eax, %1, 4), %%ebx                     \n\t"
++       "leal (%%eax, %1, 4), %%ecx                     \n\t"
+ 
+        "movq (%0), %%mm0                               \n\t" // L0
+        "movq (%%eax, %1), %%mm1                        \n\t" // L2
+@@ -99,31 +99,31 @@
+        PAVGB(%%mm2, %%mm1)                                   // L2+L4
+        PAVGB(%%mm0, %%mm1)                                   // 2L3 + L2 + L4
+        "movq %%mm1, (%%eax, %1)                        \n\t"
+-       "movq (%%ebx), %%mm1                            \n\t" // L5
++       "movq (%%ecx), %%mm1                            \n\t" // L5
+        PAVGB(%%mm1, %%mm0)                                   // L3+L5
+        PAVGB(%%mm2, %%mm0)                                   // 2L4 + L3 + L5
+        "movq %%mm0, (%%eax, %1, 2)                     \n\t"
+-       "movq (%%ebx, %1), %%mm0                        \n\t" // L6
++       "movq (%%ecx, %1), %%mm0                        \n\t" // L6
+        PAVGB(%%mm0, %%mm2)                                   // L4+L6
+        PAVGB(%%mm1, %%mm2)                                   // 2L5 + L4 + L6
+        "movq %%mm2, (%0, %1, 4)                        \n\t"
+-       "movq (%%ebx, %1, 2), %%mm2                     \n\t" // L7
++       "movq (%%ecx, %1, 2), %%mm2                     \n\t" // L7
+ 
+ 
+       PAVGB(%%mm2, %%mm1)                                   // L5+L7
+        PAVGB(%%mm0, %%mm1)                                   // 2L6 + L5 + L7
+-       "movq %%mm1, (%%ebx)                            \n\t"
++       "movq %%mm1, (%%ecx)                            \n\t"
+        "movq (%0, %1, 8), %%mm1                        \n\t" // L8
+        PAVGB(%%mm1, %%mm0)                                   // L6+L8
+        PAVGB(%%mm2, %%mm0)                                   // 2L7 + L6 + L8
+-       "movq %%mm0, (%%ebx, %1)                        \n\t"
+-       "movq (%%ebx, %1, 4), %%mm0                     \n\t" // L9
++       "movq %%mm0, (%%ecx, %1)                        \n\t"
++       "movq (%%ecx, %1, 4), %%mm0                     \n\t" // L9
+        PAVGB(%%mm0, %%mm2)                                   // L7+L9
+        PAVGB(%%mm1, %%mm2)                                   // 2L8 + L7 + L9
+-       "movq %%mm2, (%%ebx, %1, 2)                     \n\t"
++       "movq %%mm2, (%%ecx, %1, 2)                     \n\t"
+ 
+        : : "r" (src), "r" (stride)
+-       : "%eax", "%ebx"
++       : "%eax", "%ecx"
+   );
+   emms();
+ #else

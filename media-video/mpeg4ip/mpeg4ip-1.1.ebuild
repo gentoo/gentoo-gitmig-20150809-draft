@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.7 2004/07/26 04:04:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.8 2004/11/06 00:16:23 tester Exp $
+
+inherit eutils
 
 DESCRIPTION="MPEG 4 implementation library"
 
@@ -29,7 +31,7 @@ RDEPEND="sys-devel/libtool
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )"
 
-DEPENDS="${RDEPEND}
+DEPEND="${RDEPEND}
 	x86? ( mmx? ( >=dev-lang/nasm-0.98.19 ) )"
 
 src_unpack() {
@@ -39,6 +41,10 @@ src_unpack() {
 
 	cd ${S}/lib/SDLAudio
 	sed -i -e 's:-laudio:-L/usr/X11R6/lib -laudio:' configure
+
+	cd ${S}
+	#epatch ${FILESDIR}/mpeg4ip-1.1-gcc3.4.patch
+	epatch ${FILESDIR}/mpeg4ip-1.1-gentoo-fixes.patch
 }
 
 src_compile() {
