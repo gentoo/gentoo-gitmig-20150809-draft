@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui2/dc-gui2-0.70.ebuild,v 1.1 2003/02/17 18:44:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui2/dc-gui2-0.70.ebuild,v 1.2 2003/02/28 06:52:14 vapier Exp $
 
 S=${WORKDIR}/${P/-/_}
 DESCRIPTION="GUI for dctc (GTK2 version)"
@@ -14,6 +14,7 @@ IUSE="nls pic"
 
 DEPEND="=dev-libs/glib-2*
 	=x11-libs/gtk+-2*
+	=gnome-base/libgnomeui-2*
 	>=sys-libs/db-3.2*
 	>=net-p2p/dctc-0.83.8"
 RDEPEND="nls? ( sys-devel/gettext )"
