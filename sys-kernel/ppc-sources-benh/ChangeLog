@@ -1,0 +1,12 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.1 2003/02/04 21:53:33 gerk Exp $
+
+*ppc-sources-benh-2.4.20-r5 (04 Jan 2003)
+
+  04 Jan 2003; Mark Guertin <gerk@gentoo.org> ppc-sources-benh-2.4.20-r5.ebuild:
+  Initial benh tree build.  This is built with the diff's benh is providing
+  on kernel.org (see HOMEPAGE for details).  It is a diff against the kernel.org
+  trees, and the -r5 is set to line up with benh's release, this one being
+  2.4.20-ben5
+
