@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r6.ebuild,v 1.6 2004/10/26 14:34:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r6.ebuild,v 1.7 2004/11/29 22:04:49 vapier Exp $
 
-inherit eutils gcc flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic
 
 MY_P=nc${PV}
 DESCRIPTION="the network swiss army knife"
@@ -37,7 +37,7 @@ src_compile() {
 	use static && export STATIC="-static"
 	use crypt && XFLAGS="${XFLAGS} -DAESCRYPT" && XLIBS="${XLIBS} -lmix"
 	use GAPING_SECURITY_HOLE && XFLAGS="${XFLAGS} -DGAPING_SECURITY_HOLE"
-	CC="$(gcc-getCC) ${CFLAGS}" make -e nc || die
+	CC="$(tc-getCC) ${CFLAGS}" make -e nc || die
 }
 
 src_install() {
