@@ -1,9 +1,9 @@
-diff -ur /home/mkennedy/tmp/AspectJForEmacs-1.1b2.original/ /home/mkennedy/tmp/AspectJForEmacs-1.1b2/
-Only in /home/mkennedy/tmp/AspectJForEmacs-1.1b2/ajdee: ajdee.elc
-Only in /home/mkennedy/tmp/AspectJForEmacs-1.1b2/ajdee: semantic.cache
-diff -ur /home/mkennedy/tmp/AspectJForEmacs-1.1b2.original/aspectj-mode/aspectj-mode.el /home/mkennedy/tmp/AspectJForEmacs-1.1b2/aspectj-mode/aspectj-mode.el
---- /home/mkennedy/tmp/AspectJForEmacs-1.1b2.original/aspectj-mode/aspectj-mode.el	2002-12-18 15:31:02.000000000 -0600
-+++ /home/mkennedy/tmp/AspectJForEmacs-1.1b2/aspectj-mode/aspectj-mode.el	2004-04-19 23:13:40.847760384 -0500
+diff -ur AspectJForEmacs-1.1b2.original/ AspectJForEmacs-1.1b2/
+Only in AspectJForEmacs-1.1b2/ajdee: ajdee.elc
+Only in AspectJForEmacs-1.1b2/ajdee: semantic.cache
+diff -ur AspectJForEmacs-1.1b2.original/aspectj-mode/aspectj-mode.el AspectJForEmacs-1.1b2/aspectj-mode/aspectj-mode.el
+--- AspectJForEmacs-1.1b2.original/aspectj-mode/aspectj-mode.el	2002-12-18 15:31:02.000000000 -0600
++++ AspectJForEmacs-1.1b2/aspectj-mode/aspectj-mode.el	2004-04-19 23:13:40.847760384 -0500
 @@ -2135,6 +2135,30 @@
  ;;;
  ;;; Declarations data cache management.
@@ -67,8 +67,8 @@ diff -ur /home/mkennedy/tmp/AspectJForEmacs-1.1b2.original/aspectj-mode/aspectj-
  ;;; For what we're doing with this, maybe we could just check the timestamp,
  ;;; but this is more inclusive if this check is done when aj-mode is on,
  ;;; but the declarations file isn't loaded *yet*.
-Only in /home/mkennedy/tmp/AspectJForEmacs-1.1b2/aspectj-mode: aspectj-mode.elc
-Only in /home/mkennedy/tmp/AspectJForEmacs-1.1b2/aspectj-mode: aspectj-mode.el~
-Only in /home/mkennedy/tmp/AspectJForEmacs-1.1b2/aspectj-mode: semantic.cache
+Only in AspectJForEmacs-1.1b2/aspectj-mode: aspectj-mode.elc
+Only in AspectJForEmacs-1.1b2/aspectj-mode: aspectj-mode.el~
+Only in AspectJForEmacs-1.1b2/aspectj-mode: semantic.cache
 
 Diff finished.  Mon Apr 19 23:14:39 2004
