@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.70 2005/01/30 22:09:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.71 2005/01/31 15:21:34 gustavoz Exp $
+
+  31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> automake-1.4_p6.ebuild,
+  automake-1.5.ebuild, automake-1.6.3.ebuild, automake-1.7.9-r1.ebuild,
+  automake-1.8.5-r3.ebuild, automake-1.9.4.ebuild:
+  Stable on sparc
 
   31 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> automake-1.4_p6.ebuild,
   automake-1.5.ebuild, automake-1.6.3.ebuild, automake-1.7.9-r1.ebuild,
