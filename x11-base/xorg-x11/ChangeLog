@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.55 2004/06/14 19:57:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.56 2004/06/14 22:27:40 tgall Exp $
+
+  14 Jun 2004; Tom Gall <tgall@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
+  ~ppc64 initial x support #53763
 
   14 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.0-r1.ebuild:
