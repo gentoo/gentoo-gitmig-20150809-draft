@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Log-Log4perl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.1 2005/01/03 17:36:25 rizzo Exp $
+
+*Log-Log4perl-0.50 (03 Jan 2005)
+
+  03 Jan 2005; Don Seiler <rizzo@gentoo.org> +metadata.xml,
+  +Log-Log4perl-0.50.ebuild:
+  Initial add.  Thought this was already in portage
+
