@@ -1,0 +1,11 @@
+# ChangeLog for x11-themes/gdeskcal-skins
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdeskcal-skins/ChangeLog,v 1.1 2005/01/11 10:44:59 pclouds Exp $
+
+*gdeskcal-skins-0.0.1 (11 Jan 2005)
+
+  11 Jan 2005; <pclouds@gentoo.org> +metadata.xml,
+  +gdeskcal-skins-0.0.1.ebuild:
+  Initial ebuild for gdeskcal-skins, contributed by Steven Mertens
+  <mertens.steven@gmail.com> #76692
+
