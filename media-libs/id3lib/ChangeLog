@@ -1,7 +1,16 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.3 2002/06/07 03:25:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.4 2002/08/24 06:15:11 mkennedy Exp $
 
+*id3lib-3.8.0 (23 Aug 2002)
+
+  23 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  id3lib-3.8.0.ebuild, ChangeLog, files/digest-id3lib-3.8.0 :
+
+  Version bump. Removed azarah's patch for _pre2 (doesn't seem to be
+  necessary for gcc3.2), added the following for 3.8.0 from Michael Best
+  <gentoo@pendragon.org> for gcc3.2 compatibility (Bug #6840)
+	
 *id3lib-3.8.0_pre2-r3 (6 Jun 2002)
 
   6 Jun 2002; Brandon Low <lostlogic@lostlogicx.com> id3lib-3.8.0_pre2-r3.ebuild :
