@@ -48,34 +48,6 @@
             -2147483646
 	</load-on-startup>
     </servlet>
-
-<!-- uncoomet the following to use Cocoon
-    <servlet>
-	<servlet-name>
-	    org.apache.cocoon.Cocoon
-	</servlet-name>
-	<servlet-class>
-	    org.apache.cocoon.Cocoon
-	</servlet-class>
-	<init-param>
-	    <param-name>
-		properties
-	    </param-name>
-	    <param-value>
-		cocoon.properties
-	    </param-value>
-	</init-param>
-    </servlet>
-    <servlet-mapping>
-	<servlet-name>
-	    org.apache.cocoon.Cocoon
-	</servlet-name>
-	<url-pattern>
-	    *.xml
-	</url-pattern>
-    </servlet-mapping>
-    
--->
     <servlet-mapping>
         <servlet-name>
             invoker

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-1.8.ebuild,v 1.1 2000/11/26 22:48:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-1.8.ebuild,v 1.2 2001/01/05 07:58:48 achim Exp $
 
 A=Cocoon-${PV}.tar.gz
 S=${WORKDIR}/${P}
@@ -18,7 +18,7 @@ src_unpack() {
   unpack ${A}
 }
 
-src_compile() {                           
+src_compile() {
   CLASSPATH=/opt/java/src.jar:/opt/java/lib/tools.jar
   CLASSPATH=${CLASSPATH}:/usr/lib/java/jndi.jar
   CLASSPATH=${CLASSPATH}:/usr/lib/java/xt.jar:/usr/lib/java/sax.jar
@@ -31,21 +31,21 @@ src_compile() {
 
 src_install() {                               
   cd ${S}
-  insinto /usr/lib/java
+  insinto /opt/tomcat/lib/cocoon
   for i in xerces_1_2 xalan_1_2_D02 fop_0_13_0 \
-	   servlet_2_2 stylebook-1.0-b2 turbine-pool
+	   servlet_2_2 turbine-pool
   do
      doins  lib/$i.jar
   done
   doins build/cocoon.jar
-  insinto /opt/tomcat/webapps/ROOT
-  doins ${O}/files/cocoon.properties
+  insinto /opt/tomcat/webapps/cocoon/WEB-INF
+  cp -a samples ${D}/opt/tomcat/webapps/cocoon
+  doins ${FILESDIR}/cocoon.properties
+  doins ${FILESDIR}/web.xml
   dodoc README LICENSE
   dodir /usr/doc/${PF}/html
   cp -a docs/* ${D}/usr/doc/${PF}/html
   find ${D}/usr/doc/${PF}/html -type f -exec gzip -9 {} \;
 }
-
-
 
 

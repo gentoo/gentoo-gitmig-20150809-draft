@@ -1,6 +1,6 @@
 #!/bin/sh
 #RCUPDATE:3 4:75:
-# $Id: jakarta,v 1.3 2000/11/02 08:31:53 achim Exp $
+# $Id: jakarta,v 1.4 2001/01/05 07:58:48 achim Exp $
 
 . /etc/rc.d/config/functions
 
@@ -47,26 +47,22 @@ oldCP=$CLASSPATH
 
 CLASSPATH=.
 
+# Add support for Cocoon if available
+
+if [ -f /opt/tomcat/lib/cocoon/cocoon.jar ]; then
+
+  for i in ${TOMCAT_HOME}/lib/cocoon/*.jar
+  do
+    CLASSPATH=${i}:${CLASSPATH}
+  done
+    CLASSPATH=${CLASSPATH}:/usr/lib/java/jndi.jar
+fi
 
 for i in ${TOMCAT_HOME}/lib/* ; do
   CLASSPATH=${CLASSPATH}:$i
 done
 
-if [ -f /usr/lib/java/tomcat.jar ]; then
-    CLASSPATH=/usr/lib/java/tomcat.jar:${CLASSPATH}
-fi
-
-# Add support for Cocoon if available
-
-if [ -f /usr/lib/java/cocoon.jar ]; then
-    CLASSPATH=/usr/lib/java/cocoon.jar:${CLASSPATH}
-    CLASSPATH=/usr/lib/java/fop_0_12_1.jar:${CLASSPATH}
-    CLASSPATH=/usr/lib/java/xalan_1_0_1.jar:${CLASSPATH}
-    CLASSPATH=/usr/lib/java/xerces_1_0_3.jar:${CLASSPATH}
-    CLASSPATH=${CLASSPATH}:/usr/lib/java/jndi.jar
-fi
-
-CLASSPATH=${CLASSPATH}:/opt/java/src.jar:/opt/java/lib
+CLASSPATH=${CLASSPATH}:/opt/java/src.jar:/opt/java/lib/tools.jar
 
 export CLASSPATH
 

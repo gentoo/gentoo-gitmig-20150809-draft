@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r1.ebuild,v 1.5 2001/01/05 03:21:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r1.ebuild,v 1.6 2001/01/05 07:58:48 achim Exp $
 
 P=jakarta-3.1
 A="jakarta-tomcat.tar.gz jakarta-ant.tar.gz"
@@ -37,10 +37,9 @@ src_compile() {
   rm -rf org
 }
 
-src_install() {                               
-  dodir /opt/jakarta
+src_install() {
   cp -a ${S}/build/tomcat ${D}/opt
-  insinto /usr/lib/java
+  insinto /opt/tomcat/lib
   doins ${S}/build/tomcat/classes/tomcat.jar
   rm -rf ${D}/opt/tomcat/classes
   insinto /usr/lib/apache
@@ -50,8 +49,8 @@ src_install() {
   insinto /etc/rc.d/init.d
   insopts -m755
   doins ${O}/files/jakarta
-  insinto /opt/tomcat/conf
-  doins ${O}/files/web.xml
+  #insinto /opt/tomcat/conf
+  #doins ${O}/files/web.xml
 
   cd ${S}/jakarta-tomcat
   dodoc BUGS LICENSE README RELEASE-* TODO etc/*.txt src/doc/faq src/doc/readme
@@ -69,13 +68,6 @@ src_install() {
 
 pkg_config() {
 
-   source ${ROOT}/etc/rc.d/config/functions
-   einfo "Activating mod_jserv in httpd.conf..."
-   cp ${ROOT}/etc/httpd/httpd.conf ${ROOT}/etc/httpd/httpd.conf.orig
-   sed -e "s:^#LoadModule jserv_module:LoadModule jserv_module:" \
-       -e "s:^#AddModule mod_jserv\.c:AddModule mod_jserv\.c:" \
-       -e "s:^#Include /etc/httpd/tomcat\.conf:Include /etc/httpd/tomcat\.conf:" \
-	${ROOT}/etc/httpd/httpd.conf.orig >  ${ROOT}/etc/httpd/httpd.conf
    einfo "Activating Servlet Engine..."
    ${ROOT}/usr/sbin/rc-update add jakarta
 }
