@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.106 2004/11/22 21:45:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.107 2004/11/24 11:35:00 eradicator Exp $
+
+*alsa-driver-1.0.7-r1 (24 Nov 2004)
+
+  24 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/alsa-driver-1.0.7-ioctl32.patch-r1, +alsa-driver-1.0.7-r1.ebuild:
+  Updated ioctl32 patch to one provided by upstream.
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-driver-1.0.7.ebuild:
