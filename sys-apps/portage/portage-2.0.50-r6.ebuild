@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r6.ebuild,v 1.4 2004/05/20 16:29:53 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r6.ebuild,v 1.5 2004/05/21 17:50:14 kugelfang Exp $
 
 IUSE="build multilib"
 
@@ -31,6 +31,24 @@ python_version() {
 	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 }
 
+check_multilib() {
+	use !multilib && return
+	echo "main() {}" > ./check-multilib.c
+	/usr/bin/gcc -m32 -o ./check-multilib ./check-multilib.c > /dev/null 2>&1
+	if [ "$?" == 0 ]; then
+		einfo "Found valid multilib environment."
+		einfo "Building with multilib support."
+		export MULTILIB="1"
+	else
+		ewarn "No valid multilib environment found!"
+		ewarn "Building without multilib support. If"
+		ewarn "you want to have multilib support,"
+		ewarn "emerge gcc with \"multilib\" in your"
+		ewarn "useflags."
+		sleep 20
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -43,9 +61,9 @@ src_compile() {
 		"x86")
 		make CFLAGS="-march=i386 -O1 -pipe" || die
 			;;
-		"amd64") 
-			use multilib && einfo "Building with multilib support on amd64"
-			make CFLAGS="-O2 -pipe" HAVE_64BIT_ARCH="`use multilib`" || die
+		"amd64")
+		check_multilib
+		make CFLAGS="-O2 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
 			;;
 		*)
 		make || die
@@ -120,7 +138,7 @@ src_install() {
 	cd ${S}/src/sandbox-1.1
 	make clean
 	make DESTDIR=${D} \
-		HAVE_64BIT_ARCH="`use amd64 && use multilib`" \
+		HAVE_64BIT_ARCH="${MULTILIB}" \
 		install || die "Failed to compile sandbox"
 
 	#symlinks
