@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/xplore
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xnc/ChangeLog,v 1.1 2003/01/08 21:33:21 bass Exp $
+
+*xnx-5.0.0 (8 Jan 2003)
+
+  8 Jan 2003; J.ALberto Suarez L. <bass@gentoo.org> xnc-5.0.0.ebuild :
+  First relase.
