@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.32 2005/02/28 21:58:39 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.33 2005/03/11 12:33:14 sekretarz Exp $
+
+  11 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org> :
+  Added to ~amd64, bug #84522
 
   28 Feb 2005; Christian Zoffoli <xmerlin@gentoo.org> -heartbeat-1.2.2.ebuild:
   removed some old files
