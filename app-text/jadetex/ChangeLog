@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.10 2003/02/12 05:31:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.11 2003/02/25 16:18:27 gmsoft Exp $
+
+  25 Feb 2003; Guy Martin <gmsoft@gentoo.org> jadetex-3.12.ebuild :
+  Added hppa to keywords.
 
   07 Feb 2003; Matthew Turk <satai@gentoo.org> jadetex-3.12.ebuild :
   Added some more addwrite lines in order to generate font metrics.
