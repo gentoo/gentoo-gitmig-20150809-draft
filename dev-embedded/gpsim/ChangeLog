@@ -1,0 +1,12 @@
+# ChangeLog for dev-util/gpsim
+# Copyright 2003 Alex Holden <alex@alexholden.net>; Distributed under the GPL
+# $Header:
+
+*gpsim-0.20.14 (08 Feb 2003)
+
+  08 Feb 2003; Alex Holden <alex@alexholden.net> gpsim-0.20.14.ebuild files/digest-gpsim-0.20.14 :
+  
+  gpsim is a full-featured software simulator for Microchip PIC
+  microcontrollers distributed under the GNU General Public License.
+  See the gnupic web page (http://www.gnupic.org/) for other GNU PIC tools such
+  as gputils, which includes gpasm, a gpsim compatible assembler.
