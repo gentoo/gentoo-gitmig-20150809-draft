@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xindice
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.1 2003/04/11 20:10:21 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.2 2003/12/08 04:51:30 mr_bones_ Exp $
+
+  07 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> xindice-1.0.ebuild:
+  chown x.y -> chown x:y (bug 35127)
 
 *xindice-1.0 (11 Apr 2003)	
 
