@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/stellarium
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/ChangeLog,v 1.7 2004/07/28 23:42:26 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/ChangeLog,v 1.8 2004/07/29 00:00:23 mr_bones_ Exp $
+
+  28 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  stellarium-0.6.0.ebuild:
+  tidy
 
   28 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
   stellarium-0.6.0.ebuild:
