@@ -1,8 +1,11 @@
 # ChangeLog for games-arcade/crack-attack
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.3 2003/10/06 03:43:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.4 2003/10/14 00:26:04 vapier Exp $
 
 *crack-attack-1.1.9 (05 Oct 2003)
+
+  13 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add filter-flags to remove march=pentium3 #30483.
 
   05 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org>
   crack-attack-1.1.9.ebuild:
