@@ -1,0 +1,18 @@
+--- x11.c.orig	2005-01-01 07:56:33.135756896 +0930
++++ x11.c	2005-01-01 07:57:16.810117384 +0930
+@@ -64,15 +64,6 @@
+ 
+     XFree(buf); buf = 0;
+ 
+-    /* get workarea */
+-    if (XGetWindowProperty(display, root, ATOM(_NET_WORKAREA), desktop*4, 4,
+-          False, XA_CARDINAL, &type, &format, &nitems, &bytes, &buf) ==
+-        Success && type == XA_CARDINAL) {
+-      workarea[0] = ((long *) buf)[0];
+-      workarea[1] = ((long *) buf)[1];
+-      workarea[2] = ((long *) buf)[2];
+-      workarea[3] = ((long *) buf)[3];
+-    }
+   }
+ 
+   if (buf) { XFree(buf); buf = 0; }

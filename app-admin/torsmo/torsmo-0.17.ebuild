@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17.ebuild,v 1.10 2004/10/19 22:00:17 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17.ebuild,v 1.11 2004/12/31 22:38:46 dragonheart Exp $
 
 inherit eutils
 

@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/torsmo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.19 2004/12/27 23:56:32 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.20 2004/12/31 22:38:46 dragonheart Exp $
+
+*torsmo-0.18-r1 (01 Jan 2005)
+
+  01 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/torsmo-0.18.xwin.patch, +torsmo-0.18-r1.ebuild, torsmo-0.18.ebuild:
+  revision bump to fix endless loop for AMD64 users. Bug #74036 and
+  http://sourceforge.net/tracker/index.php?func=detail&aid=1087205&group_id=1085
+  94&atid=650929 refer. Thanks to Florian Huber <florian.huber@mnet-online.de>
+  for pointing out the solution and floam@sh.nu for testing it.
 
   28 Dec 2004; Daniel Black <dragonheart@gentoo.org> torsmo-0.18.ebuild:
   X libraries fix as per bug #75828. Fix by Emil Beinroth <emilbeinroth@gmx.net>.
