@@ -1,24 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 76b1482dfbccaced9d8fc541bdd21184 ck-sources-2.4.28-r1.ebuild 1089
-MD5 9d00f6ea2ca13444321ec9bccce65bab ck-sources-2.6.10-r2.ebuild 782
-MD5 7316f7df8d3230761084b187b20bc565 ChangeLog 17215
+MD5 072e410d511d4a6f5e04862311b8b275 ChangeLog 17599
+MD5 3c99b06b9782c24519b9da98b9795ce2 ck-sources-2.4.28-r2.ebuild 1152
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
-MD5 8c35751caf824a9dacb02e80d6189b2e files/ck-sources-2.4.28.CAN-2004-1137.patch 1764
-MD5 cd90102d73b2dbed58a9263901319844 files/ck-sources-2.6.10-disable-iopriowr.patch 912
+MD5 d81afad5097d8551a96f491772e40a3b ck-sources-2.6.10-r2.ebuild 842
+MD5 3f3b0560e2253b45f6178e8396a6c4ec files/ck-sources-2.6.10-77094.patch 3667
 MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/ck-sources-2.4.28.CAN-2004-1016.patch 2835
-MD5 d1ccc2047be533c992f67270a150a210 files/ck-sources-2.4.28.cmdlineLeak.patch 388
-MD5 c27699e9d62f7d46213bd51f87636163 files/ck-sources-2.4.28.vma.patch 8143
-MD5 55eb417b53b98efb6e89557bbf35e51b files/digest-ck-sources-2.4.28-r1 214
-MD5 79a76d3cb0029b85d4303b0019e788a8 files/ck-sources-2.4.28.compileFix.patch 2070
-MD5 b9a94233e1457787352e5f85e3e3582d files/ck-sources-2.4.28.binfmt_a.out.patch 2009
-MD5 757ee1239c3f14645ccea3640d551e11 files/ck-sources-2.4.28.CAN-2004-1056.patch 11249
 MD5 45c159d1ec53d40f6d602733313523b5 files/digest-ck-sources-2.6.10-r2 131
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB3u41iJcSIUGNthERAvOXAKCDT5w3yBuGJ2enOcrzdqbRH+tIkwCeIkaA
-XkkFwDjeIX/VSmdzlqp7Xyw=
-=Ccap
------END PGP SIGNATURE-----
+MD5 c27699e9d62f7d46213bd51f87636163 files/ck-sources-2.4.28.vma.patch 8143
+MD5 79a76d3cb0029b85d4303b0019e788a8 files/ck-sources-2.4.28.compileFix.patch 2070
+MD5 1d78b90e495e432432e095ee47bbc2fc files/ck-sources-2.4.28.77094.patch 452
+MD5 6cf860a301930c8cac126ab0c4d859d4 files/ck-sources-2.4.28.brk-locked.patch 8202
+MD5 cd0a7533c43364e377348613c6d76bb7 files/ck-sources-2.6.10-brk-locked.patch 9736
+MD5 cd90102d73b2dbed58a9263901319844 files/ck-sources-2.6.10-disable-iopriowr.patch 912
+MD5 ea61cd84e266e1ddfa963d27e9c1ba99 files/digest-ck-sources-2.4.28-r2 210
+MD5 757ee1239c3f14645ccea3640d551e11 files/ck-sources-2.4.28.CAN-2004-1056.patch 11249
+MD5 d1ccc2047be533c992f67270a150a210 files/ck-sources-2.4.28.cmdlineLeak.patch 388
+MD5 8c35751caf824a9dacb02e80d6189b2e files/ck-sources-2.4.28.CAN-2004-1137.patch 1764
+MD5 b9a94233e1457787352e5f85e3e3582d files/ck-sources-2.4.28.binfmt_a.out.patch 2009
