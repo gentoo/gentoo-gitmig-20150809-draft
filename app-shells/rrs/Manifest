@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6b098e8660f02dff01aafa17c5d89206 ChangeLog 990
+MD5 0518f549505fa41a808cdc788987f54f rrs-1.70.ebuild 658
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 MD5 7d169e54942816626dab957f5f48eaa7 rrs-1.50.ebuild 774
+MD5 d43cd1499ed49431b2016f03a1cc88b2 ChangeLog 1077
 MD5 27150928654f66d7fe4a5d6cca4e63eb rrs-1.55.ebuild 653
-MD5 704c557c6aa7a11bfaa2d97e1a811bda rrs-1.70.ebuild 654
 MD5 55729988ea19ac7dfc4a35622cd0d43b files/1.50-include-string.h.patch 320
 MD5 3faef8b43111fd788fee0ab7bef0fe7c files/digest-rrs-1.50 59
 MD5 5ab6a5d89cea4568fa1be9233f1a708b files/digest-rrs-1.55 59
 MD5 38c94cec421cee153c06951ee94ded0c files/digest-rrs-1.70 59
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA4OjTHTu7gpaalycRAj8XAJ4s+Prs/kTqT7m1koiiO0hlGZvWqACfRr7h
-Z5QdYeN+y+C3UdvaX7M8AC8=
-=48GT
+iD8DBQFA+hNqmdTrptrqvGERAkEWAJkB4Ti7aiomGqqPiNi2deSXlj6ctACgi8Mn
+DWwhYqFNYtU1tmb14n/6XV0=
+=34gm
 -----END PGP SIGNATURE-----
