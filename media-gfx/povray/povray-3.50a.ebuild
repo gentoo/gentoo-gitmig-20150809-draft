@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.2 2002/08/05 03:08:54 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.3 2002/08/05 03:22:01 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.povray.org/"
 
 SLOT="0"
 LICENSE="povlegal-3.50a"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86"
 
 
 DEPEND="media-libs/libpng
