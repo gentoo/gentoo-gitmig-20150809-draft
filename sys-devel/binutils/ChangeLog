@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.89 2003/11/08 19:24:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.90 2003/11/09 01:44:45 weeve Exp $
+
+  08 Nov 2003; Jason Wever <weeve@gentoo.org> binutils-2.14.90.0.7-r2.ebuild:
+  Masked on sparc until ld issue is fixed.
 
 *binutils-2.14.90.0.7-r2 (08 Nov 2003)
 
