@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.106 2004/07/27 02:22:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.107 2004/07/28 03:35:55 agriffis Exp $
+
+  27 Jul 2004; <agriffis@gentoo.org> gtk+-1.2.10-r11.ebuild,
+  gtk+-2.4.1.ebuild:
+  stable on alpha (1.2.10-r11) and ia64 (1.2.10-r11, 2.4.1)
 
   26 Jul 2004; Tom Gall <tgall@gentoo.org> gtk+-1.2.10-r11.ebuild:
   stable on ppc64
