@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.74.ebuild,v 1.1 2004/08/22 19:25:29 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.74.ebuild,v 1.2 2004/09/03 15:28:15 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="nls"
 
 DEPEND=">=dev-libs/libticables-3.8.6
