@@ -1,0 +1,13 @@
+--- ruby/lib/soap/wsdlDriver.rb	2004/12/21 15:08:54	1.5.2.4
++++ ruby/lib/soap/wsdlDriver.rb	2005/01/23 03:42:36	1.5.2.5
+@@ -425,6 +425,10 @@     def add_method_interface(op_info)
+ 	add_document_method_interface(name)
+       when :rpc
+ 	parts_names = op_info.bodyparts.collect { |part| part.name }
++        orgname = op_info.op_name.name
++        if orgname != name and orgname.capitalize == name.capitalize
++          add_rpc_method_interface(orgname, parts_names)
++        end
+ 	add_rpc_method_interface(name, parts_names)
+       else
+ 	raise RuntimeError.new("Unknown style: #{op_info.style}")
