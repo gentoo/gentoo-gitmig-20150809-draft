@@ -1,0 +1,38 @@
+# ChangeLog for app-accessibility/at-poke
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-poke/ChangeLog,v 1.1 2004/03/18 00:06:56 leonardop Exp $
+
+  17 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> at-poke-0.2.1.ebuild:
+  stable on sparc
+
+*at-poke-0.2.2 (17 Mar 2004)
+
+  17 Mar 2004; L. Boshell <leonardop@gentoo.org> at-poke-0.2.2.ebuild:
+  New release.
+
+  17 Mar 2004; L. Boshell <leonardop@gentoo.org> at-poke-0.2.1.ebuild:
+  Marked stable on x86.
+
+  13 Mar 2004; foser <foser@gentoo.org> metadata.xml :
+  Move maintainership to gnome-accessibility herd
+
+  06 Jul 2003; Alastair Tse <liquidx@gentoo.org> at-poke-0.2.1.ebuild:
+  fixed at-spi dep thanks to ska-fan
+
+*at-poke-0.2.1 (05 Jul 2003)
+
+  05 Jul 2003; Alastair Tse <liquidx@gentoo.org> at-poke-0.2.1.ebuild:
+  version bump, gnome2.eclass-ified
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+
+*at-poke-0.1.0-r1 (24 Jul 2002)
+  24 Jul 2002; Spider <spider@gentoo.org> at-poke-0.1.0-r1.ebuild :
+  using gnome2.eclass
+  QA with repoman passed
+  mirror:// support
+
+*at-poke-0.1.0 (28 May 2002)
+  28 May 2002; Spider <spider@gentoo.org>; ChangeLog at-poke-0.1.0.ebuild:
+ initial introduction of at-poke from gnome2
