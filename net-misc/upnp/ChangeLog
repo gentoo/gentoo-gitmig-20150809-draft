@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/upnp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/ChangeLog,v 1.8 2004/06/25 00:17:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/ChangeLog,v 1.9 2004/11/06 04:26:44 lv Exp $
+
+  05 Nov 2004; Travis Tilley <lv@gentoo.org> upnp-1.0.4-r1.ebuild:
+  added ~amd64 keyword
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> upnp-1.0.4-r1.ebuild:
   Add inherit eutils
