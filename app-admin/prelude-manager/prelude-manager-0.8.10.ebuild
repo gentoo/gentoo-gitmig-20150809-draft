@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.8.10.ebuild,v 1.7 2004/06/25 19:29:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.8.10.ebuild,v 1.8 2004/08/04 22:14:49 squinky86 Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc"
 IUSE="ssl doc mysql postgres debug"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	!dev-libs/libprelude-cvs
 	!app-admin/prelude-manager-cvs
 	dev-libs/libprelude
@@ -21,6 +21,15 @@ DEPEND="virtual/libc
 	doc? ( dev-util/gtk-doc )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e 's:serber:server:g' prelude-manager.conf*
+}
 
 src_compile() {
 	local myconf
