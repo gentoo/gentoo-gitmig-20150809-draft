@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.3.ebuild,v 1.7 2004/03/19 07:56:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.3.ebuild,v 1.8 2004/06/03 23:54:18 vapier Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="cross-platform multimedia library"
-SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 HOMEPAGE="http://alleg.sourceforge.net/"
+SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 
 LICENSE="Allegro"
 SLOT="0"
@@ -53,9 +53,9 @@ src_compile() {
 	cp makefile{,.orig}
 	sed -e "/CFLAGS =.*/s:$: ${CFLAGS}:" \
 		makefile.orig > makefile
-	make || die	# emake fails
+	emake -j1 || die	# parallel fails
 
-	if [ `use tetex` ] ; then
+	if use tetex ; then
 		addwrite /var/lib/texmf
 		addwrite /usr/share/texmf
 		addwrite /var/cache/fonts
@@ -69,7 +69,7 @@ src_install() {
 
 	# Different format versions of the Allegro documentation
 	dodoc AUTHORS CHANGES THANKS readme.txt todo.txt
-	[ `use tetex` ] && dodoc docs/allegro.{dvi,ps}
+	use tetex && dodoc docs/allegro.{dvi,ps}
 	dohtml docs/html/*
 	docinto txt ; dodoc docs/txt/*.txt
 	docinto rtf ; dodoc docs/rtf/*.rtf
