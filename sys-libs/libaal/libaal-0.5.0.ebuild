@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-0.4.15.ebuild,v 1.2 2004/01/11 09:27:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-0.5.0.ebuild,v 1.1 2004/02/06 14:12:24 vapier Exp $
 
 DESCRIPTION="libaal library required by reiser4progs"
 HOMEPAGE="http://www.namesys.com/v4/v4.html"
@@ -13,7 +13,6 @@ KEYWORDS="x86"
 DEPEND=""
 
 src_compile() {
-	./prepare || die "prepare failed"
 	econf --libdir=/lib || die "configure failed"
 	emake || die "make failed"
 }
