@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 fe90002053a5527086ba5d6de427090b eggdrop-1.6.15.ebuild 1800
 MD5 96ac1b9f4886b3f88ab93d2da9b5893b eggdrop-1.6.15-r1.ebuild 2272
-MD5 c6cb4d70ca5e7f0b4eb51c7a0c3f5787 eggdrop-1.6.17.ebuild 2185
-MD5 eef7c98668ddd0e6fcdddf641f70674d ChangeLog 5869
+MD5 3dd3492660b1a1395891d71acdc24de9 eggdrop-1.6.17.ebuild 2183
+MD5 0e258aebc622fc87e7bff29b123a8bc0 ChangeLog 5959
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 6b1308dc13633239bd7c16c54b497795 eggdrop-1.6.17-r1.ebuild 2270
 MD5 e410ac6d9adce910c8f37daf99a4b0e1 files/eggdrop-1.6.15-config.patch 6182
@@ -18,9 +18,9 @@ MD5 1892518b7bb9c06cf7cfd46868012971 files/eggdrop-1.6.15-botchk.patch 2931
 MD5 a0c1fc8d184c3a0214e009cf56fc86b1 files/eggdrop-installer 2264
 MD5 2f73d0025c666719612e4d05c47a46dd files/eggdrop-1.6.15-mysql-use_ssl-fix.patch 300
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCKP9mI1lqEGTUzyQRApeeAJ4hi8PqlJYMXlcRmTS++0ct8t60NgCeOgyP
-vb6gXoP69mwbv047QIs+dxs=
-=HwMS
+iD8DBQFCUA4/M+I1L6GK/u4RAunZAKCKr0b3Tv12alTveurpK//o6A+wkACeJBOd
+bLvsJV+URIRmk7jW+eHM+rs=
+=5/zl
 -----END PGP SIGNATURE-----
