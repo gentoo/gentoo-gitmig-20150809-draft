@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 66dae146cb349d1eb0e3a37e84a03456 ChangeLog 3105
-MD5 d4b0665c09cd50a5a9e8811ca6ecb45b libart_lgpl-2.3.16.ebuild 602
+MD5 b7cf0c752ce51a1eae94e6ca6a0aadeb libart_lgpl-2.3.17.ebuild 609
+MD5 6a54fbaf671eb8006437bf3a70cd1c67 ChangeLog 3228
+MD5 976f78bd3fb6554e617c8e4311a28079 libart_lgpl-2.3.16.ebuild 599
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 74b2647d24b94747a1baba0991bc11b7 files/digest-libart_lgpl-2.3.16 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiqv5HTu7gpaalycRAoZDAKCP99OL7eoL4amcO8IAWpzmZHn+ZQCfYrcy
-lwvJ14TArWysF7sTZbuK170=
-=geRC
------END PGP SIGNATURE-----
+MD5 0749f048bd1460c27e0e7a5e8bdaa581 files/digest-libart_lgpl-2.3.17 71
