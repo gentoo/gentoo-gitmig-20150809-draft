@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.27 2004/10/09 21:59:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.28 2004/11/04 11:57:48 usata Exp $
+
+  04 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> texmacs-1.0.4-r1.ebuild,
+  -texmacs-1.0.4.1.ebuild:
+  Marked 1.0.4-r1 stable on x86, ppc and alpha.
 
 *texmacs-1.0.4.3 (10 Oct 2004)
 *texmacs-1.0.4-r1 (10 Oct 2004)

@@ -1,13 +1,21 @@
-MD5 be90386bb44bb94df33a820f02b5c905 ChangeLog 4543
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 769c40ecaf362dbd6ca1d708972e3a27 ChangeLog 4693
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 f3b4fdd0ce8f532149d660c48220006a texmacs-1.0.4.ebuild 1474
-MD5 5d7cb0a78644fd8a4450eb340ea2a922 texmacs-1.0.4.1.ebuild 1542
 MD5 826de5c24c99ac9a7729841a0c7d3d7e texmacs-1.0.3-r1.ebuild 1463
-MD5 0153d3439cdd4ee4efffeca0c978c8e1 texmacs-1.0.4-r1.ebuild 1479
+MD5 46d7b75e973732b017f82f38b367702c texmacs-1.0.4-r1.ebuild 1476
 MD5 b2daba45c637c9329c72879f3ef05955 texmacs-1.0.4.3.ebuild 1542
 MD5 6c1335b256982ee1f6daac8ccbf4aae6 files/digest-texmacs-1.0.4 146
-MD5 01892c5e808927f7326557387c1c6997 files/digest-texmacs-1.0.4.1 145
 MD5 6a01145afda09629a7954638b8383116 files/digest-texmacs-1.0.4.3 145
 MD5 6e7c1518893b302b2ac067f9787872f7 files/digest-texmacs-1.0.3-r1 146
 MD5 2d501a8fe39616f98bc65ec3f7343548 files/TeXmacs.desktop 266
 MD5 bf93b125609bba4a0caf22c50fd0c084 files/digest-texmacs-1.0.4-r1 146
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBihfEVWNWqTUmv+0RAhjNAJ9AHDmK0SlK9ePHH/aOWYCVY0804gCeIPN8
+NG8mLDt3Bt61Xpdcj7wCWFo=
+=C50o
+-----END PGP SIGNATURE-----
