@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-3.4.0_rc1.ebuild,v 1.1 2005/02/27 20:21:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-3.4.0_rc1.ebuild,v 1.2 2005/03/07 16:47:37 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -10,10 +10,9 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="3.4"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="accessibility"
 
 RDEPEND="
-$(deprange $PV $MAXKDEVER kde-base/kdeaccessibility-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdeaddons-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdeadmin-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-meta)
@@ -27,4 +26,6 @@ $(deprange $PV $MAXKDEVER kde-base/kdesdk-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdetoys-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdeutils-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdewebdev-meta)
-$(deprange $PV $MAXKDEVER kde-base/kdeartwork-meta)"
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-meta)
+accessibility? ( $(deprange $PV $MAXKDEVER kde-base/kdeaccessibility-meta) )"
+
