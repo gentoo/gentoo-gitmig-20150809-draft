@@ -14,12 +14,9 @@ MD5 1316f73c0eecd8832bb362a3d5ca4892 files/digest-nvidia-kernel-1.0.5336-r4 80
 MD5 50ffea0f5eb12d252905f379bc7be2d6 files/digest-nvidia-kernel-1.0.6106-r1 163
 MD5 046ed3744551619863faea8c5c83db02 files/digest-nvidia-kernel-1.0.4499 74
 MD5 ed1e098d85579c75542ef0a49ee4dd5c files/digest-nvidia-kernel-1.0.6111 163
-MD5 089e6829e7e8497a603ba9dc9563a722 files/nvidia 30
 MD5 56ebaa3ba92e9db848baea746a6aef1a files/digest-nvidia-kernel-1.0.4363-r3 74
 MD5 a88479c177f936b6ef19fc73bb39d149 files/digest-nvidia-kernel-1.0.4496-r3 80
 MD5 b6a9c4bdd3961980af4a70f57485d708 files/nvidia-1.1 441
-MD5 eaed145a02e1457194d0e9fdb1f4851a files/1.0.4349/NVIDIA_kernel-1.0-4349-2.5-20030402.diff 70356
-MD5 439563bcf7fa96c91361226fae454e0e files/1.0.4349/NVIDIA_kernel-1.0-4349-2.5.68.diff 1467
 MD5 f7d7092e9eb9fbe926ff1b8aa9b3f50e files/1.0.4363/NVIDIA_kernel-1.0-4363-2.5-20030714.diff 79485
 MD5 183b64f528e98221291072f12db5859d files/1.0.4496/NVIDIA_kernel-1.0-4496-2.6-pci_name-20030905.diff 608
 MD5 c0f21cb76a7471671ec9665968dfaafb files/1.0.4496/NVIDIA_kernel-1.0-4496-2.6-20031026.diff 81900
