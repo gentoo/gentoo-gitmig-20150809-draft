@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.23 2003/01/05 13:09:43 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.24 2003/01/07 01:54:07 weeve Exp $
 
 *arts-1.1.0_rc6 (05 Jan 2003)
 
@@ -8,6 +8,9 @@
   version bump
 
 *arts-1.0.5a (21 Dec 2002)
+
+  06 Jan 2003; Jason Wever <weeve@gentoo.org> arts-1.0.5a.ebuild:
+  Added ~sparc to keywords.
 
   21 Dec 2002; Hannes Mehnert <hannes@gentoo.org> arts-1.0.5a.ebuild:
   version bump
