@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.5.ebuild,v 1.1 2004/03/01 04:37:28 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.5.ebuild,v 1.2 2004/03/23 02:49:24 zx Exp $
 
 inherit jakarta-commons
 
@@ -32,7 +32,7 @@ src_compile() {
 	antflags="${antflags} -Dcommons-beanutils.jar=`java-config --classpath=commons-beanutils`"
 	antflags="${antflags} -Dcommons-collections.jar=`java-config --classpath=commons-collections`"
 	antflags="${antflags} -Dcommons-logging.jar=/usr/share/commons-logging/lib/commons-logging.jar"
-	ant ${antflags}
+	ant ${antflags} || die "compilation failed"
 }
 
 src_install() {

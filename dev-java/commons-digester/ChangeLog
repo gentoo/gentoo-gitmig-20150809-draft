@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-digester
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.8 2004/03/01 04:37:28 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.9 2004/03/23 02:49:24 zx Exp $
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> commons-digester-1.4.1.ebuild,
+  commons-digester-1.5.ebuild:
+  Let ant die gracefully if there is a compilation error + clean up. Bug #45398
 
 *commons-digester-1.5 (29 Feb 2004)
 
