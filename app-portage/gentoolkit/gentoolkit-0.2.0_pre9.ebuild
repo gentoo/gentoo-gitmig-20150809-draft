@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.0_pre9.ebuild,v 1.1 2004/09/27 11:35:34 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.0_pre9.ebuild,v 1.2 2004/10/10 22:42:16 genone Exp $
 
 DESCRIPTION="Collection of administration scripts for Gentoo"
-HOMEPAGE="http://www.gentoo.org/~karltk/projects/gentoolkit/"
+HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
 #SRC_URI="http://dev.gentoo.org/~genone/distfiles/${P}.tar.gz"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 

@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.28 2004/09/27 11:44:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.29 2004/10/10 22:42:16 genone Exp $
+
+*gentoolkit-0.2.0_pre10 (11 Oct 2004)
+
+  11 Oct 2004; <genone@gentoo.org> +gentoolkit-0.2.0_pre10.ebuild,
+  -gentoolkit-0.2.0_pre7.ebuild, gentoolkit-0.2.0_pre9.ebuild:
+  version bump including a few bugfixes and removing most of the older
+  unsupported scripts, now needs portage-2.0.51 for md5 verification. Removed
+  pre7.
 
   27 Sep 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   gentoolkit-0.1.38.ebuild gentoolkit-0.2.0_pre3.ebuild

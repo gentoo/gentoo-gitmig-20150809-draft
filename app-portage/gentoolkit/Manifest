@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 003dba2c03b73c747fd9c6f03dea40b6 ChangeLog 25222
-MD5 d9f267bb9b53767a45bf475d798b273d gentoolkit-0.2.0_pre7.ebuild 1076
 MD5 c36d3e9465a96d7220228d2ef5457bd3 metadata.xml 451
-MD5 66c437554c7b6f2ea94abb56e01c47a1 gentoolkit-0.2.0_pre9.ebuild 838
 MD5 06dab4cbc3b5d22b98f63f6a10b07a25 gentoolkit-0.2.0_pre8.ebuild 1106
-MD5 eb45ed0289923c51c7a1caeb2b678379 files/digest-gentoolkit-0.2.0_pre7 72
+MD5 ac5a1c6450a5f45ace7723dce748b3de ChangeLog 25549
+MD5 9d3b24998e60d36c7bee09495b23501f gentoolkit-0.2.0_pre10.ebuild 980
+MD5 4786c960d94840f45260b5d7ece4235f gentoolkit-0.2.0_pre9.ebuild 841
 MD5 1b132e20e9de1c5163594b2cbd950d34 files/digest-gentoolkit-0.2.0_pre8 72
 MD5 ece108f9a9cf45a6cdd9211bb1b26db5 files/digest-gentoolkit-0.2.0_pre9 72
+MD5 096ea293c35570bd708ebd8cde10ca6b files/digest-gentoolkit-0.2.0_pre10 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBaaP26J2i8a8J4okRApCwAKDIueJ8fydOVpW5R1SS6gY9Zwng3QCg2juD
-i3kKHlxzPjr3c9mIPt3eqEc=
-=nIbP
+iD8DBQFBabrU6J2i8a8J4okRAuDDAKDT/Jc6PFwWGtJXK8Nb42gFmnIxhACgsOa9
+ndUhPn7FgCuM8QIeMPekutY=
+=xfll
 -----END PGP SIGNATURE-----
