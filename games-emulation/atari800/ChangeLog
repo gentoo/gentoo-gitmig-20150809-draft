@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/atari800
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.2 2003/09/10 16:03:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.3 2003/10/11 04:40:05 vapier Exp $
+
+*atari800-1.3.1 (11 Oct 2003)
+
+  11 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage + games.eclass support.
 
 *atari800-1.3.0-r1 (02 Sep 2003)
 
