@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-20030302.ebuild,v 1.3 2003/03/14 20:44:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-20030302.ebuild,v 1.4 2003/09/07 04:15:40 vapier Exp $
 
 DESCRIPTION="e17 meta ebuild ... emerge this to get all e17 components"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -31,7 +31,6 @@ RDEPEND="media-gfx/etcher
 	media-gfx/imlib2_tools
 	sys-apps/efsd
 	x11-wm/e
-	x11-misc/elogin
 	x11-misc/entrance
 	app-misc/evidence"
 
