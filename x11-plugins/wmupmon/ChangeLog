@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/wmupmon
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmupmon/ChangeLog,v 1.1 2003/06/06 22:52:39 robh Exp $
+
+*wmupmon-0.1.1a (06 Jun 2003)
+
+  06 Jun 2003; robh <robh@gentoo.org> wmupmon-0.1.1a.ebuild:
+  Initial version. Thanks to: Beowulf for submitting the ebuild and
+  Justin Spadea for adjusting the packaging so it would work on gentoo.
+  Closes #21926
+
