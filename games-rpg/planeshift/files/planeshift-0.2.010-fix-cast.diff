@@ -1,0 +1,12 @@
+--- planeshift/src/server/psdatabase.cpp~	2003-12-16 18:05:24.000000000 +0000
++++ planeshift/src/server/psdatabase.cpp	2003-12-16 18:03:23.000000000 +0000
+@@ -2371,7 +2371,8 @@
+     int epos = questName.FindSubStringReverse(sep, questName.Length());
+ 
+     csString temp ("");
+-    temp.Append(questName + spos, epos-spos);
++    sprintf ( buffer, "%s%d", eventName, spos );
++    temp.Append( buffer, epos-spos);
+     printf("InsertQuestEvent quest name: %s", temp.GetData());
+ 
+     csString command( "" );

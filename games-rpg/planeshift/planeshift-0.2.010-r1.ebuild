@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.2 2003/10/27 00:01:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.3 2003/12/16 23:43:48 hythloday Exp $
 
 inherit games
 
@@ -21,6 +21,11 @@ S=${WORKDIR}/${PN}
 export PLANESHIFT_PREFIX=${PLANESHIFT_PREFIX:-${GAMES_PREFIX_OPT}/${PN}}
 export CRYSTAL_PREFIX=${CRYSTAL_PREFIX:-${GAMES_PREFIX_OPT}/crystal}
 export CEL_PREFIX=${CEL_PREFIX:-${CRYSTAL_PREFIX}}
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-fix-cast.diff
+}
 
 src_compile() {
 	env \
