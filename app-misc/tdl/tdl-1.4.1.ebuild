@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.4.1.ebuild,v 1.3 2003/08/04 12:00:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.4.1.ebuild,v 1.4 2003/08/07 23:18:17 taviso Exp $
 
 DESCRIPTION="Command line To Do List manager"
 HOMEPAGE="http://www.rc0.org.uk/tdl/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.rrbcurnow.freeuk.com/tdl/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha"
 IUSE="readline ncurses doc"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.3 
