@@ -1,13 +1,9 @@
-SHELL=/bin/sh
-PATH=/usr/bin:/usr/sbin:/sbin:/bin:/usr/lib/news/bin
-MAILTO=root
-
 # check scripts in cron.hourly, cron.daily, cron.weekly and cron.monthly
 #
--*/15 * * * *   root  test -x /usr/sbin/run-crons && /usr/sbin/run-crons 
-0 0  * * *     root  rm -f /var/cron/lastrun/cron.daily
-0 0  * * 6     root  rm -f /var/cron/lastrun/cron.weekly
-0 0  1 * *     root  rm -f /var/cron/lastrun/cron.monthly
+-*/15 * * * * 		test -x /usr/sbin/run-crons && /usr/sbin/run-crons 
+0 0  * * *			rm -f /var/cron/lastrun/cron.daily
+0 0  * * 6			rm -f /var/cron/lastrun/cron.weekly
+0 0  1 * *			rm -f /var/cron/lastrun/cron.monthly
 
 
 
