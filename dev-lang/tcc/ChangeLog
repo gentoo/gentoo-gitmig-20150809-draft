@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.16 2004/10/07 21:57:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.17 2004/11/10 23:51:01 spider Exp $
+
+*tcc-0.9.22 (11 Nov 2004)
+
+  11 Nov 2004; <spider@gentoo.org> +tcc-0.9.22.ebuild:
+  Updated ebuild, thanks to Olaf Freyer and Thomas Eckert
 
   07 Oct 2004; George Shapovalov <george@gentoo.org> tcc-0.9.{19,20}.ebuild  :
   marked all versions -amd64. tcc apparently does not know about this arch (configure borks)
