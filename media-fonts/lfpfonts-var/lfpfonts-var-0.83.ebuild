@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-var/lfpfonts-var-0.83.ebuild,v 1.4 2004/07/14 17:06:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-var/lfpfonts-var-0.83.ebuild,v 1.5 2004/09/29 07:39:00 usata Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Linux Font Project variable-width fonts"
-HOMEPAGE="http://dreamer.nitro.dk/linux/lfp/"
-SRC_URI="http://dreamer.nitro.dk/linux/lfp/${P}.tar.bz2"
+HOMEPAGE="http://sourceforge.net/projects/xfonts/"
+SRC_URI="mirror://sourceforge/xfonts/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="public-domain"
