@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/aquapfont
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.9 2004/06/24 22:26:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.10 2004/07/24 03:40:47 usata Exp $
+
+  24 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> aquapfont-2.5.ebuild:
+  Changed DESCRIPTION field. See bug #58142
 
   21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> aquapfont-2.5-r1.ebuild:
   Forgot to add FONT_SUFFIX
