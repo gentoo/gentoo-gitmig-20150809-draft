@@ -1,8 +1,11 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.4 2002/10/25 20:02:02 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.5 2003/01/28 13:49:33 nall Exp $
 
 *lablgl-0.98.ebuild (03 Sep 2002)
+
+  28 Jan 2003; Jon Nall <nall@gentoo.org> lablgl-0.98.ebuild :
+  added ~ppc
 
   24 Oct 2002; George Shapovalov <george@gentoo.org> lablgl-0.98.ebuild :
 
