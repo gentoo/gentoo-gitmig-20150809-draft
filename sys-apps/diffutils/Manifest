@@ -10,12 +10,11 @@ MD5 bb27bd30edca169156e905ebe7dab570 files/diffutils-2.8.4-no-manpage.patch 1168
 MD5 fcb3554acdf9074aad98b90af6cb915d files/diffutils-2.8.4-sdiff-no-waitpid.patch 525
 MD5 a571ebf3fcef3b033e33a4f013521e13 files/diffutils-2.8.4-tabsize-dumps-core.diff 804
 MD5 7abb095c2c2ecdbd465a1953cb443289 files/digest-diffutils-2.8.4-r4 67
-MD5 96bfbc8c9d4a828ec67d9d537a52d756 files/diffutils-2.8.7-no-manpage.patch 1231
 MD5 28aba2261ffb7634265a612938df28f5 files/digest-diffutils-2.8.7 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2g3GroRuSHgZdywRAsE1AJ98wHQInF3jlRYfv/zsnCTDlCP1xgCgj7Cy
-XSkzXbNXH5/6lvUtQ8buUys=
-=zp/3
+iD8DBQFB2g5YroRuSHgZdywRAopoAJ9DHWKa6JYO4ozj738cDJAaX5ecWACfYkYQ
+9knrpCe22wcR4Sy9YYD4mpw=
+=ovoM
 -----END PGP SIGNATURE-----
