@@ -30,10 +30,8 @@ MD5 3647e3adbfddb3278250cdc335fb6e99 files/cvs/12_all_uClibc-libc-ssp.patch 556
 MD5 7eea15a7a3e8d8a2a222b815e57dc221 files/cvs/13_all_uClibc-enable-ssp.patch 331
 MD5 9cb04f6f038b903868f99d90f81e7e61 files/cvs/21_all_uClibc-ld-relro.patch 1040
 MD5 df59fcf3a02c17b7dac6999bd9262d05 files/cvs/22_all_uClibc-ld-now.patch 1072
-MD5 6835449424e7a8a38e9c85ecf1b73577 files/cvs/30_all_uClibc-arm-ucontext.patch 303
 MD5 bdd1e91ee48fb8be0d28cabdfcfdf3ff files/cvs/01_all_uClibc-pie-option.patch 863
 MD5 2416f5e954ccb8b39b1c0d6a3cf5e827 files/cvs/02_all_uClibc-Makefile.patch 1478
-MD5 934c38617957cdeeb13cc836ccf4035b files/cvs/07_all_uClibc-owl-erik-malloc-unlink-sanity-check.patch 813
 MD5 ef7fa60d23c46f41d0e9748372cfc7dd files/0.9.26/ssp.c 3937
 MD5 2416f5e954ccb8b39b1c0d6a3cf5e827 files/0.9.26/uClibc-0.9.26-Makefile.patch 1478
 MD5 bdd1e91ee48fb8be0d28cabdfcfdf3ff files/0.9.26/uClibc-0.9.26-pie-option.patch 863
@@ -48,7 +46,7 @@ MD5 7157f784ba7672c9904d289712131a52 files/0.9.26/uclibc-0.9.26-ldso-cache.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBLRcQHTu7gpaalycRAjkEAJ9/vqYgoGgYmpU3Q1Fe6UfaEbnX4gCghgZU
-Y2VKjIby5AjNK2bxlPioqpY=
-=xqs4
+iD8DBQFBLSnDHTu7gpaalycRAui3AKDo4M/xs706/RHQB+I9Ihy2XGO4CwCfcRgu
+GswkPS+7pkjLLuwPdiGOEO0=
+=NZBZ
 -----END PGP SIGNATURE-----
