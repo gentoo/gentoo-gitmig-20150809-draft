@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.0-r2.ebuild,v 1.10 2004/07/14 01:43:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.0-r2.ebuild,v 1.11 2004/07/30 17:18:24 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -30,7 +30,7 @@ DEPEND="=dev-java/ant-1.6.0-r2
 	jdepend? ( >=dev-java/jdepend-2.6 )
 	jsch? ( >=dev-java/jsch-0.1.12 )
 	regexp? ( >=dev-java/regexp-1.3 )
-	jython? ( >=dev-java/jython-2.1 )
+	jython? ( >=dev-java/jython-bin-2.1 )
 	javamail? ( >=dev-java/sun-javamail-bin-1.3 )"
 
 S="${WORKDIR}/apache-ant-${PV}"

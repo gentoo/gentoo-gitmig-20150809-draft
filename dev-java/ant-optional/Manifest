@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 18cf25cf521f2fce405ff54ba713b6af ant-optional-1.6.0-r2.ebuild 4827
-MD5 f42b995fefed019cb3474c9cc66100b2 ant-optional-1.6.1-r1.ebuild 4675
-MD5 f72638291acf0ad48dc71a0b06cae7ac ant-optional-1.6.2.ebuild 1974
-MD5 72ce0ba03e3f3d75f218a1046cb0a7d8 ant-optional-1.6.2-r2.ebuild 1978
-MD5 9a43937da4c7e9089d8ecfa1bd224af9 ant-optional-1.6.0-r3.ebuild 4610
-MD5 d4583291297ac4e244f8364c2c393f70 ant-optional-1.6.1.ebuild 4605
-MD5 142180968ff412830529f030e2cc91f1 ChangeLog 3210
+MD5 324a4f21ee5fcf128e9ceaf4a0125087 ant-optional-1.6.0-r2.ebuild 4827
+MD5 6879bbd660845b77940710412564837d ant-optional-1.6.1-r1.ebuild 4675
+MD5 f723b518c81327add94a937d115bdbe1 ant-optional-1.6.2.ebuild 1978
+MD5 701579a672bb37df4e5832a4fbec81cf ant-optional-1.6.2-r2.ebuild 1982
+MD5 d25e8d817f82935f64e611769cdbae3f ant-optional-1.6.0-r3.ebuild 4611
+MD5 a29f92fa7aa870908bb9bec0d5d38bf1 ant-optional-1.6.1.ebuild 4605
+MD5 b55523cb7682ab4035cbaf49b9d285a4 ChangeLog 3518
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 c7249186b952476188942034f199bb82 ant-optional-1.6.2-r1.ebuild 1978
+MD5 94236e6163798a361b46f8130ffb19de ant-optional-1.6.2-r1.ebuild 1982
 MD5 c2a3ad39a9e095b30108083f4002b384 files/digest-ant-optional-1.6.0-r2 74
 MD5 c2a3ad39a9e095b30108083f4002b384 files/digest-ant-optional-1.6.0-r3 74
 MD5 742e94a3c64e9b5cddc7ce7863d1afac files/digest-ant-optional-1.6.1-r1 74
@@ -20,7 +20,7 @@ MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-optional-1.6.2 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBCQ+C/rLF9B432nYRAqzHAKCpkBiFSg7vDM4uto42Yxzlzd9lxwCfbtt8
-3Ww2mHj+P9jnLTG0PGsQG9U=
-=M+yq
+iD8DBQFBCoNM/rLF9B432nYRAteYAJ9D/Q/VcZAzYvmGctWW3Lc9OM8yKgCffceZ
+NPdxiJhUsLyiCHd7eT/TrzU=
+=rzjI
 -----END PGP SIGNATURE-----
