@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-Cracklib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/ChangeLog,v 1.3 2004/06/25 00:17:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/ChangeLog,v 1.4 2004/08/14 14:38:50 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> Crypt-Cracklib-0.01.ebuild:
+  Trimmed trailing whitespace.
 
   07 Nov 2003; Robin H. Johnson <robbat2@gentoo.org>
   Crypt-Cracklib-0.01.ebuild:
