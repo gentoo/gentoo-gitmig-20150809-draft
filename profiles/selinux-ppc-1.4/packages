@@ -10,18 +10,17 @@
 ###########################################################
 # SELinux versionings
 
-# SELinux specific stuff
+# Base SELinux packages
 *sys-libs/libselinux
 *sys-apps/checkpolicy
 *sys-apps/policycoreutils
 *sec-policy/selinux-base-policy
 *dev-python/python-selinux
 
-# selinux-patched packages
+# SELinux-patched packages
 *>=net-misc/openssh-3.0.1_p1
 *>=sys-apps/coreutils-5.0
 *sys-apps/findutils
-# locking procps, selinux code is gone in newer versions
 *=sys-apps/procps-3.1.12
 *sys-apps/psmisc
 *sys-apps/util-linux
@@ -29,13 +28,19 @@
 *>=sys-libs/pam-0.75-r9
 *sys-libs/pwdb
 
-# must use coreutils:
-!sys-apps/fileutils
-!sys-apps/textutils
-!sys-apps/sh-utils
-###########################################################
+# must use coreutils (these RDEP on it):
+>=sys-apps/fileutils-4.1.11-r2
+>=sys-apps/textutils-2.1-r1
+>=sys-apps/sh-utils-2.0.15-r1
 
-# less critical stuff -- all last checked on Wed Jul 16 11am 
+# SELinux merged into 2.6.0-test3:
+>=sys-kernel/ppc-sources-2.6.0_beta3
+>=sys-kernel/ppc-sources-benh-2.6.0_beta3
+>=sys-kernel/ppc-sources-crypto-2.6.0_beta3
+>=sys-kernel/ppc-sources-dev-2.6.0_beta3
+>=sys-kernel/development-sources-2.6.0_beta3
+>=sys-kernel/mm-sources-2.6.0_beta3
+###########################################################
 
 *app-arch/ncompress
 *app-shells/bash
@@ -97,6 +102,8 @@
 *virtual/bootloader
 *virtual/editor
 *virtual/modutils
+
+# general PPC versionings:
 
 >=app-admin/metalog-0.6-r6
 >=app-admin/mon-0.38.20-r6
