@@ -1,0 +1,75 @@
+# ChangeLog for net-www/mythweb
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.1 2004/08/15 15:15:27 stuart Exp $
+
+*mythweb-0.15.1 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +mythweb-0.14-r1.ebuild, +mythweb-0.14.ebuild, +mythweb-0.15.1.ebuild:
+  Moved from net-www/mythweb to www-apps/mythweb.
+
+*mythweb-0.15.1 (01 Jun 2004)
+
+  01 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.14-r1.ebuild,
+  mythweb-0.15.1.ebuild:
+  Version bump and unmask.
+
+  21 Apr 2004; Martin Holzer <mholzer@gentoo.org> mythweb-0.14-r1.ebuild,
+  mythweb-0.14.ebuild:
+  moving webapp-detect into pkg_setup. closes 48354
+
+*mythweb-0.14-r1 (11 Apr 2004)
+
+  11 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.14-r1.ebuild,
+  Add env.d to protect configuration dir.
+
+  23 Mar 2004; Martin Holzer <mholzer@gentoo.org> mythweb-0.10.ebuild:
+  fixing depend qa issue. see 45343.
+
+*mythweb-0.14 (02 Feb 2004)
+
+  02 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.14.ebuild:
+  Version bump
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> mythweb-0.11.ebuild:
+  Missed one ;-)
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> mythweb-0.12.ebuild,
+  mythweb-0.13.ebuild:
+  Fix for bug #32636
+
+*mythweb-0.13 (11 Dec 2003)
+
+  11 Dec 2003; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.13.ebuild:
+  Version bump.
+
+*mythweb-0.12 (19 Oct 2003)
+
+  19 Oct 2003; Max Kalika <max@gentoo.org> mythweb-0.12.ebuild:
+  Bump to version 0.12.
+
+*mythweb-0.11 (19 Sep 2003)
+
+  19 Sep 2003; Max Kalika <max@gentoo.org> metadata.xml, mythweb-0.11.ebuild:
+  Bump to version 0.11 and convert to webapp-apache eclass. This is not the
+  cleanest of all installations so it will remain ~arch for a bit.
+
+*mythweb-0.10 (01 Jul 2003)
+
+  01 Jul 2003; Max Kalika <max@gentoo.org> mythweb-0.10.ebuild:
+  Bump version to 0.10.
+
+*mythweb-0.9.1 (22 Jun 2003)
+
+  22 Jun 2003; Max Kalika <max@gentoo.org> mythweb-0.9.1.ebuild:
+  Bump to 0.9.1.  Some consistancy fixes.
+
+*mythweb-0.9 (09 Jun 2003)
+
+  09 Jun 2003; Max Kalika <max@gentoo.org> mythweb-0.9.ebuild:
+  Bump to 0.9.  Some minor cleanup and a postinst() info about settings.php.
+
+*mythweb-0.8 (03 Apr 2003)
+
+  03 Apr 2003; Max Kalika <max@gentoo.org> mythweb-0.9.ebuild:
+  Initial import.
