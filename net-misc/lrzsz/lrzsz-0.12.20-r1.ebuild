@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.20 2004/11/20 12:10:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.21 2005/01/06 19:09:31 vapier Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ohse.de/uwe/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc amd64 hppa alpha ~mips"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc sparc x86"
 IUSE="nls"
 
 DEPEND=""
@@ -32,12 +32,10 @@ src_install() {
 		mandir="${D}/usr/share/man" \
 		install || die
 
-	dosym /usr/bin/lrb /usr/bin/rb
-	dosym /usr/bin/lrx /usr/bin/rx
-	dosym /usr/bin/lrz /usr/bin/rz
-	dosym /usr/bin/lsb /usr/bin/sb
-	dosym /usr/bin/lsx /usr/bin/sx
-	dosym /usr/bin/lsz /usr/bin/sz
+	local x
+	for x in {r,s}{b,x,z} ; do
+		dosym l${x} /usr/bin/${x}
+	done
 
 	dodoc AUTHORS COMPATABILITY ChangeLog NEWS README* THANKS TODO
 }
