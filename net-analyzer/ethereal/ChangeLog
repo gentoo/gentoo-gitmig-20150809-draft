@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.92 2004/12/16 18:33:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.93 2004/12/18 10:13:00 blubb Exp $
+
+  18 Dec 2004; Simon Stelling <blubb@gentoo.org> ethereal-0.10.8.ebuild:
+  stable on amd64; bug #74443
 
   16 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> ethereal-0.10.8.ebuild:
   Stable on alpha, bug 74443.
