@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.43 2003/06/30 18:17:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.44 2003/07/04 13:21:02 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -35,7 +35,7 @@ INHERITED="$INHERITED $ECLASS"
 # like useless empty directories.
 # WARNING: to be set only from within ebuilds! if set in your shell or some such,
 # things wil break because the ebuild won't expect it and have e.g. a wrong $S setting.
-[ -z "$ECVS_LOCALNAME" ] && ECVS_LOCALNAME="$ECVS_MODULE"
+# ECVS_LOCALNAME
 
 # Where the cvs modules are stored/accessed
 [ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="${DISTDIR}/cvs-src"
@@ -240,12 +240,23 @@ ECVS_TOP_DIR=$ECVS_TOP_DIR
 ECVS_SERVER=$ECVS_SERVER
 ECVS_USER=$ECVS_USER
 ECVS_PASS=$ECVS_PASS
-ECS_MODULE=$ECVS_MODULE
+ECVS_MODULE=$ECVS_MODULE
 ECVS_LOCAL=$ECVS_LOCAL
 ECVS_RUNAS=$ECVS_RUNAS
 ECVS_LOCALNAME=$ECVS_LOCALNAME"
 
 	[ -z "$ECVS_MODULE" ] && die "ERROR: CVS module not set, cannot continue."
+
+	# merely setting this default value makes things fail when cvs_src_unpack is called
+	# more than once per ebuild (eg kdenonbeta submodules); so if we set a default value,
+	# we disable it again at the function's end.
+	# of course, we could instead always reference it with the bash syntax for 'take default
+	# value from this other variable if undefined', but i'm lazy.
+	if [ -z "$ECVS_LOCALNAME" ]; then
+	    ECVS_LOCALNAME="$ECVS_MODULE"
+	    ECVS_LOCALNAME_SETDEFAULT=true
+	fi
+
 
 	if [ "$ECVS_SERVER" == "offline" ]; then
 		# we're not required to fetch anything, the module already exists and shouldn't be updated
@@ -294,6 +305,11 @@ ECVS_LOCALNAME=$ECVS_LOCALNAME"
 		# make sure we don't try to apply patches more than once, since
 		# cvs_src_unpack is usually called several times from e.g. kde-source_src_unpack
 		export PATCHES=""
+	fi
+	
+	if [ -n "$ECVS_LOCALNAME_SETDEFAULT" ]; then
+	    unset ECVS_LOCALNAME
+	    unset ECVS_LOCALNAME_SETDEFAULT
 	fi
 
 }
