@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.1_rc4.ebuild,v 1.2 2003/11/20 18:49:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.1_rc4.ebuild,v 1.3 2003/11/21 17:46:05 mholzer Exp $
 
 inherit webapp-apache
 
@@ -37,8 +37,8 @@ src_install() {
 	local DocumentRoot=${HTTPD_ROOT}
 	local destdir=${DocumentRoot}/${PN}
 	dodir ${destdir}
-	dodoc AUTHORS ChangeLog README LICENSE.txt UPGRADING
-	rm -rf AUTHORS ChangeLog README LICENSE.txt UPGRADING
+	dodoc AUTHORS ChangeLog README LICENSE.txt
+	rm -rf ChangeLog
 
 	cp -r . ${D}/${HTTPD_ROOT}/${PN}
 	cd ${D}/${HTTPD_ROOT}
