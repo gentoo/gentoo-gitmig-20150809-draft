@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tmpreaper
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/ChangeLog,v 1.6 2003/02/12 09:10:23 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/ChangeLog,v 1.7 2004/02/13 00:44:23 ferringb Exp $
+
+  12 Feb 2004; Brian Harring <ferringb@gentoo.org> tmpreaper-1.5.1.ebuild :
+  Version bump to 1.5.1.  Marking ~arch.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/tmpreaper-1.4.12.ebuild,v 1.17 2003/09/07 00:46:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/tmpreaper-1.4.12.ebuild,v 1.18 2004/02/13 00:44:23 ferringb Exp $
 
 MYP="tmpreaper_1.4.12"
 S=${WORKDIR}/${P}
