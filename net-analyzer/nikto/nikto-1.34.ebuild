@@ -1,28 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-1.32.ebuild,v 1.5 2004/10/29 11:53:57 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-1.34.ebuild,v 1.1 2004/10/29 11:53:57 eldad Exp $
 
 DESCRIPTION="Web Server vulnerability scanner."
 HOMEPAGE="http://www.cirt.net/code/nikto.shtml"
 SRC_URI="http://www.cirt.net/source/nikto/ARCHIVE/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
-RDEPEND=${DEPEND}
+KEYWORDS="~x86 ~ppc ~sparc"
 RDEPEND="dev-lang/perl
 		>=net-libs/libwhisker-1.5
 		>=net-analyzer/nmap-3.00
-		ssl? ( dev-libs/openssl ) "
+		ssl? ( dev-libs/openssl )"
 IUSE="ssl"
 
-src_unpack() {
-	unpack ${A}
-	#einfo ${WORKDIR}
-	cd  ${S}
+src_compile() {
 	sed	-i -e 's:config.txt:nikto.conf:' \
 		-i -e 's:\$CFG{configfile}="nikto.conf":\$CFG{configfile}="/etc/nikto/nikto.conf":' \
 		 nikto.pl
+
 	mv config.txt nikto.conf
+
 	sed -i -e 's:^#NMAP:NMAP:' \
 		-i -e 's:^PROXYHOST:#PROXYHOST:' \
 		-i -e 's:^PROXYPORT:#PROXYPORT:' \
@@ -33,18 +32,18 @@ src_unpack() {
 }
 
 src_install() {
-	cd ${S}
 	insinto /etc/nikto
 	doins nikto.conf
-	cd docs
-	dodoc CHANGES.txt LICENSE.txt README_plugins.txt nikto_usage.txt
-	dohtml nikto_usage.html
-	cd ..
+
 	dodir /usr/bin
 	dobin nikto.pl
 	dosym /usr/bin/nikto.pl /usr/bin/nikto
+
 	dodir /usr/share/nikto/plugins
 	insinto /usr/share/nikto/plugins
-	cd plugins
-	doins *
+	doins plugins/*
+
+	cd docs
+	dodoc CHANGES.txt LICENSE.txt README_plugins.txt nikto_usage.txt
+	dohtml nikto_usage.html
 }
