@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.18 2005/02/07 21:14:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.19 2005/03/07 20:21:17 mrness Exp $
+
+*ltmodem-8.31_alpha10-r1 (07 Mar 2005)
+
+  07 Mar 2005; Alin Nastac <mrness@gentoo.org>
+  -ltmodem-8.26_alpha9-r3.ebuild, +ltmodem-8.31_alpha10-r1.ebuild:
+  Add udev rules (#84338) and remove obsolete version.
 
 *ltmodem-8.31_alpha10 (07 Feb 2005)
 
