@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gplflash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.14 2004/06/25 00:53:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.15 2004/11/03 15:31:52 corsair Exp $
+
+*gplflash-0.4.12 (03 Nov 2004)
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> +gplflash-0.4.12.ebuild:
+  Version bumb; won't work on ppc64 -> -ppc64
 
   03 Oct 2003; Joel Hill <hillster@gentoo.org> gplflash-0.4.10-r3.ebuild:
   added einfo regarding support only for older flash and also changed
