@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.3.ebuild,v 1.1 2004/12/28 03:50:54 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.3.ebuild,v 1.2 2004/12/29 03:49:47 stkn Exp $
 
 inherit eutils
 
@@ -9,8 +9,9 @@ IUSE="ssl sdl ieee1394 alsa esd"
 MY_P="${PN}-v${PV//./_}"
 DESCRIPTION="Portable Multiplatform Class Libraries for OpenH323"
 HOMEPAGE="http://www.openh323.org/"
-SRC_URI="http://dev.gentoo.org/~stkn/openh323/${MY_P}-src.tar.gz"
+SRC_URI="mirror://sourceforge/openh323/${MY_P}-src-tar.gz"
 
+RESTRICT="nomirror"
 LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="-*"
@@ -33,7 +34,9 @@ MAKEOPTS="${MAKEOPTS} -j1"
 S=${WORKDIR}/${PN}
 
 src_unpack() {
-	unpack ${A}
+	# currently complaining to upstream about new naming scheme
+	tar -C ${WORKDIR} -xzf ${DISTDIR}/${MY_P}-src-tar.gz || die "Unpacking of ${PF} failed"
+
 	cd ${S}/make
 
 	# filter out -O3 and -mcpu embedded compiler flags
@@ -72,10 +75,15 @@ src_compile() {
 	if use esd; then
 		# fixes bug #45059
 		export ESDDIR=/usr
+
+		# ESD includes are in /usr/include?
+		# remove include path, bad things may happen if we leave it in there
+		sed -i -e "s:-I\$(ESDDIR)/include::" \
+			${S}/make/unix.mak
 	fi
 
 	# merge plugin options (safe way if default = "")
-	plugins="`echo ${plugins} | sed -e "y: :,:"`"
+	plugins="$(echo ${plugins} | sed -e "y: :,:")"
 
 	econf ${myconf} \
 		--enable-plugins \
@@ -92,20 +100,15 @@ src_compile() {
 		-e "s:^\(CCFLAGS[\s]*=.*\) -I/usr/include:\1:" \
 		${S}/make/ptlib-config
 
-	# remove -fno-rtti, this breaks various things *grr*
-	sed -i -e "s:-fno-rtti::" \
-		make/ptbuildopts.mak
-	sed -i -e "s:-fno-rtti::" \
-		make/ptlib-config
-
 	emake opt || die "make failed"
-	emake PWLIBDIR=${S} -C plugins opt || die "make plugins failed"
 }
 
 src_install() {
-	# make these because the makefile isn't smart enough
-	dodir /usr/bin /usr/lib /usr/share /usr/include
+	# makefile doesn't create ${D}/usr/bin
+	dodir /usr/bin
 	make PREFIX=${D}/usr install || die "install failed"
+
+	## vv will try to fix the mess below, requires a lot of patching though...
 
 	# these are for compiling openh323
 	# NOTE: symlinks don't work when upgrading
@@ -118,13 +121,12 @@ src_install() {
 		dosym /usr/lib/`basename ${x}` /usr/share/pwlib/lib/`basename ${x}`
 	done
 
-	# remove CVS dirs
-	find ${D} -name CVS -type d | xargs rm -rf
+	## ^^ bad stuff
 
 	# fix symlink
 	# only amd64 needs special handling, afaiks
 	rm ${D}/usr/lib/libpt.so
-	if [ ${ARCH} = "amd64" ] ; then
+	if use amd64; then
 		dosym /usr/lib/libpt_linux_x86_64_r.so.${PV} /usr/lib/libpt.so
 	else
 		dosym /usr/lib/libpt_linux_${ARCH}_r.so.${PV} /usr/lib/libpt.so
@@ -137,12 +139,9 @@ src_install() {
 	# dodgy configure/makefiles forget to expand this
 	dosed 's:${exec_prefix}:/usr:' /usr/bin/ptlib-config
 
-	# satisfy ptlib.mak's weird definition (should check if true for future versions)
-	cp ${D}/usr/bin/ptlib-config ${D}/usr/share/pwlib/make/ptlib-config
-
 	# copy version.h
 	insinto /usr/share/pwlib
 	doins version.h
 
-	dodoc ReadMe.txt History.txt
+	dodoc ReadMe.txt ReadMe_QOS.txt History.txt ChangeLog mpl-1.0.htm
 }
