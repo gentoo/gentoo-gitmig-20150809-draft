@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvorakng
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.4 2004/07/10 10:53:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.5 2004/09/20 02:56:22 tgall Exp $
+
+  19 Sep 2004; Tom Gall <tgall@gentoo.org> dvorakng-0.6.0.ebuild:
+  stable on ppc64, bug #63664
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> dvorakng-0.6.0.ebuild:
   Marked ~amd64.
