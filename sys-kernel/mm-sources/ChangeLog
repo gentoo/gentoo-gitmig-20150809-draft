@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.101 2003/12/23 21:42:24 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.102 2003/12/30 01:15:00 tseng Exp $
+
+*mm-sources-2.6.0-r2 (29 Dec 2003)
+
+  29 Dec 2003; Brandon Hale <tseng@gentoo.org> metadata.xml,
+  mm-sources-2.6.0-r2.ebuild, mm-sources-2.6.0_beta10-r1.ebuild,
+  mm-sources-2.6.0_beta9-r5.ebuild:
+  Version bump + cleanup. I'm assigning this to the x86-kernel herd, who will be
+  responsible for this package from now on.
 
 *mm-sources-2.6.0-r1 (23 Dec 2003)
 

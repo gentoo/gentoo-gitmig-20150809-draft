@@ -2,11 +2,13 @@ MD5 dc36d170dc3a3ce036b2945ada103e96 ChangeLog 17264
 MD5 62587df4b49506468241ec3c9415b010 metadata.xml 435
 MD5 0edac4f2505055557c8a335081ab5a53 mm-sources-2.6.0-r1.ebuild 2988
 MD5 4c74c994b40877995887f661839d511c mm-sources-2.6.0_beta10-r1.ebuild 3011
-MD5 795da7cc15e11462555565b3f23c4d1b mm-sources-2.6.0_beta9-r5.ebuild 3010
 MD5 aef70229deac69484ad99f7dcbc27114 mm-sources-2.6.0_beta11-r1.ebuild 3113
+MD5 795da7cc15e11462555565b3f23c4d1b mm-sources-2.6.0_beta9-r5.ebuild 3010
+MD5 a4399da33ffe8b80e254271d3ebef512 mm-sources-2.6.0-r2.ebuild 2984
 MD5 c57fb303f389d1b448d8c5ffa004b58f files/apic.patch 533
-MD5 2a430547eedc1e5e31db3903fe1f5e8a files/digest-mm-sources-2.6.0_beta10-r1 138
 MD5 01a838b34918f69ee08e3674c2b3c6e7 files/digest-mm-sources-2.6.0-r1 124
+MD5 2a430547eedc1e5e31db3903fe1f5e8a files/digest-mm-sources-2.6.0_beta10-r1 138
+MD5 e9846e2e40bb7cd35237bf3033be6d6b files/digest-mm-sources-2.6.0_beta11-r1 138
 MD5 2456d3e9950c102b25cd15d03b1d5f90 files/digest-mm-sources-2.6.0_beta9-r5 136
 MD5 c2a85ee37f0ce1076159ec64b7c5a78d files/wpadded.patch 1751
-MD5 e9846e2e40bb7cd35237bf3033be6d6b files/digest-mm-sources-2.6.0_beta11-r1 138
+MD5 1ad49f2d7d99c775522b3e7b06f4e9de files/digest-mm-sources-2.6.0-r2 125
