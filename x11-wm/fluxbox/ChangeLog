@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.52 2003/04/12 10:23:45 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.53 2003/04/18 16:19:04 gmsoft Exp $
 
 *fluxbox (12 Apr 2003)
 
@@ -8,6 +8,9 @@
   Fluxbox was never based on pwm, so I changed the Description of all ebuilds.
 
 *fluxbox-0.1.14-r1 (10 Dec 2002)
+
+  18 Apr 2003; Guy Martin <gmsoft@gentoo.org> fluxbox-0.1.14-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   06 Mar 2003; Jason Wever <weeve@gentoo.org> fluxbox-0.1.14-r1.ebuild:
   Changed ~sparc keyword to sparc.
