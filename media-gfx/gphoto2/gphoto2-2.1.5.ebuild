@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.4.ebuild,v 1.10 2005/01/13 15:38:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.5.ebuild,v 1.1 2005/01/13 15:38:28 liquidx Exp $
 
 inherit libtool flag-o-matic
 
 DESCRIPTION="free, redistributable digital camera software application"
 HOMEPAGE="http://www.gphoto.org/"
-SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 ~ia64 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ia64 ~ppc64"
 IUSE="nls jpeg readline ncurses aalib"
 
 # jpeg useflag -> exif support
@@ -31,7 +31,8 @@ src_compile() {
 
 	aclocal
 	# -pipe does no work
-	filter-flags -pipe
+	# liquidx: why doesn't it work? bug #?
+	# filter-flags -pipe
 
 	local myconf
 	use nls \
