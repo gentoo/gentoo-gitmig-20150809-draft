@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/grepmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.15 2004/12/21 17:21:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.16 2004/12/21 17:23:52 ticho Exp $
+
+  21 Dec 2004; Andrej Kacian <ticho@gentoo.org> -grepmail-4.70-r1.ebuild,
+  -grepmail-4.70-r2.ebuild:
+  Old ebuild cleanup.
 
   21 Dec 2004; Andrej Kacian <ticho@gentoo.org> grepmail-5.30.ebuild:
   Stable on x86.
