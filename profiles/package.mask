@@ -23,9 +23,6 @@ app-admin/webconfig
 #untested/not approved stuff, please do not use
 >=sys-apps/portage-1.9
 
-#still need some testing, especially the XFS.
->=sys-kernel/linux-sources-2.4.17
-
 #incomplete and very dangerous < Danarmak >
 >=app-office/openoffice-641b
 
