@@ -1,4 +1,7 @@
 #!/bin/bash
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/files/visualboyadvance,v 1.2 2004/01/02 00:03:32 mr_bones_ Exp $
 
 PN=VisualBoyAdvance
 if ! [ -d ~/.${PN}/save ]; then
@@ -6,12 +9,11 @@ if ! [ -d ~/.${PN}/save ]; then
 	cd ~/.${PN}
 	ln -s `which ${PN}` .
 	cp /usr/games/share/${PN}/${PN}.cfg .
-	mv ${PN}.cfg ${PN}.cfg.old
-	sed -e "s:#saveDir.*:saveDir ${HOME}/.${PN}/save:" \
+	sed -i \
+		-e "s:#saveDir.*:saveDir ${HOME}/.${PN}/save:" \
 	    -e "s:#captureDir.*:captureDir ${HOME}/.${PN}:" \
 	    -e "s:#batteryDir.*:batteryDir ${HOME}/.${PN}/save:" \
-	    ${PN}.cfg.old > ${PN}.cfg
-	rm -f ${PN}.cfg.old
+	    ${PN}.cfg
 fi
 
 cd ~/.${PN}

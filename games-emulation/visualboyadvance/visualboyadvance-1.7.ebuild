@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.6a.ebuild,v 1.2 2004/01/02 00:03:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.ebuild,v 1.1 2004/01/02 00:03:32 mr_bones_ Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ DESCRIPTION="gameboy, gameboy color, and gameboy advance emulator"
 HOMEPAGE="http://vboy.emuhq.com/"
 SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-src-${PV}.tar.gz"
 
-KEYWORDS="x86"
+KEYWORDS="~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
