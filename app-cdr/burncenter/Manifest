@@ -1,5 +1,5 @@
 MD5 58bd86450180b4425104bb6d655aeab6 files/digest-burncenter-3.0 65
 MD5 c8ff06ba67123e3a7e5ae226441b0917 files/digest-burncenter-3.1 65
 MD5 3c693dbbbe2c8fd230df6376f9db4769 burncenter-3.0.ebuild 972
-MD5 c27c2103a3fe9086948f0ccb7b08a5da ChangeLog 520
-MD5 347035b84a664e325ea7d444fbede9d8 burncenter-3.1.ebuild 1007
+MD5 4edea4c67a13532955125e17f438610b ChangeLog 631
+MD5 1bc2c44e5f77ffbc83b331ed8ab7d11a burncenter-3.1.ebuild 1004

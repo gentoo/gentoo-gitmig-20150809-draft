@@ -1,5 +1,5 @@
 MD5 eb73229fac3e9bcb51e0f89e06add9eb files/digest-kover-2.8.7 63
 MD5 c156b0ff95582eff8775a0dc67f1c311 files/digest-kover-2.9.3 63
+MD5 a4b5a687ffb4d225ceacfa83eaa55e17 ChangeLog 968
 MD5 cb22e10103ddafef4f46b7bff6540713 kover-2.8.7.ebuild 450
-MD5 2628734b1f0dc5115f1f76e3e22066b3 ChangeLog 858
 MD5 567f35d5714a8fdb89e10df19f684e61 kover-2.9.3.ebuild 520
