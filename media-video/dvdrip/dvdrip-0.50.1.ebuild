@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.1.ebuild,v 1.2 2003/02/14 17:56:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.1.ebuild,v 1.3 2003/03/05 11:18:30 phoenix Exp $
 
 IUSE="cdr gnome"
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.exit1.org/${PN}/${MY_URL}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.exit1.org/dvdrip/"
 SLOT="0"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=" gnome? ( gnome-extra/gtkhtml )
 	cdr? ( >=media-video/vcdimager-0.7.12

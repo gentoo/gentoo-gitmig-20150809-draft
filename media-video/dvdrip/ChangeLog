@@ -1,15 +1,28 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.14 2003/02/24 21:01:57 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.15 2003/03/05 11:18:30 phoenix Exp $
+
+*dvdrip-0.50.7 (05 Mar 2003)
+
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> dvdrip-0.50.7.ebuild,
+  files/digest-dvdrip-0.50.7 ChangeLog:
+  Version bumped. Thanks to Fridtjof Busse <fridtjof@fbunet.de> for
+  the contribution. This closes bug #16764.
 
 *dvdrip-0.50.4 (24 Feb 2003)
 
-  24 Feb 2003; phoen][x <phoenixgentoo.org> dvdrip-0.50.4.ebuild,
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> dvdrip-0.50.4.ebuild :
+  Marked this ebuild stable ('x86').
+
+  24 Feb 2003; phoen][x <phoenix@gentoo.org> dvdrip-0.50.4.ebuild,
   files/digest-dvdrip-0.50.4 ChangeLog:
   Version bumped. Thanks to Fridtjof Busse <fridtjof@fbunet.de> for
   the contribution. This closes bug #15640.
 
 *dvdrip-0.50.1 (13 Feb 2003)
+
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> dvdrip-0.50.1.ebuild :
+  Marked this ebuild stable ('x86').
 
   14 Feb 2003; Martin Holzer <mholzer@gentoo.org> dvdrip-0.50.1.ebuild :
   Fixed DEPEND.
