@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/wtf-20021005.ebuild,v 1.2 2003/11/10 02:43:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/wtf-20021005.ebuild,v 1.3 2004/01/06 02:33:05 avenj Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mu.org/~mux/wtf/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa ~amd64"
 
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="sys-apps/grep"
