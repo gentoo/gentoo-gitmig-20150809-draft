@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 887eafe0c3fb793f19176ede90195b1a ChangeLog 551
+MD5 c516b97b15153fc322545649cc5ade1d ChangeLog 660
+MD5 5a9db9a93ec019bc9f513f8008a18422 aqhbci-0.9.14_beta.ebuild 708
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
-MD5 8124db4def4ca612c9c60ad15cb0a01e aqhbci-0.9.14_beta.ebuild 699
 MD5 e2940ce849e27d07eaab34d75f48fbba files/digest-aqhbci-0.9.14_beta 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBz2KkugEuf3OQ0akRAr/5AKCi6//hd5oz5oTfnL0mv5H7xEpUFwCfWMvW
-VTwHp5VhB1Oif5yaAjCBE24=
-=6sUG
+iD8DBQFB2LtUFdQwWVoAgN4RAn9pAKCdL7goaTbBN5ceT5f7V7gs75YcbwCeIZ0m
+r1VjANLyrxUobbS0PN6tQZ4=
+=Iswb
 -----END PGP SIGNATURE-----
