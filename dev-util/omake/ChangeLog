@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/omake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.4 2005/02/06 15:41:33 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.5 2005/02/17 20:05:20 mattam Exp $
+
+  17 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> :
+  Stable on x86, ppc, with downgraded readline dependency.
 
 *omake-0.9.4 (06 Feb 2005)
 
