@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
+<maintainer>
+  <email>usata@gentoo.org</email>
+</maintainer>
 <longdescription>
 Magic Point is an X11 based presentation tool. It is designed to make
 simple presentations easy while to make complicated presentations
