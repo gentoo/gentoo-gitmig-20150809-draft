@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.5 2002/07/25 14:16:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.6 2002/08/14 08:04:08 pvdabeel Exp $
 
 
 MY_P=guiTAR-${PV}
@@ -12,7 +12,7 @@ HOMEPAGE="http://artemis.efes.net/disq/guitar/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="x11-libs/gtk+
 	sys-apps/tar
