@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.4-r1.ebuild,v 1.1 2001/04/06 12:06:37 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.4-r1.ebuild,v 1.2 2001/04/06 14:26:41 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -31,7 +31,7 @@ src_install() {
 
     dolib.a  src/objs/libslang.a
     dolib.so src/elfobjs/libslang.so.${PV}
-    dosym linslang.so.${PV} /usr/lib/libslang.so
+    dosym libslang.so.${PV} /usr/lib/libslang.so
 
     insinto /usr/include
     doins src/{slang.h,slcurses.h}
