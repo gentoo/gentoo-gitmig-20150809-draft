@@ -1,9 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2005.0/virtuals,v 1.2 2005/01/21 20:01:11 wolf31o2 Exp $
-
-# This file is used to either override or extend the parent profile's
-# virtuals mappings.   In this case, this is for ARCHITECTURE SPECIFIC
-# mappings
-
-virtual/dev-manager		sys-fs/udev

@@ -248,3 +248,8 @@ move net-www/rawdog net-news/rawdog
 move net-www/mozilla www-client/mozilla
 move net-www/epiphany www-client/epiphany
 move net-www/mozilla-launcher www-client/mozilla-launcher
+move sys-kernel/gentoo-dev-sources sys-kernel/gentoo-sources
+move sys-kernel/hardened-dev-sources sys-kernel/hardened-sources
+move sys-kernel/rsbac-dev-sources sys-kernel/rsbac-sources
+move sys-kernel/development-sources sys-kernel/vanilla-sources
+move sys-kernel/linux26-headers sys-kernel/linux-headers

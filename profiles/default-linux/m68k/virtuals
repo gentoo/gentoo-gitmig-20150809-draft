@@ -1,5 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/m68k/virtuals,v 1.2 2005/03/04 04:52:49 vapier Exp $
-
-virtual/dev-manager			sys-fs/udev

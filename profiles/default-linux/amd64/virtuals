@@ -1,10 +1,10 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/virtuals,v 1.15 2005/01/12 04:47:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/virtuals,v 1.16 2005/03/28 01:39:06 wolf31o2 Exp $
 
-virtual/os-headers			sys-kernel/linux26-headers
-virtual/alsa				sys-kernel/gentoo-dev-sources
-virtual/kernel				sys-kernel/linux26-headers
-virtual/linux-sources			sys-kernel/gentoo-dev-sources
-virtual/bootloader			sys-boot/grub-static
-virtual/os-headers			sys-kernel/linux26-headers
+virtual/os-headers			sys-kernel/linux-headers
+virtual/alsa				sys-kernel/gentoo-sources
+virtual/kernel				sys-kernel/linux-headers
+virtual/linux-sources		sys-kernel/gentoo-sources
+virtual/bootloader			sys-boot/grub
+virtual/os-headers			sys-kernel/linux-headers
