@@ -1,0 +1,73 @@
+.TH qpkg "1" "March 2002" "gentoolkit 0.1.3" 
+.SH NAME
+qpkg \- manual page for qpk, a package query tool for Gentoo
+.SH SYNOPSIS
+.B qpkg
+\fI[options] [ pkgname | -g group | -f <file> ]\fB
+.br
+.B qpkg
+\fI--dups\fB
+.br
+.B qpkg
+\fI-h | --help\fB
+
+.SH DESCRIPTION
+Qpkg is a package query tool which you can use to query that state of both
+installed and not-installed packages on your Gentoo system.
+.PP
+.SH OPTIONS 
+.TP
+.I Package selection
+.TP
+\fB-f, --find-file\fI
+finds package that owns file <file>.
+.TP
+\fB-fp, --find-pattern\fI
+finds package that owns file matching *<file>*.
+.TP
+\fB-I, --installed\fI
+Include only installed packages.
+.TP
+\fB-U, --uninstalled\fI
+Include only uninstalled packages.
+.TP
+\fB-g, --group\fI
+Find by group (category), this can be combined with other searches.
+.TP
+\fB--dups\fI
+Print a list of packages that have multiple versions installed.
+
+.TP
+.I Information selection
+.TP
+\fB-l, --list\fI
+List package content
+.TP
+\fB-i, --info\fI
+List package description and home page.
+.TP
+\fB-ct, --check-time\fI
+Alias for -tc.
+.TP
+\fB-tc, --time-check\fI
+Verify package files' time stamps.
+.TP
+\fB-cm, --check-md5\fI
+Alias for -mc
+.TP
+\fB-mc, --md5-check\fI
+Verify package files' MD5 sums.
+.TP
+\fB-c, --check\fI
+Verify package consistency by checking both timestamps and MD5 sums.
+
+.SH AUTHORS
+Vitaly Kushneriuk <vitaly@gentoo.org>, 2002: qpkg
+.br
+Karl Trygve Kalleberg <karltk@gentoo.org>, 2002: man page
+
+.SH "SEE ALSO"
+ebuild(5) 
+.TP
+The \fI/usr/sbin/qpkg\fR script. 
+.TP

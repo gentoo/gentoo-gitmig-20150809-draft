@@ -1,9 +1,17 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.4 2002/02/11 15:28:47 vitaly Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.5 2002/03/16 17:32:22 karltk Exp $
 
 
-*gentoolkit-0.1.2 (11 Feb 2002)
+*gentoolkit-0.1.4 (16 Mar 2002)
+
+  16 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.4.ebuild, various:
+
+  Added man pages to lintool, qpkg and etc-update.
+
+  Removed old versions.
+
+*gentoolkit-0.1.3 (11 Feb 2002)
 
   11 Feb 2002; Vitaly Kushneriuk <vitaly@gentoo.org> files/scripts/qpkg:
 
