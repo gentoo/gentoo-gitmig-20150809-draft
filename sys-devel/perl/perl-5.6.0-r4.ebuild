@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r4.ebuild,v 1.1 2000/12/02 08:18:46 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r4.ebuild,v 1.2 2000/12/19 23:39:17 achim Exp $
 
 P=perl-5.6.0
 A=${P}.tar.gz
@@ -9,6 +9,8 @@ S=${WORKDIR}/perl-5.6.0
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 SRC_URI="ftp://ftp.perl.org/pub/perl/CPAN/src/${A}"
 HOMEPAGE="http://www.perl.org"
+DEPEND=">=sys-libs/db-3.1.17
+	>=sys-libs/gdbm-1.8.0"
 
 src_compile() {   
                         
@@ -29,8 +31,7 @@ EOF
 
 
     sh Configure -des -Dprefix=/usr -Dd_dosuid \
-	-Di_db -Di_gdbm \
-	-Duselargefiles -Duse64bitint
+	-Dd_semctl_semun -Di_db -Di_gdbm -Duselargefiles
 	#-Dusethreads -Duse505threads \
 
     #Optimize ;)
@@ -38,7 +39,8 @@ EOF
     sed -e "s/optimize='-O2'/optimize=\'${CFLAGS}\'/" config.sh.orig > config.sh
     #THIS IS USED LATER:
     export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
-    try make
+    try make 
+    # Parallell make failes
     make test
 }
 
@@ -95,10 +97,12 @@ EOF
 
 # DOCUMENTATION
 
-    dodoc Changes* Artistic Copying README
+    dodoc Changes* Artistic Copying README Todo* AUTHORS
 
-
-
+# HTML Documentation
+    dodir /usr/doc/${PF}/html
+    ./perl installhtml --recurse --htmldir=${D}/usr/doc/${PF}/html
+    prepalldocs
 }
 
 
