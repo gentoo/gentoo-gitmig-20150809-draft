@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/iptstate-1.0.1.ebuild,v 1.1 2002/03/02 06:05:20 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/iptstate-1.2.1.ebuild,v 1.1 2002/07/02 05:33:20 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IP Tables State displays states being kept by iptables in a top-like format"
@@ -19,7 +19,7 @@ src_compile() {
 src_install() {
 
 	make PREFIX=${D}/usr install
-	dodoc README Changelog
+	dodoc README Changelog BUGS CONTRIB LICENSE WISHLIST
 
 }
 
