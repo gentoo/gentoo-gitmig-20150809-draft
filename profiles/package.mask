@@ -21,8 +21,9 @@
 ##   End example
 ##
 
+
 # <fava@gentoo.org> (24 Apr 2003)
-# work in progress
+# work in progress, broken ebuild
 >=app-admin/ufed-0.3
 
 # <robbat2@gentoo.org> (23 Apr 2003)
