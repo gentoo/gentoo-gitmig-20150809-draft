@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.1 2004/03/15 12:18:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.2 2004/03/18 08:24:35 phosphan Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 	# See bug #36502, comment 8
 	[ "$ARCH" != x86 ] && epatch ${FILESDIR}/${P}-fPIC.patch
 
-#	epatch "${FILESDIR}/no-x11-lib.patch"
+	use X || epatch "${FILESDIR}/no-x11-lib-2.patch"
 }
 
 src_compile() {
