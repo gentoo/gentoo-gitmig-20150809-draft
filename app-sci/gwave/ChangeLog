@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/gwave
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/ChangeLog,v 1.4 2004/02/01 17:52:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/ChangeLog,v 1.5 2004/04/19 10:23:34 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> gwave-20020122.ebuild,
+  gwave-20030804.ebuild, gwave-20031224.ebuild:
+  Added IUSE
 
 *gwave-20031224 (01 Feb 2004)
 

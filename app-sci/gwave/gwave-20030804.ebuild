@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/gwave-20030804.ebuild,v 1.3 2004/04/07 19:44:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/gwave-20030804.ebuild,v 1.4 2004/04/19 10:23:34 phosphan Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.geda.seul.org/dist/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND=">=x11-libs/gtk+-1.2
 	>=dev-util/guile-1.6
