@@ -1,3 +1,5 @@
-MD5 fd4f029df08eea8910af6d0698dbe410 ChangeLog 348
 MD5 77e8c7aecbb063c1eb121a8406c8b77e bbdate-0.2.3.ebuild 659
+MD5 22e38992954bb77f1136da6600b9d420 ChangeLog 476
+MD5 b6654add6c212a9a67fc89e8ea260d3e bbdate-0.2.4.ebuild 662
 MD5 49a1de247dbd7485cb382dadbc3dc783 files/digest-bbdate-0.2.3 63
+MD5 f977ccef24f99dd5d0b956db746e6e26 files/digest-bbdate-0.2.4 63
