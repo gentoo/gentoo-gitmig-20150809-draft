@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.0.ebuild,v 1.8 2004/06/24 22:21:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.0.ebuild,v 1.9 2004/06/27 17:29:43 zx Exp $
 
 inherit eutils java-pkg
 
@@ -14,8 +14,8 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
-IUSE="jikes"
+KEYWORDS="x86 ~sparc ppc"
+IUSE="jikes doc"
 
 src_unpack() {
 	unpack ${A}
