@@ -1,7 +1,15 @@
-MD5 0e95402502006d082e18fe3a50a2512f files/digest-hydra-3.0 60
-MD5 afcf39b78ccc8fa0569e7ad828d56e55 files/digest-hydra-3.1 60
-MD5 3f268b3dbfe53c124b61b04632652b3c files/digest-hydra-4.0 64
-MD5 de2bfe48b5a4808dd40b9fdf23aea79f hydra-3.0.ebuild 877
-MD5 fd9e7304b0bb478ce21e00d534be5500 ChangeLog 614
-MD5 638d56d9a5c2a8275f8626b024877eeb hydra-3.1.ebuild 872
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 054ffe556e7a0c675f5bae37d9361b91 ChangeLog 789
 MD5 178473c35dcec1212ec5b8c4305d1d41 hydra-4.0.ebuild 932
+MD5 d2f8d50d4fa5a248ac3d6174c510b80a hydra-4.1.ebuild 801
+MD5 3f268b3dbfe53c124b61b04632652b3c files/digest-hydra-4.0 64
+MD5 bb569d03a75366ecec4924c020582d81 files/digest-hydra-4.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA16VOHTu7gpaalycRApl9AJ9UO+SKu2otVboz09qyK4jf46tm0gCgzzNa
+BNqfmPDr7SCnFNPt+Gc20yA=
+=yd9S
+-----END PGP SIGNATURE-----
