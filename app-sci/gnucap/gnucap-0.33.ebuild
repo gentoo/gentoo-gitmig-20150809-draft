@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc. and Tim Yamin <plasmaroo@gentoo.org> <plasmaroo@squirrelserver.org.uk>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gnucap/gnucap-0.33.ebuild,v 1.1 2003/11/28 22:07:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gnucap/gnucap-0.33.ebuild,v 1.2 2003/11/30 13:14:46 plasmaroo Exp $
 
 S=${WORKDIR}/${P}
 
@@ -25,6 +25,8 @@ src_install () {
 
 	insinto /usr/bin
 	doins src/O/gnucap
+	fperms 755 /usr/bin/gnucap
+
 	dodoc doc/COPYING doc/acs-tutorial doc/whatisit
 
 }
