@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.0.2-r1.ebuild,v 1.5 2004/11/12 10:31:29 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.0.2-r1.ebuild,v 1.6 2004/12/29 13:51:23 joem Exp $
 
 inherit gnome2 eutils
 
@@ -44,3 +44,5 @@ pkg_postinst() {
 	einfo "needs to be running or it will shut down."
 
 }
+
+USE_DESTDIR="1"
