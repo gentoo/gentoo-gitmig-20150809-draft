@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.3-r1.ebuild,v 1.1 2003/11/16 18:08:05 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.3-r1.ebuild,v 1.2 2003/11/18 01:21:22 lu_zero Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -138,7 +138,7 @@ src_compile() {
 	fi
 
 	# Crashes on start when compiled with -fomit-frame-pointer
-	filter-flags -fomit-frame-pointer
+	filter-flags -fomit-frame-pointer -mpowerpc-gfxopt
 	filter-flags -ffast-math
 	append-flags -s -fforce-addr
 
