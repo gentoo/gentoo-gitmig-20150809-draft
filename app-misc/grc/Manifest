@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ac3b902b47f41fe2f8d743d3840b9ef2 grc-1.0.2.ebuild 703
 MD5 cbb2784c463fa01d43e0f865a7d02bb6 grc-1.0.6.ebuild 903
-MD5 ea006ab22e0013708126d0e78d1d45ca ChangeLog 1091
+MD5 54cd40235ed371843b35e4d56f600186 ChangeLog 1090
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 383d861eec4f6bf4616cbc97c558dac6 files/1.0.6-support-more-files.patch 1196
 MD5 13eb759a5f5f2df0eb2222dc9564efe3 files/conf.configure 530
 MD5 8d7cac1460ba9326f64da6b5efa70454 files/digest-grc-1.0.2 60
 MD5 0e25c91f77dd4f8a1b9d8065d6158fa1 files/digest-grc-1.0.6 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBd78dEZCkKN40op4RAuJhAJ9xfAIa4lOuScqkkQikORkllIq3HACfUdMI
++EwpP/jfPp5xMPAWTwA8Gxk=
+=J2tq
+-----END PGP SIGNATURE-----
