@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.2.ebuild,v 1.10 2002/09/03 04:54:02 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.2.ebuild,v 1.11 2002/09/08 19:41:33 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -63,7 +63,7 @@ src_compile() {
 	use python && myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
 	use java && myconf="$myconf --with-java"
-	use ssl && myconf="$myconf --with-openssl=yes"
+	use ssl && myconf="$myconf --with-openssl"
 	use nls && myconf="$myconf --enable-locale --enable-nls --enable-multibyte"
 	use libg++ && myconf="$myconf --with-CXX"
 
