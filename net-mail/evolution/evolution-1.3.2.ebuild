@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.2.ebuild,v 1.4 2003/06/06 23:58:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.2.ebuild,v 1.5 2003/06/07 01:36:56 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -44,6 +44,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0.2
 	spell?   ( >=app-text/gnome-spell-1.0.2 )"
 
 DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
 	>=sys-devel/libtool-1.4.1-r1
 	>=dev-util/intltool-0.20
 	sys-devel/gettext
