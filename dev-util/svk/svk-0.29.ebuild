@@ -35,7 +35,7 @@ DEPEND="${DEPEND}
 	dev-perl/TimeDate
 	dev-perl/URI
 	dev-perl/PerlIO-eol
-	>=dev-perl/Locale-Maketext-Lexicon-0.42
+	>=dev-perl/locale-maketext-lexicon-0.42
 	>=dev-perl/Locale-Maketext-Simple-0.12
 	dev-perl/Compress-Zlib
 	dev-perl/FreezeThaw

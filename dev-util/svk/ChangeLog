@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/svk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.2 2005/02/05 23:37:36 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.3 2005/04/02 17:59:50 mcummings Exp $
+
+  02 Apr 2005; Michael Cummings <mcummings@gentoo.org> svk-0.26.ebuild,
+  svk-0.29.ebuild:
+  Correcting dependancy on locale-maketext-lexicon
 
 *svk-0.29 (05 Feb 2005)
 
