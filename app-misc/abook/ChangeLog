@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/abook
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.10 2004/03/25 21:49:43 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.11 2004/03/27 17:06:42 rizzo Exp $
+
+  27 Mar 2004; Don Seiler <rizzo@gentoo.org>; abook-0.5.1-r1.ebuild,
+  abook-0.5.1.ebuild, files/0.5.1-01_mutt-filter:
+  Removing obsolete files
 
 *abook-0.5.2-r1 (25 Mar 2004)
 
