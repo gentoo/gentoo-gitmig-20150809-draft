@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.21 2003/06/07 12:21:22 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.22 2003/06/21 22:06:04 drobbins Exp $
 
 IUSE="tcltk java"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.sleepycat.com/update/snapshot/${P}.tar.gz"
 HOMEPAGE="http://www.sleepycat.com"
 SLOT="4"
 LICENSE="DB"
-KEYWORDS="~x86 -ppc -sparc "
+KEYWORDS="x86 amd64 -ppc -sparc "
 
 DEPEND="tcltk? ( dev-lang/tcl )
 	java? ( virtual/jdk )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9.ebuild,v 1.13 2003/02/13 16:48:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9.ebuild,v 1.14 2003/06/21 22:06:04 drobbins Exp $
 
 S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
@@ -10,7 +10,7 @@ SLOT="3"
 RDEPEND="virtual/glibc"
 DEPEND="$RDEPEND =sys-libs/db-1.85-r1"
 LICENSE="DB"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 amd64 ppc sparc "
 
 # this doesnt build without exceptions
 export CXXFLAGS="${CXXFLAGS/-fno-exceptions/-fexceptions}"

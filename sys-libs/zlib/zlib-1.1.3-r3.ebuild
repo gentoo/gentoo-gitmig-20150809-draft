@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.3-r3.ebuild,v 1.10 2003/02/13 16:53:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.3-r3.ebuild,v 1.11 2003/06/21 22:06:05 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard (de)compression library"
 SRC_URI="ftp://ftp.freesoftware.com/pub/infozip/zlib/${P}.tar.gz"
 HOMEPAGE="http://www.gzip.org/zlib"
 LICENSE="ZLIB"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 amd64 ppc sparc "
 SLOT="0"
 
 DEPEND="virtual/glibc"

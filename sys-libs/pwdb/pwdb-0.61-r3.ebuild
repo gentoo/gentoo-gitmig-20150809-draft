@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r3.ebuild,v 1.18 2003/02/13 16:52:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r3.ebuild,v 1.19 2003/06/21 22:06:04 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Password database"
@@ -8,7 +8,7 @@ SRC_URI="ftp://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}.tar
 HOMEPAGE="http://www.firstlinux.com/cgi-bin/package/content.cgi?ID=6886"
 DEPEND="virtual/glibc"
 LICENSE="PWDB"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 SLOT="0"
 
 src_unpack () {
