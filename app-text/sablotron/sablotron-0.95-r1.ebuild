@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.95-r1.ebuild,v 1.5 2002/08/16 02:42:02 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.95-r1.ebuild,v 1.6 2002/08/26 12:21:18 seemant Exp $
 
 MY_P="Sablot-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -21,12 +21,17 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
+
+	local myconf
+
+	use perl && myconf="--enable-perlconnect"
+
+	econf ${myconf} || die
 	make || die
 }
 
 src_install () {
-	einstall prefix=${D}/usr || die
+	einstall || die
 	dodoc README* RELEASE
 	dodoc src/TODO
 }
