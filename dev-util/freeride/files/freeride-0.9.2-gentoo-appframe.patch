@@ -1,14 +1,6 @@
---- appframe.rb.old	2004-12-03 22:24:02.000000000 +0100
-+++ appframe.rb	2005-02-07 20:19:55.224242776 +0100
-@@ -1,6 +1,6 @@
- # Purpose: Setup and initialize the core gui interfaces
- #
--# $Id: freeride-0.9.2-gentoo-appframe.patch,v 1.1 2005/02/07 21:42:00 citizen428 Exp $
-+# $Id: freeride-0.9.2-gentoo-appframe.patch,v 1.1 2005/02/07 21:42:00 citizen428 Exp $
- #
- # Authors:  Curt Hibbs <curt@hibbs.com>
- # Contributors:
-@@ -37,7 +37,24 @@
+--- appframe.rb.old	2005-02-08 11:46:02.392828416 +0100
++++ appframe.rb	2005-02-08 11:45:38.820411968 +0100
+@@ -21,7 +21,24 @@
          
          component_slot.subscribe do |event, slot|
            if (event == :notify_slot_add && slot.parent == component_slot)
@@ -34,7 +26,7 @@
            end
          end
          
-@@ -52,14 +69,13 @@
+@@ -36,14 +53,13 @@
        class Renderer < Fox::FXMainWindow
          include Fox
          attr_reader :plugin
@@ -52,7 +44,7 @@
  
            # use the FR mini icon for the main window
            mi_path = "#{plugin.plugin_configuration.full_base_path}/icons/bullseye.ico"
-@@ -146,24 +162,28 @@
+@@ -130,24 +146,28 @@
            @plugin["/system/ui/fox/dockbar/south/textAngle"].data = 0
            @plugin.log_info << "Dockbar UI components positioned OK!"
            
