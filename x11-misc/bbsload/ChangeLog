@@ -1,6 +1,19 @@
 # ChangeLog for x11-misc/bbsload
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/ChangeLog,v 1.6 2003/02/12 09:27:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/ChangeLog,v 1.7 2003/06/19 16:48:42 mkeadle Exp $
+
+*bbsload-0.2.8 (19 Jun 2003)
+
+  19 Jun 2003; mkeadle <mkeadle@gentoo.org> bbsload-0.2.5-r1.ebuild,
+  bbsload-0.2.5-r1.ebuild, bbsload-0.2.5-r2.ebuild, bbsload-0.2.5-r2.ebuild,
+  bbsload-0.2.8.ebuild:
+  bump to latest upsdtream stable. added automake to DEPEND. breaks with emake
+  now.
+
+*bbsload-0.2.8 (19 Jun 2003)
+
+  19 Jun 2003; mkeadle <mkeadle@gentoo.org> bbsload-0.2.8.ebuild:
+  bump to latest upstream stable. marked ~x86 ~sparc
 
 *bbsload-0.2.6 (12 Dec 2002)
 
