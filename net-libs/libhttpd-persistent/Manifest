@@ -1,8 +1,14 @@
-MD5 02e89b0f99d99cc6a2284aa49ae1621b ChangeLog 2601
-MD5 cf721678e28743ea0fab7fed1afc8322 libhttpd-persistent-1.3p-r6.ebuild 1417
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 300378ac668a717f80d4d7794626ac73 ChangeLog 2809
 MD5 34371b0b6264e8222d4666bf5895f5f7 metadata.xml 432
-MD5 24b3afa017edda99b1016be28d5b07f2 libhttpd-persistent-1.3p-r7.ebuild 1423
-MD5 78264ec5e530663b659e27f2e328523f libhttpd-persistent-1.3p-r8.ebuild 1423
-MD5 3d54fde5d128291ea5a6ae6dd4f9d840 files/digest-libhttpd-persistent-1.3p-r6 64
-MD5 a43bd699e47de8bf6404b07890394b13 files/digest-libhttpd-persistent-1.3p-r7 64
+MD5 4d6f4092967658051c871ccf0e5d5d42 libhttpd-persistent-1.3p-r8.ebuild 2096
 MD5 d59fcbd11fe6a68bf60fcba57b403351 files/digest-libhttpd-persistent-1.3p-r8 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdMT2ArHZZzCEUG0RAtMGAJ45R/vBMs6plv4Tpohf1kwDyOoYLgCeKsiH
+4E2TG3Q0nUFt3LXuoEfIXr0=
+=yvt6
+-----END PGP SIGNATURE-----

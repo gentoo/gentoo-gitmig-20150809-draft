@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libhttpd-persistent
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.12 2004/09/22 17:50:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.13 2004/10/19 07:40:28 eradicator Exp $
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -libhttpd-persistent-1.3p-r6.ebuild, -libhttpd-persistent-1.3p-r7.ebuild:
+  Removing old versions.  Using toolchain-funs eclass now where it works.
 
   22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libhttpd-persistent-1.3p-r8.ebuild:
