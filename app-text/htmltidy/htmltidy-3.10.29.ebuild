@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.1 2003/11/08 05:42:56 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.2 2003/12/16 14:31:29 obz Exp $
 
 # Convert gentoo version number x.y.z to date xyz for
 # tidy's source numbering by date
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 
 IUSE="debug doc xml"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 src_unpack() {
 
