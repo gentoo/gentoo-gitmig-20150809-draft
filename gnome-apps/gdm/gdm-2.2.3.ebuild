@@ -4,7 +4,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gdm"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/latest/sources/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gdm/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=sys-libs/pam-0.72
