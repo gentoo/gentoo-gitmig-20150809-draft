@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.8-r1.ebuild,v 1.1 2004/03/07 23:42:01 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.8-r1.ebuild,v 1.2 2004/04/29 08:36:57 ciaranm Exp $
 
 IUSE="nls xinerama truetype kde gnome"
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/x11
 PROVIDE="virtual/blackbox"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="MIT"
 KEYWORDS="x86 ppc sparc amd64 alpha hppa ia64 ~mips"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.9.ebuild,v 1.1 2004/04/26 11:05:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.9.ebuild,v 1.2 2004/04/29 08:36:57 ciaranm Exp $
 
 IUSE="nls xinerama truetype kde gnome"
 
@@ -10,16 +10,24 @@ HOMEPAGE="http://www.fluxbox.org"
 
 # Please note that USE="kde gnome" simply adds support for
 # the respective protocols, and does not depend on external libraries.
-DEPEND=">=sys-devel/autoconf-2.52
-		${RDEPEND}"
 RDEPEND="virtual/x11
 	truetype? ( media-libs/freetype )
 	nls? ( sys-devel/gettext )"
+DEPEND=">=sys-devel/autoconf-2.52
+		${RDEPEND}"
 PROVIDE="virtual/blackbox"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="MIT"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha ~hppa ~ia64 ~mips"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# upstream tell us we probably want to apply this if there's any chance
+	# anyone will ever try to compile using gcc 3.4.
+	epatch ${FILESDIR}/${PN}-0.9.9-gcc3.4.patch
+}
 
 src_compile() {
 	econf \

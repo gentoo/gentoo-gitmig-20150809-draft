@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r2.ebuild,v 1.11 2004/04/26 11:05:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r2.ebuild,v 1.12 2004/04/29 08:36:57 ciaranm Exp $
 
 IUSE="kde gnome nls xinerama truetype cjk"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Window manager based on Blackbox -- has tabs."
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://fluxbox.sf.net"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 ppc sparc hppa mips ~amd64 alpha"
 PROVIDE="virtual/blackbox"
