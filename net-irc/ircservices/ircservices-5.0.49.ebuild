@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.49.ebuild,v 1.1 2005/03/11 19:01:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.49.ebuild,v 1.2 2005/03/14 20:45:49 swegener Exp $
 
 inherit eutils fixheadtails flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE=""
 DEPEND=""
 
 # configure fails with -O higher than 2
-replace-flags "-O[3-9]" "-O2"
+replace-flags "-O[3-9s]" "-O2"
 
 src_unpack() {
 	unpack ${A}
