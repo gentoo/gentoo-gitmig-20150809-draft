@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.4_pre20030409.ebuild,v 1.2 2003/05/04 19:07:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.4_pre20030409.ebuild,v 1.3 2003/05/04 19:31:59 mholzer Exp $
 
 inherit libtool flag-o-matic
 
@@ -23,7 +23,6 @@ DEPEND=">=media-libs/a52dec-0.7.3
 	>=media-libs/libdv-0.9.5
 	x86? ( >=dev-lang/nasm-0.98.34 )
 	>=media-libs/libdvdread-0.9.0
-	>=media-video/mplayer-0.90_pre10
 	>=media-video/ffmpeg-0.4.6
 	>=media-libs/xvid-0.9.0
 	>=media-video/mjpegtools-1.6.0
