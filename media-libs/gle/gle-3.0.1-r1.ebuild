@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r1.ebuild,v 1.2 2001/02/13 14:29:40 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r1.ebuild,v 1.3 2001/02/15 18:16:54 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GL extrusion library"
@@ -14,12 +14,12 @@ DEPEND="virtual/glibc
 
 src_compile() {
 
-	try ./configure --with-x --prefix=/usr
+	try ./configure --with-x --prefix=/usr --mandir=/usr/share/man
 	try make
 }
 
 src_install () {
-	try make prefix=${D}/usr install
+	try make prefix=${D}/usr mandir=${D}/usr/share/man install
 }
 
 

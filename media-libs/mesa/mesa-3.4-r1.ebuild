@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.4-r1.ebuild,v 1.1 2001/02/13 14:29:41 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.4-r1.ebuild,v 1.2 2001/02/15 18:16:54 achim Exp $
 
 P=MesaLib-${PV}
 A0=${P}.tar.bz2
@@ -97,7 +97,7 @@ src_compile() {
 
 src_install () {
 
-    try make DESTDIR=${D} install
+
     if [ "`use ggi`" ]
     then
       cd ggi/ggiglut
@@ -107,7 +107,8 @@ src_install () {
       sed -e "s:-L${S}/src/.libs::g" libglut.orig > libglut.la
       rm libglut.orig
     fi
-
+    cd ${S}
+    try make DESTDIR=${D} install
     cd ${D}/usr/lib
     if [ "$PN" = "mesa-glu" ]
     then
