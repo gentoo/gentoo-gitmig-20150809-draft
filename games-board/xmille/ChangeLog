@@ -1,6 +1,11 @@
 # ChangeLog for games-board/xmille
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.1 2004/01/09 01:43:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.2 2004/04/22 07:13:41 mr_bones_ Exp $
+
+*xmille-2.0-r1 (22 Apr 2004)
+
+  22 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> xmille-2.0-r1.ebuild:
+  get the patch off the Debian mirrors; update to the latest Debian patch.
 
 *xmille-2.0 (08 Jan 2004)
 
