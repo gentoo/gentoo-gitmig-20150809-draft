@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.2.ebuild,v 1.1 2003/11/20 01:14:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.2.ebuild,v 1.2 2003/11/20 18:02:08 mholzer Exp $
 
 IUSE=""
 
 SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
+RESTRICT="nomirror"
 DESCRIPTION="Console based AIM client that looks like ircII"
 HOMEPAGE="http://dev.ojnk.net/"
 LICENSE="GPL-2"
