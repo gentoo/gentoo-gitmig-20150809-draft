@@ -18,12 +18,14 @@ src_unpack() {
   unpack ${A}
   cd ${S}
   try patch -p0 < ${FILESDIR}/${P}-Makefile.org-gentoo.diff
-
+  cp Configure Configure.orig
+  sed -e "s/-O3/$CFLAGS/" -e "s/-m486//" \
+    Configure.orig > Configure
 }
 
 src_compile() {
 
-    ./config --prefix=/usr --openssldir=/usr/ssl shared threads
+   ./config --prefix=/usr --openssldir=/usr/ssl shared threads
    try make all
 }
 
