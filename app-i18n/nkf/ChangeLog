@@ -1,0 +1,11 @@
+# ChangeLog for app-i18n/nkf
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.1 2002/10/23 13:58:05 stubear Exp $
+
+*nkf-1.92 (12 Oct 2002)
+
+  12 Oct 2002; Stuart Bouyer <stubear@gentoo.org> nkf-1.92.ebuild,
+  digest-nkf-1.92, ChangeLog :
+
+  Initial ebuild submitted by Moto Kawasaki <kawasaki@kawasaki3.org>,
+  updated by YAMAKURA Makoto <makoto@dsb.club.ne.jp>.
