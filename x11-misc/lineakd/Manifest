@@ -1,19 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3c912f7e6fab2dd2ddf575c90f2d0537 ChangeLog 1638
 MD5 7e3261cb65c9f60bcafec5da2baa97a9 lineakd-0.7.2.ebuild 821
 MD5 a6ccada061a87c124656d7636979b3c8 lineakd-0.7.ebuild 704
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 fd8b27ae03c8731b876502d30d0d03fe lineakd-0.6.1.ebuild 706
-MD5 cb10498babf3c81a98a423ea7f52f34a files/digest-lineakd-0.6.1 65
-MD5 7633a56319bdc9f33b902beb4ecb3bb4 files/digest-lineakd-0.7 63
-MD5 972697b2c9473d58cc3734141c3161a4 files/digest-lineakd-0.7.2 65
+MD5 a34146ecedf69488f56f71b852445424 lineakd-0.8.2.ebuild 846
+MD5 8b981cf7aa18f439012ddd394051d974 ChangeLog 1897
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 c5669d240c36c2f263c6ace7678e382c files/lkey-cast.patch 519
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjnx6I7fK2cqeyXkRAvc1AJ4q1JkbgZVi4vjfP5KCfwW9Fk3ZWACfXBlz
-ekqpXYUFvIAI1trDchN1fUY=
-=12CS
------END PGP SIGNATURE-----
+MD5 7633a56319bdc9f33b902beb4ecb3bb4 files/digest-lineakd-0.7 63
+MD5 cb10498babf3c81a98a423ea7f52f34a files/digest-lineakd-0.6.1 65
+MD5 972697b2c9473d58cc3734141c3161a4 files/digest-lineakd-0.7.2 65
+MD5 7d34394cb4d85fa0c1aeca17e614ab85 files/digest-lineakd-0.8.2 65
