@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.8 2002/08/14 19:45:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.9 2002/09/08 16:17:15 danarmak Exp $
 
 # This is for kde-base cvs ebuilds. Read comments about settings.
 # It uses $S and sets $SRC_URI, so inherit it as late as possible (certainly after any other eclasses).
@@ -22,7 +22,7 @@ INHERITED="$INHERITED $ECLASS"
 
 # Under this directory the cvs modules are stored/accessed
 # Storing in tarballs in $DISTDIR to be implemented soon
-[ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="/usr/src/kde"
+[ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="$DISTDIR/cvs-src/kde"
 
 # Set to name of cvs server. Set to "" to disable fetching (offline mode).
 # In offline mode, we presume that modules are already checked out at the specified

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.13 2002/08/19 16:56:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.14 2002/09/08 16:17:15 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -26,7 +26,7 @@ INHERITED="$INHERITED $ECLASS"
 #[ -n "$ECVS_LOCAL" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -l"
 
 # Where the cvs modules are stored/accessed
-[ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="/usr/src"
+[ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="${DISTDIR}/cvs-src"
 
 # Name of cvs server, set to "offline" to disable fetching
 # (i.e. to assume module is checked out already and don't update it).
@@ -45,6 +45,10 @@ INHERITED="$INHERITED $ECLASS"
 # Module to be fetched, must be set explicitly -
 # I don't like the former ="$PN" default setting
 [ -z "$ECVS_MODULE" ] && debug-print "$ECLASS: error: ECVS_MODULE not set, cannot continue"
+
+# Branch/tag to use, default is HEAD
+# uncomment the following line to enable the reset-branch-to-HEAD behaviour
+[ -z "$ECVS_BRANCH" ] && ECVS_BRANCH="HEAD"
 
 # Subdirectory in module to be fetched, default is not defined = whole module
 # DO NOT set default to "", if it's defined at all code will break!
@@ -73,6 +77,14 @@ ECS_MODULE=$ECVS_MODULE
 ECVS_MODULE_SUBDIR=$ECVS_SUBDIR
 ECVS_LOCAL=$ECVS_LOCAL
 DIR=$DIR"
+
+	# if ECVS_TOP_DIR is a symlink to a dir, get the real dir's path,
+	# otherwise addwrite() doesn't work
+	if [ -n "$ECVS_TOP_DIR" ]; then
+	    cd -P $ECVS_TOP_DIR
+	    ECVS_TOP_DIR="`pwd`"
+	    cd $OLDPWD
+	fi
 	
 	# a shorthand
 	[ -n "$ECVS_SUBDIR" ] && DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}/${ECVS_SUBDIR}" || \
@@ -95,7 +107,6 @@ DIR=$DIR"
 	fi
 
 	# disable the sandbox for this dir
-	
 	# not just $DIR because we want to create moduletopdir/CVS too
 	addwrite $ECVS_TOP_DIR/$ECVS_MODULE
 	
@@ -174,6 +185,10 @@ DIR=$DIR"
 		fi
 
 	fi
+
+	# cvs auto-switches branches, how nice
+	# warning: if we do it this way we get multiple -rX options - harmless i think
+	[ -n "$ECVS_BRANCH" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -r$ECVS_BRANCH"
 
 	# finally run the cvs update command
 	debug-print "$FUNCNAME: running $ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS with $ECVS_SERVER for module $ECVS_MODULE subdir $ECVS_SUBDIR"
