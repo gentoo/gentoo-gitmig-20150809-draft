@@ -2,6 +2,7 @@ MD5 c94f334485aebdf46f780ee6e463787e ChangeLog 1336
 MD5 d40791d1c634a9e4821ddd7800a52b3f rezound-0.7.0_beta.ebuild 890
 MD5 19a34eec5971d3224f3dc4219521ebbe rezound-0.9.0_beta.ebuild 1238
 MD5 b8169ca15c5ef9449d7f0d66e930addb rezound-0.8.3_beta-r2.ebuild 932
+MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 0a88192ec35374b20ff65174d60a910c files/digest-rezound-0.7.0_beta 70
 MD5 7537253fdf956d64c7d7dcfd4a29b60a files/digest-rezound-0.8.3_beta-r2 70
 MD5 c941294b2efff5b8fbfdfd448d48490f files/digest-rezound-0.9.0_beta 70
