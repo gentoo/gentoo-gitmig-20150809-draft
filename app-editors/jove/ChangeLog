@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jove
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.1 2004/02/26 03:16:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.2 2004/06/07 04:21:31 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  jove-4.16.0.58.ebuild:
+  x86 stable. Added dependancy. QA fixed to mirror://debian/
 
 *jove-4.16.0.58 (25 Feb 2004)
 
