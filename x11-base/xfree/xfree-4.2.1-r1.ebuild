@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.12 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.13 2003/01/23 00:31:36 weeve Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -85,7 +85,7 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc -sparc ~alpha"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
