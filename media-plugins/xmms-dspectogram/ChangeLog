@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-dspectogram
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/ChangeLog,v 1.13 2004/09/15 19:24:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/ChangeLog,v 1.14 2004/11/27 20:19:10 corsair Exp $
+
+  27 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  xmms-dspectogram-1.2.1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72242
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-dspectogram-1.2.1.ebuild:
