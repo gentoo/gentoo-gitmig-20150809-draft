@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/transcend/transcend-0.2.ebuild,v 1.1 2005/02/08 19:00:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/transcend/transcend-0.2.ebuild,v 1.2 2005/02/22 12:21:54 dholm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/Transcend_${PV}-IGF-2_UnixSource.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc
