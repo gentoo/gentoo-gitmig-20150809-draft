@@ -1,9 +1,13 @@
 # ChangeLog for x11-misc/xstroke
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.5 2003/02/12 09:34:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.6 2003/02/17 00:32:42 liquidx Exp $
 
 *xstroke-0.5.12 (31 May 2002)
- 
+  
+  17 Feb 2003; Alastair Tse <liquidx@gentoo.org> :
+  
+  Eliminated the need for patch and fixed freetype header problems (#15494).
+  
   11 Feb 2003; Seemant Kulleen <seemant@gentoo.org> :
 
   Moved the patch to a patchball on the mirrors and out of files/
