@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.5 2003/09/22 12:09:55 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.6 2003/09/23 04:22:09 pebenito Exp $
+
+  22 Sep 2003; Chris PeBenito <pebenito@gentoo.org> checkpolicy-1.1.ebuild:
+  Add selinux-base-policy dependancy.
 
   22 Sep 2003; <paul@gentoo.org> metadata.xml:
   Fix metadata.xml
