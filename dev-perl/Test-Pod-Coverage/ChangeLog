@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-Pod-Coverage
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/ChangeLog,v 1.1 2004/09/22 14:25:06 mcummings Exp $
+
+*Test-Pod-Coverage-1.06 (22 Sep 2004)
+
+  22 Sep 2004; Michael Cummings <mcummings@gentoo.org>
+  +Test-Pod-Coverage-1.06.ebuild:
+  New dep for new version of XML-DT
+
