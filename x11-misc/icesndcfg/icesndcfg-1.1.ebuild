@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/icesndcfg-1.1.ebuild,v 1.4 2004/03/03 12:46:15 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/icesndcfg-1.1.ebuild,v 1.5 2004/04/01 10:16:38 phosphan Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 
 src_compile () {
-
+	addwrite ${QTDIR}/etc/settings
 	econf
 	emake || die
 }
