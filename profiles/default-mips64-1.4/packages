@@ -37,6 +37,9 @@
 *>=sys-kernel/mips-headers-2.4.21
 *>=sys-devel/gnuconfig-20030708
 
+# We want this to mimic mips32 environments sometimes
+*sys-devel/mips32
+
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 *app-shells/sash
