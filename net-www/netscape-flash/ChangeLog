@@ -1,6 +1,13 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.12 2002/12/16 10:56:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.13 2002/12/18 13:55:27 seemant Exp $
+
+*netscape-flash-6.0.68 (18 Dec 2002)
+
+  18 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
+  netscape-flash-6.0.69-r1.ebuild files/digest-netscape-flash-6.0.69-r1 :
+
+  Added lib-compat-1.1 (with gcc2's libstdc++) as a DEPEND
 
 *netscape-flash-6.0.69 (16 Dec 2002)
 
