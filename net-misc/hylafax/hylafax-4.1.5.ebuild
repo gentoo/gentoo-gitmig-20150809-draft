@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.5.ebuild,v 1.4 2003/02/13 14:53:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.5.ebuild,v 1.5 2003/03/20 13:40:25 seemant Exp $
 
 IUSE="jpeg"
 
 S=${WORKDIR}/${P}
-
 DESCRIPTION="Fax package for class 1 and 2 fax modems."
-SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 HOMEPAGE="http://www.hylafax.org"
+SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
-KEYWORDS="x86 -ppc -sparc "
-LICENSE="freedist"
 SLOT="0"
+LICENSE="freedist"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="net-dialup/mgetty
 	sys-libs/zlib
