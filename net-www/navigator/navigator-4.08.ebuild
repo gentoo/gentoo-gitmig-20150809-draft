@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/net-www/netscape/netscape-4.79.ebuild,v 1.1 2001/08/03 13:33:54 pm Exp
+# $Header: /var/cvsroot/gentoo-x86/net-www/navigator/navigator-4.08.ebuild,v 1.2 2002/04/07 00:43:01 jnelson Exp $
 
 S=${WORKDIR}/navigator-v408.x86-unknown-linux2.0
 DESCRIPTION="Netscape Communicator 4.08"
