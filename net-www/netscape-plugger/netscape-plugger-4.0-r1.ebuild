@@ -1,6 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r1.ebuild,v 1.3 2002/04/30 12:33:40 seemant Exp $
 
 MYP=${P#netscape-}-linux-x86-glibc
 S=${WORKDIR}/plugger-4.0
@@ -10,7 +11,7 @@ HOMEPAGE="http://fredrik.hubbe.net/plugger.html"
 
 src_install() {                               
 	cd ${S}
-	dodir /opt/netscape/plugins /etc /usr/local/bin
+	dodir /opt/netscape/plugins /etc
 	insinto /opt/netscape/plugins
 	doins plugger.so
 	insinto /etc
