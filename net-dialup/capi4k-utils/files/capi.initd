@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.initd,v 1.1 2005/03/29 06:43:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.initd,v 1.2 2005/03/29 06:55:24 mrness Exp $
 
 opts="start stop info"
 
@@ -25,6 +25,8 @@ start() {
 	( [ -f /proc/capi/capidrv ] || /sbin/modprobe capidrv )
 	eend $? || return 1
 
+	ebegin "Starting CAPI"
+	
 	CNT=0  # wait for udev
 	while [ ! -e /dev/capi20 -a $CNT -lt 10 ]; do
 		sleep 1; : $((CNT++))

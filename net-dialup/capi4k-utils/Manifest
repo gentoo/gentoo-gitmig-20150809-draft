@@ -8,7 +8,7 @@ MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 e74f9b822b6f485ca6ff834c2699151a files/README.gentoo 1492
 MD5 4607b3504bc1d4aa7a97c4913b85d8f3 files/capi.conf 592
 MD5 bb88526e859b8c77b803550a4229db09 files/capi.confd 415
-MD5 08ce87f735e22009b105c33eeb415306 files/capi.initd 1343
+MD5 27acf39b69fa79bc20aeec5c567dc7ac files/capi.initd 1369
 MD5 5567e0f076f3d1faafcd0d4fa39a1c4e files/digest-capi4k-utils-20041006-r5 156
 MD5 edc50538053b658093927f9fb28c3aff files/config 195
 MD5 fa4cf0be46c4a16a2ef6fd178ed54c01 files/capi.usermap 1504
@@ -27,7 +27,7 @@ MD5 2ddf9c04a03949cb2301888586096bfe files/20041006/capi.hotplug 2435
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSPkhjiC39V7gKu0RAtdBAKCiN37IyekYR0fZT6L66+c/HNp6jACdFB/G
-e/xN8dIeAhx2fbiQVEOta4g=
-=xTbf
+iD8DBQFCSPvtjiC39V7gKu0RAkIcAKC+R2FGFiEzdLD5+Kk45qy5gYhGsQCfeckP
+mxIi9QyDkxG1FL4EqnFpR+8=
+=UqV3
 -----END PGP SIGNATURE-----
