@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.2.2b.ebuild,v 1.1 2003/09/26 15:52:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.2.2b.ebuild,v 1.2 2003/09/27 01:03:59 vapier Exp $
 
 inherit games
 
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${A}
 	rm runlegends libSDL-*.so* libopenal.so
 	find -type f -exec chmod a-x '{}' \;
-	chmod -R a-x *
+	chmod -R go-w *
 	chmod a+x common legends show ispawn lindedicated LinLegends
 }
 
