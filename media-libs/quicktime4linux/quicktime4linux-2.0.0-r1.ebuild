@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.0-r1.ebuild,v 1.2 2003/10/02 15:57:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.0-r1.ebuild,v 1.3 2003/10/02 19:39:40 vapier Exp $
 
 inherit flag-o-matic gcc
 
@@ -21,6 +21,7 @@ DEPEND="media-libs/jpeg
 	>=media-libs/libogg-1.0
 	>=media-libs/libvorbis-1.0
 	media-libs/divx4linux
+	media-libs/a52dec
 	!virtual/quicktime"
 PROVIDE="virtual/quicktime"
 

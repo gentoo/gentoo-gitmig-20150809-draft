@@ -62,7 +62,7 @@ diff -ur work/quicktime4linux-2.0.0/Makefile work.new/quicktime4linux-2.0.0/Make
  
 -LIBS := $(OUTPUT) $(MPEG3_DIR)/$(OBJDIR)/libmpeg3.a -lpng -lz -lpthread -lglib -ldl -lm
 +LIBS := $(OUTPUT) \
-+	-logg -lmpeg3 -lmp3lame -ldv -ljpeg -lvorbis -lvorbisenc -lavcodec \
++	-logg -lmpeg3 -lmp3lame -ldv -ljpeg -lvorbis -lvorbisenc -lavcodec -a52 \
 +	-lpng -lz -lpthread -lglib -ldl -lm
  
  
