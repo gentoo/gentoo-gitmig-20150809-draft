@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.3-r1.ebuild,v 1.1 2002/10/11 15:46:43 lostlogic Exp $
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.3-r2.ebuild,v 1.1 2002/10/20 22:51:56 foser Exp $
 
-IUSE="ssl nls gnome ipv6 mmx python gtk perl"
+IUSE="perl gnome ssl gtk python mmx ipv6 nls" 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
@@ -28,11 +28,12 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	patch -d ${S} -p1 < ${FILESDIR}/xchat-1.9.3-tolowertab.patch
+	
 }
 
 
-# From the xchat 1.9.2 README_FIRST file:
+# From the xchat 1.9.3 README_FIRST file:
 # (one of the) REMAINING PROBLEMS:
 # * can't compile with gnome, panel and zvt support *
 # stroke 
@@ -86,14 +87,12 @@ src_install() {
 
 	einstall utildir=${D}${KDEDIR}/share/applnk/Internet install || die "Install failed"
 
-	mv ${D}usr/lib/xchat ${D}usr/lib/xchat-2 || die
-	for file in ${D}usr/lib/xchat-2/plugins/* ;do
-		mv ${file} ${file/.so-2/}.so || die
-	done
-
 	use gnome && 
 	(	insinto /usr/share/gnome/apps/Internet
 		doins xchat.desktop  )
-
+	use python &&
+	(	dosym /usr/lib/xchat/plugins/python.so-2 /usr/lib/xchat/plugins/python.so )
+	use perl &&
+	(	dosym /usr/lib/xchat/plugins/perl.so-2 /usr/lib/xchat/plugins/perl.so  )
 	dodoc AUTHORS COPYING ChangeLog README
 }

@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.23 2002/10/11 15:46:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.24 2002/10/20 22:51:56 foser Exp $
+
+*xchat-1.9.3-r2.ebuild (20 Oct 2002)
+
+  20 Oct 2002; foser <foser@gentoo.org> xchat-1.9.3-r2.ebuild :
+  Now really fixing plugins 
+  Added a patch to prevent problems with gnome2.1 and up
 
 *xchat-1.9.3-r1.ebuild (11 Oct 2002)
 
