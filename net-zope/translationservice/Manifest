@@ -1,5 +1,5 @@
 MD5 34dcd7a9eddfe44833f0a344aa182e30 ChangeLog 817
-MD5 a57bbd033e52c1887cfc2c7b6cc127db translationservice-0.3.ebuild 508
-MD5 07a10a2158a0c81b2b8381a07c20e377 translationservice-0.4.ebuild 510
+MD5 25f74ea73d03880145ca7c7031c7bed1 translationservice-0.3.ebuild 514
+MD5 164539069e4effbda970c6c7d187b55f translationservice-0.4.ebuild 516
 MD5 593dddb4cf1ae7b13fc6f46f50036e3e files/digest-translationservice-0.3 70
 MD5 0f47b403338e143a1aeec3f24959fc35 files/digest-translationservice-0.4 70

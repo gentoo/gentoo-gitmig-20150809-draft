@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/xmlwidgets/xmlwidgets-0.8.5.ebuild,v 1.1 2003/06/23 04:37:34 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/xmlwidgets/xmlwidgets-0.8.5.ebuild,v 1.2 2003/09/08 06:53:31 msterret Exp $
 
 inherit zproduct
 

@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/localizer/localizer-1.0.0-r1.ebuild,v 1.5 2003/06/26 16:27:41 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/localizer/localizer-1.0.0-r1.ebuild,v 1.6 2003/09/08 06:53:31 msterret Exp $
 
 inherit zproduct
 

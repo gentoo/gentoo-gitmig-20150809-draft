@@ -1,7 +1,6 @@
- 
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/extfile/extfile-1.2.0_beta1.ebuild,v 1.2 2003/07/13 21:46:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/extfile/extfile-1.2.0_beta1.ebuild,v 1.3 2003/09/08 06:53:30 msterret Exp $
 
 inherit zproduct
 PV_NEW=${PV/_beta/b}

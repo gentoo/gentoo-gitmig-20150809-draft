@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zwiki/zwiki-0.19.0.ebuild,v 1.1 2003/06/21 02:58:24 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zwiki/zwiki-0.19.0.ebuild,v 1.2 2003/09/08 06:53:31 msterret Exp $
 
 inherit zproduct
 
