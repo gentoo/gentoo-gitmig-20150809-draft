@@ -1,7 +1,15 @@
-MD5 593c1f3eb6427b68defa458574541da9 gtkhtml-1.1.10.ebuild 4062
-MD5 38ba514ac42d50a81ff0284c6623315c gtkhtml-1.1.10-r1.ebuild 4177
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3c635656fff7fb845d147e99044d792d ChangeLog 5904
+MD5 38ba514ac42d50a81ff0284c6623315c gtkhtml-1.1.10-r1.ebuild 4177
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 bc6bf91c4d69c7c6933885588f46eab3 files/gtkhtml-gcc34.patch 484
 MD5 beee6dc1f9b01326aec9a28c8959c395 files/digest-gtkhtml-1.1.10-r1 68
-MD5 2da7540b316c5dfdd790869fdb2f4070 files/digest-gtkhtml-1.1.10 133
+MD5 bc6bf91c4d69c7c6933885588f46eab3 files/gtkhtml-gcc34.patch 484
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBeWC8Rkyva5PS18kRAqlmAJ9PFay/1Cx/UTnQ7NcZJFWujsf2ygCfQysk
+sPXJwUkGiEjWgOcK6NnmfGw=
+=ofKS
+-----END PGP SIGNATURE-----
