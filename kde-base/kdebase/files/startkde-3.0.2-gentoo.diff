@@ -1,7 +1,8 @@
 --- startkde	Mon Jun 24 14:54:36 2002
-+++ startkde	Fri Jun 28 19:25:38 2002
++++ startkde	Fri Jul 12 22:04:23 2002
 @@ -1,8 +1,22 @@
- #!/bin/sh
+-#!/bin/sh
++#!/bin/sh --login
  #
 -#  DEFAULT KDE STARTUP SCRIPT ( KDE-3.0.2 )
 +#  GENTOO CUSTOMIZED KDE STARTUP SCRIPT ( KDE-3.0.2 )
