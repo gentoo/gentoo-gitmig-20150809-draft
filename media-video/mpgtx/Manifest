@@ -1,5 +1,17 @@
-MD5 7f9a031d463f9dcaa51eda32de19c631 ChangeLog 725
-MD5 3b8f6d4db5c438860a7e42c20075c582 mpgtx-1.3.ebuild 1467
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6f7a10e919eecad9f3db16d77bc77da2 ChangeLog 905
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
+MD5 c17e70be84ef707dd28d82638125547d mpgtx-1.3.ebuild 1468
+MD5 5cd3c56f730f98b6f43a6c3da70a5374 mpgtx-1.3.1.ebuild 1396
 MD5 2f7766f539f18c11a67ea4d0ceaaadda files/digest-mpgtx-1.3 57
 MD5 a3dbfa95d33bc0878275c94e9e6e8fe9 files/mpgtx-1.3-gcc34.patch 288
+MD5 e7a438b14d3a5d4e41f591b09d90b6cf files/digest-mpgtx-1.3.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+ZdBFdQwWVoAgN4RAjBBAJ9Ajix8GB+GLdoL6eXrZ6dQP0GBZgCgpV0B
+lcRfxRiSAzPgyahrA7ErPyY=
+=BY0e
+-----END PGP SIGNATURE-----

@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/mpgtx-1.3.ebuild,v 1.11 2005/01/28 01:46:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/mpgtx-1.3.1.ebuild,v 1.1 2005/01/28 01:46:17 chriswhite Exp $
 
 inherit eutils gcc
 
 DESCRIPTION="mpgtx a command line MPEG audio/video/system file toolbox"
-SRC_URI="mirror://sourceforge/mpgtx/${P}.tgz"
+SRC_URI="mirror://sourceforge/mpgtx/${P}.tar.gz"
 HOMEPAGE="http://mpgtx.sourceforge.net/"
 
 KEYWORDS="~x86 ~ppc ~amd64"
@@ -14,11 +14,6 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="sys-libs/glibc"
-
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/${P}-gcc34.patch
-}
 
 src_compile() {
 	./configure --parachute --prefix=/usr
@@ -47,5 +42,5 @@ src_install() {
 	dosym /usr/share/man/man1/mpgtx.1 /usr/share/man/man1/mpgsplit.1
 	dosym /usr/share/man/man1/mpgtx.1 /usr/share/man/man1/mpgdemux.1
 
-	dodoc AUTHORS COPYING ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO
 }
