@@ -1,0 +1,36 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.4.ebuild,v 1.1 2004/06/02 16:08:34 latexer Exp $
+
+inherit mono
+
+DESCRIPTION="MonoDevelop is a project to port SharpDevelop to Gtk#"
+SRC_URI="http://www.go-mono.com/archive/beta2/${P}.tar.gz"
+HOMEPAGE="http://monodevelop.com/"
+LICENSE="GPL-2"
+
+IUSE="nptl"
+DEPEND=">=dev-libs/icu-2.6
+	>=dev-dotnet/gtksourceview-sharp-0.3
+	>=dev-dotnet/gecko-sharp-0.4
+	>=dev-dotnet/mono-0.95
+	>=dev-util/monodoc-0.16
+	>=x11-libs/gtk-sharp-0.93"
+
+KEYWORDS="~x86"
+SLOT="0"
+
+src_compile() {
+	econf || die
+	MAKEOPTS="-j1" make || die
+}
+
+src_install () {
+	# Needed if update-mime-info is run
+	addwrite ${ROOT}/usr/share/mime
+
+	make DESTDIR=${D} install || die
+
+	# Install documentation.
+	dodoc ChangeLog README
+}
