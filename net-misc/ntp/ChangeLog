@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.40 2003/12/14 03:52:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.41 2004/02/14 22:58:02 vapier Exp $
+
+*ntp-4.2.0 (14 Feb 2004)
+
+  14 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #31258 by Christian Strauf.
 
   14 Dec 2003; Guy Martin <gmsoft@gentoo.org> ntp-4.1.2.ebuild:
   Marked stable on hppa.

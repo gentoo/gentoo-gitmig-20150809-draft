@@ -1,0 +1,46 @@
+--- ntpdate/ntpdate.c.orig	2003-07-17 06:27:30.000000000 -0400
++++ ntpdate/ntpdate.c	2003-12-03 18:01:17.119094200 -0500
+@@ -199,6 +199,7 @@
+  * Miscellaneous flags
+  */
+ int verbose = 0;
++int quiet = 0;
+ int always_step = 0;
+ int never_step = 0;
+ 
+@@ -288,6 +289,7 @@
+    */
+   complete_servers = 0;
+   verbose = 0;
++  quiet = 0;
+   always_step = 0;
+   never_step = 0;
+ }
+@@ -357,7 +359,7 @@
+ 	/*
+ 	 * Decode argument list
+ 	 */
+-	while ((c = ntp_getopt(argc, argv, "46a:bBde:k:o:p:qr:st:uv")) != EOF)
++	while ((c = ntp_getopt(argc, argv, "46a:bBde:k:o:p:qr:st:uvQ")) != EOF)
+ 		switch (c)
+ 		{
+ 		case '4':
+@@ -443,6 +445,9 @@
+ 		case 'v':
+ 			verbose = 1;
+ 			break;
++		case 'Q':
++			quiet = 1;
++			break;
+ 		case 'u':
+ 			unpriv_port = 1;
+ 			break;
+@@ -1348,7 +1353,7 @@
+ 		return;
+ 	}
+         else {
+-                fprintf(stderr, "host found : %s\n", stohost((struct sockaddr_storage*)addrResult->ai_addr));
++                fprintf((quiet?stdout:stderr), "host found : %s\n", stohost((struct sockaddr_storage*)addrResult->ai_addr));
+         }
+ 
+ 	server = (struct server *)emalloc(sizeof(struct server));

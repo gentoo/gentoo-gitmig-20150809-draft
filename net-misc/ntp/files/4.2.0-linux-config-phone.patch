@@ -1,0 +1,34 @@
+--- ntpd/ntp_config.c.orig	2003-10-17 23:47:28.624463400 -0400
++++ ntpd/ntp_config.c	2003-10-17 23:47:36.409279928 -0400
+@@ -9,15 +9,6 @@
+ # include <netinfo/ni.h>
+ #endif
+ 
+-#include "ntpd.h"
+-#include "ntp_io.h"
+-#include "ntp_unixtime.h"
+-#include "ntp_refclock.h"
+-#include "ntp_filegen.h"
+-#include "ntp_stdlib.h"
+-#include "ntp_config.h"
+-#include "ntp_cmdargs.h"
+-
+ #include <stdio.h>
+ #include <ctype.h>
+ #ifdef HAVE_SYS_PARAM_H
+@@ -40,6 +31,15 @@
+ 
+ #include <netdb.h>
+ 
++#include "ntpd.h"
++#include "ntp_io.h"
++#include "ntp_unixtime.h"
++#include "ntp_refclock.h"
++#include "ntp_filegen.h"
++#include "ntp_stdlib.h"
++#include "ntp_config.h"
++#include "ntp_cmdargs.h"
++
+ extern int priority_done;
+ 
+ /*
