@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.57 2004/09/18 10:31:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.58 2004/09/22 03:42:33 vapier Exp $
+
+*sed-4.1.2 (21 Sep 2004)
+
+  21 Sep 2004; Mike Frysinger <vapier@gentoo.org> +sed-4.1.2.ebuild:
+  Version bump #64897 by Anthony Giorgio.
 
   18 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> sed-4.0.9.ebuild:
   tidy the macos stuff
