@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.2.ebuild,v 1.8 2004/05/24 03:07:05 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.2.ebuild,v 1.9 2004/06/01 06:04:19 vapier Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="x86 ppc sparc ~alpha hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ppc sparc ~mips ~alpha hppa ~amd64 ~ia64"
 IUSE="ldap pam motif encode cups ssl opengl samba java"
 
 DEPEND="media-sound/cdparanoia
