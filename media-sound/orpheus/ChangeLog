@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/orpheus
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.1 2003/08/03 12:35:11 coredumb Exp $
+
+*orpheus-1.2 (03 Aug 2003)
+
+  03 Aug 2003; Tal Peer <coredumb@gentoo.org> orpheus-1.2.ebuild:
+  Initial import, contributed by Brian <brian@reichholf.at> and Clemens Oertel <gentoo-bugzilla@kriegate.net>
+  Closes bug #23288.
+
