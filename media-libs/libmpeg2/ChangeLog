@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.9 2003/03/31 18:20:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.10 2003/05/30 00:06:59 lu_zero Exp $
+
+  30 May 2003; Luca Barbato <lu_zero@gentoo.org> libmpeg2-0.3.1.ebuild:
+  Added ppc in KEYWORDS
 
 *libmpeg2-0.3.1 (14 Jan 2003)
 
