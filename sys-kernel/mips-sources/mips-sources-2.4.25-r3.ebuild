@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r12.ebuild,v 1.1 2004/04/21 22:05:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25-r3.ebuild,v 1.1 2004/06/04 09:32:17 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20031015"
+CVSDATE="20040222"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
-COBALTPATCHVER="1.2"
+COBALTPATCHVER="1.4"
 
 # Miscellaneous stuff
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
@@ -21,13 +21,11 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 15 Oct 2003
+# 2) linux-mips.org CVS snapshot diff from 28 Nov 2003
 # 3) patch to fix arch/mips[64]/Makefile to pass appropriate CFLAGS
-# 4) do_brk fix
-# 5) mremap fix
-# 6) RTC fixes
-# 7) iso9660 fix
-# 8) Patches for Cobalt support
+# 4) patch to fix the mips64 Makefile to allow building of mips64 kernels
+# 5) Security Fixes
+# 6) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -51,8 +49,8 @@ src_unpack() {
 	# Patch arch/mips/Makefile for gcc (Pass -mips3/-mips4 for r4k/r5k cpus)
 	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-fix.patch
 
-	# MIPS RTC Fixes (Fixes memleaks, backport from 2.4.24)
-	epatch ${FILESDIR}/rtc-fixes.patch
+	# Patch to fix mips64 Makefile so that -finline-limit=10000 gets added to CFLAGS
+	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-inlinelimit.patch
 
 	# Binutils-2.14.90.0.8 and does some magic with page alignment
 	# that prevents the kernel from booting.  This patch fixes it.
@@ -61,13 +59,13 @@ src_unpack() {
 	# Security Fixes
 	echo -e ""
 	ebegin "Applying Security Fixes"
-		epatch ${FILESDIR}/CAN-2003-0961-do_brk.patch
-		epatch ${FILESDIR}/CAN-2003-0985-mremap.patch
-		epatch ${FILESDIR}/CAN-2004-0010-ncpfs.patch
-		epatch ${FILESDIR}/CAN-2004-0077-do_munmap.patch
 		epatch ${FILESDIR}/CAN-2004-0109-2.4-iso9660.patch
+		epatch ${FILESDIR}/CAN-2004-0133-xfs_ext3.patch
 		epatch ${FILESDIR}/CAN-2004-0177-ext3_jbd.patch
 		epatch ${FILESDIR}/CAN-2004-0178-sbblaster.patch
+		epatch ${FILESDIR}/CAN-2004-0181-2.4-jfs_ext3.patch
+		epatch ${FILESDIR}/CAN-2004-0394-panic.patch
+		epatch ${FILESDIR}/CAN-2004-0427-2.4-do_fork.patch
 	eend
 
 	# Cobalt Patches

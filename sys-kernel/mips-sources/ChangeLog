@@ -1,6 +1,37 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.42 2004/05/11 03:08:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.43 2004/06/04 09:32:17 kumba Exp $
+
+
+*mips-sources-2.4.25-r3 (04 Jun 2004)
+
+  04 Jun 2004; Joshua Kinard <kumba@gentoo.org>
+  -files/CAN-2003-0961-do_brk.patch, -files/CAN-2003-0985-mremap.patch,
+  -files/CAN-2004-0010-ncpfs.patch, +files/CAN-2004-0075-2.6-vicam_usb.patch,
+  -files/CAN-2004-0077-do_munmap.patch, +files/CAN-2004-0133-xfs_ext3.patch,
+  +files/CAN-2004-0181-2.4-jfs_ext3.patch,
+  +files/CAN-2004-0181-2.6-jfs_ext3.patch, +files/CAN-2004-0228-cpufreq.patch,
+  +files/CAN-2004-0229-fb_copy_cmap.patch, +files/CAN-2004-0394-panic.patch,
+  +files/CAN-2004-0427-2.4-do_fork.patch,
+  +files/CAN-2004-0427-2.6-do_fork.patch,
+  -files/bigendian-byteorder-fix.patch,
+  -files/mipscvs-2.4.21-makefile-fix.patch,
+  -files/mipscvs-2.4.21-no-page-align.patch,
+  -files/mipscvs-2.4.22-makefile-fix.patch,
+  -files/mipscvs-2.4.22-no-page-align.patch,
+  -files/mipscvs-2.4.23-makefile-fix.patch,
+  -files/mipscvs-2.4.23-makefile-inlinelimit.patch,
+  -files/mipscvs-2.4.23-no-page-align.patch, -files/rtc-fixes.patch,
+  -mips-sources-2.4.21-r9.ebuild, -mips-sources-2.4.22-r12.ebuild,
+  -mips-sources-2.4.23-r8.ebuild, -mips-sources-2.4.25-r2.ebuild,
+  +mips-sources-2.4.25-r3.ebuild, -mips-sources-2.4.26-r1.ebuild,
+  +mips-sources-2.4.26-r2.ebuild, -mips-sources-2.6.3-r4.ebuild,
+  -mips-sources-2.6.4-r2.ebuild, +mips-sources-2.6.4-r3.ebuild,
+  -mips-sources-2.6.5-r1.ebuild, +mips-sources-2.6.5-r2.ebuild,
+  +mips-sources-2.6.6-r1.ebuild:
+  Batch of security updates that apparently got missed. Finally removed
+  2.4.{21,22,23} and 2.6.3 from repository. Added newer 2.6.6 snapshot
+  (20040406), and marked 2.4.26 stable.
 
 *mips-sources-2.6.6 (10 May 2004)
 

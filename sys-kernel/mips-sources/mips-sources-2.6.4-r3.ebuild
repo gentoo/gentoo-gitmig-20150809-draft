@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.5-r1.ebuild,v 1.2 2004/05/11 03:08:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.4-r3.ebuild,v 1.1 2004/06/04 09:32:17 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20040412"
+CVSDATE="20040311"
 COBALTPATCHVER="1.4"
-IP32DIFFDATE="20040402"
+IP32DIFFDATE="20040229"
 [ "${USE_IP32}" = "yes" ] && EXTRAVERSION="-mipscvs-${CVSDATE}-ip32" || EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 
@@ -21,12 +21,11 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 12 Apr 2004
-# 3) Patch to fix the Swap issue in 2.6.5+ (Credit: Peter Horton <cobalt@colonel-panic.org>
+# 2) linux-mips.org CVS snapshot diff from 11 Mar 2004
+# 3) Patch to tweak arch/mips/Makefile to build proper kernels under binutils-2.15.x
 # 4) Iluxa's minimal O2 patchset
-# 5) Patch to fix linking issue for initrd's
-# 6) CAN-2004-0109: ISO9660 patch
-# 7) Patches for Cobalt support
+# 5) Security Fixes
+# 6) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -74,14 +73,20 @@ src_unpack() {
 	# Update the vanilla sources with linux-mips CVS changes
 	epatch ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff
 
-	# Bug in 2.6.5 that triggers a kernel oops when swap is activated
-	epatch ${FILESDIR}/mipscvs-${OKV}-swapbug-fix.patch
-
-	# Bug in 2.6.5 in which an include was left out of unistd.h (breaks initrd)
-	epatch ${FILESDIR}/mipscvs-${OKV}-unistd-linkage.patch
+	# Binutils-2.14.90.0.8 and up does some magic with page alignment
+	# that prevents the kernel from booting.  This patch fixes it.
+	epatch ${FILESDIR}/mipscvs-2.6.x-no-page-align.patch
 
 	# Security Fixes
-	epatch ${FILESDIR}/CAN-2004-0109-2.6-iso9660.patch
+	echo -e ""
+	ebegin "Applying Security Fixes"
+		epatch ${FILESDIR}/CAN-2004-0075-2.6-vicam_usb.patch
+		epatch ${FILESDIR}/CAN-2004-0109-2.6-iso9660.patch
+		epatch ${FILESDIR}/CAN-2004-0181-2.6-jfs_ext3.patch
+		epatch ${FILESDIR}/CAN-2004-0228-cpufreq.patch
+		epatch ${FILESDIR}/CAN-2004-0229-fb_copy_cmap.patch
+		epatch ${FILESDIR}/CAN-2004-0427-2.6-do_fork.patch
+	eend
 
 	# Cobalt Patches
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then

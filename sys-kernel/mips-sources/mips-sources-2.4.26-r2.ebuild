@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26-r1.ebuild,v 1.2 2004/04/28 09:29:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26-r2.ebuild,v 1.1 2004/06/04 09:32:17 kumba Exp $
 
 
 # Version Data
@@ -35,7 +35,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 HOMEPAGE="http://www.linux-mips.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources"
-KEYWORDS="-* ~mips"
+KEYWORDS="-* mips"
 
 
 src_unpack() {
@@ -48,6 +48,12 @@ src_unpack() {
 
 	# Patch arch/mips/Makefile for gcc (Pass -mips3/-mips4 for r4k/r5k cpus)
 	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-fix.patch
+
+	# Security Fixes
+	echo -e ""
+	ebegin "Applying Security Fixes"
+		epatch ${FILESDIR}/CAN-2004-0394-panic.patch
+	eend
 
 	# Cobalt Patches
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
