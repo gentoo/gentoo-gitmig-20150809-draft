@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.4.20020606-r3.ebuild,v 1.1 2002/07/09 22:43:42 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.4.20020606-r3.ebuild,v 1.2 2002/07/10 20:28:07 danarmak Exp $
 
 PV=3.0.4
 S=${WORKDIR}/qt-copy-${PV}
@@ -58,27 +58,6 @@ src_unpack() {
 src_compile() {
 
 	echo "src_compile, QTDIR=$QTDIR"
-
-	# experimental: enable custom optimizations
-	# i don't really trust this because the qt configure doesn't support them at all
-	# and it might well have a good reason
-	# see bug #
-	
-	# 1. for qmake itself
-	# note: these regexp matches are loose and may match lots of stuff,
-	# so it's important to work only the first match
-	cd ${S}/qmake
-	mv GNUmakefile.in GNUmakefile.in.orig
-	sed -e "s:CFLAGS=:CFLAGS=${CFLAGS} :" \
-	    -e "s:CXXFLAGS= \$(CFLAGS):CXXFLAGS= \$(CFLAGS) ${CXXFLAGS} :" GNUmakefile.in.orig > GNUmakefile.in
-	
-	# 2. for apps built by qmake, in this case qt
-	cd ${S}/mkspecs/linux-g++
-	mv qmake.conf qmake.conf.orig
-	sed -e "s:QMAKE_CFLAGS		= -pipe:QMAKE_CFLAGS		= ${CFLAGS} -pipe:" \
-	    -e "s:QMAKE_CXXFLAGS		=:QMAKE_CXXFLAGS		= ${CXXFLAGS} \#:" \
-	    -e "s:QMAKE_CFLAGS_RELEASE	=:QMAKE_CFLAGS_RELEASE	= \#:" \
-	qmake.conf.orig > qmake.conf
 
 	cd ${S}
 	export QTDIR=${S}
@@ -177,8 +156,4 @@ src_install() {
 	doins $x
 	done
 	
-	# remove extra-optimization stuff from default qmake configuration
-	cd ${D}/${QTBASE}/mkspecs/linux-g++
-	mv qmake.conf.orig qmake.conf
-
 }
