@@ -1,10 +1,13 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.8 2003/02/12 08:36:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.9 2003/02/15 08:03:39 gerk Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *yp-tools-2.7-r1 (18 Jul 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> yp-tools-2.7-r1.ebuild yp-tools-2.7.ebuild :
+  set ~ppc in keywords
 
   18 Jul 2002; Seemant Kulleen <seemant@gentoo.orG> yp-tools-2.7-r1.ebuild
   files/digest-yp-tools-2.7-r1 :
