@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.8_pre2.ebuild,v 1.1 2003/03/01 06:17:18 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.8_pre2.ebuild,v 1.2 2003/03/01 07:38:43 woodchip Exp $
 
 inherit eutils
 
@@ -17,11 +17,8 @@ HOMEPAGE="http://www.samba.org"
 S=${WORKDIR}/samba-2.2.7a
 SRC_URI="oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2
 	http://us2.samba.org/samba/ftp/samba-2.2.7a.tar.bz2
-	http://us2.samba.org/samba/ftp/pre/patch-2.2.7a-2.2.8pre1.diffs.gz
-	http://us2.samba.org/samba/ftp/pre/patch-2.2.8pre1-2.2.8pre2.diffs.gz
-	http://us3.samba.org/samba/ftp/samba-2.2.7a.tar.bz2
-	http://us3.samba.org/samba/ftp/pre/patch-2.2.7a-2.2.8pre1.diffs.gz
-	http://us3.samba.org/samba/ftp/pre/patch-2.2.8pre1-2.2.8pre2.diffs.gz"
+	mirror://gentoo/patch-2.2.7a-2.2.8pre1.diffs.gz
+	mirror://gentoo/patch-2.2.8pre1-2.2.8pre2.diffs.gz"
 DEPEND="pam? >=sys-libs/pam-0.72
 	acl? sys-apps/acl
 	cups? net-print/cups
