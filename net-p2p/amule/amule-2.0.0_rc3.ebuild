@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc3.ebuild,v 1.5 2004/06/30 18:33:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc3.ebuild,v 1.6 2004/07/02 20:26:25 squinky86 Exp $
 
 MY_P=${P/m/M}
 MY_P=${MY_P/_/}
@@ -12,6 +12,7 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
+# this is a release candidate- do not put in the stable tree yet
 KEYWORDS="~x86 ~amd64"
 IUSE="debug nls stats remote"
 RESTRICT="nomirror"
