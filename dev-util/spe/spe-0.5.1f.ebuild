@@ -1,18 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.5.1d.ebuild,v 1.7 2004/10/02 15:32:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.5.1f.ebuild,v 1.1 2004/10/02 15:32:53 kloeri Exp $
 
 inherit distutils eutils
 
-MY_P="SPE-0.5.1.d-wx2.4.2.4.-bl2.31"
+MY_P="SPE-0.5.1.f-wx2.4.2.4.-bl2.31"
+#MY_P2="SPE-0.5.1.d-wx2.4.2.4.-bl2.31"
 DESCRIPTION="Python IDE with Blender support"
 HOMEPAGE="http://spe.pycs.net/"
 SRC_URI="http://projects.blender.org/download.php/162/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
-S="${WORKDIR}/${MY_P}"
+# Upstream have mismatched versions when unpacked..
+S="${WORKDIR}/${MY_P/1.f/1.d}"
 
 DEPEND=">=virtual/python-2.2.3-r1"
 
@@ -24,7 +26,7 @@ RDEPEND=">=dev-python/wxpython-2.4.2.4
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/spe_setup.patch
+	epatch ${FILESDIR}/spe_setup.patch || die "patch failed."
 }
 
 src_install() {
