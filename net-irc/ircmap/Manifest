@@ -1,3 +1,4 @@
-MD5 d17873231bc2757495c032cf2b08a946 files/digest-ircmap-0.99 57
 MD5 5f2500f189a55aad0d4615aa2b97fe71 ircmap-0.99.ebuild 1424
 MD5 b2d7e3dfda8733d495fd551ca2880ed3 ChangeLog 430
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 d17873231bc2757495c032cf2b08a946 files/digest-ircmap-0.99 57
