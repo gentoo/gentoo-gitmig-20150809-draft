@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.4.0_beta2.ebuild,v 1.2 2005/02/11 19:04:30 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.4.0_beta2.ebuild,v 1.3 2005/02/11 19:05:24 danarmak Exp $
 
 inherit kde-dist eutils
 
@@ -28,10 +28,10 @@ if useq berkdb; then
 	PATCHES="$FILESDIR/noatun-oblique-db-location-$PV.diff"
 	myconf="--with-extra-includes=/usr/include/db4.2"
 fi
-	
+
 src_unpack() {
 	kde_src_unpack
-	
+
 	if useq berkdb; then
 		rm $S/configure
 	fi
