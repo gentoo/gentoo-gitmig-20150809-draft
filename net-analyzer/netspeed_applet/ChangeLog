@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/netspeed_applet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.6 2002/12/13 10:59:47 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.7 2003/01/30 14:25:33 foser Exp $
+
+*netspeed_applet-0.8 (30 Jan 2003)
+
+  30 Jan 2003; foser <foser@gentoo.org> netspeed_applet-0.8.ebuild :
+  New version
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
