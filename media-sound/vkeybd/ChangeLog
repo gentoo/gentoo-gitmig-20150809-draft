@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/vkeybd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.6 2003/04/24 16:26:46 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.7 2003/05/18 02:56:52 jje Exp $
+
+  18 May 2003; Torben Hohn <torbenh@gentoo.org> vkeybd-0.1.13.ebuild,
+  vkeybd-0.1.13.ebuild:
+  media-libs/ladcca-0.1 is gone. build against >=media-libs/ladcca-0.3.1
+  and therefor apply the patch.
+  files/vkeybd-0.1.13-vkb.c-ladcca.patch: fixes the new cca_init signature.
 
 *vkeybd-0.1.13 (22 Apr 2003)
 
