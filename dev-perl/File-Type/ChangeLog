@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/File-Type
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.1 2004/11/27 05:45:27 pclouds Exp $
+
+*File-Type-0.22 (27 Nov 2004)
+
+  27 Nov 2004; <pclouds@gentoo.org> +metadata.xml, +File-Type-0.22.ebuild:
+  New ebuild
+
