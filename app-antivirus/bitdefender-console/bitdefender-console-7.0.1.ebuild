@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1.ebuild,v 1.3 2004/11/21 07:14:07 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1.ebuild,v 1.4 2004/11/21 16:22:43 blubb Exp $
 
 IUSE=""
 
@@ -13,7 +13,8 @@ SRC_URI="ftp://ftp.bitdefender.com/pub/linux/free/bitdefender-console/en/${MY_P}
 
 DEPEND="app-arch/tar
 	app-arch/gzip"
-RDEPEND="virtual/libc"
+RDEPEND="virtual/libc
+		amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
 PROVIDE="virtual/antivirus"
 
 SLOT="0"
