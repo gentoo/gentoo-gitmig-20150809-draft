@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.2.ebuild,v 1.5 2004/11/24 21:31:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.2.ebuild,v 1.6 2005/01/03 04:03:25 vapier Exp $
 
 inherit flag-o-matic games
 
@@ -39,15 +39,19 @@ src_unpack() {
 
 src_compile() {
 	# Fixes build problem with gcc3 and -march=pentium4
-	replace-flags "-march=pentium4" "-march=pentium3"
-	egamesconf --disable-doc-ps --disable-doc-pdf || die
+	replace-cpu-flags pentium4 pentium3
+	egamesconf \
+		--disable-doc-ps \
+		--disable-doc-pdf \
+		--disable-target-opt \
+		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install_nolink || die "make install failed"
-	rm -f "${D}/usr/share/doc/${P}/COPYING"
-	use nls || rm -f "${D}/usr/share/doc/${P}/README.*"
-	gzip -9 "${D}/usr/share/doc/${PF}/"{[A-Z]*,*txt}
+	rm -f "${D}"/usr/share/doc/${PF}/COPYING
+	use nls || rm -f "${D}"/usr/share/doc/${PF}/README.*
+	prepalldocs
 	prepgamesdirs
 }

@@ -1,4 +1,14 @@
-MD5 faee648366b110c793556d0975b47843 liquidwar-5.6.2.ebuild 1571
-MD5 92a087c15af0f5ff2fc9be11c4fe277e ChangeLog 2112
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8abd3222a7ac7a88e526b241fb2f5529 ChangeLog 2284
+MD5 d3416c39d317739c6c0928b2a21bcc67 liquidwar-5.6.2.ebuild 1559
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 baa58ba47700f8e6b8525f9d35093e57 files/digest-liquidwar-5.6.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB2MQdroRuSHgZdywRAnxPAJ0RFyORi5KKELKX0CChIwWk9m8xVQCfXxEi
+JbwMQFP8V7zuwInr00ZFvcg=
+=yJeE
+-----END PGP SIGNATURE-----
