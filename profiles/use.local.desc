@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1042 2005/03/25 11:49:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1043 2005/03/25 12:35:32 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -319,6 +319,7 @@ mail-client/mozilla-thunderbird:mozplaintext - Disallow HTML editing for email
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:nntp - Adds support for nntp via patch
 mail-client/muttng:gpgme - Enable support for gpgme
+mail-client/muttng:idn - Enable support for Internalized Domain Names
 mail-client/muttng:nntp - Enable support for nntp
 mail-client/muttng:smtp - Enable support for smtp
 mail-client/pine:largeterminal - Add support for large terminals by doubling the size of pine's internal display buffer
