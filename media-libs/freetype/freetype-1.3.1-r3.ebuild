@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.27 2004/07/14 19:35:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.28 2004/10/17 06:52:25 usata Exp $
 
 # r3 change by me (danarmak): there's a contrib dir inside the freetype1
 # sources with important utils: ttf2bdf, ttf2pfb, ttf2pk, ttfbanner.
@@ -80,11 +80,11 @@ src_install() {
 	dodoc docs/*.txt docs/FAQ docs/TODO
 	dohtml -r docs
 
-	# install contrib utils
+	# install contrib utils, omit t1asm (conflicts with t1lib)
+	# and getafm (conflicts with psutils)
 	cd ${S}/freetype1-contrib
 	into /usr
-	dobin ttf2bdf/ttf2bdf \
-		ttf2pfb/getafm ttf2pfb/t1asm ttf2pfb/.libs/ttf2pfb \
+	dobin ttf2bdf/ttf2bdf ttf2pfb/.libs/ttf2pfb \
 		ttf2pk/.libs/ttf2pk ttf2pk/.libs/ttf2tfm \
 		ttfbanner/.libs/ttfbanner \
 		|| die

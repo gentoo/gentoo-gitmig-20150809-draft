@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5.ebuild,v 1.13 2004/09/16 02:02:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5.ebuild,v 1.14 2004/10/17 06:52:25 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.freetype.org/"
 SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2"
 
 SLOT="2"
-LICENSE="FTL | GPL-2"
+LICENSE="|| ( FTL GPL-2 )"
 KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~ia64 ~amd64 ppc64 macos ppc-macos"
 IUSE="bindist doc zlib"
 

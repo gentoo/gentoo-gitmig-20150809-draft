@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5-r1.ebuild,v 1.17 2004/10/11 05:27:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5-r1.ebuild,v 1.18 2004/10/17 06:52:25 usata Exp $
 
 inherit eutils flag-o-matic gnuconfig libtool
 
@@ -8,7 +8,7 @@ DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
 SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2"
 
-LICENSE="FTL | GPL-2"
+LICENSE="|| ( FTL GPL-2 )"
 SLOT="2"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 macos ppc-macos"
 IUSE="zlib bindist cjk doc"

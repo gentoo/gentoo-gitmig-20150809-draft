@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r4.ebuild,v 1.7 2004/10/05 09:49:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r4.ebuild,v 1.8 2004/10/17 06:52:25 usata Exp $
 
 # r3 change by me (danarmak): there's a contrib dir inside the freetype1
 # sources with important utils: ttf2bdf, ttf2pfb, ttf2pk, ttfbanner.
@@ -25,7 +25,7 @@ SRC_URI="ftp://ftp.freetype.org/freetype/freetype1/${P}.tar.gz
 
 LICENSE="FTL"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ppc64"
+KEYWORDS="x86 ppc ~sparc alpha ~arm ~hppa ~amd64 ~ia64 ppc64"
 IUSE="nls tetex"
 
 DEPEND="virtual/libc
@@ -85,11 +85,11 @@ src_install() {
 	dodoc docs/*.txt docs/FAQ docs/TODO
 	dohtml -r docs
 
-	# install contrib utils
+	# install contrib utils, omit t1asm (conflicts with t1lib)
+	# and getafm (conflicts with psutils)
 	cd ${S}/freetype1-contrib
 	into /usr
-	dobin ttf2bdf/ttf2bdf \
-		ttf2pfb/getafm ttf2pfb/t1asm ttf2pfb/.libs/ttf2pfb \
+	dobin ttf2bdf/ttf2bdf ttf2pfb/.libs/ttf2pfb \
 		ttf2pk/.libs/ttf2pk ttf2pk/.libs/ttf2tfm \
 		ttfbanner/.libs/ttfbanner \
 		|| die
