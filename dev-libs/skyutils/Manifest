@@ -1,6 +1,16 @@
-MD5 45be753f7b4ff72fdc48fca7933e6417 ChangeLog 1297
-MD5 b67394c3bd8082d03ed2bf5b8748cba7 metadata.xml 463
-MD5 980d9aef6092b768843b7364bc2467f0 skyutils-2.5.ebuild 664
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9831a9a873bd4d0199d72586a7964b99 skyutils-2.6.ebuild 766
-MD5 419c513493692f57a2249a487542e2f5 files/digest-skyutils-2.5 126
+MD5 980d9aef6092b768843b7364bc2467f0 skyutils-2.5.ebuild 664
+MD5 fb748afaf25af6023cc4efcf48628cd0 ChangeLog 1364
+MD5 b67394c3bd8082d03ed2bf5b8748cba7 metadata.xml 463
+MD5 1d7891962ddf3aba8268ef5e8da67607 files/digest-skyutils-2.5 64
 MD5 117d166dc994a816b0a9d821233fa251 files/digest-skyutils-2.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBooEtI1lqEGTUzyQRAvpuAKC02nPcGzsi7II5RC/skHoqSROBsgCfWw5D
+Zao1IkK7Cht86fECj7Jgn70=
+=/jJ0
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6085f2de8616604838eea07acfd26695 neoportallibrary-0.9b.ebuild 619
-MD5 1ae8a28dc2aa86aa538b46c799213b5e ChangeLog 620
+MD5 6a55e1e71c6bb58bf2fd9e7c3ae5c7ad ChangeLog 689
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 2620e7d6049ab360d1e714d777ad7ee4 files/digest-neoportallibrary-0.9b 144
+MD5 298c7f1614c919e8f367eee6a1cec8b5 files/digest-neoportallibrary-0.9b 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBooFnI1lqEGTUzyQRAlFrAKCi3PPhlB+sv2m5tCphGInhfLcd1gCeLrba
+La787WM36fEFEQE5JT8HrJ0=
+=7vKO
+-----END PGP SIGNATURE-----

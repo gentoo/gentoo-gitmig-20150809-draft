@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3538932cdac06180b4db4fbf973de120 cmfforum-1.0.ebuild 712
-MD5 e36cfd8e0e3873b4a567c8fb4366a0bc ChangeLog 578
+MD5 2e1c29490f8028385e88923d3db92e5e ChangeLog 647
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 f2d532791a6c2032bcfc3fefc775f01c files/digest-cmfforum-1.0 122
+MD5 a4f6d20407dda961d8d668c4c62fef45 files/digest-cmfforum-1.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBooBhI1lqEGTUzyQRAu7sAKDUCuxYqAz5NHjdrC2rqCRcOjQmpQCgh0+n
+y5VScDyNYxp/va9hC3oSGOw=
+=efv8
+-----END PGP SIGNATURE-----

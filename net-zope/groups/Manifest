@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 90ec0317c2b928f927d379cc140e9336 groups-0.3.1.ebuild 447
 MD5 3de834ab389cb357d9b1c2fa02645100 groups-0.3.2.ebuild 448
-MD5 30cfcc1bc934f2f982783141bd6df21f ChangeLog 787
+MD5 3951c5f829bcb79975b696ff0a9e5089 ChangeLog 856
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 f3b27f0b5d72a4c5c9bb80b3fcee59ab files/digest-groups-0.3.1 122
+MD5 afc3673fd22b849dee0886845de8a43f files/digest-groups-0.3.1 60
 MD5 73a175fb11e9eb0e1d08534ee6ac3a1c files/digest-groups-0.3.2 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBooCVI1lqEGTUzyQRAq45AKCESDB9WvWqCcavmSbnJlyXsp4kUQCZAVTZ
+dZld2/U1giUKVxHaieHFcD8=
+=HPDb
+-----END PGP SIGNATURE-----

@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c6b1b71735e44f49ab64f3df937d0b0e ChangeLog 1459
-MD5 9474064d99f5b0f0ee3ec7437c8b6928 localizer-1.0.1.ebuild 544
 MD5 ea2af49188b95efce7c11ac58091703b localizer-1.1.0_alpha1.ebuild 593
+MD5 9474064d99f5b0f0ee3ec7437c8b6928 localizer-1.0.1.ebuild 544
+MD5 6f4ebdf26d868e3fd2e18ca5d9d33c44 ChangeLog 1528
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 acd3188a587fae5644577822e41c9613 localizer-1.0.0-r1.ebuild 548
-MD5 d00932aa32235cb02a1c05730b777aa9 files/digest-localizer-1.0.0-r1 64
-MD5 d56abb5c2103e46f28b0cb51aa4da66c files/digest-localizer-1.0.1 129
 MD5 3f8f43b42225585543961468215a81dc files/digest-localizer-1.1.0_alpha1 71
+MD5 b6a105e31d507683d40974013a7dfb9f files/digest-localizer-1.0.1 64
+MD5 d00932aa32235cb02a1c05730b777aa9 files/digest-localizer-1.0.0-r1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBLADDI1lqEGTUzyQRAh9vAJ9UPF3OJEQo7nJ/KtGEmiaji5DkegCfZXyL
-7LYUfigZR6zhLGIKOkF4rlo=
-=BfCM
+iD8DBQFBooEDI1lqEGTUzyQRAtYDAKCbDPkl99DGxuZ6Qxj6w+WZCCOo6ACgwiFr
+h8SwPppMOo4bO6eyjGnMrWg=
+=lXT4
 -----END PGP SIGNATURE-----
