@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.6 2004/06/29 03:55:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.7 2004/09/12 19:10:49 taviso Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -13,11 +13,10 @@ SRC_URI="http://www.research.att.com/~gsf/download/tgz/INIT.${RELEASE}.tgz
 
 LICENSE="ATT"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha arm s390"
+KEYWORDS="x86 ~sparc ~alpha arm s390"
 IUSE="static nls"
 
-DEPEND="virtual/libc
-	!app-shells/pdksh"
+DEPEND="virtual/libc !app-shells/pdksh"
 
 S=${WORKDIR}
 
@@ -68,9 +67,7 @@ src_install() {
 	exeinto /bin
 	doexe ${my_arch}/bin/ok/ksh
 
-	# FIXME: talk to pdksh maintainer about making this nicer,
-	# 		how can we co-exist nicely without blocking?
-	dosym /bin/ksh /bin/ksh93
+	dosym /bin/ksh ksh93
 
 	newman ${my_arch}/man/man1/sh.1 ksh.1
 	dodoc lib/package/LICENSES/ast lib/package/gen/ast-ksh.txt
