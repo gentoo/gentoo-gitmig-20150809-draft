@@ -451,3 +451,7 @@ dev-lang/tcl-tk
 # has a defect build system that doesn't honor --prefix=${D}
 # see #1279
 >=dev-python/pychecker-0.8.0
+
+# Testing this from gnome2 source tree
+>=app-text/scrollkeeper-0.3.4-r4
+
