@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r1.ebuild,v 1.2 2004/01/26 19:46:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r1.ebuild,v 1.3 2004/03/09 18:05:52 mkennedy Exp $
 
 ECVS_SERVER="common-lisp.net:/project/slime/cvsroot"
 if [ -z "${ECVS_BRANCH}" ]; then # user configurable
@@ -33,7 +33,8 @@ CLPACKAGE=swank
 # best to compare differences and provide app-emacs/hyperspec
 
 src_compile() {
-	elisp-comp hyperspec.el slime.el 2>/dev/null || die
+	echo "(add-to-list 'load-path \".\")" >script
+	emacs --batch -q -l script -f batch-byte-compile hyperspec.el slime.el || die
 }
 
 src_install() {

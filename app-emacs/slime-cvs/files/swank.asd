@@ -22,6 +22,7 @@
     #+clisp ((:file "swank-backend")
              (:file "swank")
 	     (:file "xref")
+             (:file "metering")
 	     (:file "swank-clisp")
 	     (:file "swank-gray"))
     #+sbcl :depends-on #+sbcl (:sb-bsd-sockets))
