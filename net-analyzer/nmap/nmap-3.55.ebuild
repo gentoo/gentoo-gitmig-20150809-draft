@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.55.ebuild,v 1.2 2004/07/20 14:43:43 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.55.ebuild,v 1.3 2004/07/30 03:40:19 vapier Exp $
 
-inherit gcc eutils
+inherit gcc eutils gnuconfig
 
 DESCRIPTION="A utility for network exploration or security auditing"
 HOMEPAGE="http://www.insecure.org/nmap/"
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
 	epatch ${DISTDIR}/${PN}-3.20_statistics-1.diff
+	gnuconfig_update
 }
 
 src_compile() {

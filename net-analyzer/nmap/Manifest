@@ -1,14 +1,24 @@
-MD5 c99d113e2a1ec1aadfe5667f38b37880 nmap-3.30.ebuild 1116
-MD5 519ce60fb556bb594385954bf8461bd2 nmap-3.50-r1.ebuild 1006
-MD5 5b7791930b048be18d6e45cfe37ed2ae nmap-3.55.ebuild 1009
-MD5 dd8e704f8af8f654006ad7425e4810d1 nmap-3.50.ebuild 979
-MD5 9992ac1d8edaeaf8d63b3fe941ff96ff nmap-3.48.ebuild 979
-MD5 8628dfcf2a5b42ee7a6725056d62a558 nmap-3.45.ebuild 988
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 40e34878b88c24802d4f4fbde9d7ea2f ChangeLog 7752
+MD5 c99d113e2a1ec1aadfe5667f38b37880 nmap-3.30.ebuild 1116
+MD5 8628dfcf2a5b42ee7a6725056d62a558 nmap-3.45.ebuild 988
+MD5 9992ac1d8edaeaf8d63b3fe941ff96ff nmap-3.48.ebuild 979
+MD5 5846dfe645a4c7ba1dfdc9d2d1ee4dfc nmap-3.55.ebuild 1038
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
+MD5 dd8e704f8af8f654006ad7425e4810d1 nmap-3.50.ebuild 979
+MD5 519ce60fb556bb594385954bf8461bd2 nmap-3.50-r1.ebuild 1006
+MD5 1037b8fc75e77ab2c1e2687d5d3a88cc files/digest-nmap-3.55 133
 MD5 71e95ca8be6f8faf7acb7b35658c2d03 files/digest-nmap-3.30 132
 MD5 7a58117777c97362ea9c4a6982cca224 files/digest-nmap-3.45 133
 MD5 d46477d7825ac476a9c5f557fd0a7272 files/digest-nmap-3.48 133
 MD5 3df9d80cb8c3933dffd20af89a82957b files/digest-nmap-3.50 133
-MD5 1037b8fc75e77ab2c1e2687d5d3a88cc files/digest-nmap-3.55 133
 MD5 3df9d80cb8c3933dffd20af89a82957b files/digest-nmap-3.50-r1 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBCcMyHTu7gpaalycRAmTLAKCIdHujOPaHLezXbwDXVg+e36U40gCgsJ6+
+a/3zMl/0uuFjNma6yI6WDSE=
+=D181
+-----END PGP SIGNATURE-----
