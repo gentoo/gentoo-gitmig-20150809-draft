@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 364b8eb900127a5f131dfb61e9c62540 ChangeLog 8803
+MD5 51279e6cc9021e6feb05c204a2c7a631 ChangeLog 8884
 MD5 a8f4e2b68b04b535b32e12816278f1da metadata.xml 231
-MD5 942ace25ce87f6677723ebf201af8b8e xterm-197.ebuild 1631
-MD5 142e64d695e943ca214286bbe8bd3d9a xterm-199.ebuild 1618
 MD5 37288ae5949a75dcd71d219ece1de344 xterm-196-r1.ebuild 1637
 MD5 32a785da80adfaa874f82ae27be29b46 xterm-196.ebuild 1360
-MD5 262f724e0a5b9a083a6fb77ba48e5e12 files/digest-xterm-197 58
-MD5 6fae395e470f08203ce93f62fa6e896c files/digest-xterm-199 58
+MD5 88445a15fb710d1fa8db788373c49948 xterm-197.ebuild 1628
+MD5 142e64d695e943ca214286bbe8bd3d9a xterm-199.ebuild 1618
 MD5 222267de7af1500b6d28efe51a296e1b files/digest-xterm-196 58
 MD5 222267de7af1500b6d28efe51a296e1b files/digest-xterm-196-r1 58
+MD5 262f724e0a5b9a083a6fb77ba48e5e12 files/digest-xterm-197 58
 MD5 22861d1a4affc7229c468095a0103257 files/xterm-184-remove-termcap-breakage.patch 377
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB8WXdKRy60XGEcJIRAm0zAKCsOtv/DKiNIB6UYVjg+dMT0F5jXwCfeNVQ
-DutSwQxanlhHJlPrJA1brcQ=
-=6aep
------END PGP SIGNATURE-----
+MD5 6fae395e470f08203ce93f62fa6e896c files/digest-xterm-199 58
