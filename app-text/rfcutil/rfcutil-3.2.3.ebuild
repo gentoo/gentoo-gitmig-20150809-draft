@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.16 2004/09/08 14:21:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.17 2004/09/12 20:14:04 kloeri Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ numbers."
 HOMEPAGE="http://www.dewn.com/rfc/"
 SRC_URI="http://www.dewn.com/rfc/${MY_P}.tar.gz"
 IUSE=""
-KEYWORDS="x86 sparc ppc ~mips macos ppc64"
+KEYWORDS="x86 sparc ppc ~mips macos ppc64 ~alpha"
 SLOT="0"
 LICENSE="as-is"
 
