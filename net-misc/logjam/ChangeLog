@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.8 2003/05/10 23:00:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.9 2003/06/19 08:27:09 liquidx Exp $
+
+  19 Jun 2003; Alastair Tse <liquidx@gentoo.org> logjam-4.1.2.ebuild:
+  bumping 4.1.2 to stable x86. introduce ebuild with gtkhtml editing option
 
 *logjam-4.1.2 (10 May 2003)
 
