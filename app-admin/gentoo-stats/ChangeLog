@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/gentoo-stats
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.4 2002/08/31 19:58:04 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.5 2002/10/05 03:38:11 blizzy Exp $
+
+*gentoo-stats-0.2 (05 Oct 2002)
+
+  05 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
+  Changes in this release:
+    - HTTP proxy support
+    - recognition of installed PCI cards
+    - you can decide what data to transmit (see
+      /etc/gentoo-stats/gentoo-stats.conf)
 
   31 Aug 2002; Maik Schreiber <blizzy@gentoo.org> gentoo-stats-0.1.ebuild:
   Changed to "-sparc -sparc64" since bug #5822 isn't resolved yet. Also
