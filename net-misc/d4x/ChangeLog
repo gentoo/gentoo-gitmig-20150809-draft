@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.9 2003/03/30 17:46:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.10 2003/07/13 14:31:35 aliz Exp $
 
 *d4x-2.4.1-r1 (30 Mar 2003)
 
@@ -29,7 +29,7 @@
   current nt-2.03 ebuild is much more complete than the newly added
   one.
 
-*nt-2.0.3 (1 Sep 2002)
+*d4x-2.03 (1 Sep 2002)
 
   1 Sep 2002; Martin Schlemmer <azarah@gentoo.org> nt-2.03.ebuild :
   New version.

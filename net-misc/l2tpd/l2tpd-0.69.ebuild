@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l2tpd/l2tpd-0.69.ebuild,v 1.3 2003/07/11 03:58:09 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l2tpd/l2tpd-0.69.ebuild,v 1.4 2003/07/13 14:31:36 aliz Exp $
 
 DESCRIPTION="Layer 2 Tunnelling Protocol Daemon"
 HOMEPAGE="http://www.l2tpd.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.l2tpd.org/downloads/${P}.tar.gz"
 #	http://www.jacco2.dds.nl/networking/freeswanl2tpconfig-1.1.tgz"
 DEPEND="virtual/glibc"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 

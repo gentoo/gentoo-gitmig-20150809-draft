@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tkusr/tkusr-0.80.ebuild,v 1.1 2003/04/22 16:40:43 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tkusr/tkusr-0.80.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
 
 DESCRIPTION="TkUsr is a small program that allows you to manage the Self-mode of USR/3COM Message (Plus), Professional Message modems."
 HOMEPAGE="http://www.drolez.com/tkusr"
 SRC_URI="http://www.drolez.com/tkusr/${PN}_${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 S="${WORKDIR}/${P}"

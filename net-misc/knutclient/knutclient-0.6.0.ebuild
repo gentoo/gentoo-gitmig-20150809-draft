@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-0.6.0.ebuild,v 1.1 2003/04/21 03:57:57 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-0.6.0.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
 
 inherit kde-base || die
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Client for the NUT UPS monitoring daemon"
 SRC_URI="ftp://ftp.buzuluk.cz/pub/alo/knutclient/${P}.tar.gz"
 HOMEPAGE="http://www.alo.cz/knutclient-pop-en.html"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 

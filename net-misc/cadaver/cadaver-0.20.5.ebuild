@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.20.5.ebuild,v 1.2 2003/02/13 14:46:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.20.5.ebuild,v 1.3 2003/07/13 14:31:35 aliz Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="a command-line WebDAV client."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.webdav.org/cadaver"
 LICENSE="GPL-2"
 #DEPEND=">=net-misc/neon-0.23.5"
 DEPEND="virtual/glibc"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 

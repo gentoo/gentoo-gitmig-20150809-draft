@@ -1,8 +1,8 @@
 # ChangeLog for net-misc/bcm4400
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.3 2003/02/12 08:19:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.4 2003/07/13 14:31:35 aliz Exp $
 
-* net-misc/bcm4400-1.0.1 (Jan 18 2003)
+*bcm4400-1.0.1 (Jan 18 2003)
 
   18 Jan 2003; Seth Chandler <sethbc@gentoo.org> bcm4400-1.0.1.ebuild :
   initial import into portage

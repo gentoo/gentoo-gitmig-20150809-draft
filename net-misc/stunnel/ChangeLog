@@ -1,11 +1,11 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.14 2003/07/11 15:05:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.15 2003/07/13 14:31:36 aliz Exp $
 
   11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> stunnel-4.04-r1.ebuild :
   Fixed path to patch. Closes #23702.
 
-*stunnel-3.24 (02 Jul 2003)
+*stunnel-3.24-r1 (02 Jul 2003)
 
   02 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> stunnel-3.24-r1.ebuild :
   New revision without the blindingfix patch.

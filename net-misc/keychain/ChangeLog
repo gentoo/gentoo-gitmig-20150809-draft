@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/keychain
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.13 2003/04/22 20:06:44 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.14 2003/07/13 14:31:36 aliz Exp $
 
 *keychain-2.0.3 (22 Apr 2003)
 
@@ -21,6 +21,11 @@
   
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
+*keychain-2.0.2 (27 Mar 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *keychain-1.9 (23 Feb 2002)
 
   28 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> keychain-2.0.2.ebuild :

@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/kluje
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kluje/ChangeLog,v 1.8 2003/03/01 14:28:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kluje/ChangeLog,v 1.9 2003/07/13 14:31:36 aliz Exp $
 
   01 Mar 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
@@ -15,7 +15,7 @@
 
   New version. Closes #6397
 
-kluje-0.6 (3 July 2002)
+*kluje-0.6 (3 July 2002)
 
 3 Jul 2002; Ryan Breen <ryan@ryanbreen.com> kluje-0.6.ebuild:
    Version bumped.

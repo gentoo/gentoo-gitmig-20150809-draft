@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.9.ebuild,v 1.3 2003/06/12 21:44:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.9.ebuild,v 1.4 2003/07/13 14:31:36 aliz Exp $
 
 DESCRIPTION="SIP Express Router"
 
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/ser/0.8.9/src/${P}_src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="ipv6 mysql"
 
 DEPEND=">=sys-devel/gcc-2.95.3

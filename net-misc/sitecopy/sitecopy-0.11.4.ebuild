@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.11.4.ebuild,v 1.2 2003/02/13 15:07:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.11.4.ebuild,v 1.3 2003/07/13 14:31:36 aliz Exp $
 
 DESCRIPTION="sitecopy is for easily maintaining remote web sites"
 SRC_URI="http://www.lyra.org/sitecopy/${P}.tar.gz"
 HOMEPAGE="http://www.lyra.org/sitecopy/"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 

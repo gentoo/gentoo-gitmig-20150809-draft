@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-0.9.1.ebuild,v 1.1 2003/05/20 07:28:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-0.9.1.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sourceforge.net/project/drivel/"
 SRC_URI="mirror://sourceforge/drivel/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND=">=x11-libs/gtk+-2.0.0
 	>=gnome-base/libgnomeui-2.0.3

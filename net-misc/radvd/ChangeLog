@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.4 2003/04/21 15:11:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.5 2003/07/13 14:31:36 aliz Exp $
+
+*radvd-0.7.2-r1 (21 Apr 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *radvd-0.7.2 (21 Apr 2003)
 

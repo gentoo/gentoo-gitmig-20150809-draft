@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.8.ebuild,v 1.4 2003/06/18 02:30:28 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.8.ebuild,v 1.5 2003/07/13 14:31:36 aliz Exp $
 
 DESCRIPTION="Server and client for DHCPv6"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/dhcpv6/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND=""
 S=${WORKDIR}/${MY_P}

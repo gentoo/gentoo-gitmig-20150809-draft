@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rp-l2tp/rp-l2tp-0.3-r1.ebuild,v 1.1 2003/04/05 20:20:48 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rp-l2tp/rp-l2tp-0.3-r1.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2"
 DEPEND="virtual/glibc"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 

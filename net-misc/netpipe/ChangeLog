@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netpipe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/ChangeLog,v 1.1 2003/02/11 22:27:50 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/ChangeLog,v 1.2 2003/07/13 14:31:36 aliz Exp $
+
+*netpipe-1.0.0_beta2 (13 Feb 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *netpipe-1.0.0_beta1 (08 Feb 2003)
 

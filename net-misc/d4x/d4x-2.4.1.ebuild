@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1.ebuild,v 1.4 2003/03/30 17:46:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1.ebuild,v 1.5 2003/07/13 14:31:36 aliz Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -9,7 +9,7 @@ DESCRIPTION="GTK based download manager for X."
 SRC_URI="http://www.krasu.ru/soft/chuchelo/files/${P/_}.tar.gz"
 HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="Artistic"
 

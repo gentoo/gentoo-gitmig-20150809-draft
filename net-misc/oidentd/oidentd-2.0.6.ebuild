@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.6.ebuild,v 1.1 2003/04/28 18:30:30 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.6.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
 
 IUSE="ipv6"
 
 DESCRIPTION="Another (RFC1413 compliant) ident daemon"
 HOMEPAGE="http://dev.ojnk.net/"
 SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
-KEYWORDS="~x86 ~sparc ~alpha"
+KEYWORDS="x86 ~sparc ~alpha"
 LICENSE="GPL-2"
 SLOT="0"
 

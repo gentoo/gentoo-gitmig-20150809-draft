@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.2.0-r1.ebuild,v 1.2 2003/04/28 19:36:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.2.0-r1.ebuild,v 1.3 2003/07/13 14:31:36 aliz Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://rdesktop.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~sparc"
+KEYWORDS="x86 ~alpha ~sparc"
 
 DEPEND="x11-base/xfree 
 	ssl? ( >=dev-libs/openssl-0.9.6b )"

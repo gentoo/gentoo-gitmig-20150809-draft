@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/vncsnapshot-1.1.ebuild,v 1.1 2003/04/21 17:51:45 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/vncsnapshot-1.1.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
 
 LICENSE="GPL-2"
 DESCRIPTION="A command-line tool for taking JPEG snapshots of VNC servers"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 HOMEPAGE="http://vncsnapshot.sourceforge.net/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 SLOT="0"
 DEPEND=">=media-libs/jpeg-6b

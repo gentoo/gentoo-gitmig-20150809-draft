@@ -1,11 +1,11 @@
 # ChangeLog for net-misc/gtkesms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/ChangeLog,v 1.5 2003/02/12 08:23:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/ChangeLog,v 1.6 2003/07/13 14:31:36 aliz Exp $
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
-*gtkems-0.0.4 (26 May 2002)
+*gtkesms-0.0.4 (26 May 2002)
 
   01 Jun 2002; phoen][x <phoenix@gentoo.org> gtkesms-0.0.4.ebuild:
   Added KEYWORDS.

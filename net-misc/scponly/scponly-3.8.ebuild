@@ -1,13 +1,13 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-3.8.ebuild,v 1.1 2003/05/06 12:57:21 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-3.8.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
 
 DESCRIPTION="A tiny psuedoshell which only permits scp and sftp"
 SRC_URI="http://www.sublimation.org/scponly/${P}.tgz"
 HOMEPAGE="http://www.sublimation.org/scponly/"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/glibc

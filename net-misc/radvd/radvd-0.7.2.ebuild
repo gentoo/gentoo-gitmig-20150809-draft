@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.7.2.ebuild,v 1.3 2003/02/13 15:05:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.7.2.ebuild,v 1.4 2003/07/13 14:31:36 aliz Exp $
 
 DESCRIPTION="Linux IPv6 Router Advertisement Daemon (radvd)"
 HOMEPAGE="http://v6web.litech.org/radvd/"
@@ -8,7 +8,7 @@ SRC_URI="http://v6web.litech.org/radvd/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	virtual/kernel"

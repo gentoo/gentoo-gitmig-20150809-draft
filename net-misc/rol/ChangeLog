@@ -1,8 +1,8 @@
 # ChangeLog for net-misc/rol
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rol/ChangeLog,v 1.2 2003/04/22 10:25:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rol/ChangeLog,v 1.3 2003/07/13 14:31:36 aliz Exp $
 
-* rol-0.2.2 (11 Mar 2003)
+*rol-0.2.2 (11 Mar 2003)
 
   10 Feb 2003; Seth Chandler <sethbc@gentoo.org>; rol-0.2.2.ebuild:
   Initial Ebuild by Marc Hildebrand <marc.hildebrand@t-online.de> :

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.3.2.ebuild,v 1.3 2003/02/28 16:55:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.3.2.ebuild,v 1.4 2003/07/13 14:31:36 aliz Exp $
 
 IUSE="ssl"
 
@@ -10,7 +10,7 @@ SRC_URI="http://unc.dl.sourceforge.net/sourceforge/openvpn/${P}.tar.gz"
 HOMEPAGE="http://openvpn.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND=">=dev-libs/lzo-1.07
 		virtual/linux-sources
