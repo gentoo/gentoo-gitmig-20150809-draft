@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.2.ebuild,v 1.1 2004/10/21 20:53:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.2.ebuild,v 1.2 2004/11/02 22:32:09 mr_bones_ Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_compile() {
 	local myconf
 	myconf="`use_enable nls`"
 	myconf="${myconf} `use_with ofx`"
-	
+
 	econf ${myconf} || die "configure failed"
 	emake || die
 }
