@@ -1,6 +1,13 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.6 2002/12/13 10:56:19 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.7 2003/01/03 06:44:01 satai Exp $
+
+*docbook2X-0.6.1-r1 (03 Jan 2003)
+
+  03 Jan 2003; Matthew Turk <satai@gentoo.org> :
+  changed to install everything as ${exe}.pl, to thus avoid the conflicts
+  between this package and docbook-sgml-utils, as this one is much less widely
+  used.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
