@@ -1,4 +1,14 @@
-MD5 bb9c4089bf206494d2c69574416285b9 wmdots-0.2_beta.ebuild 578
-MD5 c3a5f1531c8d264e68eb2db56e1469c9 ChangeLog 469
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ad9eddd3be2dce48fec993a07b2d3521 ChangeLog 564
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 bb9c4089bf206494d2c69574416285b9 wmdots-0.2_beta.ebuild 578
 MD5 4031338ccfa2db6b7b0033f1c972efa2 files/digest-wmdots-0.2_beta 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBXs1LI1lqEGTUzyQRAkZKAKDPlflBcK6cTjjEdu8V8bf6gVhrggCg19fr
++1uYxOzRQeX3ie5E4VGGkFQ=
+=ApOF
+-----END PGP SIGNATURE-----
