@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r1.ebuild,v 1.20 2004/07/12 08:04:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r1.ebuild,v 1.21 2004/07/13 02:14:15 eradicator Exp $
 
 IUSE=""
 
@@ -31,13 +31,15 @@ src_install () {
 pkg_postinst() {
 	# We create a symlink for /usr/bin/mpg123 if it doesn't already exist
 	if ! [ -f /usr/bin/mpg123 ]; then
-		ln -s mpg321 /usr/bin/mpg123
+		ln -s mpg321 ${ROOT}/usr/bin/mpg123
 	fi
 }
 
 pkg_postrm() {
-	# We can't delete it here because it would break upgrades.
-	if [ -L /usr/bin/mpg123 ]; then
-		einfo "The /usr/bin/mpg123 symlink still exists.  You may wish to remove it."
+	# We delete the symlink if it's nolonger valid.
+	if [ -L "${ROOT}/usr/bin/mpg123" ] && [ ! -x "${ROOT}/usr/bin/mpg123" ]; then
+		einfo "We are removing the ${ROOT}/usr/bin/mpg123 symlink since it is no longer valid."
+		einfo "If you are using another virtual/mpg123 program, you should setup the appropriate symlink."
+		rm ${ROOT}/usr/bin/mpg123
 	fi
 }
