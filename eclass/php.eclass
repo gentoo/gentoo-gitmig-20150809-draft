@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.61 2003/06/28 20:01:00 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.62 2003/06/30 10:06:07 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -18,7 +18,7 @@ inherit eutils flag-o-matic
 ECLASS=php
 INHERITED="$INHERITED $ECLASS"
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install 
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst pkg_preinst
 
 function runningunstable() { has ~${ARCH} ${ACCEPT_KEYWORDS} > /dev/null ; }
 
@@ -64,7 +64,7 @@ RDEPEND="
 	png? ( >=media-libs/libpng-1.2.5 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	qt? ( >=x11-libs/qt-2.3.0 )
-	snmp? ( virtual/snmp )
+	snmp? ( net-analyzer/net-snmp )
 	spell? ( app-text/aspell )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
 	tiff? ( >=media-libs/tiff-3.5.5 )
@@ -140,6 +140,15 @@ PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules install-pear install-b
 #overall recommended order
 #install-cli install-sapi install-modules install-pear install-build install-headers install-programs
 
+PHPMAJORVER=${PV//\.*}
+if [ -z "${PHPSAPI}" ]; then
+	msg="The PHP eclass needs a PHPSAPI setting!"
+	eerror "${msg}"
+	die "${msg}"
+fi
+PHPINIDIRECTORY="/etc/php/${PHPSAPI}-php${PHPMAJORVER}"
+PHPINIFILENAME="php.ini"
+
 #fixes bug #14067
 replace-flags "-march=k6*" "-march=i586"
 
@@ -150,17 +159,32 @@ php_check_java_config() {
 		eerror "${NOJDKERROR}"
 		die "${NOJDKERROR}"
 	fi
+
+	# stuart@gentoo.org - 2003/05/18
+	# Kaffe JVM is not a drop-in replacement for the Sun JDK at this time
+
+	if echo $JDKHOME | grep kaffe > /dev/null 2>&1 ; then
+		eerror
+		eerror "PHP will not build using the Kaffe Java Virtual Machine."
+		eerror "Please change your JVM to either Blackdown or Sun's."
+		eerror 
+		eerror "To build PHP without Java support, please re-run this emerge"
+		eerror "and place the line:"
+		eerror "  USE='-java'"
+		eerror "in front of your emerge command; e.g."
+		eerror "  USE='-java' emerge mod_php"
+		eerror
+		eerror "or edit your USE flags in /etc/make.conf"
+		die
+	fi
 }
 
 php_src_unpack() {
-	einfo "This ebuild should be very stable at this point."
 	use xml || \
-	( ewarn "You have the xml USE flag turned off Previously this"
+	( ewarn "You have the xml USE flag turned off. Previously this"
 	  ewarn "disabled XML support in PHP. However PEAR has a hard"
 	  ewarn "dependancy on it, so they are now enabled." )
 
-	use java && ewarn "Java support may be somewhat flakey, but it shouldn't break anything."
-	
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
 
@@ -341,7 +365,7 @@ php_src_compile() {
 		--enable-track-vars \
 		--enable-trans-sid \
 		--enable-versioning \
-		--with-config-file-path=/etc/php4" 
+		--with-config-file-path=${PHPINIDIRECTORY}" 
 
 	LIBS="${LIBS}" econf \
 		${myconf} || die "bad ./configure"
@@ -359,6 +383,7 @@ php_src_install() {
 	# parallel make breaks it
 	# so no emake here
 	make INSTALL_ROOT=${D} ${PHP_INSTALLTARGETS} || die
+	PHPEXTDIR="`${D}/usr/bin/php-config  --extension-dir`"
 	
 	# put make here
 
@@ -368,11 +393,6 @@ php_src_install() {
 	#install scripts
 	exeinto /usr/bin
 
-	# Deprecated
-	#doexe ${S}/pear/scripts/phpize
-	#doexe ${S}/pear/scripts/php-config
-	#doexe ${S}/pear/scripts/phpextdist
-	
 	# PHP module building stuff
 	mkdir -p ${D}/usr/lib/php/build
 	insinto /usr/lib/php/build
@@ -383,4 +403,49 @@ php_src_install() {
 	rm ${D}/usr/lib/php/PEAR/Registry.php
 	#should this possibly result to the SAME original value it was ? (\$pear_install_dir)
 	cat ${S}/pear/PEAR/Registry.old | sed -e 's:${PORTAGE_TMPDIR}/${PF}::' > ${D}/usr/lib/php/PEAR/Registry.php
+
+
+	# Support for Java extension
+	# 1. install php_java.jar file into ${EXT_DIR}
+	# 2. edit the php.ini file ready for installation
+	# - stuart@gentoo.org
+	local phpinisrc=php.ini-dist
+	if [ "`use java`" ] ; then
+
+		# we put these into /usr/lib so that they cannot conflict with
+		# other versions of PHP (e.g. PHP 4 & PHP 5)
+
+		insinto ${PHPEXTDIR}
+		einfo "Installing JAR for PHP"
+		doins ext/java/php_java.jar
+
+		einfo "Installing Java test page"
+		newins ext/java/except.php java-test.php
+
+		JAVA_LIBRARY="`grep -- '-DJAVALIB' Makefile | sed -e 's,.\+-DJAVALIB=\"\([^"]*\)\".*$,\1,g;'| sort | uniq `"
+		cat ${phpinisrc} | sed -e "s|;java.library .*$|java.library = ${JAVA_LIBRARY}|g" > php.ini-1
+		cat php.ini-1 | sed -e "s|;java.class.path .*$|java.class.path = ${PHPEXTDIR}/php_java.jar|g" > php.ini-2
+		cat php.ini-2 | sed -e "s|extension_dir .*$|extension_dir = ${PHPEXTDIR}|g" > php.ini-3
+		cat php.ini-3 | sed -e "s|;extension=php_java.dll.*$|extension = java.so|g" > php.ini-4
+		cat php.ini-4 | sed -e "s|;java.library.path .*$|java.library.path = ${PHPEXTDIR}|g" > php.ini-5
+		phpinisrc=php.ini-5
+		dosym ${PHPEXTDIR}/java.so ${PHPEXTDIR}/libphp_java.so
+		#( cd ${D} ; ln -snf ${PHPEXTDIR}/java.so ${D}/${PHPEXTDIR}/libphp_java.so )
+	fi
+
+	# A lot of ini file funkiness
+	insinto ${PHPINIDIRECTORY}
+	newins ${phpinisrc} ${PHPINIFILENAME}
+	dodir /etc/php4
+	[ "${PHPMAJORVER}" -eq 4 ] && dosym ${PHPINIDIRECTORY}/${PHPINIFILENAME} /etc/php4/${PHPINIFILENAME}
+}
+
+php_pkg_preinst() {
+	einfo "Preserving old php.ini if needed"
+	mkdir -p ${PHPINIDIRECTORY}
+	[ -e /etc/php4/php.ini ] && [ -f /etc/php4/php.ini ] && mv -f /etc/php4/php.ini ${PHPINIDIRECTORY}/${PHPINIFILENAME}
+}
+
+php_pkg_postinst() {
+	einfo "The INI file for this build is ${PHPINIDIRECTORY}"
 }
