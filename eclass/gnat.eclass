@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.3 2003/09/18 15:09:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.4 2003/12/12 05:04:44 george Exp $
 #
 # Author: David Holm <dholm@telia.com>
 #
@@ -25,7 +25,9 @@ ADAC=${ADAC:-gnatgcc}
 ADAMAKE=${ADAMAKE:-gnatmake}
 ADABIND=${ADABIND:-gnatbind}
 
-filter-flags "-mmmx -msse -mfpmath=sse -frename-registers \
+filter-mfpmath "sse 387"
+
+filter-flags "-mmmx -msse -mfpmath -frename-registers \
 	-fprefetch-loop-arrays -falign-functions=4 -falign-jumps=4 -falign-loops=4 \
 	-msse2 -frerun-loop-opt -maltivec -mabi=altivec -pipe"
 
