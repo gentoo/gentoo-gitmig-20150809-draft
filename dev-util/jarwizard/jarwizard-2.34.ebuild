@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/jarwizard-2.34.ebuild,v 1.1 2004/04/11 21:43:07 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/jarwizard-2.34.ebuild,v 1.2 2004/06/03 17:47:36 agriffis Exp $
 
 inherit java-pkg
 
@@ -18,7 +18,7 @@ RDEPEND=">=virtual/jre-1.3"
 S="${WORKDIR}/${PN}"
 
 src_compile() {
-	if [ -n "`use jikes`" ] ; then
+	if use jikes ; then
 		jikes -O -source 1.3 *.java
 	else
 		javac -g:none -source 1.3 *.java

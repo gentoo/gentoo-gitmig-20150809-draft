@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/biew
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.5 2004/04/14 15:06:37 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.6 2004/06/03 17:45:13 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> biew-5.5.0.ebuild,
+  biew-5.6.1.ebuild:
+  Fix use invocation
 
 *biew-5.6.1 (14 Apr 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.5.3.ebuild,v 1.2 2004/03/13 01:43:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.5.3.ebuild,v 1.3 2004/06/03 17:45:50 agriffis Exp $
 
 IUSE="ssl postgres"
 
@@ -19,7 +19,7 @@ DEPEND=">=sys-libs/glibc-2.2
 src_compile() {
 
 	# Patch configure to add -lssl when using postgresql and ssl
-	if [ "`use postgres`" ] && [ "`use ssl`" ]
+	if use postgres && use ssl
 	then
 		sed -i "s/-lcrypt/-lcrypt -lssl/" configure
 	fi

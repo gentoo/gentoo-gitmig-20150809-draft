@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.1.ebuild,v 1.1 2004/04/14 15:06:37 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.1.ebuild,v 1.2 2004/06/03 17:45:13 agriffis Exp $
 
 IUSE="slang ncurses"
 
@@ -33,9 +33,9 @@ src_compile() {
 
 	local scrnlib
 
-	if [ `use ncurses` ] ; then
+	if use ncurses ; then
 		scrnlib="ncurses"
-	elif [ `use slang` ] ; then
+	elif use slang ; then
 		scrnlib="slang"
 	else
 		scrnlib="vt100"
