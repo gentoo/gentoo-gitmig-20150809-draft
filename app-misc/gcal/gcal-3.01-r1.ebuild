@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01-r1.ebuild,v 1.7 2004/06/28 03:36:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01-r1.ebuild,v 1.8 2004/09/05 23:53:03 pylon Exp $
 
 DESCRIPTION="The GNU Calendar - a replacement for cal"
 HOMEPAGE="http://www.gnu.org/software/gcal/gcal.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/gcal/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~amd64"
+KEYWORDS="x86 ppc ~sparc alpha ~amd64"
 IUSE="ncurses nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
