@@ -68,3 +68,4 @@ move media-gfx/sane-plustek media-gfx/plustek-parallel
 move app-admin/tftp-hpa net-misc/tftp-hpa
 move net-ftp/atftp net-misc/atftp
 move dev-python/PyXML dev-python/pyxml
+move app-misc/linux_logo app-misc/linux-logo
