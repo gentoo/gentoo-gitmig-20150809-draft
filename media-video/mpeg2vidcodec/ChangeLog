@@ -1,8 +1,11 @@
 # ChangeLog for media-video/mpeg2vidcodec
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/ChangeLog,v 1.4 2003/03/10 22:21:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/ChangeLog,v 1.5 2003/03/19 13:05:23 weeve Exp $
 
 *mpeg2vidcodec-12-r1 (1 Feb 2002)
+
+  19 Mar 2003; Jason Wever <weeve@gentoo.org> mpeg2vidcodec-12-r1.ebuild:
+  Added ~sparc to keywords.
 
   10 Mar 2003; Aron Griffis <agriffis@gentoo.org> mpeg2vidcodec-12-r1.ebuild:
   Add ~alpha to KEYWORDS
