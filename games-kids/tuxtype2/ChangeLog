@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/tuxtype2
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/ChangeLog,v 1.1 2005/01/04 13:47:14 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/ChangeLog,v 1.2 2005/01/14 22:23:44 luckyduck Exp $
+
+  14 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> tuxtype2-1.5.3.ebuild:
+  added ~amd64 to KEYWORDS. fixes bug #77993.
 
 *tuxtype2-1.5.3 (30 Dec 2004)
 

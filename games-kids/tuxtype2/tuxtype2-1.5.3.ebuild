@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/tuxtype2-1.5.3.ebuild,v 1.2 2005/01/08 11:00:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/tuxtype2-1.5.3.ebuild,v 1.3 2005/01/14 22:23:44 luckyduck Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tuxtype/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc sparc x86"
+KEYWORDS="ppc sparc x86 ~amd64"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2bccbb85f9a55948296475cbcefdfb6 tuxtype2-1.5.3.ebuild 968
-MD5 e059b253336a70ff5f05c801b71e8c7f ChangeLog 363
+MD5 e207974373491a889b32039a6c6c1ce5 tuxtype2-1.5.3.ebuild 976
+MD5 1e84d8bdbaaffd40f59f021825917653 ChangeLog 488
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 e90cf08972a1a3a1d13e20753e7a296f files/digest-tuxtype2-1.5.3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB371oI1lqEGTUzyQRAsFBAKCNi0iptm7Se4nGXVFTdktmbA3CCACeK3gh
-rmZe4hBlWm5tsDrQ58BjiJ8=
-=y34u
------END PGP SIGNATURE-----
