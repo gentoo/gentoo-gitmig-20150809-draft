@@ -1,5 +1,5 @@
-MD5 ccd8e44943dfb4e9778df04738e26fc8 ChangeLog 5502
-MD5 63a1ecad931fdb327f142454f44518a1 ethereal-0.9.14.ebuild 2132
+MD5 b7f1a168daef3bb0bc601090691db343 ChangeLog 5615
+MD5 5bbf71836a68992d2ba9db913a8263ed ethereal-0.9.14.ebuild 2130
 MD5 dfba4396f60b494565bbfc3845e09cec ethereal-0.9.13.ebuild 2129
 MD5 380524e1a6116898080fe64bed810144 files/digest-ethereal-0.9.14 69
 MD5 44dcde01bfc4b986a229fa28dee9f9e7 files/digest-ethereal-0.9.13 69
