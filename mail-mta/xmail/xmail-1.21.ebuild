@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.16-r1.ebuild,v 1.5 2005/01/27 17:25:35 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.21.ebuild,v 1.1 2005/01/27 17:25:35 superlag Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.xmailserver.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -26,11 +26,8 @@ src_compile() {
 	sed -i -e "s:^CFLAGS = -O2:CFLAGS=$CFLAGS:g" Makefile.lnx
 
 	# Makefile does not setup dependencies properly to handle parallel build
-	if use x86 ; then
-		emake -j1 -f Makefile.lnx || die
-	elif use sparc ; then
-		emake -j1 -f Makefile.slx || die
-	fi
+	emake -j1 -f Makefile.lnx || die
+
 	sed -e "s:/var/MailRoot:/chroot/xmail/var/MailRoot:g" sendmail.sh > sendmail.sh.new
 }
 
@@ -96,12 +93,12 @@ src_install() {
 	newexe ${FILESDIR}/xmail.initd xmail
 	insinto /etc/conf.d
 	newins ${FILESDIR}/xmail.confd xmail
-	cd ${S}
+	cd ${S}/bin
 	exeopts -o xmail -g xmail -m 4700
 	exeinto /usr/sbin
 	newexe sendmail sendmail.xmail
 	exeopts -o root -g root -m 755
-	newexe sendmail.sh.new sendmail
+	newexe ../sendmail.sh.new sendmail
 	exeopts -o xmail -g xmail -m 700
 	exeinto /chroot/xmail/var/MailRoot/bin
 	doexe CtrlClnt XMail XMCrypt MkUsers
