@@ -1,5 +1,7 @@
 MD5 f5aec537e7e8e5e7be9f3a4a4b7c6c56 ChangeLog 1046
 MD5 1bcc12bbfaffe54ef32b84b247ba5fa2 Convert-BER-1.31-r2.ebuild 540
 MD5 737e30f5afb48f976e04d064e3ed1940 Convert-BER-1.31-r3.ebuild 539
+MD5 1da67a68f0f7d5723d83559bfa4a6a03 Convert-BER-1.3101.ebuild 563
 MD5 52b3eda12e5c33cc3b8f29ec79985314 files/digest-Convert-BER-1.31-r2 67
 MD5 52b3eda12e5c33cc3b8f29ec79985314 files/digest-Convert-BER-1.31-r3 67
+MD5 e4c548c92fc7d5d0e0e8f9f46e1a2322 files/digest-Convert-BER-1.3101 69

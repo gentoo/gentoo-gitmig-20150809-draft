@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Convert-BER
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.6 2003/02/12 06:15:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.7 2003/06/07 11:39:18 mcummings Exp $
+
+*Convert-BER-1.3101 (07 Jun 2003)
+
+  07 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Convert-BER-1.3101.ebuild:
+  CPAN update
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
