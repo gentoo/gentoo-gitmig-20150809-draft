@@ -1,0 +1,7 @@
+# ChangeLog for net-fs/kasablanca
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/kasablanca/ChangeLog,v 1.1 2004/04/21 02:58:31 dragonheart Exp $
+
+  21 Apr 2004; Daniel Black <dragonheart@gentoo.org> :
+  Inital import by Valerio <mr.gamer@email.it> in bug #48054
+
