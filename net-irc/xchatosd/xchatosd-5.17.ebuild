@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.12.ebuild,v 1.8 2005/02/17 02:54:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.17.ebuild,v 1.1 2005/02/17 02:54:14 swegener Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="On-Screen Display for XChat"
 HOMEPAGE="http://sourceforge.net/projects/xchatosd/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="iconv"
 
 RDEPEND=">=x11-libs/xosd-2.2.5
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PV}-return-values.patch
+	epatch ${FILESDIR}/${PV}-iconv-fix.patch
 
 	# We have our own include file in /usr/include/xchat
 	einfo "Updating xchat-plugin.h from /usr/include/xchat/xchat-plugin.h"
@@ -29,9 +29,10 @@ src_unpack() {
 }
 
 src_compile() {
-	use iconv || sed -i -e "s/#define ICONV_LIB//" xchatosd.h
+	append-flags -fPIC -DPIC
+	use iconv || sed -i -e "/^#define ICONV_LIB$/d" xchatosd.h
 
-	emake CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCXX)" CPP="$(tc-getCXX)" CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
