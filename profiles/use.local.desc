@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.644 2004/09/27 00:11:40 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.645 2004/09/27 01:19:58 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -229,6 +229,7 @@ games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
 games-emulation/advancemame:expat - Enable the use of dev-libs/expat
+games-emulation/advancemenu:expat - Enable the use of dev-libs/expat
 games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
 games-engines/exult:timidity - Add sound support (timidity)
@@ -261,8 +262,8 @@ gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in 
 gnustep-apps/gworkspace:imagekits - Enable support for ImageKits Bundle (mainly for PDF previewing)
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
-gnustep-base/gnustep-gui:gsnd - Enable GNUstep sound server
 gnustep-base/gnustep-gui:camaelon - Enable GNUstep Camaelon theme engine support
+gnustep-base/gnustep-gui:gsnd - Enable GNUstep sound server
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
