@@ -1,14 +1,24 @@
-MD5 efeb33735f2331df543608926e1519cc ChangeLog 7372
-MD5 9b91ead14acbf0da98d3b33e75c67e79 metadata.xml 306
-MD5 27eca0b6299f5b4772be31cdef6cd3d3 psi-0.9.2-r1.ebuild 1141
-MD5 7a62550ce4fcae4f3c0eabd2acf58760 psi-0.9.2.ebuild 829
-MD5 ebabc85c842057f3ddfe9d332f0d48fd psi-0.9.3-r1.ebuild 8119
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 106836f4c68e913373ce7174989d4b58 psi-0.9.3-r2.ebuild 9409
-MD5 dab2c4d26326cec55a905a1a38351d51 files/digest-psi-0.9.2 63
+MD5 796cd8c44d56b99ca7c246345b93ca4c psi-0.9.3-r1.ebuild 8121
+MD5 27eca0b6299f5b4772be31cdef6cd3d3 psi-0.9.2-r1.ebuild 1141
+MD5 98336287a2f4d5c91ce5b1d339a055a1 ChangeLog 7481
+MD5 9b91ead14acbf0da98d3b33e75c67e79 metadata.xml 306
+MD5 7a62550ce4fcae4f3c0eabd2acf58760 psi-0.9.2.ebuild 829
 MD5 dab2c4d26326cec55a905a1a38351d51 files/digest-psi-0.9.2-r1 63
 MD5 fc8fae7a49b592b4f2c2914c21494c11 files/digest-psi-0.9.3-r1 1924
 MD5 db2a4c5b68dbb0147392a4657f2dbc92 files/digest-psi-0.9.3-r2 2132
-MD5 5765c2029b335e7aacda89f4417b1f7b files/psi-desktop.patch 473
+MD5 dab2c4d26326cec55a905a1a38351d51 files/digest-psi-0.9.2 63
 MD5 4195bf9d000383fae25545249a3f8709 files/psi-desktop_file_and_icons_directories.patch 1454
-MD5 70151bfc9706b2d763cc7ed9c9b03b9f files/psi-pathfix.patch 224
 MD5 c43f1bfd60e72f69346f0a67288c62e8 files/psi_gpg_fix 1193
+MD5 70151bfc9706b2d763cc7ed9c9b03b9f files/psi-pathfix.patch 224
+MD5 5765c2029b335e7aacda89f4417b1f7b files/psi-desktop.patch 473
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCQh8R06ebR+OMO78RAgTTAJ0RzIIUNtGTtfc/0TRP+w5VOGKzBgCdFGB2
+JFMZm2VOLF5PSS2rD98mCh0=
+=5Kuc
+-----END PGP SIGNATURE-----
