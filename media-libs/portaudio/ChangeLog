@@ -1,7 +1,12 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.1 2002/10/13 23:33:05 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.2 2002/10/26 15:15:16 verwilst Exp $
 
 *portaudio-18 (14 Okt 2002) Bart Verwilst <verwilst@gentoo.org>
 
   Initial ebuild, by Tue Haste Andersen <haste@diku.dk>.
+
+  26 Okt 2002, Bart Verwilst <verwilst@gentoo.org>
+
+  Added to stable tree (removed ~).
+
