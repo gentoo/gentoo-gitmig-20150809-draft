@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2.ebuild,v 1.1 2003/11/08 22:53:55 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2.ebuild,v 1.2 2003/11/16 20:30:26 brad_mssw Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ HOMEPAGE="http://www.perl.org/"
 SLOT="0"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~alpha ~mips ~hppa ~ia64"
+KEYWORDS="~x86 amd64 ~sparc ~ppc ~alpha ~mips ~hppa ~ia64"
 IUSE="berkdb doc gdbm threads"
 
 DEPEND="sys-apps/groff
@@ -154,7 +154,12 @@ src_compile() {
 		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
 
+	# These are temporary fixes. Need to edit the build so that that libraries created
+	# only get compiled with -fPIC, since they get linked into shared objects, they
+	# must be compiled with -fPIC.  Don't have time to parse through the build system
+	# at this time.
 	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
+	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 
 	sh Configure -des \
 		-Darchname="${myarch}" \
