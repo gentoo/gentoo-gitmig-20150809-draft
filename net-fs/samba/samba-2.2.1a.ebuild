@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.1a.ebuild,v 1.1 2001/07/24 20:42:08 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.1a.ebuild,v 1.2 2001/07/25 03:20:35 lamer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Samba :)"
@@ -14,19 +14,26 @@ DEPEND="virtual/glibc sys-devel/autoconf
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
 RDEPEND="virtual/glibc
-        cups? ( net-print/cups )
-		pam? ( >=sys-libs/pam-0.72 )"
+        cups? ( net-print/cups )"
+
+# PAM support can cause lots of problems. We want the admin of the box to
+# do this on his own. There is a mailing list thread on samba-devel that's
+# about 40 posts long about this
+#		pam? ( >=sys-libs/pam-0.72 )"
 
 
 
 src_compile() { 
   local myconf
-  if [ "`use pam`" ]
-  then
-     myconf="--with-pam"
-  else
+# Again same as above, PAM and Samba not good. Consult samba.org for
+# details. Only enable if you KNOW what you're doing and you really really
+# wanna venture down this path.
+#  if [ "`use pam`" ]
+#  then
+#     myconf="--with-pam"
+#  else
     myconf="--without-pam"
-  fi
+#  fi
   cd ${S}/source
   if [ ! "`use cups`" ] ; then
     cp configure.in configure.in.orig
