@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/betna
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/betna/ChangeLog,v 1.1 2004/06/02 02:18:07 mr_bones_ Exp $
+
+*betna-0.9.7 (01 Jun 2004)
+
+  01 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> betna-0.9.7.ebuild,
+  metadata.xml:
+  initial commit - ebuild from Alexandru Toma via bug #52685
+
