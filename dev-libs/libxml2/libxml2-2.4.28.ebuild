@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.28.ebuild,v 1.1 2002/11/26 20:44:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.28.ebuild,v 1.2 2002/11/30 12:25:18 danarmak Exp $
 
 inherit libtool gnome2
 
@@ -21,6 +21,7 @@ src_unpack() {
 
 	unpack $A
 	cd $S
+	# fix from the libxml2 cvs. will be included in version .29
 	patch -p0 < $FILESDIR/parser.c.diff || die
 
 }
