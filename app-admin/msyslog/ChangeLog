@@ -1,9 +1,12 @@
 # ChangeLog for app-admin/msyslog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.4 2002/07/25 12:54:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.5 2002/07/30 03:03:26 cselkirk Exp $
 
 *msyslog-1.08e (25 Jul 2002)
 
+  29 Jul 2002; Calum Selkrik <cselkirk@gentoo.org> msyslog-1.08e.ebuild :
+
+  Added PPC to KEYWORDS. Added RDEPEND.
   25 Jul 2002; Seemant Kulleen <seemant@gentoo.org> msyslog-1.08e.ebuild :
 
   Version bump.
