@@ -1,6 +1,7 @@
 MD5 99bbb8ec5d9cbd056294e9af70cdf91c ck-sources-2.6.8.1-r7.ebuild 1119
+MD5 12f683416d8076539bc60b1f81845874 ck-sources-2.6.8.1-r8.ebuild 1121
 MD5 32b8aa0b939015a934e76c7dbcc7bcc5 ck-sources-2.4.26-r1.ebuild 3061
-MD5 c6829e5d727756b4cef310c746aa3aaf ChangeLog 10002
+MD5 2e677392acfc2f1c8a7a421c4fdaa972 ChangeLog 10187
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
 MD5 0f66013f643c79c97fda489618a4e2fd files/ck-sources-2.4.26.CAN-2004-0535.patch 476
 MD5 dc18e982f8149588a291956481885a8c files/ck-sources-2.4.26.CAN-2004-0495.patch 17549
@@ -9,6 +10,7 @@ MD5 8204afea1d572b49a4a80d8da4eef0c9 files/ck-sources-2.6.7.CAN-2004-0596.patch 
 MD5 d4a740ae56c2049247083af387a22a85 files/ck-sources-2.4.26.CAN-2004-0394.patch 350
 MD5 3bdf00d5f80fe9dfbfe8220e076cd04c files/ck-sources-2.4.26.CAN-2004-0497.patch 707
 MD5 a464cd3ab37b8d1a475bd9126782ddd3 files/digest-ck-sources-2.6.8.1-r7 134
+MD5 516af89b3a9e81b550cc9e33a4857a77 files/digest-ck-sources-2.6.8.1-r8 133
 MD5 39361f8d16b1fe5891aab62e92f8cd30 files/ck-sources-2.6.IPTables-RDoS.patch 390
 MD5 d1ccc2047be533c992f67270a150a210 files/ck-sources-2.4.26.cmdlineLeak.patch 388
 MD5 60d25ff310fc6abfdce39ec9e47345af files/ck-sources-2.4.26.CAN-2004-0685.patch 2809
