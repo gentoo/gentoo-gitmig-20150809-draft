@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/elvis
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.10 2004/04/28 22:20:09 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.11 2004/04/29 06:27:01 ciaranm Exp $
+
+  29 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> elvis-2.2.0.ebuild:
+  Stable on sparc
 
   28 Apr 2004; Jon Portnoy <avenj@gentoo.org> elvis-2.2.0.ebuild :
   Stable on x86 and AMD64.
