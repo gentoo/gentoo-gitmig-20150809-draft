@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.2.0.ebuild,v 1.1 2003/04/13 13:40:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.2.0.ebuild,v 1.2 2003/04/13 15:24:20 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs extended attributes tools"
@@ -18,7 +18,8 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
-	unpack ${P}.src.tar.gz
+	unpack ${A}
+	cd ${S}
 	
 	epatch ${DISTDIR}/attr_copy.diff
 	use nls || epatch ${FILESDIR}/${P}-gettext.diff
