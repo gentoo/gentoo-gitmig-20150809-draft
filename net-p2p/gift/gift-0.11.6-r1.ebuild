@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.6-r1.ebuild,v 1.1 2004/06/26 17:53:01 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.6-r1.ebuild,v 1.2 2004/07/27 13:02:50 kang Exp $
 
 inherit eutils
 
@@ -22,6 +22,11 @@ DEPEND="${RDEPEND}
 
 GIFTUSER="p2p"
 
+src_preinst() {
+	# Add the user
+	enewuser ${GIFTUSER} -1 /bin/bash /home/p2p users
+}
+
 src_install() {
 	einstall \
 		giftconfdir=${D}/etc/giFT \
@@ -33,9 +38,6 @@ src_install() {
 	# init scripts for users who want a central server
 	insinto /etc/conf.d; newins ${FILESDIR}/gift.confd gift
 	exeinto /etc/init.d; newexe ${FILESDIR}/gift.initd gift
-
-	# add user
-	enewuser ${GIFTUSER} -1 /bin/bash /home/p2p users
 
 	touch ${D}/usr/share/giFT/giftd.log
 	chown ${GIFTUSER}:root ${D}/usr/share/giFT/giftd.log
