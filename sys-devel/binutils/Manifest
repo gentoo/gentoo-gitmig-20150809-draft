@@ -8,6 +8,7 @@ MD5 0128e4349da81a9b35d368f3f5457d08 binutils-2.14.90.0.6-r1.ebuild 5115
 MD5 b7ddfee30d6b7884c1b9088c6fde759d binutils-2.13.90.0.16-r1.ebuild 4661
 MD5 1b11085f74185bfe7061a6fb01d62ebd binutils-2.12.90.0.15.ebuild 3501
 MD5 4e9454f46437a2eac0c8b907f999c2af ChangeLog 18151
+MD5 ba3f9ff05fa06585d3d2aa5105df7caa binutils-2.14.90.0.6-r7.ebuild 6399
 MD5 b7db6fb32b4653b2832c60bc12dce7a1 binutils-2.11.92.0.7.ebuild 2325
 MD5 0605cad192892662d9ab7bcf4292a278 binutils-2.11.92.0.12.3-r2.ebuild 3047
 MD5 eef83daafb41a3e0beafc59446a00002 binutils-2.14.90.0.6-r4.ebuild 6284
@@ -22,6 +23,7 @@ MD5 4270b9eea6fb9d807bc63ba0a221ea9b files/digest-binutils-2.13.90.0.18 75
 MD5 f2fca878c36319fd0efd1606f4baf24e files/digest-binutils-2.14.90.0.5-r1 75
 MD5 f453b3f208b17cd18380bc3653936487 files/binutils-2.12.90.0.14-x86_64-libpic.patch 1184
 MD5 db3f89b51f6961b0cf92bdddf8127ea7 files/digest-binutils-2.11.92.0.12.3-r2 161
+MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r7 75
 MD5 bac15ed517ba3cc1eb3c08f463654aad files/digest-binutils-2.14.90.0.2 75
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r4 75
 MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.patch 456
@@ -60,6 +62,7 @@ MD5 b265b60d8878dd647f2e39fb9fcf4871 files/2.13/binutils-2.13.90.0.18-searchdir.
 MD5 feebd067c397d519e1ca9340606968a8 files/2.13/binutils-2.13.90.0.16-array-sects-compat.patch 1054
 MD5 6dd59bc404c01dd65a21a68cf62c639e files/2.13/binutils-2.13.90.0.16-rodata-cst.patch 974
 MD5 c013cc4711373f43cb426e8b08d69ae1 files/2.13/binutils-2.13.90.0.18-testsuite-Wall-fixes.patch 943
+MD5 2bc2ff3c3e1b608f1c3776246a5000c1 files/2.14/binutils-2.14.90.0.6-bfd-elf-interp-4.patch 1284
 MD5 0d4022656708019a1b010c69dbf2442b files/2.14/binutils-2.14.90.0.5-ppc64-ldr.patch 825
 MD5 f8d0738db8174c369f4f3a6185d8f76b files/2.14/binutils-2.14.90.0.4-ppc64-ctors.patch 843
 MD5 b42bde8fcae8815f106b6c1f78e68134 files/2.14/binutils-2.14.90.0.4-ppc-bigplt.patch 628
