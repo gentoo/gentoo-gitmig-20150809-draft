@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.17 2004/10/17 19:31:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.18 2004/10/18 06:24:27 ticho Exp $
+
+  18 Oct 2004; Andrej Kacian <ticho@gentoo.org> clamav-0.80.ebuild:
+  Added postinstall warning about config file name change.
 
 *clamav-0.80 (17 Oct 2004)
 
