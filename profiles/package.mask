@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3429 2004/12/29 13:36:53 brix Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3430 2004/12/29 20:13:53 dsd Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <dsd@gentoo.org> (29 Dec 2004)
+# eradicator says its broken
+=sys-fs/evms-2.5.0
 
 # <brix@gentoo.org> (29 Dec 2004)
 # Masking net-wireless/waproamd since it is no longer
