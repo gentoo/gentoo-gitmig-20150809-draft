@@ -1,0 +1,14 @@
+# ChangeLog for dev-cpp/sptk
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.1 2004/08/16 02:02:40 iluxa Exp $
+
+*sptk-2.2 (15 Aug 2004)
+
+  15 Aug 2004 Ilya A. Volynets-Evenbakh <iluxa@gentoo.org> ChangeLog :
+  Added sptk - ebuild contributed by Alexey Parshin <alexeyp@tts-sf.com>
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
