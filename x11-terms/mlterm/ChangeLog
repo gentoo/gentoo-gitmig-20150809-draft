@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.44 2005/03/07 15:07:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.45 2005/03/27 13:28:41 gmsoft Exp $
+
+  27 Mar 2005; Guy Martin <gmsoft@gentoo.org> mlterm-2.9.2.ebuild:
+  Stable on hppa.
 
   07 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> mlterm-2.9.2.ebuild:
   Keyworded ~sparc

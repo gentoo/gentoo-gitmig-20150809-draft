@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e40bd827e61ebccdf605a976d0a5353 ChangeLog 5779
+MD5 25d1c7e3ede87c0fa01f954a31f17095 ChangeLog 5863
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 80c7bc3aad17872c0988ad3cecfd10e7 mlterm-2.8.0_p1-r1.ebuild 1808
 MD5 5f9fc008a98498e22ba7c561f1f2a22e mlterm-2.9.0.ebuild 1429
 MD5 152081d253646e4b0eda8ef313562cd5 mlterm-2.9.1.ebuild 1534
-MD5 c397d1daa47b13b9e1187994ef576c8c mlterm-2.9.2.ebuild 1563
+MD5 b3ef28068b67b6edefbe03b1e0ef0e7f mlterm-2.9.2.ebuild 1560
 MD5 a0803ba46dc61092ab4aed1119efee8c files/digest-mlterm-2.8.0_p1-r1 129
 MD5 b64ecd6cd796a58c304b54be81f444f6 files/digest-mlterm-2.9.0 65
 MD5 588885f48298112ba5f29a16b6e58346 files/digest-mlterm-2.9.1 65
-MD5 35f136547978c18aed013cdfd088d098 files/mlterm-2.9.1-gentoo.diff 346
 MD5 28cc03d6622442b7df9321c410403fbf files/digest-mlterm-2.9.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLG40KRy60XGEcJIRAgjuAJ9qgHI9Yd55hPulIlJ01WPoHvS2uwCfeYOA
-p2VQXHZuk6Y1fqKhHOGqNWk=
-=sjmD
------END PGP SIGNATURE-----
+MD5 35f136547978c18aed013cdfd088d098 files/mlterm-2.9.1-gentoo.diff 346
