@@ -1,10 +1,13 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.12 2003/01/15 02:40:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.13 2003/02/05 16:45:26 agriffis Exp $
+
+  05 Feb 2003; Aron Griffis <agriffis@gentoo.org> gmp-4.1-r1.ebuild :
+  Mark stable on alpha
 
   14 Jan 2003: Jason Wever <weeve@gentoo.org> gmp-4.1-r1.ebuild :
-  Removed --enable-mpfr from configure options for sparc only as with it enabled, 
-  gmp would not compile on sparc.
+  Removed --enable-mpfr from configure options for sparc only as with it
+  enabled, gmp would not compile on sparc.
 
   17 Dec 2002; Aron Griffis <agriffis@gentoo.org> gmp-4.1-r1.ebuild :
   Added ~alpha to KEYWORDS

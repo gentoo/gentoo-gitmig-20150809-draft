@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.24 2003/01/05 12:03:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.25 2003/02/05 16:45:27 agriffis Exp $
+
+  05 Feb 2003; Aron Griffis <agriffis@gentoo.org> sawfish-1.2.ebuild :
+  Mark stable on alpha
 
   05 Jan 2003; foser <foser@gentoo.org> sawfish-1.2.ebuild :
   gtk+-2.2 build fix provided by Andy Dustman (bug #12755)

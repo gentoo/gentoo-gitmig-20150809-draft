@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# # $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.16.1.ebuild,v 1.6 2002/12/17 22:55:48 agriffis Exp $
+# # $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.16.1.ebuild,v 1.7 2003/02/05 16:45:27 agriffis Exp $
 
 IUSE="readline"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://librep.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc  ppc ~alpha"
+KEYWORDS="x86 sparc  ppc alpha"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=dev-libs/gmp-3.1.1

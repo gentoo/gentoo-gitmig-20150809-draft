@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1-r1.ebuild,v 1.11 2003/01/15 02:40:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1-r1.ebuild,v 1.12 2003/02/05 16:45:26 agriffis Exp $
 
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/gmp/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
 
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 SLOT="0"    
 LICENSE="LGPL-2"
 
