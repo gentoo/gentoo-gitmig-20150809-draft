@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.0.0.ebuild,v 1.3 2004/11/03 00:30:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.0.0.ebuild,v 1.4 2004/11/30 03:51:31 kingtaco Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="http://el.tfm.ro/el_${TMP_PV//.}.zip
 
 LICENSE="eternal_lands"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="virtual/x11
