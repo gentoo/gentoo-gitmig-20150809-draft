@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/polytable
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/ChangeLog,v 1.1 2004/03/20 20:01:50 kosmikus Exp $
+
+*polytable-0.7.2 (20 Mar 2004)
+
+  20 Mar 2004; Andres Loeh <kosmikus@gentoo.org> metadata.xml,
+  polytable-0.7.2.ebuild:
+  Initial import.
+
