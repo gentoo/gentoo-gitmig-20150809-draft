@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r3.ebuild,v 1.1 2004/07/12 21:13:29 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r3.ebuild,v 1.2 2004/07/13 22:33:24 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -210,9 +210,14 @@ src_install() {
 		doexe ${FILESDIR}/getent
 	fi
 
+	# shameless plug for mjn3 who gives us so much...
+	# please give back if you can. -solar
+	cat DEDICATION.mjn3
+	sleep 2s
+
 	if ! use build
 	then
-		dodoc Changelog* README TODO docs/*.txt
+		dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
 		doman debian/*.1
 	fi
 }
