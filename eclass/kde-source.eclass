@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.17 2003/07/13 13:04:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.18 2003/07/17 14:55:10 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -64,14 +64,12 @@ DESCRIPTION="$DESCRIPTION (cvs) "
 # inheriting kde_source.
 SRC_URI=""
 
-# this is here because it needs to be in the main section of the eclass,
-# even though the code setting ECVS_MODULE from KCVS_MODULE is all inside
-# kde-source_src_unpack
+
 if [ -n "$KCVS_SUBDIR" -o -n "$KCVS_MODULE" ]; then
     S="$WORKDIR/$KCVS_MODULE"
 else
     # default for kde-base ebuilds
-    S="$WORKDIR/$ECVS_MODULE"
+    S="$WORKDIR/${ECVS_MODULE:-$PN}"
 fi
 
 
@@ -134,14 +132,7 @@ kde-source_src_unpack() {
 	# which is also needed
 	if [ ! -d "$S/admin" ]; then
 		ECVS_MODULE="kde-common/admin" cvs_src_unpack
-		IFS2="$IFS"
-		IFS="/"
-		path=""
-		for x in $ECVS_MODULE; do
-			[ -z "$path" ] && path="$x"
-		done
-		IFS="$IFS2"
-		mv ${WORKDIR}/kde-common/admin $WORKDIR/$path
+		mv ${WORKDIR}/kde-common/admin $S/
 	fi
 
 	# make sure we give them a clean cvs checkout
