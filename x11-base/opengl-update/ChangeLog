@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/opengl-update
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.15 2003/12/29 04:12:05 kumba Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.16 2004/02/04 05:04:23 spyderous Exp $
+
+*opengl-update-1.6 (04 Feb 2004)
+
+  04 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  opengl-update-1.6.ebuild, files/opengl-update-1.6:
+  New version. Symlinks libGL.la whenever available, changes hardcoded
+  opengl-update to use basename in preparation for a possible symlink to
+  config-opengl, adds matrox and ati to supported list in help.
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> opengl-update-1.5.ebuild:
   Move to mips stable (~mips -> mips)
