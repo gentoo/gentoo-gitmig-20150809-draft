@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.27 2004/09/15 04:54:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.28 2004/09/15 19:48:47 vapier Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -35,7 +35,7 @@ virtual/jack				media-sound/jack-audio-connection-kit
 virtual/jdk					dev-java/blackdown-jdk
 virtual/jre					dev-java/blackdown-jre
 virtual/krb5				app-crypt/mit-krb5
-virtual/logger				app-admin/syslog-ng
+virtual/logger				app-admin/metalog
 virtual/lpr					net-print/cups
 virtual/mda					mail-filter/procmail
 virtual/mpg123				media-sound/mpg123
