@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.128 2004/12/23 09:20:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.129 2004/12/23 20:38:25 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1588,7 +1588,7 @@ get_abi_var() {
 	elif [ -n "${DEFAULT_ABI}" ]; then
 		abi=${DEFAULT_ABI}
 	else
-		return ""
+		return 1
 	fi
 	eval echo \${${flag}_${abi}}
 }
