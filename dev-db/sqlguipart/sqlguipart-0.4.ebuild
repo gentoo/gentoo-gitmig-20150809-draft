@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlguipart/sqlguipart-0.4.ebuild,v 1.6 2004/03/14 13:19:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlguipart/sqlguipart-0.4.ebuild,v 1.7 2004/03/14 17:22:55 mr_bones_ Exp $
 
-inherit kde-base eutils
+inherit kde eutils
 need-kde 3
 newdepend ">=dev-db/mysql-3.23.38
 	>=kde-base/kdebase-3"

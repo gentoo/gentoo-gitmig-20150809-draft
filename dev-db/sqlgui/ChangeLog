@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlgui
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/ChangeLog,v 1.5 2003/10/13 20:34:47 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/ChangeLog,v 1.6 2004/03/14 17:22:44 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> sqlgui-0.4.ebuild,
+  sqlgui-0.5.ebuild:
+  inherit kde instead of deprecated kde-base
 
 *sqlgui-0.5 (14 Oct 2003)
 
