@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.1/xfs.start,v 1.3 2002/10/20 21:06:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.1/xfs.start,v 1.4 2002/10/21 00:09:58 azarah Exp $
 
 #NB: Config is in /etc/conf.d/xfs
 
@@ -134,7 +134,7 @@ setup_font_dirs() {
 		eend 0
 	fi
 
-	if [ ! -x /usr/X11R6/bin/mkfontdir -o ! /usr/X11R6/bin/ttmkfdir2 ]
+	if [ ! -x /usr/X11R6/bin/mkfontdir -o ! -x /usr/X11R6/bin/ttmkfdir2 ]
 	then
 		ewarn "Could not find mkfontdir or ttmkfdir2 binary!"
 		return 0
