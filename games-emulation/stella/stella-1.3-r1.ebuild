@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-1.3-r1.ebuild,v 1.1 2003/12/06 22:54:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-1.3-r1.ebuild,v 1.2 2004/02/01 12:13:02 ferringb Exp $
 
 DESCRIPTION="Stella Atari 2600 VCS Emulator"
 HOMEPAGE="http://stella.sourceforge.net/"
@@ -18,6 +18,13 @@ DEPEND="|| (
 		alsa? ( media-libs/alsa-lib )
 		media-libs/libpng
 	)"
+
+src_unpack() {
+	unpack ${A} || die
+	cd ${S}
+	epatch ${FILESDIR}/${P}-alsa-fix.patch || die \
+		"Alsalib 1.0 fix failed"
+}
 
 src_compile() {
 	# let's just default joystick & snapshot support to on

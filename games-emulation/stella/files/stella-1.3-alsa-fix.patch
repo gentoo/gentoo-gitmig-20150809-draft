@@ -1,0 +1,30 @@
+diff -ur stella-1.3/src/ui/sound/SoundALSA.cxx stella-1.3-fixed/src/ui/sound/SoundALSA.cxx
+--- stella-1.3/src/ui/sound/SoundALSA.cxx	2003-02-17 19:19:44.000000000 -0600
++++ stella-1.3-fixed/src/ui/sound/SoundALSA.cxx	2004-01-22 00:57:30.000000000 -0600
+@@ -16,6 +16,11 @@
+ // $Id: stella-1.3-alsa-fix.patch,v 1.1 2004/02/01 12:13:02 ferringb Exp $
+ //============================================================================
+ 
++#include <alsa/version.h>
++#if SND_LIB_MAJOR==1
++#define ALSA_PCM_OLD_HW_PARAMS_API
++#define ALSA_PCM_NEW_HW_PARAMS_API
++#endif
+ #include <alsa/asoundlib.h>
+ #include <stdio.h>
+ 
+diff -ur stella-1.3/src/ui/sound/SoundALSA.hxx stella-1.3-fixed/src/ui/sound/SoundALSA.hxx
+--- stella-1.3/src/ui/sound/SoundALSA.hxx	2003-02-17 19:19:44.000000000 -0600
++++ stella-1.3-fixed/src/ui/sound/SoundALSA.hxx	2004-01-22 00:57:01.000000000 -0600
+@@ -19,6 +19,11 @@
+ #ifndef SOUNDALSA_HXX
+ #define SOUNDALSA_HXX
+ 
++#include <alsa/version.h>
++#if SND_LIB_MAJOR==1
++#define ALSA_PCM_OLD_HW_PARAMS_API
++#define ALSA_PCM_NEW_HW_PARAMS_API
++#endif
+ #include <alsa/asoundlib.h>
+ 
+ #include "Sound.hxx"
