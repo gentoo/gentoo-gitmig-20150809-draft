@@ -5,7 +5,7 @@
 #IS_CONFIGURED="yes"
 
 ## FTP Server,Port (separated by comma) ##
-PORT="-S 192.168.0.1,21"
+SERVER="-S 192.168.0.1,21"
 
 ## Number of simultaneous connections in total, and per ip ##
 MAX_CONN="-c 30"
@@ -15,14 +15,13 @@ MAX_CONN_IP="-C 10"
 DAEMON="-B"
 
 ## Don't allow uploads if the partition is more full then this var ##
-DISK_FULL="-k 95%"
+DISK_FULL="-k 90%"
 
 ## If your FTP server is behind a NAT box, uncomment this ##
 #USE_NAT="-N"
 
-## Authentication ##
+## Authentication (others are 'pam', ...)##
 AUTH="-l unix"
-
 
 
 ## Misc. Others ##
