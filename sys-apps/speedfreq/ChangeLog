@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/speedfreq
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/ChangeLog,v 1.1 2003/08/21 02:31:55 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/ChangeLog,v 1.2 2004/02/25 13:46:58 tantive Exp $
+
+*speedfreq-0.7.2 (25 Feb 2004)
+
+  25 Feb 2004; Michael Imhof <tantive@gentoo.org> speedfreq-0.7.2.ebuild,
+  files/speedfreq.rc:
+  Version bumped. Fixed error in init-script.
 
 *speedfreq-0.5 (20 Aug 2003)
 
