@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 a8d348e474de5733613ac943aed4811e emacs-cvs-21.3.50-r1.ebuild 4424
 MD5 97677808a8ae395fffcc37956fc72e8e emacs-cvs-21.3.50.ebuild 3069
 MD5 652795f625e600f3e86a47073ba70021 emacs-cvs-22.0.0.ebuild 3038
 MD5 0f08e0f89f996d624a36fd3da108a138 ChangeLog 3500
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 1f27ba251039017b0ed6933be6aabad5 emacs-cvs-21.3.50-r1.ebuild 4404
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-22.0.0 0
@@ -18,7 +18,7 @@ MD5 ffdd28353d4bb08ee9ec653650458a40 files/50emacs-21.3.50.envd 39
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (Darwin)
 
-iD8DBQFBbfclVWNWqTUmv+0RAt8eAKCLAMTLH63kfnASpc1OeY9x9l5yFwCeMPfO
-FNMEQGWDjCjCoZnVbvWUjns=
-=6Gwn
+iD8DBQFBbfhCVWNWqTUmv+0RAsoWAJwL5It//Zo9bCak81/bggODz+SjsQCePbWT
+FgQBeAVgFoxNfImu1Kq2OjI=
+=s42E
 -----END PGP SIGNATURE-----
