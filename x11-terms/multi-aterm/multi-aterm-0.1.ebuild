@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.1.ebuild,v 1.1 2004/01/09 11:55:29 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.1.ebuild,v 1.2 2004/02/17 07:44:24 mr_bones_ Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A terminal emulator with transparency support as well as rxvt backwards compatibility like aterm, with tab support"
@@ -10,7 +10,7 @@ SRC_URI=" http://www.materm.tuxfamily.org/${P}.tar.gz"
 IUSE="cjk"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~arm"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 
 DEPEND="media-libs/jpeg
 	media-libs/libpng
