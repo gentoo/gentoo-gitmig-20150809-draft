@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.14_pre7.ebuild,v 1.1 2004/01/04 11:16:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.14_pre7.ebuild,v 1.2 2004/02/02 20:30:13 bcowan Exp $
 
 DESCRIPTION="Ice Window Manager"
 SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz"
 HOMEPAGE="http://www.icewm.org"
-IUSE="esd gnome imlib nls spell truetype"
+IUSE="esd gnome imlib nls spell truetype xinerama"
 
 DEPEND="virtual/x11
 	esd? ( media-sound/esound )
@@ -49,6 +49,10 @@ src_compile(){
 	use gnome \
 		&& myconf="${myconf} --enable-menus-gnome2 --enable-menus-gnome1" \
 		|| myconf="${myconf} --disable-menus-gnome2 --disable-menus-gnome1"
+
+	use xinerama \
+		&& myconf="${myconf} --enable-xinerama" \
+		|| myconf="${myconf} --disable-xinerama"
 
 	CXXFLAGS="${CXXFLAGS}" econf \
 		--with-libdir=/usr/share/icewm \

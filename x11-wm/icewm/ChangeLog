@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/icewm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.40 2004/01/04 11:16:21 hanno Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.41 2004/02/02 20:30:13 bcowan Exp $
+
+  02 Feb 2004; Brad Cowan <bcowan@gentoo.org> icewm-1.2.14_pre7.ebuild:
+  Added support for xinerama flag. Thanks to James Le Cuirot <chewi@ffaura.com>.
+  Closes bug #39479.
 
 *icewm-1.2.14_pre7 (04 Jan 2004)
 
