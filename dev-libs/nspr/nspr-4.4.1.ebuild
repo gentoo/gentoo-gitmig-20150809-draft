@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1.ebuild,v 1.5 2004/03/14 12:23:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1.ebuild,v 1.6 2004/04/06 19:51:49 gmsoft Exp $
 
 DESCRIPTION="Netscape Portable Runtime"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v${PV}/src/${P}.tar.gz"
@@ -19,6 +19,10 @@ src_unpack() {
 	if [ "${ARCH}" = "amd64" ]
 	then
 		cd ${S}; epatch ${FILESDIR}/${PN}-4.3-amd64.patch
+	elif [ "${ARCH}" = "hppa" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/${PN}-${PV}-hppa.patch
 	fi
 }
 src_compile() {
