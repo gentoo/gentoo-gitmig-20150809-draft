@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libdc1394
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.4 2004/06/24 23:32:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.5 2004/07/24 05:59:10 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libdc1394-0.9.1.ebuild:
+  Removing libtool from RDEPEND.
 
   26 May 2004; Danny van Dyk <kugelfang@gentoo.org> libdc1394-0.9.3.ebuild:
   Marked ~amd64.
