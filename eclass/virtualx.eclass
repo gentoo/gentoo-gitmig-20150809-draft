@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.7 2002/07/12 15:24:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.8 2002/09/11 17:22:02 azarah Exp $
 # This eclass can be used for packages that needs a working X environment to build
 ECLASS=virtualx
 INHERITED="$INHERITED $ECLASS"
@@ -9,8 +9,11 @@ newdepend virtual/x11
 
 DESCRIPTION="Based on the $ECLASS eclass"
 
+[ -z "${SANDBOX_DISABLED}" ] && export SANDBOX_DISABLED="0" || :
+
 virtualmake() {
 	local retval=0
+	local OLD_SANDBOX_DISABLED="${SANDBOX_DISABLED}"
 
 	#If $DISPLAY is not set, or xhost cannot connect to an X
 	#display, then do the Xvfb hack.
@@ -21,6 +24,9 @@ virtualmake() {
 		# compiling without the X display
 
 		einfo "Scanning for a open DISPLAY to start Xvfb..."
+
+		# We really do not want SANDBOX enabled here
+		export SANDBOX_DISABLED="1"
 		
 		local i=0
 		XDISPLAY=$(i=0; while [ -f /tmp/.X${i}-lock ] ; do i=$((${i}+1));done; echo ${i})
@@ -42,6 +48,9 @@ virtualmake() {
 			sleep 2
 		done
 
+		# Now enable SANDBOX again if needed.
+		export SANDBOX_DISABLED="${OLD_SANDBOX_DISABLED}"
+
 		einfo "Starting Xvfb on \$DISPLAY=${XDISPLAY} ..."
 		
 		export DISPLAY=:${XDISPLAY}
@@ -57,6 +66,7 @@ virtualmake() {
 		${maketype} $*
 		retval=$?
 	fi
+
 	return $retval
 }
 
