@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ftpd-0.17.ebuild,v 1.2 2002/12/05 22:57:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ftpd-0.17.ebuild,v 1.3 2003/01/16 02:02:27 raker Exp $
 
 DESCRIPTION="The netkit FTP server with optional SSL support"
 HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
@@ -54,7 +54,7 @@ pkg_postinst() {
 	einfo "You need to create a certificate and place it"
 	einfo "in SSLCERTDIR..."
 	einfo "<=openssl-0.9.6g - SSLCERTDIR=/usr/lib/ssl/certs"
-	einfo ">=openssl-0.9.6-r1 - SSLCERTDIR=/etc/ssl/certs"
+	einfo ">=openssl-0.9.6g-r1 - SSLCERTDIR=/etc/ssl/certs"
 	einfo ""
 	einfo "cd SSLCERTDIR"
 	einfo "openssl req -new -x509 -nodes -out ftpd.pem -keyout ftpd.pem"
