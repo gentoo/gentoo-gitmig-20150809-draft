@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.233 2004/11/14 09:51:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.234 2004/12/02 07:04:30 chriswhite Exp $
+
+  02 Dec 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r4.ebuild:
+  vo -> ao in alsa warning.
 
   14 Nov 2004; Markus Rothe <corsair@gentoo.org>
   +files/mplayer-1.0_pre5-r4-ppc64.patch, mplayer-1.0_pre5-r4.ebuild:
