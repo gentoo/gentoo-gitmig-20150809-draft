@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.4.ebuild,v 1.6 2003/09/06 22:27:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.4.ebuild,v 1.7 2003/09/17 22:56:32 avenj Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha hppa arm amd64"
+KEYWORDS="x86 ppc sparc alpha hppa arm amd64 ia64"
 
 # hyper-optimizations untested...
 #
