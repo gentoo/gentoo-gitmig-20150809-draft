@@ -1,7 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.2.5-1.ebuild,v 1.1 2000/07/30 00:18:15 achim Exp $
+# $Header: /home/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.2.5-1.ebuild,v 1.1 
+2000/07/30 00:18:15 achim Exp $
 
 P=mutt-1.2.5-1
 A=mutt-1.2.5i.tar.gz
@@ -9,7 +10,7 @@ S=${WORKDIR}/mutt-1.2.5
 CATEGORY="net-mail"
 DESCRIPTION="a small but very powerful text-based mail client"
 SRC_URI="ftp://ftp.mutt.org/pub/mutt/${A}"
-HOMEPAGE="http://"
+HOMEPAGE="http://www.mutt.org"
 
 
 src_compile() {
@@ -35,5 +36,6 @@ src_install () {
     gzip ${D}/usr/doc/${P}/samples/*
     gzip ${D}/usr/doc/${P}/*
 }
+
 
 
