@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.36 2002/10/27 19:36:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.37 2002/11/05 18:02:16 azarah Exp $
+
+  5 Nov 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre9.ebuild :
+
+  Add realplayer support, closing bug #6286.
 
 *mplayer-0.90_pre9 (27 Oct 2002)
 
@@ -18,25 +22,25 @@
 
 *mplayer-0.90_pre8 (26 Sep 2002)
 
-  26 Sep 2002; Kevyn Shortell<trance@gentoo.org> mplayer-0.90_pre8 :
+  26 Sep 2002; Kevyn Shortell<trance@gentoo.org> mplayer-0.90_pre8.ebuild :
   PPC keyword added, tested on ibook 300mhz, worked well.
 
 *mplayer-0.90_pre8 (19 Sep 2002)
 
-  19 Sep 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre8 :
+  19 Sep 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre8.ebuild :
   New bugfix release.
 
 *mplayer-0.90_pre7 (16 Sep 2002)
 
-  16 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> mplayer-0.90_pre7 :
+  16 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> mplayer-0.90_pre7.ebuild :
   Removed ppc keyword. Audio does not work at all on PPC.
 
-  15 Sep 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre7 :
+  15 Sep 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre7.ebuild :
   Update version.
 
 *mplayer-0.90_pre6-r3 (12 Aug 2002)
 
-  16 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> mplayer-0.90_pre6-r3 :
+  16 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> mplayer-0.90_pre6-r3.ebuild :
   Removed ppc keyword. Audio does not work at all on PPC.
 
   Sep 11 2002; Mark Guertin <gerk@gentoo.org> mplayer-0.90_pre6-63.ebuild :
@@ -47,7 +51,7 @@
   adjusted nasm and win32codes to use x86 USE flags (they don't work on 
   anything except x86)
 
-  12 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre6-r3 :
+  12 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre6-r3.ebuild :
 
   Add patch to support libdvdnav-0.1.3.
 
@@ -55,14 +59,14 @@
 
 *mplayer-0.90_pre6-r2 (07 Aug 2002)
 
-  07 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre6-r2 :
+  07 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre6-r2.ebuild :
 
   Update DEPEND to block libdvdnav-0.1.3.  Change "emake" to "make", as
   'make -j' fails in some cases.
 
 *mplayer-0.90_pre6-r1 (07 Aug 2002)
 
-  07 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre6-r1 :
+  07 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre6-r1.ebuild :
 
   Fix compile problems if "dvd" not in USE.  Added two patches for this:
   
@@ -71,39 +75,39 @@
 
 *mplayer-0.90_pre6 (06 Aug 2002)
 
-  06 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre6 :
+  06 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre6.ebuild :
 
   New version.  Patch vidix's Makefile not to fail if it cannot install
   any drivers.  This should resolve bug #5246.
 
 *mplayer-0.90_pre5-r1 (13 Jun 2002)
 
-  13 Jun 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre5-r1 :
+  13 Jun 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre5-r1.ebuild :
 
   Fix missing subtitles for region 4 DVD's, bug #3679, thanks to report
   from Bernardo S. A. Silva.
 
 *mplayer-0.90_pre5 (10 Jun 2002)
 
-  10 Jun 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre5 :
+  10 Jun 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre5.ebuild :
 
   Version update with a few fixes (vidix install location, #include errors,
   etc).
 
 *mplayer-0.90_pre4 (21 May 2002)
 
-  21 May 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre4 :
+  21 May 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre4.ebuild :
 
   Add new version. Resolves bug #2891.  This version seems to fix many
   of the bugs with previous 0.90_pre versions.
 
 *mplayer-0.90_pre3-r1 (5 May 2002)
 
-  8 May 2002; Jon Nelson <jnelson@gentoo.org> mplayer-0.90_pre3-r1 :
+  8 May 2002; Jon Nelson <jnelson@gentoo.org> mplayer-0.90_pre3-r1.ebuild :
  
   Use new check_KV from portage 1.9.10
  
-  5 May 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre3-r1 :
+  5 May 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre3-r1.ebuild :
 
   Fix some compile problems for Gui, thanks to Gwenn Gueguen.
 

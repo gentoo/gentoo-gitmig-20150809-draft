@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre9.ebuild,v 1.1 2002/10/27 19:36:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre9.ebuild,v 1.2 2002/11/05 18:02:16 azarah Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb"
 
@@ -166,6 +166,16 @@ src_compile() {
 		&& myconf="${myconf} --enable-i18n" \
 		|| myconf="${myconf} --disable-i18n"
 
+	if [ -d /opt/RealPlayer9/Real/Codecs ]
+	then
+		REALLIBDIR="/opt/RealPlayer9/Real/Codecs"
+	elif [ -d /opt/RealPlayer8/Codecs ]
+	then
+		REALLIBDIR="/opt/RealPlayer8/Codecs"
+	else
+		REALLIBDIR="/usr/lib/real"
+	fi
+
 	# Crashes on start when compiled with most optimizations.
 	# The code have CPU detection code now, with CPU specific
 	# optimizations, so extra should not be needed and is not
@@ -177,6 +187,8 @@ src_compile() {
 		--disable-runtime-cpudetection \
 		--enable-largefiles \
 		--enable-linux-devfs \
+		--enable-real \
+		--with-reallibdir=${REALLIBDIR} \
 		${myconf} || die
 
 	# emake borks on fast boxes - Azarah (07 Aug 2002)
