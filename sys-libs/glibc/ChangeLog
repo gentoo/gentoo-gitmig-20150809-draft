@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.289 2004/11/10 09:20:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.290 2004/11/10 11:16:40 kumba Exp $
+
+  10 Nov 2004; Joshua Kinard <kumba@gentoo.org>
+  glibc-2.3.4.20040808-r1.ebuild:
+  Masking via keywords directly. 2.3.4.20041102 works for o32 mips, n32 is still
+  experimental and broken, but I don't think it can get much more broken than it
+  is already. Winging it.
 
   10 Nov 2004; Joshua Kinard <kumba@gentoo.org>
   +files/2.3.3/glibc-2.3.3-mips-addabi.diff,
