@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/mod_dav-1.0.3-r2.ebuild,v 1.1 2004/09/14 10:00:03 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/mod_dav-1.0.3-r2.ebuild,v 1.2 2004/09/14 10:01:26 tigger Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ SRC_URI="http://www.webdav.org/mod_dav/${PN}-${MY_V}.tar.gz"
 DEPEND="virtual/libc =net-www/apache-1*"
 LICENSE="as-is"
 SLOT="0"
+IUSE=""
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

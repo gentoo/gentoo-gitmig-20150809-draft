@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_dav
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.14 2004/09/14 10:00:03 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.15 2004/09/14 10:01:26 tigger Exp $
+
+  14 Sep 2004; Rob Holland <tigger@gentoo.org> mod_dav-1.0.3-r2.ebuild:
+  add IUSE in
 
 *mod_dav-1.0.3-r2 (14 Sep 2004)
 
