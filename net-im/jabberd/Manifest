@@ -1,22 +1,32 @@
-MD5 c192b6d78e9a9652b30d815fc9dc9e32 jabberd-1.4.3-r4.ebuild 5810
-MD5 f81b4c2b73367e5bed25722aa45e2533 jabberd-2.0-r2.ebuild 4965
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac3c49e9c0e49367ff665d484e9f275c jabberd-1.4.3-r4.ebuild 5815
+MD5 f83d77f9da312d8336e33827a130a65f ChangeLog 7933
 MD5 073710b6dd1869d3930f8f2e857341e8 metadata.xml 411
-MD5 f5481a647e14d66735e85b1b4e1ece01 ChangeLog 7821
 MD5 786349de4f04c6c1a5a16f2cae544e3b jabberd-2.0_p20050119.ebuild 3525
-MD5 3a5219d7870e60f5b16d6aefb1c63a0e files/jabber-conf.d 525
-MD5 0d59ca6b46e061b4b1d1673fce93487f files/digest-jabberd-2.0-r2 65
-MD5 6ec1c588cf732d89e8bc7b5864842ab9 files/self-cert.sh 494
-MD5 5aeafd17644a405b363de0ea1eb22d8b files/multiple-xml-patch-00 5934
+MD5 f81b4c2b73367e5bed25722aa45e2533 jabberd-2.0-r2.ebuild 4965
+MD5 6912454f1d1d480cbb711f715292e3cc files/jabber.rc6-r6 953
+MD5 1813a30dabb60fa0a15ee3ed3aaad28d files/jabber.init.gentoo 2118
 MD5 92ba69168d2fb8c1384e8e13e03dcbc2 files/xdb-ldap.xml 985
-MD5 241fdbe6af83f9f39f14becf5e051ba2 files/digest-jabberd-2.0_p20050119 74
-MD5 8d4ca5fb6338d837674ab33c8f969273 files/jabber.rc6-r5 874
-MD5 73c38af347fdcf7d7cb6dd3490344bfa files/multiple.xml 15387
+MD5 a8408aaabc3453cfd3cbe3df1a65f67e files/xml-stream-patch-00 726
+MD5 0067018951674e703063f0f4337c5a2c files/multiple-xml-patch-01 303
 MD5 1a325b6068e591bc222376a7d70f6e17 files/README.Gentoo 984
+MD5 264b9719c0773f480ee42d8a61c34d0a files/digest-jabberd-1.4.3-r4 201
+MD5 6ec1c588cf732d89e8bc7b5864842ab9 files/self-cert.sh 494
 MD5 3d8c2953acd251416c2fdb9a721b9e52 files/jabber.init.bundled 626
 MD5 4ea516e4527dd2de19281709704238ee files/jabber.rc6-r7 1842
-MD5 264b9719c0773f480ee42d8a61c34d0a files/digest-jabberd-1.4.3-r4 201
-MD5 0067018951674e703063f0f4337c5a2c files/multiple-xml-patch-01 303
+MD5 3a5219d7870e60f5b16d6aefb1c63a0e files/jabber-conf.d 525
+MD5 0d59ca6b46e061b4b1d1673fce93487f files/digest-jabberd-2.0-r2 65
+MD5 8d4ca5fb6338d837674ab33c8f969273 files/jabber.rc6-r5 874
+MD5 241fdbe6af83f9f39f14becf5e051ba2 files/digest-jabberd-2.0_p20050119 74
+MD5 5aeafd17644a405b363de0ea1eb22d8b files/multiple-xml-patch-00 5934
 MD5 40ed7d521eda61aa9f67390099e5b693 files/patch-c2s-buffers 12112
-MD5 a8408aaabc3453cfd3cbe3df1a65f67e files/xml-stream-patch-00 726
-MD5 1813a30dabb60fa0a15ee3ed3aaad28d files/jabber.init.gentoo 2118
-MD5 6912454f1d1d480cbb711f715292e3cc files/jabber.rc6-r6 953
+MD5 73c38af347fdcf7d7cb6dd3490344bfa files/multiple.xml 15387
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQ+vOugEuf3OQ0akRAsLuAJ9yM1UFf1tcewVryZtstbPdCgwuugCgjtn4
+4F9QRHXNtM2EoqptQyXudr0=
+=4fMW
+-----END PGP SIGNATURE-----

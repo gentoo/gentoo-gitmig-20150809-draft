@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 07bface6fd2b1dde98fb40bd085a2837 jit-1.1.6-r3.ebuild 1342
-MD5 af91c8427cbdcd5ed5aec91806a19f76 ChangeLog 2482
+MD5 bdef29a132e4e73e4894cb256762d27d ChangeLog 2590
 MD5 7790f4556753d2a09382cb1123d3253c metadata.xml 403
-MD5 1aff6a87f50b47b6f76b349cfb1e6a67 files/jit-transport.init 433
-MD5 de04a2ef800e243b5c5f46fab4d4059d files/jit-sparc.patch 422
-MD5 54f7c7c05a3bf14a77d8a9e592079c18 files/README.Gentoo 1479
+MD5 428a2d81b003d589f70067a1f60bee59 jit-1.1.6-r3.ebuild 1349
 MD5 50412e85cf54ff2a36e6b51564731c82 files/jit-patch-00 1271
-MD5 84e79bea97642c2440440e8257497a79 files/digest-jit-1.1.6-r3 61
+MD5 de04a2ef800e243b5c5f46fab4d4059d files/jit-sparc.patch 422
 MD5 2823c4cf16925056ce9b9094bc47b0bd files/jit.xml 4007
+MD5 54f7c7c05a3bf14a77d8a9e592079c18 files/README.Gentoo 1479
+MD5 1aff6a87f50b47b6f76b349cfb1e6a67 files/jit-transport.init 433
+MD5 84e79bea97642c2440440e8257497a79 files/digest-jit-1.1.6-r3 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBf2yqCHk4+ZoBpvsRAis4AJ9Osxwas1Vplh7Tp6GxybXfOcqUogCgkeJJ
-ixMyUJqUiVehD2Anwj0GV2I=
-=x5hT
+iD8DBQFCQ+seugEuf3OQ0akRArbsAJ4nbNDygIwdFCJpvcFQpeDWYkg1RQCgo2xz
+Gr/V/lg+Ss7hrpC98GXxrPw=
+=Junh
 -----END PGP SIGNATURE-----

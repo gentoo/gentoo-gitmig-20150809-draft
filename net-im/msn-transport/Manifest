@@ -2,21 +2,21 @@
 Hash: SHA1
 
 MD5 e3a39683542d05f68ac8bf4c42743de5 msn-transport-20040531.ebuild 1311
-MD5 280c0e67a53b4429dd2046b3c11ac825 ChangeLog 2454
-MD5 2030cb2eae4bcaa8e215fb875d57f94d msn-transport-20040531-r1.ebuild 1400
+MD5 a3ff66586977bfbe54348a98f21284ce ChangeLog 2577
 MD5 d76a7c620d2b4630a7f3f6d6a0f4e353 metadata.xml 319
-MD5 5fd3cce8c18bc9ca1aa9ff085bcb3f7e files/msnt.xml 3328
-MD5 6b5eaadda94bd02fb01ef8ae6631c7fd files/digest-msn-transport-20040531 75
+MD5 de08ebbff2163316b59ccb11375262d6 msn-transport-20040531-r1.ebuild 1407
 MD5 b10c249fc6c73b6357de44efcc6b93f9 files/msn-transport.init-r2 697
-MD5 95e51aeefb99a8ede13bef28054f9922 files/msn-transport-conf.d 427
-MD5 2bb7338640063281eeef587f8ce0fd5e files/msn-configure-patch-00 805
-MD5 5fab4d7c4c2ae4b6dcf45a407c56f8ea files/msn-transport.init 423
+MD5 5fd3cce8c18bc9ca1aa9ff085bcb3f7e files/msnt.xml 3328
 MD5 6b5eaadda94bd02fb01ef8ae6631c7fd files/digest-msn-transport-20040531-r1 75
 MD5 052318a7b8dfc18122569ed5aac82ab2 files/README.Gentoo 1495
+MD5 95e51aeefb99a8ede13bef28054f9922 files/msn-transport-conf.d 427
+MD5 5fab4d7c4c2ae4b6dcf45a407c56f8ea files/msn-transport.init 423
+MD5 2bb7338640063281eeef587f8ce0fd5e files/msn-configure-patch-00 805
+MD5 6b5eaadda94bd02fb01ef8ae6631c7fd files/digest-msn-transport-20040531 75
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBf2zhCHk4+ZoBpvsRAlceAKC7425wUOqjA/LjPi9MoOtSmfs26wCdEotm
-wC4CBrfDw+xpbqfXa2aRZW4=
-=lvm+
+iD8DBQFCQ+t3ugEuf3OQ0akRAgQmAJ9nZYfs0ycwQUe4vQ2m3GuHH0ibDQCeNTD3
+W+J411QavEDU5Ygb4ApNb5g=
+=4Fr4
 -----END PGP SIGNATURE-----
