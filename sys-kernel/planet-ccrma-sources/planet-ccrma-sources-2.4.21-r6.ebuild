@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21-r5.ebuild,v 1.3 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21-r6.ebuild,v 1.1 2004/04/15 10:27:23 plasmaroo Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -10,7 +10,7 @@ IUSE=""
 OKV=2.4.21
 EXTRAVERSION="-1.ll.acpi"
 KV=${OKV}${EXTRAVERSION}
-S=${WORKDIR}/linux-${KV}
+S=${WORKDIR}/linux-${KV}-${PR}
 
 # This package contains the Linux Kernel source for the version of the
 # RedHat Linux Kernel modified by the Planet CCRMA project.
@@ -41,26 +41,24 @@ KEYWORDS="x86"
 SLOT="${KV}"
 
 src_unpack() {
-
 	rpm_unpack ${DISTDIR}/kernel-source-${KV}.i386.rpm
 	cd ${WORKDIR}
 
 	tar xvzf ${DISTDIR}/${P}.tar.gz || die
-
-	mv usr/src/linux-${KV} ${WORKDIR} || die
+	mv usr/src/linux-${KV} ${WORKDIR}/linux-${KV}-${PR} || die
 
 	cd ${S}
 
 	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
 	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 	epatch ${FILESDIR}/${PN}.munmap.patch || die "Failed to apply munmap patch!"
 
-	kernel_universal_unpack
+	EXTRAVERSION="$EXTRAVERSION-${PR}" kernel_universal_unpack
 }
 
 pkg_postinst() {
-
 	ewarn "This kernel should now work with ALSA 0.9.6 or better."
 	ewarn "You'll need ~x86 for ALSA greater than 0.9.2"
 
