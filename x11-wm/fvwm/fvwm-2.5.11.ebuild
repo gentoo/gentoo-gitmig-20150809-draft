@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.11.ebuild,v 1.6 2004/10/01 08:14:35 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.11.ebuild,v 1.7 2004/10/03 12:52:29 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -292,9 +292,13 @@ pkg_postinst() {
 	einfo "FvwmIconMan, please update your configuration to use the new "
 	einfo "officially supported 'ShowNoIcons' option."
 	echo
-	einfo "The FvwmButtons 'HoverIcon' feature has been renamed 'ActiveIcon'."
-	einfo "If you have been using this feature, you may also be interested"
-	einfo "in the new 'PressIcon' Option."
+	einfo "The FvwmButtons 'HoverIcon', 'HoverTitle' and 'HoverColorset'"
+	einfo "features have been renamed 'Active'. Please update your"
+	einfo "configuration accordingly."
+	echo
+	einfo 'The $[w.miniiconfile] and $[w.iconfile] expansion has changed, if'
+	einfo "the image exists in your ImagePath, it will now expand to the full"
+	einfo "path of the image."
 	echo
 	einfo "For in depth information about all changes in this release, please"
 	einfo "refer to the ChangeLog."
