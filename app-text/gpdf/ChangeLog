@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.76 2005/01/21 20:28:54 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.77 2005/01/29 03:59:30 joem Exp $
+
+*gpdf-2.8.3 (29 Jan 2005)
+
+  29 Jan 2005; Joe McCann <joem@gentoo.org> +gpdf-2.8.3.ebuild:
+  New bugfix release
 
   21 Jan 2005; Danny van Dyk <kugelfang@gentoo.org> gpdf-2.8.2.ebuild:
   Marked stable on amd64 wrt Security BUG #71828.
