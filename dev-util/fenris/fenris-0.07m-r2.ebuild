@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r2.ebuild,v 1.2 2004/02/05 10:48:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r2.ebuild,v 1.3 2004/02/05 10:50:53 mr_bones_ Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Fenris is a tracer, GUI debugger, analyzer, partial decompiler and much more"
@@ -33,7 +33,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-dress.c.patch # update for latest binutils
 	epatch ${FILESDIR}/${P}-speedup.patch # to speed up makefile
 	epatch ${FILESDIR}/${P}-fnprints.patch # move fnprints to /etc/fenris
-	
+
 	cd ${S}/doc/man
 	sed -i 's:/etc/fnprints.dat:/etc/fenris/fnprints.dat:' -i *
 }
@@ -70,7 +70,7 @@ src_install() {
 	into /usr
 	dobin fenris fprints getfprints ragnarok fenris-bug \
 		ragsplit dress aegir nc-aegir spliter.pl
-		
+
 }
 
 pkg_postinst() {
