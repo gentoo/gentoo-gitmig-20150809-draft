@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/mac-fdisk-0.1.ebuild,v 1.3 2004/07/01 21:50:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/mac-fdisk-0.1.ebuild,v 1.4 2004/08/08 00:47:33 slarti Exp $
 
 DEBRV=8
-DESCRIPTION="Mac/PowerMac disk partitinoing utility"
+DESCRIPTION="Mac/PowerMac disk partitioning utility"
 HOMEPAGE="ftp://ftp.mklinux.apple.com/pub/Other_Tools/"
 SRC_URI="http://http.us.debian.org/debian/pool/main/m/mac-fdisk/${PN}_${PV}.orig.tar.gz
 	http://http.us.debian.org/debian/pool/main/m/mac-fdisk/${PN}_${PV}-${DEBRV}.diff.gz"
