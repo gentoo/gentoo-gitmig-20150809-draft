@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064-r1.ebuild,v 1.4 2003/09/20 22:21:25 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064-r1.ebuild,v 1.5 2003/09/24 15:11:58 avenj Exp $
 
 inherit rpm
 
@@ -30,7 +30,11 @@ src_unpack() {
 	cd "${S}"
 	# Keep disk space to a minimum
 	rm -f intel-*.ia64.rpm
-	rpm_unpack intel-*.i386.rpm
+
+	for x in intel-*.i386.rpm
+	do
+		rpm_unpack $x
+	done
 }
 
 src_compile() {
