@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.2 2002/07/25 22:23:47 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.3 2002/07/26 21:38:14 george Exp $
 
 S="${WORKDIR}/omni"
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"
-SRC_URI="http://us.dl.sourceforge.net/omniORB/${PN}_${PV}.tar.gz
-	http://us.dl.sourceforge.net/omniORB/${PN}py_1_5.tar.gz"
-HOMEPAGE="www.sourceforge.net/omniORB"
+SRC_URI="http://us.dl.sourceforge.net/sourceforge/omniorb/${PN}_${PV}.tar.gz
+	http://us.dl.sourceforge.net/sourceforge/omniorb/${PN}py_1_5.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/omniorb/"
 #the following one contains some more info, though it looks soemwhat deserted
 #HOMEPAGE="http://www.uk.research.att.com/omniORB/"
 
