@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.17 2003/05/31 23:45:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.18 2003/07/14 18:41:51 gmsoft Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -142,6 +142,9 @@ PROVIDE="virtual/x11
 #inherit needs to happen *after* DEPEND has been defined to have "newdepend"
 #do the right thing. Otherwise RDEPEND doesn't get set properly.
 inherit eutils flag-o-matic gcc
+
+# Needed by kdebase on hppa
+[ "${ARCH}" = "hppa" ] && append-flags -fPIC
 
 src_unpack() {
 

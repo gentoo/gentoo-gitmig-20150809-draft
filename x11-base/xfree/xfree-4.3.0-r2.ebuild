@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.33 2003/06/08 02:12:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.34 2003/07/14 18:41:51 gmsoft Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -35,6 +35,9 @@ ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O2 -O3 -pipe"
 #
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
+
+# Needed by kdebase on hppa
+[ "${ARCH}" = "hppa" ] && append-flags -fPIC
 
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"

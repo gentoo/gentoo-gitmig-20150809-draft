@@ -34,6 +34,9 @@ ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O2 -O3 -pipe"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
+# Needed by kdebase on hppa
+[ "${ARCH}" = "hppa" ] && append-flags -fPI
+
 # Are we using a snapshot ?
 USE_SNAPSHOT="yes"
 
