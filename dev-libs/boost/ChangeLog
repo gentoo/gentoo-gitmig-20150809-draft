@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.38 2005/03/05 05:33:08 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.39 2005/03/05 16:02:36 morfic Exp $
+
+  05 Mar 2005; Daniel Goller <morfic@gentoo.org> boost-1.32.0-r1.ebuild:
+  making the symlinks work for gcc and icc by inserting a variable not a
+  harcoded -gcc into the libname
 
 *boost-1.32.0-r1 (04 Mar 2005)
 
