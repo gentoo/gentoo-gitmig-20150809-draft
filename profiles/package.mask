@@ -157,6 +157,7 @@ net-www/mod_scgi
 
 # pebenito@gentoo.org (03 Aug 2003)
 # new api/userland for selinux
+>=dev-python/python-selinux-2.0
 sys-libs/libselinux
 sys-apps/checkpolicy
 sys-apps/policycoreutils
