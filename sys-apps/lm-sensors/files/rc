@@ -25,11 +25,12 @@ start() {
 	i=0
 	while true; do
 		module=`eval echo '$'MODULE_${i}`
+		module_args=`eval echo '$'MODULE_${i}_ARGS`
 		if [ -z "${module}" ] ; then
 			break
 		fi
 		ebegin "  Loading ${module}"
-		modprobe ${module} &>/dev/null
+		modprobe ${module} ${module_args} &>/dev/null
 		eend $?
 		i=$((i+1))
 	done
