@@ -1,0 +1,61 @@
+Status: Done
+
+Gentoo logo
+
+  Gentoo logo pulled from /etc/issue.logo, compiled in by default.
+
+
+ ----------- Diffstat output ------------
+ ./logo_config                     |    1 +
+ ./logos/distributions/gentoo.logo |   37 +++++++++++++++++++++++++++++++++++++
+ 2 files changed, 38 insertions(+)
+
+diff ./logo_config~current~ ./logo_config
+--- ./logo_config~current~	2003-06-04 11:20:02.000000000 +0100
++++ ./logo_config	2003-06-04 11:20:02.000000000 +0100
+@@ -1,2 +1,3 @@
+ ./logos/banner.logo
+ ./logos/classic.logo
++./logos/distributions/gentoo.logo
+
+diff ./logos/distributions/gentoo.logo~current~ ./logos/distributions/gentoo.logo
+--- ./logos/distributions/gentoo.logo~current~	2003-06-04 11:20:02.000000000 +0100
++++ ./logos/distributions/gentoo.logo	2003-06-04 11:20:02.000000000 +0100
+@@ -0,0 +1,37 @@
++# Gentoo Logo
++# Added by James Rowe <Jay@jnrowe.uklinux.net>
++# Logo by 
++  
++SYSINFO_POSITION bottom
++  
++DESCRIPTION_STRING Gentoo Linux Logo
++
++BEGIN_LOGO
++
++
++[0;35;40m                                            .
++[0;35;40m      .vir.                                d$b
++[0;35;40m   .d$$$$$$b.    .cd$$b.     .d$$b.   d$$$$$$$$$$$b  .d$$b.      .d$$b.
++[0;35;40m   $$$$( )$$$b d$$$()$$$.   d$$$$$$$b Q$$$$$$$P$$$P.$$$$$$$b.  .$$$$$$$b.
++[0;35;40m   Q$$$$$$$$$$B$$$$$$$$P"  d$$$PQ$$$$b.   $$$$.   .$$$P' `$$$ .$$$P' `$$$
++[0;35;40m     "$$$$$$$P Q$$$$$$$b  d$$$P   Q$$$$b  $$$$b   $$$$b..d$$$ $$$$b..d$$$
++[0;35;40m    d$$$$$$P"   "$$$$$$$$ Q$$$     Q$$$$  $$$$$   `Q$$$$$$$P  `Q$$$$$$$P
++[0;35;40m|  $$$$$$$P       `"""""   ""        ""   Q$$$P     "Q$$$P"     "Q$$$P"
++[0;35;40m|  `Q$$P"                                  """
++[0;37;40m+--------------------------------------------------------- l  i  n  u  x  
++END_LOGO
++
++BEGIN_ASCII_LOGO
++
++
++                                            .
++      .vir.                                d$b
++   .d$$$$$$b.    .cd$$b.     .d$$b.   d$$$$$$$$$$$b  .d$$b.      .d$$b.
++   $$$$( )$$$b d$$$()$$$.   d$$$$$$$b Q$$$$$$$P$$$P.$$$$$$$b.  .$$$$$$$b.
++   Q$$$$$$$$$$B$$$$$$$$P"  d$$$PQ$$$$b.   $$$$.   .$$$P' `$$$ .$$$P' `$$$
++     "$$$$$$$P Q$$$$$$$b  d$$$P   Q$$$$b  $$$$b   $$$$b..d$$$ $$$$b..d$$$
++    d$$$$$$P"   "$$$$$$$$ Q$$$     Q$$$$  $$$$$   `Q$$$$$$$P  `Q$$$$$$$P
++|  $$$$$$$P       `"""""   ""        ""   Q$$$P     "Q$$$P"     "Q$$$P"
++|  `Q$$P"                                  """
+++--------------------------------------------------------- l  i  n  u  x  
++END_ASCII_LOGO
