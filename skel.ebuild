@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86/skel.ebuild,v 1.5 2002/04/29 22:56:53 sandymac Exp $
+# $Header: /home/cvsroot/gentoo-x86/skel.ebuild,v 1.6 2002/05/07 03:58:19 drobbins Exp $
 
 # NOTE: The comments in this file are for instruction and documentation.
 # They're not meant to appear with your final, production ebuild.  Please
@@ -11,18 +11,8 @@
 # will be commited to cvs, the details on that line will be automatically
 # generated to contain the correct data.
 
-# Source directory; the dir where the sources can be found (automatically
-# unpacked) inside ${WORKDIR}.  S will get a default setting of ${WORKDIR}/${P}
-# if you omit this line.
-
-S=${WORKDIR}/${P}
-
 # Short one-line description of this package.
 DESCRIPTION="This is a sample skeleton ebuild file"
-
-# Point to any required sources; these will be automatically downloaded by
-# Portage.
-SRC_URI="ftp://foo.bar.com/${P}.tar.gz"
 
 # Homepage, not used by Portage directly but handy for developer reference
 HOMEPAGE="http://"
@@ -43,6 +33,16 @@ DEPEND=""
 
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 #RDEPEND=""
+
+# Point to any required sources; these will be automatically downloaded by
+# Portage.
+SRC_URI="ftp://foo.bar.com/${P}.tar.gz"
+
+# Source directory; the dir where the sources can be found (automatically
+# unpacked) inside ${WORKDIR}.  S will get a default setting of ${WORKDIR}/${P}
+# if you omit this line.
+
+S=${WORKDIR}/${P}
 
 src_compile() {
 	# Most open-source packages use GNU autoconf for configuration.
