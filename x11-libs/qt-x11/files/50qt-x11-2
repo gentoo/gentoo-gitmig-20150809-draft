@@ -1,0 +1,4 @@
+PATH=/usr/lib/qt-x11-2/bin
+ROOTPATH=/usr/lib/qt-x11-2/bin
+LDPATH=/usr/lib/qt-x11-2/lib
+MANPATH=/usr/lib/qt-x11-2/share/man
