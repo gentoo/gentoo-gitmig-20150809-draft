@@ -1,5 +1,15 @@
-MD5 dfb6fe383b454a529fb958550853cd7c ChangeLog 1052
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2158f8578c1311a23a41c7adbd252aa8 ChangeLog 1156
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 e82bddd0c3be4b4b42a5686899d23c1e xmms-jess-2.9.1.ebuild 764
+MD5 6f0d6f04461b9524363252ce9c7523b0 xmms-jess-2.9.1.ebuild 777
 MD5 f4856328ab7b220af943402e1dc92475 files/digest-xmms-jess-2.9.1 62
 MD5 54c6a61d455728c63b489b057d9d4f3d files/xmms-jess-2.9.1-gcc34.patch 973
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBZLWLArHZZzCEUG0RAkQ/AJ9jix02gXK8DhO77DZLt7kY5Cx89QCfUM5D
+Xto5AZr/QbKjrOwbsKt3hZE=
+=6t8p
+-----END PGP SIGNATURE-----
