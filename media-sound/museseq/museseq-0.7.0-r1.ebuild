@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.0-r1.ebuild,v 1.2 2004/09/28 19:57:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.0-r1.ebuild,v 1.3 2005/01/09 22:19:14 fvdpol Exp $
 
 inherit kde-functions gcc virtualx eutils
 need-qt 3
