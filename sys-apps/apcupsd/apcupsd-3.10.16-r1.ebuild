@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.16.ebuild,v 1.1 2004/11/12 01:07:37 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.16-r1.ebuild,v 1.1 2004/11/23 22:09:23 tantive Exp $
 
 inherit eutils
 
@@ -11,13 +11,13 @@ SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
-IUSE="doc snmp usb apache2"
+IUSE="doc snmp usb apache2 gd"
 
 DEPEND=">=sys-apps/baselayout-1.8.4
 	virtual/libc
 	virtual/mta
 	snmp? ( virtual/snmp )
-	>=media-libs/gd-1.8.4
+	gd? ( >=media-libs/gd-1.8.4 )
 	sys-libs/ncurses"
 RDEPEND="${DEPEND}
 	usb? ( sys-apps/hotplug )"
@@ -41,6 +41,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use snmp && myconf="--enable-net-snmp"
+	use gd && myconf="${myconf} --enable-cgi --with-css-dir=/var/www/apcupsd --with-cgi-bin=/var/www/apcupsd"
 	APCUPSD_MAIL=/usr/sbin/sendmail ./configure \
 		--prefix=/usr \
 		--sbindir=/usr/sbin \
@@ -59,10 +60,7 @@ src_compile() {
 		--enable-oldnet \
 		--enable-master-slave \
 		--enable-powerflute \
-		--enable-pthreads \
-		--with-css-dir=/var/www/apcupsd \
-		--with-cgi-bin=/var/www/apcupsd \
-		--enable-cgi \
+		--enable-pthreads
 		${myconf} \
 		|| die
 	make || die
@@ -71,11 +69,14 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die "installed failed"
 
-	use apache2 || insinto /etc/apache/conf/addon-modules
-	use apache2 || newins  ${FILESDIR}/${PV}/apache.conf apcupsd.conf
+	if use gd
+	then
+		use apache2 || insinto /etc/apache/conf/addon-modules
+		use apache2 || newins  ${FILESDIR}/${PV}/apache.conf apcupsd.conf
 
-	use apache2 && insinto /etc/apache2/conf/modules.d
-	use apache2 && newins ${FILESDIR}/${PV}/apache.conf 60_apcupsd.conf
+		use apache2 && insinto /etc/apache2/conf/modules.d
+		use apache2 && newins ${FILESDIR}/${PV}/apache.conf 60_apcupsd.conf
+	fi
 
 	insinto /etc/apcupsd
 	newins examples/safe.apccontrol safe.apccontrol
