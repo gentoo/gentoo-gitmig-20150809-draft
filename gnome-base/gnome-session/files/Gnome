@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Great new Gnome2 feature, AA
+# We enable this by default
+
+export GDK_USE_XFT=1
+
 for errfile in "$HOME/.gnomerc-errors" "${TMPDIR-/tmp}/gnomerc-$USER" "/tmp/gnomerc-$USER"
 do
 	if ( cp /dev/null "$errfile" 2> /dev/null )
@@ -9,7 +14,6 @@ do
 		break
 	fi
 done
-
 #
 #  Distributors:
 #  You should modify the paths here to fit your distro
