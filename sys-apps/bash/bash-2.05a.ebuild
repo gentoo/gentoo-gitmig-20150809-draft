@@ -1,15 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a.ebuild,v 1.1 2002/01/03 16:49:00 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a.ebuild,v 1.2 2002/01/03 19:03:31 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The standard GNU Bourne again shell"
 SRC_URI="ftp://ftp.gnu.org/gnu/bash/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 
-#A recent baselayout is needed since bash is dynamic.
-DEPEND=">=sys-libs/ncurses-5.2-r2 readline? ( >=sys-libs/readline-4.1-r2 ) >=sys-apps/baselayout-1.8"
+#A recent portage is needed since bash is dynamic.
+DEPEND=">=sys-libs/ncurses-5.2-r2 readline? ( >=sys-libs/readline-4.1-r2 ) >=sys-apps/portage-1.8"
 RDEPEND="virtual/glibc"
 
 src_compile() {
