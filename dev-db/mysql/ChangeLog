@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.76 2003/10/26 21:23:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.77 2003/10/26 23:56:11 robbat2 Exp $
+
+*mysql-4.0.16 (26 Oct 2003)
+
+  26 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.16.ebuild,
+  files/mysql-4.0.16-install-db-sh.diff,
+  files/mysql-4.0.16-mysqld-safe-sh.diff:
+  version bump as per bug 31806, re-did patching code to use epatch and
+  re-diffed some patches for the new version
 
 *mysql-4.0.15-r1 (26 Oct 2003)
 

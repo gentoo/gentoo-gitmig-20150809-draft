@@ -6,6 +6,7 @@ MD5 39e3c7ff2e2cdadd676978486e20178e mysql-4.0.15-r1.ebuild 7686
 MD5 4f99ec86879e1aaa642eeb33007d4d76 mysql-4.0.14.ebuild 6909
 MD5 b1716c908bb6b91f9d95929d8882d362 mysql-3.23.52-r1.ebuild 5872
 MD5 cac184b213bfcbbea7e7f17cf787e538 mysql-4.0.14-r1.ebuild 7407
+MD5 39e3c7ff2e2cdadd676978486e20178e mysql-4.0.16.ebuild 7686
 MD5 6b519e83d68043614f6631e7b098d87c mysql-4.0.13-r4.ebuild 7282
 MD5 a3702a4c1f2b7118dcd12c8157f07009 mysql-3.23.57.ebuild 6550
 MD5 7866014a1102981ef38b908f26e5a2b8 ChangeLog 12367
@@ -22,6 +23,7 @@ MD5 7d92ba9c74a73bf3c852a5c078c16d29 files/rebuilder.sh 1557
 MD5 a77a12a8e251ca0d82d3027b7b50c762 files/digest-mysql-4.0.12 1371
 MD5 33666c6c9542fe3ef02379877f0c6bac files/digest-mysql-4.0.14 66
 MD5 68e456716a2026e49c85766696180bfc files/digest-mysql-4.0.15 66
+MD5 b3d105fcbd2750964387bfcc010c145e files/digest-mysql-4.0.16 66
 MD5 ee578e3021841ef9dba4175403564136 files/mysql-4.0-db-3.2.1.diff 1047
 MD5 ff80a5d8d87212046e89f2f8ae779af4 files/mysql-4.0-nisam.h.diff 452
 MD5 afbf3b6821056a31ee09430933f8fb47 files/mysql.init 903
