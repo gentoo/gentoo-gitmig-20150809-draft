@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29.ebuild,v 1.2 2003/05/29 14:09:47 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29.ebuild,v 1.3 2003/06/04 22:58:27 taviso Exp $
 
 DESCRIPTION="Classic UNIX shell with C like syntax"
 HOMEPAGE="http://www.netbsd.org/"
@@ -20,8 +20,6 @@ RESTRICT="nomirror"
 # 
 # i decided to go with cvs.
 
-inherit cvs flag-o-matic eutils ccc
-
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~alpha"
@@ -32,6 +30,8 @@ DEPEND="virtual/glibc
 	>=sys-apps/sed-4
 	doc? ( sys-apps/groff )"
 RDEPEND="virtual/glibc"
+
+inherit cvs flag-o-matic eutils ccc
 
 ECVS_SERVER="anoncvs.netbsd.org:/cvsroot"
 ECVS_MODULE="src/bin/csh"
@@ -103,7 +103,7 @@ src_install() {
 	exeinto /bin
 	doexe csh
 	doman csh.1
-	dodoc USD.doc/paper.ps
+	use doc && dodoc USD.doc/paper.ps
 }
 
 pkg_postinst() {
