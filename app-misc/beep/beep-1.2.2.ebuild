@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2.ebuild,v 1.15 2004/07/03 23:19:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2.ebuild,v 1.16 2004/07/14 01:43:23 mr_bones_ Exp $
 
 DESCRIPTION="the advanced PC speaker beeper"
 HOMEPAGE="http://www.johnath.com/beep/"
@@ -18,16 +18,9 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin
-	dodir /usr/share/man/man1
-
-	exeinto /usr/bin
-	doexe beep
+	dobin beep
 	# do we really have to set this suid by default? -solar
-	chmod 4711 ${D}/usr/bin/beep
-
-	insinto /usr/share/man/man1
-	doins beep.1.gz
-
+	fperms 4711 /usr/bin/beep
+	doman beep.1.gz
 	dodoc CHANGELOG CREDITS README
 }

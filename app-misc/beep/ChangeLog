@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.10 2004/07/03 23:19:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.11 2004/07/14 01:43:23 mr_bones_ Exp $
+
+  13 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> beep-1.2.2.ebuild:
+  use the portage functions; tidy
 
   03 Jul 2004; <solar@gentoo.org> beep-1.2.2.ebuild:
   allow user optimizations by passing CFLAGS
