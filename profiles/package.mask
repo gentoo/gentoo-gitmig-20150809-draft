@@ -55,7 +55,7 @@ sys-devel/spython
 
 # <pauldv@gentoo.org> (19 Jun 2003)
 # It is a beta version
-=app-office/openoffice-bin-1.1_beta2
+>=app-office/openoffice-bin-1.1_beta2
 
 # <games@gentoo.org> (19 Jun 2003)
 # 4.1.x is incompat with 4.0.x
@@ -115,7 +115,7 @@ media-libs/gst-plugins-cdparanoia
 
 # <pauldv@gentoo.org> 10 Jun 2003
 # Beta version, and testing needed
-=app-office/openoffice-1.1_beta2
+>=app-office/openoffice-1.1_beta2
 
 # <malverian@gentoo.org> 08 Jun 2003
 # Masked for testing
