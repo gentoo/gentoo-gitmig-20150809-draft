@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syscriptor/syscriptor-1.5.12.ebuild,v 1.4 2003/06/21 21:19:41 drobbins Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syscriptor/syscriptor-1.5.12.ebuild,v 1.5 2003/09/07 00:58:44 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program that displays information about your hardware"
@@ -18,7 +18,7 @@ src_compile() {
 
 	econf || die
 	emake || die
-	
+
 }
 
 src_install () {
