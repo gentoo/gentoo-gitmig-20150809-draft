@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9ff42728d9b56ee0a0d8d2bece620170 gtkimprime-0.1.ebuild 939
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 49f2377afe191b4c0a20ad9818886fb4 ChangeLog 350
+MD5 bdceef794d50f423dabc3817421c144f files/digest-gtkimprime-0.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBrBw9VWNWqTUmv+0RAlf3AJ4sKmwnvAQ2S3Su94AbCiEbDMa+GgCgn7es
+PQAyfjzq1qWt3/UwHczL/5U=
+=7nSv
+-----END PGP SIGNATURE-----
