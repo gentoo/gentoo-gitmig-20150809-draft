@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/ensemblist
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ChangeLog,v 1.1 2004/09/25 08:06:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ChangeLog,v 1.2 2004/10/17 09:25:29 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> ensemblist-040126.ebuild:
+  Added to ~ppc.
 
 *ensemblist-040126 (25 Sep 2004)
 
