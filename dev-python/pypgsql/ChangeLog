@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pypgsql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.2 2003/02/12 06:34:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.3 2003/10/12 07:40:54 liquidx Exp $
+
+*pypgsql-2.4 (12 Oct 2003)
+
+  12 Oct 2003; Alastair Tse <liquidx@gentoo.org> pypgsql-2.4.ebuild:
+  version bump (#30398)
 
 *pypgsql-2.3 (18 Dec 2002)
 
