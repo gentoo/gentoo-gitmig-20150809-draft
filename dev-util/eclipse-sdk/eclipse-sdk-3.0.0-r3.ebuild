@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.7 2004/09/16 06:55:11 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.8 2004/09/17 01:40:20 mr_bones_ Exp $
 
 inherit eutils java-utils
 
@@ -40,7 +40,7 @@ pkg_setup() {
 	if use ppc; then
 		ewarn "This package needs 1 gig Ram on PPC !"
 	fi
-	
+
 	java-utils_setup-vm
 
 	# karltk: refactor, put in java-pkg.eclass?
