@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/multvals
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/multvals/ChangeLog,v 1.1 2004/07/15 17:56:49 ciaranm Exp $
+
+*multvals-3.6.1 (15 Jul 2004)
+
+  15 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +multvals-3.6.1.ebuild:
+  New ebuild. We'll be needing this for a few other app-vim plugins shortly.
+
