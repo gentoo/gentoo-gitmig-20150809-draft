@@ -1,0 +1,27 @@
+# ChangeLog for app-sci/ncview
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.1 2004/12/27 21:21:51 ribosome Exp $
+
+*ncview-1.92d (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +ncview-1.92d.ebuild:
+  Moved from app-sci/ncview to sci-misc/ncview.
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org> ncview-1.92d.ebuild:
+  added ~amd64
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> ncview-1.92d.ebuild:
+  Adding IUSE
+
+*ncview-1.92d.ebuild (05 Jan 2003)
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; ncview-1.92d.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
+
+*ncview-1.92d (05 Jan 2003)
+
+  05 Jan 2003; George Shapovalov <george@gentoo.org> ChangeLog, ncview-1.92d.ebuild, files/digest-ncview-1.92d :
+  initial release (#12161)
+  Ncview is an X-based viewer for netCDF files.
+  ebuild submitted by Jordan Dawe <freedryk@hotmail.com>
