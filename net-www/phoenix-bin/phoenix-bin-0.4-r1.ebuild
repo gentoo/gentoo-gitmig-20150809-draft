@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.4.ebuild,v 1.4 2002/11/17 11:59:44 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.4-r1.ebuild,v 1.1 2002/11/17 11:59:44 phoenix Exp $
 
 IUSE=""
 
@@ -25,6 +25,11 @@ src_install() {
 
 	mv ${S} ${D}/usr/lib
 	chown -R root.root ${D}/usr/lib/${MY_PN}
+
+        cd ${D}/usr/lib/${MY_PN}/defaults/pref
+
+        einfo "Enabling truetype fonts"
+        patch < ${FILESDIR}/phoenix-0.4-antialiasing-patch
 
 	dobin ${FILESDIR}/phoenix
 	dosym /usr/lib/libstdc++-libc6.1-1.so.2 /usr/lib/${MY_PN}/libstdc++-libc6.2-2.so.3

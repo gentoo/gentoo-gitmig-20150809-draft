@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.3.ebuild,v 1.2 2002/10/31 16:29:21 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.3.ebuild,v 1.3 2002/11/17 11:59:44 phoenix Exp $
+
+IUSE=""
 
 MY_PN=${PN/-bin/}
 S=${WORKDIR}/${MY_PN}
@@ -9,18 +11,14 @@ SRC_URI="http://ftp.mozilla.org/pub/phoenix/releases/0.3/phoenix-0.3-i686-pc-lin
 HOMEPAGE="http://www.mozilla.org/projects/phoenix/"
 RESTRICT="nostrip"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
-LICENSE="MPL-1.1 | NPL-1.1"
+LICENSE="MPL-1.1 NPL-1.1"
 
+DEPEND="virtual/glibc"
 RDEPEND=">=net-www/mozilla-1.0.1-r2
 	 >=sys-libs/lib-compat-1.0-r2
 	 virtual/x11"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
 
 src_install() {
 	dodir /usr/lib
