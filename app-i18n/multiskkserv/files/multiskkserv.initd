@@ -1,0 +1,34 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/files/multiskkserv.initd,v 1.1 2003/07/16 18:59:43 usata Exp $
+
+opts="start stop"
+
+depend() {
+	need net
+}
+
+start() {
+	if [ -e /var/run/multiskkserv.pid ] ; then
+		eerror "Anothor pid file is detected."
+		eerror "If you are sure any multiskkserv is not running,"
+		eerror "please rm /var/run/multiskkserv manually."
+	fi
+
+	ebegin "Starting multiskkserv"
+	start-stop-daemon --start --quiet --background \
+		--make-pidfile --pidfile /var/run/multiskkserv.pid \
+		--startas /usr/sbin/multiskkserv -- \
+			-r /usr/share/skk ${SKKJISYO_CDB}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping multiskkserv"
+	start-stop-daemon --stop --quiet \
+		--pidfile /var/run/multiskkserv.pid \
+		--startas /usr/sbin/multiskkserv
+	eend $?
+	[ -e /var/run/multiskkserv.pid ] && rm /var/run/multiskkserv.pid
+}
