@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0.ebuild,v 1.6 2004/08/31 12:48:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0.ebuild,v 1.7 2004/09/01 13:08:00 caleb Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
@@ -31,11 +31,11 @@ DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/1.3.0-jack-configure.in.in.patch
+
 	kde_sandbox_patch ${S}/soundserver
 	# for the configure.in.in patch, for some reason it's not automatically picked up
 	# rm -f $S/configure
-
-	epatch ${FILESDIR}/1.3.0-jack-configure.in.in.patch
 
 	cd ${S} && make -f admin/Makefile.common
 	# use amd64 && epatch ${FILESDIR}/arts-${PV}-buffer.patch
