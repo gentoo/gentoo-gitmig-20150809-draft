@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.48 2005/03/31 13:21:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.49 2005/04/01 20:15:25 chainsaw Exp $
+
+*beep-media-player-0.9.7-r5 (01 Apr 2005)
+
+  01 Apr 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/0.9.7-playlist-deadfile-delete.patch,
+  +files/0.9.7-window-focus.patch, +beep-media-player-0.9.7-r5.ebuild:
+  Version bump, updated ALSA depend, closes bug #86066. Patch for upstream
+  bug #260. Patch from Dale Whittaker applied, closes bug #83702 (upstream bug
+  #94).
 
   31 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   beep-media-player-0.9.7-r4.ebuild:

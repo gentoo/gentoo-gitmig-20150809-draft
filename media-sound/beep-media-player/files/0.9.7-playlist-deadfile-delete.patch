@@ -1,0 +1,14 @@
+--- beep-media-player-0.9.7/beep/playlist.c	2004-09-19 00:15:46.000000000 +0100
++++ beep-media-player-0.9.7-patched/beep/playlist.c	2005-03-25 16:23:30.985468176 +0000
+@@ -2000,7 +2000,10 @@
+             if (bmp_playback_get_playing())
+                 continue;
+ 
+-            playlist_position = PLAYLIST_ENTRY(next_node->data);
++            if (next_node)
++                playlist_position = PLAYLIST_ENTRY(next_node->data);
++            else
++                playlist_position = NULL;
+         }
+ 
+         playlist_entry_free(entry);
