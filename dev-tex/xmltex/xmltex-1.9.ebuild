@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/xmltex-1.9.ebuild,v 1.4 2004/06/25 02:18:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/xmltex-1.9.ebuild,v 1.5 2004/10/18 12:31:05 dholm Exp $
 
 inherit latex-package
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~ppc"
 
 DEPEND="virtual/tetex"
 
