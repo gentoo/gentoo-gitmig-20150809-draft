@@ -1,0 +1,12 @@
+# ChangeLog for media-plugins/xmms-idcin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-idcin/ChangeLog,v 1.1 2004/01/27 09:39:21 eradicator Exp $
+
+*xmms-idcin-0.5 (27 Jan 2004)
+
+  27 Jan 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-idcin-0.5.ebuild:
+  xmms-idcin is an XMMS Input plugin to watch .cin movies that are used for such
+  things as Quake 2. The ebuild was provided by John Steele Scott
+  <toojays@toojays.net> in bug #32321
+
