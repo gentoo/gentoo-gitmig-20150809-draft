@@ -1,4 +1,4 @@
-MD5 3eb9c9262c14f27d7c2dc02d5c82788e ChangeLog 669
-MD5 710aeeba457618480e22b5877aaa8c0e libmad-0.15.0b.ebuild 1124
-MD5 92125e295ca016ce5cda529054eb5353 files/digest-libmad-0.15.0b 66
+MD5 8de4ee2670f09cb8639a914f4d1506ae libmad-0.15.0b.ebuild 1195
+MD5 f17e9662210c12ec8c7ce6c94ce93c84 ChangeLog 841
 MD5 89806934195402446d21d1a83f523b11 files/mad.pc 211
+MD5 92125e295ca016ce5cda529054eb5353 files/digest-libmad-0.15.0b 66

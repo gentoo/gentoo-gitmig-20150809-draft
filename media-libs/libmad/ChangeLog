@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmad
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.4 2003/07/18 11:09:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.5 2003/07/19 06:10:02 raker Exp $
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org> libmad-0.15.0b.ebuild:
+  Added lotsa arch's, changed so mad is not conflicting and some other
+  cleanup and beautification.
 
   18 Jul 2003; Luca Barbato <lu_zero@gentoo.org> libmad-0.15.0b.ebuild:
   Added keyword ~ppc
