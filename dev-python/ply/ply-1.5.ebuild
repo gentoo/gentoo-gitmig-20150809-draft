@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-1.5.ebuild,v 1.1 2004/06/27 14:58:17 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-1.5.ebuild,v 1.2 2004/06/28 21:37:35 dholm Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://systems.cs.uchicago.edu/ply/"
 DEPEND="virtual/python"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 src_install() {
 	distutils_src_install
