@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r4.ebuild,v 1.5 2004/07/14 19:35:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r4.ebuild,v 1.6 2004/08/02 03:32:16 tgall Exp $
 
 # r3 change by me (danarmak): there's a contrib dir inside the freetype1
 # sources with important utils: ttf2bdf, ttf2pfb, ttf2pk, ttfbanner.
@@ -25,7 +25,7 @@ SRC_URI="ftp://ftp.freetype.org/freetype/freetype1/${P}.tar.gz
 
 LICENSE="FTL"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ppc64"
 IUSE="nls tetex"
 
 DEPEND="virtual/libc
