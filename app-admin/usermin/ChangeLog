@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.47 2005/01/13 13:19:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.48 2005/01/16 14:11:28 gmsoft Exp $
+
+  16 Jan 2005; Guy Martin <gmsoft@gentoo.org> usermin-1.100-r1.ebuild:
+  Stable on hppa.
 
   13 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   usermin-1.100-r1.ebuild:
