@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.45-r5.ebuild,v 1.1 2002/12/13 15:54:07 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.45-r5.ebuild,v 1.2 2002/12/13 17:12:57 carpaski Exp $
 
 IUSE="build"
 
@@ -228,7 +228,7 @@ pkg_postinst() {
 			eerror "ATTENTION: This issue is handled automatically from this new version on."
 			eerror "ATTENTION: Sorry for any inconvenience. Exiting..."
 
-			ps wax | egrep 'python.*emerge' | sed 's:[ ]*\([0-9]\+\):\1:' | xargs kill -INT
+			ps wax | egrep 'python.*emerge' | sed 's:^[ ]*\([0-9]\+\).*:\1:' | xargs kill -INT
 		fi
 	fi
 }
