@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3099 2004/08/25 11:40:04 genone Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3100 2004/08/25 18:53:25 swegener Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -29,9 +29,9 @@
 
 # <swegener@gentoo.org> (25 Aug 2004)
 # Temporary masking the new dev-db/mysql-{administrator,query-browser} packages
-# mysql-adminstrator should be stable
+# mysql-administrator should be stable
 # mysql-query-browser segfaults when deleting rows
-dev-db/mysql-adminstrator
+dev-db/mysql-administrator
 dev-db/mysql-query-browser
 
 # <foser@gentoo.org> (24 Aug 2004)
