@@ -1,0 +1,131 @@
+--- src/plugin.h 2004-01-09 22:04:56.000000000 -0600
++++ src/plugin.h      2004-01-11 23:47:56.000000000 -0600
+@@ -117,7 +117,7 @@
+ /**
+  * Handles the initialization of modules.
+  */
+-#if !defined(GAIM_PLUGINS) || defined(STATIC)
++#if !defined(GAIM_PLUGINS) || defined(GAIM_STATIC_PRPL)
+ # define GAIM_INIT_PLUGIN(pluginname, initfunc, plugininfo) \
+ 	gboolean gaim_init_##pluginname##_plugin(void) { \
+ 		GaimPlugin *plugin = gaim_plugin_new(TRUE, NULL); \
+@@ -125,7 +125,7 @@
+ 		initfunc((plugin)); \
+ 		return gaim_plugin_register(plugin); \
+ 	}
+-#else /* GAIM_PLUGINS  && !STATIC */
++#else /* GAIM_PLUGINS  && !GAIM_STATIC_PRPL */
+ # define GAIM_INIT_PLUGIN(pluginname, initfunc, plugininfo) \
+ 	G_MODULE_EXPORT gboolean gaim_init_plugin(GaimPlugin *plugin) { \
+ 		plugin->info = &(plugininfo); \
+--- src/protocols/zephyr/Makefile.am	2003/08/31 22:45:17	1.11
++++ src/protocols/zephyr/Makefile.am	2004/01/12 05:47:57	1.12
+@@ -73,7 +73,7 @@
+ 
+ if STATIC_ZEPHYR
+ 
+-st = -DSTATIC -Dlint
++st = -DGAIM_STATIC_PRPL -Dlint
+ noinst_LIBRARIES = libzephyr.a
+ libzephyr_a_SOURCES = $(ZEPHYRSOURCES)
+ libzephyr_a_CFLAGS  = $(AM_CFLAGS)
+--- src/protocols/yahoo/Makefile.am	2003/11/29 03:30:01	1.19
++++ src/protocols/yahoo/Makefile.am	2004/01/12 05:47:57	1.20
+@@ -19,7 +19,7 @@
+ 
+ if STATIC_YAHOO
+ 
+-st = -DSTATIC
++st = -DGAIM_STATIC_PRPL
+ noinst_LIBRARIES   = libyahoo.a
+ libyahoo_a_SOURCES = $(YAHOOSOURCES)
+ libyahoo_a_CFLAGS  = $(AM_CFLAGS)
+--- src/protocols/trepia/Makefile.am	2003/10/30 15:39:01	1.5
++++ src/protocols/trepia/Makefile.am	2004/01/12 05:47:57	1.6
+@@ -14,7 +14,7 @@
+ 
+ if STATIC_TREPIA
+ 
+-st = -DSTATIC
++st = -DGAIM_STATIC_PRPL
+ noinst_LIBRARIES = libtrepia.a
+ libtrepia_a_SOURCES = $(TREPIASOURCES)
+ libtrepia_a_CFLAGS  = $(AM_CFLAGS)
+--- src/protocols/toc/Makefile.am	2003/10/06 21:55:43	1.10
++++ src/protocols/toc/Makefile.am	2004/01/12 05:47:57	1.11
+@@ -12,7 +12,7 @@
+ 
+ if STATIC_TOC
+ 
+-st = -DSTATIC
++st = -DGAIM_STATIC_PRPL
+ noinst_LIBRARIES = libtoc.a
+ libtoc_a_SOURCES = $(TOCSOURCES)
+ libtoc_a_CFLAGS  = $(AM_CFLAGS)
+--- src/protocols/oscar/Makefile.am	2003/10/14 03:12:28	1.22
++++ src/protocols/oscar/Makefile.am	2004/01/12 05:47:57	1.23
+@@ -52,7 +52,7 @@
+ 
+ if STATIC_OSCAR
+ 
+-st = -DSTATIC
++st = -DGAIM_STATIC_PRPL
+ noinst_LIBRARIES   = liboscar.a
+ liboscar_a_SOURCES = $(OSCARSOURCES)
+ liboscar_a_CFLAGS  = $(AM_CFLAGS)
+--- src/protocols/napster/Makefile.am	2003/08/05 10:55:03	1.7
++++ src/protocols/napster/Makefile.am	2004/01/12 05:47:57	1.8
+@@ -8,7 +8,7 @@
+ 
+ if STATIC_NAPSTER
+ 
+-st = -DSTATIC
++st = -DGAIM_STATIC_PRPL
+ noinst_LIBRARIES     = libnapster.a
+ libnapster_a_SOURCES = $(NAPSTERSOURCES)
+ libnapster_a_CFLAGS  = $(AM_CFLAGS)
+--- src/protocols/msn/Makefile.am	2003/10/17 14:57:59	1.22
++++ src/protocols/msn/Makefile.am	2004/01/12 05:47:56	1.23
+@@ -44,7 +44,7 @@
+ 
+ if STATIC_MSN
+ 
+-st = -DSTATIC
++st = -DGAIM_STATIC_PRPL
+ noinst_LIBRARIES = libmsn.a
+ libmsn_a_SOURCES = $(MSNSOURCES)
+ libmsn_a_CFLAGS  = $(AM_CFLAGS)
+--- src/protocols/jabber/Makefile.am	2003/12/23 17:36:07	1.15
++++ src/protocols/jabber/Makefile.am	2004/01/12 05:47:56	1.16
+@@ -38,7 +38,7 @@
+ 
+ if STATIC_JABBER
+ 
+-st = -DSTATIC
++st = -DGAIM_STATIC_PRPL
+ noinst_LIBRARIES = libjabber.a
+ pkg_LTLIBRARIES =
+ 
+--- src/protocols/irc/Makefile.am	2003/08/05 10:55:02	1.11
++++ src/protocols/irc/Makefile.am	2004/01/12 05:47:56	1.12
+@@ -10,7 +10,7 @@
+ 
+ if STATIC_IRC
+ 
+-st = -DSTATIC
++st = -DGAIM_STATIC_PRPL
+ noinst_LIBRARIES = libirc.a
+ pkg_LTLIBRARIES =
+ 
+--- src/protocols/gg/Makefile.am	2003/08/06 07:31:33	1.11
++++ src/protocols/gg/Makefile.am	2004/01/12 05:47:56	1.12
+@@ -16,7 +16,7 @@
+ 
+ if STATIC_GG
+ 
+-st = -DSTATIC
++st = -DGAIM_STATIC_PRPL
+ noinst_LIBRARIES = libgg.a
+ 
+ libgg_a_SOURCES = $(GGSOURCES)
+
