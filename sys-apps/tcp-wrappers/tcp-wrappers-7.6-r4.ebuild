@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.20 2003/09/07 00:53:43 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.21 2004/01/25 23:05:21 vapier Exp $
 
 inherit eutils
 
@@ -49,5 +49,5 @@ src_install() {
 	insinto /usr/include
 	doins tcpd.h
 
-	dodoc BLURB CHANGES DISCLAIMER README*
+	dodoc BLURB CHANGES DISCLAIMER README* ${FILESDIR}/hosts.allow.example
 }
