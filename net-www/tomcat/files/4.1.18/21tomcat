@@ -1,2 +1,0 @@
-CATALINA_HOME=/opt/tomcat
-CONFIG_PROTECT=/opt/tomcat/conf
