@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.5.ebuild,v 1.2 2004/07/11 05:14:07 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.5.ebuild,v 1.3 2004/07/14 20:55:53 langthang Exp $
 
 inherit eutils
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
@@ -51,7 +51,9 @@ src_compile() {
 	use postgres && myconf="${myconf} --with-postgres"
 
 	# do not disable-sendmail for postfix user w/o mailwrapper, bug #44249.
-	mymta="$(best_version virtual/mta | awk -F/ '{print $2}' | awk -F- '{print $1}')"
+	mymta=$(portageq best_version / virtual/mta)
+	mymta=${mymta%-[0-9]*}
+	mymta=${mymta##*\/}
 	if ! use mailwrapper && [ "$mymta" == "postfix" ]; then
 		myconf="${myconf} --enable-sendmail"
 		einfo "My MTA is: $mymta"
