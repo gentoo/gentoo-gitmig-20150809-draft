@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.4 2002/07/03 17:49:46 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.5 2002/07/04 16:32:29 stroke Exp $
+
+*gtkglext-0.3.2 (04 Jul 2002)
+  04 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gtkglext-0.3.2.ebuild:
+  new version
 
 *gtkglext-0.3.1 (03 Jul 2002)
   03 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gtkglext-0.3.1.ebuild :
