@@ -1,0 +1,59 @@
+--- smoke/qt/Makefile.am.orig	2004-10-03 09:13:32.000000000 +0200
++++ smoke/qt/Makefile.am	2004-10-30 00:16:08.016760480 +0200
+@@ -15,6 +15,27 @@
+ libsmokeqt_la_SOURCES = smokedata.cpp x_1.cpp x_2.cpp x_3.cpp x_4.cpp x_5.cpp x_6.cpp x_7.cpp \
+  x_8.cpp x_9.cpp x_10.cpp x_11.cpp x_12.cpp x_13.cpp x_14.cpp x_15.cpp \
+  x_16.cpp x_17.cpp x_18.cpp x_19.cpp x_20.cpp
++ 
++x_1.cpp: smokedata.cpp
++x_2.cpp: smokedata.cpp
++x_3.cpp: smokedata.cpp
++x_4.cpp: smokedata.cpp
++x_5.cpp: smokedata.cpp
++x_6.cpp: smokedata.cpp
++x_7.cpp: smokedata.cpp
++x_8.cpp: smokedata.cpp
++x_9.cpp: smokedata.cpp
++x_10.cpp: smokedata.cpp
++x_11.cpp: smokedata.cpp
++x_12.cpp: smokedata.cpp
++x_13.cpp: smokedata.cpp
++x_14.cpp: smokedata.cpp
++x_15.cpp: smokedata.cpp
++x_16.cpp: smokedata.cpp
++x_17.cpp: smokedata.cpp
++x_18.cpp: smokedata.cpp
++x_19.cpp: smokedata.cpp
++x_20.cpp: smokedata.cpp
+ 
+ smokedata.cpp:
+ 	perl generate.pl
+--- smoke/kde/Makefile.am.orig	2004-10-03 09:13:32.000000000 +0200
++++ smoke/kde/Makefile.am	2004-10-30 00:33:44.270185552 +0200
+@@ -16,5 +16,26 @@
+  x_8.cpp x_9.cpp x_10.cpp x_11.cpp x_12.cpp x_13.cpp x_14.cpp x_15.cpp \
+  x_16.cpp x_17.cpp x_18.cpp x_19.cpp x_20.cpp
+  
++x_1.cpp: smokedata.cpp
++x_2.cpp: smokedata.cpp
++x_3.cpp: smokedata.cpp
++x_4.cpp: smokedata.cpp
++x_5.cpp: smokedata.cpp
++x_6.cpp: smokedata.cpp
++x_7.cpp: smokedata.cpp
++x_8.cpp: smokedata.cpp
++x_9.cpp: smokedata.cpp
++x_10.cpp: smokedata.cpp
++x_11.cpp: smokedata.cpp
++x_12.cpp: smokedata.cpp
++x_13.cpp: smokedata.cpp
++x_14.cpp: smokedata.cpp
++x_15.cpp: smokedata.cpp
++x_16.cpp: smokedata.cpp
++x_17.cpp: smokedata.cpp
++x_18.cpp: smokedata.cpp
++x_19.cpp: smokedata.cpp
++x_20.cpp: smokedata.cpp
++ 
+ smokedata.cpp:
+ 	perl generate.pl

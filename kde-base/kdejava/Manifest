@@ -1,0 +1,4 @@
+MD5 d65397f63ca5b6d62f5af38875b7680f kdejava-3.3.1.ebuild 1081
+MD5 fc46ca78f5d80f074b350dc510f1858c files/digest-kdejava-3.3.1 148
+MD5 5b4709a4940e69ed965855ca38b4ee56 files/no-gtk-glib-check.diff 596
+MD5 9598e813037e1a6ea89142a23ac4018a files/classpath.diff 460

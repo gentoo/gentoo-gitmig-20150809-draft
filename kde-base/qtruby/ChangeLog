@@ -1,0 +1,13 @@
+# ChangeLog for kde-base/qtruby
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.1 2004/11/06 17:23:33 danarmak Exp $
+
+*qtruby-3.3.1 (06 Nov 2004)
+
+  06 Nov 2004; Dan Armak <danarmak@gentoo.org>
+  +files/no-gtk-glib-check.diff, +qtruby-3.3.1.ebuild:
+  Initial version of the split-up kdebindings ebuilds. Cf.
+  kde-metaebuilds.berlios.de. This is a project to split the monolithic kde
+  ebuilds into separate ebuilds for separate applications. These ebuilds are
+  packaged.masked at first, pending testing.
+
