@@ -1,6 +1,4 @@
-MD5 2edf7891f96b32972de0370a148c7905 ChangeLog 1450
+MD5 4c6997b21744b58c2794d6a09f79e12d ChangeLog 1592
 MD5 a313f79b2af4b0767b678210c3fb8f49 vice-1.14.ebuild 1303
-MD5 bee1c24b1742b33f95f243358383697e files/1.12-po-Makefile.patch 555
-MD5 bee1c24b1742b33f95f243358383697e files/1.13-po-Makefile.patch 555
 MD5 962c8cfd8a9a308b180e1a26c4973625 files/1.14-po-Makefile.patch 560
 MD5 eca7586b8ef1c0d8665368c0328f9250 files/digest-vice-1.14 62
