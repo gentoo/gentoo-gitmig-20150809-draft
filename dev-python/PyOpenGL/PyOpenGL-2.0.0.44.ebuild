@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.17 2004/01/06 03:12:44 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.18 2004/01/15 08:32:25 blauwers Exp $
 
 inherit distutils virtualx
 
@@ -35,4 +35,21 @@ src_install () {
 	export maketype="python"
 	export python="virtualmake"
 	distutils_src_install
+}
+
+pkg_setup () {
+	VOID=`cat /etc/env.d/09opengl | grep xfree`
+
+	USING_NVIDIA=$?
+	if [ ${USING_NVIDIA} -eq 1 ]
+	then
+		opengl-update xfree
+	fi
+}
+
+pkg_postinst () {
+	if [ ${USING_NVIDIA} -eq 1 ]
+	then
+		opengl-update nvidia
+	fi
 }
