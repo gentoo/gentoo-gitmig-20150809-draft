@@ -22,6 +22,9 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> 23 Jul 2002
+# Masked while the system people put this through the test
+=sys-apps/bash-2.05b
 
 # <nitro@gentoo.org> 23 Jul 2002
 # Masked net-snmp-5.0.2a for testing
