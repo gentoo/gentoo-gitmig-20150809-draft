@@ -1,27 +1,38 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0.ebuild,v 1.7 2003/06/22 23:23:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0-r1.ebuild,v 1.1 2003/06/22 23:23:50 vapier Exp $
+
+inherit eutils
  
 DESCRIPTION="Window manager based on BlackBox"
-SRC_URI="http://www.waimea.org/files/stable/source/${P}.tar.bz2"
+SRC_URI="http://www.waimea.org/files/stable/source/${P}.tar.bz2
+	cjk? ( http://www.kasumi.sakura.ne.jp/~zoe/tdiary/patch/${P}-ja.patch )"
 HOMEPAGE="http://www.waimea.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ~sparc ~ppc"
+IUSE="truetype xinerama cjk"
 
 DEPEND="virtual/x11 
 	media-libs/imlib2
 	virtual/xft"
+
 PROVIDE="virtual/blackbox"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use cjk && epatch ${DISTDIR}/${P}-ja.patch
+}
 
 src_compile() {
 	econf \
+		`use_enable xinerama` \
+		`use_enable truetype xft` \
 		--enable-shape \
-		--enable-xinerama \
 		--enable-render \
 		--enable-randr \
-		--enable-xft \
 		--enable-pixmap \
 		|| die
 	emake || die
