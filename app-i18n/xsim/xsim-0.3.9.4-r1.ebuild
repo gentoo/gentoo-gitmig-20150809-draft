@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r1.ebuild,v 1.1 2003/05/25 13:44:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r1.ebuild,v 1.2 2003/06/07 01:40:22 liquidx Exp $
 
 [ -n "`use kde`" ] && inherit kde
 
@@ -15,6 +15,7 @@ IUSE="kde"
 
 DEPEND="virtual/glibc
 	=sys-libs/db-3*
+	>=sys-apps/sed-4
 	kde? ( >=kde-base/kdelibs-3 )"
 
 src_unpack() {
