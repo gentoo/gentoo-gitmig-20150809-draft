@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.6.ebuild,v 1.1 2004/10/07 14:27:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.6.ebuild,v 1.2 2004/10/13 00:20:38 wolf31o2 Exp $
 
 IUSE="opengl X"
 
@@ -18,6 +18,7 @@ DEPEND=""
 src_install() {
 	exeinto /etc/init.d && doexe autoconfig && newexe spind.init spind
 	use X && dosbin x-setup
-	use opengl && dosbin opengl-update openglify
+	# The following is commented because of bug #51726.
+	#use opengl && dosbin opengl-update openglify
 	dosbin net-setup spind
 }
