@@ -2,6 +2,6 @@ MD5 0e902d72507e8c36cc262c54d1b6aff0 files/digest-xmame-0.62.2-r1 66
 MD5 f1f68770c4bf6080e8037b796a142692 files/digest-xmame-0.67.2 66
 MD5 e096bfbd5dc89088df99c3e2237e62fb files/digest-xmame-0.69.1 66
 MD5 af03b4fd913aa8c42311fa136359e9e9 xmame-0.62.2-r1.ebuild 6958
-MD5 85e3cf3862616d9826bfd7d3100fce52 ChangeLog 2801
-MD5 6e3e81448e56f9c10a2e24eaa44589bd xmame-0.67.2.ebuild 6648
+MD5 8658c70e489bff204605e34cab2fe8f6 ChangeLog 2917
+MD5 84e1d19dac66b6443390e116c8a1f152 xmame-0.67.2.ebuild 6645
 MD5 f8dd052a10dee163e90be638b6049c08 xmame-0.69.1.ebuild 6646

@@ -7,8 +7,8 @@ MD5 710ef99af4d9318d273c6596773de660 files/digest-win4lin-4.0.22 72
 MD5 a56d557323abbc90fb5aab4b4896b6a2 files/digest-win4lin-5.0.1 71
 MD5 479e88d3a00dc755cf51c6beaaaad675 files/win4lin.initd.new 542
 MD5 f31e8d126cd6017c6a6bf4bc99725bf7 win4lin-4.0.12.ebuild 2572
-MD5 e3870fec99e38e1a4de64eb7563c2bb0 ChangeLog 1574
+MD5 6ab63b45fcfaf02c2fa68f41803eabbd ChangeLog 1690
 MD5 bb4d67211c4187ea6b12c11a532ed679 win4lin-4.0.16.ebuild 2569
-MD5 4e4453305d403c6bfb8e303bd8875135 win4lin-4.0.20.ebuild 2567
+MD5 98011380f323704bce283833101f651c win4lin-4.0.20.ebuild 2566
 MD5 dec226eb276b3d8092047c29da7e46b1 win4lin-4.0.22.ebuild 2567
 MD5 49cf06d288586a20ef979167c81d6962 win4lin-5.0.1.ebuild 2956
