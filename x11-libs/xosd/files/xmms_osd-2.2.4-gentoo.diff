@@ -1,0 +1,20 @@
+--- src/xmms_plugin/xmms_osd.c-orig	2003-07-08 10:11:20.000000000 +1200
++++ src/xmms_plugin/xmms_osd.c	2003-08-13 16:33:03.000000000 +1200
+@@ -263,6 +263,7 @@
+ 	{
+ 		xosd_set_colour (osd, colour);
+ 		xosd_set_timeout (osd, timeout);
++		xosd_set_pos (osd, pos);
+ 		xosd_set_vertical_offset (osd, offset);
+ 		xosd_set_horizontal_offset (osd, h_offset);
+ 		xosd_set_shadow_offset (osd, shadow_offset);
+--- src/xmms_plugin/xmms_osd.c-orig	2003-07-08 10:11:20.000000000 +1200
++++ src/xmms_plugin/xmms_osd.c	2003-08-13 16:34:35.000000000 +1200
+@@ -267,7 +267,6 @@
+ 		xosd_set_horizontal_offset (osd, h_offset);
+ 		xosd_set_shadow_offset (osd, shadow_offset);
+ 		xosd_set_outline_offset (osd, outline_offset);
+-		xosd_set_pos (osd, pos);
+ 		xosd_set_align (osd, align);
+ 		if (xosd_set_font (osd, font) == -1)
+ 		{

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.1.0.ebuild,v 1.3 2003/03/08 23:13:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.1.0.ebuild,v 1.4 2003/08/15 11:08:37 lanius Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library for overlaying text/glyphs in X-Windows \
@@ -13,7 +13,7 @@ DEPEND="virtual/x11
 	xmms? ( media-sound/xmms
 		media-libs/gdk-pixbuf )"
 RDEPEND=${DEPEND}
-SLOT="1"
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc ~ppc"
 

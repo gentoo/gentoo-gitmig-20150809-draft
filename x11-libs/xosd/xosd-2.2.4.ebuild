@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.2.ebuild,v 1.3 2003/08/13 05:49:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.4.ebuild,v 1.1 2003/08/15 11:08:37 lanius Exp $
 
 DESCRIPTION="Library for overlaying text/glyphs in X-Windows \
 X-On-Screen-Display plus binary for sending text from command line."
 HOMEPAGE="http://www.ignavus.net/"
-SRC_URI="http://www.ignavus.net/${P}.tar.gz"
+SRC_URI="http://ftp.debian.org/debian/pool/main/x/xosd/${PN}_${PV}.orig.tar.gz"
 
 IUSE="xmms"
-SLOT="1"
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc"
 
@@ -16,16 +16,20 @@ DEPEND="virtual/x11
 	xmms? ( media-sound/xmms
 		>=media-libs/gdk-pixbuf-0.22.0 )"
 
-src_compile() {
-	local myconf
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/xmms_osd-2.2.4-gentoo.diff
+}
 
+src_compile() {
 	if [ "`use xmms`" ]; then
 		myconf="--with-plugindir=/usr/lib/xmms"
 	else
 		myconf="--without-plugindir"
 	fi
 
-	econf || die
+	econf ${myconf} || die
 	emake || die
 }
 
