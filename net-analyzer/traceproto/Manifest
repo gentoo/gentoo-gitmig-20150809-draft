@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a0082cb8b47914d5f6b465ee5909d07a traceproto-1.1.1.ebuild 945
+MD5 d19e802878af5867c69daf26d29a66eb ChangeLog 421
+MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
+MD5 1a3c5caf1acac2a8326789361bf81663 files/traceproto-1.1.1-fix-warnings.diff 2407
+MD5 e489db124aef70ee3c4067dcc0f15c2d files/digest-traceproto-1.1.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB/gsGEZCkKN40op4RAg/CAJ9+LfbNJyN8L09giaRzw9YMHRU5sgCeIoFR
+RMSB/osBTW+Jh//9Yg5SarY=
+=Nb2L
+-----END PGP SIGNATURE-----
