@@ -2,7 +2,7 @@ MD5 33e6283746f4cacf1eb4a854c181764f fam-2.7.0-r1.ebuild 2034
 MD5 d49ea900787238e2b39aac3027ddc702 fam-2.6.10-r1.ebuild 1405
 MD5 1cc0c5369347f0df74ace8c2a526e59a ChangeLog 6188
 MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
-MD5 127560b77ea9ad5f8ab99a89d0d6910e fam-2.7.0.ebuild 1884
+MD5 9bb6526ceb08b17f8335958bb1a8353b fam-2.7.0.ebuild 1872
 MD5 f92603705dc72be607e36de2b546d58f files/fam 498
 MD5 570f59cab928a001295ae62cccca1c8a files/famd 511
 MD5 0dba17f68005aa92b3903797dcc7c625 files/digest-fam-2.6.10-r1 62

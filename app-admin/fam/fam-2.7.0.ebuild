@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.16 2004/06/24 21:25:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.17 2004/07/13 22:35:44 agriffis Exp $
 
 inherit libtool eutils gnuconfig
 
@@ -25,7 +25,7 @@ src_unpack() {
 	# scripts (.la files)
 	cd ${S}; elibtoolize
 
-	use mips && gnuconfig_update
+	gnuconfig_update
 }
 
 src_install() {
