@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5.ebuild,v 1.3 2001/09/28 07:15:22 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5.ebuild,v 1.4 2001/09/28 08:03:16 woodchip Exp $
 
 # *** README ***
 #
@@ -15,11 +15,10 @@
 # Dont worry about that, just ignore it. Furthermore, this package installs
 # a whole truckload of doc files into /opt/hp-web-jetadmin/doc, totalling
 # some 34MB. The daemon even writes configuration info into that directory
-# which you'll notice if you play around with the program, and then unmerge
-# it.
+# which you'll notice if you play with the program, and then unmerge it.
 #
 # I probably need to tweak the depends a little; I couldn't make it install
-# on an rc5 box with no X. Suggestions/help welcomed/appreciated =)
+# on an rc5 box with no X. Suggestions and or help welcomed.
 #
 # *** README ***
 
@@ -69,7 +68,9 @@ src_install() {
 	# You can change the port in /opt/hp-web-jetadmin/httpd.ini
 	# after installing. Maybe the hostname can be changed too.
 	#
+	go_grab_a_coffee_and_a_donut
 	${DISTDIR}/hpwebjet_linux.selfx -s -d ${D}/opt/hp-web-jetadmin-6.5
+	assert "Fatal install problem. Please file a gentoo bug report."
 
 	#
 	# /etc/init.d/hpwebjetd (not in $D) is getting installed by
@@ -99,6 +100,16 @@ src_install() {
 	# Butcher alert -- this is ridiculous. Ciao baby.
 	#
 	rm -f /etc/redhat-release
+}
+
+go_grab_a_coffee_and_a_donut() {
+	einfo "+ ------------------------------------------------- +"
+	einfo "+   This will take some time to completely merge!   +"
+	einfo "+ ------------------------------------------------- +"
+	einfo "+  Dont go hitting cntrl-c thinking that its stuck  +"
+	einfo "+  because its not! Just be patient and wait for it +"
+	einfo "+               to finish installing.               +"
+	einfo "+ ------------------------------------------------- +"
 }
 
 #
