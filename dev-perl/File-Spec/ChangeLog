@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Spec
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.1 2003/05/31 19:52:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.2 2003/06/02 23:04:39 joker Exp $
+
+  03 Jun 2003; Christian Birchinger <joker@gentoo.org> File-Spec-0.82.ebuild:
+  Added sparc stable keyword
 
 *File-Spec-0.82 (31 May 2003)
 

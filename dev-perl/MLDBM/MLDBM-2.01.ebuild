@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/MLDBM-2.01.ebuild,v 1.3 2003/06/02 13:31:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/MLDBM-2.01.ebuild,v 1.4 2003/06/02 23:08:33 joker Exp $
 
 inherit perl-module
 
@@ -11,4 +11,4 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-authors/id/C/CH/CHAMAS/${P}.read
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc sparc ~alpha"
