@@ -1,6 +1,13 @@
 # ChangeLog for net-im/gaim
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.110 2004/01/02 20:06:30 rizzo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.111 2004/01/10 06:41:58 rizzo Exp $
+
+*gaim-0.75 (10 Jan 2004)
+
+  10 Jan 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75.ebuild:
+  Version bump. SSL USERS: gaim-encryption does NOT yet work with gaim-0.75 and
+  so has been disabled. There will be a new revision when a new release of
+  gaim-encryption comes out.
 
 *gaim-0.74-r2 (02 Jan 2004)
 
