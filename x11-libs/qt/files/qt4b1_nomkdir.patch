@@ -1,0 +1,67 @@
+--- configure	2005-03-03 08:54:03.345313552 -0500
++++ configure.nomkdir	2005-03-03 09:53:35.531258744 -0500
+@@ -1083,64 +1083,6 @@
+ # post process QT_INSTALL_* variables, and generate qt.conf
+ #-------------------------------------------------------------------------------
+ 
+-#prefix
+-[ -z "$QT_INSTALL_PREFIX" ] && QT_INSTALL_PREFIX=$outpath  #default
+-if mkdir -p "$QT_INSTALL_PREFIX" >/dev/null 2>&1; then
+-  QT_INSTALL_PREFIX=`(cd "$QT_INSTALL_PREFIX"; /bin/pwd)` #absolute
+-fi
+-
+-#docs
+-[ -z "$QT_INSTALL_DOCS" ] && QT_INSTALL_DOCS=$QT_INSTALL_PREFIX/doc #default
+-if mkdir -p "$QT_INSTALL_DOCS" >/dev/null 2>&1; then
+-  QT_INSTALL_DOCS=`(cd "$QT_INSTALL_DOCS"; /bin/pwd)` #absolute
+-fi
+-
+-#headers
+-[ -z "$QT_INSTALL_HEADERS" ] && QT_INSTALL_HEADERS=$QT_INSTALL_PREFIX/include #default
+-if mkdir -p "$QT_INSTALL_HEADERS" >/dev/null 2>&1; then
+-  QT_INSTALL_HEADERS=`(cd "$QT_INSTALL_HEADERS"; /bin/pwd)` #absolute
+-fi
+-
+-#libs
+-[ -z "$QT_INSTALL_LIBS" ] && QT_INSTALL_LIBS=$QT_INSTALL_PREFIX/lib #default
+-if mkdir -p "$QT_INSTALL_LIBS" >/dev/null 2>&1; then
+-  QT_INSTALL_LIBS=`(cd "$QT_INSTALL_LIBS"; /bin/pwd)` #absolute
+-fi
+-
+-#bins
+-[ -z "$QT_INSTALL_BINS" ] && QT_INSTALL_BINS=$QT_INSTALL_PREFIX/bin #default
+-if mkdir -p "$QT_INSTALL_BINS" >/dev/null 2>&1; then
+-  QT_INSTALL_BINS=`(cd "$QT_INSTALL_BINS"; /bin/pwd)` #absolute
+-fi
+-
+-#plugins
+-[ -z "$QT_INSTALL_PLUGINS" ] && QT_INSTALL_PLUGINS=$QT_INSTALL_PREFIX/plugins #default
+-if mkdir -p "$QT_INSTALL_PLUGINS" >/dev/null 2>&1; then
+-  QT_INSTALL_PLUGINS=`(cd "$QT_INSTALL_PLUGINS"; /bin/pwd)` #absolute
+-fi
+-
+-#data
+-[ -z "$QT_INSTALL_DATA" ] && QT_INSTALL_DATA=$QT_INSTALL_PREFIX #default
+-if mkdir -p "$QT_INSTALL_DATA" >/dev/null 2>&1; then
+-  QT_INSTALL_DATA=`(cd "$QT_INSTALL_DATA"; /bin/pwd)` #absolute
+-fi
+-
+-#translations
+-[ -z "$QT_INSTALL_TRANSLATIONS" ] && QT_INSTALL_TRANSLATIONS=$QT_INSTALL_PREFIX/translations #default
+-if mkdir -p "$QT_INSTALL_TRANSLATIONS" >/dev/null 2>&1; then
+-  QT_INSTALL_TRANSLATIONS=`(cd "$QT_INSTALL_TRANSLATIONS"; /bin/pwd)` #absolute
+-fi
+-
+-#settings
+-if [ "$PLATFORM_MAC" = "yes" ]; then
+-   [ -z "$QT_INSTALL_SETTINGS" ] && QT_INSTALL_SETTINGS=/Library/Preferences/Qt #default
+-else
+-   [ -z "$QT_INSTALL_SETTINGS" ] && QT_INSTALL_SETTINGS=/etc/xdg #default
+-fi
+-if mkdir -p "$QT_INSTALL_SETTINGS" >/dev/null 2>&1; then
+-  QT_INSTALL_SETTINGS=`(cd "$QT_INSTALL_SETTINGS"; /bin/pwd)` #absolute
+-fi
+-
+ cat > $outpath/qt.conf.new <<EOF
+ [Paths]
+ Prefix = $QT_INSTALL_PREFIX
