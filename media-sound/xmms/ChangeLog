@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.145 2004/10/19 04:16:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.146 2004/10/23 23:06:46 eradicator Exp $
+
+  23 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r8.ebuild:
+  Added id3v2 editor and cleaned up code a bit.
 
   18 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-1.2.10-r8.ebuild:
