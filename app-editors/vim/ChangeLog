@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.105 2004/06/07 20:07:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.106 2004/06/08 11:57:03 ciaranm Exp $
+
+*vim-6.3 (08 Jun 2004)
+
+  08 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> +vim-6.3.ebuild:
+  Version bump, bug #53295
 
   07 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> vim-6.3_beta2.ebuild:
   Added in remaining keywords, bug #51705
