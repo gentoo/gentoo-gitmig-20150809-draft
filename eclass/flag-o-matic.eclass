@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.27 2003/09/24 05:51:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.28 2003/10/26 00:40:52 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -109,14 +109,15 @@ append-flags() {
 	CFLAGS="${CFLAGS} $@"
 	CXXFLAGS="${CXXFLAGS} $@"
 	for x in $@; do
-		[ "${x}" = "-fno-stack-protector" ] &&
-			fstack-flags
+		[ "${x}" = "-fno-stack-protector" ] && fstack-flags
 	done
+	return 0
 }
 
 replace-flags() {
 	CFLAGS="${CFLAGS/${1}/${2} }"
 	CXXFLAGS="${CXXFLAGS/${1}/${2} }"
+	return 0
 }
 
 is-flag() {
@@ -179,13 +180,13 @@ strip-flags() {
 
 get-flag() {
 	local findflag="$1"
-
 	for f in ${CFLAGS} ${CXXFLAGS} ; do
 		if [ "${f/${findflag}}" != "${f}" ] ; then
 			echo "${f/-${findflag}=}"
-			return
+			return 0
 		fi
 	done
+	return 1
 }
 
 replace-sparc64-flags() {
@@ -220,6 +221,7 @@ replace-sparc64-flags() {
 
 append-ldflags() {
 	LDFLAGS="${LDFLAGS} $@"
+	return 0
 }
 
 etexec-flags() {
