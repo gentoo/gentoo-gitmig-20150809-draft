@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.52.ebuild,v 1.1 2004/04/01 11:31:26 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.52.ebuild,v 1.2 2004/04/01 19:42:16 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -240,6 +240,7 @@ src_unpack() {
 	#Additional patch for Kernel 2.6
 	epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-linux-2.6-fix.patch
 
+
 	if [ ${ARCH} = "sparc" ]; then
 		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
 	fi
@@ -448,14 +449,14 @@ src_install() {
 	cd ${PATCHDIR}/desktop/
 	insinto /usr/share/pixmaps
 	doins *.png
+	for menu in drawing presentation spreadsheet textdoc; do
+		intltool-merge -d ../po ${menu}.desktop.in xoo-${menu}.desktop;
+	done
+	sed -i -e s/'=oo'/'=xoo'/g *.desktop
 
 	einfo "Installing Menu shortcuts and mime info (need \"gnome\" or \"kde\" in USE)..."
 	if [ -n "`use gnome`" ]
 	then
-		for menu in drawing presentation spreadsheet textdoc; do
-			intltool-merge -d ../po ${menu}.desktop.in xoo-${menu}.desktop;
-		done
-		sed -i -e s/'=oo'/'=xoo'/g *.desktop
 		insinto /usr/share/applications
 		doins *.desktop
 		insinto /usr/share/application-registry
@@ -467,7 +468,7 @@ src_install() {
 	if [ -n "`use kde`" ]
 	then
 		insinto /usr/share/applnk/Ximian-OpenOffice.org
-		doins ${FILESDIR}/${OO_VER}/*.desktop
+		doins *.desktop
 		insinto /usr/share/mimelnk/application
 		doins ${S}/sysui/${SOLPATH}/misc/kde/share/mimelnk/application/*
 	fi
