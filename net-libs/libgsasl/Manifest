@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 be31e8fa081d3037eec21b5ae4338092 ChangeLog 1117
-MD5 9a3024665c04c1eb6ef0f20c66b451dc metadata.xml 252
 MD5 cd3b0b8e0e8bc3b6c9ac0b87a8b51611 libgsasl-0.2.0.ebuild 1045
 MD5 3bcaf6e6b657d1ec364475e7e7d10c27 libgsasl-0.1.4.ebuild 1112
-MD5 7aa8cb7bee39e757a46566e64ec20b09 libgsasl-0.1.1.ebuild 1114
-MD5 1bd701f1053d1243cb785b696d3b50a7 files/digest-libgsasl-0.2.0 66
+MD5 c9f04e20f7c484636b2a326c5e15ef3a ChangeLog 1213
+MD5 9a3024665c04c1eb6ef0f20c66b451dc metadata.xml 252
 MD5 17882049058e34b91e9b32c1e6e7886e files/digest-libgsasl-0.1.4 66
-MD5 da9b047fe6bfeac4c642a3f358211c69 files/digest-libgsasl-0.1.1 66
+MD5 1bd701f1053d1243cb785b696d3b50a7 files/digest-libgsasl-0.2.0 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBqHRS10xuJSrg3/sRAjEZAJ9hYl98DMznlUwD8vR7zCG+3WxYtgCeJdkb
-+sVxQV6uwbl+CnLKCOoEynY=
-=Xk6R
+iD8DBQFBqL1GCHk4+ZoBpvsRAhfIAJ4o4LlfL+RUlB23QlXruWey+Ya5LgCfQwwf
+Zh7B2yhFIWr0M/Ok/qhFEJA=
+=G+mz
 -----END PGP SIGNATURE-----
