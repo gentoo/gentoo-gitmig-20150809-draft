@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.7.0.20040907-r1.ebuild,v 1.1 2004/12/28 00:05:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.7.0.20040907-r1.ebuild,v 1.2 2004/12/30 21:53:09 kloeri Exp $
 
 
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="http://www.courier-mta.org/beta/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~alpha ~amd64"
+KEYWORDS="x86 sparc alpha ~amd64"
 
 DEPEND="dev-lang/perl
 	virtual/mta
