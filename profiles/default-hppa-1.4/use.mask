@@ -48,3 +48,4 @@ sse
 svga
 trusted
 wavelan
+x86
