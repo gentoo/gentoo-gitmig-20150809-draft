@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.3 2002/06/03 05:50:56 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.4 2002/07/23 21:12:02 gerk Exp $
 
 *dialog-0.9_beta20020519 (03 Jun 2002)
+
+  23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   03 Jun 2002; Bruce A. Locke <blocke@shivan.org> dialog-0.9_beta20020519.ebuild :
 
