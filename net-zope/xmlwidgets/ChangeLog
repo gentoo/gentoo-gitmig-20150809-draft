@@ -1,6 +1,14 @@
 # ChangeLog for net-zope/xmlwidgets
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/xmlwidgets/ChangeLog,v 1.2 2003/04/06 03:22:15 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/xmlwidgets/ChangeLog,v 1.3 2003/06/23 04:37:34 kutsuya Exp $
+
+*xmlwidgets-0.8.5 (22 Jun 2003)
+
+  22 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> xmlwidgets-0.9.ebuild:
+  Version bump. Marked as unstable.
+
+  22 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> xmlwidgets-0.8.5.ebuild:
+  Version bump. Marked as stable. Removed 0.8.4
 
 *xmlwidgets-0.8.4 (25 Mar 2003)
 
