@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3788 2005/04/02 22:52:17 dsd Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3789 2005/04/03 17:25:01 axxo Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# <axxo@gentoo.org> (03 Apr 2005)
+# beta
+=dev-java/ant-core-1.6.3_beta1
+=dev-java/ant-tasks-1.6.3_beta1
+=dev-java/ant-1.6.3_beta1
 
 # Peter Johanson <latexer@gentoo.org> (02 Apr 2005)
 # Masking the new muine until gtk-sharp-1.9* and friends are out of package.mask
