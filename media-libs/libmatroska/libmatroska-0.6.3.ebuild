@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.6.3.ebuild,v 1.4 2004/04/04 04:08:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.6.3.ebuild,v 1.5 2004/04/10 01:31:30 lv Exp $
 
 IUSE=""
 
@@ -19,6 +19,12 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	cd ${S}/make/linux
+
+	# This is needed on amd64 to create shared libraries that make
+	# use of matroska, like libvlcplugin from vlc.
+	# Travis Tilley <lv@gentoo.org> 09 Apr 2004
+	use amd64 && append-flags -fPIC
+
 	sed -i -e 's/CXXFLAGS=/CXXFLAGS+=/g' Makefile
 	make PREFIX=/usr \
 		LIBEBML_INCLUDE_DIR=/usr/include/ebml \
