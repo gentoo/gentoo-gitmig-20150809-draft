@@ -1,8 +1,24 @@
+
+$ Header: $
+
+20 Apr 2oo2; Thilo Bangert <bangert@gentoo.org>
+
+initial release
+
+
+
 The Gentoo Linux Cron README
 ============================
+  
+  - To be able to use cron a user must be part of the cron group.
 
+  - Crontabs are placed in /var/spool/cron/crontabs
 
-    This document describes the way crons that are placed in portage are supposed to behave. This is to ensure that all crons behave similar and adhere to the same security standards.
+  - Each cron takes care of running /etc/cron.{hourly|daily|weekly|montly}. Vixie 
+  Cron does this via the system crontab /etc/crontab - the others must have a 
+  root crontab that takes care of this.
 
+  - Only one cron per system.
 
-    
+  - dcron is "default"
+

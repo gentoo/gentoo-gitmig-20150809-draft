@@ -17,19 +17,15 @@ keepdir() {
 
 src_install () {
 
-    dodir /usr/sbin
+    exeinto /usr/sbin
     doexe ${FILESDIR}/run-crons
-
-    insinto /etc
-    doins ${FILESDIR}/crontab
 
     diropts -m0750; keepdir /etc/cron.hourly
     diropts -m0750; keepdir /etc/cron.daily
     diropts -m0750; keepdir /etc/cron.weekly
-    diropts -m0750; keepdir /etc/cron.montly
+    diropts -m0750; keepdir /etc/cron.monthly
 
-    diropts -m0770 -o root -g cron; keepdir /var/spool/cron
-    diropts -m0770 -o root -g cron; keepdir /var/spool/cron/crontabs
+    diropts -m0750 -o root -g cron; keepdir /var/spool/cron
 
     diropts -m0750; keepdir /var/spool/cron/lastrun
 
