@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.3.ebuild,v 1.6 2004/10/19 10:34:07 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.3.ebuild,v 1.7 2004/12/11 20:30:34 vapier Exp $
 
 inherit eutils
 
@@ -38,6 +38,7 @@ src_unpack() {
 	# The date can be troublesome
 	sed -i "s:\`date\`::" configure
 
+	epunt_cxx #74077
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.58 2004/10/19 10:34:07 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.59 2004/12/11 20:30:34 vapier Exp $
+
+  11 Dec 2004; Mike Frysinger <vapier@gentoo.org> fontconfig-2.2.3.ebuild:
+  Remove C++ checks from configure since we dont need C++ #74077.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> fontconfig-2.2.3.ebuild:
   Stable on amd64.
