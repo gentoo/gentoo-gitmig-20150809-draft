@@ -111,10 +111,6 @@ x11-libs/gtkmm-addons
 # Newer ppc kernel; wants more testing.
 =sys-kernel/ppc-sources-2.4.20-r1
 
-# <rphillips@gentoo.org> (08 Oct 2002)
-# version bumped, masked for testing
-=sys-libs/db-4.1.24
-
 # <lostlogic@gentoo.org> (06 Oct 2002)
 # Masked new kernel
 =sys-kernel/gentoo-sources-2.4.19-r10
