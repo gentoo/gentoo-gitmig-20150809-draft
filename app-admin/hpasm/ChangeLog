@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/hpasm
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/ChangeLog,v 1.1 2003/06/25 01:38:00 method Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/ChangeLog,v 1.2 2004/03/16 19:21:54 seemant Exp $
+
+  16 Mar 2004; Seemant Kulleen <seemant@gentoo.org> hpasm-6.30.0.12-r1.ebuild:
+  switch to using rpm.eclass, which fixes bug #32872 by JF Burdet
+  <jean-francois.burdet@adm.unige.ch>. Also, fixed up MY_P to make this more
+  resilient to version bumps upstream. I have no idea what bug #22015 is all
+  about though. Additionally, the install is a bit changed, no need to
+  explicitly install stuff when a cp -a will do.
 
 *hpasm-6.30.0.12-r1 (24 Jun 2003)
 
