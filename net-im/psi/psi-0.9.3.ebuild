@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3_rc2.ebuild,v 1.1 2005/01/04 20:32:14 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3.ebuild,v 1.1 2005/01/09 20:26:13 humpback Exp $
 
 inherit eutils
 
 VER="0.9.3"
-REV="-test2"
+REV=""
 MY_PV="${VER}${REV}"
 MY_P="${PN}-${MY_PV}"
 LANGVER="${VER}_rc1"
@@ -17,7 +17,7 @@ QV="2.0"
 DESCRIPTION="QT 3.x Jabber Client, with Licq-like interface"
 HOMEPAGE="http://psi.affinix.com"
 # translations from http://tanoshi.net/language.html
-SRC_URI="http://people.ex.ac.uk/kismith/psi/${MY_P}.tar.bz2
+SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
 		!vanilla?	( http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-${EXTRAPATCH_VER}.tar.bz2
 		http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-0.2.tar.bz2 )
 		linguas_ar? ( ${HTTPMIRR}/psi_ar-${LANGVER}.tar.bz2 )
@@ -156,9 +156,25 @@ src_unpack() {
 			epatch ${PATCHDIR}/psi-desktop.patch
 			epatch ${PATCHDIR}/psi-richroster-status_default_on.patch
 			epatch ${PATCHDIR}/psi-richroster-status_gui_on_off.patch
-			epatch ${PATCHDIR}/psi-gentoo-version.patch
+			#epatch ${FILESDIR}/psi-gentoo-version.patch
 			epatch ${PATCHDIR}/psi-reverse_trayicon.patch
 		fi
+		einfo ""
+		einfo "Unpacking language files, you must have linguas_* in USE where"
+		einfo "* is the language files you wish. English is always available"
+		einfo ""
+		cd ${WORKDIR}
+		if ! [ -d langs ] ; then
+			mkdir langs
+		fi
+		local i
+		for i in  `ls -c1 | grep "\.ts$"` ; do
+			mv $i langs
+		done
+		for i in  `ls -c1 | grep "\.qm$"` ; do
+			mv $i langs
+		done
+
 }
 
 
@@ -176,7 +192,7 @@ src_compile() {
 	emake || die "Make failed"
 	einfo "Building language packs"
 	cd ${WORKDIR}/langs
-	for i in `ls -c1 | grep "\.ts$"`; do
+	for i in `ls -c1 | grep "\.ts$"` ; do
 		lrelease $i
 	done;
 
