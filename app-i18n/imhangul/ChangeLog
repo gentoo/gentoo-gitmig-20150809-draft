@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/imhangul
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.13 2004/08/14 15:28:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.14 2004/10/03 14:01:24 usata Exp $
+
+  03 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> imhangul-0.9.11.ebuild:
+  Marked as stable.
 
   15 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -imhangul-0.9.6.ebuild,
   -imhangul-0.9.7.ebuild, imhangul-0.9.9.ebuild:
