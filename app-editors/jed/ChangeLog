@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jed
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.14 2003/09/18 22:28:57 zul Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.15 2004/01/18 20:14:46 zul Exp $
+
+  18 Jan 2004; Chuck Short <zul@gentoo.org> jed-0.99.14-r1.ebuild,
+  jed-0.99.16-r1.ebuild, jed-0.99.16.ebuild:
+  Header updates added amd64 to jed-0.99.16-r1, closes #37214.
 
   18 Sep 2003; Chuck Short <zul@gentoo.org> jed-0.99.14-r1.ebuild,
   jed-0.99.16-r1.ebuild, jed-0.99.16.ebuild:

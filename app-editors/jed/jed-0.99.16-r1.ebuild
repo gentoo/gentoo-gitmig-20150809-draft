@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.10 2003/10/01 11:39:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.11 2004/01/18 20:14:46 zul Exp $
 
 IUSE="X gpm truetype"
 
@@ -20,7 +20,7 @@ DEPEND=">=sys-libs/slang-1.4.5
 PROVIDE="virtual/editor"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc "
+KEYWORDS="x86 ~ppc sparc amd64"
 LICENSE="GPL-2"
 
 src_compile() {
