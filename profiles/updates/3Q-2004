@@ -117,3 +117,4 @@ move net-www/horde-turba www-apps/horde-turba
 move net-www/horde-vacation www-apps/horde-vacation
 move net-www/ids www-apps/ids
 move net-www/issue-tracker www-apps/issue-tracker
+move net-www/lxr www-apps/lxr
