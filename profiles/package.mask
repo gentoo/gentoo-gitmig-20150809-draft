@@ -740,10 +740,6 @@ app-cdr/cddump
 # 0.0.1
 =app-admin/puregui-1-r1
 
-# prez@gentoo.org 1 May, 2002
-# new package -- masking while testing
-=sys-apps/gradm-1.2.1
-
 # jnelson@gentoo.org 1 May 2002
 # mask ntp 4.1.72* as they are alpha
 =net-misc/ntp-4.1.72*
@@ -790,18 +786,10 @@ app-editors/xemacs-gamma
 # courier needs to have .maildir stuff fixed
 net-mail/courier
 
-# prez@gentoo.org 17 May 2002
-# needs testing
-=sys-devel/gcc-3.1
-
 # spider@gentoo.org 18 May 2002
 # Why did this get installed by profiles? its broken. 
 # should be updated to 4.2 
 sys-apps/texinfo
-
-# prez@gentoo.org 20 May 2002
-# Needs testing, but now works with gcc 3.1
-=sys-devel/perl-5.6.1-r4
 
 # mkennedy@gentoo.org 22 May 2002 
 # patch to support gcc3.1 and version bump -- masked until someone
