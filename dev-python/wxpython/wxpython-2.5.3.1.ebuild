@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.5.3.1.ebuild,v 1.2 2004/11/13 17:27:42 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.5.3.1.ebuild,v 1.3 2004/11/13 23:05:05 pythonhead Exp $
 
-inherit wxwidgets
+inherit python wxwidgets
 
 MY_P="${P/wxpython-/wxPython-src-}"
 S="${WORKDIR}/${MY_P}/wxPython"
