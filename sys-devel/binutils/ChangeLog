@@ -1,8 +1,13 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.52 2003/05/27 23:48:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.53 2003/06/07 07:37:36 kumba Exp $
+
 
 *binutils-2.14.90.0.4 (26 May 2003)
+
+  07 Jun 2003; Joshua Kinard <kumba@gentoo.org> binutils-2.14.90.0.4.ebuild:
+  Changed ~mips to -mips.  This package should stay masked until dragon
+  can release a fixed version that fixes the bad libbfd linkage.
 
   26 May 2003; Joshua Kinard <kumba@gentoo.org>
   binutils-2.14.90.0.4.ebuild:
