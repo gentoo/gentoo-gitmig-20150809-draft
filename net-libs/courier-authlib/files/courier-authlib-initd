@@ -1,0 +1,43 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/files/courier-authlib-initd,v 1.1 2004/11/20 00:28:36 swtaylor Exp $
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -e /etc/courier/authlib/authdaemonrc ] ; then
+		eerror "You need an /etc/courier/authlib/authdaemonrc file to run authdaemon"
+		return 1
+	fi
+}
+
+setauth() {
+	source /etc/courier/authlib/authdaemonrc
+	AUTHLIB="/usr/lib/courier/courier-authlib"
+	AUTHDAEMOND="authdaemond"
+	#source /etc/courier/authlib/authdaemond.conf
+	#[ -z "$version" ] && version="${AUTHDAEMOND}"
+	pidfile="/var/run/authdaemon.pid"
+	logger="/usr/lib/courier/courierlogger"
+}
+
+start() {
+	checkconfig || return 1
+	setauth
+	
+	ebegin "Starting ${AUTHDAEMOND}"
+	start-stop-daemon --quiet --start --pidfile "$pidfile" --exec \
+		/usr/bin/env -- - $logger -pid="$pidfile" -start "${AUTHLIB}/${AUTHDAEMOND}" 
+	eend $?
+}
+
+stop() {
+	setauth
+	
+	ebegin "Stopping ${AUTHDAEMOND}"
+	start-stop-daemon --quiet --stop \
+		--pidfile "$pidfile"
+	eend $?
+}
