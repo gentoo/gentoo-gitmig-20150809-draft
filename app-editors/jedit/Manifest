@@ -4,8 +4,9 @@ Hash: SHA1
 MD5 1147512bd02c5c4eb5052519097756a4 jedit-4.2_pre14.ebuild 1927
 MD5 4fe2c18357c7e0901e9d70fb1056dc9e jedit-4.1-r1.ebuild 2150
 MD5 592be97706a86c648f5c2424075b5a4e jedit-4.2_pre13.ebuild 1927
+MD5 41a1b90afa675ed77af131f972f36d0d jedit-4.2_pre15.ebuild 1773
 MD5 fd6cc31cfb221879341ae3e8e0b244cc jedit-4.1.ebuild 1862
-MD5 c2b05fa2ae1afd1e7a2d1b2fae1d609a ChangeLog 5532
+MD5 fa75c0b944d62f55daf038bbed02c94f ChangeLog 5654
 MD5 0c1bc759b6cafc454c336cb35fd05550 metadata.xml 257
 MD5 c4053418bbd3d9d5f4a87edad0e9f043 jedit-4.2_pre12.ebuild 1943
 MD5 c3d71c0ba59148476f840c60b999c6b6 files/jedit-4.2_pre12.jikes-and-lock-fix.patch 10873
@@ -13,11 +14,12 @@ MD5 c29174550ae9f95fc60afd5cbf079f0c files/digest-jedit-4.1 66
 MD5 9310de740b7b3ffacf2c96fe446b1ab8 files/digest-jedit-4.2_pre12 71
 MD5 4ac4f20a8627c48f7d87491623f88c3a files/digest-jedit-4.2_pre13 71
 MD5 81f506cd1acce828eff86acf6dc18331 files/digest-jedit-4.2_pre14 71
+MD5 f7f1206ae0c12cdf8bc20efb8383dba5 files/digest-jedit-4.2_pre15 71
 MD5 c29174550ae9f95fc60afd5cbf079f0c files/digest-jedit-4.1-r1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBC+ak/rLF9B432nYRArXbAJ98jl01ZdCuJXDLukuMZubioGMP0gCgicXx
-NesOa0WgZQ6/hprssra0DVc=
-=bdSC
+iD8DBQFBC+e4/rLF9B432nYRAprFAKCk/I6onR7U2RMgPYgxfVChFd90+wCfQYGR
+KOkcGps2BQgWV3un5AfAhMY=
+=G211
 -----END PGP SIGNATURE-----
