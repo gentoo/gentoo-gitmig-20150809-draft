@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.12 2004/04/15 02:37:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.13 2004/04/15 05:14:39 vapier Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -67,7 +67,13 @@ src_compile() {
 		${myconf} \
 		|| die "configure failed"
 
-	emake -j1 || die "make failed"
+	# A little hack to fix parallel builds ... they break when
+	# generating sources so if we generate the sources first (in
+	# non-parallel), we can then build the rest of the package
+	# in parallel.  This is not really a perf hit since the source
+	# generation is quite small.  -vapier
+	emake -j1 sources || die "make sources failed"
+	emake || die "make failed"
 }
 
 src_install() {
