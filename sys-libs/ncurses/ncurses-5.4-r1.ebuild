@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.9 2004/03/30 18:54:38 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.10 2004/04/03 00:48:42 avenj Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 filter-flags -fno-exceptions
@@ -12,10 +12,13 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="x86 ~ppc sparc alpha hppa ~mips amd64 ia64 ppc64 s390"
-IUSE="debug gpm"
+IUSE="debug"
 
-DEPEND="virtual/glibc
-	!bootstrap? ( gpm? ( sys-libs/gpm ) )"
+DEPEND="virtual/glibc"
+# This doesn't fix the problem. bootstrap builds ncurses again with
+# normal USE flags while bootstrap is unset, which apparently causes
+# things to break -- avenj  2 Apr 04
+#	!bootstrap? ( gpm? ( sys-libs/gpm ) )"
 
 src_unpack() {
 	unpack ${A}
@@ -47,7 +50,8 @@ src_compile() {
 	( use build || use bootstrap ) \
 		&& myconf="${myconf} --without-cxx --without-cxx-binding --without-ada"
 
-	use gpm && myconf="${myconf} --with-gpm"
+	# see note about DEPEND above -- avenj@gentoo.org  2 Apr 04
+#	use gpm && myconf="${myconf} --with-gpm"
 
 	# We need the basic terminfo files in /etc, bug #37026.  We will
 	# add '--with-terminfo-dirs' and then populate /etc/terminfo in

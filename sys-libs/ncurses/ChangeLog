@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.61 2004/03/30 18:54:38 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.62 2004/04/03 00:48:42 avenj Exp $
+
+  02 Apr 2004; Jon Portnoy <avenj@gentoo.org> ncurses-5.4.ebuild, 
+  ncurses-5.4-r1.ebuild :
+  Revert gpm support entirely due to bootstrap problems.
 
   30 Mar 2004; <rac@gentoo.org> ncurses-5.4-r1.ebuild, ncurses-5.4.ebuild:
   Make gpm support not come in if USE=bootstrap, fix bootstrap with USE=gpm set
