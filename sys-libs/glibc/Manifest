@@ -5,8 +5,8 @@ MD5 cd13158dcc1642c3cabdf5c96f02f480 ChangeLog 64074
 MD5 5529417ce5503c488b1ccaaa2e781799 glibc-2.2.5-r9.ebuild 10915
 MD5 3b44d39389334d36b42c51887729dd4d glibc-2.3.2-r12.ebuild 21817
 MD5 39ac6b0f30c9c27a5cd04c4e0b6caadb glibc-2.3.3.20040420-r2.ebuild 21634
-MD5 af5376fd9cce24f03e83f48c0d0be4d5 glibc-2.3.4.20040808-r1.ebuild 25900
-MD5 b4527db94561e39df86b4fc8aff80b82 glibc-2.3.4.20041102.ebuild 30884
+MD5 92f49baec000e481a37e2490939bf017 glibc-2.3.4.20040808-r1.ebuild 25997
+MD5 a476f27e4cca3afc7df67280ccf2c2ef glibc-2.3.4.20041102.ebuild 30981
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 e4c399efc30efc54fb478b897cd37149 glibc-2.3.4.20040619-r2.ebuild 21078
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
@@ -139,7 +139,7 @@ MD5 b72e5aca6d834026a6f5fb87623e6fd3 files/2.3.4/host.conf 1302
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB48cKArHZZzCEUG0RAtLvAKCGLwwOpILs2vJUXFVNcEN5dxk6bACfY+75
-vWb5BoglemWVgPmkF8k9oOk=
-=VHXa
+iD8DBQFB5EKDArHZZzCEUG0RAs/kAJoC1btu/w1TmosfevjbpHnuu+vsKwCdHS7a
+VyKeYKnqdR5a5w3AGAijatg=
+=yfmA
 -----END PGP SIGNATURE-----

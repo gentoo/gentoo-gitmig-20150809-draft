@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.21 2005/01/11 12:30:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.22 2005/01/11 21:17:43 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -924,6 +924,8 @@ EOF
 	rm -f ${D}/etc/localtime
 
 	# Some things want this, notably ash.
+	# Need to dodir first because it might not exist (bad amd64 profiles)
+	dodir /usr/$(get_libdir)
 	dosym /usr/$(get_libdir)/libbsd-compat.a /usr/$(get_libdir)/libbsd.a
 
 	insinto /etc
