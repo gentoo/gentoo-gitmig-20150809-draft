@@ -1,8 +1,15 @@
 # ChangeLog for net-nds/portmap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.3 2002/12/13 11:00:17 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.4 2002/12/31 20:27:47 azarah Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*portmap-5b-r7 (31 Dec 2002)
+
+  31 Dec 2002; Martin Schlemmer <azarah@gentoo.org> portmap-5b-r7.ebuild :
+  Should include errno.h, and not define as external.  Fix
+  relocation error and build problem with glibc-2.3.2 cvs ...
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords.
  
 *portmap-5b-r6 (1 Feb 2002)
 
