@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f37a80133cac33b55bb77b13db14fae1 ChangeLog 2679
+MD5 62b79f7858d932f5e173e86d8b4dee98 ChangeLog 2792
 MD5 d2fd604b88f163116f23670ca84b1815 metadata.xml 531
-MD5 c98faa42d61722316cf9178e414ae474 ptex-3.1.4.ebuild 1911
-MD5 ba640e59d90475a28d8055a04c96f10d ptex-3.1.3.ebuild 1895
-MD5 2d234949b4bccea51b2dd3370d251937 files/digest-ptex-3.1.4 417
+MD5 532134824726a3f3cc59a1cde782ec9c ptex-3.1.3.ebuild 1906
+MD5 f59e3af4948b26eccdc31374aea95b45 ptex-3.1.4.ebuild 1923
+MD5 cb7b6b0b14b8e8b5b1ae59795883d687 files/digest-ptex-3.1.3 416
 MD5 8d6f7372f16899ab048c61a738b48065 files/psfonts-ja.map 1184
 MD5 d15f2d9ab04bcfa15c3e737f106d1625 files/psfonts-novflib-ja.map 1158
 MD5 476a1c8128397ff7a381c43fe723a522 files/tetex-2.0.2-dont-run-config.diff 1243
 MD5 50c560b391869be15a001b738e0b7bfe files/tetex-2.0.2.diff 2010
-MD5 cb7b6b0b14b8e8b5b1ae59795883d687 files/digest-ptex-3.1.3 416
+MD5 2d234949b4bccea51b2dd3370d251937 files/digest-ptex-3.1.4 417
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.4 (Darwin)
 
-iD8DBQFBXQt5VWNWqTUmv+0RAinDAJ0RGwAkIi3p5qHK4QKdTY+zgR9FQQCdGpKP
-I8MVTo5LDE09vY8ijCpEHqk=
-=GC6E
+iD8DBQFBeySzVWNWqTUmv+0RAhScAJ97iTxToJzWZ85K9yH1e41QmQDQRACgmvTr
+acKVV2HYqYGGygu+6srL01o=
+=+gEn
 -----END PGP SIGNATURE-----
