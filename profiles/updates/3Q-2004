@@ -175,3 +175,5 @@ slotmove gnome-base/ORBit 0 1
 slotmove gnome-base/ORBit2 0 2
 move gnome-base/ORBit gnome-base/orbit
 move gnome-base/ORBit2 gnome-base/orbit
+move net-misc/gwget2 net-misc/gwget
+
