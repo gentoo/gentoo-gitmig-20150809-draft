@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.32 2002/02/01 23:22:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.33 2002/02/06 00:57:49 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -73,10 +73,23 @@ src_install() {
 	cd ..
 	tar czvf ${D}${WEBROOT}/projects/guide-xml-latest.tar.gz gentoo-web 
 	cd ${S}
-	
+	dodir ${WEBROOT}/news	
+	local mydate
+	mydate=`date +"%d %b %Y"`
+ 	echo "<?xml version='1.0'?>" > ${T}/main-news.xml
+	echo '<mainpage id="news"><title>Gentoo Linux News</title><author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>' >> ${T}/main-news.xml
+	echo "<version>1.0</version><date>${mydate}</date><newsitems>" >> ${T}/main-news.xml
+	local myext
+	for x in `find xml/news -iname 200*.xml`
+	do
+		myext=`basename $x`
+		myext=${myext%*.xml}
+		cat $x | sed -e "1d" -e "s:<news:<news external=\"/news/${myext}.html\":" >> ${T}/main-news.xml
+		xsltproc xsl/guide-main.xsl $x | xsltproc xsl/guide-main.xsl - > ${D}/${WEBROOT}/news/${myext}.html
+	done
+	echo "</newsitems></mainpage>" >> ${T}/main-news.xml
 	insinto ${WEBROOT}
-
-	xsltproc $TEMPLATE xml/main-news.xml > ${D}${WEBROOT}/index.html || die
+	xsltproc $TEMPLATE ${T}/main-news.xml > ${D}${WEBROOT}/index.html || die
 	xsltproc $TEMPLATE xml/main-about.xml > ${D}${WEBROOT}/index-about.html || die
 	xsltproc $TEMPLATE xml/main-download.xml > ${D}${WEBROOT}/index-download.html || die
 	xsltproc $TEMPLATE xml/main-projects.xml > ${D}${WEBROOT}/index-projects.html || die
@@ -97,33 +110,8 @@ src_install() {
 	cd ${S}/scripts
 	doins snddevices
 
-	#wikistuffs
-#	dodir ${WEBROOT}/wiki/images
-#	dodir ${WEBROOT}/wiki/bios
-#	insinto ${WEBROOT}/wiki
-#	cd ${S}/wiki
-#	doins *.php
-#	cd images
-#	insinto ${WEBROOT}/wiki/images
-#	doins *.gif
-#	cd ../bios
-#	insinto ${WEBROOT}/wiki/bios
-#	doins *.png *.jpg *.gif
-	
-#	cd ${D}
-#	chmod -R g+rw,o+r *
-#	chown -R root.root *
-#	cd ${D}/usr/local/httpd
-#	chown -R drobbins.webadmin htdocs 
-#	chmod -R g+rws htdocs
-
 	dobin ${DISTDIR}/cvs2cl.pl
 	dosbin ${S}/bin/cvslog.sh
-#	dosbin ${FILESDIR}/bin/wiki.pl
-#	chmod o-rwx,g+rx ${D}/usr/sbin/wiki.pl
-#	chown root.dbadmin ${D}/usr/sbin/wiki.pl
-
-#	ln -s /home/mailman/icons ${D}${WEBROOT}/mailman-images
 }
 
 pkg_preinst() {
@@ -136,17 +124,3 @@ pkg_preinst() {
 		cp -ax ${WEBROOT} ${WEBROOT}.bak
 	fi
 }
-
-#pkg_postinst() {
-#	source /home/drobbins/.wiki-auth
-#	cd ${WEBROOT}/wiki
-#	cp functions.php functions.php.orig
-#	sed -e "s:##USER##:${WIKI_USER}:g" -e "s:##PASS##:${WIKI_PASS}:g" -e "s:##DB##:${WIKI_DB}:g" functions.php.orig > functions.php
-#	rm functions.php.orig
-#	cd /usr/sbin
-#	cp wiki.pl wiki.pl.orig
-#	sed -e "s:##USER##:${WIKI_USER}:g" -e "s:##PASS##:${WIKI_PASS}:g" -e "s:##DB##:${WIKI_DB}:g" wiki.pl.orig > wiki.pl
-#	rm wiki.pl.orig
-#}
-
-
