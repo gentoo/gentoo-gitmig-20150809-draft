@@ -1,0 +1,7 @@
+# ChangeLog for app-arch/alien
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.1 2002/12/15 11:50:49 lordvan Exp $
+
+*alien-8.21 (15 Dec 2002)
+	15 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org>
+	added initial ebuild bug # 11812
