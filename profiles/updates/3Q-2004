@@ -182,3 +182,4 @@ move dev-java/jython-bin dev-java/jython
 move dev-java/regexp-bin dev-java/regexp
 move dev-java/ant-optional dev-java/ant-tasks
 move net-www/ci www-client/ci
+move net-www/ochusha www-client/ochusha
