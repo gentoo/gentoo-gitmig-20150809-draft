@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.1.ebuild,v 1.2 2002/07/11 06:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.1.ebuild,v 1.3 2002/07/19 12:38:15 stroke Exp $
 
 inherit libtool
 
@@ -8,6 +8,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Core components of the GNOME desktop environment"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 RDEPEND="=gnome-base/control-center-1.4*
 	 >=gnome-base/libglade-0.17-r1
