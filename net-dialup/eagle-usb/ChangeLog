@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/eagle-usb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.2 2005/02/26 11:43:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.3 2005/03/02 22:37:12 sekretarz Exp $
+
+  03 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  eagle-usb-2.1.1.ebuild:
+  Added ~amd64, bug #83408
 
 *eagle-usb-2.1.1 (25 Feb 2005)
 
