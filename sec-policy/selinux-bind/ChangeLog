@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-bind
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bind/ChangeLog,v 1.1 2003/08/12 01:51:20 pebenito Exp $
+
+*selinux-bind-20030811 (11 Aug 2003)
+
+  11 Aug 2003; Chris PeBenito <pebenito@gentoo.org> metadata.xml,
+  selinux-bind-20030811.ebuild:
+  Initial commit
+
