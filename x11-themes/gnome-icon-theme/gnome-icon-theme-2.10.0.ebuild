@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-2.10.0.ebuild,v 1.2 2005/04/04 19:25:24 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-2.10.0.ebuild,v 1.3 2005/04/04 19:50:15 joem Exp $
 
 inherit gnome2
 
@@ -23,8 +23,7 @@ USE_DESTDIR="1"
 pkg_postinst() {
 	einfo "Updating icon cache"
 
-	gtk-update-icon-cache -qf \
-		/usr/share/icons/gnome \
-		/usr/share/icons/hicolor
+	gtk-update-icon-cache -qf /usr/share/icons/gnome
+	gtk-update-icon-cache -qf /usr/share/icons/hicolor
 }
 
