@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b9e00c24bbc4b6783ba4a4541ad3eb5b Crypt-SSLeay-0.45-r1.ebuild 652
-MD5 d6e25f5f7e314094ca7ac42581e9596f Crypt-SSLeay-0.45.ebuild 649
 MD5 b97b67b6933560d329c4fe344a8a2af5 Crypt-SSLeay-0.49.ebuild 676
-MD5 fd3e520b143dc805c9df7eefd85fe300 ChangeLog 1853
-MD5 db51d3b761f4b7c22a8f0febfb390ebc Crypt-SSLeay-0.51.ebuild 796
+MD5 d6e25f5f7e314094ca7ac42581e9596f Crypt-SSLeay-0.45.ebuild 649
+MD5 b9e00c24bbc4b6783ba4a4541ad3eb5b Crypt-SSLeay-0.45-r1.ebuild 652
+MD5 db0708da7438008fe77ce09df17379c7 ChangeLog 1946
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 7709dc38247726931de429c27a5437eb Crypt-SSLeay-0.51.ebuild 794
 MD5 fff1d92c7426ddcd3f0322d0e32f62bd files/digest-Crypt-SSLeay-0.45-r1 69
 MD5 fff1d92c7426ddcd3f0322d0e32f62bd files/digest-Crypt-SSLeay-0.45 69
 MD5 15c0d75072fb09b20cf2a7b3c5987ef6 files/digest-Crypt-SSLeay-0.49 69
 MD5 dfb08ff0befe670c6daa71532b2d80ad files/digest-Crypt-SSLeay-0.51 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCB2VutG5z4I8BtQoRAuGvAJ4pG1i5rro39jRz/G+id3bJWjW1EwCeNpWB
-RCcIbohopGgQQMKInJTmilY=
-=Cg48
------END PGP SIGNATURE-----
