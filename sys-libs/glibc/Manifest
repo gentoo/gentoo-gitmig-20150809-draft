@@ -1,20 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 29e5ada9ecd8e369b86439a1945e7bc3 ChangeLog 59076
+MD5 315287a8b43c0bdce7b51bf92ef33d08 ChangeLog 59174
 MD5 7cf88dee2671dcc30659d07241b8d918 glibc-2.2.5-r9.ebuild 10915
-MD5 3603fa6448052edcf78a329d10746461 glibc-2.3.2-r12.ebuild 20530
 MD5 daf5c4924c0a0ccc6e55f7588b1b4d52 glibc-2.3.3.20040420-r2.ebuild 21765
 MD5 af6f1491a70a6ee80e8d867d8ee0f98f glibc-2.3.4.20040619-r2.ebuild 20997
-MD5 3c91bd3c2258eb1a8889c90a90ae208d glibc-2.3.4.20041021.ebuild 26711
+MD5 3603fa6448052edcf78a329d10746461 glibc-2.3.2-r12.ebuild 20530
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 ac8cbd194b0e622f368f12f876f732a7 glibc-2.3.4.20040808-r1.ebuild 23089
+MD5 a5f6f51d7ac26314a1b29e3231b88abe glibc-2.3.4.20041021.ebuild 26793
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
-MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r12 312
 MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r2 312
 MD5 470f57fe18dd0a94cb4a4d6cf51528af files/digest-glibc-2.3.4.20040619-r2 307
 MD5 2f05d3181e9a9ded61e074147af47e8e files/digest-glibc-2.3.4.20040808-r1 382
-MD5 123d66ef523985c88c77af1ab1fc2d56 files/digest-glibc-2.3.4.20041021 383
+MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r12 312
 MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
 MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
 MD5 135f8145885a2f4f9876fe973f33ddf6 files/glibc-2.2.4-string2.h.diff 5221
@@ -28,6 +24,7 @@ MD5 bedcd868a9462009158714238594173c files/nscd 964
 MD5 2013443f5192d4b999953ba4248d288c files/nscd.conf 1158
 MD5 d8830438ea871dbfd1acf7a3d0299159 files/test-__thread.c 53
 MD5 4404ee4b6e3017819d8f36082e0265e5 files/test-sysctl_h.c 54
+MD5 123d66ef523985c88c77af1ab1fc2d56 files/digest-glibc-2.3.4.20041021 383
 MD5 f75ebd335c4b882013cc12229d39c9f7 files/2.2.5/glibc-2.2.5-alpha-gcc3-fix.diff 475
 MD5 843eaa26ae2c49e894aa365b6f463546 files/2.2.5/glibc-2.2.5-alpha-pcdyn-fix.diff 471
 MD5 5182f441608833569cb9e78536baf8af files/2.2.5/glibc-2.2.5-arm-errlist-fix.diff 2210
@@ -110,28 +107,21 @@ MD5 84fa9a725c22975d735a2f91543a5cca files/2.3.3/mips-sysify.diff 2138
 MD5 81d95470c5766e56e27ad8b6967d2a16 files/2.3.3/semtimedop.diff 602
 MD5 ae9425cd4199cccd69c6d22633583dc1 files/2.3.3/ssp.c 4041
 MD5 ff0a2716aebc6fb8a2e3b3f2c9be8bba files/2.3.3/glibc-2.3.3-tempfile.patch 1787
+MD5 89a6d0d924c8b05c4e06bdffb7c69b41 files/2.3.4/glibc-2.3.4-arm-ioperm.patch 4037
 MD5 03e0e9a2235886c0abbe98bdafd0d5ce files/2.3.4/glibc-2.3.4-hardened-sysdep-shared.patch 382
 MD5 659a9d64935d67a5938d0cb4e5fe4899 files/2.3.4/glibc-2.3.4-hppa-hardened-disable__init_arrays.patch 2310
-MD5 207e313566b3fc24e0a5ca2ffd2da1d9 files/2.3.4/glibc-2.3.4-nptl-altivec.patch 6140
-MD5 1185022e9a50560d1bf9116a0461e011 files/2.3.4/mips-sysdep-cancel.diff 2402
-MD5 340825c77e38e88e0ceaa12f154cbfa3 files/2.3.4/glibc-2.3.4.20040808-i386-got-fix.diff 4203
 MD5 16f18501efd56811e724231470dc5d00 files/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch 2562
+MD5 207e313566b3fc24e0a5ca2ffd2da1d9 files/2.3.4/glibc-2.3.4-nptl-altivec.patch 6140
+MD5 340825c77e38e88e0ceaa12f154cbfa3 files/2.3.4/glibc-2.3.4.20040808-i386-got-fix.diff 4203
 MD5 e109c03013bd08a2b96e2c2ca9017a4b files/2.3.4/glibc-gentoo-libdir.patch 1347
-MD5 89a6d0d924c8b05c4e06bdffb7c69b41 files/2.3.4/glibc-2.3.4-arm-ioperm.patch 4037
+MD5 1185022e9a50560d1bf9116a0461e011 files/2.3.4/mips-sysdep-cancel.diff 2402
 MD5 7960564130a698073bdd3597a781e39b files/2.3.4/glibc-2.3.4-nptl-pthread.h-g++-fix.patch 3304
-MD5 9ee1438ba6ac30363130330c996dbb84 files/2.3.4/glibc-2.3.4-dl_execstack-PaX-support.patch 1443
-MD5 bbe355d94c5a36e11f543d12b70b5702 files/2.3.4/glibc-sec-hotfix-20040916.patch 3080
 MD5 9db90105eb74d75834d25a599cba97ea files/2.3.4/glibc-2.3.3-mdns-resolver2.diff 12272
+MD5 9ee1438ba6ac30363130330c996dbb84 files/2.3.4/glibc-2.3.4-dl_execstack-PaX-support.patch 1443
 MD5 7fca8a203196513f13e519903dedbfd5 files/2.3.4/glibc-2.3.4-getcontext.patch 9854
 MD5 d490f38bd9ca9c48a9799f1e48629f6e files/2.3.4/glibc-2.3.4-mips-generate-syscall_h.patch 8230
+MD5 bbe355d94c5a36e11f543d12b70b5702 files/2.3.4/glibc-sec-hotfix-20040916.patch 3080
 MD5 fe21fd44628b90f50e5024462cf4c348 files/2.3.4/glibc-2.3.4-res_init.patch 3417
 MD5 ad71dc5c3f84f026c6e28865b2e90fbb files/2.3.4/glibc-2.3.4-fedora-branch-no-force-nontls.patch 2337
 MD5 973e31ce24c9622234c4293b367de6b3 files/2.3.4/glibc-2.3.4-fedora-branch-no-libnoversion.patch 2288
 MD5 edcaf42f72d84a2cbbd911bfbcd4161a files/2.3.4/host.conf 1300
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBhAosHTu7gpaalycRAmxnAKC/ZxEpw7/VmYKYbphpbFlPbtWozACeIyC+
-OpK4SExan2q1YiiP339HnVg=
-=TD3r
------END PGP SIGNATURE-----

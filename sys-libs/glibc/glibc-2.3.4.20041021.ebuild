@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.5 2004/10/30 21:39:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.6 2004/10/31 15:51:47 tgall Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -392,6 +392,9 @@ do_arch_ppc_patches() {
 do_arch_ppc64_patches() {
 	cd ${S};
 	# Any needed patches for ppc64 go here
+
+	# setup lib -- seems like a good place to set this up
+	get_libdir_override lib64
 }
 
 
