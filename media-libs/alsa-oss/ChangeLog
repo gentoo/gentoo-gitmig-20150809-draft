@@ -1,6 +1,6 @@
-# ChangeLog for media-libs/alsa-lib
+# ChangeLog for media-libs/alsa-oss
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.4 2002/05/23 16:20:24 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.5 2002/05/23 17:02:02 agenkin Exp $
 
 *alsa-oss-0.9.0_rc1 (27 Apr 2002)
 
