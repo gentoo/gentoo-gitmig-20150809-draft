@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r3.ebuild,v 1.3 2003/12/17 04:16:12 brad_mssw Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r3.ebuild,v 1.4 2003/12/23 04:06:44 kumba Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 IUSE=
 
@@ -126,6 +126,10 @@ src_compile() {
 	#
 
 	cd ${OLD_S}
+
+	# Detect mips/mips64
+	use mips && gnuconfig_update
+
 	einfo "Configuring ${OLD_S##*/} ..."
 	./configure --host=${CHOST} \
 			--prefix=/usr \
@@ -139,6 +143,10 @@ src_compile() {
 	#
 
 	cd ${S}
+
+	# Detect mips/mips64
+	use mips && gnuconfig_update
+
 	einfo "Configuring ${S##*/} ..."
 	./configure --host=${CHOST} \
 		--prefix=/usr \
