@@ -24,7 +24,7 @@ while($flag)
 	my $year = sprintf("%04d", $date[5]);
 	
 	my $file = "portage-".$year.$month.$day.".tar.bz2";
-	my $url = "http://www.gentoo.org/snapshots/$file";
+	my $url = "http://www.ibiblio.org/gentoo/snapshots/$file"
 	print "Trying to get $url...\n";
 	$flag = system "wget $url";
 	if(!$flag)
