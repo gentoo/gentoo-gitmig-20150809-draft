@@ -1,6 +1,16 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.41 2004/09/03 08:20:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.42 2004/10/05 01:44:19 mkennedy Exp $
+
+*sbcl-0.8.15 (04 Oct 2004)
+
+  04 Oct 2004; <mkennedy@gentoo.org> +files/0.8.15/README.Gentoo,
+  +files/0.8.15/customize-target-features.lisp,
+  +files/0.8.15/customize-target-features.lisp.no-threads,
+  +files/0.8.15/install-clc.lisp, +files/0.8.15/sbcl-gentoo.patch,
+  +files/0.8.15/sbcl-no-tests-gentoo.patch, +files/0.8.15/sbcl.sh,
+  +files/0.8.15/sbclrc, +sbcl-0.8.15.ebuild:
+  New upstream version.
 
 *sbcl-0.8.14 (02 Sep 2004)
 
