@@ -1,0 +1,23 @@
+--- lib/modules/fglrx/build_mod/firegl_public.c~	2003-04-30 10:55:44.000000000 +0100
++++ lib/modules/fglrx/build_mod/firegl_public.c	2003-04-30 10:57:08.000000000 +0100
+@@ -86,6 +86,19 @@
+ #include "firegl_public.h"
+ 
+ // ============================================================
++#ifdef CONFIG_HIGHPTE
++    #ifdef pte_offset_map
++//        #error Error: this code was never tested with CONFIG_HIGHPTE setting enabled
++    #endif
++#endif
++
++#ifndef pte_offset
++    #ifdef pte_offset_map
++        #define pte_offset  pte_offset_map
++    #endif
++#endif
++
++// ============================================================
+ #ifndef TRUE
+ #define TRUE 1
+ #endif
+
