@@ -1,5 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/gpp-0.6.4.ebuild,v 1.3 2005/03/06 17:03:17 mr_bones_ Exp $
 
 inherit gnome2
 
