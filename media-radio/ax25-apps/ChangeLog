@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/ax25-apps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.1 2003/06/19 19:11:42 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.2 2003/07/31 19:59:40 rphillips Exp $
+
+*ax25-apps-0.0.6-r1 (19 Jun 2003)
+
+  31 Jul 2003; Ryan Phillips <rphillips@gentoo.org> ax25-apps-0.0.6-r1.ebuild:
+  Samuel Greenfeld's fixes were added. #23931
 
 *ax25-apps-0.0.6 (19 Jun 2003)
 
