@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 70f9ef98f3e6463a62e1a79244370c7b ChangeLog 1430
 MD5 7f79997b892a81c315b94cdc0bb97b5b libidn-0.3.7.ebuild 635
 MD5 1434b83540cb524dc9220a5956a41d83 libidn-0.5.0.ebuild 634
-MD5 3252cc52888bcf32ad7fdbb6c04e592f libidn-0.5.4.ebuild 535
+MD5 063a516cc3d8e44ca2232bfec7e8bd95 libidn-0.5.4.ebuild 543
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 2bcede8f198a5e633fc5a1fb2e8fff54 libidn-0.5.7.ebuild 611
+MD5 93d96e9c5619f1801737c14f2eb25297 libidn-0.5.7.ebuild 621
 MD5 71c9d73948b2aae62f1f91b02a24904c files/digest-libidn-0.3.7 65
 MD5 fc807c568d7d15366e98afb3b5d04911 files/digest-libidn-0.5.0 65
 MD5 34af7cf0c0c059728bc3b2870298d456 files/digest-libidn-0.5.4 65
@@ -14,7 +14,7 @@ MD5 9735250b9caf3517e94e86f3f18ef8cd files/digest-libidn-0.5.7 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdVAJHTu7gpaalycRAiFbAKDR2ZfSWTQS9Yo96xJM/k1cRdZMugCeP2ur
-Co976GFztc9BtTPxIt2Y3BI=
-=ogai
+iD8DBQFBh6QjHTu7gpaalycRAm/yAJ9dayRamPmvoWph24QS8IARMXOK5gCg4pxd
+UVJRPlxeWmGVjzM2x0LwLGw=
+=fG9Z
 -----END PGP SIGNATURE-----
