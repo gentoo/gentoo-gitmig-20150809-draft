@@ -1,6 +1,12 @@
 # ChangeLog for app-text/man2html
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/ChangeLog,v 1.6 2004/02/29 18:10:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/ChangeLog,v 1.7 2004/05/31 12:14:01 twp Exp $
+
+*man2html-1.5l-r2 (31 May 2004)
+
+  31 May 2004; twp +files/mansec.patch, +man2html-1.5l-r2.ebuild:
+  Patch to use webapp eclass, thanks Rob Kruus. Bug # 52119, masked in
+  package.mask pending bug # 52544.
 
   20 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org>
   man2html-1.5l-r1.ebuild, man2html-1.5l.ebuild:
