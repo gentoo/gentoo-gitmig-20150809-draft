@@ -1,0 +1,37 @@
+# ChangeLog for app-misc/rox-session
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.1 2004/11/26 18:43:55 sergey Exp $
+
+*rox-session-0.1.21 (26 Nov 2004)
+
+  26 Nov 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +files/ROX-Session, +rox-session-0.1.20.ebuild, +rox-session-0.1.21.ebuild:
+  Moved from app-misc/rox-session to rox-base/rox-session.
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  rox-session-0.1.21.ebuild:
+  Masked rox-session-0.1.21.ebuild stable for ppc
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  rox-session-0.1.21.ebuild:
+  x86 stable.
+
+  02 Jun 2004; David Holm <dholm@gentoo.org> rox-session-0.1.21.ebuild:
+  Added to ~ppc.
+
+*rox-session-0.1.21 (27 Oct 2003)
+
+  27 Oct 2003; MATSUU Takuto <matsuu@gentoo.org> rox-session-0.1.21.ebuild:
+  version bump.
+
+  27 Oct 2003; MATSUU Takuto <matsuu@gentoo.org> rox-session-0.1.20.ebuild:
+  Add ~sparc to KEYWORDS.
+
+  08 Oct 2003; Joel Hill <hillster@gentoo.org> rox-session-0.1.20.ebuild:
+  cleanup, marking stable
+
+*rox-session-0.1.20 (21 Aug 2003)
+
+  21 Aug 2003; MATSUU Takuto <matsuu@gentoo.org> rox-session-0.1.20.ebuild:
+  Initial import. #801
+
