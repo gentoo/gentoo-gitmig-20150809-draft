@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.2.2.ebuild,v 1.5 2004/03/19 21:03:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.2.2.ebuild,v 1.6 2004/04/12 18:18:19 weeve Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/atlas/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 IUSE=""
 
 DEPEND=">=games-simulation/flightgear-0.8.0
