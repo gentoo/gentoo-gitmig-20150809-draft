@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.23.ebuild,v 1.3 2004/06/25 00:35:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.23.ebuild,v 1.4 2004/07/14 21:13:24 agriffis Exp $
 
 inherit perl-module
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 # NOTE: you can customize the xmltv installation by
 #       defining a XMLTV_OPTS variable which contains
