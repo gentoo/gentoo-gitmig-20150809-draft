@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+ <email>vapier@gentoo.org</email>
+ <name>Mike Frysinger</name>
+</maintainer>
+ <longdescription>
+Evidence - file-manager
+* Sports different views so whatever you are doing, you'll have the most 
+  intuitive grasp on your files:
+    o icon-view (efm-like and fully themable)
+    o browser-view -- perfect for those MP3/Ogg directories!
+        Do you ever get fed up going down two levels (from music to artist to 
+        album) for each song you want to add to a playlist, then going back to 
+        music for the next song? Then this is for you.
+    o tree-view
+* Also features a "micro-shell" (a la efm-"typebuffer") for 
+  keyboard-afficionados
+    o Selected a group of unlikely-named files in the GUI, then apply a 
+      shell-command to them!
+    o Pick some files and paste that (primary) selection into your 
+      favourite shell or editor!
+* May be built against enlightenment 17 libraries for state-of-the-art eye-candy 
+  and pluggable themes.
+    o Compose icons out of any number of evas objects such as images or 
+      gradients, with on-the-fly tinting/shading and alpha composition.
+    o Use jpg, png, or ebg.edb (e17 background database made with ebony, 
+      optionally composed on top of pseudo-transparency) as a backdrop
+    o Plugins are determined by a theme-file. Support for features not used 
+      by a given theme (e.g. pseudo-transparency) need not be loaded. Make themes 
+      as outlandish eye-candy as they get, or save loads of memory if you don't! 
+      No bloat!
+    o Plugins can be built/added at a later date without having to rebuild 
+      the main application.
+
+* Supports plugins for custom Meta-Data such as MP3/Ogg song titles, picture 
+  dimensions, and more.
+    o Comes with example plugins for Ogg/Vorbis, MP3, and images, turning 
+      evidence into a MP3/ID3/Vorbis tag editor right out of the box.
+    o Plugins for your own file-types are easily written.
+    o Plugins are loaded on-demand. For example, the MP3 plugin will not be 
+      loaded until you access the first MP3 file. It will also be unloaded if 
+      haven't touched a MP3-file in a while. No bloat.
+    o Plugins can be built/added at a later date without having to rebuild 
+      the main application.
+
+* Pluggable backends. If you want to go above and beyond UNIX/POSIX file-ops, 
+  use an alternate backend supporting efsd (the enlightened file-system daemon), 
+  GNOME-VFS or kioslaves (forthcoming).
+    o Default "POSIX" backend supports Access Control Lists and Extended 
+      Attributes.
+    o Plugins can be built/added at a later date without having to rebuild 
+      the main application.
+ </longdescription>
+</pkgmetadata>
