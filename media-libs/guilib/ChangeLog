@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/guilib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/ChangeLog,v 1.6 2004/06/24 23:02:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/ChangeLog,v 1.7 2004/10/01 22:56:05 pyrania Exp $
+
+  02 Oct 2004; Markus Nigbur <pyrania@gentoo.org> guilib-1.1.0-r1.ebuild:
+  Made epatch aware.
 
   05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> guilib-1.1.0-r1.ebuild:
   Stable on alpha.
