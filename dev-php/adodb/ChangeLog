@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/adodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.22 2005/01/18 18:43:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.23 2005/01/26 03:27:13 pfeifer Exp $
+
+*adodb-4.60 (25 Jan 2005)
+
+  25 Jan 2005; Jay Pfeifer <pfeifer@gentoo.org> adodb-4.55.ebuild,
+  +adodb-4.60.ebuild:
+  Version bump adding official postgresql 8.0 support.
+  Mark version 4.55 stable on x86.
 
   18 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> adodb-4.54.ebuild:
   Stable on alpha.
