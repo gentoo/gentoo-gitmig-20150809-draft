@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.15 2003/04/30 13:38:02 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.16 2003/05/03 10:24:56 pauldv Exp $
+
+*libpcre-4.2-r1 (03 May 2003)
+
+  03 May 2003; Paul de Vrieze pauldv@gentoo.org libpcre-4.2-r1.ebuild:
+  Bumped libpcre-4.2 version to -r1 to force recompilation with people who run
+  unstable and have a miscompiled libpcre
 
 *libpcre-4.2 (15 Apr 2003)
 
