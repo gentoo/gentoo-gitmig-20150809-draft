@@ -1,29 +1,39 @@
-MD5 3593b6c4a44ba3ff68af57aed1cc7e19 ChangeLog 14099
-MD5 41aedc6d7a7ac73f5ea5705a772009d7 exim-4.43.ebuild 7719
-MD5 de445d37973846142988a0470a6c4c03 exim-4.42.ebuild 7709
-MD5 3faecfffa69ae8404a41a8d39201b3e1 exim-4.33-r1.ebuild 7626
-MD5 8807b47f2f299eb16a17bf4904c4ca81 exim-4.34-r1.ebuild 7933
-MD5 4f81a30a363f8dee30864633df6649f4 exim-4.34.ebuild 7562
-MD5 33dd717372c0b5d66b421e65dc0e45e3 metadata.xml 1065
-MD5 3230f68c6fc65134613e31a7e7dd5009 exim-4.40.ebuild 7741
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 861bb14b8dbf53aed22d03f8778fd118 exim-4.41.ebuild 7743
-MD5 68fc403ba2c98ccba281939085cb9052 files/auth_conf.sub 775
-MD5 0cb2ffe88c81fd7ac8429b5a19d58b35 files/configure 16346
-MD5 02d10d38a03184cc913c44a59f7d61ed files/digest-exim-4.42 133
-MD5 f05ff505c7b77a17696736e2730ae8d1 files/digest-exim-4.43 133
-MD5 904b31332322109b4d2a382d6a253412 files/digest-exim-4.33-r1 133
-MD5 6a964dbcdbca2690ed166e9a59cebe84 files/digest-exim-4.34 133
-MD5 6a964dbcdbca2690ed166e9a59cebe84 files/digest-exim-4.34-r1 133
-MD5 369b42cafcbe5631c2d03cbbfd4aeddd files/exim-4.10-gentoo.diff 1889
-MD5 5d5aabea7d56a91803df1312c04d32c0 files/exim-4.14-tail.patch 446
-MD5 622b726ea7b32aae93a8fe9f3c2af9cd files/exim-4.20-maildir.patch 478
-MD5 f03fc637e154f9ca79d991e71eb063bf files/exim-4.30-conf.patch 887
-MD5 5127f4b2ace5cf148e2ac21e101ac967 files/exim-4.33-r1-header-syntax.patch 1017
-MD5 f442b68d435598831bab8536ade071b8 files/exim.confd 62
-MD5 fbbcb4be0ca4e33398067706ba35c027 files/exim.rc6 505
-MD5 eb249c90af3ab11e5a4d307e184a75ac files/exiscan.conf 22113
-MD5 de6d33cbc3f6762f73fbe852c318e461 files/mailer.conf 1301
-MD5 d230e0fa45f2b65d5bc50c0879c40148 files/pam.d-exim 101
+MD5 41aedc6d7a7ac73f5ea5705a772009d7 exim-4.43.ebuild 7719
+MD5 4f81a30a363f8dee30864633df6649f4 exim-4.34.ebuild 7562
+MD5 8807b47f2f299eb16a17bf4904c4ca81 exim-4.34-r1.ebuild 7933
+MD5 3230f68c6fc65134613e31a7e7dd5009 exim-4.40.ebuild 7741
+MD5 3faecfffa69ae8404a41a8d39201b3e1 exim-4.33-r1.ebuild 7626
+MD5 dcd25bc48532a523ee61db7f2d7d4244 exim-4.42.ebuild 7706
+MD5 7c96e64e816b246884c78fcf367cff1a ChangeLog 14181
+MD5 33dd717372c0b5d66b421e65dc0e45e3 metadata.xml 1065
 MD5 4c0b8ee742360c08f0bc0b526fcaad10 files/system_filter.exim 8120
+MD5 0cb2ffe88c81fd7ac8429b5a19d58b35 files/configure 16346
+MD5 369b42cafcbe5631c2d03cbbfd4aeddd files/exim-4.10-gentoo.diff 1889
+MD5 f442b68d435598831bab8536ade071b8 files/exim.confd 62
+MD5 5127f4b2ace5cf148e2ac21e101ac967 files/exim-4.33-r1-header-syntax.patch 1017
+MD5 f03fc637e154f9ca79d991e71eb063bf files/exim-4.30-conf.patch 887
+MD5 904b31332322109b4d2a382d6a253412 files/digest-exim-4.33-r1 133
+MD5 6a964dbcdbca2690ed166e9a59cebe84 files/digest-exim-4.34-r1 133
+MD5 eb249c90af3ab11e5a4d307e184a75ac files/exiscan.conf 22113
+MD5 68fc403ba2c98ccba281939085cb9052 files/auth_conf.sub 775
+MD5 622b726ea7b32aae93a8fe9f3c2af9cd files/exim-4.20-maildir.patch 478
+MD5 de6d33cbc3f6762f73fbe852c318e461 files/mailer.conf 1301
+MD5 5d5aabea7d56a91803df1312c04d32c0 files/exim-4.14-tail.patch 446
+MD5 d230e0fa45f2b65d5bc50c0879c40148 files/pam.d-exim 101
+MD5 fbbcb4be0ca4e33398067706ba35c027 files/exim.rc6 505
+MD5 6a964dbcdbca2690ed166e9a59cebe84 files/digest-exim-4.34 133
 MD5 22fec326813079b35bb1997f9b323060 files/digest-exim-4.40 133
 MD5 fc1d2de3c279dab8107d973ae63301d6 files/digest-exim-4.41 133
+MD5 02d10d38a03184cc913c44a59f7d61ed files/digest-exim-4.42 133
+MD5 f05ff505c7b77a17696736e2730ae8d1 files/digest-exim-4.43 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsflqCHk4+ZoBpvsRArQnAKC1W/S2P+M/z22981hpPuzsua0cNACgwhnu
+4Y8zVT7YBO1kfD/Djuy3wbM=
+=Ppsv
+-----END PGP SIGNATURE-----
