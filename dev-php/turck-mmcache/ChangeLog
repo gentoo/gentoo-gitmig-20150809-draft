@@ -1,11 +1,19 @@
 # ChangeLog for dev-php/turck-mmcache
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.6 2003/07/29 18:45:17 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.7 2003/08/03 23:12:08 stuart Exp $
+
+*turck-mmcache-2.3.21 (03 08 2003)
+
+  03 08 2003: Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.21.ebuild
+  Updated the ebuild to version 2.3.21.  Thanks to Klavs Klavsen <kl@vsen.dk>
+  once more ;-)
+
+  Also added a block against ioncube_loaders and php-accelerator.
 
 *turck-mmcache-2.3.20 (29 07 2003)
 
   29 07 2003: Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.20.ebuild
-  Updated the ebuild to version 2.3.20 - added the mmcache.compress="1" option.
+  Updated the ebuild to version 2.3.20 - added the mmcache.compress="0" option.
   Ebuild submitted by Klavs Klavsen <kl@vsen.dk>
 
   21 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> turck-mmcache-2.3.19.ebuild:
