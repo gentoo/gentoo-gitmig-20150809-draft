@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 08211275c9d8c870ec1966320be6f6b7 ekg-1.4.ebuild 1109
 MD5 3b274a0980356156a3dc9b9a492511d0 ekg-1.4-r1.ebuild 1109
 MD5 d2e44bfd92cfba992ef02716103fb8ea ekg-1.3.ebuild 974
@@ -8,3 +11,10 @@ MD5 2bc5f13c9e2cc840a2f8f61fc3a51391 files/digest-ekg-1.4-r1 59
 MD5 fa4379b937783ca0ff3bc06452e35ea1 files/digest-ekg-1.3 59
 MD5 2bc5f13c9e2cc840a2f8f61fc3a51391 files/digest-ekg-1.4 59
 MD5 fabb312576862c943792eed047bac7a8 files/digest-ekg-1.5 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOe9H/rLF9B432nYRAjARAJwMq9pLV36CVrG6zedZ/Kd2id5vcQCdErwu
+lxA7teEckP5dINYUE+XQJNk=
+=Vt5A
+-----END PGP SIGNATURE-----

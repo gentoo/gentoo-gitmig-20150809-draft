@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 45448255bb43a282357bee5bc2db5a37 silky-0.5.1.ebuild 917
 MD5 263b1ccf9d6832acc7c1a394d5fb3da5 ChangeLog 1205
 MD5 b9fdb558af0dc40960d563eb57947c0f metadata.xml 221
 MD5 503565a71edccf299762fa80d5242be0 files/digest-silky-0.5.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOe9d/rLF9B432nYRAhajAJ4iNiP7FI7sX52lH/+w02SbDuMNMQCeOafT
+ms7yH9/4HdwjdJd0MDv6u3Q=
+=wZn3
+-----END PGP SIGNATURE-----
