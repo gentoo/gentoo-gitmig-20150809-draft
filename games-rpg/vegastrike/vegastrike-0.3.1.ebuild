@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.3.1.ebuild,v 1.2 2003/09/23 19:55:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.3.1.ebuild,v 1.3 2003/11/23 00:08:36 mholzer Exp $
 
 inherit games eutils flag-o-matic
 
@@ -9,6 +9,7 @@ DESCRIPTION="3d OpenGL Action RPG space sim"
 HOMEPAGE="http://vegastrike.sourceforge.net/"
 SRC_URI="mirror://sourceforge/vegastrike/${P}-gcc3.2.src.rpm
 	mirror://sourceforge/vegastrike/${PN}-data-${DATA_VER}.noarch.rpm"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"

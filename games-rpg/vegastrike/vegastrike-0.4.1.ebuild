@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.2 2003/11/21 21:24:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.3 2003/11/23 00:08:36 mholzer Exp $
 
 inherit games eutils flag-o-matic
 
 DESCRIPTION="A 3D space simulator that allows you to trade and bounty hunt"
 HOMEPAGE="http://vegastrike.sourceforge.net/"
 SRC_URI="mirror://sourceforge/vegastrike/${P}-installer.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
