@@ -1,8 +1,11 @@
 # ChangeLog for app-arch/cfv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.4 2003/03/05 04:40:15 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.5 2003/03/28 10:44:01 pvdabeel Exp $
 
 *cfv-1.13 (27 Jan 2003)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> cfv-1.13.ebuild:
+  moved to ppc keyword
 
   05 Mar 2003; Bartosch Pixa <darkspecter@gentoo.org> cfv-1.13.ebuild:
   set ~ppc in keywords
