@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/wire
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/wire/ChangeLog,v 1.1 2004/08/15 22:18:50 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/wire/ChangeLog,v 1.2 2004/08/16 17:42:05 mr_bones_ Exp $
+
+  16 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> wire-1.0.2.ebuild:
+  fix dep; use generic src_compile; tidy
 
 *wire-1.0.2 (16 Aug 2004)
 
