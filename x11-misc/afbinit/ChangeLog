@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/afbinit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.5 2004/05/27 20:14:23 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.6 2004/05/27 21:41:10 fmccor Exp $
+
+  27 May 2004; Ferris McCormick <fmccor@gentoo.org> afbinit-1.0.1-r1.ebuild,
+  afbinit-1.0.1-r2.ebuild:
+  Mark 1.0.1-r1 stable for sparc, and add ~keyword to 1.0.1-r2 for testing:
+  1.0.1-r2 is required for afb (Elite) systems which are running 2.6.x kernels.
 
 *afbinit-1.0.1-r2 (27 May 2004)
 
