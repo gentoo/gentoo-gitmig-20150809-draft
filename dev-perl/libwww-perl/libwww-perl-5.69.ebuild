@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.69.ebuild,v 1.4 2003/07/02 19:47:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.69.ebuild,v 1.5 2003/09/10 22:22:17 msterret Exp $
 
 inherit perl-module
 
@@ -25,5 +25,5 @@ mydoc="TODO"
 src_compile() {
 
 	yes "" | perl Makefile.PL ${myconf} \
-         PREFIX=${D}/usr
+		PREFIX=${D}/usr
 }
