@@ -1,6 +1,9 @@
 # ChangeLog for app-text/html2text
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/ChangeLog,v 1.7 2004/05/07 22:18:34 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/ChangeLog,v 1.8 2004/06/01 04:22:10 absinthe Exp $
+
+  01 Jun 2004; Dylan Carlson <absinthe@gentoo.org> html2text-1.3.1.ebuild:
+  Marked stable on amd64.
 
   07 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> html2text-1.3.1.ebuild:
   Stable on sparc, #50392
