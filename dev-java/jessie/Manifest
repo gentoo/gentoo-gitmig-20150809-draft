@@ -1,4 +1,14 @@
-MD5 24b2c2bc4f7ef0ab118f096179d9636e ChangeLog 975
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30527e721fa706abdd8b27db40aed1dc jessie-1.0.0.ebuild 1111
+MD5 f2557e7a4ca4a1d1d926aa70b55eef19 ChangeLog 1061
 MD5 d7a22352b39820b369e6e067dcac7fff metadata.xml 2204
-MD5 76ba020fc7bccf03aef3e5672ed37b81 jessie-1.0.0.ebuild 1136
 MD5 c614b4d53c89c67391b2d7e5c0d06fcf files/digest-jessie-1.0.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBgj0Z/rLF9B432nYRAhoXAJ4hvogx+XXVrlyC9fRlvf7tUiif3wCfVZAo
+WEmVIJ22Owolns7MehFSvKc=
+=9hWK
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
-MD5 4c28e93f6c2fb66d13daee2e964c7c5f ChangeLog 2341
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30220119230449a850dbf4d240f5d9bb gnu-classpath-0.10-r1.ebuild 1078
+MD5 8df97d5816e51b31abae8e615318269f ChangeLog 2465
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 2e8c686b5516e95c5bc48cb97c74c128 gnu-classpath-0.10-r1.ebuild 1102
-MD5 7b8ca121f0b9d43cd4dab9db1bbb7079 gnu-classpath-0.11.ebuild 1100
+MD5 b66b0cf285145d50f5eaa2c945541679 gnu-classpath-0.11.ebuild 1076
 MD5 6bcac2500b924707633a717d9bf03def files/digest-gnu-classpath-0.10-r1 67
 MD5 0965aebb02562b86de80b9aea8d8ac59 files/digest-gnu-classpath-0.11 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBgj3h/rLF9B432nYRAr0/AKCGKudtgMPyUIbUsUiOqs8Z6hi03wCgnQ6p
+3LVAuP0c5qz+UaDuRsfw5Y0=
+=amd8
+-----END PGP SIGNATURE-----
