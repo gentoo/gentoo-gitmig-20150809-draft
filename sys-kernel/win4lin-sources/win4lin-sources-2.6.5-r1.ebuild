@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.5-r1.ebuild,v 1.2 2004/04/15 23:36:58 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.5-r1.ebuild,v 1.3 2004/04/17 07:21:20 mr_bones_ Exp $
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 inherit eutils
@@ -39,8 +39,8 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${DISTDIR}/Kernel-Win4Lin3-${OKV}.patch || die "Error: Failed to appky Win4Lin3 patch!"
-	ebegin "Applying mki-adapter26_1_3_3.patch"
-	patch -Np1 -i ${DISTDIR}/mki-adapter26_1_3_3.patch > /dev/null 2>&1 || die "Error: Failed to apply mki-adapter patch!"
+	ebegin "Applying mki-adapter26_1_3_4.patch"
+	patch -Np1 -i ${DISTDIR}/mki-adapter26_1_3_4.patch > /dev/null 2>&1 || die "Error: Failed to apply mki-adapter patch!"
 	eend $?
 	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 
