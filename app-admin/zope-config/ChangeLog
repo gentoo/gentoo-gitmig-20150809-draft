@@ -1,10 +1,13 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.12 2004/01/26 19:55:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.13 2004/01/26 20:30:49 lanius Exp $
 
   26 Jan 2004; Jason Wever <weeve@gentoo.org> zope-config-0.3.ebuild:
   Changed sparc keyword to ~sparc as this was mistakenly stabilized with broken
   dependencies.
+
+  26 Jan 2004; Heinrich Wendel <lanius@gentoo.org> zope-config-0.3.ebuild:
+  fix PDEPEND on arch != x86
 
   17 Jan 2004; Heinrich Wendel <lanius@gentoo.org> zope-config-0.2.ebuild,
   zope-config-0.3.ebuild:
