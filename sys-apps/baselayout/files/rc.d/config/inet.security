@@ -45,6 +45,7 @@ netup() {
 }
 
 netdown() {
+	return 0
 #	iptables -P INPUT ACCEPT
 #	iptables -F INPUT
 }
