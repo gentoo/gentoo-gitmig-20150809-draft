@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.4 2005/02/22 23:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.5 2005/03/19 02:09:54 vapier Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
 IUSE="X gif jpeg mmx png tiff"
 
 DEPEND="=media-libs/freetype-2*
-	gif? ( || ( media-libs/libungif >=media-libs/giflib-4.1.0 ) )
+	gif? ( >=media-libs/giflib-4.1.0 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( >=media-libs/tiff-3.5.5 )
