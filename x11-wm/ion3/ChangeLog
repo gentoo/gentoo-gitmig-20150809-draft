@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.10 2004/12/19 18:01:18 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.11 2004/12/20 12:57:34 twp Exp $
+
+  20 Dec 2004; Tom Payne <twp@gentoo.org> -ion3-20040906.ebuild:
+  Removed old version.
 
   19 Dec 2004; Tom Payne <twp@gentoo.org>
   -files/ion3-20040316-libtu-I.patch, -files/ion3-20040316_p1-rename.patch:
