@@ -1,18 +1,16 @@
---- Doc/config/dhcpd-mol.conf.orig	2003-02-07 02:57:40.000000000 +0000
-+++ Doc/config/dhcpd-mol.conf	2003-02-07 02:59:04.000000000 +0000
-@@ -48,7 +48,7 @@
- subnet 192.168.5.0 netmask 255.255.255.0 {
- 	option domain-name-servers	192.168.5.1;
- 	option routers			192.168.5.1;
+--- Doc/config/dhcpd-mol.conf.orig	2003-02-07 03:29:08.000000000 +0000
++++ Doc/config/dhcpd-mol.conf	2003-02-07 03:30:04.000000000 +0000
+@@ -56,8 +56,12 @@
+ subnet 192.168.6.0 netmask 255.255.255.0 {
+ 	option domain-name-servers	192.168.6.1;
+ 	option routers			192.168.6.1;
 -	host mol4 { 
 +	host mol5 { 
  		hardware ethernet	00:00:0D:EA:DB:EE;
- 		fixed-address		192.168.5.2;
- 	}
-@@ -61,3 +61,6 @@
  		fixed-address		192.168.6.2;
  	}
  }
 +
-+# Set this to pass the DNS info along
++# Without this dhcpd fails
 +ddns-update-style               ad-hoc;
++
