@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.68 2004/09/06 19:04:05 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.69 2004/09/07 18:09:56 humpback Exp $
+
+*proftpd-1.2.10 (07 Sep 2004)
+
+  07 Sep 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  +proftpd-1.2.10.ebuild, -proftpd-1.2.10_rc3-r1.ebuild:
+  Adding version 1.2.10, mod_shaper is back and also adding selinux flag and
+  dep, thanks to petre rodan on bug 62905 for this one
 
 *proftpd-1.2.10_rc3-r1 (06 Sep 2004)
 
