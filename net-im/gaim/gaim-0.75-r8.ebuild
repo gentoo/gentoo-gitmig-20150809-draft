@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.3 2004/01/29 07:18:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.4 2004/02/12 22:09:56 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 
-IUSE="nls perl spell nas mozilla cjk debug ssl"
+IUSE="nls perl spell nas cjk debug ssl"
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -24,9 +24,8 @@ DEPEND="=sys-libs/db-1*
 	>=media-libs/audiofile-0.2.0
 	perl? ( >=dev-lang/perl-5.6.1
 		>=sys-apps/sed-4.0.0 )
-	mozilla? ( net-www/mozilla )
-	!mozilla? ( dev-libs/nss )
-	spell? ( >=app-text/gtkspell-2.0.2 )"
+	spell? ( >=app-text/gtkspell-2.0.2 )
+	|| ( dev-libs/nss net-www/mozilla )"
 PDEPEND="ssl? ( net-im/gaim-encryption )"
 
 src_unpack() {
@@ -55,7 +54,7 @@ src_compile() {
 
 	NSS_LIB=/usr/lib
 	NSS_INC=/usr/include
-	use mozilla || {
+	has_version dev-libs/nss && {
 		# Only need to specify this if no pkgconfig from mozilla
 		myconf="${myconf} --with-nspr-includes=${NSS_INC}/nspr"
 		myconf="${myconf} --with-nss-includes=${NSS_INC}/nss"

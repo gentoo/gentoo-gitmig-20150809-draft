@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.129 2004/01/29 02:56:22 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.130 2004/02/12 22:09:56 rizzo Exp $
+
+  12 Feb 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r8.ebuild:
+  Changing DEPEND usage for nss/mozilla
 
   28 Jan 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r8.ebuild:
   Filtering -msse2 for gcc 3.2.  Fixed bug 27975, thanks to vapier for fix

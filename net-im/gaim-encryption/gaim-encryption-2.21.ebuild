@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/gaim-encryption-2.21.ebuild,v 1.4 2004/01/27 21:59:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/gaim-encryption-2.21.ebuild,v 1.5 2004/02/12 22:12:55 rizzo Exp $
 
-IUSE="mozilla"
+IUSE=""
 
 DESCRIPTION="GAIM Encryption PlugIn"
 HOMEPAGE="http://gaim-encryption.sourceforge.net/"
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~amd64 ppc ~alpha ~ia64"
 
 DEPEND=">=net-im/gaim-0.75-r3
-	mozilla? ( net-www/mozilla )
-	!mozilla? ( dev-libs/nss )"
+		|| ( dev-libs/nss net-www/mozilla )"
 
 src_compile() {
 
@@ -24,7 +23,7 @@ src_compile() {
 
 	NSS_LIB=/usr/lib
 	NSS_INC=/usr/include
-	use mozilla || {
+	has_version dev-libs/nss && {
 		# Only need to specify this if no pkgconfig from mozilla
 		myconf="${myconf} --with-nspr-includes=${NSS_INC}/nspr"
 		myconf="${myconf} --with-nss-includes=${NSS_INC}/nss"
