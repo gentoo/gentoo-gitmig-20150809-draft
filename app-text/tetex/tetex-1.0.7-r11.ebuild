@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r11.ebuild,v 1.7 2002/12/09 04:17:45 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r11.ebuild,v 1.8 2003/01/03 03:53:38 satai Exp $
+
+inherit flag-o-matic
 
 IUSE="ncurses X libwww png"
 
@@ -55,15 +57,18 @@ src_unpack() {
 	# Do not run config stuff
 	patch -p1 < ${FILESDIR}/${P}-dont-run-config.diff || die
 
+	# Fix for dvips to print directly.
+	patch -p1 < ${FILESDIR}/teTeX-1.0-dvips.diff || die
+
 	# Fix problem where the *.fmt files are not generated due to the LaTeX
 	# source being older than a year.
-#        local x
-#        for x in `find ${S}/texmf/ -type f -name '*.ini'`
-#        do
-#                cp ${x} ${x}.orig
-#                sed -e '1i \\scrollmode' ${x}.orig > ${x}
-#                rm -f ${x}.orig
-#        done
+        local x
+        for x in `find ${S}/texmf/ -type f -name '*.ini'`
+        do
+                cp ${x} ${x}.orig
+                sed -e '1i \\scrollmode' ${x}.orig > ${x}
+                rm -f ${x}.orig
+        done
 
 }
 

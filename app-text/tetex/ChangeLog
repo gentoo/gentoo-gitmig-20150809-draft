@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.18 2002/12/13 10:56:20 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.19 2003/01/03 03:53:38 satai Exp $
+
+  02 Jan 2003; Matthew Turk <satai@gentoo.org> :
+  Added a fix to allow dvips to recognize when secure mode is turned off.
+  Closes 11579.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
