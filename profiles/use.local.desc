@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.780 2004/12/07 17:32:42 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.781 2004/12/08 02:18:40 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -642,6 +642,7 @@ sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checki
 sys-devel/gcc:fortran - Build support for the fortran language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
+sys-devel/gcc:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
 sys-devel/gcc:n64 - Enable n64 ABI support on mips
 sys-devel/gcc:nomultilib - Disables multilib support in gcc
