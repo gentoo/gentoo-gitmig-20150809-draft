@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 dbb4e01b86a1281b1a02603d9830c901 ChangeLog 2219
 MD5 cab833ea192155065c07aac34424a76c gdm-themes-1.0-r1.ebuild 1727
 MD5 766c9ab191efc4bdaa274b934c3eb6b3 gdm-themes-1.0.ebuild 1653
-MD5 282e22bfc80068b05fc31b3a528d558f gdm-themes-2.0-r1.ebuild 4398
 MD5 9ea9a9c5601b7f2be3f46b882cbf3f03 metadata.xml 416
+MD5 282e22bfc80068b05fc31b3a528d558f gdm-themes-2.0-r1.ebuild 4398
 MD5 4521cae17d4d1e38070589d7f7135c63 files/digest-gdm-themes-1.0 1837
 MD5 267b9a61fd87562b2472231edfcd1e85 files/digest-gdm-themes-1.0-r1 1911
-MD5 60c3c1afe70b81b34f4d77a72ca82e05 files/digest-gdm-themes-2.0-r1 6959
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCOaS18zY1VwezZiERArYOAKCs9Kp2nF7hPlzMwqa+anc8yu9G0wCgryoP
-gzSfAMsnXJAd3Uv88zAlI4E=
-=7NFH
------END PGP SIGNATURE-----
+MD5 fd04b31a7e6615c5f265a6597164284f files/digest-gdm-themes-2.0-r1 6897
