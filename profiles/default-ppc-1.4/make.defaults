@@ -26,7 +26,7 @@ motif opengl mozilla ppc"
 
 # The following USE should _not_ bet set on ppc as they can cause breakage
 # in some pacakges
-# 3dfx 3dnow avi icc icc-pgo  
+# 3dfx 3dnow avi icc icc-pgo svga 
 
 ACCEPT_KEYWORDS="ppc"
 
