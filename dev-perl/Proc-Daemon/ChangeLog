@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Proc-Daemon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Daemon/ChangeLog,v 1.8 2004/12/23 16:39:14 nigoro Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Daemon/ChangeLog,v 1.9 2005/03/15 07:52:18 eradicator Exp $
+
+  15 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  Proc-Daemon-0.03.ebuild:
+  Added to ~amd64.
 
   24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Proc-Daemon-0.03.ebuild:
   added ~ppc64

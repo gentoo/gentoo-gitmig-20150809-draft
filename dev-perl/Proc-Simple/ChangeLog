@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Proc-Simple
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.7 2004/07/30 16:12:19 mcummings Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.8 2005/03/15 07:52:51 eradicator Exp $
+
+  15 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  Proc-Simple-1.21.ebuild:
+  Added to ~amd64.
 
 *Proc-Simple-1.21 (30 Jul 2004)
 
