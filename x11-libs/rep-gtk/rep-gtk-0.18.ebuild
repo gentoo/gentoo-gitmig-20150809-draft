@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18.ebuild,v 1.3 2004/02/22 16:01:50 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18.ebuild,v 1.4 2004/03/29 19:41:06 agriffis Exp $
 
 inherit eutils
 
@@ -25,8 +25,17 @@ DEPEND="virtual/glibc
 	>=sys-devel/automake-1.6.1-r5
 	>=dev-libs/librep-0.13"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S} || die
 
+	# Fix for bug 45646 to sync up rep-gtk headers with gtk+
+	if has_version '>=x11-libs/gtk+-2.4'; then
+		epatch ${FILESDIR}/rep-gtk-0.18-gtk24.patch
+	fi
+}
+
+src_compile() {
 	./configure --host=${CHOST} \
 	    --prefix=/usr \
 	    --libexecdir=/usr/lib \
@@ -39,7 +48,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make install \
 		host_type=${CHOST} \
 		installdir=${D}/usr/lib/rep/${CHOST} || die
