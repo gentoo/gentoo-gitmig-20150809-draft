@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5.ebuild,v 1.1 2005/03/25 22:28:20 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5.ebuild,v 1.2 2005/03/25 23:51:44 swegener Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -25,7 +25,7 @@ DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=dev-db/mysql-4 )
-	ldap? ( >=net-nds/openldap )"
+	ldap? ( net-nds/openldap )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"

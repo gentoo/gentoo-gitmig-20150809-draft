@@ -1,12 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 45b230cb3f1fd14ba338701d4080b4ba bind-9.2.3.ebuild 5875
 MD5 dddb6eb8d23d2bcc3e69dec4baabe6aa bind-9.3.1.ebuild 6394
 MD5 23c809afe06852c286f137645287abb4 bind-9.2.2-r3.ebuild 5708
-MD5 22fc459df0ee1ab39349ef5c331ef94e bind-9.2.5.ebuild 7270
+MD5 9ebc2290eb568e9b4e76dd17316cca98 bind-9.2.5.ebuild 7271
 MD5 61a6fb5346e4f405c35bf0c823e75476 bind-9.2.2-r5.ebuild 6434
 MD5 9676ca38b8a2af68a01785194ecd12d8 bind-9.2.2.ebuild 4678
 MD5 242fac0b5f26fab0bc0a3bded1fccdfa bind-9.2.2-r2.ebuild 4895
 MD5 0fce7dffc077cc801ceeaf46cce6ead0 bind-9.2.2-r4.ebuild 5828
-MD5 45d58b9b4cfcd1d8369210987915415a ChangeLog 9575
+MD5 f9ea903e3bbcab05988a1455f49d2051 ChangeLog 9682
 MD5 9878980f4b7a34ac4812812325b9ad85 metadata.xml 349
 MD5 5a5afd0ab570b531cd0094bf16f6735d bind-9.2.2-r1.ebuild 4880
 MD5 51197afe8da37b1b453456de90ca4f25 files/127 227
@@ -35,3 +38,10 @@ MD5 2bb12cfcd70284e72fbf9e70e5e2974d files/dyndns-samples.tbz2 22866
 MD5 412d666c947769b6015a65a42bb8ea00 files/named.rc6 1434
 MD5 42b5ed5adcee33cf40531d7955412b21 files/10bind.env 27
 MD5 e83e7a76e253debfdd120311fda73fb6 files/named.ca 2518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCRKQbI1lqEGTUzyQRAlX6AKCNJt4ZuD9abCqu9hMMooxUneVusACdEPxC
+JwsDuzFUqw+NoMBtEPa9/do=
+=PPGr
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.58 2005/03/25 23:15:00 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.59 2005/03/25 23:51:44 swegener Exp $
+
+  25 Mar 2005; Sven Wegener <swegener@gentoo.org> bind-9.2.5.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *bind-9.3.1 (26 Mar 2005)
 
