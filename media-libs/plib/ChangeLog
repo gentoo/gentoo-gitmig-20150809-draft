@@ -1,11 +1,16 @@
 # ChangeLog for media-libs/plib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.6 2003/02/12 07:15:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.7 2003/02/19 19:28:40 seemant Exp $
+
+*plib-1.6.0 (05 Nov 2002)
+
+  19 Feb 2003; Seemant Kulleen <seemant@gentoo.org> ChangeLog :
+
+  Note that Michael Pujos <pujos.michael@laposte.net> had submitted an
+  ebuild update in bug #8167 which had gotten neglected :(
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*plib-1.6.0 (05 Nov 2002)
-
   05 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.
 
