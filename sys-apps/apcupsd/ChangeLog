@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.17 2003/09/03 19:38:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.18 2003/09/03 20:01:26 mholzer Exp $
+
+  04 Sep 2003; Martin Holzer <mholzer@gentoo.org> apcupsd-3.10.5-r4.ebuild,
+  files/apcupsd:
+  adding usb support
 
 *apcupsd-3.10.5-r4 (04 Sep 2003)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.5-r4.ebuild,v 1.1 2003/09/03 19:38:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.5-r4.ebuild,v 1.2 2003/09/03 20:01:26 mholzer Exp $
 
-IUSE="doc snmp"
+IUSE="doc snmp usb"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
@@ -18,6 +18,8 @@ DEPEND=">=sys-apps/baselayout-1.8.4
 	virtual/mta
 	snmp? ( net-analyzer/ucd-snmp )
 	sys-libs/ncurses"
+RDEPEND="${DEPEND}
+	usb? ( sys-apps/hotplug )"
 
 XPIDDIR=/var/run
 XLOGDIR=/var/log
