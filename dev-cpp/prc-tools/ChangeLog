@@ -1,0 +1,10 @@
+# ChangeLog for dev-cpp/prc-tools
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/prc-tools/ChangeLog,v 1.1 2003/08/31 07:32:50 plasmaroo Exp $
+
+*prc-tools-2.2 (31 Aug 2003)
+
+  31 Aug 2003; <plasmaroo@gentoo.org> prc-tools-2.2.ebuild,
+  files/prc-tools-2.2-compilefix.patch:
+  Initial Import
+
