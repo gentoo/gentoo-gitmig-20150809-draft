@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/listings
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/listings/ChangeLog,v 1.6 2004/06/25 02:16:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/listings/ChangeLog,v 1.7 2004/08/17 23:08:23 usata Exp $
+
+*listings-1.2 (18 Aug 2004)
+
+  18 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +listings-1.2.ebuild:
+  Version bumped. This closes bug #59909.
 
   21 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> listings-1.1.ebuild:
   Added to ~ppc, bug #54668.
