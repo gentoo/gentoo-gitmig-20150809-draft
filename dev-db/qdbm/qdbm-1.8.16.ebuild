@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.16.ebuild,v 1.3 2004/09/27 14:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.16.ebuild,v 1.4 2004/09/27 14:13:40 hattya Exp $
 
 inherit java-pkg
+
+IUSE="debug java perl ruby zlib"
 
 DESCRIPTION="Quick Database Manager"
 HOMEPAGE="http://qdbm.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
 KEYWORDS="~amd64 ~ppc ~s390 x86"
-IUSE="debug java perl ruby zlib"
+SLOT="0"
 
 DEPEND="java? ( virtual/jdk )
 	perl? ( dev-lang/perl )
@@ -19,6 +20,7 @@ DEPEND="java? ( virtual/jdk )
 	zlib? ( sys-libs/zlib )"
 
 src_compile() {
+
 	econf \
 		`use_enable debug` \
 		`use_enable zlib` \
@@ -39,6 +41,7 @@ src_compile() {
 }
 
 src_install() {
+
 	make DESTDIR=${D} install || die
 	dodoc COPYING ChangeLog NEWS README THANKS
 
@@ -59,4 +62,5 @@ src_install() {
 	fi
 
 	rm ${D}/usr/bin/*test
+
 }
