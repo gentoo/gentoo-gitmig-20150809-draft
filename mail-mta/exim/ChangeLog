@@ -1,6 +1,22 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.1 2004/05/30 02:35:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.2 2004/05/31 02:43:38 g2boojum Exp $
+
+*exim-4.34-r1 (30 May 2004)
+
+  30 May 2004; Grant Goodyear <g2boojum@gentoo.org> files/mailer.conf,
+  exim-4.24-r3.ebuild, exim-4.30-r1.ebuild, exim-4.30.ebuild,
+  exim-4.31.ebuild, exim-4.32-r1.ebuild, exim-4.32.ebuild,
+  exim-4.33-r1.ebuild, exim-4.33.ebuild, +exim-4.34-r1.ebuild,
+  exim-4.34.ebuild:
+  New revision w/ "mailwrapper" as an optional dep.
+  
+  Removed mailwrapper as a dep from a number of packages where the
+  package was not, in fact, actually using mailwrapper.  (In fact,
+  the package was clobbering /usr/sbin/sendmail w/ a symlink.)
+  
+  In the masked ebuild I also removed the "maildir" use flag, instead
+  keying on ! mbox.  We're going to remove maildir as a USE flag soon.
 
 *exim-4.24-r2 (29 May 2004)
 

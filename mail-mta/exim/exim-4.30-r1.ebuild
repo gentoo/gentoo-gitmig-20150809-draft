@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.30-r1.ebuild,v 1.1 2004/05/30 02:35:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.30-r1.ebuild,v 1.2 2004/05/31 02:43:38 g2boojum Exp $
 
 inherit eutils
 
@@ -30,7 +30,6 @@ DEPEND=">=sys-apps/sed-4.0.5
 	postgres? ( >=dev-db/postgresql-7 )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.14 )"
 RDEPEND="${DEPEND}
-	net-mail/mailwrapper
 	>=net-mail/mailbase-0.00-r5"
 
 src_unpack() {

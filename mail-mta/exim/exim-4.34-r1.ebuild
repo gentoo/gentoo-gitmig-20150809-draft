@@ -1,21 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.32.ebuild,v 1.2 2004/05/31 02:43:38 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.34-r1.ebuild,v 1.1 2004/05/31 02:43:38 g2boojum Exp $
 
 inherit eutils
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl maildir lmtp ipv6 sasl wildlsearch dnsdb perl mbox X"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl wildlsearch dnsdb perl mbox X exiscan"
 
-EXISCANACL_VER=${PV}-18
+EXISCANACL_VER=${PV}-21
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
-SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.gz
+SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.bz2
 	exiscan-acl? ( http://duncanthrax.net/exiscan-acl/exiscan-acl-${EXISCANACL_VER}.patch )"
 HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~amd64 ~alpha ~hppa ~ppc"
 
 PROVIDE="virtual/mta"
 DEPEND=">=sys-apps/sed-4.0.5
@@ -30,6 +30,8 @@ DEPEND=">=sys-apps/sed-4.0.5
 	postgres? ( >=dev-db/postgresql-7 )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.14 )"
 RDEPEND="${DEPEND}
+	mailwrapper? ( >=net-mail/mailwrapper-0.2 )
+	!mailwrapper? ( !virtual/mta )
 	>=net-mail/mailbase-0.00-r5"
 
 src_unpack() {
@@ -40,7 +42,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/exim-4.14-tail.patch
 
-	if use maildir; then
+	if ! use mbox; then
 		einfo "Patching maildir support into exim.conf"
 		epatch ${FILESDIR}/exim-4.20-maildir.patch
 	fi
@@ -196,8 +198,15 @@ src_install () {
 	fi
 	dosym exim /usr/sbin/rsmtp
 	dosym exim /usr/sbin/rmail
-	dosym exim /usr/sbin/sendmail
 	dosym ../sbin/exim /usr/lib/sendmail
+
+	if use mailwrapper
+	then
+		insinto /etc/mail
+		doins ${FILESDIR}/mailer.conf
+	else
+		dosym exim /usr/sbin/sendmail
+	fi
 
 	exeinto /usr/sbin
 	for i in exicyclog exim_dbmbuild exim_dumpdb exim_fixdb exim_lock \
@@ -242,6 +251,14 @@ pkg_postinst() {
 	einfo "/etc/exim/system_filter.exim is a sample system_filter."
 	einfo "/etc/exim/auth_conf.sub contains the configuration sub for using smtp auth."
 	einfo "Please create /etc/exim/exim.conf from /etc/exim/exim.conf.dist."
+
+	if ! use mailwrapper && [[ -e /etc/mailer.conf ]]
+	then
+		einfo
+		einfo "Since you emerged $PN without mailwrapper in USE,"
+		einfo "you probably want to 'emerge -C mailwrapper' now."
+		einfo
+	fi
 }
 
 

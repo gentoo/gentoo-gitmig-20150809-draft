@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.10.ebuild,v 1.1 2004/05/30 02:35:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.10.ebuild,v 1.2 2004/05/31 02:43:38 g2boojum Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam"
 
