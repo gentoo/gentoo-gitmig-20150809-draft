@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $HEADER $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.33.ebuild,v 1.2 2002/01/27 07:08:54 blocke Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
