@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.5.2-r1.ebuild,v 1.7 2002/08/14 04:32:30 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.5.2-r1.ebuild,v 1.8 2002/09/21 01:00:24 vapier Exp $
 
 inherit perl-module
 
 S=${WORKDIR}/${PN}-1.52
 DESCRIPTION="The Apache AxKit Perl Module"
-SRC_URI="http://xml.sergeant.org/download/${P}.tar.gz"
-HOMEPAGE="http://xml.sergeant.org/"
+SRC_URI="http://axkit.org/download/${P}.tar.gz"
+HOMEPAGE="http://axkit.org/"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
@@ -26,6 +26,8 @@ newdepend ">=dev-perl/libapreq-0.31 \
 	>=dev-perl/XML-Sablot-0.50"
 
 src_unpack() {
+echo "${PV} | ${P}"
+die
 	unpack ${A}
 	cd ${S}
 	cp Makefile.PL Makefile.PL.orig
