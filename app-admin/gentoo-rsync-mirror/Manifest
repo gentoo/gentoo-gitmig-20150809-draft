@@ -1,6 +1,6 @@
 MD5 fe7d670f084243492df814ce54ea9afc gentoo-rsync-mirror-1.0-r2.ebuild 1530
 MD5 13e59c18e75753498213dc19830ea594 gentoo-rsync-mirror-1.0-r3.ebuild 2038
-MD5 1625e5eb46a2f07c75e7a6dff3a1b20f ChangeLog 2046
+MD5 4abe09d60b18aca3b0983d3b1eb0ff05 ChangeLog 2078
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
 MD5 ea6051bed36e051cb977663d82f9f544 files/rsync-gentoo-portage.sh 621
 MD5 866f4631fad8ab795f8420dfb8144ffb files/rsynclogparse-extended.pl 3476
