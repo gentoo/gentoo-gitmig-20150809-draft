@@ -1,6 +1,6 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.15 2004/03/06 01:20:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.16 2004/03/09 15:22:32 lanius Exp $
 
   05 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> wv2-0.2.ebuild:
   stable on sparc
@@ -10,6 +10,12 @@
 
   14 Feb 2004; Jason Wever <weeve@gentoo.org> wv2-0.2.ebuild:
   Added ~sparc keyword.
+
+*wv2-0.2.1 (09 Mar 2004)
+
+  09 Mar 2004; Heinrich Wendel <lanius@gentoo.org> wv2-0.0.9.ebuild,
+  wv2-0.1.9.ebuild, wv2-0.2.1.ebuild, wv2-0.2.ebuild:
+  version bump; fix homepage
 
   09 Dec 2003; Caleb Tennis <caleb@gentoo.org> wv2-0.2.ebuild:
   Mark x86 stable, move ~ppc to latest version
