@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.5 2004/02/17 23:10:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.6 2004/02/18 20:17:41 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -91,17 +91,10 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	if [ `use ssl` ]; then
-		einfo
-		einfo "The gaim-encryption package is now it's own package in portage"
-		einfo "To install it run:"
-		einfo
-		einfo "emerge gaim-encryption"
-		einfo
-		einfo "All of your existing gaim-encryption settings are still"
-		einfo "in place and will be recognized when gaim-encryption is"
-		einfo "installed.  You may need to re-enable gaim-encryption in"
-		einfo "your gaim preferences."
-		einfo
-	fi
+	ewarn
+	ewarn "If you experience problems with gaim, file them as bugs with"
+	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
+	ewarn "as bugs with gaim's sourceforge tracker, and by all means DO NOT"
+	ewarn "seek help in #gaim.  gaim developers do not like gentoo users."
+	ewarn
 }
