@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.14-r1.ebuild,v 1.1 2005/02/25 16:28:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.14-r1.ebuild,v 1.2 2005/03/31 23:54:09 wschlich Exp $
 
 IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d mysql"
 inherit eutils
@@ -113,7 +113,7 @@ src_install () {
 	# per default dovecot wants it ssl cert called dovecot.pem
 	# fix this in mkcert.sh, which we use to generate the ssl certs
 	cd ${S}/doc
-	sed -ie 's/imapd.pem/dovecot.pem/g' mkcert.sh
+	sed -i -e 's/imapd.pem/dovecot.pem/g' mkcert.sh
 	dodoc mkcert.sh
 
 	# rc script
@@ -124,7 +124,7 @@ src_install () {
 	# We're using pam files (imap and pop3) provided by mailbase-0.00-r8
 	if use pam
 	then
-		sed -ie 's/auth_passdb = pam/auth_passdb = pam */' ${D}/etc/dovecot.conf
+		sed -i -e 's/auth_passdb = pam/auth_passdb = pam */' ${D}/etc/dovecot.conf
 	fi
 
 	# Create SSL certificates

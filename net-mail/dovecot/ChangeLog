@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.21 2005/02/25 16:28:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.22 2005/03/31 23:54:09 wschlich Exp $
+
+  01 Apr 2005; Wolfram Schlich <wschlich@gentoo.org>
+  dovecot-0.99.11-r1.ebuild, dovecot-0.99.13.ebuild,
+  dovecot-0.99.14-r1.ebuild, dovecot-0.99.14.ebuild:
+  fix broken sed calls (-ie -> -i -e)
 
 *dovecot-0.99.14-r1 (25 Feb 2005)
 
