@@ -1,6 +1,11 @@
 # ChangeLog for media-video/spca5xx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.3 2005/02/05 19:39:01 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.4 2005/02/14 14:43:31 kingtaco Exp $
+
+*spca5xx-20050206 (14 Feb 2005)
+
+  14 Feb 2005; Mike Doty <kingtaco@gentoo.org> +spca5xx-20050206.ebuild:
+  version bump.  bug 81873
 
 *spca5xx-20050116 (05 Feb 2005)
 
