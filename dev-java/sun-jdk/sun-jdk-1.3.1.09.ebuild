@@ -1,11 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.09.ebuild,v 1.1 2003/08/10 21:17:58 strider Exp $
-
-# Since This Ebuild Has FETCH restrictions:
-# You need to download this file from 
-# http://java.sun.com/j2se/1.3.1/download.html 
-# and copy it on your distfiles directory and emerge it again
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.09.ebuild,v 1.2 2003/09/12 04:40:27 strider Exp $
 
 IUSE="doc"
 
@@ -13,7 +8,7 @@ inherit java nsplugins
 
 At="j2sdk-1_3_1_09-linux-i586.bin"
 S="${WORKDIR}/jdk1.3.1_09"
-SRC_URI=""
+SRC_URI="${At}"
 DESCRIPTION="Sun Java Development Kit 1.3.1_09"
 HOMEPAGE="http://java.sun.com/j2se/1.3/download.html"
 DEPEND="virtual/glibc
@@ -28,11 +23,21 @@ SLOT="1.3"
 KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
 RESTRICT="fetch"
 
+pkg_nofetch() {
+	einfo "Please download ${At} from:"
+	einfo ${HOMEPAGE}
+	einfo "(select the \"Linux self-extracting file\" package format of the SDK)"
+	einfo "and move it to ${DISTDIR}"
+}
+
 src_unpack() {
-	if [ ! -f ${DISTDIR}/${At} ] ; then
-		die "Please download ${At} from ${HOMEPAGE} (select the \"Linux self-extracting file\" package format of the SDK) and move it to ${DISTDIR}. Note: You can find archived releases from http://java.sun.com/products/archive/"
+	if [ ! -r ${DISTDIR}/${At} ]; then
+		eerror "cannot read ${At}. Please check the permission and try again."
+		die
 	fi
-	tail +295 ${DISTDIR}/${At} > install.sfx
+	testExp=`echo -e "\0177\0105\0114\0106\0001\0001\0001"`
+	startAt=`grep -aonm 1 ${testExp}  ${DISTDIR}/${At} | cut -d: -f1`
+	tail -n +${startAt} ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
 	./install.sfx
 	rm install.sfx

@@ -1,11 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.ebuild,v 1.4 2003/08/24 02:23:53 strider Exp $
-
-# Since This Ebuild Has FETCH restrictions:
-# You need to download this file from 
-# http://java.sun.com/j2se/1.4.2/download.html 
-# and copy it on your distfiles directory and emerge it again
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.ebuild,v 1.5 2003/09/12 04:40:27 strider Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -44,8 +39,13 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	startAt=`grep -aonm 1 ELF  ${DISTDIR}/${At} | cut -d: -f1`
-	tail +${startAt} ${DISTDIR}/${At} > install.sfx
+	if [ ! -r ${DISTDIR}/${At} ]; then
+		eerror "cannot read ${At}. Please check the permission and try again."
+		die
+	fi
+	testExp=`echo -e "\0177\0105\0114\0106\0001\0001\0001"`
+	startAt=`grep -aonm 1 ${testExp}  ${DISTDIR}/${At} | cut -d: -f1`
+	tail -n +${startAt} ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
 	./install.sfx || die
 	rm install.sfx
