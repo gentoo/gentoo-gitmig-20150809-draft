@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmspaceclock/wmspaceclock-1.2d.ebuild,v 1.1 2004/07/22 09:22:55 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmspaceclock/wmspaceclock-1.2d.ebuild,v 1.2 2004/07/22 23:41:11 dholm Exp $
 
 DESCRIPTION="A sexy anti-aliased dockapp clock"
 HOMEPAGE="http://wmspaceclock.sourceforge.net"
 SRC_URI="mirror://sourceforge/wmspaceclock/${P/wm/}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND="virtual/libc
 	virtual/x11
