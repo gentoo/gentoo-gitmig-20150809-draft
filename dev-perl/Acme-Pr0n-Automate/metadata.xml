@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>perl</herd>
+	<herd></herd>
 	<maintainer>
-		<email>perl@gentoo.org</email>
-		<description>Primary Maintainer</description>
+		<email></email>
+		<description></description>
 	</maintainer>
-	<longdescription></longdescription>
+	<longdescription>This package is *NOT* maintained by the perl herd. Will the responsible party please correct the metadata file.</longdescription>
 </pkgmetadata>
