@@ -1,5 +1,15 @@
-MD5 9ca51b6b469a67958d85a8c645c10038 ChangeLog 464
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9c2554d29109c35b4f420c69aa255204 ChangeLog 565
 MD5 eddf170039964fad42c3d19d7a63bf81 metadata.xml 497
-MD5 6dcc4e9766fd9db3207c3b39870badc4 sdif-3.8.6.ebuild 1323
+MD5 4f8ec94a430e766b9d1d948f37eec0bb sdif-3.8.6.ebuild 1341
 MD5 3ba87254ca763ee63eef337f101a1138 files/digest-sdif-3.8.6 126
 MD5 dc3ba82219e697318a271e47a3694c00 files/sdif-3.8.6-cflags.patch 1369
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBkzWvArHZZzCEUG0RAklnAJ9Es+F1x4hLiEC0DNdY5osJMqAlEwCeJpdj
+ZeNT4/5L2o9JG7/HKo5pxBo=
+=UQu1
+-----END PGP SIGNATURE-----

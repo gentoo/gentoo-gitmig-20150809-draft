@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.8 2004/11/08 15:39:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.9 2004/11/11 09:44:57 eradicator Exp $
 
 inherit libtool flag-o-matic gcc eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 	# Fixes some strange sed-, libtool- and ranlib-errors on
 	# Mac OS X
-	if use macos || use ppc-macos; then
+	if use ppc-macos; then
 		glibtoolize
 	else
 		elibtoolize
@@ -54,17 +54,13 @@ src_compile() {
 	append-ldflags -fPIC
 
 	econf || die
-	use macos && cd ${S} && sed -i -e 's/examples//' Makefile
 	use ppc-macos && cd ${S} && sed -i -e 's/examples//' Makefile
 	emake || die
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	if use macos; then
-		dosym /usr/$(get_libdir)/libvorbisfile.3.1.0.dylib /usr/$(get_libdir)/libvorbisfile.0.dylib
-		dosym /usr/$(get_libdir)/libvorbisenc.2.0.0.dylib /usr/$(get_libdir)/libvorbisenc.0.dylib
-	elif use ppc-macos; then
+	if use ppc-macos; then
 		dosym /usr/$(get_libdir)/libvorbisfile.3.1.0.dylib /usr/$(get_libdir)/libvorbisfile.0.dylib
 		dosym /usr/$(get_libdir)/libvorbisenc.2.0.0.dylib /usr/$(get_libdir)/libvorbisenc.0.dylib
 	else
