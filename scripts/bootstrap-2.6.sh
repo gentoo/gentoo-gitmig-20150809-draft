@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.3 2004/06/10 16:52:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.4 2004/06/10 17:17:33 eradicator Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -149,7 +149,13 @@ myGETTEXT=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/gettext 
 [ -z "${myGETTEXT}" ] && myGETTEXT="sys-devel/gettext"
 myBINUTILS=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/binutils | sed 's:^\*::'`
 myGCC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/gcc | sed 's:^\*::'`
-myOS_HEADERS=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep virtual/os-headers | sed 's:^\*::'`
+myVOS_HEADERS=`cat ${MYPROFILEDIR}/virtuals | grep -v '^#' | grep virtual/os-headers | awk '{print $2}'`
+myOS_HEADERS=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep ${myVOS_HEADERS} | sed 's:^\*::'`
+
+if [ -z "${myOS_HEADERS}" ]; then
+	myOS_HEADERS=${myVOS_HEADERS}
+fi
+
 myGLIBC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-libs/glibc | sed 's:^\*::'`
 myTEXINFO=`cat ${MYPROFILEDIR}/packages|grep -v '^#'|grep sys-apps/texinfo |sed 's:^\*::'`
 myZLIB=`cat ${MYPROFILEDIR}/packages|grep -v '^#'|grep sys-libs/zlib |sed 's:^\*::'`
