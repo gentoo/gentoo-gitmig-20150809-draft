@@ -1,15 +1,16 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabber.rc6-r5,v 1.2 2004/02/02 21:40:45 humpback Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabber.rc6-r5,v 1.3 2004/03/04 19:31:19 vapier Exp $
+
 depend() {
-        need net
+	need net
 }
 
 start() {
-        ebegin "Starting Jabber Server"
+	ebegin "Starting Jabber Server"
 
-        jabberd -B -c /etc/jabber/multiple.xml >/dev/null 2>&1
+	jabberd -B -c /etc/jabber/multiple.xml >/dev/null 2>&1
 	for addon in /etc/jabber/*.xml; do
 		if [ "$addon" == "/etc/jabber/jit.xml" ]; then
 			jit-wpjabber -d -c $addon >/dev/null 2>&1
@@ -20,20 +21,19 @@ start() {
 		fi
 	done
 
-
-        eend $?
+	eend $?
 }
 
 stop() {
-        ebegin "Stopping Jabber Server"
-        killall jabberd
+	ebegin "Stopping Jabber Server"
+	killall jabberd
 	if [ "$addon" == "/etc/jabber/jit.xml" ]; then
 		killall jit-wpjabber
-        fi
-    	sleep 2
+	fi
+	sleep 2
 	killall -9 jabberd
 	if [ "$addon" == "/etc/jabber/jit.xml" ]; then
 		killall -9 jit-wpjabber
 	fi
-        eend $?
+	eend $?
 }
