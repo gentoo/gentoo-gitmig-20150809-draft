@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.17 2004/01/30 05:54:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.18 2004/02/18 12:14:39 mholzer Exp $
 
 inherit eutils libtool
 
@@ -9,6 +9,7 @@ S="${WORKDIR}/${PN}-1.4.0"
 DESCRIPTION="A ASCII-Graphics Library"
 HOMEPAGE="http://aa-project.sourceforge.net/aalib/"
 SRC_URI="mirror://sourceforge/aa-project/${MY_P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
