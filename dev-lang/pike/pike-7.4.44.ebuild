@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation, Emil Skoldberg, Fredrik Mellstrom (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.44.ebuild,v 1.3 2004/06/24 22:54:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.44.ebuild,v 1.4 2004/06/26 14:52:49 scandium Exp $
 
 inherit fixheadtails
 
@@ -30,10 +30,7 @@ DEPEND="dev-libs/gmp
 	opengl?	( virtual/opengl
 		virtual/glut )
 	sdl?	( media-libs/libsdl )
-	gtk?	( =x11-libs/gtk+-1.2* )
-	sys-devel/gcc
-	sys-devel/make
-	sys-apps/sed"
+	gtk?	( =x11-libs/gtk+-1.2* )"
 
 src_unpack() {
 	unpack ${A}

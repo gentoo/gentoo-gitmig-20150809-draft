@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation, Emil Skoldberg, Fredrik Mellstrom (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r2.ebuild,v 1.4 2004/06/24 22:54:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r2.ebuild,v 1.5 2004/06/26 14:52:48 scandium Exp $
 
 inherit flag-o-matic fixheadtails
 
@@ -32,10 +32,7 @@ DEPEND="dev-libs/gmp
 	tiff?	( media-libs/tiff )
 	opengl?	( virtual/opengl
 		virtual/glut )
-	sdl?	( media-libs/libsdl )
-	sys-devel/gcc
-	sys-devel/make
-	sys-apps/sed"
+	sdl?	( media-libs/libsdl )"
 
 src_unpack() {
 	unpack ${A}
