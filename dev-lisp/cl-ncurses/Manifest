@@ -1,5 +1,5 @@
-MD5 473ee323d660d5a9599bf58f51d8e2e1 cl-ncurses-0.1.ebuild 964
-MD5 c2c8af5ec1f1979a8e5ae0ed9a480a28 ChangeLog 348
+MD5 83577774dedba7c42b46f120f8eaa545 cl-ncurses-0.1.ebuild 961
+MD5 071f450ade59bade7ae54d740f5316c7 ChangeLog 442
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 96ddfd050deda89c9edb35514e57d926 files/cl-ncurses-0.1-gentoo.patch 4484
 MD5 b6ca5ee7861336d468ffa7b3d05eea9d files/digest-cl-ncurses-0.1 62
