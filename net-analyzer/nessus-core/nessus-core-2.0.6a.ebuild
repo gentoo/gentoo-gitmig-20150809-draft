@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.6a.ebuild,v 1.1 2003/05/23 11:49:00 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.6a.ebuild,v 1.2 2003/05/27 08:04:19 aliz Exp $
 
 IUSE="tcpd X gtk gtk2"
 S=${WORKDIR}/${PN}
@@ -14,7 +14,7 @@ DEPEND="=net-analyzer/libnasl-${PV}
 	gtk2? ( =x11-libs/gtk+-2* )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc -sparc ~alpha"
+KEYWORDS="x86 ppc -sparc alpha"
 
 src_compile() {
 	local myconf
