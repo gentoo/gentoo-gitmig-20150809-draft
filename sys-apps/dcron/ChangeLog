@@ -1,11 +1,17 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.19 2003/07/25 05:05:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.20 2003/11/19 06:41:09 prez Exp $
+
+*dcron-2.9-r1 (19 Nov 2003)
+
+  19 Nov 2003; Preston A. Elder <prez@gentoo.org> dcron-2.9-r1.ebuild:
+  Changed so run-crons is run every minute.  This will only work right
+  with the newer cronbase.
+
+*dcron-2.9 (19 Mar 2003)
 
   15 Jul 2003; Martin Holzer <mholzer@gentoo.org> dcron-2.9.ebuild:
   Marked x86 stable
-
-*dcron-2.9 (19 Mar 2003)
 
   25 Jul 2003; Guy Martin <gmsoft@gentoo.org> dcron-2.9.ebuild :
   Marked stable on hppa.
