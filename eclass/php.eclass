@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.34 2003/06/02 21:31:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.35 2003/06/08 02:27:45 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -239,7 +239,6 @@ php_src_compile() {
 	use jpeg && myconf="${myconf} --with-jpeg --with-jpeg-dir=/usr --enable-exif" || myconf="${myconf} --without-jpeg"
 	use jpeg && LDFLAGS="${LDFLAGS} -ljpeg"
 	use mcal && myconf="${myconf} --with-mcal=/usr"
-	use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
 	use oci8 && [ -n "${ORACLE_HOME}" ] && myconf="${myconf} --with-oci8=${ORACLE_HOME}"
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
@@ -252,6 +251,19 @@ php_src_compile() {
 	use truetype && myconf="${myconf} --with-ttf --with-t1lib"
 	use xml2 && myconf="${myconf} --with-dom --with-dom-xslt"
 	use zlib && myconf="${myconf} --with-zlib --with-zlib-dir=/usr/lib"
+
+	#use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
+	if [ -n "`use mysql`" ] ; then
+		if [ -n "`mysql_config | grep '4.1'`" ] ; then
+			myconf="${myconf} --with-mysqli=/usr"
+		else
+			myconf="${myconf} --with-mysql=/usr"
+		fi
+	else
+		myconf="${myconf} --without-mysql"
+	fi
+
+
 	
 	#use nls && myconf="${myconf} --with-gettext" || myconf="${myconf} --without-gettext"
 	#use qt && myconf="${myconf} --with-qtdom" || myconf="${myconf} --without-qtdom"
@@ -360,14 +372,17 @@ php_src_install() {
 
 	#install scripts
 	exeinto /usr/bin
-	doexe ${S}/pear/scripts/phpize
-	doexe ${S}/pear/scripts/php-config
-	doexe ${S}/pear/scripts/phpextdist
+
+	# Deprecated
+	#doexe ${S}/pear/scripts/phpize
+	#doexe ${S}/pear/scripts/php-config
+	#doexe ${S}/pear/scripts/phpextdist
 	
 	# PHP module building stuff
 	mkdir -p ${D}/usr/lib/php/build
 	insinto /usr/lib/php/build
-	doins build/* pear/pear.m4 acinclude.m4 configure.in Makefile.global scan_makefile_in.awk
+	doins build/* acinclude.m4 configure.in Makefile.global scan_makefile_in.awk
+	# Deprecated : pear/pear.m4
 
     
 	#revert Pear patch
