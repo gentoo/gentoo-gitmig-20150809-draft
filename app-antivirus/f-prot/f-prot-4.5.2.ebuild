@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.5.1.ebuild,v 1.1 2004/12/29 17:08:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.5.2.ebuild,v 1.1 2004/12/29 22:34:22 ticho Exp $
 
 IUSE=""
 
