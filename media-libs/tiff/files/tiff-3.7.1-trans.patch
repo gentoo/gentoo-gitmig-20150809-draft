@@ -1,0 +1,11 @@
+--- libtiff/tif_getimage.c.orig	2005-01-02 12:17:24.733622762 -0800
++++ libtiff/tif_getimage.c	2005-01-02 12:17:29.010612325 -0800
+@@ -247,7 +247,7 @@
+     TIFFGetFieldDefaulted(tif, TIFFTAG_SAMPLESPERPIXEL, &img->samplesperpixel);
+     TIFFGetFieldDefaulted(tif, TIFFTAG_EXTRASAMPLES,
+ 	&extrasamples, &sampleinfo);
+-    if (extrasamples > 1)
++    if (extrasamples >= 1)
+     {
+ 	switch (sampleinfo[0]) {
+ 	case EXTRASAMPLE_UNSPECIFIED:	/* Workaround for some images without */
