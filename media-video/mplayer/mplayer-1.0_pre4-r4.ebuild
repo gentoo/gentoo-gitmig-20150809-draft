@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.9 2004/06/09 17:05:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.10 2004/06/16 20:13:39 azarah Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://mplayer/releases/MPlayer-${MY_PV}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-1.9.17-mplayer.tar.bz2 )
-	gtk? ( mirror://mplayer/Skin/Blue-1.0.tar.bz2 )"
+	gtk? ( mirror://mplayer/Skin/Blue-1.4.tar.bz2 )"
 # Only install Skin if GUI should be build (gtk as USE flag)
 DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
