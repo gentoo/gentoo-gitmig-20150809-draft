@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.1 2004/02/10 23:27:38 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.2 2004/02/11 10:15:38 twp Exp $
+
+*ion2-20040211 (11 Feb 2004)
+
+  11 Feb 2004; Tom Payne <twp@gentoo.org> ion2-20040211.ebuild :
+  Added patch from mailing list.
 
 *ion2-20040207 (10 Feb 2004)
 

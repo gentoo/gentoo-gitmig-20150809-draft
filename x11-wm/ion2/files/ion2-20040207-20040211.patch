@@ -1,0 +1,267 @@
+Index: system-ac.mk.in
+===================================================================
+--- system-ac.mk.in	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ system-ac.mk.in	(.../ion-2-stable)	(revision 1290)
+@@ -163,7 +163,7 @@
+ DEFINES += @_DCF_HAS_VA_COPY@
+ 
+ CFLAGS=@CFLAGS@ $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
+-LDFLAGS=@CFLAGS@ $(LIBS) $(EXTRA_LIBS)
++LDFLAGS=@LDFLAGS@ $(LIBS) $(EXTRA_LIBS)
+ 
+ 
+ ##
+Index: ioncore/mplex.c
+===================================================================
+--- ioncore/mplex.c	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ ioncore/mplex.c	(.../ion-2-stable)	(revision 1290)
+@@ -349,7 +349,7 @@
+ 	region_lower(sub);
+ 
+ 	if(region_may_control_focus((WRegion*)mplex))
+-		set_focus((WRegion*)mplex);
++		warp((WRegion*)mplex);
+ 	
+ 	return TRUE;
+ }
+Index: ioncore/clientwin.c
+===================================================================
+--- ioncore/clientwin.c	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ ioncore/clientwin.c	(.../ion-2-stable)	(revision 1290)
+@@ -1078,7 +1078,7 @@
+ 		send_clientmsg(cwin->win, wglobal.atom_wm_take_focus, stmp);
+ 	}
+ 
+-	XSetInputFocus(wglobal.dpy, cwin->win, RevertToParent, CurrentTime);
++    SET_FOCUS(cwin->win);
+ 	
+ 	XSync(wglobal.dpy, 0);
+ }
+Index: ioncore/rootwin.c
+===================================================================
+--- ioncore/rootwin.c	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ ioncore/rootwin.c	(.../ion-2-stable)	(revision 1290)
+@@ -105,8 +105,15 @@
+ 
+ Window create_simple_window(WRootWin *rw, Window par, const WRectangle *geom)
+ {
+-	return XCreateSimpleWindow(wglobal.dpy, par,
+-							   geom->x, geom->y, geom->w, geom->h,
++    int w=geom->w;
++    int h=geom->h;
++    
++    if(w<=0)
++        w=1;
++    if(h<=0)
++        h=1;
++    
++	return XCreateSimpleWindow(wglobal.dpy, par, geom->x, geom->y, w, h,
+ 							   0, 0, BlackPixel(wglobal.dpy, rw->xscr));
+ }
+ 
+Index: ioncore/resize.c
+===================================================================
+--- ioncore/resize.c	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ ioncore/resize.c	(.../ion-2-stable)	(revision 1290)
+@@ -499,8 +499,6 @@
+ 	if(tmpreg!=reg || reg==NULL)
+ 		return;
+ 	
+-	moveres_mode=MOVERES_SIZE;
+-	
+ 	realdx1=(tmpdx1+=dx1);
+ 	realdx2=(tmpdx2+=dx2);
+ 	realdy1=(tmpdy1+=dy1);
+Index: ionws/split.c
+===================================================================
+--- ionws/split.c	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ ionws/split.c	(.../ion-2-stable)	(revision 1290)
+@@ -720,8 +720,6 @@
+ 	sn=s/2;
+ 	so=s-sn;
+ 	
+-    fprintf(stderr, "%d[%d:%d %d:%d]\n", s, sn, minsize, so, objmin);
+-    
+ 	if(sn<minsize)
+ 		sn=minsize;
+ 	if(so<objmin)
+Index: configure.ac
+===================================================================
+--- configure.ac	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ configure.ac	(.../ion-2-stable)	(revision 1290)
+@@ -20,7 +20,7 @@
+ 
+ dnl Checks for libraries. {{{
+ AC_PATH_XTRA()
+-test "${X_DISPLAY_MISSING+set}" == set && exit 1
++test "${X_DISPLAY_MISSING+set}" = set && exit 1
+ AC_CHECK_LIB([Xext],
+ 			 [XMissingExtension],
+ 			 [X_LIBS="$X_LIBS -lXext"],
+@@ -73,7 +73,7 @@
+ 							   instead of Xmb routines in an UTF-8 locale given
+ 							   the -i18n command line option])])
+ 
+-if test "x$enable_Xutf8" == xyes; then
++if test "x$enable_Xutf8" = xyes; then
+ 	AC_MSG_CHECKING([for Xutf8*])
+ 	save_CFLAGS="$CFLAGS"
+ 	CFLAGS="$CFLAGS $X_CFLAGS"
+@@ -115,7 +115,7 @@
+ 	libtool_path="$PATH"
+ fi
+ AC_PATH_PROG([LIBTOOL], [libtool], [], [$libtool_path])
+-test "x$LIBTOOL" == x && exit 1
++test "x$LIBTOOL" = x && exit 1
+ AC_MSG_CHECKING([for libtool version >= 1.4.3])
+ libtool_version=$($LIBTOOL --version | head -n 1 | cut -d' ' -f4)
+ dnl libtool_version=$($LIBTOOL --version | $EGREP -o '[0-9]+(\.[0-9]+)+' | head -n 1)
+@@ -143,7 +143,7 @@
+ 							  [Do not dynamically load modules (preload modules
+ 							   instead)])])
+ 
+-if test "x$enable_shared" == xno; then
++if test "x$enable_shared" = xno; then
+ 	PRELOAD_MODULES="1"
+ fi
+ 
+@@ -173,14 +173,14 @@
+ dnl }}}
+ 
+ dnl LUA {{{
+-if test "x$with_lua_prefix" == x; then
++if test "x$with_lua_prefix" = x; then
+ 	lua_search_path="$PATH"
+ else
+ 	lua_search_path="$with_lua_prefix/bin"
+ fi
+-if test "x$LUA" == x; then
++if test "x$LUA" = x; then
+ 	AC_PATH_PROG([LUA], [lua$with_lua_suffix], [], [$lua_search_path])
+-	test "x$LUA" == x && exit 1
++	test "x$LUA" = x && exit 1
+ fi
+ dnl }}}
+ 
+@@ -200,16 +200,16 @@
+ dnl }}}
+ 
+ dnl LUAC {{{
+-if test "x$LUAC" == x; then
++if test "x$LUAC" = x; then
+ 	AC_PATH_PROG([LUAC], [luac$with_lua_suffix], [], [$lua_search_path])
+-	test "x$LUAC" == x && exit 1
++	test "x$LUAC" = x && exit 1
+ fi
+ dnl }}}
+ 
+ dnl luac_version {{{
+-AC_MSG_CHECKING([for lua version == luac version])
++AC_MSG_CHECKING([for lua version = luac version])
+ luac_version=$($LUAC -v 2>&1 | head -n 1 | cut -d' ' -f2)
+-if test "x$lua_version" == "x$luac_version"; then
++if test "x$lua_version" = "x$luac_version"; then
+ 	AC_MSG_RESULT([yes (found $luac_version)])
+ else
+ 	AC_MSG_RESULT([no (found $luac_version)])
+@@ -301,7 +301,7 @@
+ 			  [AS_HELP_STRING([--enable-xopen-source],
+ 							  [Enable X/Open C flags (development use only)])])
+ 
+-if test "x$enable_xopen_source" == xyes; then
++if test "x$enable_xopen_source" = xyes; then
+ 	AC_MSG_CHECKING([for $CC flags to accept X/Open C])
+ 	case $host in
+ 	# FIXME: what flags are required for other hosts/compilers?
+@@ -325,7 +325,7 @@
+ 			  [AS_HELP_STRING([--enable-c99-source],
+ 							  [Enable C99 source (development use only)])])
+ 
+-if test "x$enable_c99_source" == xyes; then
++if test "x$enable_c99_source" = xyes; then
+ 	AC_MSG_CHECKING([for $CC flags to accept C99])
+ 	case $CC in
+ 	# FIXME: what flags are required for other hosts/compilers?
+@@ -428,7 +428,7 @@
+ 
+ AC_OUTPUT([system-ac.mk])
+ 
+-if test "x$lua_version" == "x5.0"; then
++if test "x$lua_version" = "x5.0"; then
+ 	AC_MSG_NOTICE([**])
+ 	AC_MSG_NOTICE([** lua version 5.0 is buggy, consider upgrading to 5.0.1])
+ 	AC_MSG_NOTICE([** see http://lua-users.org/lists/lua-l/2003-10/msg00039.html])
+Index: query/wedln.c
+===================================================================
+--- query/wedln.c	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ query/wedln.c	(.../ion-2-stable)	(revision 1290)
+@@ -416,12 +416,16 @@
+ 
+ static void wedln_show_completions(WEdln *wedln, char **strs, int nstrs)
+ {
+-	if(WEDLN_BRUSH(wedln)==NULL)
+-		return;
+-	
+-	setup_listing(&(wedln->complist), strs, nstrs, FALSE);
+-	input_refit((WInput*)wedln);
+-	/*wedln_draw_completions(wedln, TRUE);*/
++    int w=REGION_GEOM(wedln).w;
++    int h=REGION_GEOM(wedln).h;
++    
++    if(WEDLN_BRUSH(wedln)==NULL)
++        return;
++    
++    setup_listing(&(wedln->complist), strs, nstrs, FALSE);
++    input_refit((WInput*)wedln);
++    if(w==REGION_GEOM(wedln).w && h==REGION_GEOM(wedln).h)
++        wedln_draw_completions(wedln, TRUE);
+ }
+ 
+ 
+Index: query/querylib.lua
+===================================================================
+--- query/querylib.lua	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ query/querylib.lua	(.../ion-2-stable)	(revision 1290)
+@@ -337,10 +337,8 @@
+ -- This query asks for the name of a workspace. If a workspace
+ -- (an object inheriting \type{WGenWS}) with such a name exists,
+ -- it will be switched to. Otherwise a new workspace with the
+--- entered name will be created. The default class for such a workspace
+--- has been \emph{temporarily} hardcoded to \type{WIonWS}. By prefixing
+--- the input string with ''classname:'' it is possible to create other 
+--- kinds of workspaces.
++-- entered name will be created and the user will be queried for
++-- the type of the workspace.
+ querylib.query_workspace=querylib.make_frame_fn(
+     "Go to or create workspace:", nil, 
+     querylib.workspace_handler,
+Index: man/ion.1.in.txt
+===================================================================
+--- man/ion.1.in.txt	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ man/ion.1.in.txt	(.../ion-2-stable)	(revision 1290)
+@@ -258,8 +258,11 @@
+        Mod1+K Q
+               Send next key press to active client window.
+ 
++       Mod1+Enter
++              Toggle client window full screen mode.
+ 
+ 
++
+ LINE-EDITING KEYS
+        These  keys  can be used in the line editor (queries). They are similar
+        to those of the joe(1) editor.  Selection  works  differently,  though,
+Index: man/ion.1.in
+===================================================================
+--- man/ion.1.in	(.../tags/RELEASE_2-20040207)	(revision 1290)
++++ man/ion.1.in	(.../ion-2-stable)	(revision 1290)
+@@ -272,6 +272,9 @@
+ .TP
+ .B Mod1+K Q
+ Send next key press to active client window.
++.TP
++.B Mod1+Enter
++Toggle client window full screen mode.
+ 
+ 
+ .SH LINE-EDITING KEYS
