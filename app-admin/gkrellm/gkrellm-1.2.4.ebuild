@@ -1,14 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jerry A! <jerry@thehutt.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.4.ebuild,v 1.4 2001/11/27 08:15:00 jerrya Exp $
-
-
+# Author Jerry Alexandratos <jerry@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.4.ebuild,v 1.5 2001/11/27 21:23:44 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Single process stack of various system monitors"
-SRC_URI="http://web.wt.net/~billw/gkrellm/${P}.tar.gz"
-HOMEPAGE="http://www.gkrellm.net/"
+SRC_URI="http://web.wt.net/~billw/${PN}/${P}.tar.gz"
 
 DEPEND="virtual/glibc
 	>=x11-libs/gtk+-1.2.10-r4
@@ -16,26 +13,27 @@ DEPEND="virtual/glibc
 
 
 src_compile() {
-	emake  PREFIX=/usr prefix=/usr || die
+
+	use nls && ./enable_nls
+
+	emake || die
+
 }
 
-src_install() {
-	cd ${S}/src
+src_install () {
 
-	exeinto /usr/bin
-	doexe gkrellm
-
-	insinto /usr/include/gkrellm
-	for i in gkrellm.h gkrellm_private_proto.h gkrellm_public_proto.h
-	do
-		doins $i
-	done
-
+	dodir /usr/{bin,include,share/man}
 	dodir /usr/share/gkrellm/{themes,plugins}
 
-	cd ${S}
+	make install \
+		INSTALLDIR=${D}/usr/bin \
+		MANDIR=${D}/usr/share/man/man1 \
+		INCLUDEDIR=${D}/usr/include \
+		LOCALEDIR=/usr/share/locale
 
 	dodoc COPYRIGHT README Changelog
 	docinto html
 	dodoc Changelog-plugins.html Changelog-themes.html Themes.html
 }
+
+
