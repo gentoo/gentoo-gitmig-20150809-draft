@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.9 2004/03/14 10:59:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.10 2004/04/18 03:29:34 dragonheart Exp $
 
 inherit eutils
 
 S="${WORKDIR}/${PN}_1-9_stable"
 DESCRIPTION="Jail Chroot Project is a tool that builds a chrooted environment and automagically configures and builds all the required files, directories and libraries"
-SRC_URI="http://www.gsyc.inf.uc3m.es/~assman/downloads/jail/${PN}_${PV}.tar.gz"
-HOMEPAGE="http://www.gsyc.inf.uc3m.es/~assman/jail/"
-
+SRC_URI="mirror://sourceforge/jail/${PN}_${PV}.tar.gz"
+HOMEPAGE="http://www.jmcresearch.com/projects/jail/"
+RESTRICT="nomirror"
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc"

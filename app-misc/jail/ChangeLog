@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.10 2004/04/17 06:17:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.11 2004/04/18 03:29:34 dragonheart Exp $
+
+  18 Apr 2004; Daniel Black <dragonheart@gentoo.org> jail-1.9-r1.ebuild:
+  Homedirectory move - ref bug #47792. Thanks Aaron Peterson <alpeterson@wsu.edu>
 
   16 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> jail-1.9.ebuild:
   clean older version
