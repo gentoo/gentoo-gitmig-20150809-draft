@@ -1,14 +1,14 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.9 2003/03/20 07:24:34 method Exp $
-
-*coreutils-4.5.10-r1 (20 Mar 2003)
-
-  20 Mar 2003; Joshua Brindle <method@gentoo.org> coreutils-4.5.10-r1.ebuild:
-  Revision bump to add selinux support
-  Thanks to sindian
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.10 2003/03/20 11:22:41 seemant Exp $
 
 *coreutils-4.5.10 (14 Mar 2003)
+
+  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  coreutils-4.5.10.ebuild :
+
+  Patched to add selinux, thanks to sindian. Note, I removed the -r1
+  revision bump as it was unnecessary.
 
   14 Mar 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-4.5.10.ebuild:
   version bump thanks to drobbins on -core
