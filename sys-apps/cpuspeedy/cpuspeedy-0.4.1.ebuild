@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/cpuspeedy-0.4.1.ebuild,v 1.3 2004/09/11 15:44:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/cpuspeedy-0.4.1.ebuild,v 1.4 2005/01/30 20:00:00 voxus Exp $
 
 inherit python
 
 DESCRIPTION="A simple and easy to use program to control the speed and the voltage of CPUs on the fly."
 SRC_URI="mirror://sourceforge/cpuspeedy/${P}.tar.gz"
 HOMEPAGE="http://cpuspeedy.sourceforge.net/"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cpuspeedy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/ChangeLog,v 1.14 2004/11/27 11:55:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/ChangeLog,v 1.15 2005/01/30 20:00:00 voxus Exp $
+
+  30 Jan 2004; Konstantin Arkhipov <voxus@gentoo.org> cpuspeedy-0.4.1.ebuild:
+  Added ~amd64 keyword + header fix.
 
   27 Nov 2004; Daniel Black <dragonheart@gentoo.org> -cpuspeedy-0.3.0.ebuild,
   -cpuspeedy-0.4.0.ebuild:
