@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/rapip
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/rapip/ChangeLog,v 1.1 2003/02/25 05:01:10 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/rapip/ChangeLog,v 1.2 2003/03/20 05:58:41 zwelch Exp $
+
+*rapip-0.4.1 (19 Mar 2003)
+
+  19 Mar 2003; Zach Welch <zwelch@gentoo.org> rapip-0.4.1.ebuild:
+  bump version; see bug 17419
 
 *rapip-0.4 (24 Feb 2003)
 
