@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.2-r2.ebuild,v 1.9 2005/02/08 14:38:41 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.2-r2.ebuild,v 1.10 2005/04/03 17:06:35 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -12,6 +12,8 @@ IUSE="gphoto2 imlib jpeg2k opengl povray scanner tetex"
 DEPEND="~kde-base/kdebase-${PV}
 	gphoto2? ( media-gfx/gphoto2 )
 	scanner? ( media-gfx/sane-backends )
+	media-libs/libart_lgpl
+	media-libs/lcms
 	dev-libs/fribidi
 	opengl? ( virtual/glut virtual/opengl )
 	imlib? ( media-libs/imlib )
