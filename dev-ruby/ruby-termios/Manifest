@@ -1,3 +1,4 @@
-MD5 8346d30ad97e71931b5305a3aef9a151 ruby-termios-0.9.4.ebuild 631
-MD5 fb2376b0c53bbd19223435a9c7320dc8 ChangeLog 433
 MD5 23ee30229f890432c588dc86bfac7e24 files/digest-ruby-termios-0.9.4 68
+MD5 fb2376b0c53bbd19223435a9c7320dc8 ChangeLog 433
+MD5 220408f650a594292513fe0e6720dae2 ruby-termios-0.9.4.ebuild 631
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157

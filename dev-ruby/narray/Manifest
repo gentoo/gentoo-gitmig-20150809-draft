@@ -1,3 +1,4 @@
-MD5 35cc1e4804cccc2695a02de6a6307e98 ChangeLog 538
-MD5 024ca79de12559b4d4d59a92f055c4df narray-0.5.7-r1.ebuild 668
 MD5 e9d299e2c06fd387bd6cfea9f9c743ba files/digest-narray-0.5.7-r1 63
+MD5 071e7e535d71abfac453700f243f4dc6 ChangeLog 656
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 024ca79de12559b4d4d59a92f055c4df narray-0.5.7-r1.ebuild 668
