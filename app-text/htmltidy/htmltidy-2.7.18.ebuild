@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18.ebuild,v 1.6 2002/12/09 04:17:44 manson Exp $ /home/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18.ebuild, v 1.5 2002/07/25 11:07:00 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18.ebuild,v 1.7 2003/02/01 17:17:35 kutsuya Exp $ /home/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18.ebuild, v 1.5 2002/07/25 11:07:00 cybersystem Exp $
 
 # convert from normalized gentoo version number to htmltidy's wacky date thing
 parts=(${PV//./ })
@@ -9,7 +9,7 @@ MY_P=tidy_src_${vers}
 S=${WORKDIR}/tidy
 
 DESCRIPTION="fix mistakes and tidy up sloppy editing in HTML and XML"
-SRC_URI="http://tidy.sourceforge.net/src/${MY_P}.tgz"
+SRC_URI="http://tidy.sourceforge.net/src/old/${MY_P}.tgz"
 HOMEPAGE="http://tidy.sourceforge.net/"
 
 SLOT="0"
@@ -17,6 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc "
 
 DEPEND=""
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
