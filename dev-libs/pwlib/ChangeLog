@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.70 2004/12/29 22:41:02 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.71 2005/01/08 20:12:42 stkn Exp $
+
+  08 Jan 2005; Stefan Knoblich <stkn@gentoo.org> pwlib-1.8.3.ebuild:
+  marked ~x86
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
