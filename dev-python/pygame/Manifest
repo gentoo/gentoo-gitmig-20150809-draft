@@ -1,0 +1,7 @@
+MD5 d86869cfb8fb0f1bb9982ba861512727 ChangeLog 1958
+MD5 ca4a36af23bff0768dc77811c250dcc2 pygame-1.5.3.ebuild 855
+MD5 36b0e4a34427ea98ca0082ffdc38b17a pygame-1.5.5.ebuild 917
+MD5 bcc21545f0d3a09c4bf9beb344d39535 files/digest-pygame-1.5.3 64
+MD5 a0a1443e65c63b895d64a478953de7c7 files/digest-pygame-1.5.5 64
+MD5 8f157ac063bfbc2817a2ee8d2acf05c7 files/mixer.c-pause.patch 812
+MD5 d46bdbdd81463a498d29a4a22bb14f81 files/music.c-pause.patch 800
