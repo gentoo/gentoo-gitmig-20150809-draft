@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.ebuild,v 1.1 2002/06/05 19:42:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.1 2002/07/07 21:24:27 azarah Exp $
+
+# NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 
 # handle _rc versions
 MY_PV1=${PV/_}
@@ -14,7 +16,6 @@ LICENSE="MPL-1.1 | NPL-1.1"
 
 RDEPEND=">=x11-base/xfree-4.2.0-r11
 	>=gnome-base/ORBit-0.5.10-r1
-	=dev-libs/glib-2.0*
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/jpeg-6b
 	>=media-libs/libmng-1.0.0
@@ -22,10 +23,13 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	=x11-libs/gtk+-2.0*
+	( gtk2? >=x11-libs/gtk+-2.0.5 :
+	  =x11-libs/gtk+-1.2* )
+	( gtk2? >=dev-libs/glib-2.0.4 :
+	  =dev-libs/glib-1.2* )
 	java?  ( virtual/jre )"
-#   gtk?   ( x11-libs/gtk+ )
-#   mozqt? ( x11-libs/qt )"
+#	gtk?   ( x11-libs/gtk+ )
+#	mozqt? ( x11-libs/qt )"
 
 DEPEND="java?  ( >=dev-java/java-config-0.2.0 )
 	${RDEPEND}
@@ -38,12 +42,19 @@ SLOT="0"
 export MOZILLA_OFFICIAL=1
 export BUILD_OFFICIAL=1
 
-# enable XFT support (via freetype2)
-export MOZ_ENABLE_XFT=1
+# enable XFT
+[ "${DISABLE_XFT}" != "1" ] && [ -z "`use gtk2`" ] && \
+	export MOZ_ENABLE_XFT=1
+
+# enable GTK+-2.0 support
+if [ "`use gtk2`" ] ; then
+	export MOZ_ENABLE_GTK2=1
+	export MOZ_WIDGET_GTK2=1
+	export MOZ_WIDGET_TOOLKIT=gtk2
+fi
 
 # make sure the nss module gets build (for NSS support)
-#[ -n "`use ssl`" ] && export MOZ_PSM=1
-export MOZ_PSM=1
+[ -n "`use ssl`" ] && export MOZ_PSM=1
 
 # do we build java support for the NSS stuff ?
 # NOTE: this is broken for the moment
@@ -51,52 +62,86 @@ export MOZ_PSM=1
 
 
 src_unpack() {
-
+	
 	unpack ${A}
+
 	# Fix a compile error with freetype-2.0.9 or later
 	cd ${S}
 	patch -p1 < ${FILESDIR}/mozilla-new-freetype2.patch || die
 
-	echo  "applying marco gtk2 patch"
-	patch -p1 <${FILESDIR}/gtk2mozilla.patch
+	[ -z "${CC}" ] && CC=gcc
+	if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ] ; then
+		# Fix bogus asm (from Mandrake .spec)
+		patch -p1 < ${FILESDIR}/${P}-asmfixes.patch || die
 
-	echo "applying gtk2 XFT bytecode  patch"
-	patch -p1  < ${FILESDIR}/mozilla-ft-bytecode.patch || die "Failed" mozilla-ft-bytecode.patch
+#		patch -p1 < ${FILESDIR}/${P}-gcc3-java-plugin.patch || die
 
-#	echo "gtk2_mozilla_xft.patch"
-#	patch -p1  < ${FILESDIR}/gtk2_mozilla_xft.patch
-	chown -R root.root *
+		# ABI compat patch for gcc-3.x to use gcc-2.95 plugins
+		#
+		# http://bugzilla.mozilla.org/show_bug.cgi?id=154206
+		# http://bugzilla.mozilla.org/show_bug.cgi?id=124006
+		# http://bugzilla.mozilla.org/show_bug.cgi?id=116444
+		#
+		if [ "${ARCH}" = "x86" ] ; then
+			patch -p0 < ${FILESDIR}/${P}-abi-compat-wrappers.patch
+		fi
+	fi
+
+	# Apply the bytecode patch for freetype2
+	patch -p1 < ${FILESDIR}/mozilla-ft-bytecode.patch || die
+
+	# Use gtk+-2.0 as widget toolkit
+	if [ "`use gtk2`" ] ; then
+		cd ${S}/embedding/browser/gtk/src
+		bzip2 -dc ${FILESDIR}/gtk2_embed.patch.bz2 | patch -p0 || die
+		cd ${S}/widget/src/gtk2
+		bzip2 -dc ${FILESDIR}/gtk2_widget.patch.bz2 | patch -p0 || die
+	fi
 }
 
 src_compile() {
 
+	chown -R root.root *
+	#This should enable parallel builds, I hope
 	export MAKE="emake"
 	local myconf=""
+	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
+	#       tested ok -- azarah
+	if [ -n "`use gtk2`" ] ; then
+		myconf="${myconf} --enable-toolkit-gtk2 \
+			--enable-default-toolkit=gtk2 \
+			--disable-toolkit-qt \
+			--disable-toolkit-xlib \
+			--disable-gtk"
+	else
+		myconf="${myconf} --enable-toolkit-gtk \
+			--enable-default-toolkit=gtk \
+			--disable-toolkit-qt \
+			--disable-toolkit-xlib \
+			--disable-gtk2"
+	fi
 
-    # NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
-    #       tested ok.  ALSO, since we can use gtk+-2.0 now for XFT support,
-	#       QT or such wont be needed anymore - Azarah
-#   if [ -n "`use qt`" ] ; then
-        # when you enable this again, remember the qt dir is now /usr/qt/2 - danarmak
-#       myconf="--enable-toolkit-qt --enable-default-toolkit=qt \
-#           --disable-toolkit-gtk --disable-toolkit-xlib"
-#   elif [ -n "`use gtk`" ] ; then
-		myconf="--enable-default-toolkit=gtk2 --disable-toolkit-qt \
-			--disable-toolkit-xlib"
-#   else
-#       myconf="--enable-toolkit-xlib --enable-default-toolkit=xlib \
-#           --disable-toolkit-qt --disable-toolkit-gtk"
-#   fi
-
-		
 	if [ -z "`use ldap`" ] ; then
 		myconf="${myconf} --disable-ldap"
 	fi
-	if [ -z "$DEBUG" ] ; then
-		 myconf="${myconf} --enable-strip-libs --disable-debug \
-		 	-disable-dtd-debug --disable-tests"
+
+	if [ -z "${DEBUG}" ] ; then
+		myconf="${myconf} --enable-strip-libs \
+			--disable-debug \
+			--disable-dtd-debug \
+			--disable-tests"
 	fi
-	
+
+	if [ -n "${MOZ_ENABLE_XFT}" ] ; then
+		# for this we have to use freetype-2.0.8 included with XFree86
+		myconf="${myconf} --enable-xft \
+			--with-ft-prefix=/usr/X11R6 \
+			--with-ft-exec-prefix=/usr/X11R6/bin"
+			
+		export FT2_CONFIG="/usr/X11R6/bin/freetype-config"
+	fi
+
+
 	# NB!!:  Due to the fact that the non default extensions do not always
 	#        compile properly, using them is considered unsupported, and
 	#        is just here for completeness.  Please do not use if you 
@@ -113,7 +158,7 @@ src_compile() {
 	if [ -n "`use mozaccess-builtin`" ] ; then
 		myext="${myext},access-builtin"
 	fi
-    if [ -n "`use mozctl`" ] ; then
+	if [ -n "`use mozctl`" ] ; then
 		myext="${myext},ctl"
 	fi
 	if [ -n "`use mozp3p`" ] ; then
@@ -123,41 +168,53 @@ src_compile() {
 		myext="${myext},interfaceinfo"
 	fi
 
+	
+	if [ -n "`use moznomail`" ] || \
+	   [ "${NO_MAIL}" = "YES" ] || [ "${NO_MAIL}" = "yes" ]
+	then
+		myconf="${myconf} --disable-mailnews"
+	fi
+	
 	export BUILD_MODULES=all
 	export BUILD_OPT=1
 
-	# Use freetype included with xfree86
-	export FT2_CONFIG="/usr/X11R6/bin/freetype-config"
-																	
+	# Currently gcc-3.1.1 dont work well if we specify "-march"
+	# and other optimizations
+	[ -z "${CC}" ] && CC=gcc
+	if [ "`${CC} -dumpversion`" = "3.1.1" ] ; then
+		export CFLAGS=""
+		export CXXFLAGS=""
+	fi
+
 	# Crashes on start when compiled with -fomit-frame-pointer
 	CFLAGS="${CFLAGS/-fomit-frame-pointer}"
 	CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer}"
 
 	./configure --prefix=/usr/lib/mozilla \
-		--disable-tests \
 		--disable-pedantic \
 		--disable-svg \
+		--enable-mathml \
+		--without-system-nspr \
+		--enable-nspr-autoconf \
+		--with-system-zlib \
+		--enable-ipv6 \
 		--enable-xsl \
 		--enable-crypto \
 		--enable-detect-webshell-leaks \
 		--enable-xinerama \
 		--with-java-supplement \
 		--with-pthreads \
-		--enable-xft \
-		--with-ft-prefix=/usr/X11R6 \
-		--with-ft-exec-prefix=/usr/X11R6/bin \
 		--with-extensions="${myext}" \
-		--enable-optimize=-O3 \
+		--enable-optimize="-Wno-deprecated -O3" \
 		--with-default-mozilla-five-home=/usr/lib/mozilla \
 		${myconf} || die
 
 	make || die
-	
-# SSL is needed for far too much galeon2 status is "on the way" enabling this for now":/
+
 	# Build the NSS/SSL support
-#	if [ "`use ssl`" ] ; then
+	if [ "`use ssl`" ] ; then
 		cd ${S}/security/coreconf
-	
+		
 		# Fix #include problem
 		cp headers.mk headers.mk.orig
 		echo 'INCLUDES += -I$(DIST)/include/nspr -I$(DIST)/include/dbm'\
@@ -170,7 +227,7 @@ src_compile() {
 		make moz_import || die
 		make || die
 		cd ${S}
-#	fi
+	fi
 }
 
 src_install() {
@@ -213,8 +270,7 @@ src_install() {
 	mv ${D}/usr/lib/mozilla/{xpcshell,xpidl,xpt_dump,xpt_link} ${D}/usr/bin
 
 	# Install the NSS/SSL libs, headers and tools
-	# once again we enable SSL per default
-#	if [ "`use ssl`" ] ; then
+	if [ "`use ssl`" ] ; then
 		# Install the headers ('make install' do not work for headers ...)
 		insinto /usr/lib/mozilla/include/nss
 		doins ${S}/dist/public/seccmd/*.h
@@ -235,11 +291,11 @@ src_install() {
 		# gets newked.
 		unset SOURCE_LIB_DIR
 		unset SOURCE_BIN_DIR
-#	fi
+	fi
 
 	cd ${S}
 	exeinto /usr/bin
-	doexe ${FILESDIR}/mozilla
+	newexe ${FILESDIR}/mozilla.sh mozilla
 	insinto /etc/env.d
 	doins ${FILESDIR}/10mozilla
 	dodoc LEGAL LICENSE README/mozilla/README*
@@ -250,7 +306,6 @@ src_install() {
 	doins ${S}/build/package/rpm/SOURCES/mozicon50.xpm
 
 	# Install icon and .desktop for menu entry
-	# Mozilla + gtk2 Really should do this you know :p
 	if [ "`use gnome`" ] ; then
 		insinto /usr/share/pixmaps
 		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png
@@ -263,12 +318,13 @@ src_install() {
 		cd ${S}
 		insinto /usr/share/gnome/apps/Internet
 		doins ${S}/build/package/rpm/SOURCES/mozilla.desktop
-	fi
+        fi
 
-	# Fix the preferences for XFT
-	cd ${D}/usr/lib/mozilla/defaults/pref
-	patch -p0 <${FILESDIR}/mozilla-xft-unix-prefs.patch || \
-		die "failed unix prefs patch"
+	if [ -n "${MOZ_ENABLE_XFT}" ] ; then
+		cd ${D}/usr/lib/mozilla/defaults/pref
+		patch -p0 <${FILESDIR}/mozilla-xft-unix-prefs.patch || \
+			die "failed unix prefs patch"
+	fi
 
 	# Take care of non root execution
 	# (seems the problem is that not all files are readible by the user)
@@ -289,30 +345,31 @@ pkg_preinst() {
 
 pkg_postinst() {
 
+	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
+
 	# Make symlink for Java plugin (do not do in src_install(), else it only
 	# gets installed every second time)
-	if [ "`use java`" ] && [ ! -L /usr/lib/mozilla/plugins/`java-config --browser-plugin=mozilla` ]
+	if [ "`use java`" ] && [ ! -L ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` ]
 	then
 		if [ -e `java-config --full-browser-plugin-path=mozilla` ]
 		then
 			ln -sf `java-config --full-browser-plugin-path=mozilla` \
-				/usr/lib/mozilla/plugins/`java-config --browser-plugin=mozilla` 
+				${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` 
 		fi
 	fi
 
 	# Take care of component registration
-	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
 
 	# Remove any stale component.reg
-	if [ -e ${ROOT}/usr/lib/mozilla/component.reg ] ; then
-		rm -f ${ROOT}/usr/lib/mozilla/component.reg
+	if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
+		rm -f ${MOZILLA_FIVE_HOME}/component.reg
 	fi
 
 	# Tempory fix for missing libtimer_gtk.so
 	# If it exists when generating component.reg (before unmerge of old),
 	# it 'corrupts' the newly generated component.reg with invalid references.
-	if [ -e ${ROOT}/usr/lib/mozilla/components/libtimer_gtk.so ] ; then
-		rm -f ${ROOT}/usr/lib/mozilla/components/libtimer_gtk.so
+	if [ -e ${MOZILLA_FIVE_HOME}/components/libtimer_gtk.so ] ; then
+		rm -f ${MOZILLA_FIVE_HOME}/components/libtimer_gtk.so
 	fi
 
 	# Needed to update the run time bindings for REGXPCOM 
@@ -320,24 +377,26 @@ pkg_postinst() {
 	env-update
 	# Register components, setup Chrome .rdf files and fix file permissions
 	umask 022
-	${ROOT}/usr/lib/mozilla/regxpcom
-	chmod g+r,o+r ${ROOT}/usr/lib/mozilla/component.reg
+	${MOZILLA_FIVE_HOME}/regxpcom
+	chmod g+r,o+r ${MOZILLA_FIVE_HOME}/component.reg
 	# Setup the default skin and locale to correctly generate the Chrome .rdf files
+	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec rm -f {} \; || :
 	echo "skin,install,select,classic/1.0" >> \
 		${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt
 	echo "locale,install,select,en-US" >> \
 		${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt
-	${ROOT}/usr/lib/mozilla/regchrome
-	find ${ROOT}/usr/lib/mozilla -type d -perm 0700 -exec chmod 755 {} \; || :
+	${MOZILLA_FIVE_HOME}/regchrome
+	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
 
-	einfo
-	einfo "*****************************************************************"
-	einfo "* NB:  Please unmerge old versions of mozilla, as the header    *"
-	einfo "* layout in /usr/lib/mozilla/include usually change, and will   *"
-	einfo "* result in compile errors when compiling programs that need    *"
-	einfo "* mozilla headers and libs (galeon, nautilus, ...)              *"
-	einfo "*****************************************************************"
-	einfo
+    
+	echo
+	echo "*****************************************************************"
+	echo "* NB:  Please unmerge old versions of mozilla, as the header    *"
+	echo "* layout in /usr/lib/mozilla/include have changed and will      *"
+	echo "* result in compile errors when compiling programs that need    *"
+	echo "* mozilla headers and libs (galeon, nautilus, ...)              *"
+	echo "*****************************************************************"
+	echo
 }
 
 pkg_postrm() {
@@ -345,12 +404,18 @@ pkg_postrm() {
 	# Regenerate component.reg in case some things changed
 	if [ -e ${ROOT}/usr/lib/mozilla/regxpcom ] ; then
 	
-		if [ -e ${ROOT}/usr/lib/mozilla/component.reg ] ; then
-			rm -f ${ROOT}/usr/lib/mozilla/component.reg
+		export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
+	
+		if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
+			rm -f ${MOZILLA_FIVE_HOME}/component.reg
 		fi
-		
-		${ROOT}/usr/lib/mozilla/regxpcom
-		chmod g+r,o+r ${ROOT}/usr/lib/mozilla/component.reg
+
+		${MOZILLA_FIVE_HOME}/regxpcom
+		chmod g+r,o+r ${MOZILLA_FIVE_HOME}/component.reg
+
+		find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec rm -f {} \; || :
+		${MOZILLA_FIVE_HOME}/regchrome
+		find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
 	fi
 }
 
