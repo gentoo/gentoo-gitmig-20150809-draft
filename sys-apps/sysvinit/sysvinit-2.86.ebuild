@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86.ebuild,v 1.1 2004/12/22 03:25:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86.ebuild,v 1.2 2005/01/01 22:08:41 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,6 @@ SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-KEYWORDS="-*"
 IUSE="selinux bootstrap build"
 
 RDEPEND="selinux? ( >=sys-libs/libselinux-1.14 )"
