@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cf5ea4c156d021d3a37acb6ae9536a92 ChangeLog 1476
-MD5 a9fb2efb2d6b1cf569fb93938b74a58d gl117-1.3.ebuild 834
+MD5 164a3d7a3b227557167aa08419b6e0f6 gl117-1.3.ebuild 828
+MD5 ffda1b7edd11453ba68248e68ea9ee92 ChangeLog 1469
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 9c39378ab87e04c92b53be4325473a1b gl117-1.2.ebuild 776
+MD5 c29d052b39ddd7a298b256afc1abb8e7 gl117-1.2.ebuild 766
+MD5 dbc181b31b75b84a681b2d278a214165 files/1.3-gcc-3.4-gentoo.patch 1388
 MD5 945f07eb6f434e41cfcb6dd284717073 files/digest-gl117-1.2 67
 MD5 b71cc371a34ed8325ca96ab27964f748 files/digest-gl117-1.3 68
-MD5 dbc181b31b75b84a681b2d278a214165 files/1.3-gcc-3.4-gentoo.patch 1388
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAzLCqHTu7gpaalycRAkSnAJ4kaqxnUaV7Dr4vyU+r4AN2EiL6DQCfduk7
-FbSfI4aE6vBEgPbw+SehS54=
-=rFVF
------END PGP SIGNATURE-----
