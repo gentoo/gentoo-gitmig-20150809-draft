@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4.ebuild,v 1.12 2004/01/29 04:08:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4.ebuild,v 1.13 2004/03/09 18:31:22 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -17,6 +17,7 @@ DEPEND=">=sys-devel/autoconf-2.52d-r1"
 
 src_compile() {
 	append-flags -fPIC
+	filter-flags -fprefetch-loop-arrays
 
 	local myconf
 	use oss \

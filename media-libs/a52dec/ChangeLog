@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.11 2004/01/29 04:08:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.12 2004/03/09 18:31:22 eradicator Exp $
+
+  09 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  a52dec-0.7.3-r1.ebuild, a52dec-0.7.4.ebuild:
+  Filter out -fprefetch-loop-arrays (Bug #44007).
 
   28 Jan 2004; Aron Griffis <agriffis@gentoo.org> a52dec-0.7.4.ebuild:
   stable on alpha and ia64
