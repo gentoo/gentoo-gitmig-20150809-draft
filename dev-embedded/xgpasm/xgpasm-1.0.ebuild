@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/xgpasm/xgpasm-1.0.ebuild,v 1.3 2004/03/23 18:44:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/xgpasm/xgpasm-1.0.ebuild,v 1.4 2004/06/24 22:09:15 agriffis Exp $
 
 DESCRIPTION="GUI for GPASM"
 HOMEPAGE="http://xizard.free.fr/logiciels/xgpasm/xgpasm.html"

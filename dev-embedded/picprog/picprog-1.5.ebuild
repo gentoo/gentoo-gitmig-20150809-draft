@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/picprog-1.5.ebuild,v 1.2 2004/03/22 00:02:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/picprog-1.5.ebuild,v 1.3 2004/06/24 22:08:11 agriffis Exp $
 
 DESCRIPTION="a pic16xxx series microcontroller programmer software for the simple serial port device"
 HOMEPAGE="http://www.iki.fi/hyvatti/pic/${PN}.html"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/include/include-0.3.2.ebuild,v 1.6 2004/04/25 18:58:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/include/include-0.3.2.ebuild,v 1.7 2004/06/24 22:07:40 agriffis Exp $
 
 DESCRIPTION="This is a collection of the useful independent include files for C/Assembler developers."
 SRC_URI="mirror://sourceforge/openwince/${P}.tar.bz2"

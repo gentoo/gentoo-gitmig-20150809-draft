@@ -1,6 +1,6 @@
 # ChangeLog for dev-embedded/include
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/include/ChangeLog,v 1.5 2004/04/25 18:58:52 squinky86 Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/include/ChangeLog,v 1.6 2004/06/24 22:07:40 agriffis Exp $
 
   25 Apr 2004; Jon Hood <squinky86@gentoo.org> include-0.3.2.ebuild:
   changed econf || dir to econf || die

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0.ebuild,v 1.7 2004/05/17 15:39:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0.ebuild,v 1.8 2004/06/24 22:08:53 agriffis Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Small device C compiler (for various microprocessors)"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/uisp-20030618.ebuild,v 1.3 2004/03/23 18:41:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/uisp-20030618.ebuild,v 1.4 2004/06/24 22:09:04 agriffis Exp $
 
 DESCRIPTION="Uisp is a tool for AVR microcontrollers which can interface to many hardware in-system programmers"
 SRC_URI="http://savannah.nongnu.org/download/uisp/${P}.tar.gz"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/gputils-0.11.7.ebuild,v 1.5 2004/03/23 18:33:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/gputils-0.11.7.ebuild,v 1.6 2004/06/24 22:07:19 agriffis Exp $
 
 DESCRIPTION="Collection of tools including assembler, linker and librarian for PIC microcontrollers"
 SRC_URI="mirror://sourceforge/gputils/${P}.tar.gz"
