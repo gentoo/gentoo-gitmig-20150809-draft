@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.19 2003/01/28 10:28:58 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.20 2003/02/03 20:39:34 nall Exp $
 
 *exim-4.12 (28 Jan 2003)
 
@@ -17,6 +17,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *exim-4.10 (15 Nov 2002)
+
+  03 Feb 2003; Jon Nall <nall@gentoo.org> exim-4.10.ebuild :
+  added ~ppc
 
   15 Nov 2002; Nick Hadaway <raker@gentoo.org> exim-4.10.ebuild,
   files/digest-exim-4.10, files/exiscan.conf :
