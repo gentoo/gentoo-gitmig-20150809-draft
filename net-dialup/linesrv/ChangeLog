@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/linesrv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/ChangeLog,v 1.2 2004/12/05 22:17:35 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/ChangeLog,v 1.3 2005/02/07 20:59:06 mrness Exp $
+
+  07 Feb 2005; Alin Nastac <mrness@gentoo.org> linesrv-2.1.20.ebuild:
+  Mark stable on x86.
 
 *linesrv-2.1.20 (05 Dec 2004)
 

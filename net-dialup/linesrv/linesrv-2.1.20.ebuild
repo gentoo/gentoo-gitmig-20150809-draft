@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.20.ebuild,v 1.1 2004/12/05 15:56:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.20.ebuild,v 1.2 2005/02/07 20:59:06 mrness Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=sys-libs/glibc-2.2.0
 	mysql? ( >=dev-db/mysql-4 )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 [ -z "$HTTPD_ROOT" ] && HTTPD_ROOT=/var/www/localhost
 

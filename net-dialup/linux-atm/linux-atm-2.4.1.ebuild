@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1.ebuild,v 1.14 2004/09/25 05:09:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1.ebuild,v 1.15 2005/02/07 21:02:27 mrness Exp $
 
 inherit eutils
 
