@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.79 2003/07/17 16:42:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.80 2003/07/29 10:39:02 pauldv Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.kde.org/"
 
 # deps on the build tools
 if [ -n "$KDEBASE" -a -n "`use ppc`" -a "${PV//3.1}" != "$PV" ]; then
-	DEPEND="$DEPEND >=sys-devel/automake-1.6.3"
+	DEPEND="$DEPEND >=sys-devel/automake-1.7.0"
 else
 	DEPEND="$DEPEND sys-devel/automake"
 fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.59 2003/07/01 11:51:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.60 2003/07/29 10:39:02 pauldv Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -63,6 +63,10 @@ need-kde() {
 			need-autoconf 2.1
 			need-automake 1.4
 			;;
+		3.1.[23])	# Newer 3.1.x versions are built with automake 1.7, and have errors when using 1.6
+			need-automake 1.7
+			need-autoconf 2.5
+			;;
 		3.1*)	# actually, newer 3.0.x stuff uses this too, but i want to make a clean switch
 			need-automake 1.6
 			need-autoconf 2.5
@@ -73,7 +77,7 @@ need-kde() {
 			;;
 		5*)
 			need-autoconf 2.5
-			need-automake 1.6
+			need-automake 1.7
 			;;
 	esac
 
@@ -90,6 +94,10 @@ need-kde() {
 		# maybe i should look at relocating it...
 		if [ "$PV" == "3.0.3" ]; then
 			newdepend "=kde-base/kdelibs-3.0.3*"
+		elif [ "$PV" == "3.1.3" ]; then
+			newdepend "=kde-base/kdelibs-3.1.3*"
+		elif [ "$PV" == "3.1.2" ]; then
+			newdepend "=kde-base/kdelibs-3.1.2*"
 		elif [ "$PV" == "3.1.1" ]; then
 			newdepend "=kde-base/kdelibs-3.1.1*"
 		elif [ "$PV" == "2.2.2" ]; then
@@ -304,6 +312,28 @@ min-kde-ver() {
 		*)					echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
+}
+
+# This function should fix the broken automake detection in the detect-autoconf file
+kde_fix_autodetect() {
+	cd ${S}/admin
+	patch -p0 <<EOF
+--- arts-1.1.3/admin/detect-autoconf.sh	2003-05-07 13:50:14.000000000 +0200
++++ detect-autoconf.sh	2003-07-29 12:21:39.000000000 +0200
+@@ -52,7 +52,10 @@
+ checkAutomakeAclocal ()
+ {
+   if test -z "\$UNSERMAKE"; then
+-    if test -x "\`\$WHICH automake-1.5\`" ; then
++    if test -x "\`\$WHICH automake\`" ; then
++      AUTOMAKE="\`\$WHICH automake\`"
++      ACLOCAL="\`\$WHICH aclocal\`"
++    elif test -x "\`\$WHICH automake-1.5\`" ; then
+       AUTOMAKE="\`\$WHICH automake-1.5\`"
+       ACLOCAL="\`\$WHICH aclocal-1.5\`"
+     elif test -x "\`\$WHICH automake-1.6\`" ; then
+EOF
+	cd -
 }
 
 # generic makefile sed for sandbox compatibility. for some reason when the kde makefiles (of many packages
