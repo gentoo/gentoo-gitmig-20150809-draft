@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/bopm
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/ChangeLog,v 1.1 2004/02/18 00:43:58 zul Exp $
+
+*bopm-3.1.2 (17 Feb 2004)
+
+  17 Feb 2004; Chuck Short <zul@gentoo.org> bopm-3.1.2.ebuild:
+  Initial version, ebuild written by Sven Wegener <sven.wegener@stealer.net>
+  Closes #41376.
+
