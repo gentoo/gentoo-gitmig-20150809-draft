@@ -1,12 +1,12 @@
 # ChangeLog for media-plugins/tap-plugins
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.6 2004/06/15 22:58:35 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.7 2004/06/15 23:20:13 fvdpol Exp $
 
 *tap-plugins-0.5.0 (16 Jun 2004)
 
   16 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> metadata.xml,
   +tap-plugins-0.5.0.ebuild:
-  Version bump to 0.5.0; closes bug 51311.
+  Version bump to 0.5.0; closes bug 51311...
   
   From package's changelog:
   
