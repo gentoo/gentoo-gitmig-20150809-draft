@@ -1,0 +1,11 @@
+# ChangeLog for app-cdr/b5i2iso
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/b5i2iso/ChangeLog,v 1.1 2005/01/08 14:27:40 pylon Exp $
+
+*b5i2iso-0.1 (08 Jan 2005)
+
+  08 Jan 2005; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +b5i2iso-0.1.ebuild:
+  New package.  
+  Thanks to eGore for this ebuild in bug #70491.
+
