@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.22 2005/03/22 20:30:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.23 2005/03/27 17:23:14 luckyduck Exp $
+
+  27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> tomcat-5.0.28-r2.ebuild:
+  moved from dev-java/regexp to dev-java/jakarta-regexp dependency. see #71336
 
   22 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> -tomcat-5.0.28-r1.ebuild,
   tomcat-5.0.28-r2.ebuild, -tomcat-5.0.28.ebuild:

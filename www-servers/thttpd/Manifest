@@ -1,19 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9638e3f16ce376f6259c3963fe78da43 thttpd-2.25b-r1.ebuild 1234
-MD5 81ad0c3d58b6031c8e4774fb9e38116b ChangeLog 1607
+MD5 a1f47f6df2e0465c19194579f3b8c943 ChangeLog 1947
 MD5 4a186842848d9c384e2d12785ba426bc metadata.xml 165
 MD5 01cfdda0a52d777aa2c814dcf4ba9d95 thttpd-2.25b.ebuild 1188
-MD5 1e6cbba778f6846533ae1d69310e0c4e files/digest-thttpd-2.25b-r1 64
+MD5 9638e3f16ce376f6259c3963fe78da43 thttpd-2.25b-r1.ebuild 1234
+MD5 28476b1f3d427e754067720238c3fdff thttpd-2.25b-r2.ebuild 2088
 MD5 1e6cbba778f6846533ae1d69310e0c4e files/digest-thttpd-2.25b 64
+MD5 1e6cbba778f6846533ae1d69310e0c4e files/digest-thttpd-2.25b-r1 64
+MD5 6f77a5ae06c1e805c8ba4f18ef210040 files/digest-thttpd-2.25b-r2 126
+MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/php5.0-stdint.diff 358
+MD5 f7a7898637874593f519c336db79fa45 files/php-5.0.3-missing-arches.patch 524
+MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
+MD5 cbb3d508ce2e62b217ed6628ddf82290 files/php-5.0.3-IOV.patch 413
+MD5 1d3e759791468812bd3c6dd786428cac files/thttpd-2.25/thttpd.conf.sample 672
 MD5 84af2600ce2cfa9331871027accd00f5 files/thttpd-2.25/thttpd.confd 1152
 MD5 98bfd7ed90b6a438a940413d5e541c29 files/thttpd-2.25/thttpd.init 828
-MD5 1d3e759791468812bd3c6dd786428cac files/thttpd-2.25/thttpd.conf.sample 672
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCLbn/EZCkKN40op4RAm4UAKC9q3z+vlsFOz8N8ZB63TtUK8Y7vwCfXop7
-N5rBkfmyLxjtED0V0jU84Mg=
-=3U44
------END PGP SIGNATURE-----
+MD5 8c8c8edd7b2bc08ca093377c6ed10dae files/thttpd-2.25/php-5.0.3-thttpd-2.25b.patch 11525

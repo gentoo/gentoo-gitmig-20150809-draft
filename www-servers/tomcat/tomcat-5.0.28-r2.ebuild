@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r2.ebuild,v 1.2 2005/03/22 20:30:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r2.ebuild,v 1.3 2005/03/27 17:23:14 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -31,7 +31,7 @@ RDEPEND=">=virtual/jdk-1.4
 	   >=dev-java/junit-3.8.1
 	   dev-java/jmx
 	   >=dev-java/log4j-1.2.8
-	   >=dev-java/regexp-1.3
+	   =dev-java/jakarta-regexp-1.3*
 	   >=dev-java/saxpath-1.0
 	   ~dev-java/servletapi-2.4
 	   =dev-java/struts-1.1*
@@ -81,7 +81,7 @@ src_unpack() {
 	java-pkg_jar-from commons-digester
 	java-pkg_jar-from commons-fileupload
 	java-pkg_jar-from commons-modeler
-	java-pkg_jar-from regexp
+	java-pkg_jar-from jakarta-regexp-1.3
 }
 
 src_compile(){
@@ -100,7 +100,7 @@ src_compile(){
 	antflags="${antflags} -Dcommons-modeler.jar=$(java-config -p commons-modeler)"
 	antflags="${antflags} -Djunit.jar=$(java-config -p junit)"
 	antflags="${antflags} -Dlog4j.jar=$(java-config -p log4j)"
-	antflags="${antflags} -Dregexp.jar=$(java-config -p regexp)"
+	antflags="${antflags} -Dregexp.jar=$(java-config -p jakarta-regexp-1.3)"
 	antflags="${antflags} -Dstruts.jar=$(java-pkg_getjar struts struts.jar)"
 	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar	commons-beanutils commons-beanutils.jar)"
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
