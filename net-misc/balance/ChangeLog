@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/balance
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.2 2004/06/24 23:35:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.3 2004/12/05 08:49:03 vapier Exp $
+
+*balance-3.19 (05 Dec 2004)
+
+  05 Dec 2004; Mike Frysinger <vapier@gentoo.org> +balance-3.19.ebuild:
+  Version bump #73104 by David Pufer.
 
 *balance-3.11 (25 Dec 2003)
 
