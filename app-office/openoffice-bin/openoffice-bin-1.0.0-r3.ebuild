@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.0-r3.ebuild,v 1.1 2002/09/09 21:17:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.0-r3.ebuild,v 1.2 2002/09/15 16:00:42 azarah Exp $
 
 inherit virtualx
 
@@ -99,8 +99,8 @@ pkg_postinst() {
 
 	# Make sure these do not get nuked.
 	cd ${ROOT}${LOC}/OpenOffice-${PV}
-	keepdir -p user/config/registry/instance/org/openoffice/{Office,ucb}
-	keepdir -p user/psprint/{driver,fontmetric}
-	keepdir -p user/{autocorr,backup,plugin,store,temp,template}
+	keepdir ${ROOT}${LOC}/OpenOffice-${PV}/user/config/registry/instance/org/openoffice/{Office,ucb}
+	keepdir ${ROOT}${LOC}/OpenOffice-${PV}/user/psprint/{driver,fontmetric}
+	keepdir ${ROOT}${LOC}/OpenOffice-${PV}/user/{autocorr,backup,plugin,store,temp,template}
 }
 
