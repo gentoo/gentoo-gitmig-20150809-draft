@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.5 2002/11/06 05:53:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.6 2002/11/17 21:58:43 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
@@ -36,6 +36,20 @@ egameconf() {
 			"$@" || die "egamesconf failed"
 	else
 		die "no configure script found"
+	fi
+}
+
+egamesinstall() {
+	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
+		make prefix=${D}${GAMES_PREFIX} \
+		    mandir=${D}/usr/share/man \
+		    infodir=${D}/usr/share/info \
+		    datadir=${D}${GAMES_DATADIR} \
+		    sysconfdir=${D}${GAMES_SYSCONFDIR} \
+		    localstatedir=${D}${GAMES_STATEDIR} \
+		    "$@" install || die "einstall failed"
+	else
+		die "no Makefile found" 
 	fi
 }
 
