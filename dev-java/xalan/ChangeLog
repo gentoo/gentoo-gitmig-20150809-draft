@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.28 2004/10/16 17:40:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.29 2004/10/17 11:23:25 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xalan-2.6.0.ebuild
+  keywords amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> xalan-2.5.2.ebuild,
   xalan-2.6.0-r1.ebuild, xalan-2.6.0.ebuild:
