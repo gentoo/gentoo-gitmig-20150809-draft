@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-1.4.0.4-r2.ebuild,v 1.3 2002/07/17 10:13:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-1.4.0.4-r2.ebuild,v 1.4 2002/07/19 12:33:25 stroke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-applets"
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 
 SLOT="1"
 LICENSE="GPL"
-KEYWORDs="x86"
+KEYWORDS="x86"
 
 src_compile() {
 	local myconf
