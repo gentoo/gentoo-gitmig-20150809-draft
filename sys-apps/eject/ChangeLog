@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/eject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.12 2003/03/06 20:57:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.13 2003/07/04 21:58:32 gmsoft Exp $
 
   06 Mar 2003; Martin Schlemmer <azarah@gentoo.org> eject-2.0.12-r1.ebuild :
   Get eject to build with kernel-2.5.x.
@@ -11,6 +11,9 @@
   make it setuid root the patch in -r1 will make it safer.
 
 *eject-2.0.12-r1 (03 Mar 2003)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> eject-2.0.12-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   03 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update.
