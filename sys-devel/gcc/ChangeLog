@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.295 2004/07/27 03:19:05 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.296 2004/07/29 08:46:01 pappy Exp $
+
+  29 Jul 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.3.4-r1.ebuild:
+  adding hardened dependency for sparc, still not keyworded, but yet to come
 
   26 Jul 2004; Travis Tilley <lv@gentoo.org>
   +files/3.4.1/gcc341-ppc64-mozilla-ICE-fix.patch, gcc-3.4.1-r1.ebuild,
