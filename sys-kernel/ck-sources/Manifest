@@ -7,10 +7,10 @@ MD5 659225f3709d3099b222fe32b01996aa ck-sources-2.4.22-r2.ebuild 2819
 MD5 bc2d9e3acdf71e4e0ce547851e208c97 ck-sources-2.4.23-r1.ebuild 2290
 MD5 24843ffef35f4a0a56b588c644be72e0 ck-sources-2.6.3-r1.ebuild 666
 MD5 50b4d502e416be23c76ec38bb5be275d ck-sources-2.4.22-r1.ebuild 2376
-MD5 ee52b0a8a98ddda7e1d999f5c67afd44 ChangeLog 4559
+MD5 565d4bece9cc4d4f49559b4a6bb4cbbe ChangeLog 4646
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
 MD5 1ad7b4163bf2c8e9bc7c546be72e30fd ck-sources-2.6.2-r1.ebuild 696
-MD5 ba5dd31a399d48f9e4cf3b38700c8d59 ck-sources-2.6.4-r2.ebuild 1071
+MD5 3acfd689b387048edb4f363ce8c09110 ck-sources-2.6.4-r2.ebuild 1075
 MD5 127fe46a668983c028f6b4a2f30174bc files/ck-sources-2.6.2.munmap.patch 1557
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
 MD5 f6e9c2031ae54360cabb5d8670ce2eaf files/digest-ck-sources-2.6.2-r1 129
