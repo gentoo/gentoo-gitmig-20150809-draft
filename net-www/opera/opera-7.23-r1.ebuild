@@ -1,26 +1,29 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha2.ebuild,v 1.2 2004/02/21 12:08:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.23-r1.ebuild,v 1.1 2004/02/21 12:08:00 lanius Exp $
 
 IUSE="static"
 
-OPERAVER="7.50-20040218"
-OPERATYPE="1-static-qt"
-S=${WORKDIR}/${A/.tar.bz2/}
+OPERAVER="7.23-20031119"
 
+S=${WORKDIR}/${A/.tar.bz2/}
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
 
 # that's an ugly workaround for the broken src_uri syntax
 if [ `use static` ]; then
-	SRC_URI="x86? ( http://snapshot.opera.com/unix/7.50-Preview-2/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 )
-		ppc? ( http://snapshot.opera.com/unix/7.50-Preview-2/ppc-linux/en/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 )
-		sparc? ( http://snapshot.opera.com/unix/7.50-Preview-2/sparc-linux/en/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 )"
+	SRC_URI="x86? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 )
+	ppc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 )
+	sparc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/sparc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 )"
 else
-	SRC_URI="x86? (http://snapshot.opera.com/unix/7.50-Preview-2/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
-		ppc? ( http://snapshot.opera.com/unix/7.50-Preview-2/ppc-linux/en/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )
-		sparc? ( http://snapshot.opera.com/unix/7.50-Preview-2/sparc-linux/en/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
+	SRC_URI="x86? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
+	ppc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )
+	sparc? ( ftp://ftp.opera.com/pub/opera/linux/723/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
 fi
+
+SLOT="0"
+LICENSE="OPERA"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 # Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4"
@@ -31,23 +34,33 @@ RDEPEND="virtual/x11
 	x11-libs/openmotif
 	!static? ( =x11-libs/qt-3* )"
 
-SLOT="0"
-LICENSE="OPERA"
-KEYWORDS="~x86 ~ppc ~sparc"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
+	sed -i -e "s:/etc:${D}/etc:g" \
+	       -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
+	       -e "s:read install_config:install_config=yes:" \
+	       -e "s:/opt/kde2:${D}/usr/kde/2:g" \
+	       -e "s:/opt/kde2:${D}/usr/kde/2:g" \
 	       -e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
 	       -e "s:/usr/share/pixmaps:${D}/usr/share/pixmaps:g" \
 	       -e "s:/usr/share/icons:${D}/usr/share/icons:g" \
 	       -e "s:/etc/X11:${D}/etc/X11:g" \
 	       -e "s:/usr/share/gnome:${D}/usr/share/gnome:g" \
+	       -e 's:#\(LD_PRELOAD=.*libawt.so\):\1:' \
 	       -e 's:#\(OPERA_FORCE_JAVA_ENABLED=\):\1:' \
 	       -e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
+		   -e 's:chop "${DESTDIR}" "str_localdirexec"::' \
+		   -e 's:chop "${DESTDIR}" "str_localdirshare"::' \
+		   -e 's:chop "${DESTDIR}" "str_localdirplugin"::' \
 		   -e 's:read str_answer:return 0:' \
 	       install.sh || die
+
+	# Make mail and irc support optional
+	if [ "`use operanom2`" ]; then
+		einfo "Removing mail and chat support"
+		rm -f ${S}/lib/m2.so
+	fi
 }
 
 src_compile() {
