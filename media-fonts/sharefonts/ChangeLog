@@ -1,0 +1,29 @@
+# ChangeLog for media-fonts/sharefonts
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/ChangeLog,v 1.1 2003/06/02 13:59:27 seemant Exp $
+
+*sharefonts-0.10-r1 (02 Jun 2003)
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> sharefonts-0.10-r1.ebuild:
+  moved to media-fonts
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*sharefonts-0.10-r1 (1 Feb 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> sharefonts-0.10-r1.ebuild :
+  set ppc in keywords
+
+  20 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE variable
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> sharefonts-0.10-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
