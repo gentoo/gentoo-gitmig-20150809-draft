@@ -222,6 +222,55 @@ shell-script mode for editing them. You should use proper indentation, using onl
 no spaces. Make sure you set up your editor to put tabstops at 4 spaces. Always make sure you use braces around your environment variables; e.g. <c>${P}</c> instead of just <c>$P</c>.</p>
 <p>TODO: add stuff about emacs &amp; vi.</p></body>
 </section>
+
+<section>
+<title><c>USE</c> Variables</title>
+
+<body><p>The USE variable is set in <path>/etc/make.conf</path>. It
+contains several keywords, normally called &quot;USE variables&quot;
+by the developers, separated by spaces, that when present, enable and
+disable certain features of packages that you install. You can check
+for the presence of a USE variable in an <c>ebuild</c> that you create
+using the <c>use &lt;variable&gt;</c> command. The <c>use</c> command
+prints out the name of every variable that is present in both
+<c>USE</c> and its command line. You would normally use this like
+so:</p>
+<p><c>if [ &quot;`use X`&quot; ]; then commands; fi</c></p>
+<p>USE variables can also be used to set dependencies. For example,
+you may only want to require a package if a certain USE variable is set. This is done by using the syntax <c>variable? (package-1.0-r1)</c> in the DEPEND variable for your ebuild. In this example, <c>package-1.0-r1</c> will only be required if <c>variable</c> is present in your <c>USE</c> setting.</p>
+<p>The following USE variables are currently used in Gentoo Linux:</p>
+<table>
+<tr><th>Variable</th><th>Description</th><th>Used By</th></tr>
+<tr><ti>X</ti><ti>enable X11 features</ti><ti></ti></tr>
+<tr><ti>alsa</ti><ti>enable the Advanced Linux Sound Architecture</ti><ti><c>sys-kernel</c> packages and others</ti></tr>
+<tr><ti>berkdb</ti><ti>use the Berkeley DB libraries</ti><ti></ti></tr>
+<tr><ti>bonobo</ti><ti>enable Bonobo</ti><ti><c>gnome</c> packages and others</ti></tr>
+<tr><ti>esd</ti><ti>enable ESound</ti><ti><c>gnome</c> packages and others</ti></tr>
+<tr><ti>gdbm</ti><ti>use GNU dbm</ti><ti></ti></tr>
+<tr><ti>glibc22</ti><ti>use GNU libc 2.2</ti><ti></ti></tr>
+<tr><ti>gnome</ti><ti>use GNOME; also enables use of GNOME related packages such as gdk-pixbuf</ti><ti></ti></tr>
+<tr><ti>gpm</ti><ti>use gpm</ti><ti></ti></tr>
+<tr><ti>kde</ti><ti>enable features of the K Desktop Environment</ti><ti></ti></tr>
+<tr><ti>ldap</ti><ti>use ldap</ti><ti></ti></tr>
+<tr><ti>lm_sensors</ti><ti>enable lm_sensors</ti><ti><c>sys-kernel</c> packages</ti></tr>
+<tr><ti>lvm</ti><ti>enable the Linux Volume Manager</ti><ti><c>sys-kernel</c> packages</ti></tr>
+<tr><ti>motif</ti><ti>enable Motif</ti><ti></ti></tr>
+<tr><ti>mysql</ti><ti>enable MySQL</ti><ti></ti></tr>
+<tr><ti>odbc</ti><ti>enable odbc</ti><ti></ti></tr>
+<tr><ti>ogg</ti><ti>enable the Ogg multimedia libraries</ti><ti></ti></tr>
+<tr><ti>opengl</ti><ti>use OpenGL 3D graphics</ti><ti></ti></tr>
+<tr><ti>pcmcia-cs</ti><ti>enable PCMCIA</ti><ti><c>sys-kernel</c> packages</ti></tr>
+<tr><ti>postgres</ti><ti>use PostgreSQL</ti><ti></ti></tr>
+<tr><ti>qt</ti><ti>use the Qt widget set</ti><ti></ti></tr>
+<tr><ti>readline</ti><ti>use readline</ti><ti></ti></tr>
+<tr><ti>slang</ti><ti>use slang</ti><ti></ti></tr>
+<tr><ti>ssl</ti><ti>use SSL</ti><ti></ti></tr>
+<tr><ti>tcltk</ti><ti>use Tcl/TK</ti><ti></ti></tr>
+<tr><ti>tcpd</ti><ti>use tcpd/tcp_wrappers</ti><ti></ti></tr>
+<tr><ti>xfs</ti><ti>enable the SGI XFS journaling filesystem</ti><ti><c>sys-kernel-package</c></ti></tr>
+</table>
+</body>
+</section>
 </chapter>
 
 <chapter>
