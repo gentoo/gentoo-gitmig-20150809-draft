@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author Frederic Brin <duckx@libertysurf.fr>, Maintainer: Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.6.ebuild,v 1.2 2002/02/09 11:47:56 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.7.ebuild,v 1.1 2002/02/20 19:21:49 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNOME Jabber Client"
@@ -24,19 +24,19 @@ src_compile() {
 	   myconf="--disable-ssl"
 	fi
 
-	./configure --host=${CHOST}					\
-		    --prefix=/usr	 				\
-		    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
+	./configure --host=${CHOST}		\
+		    --prefix=/usr		\
+		    --sysconfdir=/etc		\
+		    --localstatedir=/var/lib	\
    		    $myconf || die
 
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
+	make prefix=${D}/usr			\
+	     sysconfdir=${D}/etc		\
+	     localstatedir=${D}/var/lib		\
 	     install || die
 }
 
