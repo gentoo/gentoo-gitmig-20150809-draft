@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c350904138792e7e1e373ede6e622e35 ChangeLog 6900
 MD5 91a159b983332d5ed0fb985cc1fe1b80 metadata.xml 330
-MD5 3d7be545111c419f078947ee2b19d4f1 nut-2.0.0-r1.ebuild 3104
-MD5 b7de3d9347689621cbbdddb62e1e10ca nut-2.0.0.ebuild 3082
-MD5 561446fffb8635c0584339ad2b74fe0a nut-2.0.1_pre4.ebuild 3166
+MD5 be73b61ada50ae1465c68cd432b83d60 nut-2.0.0-r1.ebuild 3117
+MD5 7a4b25821ba8388e45f7fb67c8b8c54c nut-2.0.0.ebuild 3095
+MD5 81d4ae9730f813fcc5e55390ad277ffa nut-2.0.1_pre4.ebuild 3177
 MD5 891b50cff5827a4e77573ee8f2f40e48 files/digest-nut-2.0.0-r1 61
 MD5 2d1326c3eefc364c474ea2f191810bfc files/upsdrv.rc6-r1 489
 MD5 891b50cff5827a4e77573ee8f2f40e48 files/digest-nut-2.0.0 61
@@ -10,3 +13,10 @@ MD5 057b35a5ced412ebf01c952b55d2e4db files/upsd.rc6 585
 MD5 d369e7d9bf8a83e47b0a958ec30baf43 files/upsdrv.rc6 477
 MD5 5962635c2a91e3df315cc69f5aa52f6a files/upsmon.rc6 471
 MD5 23c9faa5fc009d873bac5c36b1d02b4e files/digest-nut-2.0.1_pre4 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCGUr0mdTrptrqvGERAvkPAJ9AA8LuORfqzj7yIgEbfQDRJkCSUgCfeqOT
+wSHfw6L8eU9KLkVJqkH0QRw=
+=mw4y
+-----END PGP SIGNATURE-----
