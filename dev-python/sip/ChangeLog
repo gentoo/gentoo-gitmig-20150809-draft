@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.21 2004/01/18 01:11:20 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.22 2004/01/30 21:42:35 ferringb Exp $
+
+  30 Jan 2004; Brian Harring <ferringb@gentoo.org> sip-3.5.ebuild,
+  sip-3.8.ebuild, sip-4.0_rc1.ebuild, sip-4.0_rc2.ebuild:
+  Updated sip-3.8 w/ a mirror://gentoo url, due to it being removed upstream.
+  Copyright date fixes, removed sip-3.9 due to lack of upstream src.
 
 *sip-3.10 (17 Jan 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.0_rc1.ebuild,v 1.2 2003/12/17 14:13:05 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.0_rc1.ebuild,v 1.3 2004/01/30 21:42:37 ferringb Exp $
 
 IUSE=""
 
@@ -15,7 +15,9 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/sip/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc"
+# note, python-2.3 isn't keyworded for alpha yet.
+# ~alpha"
 RESTRICT="nomirror"
 
 DEPEND="virtual/glibc
