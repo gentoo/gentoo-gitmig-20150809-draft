@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.76 2004/12/15 06:49:15 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.77 2004/12/16 19:05:56 blubb Exp $
+
+  16 Dec 2004; Simon Stelling <blubb@gentoo.org>
+  phpmyadmin-2.6.1_rc1.ebuild:
+  stable on amd64; bug #74303
 
   15 Dec 2004; <SeJo@gentoo.org> phpmyadmin-2.6.1_rc1.ebuild:
   stable on ppc gsla: 74303
