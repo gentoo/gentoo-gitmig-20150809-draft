@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24-r1.ebuild,v 1.1 2002/04/09 23:51:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24-r1.ebuild,v 1.2 2002/04/10 17:04:09 woodchip Exp $
 
 mod_ssl_ver=2.8.8-${PV}
 HARD_SERVER_LIMIT=512
@@ -29,7 +29,7 @@ pkg_setup() {
 	fi
 
 	if ! grep -q ^apache: /etc/passwd ; then
-		useradd -g apache -s /bin/false -d /var/www -c "apache" apache
+		useradd -g apache -s /bin/false -d /home/httpd -c "apache" apache
 		assert "problem adding user apache"
 	fi
 
