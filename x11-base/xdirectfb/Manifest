@@ -1,6 +1,6 @@
 MD5 ead77bf35249298fa75933b274ef686c xdirectfb-1.0_rc5-r1.ebuild 2066
 MD5 3730bb72dccfa27f70f222177e9cbeb9 ChangeLog 3188
-MD5 389353a5436482e8c713963708ebd314 metadata.xml 280
+MD5 7191cffeda5249a1cafc736e2459daac metadata.xml 278
 MD5 625e74462ca9d2751a3a2607382f9106 files/host.def 456
 MD5 d38fb61c0ade184ffc8e4c080f25ea28 files/dfbserverrc 38
 MD5 d1bc78938748c36ba47bf119d923dfdb files/startxdfb 1436
