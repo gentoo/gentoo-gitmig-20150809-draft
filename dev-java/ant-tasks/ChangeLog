@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.16 2005/02/03 20:57:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.17 2005/03/27 21:21:26 luckyduck Exp $
+
+*ant-tasks-1.6.2-r6 (27 Mar 2005)
+
+  27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +ant-tasks-1.6.2-r6.ebuild:
+  moved from dev-java/regexp to dev-java/jakarta-regexp dependency. see #71336
 
   03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> ant-tasks-1.6.2-r5.ebuild:
   applied an patch to fix scp with openssh-3.9. also see #77365
