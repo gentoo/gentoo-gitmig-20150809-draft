@@ -4,6 +4,17 @@
 # old version isn't available, new version doesn't compile
 media-libs/nurbs++
 
+# This one causes a lot of problems ... svgalib gives problems
+# when used by user (not root), and it just dies randomly.
+#
+# Azarah (26 May 2002)
+>=sys-libs/gpm-1.20.0
+
+# Mask this one, as it seems users dont emerge --clean rsync
+#
+# Azarah (26 May 2002)
+=media-video/avifile-0.7.20020412
+
 # Just masked until more testing can be done. (sandymac, 24 May 2002)
 # If you unmask mozilla, please do so to galeon and nautilus as well
 >=net-www/mozilla-1.0_rc3
@@ -149,12 +160,6 @@ net-www/zope
 # for various legal reasons 
 >=net-misc/gift-0.9.7
 
-# These two have compile problems -- Azarah (24/03/2002)
-#
-# Mozilla installs correctly, but there is a java-config error with the plugin
-# This is more a java-config bug ....
-=net-www/mozilla-0.9.9
-
 # Opera 6 final.
 # This package requires that qt2 package were linked against libpng 1.0.12,
 # while the latest libpng version is 1.2.  Since I could not figure out how
@@ -188,15 +193,18 @@ net-www/zope
 #per jnelson's request (30 Jan 2002, drobbins)
 =net-www/boa-0.94.12_pre3
 
-#mesa 3.5 apparently breaks source compatibilty with 3.4.2 and we should
-#stay with 3.4.2 'cause so many apps depend on it.  (drobbins, 26 Jan 2002)
-#sad but true, we're stuck at 3.4.2.
+# Only use the mesa and mesa-glu provided with x11-base/xfree,
+# as the external ones gives problems in most cases with DRI/DRM.
+# Nvidia users do not use it anyhow, and tdfx users report that
+# it works fine with the mesa included with xfree.  If you do
+# unmask these, make sure that you know what you are doing, and
+# know that if anything breaks, then you get to keep the pieces.
 #
-#think we should try mesa 4.0.1 sometime, although including glu in the xfree
-#ebuild seems to have good results.
-#azarah (29/01/2002)
->=media-libs/mesa-3.5
->=media-libs/mesa-glu-3.5
+# azarah (26 May 2002)
+>=media-libs/mesa-3.0
+>=media-libs/mesa-glu-3.0
+>=media-libs/sgi-oss-glu-1.0
+>=media-libs/oss-opengl-glu-1.0
 
 # We are masking out the shadow snapshots now, to coincide
 # with the new pam rollout. ( Woodchip - Mar 20 2002)
