@@ -1,8 +1,7 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Daniel Robbins <drobbins@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7.ebuild,v 1.8 2001/10/03 04:35:19 woodchip Exp $
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r8.ebuild,v 1.1 2002/03/21 21:27:35 woodchip Exp $
 
 # to use this, you must be part of the "cron" group
 
@@ -17,6 +16,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	patch -p0 < ${FILESDIR}/${P}-Makefile-gentoo.diff || die
+	# fix 'crontab -e' to look at $EDITOR and not $VISUAL
+	cp ${S}/crontab.c ${S}/crontab.c.orig
+	sed -e 's:VISUAL:EDITOR:g' ${S}/crontab.c.orig > ${S}/crontab.c
+	cp ${S}/crontab.1 ${S}/crontab.1.orig
+	sed -e 's:VISUAL:EDITOR:g' ${S}/crontab.1.orig > ${S}/crontab.1
+	# fix for lines starting with whitespace
+	patch -p0 < ${FILESDIR}/${P}-whitespace.diff || die
 }
 
 src_compile() {
@@ -34,11 +40,13 @@ src_install() {
 	# gotcha: /var/spool needs to be 755
 	diropts -m0755 ; dodir /var/spool
 	diropts -m0750 ; dodir /var/spool/cron/crontabs
+	# this still do not alway get created
+	touch ${D}/var/spool/cron/crontabs/.dummy
 
 	dodoc CHANGELOG README
 	doman crontab.1 crond.8
 
 	insinto /etc ; doins ${FILESDIR}/crontab
 
-	exeinto /etc/rc.d/init.d ; newexe ${FILESDIR}/dcron.rc5 dcron
+	exeinto /etc/init.d ; newexe ${FILESDIR}/dcron.rc6 dcron
 }

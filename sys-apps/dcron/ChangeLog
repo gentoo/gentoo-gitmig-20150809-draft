@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.2 2002/03/21 21:27:35 woodchip Exp $
+
+*dcron-2.7-r8 (21 Mar 2002)
+
+  21 Mar 2002; Donny Davies <woodchip@gentoo.org> dcron-2.7-r8.ebuild,
+  files/dcron-2.7-whitespace.diff :
+
+  Added patch from Matt Dillon to fix crontabs that begin with whitespace.
+  Thanks to everybody who helped analyze this problem.
 
 *dcron-2.7-r7 (1 Feb 2002)
 
