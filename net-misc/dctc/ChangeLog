@@ -1,0 +1,17 @@
+# ChangeLog for net-misc/dctc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dctc/ChangeLog,v 1.1 2002/04/18 16:44:58 mkennedy Exp $
+
+*dctc-0.79.1 (18 Apr 2002)
+
+  18 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  dcdc-0.79.1.ebuild, files/digest-dctd-0.79.1 :
+  
+  New ebuild.
+
+  DCTC is a Direct Connect clone, a windoz client allowing users to
+  share their files and talk (like IRC but more software sharing
+  oriented) using a proprietary protocol. DCTC stands for Direct
+  Connect Text Client. DCTC is release under GPL however, if you use
+  it regularly and want to support its development, you can send a
+  small fee.
