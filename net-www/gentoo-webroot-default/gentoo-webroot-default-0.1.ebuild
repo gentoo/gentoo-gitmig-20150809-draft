@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/gentoo-webroot-default-0.1.ebuild,v 1.6 2005/01/25 13:10:01 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/gentoo-webroot-default-0.1.ebuild,v 1.7 2005/01/28 17:03:19 hollow Exp $
 
 DESCRIPTION="This is the default Gentoo WebServer content"
 HOMEPAGE="http://www.gentoo.org/"
@@ -20,6 +20,8 @@ src_install() {
 		insinto /var/www/localhost/
 	fi
 	doins -r webroot/htdocs
+	doins -r webroot/icons
+	doins -r webroot/cgi-bin
 
 	dodoc AUTHORS README TODO
 }
