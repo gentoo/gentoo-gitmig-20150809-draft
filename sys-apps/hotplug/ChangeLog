@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.60 2005/01/21 21:07:02 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.61 2005/01/23 19:24:48 wolf31o2 Exp $
+
+  23 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/hotplug.rc.empty:
+  Updated hotplug.rc.empty to unpack firmware tarball. This is used by the
+  LiveCD to allow /lib/firmware to be tmpfs without losing any firmwares that
+  were installed on the LiveCD and allows users to provide their own
+  firmwares.
 
   21 Jan 2005; Lars Weiler <pylon@gentoo.org> hotplug-20040923.ebuild:
   Stable on ppc.

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/files/hotplug.rc.empty,v 1.1 2004/09/21 00:13:47 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/files/hotplug.rc.empty,v 1.2 2005/01/23 19:24:48 wolf31o2 Exp $
 
 #
 # nothing here anymore. Please use the coldplug package if you really want to
@@ -23,5 +23,12 @@ start () {
 	if [ ! -f /proc/sys/kernel/hotplug ] ; then
 		eerror "CONFIG_HOTPLUG not enabled for this kernel!"
 		return 1
+	fi
+	# This unpacks any firmware tarballs.  Used for LiveCD.
+	if [ -e /lib/firmware.tar.bz2 ]
+	then
+		ebegin "Unpacking hotplug frmware"
+		tar xjf /lib/firmware.tar.bz2 -C /lib/firmware
+		eend 0
 	fi
 }
