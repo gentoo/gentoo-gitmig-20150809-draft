@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.5 2004/10/07 16:54:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.6 2004/10/12 00:32:58 latexer Exp $
+
+*mod_mono-1.0.2-r1 (11 Oct 2004)
+
+  11 Oct 2004; <peter@gentoo.org> +mod_mono-1.0.2-r1.ebuild:
+  Fix for missing symlinks, and permissions. Thanks to Scott
+  <nzgreen@operamail.com> on bug #66948
 
   07 Oct 2004; <peter@gentoo.org> metadata.xml, mod_mono-1.0.1.ebuild,
   mod_mono-1.0.2.ebuild, mod_mono-1.0.ebuild:
