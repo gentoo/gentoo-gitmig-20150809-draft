@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.2 2003/02/12 08:30:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.3 2003/11/28 03:31:31 spider Exp $
+
+*pavuk-0.9.28-r1 (28 Nov 2003)
+
+  28 Nov 2003; <spider@gentoo.org> pavuk-0.9.28-r1.ebuild:
+  Attempting to fix the DEPEND entries.
 
 *pavuk-0.9.28 (10 Feb 2003)
 
