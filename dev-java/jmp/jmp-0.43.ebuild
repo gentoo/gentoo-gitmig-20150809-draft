@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/jmp-0.41.ebuild,v 1.3 2004/07/02 04:21:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/jmp-0.43.ebuild,v 1.1 2004/08/31 04:07:30 zx Exp $
 
 DESCRIPTION="Java Memory Profiler"
 HOMEPAGE="http://www.khelekore.org/jmp/"
