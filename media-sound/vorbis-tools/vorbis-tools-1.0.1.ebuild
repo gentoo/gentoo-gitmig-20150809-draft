@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.17 2004/11/08 20:08:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.18 2004/11/11 21:05:30 eradicator Exp $
+
+IUSE="nls flac speex"
 
 inherit gcc flag-o-matic
 
@@ -11,7 +13,6 @@ SRC_URI="http://www.vorbis.com/files/${PV}/unix/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa mips ppc ppc64 sparc x86"
-IUSE="nls flac speex"
 
 RDEPEND=">=media-libs/libvorbis-1.0
 	>=media-libs/libao-0.8.2
@@ -38,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	rm -rf ${D}/usr/share/doc
 	dodoc AUTHORS README
