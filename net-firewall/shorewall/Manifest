@@ -1,4 +1,6 @@
 MD5 b909b96ff83d66846e7f21dd7bf6476f ChangeLog 1653
+MD5 d3d7d1d95ca81411229b63b9640012cc shorewall-1.4.3.ebuild 879
 MD5 d3d7d1d95ca81411229b63b9640012cc shorewall-1.4.2.ebuild 879
+MD5 6fbbe1678c89dbabaa4c9f0dcb5a8656 files/digest-shorewall-1.4.3 65
 MD5 2bb788dc55a65a1daee4a13ca9240fab files/shorewall 433
 MD5 5f8cd4aac7756b6a80f752542a791459 files/digest-shorewall-1.4.2 65
