@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.1.ebuild,v 1.11 2004/06/25 00:25:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.1.ebuild,v 1.12 2004/07/14 21:05:52 agriffis Exp $
 
 IUSE="sdl svga esd alsa"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="a program that represents music graphically in real time as coruscating field of fog and glowing lines"
 HOMEPAGE="http://yoyo.cc.monash.edu.au/~pfh/synaesthesia.html"
 SRC_URI="http://yoyo.cc.monash.edu.au/~pfh/${P}.tar.gz"

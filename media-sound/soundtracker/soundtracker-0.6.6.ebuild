@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.6.ebuild,v 1.12 2004/06/25 00:23:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.6.ebuild,v 1.13 2004/07/14 21:05:29 agriffis Exp $
 
 IUSE="nls esd gnome oss alsa"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="SoundTracker is a music tracking tool for UNIX/X11 (MOD tracker)"
 SRC_URI="http://www.soundtracker.org/dl/v0.6/${P}.tar.gz"
 HOMEPAGE="http://www.soundtracker.org"
