@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2003.02.22.ebuild,v 1.6 2004/12/28 05:36:01 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2003.02.22.ebuild,v 1.7 2004/12/28 14:50:12 ribosome Exp $
 
 DESCRIPTION="A collection of custom scripts, functions and extensions for GNU Octave"
 HOMEPAGE="http://octave.sourceforge.net/"
@@ -12,7 +12,7 @@ KEYWORDS="x86"
 SLOT="0"
 IUSE="ginac qhull"
 
-DEPEND=">=app-sci/octave-2.1.44
+DEPEND=">=sci-mathematics/octave-2.1.44
 		>=sys-apps/sed-4
 		sys-libs/libtermcap-compat
 		ginac? ( sci-mathematics/ginac )
