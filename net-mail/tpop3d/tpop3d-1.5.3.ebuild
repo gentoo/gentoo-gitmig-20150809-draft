@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.7 2004/08/26 01:29:51 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.8 2004/08/26 13:50:28 griffon26 Exp $
+
+inherit eutils
 
 DESCRIPTION="An extensible POP3 server with vmail-sql/MySQL support."
 HOMEPAGE="http://www.ex-parrot.com/~chris/tpop3d/"
@@ -8,7 +10,7 @@ SRC_URI="http://www.ex-parrot.com/~chris/tpop3d/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="ssl ldap mysql perl pam tcpd maildir debug"
 
 DEPEND="virtual/libc
@@ -22,6 +24,7 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
+	epatch ${FILESDIR}/${P}-invalid-user-message.patch
 }
 
 src_compile() {
