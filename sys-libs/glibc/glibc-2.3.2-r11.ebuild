@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r11.ebuild,v 1.10 2004/08/11 10:07:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r11.ebuild,v 1.11 2004/08/28 01:28:40 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -556,7 +556,7 @@ src_install() {
 	# now, strip everything but the thread libs #46186
 	mkdir ${T}/thread-backup
 	mv ${D}/lib/lib{pthread,thread_db}* ${T}/thread-backup/
-	RESTRICT="" prepallstrip
+	env -uRESTRICT prepallstrip
 	mv ${T}/thread-backup/* ${D}/lib/
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
