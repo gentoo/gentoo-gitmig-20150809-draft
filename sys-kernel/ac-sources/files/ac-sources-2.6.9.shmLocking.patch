@@ -48,7 +48,7 @@ diff -Nru a/ipc/shm.c b/ipc/shm.c
 +			    current->euid != shp->shm_perm.cuid)
 +				goto out_unlock;
 +			if (cmd == SHM_LOCK &&
-+			    !current->signal->rlim[RLIMIT_MEMLOCK].rlim_cur)
++			    !current->rlim[RLIMIT_MEMLOCK].rlim_cur)
 +				goto out_unlock;
 +		}
  
