@@ -1,0 +1,31 @@
+# ChangeLog for app-sci/geomview
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.1 2004/12/28 05:28:11 ribosome Exp $
+
+*geomview-1.8.1-r3 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/geomview-1.8.1-configure.diff,
+  +files/geomview-1.8.1-stdiostream.diff, +geomview-1.8.1-r3.ebuild:
+  Moved from app-sci/geomview to sci-mathematics/geomview.
+
+  25 Jun 2004; George Shapovalov <george@gentoo.org> geomview-1.8.1-r3.ebuild:
+  removed RDEPEND=DEPEND line (deprecated for a while now)
+
+  20 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> geomview-1.8.1-r3.ebuild:
+  Some people seem to have problems with GL headers, adding -DGL_GLEXT_LEGACY to
+  CFLAGS. See bug #44896.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> geomview-1.8.1-r3.ebuild:
+  moved to epatch
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> geomview-1.8.1-r3.ebuild:
+  Removed S, added IUSE
+
+*geomview-1.8.1-r3 (04 Mar 2004)
+
+  04 Mar 2004; <nerdboy@gentoo.org> geomview-1.8.1-r3.ebuild, metadata.xml:
+  new user-contributed ebuild (a group effort even) by David Hyunjin Lim,
+  with contributions from Cliff Yapp (I added the keywords and cleaned up
+  the syntax a bit)
+
