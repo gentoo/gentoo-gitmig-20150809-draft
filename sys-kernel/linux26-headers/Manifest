@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 c42755de1dd8cc75f5fe89460483ce48 ChangeLog 7286
-MD5 4900eb9d9344b24f07d0d92f4f793158 linux26-headers-2.6.8.1.ebuild 3888
+MD5 c3e4121b744b4fe55e6086a362823f51 linux26-headers-2.6.8.1.ebuild 3895
 MD5 e7df5c99f9a3767cb014d5664ac68f38 linux26-headers-2.6.6-r1.ebuild 4222
 MD5 21dcb669b4e8535f0a04f40ad2c4c9ff metadata.xml 224
 MD5 cf6343e76c3e3fb5519e0690fed8a4e1 linux26-headers-2.6.7-r4.ebuild 4028
@@ -27,7 +27,7 @@ MD5 ec3d195f7d40d599802d5c0c5ad8f502 files/linux26-headers-2.6.4-appCompat.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWCdSHTu7gpaalycRAnAZAJ9ujOC0XZL/GLKHRCtrFjalpD4cUgCgvbXV
-FNwEtqqAOKQtPuWsDoLFdts=
-=+uIp
+iD8DBQFBWMX8HTu7gpaalycRAtyFAJ4oDBrgJrZKQwqxyzap7QgJLl1ATgCg666n
+AGi71g5XPxFGrmN3QwEnZi8=
+=3Dnd
 -----END PGP SIGNATURE-----
