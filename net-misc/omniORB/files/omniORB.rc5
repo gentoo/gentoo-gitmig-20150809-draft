@@ -23,7 +23,8 @@ start() {
 
 stop() {
 		ebegin "Stopping ${SERVICE}"
-		killall $EXE 1>&2
+		killall $EXE1 1>&2
+	        killall $EXE2 1>&2
 		eend $? "Error stopping ${SERVICE}."
 }
 
