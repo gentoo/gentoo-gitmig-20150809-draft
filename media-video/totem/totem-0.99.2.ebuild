@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.2.ebuild,v 1.1 2003/07/25 21:21:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.2.ebuild,v 1.2 2003/07/26 19:40:33 foser Exp $
 
 inherit gnome2
 
@@ -12,8 +12,9 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 
+# specific gtk dep is needed for a certain xfree patch (#21336)
 RDEPEND=">=dev-libs/glib-2.1
-	>=x11-libs/gtk+-2
+	>=x11-libs/gtk+-2.2.2-r1
 	>=gnome-base/libgnomeui-2.1.1
 	>=gnome-base/gnome-vfs-2.2
 	>=gnome-base/libglade-2
