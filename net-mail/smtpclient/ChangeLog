@@ -1,0 +1,13 @@
+# ChangeLog for net-mail/smtpclient
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/smtpclient/ChangeLog,v 1.1 2002/11/02 21:14:10 raker Exp $
+
+*smtpclient-1.0.0 (10 Sep 2002)
+
+  02 Nov 2002; Nick Hadaway <raker@gentoo.org> smtpclient-1.0.0.ebuild :
+  Added IUSE.  Added to portage.
+
+  10 Sep 2002; Russell Adams <rladams@kelsey-seybold.com> 
+  smtpclient-1.0.0.ebuild:
+  Initial version. Verified compile and installation.
+
