@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/epic5
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.1 2004/06/20 02:30:19 swegener Exp $
+
+*epic5-0.0.2 (20 Jun 2004)
+
+  20 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +files/0.0.2-segfault-fix.patch, +files/epic-defaultserver.patch,
+  +epic5-0.0.2.ebuild:
+  Initial import, ebuild based on net-irc/epic4
+
