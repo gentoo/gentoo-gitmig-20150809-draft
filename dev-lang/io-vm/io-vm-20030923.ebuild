@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io-vm/io-vm-20030923.ebuild,v 1.6 2004/10/27 19:00:12 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io-vm/io-vm-20030923.ebuild,v 1.7 2005/01/03 00:21:05 j4rg0n Exp $
 
 MY_P=IoVM-${PV:0:4}-${PV:4:2}-${PV:6:2}
 DESCRIPTION="Io is small prototype-based programming language."
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.iolanguage.com/"
 SRC_URI="http://io.urbanape.com/release/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ppc-macos"
+KEYWORDS="~x86 ~ppc ppc-macos"
 IUSE=""
 DEPEND=""
 S=${WORKDIR}/${MY_P}
