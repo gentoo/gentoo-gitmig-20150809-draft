@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.5.ebuild,v 1.1 2004/03/06 21:42:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.5.ebuild,v 1.2 2004/03/26 07:46:01 seemant Exp $
 
 inherit flag-o-matic
 
@@ -50,9 +50,9 @@ src_compile()  {
 	if [ "$LINUX" != "" ]; then
 		einfo "Cross-compiling using:- $LINUX"
 		LINUX=`echo $LINUX | sed 's/build\//build/'`
-		KV=`cut -d\  -f3 ${LINUX}include/linux/version.h | grep \" | sed -e 's/"//' -e 's/"//'`
+		KV=`cut -d\  -f3 ${LINUX}/include/linux/version.h | grep \" | sed -e 's/"//' -e 's/"//'`
 		if [ "${KV}" == "" ]; then
-			die "Could not get kernel version; make sure ${LINUX}include/linux/version.h is there!"
+			die "Could not get kernel version; make sure ${LINUX}/include/linux/version.h is there!"
 		fi
 	else
 		LINUX='/usr/src/linux'
