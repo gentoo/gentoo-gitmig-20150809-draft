@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r2.ebuild,v 1.1 2002/10/20 08:18:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r3.ebuild,v 1.1 2002/10/26 09:57:54 azarah Exp $
+
+inherit eutils
 
 # Official patches
 PLEVEL="x001 x002"
@@ -55,6 +57,10 @@ src_install() {
 
 	dodir /lib
 	mv ${D}/usr/lib/*.so* ${D}/lib
+	# bug #4411
+	gen_usr_ldscript libreadline.so
+	gen_usr_ldscript libhistory.so
+	# end bug #4411
 	dosym libhistory.so.${PV/a/} /lib/libhistory.so
 	dosym libreadline.so.${PV/a/} /lib/libreadline.so
 	# Needed because make install uses ${D} for the link

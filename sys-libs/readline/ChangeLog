@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.7 2002/10/20 08:18:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.8 2002/10/26 09:57:54 azarah Exp $
+
+*readline-4.1-r5 (26 Oct 2002)
+*readline-4.2a-r1 (26 Oct 2002)
+*readline-4.3-r3 (26 Oct 2002)
+
+  26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> readline*.ebuild :
+  Add linker scripts in /usr/lib to fix bug #4411.
 
 *readline-4.3-r2 (20 Oct 2002)
 
