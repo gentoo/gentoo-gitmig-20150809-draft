@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.16 2003/03/25 03:59:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.17 2003/05/10 11:52:45 liquidx Exp $
+
+*redhat-artwork-0.73 (10 May 2003)
+
+  10 May 2003; Alastair Tse <liquidx@gentoo.org> redhat-artwork-0.73.ebuild:
+  version bump to redhat 9's artwork
 
 *redhat-artwork-0.63-r1 (25 Mar 2003)
 
