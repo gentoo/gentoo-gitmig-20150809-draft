@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 80d480950cc29fc888a316a430dfd72b zip-2.3-r1.ebuild 746
-MD5 086f02bb611605f32fe4b90a3388d581 zip-2.3-r3.ebuild 1047
-MD5 bba1a25568c491eb25562c8846b022fd zip-2.3-r2.ebuild 970
 MD5 160b019c3672f2fb9e68c4f79950df45 ChangeLog 2993
-MD5 6cf67950f3003a17d048c9a3ce4f243a files/zip-2.3-unix_configure-pic.patch 444
-MD5 446598b124c5aa6073e4a431a166cc2d files/digest-zip-2.3-r1 57
+MD5 be95da43ccf9816b592b241797c372fa zip-2.3-r2.ebuild 984
+MD5 a3c80560391ef7908418ca7b8fffb5e2 zip-2.3-r3.ebuild 1062
 MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r2 113
 MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r3 113
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBWbn694CCfB4KcwwRAqxuAJ9roPkbaoBJ3+AU67hdqE7Ob0WAdACgvnZp
-V9COWO+GQ9gV+PGEZ2RrTaY=
-=BCxw
------END PGP SIGNATURE-----
+MD5 6cf67950f3003a17d048c9a3ce4f243a files/zip-2.3-unix_configure-pic.patch 444

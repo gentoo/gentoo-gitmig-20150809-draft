@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.22 2004/07/20 20:03:11 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.23 2004/10/27 16:18:54 vapier Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="Info ZIP (encryption support)"
 HOMEPAGE="ftp://ftp.freesoftware.com/pub/infozip/Zip.html"
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${PN}${PV/./}.tar.gz
 
 LICENSE="Info-ZIP"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64 ia64 hppa mips ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="crypt"
 
 DEPEND="crypt? ( app-arch/unzip )"
@@ -29,13 +29,13 @@ src_unpack() {
 src_compile() {
 	emake \
 		-f unix/Makefile \
-		CC="$(gcc-getCC)" \
-		CPP="$(gcc-getCC) -E" \
+		CC="$(tc-getCC)" \
+		CPP="$(tc-getCC) -E" \
 		generic || die
 }
 
 src_install() {
-	dobin zip zipcloak zipnote zipsplit
+	dobin zip zipcloak zipnote zipsplit || die
 	doman man/zip.1
-	dodoc BUGS CHANGES LICENSE MANUAL README TODO WHATSNEW WHERE
+	dodoc BUGS CHANGES MANUAL README TODO WHATSNEW WHERE
 }
