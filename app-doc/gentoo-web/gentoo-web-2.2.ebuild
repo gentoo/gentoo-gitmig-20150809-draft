@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.34 2002/02/06 01:11:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.35 2002/02/07 23:39:09 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -76,7 +76,7 @@ src_install() {
 	dodir ${WEBROOT}/news	
 	local mydate
 	mydate=`date +"%d %b %Y"`
- 	echo "<?xml version='1.0'?>" > ${T}/main-news.xml
+	echo "<?xml version='1.0'?>" > ${T}/main-news.xml
 	echo '<mainpage id="news"><title>Gentoo Linux News</title><author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>' >> ${T}/main-news.xml
 	echo "<version>1.0</version><date>${mydate}</date><newsitems>" >> ${T}/main-news.xml
 	local myext
@@ -85,7 +85,7 @@ src_install() {
 		myext=`basename $x`
 		myext=${myext%*.xml}
 		cat $x | sed -e "1d" -e "s:<news:<news external=\"/news/${myext}.html\":" >> ${T}/main-news.xml
-		xsltproc xsl/guide-main.xsl $x | xsltproc xsl/guide-main.xsl - > ${D}/${WEBROOT}/news/${myext}.html
+		xsltproc xsl/guide-main.xsl $x > ${D}/${WEBROOT}/news/${myext}.html
 	done
 	echo "</newsitems></mainpage>" >> ${T}/main-news.xml
 	insinto ${WEBROOT}
