@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.0.20031018.ebuild,v 1.3 2004/03/29 01:24:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.0.20031018.ebuild,v 1.4 2004/04/27 22:02:49 agriffis Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 MY_P=${P/3.0.0./3.0-}
 

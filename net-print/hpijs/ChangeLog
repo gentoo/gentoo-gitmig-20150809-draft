@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hpijs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.21 2004/04/26 19:10:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.22 2004/04/27 22:04:28 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> hpijs-1.4.1.ebuild,
+  hpijs-1.5.ebuild:
+  Add inherit eutils
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> hpijs-1.4.1.ebuild,
   hpijs-1.5.ebuild:

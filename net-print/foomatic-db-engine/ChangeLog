@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.11 2004/04/19 19:48:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.12 2004/04/27 22:02:49 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  foomatic-db-engine-3.0.0.20031018.ebuild, foomatic-db-engine-3.0.0.ebuild,
+  foomatic-db-engine-3.0.1.ebuild:
+  Add inherit eutils
 
   19 Apr 2004; Guy Martin <gmsoft@gentoo.org> foomatic-db-engine-3.0.1.ebuild:
   Marked stable on hppa.

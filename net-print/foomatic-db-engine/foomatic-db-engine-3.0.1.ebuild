@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.1.ebuild,v 1.6 2004/04/19 19:48:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.1.ebuild,v 1.7 2004/04/27 22:02:49 agriffis Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 DESCRIPTION="Foomatic printer database engine"
 HOMEPAGE="http://www.linuxprinting.org/foomatic"
