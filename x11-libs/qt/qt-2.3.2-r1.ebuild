@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.15 2003/01/06 10:50:10 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.16 2003/01/08 17:58:05 hannes Exp $
 
 IUSE="gif opengl nas"
 
@@ -24,7 +24,6 @@ RDEPEND="virtual/x11
 	
 
 DEPEND="$RDEPEND
-	!x11-libs/xft
 	sys-devel/gcc"
 
 QTBASE=/usr/qt/2
@@ -65,7 +64,7 @@ src_compile() {
 	./configure \
 		-sm -thread -system-zlib -system-jpeg ${myconf} \
 		-system-libmng -system-libpng -gif -platform linux-g++ \
-		-ldl -lpthread -no-g++-exceptions || die
+		-ldl -lpthread -no-g++-exceptions -no-xft || die
 
 	cd ${S}
 	make symlinks src-moc sub-src sub-tools || die
