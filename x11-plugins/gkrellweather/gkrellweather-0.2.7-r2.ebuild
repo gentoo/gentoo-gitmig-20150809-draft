@@ -27,14 +27,14 @@ src_unpack() {
 }
 
 src_compile() {
-    emake || die
+	emake || die
 }
 
 src_install () {
 	exeinto /usr/share/gkrellm
-    doexe GrabWeather 
+	doexe GrabWeather 
 
-    insinto /usr/lib/gkrellm/plugins
-    doins gkrellweather.so
-    dodoc README ChangeLog COPYING
+	insinto /usr/lib/gkrellm/plugins
+	doins gkrellweather.so
+	dodoc README ChangeLog COPYING
 }
