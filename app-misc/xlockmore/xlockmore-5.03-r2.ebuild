@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.03.ebuild,v 1.1 2002/03/01 10:21:24 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.03-r2.ebuild,v 1.1 2002/03/06 23:38:24 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Just another screensaver application for X"
@@ -11,9 +11,9 @@ DEPEND="virtual/x11 media-libs/freetype
 	opengl? ( virtual/opengl )
 	pam? ( sys-libs/pam )
 	nas? ( media-libs/nas )
-	esd? ( media-libs/esound )
-	motif? ( >=x11-libs/openmotif-2.1.30-r1 )
-	gtk? ( x11-libs/gtk+ )"
+	esd? ( media-sound/esound )"
+	# motif? ( >=x11-libs/openmotif-2.1.30-r1 )
+	# gtk? ( x11-libs/gtk+ )
 
 src_compile() {
 
@@ -23,8 +23,10 @@ src_compile() {
 	use nas || myconf="${myconf} --without-nas"
 	use esd && myconf="${myconf} --with-esound"
 	use opengl || myconf="${myconf} --without-opengl"
-	use motif || myconf="${myconf} --without-motif"
-	use gtk || myconf="${myconf} --without-gtk"
+	#use motif || myconf="${myconf} --without-motif"
+	#use gtk || myconf="${myconf} --without-gtk"
+	# sigh... broken configure script and/or makefile...
+	myconf="${myconf} --without-motif --without-gtk"
 
 	./configure --prefix=/usr --mandir=${prefix}/man/man1 \
 		--sharedstatedir=/usr/share/xlockmore --host=${CHOST} ${myconf} || die
