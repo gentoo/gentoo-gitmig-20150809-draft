@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/prime-el/prime-el-1.3.1_rc2.ebuild,v 1.1 2004/01/28 14:44:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/prime-el/prime-el-1.3.1.ebuild,v 1.1 2004/01/29 16:59:26 usata Exp $
 
 inherit elisp
 
