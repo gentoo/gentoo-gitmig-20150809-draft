@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/perforce-2003.1.ebuild,v 1.3 2004/04/26 01:36:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/perforce-2003.1.ebuild,v 1.4 2004/04/26 01:39:54 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Daemon for a commercial version control system"
 HOMEPAGE="http://www.perforce.com/"

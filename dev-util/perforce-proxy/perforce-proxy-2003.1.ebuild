@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-proxy/perforce-proxy-2003.1.ebuild,v 1.3 2004/04/26 01:34:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-proxy/perforce-proxy-2003.1.ebuild,v 1.4 2004/04/26 01:41:51 vapier Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ MY_FILES=${FILESDIR}/perforce-proxy-2003.1/
 src_unpack() {
 	# we have to copy all of the files from $DISTDIR, otherwise we get
 	# sandbox violations when trying to install
+
 	for x in p4p ; do
 		cp ${DISTDIR}/$x .
 	done

@@ -1,5 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-gui/perforce-gui-2003.1.ebuild,v 1.3 2004/04/26 01:40:46 vapier Exp $
 
 inherit rpm
 
@@ -11,17 +12,17 @@ GUI_NAME="p4v-2003.1-48707.i386"
 GUI_RPM="${GUI_NAME}.rpm"
 DOC_BASE="$URI_BASE/doc"
 SRC_URI="${GUI_BASE}/${GUI_RPM}"
+
 LICENSE="perforce.pdf"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-DEPEND="virtual/glibc"
-#RDEPEND=""
-S=${WORKDIR}
 RESTRICT="nomirror nostrip"
-MY_FILES=$FILESDIR/perforce-2003.1/
 
-src_install()
-{
+DEPEND="virtual/glibc"
+
+S=${WORKDIR}
+
+src_install() {
 	cp -R ${WORKDIR}/usr ${D}
 }
