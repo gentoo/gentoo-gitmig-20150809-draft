@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.4.0-r1.ebuild,v 1.6 2004/01/04 17:34:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.4.0-r1.ebuild,v 1.7 2004/03/13 20:18:04 dholm Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://solfertje.student.utwente.nl/~dalroi/libdockapp/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="x86 sparc amd64 ~ppc"
 
 DEPEND=">=x11-base/xfree-4.1.0"
 
