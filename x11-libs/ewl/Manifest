@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 7ef687cf82b91783745f77655c4c2310 ChangeLog 693
-MD5 5fb50b33a79451a2c1df05e820975c9f ewl-0.0.4.20040807.ebuild 532
 MD5 b2f38f5f7601bca578b8d0225bdc0e96 metadata.xml 529
-MD5 7cabe5361fe89bf930e02fed417d83c1 files/digest-ewl-0.0.4.20040807 72
+MD5 ad2116b8ea5023b686069bdcb1a8bafc ewl-0.0.4.20040828.ebuild 532
+MD5 175d056fd69e8c3128b8f921dfee9be7 files/digest-ewl-0.0.4.20040828 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBGazIHTu7gpaalycRAkgtAKCuUo3AGj8FzkNJZbeROHZThnjNQwCgin9Q
-zVSJjNgrWsMq75fagtpoy04=
-=DgTp
+iD8DBQFBNRTpHTu7gpaalycRAssVAKCJQVvI0B7sa6akpRNiazp8GcoPPQCgkwYN
+HdWOQq75PBdc2hjNSENVEbs=
+=0d02
 -----END PGP SIGNATURE-----
