@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/ChangeLog,v 1.9 2004/11/03 11:31:43 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/ChangeLog,v 1.10 2004/11/05 03:39:03 weeve Exp $
+
+  04 Nov 2004; Jason Wever <weeve@gentoo.org> jmx-1.2.1.ebuild:
+  Added ~sparc keyword to fix broken deps.
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> jmx-1.2.1.ebuild:
   depend on app-arch/unzip
