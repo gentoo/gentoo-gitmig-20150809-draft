@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.6 2004/06/25 02:14:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.7 2004/08/08 09:20:06 mattam Exp $
+
+*hevea-1.07-r1 (08 Aug 2004)
+
+  08 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> -hevea-1.06.ebuild,
+  +hevea-1.07-r1.ebuild, -hevea-1.07.ebuild:
+  Move 1.07 to stable, remove old ebuilds and propagate fix for bug #52766.
 
   05 Jun 2004; Matthieu Sozeau <mattam@gentoo.org> hevea-1.06.ebuild,
   files/99hevea:
