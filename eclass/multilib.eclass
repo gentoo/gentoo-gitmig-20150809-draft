@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.5 2005/01/12 22:39:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.6 2005/01/13 00:43:41 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -296,7 +296,7 @@ create_ml_includes-relative_between() {
 create_ml_includes-tidy_path() {
 	local removed="${1}"
 
-	if [ -n "${1}" ]; then
+	if [ -n "${removed}" ]; then
 		# Remove multiple slashes
 		while [ "${removed}" != "${removed/\/\//\/}" ]; do
 			removed=${removed/\/\//\/}
@@ -309,13 +309,15 @@ create_ml_includes-tidy_path() {
 		[ "${removed##*/}" = "." ] && removed=${removed%/*}
 
 		# Removed .. directories
-		# I wonder if there's a non-trivial bashism for this one...
-		while [ "${removed}" !=  "$(echo ${removed} | sed -e 's:[^/]*/\.\./::')" ]; do
-			removed=$(echo ${removed} | sed -e 's:[^/]*/\.\./::')
+		while [ "${removed}" != "${removed//\/..\/}" ]; do
+			local p1="${removed%%\/..\/*}"
+			local p2="${removed#*\/..\/}"
+
+			removed="${p1%\/*}/${p2}"
 		done
 
 		# Remove trailing ..
-		removed=$(echo ${removed} | sed -e 's:/[^/]*/\.\.$::')
+		[ "${removed##*/}" = ".." ] && removed=${removed%/*/*}
 
 		# Remove trailing /
 		[ "${removed##*/}" = "" ] && removed=${removed%/*}
