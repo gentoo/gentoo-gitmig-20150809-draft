@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 2bec4f3999a1868cbb8dbc9be8bdd7bd grsec-sources-2.4.27.2.0.1-r4.ebuild 2903
 MD5 719867268ad00f3f18b6648d5c0461dd grsec-sources-2.4.28.2.0.2.ebuild 2125
-MD5 709e3646269ccc7e5e8ae3062931d339 ChangeLog 7769
+MD5 838329a32b61d926a4b4d1574b157d18 ChangeLog 7817
 MD5 140d8af1d66f9f6cd030e7d9902f38d9 metadata.xml 478
 MD5 c47b7075dd1e065b09bb08936c1901a1 files/2.4.26-signal-race.patch 365
 MD5 3bdf00d5f80fe9dfbfe8220e076cd04c files/openmosix-sources.CAN-2004-0497.patch 707
@@ -11,14 +11,14 @@ MD5 3dac23b6e285462a7cda41505cc698e1 files/2.4.26-CAN-2004-0394.patch 319
 MD5 f0aff4d717032ce77283fe63d6df94ec files/digest-grsec-sources-2.4.27.2.0.1-r4 462
 MD5 36615aa14e3aed91008beeeb406693bf files/2.4.26-pax-binfmt_elf-page-size.patch 427
 MD5 b293289df61d6f42ff54e4e0ceae53cf files/2.4.24-x86.config 2397
-MD5 142e3c50598bb525c490bee83604ab5a files/digest-grsec-sources-2.4.28.2.0.2 144
+MD5 c829ff92477a5a9e4fcbc370303217f8 files/digest-grsec-sources-2.4.28.2.0.2 144
 MD5 0f66013f643c79c97fda489618a4e2fd files/gentoo-sources-2.4.CAN-2004-0535.patch 476
 MD5 dc18e982f8149588a291956481885a8c files/gentoo-sources-2.4.CAN-2004-0495.patch 17549
 MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBo2de94CCfB4KcwwRAg8pAJkBWoMcYKwDQDtQ2buyjiSIW1IPdACgwu+Y
-wY+M7nhYFuZzI1jQyAUq3F0=
-=GZaA
+iD8DBQFBpMCw94CCfB4KcwwRAlBzAJ9Y9Rnop7hFmcUulHpuJkOFj69viQCgw8tM
+tSsqLw4TX/YkD1K912DCMcg=
+=/JHE
 -----END PGP SIGNATURE-----
