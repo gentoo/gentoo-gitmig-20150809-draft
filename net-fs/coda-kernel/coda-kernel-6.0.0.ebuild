@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: Addme please
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-kernel/coda-kernel-6.0.0.ebuild,v 1.5 2004/10/03 21:44:25 swegener Exp $
 
 MY_PN=linux-coda
 MY_P=${MY_PN}-${PV}
