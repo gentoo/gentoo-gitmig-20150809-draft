@@ -1,5 +1,5 @@
-MD5 ecd7f578187a0d64d3bfa79c23fe0bde mono-0.28.ebuild 2164
-MD5 de6401bde26ec25480c0c195138f1162 mono-0.26-r1.ebuild 2167
+MD5 5c76a46e0d737e4d86f9ad2e7fa4fbf0 mono-0.28.ebuild 2160
+MD5 71126200d305ffc2f8cabd9d1f545c87 mono-0.26-r1.ebuild 2163
 MD5 204ae4c2fa259575cb0c87c05a85046d ChangeLog 5972
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 518023a50bb285d0758ed7562a6af8a8 files/dotnet.conf 582
