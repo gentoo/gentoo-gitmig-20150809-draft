@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.2.4.ebuild,v 1.5 2003/10/12 03:00:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.2.4.ebuild,v 1.6 2003/10/12 03:02:07 liquidx Exp $
 
 inherit eutils
 
@@ -66,7 +66,7 @@ pkg_setup() {
 			die "wxGTK needs to be compiled without unicode"
 		fi
 	fi
-	
+
 }
 
 src_compile() {
@@ -79,7 +79,7 @@ src_compile() {
 	use gtk2 \
 		&&	mypyconf="${mypyconf} WXPORT=gtk2" \
 		|| mypyconf="${mypyconf} WXPORT=gtk"
-	
+
 	use unicode && mypyconf="${mypyconf} UNICODE=1"
 
 	python setup.py ${mypyconf} build || die "build failed"
@@ -95,7 +95,7 @@ src_install() {
 	use gtk2 \
 		&& mypyconf="${mypyconf} WXPORT=gtk2" \
 		|| mypyconf="${mypyconf} WXPORT=gtk"
-	
+
 	use unicode && mypyconf="${mypyconf} UNICODE=1"
 
 	python setup.py ${mypyconf} install --prefix=/usr --root=${D} || die
