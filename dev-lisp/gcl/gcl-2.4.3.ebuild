@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.4.3.ebuild,v 1.1 2002/09/04 00:38:52 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.4.3.ebuild,v 1.2 2002/09/05 03:09:03 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Common Lisp"
@@ -8,7 +8,8 @@ SRC_URI="ftp://ftp.gnu.org/gnu/gcl/gcl-2.4.3.tgz"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
 PROVIDE="virtual/commonlisp"
 
-DEPEND=">=app-text/texi2html-1.64"
+DEPEND=">=app-text/texi2html-1.64
+	>=dev-libs/gmp-4.1"
 RDEPEND="${DEPEND}"
 
 LICENSE="GPL-2"
@@ -49,5 +50,15 @@ src_install() {
 	sed -e "s:${D}::g" < ${D}/usr/bin/gcl.orig > ${D}/usr/bin/gcl
 	rm ${D}/usr/bin/gcl.orig
 
+	# fix the GCL_TK_DIR=/var/tmp/portage/gcl-2.4.3/image//
+	mv ${D}/usr/lib/gcl-2.5.0/gcl-tk/gcltksrv ${D}/usr/lib/gcl-2.5.0/gcl-tk/gcltksrv.orig
+	sed -e "s:${D}::g" < ${D}/usr/lib/gcl-2.5.0/gcl-tk/gcltksrv.orig > ${D}/usr/lib/gcl-2.5.0/gcl-tk/gcltksrv
+	rm ${D}/usr/lib/gcl-2.5.0/gcl-tk/gcltksrv.orig
+	chmod 0755 ${D}/usr/lib/gcl-2.5.0/gcl-tk/gcltksrv
+
 	chmod 0755 ${D}/usr/bin/gcl
+
+	#repair gcl.exe symlink
+	rm ${D}/usr/bin/gcl.exe
+	dosym ../lib/gcl-2.5.0/unixport/saved_gcl /usr/bin/gcl.exe
 }
