@@ -1,5 +1,2 @@
-MD5 d251517a5e6a213919ebcf840df53edb libxfce4util-3.99.2.ebuild 790
-MD5 be230c6f9b90e7a769827ceabed9a750 libxfce4util-3.99.1.ebuild 790
-MD5 ba13b3858d2d5e5e1a3a4ed5e1c914ad ChangeLog 640
-MD5 37e8e22726f9d1a70f09e8682e4a1241 files/digest-libxfce4util-3.99.1 71
-MD5 0346bf8a1de37c5f428d3c82aaa90101 files/digest-libxfce4util-3.99.2 71
+MD5 d86975dbd08bb61995cf2dcd5aba3b6d libxfce4util-3.99.3.ebuild 790
+MD5 575baa6c56365f23444bb900526d903c files/digest-libxfce4util-3.99.3 71
