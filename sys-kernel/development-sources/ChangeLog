@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.54 2003/10/26 11:48:51 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.55 2003/10/26 19:27:07 johnm Exp $
+
+  26 Oct 2003; John Mylchreest <johnm@gentoo.org>;
+  development-sources-2.6.0_beta9.ebuild:
+  adding a local use to prevent the application of genpatches. this may change
+  in future
 
 *development-sources-2.6.0_beta9 (26 Oct 2003)
 

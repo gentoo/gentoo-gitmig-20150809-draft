@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta9.ebuild,v 1.1 2003/10/26 11:39:29 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta9.ebuild,v 1.2 2003/10/26 19:27:07 johnm Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #Original Kernel Version before Patches
@@ -18,11 +18,12 @@ KV=${KV//${PN}-}
 # eg: 2.6.0-test8-r1-patchset-1
 # this gets added on right at the end before it links
 # if you dont want to apply these patches, set GPV=0
-GPV=0.1
+[ ! $(use vanilla) ] && GPV=0.1
 
 S=${WORKDIR}/linux-${OKV}
 ETYPE="sources"
 
+IUSE="vanilla"
 DESCRIPTION="Full sources for the Development Branch of the Linux kernel"
 
 [ ! ${GPV} == 0 ] && GPATCH_URI="mirror://gentoo/distfiles/genpatches-2.6-${GPV}.tar.bz2"
@@ -50,21 +51,18 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
 
+	cd ${S}
 	# apply bk pulls	
 	if [ -z ${KV/*-bk*/} ]
 	then
-		cd ${S}
 		epatch ${DISTDIR}/patch-${KV}.bz2
-		cd ${WORKDIR}
 	fi
 
 	# apply gentoo patches	
 	if [ ! ${GPV} == 0 ]
 	then
-		cd ${S}
 		epatch ${DISTDIR}/genpatches-2.6-${GPV}.tar.bz2
 		KV="${KV}-patchset-${GPV}"
-		cd ${WORKDIR}
 	fi
 
 	# move to appropriate src dir
