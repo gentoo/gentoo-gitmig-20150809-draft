@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.23 2003/02/17 01:15:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.24 2003/03/01 03:39:39 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
 # This is the games ebuild for standardizing the install of games ...
 # you better have a *good* reason why you're *not* using games.eclass
 # in an ebuild in app-games
+
+inherit eutils
 
 ECLASS=games
 INHERITED="$INHERITED $ECLASS"
@@ -87,23 +89,8 @@ gamesenv() {
 }
 
 games_pkg_setup() {
-	local tmpfile="`mktemp -p ${T}`"
-	touch ${tmpfile}
-	chown ${GAMES_USER} ${tmpfile}
-	local REAL_USER="`ls -l ${tmpfile} | awk '{print $3}'`"
-	chgrp ${GAMES_GROUP} ${tmpfile}
-	local REAL_GROUP="`ls -l ${tmpfile} | awk '{print $4}'`"
-
-	if [ "${REAL_GROUP}" != "${GAMES_GROUP}" ] ; then
-		einfo "Adding the group ${GAMES_GROUP} to your system ..."
-		groupadd -g 35 ${GAMES_GROUP} \
-			|| groupadd ${GAMES_GROUP}
-	fi
-	if [ "${REAL_USER}" != "${GAMES_USER}" ] ; then
-		einfo "Adding the user ${GAMES_USER} to your system ..."
-		adduser -c "added to play games" -d /usr/games -g ${GAMES_GROUP} -u 35 -s /bin/false ${GAMES_USER} \
-			|| adduser -c "added to play games" -d /usr/games -g ${GAMES_GROUP} -s /bin/false ${GAMES_USER}
-	fi
+	enewgroup ${GAMES_GROUP} 35
+	enewuser ${GAMES_USER} 35 /bin/false /usr/games ${GAMES_GROUP}
 }
 
 games_pkg_postinst() {
