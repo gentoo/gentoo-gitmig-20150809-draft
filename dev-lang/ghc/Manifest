@@ -1,7 +1,7 @@
 MD5 fea7650a5492528d515692c8a26f1ab8 ghc-6.2.1-r1.ebuild 5790
 MD5 cdc2c51fea57a0f87af76599f73c64f8 ghc-6.2.ebuild 5000
 MD5 1bab1224823b1bdf22fe21cbf40d8a56 ghc-6.0.1.ebuild 4709
-MD5 122a3cf76eff7f0af3ab087dd4277193 ghc-6.2.2.ebuild 4730
+MD5 07dc47ed30e6bfa61d9873ba6025b463 ghc-6.2.2.ebuild 5078
 MD5 1fb3de6853518ec7296c3326095353e8 ChangeLog 8981
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 700ce4a5a2ed7953404345f57ac8bbc7 ghc-6.2-r1.ebuild 5182
@@ -12,7 +12,7 @@ MD5 9c184505ec441675c94d47a3110fa754 files/ghc-6.2.documentation.patch 721
 MD5 d4a4184d5dcf525047332f9c68e522f7 files/ghc-5.04.3-r1.patch 2717
 MD5 0cc23d312b60d64e20735768503db1c6 files/digest-ghc-6.2.1-r1 67
 MD5 d417c9e24a826959ad6d921247e43328 files/digest-ghc-6.0.1 67
-MD5 2657b1ad2259eadd2439f233744afc48 files/digest-ghc-6.2.2 67
+MD5 9e9c22452b545fd9ec1367155c15d8e2 files/digest-ghc-6.2.2 67
 MD5 2e1bd1157c6d47093864b670d6b51a64 files/digest-ghc-6.2-r1 65
 MD5 2e1bd1157c6d47093864b670d6b51a64 files/digest-ghc-6.2 65
 MD5 c2e63b1796b9c089a23a07b0eb6e76a7 files/ghc-6.2.hardened.patch.bz2 362
