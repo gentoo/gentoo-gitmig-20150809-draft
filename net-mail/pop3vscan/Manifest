@@ -1,7 +1,17 @@
-MD5 29cded14c358b91717bcf5b080078f0a ChangeLog 1201
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0da3577241cb34e86213cddf1d455424 ChangeLog 1334
+MD5 7f2be9c5bc4ca17a2ed0af898522d867 pop3vscan-0.4-r1.ebuild 1454
 MD5 e1c1cf8172004d687a773e825eb30d01 pop3vscan-0.4.ebuild 1284
-MD5 32b41a5fa4cffa9b29c2d84fc07884fb pop3vscan-0.4-r1.ebuild 1475
-MD5 ce149161cbc3342eec80fe74757fa41d files/digest-pop3vscan-0.4 65
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 e8716b98e8a9ebd3cc7a3eee99b11568 files/pop3vscan 617
 MD5 31dc6dee0390bf98e963a763fcb09a96 files/digest-pop3vscan-0.4-r1 138
+MD5 ce149161cbc3342eec80fe74757fa41d files/digest-pop3vscan-0.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBc+A410xuJSrg3/sRAtejAJ9NLLbxUZhuDIllgtrNH8vX+dtSjwCfRGTY
+Ru5GKrJcdmOaH7s36YrUCko=
+=Om76
+-----END PGP SIGNATURE-----
