@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc., 2002-2003 Mike Frysinger
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.6_beta.ebuild,v 1.2 2004/03/12 12:02:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.6_beta.ebuild,v 1.3 2004/03/12 23:28:33 vapier Exp $
 
 inherit gcc flag-o-matic python
 
 DESCRIPTION="mount bin/cue cd images"
-HOMEPAGE="http://cdemu.sourceforge.net/"
+HOMEPAGE="http://cdemu.org/"
 SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
