@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p1.ebuild,v 1.4 2003/09/17 04:06:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p1.ebuild,v 1.5 2003/09/18 00:58:07 avenj Exp $
 
 inherit eutils flag-o-matic ccc
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64 ia64"
 
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
