@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpager/wmpager-1.2-r1.ebuild,v 1.3 2004/06/24 23:15:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpager/wmpager-1.2-r1.ebuild,v 1.4 2004/06/28 21:29:00 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="A simple pager docklet for the WindowMaker window manager."
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="virtual/x11
-	virtual/glibc"
+	virtual/libc"
 
 src_compile() {
 	sed -i "s:\(WMPAGER_DEFAULT_INSTALL_DIR \).*:\1\"/usr/share/wmpager\":" \
