@@ -1,6 +1,6 @@
-# ChangeLog for app-games/pathological
+# ChangeLog for games-puzzle/pathological
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/ChangeLog,v 1.1 2003/09/10 06:36:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/ChangeLog,v 1.2 2003/09/10 15:48:37 vapier Exp $
 
   10 Jul 2003; Michael Sterrett <msterret@gentoo.org>
   pathological-1.1.2.ebuild:
