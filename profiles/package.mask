@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3705 2005/03/10 16:38:54 agriffis Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3706 2005/03/10 18:29:29 luckyduck Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -323,7 +323,7 @@ dev-lisp/cl-imho
 
 # <compnerd@gentoo.org> (24 Jan 2005)
 # Masked as it has security holes. We (Java Herd) recommend that you use
-# sun-jdk-bin instead of this deprecated package.  This will be removed unless
+# sun-jdk instead of this deprecated package.  This will be removed unless
 # someone wishes to touch this (it has an evil license btw). (bug #78854)
 dev-java/sun-j2sdk
 
