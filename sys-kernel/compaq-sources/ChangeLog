@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/compaq-sources
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/ChangeLog,v 1.1 2003/05/13 18:49:07 taviso Exp $
+
+*compaq-sources-2.4.9.32.7 (13 May 2003)
+
+  13 May 2003; Tavis Ormandy <taviso@gentoo.org>
+  compaq-sources-2.4.9.32.7.ebuild:
+  Initial Import, new kernel for ALPHA users.
+
