@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r5.ebuild,v 1.4 2003/09/22 03:44:49 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r5.ebuild,v 1.5 2003/10/18 15:03:11 strider Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 DEPEND="virtual/glibc
 	>=virtual/jdk-1.3"
-RDEPEND=">=virtual/jdk-1.3"
+RDEPEND=">=virtual/jdk-1.3
+	app-shells/bash"
 IUSE="doc"
 
 src_unpack() {

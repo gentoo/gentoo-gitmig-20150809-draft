@@ -1,9 +1,9 @@
-#! /bin/sh
+#! /bin/bash
 
 #   Copyright (c) 2001-2003 The Apache Software Foundation.  All rights
 #   reserved.
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.5.3/ant,v 1.1 2003/04/15 21:10:04 absinthe Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.5.3/ant,v 1.2 2003/10/18 15:03:11 strider Exp $
 
 if [ -f $HOME/.gentoo/java-env ] ; then
   source $HOME/.gentoo/java-env
