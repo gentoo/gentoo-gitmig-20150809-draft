@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/webgraph
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph-bin/ChangeLog,v 1.1 2004/07/30 21:56:48 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph-bin/ChangeLog,v 1.2 2004/08/03 12:07:00 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> webgraph-bin-1.2.2.ebuild:
+  Added to ~ppc.
 
 *webgraph-bin-1.2.2 (30 Jul 2004)
 

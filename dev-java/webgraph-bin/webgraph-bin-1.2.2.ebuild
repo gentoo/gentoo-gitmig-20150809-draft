@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph-bin/webgraph-bin-1.2.2.ebuild,v 1.1 2004/07/30 21:56:48 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph-bin/webgraph-bin-1.2.2.ebuild,v 1.2 2004/08/03 12:07:00 dholm Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="http://webgraph.dsi.unimi.it/${P/-bin}-bin.tar.gz"
 HOMEPAGE="http://webgraph.dsi.unimi.it"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc"
 
 RDEPEND=">=virtual/jdk-1.4
