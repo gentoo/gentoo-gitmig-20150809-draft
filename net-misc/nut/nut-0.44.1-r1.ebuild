@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-0.44.1-r1.ebuild,v 1.2 2002/04/12 22:19:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-0.44.1-r1.ebuild,v 1.3 2002/07/09 10:10:21 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network-UPS Tools"
 SRC_URI="http://www.exploits.org/nut/release/${P}.tar.gz"
 HOMEPAGE="http://www.exploits.org/nut/"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND=">=media-libs/libgd-1.8.3
 	>=media-libs/libpng-1.2.1"

@@ -2,13 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Terry Chan <tchan@enteract.com>
 # Maintainer: Jon Nelson <jnelson@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1a.ebuild,v 1.1 2002/05/02 01:20:18 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1a.ebuild,v 1.2 2002/07/09 10:08:31 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network Time Protocol suite/programs"
 SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz"
 HOMEPAGE="http://www.ntp.org/"
 LICENSE="as-is"
+KEYWORDS="x86"
+SLOT="0"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
