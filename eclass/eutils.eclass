@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.30 2003/05/31 13:24:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.31 2003/06/05 06:42:32 drobbins Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -12,7 +12,7 @@
 ECLASS=eutils
 INHERITED="$INHERITED $ECLASS"
 
-newdepend "!bootstrap? ( sys-devel/patch )"
+DEPEND="$DEPEND !bootstrap? ( sys-devel/patch )"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
