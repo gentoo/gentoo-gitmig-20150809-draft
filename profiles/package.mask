@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2900 2004/06/01 11:56:58 g2boojum Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2901 2004/06/01 21:37:46 mholzer Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -263,11 +263,6 @@ net-p2p/teknap
 # major API changes; not compatible with anything yet
 >=dev-libs/libmal-0.40
 
-# <darkspecter@gentoo.org> (16 Feb 2004)
-# to be removed rsn
-sys-kernel/ppc-headers
-sys-kernel/ppc-sources-crypto
-
 # <liquidx@gentoo.org> (14 Feb 2004)
 # dev-db/db-4.2
 =dev-python/bsddb3-4.2*
@@ -278,18 +273,11 @@ sys-kernel/ppc-sources-crypto
 media-plugins/rmxmms
 media-plugins/realvideo-codecs
 
-# <iggy@gentoo.org> (07 Feb 2004
-# testing stuff, don't use unless I told you to
-sys-kernel/gentoo-test-sources
 
 # <solar@gentoo.org> (06 Feb 2004)
 # RealOne/RealPlayer 8 vulnerabilities bug #40469
 media-video/realplayer
 media-video/realone
-
-# <liquidx@gentoo.org> (04 Feb 2004)
-# deprecating libgpio because it isn't needed by anything and unmaintained
-media-libs/libgpio
 
 # <george@gentoo.org> (03 Feb 2004)
 # blas dependants, will have to be unmasked after virtual is finalized and blas is unmasked
@@ -335,10 +323,6 @@ net-im/msn4lin
 # <battousai@gentoo.org> (13 Jan 2004)
 # needs testing and xfree-4.3.0-r6 release first
 >=media-video/ati-gatos-4.3
-
-# <mkennedy@gentoo.org> (12 Jan 2004)
-# rolled into dev-lisp/sbcl w/ a threads USE flag
-dev-lisp/sbcl-mt
 
 # <lanius@gentoo.org> (11 Jan 2004)
 # force downgrade
@@ -482,10 +466,6 @@ app-admin/systemimager-server-bin
 # needs gcc3.3/tcl8.4 fixing
 dev-embedded/picptk
 
-# <mkennedy@gentoo.org> (15 Oct 2003)
-# uncertain status
-dev-lisp/cl-db-sockets
-
 # <vapier@gentoo.org> (13 Oct 2003)
 # if you're still using this i just deprecated you
 x11-misc/med
@@ -498,18 +478,11 @@ x11-misc/med
 # Old and broken cvs-releases of sidplay, to be removed soon.
 # sidplay-libs-2.1.0 and sidplay-2.0.8 should replace everything
 =media-libs/libsidplay-2.1.0.20021111
-media-libs/resid-builder
-media-sound/libsidutils
 =media-sound/sidplay-2.0.8.20021111
 
 # <games@gentoo.org> (06 Oct 2003)
 # needs an update ... currently broken #30452
 <=games-sports/soccar-0.5.2
-
-# <agenkin@gentoo.org> (02 Oct 2003)
-# deprecated.  now comes as part of app-cdf/cdrtools
-# bug #18539
-sys-fs/mkisofs
 
 # <mkennedy@gentoo.org> (01 Oct 2003)
 # deprecated in favour of dev-lisp/cmucl (source package)
@@ -542,11 +515,6 @@ dev-lisp/cmucl-bin
 # masking openafs-1.3 series as it is really unstable and useless
 =net-fs/openafs-1.3*
 
-# <tberman@gentoo.org> (24 July 2003)
-# Mask for the under development gtk-sharp split
-dev-dotnet/gtk-sharp-base
-dev-dotnet/glib-sharp
-
 # <coredumb@gentoo.org> (14 July 2003)
 # Finally a php5 beta :)
 >=dev-php/php-5.0_beta1
@@ -560,10 +528,6 @@ dev-dotnet/glib-sharp
 # See bug #23434
 =net-libs/nss_ldap-209
 
-# <agenkin@gentoo.org> (10 Jul 2003)
-# xmms-aalsa package is permanently removed (bug #6797)
-media-plugins/xmms-aalsa
-
 # <liquidx@gentoo.org> (28 Jun 2003)
 # cjkcodecs replaces koreancodecs and possibly japanesecodecs
 dev-python/koreancodecs
@@ -576,12 +540,6 @@ dev-python/japanesecodecs
 # <liquidx@gentoo.org> (21 Jun 2003)
 # doesn't compile under gcc3 and is unsupported anymore
 sys-devel/spython
-
-# <robh@gentoo.org> (18 Jun 2003)
-# due to ardour approaching a release and sourceforge breaking
-# this ebuild is not going to work for quite a while
-# a snapshot ebuild will be available as soon as Paul releases a tarball
->=media-sound/ardour-cvs-0.6.4
 
 # <woodchip@gentoo.org> (17 Jun 2003)
 # It is alpha after all.
@@ -670,10 +628,6 @@ media-video/lumiere
 =net-www/netscape-plugger-4.0-r2
 =media-video/realplayer-8-r3
 =app-text/djvu-3.5.9-r1
-=dev-java/ibm-jdk-1.4.0-r2
-=dev-java/ibm-jre-1.4.0-r2
-=dev-java/ibm-jdk-1.3.1-r2
-=dev-java/ibm-jre-1.3.1-r2
 
 # <phoenix@gentoo.org> (17 Nov 2002)
 # sawfish-1.2 is newer - masking 2.0
@@ -745,9 +699,6 @@ app-misc/ldapbrowser
 # functions correctly.  Masking while incompatible pointers are figured out
 =x11-libs/libwmfun-0.0.4
 
-#waiting for the unmasking of gnomelibs (gnome2) BaSS 20 Jun 02
-dev-utils/vdkbuilder
-
 # masking nhc98, until strange module lookup behaviour is resolved
 # george - Jun 8, 2002
 =dev-lang/nhc98-1.12
@@ -770,7 +721,6 @@ dev-libs/libiconv
 >=media-libs/mesa-3.0
 >=media-libs/mesa-glu-3.0
 >=media-libs/sgi-oss-glu-1.0
->=media-libs/oss-opengl-glu-1.0
 
 # We are masking out the shadow snapshots now, to coincide
 # with the new pam rollout. ( Woodchip - Mar 20 2002)
@@ -781,9 +731,6 @@ sys-apps/sysvinit
 
 # broken
 =app-doc/quanta-docs-1.0
-
-#buggy < Danarmak, Verwilst >
-=x11-libs/qt-x11-2.3.2
 
 #untested, author mentions an error
 media-libs/id3lib-docs
@@ -806,7 +753,6 @@ app-text/sgml2x
 # unfinished
 app-admin/va-systemimager-server
 app-admin/va-systemimager-client
->=berlin-base/berlin-0.2.2
 
 # broken
 >=net-www/konqueror-embedded-20010207
@@ -841,8 +787,3 @@ dev-util/arch
 # weeve@gentoo.org 02 Mar 2004
 # mask slib-3.1.1 until gnucash can get a fix for it
 =dev-libs/slib-3.1.1
-
-# puggy@gentoo.org 14 Mar 2004
-# mask pbbuttonsd-0.5.9 until kdeutils gets updated to reflect the new tags,
-# in favour of patched 0.5.9-r1
-=sys-apps/pbbuttonsd-0.5.9
