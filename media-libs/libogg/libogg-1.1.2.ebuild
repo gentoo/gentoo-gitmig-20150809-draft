@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.2.ebuild,v 1.7 2004/11/12 19:08:32 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.2.ebuild,v 1.8 2004/12/17 06:20:01 vapier Exp $
 
-inherit gnuconfig
+inherit eutils
 
 DESCRIPTION="the Ogg media file format library"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
@@ -18,15 +18,15 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	gnuconfig_update
+	epunt_cxx
 }
 
-src_install () {
+src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	# remove the docs installed by make install, since I'll install
 	# them in portage package doc directory
-	rm -rf "${D}/usr/share/doc"
+	rm -r "${D}"/usr/share/doc
 
 	dodoc AUTHORS CHANGES README
 	dohtml doc/*.{html,png}
