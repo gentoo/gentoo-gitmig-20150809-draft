@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.2.1.ebuild,v 1.3 2004/04/08 07:55:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.2.1-r1.ebuild,v 1.1 2004/04/20 16:55:29 eradicator Exp $
+
+inherit eutils
 
 IUSE="alsa encode oggvorbis"
 
@@ -104,7 +106,7 @@ src_install() {
 		chmod 0644 ${D}/var/lib/xmcd/discog/*/*/index.html
 	eend 0
 
-	if [ -n "`use gracenote`" ]
+	if use x86
 	then
 		ebegin "Adding Gracenote CDDB² support"
 			exeinto /usr/X11R6/lib/X11/xmcd/lib-Linux-i686
