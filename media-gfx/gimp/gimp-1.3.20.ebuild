@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.20.ebuild,v 1.2 2003/09/20 08:57:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.20.ebuild,v 1.3 2003/09/20 12:54:15 liquidx Exp $
 
 IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X"
 
@@ -91,10 +91,16 @@ src_install() {
 	rm ${D}/usr/share/gimp/1.3/misc/gimp-1.3.desktop
 	mv ${D}/usr/share/gimp/1.3/misc/gimp.desktop ${D}/usr/share/applications/gimp-1.3.desktop
 
-	# create temporary libtool workaround links
-	for x in libgimp libgimpwidgets libgimpbase libgimpcolor; do
-		dosym /usr/lib/${x}-1.3.so.20 /usr/lib/${x}-1.3.so.19
-	done
+	# HACK! create temporary libtool workaround links - liquidx
+	# Finds out if the installed version number and sees if its the same
+	# as the one being merged. If not, then we create the symlinks.
+	OLD_V=$(find ${ROOT}/usr/lib -maxdepth 1 -name libgimp-1.3.so.*.0.0 | sort | head -n 1 | sed -e 's:.*libgimp-1\.3\.so\.\([0-9]*\)\.0\.0:\1:')
+	if [ ! -f "${D}/usr/lib/libgimp-1.3.so.${OLD_V}.0.0" ]; then
+		einfo "Making symlinks from 1.3.${OLD_V} to 1.3.20"
+		for x in libgimp libgimpwidgets libgimpbase libgimpcolor; do
+			dosym /usr/lib/${x}-1.3.so.20 /usr/lib/${x}-1.3.so.${OLD_V}
+		done
+	fi		
 }
 
 pkg_postinst() {
