@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.8-r1.ebuild,v 1.5 2005/03/17 22:40:15 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.8-r1.ebuild,v 1.6 2005/03/23 13:40:09 gustavoz Exp $
 
 inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp sasl vanilla"
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 sparc x86"
 
 src_unpack() {
 	unpack ${P}i.tar.gz && cd ${S} || die "unpack failed"
