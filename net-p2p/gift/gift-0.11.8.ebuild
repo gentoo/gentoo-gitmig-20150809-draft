@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.ebuild,v 1.1 2004/11/23 20:32:36 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.ebuild,v 1.2 2004/11/23 20:42:01 squinky86 Exp $
 
 inherit eutils libtool
 
@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~ia64"
 
 DEPEND=">=sys-libs/zlib-1.1.4
+	sys-apps/file
 	imagemagick? ( >=media-gfx/imagemagick-5.5.7.15 )
 	oggvorbis? ( >=media-libs/libvorbis-1 )"
 
@@ -25,7 +26,8 @@ pkg_preinst() {
 }
 
 src_compile() {
-	econf `use_enable imagemagick` \
+	econf --enable-libmagic \
+		`use_enable imagemagick` \
 		`use_enable oggvorbis libvorbis` || die
 	emake || die
 }

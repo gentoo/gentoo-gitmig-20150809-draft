@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 64a4a61a56630452a903b6a2f05599ac gift-0.11.7-r1.ebuild 1859
 MD5 3408d5257ab210c257a3176267b33453 gift-0.11.6.ebuild 1339
 MD5 20f38ffd20cb25188a17e8fe4a985f60 gift-0.11.7_pre20040627.ebuild 2139
-MD5 1545a9b074a8f1da838598c867506add gift-0.11.8.ebuild 1682
+MD5 1d75271b7e400dda804655ecbfb1c0f6 gift-0.11.8.ebuild 1719
 MD5 fa7abf5b122646184f15da253331f226 gift-0.11.6-r1.ebuild 1920
-MD5 a4f371a5a1b9f780f1001d3f0bc26d7b ChangeLog 3417
+MD5 97dcb1a6fb8d91eda6fdaeb830b4e58c ChangeLog 3475
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
 MD5 64b21cffd79f35db281d077303eb810b files/digest-gift-0.11.6 64
 MD5 2b01e41e66d0aa24d89cb08967a09deb files/digest-gift-0.11.8 64
@@ -18,7 +18,7 @@ MD5 e53b1d5024a6b4a9c59097929889cd0e files/digest-gift-0.11.7_pre20040627 76
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBo55scAgAdbxYsnERAnGRAKCpQRu03McHiS35Q/0ijm3thceragCfQfss
-+ODaBSnL3C9AG85sEGj4vfg=
-=7VQC
+iD8DBQFBo6CgcAgAdbxYsnERAsvAAKCL/Mwu65QIW65XemACTqQ94RWZcwCfSzGY
+oorW0v4CiPexW0xvhKyisGQ=
+=UHPx
 -----END PGP SIGNATURE-----
