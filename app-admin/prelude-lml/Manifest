@@ -1,5 +1,7 @@
 MD5 13739cf76d54cc389da48670d5c69903 prelude-lml-0.8.3.ebuild 1559
 MD5 62f57d1cc3d38488c12d02c6303f1a49 ChangeLog 433
+MD5 62bc1b9afdd373800cd903a407652bcd prelude-lml-0.8.3-r1.ebuild 1724
 MD5 a2fbb252d4d430de2de0792682d67592 files/gentoo.init 584
 MD5 12e66d118e0d88eef9484535150b52f0 files/gentoo.conf 179
 MD5 673a9f17641555960c5df2e683149767 files/digest-prelude-lml-0.8.3 69
+MD5 673a9f17641555960c5df2e683149767 files/digest-prelude-lml-0.8.3-r1 69

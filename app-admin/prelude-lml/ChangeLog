@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.1 2003/06/21 17:05:10 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.2 2003/06/28 15:27:55 solar Exp $
+
+*prelude-lml-0.8.3-r1 (28 Jun 2003)
+
+  28 Jun 2003; Ned Ludd <solar@gentoo.org> prelude-lml-0.8.3-r1.ebuild:
+  The prelude rulesset was moved to /usr/share/prelude/lml/ with a symlink in
+  /etc/prelude-lml/ruleset pointing to it (so we don't need to re-write the
+  default config) suggested by Michael Boman Bug#: 23487
 
 *prelude-lml-0.8.3 (21 Jun 2003)
 
