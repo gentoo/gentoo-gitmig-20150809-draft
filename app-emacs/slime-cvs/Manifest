@@ -1,5 +1,5 @@
-MD5 75eaca90919c947748d51888a38444f6 ChangeLog 581
-MD5 2b9defbff44b007f860367afa74cc66b slime-cvs-0.ebuild 1641
+MD5 1fe1c5ab495238a2dbabca0a22853ceb ChangeLog 679
+MD5 45a7d31e309723c45ee8c980b54ab7bf slime-cvs-0.ebuild 1669
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 2b946b67bc1c932cc436cec363a0487b files/swank.asd 1162
 MD5 e4086b50bade07de735b2e62d60c41cb files/swank-loader.lisp 50
