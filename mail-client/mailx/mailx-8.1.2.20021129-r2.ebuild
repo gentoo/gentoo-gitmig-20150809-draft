@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r2.ebuild,v 1.3 2004/06/04 18:26:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r2.ebuild,v 1.4 2004/06/07 20:41:19 agriffis Exp $
 
 inherit ccc eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${DISTDIR}/20021129-cvs.diff.bz2 || die "patch failed"
 	epatch ${DISTDIR}/multifix.diff.gz || die "patch failed"
-	if [ `use ia64` ] ; then
+	if use ia64 ; then
 	epatch ${FILESDIR}/mailx-64bit.diff || die "patch failed"
 	fi
 }
