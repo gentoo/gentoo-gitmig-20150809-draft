@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/wikipedia-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/wikipedia-syntax/ChangeLog,v 1.1 2005/02/12 17:54:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/wikipedia-syntax/ChangeLog,v 1.2 2005/02/13 18:34:22 corsair Exp $
+
+  13 Feb 2005; Markus Rothe <corsair@gentoo.org>
+  wikipedia-syntax-20050212.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *wikipedia-syntax-20050212 (12 Feb 2005)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/selinux-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/selinux-syntax/ChangeLog,v 1.5 2005/01/01 16:53:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/selinux-syntax/ChangeLog,v 1.6 2005/02/13 18:31:06 corsair Exp $
+
+  13 Feb 2005; Markus Rothe <corsair@gentoo.org>
+  selinux-syntax-20040707.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   05 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   selinux-syntax-20040707.ebuild:

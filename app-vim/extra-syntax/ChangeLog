@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/extra-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.1 2005/02/12 21:10:11 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.2 2005/02/13 18:37:25 corsair Exp $
+
+  13 Feb 2005; Markus Rothe <corsair@gentoo.org> extra-syntax-1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *extra-syntax-1 (12 Feb 2005)
 
