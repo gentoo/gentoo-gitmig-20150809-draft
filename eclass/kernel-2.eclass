@@ -408,7 +408,7 @@ src_unpack() {
 
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
-	mv linux-${OKV} linux-${KV} || die "Unable to move source tree to ${KV}."
+	[ ! "${OKV}" == "${KV}" ] && mv linux-${OKV} linux-${KV} || die "Unable to move source tree to ${KV}."
 	cd ${S}
 
 	universal_unpack
