@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.5.0-r1.ebuild,v 1.1 2002/12/27 18:14:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.5.0-r1.ebuild,v 1.2 2002/12/30 04:33:06 satai Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-libs/glib-2.0.4
 		media-gfx/transfig
 		dev-libs/libxslt
 		app-text/docbook-xsl-stylesheets
-		app-text/xmltex
+		app-text/passivetex
 		app-text/xpdf
 		app-text/ghostscript )
 	x86? ( >=dev-lang/nasm-0.90 )
