@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.5 2003/09/04 05:20:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.6 2003/09/15 17:47:58 seemant Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND="sys-libs/readline
 		samba? ( net-fs/samba )
 		berkdb? ( sys-libs/db )
 		gdbm? ( sys-libs/gdbm )
-		xfs? ( sys-apps/xfsdump )"
+		xfs? ( sys-fs/xfsdump )"
 
 IUSE="pic debug gdbm berkdb samba xfs"
 
