@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.2-r1.ebuild,v 1.10 2004/10/21 19:19:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.2-r1.ebuild,v 1.11 2004/10/21 19:24:40 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -39,7 +39,7 @@ src_install() {
 	dohtml Readme.html
 
 	if use doc ; then
-		dodir /usr/share/doc/${P}
+		dodir /usr/share/doc/${PF}
 		cp -a samples ${D}/usr/share/doc/${PF}
 		java-pkg_dohtml -r build/docs/javadocs
 	fi
