@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16.ebuild,v 1.2 2004/12/14 14:38:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16.ebuild,v 1.3 2004/12/18 20:07:46 lu_zero Exp $
 
 inherit gnuconfig eutils
 
@@ -26,7 +26,7 @@ DEPEND=">=sys-libs/zlib-1.1.3
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
+	epatch ${FILESDIR}/${P}-build.patch
 	# Run gnuconfig_update on all arches, needed at least for mips
 	gnuconfig_update
 
