@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.1 2004/04/25 20:00:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.2 2004/04/26 02:06:05 vapier Exp $
 
 inherit base flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.4/${
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64"
 IUSE="python pic static"
 
 #patch is in recent 2.2 kernels so it works there
