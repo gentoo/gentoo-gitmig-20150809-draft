@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.18 2004/12/30 22:22:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.19 2005/01/02 03:42:22 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -156,6 +156,21 @@ toolchain-binutils_src_install() {
 	dodir /usr/${CTARGET}/{bin,include,lib}
 	prepman ${DATAPATH}
 
+	# Now, some binutils are tricky and actually provide 
+	# for multiple TARGETS.  Really, we're talking just 
+	# 32bit/64bit support (like mips/ppc/sparc).  Here 
+	# we want to tell binutils-config that it's cool if 
+	# it generates multiple sets of binutil symlinks.
+	# e.g. sparc gets {sparc,sparc64}-unknown-linux-gnu
+	local targ=${CTARGET/-*}
+	local FAKE_TARGETS=${CTARGET}
+	case ${targ} in
+		mips|powerpc|sparc)
+			FAKE_TARGETS="${FAKE_TARGETS} ${CTARGET/-/64-}";;
+		mips64|powerpc64|sparc64)
+			FAKE_TARGETS="${FAKE_TARGETS} ${CTARGET/64-/-}";;
+	esac
+
 	# Generate an env.d entry for this binutils
 	cd ${S}
 	insinto /etc/env.d/binutils
@@ -163,7 +178,7 @@ toolchain-binutils_src_install() {
 TARGET="${CTARGET}"
 VER="${PV}"
 LIBPATH="${LIBPATH}"
-FAKE_TARGETS="${CTARGETS_BINUTILS}"
+FAKE_TARGETS="${FAKE_TARGETS}"
 EOF
 	newins env.d ${CTARGET}-${PV}
 
