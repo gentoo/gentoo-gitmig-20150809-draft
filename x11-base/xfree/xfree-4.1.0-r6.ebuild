@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r6.ebuild,v 1.7 2002/10/04 06:38:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r6.ebuild,v 1.8 2002/10/17 16:23:57 aliz Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -23,8 +23,8 @@ KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND=">=sys-libs/ncurses-5.1
         >=sys-libs/zlib-1.1.3-r2
-        sys-devel/flex
-        sys-devel/perl"
+	sys-devel/flex
+	sys-devel/perl"
 	
 RDEPEND=">=sys-libs/ncurses-5.1"
 
