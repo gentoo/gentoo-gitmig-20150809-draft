@@ -1,6 +1,6 @@
-# ChangeLog for app-emulation/game-launcher
+# ChangeLog for games-emulation/game-launcher
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/game-launcher/ChangeLog,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/game-launcher/ChangeLog,v 1.2 2003/09/10 16:01:58 vapier Exp $
 
   21 Aug 2003; Michael Sterrett <msterret@gentoo.org>
   game-launcher-0.9.8.ebuild:
