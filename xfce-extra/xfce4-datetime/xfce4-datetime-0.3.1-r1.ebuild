@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/xfce4-datetime-0.3.1-r1.ebuild,v 1.3 2005/02/08 17:44:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/xfce4-datetime-0.3.1-r1.ebuild,v 1.4 2005/03/06 14:17:30 lanius Exp $
 
 DESCRIPTION="Xfce4 panel plugin that displays date/time and small calendar"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 
 GOODIES_PLUGIN=1
 
