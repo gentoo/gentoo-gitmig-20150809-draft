@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.15 2003/11/16 15:05:53 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.16 2003/12/14 02:52:16 gmsoft Exp $
+
+  14 Dec 2003; root <root@gentoo.org> libcap-1.10-r3.ebuild:
+  Marked stable on hppa.
 
   16 Nov 2003; Alexander Gabert <pappy@gentoo.org> libcap-1.10.ebuild:
   removed text relocations out of the libcap library for hardened-gcc via
