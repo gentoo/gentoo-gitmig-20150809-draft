@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.5 2002/04/27 21:46:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.6 2002/06/21 12:37:25 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a simple ntp client"
@@ -31,7 +31,7 @@ src_install () {
     doman clockspeed.1 clockadd.1 clockview.1 sntpclock.1 taiclock.1 taiclockd.1
 
     exeinto /usr/sbin
-    newexe ${FILESDIR}/ntpclockset ntpclockset
+    doexe ${FILESDIR}/ntpclockset
 
     dodoc BLURB CHANGES README THANKS TODO INSTALL
 }
