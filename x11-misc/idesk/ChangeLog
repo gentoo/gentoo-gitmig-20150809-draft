@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.3 2002/11/10 06:53:33 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.4 2002/12/07 23:57:20 foser Exp $
+
+*idesk-0.3.5-r1 (07 Dec 2002)
+
+  07 Dec 2002; foser <foser@gentoo.org> idesk-0.3.5.ebuild :
+  Fix build to compile with xft2
 
 *idesk-0.3.5 (10 Nov 2002)
 
