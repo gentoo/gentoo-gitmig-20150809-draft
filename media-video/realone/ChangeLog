@@ -1,7 +1,9 @@
 # ChangeLog for media-video/realone
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/realone/ChangeLog,v 1.2 2002/11/12 08:18:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realone/ChangeLog,v 1.3 2002/11/12 08:20:59 seemant Exp $
 
 *realone-1 (3 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
 
-  Initial version, made by Danny Pansters in bug #10065
+  RealONE player. Ebuild submitted by: danny@ricin.com (Danny Pansters) in
+  bug #10065.  Masked until we can get real.com's blessing on this.
+  Shouldn't have been added into portage yet.
