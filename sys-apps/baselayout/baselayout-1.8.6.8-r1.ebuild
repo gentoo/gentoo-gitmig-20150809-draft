@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.8 2003/07/15 20:31:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.9 2003/07/23 21:39:13 tester Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -190,7 +190,16 @@ src_install() {
 	keepdir /var/spool /var/tmp /var/lib/misc
 	keepdir /var/log/news
 	dosym ../var/tmp /usr/tmp
-	
+
+	# Symlinks so that LSB compliant apps work
+	# /lib64 is especially required since its the default place for ld.so
+	if [ "${ARCH}" = "amd64" ]
+	then
+		dosym lib /lib64
+		dosym lib /usr/lib64
+		dosym lib /usr/X11R6/lib64
+	fi
+
 	keepdir /home
 	keepdir /usr/include /usr/src
 	keepdir /usr/X11R6/include/{X11,GL} /usr/X11R6/lib
