@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.1.16_pre6.ebuild,v 1.3 2003/02/11 19:35:13 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.1.16_pre6.ebuild,v 1.4 2003/03/08 22:59:45 latexer Exp $
 
 # linux-wlan-ng requires a configured pcmcia-cs source tree.  
 # unpack/configure it in WORKDIR.  No need to compile it though.
@@ -151,6 +151,11 @@ pkg_postinst() {
 	einfo "provide more usable keys at the moment."
 	einfo ""
 	einfo "Be sure to add iface_wlan0 parameters to /etc/conf.d/net."
+	einfo ""
+	ewarn "Wireless cards which you want to use drivers other than wlan-ng for"
+	ewarn "need to have the appropriate line removed from /etc/pcmcia/wlan-ng.conf"
+	ewarn "Do 'cardctl info' to see the manufacturer ID and remove the corresponding"
+	ewarn "line from that file."
 }
 
 
