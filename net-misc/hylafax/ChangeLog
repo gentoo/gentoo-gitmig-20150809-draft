@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.40 2004/10/24 05:50:07 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.41 2004/10/25 22:07:11 nerdboy Exp $
+
+  25 Oct 2004; Steve Arnold <nerdboy@gentoo.org> -hylafax-4.1.8-r1.ebuild,
+  -hylafax-4.1.8-r2.ebuild, -hylafax-4.1.8-r3.ebuild, -hylafax-4.1.8.ebuild,
+  -hylafax-4.2.0.ebuild, -hylafax-4.2.0_rc2.ebuild:
+  removed out-dated ebuilds
 
 *hylafax-4.2.0-r1 (23 Oct 2004)
 
