@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.0.0.ebuild,v 1.1 2004/04/19 08:53:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.0.0.ebuild,v 1.2 2004/04/21 09:37:41 tigger Exp $
 
 IUSE="doc"
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 DEPEND="virtual/glibc
 	>=net-firewall/iptables-1.2.4
-	sys-apps/iproute"
+	sys-apps/iproute2"
 
 S=${WORKDIR}/${MY_P}
 
