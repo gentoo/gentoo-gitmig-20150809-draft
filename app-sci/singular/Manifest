@@ -1,3 +1,5 @@
-MD5 768f1ae7c0cee175dd122e6c6748ba7c singular-2.0.4.ebuild 2535
+MD5 eb94cc70a08390a13b1a1504fd5da2f4 singular-2.0.4.ebuild 2537
+MD5 d3437d25b8c64f25372d74aef6c0cd51 ChangeLog 446
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 b52673163a28446aae41691abc3e705d files/digest-singular-2.0.4 862
 MD5 660ffc170458b159396e236d9d25351f files/singular-2.0.4-gentoo.diff 2677
