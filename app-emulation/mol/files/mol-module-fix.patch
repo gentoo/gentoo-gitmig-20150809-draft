@@ -1,0 +1,12 @@
+--- src/kmod/Linux/alloc.h.orig	2004-03-21 16:20:39.000000000 -0600
++++ src/kmod/Linux/alloc.h	2005-01-16 15:23:17.583148592 -0600
+@@ -24,6 +24,9 @@
+ 
+ #ifdef LINUX_26
+ #include <asm/cacheflush.h>
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10)
++#include <asm/io.h>
++#endif
+ #endif
+ 
+ #define	spin_lock_mol(x)			spin_lock(x)

@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.40 2005/01/01 14:14:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.41 2005/01/18 12:04:42 pylon Exp $
+
+*mol-0.9.71_pre1 (18 Jan 2005)
+
+  18 Jan 2005; Lars Weiler <pylon@gentoo.org> -files/26-arch-fix.patch,
+  +files/mol-module-fix.patch, -mol-0.9.68-r4.ebuild, mol-0.9.70.ebuild, 
+  -mol-0.9.70_rc2-r1.ebuild, +mol-0.9.71_pre1.ebuild:
+
+  mol-0.9.71_pre1.ebuild: A new rsync-snapshot with minor improvements.
+  mol-0.9.70.ebuild: Patched to compile modules on linux-2.6.10; bug #77386.
+  Stripped LDFLAGS as they break compilation.
+
+  Removed old versions.
 
   01 Oct 2004; Luca Barbato <lu_zero@gentoo.org> mol-0.9.70.ebuild:
   Workaround for issue with libpng.

@@ -1,23 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70_rc2-r1.ebuild,v 1.5 2005/01/01 14:14:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre1.ebuild,v 1.1 2005/01/18 12:04:42 pylon Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
-S=${WORKDIR}/${P}-r1
 DESCRIPTION="MOL (Mac-on-Linux) lets PPC users run MacOS (X) under Linux (rsync snapshot)"
-SRC_URI="mirror://gentoo/${P}-r1.tar.bz2"
 HOMEPAGE="http://www.maconlinux.net/"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~ppc"
+IUSE="vnc alsa oss fbcon X oldworld sheep debug dga usb"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 DEPEND=""
 RDEPEND="net-misc/dhcp
 	net-firewall/iptables
 	alsa? ( virtual/alsa )
+	vnc? ( net-misc/vnc )
 	X? ( virtual/x11 )"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="ppc -x86 -sparc -alpha -mips"
-IUSE="alsa oss fbcon X oldworld sheep debug"
 
 pkg_setup() {
 	echo
@@ -29,13 +32,12 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	# dhcp config fix and show dchpd messages on starting mol
 	cd ${S}
+	epatch ${FILESDIR}/${PN}-module-fix.patch
+
+	# dhcp config fix and show dchpd messages on starting mol
 	sed -i "s:#ddns-update-style:ddns-update-style:g" Doc/config/dhcpd-mol.conf || die
 	sed -i "s:DHCPD\ -q\ -cf:DHCPD\ -cf:g" Doc/config/tunconfig || die
-
-	sed -i "s:prefix		= /usr/local:prefix		= /usr:" Makefile.top || die
-	sed -i "s#VENDOR		:=#VENDOR		:= -gentoo#" Makefile.top || die
 
 }
 
@@ -43,28 +45,34 @@ src_compile() {
 	filter-flags -fsigned-char
 
 	export KERNEL_SOURCE="/usr/src/${FK}"
+	export LDFLAGS=""
 
 	# initialize all needed build-files
 	./autogen.sh
+	./configure --prefix="/usr" || die "configure failed"
 
-	emake defconfig || die "This is a ppc-only package (time to buy that iBook, no?)"
+	# workaround for proper module-building
+	make defconfig || die "This is a ppc-only package (time to buy that iBook, no?)"
 
-	sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config
-	sed -i "s:CONFIG_TAP=y:# CONFIG_TAP is not set:" .config
-	use alsa     || sed -i "s:CONFIG_ALSA=y:# CONFIG_ALSA is not set:" .config
-	use debug    && sed -i "s:# CONFIG_DEBUGGER is not set:CONFIG_DEBUGGER=y:" .config
-	use oss      || sed -i "s:CONFIG_OSS=y:# CONFIG_OSS is not set:" .config
-	use oldworld || sed -i "s:CONFIG_OLDWORLD=y:# CONFIG_OLDWORLD is not set:" .config
-	use sheep    || sed -i "s:CONFIG_SHEEP=y:# CONFIG_SHEEP is not set:" .config
-	use X        || sed -i "s:CONFIG_X11=y:# CONFIG_X11 is not set:" .config
-	use fbcon    || sed -i "s:CONFIG_FBDEV=y:# CONFIG_FBDEV is not set:" .config
+	sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config-ppc
+	sed -i "s:CONFIG_TAP=y:# CONFIG_TAP is not set:" .config-ppc
+	use alsa     || sed -i "s:CONFIG_ALSA=y:# CONFIG_ALSA is not set:" .config-ppc
+	use debug    && sed -i "s:# CONFIG_DEBUGGER is not set:CONFIG_DEBUGGER=y:" .config-ppc
+	use oss      || sed -i "s:CONFIG_OSS=y:# CONFIG_OSS is not set:" .config-ppc
+	use oldworld || sed -i "s:CONFIG_OLDWORLD=y:# CONFIG_OLDWORLD is not set:" .config-ppc
+	use sheep    || sed -i "s:CONFIG_SHEEP=y:# CONFIG_SHEEP is not set:" .config-ppc
+	use X        || sed -i "s:CONFIG_X11=y:# CONFIG_X11 is not set:" .config-ppc
+	use fbcon    || sed -i "s:CONFIG_FBDEV=y:# CONFIG_FBDEV is not set:" .config-ppc
+	use vnc      || sed -i "s:CONFIG_VNC=y:# CONFIG_VNC is not set:" .config-ppc
+	use dga      || sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config-ppc
+	use usb      || sed -i "s:CONFIG_USBDEV=y:# CONFIG_USBDEV is not set:" .config-ppc
 
 	einfo "The configuration has been altered according to your USE-flags."
 	# reinitialize our changed configuration
-	emake oldconfig
+	make oldconfig
 
 	addwrite "/usr/src/${FK}"
-	emake || die "Build mol with: FEATURES=\"-userpriv -strict\" emerge mol"
+	make || die "Build mol with: FEATURES=\"-userpriv -usersandbox\" emerge mol"
 }
 
 src_install() {
@@ -73,7 +81,7 @@ src_install() {
 	# sandboxing enabled this would result in an access violation.
 
 	addwrite "/usr/src/${FK}"
-	emake DESTDIR=${D} install || die "Failed to install MOL."
+	make DESTDIR=${D} install || die "Failed to install MOL."
 
 	dodoc 0README BUILDING COPYRIGHT CREDITS Doc/*
 }
@@ -92,7 +100,6 @@ pkg_postinst() {
 	ewarn "If errors with networking occur, make sure you have the following"
 	ewarn "kernel functions enabled:"
 	einfo "For the dhcp server:"
-	einfo "    Socket Filtering (CONFIG_FILTER)"
 	einfo "    Packet Socket (CONFIG_PACKET)"
 	einfo "For NAT:"
 	einfo "    Network packet filtering (CONFIG_NETFILTER)"
