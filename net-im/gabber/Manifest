@@ -3,3 +3,4 @@ MD5 fdfa11bac2f9a6274ebfc375411072e9 gabber-0.8.7-r3.ebuild 1520
 MD5 3c26fdd6bd493036699f43145aad0613 files/TCPtransmitter.cc-gcc3-gentoo.patch 584
 MD5 2305451d3c724090f81f2cf91551a581 files/digest-gabber-0.8.7.12 68
 MD5 13fd2ef7cc09c0d0e358f639c31f687e files/digest-gabber-0.8.7-r3 65
+MD5 dcae11106ad494209e522c930de6b6e1 gabber-0.8.7.12.ebuild 1438
