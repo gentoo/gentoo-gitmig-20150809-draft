@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.5.2.ebuild,v 1.2 2003/07/06 13:08:02 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.5.4.ebuild,v 1.1 2003/07/06 13:08:02 scandium Exp $
 
 DESCRIPTION="wxWindows based client for the eDonkey/eMule/lMule network"
 HOMEPAGE="http://www.xmule.org/"
