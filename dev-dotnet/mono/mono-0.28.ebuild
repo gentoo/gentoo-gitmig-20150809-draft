@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.28.ebuild,v 1.7 2005/01/01 17:49:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.28.ebuild,v 1.8 2005/01/18 16:38:31 scandium Exp $
 
 inherit mono
 
@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND="virtual/libc
 	>=dev-libs/glib-2.0
-	!dev-dotnet/pnet"
+	!<dev-dotnet/pnet-0.6.12"
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxml2

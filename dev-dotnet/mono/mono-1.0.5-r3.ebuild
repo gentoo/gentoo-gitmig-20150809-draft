@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.5-r3.ebuild,v 1.7 2005/01/04 15:58:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.5-r3.ebuild,v 1.8 2005/01/18 16:38:31 scandium Exp $
 
 inherit eutils mono flag-o-matic debug gcc
 
@@ -20,7 +20,7 @@ IUSE="nptl"
 DEPEND="virtual/libc
 	>=dev-libs/glib-2.0
 	>=dev-libs/icu-2.6.1
-	!dev-dotnet/pnet
+	!<dev-dotnet/pnet-0.6.12
 	nptl? ( >=sys-devel/gcc-3.4 )
 	ppc? (
 		>=sys-devel/gcc-3.2.3-r4
