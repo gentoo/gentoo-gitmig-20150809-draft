@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.7 2003/12/11 15:41:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.8 2003/12/16 01:03:05 avenj Exp $
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/enlightenment/${P/_/-}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa"
+KEYWORDS="x86 ppc sparc hppa amd64"
 IUSE="nls esd gnome kde"
 
 DEPEND=">=media-libs/fnlib-0.5
