@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kmrcl/cl-kmrcl-1.69.ebuild,v 1.1 2004/05/09 06:39:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kmrcl/cl-kmrcl-1.69.ebuild,v 1.2 2004/05/09 14:45:24 dholm Exp $
 
 inherit common-lisp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://packages.debian.org/unstable/devel/cl-kmrcl.html
 SRC_URI="ftp://ftp.b9.com/kmrcl/kmrcl-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DEPEND="dev-lisp/cl-rt"
 
 CLPACKAGE=kmrcl
