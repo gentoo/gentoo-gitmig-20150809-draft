@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.150 2004/10/11 09:20:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.151 2004/10/11 15:44:36 spyderous Exp $
+
+  11 Oct 2004; Mike Frysinger <vapier@gentoo.org>;
+  xorg-x11-6.7.0-r2.ebuild, xorg-x11-6.8.0-r1.ebuild, xorg-x11-6.8.0-r2.ebuild:
+  remove baselayout DEPEND
 
   11 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
