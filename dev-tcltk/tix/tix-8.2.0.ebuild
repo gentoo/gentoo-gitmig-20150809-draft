@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.8 2003/08/07 03:22:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.9 2003/10/18 13:25:38 liquidx Exp $
 
 MY_P=${P/-/}
 S=${WORKDIR}/${MY_P}/unix
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=sys-apps/sed-4
 	dev-lang/tk"
 
 src_unpack() {
@@ -31,6 +32,7 @@ src_compile() {
 		--enable-shared || die "./configure failed"
 
 	ebegin "Fixing the Makefile..."
+	sed -e 's:TK_LIBS =:TK_LIBS = -L/usr/X11R6/lib -lX11:' -i ${S}/unix/Makefile 
 	eend $?
 
 	make || die

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.4 2003/05/10 19:58:11 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.5 2003/10/18 13:25:38 liquidx Exp $
+
+  18 Oct 2003; Alastair Tse <liquidx@gentoo.org> tix-8.2.0.ebuild:
+  add fix for unresolved symbols in X11 (#29371)
 
   10 May 2003; Stanislav Brabec <sb@gentoo.org> tix-8.2.0.ebuild:
   Removed obsolete fix_makefile (bug #20259) and removed dependency on
