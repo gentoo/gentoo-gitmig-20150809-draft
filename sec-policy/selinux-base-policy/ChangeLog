@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.22 2004/05/16 01:22:22 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.23 2004/06/04 20:06:48 pebenito Exp $
+
+*selinux-base-policy-20040604 (04 Jun 2004)
+
+  04 Jun 2004; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-base-policy-20040604.ebuild:
+  New release including 1.12 NSA policy, and experimental sesandbox.
 
   15 May 2004; Chris PeBenito <pebenito@gentoo.org>
   selinux-base-policy-20040509.ebuild:
