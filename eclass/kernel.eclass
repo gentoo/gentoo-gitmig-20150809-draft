@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.42 2003/11/20 07:52:16 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.43 2003/12/01 19:09:35 plasmaroo Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -172,6 +172,7 @@ kernel_pkg_preinst() {
 }
 
 kernel_pkg_postinst() {
+
 	[ "$ETYPE" = "headers" ] && return
 	if [ ! -e ${ROOT}usr/src/linux ]
 	then
@@ -179,10 +180,13 @@ kernel_pkg_postinst() {
 		ln -sf linux-${KV} ${ROOT}/usr/src/linux
 	fi
 
+	echo
 	einfo "After installing a new kernel of any version, it is important"
 	einfo "that you have the appropriate /etc/modules.autoload.d/kernel-X.Y"
 	einfo "created (X.Y is the first 2 parts of your new kernel version)"
 	echo
 	einfo "For example, this kernel will require:"
 	einfo "/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}"
+	echo
+
 }
