@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r12.ebuild,v 1.1 2004/11/04 16:25:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r12.ebuild,v 1.2 2004/11/09 20:22:40 usata Exp $
 
 IUSE="cjk"
 
@@ -38,9 +38,7 @@ src_unpack() {
 	if use cjk ; then
 		einfo "Applying ${ONIGURUMA}"
 		cd ${WORKDIR}/oniguruma
-		if use ppc || use ppc64 || use alpha ; then
-			epatch ${FILESDIR}/oniguruma-2.3.1-fix-ppc.patch
-		fi
+		epatch ${FILESDIR}/oniguruma-2.3.1-gentoo.patch
 		econf --with-rubydir=${S} || die "econf failed"
 		make ${SLOT/./}
 	fi
