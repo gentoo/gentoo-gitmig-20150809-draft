@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libpqpp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.10 2004/09/01 16:57:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.11 2004/11/24 21:13:18 swegener Exp $
+
+  24 Nov 2004; Sven Wegener <swegener@gentoo.org> -libpqpp-4.0-r1.ebuild:
+  Removed old version that has broken SRC_URI and missing patch.
 
   01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libpqpp-4.0-r4.ebuild:

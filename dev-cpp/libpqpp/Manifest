@@ -1,12 +1,20 @@
-MD5 5bd99399ca77c3c9c0c16c89d5a3c62d ChangeLog 1864
-MD5 d078373220676536198ceb5952baf584 libpqpp-4.0-r1.ebuild 1010
-MD5 bd9b56bb3c58a038bc3cd1779aec5286 libpqpp-4.0-r2.ebuild 1149
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 14883dc5afd4ca5ac6bd5e9d66a2c5ac libpqpp-4.0-r3.ebuild 1213
+MD5 bd9b56bb3c58a038bc3cd1779aec5286 libpqpp-4.0-r2.ebuild 1149
 MD5 a551803a52ecfe87a01a965a138ba348 libpqpp-4.0-r4.ebuild 1215
+MD5 4da3176f6be285389ace6a3d993c7130 ChangeLog 2002
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 312b07ad4bf840d75840b7410d48f268 files/digest-libpqpp-4.0-r1 62
+MD5 69fc4a69b78cb8cf9b4f69bb49e71363 files/libpqpp-4.0-PIC.patch 941
+MD5 530daffcb76569636aa08cb163318b88 files/libpqpp-4.0-gentoo.patch 3559
 MD5 312b07ad4bf840d75840b7410d48f268 files/digest-libpqpp-4.0-r2 62
 MD5 312b07ad4bf840d75840b7410d48f268 files/digest-libpqpp-4.0-r3 62
 MD5 312b07ad4bf840d75840b7410d48f268 files/digest-libpqpp-4.0-r4 62
-MD5 530daffcb76569636aa08cb163318b88 files/libpqpp-4.0-gentoo.patch 3559
-MD5 69fc4a69b78cb8cf9b4f69bb49e71363 files/libpqpp-4.0-PIC.patch 941
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpPl0I1lqEGTUzyQRAj8HAJ9pUtrBOzR0btV/N4n2uIDb1UgoNQCgqrQr
+IEWIuSaIiEc/1Kq+0qSSAfw=
+=ZIi1
+-----END PGP SIGNATURE-----
