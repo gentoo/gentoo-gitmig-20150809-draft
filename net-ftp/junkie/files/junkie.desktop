@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Junkie
+Exec=junkie
+# The png icon is the heaviest one, but the only one which works properly in both Gnome and KDE
+Icon=junkie-logo.png
+Info=JUNKIE
+Comment="Light and cute ftp client"
+Comment[es_ES]="Cliente ftp ligero y bonito"
+Terminal=0
+Type=Application
+Categories=Application;Network;
