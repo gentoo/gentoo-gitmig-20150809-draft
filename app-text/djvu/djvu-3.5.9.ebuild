@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.9.ebuild,v 1.9 2004/06/24 22:32:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.9.ebuild,v 1.10 2004/07/13 20:59:00 agriffis Exp $
 
 MY_P="${PN}libre-${PV}"
 DESCRIPTION="A web-centric format and software platform for distributing documents and images."
@@ -54,5 +54,3 @@ pkg_postrm() {
 		rm /usr/lib/mozilla/plugins/nsdejavu.so
 	fi
 }
-
-

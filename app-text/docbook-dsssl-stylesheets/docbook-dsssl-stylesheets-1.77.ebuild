@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77.ebuild,v 1.11 2004/06/25 03:04:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77.ebuild,v 1.12 2004/07/13 21:03:28 agriffis Exp $
 
 MY_P=${P/-stylesheets/}
 S=${WORKDIR}/${MY_P}
@@ -13,6 +13,7 @@ RDEPEND="app-text/sgml-common"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.7.ebuild,v 1.11 2004/06/24 22:32:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.7.ebuild,v 1.12 2004/07/13 20:59:00 agriffis Exp $
 
 MY_P="${PN}libre-${PV}"
 DESCRIPTION="A web-centric format and software platform for distributing documents and images."
@@ -10,6 +10,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 # Build-time dependencies, such as
 DEPEND=">=x11-libs/qt-3.0.4.20020606-r1
@@ -57,5 +58,3 @@ pkg_postrm() {
 		rm /usr/lib/mozilla/plugins/nsdejavu.so
 	fi
 }
-
-
