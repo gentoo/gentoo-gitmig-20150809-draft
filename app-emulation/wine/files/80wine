@@ -1,4 +1,3 @@
 PATH=/usr/wine/bin
 ROOTPATH=/usr/wine/bin
 LDPATH=/usr/wine/lib
-MANPATH=/usr/wine/man
