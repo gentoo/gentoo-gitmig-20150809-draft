@@ -1,4 +1,4 @@
-MD5 2b15309d650d118050b0774b804740eb ChangeLog 372
-MD5 e8bd419c591c48caa94595166505ff1c jdbc3-postgresql-7.3.ebuild 663
+MD5 96ea15d2ae04d34e78ed1ee4f309505c jdbc3-postgresql-7.3.ebuild 638
+MD5 27080d95f5c645dcfafab89bece91018 ChangeLog 502
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 927470f50a83ea9bf353f3d3e8c68c4f files/digest-jdbc3-postgresql-7.3 58
