@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.17 2004/07/13 23:15:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.18 2004/07/14 12:06:11 lv Exp $
+
+  14 Jul 2004; Travis Tilley <lv@gentoo.org>
+  +files/2.0.1-gcc3.4-after-cvs.patch, +files/2.0.1-gcc3.4-to-cvs.patch,
+  libgnomecanvasmm-2.0.1.ebuild:
+  added gcc 3.4 fix from ed catmur
 
   14 Jul 2004; foser <foser@gentoo.org> libgnomecanvasmm-2.0.{0,1}.ebuild :
   Fix *mm deps to actually work..
