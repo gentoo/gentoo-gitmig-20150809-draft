@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p3.ebuild,v 1.3 2004/11/24 09:30:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p3.ebuild,v 1.4 2004/12/10 22:12:21 ticho Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND="sys-libs/readline
 		dev-lang/perl
 		sys-apps/mtx
 		app-arch/dump
-		mail-client/mailx
+		virtual/mailx
 		samba? ( net-fs/samba )
 		berkdb? ( sys-libs/db )
 		gdbm? ( sys-libs/gdbm )

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/amanda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.26 2004/11/24 09:30:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.27 2004/12/10 22:12:21 ticho Exp $
+
+  10 Dec 2004; Andrej Kacian <ticho@gentoo.org> amanda-2.4.4-r3.ebuild,
+  amanda-2.4.4_p2-r1.ebuild, amanda-2.4.4_p2-r2.ebuild,
+  amanda-2.4.4_p2.ebuild, amanda-2.4.4_p3.ebuild:
+  Changed mail-client/mailx to virtual/mailx in DEPEND. See bug #73972.
 
   24 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> amanda-2.4.4_p3.ebuild:
   Fix bug #66842 properly.
