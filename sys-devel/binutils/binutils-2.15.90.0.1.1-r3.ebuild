@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1-r3.ebuild,v 1.3 2004/05/28 04:10:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1-r3.ebuild,v 1.4 2004/06/02 11:05:26 lv Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -17,7 +17,7 @@ SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 
 LICENSE="GPL-2 | LGPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 -hppa ~ppc"
+KEYWORDS="-* amd64 -hppa ~ppc"
 IUSE="nls bootstrap build multitarget"
 
 DEPEND="virtual/glibc
