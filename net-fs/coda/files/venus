@@ -1,10 +1,18 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/venus,v 1.3 2004/07/16 23:22:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/venus,v 1.4 2004/07/26 17:50:21 griffon26 Exp $
 
 depend() {
 	need net
+	after codasrv
+}
+
+checkconfig() {
+	if ! /usr/sbin/codaconfedit venus.conf &>/dev/null; then
+		eerror "Please run venus-setup before starting the service..."
+		return 1
+	fi
 }
 
 start() {

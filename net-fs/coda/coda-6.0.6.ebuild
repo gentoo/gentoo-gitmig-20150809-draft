@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.6.ebuild,v 1.3 2004/06/24 22:42:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.6.ebuild,v 1.4 2004/07/26 17:50:21 griffon26 Exp $
 
 inherit eutils
 
@@ -114,7 +114,8 @@ src_install () {
 pkg_postinst () {
 	einfo
 	einfo "To enable the coda at boot up, please do:"
-	einfo "    rc-update venus default"
+	einfo "    rc-update add codasrv default"
+	einfo "    rc-update add venus default"
 	einfo
 	einfo "* To get started, run venus-setup and vice-setup"
 	einfo

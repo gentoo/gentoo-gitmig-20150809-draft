@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/coda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.7 2004/07/16 23:22:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.8 2004/07/26 17:50:21 griffon26 Exp $
+
+  26 Jul 2004; Maurice van der Pot <griffon26@gentoo.org> metadata.xml,
+  files/auth2, files/coda-update, files/codasrv, files/venus,
+  coda-6.0.3.ebuild, coda-6.0.6.ebuild:
+  Fixed several issues with init scripts that popped up in the comments
+  of bug #26132. Fixed omission in einfo in both ebuilds. Took over
+  maintainance from Daniel Black <dragonheart@gentoo.org>
 
   17 Jul 2004; Daniel Black <dragonheart@gentoo.org> files/auth2,
   files/coda-update, files/codasrv, files/venus:

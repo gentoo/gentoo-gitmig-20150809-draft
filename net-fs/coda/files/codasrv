@@ -1,22 +1,17 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/codasrv,v 1.4 2004/07/18 03:52:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/codasrv,v 1.5 2004/07/26 17:50:21 griffon26 Exp $
 
 depend() {
 	need net coda-update auth2
 }
 
 checkconfig() {
-        if [ ! -e /etc/coda/server.conf ] ; then
-                eerror "Please run vice-setup before starting the service..."
-                return 1
-        fi
-        eval `grep "^vicedir=" /etc/coda/server.conf || echo vicedir=/var/lib/vice`
-        if [ ! -e $vicedir/hostname ] ; then
-                eerror "Please run vice-setup before starting the service..."
-                return 1
-        fi
+	if [ ! -e $vicedir/hostname ] ; then
+		eerror "Please run vice-setup before starting the service..."
+		return 1
+	fi
 }
 
 we_are_scm() {
@@ -27,7 +22,13 @@ we_are_scm() {
 	fi
 }
 
+getvicedir() {
+        vicedir=`/usr/sbin/codaconfedit server.conf vicedir`
+}
+
 start() {
+	getvicedir
+
 	checkconfig || return 1
 
 	ebegin "Starting codasrv"
@@ -37,8 +38,7 @@ start() {
 
 stop() {
 	ebegin "Stopping codasrv"
-	start-stop-daemon --stop --quiet --exec /usr/sbin/codasrv
-	/usr/sbin/volutil shutdown
-	sleep 30
+	msg=`/usr/sbin/volutil shutdown 2>&1` || echo "$msg"
+	start-stop-daemon --stop --quiet --retry 30/TERM --oknodo --exec /usr/sbin/codasrv
 	eend $?
 }

@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>net-fs</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-  <description>Maintaining until net-fs gets off its feet</description>
+  <email>griffon26@gentoo.org</email>
+  <name>Maurice van der Pot</name>
 </maintainer>
 <maintainer>
   <email>net-fs@gentoo.org</email>
