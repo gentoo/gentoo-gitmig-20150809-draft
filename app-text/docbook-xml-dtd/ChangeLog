@@ -1,6 +1,13 @@
 # ChangeLog for app-text/docbook-xml-dtd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.2 2002/02/24 03:01:02 karltk Exp $
+
+*docbook-xml-dtd-4.1.2-r1 (24 Feb 2002)
+
+  24 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog docbook-xml-dtd-4.1.2-r1:
+  
+  Added proper catalog installation into /etc/xml/catalog and 
+  /etc/xml/xml-docbook.cat
 
 *docbook-xml-dtd-4.1.2 (1 Feb 2002)
 
