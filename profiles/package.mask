@@ -847,11 +847,6 @@ x11-libs/gdkxft
 # unstable package... masked for future use and testing
 =net-fs/openafs-1.3.2
 
-# jnelson@gentoo.org 2 Aug 2002
-# mask python-fchksum because older versions of portage hork on the
-# circular dependency
-=dev-python/python-fchksum-1.6.1-r1
-
 # naz@gentoo.org 4 Aug 2002
 # masked for testing
 >=media-sound/ecasound-2.0.4
