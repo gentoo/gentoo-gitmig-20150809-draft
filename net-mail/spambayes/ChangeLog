@@ -1,5 +1,8 @@
-# ChangeLog for net-mail/quotient
+# ChangeLog for net-mail/spambayes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spambayes/ChangeLog,v 1.1 2004/02/17 16:55:09 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spambayes/ChangeLog,v 1.2 2004/02/17 17:01:07 lordvan Exp $
 
-*
+*spambayes-1.0-alpha9 (17 Feb 2004)
+
+  17 Feb 2004; Thomas Raschbacher <lordvan@gentoo.org> spambayes-1.0-alpha9.ebuild:
+  initial release
