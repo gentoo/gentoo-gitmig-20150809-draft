@@ -356,3 +356,10 @@ move app-games/wtf games-misc/wtf
 move app-games/wumpus games-misc/wumpus
 move app-games/xcruise games-misc/xcruise
 move app-games/xpenguins games-misc/xpenguins
+move app-games/atlas games-util/atlas
+move app-games/qstat games-util/qstat
+move app-games/searchtool games-util/searchtool
+move app-games/uglygs games-util/uglygs
+move app-games/umodpack games-util/umodpack
+move app-games/xboxgw games-util/xboxgw
+move app-games/xqf games-util/xqf
