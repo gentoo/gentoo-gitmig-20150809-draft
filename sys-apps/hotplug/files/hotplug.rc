@@ -1,0 +1,40 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/files/hotplug.rc,v 1.6 2003/05/03 18:34:38 azarah Exp $
+
+depend() {
+	need modules
+}
+
+checkconfig() {
+	if [ ! -d /etc/hotplug ] ; then
+		eerror "Hotplug requires scripts & configs in /etc/hotplug !"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	
+	ebegin "Starting USB and PCI hotplugging"
+	for RC in /etc/hotplug/*.rc
+	do
+		# We do not want to check the return status, as
+		# some of the scripts may fail due to drivers not
+		# compiled as modules ...
+		$RC start
+	done
+	eend 0
+}
+
+stop() {
+	local error
+	ebegin "Stopping USB and PCI hotplugging"
+	for RC in /etc/hotplug/*.rc
+	do
+		$RC stop
+	done
+	eend 0
+}
+
