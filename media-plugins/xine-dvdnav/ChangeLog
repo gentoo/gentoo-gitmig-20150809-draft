@@ -1,6 +1,6 @@
-# ChangeLog for media-video/xine-dvdnav
+# ChangeLog for media-plugins/xine-dvdnav
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-dvdnav/ChangeLog,v 1.3 2002/12/13 19:56:07 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-dvdnav/ChangeLog,v 1.4 2002/12/17 19:41:38 vapier Exp $
 
 *xine-dvdnav-0.9.13 (06 Aug 2002)
 
