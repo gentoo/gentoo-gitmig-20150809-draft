@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.1.1.ebuild,v 1.1 2005/01/23 07:56:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.1.1.ebuild,v 1.2 2005/02/12 00:50:20 mr_bones_ Exp $
 
 inherit games distutils
 
@@ -24,6 +24,7 @@ pkg_setup() {
 		echo
 		die "missing tkinter support with installed python"
 	fi
+	games_pkg_setup
 }
 
 src_install() {
