@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/ksambaplugin
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.9 2003/12/17 13:00:21 caleb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.10 2004/01/18 15:18:20 caleb Exp $
+
+*ksambaplugin-0.5f (18 Jan 2004)
+
+  18 Jan 2004; Caleb Tennis <caleb@gentoo.org> ksambaplugin-0.4.2.ebuild,
+  ksambaplugin-0.5_beta2.ebuild, ksambaplugin-0.5b.ebuild,
+  ksambaplugin-0.5f.ebuild:
+  Latest and greatest version, remove old versions. The naming scheme has an "f"
+  in the ebuild for "final" since the authors used a "b" for beta. Just using a
+  0.5 would make that version OLDER than 0.5b, so this was the best thing I
+  could think of.
 
 *ksambaplugin-0.5_beta2 (17 Dec 2003)
 
