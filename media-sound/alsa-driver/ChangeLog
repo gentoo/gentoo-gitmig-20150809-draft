@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.94 2004/09/22 09:32:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.95 2004/10/07 20:35:04 eradicator Exp $
+
+  07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/alsa-driver-1.0.6a-emu10k1-passthrough.patch:
+  Added patch to make emu10k1 passthrough work.  Closes bug #66635.
 
   22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> :
   Stable amd64, x86. Fixed build process to work on newer 2.6 kernels without

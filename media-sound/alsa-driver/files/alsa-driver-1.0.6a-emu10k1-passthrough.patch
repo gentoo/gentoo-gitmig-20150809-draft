@@ -1,0 +1,12 @@
+diff -uNr alsa-driver-1.0.6a.org/sound/pci/emu10k1/emupcm.c alsa-driver-1.0.6a/sound/pci/emu10k1/emupcm.c
+--- alsa-driver-1.0.6a.org/sound/pci/emu10k1/emupcm.c	2004-10-08 04:14:23.722015224 +0800
++++ alsa-driver-1.0.6a/sound/pci/emu10k1/emupcm.c	2004-10-08 04:15:47.318306656 +0800
+@@ -1185,7 +1185,7 @@
+ 	}
+ 	snd_emu10k1_fx8010_playback_tram_poke1((unsigned short *)emu->fx8010.etram_pages.area + tram_pos,
+ 					       (unsigned short *)emu->fx8010.etram_pages.area + tram_pos + tram_size / 2,
+-					       src, frames, tram_shift++);
++					       src, frames, tram_shift);
+ 	tram_pos -= frames;
+ 	pcm->tram_pos = tram_pos;
+ 	pcm->tram_shift = tram_shift;

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.6a.ebuild,v 1.2 2004/09/22 09:32:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.6a.ebuild,v 1.3 2004/10/07 20:35:04 eradicator Exp $
 
 inherit kernel-mod flag-o-matic eutils
 
@@ -43,6 +43,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.0.5-devfix.patch
 	epatch ${FILESDIR}/${PN}-1.0.5a-cs46xx-passthrough.patch
+	epatch ${FILESDIR}/${PN}-1.0.6a-emu10k1-passthrough.patch
 
 	# SUBDIRS -> M
 	epatch ${FILESDIR}/${P}-kbuild.patch
