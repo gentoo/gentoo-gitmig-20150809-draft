@@ -1,6 +1,18 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.70 2004/03/30 11:50:28 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.71 2004/04/24 10:53:41 robbat2 Exp $
+
+  24 Apr 2004; Robin H. Johnson <robbat2@gentoo.org>
+  openldap-2.0.25-r1.ebuild, openldap-2.0.25-r2.ebuild,
+  openldap-2.0.25-r3.ebuild, openldap-2.0.27-r4.ebuild,
+  openldap-2.0.27-r5.ebuild, openldap-2.0.27.ebuild, openldap-2.1.21.ebuild,
+  openldap-2.1.22-r1.ebuild, openldap-2.1.22.ebuild, openldap-2.1.23.ebuild,
+  files/kerberos-2.0.diff.bz2, files/kerberos-2.1.diff.bz2,
+  files/openldap-2.0.27-db3-gentoo.patch,
+  files/openldap-2.1.22-perlsedfoo.patch, files/rfc2252-bork.patch,
+  files/slapd-2.1-r1.rc6, files/slapd-2.1.conf, files/slapd-2.1.rc6,
+  files/slapd.rc6, files/slurpd-2.1.rc6, files/slurpd.rc6:
+  remove old versions incl old 2.0 series.
 
   30 Mar 2004; Lars Weiler <pylon@gentoo.org> openldap-2.1.27-r1.ebuild:
   stable on ppc, as requested in bug #26728
