@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.8 2003/07/08 23:40:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.9 2003/10/02 14:04:50 phosphan Exp $
+
+*win32codecs-20031001 (01 Oct 2003)
+
+  01 Oct 2003; Patrick Kursawe <phosphan@gentoo.org>
+  win32codecs-20031001.ebuild:
+  In response to bug 29972, the files are renamed with a date-based version
+  number and brought manually to the distfiles mirrors. The dmocodecs package
+  was removed, this seems to be in win32codecs.tar.bz2 now.
 
   08 Jul 2003; Jason Wever <weeve@gentoo.org> win32codecs-0.90.1-r1.ebuild:
   Added -sparc to keywords.
