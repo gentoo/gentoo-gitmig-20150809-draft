@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.2-r1.ebuild,v 1.5 2003/02/13 17:49:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.2-r1.ebuild,v 1.6 2003/04/23 00:08:19 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ice Window Manager"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.icewm.org"
 IUSE="esd nls imlib truetype gnome"
 
 DEPEND="virtual/x11
-	sys-apps/supersed
+	=sys-apps/sed-4*
 	esd? ( media-sound/esound )
 	nls? ( sys-devel/gettext )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
@@ -30,12 +30,12 @@ src_unpack(){
 	# "make install" skip the docs install, and do it ourselves.  That also
 	# means we have to adjust the Makefile so that it can find the help files
 	# when you choose the 'help' item out of its menu.
-	ssed -i 's:icewm-$(VERSION)::' Makefile.in
-	ssed -i 's:icewm-$(VERSION)::' Makefile
+	sed -i 's:icewm-$(VERSION)::' Makefile.in
+	sed -i 's:icewm-$(VERSION)::' Makefile
 	
 	cd ${S}/src
-	ssed -i 's:icewm-$(VERSION)::' Makefile
-	ssed -i 's:icewm-$(VERSION)::' Makefile.in
+	sed -i 's:icewm-$(VERSION)::' Makefile
+	sed -i 's:icewm-$(VERSION)::' Makefile.in
 }
 
 src_compile(){

@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.22 2003/03/25 05:17:56 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.23 2003/04/23 00:08:19 lostlogic Exp $
 
 *icewm-1.2.7 (24 Mar 2003)
 
@@ -47,6 +47,11 @@
 
   Version bump, thanks to: craig@mosquitonet.com (Craig Callender) in bug
   #9920
+
+*icewm-1.2.2-r1 (16 Oct 2002)
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> icewm-1.2.2-r1.ebuild:
+  Change supersed dependencies
 
 *icewm-1.2.2 (16 Oct 2002)
 
