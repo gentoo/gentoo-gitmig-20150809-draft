@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.24 2005/02/20 22:18:40 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.25 2005/03/19 05:40:44 eradicator Exp $
+
+*libmcal-0.7-r5 (19 Mar 2005)
+
+  19 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -libmcal-0.7-r4.ebuild, +libmcal-0.7-r5.ebuild:
+  Stable amd64. Revbump to force --libdir option to configure on all archs
+  otherwise it will install to /lib.
 
   20 Feb 2005; Hardave Riar <hardave@gentoo.org> libmcal-0.7-r3.ebuild:
   Stable on mips
