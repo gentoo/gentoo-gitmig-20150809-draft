@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/wxpython-demo-2.4.1.2.ebuild,v 1.5 2004/08/15 18:29:06 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/wxpython-demo-2.4.1.2.ebuild,v 1.6 2005/03/10 18:19:32 luckyduck Exp $
 
 MY_P=${P/wxpython-demo/wxPythonDemo}
 

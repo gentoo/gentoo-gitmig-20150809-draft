@@ -1,8 +1,18 @@
-MD5 3ca4a6e6393bcf2a786a86927766118b ChangeLog 1623
-MD5 d10f1f43e506503326f93e5d80666d3c wxpython-demo-2.4.1.2.ebuild 787
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2256f6b980f061cba4c57bf63022f28b wxpython-demo-2.4.2.4.ebuild 793
+MD5 684960bfd52fb52e82c83d812172637d wxpython-demo-2.4.0.7.ebuild 786
+MD5 0f232f03b227d8d24d7a5801ce9305eb wxpython-demo-2.4.1.2.ebuild 786
+MD5 1e12903e47c1fc12bf9c7379a2208123 ChangeLog 1751
 MD5 3b06f1e87549af51d78bb7bfa33728b5 metadata.xml 182
-MD5 eef93bcad0b4edb1aa5237a4537d27aa wxpython-demo-2.4.0.7.ebuild 787
-MD5 0fd1d5c30cbd8318a54b699f56c63c1d wxpython-demo-2.4.2.4.ebuild 787
 MD5 51ae26b9189b625fdacd93232e7a524a files/digest-wxpython-demo-2.4.0.7 72
-MD5 fee12156c4dc6432df10835df117a4cc files/digest-wxpython-demo-2.4.2.4 73
 MD5 ddc99b1e7ed57ccdbbfa7a3bbf601280 files/digest-wxpython-demo-2.4.1.2 72
+MD5 fee12156c4dc6432df10835df117a4cc files/digest-wxpython-demo-2.4.2.4 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMI+906ebR+OMO78RAmAaAJ40crT8ZgqnJ2Z2lybVwdkFx6KhuQCePjD1
+Cfq0xexdLzakjWGVBuM4M1w=
+=Uiq2
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython-demo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/ChangeLog,v 1.10 2004/12/31 00:46:14 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/ChangeLog,v 1.11 2005/03/10 18:19:32 luckyduck Exp $
+
+  10 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  wxpython-demo-2.4.2.4.ebuild:
+  added ~amd64 to KEYWORDS, fixes #77280
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
