@@ -62,3 +62,4 @@ move app-admin/ufed app-portage/ufed
 move dev-util/ebuilder app-portage/ebuilder
 move dev-util/lintool app-portage/lintool
 move sys-apps/deltup app-portage/deltup
+move dev-libs/physfs dev-games/physfs
