@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.6 2004/11/22 15:24:17 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.7 2004/11/24 15:03:04 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -25,7 +25,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -alpha"
+KEYWORDS="~x86 ~ppc -alpha ~amd64"
 
 
 PROVIDE="virtual/ghc"
@@ -109,7 +109,7 @@ src_compile() {
 	echo "ArSupportsInput:=" >> mk/build.mk
 
 	# Required under ppc to work around some obscure linker problem.
-	if use ppc;
+	if use ppc || use amd64;
 	then
 		echo "SplitObjs=NO" >> mk/build.mk
 	fi
