@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/sash
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.18 2004/02/14 22:23:05 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.19 2004/03/03 20:22:45 agriffis Exp $
+
+*sash-3.7 (03 Mar 2004)
+
+  03 Mar 2004; <agriffis@gentoo.org> sash-3.7.ebuild:
+  Add missing keywords back into this ebuild (where did they go, plasmaroo?) and
+  mark immediately stable on ia64 to clean up compilation issues with the older
+  versions
 
   14 Feb 2004; <plasmaroo@gentoo.org> files/sash-3.6-readline.patch:
   Fixed an upstream bug in the readline patch, this should solve
