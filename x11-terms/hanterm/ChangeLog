@@ -1,12 +1,17 @@
 # ChangeLog for x11-terms/hanterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.7 2003/06/02 14:26:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.8 2003/09/09 03:02:36 usata Exp $
+
+*hanterm-3.1.6-r2 (24 Jul 2002)
+
+  09 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> hanterm-3.1.6-r2.ebuild,
+  files/Hanterm.gentoo:
+  Updated hangul font path. Added manpage and other docs. Install everything
+  according to FHS.
 
   02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> hanterm-3.1.6-r1.ebuild,
   hanterm-3.1.6-r2.ebuild:
   baekmuk fonts are in media-fonts now
-
-*hanterm-3.1.6-r2 (24 Jul 2002)
 
   21 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> hanterm-3.1.6-r2.ebuild :
 

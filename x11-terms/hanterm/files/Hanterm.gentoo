@@ -26,8 +26,8 @@
 !Hanterm*hangulFont: -kaist-iyagi-bold-r-normal--16-160-75-75-c-160-johabsh-1
 
 !!!!! Gentoo Linux Setting ----------------------------------------------------
-Hanterm*Font: *-lucidatypewriter-medium-r-normal-sans-12-120-*-*-*-70-iso8859-1
-Hanterm*hangulFont: -*-gulim-medium-r-normal--14-140-75-75-*-140-ksc5601.1987-0
+Hanterm*Font: -*-lucidatypewriter-medium-r-normal-sans-12-120-*-*-*-70-iso8859-1
+Hanterm*hangulFont: -*-gulim-medium-r-normal--14-140-75-75-*-140-ksx1001.1998-0
 
 Hanterm*title: Hangul Terminal - Hanterm
 Hanterm*iconName: Hangul Terminal - Hanterm
