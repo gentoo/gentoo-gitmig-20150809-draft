@@ -1,0 +1,14 @@
+--- riceplugin/Makefile.orig	2004-07-15 21:38:45.195293640 +0000
++++ riceplugin/Makefile	2004-07-15 21:40:31.719099560 +0000
+@@ -1,8 +1,8 @@
+ CC = gcc
+-#CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -g -mmmx -msse
+-CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer -msse -mmmx
++CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags`
++#CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer -msse -mmmx
+ CXX = g++
+-CPPFLAGS = $(CFLAGS)
++CPPFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags`
+ LD = g++
+ LDFLAGS = -lGL -lGLU -L/usr/X11R6/lib -lSDL
+ 
