@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/mpqc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/ChangeLog,v 1.4 2003/12/15 03:54:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/ChangeLog,v 1.5 2003/12/24 19:48:48 spyderous Exp $
+
+  24 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; :
+  Bad digest. Closing bug #36425.
 
 *mpqc-2.2.0 (14 Dec 2003)
 
