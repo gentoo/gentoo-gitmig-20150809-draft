@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/funny-manpages/funny-manpages-1.3_rc4.ebuild,v 1.2 2004/02/20 06:43:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/funny-manpages/funny-manpages-1.3_rc4.ebuild,v 1.3 2004/05/04 00:21:18 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/f/funny-manpages/${MY_P}.orig.ta
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 RDEPEND="sys-apps/man"
 

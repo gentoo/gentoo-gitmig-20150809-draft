@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.13.ebuild,v 1.3 2004/02/22 09:47:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.13.ebuild,v 1.4 2004/05/04 00:21:18 mr_bones_ Exp $
 
 inherit games
 
@@ -12,6 +12,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/games/${P}.tar.gz"
 LICENSE="BSD | free-noncomm"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="sys-libs/ncurses
 	sys-apps/miscfiles
