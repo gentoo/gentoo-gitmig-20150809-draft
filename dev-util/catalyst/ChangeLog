@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.43 2005/01/29 14:39:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.44 2005/01/30 00:57:31 wolf31o2 Exp $
+
+*catalyst-1.1.5 (29 Jan 2005)
+
+  29 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -catalyst-1.1.4.ebuild, +catalyst-1.1.5.ebuild:
+  Updated to latest version to fix gconfd-2/acpi bugs.
 
   29 Jan 2005; Markus Rothe <corsair@gentoo.org> catalyst-1.1.4.ebuild:
   Stable on ppc64
