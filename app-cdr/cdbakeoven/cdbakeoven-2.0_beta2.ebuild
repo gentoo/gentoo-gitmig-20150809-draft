@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-2.0_beta2.ebuild,v 1.10 2004/02/24 02:43:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-2.0_beta2.ebuild,v 1.11 2004/02/25 02:55:45 pylon Exp $
 
 inherit kde
 
@@ -22,3 +22,10 @@ newdepend ">=media-libs/libogg-1.0_rc2
 	>=app-cdr/cdrtools-1.11
 	>=kde-base/kdebase-3.1.1
 	>=kde-base/kdemultimedia-3.1.1"
+
+src_unpack() {
+	unpack ${A} || die
+	cd ${S}
+	epatch ${FILESDIR}/configure-2.0_beta2.patch
+	epatch ${FILESDIR}/acinclude.m4-2.0_beta2.patch
+}
