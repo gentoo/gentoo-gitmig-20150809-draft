@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.7-r3.ebuild,v 1.1 2004/07/15 19:42:15 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.7-r3.ebuild,v 1.2 2004/07/19 19:00:24 vapier Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -27,17 +27,12 @@ IUSE=""
 DEPEND="!virtual/os-headers"
 
 pkg_setup() {
-	# Figure out what architecture we are, and set ARCH appropriately
-	ARCH="$(uname -m)"
-	ARCH="$(echo ${ARCH} | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/)"
-	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH=sparc64
-
 	# Archs which have their own separate header packages, add a check here
 	# and redirect the user to them
 	case "${ARCH}" in
-		mips|mips64)
+		mips)
 			eerror "These headers are not appropriate for your architecture."
-			eerror "Please use sys-kernel/${ARCH/64/}-headers instead."
+			eerror "Please use sys-kernel/mips-headers instead."
 			die
 		;;
 	esac
@@ -65,8 +60,10 @@ src_compile() {
 		touch ${S}/include/linux/autoconf.h
 	# if there arent any installed headers, then there also isnt an asm
 	# symlink in /usr/include/, and make defconfig will fail.
+	set_arch_to_kernel
 	ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
 	make defconfig HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/"
+	set_arch_to_portage
 }
 
 src_install() {

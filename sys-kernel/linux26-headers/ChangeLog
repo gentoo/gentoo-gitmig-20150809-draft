@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.9 2004/07/18 12:27:51 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.10 2004/07/19 19:00:24 vapier Exp $
+
+  19 Jul 2004; Mike Frysinger <vapier@gentoo.org>
+  linux26-headers-2.6.7-r3.ebuild:
+  Stop running $(uname -m) to figure out what to set ARCH to. Use the functions
+  from kernel.eclass to translate portage ARCH to kernel ARCH.
 
   18 Jul 2004; <plasmaroo@gentoo.org>
   files/linux26-headers-2.6.7-appCompat.patch:
