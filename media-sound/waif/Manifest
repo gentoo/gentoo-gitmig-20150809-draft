@@ -4,14 +4,14 @@ Hash: SHA1
 MD5 22604e9e227ab7d5d8f91bc4b9e068e7 ChangeLog 3248
 MD5 aa0bfeeaf772ac88a10eaadfcec3936f metadata.xml 250
 MD5 a134fb4c20077e0c1ef36ba6e1f6a8c1 waif-0.59.6.ebuild 1307
-MD5 d82d5e6f8db07d893fe5b8e50c1bb7fb waif-0.59.7.ebuild 1375
+MD5 77ccbd8721d5a478b6641bca6ced7b41 waif-0.59.7.ebuild 1391
 MD5 3b3e0a6ef4724b594fc78b9b0dfd9c5e files/LICENSE 146
 MD5 fbdc57553cb2209c0b024afb096509c1 files/digest-waif-0.59.6 119
 MD5 b672105be7c357165e12fd4963e9a54d files/digest-waif-0.59.7 119
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZLiSArHZZzCEUG0RAlk5AJwLw9yxVhjOTMhlSv8yJa4wkUKLlQCghBrh
-ZIgdDnKTSOM21HKKjWLTrpo=
-=PSSM
+iD8DBQFBZOv6ArHZZzCEUG0RAll7AJ9R+KZ9TuTKU+t5ps23uMvSk2amswCfT3WP
+eomJZko7fT65SKfgmOvEU0o=
+=Dx8L
 -----END PGP SIGNATURE-----
