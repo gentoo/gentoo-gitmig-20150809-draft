@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20010418.ebuild,v 1.3 2001/06/03 22:42:30 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20010418.ebuild,v 1.4 2001/06/08 23:08:18 pete Exp $
 
 WSV=0.5.1b
 A="Wine-${PV}.tar.gz winesetuptk-${WSV}.tar.gz"
@@ -59,6 +59,8 @@ src_install () {
     dodoc CHANGELOG.TXT LICENSE.TXT README.TXT
     cd development_doc ; docinto winesetuptk-${WSV}/development_doc
     dodoc CHANGELOG.TXT global_cfg_db_members.txt
+    
+    dosym ../share/winesetuptk /opt/wine/bin/winesetuptk
     
     insinto /etc/env.d
     newins ${FILESDIR}/wine.env 90wine
