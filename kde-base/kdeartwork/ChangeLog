@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.91 2004/09/20 01:59:38 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.92 2004/09/20 03:18:46 caleb Exp $
+
+  19 Sep 2004; Caleb Tennis <caleb@gentoo.org> kdeartwork-3.3.0.ebuild:
+  Add in dep on xscreensaver (Bug #39011)
 
   19 Sep 2004; Malcolm Lashley <malc@gentoo.org> kdeartwork-3.3.0.ebuild:
   Stable on amd64
