@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.12 2004/10/16 17:15:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.13 2004/10/22 10:59:48 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> hibernate-2.1.4.ebuild,
+  hibernate-2.1.6.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> hibernate-2.1.4.ebuild,
   hibernate-2.1.6.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/j2ssh
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/ChangeLog,v 1.6 2004/10/17 09:48:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/ChangeLog,v 1.7 2004/10/22 11:03:36 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> j2ssh-0.2.7-r1.ebuild,
+  j2ssh-0.2.7.ebuild:
+  Keywords ~amd64.
 
   17 Oct 2004; David Holm <dholm@gentoo.org> j2ssh-0.2.7-r1.ebuild:
   Added to ~ppc.
