@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r3.ebuild,v 1.1 2003/07/24 18:35:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r3.ebuild,v 1.2 2003/07/24 18:38:20 lostlogic Exp $
 
 IUSE=""
 
@@ -57,6 +57,9 @@ pkg_postinst() {
 	einfo "This step is also necessary to configure freenet for"
 	einfo "first use.  You may also run this step again at any time"
 	einfo "to get any updates available to freenet"
+	ewarn "Anyone who merged a freenet prior to 0.5.2.1-r3 will"
+	ewarn "need to change their logFile setting to /var/freenet/freenet.log"
+	ewarn "in order for freenet to continue to function"
 }
 
 pkg_postrm() {
