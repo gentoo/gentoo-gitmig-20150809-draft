@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xtrlock/xtrlock-2.0.ebuild,v 1.7 2002/10/20 18:40:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xtrlock/xtrlock-2.0.ebuild,v 1.8 2003/01/26 23:37:34 nall Exp $
 
 MY_P=${PN}_${PV}-6
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ HOMEPAGE="ftp://ftp.debian.org/debian/dists/stable/main/source/x11/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/x11"
 
