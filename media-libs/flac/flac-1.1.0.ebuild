@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.16 2004/01/29 04:16:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.17 2004/02/28 11:55:12 eradicator Exp $
 
 inherit libtool
 
@@ -15,7 +15,6 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE="sse xmms X"
 
 RDEPEND="virtual/glibc
-	media-libs/id3lib
 	>=media-libs/libogg-1.0_rc2
 	X? ( xmms? ( media-sound/xmms ) )"
 DEPEND="${RDEPEND}
