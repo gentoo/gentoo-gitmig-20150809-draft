@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/aap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.1 2003/07/24 03:17:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.2 2003/07/24 11:47:11 agriffis Exp $
+
+*aap-1.000-r1 (24 Jul 2003)
+
+  24 Jul 2003; Aron Griffis <agriffis@gentoo.org> aap-1.000-r1.ebuild:
+  Fix the way documentation is installed
 
 *aap-1.000 (23 Jul 2003)
 
