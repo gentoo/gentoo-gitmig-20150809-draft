@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mac-fdisk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.4 2004/08/08 00:47:33 slarti Exp $
+# $Id: ChangeLog,v 1.5 2004/08/31 03:05:02 tgall Exp $
+
+  30 Aug 2004; Tom Gall <tgall@gentoo.org> mac-fdisk-0.1-r2.ebuild:
+  marking stable. (Which I SWEAR I've done once before)
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> mac-fdisk-0.1-r2.ebuild,
   mac-fdisk-0.1.ebuild:
