@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/devil
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.6 2003/07/12 18:05:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.7 2003/10/02 06:04:54 mr_bones_ Exp $
+
+*devil-1.6.6 (01 Oct 2003)
+
+  01 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> devil-1.6.6.ebuild:
+  version bump; converted to use use_with and use_enable for USE flags
 
 *devil-1.6.5 (31 Dec 2002)
 
