@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.7 2002/11/22 07:06:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.8 2002/11/25 18:50:19 raker Exp $
 
 *pine-4.50 (22 Nov 2002)
+
+  25 Nov 2002; Nick Hadaway <raker@gentoo.org> pine-4.50.ebuild :
+  Added ability to compile with/without debugging.  Fixed the 
+  ssl certs directory (openssl-0.9.6-r1 style)
 
   22 Nov 2002; Nick Hadaway <raker@gentoo.org> pine-4.50.ebuild,
   files/digest-pine-4.50 :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50.ebuild,v 1.1 2002/11/22 07:06:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50.ebuild,v 1.2 2002/11/25 18:50:19 raker Exp $
 
 IUSE="ssl ldap"
 
@@ -56,21 +56,24 @@ src_unpack() {
 	# gets rid of a call to stripwhitespace()
 	patch -d ${S} -p1 < ${FILESDIR}/pine-4.33-whitespace.patch
 
-	# 4.50 adds some support for multibyte character sets
-	#patch -d ${S} -p1 < ${FILESDIR}/pine-4.44-multibyte.patch
-
-	# threaded view and other diplay niceties are now built into
-	# pine 4.50
-	#bzcat ${FILESDIR}/fancy.patch.bz2 | patch -p0 || die "fancy patch failed"
-
-	cd ${S}/pine
-	cp makefile.lnx makefile.orig
-	sed -e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS}:" \
-		< makefile.orig > makefile.lnx
-
-	cd ${S}/pico
-	cp makefile.lnx makefile.orig
-	sed -e "s:-g -DDEBUG:${CFLAGS}:" makefile.orig > makefile.lnx
+	if [ -n "$DEBUG" ]; then
+		cd ${S}/pine
+		cp makefile.lnx makefile.orig
+		sed -e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \
+			< makefile.orig > makefile.lnx
+		cd ${S}/pico
+		cp makefile.lnx makefile.orig
+		sed -e "s:-g -DDEBUG:${CFLAGS} -g -DDEBUG:" \
+			< makefile.orig > makefile.lnx
+	else
+		cd ${S}/pine
+		cp makefile.lnx makefile.orig
+		sed -e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS}:" \
+			< makefile.orig > makefile.lnx
+		cd ${S}/pico
+		cp makefile.lnx makefile.orig
+		sed -e "s:-g -DDEBUG:${CFLAGS}:" makefile.orig > makefile.lnx
+	fi
 
 }
 
@@ -79,6 +82,12 @@ src_compile() {
 	if [ "`use ssl`" ] 
 	then
 		BUILDOPTS="${BUILDOPTS} SSLDIR=/usr SSLTYPE=unix SSLCERTS=/etc/ssl/certs"
+		cd ${S}/imap/src/osdep/unix
+		cp Makefile Makefile.orig
+		sed -e "s:$(SSLDIR)/certs:/etc/ssl/certs:" \
+			-e "s:$(SSLCERTS):/etc/ssl/certs:" \
+			< Makefile.orig > Makefile
+		cd ${S}
 	else
 		BUILDOPTS="${BUILDOPTS} NOSSL"
 	fi
