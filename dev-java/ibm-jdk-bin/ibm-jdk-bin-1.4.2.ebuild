@@ -1,6 +1,6 @@
-# Copyright 1992-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.6 2004/07/24 10:03:21 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.7 2004/07/24 21:51:26 mr_bones_ Exp $
 
 IUSE="X doc javacomm"
 
