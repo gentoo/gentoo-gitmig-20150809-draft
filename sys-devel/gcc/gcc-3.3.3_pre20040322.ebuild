@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3_pre20040322.ebuild,v 1.1 2004/03/23 13:03:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3_pre20040322.ebuild,v 1.2 2004/03/24 00:04:11 lu_zero Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -84,7 +84,7 @@ then
 	fi
 else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
-	SRC_URI="ftp://ftp.linuxppc64.org/pub/people/tgall/gcc/${PN}-20040215.tar.bz2"
+	SRC_URI="mirror://gentoo/${PN}-${SNAPSHOT//-}.tar.bz2"
 fi
 if [ -n "${PP_VER}" ]
 then

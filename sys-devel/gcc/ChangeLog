@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.195 2004/03/23 13:03:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.196 2004/03/24 00:04:11 lu_zero Exp $
+
+  24 Mar 2004; Luca Barbato <lu_zero@gentoo.org> gcc-3.3.3_pre20040322.ebuild:
+  Fixed SRC_URI
 
 *gcc-3.3.3_pre20040322 (23 Mar 2004)
 
