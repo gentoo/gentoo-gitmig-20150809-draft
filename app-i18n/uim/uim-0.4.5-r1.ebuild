@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.5-r1.ebuild,v 1.2 2005/01/01 14:42:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.5-r1.ebuild,v 1.3 2005/01/03 18:58:25 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -29,6 +29,14 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-Parser
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )"
+
+get_gtk_confdir() {
+	if useq amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && useq x86 ) ; then
+		echo "/etc/gtk-2.0/${CHOST}"
+	else
+		echo "/etc/gtk-2.0"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -77,9 +85,9 @@ pkg_postinst() {
 	ewarn "Available input methods can be found by running uim-im-switcher."
 	ewarn
 
-	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	use gtk && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
 }
 
 pkg_postrm() {
-	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	use gtk && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
 }
