@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.9-r3.ebuild,v 1.5 2004/11/27 17:49:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.9-r3.ebuild,v 1.6 2004/11/28 11:52:23 plasmaroo Exp $
 
 UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2
 	${FILESDIR}/${P}.binfmt_elf.patch
 	${FILESDIR}/${P}.binfmt_a.out.patch
-	${FILESDIR}/${PN}.AF_UNIX.patch"
+	${FILESDIR}/${P}.AF_UNIX.patch"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r10.ebuild,v 1.1 2004/11/27 18:25:13 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r10.ebuild,v 1.2 2004/11/28 11:56:06 plasmaroo Exp $
 
 IUSE=""
 
@@ -52,7 +52,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.6.devPtmx.patch || die "Failed to apply /dev/ptmx patch!"
 	epatch ${FILESDIR}/${PN}-2.6.binfmt_elf.patch || die "Failed to apply binfmt_elf patch!"
 	epatch ${FILESDIR}/${PN}-2.6.smbfs.patch || die "Failed to apply SMBFS patch!"
-	epatch ${FILESDIR}/${PN}.AF_UNIX.patch || die "Failed to apply the AF_UNIX patch!"
+	epatch ${FILESDIR}/${PN}-2.6.AF_UNIX.patch || die "Failed to apply the AF_UNIX patch!"
 	epatch ${FILESDIR}/${PN}-2.6.binfmt_a.out.patch || die "Failed to apply the a.out patch!"
 
 	set MY_ARCH=${ARCH}

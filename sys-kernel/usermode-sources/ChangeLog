@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.53 2004/11/27 20:04:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.54 2004/11/28 11:50:35 plasmaroo Exp $
+
+  28 Nov 2004; <plasmaroo@gentoo.org> usermode-sources-2.6.8.1-r5.ebuild,
+  +files/usermode-sources-2.6.AF_UNIX.patch:
+  Adding fixed 2.6 AF_UNIX security patch for 2.6 branch; bug #72688.
 
 *usermode-sources-2.6.8.1-r5 (27 Nov 2004)
 

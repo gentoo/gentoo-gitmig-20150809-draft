@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.8.1-r5.ebuild,v 1.1 2004/11/27 18:08:56 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.8.1-r5.ebuild,v 1.2 2004/11/28 11:57:52 plasmaroo Exp $
 
 ETYPE='sources'
 inherit kernel-2
@@ -19,7 +19,7 @@ UNIPATCH_LIST="
 	${FILESDIR}/${P}.smbfs.patch
 	${FILESDIR}/${P}.binfmt_elf.patch
 	${FILESDIR}/${P}.binfmt_a.out.patch
-	${FILESDIR}/${PN}.AF_UNIX.patch"
+	${FILESDIR}/${P}.AF_UNIX.patch"
 DESCRIPTION='Full sources for the Xbox Linux kernel'
 SRC_URI="${KERNEL_URI}
 	mirror://gentoo/${XBOX_PATCHES}
