@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.7 2004/04/26 02:07:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.8 2004/04/27 02:10:46 vapier Exp $
 
 IUSE="nls pic build nptl"
 
@@ -408,6 +408,14 @@ src_unpack() {
 		#
 		# Closes Bug 47415
 		cd ${S}/sysdeps/unix/sysv/linux; epatch ${FILESDIR}/2.3.2/${P}-s390-deprecated-ustat-fixup.patch
+	fi
+
+	if [ "${ARCH}" == "arm" ]
+	then
+		# sjlj exceptions can cause issues with undefined frame variables.
+		# this patch has been ported from current glibc cvs.
+		cd ${S}/sysdeps/generic
+		epatch ${FILESDIR}/glibc-framestate-USING_SJLJ_EXCEPTIONS.patch
 	fi
 
 	# Fix permissions on some of the scripts
