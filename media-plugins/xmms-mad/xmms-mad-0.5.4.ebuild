@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.5.4.ebuild,v 1.2 2003/09/16 18:28:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.5.4.ebuild,v 1.3 2004/01/21 09:27:27 raker Exp $
 
 DESCRIPTION="A XMMS plugin for MAD"
 HOMEPAGE="http://xmms-mad.sourceforge.net/"

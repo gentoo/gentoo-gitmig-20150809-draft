@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-mad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.11 2003/09/16 18:28:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.12 2004/01/21 09:27:27 raker Exp $
+
+*xmms-mad-0.5.6 (21 Jan 2004)
+
+  21 Jan 2004; Nick Hadaway <raker@gentoo.org> xmms-mad-0.5.6.ebuild:
+  Version bump.  See bug #35868.  Seems to be a little more stable than
+  the previous edition with mad-0.15b.
 
   16 Sep 2003; David Holm <dholm@gentoo.org> xmms-mad-0.5.4.ebuild:
   Added to ~ppc.
