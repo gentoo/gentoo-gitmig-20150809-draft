@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.4-r1.ebuild,v 1.10 2005/03/11 03:14:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.4-r1.ebuild,v 1.11 2005/03/14 23:54:47 latexer Exp $
 
 inherit eutils mono
 
@@ -23,7 +23,7 @@ RDEPEND=">=sys-apps/sed-4.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-KEYWORDS="~x86 ~ppc -amd64"
+KEYWORDS="x86 ~ppc -amd64"
 
 src_unpack() {
 	unpack ${A}
