@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4-r3.ebuild,v 1.7 2002/12/14 17:55:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4-r3.ebuild,v 1.8 2003/01/28 21:00:16 mholzer Exp $
 
-IUSE="ssl nls slang cjk"
+IUSE="ssl nls slang cjk mbox"
 
 S=$WORKDIR/${P}
 DESCRIPTION="a small but very powerful text-based mail client"
@@ -50,6 +50,10 @@ src_compile() {
 		&& myconf="${myconf} --with-slang" \
 		|| myconf="${myconf} --with-curses"
 
+	use mbox \
+		&& myconf="${myconf} --with-maildir=/var/spool/mail" \
+		|| myconf="${myconf} --with-homespool=Maildir"
+
 	use cjk && myconf="$myconf --enable-default-japanese"
 
 	econf \
@@ -57,7 +61,6 @@ src_compile() {
 		--with-docdir=/usr/share/doc/mutt-$PVR \
 		--with-regex --enable-pop --enable-imap --enable-nfs-fix \
 		--disable-fcntl --enable-flock --enable-external-dotlock \
-		--with-homespool=Maildir \
 		--enable-compressed \
 		${myconf} || die
 	

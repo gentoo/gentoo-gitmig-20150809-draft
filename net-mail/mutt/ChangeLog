@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.16 2002/12/14 17:55:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.17 2003/01/28 21:00:16 mholzer Exp $
 
 *mutt-1.4-r3 (03 Sept 2002) 
+
+  28 Jan 2003; Martin Holzer <mholzer@gentoo.org> mutt-1.4-r3.ebuild :
+  Added mbox support. Closes #13234.
 
   14 Dec 2002; Aron Griffis <agriffis@gentoo.org> mutt-1.4-r3.ebuild :
 
