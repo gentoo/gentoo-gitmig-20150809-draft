@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.41 2003/01/22 11:12:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.42 2003/02/08 22:14:00 gmsoft Exp $
+
+  08 Feb 2003; Guy Martin <gmsoft@gentoo.org> vim-6.1-r19.ebuild :
+  Added hppa to keywords.
 
   22 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> vim-6.1-r19.ebuild :
   Unmasked, security update.
