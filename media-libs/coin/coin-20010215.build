@@ -1,0 +1,31 @@
+# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Your Name <your email>
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-20010215.build,v 1.1 2001/02/15 18:07:07 achim Exp $
+
+
+A=Coin-${PV}.tar.gz
+S=${WORKDIR}/Coin
+DESCRIPTION="An OpenSource implementation of SGI's OpenInventor"
+SRC_URI="ftp://ftp.coin3d.org/pub/snapshots/${A}"
+HOMEPAGE="http://www.coinn3d.org"
+
+DEPEND=">=x11-base/xfree-4.0.2
+        >=media-libs/mesa-3.4"
+
+src_compile() {
+
+    try ./configure --prefix=/usr/X11R6 --host=${CHOST} --with-x --with-mesa
+    try make
+
+}
+
+src_install () {
+
+    try make prefix=${D}/usr/X11R6 install
+    dodoc AUTHORS COPYING ChangeLog* HACKING LICENSE* NEWS README*
+    docinto txt
+    dodoc docs/*.txt docs/coin.doxygen docs/whitepapers/*.txt
+
+}
+
