@@ -1,4 +1,6 @@
-MD5 b48233bcb935ce82a78f852581b38d5a ChangeLog 625
+MD5 4aca228e0ebc87950abf89cea65b8153 gnustep-guile-1.1.1.ebuild 583
+MD5 bc620044ae3734ef416864b7ddb6083d ChangeLog 903
 MD5 01d43eccac98b789dce443cc74de5107 gnustep-guile-1.0.3.ebuild 1119
 MD5 9bf9315aa26a8b68362779dfb1f038da files/digest-gnustep-guile-1.0.3 71
+MD5 662658c88a060ca5b9fd42bd316e269d files/digest-gnustep-guile-1.1.1 71
 MD5 19d2146437d3d17c10ee8fd84e112ece files/installpath.diff 654
