@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e233dcc4fed82ed5fcf2ff7080688faa archivemail-0.6.1-r1.ebuild 814
+MD5 160f2c38520ffbd9693d430949d4edb5 archivemail-0.6.1-r1.ebuild 836
 MD5 31f7759ae7cf9d9ab3c3deea356166fb ChangeLog 683
 MD5 61e0d05b1306513aede2838fa81b05b5 metadata.xml 225
 MD5 95ba0111b81bfefbcd9e5254e7b8091b files/digest-archivemail-0.6.1-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOKCZCHk4+ZoBpvsRAlxoAJ4u8thYb05IFLCmTVJ4PT1j9nDkqQCdH7qh
-oxiX8e84L4EM53LbVXHCYuo=
-=1a7B
------END PGP SIGNATURE-----
