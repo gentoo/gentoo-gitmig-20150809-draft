@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.3.ebuild,v 1.2 2004/08/05 19:42:52 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.3.ebuild,v 1.3 2004/08/06 02:18:24 agriffis Exp $
 
 IUSE="crypt gtk2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/thund
 	 crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 	   		  http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 
-KEYWORDS="~x86 ~ppc sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc sparc alpha ~amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -33,6 +33,13 @@ export MOZ_ENABLE_XFT=1
 src_unpack() {
 	unpack ${A} || die "unpack failed"
 	cd ${S} || die
+
+	if [[ $(gcc-major-version) -eq 3 ]]; then
+		# ABI Patch for alpha/xpcom for gcc-3.x
+		if [[ ${ARCH} == alpha ]]; then
+			epatch ${FILESDIR}/mozilla-alpha-xpcom-subs-fix.patch
+		fi
+	fi
 
 	# Unpack the enigmail plugin
 	if use crypt; then

@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.22 2004/08/05 19:42:52 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.23 2004/08/06 02:18:24 agriffis Exp $
+
+  05 Aug 2004; <agriffis@gentoo.org>
+  +files/mozilla-alpha-xpcom-subs-fix.patch, mozilla-thunderbird-0.7.3.ebuild:
+  Fix compilation on alpha #57057.  Mark stable on x86 and alpha #59419.
 
   05 Aug 2004; Josh Grebe <squash@gentoo.org>
   mozilla-thunderbird-0.7.3.ebuild:
