@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdebindings-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.5 2005/02/11 14:09:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.6 2005/02/19 15:37:14 danarmak Exp $
+
+  19 Feb 2005; Dan Armak <danarmak@gentoo.org>
+  kdebindings-meta-3.3.2.ebuild, kdebindings-meta-3.4.0_beta2.ebuild:
+  Since dcopperl, dcoppython, qtruby and korundum have been moved to SLOT 0
+  (bug 80858) and only one version of each can be installed now, the deps here
+  are changed to match. This means kdebindings-meta-3.3.2 will work with
+  dcopperl-3.4.0. That's better than the alternative of not being able to
+  emerge two versions of kdebindings-meta at all.
 
   11 Feb 2005; Dan Armak <danarmak@gentoo.org>
   kdebindings-meta-3.3.2.ebuild:
