@@ -1,6 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/oer-mysql-1.0.42.ebuild,v 1.2 2004/03/15 12:02:16 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/oer-mysql-1.0.42.ebuild,v 1.3 2004/03/23 19:06:31 mholzer Exp $
+
 IUSE=""
 MY_P=N"oer+MySQL"
 S=${WORKDIR}/${MY_P}-dist
@@ -12,10 +13,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-RDEPEND="virtual/glibc
+DEPEND="virtual/glibc
 	 >=dev-db/mysql-3.23.52-r1
 	 >=sys-apps/sed-3.02.80-r4"
-DEPEND="${RDEPEND}"
 
 src_compile() {
 
