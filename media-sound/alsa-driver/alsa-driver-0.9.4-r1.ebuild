@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.4-r1.ebuild,v 1.1 2003/06/05 17:19:00 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.4-r1.ebuild,v 1.2 2003/06/05 21:13:48 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -54,7 +54,7 @@ src_compile() {
 		myconf="$myconf --with-oss=no"
 
 	./configure \
-		$myconf
+		$myconf \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--with-kernel="${ROOT}usr/src/linux" \
