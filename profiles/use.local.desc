@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.891 2005/01/23 06:41:22 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.892 2005/01/23 06:53:13 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -167,12 +167,12 @@ dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/log4j:jmx - Build org.apace.log4j.jmx
 dev-java/mockobjects:source - Zip the sources and install them 
+dev-java/mx4j:examples - Install example source code
+dev-java/mx4j:source - Zip the sources and install them
 dev-java/quartz:dbcp - Enable dbcp support
 dev-java/quartz:jboss - Enable jboss support
 dev-java/quartz:jmx - Enable jmx support
 dev-java/quartz:jta - Enable jta support
-dev-java/mx4j:examples - Install example source code
-dev-java/mx4j:source - Zip the sources and install them
 dev-java/quartz:oracle - Enable oracle support
 dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
@@ -181,9 +181,9 @@ dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Po
 dev-java/velocity:j2ee - Add j2ee support
 dev-java/xerces:examples - Install example source code
 dev-java/xerces:source - Zip the sources and install them
-dev-java/xmlunit:source - Zip the sources and install them
 dev-java/xml-commons-resolver:source - Zip the sources and install them
 dev-java/xml-xmlbeans:source - Zip the sources and install them
+dev-java/xmlunit:source - Zip the sources and install them
 dev-lang/R:blas - Use the blas library. (virtual/blas)
 dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
 dev-lang/R:f77 - Use f77 to compile FORTRAN sources.
@@ -279,6 +279,7 @@ games-strategy/wesnoth:nomusic - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-util/aabrowse:geoip - lookup countries by IP addresses via the GeoIP library
+games-util/xqf:bzip2 - use bzip2 for data compression
 games-util/xqf:geoip - Add geoip support
 gnome-base/gnome-panel:eds - Enable Evolution Data Server (EDS) support
 gnome-base/gnome-vfs:hal - Enable Hardware Abstraction Layer (HAL) support
@@ -301,20 +302,20 @@ kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which
 kde-base/kbugbuster:kcal - Add support for kcal (calendar) format
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
-kde-base/kdeartwork:xscreensaver - Builds xscreensavers as compile time
 kde-base/kdeartwork-kscreensaver:xscreensaver - Builds xscreensavers as compile time
+kde-base/kdeartwork:xscreensaver - Builds xscreensavers as compile time
 kde-base/kdebase:lm_sensors - Adds linux lm_sensors (hardward sensors) support
 kde-base/kdebase:logitech-mouse - Builds module for configuring logitech mice.
-kde-base/kdegraphics:jpeg2k - Enable support for jpeg2k (jasper)
-kde-base/kdegraphics:povray - Enable povray dependency - needed for kpovmodeler
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
+kde-base/kdegraphics:jpeg2k - Enable support for jpeg2k (jasper)
+kde-base/kdegraphics:povray - Enable povray dependency - needed for kpovmodeler
 kde-base/kdelibs:jpeg2k - Enable support for jpeg2k (jasper)
 kde-base/kdelibs:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
-kde-base/kdemultimedia:cdparanoia - Enables support for audiocd browsing and ripping
 kde-base/kdemultimedia-kioslaves:cdparanoia - Enables support for audiocd browsing and ripping
-kde-base/kdenetwork:wifi - Enable wireless network functions in kde
+kde-base/kdemultimedia:cdparanoia - Enables support for audiocd browsing and ripping
 kde-base/kdenetwork-meta:wifi - Enable wireless network functions in kde
+kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
 kde-base/krdc:rdesktop - Enable remote desktop functionality
 kde-base/ksysguard:lm_sensors - Adds linux lm_sensors (hardward sensors) support
@@ -497,8 +498,8 @@ media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:ogg - Enables libogg ogg container support
 media-video/vlc:stream - Enables vlc to stream video
 media-video/vlc:utf8 - Enables utf8 support
-media-video/vlc:vcd - Enables vcd playback support
 media-video/vlc:v4l - Enables video4linux support
+media-video/vlc:vcd - Enables vcd playback support
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
 media-video/vlc:vorbis - Enables vorbis audio codec support
 media-video/winki:css - Enables ripping of encrypted dvds
@@ -609,9 +610,9 @@ net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessi
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
 net-misc/strongswan:smartcard - Enables smartcard support
+net-misc/vnc:server - Build VNC client
 net-misc/zaptel:devfs26 - Devfs support for Linux-2.6
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
-net-misc/vnc:server - Build VNC client
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
@@ -623,20 +624,20 @@ net-wireless/hostap-driver:hostap-noplx - Set to not install hostap_plx driver
 net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
+net-wireless/libbtctl:mono - Add Mono Bluetooth bindings
 net-wireless/ndiswrapper:4kstacks - Allow the use of 4kstacks in ndiswrapper for some users
 net-wireless/obexftp:bluetooth - Install bluez so obexftp can detect and build BT support.
-net-wireless/libbtctl:mono - Add Mono Bluetooth bindings
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa_supplicant:gsm - Add support for EAP-SIM authentication algorithm
 net-wireless/wpa_supplicant:pcap - Use external libpcap and libdnet for layer2 packet processing
 net-www/apache:distcache - Enable SSL distcache support
 net-www/apache:lingerd - Enable support for lingerd
-net-www/apache:mpm-worker - Adds support for the worker Apache MPM
-net-www/apache:mpm-prefork - Adds support for the prefork Apache MPM
 net-www/apache:mpm-leader - Adds support for the leader Apache MPM
-net-www/apache:mpm-threadpool - Adds support for the threadpool Apache MPM
 net-www/apache:mpm-metux - Adds support for the metux Apache MPM
 net-www/apache:mpm-peruser - Adds support for the peruser Apache MPM
+net-www/apache:mpm-prefork - Adds support for the prefork Apache MPM
+net-www/apache:mpm-threadpool - Adds support for the threadpool Apache MPM
+net-www/apache:mpm-worker - Adds support for the worker Apache MPM
 net-www/apache:no-suexec - Don't install suexec with apache
 net-www/apache:static-modules - Build modules into apache instead of having them load at run time
 net-www/elinks:lua - enable lua support
@@ -726,6 +727,7 @@ sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled becau
 sys-cluster/lam-mpi:f77 - Adds support for f77
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
+sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building an SGI IP28 kernel
 sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checking (disables PIE and SSP building in gcc)
 sys-devel/gcc:fortran - Build support for the fortran language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
@@ -736,7 +738,6 @@ sys-devel/gcc:n32 - Enable n32 ABI support on mips
 sys-devel/gcc:n64 - Enable n64 ABI support on mips
 sys-devel/gcc:nomultilib - Disables multilib support in gcc
 sys-devel/gcc:objc - Build support for the Objective C code language
-sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building an SGI IP28 kernel
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-fs/e2fsprogs:diet - Compile and link with dietlibc
@@ -748,10 +749,10 @@ sys-kernel/development-sources:ultra1 - If you have a SUN Ultra 1 with a HME int
 sys-kernel/development-sources:vanilla - keep the kernel sources in a vanilla state and do not apply anything from genpatches.
 sys-kernel/genkernel:bootsplash - Installs bootsplash support if you request it and it is not already available.
 sys-kernel/gentoo-dev-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
-sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/gentoo-sources:aavm - adds Andrea Arcangeli's vm support (removes rmap by Rik van Riel which is the default)
 sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
 sys-kernel/gentoo-sources:evms2 - adds EVMS 2.0 support drop EVMS 1.2.1
+sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/gentoo-sources:usagi - adds USAGI (Linux IPv6 Development Project) support drops {superfreeswan/patch-int/loop-jari}
 sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
 sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
