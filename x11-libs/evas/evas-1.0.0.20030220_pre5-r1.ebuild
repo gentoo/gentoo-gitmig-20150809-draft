@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20030220_pre5-r1.ebuild,v 1.1 2003/03/20 13:02:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20030220_pre5-r1.ebuild,v 1.2 2003/04/04 13:25:01 vapier Exp $
 
 inherit flag-o-matic
 
@@ -22,7 +22,8 @@ DEPEND="virtual/x11
 	>=dev-db/edb-1.0.3.2003*
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
-	directfb? ( >=dev-libs/DirectFB-0.9.16 )"
+	directfb? ( >=dev-libs/DirectFB-0.9.16 )
+	dev-util/pkgconfig"
 
 src_compile() {
 	env NOCONFIGURE=yes ./autogen.sh || die "could not autogen"
