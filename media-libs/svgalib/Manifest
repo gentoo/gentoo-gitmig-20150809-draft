@@ -1,4 +1,4 @@
-MD5 eeb406ce27c03c31079bf393fefc486d ChangeLog 4466
+MD5 02b04e5d18a20a3e21c73423f23bf88f ChangeLog 4620
 MD5 b3845e961f29a0e3754831e90ff5e798 svgalib-1.4.3-r4.ebuild 2566
 MD5 7aae39539c1f87ab37a6d216f9f9be87 svgalib-1.9.17-r3.ebuild 3180
 MD5 63b8fb91eeb88053caab43d3fd10c59a svgalib-1.9.18.ebuild 3322
@@ -8,7 +8,7 @@ MD5 19b74fedfd6953bd3537a803abecc4d3 files/svgalib-1.4.3-gentoo.diff 10364
 MD5 0d7d045fc55ccf3f4a26bc54286a3b8a files/digest-svgalib-1.9.18 66
 MD5 0ded96494b4c3f4f744474ff89033c18 files/svgalib-1.9.17-linux2.6.patch 38611
 MD5 3538c97a42a76d7c1b210319171d3daa files/svgalib-1.4.3-linux2.6.patch 195
-MD5 0209cd9462a2c845466526a2a4017104 files/svgalib-1.9.18-gentoo.patch 3622
+MD5 0ab58f00461c5fc3e61589c8ce890500 files/svgalib-1.9.18-gentoo.patch 3624
 MD5 e4ead3e3192f5a945ff177331122d7ae files/digest-svgalib-1.9.17-r3 66
 MD5 c2977469108170b5851b7706829ad646 files/svgalib-1.9.17-gentoo.patch 11536
 MD5 c4b69ccaea188c0ee4b32111b769ae6d files/svgalib-1.4.3-userpriv.patch 1267

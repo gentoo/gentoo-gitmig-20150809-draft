@@ -93,7 +93,7 @@
  
  # Comment this out if you use devfs only and don't want to make svga nodes
 -INSTALLDEV = installdev
-+#INSTALLDEV = installdev
++INSTALLDEV = installmodule
  
  #
  # Comment out any driver that you don't want included in the library.
