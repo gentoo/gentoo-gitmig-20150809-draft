@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjgraph/openjgraph-0.9.2.ebuild,v 1.4 2004/08/31 04:02:24 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjgraph/openjgraph-0.9.2.ebuild,v 1.5 2004/09/17 11:43:45 axxo Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 ~sparc ~ppc"
 S=${WORKDIR}/${P//./_}
 
 src_compile() {
-	./compileall.sh
+	./compileall.sh || die "compile failed"
 }
 
 src_install () {
