@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.188 2004/11/03 06:45:05 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.189 2004/11/07 07:44:17 corsair Exp $
+
+  07 Nov 2004; Markus Rothe <corsair@gentoo.org> mod_php-5.0.2.ebuild:
+  Marked ~ppc64
 
   03 Nov 2004; Bret Curtis <psi29a@gentoo.org> mod_php-4.3.9.ebuild:
   marked as ~mips for testing
