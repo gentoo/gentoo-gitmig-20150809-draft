@@ -1,6 +1,6 @@
-# Copyright 2002 Paul Thompson
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2.ebuild,v 1.2 2003/07/12 20:31:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2.ebuild,v 1.3 2003/09/29 21:24:18 mholzer Exp $
 
 IUSE="oggvorbis alsa nls"
 
