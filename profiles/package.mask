@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <iggy@gentoo.org> (01 Jul 2003)
+# testing, it works for me, but I want more testers
+=net-mail/courier-0.42.2-r1
+
 # <carpaski@gentoo.org> (29 Jun 2003)
 # Masking 2.0.48-r2 for testing some cleanups and fixes
 >=sys-apps/portage-2.0.48-r2
