@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.89 2005/03/02 17:58:13 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.90 2005/03/02 21:43:21 hansmi Exp $
+
+  02 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  phpmyadmin-2.6.1_p2-r1.ebuild:
+  Stable on ppc.
 
   02 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
   files/2.6.1_p2-no-wildcard-privs-for-you.patch,
