@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.22 2004/02/02 03:36:42 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.23 2004/04/07 03:45:04 raker Exp $
+
+*pure-ftpd-1.0.18 (06 Apr 2004)
+
+  06 Apr 2004; Nick Hadaway <raker@gentoo.org> pure-ftpd-1.0.18.ebuild:
+  Version bump.  Adjusted pam-related stuff.  No other significant 
+  ebuild changes.
 
   01 Feb 2004; Jon Portnoy <avenj@gentoo.org> pure-ftpd-1.0.17a.ebuild :
   AMD64 keywords.
