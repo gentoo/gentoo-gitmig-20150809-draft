@@ -1,15 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030629_pre0.ebuild,v 1.2 2003/09/15 18:11:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030629_pre0.ebuild,v 1.3 2003/10/21 05:39:47 vapier Exp $
 
 inherit enlightenment
 
 DESCRIPTION="window manager and desktop shell"
 HOMEPAGE="http://www.enlightenment.org/pages/enlightenment.html"
-
-LICENSE="as-is"
-SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc"
 
 DEPEND="${DEPEND}
 	virtual/x11
@@ -26,17 +22,17 @@ DEPEND="${DEPEND}
 
 S=${WORKDIR}/${PN}
 
-src_compile() {
-	env WANT_AUTOCONF_2_5=1 NOCONFIGURE=yes ./autogen.sh || die
-	econf --with-gnu-ld || die
-	emake || die
+pkg_setup() {
+	eerror "Sorry, but this package is broken at the moment."
+	eerror "That is because it has not been updated to use"
+	eerror "all the latest EFL (Enlightened Foundation Libraries)."
+	eerror "Next time you see an update here though, this package"
+	eerror "will work ! :)"
+	die "unmaintained code"
 }
 
 src_install() {
-	make install DESTDIR=${D} || make install DESTDIR=${D} || die
-	find ${D} -name CVS -type d -exec rm -rf '{}' \;
-	dodoc AUTHORS ChangeLog NEWS README
-	dohtml -r doc
+	enlightenment_src_install
 
 	# fix name clash with 0.16.x
 	cd ${D}/usr/bin
