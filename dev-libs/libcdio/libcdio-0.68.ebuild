@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.68.ebuild,v 1.2 2004/06/24 23:14:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.68.ebuild,v 1.3 2004/06/27 09:52:39 mholzer Exp $
 
 IUSE="cddb"
 
 DESCRIPTION="A library to encapsulate CD-ROM reading and control."
 HOMEPAGE="http://www.gnu.org/software/libcdio/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 LICENSE="GPL-2"
 
 SLOT="0"
