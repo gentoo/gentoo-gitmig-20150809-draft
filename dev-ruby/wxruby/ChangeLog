@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/wxruby
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.9 2004/09/02 11:17:15 twp Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.10 2005/02/16 18:07:28 pythonhead Exp $
+
+*wxruby-0.6 (16 Feb 2005)
+
+  16 Feb 2005; Rob Cakebread <pythonhead@gentoo.org> +wxruby-0.6.ebuild:
+  Version bump.
 
   02 Sep 2004; twp wxruby-0.5.ebuild:
   Update dependencies after wxGTK patch

@@ -1,6 +1,18 @@
-MD5 8fc839fa12312cc503d726d983ac80bc wxruby-0.5.ebuild 840
-MD5 d93e5e1fdd2c728c2f1d23f4b3196626 ChangeLog 955
-MD5 f628341d17bcf0b7e722e0192822b61d wxruby-0.4.0.ebuild 841
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 01be62d7ab4522215f975b11586b009e ChangeLog 1080
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 1f0111880794012e64b69fc682484e9b files/digest-wxruby-0.4.0 65
+MD5 65ab034e6675aadbc3a3c6fe7c93e02d wxruby-0.5.ebuild 847
+MD5 737a771d6bcfb5ae52fc8566dc729494 wxruby-0.6.ebuild 847
+MD5 3ac79c2d15cd85cc232651a7e6fa846c wxruby-0.4.0.ebuild 845
 MD5 9980a9d8fd764998769e8247c2301971 files/digest-wxruby-0.5 63
+MD5 363c4d9ac68231d41eb47831435f6a13 files/digest-wxruby-0.6 63
+MD5 1f0111880794012e64b69fc682484e9b files/digest-wxruby-0.4.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD4DBQFCE4wez2gxt1z4IGYRAmqrAJ9tR1xcQusDeiIXTgyQberDU2W12gCY+pov
+becxwUe6ujMsM5wVCE3/3g==
+=lL6S
+-----END PGP SIGNATURE-----
