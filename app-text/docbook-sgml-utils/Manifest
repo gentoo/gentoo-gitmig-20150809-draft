@@ -4,9 +4,12 @@ MD5 2373cd700719ef9c257923073e168d22 docbook-sgml-utils-0.6.12.ebuild 1141
 MD5 5065b5c9a9c61f4181b5ce646666f16c docbook-sgml-utils-0.6.11.ebuild 1101
 MD5 8ec02afef5ad042b670acaf5131132b9 docbook-sgml-utils-0.6.11-r2.ebuild 1138
 MD5 afdfcd38130927c4a5c5119cfe69cf2e ChangeLog 2135
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 6d3680de414107045cb2c50eaa7f5cdc docbook-sgml-utils-0.6.12-r1.ebuild 1177
 MD5 cf0e9b3c8770d072f69219b8f5aa418a files/digest-docbook-sgml-utils-0.6.9 76
 MD5 a52142a3e1462a0e62a1d4b0e4b9e685 files/docbook-sgml-utils-frontend.patch 455
 MD5 1dd65666f8e59fae0cbcc281806b1195 files/digest-docbook-sgml-utils-0.6.11-r1 72
 MD5 1dd65666f8e59fae0cbcc281806b1195 files/digest-docbook-sgml-utils-0.6.11-r2 72
+MD5 162814a2342da5479a18dc8e9f74182a files/digest-docbook-sgml-utils-0.6.12-r1 72
 MD5 1dd65666f8e59fae0cbcc281806b1195 files/digest-docbook-sgml-utils-0.6.11 72
 MD5 162814a2342da5479a18dc8e9f74182a files/digest-docbook-sgml-utils-0.6.12 72
