@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3.ebuild,v 1.5 2002/05/01 01:29:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r1.ebuild,v 1.1 2002/05/23 00:55:55 agenkin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a library for running svga graphics on the console"
@@ -18,23 +18,19 @@ src_unpack() {
 
 src_compile() {
 
-	 make OPTIMIZE="${CFLAGS}" static || die
-	 make OPTIMIZE="${CFLAGS}" shared || die
-	 make OPTIMIZE="${CFLAGS}" textutils || die
-	 make OPTIMIZE="${CFLAGS}" lrmi || die
-	 make OPTIMIZE="${CFLAGS}" utils || die
+	make OPTIMIZE="${CFLAGS}" static shared textutils lrmi utils || die
 	# Build the gl stuff tpp
-	 make OPTIMIZE="${CFLAGS}" -C gl || die
-	 make OPTIMIZE="${CFLAGS}" -C gl libvgagl.so.${PV} || die
+	make OPTIMIZE="${CFLAGS}" -C gl || die
+	make OPTIMIZE="${CFLAGS}" -C gl libvgagl.so.${PV} || die
 
 	cp Makefile Makefile.orig
-	 sed 's/\(install: $(INSTALLAOUTLIB) \)installheaders \(.*\)/\1\2/g' \
+	sed 's/\(install: $(INSTALLAOUTLIB) \)installheaders \(.*\)/\1\2/g' \
 	 	Makefile.orig > Makefile
 }
 
 src_install () {
 
-	dodir /etc/svga /usr/{include,lib,bin,share/man}
+	dodir /etc/{vga,svga} /usr/{include,lib,bin,share/man}
 	make TOPDIR=${D} OPTIMIZE="${CFLAGS}" install || die
 	insinto /usr/include
 	doins gl/vgagl.h
