@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6.ebuild,v 1.3 2003/10/09 19:08:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6.ebuild,v 1.4 2003/10/17 23:49:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -25,6 +25,9 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 
 	epatch ${FILESDIR}/${P}-security.patch
+
+	# Remove redundant games in directory
+	sed -i -e 's/\/games\//\//g' configure*
 }
 
 src_install() {
