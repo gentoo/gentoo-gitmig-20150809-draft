@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.59 2004/08/02 14:37:44 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.60 2004/08/07 04:02:58 pythonhead Exp $
+
+*wxGTK-2.4.2-r2 (06 Aug 2004)
+
+  06 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> -wxGTK-2.4.0.ebuild,
+  -wxGTK-2.4.1-r1.ebuild, -wxGTK-2.4.2-r1.ebuild, +wxGTK-2.4.2-r2.ebuild,
+  -wxGTK-2.4.2.ebuild:
+  Removed obsolete versions and changed 2.4.2-r2 so apps can use new wxwidgets
+  eclass with multiple versions (gtk,gtk2,unicode,debug) of wxGTK installed. See
+  bug #39931
 
   02 Aug 2004; Ferris McCormick <fmccor@gentoo.org> wxGTK-2.4.2-r1.ebuild:
   Stable for sparc.  Runs on sparc and is required for wxpython-2.4.2.4,
