@@ -1,0 +1,68 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/clvmd.rc,v 1.1 2005/03/25 02:32:08 xmerlin Exp $
+
+depend() {
+	use dns logger
+	use net
+	need cluster-manager cluster-locking-manager fenced
+}
+exefile=/sbin/clvmd
+
+start() {
+	ebegin "Activating LVM volumes (locally)"
+	/sbin/vgchange -aly
+	eend $?
+	
+	ebegin "Starting clvmd"
+	start-stop-daemon --start --quiet \
+		--exec ${exefile} 
+	eend $?
+}
+
+umount_gfs_filesystems() {
+	local sig retry
+	local remaining="$(awk '$3 ~ /gfs/ { print $2 }' /proc/mounts | sort -r)"
+
+	if [ -n "${remaining}" ]
+	then
+	        sig=
+	        retry=3
+	        while [ -n "${remaining}" -a "${retry}" -gt 0 ]
+	        do
+	                if [ "${retry}" -lt 3 ]
+			then
+	                        ebegin "Unmounting GFS filesystems (retry)"
+	                        umount ${remaining} &>/dev/null
+	                        eend $? "Failed to unmount GFS filesystems this retry"
+	                else
+	                        ebegin "Unmounting GFS filesystems"
+	                        umount ${remaining} &>/dev/null
+	                        eend $? "Failed to unmount GFS filesystems"
+	                fi
+	                remaining="$(awk '$3 ~ /gfs/ { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
+	                [ -z "${remaining}" ] && break
+	                /bin/fuser -k -m ${sig} ${remaining} &>/dev/null
+	                sleep 5
+	                retry=$((${retry} -1))
+	                sig=-9
+	        done
+	fi
+}
+
+stop() {
+
+	# umount GFS filesystems
+	umount_gfs_filesystems
+	
+	ebegin "Deactivating LVM volumes (locally)"
+	/sbin/vgchange -aln
+	eend $?
+	
+	ebegin "Stopping clvmd"
+	start-stop-daemon --stop --quiet \
+		--exec ${exefile}
+		
+	eend $?
+}

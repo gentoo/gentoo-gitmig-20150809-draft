@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/clvm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.1 2005/03/25 02:32:08 xmerlin Exp $
+
+*clvm-2.00.33 (25 Mar 2005)
+
+  25 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
+  +files/clvmd.rc, +files/lvm2-start.sh, +files/lvm2-stop.sh,
+  +clvm-2.00.33.ebuild:
+  new in portage
+
