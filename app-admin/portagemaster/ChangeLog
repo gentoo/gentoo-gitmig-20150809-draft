@@ -1,16 +1,20 @@
 # ChangeLog for app-admin/portagemaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/ChangeLog,v 1.9 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/ChangeLog,v 1.10 2002/12/25 23:47:02 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *portagemaster-0.2.0 (11 Oct 2002)
+
+  25 Dec 2002; Martin Holzer <mholzer@gentoo.org> portagemaster-0.2.0.ebuild :
+  Changed SRC_URI.
 
   11 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> portagemaster-0.2.0.ebuild files/digest-portagemaster-0.2.0 :
   New upstream version, ebuild submitted by <milosn@slingshot.co.nz>, fixes
   #8909.
 
 *portagemaster-0.1.8 (08 Sep 2002)
+
+  25 Dec 2002; Martin Holzer <mholzer@gentoo.org> portagemaster-0.1.8.ebuild :
+  Changed SRC_URI.
 
   21 Sep 2002; Karl Trygve Kalleberg <karltk@gentoo.org> portagemaster-0.1.8.ebuild :
   Added check to ensure it will be compiled by a 1.4.x JDK. Fixes #7875.
@@ -20,6 +24,11 @@
   New upstream version. Ebuild submitted by Robin Cull
   <robin@digitalevacuation.org>, <milosn@slingshot.co.nz> and Jelmer
   Jaarsma <dis-k@diska.dyndns.org>.
+
+*portagemaster-0.1.5 ()
+
+  25 Dec 2002; Martin Holzer <mholzer@gentoo.org> portagemaster-0.1.5.ebuild :
+  Changed SRC_URI.
 
 *portagemaster-0.1.4-r1 (5 Jun 2002)
   
