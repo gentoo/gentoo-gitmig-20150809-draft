@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/bittorrent-theshadow
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/ChangeLog,v 1.1 2003/08/10 21:58:47 luke-jr Exp $
+
+*bittorrent-theshadow-5.5 (10 Aug 2003)
+
+  10 Aug 2003; Luke-Jr <luke-jr@gentoo.org> bittorrent-theshadow-5.5.ebuild:
+  Initial ebuild submitted by ^Mafteah; modified by Luke-Jr to use
+  virtual/bittorrent and other various changes
+
