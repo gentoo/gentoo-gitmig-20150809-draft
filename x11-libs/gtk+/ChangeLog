@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.83 2003/11/16 00:18:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.84 2003/12/07 15:03:55 foser Exp $
+
+  07 Dec 2003; foser <foser@gentoo.org> gtk+-1.2.10-r10.ebuild :
+  Fix sysconfdir to /etc to fix gtkrc problems described in #34279
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gtk+-1.2.10-r10.ebuild:
   Stable on ia64

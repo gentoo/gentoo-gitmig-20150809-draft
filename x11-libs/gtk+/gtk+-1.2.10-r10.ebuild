@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.12 2003/11/15 02:41:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.13 2003/12/07 15:03:55 foser Exp $
 
 inherit eutils libtool
 
@@ -19,7 +19,7 @@ IUSE="nls debug"
 DEPEND="virtual/x11
 	=dev-libs/glib-1.2*
 	nls? ( sys-devel/gettext
-	dev-util/intltool )"
+		dev-util/intltool )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -47,7 +47,7 @@ src_compile() {
 	fi
 
 	econf \
-		--sysconfdir=/etc/X11 \
+		--sysconfdir=/etc \
 		--with-xinput=xfree \
 		--with-x \
 		${myconf} || die
@@ -74,9 +74,11 @@ src_install() {
 }
 
 pkg_postinst() {
+
 	ewarn "Older versions added /etc/X11/gtk/gtkrc which changed settings for"
 	ewarn "all themes it seems.  Please remove it manually as it will not due"
 	ewarn "to /env protection."
 	echo ""
 	einfo "The old gtkrc is available through the new Gentoo gtk theme."
+
 }
