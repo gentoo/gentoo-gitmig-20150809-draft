@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libavc1394
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> libavc1394-0.3.1.ebuild:
+  adding categorie. see 45110 for details
+
   09 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> libavc1394-0.4.1.ebuild:
   AMD64 keyword.
 
