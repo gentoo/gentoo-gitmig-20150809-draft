@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.4.4.ebuild,v 1.6 2005/02/10 10:10:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.4.4.ebuild,v 1.7 2005/02/12 12:05:45 usata Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="modern style C++ library that provides a simple and easy interface to libxml2"
 HOMEPAGE="http://pmade.org/software/xmlwrapp/"
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	perl configure.pl --prefix /usr || die
+	CXX="$(tc-getCXX)" perl configure.pl --prefix /usr || die
 	emake || die
 }
 
