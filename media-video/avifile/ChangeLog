@@ -1,10 +1,16 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.5 2002/04/13 17:22:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.6 2002/04/14 01:47:26 seemant Exp $
+
+avifile-0.6.0.20011220-r2 (13 Apr 2002) 
+
+  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org>
+
+  Trying to make avifile more friendly towards kde3 users
 
   13 Apr 2002; M.Schlemmer <azarah@gentoo.org> :
 
-  After much though, decided to remove the "avi" USE flag, as it enabling or
+  After much thought, decided to remove the "avi" USE flag, as it enabling or
   disabling use of the win32 codecs is not valid.  Also, avifile's main use *is*
   to do avi.
 
