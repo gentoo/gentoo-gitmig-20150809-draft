@@ -7,7 +7,7 @@ HOMEPAGE="http://lin-seti.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha"
+KEYWORDS="x86 sparc ~ppc ~alpha"
 IUSE=""
 DEPEND="app-sci/setiathome"
 
