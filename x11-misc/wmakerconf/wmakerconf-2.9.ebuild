@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.ebuild,v 1.6 2002/09/17 14:07:38 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.ebuild,v 1.7 2002/10/05 05:39:27 drobbins Exp $
+
+IUSE="nls gnome imlib perl"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X based config tool for the windowmaker X windowmanager."

@@ -1,6 +1,8 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/icesndcfg-0.8.ebuild,v 1.4 2002/10/04 06:43:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/icesndcfg-0.8.ebuild,v 1.5 2002/10/05 05:39:27 drobbins Exp $
+
+IUSE="nls esd"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IceWM sound editor."

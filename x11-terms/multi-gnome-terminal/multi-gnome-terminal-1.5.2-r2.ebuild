@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.5.2-r2.ebuild,v 1.2 2002/08/05 17:57:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.5.2-r2.ebuild,v 1.3 2002/10/05 05:39:28 drobbins Exp $
+
+IUSE="nls"
 
 inherit libtool
 
