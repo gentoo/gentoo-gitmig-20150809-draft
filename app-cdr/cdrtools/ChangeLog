@@ -1,7 +1,21 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.20 2002/10/15 19:36:02 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.21 2002/10/23 03:17:01 agenkin Exp $
 
+*cdrtools-1.11.38 (22 Oct 2002)
+
+  22 Oct 2002; Arcady Genkin <agenkin@thpoon.com> cdtrools-1.11.38.ebuild :
+
+  Version bump to 1.11a38.  To quote from freshmeat.net:
+
+    A major speedup was made with libedc (used to write raw data CDs).
+    Help functions have been added to libscg (SCSI transport) to list
+    possible low level SCSI transport layers. A patch for Linux from
+    Linus Torvalds was added to allow cdrecord to be used on ATAPI
+    drives without needing the ide-scsi driver.
+
+  See ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/alpha/AN-1.11a38.
+	
 *cdrtools-1.11.37 (15 Oct 2002)
 
   15 Oct 2002; Arcady Genkin <agenkin@thpoon.com> cdtrools-1.11.37.ebuild :
