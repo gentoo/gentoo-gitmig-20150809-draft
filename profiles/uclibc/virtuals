@@ -2,3 +2,5 @@ virtual/libc			dev-libs/uclibc
 virtual/glibc			dev-libs/uclibc
 virtual/logger			app-admin/sysklogd
 virtual/os-headers		sys-kernel/linux-headers
+virtual/linux-sources	sys-kernel/vanilla-sources
+virtual/alsa			media-sound/alsa-driver
