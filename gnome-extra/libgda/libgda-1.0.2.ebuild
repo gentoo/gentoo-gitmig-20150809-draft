@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.0.2.ebuild,v 1.1 2003/12/01 13:48:40 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.0.2.ebuild,v 1.2 2003/12/03 06:16:43 leonardop Exp $
 
 IUSE="odbc postgres mysql ldap firebird freetds sqlite mdb oci8 doc"
 
@@ -42,6 +42,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix ${S}/doc/Makefile.in
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 }
 
 src_compile() {
