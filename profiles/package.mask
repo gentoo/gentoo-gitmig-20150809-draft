@@ -7,9 +7,6 @@
 #a work in progress (drobbins, 10 Feb 2002)
 app-emulation/vmware-workstation
 
-#still needs testing (drobbins, 10 Feb 2002)
->=sys-libs/glibc-2.2.5
-
 #as of 7 Feb 2002, this ebuild still has an rc5 initscript. (drobbins)
 net-misc/djbdns
 
