@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>vapier@gentoo.org</email>
+</maintainer>
+<longdescription>
+CVSup is a software package for distributing and 
+updating collections of files across a network. It can 
+efficiently and accurately mirror all types of files, 
+including sources, binaries, hard links, symbolic 
+links, and even device nodes. CVSup's streaming 
+communication protocol and multithreaded architecture 
+make it most likely the fastest mirroring tool in 
+existence today.
+</longdescription>
+</pkgmetadata>
