@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/etherape
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.18 2005/02/25 15:50:32 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.19 2005/03/10 10:32:34 ka0ttic Exp $
+
+  10 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/etherape-0.9.1-fix-mkinstalldirs.diff, etherape-0.9.1.ebuild:
+  Added patch to fix mkinstalldirs path for bug 83310.
 
   25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> etherape-0.9.1.ebuild:
   Revert keywords pending actual solution to 79385.

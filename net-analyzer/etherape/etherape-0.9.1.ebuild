@@ -1,10 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.1.ebuild,v 1.5 2005/02/25 15:50:32 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.1.ebuild,v 1.6 2005/03/10 10:32:34 ka0ttic Exp $
 
 inherit eutils
 
-IUSE=""
 DESCRIPTION="A graphical network monitor for Unix modeled after etherman"
 SRC_URI="mirror://sourceforge/etherape/${P}.tar.gz"
 HOMEPAGE="http://etherape.sourceforge.net/"
@@ -12,30 +11,30 @@ HOMEPAGE="http://etherape.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+IUSE=""
 
 DEPEND=">=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.0
 	virtual/libpcap
-	sys-devel/gettext
-	sys-devel/autoconf"
+	sys-devel/gettext"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
 	epatch ${FILESDIR}/${P}-res_mkquery.patch
+	epatch ${FILESDIR}/${P}-fix-mkinstalldirs.diff
 }
 
 src_compile() {
-	aclocal
-	autoconf
+	aclocal || die "aclocal failed"
+	autoconf || die "autoconf failed"
 
-	econf || die
-	emake || die
+	econf || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "failed to install"
+	make DESTDIR=${D} install || die "make install failed"
 
 	# move shortcut to gnome2 compliant location
 	dodir /usr/share/applications
