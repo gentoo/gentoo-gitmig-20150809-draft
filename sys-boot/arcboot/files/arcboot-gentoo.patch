@@ -1,0 +1,22 @@
+--- ext2load/Makefile.orig	2004-08-03 00:08:44.000000000 -0400
++++ ext2load/Makefile	2004-08-03 00:44:43.000000000 -0400
+@@ -25,7 +25,7 @@ ASFLAGS= -mno-abicalls -G 0 -fno-pic
+ #CFLAGS+=-DDEBUG
+ 
+ LD = ld
+-LDFLAGS = -N --oformat ecoff-bigmips -T ld.script
++LDFLAGS = -N --oformat elf32-tradbigmips -T ld.script
+ 
+ TARGETS = ext2load 
+ 
+--- ext2load/ld.script.in.orig	2004-08-03 00:08:56.000000000 -0400
++++ ext2load/ld.script.in	2004-08-03 00:44:52.000000000 -0400
+@@ -9,7 +9,7 @@ SECTIONS
+   .text      :
+   {
+     _ftext = . ;
+-    *(.rodata)
++    *(.rodata*)
+     *(.text)
+   } =0
+   _etext = .;

@@ -1,0 +1,10 @@
+# ChangeLog for sys-boot/arcboot
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/ChangeLog,v 1.1 2004/08/04 05:32:43 kumba Exp $
+
+*arcboot-0.3.8.2 (04 Aug 2004)
+
+  04 Aug 2004; Joshua Kinard <kumba@gentoo.org> +metadata.xml,
+  +files/arcboot-gentoo.patch, +arcboot-0.3.8.2.ebuild:
+  Initial import of arcboot, a bootloader for SGI machines.
+
