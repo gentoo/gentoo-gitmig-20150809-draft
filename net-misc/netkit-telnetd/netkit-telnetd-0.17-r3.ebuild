@@ -1,17 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.6 2002/08/14 12:08:08 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.7 2002/08/16 09:42:32 seemant Exp $
 
 P2=netkit-telnet-${PV}
 S=${WORKDIR}/${P2}
 DESCRIPTION="Standard Linux telnet client"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P2}.tar.gz"
-KEYWORDS="x86 ppc sparc sparc64"
-LICENSE="BSD"
-SLOT="0"
 
-DEPEND="virtual/glibc 
-	>=sys-libs/ncurses-5.2"
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="x86 ppc sparc sparc64"
+
+DEPEND=">=sys-libs/ncurses-5.2"
 
 src_unpack() {
 	unpack ${A}
@@ -20,9 +20,12 @@ src_unpack() {
 }
 
 src_compile() {                           
-	./configure --prefix=/usr || die
+	econf || die
+
 	cp MCONFIG MCONFIG.orig
-	sed -e "s/-pipe -O2/${CFLAGS}/" -e "s:-Wpointer-arith::" MCONFIG.orig > MCONFIG
+	sed -e "s/-pipe -O2/${CFLAGS}/" -e "s:-Wpointer-arith::" \
+		MCONFIG.orig > MCONFIG
+
 	make || die
 	cd telnetlogin
 	make || die
@@ -48,5 +51,3 @@ src_install() {
 	newdoc telnet/README README.telnet
 	newdoc telnet/TODO TODO.telnet
 }
-
-
