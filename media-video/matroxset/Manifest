@@ -1,6 +1,16 @@
-MD5 29ecf093647ac7304179f54499ee243a ChangeLog 1148
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f3a6fb17a4046790c2751e17ac4335a2 ChangeLog 1153
 MD5 ec9a96c8e5c8f879039611063817d21f matroxset-0.3.ebuild 982
-MD5 954929dbdba2a3ddf63037a197b67bf3 metadata.xml 242
 MD5 48b200f4a17bce82a358475ab7cb8c53 matroxset-0.4.ebuild 912
+MD5 954929dbdba2a3ddf63037a197b67bf3 metadata.xml 242
 MD5 26112125752e87510ab1ea7214ef4a1f files/digest-matroxset-0.3 63
 MD5 19f27c51bae69671315457b62927d34f files/digest-matroxset-0.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1mII1lqEGTUzyQRAgkCAJ9UD9UzU9gWHFSmtYtm/cKDgYVRLwCg0aVN
+m/ScpO0hQ7opCM7vOPTFgaQ=
+=a2e8
+-----END PGP SIGNATURE-----
