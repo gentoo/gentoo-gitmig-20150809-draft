@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.2 2002/03/17 21:44:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.3 2002/03/29 13:51:56 seemant Exp $
+
+*sawfish-1.0.1-r3 (28 Mar 2002)
+
+  28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sawfish-1.0.1-r3.ebuild :
+
+  Separate gnome from gtk/gdk-pixbuf stuff, and from sawfish in general, unless
+  user has gnome in the USE list.
 
 *sawfish-1.0.1-r2 (16 Mar 2002)
 
