@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6j.ebuild,v 1.5 2003/07/24 04:46:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6j.ebuild,v 1.6 2003/07/29 19:52:18 wwoods Exp $
 
 inherit eutils
 
@@ -23,7 +23,11 @@ fi
 if [ "`uname -m`" = "parisc64" ]; then
 	SSH_TARGET="linux-parisc"
 fi
-	
+
+case $CHOST in
+	alphaev56*|alphaev6*) SSH_TARGET="linux-alpha+bwx-${CC:-gcc}" ;;
+	alpha*)               SSH_TARGET="linux-alpha-${CC:-gcc}" ;;
+esac
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -45,17 +49,6 @@ src_unpack() {
 		sed -e \
 		's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
 			Configure > Configure.orig
-	elif [ "${ARCH}" = "alpha" ]; then
-		if [ "${CC}" != "ccc" ]; then
-			# ccc compiled openssl will break things linked against
-			# a gcc compiled openssl, the configure will automatically detect 
-			# ccc and use it, so stop that if user hasnt asked for it.
-			#         
-			sed -e \
-				's!CC=ccc!CC=gcc!' config > config.orig
-			cp config.orig config
-		fi
-		cp Configure Configure.orig
 	else
 		cp Configure Configure.orig
 	fi
