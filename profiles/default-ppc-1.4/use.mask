@@ -24,3 +24,5 @@ selinux
 # until it is fixed
 hdf
 
+# media-libs/glide-v3 requires some extra work on ppc
+3dfx
