@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgii
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.15 2005/03/30 07:53:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.16 2005/04/02 08:51:25 kloeri Exp $
+
+  02 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> libgii-0.9.0.ebuild:
+  Fixes bug 87021, thanks to transient in #gentoo-bugs.
 
   30 Mar 2005; Chris White <chriswhite@gentoo.org>
   +files/libgii-0.9.0-gcc34.patch, libgii-0.9.0.ebuild:

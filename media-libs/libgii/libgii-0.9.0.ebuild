@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.3 2005/03/30 07:53:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.4 2005/04/02 08:51:25 kloeri Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
 HOMEPAGE="http://www.ggi-project.org/"
@@ -26,6 +26,9 @@ src_compile() {
 	local myconf
 
 	use X || myconf="--without-x --disable-x --disable-xwin"
+
+	# Fixes bug 87021
+	filter-flags -fPIC
 
 	econf ${myconf} || die
 	emake || die
