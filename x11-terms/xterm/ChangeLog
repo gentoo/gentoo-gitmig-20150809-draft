@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.52 2004/11/08 16:41:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.53 2004/12/19 08:28:27 dragonheart Exp $
+
+  19 Dec 2004; Daniel Black <dragonheart@gentoo.org> xterm-196-r1.ebuild,
+  xterm-196.ebuild:
+  ppc stable as per bug #67326
 
 *xterm-196-r1 (08 Nov 2004)
 
