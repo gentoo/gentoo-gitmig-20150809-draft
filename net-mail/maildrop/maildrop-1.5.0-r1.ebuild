@@ -1,37 +1,40 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.0-r1.ebuild,v 1.3 2002/12/09 04:33:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.0-r1.ebuild,v 1.4 2002/12/21 22:19:56 raker Exp $
 
-IUSE="mysql ldap"
+IUSE="mysql ldap gdbm berkdb"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.flounder.net/~mrsam/maildrop/index.html"
 
-DEPEND=">=sys-libs/gdbm-1.8.0
-		sys-devel/perl
-		virtual/mta
-		mysql? ( >=dev-db/mysql-3.23.51 )
-		ldap? ( >=net-nds/openldap-2.0.23 )"
+DEPEND="sys-devel/perl
+	virtual/mta
+	>=sys-libs/db-3.2
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	mysql? ( >=dev-db/mysql-3.23.51 )
+	ldap? ( >=net-nds/openldap-2.0.23 )"
 PROVIDE="virtual/mda"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="~x86 ~sparc"
 
 # FYI:  There appears to be a problem with maildrop when compiled with gcc-3.2.
 # I've tested (and am using) mysql support.  I haven't tested ldap yet.
 # - Kyle <nitro@gentoo.org>
 
+inherit flag-o-matic
+filter-flags -funroll-loops
+filter-flags -fomit-frame-pointer
+
 src_compile() {
-	# These next two lines are a MUST! If tries to unroll the loops in
-	# CFLAGS or CXXFLAGS maildrop will not compile :-( <lamer@gentoo.org>
-	export CFLAGS="${CFLAGS/-funroll-loops/}"
-	export CXXFLAGS="${CXXFLAGS/-funroll-loops/}"
-	
-	use mysql && myconf="--enable-maildropmysql --with-mysqlconfig=/etc/maildrop/maildropmysql.cf"
-	#use ldap && myconf="--enable-maildropldap --with-ldapconfig=/etc/maildrop/maildropldap.cf"
+
+	local myconf
+	use berkdb && myconf="--with-db=db"
+	use mysql && myconf="${myconf} --enable-maildropmysql --with-mysqlconfig=/etc/maildrop/maildropmysql.cf"
+	use ldap && myconf="${myconf} --enable-maildropldap --with-ldapconfig=/etc/maildrop/maildropldap.cf"
 	
 	./configure \
 		--host=${CHOST} \
@@ -83,5 +86,6 @@ src_install() {
 		 	${S}/maildropmysql.config > ${S}/maildropmysql.cf
 		newins ${S}/maildropmysql.cf maildropmysql.cf
 	fi
-	#use ldap && newins ${S}/maildropldap.config maildropldap.cf
+
+	use ldap && newins ${S}/maildropldap.config maildropldap.cf
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.0.ebuild,v 1.2 2002/12/09 04:33:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.0.ebuild,v 1.3 2002/12/21 22:19:56 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -14,11 +14,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc "
 
+inherit flag-o-matic
+filter-flags -funroll-loops
+filter-flags -fomit-frame-pointer
+
 src_compile() {
-	# These next two lines are a MUST! If tries to unroll the loops in
-	# CFLAGS or CXXFLAGS maildrop will not compile :-( <lamer@gentoo.org>
-	export CFLAGS="${CFLAGS/-funroll-loops/}"
-	export CXXFLAGS="${CXXFLAGS/-funroll-loops/}"
 	./configure \
 		--prefix=/usr \
 		--with-devel \
