@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/ladspa-sdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.6 2003/01/08 07:12:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.7 2003/01/12 17:22:35 viz Exp $
 
 *ladspa-sdk-1.12 (25 Dec 2002)
 
-  08 Jan 2002; Nick Hadaway <raker@gentoo.org> ladspa-sdk-1.12.ebuild :
+  12 Jan 2003; Tobias Eichert <viz@gentoo.org> ladspa-sdk-1.12.ebuild :
+  Removed ALSA as a dependency. Closes bug #13556 .
+
+  08 Jan 2003; Nick Hadaway <raker@gentoo.org> ladspa-sdk-1.12.ebuild :
   Marked stable.
 
   25 Dec 2002; Tobias Eichert <viz@gentoo.org> ladspa-sdk-1.12.ebuild

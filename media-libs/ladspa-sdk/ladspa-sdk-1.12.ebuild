@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12.ebuild,v 1.4 2003/01/08 07:12:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12.ebuild,v 1.5 2003/01/12 17:22:35 viz Exp $
 
 IUSE=""
 
@@ -16,8 +16,8 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc sparc "
 
-DEPEND="virtual/glibc
-		media-sound/alsa-driver"
+DEPEND="virtual/glibc"
+
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
