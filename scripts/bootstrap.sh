@@ -1,7 +1,7 @@
 #!/bin/sh
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.34 2002/12/16 18:53:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.35 2002/12/27 18:42:46 azarah Exp $
 
 MYPROFILEDIR="`readlink -f /etc/make.profile`"
 if [ ! -d ${MYPROFILEDIR} ]
@@ -104,10 +104,11 @@ export CONFIG_PROTECT="-*"
 # First stage of bootstrap (aka build stage)
 #
 cd /usr/portage
-emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
-emerge $myBASELAYOUT $myTEXINFO $myGETTEXT $myBINUTILS $myGCC || cleanup 1
+# Separate, so that the next command uses the *new* emerge
+emerge ${myPORTAGE} || cleanup 1
+emerge ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} || cleanup 1
 # make.conf has been overwritten, so we explicitly export our original settings
-export USE="$ORIGUSE bootstrap"
+export USE="${ORIGUSE} bootstrap"
 
 # Basic support for gcc multi version/arch scheme ...
 if test -f /usr/sbin/gcc-config &> /dev/null && \
@@ -116,7 +117,7 @@ then
 	# Make sure we get the old gcc unmerged ...
 	emerge clean || cleanup 1
 	# Make sure the profile and /lib/cpp and /usr/bin/cc are valid ...
-	/usr/sbin/gcc-config `/usr/sbin/gcc-config --get-current-profile` &> /dev/null
+	/usr/sbin/gcc-config "`/usr/sbin/gcc-config --get-current-profile`" &> /dev/null
 fi
 
 #
