@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/nagios-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/nagios-syntax/ChangeLog,v 1.1 2005/01/05 03:51:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/nagios-syntax/ChangeLog,v 1.2 2005/02/01 19:43:25 ciaranm Exp $
+
+  01 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  nagios-syntax-20050105.ebuild:
+  x86, sparc, mips stable
 
 *nagios-syntax-20050105 (05 Jan 2005)
 
