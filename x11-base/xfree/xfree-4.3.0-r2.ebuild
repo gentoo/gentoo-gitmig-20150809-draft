@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.46 2003/10/14 02:09:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.47 2003/10/18 00:40:15 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -125,6 +125,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=x11-base/opengl-update-1.4
 	>=x11-misc/ttmkfdir-3.0.4
 	>=sys-apps/sed-4
+	>=sys-devel/patch-2.5.9
 	dev-lang/perl
 	media-libs/libpng
 	app-arch/unzip
