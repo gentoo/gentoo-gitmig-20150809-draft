@@ -19,10 +19,10 @@ if [ "$USEPEERDNS" ]; then
 
 	if [ "$REALRESOLVCONF" != "/etc/ppp/resolv.conf" ]; then
 
-	# if an old resolv.conf file exists, restore it
-	if [ -e $REALRESOLVCONF.pppd-backup ]; then
-		mv $REALRESOLVCONF.pppd-backup $REALRESOLVCONF
-	fi
+		# if an old resolv.conf file exists, restore it
+		if [ -e $REALRESOLVCONF.pppd-backup ]; then
+			mv $REALRESOLVCONF.pppd-backup $REALRESOLVCONF
+		fi
 
 	fi
 
