@@ -1,8 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.59 2004/05/22 23:29:24 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.60 2004/05/23 07:21:27 dostrow Exp $
 
 *gentoo-dev-sources-2.6.6 (22 May 2004)
+
+  23 May 2004; <dostrow@gentoo.org> gentoo-dev-sources-2.6.6.ebuild:
+  Masked for x86, ppc, and amd64 due to missconfiguration in patch.
+  Notified commiter and relevent arch's.
 
   22 May 2004; <coxj@gentoo.org> gentoo-dev-sources-2.6.6.ebuild:
   Version Bump, new patches
