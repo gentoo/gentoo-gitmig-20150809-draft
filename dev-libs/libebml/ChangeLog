@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.33 2005/02/27 14:35:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.34 2005/03/04 22:09:45 kito Exp $
+
+  04 Mar 2005; Kito <kito@gentoo.org> libebml-0.7.3.ebuild:
+  ~ppc-macos keyword. closes Bug 82726. Thanks to D. W. Srinath
+  <duty86@comcast.net> for the fix.
 
 *libebml-0.7.3 (27 Feb 2005)
 
