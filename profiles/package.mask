@@ -777,3 +777,8 @@ net-mail/courier
 # prez@gentoo.org 17 May 2002
 # needs testing
 =sys-devel/gcc-3.1
+
+# spider@gentoo.org 18 May 2002
+# Why did this get installed by profiles? its broken. 
+# should be updated to 4.2 
+sys-apps/texinfo
