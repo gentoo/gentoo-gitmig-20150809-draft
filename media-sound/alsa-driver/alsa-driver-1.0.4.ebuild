@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.4.ebuild,v 1.1 2004/04/04 18:25:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.4.ebuild,v 1.2 2004/04/04 18:39:01 eradicator Exp $
 
-inherit eutils kernel-mod
+inherit kernel-mod
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -38,12 +38,6 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	# The makefile still installs an alsasound initscript,
-	# which we REALLY dont want.
-	# This patch stops that
-	epatch ${FILESDIR}/makefile.patch || die "Makefile patch failed"
-	epatch ${FILESDIR}/${PN}-0.9.8-au-fix.patch
 
 	if kernel-mod_is_2_6_kernel || kernel-mod_is_2_5_kernel; then
 		FULL_KERNEL_PATH="${ROOT}/usr/src/${KV_DIR}"
@@ -89,6 +83,10 @@ src_compile() {
 src_install() {
 	dodir /usr/include/sound
 	make DESTDIR=${D} install || die
+
+	# We have our own scripts in alsa-utils
+	test -e ${D}/etc/init.d/alsasound && rm ${D}/etc/init.d/alsasound
+	test -e ${D}/etc/rc.d/init.d/alsasound && rm ${D}/etc/rc.d/init.d/alsasound
 
 	rm doc/Makefile
 	dodoc CARDS-STATUS COPYING FAQ INSTALL README WARNING TODO doc/*
