@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.2.ebuild,v 1.1 2005/03/19 14:51:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.2-r1.ebuild,v 1.1 2005/03/25 12:08:20 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -35,6 +35,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/xc242-whois-spec.diff
+	epatch ${FILESDIR}/xc242-slist-nosel.diff
 
 	use xchatdccserver && epatch ${DISTDIR}/xchat-dccserver-0.4.patch
 }

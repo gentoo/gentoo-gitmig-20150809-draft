@@ -1,0 +1,25 @@
+#
+# Fixes a crash when clicking "Connect" if no network is selected.
+# 
+--- xchat-2.4.2/src/fe-gtk/servlistgui.c	2005-02-03 15:42:44.000000000 +1100
++++ xchat-2.4.2p1/src/fe-gtk/servlistgui.c	2005-03-20 18:02:41.000000000 +1100
+@@ -609,6 +609,9 @@
+ static void
+ servlist_connectnew_cb (GtkWidget *button, gpointer userdata)
+ {
++	if (!selected_net)
++		return;
++
+ 	if (servlist_savegui () != 0)
+ 	{
+ 		gtkutil_simpledialog (_("User name and Real name cannot be left blank."));
+@@ -625,6 +628,9 @@
+ static void
+ servlist_connect_cb (GtkWidget *button, gpointer userdata)
+ {
++	if (!selected_net)
++		return;
++
+ 	if (servlist_savegui () != 0)
+ 	{
+ 		gtkutil_simpledialog (_("User name and Real name cannot be left blank."));

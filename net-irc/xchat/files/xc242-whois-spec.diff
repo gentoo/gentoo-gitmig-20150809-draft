@@ -1,0 +1,15 @@
+#
+# Fix handling of WHOIS SPECIAL events to be more strictly correct.
+#
+--- xchat-2.4.2/src/common/proto-irc.c	2005-03-13 13:38:57.000000000 +1100
++++ xchat-2.4.2p1/src/common/proto-irc.c	2005-03-20 21:33:58.000000000 +1100
+@@ -710,7 +710,8 @@
+ 		{
+ 			/* some unknown WHOIS reply, ircd coders make them up weekly */
+ 			EMIT_SIGNAL (XP_TE_WHOIS_SPECIAL, serv->server_session, word[4],
+-							 word_eol[5] + 1, word[2], NULL, 0);
++							(word_eol[5][0] == ':') ? word_eol[5] + 1 : word_eol[5],
++							 word[2], NULL, 0);
+ 			return;
+ 		}
+ 
