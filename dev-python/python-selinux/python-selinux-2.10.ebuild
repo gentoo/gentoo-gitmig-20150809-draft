@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.10.ebuild,v 1.1 2003/11/21 05:58:47 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.10.ebuild,v 1.2 2003/12/06 23:44:01 pebenito Exp $
 
 DESCRIPTION="Python bindings for SELinux functions"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
@@ -10,7 +10,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc"
 IUSE=""
 
-DEPEND="sys-libs/libselinux"
+DEPEND="dev-lang/python
+	sys-libs/libselinux"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
