@@ -51,6 +51,6 @@ ssl		dev-libs/openssl
 svga		media-libs/svgalib
 tcltk		dev-lang/tcl dev-lang/tk
 tcpd		sys-apps/tcp-wrappers
-tex		app-text/tetex
+tetex		app-text/tetex
 tiff		media-libs/tiff
 X		x11-base/xfree

@@ -21,7 +21,7 @@ berkdb		sys-libs/db
 slang		sys-libs/slang
 readline	sys-libs/readline
 arts		kde-base/kdelibs
-tex		app-text/tetex
+tetex		app-text/tetex
 aalib		media-libs/aalib	
 nas		media-libs/nas
 bonobo		gnome-base/bonobo
