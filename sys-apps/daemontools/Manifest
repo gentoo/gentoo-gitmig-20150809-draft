@@ -1,5 +1,5 @@
 MD5 3f0f5c5f8ae8169640d4dff02605d25e files/digest-daemontools-0.76-r3 67
-MD5 16ff0eb7728ebf88af611466ce005ee8 files/svscan 797
+MD5 67bd76fc34cd59a67fe462ed6e4ce942 files/svscan 875
 MD5 c75438b1c3b9d9f67691bd10cf3c8e52 files/0.76-errno.patch 246
 MD5 6ce7442b288dd69b4e456d00690a8344 files/0.76-head-1.patch 791
 MD5 999bbe136b4b81e9254a54887d1ab947 ChangeLog 2237
