@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3545 2005/01/30 17:48:54 motaboy Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3546 2005/01/30 20:15:31 hollow Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Benedikt Boehm <hollow@gentoo.org> (30 Jan 2005)
+# Apache herd package refresh
+# Masked for user testing. Meta-bug #76457
+=net-www/mod_auth_kerb-5.0_rc6
+=net-www/mod_ftpd-0.13.0
 
 # Sven Wegener <swegener@gentoo.org> (30 Jan 2005)
 # Major changes, needs some more testing
