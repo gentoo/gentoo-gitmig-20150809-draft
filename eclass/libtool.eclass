@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.39 2004/10/20 14:27:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.40 2004/10/20 14:29:26 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -157,6 +157,9 @@ elibtoolize() {
 				else
 					my_dirlist=
 				fi
+				;;
+			"--no-uclibc")
+				NO_UCLIBCTOOLIZE=1
 				;;
 		esac
 	done
