@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.8.7.ebuild,v 1.5 2004/01/22 02:55:38 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.8.7.ebuild,v 1.6 2004/03/23 06:07:38 eradicator Exp $
 
 inherit distutils
 
 DESCRIPTION="TheShad0w's experimental BitTorrent client"
-HOMEPAGE="http://bt.degreez.net/"
+HOMEPAGE="http://www.bittornado.com/"
 SRC_URI="http://home.elp.rr.com/tur/BitTorrent-experimental-S-${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
