@@ -2,8 +2,8 @@ MD5 d57f3f5fdc923ccce50b74b5b5bec99c coreutils-5.0.91-r3.ebuild 4063
 MD5 892411466b5aa40edfb2ef50da54bc0b coreutils-5.0-r6.ebuild 2741
 MD5 5296d12e384ee08bc6be40dc80924f68 coreutils-5.0.91-r2.ebuild 3648
 MD5 eb91c3dff46b58a712d16e1a07a6371c coreutils-5.0-r5.ebuild 2573
-MD5 8cfb8f8cf53400093dd681b43e5b47bb coreutils-5.0.91-r4.ebuild 4273
-MD5 9e3d8398de4ae8b391f8cf63e18e04aa ChangeLog 13433
+MD5 fdc690b593277a6f5e5ceb90b9790e2a coreutils-5.0.91-r4.ebuild 4262
+MD5 3a369edcb4a8b3636dc6b456eab7545f ChangeLog 13643
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 4638c50e0ea024536055d69519cd5fad files/digest-coreutils-5.0.91-r2 151
 MD5 a56b66f95289815e386f537689ef29a0 files/digest-coreutils-5.0.91-r3 229

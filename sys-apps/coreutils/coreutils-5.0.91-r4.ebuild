@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r4.ebuild,v 1.2 2004/01/09 15:01:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r4.ebuild,v 1.3 2004/01/10 07:05:46 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -142,8 +142,8 @@ src_install() {
 
 	# move non-critical packages into /usr
 	mv bin/{csplit,expand,factor,fmt,fold,install,join,md5sum,nl,od} usr/bin
-	mv bin/{paste,pathchk,pinky,pr,printf,sha1sum,shred,split,sum,tac} usr/bin
-	mv bin/{tail,test,tsort,unexpand,uniq,users} usr/bin
+	mv bin/{paste,pathchk,pinky,pr,printf,sha1sum,shred,sum,tac} usr/bin
+	mv bin/{tail,test,tsort,unexpand,users} usr/bin
 	cd usr/bin
 	ln -s ../../bin/* .
 
