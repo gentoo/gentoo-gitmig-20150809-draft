@@ -1,0 +1,14 @@
+# this is a list of USE flags that should not be used on alpha, ever
+3dnow
+icc
+icc-pgo
+mmx
+svga
+sse
+# these are debatable, since technically an alpha could support this hardware
+pcmcia
+3dfx
+# these are masked for the moment, since they're untested and causing
+# dependency hell. test and unmask!
+pda
+alsa
