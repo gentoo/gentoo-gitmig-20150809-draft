@@ -1,9 +1,14 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.2 2002/07/07 10:05:16 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.3 2002/07/21 21:30:14 spider Exp $
+
+
+xscreensaver-4.05-r3 (21 Jul 2002)
+  21 Jul 2002; Spider <spider@gentoo.org> xscreensaver-4.05-r3.ebuild :
+  Dep change solves bug 4743
 
 *xscreensaver-4.05-r3 (07 July 2002)
-
+  
   07 Jul 2002; phoen][x <phoenix@gentoo.org>
   xscreensaver-4.05-r3.ebuild files/digest-xscreensaver-4.05-r3 :
 

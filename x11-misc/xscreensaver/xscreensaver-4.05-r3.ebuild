@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.3 2002/07/11 06:30:58 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.4 2002/07/21 21:30:14 spider Exp $
 
 DESCRIPTION="a modular screensaver for X11"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -17,6 +17,9 @@ DEPEND="virtual/x11 sys-devel/bc
 		>=gnome-base/control-center-1.4.0.1-r1 )
 	pam? ( >=sys-libs/pam-0.75 )
 	dev-libs/libxml2"
+
+RDEPEND="${DEPEND}
+	media-libs/netpbm"
 
 src_unpack() {
 
