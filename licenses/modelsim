@@ -1,0 +1,183 @@
+
+
+SOFTWARE LICENSE AGREEMENT
+
+IMPORTANT – USE OF THIS SOFTWARE IS SUBJECT TO LICENSE RESTRICTIONS
+CAREFULLY READ THIS LICENSE AGREEMENT BEFORE USING THE SOFTWARE
+
+This license is a legal “Agreement” concerning the use of Software between you, the end user, 
+either individually or as an authorized representative of the company purchasing the license, and Mentor 
+Graphics Corporation, Mentor Graphics (Ireland) Limited, Mentor Graphics (Singapore) Private Limited, and 
+their majority-owned subsidiaries (“Mentor Graphics”). USE OF SOFTWARE INDICATES YOUR COMPLETE AND 
+UNCONDITIONAL ACCEPTANCE OF THE TERMS AND CONDITIONS SET FORTH IN THIS AGREEMENT. If you do not agree to 
+these terms and conditions, promptly return or, if received electronically, certify destruction of Software 
+and all accompanying items within 10 days after receipt of Software and receive a full refund of any 
+license fee paid.
+
+END USER LICENSE AGREEMENT
+
+1. GRANT OF LICENSE. The software programs you are installing, downloading, or have acquired with this 
+Agreement, including any updates, modifications, revisions, copies, and documentation (“Software”) 
+are copyrighted, trade secret and confidential information of Mentor Graphics or its licensors who maintain 
+exclusive title to all Software and retain all rights not expressly granted by this Agreement. Mentor 
+Graphics or its authorized distributor grants to you, subject to payment of appropriate license fees, a 
+nontransferable, nonexclusive license to use Software solely: (a) in machine-readable, object-code form; 
+(b) for your internal business purposes; and (c) on the computer hardware or at the site for which an 
+applicable license fee is paid, or as authorized by Mentor Graphics. A site is restricted to a one-half 
+mile (800 meter) radius. Mentor Graphics’ then-current standard policies, which vary depending on 
+Software, license fees paid or service plan purchased, apply to the following and are subject to change: 
+(a) relocation of Software; (b) use of Software, which may be limited, for example, to execution of a 
+single session by a single user on the authorized hardware or for a restricted period of time (such 
+limitations may be communicated and technically implemented through the use of authorization codes or 
+similar devices); (c) eligibility to receive updates, modifications, and revisions; and (d) support 
+services provided. Current standard policies are available upon request.
+
+2. ESD SOFTWARE. If you purchased a license to use embedded software development (“ESD”) Software, 
+Mentor Graphics or its authorized distributor grants to you a nontransferable, nonexclusive license to 
+reproduce and distribute executable files created using ESD compilers, including the ESD run-time libraries 
+distributed with ESD C and C++ compiler Software that are linked into a composite program as an integral 
+part of your compiled computer program, provided that you distribute these files only in conjunction with 
+your compiled computer program. Mentor Graphics does NOT grant you any right to duplicate or incorporate 
+copies of Mentor Graphics' real-time operating systems or other ESD Software, except those explicitly 
+granted in this section, into your products without first signing a separate agreement with Mentor Graphics 
+for such purpose.
+
+3. BETA CODE.
+3.1 Portions or all of certain Software may contain code for experimental testing and evaluation (“Beta 
+Code”), which may not be used without Mentor Graphics’ explicit authorization. Upon Mentor 
+Graphics’ authorization, Mentor Graphics grants to you a temporary, nontransferable, nonexclusive 
+license for experimental use to test and evaluate the Beta Code without charge for a limited period of time 
+specified by Mentor Graphics. This grant and your use of the Beta Code shall not be construed as marketing 
+or offering to sell a license to the Beta Code, which Mentor Graphics may choose not to release 
+commercially in any form.
+3.2 If Mentor Graphics authorizes you to use the Beta Code, you agree to evaluate and test the Beta Code 
+under normal conditions as directed by Mentor Graphics. You will contact Mentor Graphics periodically 
+during your use of the Beta Code to discuss any malfunctions or suggested improvements. Upon completion of 
+your evaluation and testing, you will send to Mentor Graphics a written evaluation of the Beta Code, 
+including its strengths, weaknesses and recommended improvements.
+3.3 You agree that any written evaluations and all inventions, product improvements, modifications or 
+developments that Mentor Graphics conceives or makes during or subsequent to this Agreement, including 
+those based partly or wholly on your feedback, will be the exclusive property of Mentor Graphics. Mentor 
+Graphics will have exclusive rights, title and interest in all such property. The provisions of this 
+subsection shall survive termination or expiration of this Agreement.
+
+
+4. RESTRICTIONS ON USE. You may copy Software only as reasonably necessary to support the authorized use. 
+Each copy must include all notices and legends embedded in Software and affixed to its medium and container 
+as received from Mentor Graphics. All copies shall remain the property of Mentor Graphics or its licensors. 
+You shall maintain a record of the number and primary location of all copies of Software, including copies 
+merged with other software, and shall make those records available to Mentor Graphics upon request. You 
+shall not make Software available in any form to any person other than your employer's employees and 
+contractors, excluding Mentor Graphics' competitors, whose job performance requires access. You shall take 
+appropriate action to protect the confidentiality of Software and ensure that any person permitted access 
+to Software does not disclose it or use it except as permitted by this Agreement. Except as otherwise 
+permitted for purposes of interoperability as specified by the European Union Software Directive or local 
+law, you shall not reverse-assemble, reverse-compile, reverse-engineer or in any way derive from Software 
+any source code. You may not sublicense, assign or otherwise transfer Software, this Agreement or the 
+rights under it without Mentor Graphics’ prior written consent. The provisions of this section shall 
+survive the termination or expiration of this Agreement.
+
+5. LIMITED WARRANTY.
+5.1 Mentor Graphics warrants that during the warranty period Software, when properly installed, will 
+substantially conform to the functional specifications set forth in the applicable user manual. Mentor 
+Graphics does not warrant that Software will meet your requirements or that operation of Software will be 
+uninterrupted or error free. The warranty period is 90 days starting on the 15th day after delivery or upon 
+installation, whichever first occurs. You must notify Mentor Graphics in writing of any nonconformity 
+within the warranty period. This warranty shall not be valid if Software has been subject to misuse, 
+unauthorized modification or installation. MENTOR GRAPHICS' ENTIRE LIABILITY AND YOUR EXCLUSIVE REMEDY 
+SHALL BE, AT MENTOR GRAPHICS' OPTION, EITHER (A) REFUND OF THE PRICE PAID UPON RETURN OF SOFTWARE TO MENTOR 
+GRAPHICS OR (B) MODIFICATION OR REPLACEMENT OF SOFTWARE THAT DOES NOT MEET THIS LIMITED WARRANTY, PROVIDED 
+YOU HAVE OTHERWISE COMPLIED WITH THIS AGREEMENT. MENTOR GRAPHICS MAKES NO WARRANTIES WITH RESPECT TO: (A) 
+SERVICES; (B) SOFTWARE WHICH IS LOANED TO YOU FOR A LIMITED TERM OR AT NO COST; OR (C) EXPERIMENTAL BETA 
+CODE; ALL OF WHICH ARE PROVIDED “AS IS.”
+5.2 THE WARRANTIES SET FORTH IN THIS SECTION 5 ARE EXCLUSIVE. NEITHER MENTOR GRAPHICS NOR ITS LICENSORS 
+MAKE ANY OTHER WARRANTIES, EXPRESS OR IMPLIED, WITH RESPECT TO SOFTWARE OR OTHER MATERIAL PROVIDED UNDER 
+THIS AGREEMENT. MENTOR GRAPHICS AND ITS LICENSORS SPECIFICALLY DISCLAIM ALL IMPLIED WARRANTIES OF 
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+
+6. LIMITATION OF LIABILITY. EXCEPT WHERE THIS EXCLUSION OR RESTRICTION OF LIABILITY WOULD BE VOID OR 
+INEFFECTIVE UNDER APPLICABLE STATUTE OR REGULATION, IN NO EVENT SHALL MENTOR GRAPHICS OR ITS LICENSORS BE 
+LIABLE FOR INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES (INCLUDING LOST PROFITS OR SAVINGS) 
+WHETHER BASED ON CONTRACT, TORT OR ANY OTHER LEGAL THEORY, EVEN IF MENTOR GRAPHICS OR ITS LICENSORS HAVE 
+BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN NO EVENT SHALL MENTOR GRAPHICS' OR ITS LICENSORS' 
+LIABILITY UNDER THIS AGREEMENT EXCEED THE AMOUNT PAID BY YOU FOR THE SOFTWARE OR SERVICE GIVING RISE TO THE 
+CLAIM. IN THE CASE WHERE NO AMOUNT WAS PAID, MENTOR GRAPHICS AND ITS LICENSORS SHALL HAVE NO LIABILITY FOR 
+ANY DAMAGES WHATSOEVER.
+
+7. LIFE ENDANGERING ACTIVITIES. NEITHER MENTOR GRAPHICS NOR ITS LICENSORS SHALL BE LIABLE FOR ANY DAMAGES 
+RESULTING FROM OR IN CONNECTION WITH THE USE OF SOFTWARE IN ANY APPLICATION WHERE THE FAILURE OR INACCURACY 
+OF THE SOFTWARE MIGHT RESULT IN DEATH OR PERSONAL INJURY. YOU AGREE TO INDEMNIFY AND HOLD HARMLESS MENTOR 
+GRAPHICS AND ITS LICENSORS FROM ANY CLAIMS, LOSS, COST, DAMAGE, EXPENSE, OR LIABILITY, INCLUDING ATTORNEYS' 
+FEES, ARISING OUT OF OR IN CONNECTION WITH SUCH USE.
+
+8. INFRINGEMENT.
+8.1 Mentor Graphics will defend or settle, at its option and expense, any action brought against you 
+alleging that Software infringes a patent or copyright in the United States, Canada, Japan, Switzerland, 
+Norway, Israel, Egypt, or the European Union. Mentor Graphics will pay any costs and damages finally 
+awarded against you that are attributable to the claim, provided that you: (a) notify Mentor Graphics 
+promptly in writing of the action; (b) provide Mentor Graphics all reasonable information and assistance to 
+settle or defend the claim; and (c) grant Mentor Graphics sole authority and control of the defense or 
+settlement of the claim.
+
+8.2 If an infringement claim is made, Mentor Graphics may, at its option and expense, either (a) replace or 
+modify Software so that it becomes noninfringing, or (b) procure for you the right to continue using 
+Software. If Mentor Graphics determines that neither of those alternatives is financially practical or 
+otherwise reasonably available, Mentor Graphics may require the return of Software and refund to you any 
+license fee paid, less a reasonable allowance for use.
+8.3 Mentor Graphics has no liability to you if the alleged infringement is based upon: (a) the combination 
+of Software with any product not furnished by Mentor Graphics; (b) the modification of Software other than 
+by Mentor Graphics; (c) the use of other than a current unaltered release of Software; (d) the use of 
+Software as part of an infringing process; (e) a product that you design or market; (f) any Beta Code 
+contained in Software; or (g) any Software provided by Mentor Graphics’ licensors which do not provide 
+such indemnification to Mentor Graphics’ customers.
+8.4 THIS SECTION 8 STATES THE ENTIRE LIABILITY OF MENTOR GRAPHICS AND ITS LICENSORS AND YOUR SOLE AND 
+EXCLUSIVE REMEDY WITH RESPECT TO ANY ALLEGED PATENT OR COPYRIGHT INFRINGEMENT BY ANY SOFTWARE LICENSED 
+UNDER THIS AGREEMENT.
+
+9. TERM. This Agreement remains effective until expiration or termination. This Agreement will 
+automatically terminate if you fail to comply with any term or condition of this Agreement or if you fail 
+to pay for the license when due and such failure to pay continues for a period of 30 days after written 
+notice from Mentor Graphics. If Software was provided for limited term use, this Agreement will 
+automatically expire at the end of the authorized term. Upon any termination or expiration, you agree to 
+cease all use of Software and return it to Mentor Graphics or certify deletion and destruction of Software, 
+including all copies, to Mentor Graphics’ reasonable satisfaction.
+
+10. EXPORT. Software is subject to regulation by local laws and United States government agencies, which 
+prohibit export or diversion of certain products, information about the products, and direct products of 
+the products to certain countries and certain persons. You agree that you will not export in any manner any 
+Software or direct product of Software, without first obtaining all necessary approval from appropriate 
+local and United States government agencies.
+
+11. RESTRICTED RIGHTS NOTICE. Software has been developed entirely at private expense and is commercial 
+computer software provided with RESTRICTED RIGHTS. Use, duplication or disclosure by the U.S. Government or 
+a U.S. Government subcontractor is subject to the restrictions set forth in the license agreement under 
+which Software was obtained pursuant to DFARS 227.7202-3(a) or as set forth in subparagraphs (c)(1) and (2) 
+of the Commercial Computer Software - Restricted Rights clause at FAR 52.227-19, as applicable. 
+Contractor/manufacturer is Mentor Graphics Corporation, 8005 Boeckman Road, Wilsonville, Oregon 97070-7777 
+USA.
+
+12. Third Party Beneficiary. For any Software under this Agreement licensed by Mentor Graphics from 
+Microsoft or other licensors, Microsoft or the applicable licensor is a third party beneficiary of this 
+Agreement with the right to enforce the obligations set forth in this Agreement.
+
+13. CONTROLLING LAW. This Agreement shall be governed by and construed under the laws of Ireland if the 
+Software is licensed for use in Israel, Egypt, Switzerland, Norway, South Africa, or the European Union, 
+the laws of Japan if the Software is licensed for use in Japan, the laws of Singapore if the Software is 
+licensed for use in Singapore, People’s Republic of China, Republic of China, India, or Korea, and the 
+laws of the state of Oregon if the Software is licensed for use in the United States of America, Canada, 
+Mexico, South America or anywhere else worldwide not provided for in this section.
+
+14. SEVERABILITY. If any provision of this Agreement is held by a court of competent jurisdiction to be 
+void, invalid, unenforceable or illegal, such provision shall be severed from this Agreement and the 
+remaining provisions will remain in full force and effect.
+
+15. MISCELLANEOUS. This Agreement contains the entire understanding between the parties relating to its 
+subject matter and supersedes all prior or contemporaneous agreements, including but not limited to any 
+purchase order terms and conditions, except valid license agreements related to the subject matter of this 
+Agreement which are physically signed by you and an authorized agent of Mentor Graphics. This Agreement may 
+only be modified by a physically signed writing between you and an authorized agent of Mentor Graphics. 
+Waiver of terms or excuse of breach must be in writing and shall not constitute subsequent consent, waiver 
+or excuse. The prevailing party in any legal action regarding the subject matter of this Agreement shall be 
+entitled to recover, in addition to other relief, reasonable attorneys' fees and expenses.
+Mentor Graphics End User License Agreement (Rev. 03/00)
