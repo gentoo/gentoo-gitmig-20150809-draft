@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dc-gui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.23 2004/10/18 12:33:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.24 2004/11/06 16:49:27 squinky86 Exp $
+
+  06 Nov 2004; Jon Hood <squinky86@gentoo.org> dc-gui-0.80.ebuild:
+  Fix homepage irt #70088, thanks Daniel Armyr <daniel.armyr@home.se>.
 
   18 Oct 2004; Jason Wever <weeve@gentoo.org> dc-gui-0.80.ebuild:
   Added ~sparc keyword.
