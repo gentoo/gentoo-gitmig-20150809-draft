@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.20050115.ebuild,v 1.3 2005/02/10 07:24:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.20050115-r1.ebuild,v 1.1 2005/02/10 07:24:51 cardoe Exp $
 
 inherit myth flag-o-matic eutils
 
