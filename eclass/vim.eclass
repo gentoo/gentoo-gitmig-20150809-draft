@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.96 2005/01/29 23:16:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.97 2005/01/30 19:09:27 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -106,7 +106,8 @@ if [[ $(get_major_version ) -ge 7 ]] ; then
 	if [[ "${MY_PN}" != "vim-core" ]] ; then
 		# align: bug 79982
 		RDEPEND="${RDEPEND}
-			!<app-vim/align-30-r1"
+			!<app-vim/align-30-r1
+			!app-vim/latexsuite"
 	fi
 fi
 
