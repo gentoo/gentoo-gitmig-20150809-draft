@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.6 2004/01/29 07:41:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.7 2004/01/31 00:28:11 mr_bones_ Exp $
 
 MY_P="${P/sdl-/SDL_}"
 S=${WORKDIR}/${MY_P}
@@ -40,5 +40,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc CHANGES COPYING README
+	dodoc CHANGES README
 }
