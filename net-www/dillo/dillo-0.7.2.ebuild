@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.2.ebuild,v 1.1 2003/05/05 05:36:36 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.2.ebuild,v 1.2 2003/05/08 17:07:32 weeve Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ SRC_URI="http://dillo.auriga.wearlab.de/download/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="~x86 ~ppc sparc ~alpha ~mips ~hppa"
 
 replace-flags "-O2 -mcpu=k6" "-O2 -mcpu=pentium"
 
