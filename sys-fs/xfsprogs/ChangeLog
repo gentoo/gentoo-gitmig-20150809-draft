@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.24 2004/10/08 00:36:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.25 2004/10/10 00:01:27 vapier Exp $
+
+*xfsprogs-2.6.25 (09 Oct 2004)
+
+  09 Oct 2004; Mike Frysinger <vapier@gentoo.org> +xfsprogs-2.6.25.ebuild:
+  Version bump.
 
   07 Oct 2004; <solar@gentoo.org> +files/2.6.13-uclibc-mincore.patch,
   xfsprogs-2.6.13.ebuild:
