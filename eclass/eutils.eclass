@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.104 2004/09/17 21:19:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.105 2004/09/19 21:36:46 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -117,7 +117,7 @@ gen_usr_ldscript() {
 	# Just make sure it exists
 	dodir /usr/$(get_libdir)
 
-	cat > ${D}/usr/$(get_libdir)/$1 <<"END_LDSCRIPT"
+	cat > "${D}/usr/$(get_libdir)/$1" << END_LDSCRIPT
 /* GNU ld script
    Because Gentoo have critical dynamic libraries
    in /lib, and the static versions in /usr/lib, we
@@ -125,12 +125,8 @@ gen_usr_ldscript() {
    otherwise we run into linking problems.
    See bug #4411 on http://bugs.gentoo.org/ for
    more info.  */
+GROUP ( /$(get_libdir)/$1 )
 END_LDSCRIPT
-
-	echo "GROUP ( /$(get_libdir)/libxxx )" >> ${D}/usr/$(get_libdir)/$1
-	dosed "s:libxxx:$1:" /usr/$(get_libdir)/$1
-
-	return 0
 }
 
 # Simple function to draw a line consisting of '=' the same length as $*
