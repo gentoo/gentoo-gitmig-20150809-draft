@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.4.11.ebuild,v 1.1 2004/11/19 20:11:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.4.11.ebuild,v 1.2 2004/12/30 10:58:44 nigoro Exp $
 
 inherit ruby
 
@@ -13,7 +13,7 @@ LICENSE="MIT"
 SRC_URI="http://rubyforge.org/frs/download.php/1885/${P}.tgz"
 
 USE_RUBY="ruby18 ruby19"  # requires 1.8.0 or later
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~ppc64"
 
 SLOT="0"
 IUSE=""
