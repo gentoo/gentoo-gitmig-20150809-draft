@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.7 2004/10/31 05:40:49 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.8 2004/10/31 12:04:50 kloeri Exp $
+
+  31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  gnustep-back-art-0.9.5_pre20040928.ebuild:
+  ~alpha keyword.
 
 *gnustep-back-art-0.9.5_pre20041030 (30 Oct 2004)
 
