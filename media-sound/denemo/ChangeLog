@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/denemo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.8 2004/08/03 11:56:05 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.9 2004/08/25 02:38:10 swegener Exp $
+
+  25 Aug 2004; Sven Wegener <swegener@gentoo.org> denemo-0.5.9.ebuild,
+  denemo-0.7.2.ebuild:
+  Changed SRC_URI to use mirror:// syntax.
 
   03 Aug 2004; David Holm <dholm@gentoo.org> denemo-0.7.2.ebuild:
   Added to ~ppc.
