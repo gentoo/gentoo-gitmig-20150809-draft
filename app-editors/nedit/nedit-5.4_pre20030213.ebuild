@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.12 2004/03/07 04:47:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.13 2004/03/30 06:03:59 spyderous Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc sparc amd64 ~mips"
 IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )
-	x11-base/xfree"
+	virtual/x11"
 DEPEND="${RDEPEND}
 	dev-util/yacc
 	x11-libs/openmotif"

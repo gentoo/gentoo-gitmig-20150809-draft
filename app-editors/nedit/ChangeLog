@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.22 2004/03/09 14:25:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.23 2004/03/30 06:03:59 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; nedit-5.3-r2.ebuild,
+  nedit-5.4.ebuild, nedit-5.4_pre20030213.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   06 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
   nedit-5.4_pre20030213.ebuild:

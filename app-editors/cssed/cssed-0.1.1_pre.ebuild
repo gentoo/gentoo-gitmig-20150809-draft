@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/cssed-0.1.1_pre.ebuild,v 1.1 2003/12/20 12:49:36 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/cssed-0.1.1_pre.ebuild,v 1.2 2004/03/30 06:00:27 spyderous Exp $
 
 DESCRIPTION="CSSED a GTK2 application to help create and maintain CSS style sheets for web developing"
 HOMEPAGE="http://cssed.sourceforge.net/"
@@ -32,7 +32,7 @@ DEPEND=">=x11-libs/gtk+-2
 		>=media-sound/esound-0.2.32
 		>=sys-libs/ncurses-5.3-r2
 		>=sys-libs/zlib-1.1.4-r2
-		x11-base/xfree
+		virtual/x11
 		>=x11-libs/gtk+-2.2.4-r1
 		>=x11-libs/pango-1.2.1-r1
 		>=x11-libs/vte-0.11.10"

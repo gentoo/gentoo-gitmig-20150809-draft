@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.3.8.ebuild,v 1.2 2004/03/13 23:52:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.3.8.ebuild,v 1.3 2004/03/30 06:06:32 spyderous Exp $
 
 DESCRIPTION="Zoinks is a programmer's text editor and development environment"
 HOMEPAGE="http://zoinks.mikelockwood.com/"
@@ -11,7 +11,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE="nls imlib"
 DEPEND="nls? ( sys-devel/gettext )
 	imlib? ( media-libs/imlib )
-	x11-base/xfree"
+	virtual/x11"
 
 src_compile() {
 	local myconf

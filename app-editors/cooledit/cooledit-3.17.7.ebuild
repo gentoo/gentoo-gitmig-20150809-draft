@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/cooledit-3.17.7.ebuild,v 1.2 2004/02/04 17:30:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/cooledit-3.17.7.ebuild,v 1.3 2004/03/30 05:57:44 spyderous Exp $
 
 IUSE="nls spell"
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.sourceforge.net/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-DEPEND="x11-base/xfree
+DEPEND="virtual/x11
 	spell? ( app-text/ispell )"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4.ebuild,v 1.1 2004/03/09 14:25:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4.ebuild,v 1.2 2004/03/30 06:03:59 spyderous Exp $
 
 DESCRIPTION="multi-purpose text editor for the X Window System"
 HOMEPAGE="http://nedit.org/"
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips"
 IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )
-	x11-base/xfree"
+	virtual/x11"
 
 DEPEND="${RDEPEND}
 	dev-util/yacc

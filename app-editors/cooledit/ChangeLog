@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/cooledit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.2 2004/02/04 17:30:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.3 2004/03/30 05:57:44 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; cooledit-3.17.7.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   04 Feb 2004; Aron Griffis <agriffis@gentoo.org> cooledit-3.17.7.ebuild:
   addwrite /dev/ptym/clone:/dev/ptmx for bug 40152, thanks to Sven Wegener
