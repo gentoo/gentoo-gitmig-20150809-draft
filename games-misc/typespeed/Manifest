@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe9b1409fcc540cc7f0a90a2b1ff68cc typespeed-0.4.4.ebuild 2007
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 48ddfa316630c8efd3381dc1aa4ec21d ChangeLog 469
+MD5 09490e2cc962578e3cf60ee6d9893fe9 files/digest-typespeed-0.4.4 66
+MD5 9818f759fab13af7dcafc9ad329e1af9 files/01_all_statedir-fix.patch 2095
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB63krmdTrptrqvGERAgGIAJ4oP7jz42V3q/L8AO6Bl4y+H8Qn4ACeKqO0
+ZW5T0uoYTZwwrLEWRUEb44w=
+=4Hra
+-----END PGP SIGNATURE-----

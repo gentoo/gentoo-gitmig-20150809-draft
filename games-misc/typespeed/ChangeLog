@@ -1,0 +1,11 @@
+# ChangeLog for games-misc/typespeed
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/ChangeLog,v 1.1 2005/01/17 08:36:52 dragonheart Exp $
+
+*typespeed-0.4.4 (17 Jan 2005)
+
+  17 Jan 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +files/01_all_statedir-fix.patch, +typespeed-0.4.4.ebuild:
+  Initial import as per bug #52367. Thanks to Octavio Ruiz (Ta^3)
+  <tacvbo@tacvbo.net>.
+
