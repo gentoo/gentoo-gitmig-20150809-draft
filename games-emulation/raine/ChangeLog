@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/raine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.7 2004/07/01 11:16:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.8 2004/09/02 00:47:21 mr_bones_ Exp $
+
+  01 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> -raine-0.36.2.ebuild:
+  clean older ebuild
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> raine-0.36.2.ebuild,
   raine-0.39.0.ebuild:
