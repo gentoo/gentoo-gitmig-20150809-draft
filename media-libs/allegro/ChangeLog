@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.15 2003/08/22 12:17:53 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.16 2003/08/22 19:33:57 msterret Exp $
+
+  22 Aug 2003; Michael Sterrett <msterret@gentoo.org> allegro-4.1.11.ebuild:
+  Add back Spanky's fixes from 4.1.9 that I missed before.
 
 *allegro-4.1.11 (22 Aug 2003)
 
