@@ -1,14 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.7 2003/07/31 13:51:00 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.8 2003/08/05 15:58:22 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="A fast, reliable, simple package for creating and reading constant databases"
-SRC_URI="http://cr.yp.to/cdb/${P}.tar.gz"
+inherit eutils gcc
+
+DESCRIPTION="fast, reliable, simple package for creating and reading constant databases"
 HOMEPAGE="http://cr.yp.to/cdb.html"
+SRC_URI="http://cr.yp.to/cdb/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="x86 ~alpha"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
@@ -21,21 +22,15 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-errno.diff
 }
 
-src_compile() {                           
-	echo "gcc ${CFLAGS}" > conf-cc
-	echo "gcc" > conf-ld
+src_compile() {
+	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(gcc-getCC)" > conf-ld
 	echo "/usr" > conf-home
 	emake || die "emake failed"
 }
 
-src_install() {                               
-	exeinto /usr/bin
-	for i in cdbdump cdbget cdbmake cdbmake-12 cdbmake-sv cdbstats cdbtest
-	do
-		doexe $i
-	done
-
-	into /usr
+src_install() {
+	dobin cdbdump cdbget cdbmake cdbmake-12 cdbmake-sv cdbstats cdbtest
 	newlib.a cdb.a libcdb.a
 	insinto /usr/include
 	doins cdb.h

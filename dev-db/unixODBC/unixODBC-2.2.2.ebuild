@@ -1,20 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.11 2003/07/31 19:36:23 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.12 2003/08/05 16:05:00 vapier Exp $
 
+DESCRIPTION="ODBC Interface for Linux"
+HOMEPAGE="http://www.unixodbc.org/"
+SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~hppa ~alpha amd64"
 IUSE="qt"
 
-S=${WORKDIR}/${P}
-DESCRIPTION="ODBC Interface for Linux"
-SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
-HOMEPAGE="http://www.unixodbc.org"
 DEPEND="virtual/glibc
-		>=sys-libs/readline-4.1
-		>=sys-libs/ncurses-5.2
-		qt? ( >=x11-libs/qt-3.0* )"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~hppa ~alpha amd64"
-SLOT="0"
+	>=sys-libs/readline-4.1
+	>=sys-libs/ncurses-5.2
+	qt? ( >=x11-libs/qt-3.0* )"
 
 src_unpack() {
 	unpack ${A}
@@ -36,19 +36,19 @@ src_compile() {
 		myconf="--enable-gui=no"
 	fi
 
-	./configure --host=${CHOST}					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc/unixODBC				\
+	./configure --host=${CHOST} \
+		    --prefix=/usr \
+		    --sysconfdir=/etc/unixODBC \
 		    ${myconf} || die
 
 	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README*
-	cp -a doc ${D}/usr/share/doc/${PF}/html
-	find ${D}/usr/share/doc/${PF}/html -name "Makefile*" -exec rm {} \;
+	find doc/ -name "Makefile*" -exec rm '{}' \;
+	dohtml doc/*
 	prepalldocs
 }

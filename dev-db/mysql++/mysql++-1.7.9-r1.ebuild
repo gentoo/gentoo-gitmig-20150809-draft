@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r1.ebuild,v 1.5 2003/08/02 19:53:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r1.ebuild,v 1.6 2003/08/05 16:01:17 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit gcc eutils
 
 DESCRIPTION="C++ API interface to the MySQL database"
-
+# This is the download page but includes links to other places
+HOMEPAGE="http://www.mysql.org/downloads/api-mysql++.html"
 SRC_URI="http://mysql.he.net/Downloads/${PN}/${P}.tar.gz
 	http://mysql.adgrafix.com/Downloads/${PN}/${P}.tar.gz
 	http://mysql.fastmirror.com/Downloads/${PN}/${P}.tar.gz
@@ -13,19 +14,16 @@ SRC_URI="http://mysql.he.net/Downloads/${PN}/${P}.tar.gz
 	mirror://gentoo/mysql++-gcc-3.0.patch.gz
 	mirror://gentoo/mysql++-gcc-3.2.patch.gz"
 
-# This is the download page but includes links to other places
-HOMEPAGE="http://www.mysql.org/downloads/api-mysql++.html"
-
-IUSE=""
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ~alpha ~hppa ~mips ~arm ~sparc ~ppc"
-LICENSE="LGPL-2"
+
 DEPEND=">=dev-db/mysql-3.23.49"
 
 src_unpack() {
 	unpack ${A}
 	EPATCH_OPTS="-p1 -d ${S}"
-	if [[ "${COMPILER}" == "gcc3" ]];then
+	if [ `gcc-major-version` -eq 3 ] ; then
 		EPATCH_SINGLE_MSG="Patching for gcc 3.0..."
 		epatch ${DISTDIR}/mysql++-gcc-3.0.patch.gz
 		EPATCH_SINGLE_MSG="Patching for gcc 3.2..."
@@ -43,7 +41,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
 	# we want C++ exceptions turned on
 	myconf="--enable-exceptions"
@@ -61,7 +58,7 @@ src_compile() {
 	emake || die "unable to make"
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	# install the docs and HTML pages
 	dodoc README LGPL

@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.6.ebuild,v 1.17 2003/07/18 21:29:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.6.ebuild,v 1.18 2003/08/05 16:05:00 vapier Exp $
 
 inherit gnuconfig
 
+DESCRIPTION="ODBC Interface for Linux"
+HOMEPAGE="http://www.unixodbc.org/"
+SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc hppa sparc alpha ~amd64"
 IUSE="qt"
 
-S=${WORKDIR}/${P}
-DESCRIPTION="ODBC Interface for Linux"
-SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
-HOMEPAGE="http://www.unixodbc.org"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc hppa sparc alpha ~amd64"
-SLOT="0"
 DEPEND="virtual/glibc
         >=sys-libs/readline-4.1
         >=sys-libs/ncurses-5.2
@@ -26,8 +26,8 @@ src_unpack() {
 	cp configure.in configure.orig
 	sed -e "s:AC_CHECK_LIB *( *c *,:AC_CHECK_FUNC(:" configure.orig >configure.in
 	cd gODBCConfig
-		libtoolize
-		aclocal
+	libtoolize
+	aclocal
 	cd ..
 	libtoolize
 	aclocal
@@ -47,21 +47,21 @@ src_compile() {
 	fi
 
 	export QTDIR=/usr/qt/2
-	./configure --host=${CHOST}					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc/unixODBC				\
+	./configure --host=${CHOST} \
+		    --prefix=/usr \
+		    --sysconfdir=/etc/unixODBC \
 		    ${myconf} || die
 
 	make || die
 }
 
-src_install () {
-	mkdir -p ${D}/etc/unixODBC
+src_install() {
+	dodir /etc/unixODBC
 	make DESTDIR=${D} sysconfdir=${D}/etc/unixODBC install || die
 	rm -r ${D}/var
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README*
-	cp -a doc ${D}/usr/share/doc/${PF}/html
-	find ${D}/usr/share/doc/${PF}/html -name "Makefile*" -exec rm {} \;
+	find doc/ -name "Makefile*" -exec rm '{}' \;
+	dohtml doc/*
 	prepalldocs
 }
