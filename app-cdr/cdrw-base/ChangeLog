@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrw-base
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrw-base/ChangeLog,v 1.1 2003/09/22 21:04:50 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrw-base/ChangeLog,v 1.2 2003/09/22 21:12:45 spider Exp $
+
+  22 Sep 2003; <spider@gentoo.org> cdrw-base-0.1.ebuild:
+  move the cp to newins, doh.
 
 *cdrw-base-0.1 (22 Sep 2003)
   22 Sep 2003; Spider <spider@gentoo.org> *
