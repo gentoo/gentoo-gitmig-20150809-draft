@@ -1,0 +1,8 @@
+# ChangeLog for devl-lisp/cl-albert
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-albert/ChangeLog,v 1.1 2003/08/28 15:31:07 mkennedy Exp $
+
+*c-albert-0.4.6 (28 Aug 2003)
+
+  28 Aug 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.
