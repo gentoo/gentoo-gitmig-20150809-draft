@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94-r1.ebuild,v 1.13 2004/06/24 22:43:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94-r1.ebuild,v 1.14 2004/06/28 20:29:40 agriffis Exp $
 
 inherit eutils
 
 DESCRIPTION="A program to render images of the earth into the X root window"
 HOMEPAGE="http://xplanet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+DEPEND=">=sys-apps/sed-4"
 
 LICENSE="GPL-2"
 SLOT="0"
