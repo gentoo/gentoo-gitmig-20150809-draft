@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-2.00.ebuild,v 1.2 2005/02/20 22:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-2.00.ebuild,v 1.3 2005/03/24 01:41:16 vapier Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_install() {
 	# custom options
 	export USETCPD=$(yesno useq tcpd)
 	export JAIL=y
-	export MAKETLS=$(yesno [ ! -e /etc/glftpd-dsa.pem ])
+	export MAKETLS=$(yesno [[ ! -e ${ROOT}/etc/glftpd-dsa.pem ]])
 	export WHICHNETD=x
 	"${S}"/installgl.sh || die "installgl.sh failed"
 
@@ -56,10 +56,10 @@ src_install() {
 
 	mv ${GLROOT}/glftpd.conf ${D}/etc/
 	ln -s /etc/glftpd.conf ${GLROOT}/glftpd.conf
-	if [ -e /etc/glftpd-dsa.pem ] ; then
-		cp /etc/glftpd-dsa.pem ${D}/etc/
+	if [[ -e ${ROOT}/etc/glftpd-dsa.pem ]] ; then
+		cp "${ROOT}"/etc/glftpd-dsa.pem "${D}"/etc/
 	else
-		cp ftpd-dsa.pem ${D}/etc/glftpd-dsa.pem
+		cp ftpd-dsa.pem "${D}"/etc/glftpd-dsa.pem
 	fi
 	ln -s /etc/glftpd-dsa.pem ${GLROOT}/etc/glftpd-dsa.pem
 	fperms o-r /etc/glftpd-dsa.pem
@@ -92,6 +92,12 @@ pkg_postinst() {
 }
 
 pkg_config() {
+	einfo "Updating /etc/services"
+	{ grep -v ^glftpd /etc/services;
+	echo "glftpd   21/tcp"
+	} > /etc/services.new
+	mv -f /etc/services.new /etc/services
+
 	einfo "Updating crontab"
 	{ crontab -l | grep -v "bin/reset"
 	echo "0  0 * * *      ${CUSTOMGLROOT}/bin/reset -r ${CUSTOMGLROOT}/glftpd.conf"
