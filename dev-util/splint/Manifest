@@ -1,5 +1,5 @@
-MD5 a917ad0e8c3c62433547343b5a4ee61d splint-3.0.1.6.ebuild 558
 MD5 e0d71377790e36cf2cdf4f5cc36ca573 ChangeLog 834
-MD5 b4881d9fe195739cc1ccc329f72fc6b4 splint-3.1.1.ebuild 582
+MD5 a917ad0e8c3c62433547343b5a4ee61d splint-3.0.1.6.ebuild 558
+MD5 5530fa8db0b5aa397cec6d61577ad252 splint-3.1.1.ebuild 636
 MD5 6c02dbe00c00b90917d9ab37920c27f1 files/digest-splint-3.0.1.6 68
 MD5 29844a798047c02aa27ffc8ac6d9ae36 files/digest-splint-3.1.1 66
