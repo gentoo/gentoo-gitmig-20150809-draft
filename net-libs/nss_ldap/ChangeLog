@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.19 2004/01/30 06:55:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.20 2004/03/19 01:58:07 raker Exp $
+
+*nss_ldap-215-r1 (18 Mar 2004)
+
+  18 Mar 2004; Nick Hadaway <raker@gentoo.org> nss_ldap-215-r1.ebuild,
+  files/db4_1.85.diff:
+  Your mileage probably did vary.  Loosening the dependancy was an
+  appropriate change but did nothing for db4 people.  Thanks to
+  Holger on bug #34717, we now have fixed .in files that appropriately
+  search for db{4,4.1} stuff.
 
 *nss_ldap-215 (29 Jan 2004)
 

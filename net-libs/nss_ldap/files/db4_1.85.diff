@@ -1,0 +1,46 @@
+diff -urN nss_ldap-215/configure.in nss_ldap-215-modified/configure.in
+--- nss_ldap-215/configure.in	2004-01-07 07:02:15.000000000 -0600
++++ nss_ldap-215-modified/configure.in	2004-03-18 19:47:13.111404704 -0600
+@@ -133,6 +133,8 @@
+ AC_CHECK_HEADERS(db1/db.h)
+ AC_CHECK_HEADERS(db_185.h)
+ AC_CHECK_HEADERS(db3/db_185.h)
++AC_CHECK_HEADERS(db4/db_185.h)
++AC_CHECK_HEADERS(db4.1/db_185.h)
+ AC_CHECK_HEADERS(alignof.h)
+ AC_CHECK_HEADERS(rpc/rpcent.h)
+ AC_CHECK_HEADERS(sys/byteorder.h)
+diff -urN nss_ldap-215/ldap-nss.c nss_ldap-215-modified/ldap-nss.c
+--- nss_ldap-215/ldap-nss.c	2004-01-07 07:02:15.000000000 -0600
++++ nss_ldap-215-modified/ldap-nss.c	2004-03-18 19:48:19.139366928 -0600
+@@ -72,7 +72,11 @@
+ #include <sasl.h>
+ #endif
+ #ifdef AT_OC_MAP
+-#ifdef HAVE_DB3_DB_185_H
++#ifdef HAVE_DB4_1_DB_185_H
++#include <db4.1/db_185.h>
++#elif defined(HAVE_DB4_DB_185_H)
++#include <db4/db_185.h>
++#elif defined(HAVE_DB3_DB_185_H)
+ #include <db3/db_185.h>
+ #elif defined(HAVE_DB_185_H)
+ #include <db_185.h>
+diff -urN nss_ldap-215/util.c nss_ldap-215-modified/util.c
+--- nss_ldap-215/util.c	2004-01-07 07:02:15.000000000 -0600
++++ nss_ldap-215-modified/util.c	2004-03-18 19:49:16.347669944 -0600
+@@ -84,7 +84,13 @@
+  * right API!
+  */
+ #if defined(RFC2307BIS) || defined(AT_OC_MAP)
+-#ifdef HAVE_DB3_DB_185_H
++#ifdef HAVE_DB4_1_DB_185_H
++#include <db4.1/db_185.h>
++#define DN2UID_CACHE
++#elif defined(HAVE_DB4_DB_185_H)
++#include <db4/db_185.h>
++#define DN2UID_CACHE
++#elif defined(HAVE_DB3_DB_185_H)
+ #include <db3/db_185.h>
+ #define DN2UID_CACHE
+ #elif defined(HAVE_DB_185_H)
