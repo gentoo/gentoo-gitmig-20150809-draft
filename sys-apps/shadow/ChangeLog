@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.82 2004/11/02 20:10:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.83 2004/11/03 17:58:23 vapier Exp $
+
+*shadow-4.0.5-r1 (03 Nov 2004)
+
+  03 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/shadow-4.0.5-remove-else.patch, +shadow-4.0.5-r1.ebuild,
+  shadow-4.0.5.ebuild:
+  Small security patch from upstream cvs #69212 and install more pam.d files
+  #69895.
 
   02 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   shadow-4.0.5.ebuild:

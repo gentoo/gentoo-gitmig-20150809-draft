@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5.ebuild,v 1.13 2004/11/03 17:58:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5-r1.ebuild,v 1.1 2004/11/03 17:58:23 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -54,6 +54,9 @@ src_unpack() {
 
 	# skeychallenge call needs updating #69741
 	epatch ${FILESDIR}/shadow-${PV}-skey.patch
+
+	# remove an extra else #69212
+	epatch ${FILESDIR}/shadow-${PV}-remove-else.patch
 
 	# Allows shadow configure detect newer systems properly
 	gnuconfig_update
@@ -121,7 +124,8 @@ src_install() {
 		# Make sure /etc/pam.d/system-auth is the new version ..
 		mv ${D}/etc/pam.d/system-auth-1.1 ${D}/etc/pam.d/system-auth
 		newins system-auth-1.1 system-auth.new || die
-		for x in chage chsh chfn useradd groupadd ; do
+		for x in chage chsh chfn chpasswd newusers \
+		         user{add,del,mod} group{add,del,mod} ; do
 			newins shadow ${x}
 		done
 
