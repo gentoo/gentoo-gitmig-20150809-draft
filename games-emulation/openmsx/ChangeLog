@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.4 2004/03/01 14:33:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.5 2004/06/12 20:13:55 chainsaw Exp $
+
+*openmsx-0.4.0 (12 Jun 2004)
+
+  12 Jun 2004; Tony Vroon <chainsaw@gentoo.org>
+  +files/openmsx-0.4.0-custom.mk.patch, +files/openmsx-0.4.0-symlinking.patch,
+  +openmsx-0.4.0.ebuild:
+  Version bumped. New build system, and compatible with the catapult launcher.
 
   01 Mar 2004; David Holm <dholm@gentoo.org> openmsx-0.3.4.ebuild:
   Added to ~ppc.
