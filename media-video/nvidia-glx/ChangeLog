@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.9 2002/05/25 23:24:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.10 2002/09/08 12:58:09 azarah Exp $
+
+  8 Sep 2002; Martin Schlemmer <azarah@gentoo.org> nvidia-glx-1.0.2960-r1.ebuild :
+  
+  Add opengl-update to DEPEND.
 
 *nvidia-glx-1.0.2960-r1 (26 May 2002)
 
