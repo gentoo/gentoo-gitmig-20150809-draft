@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.22.ebuild,v 1.1 2003/07/15 10:57:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.22.ebuild,v 1.2 2003/07/18 21:20:26 rac Exp $
 
 inherit perl-module
 
@@ -20,7 +20,7 @@ DEPEND="${DEPEND}
 	>=dev-perl/Exception-Class-1.14
 	dev-perl/Scalar-List-Utils
 	dev-perl/CGI
-	dev-perl/File-Spec
+	|| ( dev-perl/File-Spec >=perl-5.8.0-r12 )
 	>=dev-perl/Cache-Cache-1.01"
 
 mydoc="CREDITS UPGRADE"
