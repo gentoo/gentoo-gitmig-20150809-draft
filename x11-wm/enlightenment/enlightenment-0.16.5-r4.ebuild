@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.12 2002/10/14 18:29:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.13 2002/12/09 04:42:01 manson Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.enlightenment.org/enlightenment/enlightenment/${P}.tar.gz"
 HOMEPAGE="http://www.enlightenment.org/"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND=">=media-libs/fnlib-0.5
 	>=media-sound/esound-0.2.19

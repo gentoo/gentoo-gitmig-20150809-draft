@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.1.ebuild,v 1.4 2002/10/17 14:50:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.1.ebuild,v 1.5 2002/12/09 04:42:02 manson Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://people.redhat.com/~hp/metacity/"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=x11-libs/pango-1.0.2

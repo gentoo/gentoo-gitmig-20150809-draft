@@ -7,7 +7,7 @@ SRC_URI="ftp://ftp.afterstep.org/stable/AfterStep-${PV}.tar.bz2"
 HOMEPAGE="http://www.afterstep.org/"
 LICENSE="AFTERSTEP"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 IUSE="nls"
 
 DEPEND="virtual/glibc virtual/x11

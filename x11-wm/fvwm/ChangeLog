@@ -1,7 +1,10 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.6 2002/08/12 06:47:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.7 2002/12/09 04:42:02 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *fvwm-2.4.8 (12 Aug 2002)
 
   12 Aug 2002; Seemant Kulleen <seemant@gentoo.org> fvwm-2.4.8.ebuild

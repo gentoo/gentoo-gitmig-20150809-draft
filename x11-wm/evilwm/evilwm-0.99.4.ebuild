@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.4.ebuild,v 1.2 2002/08/14 15:45:39 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.4.ebuild,v 1.3 2002/12/09 04:42:01 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A minimalist, no frills window manager for X."
@@ -8,7 +8,7 @@ SRC_URI="http://download.sourceforge.net/evilwm/${PN}_${PV}-1.tar.gz"
 HOMEPAGE="http://evilwm.sourceforge.net"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/x11
 	virtual/glibc"

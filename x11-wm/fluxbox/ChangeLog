@@ -2,6 +2,9 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $Header
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *fluxbox-0.1.13-r6 (07 Dec 2002)
 
   07 Dec 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13-r8.ebuild

@@ -1,7 +1,10 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.19 2002/12/04 14:16:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.20 2002/12/09 04:42:03 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *sawfish-1.2 (17 Nov 2002)
 
   04 Dec 2002; foser <foser@gentoo.org> sawfish-1.2.ebuild :

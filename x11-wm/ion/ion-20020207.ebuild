@@ -9,7 +9,7 @@ DEPEND="virtual/glibc"
 RDEPEND="virtual/x11"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_compile() {
 	cd ${S}

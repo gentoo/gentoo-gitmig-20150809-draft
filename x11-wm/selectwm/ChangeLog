@@ -1,7 +1,10 @@
 # ChangeLog for x11-wm/selectwm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/ChangeLog,v 1.5 2002/11/06 06:27:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/ChangeLog,v 1.6 2002/12/09 04:42:03 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *selectwm-0.3-r1 selectwm-0.4 (01 Sep 2002)
 
   17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> selectvm-0.3-r1.ebuild, selectwm-0.4.ebuild :

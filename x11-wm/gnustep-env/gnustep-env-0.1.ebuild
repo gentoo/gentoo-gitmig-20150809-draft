@@ -4,7 +4,7 @@
 DESCRIPTION="Exports GNUSTEP_LOCAL_ROOT"
 HOMEPAGE="http://www.gentoo.org"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 SLOT="0"
 
 src_install() {

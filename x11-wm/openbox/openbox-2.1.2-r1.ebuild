@@ -11,7 +11,7 @@ HOMEPAGE="http://icculus.org/${PN}"
 
 SLOT="1"
 LICENSE="BSD"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 MYBIN="${PN}"
 mydoc="CHANGE* TODO LICENSE data/README*"
