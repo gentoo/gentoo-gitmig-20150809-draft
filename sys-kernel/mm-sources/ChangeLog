@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.175 2004/08/17 17:43:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.176 2004/08/19 11:44:58 lostlogic Exp $
+
+*mm-sources-2.6.8.1-r2 (19 Aug 2004)
+
+  19 Aug 2004; Brandon Low <lostlogic@gentoo.org>
+  -files/mm-sources.IPTables-RDoS.patch, -mm-sources-2.6.7-r6.ebuild,
+  +mm-sources-2.6.8.1-r2.ebuild:
+  Bump and clean up some stuff
 
 *mm-sources-2.6.8.1-r1 (17 Aug 2004)
 

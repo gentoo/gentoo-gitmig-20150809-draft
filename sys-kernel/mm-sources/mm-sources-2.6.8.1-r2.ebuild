@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.7-r6.ebuild,v 1.2 2004/07/15 03:54:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.8.1-r2.ebuild,v 1.1 2004/08/19 11:44:58 lostlogic Exp $
 
 UNIPATCH_LIST="${DISTDIR}/${KV}.bz2"
 K_PREPATCHED="yes"
