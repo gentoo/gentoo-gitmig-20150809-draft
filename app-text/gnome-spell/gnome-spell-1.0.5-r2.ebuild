@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r2.ebuild,v 1.14 2004/11/04 00:10:02 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r2.ebuild,v 1.15 2004/12/29 13:32:24 joem Exp $
 
 inherit gnome.org gnome2 libtool eutils
 
@@ -38,3 +38,5 @@ src_unpack() {
 	WANT_AUTOMAKE=1.4 automake || die "automake failed"
 
 }
+
+USE_DESTDIR="1"
