@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.28 2004/10/13 12:42:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.29 2004/10/17 10:05:33 hattya Exp $
+
+  17 Oct 2004; Akinori Hattori <hattya@gentoo.org> anthy-5100b.ebuild:
+  stable on ia64.
 
   13 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> anthy-5500.ebuild:
   Added to ~ppc-macos.
