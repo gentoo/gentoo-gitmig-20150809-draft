@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.97.ebuild,v 1.2 2004/05/03 22:06:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.97.ebuild,v 1.3 2004/05/06 20:06:15 zul Exp $
+
+inherit eutils
 
 DESCRIPTION="An Apache module for logging to an SQL (MySQL) database"
 HOMEPAGE="http://www.outoforder.cc/projects/apache/mod_log_sql/"
@@ -62,6 +64,7 @@ src_compile() {
 	detectapache
 	myconf="--with-apxs=${APXS}"
 
+	epatch ${FILESDIR}/mod_log_sql-1.97-gentoo.patch || die "Patch failed."
 	use ssl && myconf="${myconf} --enable-ssl"
 	./configure ${myconf}
 	emake || die
