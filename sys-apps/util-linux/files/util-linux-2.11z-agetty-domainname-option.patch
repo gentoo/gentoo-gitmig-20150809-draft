@@ -1,0 +1,69 @@
+--- util-linux-2.11z/login-utils/agetty.c	2002-07-29 09:36:42.000000000 +0200
++++ util-linux-2.11z.O/login-utils/agetty-with-dns.c	2003-07-13 04:24:01.000000000 +0200
+@@ -30,6 +30,7 @@
+ #include <getopt.h>
+ #include <time.h>
+ #include <sys/file.h>
++#include <netdb.h>
+ #include "xstrncpy.h"
+ #include "nls.h"
+ 
+@@ -122,6 +123,17 @@
+ #define	BUFSIZ		1024
+ #endif
+ 
++/* set a maximum length for the hostname,  */
++#ifdef HOST_NAME_MAX			
++	/* defined by POSIX */
++	#define HOSTNAME_LENGTH HOST_NAME_MAX
++#elif defined(MAXHOSTNAMELEN)		
++	/* implemented in current Unix-versions */
++	#define HOSTNAME_LENGTH MAXHOSTNAMELEN
++#else
++	#define HOSTNAME_LENGTH 500
++#endif
++
+  /*
+   * When multiple baud rates are specified on the command line, the first one
+   * we will try is the first one specified.
+@@ -878,7 +890,25 @@
+ 		     printf ("%s", domainname);
+ 		   }
+ 		  break;
+-
++		  
++		  case 'O':
++		  {
++			char *domain = NULL;
++			char host[HOSTNAME_LENGTH + 1];
++			struct hostent *hp = NULL;
++			
++			if (gethostname(host, HOSTNAME_LENGTH) || !(hp = gethostbyname(host))) {
++				domain = "unknown_domain";
++			} else {
++				/* get the substring after the first . */
++				domain = strchr(hp->h_name, '.');
++				if (domain == NULL)
++					domain = ".(none)";
++			}
++			printf("%s", ++domain);
++		  }  
++		  break;
++		  
+ 		  case 'd':
+ 		  case 't':
+ 		    {
+--- util-linux-2.11z/login-utils/agetty.8	1999-11-03 00:28:11.000000000 +0100
++++ util-linux-2.11z.O/login-utils/agetty-with-dns.8	2003-07-13 04:27:17.000000000 +0200
+@@ -217,7 +217,10 @@
+ Insert the nodename of the machine, also known as the hostname.
+ .TP
+ o
+-Insert the domainname of the machine.
++Insert the NIS domainname of the machine.
++.TP
++O
++Insert the DNS domainname of the machine.
+ .TP
+ r
+ Insert the release number of the OS, eg. 1.1.9.
