@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.5 2005/01/23 21:01:00 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.6 2005/02/02 11:48:19 lanius Exp $
 
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, juk..."
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="alsa audiofile encode flac gstreamer oggvorbis speex theora xine"
 
 DEPEND="~kde-base/kdebase-${PV}

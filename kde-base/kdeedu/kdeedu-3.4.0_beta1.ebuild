@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.4.0_beta1.ebuild,v 1.3 2005/01/18 16:11:19 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.4.0_beta1.ebuild,v 1.4 2005/02/02 11:41:47 lanius Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE educational apps"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=""

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.136 2005/01/28 18:52:48 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.137 2005/02/02 11:48:14 lanius Exp $
+
+  02 Feb 2005; Heinrich Wendel <lanius@gentoo.org> kdepim-3.4.0_beta1.ebuild:
+  mark ~amd64
 
   23 Jan 2005; Markus Rothe <corsair@gentoo.org> kdepim-3.3.2.ebuild:
   Stable on ppc64; bug #78619
