@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6-r1.ebuild,v 1.2 2005/01/08 20:12:42 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6-r1.ebuild,v 1.3 2005/01/10 04:43:54 stkn Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE="ssl sdl ieee1394 alsa esd"
 
@@ -53,6 +53,9 @@ src_unpack() {
 src_compile() {
 	local plugins
 	local myconf
+
+	# may cause ICE (bug #70638)
+	filter-flags -fstack-protector
 
 	if use ssl; then
 		export OPENSSLFLAG=1
