@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/kkeyled
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
 
+*kkeyled-0.8.9 (17 Aug 2004)
+
+  17 Aug 2004; Dominik Stadler <centic@gentoo.org> +kkeyled-0.8.9.ebuild:
+  Add new Version 0.8.9, see Bug 59570
+
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kkeyled-0.8.6.ebuild:
   inherit kde instead of deprecated kde-base
 
