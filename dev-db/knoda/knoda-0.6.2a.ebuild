@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.6.2a.ebuild,v 1.6 2004/06/24 21:55:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.6.2a.ebuild,v 1.7 2004/06/28 23:47:09 carlo Exp $
 
 inherit kde
-need-kde 3
 
-#S=${WORKDIR}/${P}
-
-IUSE=""
 DESCRIPTION="KDE database frontend based on the hk_classes library"
-SRC_URI="mirror://sourceforge/knoda/${P}.tar.bz2"
-RESTRICT="nomirror"
 HOMEPAGE="http://hk-classes.sourceforge.net/"
+SRC_URI="mirror://sourceforge/knoda/${P}.tar.bz2"
+
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE=""
 
-newdepend ">=dev-db/hk_classes-0.6.2a"
+DEPEND=">=dev-db/hk_classes-0.6.2a"
+need-kde 3
