@@ -1,7 +1,10 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.41 2004/09/28 05:09:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.42 2004/10/25 16:40:45 alexander Exp $
 
+  25 Oct 2004; Alexander Plank <alexander@gentoo.org> libao-0.8.5.ebuild:
+  keyword it ~ppc-macos
+    
   27 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> libao-0.8.5.ebuild:
   static USE flag support.
 

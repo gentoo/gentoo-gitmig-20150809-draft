@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.5.ebuild,v 1.11 2004/09/28 05:09:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.5.ebuild,v 1.12 2004/10/25 16:40:45 alexander Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.xiph.org/ao/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ~mips ppc64"
+KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ~mips ppc64 ~ppc-macos"
 IUSE="alsa arts esd nas mmap static"
 
 DEPEND="virtual/libc
