@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/wmi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/ChangeLog,v 1.5 2004/06/30 18:56:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/ChangeLog,v 1.6 2004/08/17 22:46:07 usata Exp $
+
+*wmi-9 (10 Aug 2004)
+
+  10 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> wmi-7.ebuild,
+  wmi-8.ebuild, +wmi-9.ebuild:
+  Version bumped. Marked previous versions stable on x86.
+  This closes bug #59116.
 
 *wmi-8 (01 Jul 2004)
 
