@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/gnucap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gnucap/ChangeLog,v 1.6 2004/10/04 19:58:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gnucap/ChangeLog,v 1.7 2004/10/07 19:02:07 hansmi Exp $
+
+  07 Oct 2004; Michael Hanselmann <hansmi@gentoo.org> gnucap-0.34.ebuild:
+  Added to ~ppc. See bug #66325.
 
   04 Oct 2004; <plasmaroo@gentoo.org> gnucap-0.34.ebuild,
   +files/gnucap-0.34-gcc-3.4.patch:
