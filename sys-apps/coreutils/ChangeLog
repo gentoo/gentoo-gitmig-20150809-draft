@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.89 2004/05/15 22:00:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.90 2004/05/16 16:30:47 seemant Exp $
+
+  16 May 2004; Seemant Kulleen <seemant@gentoo.org> coreutils-5.2.0-r2.ebuild:
+  Change dependency to autoconf-2.58 or above. This finally fixes the reconf bug
+  #49137
 
   15 May 2004; Joshua Kinard <kumba@gentoo.org> coreutils-5.2.0-r2.ebuild:
   Marked stable on mips.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r2.ebuild,v 1.6 2004/05/15 22:00:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r2.ebuild,v 1.7 2004/05/16 16:30:47 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	virtual/glibc
 	>=sys-apps/portage-2.0.49
 	>=sys-devel/automake-1.8.2
-	>=sys-devel/autoconf-2.57
+	>=sys-devel/autoconf-2.58
 	>=sys-devel/m4-1.4-r1
 	sys-apps/help2man"
 
