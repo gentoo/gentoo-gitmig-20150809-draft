@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.15 2003/02/02 19:43:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.16 2003/02/03 14:10:37 carpaski Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
 #
@@ -336,9 +336,9 @@ get_number_of_jobs() {
 
 	export MAKEOPTS="`echo ${MAKEOPTS} | sed -e 's:-j[0-9]*::g'`"
 	
-	if [ "${ARCH}" = "x86" ]
+	if [ "${ARCH}" = "x86" -o "${ARCH}" = "hppa" ]
 	then
-		# x86 always has "processor"
+		# x86 and hppa always has "processor"
 		jobs="$((`grep -c ^processor /proc/cpuinfo` * 2))"
 	
 	elif [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]
