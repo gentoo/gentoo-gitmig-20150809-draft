@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.35 2003/06/08 14:45:47 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.36 2003/06/08 19:50:52 torbenh Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -22,6 +22,7 @@ kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages r
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
+media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/totem:gstreamer - Enable gstreamer instead of Xine backend
 media-video/transcode - Enable Altivec code portions
 net-fs/shfs:amd - Enable automounter support
