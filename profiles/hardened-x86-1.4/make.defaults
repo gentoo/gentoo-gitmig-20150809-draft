@@ -6,6 +6,9 @@ java jpeg kde gnome libg++ libwww mad mikmod mmx motif mpeg ncurses nls oggvorbi
 opengl pam pdflib png python qt quicktime readline sdl slang spell ssl
 svga tcpd truetype X xml2 xmms xv zlib"
 
+# zhen can we run with this? -solar
+USE="x86 crypt readline ssl tcpd zlib"
+
 ARCH="x86"
 COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
