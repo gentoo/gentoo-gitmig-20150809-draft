@@ -192,7 +192,7 @@ dyn_check() {
     dopython portage.dep_frontend
     if [ $? -ne 0 ]
     then
-      exit $?
+      exit 1 
     fi
 
 }
