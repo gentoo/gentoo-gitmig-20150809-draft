@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.2 2003/09/12 04:03:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.3 2003/09/22 19:12:57 usata Exp $
 
 inherit cannadic
 
@@ -21,6 +21,13 @@ DEPEND=""
 CANNADICS="2ch"
 
 S="${WORKDIR}/${PN}"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-canna36p4-gentoo.patch
+}
 
 src_compile() {
 
