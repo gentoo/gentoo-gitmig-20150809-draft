@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.167 2004/02/07 05:50:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.168 2004/02/08 15:29:35 azarah Exp $
+
+*gcc-3.3.2-r7 (08 Feb 2004)
+
+  08 Feb 2004; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.2-r7.ebuild:
+  Update snapshot to 20040119. Tweak SSP stuff to scan *before* unpacking and
+  patching.
 
   07 Feb 2004; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.2-r6.ebuild:
   Mask again, as it have some issues, bug #40603.
