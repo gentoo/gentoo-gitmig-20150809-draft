@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-html-diff
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-html-diff/ChangeLog,v 1.1 2005/03/21 00:02:50 mkennedy Exp $
+
+*cl-html-diff-0.1 (21 Mar 2005)
+
+  21 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-html-diff-0.1.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
