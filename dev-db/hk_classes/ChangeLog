@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.23 2004/11/08 22:26:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.24 2004/11/21 22:27:10 sekretarz Exp $
+
+  21 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/hk_classes-amd64.patch, hk_classes-0.7.1.ebuild,
+  hk_classes-0.7.2_alpha3.ebuild:
+  Added to ~amd64, bug #70459
 
 *hk_classes-0.7.2_alpha3 (08 Nov 2004)
 
