@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 910ff147ebc717dcc50815523af03a7c ash-1.6.ebuild 1304
-MD5 7cb6cca89ef2fecc106a1abaa8e70ee4 ChangeLog 1234
+MD5 42a71de3f720ee670581406e6bd49332 ash-1.6.ebuild 1310
+MD5 672ad4b446461449fd3a83e87b689fd3 ChangeLog 1327
 MD5 8ae8baf7eab9f0bf48c73e3198ab0ee4 files/digest-ash-1.6 127
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBSupXEZCkKN40op4RAsjnAKDDLzTTlkAjrzTC+oUpP+FFG9pGBQCglWp3
-DLfDmy2uHnssxRj3GpXMLoU=
-=I2bv
+iD8DBQFBfqWgCHk4+ZoBpvsRAhdhAKC71dQIhpMyH0bqrN1lcG00E6sOIgCgkfTx
+i8CbiOIbhQ4bucy63EhrlEs=
+=md0n
 -----END PGP SIGNATURE-----

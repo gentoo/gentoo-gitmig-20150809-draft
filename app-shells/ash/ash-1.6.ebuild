@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.14 2004/09/17 13:44:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.15 2004/10/26 20:29:13 slarti Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/tar_files/src/bin.ta
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips alpha arm"
+KEYWORDS="x86 ~ppc sparc ~mips alpha arm ~amd64"
 IUSE=""
 
 DEPEND="sys-devel/pmake

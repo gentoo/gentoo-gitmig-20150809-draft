@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.10 2004/09/17 13:44:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.11 2004/10/26 20:29:13 slarti Exp $
+
+  26 Oct 2004; Tom Martin <slarti@gentoo.org> ash-1.6.ebuild:
+  Marked ~amd64 for bug 69062.
 
   17 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> ash-1.6.ebuild:
   Fixed broken src_install
