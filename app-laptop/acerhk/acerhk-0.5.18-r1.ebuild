@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.18-r1.ebuild,v 1.5 2005/02/27 16:50:34 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.18-r1.ebuild,v 1.6 2005/02/27 20:33:37 sekretarz Exp $
 
 inherit linux-mod eutils
 
@@ -19,7 +19,7 @@ BUILD_TARGETS="all"
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
-	epatch ${FILESDIR}/${PN}-redef-wireless.patch
+	epatch ${FILESDIR}/${P}-redef-wireless.patch
 
 }
 
