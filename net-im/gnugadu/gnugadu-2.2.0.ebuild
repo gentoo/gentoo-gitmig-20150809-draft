@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.0.ebuild,v 1.1 2004/10/21 18:13:43 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.0.ebuild,v 1.2 2004/10/21 20:31:18 spock Exp $
 
 IUSE="debug tlen esd oss xosd arts jabber perl spell"
 
@@ -20,7 +20,7 @@ DEPEND=">=x11-libs/gtk+-2.4.0
 	sys-devel/gettext
 	>=sys-devel/automake-1.7
 	>=sys-devel/libtool-1.4
-	jabber? ( >=net-libs/loudmouth-0.15.1 )
+	jabber? ( >=net-libs/loudmouth-0.17 )
 	xosd? ( x11-libs/xosd )
 	perl? ( dev-lang/perl dev-perl/XML-Parser )
 	arts? ( >=kde-base/arts-0.9.5 )
