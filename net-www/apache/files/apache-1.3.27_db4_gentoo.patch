@@ -1,0 +1,17 @@
+diff -ur apache_1.3.27.orig/src/modules/standard/mod_auth_db.module apache_1.3.27/src/modules/standard/mod_auth_db.module
+--- apache_1.3.27.orig/src/modules/standard/mod_auth_db.module	2001-10-16 11:12:02.000000000 +0200
++++ apache_1.3.27/src/modules/standard/mod_auth_db.module	2003-06-22 20:22:02.000000000 +0200
+@@ -2,7 +2,12 @@
+ ConfigStart
+     DB_VERSION=''
+     DB_LIB=''
+-    if ./helpers/TestCompile func db_create; then
++    if ./helpers/TestCompile func db_create_4000; then
++	DB_VERSION='Berkeley-DB/4.x'
++    elif ./helpers/TestCompile lib db-4 db_create_4000; then
++	DB_VERSION='Berkeley-DB/4.x'
++	DB_LIB='-ldb-4'
++    elif ./helpers/TestCompile func db_create; then
+         DB_VERSION='Berkeley-DB/3.x'
+     elif ./helpers/TestCompile lib db db_create; then
+         DB_VERSION='Berkeley-DB/3.x'

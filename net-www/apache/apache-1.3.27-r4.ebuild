@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r4.ebuild,v 1.5 2003/03/26 09:56:41 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r4.ebuild,v 1.6 2003/06/22 18:35:46 pauldv Exp $
 
 IUSE="ipv6 pam"
 
@@ -57,6 +57,9 @@ src_unpack() {
 	if use pam; then
 		patch -p1 <${FILESDIR}/suexec_pam_gentoo.patch || die
 	fi
+
+	# Detect db4 correctly
+	patch -p1 <${FILESDIR}/apache-1.3.27_db4_gentoo.patch || die
 }
 
 src_compile() {
