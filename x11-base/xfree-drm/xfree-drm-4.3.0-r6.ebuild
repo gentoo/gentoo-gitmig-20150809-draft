@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.13 2003/10/20 07:05:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.14 2003/11/25 03:59:23 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -184,11 +184,16 @@ pkg_postinst() {
 	then
 		einfo "USE is deprecated. Please set your video cards using VIDEO_CARDS."
 		einfo "Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis, i810, i830, and gamma."
+		echo
 	fi
 
 	if vcards sis
 	then
 		einfo "SiS direct rendering only works on 300/305, 540, 630/S/ST, 730/S chipsets."
 		einfo "SiS framebuffer also needs to be enabled in the kernel."
+		echo
 	fi
+
+	ewarn "If you used genkernel to compile your kernel, you must change"
+	ewarn "your processor type to something greater than 386."
 }
