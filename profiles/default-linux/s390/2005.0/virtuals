@@ -1,0 +1,6 @@
+# Copyright 2001-2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/s390/2005.0/virtuals,v 1.1 2005/01/20 21:17:55 wolf31o2 Exp $
+
+virtual/kernel			sys-kernel/vanilla-sources
+virtual/linux-sources	sys-kernel/vanilla-sources
