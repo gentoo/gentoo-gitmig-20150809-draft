@@ -1,24 +1,33 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r2.ebuild,v 1.2 2002/12/09 04:26:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.1 2002/12/26 01:27:42 azarah Exp $
 
+IUSE=""
+
+inherit eutils
+
+S="${WORKDIR}/${P}"
 DESCRIPTION="A library for running svga graphics on the console"
+SRC_URI="http://www.svgalib.org/${P}.tar.gz
+	http://www.arava.co.il/matan/svgalib/r128.c"
 HOMEPAGE="http://www.svgalib.org/"
+
 LICENSE="BSD"
-
-DEPEND="virtual/glibc"
-
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc "
 
-S=${WORKDIR}/${P}
-SRC_URI="http://www.svgalib.org/${P}.tar.gz"
+DEPEND="virtual/glibc"
 
 
 src_unpack() {
-	unpack ${A}
+
+	unpack ${P}.tar.gz
+	
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
+
+	# Update r128 driver, bug #10987.
+	cp -f ${DISTDIR}/r128.c ${S}/src
 }
 
 src_compile() {
@@ -35,7 +44,7 @@ src_compile() {
 		Makefile.orig > Makefile
 }
 
-src_install () {
+src_install() {
 
 	dodir /etc/{vga,svga} /usr/{include,lib,bin,share/man}
 	make TOPDIR=${D} OPTIMIZE="${CFLAGS}" install || die
@@ -44,6 +53,7 @@ src_install () {
 	dolib.a gl/libvgagl.a
 	dolib.so gl/libvgagl.so.${PV}
 	dosym libvgagl.so.${PV} /usr/lib/libvgagl.so
+	preplib
 
 	insinto /usr/include
 	doins src/vga.h gl/vgagl.h src/mouse/vgamouse.h src/joystick/vgajoystick.h
@@ -67,5 +77,5 @@ src_install () {
 	dodoc 0-README CHANGES* DESIGN NEWS TODO
 	docinto txt
 	dodoc  Driver-programming-HOWTO README.* add_driver svgalib.lsm
-
 }
+

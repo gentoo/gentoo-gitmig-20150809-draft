@@ -1,8 +1,19 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.9 2002/12/13 12:38:48 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.10 2002/12/26 01:27:42 azarah Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*svgalib-1.9.17 (26 Dec 2002)
+
+  26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> svgalib-1.4.3-r4.ebuild :
+  Update version.
+
+*svgalib-1.4.3-r4 (26 Dec 2002)
+
+  26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> svgalib-1.4.3-r4.ebuild :
+  Update r128 driver, bug #10987.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords
  
 *svgalib-1.4.3-r3 (03 Dec 2002)
 
