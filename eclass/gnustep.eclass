@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.16 2004/10/04 00:57:02 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.17 2004/10/04 01:22:19 fafhrd Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,8 +34,8 @@ GS_RDEPEND="${GS_DEPEND}
 GENTOO_GNUSTEP_ROOT="/usr/GNUstep"
 
 egnustep_env() {
-	if [ -f /usr/GNUstep/System/Makefiles/GNUstep.sh ] ; then
-		. /usr/GNUstep/System/Makefiles/GNUstep.sh
+	if [ -f ${GENTOO_GNUSTEP_ROOT}/System/Makefiles/GNUstep.sh ] ; then
+		. ${GENTOO_GNUSTEP_ROOT}/System/Makefiles/GNUstep.sh
 	else
 		die "gnustep-make not installed!"
 	fi
@@ -76,8 +76,8 @@ egnustep_make() {
 
 egnustep_package_config() {
 	if [ -f ${FILESDIR}/config-${PN}.sh ]; then
-		dodir /usr/GNUstep/System/Tools/Gentoo
-		exeinto /usr/GNUstep/System/Tools/Gentoo
+		dodir ${GENTOO_GNUSTEP_ROOT}/System/Tools/Gentoo
+		exeinto ${GENTOO_GNUSTEP_ROOT}/System/Tools/Gentoo
 		doexe ${FILESDIR}/config-${PN}.sh
 	fi
 }
@@ -85,7 +85,7 @@ egnustep_package_config() {
 egnustep_package_config_info() {
 	if [ -f ${FILESDIR}/config-${PN}.sh ]; then
 		einfo "Make sure to set happy defaults for this package by executing:"
-		einfo "  /usr/GNUstep/System/Tools/Gentoo/config-${PN}.sh"
+		einfo "  ${GENTOO_GNUSTEP_ROOT}/System/Tools/Gentoo/config-${PN}.sh"
 		einfo "as the user you will run the package as." 
 	fi
 }
