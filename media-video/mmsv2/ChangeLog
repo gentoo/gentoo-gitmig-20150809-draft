@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mmsv2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.1 2004/11/10 01:02:57 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.2 2005/01/22 01:09:19 arj Exp $
+
+  21 Jan 2005; Anders Rune Jensen <arj@gentoo.org> mmsv2-0.9.3.ebuild:
+  Wrong name in ebuild found by Lars T. Mikkelsen. Also fix
+  dependency to sqlite version 2.
 
 *mmsv2-0.9.3 (10 Nov 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-0.93.ebuild,v 1.1 2004/11/10 01:02:57 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-0.93.ebuild,v 1.2 2005/01/22 01:09:19 arj Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="debug lirc svga sdl xine"
 RDEPEND="media-libs/imlib2
 	media-libs/taglib
 	>=dev-libs/libpcre-4.3
-	>=dev-db/sqlite-2.8
+	=dev-db/sqlite-2*
 	media-tv/xmltv
 	lirc? ( app-misc/lirc )
 	svga? ( media-libs/svgalib )
@@ -80,7 +80,7 @@ src_install() {
 	     BINDIR=${D}/usr/bin \
 	     CONFIGDIR=${D}/etc/mms \
 	     DATADIR=${D}/usr/share/mms \
-	     install || die "Failed to install MPlayer!"
+	     install || die "Failed to install mmsv2!"
 
 	dodoc doc/BUGS doc/Changelog doc/LICENSE doc/README doc/TODO
 }
