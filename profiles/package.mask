@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3143 2004/09/10 19:45:20 aliz Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3144 2004/09/10 23:29:41 aliz Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,20 +21,6 @@
 ##
 ##   End example
 ##
-
-# <aliz@gentoo.org> (10 Sep 2004)
-# Mask new version until all packages are added
-=media-tv/mythtv-0.16
-=media-tv/mythfrontend-0.16
-=media-plugins/mythbrowser-0.16
-=media-plugins/mythdvd-0.16
-=media-plugins/mythgallery-0.16
-=media-plugins/mythgame-0.16
-=media-plugins/mythmusic-0.16
-=media-plugins/mythnews-0.16
-=media-plugins/mythvideo-0.16
-=media-plugins/mythweather-0.16
-=www-apps/mythweb-0.16
 
 # <usata@usata.org> (07 Sep 2004)
 # Masked for multiple vulnerabilities (bug #62618)
