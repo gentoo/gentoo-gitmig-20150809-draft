@@ -1,25 +1,24 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.0_beta2.ebuild,v 1.5 2003/12/28 04:00:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.0_rc1.ebuild,v 1.1 2004/01/19 14:17:06 caleb Exp $
 
 inherit distutils kde
-need-kde 3
 
 IUSE="doc java python ruby"
-MY_P="kdevelop-3.0.0b2"
+MY_P="kdevelop-3.0.0r1"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="KDevelop is an easy to use C/C++ IDE for Unix. It supports KDE/Qt, GNOME, plain C and C++ projects."
-SRC_URI="mirror://kde/unstable/3.1.94/src/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/unstable/3.1.95/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.kdevelop.org"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
 SLOT=3
 # -j2 and greater fails - see bug #6199
-export MAKEOPTS="$MAKEOPTS -j1"
+# export MAKEOPTS="$MAKEOPTS -j1"
 
-DEPEND="dev-lang/perl
+DEPEND=">=kde-base/kdebase-3.1.0
+	dev-lang/perl
 	sys-devel/flex
-	app-text/sgmltools-lite
 	sys-devel/gdb
 	java? ( virtual/jdk dev-java/ant )
 	python? ( dev-lang/python )
@@ -36,7 +35,6 @@ use ruby || myconf="$myconf --disable-ruby"
 src_unpack()
 {
 	kde_src_unpack
-#	epatch ${FILESDIR}/${P}-compat.patch
 	epatch ${FILESDIR}/${P}-mainwindow.patch
 }
 
