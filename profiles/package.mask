@@ -132,7 +132,7 @@ media-sound/libsidutils
 
 # <games@gentoo.org> (06 Oct 2003)
 # needs an update ... currently broken #30452
-games-sports/soccar
+<=games-sports/soccar-0.5.2
 
 # <mkennedy@gentoo.org> (05 Oct 2003)
 # maxima depending on cmucl and not cmucl-bin needs testing
