@@ -4,6 +4,10 @@
 
 *fluxter-0.1.0 (10 Dec 2002)
   
+  11 Dec 2002; Matt Keadle <mkeadle@gentoo.org> fluxter-0.1.0.ebuild
+
+  Moving to stable x86
+
   10 Dec 2002; Matt Keadle <mkeadle@gentoo.org> fluxter-0.1.0.ebuild
   files/digest-fluxter-0.1.0 :
 
