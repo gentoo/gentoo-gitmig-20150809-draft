@@ -1,22 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-ps/howto-ps-20021121.ebuild,v 1.1 2002/11/25 05:28:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-ps/howto-ps-20021121.ebuild,v 1.2 2002/11/30 20:50:18 vapier Exp $
 
 MY_P="Linux-ps-HOWTOs-${PV}"
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="The LDP howtos, postscript format."
-
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
-
 HOMEPAGE="http://www.linuxdoc.org"
 
 SLOT="0"
 LICENSE="GPL-2 LDP"
 KEYWORDS="x86 ppc sparc sparc64"
 
-src_install () {
-	
+src_install() {
 	dodir /usr/share/doc/howto
 	dodir /usr/share/doc/howto/ps
 	dosym /usr/share/doc/howto /usr/share/doc/HOWTO
@@ -24,5 +21,4 @@ src_install () {
 	cd ${WORKDIR}
 	insinto /usr/share/doc/howto/ps
 	doins *
-	
 }
