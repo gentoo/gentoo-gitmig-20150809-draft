@@ -1,27 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.2.ebuild,v 1.4 2003/02/13 14:58:48 vapier Exp $
-
-# This identd is nearly perfect for a NAT box. It runs in one
-# process (doesn't fork()) and isnt very susceptible to DOS attack.
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.2.ebuild,v 1.5 2003/07/18 18:08:22 vapier Exp $
 
 DESCRIPTION="A real IDENT daemon for linux."
 HOMEPAGE="http://www.fukt.bth.se/~per/identd"
-S=${WORKDIR}/${P}
 SRC_URI="http://www.fukt.bth.se/~per/identd/${P}.tar.gz"
-KEYWORDS="x86 sparc ~ppc"
+
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+KEYWORDS="x86 ~ppc sparc"
 
 DEPEND="virtual/glibc"
 
 src_compile() {
-	cd ${S}
         emake || die
 }
 
-src_install () {
+src_install() {
 	dodir /etc/init.d /usr/sbin /usr/share/man/man8
 	dodoc README COPYING ChangeLog
 	make install DESTDIR=${D} MANDIR=/usr/share/man || die
