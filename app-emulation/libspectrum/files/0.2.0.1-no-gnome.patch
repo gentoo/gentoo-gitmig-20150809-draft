@@ -1,0 +1,12 @@
+--- libspectrum.h.in.orig	2003-11-24 11:57:50.432351584 -0500
++++ libspectrum.h.in	2003-11-24 11:58:17.915173560 -0500
+@@ -44,7 +44,9 @@
+ LIBSPECTRUM_DEFINE_TYPES
+ 
+ /* glib or its replacement */
++#ifndef __G_SLIST_H__
+ LIBSPECTRUM_GLIB_REPLACEMENT
++#endif __G_SLIST_H__
+ 
+ /*
+  * General libspectrum routines

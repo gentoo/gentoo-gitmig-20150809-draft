@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libspectrum
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.2 2003/11/21 04:04:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.3 2003/11/24 17:24:50 vapier Exp $
+
+*libspectrum-0.2.0.1-r1 (24 Nov 2003)
+
+  24 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Try to properly handle glib include #34050.
 
 *libspectrum-0.2.0.1 (20 Nov 2003)
 
