@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.95 2005/01/29 20:09:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.96 2005/01/29 23:16:29 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -39,7 +39,7 @@ if [[ "${PN##*-}" == "cvs" ]] ; then
 	inherit cvs
 fi
 
-if [[ $(get_major_version -ge 7 ) ]] ; then
+if [[ $(get_major_version ) -ge 7 ]] ; then
 	inherit bash-completion
 fi
 
