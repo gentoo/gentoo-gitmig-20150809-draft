@@ -1,16 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-0.ebuild,v 1.2 2003/12/31 03:56:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-0.ebuild,v 1.3 2004/02/05 21:05:43 mr_bones_ Exp $
 
 DESCRIPTION="Meta package for all fortune-mod packages"
 
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
+IUSE=""
 
 RDEPEND="games-misc/fortune-mod
 	games-misc/fortune-mod-bofh-excuses
 	games-misc/fortune-mod-calvin
+	games-misc/fortune-mod-debilneho
 	games-misc/fortune-mod-dubya
 	games-misc/fortune-mod-futurama
 	games-misc/fortune-mod-gentoo-dev
@@ -23,4 +25,5 @@ RDEPEND="games-misc/fortune-mod
 	games-misc/fortune-mod-smac
 	games-misc/fortune-mod-sp-fortunes
 	games-misc/fortune-mod-starwars
-	games-misc/fortune-mod-tao"
+	games-misc/fortune-mod-tao
+	games-misc/fortune-mod-zx-error"
