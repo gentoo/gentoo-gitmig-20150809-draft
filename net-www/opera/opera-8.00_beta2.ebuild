@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.60_alpha4.ebuild,v 1.3 2005/02/08 17:57:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-8.00_beta2.ebuild,v 1.1 2005/03/02 11:25:40 lanius Exp $
 
 IUSE="static spell"
 
-OPERAVER="7.60-20041203"
-OPERAFTPDIR="7.60-Preview-4"
+OPERAVER="8.0-20050225"
+OPERAFTPDIR="800b2/beta/en"
 
 S=${WORKDIR}/${A/.tar.bz2/}
 
@@ -13,18 +13,17 @@ DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
 
 # that's an ugly workaround for the broken src_uri syntax
-OPERA_URI="http://snapshot.opera.com/unix/${OPERAFTPDIR}/"
+OPERA_URI="ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/"
 SRC_URI="
-	x86? ( static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-	x86? ( !static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-	amd64? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
-	sparc? ( static? ( ${OPERA_URI}/sparc-linux/en/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
-	sparc? ( !static? ( ${OPERA_URI}/sparc-linux/en/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )
-	ppc? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )"
+	x86? ( static? ( ${OPERA_URI}/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	x86? ( !static? ( ${OPERA_URI}/i386/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	amd64? ( ${OPERA_URI}/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
+	sparc? ( static? ( ${OPERA_URI}/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
+	ppc? ( ${OPERA_URI}/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )"
 
+#	sparc? ( !static? ( ${OPERA_URI}/sparc/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )
 #	amd64? ( !static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-#	ppc? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 )
-#	ppc? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.3-shared-qt.ppc-en.tar.bz2 )
+#	ppc? ( !static? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.3-shared-qt.ppc-en.tar.bz2 ) )
 
 # Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4
@@ -57,6 +56,7 @@ src_unpack() {
 	       -e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
 		   -e 's:read str_answer:return 0:' \
 		   -e "s:/opt/kde:${D}/usr/kde:" \
+		   -e "s:\(str_localdirplugin=\).*$:\1/opt/opera/lib/opera/plugins:" \
 	       install.sh || die
 }
 
@@ -77,9 +77,6 @@ src_install() {
 
 	# java workaround
 	sed -i -e 's:LD_PRELOAD="${OPERA_JAVA_DIR}/libawt.so":LD_PRELOAD="$LD_PRELOAD"\:"${OPERA_JAVA_DIR}/libawt.so":' ${D}/opt/opera/bin/opera
-
-	rm ${D}/opt/opera/share/doc/opera/help
-	dosym /opt/share/doc/opera/help /opt/opera/share/opera/help
 
 	dosed /opt/opera/bin/opera
 	dosed /opt/opera/share/opera/java/opera.policy
