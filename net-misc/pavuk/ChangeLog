@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.7 2004/07/26 13:53:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.8 2004/08/17 11:41:42 dsd Exp $
+
+*pavuk-0.9.28-r4 (17 Aug 2004)
+
+  17 Aug 2004; Daniel Drake <dsd@gentoo.org> metadata.xml,
+  pavuk-0.9.28-r4.ebuild:
+  Gnome menu entry fix thanks to Peter Robb <peter@newproject.pl> in bug 60568.
+  Also cleaned up ebuild, and marked myself as maintainer (even though upstream
+  seems pretty dead).
 
 *pavuk-0.9.28-r3 (26 Jul 2004)
 
