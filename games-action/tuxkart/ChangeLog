@@ -1,12 +1,13 @@
 # ChangeLog for games-action/tuxkart
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/ChangeLog,v 1.8 2004/06/19 08:23:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/ChangeLog,v 1.9 2004/06/19 08:25:00 mr_bones_ Exp $
 
 *tuxkart-0.4.0 (19 Jun 2004)
 
   19 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> tuxkart-0.2.0.ebuild,
   tuxkart-0.4.0.ebuild:
   version bump (bug #49206)
+  Fix plib link for version 0.2.0 (bug #46372) - patch from Joe Burks
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> tuxkart-0.2.0.ebuild:
   Added IUSE.
