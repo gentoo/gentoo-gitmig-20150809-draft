@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r3.ebuild,v 1.1 2002/01/23 13:54:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r6.ebuild,v 1.1 2002/01/28 20:32:58 azarah Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -22,12 +22,14 @@ HOMEPAGE="http://www.xfree.org"
 DEPEND=">=sys-libs/ncurses-5.1
         >=sys-libs/zlib-1.1.3-r2
         sys-devel/flex
-        sys-devel/perl"
+        sys-devel/perl
+	glide3? ( media-libs/glide-v3 )"
 	
 RDEPEND=">=sys-libs/ncurses-5.1"
 
-PROVIDE="virtual/x11 virtual/opengl"
-# virtual/glu"	
+PROVIDE="virtual/x11
+	virtual/opengl
+	virtual/glu"	
 
 src_unpack () {
 
@@ -35,11 +37,25 @@ src_unpack () {
 	
 	cd ${S}
 	cp ${FILESDIR}/${PVR}/site.def config/cf/host.def
-	echo "#define DefaultGcc2i386Opt ${CFLAGS}" >>  config/cf/host.def
-	echo "#define GccWarningOptions -Wno" >>  config/cf/host.def
-	echo "#define DefaultCCOptions -ansi" >>  config/cf/host.def
+	echo "#define DefaultGcc2i386Opt ${CFLAGS}" >> config/cf/host.def
+	echo "#define GccWarningOptions -Wno" >> config/cf/host.def
+	echo "#define DefaultCCOptions -ansi" >> config/cf/host.def
 
-	# fix build problem
+	# optimize Mesa for architecture
+	if [ -n "`use sse`" ] ; then
+		echo "#define MesaUseKatmai YES" >> config/cf/host.def
+	fi
+	if [ -n "`use 3dnow`" ] ; then
+		echo "#define MesaUse3DNow YES" >> config/cf/host.def
+	fi
+
+	# build with glide3 support? (build the tdfx_dri.o module)
+	if [ -n "`use glide3`" ] ; then
+		echo "#define HasGlide3 YES" >> config/cf/host.def
+	fi
+
+	# fix build problem (XFree86 server among others, was not
+	#                    linked against libXau)
 	cp ${S}/programs/Xserver/Imakefile \
 		${S}/programs/Xserver/Imakefile.orig
 	sed -e '2i CCLINK = $(CC) -L../../lib/Xau -lXau' \
@@ -50,14 +66,6 @@ src_unpack () {
 src_compile() {
 
 	emake World || die
-
-#this do not always build properly ...
-#
-#	#build glxinfo
-#	cd ${S}/programs/glxinfo
-#	xmkmf
-#	make || die
-#	cd ${S}
 
 	if [ "`use nls`" ]
 	then
@@ -71,11 +79,6 @@ src_install() {
 
 	make install DESTDIR=${D} || die
 	make install.man DESTDIR=${D} || die
-
-#	#install glxinfo and its docs
-#	cd ${S}/programs/glxinfo
-#	make install install.man DESTDIR=${D} || die
-#	cd ${S}
 
 	if [ "`use nls`" ]
 	then
@@ -95,18 +98,15 @@ src_install() {
 	dosym ../../../.././etc/X11/XftConfig /usr/X11R6/lib/X11/XftConfig
 	cd ${D}/usr/X11R6/lib/X11/fonts
 	tar -xz --no-same-owner -f ${DISTDIR}/truetype.tar.gz
-	dosym /usr/X11R6/lib/libGL.so.1.2 /usr/X11R6/lib/libMesaGL.so
 	dodir /usr/bin
 	dosym /usr/X11R6/bin /usr/bin/X11
-	
-	#X installs some /usr/lib/libGL symlinks, pointing to the libGL's in /usr/X11R6/lib.
-	#I don't see the point in this.  Yes, according to LSB, the correct location for libGL is
-	#in /usr/lib, but this is so closely integrated with X itself that /usr/X11R6/lib seems
-	#like the right place.
-	rm -rf ${D}/usr/lib    
-	
-	#dosym /usr/X11R6/lib/libGLU.so.1.3 /usr/lib/libMesaGLU.so
-	#We're no longer including libGLU from here.  Packaged separately, from separate sources.
+
+	dosym /usr/X11R6/lib/libGL.so.1.2 /usr/X11R6/lib/libMesaGL.so
+	dosym /usr/X11R6/lib/libGLU.so.1.3 /usr/lib/libMesaGLU.so
+
+	# .la files for libtool support
+	insinto /usr/X11R6/lib
+	doins ${FILESDIR}/${PVR}/lib/*.la
 
 	exeinto /etc/X11
 	doexe ${FILESDIR}/${PVR}/chooser.sh
@@ -116,8 +116,8 @@ src_install() {
 	doins ${FILESDIR}/${PVR}/10xfree
 	insinto /etc/X11/xinit
 	doins ${FILESDIR}/${PVR}/xinitrc
-	insinto /etc/X11/xdm
-	doins ${FILESDIR}/${PVR}/Xsession ${FILESDIR}/${PVR}/Xsetup_0
+	exeinto /etc/X11/xdm
+	doexe ${FILESDIR}/${PVR}/Xsession ${FILESDIR}/${PVR}/Xsetup_0
 	insinto /etc/X11/fs
 	newins ${FILESDIR}/${PVR}/xfs.config config
 	insinto /etc/pam.d
@@ -130,4 +130,9 @@ src_install() {
 pkg_preinst() {
 	#this changed from a file to a symlink
 	rm -rf /usr/X11R6/lib/X11/XftConfig
+}
+
+pkg_postinst() {
+	echo ">>> Making font dirs..."
+	find /usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1 -exec mkfontdir {} ';'
 }
