@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-0.8.0-r1.ebuild,v 1.3 2005/01/09 10:53:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-0.8.0-r1.ebuild,v 1.4 2005/01/09 12:16:04 swegener Exp $
 
 inherit gnustep
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 IUSE="${IUSE} doc"
 DEPEND="${GS_DEPEND}
-	doc? sys-apps/sed"
+	doc? ( sys-apps/sed )"
 RDEPEND="${GS_RDEPEND}"
 
 egnustep_install_domain "System"
