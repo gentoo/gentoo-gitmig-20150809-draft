@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.6_p0.ebuild,v 1.1 2004/06/02 14:22:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.26_p0-r1.ebuild,v 1.1 2004/06/15 16:54:18 plasmaroo Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ inherit kernel eutils
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 
 EXTRAVERSION="uc${PV/*_p/}"
-[ "${PR}" != "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 KV="${OKV}-${EXTRAVERSION}"
 
 # Get the major & minor kernel version
@@ -43,6 +43,9 @@ src_unpack() {
 	set MY_ARCH=${ARCH}
 	unset ARCH
 	rm ../${MY_P/linux/${base}}.${patch}
+
+	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${FILESDIR}/${P}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 
 	kernel_universal_unpack
 	set ARCH=${MY_ARCH}
