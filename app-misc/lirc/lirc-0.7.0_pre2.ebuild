@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.7 2003/12/29 18:58:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.8 2003/12/29 19:01:29 lanius Exp $
 
 inherit eutils kernel-mod
 
@@ -93,6 +93,7 @@ src_compile() {
 	if kernel-mod_is_2_6_kernel; then
 		(cd daemons; emake) || die
 		(cd tools; emake) || die
+		(cd doc; emake) || die
 	else
 		emake || die
 
@@ -118,6 +119,7 @@ src_install() {
 	if kernel-mod_is_2_6_kernel; then
 		(cd daemons; make DESTDIR=${D} install) || die
 		(cd tools; make DESTDIR=${D} install) || die
+		(cd doc; make DESTDIR=${D} install) || die
 	else
 		emake || die
 		make DESTDIR=${D} install || die
