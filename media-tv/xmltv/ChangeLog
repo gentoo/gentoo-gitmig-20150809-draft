@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.25 2004/08/25 21:20:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.26 2004/09/11 10:33:16 aliz Exp $
+
+*xmltv-0.5.34-r1 (11 Sep 2004)
+
+  11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> xmltv-0.5.34-r1.ebuild:
+  Changed the dependency creation system, should close #63361.
 
   25 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> xmltv-0.5.34.ebuild:
   Change dependency creation to newdepend so that it actually set the correct
