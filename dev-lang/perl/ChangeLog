@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.44 2003/11/16 20:30:26 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.45 2003/11/26 22:16:43 rac Exp $
+
+  26 Nov 2003; <rac@gentoo.org> perl-5.8.2.ebuild:
+  Make perl depend on exact same libperl version, so that upgrading perl will
+  bring libperl along. Solves problems where new modules go into directories in
+  @INC too new for libperl to know about
 
   16 Nov 2003; Brad House <brad_mssw@gentoo.org> perl-5.8.2.ebuild:
   mark stable on amd64
