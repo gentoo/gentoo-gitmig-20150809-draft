@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.19 2004/07/13 06:51:57 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.20 2004/07/15 20:13:41 tgall Exp $
+
+  15 Jul 2004; Tom Gall <tgall@gentoo.org> traceroute-1.4_p12-r2.ebuild:
+  stable on ppc64, bug #55526
 
   13 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml:
   Added metadata
