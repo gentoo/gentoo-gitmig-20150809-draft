@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.3 2003/03/22 11:48:56 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.4 2003/03/22 12:22:42 absinthe Exp $
 
 inherit base
 ECLASS=jakarta-commons
@@ -108,10 +108,10 @@ jakarta-commons_src_install() {
 	while [ "$1" ]; do
 
 		case $1 in
-			dojar)
+		dojar)
 				debug-print-section dojar
-				[ -f dist/*.jar ] && dojar dist/*.jar
-				[ -f target/*.jar ] && dojar target/*.jar
+				[ -d dist/ ] && dojar dist/*.jar
+				[ -d target/ ] && dojar target/*.jar
 				;;
 	    	dohtml)
 				debug-print-section dohtml
