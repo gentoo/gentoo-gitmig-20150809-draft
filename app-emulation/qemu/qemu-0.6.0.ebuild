@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.0.ebuild,v 1.4 2004/10/28 07:11:14 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.0.ebuild,v 1.5 2004/11/01 18:14:05 lu_zero Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-typo.patch
 	epatch ${FILESDIR}/${P}-sigaction.patch
 	epatch ${FILESDIR}/qemu_gcc34.patch.gz
+	epatch ${FILESDIR}/${P}-configure.patch
 }
 
 src_compile() {
@@ -53,6 +54,7 @@ src_install() {
 		datadir=${D}/usr/share/qemu \
 		docdir=${D}/usr/share/doc \
 		mandir=${D}/usr/share/man || die
+	chmod -x ${D}/usr/share/man/*
 }
 
 pkg_postinst() {
