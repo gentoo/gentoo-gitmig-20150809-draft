@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fa01a32b0d911f3ce491f784022002c5 ChangeLog 849
+MD5 d910aa05fde3f1fed63a4734b40cab39 ChangeLog 1047
 MD5 3a44ccf8aea300f8ea988b23973d3621 avr-gcc-3.3-r1.ebuild 684
 MD5 858478c242856eb0b4eeb5f94dba81bf metadata.xml 528
+MD5 9a4fff675486212dbaa759e74864851b avr-gcc-3.4.2.ebuild 943
 MD5 fef91acbfc2e6b94341c876e57b599d7 files/digest-avr-gcc-3.3-r1 62
+MD5 0009a5c772da97784ef2edee2aba1b8b files/digest-avr-gcc-3.4.2 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA4WztHTu7gpaalycRAtjgAKCL8k3u1UzX66ebe7oRJKUy2pi85gCg7Viy
-TbXncA6FuBQymB/nc4ocurA=
-=Y0mo
+iD8DBQFBUvLwmdTrptrqvGERAlrWAKCV0d5j9kbptyOy6DfmOqM7Y3gPnQCePyvM
+Gk2MhVgN6a2PFnL2kjy0BKI=
+=U02J
 -----END PGP SIGNATURE-----
