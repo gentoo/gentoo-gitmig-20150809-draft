@@ -1,14 +1,26 @@
-MD5 3a2fe70dd5b43789a141ae0ed68495c0 apcupsd-3.10.16-r1.ebuild 2546
-MD5 74e598a06446374ea9bbc4c86d8501a7 apcupsd-3.10.15-r1.ebuild 2486
-MD5 85c7e65cfe79ec2013b13424e166f705 ChangeLog 9579
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 27ae5add10fc42e77804f1ecd768df87 metadata.xml 226
-MD5 ec48a12c6d8b56aeffbeaa629f8835ad files/digest-apcupsd-3.10.15-r1 68
+MD5 74e598a06446374ea9bbc4c86d8501a7 apcupsd-3.10.15-r1.ebuild 2486
+MD5 6d42386815c148e591ab78940f328300 ChangeLog 9741
+MD5 ee8cf49058cbbd4a03a03a3ae2c75179 apcupsd-3.10.16-r2.ebuild 2664
+MD5 3a2fe70dd5b43789a141ae0ed68495c0 apcupsd-3.10.16-r1.ebuild 2546
 MD5 ed12d329ca566b8f2632d425828ea5d7 files/digest-apcupsd-3.10.16-r1 68
-MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.15/apache.conf 157
-MD5 ac24c9a1e199dfd66650ca55ce1e33f4 files/3.10.15/ucd-snmp.patch 425
-MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.15/apcupsd.in.patch 315
-MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.15/smtp.patch 2663
-MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.16/apache.conf 157
-MD5 ac24c9a1e199dfd66650ca55ce1e33f4 files/3.10.16/ucd-snmp.patch 425
-MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.16/apcupsd.in.patch 315
+MD5 ed12d329ca566b8f2632d425828ea5d7 files/digest-apcupsd-3.10.16-r2 68
+MD5 ec48a12c6d8b56aeffbeaa629f8835ad files/digest-apcupsd-3.10.15-r1 68
 MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.16/smtp.patch 2663
+MD5 ac24c9a1e199dfd66650ca55ce1e33f4 files/3.10.16/ucd-snmp.patch 425
+MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.16/apache.conf 157
+MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.16/apcupsd.in.patch 315
+MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.15/smtp.patch 2663
+MD5 ac24c9a1e199dfd66650ca55ce1e33f4 files/3.10.15/ucd-snmp.patch 425
+MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.15/apache.conf 157
+MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.15/apcupsd.in.patch 315
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBrmG2KtJO8LeSoosRAtrpAJ9L3giN6nGbR9DDhV9WsTutZepxRwCeKQxp
+D39yNOXokTud+28ftphRSc0=
+=laDL
+-----END PGP SIGNATURE-----
