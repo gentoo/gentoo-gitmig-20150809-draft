@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.11.ebuild,v 1.1 2004/12/04 21:51:09 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.11.ebuild,v 1.2 2005/01/01 21:35:22 kingtaco Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/boot/syslinux/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~x86 ~amd64"
 IUSE=""
 
 DEPEND="dev-lang/nasm
