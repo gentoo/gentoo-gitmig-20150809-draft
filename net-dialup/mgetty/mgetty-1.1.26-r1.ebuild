@@ -34,7 +34,7 @@ src_install () {
 	
 	dodir /var/spool
 	dodir /usr/share/info
-	make prefix=${D}/usr INFODIR=${D}/usr/share CONFDIR=${D}/etc spool=${D}/var/spool install || die
+	make prefix=${D}/usr INFODIR=${D}/usr/share CONFDIR=${D}/etc/mgetty+sendfax spool=${D}/var/spool install || die
 	cd voice
 	make prefix=${D}/usr spool=${D}/var/spool install || die
 
