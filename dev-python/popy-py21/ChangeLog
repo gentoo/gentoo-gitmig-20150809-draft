@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/popy-py21
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/popy-py21/ChangeLog,v 1.1 2003/10/24 16:38:51 pythonhead Exp $
+
+*popy-py21-2.0.8 (24 Oct 2003)
+
+  24 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> metadata.xml,
+  popy-py21-2.0.8.ebuild:
+  Initial commit. Thank you Stefano Noferi <stefanoferi@noze.it> (Bug #29897)
+
