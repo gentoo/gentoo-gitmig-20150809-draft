@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r17.ebuild,v 1.2 2003/11/27 11:07:30 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r18.ebuild,v 1.1 2003/11/27 22:22:19 carpaski Exp $
 
 IUSE="build"
 
@@ -34,7 +34,6 @@ python_version() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/portage-2.0.49-r17-importsocket.diff
 }
 
 src_compile() {
@@ -272,12 +271,7 @@ pkg_postinst() {
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/dispatch_conf.py[co]
 
 	# New old place of install
-	rm -f ${ROOT}usr/lib/portage/pym/portage.py[co]
-	rm -f ${ROOT}usr/lib/portage/pym/output.py[co]
-	rm -f ${ROOT}usr/lib/portage/pym/cvstree.py[co]
-	rm -f ${ROOT}usr/lib/portage/pym/getbinpkg.py[co]
-	rm -f ${ROOT}usr/lib/portage/pym/emergehelp.py[co]
-	rm -f ${ROOT}usr/lib/portage/pym/dispatch_conf.py[co]
+	rm -f ${ROOT}usr/lib/portage/pym/*.py[co]
 
 	chmod 2775 ${ROOT}var/cache/edb/dep ${ROOT}var/cache/edb/dep/*
 	chown -R root:portage ${ROOT}var/cache/edb/dep
