@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mad
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/ChangeLog,v 1.17 2004/02/18 09:42:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/ChangeLog,v 1.18 2004/02/18 21:27:14 augustus Exp $
+
+  18 Feb 2004; <augustus@gentoo.org> mad-0.15.0b.ebuild, mad-0.15.1b.ebuild:
+  Added ~amd64 keyword.
 
 *mad-0.15.1b (18 Feb 2004)
 
