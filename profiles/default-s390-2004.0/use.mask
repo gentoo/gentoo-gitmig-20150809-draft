@@ -21,7 +21,8 @@ svga
 trusted
 voodoo3
 wavelan
-
+java
+X
 
 # And arch keyword flags that don't work
 
