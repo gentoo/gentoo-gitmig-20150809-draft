@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6.3.ebuild,v 1.4 2004/08/18 07:44:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6.3.ebuild,v 1.5 2004/11/08 16:28:29 phosphan Exp $
 
-use kde && inherit kde-functions
+inherit kde-functions
 inherit eutils
 
 DESCRIPTION="program for drawing organic molecules"
@@ -19,10 +19,14 @@ DEPEND=">=media-gfx/transfig-3.2.3d
 		x86? ( >=media-libs/libemf-1.0 )"
 
 src_compile() {
-	local mykdedir="${KDEDIR}"
-	if [ -z "${mykdedir}" ]; then mykdedir="bogus_kde"; fi
 	local config_opts
 	local mycppflags
+	local mykdedir
+	if [ -z "${KDEDIR}" ]; then
+		mykdedir="bogus_kde"
+	else
+		mykdedir="${KDEDIR}"
+	fi
 	if [ ${ARCH} = "x86"  ]; then
 		config_opts="--enable-emf"
 		mycppflags="${mycppflags} -I /usr/include/libEMF"
@@ -33,8 +37,6 @@ src_compile() {
 
 	if use kde; then
 		config_opts="${config_opts} --with-kdedir=${mykdedir}" ;
-	else
-		config_opts="${config_opts} --without-kdedir"
 	fi
 
 	if use gnome ; then
