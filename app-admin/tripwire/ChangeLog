@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.5 2003/09/19 11:07:06 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.6 2003/10/09 14:29:06 taviso Exp $
+
+  09 Oct 2003; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2.ebuild:
+  stable on x86
 
   19 Sep 2003; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2.ebuild:
   use mirror:// syntax

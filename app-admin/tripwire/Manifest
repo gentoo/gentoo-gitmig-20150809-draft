@@ -1,5 +1,5 @@
-MD5 8246c00d356d5423c0849cc6da769c9d tripwire-2.3.1.2.ebuild 2811
-MD5 b412e4a294679c38776d82449b345fe4 ChangeLog 1193
+MD5 99a4b44da2b01cf4328970d50560f547 tripwire-2.3.1.2.ebuild 2810
+MD5 ed645943d20a822b846c9d0bac89a022 ChangeLog 1284
 MD5 96f9cca8215d6e0286f08431592d3677 metadata.xml 597
 MD5 fa08ee8d578671e3f18b1ce684e0fa31 files/tripwire-2.3.1-2-fhs.patch.bz2 327
 MD5 7b5cac2555db706d0bdc2c49d7f6b9e9 files/tripwire-mkstemp.patch.bz2 564
