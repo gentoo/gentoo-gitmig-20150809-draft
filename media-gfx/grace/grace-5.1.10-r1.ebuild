@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.10 2005/03/18 14:17:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.11 2005/03/23 15:13:19 seemant Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ src_compile() {
 		gracehelpviewer="konqueror"
 	elif has_version 'www-client/galeon' ; then
 		gracehelpviewer="galeon"
-	elif has_version 'net-www/epiphany' ; then
+	elif has_version 'www-client/epiphany' ; then
 		gracehelpviewer="epiphany"
 	else
 		gracehelpviewer="netscape"
