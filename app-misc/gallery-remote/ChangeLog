@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gallery-remote
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/ChangeLog,v 1.5 2005/01/01 15:03:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/ChangeLog,v 1.6 2005/01/20 15:33:18 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  gallery-remote-1.3.2.ebuild, gallery-remote-1.4.1.ebuild:
+  added missing jikes dependency.
 
   21 Sep 2004; Thomas Matthijs <axxo@gentoo.org> gallery-remote-1.3.2.ebuild,
   gallery-remote-1.4.1.ebuild:

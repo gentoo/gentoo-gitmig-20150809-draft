@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/gallery-remote-1.3.2.ebuild,v 1.4 2005/01/01 15:03:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/gallery-remote-1.3.2.ebuild,v 1.5 2005/01/20 15:33:18 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -15,7 +15,8 @@ DEPEND=">=virtual/jdk-1.4
 		dev-java/apple-java-extensions-bin
 		dev-java/jsx
 		dev-java/metadata-extractor
-		dev-java/java-config"
+		dev-java/java-config
+		jikes? ( dev-java/jikes )"
 RDEPEND="${DEPEND}
 		media-gfx/imagemagick
 		media-libs/jpeg"
