@@ -1,8 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/Manifest,v 1.17 2003/12/21 09:37:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/Manifest,v 1.18 2003/12/21 09:38:42 robbat2 Exp $
 MD5 b61aed7b656a2f2e51c5889f57d8d5f1 tcp-wrappers-7.6-r4.ebuild 1287
 MD5 87d774aecfe60295bd3c1bff6baa0ae2 tcp-wrappers-7.6-r6.ebuild 1953
 MD5 3bb3f5197f62afdf125852384a280e73 tcp-wrappers-7.6-r3.ebuild 1231
-MD5 a6770ccda9602da9dac7df4ab03fcda0 tcp-wrappers-7.6-r7.ebuild 1958
+MD5 600ae523ccdc757aa07b0d8282495a06 tcp-wrappers-7.6-r7.ebuild 1960
 MD5 521b288047c8b23312ca082620f74eba ChangeLog 3425
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 9ad8321e86bbd0c9a7bab821564b3fc1 files/digest-tcp-wrappers-7.6-r3 144
