@@ -1,5 +1,5 @@
-MD5 50136e25f45ce291b1366e3f2799d634 ChangeLog 1736
-MD5 6b8b427926b1c04859b945698ac96ff5 ruby-1.6.8.ebuild 741
+MD5 9a153d3b0db8abc0da7e7c57645b8ad2 ChangeLog 2158
+MD5 a357995f80c9f0c2a5c928ccf2e22fb6 ruby-1.6.8.ebuild 750
 MD5 557fc0b69af82ee16ef65e0be0cffb2b ruby-1.8.0_pre2.ebuild 810
 MD5 11702b3cb52c88daf5d3934e3a0c2e2a files/digest-ruby-1.6.8 63
 MD5 2da205db4c1f8df1e100067e6c188543 files/digest-ruby-1.8.0_pre2 137
