@@ -1,0 +1,10 @@
+# ChangeLog for dev-scheme/gauche-qdbm
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-qdbm/ChangeLog,v 1.1 2004/07/26 14:13:19 hattya Exp $
+
+*gauche-qdbm-0.2 (26 Jul 2004)
+
+  26 Jul 2004; Akinori Hattori <hattya@gentoo.org> +metadata.xml,
+  +files/gauche-qdbm-0.2-gpd.diff, +gauche-qdbm-0.2.ebuild:
+  Initial revision.
+

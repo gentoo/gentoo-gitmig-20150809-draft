@@ -1,0 +1,5 @@
+MD5 213083fb6c9ce6330edf5f659f680276 ChangeLog 396
+MD5 7abc93a7c25e1f5663e90ce8ab431bd8 gauche-qdbm-0.2.ebuild 1003
+MD5 c9f54ac0eadf3d14a44e5dc692f0df73 metadata.xml 230
+MD5 dfc1631c87f4f3a4ca6929181b1a27f2 files/digest-gauche-qdbm-0.2 66
+MD5 52dda3b44ba9e9ca428bbf120a303423 files/gauche-qdbm-0.2-gpd.diff 330
