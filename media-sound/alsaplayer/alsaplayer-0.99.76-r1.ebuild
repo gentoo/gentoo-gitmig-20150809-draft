@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76-r1.ebuild,v 1.2 2005/03/12 15:10:23 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76-r1.ebuild,v 1.3 2005/03/13 14:42:29 luckyduck Exp $
 
 inherit eutils
 
@@ -48,13 +48,6 @@ src_compile() {
 
 	use doc ||
 		export ac_cv_prog_HAVE_DOXYGEN="false"
-
-	if ! use ogg && use oggvorbis; then
-		ewarn
-		ewarn "To enable oggvorbis you must enable also ogg."
-		ewarn
-		die "To enable oggvorbis you must enable also ogg."
-	fi
 
 	if use ogg && use flac; then
 		myconf="${myconf} --enable-oggflac"

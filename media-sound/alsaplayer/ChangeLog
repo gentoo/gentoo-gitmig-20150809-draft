@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.31 2005/03/12 15:00:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.32 2005/03/13 14:42:29 luckyduck Exp $
+
+  13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  alsaplayer-0.99.76-r1.ebuild:
+  removed unneeded useflag logic, fixes #85046
 
 *alsaplayer-0.99.76-r1 (12 Mar 2005)
 
