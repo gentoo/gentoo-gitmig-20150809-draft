@@ -1,4 +1,6 @@
-MD5 99a9abff8c44273f831764fa38cc2c52 ChangeLog 619
+MD5 7067b49be729d96734f3e05443e41ef6 ChangeLog 771
 MD5 0a88c243b3c32fba10c58cda47411101 metadata.xml 592
 MD5 f0950f26ef1f0e0fdc65003a70f3738c gnome-system-tools-0.33.0.ebuild 735
+MD5 34c89fad04784fe052cb54db9270bf9b gnome-system-tools-0.34.0.ebuild 757
+MD5 deb1440d16f3601aecdc1811cc3f6667 files/digest-gnome-system-tools-0.34.0 79
 MD5 b19810539e97be86cb285492ef7ccc7e files/digest-gnome-system-tools-0.33.0 79

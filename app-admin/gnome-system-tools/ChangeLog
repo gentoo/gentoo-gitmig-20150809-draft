@@ -1,9 +1,13 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.4 2004/06/28 01:06:27 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.5 2004/06/30 17:06:14 leonardop Exp $
 
-  27 Jun 2004; L. Boshell <leonardop@gentoo.org>
-  gnome-system-tools-0.33.0.ebuild:
+*gnome-system-tools-0.34.0 (30 Jun 2004)
+
+  30 Jun 2004; <leonardop@gentoo.org> gnome-system-tools-0.34.0.ebuild:
+  New release. Added new dependency for Gtk+ 2.4.
+
+  27 Jun 2004; <leonardop@gentoo.org> gnome-system-tools-0.33.0.ebuild:
   Marked stable on x86.
 
   15 Jun 2004; <mlashley@gentoo.org> gnome-system-tools-0.33.0.ebuild:
