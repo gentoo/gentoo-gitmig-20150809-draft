@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.10 2004/06/02 04:01:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.11 2004/06/07 03:54:39 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
@@ -283,6 +283,6 @@ pkg_postinst() {
 	update_mozilla_launcher_symlinks
 }
 
-pkg_postun() {
+pkg_postrm() {
 	update_mozilla_launcher_symlinks
 }

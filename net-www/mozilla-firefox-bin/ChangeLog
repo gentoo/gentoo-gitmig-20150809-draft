@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firefox-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.7 2004/06/02 07:44:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.8 2004/06/07 03:56:32 agriffis Exp $
+
+  06 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-0.8-r1.ebuild:
+  Fix typo: pkg_postun -> pkg_postrm
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org>
   mozilla-firefox-bin-0.8-r1.ebuild:

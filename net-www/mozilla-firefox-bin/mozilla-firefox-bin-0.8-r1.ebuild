@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-0.8-r1.ebuild,v 1.2 2004/06/02 07:44:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-0.8-r1.ebuild,v 1.3 2004/06/07 03:56:32 agriffis Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -68,6 +68,6 @@ pkg_postinst() {
 	update_mozilla_launcher_symlinks
 }
 
-pkg_postun() {
+pkg_postrm() {
 	update_mozilla_launcher_symlinks
 }
