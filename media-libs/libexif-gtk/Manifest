@@ -1,5 +1,5 @@
 MD5 dc2c7a556eaf8438f862b700dd297150 ChangeLog 1001
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 9e3f2d29de7324864eb58447588852bb libexif-gtk-0.3.3.ebuild 948
+MD5 dad6e2f0c015a08aae95992a382ff09c libexif-gtk-0.3.3.ebuild 930
 MD5 1cb4ed683e9dcd61ad4f896d698fb1ab files/libexif-gtk-0.3.3-gtk24.patch 1032
 MD5 72e044de06d759e4f39c2f03f345fb22 files/digest-libexif-gtk-0.3.3 69
