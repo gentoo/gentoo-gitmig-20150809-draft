@@ -1,6 +1,10 @@
 # ChangeLog for games-action/nighthawk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.2 2003/09/10 20:31:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.3 2003/11/29 00:57:05 mr_bones_ Exp $
+
+  28 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> nighthawk-2.2.ebuild:
+  use games eclass (bug 34644); inherit eutils for epatch; patch in src_unpack;
+  more error checking/messages; tidy
 
   12 Jul 2003; Michael Sterrett <msterret@gentoo.org> nighthawk-2.2.ebuild:
   fix DESCRIPTION; tidy
