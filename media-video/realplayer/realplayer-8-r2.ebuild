@@ -1,0 +1,75 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Maintainer: William McArthur <sandymac@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r2.ebuild,v 1.1 2002/05/02 19:51:25 sandymac Exp $
+
+S=${WORKDIR}/usr
+DESCRIPTION="Real Player 8 basic"
+SRC_URI="rp8_linux20_libc6_i386_cs2_rpm"
+HOMEPAGE="http://forms.real.com/real/player/unix/unix.html"
+LICENSE="realplayer8"
+
+DEPEND=">=app-arch/rpm-3.0.6"
+RDEPEND="virtual/x11"
+RESTRICT="fetch"
+
+dyn_fetch() {
+	for y in ${A} 
+	do
+		digest_check ${y}
+			if [ $? -ne 0 ]; then
+				einfo "Please download this yourself from www.real.com"
+   			einfo "and place it in ${DISTDIR}"
+				exit 1
+			fi
+	done
+}
+
+src_unpack() {
+	# You must download rp8_linux20_libc6_i386_cs2_rpm 
+	# from real.com and put it in ${DISTDIR}
+	rpm2cpio ${DISTDIR}/${A} | cpio -i --make-directories
+}
+
+src_install () {
+
+	insinto /opt/RealPlayer8/Codecs
+	doins lib/RealPlayer8/Codecs/*
+	insinto /opt/RealPlayer8/Common
+	doins lib/RealPlayer8/Common/*
+	insinto /opt/RealPlayer8/Plugins
+	doins lib/RealPlayer8/Plugins/*
+	insinto /opt/RealPlayer8/Plugins/netscape
+	doins lib/netscape/plugins/*
+	insinto /opt/RealPlayer8/
+	doins lib/RealPlayer8/*.xpm
+	doins lib/RealPlayer8/*.rm
+	doins lib/RealPlayer8/rpminstalled
+	doins lib/RealPlayer8/LICENSE
+	exeinto /opt/RealPlayer8
+	doexe lib/RealPlayer8/*.sh
+	doexe lib/RealPlayer8/realplay
+	#cd ${D}/lib/netscape/plugins
+	#unzip raclass.zip
+	#rm raclass.zip
+	insinto /etc/env.d
+	doins ${FILESDIR}/10realplayer	
+
+	dodir /opt/netscape/plugins
+	for x in raclass.zip rpnp.so
+	do
+		dosym /opt/RealPlayer8/Plugins/netscape/${x} \
+			/opt/netscape/plugins/${x}
+	done
+
+	if [ "`use mozilla`" ]
+	then
+		dodir /usr/lib/mozilla/plugins
+		for x in raclass.zip rpnp.so
+		do
+			dosym /opt/RealPlayer8/Plugins/netscape/${x} \
+				/usr/lib/mozilla/plugins/${x}
+		done
+	fi
+}
+
