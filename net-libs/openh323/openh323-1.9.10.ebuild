@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10.ebuild,v 1.4 2002/12/09 04:33:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10.ebuild,v 1.5 2003/02/13 14:21:16 vapier Exp $
 
 S="${WORKDIR}/${PN}"
 

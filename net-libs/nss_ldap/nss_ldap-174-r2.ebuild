@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-174-r2.ebuild,v 1.7 2002/12/09 04:33:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-174-r2.ebuild,v 1.8 2003/02/13 14:20:52 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NSS LDAP Module"
