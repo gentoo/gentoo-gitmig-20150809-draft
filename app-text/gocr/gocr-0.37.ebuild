@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.37.ebuild,v 1.1 2003/09/16 05:25:41 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.37.ebuild,v 1.2 2004/02/10 14:32:14 obz Exp $
 
 DESCRIPTION="An OCR (Optical Character Recognition) reader"
 HOMEPAGE="http://jocr.sourceforge.net"
@@ -31,7 +31,7 @@ src_compile() {
 	local mymakes="src man"
 
 	use gtk && mymakes="${mymakes} frontend"
-	use doc && mymakes="${mymakes} doc"
+	use doc && mymakes="${mymakes} doc examples"
 
 	econf || die
 	make ${mymakes} || die
@@ -42,11 +42,10 @@ src_install() {
 
 	make DESTDIR="${D}" prefix="/usr"  exec_prefix="/usr" install || die
 	# install the gtk frontend
-	use gtk \
-		&& dobin ${S}/frontend/gnome/src/gtk-ocr
-	# and install the documentation examples
+	use gtk && dobin ${S}/frontend/gnome/src/gtk-ocr
+	# and install the documentation and examples
 	if [ `use doc` ] ; then
-		DOCS="${DOCS} doc/gocr.html doc/{examples,unicode}.txt"
+		DOCS="${DOCS} doc/gocr.html doc/examples.txt doc/unicode.txt"
 		insinto /usr/share/doc/${P}/examples
 		doins ${S}/examples/*.{fig,tex,pcx}
 	fi

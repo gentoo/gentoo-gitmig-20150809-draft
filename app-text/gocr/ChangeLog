@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gocr
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.12 2003/12/09 17:36:47 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.13 2004/02/10 14:32:14 obz Exp $
+
+  10 Feb 2004; Mike Gardiner <obz@gentoo.org> gocr-0.3.6-r2.ebuild,
+  gocr-0.37.ebuild:
+  Included examples in the USE='doc' case, thanks to pYrania, see bug #40617
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> gocr-0.3.6-r2.ebuild:
   changed app-text/ghostscript to virtual/ghostscript

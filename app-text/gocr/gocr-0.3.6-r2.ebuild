@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r2.ebuild,v 1.14 2003/12/09 17:36:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r2.ebuild,v 1.15 2004/02/10 14:32:14 obz Exp $
 
 DESCRIPTION="Converts PNM to ASCII"
 SRC_URI="mirror://sourceforge/jocr/${P}.tar.gz"
@@ -15,8 +15,7 @@ RDEPEND="=media-libs/netpbm-9.12*"
 DEPEND="${RDEPEND}
 	app-text/tetex
 	virtual/ghostscript
-	tetex? ( >=tetex-1.0.7-r10
-		>=transfig-3.2.3d-r1 )"
+	tetex? ( >=media-gfx/transfig-3.2.3d-r1 )"
 
 src_unpack() {
 	unpack ${A}
