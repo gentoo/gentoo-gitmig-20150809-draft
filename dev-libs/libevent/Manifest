@@ -1,8 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 da0ae36fe55293400322f851f0dce351 libevent-0.9.ebuild 790
 MD5 fd40659618f34f556e17b35358df5875 libevent-0.7c.ebuild 722
+MD5 2aee27ada4c1c820b00495f39b0fde68 libevent-1.0b.ebuild 667
+MD5 4f3b73c81996996edcd87f3008790bad ChangeLog 2557
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 cf931339f51020364264a5c920c22e0e libevent-0.8a.ebuild 801
-MD5 b69f4519b0fe3a27517e873b2f097be0 libevent-0.9.ebuild 795
-MD5 1cbd521d6e3a5b52643c3f134c3e56ed ChangeLog 2375
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 7fae4b3118510dd6b88868b2cdf7e989 files/digest-libevent-0.8a 64
 MD5 7e087d9ab1fe0644ec05c7c5794e6234 files/digest-libevent-0.9 63
 MD5 689ab0af8c8ee4742fa19610adbb1167 files/digest-libevent-0.7c 64
+MD5 7fae4b3118510dd6b88868b2cdf7e989 files/digest-libevent-0.8a 64
+MD5 72ed5a716271d29b5df377492deb02b6 files/digest-libevent-1.0b 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB8W3nEZCkKN40op4RAt9KAJ0edoNsZumfR/OQLk2vXU49fwC+RQCbBqmr
+peyOpwLjbGLexQwhqe3wZKE=
+=RMhq
+-----END PGP SIGNATURE-----
