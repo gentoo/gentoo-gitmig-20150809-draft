@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/lopster
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.13 2004/08/04 01:44:56 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.14 2004/08/04 22:47:44 squinky86 Exp $
+
+  04 Aug 2004; Jon Hood <squinky86@gentoo.org> -lopster-1.0.2_pre5.ebuild,
+  lopster-1.2.1.ebuild:
+  Stable on x86.
 
   03 Aug 2004; Jon Hood <squinky86@gentoo.org> :
   Upstream changed the package; fixing digests.
