@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.1 2003/08/20 14:06:58 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.2 2003/10/05 17:09:28 hanno Exp $
+
+*rng-tools-1.0 (05 Oct 2003)
+
+  05 Oct 2003; Hanno Boeck <hanno@gentoo.org> rng-tools-1.0.ebuild,
+  files/rngd:
+  Fix for latest 2.6 kernels. Mark as x86 stable.
 
   20 Aug 2003; Hanno Boeck <hanno@gentoo.org> files/rngd:
   New package for using random number generators.

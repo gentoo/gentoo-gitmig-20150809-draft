@@ -1,4 +1,4 @@
-MD5 eb24309eaa35b5dfd63ceeb541a07c03 rng-tools-1.0.ebuild 644
-MD5 84863570fa4efa6a8c74fcdfe1552eaf ChangeLog 326
+MD5 6c7b8f7743b154db01702d3a998d88b5 ChangeLog 489
+MD5 d3cfb7f096d5b70a206c34e6fb8c7823 rng-tools-1.0.ebuild 643
 MD5 25da430ad0aab2964839df1b25d14d45 files/digest-rng-tools-1.0 64
-MD5 ab3e84cda9340b2a5427ce46e84a2937 files/rngd 910
+MD5 70df45a4be8eba62fb25b3cb53e74b8b files/rngd 1075
