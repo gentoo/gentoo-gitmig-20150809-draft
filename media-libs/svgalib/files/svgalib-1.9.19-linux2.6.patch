@@ -220,3 +220,14 @@ diff -urpN svgalib-1.9.18/kernel/svgalib_helper/main.c svgalib-1.9.18.new/kernel
      devfs_unregister_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper");
  
  }
+--- svgalib-1.9.19/kernel/svgalib_helper/kernel26compat.h.orig	2004-07-20 19:05:13.491390800 -0400
++++ svgalib-1.9.19/kernel/svgalib_helper/kernel26compat.h	2004-07-20 19:05:29.217999992 -0400
+@@ -7,7 +7,7 @@
+ #  undef KERNEL_2_6
+ # endif
+ 
+-# if defined (PG_chainlock)
++# if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,3)
+ #  define my_io_remap_page_range(vma, start, ofs, len, prot) \
+ 		io_remap_page_range(vma,start,ofs,len,prot)
+ # else

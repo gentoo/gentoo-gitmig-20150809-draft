@@ -24,11 +24,11 @@ MD5 627fcf9d82cd93cddcdef96a00248260 files/svgalib-1.9.18-utils-include.patch 41
 MD5 0877788ea40d3673a0c50d82d4560e0a files/svgalib-1.9.18-lrmi-gentoo-cflags.patch 269
 MD5 71fa9630e100dc3a6ce8672b4b4b2cff files/digest-svgalib-1.9.19 66
 MD5 8a336e556b73e4107cb5403bc07e7dc3 files/svgalib-1.9.19-gentoo.patch 4107
-MD5 a15e1ecf4906da3388435ed8fabfc9d4 files/svgalib-1.9.19-linux2.6.patch 7395
+MD5 431e1212290d169ae8f928e63c793009 files/svgalib-1.9.19-linux2.6.patch 7834
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA/AC0HTu7gpaalycRAkqfAKCxE2VPiafP0RiI106hm3afGbnlkACgnhDW
-3oTBKMH+KhDJp5upP33dtsQ=
-=w5no
+iD8DBQFA/acFHTu7gpaalycRAu4BAJ45s6irl8OIrcPh4/+Q10WwN4Qm9ACeMfaK
+T/cm3cgju3qTPI7wN1Nbd/4=
+=iVL1
 -----END PGP SIGNATURE-----
