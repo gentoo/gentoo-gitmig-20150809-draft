@@ -1,6 +1,12 @@
-# ChangeLog for net-misc/dante
+# ChangeLog for homeblutgensgentoo-x86net-miscdanteChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.5 2002/07/15 18:18:21 lamer Exp $
+
+  15 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
+
+  Upgraded to 1.1.13, removed entire src_unpack stuff as none of the patches
+  applied cleanly.
+# ChangeLog for net-misc/dante
 
 
 *dante-1.1.12 (6 Jul 2002)
