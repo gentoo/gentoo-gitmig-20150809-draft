@@ -1,8 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /home/cvsroot/gentoo-x86/net-misc/snort/snort-1.6.3.ebuild,v 1.3 
-2000/11/13 20:26:47 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.6.3-r2.ebuild,v 1.2 2001/02/03 20:10:31 achim Exp $
 
 #P=
 A="${P}.tar.gz"

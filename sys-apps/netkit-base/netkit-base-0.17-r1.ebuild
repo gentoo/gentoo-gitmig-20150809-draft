@@ -1,14 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r1.ebuild,v 1.5 2000/11/30 23:14:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r1.ebuild,v 1.6 2001/02/03 20:10:31 achim Exp $
 
 P=netkit-base-0.17
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard linux net thingees -- inetd, ping"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${A}"
-DEPEND=">=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc"
+
 src_compile() {                           
 
     try ./configure
