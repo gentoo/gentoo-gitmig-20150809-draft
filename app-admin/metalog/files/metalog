@@ -1,0 +1,28 @@
+#!/bin/sh
+#RCUPDATE:1 2 3 4 5:19:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=metalog
+opts="start stop restart"
+
+EXE=/usr/sbin/metalog
+
+start() {
+    ebegin "Starting $SERVICE..."
+    start-stop-daemon --start --quiet --exec $EXE -- -B -s
+    eend $? "Started $SERVICE." "Error Starting $SERVICE."
+}
+
+stop() {
+    ebegin "Stopping $SERVICE..."
+    start-stop-daemon --stop --quiet --exec $EXE
+    eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+}
+
+restart() {
+    stop
+    start
+}
+
+doservice ${@}
