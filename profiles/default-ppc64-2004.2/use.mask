@@ -33,3 +33,6 @@ junit
 guile
 uclibc
 caps
+
+# for now from xorg ... but likely not for long as this is desirable!
+dlloader

@@ -43,3 +43,6 @@ nptl
 uclibc
 guile
 caps
+
+# for now for xorg this is likely to become quite desirable
+dlloader
