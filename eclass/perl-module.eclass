@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.54 2003/10/24 05:09:32 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.55 2003/12/22 20:40:05 rac Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -17,6 +17,7 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 eval `perl '-V:version'`
 newdepend ">=dev-lang/perl-5.8.0-r12"
 SRC_PREP="no"
+SRC_TEST="skip"
 
 SITE_LIB=""
 ARCH_LIB=""
@@ -49,6 +50,10 @@ perl-module_src_compile() {
 		make ${mymake} || die "compilation failed"
 	fi
 
+	if [ "${SRC_TEST}" == "do" ]; then
+		perl-module_src_test || die "test failed"
+		SRC_TEST="done"
+	fi
 }
 
 perl-module_src_test() {
