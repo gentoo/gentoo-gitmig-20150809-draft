@@ -1,11 +1,15 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.7 2002/04/12 19:02:37 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.8 2002/04/12 21:57:32 spider Exp $
 
 
-  11 Apr 2002; Spider <spider@gentoo.org>
+
+*mozilla-0.9.9-r2 (12 Apr 2002)
+
+  12 Apr 2002; Spider <spider@gentoo.org>
   Update all glib dependencies to use glib-1.2*  in preparation of
 unmasking the glib-2.0.1 packages
+  Update libpng dependency
 
   20 Mar 2002; Chad Huneycutt <chadh@gentoo.org> mozilla-0.9.9-r1.ebuild :
   -changed virtual jdk depend to virtual/jre-r1 per karltk's advice for new
