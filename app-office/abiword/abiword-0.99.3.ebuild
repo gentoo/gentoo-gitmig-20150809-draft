@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.99.3.ebuild,v 1.1 2002/03/21 17:21:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.99.3.ebuild,v 1.2 2002/03/26 02:14:00 azarah Exp $
 
 S=${WORKDIR}/${P}/abi
 DESCRIPTION="Text processor"
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	>=dev-libs/libunicode-0.4-r1
 	>=gnome-base/bonobo-1.0.9-r1
 	>=gnome-extra/gal-0.13-r1 )
-	>=sys-devel/automake-1.6
+	>=sys-devel/automake-1.5d-r1
 	perl?  ( >=sys-devel/perl-5.6 )
 	spell? ( >=app-text/pspell-0.11.2 )
 	xml2?  ( >=dev-libs/libxml2-2.4.10 )
