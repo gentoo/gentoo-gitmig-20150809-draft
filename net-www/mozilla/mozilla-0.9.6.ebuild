@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6.ebuild,v 1.1 2001/11/23 01:02:03 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6.ebuild,v 1.2 2001/11/23 01:04:00 verwilst Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla web browser"
@@ -54,7 +54,8 @@ src_compile() {
 		     --enable-detect-webshell-leaks			\
 		     --with-java-supplement				\
 		     --with-extensions=default				\
-		     --enable-optimize=-O2				\
+		     --enable-optimize=-O3				\
+		     --with-extensions=default,inspector,venkman,irc    \
 		     --with-default-mozilla-five-home=/usr/lib/mozilla	\
 		     ${myconf} || die
 
