@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.7 2003/11/18 15:01:18 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.8 2003/12/12 19:11:19 usata Exp $
 
 inherit cannadic
 
 IUSE="doc"
 
-MY_P="Canna36${PV#*_}"
+MY_P="Canna${PV//[._]/}"
 
 DESCRIPTION="A client-server based Kana-Kanji conversion system"
 HOMEPAGE="http://canna.sourceforge.jp/"
@@ -29,6 +29,8 @@ src_unpack() {
 	cd ${S}
 	find . -name '*.man' -o -name '*.jmn' | xargs sed -i.bak -e 's/1M/8/g'
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd dic/phono
+	epatch ${FILESDIR}/${PN}-kpdef-gentoo.diff
 }
 
 src_compile() {
