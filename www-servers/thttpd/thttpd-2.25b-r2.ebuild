@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r2.ebuild,v 1.1 2005/03/27 17:26:44 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r2.ebuild,v 1.2 2005/03/27 17:27:55 stuart Exp $
 
 PHPSAPI="thttpd"
 
 MY_PHP_P="php-5.0.3"
 MY_THTTPD_P="${P%[a-z]*}"
 
-inherit php5-sapi-r1 flag-o-matic
+inherit php5-sapi-r2 flag-o-matic
 
 DESCRIPTION="Small and fast multiplexing webserver."
 HOMEPAGE="http://www.acme.com/software/thttpd/"
