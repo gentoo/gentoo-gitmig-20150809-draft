@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha14-r1.ebuild,v 1.1 2003/07/17 01:35:06 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha14-r1.ebuild,v 1.2 2003/08/05 15:05:15 vapier Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P/_/}
 DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
@@ -9,8 +11,8 @@ SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz
 	 http://www.xcdroast.org/xcdr098/patches/error_write_tracks.patch
 	 http://www.xcdroast.org/xcdr098/patches/dvd_atip.patch"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ppc"
 IUSE="nls"
 

@@ -1,50 +1,42 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.9 2003/06/21 00:11:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.10 2003/08/05 15:04:16 vapier Exp $
 
 inherit flag-o-matic
 
+DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
+HOMEPAGE="http://cdrdao.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.src.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc alpha"
 IUSE="gnome"
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
-SRC_URI="mirror://sourceforge/${PN}/${P}.src.tar.gz"
-HOMEPAGE="http://cdrdao.sourceforge.net/"
-SLOT="0"
-LICENSE="GPL-2"
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 
 	>=dev-cpp/gnomemm-1.2.2 )"
-
 DEPEND=">=dev-util/pccts-1.33.24-r1
 	${RDEPEND}"
 
-KEYWORDS="x86 ~ppc ~sparc alpha"
-
 src_compile() {
-	
 	local mygnome=""
 
 	if [ "`use gnome`" ] ; then
 		mygnome=" --with-gnome"
-		CFLAGS="${CFLAGS} `/usr/bin/gtkmm-config --cflags`"
-		CXXFLAGS="${CXXFLAGS} `/usr/bin/gtkmm-config --cflags` -fno-exceptions"
-		
+		append-flags `/usr/bin/gtkmm-config --cflags` -fno-exceptions
 	fi
-
 	# -funroll-loops do not work
-	
 	filter-flags "-funroll-loops"	
 
 	./configure "${mygnome}" \
 		--prefix=/usr \
 		--build="${CHOST}"\
-		--host="${CHOST}"
-	
+		--host="${CHOST}" \
+		|| die "configure failed"
 	emake || die
 }
 
 src_install() {
-
 	# cdrdao gets definitely installed
 	# binary
 	dobin dao/cdrdao
@@ -62,11 +54,8 @@ src_install() {
 	docinto ""
 	dodoc COPYING CREDITS INSTALL README* Release*
 	
- 
 	# and now the optional GNOME frontend
-	if [ "`use gnome`" ]
-	then
-
+	if [ "`use gnome`" ] ; then
 		# binary
 		into /usr
 		dobin xdao/gcdmaster

@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha13.ebuild,v 1.6 2003/06/14 00:04:21 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha13.ebuild,v 1.7 2003/08/05 15:05:15 vapier Exp $
 
 S=${WORKDIR}/${P/_/}
 DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
 HOMEPAGE="http://www.xcdroast.org/"
 SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="nls"
 
@@ -19,7 +19,6 @@ DEPEND="=x11-libs/gtk+-1.2*
 	>=app-cdr/cdrtools-2.0"
 
 src_compile() {
-	
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 

@@ -1,36 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.22 2003/07/12 21:39:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.23 2003/08/05 15:04:16 vapier Exp $
 
-IUSE="gnome"
-
-inherit flag-o-matic
-
+inherit flag-o-matic eutils
 strip-flags -funroll-loops
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
-SRC_URI="mirror://sourceforge/cdrdao/${P}.src.tar.gz"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
-SLOT="0"
+SRC_URI="mirror://sourceforge/cdrdao/${P}.src.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc "
+IUSE="gnome"
+
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 
 	<dev-cpp/gtkmm-1.3.0
 	>=dev-cpp/gnomemm-1.1.17 )"
-
 DEPEND=">=dev-util/pccts-1.33.24-r1
 	${RDEPEND}"
-
-KEYWORDS="x86 ppc sparc "
 
 src_unpack() {
 	unpack ${A}
 	
-	patch -p0 <${FILESDIR}/${P}-c++.patch || die
+	epatch ${FILESDIR}/${P}-c++.patch
 
-	if [ ! "`use gnome`" ] ; then
-		patch -p0 <${FILESDIR}/${P}-gentoo.diff || die
-	fi
+	[ ! "`use gnome`" ] && epatch ${FILESDIR}/${P}-gentoo.diff
 
 	cd ${S}/dao
 	wget http://cdrdao.sourceforge.net/${P}.drivers
@@ -54,8 +49,8 @@ src_compile() {
 	./configure "${mygnome}" \
 		--prefix=/usr \
 		--build="${CHOST}"\
-		--host="${CHOST}"
-		
+		--host="${CHOST}" \
+		|| die "configure failed"
 	emake || die
 }
 
