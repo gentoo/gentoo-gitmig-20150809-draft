@@ -1,5 +1,15 @@
-MD5 6f15bc0e435fe15c4f98ae04faac8085 ChangeLog 2218
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7170802db0a7bac0fc873b4a263e67d9 ChangeLog 2327
 MD5 5464e37bd9b3c96946ef499ec1cea563 gtkDPS-0.3.3-r1.ebuild 844
-MD5 127ac1f1f23c5e89b4ba7862fb93654c gtkDPS-0.3.4.ebuild 982
+MD5 e80e2675809b485b640ebcc7ac2efd91 gtkDPS-0.3.4.ebuild 974
 MD5 8f3772c51d414a6f9200895eb7aeb5df files/digest-gtkDPS-0.3.3-r1 64
 MD5 7ce6795f1acf0df797038cc2b116d66d files/digest-gtkDPS-0.3.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBh4CqmdTrptrqvGERApiOAJ9byL0xicUQ154wGh1NkjSCLRjQLwCfSyPh
+5vCPLYvw+nbUoRHzxLQmXYI=
+=t13/
+-----END PGP SIGNATURE-----

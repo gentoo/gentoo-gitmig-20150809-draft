@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkDPS
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.17 2004/11/02 01:56:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.18 2004/11/02 12:42:11 dragonheart Exp $
+
+  02 Nov 2004; Daniel Black <dragonheart@gentoo.org> gtkDPS-0.3.4.ebuild:
+  Make DEPENDs RDEPENDS as well
 
   01 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   gtkDPS-0.3.3-r1.ebuild, gtkDPS-0.3.4.ebuild:

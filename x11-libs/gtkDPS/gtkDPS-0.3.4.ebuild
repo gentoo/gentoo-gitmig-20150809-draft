@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.13 2004/11/02 01:56:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.14 2004/11/02 12:42:11 dragonheart Exp $
 
 inherit gnuconfig
 
@@ -15,9 +15,8 @@ KEYWORDS="~x86 ~sparc alpha ppc ~amd64"
 
 DEPEND="virtual/libc
 	=x11-libs/gtk+-1.2*
-	virtual/x11"
-
-RDEPEND="nls? ( sys-devel/gettext )"
+	virtual/x11
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	# needed for alpha and amd64 ... but run everywhere
