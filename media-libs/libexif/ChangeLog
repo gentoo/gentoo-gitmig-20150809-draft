@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.5 2003/08/23 23:38:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.6 2003/08/30 05:22:28 seemant Exp $
+
+  29 Aug 2003; Seemant Kulleen <seemant@gentoo.org> libexif-0.5.12.ebuild:
+  a blank /usr/share/locale directory was getting created for both nls and
+  non-nls. removing it for non-nls
 
 *libexif-0.5.12 (24 Aug 2003)
 
