@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.13 2004/08/19 14:38:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.14 2004/08/23 04:42:42 solar Exp $
 
 # drobbins optimized this script at some point which made a bootstrap
 # to complete 20 mins to 2 hours faster, depending on CPU. He did this
@@ -56,10 +56,11 @@ if [ ! -d "${MYPROFILEDIR}" ] ; then
 	exit 1
 fi
 
-if [ ! -f "${MYPROFILEDIR}/parent" ] ; then
-	echo "!!! Error:  You must use 'bootstrap.sh' with non-cascading profiles. Exiting."
-	exit 1
-fi
+# A flat profile is a cascaded profile with one level.
+#if [ ! -f "${MYPROFILEDIR}/parent" ] ; then
+#	echo "!!! Error:  You must use 'bootstrap.sh' with non-cascading profiles. Exiting."
+#	exit 1
+#fi
 
 # spython is 1.0_rc6 and earlier and python is 1.0 and later
 [ -e /usr/bin/spython ] && PYTHON="/usr/bin/spython" || PYTHON="/usr/bin/python"
