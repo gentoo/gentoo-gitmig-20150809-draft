@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-truecombat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/ChangeLog,v 1.9 2004/09/30 00:06:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/ChangeLog,v 1.10 2004/10/07 17:07:17 humpback Exp $
+
+  07 Oct 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  quake3-truecombat-1.2.ebuild:
+  Fixing url for truecombat-1.0to1.0a.zip fixes bug #66088
 
   29 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
   Fixing invalid digest entry.
