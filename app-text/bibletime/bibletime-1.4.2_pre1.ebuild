@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.4.2_pre1.ebuild,v 1.5 2004/07/06 12:19:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.4.2_pre1.ebuild,v 1.6 2004/07/07 00:01:13 kanaka Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="curl"
 
-DEPEND=">=app-text/sword-1.5.8_pre1
+RDEPEND=">=app-text/sword-1.5.8_pre1
 	>=net-misc/curl-7.10"
 DEPEND=${RDEPEND}
 need-kde 3
