@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.5 2002/12/13 10:59:46 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.6 2003/01/09 16:43:09 mholzer Exp $
+
+*arping-1.05 (09 Jan 2003)
+
+  09 Jan 2003; Martin Holzer <mholzer@gentoo.org> arping-1.05.ebuild
+  files/digest-arping-1.05 ChangeLog :
+  Version bumped. Closes #13551
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
