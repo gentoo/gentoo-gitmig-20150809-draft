@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.10 2004/10/17 09:01:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.11 2004/11/17 16:58:29 corsair Exp $
+
+  17 Nov 2004; Markus Rothe <corsair@gentoo.org> tomcat-5.0.27-r4.ebuild,
+  tomcat-5.0.28.ebuild:
+  marked ~ppc64; bug #55690
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> files/5.0.28/jikes.diff:
   fix path in jikes patch, #67847
