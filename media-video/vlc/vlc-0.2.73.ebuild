@@ -1,6 +1,6 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Nathaniel Hirsch <nh2@njit.edu> Achim Gottinge <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.2.73.ebuild,v 1.2 2001/05/01 18:29:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.2.73.ebuild,v 1.3 2001/09/30 11:54:16 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DVD / video player"
@@ -13,7 +13,7 @@ DEPEND=">=media-libs/libsdl-1.1.8-r1
     ggi? ( >=media-libs/libggi-2.0_beta3 )
     qt? ( >=x11-libs/qt-x11-2.3.0 )
     gtk? ( >=x11-libs/gtk+-1.2.9 )
-    alsa? ( >=media-libs/alsa-lib-0.5.10 )
+    #alsa? ( >=media-libs/alsa-lib-0.5.10 )
     X? ( virtual/x11 )"
     #kde? ( >=kde-base/kdelibs-2.1.1 )
 
@@ -57,11 +57,14 @@ src_compile(){
     else
       myconf="$myconf --disable-x11"
     fi
-    if [ "`use alsa`" ]
-    then
-      myconf="$myconf --enable-alsa"
-    fi
-    try ./configure --prefix=/usr $myconf --with-sdl
+
+#    Currently alsa support in vlc requires Alsa 0.90 (which is unstable).
+#    Until some release of alsa is released which works with vlc don't use it.
+#    if [ "`use alsa`" ]
+#    then
+#      myconf="$myconf --enable-alsa"
+#    fi
+    try ./configure --prefix=/usr $myconf --with-sdl --disable-alsa
 	try make
 	}
 src_install(){
