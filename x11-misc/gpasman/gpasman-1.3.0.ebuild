@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.3.0.ebuild,v 1.13 2004/05/06 17:51:13 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.3.0.ebuild,v 1.14 2004/05/23 16:29:07 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gpasman: GTK Password manager"
@@ -11,7 +11,7 @@ HOMEPAGE="http://gpasman.nl.linux.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ppc"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*"

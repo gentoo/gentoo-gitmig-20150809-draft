@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.7 2004/05/10 14:52:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.8 2004/05/23 16:44:05 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://ypwong.org/hotkeys/"
 IUSE="X gtk xosd"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc ~amd64 ppc"
 
 DEPEND="X? ( virtual/x11 )
 	>=dev-libs/libxml2-2.2.8
