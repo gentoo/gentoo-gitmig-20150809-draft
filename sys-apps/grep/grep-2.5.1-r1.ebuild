@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.12 2003/09/21 17:22:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.13 2003/10/01 14:26:44 avenj Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/grep/grep.html"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/${PN}/${P}.tar.gz
 	ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls build"
