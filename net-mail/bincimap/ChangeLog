@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/bincimap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.1 2003/10/11 20:26:52 nakano Exp $
+
+*bincimap-1.2.3 (11 Oct 2003)
+
+  11 Oct 2003; Masatomo Nakano <nakano@gentoo.org> bincimap-1.2.3.ebuild,
+  metadata.xml, files/bincimap-1.2.3-gentoo.diff:
+  Initial import.
+
