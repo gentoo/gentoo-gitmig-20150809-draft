@@ -10,5 +10,5 @@ MD5 e85fdab29910541239d107476ff1a592 files/drip-0.8.1-gcc-3.1.patch 546
 MD5 39f83fd93ac2e8bb8b9b89afcbcaedcd files/digest-drip-0.8.1-r5 62
 MD5 6ae51a54ca05edca6f931b33c8a24a0c files/digest-drip-0.9.0_rc1 66
 MD5 23432e9d253629f04e963b5f9ad807c9 files/digest-drip-0.9.0_alpha3 66
-MD5 d5ccdf84224a7be7d3cf54ac5bd6cd53 files/dripgetdvd.sh 1336
+MD5 a7d5edb693cf81b8e5fbc833cf221516 files/dripgetdvd.sh 1330
 MD5 89536060720610232d7c3306761d93eb files/drip.desktop 119
