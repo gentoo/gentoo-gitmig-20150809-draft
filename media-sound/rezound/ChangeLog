@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.13 2004/06/25 00:19:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.14 2004/06/28 21:19:05 fvdpol Exp $
+
+*rezound-0.9.0_beta-r1 (28 Jun 2004)
+
+  28 Jun 2004; Frank van de Pol <fvdpol@gentoo.org>
+  +files/rezound-0.9.0_beta-libfox1.2-code.patch.gz,
+  +files/rezound-0.9.0_beta-libfox1.2-makefiles.patch.gz,
+  +rezound-0.9.0_beta-r1.ebuild:
+  Patched rezound 0.9beta to make it compatible with gcc3.3 and the new
+  libfox1.2 library. Closes bug #51857 and #54660.
 
   13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   rezound-0.8.3_beta-r2.ebuild, rezound-0.9.0_beta.ebuild:
