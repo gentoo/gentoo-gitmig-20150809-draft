@@ -309,8 +309,7 @@ Inherits c,kde and adds qt deps. Sets HOMEPAGE=apps.kde.com.
 
 2.6 kde-i18n.eclass
 
-Meant for the kde-i18n-* packages, possibly also for the
-koffice-i18n to-be-written packages. Niche use.
+Meant for the kde-i18n-* packages. Niche use.
 
 In fact, all kde-i18n ebuilds are completely identical and
 so all they have to do is inherit from this eclass.
@@ -318,7 +317,15 @@ so all they have to do is inherit from this eclass.
 Inherits from kde,kde.org. Makes a few differences, such
 as PROVIDE virtual/kde-i18n, correct $S, HOMEPAGE and DESCRIPTION.
 
-2.7 kde-dist.eclass
+2.7 koffice-i18n.eclass
+
+Meant for the koffice-i18n-* packages. Niche use. Very similar
+to kde-i18n.eclass.
+
+All kde-i18n ebuilds are completely identical and so all
+they have to do is inherit from this eclass.
+
+2.8 kde-dist.eclass
 
 Meant for the base kde distribution packages in kde-base/*.
 Inherits kde-base, kde.org and kde-objprelink. Adds the
@@ -326,15 +333,15 @@ correct DESCRIPTION and HOMEPAGE and kdelibs-${PV} deps.
 The simpler/smaller kde-base/ packages (e.g. kdetoys) make
 no changes at all; most of those that do only add deps.
 
-2.8 c.eclass
+2.9 c.eclass
 
 Adds gcc and glibc to DEPEND and RDEPEND.
 
-2.9 autoconf.eclass
+2.10 autoconf.eclass
 
 Adds make/automake/autoconf to DEPEND.
 
-2.10 debug.eclass
+2.11 debug.eclass
 
 Adds verbose output debugging functions. Is inherited by
 virtual.eclass.
@@ -409,7 +416,7 @@ output is further disabled in inherit() in inherit.eclass
 to avoid extra-inheriting. You can enable it there by uncommenting
 the appropriate lines.
 
-2.11 kde-objprelink.eclass
+2.12 kde-objprelink.eclass
 
 This eclass has been removed in v3.3 Its contents were merged
 into kde.eclass.

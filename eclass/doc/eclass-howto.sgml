@@ -268,13 +268,24 @@
     kde-i18n.eclass
    </title>
    <para>
-    Meant for the kde-i18n-* packages, possibly also for the koffice-i18n to-be-written packages. Niche use.
+    Meant for the kde-i18n-* packages. Niche use.
    </para>
    <para>
     In fact, all kde-i18n ebuilds are completely identical and so all they have to do is inherit from this eclass.
    </para>
    <para>
     Inherits from kde,kde.org. Makes a few differences, such as PROVIDE virtual/kde-i18n, correct &dollar;S, HOMEPAGE and DESCRIPTION.
+   </para>
+   </sect2>
+   <sect2>
+    <title>
+    koffice-i18n.eclass
+   </title>
+   <para>
+    Meant for the koffice-i18n-* packages. Niche use. Very similar to kde-i18n.eclass.
+   </para>
+   <para>
+    All kde-i18n ebuilds are completely identical and so all they have to do is inherit from this eclass.
    </para>
    </sect2>
    <sect2>

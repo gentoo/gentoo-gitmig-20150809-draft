@@ -1,3 +1,6 @@
+26/10
+Added koffice-i18n.eclass, very similar to kde-i18n.eclass.
+
 15/10
 Added some multi-QTDIR failsafes:
 myconf+=--with-qt-dir=${QTDIR}

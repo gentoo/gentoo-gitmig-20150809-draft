@@ -506,8 +506,7 @@ Meant for standard kde apps, of both 2.1 and 2.2 architectures.
 kde-i18n.eclass
 \layout Standard
 
-Meant for the kde-i18n-* packages, possibly also for the koffice-i18n to-be-writ
-ten packages.
+Meant for the kde-i18n-* packages.
  Niche use.
 \layout Standard
 
@@ -518,6 +517,18 @@ In fact, all kde-i18n ebuilds are completely identical and so all they have
 Inherits from kde,kde.org.
  Makes a few differences, such as PROVIDE virtual/kde-i18n, correct $S,
  HOMEPAGE and DESCRIPTION.
+\layout Subsection
+
+koffice-i18n.eclass
+\layout Standard
+
+Meant for the koffice-i18n-* packages.
+ Niche use.
+ Very similar to kde-i18n.eclass.
+\layout Standard
+
+All kde-i18n ebuilds are completely identical and so all they have to do
+ is inherit from this eclass.
 \layout Subsection
 
 kde-dist.eclass

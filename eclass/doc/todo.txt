@@ -5,10 +5,6 @@ newdepend() in virtual.eclass, consider functions.eclass or similar
 
 finish multi-qt stuff
 
-koffice-i18n packages
-
-add objprelink features to all kde app ebuilds
-
 sort out docs/sgml, get link from site
 
 cleanup or remove kde.org.eclass - cancelled?
