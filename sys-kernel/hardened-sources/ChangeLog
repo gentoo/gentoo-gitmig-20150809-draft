@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.38 2004/09/08 20:42:21 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.39 2004/11/28 18:10:26 solar Exp $
+
+*hardened-sources-2.4.28 (28 Nov 2004)
+
+  28 Nov 2004; <solar@gentoo.org> +hardened-sources-2.4.28.ebuild:
+  security bump. Thank tocharian for rolling a new patchset
 
 *hardened-sources-2.4.27-r3 (08 Sep 2004)
 
