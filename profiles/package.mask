@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2898 2004/05/31 03:45:34 g2boojum Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2899 2004/05/31 12:09:22 twp Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <twp@gentoo.org> (31 May 2004)
+# Pending resolution of bug # 52544
+=app-text/man2html-1.5l-r2
 
 # <g2boojum@gentoo.org> (30 May 2004)
 # New USE=mailwrapper stuff, to be unmasked all at once.
