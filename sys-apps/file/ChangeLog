@@ -1,13 +1,18 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.55 2004/07/26 03:44:17 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.56 2004/07/28 16:02:50 vapier Exp $
+
+*file-4.10 (28 Jul 2004)
+
+  28 Jul 2004; Mike Frysinger <vapier@gentoo.org> +file-4.10.ebuild:
+  Version bump.
 
   25 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org>
   Fixed Manifest.
 
   24 Jun 2004; Alexander Plank <alexander@gentoo.org> file-4.08.ebuild:
   add macos keyword (emerge 4.09 gives error "emerge: there are no ebuilds to 
-satisfy "virtual/python"."
+  satisfy "virtual/python"."
 
   22 Jul 2004; <solar@gentoo.org> file-4.09.ebuild:
   enable shared support for uclibc

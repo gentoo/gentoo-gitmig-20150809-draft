@@ -1,22 +1,34 @@
-MD5 3cb6f4828ea2924f699e1357a687dede ChangeLog 7834
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b82d3b8eec5f2a293bcf63de7f8b953 ChangeLog 7948
 MD5 cb23301c27d4a9fd31c6b5100e41a18c file-3.41.ebuild 997
 MD5 720ff71d900c2c319fdc992a6abf8474 file-4.02.ebuild 1000
 MD5 f70e8a6a8a387e07b8ded7c60fc7cfc8 file-4.06.ebuild 1666
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 8a5dc3c73c275ca5879755b9acbd0b7f file-4.10.ebuild 1971
 MD5 bc885fe3857d9e8857f3344378892ef9 file-4.07-r1.ebuild 1604
 MD5 c32338854415c421bedb779cdd25b42c file-4.07.ebuild 1552
 MD5 2d8842c2b759e9bc6ffa78466552a078 file-4.08.ebuild 1548
 MD5 25180390528268c7b665df6292e38a91 file-4.09.ebuild 1966
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 8cf0ba615168e0a01ddd576d39b19efe files/digest-file-4.10 61
 MD5 eabc698678353b52ea7d9bfb724d4e1e files/digest-file-3.41 268
 MD5 fd38ae2f761ce496f7caedf3226166ae files/digest-file-4.02 61
 MD5 50700bf6bff49778fd8c6083466a0813 files/digest-file-4.06 61
-MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07 61
-MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07-r1 61
-MD5 9ab14ea35a2db2864bb6e92d1ca87f17 files/digest-file-4.08 61
-MD5 655e5c463709e244970b23b64aaf8bf7 files/digest-file-4.09 61
 MD5 aff834708f034a4995abba4192e79583 files/file-3.39-gentoo.diff 4673
 MD5 aff834708f034a4995abba4192e79583 files/file-3.41-mips-gentoo.diff 4673
-MD5 8153e3726c4dad50b53c76eaf32b4833 files/file-4.07-gentoo.diff 648
-MD5 2b50afc88e81450f52a964b98b7d0ef8 files/file-4.08-uclibc.patch 816
 MD5 8f6cec8c0754678a2817139182637eac files/file-4.xx-mips-gentoo.diff 13035
+MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07 61
+MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07-r1 61
+MD5 8153e3726c4dad50b53c76eaf32b4833 files/file-4.07-gentoo.diff 648
+MD5 9ab14ea35a2db2864bb6e92d1ca87f17 files/digest-file-4.08 61
+MD5 655e5c463709e244970b23b64aaf8bf7 files/digest-file-4.09 61
+MD5 2b50afc88e81450f52a964b98b7d0ef8 files/file-4.08-uclibc.patch 816
 MD5 2cd6110e84c85c183c7b8dcd0be814e7 files/ltconfig-uclibc.patch 1167
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBB841HTu7gpaalycRAtnWAJ9xdzgm3fFflgmDI7FpzMitDEtkOACfU/1F
+Dfwm5qgem2xLYBs8KJGI4zo=
+=xr80
+-----END PGP SIGNATURE-----
