@@ -31,10 +31,6 @@ sys-apps/console-data
 dev-dotnet/gtk-sharp-base
 dev-dotnet/glib-sharp
 
-# <robbat2@gentoo.org> (23 July 2003)
-# Need to fix patches
-=dev-db/mysql-4.0.14
-
 # <caleb@gentoo.org> (20 July 2003)
 # Masked until announcement is made
 =kde-base/kdelibs-3.1.2-r1
