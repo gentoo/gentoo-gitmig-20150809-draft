@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.1.ebuild,v 1.2 2005/01/23 10:45:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.1.ebuild,v 1.3 2005/03/28 14:11:40 chriswhite Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -16,7 +16,7 @@ DEPEND="media-libs/libpng
 	X? ( virtual/x11 )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
-IUSE="X nls lirc mozilla"
+IUSE="nls lirc mozilla"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc sparc ~amd64 ~ppc64"
@@ -27,16 +27,14 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-menu-fix.patch
+	sed -i -e 's:gxine_logo.png:gxine:' gxine.desktop
 }
 
 src_compile() {
-	# Most of these are not working currently, but are here for completeness
-	local myconf
-	use X || myconf="${myconf} --disable-x11 --disable-xv"
-
-	myconf="${myconf} $(use_enable nls)"
-
-	econf ${myconf} || die
+	econf \
+		$(use_enable nls) \
+		$(use_enable lirc) \
+		--disable-dependency-tracking || die
 	emake || die
 }
 
@@ -48,8 +46,8 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 
-	insinto /usr/share/pixmaps
-	doins pixmaps/gxine-logo.png
+	insinto /usr/share/icons/hicolor/48x48/apps
+	newins pixmaps/gxine-logo.png gxine.png
 
 	use mozilla && inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
 }

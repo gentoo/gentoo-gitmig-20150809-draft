@@ -1,9 +1,19 @@
-MD5 ccea1694d0ee9daa21110a21de7f3082 ChangeLog 3466
-MD5 feb2fd6577151e760b943fb50a12c061 gxine-0.4.1.ebuild 1373
-MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d5367593dd0f0961b67359d962e87470 ChangeLog 3588
 MD5 c30eeaab4f2b0af32ab3fbf53b7b275e gxine-0.3.3-r1.ebuild 1323
-MD5 0b50a3889d71fe54fb9249c53257d9d6 files/gxine-0.4.1-menu-fix.patch 873
-MD5 b18643e0d818679a729863e11852b1ac files/gxine-0.3.3-Makefile.in.patch 360
+MD5 e4b36868c2f5e0d1d2519bf766be8bc0 gxine-0.4.1.ebuild 1338
+MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 a0134d60cfc89d88f7f76826e3728379 files/digest-gxine-0.3.3-r1 64
-MD5 2a140bbbc46a7d9e1117771638ad8d60 files/gxine-0.3.3-http-overflow.patch 484
 MD5 69140a1cb8cc6acb6ffdca76e9301493 files/digest-gxine-0.4.1 64
+MD5 b18643e0d818679a729863e11852b1ac files/gxine-0.3.3-Makefile.in.patch 360
+MD5 2a140bbbc46a7d9e1117771638ad8d60 files/gxine-0.3.3-http-overflow.patch 484
+MD5 0b50a3889d71fe54fb9249c53257d9d6 files/gxine-0.4.1-menu-fix.patch 873
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSAkKFdQwWVoAgN4RAoeoAKDoKdgpwG2X47dUxpZxRu/aFTZxVwCfUj8g
+LXedf/Hvy9uAvXyBa1zcnB0=
+=sWSW
+-----END PGP SIGNATURE-----
