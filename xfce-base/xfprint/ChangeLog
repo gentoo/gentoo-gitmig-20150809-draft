@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfprint
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.45 2005/01/31 15:33:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.46 2005/02/08 23:43:21 kloeri Exp $
+
+  09 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> xfprint-4.2.0.ebuild:
+  Stable on alpha.
 
   31 Jan 2005; lanius@gentoo.org xfprint-4.2.0.ebuild:
   stable on amd64
