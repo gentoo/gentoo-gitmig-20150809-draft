@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.39 2005/01/20 15:50:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.40 2005/01/24 23:52:40 eradicator Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -622,10 +622,11 @@ src_unpack() {
 
 
 src_compile() {
+	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
 	local MLTEST=$(type dyn_unpack)
 	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
 		OABI="${ABI}"
-		for ABI in ${MULTILIB_ABIS}; do
+		for ABI in $(get_abi_order); do
 			export ABI
 			einfo "Compiling ${ABI} glibc"
 			src_compile && mv ${WORKDIR}/build ${WORKDIR}/build.${ABI}
@@ -699,10 +700,11 @@ src_test() {
 }
 
 src_install() {
+	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
 	local MLTEST=$(type dyn_unpack)
 	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
 		OABI="${ABI}"
-		for ABI in ${MULTILIB_ABIS}; do
+		for ABI in $(get_abi_order); do
 			export ABI
 			mv ${WORKDIR}/build.${ABI} ${WORKDIR}/build
 
