@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.176 2004/08/05 15:28:16 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.177 2004/08/06 02:30:09 robbat2 Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -49,6 +49,7 @@ curlwrappers - Adds support for using curl in streams
 db2 - Enables support for IBM DB2 database server
 dba - Enables dbm-compatible layers
 dbase - Adds support for dbase file format
+dbm - Adds support for generic DBM databases.
 dbmaker - Adds support for dbmaker database server
 dbx - Adds database abstraction layer
 debug - Tells configure and the makefiles to build for debugging. Effects vary acrosss packages, but generally it will at least add -g to CFLAGS. Remember to set FEATURES+=nostrip too.
@@ -273,6 +274,7 @@ xml2 - Check/Support flag for XML library (version 2)
 xmlrpc - Support for xml-rpc library
 xmms - Check/Support for XMMS (X MultiMedia System) player.
 xosd - Sends display using the X On Screen Display library
+xpm - Support for XPM graphics format.
 xsl - Check/Support flag for XSL library (version 1)
 xv - Adds in optional support for the Xvideo extension (an X API for video playback)
 xvid - Adds support for xvid.org's open-source mpeg-4 codec
