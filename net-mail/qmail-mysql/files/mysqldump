@@ -1,0 +1,37 @@
+CREATE TABLE alias (
+  username varchar(32) DEFAULT '' NOT NULL,
+  alias varchar(128) DEFAULT '' NOT NULL,
+  alias_username varchar(32) DEFAULT '' NOT NULL,
+  alias_host varchar(128) DEFAULT '' NOT NULL,
+  KEY username (username),
+  KEY alias (alias),
+  UNIQUE user_alias (username,alias,alias_username,alias_host)
+);
+
+CREATE TABLE mailbox (
+  username varchar(32) DEFAULT '' NOT NULL,
+  uid mediumint(9) DEFAULT '0' NOT NULL,
+  gid mediumint(9) DEFAULT '0' NOT NULL,
+  home varchar(128) DEFAULT '' NOT NULL,
+  password varchar(16) DEFAULT '' NOT NULL,
+  PRIMARY KEY (username),
+  UNIQUE home (home),
+  KEY password (password)
+);
+
+CREATE TABLE rcpthosts (
+  host varchar(128) DEFAULT '' NOT NULL,
+  PRIMARY KEY (host)
+);
+
+CREATE TABLE virtual (
+  username varchar(32) DEFAULT '' NOT NULL,
+  ext varchar(128) DEFAULT '' NOT NULL,
+  virtual_username varchar(32) DEFAULT '' NOT NULL,
+  virtual_host varchar(128) DEFAULT '' NOT NULL,
+  PRIMARY KEY (virtual_username,virtual_host),
+  KEY (virtual_username),
+  KEY (virtual_host),
+  UNIQUE virtual (username,ext,virtual_username,virtual_host)
+);
+
