@@ -1,0 +1,3 @@
+#configure which interface or interfaces to for dhcp to listen on
+#list all interfaces space separated.
+IFACE="eth0"
