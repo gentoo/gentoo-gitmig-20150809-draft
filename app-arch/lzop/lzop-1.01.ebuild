@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/lzop-1.01.ebuild,v 1.9 2004/12/17 21:38:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/lzop-1.01.ebuild,v 1.10 2005/01/01 11:47:51 eradicator Exp $
 
 DESCRIPTION="Utility for fast (even real-time) compression/decompression"
 HOMEPAGE="http://www.oberhumer.com/opensource/lzop/"

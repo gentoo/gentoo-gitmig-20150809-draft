@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.11 2004/09/13 20:09:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.12 2005/01/01 11:58:41 eradicator Exp $
 
 MY_P="stuffit520.611linux-i386"
 DESCRIPTION="Aladdin Software's StuffIt and StuffIt Expander"

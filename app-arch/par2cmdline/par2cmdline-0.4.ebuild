@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/par2cmdline-0.4.ebuild,v 1.9 2004/11/17 17:05:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/par2cmdline-0.4.ebuild,v 1.10 2005/01/01 11:51:08 eradicator Exp $
 
 DESCRIPTION="A PAR-2.0 file verification and repair tool"
 HOMEPAGE="http://parchive.sourceforge.net/"

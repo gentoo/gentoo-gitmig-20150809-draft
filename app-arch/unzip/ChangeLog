@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/unzip
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.25 2004/06/26 09:17:41 seemant Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.26 2005/01/01 12:01:18 eradicator Exp $
 
   26 Jun 2004; Seemant Kulleen <seemant@gentoo.org> unzip-5.50-r2.ebuild:
   my mistake

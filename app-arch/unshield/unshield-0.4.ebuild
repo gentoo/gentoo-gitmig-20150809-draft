@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/unshield-0.4.ebuild,v 1.2 2004/10/18 12:15:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/unshield-0.4.ebuild,v 1.3 2005/01/01 12:01:02 eradicator Exp $
 
 DESCRIPTION="InstallShield CAB file extractor."
 HOMEPAGE="http://sourceforge.net/projects/synce/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/ipkg-utils
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.1 2004/08/24 23:18:34 solar Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.2 2005/01/01 11:46:22 eradicator Exp $
 
 *ipkg-utils-1.7 (24 Aug 2004)
 

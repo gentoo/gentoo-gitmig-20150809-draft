@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/pure-sfv-0.3.ebuild,v 1.7 2004/06/25 23:54:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/pure-sfv-0.3.ebuild,v 1.8 2005/01/01 11:55:22 eradicator Exp $
 
 DESCRIPTION="utility to test and create .sfv files and create .par files"
 HOMEPAGE="http://pure-sfv.sourceforge.net/"

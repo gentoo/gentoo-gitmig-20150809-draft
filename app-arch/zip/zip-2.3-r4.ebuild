@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r4.ebuild,v 1.10 2004/11/10 06:08:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r4.ebuild,v 1.11 2005/01/01 12:02:30 eradicator Exp $
 
 inherit toolchain-funcs eutils
 

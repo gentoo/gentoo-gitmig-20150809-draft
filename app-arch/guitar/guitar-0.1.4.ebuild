@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.27 2004/12/18 18:51:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.28 2005/01/01 11:45:32 eradicator Exp $
 
 MY_P=guiTAR-${PV}
 S=${WORKDIR}/${MY_P}

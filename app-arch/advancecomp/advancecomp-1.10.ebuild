@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/advancecomp-1.10.ebuild,v 1.8 2004/10/05 10:59:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/advancecomp-1.10.ebuild,v 1.9 2005/01/01 11:40:04 eradicator Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip-x86/gzip-x86-0.90.ebuild,v 1.5 2004/06/25 23:50:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip-x86/gzip-x86-0.90.ebuild,v 1.6 2005/01/01 11:46:02 eradicator Exp $
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}

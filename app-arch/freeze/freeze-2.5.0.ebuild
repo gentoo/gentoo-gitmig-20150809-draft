@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0.ebuild,v 1.12 2004/12/18 18:47:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0.ebuild,v 1.13 2005/01/01 11:45:03 eradicator Exp $
 
 DESCRIPTION="Freeze/unfreeze compression program"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/utils/compress/"

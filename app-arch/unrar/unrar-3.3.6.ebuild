@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.3.6.ebuild,v 1.8 2004/10/05 10:59:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.3.6.ebuild,v 1.9 2005/01/01 12:00:36 eradicator Exp $
 
 MY_PN=${PN}src
 DESCRIPTION="Uncompress rar files"

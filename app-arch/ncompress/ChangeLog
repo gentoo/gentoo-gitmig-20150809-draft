@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/ncompress
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.21 2004/12/28 20:38:14 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.22 2005/01/01 11:49:39 eradicator Exp $
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/pure-sfv
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.5 2004/06/24 21:35:02 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.6 2005/01/01 11:55:22 eradicator Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   pure-sfv-0.3.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-0.91.ebuild,v 1.1 2004/09/26 19:15:53 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-0.91.ebuild,v 1.2 2005/01/01 11:50:22 eradicator Exp $
 
 DESCRIPTION="Port of 7-Zip archiver for Unix."
 HOMEPAGE="http://p7zip.sourceforge.net/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.6.ebuild,v 1.18 2004/06/26 09:18:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.6.ebuild,v 1.19 2005/01/01 11:42:13 eradicator Exp $
 
 DESCRIPTION="Extracts files from Microsoft .cab files"
 HOMEPAGE="http://www.kyz.uklinux.net/cabextract.php3"

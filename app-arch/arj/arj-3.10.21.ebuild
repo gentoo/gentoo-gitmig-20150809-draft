@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.21.ebuild,v 1.2 2004/10/17 09:41:42 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.21.ebuild,v 1.3 2005/01/01 11:41:07 eradicator Exp $
 
 inherit gnuconfig eutils
 

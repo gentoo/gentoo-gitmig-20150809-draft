@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/atool-0.28.0.ebuild,v 1.5 2004/12/19 19:11:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/atool-0.28.0.ebuild,v 1.6 2005/01/01 11:41:22 eradicator Exp $
 
 DESCRIPTION="script for managing file archives of various types (atr,tar+gzip,zip,etc)"
 HOMEPAGE="http://www.student.lu.se/~nbi98oli/"
