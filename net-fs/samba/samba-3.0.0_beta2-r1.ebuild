@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0_alpha24-r1.ebuild,v 1.3 2003/05/30 14:08:15 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0_beta2-r1.ebuild,v 1.1 2003/07/07 00:17:11 woodchip Exp $
 
 inherit eutils
 
@@ -8,17 +8,18 @@ IUSE="kerberos mysql xml acl cups ldap pam readline python"
 IUSE="${IUSE} oav"
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
-HOMEPAGE="http://www.samba.org"
+HOMEPAGE="http://www.samba.org
+	http://www.openantivirus.org/projects.php"
 
-VSCAN_VER=0.3.2b
+VSCAN_VER=HEAD-06-25-2003
 VSCAN_MODS=${VSCAN_MODS:=fprot mks openantivirus sophos trend icap} #kapersky
 # To build the "kapersky" plugin, the kapersky lib must be installed.
 
-_CVS=_3_0_20030528
+_CVS=_3_0_20030706
 S=${WORKDIR}/${PN}${_CVS}
 
 SRC_URI="mirror://gentoo/${PN}${_CVS}.tar.bz2
-	oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2"
+	oav? http://www.openantivirus.org/snapshots/${PN}-vscan-${VSCAN_VER}.tar.gz"
 
 DEPEND="sys-devel/autoconf dev-libs/popt
 	readline? sys-libs/readline
@@ -43,17 +44,7 @@ src_unpack() {
 	# Clean up CVS and add patch(es)
 	find . -name .cvsignore | xargs rm -f
 	find . -name CVS | xargs rm -rf
-	cd source; epatch ${FILESDIR}/samba-pdb_ldap-exop.patch; cd ..
-
-	#HACK!! else get linker errors starting with vfstest
-	#and then the build will fail.  not sure whats going on
-	#with this yet.
-	if use ldap || use kerberos; then
-		cd source; cp Makefile.in Makefile.in.orig
-		sed -e "s%^\(LIBS=.*\)%\1 -llber -lldap%" Makefile.in.orig >Makefile.in
-		cd ..
-	fi
-
+	# no patches ...
 
 	# For clean docs packaging sake.
 	rm -rf ${S}/examples.bin ; cp -a ${S}/examples ${S}/examples.bin
@@ -61,10 +52,6 @@ src_unpack() {
 	# Prep samba-vscan source.
 	if use oav; then
 		cp -a ${WORKDIR}/${PN}-vscan-${VSCAN_VER} ${S}/examples.bin/VFS
-		cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/include
-		sed -e "s%^\(# define SAMBA_VERSION_MAJOR\).*%\1 3%" \
-			vscan-global.h >vscan-global.h.3
-		mv -f vscan-global.h.3 vscan-global.h
 	fi
 
 	cd ${S}/source
@@ -74,11 +61,14 @@ src_unpack() {
 src_compile() {
 	local i
 	local myconf
-	local mymods #="nisplussam"
+	local mymods
 
+	#looks like this is deprecated...
+	#mymods="nisplussam"
 	use xml && mymods="xml,${mymods}"
 	use mysql && mymods="mysql,${mymods}"
-	myconf="${myconf} --with-expsam=${mymods}"
+
+	myconf="--with-expsam=${mymods}"
 
 	use acl \
 		&& myconf="${myconf} --with-acl-support" \
@@ -138,45 +128,45 @@ src_compile() {
 		\
 		--enable-static --enable-shared \
 		--with-manpages-langs=en \
-		--with-sendfile-support \
 		--without-spinlocks \
 		--with-libsmbclient \
 		--with-automount \
 		--with-smbmount \
 		--with-winbind \
 		--with-quotas \
-		--with-tdbsam \
 		--with-syslog \
 		--with-idmap \
-		--with-utmp \
 		--host=${CHOST} ${myconf} || die
 
 	# Compile main SAMBA pieces.
-	make everything wins || die "SAMBA pieces"
+	make everything || die "SAMBA pieces"
 	#make rpctorture
 
 	# Build selected samba-vscan plugins.
-	use oav && \
-	for i in ${VSCAN_MODS}
-	do
-		cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/$i
-		make USE_INCLMKSDLIB=1 #needed for the mks build
-		assert "problem building $i vscan module"
-	done
+	if use oav; then
+		cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}
+		./configure || die "bad ${PN}-vscan-${VSCAN_VER} ./configure"
+		for i in ${VSCAN_MODS}
+		do
+			cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/$i
+			make USE_INCLMKSDLIB=1 #needed for the mks build
+			assert "problem building $i vscan module"
+		done
+	fi
 }
 
 src_install() {
-# For tesing the latest brokeness with the Make/Install system :-)
+# For testing brokeness of make install
 #	cd source
 #	make DESTDIR=${D} install installmodules install_python
-#	assert "yawn, still horribly broken ... sigh."
+#	assert "It would be nice if that worked. REALLY worked."
 
 	# Install standard binary files.
 	for i in smbclient net smbspool testparm testprns smbstatus \
-		smbcontrol smbtree tdbbackup nmblookup pdbedit editreg \
+		smbcontrol smbtree tdbbackup nmblookup pdbedit \
 		smbpasswd rpcclient smbcacls profiles ntlm_auth \
 		smbcquotas smbmount smbmnt smbumount wbinfo \
-		debug2html smbfilter talloctort # smbsh
+		debug2html smbfilter talloctort #smbsh editreg
 	do
 		exeinto /usr/bin
 		doexe source/bin/${i}
@@ -195,8 +185,8 @@ src_install() {
 	done
 
 	# Installing these two setuid-root allows users to (un)mount smbfs.
-	fperms 4755 /usr/bin/smbumount
-	fperms 4755 /usr/bin/smbmnt
+	fperms 4111 /usr/bin/smbumount
+	fperms 4111 /usr/bin/smbmnt
 
 	# Install server binaries.
 	for i in smbd nmbd swat winbindd # wrepld
@@ -340,7 +330,8 @@ src_install() {
 
 	insinto /etc/samba
 	doins ${FILESDIR}/smbusers
-# need to update this one! :)
+
+# need to update this one!!
 	doins ${FILESDIR}/smb.conf.example
 	doins ${FILESDIR}/lmhosts
 	doins ${FILESDIR}/recycle.conf
@@ -351,7 +342,7 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/samba-init samba
-# this one looks funny
+# hmmm
 	newexe ${FILESDIR}/winbind-init winbind
 
 	insinto /etc/xinetd.d
