@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.28 2005/02/11 19:45:40 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.29 2005/02/26 12:27:02 kloeri Exp $
+
+*mod_python-2.7.11 (26 Feb 2005)
+
+  26 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  +mod_python-2.7.11.ebuild, +mod_python-3.1.4.ebuild:
+  Version bump + uses new apache-module eclass. All changes by Benedikt Boehm
+  <hollow@gentoo.org>.
 
   11 Feb 2005; Rob Cakebread <pythonhead@gentoo.org>
   +files/publisher-2.diff, mod_python-3.1.3.ebuild:
