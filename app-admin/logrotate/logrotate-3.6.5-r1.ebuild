@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.9 2004/01/27 21:54:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.10 2004/02/02 02:46:34 avenj Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/l/logrotate/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ia64"
+KEYWORDS="x86 ppc sparc alpha ia64 ~amd64"
 IUSE="selinux"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
