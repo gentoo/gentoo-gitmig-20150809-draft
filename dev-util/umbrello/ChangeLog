@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/umbrello
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/umbrello/ChangeLog,v 1.1 2002/10/25 17:05:06 danarmak Exp $
+
+*umbrello-1.1_beta2 (25 Oct 2002)
+
+  25 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  This was formerly known as simply 'uml', and had ebuilds under
+  dev-util/uml. The upstream devs decided to change the project's name.
