@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.2.1.ebuild,v 1.1 2003/01/21 03:34:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.2.4.ebuild,v 1.1 2003/02/02 19:50:27 styx Exp $
+
+inherit kde-functions
 
 MY_P="${P/qt-/}"
 MY_P="${MY_P/_/}"
@@ -13,9 +15,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="=x11-libs/qt-3*
-	>=dev-libs/libxml2-2.4.22
-	~net-p2p/dclib-${PV}"
+need-qt 3
+newdepend ">=dev-libs/libxml2-2.4.22
+		~net-p2p/dclib-${PV}"
 
 src_compile() {
 	export CPPFLAGS="${CXXFLAGS} -I/usr/include/libxml2/libxml"
