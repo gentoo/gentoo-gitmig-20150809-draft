@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/manopages-es
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/ChangeLog,v 1.1 2003/03/16 01:10:29 bass Exp $
+
+
+*manpages-es-1.28 (18 Mar 2003)
+
+  10 Jan 2003; José Alberto Suárez López <bass@gentoo.org>
+  Initial ebuild by Javier Lopez <iborg1013@terra.org> 
+ 
