@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.7.ebuild,v 1.3 2004/07/01 22:35:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.7.ebuild,v 1.4 2004/07/15 02:28:25 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Tiny POP3 server"
 SRC_URI="ftp://ftp.toontown.org/pub/teapop/${P}.tar.gz"
 HOMEPAGE="http://www.toontown.org/teapop/"
