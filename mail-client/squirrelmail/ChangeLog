@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.14 2004/11/11 20:59:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.15 2004/12/29 00:16:10 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   11 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -squirrelmail-1.4.3a.ebuild:
@@ -41,7 +44,7 @@
   files/squirrelmail-1.4.3-compose.patch:
   Trivial patch to fix double quoting of messages in replies.  Fixes bug #52656.
 
-  02 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> squirrelmail-1.4.3.ebuild:
+  02 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> squirrelmail-1.4.3.ebuild:
   Stable on alpha, bug 52434.
 
   31 May 2004; Jason Wever <weeve@gentoo.org> squirrelmail-1.4.3.ebuild:
@@ -91,7 +94,7 @@
   squirrelmail-1.4.3_rc1-r1.ebuild, squirrelmail-1.4.3_rc1.ebuild:
   Security fix.  Bug #49675.
 
-  03 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  03 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   squirrelmail-1.4.2-r5.ebuild:
   Keyword ~alpha.
 

@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.60 2004/12/28 13:08:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.61 2004/12/29 00:17:00 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   28 Dec 2004; Guy Martin <gmsoft@gentoo.org> sylpheed-0.9.99.ebuild:
   Stable on hppa.
@@ -93,7 +96,7 @@
   05 Oct 2004; Guy Martin <gmsoft@gentoo.org> sylpheed-0.9.12-r3.ebuild:
   Stable on hppa.
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> sylpheed-0.9.12-r3.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> sylpheed-0.9.12-r3.ebuild:
   Stable on alpha, requested in bug 64485.
 
   28 Sep 2004; Jason Wever <weeve@gentoo.org> sylpheed-0.9.12-r3.ebuild:
@@ -150,7 +153,7 @@
   Old versions modified to preclude gpgme-0.3.14-r1 from a dependancy. New
   version added to support gpgme-0.3.14-r1 - Fixes bugs #53942, #60540, #60684
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> sylpheed-0.9.12.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> sylpheed-0.9.12.ebuild:
   Stable on alpha.
 
   15 Aug 2004; Jason Wever <weeve@gentoo.org> sylpheed-0.9.12.ebuild:

@@ -1,11 +1,14 @@
 # ChangeLog for mail-client/elm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/ChangeLog,v 1.9 2004/12/23 16:50:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/ChangeLog,v 1.10 2004/12/29 00:13:04 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> elm-2.4_rc100-r1.ebuild:
   Stable on sparc wrt #75370
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> elm-2.4_rc100-r1.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> elm-2.4_rc100-r1.ebuild:
   Stable on alpha.
 
   22 Sep 2004; Andrej Kacian <ticho@gentoo.org> elm-2.4_rc100-r1.ebuild:
@@ -19,7 +22,7 @@
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> elm-2.4_rc100.ebuild:
   virtual/glibc -> virtual/libc
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> elm-2.4_rc100.ebuild:
+  04 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> elm-2.4_rc100.ebuild:
   Stable on alpha.
 
 *elm-2.4_rc100 (29 May 2004)

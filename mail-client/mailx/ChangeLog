@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mailx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.24 2004/10/19 10:11:48 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.25 2004/12/29 00:13:49 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   mailx-8.1.2.20021129-r3.ebuild, mailx-8.1.2.20021129-r4.ebuild:
@@ -9,7 +12,7 @@
   09 Oct 2004; Tom Gall <tgall@gentoo.org> mailx-8.1.2.20021129-r4.ebuild:
   stable on ppc64, bug #63123
 
-  19 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  19 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   mailx-8.1.2.20021129-r4.ebuild:
   Stable on alpha.
 
@@ -30,7 +33,7 @@
   +mailx-8.1.2.20021129-r4.ebuild:
   Provide virtual/mailx. Closes #63123.
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   mailx-8.1.2.20021129-r3.ebuild:
   Stable on alpha.
 
@@ -80,7 +83,7 @@
   +mailx-8.1.2.20021129-r3.ebuild:
   Apply 64-bit compatibility patch on all architectures instead of just ia64
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   mailx-8.1.2.20021129-r2.ebuild:
   Stable on alpha.
 
