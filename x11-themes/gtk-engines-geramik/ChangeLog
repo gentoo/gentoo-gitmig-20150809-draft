@@ -1,9 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-geramik
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/ChangeLog,v 1.1 2002/11/17 02:00:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/ChangeLog,v 1.2 2002/11/17 02:00:46 leonardop Exp $
 
 *gtk-engines-geramik-0.03 (16 Nov 2002)
 
   16 Nov 2002; L. Boshell <leonardop@gentoo.org> ChangeLog,
   gtk-engines-geramik-0.03.ebuild : Initial import. Thanks to Carl Dunham
-  for his work, contributed on bug #10603.
+  for his work, contributed on bug #10765.
