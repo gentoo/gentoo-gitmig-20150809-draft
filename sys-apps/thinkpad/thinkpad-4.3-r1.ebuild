@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-4.3-r1.ebuild,v 1.1 2003/06/28 12:02:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-4.3-r1.ebuild,v 1.2 2003/11/28 13:22:39 karltk Exp $
 
 #transform P to match tarball versioning
 MYPV=${PV/_beta/beta}
@@ -32,7 +32,10 @@ src_unpack() {
 
 src_compile() {
 	check_KV
-	emake DIR_MOD_VER=/lib/modules/${KV} || die "Make failed"
+	emake DIR_MOD_VER=/lib/modules/${KV} \
+		DIR_MODULES_VER=/lib/modules/${KV} \
+		|| die "Make failed"
+
 }
 
 src_install() {
