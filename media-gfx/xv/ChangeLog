@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.37 2004/10/13 14:04:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.38 2004/11/03 19:26:31 corsair Exp $
+
+*xv-3.10a-r8 (03 Nov 2004)
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> xv-3.10a-r8.ebuild:
+  Marked ~ppc64; bug #69847
 
   13 Oct 2004; <solar@gentoo.org> -xv-3.10a-r7.ebuild:
   security bump. -r7 -> -r8 no changes except for depending on a newer version

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/igal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.10 2004/08/31 16:19:01 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.11 2004/11/03 19:28:26 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> igal-1.4.ebuild:
+  Marked ~ppc64; bug #69849
 
   08 Aug 2004; Dylan Carlson <absinthe@gentoo.org> igal-1.4.ebuild:
   KEYWORDS amd64.
