@@ -1,0 +1,17 @@
+--- info/info.c~	Tue May  1 18:12:30 2001
++++ info/info.c	Tue Jun 19 02:52:00 2001
+@@ -563,13 +563,7 @@
+ Email bug reports to bug-texinfo@gnu.org,\n\
+ general questions and discussion to help-texinfo@gnu.org.\n\
+ "),
+-  program_name,
+-#ifdef __MSDOS__
+-"\
+- --speech-friendly        be friendly to speech synthesizers.\n"
+-#else
+-""
+-#endif
++  program_name,""
+ 	  );
+ 
+   xexit (0);
