@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r1.ebuild,v 1.5 2003/09/06 22:21:02 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r1.ebuild,v 1.6 2003/09/07 10:02:33 pappy Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -376,6 +376,13 @@ src_compile() {
 	# Setup default compilers (We overide gcc2 if that is default here)
 	export CC="$(gcc-getCC)"
 	export CXX="$(gcc-getCXX)"
+
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml - #27761
+	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
+	then
+		export CC="${CC} -yet_exec"
+		export CXX="${CXX} -yet_exec"
+	fi
 
 	# Enable ccache for this build (Az)
 	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
