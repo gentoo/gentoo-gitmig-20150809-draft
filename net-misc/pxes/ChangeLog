@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.6 2003/11/05 15:24:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.7 2003/11/20 16:16:28 wolf31o2 Exp $
+
+*pxes-0.7 (20 Nov 2003)
+
+  20 Nov 2003; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.7.ebuild:
+  Bumped to version 0.7 for ~x86
 
   05 Nov 2003; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.6-r4.ebuild:
   Adding cdr USE flag per bug #32794.
