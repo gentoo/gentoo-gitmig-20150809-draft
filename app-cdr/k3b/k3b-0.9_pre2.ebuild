@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.9_pre2.ebuild,v 1.4 2003/06/19 00:16:38 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.9_pre2.ebuild,v 1.5 2003/07/07 18:31:02 caleb Exp $
 
 inherit kde-base
 need-kde 3.1
@@ -26,6 +26,7 @@ newdepend ">=media-sound/mpg123-0.59
 RDEPEND="$RDEPEND sys-apps/eject
 	>=app-cdr/cdrtools-1.11
 	>=app-cdr/cdrdao-1.1.5
+	media-sound/normalize
 	dvd? ( media-video/transcode media-libs/xvid )"
 
 myconf="$myconf --enable-sso"
