@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gaim-extprefs
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-extprefs/ChangeLog,v 1.5 2004/12/14 07:10:37 rizzo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-extprefs/ChangeLog,v 1.6 2005/03/21 15:18:02 rizzo Exp $
+
+  21 Mar 2005; Don Seiler <rizzo@gentoo.org> -gaim-extprefs-0.3.ebuild,
+  gaim-extprefs-0.4.ebuild:
+  Stable on x86, closes bug #85737
 
 *gaim-extprefs-0.4 (14 Dec 2004)
 
