@@ -253,10 +253,12 @@ src_install() {
 		[ ! -e libobjc_gc.so ] && rm -f libobjc_gc.so
 
 		#Tell libtool files where real libraries are
-		for LA in `ls -1 ${D}${LOC}/lib/*.la`; do
+		for LA in ${D}${LOC}/lib/*.la; do
 			sed -e "s:/usr/lib:${FULLPATH}:" ${LA} > ${LA}.hacked
 			mv ${LA}.hacked ${LA}
+			cp ${LA} ${FULLPATH_D}
 		done
+
 		if build_multiple
 		then
 			#move libtool .la files to $FULLPATH till I figure
