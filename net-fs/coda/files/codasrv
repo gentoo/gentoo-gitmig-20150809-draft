@@ -1,0 +1,39 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/codasrv,v 1.1 2004/03/23 20:18:49 dragonheart Exp $
+
+depend() {
+	need net coda-update auth2
+}
+
+checkconfig() {
+	if [ ! -e /var/lib/vice/hostname ] ; then
+		eerror "Please set up vice before starting the service..."
+		return 1
+	fi
+}
+
+we_are_scm() {
+	if [ "`cat /var/lib/vice/hostname`" = "`cat /var/lib/vice/db/scm`" ] ; then
+		return 0
+	else
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting codasrv"
+	start-stop-daemon --start --exec /usr/sbin/codasrv
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping codasrv"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/codasrv
+	/usr/sbin/volutil shutdown
+	sleep 30
+	eend $?
+}

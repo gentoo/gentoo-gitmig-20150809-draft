@@ -1,0 +1,13 @@
+# ChangeLog for net-fs/coda
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.1 2004/03/23 20:18:49 dragonheart Exp $
+
+*coda-6.0.3 (24 Mar 2004)
+
+  24 Mar 2004; Daniel Black <dragonheart@gentoo.org> coda-6.0.3.ebuild,
+  files/auth2, files/coda-6.0.3-iowr.patch, files/coda-update, files/codasrv,
+  files/venus:
+  inital import based off bug #26132. Still work in progress - I want to
+  automate the install a lot more but its hard! Thanks to Michael C. Ferguson
+  mcf@augustmail.com who put together the intial ebuilds for this
+

@@ -1,0 +1,12 @@
+diff -ru coda-6.0.3.orig/lib-src/kernel-includes/coda.h coda-6.0.3/lib-src/kernel-includes/coda.h
+--- coda-6.0.3.orig/lib-src/kernel-includes/coda.h	2003-05-24 03:57:52.000000000 +0930
++++ coda-6.0.3/lib-src/kernel-includes/coda.h	2004-02-13 20:57:57.012548016 +0930
+@@ -311,7 +311,7 @@
+ #define VC_MAXMSGSIZE      sizeof(union inputArgs)+sizeof(union outputArgs) +\
+                             VC_MAXDATASIZE  
+ 
+-#define CIOC_KERNEL_VERSION _IOWR('c', 10, sizeof (int))
++#define CIOC_KERNEL_VERSION _IOWR('c', 10, int)
+ 
+ #if 0
+ #define CODA_KERNEL_VERSION 0 /* don't care about kernel version number */
