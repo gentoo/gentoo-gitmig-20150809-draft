@@ -1,5 +1,3 @@
+MD5 76da7226792e224b1c67a6232833c650 files/digest-rackview-0.04-r1 66
 MD5 701258c0b3fa5780b074cf7189282275 ChangeLog 637
 MD5 555cb5fd68fa10cfb9c0d320daacad44 rackview-0.04-r1.ebuild 3320
-MD5 555cb5fd68fa10cfb9c0d320daacad44 rackview-0.06.ebuild 3320
-MD5 76da7226792e224b1c67a6232833c650 files/digest-rackview-0.04-r1 66
-MD5 0ddca48b077ca05b2c21d0400a6edbfd files/digest-rackview-0.06 66
