@@ -1,4 +1,14 @@
-MD5 67c4bc46964a70b3c265181899b24b17 ChangeLog 403
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ae4701896e29ba34b41f9e499c216c15 ChangeLog 498
 MD5 ae5592e9a022e6beab44a52a4f23c3f0 metadata.xml 221
-MD5 db460263536efc633911bc5bd03f5fe2 pastemecli-0.8.ebuild 515
+MD5 756aa6fadb26af5523da4c64234805c7 pastemecli-0.8.ebuild 518
 MD5 573e9fae1787b566281d5b2640676c36 files/digest-pastemecli-0.8 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQENdugEuf3OQ0akRAglJAJ9J+TMLZig3utua6+CDejrJgTD9awCfaXkL
+Q7AqfvCxpHeMynx89GsW6/A=
+=0HaS
+-----END PGP SIGNATURE-----
