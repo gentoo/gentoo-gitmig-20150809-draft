@@ -126,11 +126,11 @@ class depgraph:
 	def display(self,mylist):
 		for x in mylist:
 			if self.db[x[1]]["vartree"].exists_specific(x[2]):
-				addl=" R "
+				addl=" \x1b[33;01mR\x1b[0m "
 			elif self.db[x[1]]["vartree"].exists_specific_cat(x[2]):
-				addl="  U"
+				addl="  \x1b[36;01mU\x1b[0m"
 			else:
-				addl="N  "
+				addl="\x1b[32;01mN\x1b[0m  "
 			print "["+x[0]+" "+addl+"]",x[2],"to",x[1]
 				
 	def merge(self,mylist):
@@ -183,7 +183,7 @@ class depgraph:
 					print "!!! emerge aborting on ",y,"."
 					sys.exit(1)
 opts=["--help","--pretend","--buildpkg","--usepkg","--autoclean"]
-modes=["rsync","system","update"]
+modes=["rsync","system","update","config"]
 myopts=[]
 mymode=[]
 myfiles=[]
@@ -211,9 +211,71 @@ for x in sys.argv[1:]:
 			sys.exit(1)
 
 if "--help" in myopts:
-	print "Usage: emerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
+	if len(mymode)==0:
+		print
+		print "\x1b[01mYou can also type \"emerge --help system\" and \"emerge --help rsync\" for extra help.\x1b[0m"
+		print
+		print "Usage: \x1b[36;01memerge\x1b[0m [ \x1b[32;01moptions\x1b[0m ] [ \x1b[36;01mebuildfile\x1b[0m | \x1b[36;01mtbz2file\x1b[0m ] ..."
+		print "       \x1b[36;01memerge\x1b[0m [ \x1b[32;01moptions\x1b[0m ] \x1b[36;01msystem\x1b[0m"
+		print "       \x1b[36;01memerge rsync"
+		print "       emerge rsync clean\x1b[0m"
+		print
+		print "Options:"
+		print "       \x1b[32;01m--help\x1b[0m [ mode ]"
+		print "              display this help (specify optional \"rsync\" or \"system\" for more info)"
+		print
+		print "       \x1b[32;01m--usepkg\x1b[0m"
+		print "              tell emerge to use binary packages (from $DISTDIR) if they are available,"
+		print "              thus possibly avoiding some time-consuming compiles.  This option is"
+		print "              useful for CD installs; export DISTDIR=/mnt/cdrom/packages and then use"
+		print "              use this option to have emerge \"pull\" binary packages from the CD in"
+		print "              order to satisfy dependencies."
+		print
+		print "       \x1b[32;01m--buildpkg\x1b[0m"
+		print "              tell emerge to build binary packages for all ebuilds processed (in"
+		print "              addition to actually merging the packages.  Useful for maintainers or if"
+		print "              you administrate multiple Gentoo Linux systems (build once, emerge"
+		print "              everywhere)."
+		print
+		print "       \x1b[32;01m--autoclean\x1b[0m"
+		print "              emerge normally cleans out the package-specific temporary build directory"
+		print "              before it starts the building a package.  With --autoclean, it will also"
+		print "              clean the directory *after* the building ocmpletes.  This option is"
+		print "              automatically enabled for normal users, and automatically disabled for"
+		print "              maintainers (if MAINTAINER=\"YES\" is in /etc/make.conf"
+		print
+		print "       \x1b[32;01m--pretend\x1b[0m"
+		print "              instead of actually performing the merge, simply display what ebuilds and"
+		print "              tbz2s *would* have been installed if --pretend weren't used.  Using"
+		print "              --pretend is strongly recommended before installing an unfamiliar package."
+		print "              In the printout, N = new, U = upgrading, R = replacing"
+		print
+	elif "rsync" in mymode:
+		print
+		print "       \x1b[36;01memerge rsync"
+		print "       emerge rsync clean\x1b[0m"
+		print
+		print "       \"emerge rsync\" initiates an rsync update with rsync://cvs.gentoo.org, updating"
+		print "       your Portage tree (typically in /usr/portage).  This option will erase any changes"
+		print "       that you have made to existing Portage files, so be careful.  \"emerge rsync clean\""
+		print "       does the same thing as \"emerge rsync\", but files that no longer exist on our"
+		print "       server are removed."
+		print
+	elif "system" in mymode:
+		print
+		print "       \x1b[36;01memerge\x1b[0m [ \x1b[32;01moptions\x1b[0m ] \x1b[36;01msystem\x1b[0m"
+		print
+		print "       \"emerge system\" is the Portage system update command.  When run, it will scan the"
+		print "       /etc/make.profile/packages file and determine what packages need to be installed so"
+		print "       that your system meets the minimum requirements of your current system profile.  Note"
+		print "       that this doesn't necessarily bring your system up-to-date at all; instead, it just"
+		print "       ensures that you have no missing parts.  For example, if your system profile specifies"
+		print "       that you should have sys-apps/iptables installed and you don't, then \"emerge system\""
+		print "       will install it for you.  It's always a good idea to do an \"emerge --pretend system\""
+		print "       before and \"emerge system\", just so you know what emerge is planning to do."
+		print
 	sys.exit(1)
-
+		
 if "--pretend" in myopts:
 		print
 		print "These are the packages that I would merge, in order."
@@ -257,6 +319,14 @@ if ("system" in mymode) or ("update" in mymode):
 		mydepgraph.display(mydepgraph.altlist())
 	else:
 		mydepgraph.merge(mydepgraph.altlist())
+	
+	if portage.settings["CONFIG_PROTECT"]:
+		print
+		print ">>> \x1b[32;01mNote:\x1b[0m"
+		print "    Config file protection is enabled for these"
+		print "    directories: \x1b[32;01m"+portage.settings["CONFIG_PROTECT"]+"\x1b[0m"
+		print "    Type \"emerge --help config\" more information."
+		print
 	sys.exit(0)
 
 mydepgraph=depgraph(mymode,myopts)
