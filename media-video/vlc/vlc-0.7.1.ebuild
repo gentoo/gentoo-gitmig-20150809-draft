@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1.ebuild,v 1.4 2004/06/09 17:44:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1.ebuild,v 1.5 2004/06/16 09:50:57 kloeri Exp $
 
 inherit libtool gcc eutils
 
@@ -14,7 +14,6 @@ inherit libtool gcc eutils
 PLIVE=live
 
 SLIVE=${WORKDIR}/${PLIVE}
-S=${WORKDIR}/${P}
 
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc"

@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r2.ebuild,v 1.4 2003/06/09 22:57:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r2.ebuild,v 1.5 2004/06/16 09:52:07 kloeri Exp $
 
 IUSE="nls gnome"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="X Movie Player System"
 SRC_URI="http://xmps.sourceforge.net/sources/${P}.tar.gz"
 HOMEPAGE="http://xmps.sourceforge.net"

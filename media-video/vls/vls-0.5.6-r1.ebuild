@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vls/vls-0.5.6-r1.ebuild,v 1.2 2004/02/24 09:29:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vls/vls-0.5.6-r1.ebuild,v 1.3 2004/06/16 09:45:05 kloeri Exp $
 
 IUSE="debug dvd dvb"
 
@@ -15,8 +15,6 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 DEPEND="dvd? ( >=media-libs/libdvdread-0.9.4
 	>=media-libs/libdvdcss-1.2.8 )
 	dvb? ( >=media-libs/libdvbpsi-0.1.3 )"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf

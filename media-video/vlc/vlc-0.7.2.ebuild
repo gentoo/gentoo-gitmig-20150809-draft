@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.1 2004/06/08 01:39:49 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.2 2004/06/16 09:50:57 kloeri Exp $
 
 inherit libtool gcc eutils
 
@@ -14,7 +14,6 @@ IUSE="arts ncurses dvd gtk nls 3dfx svga fbcon esd X alsa ggi speex
 	wxwindows imlib matroska dvb mozilla debug faad
 	xosd altivec png"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="VLC media player - Video player and streamer"
 SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 
