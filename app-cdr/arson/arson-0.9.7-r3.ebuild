@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.1 2003/04/12 21:26:30 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.2 2003/06/29 16:01:56 aliz Exp $
 inherit kde-base
 inherit eutils
 
@@ -19,7 +19,7 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 need-kde 3
 	   
 IUSE="oggvorbis"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 S=${WORKDIR}/${P}-kde3
 SRC_URI="mirror://sourceforge/arson/${P}-kde3.tar.bz2"
 

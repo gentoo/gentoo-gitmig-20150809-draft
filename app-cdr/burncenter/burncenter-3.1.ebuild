@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.1.ebuild,v 1.1 2003/04/19 19:34:55 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.1.ebuild,v 1.2 2003/06/29 16:01:56 aliz Exp $
 
 DESCRIPTION="A Perl module and a collection of easy-to-use text based interfaces to the UNIX CD burning tools"
 HOMEPAGE="http://alx14.free.fr/burncenter/"
@@ -16,7 +16,7 @@ RDEPEND="${DEPEND}
 
 IUSE="oggvorbis"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 SRC_URI="http://alx14.free.fr/burncenter/download/${P}.tar.gz"
 S="${WORKDIR}/burncenter3"

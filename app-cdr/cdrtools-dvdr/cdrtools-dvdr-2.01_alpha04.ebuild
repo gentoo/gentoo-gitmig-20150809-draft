@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/cdrtools-dvdr-2.01_alpha04.ebuild,v 1.3 2003/03/05 02:57:50 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/cdrtools-dvdr-2.01_alpha04.ebuild,v 1.4 2003/06/29 16:01:56 aliz Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="A set of tools for CDR drives, including cdrecord.	 Includes Mandra
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/glibc"
 PROVIDE="virtual/cdrtools"

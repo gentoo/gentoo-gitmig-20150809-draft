@@ -1,8 +1,8 @@
 # ChangeLog for app-cdr/dvdrtools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.2 2003/03/28 11:41:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.3 2003/06/29 16:01:56 aliz Exp $
 
-*app-cdr/dvdrtools-0.1.4 (19 Mar 2003)
+*dvdrtools-0.1.4 (19 Mar 2003)
 
   28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   Added ~ppc

@@ -1,18 +1,18 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.49 2003/06/29 14:28:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.50 2003/06/29 16:01:56 aliz Exp $
 
-*cdrtools-2.01_apha16 (28 Jun 2003)
+*cdrtools-2.01_alpha16 (28 Jun 2003)
 
   28 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> cdrtools-2.01_alpha16.ebuild :
   Version bump. Install includefiles from #23384.
 
-*cdrtools-1.1.33-r1 (17 May 2003)
+*cdrtools-1.11.33-r1 (17 May 2003)
 
   17 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update.
 
-*cdrtools-1.1.39-r1 (17 May 2003)
+*cdrtools-1.11.39-r1 (17 May 2003)
 
   17 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update.

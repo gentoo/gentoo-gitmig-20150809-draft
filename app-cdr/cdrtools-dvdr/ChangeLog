@@ -1,13 +1,13 @@
 # ChangeLog for app-cdr/cdrtools-dvdr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/ChangeLog,v 1.3 2003/03/15 16:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/ChangeLog,v 1.4 2003/06/29 16:01:56 aliz Exp $
 
 *cdrtools-dvdr-2.01_alpha05 (04 Mar 2003)
 
   15 Mar 2003; Daniel Ahlberg <aliz@getoo.org> :
   Version bump.
 
-*cdrtools-dvdr-2.01_alpha4 (04 Mar 2003)
+*cdrtools-dvdr-2.01_alpha04 (04 Mar 2003)
 
   04 Mar 2003; Arcady Genkin <agenkin@getoo.org> :
   The patch seems to apply with fuzz for the latest 2.01.
