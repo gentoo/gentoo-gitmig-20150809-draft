@@ -1,8 +1,18 @@
-MD5 9aaca1c2e75da2afb3517050e875e0a6 ChangeLog 1096
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 af751a4785eb0cc12010f78d936fdfaa ChangeLog 1178
+MD5 08032f64508e981f0f84fd8ec75e3c9e tclxml-2.6.ebuild 652
 MD5 1b617cdf2264e2a5dbf65e576f70ef46 tclxml-2.4.ebuild 656
 MD5 bad9961dce9bfbcc407e624ce1f8c322 tclxml-2.5.ebuild 737
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 d7d23891f610a71e88bd76e687ac5a59 tclxml-2.6.ebuild 651
-MD5 0a225320340157ce509a1645988f1a10 files/digest-tclxml-2.4 62
 MD5 2770e7494e3f147c5a80579ff7334250 files/digest-tclxml-2.5 62
 MD5 157b44d2d7c3d7a31afd230b30a9c2e0 files/digest-tclxml-2.6 62
+MD5 0a225320340157ce509a1645988f1a10 files/digest-tclxml-2.4 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjO+jI7fK2cqeyXkRAl77AKD5stVcCULJTCjPSk7+FJTkzR4GjgCg4dCp
+17iG8c+W9ZskG1jqUzgRxeA=
+=2oJX
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
-MD5 a63c5ad94514b69b4f261e9e3783255e ChangeLog 509
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8e6ae4224e0507cada051aa68702e3d2 ChangeLog 612
+MD5 2fdcc3c82fa40f68f46c46753d91ab4c tktable-2.9.ebuild 592
+MD5 f56cf8c2a98828ddb156df7875abf9f2 tktable-2.8.ebuild 587
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 8efb3407755962d689af0d18b20540e2 tktable-2.8.ebuild 589
-MD5 8fb5f821eea920f21c7617ebc800aa8e tktable-2.9.ebuild 591
 MD5 84e027c89fe88cd5448525745328dda5 files/digest-tktable-2.8 62
 MD5 c199595018467274cb021324cb5a699a files/digest-tktable-2.9 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPC3I7fK2cqeyXkRAv0PAJ44czz747G6YmQHMWebTdXQUUmuvwCg1Dp0
+/boTyXUNISLwx8cfbj8+eYw=
+=CBU/
+-----END PGP SIGNATURE-----

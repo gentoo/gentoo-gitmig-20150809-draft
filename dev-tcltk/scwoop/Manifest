@@ -1,4 +1,14 @@
-MD5 bd4b28f04076b59be98e0fe2a93b7850 ChangeLog 472
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e1f1c44cda5c94926084bf11eaf8cfef ChangeLog 554
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 2989a9c38ffcd33d416cb88bd4ae4863 scwoop-4.1.ebuild 647
+MD5 0ff33d05ef2233691de6eacf00757eb7 scwoop-4.1.ebuild 648
 MD5 4f3a54e827c15e3799edc52475c6c17f files/digest-scwoop-4.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPCVI7fK2cqeyXkRApt9AJ955iPwT41ZciDSXA/Bruqe9U/MzwCgxISD
+iEsvbb7N78zOLvS9i2nfTjY=
+=bwby
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 de732957878536c1ebc99f1addef8c21 tkpiechart-6.5.ebuild 701
-MD5 3ff894615a7ace854c6cf8bf798e46d4 ChangeLog 500
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 256abbea04b7ab34a38890124604fe6e ChangeLog 585
+MD5 13bc0f2de0a90550ab1a8e10b9b25007 tkpiechart-6.5.ebuild 701
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 13ce41b1901a8154889a860a6f7544ac files/digest-tkpiechart-6.5 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPARI7fK2cqeyXkRAieTAKC8SHXmFaIYmlWPq6kUCvnCt80wzACgwJNq
+TFHOsTCE98sAW4pXUlKLVXM=
+=2qJA
+-----END PGP SIGNATURE-----

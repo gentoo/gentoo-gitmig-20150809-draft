@@ -1,4 +1,14 @@
-MD5 3aaf93fd73f4ca9f2bb54fefff033344 ChangeLog 570
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8bbbd041b4b265f43972dde1ed1e388e ChangeLog 652
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 36193defe3872ce2576b7efc8dd8d0f8 tclperl-3.1.ebuild 959
+MD5 1777c36eedc23bcdebefd34f949e4c60 tclperl-3.1.ebuild 959
 MD5 595db246634277484e07016371570132 files/digest-tclperl-3.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPA2I7fK2cqeyXkRAvhZAKDxVHpnB412lWnU0DZgMC8f+IkILACfVOhH
+L+0EMRCmKUl6pXBndbH7OG0=
+=ywXJ
+-----END PGP SIGNATURE-----
