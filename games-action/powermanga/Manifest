@@ -1,4 +1,6 @@
-MD5 22f61e4a080db878436a86cac4d58483 ChangeLog 629
+MD5 bb49ba9b2bf5ddafb49eaf09cbe622ef ChangeLog 760
+MD5 3e4995c1bdb1414a0dc12e0bea3f7557 powermanga-0.79.ebuild 1102
 MD5 03f1ea7e655881b54bc0d815ba2d5a8c powermanga-0.78.ebuild 1074
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 9c25a84908beb1a0d142e2421d310be7 files/digest-powermanga-0.79 68
 MD5 2943a5cad4be13cb5a4b7b95b7532300 files/digest-powermanga-0.78 68
