@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 621326b2b37c045d5d490f26ececfdf5 a52dec-0.7.4-r3.ebuild 1311
 MD5 de290c0400384a59257ecb5b48147c87 a52dec-0.7.4.ebuild 941
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 483a4eeaf96efe5b6dd5c2926e863521 ChangeLog 3062
-MD5 234b3ff5d39d0f83a02ec9fff3e23f0a a52dec-0.7.4-r2.ebuild 1030
+MD5 35c5073cb4ee507b4a49e4597ac8067f ChangeLog 3285
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4 64
-MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r2 64
+MD5 3bb61e4ec18824ddab0068807ad43de8 files/a52dec-0.7.4-build.patch 1232
+MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r3 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYQvFArHZZzCEUG0RApL6AJwNQfNjgrt5xfudUBQSpWhwX7Om4gCcCJvo
-y6v5PyQ7Pi+uiSq3AAjmIDE=
-=DXXb
+iD8DBQFBi0f4ArHZZzCEUG0RAu/8AJ48n6mKWHnsOtDdimFiNDFtmMJI3ACfaFne
+r1EJiA0oQyG3ZuioMemWAHQ=
+=jPDv
 -----END PGP SIGNATURE-----

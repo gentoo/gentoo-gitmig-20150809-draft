@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.21 2004/10/04 08:37:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.22 2004/11/05 09:29:17 eradicator Exp $
+
+*a52dec-0.7.4-r3 (05 Nov 2004)
+
+  05 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/a52dec-0.7.4-build.patch, -a52dec-0.7.4-r2.ebuild,
+  +a52dec-0.7.4-r3.ebuild:
+  Revision bump to fix fPIC issue bug #68567.
 
   04 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -a52dec-0.7.4-r1.ebuild:
