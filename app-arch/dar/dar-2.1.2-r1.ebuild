@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.2-r1.ebuild,v 1.1 2004/04/19 16:39:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.2-r1.ebuild,v 1.2 2004/04/22 23:56:45 matsuu Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/dar/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 IUSE="acl"
 
 DEPEND=">=sys-libs/zlib-1.1.3
