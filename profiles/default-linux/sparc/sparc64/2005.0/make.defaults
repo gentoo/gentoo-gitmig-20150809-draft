@@ -1,19 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/make.defaults,v 1.4 2005/03/30 19:15:20 gustavoz Exp $
-
-CHOST="sparc-unknown-linux-gnu"
-
-MULTILIB_ABIS="sparc32"
-DEFAULT_ABI="sparc32"
-
-CFLAGS_sparc32="-m32"
-LDFLAGS_sparc32="-m elf32_sparc"
-CHOST_sparc32="sparc-unknown-linux-gnu"
-FAKE_TARGETS_sparc32="sparcv9-unknown-linux-gnu"
-CDEFINE_sparc32="!__arch64__"
-
-LIBDIR_sparc32="lib"
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/make.defaults,v 1.5 2005/03/30 19:13:40 gustavoz Exp $
 
 # USE settings
 USE="arts avi berkdb bitmap-fonts crypt cups dlloader encode esd fortran fbcon foomaticdb gdbm gcc64 gif gtk gtk2 gnome imlib jpeg kde libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts X xv xml2 xmms zlib"
