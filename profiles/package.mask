@@ -108,7 +108,11 @@ dev-libs/libiconv
 
 # Since azarah is the opengl dude here, i'll mask this untill he looks at 
 # it... Won't compile.. <Verwilst, 17 April 2002>
-=app-games/crack-attack-1.1.7
+# 
+# I grabbed the bug #1666 and have tried it on two very different machines
+# and it's good to go. I'm taking the liberty to unmask it <lamer, 26 May
+# 2002>
+#=app-games/crack-attack-1.1.7
 
 # Licq is b0rked beyond usability.. Not only the ebuild, but the protocol 
 #they use as well... Trust me, unmasking this has no use at all :o) <Verwilst, 17 April 2002>
