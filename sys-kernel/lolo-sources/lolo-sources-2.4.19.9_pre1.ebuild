@@ -46,7 +46,7 @@ src_unpack() {
 	cd ../linux-${KV}
 	
 	#sometimes we have icky kernel symbols; this seems to get rid of them
-	make mrproper || die
+	make distclean || die
 
 	#this file is required for other things to build properly, so we autogenerate it
 	make include/linux/version.h || die
