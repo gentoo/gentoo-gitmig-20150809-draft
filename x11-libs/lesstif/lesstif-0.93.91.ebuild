@@ -99,6 +99,4 @@ src_install() {
 	rm -fR ${D}/usr/lib/X11
 	rm -f  ${D}/bin/mxmkmf-1.2
 	rm -fR ${D}/etc
-
-
 }
