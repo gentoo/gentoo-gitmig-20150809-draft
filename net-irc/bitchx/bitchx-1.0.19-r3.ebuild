@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r3.ebuild,v 1.1 2002/11/11 19:18:11 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r3.ebuild,v 1.2 2002/11/19 18:04:03 phoenix Exp $
 
 IUSE="ssl esd gnome xmms ncurses ipv6 gtk"
 
@@ -16,6 +16,12 @@ KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 inherit flag-o-matic
 replace-flags -O[3-9] -O2
+
+
+# BitchX needs to be merged with -fPIC on alpha boxes
+# This fixes bug 10932
+[ "${ARCH}" = "alpha" ] && append-flags "-fPIC"
+
 
 DEPEND=">=sys-libs/ncurses-5.1 
 	ssl? ( >=dev-libs/openssl-0.9.6 )

@@ -1,12 +1,15 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.12 2002/11/11 19:18:11 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.13 2002/11/19 18:04:03 phoenix Exp $
 
 *bitchx-1.0.19-r3 (11 Nov 2002)
 
+  19 Nov 2002; phoen][x <phoenix@gentoo.org> bitchx-1.0.19-r3.ebuild :
+  Added "-fPIC" to C(XX)FLAGS on alpha boxes. This fixes bug 10932.
+  Thanks to bjb for the help.
+  
   21 Oct 2002; phoen][x <phoenix@gentoo.org> bitchx-1.0.19-r3.ebuild,
   files/digest-bitchx-1.0.19-r3 :
-
   Used sed to patch include/config.h. BitchX now compiles with #define LATIN1 ON.
   This shouldn't break anything but add support for the standard LATIN1 letters.
   This closes bug #10332.
@@ -14,67 +17,54 @@
 *bitchx-1.0.19-r2 (26 Jun 2002)
 
   26 Oct 2002; Jack Morgan <jmorgan@gentoo.org> bitchx-1.0.19-r2.ebuild :
-
   Added Sparc/sparc64 keywords
   
   21 Oct 2002; phoen][x <phoenix@gentoo.org> bitchx-1.0.19-r2.ebuild :
-
   Fixed the flag-o-matic setting. It explicitely replaced -O3 with -O2,
   which made the ebuild fail on -O4++ (which aren't standard gcc settings).
   Flag-o-matic replaces -O[3-9] with -O2 now. 
 
   03 Oct 2002; Brad Cowan <bcowan@gentoo.org> bitchx-1.0.19-r2.ebuild :
-  
   Added flag-o-matic to change -O3 to -O2 this fixes a segmentation fault
   problem. closes bug #8667
 
   22 Aug 2002; Seemant Kulleen <seemant@gentoo.org> bitchx-1.0.19-r2.ebuild :
-
   Man page now installs properly (ie, it's readable).  Thanks to:
   stocke2@cox.net (Eric Stockbridge) in bug #6720.
 
   16 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
-
   Commented out the "use socks5" stuff because bitchx is being lame and
   doesn't work with any packaged socks implementations in the tree :-(
 
   26 Jun 2002; Seemant Kulleen <seemant@gentoo.org> bitchx-1.0.19-r1.ebuild
   files/digest-bitchx-1.0.19-r2 :
-
   LFH/man page fixes, SLOT, LICENSE
 
 *bitchx-1.0.19-r1 (23 April 2002)
 
   23 April 2002; Bart Verwilst <verwilst@gentoo.org> Changelog:
-
   Quick revision bump, fixed symlink bug..
 
 *bitchx-1.0.19 (16 Apr 2002)
 
   16 Apr 2002; Seemant Kulleen <seemant@gentoo.org> bitchx-1.0.19.ebuild,
-  files/digest-bitchx-1.0.19
-  
+  files/digest-bitchx-1.0.19  
   Quick version bump, and ebuild clean up
   
-
   25 Feb 2002; Geert Bevin <gbevin@gentoo.org> bitchx-1.0.18-r5.ebuild,
   files/bitchx-1.0.18-dupver.patch :
-  
   Gcc3 related fixes.
 
 *bitchx-1.0.18-r5 (25 Feb 2002)
 
-  25 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
-  
+  25 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :  
   Fixed bug #817 - now, when gnome is in use both gtkBitchX and plain BitchX
-  are built and installed.
-  
+  are built and installed.  
   Also, fixed case where gtkBitchX would be built even when gnome isn't in use.
 
 *bitchx-1.0.18-r4 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
