@@ -1,0 +1,20 @@
+--- isdn.conf.install   2004-03-19 13:53:59.000000000 +0100
++++ isdn.conf   2004-03-19 13:54:48.000000000 +0100
+@@ -24,12 +24,12 @@
+ CHARGEMAX       = 50.00
+ CURRENCY = 0.062,EUR
+
+-COUNTRYFILE = /usr/lib/isdn/country.dat
++COUNTRYFILE = /usr/share/isdn/country.dat
+ RATECONF= /etc/isdn/rate.conf
+-RATEFILE= /usr/lib/isdn/rate-de.dat
+-HOLIDAYS= /usr/lib/isdn/holiday-de.dat
+-ZONEFILE= /usr/lib/isdn/zone-de-%s.cdb
+-DESTFILE= /usr/lib/isdn/dest.cdb
++RATEFILE= /usr/share/isdn/rate-de.dat
++HOLIDAYS= /usr/share/isdn/holiday-de.dat
++ZONEFILE= /usr/share/isdn/zone-de-%s.cdb
++DESTFILE= /usr/share/isdn/dest.cdb
+
+ # providerselect
+ VBN = 010:01900

@@ -1,0 +1,11 @@
+IFACE=$1
+
+/bin/sleep 1
+
+[ -s /etc/conf.d/net ] && . /etc/conf.d/net
+
+# Recreate the default route so autodial works
+
+if [ -n "${gateway}" ] && [ "${gateway%/*}" = "${IFACE}" ]; then
+	/sbin/route add default dev ${gateway%/*}
+fi

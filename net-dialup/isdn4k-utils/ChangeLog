@@ -1,6 +1,16 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.21 2004/09/27 12:56:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.22 2004/11/07 17:30:20 mrness Exp $
+
+*isdn4k-utils-20041024 (07 Nov 2004)
+
+  07 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  +isdn4k-utils-20041024.ebuild, +files/20041024/config, +files/20041024/gentoo.patch,
+  +files/20041024/ioptions, +files/20041024/ip-down.ippp0, +files/20041024/ip-up,
+  +files/20041024/isdn4linux.conf, +files/20041024/isdn4linux.init,
+  +files/20041024/net.ippp0, +files/20041024/options.ippp0, +files/20041024/pathfix.patch,
+  +files/20041024/vbox-makefile.am.patch:
+  Version bump. See bug #65168.
 
   27 Sep 2004; Daniel Black <dragonheart@gentoo.org>
   files/3.2_p1-r2/isdn4linux.init:
