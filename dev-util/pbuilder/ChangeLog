@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pbuilder
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pbuilder/ChangeLog,v 1.5 2003/09/19 17:57:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pbuilder/ChangeLog,v 1.6 2003/10/31 13:48:57 lanius Exp $
+
+  31 Oct 2003; Heinrich Wendel <lanius@gentoo.org> pbuilder-0.76.ebuild,
+  pbuilder-0.86.ebuild:
+  stable
 
 *pbuilder-0.86 (19 Sep 2003)
 
