@@ -4,21 +4,39 @@
 tar \- The GNU version of the tar archiving utility
 .SH SYNOPSIS
 .B tar
-[
-.B \-
-]
-.B A --catenate --concatenate \||\| c --create \||\| d --diff --compare \||\| r --append \||\| t --list \||\| u --update \||\| x -extract --get
+.I [operation] [options]
+
+.I Operations:
+.nf
+.B [-]A --catenate --concatenate
+.B [-]c --create
+.B [-]d --diff --compare
+.B [-]r --append
+.B [-]t --list
+.B [-]u --update
+.B [-]x --extract --get
+.B --delete
+.fi
+
+.I Options:
+.br
 [
 .B --atime-preserve
 ]
 [
-.B -b, --block-size N
+.B --backup=BACKUP-TYPE
 ]
 [
-.B -B, --read-full-blocks
+.B -b, --blocking-factor N
+]
+[
+.B -B, --read-full-records
 ]
 [
 .B -C, --directory DIR
+]
+[
+.B --check-links
 ]
 [
 .B --checkpoint	
@@ -27,28 +45,43 @@ tar \- The GNU version of the tar archiving utility
 .B -f, --file [HOSTNAME:]F
 ]
 [
-.B --force-local	
-]
-[
 .B -F, --info-script F --new-volume-script F
 ]
 [
-.B -G, --incremental
+.B --force-local	
+]
+[
+.B --format FORMAT
 ]
 [
 .B -g, --listed-incremental F
 ]
 [
+.B -G, --incremental
+]
+[
+.B --group GROUP
+]
+[
 .B -h, --dereference
+]
+[
+.B --help
 ]
 [
 .B -i, --ignore-zeros
 ]
 [
-.B -j, --bzip2
+.B --ignore-case
 ]
 [
 .B --ignore-failed-read
+]
+[
+.B --index-file FILE
+]
+[
+.B -j, --bzip2
 ]
 [
 .B -k, --keep-old-files
@@ -57,25 +90,67 @@ tar \- The GNU version of the tar archiving utility
 .B -K, --starting-file F
 ]
 [
+.B --keep-newer-files
+]
+[
 .B -l, --one-file-system
 ]
 [
 .B -L, --tape-length N
 ]
 [
-.B -m, --modification-time
+.B -m, --touch, --modification-time
 ]
 [
 .B -M, --multi-volume
 ]
 [
+.B --mode PERMISSIONS
+]
+[
 .B -N, --after-date DATE, --newer DATE
 ]
 [
-.B -o, --old-archive, --portability
+.B --newer-mtime DATE
+]
+[
+.B --no-anchored
+]
+[
+.B --no-ignore-case
+]
+[
+.B --no-recursion
+]
+[
+.B --no-same-permissions
+]
+[
+.B --no-wildcards
+]
+[
+.B --no-wildcards-match-slash
+]
+[
+.B --null	
+]
+[
+.B -o, --old-archive, --portability, --no-same-owner
 ]
 [
 .B -O, --to-stdout
+]
+[
+.B --occurrence NUM
+]
+[
+.B --overwrite
+]
+[
+.B --overwrite-dir
+]
+[
+.B --owner USER
 ]
 [
 .B -p, --same-permissions, --preserve-permissions
@@ -84,16 +159,40 @@ tar \- The GNU version of the tar archiving utility
 .B -P, --absolute-names
 ]
 [
+.B --pax-option KEYWORD-LIST
+]
+[
+.B --posix
+]
+[
 .B --preserve	
 ]
 [
-.B -R, --record-number
+.B -R, --block-number
+]
+[
+.B --record-size
+]
+[
+.B --recursion
+]
+[
+.B --recursive-unlink
 ]
 [
 .B --remove-files
 ]
 [
+.B --rmt-command CMD
+]
+[
+.B --rsh-command=CMD
+]
+[
 .B -s, --same-order, --preserve-order
+]
+[
+.B -S, --sparse
 ]
 [
 .B --same-owner
@@ -102,16 +201,31 @@ tar \- The GNU version of the tar archiving utility
 .B --numeric-owner
 ]
 [
-.B -S, --sparse
+.B --show-defaults
+]
+[
+.B --show-omitted-dirs
+]
+[
+.B --strip-path NUMBER
+]
+[
+.B --suffix SUFFIX
 ]
 [
 .B -T, --files-from F
 ]
 [
-.B --null	
+.B --totals	
 ]
 [
-.B --totals	
+.B -U, --unlink-first
+]
+[
+.B --use-compress-program PROG
+]
+[
+.B --utc
 ]
 [
 .B -v, --verbose
@@ -123,13 +237,22 @@ tar \- The GNU version of the tar archiving utility
 .B --version	
 ]
 [
+.B --volno-file FILE
+]
+[
 .B -w, --interactive, --confirmation
 ]
 [
 .B -W, --verify	
 ]
 [
-.B --exclude=FILE
+.B --wildcards
+]
+[
+.B --wildcards-match-slash
+]
+[
+.B --exclude PATTERN
 ]
 [
 .B -X, --exclude-from FILE
@@ -138,24 +261,14 @@ tar \- The GNU version of the tar archiving utility
 .B -Z, --compress, --uncompress
 ]
 [
-.B -z, --gzip, --ungzip	
-]
-[
-.B --use-compress-program PROG
+.B -z, --gzip, --gunzip, --ungzip	
 ]
 [
 .B --block-compress
 ]
 [
-.B --rsh-command=CMD
-]
-[
 .B -[0-7][lmh]	
 ]
-.TP
-.I filename1 [ filename2, ... filenameN ] 
-.TP
-.I directory1 [ directory2, ...directoryN ]
 .SH DESCRIPTION
 .LP
 This manual page documents the GNU version of
