@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.3_p1.ebuild,v 1.1 2000/10/18 03:26:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.3_p1.ebuild,v 1.2 2000/10/27 20:43:28 drobbins Exp $
 
 P=php-4.0.3pl1
 A="${P}.tar.gz number4.tar.gz"
@@ -49,7 +49,7 @@ pkg_config() {
   then
 
     # Activate PHP-Extension in httpd.conf
-    einfo "Activate PHP in httpd.conf..."
+    echo "Activate PHP in httpd.conf..."
     cp ${ROOT}/etc/httpd/httpd.conf ${ROOT}/etc/httpd/httpd.conf.orig
     sed -e "s/^#LoadModule php4_module/LoadModule php4_module/" \
       -e "s/^#AddModule mod_php4.c/AddModule mod_php4.c/" \
