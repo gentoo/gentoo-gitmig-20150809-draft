@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/kdelibs-apidocs-3.1.1a.ebuild,v 1.3 2003/04/27 13:45:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/kdelibs-apidocs-3.1.1a.ebuild,v 1.4 2003/04/29 06:38:08 hannes Exp $
 
 inherit kde
 
@@ -10,7 +10,8 @@ KEYWORDS="x86 ~ppc sparc"
 HOMEPAGE="http//developer.kde.org/"
 SLOT="3.1"
 LICENSE="GPL-2"
-SRC_URI="mirror://kde/stable/$PV/src/kdelibs-${PV}.tar.bz2 mirror://gentoo/kdelibs-${PVR}.diff.bz2"
+SRC_URI="mirror://kde/stable/$PV/src/kdelibs-3.1.1.tar.bz2
+	mirror://gentoo/kdelibs-${PVR}.diff.bz2"
 DEPEND="app-doc/doxygen app-doc/qt-docs"
 RDEPEND=""
 

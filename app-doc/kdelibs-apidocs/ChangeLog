@@ -1,6 +1,6 @@
 # ChangeLog for app-doc/kdelibs-apidocs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.14 2003/04/28 04:53:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.15 2003/04/29 06:38:07 hannes Exp $
 
   28 Apr 2003; Lars Weiler <pylon@gentoo.org> kdelibs-apidocs-3.1.1.ebuild:
   Set ppc in KEYWORDS
@@ -17,6 +17,11 @@
   <aoyu93@dsl.pipex.com>
 
 *kdelibs-apidocs-3.1.1a (08 Apr 2003)
+
+  29 Apr 2003; Hannes Mehnert <hannes@gentoo.org>
+  kdelibs-apidocs-3.1.1a.ebuild:
+  fixed SRC_URI, thanks to Andreas Klauer <Andreas.Klauer@metamorpher.de> (bug
+  #20149)
 
   08 Apr 2003; Dan Armak <danarmak@gentoo.org> kdelibs-apidocs-3.1.1a.ebuild:
   new vesrion to go with newly released kdelibs-3.1.1a.
