@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ogle
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.6 2002/06/15 18:45:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.7 2002/07/01 08:10:27 seemant Exp $
+
+*ogle-0.8.4 (1 Jul 2002)
+
+  1 Jul 2002; Seemant Kulleen <seemant@gentoo.org> ogle-0.8.4.ebuild
+  files/digest-ogle-0.8.4 :
+
+  Version bump.
 
   15 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
