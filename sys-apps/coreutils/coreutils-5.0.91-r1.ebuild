@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r1.ebuild,v 1.2 2003/11/19 19:19:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r1.ebuild,v 1.3 2003/11/23 08:30:01 gmsoft Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,9 +43,9 @@ src_unpack() {
 		ewarn "Will Select SELINUX instead"
 	fi
 
-	# HPPA and ARM platforms do not work well with the uname patch
+	# ARM platform does not work well with the uname patch
 	# (see below about it)
-	if use hppa || use arm
+	if use arm
 	then
 		mv ${PATCHDIR}/003* ${PATCHDIR}/excluded
 	fi
