@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/gmetadom
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.1 2003/04/18 06:37:42 george Exp $
+
+*gmetadom-0.0.3-r3.ebuild (17 Apr 2003)
+
+  17 Apr 2003; George Shapovalov <george@gentoo.org> gmetadom-0.0.3-r3.ebuild, files/{digest-gmetadom-0.0.3-r3,gmetadom-0.0.3-gcc3.diff} :
+  initial release (#11398)
+  A library providing bindings for multiple languages of multiple C DOM implementations
+  ebuild submitted by Matthieu Sozeau <mattam@netcourrier.com>
