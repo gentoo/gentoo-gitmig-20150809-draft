@@ -1,26 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c840524c434a3b9449ad4d0ac674fcf2 ChangeLog 10019
+MD5 111fb3875b7bfab24cd282880f1ae7ce ChangeLog 10652
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 07be834b0dbedbb5f91170c18dd22c1f spamassassin-2.63-r1.ebuild 2401
-MD5 977dc4b389deafd70daf9fd67c796b06 spamassassin-2.63.ebuild 2293
-MD5 205e042f0bd8a0cac7df1b17ff5b8aa5 spamassassin-2.64.ebuild 2505
-MD5 c607c46288451f185dc1c3a769e10fa8 spamassassin-3.0.0.ebuild 5799
+MD5 65493afe87a913fca09fc1a71f91c049 spamassassin-2.63-r1.ebuild 2411
+MD5 2340f8dc700ca777028031b023b4d168 spamassassin-2.63.ebuild 2300
+MD5 765fc4df91c2d5259208d35fc1c6068b spamassassin-2.64.ebuild 2515
 MD5 2a3d10825088e74b85c07939be66c34b spamassassin-3.0.0-r1.ebuild 5602
+MD5 c607c46288451f185dc1c3a769e10fa8 spamassassin-3.0.0.ebuild 5799
+MD5 0bc711a9d3d30520a21f09f6584085ed spamassassin-3.0.1.ebuild 5606
+MD5 4b17c303c2a11eab455003b92cd1851a files/3.0.0-spamd.conf 596
+MD5 33f67831957d640746a374b8774e7d2d files/3.0.0-spamd.init 667
 MD5 2bc962fe7cbd5fc24b6ca7703a498e83 files/digest-spamassassin-2.63 75
 MD5 2bc962fe7cbd5fc24b6ca7703a498e83 files/digest-spamassassin-2.63-r1 75
 MD5 6a161feb8320fadb55f440aab192d008 files/digest-spamassassin-2.64 75
-MD5 1ed9c6ddcb224ed5d2ad37aab7c0cce9 files/spamd.conf 265
-MD5 90925e8f6521add45f8a727ed982e61a files/spamd.init 645
-MD5 4b17c303c2a11eab455003b92cd1851a files/3.0.0-spamd.conf 596
-MD5 33f67831957d640746a374b8774e7d2d files/3.0.0-spamd.init 667
 MD5 7d4ce834279c9e36320d114a7118c127 files/digest-spamassassin-3.0.0 76
 MD5 7d4ce834279c9e36320d114a7118c127 files/digest-spamassassin-3.0.0-r1 76
+MD5 1ed9c6ddcb224ed5d2ad37aab7c0cce9 files/spamd.conf 265
+MD5 90925e8f6521add45f8a727ed982e61a files/spamd.init 645
+MD5 37be9f25f104cf5e5ad47b37351c7900 files/digest-spamassassin-3.0.1 76
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBcSoYtG5z4I8BtQoRApg/AKCLl7Uea41lPDBYx0wQUP0LfWWEMQCfSCH1
-PASEvDpO7T8CbJEaFn+hSxA=
-=EK11
+iD8DBQFBfuAttG5z4I8BtQoRAktgAJ0XEWHrKUKH2ftW32Ba3RdtwSv7RgCfQSxm
+Pd+yk73TKfPNa7QnbEzFUZs=
+=iIUr
 -----END PGP SIGNATURE-----

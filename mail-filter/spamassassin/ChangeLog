@@ -1,6 +1,16 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.16 2004/09/28 01:04:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.17 2004/10/26 23:39:42 mcummings Exp $
+
+  26 Oct 2004; Michael Cummings <mcummings@gentoo.org> :
+  Bug 68841. - excessive memory-usage fixes - bug fixed which stopped DCC, Pyzor
+  working with amavisd - deprecate RCVD_IN_RFC_IPWHOIS - user_prefs were staying
+  active between different spamd users, fixed - user_prefs blacklist entries
+  were not working in spamd, fixed - excessive time and memory consumption when
+  ok_languages is used, fixed - sa-learn -u switch to specify the username for
+  virtual environments - avoid bug in Sys::Hostname::Long that renames the
+  hostname when "make test" is run - whitelist the top 125 queried SURBL domains
+  common in nonspam
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/3.0.0-spamd.init:
   Gentoo Technologies, Inc. -> Gentoo Foundation
