@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Ilian Zarov <coder@descom.com>
 # Maintainer: Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-2.1.ebuild,v 1.1 2002/01/23 21:04:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-2.1.ebuild,v 1.2 2002/02/03 21:54:32 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 use kde && inherit kde
 
@@ -16,7 +16,7 @@ if [ "`use kde`" ]
 then
     need-kde 2
 else
-    DEPEND=">=x11-libs/qt-2.3.1"
+    DEPEND="=x11-libs/qt-2.3*"
     RDEPEND="$DEPEND"
 fi
 
