@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.25 2002/06/07 22:25:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.26 2002/06/08 16:24:32 azarah Exp $
+
+*xfree-4.2.0-r12 (8 Jun 2002)
+
+  8 Jun 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r12.ebuild :
+
+  Basically r11, but just new version to make sure we dont have some
+  of the weird issues in past because of a masked revision being changed
+  and then unmasked.
 
 *xfree-4.2.0-r11 (28 May 2002)
 
