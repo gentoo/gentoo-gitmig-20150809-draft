@@ -1,25 +1,29 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.2 2004/03/17 04:05:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.3 2004/03/24 17:26:42 eradicator Exp $
 
 inherit eutils fixheadtails
 
 MY_P=${P/-/_}
 DESCRIPTION="Speech tools for Festival Text to Speech engine"
 HOMEPAGE="http://www.cstr.ed.ac.uk/"
-SRC_URI="http://www.cstr.ed.ac.uk/download/festival/1.4.3/${MY_P}-release.tar.gz"
+SRC_URI="http://www.cstr.ed.ac.uk/download/festival/1.4.3/${MY_P}-release.tar.gz
+	 doc? ( http://www.cstr.ed.ac.uk/download/festival/1.4.3/festdoc-1.4.2.tar.gz )"
 
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
 KEYWORDS="x86 ~ppc -sparc amd64"
 
 RDEPEND="virtual/glibc"
-
+IUSE=""
 S="${WORKDIR}/speech_tools"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${MY_P}-release.tar.gz
+
 	cd ${S}
+	use doc && unpack festdoc-1.4.2.tar.gz && mv festdoc-1.4.2 festdoc
+
 	epatch ${FILESDIR}/${PN}-gcc3.3.diff
 	ht_fix_file config.guess
 	sed -i 's:-O3:$(CFLAGS):' base_class/Makefile
@@ -64,11 +68,13 @@ src_install() {
 	insinto /etc/env.d
 	doins ${FILESDIR}/58speech-tools
 
-	cd ${D}
-
 	cd ${S}
-	dodoc README
-	dodoc INSTALL
+	dodoc README INSTALL
 	cd ${S}/lib
 	dodoc cstrutt.dtd
+
+	if use doc; then
+		cd ${S}/festdoc/speech_tools/doc
+		dohtml *
+	fi
 }
