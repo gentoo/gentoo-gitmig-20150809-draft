@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/epm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/epm/ChangeLog,v 1.13 2003/05/02 02:03:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epm/ChangeLog,v 1.14 2003/05/27 01:39:22 agriffis Exp $
+
+*epm-0.8.4 (26 May 2003)
+
+  26 May 2003; Aron Griffis <agriffis@gentoo.org> epm-0.8.4.ebuild:
+  Update to 0.8.4 with a patch from Michael Sterrett to report the package URL
+  with -qi
 
 *epm-0.8.3 (01 May 2003)
 
