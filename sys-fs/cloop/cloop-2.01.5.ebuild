@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.01.5.ebuild,v 1.1 2004/11/23 22:50:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.01.5.ebuild,v 1.2 2004/11/24 06:08:00 genstef Exp $
 
 inherit kernel-mod eutils versionator
 
@@ -31,6 +31,7 @@ src_unpack() {
 	kernel-mod_is_2_6_kernel && [ "${KV_PATCH}" -gt 7 ] && epatch ${FILESDIR}/kernel-2.6.8-fs_h-fix.patch
 	cd ${S}
 	epatch ${FILESDIR}/cloop.fix.patch
+	epatch ${FILESDIR}/cloop.zlib-amd64.patch
 }
 
 src_compile() {
