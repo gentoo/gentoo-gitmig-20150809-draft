@@ -1,13 +1,23 @@
-MD5 7a0eeb4c2ef83f9152df32e6248f8cfd librsvg-2.6.5.ebuild 1206
-MD5 32aa3be893dc174acd0256168c7576ba librsvg-2.8.1.ebuild 1323
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ea46dca155aeaa59894db685725d5cf8 ChangeLog 6980
 MD5 0285767e6ab81272fb98a5592c6f4254 librsvg-1.0.3.ebuild 918
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 1b19a2f18300d04f8d675ded7f40214f librsvg-2.4.0-r1.ebuild 1023
 MD5 b1aa7b7a94730873a9e58d5c7b1be54e librsvg-2.6.4.ebuild 1350
-MD5 ea46dca155aeaa59894db685725d5cf8 ChangeLog 6980
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 4da0dc642eed645fd4dcbbfa8c7f4989 files/librsvg-2.6.4-gcc2_fix.patch 653
-MD5 34c42ed742cb02509b40848042cbc522 files/digest-librsvg-2.4.0-r1 66
+MD5 25ea72914526c479b668f3e3d6f3a236 librsvg-2.6.5.ebuild 1209
+MD5 38a8bef37c747680e83a829f27d75579 librsvg-2.8.1.ebuild 1329
 MD5 70f6afa0baffe29c6c4ab43dccbd0435 files/digest-librsvg-1.0.3 65
-MD5 a8d8e664929769b2cb10ba5dbeccb0d6 files/digest-librsvg-2.6.4 66
 MD5 46efdcbccab8e3618356a4b79cdf7a6a files/digest-librsvg-2.6.5 66
+MD5 34c42ed742cb02509b40848042cbc522 files/digest-librsvg-2.4.0-r1 66
+MD5 a8d8e664929769b2cb10ba5dbeccb0d6 files/digest-librsvg-2.6.4 66
+MD5 4da0dc642eed645fd4dcbbfa8c7f4989 files/librsvg-2.6.4-gcc2_fix.patch 653
 MD5 d74e975dc13fe71bdb6a66a6e021b3d7 files/digest-librsvg-2.8.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiq17HTu7gpaalycRAh6oAJsEsZx4UIgYOFoDrU3manThZlzhYQCfbXCx
+iio1nIPBm8ZLgM+ka6J3Jf8=
+=4/mf
+-----END PGP SIGNATURE-----

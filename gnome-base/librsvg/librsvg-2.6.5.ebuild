@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.5.ebuild,v 1.11 2004/10/01 07:04:23 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.5.ebuild,v 1.12 2004/11/04 22:29:35 vapier Exp $
 
 inherit eutils gnome2
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="http://librsvg.sourceforge.net/"
 
-IUSE="doc zlib"
-SLOT="2"
-KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~ia64 mips ppc64"
 LICENSE="LGPL-2"
+SLOT="2"
+KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ia64 mips ppc64 arm"
+IUSE="doc zlib"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
