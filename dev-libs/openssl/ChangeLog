@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.80 2004/05/10 15:18:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.81 2004/05/16 16:29:57 lu_zero Exp $
+
+  16 May 2004; Luca Barbato <lu_zero@gentoo.org> openssl-0.9.7d.ebuild:
+  Minor workaround for ppc and ppc64 gcc-3.3.3 and gcc-3.4
 
   10 May 2004; Tom Gall <tgall@gentoo.org> openssl-0.9.7d.ebuild:
   fix for ppc64, bug #50637

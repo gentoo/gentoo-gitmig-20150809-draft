@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.10 2004/05/10 15:18:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.11 2004/05/16 16:29:57 lu_zero Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -60,8 +60,13 @@ src_unpack() {
 	fi
 
 	case $( gcc-version ) in
-		3.3 | 3.2 )
+		3.2 )
+			filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loop 		;;
+		3.4 | 3.3 )
 			filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loops
+			if [ "${ARCH}" = "ppc" -o  "${ARCH}" = "ppc64" ]; then
+			append-flags -fno-strict-aliasing
+			fi
 		;;
 	esac
 
