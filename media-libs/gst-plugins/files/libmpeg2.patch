@@ -1,0 +1,21 @@
+diff -urN gst-plugins-0.6.2/ext/mpeg2dec/gstmpeg2dec.c gst-plugins-0.6.2-modified/ext/mpeg2dec/gstmpeg2dec.c
+--- gst-plugins-0.6.2/ext/mpeg2dec/gstmpeg2dec.c	2003-05-06 17:51:38.000000000 -0500
++++ gst-plugins-0.6.2-modified/ext/mpeg2dec/gstmpeg2dec.c	2003-06-29 13:51:21.000000000 -0500
+@@ -262,7 +262,7 @@
+   GstBuffer *outbuf = NULL;
+   gint size = mpeg2dec->width * mpeg2dec->height;
+   guint8 *buf[3], *out;
+-  const picture_t *picture;
++  const mpeg2_picture_t *picture;
+ 
+   if (mpeg2dec->peerpool) {
+     outbuf = gst_buffer_new_from_pool (mpeg2dec->peerpool, 0, 0);
+@@ -553,7 +553,7 @@
+ 			(info->display_fbuf ? info->display_fbuf->id : NULL));
+ 
+ 	if (info->display_fbuf && info->display_fbuf->id) {
+-          const picture_t *picture;
++          const mpeg2_picture_t *picture;
+ 	  gboolean key_frame = FALSE;
+ 	  
+ 	  outbuf = (GstBuffer *) info->display_fbuf->id;

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2.ebuild,v 1.2 2003/06/27 15:45:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2.ebuild,v 1.3 2003/07/06 09:51:20 raker Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -36,7 +36,7 @@ RDEPEND="=media-libs/gstreamer-${PV}*
 		media-libs/libogg )
 	encode? ( media-sound/lame )
 	quicktime? ( media-libs/openquicktime )
-	mpeg? (	=media-libs/libmpeg2-0.3.1* )
+	mpeg? (	>=media-libs/libmpeg2-0.3.1 )
 	esd? ( media-sound/esound )
 	gnome? ( >=gnome-base/gnome-vfs-2.0.1 )
 	mikmod? ( media-libs/libmikmod )
@@ -67,6 +67,11 @@ src_unpack() {
 
 	# ffmpeg libs fix
 	use oggvorbis && epatch ${FILESDIR}/${PN}-${PV_MAJ_MIN}-ffmpeg_ldflags.patch
+
+	# patch for changing types in >libmpeg-0.3.1
+        if grep -q mpeg2_picture ${ROOT}/usr/include/mpeg2dec/mpeg2.h; then
+                epatch ${FILESDIR}/libmpeg2.patch
+        fi
 
 	# fix the scripts
 	cd ${S}/tools
