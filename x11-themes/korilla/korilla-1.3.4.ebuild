@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/korilla/korilla-1.3.4.ebuild,v 1.1 2003/11/16 03:44:10 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/korilla/korilla-1.3.4.ebuild,v 1.2 2004/03/20 01:41:10 weeve Exp $
 
 inherit kde # not kde-base since we don't need c++ deps
 
@@ -8,7 +8,7 @@ need-kde 3
 
 DESCRIPTION="Kool Gorilla Icon Set for KDE"
 SRC_URI="http://www.starsurvivor.net/linux/gorilla/Korilla-v${PV}.tar.bz2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~sparc"
 SLOT="0"
 LICENSE="as-is"
 
