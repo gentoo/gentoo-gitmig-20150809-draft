@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r4.ebuild,v 1.1 2004/08/19 14:48:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r4.ebuild,v 1.2 2004/08/19 21:46:59 lv Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -98,11 +98,11 @@ src_install() {
 
 	if use unicode ; then
 		gen_usr_ldscript libncursesw.so
-		for i in ${D}/usr/lib/*w.*; do
+		for i in ${D}/usr/${CONF_LIBDIR}/*w.*; do
 			local libncurses=${i/${D}/}
 			dosym ${libncurses} ${libncurses/w./.}
 		done
-		for i in ${D}/lib/libncursesw.so*; do
+		for i in ${D}/${CONF_LIBDIR}/libncursesw.so*; do
 			local libncurses=${i/${D}}
 			dosym ${libncurses} ${libncurses/w./.}
 		done
@@ -151,11 +151,11 @@ src_install() {
 		# need to remove libncurses.a from the build image manually.
 		# cd ${D}/usr/lib; rm *.a
 		# remove extraneous ncurses libraries
-		cd ${D}/usr/lib; rm -f lib{form,menu,panel}*
+		cd ${D}/usr/${CONF_LIBDIR}; rm -f lib{form,menu,panel}*
 		cd ${D}/usr/include; rm -f {eti,form,menu,panel}.h
 	else
 		if use bootstrap ; then
-			cd ${D}/usr/lib; rm -f lib{form,menu,panel,ncurses++}*
+			cd ${D}/usr/${CONF_LIBDIR}; rm -f lib{form,menu,panel,ncurses++}*
 			cd ${D}/usr/include; rm -f {eti,form,menu,panel}.h cursesapp.h curses?.h cursslk.h etip.h
 		fi
 		# Install xterm-debian terminfo entry to satisfy bug #18486

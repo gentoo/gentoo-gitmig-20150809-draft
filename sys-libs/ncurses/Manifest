@@ -3,9 +3,9 @@ MD5 67809502940dfc2279c85ba964cf9208 ncurses-5.4-r3.ebuild 5628
 MD5 e0cbea07444890f3bd2fa7462ee9b8c9 ncurses-8.1.ebuild 401
 MD5 b64893113afb0ce133c2d3445394666f ncurses-5.4-r2.ebuild 5672
 MD5 31b0e575ef0e06746b60c74b3e9cdbe8 ncurses-5.3-r5.ebuild 3788
-MD5 0341d95d620e7e4e63a8e4270362ef4b ChangeLog 12198
+MD5 575814274aca1311cac34115ce3b8ab6 ChangeLog 12366
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d3a368b6570d79cba6df8b3257ab8ad3 ncurses-5.4-r4.ebuild 6012
+MD5 69fdbb1bd156f172aef0960836aa19d3 ncurses-5.4-r4.ebuild 6052
 MD5 f96d1b4b0bf94f1d38ce950df0efb37e files/ncurses-5.3-xterm.patch 1002
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ncurses-8.1 0
 MD5 61ecd5aac5ddbd35cc4d4a00282eed01 files/ncurses-5.4-xterm.patch 495
