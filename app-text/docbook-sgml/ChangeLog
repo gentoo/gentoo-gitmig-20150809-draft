@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook-sgml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml/ChangeLog,v 1.7 2003/07/04 05:28:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml/ChangeLog,v 1.8 2004/01/07 16:06:03 agriffis Exp $
+
+  07 Jan 2004; <agriffis@gentoo.org> docbook-sgml-1.0.ebuild:
+  stable on ia64
 
   23 Jan 2003; Aron Griffis <agriffis@gentoo.org> docbook-sgml-1.0.ebuild :
   Add alpha to KEYWORDS
