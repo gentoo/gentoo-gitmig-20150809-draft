@@ -1,6 +1,16 @@
-MD5 45d21b56d9a454b5c7b7a69501c832c5 ChangeLog 1113
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5bf44435665f6c8f3e874bc0540f8ccc nepali-fonts-1.ebuild 596
-MD5 404bf79599c4fe7ac9b01e274324be39 nepali-fonts-1-r1.ebuild 576
+MD5 45d21b56d9a454b5c7b7a69501c832c5 ChangeLog 1113
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 3b632f9306055daee9eaaa51aecfbc6f nepali-fonts-1-r1.ebuild 574
 MD5 dd8bfa69cb93ddd4b0a181d014c28282 files/digest-nepali-fonts-1 67
 MD5 dd8bfa69cb93ddd4b0a181d014c28282 files/digest-nepali-fonts-1-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA14kjHTu7gpaalycRAqGHAKDmrRcwxWIv1PCDQou6jY6XjYkoCQCg4ZCS
+iLUUprx26dlRvG7pud/UarA=
+=bRYg
+-----END PGP SIGNATURE-----
