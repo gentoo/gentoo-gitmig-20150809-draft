@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r6.ebuild,v 1.5 2003/02/13 16:15:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r6.ebuild,v 1.6 2003/02/21 02:34:19 zwelch Exp $
 
 IUSE="nls"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Tools to deal with shar archives"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/sharutils/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/sharutils/"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa arm"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc 

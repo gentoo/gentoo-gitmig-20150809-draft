@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.15 2003/02/12 09:02:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.16 2003/02/21 02:34:19 zwelch Exp $
+
+  20 Feb 2003; Zach Welch <zwelch@gentoo.org> man-1.5k-r1.ebuild :
+  Added arm to keywords.
 
   07 Feb 2003; Guy Martin <gmsoft@gentoo.org> man-1.5k-r1.ebuild :
   Added hppa to keywords.

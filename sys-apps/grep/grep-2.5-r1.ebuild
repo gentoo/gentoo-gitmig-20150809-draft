@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5-r1.ebuild,v 1.15 2003/02/13 15:58:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5-r1.ebuild,v 1.16 2003/02/21 02:34:19 zwelch Exp $
 
 IUSE="nls build"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/${PN}/${P}.tar.gz
 	ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/grep/grep.html"
 
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 SLOT="0"
 LICENSE="GPL-2"
 

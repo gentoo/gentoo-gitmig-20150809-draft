@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.13 2003/02/13 16:14:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.14 2003/02/21 02:34:19 zwelch Exp $
 
 IUSE="nls static build"
 
@@ -13,7 +13,7 @@ DEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -22,8 +22,8 @@ src_unpack() {
 	# patch to remove Stallman's su/wheel group rant and to add processor
 	# information in uname output
 
-	# btw, this patch is b0rked on hppa
-	use hppa || patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
+	# note: this patch is b0rked on hppa and arm  -- gm and ztw
+	use hppa || use arm || patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
 
 	# This next line prevents our patched (and updated-mtime) uname.c 
 	# from forcing a uname.1 man page regeneration, which requires perl 

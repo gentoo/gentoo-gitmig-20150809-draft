@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.8 2003/02/15 19:49:11 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.9 2003/02/21 02:34:19 zwelch Exp $
+
+  20 Feb 2003; Zach Welch <gmsoft@gentoo.org> ed-0.2-r3.ebuild :
+  Added arm to keywords.
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> ed-0.2-r3.ebuild :
   Added hppa to keywords.

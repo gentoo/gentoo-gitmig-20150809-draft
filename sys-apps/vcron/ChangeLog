@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.9 2003/02/19 20:02:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.10 2003/02/21 02:34:19 zwelch Exp $
 
 *vcron-3.0.1-r1 (20 Apr 2002)
+
+  20 Feb 2003; Zach Welch <zwelch@gentoo.org> vcron-3.0.1-r1.ebuild :
+  Add arm keyword
 
   19 Feb 2003; Martin Holzer <mholzer@gentoo.org> vcron-3.0.1-r1.ebuild :
   added keepdir /var/spool/cron/crontabs/

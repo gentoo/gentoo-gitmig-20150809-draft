@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sharutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.8 2003/02/12 09:07:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.9 2003/02/21 02:34:19 zwelch Exp $
+
+  20 Feb 2003; Zach Welch <zwelch@gentoo.org> sharutuls-4.2.1-r6.ebuild :
+  Added arm to keywords.
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> sharutuls-4.2.1-r6.ebuild :
   Added hppa to keywords.

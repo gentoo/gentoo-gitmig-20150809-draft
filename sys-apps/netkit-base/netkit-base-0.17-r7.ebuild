@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r7.ebuild,v 1.5 2003/02/14 21:36:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r7.ebuild,v 1.6 2003/02/21 02:34:19 zwelch Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Standard linux net thingees -- inetd, ping"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa arm"
 SLOT="0"
 LICENSE="BSD"
 
