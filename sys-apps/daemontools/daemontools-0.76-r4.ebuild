@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r4.ebuild,v 1.16 2005/01/02 23:13:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r4.ebuild,v 1.17 2005/01/30 18:49:10 vapier Exp $
 
 inherit eutils gcc
 
@@ -10,8 +10,8 @@ SRC_URI="http://cr.yp.to/daemontools/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips sparc ppc ppc64 x86"
-IUSE="selinux static"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+IUSE="selinux static doc"
 
 DEPEND="virtual/libc"
 RDEPEND="selinux? ( sec-policy/selinux-daemontools )
@@ -27,8 +27,8 @@ src_unpack() {
 
 	use static && LDFLAGS="${LDFLAGS} -static"
 
-	echo "$(gcc-getCC) ${CFLAGS}" > src/conf-cc
-	echo "$(gcc-getCC) ${LDFLAGS}" > src/conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > src/conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > src/conf-ld
 	echo ${S} > src/home
 }
 
@@ -44,8 +44,7 @@ src_install() {
 	einfo "Installing package ..."
 	cd ${S}/src
 	exeinto /usr/bin
-	for x in `cat ../package/commands`
-	do
+	for x in `cat ../package/commands` ; do
 		doexe $x || die
 	done
 
