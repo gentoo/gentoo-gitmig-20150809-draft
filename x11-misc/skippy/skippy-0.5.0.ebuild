@@ -10,7 +10,7 @@ SRC_URI="http://thegraveyard.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 RDEPEND="virtual/x11
 	virtual/xft"
