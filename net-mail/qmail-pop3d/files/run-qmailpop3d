@@ -1,6 +1,6 @@
 #!/bin/sh
 exec /usr/bin/softlimit -m 2000000 \
     /usr/bin/tcpserver -v -p -x /etc/tcp.smtp.cdb \
-    0 pop-3 /var/qmail/bin/qmail-popup theleaf.be /bin/checkpassword \
-    /var/qmail/bin/qmail-pop3d .maildir 2>&1
+    0 pop-3 /var/qmail/bin/qmail-popup `hostname --fqdn`
+    /bin/checkpassword /var/qmail/bin/qmail-pop3d .maildir 2>&1
 
