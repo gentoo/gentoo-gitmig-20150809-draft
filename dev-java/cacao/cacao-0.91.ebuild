@@ -1,6 +1,6 @@
-# Copyright 2005-2005 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.91.ebuild,v 1.1 2005/02/20 00:56:06 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.91.ebuild,v 1.2 2005/02/20 10:51:41 karltk Exp $
 
 inherit eutils java-pkg
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_enable gtk` || die "Failed to configure"
+	econf `use_enable gtk gtk-peers` || die "Failed to configure"
 	emake || die "Failed to compile"
 }
 
