@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.58 2003/11/12 09:20:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.59 2003/11/17 09:56:04 kumba Exp $
+
+
+*openssl-0.9.6l (04 Nov 2003)
+*openssl-0.9.7c-r1 (04 Nov 2003)
+
+  17 Nov 2003; Joshua Kinard <kumba@gentoo.org> openssl-0.9.7c-r1.ebuild:
+  Made a tweak to allow openssl to build on mips64 platforms (64-bit kernel,
+  32-bit userland)
 
   12 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7c.ebuild, openssl-0.9.7c-r1.ebuild :
   Make test removes the built libraries to be rebuilt later with make install, this was not the case with 
@@ -10,9 +18,6 @@
   06 Nov 2003; Paul de Vrieze <pauldv@gentoo.org> openssl-0.9.7c-r1.ebuild:
   Add checks so that missing 0.9.6 libs when they should be there will cause the
   ebuild to fail, so saving from mishap
-
-*openssl-0.9.6l (04 Nov 2003)
-*openssl-0.9.7c-r1 (04 Nov 2003)
 
   04 Nov 2003; Daniel AHlberg <aliz@gentoo.org> openssl-0.9.7c-r1.ebuild openssl-0.9.6l.ebuild :
   Security update.
