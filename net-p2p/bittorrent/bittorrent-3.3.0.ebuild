@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.3.0.ebuild,v 1.2 2003/12/17 18:38:15 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.3.0.ebuild,v 1.3 2004/01/06 03:27:32 avenj Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://bitconjurer.org/BitTorrent/${MY_P}.tar.gz"
 HOMEPAGE="http://bitconjurer.org/BitTorrent"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc ~amd64"
 
 IUSE="X"
 
