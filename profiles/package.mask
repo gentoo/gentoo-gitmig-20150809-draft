@@ -1,8 +1,11 @@
 # Security fix (reported by M0rpheus)
 <=net-mail/exim-3.33
+<=app-admin/sudo-1.6.4
 
 #previous versions had a security hole (bug #212)
 <=net-misc/stunnel-3.22
+
+
 
 #we no longer use sysvinit (rolled into baselayout)
 sys-apps/sysvinit
