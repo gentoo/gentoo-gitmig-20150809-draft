@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.52 2004/07/13 23:46:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.53 2004/07/14 00:17:25 mr_bones_ Exp $
+
+*libsdl-1.2.7-r2 (13 Jul 2004)
+
+  13 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/1.2.7-joystick2.patch, +libsdl-1.2.7-r2.ebuild:
+  Updated joystick patch from libsdl CVS. (bug #52833)
 
   14 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libsdl-1.2.7-r1.ebuild:
   Stable on alpha.
