@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.10 2004/03/25 08:12:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.11 2004/05/13 14:20:08 randy Exp $
+
+  13 May 2004; Michael McCabe <randy@gentoo.org> netselect-0.3.ebuild:
+  Added s390 keywords
 
   25 Mar 2004; Joshua Kinard <kumba@gentoo.org> netselect-0.3.ebuild:
   Marked stable on mips.
