@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.42 2004/08/25 20:44:54 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.43 2004/08/25 22:53:24 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -466,6 +466,7 @@ unipatch() {
 	#populate KPATCH_DIRS so we know where to look to remove the excludes
 	x=${KPATCH_DIR}
 	KPATCH_DIR=""
+	LC_ALL="C"
 	for i in $(find ${x} -type d | sort -n)
 	do
 		KPATCH_DIR="${KPATCH_DIR} ${i}"
@@ -487,10 +488,9 @@ unipatch() {
 	done
 
 	# and now, finally, we patch it :)
-	LC_ALL="C"
 	for x in ${KPATCH_DIR}
 	do
-		for i in $(find ${x} -maxdepth 1 -iregex ".*\.patch[0-9]*" -or -iname "*.diff" | sort -n)
+		for i in $(find ${x} -maxdepth 1 -iname "*.patch*" -or -iname "*.diff" | sort -n)
 		do
 			STDERR_T="${T}/${i/*\//}"
 			STDERR_T="${STDERR_T/.patch*/.err}"
@@ -534,6 +534,12 @@ unipatch() {
 				die "Unable to dry-run patch."
 			fi
 		done
+	done
+
+	# clean up  KPATCH_DIR's - fixes bug #53610
+	for x in ${KPATCH_DIR}
+	do
+		rm -Rf ${x}
 	done
 	unset LC_ALL
 }
