@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.3 2004/05/21 23:33:01 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.4 2004/05/22 16:25:11 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -63,6 +63,10 @@ src_unpack() {
 
 	if use ipv6; then
 		epatch ${FILESDIR}/patches/${PVR}/01_gentoo_ipv6.patch || die
+	fi
+
+	if use ldap; then
+		epatch ${FILESDIR}/patches/${PVR}/01_apache_ldap_fixes.patch || die
 	fi
 
 	if use ssl; then

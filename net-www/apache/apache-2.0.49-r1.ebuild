@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.22 2004/05/21 00:20:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.23 2004/05/22 16:25:11 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -63,10 +63,9 @@ src_unpack() {
 		epatch ${FILESDIR}/httpd-2.0.49-ipv6.patch
 	fi
 
-	#if use ssl; then
-	#	epatch ${FILESDIR}/patches/${PVR}/00_ssl_engine.patch
-	#	epatch ${FILESDIR}/patches/${PVR}/00_ssl_verify_client.patch
-	#fi
+	if use ldap; then
+		epatch ${FILESDIR}/patches/${PVR}/01_apache_ldap_fixes.patch
+	fi
 
 	#avoid utf-8 charset problems
 	export LC_CTYPE=C
