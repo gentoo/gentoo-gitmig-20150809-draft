@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.4.4.ebuild,v 1.4 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.4.4.ebuild,v 1.5 2003/03/26 00:44:59 vladimir Exp $
 
 inherit libtool
 inherit perl-module
@@ -16,7 +16,7 @@ MY_P=${MY_PN}-${PV%.*}-${PV#*.*.*.}
 MY_P2=${MY_PN}-${PV%.*}
 S=${WORKDIR}/${MY_P2}
 DESCRIPTION="A collection of tools and libraries for many image formats"
-SRC_URI="http://imagemagick.sourceforge.net/http/${MY_P}.tar.bz2"
+SRC_URI="http://imagemagick.sourceforge.net/http/${MY_P}.tar.gz"
 HOMEPAGE="http://www.imagemagick.org/"
 
 SLOT="0"
