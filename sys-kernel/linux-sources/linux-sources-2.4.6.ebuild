@@ -19,7 +19,7 @@ AV=0.5.11
 JFSV=1.0.0
 
 # Versions of lm_sensors
-SENV=2.5.5
+#SENV=2.6.0
 
 # Versions of reiserfs
 RV=20010327
@@ -30,7 +30,7 @@ PIV="1.d"
 XMLV=0.3
 
 # Versions of pcmcia-cs
-PCV="3.1.26"
+PCV="3.1.27"
 
 [ "${PN}" = "linux" ] && DESCRIPTION="Linux kernel version ${KV}, including modules, binary tools, libraries and includes"
 [ "${PN}" = "linux-sources" ] && DESCRIPTION="Linux kernel version ${KV} - full sources"
@@ -40,13 +40,15 @@ PCV="3.1.26"
 # so we need no sources
 if [ ! "${PN}" = "linux-extras" ] ; then
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz
-	ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz
 	ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
 	http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz
+	http://www.zip.com.au/~akpm/ext3-2.4-0.9.1-246.gz
 	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-1.0.0-patch.tar.gz"
 fi
-
+#	http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz
+#	http://www.netroedge.com/~lm78/archive/i2c-${SENV}.tar.gz
+#	ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz
+	
 if [ "$PN" != "linux-extras" ]
 then
 	PROVIDE="virtual/kernel"
@@ -69,7 +71,7 @@ HOMEPAGE="http://www.kernel.org/
 
 
 if [ ! $PN = "linux-extras" ] ; then
-    RDEPEND=">=sys-apps/e2fsutils-1.22 >=sys-apps/util-linux-2.11f >=sys-apps/reiserfs-utils-3.6.25-r1"
+    RDEPEND=">=sys-apps/e2fsprogs-1.22 >=sys-apps/util-linux-2.11f >=sys-apps/reiserfs-utils-3.6.25-r1"
     DEPEND=">=sys-apps/modutils-2.4.2 sys-devel/perl"
 else
     DEPEND=">=sys-kernel/${PF/extras/sources}"
@@ -96,13 +98,20 @@ src_unpack() {
 		cd ${S}
 #		echo "Applying ${KV} patch..."
 #		try bzip2 -dc ${DISTDIR}/patch-${KV}.bz2 | patch -p1
+		
+#		This patch is just *too* unweildy and creates tons of rejects all over the place (boo!)
+#		echo "Applying XFS patch..."
+#		local x
+#		for x in easy only tricky acl-extattr misc
+#		do
+#			cat ${DISTDIR}/patch-2.4.6-xfs-${x}.bz2 | bzip2 -d | patch -p1
+#		done		
+		
 		echo "Applying reiserfs-NFS fix..."
 		try cat ${FILESDIR}/2.4.6/linux-2.4.6-reiserfs-NFS.patch | patch -N -p1
     
-		if [ "`use lvm`" ] || [ "`use alsa`" ] || [ "`use lm_sensors`" ] || [ "`use pcmcia-cs`" ]
-		then
-			mkdir ${S}/extras
-		fi
+		mkdir ${S}/extras
+				
 		if [ "`use lvm`" ]
 		then
 			#create and apply LVM patch.  The tools get built later.
@@ -131,27 +140,44 @@ src_unpack() {
 			unpack alsa-driver-${AV}.tar.bz2
 		fi
     
-		if [ "`use lm_sensors`" ]
-		then
-			#unpack and apply the lm_sensors patch
-			echo "Unpacking and applying lm_sensors patch..."
-			cd ${S}/extras
-			unpack lm_sensors-${SENV}.tar.gz
-			try cd lm_sensors-${SENV}
-			try mkpatch/mkpatch.pl . ${S} > ${S}/lm_sensors-patch
-			try rmdir src
-			try ln -s ../.. src
-			try cp -a Makefile Makefile.orig
-
-			cd ${S}
-			try patch -p1 < lm_sensors-patch
-		fi
+#		if [ "`use lm_sensors`" ]
+#		then
+#			#unpack and apply the lm_sensors patch
+#			echo "Unpacking and applying lm_sensors patch..."
+#			cd ${S}/extras
+#			unpack lm_sensors-${SENV}.tar.gz
+#			unpack i2c-${SENV}.tar.gz
+#			try cd i2c-${SENV}
+#			try rmdir src
+#			try ln -s ../.. src
+#			try mkpatch/mkpatch.pl . /usr/src/linux | patch -p1 -E -d /usr/src/linux
+#			cp Makefile Makefile.orig
+#			try sed -e \"s:^LINUX=.*:LINUX=src:\" \
+#			-e \"s/^COMPILE_KERNEL.*/COMPILE_KERNEL := 2/\" \
+#			-e \"s:^I2C_HEADERS.*:I2C_HEADERS=.i2c-src/kernel:\" \
+#			-e \"s#^DESTDIR.*#DESTDIR := ${D}#\" \
+#			-e \"s#^PREFIX.*#PREFIX := /usr#\" \
+#			-e \"s#^MANDIR.*#MANDIR := /usr/share/man#\" \
+#			Makefile.orig > Makefile
+#			try cd ${S}/extras/lm_sensors-${SENV}
+#			try rmdir src
+#			try ln -s ../.. src
+#			try ln -s ../i2c-${SENV} i2c-src
+#			try mkpatch/mkpatch.pl . /usr/src/linux | patch -p1 -E -d /usr/src/linux
+#			try sed -e \"s:^LINUX=.*:LINUX=src:\" \
+#			-e \"s/^COMPILE_KERNEL.*/COMPILE_KERNEL := 2/\" \
+#			-e \"s:^I2C_HEADERS.*:I2C_HEADERS=.i2c-src/kernel:\" \
+#			-e \"s#^DESTDIR.*#DESTDIR := ${D}#\" \
+#			-e \"s#^PREFIX.*#PREFIX := /usr#\" \
+#			-e \"s#^MANDIR.*#MANDIR := /usr/share/man#\" \
+#			Makefile.orig > Makefile
+#		 fi
 		if [ "`use pcmcia-cs`" ]
 		then
 			echo "Unpacking pcmcia-cs tools..."
 			cd ${S}/extras
 			unpack pcmcia-cs-${PCV}.tar.gz
-			patch -p0 < ${FILESDIR}/${KV}/pcmcia-cs-${PCV}-gentoo.diff
+		#	patch -p0 < ${FILESDIR}/${KV}/pcmcia-cs-${PCV}-gentoo.diff
 		fi
 		
 		if [ "`use jfs`" ]
@@ -163,6 +189,14 @@ src_unpack() {
 			patch -p1 < ${WORKDIR}/jfs-common-v1.0.0-patch
 			patch -p1 < ${WORKDIR}/jfs-2.4.5-v1.0.0-patch
 		fi
+		
+		if [ "`use ext3`" ]
+		then
+			echo "Applying ext3 patch..."
+			cd ${S}
+			gzip -dc ${DISTDIR}/ext3-2.4-0.9.1-246.gz | patch -l -p1
+		fi
+		
 		#get sources ready for compilation or for sitting at /usr/src/linux
 		echo "Preparing for compilation..."
 		cd ${S}
@@ -173,7 +207,7 @@ src_unpack() {
 		if [ "${PN}" != "linux-extras" ]
 		then
 			#this is the configuration for the default kernel
-			try cp ${FILESDIR}/${KV}/config.bootcomp .config
+			try cp ${FILESDIR}/${KV}/config.bootcd .config
 			try yes \"\" \| make oldconfig
 			echo "Ignore any errors from the yes command above."
 		fi
@@ -188,14 +222,14 @@ src_unpack() {
 
 src_compile() {
 
-    if [ "${PN}" != "linux-sources" ]
+	if [ "${PN}" != "linux-sources" ]
 	then
-    	if [ $PN = "linux-extras" ]
-		then
-        	KS=/usr/src/linux
-    	else
-        	KS=${S}
-    	fi
+		if [ $PN = "linux-extras" ]
+			then
+			KS=/usr/src/linux
+		else
+			KS=${S}
+		fi
 		if [ $PN = "linux" ]
 		then
 			try make symlinks
@@ -204,7 +238,7 @@ src_compile() {
 		then
 			#LVM tools are included in the linux and linux-extras pakcages
 			cd ${KS}/extras/LVM/${LVMV}
-
+	
 			# This is needed for linux-extras
 			if [ -f "Makefile" ]
 			then
@@ -216,22 +250,14 @@ src_compile() {
 			try make 
 		fi
 	
-		if [ "`use lm_sensors`" ]
-		then
-			cd ${KS}/extras/lm_sensors-${SENV}
-			try sed -e \"s:^LINUX=.*:LINUX=src:\" \
-			-e \"s/^COMPILE_KERNEL.*/COMPILE_KERNEL := 0/\" \
-			-e \"s:^I2C_HEADERS.*:I2C_HEADERS=src/include:\" \
-			-e \"s#^DESTDIR.*#DESTDIR := ${D}#\" \
-			-e \"s#^PREFIX.*#PREFIX := /usr#\" \
-			-e \"s#^MANDIR.*#MANDIR := /usr/share/man#\" \
-			Makefile.orig > Makefile
-
-			try make
-		fi
-	
+#		if [ "`use lm_sensors`" ]
+#		then
+#			cd ${KS}/extras/lm_sensors-${SENV}
+#			try make
+#		fi
+		
 		cd ${S}
-	
+		
 		if [ "`use jfs`" ]
 		then
 			cd ${S}/fs/jfs/utils
@@ -241,7 +267,7 @@ src_compile() {
 			dosbin *
 			doman `find -iname *.8`
 		fi
-		
+			
 		if [ "$PN" == "linux" ]
 		then
 			try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
@@ -250,7 +276,7 @@ src_compile() {
 			try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
 			#LEX=\""flex -l"\" modules
 		fi
-	    
+		
 		# This must come after the kernel compilation in linux
 		if [ "`use alsa`" ]
 		then
@@ -275,7 +301,7 @@ src_compile() {
 			--notrust --cardbus --nopnp --noapm --srctree --sysv --rcdir=/etc/rc.d/
 			try make all
 		fi
-    else
+	else
 		#linux-sources
 		try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
 	fi
@@ -318,13 +344,14 @@ src_install() {
 			mv ${D}/lib/*.a ${D}/usr/lib
 		fi
 	
-		if [ "`use lm_sensors`" ]
-		then
-			echo "Install sensor tools..."
-			#install sensors tools
-			cd ${KS}/extras/lm_sensors-${SENV}
-			make install
-		fi
+#		if [ "`use lm_sensors`" ]
+#		then
+#			echo "Install sensor tools..."
+#			#install sensors tools
+#			cd ${KS}/extras/lm_sensors-${SENV}
+#			make install
+#		fi
+
 		if [ "${PN}" = "linux" ] 
 		then
 			dodir /usr/src
