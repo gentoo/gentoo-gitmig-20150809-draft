@@ -1,0 +1,28 @@
+#!/bin/sh
+# Copyright (c) 2003 Gentoo Technologies, Inc.
+# Copyright (c) 2003 Karl Trygve Kalleberg <karltk@gentoo.org>
+# 
+# Derived from vapier's clanlib-update
+
+VERSION=@VERSION@
+
+if [ ! "`ls /usr/lib/clanlib-* 2> /dev/null`" ] ; then
+	echo "No installed versions of ClanLib detected!"
+	exit 1
+fi
+
+showusage() {
+	echo "Usage: clanlib-config [options]"
+	echo "Options: "
+	echo "   [--libs]"
+	echo "   [--version]"
+}
+
+[ -z "${1}" ] && showusage
+
+case ${1} in
+	--lib-path)
+		echo /usr/lib/clanlib-${VERSION}
+		;;
+	--version)
+		echo ${VERSION}

@@ -1,5 +1,5 @@
-MD5 ca0e6fd811b998e111fd99ffae13d77e ChangeLog 2926
-MD5 62c2bd38c15c7bab966df4896f9b5e27 clanlib-0.7.3.ebuild 2028
+MD5 b963af2468fd528182c8fd141f8b90f7 ChangeLog 3153
+MD5 80edec9c7b49aa605d2d124760ecfdc3 clanlib-0.7.3.ebuild 2287
 MD5 03cbccb6c4090d5be3b53e08c878232f clanlib-0.6.5.ebuild 1819
 MD5 896de8fa3660ab63de3ca6e3f3a3c63c clanlib-0.6.5-r1.ebuild 1826
 MD5 e7a1f3bc72ec1c7b2ba485f7d34cdfab clanlib-0.7.2-r1.ebuild 1812
@@ -10,4 +10,4 @@ MD5 bc345d3a4ee0ea2456a34e07440f64a1 files/0.6.5-gcc3.patch 1518
 MD5 26dcf3921a83e1671ba72cd1ee82c6ed files/clanlib-config 580
 MD5 3e439d751339f684be1c709644d71a4d files/digest-clanlib-0.6.5-r1 68
 MD5 4e2de6bff20d9fd5f2df68d686773d03 files/0.7.2-gcc3.patch 422
-MD5 0037c560d9d2daa632005b978e892402 files/clanlib-config-0.7.3 729
+MD5 af53cae04024e14d32df343a2cd6f66c files/clanlib-config-0.7.in 542
