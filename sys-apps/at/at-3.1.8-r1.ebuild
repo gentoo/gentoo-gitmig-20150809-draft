@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r1.ebuild,v 1.3 2000/08/23 06:16:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r1.ebuild,v 1.4 2000/09/15 20:09:16 drobbins Exp $
 
 A="${P}.tar.bz2 ${P}.dif"
 S=${WORKDIR}/${P}
@@ -11,8 +11,8 @@ SRC_URI="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.tar.bz2
 
 src_compile() {
 
-    ./configure --host=${CHOST} --sysconfdir=/etc/at 
-    make
+    try ./configure --host=${CHOST} --sysconfdir=/etc/at 
+    try make
 
 }
 

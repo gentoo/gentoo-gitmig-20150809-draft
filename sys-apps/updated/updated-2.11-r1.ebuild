@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/updated/updated-2.11-r1.ebuild,v 1.2 2000/08/16 04:38:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/updated/updated-2.11-r1.ebuild,v 1.3 2000/09/15 20:09:23 drobbins Exp $
 
 P=updated-2.11
 A=${P}.tar.gz
@@ -10,7 +10,7 @@ DESCRIPTION="Update flushes filesystem buffers at regular intervals"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/${P}"
 
 src_compile() {                           
-	make
+	try make
 }
 
 src_unpack() {

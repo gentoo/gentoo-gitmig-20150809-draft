@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r1.ebuild,v 1.2 2000/08/16 04:38:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r1.ebuild,v 1.3 2000/09/15 20:09:21 drobbins Exp $
 
 P=raidtools-0.90-1
 A=raidtools-dangerous-0.90-20000116.tar.gz
@@ -10,10 +10,10 @@ DESCRIPTION="Linux RAID 0/1/4/5 utilities"
 SRC_URI="http://people.redhat.com/mingo/raid-patches/"${A}
 
 src_compile() {                           
-    ./configure 
+    try ./configure 
     cp Makefile Makefile.orig
     sed -e "s/-O2//" -e "s/-g//" Makefile.orig > Makefile
-    make
+    try make
 }
 
 src_install() {                               

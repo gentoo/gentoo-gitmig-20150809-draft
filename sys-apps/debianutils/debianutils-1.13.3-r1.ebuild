@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.13.3-r1.ebuild,v 1.2 2000/08/16 04:38:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.13.3-r1.ebuild,v 1.3 2000/09/15 20:09:17 drobbins Exp $
 
 P=debianutils-1.13.3     
 A=debianutils_1.13.3.tar.gz
@@ -10,7 +10,7 @@ DESCRIPTION="A selection of tools from Debian"
 SRC_URI="ftp://ftp.debian.org/debian/dists/potato/main/source/base/${A}"
 
 src_compile() {                           
-	make
+	try make
 }
 
 src_unpack() {

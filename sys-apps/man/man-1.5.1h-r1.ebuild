@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5.1h-r1.ebuild,v 1.1 2000/08/16 17:17:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5.1h-r1.ebuild,v 1.2 2000/09/15 20:09:20 drobbins Exp $
 
 P=man-1.5h1 
 A=${P}.tar.gz
@@ -10,16 +10,16 @@ DESCRIPTION="Standard commands to read man pages"
 SRC_URI="ftp://ftp.win.tue.nl/pub/linux-local/utils/man/${P}"
 
 src_compile() {                           
-    ./configure +sgid +fsstnd +lang all
+    try ./configure +sgid +fsstnd +lang all
     for FOOF in src man2html
     do
-	make ${FOOF}/Makefile
+	try make ${FOOF}/Makefile
 	cd ${S}/${FOOF}
 	cp Makefile Makefile.orig
 	sed -e "s/gcc -O/gcc ${CFLAGS}/" Makefile.orig > Makefile
 	cd ${S}
     done
-    make
+    try make
 }
 
 src_unpacks() {
@@ -36,9 +36,9 @@ src_install() {
     exeopts -s -m 2555 -o root -g man
     exeinto /usr/bin
     doexe man
-    chmod +x apropos whatis makewhatis
+    chmod +x apropos whatis try makewhatis
     dobin apropos whatis
-    dosbin makewhatis
+    dosbin try makewhatis
     dodir /usr/lib
     insinto /usr/lib
     doins man.conf
@@ -50,7 +50,7 @@ src_install() {
     cp Makefile Makefile.orig
     echo "BINROOTDIR=${D}" > Makefile
     cat Makefile.orig >> Makefile
-    make installsubdirs
+    try make installsubdirs
     cd ${S}
     dodoc COPYING LSM README* TODO
     for i in cs da de es fi fr hr it nl pl pt sl

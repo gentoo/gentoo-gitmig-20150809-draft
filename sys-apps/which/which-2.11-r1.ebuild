@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.11-r1.ebuild,v 1.2 2000/08/16 04:38:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.11-r1.ebuild,v 1.3 2000/09/15 20:09:24 drobbins Exp $
 
 P=which-2.11
 A=${P}.tar.gz
@@ -10,8 +10,8 @@ DESCRIPTION="Prints out location of specified executables that are in your path"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/which/${P}"
 
 src_compile() {                           
-    ./configure --prefix=/usr
-    make
+    try ./configure --prefix=/usr
+    try make
 }
 
 src_unpack() {

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.10o.ebuild,v 1.1 2000/08/25 15:10:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.10o.ebuild,v 1.2 2000/09/15 20:09:24 drobbins Exp $
 
 P="util-linux-2.10o"      
 A="${P}.tar.bz2" 
@@ -11,8 +11,8 @@ DESCRIPTION="Various useful Linux utilities"
 SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/util-linux/${P}.tar.bz2"
 
 src_compile() {                           
-	./configure
-	make
+	try ./configure
+	try make
 }
 
 src_unpack() {
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_install() {                               
 	cd ${S}
-	make DESTDIR=${D} install
+	try make DESTDIR=${D} install
 	cd ${S}
 	dodoc licenses/* HISTORY 
 	prepman

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel robbins <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.78-r1.ebuild,v 1.2 2000/08/16 04:38:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.78-r1.ebuild,v 1.3 2000/09/15 20:09:23 drobbins Exp $
 
 P="sysvinit-2.78"      
 A=${P}.tar.gz
@@ -11,7 +11,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/init/${A}"
 
 src_compile() {                           
 	cd ${S}/src
-	make
+	try make
 	cd ${S}/contrib
 	gcc start-stop-daemon.c -o start-stop-daemon
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.1.ebuild,v 1.3 2000/08/25 04:47:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.1.ebuild,v 1.4 2000/09/15 20:09:16 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceware.cygnus.com/bzip2/"
 
 src_unpack() {
     unpack ${A}
-    # bzip2's makefile does not use CFLAGS so we hard-wire the compile
+    # bzip2's try makefile does not use CFLAGS so we hard-wire the compile
     # options using sed ;)
     cd ${S}
     cp Makefile Makefile.orig
@@ -21,14 +21,14 @@ src_unpack() {
 }
 
 src_compile() {                           
-	make -f Makefile-libbz2_so $MAKEOPTS "MAKE = make $MAKEOPTS" all
-	make $MAKEOPTS "MAKE = make $MAKEOPTS" all
+	try make -f Makefile-libbz2_so $MAKEOPTS "MAKE = try make $MAKEOPTS" all
+	try make $MAKEOPTS "MAKE = try make $MAKEOPTS" all
 }
 src_install() {                               
 	dodoc README LICENSE CHANGES manual.ps 
 	docinto html
 	dodoc manual_*.html
-	make PREFIX=${D}/usr install
+	try make PREFIX=${D}/usr install
 	strip ${D}/usr/bin/*
         into /usr
 	dolib.so libbz2.so.1.0.1
