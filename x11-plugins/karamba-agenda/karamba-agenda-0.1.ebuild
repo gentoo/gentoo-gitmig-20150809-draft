@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-agenda/karamba-agenda-0.1.ebuild,v 1.3 2003/05/04 03:13:06 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-agenda/karamba-agenda-0.1.ebuild,v 1.4 2003/05/04 03:21:35 prez Exp $
 
 DESCRIPTION="Current Agenda plugin for Karamba"
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=5793"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-RDEPEND="|| (>=x11-misc/karamba-0.17 >=x11-misc/superkaramba-0.21)"
+RDEPEND="||( >=x11-misc/karamba-0.17 >=x11-misc/superkaramba-0.21 )"
 
 src_unpack () {
 	unpack ${A}
