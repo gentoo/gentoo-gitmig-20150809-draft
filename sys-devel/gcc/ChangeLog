@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.98 2003/05/18 07:41:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.99 2003/05/19 19:45:23 azarah Exp $
+
+  19 May 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.ebuild :
+  Only compile gcj AWT/Swing support if we have the Xlib.h header, else
+  it borks during bootstrap.
 
 *gcc-3.3 (17 May 2003)
 

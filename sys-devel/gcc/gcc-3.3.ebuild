@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.2 2003/05/18 13:50:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.3 2003/05/19 19:45:23 azarah Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -260,7 +260,8 @@ src_compile() {
 	# X11 support is still very experimental but enabling it is
 	# quite innocuous...  [No, gcc is *not* linked to X11...]
 	# <dragon@gentoo.org> (15 May 2003)
-	if [ -n "`use java`" -a -n "`use X`" -a -z "`use build`" ]
+	if [ -n "`use java`" -a -n "`use X`" -a -z "`use build`" -a \
+	     -f /usr/X11R6/include/X11/Xlib.h ]
 	then
 		myconf="${myconf} --x-includes=/usr/X11R6/include --x-libraries=/usr/X11R6/lib"
 		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
