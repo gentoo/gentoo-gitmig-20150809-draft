@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bc14c9645229a525afb2a772c1cd44f7 ChangeLog 9345
+MD5 7ce3a9c52e78e5c70ccaa9abcb1b1ccc ChangeLog 9551
 MD5 58516a09eebcaa2239ea0b70f310484e linux26-headers-2.6.8.1.ebuild 3895
 MD5 91179c84e3dc8dadcfdad16cabede343 linux26-headers-2.6.5.ebuild 4188
 MD5 4cc9fbc64c128b279d9cdc0c166e936b linux26-headers-2.6.8.1-r1.ebuild 4923
@@ -28,11 +28,11 @@ MD5 7c487aa645f5d88e86c3252ab44ef5ae files/linux26-headers-2.6.7-appCompat.patch
 MD5 6dd79a655f006aebb7206203f3654976 files/linux26-headers-2.6.7-generic-arm-prepare.patch 978
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-linux26-headers-2.6.7-r4 66
 MD5 d78e0d94873de4518bca401d5688401c files/linux26-headers-2.6.7-prefetch.patch 528
-MD5 0f6be0bccf5735091c23b53d437697e6 files/linux26-headers-2.6.8.1-sparc-glibcsafe.patch 2630
+MD5 5258c64bed51646ee05cde4fbc40ae03 files/linux26-headers-2.6.8.1-sparc-glibcsafe.patch 2886
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBu2l8ArHZZzCEUG0RArM7AJ9Atig1xPZy6BCLVIO/bYKaS3c6SwCfUTfo
-z3tfD3O+QcaxSBlKM4/OlF0=
-=52fs
+iD8DBQFBvClXArHZZzCEUG0RAhv+AJ4weiqLwm0igcJBdOrS6Qhc5qeqIwCfYmYy
+pQIjbWT1o8fD3TXutUa2LKk=
+=RaXU
 -----END PGP SIGNATURE-----
