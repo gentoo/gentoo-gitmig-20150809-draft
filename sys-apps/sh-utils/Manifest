@@ -1,5 +1,5 @@
-MD5 7275d2ff30187bd406553a4c4ed0019c sh-utils-2.0.15.ebuild 2334
-MD5 80cb96d253ce36133763a8796fe3704e sh-utils-2.0.15-r1.ebuild 493
+MD5 8322db26ca8062a24c059535d2136849 sh-utils-2.0.15.ebuild 2331
+MD5 6f09dc22470a508284409bd895014884 sh-utils-2.0.15-r1.ebuild 488
 MD5 44e8187eb463da6ba85f29c49c134ed7 ChangeLog 4782
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b0454d28beed9edd23c9facdd154174f files/sh-utils-2.0.15-gentoo.diff 2585

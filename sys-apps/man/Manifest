@@ -1,4 +1,7 @@
 MD5 578c2a99430e594b3d6051cacab54dc8 man-1.5m.ebuild 2954
+MD5 b5a30644e4040808912356e1162294be man-1.5l-r6.ebuild 2765
+MD5 fbe1f3764f657493091e2c5cd6e0e180 ChangeLog 6955
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 cbbd4de51a8359a1ae81f46f2dad6bd8 files/man-1.5k-search-order.patch 489
 MD5 7de4684156992ffd479e773a4abc79d7 files/man-1.5l-locale-debug-info.patch 2128
 MD5 cbbd4de51a8359a1ae81f46f2dad6bd8 files/man-1.5l-search-order.patch 489
@@ -27,7 +30,3 @@ MD5 a63bfea0511bb4ea9292d63dc11348b3 files/digest-man-1.5l-r6 60
 MD5 3fd69820a5978ad926d9f3583b485e1a files/man-1.5l-groff-1.18.patch 689
 MD5 45544066c9da6e67ca8b7b72525ed185 files/man-1.5k-locale-debug-info.patch 1958
 MD5 eb0c495f1c11036460b98e3b2fd41e0a files/man-1.5k-redhat-patches.patch 7701
-MD5 f7ab14e4dd6dc3c02676396737f185bf .#Manifest.1.27 2708
-MD5 ef3d41d876a55355e321e08497fa79a3 man-1.5l-r6.ebuild 2767
-MD5 fbe1f3764f657493091e2c5cd6e0e180 ChangeLog 6955
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164

@@ -1,5 +1,5 @@
-MD5 0940ebffaf380f0ce71ea3369b791b5e psmisc-21.2-r3.ebuild 1155
-MD5 8ab90c843bd7fac998090fd5d491bc40 psmisc-21.2-r4.ebuild 1857
+MD5 17ee8e709716fa809e8a8551996b31d9 psmisc-21.2-r3.ebuild 1151
+MD5 463b2e683ea28dca03ba66ebf147322e psmisc-21.2-r4.ebuild 1853
 MD5 807f195e91d512d5de9db3b3c3ef63d5 ChangeLog 3590
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c3fc900b7ebf1f4231b1ea416d908ce2 files/psmisc-21.2-fix-realloc.patch 368
