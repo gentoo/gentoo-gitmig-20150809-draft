@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.20 2004/11/07 09:19:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.21 2004/11/12 00:33:19 usata Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -68,21 +68,21 @@ latex-package_src_doinstall() {
 			"sh")
 				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
 				do
-					dobin $i
+					dobin $i || die "dobin $i failed"
 				done
 				;;
 			"sty" | "cls" | "fd" | "clo" | "def" | "cfg")
 				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
 				do
 					insinto ${TEXMF}/tex/latex/${PN}
-					doins $i
+					doins $i || die "doins $i failed"
 				done
 				;;
 			"dvi" | "ps" | "pdf")
 				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
 				do
 					insinto /usr/share/doc/${P}
-					doins $i
+					doins $i || "doins $i failed"
 					#dodoc -u $i
 				done
 				;;
@@ -97,21 +97,21 @@ latex-package_src_doinstall() {
 				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
 				do
 					insinto ${TEXMF}/fonts/${1}/${SUPPLIER}/${PN}
-					doins $i
+					doins $i || die "doins $i failed"
 				done
 				;;
 			"ttf")
 				for i in `find . -maxdepth 1 -type f -name "*.ttf"`
 				do
 					insinto ${TEXMF}/fonts/truetype/${SUPPLIER}/${PN}
-					doins $i
+					doins $i || die "doins $i failed"
 				done
 				;;
 			"bst")
 				for i in `find . -maxdepth 1 -type f -name "*.bst"`
 				do
 					insinto ${TEXMF}/bibtex/bst/${PN}
-					doins $i
+					doins $i || die "doins $i failed"
 				done
 				;;
 			"styles")
@@ -146,7 +146,9 @@ latex-package_src_compile() {
 latex-package_src_install() {
 	debug-print function $FUNCNAME $*
 	latex-package_src_doinstall all
-	[ -n "${DOCS}" ] && dodoc ${DOCS}
+	if [ -n "${DOCS}" ] ; then
+		dodoc ${DOCS}
+	fi
 }
 
 latex-package_pkg_postinst() {
