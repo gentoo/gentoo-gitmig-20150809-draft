@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 6283ec5f4a12acc31cfef275f29309d1 ChangeLog 323
-MD5 0d664fbf262006b4641f6b4c36dab00f engage-0.0.9.20041031.ebuild 716
+MD5 a0bd708fd2cfae8681705d2055d6d16a engage-0.0.9.20041208.ebuild 716
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 8e98592a6d903696ba0773e057d7a65c engage-9999.ebuild 706
-MD5 dd53ffdd4d0851e376c852e10141c774 files/digest-engage-0.0.9.20041031 75
+MD5 5ae74a5dc55cde95d3c0f68f34636106 files/digest-engage-0.0.9.20041208 75
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-engage-9999 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhxNaHTu7gpaalycRAi3mAJ9zHagomzIYq3KpYY8e2FnOZxgTIgCfS7k7
-7aWdPSMmCosUnXKvm0h1j4Q=
-=kFv+
+iD8DBQFBudBOroRuSHgZdywRAqEmAJ49wojw2uNb54d3BARVw8aWNdeDMgCePDl9
+B3nx7HkjBc8W+j1WZFwIkuA=
+=pDne
 -----END PGP SIGNATURE-----

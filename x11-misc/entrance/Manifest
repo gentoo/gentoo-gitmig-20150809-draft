@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8e84124e92bc6b227f63790f5ff64dff entrance-9999.ebuild 2489
-MD5 fc3a96ca5e7aa0853eba18fbc5e08c9a entrance-0.9.0.20041031.ebuild 2517
 MD5 68ff58a2c9237ecc80a013841dfd1b5e ChangeLog 1015
+MD5 86c2b66cafd829e6a3e5f8b276bd5273 entrance-0.9.0.20041208.ebuild 2517
 MD5 088d07394fa8372e79b7757075ea4a7d metadata.xml 515
-MD5 617b7b85601ee0087c73d8c65167d97e files/digest-entrance-0.9.0.20041031 141
+MD5 8e84124e92bc6b227f63790f5ff64dff entrance-9999.ebuild 2489
+MD5 77641f465c55e82855ae299836e1e95d files/digest-entrance-0.9.0.20041208 142
 MD5 8c2c9320269ef791ea0b6a00729a9104 files/digest-entrance-9999 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBpQidI1lqEGTUzyQRAprKAKDVqt21m6Pmn1/h1TB2qpoalfd9rACfUHCh
-PLmuUA+T0mze/Vyn9cUBd+I=
-=+1yY
+iD8DBQFBuc/JroRuSHgZdywRAoxQAJ9rZFgjTkPWhEtUrd/NSBH23kOTMACdGHSB
+1qDcNmSi1gCqapP99btwQbk=
+=KncN
 -----END PGP SIGNATURE-----
