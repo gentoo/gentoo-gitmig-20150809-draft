@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.0.ebuild,v 1.1 2003/01/14 00:00:13 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.0.ebuild,v 1.2 2003/01/15 19:51:53 alron Exp $
 
 DESCRIPTION="Nagios $PV - merge this to pull install all of the nagios packages"
 HOMEPAGE="http://www.nagios.org/"
@@ -8,7 +8,7 @@ RDEPEND=`echo ~net-analyzer/nagios-{core-1.0,plugins-1.3.0_beta2,nrpe-1.7,nsca-2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~sparc ~ppc"
 pkg_postinst() {
 	einfo
 	einfo "Remember to edit the config files in /etc/nagios"
