@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.3-r1.ebuild,v 1.2 2004/02/08 10:58:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.3-r2.ebuild,v 1.1 2004/02/12 05:46:34 eradicator Exp $
 
 S=${WORKDIR}/${P}
 
@@ -28,6 +28,9 @@ src_unpack() {
 
 	# Fix configure.in to detect readline
 	epatch ${FILESDIR}/${PN}-readline.patch
+
+	# Fix null pointer when default skin
+	epatch ${FILESDIR}/${PN}-null-skin.patch
 
 	WANT_AUTOCONF=2.1
 	WANT_AUTOMAKE=1.4

@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/xmms-shell
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.7 2004/02/08 10:58:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.8 2004/02/12 05:46:34 eradicator Exp $
+
+*xmms-shell-0.99.3-r2 (11 Feb 2004)
+
+  11 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-shell-0.99.3-r1.ebuild, xmms-shell-0.99.3-r2.ebuild,
+  files/xmms-shell-null-skin.patch:
+  Fix segfault resulting from default skin selection. Submitted by Joel Martin
+  <buskanaka@yahoo.com> in bug #41033
 
   08 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-shell-0.99.3-r1.ebuild, xmms-shell-0.99.3.ebuild:

@@ -1,0 +1,16 @@
+diff -ur xmms-shell-0.99.3.original/src/session.cc xmms-shell-0.99.3/src/session.cc
+--- xmms-shell-0.99.3.original/src/session.cc	2002-10-22 19:45:55.000000000 -0400
++++ xmms-shell-0.99.3/src/session.cc	2004-01-25 20:46:38.000000000 -0500
+@@ -219,7 +219,11 @@
+ {
+     ensure_running();
+ 
+-    return xmms_remote_get_skin(sid);
++    if (xmms_remote_get_skin(sid)) {
++    	return xmms_remote_get_skin(sid);
++    } else {
++    	return "";
++    }
+ }
+ 
+ #if HAVE_XMMS_REMOTE_GET_EQ
