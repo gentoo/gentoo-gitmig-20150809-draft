@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-owanttask
 # Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.5 2004/08/24 03:21:50 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.6 2004/09/10 19:45:43 axxo Exp $
+
+*ant-owanttask-1.1-r1 (10 Sep 2004)
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +ant-owanttask-1.1-r1.ebuild,
+  -ant-owanttask-1.1.ebuild:
+  revision bump: ant moved to ant-core
 
   23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> ant-owanttask-1.1.ebuild:
   Marking stable on x86

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1.ebuild,v 1.4 2004/08/24 03:21:50 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r1.ebuild,v 1.1 2004/09/10 19:45:43 axxo Exp $
 
 inherit java-pkg
 
@@ -22,7 +22,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar output/lib/ow_util_ant_tasks.jar
-	dodir /usr/share/ant/lib
-	dosym /usr/share/ant-owanttask/lib/ow_util_ant_tasks.jar /usr/share/ant/lib/
+	dodir /usr/share/ant-core/lib
+	dosym /usr/share/ant-owanttask/lib/ow_util_ant_tasks.jar /usr/share/ant-core/lib/
 }
 

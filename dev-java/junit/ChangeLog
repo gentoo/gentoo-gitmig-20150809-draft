@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.13 2004/06/24 22:37:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.14 2004/09/10 19:49:12 axxo Exp $
+
+*junit-3.8.1-r1 (10 Sep 2004)
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> -files/junit-3.7-build.xml,
+  +junit-3.8.1-r1.ebuild, -junit-3.8.1.ebuild:
+  revision bump: ant moved to ant-core
 
   19 Jan 2004; Adrian Almenar <strider@gentoo.org> junit-3.8.1.ebuild:
   Added amd64 keyword.

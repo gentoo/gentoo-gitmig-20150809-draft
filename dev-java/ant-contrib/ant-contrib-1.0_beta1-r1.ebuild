@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta1.ebuild,v 1.3 2004/08/31 03:34:07 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta1-r1.ebuild,v 1.1 2004/09/10 19:42:39 axxo Exp $
 
 inherit java-pkg
 
@@ -28,8 +28,8 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/lib/${PN}-${PV}.jar || die "pkg jar not found"
 
-	dodir /usr/share/ant/lib
-	dosym /usr/share/${PN}/lib/${PN}-${PV}.jar /usr/share/ant/lib/
+	dodir /usr/share/ant-core/lib
+	dosym /usr/share/${PN}/lib/${PN}-${PV}.jar /usr/share/ant-core/lib/
 
 	dodoc README.txt
 	use doc && dohtml -r build/docs
