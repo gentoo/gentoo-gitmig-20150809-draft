@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.39 2003/10/22 16:42:03 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.40 2003/10/23 21:56:11 foser Exp $
+
+*gstreamer-0.6.4 (23 Oct 2003)
+
+  23 Oct 2003; foser <foser@gentoo.org> gstreamer-0.6.4.ebuild :
+  Add some hacks to have at least some docs build
+  Removed old nasm, popt and zlib deps
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> gstreamer-0.6.3.ebuild:
   set ppc in keywords
