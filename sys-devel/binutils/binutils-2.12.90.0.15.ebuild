@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.15.ebuild,v 1.1 2002/07/28 07:44:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.15.ebuild,v 1.2 2002/07/28 12:38:48 azarah Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -17,9 +17,14 @@ LICENSE="GPL-2|LGPL-2"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc
+	>=sys-apps/portage-2.0.21
 	nls? ( sys-devel/gettext )
-	!build? ( sys-devel/perl )
-	!bootstrap? ( sys-devel/perl )"
+	|| ( sys-devel/perl 
+	     ( !build?     ( sys-devel/perl ) )
+	     ( !bootstrap? ( sys-devel/perl ) )
+	   )"
+# This is a hairy one.  Basically depend on sys-devel/perl
+# if "build" or "bootstrap" not in USE.
 
 
 src_compile() {
