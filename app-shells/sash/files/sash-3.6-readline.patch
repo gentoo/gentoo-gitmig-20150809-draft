@@ -260,11 +260,32 @@ diff -ruN sash-3.6/sash.c sash-3.6.readline/sash.c
  		if (intFlag && !ttyFlag && (fp != stdin))
  		{
  			fclose(fp);
-@@ -596,6 +804,19 @@
- 
+@@ -805,17 +805,34 @@
  			return;
  		}
+ 	
+-		if (fgets(buf, CMD_LEN - 1, fp) == NULL)
 +#ifdef HAVE_READLINE
++		if (name != NULL)
+ 		{
+-			if (ferror(fp) && (errno == EINTR))
++#endif
++			if (fgets(buf, CMD_LEN - 1, fp) == NULL)
+ 			{
+-				clearerr(fp);
++				if (ferror(fp) && (errno == EINTR))
++				{
++					clearerr(fp);
++					continue;
++				}
+ 
+-				continue;
++				break;
+ 			}
+-
+-			break;
++#ifdef HAVE_READLINE
+ 		}
 +		if (name == NULL)
 +		   {
 +		       input_line = readline(prompt ? prompt : "$ ");
@@ -276,16 +297,7 @@ diff -ruN sash-3.6/sash.c sash-3.6.readline/sash.c
 +			   }
 +		       free(input_line);
 +		    }   
-+#else
- 	
- 		if (fgets(buf, CMD_LEN - 1, fp) == NULL)
- 		{
-@@ -608,7 +829,7 @@
++#endif
  
- 			break;
- 		}
--
-+#endif		    
  		cc = strlen(buf);
  
- 		if (buf[cc - 1] == '\n')
