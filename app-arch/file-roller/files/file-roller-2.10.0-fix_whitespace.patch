@@ -1,0 +1,56 @@
+diff -u -r1.125 -r1.128
+--- src/window.c	2005/03/07 12:33:45	1.125
++++ src/window.c	2005/03/14 10:17:51	1.128
+@@ -1842,10 +1842,8 @@
+         FRWindow         *window = data;
+ 	GtkTreeSelection *selection;
+ 
+-	/* FIXME: uncomment after freeze 
+ 	if (event->window != gtk_tree_view_get_bin_window (GTK_TREE_VIEW (window->list_view))) 
+                 return FALSE;
+-	*/
+ 
+ 	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (window->list_view));
+ 	if (selection == NULL)
+@@ -1917,10 +1915,8 @@
+         FRWindow         *window = data;
+ 	GtkTreeSelection *selection;
+ 
+-	/* FIXME: uncomment after freeze 
+ 	if (event->window != gtk_tree_view_get_bin_window (GTK_TREE_VIEW (window->list_view))) 
+                 return FALSE;
+-	*/
+ 
+ 	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (window->list_view));
+ 	if (selection == NULL)
+@@ -5436,8 +5432,9 @@
+ 		
+ 		fr_process_begin_command (proc, cdata->command);
+ 		for (scan = cdata->file_list; scan; scan = scan->next) {
+-			char *filename = scan->data;
++			char *filename = shell_escape (scan->data);
+ 			fr_process_add_arg (proc, filename);
++			g_free (filename);
+ 		}
+ 		fr_process_end_command (proc);
+ 		
+@@ -5452,6 +5449,7 @@
+ 			uris = g_list_prepend (uris, gnome_vfs_get_uri_from_local_path (filename));
+ 		}
+ 
++		command_list = g_list_prepend (command_list, cdata);
+ 		gnome_vfs_mime_application_launch (cdata->app, uris);
+ 
+ 		path_list_free (uris);
+@@ -5488,9 +5486,7 @@
+ 					"/",
+ 					file,
+ 					NULL);
+-		cdata->file_list = g_list_prepend (cdata->file_list,
+-						   shell_escape (filename));
+-		g_free (filename);
++		cdata->file_list = g_list_prepend (cdata->file_list, filename);
+ 	}
+ 
+ 	g_signal_connect (G_OBJECT (window->archive), 
+

@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.96 2005/03/11 20:32:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.97 2005/03/15 21:12:20 joem Exp $
+
+*file-roller-2.10.0-r1 (15 Mar 2005)
+
+  15 Mar 2005; Joe McCann <joem@gentoo.org>
+  +files/file-roller-2.10.0-fix_whitespace.patch,
+  +file-roller-2.10.0-r1.ebuild:
+  patch from gnome cvs to fix behavior when dealing with whitespaces in
+  filenames. thanks to bug 85218
 
   11 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   file-roller-2.10.0.ebuild:
