@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portagemaster
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.5 2004/03/13 18:54:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.6 2004/03/13 18:59:52 weeve Exp $
+
+  13 Mar 2004; Jason Wever <weeve@gentoo.org> portagemaster-0.2.1.ebuild:
+  Added ~sparc keyword.
 
   13 Mar 2004; Marius Mauch <genone@gentoo.org> portagemaster-0.2.1.ebuild:
   added xfree dependency
