@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/xmms-mad
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.12 2004/01/21 09:27:27 raker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.13 2004/03/20 16:23:40 eradicator Exp $
+
+*xmms-mad-0.5.6-r1 (20 Mar 2004)
+
+  20 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-mad-0.5.6-r1.ebuild, xmms-mad-0.5.6.ebuild,
+  files/xmms-mad-0.5.6-mp3header.patch:
+  Added patch to fix detection of MP3 frame header. Submitted in bug #44838 by
+  Eric Villani <caligari@libertysurf.fr>.
 
 *xmms-mad-0.5.6 (21 Jan 2004)
 

@@ -1,0 +1,11 @@
+--- src/xmms-mad.c   2003-12-28 16:18:40.000000000 +0100
++++ src/xmms-mad.c   2004-03-16 13:14:12.000000000 +0100
+@@ -95,7 +95,7 @@
+       if (fin >= 0 && read (fin, check, 4) == 4)
+ 	{
+ 	  /* If first two bytes are a sync header or three bytes are "ID3" */
+-	  if ( (check[0] == 0xff && (check[1] & 0x70) == 0x70) 
++         if ( (check[0] == 0xff && (check[1] & 0xE0) == 0xE0)
+ 	       || memcmp (check, "ID3", 3) == 0) 
+ 	    {
+ 	      rtn = 1;
