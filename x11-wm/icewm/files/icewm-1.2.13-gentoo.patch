@@ -1,0 +1,61 @@
+--- icewm-1.2.13/configure.in.orig	2003-12-30 19:56:55.975650544 -0500
++++ icewm-1.2.13/configure.in	2003-12-30 20:10:21.265227920 -0500
+@@ -21,7 +21,9 @@
+ 
+ dnl ---------- Checking for a C compiler in hope that it understands C++ too ---
+ dnl
+-ICE_PROG_CXX_LIGHT
++dnl
++dnl Gentoo patch by Ryan C. Gordon 12/30/2003: ICE_PROG_CXX_LIGHT is broken.
++dnl ICE_PROG_CXX_LIGHT
+ AC_LANG_CPLUSPLUS
+ AC_PROG_CXX
+ 
+@@ -29,9 +31,11 @@
+ dnl ---- for linking. Also check how to turn off RTTI and exception handling ---
+ if test x"$ac_cv_prog_gxx" != x; then
+   AC_PROG_CC
+-  if test x"$ac_cv_prog_gcc" != x; then
+-    CXX_LINK=${CC}
+-  fi
++
++  dnl Gentoo patch by Ryan C. Gordon 12/30/2003: Must link with CXX, not CC.
++  dnl if test x"$ac_cv_prog_gcc" != x; then
++  dnl   CXX_LINK=${CC}
++  dnl fi
+   
+   ICE_CXX_FLAG_ACCEPT(no_rtti, -fno-rtti)
+   dnl --- Intel C++ supports -fno-rtti, but doens't support -fno-*-exceptions
+@@ -368,7 +372,12 @@
+      AC_MSG_ERROR("xfreetype or core fonts must be enabled")
+   fi
+   if test "$enable_xfreetype" != "no" -o "$enable_xfreetype" = "implied"; then
+-    AC_PATH_PROG(XFT_CONFIG, xft-config,, ${with_xft_arg-${PATH}})
++    dnl Gentoo patch by Ryan C. Gordon 12/30/2003:
++    dnl xft-config is installed with the xfree package, but is in
++    dnl /usr/X11R6/bin, which isn't in the default path. The original
++    dnl version of AC_PATH_PROG can't be used, because it breaks other things.
++    dnl AC_PATH_PROG(XFT_CONFIG, xft-config,, ${with_xft_arg-${PATH}})
++    AC_PATH_PROG(XFT_CONFIG, xft-config,, ${PATH}:/usr/X11R6/bin)
+     if test "${XFT_CONFIG}" != ""; then
+       XFT_CFLAGS=`${XFT_CONFIG} --cflags`
+       XFT_LIBS=`${XFT_CONFIG} --libs`
+@@ -774,7 +783,17 @@
+       fi
+     fi ])
+ 
+-CONFIG_KDE_MENU_DIR="`kde-config --path apps | sed -e 's/.*://'`" 
++dnl Gentoo patch by Ryan C. Gordon 12/30/2003:
++dnl kde-config is installed with the kde package, but is in
++dnl /usr/kde/KDEVER/bin, which isn't in the default path.
++dnl CONFIG_KDE_MENU_DIR="`kde-config --path apps | sed -e 's/.*://'`"
++
++AC_PATH_PROG(KDE_CONFIG, kde-config,, ${PATH}:/usr/kde/*/bin)
++if test "${KDE_CONFIG}" != ""; then
++  CONFIG_KDE_MENU_DIR="`${KDE_CONFIG} --path apps | sed -e 's/.*://'`"
++else
++  CONFIG_KDE_MENU_DIR=""
++fi
+ 
+ AC_SUBST(GNOME_VER)
+ AC_SUBST(CONFIG_GNOME1_MENU_DIR)

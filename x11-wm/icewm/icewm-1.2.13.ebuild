@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.13.ebuild,v 1.4 2003/11/05 19:38:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.13.ebuild,v 1.5 2004/03/25 14:43:09 jhuebel Exp $
 
 DESCRIPTION="Ice Window Manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -19,10 +19,20 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ~ppc sparc amd64"
 S=${WORKDIR}/${P}
 
+# rcg12302003 Various patches to configure.in...
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-${PV}-gentoo.patch
+}
+
 src_compile(){
+	# rcg12302003 We patch configure.in, so rebuild the configure script...
+	./autogen.sh
+
 	use esd \
 		&& myconf="${myconf} --with-esd-config=/usr/bin/esd-config"
 
