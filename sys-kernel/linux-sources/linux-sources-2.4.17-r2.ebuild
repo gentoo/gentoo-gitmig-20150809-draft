@@ -1,29 +1,41 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.18_pre3.ebuild,v 1.1 2002/01/18 09:15:00 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.17-r2.ebuild,v 1.1 2002/01/27 06:04:25 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
-OKV=2.4.17
-KV=2.4.18-pre3
+OKV=${PV}
+KV=${PVR}
 S=${WORKDIR}/linux-${KV}
 S2=${WORKDIR}/linux-${KV}-extras
 
-#This kernel includes XFS (CVS 16 Jan 2002) and mjb-2.4.18-r3 (which includes *lots* of good stuff))
+#What's in this kernel?
+#======================
+# xfs (26 Jan 2002 CVS)
+# readahead patch from akpm (improves disk readahead algorithm)
+# read-latency-2 from akpm (improves multiple disk read/write IO performance)
+# fastpte (enables an option to do fast scanning of the page tables)
+# irqrate-a1 (optimizes irq handling, no more ksoftirqd and eliminates irq storms on servers)
+# ide (from http://www.linuxdiskcert.org, patch ide.2.4.17.01192002.patch) ide updates, performance improvements
+#   note: enable "Taskfile" options in kernel config
+# preempt-2.4.17-r1 (preemptible kernel)
+# loopback device deadlock fixes from akpm
 
 DESCRIPTION="Linux kernel version ${KV} - full sources"
 SRC_URI="http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
 PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 
+XFSV=20020124
+
 if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco.
 	#binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31 sys-apps/console-tools >=sys-apps/modutils-2.4.2 sys-devel/perl"
-	RDEPEND=">=sys-libs/ncurses-5.2"
+	RDEPEND=">=sys-libs/ncurses-5.2 >=sys-apps/xfsprogs-${XFSV} >=sys-apps/dmapi-${XFSV} >=sys-apps/attr-${XFSV} >=sys-apps/acl-${XFSV} >=sys-apps/xfsdump-${XFSV}"
 fi
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include"
