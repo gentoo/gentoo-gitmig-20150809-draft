@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.21 2005/03/08 18:27:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.22 2005/03/19 14:06:14 chainsaw Exp $
+
+*musepack-tools-1.15v (19 Mar 2005)
+
+  19 Mar 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/musepack-tools-1.15v-Makefile.patch,
+  +files/musepack-tools-1.15v-gcc4.patch, musepack-tools-1.15s-r2.ebuild,
+  musepack-tools-1.15t.ebuild, musepack-tools-1.15u.ebuild,
+  +musepack-tools-1.15v.ebuild:
+  Version bump, closes bug #83365. Correct LICENSE in all ebuilds.
 
 *musepack-tools-1.15u (08 Mar 2005)
 
