@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.7 2002/07/02 10:10:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.8 2002/07/07 01:41:20 seemant Exp $
+
+*icewm-1.2.0 (06 Jul 2002)
+
+  06 Jul 2002; Seemant Kulleen <seemant@gentoo.org> icewm-1.2.0.ebuild
+  files/icewm-1.2.0-gcc31-gentoo.patch files/digest-icewm-1.2.0 :
+
+  Version bump, thanks to: craig@mosquitonet.com (Craig Callender) in bug #
+  4539. And NLS translation files are now installed properly, thanks to:
+  arkmch@priv4.onet.pl (Arkadiusz Mucha) in bug #4532.
 
 *icewm-1.2.0_pre3-r1 (02 Jul 2002)
 

@@ -1,17 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.0-r1.ebuild,v 1.1 2002/05/26 21:17:43 mkennedy Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.0.ebuild,v 1.1 2002/07/07 01:41:20 seemant Exp $
 
-MY_P=${P/_/}
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${P}
 DESCRIPTION="Ice Window Manager"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="www.icewm.org"
 
 DEPEND="virtual/x11
+	esd? ( media-sound/esound )
+	nls? ( sys-devel/gettext )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
-	nls? ( >=sys-devel/gettext-0.10.40 )
 	truetype? ( >=media-libs/freetype-2.0.9 )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack(){
 	unpack ${A}
@@ -30,6 +34,10 @@ src_unpack(){
 }
 
 src_compile(){
+
+	use esd \
+		&& myconf="${myconf} --with-esd-config=/usr/bin/esd-config"
+
 	use nls \
 		&& myconf="${myconf} --enable-nls --enable-i18n" \
 		|| myconf="${myconf} --disable-nls --disable-i18n"
@@ -64,8 +72,8 @@ src_install(){
 		prefix=${D}/usr \
 		LIBDIR=${D}/usr/lib/icewm \
 		CFGDIR=${D}/etc/icewm \
+		LOCDIR=${D}/usr/share/locale \
 		DOCDIR=${S}/dummy \
-		LOCDIR=${S}/usr/share/locale \
 		install || die "make install failed"
 
 	dodoc AUTHORS BUGS CHANGES COPYING FAQ PLATFORMS README* TODO VERSION
