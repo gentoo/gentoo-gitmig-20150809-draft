@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030220.ebuild,v 1.3 2003/02/21 02:06:18 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030220.ebuild,v 1.4 2003/02/22 07:39:15 vapier Exp $
 
 DESCRIPTION="daemon that provides commonly needed file system functionality to clients"
 HOMEPAGE="http://www.enlightenment.org/pages/efsd.html"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="pic"
 
 DEPEND="virtual/glibc
