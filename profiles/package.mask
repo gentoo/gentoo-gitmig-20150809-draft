@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <blocke@shivan.org> (16 Sep 2002)
+# Masked due to freeze
+=net-www/galeon-1.2.6
 
 # <g2boojum@gentoo.org> (15 Sep 2002)
 # Masked for testing, 'cause it's not quite done, and 'cause there's a freeze
