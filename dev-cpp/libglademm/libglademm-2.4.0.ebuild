@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.4.0.ebuild,v 1.10 2004/10/05 12:21:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.4.0.ebuild,v 1.11 2004/12/16 06:11:54 joem Exp $
 
 inherit gnome2 eutils
 
@@ -18,6 +18,8 @@ RDEPEND=">=gnome-base/libglade-2.3.6
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"
 
+ELTCONF="--copy --force"
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -26,6 +28,7 @@ src_unpack() {
 src_compile() {
 	if [ "${ARCH}" = "amd64" ]; then
 		aclocal -I scripts
+		elibtoolize
 		automake -c -f
 		autoconf
 	fi
