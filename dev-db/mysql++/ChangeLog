@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.9 2003/06/12 20:29:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.10 2003/08/02 19:53:30 robbat2 Exp $
+
+  02 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> mysql++-1.7.9-r1.ebuild:
+  $A should NOT be quoted at all in an unpack call
 
   12 Jun 2003; <msterret@gentoo.org> mysql++-1.7.9.ebuild:
   fix Header
