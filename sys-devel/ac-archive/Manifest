@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7fa628798a9f11efc6033dfb9ee8376a ChangeLog 545
-MD5 cb9306b84d247c4b48c7caa45d2a664e ac-archive-0.5.57.ebuild 750
+MD5 9e770a9d024927bec20c7edc9bd2032e ac-archive-0.5.57.ebuild 759
 MD5 ac9d7aa98a803fad73610d51fd658c97 files/digest-ac-archive-0.5.57 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBWMTkI1lqEGTUzyQRAl28AJ0UTlQJ1dMKcsApeMRzWFD9W5r7fACfePFt
-XMj83rgvgFyOpc8D5hpg5nI=
-=ox4I
------END PGP SIGNATURE-----
