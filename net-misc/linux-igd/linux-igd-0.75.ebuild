@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.75.ebuild,v 1.5 2003/02/13 14:58:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.75.ebuild,v 1.6 2003/03/11 22:20:02 mholzer Exp $
 
 MY_PN="gateway"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
 
 RDEPEND="net-misc/upnp
-	sys-apps/iptables"
+	net-firewall/iptables"
 DEPEND="${RDEPEND}"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/monmotha-2.3.8_pre7.ebuild,v 1.4 2003/02/13 15:00:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/monmotha-2.3.8_pre7.ebuild,v 1.5 2003/03/11 22:20:45 mholzer Exp $
 
 DESCRIPTION="MonMotha IPTables-based firewall script."
 HOMEPAGE="http://monmotha.mplug.org/firewall/"
@@ -8,7 +8,7 @@ LICENSE="GPL-2"
 
 KEYWORDS="x86"
 SLOT="0"
-RDEPEND=">=sys-apps/iptables-1.2.5"
+RDEPEND=">=net-firewall/iptables-1.2.5"
 
 src_install() {
 	exeinto /etc/init.d

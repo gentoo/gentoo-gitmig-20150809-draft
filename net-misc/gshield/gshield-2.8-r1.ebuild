@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gshield/gshield-2.8-r1.ebuild,v 1.2 2003/02/13 14:51:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gshield/gshield-2.8-r1.ebuild,v 1.3 2003/03/11 22:17:50 mholzer Exp $
 
 # re-capitalize gShield
 P=gShield-${P#*-}
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-RDEPEND="sys-apps/iptables
+RDEPEND="net-firewall/iptables
 	net-dns/bind-tools"
 
 src_install() {

@@ -1,11 +1,15 @@
 # ChangeLog for net-misc/guarddog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guarddog/ChangeLog,v 1.8 2003/02/12 08:23:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guarddog/ChangeLog,v 1.9 2003/03/11 22:19:09 mholzer Exp $
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
 *guarddog-2.0.0 (18 Oct 2002)
+
+  11 Mar 2003; Martin Holzer <mholzer@gentoo.org> guarddog-1.9.14.ebuild,
+  guarddog-1.9.15.ebuild, guarddog-1.9.16.ebuild, guarddog-2.0.0.ebuild:
+  changed sys-apps/iptables to net-firewall/iptables
 
   18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> guarddog-2.0.0.ebuild :
   Version bump, found by Sebastian Boehm <s-boehm@gmx.net > in #7330. 
