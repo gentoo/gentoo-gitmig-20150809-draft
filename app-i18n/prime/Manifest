@@ -2,11 +2,13 @@ MD5 a8fbd545873f4f9d23942a15417e84fa prime-0.7.4.1.ebuild 838
 MD5 79d7a86bc482dcfed9d7971ce739fae9 prime-0.6.6.ebuild 809
 MD5 a5a0dba1d3f6aa601ac9067d532d5958 prime-0.7.3.ebuild 836
 MD5 6bc225930c3723f873d4d2c1944db8f7 prime-0.6.5.ebuild 808
-MD5 48343d7a761a0f48340bac22426db6da ChangeLog 1804
+MD5 a05ed08a06ea5a8a10526b3950a04bc5 ChangeLog 1964
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 9fe317d85803497a7f5a0ac34d5e8ff9 prime-0.7.2.ebuild 836
+MD5 726e34b8cc6dd2be1f66d38b3654918e prime-0.7.6_rc1.ebuild 890
 MD5 7c598d1e99281f303b91f4baad6a544e files/digest-prime-0.7.4.1 65
 MD5 91334c611e35694019f508434e0ab4ed files/digest-prime-0.6.5 63
 MD5 87fe56320435eac8372c7d7fc0ba6f69 files/digest-prime-0.7.3 63
 MD5 f59eee3296072e3dd4a8582e606cf94d files/digest-prime-0.6.6 63
 MD5 d0ca35b6a4cae91a1979f2ad6ea681f5 files/digest-prime-0.7.2 63
+MD5 624f08d5918e4f4319bd23057734b065 files/digest-prime-0.7.6_rc1 67
