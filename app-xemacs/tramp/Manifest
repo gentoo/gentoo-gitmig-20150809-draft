@@ -1,5 +1,5 @@
 MD5 10e322dd0eee27087546b3125445b827 ChangeLog 643
 MD5 d03437e29b3ce26b2db8905e08c1bfb7 tramp-1.10.ebuild 526
-MD5 6da2069786859b298f26d6662603ff56 tramp-1.11.ebuild 525
+MD5 83ed1273b5121b6eab30ba58b7ec9002 tramp-1.11.ebuild 529
 MD5 d51fa8891449626d7dcfd3925db3fa4b files/digest-tramp-1.10 65
 MD5 a52cc2338275245d622dbb25877acd93 files/digest-tramp-1.11 65
