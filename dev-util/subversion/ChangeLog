@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.117 2004/11/07 13:36:41 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.118 2004/11/09 16:29:44 agriffis Exp $
+
+  09 Nov 2004; Aron Griffis <agriffis@gentoo.org> subversion-1.1.1.ebuild:
+  Replace ~ppc64 and ~ia64 keywords which went missing
 
   05 Nov 2004; Aron Griffis <agriffis@gentoo.org> subversion-1.0.9.ebuild:
   Remove attempted installation of cvs2svn #47099
