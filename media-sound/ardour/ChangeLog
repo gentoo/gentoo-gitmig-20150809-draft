@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.32 2004/08/14 02:47:10 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.33 2004/08/14 22:50:51 tigger Exp $
+
+*ardour-0.9_beta19-r1 (14 Aug 2004)
+
+  14 Aug 2004; Rob Holland <tigger@gentoo.org> +ardour-0.9_beta19-r1.ebuild:
+  Fixed optimisation flags and don't run autoconf as its not needed.
 
 *ardour-0.9_beta19 (13 Aug 2004)
 
