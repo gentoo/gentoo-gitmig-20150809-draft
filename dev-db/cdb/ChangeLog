@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.11 2005/01/01 17:30:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.12 2005/03/27 22:39:42 slarti Exp $
+
+  27 Mar 2005; Tom Martin <slarti@gentoo.org> cdb-0.75.ebuild:
+  Stable on amd64, testing on sparc.
 
   07 Dec 2004; Dylan Carlson <absinthe@gentoo.org> cdb-0.75.ebuild:
   Keywords ~amd64.
