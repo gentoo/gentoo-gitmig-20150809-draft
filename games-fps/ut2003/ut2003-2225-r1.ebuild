@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r1.ebuild,v 1.1 2004/02/13 18:32:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r1.ebuild,v 1.2 2004/02/24 20:30:14 wolf31o2 Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="http://unreal.epicgames.com/linux/ut2003/${PN}lnx_2107to${PV}.sh.bin
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 RESTRICT="nostrip"
 
 DEPEND="virtual/glibc"
@@ -110,9 +110,10 @@ src_install() {
 	insinto ${dir}
 	doins ${S}/README.linux ${S}/Unreal.xpm || die "copying readme/icon"
 
-	sed -e "s:GENTOO_DIR:${dir}:" ${FILESDIR}/ucc > ucc
+	#sed -e "s:GENTOO_DIR:${dir}:" ${FILESDIR}/ucc > ucc
 	sed -e "s:GENTOO_DIR:${dir}:" ${FILESDIR}/ut2003 > ut2003
-	dogamesbin ucc ut2003
+	#dogamesbin ucc ut2003
+	dogamesbin ut2003
 
 	rm ${Ddir}/System/{UT2003,User}.ini || die "deleting ini files"
 
