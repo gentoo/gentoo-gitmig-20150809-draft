@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1.ebuild,v 1.1 2003/12/14 15:01:18 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1.ebuild,v 1.2 2003/12/14 18:11:11 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="as-is"
 SLOT="2.0"
 
-IUSE="cdr doc accessibility"
+IUSE="cdr doc accessibility samba"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
@@ -26,7 +26,7 @@ KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc ~hppa"
 RDEPEND="!gnome-base/gnome-core
 
 	>=gnome-base/gconf-2.4.0.1
-	>=gnome-base/ORBit2-2.8.2
+	>=gnome-base/ORBit2-2.8.3
 	>=dev-libs/atk-1.4.1
 	>=media-libs/audiofile-0.2.4
 	>=media-sound/esound-0.2.32
@@ -47,27 +47,27 @@ RDEPEND="!gnome-base/gnome-core
 	>=dev-libs/libIDL-0.8.2
 	>=dev-libs/libxml2-2.5.11
 	>=dev-libs/libxslt-1.0.33
-	>=x11-libs/pango-1.2.5
+	>=x11-libs/pango-1.2.5-r1
 
-	>=gnome-extra/acme-2.4.1
+	>=gnome-extra/acme-2.4.2
 	>=gnome-extra/bug-buddy-2.4.1
 
 	>=gnome-base/control-center-2.4
 
 	>=gnome-base/eel-2.4.1
-	>=gnome-base/nautilus-2.4.1
+	>=gnome-base/nautilus-2.4.1-r2
 	>=gnome-extra/nautilus-media-0.3.3.1
 
 	>=media-gfx/eog-2.4.1
-	>=net-www/epiphany-1.0.5
+	>=net-www/epiphany-1.0.6
 	>=app-arch/file-roller-2.4.1.1
 	>=gnome-extra/gcalctool-4.3.16
 	>=gnome-extra/gconf-editor-2.4
-	>=gnome-base/gdm-2.4.1.6
+	>=gnome-base/gdm-2.4.1.7
 	>=app-editors/gedit-2.4.1
 	>=app-text/ggv-2.4.0.2
 	>=app-text/gpdf-0.111
-	>=gnome-base/gnome-applets-2.4.1-r1
+	>=gnome-base/gnome-applets-2.4.1-r2
 	>=gnome-base/gnome-desktop-2.4.1.1
 	>=gnome-extra/gnome-games-2.4.1.1
 
@@ -85,11 +85,11 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-libs/gstreamer-0.6.4
 	>=media-libs/gst-plugins-0.6.4
 	>=x11-libs/gtksourceview-0.7
-	>=gnome-extra/gucharmap-1
-	>=gnome-base/libgnomeprint-2.4
-	>=gnome-base/libgnomeprintui-2.4
+	>=gnome-extra/gucharmap-1.2
+	>=gnome-base/libgnomeprint-2.4.2
+	>=gnome-base/libgnomeprintui-2.4.2
 	=gnome-extra/libgtkhtml-2.4*
-	>=gnome-base/libgtop-2.0.7
+	>=gnome-base/libgtop-2.0.6
 	>=gnome-base/librsvg-2.4
 	>=x11-libs/libwnck-2.4.0.1-r1
 	>=x11-wm/metacity-2.6.3
@@ -97,7 +97,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=x11-libs/startup-notification-0.5
 
-	>=gnome-extra/yelp-2.4.1
+	>=gnome-extra/yelp-2.4.2
 	>=x11-libs/vte-0.11.10
 
 	>=app-text/scrollkeeper-0.3.12
@@ -108,14 +108,18 @@ RDEPEND="!gnome-base/gnome-core
 	doc? ( >=dev-util/gtk-doc-1.1 )
 
 	accessibility? ( >=gnome-extra/libgail-gnome-1.0.2
-		>=gnome-extra/at-spi-1.3.8
-		>=gnome-extra/gnome-speech-0.2.7
-		>=gnome-extra/gnome-mag-0.10.3
+		>=gnome-extra/at-spi-1.3.9
+		>=gnome-extra/gnome-speech-0.2.8
+		>=gnome-extra/gnome-mag-0.10.4
 		>=gnome-extra/gok-0.8.4
-		>=gnome-extra/gnopernicus-0.7.1 )"
+		>=gnome-extra/gnopernicus-0.7.1 )
+
+	samba? ( >=gnome-extra/gnome-vfs-extras-0.99.11 )"
 
 pkg_postinst () {
+
 	einfo "note that to change windowmanager to metacity do: "
 	einfo " export WINDOW_MANAGER=\"/usr/bin/metacity\""
 	einfo "of course this works for all other window managers as well"
+
 }
