@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/hdup
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/hdup/ChangeLog,v 1.9 2004/06/24 21:31:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/hdup/ChangeLog,v 1.10 2004/07/07 17:04:57 mholzer Exp $
+
+*hdup-1.6.32 (07 Jul 2004)
+
+  07 Jul 2004; Martin Holzer <mholzer@gentoo.org> +hdup-1.6.32.ebuild:
+  Version bumped.
 
 *hdup-1.6.31 (01 Jun 2004)
 
