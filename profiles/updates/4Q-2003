@@ -66,3 +66,4 @@ move net-libs/lcrzo net-libs/netwib
 move net-analyzer/lcrzoex net-analyzer/netwox
 move app-i18n/konfont media-fonts/konfont
 move app-misc/gwhere x11-misc/gwhere
+move media-plugins/crystality-plugin media-plugins/xmms-crystality
