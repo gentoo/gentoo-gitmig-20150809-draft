@@ -1,6 +1,17 @@
 # ChangeLog for net-www/htdig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.1 2004/08/15 18:08:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.2 2004/08/26 12:51:06 rl03 Exp $
+
+*htdig-3.1.6-r5 (26 Aug 2004)
+
+  26 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +htdig-3.1.6-r5.ebuild:
+  Added metadata.xml
+
+*htdig-3.1.6-r5 (26 Aug 2004)
+
+  26 Aug 2004; Renat Lumpau <rl03@gentoo.org> +htdig-3.1.6-r5.ebuild:
+  Convert to webapp.eclass. Closes #34594, 52592, and helps with #7728, 35275.
 
 *htdig-3.1.6-r4 (15 Aug 2004)
 
