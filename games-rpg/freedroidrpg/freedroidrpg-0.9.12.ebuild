@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.9.12.ebuild,v 1.2 2004/05/10 18:16:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.9.12.ebuild,v 1.3 2004/05/27 19:52:26 mr_bones_ Exp $
 
 inherit games
 
-DESCRIPTION="Freedroid - a Paradroid clone"
+DESCRIPTION="A modification of the classical Freedroid engine into an RPG"
 HOMEPAGE="http://freedroid.sourceforge.net/"
 SRC_URI="mirror://sourceforge/freedroid/${P}.tar.bz2"
 
