@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <nitro@gentoo.org> (19 Jun 2002)
+# new version, please test
+>=net-ftp/proftpd-1.2.6_rc1
+
 # <chadh@gentoo.org> (19 Jul 2002)
 # new ebuild.  x86-only.  Should be good to go once it is masked for alt arch
 app-misc/lphdisk
@@ -1026,7 +1030,7 @@ x11-base/xdirectfb
 
 # raker@gentoo.org 10 Jul 2002
 # postfix-1.1.11-r3.ebuild provided by Alexander Holler (NMU) Please test!
->=net-mail/postfix-1.1.11-r2
+#>=net-mail/postfix-1.1.11-r2
 
 # stroke@gentoo.org 11 Jul 2002
 # app-cdr/eroaster-2.1.0 development branch #4250, masked for testing
