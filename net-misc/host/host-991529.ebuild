@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.7 2002/10/04 06:12:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.8 2002/10/20 18:52:19 vapier Exp $
 
 S="${WORKDIR}"
 
@@ -19,7 +19,6 @@ DEPEND="net-dns/bind-tools"
 #but since bind-tools is just a partiall install of bind
 #there is no point in introducing new use var and doing PROVIDE dance..
 
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="as-is"

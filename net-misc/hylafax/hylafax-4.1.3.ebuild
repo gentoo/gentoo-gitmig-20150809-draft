@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.3.ebuild,v 1.6 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.3.ebuild,v 1.7 2002/10/20 18:52:19 vapier Exp $
 
 IUSE="jpeg"
 
@@ -21,7 +21,6 @@ DEPEND="net-dialup/mgetty
 	app-text/ghostscript
 	media-libs/tiff
 	jpeg? ( media-libs/jpeg )"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	

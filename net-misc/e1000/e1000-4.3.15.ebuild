@@ -1,12 +1,11 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/e1000/e1000-4.3.15.ebuild,v 1.1 2002/09/23 13:40:19 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/e1000/e1000-4.3.15.ebuild,v 1.2 2002/10/20 18:52:19 vapier Exp $
 
 DESCRIPTION="Kernel driver for Intel Pro/1000 ethernet adapters."
 HOMEPAGE="http://support.intel.com/support/network/adapter/1000/index.htm"
 LICENSE="GPL-2"
 DEPEND="virtual/linux-sources"
-RDEPEND="${DEPEND}"
 
 SRC_URI="ftp://aiedownload.intel.com/df-support/2897/eng/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.0.3.ebuild,v 1.7 2002/10/04 06:10:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.0.3.ebuild,v 1.8 2002/10/20 18:52:19 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
@@ -10,7 +10,6 @@ HOMEPAGE="http://www.iu.hio.no/cfengine/"
 DEPEND="virtual/glibc
 	=sys-libs/db-3.2*
 	dev-libs/openssl"
-RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"

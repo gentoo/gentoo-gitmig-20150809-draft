@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r7.ebuild,v 1.3 2002/10/04 06:14:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r7.ebuild,v 1.4 2002/10/20 18:52:19 vapier Exp $
 
 S=${WORKDIR}/${PN/ORB/}
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"
@@ -12,7 +12,6 @@ HOMEPAGE="http://www.uk.research.att.com/omniORB/"
 
 DEPEND="virtual/glibc 
 		dev-lang/python"
-RDEPEND="${DEPEND}"
 
 PLT="i586_linux_2.0_glibc2.1"
 KEYWORDS="x86 sparc sparc64"
