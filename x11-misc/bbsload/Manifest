@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3c215600cac632f2834e538a73c795e6 bbsload-0.2.8.ebuild 745
 MD5 16f911f77795f95eb23328b4071d23d0 bbsload-0.2.6.ebuild 656
 MD5 e60a3c0f8e399f29769d9ccb10a2ae9c ChangeLog 2038
-MD5 14353e2e498d94298080895c7d8bfd83 metadata.xml 234
+MD5 870a1535de0c10b511aaf118a3dbc865 metadata.xml 319
 MD5 bd5c900301ea3d9fff0638a3b3b74e56 files/digest-bbsload-0.2.6 64
 MD5 a8181c51262feabb4dc4154c38b5fbeb files/digest-bbsload-0.2.8 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB7R6iEZCkKN40op4RAhrdAKCmYhGnfrs78C6fGwUWxgcH8G8LogCffVnr
+8SlRvS8pVSBFA2N0Hjb32Es=
+=d/HN
+-----END PGP SIGNATURE-----
