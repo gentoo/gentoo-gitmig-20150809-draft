@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/md5
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/md5/ChangeLog,v 1.1 2003/11/22 06:23:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/md5/ChangeLog,v 1.2 2003/12/22 07:28:10 mkennedy Exp $
+
+*md5-1.0-r1 (22 Dec 2003)
+
+  22 Dec 2003; <mkennedy@gentoo.org> md5-1.0-r1.ebuild, md5-1.0.ebuild:
+  rename module from md5 to md5-digest to avoid conflict with emacs' built-in
+  md5 function and also flim's md5 module
 
 *md5-1.0 (22 Nov 2003)
 
